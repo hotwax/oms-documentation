@@ -1,0 +1,17 @@
+== addCategoryProducts
+This service is used to add the products to the specific category via UI.
+
+== Properties
+Following are the attributes used in below service:
+
+[width="100%", cols="3,2,10" options="header"]
+|=======
+|Attribute |Type |Description
+|productCategoryId|String|This attribute contains the required category
+|productId|List|This attributes contains the list of products that we need to add in the category.
+|=======
+
+== Inline Services
+
+=== addProductToCategory
+This service is used to create record in the ProductCategoryMember entity with the passed productId and productCategoryId
