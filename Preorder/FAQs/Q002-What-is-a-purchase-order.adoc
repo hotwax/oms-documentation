@@ -1,0 +1,7 @@
+== Q002. What is a purchase order?
+
+A purchase order is a contract between a merchandiser and a vendor to document the purchase of a certain quantity of product that will be delivered at a future date.
+
+A purchase order contains many details like the purchase order number, the name of the buyer and seller, SKU of the ordered product, ordered quantity, price pre-unit, delivery date, delivery location, billing address, discount, payment terms, etc.
+
+But the one created in OMS only needs limited information like the purchase order number, SKU of the ordered product, ordered quantity, delivery date, delivery location.

@@ -1,0 +1,3 @@
+== Q010. If the pre-order items in the PO arrive early. Will the pre-order items be auto-released?
+
+No, in this case, the pre-ordered item will not be auto-released for brokering as the promise date is still in the future even though the warehouses/stores have physical ATP quantity to reserve these items.  

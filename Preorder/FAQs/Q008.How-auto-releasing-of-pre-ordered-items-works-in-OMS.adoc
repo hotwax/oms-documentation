@@ -1,0 +1,22 @@
+=== Q008. How auto-releasing of pre-ordered items works in OMS?
+
+
+The OMS automatically releases the pre-ordered item from the *_Preorder Parking_* for brokering to a suitable warehouse or store, when the service *_checkPreOrderedItemsForRelease_* runs. 
+
+*For retailers with purchase orders details* +
+In this case, the pre-ordered item will be automatically released for brokering if the following conditions are fulfilled:
+
+* Promise date of the pre-order item is achieved or is in the past
+* Warehouses or stores in OMS have the physical ATP quantity that can be reserved for the pre-ordered item
+
+Once a pre-order item fulfills these conditions they are released from the *_Preorder Parking_* for brokering based on the first-in-first-out basis i.e. the oldest pre-order for the item will be released first followed by the newer pre-orders.
+
+If the promise date is not yet reached for the pre-ordered item or enough physical ATP is not yet available then the pre-ordered item will not be released this time and will be released whenever the service *_checkPreOrderedItemsForRelease_* runs and both these conditions are fulfilled.
+
+=== These are the technical details to add the item to pre-order category via CSV:
+include::../Services/S008-checkPreOrderedItemsForRelease.adoc[leveloffset=+1]
+
++++<s>+++*For retailers without purchase orders details*+++</s>+++ +
++++<s>+++In this case, the pre-ordered item will not have any promise date assigned to it. So, the OMS automatically releases the pre-order item when warehouses or stores in OMS have the physical ATP quantity that can be reserved for the pre-ordered item whenever the service +++</s>++++++<s>+++*_checkPreOrderedItemsForRelease_*+++</s>++++++<s>+++ runs.+++</s>+++
+
++++<s>+++The pre-ordered items will be released from the Preorder Parking for brokering based on the first-in-first-out basis i.e. the oldest pre-order for the item will be released first followed by the newer pre-orders.+++<s>+++

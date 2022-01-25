@@ -1,0 +1,8 @@
+=== Q007. How does OMS set the promise date for the pre-order items while importing orders from Shopify?
+
+
+*For retailers with purchase orders details* +
+While importing the items that are in the pre-order category, OMS reserves the pre-ordered item to the PO with the nearest arrival date and sets the arrival date of the PO as the promise date of the pre-ordered item. During this process, the ATP of the pre-ordered item in the PO is reduced by the ordered quantity.
+
++++<s>+++*For retailers without purchase orders details* +
+In this case, as there is no PO and arrival date, so while importing the items that are in the pre-order category, OMS only adds the *_Pre-Order_* tag to the pre-ordered item and does not apply any promise date.+++</s>+++

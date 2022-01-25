@@ -1,0 +1,12 @@
+== Q005. How does OMS inform Shopify to start taking pre-orders for an item?
+
+*For retailers with purchase orders details* +
+When an item is added to the pre-order category in OMS, it sends the following request and information to Shopify:
+
+* Check the flag for *_Continue selling when out of stock_* for the pre-order item
+* Save the estimated shipping date of the pre-order item
+
+Using this information Shopify displays the item is available for pre-order along with the estimated shipping date to the customer on the storefront.
+
++++<s>+++*For retailers without purchase orders details* +++</s>+++ + 
++++<s>+++If the retailer does not deal with PO and manually adds items to the pre-order category then OMS will only request Shopify to check the flag for Continue selling when out of stock for the pre-order item. The estimated shipping date of the pre-order item will not be sent in this case. So no estimated shipping date is displayed to the customer on the storefront.+++</s>+++

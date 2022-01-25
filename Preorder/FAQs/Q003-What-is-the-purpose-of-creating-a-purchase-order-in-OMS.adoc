@@ -1,0 +1,5 @@
+== Q003. What is the purpose of creating a purchase order in OMS?
+
+When a purchase order is created in OMS the system gets the information about which product was ordered by the retailer, how many products were ordered, when the product will be delivered, where the product will be delivered.
+
+Based on this information in the PO, the system adds the product to the pre-order category and makes reservations of the pre-ordered item against the PO after customers have placed the orders.

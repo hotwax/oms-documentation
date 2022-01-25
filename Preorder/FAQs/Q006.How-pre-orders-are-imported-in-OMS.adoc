@@ -1,0 +1,10 @@
+== Q006. How pre-orders are imported in OMS?
+
+After a pre-order is placed by a customer on Shopify, the OMS imports the order when the *_createOrdersFromShopify_* service runs.
+
+While importing orders OMS checks if the item is in the pre-order category. 
+
+If the item is found in the pre-order category then the system applies the *_Pre-Order_* tag to the item and sets the *_Ship From_* as *_Preorder Parking_*. The status of the pre-ordered item will be set as *_Hold_* and the status of the order will be *_Approved_*.
+
+=== These are the technical details:
+include::../Services/S006-createOrdersFromShopify.adoc[leveloffset=+1]

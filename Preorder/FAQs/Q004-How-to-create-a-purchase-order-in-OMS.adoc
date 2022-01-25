@@ -1,0 +1,11 @@
+== Q004. How to create a purchase order in OMS?
+
+There are two ways of creating a PO in OMS.
+
+* The first way is creating a PO manually in OMS using a CSV.
+
+=== These are the technical details:
+
+include::../Services/S004-1-purchaseOrderDataSetup.adoc[leveloffset=+1]
+
+* The second way is integrating the OMS with an ERP system that maintains the records of PO. In this way, the OMS automatically creates the PO using the information provided by the ERP system.

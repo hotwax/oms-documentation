@@ -1,0 +1,3 @@
+== Q009. If the warehouse and stores do not have a physical ATP quantity to reserve pre-ordered items. Will the pre-order items be auto-released for brokering on the promised date? 
+
+No, in this case, the pre-ordered item will not be auto-released for brokering on the promise date as the warehouses/stores do not have physical ATP quantity to reserve these items.
