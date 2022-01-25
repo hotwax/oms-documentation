@@ -50,129 +50,121 @@ Content-Type: application/json
                     "doclist": {
                         "docs": [
                             {
-                                "_version_": 1721207525355815000,
+                                "_version_": 1722923544406392800,
                                 "carrierPartyId": "_NA_",
                                 "categoryHierarchy": [
-                                    "0/Superga Catalog/",
-                                    "1/Superga Catalog/Browse Root/",
-                                    "2/Superga Catalog/Browse Root/Browse Root/Women's/"
+                                    "0/Shopify Catalog/",
+                                    "1/Shopify Catalog/Browse Root/",
+                                    "2/Shopify Catalog/Browse Root/Browse Root/SH_ECOM_STORE_NA/"
                                 ],
                                 "companyIds": [
-                                    "SM_COMPANY"
+                                    "NN_COMPANY"
                                 ],
-                                "correspondingPoId": "28450",
+                                "correspondingPoId": "11045",
                                 "currencyUomId": "USD",
-                                "customerPartyId": "36640",
-                                "customerPartyName": "William K",
+                                "customerPartyId": "10473",
+                                "customerPartyName": "Deepak Dixit",
                                 "docType": "ORDER",
-                                "docType-identifier": "ORDER-28451-00006",
-                                "entryDate": "2021-12-24T06:32:36.571Z",
+                                "docType-identifier": "ORDER-NN11049-00001",
+                                "entryDate": "2022-01-25T10:52:13.209Z",
                                 "facilityId": "PRE_ORDER_PARKING",
                                 "facilityName": "Preorder Parking",
                                 "facilityTypeId": "PRE_ORDER",
                                 "goodIdentifications": [
-                                    "SHOPIFY_PROD_SKU/S00BGW0",
-                                    "UPCA/190640474498"
+                                    "SHOPIFY_PROD_SKU/S22011802",
+                                    "UPCA/B22011802"
                                 ],
-                                "groupId": "ORDER-28451",
-                                "identifier": "28451-00006",
-                                "internalName": "31675758215261",
+                                "groupId": "ORDER-NN11049",
+                                "identifier": "NN11049-00001",
+                                "internalName": "42350352531709",
                                 "isPromo": "N",
-                                "itemCreatedDate": "2021-12-24T06:32:36.571Z",
-                                "itemExternalId": "10528700268637",
+                                "itemCreatedDate": "2022-01-25T10:52:13.209Z",
+                                "itemExternalId": "11942081134845",
                                 "keywordSearchText": [
-                                    "ORDER-28451",
-                                    "11344",
-                                    "2750 AULEAU WHITE",
-                                    "31675758215261",
-                                    "WHITE / 39.5 / 2"
+                                    "ORDER-NN11049",
+                                    "12222",
+                                    "Cultsport Solid Running T-Shirt",
+                                    "42350352531709",
+                                    "Teal Blue / S"
                                 ],
-                                "orderDate": "2021-12-24T06:31:59Z",
-                                "orderDateString": "12-24-2021 1:31 AM",
+                                "orderDate": "2022-01-25T10:51:33Z",
+                                "orderDateString": "1-25-2022 10:51 AM",
                                 "orderFacilityId": "PRE_ORDER_PARKING",
                                 "orderFacilityName": "Preorder Parking",
-                                "orderGrandTotal": 141.49,
-                                "orderId": "28451",
+                                "orderGrandTotal": 32.33,
+                                "orderId": "NN11049",
                                 "orderIdentifications": [
-                                    "SHOPIFY_ORD_ID/4129791836253",
-                                    "SHOPIFY_ORD_NAME/SU#4663",
-                                    "SHOPIFY_ORD_NO/3663"
+                                    "SHOPIFY_ORD_ID/4642990817533",
+                                    "SHOPIFY_ORD_NAME/#1288",
+                                    "SHOPIFY_ORD_NO/288"
                                 ],
                                 "orderItemAttrName": [
                                     "PreOrderItemProperty"
                                 ],
                                 "orderItemAttrValue": [
-                                    "Pre-ordered items"
+                                    "Pre-order item"
                                 ],
-                                "orderItemSeqId": "00006",
+                                "orderItemSeqId": "00001",
                                 "orderItemStatusId": "ITEM_HOLD",
-                                "orderItemSubTotal": 19.99,
+                                "orderItemSubTotal": 30,
                                 "orderItemTypeId": "PRODUCT_ORDER_ITEM",
-                                "orderName": "SU#4663",
-                                "orderNotes": [
-                                    "Pre-Order",
-                                    "SU#4663",
-                                    "Cancelled item to order:11344 (1.0)",
-                                    "orderify",
-                                    "orderifyReorderClickedAtLeastOnce",
-                                    "Cancelled item to order:11344 (1.0)"
-                                ],
+                                "orderName": "#1288",
                                 "orderPaymentMethodTypeId": [
                                     "EXT_SHOP_VISA"
                                 ],
                                 "orderRoles": [
-                                    "1/Bill-To Customer/36640/",
                                     "0/Placing Customer/",
-                                    "1/End-User Customer/36640/",
+                                    "1/Bill-From Vendor/NN_COMPANY/",
+                                    "1/Ship-From Vendor/NN_COMPANY/",
                                     "0/Bill-To Customer/",
                                     "0/End-User Customer/",
+                                    "1/End-User Customer/10473/",
                                     "0/Bill-From Vendor/",
-                                    "1/Ship-To Customer/36640/",
-                                    "1/Bill-From Vendor/SM_COMPANY/",
+                                    "1/Bill-To Customer/10473/",
+                                    "1/Ship-To Customer/10473/",
                                     "0/Ship-From Vendor/",
-                                    "1/Placing Customer/36640/",
-                                    "1/Ship-From Vendor/SM_COMPANY/",
+                                    "1/Placing Customer/10473/",
                                     "0/Ship-To Customer/"
                                 ],
-                                "orderSize": 5,
+                                "orderSize": 1,
                                 "orderStatusDesc": "Approved",
                                 "orderStatusId": "ORDER_APPROVED",
                                 "orderTypeId": "SALES_ORDER",
-                                "parentProductId": "11342",
-                                "parentProductName": "2750 AULEAU WHITE",
-                                "placingPartyId": "36640",
-                                "placingPartyName": "William K",
+                                "parentProductId": "12220",
+                                "parentProductName": "Cultsport Solid Running T-Shirt",
+                                "placingPartyId": "10473",
+                                "placingPartyName": "Deepak Dixit",
                                 "priceType": "List Price",
-                                "primaryProductCategoryId": "10061",
-                                "primaryProductCategoryName": "Women's",
-                                "productId": "11344",
-                                "productName": "WHITE / 39.5 / 2",
-                                "productStoreId": "SG_STORE",
-                                "productStoreName": "Superga",
+                                "primaryProductCategoryId": "10030",
+                                "primaryProductCategoryName": "SH_ECOM_STORE_NA",
+                                "productId": "12222",
+                                "productName": "Teal Blue / S",
+                                "productStoreId": "SH_ECOM_STORE",
+                                "productStoreName": "Shopify E-Commerce Store",
                                 "productTypeDesc": "Finished Good",
                                 "productTypeId": "FINISHED_GOOD",
-                                "promisedDatetime": "2022-01-10T05:00:00Z",
+                                "promisedDatetime": "2022-03-01T18:30:00Z",
                                 "quantity": 1,
                                 "requiredPermissions": [
                                     "ORDERMGR_ADMIN",
-                                    "SM_COMPANY/ORDERMGR_VIEW",
-                                    "SM_COMPANY/ORDERMGR_ROLE_VIEW/36640"
+                                    "NN_COMPANY/ORDERMGR_VIEW",
+                                    "NN_COMPANY/ORDERMGR_ROLE_VIEW/10473"
                                 ],
                                 "salesChannelDesc": "Web Channel",
                                 "salesChannelEnumId": "WEB_SALES_CHANNEL",
-                                "shipmentMethodTypeId": "NEXT_DAY",
+                                "shipmentMethodTypeId": "STOREPICKUP",
                                 "shippingMethod": [
-                                    "Not Applicable Next Day"
+                                    "Not Applicable Store Pickup"
                                 ],
-                                "shipToCity": "New York",
+                                "shipToCity": "Salt Lake City",
                                 "shipToCountry": "United States",
-                                "shipToState": "New York",
-                                "spellchecker": "WHITE / 39.5 / 2",
+                                "shipToState": "Utah",
+                                "spellchecker": "Teal Blue / S",
                                 "statusSeqId": 5,
-                                "title": "Order 28451 placed by William K on 12-24-2021 1:31 AM.",
-                                "unitListPrice": 19.99,
-                                "unitPrice": 19.99,
-                                "updatedDatetime": "2022-01-06T12:16:50.122Z"
+                                "title": "Order NN11049 placed by Deepak Dixit on 1-25-2022 10:51 AM.",
+                                "unitListPrice": 30,
+                                "unitPrice": 30,
+                                "updatedDatetime": "2022-01-25T10:52:13.426Z"
                             }
                         ]
                     }
