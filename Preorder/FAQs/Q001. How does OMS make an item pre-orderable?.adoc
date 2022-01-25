@@ -1,0 +1,15 @@
+== Q001. How does OMS make an item pre-orderable?
+
+When a retailer wants to take pre-orders for an item, they need to provide certain information to OMS so that the system can add the item to the pre-order category and make the item pre-orderable.
+
+There are two ways retailers can share this information with OMS. The first way is to share the details of the purchase order with OMS and the second way is for the retailer that does not maintain PO, these retailers can share the information of the item that should be made pre-orderable.
+
+*For retailers with purchase orders details* +
+If a retailer shares the details of the purchase order then the system automatically adds the item to the pre-order category if it fulfills the following conditions:
+
+* Have zero inventory in all the stores and warehouses in OMS
+* Have one or more ATP quantities in a PO with a future arrival date in OMS
+
+If an item fulfills these two conditions then the system adds the item to the pre-order category when the *_loadPreorderCategoryItems_* service runs. 
+
+Note: *_loadPreorderCategoryItems_* can be scheduled as per business requirements.
