@@ -1,0 +1,22 @@
+= checkPreOrderedItemsForRelease
+This service is used to check the preordered items for release if the inventory is available for the product and promiseDate is less/equal to currentDate.
+
+== Properties
+Following are the attributes used in below service:
+
+[width="100%", cols="4" options="header"]
+|=======
+|Attribute |Type |Required| Description
+|orderId|String|No|This attribute contains the unique ID of order in OMS.
+|orderItemSeqId|String|No|This attribute contains the item ID of order in OMS.
+|productStoreId|String|No|This attribute contains the unique ID of productStore in OMS.
+|productIds|List|No|This attribute contains the list of items that needs to be check for release.
+|=======
+
+== Inline Services
+
+=== releaseOrderItem
+This service is used to release the item as per the following conditions:
+
+* If the toFacilityId is _NA_ and changeReasonEnumId is RELEASED then item is released for brokering.
+* If the facilityId is not _NA_ and changeReasonEnumId is BROKERED then item is released to the facility.
