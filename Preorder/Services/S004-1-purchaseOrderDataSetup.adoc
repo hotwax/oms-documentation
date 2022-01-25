@@ -1,0 +1,30 @@
+== purchaseOrderDataSetup
+This service is used to import the purchase order in HC using CSV. Further it invokes the validatePurchaseOrderCSV to validate the parameters and then invoke the storeOrder service to create the order. 
+
+== Properties
+Following are the attributes used in below service:
+
+[width="100%", cols="3,2,10" options="header"]
+|=======
+|Attribute |Type |Description
+|external-id|String|This attribute contains the unique ID assigned to an order in the external system.
+|facility-id|String|This attribute contains the facility/warehouse ID already exist in the system.
+|product-id|String|This attribute contains the unique ID assigned to an product in the system.
+|product-sku|String|This attribute contains the unique sku of the product.
+|quantity|String|This attribute contains the quantity of product in the order.
+|arrival-date|String|The attribute contains the estimated date on which order will arrive.
+|product-store-id|String|This attribute contains the required productStore
+|=======
+
+== Inline Services
+
+=== validatePurchaseOrderCSV
+This service is used for validating the parameters to setup the purchase order in the system.
+
+=== storeOrder
+This service is used to create purchase order using createOrder service
+
+== Triggered Services
+
+=== checkAndAdjustAtpToEarlyPO
+This service is used to check the reserved quantity of current PO and adjust the ATP in both PO by adding the reserved quantity to current PO ATP and substract it from other PO ATP using updateOrderItem service.
