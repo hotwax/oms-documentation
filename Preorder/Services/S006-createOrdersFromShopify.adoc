@@ -1,0 +1,17 @@
+== createOrdersFromShopify
+This service is used to fetch the orders created in last set frequency(in minutes) and import them in OMS.
+
+== Properties
+Following are the attributes used in below service:
+
+[width="100%", cols="4" options="header"]
+|=======
+|Attribute |Type |Required |Description
+|frequency|Integer|Yes|To fetch orders created in last frequency (in minutes)
+|shopifyConfigId|String|Yes|To fetch record as per the shopify configuration (SH_NN_CONFIG)
+|=======
+
+== Inline Services
+
+=== importShopifyOrders
+This service get the orders from shopify and pass the json list to uploadAndImportFile service, further it invokes the createOrderFromShopify service for each json.
