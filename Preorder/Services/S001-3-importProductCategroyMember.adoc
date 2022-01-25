@@ -1,0 +1,26 @@
+== importProductCategoryMember
+This service is used to add the products to the specific category via CSV using importProductCategoryMemberData service.
+
+== Properties
+Following are the attributes used in below service:
+
+[width="100%", cols="3,2,10" options="header"]
+|=======
+|Attribute |Type |Description
+|product-id|String|This attribute contains the unique ID assigned to a product in the system.
+|product-sku|String|This attribute contains the unique sku of the product.
+|product-category-id|String|This attribute contains the unique ID assigned to a category in the system.
+|external-id|String|This attribute contains the unique ID assigned to the category in the external system.
+|from-date|String|This attribute contains start date of valid category.
+|thru-date|String|This attribute contains date upto which category is valid/exists.
+|=======
+
+== Inline Services
+
+importProductCategoryMemberData service first check the data in ProductCategoryMember entity if the corresponding data exist then invoke the updateProductCategoryMember service otherwise addProductToCategory service will be invoke.
+
+=== addProductToCategory
+This service is used to create record in the ProductCategoryMember entity with the passed productId and productCategoryId.
+
+=== updateProductCategoryMember
+This service is used to update record in the ProductCategoryMember entity with the passed thruDate.
