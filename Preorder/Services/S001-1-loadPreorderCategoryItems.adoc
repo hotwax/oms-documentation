@@ -1,1 +1,44 @@
+== loadPreorderCategoryItems
+This service is used to identify and mark/unmark items as preorder.
+Following are the condition for adding an item to the preorder category:
 
+* If OMS physical ATP is zero in all the stores/warehouses.
+* If ATP quantity is greater than zero in the purchase order.
+* If New Style PO(isNewProduct) is yes, it will check only if the backorder setting is enabled for the store.
+
+== Properties
+Following are the attributes used in below service:
+
+[width="100%", cols="3,2,10" options="header"]
+|=======
+|Attribute |Type |Description
+|productStoreId|String|To fetch catalog/category records as per passed productStoreId
+|=======
+
+== Inline Services
+
+=== getStoreCatalogs
+This worker service is used to fetch the productStoreCatalog as per the passed productStoreId.
+
+=== getProductCategoryId
+This utility service is used to fetch the preOrderCategoryId as per the passed productStoreCatalog along with the prodCatalogCategoryTypeId: PCCT_PREORDR
+
+=== getAllActivePOForStore
+This helper service is used to fetch active PO from PreOrderShipmentItem entity, where the records are orderby ascending estimatedDeliveryDate, also the order/item status should be created/approved.
+
+=== getActivePOForItem
+This helper service is used to filters/fetches the active PO as per the active PO items.
+
+=== addProductToCategory
+This service is used to add the item to preorder category if the corresponding record of product for preOrder category is not exist in the ProductCategoryMember entity.
+
+=== updateProductToCategory
+This service is used to update the fromDate in the category if the estimatedDeliveryDate of PO item(PreOrderShipmentItem entity) is not equal to the thruDate of preOrderItem(ProductCategoryMember entity).
+
+=== resetCategoryItems
+This service is used to delete the item from preOrder category by invoking the updateProductToCategory service with the thruDate.
+
+== Triggered Services
+
+=== pushInventoryPolicyForPreorderItems
+This service is used to mark/unmark continue selling flag on the shopify using updateShopifyProductVariant service.
