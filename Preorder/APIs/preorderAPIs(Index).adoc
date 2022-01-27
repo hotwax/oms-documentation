@@ -3,3 +3,5 @@
 include::searchOrders.adoc[leveloffset=+1]
 
 include::searchProducts.adoc[leveloffset=+1]
+
+include::checkInventory.adoc[leveloffset=+1]
