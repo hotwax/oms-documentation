@@ -6,6 +6,6 @@ There are two ways of creating a PO in OMS.
 
 === These are the technical details:
 
-include::../Services/S004-1-purchaseOrderDataSetup.adoc[leveloffset=+1]
+include::../Services/purchaseOrderDataSetup.adoc[leveloffset=+1]
 
 * The second way is integrating the OMS with an ERP system that maintains the records of PO. In this way, the OMS automatically creates the PO using the information provided by the ERP system.
