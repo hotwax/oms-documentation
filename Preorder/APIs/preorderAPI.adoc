@@ -1,10 +1,10 @@
 = Search Orders
-To get the pre-orders you will need to call `/searchOrders` endpoint with post method and in the filters, orderTypeId should be SALES_ORDER and facilityId should either be PRE_ORDER_PARKING or BACKORDER_PARKING
+To get the pre-orders you will need to call `/searchOrders` endpoint with post method and in the filters, orderTypeId should be SALES_ORDER and facilityId should either be PRE_ORDER_PARKING or BACKORDER_PARKING. Further this API will use the solr doc with ORDER docType.
 
 === *Request*
 *Endpoint*
 ----
-GET /api/searchOrders HTTP/1.1
+POST /api/searchOrders HTTP/1.1
 
 Host: example.com
 ----
