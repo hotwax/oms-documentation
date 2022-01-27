@@ -7,4 +7,4 @@ While importing orders OMS checks if the item is in the pre-order category.
 If the item is found in the pre-order category then the system applies the *_Pre-Order_* tag to the item and sets the *_Ship From_* as *_Preorder Parking_*. The status of the pre-ordered item will be set as *_Hold_* and the status of the order will be *_Approved_*.
 
 === These are the technical details:
-include::../Services/S006-createOrdersFromShopify.adoc[leveloffset=+1]
+include::../Services/createOrdersFromShopify.adoc[leveloffset=+1]
