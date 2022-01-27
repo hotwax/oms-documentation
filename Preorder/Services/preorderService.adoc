@@ -1,0 +1,15 @@
+= PreOrder Services
+
+include::loadPreorderCategoryItems.adoc[leveloffset=+1]
+
+include::addCategoryProducts.adoc[leveloffset=+1]
+
+include::importProductCategoryMember.adoc[leveloffset=+1]
+
+include::purchaseOrderDataSetup.adoc[leveloffset=+1]
+
+include::createOrdersFromShopify.adoc[leveloffset=+1]
+
+include::receiveInventoryForProducts.adoc[leveloffset=+1]
+
+include::checkPreOrderedItemsForRelease.adoc[leveloffset=+1]
