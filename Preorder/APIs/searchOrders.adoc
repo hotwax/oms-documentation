@@ -26,7 +26,12 @@ Accept: application/json
     "queryString":"**",
     "queryFields":"parentProductId productId parentProductName productName goodIdentifications orderId search_orderIdentifications customerPartyName","groupByField":"orderId",
     "groupLimit":10000,
-    "filters":["orderTypeId: SALES_ORDER","facilityId:PRE_ORDER_PARKING OR facilityId:BACKORDER_PARKING","orderStatusId: ORDER_APPROVED","!orderItemStatusId: ITEM_CANCELLED"]
+    "filters":[
+        "orderTypeId: SALES_ORDER",
+        "facilityId:PRE_ORDER_PARKING OR facilityId:BACKORDER_PARKING",
+        "orderStatusId: ORDER_APPROVED",
+        "!orderItemStatusId: ITEM_CANCELLED"
+    ]
 }
 ----------------------------------------------------------------
 === *Response*
