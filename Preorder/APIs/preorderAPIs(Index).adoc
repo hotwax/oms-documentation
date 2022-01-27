@@ -7,3 +7,5 @@ include::searchProducts.adoc[leveloffset=+1]
 include::checkInventory.adoc[leveloffset=+1]
 
 include::facilities.adoc[leveloffset=+1]
+
+include::updateOrderItem.adoc[leveloffset=+1]
