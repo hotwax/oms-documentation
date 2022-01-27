@@ -1,4 +1,5 @@
 = Check Inventory
+
 To get the stock details of product you will need to call `/checkInventory` endpoint with post method and you can pass the productId of the order-items in the filters. Further it fetches the records from ProductFacilityAndAtp entity.
 
 === *Request*
