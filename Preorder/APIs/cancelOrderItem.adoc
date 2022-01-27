@@ -1,0 +1,48 @@
+= Cancel Order Item
+
+To cancel the order-item you will need to call `/cancelOrderItem` endpoint with post method. Further it cancel the record of OrderItem using cancelOrderItemInvResQty service.
+
+=== *Request*
+*Endpoint*
+----
+POST /api/cancelOrderItem HTTP/1.1
+
+Host: example.com
+----
+*Headers*
+----
+Content-Type:​ application/json
+
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1NTE5NTIxNjcsInVzZXJMb2dpbklkIjoicGFsbGF2aUBleGFtcGxlLmNvbSJ9.VREDB8Mul9q4sdeNQAvhikVdpDJKKoMBfiBbeQTQOn5e5eOj6XdXnHNAguMpgXk8KXhj_scLDdlfe0HCKPp7HQ
+
+Accept: application/json
+----
+*Body*
+[source, json]
+----------------------------------------------------------------
+{
+    "orderId":"NN11080",
+    "orderItemSeqId":"00001"
+}
+----------------------------------------------------------------
+=== *Response*
+
+*Status Code*
+----
+HTTP/1.1​ ​200​ ​OK
+----
+
+*Headers*
+----
+Content-Type: application/json
+----
+*Body*
+[source, json]
+----------------------------------------------------------------
+{
+    "orderItemSeqId":"00001",
+    "cors.request.origin":"https://preorder.hotwax.io",
+    "orderId":"NN11080",
+    "cors.request.type":"actual",
+    "webSiteId":"API"
+}
