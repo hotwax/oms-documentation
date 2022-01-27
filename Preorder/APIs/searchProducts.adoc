@@ -1,5 +1,6 @@
 = Search Products
-To get the product details of pre-orders you will need to call `/searchProducts` endpoint with post method and you can pass the productId of the order-items in the filters.
+
+To get the product details of pre-orders you will need to call `/searchProducts` endpoint with post method and you can pass the productId of the order-items in the filters. Further this API will use the solr doc with PRODUCT docType.
 
 === *Request*
 *Endpoint*
