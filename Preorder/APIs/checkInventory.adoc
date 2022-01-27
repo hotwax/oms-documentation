@@ -1,0 +1,51 @@
+= Check Inventory
+To get the stock details of product you will need to call `/checkInventory` endpoint with post method and you can pass the productId of the order-items in the filters. Further it fetches the records from ProductFacilityAndAtp entity.
+
+=== *Request*
+*Endpoint*
+----
+POST /api/searchProducts HTTP/1.1
+
+Host: example.com
+----
+*Headers*
+----
+Content-Type:​ application/json
+
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1NTE5NTIxNjcsInVzZXJMb2dpbklkIjoicGFsbGF2aUBleGFtcGxlLmNvbSJ9.VREDB8Mul9q4sdeNQAvhikVdpDJKKoMBfiBbeQTQOn5e5eOj6XdXnHNAguMpgXk8KXhj_scLDdlfe0HCKPp7HQ
+
+Accept: application/json
+----
+*Body*
+[source, json]
+----------------------------------------------------------------
+{
+    "filters":{
+        "productId":["12231"],"productId_op":"in"
+    },
+    "fieldsToSelect":["productId","atp"]
+}
+----------------------------------------------------------------
+=== *Response*
+
+*Status Code*
+----
+HTTP/1.1​ ​200​ ​OK
+----
+
+*Headers*
+----
+Content-Type: application/json
+----
+*Body*
+[source, json]
+----------------------------------------------------------------
+{
+    "count": "1",
+    "docs": [
+        {
+            "productId":"12231",
+            "atp":10.000000
+        }
+    ]
+}
