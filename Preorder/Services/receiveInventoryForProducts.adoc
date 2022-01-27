@@ -1,0 +1,33 @@
+= receiveInventoryForProducts
+This service is used to receive the inventory of products in bulk using CSV.
+
+== Properties
+Following are the attributes used in below service:
+
+[width="100%", cols="3,2,10" options="header"]
+|=======
+|Attribute |Type |Description
+|warehouse-id|String|This attribute contains the unique ID assigned to a facility in the system.
+|product-id|String|This attribute contains the unique ID assigned to a product in the system.
+|product-sku|String|This attribute contains the unique sku of the product.
+|accepted-quantity|String|This attribute contains the quantity of product that you accept to the inventory.
+|=======
+
+== Inline Services
+
+=== createFacilityLocation
+This service is used to create a new location for facility, if the location not exist in the system.
+
+=== createAndAddFacilityLocationToProduct
+This service is used to add the facility-location to the product, if the facility-location not exist in the system.
+
+=== createProductFacility
+This service is used to create the product-facility record in the system.
+
+=== receiveInventoryProduct
+This service is used to receive the inventory of product by checking certain validations and permissions using createInventoryItem, createInventoryItemStatus, createInventoryItemDetail and balanceInventoryOnIncreaseInATP services.
+
+== Triggered Services
+
+=== pushUpdatedInventoryOnShopify
+This service is used to push the updated inventory details on shopify using adjustInventoryLevelOnShopify service.
