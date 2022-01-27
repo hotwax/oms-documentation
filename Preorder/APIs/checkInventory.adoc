@@ -5,7 +5,7 @@ To get the stock details of product you will need to call `/checkInventory` endp
 === *Request*
 *Endpoint*
 ----
-POST /api/searchProducts HTTP/1.1
+POST /api/checkInventory HTTP/1.1
 
 Host: example.com
 ----
