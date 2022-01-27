@@ -1,0 +1,265 @@
+= Search Products
+To get the product details of pre-orders you will need to call `/searchProducts` endpoint with post method and you can pass the productId of the order-items in the filters.
+
+=== *Request*
+*Endpoint*
+----
+POST /api/searchProducts HTTP/1.1
+
+Host: example.com
+----
+*Headers*
+----
+Content-Type:​ application/json
+
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1NTE5NTIxNjcsInVzZXJMb2dpbklkIjoicGFsbGF2aUBleGFtcGxlLmNvbSJ9.VREDB8Mul9q4sdeNQAvhikVdpDJKKoMBfiBbeQTQOn5e5eOj6XdXnHNAguMpgXk8KXhj_scLDdlfe0HCKPp7HQ
+
+Accept: application/json
+----
+*Body*
+[source, json]
+----------------------------------------------------------------
+{
+    "filters":[
+        "productId: (12231 OR 12222)"
+    ]
+}
+----------------------------------------------------------------
+=== *Response*
+
+*Status Code*
+----
+HTTP/1.1​ ​200​ ​OK
+----
+
+*Headers*
+----
+Content-Type: application/json
+----
+*Body*
+[source, json]
+----------------------------------------------------------------
+{
+    "response": {
+        "docs": [
+            {
+                "_version_": 1723085314535194600,
+                "attributeName": [
+                    "calculateProductPrice_NN_STORE_GROUP",
+                    "SHOPIFY_INV_ITEM_ID"
+                ],
+                "attributeValue": [
+                    "{defaultPrice=0, margin=0.000, currencyUsed=USD, specialPromoPrice=null, validPriceFound=true, competitivePrice=null, price=60.000, orderItemPriceInfos=[], isSale=false, averageCost=60.000, wholesalePrice=0, listPrice=60.000, basePrice=60.000}",
+                    "44444576383229"
+                ],
+                "BASE_PRICE_PURCHASE_USD_NN_STORE_GROUP_price": 60,
+                "brandName": "HC Demo",
+                "categoryHierarchy": [
+                    "0/Shopify Catalog/",
+                    "1/Shopify Catalog/Browse Root/",
+                    "2/Shopify Catalog/Browse Root/Browse Root/SH_ECOM_STORE_NA/"
+                ],
+                "companyIds": [
+                    "NN_COMPANY"
+                ],
+                "context_field": [
+                    "SH_ECOM_STORE"
+                ],
+                "description": "",
+                "docType": "PRODUCT",
+                "docType-identifier": "PRODUCT-12231",
+                "featureHierarchy": [
+                    "0/COLOR/",
+                    "1/COLOR/Grey/",
+                    "0/SIZE/",
+                    "1/SIZE/XS/"
+                ],
+                "goodIdentifications": [
+                    "SHOPIFY_PROD_SKU/S22011811",
+                    "UPCA/B22011811"
+                ],
+                "groupId": "12220",
+                "groupName": "7544625332477",
+                "identifier": "12231",
+                "internalName": "42350352826621",
+                "introductionDate": "2022-01-18T03:00:18.117Z",
+                "inventoryItemTypeId": "NON_SERIAL_INV_ITEM",
+                "isVariant": "true",
+                "isVirtual": "false",
+                "keywordSearchText": [
+                    "12231",
+                    "Grey / XS",
+                    "42350352826621",
+                    "Cultsport Solid Running T-Shirt",
+                    "7544625332477",
+                    "12220",
+                    "B22011811",
+                    "SH_ECOM_STORE_NA",
+                    "SH Pre-order"
+                ],
+                "LIST_PRICE_PURCHASE_USD_NN_STORE_GROUP_price": 60,
+                "longDescription": "",
+                "mainImageUrl": "https://cdn.shopify.com/s/files/1/0069/7384/9727/products/011Grey.jpg?v=1642474446",
+                "parentProductName": "Cultsport Solid Running T-Shirt",
+                "primaryProductCategoryName": "SH_ECOM_STORE_NA",
+                "prodCatalogCategoryTypeIds": [
+                    "PCCT_PREORDR",
+                    "PCCT_PURCH_ALLW",
+                    "PCCT_BROWSE_ROOT"
+                ],
+                "prodCatalogIds": [
+                    "SH_CATALOG"
+                ],
+                "productAverageRating": "0",
+                "productCategories": [
+                    "10030",
+                    "SH_CATALOG_CAT",
+                    "SH_PREORDER_CAT",
+                    "SH_PURCHASE_ALLOW"
+                ],
+                "productCategoryNames": [
+                    "SH_ECOM_STORE_NA",
+                    "SH Pre-order"
+                ],
+                "productDescContent": "",
+                "productFeatureIds": [
+                    "10031",
+                    "TEXT_EXTRASMALL"
+                ],
+                "productFeatures": [
+                    "Color/Grey",
+                    "Size/XS"
+                ],
+                "productId": "12231",
+                "productLongDescContent": "",
+                "productName": "Grey / XS",
+                "productSalesChannel": [
+                    "Shopify"
+                ],
+                "productStoreIds": [
+                    "SH_ECOM_STORE"
+                ],
+                "productTypeId": "FINISHED_GOOD",
+                "sellingDate": [
+                    "2022-01-18T03:00:18.105Z"
+                ],
+                "sku": "42350352826621",
+                "spellchecker": "Grey / XS",
+                "taxable": "Y",
+                "title": "Product Grey / XS.",
+                "upc": "B22011811"
+            },
+            {
+                "_version_": 1723085871111995400,
+                "attributeName": [
+                    "calculateProductPrice_NN_STORE_GROUP",
+                    "SHOPIFY_INV_ITEM_ID",
+                    "STORE_3"
+                ],
+                "attributeValue": [
+                    "{defaultPrice=0, margin=0.000, currencyUsed=USD, specialPromoPrice=null, validPriceFound=true, competitivePrice=null, price=60.000, orderItemPriceInfos=[], isSale=false, averageCost=60.000, wholesalePrice=0, listPrice=60.000, basePrice=60.000}",
+                    "44444576088317",
+                    "40663"
+                ],
+                "BASE_PRICE_PURCHASE_USD_NN_STORE_GROUP_price": 60,
+                "brandName": "HC Demo",
+                "categoryHierarchy": [
+                    "0/Shopify Catalog/",
+                    "1/Shopify Catalog/Browse Root/",
+                    "2/Shopify Catalog/Browse Root/Browse Root/SH_ECOM_STORE_NA/"
+                ],
+                "companyIds": [
+                    "NN_COMPANY"
+                ],
+                "context_field": [
+                    "SH_ECOM_STORE"
+                ],
+                "description": "",
+                "docType": "PRODUCT",
+                "docType-identifier": "PRODUCT-12222",
+                "featureHierarchy": [
+                    "0/COLOR/",
+                    "1/COLOR/Teal Blue/",
+                    "0/SIZE/",
+                    "1/SIZE/S/"
+                ],
+                "goodIdentifications": [
+                    "SHOPIFY_PROD_SKU/S22011802",
+                    "UPCA/B22011802"
+                ],
+                "groupId": "12220",
+                "groupName": "7544625332477",
+                "identifier": "12222",
+                "internalName": "42350352531709",
+                "introductionDate": "2022-01-18T03:00:17.531Z",
+                "inventoryItemTypeId": "NON_SERIAL_INV_ITEM",
+                "isVariant": "true",
+                "isVirtual": "false",
+                "keywordSearchText": [
+                    "12222",
+                    "Teal Blue / S",
+                    "42350352531709",
+                    "Cultsport Solid Running T-Shirt",
+                    "7544625332477",
+                    "12220",
+                    "B22011802",
+                    "SH_ECOM_STORE_NA",
+                    "SH Pre-order"
+                ],
+                "LIST_PRICE_PURCHASE_USD_NN_STORE_GROUP_price": 60,
+                "longDescription": "",
+                "mainImageUrl": "https://cdn.shopify.com/s/files/1/0069/7384/9727/products/001TealBlue.jpg?v=1642474444",
+                "parentProductName": "Cultsport Solid Running T-Shirt",
+                "primaryProductCategoryName": "SH_ECOM_STORE_NA",
+                "prodCatalogCategoryTypeIds": [
+                    "PCCT_PREORDR",
+                    "PCCT_PURCH_ALLW",
+                    "PCCT_BROWSE_ROOT"
+                ],
+                "prodCatalogIds": [
+                    "SH_CATALOG"
+                ],
+                "productAverageRating": "0",
+                "productCategories": [
+                    "10030",
+                    "SH_CATALOG_CAT",
+                    "SH_PREORDER_CAT",
+                    "SH_PURCHASE_ALLOW"
+                ],
+                "productCategoryNames": [
+                    "SH_ECOM_STORE_NA",
+                    "SH Pre-order"
+                ],
+                "productDescContent": "",
+                "productFeatureIds": [
+                    "10030",
+                    "TEXT_SMALL"
+                ],
+                "productFeatures": [
+                    "Color/Teal Blue",
+                    "Size/S"
+                ],
+                "productId": "12222",
+                "productLongDescContent": "",
+                "productName": "Teal Blue / S",
+                "productSalesChannel": [
+                    "Shopify"
+                ],
+                "productStoreIds": [
+                    "SH_ECOM_STORE"
+                ],
+                "productTypeId": "FINISHED_GOOD",
+                "sellingDate": [
+                    "2022-01-18T03:00:17.519Z"
+                ],
+                "sku": "42350352531709",
+                "spellchecker": "Teal Blue / S",
+                "taxable": "Y",
+                "title": "Product Teal Blue / S.",
+                "upc": "B22011802"
+            }
+        ],
+        "numFound": 2,
+        "start": 0
+    },
+}
