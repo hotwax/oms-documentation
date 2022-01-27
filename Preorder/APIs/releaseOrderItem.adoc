@@ -1,0 +1,58 @@
+= Release Order Item
+
+To release the order-item you will need to call `/releaseOrderItem` endpoint with post method. Further it release the item using createOrderItemShipGroup, moveItemBetweenShipGroups and createOrderFacilityChange services.
+
+* If the toFacilityId is _NA_ and changeReasonEnumId is RELEASED then item is released for brokering.
+* If the toFacilityId is not _NA_ and changeReasonEnumId is BROKERED then item is released to the facility.
+
+=== *Request*
+*Endpoint*
+----
+POST /api/releaseOrderItem HTTP/1.1
+
+Host: example.com
+----
+*Headers*
+----
+Content-Type:​ application/json
+
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1NTE5NTIxNjcsInVzZXJMb2dpbklkIjoicGFsbGF2aUBleGFtcGxlLmNvbSJ9.VREDB8Mul9q4sdeNQAvhikVdpDJKKoMBfiBbeQTQOn5e5eOj6XdXnHNAguMpgXk8KXhj_scLDdlfe0HCKPp7HQ
+
+Accept: application/json
+----
+*Body*
+[source, json]
+----------------------------------------------------------------
+For example: Release the item to facility/warehouse.
+
+{
+    "orderId":"NN11077",
+    "orderItemSeqId":"00001",
+    "toFacilityId":"NN_WH_2",
+    "changeReasonEnumId":"BROKERED"
+}
+----------------------------------------------------------------
+=== *Response*
+
+*Status Code*
+----
+HTTP/1.1​ ​200​ ​OK
+----
+
+*Headers*
+----
+Content-Type: application/json
+----
+*Body*
+[source, json]
+----------------------------------------------------------------
+{
+    "orderItemSeqId":"00001",
+    "cors.request.origin":"https://preorder.hotwax.io",
+    "orderId":"NN11077",
+    "shipGroupSeqId":"00002",
+    "toFacilityId":"NN_WH_2",
+    "cors.request.type":"actual",
+    "changeReasonEnumId":"BROKERED",
+    "webSiteId":"API"
+}
