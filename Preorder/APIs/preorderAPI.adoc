@@ -1,2 +1,5 @@
-./searchOrders.adoc
-./searchProducts.adoc
+= PreOrder
+
+include::searchOrders.adoc[leveloffset=+1]
+
+include::searchProducts.adoc[leveloffset=+1]
