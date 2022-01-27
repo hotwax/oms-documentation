@@ -23,9 +23,9 @@ Accept: application/json
 For example: Update the promisedDate in orderItem
 
 {
-    orderId: "NN11077"
-    orderItemSeqId: "00001"
-    promisedDatetime: "2022-03-11 23:59:59.999"
+    "orderId": "NN11077"
+    "orderItemSeqId": "00001"
+    "promisedDatetime": "2022-03-11 23:59:59.999"
 }
 ----------------------------------------------------------------
 === *Response*
