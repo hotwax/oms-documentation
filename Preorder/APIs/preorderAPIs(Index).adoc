@@ -1,5 +1,7 @@
 = PreOrder APIs
 
+include::cancelOrderItem.adoc[leveloffset=+1]
+
 include::checkInventory.adoc[leveloffset=+1]
 
 include::facilities.adoc[leveloffset=+1]
