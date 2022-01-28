@@ -1,0 +1,3 @@
+== Q015. If less than expected quantity arrives in the PO. Will pre-ordered items that cannot be fulfilled be cancelled automatically on the promise date?
+
+No, pre-ordered items that cannot be fulfilled will not be cancelled automatically on the promise date if OMS does not find the physical ATP for the items. They item will remain in the Preorder Parking unless they are manually cancelled either from the Preorder Management app or by using the CSV.
