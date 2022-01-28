@@ -1,0 +1,3 @@
+== Q020. If the arrival date of a pre-order item in a PO is changed in OMS. Will the new pre-orders for items have an updated promise date?
+
+Yes, after the arrival date of PO is updated in OMS, the updated date will be set as a promise date to the new pre-ordered item imported in OMS.
