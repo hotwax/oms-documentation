@@ -1,3 +1,42 @@
 == FAQs
 
-include::Q001.{sp}How{sp}does{sp}OMS{sp}make{sp}an{sp}item{sp}pre-orderable?.adoc[]
+link:Q001.%20How%20does%20OMS%20make%20an%20item%20pre-orderable%3F.adoc[Q001. How does OMS make an item pre-orderable?]
+
+link:Q002.%20What%20is%20a%20purchase%20order%3F.adoc[Q002. What is a purchase order?]
+
+link:Q003.%20What%20is%20the%20purpose%20of%20creating%20a%20purchase%20order%20in%20OMS%3F.adoc[Q003. What is the purpose of creating a purchase order in OMS?]
+
+link:Q004.%20How%20to%20create%20a%20purchase%20order%20in%20OMS%3F.adoc[Q004. How to create a purchase order in OMS?]
+
+link:Q005.%20How%20does%20OMS%20inform%20Shopify%20to%20start%20taking%20pre-orders%20for%20an%20item%3F.adoc[Q005. How does OMS inform Shopify to start taking pre-orders for an item?]
+
+link:Q006.%20How%20pre-orders%20are%20imported%20in%20OMS%3F.adoc[Q006. How pre-orders are imported in OMS?]
+
+link:Q007.%20How%20does%20OMS%20set%20the%20promise%20date%20for%20the%20pre-order%20items%20while%20importing%20orders%20from%20Shopify%3F.adoc[Q007. How does OMS set the promise date for the pre-order items while importing orders from Shopify?]
+
+link:Q008.%20How%20auto-releasing%20of%20pre-ordered%20items%20works%20in%20OMS%3F.adoc[Q008. How auto-releasing of pre-ordered items works in OMS?]
+
+link:Q009.%20If%20the%20warehouse%20and%20stores%20do%20not%20have%20a%20physical%20ATP%20quantity%20to%20reserve%20pre-ordered%20items.%20Will%20the%20pre-order%20items%20be%20auto-released%20for%20brokering%20on%20the%20promised%20date%3F.adoc[Q009. If the warehouse and stores do not have a physical ATP quantity to reserve pre-ordered items. Will the pre-order items be auto-released for brokering on the promised date?]
+
+link:Q010.%20If%20the%20pre-order%20items%20in%20the%20PO%20arrive%20early.%20Will%20the%20pre-order%20items%20be%20auto-released%3F.adoc[Q010. If the pre-order items in the PO arrive early. Will the pre-order items be auto-released?]
+
+link:Q011.%20If%20the%20pre-order%20items%20in%20the%20PO%20arrive%20late.%20Will%20the%20pre-order%20items%20be%20auto-released%3F.adoc[Q011. If the pre-order items in the PO arrive late. Will the pre-order items be auto-released?]
+
+link:Q012.%20If%20the%20pre-order%20items%20in%20the%20PO%20arrive%20early.%20Can%20the%20pre-ordered%20items%20be%20released%20for%20brokering%20before%20the%20promise%20date%3F.adoc[Q012. If the pre-order items in the PO arrive early. Can the pre-ordered items be released for brokering before the promise date?]
+
+link:Q013.%20If%20the%20pre-order%20items%20in%20the%20PO%20arrive%20early.%20Can%20the%20pre-ordered%20items%20be%20released%20to%20a%20specific%20warehouse%20before%20the%20promise%20date%3F.adoc[Q013. If the pre-order items in the PO arrive early. Can the pre-ordered items be released to a specific warehouse before the promise date?]
+
+link:Q014.%20If%20an%20item%20is%20in%20the%20pre-order%20category%20and%20new%20inventory%20is%20uploaded%20in%20OMS.%20Will%20the%20item%20still%20remain%20in%20the%20pre-order%20category%3F.adoc[Q014. If an item is in the pre-order category and new inventory is uploaded in OMS. Will the item still remain in the pre-order category?]
+
+link:Q015.%20If%20less%20than%20expected%20quantity%20arrives%20in%20the%20PO.%20Will%20pre-ordered%20items%20that%20cannot%20be%20fulfilled%20be%20cancelled%20automatically%20on%20the%20promise%20date%3F.adoc[Q015. If less than expected quantity arrives in the PO. Will pre-ordered items that cannot be fulfilled be cancelled automatically on the promise date?]
+
+link:Q016.%20If%20less%20than%20expected%20quantity%20arrives%20in%20the%20PO.%20How%20to%20cancel%20the%20pre-ordered%20items%20that%20cannot%20be%20fulfilled%3F.adoc[Q016. If less than expected quantity arrives in the PO. How to cancel the pre-ordered items that cannot be fulfilled?]
+
+link:Q017.%20If%20the%20vendor%20has%20changed%20the%20delivery%20date%20of%20a%20pre-ordered%20item.%20How%20to%20change%20the%20arrival%20date%20of%20the%20item%20in%20the%20PO%20in%20OMS%3F.adoc[Q017. If the vendor has changed the delivery date of a pre-ordered item. How to change the arrival date of the item in the PO in OMS?]
+
+link:Q018.%20If%20the%20arrival%20date%20of%20a%20pre-order%20item%20in%20a%20PO%20is%20changed%20in%20OMS.%20Will%20the%20promise%20date%20of%20the%20existing%20pre-ordered%20item%20reserved%20against%20PO%20also%20change%3F.adoc[Q018. If the arrival date of a pre-order item in a PO is changed in OMS. Will the promise date of the existing pre-ordered item reserved against PO also change?]
+
+link:Q019.%20If%20the%20arrival%20date%20of%20a%20pre-order%20item%20in%20a%20PO%20is%20changed%20in%20OMS.%20Will%20an%20updated%20promise%20date%20be%20displayed%20to%20the%20customer%20on%20the%20storefront%3F.adoc[Q019. If the arrival date of a pre-order item in a PO is changed in OMS. Will an updated promise date be displayed to the customer on the storefront?]
+
+link:Q020.%20If%20the%20arrival%20date%20of%20a%20pre-order%20item%20in%20a%20PO%20is%20changed%20in%20OMS.%20Will%20the%20new%20pre-orders%20for%20items%20have%20an%20updated%20promise%20date%3F.adoc[Q020. If the arrival date of a pre-order item in a PO is changed in OMS. Will the new pre-orders for items have an updated promise date?]
+
