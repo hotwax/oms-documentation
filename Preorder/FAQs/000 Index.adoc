@@ -1,4 +1,4 @@
-== FAQs
+== Index of FAQs
 
 link:Q001.%20How%20does%20OMS%20make%20an%20item%20pre-orderable%3F.adoc[Q001. How does OMS make an item pre-orderable?]
 
