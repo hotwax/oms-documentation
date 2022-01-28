@@ -1,4 +1,4 @@
-=== Q008. How auto-releasing of pre-ordered items works in OMS?
+== Q008. How auto-releasing of pre-ordered items works in OMS?
 
 
 The OMS automatically releases the pre-ordered item from the *_Preorder Parking_* for brokering to a suitable warehouse or store, when the service *_checkPreOrderedItemsForRelease_* runs. 
