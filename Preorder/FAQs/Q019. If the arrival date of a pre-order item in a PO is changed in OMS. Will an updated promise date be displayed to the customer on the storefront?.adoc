@@ -1,0 +1,5 @@
+== Q019. If the arrival date of a pre-order item in a PO is changed in OMS. Will an updated promise date be displayed to the customer on the storefront?
+
+Yes, the updated promise date will be displayed to the customer on the storefront.
+
+After the arrival date of PO is updated in OMS, the service loadPreorderCategoryItems will send a new estimated shipping date to Shopify, which will be saved by Shopify and displayed to the customer on the product detail page.
