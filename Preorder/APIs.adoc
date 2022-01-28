@@ -1,15 +1,3 @@
 = PreOrder APIs
 
-include::APIs/cancelOrderItem.adoc[leveloffset=+1]
-
-include::APIs/checkInventory.adoc[leveloffset=+1]
-
-include::APIs/facilities.adoc[leveloffset=+1]
-
-include::APIs/releaseOrderItem.adoc[leveloffset=+1]
-
-include::APIs/searchOrders.adoc[leveloffset=+1]
-
-include::APIs/searchProducts.adoc[leveloffset=+1]
-
-include::APIs/updateOrderItem.adoc[leveloffset=+1]
+include::APIs/preorderAPIs(Index).adoc[leveloffset=+1]
