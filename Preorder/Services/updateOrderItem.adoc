@@ -1,0 +1,15 @@
+= updateOrderItem
+
+This service is used to update the order item using entity-auto, Accepts pre-defined attributes and update the order item.
+
+.Following are the requried attributes:
+- orderId (required, string): Unique identification of the order in the system.
+- orderItemSeqId (required, string): Unique identification of the order item in the system.
+
+== Triggered Services
+
+=== createOrderInvPromiseHistory
+This service is used to created record in OrderInvPromiseHistory entity if the promisedDatetime is not empty in the passed properties.
+
+=== createOrderIndex
+This service is used to create the order indexes after updating the order item.
