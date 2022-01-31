@@ -15,3 +15,5 @@ include::loadPreorderCategoryItems.adoc[leveloffset=+1]
 include::purchaseOrderDataSetup.adoc[leveloffset=+1]
 
 include::receiveInventoryForProducts.adoc[leveloffset=+1]
+
+include::releaseOrderItem.adoc[leveloffset=+1]
