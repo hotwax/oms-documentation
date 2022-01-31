@@ -1,0 +1,40 @@
+= releaseOrderItem
+
+This service is used to release the order item from one to another facility.
+
+== Properties
+Following are the attributes used in below service:
+
+[width="100%", cols="4" options="header"]
+|=======
+|Attribute |Type |Required| Description
+|orderId|String|Yes|This attribute contains the unique ID of order in OMS.
+|orderItemSeqId|String|No|This attribute contains the item ID of order in OMS.
+|shipGroupSeqId|String|No|This attribute contains the unique ID of ship-group in OMS.
+|fromFacilityId|String|No|This attribute contains the unique ID of fromFacility in OMS, from which item is released.
+|toFacilityId|String|No|This attribute contains the unique ID of toFacility in OMS, to which item is released.
+|changeReasonEnumId|String|No|This attribute contains the reason of releasing the item. Accepts predefined values in the system.
+|routerUserLogin|String|No|This attribute contains the value of userLoginId.
+|=======
+
+== Inline Services
+
+=== createOrderItemShipGroup
+This service is used to create record in OrderItemShipGroup entity with toFacilityId.
+
+=== moveItemBetweenShipGroups
+This service is used to move the item between ship groups along with the control on reservations.
+
+=== createOrderFacilityChange
+This service is used to create record in OrderFacilityChange entity along with the passed properties.
+
+== Triggered Services
+
+=== reserveInventoryForReleasedOrderItem
+This service is used to reserve the inventory on releasing the order items using reserveAndBalanceNegativeInventory service.
+
+=== changeOrderItemStatus
+This service is used to update the order item status from hold to approved.
+
+=== createOrderIndex
+This service is used to create the order indexes after releasing the order item.
