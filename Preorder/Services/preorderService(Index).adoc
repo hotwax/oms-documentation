@@ -2,6 +2,8 @@
 
 include::addCategoryProducts.adoc[leveloffset=+1]
 
+include::cancelOrderItem.adoc[leveloffset=+1]
+
 include::checkPreOrderedItemsForRelease.adoc[leveloffset=+1]
 
 include::createOrdersFromShopify.adoc[leveloffset=+1]
