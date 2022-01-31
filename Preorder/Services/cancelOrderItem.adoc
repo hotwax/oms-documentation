@@ -1,0 +1,46 @@
+= cancelOrderItem
+
+This service is used to cancel the order item.
+
+== Properties
+Following are the attributes used in below service:
+
+[width="100%", cols="4" options="header"]
+|=======
+|Attribute |Type |Required| Description
+|orderId|String|Yes|This attribute contains the unique ID of order in OMS.
+|orderItemSeqId|String|No|This attribute contains the item ID of order in OMS.
+|shipGroupSeqId|String|No|This attribute contains the unique ID of ship-group in OMS.
+|cancelQuantity|BigDecimal|No|This attribute contains the quantity of item that you need to cancel.
+|itemReasonMap|Map|No|This attribute contains the reason of cancellation. Accepts predefined values in the system.
+|itemCommentMap|Map|No|This attribute contains the comment for cancelling the item.
+|=======
+
+== Inline Services
+
+=== createOrderItemChange
+This service is used to create record in OrderItemChange entity with changeTypeEnumId as ODR_ITM_CANCEL along with the passed properties.
+
+=== createOrderNote
+This service is used to create a note item and associate with the order header.
+
+=== cancelOrderItemInvResQty
+This service is used to cancel a specific quantity of an order item using cancelOrderInventoryReservation and cancelOrderItemShipGrpInvRes services. If the product is marketing package then checkDecomposeInventoryItem service will also be invoked.
+
+=== changeOrderItemStatus
+This service is used to update the status of an existing order item. If no orderItemSeqId is specified, then the status of all order items will be changed.
+
+== Triggered Services
+
+=== resetGrandTotal
+This service is used to reset the OrderHeader grand total.
+
+=== checkAndRejectOrderItem
+This service is used to reject order item.
+
+* If the fulfillment is started then reject the order item using unpackOrderItems, updateShipment and rejectShipmentItem services.
+
+* If the fulfillment is not started i.e. shipment record is not exist then reject the order item using rejectOrderItem service.
+
+=== createOrderIndex
+This service is used to create the order indexes after cancelling the order item.
