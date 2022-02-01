@@ -1,0 +1,7 @@
+== Q036. How can retailers manually release pre-ordered items to a specific warehouse?
+
+Retailers can release pre-ordered items by selecting the items from the Orders screen of the Preorder Management app and using the release to warehouse button.
+
+Alternatively, retailers can also release pre-ordered items by entering a quantity in the Product screen of the Preorder Management app and using the release to warehouse button.
+
+The pre-ordered items will be released based on the first-in-first-out basis i.e. the oldest pre-order for the item will be released first followed by the newer pre-orders.
