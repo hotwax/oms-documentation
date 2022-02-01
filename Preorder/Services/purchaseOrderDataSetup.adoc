@@ -1,4 +1,5 @@
-== purchaseOrderDataSetup
+= purchaseOrderDataSetup
+
 This service is used to import the purchase order in HC using CSV. Further it invokes the validatePurchaseOrderCSV to validate the parameters and then invoke the storeOrder service to create the order. 
 
 == Properties
@@ -28,3 +29,6 @@ This service is used to create purchase order using createOrder service
 
 === checkAndAdjustAtpToEarlyPO
 This service is used to check the reserved quantity of current PO and adjust the ATP in both PO by adding the reserved quantity to current PO ATP and substract it from other PO ATP using updateOrderItem service.
+
+=== createOrderIndex
+This service is used to create the order indexes after creating the order.
