@@ -6,3 +6,8 @@ Retailers can release pre-ordered items by selecting the items from the Orders s
 Alternatively, retailers can also release pre-ordered items by entering a quantity in the Product screen of the Preorder Management app and using the release button.
 
 The pre-ordered items will be released based on the first-in-first-out basis i.e. the oldest pre-order for the item will be released first followed by the newer pre-orders.
+
+=== For more details please refer releaseOrderItem API and service:
+include::../APIs/releaseOrderItem.adoc[leveloffset=+1]
+
+include::../Services/releaseOrderItem.adoc[leveloffset=+1]
