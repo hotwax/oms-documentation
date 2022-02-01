@@ -4,10 +4,10 @@ No, if the arrival date of a pre-ordered item in a PO is changed and the promise
 
 The promise date of the existing pre-ordered item will remain the same irrespective of the change in the arrival date of PO. But it can be changed from the Preorder Management app or by importing a CSV in the OMD
 
-=== For more details please refer updateOrderItem API and Service:
+=== These are the technical details for updating the item:
 
 API:
 include::../APIs/updateOrderItem.adoc[leveloffset=+1]
 
-Service:
+Service: MDM_UPD_ORD_ITM_JSON is the configId to update the order-item using CSV.
 include::../Services/updateOrderItem.adoc[leveloffset=+1]
