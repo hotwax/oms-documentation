@@ -1,0 +1,6 @@
+=== Q021. Today is the arrival date of the PO but it still has available quantities for which pre-order can be taken. Can the customer still place pre-orders for the item?
+
+
+No, the item will be removed from the pre-order category when the service *_loadPreorderCategoryItems_* runs, and changes will be pushed to Shopify when service *_pushInventoryPolicyForPreorderItems_* runs.
+
+Pre-order can only be taken for an item if it has a PO with a future arrival date and the PO has available quantity remaining. PO with current and past arrival dates are not considered for pre-orders.
