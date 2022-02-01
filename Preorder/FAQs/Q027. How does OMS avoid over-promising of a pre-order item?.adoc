@@ -1,0 +1,24 @@
+== Q027. How does OMS avoid over-promising of a pre-order item?
+
+
+This is a two-step process, the first step involved removing the pre-order item from the pre-order category in OMS and the second step involves informing Shopify to stop taking pre-orders for the item.
+
+Let's discuss each step in detail.
+
+*_Step 1: Removing item from pre-order category in OMS_*
+
+As mentioned earlier, to make an item pre-orderable OMS adds it to the pre-order category. Similarly, to stop pre-ordering of an item, it should be removed from the pre-order category
+
+*For retailers with purchase orders details* +
+OMS automatically removes an item from the pre-order category when the service *_loadPreorderCategoryItems_* runs, if any one of the following conditions is fulfilled:
+
+* There is no PO in the system with a future arrival date
+* There is no available quantity in PO with a future arrival date
+* The system has PO with a future arrival date but it is cancelled 
+
+*For retailers without purchase orders details* +
+In this case, as there are no pre-orders the item needs to be manually removed from the pre-order category. 
+
+*_Step 2: Inform Shopify to stop taking pre-orders for the item_*
+
+If an item is removed from the pre-order category then the service *_pushInventoryPolicyForPreorderItems_* uncheck the flag for Continue selling when out of stock on Shopify and then onwards the item will be displayed as out of stock to the customer.
