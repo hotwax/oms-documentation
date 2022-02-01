@@ -1,4 +1,5 @@
-== importProductCategoryMember
+= importProductCategoryMember
+
 This service is used to add the products to the specific category via CSV using importProductCategoryMemberData service.
 
 == Properties
