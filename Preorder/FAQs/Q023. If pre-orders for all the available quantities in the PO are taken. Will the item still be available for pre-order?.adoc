@@ -1,4 +1,4 @@
-=== Q023. If pre-orders for all the available quantities in the PO are taken. Will the item still be available for pre-order?
+== Q023. If pre-orders for all the available quantities in the PO are taken. Will the item still be available for pre-order?
 
 
 No, the item will be removed from the pre-order category when the service *_loadPreorderCategoryItems_* runs, and changes will be pushed to Shopify when service *_pushInventoryPolicyForPreorderItems_* runs.
