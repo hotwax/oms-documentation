@@ -2,10 +2,9 @@
 
 Yes, if the pre-ordered items are available before the promise date then they can be manually released to a particular warehouse using the Preorder Management application.
 
-=== These are the technical details:
+Note: While calling the releaseOrderItem API, If the toFacilityId is not NA and changeReasonEnumId is BROKERED then item is released to the warehouse/facility.
 
-API:
+=== For more details please refer releaseOrderItem API and service:
 include::../APIs/releaseOrderItem.adoc[leveloffset=+1]
 
-Service:
 include::../Services/releaseOrderItem.adoc[leveloffset=+1]
