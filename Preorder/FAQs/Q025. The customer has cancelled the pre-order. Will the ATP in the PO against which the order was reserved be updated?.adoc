@@ -6,5 +6,5 @@ These increased quantities can be used for pre-order of the item placed by other
 
 === These are the technical details for cancelled item:
 
-Service: Please refer cancelOrderItemInvResQty from inline services
+Service: Please refer cancelOrderItemInvResQty from inline services in cancelOrderItem service
 include::../Services/cancelOrderItem.adoc[leveloffset=+1]
