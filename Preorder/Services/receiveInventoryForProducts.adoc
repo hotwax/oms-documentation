@@ -1,4 +1,5 @@
 = receiveInventoryForProducts
+
 This service is used to receive the inventory of products in bulk using CSV.
 
 == Properties
