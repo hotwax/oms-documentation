@@ -8,6 +8,8 @@ include::checkPreOrderedItemsForRelease.adoc[leveloffset=+1]
 
 include::createOrdersFromShopify.adoc[leveloffset=+1]
 
+include::generateSalesOrderItemPODetailFeed.adoc[leveloffset=+1]
+
 include::importProductCategoryMember.adoc[leveloffset=+1]
 
 include::loadPreorderCategoryItems.adoc[leveloffset=+1]
