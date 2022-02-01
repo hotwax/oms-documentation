@@ -1,0 +1,48 @@
+= User-Profile
+
+To get the detail of logged-in user you will need to call `/user-profile` endpoint with get method.
+
+=== *Request*
+*Endpoint*
+----
+GET /api/user-profile HTTP/1.1
+
+Host: example.com
+----
+*Headers*
+----
+Content-Type:​ application/json
+
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1NTE5NTIxNjcsInVzZXJMb2dpbklkIjoicGFsbGF2aUBleGFtcGxlLmNvbSJ9.VREDB8Mul9q4sdeNQAvhikVdpDJKKoMBfiBbeQTQOn5e5eOj6XdXnHNAguMpgXk8KXhj_scLDdlfe0HCKPp7HQ
+
+Accept: application/json
+----
+*Body*
+[source, json]
+----------------------------------------------------------------
+{
+}
+----------------------------------------------------------------
+=== *Response*
+
+*Status Code*
+----
+HTTP/1.1​ ​200​ ​OK
+----
+
+*Headers*
+----
+Content-Type: application/json
+----
+*Body*
+[source, json]
+----------------------------------------------------------------
+{
+    "partyId" : "admin",
+    "partyName" : "Admin User",
+    "partyImageUrl": "",
+    "email" : "admin@example.com",
+    "userLoginId" : "admin",
+    "userTimeZone" : "Africa/Asmara",
+    "facilities" : []
+}
