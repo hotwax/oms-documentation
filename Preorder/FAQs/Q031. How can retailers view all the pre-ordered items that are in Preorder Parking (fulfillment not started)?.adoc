@@ -1,0 +1,5 @@
+== Q031. How can retailers view all the pre-ordered items that are in Preorder Parking (fulfillment not started)?
+
+Retailers can view all the pre-order items that are in pre-order parking from the Orders screen of the Preorder Management app.
+
+They can further filter the results based on the order date, promise date, and pre-ordered item.
