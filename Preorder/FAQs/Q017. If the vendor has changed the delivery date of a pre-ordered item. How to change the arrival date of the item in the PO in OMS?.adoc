@@ -1,6 +1,6 @@
 == Q017. If the vendor has changed the delivery date of a pre-ordered item. How to change the arrival date of the item in the PO in OMS?
 
-The arrival date of PO in HC can be changed either from UI or by uploading a CSV with an updated arrival date.
+The arrival date of PO in HC can be changed either from UI using updateItemArrivalDate request or by uploading a CSV with an updated arrival date.
 
 In case OMS is integrated with the ERP system then the arrival date of PO can be updated automatically in OMS (provided the date is changed in the ERP system and the integration has handled the use case to update the arrival date of PO in OMS)
 
@@ -10,4 +10,8 @@ API:
 include::../APIs/updateOrderItem.adoc[leveloffset=+1]
 
 Service:
+
+* updateItemArrivalDate request will further invoke updateOrderItem service to change the date from UI.
+* MDM_UPD_ORD_ITM_JSON is the configId to update the order-item using CSV.
+
 include::../Services/updateOrderItem.adoc[leveloffset=+1]
