@@ -2,4 +2,4 @@
 
 Yes, if an order is cancelled in OMS then changes will be pushed to Shopify and the order will be cancelled in Shopify as well.
 
-There is a seca rule on changeOrderStatus service that will invoke pushCancelledOrderToShopify service if the orderId is not empty, statusId is ORDER_CANCELLED and orderTypeId is SALES_ORDER. Further it cancel the order on shopify using calculateShopifyOrderRefund and sendShopifyRequest method.
+There is a seca rule on *_changeOrderStatus_* service that will invoke *_pushCancelledOrderToShopify_* service if the orderId is not empty, statusId is ORDER_CANCELLED and orderTypeId is SALES_ORDER. Further it cancel the order on shopify using calculateShopifyOrderRefund and sendShopifyRequest method.
