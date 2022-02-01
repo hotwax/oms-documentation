@@ -1,3 +1,23 @@
 = PreOrder Services
 
-include::Services/preorderService(Index).adoc[leveloffset=+1]
+link:Services/addCategoryProducts.adoc[addCategoryProducts]
+
+link:Services/cancelOrderItem.adoc[cancelOrderItem]
+
+link:Services/checkPreOrderedItemsForRelease.adoc[checkPreOrderedItemsForRelease]
+
+link:Services/createOrdersFromShopify.adoc[createOrdersFromShopify]
+
+link:Services/generateSalesOrderItemPODetailFeed.adoc[generateSalesOrderItemPODetailFeed]
+
+link:Services/importProductCategoryMember.adoc[importProductCategoryMember]
+
+link:Services/loadPreorderCategoryItems.adoc[loadPreorderCategoryItems]
+
+link:Services/purchaseOrderDataSetup.adoc[purchaseOrderDataSetup]
+
+link:Services/receiveInventoryForProducts.adoc[receiveInventoryForProducts]
+
+link:Services/releaseOrderItem.adoc[releaseOrderItem]
+
+link:Services/updateOrderItem.adoc[updateOrderItem]
