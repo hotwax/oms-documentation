@@ -15,3 +15,5 @@ link:APIs/searchOrders.adoc[searchOrders]
 link:APIs/searchProducts.adoc[searchProducts]
 
 link:APIs/updateOrderItem.adoc[updateOrderItem]
+
+link:APIs/user-profile.adoc[user-profile]
