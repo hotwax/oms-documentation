@@ -52,4 +52,4 @@ Content-Type: application/json
 }
 ----------------------------------------------------------------
 
-== To update the the order item in bulk you will need to call `/uploadJsonFile` endpoint with post method and MDM_UPD_ORD_ITM_JSON as configId. Further it use uploadAndImportFile service.
+=== To update the the order item in bulk you will need to call `/uploadJsonFile` endpoint with post method and MDM_UPD_ORD_ITM_JSON as configId. Further it use uploadAndImportFile service.
