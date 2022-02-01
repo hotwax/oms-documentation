@@ -3,3 +3,11 @@
 The arrival date of PO in HC can be changed either from UI or by uploading a CSV with an updated arrival date.
 
 In case OMS is integrated with the ERP system then the arrival date of PO can be updated automatically in OMS (provided the date is changed in the ERP system and the integration has handled the use case to update the arrival date of PO in OMS)
+
+=== These are the technical details for updating the item:
+
+API:
+include::../APIs/updateOrderItem.adoc[leveloffset=+1]
+
+Service:
+include::../Services/updateOrderItem.adoc[leveloffset=+1]
