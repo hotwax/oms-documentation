@@ -6,8 +6,5 @@ These increased quantities can be used for pre-order of the item placed by other
 
 === These are the technical details for cancelled item:
 
-API:
-include::../APIs/cancelOrderItem.adoc[leveloffset=+1]
-
 Service: Please refer cancelOrderItemInvResQty from inline services
 include::../Services/cancelOrderItem.adoc[leveloffset=+1]
