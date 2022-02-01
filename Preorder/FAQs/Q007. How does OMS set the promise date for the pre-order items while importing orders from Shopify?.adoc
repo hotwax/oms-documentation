@@ -1,4 +1,4 @@
-=== Q007. How does OMS set the promise date for the pre-order items while importing orders from Shopify?
+== Q007. How does OMS set the promise date for the pre-order items while importing orders from Shopify?
 
 
 *For retailers with purchase orders details* +
