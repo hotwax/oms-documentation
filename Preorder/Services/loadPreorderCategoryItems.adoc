@@ -25,7 +25,7 @@ This worker service is used to fetch the productStoreCatalog as per the passed p
 This utility service is used to fetch the preOrderCategoryId as per the passed productStoreCatalog along with the prodCatalogCategoryTypeId: PCCT_PREORDR
 
 === getAllActivePOForStore
-This helper service is used to fetch active PO from PreOrderShipmentItem entity, where the records are orderby ascending estimatedDeliveryDate, also the order/item status should be created/approved.
+This helper service is used to fetch active PO from PreOrderShipmentItem entity using getAllActivePO method, where the records are orderby ascending estimatedDeliveryDate, also the order/item status should be created/approved.
 
 === getActivePOForItem
 This helper service is used to filters/fetches the active PO as per the active PO items.
