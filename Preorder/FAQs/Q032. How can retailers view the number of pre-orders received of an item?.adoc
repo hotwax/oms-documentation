@@ -1,0 +1,3 @@
+== Q032. How can retailers view the number of pre-orders received of an item?
+
+Retailers can view how many pre-orders are received for an item from the Product screen of the Preorder Management app.
