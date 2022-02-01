@@ -56,3 +56,6 @@ Content-Type: application/json
     "changeReasonEnumId":"BROKERED",
     "webSiteId":"API"
 }
+----------------------------------------------------------------
+
+To release the the order item in bulk you will need to call `/uploadJsonFile` endpoint with post method and MDM_REL_ORD_ITM_JSON as configId. Further it use uploadAndImportFile service.
