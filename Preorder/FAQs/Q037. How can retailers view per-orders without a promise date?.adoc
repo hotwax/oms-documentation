@@ -1,0 +1,5 @@
+== Q037. How can retailers view per-orders without a promise date?
+
+Retailers can view all the pre-orders without a promise date from the Orders screen of the Preorder Management app and use the toggle for Only orders without promise date.
+
+They can further filter the results based on the order date and pre-ordered item.
