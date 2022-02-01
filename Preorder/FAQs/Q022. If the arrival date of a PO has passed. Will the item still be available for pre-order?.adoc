@@ -1,0 +1,6 @@
+=== Q022. If the arrival date of a PO has passed. Will the item still be available for pre-order?
+
+
+No, the item will be removed from the pre-order category when the service *_loadPreorderCategoryItems_* runs, and changes will be pushed to Shopify when service *_pushInventoryPolicyForPreorderItems_* runs.
+
+Pre-order can only be taken for an item if it has a PO with a future arrival date and the PO has available quantity remaining. PO with current and past arrival dates are not considered for pre-orders.
