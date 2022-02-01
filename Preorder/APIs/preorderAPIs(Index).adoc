@@ -6,6 +6,8 @@ include::checkInventory.adoc[leveloffset=+1]
 
 include::facilities.adoc[leveloffset=+1]
 
+include::login.adoc[leveloffset=+1]
+
 include::releaseOrderItem.adoc[leveloffset=+1]
 
 include::searchOrders.adoc[leveloffset=+1]
