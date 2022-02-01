@@ -1,0 +1,3 @@
+== Q026. If the pre-orders for the item are cancelled in OMS. Will the order be cancelled in Shopify as well?
+
+Yes, if an order is cancelled in OMS then changes will be pushed to Shopify and the order will be cancelled in Shopify as well.
