@@ -17,6 +17,12 @@ Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1NTE5NTIxNjcsInVzZXJMb2dpb
 
 Accept: application/json
 ----
+Following parameters can be passed in the filters:
+
+* To filter the order as per orderDate, date can be select as orderBefore/orderAfter "orderDate: [2022-01-01T05:00:00Z TO 2022-02-02T04:59:59Z]"
+* To filter the order as per promisedDatetime, date can be select as promisedBefore/promisedAfter "promisedDatetime: [2022-01-01T05:00:00Z TO 2022-02-02T04:59:59Z]"
+* To filter the order as per loyalty status, date can be select as LoyaltyCustomer/LoyaltyPlusOrder "orderNotes: LoyaltyPlusOrder"
+
 *Body*
 [source, json]
 ----------------------------------------------------------------
