@@ -5,3 +5,8 @@ Retailers can cancel pre-ordered items by selecting the items from the Orders sc
 Alternatively, retailers can also cancel pre-ordered items by entering a quantity in the Product screen of the Preorder Management app.
 
 The pre-ordered items will be cancelled based on the last-in-first-out basis i.e. the newest pre-order for the item will be cancelled first followed by the newer pre-orders.
+
+=== For more details please refer cancelOrderItem API and service:
+include::../APIs/cancelOrderItem.adoc[leveloffset=+1]
+
+include::../Services/cancelOrderItem.adoc[leveloffset=+1]
