@@ -1,0 +1,24 @@
+= generateSalesOrderItemPODetailFeed
+
+This service is used to generate feed to update promised date, po id on existing sales items.
+
+== Properties
+Following are the attributes used in below service:
+
+[width="100%", cols="4" options="header"]
+|=======
+|Attribute |Type |Required| Description
+|orderId|String|No|This attribute contains the unique ID of order in OMS.
+|productStoreIds|String|No|This attribute contains the unique ID of productStore in OMS.
+|productId|String|No|This attribute contains the unique ID of product in OMS.
+|=======
+
+== Inline Services
+
+=== updateSalesOrderItemPODetail
+This service is used to generate a CSV of sales items along with corresponding po id, promised date.
+
+Further updateOrderItem service will be invoked as per following condition:
+
+* If no active PO exists, then update Sales Order item with current promised date, po id as null.
+* If all the sales items for a product is updated and PO ATP is still available, update the PO Item with remaining ATP.
