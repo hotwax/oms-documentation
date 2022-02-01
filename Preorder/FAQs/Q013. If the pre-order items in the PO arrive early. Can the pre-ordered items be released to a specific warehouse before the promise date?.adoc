@@ -1,3 +1,9 @@
 == Q013. If the pre-order items in the PO arrive early. Can the pre-ordered items be released to a specific warehouse before the promise date?
 
 Yes, if the pre-ordered items are available before the promise date then they can be manually released to a particular warehouse using the Preorder Management application.
+
+=== These are the technical details:
+
+API: include::../APIs/releaseOrderItem.adoc[leveloffset=+1]
+
+Service: include::../Services/releaseOrderItem.adoc[leveloffset=+1]
