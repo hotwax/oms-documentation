@@ -50,5 +50,6 @@ Content-Type: application/json
     "cors.request.type":"actual","_EVENT_MESSAGE_":"Order Item updated successfully",
     "webSiteId":"API"
 }
+----------------------------------------------------------------
 
 == To update the the order item in bulk you will need to call `/uploadJsonFile` endpoint with post method and MDM_UPD_ORD_ITM_JSON as configId. Further it use uploadAndImportFile service.
