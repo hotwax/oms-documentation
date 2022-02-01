@@ -4,6 +4,8 @@ Yes, if the pre-ordered items are available before the promise date then they ca
 
 === These are the technical details:
 
-API: include::../APIs/releaseOrderItem.adoc[leveloffset=+1]
+API:
+include::../APIs/releaseOrderItem.adoc[leveloffset=+1]
 
-Service: include::../Services/releaseOrderItem.adoc[leveloffset=+1]
+Service:
+include::../Services/releaseOrderItem.adoc[leveloffset=+1]
