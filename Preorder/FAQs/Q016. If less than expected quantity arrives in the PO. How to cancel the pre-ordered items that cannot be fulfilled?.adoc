@@ -5,3 +5,11 @@ The retailer can navigate to the product details screen of the Preorder Manageme
 The pre-ordered items will be cancelled based on the last-in-first-out basis i.e. the newest pre-order for the item will be cancelled first followed by the newer pre-orders
 
 Retailers can also import CSV in OMS to cancel the pre-orders.
+
+=== These are the technical details for cancelling the item manually:
+
+API:
+include::../APIs/cancelOrderItem.adoc[leveloffset=+1]
+
+Service: MDM_CAN_ORD_ITM_JSON is the configId to cancel the item using CSV.
+include::../Services/cancelOrderItem.adoc[leveloffset=+1]
