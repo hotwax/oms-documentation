@@ -1,0 +1,7 @@
+== Q034. How can retailers cancel pre-ordered items?
+
+Retailers can cancel pre-ordered items by selecting the items from the Orders screen of the Preorder Management app.
+
+Alternatively, retailers can also cancel pre-ordered items by entering a quantity in the Product screen of the Preorder Management app.
+
+The pre-ordered items will be cancelled based on the last-in-first-out basis i.e. the newest pre-order for the item will be cancelled first followed by the newer pre-orders.
