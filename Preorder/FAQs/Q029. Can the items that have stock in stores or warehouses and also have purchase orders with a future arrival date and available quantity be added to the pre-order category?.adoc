@@ -4,3 +4,6 @@
 No, items that have stock in stores/warehouses cannot be added to the pre-order category even if they have a purchase order with a future arrival date and available quantity. 
 
 But once all the stock in stores/warehouses is reserved, the system will automatically add the items to the pre-order category next time the *_loadPreorderCategoryItems_* service is scheduled to run.
+
+=== For more details please refer loadPreorderCategoryItems service:
+include::../Services/loadPreorderCategoryItems.adoc[leveloffset=+1]
