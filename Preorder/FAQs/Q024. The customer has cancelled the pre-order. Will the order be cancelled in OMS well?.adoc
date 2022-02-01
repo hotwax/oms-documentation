@@ -1,0 +1,3 @@
+== Q024. The customer has cancelled the pre-order. Will the order be cancelled in OMS as well?
+
+Yes, if an order is cancelled by the customer from the storefront, the order will be cancelled in OMS as well.
