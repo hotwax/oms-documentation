@@ -2,7 +2,7 @@
 
 Yes, in this case, the item will be available for pre-order. 
 
-if all the available quantity in the current PO is consumed and the item has available quantity in another PO with a later arrival date then the service *_loadPreorderCategoryItems_* will make the PO that has available quantity with a later arrival date as current PO. From date will also be updated on the pre-order category page as the arrival date of the new PO.
+If all the available quantity in the current PO is consumed and the item has available quantity in another PO with a later arrival date then the service *_loadPreorderCategoryItems_* will make the PO that has available quantity with a later arrival date as current PO. To date will also be updated on the pre-order category page as the arrival date of the new PO.
 
 The service *_pushInventoryPolicyForPreorderItems_* will save the arrival date of the new active PO in Shopify and it will be displayed to the customers on the product detail page while placing orders.
 
