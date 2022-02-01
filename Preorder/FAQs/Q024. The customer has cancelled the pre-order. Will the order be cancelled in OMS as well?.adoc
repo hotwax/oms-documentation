@@ -1,7 +1,8 @@
 == Q024. The customer has cancelled the pre-order. Will the order be cancelled in OMS as well?
 
 Yes, if an order is cancelled by the customer from the storefront, the order will be cancelled in OMS as well.
-A job(cancelShopifyOrders) is scheduled to fetch the cancelled order form storefront and mark them cancelled in OMS. Further it invoke cancelOrderItem service to cancel the order in OMS.
+
+A job(cancelShopifyOrders) is scheduled to fetch the cancelled order from storefront and mark them cancelled in OMS. Further it invoke cancelOrderItem service to cancel the order in OMS.
 
 === These are the technical details:
 
