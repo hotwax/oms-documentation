@@ -3,3 +3,11 @@
 Yes, if an order is cancelled, the reservation for the order made against the PO will be released and the available quantity in the PO will be increased by the ordered quantity of the item in the cancelled pre-order.
 
 These increased quantities can be used for pre-order of the item placed by other customers.
+
+=== These are the technical details for cancelled item:
+
+API:
+include::../APIs/cancelOrderItem.adoc[leveloffset=+1]
+
+Service: Please refer cancelOrderItemInvResQty from inline services
+include::../Services/cancelOrderItem.adoc[leveloffset=+1]
