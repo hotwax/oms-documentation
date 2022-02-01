@@ -4,3 +4,8 @@
 No, the item will be removed from the pre-order category when the service *_loadPreorderCategoryItems_* runs, and changes will be pushed to Shopify when service *_pushInventoryPolicyForPreorderItems_* runs.
 
 Pre-order can only be taken for an item if it has a PO with a future arrival date and the PO has available quantity remaining. PO with all the available quantities consumed are not considered for pre-orders.
+
+There is a helper method getAllActivePOForStore which will be invoked from loadPreorderCategoryItems service. Here it checks the PO with future arrival date as estimatedDeliveryDate and available quantity as availableToPromise from PreOrderShipmentItem entity.
+
+=== For more details please refer loadPreorderCategoryItems service:
+include::../Services/loadPreorderCategoryItems.adoc[leveloffset=+1]
