@@ -1,3 +1,6 @@
 == Q014. If an item is in the pre-order category and new inventory is uploaded in OMS. Will the item still remain in the pre-order category?
 
 Yes, the item will still remain in the pre-order category even though OMS has physical ATP quantity for the pre-ordered item. The system will consider that the inventory received is for already existing pre-orders and will allot it to them after they are release from the Preorder Parking.
+
+=== These are the technical details to upload new inventory in OMS using CSV:
+include::../Services/receiveInventoryForProducts.adoc[leveloffset=+1]
