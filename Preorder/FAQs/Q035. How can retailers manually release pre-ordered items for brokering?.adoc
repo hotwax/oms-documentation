@@ -7,6 +7,8 @@ Alternatively, retailers can also release pre-ordered items by entering a quanti
 
 The pre-ordered items will be released based on the first-in-first-out basis i.e. the oldest pre-order for the item will be released first followed by the newer pre-orders.
 
+Note: While calling the releaseOrderItem API, If the toFacilityId is _NA_ and changeReasonEnumId is RELEASED then item is released for brokering.
+
 === For more details please refer releaseOrderItem API and service:
 include::../APIs/releaseOrderItem.adoc[leveloffset=+1]
 
