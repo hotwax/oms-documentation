@@ -1,4 +1,4 @@
-= Facilities
+= Login
 
 To get the token you will need to call `/login` endpoint with post method. Further it checks if the password change is required and then return token.
 
