@@ -1,4 +1,5 @@
-== addCategoryProducts
+= addCategoryProducts
+
 This service is used to add the products to the specific category via UI.
 
 == Properties
