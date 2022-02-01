@@ -4,6 +4,7 @@ Retailers can view all the pre-order items that are in pre-order parking from th
 
 === For more details please refer searchOrders and searchProducts API:
 include::../APIs/searchOrders.adoc[leveloffset=+1]
+
 include::../APIs/Products.adoc[leveloffset=+1]
 
 They can further filter the results based on the order date, promise date, and pre-ordered item.
