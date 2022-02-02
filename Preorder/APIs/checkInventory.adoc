@@ -1,11 +1,15 @@
 = Check Inventory
 
-To get the stock details of product you will need to call `/checkInventory` endpoint with post method and you can pass the productId of the order-items in the filters. Further it fetches the records from ProductFacilityAndAtp entity.
+To get the stock details of product you will need to call `/checkInventory` endpoint with get method and you can pass the productId of the order-items in the filters. Further it fetches the records from ProductFacilityAndAtp entity.
+
+.Following are the required attributes:
+
+- productId/sku (required, string): Either productId or sku is required.
 
 === *Request*
 *Endpoint*
 ----
-POST /api/checkInventory HTTP/1.1
+GET /api/checkInventory HTTP/1.1
 
 Host: example.com
 ----
@@ -28,6 +32,8 @@ Accept: application/json
 }
 ----------------------------------------------------------------
 === *Response*
+
+Returns the inventory count at particular facility if facilityId is provided in the filters or returns count at all the facilities.
 
 *Status Code*
 ----
