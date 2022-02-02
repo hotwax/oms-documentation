@@ -9,7 +9,7 @@ When an item is added to the pre-order category in OMS, it sends the following r
 Using this information Shopify displays the item is available for pre-order along with the estimated shipping date to the customer on the storefront.
 
 === For more details please refer pushInventoryPolicyForPreorderItems in loadPreorderCategoryItems service:
-include::../Services/loadPreorderCategoryItems.adoc[leveloffset=+1]
+link:../Services/loadPreorderCategoryItems.adoc[loadPreorderCategoryItems]
 
 +++<s>+++*For retailers without purchase orders details* +++</s>+++ + 
 +++<s>+++If the retailer does not deal with PO and manually adds items to the pre-order category then OMS will only request Shopify to check the flag for Continue selling when out of stock for the pre-order item. The estimated shipping date of the pre-order item will not be sent in this case. So no estimated shipping date is displayed to the customer on the storefront.+++</s>+++
