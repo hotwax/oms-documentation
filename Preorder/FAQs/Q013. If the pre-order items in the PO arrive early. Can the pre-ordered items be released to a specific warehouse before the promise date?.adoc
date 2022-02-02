@@ -4,8 +4,10 @@ Yes, if the pre-ordered items are available before the promise date then they ca
 
 Note: While calling the releaseOrderItem API, If the toFacilityId is not NA and changeReasonEnumId is BROKERED then item is released to the warehouse/facility.
 
-=== For more details please refer releaseOrderItem API:
-link:../APs/releaseOrderItem.adoc[releaseOrderItem]
+=== These are the technical details for releasing the item:
 
-=== For more details please refer releaseOrderItem Service:
+API:
+link:../APIs/releaseOrderItem.adoc[releaseOrderItem]
+
+Service:
 link:../Services/releaseOrderItem.adoc[releaseOrderItem]
