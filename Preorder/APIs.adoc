@@ -4,6 +4,8 @@ link:APIs/cancelOrderItem.adoc[cancelOrderItem]
 
 link:APIs/checkInventory.adoc[checkInventory]
 
+link:APIs/checkPreorderItemAvailability.adoc[checkPreorderItemAvailability]
+
 link:APIs/checkPreorderItemsInventory.adoc[checkPreorderItemsInventory]
 
 link:APIs/getAvailableTimeZones.adoc[getAvailableTimeZones]
