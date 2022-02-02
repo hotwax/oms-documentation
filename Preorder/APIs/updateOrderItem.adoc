@@ -2,6 +2,10 @@
 
 To update the record of order-item you will need to call `/updateOrderItem` endpoint with post method. Further it updates the record in OrderItem entity using entity-auto.
 
+.Following are the requried attributes:
+- orderId (required, string): Unique identification of the order in the system.
+- orderItemSeqId (required, string): Unique identification of the order item in the system.
+
 === *Request*
 *Endpoint*
 ----
