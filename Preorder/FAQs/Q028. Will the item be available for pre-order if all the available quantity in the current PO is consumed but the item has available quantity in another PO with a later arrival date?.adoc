@@ -7,4 +7,4 @@ If all the available quantity in the current PO is consumed and the item has ava
 The service *_pushInventoryPolicyForPreorderItems_* will save the arrival date of the new active PO in Shopify and it will be displayed to the customers on the product detail page while placing orders.
 
 === For more details please refer loadPreorderCategoryItems service:
-include::../Services/loadPreorderCategoryItems.adoc[leveloffset=+1]
+link:../Services/loadPreorderCategoryItems.adoc[loadPreorderCategoryItems]
