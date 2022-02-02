@@ -3,3 +3,5 @@
 Yes, the updated promise date will be displayed to the customer on the storefront.
 
 After the arrival date of PO is updated in OMS, the service loadPreorderCategoryItems will send a new estimated shipping date to Shopify, which will be saved by Shopify and displayed to the customer on the product detail page.
+
+A job(*_pushShopifyPreOrderItems_*) is scheduled to push the preorder items from OMS to shopify. Further it invoke createUpdateShopifyAsset service.
