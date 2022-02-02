@@ -1,0 +1,22 @@
+= generateInactivePreorderItemsFeed
+
+This service will generate feed for inactive preorder items.
+
+Note: generateInactivePreorderItemsFeed can be scheduled as per business requirements.
+
+== Properties
+Following are the attributes used in below API:
+[width="100%", cols="4" options="header"]
+|=======
+|Attribute |Type |Required |Description
+|productStoreIds |String |Yes |This attribute contains the unique ID of productStore in OMS.
+|productIdTypeId |String |No |This attribute contains the unique sku of the product in OMS.
+|facilityGroupId |String |No |This attribute contains the unique ID of facilityGroup in OMS.
+|frequency|Integer|No|To fetch preorder item added in last frequency (in minutes)
+|bufferTime|Integer|No|Time to consider as buffer time from actual last sync time (in minutes)
+|=======
+
+== Inline Services
+
+=== inactivePreorderItemFeed
+This service is used to check records, expired from preorder category in last sync time or given time frequency and prepare the feed for these records.
