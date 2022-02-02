@@ -8,13 +8,21 @@ link:Services/checkPreOrderedItemsForRelease.adoc[checkPreOrderedItemsForRelease
 
 link:Services/createOrdersFromShopify.adoc[createOrdersFromShopify]
 
+link:Services/generateActivePreorderItemsFeed.adoc[generateActivePreorderItemsFeed]
+
+link:Services/generateInactivePreorderItemsFeed.adoc[generateInactivePreorderItemsFeed]
+
 link:Services/generateSalesOrderItemPODetailFeed.adoc[generateSalesOrderItemPODetailFeed]
+
+link:Services/generateUpdatedPreorderItemsFeed.adoc[generateUpdatedPreorderItemsFeed]
 
 link:Services/importProductCategoryMember.adoc[importProductCategoryMember]
 
 link:Services/loadPreorderCategoryItems.adoc[loadPreorderCategoryItems]
 
 link:Services/purchaseOrderDataSetup.adoc[purchaseOrderDataSetup]
+
+link:Services/pushShopifyPreOrderItems.adoc[pushShopifyPreOrderItems]
 
 link:Services/receiveInventoryForProducts.adoc[receiveInventoryForProducts]
 
