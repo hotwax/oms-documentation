@@ -16,8 +16,6 @@ link:APIs/isPreOrderItem.adoc[isPreOrderItem]
 
 link:APIs/login.adoc[login]
 
-link:APIs/pushShopifyPreOrderItems.adoc[pushShopifyPreOrderItems]
-
 link:APIs/releaseOrderItem.adoc[releaseOrderItem]
 
 link:APIs/searchOrders.adoc[searchOrders]
