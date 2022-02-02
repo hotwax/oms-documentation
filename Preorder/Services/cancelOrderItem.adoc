@@ -44,3 +44,6 @@ This service is used to reject order item.
 
 === createOrderIndex
 This service is used to create the order indexes after cancelling the order item.
+
+=== For more details please refer canceleOrderItem API:
+link:../APIs/cancelOrderItem.adoc[cancelOrderItem]
