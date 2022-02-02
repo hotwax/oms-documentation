@@ -8,4 +8,4 @@ Pre-order can only be taken for an item if it has a PO with a future arrival dat
 There is a helper method getAllActivePOForStore which will be invoked from loadPreorderCategoryItems service. Here it checks the PO with future arrival date as estimatedDeliveryDate and available quantity as availableToPromise from PreOrderShipmentItem entity.
 
 === For more details please refer loadPreorderCategoryItems service:
-include::../Services/loadPreorderCategoryItems.adoc[leveloffset=+1]
+link:../Services/loadPreorderCategoryItems.adoc[loadPreorderCategoryItems]
