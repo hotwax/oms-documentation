@@ -7,6 +7,6 @@ A job(cancelShopifyOrders) is scheduled to fetch the cancelled order from storef
 === These are the technical details:
 
 Service:
-include::../Services/cancelOrderItem.adoc[leveloffset=+1]
+link:../Services/cancelOrderItem.adoc[cancelOrderItem]
 
 Note: cancelShopifyOrders can be scheduled as per business requirements.
