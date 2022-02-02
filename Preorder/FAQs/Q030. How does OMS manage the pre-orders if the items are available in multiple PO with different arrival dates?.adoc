@@ -5,6 +5,6 @@ The PO with the closest arrival date is considered as active PO and the arrival 
 There is a helper method getAllActivePOForStore which will be invoked from loadPreorderCategoryItems service to get the active PO.
 
 === For more details please refer loadPreorderCategoryItems service:
-include::../Services/loadPreorderCategoryItems.adoc[leveloffset=+1]
+link:../Services/loadPreorderCategoryItems.adoc[loadPreorderCategoryItems]
 
-Once all the available quantity in the current active PO is reserved, the PO with the next closest arrival date is made active PO, and the arrival date of items in this PO will then be pushed to Shopify. 
+Once all the available quantity in the current active PO is reserved, the PO with the next closest arrival date is made active PO, and the arrival date of items in this PO will then be pushed to Shopify.
