@@ -76,4 +76,4 @@ Content-Type: application/json
 To release the the order item in bulk you will need to call `/uploadJsonFile` endpoint with post method and MDM_REL_ORD_ITM_JSON as configId. Further it use uploadAndImportFile service.
 
 === For more details please refer releaseOrderItem service:
-include::../Services/releaseOrderItem.adoc[leveloffset=+1]
+link:../Services/releaseOrderItem.adoc[releaseOrderItem]
