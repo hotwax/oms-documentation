@@ -6,10 +6,8 @@ The pre-ordered items will be cancelled based on the last-in-first-out basis i.e
 
 Retailers can also import CSV in OMS to cancel the pre-orders.
 
-=== These are the technical details for cancelling the item manually:
+=== For more details please refer cancelOrderItem API:
+link:../APs/cancelOrderItem.adoc[cancelOrderItem]
 
-API:
-include::../APIs/cancelOrderItem.adoc[leveloffset=+1]
-
-Service: MDM_CAN_ORD_ITM_JSON is the configId to cancel the item using CSV.
-include::../Services/cancelOrderItem.adoc[leveloffset=+1]
+=== MDM_CAN_ORD_ITM_JSON is the configId to cancel the item using CSV, For more details please refer cancelOrderItem Service:
+link:../Services/cancelOrderItem.adoc[cancelOrderItem]
