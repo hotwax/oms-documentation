@@ -24,7 +24,7 @@ Following are the attributes used in below API:
 === *Request*
 *Endpoint*
 ----
-GET /api/checkPreorderItemAvailability HTTP/1.1
+GET /api/isPreOrderItem HTTP/1.1
 
 Host: example.com
 ----
