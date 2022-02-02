@@ -12,6 +12,8 @@ link:APIs/getAvailableTimeZones.adoc[getAvailableTimeZones]
 
 link:APIs/facilities.adoc[facilities]
 
+link:APIs/isPreOrderItem.adoc[isPreOrderItem]
+
 link:APIs/login.adoc[login]
 
 link:APIs/releaseOrderItem.adoc[releaseOrderItem]
