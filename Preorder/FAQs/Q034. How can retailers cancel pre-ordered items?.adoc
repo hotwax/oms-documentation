@@ -6,7 +6,10 @@ Alternatively, retailers can also cancel pre-ordered items by entering a quantit
 
 The pre-ordered items will be cancelled based on the last-in-first-out basis i.e. the newest pre-order for the item will be cancelled first followed by the newer pre-orders.
 
-=== For more details please refer cancelOrderItem API and service:
-include::../APIs/cancelOrderItem.adoc[leveloffset=+1]
+=== These are the technical details for cancelling the item:
 
-include::../Services/cancelOrderItem.adoc[leveloffset=+1]
+API:
+link:../APIs/cancelOrderItem.adoc[cancelOrderItem]
+
+Service:
+link:../Services/cancelOrderItem.adoc[cancelOrderItem]
