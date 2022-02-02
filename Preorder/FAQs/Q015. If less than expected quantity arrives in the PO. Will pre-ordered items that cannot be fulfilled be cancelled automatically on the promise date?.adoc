@@ -4,8 +4,8 @@ No, pre-ordered items that cannot be fulfilled will not be cancelled automatical
 
 === These are the technical details for cancelling the item manually:
 
-API:
-include::../APIs/cancelOrderItem.adoc[leveloffset=+1]
+=== For more details please refer cancelOrderItem API:
+link:../APs/cancelOrderItem.adoc[cancelOrderItem]
 
-Service:
-include::../Services/cancelOrderItem.adoc[leveloffset=+1]
+=== For more details please refer cancelOrderItem Service:
+link:../Services/cancelOrderItem.adoc[cancelOrderItem]
