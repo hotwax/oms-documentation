@@ -17,7 +17,7 @@ OMS automatically removes an item from the pre-order category when the service *
 * The system has PO with a future arrival date but it is cancelled
 
 === For more details please refer loadPreorderCategoryItems service:
-include::../Services/loadPreorderCategoryItems.adoc[leveloffset=+1]
+link:../Services/loadPreorderCategoryItems.adoc[loadPreorderCategoryItems]
 
 *For retailers without purchase orders details* +
 In this case, as there are no pre-orders the item needs to be manually removed from the pre-order category. 
