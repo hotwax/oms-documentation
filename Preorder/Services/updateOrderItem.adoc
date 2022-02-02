@@ -15,4 +15,4 @@ This service is used to created record in OrderInvPromiseHistory entity if the p
 This service is used to create the order indexes after updating the order item.
 
 === For more details please refer updateOrderItem API:
-link:APIs/updateOrderItem.adoc[updateOrderItem]
+link:../APIs/updateOrderItem.adoc[updateOrderItem]
