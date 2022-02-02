@@ -2,6 +2,13 @@
 
 To check whether the item is preorder or not, you will need to call the `/isPreOrderItem` endpoint with the GET method.
 
+Further it fetches the record from ShipmentAndItem entity based on following condition:
+
+* productId: passed productId
+* shipmentTypeId: PURCHASE_SHIPMENT
+* statusId: PURCH_SHIP_CREATED
+* estimatedArrivalDate: should be greater/equal to today's date.
+
 .Following are the required attributes:
 
 - productId/sku (required, string/List): Either productId or sku is required.
