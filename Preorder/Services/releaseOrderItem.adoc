@@ -38,3 +38,6 @@ This service is used to update the order item status from hold to approved.
 
 === createOrderIndex
 This service is used to create the order indexes after releasing the order item.
+
+=== For more details please refer releaseOrderItem API:
+link:../APIs/releaseOrderItem.adoc[releaseOrderItem]
