@@ -2,6 +2,20 @@
 
 To cancel the order-item you will need to call `/cancelOrderItem` endpoint with post method. Further it cancel the record of OrderItem using cancelOrderItemInvResQty service.
 
+== Properties
+Following are the attributes used in below API:
+
+[width="100%", cols="4" options="header"]
+|=======
+|Attribute |Type |Required| Description
+|orderId|String|Yes|This attribute contains the unique ID of order in OMS.
+|orderItemSeqId|String|No|This attribute contains the item ID of order in OMS.
+|shipGroupSeqId|String|No|This attribute contains the unique ID of ship-group in OMS.
+|cancelQuantity|BigDecimal|No|This attribute contains the quantity of item that you need to cancel.
+|itemReasonMap|Map|No|This attribute contains the reason of cancellation. Accepts predefined values in the system.
+|itemCommentMap|Map|No|This attribute contains the comment for cancelling the item.
+|=======
+
 === *Request*
 *Endpoint*
 ----
