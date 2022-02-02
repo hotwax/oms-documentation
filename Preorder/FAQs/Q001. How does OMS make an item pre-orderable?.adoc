@@ -16,9 +16,7 @@ If an item fulfills these two conditions then the system adds the item to the pr
 Note: *_loadPreorderCategoryItems_* can be scheduled as per business requirements.
 
 === These are the technical details:
-:includedir: _includes
-:sourcedir: ../Services
-include::{sourcedir}/loadPreorderCategoryItems.adoc[leveloffset=+1]
+link:../Services/loadPreorderCategoryItems.adoc[loadPreorderCategoryItems]
 
 +++<s>+++*For retailers without purchase orders details*+++</s>+++ +
 +++<s>+++If a retailer does not deal with purchase orders then they can manually add the item to the pre-order category either using CSV or from UI.+++</s>+++
@@ -27,9 +25,9 @@ include::{sourcedir}/loadPreorderCategoryItems.adoc[leveloffset=+1]
 
 
 === These are the technical details to add the item to pre-order category via UI:
-include::../Services/addCategoryProducts.adoc[leveloffset=+1]
+link:../Services/addCategoryProducts.adoc[addCategoryProducts]
 
 === These are the technical details to add the item to pre-order category via CSV:
-include::../Services/importProductCategroyMember.adoc[leveloffset=+1]
+link:../Services/importProductCategroyMember.adoc[importProductCategroyMember]
 
 _Please note retailers can use only one of these ways, either share PO details or add items manually to the pre-order category. They cannot use both ways simultaneously. Also, they cannot use one way for some items and another way for other items., either all the pre-order items will be managed using PO, or all the pre-order items will be managed by manually adding them to the pre-order category._
