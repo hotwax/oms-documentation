@@ -3,4 +3,4 @@
 Yes, in this case, the pre-ordered item will be auto-released for brokering as the promise date and the warehouses/stores have physical ATP quantity to reserve these items.
 
 === These are the technical details:
-include::../Services/checkPreOrderedItemsForRelease.adoc[leveloffset=+1]
+link:../Services/checkPreOrderedItemsForRelease.adoc[checkPreOrderedItemsForRelease]
