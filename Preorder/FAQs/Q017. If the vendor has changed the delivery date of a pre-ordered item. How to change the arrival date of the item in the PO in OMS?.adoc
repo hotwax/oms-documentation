@@ -7,11 +7,11 @@ In case OMS is integrated with the ERP system then the arrival date of PO can be
 === These are the technical details for updating the item:
 
 API:
-include::../APIs/updateOrderItem.adoc[leveloffset=+1]
+link:../APIs/updateOrderItem.adoc[updateOrderItem]
 
 Service:
 
 * updateItemArrivalDate request will further invoke updateOrderItem service to change the date from UI.
 * MDM_UPD_ORD_ITM_JSON is the configId to update the order-item using CSV.
 
-include::../Services/updateOrderItem.adoc[leveloffset=+1]
+link:../Services/updateOrderItem.adoc[updateOrderItem]
