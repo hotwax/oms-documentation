@@ -13,3 +13,6 @@ This service is used to created record in OrderInvPromiseHistory entity if the p
 
 === createOrderIndex
 This service is used to create the order indexes after updating the order item.
+
+=== For more details please refer updateOrderItem API:
+include::../APIs/updateOrderItem.adoc[leveloffset=+1]
