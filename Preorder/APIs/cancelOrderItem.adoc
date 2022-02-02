@@ -49,3 +49,6 @@ Content-Type: application/json
 ----------------------------------------------------------------
 
 To cancel the the order item in bulk you will need to call `/uploadJsonFile` endpoint with post method and MDM_CAN_ORD_ITM_JSON as configId. Further it use uploadAndImportFile service.
+
+=== For more details please refer cancelOrderItem service:
+include::../Services/cancelOrderItem.adoc[leveloffset=+1]
