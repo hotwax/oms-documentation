@@ -5,6 +5,21 @@ To release the order-item you will need to call `/releaseOrderItem` endpoint wit
 * If the toFacilityId is _NA_ and changeReasonEnumId is RELEASED then item is released for brokering.
 * If the toFacilityId is not _NA_ and changeReasonEnumId is BROKERED then item is released to the facility.
 
+== Properties
+Following are the attributes used in below service:
+
+[width="100%", cols="4" options="header"]
+|=======
+|Attribute |Type |Required| Description
+|orderId|String|Yes|This attribute contains the unique ID of order in OMS.
+|orderItemSeqId|String|No|This attribute contains the item ID of order in OMS.
+|shipGroupSeqId|String|No|This attribute contains the unique ID of ship-group in OMS.
+|fromFacilityId|String|No|This attribute contains the unique ID of fromFacility in OMS, from which item is released.
+|toFacilityId|String|No|This attribute contains the unique ID of toFacility in OMS, to which item is released.
+|changeReasonEnumId|String|No|This attribute contains the reason of releasing the item. Accepts predefined values in the system.
+|routerUserLogin|String|No|This attribute contains the value of userLoginId.
+|=======
+
 === *Request*
 *Endpoint*
 ----
