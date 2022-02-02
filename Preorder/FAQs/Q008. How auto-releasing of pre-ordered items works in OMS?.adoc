@@ -14,7 +14,7 @@ Once a pre-order item fulfills these conditions they are released from the *_Pre
 If the promise date is not yet reached for the pre-ordered item or enough physical ATP is not yet available then the pre-ordered item will not be released this time and will be released whenever the service *_checkPreOrderedItemsForRelease_* runs and both these conditions are fulfilled.
 
 === These are the technical details to add the item to pre-order category via CSV:
-include::../Services/checkPreOrderedItemsForRelease.adoc[leveloffset=+1]
+link:../Services/checkPreOrderedItemsForRelease.adoc[checkPreOrderedItemsForRelease]
 
 +++<s>+++*For retailers without purchase orders details*+++</s>+++ +
 +++<s>+++In this case, the pre-ordered item will not have any promise date assigned to it. So, the OMS automatically releases the pre-order item when warehouses or stores in OMS have the physical ATP quantity that can be reserved for the pre-ordered item whenever the service +++</s>++++++<s>+++*_checkPreOrderedItemsForRelease_*+++</s>++++++<s>+++ runs.+++</s>+++
