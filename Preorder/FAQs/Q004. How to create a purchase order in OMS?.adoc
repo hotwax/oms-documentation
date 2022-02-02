@@ -5,7 +5,6 @@ There are two ways of creating a PO in OMS.
 * The first way is creating a PO manually in OMS using a CSV.
 
 === These are the technical details:
-
-include::../Services/purchaseOrderDataSetup.adoc[leveloffset=+1]
+link:../Services/purchaseOrderDataSetup.adoc[purchaseOrderDataSetup]
 
 * The second way is integrating the OMS with an ERP system that maintains the records of PO. In this way, the OMS automatically creates the PO using the information provided by the ERP system.
