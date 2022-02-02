@@ -1,0 +1,95 @@
+= Check Preorder Item Availability
+
+To get the availability date of a product you will need to call the `/checkPreorderItemAvailability` endpoint with the GET method.
+
+.Following are the required attributes:
+
+- productId/sku (required, string/List): Either productId or sku is required.
+
+== Properties
+Following are the attributes used in below API:
+[width="100%", cols="5" options="header"]
+|=======
+|Attribute |IN |Type |Required |Description
+|productId/sku |Query|String/List |Either productId/sku is required |Product's id/sku
+|Availability Date| Response| Date | | Product's availability date in MM/dd/yyyy format. (If product has multiple dates, nearer date will be returned) 
+|=======
+
+=== *Request*
+*Endpoint*
+----
+GET /api/checkPreorderItemAvailability HTTP/1.1
+
+Host: example.com
+----
+*Headers*
+----
+Content-Type: application/json
+
+Accept: application/json
+----
+*Body*
+[source, json]
+----------------------------------------------------------------
+{
+  "viewIndex": 0,
+  "viewSize": 10,
+  "filters": {
+    "sku" : ["14311979647091","31675591655517","31675768307805"],
+    "sku_op" : "in"
+   }
+}
+OR
+{
+  "viewIndex": 0,
+  "viewSize": 10,
+  "filters": {
+    "productId" : ["22655","11205","15492"],
+    "productId_op" : "in"
+   }
+}
+OR
+{
+  "viewIndex": 0,
+  "viewSize": 10,
+  "filters": {
+    "productId" : "22655"
+   }
+}
+----------------------------------------------------------------
+=== *Response*
+Returns the availability date for item.
+
+*Status Code*
+----
+HTTP/1.1 200 OK
+----
+
+*Headers*
+----
+Content-Type: application/json
+----
+*Body*
+[source, json]
+----------------------------------------------------------------
+{
+    "count": "3",
+    "docs": [
+        {
+            "productId": "13331",
+            "sku": "31675591655517",
+            "estimatedDeliveryDate": "2021-10-11T18:30:00.000Z"
+        },
+        {
+            "productId": "15492",
+            "sku": "14311979647091",
+            "estimatedDeliveryDate": "2021-10-11T18:30:00.000Z"
+        },
+        {
+            "productId": "11550",
+            "sku": "31675768307805",
+            "estimatedDeliveryDate": "2021-10-11T18:30:00.000Z"
+        }
+    ]
+}
+----------------------------------------------------------------
