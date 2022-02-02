@@ -7,7 +7,7 @@ The promise date of the existing pre-ordered item will remain the same irrespect
 === These are the technical details for updating the item:
 
 API:
-include::../APIs/updateOrderItem.adoc[leveloffset=+1]
+link:../APIs/updateOrderItem.adoc[updateOrderItem]
 
 Service: MDM_UPD_ORD_ITM_JSON is the configId to update the order-item using CSV.
-include::../Services/updateOrderItem.adoc[leveloffset=+1]
+link:../Services/updateOrderItem.adoc[updateOrderItem]
