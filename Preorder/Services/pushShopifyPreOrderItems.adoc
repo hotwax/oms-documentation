@@ -1,0 +1,19 @@
+= pushShopifyPreOrderItems
+
+This service is used to push the preorder items from OMS to shopify.
+
+Note: pushShopifyPreOrderItems can be scheduled as per business requirements.
+
+== Properties
+Following are the attributes used in below service:
+
+[width="100%", cols="4" options="header"]
+|=======
+|Attribute |Type |Required| Description
+|shopifyConfigId|String|Yes|This attribute contains the unique config ID of shopify in OMS.
+|=======
+
+== Inline Services
+
+=== createUpdateShopifyAsset
+This service is used to create/update shopify asset from OMS to shopify using sendShopifyRequest helper method.
