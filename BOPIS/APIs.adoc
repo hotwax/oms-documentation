@@ -1,0 +1,7 @@
+= BOPIS APIs
+
+link:APIs/quickShipEntireShipGroup.adoc[quickShipEntireShipGroup]
+
+link:APIs/readytoshiporders.adoc[readytoshiporders]
+
+link:APIs/wms-orders.adoc[wms-orders]
