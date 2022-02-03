@@ -8,7 +8,7 @@ Following are the attributes used in below API:
 [width="100%", cols="3,2,10" options="header"]
 |=======
 |Attribute |Type |Description
-|orderId |string |This attribute contains the unique ID of order in OMS..
+|orderId |string |This attribute contains the unique ID of order in OMS.
 |setPackedOnly |string |This attribute is a flag and set Y if user only want to pack the order.
 |dimensionUomId |string |This attributes contains dimension UOM of shipment package. like WT_lb, WT_kg e.t.c.
 |shipmentBoxTypeId |string |This attribute contains the type of box used in the shipment like YOURPACKNG
@@ -21,7 +21,9 @@ Following are the attributes used in below API:
 == Inline Services
 
 === isPackingStartedForOrderShipGroup
+This service is used to check whether packing started for the orderShipGroup, it returns the boolean value. Further it checks the record in Shipment entity along with the passed orderId and shipmentId should not be cancelled. This service return true if the shipment record exists.
 
 === validatePicklistBinIdOrOrderIdForPacking
+This service is used to find the valid picklistBin record on the basis passed orderId.
 
 === initializeShipment
