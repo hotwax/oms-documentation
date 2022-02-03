@@ -52,7 +52,7 @@ Accept: application/json
 [source, json]
 ----------------------------------------------------------------
 {
-    payload": {
+    "payload": {
       "facilityId": "STORE_1",
       "externalFacilityId": "DC_STORE_1",
       "shipmentMethodTypeId": "STOREPICKUP",
@@ -88,7 +88,7 @@ Content-Type: application/json
 [source, json]
 ----------------------------------------------------------------
 {
-    payload": {
+    "payload": {
       "facilityId": "STORE_1",
       "externalFacilityId": "DC_STORE_1",
       "shipmentMethodTypeId": "STOREPICKUP",
