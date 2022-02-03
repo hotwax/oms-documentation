@@ -1,0 +1,121 @@
+== Get approved orders
+
+To get the list of approved orders and order items for a particular store you will need to call `/wms-orders` endpoint with post method. Further it fetches the record from ReadyOrderItems and OrderHeaderItemAndShipment based on the reserveInventory configuration of product store.
+
+API response must fulfill following conditions:
+
+* Orders should be in Approved status
+* Picklist is not created for the order
+* Shipment is not created for the order
+* It is assumed that orders will not split i.e. partial backorder is not handled.
+
+.Following are the requried attributes:
+
+- facilityId (required, string): The unique ID of the facility/warehouse.
+
+=== *User Story*
+
+- It will be used to fetch the list of all approved orders which needs to be picked.
+
+=== *Request*
+*Endpoint*
+----
+POST /api/wms-orders HTTP/1.1
+
+Host: example.com
+----
+
+*Headers*
+----
+Content-Type:​ application/json
+
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1NTE5NTIxNjcsInVzZXJMb2dpbklkIjoicGFsbGF2aUBleGFtcGxlLmNvbSJ9.VREDB8Mul9q4sdeNQAvhikVdpDJKKoMBfiBbeQTQOn5e5eOj6XdXnHNAguMpgXk8KXhj_scLDdlfe0HCKPp7HQ
+
+Accept: application/json
+----
+*Body*
+[source, json]
+----------------------------------------------------------------
+{
+    "sortBy":"orderDate",
+    "sortOrder":"Desc",
+    "viewSize":"10",
+    "viewIndex":0,
+    "facilityId":"STORE_1"
+}
+----------------------------------------------------------------
+=== *Response*
+
+*Status Code*
+----
+HTTP/1.1​ ​200​ ​OK
+----
+
+*Headers*
+----
+Content-Type: application/json
+----
+*Body*
+[source, json]
+----------------------------------------------------------------
+{
+    "count" : "50",
+    "docs": [
+        {
+            "orderId" : "NN11142",
+            "orderName" : "NN11142",
+            "statusId" : "ORDER_APPROVED",
+            "salesChannelEnumId" : "WEB_SALES_CHANNEL",
+            "orderIdentifications" : [
+                "SHOPIFY_ORD_ID/4651072979197"
+                ,
+                "SHOPIFY_ORD_NAME/#1351"
+                ,
+                "SHOPIFY_ORD_NO/351"
+                
+            ],
+            "orderDate" : "2022-02-03T10:54:42.000Z",
+            "customerId" : "10541",
+            "customerName" : "Humera Khan",
+            "items" : [
+                {
+                    "shipGroupSeqId" : "00001",
+                    "shipmentMethodTypeId" : "STOREPICKUP",
+                    "orderItemSeqId" : "00001",
+                    "itemId" : "12017",
+                    "inventory" : [
+                        {
+                        "inventoryItemId" : "37850",
+                        "quantity" : "1"
+                        }
+                    ],
+                    "facilityId" : "STORE_1",
+                    "statusId" : "ITEM_APPROVED",
+                    "itemName" : "Abominable Hoodie-L-Blue",
+                    "brandName" : "HC Demo",
+                    "picklistItemStatusId" : "",
+                    "standardFeatures": {
+                        "COLOUR": {
+                            "productFeatureId": "10020",
+                            "description": "Blue"
+                        },
+                        "SIZE": {
+                            "productFeatureId": "TEXT_LARGE",
+                            "description": "L"
+                        }
+                    },
+                    "images": {
+                        "main": {
+                            "thumbnail": "https://cdn.shopify.com/s/files/1/0069/7384/9727/products/mh09-blue_main.jpg?v=1593170785",
+                            "small": "https://cdn.shopify.com/s/files/1/0069/7384/9727/products/mh09-blue_main.jpg?v=1593170785",
+                            "large": "https://cdn.shopify.com/s/files/1/0069/7384/9727/products/mh09-blue_main.jpg?v=1593170785",
+                            "detail": "https://cdn.shopify.com/s/files/1/0069/7384/9727/products/mh09-blue_main.jpg?v=1593170785"
+                        }
+                    }
+                }
+            ]
+        },
+    ]
+}
+----------------------------------------------------------------
+----------------------------------------------------------------
