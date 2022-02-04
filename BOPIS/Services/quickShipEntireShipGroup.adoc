@@ -1,6 +1,6 @@
 = quickShipEntireShipGroup
 
-This service is used quick ship the entire ship group items.
+This service is used to quick ship the entire ship group items.
 
 == Properties
 Following are the attributes used in below API:
@@ -24,7 +24,11 @@ Following are the attributes used in below API:
 This service is used to check whether packing started for the orderShipGroup, it returns the boolean value. Further it checks the record in Shipment entity along with the passed orderId and shipmentId should not be cancelled. This service return true if the shipment record exists.
 
 === validatePicklistBinIdOrOrderIdForPacking
-This service is used to find the valid picklistBin record on the basis passed orderId.
+This service is used to find the valid picklistBin record on the basis of given input parameter, picking process will be skipped in case of direct packing.
+
+* Checks whether for entered binId or orderId, bin is completed or not using isBinComplete method. If it is completed, then return error.
+* Checks whether picklist for entered binId or orderId is cancelled or not. If it is cancelled, then return error.
+* Check whether entered bin number's picklist is in picked status or not. If already picked then cool, and if not then mark the pick list as picked using markAllPicklistItemsPicked method.
 
 === initializeShipment
 This service is used to createShipment after following steps:
