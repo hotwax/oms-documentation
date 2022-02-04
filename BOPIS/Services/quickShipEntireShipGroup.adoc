@@ -1,4 +1,4 @@
-= quickShipEntireShipGroup.adoc
+= quickShipEntireShipGroup
 
 This service is used quick ship the entire ship group items.
 
