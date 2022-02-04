@@ -17,8 +17,8 @@ Following are the attributes used in below API:
 |orderId |string |This attribute contains unique order ID.
 |facilityId |string |This attribute contains unique facility ID.
 |shipmentMethodTypeId |string |This attribute contains unique shipmentMethodType ID.
-|viewSize |Integer | View Size. If size is not passed default view size is 10
-|viewIndex |Integer | View Index. If view index is not passed default view index is 0
+|viewSize |Integer | Represents the total number count to get the records. If size is not passed default view size is 10 (can vary as per the configuration)
+|viewIndex |Integer | Represents the page number, we can assign viewIndex based on the number of page. If view index is not passed default view index is 0
 |sortBy |String | sort data based on the attribute. Ex. `sortBy=orderDate`
 |sortOrder |String | Order of sorted records i.e either ascending or descending. `asc` for ascending and `desc` for descending.
 |=======
