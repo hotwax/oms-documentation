@@ -27,3 +27,8 @@ This service is used to check whether packing started for the orderShipGroup, it
 This service is used to find the valid picklistBin record on the basis passed orderId.
 
 === initializeShipment
+This service is used to createShipment after following steps:
+
+* Checks pickedItems using getPicklistBinItems helper method with picklistBinId.
+* Checks reservedItems using getOrderItemsReadyToPack helper method with orderId and shipGroupSeqId.
+* If any of pickedItems and reservedItems exists, Checks the corresponding shipment record, if exists then return that shipmentId else invoked createShipment service for creating a shipment.
