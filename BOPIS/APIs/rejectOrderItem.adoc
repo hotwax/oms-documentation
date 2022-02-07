@@ -105,3 +105,6 @@ Content-Type: application/json
     }
 }
 ----------------------------------------------------------------
+
+=== For more details please refer rejectOrderItem Service:
+link:../Services/rejectOrderItem.adoc[rejectOrderItem]
