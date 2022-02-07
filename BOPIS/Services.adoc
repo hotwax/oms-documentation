@@ -1,3 +1,4 @@
 = BOPIS Services
 
 link:Services/quickShipEntireShipGroup.adoc[quickShipEntireShipGroup]
+link:Services/rejectOrderItem.adoc[rejectOrderItem]
