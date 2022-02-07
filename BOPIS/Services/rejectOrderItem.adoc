@@ -39,7 +39,7 @@ This service is used to create a new orderItemShipGroup
 
 * If shipGroup with _NA_ facility not exists then create a new shipGroup with _NA_ facility.
 * If the item is preorderItem then create a new shipGroup with PRE_ORDER_PARKING facility.
-* If the item is backorerItem then create a new shipGroup with BACKORDER_PARKING facility.
+* If the item is backorderItem then create a new shipGroup with BACKORDER_PARKING facility.
 
 === addOrderItemShipGroupAssoc
 This service is used to create orderItem and shipGroup association, after creating new ship group.
