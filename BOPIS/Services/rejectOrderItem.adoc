@@ -26,19 +26,35 @@ Following are the attributes used in below API:
 == Inline Services
 
 === updatePicklistItem
+This service is used to update picklistItem after rejecting the item, If the picklistItems exists for the passed parameters with itemStatusId as PICKITEM_PENDING. Picklist will be marked as cancelled if all the quantity of items are rejected.
 
 === cancelOrderItemInvResQty
+This service is used to cancel a specific quantity of an order item using cancelOrderInventoryReservation and cancelOrderItemShipGrpInvRes services. If the product is marketing package then checkDecomposeInventoryItem service will also be invoked.
 
 === deleteOrderItemShipGroupAssoc
+This service is used to remove ship group assoc if order item quantity is zero using entity-auto engine in OrderItemShipGroupAssoc entity.
 
 === createOrderItemShipGroup
+This service is used to create a new orderItemShipGroup
+
+* If shipGroup with _NA_ facility not exists then create a new shipGroup with _NA_ facility.
+* If the item is preorderItem then create a new shipGroup with PRE_ORDER_PARKING facility.
+* If the item is backorerItem then create a new shipGroup with BACKORDER_PARKING facility.
 
 === addOrderItemShipGroupAssoc
+This service is used to create orderItem and shipGroup association, after creating new ship group.
 
 === createOrderFacilityChange
+This service is used to create orderFacilityChange record along with rejectReason.
 
 === updateOrderItem
+This service is used to update orderItem after adding the auto-cancel date. Further it uses entity-auto engine for OrderItem entity.
 
 === changeOrderItemStatus
+If the item is either preorder or backorder then invoke the changeOrderItemStatus service with statusId as ITEM_HOLD.
 
 === createPhysicalInventoryAndVariance
+This service is used to record variance for all the available quantity using createPhysicalInventory and createInventoryItemVariance services.
+
+=== For more details please refer rejectOrderItem API:
+link:../APIs/rejectOrderItem.adoc[rejectOrderItem]
