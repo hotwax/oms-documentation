@@ -92,3 +92,6 @@ Content-Type: application/json
     "_EVENT_MESSAGE_":"Congratulations! Shipment #10890 is shipped successfully."
 }
 ----------------------------------------------------------------
+
+=== For more details please refer quickShipEntireShipGroup Service:
+link:../Services/quickShipEntireShipGroup.adoc[quickShipEntireShipGroup]
