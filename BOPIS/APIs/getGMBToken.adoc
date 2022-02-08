@@ -1,0 +1,51 @@
+= getGMBToken
+
+To get the google my business access token you will need to call `/getGMBToken` endpoint with post method.
+
+* If the access token is found in cache then return that token.
+* If hard refresh is set to true, make API call even if the access token is found in cache. Further it gets the configuration of GMB_REMOTE_CONFIG from SystemMessageRemote entity and make an API call to get the token.
+
+=== *Request*
+*Endpoint*
+----
+POST /api/getGMBToken HTTP/1.1
+
+Host: example.com
+----
+*Headers*
+----
+Content-Type:​ application/json
+
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1NTE5NTIxNjcsInVzZXJMb2dpbklkIjoicGFsbGF2aUBleGFtcGxlLmNvbSJ9.VREDB8Mul9q4sdeNQAvhikVdpDJKKoMBfiBbeQTQOn5e5eOj6XdXnHNAguMpgXk8KXhj_scLDdlfe0HCKPp7HQ
+
+Accept: application/json
+----
+*Body*
+[source, json]
+----------------------------------------------------------------
+{
+    refresh: true
+}
+----------------------------------------------------------------
+=== *Response*
+
+*Status Code*
+----
+HTTP/1.1​ ​200​ ​OK
+----
+
+*Headers*
+----
+Content-Type: application/json
+----
+*Body*
+[source, json]
+----------------------------------------------------------------
+{
+    "cors.request.origin":"https://hc-demo.myshopify.com",
+    "refresh":true,
+    "accessToken":"ya29.A0ARrdaM-bmxPIAsjKou7MJejrjUEja_JPdA79FNOBfXzkr2TC1wzTk7TLZnMgdqrSBWM3U85EyklIiuDilODGVw0kHDVD5VaFaa7MnDYl0owmIs0z9KHFkc6wpuprhQrrRjDloKfmTTn62oGPFeAghoWhXr_B4JM",
+    "cors.request.type":"actual",
+    "webSiteId":"API"
+}
+----------------------------------------------------------------
