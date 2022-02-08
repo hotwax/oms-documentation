@@ -1,0 +1,129 @@
+== Q. How does OMS make an item ready for BOPIS order?
+
+Retailers will have to install the HC BOPIS app in Shopify that make the following changes:
+
+* Add a ‘Pick up today’ button below the ‘Add to Cart' button on the Shopify storefront
+* Open a popup for ‘Pick up today’
+* Add functionality to search store that has inventory for the item by zip code in ‘Pick up today’ popup
+* Add functionality to select a store for pickup
+* Display selected pickup store for the item on the cart
+* Display ‘Store Pickup’ shipping method during checkout
+* +++<s>+++ Display selected store on the order page of Shopify storefront to customer +++</s>+++ 
+* Add BOPIS tag for items
+
+
+
+== Q. How does OMS informs Shopify to start taking BOPIS order for an item?
+
+== Q. How inventory availability of an item at stores is sent to Shopify for BOPIS orders?
+
+When the customers enter zip code and click on the ‘Find Store’ button on the product detail page of the Shopify storefront then an API request is sent to the inventory master system to fetch the stores if the item is available in at the entered zip code. 
+
+If the zip code is not entered by the customers then the inventory master will send all the stores that have inventory for the item.
+
+The inventory master system can either be HC-OMS or Shopify.
+
+== Q. How BOPIS orders are imported in OMS?
+
+After an order is placed by a customer on Shopify, the OMS imports the order when the *_createOrdersFromShopify_* service runs.
+
+While importing orders OMS checks if the ordered item has a BOPIS tag and store address. 
+
+If the item has a BOPIS tag then the store address will be set as the 'Ship From' and the 'Ship To' and the item will be displayed on the BOPIS app for fulfillment.
+
+== Q. How can store associates view BOPIS orders placed for their store?
+
+Store associates can use the BOPIS app to view BOPIS orders placed for their store.
+
+All the new orders that need to be picked will be displayed in the 'Open' tab of the app and all the orders that are packed and ready for the customer to be picked are displayed on the 'Packed' tab.
+
+Retailers can also use the APIs to integrate this functionality into their existing fulfillment system.
+
+== Q. How can a store associate mark the BOPIS order as packed and ready for pickup?
+
+Store associates can view the item to be picked from the 'Open' tab of the BOPIS app. Once the item is picked and packed the store associate can click on the 'Ready for Pickup' button and the order will be marked packed and will be displayed on the 'Packed' tab on the app.
+
+If OMS is integrated with CRM then OMS will trigger an email to notify the customer that their order is ready for pickup.
+
+Retailers can also use the APIs to integrate this functionality into their existing fulfillment system.
+
+== Q. Customers has come to collect his/her BOPIS order. How can a store associate complete a packed BOPIS order?
+
+The store associate will have to search the order in the 'Packed' tab of the BOPIS app and then click on the 'Handover' button to complete the order.
+
+Retailers can also use the APIs to integrate this functionality into their existing fulfillment system.
+
+== Q. Customer has come to collect BOPIS order but the store associate cannot find his/her order in the packed tab of BOPIS app. How can store a associate find and complete the BOPIS order of the customer?
+
+The most probable reason for not finding the order on the packed tab would be that the customer has arrived early before the order could be packed. 
+
+The store associate should search the order in the 'Open' tab and continue the fulfillment process from there.
+
+== Q. Customer has come to collect BOPIS order but the store associate cannot find his/her order either in the packed tab or in the open tab of BOPIS app. What does the store associate need to do?
+
+The store associate will need to contact the CSR to check the status of the order in OMS. This could be due to one of the following reasons:
+
+* Order was cancelled
+* Order was rejected 
+* A wrong order was marked as handover by a store associate
+
+== Q. How can the store managers see all the BOPIS orders rejected by their stores?
+
+== Q. How can the store managers see all the BOPIS orders completed by their stores?
+
+== Q. How can a store associate rejects a BOPIS order that the store cannot fulfill?
+
+Store associates can reject the order by clicking on the order card in the 'Open' tab on the BOPIS app. 
+
+On the order detail page, the store associate will have to select the reason for rejecting the order.
+
+If 'Not is stock' is selected as the reason then the order will be rejected and the item will be made out of stock in the store. No further BOPIS and delivery orders for the item will be assigned to the store. Existing delivery orders will be sent for re-brokering and non-picked BOPIS orders will also be rejected.
+
+If 'No reason' is selected then only the order will be rejected and no changes will be made to the inventory of the item in the store.
+
+Retailers can also use the APIs to integrate this functionality into their existing fulfillment system.
+
+== Q. If a BOPIS order is rejected by the store will the order be cancelled?
+
+No, the order will not be cancelled, it will be removed from the "Open' tab of the BOPIS app for the store.
+
+The 'Ship From' for the order will be updated to 'N/A' in OMS and the customer will receive an email regarding the order rejected by the store. The customers will then have an option to either have the item delivered to them or cancel the order.
+
+== Q. How will the customers be notified if their BOPIS order is rejected by the store?
+
+If the OMS is integrated with the CRM and the BOPIS order of customers are rejected then OMS will trigger an email to the customer regarding the order rejected by the store. The customer will then have an option to either have the item delivered to them or cancel the order.
+
+== Q. How can customers have the item delivered to them if their BOPIS order is rejected by the store?
+
+Customers will have to enter the address at which the item should be delivered. 
+
+Once the customer has provided the address 'Ship To' will be updated as the address provided by the customer and the order will be brokered and fulfilled by a suitable store or warehouse.
+
+== Q. How can customers cancel the item delivered if their BOPIS order is rejected by the store?
+
+== Q. How can the store manager turn off the store for new BOPIS order?
+
+== Q. How does OMS syncs inventory with Shopify?
+
+==== When HC-OMS is the inventory master
+In this case, Shopify only maintains the total inventory count of the item for which it can take orders. Inventory in the individual stores and warehouses is maintained by OMS.
+
+When a BOPIS order is placed for an item, the available quantity is automatically reduced in Shopify. And when the order is imported in OMS then the available quantity of store is also reduced. 
+
+As soon as the available quantity in Shopify becomes zero then the item is made out of stock thus avoiding overpromising of the item.
+
+When new inventory is received in OMS it sends an increased quantity for which Shopify can take the orders and the available quantity in increased in Shopify.
+
+==== When Shopify is the inventory master
+In this case, Shopify maintains the inventory of each store but when a BOPIS order is placed for an item, the available quantity of the online store is reduced by Shopify.
+
+When the order is imported in OMS then it sends an update to Shopify to increase the available quantity of the online store and reduced the available quantity of the store, thus maintaining the correct inventory on Shopify.
+
+== Q. How does overpromising of BOPIS order is avoided?
+
+When customers search stores for BOPIS orders an API call is made to the inventory master to fetch the stores that have inventory fulfill orders. The inventory master will return only those stores that have inventory to fulfill orders will be displayed. Stores that do not have inventory to fulfill the order will not be displayed. In this way, over-promising of BOPIS order is avoided.
+
+== Q. Can a customer place a single order for both fulfillment and BOPIS items?
+
+Yes, customers can palace a single order containing both the fulfillment items and BOPIS items. OMS will split the items and broker the delivery items to the most suitable store or warehouse and will send an update to the fulfillment system. OMS will also display the BOPIS item on the BOPIS app to the selected store for fulfillment. 
+
