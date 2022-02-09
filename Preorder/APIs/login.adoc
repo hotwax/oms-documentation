@@ -41,8 +41,8 @@ Content-Type: application/json
     "cors.request.origin":"https://preorder.hotwax.io",
  "token":"eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1NTE5NTIxNjcsInVzZXJMb2dpbklkIjoicGFsbGF2aUBleGFtcGxlLmNvbSJ9.VREDB8Mul9q4sdeNQAvhikVdpDJKKoMBfiBbeQTQOn5e5eOj6XdXnHNAguMpgXk8KXhj_scLDdlfe0HCKPp7HQ",
     "cors.request.type":"actual",
-    "PASSWORD":"hotwax@786",
+    "PASSWORD":<password>,
     "expirationTime":1643807918604,
-    "USERNAME":"admin",
+    "USERNAME":<username>,
     "webSiteId":"API"
 }
