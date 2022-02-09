@@ -5,3 +5,5 @@ link:Services/quickShipEntireShipGroup.adoc[quickShipEntireShipGroup]
 link:Services/rejectOrderItem.adoc[rejectOrderItem]
 
 link:Services/syncInventoryFromShopify.adoc[syncInventoryFromShopify]
+
+link:Services/shopifySyncProductsInventory.adoc[shopifySyncProductsInventory]
