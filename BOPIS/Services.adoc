@@ -4,4 +4,4 @@ link:Services/quickShipEntireShipGroup.adoc[quickShipEntireShipGroup]
 
 link:Services/rejectOrderItem.adoc[rejectOrderItem]
 
-link:Services/syncShopifyInventory.adoc[syncShopifyInventory]
+link:Services/syncInventoryFromShopify.adoc[syncInventoryFromShopify]
