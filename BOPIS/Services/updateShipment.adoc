@@ -1,10 +1,6 @@
 = updateShipment
 
-This service is used to update the shipment.
-
-.Following are the requried attributes:
-
-This service will accept the attributes of Shipment entity excluding shipmentTypeId, createdDate, createdByUserLogin, lastModifiedDate and lastModifiedByUserLogin.
+This service is used to update the shipment. It will accept the attributes of Shipment entity excluding shipmentTypeId, createdDate, createdByUserLogin, lastModifiedDate and lastModifiedByUserLogin.
 
 == Inline Services
 
