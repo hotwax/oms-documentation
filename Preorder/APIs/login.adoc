@@ -19,8 +19,8 @@ Accept: application/json
 [source, json]
 ----------------------------------------------------------------
 {
-    "USERNAME":"admin",
-    "PASSWORD":"hotwax@786"
+    "USERNAME":<username>,
+    "PASSWORD":<password>
 }
 ----------------------------------------------------------------
 === *Response*
