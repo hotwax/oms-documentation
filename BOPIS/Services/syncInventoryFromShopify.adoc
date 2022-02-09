@@ -1,0 +1,26 @@
+= syncInventoryFromShopify
+
+This service is used to sync initial inventory from shopify when shopify is the inventory master, it will call the wrapper service syncShopifyInventory. Further it will use resetInventoryByIdentification service to sync inventory from file provided by external system(Shopify) using resetInventory service.
+
+== Properties
+Following are the attributes used in below service:
+
+[width="100%", cols="4" options="header"]
+|=======
+|Attribute |Type |Required| Description
+|payload|Map|No|This attribute contains the inventory details.
+|shopifyConfigId|String|Yes|This attribute contains the unique config ID of shopify in OMS.
+|=======
+
+== Inline Services
+
+=== getShopifyInventoryLevels
+This service is used to fetch inventory levels from Shopify based on filters provided. Following filters are supported:
+
+* updatedFromDate: Show inventory levels updated at or after date
+* locationIds: A comma-separated list of location IDs
+* inventoryItemIds: A comma-separated list of inventory item IDs
+* Either locationIds or inventoryItemIds is required. Otherwise, error will be returned from Shopify
+
+=== uploadAndImportFile
+This service is used to import the inventory data using SYNC_SHOPIFY_INV configId.
