@@ -1,5 +1,7 @@
 = BOPIS APIs
 
+link:APIs/checkInventory.adoc[checkInventory]
+
 link:APIs/getGMBToken.adoc[getGMBToken]
 
 link:APIs/quickShipEntireShipGroup.adoc[quickShipEntireShipGroup]
