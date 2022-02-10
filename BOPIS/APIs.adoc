@@ -8,4 +8,6 @@ link:APIs/readytoshiporders.adoc[readytoshiporders]
 
 link:APIs/rejectOrderItem.adoc[rejectOrderItem]
 
+link:APIs/updateShipment.adoc[updateShipment]
+
 link:APIs/wms-orders.adoc[wms-orders]
