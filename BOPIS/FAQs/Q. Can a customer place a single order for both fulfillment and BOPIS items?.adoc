@@ -1,0 +1,3 @@
+== Q. Can a customer place a single order for both fulfillment and BOPIS items?
+
+Yes, customers can place a single order containing both the delivery items and BOPIS items. OMS will split the items. The delivery items will be brokered to the most suitable store or warehouse and can be fulfilled using the fulfillment system. The BOPIS item will be displayed on the BOPIS app to the selected store for fulfillment. 
