@@ -1,3 +1,7 @@
 = BOPIS Services
 
 link:Services/completeOrderItem.adoc[completeOrderItem]
+
+link:Services/packStoreFulfillmentOrder.adoc[packStoreFulfillmentOrder]
+
+link:Services/picklistDataSetup.adoc[picklistDataSetup]
