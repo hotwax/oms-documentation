@@ -10,6 +10,10 @@ Following are the attributes used in below service:
 |Attribute |Type |Required| Description
 |orderId|String|Yes|This attribute contains the unique ID of order in OMS.
 |picklistBinId|String|Yes|This attribute contains the unique ID of picklistBin in OMS.
+|orderItemSeqId|String|No|This attribute contains the unique ID of order-item exists in the system.
+|shipGroupSeqId|String|No|This attribute contains the unique ID of shipgroup exists in the system.
+|inventoryItemId|String|No|This attribute contains the unique ID of inventoryItem exists in the system.
+|itemStatusId|String|No|This attribute contains the unique ID of itemStatus exists in the system.
 |=======
 
 == Inline Services
