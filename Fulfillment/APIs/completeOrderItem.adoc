@@ -1,0 +1,68 @@
+= Complete Shipment
+
+To complete warehouse shipment item you will need to call the `/completeOrderItem` endpoint with the POST method. Accepts pre-defined attributes and complete the shipment item.
+
+== Properties
+Following are the attributes used in below API:
+
+[width="100%", cols="4" options="header"]
+|=======
+|Attribute |Type |Required| Description
+|orderId|String|Yes|This attribute contains the unique ID of order in OMS.
+|item|Map|Yes|This attribute contains the unique ID of order-item in OMS.
+|shipmentMethodTypeId|String|Yes|This attribute contains the unique ID of shipment method type in OMS.
+|facilityId|String|Yes|This attribute contains the unique ID of facility in OMS.
+|shipGroupSeqId|String|No|This attribute contains ship group sequence ID.
+|shipmentBoxTypeId|String|No|This attribute contains the type of box used in the shipment like YOURPACKNG.
+|dimensionUomId|String|No|This attributes contains dimension UOM of shipment package. like WT_lb, WT_kg e.t.c.
+|weightUomId|String|No|his attribute contains weight UOM of the shipment.
+|weight|String|No|This attribute contains weight of the shipment.
+|carrierPartyId|String|No|This attribute contains carrier party ID.
+|=======
+
+=== *Request*
+*Endpoint*
+----
+POST /api/completeOrderItem HTTP/1.1
+
+Host: example.com
+----
+*Headers*
+----
+Content-Type:​ application/json
+
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1NTE5NTIxNjcsInVzZXJMb2dpbklkIjoicGFsbGF2aUBleGFtcGxlLmNvbSJ9.VREDB8Mul9q4sdeNQAvhikVdpDJKKoMBfiBbeQTQOn5e5eOj6XdXnHNAguMpgXk8KXhj_scLDdlfe0HCKPp7HQ
+
+Accept: application/json
+----
+*Body*
+[source, json]
+----------------------------------------------------------------
+{
+}
+----------------------------------------------------------------
+=== *Response*
+
+*Status Code*
+----
+HTTP/1.1​ ​201 CREATED
+
+--or--
+
+HTTP/1.1​ 400 Bad Request
+----
+
+*Headers*
+----
+Content-Type: application/json
+----
+*Body*
+[source, json]
+----------------------------------------------------------------
+{
+    
+}
+----------------------------------------------------------------
+
+=== For more details please refer completeOrderItem Service:
+link:../Services/completeOrderItem.adoc[completeOrderItem]
