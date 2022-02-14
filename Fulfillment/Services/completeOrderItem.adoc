@@ -27,21 +27,29 @@ Following are the attributes used in below API:
 == Inline Services
 
 === updatePicklistItem
-This service is used to update picklistItem after rejecting the item, If the picklistItems exists for the passed parameters with itemStatusId as PICKITEM_PENDING. Picklist will be marked as cancelled if all the quantity of items are rejected.
-
-=== updatePicklistItem
+This service is used to update picklistItem after completing the item, If the picklistItems exists for the passed parameters with itemStatusId not in PICKLIST_CANCELLED, PICKLIST_COMPLETED,PICKLIST_PICKED. Picklist will be marked as picked.
 
 === createShipment
+This service is used to create a new shipment. After updating the picklistItem, system checks following:
+
+* While iterating the item, first check the existing shipment of the shipGroup with statusId as SHIPMENT_INPUT
+* This will ensure that the same shipGroup items are packed in same shipment.
+* In case, shipGroup is different, then create a new shipment.
 
 === createShipmentPackage
+This service is used to create shipment package after creating new shipment using checkCanChangeShipmentStatusPacked and ensurePackageRouteSeg methods.
 
 === createOrderShipmentItem
+This service is used to create shipment package contents with order-shipment and shipment-item records using createOrderShipment/updateOrderShipment, createShipmentItem/updateShipmentItem and createShipmentPackageContent/updateShipmentPackageContent services
 
 === updateShipmentRouteSegment
+This service is used to update shipment route segment with tracking number using checkCanChangeShipmentStatusDelivered and ensureRouteSegPackage methods.
 
 === createShipmentStatus
+This service is used to create shipment status using entity-auto engine with SHIPMENT_PACKED statusId.
 
 === updateShipment
+If there is some error in createShipmentStatus service then updateShipment service will be invoke with SHIPMENT_SHIPPED statusId.
 
 === For more details please refer completeOrderItem API:
 link:../APIs/completeOrderItem.adoc[completeOrderItem]
