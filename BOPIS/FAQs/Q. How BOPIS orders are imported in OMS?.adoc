@@ -1,0 +1,7 @@
+== Q. How BOPIS orders are imported in OMS?
+
+After an order is placed by a customer on Shopify, the OMS imports the order when the *_createOrdersFromShopify_* service runs.
+
+While importing orders OMS checks if the ordered item has store ID and/or store name in the virtual tags. 
+
+If the ordered item has store ID and/or store name are found in virtual tags then while importing order, the store address will be set as the 'Ship From' and the 'Ship To' and the item will be displayed on the BOPIS app for fulfillment.
