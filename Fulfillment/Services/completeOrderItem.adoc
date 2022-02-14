@@ -1,0 +1,47 @@
+= completeOrderItem
+
+This service is used to complete/fulfill the order items from warehouse facility.
+
+* If items belong to same shipgroup, they will be shipped in same shipment.
+* A new shipment is created if the shipgroup is different.
+* For more than one quantity, item would get reiterated from API call. This will be handled by the createShipmentItemPackageContent service.
+
+== Properties
+Following are the attributes used in below API:
+
+[width="100%", cols="4" options="header"]
+|=======
+|Attribute |Type |Required| Description
+|orderId|String|Yes|This attribute contains the unique ID of order in OMS.
+|item|Map|Yes|This attribute contains the unique ID of order-item in OMS.
+|shipmentMethodTypeId|String|Yes|This attribute contains the unique ID of shipment method type in OMS.
+|facilityId|String|Yes|This attribute contains the unique ID of facility in OMS.
+|shipGroupSeqId|String|No|This attribute contains ship group sequence ID.
+|shipmentBoxTypeId|String|No|This attribute contains the type of box used in the shipment like YOURPACKNG.
+|dimensionUomId|String|No|This attributes contains dimension UOM of shipment package. like WT_lb, WT_kg e.t.c.
+|weightUomId|String|No|his attribute contains weight UOM of the shipment.
+|weight|String|No|This attribute contains weight of the shipment.
+|carrierPartyId|String|No|This attribute contains carrier party ID.
+|=======
+
+== Inline Services
+
+=== updatePicklistItem
+This service is used to update picklistItem after rejecting the item, If the picklistItems exists for the passed parameters with itemStatusId as PICKITEM_PENDING. Picklist will be marked as cancelled if all the quantity of items are rejected.
+
+=== updatePicklistItem
+
+=== createShipment
+
+=== createShipmentPackage
+
+=== createOrderShipmentItem
+
+=== updateShipmentRouteSegment
+
+=== createShipmentStatus
+
+=== updateShipment
+
+=== For more details please refer completeOrderItem API:
+link:../APIs/completeOrderItem.adoc[completeOrderItem]
