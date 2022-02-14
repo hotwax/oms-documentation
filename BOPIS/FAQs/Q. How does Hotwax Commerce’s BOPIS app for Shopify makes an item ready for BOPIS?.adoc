@@ -1,0 +1,11 @@
+== Q. How does Hotwax Commerce’s BOPIS app for Shopify makes an item ready for BOPIS?
+
+Retailers will have to install the HC BOPIS app in Shopify. This app makes the following changes:
+
+* Add a ‘Pick up today’ button below the ‘Add to Cart' button on the Shopify storefront
+* Open a popup for ‘Pick up today’
+* Add functionality to search store that has inventory for the item by zip code in ‘Pick up today’ popup
+* Add functionality to select a store for pickup
+* Display selected pickup store for the item on the cart and during checkout
+* +++<s>+++ Display selected store on the order page of Shopify storefront to customer +++</s>+++
+* After the order is placed by the customer save the store name and store ID for the ordered item in virtual tags in Shopify
