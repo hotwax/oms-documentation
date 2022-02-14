@@ -1,0 +1,3 @@
+== Q. How does overpromising of BOPIS order is avoided?
+
+When customers search stores for BOPIS orders an API call is made to OMS to fetch the stores that have inventory to fulfill orders. The OMS will return only those stores that have inventory to fulfill orders. Stores that do not have inventory to fulfill the order will not be displayed. In this way, over-promising of BOPIS order is avoided.
