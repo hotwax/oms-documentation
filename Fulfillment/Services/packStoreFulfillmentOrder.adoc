@@ -1,0 +1,21 @@
+= packStoreFulfillmentOrder
+
+This service is used to mark the picklist bin items as picked and shipment as packed.
+
+== Properties
+Following are the attributes used in below service:
+
+[width="100%", cols="4" options="header"]
+|=======
+|Attribute |Type |Required| Description
+|orderId|String|Yes|This attribute contains the unique ID of order in OMS.
+|picklistBinId|String|Yes|This attribute contains the unique ID of picklistBin in OMS.
+|=======
+
+== Inline Services
+
+=== updatePicklistItem
+This service is used to update picklistItem along with the passed attributes and itemStatusId as PICKITEM_PICKED.
+
+=== updateShipment
+This service is used to update shipment along with the passed attributes and shipment statusId as SHIPMENT_PACKED.
