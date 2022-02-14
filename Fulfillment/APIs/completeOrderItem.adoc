@@ -39,6 +39,13 @@ Accept: application/json
 [source, json]
 ----------------------------------------------------------------
 {
+    "orderId": "NN11160",
+    "facilityId": "STORE_9",
+    "shipmentMethodTypeId": "STANDARD",
+    "item": {
+        "orderItemSeqId": "00001",
+        "quantity": 1
+    }
 }
 ----------------------------------------------------------------
 === *Response*
@@ -60,7 +67,14 @@ Content-Type: application/json
 [source, json]
 ----------------------------------------------------------------
 {
-    
+    "item": {
+        "orderItemSeqId": "00001",
+        "quantity": 1
+    },
+    "facilityId": "STORE_9",
+    "orderId": "NN11160",
+    "shipmentMethodTypeId": "STANDARD",
+    "webSiteId": "API"
 }
 ----------------------------------------------------------------
 
