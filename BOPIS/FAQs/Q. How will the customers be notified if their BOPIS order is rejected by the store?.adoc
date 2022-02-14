@@ -1,0 +1,3 @@
+== Q. How will the customers be notified if their BOPIS order is rejected by the store?
+
+If the OMS is integrated with the CRM and the BOPIS order of customers are rejected then OMS will trigger an email to the customer regarding the order rejected by the store. The customer will then have an option to either have the item delivered to them or cancel the order.
