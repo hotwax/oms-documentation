@@ -1,0 +1,7 @@
+== Q. Customer has come to collect his-her BOPIS order but the store associate cannot find the order in the ‘Packed’ tab of the BOPIS app. How can store a associate find and complete the BOPIS order of the customer?
+
+The most probable reason for not finding the order on the ‘Packed’ tab would be that the customer has arrived early before the order could be packed. 
+
+The store associate should search the order in the 'Open' tab and if the order is found then they should start the fulfillment process from there.
+
+If the store associate did not find the order even in the ‘Open’ tab then please refer to this link:https://github.com/hotwax/oms-documentation/blob/bopis/BOPIS/FAQs/Q.%20Customer%20has%20come%20to%20collect%20BOPIS%20order%20but%20the%20store%20associate%20cannot%20find%20his-her%20order%20either%20in%20the%20packed%20tab%20or%20in%20the%20open%20tab%20of%20BOPIS%20app.%20What%20does%20the%20store%20associate%20need%20to%20do%3F.adoc[article] to know what could be the probable reason.
