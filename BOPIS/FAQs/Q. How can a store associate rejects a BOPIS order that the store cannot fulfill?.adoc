@@ -9,3 +9,5 @@ If 'Not is stock' is selected as the reason then the order will be rejected and 
 If 'No reason' is selected then only the order will be rejected and no changes will be made to the inventory of the item in the store.
 
 Retailers can also use the APIs to integrate this functionality into their existing fulfillment system.
+
+For more details please refer rejectOrderItem API: link:../APIs/rejectOrderItem.adoc[rejectOrderItem]
