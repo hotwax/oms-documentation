@@ -23,3 +23,6 @@ This service is used to update picklistItem along with the passed attributes and
 
 === updateShipment
 This service is used to update shipment along with the passed attributes and shipment statusId as SHIPMENT_APPROVED.
+
+=== For more details please refer unpackOrderItems API:
+link:../APIs/unpackOrderItems.adoc[unpackOrderItems]
