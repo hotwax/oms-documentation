@@ -1,5 +1,9 @@
 = BOPIS Services
 
+link:Services/bulkRejectStoreInProgressOrders.adoc[bulkRejectStoreInProgressOrders]
+
+link:Services/bulkRejectStoreOutstandingOrders.adoc[bulkRejectStoreOutstandingOrders]
+
 link:Services/completeOrderItem.adoc[completeOrderItem]
 
 link:Services/packStoreFulfillmentOrder.adoc[packStoreFulfillmentOrder]
