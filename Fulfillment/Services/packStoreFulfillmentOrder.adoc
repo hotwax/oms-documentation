@@ -1,6 +1,6 @@
 = packStoreFulfillmentOrder
 
-This service is used to mark the picklist bin items as picked and shipment as packed.
+While tapping on the pack button under in-progress segment, packStoreFulfillmentOrder request will be called which further invokes packStoreFulfillmentOrder service. This service is used to mark the picklist bin items as picked and shipment as packed.
 
 == Properties
 Following are the attributes used in below service:
