@@ -17,5 +17,5 @@ Following are the attributes used in below service:
 === rejectOutstandingOrder
 This service is used to route outstanding order to rebrokering.
 
-* If the record of picklist item exists for the order then substract the quantity of PicklistItem from the quantity of OrderItemShipGrpInvRes.
-* Otherwise invokes rejectOrderItem service with rejectComments as Store Rejected Inventory.
+* If the record of PicklistItem exists for the order and itemStatusId is not the PICKITEM_CANCELLED then substract the quantity of PicklistItem from the quantity of OrderItemShipGrpInvRes.
+* Otherwise invokes rejectOrderItem service with recordVariance as Y and rejectComments as Store Rejected Inventory.
