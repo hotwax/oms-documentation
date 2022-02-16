@@ -22,7 +22,13 @@ Following are the attributes used in below API:
 == Inline Services
 
 === createShipment
+This service is used to create a new shipment with statusId as SHIPMENT_INPUT.
 
 === updateShipmentRouteSegment
+This service is used to update shipment route segment with the passed carrierPartyId and shipmentMethodTypeId using checkCanChangeShipmentStatusDelivered and ensureRouteSegPackage methods.
 
 === createShipmentPackage
+This service is used to create shipment package after creating new shipment using checkCanChangeShipmentStatusPacked and ensurePackageRouteSeg methods.
+
+=== For more details please refer addShipmentPackage API:
+link:../APIs/addShipmentPackage.adoc[addShipmentPackage]
