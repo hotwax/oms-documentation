@@ -1,5 +1,7 @@
 = BOPIS Services
 
+link:Services/addShipmentPackage.adoc[addShipmentPackage]
+
 link:Services/bulkRejectStoreInProgressOrders.adoc[bulkRejectStoreInProgressOrders]
 
 link:Services/bulkRejectStoreOutstandingOrders.adoc[bulkRejectStoreOutstandingOrders]
@@ -13,3 +15,5 @@ link:Services/picklistDataSetup.adoc[picklistDataSetup]
 link:Services/unpackOrderItems.adoc[unpackOrderItems]
 
 link:Services/updateFacility.adoc[updateFacility]
+
+link:Services/updateInProgressOrder.adoc[updateInProgressOrder]
