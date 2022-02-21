@@ -1,3 +1,11 @@
 = Fulfillment APIs
 
+link:APIs/addShipmentPackage.adoc[addShipmentPackage]
+
 link:APIs/completeOrderItem.adoc[completeOrderItem]
+
+link:APIs/moveShipmentItem.adoc[moveShipmentItem]
+
+link:APIs/rejectShipmentItem.adoc[rejectShipmentItem]
+
+link:APIs/unpackOrderItems.adoc[unpackOrderItems]
