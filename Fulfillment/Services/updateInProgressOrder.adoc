@@ -16,9 +16,16 @@ Following are the attributes used in below API:
 == Inline Services
 
 === updateShipment
+This service is used to change the shipment status to SHIPMENT_INPUT.
 
 === moveShipmentItem
+This service is used to change the package of shipmentItem. Further it uses deleteOrderShipmentItem service to remove item from old shipment and createOrderShipmentItem service to add item to the new shipment.
 
 === rejectShipmentItem
+This service is used to remove item from Shipment and Picklist using deleteOrderShipmentItem and rejectOrderItem services.
 
 === rejectItemFromAllOrders
+This service is used to route outstanding order to rebrokering i.e. Reject all orders having this item and zero out the inventory by logging variance.
+
+* This service is called when we select NOT_IN_STOCK as rejection reason, where system needs to clear all existing orders available in the queue.
+* Also need to record variance for all existing qty for this location.
