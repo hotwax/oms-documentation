@@ -21,8 +21,14 @@ This service is used to change the shipment status to SHIPMENT_INPUT.
 === moveShipmentItem
 This service is used to change the package of shipmentItem. Further it uses deleteOrderShipmentItem service to remove item from old shipment and createOrderShipmentItem service to add item to the new shipment.
 
+For more details please refer moveShipmentItem API:
+link:../APIs/moveShipmentItem.adoc[moveShipmentItem]
+
 === rejectShipmentItem
 This service is used to remove item from Shipment and Picklist using deleteOrderShipmentItem and rejectOrderItem services.
+
+For more details please refer rejectShipmentItem API:
+link:../APIs/rejectShipmentItem.adoc[rejectShipmentItem]
 
 === rejectItemFromAllOrders
 This service is used to route outstanding order to rebrokering i.e. Reject all orders having this item and zero out the inventory by logging variance.
