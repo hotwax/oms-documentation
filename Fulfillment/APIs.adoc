@@ -6,6 +6,8 @@ link:APIs/completeOrderItem.adoc[completeOrderItem]
 
 link:APIs/moveShipmentItem.adoc[moveShipmentItem]
 
+link:APIs/order.adoc[order]
+
 link:APIs/orders.adoc[orders]
 
 link:APIs/rejectShipmentItem.adoc[rejectShipmentItem]
