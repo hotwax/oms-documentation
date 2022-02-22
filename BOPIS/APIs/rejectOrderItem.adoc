@@ -5,22 +5,22 @@ To reject order item you will need to call the `/rejectOrderItem` endpoint with 
 == Properties
 Following are the attributes used in below API:
 
-[width="100%", cols="3,2,10" options="header"]
+[width="100%", cols="4" options="header"]
 |=======
-|Attribute |Type |Description
-|orderId |String |This is the unique ID assigned to an order in the system.
-|externalOrderId |String |This is the unique ID assigned to an order in the external system.
-|orderIdentification |Object |This carry the identification information.
-|orderIdentification.orderIdentificationTypeId |String |This is the identification type of the order in the system.
-|orderIdentification.idValue |String |This is the identification value for the orderIdentificationTypeId.
-|shipmentMethodTypeId  |String | This attribute contains shipment Method Type Id of item.
-|orderItemSeqId |String |This attribute contains order item sequence ID.
-|externalOrderItemId |String |This is the unique ID assigned to an order item in the external system.
-|quantity |Integer |This attribute contains the quantity of product in the order.
-|facilityId |String |This attribute contains facility/warehouse ID already exist in the system.
-|externalFacilityId|String|FacilityID in the external system.
-|recordVariance |String |Flag to record variance or not. Default value is Y
-|rejectReason |String |Reason of rejection. Accepts predefined values in the system.
+|Attribute |Type |Required|Description
+|orderId |String |Yes|This is the unique ID assigned to an order in the system.
+|externalOrderId |String |No|This is the unique ID assigned to an order in the external system.
+|orderIdentification |Object |No|This carry the identification information.
+|orderIdentification.orderIdentificationTypeId |String |No|This is the identification type of the order in the system.
+|orderIdentification.idValue |String |No|This is the identification value for the orderIdentificationTypeId.
+|shipmentMethodTypeId  |String | No|This attribute contains shipment Method Type Id of item.
+|orderItemSeqId |String |Yes|This attribute contains order item sequence ID.
+|externalOrderItemId |String |No|This is the unique ID assigned to an order item in the external system.
+|quantity |Integer |Yes|This attribute contains the quantity of product in the order.
+|facilityId |String |Yes|This attribute contains facility/warehouse ID already exist in the system.
+|externalFacilityId|String|No|FacilityID in the external system.
+|recordVariance |String |No|Flag to record variance or not. Default value is Y
+|rejectReason |String |No|Reason of rejection. Accepts predefined values in the system.
 |=======
 
 === User Story
@@ -31,7 +31,6 @@ Reject desired item qty from a store/facility/warehouse if it is unfulfillable f
 - orderId/externalId/orderIdentification (required, string): OrderId/externalId/orderIdentification is required.
 - facilityId/externalFacilityId (required, string): Either facilityId/externalFacilityId is required.
 - orderItemSeqId/externalOrderItemId (required, string): Either orderItemSeqId/externalOrderItemId is required.
-- quantity (required, object): Quantity of item to reject.
 
 === *Request*
 *Endpoint*
