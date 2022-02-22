@@ -47,11 +47,11 @@ Accept: application/json
 [source, json]
 ----------------------------------------------------------------
 {
+    "facilityId":"STORE_1"
     "sortBy":"createdDate",
     "sortOrder":"Desc",
     "viewSize":"10",
     "viewIndex":0,
-    "facilityId":"STORE_1"
 }
 ----------------------------------------------------------------
 === *Response*
