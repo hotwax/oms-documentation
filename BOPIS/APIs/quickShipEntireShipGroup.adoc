@@ -54,13 +54,13 @@ Accept: application/json
 ----------------------------------------------------------------
 {
     "orderId":"NN11142",
-    "setPackedOnly":"Y",
-    "dimensionUomId":"WT_kg",
-    "shipmentBoxTypeId":"YOURPACKNG",
-    "weight":"1",
-    "weightUomId":"WT_kg",
     "facilityId":"STORE_1",
     "shipGroupSeqId":"00001"
+    "setPackedOnly":"Y",
+    "weight":"1",
+    "dimensionUomId":"WT_kg",
+    "weightUomId":"WT_kg",
+    "shipmentBoxTypeId":"YOURPACKNG",
 }
 ----------------------------------------------------------------
 === *Response*
@@ -79,16 +79,16 @@ Content-Type: application/json
 ----------------------------------------------------------------
 {
     "orderId":"NN11142",
+    "facilityId":"STORE_1",
+    "shipGroupSeqId":"00001",
     "setPackedOnly":"Y",
+    "weight":"1",
     "shipmentBoxTypeId":"YOURPACKNG",
     "cors.request.type":"actual",
     "dimensionUomId":"WT_kg",
-    "webSiteId":"API",
-    "facilityId":"STORE_1",
-    "cors.request.origin":"https://bopis.hotwax.io",
-    "weight":"1",
-    "shipGroupSeqId":"00001",
     "weightUomId":"WT_kg",
+    "webSiteId":"API",
+    "cors.request.origin":"https://bopis.hotwax.io",
     "_EVENT_MESSAGE_":"Congratulations! Shipment #10890 is shipped successfully."
 }
 ----------------------------------------------------------------
