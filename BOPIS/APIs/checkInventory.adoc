@@ -21,7 +21,7 @@ Following are the attributes used in below API:
 
 *HTTP Request*
 [source, html]
-GET /api/checkInventory?sku=31284199489663&facilityId=STORE_11&facilityId=STORE_1&facilityId=STORE_8&facilityId=STORE_9&facilityId=STORE_10
+GET /api/checkInventory?sku=31284199489663&facilityId=STORE_1&facilityId=STORE_2&facilityId=STORE_3&facilityId=STORE_4
 
 *End-point*
 [source, html]
@@ -44,26 +44,22 @@ Content-Type: application/json
 [source, json]
 ----------------------------------------------------------------
 {
-    "count": "5", 
+    "count": "4", 
     "docs": [
         {
             "facilityId":"STORE_1",
             "atp":48.000000
         },
         {
-            "facilityId":"STORE_10",
+            "facilityId":"STORE_2",
             "atp":50.000000
         },
         {
-            "facilityId":"STORE_11",
+            "facilityId":"STORE_3",
             "atp":49.000000
         },
         {
-            "facilityId":"STORE_8",
-            "atp":50.000000
-        },
-        {
-            "facilityId":"STORE_9",
+            "facilityId":"STORE_4",
             "atp":50.000000
         }
     ]
