@@ -24,15 +24,14 @@ Accept: application/json
     "json":
     {
         "params":
-         {
-            "rows":"50",
-        "q.op":"AND",
-        "qf":"postalCode city state country storeCode storeName",
-        "defType":"edismax"
-      },
-    "query":"(**) OR \"\"^100",
-    "filter":"docType:STORE"
-  }
+        {
+            "q.op":"AND",
+            "qf":"postalCode city state country storeCode storeName",
+            "defType":"edismax"
+        },
+        "query":"(**) OR \"\"^100",
+        "filter":"docType:STORE"
+    }
 }
 ----------------------------------------------------------------
 === *Response*
@@ -130,5 +129,5 @@ Content-Type: application/json
 }
 ----------------------------------------------------------------
 
-=== Further you will need to call checkInventory API to get the product count on specific locations:
+=== Further you will need to call checkInventory API to get the product count on specific locations, using identifier as facilityId:
 link:../APIs/checkInventory.adoc[checkInventory]
