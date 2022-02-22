@@ -1,0 +1,3 @@
+== Q. Can store associates select the number of orders in a picklist?
+
+Yes, store associates can select the number of orders from the bottom of the 'Orders' tab before creating a picklist.
