@@ -1,6 +1,6 @@
 = updateShipment
 
-To complete packed BOPIS order i.e. mark the shipment as SHIPMENT_SHIPPED you will need to call the `/updateShipment` endpoint with the POST method.
+To complete the packed BOPIS order i.e. mark the shipment as SHIPMENT_SHIPPED you will need to call the `/updateShipment` endpoint with the POST method.
 
 == Properties
 Following are the attributes used in below API:
@@ -51,16 +51,16 @@ Content-Type: application/json
 [source, json]
 ----------------------------------------------------------------
 {
-    "cors.request.type":"actual",
-    "webSiteId":"API",
-    "oldStatusId":"SHIPMENT_PACKED",
     "oldPrimaryOrderId":"NN11142",
-    "cors.request.origin":"https://bopis.hotwax.io",
     "oldPrimaryShipGroupSeqId":"00001",
-    "statusId":"SHIPMENT_SHIPPED",
+    "oldStatusId":"SHIPMENT_PACKED",
     "oldOriginFacilityId":"STORE_1",
     "shipmentId":"10890",
+    "statusId":"SHIPMENT_SHIPPED",
     "shipmentTypeId":"SALES_SHIPMENT",
+    "cors.request.type":"actual",
+    "webSiteId":"API",
+    "cors.request.origin":"https://bopis.hotwax.io",
     "_EVENT_MESSAGE_":"Shipment updated successfully"
 }
 ----------------------------------------------------------------
