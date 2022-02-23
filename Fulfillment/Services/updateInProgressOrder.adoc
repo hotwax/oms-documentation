@@ -1,6 +1,6 @@
 = updateInProgressOrder
 
-This service is used to create variance for all the pieces in stock (QOH). While tapping on the report-an-issue button, updateOrder request will be called which further invokes updateInProgressOrder event.
+This service is used to update in-progress order i.e. either rejecting an item via report-an-issue or updating the shipment box type. While tapping on the report-an-issue button or edit the box type, updateOrder request will be called which further invokes updateInProgressOrder event.
 
 * If item is rejected with reason - Inactive Store, then item will be rejected from that particular order and no variance will be recorded.
 * For other reasons, item will be rejected from all outstanding and in progress orders and variance will be recorded for all the quantity in the store except quantity in orders in completed tab.
