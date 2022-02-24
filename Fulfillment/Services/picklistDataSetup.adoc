@@ -43,3 +43,6 @@ If the pickerIds is passed in the attributes then updatePicklist service will be
 
 === updatePicklist
 This service is invoked on the global-commit-post-run event of picklistDataSetup service. If the picklistId is not empty then set the status of picklist as PICKLIST_PRINTED by running the updatePicklist service in async mode.
+
+=== initializeShipment
+This service is invoked on the global-commit-post-run event of createPicklistBin service. If the picklistBinId is not empty then run this service in sync mode. It is used to check if shipment is already created for picklistBinId in input status or not. If not created, the creates a new Shipment in Input status.
