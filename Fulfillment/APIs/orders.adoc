@@ -11,7 +11,7 @@ To get all the orders you will need to call the `/orders` endpoint with the GET 
 === *Request*
 *Endpoint*
 ----
-GET /api/<publish_point>/orders HTTP/1.1
+GET /api/orders HTTP/1.1
 
 Host: example.com
 ----
@@ -24,7 +24,7 @@ viewSize=10
 ----
 Content-Type:​ application/json
 
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1NTE5NTIxNjcsInVzZXJMb2dpbklkIjoicGFsbGF2aUBleGFtcGxlLmNvbSJ9.VREDB8Mul9q4sdeNQAvhikVdpDJKKoMBfiBbeQTQOn5e5eOj6XdXnHNAguMpgXk8KXhj_scLDdlfe0HCKPp7HQ
+Authorization: Bearer <token_value>
 
 Accept: application/json
 ----
