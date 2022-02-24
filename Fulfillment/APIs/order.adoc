@@ -5,7 +5,7 @@ To retrieve the order details corresponding to the order id passed in the reques
 === *Request*
 *Endpoint*
 ----
-GET /api/<publish_point>/orders/<order_id> HTTP/1.1
+GET /api/orders/<order_id> HTTP/1.1
 
 Host: example.com
 ----
