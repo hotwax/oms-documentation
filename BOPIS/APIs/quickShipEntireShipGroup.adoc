@@ -88,7 +88,7 @@ Content-Type: application/json
     "dimensionUomId":"WT_kg",
     "weightUomId":"WT_kg",
     "webSiteId":"API",
-    "cors.request.origin":"https://example.com",
+    "cors.request.origin":<origin_URL>,
     "_EVENT_MESSAGE_":"Congratulations! Shipment #10890 is shipped successfully."
 }
 ----------------------------------------------------------------
