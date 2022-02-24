@@ -24,7 +24,7 @@ Host: example.com
 ----
 Content-Type:​ application/json
 
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1NTE5NTIxNjcsInVzZXJMb2dpbklkIjoicGFsbGF2aUBleGFtcGxlLmNvbSJ9.VREDB8Mul9q4sdeNQAvhikVdpDJKKoMBfiBbeQTQOn5e5eOj6XdXnHNAguMpgXk8KXhj_scLDdlfe0HCKPp7HQ
+Authorization: Bearer <token_value>
 
 Accept: application/json
 ----
@@ -60,7 +60,7 @@ Content-Type: application/json
     "shipmentTypeId":"SALES_SHIPMENT",
     "cors.request.type":"actual",
     "webSiteId":"API",
-    "cors.request.origin":"https://bopis.hotwax.io",
+    "cors.request.origin":<origin_URL>,
     "_EVENT_MESSAGE_":"Shipment updated successfully"
 }
 ----------------------------------------------------------------
