@@ -33,7 +33,7 @@ POST /api/addShipmentPackage HTTP/1.1
 ----
 Content-Type:​ application/json
 
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1OTUzMTQ4OTEsInVzZXJMb2dpbklkIjoiYWFyb24ud2FnbmVyIn0.r2T1ER4mn1ljuilGi8Jr0OMqlD0Gd2OyzTT0Ah8kXPJLZssy1F-r5pRIC4OiyJbMQ_ZCESRxH1xBhlJcr3R3fw
+Authorization: Bearer <token_value>
 
 Accept: application/json
 ----
