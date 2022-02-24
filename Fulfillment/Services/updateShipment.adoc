@@ -1,0 +1,29 @@
+= updateShipment
+
+This service is used to update shipment. While tapping on the ship-now button under completed segment, shipOrder request will be called which further invokes updateShipment service to update the status as SHIPMENT_SHIPPED. It will accept the attributes of Shipment entity excluding shipmentTypeId, createdDate, createdByUserLogin, lastModifiedDate and lastModifiedByUserLogin.
+
+== Inline Services
+
+=== sendShipmentShippedMail
+This service is used to send the mail to the store manager when the shipment is shipped, using sendMailFromContent service.
+
+=== setShipmentPackagesWeight
+This service is used to set the shipment packages weight. If shipmentPackageSeqId not provided then reset weight for all packages using updateShipmentPackage service.
+
+=== doRateShopping
+This service is used to update the shipping method in shipment route segment for minimum shipping rate service with given delivery days.
+
+* Check if carrier and shipment method configured for product store. If not configured, process order offline. To process online, configure ProductStoreShipmentMeth data for carriers.
+* If shipmentMethods is not empty then sort the list of stores such that the store which is nearer to the location of entered postal code will display first and then finding the best rates.
+
+=== issueItemsAndCompleteSalesOrder
+This service is used to complete sales order after item issuance using issueOrderItemShipGrpInvResAndAssignRole, updatePicklistItem, updatePicklist and completeSalesOrder services.
+
+=== sendShipmentDeliveredMail
+This service is used to send the mail to the store manager when the shipment is delivered, using sendMailFromContent service.
+
+=== checkReserveInvAndCompleteOrder
+When reservation is disabled for the product store then this service is used to complete order using changeOrderItemStatus service with statusId as ITEM_COMPLETED.
+
+=== voidShipmentInvoiceAndPackagesLabel
+This service is used to void the sales invoice and package label using voidShipmentPackageLabel and voidSalesInvoice services.
