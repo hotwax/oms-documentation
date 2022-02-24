@@ -42,7 +42,7 @@ Content-Type: application/json
 [source, json]
 ----------------------------------------------------------------
 {
-    "cors.request.origin":"https://hc-demo.myshopify.com",
+    "cors.request.origin":<origin_URL>,
     "refresh":true,
     "accessToken":<accessToken_value>
     "cors.request.type":"actual",
