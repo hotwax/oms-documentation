@@ -1,4 +1,4 @@
-= Orders ready to process
+= Orders ready to pick
 
 To confirm that inventory is available and order will be fulfilled from the store you will need to call the `/solr-query` endpoint with the POST method.
 
