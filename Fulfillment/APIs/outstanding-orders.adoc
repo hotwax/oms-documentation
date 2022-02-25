@@ -32,7 +32,8 @@ Accept: application/json
       "quantityNotAvailable: 0",
       "isPicked:N",
       "-shipmentMethodTypeId : STOREPICKUP",
-      "facilityId: NN_WH"
+      "facilityId: NN_WH",
+      "-fulfillmentStatus: Cancelled"
     ]
   }
 }
