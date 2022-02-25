@@ -10,6 +10,8 @@ link:APIs/order.adoc[order]
 
 link:APIs/orders.adoc[orders]
 
+link:APIs/outstanding-orders.adoc[outstanding-orders]
+
 link:APIs/rejectShipmentItem.adoc[rejectShipmentItem]
 
 link:APIs/unpackOrderItems.adoc[unpackOrderItems]
