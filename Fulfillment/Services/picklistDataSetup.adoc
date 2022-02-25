@@ -16,7 +16,7 @@ Following are the attributes used in below service:
 |inventoryItemId|String|This attribute contains the unique ID of inventoryItem exists in the system.
 |itemStatusId|String|This attribute contains the unique ID of itemStatus exists in the system.
 |quantity|String|This attribute contains the quantity of items that need to be picked.
-|pickerIds|String|This attribute contains the unique ID of party to which picklist will be assigned.
+|pickerIds|List|This attribute contains the unique ID of party to which picklist will be assigned.
 |=======
 
 == Inline Services

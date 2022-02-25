@@ -1,6 +1,6 @@
 = unpackOrderItems
 
-This service is used to unlock order item in a picklist bin. While tapping on the unlock button in completed segment, unlockOrder request will be called which further invokes unlockStoreFulfillmentOrder service.
+This service is used to unlock order item in a picklist bin. While tapping on the unlock button in completed segment, unlockOrder request will be called which further invokes unpackOrderItems service via unlockStoreFulfillmentOrder service.
 
 == Properties
 Following are the attributes used in below service:
