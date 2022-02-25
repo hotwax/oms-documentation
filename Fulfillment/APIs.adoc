@@ -4,6 +4,10 @@ link:APIs/addShipmentPackage.adoc[addShipmentPackage]
 
 link:APIs/completeOrderItem.adoc[completeOrderItem]
 
+link:APIs/completed-orders.adoc[completed-orders]
+
+link:APIs/inprogress-orders.adoc[inprogress-orders]
+
 link:APIs/moveShipmentItem.adoc[moveShipmentItem]
 
 link:APIs/order.adoc[order]
