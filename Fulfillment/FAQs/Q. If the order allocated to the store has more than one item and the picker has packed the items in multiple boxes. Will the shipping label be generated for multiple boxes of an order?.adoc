@@ -1,0 +1,3 @@
+== Q. If the order allocated to the store has more than one item and the picker has packed the items in multiple boxes. Will the shipping label be generated for multiple boxes of an order?
+
+Yes, the shipping label will be generated for each box after the picker has added a new box for the order and added the ordered item to each box.
