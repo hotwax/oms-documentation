@@ -1,6 +1,6 @@
 = Ready To Ship Orders
 
-To get the list of ready to ship orders and order items for a particular store you will need to call `/readytoshiporders` endpoint with get method.
+To get the list of orders that need to be delivered i.e. ready to ship orders and order items for a particular store you will need to call `/readytoshiporders` endpoint with get method. 
 
 
 == Properties
