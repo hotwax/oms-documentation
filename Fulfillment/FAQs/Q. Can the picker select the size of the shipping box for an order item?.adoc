@@ -1,0 +1,3 @@
+== Q. Can the picker select the size of the shipping box for an order item?
+
+Yes, the picker can select the size of the shipping box from the 'In Progress' tab of the store fulfillment app.
