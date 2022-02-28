@@ -1,0 +1,3 @@
+== Q. Can store managers set a maximum per-day delivery order limit for their stores?
+
+Yes, store managers can set a maximum per-day delivery order limit for their stores. Once the maximum limit of the day is reached no new delivery order will be allocated to the store while brokering. 
