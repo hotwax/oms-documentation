@@ -1,0 +1,5 @@
+== Q. If a delivery ordered item is rejected by the store will it be cancelled?
+
+No, the ordered item will not be cancelled, it will be removed from the store and will be sent for re-brokering to be fulfilled from another location.
+
+The 'Ship From' for delivery ordered item will be updated to 'Not Available', auto cancel date will be set and the item will be eligible for re-brokering to another most suitable location for fulfillment.
