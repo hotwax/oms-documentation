@@ -6,4 +6,7 @@ OMS also sets an auto-cancel date for each delivery ordered item when the order 
 
 If the ordered item is marked as unfillable then on the auto-cancel date set for it then the service autoCancelOrderItems service will automatically cancel the ordered item.
 
+=== For more details please refer autoCancelOrderItems service:
+link:../Services/autoCancelOrderItems.adoc[autoCancelOrderItems]
+
 If OMS is integrated with CRM then an email could be triggered to inform the customer about the cancelled order item.

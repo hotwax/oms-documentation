@@ -8,3 +8,9 @@ Based on the reason selected while rejecting the ordered item the inventory for 
 * Inactive store: The ordered item will be sent for re-brokering to be fulfilled from another location and reservation of the ordered item in the store will be cancelled so ATP of the ordered item in the store will be increased by the rejected quantity. 
 * No variance:
 * Mismatch or Worn Display or Damaged: The ordered item will be sent for re-brokering to be fulfilled from another location and QOH for the ordered item in the store will be reduced by the rejected quantity.
+
+=== For service details please refer updateInProgressOrder:
+link:../Services/updateInProgressOrder.adoc[updateInProgressOrder]
+
+=== For api details please refer rejectShipmentItem:
+link:../APIs/rejectShipmentItem.adoc[rejectShipmentItem]
