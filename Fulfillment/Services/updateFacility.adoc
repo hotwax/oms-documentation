@@ -8,5 +8,5 @@ Following are the attributes used in below service:
 [width="100%", cols="4" options="header"]
 |=======
 |Attribute |Type |Required| Description
-|facilityId|String|Yes|This attribute contains the unique config ID of facility exists in OMS.
+|facilityId|String|Yes|This attribute contains the unique ID of facility exists in OMS.
 |=======
