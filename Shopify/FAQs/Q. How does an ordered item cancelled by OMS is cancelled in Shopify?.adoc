@@ -1,4 +1,4 @@
-== Q. How does an ordered item cancelled by OMS is cancelled in Shopify?
+== Q. How does an ordered item cancelled by OMS is also cancelled in Shopify?
 
 If an ordered item is cancelled in OMS then a service is triggered that cancels the ordered item in Shopify as well. 
 
