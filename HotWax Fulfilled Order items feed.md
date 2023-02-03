@@ -33,3 +33,20 @@ Syncs inventory from HotWax to external source (in this case: POS). After receiv
        "thruDate" : null
      },
 ```
+
+
+
+| Parameter | Description | Required |
+| ---- | ----------- | -------- |
+| ItemQuantity | Ordered quantity | Yes |
+| ProductId | The internal Id of the product in HotWax | Yes |
+| FacilityId | The internal Id of the facility in HotWax | Yes |
+| FacilityExternalId | The Id of the facility in the external systems | Yes |
+| FacilityTypeId | The type of the facility | Yes |
+| ParentFacilityTypeId | The type of the parent facility, used to group various facility types. | Yes |
+| ShippedQuantity | The quantity of items shipped from the ordered quantity. | Yes |
+| GoodIdentifications | All identifications of the product in HotWax Commerce used to identify the product in external systems | Yes |
+| GoodIdentificationTypeId | The type of the unique product Identifier in the external systems (e.g. Shopify product SKU) | Yes |
+| IdValue | The value of the GoodIdentificationTypeId | Yes |
+
+
