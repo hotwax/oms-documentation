@@ -18,3 +18,7 @@ Syncs inventory from an external reference source to HotWax. After receiving the
 | Comments | Optional field to store additional information. | No |
 
 ## Sample
+
+| FacilityId | IdType | IdValue | AvailableQty | LocationSeqId |
+|----------- |------- |-------- |------------- |-------------- | 
+| NEW_ERA_FUKUOKA | Shopify Product Id | 11434040-700 | 20 | TLTLTLLL01 |
