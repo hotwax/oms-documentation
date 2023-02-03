@@ -19,9 +19,9 @@ Syncs inventory from an external reference source to HotWax. After receiving the
 
 | FacilityId | IdType | IdValue | AvailableQty | LocationSeqId |
 |----------- |------- |-------- |------------- |-------------- | 
-| NEW_ERA_FUKUOKA | Shopify Product Id | 11434040-700 | 20 | TLTLTLLL01 |
+| DEMO_HC_STORE_1 | Shopify Product Id | 11434040-700 | 20 | TLTLTLLL01 |
 
-[Reset Inventory Sample CSV](https://github.com/Dhiraj1405/oms-documentation/blob/BOPIS_API/Reset%20Inventory%20Sample%20CSV%20%20-%20Sheet1-2.csv)
+[Reset Inventory Sample CSV](https://github.com/Dhiraj1405/oms-documentation/blob/BOPIS_API/Reset%20Inventory%20CSV%20Sample%20%20-%20Sheet1.csv)
 
 <br/><br/><br/><br/><br/>
 ## Check Inventory API
