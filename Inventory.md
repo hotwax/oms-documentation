@@ -15,14 +15,15 @@ Syncs inventory from an external reference source to HotWax. After receiving the
 | LocationSeqId | The Id of the designated location in a facility in HotWax Commerce. | Yes |
 | Comments | Optional field to store additional information. | No |
 
-### Sample
+### Example
 
 | FacilityId | IdType | IdValue | AvailableQty | LocationSeqId |
 |----------- |------- |-------- |------------- |-------------- | 
 | NEW_ERA_FUKUOKA | Shopify Product Id | 11434040-700 | 20 | TLTLTLLL01 |
 
+[Reset Inventory Sample CSV](https://github.com/Dhiraj1405/oms-documentation/blob/BOPIS_API/Reset%20Inventory%20Sample%20CSV%20%20-%20Sheet1-2.csv)
 
-
+<br/><br/><br/><br/><br/>
 ## Check Inventory API
 
 Get the stock details of the product on the specific locations. To get the stock details, you will need to call the `/checkInventory` endpoint with the GET method. 
