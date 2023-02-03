@@ -108,7 +108,7 @@ Content-Type: application/json
 | StoreName | Store Name |
 | ExternalId | The Id of the store in the external reference source |
 | PrimaryFacilityGroupId | The Id of the primary facility group |
-| PrimaryFacilityGroupName | The name of the primary facility group |
+| PrimaryFacilityGroupName |[The name of the primary facility group](https://github.com/hotwax/press-release-faq/blob/main/bopis/customer-experience/primary-facility-group.md) |
 | PrimaryShopifyShopId | The Id of the primary Shopify Shop |
 | Address1 | The address of the store |
 | City | City |
