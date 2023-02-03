@@ -16,7 +16,7 @@ Example: Host: https://demo-oms.hotwax.io/api/storeLookup
 Content-Type: application/json
 
 #### Body 
-
+```
 {
 "viewSize": 40,
 "filters": ["storeType: RETAIL_STORE"],
@@ -26,7 +26,7 @@ Content-Type: application/json
 "keyword": "value",
 "fieldsToSelect": <values>
 }
-
+```
 
 #### Parameters
 
@@ -50,7 +50,7 @@ Content-Type: application/json
 
 #### Body
 
-
+```
 "response": {
 "numFound": 1,
 "start": 0,
@@ -94,6 +94,7 @@ Content-Type: application/json
 "_version_": 1756516139717885953,
 "_root_": "STORE-524-STORE-524"
 }
+```
 
 | Parameters | Description |
 | --- | --- |
@@ -118,4 +119,3 @@ Content-Type: application/json
 | LatLon | The latitude and longitude of the facility |
 | <day_of_week>_open | The opening time of the store on the day of a week |
 | <day_of_week>_close | The closing time of the store on the day of a week |
-
