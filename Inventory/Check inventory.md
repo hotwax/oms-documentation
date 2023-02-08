@@ -1,19 +1,19 @@
-## Check inventory API
+# Check inventory API
 
 Get the stock details of the product on the specific locations. To get the stock details, you will need to call the `/checkInventory` endpoint with the GET method. 
 
-### Request
+## Request
 
-#### End Point
+### End Point
 https://<host>/api/checkInventory
 
 Example: `https://demo-oms.hotwax.io/api/checkInventory`
 
-#### Header
+### Header
 Content-Type: application/json
 
 
-#### Params
+### Params
 ```
 {
 "sku": "",
@@ -29,16 +29,16 @@ Example Request: `https://demo-oms.hotwax.io/api/checkInventory?productId=10018&
 | ProductId | HotWax Commerce internal product Id | Y |
 | FacilityId | The HotWax Commerce facility Id where product inventory is located | N |
 
-### Response
+## Response
 
-#### Status Code
+### Status Code
 HTTP/1.1 200 OK
 
-#### Headers
+### Headers
 Content-Type: application/json
 
 
-#### Body
+### Body
 ```
 {
 "count": "2",
