@@ -20,4 +20,4 @@ Syncs inventory from an external reference source to HotWax. After receiving the
 |----------- |------- |-------- |------------- |-------------- | 
 | DEMO_HC_STORE_1 | Shopify Product Id | 11434040-700 | 20 | TLTLTLLL01 |
 
-[Reset Inventory Sample CSV](https://github.com/Dhiraj1405/oms-documentation/edit/BOPIS_API/Inventory/Samples/Reset%20inventory%20sample.csv)
+[Reset Inventory Sample CSV](https://github.com/Dhiraj1405/oms-documentation/blob/BOPIS_API/Inventory/Samples/Reset%20inventory%20sample.csv)
