@@ -1,6 +1,6 @@
 # BOPIS-PDP 
 
-## Store Lookup API
+## Store lookup API
 
 The API allows to look up the stores accepting BOPIS orders near the customer’s location using the POST method.
 
