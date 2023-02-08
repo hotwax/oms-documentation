@@ -16,9 +16,9 @@ Content-Type: application/json
 ### Params
 ```
 {
-"sku": "",
-"productId": " ",
-"facilityId": ""
+  "sku": "",
+  "productId": " ",
+  "facilityId": ""
 }
 ```
 Example Request: `https://demo-oms.hotwax.io/api/checkInventory?productId=10018&facilityId=Store_2&facilityId=Store_1`
@@ -39,19 +39,18 @@ Content-Type: application/json
 
 
 ### Body
+  
 ```
 {
-"count": "2",
-"docs": [
-{
-"facilityId": "Store_1",
-"atp": 0.000000
-},
-{
-"facilityId": "Store_2",
-"atp": 4.000000
-}
-]
+  "count": "2",
+  "docs": [{
+    "facilityId": "Store_1",
+    "atp": 0.000000
+  },
+  {
+    "facilityId": "Store_2",
+    "atp": 4.000000
+  }]
 }
 ```
 
