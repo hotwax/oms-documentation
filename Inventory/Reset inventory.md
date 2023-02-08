@@ -1,5 +1,4 @@
-# Inventory
-## Reset Inventory API
+# Reset Inventory API
 
 Syncs inventory from an external reference source to HotWax. After receiving the inventory file in CSV format, HotWax Commerce calculates the difference in inventory and matches its inventory levels exactly with CSV.  
 
@@ -15,7 +14,7 @@ Syncs inventory from an external reference source to HotWax. After receiving the
 | LocationSeqId | The Id of the designated location in a facility in HotWax Commerce. | Yes |
 | Comments | Optional field to store additional information. | No |
 
-### Example
+## Example
 
 | FacilityId | IdType | IdValue | AvailableQty | LocationSeqId |
 |----------- |------- |-------- |------------- |-------------- | 
