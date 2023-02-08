@@ -1,4 +1,4 @@
-## Fulfilled Order Items
+## Fulfilled order items
 
 Syncs inventory from HotWax to external source (in this case: POS). After receiving the feed in json format at FTP locations, external sources can reduce the inventory for a product whose inventory is reserved by HotWax for a store fulfilled order. 
 
