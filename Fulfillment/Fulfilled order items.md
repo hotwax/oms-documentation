@@ -1,8 +1,8 @@
-## Fulfilled order items
+# Fulfilled order items
 
 Syncs inventory from HotWax to external source (in this case: POS). After receiving the feed in json format at FTP locations, external sources can reduce the inventory for a product whose inventory is reserved by HotWax for a store fulfilled order. 
 
-### Body 
+## Body 
 [Sample Json](https://github.com/Dhiraj1405/oms-documentation/edit/BOPIS_API/Fulfillment/Samples/HOTWAX-HotWaxFulfilledOrderItemsFeed-2023-01-31-04-22-05%20(1).json)
 
 ```
