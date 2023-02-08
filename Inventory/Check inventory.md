@@ -1,4 +1,4 @@
-# Check inventory API
+# Check Inventory API
 
 Get the stock details of the product on the specific locations. To get the stock details, you will need to call the `/checkInventory` endpoint with the GET method. 
 
