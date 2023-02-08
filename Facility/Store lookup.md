@@ -1,21 +1,19 @@
-# BOPIS-PDP 
-
-## Store lookup API
+# Store lookup API
 
 The API allows to look up the stores accepting BOPIS orders near the customer’s location using the POST method.
 
-### Request
+## Request
 
 
-#### Endpoint
+### Endpoint
 https://< host >/api/storeLookup 
 
 Example: Host: https://demo-oms.hotwax.io/api/storeLookup
 
-#### Header
+### Header
 Content-Type: application/json
 
-#### Body 
+### Body 
 ```
 {
 "viewSize": 40,
@@ -28,7 +26,7 @@ Content-Type: application/json
 }
 ```
 
-#### Parameters
+### Parameters
 
 | Parameter | Description | Required |
 |-----------|-------------|----------|
@@ -40,15 +38,15 @@ Content-Type: application/json
 | keyword   | Keyword search (only on storeName, storeCode, and externalId) | No |
 | fieldsToSelect | The list of fields to select, all the fields can be filtered in response | No |
 
-### Response
+## Response
 
-#### Status Code
+### Status Code
 HTTP/1.1 200 OK
 
-#### Headers
+### Headers
 Content-Type: application/json
 
-#### Body
+### Body
 
 ```
 "response": {
