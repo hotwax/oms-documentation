@@ -16,13 +16,13 @@ Content-Type: application/json
 ### Body 
 ```
 {
-"viewSize": 40,
-"filters": ["storeType: RETAIL_STORE"],
-"point": “lat,lon”,
-"distance": 50,
-"sortBy": "storeName asc",
-"keyword": "value",
-"fieldsToSelect": <values>
+  "viewSize": 40,
+  "filters": ["storeType: RETAIL_STORE"],
+  "point": “lat,lon”,
+  "distance": 50,
+  "sortBy": "storeName asc",
+  "keyword": "value",
+  "fieldsToSelect": <values>
 }
 ```
 
@@ -49,49 +49,50 @@ Content-Type: application/json
 ### Body
 
 ```
-"response": {
-"numFound": 1,
-"start": 0,
-"numFoundExact": true,
-"docs": [
+"response": 
 {
-"docType": "STORE",
-"storeCode": "524",
-"Identifier": "524",
-"docType-Identifier": "STORE-524-STORE-524",
-"storeType": "RETAIL_STORE",
-"storeName": "Orlando",
-"externalId": "524",
-"primaryFacilityGroupId": "10862657599",
-"primaryFacilityGroupName": "Perry Ellis",
-"primaryShopifyShopId": "10862657599",
-"10862657599_pref": "true",
-"fac_grp_pref": "true",
-"address1": "8200 Vineland Ave.,",
-"city": "Orlando",
-"postalCode": "32821",
-"country": "United States",
-"countryCode": "USA",
-"state": "FlorIda",
-"stateCode": "FL",
-"latlon": "28.3873236,-81.4924445",
-"monday_open": "10:00:00",
-"monday_close": "21:00:00",
-"tuesday_open": "10:00:00",
-"tuesday_close": "21:00:00",
-"wednesday_open": "10:00:00",
-"thursday_open": "10:00:00",
-"thursday_close": "21:00:00",
-"frIday_open": "10:00:00",
-"frIday_close": "21:00:00",
-"saturday_open": "10:00:00",
-"saturday_close": "21:00:00",
-"sunday_open": "11:00:00",
-"sunday_close": "19:00:00",
-"updatedDatetime": "2023-01-31T05:52:08.794Z",
-"_version_": 1756516139717885953,
-"_root_": "STORE-524-STORE-524"
-}
+  "numFound": 1,
+  "start": 0,
+  "numFoundExact": true,
+  "docs": [
+   {
+    "docType": "STORE",
+    "storeCode": "524",
+    "Identifier": "524",
+    "docType-Identifier": "STORE-524-STORE-524",
+    "storeType": "RETAIL_STORE",
+    "storeName": "Orlando",
+    "externalId": "524",
+    "primaryFacilityGroupId": "10862657599",
+    "primaryFacilityGroupName": "Not naked",
+    "primaryShopifyShopId": "10862657599",
+    "10862657599_pref": "true",
+    "fac_grp_pref": "true",
+    "address1": "8200 Vineland Ave.,",
+    "city": "Orlando",
+    "postalCode": "32821",
+    "country": "United States",
+    "countryCode": "USA",
+    "state": "FlorIda",
+    "stateCode": "FL",
+    "latlon": "28.3873236,-81.4924445",
+    "monday_open": "10:00:00",
+    "monday_close": "21:00:00",
+    "tuesday_open": "10:00:00",
+    "tuesday_close": "21:00:00",
+    "wednesday_open": "10:00:00",
+    "thursday_open": "10:00:00",
+    "thursday_close": "21:00:00",
+    "frIday_open": "10:00:00",
+    "frIday_close": "21:00:00",
+    "saturday_open": "10:00:00",
+    "saturday_close": "21:00:00",
+    "sunday_open": "11:00:00",
+    "sunday_close": "19:00:00",
+    "updatedDatetime": "2023-01-31T05:52:08.794Z",
+    "_version_": 1756516139717885953,
+    "_root_": "STORE-524-STORE-524"
+   }
 ```
 
 | Parameters | Description |
