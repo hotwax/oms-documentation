@@ -93,6 +93,8 @@ Content-Type: application/json
     "_version_": 1756516139717885953,
     "_root_": "STORE-524-STORE-524"
    }
+  ]
+ }
 ```
 
 | Parameters | Description |
