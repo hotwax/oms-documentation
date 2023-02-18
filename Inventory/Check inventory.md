@@ -25,7 +25,7 @@ Example Request: `https://demo-oms.hotwax.io/api/checkInventory?productId=10018&
 
 | Parameter Name | Description | Required (Y/N) |
 | --- | --- | --- |
-| `SKU` | The SKU of the product | N |
+| `sku` | The SKU of the product | N |
 | `productId` | HotWax Commerce internal product Id | Y |
 | `facilityId` | The HotWax Commerce facility Id where product inventory is located | N |
 
