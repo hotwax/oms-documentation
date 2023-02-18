@@ -28,15 +28,15 @@ Content-Type: application/json
 
 ### Parameters
 
-| Parameter | Description | Required |
-|-----------|-------------|----------|
-| viewSize  | The total number of results in the API response | No |
-| filters   | Filter records based on the passed parameters | No |
-| point     | The latitude-longitude of a specific location to find nearby stores | No |
-| distance  | The distance from the passed latitude-longitude | No |
-| sortBy    | Sort data based on the attribute, for example: "storeDistance asc" sorts results by distance | No |
-| keyword   | Keyword search (only on storeName, storeCode, and externalId) | No |
-| fieldsToSelect | The list of fields to select, all the fields can be filtered in response | No |
+| Parameter     | Description                                               | Required |
+|---------------|-----------------------------------------------------------|----------|
+| `viewSize`     | The total number of results in the API response            | No       |
+| `filter`      | Filter records based on the passed parameters              | No       |
+| `point`       | The latitude-longitude of a specific location to find nearby stores | No |
+| `distance`    | The distance from the passed latitude-longitude            | No       |
+| `sortBy`      | Sort data based on the attribute, for example: "storeDistance asc" sorts results by distance | No |
+| `keyword`     | Keyword search (only on storeName, storeCode, and externalId) | No       |
+| `fieldsToSelect` | The list of fields to select, all the fields can be filtered in response | No       |
 
 ## Response
 
@@ -97,27 +97,62 @@ Content-Type: application/json
  }
 ```
 
-| Parameters | Description |
-| --- | --- |
-| Numfound | The number of results found |
-| Docs | The array of results found |
-| DocType | Reference index |
-| Storecode | The ID of the facility (store) in HotWax |
-| Identifier | DocType-Identifier |
-| Country | Country |
-| StoreType | The type of the store (Valid values: RETAIL, WAREHOUSE, RETAIL_STORE, OUTLET_WAREHOUSE, OUTLET_STORE,DISTRIBUTION_CENTER) |
-| StoreName | Store Name |
-| ExternalId | The Id of the store in the external reference source |
-| PrimaryFacilityGroupId | The Id of the primary facility group |
-| PrimaryFacilityGroupName |[The name of the primary facility group](https://github.com/hotwax/press-release-faq/blob/main/bopis/customer-experience/primary-facility-group.md) |
-| PrimaryShopifyShopId | The Id of the primary Shopify Shop |
-| Address1 | The address of the store |
-| City | City |
-| PostalCode | Postal Code |
-| Country | Country |
-| CountryCode | Country Code |
-| StateCode | State Code |
-| LatLon | The latitude and longitude of the facility |
-| <day_of_week>_open | The opening time of the store on the day of a week |
-| <day_of_week>_close | The closing time of the store on the day of a week |
+| Parameters               | Description                                                                                                           |
+|--------------------------|-----------------------------------------------------------------------------------------------------------------------|
+| `numFound`               | The number of results found                                                                                           |
+| `docs`                   | The array of results found                                                                                             |
+| `docType`                | Reference index                                                                                                       |
+| `storeCode`              | The ID of the facility (store) in HotWax                                                                               |
+| `identifier`             | DocType-Identifier                                                                                                    |
+| `country`                | Country                                                                                                               |
+| `storeType`              | The type of the store                                                                                                 |
+| `storeName`              | Store Name                                                                                                            |
+| `externalId`             | The Id of the store in the external reference source                                                                  |
+| `primaryFacilityGroupId` | The Id of the primary facility group                                                                                  |
+| `primaryFacilityGroupName`|[The name of the primary facility group](https://github.com/hotwax/press-release-faq/blob/main/bopis/customer-experience/primary-facility-group.md) |
+| `primaryShopifyShopId`   | The Id of the primary Shopify Shop                                                                                     |
+| `address1`               | The address of the store                                                                                               |
+| `city`                   | City                                                                                                                  |
+| `postalCode`             | Postal Code                                                                                                           |
+| `country`                | Country                                                                                                               |
+| `countryCode`            | Country Code                                                                                                          |
+| `stateCode`              | State Code                                                                                                            |
+| `latLon`                 | The latitude and longitude of the facility                                                                             |
+| `<day_of_week>_open`     | The opening time of the store on the day of a week                                                                     |
+| `<day_of_week>_close`    | The closing time of the store on the day of a week                                                                     |
 
+
+
+<br></br>
+
+## Note: 
+### Filters
+
+Filter is a parameter that allows you to narrow down the results of a query or search to only include items that meet specific criteria. For storeLookup API, users can filter results for each parameter given in the response:
+
+| Parameter Name        | Description                                         |
+|-------------------------|-----------------------------------------------------|
+| `country`               | Country                                             |
+| `storeType`             | The type of the store                               |
+| `storeName`             | Store Name                                          |
+| `externalId`            | The Id of the store in the external reference source|
+| `primaryFacilityGroupId`| The Id of the primary facility group                |
+| `primaryFacilityGroupName`| The name of the primary facility group            |
+| `primaryShopifyShopId`  | The Id of the primary Shopify Shop                  |
+| `city`                  | City                                                |
+| `postalCode`            | Postal Code                                         |
+| `countryCode`           | Country Code                                        |
+| `stateCode`             | State Code                                          |
+| `latlon`                | The latitude and longitude of the facility          |
+
+
+### Valid values of storeType
+
+<ul>
+ <li>RETAIL</li>
+ <li>WAREHOUSE</li>
+ <li>RETAIL_STORE</li>
+ <li>OUTLET_WAREHOUSE</li> 
+ <li>OUTLET_STORE</li> 
+ <li>DISTRIBUTION_CENTER</li> 
+</ul>
