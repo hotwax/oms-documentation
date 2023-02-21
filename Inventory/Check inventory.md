@@ -23,7 +23,7 @@ Content-Type: application/json
 ```
 Example Request: `https://demo-oms.hotwax.io/api/checkInventory?productId=10018&facilityId=Store_2&facilityId=Store_1`
 
-| Parameters | Description | Required (Y/N) |
+| Parameter Name | Description | Required (Y/N) |
 | --- | --- | --- |
 | sku | The SKU of the product | N |
 | productId | HotWax Commerce internal product Id | N |
@@ -57,9 +57,10 @@ Content-Type: application/json
 }
 ```
 
-| Parameters | Description |
+| Parameter Name | Description |
 | --- | --- |
-| Count | Results count |
-| Docs | The array of results found |
-| FacilityId | The Id of the facility in HotWax |
-| ATP | The available to promise inventory of the product |
+|  `count`| Results count |
+| `docs` | The array of results found |
+| `facilityId` | The Id of the facility in HotWax |
+| `atp` | The available to promise inventory of the product |
+
