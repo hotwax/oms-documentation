@@ -20,36 +20,36 @@ Method: POST
 
 ##### Request
 ```
- {
-    "json": {
-        "query": "postcode: 10007"
-    }
+{
+  "json": {
+    "query": "postcode: 10007"
+  }
 }
 ```
 
 ##### Response
 ```
 {
-    "responseHeader": {
-        "status": 0,
-        "QTime": 2,
-        "params": {
-            "json": "{\"query\":\"postcode:10007\"}"
-        }
-    },
+  "responseHeader": {
+    "status": 0,
+    "QTime": 2,
+     "params": {
+       "json": "{\"query\":\"postcode:10007\"}"
+     }
+   },
     "response": {
-        "numFound": 1,
-        "start": 0,
-        "numFoundExact": true,
-        "docs": [
+      "numFound": 1,
+      "start": 0,
+      "numFoundExact": true,
+      "docs": [
             {
-                "postcode": "10007",
-                "latitude": "40.713858",
-                "longitude": "-74.007777",
-                "country": "USA",
-                "country-code-id": "10007-USA",
-                "location": "40.713858,-74.007777",
-                "_version_": 1752733529047826432
+               "postcode": "10007",
+               "latitude": "40.713858",
+               "longitude": "-74.007777",
+               "country": "USA",
+               "country-code-id": "10007-USA",
+               "location": "40.713858,-74.007777",
+               "_version_": 1752733529047826432
             }
         ]
     }
@@ -67,7 +67,7 @@ Method: POST
 
 ##### Request
 ```
- {
+{
     "viewSize": 40,
     "filters": ["storeType: RETAIL_STORE"],
     "point": "40.713858,-74.007777",
@@ -192,12 +192,16 @@ In case the customer's location is not available, you can display all the availa
   <li> Step 3: Display all the locations with non-zero inventory on the PDP </li>
 </ol>
 
+#### Sample: 
+
+Request
 ```
 {
     "viewSize": 40,
     "filters": ["storeType: RETAIL_STORE"]
 }
 ```
+
 
 By following these steps, you can integrate HotWax's BOPIS PDP experience on the Shopify storefront and provide a seamless customer experience.
 
