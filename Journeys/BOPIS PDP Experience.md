@@ -31,7 +31,7 @@ Method: POST
 ```
 {
   "responseHeader": {
-         "status": 0,
+        "status": 0,
         "QTime": 2,
         "params": {
             "json": "{\"query\":\"postcode:10007\"}"
@@ -53,7 +53,7 @@ Method: POST
                 }
             ]
         }
-}
+    }
 ```
 
 ### Step 2: Fetch all stores allowing BOPIS
