@@ -37,10 +37,14 @@ Content-Type:​ application/json
 | Parameter  | Description                                  | Required (Y/N) |
 |------------|----------------------------------------------|----------------|
 | `q`        | The query parameter                          | N              |
-| `fq`       | Applies a filter to the query search results | Y              |
-| `pt`       | The latitude and longitude of the location   | Y              |
-| `distance` | The distance from which postal code needs to be fetched | N   |
+| `fq`       | Applies a filter to the query search results | N              |
+| `pt`       | The latitude and longitude of the location   | N              |
+| `d` | The distance from which postal code needs to be fetched | N          |
   
+Note: 
+- `pt` and `d` parameters are required to get the post codes 
+- `d` = 0 will fetch exact post code value for passed latitude and longitude 
+- `d` > 0 will fetch post codes within the given distance 
  
 ### Response
   
@@ -83,10 +87,10 @@ Content-Type: application/json
 |------------------|---------------------------------------------------------|
 | `numfound`       | The number of results found                             |
 | `postcode`       | The postal code for the provided latitude and longitude |
-| `latitude`       | The latitude of the postal code                             |
-| `longitude`      | The longitude of the postal code                            |
+| `latitude`       | The latitude of the postal code                         |
+| `longitude`      | The longitude of the postal code                        |
 | `country`        | The country of the provided postal code                 |
-| `country-code-ID`| The country code ID of the provided country              |
+| `country-code-ID`| The country code ID of the provided country             |
 | `location`       | The latitude and longitude points of the postal code    |
 
 <br></br>
