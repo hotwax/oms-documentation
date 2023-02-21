@@ -31,28 +31,28 @@ Method: POST
 ```
 {
   "responseHeader": {
-    "status": 0,
-    "QTime": 2,
-     "params": {
-       "json": "{\"query\":\"postcode:10007\"}"
-     }
-   },
-    "response": {
-      "numFound": 1,
-      "start": 0,
-      "numFoundExact": true,
-      "docs": [
-            {
-               "postcode": "10007",
-               "latitude": "40.713858",
-               "longitude": "-74.007777",
-               "country": "USA",
-               "country-code-id": "10007-USA",
-               "location": "40.713858,-74.007777",
-               "_version_": 1752733529047826432
-            }
-        ]
-    }
+         "status": 0,
+        "QTime": 2,
+        "params": {
+            "json": "{\"query\":\"postcode:10007\"}"
+        }
+    },
+        "response": {
+        "numFound": 1,
+        "start": 0,
+        "numFoundExact": true,
+        "docs": [
+                {
+                    "postcode": "10007",
+                    "latitude": "40.713858",
+                    "longitude": "-74.007777",
+                    "country": "USA",
+                    "country-code-id": "10007-USA",
+                    "location": "40.713858,-74.007777",
+                    "_version_": 1752733529047826432
+                }
+            ]
+        }
 }
 ```
 
@@ -175,7 +175,7 @@ https://dev-apps.hotwax.io/api/checkInventory?productId=10249&facilityId=STORE_9
             "facilityId": "STORE_20",
             "atp": 8.000000
         },
-       {
+        {
             "facilityId": "STORE_15",
             "atp": 0.000000
         }
@@ -195,13 +195,13 @@ In case the customer's location is not available, you can display all the availa
 #### Sample: 
 
 Request
+
 ```
 {
     "viewSize": 40,
     "filters": ["storeType: RETAIL_STORE"]
 }
 ```
-
 
 By following these steps, you can integrate HotWax's BOPIS PDP experience on the Shopify storefront and provide a seamless customer experience.
 
