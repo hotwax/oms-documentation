@@ -30,7 +30,7 @@ Method: POST
 ##### Response
 ```
 {
-  "responseHeader": {
+    "responseHeader": {
         "status": 0,
         "QTime": 2,
         "params": {
@@ -38,10 +38,10 @@ Method: POST
         }
     },
         "response": {
-        "numFound": 1,
-        "start": 0,
-        "numFoundExact": true,
-        "docs": [
+            "numFound": 1,
+            "start": 0,
+            "numFoundExact": true,
+            "docs": [
                 {
                     "postcode": "10007",
                     "latitude": "40.713858",
