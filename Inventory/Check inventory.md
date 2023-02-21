@@ -5,9 +5,9 @@ Get the stock details of the product on the specific locations. To get the stock
 ## Request
 
 ### End Point
-https://<host>/api/checkInventory
+`https://<host>/api/checkInventory`
 
-Example: `https://demo-oms.hotwax.io/api/checkInventory`
+Example: https://demo-oms.hotwax.io/api/checkInventory
 
 ### Header
 Content-Type: application/json
@@ -25,9 +25,9 @@ Example Request: `https://demo-oms.hotwax.io/api/checkInventory?productId=10018&
 
 | Parameter Name | Description | Required (Y/N) |
 | --- | --- | --- |
-| sku | The SKU of the product | N |
-| productId | HotWax Commerce internal product Id | N |
-| facilityId | The HotWax Commerce facility Id where product inventory is located | N |
+| `sku` | The SKU of the product | N |
+| `productId` | HotWax Commerce internal product Id | N |
+| `facilityId` | The HotWax Commerce facility Id where product inventory is located | N |
 
 Note: It is required to pass either `sku` or `productId`
 

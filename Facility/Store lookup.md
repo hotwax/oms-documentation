@@ -6,7 +6,7 @@ The API allows to look up the stores accepting BOPIS orders near the customer’
 
 
 ### Endpoint
-https://< host >/api/storeLookup 
+`https://< host >/api/storeLookup`
 
 Example: Host: https://demo-oms.hotwax.io/api/storeLookup
 
@@ -28,15 +28,15 @@ Content-Type: application/json
 
 ### Parameters
 
-| Parameter     | Description                                               | Required |
+| Parameter     | Description                                               | Required (Y/N) |
 |---------------|-----------------------------------------------------------|----------|
-| `viewSize`     | The total number of results in the API response            | No       |
-| `filter`      | Filter records based on the passed parameters              | No       |
-| `point`       | The latitude-longitude of a specific location to find nearby stores | No |
-| `distance`    | The distance from the passed latitude-longitude            | No       |
-| `sortBy`      | Sort data based on the attribute, for example: "storeDistance asc" sorts results by distance | No |
-| `keyword`     | Keyword search (only on storeName, storeCode, and externalId) | No       |
-| `fieldsToSelect` | The list of fields to select, all the fields can be filtered in response | No       |
+| `viewSize`     | The total number of results in the API response            | N      |
+| `filter`      | Filter records based on the passed parameters              | N      |
+| `point`       | The latitude-longitude of a specific location to find nearby stores | N |
+| `distance`    | The distance from the passed latitude-longitude            | N       |
+| `sortBy`      | Sort data based on the attribute, for example: "storeDistance asc" sorts results by distance | N |
+| `keyword`     | Keyword search (only on storeName, storeCode, and externalId) | N     |
+| `fieldsToSelect` | The list of fields to select, all the fields can be filtered in response | N      |
 
 ## Response
 

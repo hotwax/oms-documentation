@@ -1,8 +1,8 @@
 
 [ {
-  "productStoreId" : "SM_STORE",
+  "productStoreId" : "NN_STORE",
   "orderId" : "36421",
-  "orderName" : "SMUS#10055",
+  "orderName" : "NNUS#10055",
   "orderDate" : "2022-06-17T07:24:32-04:00",
   "orderStatusId" : "ORDER_COMPLETED",
   "entryDate" : "2022-06-17T07:26:32-04:00",
@@ -47,7 +47,7 @@
     "orderIdentificationTypeId" : "SHOPIFY_ORD_ID",
     "thruDate" : null
   }, {
-    "idValue" : "SMUS#10055",
+    "idValue" : "NNUS#10055",
     "orderIdentificationTypeId" : "SHOPIFY_ORD_NAME",
     "orderId" : "36421",
     "fromDate" : "2022-06-17T07:26:32-04:00",
@@ -521,9 +521,9 @@
     } ]
   } ]
 }, {
-  "productStoreId" : "SM_STORE",
+  "productStoreId" : "NN_STORE",
   "orderId" : "39670",
-  "orderName" : "SMUS#11861",
+  "orderName" : "NNUS#11861",
   "orderDate" : "2023-01-30T03:40:49-05:00",
   "orderStatusId" : "ORDER_COMPLETED",
   "entryDate" : "2023-01-30T03:43:47-05:00",
@@ -568,7 +568,7 @@
     "orderIdentificationTypeId" : "SHOPIFY_ORD_ID",
     "thruDate" : null
   }, {
-    "idValue" : "SMUS#11861",
+    "idValue" : "NNUS#11861",
     "orderId" : "39670",
     "lastUpdatedStamp" : "2023-01-30T03:43:48-05:00",
     "orderIdentificationTypeId" : "SHOPIFY_ORD_NAME",

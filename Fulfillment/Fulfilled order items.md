@@ -3,7 +3,7 @@
 Syncs inventory from HotWax to external source. After receiving the feed in json format at FTP locations, external sources can reduce the inventory for a product whose inventory is reserved by HotWax for a store fulfilled order. 
 
 ## Body 
-[Sample json file](https://github.com/Dhiraj1405/oms-documentation/blob/BOPIS_API/Fulfillment/Samples/Fulfilled%20order%20items%20feed.json#L767)
+[Sample json file](https://github.com/Dhiraj1405/oms-documentation/blob/Cosmetic-changes/Fulfillment/Samples/Fulfilled%20order%20items%20feed%20sample.json#L767)
 
 ```
 "shipmentItems" : [ {

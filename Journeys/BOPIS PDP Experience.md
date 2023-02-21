@@ -16,7 +16,7 @@ To show available pickup facilities near the customer, the latitude and longitud
 
 #### Sample: 
 
-Method: POST
+Method: `POST`
 
 ##### Request
 ```
@@ -63,7 +63,7 @@ Note: The distance parameter is configurable to narrow down the search results. 
 
 #### Sample: 
 
-Method: POST
+Method: `POST`
 
 ##### Request
 ```
@@ -171,7 +171,7 @@ Note: If a facility has 0 inventory for the product, you can still display it fo
 
 #### Sample: 
 
-Method: GET
+Method: `GET`
 
 ##### Request
 ```
@@ -210,7 +210,7 @@ In case the customer's location is not available, you can display all the availa
 
 #### Sample: 
 
-Request
+##### Request
 
 ```
 {
@@ -218,6 +218,4 @@ Request
   "filters": ["storeType: RETAIL_STORE"]
 }
 ```
-
-By following these steps, you can integrate HotWax's BOPIS PDP experience on the Shopify storefront and provide a seamless customer experience.
 
