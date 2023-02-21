@@ -16,7 +16,7 @@ Fetches the postal code for a specific location based on its latitude and longit
 ### Request 
 
 #### Endpoint
-https://<host>/api/postcodeLookup
+`https://<host>/api/postcodeLookup`
 
 #### Header
 Content-Type:​ application/json
@@ -175,7 +175,7 @@ Fetches the latitude longitude for a partial postal code. This API fetches all t
 ### Request 
 
 #### Endpoint
-https://<host>/api/postcodeLookup
+`https://<host>/api/postcodeLookup`
 
 #### Header
 Content-Type:​ application/json
