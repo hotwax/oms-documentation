@@ -31,6 +31,7 @@ Example Request: `https://demo-oms.hotwax.io/api/checkInventory?productId=10018&
 
 Note: It is required to pass either `sku` or `productId`
 
+
 ## Response
 
 ### Status Code
