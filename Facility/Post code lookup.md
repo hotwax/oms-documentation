@@ -102,7 +102,7 @@ Fetches the latitude longitude for a specific postal code. To look up the latitu
 ### Request 
 
 #### Endpoint
-https://<host>/api/postcodeLookup
+`https://<host>/api/postcodeLookup`
 
 #### Header
 Content-Type:​ application/json
