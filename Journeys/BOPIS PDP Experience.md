@@ -30,29 +30,29 @@ Method: POST
 ##### Response
 ```
 {
-	"responseHeader": {
-		"status": 0,
-		"QTime": 2,
-		"params": {
-			"json": "{\"query\":\"postcode:10007\"}"
-		}
-	},
-	"response": {
-		"numFound": 1,
-		"start": 0,
-		"numFoundExact": true,
-		"docs": [
-			{
-				"postcode": "10007",
-				"latitude": "40.713858",
-				"longitude": "-74.007777",
-				"country": "USA",
-				"country-code-id": "10007-USA",
-				"location": "40.713858,-74.007777",
-				"_version_": 1752733529047826432
-			}
-		]
-	}
+  "responseHeader": {
+    "status": 0,
+    "QTime": 2,
+    "params": {
+      "json": "{\"query\":\"postcode:10007\"}"
+    }
+  },
+  "response": {
+    "numFound": 1,
+    "start": 0,
+    "numFoundExact": true,
+    "docs": [
+      {
+      "postcode": "10007",
+      "latitude": "40.713858",
+      "longitude": "-74.007777",
+      "country": "USA",
+      "country-code-id": "10007-USA",
+      "location": "40.713858,-74.007777",
+      "_version_": 1752733529047826432
+      }
+    ]
+  }
 }
 ```
 
@@ -68,10 +68,10 @@ Method: POST
 ##### Request
 ```
 {
-	"viewSize": 40,
-	"filters": ["storeType: RETAIL_STORE"],
-	"point": "40.713858,-74.007777",
-	"distance": 50
+  "viewSize": 40,
+  "filters": ["storeType: RETAIL_STORE"],
+  "point": "40.713858,-74.007777",
+  "distance": 50
 }
 
 ```
@@ -79,71 +79,87 @@ Method: POST
 ##### Response
 ```
 {
-	"responseHeader": {
-		"status": 0,
-		"QTime": 5,
-		"params": {
-			"d": "50",
-			"pt": "40.713858,-74.007777",
-			"fl": "*,dist:geodist()",
-			"start": "0",
-			"json": "{\"filter\":[\"docType: STORE\",\"storeType: RETAIL_STORE\"],\"query\":\"*:*\",\"sort\":\"geodist() asc\"}",
-			"q.op": "AND",
-			"fq": "{!geofilt}",
-			"rows": "40",
-			"sfield": "latlon"
-		}
-	},
-	"response": {
-		"numFound": 3,
-		"start": 0,
-		"docs": [
-			{
-				"identifier": "STORE_15",
-				"docType": "STORE",
-				"storeName": "Facility",
-				"latlon": "40.72,-74",
-				"storePhone": "",
-				"storeCode": "STORE_15",
-				"docType-identifier": "STORE-STORE_15",
-				"storeType": "RETAIL_STORE",
-				"_version_": 1735068683092361221,
-				"dist": 0.9465923971374126
-			},
-			{
-				"identifier": "STORE_20",
-				"docType": "STORE",
-				"storeName": "New facility",
-				"latlon": "40.72,-74",
-				"storePhone": "",
-				"storeCode": "STORE_20",
-				"docType-identifier": "STORE-STORE_20",
-				"storeType": "RETAIL_STORE",
-				"_version_": 1735068683093409793,
-				"dist": 0.9465923971374126
-			},
-			{
-				"identifier": "STORE_9",
-				"country": "United States",
-				"docType": "STORE",
-				"externalId": "DC_STORE_9",
-				"storeName": "Broadway",
-				"countryCode": "USA",
-				"city": "New York",
-				"latlon": "40.72,-74",
-				"postalCode": "10012",
-				"storePhone": "1212555-5555",
-				"storeCode": "STORE_9",
-				"docType-identifier": "STORE-STORE_9",
-				"stateCode": "NY",
-				"state": "New York",
-				"address1": "540 Broadway",
-				"storeType": "RETAIL_STORE",
-				"_version_": 1735068683094458369,
-				"dist": 0.9465923971374126
-			}
-		]
-	}
+  "responseHeader": {
+    "status": 0,
+    "QTime": 5,
+    "params": {
+      "d": "50",
+      "pt": "40.713858,-74.007777",
+      "fl": "*,dist:geodist()",
+      "start": "0",
+      "json": "{\"filter\":[\"docType: STORE\",\"storeType: RETAIL_STORE\"],\"query\":\"*:*\",\"sort\":\"geodist() asc\"}",
+      "q.op": "AND",
+      "fq": "{!geofilt}",
+      "rows": "40",
+      "sfield": "latlon"
+    }
+  },
+  "response": {
+    "numFound": 3,
+    "start": 0,
+    "docs": [
+      {
+        "identifier": "STORE_15",
+        "country": "United States",
+        "docType": "STORE",
+        "externalId": "DC_STORE_15",
+        "storeName": "Facility",
+        "countryCode": "USA",
+        "city": "New York",
+        "latlon": "40.72,-74",
+        "postalCode": "10012",
+        "storePhone": "",
+        "storeCode": "STORE_15",
+        "docType-identifier": "STORE-STORE_15",
+        "stateCode": "NY",
+        "state": "New York",
+        "address1": "10 Times Square",
+        "storeType": "RETAIL_STORE",
+        "_version_": 1735068683092361221,
+        "dist": 0.9465923971374126
+      },
+      {
+        "identifier": "STORE_20",
+        "country": "United States",
+        "docType": "STORE",
+        "externalId": "DC_STORE_20",
+        "storeName": "New facility",
+        "countryCode": "USA",
+        "city": "New York",
+        "latlon": "40.72,-74",
+        "postalCode": "10012",
+        "storePhone": "",
+        "storeCode": "STORE_20",
+        "docType-identifier": "STORE-STORE_20",
+        "stateCode": "NY",
+        "state": "New York",
+        "address1": "4 Broadway",
+        "storeType": "RETAIL_STORE",
+        "_version_": 1735068683093409793,
+        "dist": 0.9465923971374126
+      },
+      {
+        "identifier": "STORE_9",
+        "country": "United States",
+        "docType": "STORE",
+        "externalId": "DC_STORE_9",
+        "storeName": "Broadway",
+        "countryCode": "USA",
+        "city": "New York",
+        "latlon": "40.72,-74",
+        "postalCode": "10012",
+        "storePhone": "1212555-5555",
+        "storeCode": "STORE_9",
+        "docType-identifier": "STORE-STORE_9",
+        "stateCode": "NY",
+        "state": "New York",
+        "address1": "540 Broadway",
+        "storeType": "RETAIL_STORE",
+        "_version_": 1735068683094458369,
+        "dist": 0.9465923971374126
+      }
+    ]
+  }
 }
 ```
 
@@ -165,21 +181,21 @@ https://dev-apps.hotwax.io/api/checkInventory?productId=10249&facilityId=STORE_9
 ##### Response
 ```
 {
-	"count": "1",
-	"docs": [
-		{
-			"facilityId": "STORE_9",
-			"atp": 13.000000
-		},
-		{
-			"facilityId": "STORE_20",
-			"atp": 8.000000
-		},
-		{
-			"facilityId": "STORE_15",
-			"atp": 0.000000
-		}
-	]
+"count": "1",
+  "docs": [
+    {
+    "facilityId": "STORE_9",
+    "atp": 13.000000
+    },
+    {
+    "facilityId": "STORE_20",
+    "atp": 8.000000
+    },
+    {
+    "facilityId": "STORE_15",
+    "atp": 0.000000
+    }
+  ]
 }
 ```
 
@@ -198,8 +214,8 @@ Request
 
 ```
 {
-	"viewSize": 40,
-	"filters": ["storeType: RETAIL_STORE"]
+  "viewSize": 40,
+  "filters": ["storeType: RETAIL_STORE"]
 }
 ```
 
