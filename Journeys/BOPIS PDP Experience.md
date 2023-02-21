@@ -159,7 +159,7 @@ Method: GET
 
 ##### Request
 ```
-https://dev-apps.hotwax.io/api/checkInventory?productId=10249&facilityId=STORE_9&facilityId=STORE_20&facilityId=STORE_15 (https://dev-apps.hotwax.io/api/checkInventory?productId=10249&facilityId=STORE_9&facilityId=STORE_20&facilityId=STORE_15)
+https://dev-apps.hotwax.io/api/checkInventory?productId=10249&facilityId=STORE_9&facilityId=STORE_20&facilityId=STORE_15
 ```
 
 ##### Response
