@@ -4,9 +4,11 @@ Updates the inventory of products in HotWax. To update inventory you will need t
 
 Example: 
 
+```
 Inventory in HotWax = 10
 Variance = -2
 Updated inventory in HotWax = 10 - 2 = 8
+```
 
 ## Request
 
@@ -31,7 +33,7 @@ Content-Type: application/json
   }
 }
 ```
-Example Request: 
+Sample: 
 ```
 {
   {
@@ -77,7 +79,7 @@ Content-Type: application/json
 }
 ```
 
-Example Response: 
+Sample: 
 ```
 {
   {
