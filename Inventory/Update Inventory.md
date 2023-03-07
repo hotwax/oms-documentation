@@ -1,6 +1,6 @@
 # Update Inventory API
 
-Updates the inventory of products in HotWax. To update inventory you will need to call the endpoint with the POST method. The actual inventory is changed by getting the inventory variance in the "IN" parameter.
+Updates the inventory of products in HotWax. To update inventory you will need to call the endpoint with the POST method. The actual inventory is changed by getting the inventory variance in the input parameter.
 
 Example: 
 
