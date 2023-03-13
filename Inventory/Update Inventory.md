@@ -26,7 +26,7 @@ Content-Type: application/json
 {
   {
     "sku": " ",
-    "availableQty": ,
+    "adjustedQty": ,
     "externalFacilityId": "",
     "locationSeqId": " ",
     "varianceReasonId": ""
@@ -38,7 +38,7 @@ Sample:
 {
   {
     "sku": "2602",
-    "availableQty": -1,
+    "adjustedQty": -1,
     "externalFacilityId": "WH",
     "locationSeqId": "10000",
     "varianceReasonId": "POS_SALE"
@@ -49,7 +49,7 @@ Sample:
 | Parameters       | Description                                            | Required (Y/N) |
 |------------------|--------------------------------------------------------|----------------|
 | `sku`            | The SKU of the product                                 | Y              |
-| `availableQty`   | The variance in inventory (delta)                       | Y              |
+| `adjustedQty`   | The variance in inventory quantity(delta)                       | Y              |
 | `externalFacilityId` | The external facility ID where inventory item need to be updated | Y |
 | `locationSeqId` | The location ID in the facility where inventory item need to be updated | Y |
 | `varianceReasonId` | The ID of the reason that caused variance in inventory | Y              |
@@ -70,7 +70,7 @@ Content-Type: application/json
 {
   {
     "sku": "",
-    "availableQty": ,
+    "adjustedQty": ,
     "externalFacilityId": "",
     "locationSeqId": "",
     "varianceReasonId": ""
@@ -84,7 +84,7 @@ Sample:
 {
   {
     "sku": "2602",
-    "availableQty": -1 ,
+    "adjustedQty": -1 ,
     "externalFacilityId": "WH",
     "locationSeqId": "10000",
     "varianceReasonId": "POS_SALE"
