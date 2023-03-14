@@ -1,13 +1,13 @@
 # Update Inventory API
 
-Updates the inventory of products in HotWax. To update inventory you will need to call the endpoint with the POST method. The actual inventory is changed by getting the inventory variance in the input parameter.
+Updates the inventory of products in HotWax by logging a variance of the inputted amount. To update inventory you will need to call the endpoint with the POST method.
 
 Example: 
 
 ```
-Inventory in HotWax = 10
-Variance = -2
-Updated inventory in HotWax = 10 - 2 = 8
+Inventory in HotWax: 10
+Variance: -2
+Updated inventory in HotWax: 8
 ```
 
 ## Request
@@ -50,24 +50,24 @@ Sample:
 |------------------|--------------------------------------------------------|----------------|
 | `sku`            | The SKU of the product                                 | Y              |
 | `quantity`   | The variance in inventory quantity(delta)                       | Y              |
-| `externalFacilityId` | The external facility ID where inventory item need to be updated | Y |
-| `locationSeqId` | The location ID in the facility where inventory item need to be updated | Y |
+| `externalFacilityId` | The external facility ID where inventory item needs to be updated | Y |
+| `locationSeqId` | The location ID in the facility where inventory item needs to be updated | Y |
 | `varianceReasonId` | The ID of the reason that caused variance in inventory | Y              |
 
-The table below shows the variance reasons that can occur in a external system: 
+Table of valid variance reasons and their IDs: 
   
 | Variance Reason ID | Description |
 | --- | --- |
-| `MISMATCH` | Ordered SKU does not match the available SKU |
-| `NOT_IN_STOCK` | Ordered SKU is not available |
-| `NO_VARIANCE_LOG` | Ordered SKU is rejected without any explanation or inventory adjustment |
+| `MISMATCH` | Inventory does not match the available SKU |
+| `NOT_IN_STOCK` | SKU is not available |
+| `NO_VARIANCE_LOG` | Use to pass null variance where variance field is required but not used |
 | `REJ_RSN_DAMAGED` | Ordered SKU is rejected due to inventory damage |
-| `POS_SALE` | Sale is made on the point of sale system in the store |
-| `VAR_DAMAGED` | Damaged inventory for a SKU is found in the store |
-| `VAR_FOUND` | Lost SKU inventory is found |
+| `POS_SALE` | Inventory consumed by sales made on an external point of sale system in the store |
+| `VAR_DAMAGED` | Reduce damaged inventory from available quantity |
 | `VAR_LOST` | SKU inventory is lost |
-| `VAR_MANUAL` | SKU Inventory adjustment is done manually |
-| `WORN_DISPLAY` | Ordered SKU’s inventory is on a worn display |
+| `VAR_FOUND` | Lost SKU inventory is found |
+| `WORN_DISPLAY` | SKU inventory is worn and unsuable from being on display |
+| `VAR_MANUAL` | SKU inventory adjustment is done manually |
 
 ## Response
 
