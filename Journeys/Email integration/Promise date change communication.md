@@ -2,7 +2,7 @@
 
 ## Promise Date Change Communication from the OMS to marketing automation platform
 
-To enable promise date change communication from the OMS to marketing automation platform, follow these steps:
+Promise date change communication from the OMS to marketing automation platform is done by following these steps:
 
 ### Step 1: Identify Promise Date Changes
 
