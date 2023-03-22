@@ -6,7 +6,7 @@ To enable promise date change communication from the OMS to marketing automation
 
 ### Step 1: Identify Promise Date Changes
 
-The BulkSendPromiseDateChange service in OMS identifies all the purchase order (PO) items whose promise dates have changed in the last 30 minutes. The frequency of this service is configurable as per requirement, but it is recommended to set it to 30 minutes.
+The BulkSendPromiseDateChange service in OMS identifies all the sales order items whose promise dates have changed in the last 30 minutes. The frequency of this service is configurable as per requirement, but it is recommended to set it to 30 minutes.
 
 #### Service Details:
 ```
@@ -24,7 +24,7 @@ The BulkSendPromiseDateChange service in OMS identifies all the purchase order (
 
 ### Step 2: Prepare for Email Notification
 
-The BulkSendPromiseDateChange service will pick up all the updated PO items. This service processes the data and prepares it for the email notification.  `fromDate` and `toDate` and brings all the PO items whose promise dates have changed.
+The BulkSendPromiseDateChange service will pick up all the updated sales order items. This service processes the data and prepares it for the email notification.  `fromDate` and `toDate` and brings all the sales order items whose promise dates have changed.
 
 ### Step 3: Call `sendDeliveryDateChangedNotification` service
 After bringing all the updated items in response, the BulkSendPromiseDateChange service calls the `sendDeliveryDateChangedNotification` service for each item.
@@ -45,7 +45,7 @@ After bringing all the updated items in response, the BulkSendPromiseDateChange 
 | `orderItemSeqId` | The ID of the sequence of an item in the order | No |
 
 ### Step 4: Customize Email Notification
-The `sendDeliveryDateChangedNotification` service checks the configuration for the email integration platform and picks the appropriate API template. The `sendDeliveryDateChangedNotification` service then takes input parameters `orderId` and `orderItemSequenceID` to update all the PO items in the API template with changed promised dates.
+The `sendDeliveryDateChangedNotification` service checks the configuration for the email integration platform and picks the appropriate API template. The `sendDeliveryDateChangedNotification` service then takes input parameters `orderId` and `orderItemSequenceID` to update all the sales order items in the API template with changed promised dates.
 
 ### Step 5: Deliver Email Notification
 
