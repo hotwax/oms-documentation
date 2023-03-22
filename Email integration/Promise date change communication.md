@@ -1,4 +1,4 @@
-# Integration Guidelines for OMS and Marketing Automation Platforms
+# Integration guidelines for OMS and Marketing Automation Platforms
 
 ## Promise Date Change Communication from the OMS to marketing automation platform
 
@@ -51,17 +51,5 @@ The `sendDeliveryDateChangedNotification` service checks the configuration for t
 
 Finally, the service calls dedicated email platform's API and sends the details to the email integration platform. The email will be delivered to the customer. 
 
-## By following these steps, you can ensure accurate promise date change communication from the OMS to marketing automation platform, improving customer experience and reducing manual efforts.
-
-
-
-
-
-
-
-
-
-
-
-
+### By following these steps, you can ensure accurate promise date change communication from the OMS to marketing automation platform, improving customer experience and reducing manual efforts.
 
