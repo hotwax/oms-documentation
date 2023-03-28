@@ -1,8 +1,8 @@
-# Integration guidelines for OMS and Marketing Automation Platforms
+# Integration guidelines for OMS and Marketing Automation Platforms: Promise Date Change Communication 
 
-## Promise Date Change Communication from the OMS to marketing automation platform
 
-Promise date change communication from the OMS to marketing automation platform is done by following these steps:
+## Overview
+This document outlines the steps to ensure accurate promise date change communication from the Order Management System (OMS) to the Marketing Automation Platform. This integration enhances the customer experience and reduces manual efforts.
 
 ### Step 1: Identify Promise Date Changes
 
@@ -24,7 +24,7 @@ The BulkSendPromiseDateChange service in OMS identifies all the sales order item
 
 ### Step 2: Prepare for Email Notification
 
-The BulkSendPromiseDateChange service will pick up all the updated sales order items. This service processes the data and prepares it for the email notification.  `fromDate` and `toDate` and brings all the sales order items whose promise dates have changed.
+The BulkSendPromiseDateChange service picks up all the updated sales order items. This service processes the data and prepares it for the email notification by bringing all the sales order items whose promise dates have changed between `fromDate` and `toDate`.
 
 ### Step 3: Call `sendDeliveryDateChangedNotification` service
 After bringing all the updated items in response, the BulkSendPromiseDateChange service calls the `sendDeliveryDateChangedNotification` service for each item.
@@ -45,11 +45,42 @@ After bringing all the updated items in response, the BulkSendPromiseDateChange 
 | `orderItemSeqId` | The ID of the sequence of an item in the order | No |
 
 ### Step 4: Customize Email Notification
-The `sendDeliveryDateChangedNotification` service checks the configuration for the email integration platform and picks the appropriate API template. The `sendDeliveryDateChangedNotification` service then takes input parameters `orderId` and `orderItemSequenceID` to update all the sales order items in the API template with changed promised dates.
+
+The `sendDeliveryDateChangedNotification` service checks the configuration for the email integration platform and picks the appropriate API template. The service then takes input parameters  `orderId` and `orderItemSequenceID` to update all the sales order items in the API template with changed promised dates.
+
+HotWax Commerce has ready integration with Klaviyo, a marketing automation platform. Here's a sample JSON file that is shared with Klaviyo's API for each order:
+```
+{
+  "brandName": "",
+  "DISCOUNT_CODE": "",
+  "DISCOUNT_VALUE": "",
+  "ORDERNO": "",
+  "DISCOUNT_CODE": "",
+  "FIRSTNAME": "",
+  "ITEMLIST_XML": [
+    {
+      "itemId": "",
+      "status": "",
+      "description": "",
+      "quantity": "",
+      "color": "",
+      "price": "",
+      "itemImage": "",
+      "itemUrl": "",
+      "backOrder": "",
+      "deliveryDate": "",
+      "clearance": "",
+      "itemName": "",
+      "size": "",
+      "itemUri": []
+    }
+  ]
+}
+```
+To update the delivery date, the order item is identified by the `itemID` and the `deliveryDate` is updated.
 
 ### Step 5: Deliver Email Notification
 
-Finally, the service calls dedicated email platform's API and sends the details to the email integration platform. The email will be delivered to the customer. 
+The service calls dedicated email platform's API, sends the details to the email integration platform and the email will be delivered to the customers. 
 
-### By following these steps, you can ensure accurate promise date change communication from the OMS to marketing automation platform, improving customer experience and reducing manual efforts.
-
+### By following these steps, you can ensure accurate promise date change communication from the OMS to marketing automation platform.
