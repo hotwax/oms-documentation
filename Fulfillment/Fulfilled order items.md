@@ -1,10 +1,11 @@
 # Fulfilled Order Items
 
-Syncs inventory from HotWax to external source. After receiving the feed in json format at FTP locations, external sources can reduce the inventory for a product whose inventory is reserved by HotWax for a store fulfilled order. 
+Contains the order items that are marked as fulfilled in HotWax Commerce. This feed can be utilized to sync inventory data from HotWax Commerce to external sources. Upon receiving the feed in JSON format at the designated FTP location, external sources can reduce the inventory count for a product whose inventory is reserved by HotWax Commerce for a store-fulfilled order.
 
 ## Body 
-[Sample json file](https://github.com/Dhiraj1405/oms-documentation/blob/Cosmetic-changes/Fulfillment/Samples/Fulfilled%20order%20items%20feed%20sample.json#L767)
+[Link to full JSON sample file](https://github.com/Dhiraj1405/oms-documentation/blob/BOPIS_API/Fulfillment/Samples/Fulfilled%20order%20items%20feed.json#L767)
 
+Sample snippet from full JSON file: 
 ```
 "shipmentItems" : [ {
      "shipmentId" : "27091",
@@ -31,22 +32,20 @@ Syncs inventory from HotWax to external source. After receiving the feed in json
        "lastUpdatedStamp" : "2022-08-10T02:58:52-04:00",
        "goodIdentificationTypeId" : "SHOPIFY_PROD_SKU",
        "thruDate" : null
-     },
+     }
 ```
 
 
 
 | Parameter | Description | Required |
 | ---- | ----------- | -------- |
-| `shipmentItems.itemQuantity` | Ordered quantity | Yes |
-| `shipmentItems.productId` | The internal Id of the product in HotWax | Yes |
-| `shipmentItems.facilityId` | The internal Id of the facility in HotWax | Yes |
-| `shipmentItems.facilityExternalId` | The Id of the facility in the external systems | Yes |
-| `shipmentItems.facilityTypeId` | The type of the facility | Yes |
-| `shipmentItems.parentFacilityTypeId` | The type of the parent facility, used to group various facility types. | Yes |
-| `shipmentItems.shippedQuantity` | The quantity of items shipped from the ordered quantity. | Yes |
-| `shipmentItems.goodIdentifications` | All identifications of the product in HotWax Commerce used to identify the product in external systems | Yes |
-| `shipmentItems.goodIdentification.goodIdentificationTypeId` | The type of the unique product Identifier in the external systems (e.g. Shopify product SKU) | Yes |
-| `shipmentItems.goodIdentification.idValue` | The value of the GoodIdentificationTypeId | Yes |
-
-
+| ItemQuantity | Ordered quantity | Yes |
+| ProductId | The internal Id of the product in HotWax | Yes |
+| FacilityId | The internal Id of the facility in HotWax | Yes |
+| FacilityExternalId | The Id of the facility in the external systems | Yes |
+| FacilityTypeId | The type of the facility | Yes |
+| ParentFacilityTypeId | The type of the parent facility, used to group various facility types. | Yes |
+| ShippedQuantity | The quantity of items shipped from the ordered quantity. | Yes |
+| GoodIdentifications | All identifications of the product in HotWax Commerce used to identify the product in external systems | Yes |
+| GoodIdentificationTypeId | The type of the unique product Identifier in the external systems (e.g. Shopify product SKU) | Yes |
+| IdValue | The value of the GoodIdentificationTypeId | Yes |
