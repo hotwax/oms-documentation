@@ -1,6 +1,8 @@
 # Fulfilled Order Items
 
-Contains the order items that have been marked as fulfilled in HotWax Commerce. Using this feed, inventory data from HotWax Commerce can be synced to external sources. External sources can lower the inventory count for a product whose inventory is held by HotWax Commerce for a store-fulfilled order after receiving the feed in JSON format at the designated FTP location.
+Contains the order items that have been fulfilled from a particular facility. External systems that did not fulfill those orders but require an update of the inventory delta to maintain accurate inventory levels can use this feed to ensure their inventory accuracy. It's important to understand that this feed only contains orders that have been successfully fulfilled, orders that have only been reserved but not shipped are not included in this feed because they may still be rejected and re-brokered to another facility for fulfillment.
+
+The feed in produced in a JSON format and can be placed at a designated FTP location.
 
 ## Body 
 [Link to full JSON sample file](https://github.com/Dhiraj1405/oms-documentation/blob/BOPIS_API/Fulfillment/Samples/Fulfilled%20order%20items%20feed.json#L767)
