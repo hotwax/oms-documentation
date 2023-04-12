@@ -81,6 +81,6 @@ To update the delivery date, the order item is identified by the `itemID` and th
 
 ### Step 5: Deliver Email Notification
 
-The service calls dedicated email platform's API, sends the details to the email integration platform and the email will be delivered to the customers. 
+The service calls the email platform's API and sends the details to the email integration platform which will then further deliver it to the customer.
 
 ### By following these steps, you can ensure accurate promise date change communication from the OMS to marketing automation platform.
