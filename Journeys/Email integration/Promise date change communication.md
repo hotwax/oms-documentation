@@ -24,7 +24,7 @@ The BulkSendPromiseDateChange service in OMS identifies all the sales order item
 
 ### Step 2: Prepare for Email Notification
 
-The BulkSendPromiseDateChange service picks up all the updated sales order items. This service processes the data and prepares it for the email notification by bringing all the sales order items whose promise dates have changed between `fromDate` and `toDate`.
+The BulkSendPromiseDateChange service identifies all the updated sales order items whose promise dates have changed between the `fromDate` and `toDate` and gathers order context needed to hand off to the Marketing Automation Platform. 
 
 ### Step 3: Call `sendDeliveryDateChangedNotification` service
 After bringing all the updated items in response, the BulkSendPromiseDateChange service calls the `sendDeliveryDateChangedNotification` service for each item.
