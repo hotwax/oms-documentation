@@ -19,8 +19,8 @@ The BulkSendPromiseDateChange service in OMS identifies all the sales order item
 ```
 | Parameter | Description | Required |
 |-----------|-------------|----------|
-| `fromDate` | The date and time from which to find order item changes | No |
-| `toDate` | The date and time from which to find order item changes till | No |
+| `fromDate` | The starting date and time range to find order item changes | No |
+| `toDate` | The ending date and time range to find order item changes| No |
 
 ### Step 2: Prepare for Email Notification
 
@@ -41,7 +41,7 @@ After bringing all the updated items in response, the BulkSendPromiseDateChange 
 ```
 | Parameter | Description | Required |
 |-----------|-------------|----------|
-| `orderId` | The ID of the order in Shopify | No |
+| `orderId` | The ID of the order in Shopify | Yes |
 | `orderItemSeqId` | The ID of the sequence of an item in the order | No |
 
 ### Step 4: Customize Email Notification
@@ -77,7 +77,6 @@ HotWax Commerce has ready integration with Klaviyo, a marketing automation platf
   ]
 }
 ```
-To update the delivery date, the order item is identified by the `itemID` and the `deliveryDate` is updated.
 
 ### Step 5: Deliver Email Notification
 
