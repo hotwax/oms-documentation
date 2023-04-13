@@ -46,7 +46,7 @@ After bringing all the updated items in response, the BulkSendPromiseDateChange 
 
 ### Step 4: Customize Email Notification
 
-The `sendDeliveryDateChangedNotification` service checks the configuration for the email integration platform and picks the appropriate API template. The service then takes input parameters  `orderId` and `orderItemSequenceID` to update all the sales order items in the API template with changed promised dates.
+The `sendDeliveryDateChangedNotification` service identifies the configured email integration platform and picks the appropriate API template. The service then uses the input parameters  `orderId` and `orderItemSequenceID` to add all the sales order items with changed promise dates in the email template being pushed to the Marketing Automation Platform.
 
 HotWax Commerce has ready integration with Klaviyo, a marketing automation platform. Here's a sample JSON file that is shared with Klaviyo's API for each order:
 ```
