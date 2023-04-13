@@ -19,8 +19,8 @@ The BulkSendPromiseDateChange service in OMS identifies all the sales order item
 ```
 | Parameter | Description | Required |
 |-----------|-------------|----------|
-| `fromDate` | The start time for the service to read the change | No |
-| `toDate` | The end time for the service to read the change| No |
+| `fromDate` | The date and time from which to find order item changes | No |
+| `toDate` | The date and time from which to find order item changes till | No |
 
 ### Step 2: Prepare for Email Notification
 
