@@ -6,7 +6,7 @@ This document outlines the steps to ensure accurate promise date change communic
 
 ### Step 1: Identify Promise Date Changes
 
-The BulkSendPromiseDateChange service in OMS identifies all the sales order items whose promise dates have changed in the last 30 minutes. The frequency of this service is configurable as per requirement, but it is recommended to set it once a day.
+The bulkSendPromiseDateChange service in OMS identifies all the sales order items whose promise dates have changed in the last 30 minutes. The frequency of this service is configurable as per requirement, but it is recommended to set it once a day.
 
 #### Service Details:
 ```
@@ -24,10 +24,10 @@ The BulkSendPromiseDateChange service in OMS identifies all the sales order item
 
 ### Step 2: Prepare for Email Notification
 
-The BulkSendPromiseDateChange service identifies all the updated sales order items whose promise dates have changed between the `fromDate` and `toDate` and gathers order context needed to hand off to the Marketing Automation Platform. 
+The bulkSendPromiseDateChange service identifies all the updated sales order items whose promise dates have changed between the `fromDate` and `toDate` and gathers order context needed to hand off to the Marketing Automation Platform. 
 
 ### Step 3: Call `sendDeliveryDateChangedNotification` service
-After bringing all the updated items in response, the BulkSendPromiseDateChange service calls the `sendDeliveryDateChangedNotification` service for each item.
+After bringing all the updated items in response, the bulkSendPromiseDateChange service calls the `sendDeliveryDateChangedNotification` service for each item.
 
 #### Service Details:
 ```
@@ -42,7 +42,7 @@ After bringing all the updated items in response, the BulkSendPromiseDateChange 
 | Parameter | Description | Required |
 |-----------|-------------|----------|
 | `orderId` | The ID of the order in Shopify | Yes |
-| `orderItemSeqId` | The ID of the sequence of an item in the order | No |
+| `orderItemSeqId` | The numerical sequence ID of the item in the order | No |
 
 ### Step 4: Customize Email Notification
 
