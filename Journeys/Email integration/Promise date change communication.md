@@ -42,7 +42,7 @@ After bringing all the updated items in response, the bulkSendPromiseDateChange 
 | Parameter | Description | Required |
 |-----------|-------------|----------|
 | `orderId` | The ID of the order in Shopify | Yes |
-| `orderItemSeqId` | The numerical sequence ID of the item in the order | No |
+| `orderItemSeqId` | The numerical sequence ID of the item in the order | Yes |
 
 ### Step 4: Customize Email Notification
 
