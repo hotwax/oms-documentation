@@ -35,8 +35,8 @@ After bringing all the updated items in response, the bulkSendPromiseDateChange 
              location="co.hotwax.warehouse.shipping.WarehouseServices" invoke="sendDeliveryDateChangedNotification">
         <description>Send an order item Delivery Date Changed notification</description>
         <implements service="orderNotificationInterface"/>
-        <attribute name="orderId" type="String" mode="IN" optional="true"/>
-        <attribute name="orderItemSeqId" type="String" mode="IN" optional="true"/>
+        <attribute name="orderId" type="String" mode="IN" optional="false"/>
+        <attribute name="orderItemSeqId" type="String" mode="IN" optional="false"/>
 </service>
 ```
 | Parameter | Description | Required |
