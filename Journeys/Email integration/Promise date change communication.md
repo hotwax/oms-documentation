@@ -6,7 +6,7 @@ This document outlines the steps to ensure accurate promise date change communic
 
 ### Step 1: Identify Promise Date Changes
 
-The bulkSendPromiseDateChange service in OMS identifies all the sales order items whose promise dates have changed in the last 30 minutes. The frequency of this service is configurable as per requirement, but it is recommended to set it once a day.
+The bulkSendPromiseDateChange service in OMS identifies all the sales order items whose promise dates have changed in throughout the day. The frequency of this service is configurable as per requirement, but it is recommended to set it once a day.
 
 #### Service Details:
 ```
