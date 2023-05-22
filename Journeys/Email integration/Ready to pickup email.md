@@ -15,7 +15,7 @@ The `updateShipment` service in the OMS changes the status of open shipment. Thi
     <condition field-name="statusId" operator="equals" value="SHIPMENT_PACKED"/>
     <condition field-name="shipmentTypeId" operator="equals" value="SALES_SHIPMENT"/>
     <action service="sendReadyToPickupItemNotification" mode="async" persist="true"/>
-</eca>`
+</eca>
 ```
 
 | Parameter | Description | Required |
@@ -23,7 +23,7 @@ The `updateShipment` service in the OMS changes the status of open shipment. Thi
 | `statusId` | The status ID of the shipment. To send ready to pickup email, shipment must be packed | Yes |
 | `shipmentTypeID` | The ID of the shipment type | Yes |
 
-### Step 2: Invoke `sendReadyToPickupItemNotificatio`n service
+### Step 2: Invoke `sendReadyToPickupItemNotification` service
 
 After updating the shipment to packed status, the `updateShipment` service calls the `sendReadyToPickupItemNotification` service.
 
