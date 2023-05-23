@@ -50,4 +50,72 @@ The `sendReadyToPickupItemNotification` service determines the configured `email
 
 The service calls the email platform's API to send the email details to the email integration platform, which then delivers the email notification to the customer.
 
+HotWax Commerce has ready integration with Listrak, a marketing automation platform. Here's a sample JSON file that is shared with Listrak's API for each order:
+```
+const data = {
+  "emailAddress": "sumiti.joshi@hotwax.co",
+  "segmentationFieldValues": [
+    {
+      "segmentationFieldId": 2378294,
+      "value": "${originFacility.facilityName!}"
+    },
+    {
+      "segmentationFieldId": 2378297,
+      "value": "https://localhost:8443/"
+    },
+    {
+      "segmentationFieldId": 2378298,
+      "value": "${originFacility.facilityName!}"
+    },
+    {
+      "segmentationFieldId": 2378299,
+      "value": "${postalAddress.address1!}"
+    },
+    {
+      "segmentationFieldId": 2378300,
+      "value": "${postalAddress.address2!}"
+    },
+    {
+      "segmentationFieldId": 2378301,
+      "value": "${postalAddress.city!}"
+    },
+    {
+      "segmentationFieldId": 2378302,
+      "value": "${postalAddress.stateProvinceGeoId!}"
+    },
+    {
+      "segmentationFieldId": 2378303,
+      "value": "${postalAddress.postalCode!}"
+    },
+    {
+      "segmentationFieldId": 2378304,
+      "value": "${productUrl!}"
+    },
+    {
+      "segmentationFieldId": 2378305,
+      "value": "${orderItem.itemDescription!}"
+    },
+    {
+      "segmentationFieldId": 2378306,
+      "value": "${product.productName!}"
+    },
+    {
+      "segmentationFieldId": 2378384,
+      "value": "${shipmentItem.quantity!}"
+    },
+    {
+      "segmentationFieldId": 2378402,
+      "value": "${orderName!orderId}"
+    },
+    {
+      "segmentationFieldId": 2378403,
+      "value": "${partyName!}"
+    }
+  ]
+};
+
+const jsonString = JSON.stringify(data, null, 2);
+console.log(jsonString);
+```
+
 ### By following these steps, you can send ready to pickup email from the OMS to marketing automation platform.
