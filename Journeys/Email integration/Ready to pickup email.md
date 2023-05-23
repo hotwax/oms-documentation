@@ -2,11 +2,11 @@
 
 
 ## Overview
-This document provides integration guidelines for sending ready to pickup notifications from the Order Management System (OMS) to the Marketing Automation Platform. This integration improves customer experience and reduces manual efforts.
+This document provides integration guidelines for sending 'Ready to Pickup' notifications from the Order Management System (OMS) to the Marketing Automation Platform. The 'Ready to Pickup' notification is triggered when a BOPIS order is packed and ready for customer pickup at the store. This integration enhances the customer experience and reduces manual efforts."
 
 ### Step 1: Update shipments to packed status
 
-The `updateShipment` service in the OMS changes the status of open shipment. This service is triggered when an item is moved from the picked to packed status.
+The `updateShipment` service in the OMS changes the status of open order. This service is triggered when an order is marked 'ready to ship' moved to packed status.
 
 #### Service Details:
 ```
