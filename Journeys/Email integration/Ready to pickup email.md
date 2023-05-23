@@ -6,9 +6,39 @@ This document provides integration guidelines for sending 'Ready to Pickup' noti
 
 ### Step 1: Update shipments to packed status
 
-The `updateShipment` service in the OMS changes the status of open order. This service is triggered when an order is marked 'ready to ship' moved to packed status.
+When an order is ready to be shipped, it is updated to the packed status. To do this,`updateShipment` service is invoked to change the status of the order.
 
-#### Service Details:
+### Service details: 
+```
+<service name="updateShipment" default-entity-name="Shipment" engine="simple" export="true"
+             location="component://hwmapps/minilang/warehouse/WarehouseServices.xml" invoke="updateShipment" auth="true">
+        <description>Update Shipment</description>
+        <permission-service service-name="facilityGenericPermission" main-action="UPDATE"/>
+        <auto-attributes include="pk" mode="INOUT" optional="false"/>
+        <auto-attributes include="nonpk" mode="IN" optional="true">
+            <exclude field-name="shipmentTypeId"/>
+            <exclude field-name="createdDate"/>
+            <exclude field-name="createdByUserLogin"/>
+            <exclude field-name="lastModifiedDate"/>
+            <exclude field-name="lastModifiedByUserLogin"/>
+        </auto-attributes>
+        <attribute name="shipmentTypeId" type="String" mode="INOUT" optional="true"/>
+        <attribute name="eventDate" type="Timestamp" mode="IN" optional="true"/>
+        <attribute name="oldStatusId" type="String" mode="OUT" optional="true"/>
+        <attribute name="oldPrimaryOrderId" type="String" mode="OUT" optional="true"/>
+        <attribute name="oldOriginFacilityId" type="String" mode="OUT" optional="true"/>
+        <attribute name="oldDestinationFacilityId" type="String" mode="OUT" optional="true"/>
+        <attribute name="picklistBinId" type="String" mode="OUT" optional="true"/>
+        <attribute name="oldPrimaryShipGroupSeqId" type="String" mode="OUT" optional="true"/>
+        <override name="shipmentMethodTypeId" type="String" mode="INOUT" optional="true"/>
+    </service>
+```
+
+### Step 2: Invoke `sendReadyToPickupItemNotification` service
+
+After updating the shipment to packed status, the `updateShipment` service also triggers the `sendReadyToPickupItemNotification` service.
+
+#### Service details:
 ```
 <eca service="updateShipment" event="global-commit-post-run" run-on-error="false">
     <condition-field field-name="statusId" operator="not-equals" to-field-name="oldStatusId"/>
@@ -22,10 +52,6 @@ The `updateShipment` service in the OMS changes the status of open order. This s
 |-----------|-------------|----------|
 | `statusId` | The status ID of the shipment. To send ready to pickup email, shipment must be packed | Yes |
 | `shipmentTypeID` | The ID of the shipment type | Yes |
-
-### Step 2: Invoke `sendReadyToPickupItemNotification` service
-
-After updating the shipment to packed status, the `updateShipment` service calls the `sendReadyToPickupItemNotification` service.
 
 ### Step 3: Customize Email Notification
 
@@ -119,3 +145,11 @@ console.log(jsonString);
 ```
 
 ### By following these steps, you can send ready to pickup email from the OMS to marketing automation platform.
+
+
+
+
+
+
+
+
