@@ -1,4 +1,4 @@
-# Fetch Outstanding Orders API
+# Outstanding Orders API
 
 Fetches a comprehensive list of all orders that are brokered at a particular facility for fulfillment. To get the orders, you will need to call the /solr-query endpoint with the POST method. 
 
