@@ -1,4 +1,4 @@
-# Fetch In progress Orders API
+# In progress Orders API
 
 Fetches a comprehensive list of all orders for which picklist is created and are in the process of pickup for fulfillment. To get the orders, you will need to call the /solr-query endpoint with the POST method.
 
@@ -160,10 +160,3 @@ Example: https://demo-oms.hotwax.io/api/solr-query
 | `docType`                | The type of the document                                      |
 | `identifier`             | The identifier of the document                                |
 | `docType-identifier`      | The type and identifier of the document separated by a hyphen |
-
-
-
-
-
-
-
