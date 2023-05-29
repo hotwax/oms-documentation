@@ -12,7 +12,7 @@ To install the Luxon package, follow these steps:
 
 1. Open your terminal or command prompt.
 2. Navigate to your project directory.
-3. Run the following command: `npm install luxon@3.2.0`
+3. Run the following command: `npm install luxon`
 
 ### Usage
 
@@ -57,3 +57,5 @@ Luxon also supports localization and time zone handling. You can set the default
 The Luxon package is a versatile and feature-rich date and time library for JavaScript applications. By leveraging its capabilities, you can easily handle date and time operations, format and display dates and times, and work with different time zones and locales.
 
 For advanced usage and further customization options, consult the official documentation and API reference provided by the Luxon package.
+
+Note: Please check the compatibility of the package version with the app. 
