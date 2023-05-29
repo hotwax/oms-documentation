@@ -12,7 +12,7 @@ To install the Vue Barcode Reader package, follow these steps:
 
 1. Open your terminal or command prompt.
 2. Navigate to your project directory.
-3. Run the following command: `npm install vue-barcode-reader@1.0.0`
+3. Run the following command: `npm install vue-barcode-reader`
 
 ### Usage
 
@@ -75,3 +75,5 @@ The Vue Barcode Reader package provides various customization and configuration 
 The Vue Barcode Reader package is a valuable tool for integrating barcode scanning functionality into Vue.js applications. By incorporating this package, you can enable users to scan barcodes and perform relevant actions based on the scanned data.
 
 For advanced usage and further customization options, refer to the official documentation and API reference provided by the Vue Barcode Reader package.
+
+Note: Please check the compatibility of the package version with the app. 
