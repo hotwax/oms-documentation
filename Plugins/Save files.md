@@ -12,7 +12,7 @@ To install the FileSaver package, follow these steps:
 
 1. Open your terminal or command prompt.
 2. Navigate to your project directory.
-3. Run the following command: `npm install file-saver@2.0.5`
+3. Run the following command: `npm install file-saver`
 
 ### Usage
 
@@ -46,3 +46,5 @@ FileSaver provides flexibility in specifying the file type when saving files. By
 The FileSaver package is a valuable tool for saving files generated within a web application. By utilizing its capabilities, you can easily generate files on the fly and prompt the user to save them directly to their device.
 
 For advanced usage and further customization options, consult the official documentation and API reference provided by the FileSaver package.
+
+Note: Please check the compatibility of the package version with the app. 
