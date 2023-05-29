@@ -12,7 +12,7 @@ To install the qs package, follow these steps:
 
 1. Open your terminal or command prompt.
 2. Navigate to your project directory.
-3. Run the following command: `npm install qs@6.10.3`
+3. Run the following command: `npm install qs`
 
 ### Usage
 
@@ -57,3 +57,5 @@ The qs package provides additional options to customize the serialization and pa
 The qs package is a useful tool for serializing JavaScript objects into query strings and parsing query strings back into objects. By incorporating this package, you can easily format and handle query parameters in URLs within your JavaScript applications.
 
 For advanced usage and further customization options, consult the official documentation and API reference provided by the qs package.
+
+Note: Please check the compatibility of the package version with the app. 
