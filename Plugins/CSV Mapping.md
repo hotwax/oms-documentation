@@ -12,7 +12,7 @@ To install the PapaParse package, follow these steps:
 
 1. Open your terminal or command prompt.
 2. Navigate to your project directory.
-3. Run the following command: `npm install papaparse@5.3.1`
+3. Run the following command: `npm install papaparse`
 
 ### Usage
 
@@ -42,3 +42,5 @@ In the above example, `parsedData` will contain an object representing the parse
 The PapaParse package is a tool for parsing and manipulating CSV data in JavaScript applications. By leveraging its functionality, you can easily parse CSV strings into structured data and convert structured data back into CSV format.
 
 For advanced usage and further customization options, consult the official documentation and API reference provided by the PapaParse package.
+
+Note: Please check the compatibility of the package version with the app. 
