@@ -12,7 +12,7 @@ To install the @hotwax/app-version-info package, follow these steps:
 
 1. Open your terminal or command prompt.
 2. Navigate to your project directory.
-3. Run the following command: `npm install @hotwax/app-version-info@1.0.0`
+3. Run the following command: `npm install @hotwax/app-version-info`
 
 ### Usage
 
@@ -52,3 +52,5 @@ In the above example, the `version` property of the `versionInfo` object is acce
 The @hotwax/app-version-info package provides a convenient way to retrieve and display version information of an application. By incorporating this package into your project, you can easily access the version number and other relevant details for monitoring, debugging, or displaying within your application's user interface.
 
 For advanced usage and further customization options, consult the official documentation and API reference provided by the @hotwax/app-version-info package.
+
+Note: Please check the compatibility of the package version with the app. 
