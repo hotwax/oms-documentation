@@ -12,7 +12,7 @@ The CASL/ability package is a software library designed to facilitate user permi
 
 Step 1. Open your terminal or command prompt.
 Step 2. Navigate to your project directory.
-Step 3. Run the following command: `npm install @casl/ability@6.0.0`
+Step 3. Run the following command: `npm install @casl/ability`
 
 ### Steps to use
 
@@ -67,3 +67,5 @@ Integrate the CASL/ability package with your application by incorporating it int
 The CASL/ability package is an essential tool for managing user permissions and access control in your application. By leveraging its capabilities, you can ensure that users have the appropriate level of access to resources and functionalities, enhancing security and preventing unauthorized actions.
 
 For detailed information on how to use specific features or advanced configurations, refer to the official documentation and API reference provided by the CASL/ability package.
+
+Note: Please check the compatibility of the package version with the app. 
