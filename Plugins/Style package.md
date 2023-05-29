@@ -12,7 +12,7 @@ To install the @hotwax/apps-theme package, follow these steps:
 
 1. Open your terminal or command prompt.
 2. Navigate to your project directory.
-3. Run the following command: `npm install @hotwax/apps-theme@1.1.0`
+3. Run the following command: `npm install @hotwax/apps-theme`
 
 ### Usage
 
@@ -47,3 +47,5 @@ The @hotwax/apps-theme package may include components that are specifically desi
 The @hotwax/apps-theme package offers a convenient way to apply customizable themes to your application. By incorporating this package, you can enhance the visual appearance and user interface of your application and provide a consistent and visually appealing experience for your users.
 
 For advanced usage and further customization options, refer to the official documentation and API reference provided by the @hotwax/apps-theme package.
+
+Note: Please check the compatibility of the package version with the app. 
