@@ -16,13 +16,13 @@ npm install @casl/ability
 
 Here's an example how this package can be used to implement user permissions and access control. 
 
-#### Step 1. Define Abilities
-
 Define abilities for a blog website where visitors:
 
-- Can read blog posts.
-- Can manage (i.e., do anything) their own posts.
-- Cannot delete a post if it was created more than a day ago.
+<li> Can read blog posts </li> 
+<li> Can manage their own posts </li> 
+<li> Cannot delete a post if it was created more than a day ago </li> 
+
+#### Step 1. Define Abilities
 
 ```javascript
 import { AbilityBuilder, createMongoAbility } from '@casl/ability';
