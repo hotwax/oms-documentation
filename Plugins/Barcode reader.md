@@ -16,61 +16,45 @@ To install the Vue Barcode Reader package, follow these steps:
 
 ### Usage
 
-#### 1. Importing the Package
+The Vue Barcode Reader works out of the box by just including it.
 
-To use the Vue Barcode Reader package in your Vue.js application, import it into your codebase. Use the following import statement:
+#### Using Video Camera
 
-```javascript
-import VueBarcodeReader from 'vue-barcode-reader';
-```
-
-#### 2. Registering the Component
-
-Next, register the Vue Barcode Reader component in your Vue.js application. In your Vue component file, add the following code:
+Once a stream from the user's camera is loaded, it's displayed and continuously scanned for barcodes. Results are indicated by the `decode` event.
 
 ```javascript
-export default {
-  components: {
-    VueBarcodeReader,
-  },
-};
+import { StreamBarcodeReader } from "vue-barcode-reader";
 ```
 
-#### 3. Using the Component
-
-Once registered, you can use the Vue Barcode Reader component within your Vue templates. Here's an example:
+In your template, you can use this syntax:
 
 ```html
-<template>
-  <div>
-    <vue-barcode-reader @onDecode="handleBarcodeScan"></vue-barcode-reader>
-    <p>Scanned barcode: {{ scannedBarcode }}</p>
-  </div>
-</template>
-
-<script>
-export default {
-  data() {
-    return {
-      scannedBarcode: null,
-    };
-  },
-  methods: {
-    handleBarcodeScan(barcode) {
-      this.scannedBarcode = barcode;
-    },
-  },
-};
-</script>
+<StreamBarcodeReader @decode="onDecode" @loaded="onLoaded"></StreamBarcodeReader>
 ```
 
-In the above example, the Vue Barcode Reader component is added to the template. The `@onDecode` event is used to capture the scanned barcode, and the `handleBarcodeScan` method updates the `scannedBarcode` data property.
+#### Scanning from Image
 
-#### 4. Customization and Configuration
+The component renders to a simple file picker input element. Clicking opens a file dialog. On supporting mobile devices, the camera is started to take a picture. The selected images are directly scanned, and positive results are indicated by the `decode` event.
 
-The Vue Barcode Reader package provides various customization and configuration options to suit your specific requirements. You can modify the component's appearance, specify barcode types to scan, and control the scanning behavior. Consult the Vue Barcode Reader documentation for detailed information on available options and their usage.
+```javascript
+import { ImageBarcodeReader } from "vue-barcode-reader";
+```
 
-### Conclusion
+In your template, you can use this syntax:
+
+```html
+<ImageBarcodeReader @decode="onDecode" @error="onError"></ImageBarcodeReader>
+```
+
+```javascript
+methods: {
+  onDecode(result) {
+    console.log(result);
+  }
+}
+```
+
+#### Conclusion
 
 The Vue Barcode Reader package is a valuable tool for integrating barcode scanning functionality into Vue.js applications. By incorporating this package, you can enable users to scan barcodes and perform relevant actions based on the scanned data.
 
