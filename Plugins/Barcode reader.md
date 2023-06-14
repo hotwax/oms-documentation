@@ -16,7 +16,7 @@ To install the Vue Barcode Reader package, follow these steps:
 
 ### Usage
 
-The Vue Barcode Reader works out of the box by just including it.
+The Vue Barcode Reader works out of the box by just installing it.
 
 #### Using Video Camera
 
