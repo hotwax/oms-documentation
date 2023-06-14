@@ -42,6 +42,7 @@ import { ImageBarcodeReader } from "vue-barcode-reader";
 
 By incorporating this package, you can enable users to scan barcodes and QR codes to perform relevant actions based on the scanned data.
 
-For advanced usage and further customization options, refer to the official documentation and API reference provided by the Vue Barcode Reader package.
+For advanced usage and further customization options, refer to [the official documentation](https://www.npmjs.com/package/vue-barcode-reader)
+
 
 Note: Please check the compatibility of the package version with the app. 
