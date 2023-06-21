@@ -88,7 +88,7 @@ const hiddenPosts = await Post.find({ hidden: true }).accessibleBy(ability);
 const updatablePosts = await Post.accessibleBy(ability, 'update');
 ```
 
-Refer to the [Database integration](https://casl.js.org/v5/en/database-integration) section for more details.
+Refer to the [Database integration](https://casl.js.org/v5/en/database-integration) for more details.
 
 ### Conclusion
 
