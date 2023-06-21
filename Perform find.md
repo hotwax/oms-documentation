@@ -36,7 +36,7 @@ The following parameters can be sent in the request:
 | `fromDateName` | Filter by date field name if field name is different from default fromDate field | N |
 | `thruDateName` | Filter by date field name if field name is different from default thruDate field | N |
 
-Note: If `noConditionFind` is 'Y' then 'inputFiels' parameter is optional.
+Note: If `noConditionFind` is 'Y' then 'inputFields' parameter is optional.
 
 ## Response
 
