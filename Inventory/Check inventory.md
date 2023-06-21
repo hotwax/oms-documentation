@@ -13,15 +13,15 @@ Example: https://demo-oms.hotwax.io/api/checkInventory
 Content-Type: application/json
 
 
-### Params
+### Body
 ```
 {
-  "sku": "",
-  "productId": " ",
-  "facilityId": ""
+  "filters": {
+    "sku": "MSH02-32-Black",
+    "facilityId": "STORE_7"
+  }
 }
 ```
-Example Request: `https://demo-oms.hotwax.io/api/checkInventory?productId=10018&facilityId=Store_2&facilityId=Store_1`
 
 | Parameter Name | Description | Required (Y/N) |
 | --- | --- | --- |
@@ -29,7 +29,7 @@ Example Request: `https://demo-oms.hotwax.io/api/checkInventory?productId=10018&
 | `productId` | HotWax Commerce internal product Id | N |
 | `facilityId` | The HotWax Commerce facility Id where product inventory is located | N |
 
-Note: It is required to pass either `sku` or `productId`
+Note: It is required to pass either `sku` or `productId`. 
 
 
 ## Response
@@ -45,22 +45,19 @@ Content-Type: application/json
   
 ```
 {
-  "count": "2",
-  "docs": [{
-    "facilityId": "Store_1",
-    "atp": 0.000000
-  },
-  {
-    "facilityId": "Store_2",
-    "atp": 4.000000
-  }]
+  "count": "1",
+  "docs": [
+    {
+      "facilityId": "STORE_7",
+      "atp": 1.000000
+    }
+  ]
 }
 ```
 
 | Parameter Name | Description |
 | --- | --- |
-|  `count`| Results count |
+| `count`| Results count |
 | `docs` | The array of results found |
 | `facilityId` | The Id of the facility in HotWax |
 | `atp` | The available to promise inventory of the product |
-
