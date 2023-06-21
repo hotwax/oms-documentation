@@ -6,15 +6,13 @@ Fetches data from the Order Management System (OMS) entities. By making a GET re
 
 ### Endpoint
 
-`https://<host>/api/performfind`
+`https://<host>/api/performFind`
 
-Example: `https://demo-oms.hotwax.io/api/performfind`
+Example: `https://demo-oms.hotwax.io/api/performFind`
 
 ### Header
 
 Content-Type: application/json
-
-
 
 ### Parameters
 
@@ -22,51 +20,24 @@ The request should include the following parameters:
 
 | Parameter Name | Description | Required (Y/N) |
 | -------------- | ----------- | -------------- |
-| `inputFields` | The parameters to specify search conditions for retrieving data from the OMS entities | Y |
-| `fieldList` | The parameter that allows defining which fields or attributes of the entities to include in the response | N |
+| `inputFields` | Specifies search conditions for retrieving data from the OMS entities | Y |
+| `fieldList` | Defines fields or attributes of the entities to include in the response | N |
 | `entityName` | The specific entity type within the OMS from which you want to fetch data | Y |
-| `noConditionFind` | The parameter to fetch all data from the specified entity without any specific conditions applied | N |
-| `viewSize` | The parameter that determines the number of records or data items to be included in a single page of the response | N |
+| `noConditionFind` | Fetches all data from the specified entity without any specific conditions applied | N |
+| `viewSize` | Determines the number of records or data items to be included in a single page of the response | N |
+| `viewIndex` | The index to be included in the response | N |
+| `distinct` | Returns only distinct (different) values. | N |
+| `orderBy` | Sorts the result-set in ascending or descending order | N |
+| `filterByDate` | Filter records based on fromDate and thruDate | N |
+| `fromDateName` | Filter by date field name if field name is different from default fromDate field | N |
+| `thruDateName` | Filter by date field name if field name is different from default thruDate field | N |
 
-Example Request: `https://demo-oms.hotwax.io/api/performfind?inputFields={...}&fieldList={...}&entityName={...}&noConditionFind={...}&viewSize={...}`
 
-## Response
+### Example Request: 
 
-### Status Code
+https://demo-oms.hotwax.io/api/performFind?inputFields=<searchcondition>&entityName=<entityname>&fieldList=<fieldname>&fieldList=<fieldname>&viewSize=1
 
-HTTP/1.1 200 OK
-
-### Headers
-
-### Params
-```
-{
-  inputFields: 
-  fieldList: 
-  entityName: 
-  noConditionFind: 
-  viewSize: 
-}
-```
-#### Example 
-```
-{
-  inputFields: {"productStoreId":"STORE"}
-  fieldList: productStoreId
-  fieldList: daysToCancelNonPay
-  entityName: ProductStore
-  noConditionFind: Y
-}
-```
-
-| Parameter Name | Description | Required (Y/N) |
-| ------------ | --------------| -------------- |
-| `inputFields` | The parameters to specify search conditions for retrieving data from the Order Management System (OMS) entities | Y |
-| `fieldList` |The parameter allows to define which fields or attributes of the entities to include in the response  | N |
-| `entityName` | The specific entity type within the OMS from which you want to fetch data | Y |
-| `noConditionFind` | The parameter to fetch all data from the specified entity without any specific conditions applied. Default value is Y| N |
-| `viewSize` | The parameter that determines the number of records or data items to be included in a single page of the response | N |
-
+Note: If `noConditionFind` is 'Y' then 'inputFiels' parameter is optional.
 
 ## Response
 
@@ -75,7 +46,6 @@ HTTP/1.1 200 OK
 
 ### Headers
 Content-Type: application/json
-
 
 ### Body
 
