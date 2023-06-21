@@ -14,11 +14,13 @@ Example: `https://demo-oms.hotwax.io/api/performFind`
 
 Content-Type: application/json
 
-### Example Request: 
+### Example Params: 
 
 https://demo-oms.hotwax.io/api/performFind?inputFields=<searchcondition>&entityName=<entityname>&fieldList=<fieldname>&fieldList=<fieldname>&viewSize=1
 
 ### Parameters
+
+The following parameters can be sent in the request: 
 
 | Parameter Name | Description | Required (Y/N) |
 | -------------- | ----------- | -------------- |
