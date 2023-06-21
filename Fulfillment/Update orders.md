@@ -1,4 +1,4 @@
-# Update Orders API
+# Update Order API
 
 Updates the orders which are in-progress and have not been shipped yet. Orders are updated for two reason; Shipment box change and order item rejection. To update the orders, you will need to call the `updateOrder` endpoint with the POST method.
 
