@@ -14,9 +14,11 @@ Example: `https://demo-oms.hotwax.io/api/performFind`
 
 Content-Type: application/json
 
-### Parameters
+### Example Request: 
 
-The request should include the following parameters:
+https://demo-oms.hotwax.io/api/performFind?inputFields=<searchcondition>&entityName=<entityname>&fieldList=<fieldname>&fieldList=<fieldname>&viewSize=1
+
+### Parameters
 
 | Parameter Name | Description | Required (Y/N) |
 | -------------- | ----------- | -------------- |
@@ -31,11 +33,6 @@ The request should include the following parameters:
 | `filterByDate` | Filter records based on fromDate and thruDate | N |
 | `fromDateName` | Filter by date field name if field name is different from default fromDate field | N |
 | `thruDateName` | Filter by date field name if field name is different from default thruDate field | N |
-
-
-### Example Request: 
-
-https://demo-oms.hotwax.io/api/performFind?inputFields=<searchcondition>&entityName=<entityname>&fieldList=<fieldname>&fieldList=<fieldname>&viewSize=1
 
 Note: If `noConditionFind` is 'Y' then 'inputFiels' parameter is optional.
 
