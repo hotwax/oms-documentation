@@ -4,47 +4,88 @@
 
 ### Overview
 
-The FileSaver package is a software library that provides an easy way to save files generated within a web application. By using this package. HotWax generates files dynamically and save them directly to the user's device.
+The FileSaver package is a software library designed for web applications that generate files on the client-side, providing seamless file-saving functionality directly to the end-users' devices.
+
+This package runs on the [supported browsers](https://www.npmjs.com/package/file-saver#supported-browsers) only.
 
 ### Installation
 
-To install the FileSaver package, follow these steps:
+To install FileSaver.js, you can use npm or bower. For basic Node.js installation, run the following command:
 
-1. Open your terminal or command prompt.
-2. Navigate to your project directory.
-3. Run the following command: `npm install file-saver`
+```bash
+npm install file-saver --save
+```
 
-### Usage
+For TypeScript definitions, you can install the '@types/file-saver' package:
 
-#### 1. Importing the Package
+```bash
+npm install @types/file-saver --save-dev
+```
 
-To use the FileSaver package in your application, import it into your codebase. Use the following import statement:
+### Syntax
+
+To use FileSaver.js, you can import the `saveAs()` function from the 'file-saver' module as follows:
 
 ```javascript
 import { saveAs } from 'file-saver';
 ```
 
-#### 2. Saving Files
-
-FileSaver allows you to save files generated within your application. To save a file, use the `saveAs` function provided by FileSaver:
+The `saveAs()` function is used to save files and has the following syntax:
 
 ```javascript
-const fileData = 'This is the content of the file.';
-const fileName = 'example.txt';
-const file = new Blob([fileData], { type: 'text/plain;charset=utf-8' });
-saveAs(file, fileName);
+FileSaver.saveAs(Blob/File/Url, optional DOMString filename, optional Object { autoBom })
 ```
 
-In the above example, the `fileData` variable represents the content of the file you want to save, and the `fileName` variable specifies the name of the file. The `Blob` class is used to create a file object, and then the `saveAs` function is called to save the file.
+You can pass an optional `Object` with `{ autoBom: true }` as the third argument to automatically provide Unicode text encoding hints if your blob type has `charset=utf-8` set.
 
-#### 3. Configuring File Types
+### Examples
 
-FileSaver provides flexibility in specifying the file type when saving files. By adjusting the `type` parameter in the `Blob` constructor, you can change the MIME type of the saved file. Refer to the FileSaver documentation for more information on MIME types and supported file formats.
+#### Saving text using `require()`:
 
-### Conclusion
+```javascript
+var FileSaver = require('file-saver');
+var blob = new Blob(["Hello, world!"], { type: "text/plain;charset=utf-8" });
+FileSaver.saveAs(blob, "hello world.txt");
+```
 
-The FileSaver package is a valuable tool for saving files generated within a web application. By utilizing its capabilities, you can easily generate files on the fly and prompt the user to save them directly to their device.
+#### Saving text:
 
-For advanced usage and further customization options, consult the official documentation and API reference provided by the FileSaver package.
+```javascript
+var blob = new Blob(["Hello, world!"], { type: "text/plain;charset=utf-8" });
+FileSaver.saveAs(blob, "hello world.txt");
+```
+
+#### Saving URLs:
+
+```javascript
+FileSaver.saveAs("https://httpbin.org/image", "image.jpg");
+```
+
+Note: When using URLs within the same origin, it will use the `a[download]` attribute. Otherwise, it will check if it supports CORS headers with a synchronous HEAD request. If supported, it will download the data and save using blob URLs. If not, it will try to download it using `a[download]`.
+
+#### Saving a canvas:
+
+```javascript
+var canvas = document.getElementById("my-canvas");
+canvas.toBlob(function(blob) {
+    FileSaver.saveAs(blob, "pretty image.png");
+});
+```
+
+Note: The standard `canvas.toBlob()` method may not be available in all browsers. You can use the `canvas-toBlob.js` library as a cross-browser polyfill.
+
+#### Saving a File:
+
+```javascript
+var file = new File(["Hello, world!"], "hello world.txt", { type: "text/plain;charset=utf-8" });
+FileSaver.saveAs(file);
+```
+
+Note: Internet Explorer (IE) and Edge do not support the new File constructor, so it's recommended to construct blobs and use `saveAs(blob, filename)` instead.
+
+## Conclusion
+
+By incorporating this package, you can enable users to save files to their system. For advanced usage and further customization options, refer to [the official documentation](https://www.npmjs.com/package/file-saver#syntax)
+
 
 Note: Please check the compatibility of the package version with the app. 
