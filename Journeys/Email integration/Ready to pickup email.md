@@ -1,12 +1,11 @@
-# Integration guidelines for OMS and Marketing Automation Platforms: Ready to Pickup Communication 
-
+# Integration guidelines for OMS and Marketing Automation Platforms: Ready for pickup email notification
 
 ## Overview
-This document provides integration guidelines for sending 'Ready to Pickup' notifications from the Order Management System (OMS) to the Marketing Automation Platform. The 'Ready to Pickup' notification is triggered when a BOPIS order is packed and ready for customer pickup at the store. This integration enhances the customer experience and reduces manual efforts."
+These guidelines detail the integration process between the Order Management System (OMS) and the Marketing Automation Platform, enabling the automated delivery of 'Ready to Pickup' email notifications to customers. These notifications are triggered when store staff pack the items in a shipment and indicate their readiness for pickup using either HotWax Commerce's BOPIS fulfillment app or Plug and Play APIs. This integration ensures timely communication, notifying customers to collect their orders from the store.
 
-### Step 1: Update shipments to packed status
+### Step 1: Mark shipment-Ready for Pickup
 
-When an order is ready to be shipped, it is updated to the packed status. To do this,`updateShipment` service is invoked to change the status of the order.
+When store staff pick and pack the order items, the `updateShipment` service is triggered to update the order's shipment status to `packed`, indicating its readiness for pickup.
 
 ### Service details: 
 ```
@@ -34,9 +33,9 @@ When an order is ready to be shipped, it is updated to the packed status. To do 
     </service>
 ```
 
-### Step 2: Invoke `sendReadyToPickupItemNotification` service
+### Step 2: Trigger `sendReadyToPickupItemNotification` service
 
-After updating the shipment to packed status, the `updateShipment` service also triggers the `sendReadyToPickupItemNotification` service.
+After updating the shipment to packed status, the `updateShipment` service triggers the `sendReadyToPickupItemNotification` service for the shipment.
 
 #### Service details:
 ```
@@ -53,9 +52,25 @@ After updating the shipment to packed status, the `updateShipment` service also 
 | `statusId` | The status ID of the shipment. To send ready to pickup email, shipment must be packed | Yes |
 | `shipmentTypeID` | The ID of the shipment type | Yes |
 
-### Step 3: Customize Email Notification
+### Step 3: Validates the configuration of email notification
 
-The `sendReadyToPickupItemNotification` service determines the configured `emailType` from the email integration platform and selects the appropriate API template. The service then uses the `shipmentId` (shipmentID) as input for the email template, which is pushed to the Marketing Automation Platform.
+The `sendReadyToPickupItemNotification` service validates the configuration. The service verifies the configuration status to send ready-for-pickup emails. If it is enabled, the service proceeds to determine the responsible system for sending the email.
+
+If the marketing automation platform is responsible for sending notifications, the Order Management System (OMS) shares the shipment details in JSON format with the marketing automation platform. The marketing automation platform then utilizes these details to personalize the customer's email using the preconfigured email template. 
+
+On the other hand, if the OMS itself is responsible for sending the email, it directly uses the preconfigured email template within the OMS to send the notification to the customer.
+
+The data for the preconfigured email is defined by `templateContentId`.
+
+#### Service details: 
+
+```
+<ProductStoreEmailSetting emailType="PRDS_READY_TO_PICKUP" productStoreId="STORE" subject="Ready For Pickup" templateContentId="READY_FOR_PICKUP"/>
+```
+
+### Step 4: Deliver Email Notification
+
+The `sendReadyToPickupItemNotification` service checks the `templateContentId` to prepare data and sends the shipment details to the marketing integration platform, which delivers the email notification to the customer. If the OMS is responsible, it directly delivers the email notification based on the `templateContentId`.
 
 #### Service Details:
 ```
@@ -72,11 +87,8 @@ The `sendReadyToPickupItemNotification` service determines the configured `email
 | `shipmentId` | The ID of the shipment | Yes |
 | `emailType` | The type of the email | Yes |
 
-### Step 4: Deliver Email Notification
 
-The service calls the email platform's API to send the email details to the email integration platform, which then delivers the email notification to the customer.
-
-HotWax Commerce has ready integration with Listrak, a marketing automation platform. Here's a sample JSON file that is shared with Listrak's API for each order:
+##### HotWax Commerce has ready integration with Listrak, a marketing automation platform. Here's a sample JSON file that is shared with Listrak's API for each order:
 ```
 const data = {
   "emailAddress": "sumiti.joshi@hotwax.co",
@@ -144,12 +156,4 @@ const jsonString = JSON.stringify(data, null, 2);
 console.log(jsonString);
 ```
 
-### By following these steps, you can send ready to pickup email from the OMS to marketing automation platform.
-
-
-
-
-
-
-
-
+### By following these steps, you can send Ready-for-pickup email notifications from the OMS to the marketing automation platform.
