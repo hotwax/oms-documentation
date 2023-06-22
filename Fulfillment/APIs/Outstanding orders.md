@@ -168,10 +168,3 @@ Example: https://demo-oms.hotwax.io/api/solr-query
 | `docType`                | The type of the document                                      |
 | `identifier`             | The identifier of the document                                |
 | `docType-identifier`      | The type and identifier of the document separated by a hyphen |
-
-
-
-
-
-
-
