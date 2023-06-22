@@ -5,7 +5,7 @@ These guidelines detail the integration process between the Order Management Sys
 
 ### Step 1: Mark shipment-Ready for Pickup
 
-When store staff pick and pack the order items, the `updateShipment` service is triggered to update the order's shipment status to `packed`, indicating its readiness for pickup.
+When store staff pack the order items, the `updateShipment` service is triggered to update the order's shipment status to `packed`, indicating its readiness for pickup.
 
 ### Service details: 
 ```
@@ -54,11 +54,11 @@ After updating the shipment to packed status, the `updateShipment` service trigg
 
 ### Step 3: Validates the configuration of email notification
 
-The `sendReadyToPickupItemNotification` service validates the configuration. The service verifies the configuration status to send ready-for-pickup emails. If it is enabled, the service proceeds to determine the responsible system for sending the email.
+The `sendReadyToPickupItemNotification` service validates the configuration to send ready-for-pickup emails. If it is enabled, the service proceeds to determine the responsible system for sending the email.
 
 If the marketing automation platform is responsible for sending notifications, the Order Management System (OMS) shares the shipment details in JSON format with the marketing automation platform. The marketing automation platform then utilizes these details to personalize the customer's email using the preconfigured email template. 
 
-On the other hand, if the OMS itself is responsible for sending the email, it directly uses the preconfigured email template within the OMS to send the notification to the customer.
+On the other hand, if the OMS itself is responsible for sending the email, it directly uses the preconfigured email template within the OMS. 
 
 The data for the preconfigured email is defined by `templateContentId`.
 
