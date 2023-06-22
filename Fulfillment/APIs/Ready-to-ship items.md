@@ -49,7 +49,7 @@ Example: https://demo-oms.hotwax.io/api/solr-query
 | Parameter        | Description                                               | Required (Y/N) |
 |------------------|-----------------------------------------------------------|----------------|
 | `rows`           | The number of groups                                      | No             |
-| `sort`           | Sort data based on attributes                             |             |
+| `sort`           | Sort data based on attributes                             | No        |
 | `group`          | Filter to group orders                                   | Yes            |
 | `group.field`    | The field to be grouped                                   | Yes            |
 | `group.limit`    | The maximum number of items allowed in the group         | Yes            |
@@ -57,8 +57,8 @@ Example: https://demo-oms.hotwax.io/api/solr-query
 | `defType`        | Selects the query parser to be used to process the query  | No             |
 | `q.op`           | Specifies the default operator for query expressions, overriding the default operator specified in the Schema. Possible values are "AND" or "OR"| No |
 | `qf`             | The query fields                                        | No             |
-| `filter`        | Filters record based on parameters passed|              |
-| `itemShippedDate`|  The filter to get orders based on their shipped date |              |
+| `filter`        | Filters record based on parameters passed|      No     |
+| `itemShippedDate`|  The filter to get orders based on their shipped date |       -       |
 | `docType`        | Reference index                                          | No             |
 | `start`        | Index page number                                         | No             |
 | `orderTypeId`    | The ID of the order type in HotWax                       | Yes            |
@@ -69,9 +69,9 @@ Example: https://demo-oms.hotwax.io/api/solr-query
 | `mincount` | Specifies the minimum counts required for a facet field to be included in the response. | No             |
 | `limit` |  Controls how many constraints should be returned for each facet                | No             |
 | `sort` |   Controls how faceted results are sorted.               | No             |
-| `type` |                  | No             |
+| `type` |      -            | No             |
 | `facet` | The arrangement of search results into categories based on indexed terms.                     | No             |
-| `ordersCount` |                  | No             |
+| `ordersCount` |  The count of orders                | No             |
 | `-fulfillmentStatus`    | The status of fulfilment which needs to be neglected                               | No             |
 | `facilityId`     | The ID of the facility                                   | No             |
 
@@ -154,17 +154,17 @@ Example: https://demo-oms.hotwax.io/api/solr-query
 | Parameter               | Description              |
 | ----------------- | ------------------ |
 | `matches`          | The results matching the query                |
-| `ngroups`           |                        |
-| `groupValue`        |                        |
+| `ngroups`           |   -                     |
+| `groupValue`        |   -                    |
 | `numFound`          |  The number of results found  |
-| `start`             |                        |
+| `start`             |  -                      |
 | `orderId`           |  The ID of the order                      |
 | `orderItemSeqId`     | The ID of the order item sequence                       |
 | `shipGroupSeqId`     | The ID of the ship group sequence                      |
 | `inventoryItemId`    | The ID of the inventory item                      |
 | `reservedDatetime`   | The date and time of reservation                      |
 | `itemQuantity`      |  The quantity of order items                      |
-| `quantityNotAvailable` |                        |
+| `quantityNotAvailable` |    -                    |
 | `productId`         |  The ID of the product                      |
 | `keywordSearchText`  |  Keyword for search                      |
 | `productName`       | The name of the product                     |
