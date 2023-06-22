@@ -1,6 +1,6 @@
 # In progress Orders API
 
-Fetches a comprehensive list of all orders for which picklist is created and are in the process of pickup for fulfillment. To get the orders, you will need to call the /solr-query endpoint with the POST method.
+Fetches a comprehensive list of all orders which are in process of pickup for fulfillment. To get the orders, you will need to call the /solr-query endpoint with the POST method.
 
 ## Request
 
@@ -47,8 +47,8 @@ Example: https://demo-oms.hotwax.io/api/solr-query
 | `start`        | Index page number                                         | No             |
 | `orderTypeId`    | The ID of the order type in HotWax                       | Yes            |
 | `picklistItemStatusID`       | The status of the order if picked or not. Default value: N | No             |
-| `-shipmentMethodTypeId` | The ID of the shipment method type which needs to neglected                  | No             |
-| `-fulfillmentStatus`    | The status of fulfilment which needs to be neglected                               | No             |
+| `shipmentMethodTypeId` | The ID of the shipment method type which needs to neglected                  | No             |
+| `fulfillmentStatus`    | The status of fulfilment which needs to be neglected                               | No             |
 | `facilityId`     | The ID of the facility                                   | No             |
 
 
@@ -130,7 +130,7 @@ Example: https://demo-oms.hotwax.io/api/solr-query
 | `inventoryItemId`        | The ID of the inventory item                                  |
 | `reservedDatetime`       | The time and date of reservation                              |
 | `itemQuantity`           | The item quantity                                             |
-| `quantityNotAvailable`   |                                                               |
+| `quantityNotAvailable`   |  -                                                             |
 | `productId`              | The ID of the product in HotWax                               |
 | `keywordSearchText`      | The keyword used for search                                   |
 | `productName`            | The name of the product                                       |
