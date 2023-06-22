@@ -20,6 +20,6 @@ Store executives use the picking app to pick up order items to prepare them for 
 
 ## Usage
 
-To use the Vue Barcode Reader package, refer to the [official documentation](https://www.npmjs.com/package/vue-barcode-reader) for detailed instructions and customization options. 
+To use the Vue Barcode Reader package, refer to the [official documentation](https://www.npmjs.com/package/vue-barcode-reader) for detailed instructions and customization options. Make sure to check the compatibility of the package version with your application before integration.
 
 Note: Before integrating the package, ensure that the version you are using is compatible with the application.
