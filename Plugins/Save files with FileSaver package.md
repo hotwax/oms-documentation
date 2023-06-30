@@ -13,5 +13,3 @@ When retailers generate their shipping labels outside of HotWax, they need to ex
 ## Usage
 
 To use the FileSaver package package, refer to the [the official documentation](https://www.npmjs.com/package/file-saver#syntax) for detailed instructions and customization options. Make sure to check the compatibility of the package version with your application before integration.
-
-Note: Before integrating the package, ensure that the version you are using is compatible with the application.
