@@ -6,4 +6,4 @@ The @hotwax/app-version-info package is a software library developed by HotWax C
 
 ## Usage
 
-To use the Papa Parse package, refer to the [official documentation](https://www.papaparse.com/docs) for detailed instructions and customization options. Make sure to check the compatibility of the package version with your application before integration.
+To use the @hotwax/app-version-info, refer to the [official documentation](https://www.npmjs.com/package/@hotwax/app-version-info) for detailed instructions and customization options. Make sure to check the compatibility of the package version with your application before integration.
