@@ -15,6 +15,6 @@ The Reroute Fulfillment app provides customers with the flexibility to select al
 ### Case 3: Show on hand inventory in the Inventory count app
 To facilitate users during the periodic cycle count, the Inventory Count app provides a feature called "Quantity on Hand" settings. This feature allows users to view the current quantity on hand (QOH) from HotWax OMS directly on the product detail page. To enable or disable this feature, the Fulfillment admin has the authority to toggle the configuration. By utilizing the CASL Ability package, access to these configuration settings is restricted solely to Fulfillment admins. 
 
-### Conclusion
+### Usage
 
 To use the CASL Ability package, refer to the [the official documentation](https://www.npmjs.com/package/@casl/ability) for detailed instructions and customization options. Make sure to check the compatibility of the package version with your application before integration.
