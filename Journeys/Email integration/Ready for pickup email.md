@@ -54,13 +54,13 @@ After updating the shipment to packed status, the `updateShipment` service trigg
 
 ### Step 3: Validates the configuration of email notification
 
-The `sendReadyToPickupItemNotification` service validates the configuration to send ready-for-pickup emails. If it is enabled, the service proceeds to determine the responsible system for sending the email.
+The `sendReadyToPickupItemNotification` service checks the configuration to send ready-for-pickup emails. If it is enabled, the service proceeds to determine the responsible system for sending the email.
 
-If the marketing automation platform is responsible for sending notifications, the Order Management System (OMS) shares the shipment details in JSON format with the marketing automation platform. The marketing automation platform then utilizes these details to personalize the customer's email using the preconfigured email template. 
+If the marketing automation platform is responsible for sending notifications, the Order Management System (OMS) shares the shipment details in JSON format with the marketing automation platform. The marketing automation platform then uses these details to personalize the customer's email using the preconfigured email template. 
 
-On the other hand, if the OMS itself is responsible for sending the email, it directly uses the preconfigured email template within the OMS. 
+On the other hand, if the OMS is responsible for sending the email, it directly uses the preconfigured email template within the OMS. 
 
-The data for the preconfigured email is defined by `templateContentId`.
+Note: The data for the preconfigured email is defined by `templateContentId`.
 
 #### Service details: 
 
@@ -70,7 +70,7 @@ The data for the preconfigured email is defined by `templateContentId`.
 
 ### Step 4: Deliver Email Notification
 
-The `sendReadyToPickupItemNotification` service checks the `templateContentId` to prepare data and sends the shipment details to the marketing integration platform, which delivers the email notification to the customer. If the OMS is responsible, it directly delivers the email notification based on the `templateContentId`.
+The `sendReadyToPickupItemNotification` service checks the `templateContentId` to prepare data and sends the shipment details to the marketing integration platform.
 
 #### Service Details:
 ```
