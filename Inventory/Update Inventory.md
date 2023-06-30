@@ -13,9 +13,9 @@ Updated inventory in HotWax: 8
 ## Request
 
 ### End Point
-`https://<host>/api/updateInventory`
+`https://<host>/api/service/updateInventoryByIdentification`
 
-Example: https://demo-oms.hotwax.io/api/updateInventory
+Example: [https://demo-oms.hotwax.io/api/updateInventoryByIdentification](https://<host>/api/service/updateInventoryByIdentification)
 
 ### Header
 Content-Type: application/json
@@ -25,32 +25,35 @@ Content-Type: application/json
 ```
 {
   {
-    "sku": " ",
-    "quantity": ,
-    "externalFacilityId": "",
-    "locationSeqId": " ",
-    "varianceReasonId": ""
+    "facilityId": ,
+    "availableDelta": ,
+    "idType": ,
+    "idValue": ,
+    "locationSeqId": ,
+    "varianceReasonId": ,
   }
-}
+} 
 ```
 Sample: 
 ```
 {
   {
-    "sku": "2602",
-    "quantity": -1,
-    "externalFacilityId": "WH",
-    "locationSeqId": "10000",
+    "facilityId": "WH",
+    "availableDelta": 4,
+    "idType": "UPCA",
+    "idValue": "30065245099",
+    "locationSeqId": "TLTLTLLL01",
     "varianceReasonId": "POS_SALE"
   }
-}
+}  
 ```
 
 | Parameters       | Description                                            | Required (Y/N) |
 |------------------|--------------------------------------------------------|----------------|
-| `sku`            | The SKU of the product                                 | Y              |
-| `quantity`   | The variance in inventory quantity(delta)                       | Y              |
-| `externalFacilityId` | The external facility ID where inventory item needs to be updated | Y |
+| `idType`            | The type of product identifier. Currently supported ID types are SKU, UPCA,Shopify_Prod_ID | Y              |
+| `idValue`            | The value of  product identifier                | Y              |
+| `availableDelta`   | The variance in inventory quantity(delta)                       | Y              |
+| `facilityId` | The external facility ID where inventory item needs to be updated | Y |
 | `locationSeqId` | The location ID in the facility where inventory item needs to be updated | Y |
 | `varianceReasonId` | The ID of the reason that caused variance in inventory | Y              |
 
@@ -82,12 +85,13 @@ Content-Type: application/json
   
 ```
 {
-  {
-    "sku": "",
-    "quantity": ,
-    "externalFacilityId": "",
-    "locationSeqId": "",
-    "varianceReasonId": ""
+   {
+    "facilityId": ,
+    "availableDelta": ,
+    "idType": ,
+    "idValue": ,
+    "locationSeqId": ,
+    "varianceReasonId": ,
   },
   "webSiteId": ""
 }
@@ -97,10 +101,11 @@ Sample:
 ```
 {
   {
-    "sku": "2602",
-    "quantity": -1 ,
-    "externalFacilityId": "WH",
-    "locationSeqId": "10000",
+    "facilityId": "WH",
+    "availableDelta": 4,
+    "idType": "UPCA",
+    "idValue": "30065245099",
+    "locationSeqId": "TLTLTLLL01",
     "varianceReasonId": "POS_SALE"
   },
   "webSiteId": "API"
