@@ -1,7 +1,8 @@
 # Integration guidelines for OMS and Marketing Automation Platforms: Ready for pickup email notification
 
 ## Overview
-These guidelines detail the integration process between the Order Management System (OMS) and the Marketing Automation Platform, enabling the automated delivery of 'Ready to Pickup' email notifications to customers. These notifications are triggered when store staff pack the items in a shipment and indicate their readiness for pickup using either HotWax Commerce's BOPIS fulfillment app or Plug and Play APIs. This integration ensures timely communication, notifying customers to collect their orders from the store.
+
+These guidelines detail the integration process to enable the automated delivery of 'Ready to Pickup' email notifications to customers. These notifications are triggered when store staff pack the items in a shipment and indicate their readiness for pickup using either HotWax Commerce's BOPIS fulfillment app or Plug and Play APIs. 
 
 ### Step 1: Mark shipment-Ready for Pickup
 
@@ -52,15 +53,15 @@ After updating the shipment to packed status, the `updateShipment` service trigg
 | `statusId` | The status ID of the shipment. To send ready to pickup email, shipment must be packed | Yes |
 | `shipmentTypeID` | The ID of the shipment type | Yes |
 
-### Step 3: Validates the configuration of email notification
+### Step 3: Validates Email Notification Configuration
 
-The `sendReadyToPickupItemNotification` service checks the configuration to send ready-for-pickup emails. If it is enabled, the service proceeds to determine the responsible system for sending the email.
+The `sendReadyToPickupItemNotification` service checks the configuration for sending ready-for-pickup emails. If enabled, it determines the responsible system for sending the email.
 
-If the marketing automation platform is responsible for sending notifications, the Order Management System (OMS) shares the shipment details in JSON format with the marketing automation platform. The marketing automation platform then uses these details to personalize the customer's email using the preconfigured email template. 
+If the marketing automation platform is responsible, the OMS shares the shipment details in JSON format with the marketing automation platform. The platform then uses the details to personalize the customer's email using the preconfigured template.
 
-On the other hand, if the OMS is responsible for sending the email, it directly uses the preconfigured email template within the OMS. 
+If the OMS is responsible, it directly uses the preconfigured email template within the OMS.
 
-Note: The data for the preconfigured email is defined by `templateContentId`.
+Note: The data for the preconfigured email is defined by templateContentId.
 
 #### Service details: 
 
