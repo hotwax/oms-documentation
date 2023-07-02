@@ -34,6 +34,18 @@ When store staff pack the order items, the `updateShipment` service is triggered
     </service>
 ```
 
+| Parameter                 | Description                                                   |
+| ------------------------- | ------------------------------------------------------------ |
+| `shipmentTypeId`          | The ID of the shipment type.                                  |
+| `eventDate`               | The timestamp of the event.                                   |
+| `oldStatusId`             | The previous status ID of the shipment.                       |
+| `oldPrimaryOrderId`       | The previous primary order ID of the shipment.                |
+| `oldOriginFacilityId`     | The previous origin facility ID of the shipment.              |
+| `oldDestinationFacilityId`| The previous destination facility ID of the shipment.         |
+| `picklistBinId`           | The ID of the picklist bin associated with the shipment.      |
+| `oldPrimaryShipGroupSeqId`| The previous primary ship group sequence ID of the shipment.  |
+| `shipmentMethodTypeId`    | The ID of the shipment method type.                           |
+
 ### Step 2: Trigger `sendReadyToPickupItemNotification` service
 
 After updating the shipment to packed status, the `updateShipment` service triggers the `sendReadyToPickupItemNotification` service for the shipment.
