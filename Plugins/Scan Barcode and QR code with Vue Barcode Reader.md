@@ -12,11 +12,11 @@ During a cycle count, store staff needs to count the units of a product availabl
 
 ### Case 2: Receiving inventory in the Receiving App
 
-When a store receives a shipment, store personnel receive the inventory for the products. The barcode reader package allows store personnel to scan the barcodes of the items in the shipment and quickly search for the scanned products in the app to receive them into the facility's inventory.
+When a store receives a shipment, store staff receives the inventory for the products. The barcode reader package allows store staff to scan the barcodes of the items in the shipment and quickly search for the scanned products in the app to receive them into the facility's inventory.
 
 ### Case 3: Picking Order Items in the Picking App
 
-Store executives use the picking app to pick up order items to prepare them for shipping carriers. By scanning the barcode, store personnel can quickly search for the item in the app and mark it as picked, thereby checking it off the list. 
+Store staff uses the picking app to pick up order items to prepare them for shipping carriers. By scanning the barcode, store staff can quickly search for the item in the app and mark it as picked, thereby checking it off the list. 
 
 ## Usage
 
