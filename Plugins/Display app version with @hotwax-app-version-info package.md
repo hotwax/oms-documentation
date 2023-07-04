@@ -2,7 +2,7 @@
 
 ### Overview
 
-The @hotwax/app-version-info package is a software library developed by HotWax Commerce that provides functionality to retrieve version information of an application. By using this package, HotWax fetches and displays the version number and other relevant details of the application, which can be useful for monitoring, debugging, or displaying version information within the application's user interface.
+The App version info package is a software package developed by HotWax Commerce that provides functionality to retrieve version information of an application. By using this package, HotWax fetches and displays the version number and other relevant details of the application, which can be useful for monitoring and displaying version information within the application's user interface.
 
 ## Usage
 
