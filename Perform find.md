@@ -16,7 +16,8 @@ Content-Type: application/json
 
 ### Example Params: 
 
-https://demo-oms.hotwax.io/api/performFind?inputFields=<searchcondition>&entityName=<entityname>&fieldList=<fieldname>&fieldList=<fieldname>&viewSize=1
+[https://demo-oms.hotwax.io/api/performFind?inputFields=<searchcondition>&entityName=<entityname>&fieldList=<fieldname>&fieldList=<fieldname>&viewSize=1](https://demo-oms.hotwax.io/api/performFind?inputFields=search_condition_value&entityName=entity_name_value&fieldList=field_name1&fieldList=field_name2&viewSize=1
+)
 
 ### Parameters
 
@@ -24,17 +25,17 @@ The following parameters can be sent in the request:
 
 | Parameter Name | Description | Required (Y/N) |
 | -------------- | ----------- | -------------- |
-| `inputFields` | Specifies search conditions for retrieving data from the OMS entities | Y |
-| `fieldList` | Defines fields or attributes of the entities to include in the response | N |
-| `entityName` | The specific entity type within the OMS from which you want to fetch data | Y |
-| `noConditionFind` | Fetches all data from the specified entity without any specific conditions applied | N |
-| `viewSize` | Determines the number of records or data items to be included in a single page of the response | N |
-| `viewIndex` | The index to be included in the response | N |
-| `distinct` | Returns only distinct (different) values. | N |
-| `orderBy` | Sorts the result-set in ascending or descending order | N |
-| `filterByDate` | Filter records based on fromDate and thruDate | N |
-| `fromDateName` | Filter by date field name if field name is different from default fromDate field | N |
-| `thruDateName` | Filter by date field name if field name is different from default thruDate field | N |
+| `inputFields` | Specifies search conditions for retrieving data from the OMS entities | Yes |
+| `fieldList` | Defines fields or attributes of the entities to include in the response | No |
+| `entityName` | The specific entity type within the OMS from which you want to fetch data | Yes |
+| `noConditionFind` | Fetches all data from the specified entity without any specific conditions applied | No |
+| `viewSize` | Determines the number of records or data items to be included in a single page of the response | No |
+| `viewIndex` | The index to be included in the response | No |
+| `distinct` | Returns only distinct (different) values. | No |
+| `orderBy` | Sorts the result-set in ascending or descending order | No |
+| `filterByDate` | Filter records based on fromDate and thruDate | No |
+| `fromDateName` | Filter by date field name if field name is different from default fromDate field | No |
+| `thruDateName` | Filter by date field name if field name is different from default thruDate field | No |
 
 Note: If `noConditionFind` is 'Y' then 'inputFields' parameter is optional.
 
