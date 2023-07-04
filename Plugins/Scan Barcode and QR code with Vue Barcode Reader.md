@@ -8,7 +8,7 @@ The Vue Barcode Reader package is a Vue.js component library that enables the sc
 
 ### Case 1: Updating Physical Quantity in the Inventory Count App
 
-During a cycle count, store personnel need to count the units of a product available in their store and update the inventory in the OMS. The barcode reader package helps the user quickly scan the barcode and search for the product in the app to update inventory.
+During a cycle count, store staff needs to count the units of a product available in their store and update the inventory. The barcode reader package helps the user quickly scan the barcode and search for the product in the app to update inventory.
 
 ### Case 2: Receiving inventory in the Receiving App
 
