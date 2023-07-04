@@ -19,12 +19,12 @@ The Reset Inventory API accepts the following parameters:
 | Parameters | Description | Required |
 |------------|-------------|----------|
 | `facilityId` | HotWax Commerce internal facility Id. Generally the same as the facility Id in Shopify.                | Yes |
-| `externalFacilityId` | The Id of the facility in an external reference source.                                        | No  |
-| `productId` | The internal Id of a product in HotWax Commerce.                                                        | No  |
+| `locationSeqId` | The Id of the designated location in a facility in HotWax Commerce.                                 | Yes |
 | `idType` | The type of the unique product identifier in the external reference source. Default is `shopifyProductId` | No  |
 | `idValue` | The value of the product idType in the external reference source.                                         | Yes |
 | `availableQty` | The available quantity of the product in the external reference source. This number will overwrite the current ATP level of the product in HotWax Commerce. | Yes |
-| `locationSeqId` | The Id of the designated location in a facility in HotWax Commerce.                                 | Yes |
+| `externalFacilityId` | The Id of the facility in an external reference source.                                        | No  |
+| `productId` | The internal Id of a product in HotWax Commerce.                                                        | No  |
 | `comments` | Optional field to store additional information.                                                          | No  |
 
 Note: `sku` `upca` and `shopifyProductId` are commonly used product Identifiers.
