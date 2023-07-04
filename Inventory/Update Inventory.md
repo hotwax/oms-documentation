@@ -18,9 +18,10 @@ Updated inventory in HotWax: 8
 Example: [https://demo-oms.hotwax.io/api/updateInventoryByIdentification](https://<host>/api/service/updateInventoryByIdentification)
 
 ### Header
+
 Content-Type: application/json
 
-### Authentication
+#### Authentication
 
 To access this endpoint, you need to include the authorization token in the request header.
 
