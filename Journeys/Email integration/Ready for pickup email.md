@@ -2,7 +2,7 @@
 
 ## Overview
 
-These guidelines detail the integration process to enable the automated delivery of 'Ready to Pickup' email notifications to customers. These notifications are triggered when store staff pack the items in a shipment and indicate their readiness for pickup using either HotWax Commerce's BOPIS fulfillment app or Plug and Play APIs. 
+These guidelines detail the integration process to enable the automated delivery of 'Ready to Pickup' email notifications to customers. These notifications are triggered when store staff pack the items in a shipment and indicate their readiness for pickup using either HotWax Commerce's BOPIS fulfillment app or Fulfillment APIs. 
 
 ### Step 1: Mark shipment-Ready for Pickup
 
@@ -31,13 +31,13 @@ When store staff pack the order items, the `updateShipment` service is triggered
         <attribute name="picklistBinId" type="String" mode="OUT" optional="true"/>
         <attribute name="oldPrimaryShipGroupSeqId" type="String" mode="OUT" optional="true"/>
         <override name="shipmentMethodTypeId" type="String" mode="INOUT" optional="true"/>
-    </service>
+</service>
 ```
 
 | Parameter                 | Description                                                   |
-| ------------------------- | ------------------------------------------------------------ |
+| ------------------------- | ------------------------------------------------------------  |
 | `shipmentTypeId`          | The ID of the shipment type.                                  |
-| `eventDate`               | The timestamp of the event.                                   |
+| `eventDate`               | The timestamp when the shipment was updated.                  |
 | `oldStatusId`             | The previous status ID of the shipment.                       |
 | `oldPrimaryOrderId`       | The previous primary order ID of the shipment.                |
 | `oldOriginFacilityId`     | The previous origin facility ID of the shipment.              |
@@ -50,7 +50,7 @@ When store staff pack the order items, the `updateShipment` service is triggered
 
 After updating the shipment to packed status, the `updateShipment` service triggers the `sendReadyToPickupItemNotification` service for the shipment.
 
-#### Service details:
+#### Chained even condition details:
 ```
 <eca service="updateShipment" event="global-commit-post-run" run-on-error="false">
     <condition-field field-name="statusId" operator="not-equals" to-field-name="oldStatusId"/>
@@ -62,7 +62,7 @@ After updating the shipment to packed status, the `updateShipment` service trigg
 
 | Parameter | Description | Required |
 |-----------|-------------|----------|
-| `statusId` | The status ID of the shipment. To send ready to pickup email, shipment must be packed | Yes |
+| `statusId` | The status ID of the shipment. To send ready for pickup email, shipment must be packed | Yes |
 | `shipmentTypeID` | The ID of the shipment type | Yes |
 
 ### Step 3: Validates Email Notification Configuration
@@ -104,7 +104,7 @@ The `sendReadyToPickupItemNotification` service checks the `templateContentId` t
 ##### HotWax Commerce has ready integration with Listrak, a marketing automation platform. Here's a sample JSON file that is shared with Listrak's API for each order:
 ```
 const data = {
-  "emailAddress": "sumiti.joshi@hotwax.co",
+  "emailAddress": "john.doe@example.co",
   "segmentationFieldValues": [
     {
       "segmentationFieldId": 2378294,
