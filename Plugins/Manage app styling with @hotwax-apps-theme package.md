@@ -2,7 +2,7 @@
 
 ### Overview
 
-The @hotwax/apps-theme package is a software library developed by HotWax Commerce that provides stylin functionalities for applications. By using this package, HotWax enhances the visual appearance and user interface of applications.
+The Apps theme package is a software library developed by HotWax Commerce that provides styling functionalities for applications. By using this package, HotWax enhances the visual appearance and user interface of applications.
 
 ## Usage
 
