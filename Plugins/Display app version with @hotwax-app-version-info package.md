@@ -6,4 +6,4 @@ The App version info package is a software package developed by HotWax Commerce 
 
 ## Usage
 
-To use the App version info package, refer to the [official documentation](https://www.npmjs.com/package/@hotwax/app-version-info) for detailed instructions and customization options. Make sure to check the compatibility of the package version with your application before integration.
+To use the App version info package, refer to the [official documentation](https://www.npmjs.com/package/@hotwax/app-version-info) for detailed instructions and customization options. Make sure to check the compatibility of the package version with your application before integration
