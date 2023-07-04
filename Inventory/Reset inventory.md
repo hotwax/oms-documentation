@@ -1,10 +1,8 @@
 # Reset Inventory API
 
-Syncs inventory from an external reference source to HotWax. After receiving the inventory file in CSV format, HotWax Commerce calculates the difference in inventory and matches its inventory levels exactly with CSV. CSC files can be imported in HotWax by two method: using the EXIM menu in HotWax or saving the file in a designated SFTP location for HotWax to automatically download and process.
+Syncs inventory from an external reference source to HotWax. After receiving the inventory file in CSV format, HotWax Commerce calculates the difference in inventory and matches its inventory levels exactly with CSV. CSV files can be imported in HotWax by two methods: using the EXIM menu in HotWax or saving the file at a designated SFTP location for HotWax to automatically download and process.
 
-If you choose the SFTP method, please save the CSV file in the path shared by HotWax. 
-
-Sample path: `/home/<host_name>-sftp/staging/incoming`
+Sample path for SFTP method: `/home/<host_name>-sftp/staging/incoming` 
 
 ## CSV example
 
