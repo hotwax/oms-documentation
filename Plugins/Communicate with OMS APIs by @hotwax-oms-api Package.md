@@ -2,7 +2,7 @@
 
 ### Overview
 
-The @hotwax/oms-api package is a software library designed to interact with the OMS (Order Management System) API provided by HotWax Commerce. By using this package, HotWax communicates with the OMS API and perform various operations related to order management and e-commerce.
+The OMS API package is a software library designed to interact with the OMS (Order Management System) API provided by HotWax Commerce. By using this package, HotWax Commerce Apps communicate with the HotWax Commerce OMS  and perform operations related to order management.
 
 ## Usage
 
