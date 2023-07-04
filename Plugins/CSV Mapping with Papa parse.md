@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Papa Parse package is an in-browser parser that allows systems to parse CSV data into JSON and vice versa. This package is commonly used in HotWax Commerce apps to map the HotWax CSV format with the external system's CSV format.
+The Papa Parse package is an in-browser parser that allows systems to parse CSV data into JSON and vice versa. This package is used by HotWax Commerce apps to map the HotWax CSV format with the external system's CSV format.
 
 ## Use Case
 
