@@ -1,7 +1,22 @@
 # Reset Inventory API
 
-Syncs inventory from an external reference source to HotWax. After receiving the inventory file in CSV format, HotWax Commerce calculates the difference in inventory and matches its inventory levels exactly with CSV.  
+Syncs inventory from an external reference source to HotWax. After receiving the inventory file in CSV format, HotWax Commerce calculates the difference in inventory and matches its inventory levels exactly with CSV. CSC files can be imported in HotWax by two method: using the EXIM menu in HotWax or saving the file in a designated SFTP location for HotWax to automatically download and process.
 
+If you choose the SFTP method, please save the CSV file in the path shared by HotWax. 
+
+Sample path: `/home/<host_name>-sftp/staging/incoming`
+
+## CSV example
+
+Here's an example of the CSV file format:
+
+| facilityId       | idType           | idValue       | availableQty | locationSeqId |
+|------------------|------------------|---------------|--------------|---------------|
+| DEMO_HC_STORE_1  | shopifyProductId | 11434040-700  | 20           | TLTLTLLL01    |
+
+## Parameters
+
+The Reset Inventory API accepts the following parameters:
 
 | Parameter | Description | Required |
 |-----------|-------------|----------|
@@ -13,12 +28,5 @@ Syncs inventory from an external reference source to HotWax. After receiving the
 | `availableQty` | The available quantity of the product in the external reference source. This number will overwrite the current ATP level of the product in HotWax Commerce. | Yes |
 | `locationSeqId` | The Id of the designated location in a facility in HotWax Commerce. | Yes |
 | `comments` | Optional field to store additional information. | No |
-
-
-## Example
-
-| facilityId | idType | idValue | availableQty | locationSeqId |
-|----------- |------- |-------- |------------- |-------------- | 
-| DEMO_HC_STORE_1 | shopifyProductId | 11434040-700 | 20 | TLTLTLLL01 |
 
 [Reset inventory sample.csv](https://github.com/Dhiraj1405/oms-documentation/blob/BOPIS_API/Inventory/Samples/Reset%20inventory%20sample.csv)
