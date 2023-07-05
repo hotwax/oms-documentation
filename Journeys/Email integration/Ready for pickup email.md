@@ -6,7 +6,7 @@ These guidelines provide detailed steps for integrating the Order Management Sys
 
 ### Step 1: Mark shipment-Ready for Pickup
 
-When store staff pack the order items and indicate their readiness for pickup, the `quickShipEntireShipGroup` API converts order items into a shipment and marks them packed in the OMS
+When store staff pack the order items and indicate their readiness for pickup, the `quickShipEntireShipGroup` API converts the order items into a shipment and marks them packed in the OMS
 
 #### Sample API Request 
 
@@ -80,7 +80,7 @@ Note: Additionally, this ECA also offers the option to manually trigger the "rea
 | `templateContentId`        | The Id of the template content.                                                           |   
 | `systemMessageRemoteId`    | The Id of the system responsible for sending the email.                                   |   
 
-The email transmission system is identified by the parameter `systemMessageRemoteId`, while the information to configure the email's content is specified by the `templateContentId`. This `templateContentId` enables the OMS (Order Management System) to locate and retrieve the content required for composing the email.
+The email transmission system is identified by the parameter `systemMessageRemoteId`, while the information to configure the email's content is specified by the `templateContentId`. This `templateContentId` enables the OMS (Order Management System) to locate and fetch the content required for composing the email.
 
 
 #### ECA Details:
