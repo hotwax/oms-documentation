@@ -55,9 +55,9 @@ When store staff pack the order items and indicate their readiness for pickup, t
 
 ### Step 2: Trigger `sendReadyToPickupItemNotification` chained event condition action
 
-When the shipment status is `packed`, the `sendReadyToPickupItemNotification` chained event condition action (ECA) is triggered to check the order type of the shipment and the configuration for sending ready-for-pickup emails. This configuration determines the system responsible for sending the email and data required to configure email content. 
+When the shipment status is `packed`, the `sendReadyToPickupItemNotification` chained event condition action (ECA) is triggered to check the order type of the shipment and the configuration for sending ready-for-pickup emails.
 
-The email transmission system is identified by the parameter `systemMessageRemoteId`, while the information to configure the email's content is specified by the `templateContentId`. This `templateContentId` enables the OMS (Order Management System) to locate and retrieve the content required for composing the email.
+The order type filters `Store pickup` and `Ship to store` order to send the email. The configuration determines the system responsible for sending the email and data required to configure email content. 
 
 Note: Additionally, this ECA also offers the option to manually trigger the "ready to pickup" email notification. When this ECA is triggered, it internally initiates the email for shipment process. This feature allows users to manually initiate the sending of email notifications to inform recipients that their item is ready for pickup.
 
@@ -80,19 +80,10 @@ Note: Additionally, this ECA also offers the option to manually trigger the "rea
 | `templateContentId`        | The Id of the template content.                                                           |   
 | `systemMessageRemoteId`    | The Id of the system responsible for sending the email.                                   |   
 
-
-### Step 3: Prepare content for email
-
-When the marketing automation platform handles email transmission, the OMS shares the required information in JSON format, specified by the `templateContentId`, to the platform. 
-
-However, if the OMS is responsible for sending the email, it incorporates the data into a preconfigured email template within its system.
+The email transmission system is identified by the parameter `systemMessageRemoteId`, while the information to configure the email's content is specified by the `templateContentId`. This `templateContentId` enables the OMS (Order Management System) to locate and retrieve the content required for composing the email.
 
 
-### Step 4: Deliver Email Notification
-
-After recieving the data, the marketing automation platform personalizes the customer's email using the provided details, utilizing a preconfigured template. 
-
-#### Service Details:
+#### ECA Details:
 ```
 <service name="sendReadyToPickupItemNotification" engine="java" require-new-transaction="true" max-retry="3"
          location="co.hotwax.customerservice.shipment.ShipmentServices" export="true" invoke="sendReadyToPickupItemNotification" auth="true">
@@ -105,6 +96,18 @@ After recieving the data, the marketing automation platform personalizes the cus
 | ------------ | --------------------------- | -------- |
 | `shipmentId` | The Id of the shipment.      |    Yes   |
 | `emailType`  | The type of the email.       |    Yes   |
+
+
+### Step 3: Prepare content for email
+
+When the marketing automation platform handles email transmission, the OMS shares the required information in JSON format, specified by the `templateContentId`, to the platform. 
+
+Note: If the OMS is responsible for sending the email, it incorporates the data into a preconfigured email template within its system.
+
+
+### Step 4: Deliver Email Notification
+
+After recieving the data, the marketing automation platform personalizes the customer's email using the provided details and delivers the email to the customer. 
 
 
 ##### HotWax Commerce has ready integration with Listrak, a marketing automation platform. Here's a sample JSON file that is shared with Listrak's API for each shipment:
