@@ -55,20 +55,40 @@ When store staff pack the order items and mark them as ready for pickup, the `qu
 
 ### Step 2: Trigger `sendReadyToPickupItemNotification` chained event condition action
 
-When the shipment status is `packed`, the `sendReadyToPickupItemNotification` chained event condition action (ECA) is triggered to check the configuration for sending ready-for-pickup emails. This configuration determines the system responsible for sending the email and data required to configure email content. 
+When the shipment status is `packed`, the `sendReadyToPickupItemNotification` chained event condition action (ECA) is triggered to check the order type of the shipment and the configuration for sending ready-for-pickup emails. This configuration determines the system responsible for sending the email and data required to configure email content. 
+
+The email transmission system is identified by the parameter `systemMessageRemoteId`, while the information to configure the email's content is specified by the `templateContentId`. This `templateContentId` enables the OMS (Order Management System) to locate and retrieve the content required for composing the email.
 
 #### Configuration details: 
 
 ```
-<ProductStoreEmailSetting emailType="PRDS_READY_TO_PICKUP" productStoreId="STORE" subject="Ready For Pickup" templateContentId="READY_FOR_PICKUP", systemMessageRemoteId= NN_LISTRAK_CONFIG>
+<ProductStoreEmailSetting 
+  emailType="PRDS_READY_TO_PICKUP"
+  productStoreId="STORE" 
+  subject="Ready For Pickup" 
+  templateContentId="READY_FOR_PICKUP", 
+  systemMessageRemoteId= NN_LISTRAK_CONFIG>
 ```
-The email transmission system is identified by the parameter `systemMessageRemoteId`, while the information to configure the email's content is specified by the `templateContentId`. This `templateContentId` enables the OMS (Order Management System) to locate and retrieve the content required for composing the email.
+| Parameter                  | Description                                                                               | 
+| -------------------------- | ----------------------------------------------------------------------------------------- | 
+| `ProductStoreEmailSetting` | The email settings in the Order Management System (OMS) for the product store identifier. | 
+| `emailType`                | The type of email to be sent.                                                             |  
+| `productStoreId`           | The ID of the product store.                                                              |  
+| `subject`                  | The subject of the email.                                                                 |  
+| `templateContentId`        | The ID of the template content.                                                           |   
+| `systemMessageRemoteId`    | The ID of the system responsible for sending the email.                                   |   
 
-### Step 3: Prepare email content
+
+### Step 3: Prepare content for email
 
 When the marketing automation platform handles email transmission, the OMS shares the required information in JSON format, specified by the `templateContentId`, to the platform. 
 
 However, if the OMS is responsible for sending the email, it incorporates the data into a preconfigured email template within its system.
+
+
+### Step 4: Deliver Email Notification
+
+After recieving the data, the marketing automation platform personalizes the customer's email using the provided details, utilizing a preconfigured template. 
 
 #### Service Details:
 ```
@@ -85,9 +105,6 @@ However, if the OMS is responsible for sending the email, it incorporates the da
 | `shipmentId` | The ID of the shipment | Yes |
 | `emailType` | The type of the email | Yes |
 
-### Step 4: Deliver Email Notification
-
-After recieving the data, the marketing automation platform personalizes the customer's email using the provided details, utilizing a preconfigured template. 
 
 ##### HotWax Commerce has ready integration with Listrak, a marketing automation platform. Here's a sample JSON file that is shared with Listrak's API for each shipment:
 ```
