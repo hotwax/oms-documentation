@@ -2,11 +2,11 @@
 
 ## Overview
 
-These guidelines provide detailed steps for integrating the Order Management System (OMS) with Marketing Automation Platforms to enable the automated delivery of 'Ready to Pickup' email notifications to customers. These notifications are triggered when store staff packs the ordered items in a shipment and mark them as ready for pickup using  HotWax Commerce's BOPIS fulfillment app or Fulfillment APIs.
+These guidelines provide detailed steps for integrating the Order Management System (OMS) with Marketing Automation Platforms to enable the automated delivery of 'Ready to Pickup' email notifications to customers. These notifications are triggered when store staff packs the ordered items in a shipment and indicate their readiness for pickup using HotWax Commerce's BOPIS fulfillment app or Fulfillment APIs.
 
 ### Step 1: Mark shipment-Ready for Pickup
 
-When store staff pack the order items and mark them as ready for pickup, the `quickShipEntireShipGroup` API converts order items into a shipment and marks them packed in the OMS.
+When store staff pack the order items and indicate their readiness for pickup, the `quickShipEntireShipGroup` API converts order items into a shipment and marks them packed in the OMS
 
 #### Sample API Request 
 
@@ -14,7 +14,7 @@ When store staff pack the order items and mark them as ready for pickup, the `qu
 {
   "orderId": "10037",
   "setPackedOnly": "Y",
-  "dimensionUomId": "WT_kg",
+  "dimensionUomId": "DM_cm",
   "shipmentBoxTypeId": "YOURPACKNG",
   "weight": "1",
   "weightUomId": "WT_kg",
@@ -25,11 +25,11 @@ When store staff pack the order items and mark them as ready for pickup, the `qu
 | ---------------------- | --------------------------------------------------------------------------------------------| -------- |
 | `orderId`              | The unique identifier of the order.                                                         |    Yes   |
 | `setPackedOnly`        | A flag indicating if the shipment should be packed. Default value is 'Y' if not specified.  |    Yes   |
-| `dimensionUomId`       | The unit of measurement for dimensions (e.g., inches, centimeters).                         |    Yes   |
-| `shipmentBoxTypeId`    | The ID of the shipment box type.                                                            |    Yes   |
-| `weight`               | The weight of the package.                                                                  |    Yes   |
-| `weightUomId`          | The unit of measurement for weight (e.g., pounds, kilograms).                               |    Yes   |
-| `shipGroupSeqId`       | The ID of the ship group sequence.                                                          |    Yes   |
+| `dimensionUomId`       | The unit of measurement for dimensions (e.g., inches, centimeters).                         |     No   |
+| `shipmentBoxTypeId`    | The Id of the shipment box type.                                                            |     No   |
+| `weight`               | The weight of the package.                                                                  |     No   |
+| `weightUomId`          | The unit of measurement for weight (e.g., pounds, kilograms).                               |     No   |
+| `shipGroupSeqId`       | The Id of the ship group sequence.                                                          |    Yes   |
 
 
 #### Sample API Response
@@ -49,7 +49,7 @@ When store staff pack the order items and mark them as ready for pickup, the `qu
 ```
 | Parameter      | Description                                |
 | -------------- | ------------------------------------------ |
-| `shipmentId`   | The ID of the shipment made.               |
+| `shipmentId`   | The Id of the shipment made.               |
 | `_EVENT_MESSAGE_` | The message for the event performed.    |
 
 
@@ -58,6 +58,8 @@ When store staff pack the order items and mark them as ready for pickup, the `qu
 When the shipment status is `packed`, the `sendReadyToPickupItemNotification` chained event condition action (ECA) is triggered to check the order type of the shipment and the configuration for sending ready-for-pickup emails. This configuration determines the system responsible for sending the email and data required to configure email content. 
 
 The email transmission system is identified by the parameter `systemMessageRemoteId`, while the information to configure the email's content is specified by the `templateContentId`. This `templateContentId` enables the OMS (Order Management System) to locate and retrieve the content required for composing the email.
+
+Note: Additionally, this ECA also offers the option to manually trigger the "ready to pickup" email notification. When this ECA is triggered, it internally initiates the email for shipment process. This feature allows users to manually initiate the sending of email notifications to inform recipients that their item is ready for pickup.
 
 #### Configuration details: 
 
@@ -73,10 +75,10 @@ The email transmission system is identified by the parameter `systemMessageRemot
 | -------------------------- | ----------------------------------------------------------------------------------------- | 
 | `ProductStoreEmailSetting` | The email settings in the Order Management System (OMS) for the product store identifier. | 
 | `emailType`                | The type of email to be sent.                                                             |  
-| `productStoreId`           | The ID of the product store.                                                              |  
+| `productStoreId`           | The Id of the product store.                                                              |  
 | `subject`                  | The subject of the email.                                                                 |  
-| `templateContentId`        | The ID of the template content.                                                           |   
-| `systemMessageRemoteId`    | The ID of the system responsible for sending the email.                                   |   
+| `templateContentId`        | The Id of the template content.                                                           |   
+| `systemMessageRemoteId`    | The Id of the system responsible for sending the email.                                   |   
 
 
 ### Step 3: Prepare content for email
@@ -99,11 +101,10 @@ After recieving the data, the marketing automation platform personalizes the cus
     <attribute name="emailType" type="String" mode="IN" optional="true" default-value="PRDS_READY_TO_PICKUP"/>
 </service>
 ```
-
-| Parameter | Description | Required |
-|-----------|-------------|----------|
-| `shipmentId` | The ID of the shipment | Yes |
-| `emailType` | The type of the email | Yes |
+| Parameter    | Description                 | Required |
+| ------------ | --------------------------- | -------- |
+| `shipmentId` | The Id of the shipment.      |    Yes   |
+| `emailType`  | The type of the email.       |    Yes   |
 
 
 ##### HotWax Commerce has ready integration with Listrak, a marketing automation platform. Here's a sample JSON file that is shared with Listrak's API for each shipment:
