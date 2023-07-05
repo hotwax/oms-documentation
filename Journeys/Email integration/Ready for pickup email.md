@@ -25,10 +25,10 @@ When store staff pack the order items and indicate their readiness for pickup, t
 | ---------------------- | --------------------------------------------------------------------------------------------| -------- |
 | `orderId`              | The unique identifier of the order.                                                         |    Yes   |
 | `setPackedOnly`        | A flag indicating if the shipment should be packed. Default value is 'Y' if not specified.  |    Yes   |
-| `dimensionUomId`       | The unit of measurement for dimensions (e.g., inches, centimeters).                         |     No   |
-| `shipmentBoxTypeId`    | The Id of the shipment box type.                                                            |     No   |
-| `weight`               | The weight of the package.                                                                  |     No   |
-| `weightUomId`          | The unit of measurement for weight (e.g., pounds, kilograms).                               |     No   |
+| `dimensionUomId`       | The unit of measurement for dimensions (e.g., inches, centimeters).                         |    Yes   |
+| `shipmentBoxTypeId`    | The Id of the shipment box type.                                                            |    Yes   |
+| `weight`               | The weight of the package.                                                                  |    Yes   |
+| `weightUomId`          | The unit of measurement for weight (e.g., pounds, kilograms).                               |    Yes   |
 | `shipGroupSeqId`       | The Id of the ship group sequence.                                                          |    Yes   |
 
 
