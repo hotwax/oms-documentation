@@ -2,88 +2,73 @@
 
 ## Overview
 
-These guidelines detail the integration process to enable the automated delivery of 'Ready to Pickup' email notifications to customers. These notifications are triggered when store staff pack the items in a shipment and indicate their readiness for pickup using either HotWax Commerce's BOPIS fulfillment app or Fulfillment APIs. 
+These guidelines provide detailed steps for integrating the Order Management System (OMS) with Marketing Automation Platforms to enable the automated delivery of 'Ready to Pickup' email notifications to customers. These notifications are triggered when store staff packs the ordered items in a shipment and mark them as ready for pickup using  HotWax Commerce's BOPIS fulfillment app or Fulfillment APIs.
 
 ### Step 1: Mark shipment-Ready for Pickup
 
-When store staff pack the order items, the `updateShipment` service is triggered to update the order's shipment status to `packed`, indicating its readiness for pickup.
+When store staff pack the order items and mark them as ready for pickup, the `quickShipEntireShipGroup` API converts order items into a shipment and marks them packed in the OMS.
 
-### Service details: 
-```
-<service name="updateShipment" default-entity-name="Shipment" engine="simple" export="true"
-             location="component://hwmapps/minilang/warehouse/WarehouseServices.xml" invoke="updateShipment" auth="true">
-        <description>Update Shipment</description>
-        <permission-service service-name="facilityGenericPermission" main-action="UPDATE"/>
-        <auto-attributes include="pk" mode="INOUT" optional="false"/>
-        <auto-attributes include="nonpk" mode="IN" optional="true">
-            <exclude field-name="shipmentTypeId"/>
-            <exclude field-name="createdDate"/>
-            <exclude field-name="createdByUserLogin"/>
-            <exclude field-name="lastModifiedDate"/>
-            <exclude field-name="lastModifiedByUserLogin"/>
-        </auto-attributes>
-        <attribute name="shipmentTypeId" type="String" mode="INOUT" optional="true"/>
-        <attribute name="eventDate" type="Timestamp" mode="IN" optional="true"/>
-        <attribute name="oldStatusId" type="String" mode="OUT" optional="true"/>
-        <attribute name="oldPrimaryOrderId" type="String" mode="OUT" optional="true"/>
-        <attribute name="oldOriginFacilityId" type="String" mode="OUT" optional="true"/>
-        <attribute name="oldDestinationFacilityId" type="String" mode="OUT" optional="true"/>
-        <attribute name="picklistBinId" type="String" mode="OUT" optional="true"/>
-        <attribute name="oldPrimaryShipGroupSeqId" type="String" mode="OUT" optional="true"/>
-        <override name="shipmentMethodTypeId" type="String" mode="INOUT" optional="true"/>
-</service>
-```
-
-| Parameter                 | Description                                                   |
-| ------------------------- | ------------------------------------------------------------  |
-| `shipmentTypeId`          | The ID of the shipment type.                                  |
-| `eventDate`               | The timestamp when the shipment was updated.                  |
-| `oldStatusId`             | The previous status ID of the shipment.                       |
-| `oldPrimaryOrderId`       | The previous primary order ID of the shipment.                |
-| `oldOriginFacilityId`     | The previous origin facility ID of the shipment.              |
-| `oldDestinationFacilityId`| The previous destination facility ID of the shipment.         |
-| `picklistBinId`           | The ID of the picklist bin associated with the shipment.      |
-| `oldPrimaryShipGroupSeqId`| The previous primary ship group sequence ID of the shipment.  |
-| `shipmentMethodTypeId`    | The ID of the shipment method type.                           |
-
-### Step 2: Trigger `sendReadyToPickupItemNotification` service
-
-After updating the shipment to packed status, the `updateShipment` service triggers the `sendReadyToPickupItemNotification` service for the shipment.
-
-#### Chained even condition details:
-```
-<eca service="updateShipment" event="global-commit-post-run" run-on-error="false">
-    <condition-field field-name="statusId" operator="not-equals" to-field-name="oldStatusId"/>
-    <condition field-name="statusId" operator="equals" value="SHIPMENT_PACKED"/>
-    <condition field-name="shipmentTypeId" operator="equals" value="SALES_SHIPMENT"/>
-    <action service="sendReadyToPickupItemNotification" mode="async" persist="true"/>
-</eca>
-```
-
-| Parameter | Description | Required |
-|-----------|-------------|----------|
-| `statusId` | The status ID of the shipment. To send ready for pickup email, shipment must be packed | Yes |
-| `shipmentTypeID` | The ID of the shipment type | Yes |
-
-### Step 3: Validates Email Notification Configuration
-
-The `sendReadyToPickupItemNotification` service checks the configuration for sending ready-for-pickup emails. If enabled, it determines the responsible system for sending the email.
-
-If the marketing automation platform is responsible, the OMS shares the shipment details in JSON format with the marketing automation platform. The platform then uses the details to personalize the customer's email using the preconfigured template.
-
-If the OMS is responsible, it directly uses the preconfigured email template within the OMS.
-
-Note: The data for the preconfigured email is defined by templateContentId.
-
-#### Service details: 
+#### Sample API Request 
 
 ```
-<ProductStoreEmailSetting emailType="PRDS_READY_TO_PICKUP" productStoreId="STORE" subject="Ready For Pickup" templateContentId="READY_FOR_PICKUP"/>
+{
+  "orderId": "10037",
+  "setPackedOnly": "Y",
+  "dimensionUomId": "WT_kg",
+  "shipmentBoxTypeId": "YOURPACKNG",
+  "weight": "1",
+  "weightUomId": "WT_kg",
+  "shipGroupSeqId": "00001"
+}
 ```
+| Parameter              | Description                                                                                 | Required |
+| ---------------------- | --------------------------------------------------------------------------------------------| -------- |
+| `orderId`              | The unique identifier of the order.                                                         |    Yes   |
+| `setPackedOnly`        | A flag indicating if the shipment should be packed. Default value is 'Y' if not specified.  |    Yes   |
+| `dimensionUomId`       | The unit of measurement for dimensions (e.g., inches, centimeters).                         |    Yes   |
+| `shipmentBoxTypeId`    | The ID of the shipment box type.                                                            |    Yes   |
+| `weight`               | The weight of the package.                                                                  |    Yes   |
+| `weightUomId`          | The unit of measurement for weight (e.g., pounds, kilograms).                               |    Yes   |
+| `shipGroupSeqId`       | The ID of the ship group sequence.                                                          |    Yes   |
 
-### Step 4: Deliver Email Notification
 
-The `sendReadyToPickupItemNotification` service checks the `templateContentId` to prepare data and sends the shipment details to the marketing integration platform.
+#### Sample API Response
+
+```
+{
+  "orderId": "10037",
+  "setPackedOnly": "Y",
+  "weight": "1",
+  "shipmentBoxTypeId": "YOURPACKNG",
+  "shipGroupSeqId": "00001",
+  "shipmentId": "10140",
+  "dimensionUomId": "WT_kg",
+  "weightUomId": "WT_kg",
+  "_EVENT_MESSAGE_": "Congratulations! Shipment #10140 is ready for pickup"
+}
+```
+| Parameter      | Description                                |
+| -------------- | ------------------------------------------ |
+| `shipmentId`   | The ID of the shipment made.               |
+| `_EVENT_MESSAGE_` | The message for the event performed.    |
+
+
+### Step 2: Trigger `sendReadyToPickupItemNotification` chained event condition action
+
+When the shipment status is `packed`, the `sendReadyToPickupItemNotification` chained event condition action (ECA) is triggered to check the configuration for sending ready-for-pickup emails. This configuration determines the system responsible for sending the email and data required to configure email content. 
+
+#### Configuration details: 
+
+```
+<ProductStoreEmailSetting emailType="PRDS_READY_TO_PICKUP" productStoreId="STORE" subject="Ready For Pickup" templateContentId="READY_FOR_PICKUP", systemMessageRemoteId= NN_LISTRAK_CONFIG>
+```
+The email transmission system is identified by the parameter `systemMessageRemoteId`, while the information to configure the email's content is specified by the `templateContentId`. This `templateContentId` enables the OMS (Order Management System) to locate and retrieve the content required for composing the email.
+
+### Step 3: Prepare email content
+
+When the marketing automation platform handles email transmission, the OMS shares the required information in JSON format, specified by the `templateContentId`, to the platform. 
+
+However, if the OMS is responsible for sending the email, it incorporates the data into a preconfigured email template within its system.
 
 #### Service Details:
 ```
@@ -100,8 +85,11 @@ The `sendReadyToPickupItemNotification` service checks the `templateContentId` t
 | `shipmentId` | The ID of the shipment | Yes |
 | `emailType` | The type of the email | Yes |
 
+### Step 4: Deliver Email Notification
 
-##### HotWax Commerce has ready integration with Listrak, a marketing automation platform. Here's a sample JSON file that is shared with Listrak's API for each order:
+After recieving the data, the marketing automation platform personalizes the customer's email using the provided details, utilizing a preconfigured template. 
+
+##### HotWax Commerce has ready integration with Listrak, a marketing automation platform. Here's a sample JSON file that is shared with Listrak's API for each shipment:
 ```
 const data = {
   "emailAddress": "john.doe@example.co",
@@ -164,9 +152,6 @@ const data = {
     }
   ]
 };
-
-const jsonString = JSON.stringify(data, null, 2);
-console.log(jsonString);
 ```
 
 ### By following these steps, you can send Ready-for-pickup email notifications from the OMS to the marketing automation platform.
