@@ -6,7 +6,7 @@ These guidelines provide detailed steps for integrating the Order Management Sys
 
 ### Step 1: Mark shipment-Ready for Pickup
 
-When store staff pack the order items and indicate their readiness for pickup, the `quickShipEntireShipGroup` API converts the order items into a shipment and marks them packed in the OMS
+When store staff pack the order items and indicate their readiness for pickup, the `quickShipEntireShipGroup` API creates a shipment from the selected shipgroup and moves it to the "Packed" status.
 
 #### Sample API Request 
 
