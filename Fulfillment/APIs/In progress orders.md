@@ -37,6 +37,7 @@ Example: https://demo-oms.hotwax.io/api/solr-query
 | Parameter       | Description                                      | Required (Y/N) |
 |-----------------|--------------------------------------------------|----------------|
 | `rows`          | The number of groups                            | No           |
+| `sort`          | The order of search results                     | No           |                                                    
 | `group`         | Filter to group orders                          | Yes          |
 | `group.field`   | The field to be grouped                         | Yes          |
 | `group.limit`   | The maximum number of items allowed in the group| Yes          |
