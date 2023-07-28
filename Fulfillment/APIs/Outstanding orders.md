@@ -1,6 +1,6 @@
 # Outstanding Orders API
 
-Fetches a comprehensive list of all orders that are brokered at a facility for fulfillment. To get the Outstanding orders, you will need to call the /solr-query endpoint with the POST method. 
+Fetches a comprehensive list of all orders that are brokered at a facility for fulfillment. To get the outstanding orders, you will need to call the /solr-query endpoint with the POST method. 
 
 ## Request
 
