@@ -24,7 +24,7 @@ When store staff pack the order items and indicate their readiness for pickup, t
 | Parameter              | Description                                                                                 | Required |
 | ---------------------- | --------------------------------------------------------------------------------------------| -------- |
 | `orderId`              | The unique identifier of the order.                                                         |    Yes   |
-| `setPackedOnly`        | A flag indicating if the shipment should be packed. Default value is 'Y' if not specified.  |    Yes   |
+| `setPackedOnly`        | A flag indicating if the shipment should only be packed. If the customer is going to pickup their order at the fulfillment location, then this should be enabled to prevent the order from being marked as shipped. Default value is 'Y' if not specified.  |    Yes   |
 | `dimensionUomId`       | The unit of measurement for dimensions (e.g., inches, centimeters).                         |    Yes   |
 | `shipmentBoxTypeId`    | The Id of the shipment box type.                                                            |    Yes   |
 | `weight`               | The weight of the package.                                                                  |    Yes   |
