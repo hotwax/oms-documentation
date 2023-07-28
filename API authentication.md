@@ -2,7 +2,7 @@
 
 ## Overview 
 
-Verfies the identity of the user. To make transactions on HotWax’s platform secure, all apps connecting with HotWax API might need to authenticate when making API requests.
+Verfies the identity of the user. To make transactions on HotWax’s platform secure, all apps connecting with HotWax API need authentication when making API requests.
 
 ## Authentication Method Used
 
