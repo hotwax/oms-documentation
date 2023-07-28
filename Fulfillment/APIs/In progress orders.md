@@ -32,24 +32,34 @@ Example: https://demo-oms.hotwax.io/api/solr-query
   }
 }
 ```
+##### Query Parameters
 
-| Parameter                | Description                                                                                                   | Required (Y/N) |
-|--------------------------|---------------------------------------------------------------------------------------------------------------|----------------|
-| `rows`                   | The number of groups.                                                                                        | No.            |
-| `group`                  | Filter to group orders.                                                                                      | Yes.           |
-| `group.field`            | The field to be grouped.                                                                                      | Yes.           |
-| `group.limit`            | The maximum number of items allowed in the group.                                                             | Yes.           |
-| `group.ngroups`          | The number of groups that have matched the query in the results. The default value is false.                   | No.            |
-| `defType`                | Selects the query parser to be used to process the query.                                                    | No.            |
-| `q.op`                   | Specifies the default operator for query expressions, overriding the default operator specified in the Schema. Possible values are "AND" or "OR".                                                                                       | No.            |
-| `qf`                     | The query fields.                                                                                             | No.            |
-| `docType`                | Reference index.                                                                                              | No.            |
-| `start`                  | Index page number.                                                                                            | No.            |
-| `orderTypeId`            | The ID of the order type in HotWax.                                                                           | Yes.           |
-| `picklistItemStatusID`   | The status of the order if picked or not. Default value: N.                                                   | No.            |
-| `shipmentMethodTypeId`   | The ID of the shipment method type which needs to be neglected.                                               | No.            |
-| `fulfillmentStatus`      | The status of fulfillment which needs to be neglected.                                                        | No.            |
-| `facilityId`             | The ID of the facility where fulfillment is taking place.                                                  | No.            |
+| Parameter       | Description                                      | Required (Y/N) |
+|-----------------|--------------------------------------------------|----------------|
+| `rows`          | The number of groups                            | No           |
+| `group`         | Filter to group orders                          | Yes          |
+| `group.field`   | The field to be grouped                         | Yes          |
+| `group.limit`   | The maximum number of items allowed in the group| Yes          |
+| `group.ngroups` | The number of groups that have matched the query in the results. The default value is false | No |
+| `defType`       | Selects the query parser to be used to process the query | No |
+| `q.op`          | Specifies the default operator for query expressions, overriding the default operator specified in the Schema. Possible values are "AND" or "OR" | No |
+| `qf`            | The query fields                                 | No |
+| `docType`       | Reference index                                  | No |
+| `start`         | Index page number                                | No |
+
+##### API Parameters
+
+| Parameter       | Description                                      | Required (Y/N) |
+|-----------------|--------------------------------------------------|----------------|
+| `orderTypeId`   | The ID of the order type in HotWax               | Yes |
+| `picklistItemStatusID` | The status of the order if picked or not. Default value: N | No |
+| `shipmentMethodTypeId` | The ID of the shipment method type which needs to be neglected | No |
+| `fulfillmentStatus` | The status of fulfillment which needs to be neglected | No |
+| `facilityId`    | The ID of the facility where fulfillment is taking place | No |
+
+
+
+
 
 ## Response
 
