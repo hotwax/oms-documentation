@@ -27,7 +27,7 @@ To access this endpoint, you need to include the authorization token in the requ
 
 `Authorization: Bearer <access_token>`
 
-To know more about Bearer token authentication, read [this](https://github.com/Dhiraj1405/oms-documentation/blob/Authentication-flow/API%20authentication.md)
+To learn more about Bearer token authentication, read [this](https://github.com/Dhiraj1405/oms-documentation/blob/Authentication-flow/API%20authentication.md)
 
 ### Body
 ```
