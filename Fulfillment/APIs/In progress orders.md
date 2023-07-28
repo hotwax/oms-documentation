@@ -54,7 +54,7 @@ Example: https://demo-oms.hotwax.io/api/solr-query
 |-----------------|--------------------------------------------------|----------------|
 | `orderTypeId`   | The ID of the order type in HotWax               | Yes |
 | `picklistItemStatusID` | The status of the order if picked or not. Default value: N | No |
-| `shipmentMethodTypeId` | The ID of the shipment method type which needs to be neglected | No |
+| `shipmentMethodTypeId` | The ID of the shipment method type | No |
 | `fulfillmentStatus` | The status of fulfillment which needs to be neglected | No |
 | `facilityId`    | The ID of the facility where fulfillment is taking place | No |
 
