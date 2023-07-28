@@ -1,6 +1,6 @@
 # Ready to ship order items
 
-Fetches a comprehensive list of all orders items which are picked, packed and ready to ship to customers. To get the Ready to ship orders, you will need to call the /solr-query endpoint with the POST method.
+Fetches a comprehensive list of all orders items which are picked, packed and ready to ship to customers. To get ready to ship orders, you will need to call the /solr-query endpoint with the POST method.
 
 ## Request
 
