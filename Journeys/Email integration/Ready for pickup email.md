@@ -53,7 +53,7 @@ When store staff pack the order items and indicate their readiness for pickup, t
 | `_EVENT_MESSAGE_` | The message for the event performed.    |
 
 
-### Step 2: Trigger `sendReadyToPickupItemNotification` chained event condition action
+### Step 2: Trigger `sendReadyToPickupItemNotification` chained event condition action service
 
 When the shipment status is `packed`, the `sendReadyToPickupItemNotification` chained event condition action (ECA) is triggered to check the order type of the shipment and the configuration for sending ready-for-pickup emails.
 
