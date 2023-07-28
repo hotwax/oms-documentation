@@ -19,3 +19,5 @@ Sample endpoint: `https://<host_name>.hotwax.io/<api_name>/login`
 1. `updateInventory`
 
 Note: Before using the APIs requiring an authentication token, the user must ask for a bearer token from HotWax.
+
+To learn more about Bearer token authentication, watch this [video](https://youtu.be/n-IFlWGX1t4)
