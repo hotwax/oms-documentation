@@ -28,7 +28,12 @@ Example: https://demo-oms.hotwax.io/api/solr-query
       "start": 0
     },
     "query": "(*:*)",
-    "filter": "docType: OISGIR AND picklistItemStatusId: PICKITEM_PENDING AND -fulfillmentStatus: Rejected AND -shipmentMethodTypeId: STOREPICKUP AND facilityId: Store_1 AND productStoreId: STORE"
+    "filter": "docType: OISGIR AND " +
+              "picklistItemStatusId: PICKITEM_PENDING AND " +
+              "-fulfillmentStatus: Rejected AND " +
+              "-shipmentMethodTypeId: STOREPICKUP AND " +
+              "facilityId: Store_1 AND " +
+              "productStoreId: STORE"
   }
 }
 ```
