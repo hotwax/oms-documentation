@@ -1,6 +1,6 @@
 # In progress Orders API
 
-Fetches a comprehensive list of all orders which are in process of pickup for fulfillment. To get the In progress orders, you will need to call the /solr-query endpoint with the POST method.
+Fetches a comprehensive list of all orders which are in process of pickup for fulfillment. To get in progress orders, you will need to call the /solr-query endpoint with the POST method.
 
 ## Request
 
