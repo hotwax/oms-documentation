@@ -8,7 +8,7 @@ The FileSaver package is a software library designed to save files in web applic
 
 ### Case 1: Exporting packed orders CSV from the Fulfillment App
 
-When retailers generate their shipping labels outside of HotWax, they need to export all packed orders once and share it with carrier partner to generate shipping labels and give tracking codes. The FileSaver package helps the user quickly save the file in their systems by giving it their desired name.
+When retailers generate their shipping labels outside of HotWax, they need to export all packed orders once and share it with carrier partner to generate shipping labels and give tracking codes. The FileSaver package helps the user quickly save the file in their systems with their desired name.
 
 ## Usage
 
