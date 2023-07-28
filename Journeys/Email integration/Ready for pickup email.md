@@ -57,7 +57,7 @@ When store staff pack the order items and indicate their readiness for pickup, t
 
 When the shipment status is `packed`, the `sendReadyToPickupItemNotification` chained event condition action (ECA) is triggered to check the order type of the shipment and the configuration for sending ready-for-pickup emails.
 
-The order type filters `Store pickup` and `Ship to store` orders to send the email. The configuration determines the system responsible for sending the email and data required to configure email content. 
+The chained service works for both `Store pickup` and `Ship to store` shipments. Emails are triggered when `Store pickup` shipments are moved to packed status and `Ship to store `shipments are moved to "scheduled" status. The system responsible for sending the email and order details is configured in the following Product Store setting. 
 
 Note: Additionally, this ECA also offers the option to manually trigger the "ready to pickup" email notification. When this ECA is triggered, it internally initiates the email for shipment process. This feature allows users to manually initiate the sending of email notifications to inform recipients that their item is ready for pickup.
 
