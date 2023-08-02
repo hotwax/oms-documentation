@@ -35,7 +35,7 @@ Example: https://demo-oms.hotwax.io/api/solr-query
       "-shipmentMethodTypeId: STOREPICKUP",
       "facilityId: Store_1",
       "productStoreId: STORE"
-    ]
+    ],
   }
 }
 ```
