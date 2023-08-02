@@ -1,4 +1,4 @@
-# Fulfilled Order Items
+# Fulfilled Order Items Feed
 
 Contains the order items that have been fulfilled from a particular facility. External systems that did not fulfill those orders but require an update of the inventory delta to maintain accurate inventory levels can use this feed to ensure their inventory accuracy. It's important to understand that this feed only contains orders that have been successfully fulfilled, orders that have only been reserved but not shipped are not included in this feed because they may still be rejected and re-brokered to another facility for fulfillment.
 

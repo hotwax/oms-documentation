@@ -20,7 +20,8 @@ Fetches the postal code for a specific location based on its latitude and longit
 
 #### Header
 Content-Type:​ application/json
-  
+
+#### Body
 ```  
 {
   "json": {
@@ -106,7 +107,8 @@ Fetches the latitude longitude for a specific postal code. To look up the latitu
 
 #### Header
 Content-Type:​ application/json
-  
+ 
+#### Body
 ```
 {
   "json": {
@@ -179,7 +181,9 @@ Fetches the latitude longitude for a partial postal code. This API fetches all t
 
 #### Header
 Content-Type:​ application/json
-  
+
+#### Body
+
 ```
 {
   "json": {
