@@ -6,15 +6,13 @@ Stores the default Shopify store selected by the customer in their Shopify store
 
 ### End Point
 
-| https://\<oms\>/api/setShopifyCustomerDefaultStore |
-| --- |
+`https://\<oms\>/api/setShopifyCustomerDefaultStore`
 
 Example: https://demo-oms.hotwax.io/api/setShopifyCustomerDefaultStore
 
 ### Header
 
-| Content-Type:​ application/json |
-| --- |
+Content-Type:​ application/json
 
 ### Body:
 ```
@@ -41,13 +39,11 @@ Example :
 
 ### Status Code
 
-| HTTP/1.1 200 OK |
-| --- |
+HTTP/1.1 200 OK
 
 ### Headers
 
-| Content-Type: application/json |
-| --- |
+Content-Type: application/json
 
 ### Body:
 ```
