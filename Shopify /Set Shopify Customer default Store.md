@@ -1,22 +1,22 @@
-## **Set Shopify Customer Default Store API**
+# **Set Shopify Customer Default Store API**
 
 Stores the default Shopify store selected by the customer in their Shopify store. To set the Shopify store as default store you will need to call the endpoint with the `/POST` method.
 
-### **Request**
+## **Request**
 
-#### End Point
+### End Point
 
 | https://\<oms\>/api/setShopifyCustomerDefaultStore |
 | --- |
 
 Example: https://demo-oms.hotwax.io/api/setShopifyCustomerDefaultStore
 
-#### Header
+### Header
 
 | Content-Type:​ application/json |
 | --- |
 
-Body:
+### Body:
 ```
 {     	
   "customerId": "<customerID>",     
@@ -37,19 +37,19 @@ Example :
 
 ```
 
-### **Response**
+## **Response**
 
-#### Status Code
+### Status Code
 
 | HTTP/1.1 200 OK |
 | --- |
 
-#### Headers
+### Headers
 
 | Content-Type: application/json |
 | --- |
 
-Body:
+### Body:
 ```
 {     
   "result": "success",     
