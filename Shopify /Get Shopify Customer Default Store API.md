@@ -1,6 +1,6 @@
 ## **Get Shopify Customer Default Store API**
 
-Fetches the default store selected by the customer during the initial Shopify store account setup. To fetch the customer's default Shopify store ID you will need to call the endpoint with the /GET method.
+Fetches the default store selected by the customer during the initial Shopify store account setup. To fetch the customer's default Shopify store ID you will need to call the endpoint with the `/GET` method.
 
 ### **Request**
 
