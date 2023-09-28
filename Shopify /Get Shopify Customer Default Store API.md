@@ -1,16 +1,16 @@
-## **Get Shopify Customer Default Store API**
+# **Get Shopify Customer Default Store API**
 
 Fetches the default store selected by the customer during the initial Shopify store account setup. To fetch the customer's default Shopify store ID you will need to call the endpoint with the `/GET` method.
 
-### **Request**
+## **Request**
 
-#### End Point
+### End Point
 
 `https://\<oms\>/api/getShopifyCustomerDefaultStore?customerId=\<customerId\>&shopifyShopId=\<shopId\>`
 
 Example: https://demo-oms.hotwax.io/api/getShopifyCustomerDefaultStore?customerId=637245368996&shopifyShopId=672
 
-#### Header
+### Header
 
 | Content-Type:​ application/json |
 | --- |
@@ -26,17 +26,19 @@ Example: https://demo-oms.hotwax.io/api/getShopifyCustomerDefaultStore?customerI
 ###
 
 
-### **Response**
+## **Response**
 
-#### Status Code
+### Status Code
 
 | HTTP/1.1 200 OK |
 | --- |
 
-#### Headers
+### Headers
 
 | **Content-Type: application/json** |
 | --- |
+
+### Body
 
 ```
 {
@@ -64,6 +66,7 @@ An error may occur in case the data such as - Customer ID or Shopify ID is not f
 
 **Sample Code Snippet -**
 
+### Body
 ```
 {
           "customer": {
