@@ -12,8 +12,7 @@ Example: https://demo-oms.hotwax.io/api/getShopifyCustomerDefaultStore?customerI
 
 ### Header
 
-| Content-Type:​ application/json |
-| --- |
+Content-Type:​ application/json
 
 | **Parameters** | **Description** | **Required (Y/N)** |
 | --- | --- | --- |
@@ -30,13 +29,11 @@ Example: https://demo-oms.hotwax.io/api/getShopifyCustomerDefaultStore?customerI
 
 ### Status Code
 
-| HTTP/1.1 200 OK |
-| --- |
+HTTP/1.1 200 OK
 
 ### Headers
 
-| **Content-Type: application/json** |
-| --- |
+**Content-Type: application/json**
 
 ### Body
 
