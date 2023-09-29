@@ -1,6 +1,6 @@
 # Label and packing slip API
 
-Downloads a shipping label in PDF format for the shipment. To download the shipping label PDF, you will need to call the /LabelAndPackingSlip.pdf endpoint with the POST method.
+Downloads a shipping label in PDF format for the shipment. To download the shipping label PDF, you will need to call the /LabelAndPackingSlip.pdf endpoint with the `/POST` method.
 
 ## Request
 
