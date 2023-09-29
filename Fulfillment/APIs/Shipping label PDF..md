@@ -1,6 +1,6 @@
 # Shipping label PDF API
 
-Downloads a shipping label in PDF format for the shipment. To download the shipping label PDF, you will need to call the /ShippingLabel.pdf endpoint with the POST method.
+Downloads a shipping label in PDF format for the shipment. To download the shipping label PDF, you will need to call the /ShippingLabel.pdf endpoint with the `/POST` method.
 
 ## Request
 
