@@ -1,6 +1,6 @@
 # Retry shipping label PDF API
 
-Redownlaods shipping label in PDF format for the completed shipment. To redownload the shipping label PDF, you will need to call the /retryShippingLabel endpoint with the GET method.
+Redownlaods shipping label in PDF format for the completed shipment. To redownload the shipping label PDF, you will need to call the /retryShippingLabel endpoint with the `/GET` method.
 
 ## Request
 
