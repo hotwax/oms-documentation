@@ -1,19 +1,19 @@
 # Store Lookup API
 
-The API allows to look up the stores accepting BOPIS orders near the customer’s location using the POST method.
+The API allows to look up the stores accepting BOPIS orders near the customer’s location using the `/POST` method.
 
 ## Request
 
 
-### Endpoint
+#### Endpoint
 `https://< host >/api/storeLookup`
 
 Example: Host: https://demo-oms.hotwax.io/api/storeLookup
 
-### Header
+#### Header
 Content-Type: application/json
 
-### Body 
+#### Body 
 ```
 {
   "viewSize": 40,
@@ -26,7 +26,7 @@ Content-Type: application/json
 }
 ```
 
-### Parameters
+#### Parameters
 
 | Parameter     | Description                                               | Required (Y/N) |
 |---------------|-----------------------------------------------------------|----------|
@@ -40,13 +40,13 @@ Content-Type: application/json
 
 ## Response
 
-### Status Code
+#### Status Code
 HTTP/1.1 200 OK
 
-### Headers
+#### Headers
 Content-Type: application/json
 
-### Body
+#### Body
 
 ```
 "response": 
@@ -125,8 +125,8 @@ Content-Type: application/json
 
 <br></br>
 
-## Note: 
-### Filters
+### Note: 
+#### Filters
 
 Filter is a parameter that allows you to narrow down the results of a query or search to only include items that meet specific criteria. For storeLookup API, users can filter results for each parameter given in the response:
 
@@ -146,7 +146,7 @@ Filter is a parameter that allows you to narrow down the results of a query or s
 | `latlon`                | The latitude and longitude of the facility          |
 
 
-### Valid values of storeType
+#### Valid values of storeType
 
 <ul>
  <li>RETAIL</li>
