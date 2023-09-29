@@ -11,7 +11,7 @@ The Post Code Lookup API provides developers with the ability to fetch informati
 
 ## Fetch Postal Code for Latitude Longitude in a Given Range
 
-Fetches the postal code for a specific location based on its latitude and longitude. The API can also return postal codes for locations within a specified distance range from the provided latitude and longitude. To get the postal code, you will need to call /postcodeLookup endpoint with the POST method. 
+Fetches the postal code for a specific location based on its latitude and longitude. The API can also return postal codes for locations within a specified distance range from the provided latitude and longitude. To get the postal code, you will need to call /postcodeLookup endpoint with the `/POST` method. 
 
 ### Request 
 
@@ -172,7 +172,7 @@ Content-Type: application/json
 
 ## Fetch latitude longitude for a partial postal code
 
-Fetches the latitude longitude for a partial postal code. This API fetches all the latitude and longitude matching the partial postal code. To look up the latitude longitude for a partial postal code you will need to call the endpoint with the POST method.
+Fetches the latitude longitude for a partial postal code. This API fetches all the latitude and longitude matching the partial postal code. To look up the latitude longitude for a partial postal code you will need to call the endpoint with the `/POST` method.
 
 ### Request 
 
