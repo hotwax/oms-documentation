@@ -1,6 +1,6 @@
 # Upload and Import file API
 
-Imports shipped order details with the tracking code. To import file, you will need to call the /uploadAndImportfile endpoint with the POST method. 
+Imports shipped order details with the tracking code. To import file, you will need to call the /uploadAndImportfile endpoint with the `/POST` method. 
 
 ## Request
 
