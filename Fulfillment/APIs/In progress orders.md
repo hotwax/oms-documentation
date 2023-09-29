@@ -4,13 +4,13 @@ Fetches a comprehensive list of all orders which are in process of pickup for fu
 
 ## Request
 
-#### Endpoint
+### Endpoint
 
 `https://<host>/api/solr-query`
 
 Example: https://demo-oms.hotwax.io/api/solr-query
 
-#### Header
+### Header
 
 #### Body
 
@@ -71,7 +71,7 @@ Example: https://demo-oms.hotwax.io/api/solr-query
 
 ## Response
 
-#### Header
+### Header
 
 #### Body
 
