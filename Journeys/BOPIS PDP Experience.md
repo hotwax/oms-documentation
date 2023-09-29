@@ -1,8 +1,8 @@
 # Getting started with BOPIS PDP experience
 
-### HotWax's BOPIS PDP experience allows customers to browse all available pickup stores (facilities) for their desired products on the Shopify product detail page (PDP)
+HotWax's BOPIS PDP experience allows customers to browse all available pickup stores (facilities) for their desired products on the Shopify product detail page (PDP)
 
-## To integrate this feature, follow these steps:
+### **To integrate this feature, follow these steps:**
 
 ### Step 1: Obtain the customer's latitude and longitude
 
@@ -16,9 +16,9 @@ To show available pickup facilities near the customer, the latitude and longitud
 
 #### Sample: 
 
-Method: `POST`
+Method: `/POST`
 
-##### Request
+## Request
 ```
 {
   "json": {
@@ -27,7 +27,7 @@ Method: `POST`
 }
 ```
 
-##### Response
+## Response
 ```
 {
   "responseHeader": {
@@ -63,9 +63,9 @@ Note: The distance parameter is configurable to narrow down the search results. 
 
 #### Sample: 
 
-Method: `POST`
+Method: `/POST`
 
-##### Request
+## Request
 ```
 {
   "viewSize": 40,
@@ -76,7 +76,7 @@ Method: `POST`
 
 ```
 
-##### Response
+## Response
 ```
 {
   "responseHeader": {
@@ -171,14 +171,14 @@ Note: If a facility has 0 inventory for the product, you can still display it fo
 
 #### Sample: 
 
-Method: `GET`
+Method: `/GET`
 
-##### Request
+## Request
 ```
 https://dev-apps.hotwax.io/api/checkInventory?productId=10249&facilityId=STORE_9&facilityId=STORE_20&facilityId=STORE_15
 ```
 
-##### Response
+## Response
 ```
 {
 "count": "1",
@@ -210,7 +210,7 @@ In case the customer's location is not available, you can display all the availa
 
 #### Sample: 
 
-##### Request
+## Request
 
 ```
 {
