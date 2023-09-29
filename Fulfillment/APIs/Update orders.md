@@ -1,6 +1,6 @@
 # Update Order API
 
-Updates orders that are currently in progress and have not yet been shipped, to update the orders, you will need to call the `updateOrder` endpoint with the POST method. There are two main reasons for updating orders: changing the shipment box and rejecting specific order items. 
+Updates orders that are currently in progress and have not yet been shipped, to update the orders, you will need to call the `updateOrder` endpoint with the `/POST` method. There are two main reasons for updating orders: changing the shipment box and rejecting specific order items. 
 
 ## Request
 
@@ -14,7 +14,7 @@ Example: https://demo-oms.hotwax.io/api/updateOrder
 
 #### For Order Item rejection: 
 
-##### Body
+#### Body
 
 ```
 facilityId: <facilityId>,
@@ -42,7 +42,7 @@ rej_rejectionReason_0: item.rejectReason
 
 #### For Shipment Package Change: 
 
-##### Body
+#### Body
 
 ```
 facilityId: <facilityId>,
@@ -73,7 +73,7 @@ rtp_newShipmentId_1: shipmentPackage.shipmentId
 
 #### For Order Item rejection: 
 
-##### Body
+#### Body
 
 ```
 facilityId: <facilityId>,
@@ -89,7 +89,7 @@ _EVENT_MESSAGE_: "Order updated successfully"
 
 #### For Shipment Package Change: 
 
-##### Body
+#### Body
 
 ```
 facilityId: <facilityId>,
