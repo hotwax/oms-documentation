@@ -1,16 +1,16 @@
 # Create picklist API
 
-Creates a picklist of the order items to be picked up. To create a picklist, you will need to call the /createPicklist endpoint with the POST method. 
+Creates a picklist of the order items to be picked up. To create a picklist, you will need to call the /createPicklist endpoint with the `/POST` method. 
 
 ## Request
 
-### Endpoint
+#### Endpoint
 
 `https://<host>/api/createPicklist`
 
 Example: https://demo-oms.hotwax.io/api/createPicklist
 
-### Header
+#### Header
 
 #### Body
 
@@ -51,7 +51,7 @@ Note: Pass the data in form format.
 
 ## Response
 
-### Header
+#### Header
 
 #### Body
 
