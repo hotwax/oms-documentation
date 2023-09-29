@@ -1,16 +1,16 @@
 # Add shipment box API
 
-Adds a shipment box for the order for fulfillment. To add a shipment box, you will need to call the /addShipmentPackage endpoint with the POST method. 
+Adds a shipment box for the order for fulfillment. To add a shipment box, you will need to call the /addShipmentPackage endpoint with the `/POST` method. 
 
 ## Request
 
-### Endpoint
+#### Endpoint
 
 `https://<host>/api/addShipmentPackage`
 
 Example: https://demo-oms.hotwax.io/api/addShipmentPackage
 
-### Header
+#### Header
 
 #### Body
 
@@ -29,7 +29,7 @@ Example: https://demo-oms.hotwax.io/api/addShipmentPackage
 
 ## Response
 
-### Header
+#### Header
 
 #### Body
 
