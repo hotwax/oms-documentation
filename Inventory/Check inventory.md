@@ -1,6 +1,6 @@
 # Check Inventory API
 
-Get the stock details of the product on the specific locations. To get the stock details, you will need to call the `/checkInventory` endpoint with the GET method. 
+Get the stock details of the product on the specific locations. To get the stock details, you will need to call the `/checkInventory` endpoint with the `/GET` method. 
 
 ## Request
 
@@ -13,7 +13,7 @@ Example: https://demo-oms.hotwax.io/api/checkInventory
 Content-Type: application/json
 
 
-### Body
+#### Body
 ```
 {
   "filters": {
@@ -41,7 +41,7 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 
-### Body
+#### Body
   
 ```
 {
