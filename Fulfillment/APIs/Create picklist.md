@@ -4,13 +4,13 @@ Creates a picklist of the order items to be picked up. To create a picklist, you
 
 ## Request
 
-#### Endpoint
+### Endpoint
 
 `https://<host>/api/createPicklist`
 
 Example: https://demo-oms.hotwax.io/api/createPicklist
 
-#### Header
+### Header
 
 #### Body
 
@@ -51,7 +51,7 @@ Note: Pass the data in form format.
 
 ## Response
 
-#### Header
+### Header
 
 #### Body
 
