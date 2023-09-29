@@ -1,6 +1,6 @@
 # Update Inventory API
 
-Updates the inventory of products in HotWax by logging a variance of the inputted amount. To update inventory you will need to call the endpoint with the POST method.
+Updates the inventory of products in HotWax by logging a variance of the inputted amount. To update inventory you will need to call the endpoint with the `/POST` method.
 
 Example: 
 
@@ -29,7 +29,7 @@ To access this endpoint, you need to include the authorization token in the requ
 
 To learn more about Bearer token authentication, read this [document](https://github.com/hotwax/oms-documentation/blob/oms1.0/API%20authentication.md)
 
-### Body
+#### Body
 ```
 {
   {
@@ -89,7 +89,7 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 
-### Body
+#### Body
   
 ```
 {
