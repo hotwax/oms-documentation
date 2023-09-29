@@ -1,16 +1,16 @@
 # Outstanding Orders API
 
-Fetches a comprehensive list of all orders that are brokered at a facility for fulfillment. To get the outstanding orders, you will need to call the /solr-query endpoint with the POST method. 
+Fetches a comprehensive list of all orders that are brokered at a facility for fulfillment. To get the outstanding orders, you will need to call the /solr-query endpoint with the `/POST` method. 
 
 ## Request
 
-### Endpoint
+#### Endpoint
 
 `https://<host>/api/solr-query`
 
 Example: https://demo-oms.hotwax.io/api/solr-query
 
-### Header
+#### Header
 
 #### Body
 
@@ -62,7 +62,7 @@ Example: https://demo-oms.hotwax.io/api/solr-query
 
 ## Response
 
-### Header
+#### Header
 
 #### Body
 
