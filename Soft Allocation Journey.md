@@ -92,18 +92,18 @@ Utilize the `checkCartInventory` API to determine same-day delivery eligibility 
 {
   "facilityId": "646",
   "distance": 15,
-  "cors.request.origin": "https://originalpenguin-dev.myshopify.com",
-  "shopifyShopId": "10224533555",
+  "cors.request.origin": "<url of the Shopify store>",
+  "shopifyShopId": "20224533555",
   "filters": [
     "sameday_pref: true",
     "docType: STORE",
-    "shopifyShop_id:10224533555"
+    "shopifyShop_id:20224533555"
   ],
   "point": "25.786909, -80.361253",
   "cors.request.type": "actual",
   "items": [{
     "quantity": 1,
-    "variantId": "42088603123903",
+    "variantId": "44088603123903",
     "availableQty": 1,
     "status": "available"
   }],
@@ -112,7 +112,7 @@ Utilize the `checkCartInventory` API to determine same-day delivery eligibility 
     "storeCode": "646",
     "identifier": "646",
     "storeType": "RETAIL_STORE",
-    "storeName": "Dolphin Mall",
+    "storeName": "Silver Mall",
     "externalId": "646",
     "primaryFacilityGroupId": "10224533555",
     "primaryFacilityGroupName": "OP_Group",
@@ -130,15 +130,15 @@ Utilize the `checkCartInventory` API to determine same-day delivery eligibility 
     "latlon": "25.7875845,-80.3805674",
     "shopifyShop_id": ["10224533555"],
     "shopifyShops": [{
-      "domain": "originalpenguin-dev.myshopify.com",
-      "name": "originalpenguin-dev",
-      "myshopifyDomain": "originalpenguin-dev.myshopify.com",
+      "domain": "<domain-name>",
+      "name": "shop-name",
+      "myshopifyDomain": "<shopify-domain>",
       "shopifyShopId": "10224533555",
       "shopId": "OP_SHOP"
     }],
     "productStore_id": ["OP_STORE"],
     "productStores": [{
-      "storeName": "Original Penguin",
+      "storeName": "Not Naked",
       "productStoreId": "OP_STORE"
     }],
     "monday_open": "10:00:00",
