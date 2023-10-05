@@ -30,65 +30,41 @@ To check eligible same-day shipping facilities near the customer, the latitude a
 
 ```
 {
-
-"json": {
-
-"query": "postcode: 10007"
-
-}
-
+  "json": {
+    "params": {
+      "q": "*:*",
+      "fq": "{!geofilt sfield=location}",
+      "pt": "18.180555,-66.749961",
+      "d": "10"
+    }
+  }
 }
 ```
 ## Response
 ```
 {
-
-"responseHeader": {
-
-"status": 0,
-
-"QTime": 2,
-
-"params": {
-
-"json": "{\"query\":\"postcode:10007\"}"
-
-}
-
+  "responseHeader": {
+    "status": 0,
+    "QTime": 2,
+    "params": { "json": "{\"query\":\"postcode:10007\"}"
+  }
 },
-
-"response": {
-
-"numFound": 1,
-
-"start": 0,
-
-"numFoundExact": true,
-
-"docs": [
-
-{
-
-"postcode": "10007",
-
-"latitude": "40.713858",
-
-"longitude": "-74.007777",
-
-"country": "USA",
-
-"country-code-id": "10007-USA",
-
-"location": "40.713858,-74.007777",
-
-"\_version\_": 1752733529047826432
-
-}
-
-]
-
-}
-
+  "response": {
+    "numFound": 1,
+    "start": 0,
+    "numFoundExact": true,
+    "docs": [
+  {
+        "postcode": "10007",
+        "latitude": "40.713858",
+        "longitude": "-74.007777",
+        "country": "USA",
+        "country-code-id": "10007-USA",
+        "location": "40.713858,-74.007777",
+        "\_version\_": 1752733529047826432
+      }
+    ]
+  }
 }
 ```
 
@@ -106,157 +82,86 @@ This API provides results indicating the availability or unavailability of same-
 ## Request
 ```
 {
-
-point: "\\<latlon\\>",
-
-distance: "sameDayStoreSearchProximity",
-
-shopifyShopId: "shopId",
-
-items: "cartItems",
-
-filters: ["\\<filter1\\>", "\\<filter2\\>"]
-
+  point: "\\<latlon\\>",
+  distance: "sameDayStoreSearchProximity",
+  shopifyShopId: "shopId",
+  items: "cartItems",
+  filters: ["\\<filter1\\>", "\\<filter2\\>"]
 }
 ```
 ## Response
 ```
 
 {
-
-"facilityId": "646",
-
-"distance": 15,
-
-"cors.request.origin": "[https://originalpenguin-dev.myshopify.com](https://originalpenguin-dev.myshopify.com/)",
-
-"shopifyShopId": "10224533555",
-
-"filters":[
-
-"sameday\_pref: true",
-
-"docType: STORE",
-
-"shopifyShop\_id:10224533555"
-
-],
-
-"point": "25.786909, -80.361253",
-
-"cors.request.type": "actual",
-
-"items": [
-
+    "facilityId": "646",
+    "distance": 15,
+    "cors.request.origin": "[https://originalpenguin-dev.myshopify.com](https://originalpenguin-dev.myshopify.com/)",
+    "shopifyShopId": "10224533555",
+    "filters":[
+    "sameday\_pref: true",
+    "docType: STORE",
+    "shopifyShop\_id:10224533555"
+    ],
+    "point": "25.786909, -80.361253",
+    "cors.request.type": "actual",
+    "items": [{
+    "quantity": 1,
+    "variantId": "42088603123903",
+    "availableQty": 1,
+    "status": "available"
+}],
+    "facility":
 {
 
-"quantity": 1,
-
-"variantId": "42088603123903",
-
-"availableQty": 1,
-
-"status": "available"
-
+  "docType": "STORE",
+  "storeCode": "646",
+  "identifier": "646",
+  "storeType": "RETAIL\_STORE",
+  "storeName": "Dolphin Mall",
+  "externalId": "646",
+  "primaryFacilityGroupId": "10224533555",
+  "primaryFacilityGroupName": "OP\_Group",
+  "primaryShopifyShopId": "10224533555",
+  "10224533555\_pref": "true",
+  "fac\_grp\_pref": "true",
+  "sameday\_pref": "true",
+  "address1": "11401 NW 12th Street",
+  "city": "Miami",
+  "postalCode": "33172",
+  "country": "United States",
+  "countryCode": "US",
+  "state": "Florida",
+  "stateCode": "FL",
+  "latlon": "25.7875845,-80.3805674",
+  "shopifyShop\_id": ["10224533555"],
+  "shopifyShops": [
+  "[{\"domain\":\"[originalpenguin-dev.myshopify.com](http://originalpenguin-dev.myshopify.com/)\",
+  \"name\":\"originalpenguin-dev\",\"myshopifyDomain\":\"[originalpenguin-dev.myshopify.com](http://originalpenguin-dev.myshopify.com/)\",
+  \"shopifyShopId\":\"10224533555\",\"shopId\":\"OP\_SHOP\"}]" ],
+  "productStore\_id": ["OP\_STORE"],
+  "productStores": [
+  "[{\"storeName\":\"Original Penguin\",\"productStoreId\":\"OP\_STORE\"}]" ],
+  "monday\_open": "10:00:00",
+  "monday\_close": "21:00:00",
+  "tuesday\_open": "10:00:00",
+  "tuesday\_close": "21:00:00",
+  "wednesday\_open": "10:00:00",
+  "wednesday\_close": "21:00:00",
+  "thursday\_open": "10:00:00",
+  "thursday\_close": "21:00:00",
+  "friday\_open": "10:00:00",
+  "friday\_close": "21:00:00",
+  "saturday\_open": "10:00:00",
+  "saturday\_close": "21:00:00",
+  "sunday\_open": "11:00:00",
+  "sunday\_close": "20:00:00",
+  "updatedDatetime": "2023-06-15T13:41:09.708Z",
+  "docType-identifier": "STORE-646",
+  "\_version\_": 1768776238064730000,
+  "dist": 1.9352518
+  }
 }
 
-],
-
-"facility":
-
-{
-
-"docType": "STORE",
-
-"storeCode": "646",
-
-"identifier": "646",
-
-"storeType": "RETAIL\_STORE",
-
-"storeName": "Dolphin Mall",
-
-"externalId": "646",
-
-"primaryFacilityGroupId": "10224533555",
-
-"primaryFacilityGroupName": "OP\_Group",
-
-"primaryShopifyShopId": "10224533555",
-
-"10224533555\_pref": "true",
-
-"fac\_grp\_pref": "true",
-
-"sameday\_pref": "true",
-
-"address1": "11401 NW 12th Street",
-
-"city": "Miami",
-
-"postalCode": "33172",
-
-"country": "United States",
-
-"countryCode": "US",
-
-"state": "Florida",
-
-"stateCode": "FL",
-
-"latlon": "25.7875845,-80.3805674",
-
-"shopifyShop\_id": ["10224533555"],
-
-"shopifyShops": [
-
-"[{\"domain\":\"[originalpenguin-dev.myshopify.com](http://originalpenguin-dev.myshopify.com/)\",
-
-\"name\":\"originalpenguin-dev\",\"myshopifyDomain\":\"[originalpenguin-dev.myshopify.com](http://originalpenguin-dev.myshopify.com/)\",
-
-\"shopifyShopId\":\"10224533555\",\"shopId\":\"OP\_SHOP\"}]" ],
-
-"productStore\_id": ["OP\_STORE"],
-
-"productStores": [
-
-"[{\"storeName\":\"Original Penguin\",\"productStoreId\":\"OP\_STORE\"}]" ],
-
-"monday\_open": "10:00:00",
-
-"monday\_close": "21:00:00",
-
-"tuesday\_open": "10:00:00",
-
-"tuesday\_close": "21:00:00",
-
-"wednesday\_open": "10:00:00",
-
-"wednesday\_close": "21:00:00",
-
-"thursday\_open": "10:00:00",
-
-"thursday\_close": "21:00:00",
-
-"friday\_open": "10:00:00",
-
-"friday\_close": "21:00:00",
-
-"saturday\_open": "10:00:00",
-
-"saturday\_close": "21:00:00",
-
-"sunday\_open": "11:00:00",
-
-"sunday\_close": "20:00:00",
-
-"updatedDatetime": "2023-06-15T13:41:09.708Z",
-
-"docType-identifier": "STORE-646",
-
-"\_version\_": 1768776238064730000,
-
-"dist": 1.9352518 }}
 ```
 
 ## Handle case when same day delivery is unavailable -
