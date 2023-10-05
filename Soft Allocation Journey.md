@@ -81,7 +81,7 @@ Utilize the `checkCartInventory` API to determine same-day delivery eligibility 
   point: "\\<latlon\\>",
   distance: "sameDayStoreSearchProximity",
   shopifyShopId: "shopId",
-  items: "cartItems",
+  items: "44088603123903",
   filters: ["\\<filter1\\>", "\\<filter2\\>"]
 }
 ```
