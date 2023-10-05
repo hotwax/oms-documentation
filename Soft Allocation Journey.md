@@ -12,7 +12,7 @@ Internally, the Soft Allocation process adheres to a structured set of steps:
 To check eligible same-day shipping facilities near the customer, the latitude and longitude coordinates of the customer are required. There are two ways to obtain these coordinates:
 
 a. If the customer inputs their postal code,
-  - Use the `postcodeLookup` API to convert the postal code into latitude and longitude coordinates.
+  - Use the [postcodeLookup](https://github.com/hotwax/oms-documentation/blob/oms1.0/Facility/Post%20code%20lookup.md) API to convert the postal code into latitude and longitude coordinates. Know more about postCodeLookup API
 
 b. If the customer allows access to their system location,
   - Obtain the latitude and longitude coordinates directly from their device.
