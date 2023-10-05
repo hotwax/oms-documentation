@@ -90,14 +90,14 @@ Utilize the `checkCartInventory` API to determine same-day delivery eligibility 
 
 ```
 {
-  "facilityId": "646",
-  "distance": 15,
+  "facilityId": "868",
+  "distance": 50,
   "cors.request.origin": "<url of the Shopify store>",
-  "shopifyShopId": "20224533555",
+  "shopifyShopId": "23324533555",
   "filters": [
     "sameday_pref: true",
     "docType: STORE",
-    "shopifyShop_id:20224533555"
+    "shopifyShop_id:23324533555"
   ],
   "point": "25.786909, -80.361253",
   "cors.request.type": "actual",
@@ -109,18 +109,18 @@ Utilize the `checkCartInventory` API to determine same-day delivery eligibility 
   }],
   "facility": {
     "docType": "STORE",
-    "storeCode": "646",
-    "identifier": "646",
+    "storeCode": "868",
+    "identifier": "868",
     "storeType": "RETAIL_STORE",
     "storeName": "Silver Mall",
-    "externalId": "646",
+    "externalId": "868",
     "primaryFacilityGroupId": "10224533555",
     "primaryFacilityGroupName": "OP_Group",
     "primaryShopifyShopId": "10224533555",
     "10224533555_pref": "true",
     "fac_grp_pref": "true",
     "sameday_pref": "true",
-    "address1": "11401 NW 12th Street",
+    "address1": "11501 NW 10th Street",
     "city": "Miami",
     "postalCode": "33172",
     "country": "United States",
