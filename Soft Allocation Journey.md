@@ -11,7 +11,7 @@ Internally, the process of soft allocation follows the following steps:
 To check eligible same-day shipping facilities near the customer, the latitude and longitude coordinates of the customer are required. There are two ways to obtain these coordinates:
 
 - If the customer inputs their postal code,
-  - Use the postcodeLookup API to convert the postal code into latitude and longitude coordinates
+  - Use the `postcodeLookup` API to convert the postal code into latitude and longitude coordinates
 
 - If the customer allows access to their system location,
   - Obtain the latitude and longitude coordinates directly from their device
@@ -70,12 +70,12 @@ To check eligible same-day shipping facilities near the customer, the latitude a
 
 ## Step 2: Check inventory at each store allowing same day delivery
 
-For each store offering same-day delivery, utilize the checkCartInventory API to assess the eligibility for the desired product.
+For each store offering same-day delivery, utilize the `checkCartInventory` API to assess the eligibility for the desired product.
 
-This API provides results indicating the availability or unavailability of same-day delivery based on two key factors:
+This API provides results indicating the availability or unavailability of same-day delivery based on few key factors - 
 
-1. Latitude and longitude of the facility
-2. Order time compared to the store closing time
+1) Latitude and longitude of the facility
+2) Predefined distance under which same day delivery is possible by the carrier (preferred within 50 miles)
 
 ### Method : `/POST`
 
@@ -171,5 +171,6 @@ In case of unavailability for same day delivery at the selected store, the statu
 ## API Feature Detailing
 
 - Allows the customer to explore multiple zip codes on product detail page and mini cart for same day delivery eligibility.
-- Customers will be able to view the same day delivery status on product detail page, cart detail page as well as "mini cart".
+- Customers will be able to view the same day delivery status on product detail page, cart detail page as well as "mini cart"
 - If a customer's cart contains both Same Day Delivery and BOPIS items, the system will perform a soft allocation on all order items and assess their eligibility for same-day delivery
+- The API will synchronize with the application to determine the availability of same-day delivery based on the store's operating hours and order preratory lead time.
