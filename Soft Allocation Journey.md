@@ -78,7 +78,7 @@ Utilize the `checkCartInventory` API to determine same-day delivery eligibility 
 
 ```
 {
-  "point": "34.074087,-117.605618",
+  "point": "40.713858,-74.007777",
   "distance": 15,
   "shopifyShopId": "<shopifyshopID>",
   "items": [
@@ -139,7 +139,7 @@ Utilize the `checkCartInventory` API to determine same-day delivery eligibility 
     "sameday_pref": "true",
     "address1": "11501 NW 10th Street",
     "city": "Miami",
-    "postalCode": "33172",
+    "postalCode": "10007",
     "country": "United States",
     "countryCode": "US",
     "state": "Florida",
