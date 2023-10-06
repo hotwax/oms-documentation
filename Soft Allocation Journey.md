@@ -78,11 +78,20 @@ Utilize the `checkCartInventory` API to determine same-day delivery eligibility 
 
 ```
 {
-  point: "\\<latlon\\>",
-  distance: "sameDayStoreSearchProximity",
-  shopifyShopId: "shopId",
-  items: "44088603123903",
-  filters: ["\\<filter1\\>", "\\<filter2\\>"]
+  "point": "34.074087,-117.605618",
+  "distance": 15,
+  "shopifyShopId": "<shopifyshopID>",
+  "items": [
+    {
+      "variantId": "123456",
+      "quantity": 1
+    },
+    {
+      "variantId": "234567",
+      "quantity": 1
+    }
+  ],
+  "filters": ["sameday_pref: true"]
 }
 ```
 
@@ -101,12 +110,20 @@ Utilize the `checkCartInventory` API to determine same-day delivery eligibility 
   ],
   "point": "25.786909, -80.361253",
   "cors.request.type": "actual",
-  "items": [{
-    "quantity": 1,
-    "variantId": "44088603123903",
-    "availableQty": 1,
-    "status": "available"
-  }],
+  "items": [
+    {
+      "variantId": "123456",
+      "quantity": 1,
+      "available_qty": 1,
+      "status": "available"
+    },
+    {
+      "variantId": "234567",
+      "quantity": 1,
+      "available_qty": 1,
+      "status": "available"
+    }
+  ],
   "facility": {
     "docType": "STORE",
     "storeCode": "868",
@@ -129,18 +146,22 @@ Utilize the `checkCartInventory` API to determine same-day delivery eligibility 
     "stateCode": "FL",
     "latlon": "25.7875845,-80.3805674",
     "shopifyShop_id": ["10224533555"],
-    "shopifyShops": [{
-      "domain": "<domain-name>",
-      "name": "shop-name",
-      "myshopifyDomain": "<shopify-domain>",
-      "shopifyShopId": "10224533555",
-      "shopId": "OP_SHOP"
-    }],
+    "shopifyShops": [
+      {
+        "domain": "<domain-name>",
+        "name": "shop-name",
+        "myshopifyDomain": "<shopify-domain>",
+        "shopifyShopId": "10224533555",
+        "shopId": "OP_SHOP"
+      }
+    ],
     "productStore_id": ["OP_STORE"],
-    "productStores": [{
-      "storeName": "Not Naked",
-      "productStoreId": "OP_STORE"
-    }],
+    "productStores": [
+      {
+        "storeName": "Not Naked",
+        "productStoreId": "OP_STORE"
+      }
+    ],
     "monday_open": "10:00:00",
     "monday_close": "21:00:00",
     "tuesday_open": "10:00:00",
@@ -156,7 +177,7 @@ Utilize the `checkCartInventory` API to determine same-day delivery eligibility 
     "sunday_open": "11:00:00",
     "sunday_close": "20:00:00",
     "updatedDatetime": "2023-06-15T13:41:09.708Z",
-    "docType-identifier": "STORE-646",
+    "docType-identifier": "STORE-868",
     "_version_": 1768776238064730000,
     "dist": 1.9352518
   }
