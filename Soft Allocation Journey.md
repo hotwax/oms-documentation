@@ -167,27 +167,20 @@ Utilize the `checkCartInventory` API to determine same-day delivery eligibility 
 
 Upon receiving the response indicating stores eligible for same-day delivery, the application follows a systematic comparison process:
 
-1. Lead Time Comparison:
-   - The application compares the order preparation lead time with the difference between the customer's current time and the store's closing time.
+1. **Lead Time Comparison:** The application compares the order preparation lead time with the difference between the customer's current time and the store's closing time.
   
-2. Eligibility Assessment:
-   - If the lead time is less than the time difference, the item is deemed eligible for same-day delivery.
-   - Conversely, if the lead time exceeds the time difference, the order is marked as eligible for next-day delivery.
+2. **Eligibility Assessment:** If the lead time is less than the time difference, the item is deemed eligible for same-day delivery. Conversely, if the lead time exceeds the time difference, the order is marked as eligible for next-day delivery.
   
 This structured approach ensures precise determination of delivery eligibility, providing customers with accurate information about their order's expected delivery date.
-
 
 ## Additional Notes:
 
 In addition to the eligibility assessment process:
 
-a. Multiple Zip Code Exploration:
-  - The application enables customers to explore multiple zip codes directly on the product detail page and mini cart to check same-day delivery eligibility in various locations.
+a. **Multiple Zip Code Exploration:** The application enables customers to explore multiple zip codes directly on the product detail page and mini cart to check same-day delivery eligibility in various locations.
 
-b. Real-time Status Updates:
-  - Customers can view the same-day delivery status not only on the product detail page but also in the cart details and the "mini cart" interface, ensuring consistent and real-time visibility of delivery options.
+b. **Real-time Status Updates:** Customers can view the same-day delivery status not only on the product detail page but also in the cart details and the "mini cart" interface, ensuring consistent and real-time visibility of delivery options.
 
-c. Mixed Cart Handling:
-  - If a customer's cart contains both Same Day Delivery and Buy Online, Pick Up In Store (BOPIS) items, the system seamlessly performs a soft allocation for all order items. It assesses the eligibility of each item for same-day delivery, guaranteeing a comprehensive and accurate delivery determination for the entire order.
+c. **Mixed Cart Handling:** If a customer's cart contains both Delivery and Buy Online, Pick Up In Store (BOPIS) items, the system performs a soft allocation for all order items in the cart irrespective of shipping method. 
 
 These additional features enhance the customer experience, providing flexibility and transparency in the delivery process.
