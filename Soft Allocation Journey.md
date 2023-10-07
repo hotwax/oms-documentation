@@ -1,20 +1,20 @@
 # Introduction to Soft Allocation Brokering
 
-Hotwax Commerce's Soft Allocation Brokering feature performs real-time eligibility checks for same-day delivery of items in a customer's shopping cart. By evaluating the list of items in the cart along with the customer's zip code, Soft Allocation Brokering ensures compliance with predefined criteria for same-day shipping. 
+Hotwax Commerce's Soft Allocation feature performs real-time eligibility checks for the items in a customer's shopping cart. By evaluating the list of items in the cart along with the destination zip code, Soft Allocation ensures compliance with predefined criteria set by retailers such as checking if all items can be shipped from one location. 
 
-This process guarantees a seamless and efficient validation of same-day shipping eligibility, aligning with the requirements of various shipping carriers.
+This process alse helps guarantee an efficient validation of shipping eligibility, aligning with the requirements of various specialty shipping carriers.
 
 Internally, the Soft Allocation process adheres to a structured set of steps: 
 
 
 ### Step 1: Obtain the customer's latitude and longitude
 
-To check eligible same-day shipping facilities near the customer, the latitude and longitude coordinates of the customer are required. There are two ways to obtain these coordinates:
+To check eligible shipping facilities near the customer, the latitude and longitude coordinates of the customer are required. There are two ways to obtain these coordinates:
 
-a. If the customer inputs their postal code,
-  - Use the [postcodeLookup](https://github.com/hotwax/oms-documentation/blob/oms1.0/Facility/Post%20code%20lookup.md) API to convert the postal code into latitude and longitude coordinates. Know more about postCodeLookup API
+a. If the customer inputs their postal code:
+  - Use the [postcodeLookup](https://github.com/hotwax/oms-documentation/blob/oms1.0/Facility/Post%20code%20lookup.md) API to convert the postal code into latitude and longitude coordinates. Learn more about how to use the postCodeLookup API and convert postal codes into latitudes and longitudes.
 
-b. If the customer allows access to their system location,
+b. If the customer allows access to their system location:
   - Obtain the latitude and longitude coordinates directly from their device.
     
 
@@ -66,9 +66,9 @@ b. If the customer allows access to their system location,
 }
 ```
 
-## Step 2: Verify store inventory for same-day delivery of cart items.
+## Step 2: Verify inventory availability of cart items.
 
-Utilize the `checkCartInventory` API to determine same-day delivery eligibility for cart items across stores. This API evaluates eligibility based on key factors, including facility latitude and longitude and a predefined distance (typically within 50 miles) for same-day delivery by the carrier. The results indicate the closest store eligible for same-day delivery.
+Utilize the `checkCartInventory` API to determine same-day delivery eligibility for cart items across facilities. This API evaluates eligibility based on key factors, including facility latitude and longitude and a predefined distance (typically within 50 miles for same-day delivery by carriers). The results indicate the closest facility eligible for fulfillment.
 
 ### Sample of `checkCartInventory`:
 
@@ -152,14 +152,14 @@ Utilize the `checkCartInventory` API to determine same-day delivery eligibility 
         "name": "shop-name",
         "myshopifyDomain": "<shopify-domain>",
         "shopifyShopId": "10224533555",
-        "shopId": "OP_SHOP"
+        "shopId": "SHOP"
       }
     ],
-    "productStore_id": ["OP_STORE"],
+    "productStore_id": ["STORE"],
     "productStores": [
       {
         "storeName": "Not Naked",
-        "productStoreId": "OP_STORE"
+        "productStoreId": "STORE"
       }
     ],
     "monday_open": "10:00:00",
@@ -186,11 +186,11 @@ Utilize the `checkCartInventory` API to determine same-day delivery eligibility 
 
 ## Step 3: Displaying Eligibility on the Cart Page 
 
-Upon receiving the response indicating stores eligible for same-day delivery, the application follows a systematic comparison process:
+Upon receiving the response indicating facility's eligiblity for fulfillment, the application follows a systematic comparison process:
 
-1. **Lead Time Comparison:** The application compares the order preparation lead time with the difference between the customer's current time and the store's closing time.
+1. **Lead Time Comparison for Same Day Delivery:** The client side in-browser script compares the order preparation lead time predefined within the app with the difference between the customer's current time and the facility's closing time.
   
-2. **Eligibility Assessment:** If the lead time is less than the time difference, the item is deemed eligible for same-day delivery. Conversely, if the lead time exceeds the time difference, the order is marked as eligible for next-day delivery.
+2. **Eligibility Assessment:** If the lead time is less than the time difference, the cart is deemed eligible for same-day delivery. Conversely, if the lead time exceeds the time difference, the order is marked as eligible for next-day delivery.
   
 This structured approach ensures precise determination of delivery eligibility, providing customers with accurate information about their order's expected delivery date.
 
@@ -198,10 +198,10 @@ This structured approach ensures precise determination of delivery eligibility, 
 
 In addition to the eligibility assessment process:
 
-a. **Multiple Zip Code Exploration:** The application enables customers to explore multiple zip codes directly on the product detail page and mini cart to check same-day delivery eligibility in various locations.
+a. **Multiple Zip Code Exploration:** The application enables customers to explore multiple zip codes directly on the product detail page and mini cart to check same-day delivery eligibility in various locations by submitting their cart against multiple times with different destination zip codes.
 
 b. **Real-time Status Updates:** Customers can view the same-day delivery status not only on the product detail page but also in the cart details and the "mini cart" interface, ensuring consistent and real-time visibility of delivery options.
 
-c. **Mixed Cart Handling:** If a customer's cart contains both Delivery and Buy Online, Pick Up In Store (BOPIS) items, the system performs a soft allocation for all order items in the cart irrespective of shipping method. 
+c. **Mixed Cart Handling:** If a customer's cart contains both Delivery and Buy Online, Pick Up In Store (BOPIS) items, it is suggested that the client side script submit all items for soft allocation irrespective of shipping method to provide a simple experience for the customer. 
 
 These additional features enhance the customer experience, providing flexibility and transparency in the delivery process.
