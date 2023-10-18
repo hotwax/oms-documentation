@@ -102,6 +102,26 @@ The email transmission system is identified by the parameter `systemMessageRemot
 
 When the marketing automation platform handles email transmission, the OMS shares the required information in JSON format, specified by the `templateContentId`, to the platform. 
 
+#### A list of fields which are available out of box in HotWax which can be shared with a marketing automation platform: 
+
+| Dynamic Variable   | Description                                 |
+|--------------------|---------------------------------------------|
+| First Name         | The first name of the recipient.             |
+| Last Name          | The last name of the recipient.              |
+| To Facility Name   | The name of the facility for pickup.         |
+| Address 1          | The first line of the pickup location's address. |
+| Address 2          | The second line of the pickup location's address (if applicable). |
+| City               | The city where the pickup facility is located. |
+| State Name         | The name of the state or region where the pickup facility is located. |
+| Country Name       | The name of the country where the pickup facility is located. |
+| Order Name         | The name or reference number of the pickup order. |
+| Product Name       | The name of the product being picked up. |
+| Quantity           | The quantity of the product being picked up. |
+| Price              | The price of the product. |
+| Image              | An image or visual representation of the product. |
+| Subtotal           | The subtotal amount for the pickup order. |
+| GrandTotal         | The grand total amount for the pickup order. |
+
 Note: If the OMS is responsible for sending the email, it incorporates the data into a preconfigured email template within its system.
 
 
@@ -109,8 +129,7 @@ Note: If the OMS is responsible for sending the email, it incorporates the data 
 
 After recieving the required content, the marketing automation platform personalizes the customer's email using the provided details and delivers the email to the customer. 
 
-
-##### HotWax Commerce has ready integration with Listrak, a marketing automation platform. Here's a sample JSON file that is shared with Listrak's API for each shipment:
+##### HotWax Commerce has ready integration with Listrak, a marketing automation platform. Added below is a JSON file sample
 ```
 const data = {
   "emailAddress": "john.doe@example.co",
