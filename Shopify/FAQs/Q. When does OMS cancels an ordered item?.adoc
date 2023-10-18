@@ -1,8 +1,0 @@
-== Q. When does OMS cancels an ordered item?
-
-When an order is imported in OMS, it sets a future auto-cancel date on the ordered items. 
-
-If the ordered item is not allocated to any location for fulfillment till the auto-cancel date then OMS will automatically cancel the ordered item when the service *_autoCancelOrderItems_* runs. 
-
-Note: Number of days after which the ordered item should be auto-cancelled can be configured as per business requirements.
-

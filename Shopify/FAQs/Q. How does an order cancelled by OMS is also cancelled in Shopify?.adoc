@@ -1,5 +1,0 @@
-== Q. How does an order cancelled by OMS is also cancelled in Shopify?
-
-If an order is cancelled in OMS then a service is triggered that cancels the order in Shopify as well. 
-
-If a retailer does not want to allow OMS to cancel orders in Shopify then this service can be disabled.

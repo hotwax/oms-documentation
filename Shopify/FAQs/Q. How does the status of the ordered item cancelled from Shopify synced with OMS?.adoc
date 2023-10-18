@@ -1,3 +1,0 @@
-== Q. How does the status of the ordered item cancelled from Shopify synced with OMS?
-
-If an order item is cancelled in Shopify then service *_updateShopifyOrderStatus_* cancels the ordered item in OMS as well. This frequency of this service can be scheduled to run as per business requirements.

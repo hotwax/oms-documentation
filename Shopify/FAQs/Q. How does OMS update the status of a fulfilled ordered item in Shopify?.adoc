@@ -1,3 +1,0 @@
-== Q. How does OMS update the status of a fulfilled ordered item in Shopify?
-
-When an ordered item is shipped/completed in OMS then a service is triggered that marks the ordered item as fulfilled in Shopify as well. 
