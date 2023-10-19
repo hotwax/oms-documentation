@@ -15,7 +15,7 @@ Updated inventory in HotWax: 8
 ### End Point
 `https://<host>/api/service/updateInventoryByIdentification`
 
-Example: [https://demo-oms.hotwax.io/api/updateInventoryByIdentification](https://<host>/api/service/updateInventoryByIdentification)
+Example: [https://demo-oms.hotwax.io/api/service/updateInventoryByIdentification](https://<host>/api/service/updateInventoryByIdentification)
 
 ### Header
 
@@ -32,28 +32,26 @@ To learn more about Bearer token authentication, read this [document](https://gi
 ### Body
 ```
 {
-  {
-    "facilityId": ,
-    "availableDelta": ,
-    "idType": ,
-    "idValue": ,
-    "locationSeqId": ,
-    "varianceReasonId": ,
-  }
-} 
+  "facilityId": ,
+  "availableDelta": ,
+  "idType": ,
+  "idValue": ,
+  "locationSeqId": ,
+  "varianceReasonId":
+}
 ```
 Sample: 
 ```
+
 {
-  {
-    "facilityId": "WH",
-    "availableDelta": 4,
-    "idType": "UPCA",
-    "idValue": "30065245099",
-    "locationSeqId": "TLTLTLLL01",
-    "varianceReasonId": "POS_SALE"
-  }
-}  
+  "facilityId": "WH",
+  "availableDelta": 4,
+  "idType": "UPCA",
+  "idValue": "30065245099",
+  "locationSeqId": "TLTLTLLL01",
+  "varianceReasonId": "POS_SALE"
+}
+  
 ```
 
 | Parameters       | Description                                            | Required (Y/N) |
