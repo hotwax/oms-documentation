@@ -1,3 +1,3 @@
 # Table of contents
 
-* [Page](README.md)
+* [Dummy data](README.md)
