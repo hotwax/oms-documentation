@@ -2,7 +2,7 @@
 
 ## Use headings to create page groups like this one​
 
-* [APIs](BOPIS/APIs/checkInventory.adoc)
+* [APIs](BOPIS/index.md)
     * [checkInventory](BOPIS/APIs/checkInventory.adoc)    
     * [getGMBToken](BOPIS/APIs/getGMBToken.adoc)
     * [quickShipEntireShipGroup](BOPIS/APIs/quickShipEntireShipGroup.adoc)
