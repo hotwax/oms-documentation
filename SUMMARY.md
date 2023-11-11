@@ -1,6 +1,6 @@
 ‌# Summary​
 
-## Use headings to create page groups like this one​
+## Learn BOPIS
 
 * [APIs](BOPIS/index.md)
     * [checkInventory](BOPIS/APIs/checkInventory.adoc)    
