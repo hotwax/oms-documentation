@@ -9,9 +9,7 @@
   * [N/Record Module](IntegrationTools/SuiteScript/N.recordModule.md)
   * [N/Search Module](IntegrationTools/SuiteScript/N.searchModule.md)
   * [N/File Module](IntegrationTools/SuiteScript/N.fileModule.md)
-
 * [Saved Search](IntegrationTools/SavedSearch/README.md)
-
 
 ## Integration Methodologies
 
@@ -19,7 +17,10 @@
 * [NetSuite](IntegrationMethodologies/NetSuite.md)
 * [HotWax](IntegrationMethodologies/HotWax.md)
 
-
 ## Supported Integrations
 
 * [Transfer Orders](Flows/TransferOrders.md)
+* [Cycle Count](supported-integrations/cycle-count.md)
+* [Inventory](supported-integrations/inventory.md)
+* [Sales Orders](supported-integrations/sales-orders.md)
+* [Purchase Orders](supported-integrations/purchase-orders.md)
