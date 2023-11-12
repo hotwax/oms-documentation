@@ -23,11 +23,11 @@ The script runs periodically, typically every 15 minutes, to ensure it fetches o
 
 **SuiteScripts**
 
-Generate Fulfilled Transfer Order file
+Generate Fulfilled Transfer Order file:
 
 ```HC_generateCSV_FulfilledTransferOrders```
 
-*Deprecated* Move Fulfilled Transfer Order file to SFTP
+*Deprecated* Move Fulfilled Transfer Order file to SFTP:
 
 ```HC_uploadCSV_FulfilledTransferOrders```
 
@@ -54,6 +54,15 @@ Derived Origin Facility Inv Deduction:
 /home/{sftp-username}/hotwax/InventoryDelta
 /home/{sftp-username}/hotwax/InventoryDelta/archive
 ```
+
+**Jobs in HotWax Commerce**
+
+Import Pending Receipt Transfer Orders from SFTP:
+```Import fulfilled Transfer Orders from NetSuite```
+
+Import Inventory Deduction from Orgin Facility from SFTP:
+```Add job name here```
+
 
 ### Receiving Inventory in the Store
 Store associates use the HotWax Commerce Receiving App to receive transferred inventory. The user-friendly interface of this app ensures a smooth and efficient receiving process, even for users with minimal training.
