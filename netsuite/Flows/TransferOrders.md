@@ -21,6 +21,16 @@ Similar to Purchase Orders, a Map Reduce Script is executed. This script runs a 
 
 The script runs periodically, typically every 15 minutes, to ensure it fetches only the latest and pending Transfer Orders from Netsuite, optimizing efficiency.
 
+**SuiteScripts**
+
+Generate Fulfilled Transfer Order file
+
+```HC_generateCSV_FulfilledTransferOrders```
+
+*Deprecated* Move Fulfilled Transfer Order file to SFTP
+
+```HC_uploadCSV_FulfilledTransferOrders```
+
 
 ### Import Transfer Orders into HotWax Commerce
 In HotWax Commerce, a dedicated job monitors the SFTP location, regularly checking for new Transfer Order CSV files. This job utilizes the powerful APIs provided by HotWax Commerce's Export/Import tools to import these Transfer Orders.
@@ -28,13 +38,21 @@ In HotWax Commerce, a dedicated job monitors the SFTP location, regularly checki
 If HotWax is only being used for receiving transfer orders, the Transfer Order file produced by NetSuite is pre-processed to generate an inventory variance file that reduces inventory for transfered products from the origin facility. After this variance file is produced, the pending receipt transfer order file is moved by HotWax to another internal FTP location where a scheduled job will process it to create inbound shipments in the OMS at the destination facility.
 
 **SFTP Locations**
-Path for NetSuite to place pending receipt Transfer Order file: 
+
+NetSuite pending receipt Transfer Order file: 
+
 ```/home/{sftp-username}/netsuite/transferorder/fulfillment-nifi```
 
-Path for HotWax to consume pre-processed Transfer Order file:
+Pre-processed Transfer Order file:
 ```
 /home/{sftp-username}/netsuite/transferorder/fulfillment
 /home/{sftp-username}/netsuite/transferorder/fulfillment/archive
+```
+
+Derived Origin Facility Inv Deduction:
+```
+/home/{sftp-username}/hotwax/InventoryDelta
+/home/{sftp-username}/hotwax/InventoryDelta/archive
 ```
 
 ### Receiving Inventory in the Store
