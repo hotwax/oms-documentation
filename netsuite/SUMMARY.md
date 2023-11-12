@@ -20,7 +20,9 @@
 ## Supported Integrations
 
 * [Inventory](Flows/inventory.md)
-* [Sales Orders](Flows/sales-orders.md)
+* [Sales Orders](Flows/SalesOrder/README.md)
+  * [Order Approval](Flows/SalesOrder/OrderApproval.md)
+  * [POS Orders](Flows/SalesOrder/posOrders.md)
 * [Transfer Orders](Flows/TransferOrders.md)
 * [Cycle Count](Flows/cycle-count.md)
 * [Purchase Orders](Flows/purchase-orders.md)
