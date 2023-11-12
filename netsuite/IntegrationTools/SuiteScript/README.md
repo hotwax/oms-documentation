@@ -1,6 +1,6 @@
 # SuiteScript
 
-NetSuite's SuiteScript is a scripting language that acts as a pivotal tool for customization and automation. It provides comprehensive application-level scripting capabilities that span both client and server sides. In our integration with NetSuite, HotWax Commerce leverages SuiteScript 2.X [a link] [https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/article_8161516336.html#SuiteScript-2.x] APIs.
+NetSuite's SuiteScript is a scripting language that acts as a pivotal tool for customization and automation. It provides comprehensive application-level scripting capabilities that span both client and server sides. In our integration with NetSuite, HotWax Commerce leverages [SuiteScript 2.X][https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/article_8161516336.html#SuiteScript-2.x] APIs.
 
 It's worth noting that while NetSuite boasts a plethora of integration tools, our focus here is specifically on those that have played a pivotal role in our integration. Below, we offer an in-depth understanding of SuiteScript 2.X and how it has been instrumental in our integration:
 
