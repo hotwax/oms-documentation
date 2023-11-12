@@ -12,11 +12,12 @@
 
 * [Saved Search](IntegrationTools/SavedSearch/README.md)
 
+
 ## Integration Methodologies
 
-* [Introduction] (IntegrationMethodologies.md/README.md)
-* [NetSuite] (IntegrationMethodologies.md/NetSuite.md)
-* [HotWax] (IntegrationMethodologies.md/HotWax.md)
+* [Introduction] (IntegrationMethodologies/README.md)
+* [NetSuite] (IntegrationMethodologies/NetSuite.md)
+* [HotWax] (IntegrationMethodologies/HotWax.md)
 
 
 ## A second-page group​
