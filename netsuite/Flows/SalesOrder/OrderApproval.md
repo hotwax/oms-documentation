@@ -8,7 +8,7 @@ Initially, we attempted to synchronize approved orders from HotWax Commerce to N
 To circumvent such complexities and ensure a seamless process, a strategic shift was made. Orders, upon their creation within HotWax Commerce, are designated as "Created" status. It is at this phase that critical order information is captured and assembled into CSV files for transmission to Netsuite. By choosing the "Created" status for order synchronization, HotWax Commerce retains control of the integration process and its sequence of interactions with Netsuite, enhancing accuracy and mitigating errors that arose from attempts to synchronize orders in an "Approved" status.
 
 ## Synchronize Customers from HotWax Commerce to Netsuite
-To successfully create a sales order in Netsuite, it is a prerequisite to have the customer information pre-existing within Netsuite's database. If the order contains a new customer not present in Netsuite, the system won't allow the order to be pushed. Therefore, it's vital to synchronize customer data from HotWax Commerce to Netsuite before order creation.
+To successfully create a sales order in Netsuite, [it is a prerequisite to have the customer information pre-existing within Netsuite's database][netSuiteCustomer]. If the order contains a new customer not present in Netsuite, the system won't allow the order to be pushed. Therefore, it's vital to synchronize customer data from HotWax Commerce to Netsuite before order creation.
 
 Actions:
 A scheduled job in HotWax Commerce operates at defined intervals to generate a CSV file comprising customers who have not been synchronized to Netsuite. This job can be configured to run at regular intervals, typically set at an hourly frequency. Customers who haven't been synchronized within the last hour are included in this CSV file for synchronization with Netsuite.
@@ -18,3 +18,4 @@ A Scheduled Script in HotWax Commerce is responsible for downloading the CSV fil
 
 
 <!-- page links -->
+[netSuiteCustomer]:https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_162886247923.html#Best-Practices-for-Order-Sync

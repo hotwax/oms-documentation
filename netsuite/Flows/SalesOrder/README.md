@@ -8,16 +8,16 @@ The flow of order and fulfillment information in the sales order integration var
 
 Here is a step by step overview of how the sync works before we dive into elaborate details:
 
-- [] Sync new orders from HotWax to NetSuite
-  - [] Sync customers
-  - [] Sync order line items
-  - [] Sync order ids
-  - [] Create customer deposit
-- [] Approve order in HotWax for fulfillment
-- [] HotWax brokering allocates orders
-- [] Sync item allocation to NetSuite for facilities where NetSuite fulfillment is used
-- [] Sync order item fulfillment details from HotWax to NetSuite
-- [] Invoice orders in NetSuite
+- [ ] Sync new orders from HotWax to NetSuite
+  - [ ] Sync customers
+  - [ ] Sync order line items
+  - [ ] Sync order ids
+  - [ ] Create customer deposit
+- [ ] Approve order in HotWax for fulfillment
+- [ ] HotWax brokering allocates orders
+- [ ] Sync item allocation to NetSuite for facilities where NetSuite fulfillment is used
+- [ ] Sync order item fulfillment details from HotWax to NetSuite
+- [ ] Invoice orders in NetSuite
 
 ## Designating NetSuite Fulfillment Locations
 When setting up a facility on HotWax, retailers choose if fulfillment is run by NetSuite. If a facility uses NetSuite for fulfilling orders, HotWax effectivly treats NetSuite as the WMS of that facility. So when order items are allocated to that facility, HotWax pushes those items' allocation details to NetSuite and fetches there fulfillment details from NetSuite as well.
