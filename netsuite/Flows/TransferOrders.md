@@ -25,11 +25,15 @@ The script runs periodically, typically every 15 minutes, to ensure it fetches o
 
 Generate Fulfilled Transfer Order file:
 
-```HC_generateCSV_FulfilledTransferOrders```
+```
+HC_generateCSV_FulfilledTransferOrders
+```
 
 *Deprecated* Move Fulfilled Transfer Order file to SFTP:
 
-```HC_uploadCSV_FulfilledTransferOrders```
+```
+HC_uploadCSV_FulfilledTransferOrders
+```
 
 
 ### Import Transfer Orders into HotWax Commerce
@@ -41,7 +45,9 @@ If HotWax is only being used for receiving transfer orders, the Transfer Order f
 
 NetSuite pending receipt Transfer Order file: 
 
-```/home/{sftp-username}/netsuite/transferorder/fulfillment-nifi```
+```
+/home/{sftp-username}/netsuite/transferorder/fulfillment-nifi
+```
 
 Pre-processed Transfer Order file:
 ```
@@ -59,11 +65,15 @@ Derived Origin Facility Inv Deduction:
 
 Import Pending Receipt Transfer Orders from SFTP:
 
-```Import fulfilled Transfer Orders from NetSuite```
+```
+Import fulfilled Transfer Orders from NetSuite
+```
 
 Import Inventory Deduction from Orgin Facility from SFTP:
 
-```Add job name here```
+```
+Add job name here
+```
 
 
 ### Receiving Inventory in the Store
@@ -80,14 +90,18 @@ To facilitate the subsequent processing of this data, the JSON file is securely 
 
 Received Transfer Orders:
 
-```/home/{sftp-username}/netsuite/transferorder/receipt```
+```
+/home/{sftp-username}/netsuite/transferorder/receipt
+```
 
 
 **Jobs in HotWax Commerce**
 
 Export received inbound shipments to SFTP:
 
-```Add job name here```
+```
+Add job name here
+```
 
 
 ### Import Item Receipts into Netsuite
