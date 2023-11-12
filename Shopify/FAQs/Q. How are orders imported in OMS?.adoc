@@ -1,3 +1,0 @@
-== Q. How are orders imported in OMS?
-
-Orders are imported in OMS from Shopify when the service *_createOrdersFromShopify_* runs. The frequency of this service can be scheduled to run as per business requirements.
