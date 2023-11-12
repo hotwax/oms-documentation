@@ -16,6 +16,7 @@ Here is a step by step overview of how the sync works before we dive into elabor
 - [ ] Approve order in HotWax for fulfillment
 - [ ] HotWax brokering allocates orders
 - [ ] Sync item allocation to NetSuite for facilities where NetSuite fulfillment is used
+- [ ] Sync order item fulfillment details from NetSuite to HotWax
 - [ ] Sync order item fulfillment details from HotWax to NetSuite
 - [ ] Invoice orders in NetSuite
 
