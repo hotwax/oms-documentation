@@ -20,6 +20,6 @@
 * [HotWax](IntegrationMethodologies/HotWax.md)
 
 
-## A second-page group​
+## Supported Integrations
 
-* [Yet another page](a-second-page-group/yet-another-page.md)
+* [Transfer Orders](Flows/TransferOrders.md)
