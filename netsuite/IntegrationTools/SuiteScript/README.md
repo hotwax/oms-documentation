@@ -35,22 +35,22 @@ Modules contain the API information needed for scripting. There are multiple mod
   <tbody>
     <tr>
       <td>
-        <a href="N.taskModule.md">N.taskModule.md</a>
+        <a href="N.taskModule.md">N/taskModule</a>
       </td>
     </tr>
     <tr>
       <td>
-        <a href="N.recordModule.md">N.recordModule.md</a>
+        <a href="N.recordModule.md">N/recordModule</a>
       </td>
     </tr>
     <tr>
       <td>
-        <a href="N.searchModule.md">N.searchModule.md</a>
+        <a href="N.searchModule.md">N/searchModule</a>
       </td>
     </tr>
     <tr>
       <td>
-        <a href="N.fileModule.md">N.fileModule.md</a>
+        <a href="N.fileModule.md">N/fileModule</a>
       </td>
     </tr>
   </tbody>
