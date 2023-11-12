@@ -58,9 +58,11 @@ Derived Origin Facility Inv Deduction:
 **Jobs in HotWax Commerce**
 
 Import Pending Receipt Transfer Orders from SFTP:
+
 ```Import fulfilled Transfer Orders from NetSuite```
 
 Import Inventory Deduction from Orgin Facility from SFTP:
+
 ```Add job name here```
 
 
@@ -73,6 +75,19 @@ Item Receipt records are created within HotWax Commerce when Transfer Orders are
 To maintain a comprehensive record, a designated job in HotWax Commerce exports the Item Receipts created within the system. Each Item Receipt is mapped to the corresponding Transfer Order, ensuring efficient reconciliation and further processing.
 
 To facilitate the subsequent processing of this data, the JSON file is securely placed in an SFTP location, making it accessible for Netsuite. 
+
+**SFTP Locations**
+
+Received Transfer Orders:
+
+```/home/{sftp-username}/netsuite/transferorder/receipt```
+
+
+**Jobs in HotWax Commerce**
+
+Export received inbound shipments to SFTP:
+
+```Add job name here```
 
 
 ### Import Item Receipts into Netsuite
