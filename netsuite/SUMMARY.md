@@ -15,9 +15,9 @@
 
 ## Integration Methodologies
 
-* [Introduction] (IntegrationMethodologies/README.md)
-* [NetSuite] (IntegrationMethodologies/NetSuite.md)
-* [HotWax] (IntegrationMethodologies/HotWax.md)
+* [Introduction](IntegrationMethodologies/README.md)
+* [NetSuite](IntegrationMethodologies/NetSuite.md)
+* [HotWax](IntegrationMethodologies/HotWax.md)
 
 
 ## A second-page group​
