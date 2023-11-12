@@ -19,8 +19,8 @@
 
 ## Supported Integrations
 
+* [Inventory](Flows/inventory.md)
+* [Sales Orders](Flows/sales-orders.md)
 * [Transfer Orders](Flows/TransferOrders.md)
-* [Cycle Count](supported-integrations/cycle-count.md)
-* [Inventory](supported-integrations/inventory.md)
-* [Sales Orders](supported-integrations/sales-orders.md)
-* [Purchase Orders](supported-integrations/purchase-orders.md)
+* [Cycle Count](Flows/cycle-count.md)
+* [Purchase Orders](Flows/purchase-orders.md)
