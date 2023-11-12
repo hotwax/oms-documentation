@@ -21,6 +21,24 @@ Store associates upload the Cycle Count file from the app to the HotWax Commerce
 ### Export Inventory Variances from HotWax Commerce
 Once inventory variances are successfully logged in HotWax Commerce, a specific job is executed to create a CSV file containing all the inventory variance records. This file is then placed in an SFTP location, ensuring that it is readily accessible for further processing.
 
+These are the valid inventory variance reasons to be pushed to NetSuite:
+- VAR_STOLEN
+- VAR_DAMANGED
+- VAR_FOUND
+
+**SFTP Locations**
+
+Inventory variance of actual vs progromatic:
+```
+/home/{sftp-username}/netsuite/inventoryadjustment/csv
+```
+
+**Jobs in HotWax Commerce**
+
+*Deprecated* Export Inventory Variance file to SFTP:
+```
+Export Inventory Variance to NetSuite
+```
 
 ### Import Inventory Adjustment Records in Netsuite
 In Netsuite, a Scheduled Suite Script is employed to download and import the CSV files from the SFTP location. This script leverages the native CSV Import tool provided by Netsuite to create Inventory Adjustment records seamlessly. The use of the Netsuite CSV Import tool for Inventory Adjustments eliminates the need for the N/record module in this specific integration, offering an efficient and accurate synchronization method.
@@ -35,5 +53,12 @@ The automated synchronization of inventory variances from HotWax Commerce to Net
 
 
 **Operational Transparency:** With near real-time synchronization, retailers gain insight into inventory variances as they occur, facilitating quicker decision-making and enhanced operational transparency.
+
+**SuiteScripts**
+
+Import Inventory Adjustments from SFTP:
+```
+HC_importInventoryAdjustment
+```
 
 This integration not only simplifies the process of managing in-store inventory but also plays a vital role in maintaining consistency across multiple systems, ultimately improving operational efficiency and inventory accuracy in the omnichannel retail environment.
