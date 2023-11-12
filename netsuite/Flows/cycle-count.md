@@ -43,6 +43,13 @@ Export Inventory Variance to NetSuite
 ### Import Inventory Adjustment Records in Netsuite
 In Netsuite, a Scheduled Suite Script is employed to download and import the CSV files from the SFTP location. This script leverages the native CSV Import tool provided by Netsuite to create Inventory Adjustment records seamlessly. The use of the Netsuite CSV Import tool for Inventory Adjustments eliminates the need for the N/record module in this specific integration, offering an efficient and accurate synchronization method.
 
+**SuiteScripts**
+
+Import Inventory Adjustments from SFTP:
+```
+HC_importInventoryAdjustment
+```
+
 ## Benefits:
 The automated synchronization of inventory variances from HotWax Commerce to Netsuite offers numerous advantages:
 
@@ -53,12 +60,5 @@ The automated synchronization of inventory variances from HotWax Commerce to Net
 
 
 **Operational Transparency:** With near real-time synchronization, retailers gain insight into inventory variances as they occur, facilitating quicker decision-making and enhanced operational transparency.
-
-**SuiteScripts**
-
-Import Inventory Adjustments from SFTP:
-```
-HC_importInventoryAdjustment
-```
 
 This integration not only simplifies the process of managing in-store inventory but also plays a vital role in maintaining consistency across multiple systems, ultimately improving operational efficiency and inventory accuracy in the omnichannel retail environment.

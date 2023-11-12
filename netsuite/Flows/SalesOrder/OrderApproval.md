@@ -14,8 +14,24 @@ To successfully create a sales order in Netsuite, [it is a prerequisite to have 
 
 A scheduled job in HotWax Commerce operates at defined intervals to generate a CSV file comprising customers who have not been synchronized to Netsuite. This job can be configured to run at regular intervals, typically set at an hourly frequency. Customers who haven't been synchronized within the last hour are included in this CSV file for synchronization with Netsuite.
 
+Identify new customers:
+In the Person table, entries where the roleTypeId is 'CUSTOMER' and where the PartyIdentification record for identification type 'NETSUITE_CUSTOMER_ID' is not created.
 
-A Scheduled Script in HotWax Commerce is responsible for downloading the CSV file of customers not yet synchronized and utilizes the ImportTask function of the N/Task module. This script processes and creates customer records within Netsuite, ensuring that the necessary customer information is available in Netsuite for order creation.
+A Scheduled Script in NetSuite is responsible for downloading the CSV file of customers not yet synchronized and utilizes the ImportTask function of the N/Task module. This script processes and creates customer records within Netsuite, ensuring that the necessary customer information is available in Netsuite for order creation.
+
+**SuiteScripts**
+Import new customers from SFTP
+```
+HC_SC_ImportCustomer
+```
+
+Once customers are created in NetSuite, a scheduled script exports recenlty created customers in a file at an SFTP location to be imported by HotWax Commerce. After HotWax imports this file, the OMS now has confirmation of customer syncronization.
+
+**SuiteScripts**
+Export recenlty created customers to SFTP
+```
+HC_MR_ExportedCustomerCSV
+```
 
 - [x] Sync customers
 
@@ -25,6 +41,8 @@ Capturing orders in HotWax Commerce initiates the creation of orders in "created
 **Actions**
 
 A job in HotWax Commerce creates a CSV file of orders in "created" status that have not yet been sent to Netsuite. The file contains details such as unit prices, order adjustments, and shipping costs, excluding direct tax amounts. HotWax Commerce omits the tax amount from the file and sends tax codes for the individual order items because Netsuite independently computes the taxes based on these codes and applies them accurately to each order item, ensuring precise tax calculations within Netsuite.
+
+
 
 A scheduled SuiteScript in Netsuite reads the CSV file from the SFTP location and creates sales order records using the CSV Import function of the N/Task module.
 
