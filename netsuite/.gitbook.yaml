@@ -1,4 +1,4 @@
-root: ./netsuite
+root: ./
 
 ​structure:  
     readme: README.md  
