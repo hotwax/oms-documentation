@@ -13,22 +13,35 @@ The synchronization of POS sales from HotWax Commerce to Netsuite involves the c
 ### Workflow
 
 1. Create CSV for POS Orders and place the CSV file is placed on the SFTP server for further processing
+   
    a. Data Preparation in HotWax Commerce:
+   
         i. HotWax Commerce runs a synchronized job to generate a CSV file containing POS orders that have not been previously synchronized to Netsuite. The conditions for identifying POS orders include:
+   
             1. Order Status: Completed.
+   
             2. Sales Channel: POS_Channel.
+   
             3. Shipping Method: POS_COMPLETED.
 
 2. CSV File Handling and Import to Netsuite
+   
     a. A Scheduled Suite Script operates in Netsuite, fetching the CSV file from the SFTP server.
+   
     b. The Suite Script uses the CSV ImportTask function of the N/Task module to import the POS order details as Cash Sale records directly into Netsuite.
 
 3. Synchronize POS Order ID from Netsuite to HotWax Commerce
+   
     a. Export Order IDs from Netsuite:
+   
         i. A MapReduce SuiteScript is utilized in Netsuite to export the CSV file containing the internal NetSuite IDs corresponding to the processed POS orders.
+   
         ii. This CSV file is placed on the SFTP server for further synchronization.
+   
     b. POS Order Identification in HotWax Commerce:
+   
         i. A job within HotWax Commerce retrieves the exported CSV file from the SFTP server.
+
         ii. The job processes the CSV file to create Order Identification records in the OMS, linking the POS orders with their respective internal Netsuite IDs.
 
 
