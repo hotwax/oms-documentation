@@ -2,14 +2,12 @@
 
 * [Introduction](README.md)
 
-## First section
+## Integration Tools
 
-* [First page's title](first-section/first-pages-title/README.md)
-  * [Some child page](first-section/first-pages-title/some-child-page.md)
-  * [Some other child page](first-section/first-pages-title/some-other-child-page.md)
-* [Second page's title](first-section/second-pages-title/README.md)
-  * [Some child page](first-section/second-pages-title/some-child-page.md)
-  * [Some other child page](first-section/second-pages-title/some-other-child-page.md)
+* [SuiteScript](IntegrationTools/SuiteScript/README.md)
+
+* [Saved Search](IntegrationTools/SavedSearch/README.md)
+
 
 ## A second-page group​
 
