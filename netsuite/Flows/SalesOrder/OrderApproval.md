@@ -10,11 +10,45 @@ To circumvent such complexities and ensure a seamless process, a strategic shift
 ## Synchronize Customers from HotWax Commerce to Netsuite
 To successfully create a sales order in Netsuite, [it is a prerequisite to have the customer information pre-existing within Netsuite's database][netSuiteCustomer]. If the order contains a new customer not present in Netsuite, the system won't allow the order to be pushed. Therefore, it's vital to synchronize customer data from HotWax Commerce to Netsuite before order creation.
 
-Actions:
+**Actions:**
 A scheduled job in HotWax Commerce operates at defined intervals to generate a CSV file comprising customers who have not been synchronized to Netsuite. This job can be configured to run at regular intervals, typically set at an hourly frequency. Customers who haven't been synchronized within the last hour are included in this CSV file for synchronization with Netsuite.
 
 
 A Scheduled Script in HotWax Commerce is responsible for downloading the CSV file of customers not yet synchronized and utilizes the ImportTask function of the N/Task module. This script processes and creates customer records within Netsuite, ensuring that the necessary customer information is available in Netsuite for order creation.
+
+## Synchronize Sales Order from HotWax Commerce to Netsuite
+Capturing orders in HotWax Commerce initiates the creation of orders in "created" status. In this step, created sales orders are pushed from HotWax Commerce to Netsuite for further processing.
+
+**Actions:**
+A job in HotWax Commerce creates a CSV file of orders in "created" status that have not yet been sent to Netsuite. The file contains details such as unit prices, order adjustments, and shipping costs, excluding direct tax amounts. HotWax Commerce omits the tax amount from the file and sends tax codes for the individual order items because Netsuite independently computes the taxes based on these codes and applies them accurately to each order item, ensuring precise tax calculations within Netsuite.
+
+A scheduled SuiteScript in Netsuite reads the CSV file from the SFTP location and creates sales order records using the CSV Import function of the N/Task module.
+
+## Sync Sales Order Item Line IDs from Netsuite to HotWax Commerce
+This step syncs Netsuite sales order line item IDs with HotWax Commerce order items. This step is crucial as it helps in mapping and aligning the order line items in HotWax Commerce with their corresponding line item IDs in Netsuite. This synchronization enables a smooth and accurate cross-referencing of items and their relevant details between the two systems.
+
+**Actions:**
+A Map Reduce SuiteScript in Netsuite retrieves order line item IDs and generates a CSV file.
+
+A job in HotWax Commerce imports the CSV to pair Netsuite order line item IDs with appropriate order items.
+
+## Create Customer Deposit in Netsuite
+
+This step creates customer deposit records in Netsuite for authorized payments of sales orders. Generating a customer deposit in Netsuite is essential to represent authorized payments for orders. This step signifies the initiation of the financial transaction for orders.
+
+**Actions:**
+HotWax Commerce runs a scheduled job that generates a JSON file with order details and their respective grand totals.
+
+A SuiteScript in Netsuite creates customer deposit records in "undeposited" status based on the JSON file from the SFTP server. It employs the N/Record module for record creation.
+
+
+## Approval of Sales Order
+This step involves marking of  orders as "Approved" for further processing and fulfillment.This step ensures that orders are appropriately marked "Approved" once all necessary details and required references are established. This authorization triggers the routing of orders to their designated fulfillment locations.
+
+**Actions:**
+A scheduled job in HotWax Commerce validates order items and marks them "Approved."
+
+Approved orders are then processed by the brokering engine in HotWax Commerce for order routing. Following the execution of the order brokering engine, the available inventory for each order item is assessed. Consequently, the brokering engine  in HotWax Commerce assigns suitable fulfillment locations to the order items that have inventory available for fulfillment.
 
 
 <!-- page links -->
