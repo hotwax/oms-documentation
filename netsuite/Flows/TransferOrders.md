@@ -1,5 +1,4 @@
 # Transfer Orders
-
 Transfer orders are instrumental in the internal movement of inventory within an omnichannel retail environment. They are used to transfer inventory from warehouses to stores or between stores. This process is typically initiated when stores require additional inventory to meet customer demands. Retail merchandisers strategically plan inventory transfers, sourcing them either from centralized warehouses or from stores with an excess of stock that isn't selling.
 
 Similar to Purchase Orders, Transfer Orders originate within Netsuite, but there is a distinction in how they are fulfilled. When a Transfer Order is initiated from a warehouse, Netsuite's fulfillment solution is employed to fulfill the Transfer Order, ensuring the correct allocation of inventory.
