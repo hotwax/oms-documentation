@@ -24,13 +24,11 @@ The script runs periodically, typically every 15 minutes, to ensure it fetches o
 **SuiteScripts**
 
 Generate Fulfilled Transfer Order file:
-
 ```
 HC_generateCSV_FulfilledTransferOrders
 ```
 
 *Deprecated* Move Fulfilled Transfer Order file to SFTP:
-
 ```
 HC_uploadCSV_FulfilledTransferOrders
 ```
@@ -44,7 +42,6 @@ If HotWax is only being used for receiving transfer orders, the Transfer Order f
 **SFTP Locations**
 
 NetSuite pending receipt Transfer Order file: 
-
 ```
 /home/{sftp-username}/netsuite/transferorder/fulfillment-nifi
 ```
@@ -64,13 +61,11 @@ Derived Origin Facility Inv Deduction:
 **Jobs in HotWax Commerce**
 
 Import Pending Receipt Transfer Orders from SFTP:
-
 ```
 Import fulfilled Transfer Orders from NetSuite
 ```
 
 Import Inventory Deduction from Orgin Facility from SFTP:
-
 ```
 Add job name here
 ```
@@ -89,7 +84,6 @@ To facilitate the subsequent processing of this data, the JSON file is securely 
 **SFTP Locations**
 
 Received Transfer Orders:
-
 ```
 /home/{sftp-username}/netsuite/transferorder/receipt
 ```
@@ -98,7 +92,6 @@ Received Transfer Orders:
 **Jobs in HotWax Commerce**
 
 Export received inbound shipments to SFTP:
-
 ```
 Add job name here
 ```
@@ -106,6 +99,13 @@ Add job name here
 
 ### Import Item Receipts into Netsuite
 In Netsuite, a scheduled Suite Script reads the JSON files containing Item Receipt data from the SFTP location. It iterates through each record and seamlessly creates new Item Receipt records within Netsuite. The script uses the versatile N/record module to ensure a smooth transition.
+
+**SuiteScripts**
+
+Import received Transfer Order file:
+```
+HC_importTransferOrderReceipts
+```
 
 ### Automated Transfer Order Status Update
 The synchronization process extends to the automated status update of the associated Transfer Orders. Upon successful creation of Item Receipt records, the status of the Transfer Orders in Netsuite is automatically changed from "Pending" to "Received."
