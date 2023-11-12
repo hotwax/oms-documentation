@@ -25,6 +25,17 @@ The script runs periodically, typically every 15 minutes, to ensure it fetches o
 ### Import Transfer Orders into HotWax Commerce
 In HotWax Commerce, a dedicated job monitors the SFTP location, regularly checking for new Transfer Order CSV files. This job utilizes the powerful APIs provided by HotWax Commerce's Export/Import tools to import these Transfer Orders.
 
+If HotWax is only being used for receiving transfer orders, the Transfer Order file produced by NetSuite is pre-processed to generate an inventory variance file that reduces inventory for transfered products from the origin facility. After this variance file is produced, the pending receipt transfer order file is moved by HotWax to another internal FTP location where a scheduled job will process it to create inbound shipments in the OMS at the destination facility.
+
+**SFTP Locations**
+Path for NetSuite to place pending receipt Transfer Order file: 
+```/home/{sftp-username}/netsuite/transferorder/fulfillment-nifi```
+
+Path for HotWax to consume pre-processed Transfer Order file:
+```
+/home/{sftp-username}/netsuite/transferorder/fulfillment
+/home/{sftp-username}/netsuite/transferorder/fulfillment/archive
+```
 
 ### Receiving Inventory in the Store
 Store associates use the HotWax Commerce Receiving App to receive transferred inventory. The user-friendly interface of this app ensures a smooth and efficient receiving process, even for users with minimal training.
