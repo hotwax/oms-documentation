@@ -20,15 +20,16 @@ However, it's important to note a limitation: Saved Search does not allow for qu
 ## Example Scenario: Exporting Completed Customer Orders
 
 Suppose you want to export all completed customer orders from NetSuite ERP every day. Here's how SuiteScript and Saved Search come into play:
-SuiteScript Automation: We create a SuiteScript that is scheduled to run daily. This script is responsible for automating the data extraction process.
+
+- **SuiteScript Automation:** We create a SuiteScript that is scheduled to run daily. This script is responsible for automating the data extraction process.
 
 
-Saved Search Query: Within the SuiteScript code, we incorporate a "saved search" that's specifically designed to retrieve completed customer orders. The saved search is executed to obtain the relevant data.
+- **Saved Search Query:** Within the SuiteScript code, we incorporate a "saved search" that's specifically designed to retrieve completed customer orders. The saved search is executed to obtain the relevant data.
 
 
-Data Transformation: The SuiteScript processes the data returned from the saved search and formats it into a CSV or JSON file, ensuring that it is ready for external use.
+- **Data Transformation:** The SuiteScript processes the data returned from the saved search and formats it into a CSV or JSON file, ensuring that it is ready for external use.
 
 
-Data Delivery: The resulting file can be placed in an SFTP location making it accessible to external systems for further processing.
+- **Data Delivery:** The resulting file can be placed in an SFTP location making it accessible to external systems for further processing.
 
-This example showcases the harmonious interplay of SuiteScript and Saved Search in achieving a specific business task within the integration. 
+This example showcases the harmonious interplay of SuiteScript and Saved Search in achieving a specific business task within the integration.
