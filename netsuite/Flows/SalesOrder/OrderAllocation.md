@@ -36,6 +36,12 @@ HC_SC_UpdateSalesOrders
 ## Order Rejection from NetSuite
 Upcoming
 
+If a NetSuite fulfillment location cannot fulfill an order item that has been allocated to them, it is moved to a "Rejected Orders" facility. The "Rejected Orders" facility is an "undefined" type of facility, which means it is not mapped to a physical location. A SuiteScript periodically exports all the order items at this facility and places them at an SFTP location.
+
+A scheduled job in HotWax Commerce imports this rejected order item feed and moves those items back to the brokering queue to be reallocated to a new facility.
+
+
+If an order is rejected from the HotWax Store Fulfillment app with a valid inventory issue reason, then inventory delta's are also pushed to NetSuite.
 These are the valid inventory variance reasons to be pushed to NetSuite:
 - VAR_STOLEN
 - VAR_DAMANGED
