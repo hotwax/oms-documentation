@@ -1,6 +1,6 @@
 # SuiteScript
 
-NetSuite's SuiteScript is a scripting language that acts as a pivotal tool for customization and automation. It provides comprehensive application-level scripting capabilities that span both client and server sides. In our integration with NetSuite, HotWax Commerce leverages \[SuiteScript 2.X]\[https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/article\_8161516336.html#SuiteScript-2.x] APIs.
+NetSuite's SuiteScript is a scripting language that acts as a pivotal tool for customization and automation. It provides comprehensive application-level scripting capabilities that span both client and server sides. In our integration with NetSuite, HotWax Commerce leverages [SuiteScript 2.X](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/article\_8161516336.html#SuiteScript-2.x) APIs.
 
 It's worth noting that while NetSuite boasts a plethora of integration tools, our focus here is specifically on those that have played a pivotal role in our integration. Below, we offer an in-depth understanding of SuiteScript 2.X and how it has been instrumental in our integration:
 
@@ -24,38 +24,7 @@ _Unlocking SuiteScript Capabilities_
 Modules are at the core of what allows developers to work with NetSuite. Without modules, there would be no such thing as SuiteScript 2.0. SuiteScript 2.0 follows a [modular approach](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section\_1504638761.html#subsect\_1508957818) by organizing its APIs into [standard modules](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/chapter\_4220488571.html#SuiteScript-2.x-Modules). This modular approach enhances code reusability and maintainability, ensuring that each script loads only the necessary modules.
 
 Modules contain the API information needed for scripting. There are multiple modules to perform various tasks in NetSuite Suite Script, and in our integration strategy, we have focused on key modules that align with our objectives. We have documented a few of the significant modules that have played a pivotal role in our integration.
-<table data-view="cards">
-  <thead>
-    <tr>
-      <th></th>
-      <th data-type="content-ref"></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Task Module</td>
-      <td>
-        <a href="N.taskModule.md">N.taskModule.md</a>
-      </td>
-    </tr>
-    <tr>
-      <td>Record Module</td>
-      <td>
-        <a href="N.recordModule.md">N.recordModule.md</a>
-      </td>
-    </tr>
-    <tr>
-      <td>Search Module</td>
-      <td>
-        <a href="N.searchModule.md">N.searchModule.md</a>
-      </td>
-    </tr>
-    <tr>
-      <td>File Module</td>
-      <td>
-        <a href="N.fileModule.md">N.fileModule.md</a>
-      </td>
-    </tr>
-  </tbody>
-</table>
+
+<table data-view="cards"><thead><tr><th></th><th data-type="content-ref"></th></tr></thead><tbody><tr><td>Task Module</td><td><a href="N.taskModule.md">N.taskModule.md</a></td></tr><tr><td>Record Module</td><td><a href="N.recordModule.md">N.recordModule.md</a></td></tr><tr><td>Search Module</td><td><a href="N.searchModule.md">N.searchModule.md</a></td></tr><tr><td>File Module</td><td><a href="N.fileModule.md">N.fileModule.md</a></td></tr></tbody></table>
+
 These four modules together form the core of our SuiteScript-based integration, offering a comprehensive set of tools to address various aspects of our integration strategy. The strategic selection of modules, including N/task, N/Record, N/Search, and N/file, has played a pivotal role in our integration success, ensuring that our objectives are met efficiently and effectively.
