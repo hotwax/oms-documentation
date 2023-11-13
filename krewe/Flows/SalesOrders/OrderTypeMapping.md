@@ -9,259 +9,70 @@ In order to map a custom NetSuite value for each Sales Channel
 
 For mapping source based on POS facility ID, Krewe will be able to add custom Facility Identifications, allowing them to map custom values to each facility they setup. The identification types will have to be predetermined so that when HotWax syncs the order to NetSuite it is able to check specifically the Sales Channel type of facility identification and include it in the order.
 
-<details>
-    <summary>All Order Types</summary>
-    <table>
-    <thead>
-        <tr>
-        <th>Internal ID</th>
-        <th>Name</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-        <td>1</td>
-        <td>WEB</td>
-        </tr>
-        <tr>
-        <td>6</td>
-        <td>IN-STORE</td>
-        </tr>
-        <tr>
-        <td>7</td>
-        <td>OPENING</td>
-        </tr>
-        <tr>
-        <td>8</td>
-        <td>PRE-ORDER</td>
-        </tr>
-        <tr>
-        <td>9</td>
-        <td>BACKORDER</td>
-        </tr>
-        <tr>
-        <td>10</td>
-        <td>REORDER</td>
-        </tr>
-        <tr>
-        <td>107</td>
-        <td>WARRANTY</td>
-        </tr>
-        <tr>
-        <td>108</td>
-        <td>SAMPLE SALE</td>
-        </tr>
-        <tr>
-        <td>109</td>
-        <td>PRIVATE EVENT</td>
-        </tr>
-        <tr>
-        <td>110</td>
-        <td>MANUFACTURING DEFECT</td>
-        </tr>
-        <tr>
-        <td>111</td>
-        <td>GIFTING PULL</td>
-        </tr>
-        <tr>
-        <td>112</td>
-        <td>PR MEDIA</td>
-        </tr>
-        <tr>
-        <td>113</td>
-        <td>EXCHANGE</td>
-        </tr>
-        <tr>
-        <td>114</td>
-        <td>EMPLOYEE ORDER</td>
-        </tr>
-        <tr>
-        <td>115</td>
-        <td>LOST PACKAGE</td>
-        </tr>
-        <tr>
-        <td>116</td>
-        <td>REPLACEMENT</td>
-        </tr>
-        <tr>
-        <td>117</td>
-        <td>CONSIGNMENT</td>
-        </tr>
-        <tr>
-        <td>118</td>
-        <td>KREWE Foundation</td>
-        </tr>
-        <tr>
-        <td>119</td>
-        <td>MIS-PICK</td>
-        </tr>
-        <tr>
-        <td>120</td>
-        <td>ACL</td>
-        </tr>
-        <tr>
-        <td>121</td>
-        <td>BLACK FRIDAY/CYBER MONDAY</td>
-        </tr>
-        <tr>
-        <td>122</td>
-        <td>Manufacturing Pull</td>
-        </tr>
-        <tr>
-        <td>123</td>
-        <td>DONATION</td>
-        </tr>
-        <tr>
-        <td>124</td>
-        <td>CUSTOMER SERVICE</td>
-        </tr>
-        <tr>
-        <td>125</td>
-        <td>CORPORATE GIFTING</td>
-        </tr>
-        <tr>
-        <td>126</td>
-        <td>LOFT</td>
-        </tr>
-        <tr>
-        <td>127</td>
-        <td>OPTICAL ORDER</td>
-        </tr>
-        <tr>
-        <td>129</td>
-        <td>OUT OF STOCK</td>
-        </tr>
-        <tr>
-        <td>130</td>
-        <td>SHOPIFY DOWN</td>
-        </tr>
-        <tr>
-        <td>131</td>
-        <td>DOA</td>
-        </tr>
-        <tr>
-        <td>133</td>
-        <td>TEST</td>
-        </tr>
-        <tr>
-        <td>134</td>
-        <td>APRIL SALE</td>
-        </tr>
-        <tr>
-        <td>136</td>
-        <td>AMAZON</td>
-        </tr>
-        <tr>
-        <td>137</td>
-        <td>PR CELEBRITY</td>
-        </tr>
-        <tr>
-        <td>138</td>
-        <td>PR INFLUENCER</td>
-        </tr>
-        <tr>
-        <td>139</td>
-        <td>KREWE Anniversary</td>
-        </tr>
-        <tr>
-        <td>140</td>
-        <td>USO WARRANTY</td>
-        </tr>
-        <tr>
-        <td>141</td>
-        <td>ORDER ERROR</td>
-        </tr>
-        <tr>
-        <td>142</td>
-        <td>TRUNKSHOW</td>
-        </tr>
-        <tr>
-        <td>143</td>
-        <td>SUPPLY ORDER FOR RETAIL</td>
-        </tr>
-        <tr>
-        <td>144</td>
-        <td>ASSOCIATE DAMAGE</td>
-        </tr>
-        <tr>
-        <td>145</td>
-        <td>INSTAGRAM</td>
-        </tr>
-        <tr>
-        <td>146</td>
-        <td>WHOLESALE BLUE LIGHT</td>
-        </tr>
-        <tr>
-        <td>147</td>
-        <td>VISION EXPO</td>
-        </tr>
-        <tr>
-        <td>149</td>
-        <td>REMAKE - USO</td>
-        </tr>
-        <tr>
-        <td>150</td>
-        <td>REMAKE - KREWE LAB</td>
-        </tr>
-        <tr>
-        <td>151</td>
-        <td>FACEBOOK</td>
-        </tr>
-        <tr>
-        <td>152</td>
-        <td>EVENTING</td>
-        </tr>
-        <tr>
-        <td>156</td>
-        <td>GLOBAL-E</td>
-        </tr>
-        <tr>
-        <td>157</td>
-        <td>STORE CREDIT</td>
-        </tr>
-        <tr>
-        <td>158</td>
-        <td>GIFT EXCHANGE</td>
-        </tr>
-        <tr>
-        <td>159</td>
-        <td>LAB DAMAGE</td>
-        </tr>
-        <tr>
-        <td>160</td>
-        <td>FRAME DAMAGED BY CASE</td>
-        </tr>
-        <tr>
-        <td>161</td>
-        <td>TRADESHOW</td>
-        </tr>
-        <tr>
-        <td>162</td>
-        <td>SUPPLY ORDER FOR RETAIL</td>
-        </tr>
-        <tr>
-        <td>163</td>
-        <td>SUPPLY</td>
-        </tr>
-        <tr>
-        <td>164</td>
-        <td>MARDI GRAS</td>
-        </tr>
-        <tr>
-        <td>165</td>
-        <td>LOOP EXCHANGE</td>
-        </tr>
-        <tr>
-        <td>166</td>
-        <td>WHOLESALE SAMPLES</td>
-        </tr>
-        <tr>
-        <td>167</td>
-        <td>WHOLESALE SAMPLES</td>
-        </tr>
-    </tbody>
+## All Order Types
+| Internal ID | Name                           |
+|-------------|--------------------------------|
+| 1           | WEB                            |
+| 6           | IN-STORE                       |
+| 7           | OPENING                        |
+| 8           | PRE-ORDER                      |
+| 9           | BACKORDER                      |
+| 10          | REORDER                        |
+| 107         | WARRANTY                       |
+| 108         | SAMPLE SALE                    |
+| 109         | PRIVATE EVENT                  |
+| 110         | MANUFACTURING DEFECT           |
+| 111         | GIFTING PULL                   |
+| 112         | PR MEDIA                        |
+| 113         | EXCHANGE                       |
+| 114         | EMPLOYEE ORDER                  |
+| 115         | LOST PACKAGE                    |
+| 116         | REPLACEMENT                     |
+| 117         | CONSIGNMENT                     |
+| 118         | KREWE Foundation                |
+| 119         | MIS-PICK                        |
+| 120         | ACL                             |
+| 121         | BLACK FRIDAY/CYBER MONDAY       |
+| 122         | Manufacturing Pull              |
+| 123         | DONATION                        |
+| 124         | CUSTOMER SERVICE                |
+| 125         | CORPORATE GIFTING               |
+| 126         | LOFT                            |
+| 127         | OPTICAL ORDER                   |
+| 129         | OUT OF STOCK                    |
+| 130         | SHOPIFY DOWN                    |
+| 131         | DOA                             |
+| 133         | TEST                            |
+| 134         | APRIL SALE                      |
+| 136         | AMAZON                          |
+| 137         | PR CELEBRITY                    |
+| 138         | PR INFLUENCER                   |
+| 139         | KREWE Anniversary               |
+| 140         | USO WARRANTY                    |
+| 141         | ORDER ERROR                     |
+| 142         | TRUNKSHOW                       |
+| 143         | SUPPLY ORDER FOR RETAIL         |
+| 144         | ASSOCIATE DAMAGE                 |
+| 145         | INSTAGRAM                       |
+| 146         | WHOLESALE BLUE LIGHT            |
+| 147         | VISION EXPO                     |
+| 149         | REMAKE - USO                    |
+| 150         | REMAKE - KREWE LAB              |
+| 151         | FACEBOOK                        |
+| 152         | EVENTING                        |
+| 156         | GLOBAL-E                        |
+| 157         | STORE CREDIT                    |
+| 158         | GIFT EXCHANGE                   |
+| 159         | LAB DAMAGE                      |
+| 160         | FRAME DAMAGED BY CASE           |
+| 161         | TRADESHOW                       |
+| 162         | SUPPLY ORDER FOR RETAIL         |
+| 163         | SUPPLY                          |
+| 164         | MARDI GRAS                      |
+| 165         | LOOP EXCHANGE                   |
+| 166         | WHOLESALE SAMPLES               |
+| 167         | WHOLESALE SAMPLES               |
 
-</details>
 
 ## Source Data
 ```
