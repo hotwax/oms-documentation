@@ -20,6 +20,7 @@ In the Person table, entries where the roleTypeId is 'CUSTOMER' and where the Pa
 A Scheduled Script in NetSuite is responsible for downloading the CSV file of customers not yet synchronized and utilizes the ImportTask function of the N/Task module. This script processes and creates customer records within Netsuite, ensuring that the necessary customer information is available in Netsuite for order creation.
 
 **SuiteScripts**
+
 Import new customers from SFTP
 ```
 HC_SC_ImportCustomer
@@ -28,6 +29,7 @@ HC_SC_ImportCustomer
 Once customers are created in NetSuite, a scheduled script exports recenlty created customers in a file at an SFTP location to be imported by HotWax Commerce. After HotWax imports this file, the OMS now has confirmation of customer syncronization.
 
 **SuiteScripts**
+
 Export recenlty created customers to SFTP
 ```
 HC_MR_ExportedCustomerCSV
@@ -40,7 +42,6 @@ Import Customer IDs from NetSuite from SFTP
 Import Party Identification
 FTP Config: IMP_PARTY_IDENT
 ```
-
 
 - [x] Sync customers
 
@@ -89,6 +90,11 @@ HC_MR_ExportedSalesOrderItemCSV
 
 A job in HotWax Commerce imports the CSV to pair Netsuite order line item IDs with appropriate order items.
 
+**Job in HotWax Commerce**
+```
+Order Item Attribute
+FTP Config: IMP_ORDER_ITM_ATTR
+```
 
 - [x] Sync order line items
 
