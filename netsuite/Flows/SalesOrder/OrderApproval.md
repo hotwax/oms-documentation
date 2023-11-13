@@ -76,6 +76,11 @@ Export 'Created' orders with verified customers
 
 A scheduled SuiteScript in Netsuite reads the CSV file from the SFTP location and creates sales order records using the CSV Import function of the N/Task module.
 
+**SuiteScript**
+```
+HC_importSalesOrders
+```
+
 ## Sync Sales Order Item Line IDs from Netsuite to HotWax Commerce
 This step syncs Netsuite sales order line item IDs with HotWax Commerce order items. This step is crucial as it helps in mapping and aligning the order line items in HotWax Commerce with their corresponding line item IDs in Netsuite. This synchronization enables a smooth and accurate cross-referencing of items and their relevant details between the two systems. Without syncing order line item IDs, any attempt to update an order item in NetSuite would result in a new order item being created.
 
@@ -102,11 +107,29 @@ FTP Config: IMP_ORDER_ITM_ATTR
 
 This step creates customer deposit records in Netsuite for authorized payments of sales orders. Generating a customer deposit in Netsuite is essential to represent authorized payments for orders. This step signifies the initiation of the financial transaction for orders.
 
+Sync status of customer deposits to NetSuite is time driven, this means that we check the entry date of an order into HotWax Commerce and manage a cursor for the last exported timestamp. If an customer deposit creation fails, it will not be automatically retried because it will have passed the order entry time condition. 
+
+To ensure that only applicable customer deposits are created in NetSuite, orders that have been canceled or refunded will not have their deposit created. However if an order is canceled or refunded after the deposit has been creatd in NetSuite, it will have to be manually handled by a NetSuite user. HotWax provides a report for all orders that have been canceled or refunded where the customer deposit may need to be dealt with manually.
+
+<!-- name of report -->
+
 **Actions**
 
 HotWax Commerce runs a scheduled job that generates a JSON file with order details and their respective grand totals.
 
+**SFTP Locations**
+
+Export customer despot for orders with NetSuite order identification
+```
+/home/{sftp-username}/netsuite/salesorder/customerdeposit
+```
+
 A SuiteScript in Netsuite creates customer deposit records in "undeposited" status based on the JSON file from the SFTP server. It employs the N/Record module for record creation.
+
+**SuiteScript**
+```
+HC_SC_CreateCustomerDeposit
+```
 
 ## Sync Sales Order IDs from Netsuite to HotWax Commerce
 This step synchronizes Netsuite sales order IDs with orders in HotWax Commerce for tracking and identification. This step enables cross-referencing and linkage between orders in both systems, paving the way for accurate tracking and management.
@@ -119,10 +142,16 @@ A Map Reduce SuiteScript in Netsuite fetches pending fulfillment orders and gene
 
 **SuiteScript**
 ```
-HC_generateCSV_FulfilledTransferOrders
+HC_MR_ExportedSalesOrderCSV
 ```
 
 A job in HotWax Commerce imports the CSV to associate Netsuite order IDs with corresponding orders.
+
+**Job in HotWax Commerce**
+```
+Order Identification
+FTP Config: IMP_ORDER_IDENT
+```
 
 - [x] Sync order ids
 
