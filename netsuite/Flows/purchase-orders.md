@@ -23,11 +23,24 @@ To initiate the synchronization process, a Map Reduce Script, running a specific
 
 This Map Reduce script runs at regular intervals, typically every 15 minutes, ensuring that only the latest and pending Purchase Orders are fetched from Netsuite. It is meticulously designed to minimize the data transferred and processed, maintaining optimal efficiency.
 
+**SuiteScript**
+
+Create file of open purchase orders
+```
+HC_generateCSV_OpenPurchaseOrders
+```
+
+*Deprecated* move file to SFTP location
+```
+HC_uploadCSV_OpenPurchaseOrders
+```
 
 ### Import Purchase Orders into HotWax Commerce
 
 
 In HotWax Commerce, a designated job monitors the SFTP location, periodically checking for new Purchase Order CSV files. The job uses the robust APIs provided by HotWax Commerce's Export/Import tools to import these Purchase Orders.
+
+
 
 
 ### Receiving Inventory in the Store
@@ -55,7 +68,10 @@ To facilitate the subsequent processing of this data, the JSON file is securely 
 
 In Netsuite, a scheduled script retrieves the JSON files with item receipt data from the SFTP location. It then goes through each record and generates new item receipt records within Netsuite. The script uses the N/record module because the CSV import task in Netsuite doesn't accommodate item receipt records, making the JSON file the method used to transmit receipts to Netsuite.
 
-
+**SuiteScript**
+```
+HC_imortPurchaseOrderReceipts
+```
 ### Automated Purchase Order Status Update
 
 
@@ -65,3 +81,15 @@ The synchronization process doesn't stop at the creation of Item Receipts; it ex
 <!-- page links -->
 
 [receivingApp]:(https://www.hotwax.co/apps/inventory-receiving-app)
+
+
+**SuiteScript**
+```
+HC_MR_ExportedSalesOrderCSV
+```
+
+**Job in HotWax Commerce**
+```
+Order Item Fulfillment
+FTP Config: IMP_ODR_ITM_FLFLMNT
+```
