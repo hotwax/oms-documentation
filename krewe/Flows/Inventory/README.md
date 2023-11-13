@@ -7,7 +7,7 @@ There are some exception cases that are coverd in more detail in this and other 
 
 ### Kit Products
 Krewe is using the Bundles app on Shopify to create and manage Kit Products. HotWax Commerce is pre-integrated with the kit component metafields capabilities of the app.
-{% content-ref url="/KitProducts.md" %} Kit Product Details {% endcontent-ref %}
+{% content-ref url="./Flows/Inventory/KitProducts.md" %} Kit Product Details {% endcontent-ref %}
 
 Inventory count variance
 In the inventory cycle count app, users can update inventory counts and log variances for products. 
