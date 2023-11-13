@@ -155,13 +155,18 @@ FTP Config: IMP_ORDER_IDENT
 
 - [x] Sync order ids
 
-
 ## Approval of Sales Order
 This step involves marking of  orders as "Approved" for further processing and fulfillment.This step ensures that orders are appropriately marked "Approved" once all necessary details and required references are established. This authorization triggers the routing of orders to their designated fulfillment locations.
 
 **Actions**
 
 A scheduled job in HotWax Commerce validates order items and marks them "Approved."
+
+**Job in HotWax Commerce**
+```
+Approve Sales Order
+IMP_APR_SALES_ORD
+```
 
 Approved orders are then processed by the brokering engine in HotWax Commerce for order routing. Following the execution of the order brokering engine, the available inventory for each order item is assessed. Consequently, the brokering engine  in HotWax Commerce assigns suitable fulfillment locations to the order items that have inventory available for fulfillment.
 
