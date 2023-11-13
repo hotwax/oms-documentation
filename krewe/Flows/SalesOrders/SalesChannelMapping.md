@@ -52,7 +52,7 @@
 ```
 
 ## Refactored
-
+```
 {
   "source_name": "pos",
   "location_id": {
@@ -87,3 +87,4 @@
     "62776344663": 180
   }
 }
+```
