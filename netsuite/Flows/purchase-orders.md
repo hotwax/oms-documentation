@@ -40,8 +40,11 @@ HC_uploadCSV_OpenPurchaseOrders
 
 In HotWax Commerce, a designated job monitors the SFTP location, periodically checking for new Purchase Order CSV files. The job uses the robust APIs provided by HotWax Commerce's Export/Import tools to import these Purchase Orders.
 
-
-
+**Job in HotWax Commerce**
+```
+Import purchase orders
+IMP_ASN_PO_FEED
+```
 
 ### Receiving Inventory in the Store
 
@@ -62,6 +65,10 @@ This job runs at defined intervals, typically on a schedule that aligns with the
 
 To facilitate the subsequent processing of this data, the JSON file is securely placed in an SFTP location, making it accessible for Netsuite. 
 
+**SFTP Locations**
+```
+Add PO receipt SFTP location
+```
 
 ### Import Item Receipts into Netsuite
 
@@ -82,11 +89,6 @@ The synchronization process doesn't stop at the creation of Item Receipts; it ex
 
 [receivingApp]:(https://www.hotwax.co/apps/inventory-receiving-app)
 
-
-**SuiteScript**
-```
-HC_MR_ExportedSalesOrderCSV
-```
 
 **Job in HotWax Commerce**
 ```
