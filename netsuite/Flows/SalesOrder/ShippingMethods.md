@@ -2,7 +2,7 @@
 
 When syncing orders to NetSuite it's very important to have the correct shipping methods mapped. If shipping methods are not mapped correctly the order import process may fail.
 
-Here is a sample table of how shipping methods are mapped between Shopify HotWax and NetSuite
+Here is a sample table of how shipping methods are mapped between Shopify HotWax and NetSuite.
 
 | #   | Shopify Value                            | HotWax ID          | Netsuite Value                                      |
 | --- | ---------------------------------------- | ------------------ | --------------------------------------------------- |
