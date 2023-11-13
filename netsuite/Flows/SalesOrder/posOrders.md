@@ -9,41 +9,55 @@ There are two primary ways to record POS sales in Netsuite: creating sales order
 We took the approach of directly creating cash sales for POS sales data in Netsuite due to its streamlined process, eliminating the need for intervention to create additional records and allowing for immediate completion of transactions.
 
 
-### Workflow
+## Workflow
 
 The synchronization of POS sales from HotWax Commerce to Netsuite involves the creation of Cash Sale records in Netsuite, ensuring that sales data from physical stores is accurately reflected in the ERP system. By channeling all POS transactions through HotWax Commerce, retailers can leverage this integration to keep their inventory updated, perform relevant accounting postings, and maintain a consolidated view of both online and in-store sales within Netsuite.
 
+### Sync POS orders to Netsuite
 
 HotWax identifes POS completed orders that need to be synced to NetSuite by checking the following conditions. 
 - Order Status: Completed.
 - Sales Channel: POS_Channel.
 - Shipping Method: POS_COMPLETED.
 
+Orders that match these criteria as exported to an SFTP location in a CSV file.
+
+**SFTP Locations**
+```
+/home/{sftp-username}/netsuite/cashsale/export
+```
 
 {% hint style="warning" %}
 **Time based sync** HotWax uses a time based cursor to track which orders have been synced. This means if sync fails for an order, it will not be automatically retried.
 {% endhint %}
 
-1. CSV File Handling and Import to Netsuite
-   
-    a. A Scheduled Suite Script operates in Netsuite, fetching the CSV file from the SFTP server.
-   
-    b. The Suite Script uses the CSV ImportTask function of the N/Task module to import the POS order details as Cash Sale records directly into Netsuite.
 
-2. Synchronize POS Order ID from Netsuite to HotWax Commerce
-   
-    a. Export Order IDs from Netsuite:
-   
-        i. A MapReduce SuiteScript is utilized in Netsuite to export the CSV file containing the internal NetSuite IDs corresponding to the processed POS orders.
-   
-        ii. This CSV file is placed on the SFTP server for further synchronization.
-   
-    b. POS Order Identification in HotWax Commerce:
-   
-        i. A job within HotWax Commerce retrieves the exported CSV file from the SFTP server.
+A Scheduled Suite Script in Netsuite imports the file from the SFTP server. The SuiteScript uses the CSV ImportTask function of the N/Task module to import the POS order details as Cash Sale records directly into Netsuite.
 
-        ii. The job processes the CSV file to create Order Identification records in the OMS, linking the POS orders with their respective internal Netsuite IDs.
+**SuiteScript**
+```
+Add suitescript name
+```
 
+### Synchronize NetSuite POS Order ID to HotWax Commerce
+A MapReduce SuiteScript is utilized in Netsuite to export a CSV file to an SFTP location containing the internal NetSuite IDs corresponding to the processed POS orders.
+
+**SuiteScript**
+```
+Add suitescript name
+```
+**SFTP Locations**
+```
+add sftp location
+```
+
+The Import Order Identification job in HotWax Commerce then retrieves the exported CSV file from the SFTP server and creates Order Identification records in the OMS, linking the POS orders with their respective Netsuite internal IDs.
+
+**Job in HotWax Commerce**
+```
+Order Identification
+FTP Config: IMP_ORDER_IDENT
+```
 
 <!-- page links -->
 [cashSale]:https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_N407231.html#Cash-Sale-Import
