@@ -19,3 +19,12 @@ These are the FTP locations where cycle count files are placed when exported fro
 | feed.fileName.withPrefix                       | Krewe_InventoryCycleCountVarianceFeed_            |
 | hotwax.inv.cycle.count.feed.sftp.path          | hotwax/InventoryCycleCountVariance                |
 | hotwax.inv.cycle.count.feed.sftp.path.archive  | hotwax/InventoryCycleCountVariance/archive        |
+
+These are the FTP locations for pushing inventory variances recorded in store to NetSuite from HotWax
+| Variable Name                                      | Value                                            |
+|----------------------------------------------------|--------------------------------------------------|
+| destination.inv.item.variance.feed.sftp.path        | netsuite/inventoryadjustment/csv                 |
+| destination.log.inv.item.variance.feed.sftp.path    | nifi-feed-logs/netsuite/inventoryadjustment/csv |
+| feed.fileName.withPrefix                            | Krewe_InventoryItemVarianceFeed_                 |
+| hotwax.inv.item.variance.feed.sftp.path             | hotwax/InventoryItemVarianceFeed                 |
+| hotwax.inv.item.variance.feed.sftp.path.archive     | hotwax/InventoryItemVarianceFeed/archive         |
