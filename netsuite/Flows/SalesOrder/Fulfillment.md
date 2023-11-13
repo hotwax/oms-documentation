@@ -20,7 +20,6 @@ Order Item Fulfillment
 FTP Config: IMP_ODR_ITM_FLFLMNT
 ```
 
-
 - [x] Sync order item fulfillment details from NetSuite to HotWax
 
 ## Fulfillment in HotWax
@@ -33,7 +32,14 @@ While fulfillment locations are indeed transmitted to Netsuite after in-store or
 
 A scheduled job within HotWax Commerce creates a feed of outbound shipments as a JSON file and places it in an SFTP file.
 
+*to be added*
+
 A Scheduled Script in Netsuite reads the JSON file from SFTP, allocating locations to the orders within Netsuite by updating order records. Additionally, it creates fulfillment records in Netsuite based on the HotWax Commerce shipment data using the N/Record module of Netsuite. 
+
+**SuiteScript**
+```
+HC_SC_CreateItemFulfillment
+```
 
 Upon completion of this process, the orders transition to "pending_billing" status, signifying that they are fulfilled and ready for billing.
 
@@ -41,6 +47,8 @@ Upon completion of this process, the orders transition to "pending_billing" stat
 
 
 **Overall sync progress**
+
+Order fulfillment is completed and now the only step remaining is invoicing.
 
 - [x] Sync new orders from HotWax to NetSuite
   - [x] Sync customers
