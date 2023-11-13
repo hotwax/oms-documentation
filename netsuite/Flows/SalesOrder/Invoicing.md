@@ -4,11 +4,20 @@ Generating invoices in Netsuite for orders streamlines the financial processes. 
 
 **Actions**
 
-A scheduled SuiteScript in Netsuite identifies sales orders in "pending_billing" status, which have corresponding customer deposits already created (as per Step 3 and create invoice records for these orders.
+A scheduled SuiteScript in Netsuite identifies sales orders in "pending_billing" status, which have corresponding customer deposits already created.
 
-Upon generating the invoice, the status of the customer deposit is marked as "Deposited," and the invoice status changes to "Fully Applied," signifying payment reception and application to the invoice. This process also ensures all necessary accounting postings are handled in Netsuite.
+Upon generating the invoice, the status of the customer deposit is marked as "Fully Applied", and the invoice status changes to "PAID IN FULL," signifying payment reception and application to the invoice. This process also ensures all necessary accounting postings are handled in Netsuite.
+
+This step has not external dependency on jobs running in HotWax Commerce. 
+
+**SuiteScript**
+```
+HC_SC_CreateSalesOrderInvoice
+```
 
 **Overall sync progress**
+
+This is the last step of the order sync. The order lifecycle has been completed.
 
 - [x] Sync new orders from HotWax to NetSuite
   - [x] Sync customers
