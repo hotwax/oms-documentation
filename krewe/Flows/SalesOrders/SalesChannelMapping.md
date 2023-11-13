@@ -2,8 +2,14 @@
 
 ## What are Sales Channels?
 <!-- include how they are uniquely handled in Krewe and why -->
+<!-- how are they different than regular sales channels? -->
 
 ## How they're setup in HotWax
+Sales channels are determined by the facility the order is placed from. Before HotWax this information was mapped from Shopify Location ID to NetSuite Department using a Celigo Script.
+
+In HotWax, Krewe will be able to add custom Facility Identifications, allowing them to map custom values to each facility they setup. The identification types will have to be predetermined so that when HotWax syncs the order to NetSuite it is able to check specifically the Sales Channel type of facility identification and include it in the order.
+
+<!-- add actual facility type id -->
 
 ## Source Data
 ```
