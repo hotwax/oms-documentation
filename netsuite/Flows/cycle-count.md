@@ -25,6 +25,12 @@ Successful logging of an inventory count is indicated by its status being "INV_C
 
 **SFTP Locations**
 
+Inventory Cycle Count CSV:
+```
+/home/{sftp-username}/hotwax/InventoryCycleCountVariance
+/home/{sftp-username}/hotwax/InventoryCycleCountVariance/archive
+```
+
 Inventory variance of actual vs progromatic:
 ```
 /home/{sftp-username}/netsuite/inventoryadjustment/csv

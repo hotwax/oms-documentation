@@ -83,7 +83,14 @@ To facilitate the subsequent processing of this data, the JSON file is securely 
 
 **SFTP Locations**
 
-Received Transfer Orders:
+Received Transfer Orders CSV:
+**SFTP Locations**
+```
+/home/{sftp-username}/hotwax/TransferOrdersReceipt
+/home/{sftp-username}/hotwax/TransferOrdersReceipt/archive
+```
+
+Received Transfer Orders NetSuite JSON:
 ```
 /home/{sftp-username}/netsuite/transferorder/receipt
 ```

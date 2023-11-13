@@ -53,12 +53,19 @@ To ensure a comprehensive and accurate record of the items received are synchron
 
 This job runs at defined intervals, typically on a schedule that aligns with the retailer's specific requirements. It gathers the Item Receipt data and creates a JSON file, capturing all the essential details.
 
+Internal location where HotWax places CSV to convert it to NetSuite format
+<!-- gurveen please see if this is still accurate -->
+**SFTP Locations**
+```
+/home/{sftp-username}/hotwax/PurchaseOrdersReceipt
+/home/{sftp-username}/hotwax/PurchaseOrdersReceipt/archive
+```
 
 To facilitate the subsequent processing of this data, the JSON file is securely placed in an SFTP location, making it accessible for Netsuite. 
 
 **SFTP Locations**
 ```
-Add PO receipt SFTP location
+/home/{sftp-username}/netsuite/purchaseorder/receipt
 ```
 
 ### Import Item Receipts into Netsuite
