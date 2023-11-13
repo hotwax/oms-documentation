@@ -168,7 +168,7 @@ Once all checks and validations for an order to be approved are completed, HotWa
 
 A seperate job checks for orders that have this attribute added to them and internally hands them off for approval in the OMS. This is a two step process because it allows us to abstract the order approval checks from the actual order approval job, thus enabling extensiblity in the validations required for order approval for different retailers. 
 
-For example, some retailers may have an additional fraud detection check that needs to be completed before an order can be completed. Completetion of the fraud detection would add its own attribute (ex. "FRAUD_VERIFIED") to the order and the final order approval job would check both attributes before internally approving the order.
+For example, some retailers may have an additional fraud detection check that needs to be completed before an order can be approved. Completetion of the fraud detection would add its own attribute (ex. "FRAUD_VERIFIED") to the order and the final order approval job would check both attributes before internally approving the order.
 
 **SFTP Locations**
 
@@ -184,7 +184,7 @@ Export a file of orders where all attributes are added
 /home/{sftp-username}/hotwax/ApproveOrders/archive
 ```
 
-**Job in HotWax Commerce**
+**Jobs in HotWax Commerce**
 
 Add the "NETSUITE_ORDER_EXPORTED" attribute to orders
 ```
