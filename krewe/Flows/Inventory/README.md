@@ -9,15 +9,11 @@ There are some exception cases that are coverd in more detail in this and other 
 Krewe is using the Bundles app on Shopify to create and manage Kit Products. HotWax Commerce is pre-integrated with the kit component metafields capabilities of the app.
 {% content-ref url="./Flows/Inventory/KitProducts.md" %} Kit Product Details {% endcontent-ref %}
 
-Inventory count variance
-In the inventory cycle count app, users can update inventory counts and log variances for products. 
-HotWax Commerce records these variances and pushes them to Netsuite. 
-Netsuite imports the file to verify and adjust the inventory accordingly.
+### Inventory Count Variance
+The inventory cycle count app is used to update inventory counts and log variances for products. 
+HotWax Commerce syncs these variances to Netsuite in batch processes.
 
-Purchase Order
-Purchase order (PO) is created in NetSuite with vendor, product details, and expected receipt date. 
-POs that are "Pending Receipts" are  imported into HotWax.
-Stores use the HotWax Receiving app to receive purchase orders.
-Receiving inbound purchase order shipments are exported to NetSuite, and the PO status is updated to "Received" if all items are received with the expected quantity.
-In case of over receiving/under receiving:
-HotWax Commerce OMS system will receive the actual shipment at the designated store, which includes an additional/less quantity. A report will be sent from HotWax Commerce to NetSuite, containing information about the expected and accepted quantities. This report will enable NetSuite to make the necessary adjustments within the source and destination locations manually.
+### Purchase Order
+Purchase orders are created in NetSuite by Krewe. Purchase Orders that are "Pending Receipts" are imported into HotWax. Stores then use the HotWax Receiving app to receive them.
+
+Received purchase orders are exported to NetSuite. In case of over receiving/under receiving HotWax Commerce will receive the actual shipment at the designated store, which includes the over and under received quantities. A report will be sent from HotWax Commerce to Krewe Operations teams with receipts where the expected and accepted quantities do not match. This report will enable Krewe to make the necessary adjustments within the source and destination locations manually.
