@@ -8,7 +8,6 @@ It's important to remember that if items are not allocated to a "NetSuite Facili
 
 A job in HotWax Commerce generates a JSON file containing order line items and their respective fulfillment locations.
 
-
 A SuiteScript in Netsuite reads the JSON file and updates fulfillment locations in sales orders by using the N/Record module. 
 
 - [x] Sync new orders from HotWax to NetSuite
