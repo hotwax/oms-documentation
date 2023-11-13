@@ -35,3 +35,15 @@ HC_SC_UpdateSalesOrders
 
 ## Order Rejection from NetSuite
 Upcoming
+
+These are the valid inventory variance reasons to be pushed to NetSuite:
+- VAR_STOLEN
+- VAR_DAMANGED
+- VAR_FOUND
+
+**SFTP Locations**
+
+Inventory variance of actual vs progromatic:
+```
+/home/{sftp-username}/netsuite/inventoryadjustment/csv
+```

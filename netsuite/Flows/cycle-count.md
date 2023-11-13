@@ -21,10 +21,7 @@ Store associates upload the Cycle Count file from the app to the HotWax Commerce
 ### Export Inventory Variances from HotWax Commerce
 Once inventory variances are successfully logged in HotWax Commerce, a specific job is executed to create a CSV file containing all the inventory variance records. This file is then placed in an SFTP location, ensuring that it is readily accessible for further processing.
 
-These are the valid inventory variance reasons to be pushed to NetSuite:
-- VAR_STOLEN
-- VAR_DAMANGED
-- VAR_FOUND
+Successful logging of an inventory count is indicated by its status being "INV_COUNT_COMPLETED"
 
 **SFTP Locations**
 
