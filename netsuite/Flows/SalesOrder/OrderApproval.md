@@ -189,13 +189,13 @@ Export a file of orders where all attributes are added
 Add the "NETSUITE_ORDER_EXPORTED" attribute to orders
 ```
 Create or update order attribute
-MOD_ORD_ATTR
+FTP Config: MOD_ORD_ATTR
 ```
 
 Approve orders that are have required attributes
 ```
 Approve Sales Order
-IMP_APR_SALES_ORD
+FTP Config: IMP_APR_SALES_ORD
 ```
 
 Approved orders are then processed by the brokering engine in HotWax Commerce for order routing. Following the execution of the order brokering engine, the available inventory for each order item is assessed. Consequently, the brokering engine  in HotWax Commerce assigns suitable fulfillment locations to the order items that have inventory available for fulfillment.

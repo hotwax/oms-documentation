@@ -7,8 +7,19 @@ When a warehouse fulfills order items in Netsuite, fulfilled order information i
 **Actions**
 
 A Map Reduce SuiteScript generates a CSV file containing fulfilled orders and places it on the SFTP server.
+**SuiteScript**
+```
+HC_MR_ExportedSalesOrderFulfillmentCSV
+```
 
 A job in HotWax Commerce reads the file, marking order items as fulfilled in the HotWax Commerce.
+
+**Job in HotWax Commerce**
+```
+Order Item Fulfillment
+FTP Config: IMP_ODR_ITM_FLFLMNT
+```
+
 
 - [x] Sync order item fulfillment details from NetSuite to HotWax
 
@@ -27,7 +38,6 @@ A Scheduled Script in Netsuite reads the JSON file from SFTP, allocating locatio
 Upon completion of this process, the orders transition to "pending_billing" status, signifying that they are fulfilled and ready for billing.
 
 - [x] Sync order item fulfillment details from HotWax to NetSuite
-
 
 
 **Overall sync progress**
