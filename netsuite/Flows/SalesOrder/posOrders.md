@@ -18,7 +18,7 @@ The synchronization of POS sales from HotWax Commerce to Netsuite involves the c
    
    a. Data Preparation in HotWax Commerce:
    
-        i. HotWax Commerce runs a synchronized job to generate a CSV file containing POS orders that have not been previously synchronized to Netsuite. The conditions for identifying POS orders include:
+       i. HotWax Commerce runs a synchronized job to generate a CSV file containing POS orders that have not been previously synchronized to Netsuite. The conditions for identifying POS orders include:
    
             1. Order Status: Completed.
    
