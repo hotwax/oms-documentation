@@ -11,4 +11,4 @@ Moreover, the N/Record module extends its capabilities to include the creation, 
 [csvSupport]:https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_N356360.html#Supported-Record-Types-for-CSV-Import
 
 <!-- add link to NFile page -->
-[sftpFiles]:
+<!-- [sftpFiles]: -->
