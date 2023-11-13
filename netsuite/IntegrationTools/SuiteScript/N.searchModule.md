@@ -4,4 +4,6 @@ The [N/Search module][searchModule] plays a pivotal role in our integration stra
 
 Furthermore, developers can also harness existing SavedSearchIds created through NetSuite's user interface.
 
+
+<!-- page links -->
 [searchModule]:https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_4345764122.html#N%2Fsearch-Module

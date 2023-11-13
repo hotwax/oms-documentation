@@ -6,6 +6,8 @@ In such scenarios, we employ the N/Record module to bridge this gap. By writing 
 
 Moreover, the N/Record module extends its capabilities to include the creation, deletion, copying, loading, or modification of standard NetSuite records. This versatile module plays a central role in our integration, facilitating the manipulation of native NetSuite records to achieve seamless data synchronization.
 
+<!-- page links -->
+
 [csvSupport]:https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_N356360.html#Supported-Record-Types-for-CSV-Import
 
 <!-- add link to NFile page -->
