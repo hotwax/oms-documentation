@@ -39,15 +39,15 @@ Sample snippet from full JSON file:
 
 
 
-| Parameter | Description | Required |
-| ---- | ----------- | -------- |
-| `itemQuantity` | Ordered quantity | Yes |
-| `productId` | The internal Id of the product in HotWax | Yes |
-| `facilityId` | The internal Id of the facility in HotWax | Yes |
-| `facilityExternalId` | The Id of the facility in the external systems | Yes |
-| `facilityTypeId` | The type of the facility | Yes |
-| `ParentFacilityTypeId` | The type of the parent facility, used to group various facility types. | Yes |
-| `shippedQuantity` | The quantity of items shipped from the ordered quantity. | Yes |
-| `goodIdentifications` | All identifications of the product in HotWax Commerce used to identify the product in external systems | Yes |
-| `goodIdentificationTypeId` | The type of the unique product Identifier in the external systems (e.g. Shopify product SKU) | Yes |
-| `IdValue` | The value of the GoodIdentificationTypeId | Yes |
+| Parameter | Description |
+| ---- | ----------- | 
+| `itemQuantity` | Ordered quantity | 
+| `productId` | The internal Id of the product in HotWax | 
+| `facilityId` | The internal Id of the facility in HotWax | 
+| `facilityExternalId` | The Id of the facility in the external systems | 
+| `facilityTypeId` | The type of the facility | 
+| `ParentFacilityTypeId` | The type of the parent facility, used to group various facility types. | 
+| `shippedQuantity` | The quantity of items shipped from the ordered quantity. | 
+| `goodIdentifications` | All identifications of the product in HotWax Commerce used to identify the product in external systems |
+| `goodIdentificationTypeId` | The type of the unique product Identifier in the external systems (e.g. Shopify product SKU) | 
+| `IdValue` | The value of the GoodIdentificationTypeId | 
