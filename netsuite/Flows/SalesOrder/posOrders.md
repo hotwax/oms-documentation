@@ -4,9 +4,9 @@ In a retail environment, POS (Point of Sale) transactions play a vital role, ref
 
 ## Different Approaches for Posting POS Sales to Netsuite
 
-There are two primary ways to record POS sales in Netsuite: creating sales orders or directly creating [cash sales][cashSale] records. Creating sales orders necessitates additional steps such as creating customer deposits, fulfillment records, and invoices. Cash Sale transactions represent immediate sales with received payment, eliminating the need to create fulfillment records, unlike conventional sales orders. So, opting to create cash sales bypasses these individual steps, automatically handling these processes within Netsuite.
+There are two primary ways to record POS sales in Netsuite: creating sales orders or directly creating [cash sales][cashSale] records. Creating sales orders necessitates additional steps such as creating customer deposits, fulfillment records, and invoices. Cash Sale transactions represent immediate sales with received payment, eliminating the need to create fulfillment records, unlike conventional sales orders.
 
-We took the approach of directly creating cash sales for creating POS sales data in Netsuite due to its streamlined process, eliminating the need for intervention to create additional records and allowing for immediate completion of transactions.
+We took the approach of directly creating cash sales for POS sales data in Netsuite due to its streamlined process, eliminating the need for intervention to create additional records and allowing for immediate completion of transactions.
 
 
 ### Workflow
@@ -14,25 +14,23 @@ We took the approach of directly creating cash sales for creating POS sales data
 The synchronization of POS sales from HotWax Commerce to Netsuite involves the creation of Cash Sale records in Netsuite, ensuring that sales data from physical stores is accurately reflected in the ERP system. By channeling all POS transactions through HotWax Commerce, retailers can leverage this integration to keep their inventory updated, perform relevant accounting postings, and maintain a consolidated view of both online and in-store sales within Netsuite.
 
 
-1. Create CSV for POS Orders and place the CSV file is placed on the SFTP server for further processing
-   
-   a. Data Preparation in HotWax Commerce:
-   
-       i. HotWax Commerce runs a synchronized job to generate a CSV file containing POS orders that have not been previously synchronized to Netsuite. The conditions for identifying POS orders include:
-   
-            1. Order Status: Completed.
-   
-            2. Sales Channel: POS_Channel.
-   
-            3. Shipping Method: POS_COMPLETED.
+HotWax identifes POS completed orders that need to be synced to NetSuite by checking the following conditions. 
+- Order Status: Completed.
+- Sales Channel: POS_Channel.
+- Shipping Method: POS_COMPLETED.
 
-2. CSV File Handling and Import to Netsuite
+
+{% hint style="warning" %}
+**Time based sync** HotWax uses a time based cursor to track which orders have been synced. This means if sync fails for an order, it will not be automatically retried.
+{% endhint %}
+
+1. CSV File Handling and Import to Netsuite
    
     a. A Scheduled Suite Script operates in Netsuite, fetching the CSV file from the SFTP server.
    
     b. The Suite Script uses the CSV ImportTask function of the N/Task module to import the POS order details as Cash Sale records directly into Netsuite.
 
-3. Synchronize POS Order ID from Netsuite to HotWax Commerce
+2. Synchronize POS Order ID from Netsuite to HotWax Commerce
    
     a. Export Order IDs from Netsuite:
    
