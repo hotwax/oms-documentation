@@ -33,6 +33,15 @@ Export recenlty created customers to SFTP
 HC_MR_ExportedCustomerCSV
 ```
 
+**Jobs in HotWax Commerce**
+
+Import Customer IDs from NetSuite from SFTP
+```
+Import Party Identification
+FTP Config: IMP_PARTY_IDENT
+```
+
+
 - [x] Sync customers
 
 ## Synchronize Sales Order from HotWax Commerce to Netsuite
@@ -42,18 +51,44 @@ Capturing orders in HotWax Commerce initiates the creation of orders in "created
 
 A job in HotWax Commerce creates a CSV file of orders in "created" status that have not yet been sent to Netsuite. The file contains details such as unit prices, order adjustments, and shipping costs, excluding direct tax amounts. HotWax Commerce omits the tax amount from the file and sends tax codes for the individual order items because Netsuite independently computes the taxes based on these codes and applies them accurately to each order item, ensuring precise tax calculations within Netsuite.
 
+*add details about how coupon codes are synced to HC*
 
+If an order has a discount code applied to it, during order sync to NetSuite, HotWax checks if the applied code is available in NetSuite. If the code is available then the exact code is used and the value of the discount is shared as the "Rate". In the event that the code is not available in NetSuite, HotWax will use a default discount code 'SHOPIFY DISCOUNT' along with the value of the discount.
+
+Item level discounts have special handling as well. They are synced as a seperate line item in the order using a "SHOPIFY DISCOUNT" item, however HotWax does not send an order line id for this item. The amount of the adjustment is added in the "Amount" field when preparing the CSV for NetSuite and the "Price Level" is always set to "Custom".
+
+The price for products is not sent by HotWax when the order syncs to NetSuite. Instead NetSuite automatically adds the value of the product apon order creation based on the price of the product in NetSuite.
+
+For retailers that use Avatax, the Tax Code and Shipping Tax Code will always contain "AVATAX" when sent from HotWax. Avalara Tax calculation will automatically compute taxes on the order in NetSuite when the order is created.
+
+### Handling NetSuite file size limits
+We've added a limit to how many orders can be synced in one file to NetSuite to ensure the NetSuite file size limit is not breached. NetSuite has a limit of 25,000 rows in one CSV, so if your order volume in one sync duration exceeds this limit, we automatically paginate the file to ensure NetSuite does not reject the file. Another thing we kept in mind is that during pagination, one order should not be split into seperate files because this could lead to errors in the order import process in NetSuite. Assuming that most e-Commerce orders contain 10 or less items, we've set an upper limit of 1000 orders per file. This should keep the file size well below NetSuite's limit while also leaving buffer for orders with more line items.
+
+Though it may seem like this would significanlty slow down the order sync, this is not actually the case. All valid orders are still exported from HotWax Commerce at once and then paginated for NetSuite, this means all the order files are available for NetSuite to process and the speed at which they're processed is determined by the configuration of NetSuite used by the retailer. Higher configurations will have faster and more concurrent file process capabilites.
+
+**SFTP Locations**
+
+Export 'Created' orders with verified customers
+```
+/home/{sftp-username}/netsuite/salesorder/export
+```
 
 A scheduled SuiteScript in Netsuite reads the CSV file from the SFTP location and creates sales order records using the CSV Import function of the N/Task module.
 
 ## Sync Sales Order Item Line IDs from Netsuite to HotWax Commerce
-This step syncs Netsuite sales order line item IDs with HotWax Commerce order items. This step is crucial as it helps in mapping and aligning the order line items in HotWax Commerce with their corresponding line item IDs in Netsuite. This synchronization enables a smooth and accurate cross-referencing of items and their relevant details between the two systems.
+This step syncs Netsuite sales order line item IDs with HotWax Commerce order items. This step is crucial as it helps in mapping and aligning the order line items in HotWax Commerce with their corresponding line item IDs in Netsuite. This synchronization enables a smooth and accurate cross-referencing of items and their relevant details between the two systems. Without syncing order line item IDs, any attempt to update an order item in NetSuite would result in a new order item being created.
 
 **Actions**
 
 A Map Reduce SuiteScript in Netsuite retrieves order line item IDs and generates a CSV file.
 
+**SuiteScript**
+```
+HC_MR_ExportedSalesOrderItemCSV
+```
+
 A job in HotWax Commerce imports the CSV to pair Netsuite order line item IDs with appropriate order items.
+
 
 - [x] Sync order line items
 
@@ -73,8 +108,13 @@ This step synchronizes Netsuite sales order IDs with orders in HotWax Commerce f
 The synchronization of Sales Order IDs from Netsuite to HotWax Commerce is a critical step as it serves as an indicator that the orders in HotWax Commerce have been successfully integrated into Netsuite. Additionally, it is an essential step for various functions, including the creation of item fulfillment, return authorization, and customer deposit records in Netsuite. 
 
 **Actions**
+
 A Map Reduce SuiteScript in Netsuite fetches pending fulfillment orders and generates a CSV file with internal sales order IDs.
 
+**SuiteScript**
+```
+HC_generateCSV_FulfilledTransferOrders
+```
 
 A job in HotWax Commerce imports the CSV to associate Netsuite order IDs with corresponding orders.
 
