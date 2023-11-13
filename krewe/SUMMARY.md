@@ -10,3 +10,4 @@
   * [Order Types](Flows/SalesOrders/OrderTypeMapping.md)
 * [Inventory](Flows/Inventory/README.md)
   * [Kit Products](Flows/Inventory/KitProducts.md)
+  * [Cycle Count](Flows/Inventory/CycleCount.md)
