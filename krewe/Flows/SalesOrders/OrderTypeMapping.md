@@ -3,7 +3,77 @@
 ## What are Order Types?
 
 ## How they're setup in HotWax
+Order types are determined by either by the Shopify Source of the order or the the facility the order is placed from if its a POS sale. Before HotWax this information was mapped from Shopify Source and Location ID to NetSuite Order Type using a Celigo Script.
 
+In order to map a custom NetSuite value for each Sales Channel
+
+For mapping source based on POS facility ID, Krewe will be able to add custom Facility Identifications, allowing them to map custom values to each facility they setup. The identification types will have to be predetermined so that when HotWax syncs the order to NetSuite it is able to check specifically the Sales Channel type of facility identification and include it in the order.
+
+<details>
+    <summary>All Order Types</summary>
+    | Internal ID | Name                           |
+    |-------------|--------------------------------|
+    | 1           | WEB                            |
+    | 6           | IN-STORE                       |
+    | 7           | OPENING                        |
+    | 8           | PRE-ORDER                      |
+    | 9           | BACKORDER                      |
+    | 10          | REORDER                        |
+    | 107         | WARRANTY                       |
+    | 108         | SAMPLE SALE                    |
+    | 109         | PRIVATE EVENT                  |
+    | 110         | MANUFACTURING DEFECT           |
+    | 111         | GIFTING PULL                   |
+    | 112         | PR MEDIA                        |
+    | 113         | EXCHANGE                       |
+    | 114         | EMPLOYEE ORDER                  |
+    | 115         | LOST PACKAGE                    |
+    | 116         | REPLACEMENT                     |
+    | 117         | CONSIGNMENT                     |
+    | 118         | KREWE Foundation                |
+    | 119         | MIS-PICK                        |
+    | 120         | ACL                             |
+    | 121         | BLACK FRIDAY/CYBER MONDAY       |
+    | 122         | Manufacturing Pull              |
+    | 123         | DONATION                        |
+    | 124         | CUSTOMER SERVICE                |
+    | 125         | CORPORATE GIFTING               |
+    | 126         | LOFT                            |
+    | 127         | OPTICAL ORDER                   |
+    | 129         | OUT OF STOCK                    |
+    | 130         | SHOPIFY DOWN                    |
+    | 131         | DOA                             |
+    | 133         | TEST                            |
+    | 134         | APRIL SALE                      |
+    | 136         | AMAZON                          |
+    | 137         | PR CELEBRITY                    |
+    | 138         | PR INFLUENCER                   |
+    | 139         | KREWE Anniversary               |
+    | 140         | USO WARRANTY                    |
+    | 141         | ORDER ERROR                     |
+    | 142         | TRUNKSHOW                       |
+    | 143         | SUPPLY ORDER FOR RETAIL         |
+    | 144         | ASSOCIATE DAMAGE                 |
+    | 145         | INSTAGRAM                       |
+    | 146         | WHOLESALE BLUE LIGHT            |
+    | 147         | VISION EXPO                     |
+    | 149         | REMAKE - USO                    |
+    | 150         | REMAKE - KREWE LAB              |
+    | 151         | FACEBOOK                        |
+    | 152         | EVENTING                        |
+    | 156         | GLOBAL-E                        |
+    | 157         | STORE CREDIT                    |
+    | 158         | GIFT EXCHANGE                   |
+    | 159         | LAB DAMAGE                      |
+    | 160         | FRAME DAMAGED BY CASE           |
+    | 161         | TRADESHOW                       |
+    | 162         | SUPPLY ORDER FOR RETAIL         |
+    | 163         | SUPPLY                          |
+    | 164         | MARDI GRAS                      |
+    | 165         | LOOP EXCHANGE                   |
+    | 166         | WHOLESALE SAMPLES               |
+    | 167         | WHOLESALE SAMPLES               |
+</details>
 
 ## Source Data
 ```
