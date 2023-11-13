@@ -1,6 +1,7 @@
 # Order Type
 
 ## What are Order Types?
+Order types help Krewe categorize their orders based on a variety of business cases. Some may be related to seasonal events such as Mardi Gras while others simply identify that an order is an Employee Order. These order types eventually help Krewe run analyitcs on their orders and identify issues or measure sale performance.
 
 ## How they're setup in HotWax
 Order types are determined by either by the Shopify Source of the order or the the facility the order is placed from if its a POS sale. Before HotWax this information was mapped from Shopify Source and Location ID to NetSuite Order Type using a Celigo Script.
