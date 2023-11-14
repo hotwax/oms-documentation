@@ -8,25 +8,30 @@ System Properties need to be added from the XML data import page in WebTools, th
 <!-- Generally good defaults will work -->
 <SystemProperty systemResourceId="general" systemPropertyId="ORGANIZATION_PARTY" systemPropertyValue="COMPANY" description="The default organizationPartyId for used in dropdowns and reports"/>
 
-<SystemProperty systemResourceId="BuynowConfig" systemPropertyId="buynow.productStore.productStoreName" systemPropertyValue="Default product store"/>
+<SystemProperty systemResourceId="BuynowConfig" systemPropertyId="buynow.productStore.productStoreName" systemPropertyValue="{Product Store Name}"/>
+```
 
-
+**Data for UK Customers**
+```
 <!-- Customized in case of non US customers -->
 <SystemProperty systemResourceId="general" systemPropertyId="currency.uom.id.default" systemPropertyValue="British Pound" description="The default currency to use for prices, etc"/>
 
 <SystemProperty systemResourceId="general" systemPropertyId="country.geo.id.default" systemPropertyValue="UK" description="The default country for drop downs, phone number validation etc"/>
+```
 
-<!-- Add shipment weight in Kg in UK while in US add lb -->
+**Kg weight UOM:**
+```
 <SystemProperty systemResourceId="shipment" systemPropertyId="shipment.default.weight.uom" systemPropertyValue="WT_kg" description="The shipment weight to use for shipment, etc"/>
+```
 
-Or
-
+**Lb weight UOM**
+```
 <SystemProperty systemResourceId="shipment" systemPropertyId="shipment.default.weight.uom" systemPropertyValue="WT_lb" description="The shipment weight to use for shipment, etc"/>
 
-
 <SystemProperty systemResourceId="shipment" systemPropertyId="shipment.default.dimension.uom" systemPropertyValue="LEN_in" description="The shipment dimension to use for shipment, etc"/>
+```
 
-
+```
 <SystemProperty systemResourceId="BuynowCatalog" systemPropertyId="default.weight.uom" systemPropertyValue="WT_lb" description="The default weight to use for prices, etc"/>
 
 <SystemProperty systemResourceId="DateTimeFormats" systemPropertyId="date.format.short" systemPropertyValue="MM-dd-yyyy"/>
@@ -34,16 +39,18 @@ Or
 <SystemProperty systemResourceId="DateTimeFormats" systemPropertyId="date.format.long" systemPropertyValue="MM-dd-yyyy hh:mm:ss a"/>
 
 <SystemProperty systemResourceId="DateTimeFormats" systemPropertyId="date.format.default" systemPropertyValue="MM-dd-yyyy hh:mm a"/>
+```
 
-
+**Pre-order data**
+```
 <!-- Backorder and Preorder settings -->
 <SystemProperty systemResourceId="PreorderConfig" systemPropertyId="STORE.is.backorder.enabled" systemPropertyValue="Y" description="Flag to identify backorder setting for product store"/>
 
 <SystemProperty systemResourceId="ShopifyServiceConfig" systemPropertyId="CONFIG.preorder.item.property.name" systemPropertyValue="Pre-Order"/>
+```
 
-
-
-
+**Instance Specific Configs**
+```
 <!-- Always customized -->
 <SystemProperty systemResourceId="content" systemPropertyId="baseUrl" systemPropertyValue="https://{your-instance}.hotwax.io"/>
 
