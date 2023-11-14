@@ -1,12 +1,11 @@
 # Payment Method Mappings
-
 This page contains the payment method mappings for Shopify <> HotWax <> NetSuite
 
 ## How they're setup in HotWax
 <!-- need to add -->
+Because payment methods are not frequently changed, their NetSuite mappings are not available to edit from a UI. Instead they are stored in the integration layer between the systems.
 
 ## Mappings
-
 | Shopify Value            | HotWax ID               | Netsuite Value        |
 |--------------------------|-------------------------|-----------------------|
 | Ecomm giftcard           | EXT_SHOP_ECOM_GFTCRD    | Gift Card             |
