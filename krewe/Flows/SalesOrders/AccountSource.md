@@ -9,4 +9,3 @@ Within NetSuite, the account soucre field maps the customer to a correspondig ma
 We've created Party Classification Groups in HotWax Commerce that have the same internal ID as the Sales Channel Enumeration so that during synchronization with NetSuite their source can be easiliy identified. At the time of customer creation in HotWax, it's linked Sales Order's sales channel ID is used to identify which Party Classification Group to add it to.
 
 When HotWax generates a feed of new customers to be synced with NetSuite, it identifies all customers that do not have a NetSuite Identification and the party classification that they're linked to.
-

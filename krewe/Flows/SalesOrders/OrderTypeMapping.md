@@ -7,9 +7,9 @@ Order types help Krewe categorize their orders based on a variety of business ca
 The order type is a category that associates attributes to sales and transfer orders. In NetSuite WMS, you can create an accounting list of multiple order types and associate each outbound sales or transfer order with one order type.
 
 ## How they're setup in HotWax
-Order types are determined by either by the Shopify Source of the order or the the facility the order is placed from if its a POS sale. Before HotWax this information was mapped from Shopify Source and Location ID to NetSuite Order Type using a Celigo Script.
+Order types are determined by either by the Shopify Source of the order or the the facility the order is placed from if its a POS sale. Before HotWax, this information was mapped from Shopify Source and Location ID to NetSuite Order Type using a Celigo Script.
 
-In order to map a custom NetSuite value for each Sales Channel
+In order to map a custom NetSuite value for each Sales Channel, we've effectively added an external ID to that sales channel. Each sales channel in HotWax Commerce is stored in the list of enumerations of the system. Enumerations have a field "Enum Code" which can be used to store an external identification value, this is where we store the NetSuite Order Type to be used during order sync.
 
 For mapping source based on POS facility ID, Krewe will be able to add custom Facility Identifications, allowing them to map custom values to each facility they setup. The identification types will have to be predetermined so that when HotWax syncs the order to NetSuite it is able to check specifically the Sales Channel type of facility identification and include it in the order.
 
