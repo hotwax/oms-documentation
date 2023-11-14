@@ -13,12 +13,12 @@
 * [Load System Property data](InitialSetup/LoadSystemPropertys.md)
 
 ## User and Gateway Configuration
-*[Create your users](UserandGatewayConfig/CreateUser.md)
-*[Shipping gateways](UserandGatewayConfig/ShippingGateways.md)
+* [Create your users](UserandGatewayConfig/CreateUser.md)
+* [Shipping gateways](UserandGatewayConfig/ShippingGateways.md)
 
 ## Shopify Integration
-*[Connect a Shopify Store](ShopifyIntegration/README.md)
-  *[Map Shopify locations](ShopifyIntegration/MapLocations.md)
-  *[Setup Shopify Mappings](ShopifyIntegration/MapLocations.md)
-*[Sync with Shopify](ShopifyIntegration/SyncShopify.md)
+* [Connect a Shopify Store](ShopifyIntegration/README.md)
+  * [Map Shopify locations](ShopifyIntegration/MapLocations.md)
+  * [Setup Shopify Mappings](ShopifyIntegration/MapLocations.md)
+* [Sync with Shopify](ShopifyIntegration/SyncShopify.md)
 
