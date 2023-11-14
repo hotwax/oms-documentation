@@ -2,7 +2,7 @@
 
 ## Introduction
 
-HotWax Commerce’s [Job Manager App](https://www.hotwax.co/apps/job-manager-app) enables you to view, schedule, and update job workflows running in the HotWax Commerce's Order Management System for operations related to orders, products, inventory and more.&#x20;
+HotWax Commerce’s [Job Manager App](https://www.hotwax.co/apps/job-manager-app) enables you to view, schedule, and update job workflows running in the HotWax Commerce's Order Management System for operations related to orders, products, inventory and more.
 
 
 
