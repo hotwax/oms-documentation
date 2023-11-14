@@ -1,0 +1,6 @@
+== Q. Can store associates create a picklist only for selected orders?
+
+Yes, store associates can search orders by order ID (if multiple orders are to be searched then order ID can be separated by comma) before creating a picklist for these orders.
+
+=== For more details please refer picklistDataSetup service:
+link:../Services/picklistDataSetup.adoc[picklistDataSetup]

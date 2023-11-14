@@ -1,0 +1,3 @@
+== Q. If a delivery ordered item is rejected by a store. Can the same ordered item be allocated to the store on re-brokering?
+
+No, if a delivery ordered item is rejected by a store, it will be allocated to the store on re-brokering. The ordered item will be allocated to a different location and if no other location is able to fulfill the order the item be marked unfillable in OMS.

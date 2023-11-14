@@ -1,0 +1,22 @@
+= bulkRejectStoreInProgressOrders
+
+This service is used to route all in-progress orders to rebrokering. While tapping on the recycle-in-progress-orders button, recycleInProgressOrders request will be called which further invokes bulkRejectStoreInProgressOrders service.
+
+== Properties
+Following are the attributes used in below service:
+
+[width="100%", cols="4" options="header"]
+|=======
+|Attribute |Type |Required| Description
+|facilityId|String|Yes|This attribute contains the unique ID of facility in OMS.
+|reasonId|String|No|This attribute contains the unique ID of reason in OMS. Accepts predefined values in the system.
+|=======
+
+== Inline Services
+
+=== rejectInProgressOrder
+This service is used to route in-progress order to rebrokering.
+
+* If the record of Shipment exists for the order/picklistBin then invokes updateShipment service with statusId as SHIPMENT_CANCELLED.
+* If the record of ShipmentItemBilling exists for the shipment then invokes voidSalesInvoice service to remove all ShipmentItemBilling records using deleteShipmentItemBilling service.
+* If the record of PicklistItem exists for the picklistBin and itemStatusId is PICKITEM_PENDING then invokes updatePicklistItem service with itemStatusId as PICKITEM_CANCELLED and also invokes the rejectOrderItem service with recordVariance as Y and rejectComments as Store Rejected Inventory.

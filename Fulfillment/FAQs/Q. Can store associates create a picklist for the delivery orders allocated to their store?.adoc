@@ -1,0 +1,6 @@
+== Q. Can store associates create a picklist for the delivery orders allocated to their store?
+
+Yes, store associates can create a picklist for the delivery orders allocated to their stores from the 'Orders' tab for the store fulfillment app.
+
+=== For more details please refer picklistDataSetup service:
+link:../Services/picklistDataSetup.adoc[picklistDataSetup]

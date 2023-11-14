@@ -1,0 +1,6 @@
+== Q. If a store is unable to fulfill in-progress orders allocated to it. Can a store manager recycle all the in-progress orders?
+
+Yes, a store manager can recycle all the in-progress orders from the administration screen. All the orders allocated to the store for which a picklist is created but are not packed (i.e. orders displayed in the 'In Progress' tab) will be sent for re-brokering to a different location.
+
+=== For more details please refer bulkRejectStoreInProgressOrders service:
+link:../Services/bulkRejectStoreInProgressOrders.adoc[bulkRejectStoreInProgressOrders]

@@ -1,0 +1,55 @@
+= completeOrderItem
+
+This service is used to complete/fulfill the order items from warehouse facility.
+
+* If items belong to same shipgroup, they will be shipped in same shipment.
+* A new shipment is created if the shipgroup is different.
+* For more than one quantity, item would get reiterated from API call. This will be handled by the createShipmentItemPackageContent service.
+
+== Properties
+Following are the attributes used in below API:
+
+[width="100%", cols="4" options="header"]
+|=======
+|Attribute |Type |Required| Description
+|orderId|String|Yes|This attribute contains the unique ID of order in OMS.
+|item|Map|Yes|This attribute contains the unique ID of order-item in OMS.
+|shipmentMethodTypeId|String|Yes|This attribute contains the unique ID of shipment method type in OMS.
+|facilityId|String|Yes|This attribute contains the unique ID of facility in OMS.
+|shipGroupSeqId|String|No|This attribute contains ship group sequence ID.
+|shipmentBoxTypeId|String|No|This attribute contains the type of box used in the shipment like YOURPACKNG.
+|dimensionUomId|String|No|This attributes contains dimension UOM of shipment package. like WT_lb, WT_kg e.t.c.
+|weightUomId|String|No|his attribute contains weight UOM of the shipment.
+|weight|String|No|This attribute contains weight of the shipment.
+|carrierPartyId|String|No|This attribute contains carrier party ID.
+|=======
+
+== Inline Services
+
+=== updatePicklistItem
+This service is used to update picklistItem after completing the item, If the picklistItems exists for the passed parameters with itemStatusId not in PICKLIST_CANCELLED, PICKLIST_COMPLETED,PICKLIST_PICKED. Picklist will be marked as picked.
+
+=== createShipment
+This service is used to create a new shipment. After updating the picklistItem, system checks following:
+
+* While iterating the item, first check the existing shipment of the shipGroup with statusId as SHIPMENT_INPUT
+* This will ensure that the same shipGroup items are packed in same shipment.
+* In case, shipGroup is different, then create a new shipment.
+
+=== createShipmentPackage
+This service is used to create shipment package after creating new shipment using checkCanChangeShipmentStatusPacked and ensurePackageRouteSeg methods.
+
+=== createOrderShipmentItem
+This service is used to create shipment package contents with order-shipment and shipment-item records using createOrderShipment/updateOrderShipment, createShipmentItem/updateShipmentItem and createShipmentPackageContent/updateShipmentPackageContent services
+
+=== updateShipmentRouteSegment
+This service is used to update shipment route segment with tracking number using checkCanChangeShipmentStatusDelivered and ensureRouteSegPackage methods.
+
+=== createShipmentStatus
+This service is used to create shipment status using entity-auto engine with SHIPMENT_PACKED statusId.
+
+=== updateShipment
+If there is some error in createShipmentStatus service then updateShipment service will be invoke with SHIPMENT_SHIPPED statusId.
+
+=== For more details please refer completeOrderItem API:
+link:../APIs/completeOrderItem.adoc[completeOrderItem]

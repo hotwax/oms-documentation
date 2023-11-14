@@ -1,0 +1,20 @@
+= bulkPackOrders
+
+This service is used to mark all the order items as picked in bulk. While tapping on the print-shipping-labels-and-customer-letter button in the in-progress segment, printShippingLabelAndPackingSlip request will be called which further invokes bulkPackStoreFulfillmentOrders service.
+
+== Properties
+Following are the attributes used in below service:
+
+[width="100%", cols="4" options="header"]
+|=======
+|Attribute |Type |Required| Description
+|shipmentId|List|Yes|This attribute contains the unique ID of shipment in OMS.
+|=======
+
+== Inline Services
+
+=== packStoreFulfillmentOrder
+This service is used to mark the picklist bin items as picked and shipment as packed.
+
+=== For more details please refer packStoreFulfillmentOrder service:
+link:../Services/packStoreFulfillmentOrder.adoc[packStoreFulfillmentOrder]

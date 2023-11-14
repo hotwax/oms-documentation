@@ -1,0 +1,55 @@
+== Index of FAQS
+
+link:https://github.com/hotwax/oms-documentation/blob/fulfillment/Fulfillment/FAQs/Q.%20How%20delivery%20order%20or%20delivery%20order%20items%20are%20imported%20in%20OMS%3F.adoc[Q. How delivery order or delivery order items are imported in OMS?]
+
+link:https://github.com/hotwax/oms-documentation/blob/fulfillment/Fulfillment/FAQs/Q.%20How%20can%20store%20associates%20view%20all%20the%20delivery%20orders%20allocated%20to%20their%20store%20for%20fulfillment%3F.adoc[Q. How can store associates view all the delivery orders allocated to their store for fulfillment?]
+
+link:https://github.com/hotwax/oms-documentation/blob/fulfillment/Fulfillment/FAQs/Q.%20Can%20store%20associates%20create%20a%20picklist%20for%20the%20delivery%20orders%20allocated%20to%20their%20store%3F.adoc[Q. Can store associates create a picklist for the delivery orders allocated to their store?]
+
+link:https://github.com/hotwax/oms-documentation/blob/fulfillment/Fulfillment/FAQs/Q.%20Can%20store%20associate%20filter%20orders%20based%20on%20shipping%20method%20before%20creating%20a%20picklist%3F.adoc[Q. Can store associate filter orders based on shipping method before creating a picklist?]
+
+link:https://github.com/hotwax/oms-documentation/blob/fulfillment/Fulfillment/FAQs/Q.%20Can%20store%20associates%20select%20the%20number%20of%20orders%20in%20a%20picklist%3F.adoc[Q. Can store associates select the number of orders in a picklist?]
+
+link:https://github.com/hotwax/oms-documentation/blob/fulfillment/Fulfillment/FAQs/Q.%20Can%20store%20associates%20create%20a%20picklist%20only%20for%20selected%20orders%3F.adoc[Q. Can store associates create a picklist only for selected orders?]
+
+link:https://github.com/hotwax/oms-documentation/blob/fulfillment/Fulfillment/FAQs/Q.%20Can%20store%20associates%20assign%20a%20picklist%20to%20multiple%20pickers%3F.adoc[Q. Can store associates assign a picklist to multiple pickers?]
+
+link:https://github.com/hotwax/oms-documentation/blob/fulfillment/Fulfillment/FAQs/Q.%20Can%20a%20store%20picker%20view%20orders%20assigned%20to%20him%20for%20picking%20and%20packing%3F.adoc[Q. Can a store picker view orders assigned to him for picking and packing?]
+
+link:https://github.com/hotwax/oms-documentation/blob/fulfillment/Fulfillment/FAQs/Q.%20Can%20a%20pick%20sheet%20for%20a%20picker%20be%20printed%20even%20after%20the%20picklist%20is%20created%3F.adoc[Q. Can a pick sheet for a picker be printed even after the picklist is created?]
+
+link:https://github.com/hotwax/oms-documentation/blob/fulfillment/Fulfillment/FAQs/Q.%20Can%20the%20picker%20select%20the%20size%20of%20the%20shipping%20box%20for%20an%20order%20item%3F.adoc[Q. Can the picker select the size of the shipping box for an order item?]
+
+link:https://github.com/hotwax/oms-documentation/blob/fulfillment/Fulfillment/FAQs/Q.%20If%20the%20order%20allocated%20to%20the%20store%20has%20more%20than%20one%20item.%20Can%20the%20picker%20pack%20items%20in%20multiple%20boxes%3F.adoc[Q. If the order allocated to the store has more than one item. Can the picker pack items in multiple boxes?]
+
+link:https://github.com/hotwax/oms-documentation/blob/fulfillment/Fulfillment/FAQs/Q.%20How%20shipping%20labels%20are%20generated%20for%20the%20orders%20allocated%20to%20the%20store%3F.adoc[Q. How shipping labels are generated for the orders allocated to the store?]
+
+link:https://github.com/hotwax/oms-documentation/blob/fulfillment/Fulfillment/FAQs/Q.%20If%20the%20order%20allocated%20to%20the%20store%20has%20more%20than%20one%20item%20and%20the%20picker%20has%20packed%20the%20items%20in%20multiple%20boxes.%20Will%20the%20shipping%20label%20be%20generated%20for%20multiple%20boxes%20of%20an%20order%3F.adoc[Q. If the order allocated to the store has more than one item and the picker has packed the items in multiple boxes. Will the shipping label be generated for multiple boxes of an order?]
+
+link:https://github.com/hotwax/oms-documentation/blob/fulfillment/Fulfillment/FAQs/Q.%20If%20a%20store%20is%20unable%20to%20fulfill%20an%20allocated%20order%20item.%20Can%20store%20associates%20reject%20order%20items%20that%20the%20store%20cannot%20fulfill%3F.adoc[Q. If a store is unable to fulfill an allocated order item. Can store associates reject order items that the store cannot fulfill?]
+
+link:https://github.com/hotwax/oms-documentation/blob/fulfillment/Fulfillment/FAQs/Q.%20If%20a%20delivery%20ordered%20item%20is%20rejected%20by%20the%20store%20will%20it%20be%20cancelled%3F.adoc[Q. If a delivery ordered item is rejected by the store will it be cancelled?]
+
+link:https://github.com/hotwax/oms-documentation/blob/fulfillment/Fulfillment/FAQs/Q.%20If%20a%20delivery%20ordered%20item%20is%20rejected%20by%20a%20store.%20Can%20the%20same%20ordered%20item%20be%20allocated%20to%20the%20store%20on%20re-brokering%3F.adoc[Q. If a delivery ordered item is rejected by a store. Can the same ordered item be allocated to the store on re-brokering?]
+
+link:https://github.com/hotwax/oms-documentation/blob/fulfillment/Fulfillment/FAQs/Q.%20If%20no%20location%20is%20able%20to%20fulfill%20the%20ordered%20item.%20Will%20the%20ordered%20item%20be%20cancelled%3F.adoc[Q. If no location is able to fulfill the ordered item. Will the ordered item be cancelled?]
+
+link:https://github.com/hotwax/oms-documentation/blob/fulfillment/Fulfillment/FAQs/Q.%20How%20can%20a%20store%20picker%20mark%20the%20order%20as%20packed%20and%20ready%20for%20shipping%3F.adoc[Q. How can a store picker mark the order as packed and ready for shipping?]
+
+link:https://github.com/hotwax/oms-documentation/blob/fulfillment/Fulfillment/FAQs/Q.%20Can%20a%20picker%20print%20a%20shipping%20label%20or%20customer%20letter%20after%20the%20order%20is%20marked%20packed%3F.adoc[Q. Can a picker print a shipping label or customer letter after the order is marked packed?]
+
+link:https://github.com/hotwax/oms-documentation/blob/fulfillment/Fulfillment/FAQs/Q.%20Can%20a%20picker%20unlock%20a%20packed%20order%3F.adoc[Q. Can a picker unlock a packed order?]
+
+link:https://github.com/hotwax/oms-documentation/blob/fulfillment/Fulfillment/FAQs/Q.%20How%20can%20store%20associates%20mark%20the%20order%20as%20shipped%3F.adoc[Q. How can store associates mark the order as shipped?]
+
+link:https://github.com/hotwax/oms-documentation/blob/fulfillment/Fulfillment/FAQs/Q.%20How%20can%20the%20store%20managers%20see%20all%20the%20orders%20rejected%20by%20their%20stores%3F.adoc[Q. How can the store managers see all the orders rejected by their stores?]
+
+link:https://github.com/hotwax/oms-documentation/blob/fulfillment/Fulfillment/FAQs/Q.%20How%20can%20the%20store%20managers%20see%20all%20the%20orders%20completed%20by%20their%20stores%3F.adoc[Q. How can the store managers see all the orders completed by their stores?]
+
+link:https://github.com/hotwax/oms-documentation/blob/fulfillment/Fulfillment/FAQs/Q.%20Can%20a%20store%20manager%20turn%20off%20fulfillment%20for%20a%20store%3F.adoc[Q. Can a store manager turn off fulfillment for a store?]
+
+link:https://github.com/hotwax/oms-documentation/blob/fulfillment/Fulfillment/FAQs/Q.%20If%20a%20store%20is%20unable%20to%20fulfill%20the%20new%20orders%20allocated%20to%20it.%20Can%20a%20store%20manager%20recycle%20all%20the%20outstanding%20orders%3F.adoc[Q. If a store is unable to fulfill the new orders allocated to it. Can a store manager recycle all the outstanding orders?]
+
+link:https://github.com/hotwax/oms-documentation/blob/fulfillment/Fulfillment/FAQs/Q.%20If%20a%20store%20is%20unable%20to%20fulfill%20in-progress%20orders%20allocated%20to%20it.%20Can%20a%20store%20manager%20recycle%20all%20the%20in-progress%20orders%3F.adoc[Q. If a store is unable to fulfill in-progress orders allocated to it. Can a store manager recycle all the in-progress orders?]
+
+link:https://github.com/hotwax/oms-documentation/blob/fulfillment/Fulfillment/FAQs/Q.%20Can%20store%20managers%20set%20a%20maximum%20per-day%20delivery%20order%20limit%20for%20their%20stores%3F.adoc[Q. Can store managers set a maximum per-day delivery order limit for their stores?]

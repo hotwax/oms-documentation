@@ -1,0 +1,6 @@
+== Q. Can a pick sheet for a picker be printed even after the picklist is created?
+
+Yes, the pick sheet for a picker can be printed even after the picklist is created by clicking on the print icon for the picker on the 'In Progress' tab.
+
+=== For more details please refer picklistDataSetup service:
+link:../Services/picklistDataSetup.adoc[picklistDataSetup]

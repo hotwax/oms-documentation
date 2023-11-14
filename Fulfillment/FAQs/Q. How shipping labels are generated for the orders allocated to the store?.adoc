@@ -1,0 +1,7 @@
+== Q. How shipping labels are generated for the orders allocated to the store?
+
+Generating shipping labels for orders from shipping partner take about 3-4 seconds for each order. To save this waiting time the OMS automatically generates a shipping label in the background when a picklist is created for an order using the store fulfillment app. 
+
+When the pickers pack the orders they don't have to wait for shipping labels to be generated, pre-generated shipping labels are fetched and can be printed.
+
+In case, pickers change the size of the box and/or add a new box for the order then the automatically generated label is discarded and a new shipping label is generated for the order.

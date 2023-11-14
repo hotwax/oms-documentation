@@ -1,0 +1,198 @@
+= Orders ready to ship
+
+To get the list of ready to ship orders and order items for a particular store, you will need to call the `/solr-query` endpoint with the POST method.
+
+== Properties
+Following are the attributes used in below API:
+
+[width="100%", cols="4" options="header"]
+|=======
+|Attribute |Type |Required| Description
+|facilityId|String|Yes|This attribute contains the unique ID of facility in OMS.
+|=======
+
+=== *Request*
+*Endpoint*
+----
+POST https://<host>/api/solr-query
+
+Host: example.com
+----
+*Headers*
+----
+Content-Type:​ application/json
+
+Authorization: Bearer <token_value>
+
+Accept: application/json
+----
+*Body*
+[source, json]
+----------------------------------------------------------------
+{
+    "json": {
+        "params": {
+            "rows": 1,
+            "sort": "reservedDatetime desc",
+            "group": true,
+            "group.field": "orderId",
+            "group.limit": 1000,
+            "group.ngroups": true,
+            "defType": "edismax",
+            "q.op": "AND",
+            "qf": "orderId"
+        },
+        "query": "(* *)",
+        "filter": ["docType:OISGIR", "picklistItemStatusId: (PICKITEM_PICKED OR (PICKITEM_COMPLETED AND itemShippedDate: [NOW/DAY TO NOW/DAY+1DAY]))", "-shipmentMethodTypeId : STOREPICKUP", "facilityId: NN_WH"],
+        "facet": {
+            "shipmentMethodTypeIdFacet": {
+                "excludeTags": "shipmentMethodTypeIdFilter",
+                "field": "shipmentMethodTypeId",
+                "mincount": 1,
+                "limit": -1,
+                "sort": "index",
+                "type": "terms",
+                "facet": {
+                    "ordersCount": "unique(orderId)"
+                }
+            }
+        }
+    }
+}
+----------------------------------------------------------------
+=== *Response*
+
+*Status Code*
+----
+HTTP/1.1​ ​200​ ​OK
+----
+
+*Headers*
+----
+Content-Type: application/json
+----
+*Body*
+[source, json]
+----------------------------------------------------------------
+{
+    "grouped": {
+        "orderId": {
+            "matches": 207,
+            "ngroups": 143,
+            "groups": [
+                {
+                    "groupValue": "NN13172",
+                    "doclist": {
+                        "numFound": 2,
+                        "start": 0,
+                        "docs": [
+                            {
+                                "orderId": "NN13172",
+                                "orderItemSeqId": "00002",
+                                "shipGroupSeqId": "00001",
+                                "inventoryItemId": "10002",
+                                "reservedDatetime": "2021-12-29T11:49:12.582Z",
+                                "itemQuantity": 1.0,
+                                "quantityNotAvailable": 0.0,
+                                "productId": "10003",
+                                "keywordSearchText": [
+                                    "10003",
+                                    "Chaz Kangeroo Hoodie-XS-Orange"
+                                ],
+                                "productName": "Chaz Kangeroo Hoodie-XS-Orange",
+                                "spellchecker": "Chaz Kangeroo Hoodie-XS-Orange",
+                                "productSku": "MH01-XS-Orange",
+                                "virtualProductName": "Chaz Kangeroo Hoodie",
+                                "uniqueOrderItemsCount": 2.0,
+                                "isPicked": "Y",
+                                "picklistBinId": "11218",
+                                "picklistId": "11061",
+                                "picklistItemStatusId": "PICKITEM_PICKED",
+                                "picklistItemStatusDesc": "Picked",
+                                "fulfillmentStatus": "InProgress",
+                                "orderDate": "2021-12-29T11:48:56.395Z",
+                                "orderTypeId": "SALES_ORDER",
+                                "productStoreId": "NN_ECOM_STORE",
+                                "orderStatusId": "ORDER_APPROVED",
+                                "customerId": "11302",
+                                "customerName": "Aditya Patel",
+                                "maySplit": "N",
+                                "shipmentMethodTypeId": "PR_OVERNIGHT",
+                                "shipmentMethodTypeDesc": "Priority Overnight",
+                                "shipmentMethodTypeSeqNum": 13.0,
+                                "facilityId": "NN_WH",
+                                "facilityName": "California Warehouse",
+                                "facilityTypeId": "WAREHOUSE",
+                                "companyIds": [
+                                    "NN_COMPANY"
+                                ],
+                                "shipmentId": "11920",
+                                "shipmentStatusId": "SHIPMENT_APPROVED",
+                                "shipmentCarrierPartyId": "FEDEX",
+                                "shipmentShipMethodTypeId": "PR_OVERNIGHT",
+                                "isManifested": "N",
+                                "manifestContentId": "FEDEX/",
+                                "docType": "OISGIR",
+                                "identifier": "NN13172-00002-00001-10002",
+                                "docType-identifier": "OISGIR-NN13172-00002-00001-10002",
+                                "_version_": 1722910453124825091
+                            },
+                            {
+                                "orderId": "NN13172",
+                                "orderItemSeqId": "00001",
+                                "shipGroupSeqId": "00001",
+                                "inventoryItemId": "10001",
+                                "reservedDatetime": "2021-12-29T11:49:12.521Z",
+                                "itemQuantity": 3.0,
+                                "quantityNotAvailable": 0.0,
+                                "productId": "10002",
+                                "keywordSearchText": [
+                                    "10002",
+                                    "Chaz Kangeroo Hoodie-XS-Gray"
+                                ],
+                                "productName": "Chaz Kangeroo Hoodie-XS-Gray",
+                                "spellchecker": "Chaz Kangeroo Hoodie-XS-Gray",
+                                "productSku": "MH01-XS-Gray",
+                                "virtualProductName": "Chaz Kangeroo Hoodie",
+                                "uniqueOrderItemsCount": 2.0,
+                                "isPicked": "Y",
+                                "picklistBinId": "11218",
+                                "picklistId": "11061",
+                                "picklistItemStatusId": "PICKITEM_PICKED",
+                                "picklistItemStatusDesc": "Picked",
+                                "fulfillmentStatus": "InProgress",
+                                "orderDate": "2021-12-29T11:48:56.395Z",
+                                "orderTypeId": "SALES_ORDER",
+                                "productStoreId": "NN_ECOM_STORE",
+                                "orderStatusId": "ORDER_APPROVED",
+                                "customerId": "11302",
+                                "customerName": "Aditya Patel",
+                                "maySplit": "N",
+                                "shipmentMethodTypeId": "PR_OVERNIGHT",
+                                "shipmentMethodTypeDesc": "Priority Overnight",
+                                "shipmentMethodTypeSeqNum": 13.0,
+                                "facilityId": "NN_WH",
+                                "facilityName": "California Warehouse",
+                                "facilityTypeId": "WAREHOUSE",
+                                "companyIds": [
+                                    "NN_COMPANY"
+                                ],
+                                "shipmentId": "11920",
+                                "shipmentStatusId": "SHIPMENT_APPROVED",
+                                "shipmentCarrierPartyId": "FEDEX",
+                                "shipmentShipMethodTypeId": "PR_OVERNIGHT",
+                                "isManifested": "N",
+                                "manifestContentId": "FEDEX/",
+                                "docType": "OISGIR",
+                                "identifier": "NN13172-00001-00001-10001",
+                                "docType-identifier": "OISGIR-NN13172-00001-00001-10001",
+                                "_version_": 1722910453124825088
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    },
+}
+----------------------------------------------------------------

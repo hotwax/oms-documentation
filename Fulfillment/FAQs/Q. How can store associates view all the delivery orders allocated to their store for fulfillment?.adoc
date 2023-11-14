@@ -1,0 +1,20 @@
+== Q. How can store associates view all the delivery orders allocated to their store for fulfillment?
+
+Store associates can use HotWax Commerce's store fulfillment app to view delivery orders allocated to their store.
+
+All the new orders that need to be picked will be displayed on the 'Orders' tab of the app. A picklist can be created for these orders and assigned to the picker. A pick sheet can also be printed for these orders while creating the picklist.
+
+=== For more details please refer outstanding-orders API:
+link:../APIs/outstanding-orders.adoc[outstanding-orders]
+
+All the orders for which a picklist is created and that are being picked or waiting to be picked are displayed on the 'In Progress' tab. Once the picking and packing of items are done, the order can be marked packed from this tab.
+
+=== For more details please refer inprogress-orders API:
+link:../APIs/inprogress-orders.adoc[inprogress-orders]
+
+All the orders that are marked packed and are ready to ship to the customer are displayed on the 'Completed' tab. Once the shipping partner picks up the items the order can be marked shipped from this tab.
+
+=== For more details please refer completed-orders API:
+link:../APIs/completed-orders.adoc[completed-orders]
+
+Retailers can also use the APIs to integrate these functionalities into their existing fulfillment system.

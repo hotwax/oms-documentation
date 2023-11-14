@@ -1,0 +1,68 @@
+= Change shipment item package
+
+To change shipment item package you will need to call the `/moveShipmentItem` endpoint with the POST method. Further it uses deleteOrderShipmentItem service to remove item from old shipment and createOrderShipmentItem service to add item to the new shipment.
+
+== Properties
+Following are the attributes used in below API:
+
+[width="100%", cols="4" options="header"]
+|=======
+|Attribute |Type |Required|Description
+|shipmentId |String |Yes| This attribute contains the shipmentId of item exist in the system.
+|toShipmentId |String |Yes|This attribute contains the shipmentId in which item needs to move.
+|shipmentPackageSeqId |String |Yes|This attribute contains the seqId of item's current shipment package.
+|toShipmentPackageSeqId |String |Yes|This attribute contains the shipment package id in which item needs to move.
+|shipmentItemSeqId |String |Yes|This attribute contains the shipment item id which needs to move.
+|quantity |Integer |No|This attribute contains the quantity of item which needs to move.
+|=======
+
+=== *Request*
+*Endpoint*
+----
+POST /api/moveShipmentItem HTTP/1.1
+
+----
+*Headers*
+----
+Content-Type:​ application/json
+
+Authorization: Bearer <token_value>
+
+Accept: application/json
+----
+*Body*
+[source, json]
+----------------------------------------------------------------
+{
+       "shipmentId": "10440",
+       "shipmentPackageSeqId": "00001",
+       "shipmentItemSeqId":"00001",
+       "toShipmentId":"10281",
+       "toShipmentPackageSeqId":"00001",
+       "quantity": 1
+}
+----------------------------------------------------------------
+=== *Response*
+
+*Status Code*
+----
+HTTP/1.1​ ​200 OK
+----
+
+*Headers*
+----
+Content-Type: application/json
+----
+*Body*
+[source, json]
+----------------------------------------------------------------
+{
+    "shipmentId": "10440",
+    "shipmentPackageSeqId": "00001",
+    "shipmentItemSeqId": "00001",
+    "toShipmentId": "10281",
+    "toShipmentPackageSeqId": "00001",
+    "quantity": 1,
+    "webSiteId": "API"
+}
+----------------------------------------------------------------

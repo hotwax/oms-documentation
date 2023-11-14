@@ -1,0 +1,20 @@
+= bulkShipOrders
+
+This service is used to mark the shipment as shipped in bulk. While tapping on the ship-orders button in the completed segment, bulkShipOrders request will be called which further invokes bulkShipOrders service.
+
+== Properties
+Following are the attributes used in below service:
+
+[width="100%", cols="4" options="header"]
+|=======
+|Attribute |Type |Required| Description
+|shipmentId|List|Yes|This attribute contains the unique ID of shipment in OMS.
+|=======
+
+== Inline Services
+
+=== updateShipment
+This service is used to update shipment by updating the shipment as SHIPMENT_SHIPPED.
+
+=== For more details please refer updateShipment service:
+link:../Services/updateShipment.adoc[updateShipment]

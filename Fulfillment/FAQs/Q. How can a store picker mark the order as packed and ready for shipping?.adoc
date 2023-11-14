@@ -1,0 +1,8 @@
+== Q. How can a store picker mark the order as packed and ready for shipping?
+
+Store associates can create the picklist for the order from the 'Orders' tab of the fulfillment app. Once the item is picked and packed the store picker can click on the 'Pack' button for the order and print the shipping label and customer letter. The order will be marked packed and will be displayed on the ‘Completed’ tab on the app and it can be marked shipped from this tab.
+
+Retailers can also use the APIs to integrate this functionality into their existing fulfillment system.
+
+=== For more details please refer packStoreFulfillmentOrder service:
+link:../Services/packStoreFulfillmentOrder.adoc[packStoreFulfillmentOrder]

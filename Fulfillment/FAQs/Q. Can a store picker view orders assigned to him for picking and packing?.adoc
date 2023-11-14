@@ -1,0 +1,6 @@
+== Q. Can a store picker view orders assigned to him for picking and packing?
+
+Yes, the pickers can view orders assigned to them by selecting the picker's name from the 'In-progress' tab of the fulfillment app
+
+=== For more details please refer picklistDataSetup service:
+link:../Services/picklistDataSetup.adoc[picklistDataSetup]

@@ -1,0 +1,19 @@
+= autoCancelOrderItems
+
+This service is used to cancel the ordered item.
+
+Items will be cancelled if the item is flagged with an autoCancelDate and does not have a dontCancelDate and dontCancelUserLogin associated with it, and it is past the autoCancelDate.
+
+== Properties
+Following are the attributes used in below service:
+
+[width="100%", cols="4" options="header"]
+|=======
+|Attribute |Type |Required| Description
+|productStoreId|String|Yes|This attribute contains the unique ID of product store in OMS.
+|=======
+
+== Inline Services
+
+=== changeOrderItemStatus
+This service is used to change the status of an existing order item. If no orderItemSeqId is specified, the status of all order items will be changed. This service is invoked with statusId as ITEM_CANCELLED and changeReason as AUTO_CANCEL.

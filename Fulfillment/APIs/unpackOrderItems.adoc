@@ -1,0 +1,59 @@
+= Unlock order items
+
+To unlock order items of a bin you will need to call the `/unpackOrderItems` endpoint with the POST method.
+
+== Properties
+Following are the attributes used in below API:
+
+[width="100%", cols="4" options="header"]
+|=======
+|Attribute |Type |Required| Description
+|orderId|String|Yes|This attribute contains the unique ID of order in OMS.
+|picklistBinId |String |Yes|This attribute contains the unique ID of picklist bin whose items needs to unlock.
+|=======
+
+=== *Request*
+*Endpoint*
+----
+POST /api/unpackOrderItems HTTP/1.1
+
+----
+*Headers*
+----
+Content-Type:​ application/json
+
+Authorization: Bearer <token_value>
+
+Accept: application/json
+----
+*Body*
+[source, json]
+----------------------------------------------------------------
+{
+       "orderId": "10440",
+       "picklistBinId":"10221"
+}
+----------------------------------------------------------------
+=== *Response*
+
+*Status Code*
+----
+HTTP/1.1​ ​200 OK
+----
+
+*Headers*
+----
+Content-Type: application/json
+----
+*Body*
+[source, json]
+----------------------------------------------------------------
+{
+    "orderId": "10440",
+    "picklistBinId":"10221",
+    "webSiteId": "API"
+}
+----------------------------------------------------------------
+
+=== For more details please refer unpackOrderItems Service:
+link:../Services/unpackOrderItems.adoc[unpackOrderItems]

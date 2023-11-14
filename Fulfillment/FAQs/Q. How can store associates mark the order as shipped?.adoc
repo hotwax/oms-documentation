@@ -1,0 +1,6 @@
+== Q. How can store associates mark the order as shipped?
+
+All the orders that are marked packed from the 'In Progress' tab are displayed on the 'Completed' tab. Once the shipping partner picks up the orders, they can be marked Shipped from the 'Completed' tab.
+
+=== For more details please refer updateShipment service:
+link:../Services/updateShipment.adoc[updateShipment]

@@ -1,0 +1,6 @@
+== Q. Can a picker print a shipping label or customer letter after the order is marked packed?
+
+Yes, the picker can print a shipping label or customer letter after the order is marked packed from the 'Completed' tab of the store fulfillment app. 
+
+=== For more details please refer retryShippingLabel event:
+link:../Services/retryShippingLabel.adoc[retryShippingLabel]

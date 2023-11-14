@@ -1,0 +1,8 @@
+== Q. If the order allocated to the store has more than one item. Can the picker pack items in multiple boxes?
+
+Yes, the picker can add multiple boxes for an order using the add box functionality on the 'In Progress' tab of the store fulfillment app.
+
+After a new shipping box is added for an order the picker can select the box for each ordered item.
+
+=== For more details please refer addShipmentPackage service:
+link:../Services/addShipmentPackage.adoc[addShipmentPackage]

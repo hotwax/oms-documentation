@@ -1,0 +1,85 @@
+= Add shipment item
+
+To create empty shipment and package you will need to call the `/addShipmentPackage` endpoint with the POST method.
+
+== Properties
+Following are the attributes used in below API:
+
+[width="100%", cols="4" options="header"]
+|=======
+|Attribute |Type |Required|Description
+|picklistBinId |String |Yes|This attribute accepts existing picklistBinId for which shipment will be created.
+|shipmentMethodTypeId |String |No|This attribute contains pre-defined shipment methods like "AIR", "GROUND" e.t.c.
+|carrierPartyId |String |No|This attribute contains unique ID of carrier party.
+|shipmentBoxTypeId |String |No|This attribute contains the existing shipmentBoxTypeId for shipment package.
+|dimensionUomId |String |No|This attribute contains the existing dimensionUomId for shipment package.
+|boxLength |String |No|This attribute contains the length of shipment package.
+|boxWidth |String |No|This attribute contains the width of shipment package.
+|boxHeight |String |No|This attribute contains the height of shipment package.
+|boxNumber |String |No|This attribute contains the box number for shipment package.
+|=======
+
+=== *User Story*
+
+- It is used to create shipment for the items picked.
+
+=== *Request*
+*Endpoint*
+----
+POST /api/addShipmentPackage HTTP/1.1
+
+----
+*Headers*
+----
+Content-Type:​ application/json
+
+Authorization: Bearer <token_value>
+
+Accept: application/json
+----
+*Body*
+[source, json]
+----------------------------------------------------------------
+{
+  "picklistBinId" : "10130",
+  "shipmentBoxTypeId" : "BOX_1",
+  "shipmentMethodTypeId" : "GROUND",
+  "carrierPartyId" : "FEDEX",
+  "boxLength" : "15",
+  "boxWidth" : "10",
+  "boxHeight" : "5",
+  "dimensionUomId" : "LEN_in"
+}
+----------------------------------------------------------------
+=== *Response*
+
+*Status Code*
+----
+HTTP/1.1​ ​200 OK
+----
+
+*Headers*
+----
+Content-Type: application/json
+----
+*Body*
+[source, json]
+----------------------------------------------------------------
+{
+    "picklistBinId" : "10130",
+    "shipmentBoxTypeId" : "BOX_1",
+    "shipmentMethodTypeId" : "GROUND",
+    "carrierPartyId" : "FEDEX",
+    "boxLength" : "15",
+    "boxWidth" : "10",
+    "boxHeight" : "5",
+    "dimensionUomId" : "LEN_in",
+    "shipmentId" : "10010",
+    "shipmentRouteSegmentId" : "10010",
+    "shipmentPackageSeqId" : "10010",
+    "webSiteId": "API"
+}
+----------------------------------------------------------------
+
+=== For more details please refer addShipmentPackage service:
+link:../Services/addShipmentPackage.adoc[addShipmentPackage]

@@ -1,0 +1,6 @@
+== Q. If a store is unable to fulfill the new orders allocated to it. Can a store manager recycle all the outstanding orders?
+
+Yes, a store manager can recycle all the outstanding orders from the administration screen. All the orders allocated to the store for which a picklist is not created (i.e. orders displayed in the 'Orders' tab) will be sent for re-brokering to a different location.
+
+=== For more details please refer bulkRejectStoreOutstandingOrders service:
+link:../Services/bulkRejectStoreOutstandingOrders.adoc[bulkRejectStoreOutstandingOrders]

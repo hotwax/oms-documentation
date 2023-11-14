@@ -1,0 +1,16 @@
+== Q. If a store is unable to fulfill an allocated order item. Can store associates reject order items that the store cannot fulfill?
+
+Yes, store associates can use the 'Report an Issue' functionality for the ordered item from the 'In Progress' tab and select a reason for rejecting the ordered item. 
+
+Based on the reason selected while rejecting the ordered item the inventory for the item will be adjusted in OMS.
+
+* Not in Stock: The ordered item will be sent for re-brokering to be fulfilled from another location. If the same order item is in other open or in-progress orders allocated to the store then they will be sent for re-brokering to other locations as well. ATP of the ordered item in the store will be made zero. 
+* Inactive store: The ordered item will be sent for re-brokering to be fulfilled from another location and reservation of the ordered item in the store will be cancelled so ATP of the ordered item in the store will be increased by the rejected quantity. 
+* No variance:
+* Mismatch or Worn Display or Damaged: The ordered item will be sent for re-brokering to be fulfilled from another location and QOH for the ordered item in the store will be reduced by the rejected quantity.
+
+=== For service details please refer updateInProgressOrder:
+link:../Services/updateInProgressOrder.adoc[updateInProgressOrder]
+
+=== For api details please refer rejectShipmentItem:
+link:../APIs/rejectShipmentItem.adoc[rejectShipmentItem]

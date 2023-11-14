@@ -1,0 +1,8 @@
+== Q. Can a picker unlock a packed order?
+
+Yes, a picker can unlock a packed order from the 'Completed' tab of the store fulfillment app. 
+
+After an order is unlocked, it is again displayed on the 'In Progress' tab of the store fulfillment app. And the picker can perform any operation available on the tab like reject the ordered item, add box, change box of the ordered item, etc
+
+=== For more details please refer unpackOrderItems service:
+link:../Services/unpackOrderItems.adoc[unpackOrderItems]

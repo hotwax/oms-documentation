@@ -1,0 +1,21 @@
+= bulkRejectStoreOutstandingOrders
+
+This service is used to route all outstanding orders to rebrokering. While tapping on the recycle-outstanding-orders button, recycleOutstandingOrders request will be called which further invokes bulkRejectStoreOutstandingOrders service.
+
+== Properties
+Following are the attributes used in below service:
+
+[width="100%", cols="4" options="header"]
+|=======
+|Attribute |Type |Required| Description
+|facilityId|String|Yes|This attribute contains the unique ID of facility in OMS.
+|reasonId|String|No|This attribute contains the unique ID of reason in OMS. Accepts predefined values in the system.
+|=======
+
+== Inline Services
+
+=== rejectOutstandingOrder
+This service is used to route outstanding order to rebrokering.
+
+* If the record of PicklistItem exists for the order and itemStatusId is not the PICKITEM_CANCELLED then substract the quantity of PicklistItem from the quantity of OrderItemShipGrpInvRes.
+* Otherwise invokes rejectOrderItem service with recordVariance as Y and rejectComments as Store Rejected Inventory.

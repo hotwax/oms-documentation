@@ -1,0 +1,3 @@
+== Q. How can the store managers see all the orders rejected by their stores?
+ 
+<TO DO>

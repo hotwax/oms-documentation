@@ -1,0 +1,12 @@
+= updateFacility
+
+This service is used update facility i.e. While tapping on turn-on-fulfillment button, updateFacilityOrderLimit request will be called which further invoke updateFacility service to update the value of maximumOrderLimit. Accepts pre-defined attributes and used entity-auto engine to update the facility.
+
+== Properties
+Following are the attributes used in below service:
+
+[width="100%", cols="4" options="header"]
+|=======
+|Attribute |Type |Required| Description
+|facilityId|String|Yes|This attribute contains the unique ID of facility exists in OMS.
+|=======

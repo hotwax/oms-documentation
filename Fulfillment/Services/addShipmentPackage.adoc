@@ -1,0 +1,34 @@
+= addShipmentPackage
+
+This service is used to create Shipment, ShipmentRouteSegment, ShipmentPackageRouteSeg and ShipmentPackage without items. While tapping on the add-box button, addShipmentBox request will be called which further invokes addShipmentPackage service.
+
+== Properties
+Following are the attributes used in below API:
+
+[width="100%", cols="4" options="header"]
+|=======
+|Attribute |Type |Required|Description
+|picklistBinId |String |Yes|This attribute accepts existing picklistBinId for which shipment will be created.
+|shipmentMethodTypeId |String |No|This attribute contains pre-defined shipment methods like "AIR", "GROUND" e.t.c.
+|carrierPartyId |String |No|This attribute contains unique ID of carrier party.
+|shipmentBoxTypeId |String |No|This attribute contains the existing shipmentBoxTypeId for shipment package.
+|dimensionUomId |String |No|This attribute contains the existing dimensionUomId for shipment package.
+|boxLength |String |No|This attribute contains the length of shipment package.
+|boxWidth |String |No|This attribute contains the width of shipment package.
+|boxHeight |String |No|This attribute contains the height of shipment package.
+|boxNumber |String |No|This attribute contains the box number for shipment package.
+|=======
+
+== Inline Services
+
+=== createShipment
+This service is used to create a new shipment with statusId as SHIPMENT_INPUT.
+
+=== updateShipmentRouteSegment
+This service is used to update shipment route segment with the passed carrierPartyId and shipmentMethodTypeId using checkCanChangeShipmentStatusDelivered and ensureRouteSegPackage methods.
+
+=== createShipmentPackage
+This service is used to create shipment package after creating new shipment using checkCanChangeShipmentStatusPacked and ensurePackageRouteSeg methods.
+
+=== For more details please refer addShipmentPackage API:
+link:../APIs/addShipmentPackage.adoc[addShipmentPackage]

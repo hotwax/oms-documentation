@@ -1,0 +1,6 @@
+== Q. Can store associate filter orders based on shipping method before creating a picklist?
+
+Yes, store associates filter orders by selecting a shipping method on the 'Orders' tab before creating a picklist. 
+
+=== For more details please refer outstanding-orders API:
+link:../APIs/outstanding-orders.adoc[outstanding-orders]

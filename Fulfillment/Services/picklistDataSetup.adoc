@@ -1,0 +1,48 @@
+= picklistDataSetup
+
+This service is used to create picklist and picklist item. Accepts pre-defined attributes.
+
+== Properties
+Following are the attributes used in below service:
+
+[width="100%", cols="3,2,10" options="header"]
+|=======
+|Attribute |Type |Description
+|facilityId|String|This attribute contains the unique ID of facility exists in the system.
+|shipmentMethodTypeId|String|This attribute contains the unique ID of shipmentMethodType exists in the system i.e. STOREPICKUP, STANDARD etc.
+|orderId|String|This attribute contains the unique ID of order exists in the system.
+|orderItemSeqId|String|This attribute contains the unique ID of order-item exists in the system.
+|shipGroupSeqId|String|This attribute contains the unique ID of shipgroup exists in the system.
+|inventoryItemId|String|This attribute contains the unique ID of inventoryItem exists in the system.
+|itemStatusId|String|This attribute contains the unique ID of itemStatus exists in the system.
+|quantity|String|This attribute contains the quantity of items that need to be picked.
+|pickerIds|List|This attribute contains the unique ID of party to which picklist will be assigned.
+|=======
+
+== Inline Services
+
+=== validatePicklistDataSetup
+This service is used to validate the fields that are passed for creating a picklist and picklist item. It will only invoke when the externalId or picklistId passed via CSV.
+
+=== createPicklist
+This service is used to create a record in Picklist entity along with the passed attributes and statusId as PICKLIST_INPUT.
+
+=== createPicklistBin
+This service is used to create a record in PicklistBin entity along with the passed attributes and binLocationNumber as 1.
+
+=== createPicklistItem
+This service is used to create a a record in PicklistItem entity along with the passed attributes and itemStatusId as PICKITEM_PENDING.
+
+=== createPicklistRole
+This service is used to create a record in PicklistRole entity along with the passed attributes and roleTypeId as WAREHOUSE_PICKER.
+
+=== updatePicklist
+If the pickerIds is passed in the attributes then updatePicklist service will be invoked with statusId as PICKLIST_ASSIGNED.
+
+== Triggered Services
+
+=== updatePicklist
+This service is invoked on the global-commit-post-run event of picklistDataSetup service. If the picklistId is not empty then set the status of picklist as PICKLIST_PRINTED by running the updatePicklist service in async mode.
+
+=== initializeShipment
+This service is invoked on the global-commit-post-run event of createPicklistBin service. If the picklistBinId is not empty then run this service in sync mode. It is used to check if shipment is already created for picklistBinId in input status or not. If not created, then creates a new Shipment in Input status.

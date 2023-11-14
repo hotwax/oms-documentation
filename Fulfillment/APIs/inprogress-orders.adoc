@@ -1,0 +1,164 @@
+= Orders ready to pack
+
+To get the list of ready to pack orders and order items for a particular store, you will need to call the `/solr-query` endpoint with the POST method.
+
+== Properties
+Following are the attributes used in below API:
+
+[width="100%", cols="4" options="header"]
+|=======
+|Attribute |Type |Required| Description
+|facilityId|String|Yes|This attribute contains the unique ID of facility in OMS.
+|=======
+
+=== *Request*
+*Endpoint*
+----
+POST https://<host>/api/solr-query
+
+Host: example.com
+----
+*Headers*
+----
+Content-Type:​ application/json
+
+Authorization: Bearer <token_value>
+
+Accept: application/json
+----
+*Body*
+[source, json]
+----------------------------------------------------------------
+{
+    "json": {
+        "params": {
+            "wt": "json"
+        },
+        "query": "docType:OISGIR",
+        "filter": [
+            "orderTypeId:SALES_ORDER",
+            "picklistItemStatusId: PICKITEM_PENDING",
+            "-fulfillmentStatus: Rejected",
+            "-shipmentMethodTypeId : STOREPICKUP",
+            "facilityId: NN_WH"
+        ]
+    }
+}
+----------------------------------------------------------------
+=== *Response*
+
+*Status Code*
+----
+HTTP/1.1​ ​200​ ​OK
+----
+
+*Headers*
+----
+Content-Type: application/json
+----
+*Body*
+[source, json]
+----------------------------------------------------------------
+{
+    "response": {
+        "numFound": 2,
+        "start": 0,
+        "docs": [
+            {
+                "orderId": "NN11235",
+                "orderItemSeqId": "00001",
+                "shipGroupSeqId": "00001",
+                "inventoryItemId": "10539",
+                "reservedDatetime": "2020-07-28T10:06:15.497Z",
+                "itemQuantity": 1.0,
+                "quantityNotAvailable": 0.0,
+                "productId": "10575",
+                "keywordSearchText": [
+                    "10575",
+                    "Strike Endurance Tee-XL-Red"
+                ],
+                "productName": "Strike Endurance Tee-XL-Red",
+                "spellchecker": "Strike Endurance Tee-XL-Red",
+                "productSku": "MS08-XL-Red",
+                "virtualProductName": "Strike Endurance Tee",
+                "uniqueOrderItemsCount": 2.0,
+                "isPicked": "Y",
+                "picklistBinId": "11234",
+                "picklistId": "11070",
+                "picklistItemStatusId": "PICKITEM_PENDING",
+                "picklistItemStatusDesc": "Pending",
+                "fulfillmentStatus": "InProgress",
+                "orderDate": "2020-07-28T10:06:11.087Z",
+                "orderTypeId": "SALES_ORDER",
+                "productStoreId": "NN_ECOM_STORE",
+                "orderStatusId": "ORDER_APPROVED",
+                "customerId": "10460",
+                "customerName": "John Wick",
+                "shipmentMethodTypeId": "SECOND_DAY",
+                "shipmentMethodTypeDesc": "Second Day",
+                "shipmentMethodTypeSeqNum": 7.0,
+                "facilityId": "NN_WH",
+                "facilityName": "California Warehouse",
+                "facilityTypeId": "WAREHOUSE",
+                "companyIds": [
+                    "NN_COMPANY"
+                ],
+                "orderIdentifications": [
+                    "DC_ORDER_ID/106238"
+                ],
+                "docType": "OISGIR",
+                "identifier": "NN11235-00001-00001-10539",
+                "docType-identifier": "OISGIR-NN11235-00001-00001-10539",
+                "_version_": 1721740067563634688
+            },
+            {
+                "orderId": "NN11242",
+                "orderItemSeqId": "00001",
+                "shipGroupSeqId": "00001",
+                "inventoryItemId": "10329",
+                "reservedDatetime": "2020-07-28T12:16:24.804Z",
+                "itemQuantity": 1.0,
+                "quantityNotAvailable": 0.0,
+                "productId": "10351",
+                "keywordSearchText": [
+                    "10351",
+                    "Jupiter All-Weather Trainer -XL-Purple"
+                ],
+                "productName": "Jupiter All-Weather Trainer -XL-Purple",
+                "spellchecker": "Jupiter All-Weather Trainer -XL-Purple",
+                "productSku": "MJ06-XL-Purple",
+                "virtualProductName": "Jupiter All-Weather Trainer",
+                "uniqueOrderItemsCount": 2.0,
+                "isPicked": "Y",
+                "picklistBinId": "11235",
+                "picklistId": "11070",
+                "picklistItemStatusId": "PICKITEM_PENDING",
+                "picklistItemStatusDesc": "Pending",
+                "fulfillmentStatus": "InProgress",
+                "orderDate": "2020-07-28T12:16:20.620Z",
+                "orderTypeId": "SALES_ORDER",
+                "productStoreId": "NN_ECOM_STORE",
+                "orderStatusId": "ORDER_APPROVED",
+                "customerId": "10463",
+                "customerName": "John Wick",
+                "shipmentMethodTypeId": "SECOND_DAY",
+                "shipmentMethodTypeDesc": "Second Day",
+                "shipmentMethodTypeSeqNum": 7.0,
+                "facilityId": "NN_WH",
+                "facilityName": "California Warehouse",
+                "facilityTypeId": "WAREHOUSE",
+                "companyIds": [
+                    "NN_COMPANY"
+                ],
+                "orderIdentifications": [
+                    "DC_ORDER_ID/106249"
+                ],
+                "docType": "OISGIR",
+                "identifier": "NN11242-00001-00001-10329",
+                "docType-identifier": "OISGIR-NN11242-00001-00001-10329",
+                "_version_": 1721740067608723456
+            }
+        ]
+    }
+}
+----------------------------------------------------------------

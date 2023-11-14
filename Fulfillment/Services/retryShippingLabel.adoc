@@ -1,0 +1,23 @@
+= retryShippingLabel
+
+Once the order is marked as packed but the shipping label is not available then this event is used to retry for label.
+
+== Properties
+Following are the attributes used in below event:
+
+[width="100%", cols="4" options="header"]
+|=======
+|Attribute |Type |Required| Description
+|shipmentIds|List|Yes|This attribute contains the unique config ID of shipment exists in OMS for the order.
+|=======
+
+== Inline Services
+
+=== getShipmentRouteSegment
+This helper method is used to get the data of shipmentRouteSegment as per the passed shipmentId.
+
+* If the carrierPartyId is _NA_ in the shipmentRouteSegment then user will get the error as: Cannot generate label without rate shopping. Please unlock and then Save to retry for rate shopping.
+* Otherwise acceptShipment service will be called along with the storing of carrierServiceStatusId as SHRSCS_CONFIRMED.
+
+=== acceptShipment
+This service is used to request shipping label from third party shipping services and set shipmentRouteSegment to Accepted.

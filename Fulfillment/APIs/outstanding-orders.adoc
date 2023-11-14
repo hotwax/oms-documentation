@@ -1,0 +1,134 @@
+= Orders ready to pick
+
+To confirm that inventory is available and order will be fulfilled from the store you will need to call the `/solr-query` endpoint with the POST method.
+
+== Properties
+Following are the attributes used in below API:
+
+[width="100%", cols="4" options="header"]
+|=======
+|Attribute |Type |Required| Description
+|facilityId|String|Yes|This attribute contains the unique ID of facility in OMS.
+|=======
+
+=== *Request*
+*Endpoint*
+----
+POST https://<host>/api/solr-query
+
+Host: example.com
+----
+*Headers*
+----
+Content-Type:​ application/json
+
+Authorization: Bearer <token_value>
+
+Accept: application/json
+----
+*Body*
+[source, json]
+----------------------------------------------------------------
+{
+  "json": {
+    "params": {
+      "rows": 1,
+      "group": true,
+      "group.field": "orderId",
+      "group.limit": 1000,
+      "group.ngroups": true,
+      "defType": "edismax",
+      "q.op": "AND",
+      "qf": "orderId"
+    },
+    "query": "(* *)",
+    "filter" : [
+      "docType: OISGIR",
+      "quantityNotAvailable: 0",
+      "orderTypeId: SALES_ORDER",
+      "orderStatusId: ORDER_APPROVED",
+      "isPicked: N",
+      "-shipmentMethodTypeId: STOREPICKUP",
+      "-fulfillmentStatus: Cancelled", 
+      "facilityId: NN_WH"
+    ],
+  }
+}
+----------------------------------------------------------------
+=== *Response*
+
+*Status Code*
+----
+HTTP/1.1​ ​200​ ​OK
+----
+
+*Headers*
+----
+Content-Type: application/json
+----
+*Body*
+[source, json]
+----------------------------------------------------------------
+{
+  "grouped": {
+    "orderId": {
+        "matches": 58,
+        "ngroups": 41,
+        "groups": [
+          {
+            "groupValue": "NN11323",
+            "doclist": {
+              "numFound": 2,
+              "start": 0,
+              "docs": [
+                {
+                  "orderId": "NN11323",
+                  "orderItemSeqId": "00001",
+                  "shipGroupSeqId": "00001",
+                  "inventoryItemId": "11846",
+                  "reservedDatetime": "2020-08-04T11:13:08.265Z",
+                  "itemQuantity": 1.0,
+                  "quantityNotAvailable": 0.0,
+                  "productId": "11993",
+                  "keywordSearchText": [
+                      "11993",
+                      "Erika Running Short-32-Red"
+                  ],
+                  "productName": "Erika Running Short-32-Red",
+                  "spellchecker": "Erika Running Short-32-Red",
+                  "productSku": "WSH12-32-Red",
+                  "virtualProductName": "Erika Running Short",
+                  "uniqueOrderItemsCount": 2.0,
+                  "isPicked": "N",
+                  "fulfillmentStatus": "Created",
+                  "orderDate": "2020-08-04T11:13:05.001Z",
+                  "orderTypeId": "SALES_ORDER",
+                  "productStoreId": "NN_ECOM_STORE",
+                  "orderStatusId": "ORDER_APPROVED",
+                  "customerId": "10333",
+                  "customerName": "Mohammad Kathawala",
+                  "shipmentMethodTypeId": "STANDARD",
+                  "shipmentMethodTypeDesc": "Standard",
+                  "shipmentMethodTypeSeqNum": 5.0,
+                  "facilityId": "NN_WH",
+                  "facilityName": "California Warehouse",
+                  "facilityTypeId": "WAREHOUSE",
+                  "companyIds": [
+                      "NN_COMPANY"
+                  ],
+                  "orderIdentifications": [
+                      "DC_ORDER_ID/106605"
+                  ],
+                  "docType": "OISGIR",
+                  "identifier": "NN11323-00001-00001-11846",
+                  "docType-identifier": "OISGIR-NN11323-00001-00001-11846",
+                  "_version_": 1720557058047082496
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+}
+----------------------------------------------------------------

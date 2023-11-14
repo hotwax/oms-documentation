@@ -1,0 +1,13 @@
+== Q. How delivery order or delivery order items are imported in OMS?
+
+After an order is placed by a customer on Shopify, the OMS imports the order when the *_createOrdersFromShopify_* service runs.
+
+While importing orders OMS checks if the ordered item is a BOPIS order item or a pre-order item or a delivery order item. 
+
+If the ordered item has store ID and/or store name in the virtual tags then OMS considers it a BOPIS order item and sets the 'Ship From' and the 'Ship To' as the store address for the item and it will be displayed on the BOPIS app for fulfillment.
+
+If the item has a pre-order tag or it is available in the pre-order category in OMS during the import then 'Ship From' will be set as 'Preorder Parking' for the item and the arrival date of PO against which the item was reserved will be set as promise date. Item will also be displayed in the Preorder Management app.
+
+If the ordered item is not a pre-order item or BOPIS order item then OMS considers it as a delivery order item. The 'Ship From' for delivery ordered item will be set as 'Not Available', auto cancel date will be set and the item will be eligible for brokering to the most suitable location for fulfillment.
+
+Once the order items are brokered, the store associates can use the store fulfillment app to fulfill orders allocated to their store.

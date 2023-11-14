@@ -1,0 +1,37 @@
+= updateInProgressOrder
+
+This service is used to update in-progress order i.e. either rejecting an item via report-an-issue or updating the shipment box type. While tapping on the report-an-issue button or edit the box type, updateOrder request will be called which further invokes updateInProgressOrder event.
+
+* If item is rejected with reason - Inactive Store, then item will be rejected from that particular order and no variance will be recorded.
+* For other reasons, item will be rejected from all outstanding and in progress orders and variance will be recorded for all the quantity in the store except quantity in orders in completed tab.
+
+== Properties
+Following are the attributes used in below API:
+
+[width="100%", cols="4" options="header"]
+|=======
+|Attribute |Type |Required|Description
+|=======
+
+== Inline Services
+
+=== updateShipment
+This service is used to change the shipment status to SHIPMENT_INPUT.
+
+=== moveShipmentItem
+This service is used to change the package of shipmentItem. Further it uses deleteOrderShipmentItem service to remove item from old shipment and createOrderShipmentItem service to add item to the new shipment.
+
+For more details please refer moveShipmentItem API:
+link:../APIs/moveShipmentItem.adoc[moveShipmentItem]
+
+=== rejectShipmentItem
+This service is used to remove item from Shipment and Picklist using deleteOrderShipmentItem and rejectOrderItem services.
+
+For more details please refer rejectShipmentItem API:
+link:../APIs/rejectShipmentItem.adoc[rejectShipmentItem]
+
+=== rejectItemFromAllOrders
+This service is used to route outstanding order to rebrokering i.e. Reject all orders having this item and zero out the inventory by logging variance.
+
+* This service is called when we select NOT_IN_STOCK as rejection reason, where system needs to clear all existing orders available in the queue.
+* Also need to record variance for all existing qty for this location.

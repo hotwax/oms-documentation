@@ -1,0 +1,6 @@
+== Q. Can store associates assign a picklist to multiple pickers?
+
+Yes, store associates can assign up to 3 pickers while creating a picklist.
+
+=== For more details please refer picklistDataSetup service, there is pickerIds attribute of type list in the service:
+link:../Services/picklistDataSetup.adoc[picklistDataSetup]

@@ -1,0 +1,10 @@
+== Q. Can a store manager turn off fulfillment for a store?
+
+Yes, a store manager can turn off fulfillment for a store from the administration screen.
+
+When the manager turns off the fulfillment for a store, the max orders limit for the store is set to zero, and new orders will not be allocated to the store for fulfillment.
+
+Also, when the fulfillment for the store is turned off, OMS does not include the item of the store in the total available quantity sent to Shopify. Thus, also avoiding over-promising of items due to the store being unable to fulfill orders.
+
+=== For more details please refer updateFacility service:
+link:../Services/updateFacility.adoc[updateFacility]

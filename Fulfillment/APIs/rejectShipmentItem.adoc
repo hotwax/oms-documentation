@@ -1,0 +1,65 @@
+= Reject shipment item
+
+To reject shipment item you will need to call the `/rejectShipmentItem` endpoint with the POST method. Further it remove item from Shipment and Picklist using deleteOrderShipmentItem and rejectOrderItem services.
+
+== Properties
+Following are the attributes used in below API:
+
+[width="100%", cols="4" options="header"]
+|=======
+|Attribute |Type |Required|Description
+|shipmentId |String |Yes|This attribute contains the shipmentId of item exist in the system.
+|shipmentItemSeqId |String |Yes|This attribute contains the shipmentId which item needs to reject.
+|quantity |Integer |No|This attribute contains the quantity of item to reject.
+|recordVariance |String |No|This attribute contains the flag to record variance or not. Default value is Y
+|rejectionReasonId |String |No|This attribute contains the reason of rejection. Accepts predefined values in the system.
+|=======
+
+=== *Request*
+*Endpoint*
+----
+POST /api/rejectShipmentItem HTTP/1.1
+
+----
+*Headers*
+----
+Content-Type:​ application/json
+
+Authorization: Bearer <token_value>
+
+Accept: application/json
+----
+*Body*
+[source, json]
+----------------------------------------------------------------
+{
+       "shipmentId": "10440",
+       "shipmentItemSeqId":"00001",
+       "recordVariance": "Y",
+       "rejectionReasonId": "NOT_IN_STOCK",
+       "quantity": 1
+}
+----------------------------------------------------------------
+=== *Response*
+
+*Status Code*
+----
+HTTP/1.1​ ​200 OK
+----
+
+*Headers*
+----
+Content-Type: application/json
+----
+*Body*
+[source, json]
+----------------------------------------------------------------
+{
+    "quantity": 1,
+    "shipmentItemSeqId": "00001",
+    "shipmentId": "10440",
+    "recordVariance": "Y",
+    "rejectionReasonId": "NOT_IN_STOCK",
+    "webSiteId": "API"
+}
+----------------------------------------------------------------

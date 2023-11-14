@@ -1,0 +1,215 @@
+= Retrieve an order
+
+To retrieve the order details corresponding to the order id passed in the request, you will need to call the `/orders` endpoint with the GET method.
+
+=== *Request*
+*Endpoint*
+----
+GET /api/orders/<order_id> HTTP/1.1
+
+Host: example.com
+----
+
+*Headers*
+----
+Content-Type:​ application/json
+
+Authorization: Bearer <token_value>
+
+Accept: application/json
+----
+*Body*
+[source, json]
+----------------------------------------------------------------
+{
+
+}
+----------------------------------------------------------------
+=== *Response*
+
+*Status Code*
+----
+HTTP/1.1​ ​200​ ​OK
+----
+
+*Headers*
+----
+Content-Type: application/json
+----
+*Body*
+[source, json]
+----------------------------------------------------------------
+{
+  "id": "B2BCO21901",
+  "externalId": "36564",
+  "channel": "PHONE_SALES_CHANNEL",
+  "channelDesc": "Phone",
+  "customerId": "10025",
+  "customerExternalId": "PRACTO",
+  "customerName": "Style Us Brands",
+  "priority": "2",
+  "orderDate": "2018-03-14 08:37:57.000",
+  "entryDate": "2019-04-12 17:34:18.175",
+  "expireDate": "2018-03-14 08:37:57.000",
+  "statusId": "ORDER_CREATED",
+  "statusDesc": "Created",
+  "productStoreId": "B2B_STORE",
+  "productStoreName": "B2B Store",
+  "currencyCode": "INR",
+  "currencyCodeDesc": "Indian Rupee",
+  "remainingSubTotal": null,
+  "grandTotal": 1556,
+  "shipGroup": [
+      {
+          "facilityId": "B2B_WH",
+          "externalId": "",
+          "facilityName": "Pithampur Warehouse",
+          "maySplit": "N",
+          "shipBy": "",
+          "shipAfter": "",
+          "carrierPartyId": "BLUEDART",
+          "carrierPartyName": "Blue Dart Express",
+          "trackingNumber": "5455463",
+          "shipFrom": {
+              "postalAddress": {
+                  "id": "B2B_WH_SDA",
+                  "externalId": "",
+                  "address1": "Sector 1",
+                  "address2": "",
+                  "city": "Pithampur",
+                  "stateCode": "IN-MP",
+                  "postalCode": "454774",
+                  "country": "IND"
+              },
+              "email": {
+                  "id": "",
+                  "externalId": "",
+                  "email": ""
+              },
+              "phoneNumber": {
+                  "id": "",
+                  "externalId": "",
+                  "areaCode": "",
+                  "contactNumber": ""
+              }
+          },
+          "shipTo": {
+              "postalAddress": {
+                  "id": "",
+                  "externalId": "",
+                  "address1": "",
+                  "address2": "",
+                  "city": "",
+                  "stateCode": "",
+                  "postalCode": "",
+                  "country": ""
+              },
+              "email": {
+                  "id": "",
+                  "externalId": "",
+                  "email": ""
+              },
+              "phoneNumber": {
+                  "id": "",
+                  "externalId": "",
+                  "areaCode": "",
+                  "contactNumber": ""
+              }
+          },
+          "items": [
+              {
+                  "itemSeqId": "00001",
+                  "productId": "10022",
+                  "sku": "BLACK_BELL_BOTTOM_S",
+                  "name": "Black Bell Bottom_S",
+                  "status": "ITEM_COMPLETED",
+                  "quantity": 1,
+                  "unitPrice": 500,
+                  "unitListPrice": 500,
+                  "itemAdjustments": [
+                      {
+                          "id": "48353",
+                          "type": "IGST",
+                          "comments": "IGST - Integrated Goods and Services Tax",
+                          "amount": 156,
+                          "sourcePercentage": 12
+                      }
+                  ]
+              }
+          ]
+      }
+  ],
+  "orderAdjustments": [
+      {
+          "id": "48352",
+          "type": "SHIPPING_CHARGES",
+          "typeDesc": "Shipping Charges",
+          "comments": "",
+          "amount": 100,
+          "sourcePercentage": null
+      }
+  ],
+  "orderPaymentPref": [
+      {
+          "id": "17131",
+          "paymentMethodTypeId": "CREDIT_CARD",
+          "paymentMethodTypeDesc": "Credit Card",
+          "paymentMode": "",
+          "cardName": "",
+          "code": "",
+          "maxAmount": 1556,
+          "statusId": "PAYMENT_SETTLED",
+          "statusDesc": "Settled"
+      }
+  ],
+  "billTo": {
+      "postalAddress": {
+          "id": "10232",
+          "externalId": "",
+          "address1": "51 Okhla Industrial Area Okhla Industrial Estate Phase 3 Road",
+          "address2": "Okhla Phase III",
+          "city": "New Delhi",
+          "stateCode": "IN-DL",
+          "postalCode": "110020",
+          "country": "IND"
+      },
+      "email": {
+          "id": "",
+          "externalId": "",
+          "email": ""
+      },
+      "phoneNumber": {
+          "id": "",
+          "externalId": "",
+          "areaCode": "",
+          "contactNumber": ""
+      }
+  },
+  "billFrom": {
+      "id": "WS_COMPANY",
+      "externalId": "",
+      "name": "Wasatch Ski Company",
+      "postalAddress": {
+          "id": "11503",
+          "externalId": "",
+          "address1": "78C Wasatch Ski Company",
+          "address2": "Vijay Nagar",
+          "city": "Indore",
+          "stateCode": "IN-MP",
+          "postalCode": "452010",
+          "country": "IND"
+      },
+      "email": {
+          "id": "",
+          "externalId": "",
+          "email": ""
+      },
+      "phoneNumber": {
+          "id": "",
+          "externalId": "",
+          "areaCode": "",
+          "contactNumber": ""
+      }
+  }
+}
+----------------------------------------------------------------

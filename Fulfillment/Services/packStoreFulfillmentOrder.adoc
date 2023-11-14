@@ -1,0 +1,28 @@
+= packStoreFulfillmentOrder
+
+While tapping on the pack button under in-progress segment, packStoreFulfillmentOrder request will be called which further invokes packStoreFulfillmentOrder service. This service is used to mark the picklist bin items as picked and shipment as packed.
+
+== Properties
+Following are the attributes used in below service:
+
+[width="100%", cols="4" options="header"]
+|=======
+|Attribute |Type |Required| Description
+|orderId|String|Yes|This attribute contains the unique ID of order in OMS.
+|picklistBinId|String|Yes|This attribute contains the unique ID of picklistBin in OMS.
+|orderItemSeqId|String|No|This attribute contains the unique ID of order-item exists in the system.
+|shipGroupSeqId|String|No|This attribute contains the unique ID of shipgroup exists in the system.
+|inventoryItemId|String|No|This attribute contains the unique ID of inventoryItem exists in the system.
+|itemStatusId|String|No|This attribute contains the unique ID of itemStatus exists in the system.
+|=======
+
+== Inline Services
+
+=== updatePicklistItem
+This service is used to update picklistItem along with the passed attributes and itemStatusId as PICKITEM_PICKED.
+
+=== updateShipment
+This service is used to update shipment along with the passed attributes and shipment statusId as SHIPMENT_PACKED.
+
+For more details please refer updateShipment service:
+link:../Services/updateShipment.adoc[updateShipment]
