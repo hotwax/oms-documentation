@@ -9,7 +9,7 @@ This document contains a step by step guide of how to deploy a new instance of H
 - [ ] Initial login
 - [ ] Add DBICs
 - [ ] Configure Product Store
-- [ ] Add more Product Stores
+  - [ ] Add more Product Stores
 - [ ] Add company name
 - [ ] Load facilities
 - [ ] Load System Property data
@@ -20,10 +20,10 @@ This document contains a step by step guide of how to deploy a new instance of H
 
 ### Shopify Integration
 - [ ] Connect a Shopify Store
-- [ ] Map Shopify locations
-- [ ] Setup Shopify Mappings
+  - [ ] Map Shopify locations
+  - [ ] Setup Shopify Mappings
 
-### Data Management
+### Sync with Shopify
 - [ ] Import products from Shopify
 - [ ] Upload Inventory to OMS
 - [ ] Upload Inventory to Shopify
