@@ -18,7 +18,7 @@ Select "oms-launch-deploy"
 
 Click on “Build with Parameters” from the left menu options and enter required details
 
-1. Enter a HOST name
+**1. Enter a HOST name**
 
 The host name is should be the client name followed by "uat" or "oms" depending on what kind of environment you're setting up followed by .hotwax.io
 
@@ -34,18 +34,18 @@ The name or abbreviation of the company has to be unique.
 For example, if wsc-us-oms and wsc-ca-oms if there will be seperate instances for each country
 {% endhint %}
 
-2. Select version
+**2. Select version**
 
 The ECR_IMAGE value selects the version of the OMS to deploy the system onto. Ensure this is on the lastest version by default.
 
-3. Choosing a machine type
+**3. Choosing a machine type**
 
 Select the machine size from the EC2_INSTANCETYPE dropdown. Based on the business order size/day we can select the Instance type.
 
 - C5a.xlarge: Less than or equal to 100 orders orders per day.
 - C5a.2xlarge: More than 100 orders orders per day.
 
-4. Timezone
+**4. Timezone**
 
 Select the timezone where the client’s business is headquartered.
 
