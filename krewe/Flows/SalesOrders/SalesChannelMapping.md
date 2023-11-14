@@ -3,6 +3,7 @@
 ## What are Sales Channels?
 <!-- include how they are uniquely handled in Krewe and why -->
 <!-- how are they different than regular sales channels? -->
+NetSuite lets you manage order to cash transactions by channel. A sales channel is a category of sales transaction that you can differentiate by customer type and distribution channel, such as web-shop or retail outlet.
 
 ## How they're setup in HotWax
 Sales channels are determined by the facility the order is placed from. Before HotWax this information was mapped from Shopify Location ID to NetSuite Sales Channel using a Celigo Script.

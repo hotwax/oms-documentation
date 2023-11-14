@@ -1,6 +1,11 @@
 # Departments
 
 ## What are Departments?
+Departments are listed first on transactions, and are useful when designating transactions and employees as part of an internal team.
+
+They're also used to track income and expenses by each department over any time period in the reports
+
+[Reference][departmentDocs]
 
 ## How they're setup in HotWax
 The department, from a business perspective, is determined by the facility the order is placed from. Before HotWax this information was mapped from Shopify Location ID to NetSuite Department using a Celigo Script.
@@ -90,3 +95,6 @@ In HotWax, Krewe will be able to add custom Facility Identifications, allowing t
   }
 }
 ```
+
+<!-- page links -->
+[departmentDocs]: https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_N261602.html#Departments-and-Classes-Overview
