@@ -3,7 +3,9 @@ Shipping methods in Shopify are mapped directly to specific methods in HotWax, b
 Krewe also adjusts these methods periodicially or during certain events such as sales. Because of this semi-frequent editing, they should have access to updating these mappings themselves.
 
 ## How they're setup in HotWax
-<!-- explain how mapping works -->
+Shipping methods are setup just like any other instance. The name of the shipping method is mapped to the name of the shipping method that is received from Shopify. This may not always be the value that is configured against it in NetSuite. Often times a single method in NetSuite may be servicing multiple shipping methods in Shopify.
+
+When the shipping methods are configured, Shopify and HotWax are mapped 1:1 and the corresponding NetSuite shipping method is saved in the "Service Code" field of the shipping method. When a Shopify shipping method needs to be mapped to a different NetSuite shipping method, the value in the "Service Code" field needs to be updated in HotWax.
 
 ## Mappings
 

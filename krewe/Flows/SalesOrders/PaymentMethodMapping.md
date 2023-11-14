@@ -2,7 +2,6 @@
 This page contains the payment method mappings for Shopify <> HotWax <> NetSuite
 
 ## How they're setup in HotWax
-<!-- need to add -->
 Because payment methods are not frequently changed, their NetSuite mappings are not available to edit from a UI. Instead they are stored in the integration layer between the systems.
 
 ## Mappings
