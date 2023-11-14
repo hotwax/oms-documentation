@@ -11,6 +11,7 @@
   * [Sales Channels](Flows/SalesOrders/SalesChannelMapping.md)
   * [Order Types](Flows/SalesOrders/OrderTypeMapping.md)
   * [Payment Methods](Flows/SalesOrders/PaymentMethodMapping.md)
+  * [Item Price](Flows/SalesOrders/ItemPrice.md)
   * [Shipping Methods](Flows/SalesOrders/ShippingMethMapping.md)
 * [Inventory](Flows/Inventory/README.md)
   * [Kit Products](Flows/Inventory/KitProducts.md)
