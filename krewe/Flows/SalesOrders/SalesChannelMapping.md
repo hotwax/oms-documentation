@@ -10,6 +10,11 @@ Sales channels are determined by the facility the order is placed from. Before H
 
 In HotWax, Krewe will be able to add custom Facility Identifications, allowing them to map custom values to each facility they setup. The identification types will have to be predetermined so that when HotWax syncs the order to NetSuite it is able to check specifically the Sales Channel type of facility identification and include it in the order.
 
+Facility Identification Type
+```
+ORDR_ORGN_SLS_CHNL
+```
+
 <!-- add actual facility type id -->
 
 ## Source Data
