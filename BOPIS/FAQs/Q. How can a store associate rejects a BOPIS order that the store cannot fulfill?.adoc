@@ -1,0 +1,13 @@
+== Q. How can a store associate rejects a BOPIS order that the store cannot fulfill?
+
+Store associates can reject the order by clicking on the order card in the 'Open' tab of the BOPIS app. 
+
+Once the store associates click on the order card they will be directed to the order detail page. On this page, the store associate will have to select the reason for rejecting the order.
+
+If 'Not is stock' is selected as the reason then the order will be rejected and the item will be made out of stock in the store. No further BOPIS and delivery orders for the item will be assigned to the store. +++<s>+++ Existing delivery orders will be sent for re-brokering and non-picked BOPIS orders will also be rejected. +++</s>+++
+
+If 'No reason' is selected then only the order will be rejected and no changes will be made to the inventory of the item in the store.
+
+Retailers can also use the APIs to integrate this functionality into their existing fulfillment system.
+
+For more details please refer rejectOrderItem API: link:../APIs/rejectOrderItem.adoc[rejectOrderItem]

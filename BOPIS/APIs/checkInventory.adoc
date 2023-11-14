@@ -1,0 +1,66 @@
+= Check Inventory
+
+To get the stock details of product on the specific locations you will need to call `/checkInventory` endpoint with get method and you can pass the productSku and facilityId of all the available locations that you get from the google my business API. Further it fetches the records from ProductFacilityAndAtp entity.
+
+== Properties
+Following are the attributes used in below API:
+[width="100%", cols="5" options="header"]
+|=======
+|Attribute |IN |Type |Required |Description
+|inputFields |Query |java.util.Map |Required |A map to create a find condition. Records will be filtered on basis of key-value pairs of this map.Example:sku, productId, facilityId, externalFacilityId, facilityTypeId
+|fieldsToSelect |Query |java.util.Set |Optional |This is the list of fields (columns) you want to select from entity. Example:sku, productId, facilityId, externalFacilityId, facilityTypeId, atp
+|sortBy |Query |String |Optional | sort data based on the attribute. Ex. `"sortBy":"facilityId"`,`"sortBy":"facilityId DESC"`
+|viewIndex |Query |Integer | Optional |we can assign viewIndex to it based on the number of page ,Used to set index for each page which is rendered via pagination tab
+|viewSize |Query |Integer | Optional |we can assign desired viewSize ,Used to limit number of records which will be display on a single page after applying pagination
+|atp| Response| Integer | | Total quantity of item based on condition and fields to select fields 
+|=======
+
+.Following are the required attributes:
+
+- productId/sku (required, string): Either productId or sku is required.
+
+*HTTP Request*
+[source, html]
+GET /api/checkInventory?sku=31284199489663&facilityId=STORE_1&facilityId=STORE_2&facilityId=STORE_3&facilityId=STORE_4
+
+*End-point*
+[source, html]
+checkInventory
+
+=== *Response*
+
+Returns the inventory count at particular facility if facilityId is provided in the filters or returns count at all the facilities.
+
+*Status Code*
+----
+HTTP/1.1​ ​200​ ​OK
+----
+
+*Headers*
+----
+Content-Type: application/json
+----
+*Body*
+[source, json]
+----------------------------------------------------------------
+{
+    "count": "4", 
+    "docs": [
+        {
+            "facilityId":"STORE_1",
+            "atp":48.000000
+        },
+        {
+            "facilityId":"STORE_2",
+            "atp":50.000000
+        },
+        {
+            "facilityId":"STORE_3",
+            "atp":49.000000
+        },
+        {
+            "facilityId":"STORE_4",
+            "atp":50.000000
+        }
+    ]
+}

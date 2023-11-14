@@ -1,0 +1,5 @@
+== Q. How can customers have the item delivered to them if their BOPIS order is rejected by the store?
+
+Customers will have to enter the address at which the item should be delivered. 
+
+Once the customer has provided the address 'Ship To' will be updated as the address provided by the customer and the order will be brokered and fulfilled by a suitable store or warehouse.

@@ -1,0 +1,9 @@
+== Q. Customer has come to collect BOPIS order but the store associate cannot find his/her order either in the packed tab or in the open tab of BOPIS app. What does the store associate need to do?
+
+This could be due to one of the following reasons:
+
+* The order was cancelled (by CSR, or, system, or, customer)
+* The order was rejected by the store
+* A wrong order was marked as handover by a store associate
+
+The store associate will need to contact the CSR to check the status of the order in OMS.

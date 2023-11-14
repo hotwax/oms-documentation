@@ -1,0 +1,21 @@
+== Q. How does OMS syncs inventory with Shopify?
+
+*_When HC-OMS is the inventory master_*
+
+In this case, Shopify only maintains the total inventory count of the item for which it can take orders. Inventory in the individual stores and warehouses is maintained by OMS.
+
+When a BOPIS/delivery order is placed for an item, the available quantity is automatically reduced in Shopify. And when the order is imported and/or brokered in OMS then the available quantity of store is also reduced. 
+
+As soon as the available quantity in Shopify becomes zero then the item is made out of stock thus avoiding overpromising of the item.
+
+When new inventory is received in OMS it sends an increased quantity for which Shopify can take the orders and the available quantity is increased in Shopify.
+
+For more details please refer shopifySyncProductsInventory service: link:../Services/shopifySyncProductsInventory.adoc[shopifySyncProductsInventory]
+
+*_When Shopify is the inventory master_*
+
+In this case, Shopify maintains the inventory of each store but when a BOPIS order is placed for an item, the available quantity of the online store is reduced by Shopify as it does not know for which store the order was placed.
+
+For more details please refer syncInventoryFromShopify service: link:../Services/syncInventoryFromShopify.adoc[syncInventoryFromShopify]
+
+When the order is imported and/or brokered in OMS then it sends an update to Shopify to increase the available quantity of the online store and reduced the available quantity of the store, thus maintaining the correct inventory on Shopify.

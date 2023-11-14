@@ -1,0 +1,69 @@
+= updateShipment
+
+To complete the packed BOPIS order i.e. mark the shipment as SHIPMENT_SHIPPED you will need to call the `/updateShipment` endpoint with the POST method.
+
+== Properties
+Following are the attributes used in below API:
+
+[width="100%", cols="3,2,10" options="header"]
+|=======
+|Attribute |Type |Description
+|shipmentId |String |This attribute contains unique ID of the shipment exists in the system.
+|statusId |String |This attribute contains unique status ID of the shipment to which shipment will be updated.
+|=======
+
+=== *Request*
+*Endpoint*
+----
+POST /api/updateShipment HTTP/1.1
+
+Host: example.com
+----
+
+*Headers*
+----
+Content-Type:​ application/json
+
+Authorization: Bearer <token_value>
+
+Accept: application/json
+----
+*Body*
+[source, json]
+----------------------------------------------------------------
+{
+    "shipmentId":"10890",
+    "statusId":"SHIPMENT_SHIPPED"
+}
+----------------------------------------------------------------
+=== *Response*
+
+*Status Code*
+----
+HTTP/1.1​ ​200​ ​OK
+----
+
+*Headers*
+----
+Content-Type: application/json
+----
+*Body*
+[source, json]
+----------------------------------------------------------------
+{
+    "oldPrimaryOrderId":"NN11142",
+    "oldPrimaryShipGroupSeqId":"00001",
+    "oldStatusId":"SHIPMENT_PACKED",
+    "oldOriginFacilityId":"STORE_1",
+    "shipmentId":"10890",
+    "statusId":"SHIPMENT_SHIPPED",
+    "shipmentTypeId":"SALES_SHIPMENT",
+    "cors.request.type":"actual",
+    "webSiteId":"API",
+    "cors.request.origin":<origin_URL>,
+    "_EVENT_MESSAGE_":"Shipment updated successfully"
+}
+----------------------------------------------------------------
+
+=== For more details please refer updateShipment Service:
+link:../Services/updateShipment.adoc[updateShipment]

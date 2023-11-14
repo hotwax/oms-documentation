@@ -1,0 +1,51 @@
+= getGMBToken
+
+To get the google my business access token you will need to call `/getGMBToken` endpoint with post method. Further access token is used to call locations API to get the store details.
+
+* If the access token is found in cache then return that token.
+* If hard refresh is set to true, make API call even if the access token is found in cache. Further it gets the configuration of GMB_REMOTE_CONFIG from SystemMessageRemote entity and make an API call to get the token.
+
+=== *Request*
+*Endpoint*
+----
+POST /api/getGMBToken HTTP/1.1
+
+Host: example.com
+----
+*Headers*
+----
+Content-Type:​ application/json
+
+Authorization: Bearer <token_value>
+
+Accept: application/json
+----
+*Body*
+[source, json]
+----------------------------------------------------------------
+{
+    refresh: true
+}
+----------------------------------------------------------------
+=== *Response*
+
+*Status Code*
+----
+HTTP/1.1​ ​200​ ​OK
+----
+
+*Headers*
+----
+Content-Type: application/json
+----
+*Body*
+[source, json]
+----------------------------------------------------------------
+{
+    "cors.request.origin":<origin_URL>,
+    "refresh":true,
+    "accessToken":<accessToken_value>
+    "cors.request.type":"actual",
+    "webSiteId":"API"
+}
+----------------------------------------------------------------

@@ -1,0 +1,17 @@
+= BOPIS APIs
+
+link:APIs/checkInventory.adoc[checkInventory]
+
+link:APIs/getGMBToken.adoc[getGMBToken]
+
+link:APIs/quickShipEntireShipGroup.adoc[quickShipEntireShipGroup]
+
+link:APIs/readytoshiporders.adoc[readytoshiporders]
+
+link:APIs/rejectOrderItem.adoc[rejectOrderItem]
+
+link:APIs/solr-query.adoc[storeLocations]
+
+link:APIs/updateShipment.adoc[updateShipment]
+
+link:APIs/wms-orders.adoc[wms-orders]

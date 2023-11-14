@@ -1,0 +1,5 @@
+== Q. How inventory availability of an item at stores is sent to Shopify for BOPIS orders?
+
+When the customers enter zip code and click on the ‘Find Store’ button on the ‘Pick up today’ modal of the product display page on the Shopify storefront then an API request is sent to the OMS to fetch the stores that have inventory of the item to fulfill the order at the entered zip code. 
+
+If the zip code is not entered by the customers then OMS will send all the stores that have inventory of the item.

@@ -1,0 +1,43 @@
+== Index of FAQs
+
+link:https://github.com/hotwax/oms-documentation/blob/bopis/BOPIS/FAQs/Q.%20How%20does%20Hotwax%20Commerce’s%20BOPIS%20app%20for%20Shopify%20makes%20an%20item%20ready%20for%20BOPIS%3F.adoc[Q. How does Hotwax Commerce’s BOPIS app for Shopify makes an item ready for BOPIS?]
+
+link:https://github.com/hotwax/oms-documentation/blob/bopis/BOPIS/FAQs/Q.%20How%20inventory%20availability%20of%20an%20item%20at%20stores%20is%20sent%20to%20Shopify%20for%20BOPIS%20orders%3F.adoc[Q. How inventory availability of an item at stores is sent to Shopify for BOPIS orders?]
+
+link:https://github.com/hotwax/oms-documentation/blob/bopis/BOPIS/FAQs/Q.%20Will%20the%20warehouse%20that%20have%20inventory%20of%20the%20item%20be%20available%20for%20BOPIS%20orders%3F.adoc[Q. Will the warehouse that have inventory of the item be available for BOPIS orders?]
+
+link:https://github.com/hotwax/oms-documentation/blob/bopis/BOPIS/FAQs/Q.%20When%20a%20customer%20places%20a%20BOPIS%20order%20of%20an%20item%20for%20a%20store.%20Will%20the%20information%20about%20the%20store%20for%20which%20the%20BOPIS%20order%20was%20placed%20be%20saved%20in%20Shopify%3F.adoc[Q. When a customer places a BOPIS order of an item for a store. Will the information about the store for which the BOPIS order was placed be saved in Shopify?]
+
+link:https://github.com/hotwax/oms-documentation/blob/bopis/BOPIS/FAQs/Q.%20How%20BOPIS%20orders%20are%20imported%20in%20OMS%3F.adoc[Q. How BOPIS orders are imported in OMS?]
+
+link:https://github.com/hotwax/oms-documentation/blob/bopis/BOPIS/FAQs/Q.%20How%20can%20store%20associates%20view%20BOPIS%20orders%20placed%20for%20their%20store%3F.adoc[Q. How can store associates view BOPIS orders placed for their store?]
+
+link:https://github.com/hotwax/oms-documentation/blob/bopis/BOPIS/FAQs/Q.%20How%20can%20a%20store%20associate%20mark%20the%20BOPIS%20order%20as%20packed%20and%20ready%20for%20pickup%3F.adoc[Q. How can a store associate mark the BOPIS order as packed and ready for pickup?]
+
+link:https://github.com/hotwax/oms-documentation/blob/bopis/BOPIS/FAQs/Q.%20Customer%20has%20come%20to%20collect%20his-her%20BOPIS%20order.%20How%20can%20a%20store%20associate%20complete%20a%20packed%20BOPIS%20order%3F.adoc[Q. Customer has come to collect his/her BOPIS order. How can a store associate complete a packed BOPIS order?]
+
+link:https://github.com/hotwax/oms-documentation/blob/bopis/BOPIS/FAQs/Q.%20Customer%20has%20come%20to%20collect%20his-her%20BOPIS%20order%20but%20the%20store%20associate%20cannot%20find%20the%20order%20in%20the%20‘Packed’%20tab%20of%20the%20BOPIS%20app.%20How%20can%20store%20a%20associate%20find%20and%20complete%20the%20BOPIS%20order%20of%20the%20customer%3F.adoc[Q. Customer has come to collect his/her BOPIS order but the store associate cannot find the order in the ‘Packed’ tab of the BOPIS app. How can store a associate find and complete the BOPIS order of the customer?]
+
+link:https://github.com/hotwax/oms-documentation/blob/bopis/BOPIS/FAQs/Q.%20Customer%20has%20come%20to%20collect%20BOPIS%20order%20but%20the%20store%20associate%20cannot%20find%20his-her%20order%20either%20in%20the%20packed%20tab%20or%20in%20the%20open%20tab%20of%20BOPIS%20app.%20What%20does%20the%20store%20associate%20need%20to%20do%3F.adoc[Q. Customer has come to collect BOPIS order but the store associate cannot find his/her order either in the packed tab or in the open tab of BOPIS app. What does the store associate need to do?]
+
+link:https://github.com/hotwax/oms-documentation/blob/bopis/BOPIS/FAQs/Q.%20How%20can%20the%20store%20managers%20see%20all%20the%20BOPIS%20orders%20rejected%20by%20their%20stores%3F.adoc[Q. How can the store managers see all the BOPIS orders rejected by their stores?]
+
+link:https://github.com/hotwax/oms-documentation/blob/bopis/BOPIS/FAQs/Q.%20How%20can%20the%20store%20managers%20see%20all%20the%20BOPIS%20orders%20completed%20by%20their%20stores%3F.adoc[Q. How can the store managers see all the BOPIS orders completed by their stores?]
+
+link:https://github.com/hotwax/oms-documentation/blob/bopis/BOPIS/FAQs/Q.%20How%20can%20a%20store%20associate%20rejects%20a%20BOPIS%20order%20that%20the%20store%20cannot%20fulfill%3F.adoc[Q. How can a store associate rejects a BOPIS order that the store cannot fulfill?]
+
+link:https://github.com/hotwax/oms-documentation/blob/bopis/BOPIS/FAQs/Q.%20If%20a%20BOPIS%20order%20is%20rejected%20by%20the%20store%20will%20the%20order%20be%20cancelled%3F.adoc[Q. If a BOPIS order is rejected by the store will the order be cancelled?]
+
+link:https://github.com/hotwax/oms-documentation/blob/bopis/BOPIS/FAQs/Q.%20How%20will%20the%20customers%20be%20notified%20if%20their%20BOPIS%20order%20is%20rejected%20by%20the%20store%3F.adoc[Q. How will the customers be notified if their BOPIS order is rejected by the store?]
+
+link:https://github.com/hotwax/oms-documentation/blob/bopis/BOPIS/FAQs/Q.%20How%20can%20customers%20have%20the%20item%20delivered%20to%20them%20if%20their%20BOPIS%20order%20is%20rejected%20by%20the%20store%3F.adoc[Q. How can customers have the item delivered to them if their BOPIS order is rejected by the store?]
+
+link:https://github.com/hotwax/oms-documentation/blob/bopis/BOPIS/FAQs/Q.%20How%20can%20customers%20cancel%20the%20item%20delivered%20if%20their%20BOPIS%20order%20is%20rejected%20by%20the%20store%3F.adoc[Q. How can customers cancel the item delivered if their BOPIS order is rejected by the store?]
+
+link:https://github.com/hotwax/oms-documentation/blob/bopis/BOPIS/FAQs/Q.%20How%20can%20the%20store%20manager%20turn%20off%20the%20store%20for%20new%20BOPIS%20order%3F.adoc[Q. How can the store manager turn off the store for new BOPIS order?]
+
+link:https://github.com/hotwax/oms-documentation/blob/bopis/BOPIS/FAQs/Q.%20How%20does%20OMS%20syncs%20inventory%20with%20Shopify%3F.adoc[Q. How does OMS syncs inventory with Shopify?]
+
+link:https://github.com/hotwax/oms-documentation/blob/bopis/BOPIS/FAQs/Q.%20How%20does%20overpromising%20of%20BOPIS%20order%20is%20avoided%3F.adoc[Q. How does overpromising of BOPIS order is avoided?]
+
+link:https://github.com/hotwax/oms-documentation/blob/bopis/BOPIS/FAQs/Q.%20Can%20a%20customer%20place%20a%20single%20order%20for%20both%20fulfillment%20and%20BOPIS%20items%3F.adoc[Q. Can a customer place a single order for both fulfillment and BOPIS items?]

@@ -1,0 +1,3 @@
+== Q. Will the warehouse that have inventory of the item be available for BOPIS orders?
+
+No, warehouses will not be available for BOPIS orders even if they have inventory of the item. Only the stores that have the inventory of the item will be available for BOPIS orders.

@@ -1,0 +1,11 @@
+= updateShipment
+
+This service is used to update the shipment. It will accept the attributes of Shipment entity excluding shipmentTypeId, createdDate, createdByUserLogin, lastModifiedDate and lastModifiedByUserLogin.
+
+== Inline Services
+
+=== checkCanChangeShipmentStatusDelivered
+This service is used to check the Status of a Shipment to see if it can be changed to the particular status using checkCanChangeShipmentStatusGeneral method.
+
+=== For more details please refer updateShipment API:
+link:../APIs/updateShipment.adoc[updateShipment]

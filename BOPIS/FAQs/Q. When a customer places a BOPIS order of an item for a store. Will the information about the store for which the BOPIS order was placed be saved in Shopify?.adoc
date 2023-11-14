@@ -1,0 +1,3 @@
+== Q. When a customer places a BOPIS order of an item for a store. Will the information about the store for which the BOPIS order was placed be saved in Shopify?
+
+Yes, the store ID and store name are saved in virtual tags for the ordered item. Later when the order will be imported in OMS these tags will help OMS identify the BOPIS order item and the store for which the order was placed.

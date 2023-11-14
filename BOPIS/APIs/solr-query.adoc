@@ -1,0 +1,133 @@
+= Store Locations
+
+To lookup the store locations you will need to call the `/solr-query` endpoint with the POST method.
+
+=== *Request*
+*Endpoint*
+----
+POST https://<host>/api/solr-query
+
+Host: example.com
+----
+*Headers*
+----
+Content-Type:​ application/json
+
+Authorization: Bearer <token_value>
+
+Accept: application/json
+----
+*Body*
+[source, json]
+----------------------------------------------------------------
+{
+    "json":
+    {
+        "params":
+        {
+            "q.op":"AND",
+            "qf":"postalCode city state country storeCode storeName",
+            "defType":"edismax"
+        },
+        "query":"(**) OR \"\"^100",
+        "filter":"docType:STORE"
+    }
+}
+----------------------------------------------------------------
+=== *Response*
+
+*Status Code*
+----
+HTTP/1.1​ ​200​ ​OK
+----
+
+*Headers*
+----
+Content-Type: application/json
+----
+*Body*
+[source, json]
+----------------------------------------------------------------
+{
+  "response": {
+  "numFound": 4,
+  "start": 0,
+  "docs": [
+    {
+      "identifier": "STORE_1",
+      "country": "United States",
+      "docType": "STORE",
+      "externalId": "DC_STORE_1",
+      "storeName": "Salt Lake City",
+      "countryCode": "USA",
+      "city": "Salt Lake City",
+      "postalCode": "84101",
+      "storePhone": "1303555-5555",
+      "storeCode": "STORE_1",
+      "docType-identifier": "STORE-STORE_1",
+      "stateCode": "UT",
+      "state": "Utah",
+      "address1": "1110 S 300 W",
+      "storeType": "RETAIL_STORE",
+      "_version_": 1720565607323140096
+    },
+    {
+      "identifier": "STORE_2",
+      "country": "United States",
+      "docType": "STORE",
+      "externalId": "DC_STORE_2",
+      "storeName": "West Valley City",
+      "countryCode": "USA",
+      "city": "West Valley City",
+      "postalCode": "84120",
+      "storePhone": "1303555-5555",
+      "storeCode": "STORE_2",
+      "docType-identifier": "STORE-STORE_2",
+      "stateCode": "UT",
+      "state": "Utah",
+      "address1": "5518 W High Market Dr",
+      "storeType": "RETAIL_STORE",
+      "_version_": 1720565607332577280
+    },
+    {
+      "identifier": "STORE_3",
+      "country": "United States",
+      "docType": "STORE",
+      "externalId": "DC_STORE_3",
+      "storeName": "West Jordan",
+      "countryCode": "USA",
+      "city": "West Jordan",
+      "postalCode": "84084",
+      "storePhone": "1303555-5555",
+      "storeCode": "STORE_3",
+      "docType-identifier": "STORE-STORE_3",
+      "stateCode": "UT",
+      "state": "Utah",
+      "address1": "6748 Redwood Rd",
+      "storeType": "RETAIL_STORE",
+      "_version_": 1720565607333625857
+    },
+    {
+      "identifier": "STORE_4",
+      "country": "United States",
+      "docType": "STORE",
+      "externalId": "DC_STORE_4",
+      "storeName": "Centerville",
+      "countryCode": "USA",
+      "city": "Centerville",
+      "postalCode": "84014",
+      "storePhone": "1303555-5555",
+      "storeCode": "STORE_4",
+      "docType-identifier": "STORE-STORE_4",
+      "stateCode": "UT",
+      "state": "Utah",
+      "address1": "200 N Market Place Dr",
+      "storeType": "RETAIL_STORE",
+      "_version_": 1720565607334674432
+    }
+  ]
+}
+----------------------------------------------------------------
+
+=== Further you will need to call checkInventory API to get the product count on specific locations, using identifier as facilityId:
+link:../APIs/checkInventory.adoc[checkInventory]

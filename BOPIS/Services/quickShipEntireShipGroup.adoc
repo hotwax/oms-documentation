@@ -1,0 +1,46 @@
+= quickShipEntireShipGroup
+
+This service is used to quick ship the entire ship group items.
+
+== Properties
+Following are the attributes used in below API:
+
+[width="100%", cols="3,2,10" options="header"]
+|=======
+|Attribute |Type |Description
+|orderId |string |This attribute contains the unique ID of order in OMS.
+|setPackedOnly |string |This attribute is a flag and set Y if user only want to pack the order.
+|dimensionUomId |string |This attributes contains dimension UOM of shipment package. like WT_lb, WT_kg e.t.c.
+|shipmentBoxTypeId |string |This attribute contains the type of box used in the shipment like YOURPACKNG
+|weight |string |This attribute contains weight of the shipment.
+|weightUomId |string |This attribute contains weight UOM of the shipment.
+|facilityId |string |This attribute contains the unique ID of ship from facility in OMS.
+|shipGroupSeqId |string |This attribute contains ship group sequence ID.
+|=======
+
+== Inline Services
+
+=== isPackingStartedForOrderShipGroup
+This service is used to check whether packing started for the orderShipGroup, it returns the boolean value.
+
+* Further it checks the record in Shipment entity along with the passed orderId and shipmentId should not be cancelled.
+* This service return true if the shipment record exists.
+* If it returns true then we get the message 'Fulfillment has been started for ShipGroup'.
+* Otherwise further validatePicklistBinIdOrOrderIdForPacking and initializeShipment service will be invoked.
+
+=== validatePicklistBinIdOrOrderIdForPacking
+This service is used to find the valid picklistBin record on the basis of given input parameter, picking process will be skipped in case of direct packing.
+
+* Checks whether for entered binId or orderId, bin is completed or not using isBinComplete method. If it is completed, then return error.
+* Checks whether picklist for entered binId or orderId is cancelled or not. If it is cancelled, then return error.
+* Check whether entered bin number's picklist is in picked status or not. If already picked then cool, and if not then mark the pick list as picked using markAllPicklistItemsPicked method.
+
+=== initializeShipment
+This service is used to createShipment after following steps:
+
+* Checks pickedItems using getPicklistBinItems helper method with picklistBinId.
+* Checks reservedItems using getOrderItemsReadyToPack helper method with orderId and shipGroupSeqId.
+* If any of pickedItems and reservedItems exists, Checks the corresponding shipment record, if exists then return that shipmentId else invoked createShipment service for creating a shipment.
+
+=== For more details please refer quickShipEntireShipGroup API:
+link:../APIs/quickShipEntireShipGroup.adoc[quickShipEntireShipGroup]

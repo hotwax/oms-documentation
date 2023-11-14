@@ -1,0 +1,5 @@
+== Q. If a BOPIS order is rejected by the store will the order be cancelled?
+
+No, the order will not be cancelled, it will be removed from the "Open' tab of the BOPIS app for the store.
+
+The 'Ship From' for the order will be updated to 'N/A' in OMS and the customer will receive an email regarding the order rejected by the store. The customers will then have an option to either have the item delivered to them or cancel the order.

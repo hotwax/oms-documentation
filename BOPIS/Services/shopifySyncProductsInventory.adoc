@@ -1,0 +1,18 @@
+= shopifySyncProductsInventory
+
+This service is used to sync initial inventory from oms to shopify when OMS is the inventory master.
+
+== Properties
+Following are the attributes used in below service:
+
+[width="100%", cols="4" options="header"]
+|=======
+|Attribute |Type |Required| Description
+|facilityId|String|Yes|This attribute contains unique ID of facility/warehouse exists in the system.
+|productsMap|Map|Yes|This attribute contains the multiple key value (productId: qty) pair.
+|=======
+
+== Inline Services
+
+=== bulkAdjustInventoryLevelOnShopify
+This service is used to adjust the inventory level on shopify, it allows to adjust the inventory of up to 100 inventory items at a specific location. Further it will call sendShopifyBulkInventoryUpdate service that sends the bulk inventory update to shopify via graphQL.

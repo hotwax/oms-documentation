@@ -1,0 +1,11 @@
+== Q. How can store associates view BOPIS orders placed for their store?
+
+Store associates can use the BOPIS app to view BOPIS orders placed for their store.
+
+All the new orders that need to be picked will be displayed in the 'Open' tab of the app and all the orders that are packed and ready for the customer to be picked will be displayed on the 'Packed' tab.
+
+Retailers can also use the APIs to integrate this functionality into their existing fulfillment system.
+
+For open orders please refer wms-orders API: link:../APIs/wms-orders.adoc[wms-orders]
+
+For ready to pick orders please refer readytoshiporders API: link:../APIs/readytoshiporders.adoc[readytoshiporders]

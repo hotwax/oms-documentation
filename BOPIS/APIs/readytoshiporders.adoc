@@ -1,0 +1,111 @@
+= Ready To Ship Orders
+
+To get the list of orders that need to be delivered i.e. ready to ship orders and order items for a particular store you will need to call `/readytoshiporders` endpoint with get method. Further it fetches the record from ShipmentRouteSegAndShipGroupDetail entity.
+
+== Properties
+Following are the attributes used in below API:
+
+[width="100%", cols="4" options="header"]
+|=======
+|Attribute |Type |Required|Description
+|facilityId |String |Yes|This attribute contains unique ID of the facility.
+|shipmentMethodTypeId |String |No|This attribute contains unique shipmentMethodType ID.
+|statusId|String| No|This attribute contains the statusId of shipment.
+|viewSize |Integer | No|Represents the total number count to get the records. If size is not passed default view size is 10 (can vary as per the configuration)
+|viewIndex |Integer | No|Represents the page number, we can assign viewIndex based on the number of page. If view index is not passed default view index is 0
+|sortBy |String | No|Sort data based on the attribute. Ex. `sortBy=createdDate`
+|sortOrder |String | No|Order of sorted records i.e either ascending or descending. `asc` for ascending and `desc` for descending.
+|=======
+
+=== *Request*
+*Endpoint*
+----
+GET /api/readytoshiporders HTTP/1.1
+
+Host: example.com
+----
+
+*Headers*
+----
+Content-Type:​ application/json
+
+Authorization: Bearer <token_value>
+
+Accept: application/json
+----
+*Body*
+[source, json]
+----------------------------------------------------------------
+{
+    "facilityId":"STORE_1"
+    "sortBy":"createdDate",
+    "sortOrder":"Desc",
+    "viewSize":"10",
+    "viewIndex":0,
+}
+----------------------------------------------------------------
+=== *Response*
+
+*Status Code*
+----
+HTTP/1.1​ ​200​ ​OK
+----
+
+*Headers*
+----
+Content-Type: application/json
+----
+*Body*
+[source, json]
+----------------------------------------------------------------
+{
+    "count" : "1", 
+    "docs": [
+        {
+            "orderId" : "NN11142",
+            "shipmentMethodTypeId" : "STOREPICKUP",
+            "salesChannelEnumId" : "WEB_SALES_CHANNEL",
+            "orderIdentifications" : [ "SHOPIFY_ORD_ID/4651072979197" , "SHOPIFY_ORD_NAME/#1351" , "SHOPIFY_ORD_NO/351" ],
+            "customerId" : "10541",
+            "customerName" : "Humera Khan",
+            "picklistTotalItems": "0",
+            "picklistPickedItems": "0",
+            "picklistPickedDate": "",
+            "picklistId": "",
+            "pickerId": "",
+            "pickerName": "",
+            "facilityId" : "STORE_1",
+            "shipmentId" : "10890",
+            "items" : [
+                {
+                    "shipGroupSeqId" : "00001",
+                    "orderItemSeqId" : "00001",
+                    "itemId" : "12017",
+                    "itemName": "Abominable Hoodie-L-Blue",
+                    "brandName" : "HC Demo",
+                    "quantity": "1",
+                    "statusId" : "ITEM_APPROVED",
+                    "standardFeatures": {
+                        "COLOUR": { 
+                            "productFeatureId": "10020",
+                            "description": "Blue"
+                        },
+                        "SIZE": {
+                            "productFeatureId": "TEXT_LARGE",
+                            "description": "L"
+                        }
+                    },
+                    "images": {
+                        "main": {
+                            "thumbnail": "https://cdn.shopify.com/s/files/1/0069/7384/9727/products/mh09-blue_main.jpg?v=1593170785",
+                            "small": "https://cdn.shopify.com/s/files/1/0069/7384/9727/products/mh09-blue_main.jpg?v=1593170785",
+                            "large": "https://cdn.shopify.com/s/files/1/0069/7384/9727/products/mh09-blue_main.jpg?v=1593170785",
+                            "detail": "https://cdn.shopify.com/s/files/1/0069/7384/9727/products/mh09-blue_main.jpg?v=1593170785"
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
+----------------------------------------------------------------

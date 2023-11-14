@@ -1,0 +1,7 @@
+== Q. Customer has come to collect his/her BOPIS order. How can a store associate complete a packed BOPIS order?
+
+The store associate will have to search the order in the 'Packed' tab of the BOPIS app and then click on the 'Handover' button to complete the order.
+
+Retailers can also use the APIs to integrate this functionality into their existing fulfillment system.
+
+For more details please refer updateShipment API: link:../APIs/updateShipment.adoc[updateShipment]

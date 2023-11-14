@@ -1,0 +1,97 @@
+= Quick ship entire ship group
+
+To quick ship entire order you will need to call the `/quickShipEntireShipGroup` endpoint with the POST method. This API will quickly ship the entire ship group.
+
+== Properties
+Following are the attributes used in below API:
+
+[width="100%", cols="3,2,10" options="header"]
+|=======
+|Attribute |Type |Description
+|orderId |string |This attribute contains the unique ID of order in OMS..
+|setPackedOnly |string |This attribute is a flag and set Y if user only want to pack the order.
+|dimensionUomId |string |This attributes contains dimension UOM of shipment package. like WT_lb, WT_kg e.t.c.
+|shipmentBoxTypeId |string |This attribute contains the type of box used in the shipment like YOURPACKNG
+|weight |string |This attribute contains weight of the shipment.
+|weightUomId |string |This attribute contains weight UOM of the shipment.
+|facilityId |string |This attribute contains the unique ID of ship from facility in OMS.
+|shipGroupSeqId |string |This attribute contains ship group sequence ID.
+|=======
+
+.Following are the requried attributes:
+
+- orderId (required, string): The unique ID of the order.
+- setPackedOnly (required, string): The flag used for pack only.
+- dimensionUomId (required, string): The dimension UOM of the shipment.
+- shipmentBoxTypeId (required, string): The type of shipment box.
+- weight (required, string): The weight of the shipment.
+- weightUomId (required, string): The weight UOM of the shipment.
+- facilityId (required, string): The unique ID of the facility.
+- shipGroupSeqId (required, string): The unique ID of the ship group.
+
+=== *User Story*
+
+- It will be used to ship the entire ship group, provided all mandatory attributes.
+
+=== *Request*
+*Endpoint*
+----
+POST /api/quickShipEntireShipGroup HTTP/1.1
+
+Host: example.com
+----
+
+*Headers*
+----
+Content-Type:​ application/json
+
+Authorization: Bearer <token_value>
+
+Accept: application/json
+----
+*Body*
+[source, json]
+----------------------------------------------------------------
+{
+    "orderId":"NN11142",
+    "facilityId":"STORE_1",
+    "shipGroupSeqId":"00001"
+    "setPackedOnly":"Y",
+    "weight":"1",
+    "dimensionUomId":"WT_kg",
+    "weightUomId":"WT_kg",
+    "shipmentBoxTypeId":"YOURPACKNG",
+}
+----------------------------------------------------------------
+=== *Response*
+
+*Status Code*
+----
+HTTP/1.1​ ​200​ ​OK
+----
+
+*Headers*
+----
+Content-Type: application/json
+----
+*Body*
+[source, json]
+----------------------------------------------------------------
+{
+    "orderId":"NN11142",
+    "facilityId":"STORE_1",
+    "shipGroupSeqId":"00001",
+    "setPackedOnly":"Y",
+    "weight":"1",
+    "shipmentBoxTypeId":"YOURPACKNG",
+    "cors.request.type":"actual",
+    "dimensionUomId":"WT_kg",
+    "weightUomId":"WT_kg",
+    "webSiteId":"API",
+    "cors.request.origin":<origin_URL>,
+    "_EVENT_MESSAGE_":"Congratulations! Shipment #10890 is shipped successfully."
+}
+----------------------------------------------------------------
+
+=== For more details please refer quickShipEntireShipGroup Service:
+link:../Services/quickShipEntireShipGroup.adoc[quickShipEntireShipGroup]

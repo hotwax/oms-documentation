@@ -1,0 +1,9 @@
+== Q. How can a store associate mark the BOPIS order as packed and ready for pickup?
+
+Store associates can view the item to be picked from the 'Open' tab of the BOPIS app. Once the item is picked and packed the store associate can click on the 'Ready for Pickup' button, the order will be marked packed and will be displayed on the ‘Packed’ tab on the app.
+
+If OMS is integrated with CRM then OMS will trigger an email to notify the customer that their order is ready for pickup.
+
+Retailers can also use the APIs to integrate this functionality into their existing fulfillment system.
+
+For more details please refer quickShipEntireShipGroup API: link:../APIs/quickShipEntireShipGroup.adoc[quickShipEntireShipGroup]

@@ -1,0 +1,60 @@
+= rejectOrderItem
+
+This service is used to reject the order items. Further it removes the item from picklist, cancel the item reservation, move the item to NA ship group and record variance for all qty of product.
+
+== Properties
+Following are the attributes used in below API:
+
+[width="100%", cols="3,2,10" options="header"]
+|=======
+|Attribute |Type |Description
+|orderId |String |This is the unique ID assigned to an order in the system.
+|externalOrderId |String |This is the unique ID assigned to an order in the external system.
+|orderIdentification |Object |This carry the identification information.
+|orderIdentification.orderIdentificationTypeId |String |This is the identification type of the order in the system.
+|orderIdentification.idValue |String |This is the identification value for the orderIdentificationTypeId.
+|shipmentMethodTypeId  |String | This attribute contains shipment Method Type Id of item.
+|orderItemSeqId |String |This attribute contains order item sequence ID.
+|externalOrderItemId |String |This is the unique ID assigned to an order item in the external system.
+|quantity |Integer |This attribute contains the quantity of product in the order.
+|facilityId |String |This attribute contains facility/warehouse ID already exist in the system.
+|externalFacilityId|String|FacilityID in the external system.
+|recordVariance |String |Flag to record variance or not. Default value is Y
+|rejectReason |String |Reason of rejection. Accepts predefined values in the system.
+|=======
+
+== Inline Services
+
+=== updatePicklistItem
+This service is used to update picklistItem after rejecting the item, If the picklistItems exists for the passed parameters with itemStatusId as PICKITEM_PENDING. Picklist will be marked as cancelled if all the quantity of items are rejected.
+
+=== cancelOrderItemInvResQty
+This service is used to cancel a specific quantity of an order item using cancelOrderInventoryReservation and cancelOrderItemShipGrpInvRes services. If the product is marketing package then checkDecomposeInventoryItem service will also be invoked.
+
+=== deleteOrderItemShipGroupAssoc
+This service is used to remove ship group assoc if order item quantity is zero using entity-auto engine in OrderItemShipGroupAssoc entity.
+
+=== createOrderItemShipGroup
+This service is used to create a new orderItemShipGroup
+
+* If shipGroup with _NA_ facility not exists then create a new shipGroup with _NA_ facility.
+* If the item is preorderItem then create a new shipGroup with PRE_ORDER_PARKING facility.
+* If the item is backorderItem then create a new shipGroup with BACKORDER_PARKING facility.
+
+=== addOrderItemShipGroupAssoc
+This service is used to create orderItem and shipGroup association, after creating new ship group.
+
+=== createOrderFacilityChange
+This service is used to create orderFacilityChange record along with rejectReason.
+
+=== updateOrderItem
+This service is used to update orderItem after adding the auto-cancel date. Further it uses entity-auto engine for OrderItem entity.
+
+=== changeOrderItemStatus
+If the item is either preorder or backorder then invoke the changeOrderItemStatus service with statusId as ITEM_HOLD.
+
+=== createPhysicalInventoryAndVariance
+This service is used to record variance for all the available quantity using createPhysicalInventory and createInventoryItemVariance services.
+
+=== For more details please refer rejectOrderItem API:
+link:../APIs/rejectOrderItem.adoc[rejectOrderItem]
