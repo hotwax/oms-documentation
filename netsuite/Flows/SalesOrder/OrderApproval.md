@@ -12,11 +12,11 @@ To successfully create a sales order in Netsuite, [it is a prerequisite to have 
 
 **Actions**
 
-#### Export customers from HotWax Commerce and import into NetSuite
+#### Export customers from HotWax Commerce
 A scheduled job in HotWax Commerce operates at defined intervals to generate a CSV file comprising customers who have not been synchronized to Netsuite. This job can be configured to run at regular intervals, typically set at an hourly frequency. Customers who haven't been synchronized within the last hour are included in this CSV file for synchronization with Netsuite.
 
 {% hint style="info" %}
-##### HotWax Internals
+**HotWax Internals**
 Identify new customers by checking the Person table for entries where the roleTypeId is 'CUSTOMER' and where the PartyIdentification record for identification type 'NETSUITE_CUSTOMER_ID' is not created.
 {% endhint %}
 
@@ -25,6 +25,7 @@ Identify new customers by checking the Person table for entries where the roleTy
 /home/{sftp-username}/netsuite/customer/export
 ```
 
+#### Import customers into NetSuite
 A Scheduled Script in NetSuite is responsible for downloading the CSV file of customers not yet synchronized and utilizes the ImportTask function of the N/Task module. This script processes and creates customer records within Netsuite, ensuring that the necessary customer information is available in Netsuite for order creation.
 
 **SuiteScripts**
