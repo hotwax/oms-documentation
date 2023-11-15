@@ -104,6 +104,7 @@ This step syncs Netsuite sales order line item IDs with HotWax Commerce order it
 
 **Actions**
 
+#### Export order line item IDs from NetSuite
 A Map Reduce SuiteScript in Netsuite retrieves order line item IDs and generates a CSV file.
 
 **SuiteScript**
@@ -111,6 +112,7 @@ A Map Reduce SuiteScript in Netsuite retrieves order line item IDs and generates
 HC_MR_ExportedSalesOrderItemCSV
 ```
 
+#### Import order line item IDs into HotWax Commerce
 A job in HotWax Commerce imports the CSV to pair Netsuite order line item IDs with appropriate order items.
 
 **Job in HotWax Commerce**
@@ -133,6 +135,7 @@ To ensure that only applicable customer deposits are created in NetSuite, orders
 
 **Actions**
 
+#### Export Customer Deposit from HotWax Commerce
 HotWax Commerce runs a scheduled job that generates a JSON file with order details and their respective grand totals.
 
 **SFTP Locations**
@@ -142,6 +145,7 @@ Export customer despot for orders with NetSuite order identification
 /home/{sftp-username}/netsuite/salesorder/customerdeposit
 ```
 
+#### Import Customer Deposit into NetSuite
 A SuiteScript in Netsuite creates customer deposit records in "undeposited" status based on the JSON file from the SFTP server. It employs the N/Record module for record creation.
 
 **SuiteScript**
@@ -156,6 +160,7 @@ The synchronization of Sales Order IDs from Netsuite to HotWax Commerce is a cri
 
 **Actions**
 
+#### Export order IDs from NetSuite
 A Map Reduce SuiteScript in Netsuite fetches pending fulfillment orders and generates a CSV file with internal sales order IDs.
 
 **SuiteScript**
@@ -163,6 +168,7 @@ A Map Reduce SuiteScript in Netsuite fetches pending fulfillment orders and gene
 HC_MR_ExportedSalesOrderCSV
 ```
 
+#### Import order IDs into HotWax Commerce
 A job in HotWax Commerce imports the CSV to associate Netsuite order IDs with corresponding orders.
 
 **Job in HotWax Commerce**
@@ -178,15 +184,16 @@ This step involves marking of  orders as "Approved" for further processing and f
 
 **Actions**
 
-
 A scheduled job in HotWax Commerce validates order items and marks them "Approved." 
-Here is a step by step breakdown of how this process works:
 
+<details>
+​<summary>Step by step breakdown</summary>
 Once all checks and validations for an order to be approved are completed, HotWax internally adds an order attribute, "NETSUITE_ORDER_EXPORTED", to these orders. This attribute is added in batches through a scheduled job.
 
 A seperate job checks for orders that have this attribute added to them and internally hands them off for approval in the OMS. This is a two step process because it allows us to abstract the order approval checks from the actual order approval job, thus enabling extensiblity in the validations required for order approval for different retailers. 
 
 For example, some retailers may have an additional fraud detection check that needs to be completed before an order can be approved. Completetion of the fraud detection would add its own attribute (ex. "FRAUD_VERIFIED") to the order and the final order approval job would check both attributes before internally approving the order.
+</details>
 
 **SFTP Locations**
 
