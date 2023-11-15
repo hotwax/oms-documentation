@@ -13,6 +13,8 @@ In order to map a custom NetSuite value for each Sales Channel, we've effectivel
 
 For mapping source based on POS facility ID, Krewe will be able to add custom Facility Identifications, allowing them to map custom values to each facility they setup. The identification types will have to be predetermined so that when HotWax syncs the order to NetSuite it is able to check specifically the Sales Channel type of facility identification and include it in the order.
 
+Order Type value for POS orders will be 6 unless there is a facility identification created for enum id: NETSUITE_ORDR_TYPE which will overwrite the default value.
+
 Facility Identification Type
 ```
 NETSUITE_ORDR_TYPE
