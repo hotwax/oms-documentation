@@ -33,7 +33,7 @@ To go to this page directly, use this URL with your hostname
 
 ```
 <GeoAssoc geoAssocTypeId="GROUP_MEMBER" geoId="USA" geoIdTo="DBIC" sequenceNum="1"/>
-<GeoAssoc geoAssocTypeId="GROUP_MEMBER" geoId="CHN" geoIdTo="DBIC" sequenceNum="2"/>
+<GeoAssoc geoAssocTypeId="GROUP_MEMBER" geoId="CAN" geoIdTo="DBIC" sequenceNum="2"/>
 <GeoAssoc geoAssocTypeId="GROUP_MEMBER" geoId="ENGL" geoIdTo="DBIC" sequenceNum="3"/>
 <GeoAssoc geoAssocTypeId="GROUP_MEMBER" geoId="NIRL" geoIdTo="DBIC" sequenceNum="4"/>
 <GeoAssoc geoAssocTypeId="GROUP_MEMBER" geoId="SCOT" geoIdTo="DBIC" sequenceNum="5"/>
