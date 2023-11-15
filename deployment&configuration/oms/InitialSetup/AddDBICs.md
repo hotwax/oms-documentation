@@ -19,7 +19,13 @@ Alternatively you can go to this URL after loging in
 {hostname}.hotwax.io/webtools/control/EntityImport
 ```
 
+#### Get Geo IDs for your DBIC data
 GeoIds for all countries can be found in the Geo entity in Webtools. Use them to create GeoAssoc data like the sample data below. Replace the geoId and sequenceNum to create your own data for other countries.
+
+To go to this page directly, use this URL with your hostname
+```
+{hostname}.hotwax.io/webtools/control/FindGeneric?entityName=Geo
+```
 
 {% hint style="warning" %}
     The sequence no. decides the sequencing of DBIC options in the country dropdown on the stores page.
