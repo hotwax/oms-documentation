@@ -12,9 +12,8 @@ To successfully create a sales order in Netsuite, [it is a prerequisite to have 
 
 **Actions**
 
-#### Export customers from HotWax Commerce
+#### Export customers from HotWax Commerce and import into NetSuite
 A scheduled job in HotWax Commerce operates at defined intervals to generate a CSV file comprising customers who have not been synchronized to Netsuite. This job can be configured to run at regular intervals, typically set at an hourly frequency. Customers who haven't been synchronized within the last hour are included in this CSV file for synchronization with Netsuite.
-
 
 {% hint style="info" %}
 ##### HotWax Internals
@@ -35,6 +34,7 @@ Import new customers from SFTP
 HC_SC_ImportCustomer
 ```
 
+#### Export customers IDs from NetSuite and import into HotWax
 Once customers are created in NetSuite, a scheduled script exports recenlty created customers in a file at an SFTP location to be imported by HotWax Commerce. After HotWax imports this file, the OMS now has confirmation of customer syncronization.
 
 **SuiteScripts**
