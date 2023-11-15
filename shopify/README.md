@@ -1,7 +1,5 @@
 # Shopify Integration Overview
 
-Hola
-
 The integration between HotWax Commerce and Shopify simplifies the process for retailers to synchronize their "available to promise" inventory from HotWax Commerce to Shopify. It also allows Shopify orders to be routed to either the warehouse or store for fast fulfillment. Finally, the integration can update Shopify with tracking details for orders.
 
 Once the product and order data are synchronized from Shopify to HotWax Commerce, and the "available to promise" inventory data is synchronized from HotWax Commerce to Shopify, you can begin using HotWax Commerce.
