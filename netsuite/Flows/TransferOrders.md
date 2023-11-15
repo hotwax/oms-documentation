@@ -8,7 +8,7 @@ This scenario emphasizes the synchronization of Transfer Orders from Netsuite to
 ### Key Objectives
 - Automate the synchronization of Transfer Orders from Netsuite to HotWax Commerce.
 - Streamline the creation of Item Receipt records within HotWax Commerce when store associates receive inventory.
-- Automate the update of Transfer Order statuses from "Pending" to "Received" in Netsuite after item receipt.
+- Automate the update of Transfer Order statuses from "Pending Receipt" to "Received" in Netsuite after item receipt.
 
 ## Workflow
 
