@@ -4,12 +4,12 @@
 
 ## Initial Setup
 * [Launch machine](InitialSetup/LaunchMachine.md)
-* [Initial Login](InitialSetup/IntialLogin.md)
+* [Initial login](InitialSetup/IntialLogin.md)
 * [Add DBICs](InitialSetup/AddDBICs.md)
 * [Configure Product Store](InitialSetup/ProductStore/README.md)
   * [Add more Product Stores](InitialSetup/ProductStore/AddMoreProductStores.md)
 * [Add company name](InitialSetup/AddCompanyName.md)
-* [Load Facility Data](InitialSetup/LoadFacilities.md)
+* [Load facility data](InitialSetup/LoadFacilities.md)
 * [Load System Property data](InitialSetup/LoadSystemPropertys.md)
 
 ## User and Gateway Configuration

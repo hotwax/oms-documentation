@@ -20,7 +20,7 @@ Here are the settings that can be configured in a Product Store:
 
 **Product Identifier Enum ID:** This setting changes which Identification of a product to use as its primary internalName.
 
-<h3 style="color: red">Do not edit these fields </h3>
+### Do not edit these fields
 
 **Explode Order Items** This setting changes if multi-quantity order items are exploded into single quantity items. The default value for this setting is "Y" indicating that it is enabled, it should not be changed to "N", may flows of the OMS are not tested for this setting.
 
@@ -33,12 +33,12 @@ This is the organization at the top of the retailers heirarchy. If a retailer ha
 To configure the company name, you'll have to navigate to Webtools.
 
 ```
-webtools link
+{hostname}.hotwax.io/webtools
 ```
 
 Under "Framework Web Tools", click "Entity Engine". Search for the "WebSite" entity.
 ```
-WebStie
+WebSite
 ```
 
 Open the website entity and click search to see a result of the all the companies configured in the system. By default there should only be one company which is part of the default setup.
