@@ -12,9 +12,9 @@ Here are the settings that can be configured in a Product Store:
 
 **Auto Approve Order:** By default, its value is N. Based on the business rules whether auto-approval of orders needs to be enabled or disabled its value can be set from the dropdown as Y or N.
 
-**Auto Cancel Days:** By default, its value is 0. That indicates no auto cancel days should be applied. If need to pass the value enter the total no. of days for auto-cancellation. Based on that value the order will be auto-canceled.
+**Auto Cancel Days:** The default value is 0. That indicates no auto cancel days should be applied. If needed, enter the the total number of days after which an order should be auto-canceled if it remains un-allocated.
 
-**Sales Order and Purchase Order ID Prefix:** Usually we don’t use it but in case we need to pass prefixes of project name such as ODB and PO for sales order and purchase order respectively followed by a system-generated sequence number we can pass the value here.
+**Sales Order and Purchase Order ID Prefix:** This should be checked with the retailer if they have a preference. Adding a prefix to the internal ID helps visually seperate purchase orders and sales orders. 
 
 **Allow Split:** By default allow split is set to Y. If we need not allow the order split its value can be set from the dropdown as Y or N. Based on this the orders will be split and multiple shipments will be created.
 
