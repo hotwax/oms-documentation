@@ -17,7 +17,7 @@ A scheduled job in HotWax Commerce operates at defined intervals to generate a C
 
 
 {% hint style="info" %}
-## HotWax Internals
+##### HotWax Internals
 Identify new customers by checking the Person table for entries where the roleTypeId is 'CUSTOMER' and where the PartyIdentification record for identification type 'NETSUITE_CUSTOMER_ID' is not created.
 {% endhint %}
 
