@@ -20,6 +20,13 @@ Here are the settings that can be configured in a Product Store:
 
 **Product Identifier Enum ID:** This setting changes which Identification of a product to use as its primary internalName.
 
+<h3 style="color: red">Do not edit these fields </h3>
+
+**Explode Order Items** This setting changes if multi-quantity order items are exploded into single quantity items. The default value for this setting is "Y" indicating that it is enabled, it should not be changed to "N", may flows of the OMS are not tested for this setting.
+
+**External ID** Most retailers will never need this. Adding it will not break any flows but since it is not part of required data setup, it's recommended to leave it blank.
+
+
 ## Add a Company Name
 This is the organization at the top of the retailers heirarchy. If a retailer has multiple brands, this would be the name of the organization that owns all of them.
 
