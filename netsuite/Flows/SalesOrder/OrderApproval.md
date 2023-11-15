@@ -17,6 +17,7 @@ A scheduled job in HotWax Commerce operates at defined intervals to generate a C
 
 {% hint style="info" %}
 **HotWax Internals**
+
 Identify new customers by checking the Person table for entries where the roleTypeId is 'CUSTOMER' and where the PartyIdentification record for identification type 'NETSUITE_CUSTOMER_ID' is not created.
 {% endhint %}
 
@@ -188,7 +189,7 @@ A scheduled job in HotWax Commerce validates order items and marks them "Approve
 
 <details>
 ​<summary>Step by step breakdown</summary>
-Once all checks and validations for an order to be approved are completed, HotWax internally adds an order attribute, "NETSUITE_ORDER_EXPORTED", to these orders. This attribute is added in batches through a scheduled job.
+Once the NetSuite order ID and line item IDs have been saved, HotWax internally adds an order attribute, "NETSUITE_ORDER_EXPORTED", to these orders. This attribute is added in batches through a scheduled job.
 
 A seperate job checks for orders that have this attribute added to them and internally hands them off for approval in the OMS. This is a two step process because it allows us to abstract the order approval checks from the actual order approval job, thus enabling extensiblity in the validations required for order approval for different retailers. 
 
