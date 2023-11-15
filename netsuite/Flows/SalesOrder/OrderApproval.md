@@ -7,6 +7,10 @@ Initially, we attempted to synchronize approved orders from HotWax Commerce to N
 
 To circumvent such complexities and ensure a seamless process, a strategic shift was made. Orders, upon their creation within HotWax Commerce, are designated as "Created" status. It is at this phase that critical order information is captured and assembled into CSV files for transmission to Netsuite. By choosing the "Created" status for order synchronization, HotWax Commerce retains control of the integration process and its sequence of interactions with Netsuite, enhancing accuracy and mitigating errors that arose from attempts to synchronize orders in an "Approved" status.
 
+{% hint style="info" %}
+  Orders will only be allocated for fulfillment after they have been approved.
+{% endhint %}
+
 ## Synchronize Customers from HotWax Commerce to Netsuite
 To successfully create a sales order in Netsuite, [it is a prerequisite to have the customer information pre-existing within Netsuite's database][netSuiteCustomer]. If the order contains a new customer not present in Netsuite, the system won't allow the order to be pushed. Therefore, it's vital to synchronize customer data from HotWax Commerce to Netsuite before order creation.
 
