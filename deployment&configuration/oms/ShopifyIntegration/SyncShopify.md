@@ -37,7 +37,7 @@ variants/count.json
 ```
 Example:
 
-> https://{shop-name}.myshopify.com/admin/variants/count.json
+> https://admin.shopify.com/admin/{shop-name}/variants/count.json
 
 To find the count in HotWax go to the find product page and in the search bar search the following:
 
