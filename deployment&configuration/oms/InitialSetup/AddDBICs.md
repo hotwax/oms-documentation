@@ -7,6 +7,18 @@ The countries that are added here will be available in all address forms thougho
 
 DBIC countries need to be added from the XML data import page in WebTools, the backend service application of HotWax Commerce.
 
+Log into Webtools
+```
+{hostname}.hotwax.io/webtools
+```
+
+Under "Framework Web Tools", click "Import/Export". Then in the list of buttons below, select "XML Data Import"
+
+Alternatively you can go to this URL after loging in
+```
+{hostname}.hotwax.io/webtools/control/EntityImport
+```
+
 GeoIds for all countries can be found in the Geo entity in Webtools. Use them to create GeoAssoc data like the sample data below. Replace the geoId and sequenceNum to create your own data for other countries.
 
 {% hint style="warning" %}
