@@ -20,7 +20,7 @@ job-manager.hotwax.io
 
 Once this job has finished running, go to the Find Product page and verify that all products have imported.
 
-<!-- add steps for how check for failed imports -->
+### Reconcile Product Sync
 
 After all the products are imported into HotWax cross-verify product count between HotWax and Shopify.
 
