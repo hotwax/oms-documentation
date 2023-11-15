@@ -74,14 +74,15 @@ The file contains details such as unit prices, order adjustments, and shipping c
 #### Order and Item Discounts
 If an order has a discount code applied to it, during order sync to NetSuite, HotWax checks if the applied code is available in NetSuite. If the code is available then the exact code is used and the value of the discount is shared as the "Rate". In the event that the code is not available in NetSuite, HotWax will use a default discount code 'SHOPIFY DISCOUNT' along with the value of the discount.
 
-Item level discounts have special handling as well. They are synced as a seperate line item in the order using a "SHOPIFY DISCOUNT" item, however HotWax does not send an order line id for this item. The amount of the adjustment is added in the "Amount" field when preparing the CSV for NetSuite and the "Price Level" is always set to "Custom".
+<!-- make this generic for custom tax codes with example of shopify -->
+
+Item level discounts have special handling as well. They are synced as a seperate line item in the order using a "SHOPIFY DISCOUNT ITEM" item, however HotWax does not send an order line id for this item. The amount of the adjustment is added in the "Amount" field when preparing the CSV for NetSuite and the "Price Level" is always set to "Custom".
 
 #### Item Price
 The price for products is not sent by HotWax when the order syncs to NetSuite. Instead NetSuite automatically adds the value of the product apon order creation based on the price of the product in NetSuite.
 
 #### Tax Codes
 <!-- generic tax handling -->
-
 For retailers that use Avatax, the Tax Code and Shipping Tax Code will always contain "AVATAX" when sent from HotWax. Avalara Tax calculation will automatically compute taxes on the order in NetSuite when the order is created.
 
 <!-- add kit product one line summary and page link -->
