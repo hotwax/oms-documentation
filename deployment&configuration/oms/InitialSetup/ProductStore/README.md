@@ -4,6 +4,8 @@ A Product Store in HotWax Commerce is like the a company, or a brand if a retail
 
 Here are the settings that can be configured in a Product Store:
 
+**Product Store Name** This is the name of the company. If the company has multiple brands this shoudl be the name of one brand.
+
 **Currency:** Fetch it from the organization’s google form. Generally, it is USD.
 
 **Weight:** Its value can be fetched from Shopify. Usually, it is WT_lb in USA else in other countries it is WT_Kg.
@@ -18,4 +20,27 @@ Here are the settings that can be configured in a Product Store:
 
 **Product Identifier Enum ID:** This setting changes which Identification of a product to use as its primary internalName.
 
-**Company Name:** Name of the parent company of the retailer.
+## Add a Company Name
+This is the organization at the top of the retailers heirarchy. If a retailer has multiple brands, this would be the name of the organization that owns all of them.
+
+To configure the company name, you'll have to navigate to Webtools.
+
+```
+webtools link
+```
+
+Under "Framework Web Tools", click "Entity Engine". Search for the "WebSite" entity.
+```
+WebStie
+```
+
+Open the website entity and click search to see a result of the all the companies configured in the system. By default there should only be one company which is part of the default setup.
+
+Continue to the detail page of the defualt company by clicking 'View'.
+
+In the Company Detail page, click "Edit" and change the name of the company in the field "siteName".
+
+
+{% hint style="info" %}
+    If a brand only has one Product Store, its a good idea to reuse its name here.
+{% endhint %}
