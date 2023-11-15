@@ -63,11 +63,13 @@ FTP Config: IMP_PARTY_IDENT
 ## Synchronize Sales Order from HotWax Commerce to Netsuite
 Capturing orders in HotWax Commerce initiates the creation of orders in "created" status. In this step, created sales orders are pushed from HotWax Commerce to Netsuite for further processing.
 
-**Actions**
 
-A job in HotWax Commerce creates a CSV file of orders in "created" status that have not yet been sent to Netsuite. The file contains details such as unit prices, order adjustments, and shipping costs, excluding direct tax amounts. HotWax Commerce omits the tax amount from the file and sends tax codes for the individual order items because Netsuite independently computes the taxes based on these codes and applies them accurately to each order item, ensuring precise tax calculations within Netsuite.
+#### Export new orders to NetSuite
+A job in HotWax Commerce creates a CSV file of orders in "created" status that have not been that have not yet been sent to Netsuite. When creating this file HotWax Commerce also ensures that the customer already exists in NetSutie using the customer ID saved in the last step.
 
-*add details about how coupon codes are synced to HC*
+The file contains details such as unit prices, order adjustments, and shipping costs, excluding direct tax amounts. HotWax Commerce omits the tax amount from the file and sends tax codes for the individual order items because Netsuite independently computes the taxes based on these codes and applies them accurately to each order item, ensuring precise tax calculations within Netsuite.
+
+<!-- add details about how coupon codes are synced to HC -->
 
 #### Order and Item Discounts
 If an order has a discount code applied to it, during order sync to NetSuite, HotWax checks if the applied code is available in NetSuite. If the code is available then the exact code is used and the value of the discount is shared as the "Rate". In the event that the code is not available in NetSuite, HotWax will use a default discount code 'SHOPIFY DISCOUNT' along with the value of the discount.
