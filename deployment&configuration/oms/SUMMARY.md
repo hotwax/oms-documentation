@@ -22,3 +22,4 @@
   * [Setup Shopify Mappings](ShopifyIntegration/SetupMappings.md)
 * [Sync with Shopify](ShopifyIntegration/SyncShopify.md)
 
+
