@@ -45,9 +45,9 @@ Export recenlty created customers to SFTP
 HC_MR_ExportedCustomerCSV
 ```
 
-**Jobs in HotWax Commerce**
+**Job in HotWax Commerce**
 
-Import Customer IDs from NetSuite from SFTP
+Import NetSuite Customer IDs from SFTP
 ```
 Import Party Identification
 FTP Config: IMP_PARTY_IDENT
@@ -64,14 +64,22 @@ A job in HotWax Commerce creates a CSV file of orders in "created" status that h
 
 *add details about how coupon codes are synced to HC*
 
+#### Order and Item Discounts
 If an order has a discount code applied to it, during order sync to NetSuite, HotWax checks if the applied code is available in NetSuite. If the code is available then the exact code is used and the value of the discount is shared as the "Rate". In the event that the code is not available in NetSuite, HotWax will use a default discount code 'SHOPIFY DISCOUNT' along with the value of the discount.
 
 Item level discounts have special handling as well. They are synced as a seperate line item in the order using a "SHOPIFY DISCOUNT" item, however HotWax does not send an order line id for this item. The amount of the adjustment is added in the "Amount" field when preparing the CSV for NetSuite and the "Price Level" is always set to "Custom".
 
+#### Item Price
 The price for products is not sent by HotWax when the order syncs to NetSuite. Instead NetSuite automatically adds the value of the product apon order creation based on the price of the product in NetSuite.
+
+#### Tax Codes
+<!-- generic tax handling -->
 
 For retailers that use Avatax, the Tax Code and Shipping Tax Code will always contain "AVATAX" when sent from HotWax. Avalara Tax calculation will automatically compute taxes on the order in NetSuite when the order is created.
 
+<!-- add kit product one line summary and page link -->
+
+<!-- move to generic methedologies -->
 ### Handling NetSuite file size limits
 We've added a limit to how many orders can be synced in one file to NetSuite to ensure the NetSuite file size limit is not breached. NetSuite has a limit of 25,000 rows in one CSV, so if your order volume in one sync duration exceeds this limit, we automatically paginate the file to ensure NetSuite does not reject the file. Another thing we kept in mind is that during pagination, one order should not be split into seperate files because this could lead to errors in the order import process in NetSuite. Assuming that most e-Commerce orders contain 10 or less items, we've set an upper limit of 1000 orders per file. This should keep the file size well below NetSuite's limit while also leaving buffer for orders with more line items.
 
