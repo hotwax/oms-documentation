@@ -7,6 +7,5 @@
 
 * [Summary](flows/README.md)
 * [Inventory](flows/inventory/README.md)
-  * [Reset Inventory](flows/Inventory/ResetInventory.md)
 * [Sales Orders](flows/SalesOrders/README.md)
   * 
