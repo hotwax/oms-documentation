@@ -1,5 +1,5 @@
 
-# Municipio
+## Municipio
 In Central American countries, "**municipios**" refer to administrative divisions that are similar to municipalities or counties in other parts of the world. Central American countries typically consist of multiple municipios.
 
 Here is how geographic zones are organized in countries that use municipios:
