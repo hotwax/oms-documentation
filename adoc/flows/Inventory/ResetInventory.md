@@ -16,3 +16,9 @@ Because HotWax sends orders to Retail Pro for invoicing only when all items of a
 To make sure shipped inventory from partially completed orders is not reintroduced into the OMS, the Retail Pro integration layer extracts all completed order items from orders that have not been entirely completed and computes the total inventory deductions that have not been reported to Retail Pro yet. A file is then created with inventory variances for those products in the OMS.
 
 This file is consumed after the reset file to ensure that the variances are not overridden by the reset file.
+
+## POS Sales inventory
+Retail Pro calls the [Update Inventory API][updateInventoryDocs] in HotWax Commerce to deduct inventory sold in store for products.
+
+<!-- page links -->
+[updateInventoryDocs]:(https://github.com/hotwax/oms-documentation/blob/oms1.0/Inventory/Update%20Inventory.md)
