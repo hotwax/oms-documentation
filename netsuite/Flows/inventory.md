@@ -28,6 +28,11 @@ A secondary Scheduled Script is triggered, which is responsible for retrieving t
 HC_uploadCSV_InventoryItems
 ```
 
+**SFTP Locations**
+```
+/home/{sftp.user}/netsuite/inventoryitem/csv
+```
+
 The final step in the workflow involves a scheduled job within HotWax Commerce. This job is responsible for reading the Inventory Sync CSV files from the SFTP location. It utilizes this data to reset the inventory numbers for products within the HotWax Commerce system.
 
 **Job in HotWax Commerce**
