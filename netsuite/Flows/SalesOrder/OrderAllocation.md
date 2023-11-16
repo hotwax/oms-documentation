@@ -1,6 +1,6 @@
 # Order Allocation
 
-After an order's items are allocated, the OMS begins syncing them to systems that are responsible for fulfillment of those items. When items are allocated to stores for fulfillment, they show up in the HotWax Store Fulfillment application. If the facility where the item an item is allocated uses NetSuite for fulfillment, usually a warehouse, then the OMS syncs those items' allocation with NetSuite.
+After an order's items are allocated, the OMS begins syncing them to systems that are responsible for fulfillment of those items. When items are allocated to stores for fulfillment, they show up in the HotWax Store Fulfillment application. If the facility where an item is allocated uses NetSuite for fulfillment, usually a warehouse, then the OMS syncs those items' allocation with NetSuite.
 
 It's important to remember that if items are not allocated to a "NetSuite Facility" their allocation is not synced to NetSuite until after fulfillment is complete.
 
