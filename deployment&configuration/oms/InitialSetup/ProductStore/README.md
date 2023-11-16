@@ -4,7 +4,7 @@ A Product Store in HotWax Commerce is like the a company, or a brand if a retail
 
 Here are the settings that can be configured in a Product Store:
 
-**Product Store Name** This is the name of the company. If the company has multiple brands this shoudl be the name of one brand.
+**Product Store Name** This is the name of the company. If the company has multiple brands this shoudl be the name of one brand. Make sure to update this before proceeding
 
 **Currency:** Fetch it from the organization’s google form. Generally, it is USD.
 
@@ -25,29 +25,3 @@ Here are the settings that can be configured in a Product Store:
 **Explode Order Items** This setting changes if multi-quantity order items are exploded into single quantity items. The default value for this setting is "Y" indicating that it is enabled, it should not be changed to "N", may flows of the OMS are not tested for this setting.
 
 **External ID** Most retailers will never need this. Adding it will not break any flows but since it is not part of required data setup, it's recommended to leave it blank.
-
-
-## Add a Company Name
-This is the organization at the top of the retailers heirarchy. If a retailer has multiple brands, this would be the name of the organization that owns all of them.
-
-To configure the company name, you'll have to navigate to Webtools.
-
-```
-{hostname}.hotwax.io/webtools
-```
-
-Under "Framework Web Tools", click "Entity Engine". Search for the "WebSite" entity.
-```
-WebSite
-```
-
-Open the website entity and click search to see a result of the all the companies configured in the system. By default there should only be one company which is part of the default setup.
-
-Continue to the detail page of the defualt company by clicking 'View'.
-
-In the Company Detail page, click "Edit" and change the name of the company in the field "siteName".
-
-
-{% hint style="info" %}
-    If a brand only has one Product Store, its a good idea to reuse its name here.
-{% endhint %}
