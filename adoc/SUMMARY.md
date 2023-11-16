@@ -4,7 +4,7 @@
 * [Why HotWax Commerce](whyHotWax.md)
 
 ## Flows
-* [Summary](flows/README.md)
-* [Inventory](flows/Inventory/READ.md)
-  * [Reset Inventory](flows/Inventory/ResetInventory.md)
 
+* [Summary](flows/README.md)
+* [Inventory](flows/inventory/README.md)
+  * [Reset Inventory](flows/Inventory/ResetInventory.md)
