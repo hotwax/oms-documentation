@@ -1,6 +1,6 @@
 # Map Locations with Shopify
 
-On the Shopify Config Detail page for a Shopify store, scroll down to the `Shopify Location ID` section and add facilites by clicking `Add`.
+On the Shopify Config Detail page for a Shopify store, scroll down to the "Shopify Location ID" section and add facilites by clicking "Add".
 
 All Shopify POS locations shoudl be mapped directly to their counterpart store facility in HotWax Commerce.
 The locatin ID of a facility from Shopify can easily be copied from the URL of a facility detail page.
