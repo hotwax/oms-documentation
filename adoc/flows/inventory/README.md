@@ -17,10 +17,19 @@ To make sure shipped inventory from partially completed orders is not reintroduc
 
 This file is consumed after the reset file to ensure that the variances are not overridden by the reset file.
 
-## POS Sales inventory
+## POS sales inventory
 Retail Pro calls the [Update Inventory API][updateInventoryDocs] in HotWax Commerce to deduct inventory sold in store for products.
 
 Because inventory for in store POS sales is deducted using API calls, actual POS orders are not imported into the OMS from Retail Pro.
 
 <!-- page links -->
 [updateInventoryDocs]:(https://github.com/hotwax/oms-documentation/blob/oms1.0/Inventory/Update%20Inventory.md)
+
+
+## Inventory sync to Shopify
+
+### Full Reset
+After processing inventory rules like safety stock, threshold and product facility configurations a full inventory reset is synced to Shopify once a day from HotWax early in the morning after the reset inventory file from Retail Pro is processed.
+
+### Frequent Delta Syncs
+Throughout the day HotWax pushes inventory updates to Shopify every 15 minutes. These are necessary to keep Shopify up to date about in store sold inventory and avoid over selling. These changes are pushed to Shopify using the “Upload recent inventory change” job in the Job Manager.
