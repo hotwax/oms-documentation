@@ -7,7 +7,7 @@ WhatsApp and phone orders are largely the same, in that they are entered into Sh
 
 Having free text fields for CSRs to enter critical information such as municipio led to many orders being created with erroneous data. Invalid data specifically in the municipio field is problematic because it breaks the integration with the carrier and prevents labels from being generated.
 
-In an effort to combat this, HotWax recommended that a custom draft order entry application be developed which includes an enumerated list of all the valid muncipios, cantons or distrio options for the CSR to simply select from. This eliminates the the possibility of incorrect values being entered by the CSR and guarantees shipping label creation to a much greater extent.
+In an effort to combat this, HotWax recommended that a custom draft order entry application be developed which includes an enumerated list of all the valid muncipios, cantons or distrio options for the CSR to simply select from. This eliminates the possibility of incorrect values being entered by the CSR and guarantees shipping label creation to a much greater extent.
 
 ## Send Sales
 Send Sale orders created by Retail Pro and sent to Shopify. HotWax imports these orders from Shopify. These orders are identified as POS orders in the OMS using the source name mapping with the sales channel and OrderFacility attribute. The source name of the POS channel is unique on every Shopify store because Retail Pro is integrated using a custom app which generates its own custom source name. The easiest way to obtain the source name of POS orders on a Shopify store is to check the JSON of an order created by the custom app.
