@@ -20,7 +20,7 @@ HotWax identifes POS completed orders that need to be synced to NetSuite by chec
 - Sales Channel: POS_Channel.
 - Shipping Method: POS_COMPLETED.
 
-Orders that match these criteria as exported to an SFTP location in a CSV file.
+Orders that match these criteria are exported to an SFTP location in a CSV file.
 
 **SFTP Locations**
 ```
