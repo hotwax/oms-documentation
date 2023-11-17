@@ -28,6 +28,8 @@ Shopify GrqphQL config
 
 The municipio name in Shopify is stored as a Metafield upon order creation, which later becomes an order attribute in HotWax Commerce. To ensure accurate shipping, this order attribute must be transferred to both the City and Zipcode fields in the shipping address before sending it to the carrier.
 
+
+## Enrich shipping address
 HotWax updates the address by utilizing the `updatePostalAddressContactMech` API. After a successful order address update is completed, a new order attribute “SHIP_TO_ADDRESS_UPDATED” is added to orders with the corrected address. This systematic approach ensures that the city information is correctly reflected in the shipping details provided to the carrier.
 
 Here is a step by step process of how HotWax validates if the address values stored in order attributes are valid before adding them to the shipping address of the order.
@@ -40,10 +42,28 @@ It then checks the value of this attribute against the `CarrierGeoMapping` recor
 
 Once the job receives a successful response that the address has been updated in the OMS, the order ID is added to a file containing orders with successfully updated order attributes and the value of the new attribute that is to be added to them. After a batch of orders is complete, this file is imported by HotWax, and the orders have their attributes added to them. Now when a check for order approval is run, it will 
 
-Handling values that do not have a valid carrier code mapping:
+### Handling values that do not have a valid carrier code mapping
+We created a list of Municipios and Cantons where Shopify’s mapping was not aligned with what the shipping carriers were expecting. This meant that even though customers thought they were choosing the right value, behind the scenes on Shopify the ID of their selection was not what the actual carriers were expecting. 
+
+To resolve this we manually mapped all the wrong values against what the right values should be for all the countries, and then added those mappings to the `CarrierGeoMapping` table and set their carrier to the system default carrier. These records have the expected erroneous mapping in the `GeoName` column with the corrected value in the `CarrierGeoValue` column. Now with that the value is corrected, when shipping labels are requested by HotWax to the carriers, it's able to send the correct carrier code.
 
 If the job finds a matching value but the carrier is “NA”, otherwise known as the system default carrier, then it updates the postal address of the order with the data in the `CarrierGeoValue` column.
 
-We created a list of Municipios and Cantons where Shopify’s mapping was not aligned with what the shipping carriers were expecting. This meant that even though customers thought they were choosing the right value, behind the scenes on Shopify the ID of their selection was not what the actual carriers were expecting. To resolve this we manually mapped all the wrong values against what the right values should be for all the countries, and then added those mappings to the `CarrierGeoMapping` table and set their carrier to the system default carrier. These records have the expected erroneous mapping in the `GeoName` column with the corrected value in the `CarrierGeoValue` column. Now with that the value is corrected, when shipping labels are requested by HotWax to the carriers, it's able to send the correct carrier code.
-
 The process of address correction does not, however, offer a fix for CSRs misspelling municipio and canton names while creating orders. Because the error in spellings is not predictable, there is no way to auto correct them using this mapping methodology.
+
+{% hint style="info" %}
+If an order cannot be automatically handled, it requires manual correction of its order attributes by a user for HotWax approval against this value.
+{% endhint %}
+
+## Approve Order
+A scheduled process checks orders for two attributes:
+1. “CustomerId”: (any value)
+2. “SHIP_TO_ADDRESS_UPDATED”: (“true”)
+
+All orders that have these attributes are queued to be approved by the “Approve Orders” job.
+
+Job details:
+```
+Approve orders
+ConfigId: IMP_APR_SALES_ORD
+```
