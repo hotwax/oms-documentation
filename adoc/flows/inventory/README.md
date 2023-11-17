@@ -15,7 +15,12 @@ Because HotWax sends orders to Retail Pro for invoicing only when all items of a
 
 To make sure shipped inventory from partially completed orders is not reintroduced into the OMS, the Retail Pro integration layer extracts all completed order items from orders that have not been entirely completed and computes the total inventory deductions that have not been reported to Retail Pro yet. A file is then created with inventory variances for those products in the OMS.
 
-This file is consumed after the reset file to ensure that the variances are not overridden by the reset file.
+{% hint style="warning" %}
+The variance file is created for all order items from partially completed orders, even for products not included in the reset inventory file from Retail Pro. Due to this condition, it is vital that all products receive an inventory reset from Retail Pro to ensure that their inventory is not excessively deducted by the variance file.
+{% endhint %}
+
+This file is consumed after the reset file to ensure that the variances are not overridden by the reset file. It’s also important to ensure that this file is not consumed without the reset file before it, if the variance file is imported without the reset file then inventory will be deducted for partially completed orders even though the surplus inventory was not imported.
+<!-- need to find a simpler way to write this^ -->
 
 ## POS sales inventory
 Retail Pro calls the [Update Inventory API][updateInventoryDocs] in HotWax Commerce to deduct inventory sold in store for products.

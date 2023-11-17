@@ -1,6 +1,6 @@
 # Order Approval
 
-Orders are imported in “created” status in the OMS and then through a combination of checks and attributes they’re approved for fulfillment.
+ADOC uses a custom flow where certain orders are only approved after the address is validated and a government mandated Customer ID is present. After an order is imported, ADOC has a job enabled for importing order metafields, under the namespace “HotwaxOrderDetails”, from Shopify by an independent job as Order Attributes in HotWax Commerce.
 
 ## Sync Shopify order metafields
 A job in HotWax syncs order metafields from Shopify and saves them in HotWax as order attributes against that order.
@@ -19,3 +19,9 @@ This job also has an optional buffer parameter that can be used to skip orders c
 {% hint style="info" %}
     Buffer time is set in minutes
 {% endhint %}
+
+To verify the sync is running as expected, use the Shopify GraphQL MDM. This page is located under MDM > EXIM > Shopify Jobs > Shopify GraphQL Job.
+
+The name of the Shopify GrqphQL config is
+>Import Shopify Order Metafields.
+
