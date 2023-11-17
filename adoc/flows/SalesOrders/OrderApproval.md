@@ -22,6 +22,6 @@ This job also has an optional buffer parameter that can be used to skip orders c
 
 To verify the sync is running as expected, use the Shopify GraphQL MDM. This page is located under MDM > EXIM > Shopify Jobs > Shopify GraphQL Job.
 
-The name of the Shopify GrqphQL config is
+Shopify GrqphQL config
 >Import Shopify Order Metafields.
 
