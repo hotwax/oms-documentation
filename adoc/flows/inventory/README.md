@@ -1,6 +1,6 @@
 # Inventory
 
-Initial Inventory and a daily reset of invenotry is imported into HotWax Commerce from Retail Pro. While creating this integration there were some challenges that required additonal integration logic which is not usually needed for inventory reset syncs.
+Initial Inventory and a daily reset of inventory is imported into HotWax Commerce from Retail Pro. While creating this integration there were some challenges that required additional integration logic which is not usually needed for inventory reset syncs.
 
 ## Unfiltered product inventory
 It's not uncommon for retailers' inventory system of record to have additional SKUs than just the ones that are published online for sales. When these systems send inventory reset files to other systems such as the OMS, they filter the inventory file to only include products that are relevant to that sales channel. So eCommerce channel inventory files will only include inventory for eCommerce products.
@@ -11,7 +11,7 @@ This reduces the file size from 300mb to 70-80kb
 
 
 ## Partially shipped orders
-Because HotWax sends orders to Retail Pro for invoicing only when all items of an order are fulfilled inventory is not reduced for partially fulfilled orders. This means that the reset inventory file from Retail Pro includes inventory that has already been shipped artificially increasing inventory in the OMS
+Because HotWax sends orders to Retail Pro for invoicing only when all items of an order are fulfilled, inventory is not reduced for partially fulfilled orders. This means that the reset inventory file from Retail Pro includes inventory that has already been shipped artificially increasing inventory in the OMS
 
 To make sure shipped inventory from partially completed orders is not reintroduced into the OMS, the Retail Pro integration layer extracts all completed order items from orders that have not been entirely completed and computes the total inventory deductions that have not been reported to Retail Pro yet. A file is then created with inventory variances for those products in the OMS.
 
