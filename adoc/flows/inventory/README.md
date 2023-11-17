@@ -10,14 +10,10 @@ A limitation of Retail Pro at ADOC is that it does not filter out products that 
 This reduces the file size from 300mb to 70-80kb
 
 
-<details>
-<summary>Sample Reset File CSV</summary>
-{% markdown %}
+**Sample Reset File CSV**
 ​| facilityId | idType | idValue         | availableDelta | locationSeqId | varianceReasonId | comments                                                     |
 |-------------|--------|-----------------|-----------------|---------------|-------------------|--------------------------------------------------------------|
 | SVC21       | UPCA   | 2050000163913   | -1.0            | TLTLTLLL01    | VAR_INTEGR        | Inventory Variance sent as part of Reset Inventory deduction for partially completed orders |​
-{% endmarkdown %}
-</details>
 
 
 ## Partially shipped orders
