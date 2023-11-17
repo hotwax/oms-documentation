@@ -68,7 +68,7 @@ Approve orders
 ConfigId: IMP_APR_SALES_ORD
 ```
 
-Order Brokering and Fulfillment
+### Order Brokering and Fulfillment
 ADOC doesn’t have any warehouses so it is entirely dependent on its store network for order fulfillment.
 The Central American countries that ADOC operates in do not have zip codes, so instead of using numerical zip codes for distance computation and routing, the ADOC team has created their own zone mapping using their primary geo zoning system, municipios and cantons in Costa Rica.
 
@@ -94,3 +94,6 @@ The BOPIS app is also deployed in stores for fulfillment of store pickup orders.
 Reports
 
 <!-- Need a list of all reports -->
+
+### Syncing fulfillment updates
+Fulfillment updates are synced to Shopify and Retail Pro after full order completion. The sync waits for order completion because Retail Pro can only invoice orders from one location. In order to keep both systems in sync, HotWax only notifies both systems of fulfillment on order completion. If Shopify is notified of fulfillment before Retail Pro, it will capture payment against the customers payment method before the order has been legally invoiced in Retail Pro.
