@@ -4,6 +4,7 @@ Before order sync can be setup, there are a set of data points that need to be c
 
 - [ ] SFTP Locations
 - [ ] Shipping methods
+- [ ] Payment methods
 - [ ] Promo Codes
 - [ ] NetSuite Facility Group
 
