@@ -7,13 +7,12 @@ To learn more about the inventory sync integration with NetSuite read the full d
 ```
 HC_generateCSV_InventoryItems
 ```
-
-Place inventory items at SFTP
+**Place inventory items at SFTP**
 ```
 HC_uploadCSV_InventoryItems
 ```
 
-Import inventory into HotWax
+**Import inventory into HotWax**
 ```
 Import inventory
 FTP Config: RESET_INVENTORY

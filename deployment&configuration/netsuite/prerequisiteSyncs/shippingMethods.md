@@ -4,6 +4,8 @@ When syncing orders to NetSuite it's very important to have the correct shipping
 
 Oftentimes a single method in NetSuite may be servicing multiple shipping methods from eCommerce. When the shipping methods are configured, eCommerce and HotWax are mapped 1:1 and the corresponding NetSuite shipping method is saved in the "Service Code" field of the shipping method.
 
+Depending on the NetSuite order import configuration, the ‘service code’ field should include either the method name or ID.
+
 ## Sample data:
 
 **Shipping method:**

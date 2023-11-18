@@ -14,4 +14,5 @@
   * [NetSuite Fulfillment](orderSync/netsuiteFulfillment.md)
   * [Sync Customer](orderSync/syncCustomer.md)
 * [Products and Inventory](productInventorySync/README.md)
+  * [Product IDs](productInventorySync/importProductId.md)
   * [Inventory Reset](productInventorySync/inventoryReset.md)
