@@ -14,7 +14,7 @@ Depending on the NetSuite order import configuration, the ‘service code’ fie
 ```
 **Carrier and Shipment Method:**
 ```
-<CarrierShipmentMethod partyId="FEDEX" roleTypeId="CARRIER" shipmentMethodTypeId="FRE_2_DAY_SHP" sequenceNumber="63" deliveryDays="2"/>
+<CarrierShipmentMethod partyId="FEDEX" roleTypeId="CARRIER" shipmentMethodTypeId="FRE_2_DAY_SHP" carrierServiceCode=”NetSuiteName” sequenceNumber="63" deliveryDays="2"/>
 ```
 **Shopify and carrier shipment method mapping**
 ```
