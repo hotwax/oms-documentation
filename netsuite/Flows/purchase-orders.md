@@ -83,10 +83,3 @@ The synchronization process doesn't stop at the creation of Item Receipts; it ex
 <!-- page links -->
 
 [receivingApp]:(https://www.hotwax.co/apps/inventory-receiving-app)
-
-
-**Job in HotWax Commerce**
-```
-Order Item Fulfillment
-FTP Config: IMP_ODR_ITM_FLFLMNT
-```
