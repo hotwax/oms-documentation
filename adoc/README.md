@@ -1,5 +1,5 @@
 ---
-cover: .gitbook/assets/IMG_0361.HEIC
+cover: .gitbook/assets/ADOC_Brand.HEIC
 coverY: 0
 ---
 

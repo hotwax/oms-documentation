@@ -1,3 +1,8 @@
+---
+cover: .gitbook/assets/ADOC_Fulfillment.HEIC
+coverY: 0
+---
+
 # Order Brokering and Fulfillment
 ADOC doesn’t have any warehouses so it is entirely dependent on its store network for order fulfillment.
 The Central American countries that ADOC operates in do not have zip codes, so instead of using numerical zip codes for distance computation and routing, the ADOC team has created their own zone mapping using their primary geo zoning system, municipios and cantons in Costa Rica.
