@@ -43,3 +43,6 @@ This file is consumed by a job in HotWax which approves these orders on import.
 Approve Sales Order
 FTP Config: IMP_APR_SALES_ORD
 ```
+{% hint style="success" %}
+Orders have now been approved and will be brokered for fulfillment.
+{% endhint %}
