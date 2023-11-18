@@ -23,7 +23,7 @@ The variance file is created for all order items from partially completed orders
 
 **Sample variance file**
 
-| facilityId | idType | idValue         | availableDelta | locationSeqId | varianceReasonId | comments|
+| facilityId | idType | idValue | availableDelta | locationSeqId | varianceReasonId | comments|
 
 |-----------|--------|--------------|-----------------|---------------|--------------------------|
 
