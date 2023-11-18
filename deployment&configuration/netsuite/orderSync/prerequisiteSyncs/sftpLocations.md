@@ -1,7 +1,7 @@
 # SetUp NetSuite FTP Locations
 SFTP locations for all sync processes will automatically be created the first time a sync runs.
 
-In case the locations are not created, here is a list of SFTP locations.
+In case the locations are not created, here is a list of SFTP locations to verify.
 
 1. Customer:
    - a) /home/<instanceName>-sftp/netsuite/customer
