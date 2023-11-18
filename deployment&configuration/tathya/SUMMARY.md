@@ -1,4 +1,7 @@
 # Table of contents
 
-* [README](README.md)
-* [Page 1](page-1.md)
+* [Introduction](README.md)
+
+## Steps
+* [Database Configuration](databaseConfiguration/README.md)
+  * [Additional Settings](databaseConfiguration/additionalConfigurations.md)
