@@ -37,7 +37,7 @@ After entering the required details, click the "Save" button.
 # Obtaining SFTP GUID
 
 ## Request SFTP Key Generation:
-  	 - Ask the administration team to generate an RSA private key for the SFTP server in PEM format and they will share a file containing the generated key with you.
+- Ask the administration team to generate an RSA private key for the SFTP server in PEM format and they will share a file containing the generated key with you.
 
 ## Upload Key to NetSuite:
    - Navigate to Setup > Company.
