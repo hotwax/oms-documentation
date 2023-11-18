@@ -11,9 +11,9 @@ This reduces the file size from 300mb to 70-80kb
 
 **Sample Reset File CSV**
 
-​| facilityId | idType | idValue         | availableDelta | locationSeqId | varianceReasonId | comments                                                     |
+| facilityId | idType | idValue         | availableDelta | locationSeqId | varianceReasonId | comments                                                     |
 |-------------|--------|-----------------|-----------------|---------------|-------------------|--------------------------------------------------------------|
-| SVC21       | UPCA   | 2050000163913   | -1.0            | TLTLTLLL01    | VAR_INTEGR        | Inventory Variance sent as part of Reset Inventory deduction for partially completed orders |​
+| SVC21       | UPCA   | 2050000163913   | -1.0            | TLTLTLLL01    | VAR_INTEGR        | Inventory Variance sent as part of Reset Inventory deduction for partially completed orders |
 
 ## Partially shipped orders
 Because HotWax sends orders to Retail Pro for invoicing only when all items of an order are fulfilled, inventory is not reduced for partially fulfilled orders. This means that the reset inventory file from Retail Pro includes inventory that has already been shipped artificially increasing inventory in the OMS
