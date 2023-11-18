@@ -22,7 +22,7 @@ Schedule the following SuiteScript in NetSuite to consume the file of new orders
 HC_importSalesOrders
 ```
 
-{% hint style="sucess" %}
+{% hint style="success" %}
     Orders are now created in NetSuite
 {% endhint %}
 
@@ -57,6 +57,6 @@ FTP Config: IMP_ORDER_IDENT
 ```
 
 
-{% hint style="sucess" %}
+{% hint style="success" %}
     Orders and order line IDs are now synced back into HotWax
 {% endhint %}
