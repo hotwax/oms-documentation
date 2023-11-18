@@ -2,7 +2,9 @@
 
 * [Introduction](README.md)
 
-
+* [Setup SDF Bundle](sdfBundle/README.md)
+  * [Install and Setup](sdfBundle/install&SetupSdf.md)
+  * 
 
 ## Prerequisites
 * [SFTP Locations](prerequisiteSyncs/sftpLocations.md)
