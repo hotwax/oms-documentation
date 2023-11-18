@@ -9,3 +9,4 @@
 * [Inventory](flows/inventory/README.md)
 * [Sales Orders](flows/SalesOrders/README.md)
   * [Order Approval](flows/SalesOrders/OrderApproval.md)
+  * [Brokering and Fulfillment](flows/SalesOrders/Brokering&Fulfillment.md)
