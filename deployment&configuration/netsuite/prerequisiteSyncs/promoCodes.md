@@ -3,7 +3,15 @@
 ## Order level discounts:
 If an order has a discount code applied to it, during order sync to NetSuite, HotWax checks if the applied code is available in NetSuite. If the code is available then the exact code is used and the value of the discount is shared as the "Rate". In the event that the code is not available in NetSuite, HotWax will use a default discount code 'SHOPIFY DISCOUNT' along with the value of the discount.
 
+
 To check promo codes in NetSuite, HotWax syncs promo codes from NetSuite once a day.
+
+### Export Current Promo Codes from NetSuite
+Schedule this SuiteScript to export current promo codes in NetSuite that need to be synced to HotWax
+```
+add SuiteScript here
+```
+
 Job to save new promo codes:
 ```
 JOB_IMP_PRMO_CODE
@@ -11,6 +19,11 @@ Import Promo Code
 FTP Config: IMP_PRMO_CODE
 ```
 
+### Export Discontinued Promo Codes
+Schedule this SuiteScript to export removed promo codes in NetSuite that need to be synced to HotWax
+```
+add SuiteScript here
+```
 Job to remove promo codes no longer active in NetSuite:
 ```
 JOB_RMV_PRMO_CODE
