@@ -11,9 +11,6 @@ This reduces the file size from 300mb to 70-80kb
 
 **Sample Reset File CSV**
 
-| facilityId | idType | idValue         | availableDelta | locationSeqId | varianceReasonId | comments                                                     |
-|-------------|--------|-----------------|-----------------|---------------|-------------------|--------------------------------------------------------------|
-| SVC21       | UPCA   | 2050000163913   | -1.0            | TLTLTLLL01    | VAR_INTEGR        | Inventory Variance sent as part of Reset Inventory deduction for partially completed orders |
 
 ## Partially shipped orders
 Because HotWax sends orders to Retail Pro for invoicing only when all items of an order are fulfilled, inventory is not reduced for partially fulfilled orders. This means that the reset inventory file from Retail Pro includes inventory that has already been shipped artificially increasing inventory in the OMS
@@ -23,6 +20,12 @@ To make sure shipped inventory from partially completed orders is not reintroduc
 {% hint style="warning" %}
 The variance file is created for all order items from partially completed orders, even for products not included in the reset inventory file from Retail Pro. Due to this condition, it is vital that all products receive an inventory reset from Retail Pro to ensure that their inventory is not excessively deducted by the variance file.
 {% endhint %}
+
+**Sample variance file**
+
+| facilityId | idType | idValue         | availableDelta | locationSeqId | varianceReasonId | comments|
+|-----------|--------|--------------|-----------------|---------------|--------------------------|
+| SVC21 | UPCA   | 2050000163913| -1.0  | TLTLTLLL01| VAR_INTEGR | Inventory Variance sent as part of Reset Inventory deduction for partially completed orders |
 
 This file is consumed after the reset file to ensure that the variances are not overridden by the reset file. It’s also important to ensure that this file is not consumed without the reset file before it, if the variance file is imported without the reset file then inventory will be deducted for partially completed orders even though the surplus inventory was not imported.
 <!-- need to find a simpler way to write this^ -->
