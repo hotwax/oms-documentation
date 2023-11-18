@@ -28,7 +28,7 @@ To go to this page directly, use this URL with your hostname
 ```
 
 {% hint style="warning" %}
-    The sequence no. decides the sequencing of DBIC options in the country dropdown on the stores page.
+    The sequence number decides the sequencing of DBIC options in the country dropdown on the stores page.
 {% endhint %}
 
 ```
