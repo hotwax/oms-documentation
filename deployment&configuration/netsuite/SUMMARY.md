@@ -11,7 +11,6 @@
 
 ## Flows
 * [Orders](orderSync/README.md)
-  * [NetSuite Fulfillment](orderSync/netsuiteFulfillment.md)
   * [Sync Customer](orderSync/syncCustomer.md)
   * [Sync Order IDs](orderSync/syncOrderIds.md)
   * [Approve Orders](orderSync/approveOrders.md)
