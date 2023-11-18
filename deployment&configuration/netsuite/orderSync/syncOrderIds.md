@@ -20,6 +20,10 @@ Schedule the following SuiteScript in NetSuite to consume the file of new orders
 HC_importSalesOrders
 ```
 
+
+## Import Order IDs from NetSuite
+Now that the order is created in NetSuite, the following jobs will sync their identifications back to HotWax for a full sync.
+
 ### Export order line item IDs from NetSuite
 Schedule this script to export order item IDs from NetSuite to enable order updates during allocation.
 ```

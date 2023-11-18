@@ -26,6 +26,9 @@ FTP Config: MOD_ORD_ATTR
 The 'NETSUITE_ORDER_EXPORTED' attribute has now been added to orders.
 {% endhint %}
 
+
+## Approve Orders with Attributes
+
 Schedule the job that checks for orders that have this attribute added to them and internally hands them off for approval in the OMS. 
 
 This job is also in the NetSuite integration layer so it cannot be modified from the Job Manager app.
