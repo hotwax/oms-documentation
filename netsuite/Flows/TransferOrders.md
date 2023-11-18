@@ -95,15 +95,6 @@ Received Transfer Orders NetSuite JSON:
 /home/{sftp-username}/netsuite/transferorder/receipt
 ```
 
-
-**Jobs in HotWax Commerce**
-
-Export received inbound shipments to SFTP:
-```
-Add job name here
-```
-
-
 ### Import Item Receipts into Netsuite
 In Netsuite, a scheduled Suite Script reads the JSON files containing Item Receipt data from the SFTP location. It iterates through each record and seamlessly creates new Item Receipt records within Netsuite. The script uses the versatile N/record module to ensure a smooth transition.
 
