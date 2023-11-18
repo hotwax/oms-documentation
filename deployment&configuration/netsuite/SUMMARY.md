@@ -6,6 +6,7 @@
 * [Setup SDF Bundle](sdfBundle/README.md)
   * [Install SDF](sdfBundle/installSDF.md)
   * [Setup SFTP](sdfBundle/setupSFTP.md)
+  * [Date Time Format](sdfBundle/verifyDateTimeFormat.md)
 
 ## Prerequisites
 * [SFTP Locations](prerequisiteSyncs/sftpLocations.md)
