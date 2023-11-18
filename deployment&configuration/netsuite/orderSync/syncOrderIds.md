@@ -2,7 +2,9 @@
 
 Before an order can be processed further, HotWax ensures sucessful creation in NetSuite by syncing order ID and order item IDs.
 
-## Export orders from HotWax
+## Create Orders in NetSuite
+
+### Export orders from HotWax
 Schedule a job in the HotWax Commerce integration layer to create a file of orders in HotWax that have not yet been sent to Netsuite. 
 
 {% hint style="warning" %}
@@ -19,6 +21,10 @@ Schedule the following SuiteScript in NetSuite to consume the file of new orders
 ```
 HC_importSalesOrders
 ```
+
+{% hint style="sucess" %}
+    Orders are now created in NetSuite
+{% endhint %}
 
 
 ## Import Order IDs from NetSuite
@@ -49,3 +55,8 @@ Enable this Job from the Orders page in the Job Manager app to consume the file 
 Order Identification
 FTP Config: IMP_ORDER_IDENT
 ```
+
+
+{% hint style="sucess" %}
+    Orders and order line IDs are now synced back into HotWax
+{% endhint %}
