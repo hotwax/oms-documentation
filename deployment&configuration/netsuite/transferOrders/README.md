@@ -37,8 +37,16 @@ Import fulfilled Transfer Orders from NetSuite
 FTP Configuration
 ```
 
+
+{% hint style="success" %}
+    Transfer orders are now available to receive in the HotWax Receiving application.
+{% endhint %}
+
 ## Export received transfer order from HotWax
 Schedule a job in the HotWax integration layer to export a feed of received Transfer Orders to an SFTP location to be consumed by a SuiteScript in NetSuite
+```
 /home/{sftp-username}/netsuite/transferorder/receipt
-Report for over and under received
+```
+
+## Report for over and under received
 Schedule a report in Tathya for over and under received items
