@@ -47,6 +47,6 @@ After entering the required details, click the "Save" button.
    - Go to the "File" segment and upload the PEM file received.
    - Wait for the upload process to complete.
 
-### Save and Retrieve SFTP GUID:
+## Save and Retrieve SFTP GUID:
    - Save the configuration.
    - Now, in the ID column, you will find the generated key (e.g., custkey999) representing the SFTP GUID.
