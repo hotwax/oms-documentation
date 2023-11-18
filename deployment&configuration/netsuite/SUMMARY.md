@@ -4,7 +4,7 @@
 
 ## Deploy SDF
 * [Setup SDF Bundle](sdfBundle/README.md)
-  * [Install SDF](sdfBundle/installSdf.md)
+  * [Install SDF](sdfBundle/installSDF.md)
   * [Setup SFTP](sdfBundle/setupSFTP.md)
 
 ## Prerequisites
