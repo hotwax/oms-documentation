@@ -9,7 +9,9 @@ This job is scheduled in the integration layer and not executed natively in the 
 {% hint style="warning" %}
     To change this job's frequency, connect with the integration team.
 {% endhint %}
+
 **SFTP Location**
+
 ```
 /home/{sftp-username}/netsuite/customer/export
 ```
