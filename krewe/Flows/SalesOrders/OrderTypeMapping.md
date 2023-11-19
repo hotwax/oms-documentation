@@ -7,13 +7,16 @@ Order types help Krewe categorize their orders based on a variety of business ca
 The order type is a category that associates attributes to sales and transfer orders. In NetSuite WMS, you can create an accounting list of multiple order types and associate each outbound sales or transfer order with one order type.
 
 ## How they're setup in HotWax
-Order types are determined by either by the Shopify Source of the order or the the facility the order is placed from if its a POS sale. Before HotWax, this information was mapped from Shopify Source and Location ID to NetSuite Order Type using a Celigo Script.
+Order types are determined by either by the Shopify Source of the order or the facility the order is placed from if its a POS sale. Before HotWax, this information was mapped from Shopify Source and Location ID to NetSuite Order Type using a Celigo Script.
 
 In order to map a custom NetSuite value for each Sales Channel, we've effectively added an external ID to that sales channel. Each sales channel in HotWax Commerce is stored in the list of enumerations of the system. Enumerations have a field "Enum Code" which can be used to store an external identification value, this is where we store the NetSuite Order Type to be used during order sync.
 
 For mapping source based on POS facility ID, Krewe will be able to add custom Facility Identifications, allowing them to map custom values to each facility they setup. The identification types will have to be predetermined so that when HotWax syncs the order to NetSuite it is able to check specifically the Sales Channel type of facility identification and include it in the order.
 
+If no value is provided for this facility identification, the integration will default to `6` for all POS order types.
+
 Facility Identification Type
+
 ```
 NETSUITE_ORDR_TYPE
 ```
@@ -210,3 +213,18 @@ NETSUITE_ORDR_TYPE
   }
 }
 ```
+
+## XML Data
+
+<details>
+<summary>Sales Channels to Order Type</summary>
+
+```xml
+<Enumeration description="Web Channel" enumCode="1" enumId="WEB_SALES_CHANNEL" enumTypeId="ORDER_SALES_CHANNEL" />
+<Enumeration description="Draft Orders Channel" enumCode="1" enumId="DRAFT_SALES_CHANNEL" enumTypeId="ORDER_SALES_CHANNEL" />
+<Enumeration description="POS Channel" enumCode="6" enumId="POS_SALES_CHANNEL" enumTypeId="ORDER_SALES_CHANNEL" />
+<Enumeration description="Instagram Channel" enumCode="145" enumId="INSTA_SALES_CHANNEL" enumTypeId="ORDER_SALES_CHANNEL" />
+<Enumeration description="Facebook Channel" enumCode="151" enumId="FACBK_SALES_CHANNEL" enumTypeId="ORDER_SALES_CHANNEL" />
+<Enumeration description="Amazon Channel" enumCode="136" enumId="AMAZON_SALES_CHANNEL" enumTypeId="ORDER_SALES_CHANNEL" />
+```
+</details>

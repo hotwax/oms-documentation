@@ -109,20 +109,6 @@ ORDR_ORGN_SLS_CHNL
 ## XML Data
 
 <details>
-<summary>Sales Channels in HotWax</summary>
-This data also includes enumCode values which are used to map Order Types in NetSuite.
-
-```xml
-<Enumeration description="Web Channel" enumCode="1" enumId="WEB_SALES_CHANNEL" enumTypeId="ORDER_SALES_CHANNEL" />
-<Enumeration description="Draft Orders Channel" enumCode="1" enumId="DRAFT_SALES_CHANNEL" enumTypeId="ORDER_SALES_CHANNEL" />
-<Enumeration description="POS Channel" enumCode="6" enumId="POS_SALES_CHANNEL" enumTypeId="ORDER_SALES_CHANNEL" />
-<Enumeration description="Instagram Channel" enumCode="145" enumId="INSTA_SALES_CHANNEL" enumTypeId="ORDER_SALES_CHANNEL" />
-<Enumeration description="Facebook Channel" enumCode="151" enumId="FACBK_SALES_CHANNEL" enumTypeId="ORDER_SALES_CHANNEL" />
-<Enumeration description="Amazon Channel" enumCode="136" enumId="AMAZON_SALES_CHANNEL" enumTypeId="ORDER_SALES_CHANNEL" />
-```
-</details>
-
-<details>
 <summary>Shopify Sales Channel Mapping</summary>
 
 ```xml
