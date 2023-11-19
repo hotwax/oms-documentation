@@ -167,7 +167,7 @@ NETSUITE_ORDR_TYPE
 ```
 
 ## Refactored
-```
+```json
 {
   "source_name": {
     "sell-on-amazon": 136,

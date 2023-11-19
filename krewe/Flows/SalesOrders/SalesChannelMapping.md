@@ -69,7 +69,7 @@ ORDR_ORGN_SLS_CHNL
 ```
 
 ## Refactored
-```
+```json
 {
   "source_name": "pos",
   "location_id": {

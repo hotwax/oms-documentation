@@ -67,7 +67,7 @@ ORDR_ORGN_DPT
 ```
 
 ## Refactored
-```
+```json
 {
   "source_name": "pos",
   "location_id": {
