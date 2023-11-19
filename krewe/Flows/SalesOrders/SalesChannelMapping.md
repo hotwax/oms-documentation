@@ -103,3 +103,36 @@ ORDR_ORGN_SLS_CHNL
   }
 }
 ```
+
+## XML Data
+
+<details>
+<summary>Sales Channels in HotWax</summary>
+
+```xml
+<Enumeration description="POS Channel" enumCode="6" enumId="POS_SALES_CHANNEL" enumTypeId="ORDER_SALES_CHANNEL" />
+
+<Enumeration description="Web Channel" enumCode="1" enumId="WEB_SALES_CHANNEL" enumTypeId="ORDER_SALES_CHANNEL" />
+
+<Enumeration description="Instagram Channel" enumCode="145" enumId="INSTA_SALES_CHANNEL" enumTypeId="ORDER_SALES_CHANNEL" />
+
+<Enumeration description="Facebook Channel" enumCode="151" enumId="FACBK_SALES_CHANNEL" enumTypeId="ORDER_SALES_CHANNEL" />
+
+<Enumeration description="Amazon Channel" enumCode="136" enumId="AMAZON_SALES_CHANNEL" enumTypeId="ORDER_SALES_CHANNEL" />
+
+<Enumeration description="Draft Orders Channel" enumCode="1" enumId="DRAFT_SALES_CHANNEL" enumTypeId="ORDER_SALES_CHANNEL" />
+```
+</details>
+
+<details>
+<summary>Shopify Sales Channel Mapping</summary>
+
+```xml
+<ShopifyShopTypeMapping mappedKey="pos" mappedTypeId="SHOPIFY_ORDER_SOURCE" mappedValue="POS_SALES_CHANNEL" shopId="SHOP"/>
+<ShopifyShopTypeMapping mappedKey="sell-on-amazon" mappedTypeId="SHOPIFY_ORDER_SOURCE" mappedValue="AMAZON_SALES_CHANNEL" shopId="SHOP"/>
+<ShopifyShopTypeMapping mappedKey="2329312" mappedTypeId="SHOPIFY_ORDER_SOURCE" mappedValue="INSTA_SALES_CHANNEL" shopId="SHOP"/>
+<ShopifyShopTypeMapping mappedKey="580111" mappedTypeId="SHOPIFY_ORDER_SOURCE" mappedValue="FACBK_SALES_CHANNEL" shopId="SHOP"/>
+<ShopifyShopTypeMapping mappedKey="web" mappedTypeId="SHOPIFY_ORDER_SOURCE" mappedValue="WEB_SALES_CHANNEL" shopId="SHOP"/>
+<ShopifyShopTypeMapping mappedKey="shopify_draft_order" mappedTypeId="SHOPIFY_ORDER_SOURCE" mappedValue="DRAFT_SALES_CHANNEL" shopId="SHOP"/>
+```
+</details>
