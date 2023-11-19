@@ -18,5 +18,6 @@
   * [Item Price](Flows/SalesOrders/ItemPrice.md)
   * [Shipping Methods](Flows/SalesOrders/ShippingMethMapping.md)
 * [Inventory](Flows/Inventory/README.md)
+  * [Receiving](Flows/Inventory/Receiving.md)
   * [Kit Products](Flows/Inventory/KitProducts.md)
   * [Cycle Count](Flows/Inventory/CycleCount.md)
