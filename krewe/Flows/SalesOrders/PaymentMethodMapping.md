@@ -22,7 +22,7 @@ Because payment methods are not frequently changed, their NetSuite mappings are 
 
 <details>
   <summary>Click to expand XML Data</summary>
-  
+
 ```xml
 <PaymentMethodType description="Ext Ecomm giftcard" paymentMethodTypeId="EXT_SHOP_ECOM_GFTCRD"/>
 <PaymentMethodType description="Ext Gift Card" paymentMethodTypeId="EXT_SHOP_GFT_CARD"/>
@@ -31,5 +31,23 @@ Because payment methods are not frequently changed, their NetSuite mappings are 
 <PaymentMethodType description="Ext exchange-credit" paymentMethodTypeId="EXT_SHOP_EXG_CRD"/>
 <PaymentMethodType description="Ext amazon_marketplace" paymentMethodTypeId="EXT_SHOP_AMZN_MP"/>
 <PaymentMethodType description="Ext card" paymentMethodTypeId="EXT_SHOP_CARD"/>
+```
+</details>
+
+
+<details>
+<summary>Shopify Payment Method Mapping</summary>
+
+```xml
+<ShopifyShopTypeMapping mappedKey="Ecomm giftcard" mappedTypeId="SHOPIFY_PAYMENT_TYPE" mappedValue="EXT_SHOP_ECOM_GFTCRD" shopId="SHOP"/>
+<ShopifyShopTypeMapping mappedKey="gift_card" mappedTypeId="SHOPIFY_PAYMENT_TYPE" mappedValue="EXT_SHOP_GFT_CARD" shopId="SHOP"/>
+<ShopifyShopTypeMapping mappedKey="manual" mappedTypeId="SHOPIFY_PAYMENT_TYPE" mappedValue="EXT_SHOP_MANUAL" shopId="SHOP"/>
+<ShopifyShopTypeMapping mappedKey="direct" mappedTypeId="SHOPIFY_PAYMENT_TYPE" mappedValue="EXT_SHOP_DIRECT" shopId="SHOP"/>
+<ShopifyShopTypeMapping mappedKey="cash" mappedTypeId="SHOPIFY_PAYMENT_TYPE" mappedValue="EXT_SHOP_CASH_ON_DEL" shopId="SHOP"/>
+<ShopifyShopTypeMapping mappedKey="exchange-credit" mappedTypeId="SHOPIFY_PAYMENT_TYPE" mappedValue="EXT_SHOP_EXG_CRD" shopId="SHOP"/>
+<ShopifyShopTypeMapping mappedKey="amazon_marketplace" mappedTypeId="SHOPIFY_PAYMENT_TYPE" mappedValue="EXT_SHOP_AMZN_MP" shopId="SHOP"/>
+<ShopifyShopTypeMapping mappedKey="afterpay_north_america" mappedTypeId="SHOPIFY_PAYMENT_TYPE" mappedValue="EXT_SHOP_AFTRPAY_NA" shopId="SHOP"/>
+<ShopifyShopTypeMapping mappedKey="card" mappedTypeId="SHOPIFY_PAYMENT_TYPE" mappedValue="EXT_SHOP_CARD" shopId="SHOP"/>
+<ShopifyShopTypeMapping mappedKey="shopify_installments" mappedTypeId="SHOPIFY_PAYMENT_TYPE" mappedValue="EXT_SHOP_PAY_INSTALL" shopId="SHOP"/>
 ```
 </details>

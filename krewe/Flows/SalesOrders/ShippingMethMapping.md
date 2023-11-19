@@ -47,7 +47,7 @@ When the shipping methods are configured, Shopify and HotWax are mapped 1:1 and 
 
 <details>
 <!-- need to add service codes -->
-<summary>Shipping method for POS Completed</summary>
+<summary>Shipping Method for POS Completed Orders</summary>
 
 ```xml
 <ShipmentMethodType shipmentMethodTypeId="POS_COMPLETED" description="POS Completed"/>
