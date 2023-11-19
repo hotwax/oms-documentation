@@ -4,5 +4,6 @@
 * [Why HotWax Commerce](whyHotWax.md)
 
 ## Flows
-* [Inventory]
-* [Pre-orders]
+* [Inventory](flows/inventory/README.md)
+* [Products](flows/prodcuts/README.md)
+* [Pre-orders](flows/preorders/README.md)
