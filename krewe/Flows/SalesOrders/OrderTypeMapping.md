@@ -17,6 +17,9 @@ Facility Identification Type
 ```
 NETSUITE_ORDR_TYPE
 ```
+```xml
+<Enumeration enumId="NETSUITE_ORDR_TYPE" description="Netsuite Order Type" enumCode="NETSUITE_ORDER_TYPE" enumTypeId="FACILITY_IDENTITY" sequenceId="01"/>
+```
 
 ## All Order Types
 | Internal ID | Name                           |

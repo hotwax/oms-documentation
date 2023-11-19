@@ -16,6 +16,9 @@ Facility Identification Type
 ```
 ORDR_ORGN_DPT
 ```
+```xml
+<Enumeration enumId="ORDR_ORGN_DPT" description="Netsuite Department Code" enumCode="ORDER_ORIGIN_DEPARTMENT" enumTypeId="FACILITY_IDENTITY" sequenceId="01"/>
+```
 
 <!-- add actual facility type id -->
 

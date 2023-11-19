@@ -14,7 +14,9 @@ Facility Identification Type
 ```
 ORDR_ORGN_SLS_CHNL
 ```
-
+```xml
+<Enumeration enumId="ORDR_ORGN_SLS_CHNL" description="Netsuite Sales Channel" enumCode="ORDER_ORIGIN_SALES_CHANNEL" enumTypeId="FACILITY_IDENTITY" sequenceId="01"/>
+```
 <!-- add actual facility type id -->
 
 ## XML Data
