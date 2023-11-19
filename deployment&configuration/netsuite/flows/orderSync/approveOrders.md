@@ -5,7 +5,7 @@ Scheduled jobs in HotWax Commerce validates order items and marks them "Approved
 ## Add attributes
 HotWax internally adds an order attribute, "NETSUITE_ORDER_EXPORTED", to these orders. 
 
-Scheduled a job in the integration layer exports these orders into a CSV
+Schedule a job in the integration layer exports these orders into a CSV
 {% hint style="warning" %}
     To change this job's frequency, connect with the integration team.
 {% endhint %}

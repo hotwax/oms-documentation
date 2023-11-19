@@ -38,7 +38,7 @@ Job to remove promo codes no longer active in NetSuite:
 ```
 JOB_RMV_PRMO_CODE
 Remove Promo Code
-IMP_RMV_PRMO_CODE
+FTP Config: IMP_RMV_PRMO_CODE
 ```
 
 ## Discount items
