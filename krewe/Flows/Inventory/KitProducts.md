@@ -10,3 +10,15 @@ During allocation, brokering is run on the kit components directly which actuall
 {% hint style="warning" %}
 **Note** HotWax does not push kit product inventory to Shopify. Kit product inventory on Shopify is computed entirely by the Bundles app.
 {% endhint %}
+
+**Jobs to sync Kit Products from Shopify**
+
+Import kit components from Shopify
+```
+Import kit product components
+```
+
+Enable this job to sync the Shopify
+```
+Import kit product metafields
+```
