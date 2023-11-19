@@ -44,4 +44,5 @@ When the shipping methods are configured, Shopify and HotWax are mapped 1:1 and 
 | Shipping                                  | SHP                   | USPS Shipping                              |
 
 ## XML Data
+
 <ShipmentMethodType shipmentMethodTypeId="POS_COMPLETED" description="POS Completed"/>
