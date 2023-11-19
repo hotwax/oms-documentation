@@ -18,5 +18,3 @@
 ### Monitor Installation Status
    - Search for your bundle and observe its status; if it's pending, patiently wait.
    - If necessary, navigate through pages to check the installation progress.
-
-## Setup SFTP
