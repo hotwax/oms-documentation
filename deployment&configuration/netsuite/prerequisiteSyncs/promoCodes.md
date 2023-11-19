@@ -19,7 +19,7 @@ To check promo codes in NetSuite, HotWax syncs promo codes from NetSuite once a 
 ### Export Current Promo Codes from NetSuite
 Schedule this SuiteScript to export current promo codes in NetSuite that need to be synced to HotWax
 ```
-add SuiteScript here
+HC_MR_ExportedDiscountItemCSV
 ```
 
 Job to save new promo codes:
@@ -32,7 +32,7 @@ FTP Config: IMP_PRMO_CODE
 ### Export Discontinued Promo Codes
 Schedule this SuiteScript to export removed promo codes in NetSuite that need to be synced to HotWax
 ```
-add SuiteScript here
+HC_MR_ExportedInActiveDiscountCSV
 ```
 Job to remove promo codes no longer active in NetSuite:
 ```
