@@ -11,6 +11,7 @@
 ## Prerequisites
 * [SFTP Locations](prerequisiteSyncs/sftpLocations.md)
 * [Shipping Methods](prerequisiteSyncs/shippingMethods.md)
+* [Price Level](prerequisiteSyncs/priceLevel.md)
 * [Payment Methods](prerequisiteSyncs/paymentMethods.md)
 * [Promo Codes](prerequisiteSyncs/promoCodes.md)
 * [NetSuite Faciliy Group](prerequisiteSyncs/netsuiteFulfillment.md)
