@@ -22,7 +22,7 @@ Because payment methods are not frequently changed, their NetSuite mappings are 
 
 <details>
   <summary>Click to expand XML Data</summary>
-```
+```xml
 <PaymentMethodType description="Ext Ecomm giftcard" paymentMethodTypeId="EXT_SHOP_ECOM_GFTCRD"/>
 <PaymentMethodType description="Ext Gift Card" paymentMethodTypeId="EXT_SHOP_GFT_CARD"/>
 <PaymentMethodType description="Ext manual" paymentMethodTypeId="EXT_SHOP_MANUAL"/>
