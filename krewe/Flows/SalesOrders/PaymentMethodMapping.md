@@ -19,3 +19,16 @@ Because payment methods are not frequently changed, their NetSuite mappings are 
 | shopify_installments     | EXT_SHOP_PAY_INSTALL    | ShopPay               |
 
 ## XML Data
+
+<details>
+  <summary>Click to expand XML Data</summary>
+```
+<PaymentMethodType description="Ext Ecomm giftcard" paymentMethodTypeId="EXT_SHOP_ECOM_GFTCRD"/>
+<PaymentMethodType description="Ext Gift Card" paymentMethodTypeId="EXT_SHOP_GFT_CARD"/>
+<PaymentMethodType description="Ext manual" paymentMethodTypeId="EXT_SHOP_MANUAL"/>
+<PaymentMethodType description="Ext direct" paymentMethodTypeId="EXT_SHOP_DIRECT"/>
+<PaymentMethodType description="Ext exchange-credit" paymentMethodTypeId="EXT_SHOP_EXG_CRD"/>
+<PaymentMethodType description="Ext amazon_marketplace" paymentMethodTypeId="EXT_SHOP_AMZN_MP"/>
+<PaymentMethodType description="Ext card" paymentMethodTypeId="EXT_SHOP_CARD"/>
+```
+</details>
