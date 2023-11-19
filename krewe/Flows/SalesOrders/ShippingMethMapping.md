@@ -42,3 +42,6 @@ When the shipping methods are configured, Shopify and HotWax are mapped 1:1 and 
 | Standard Ground Shipping                  | STD_GRD_SHP           | FedEx Home Delivery                        |
 | Ground Shipping                           | GRD_SHP               | FedEx Home Delivery                        |
 | Shipping                                  | SHP                   | USPS Shipping                              |
+
+## XML Data
+<ShipmentMethodType shipmentMethodTypeId="POS_COMPLETED" description="POS Completed"/>

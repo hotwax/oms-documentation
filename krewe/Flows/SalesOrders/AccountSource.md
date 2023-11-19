@@ -16,3 +16,18 @@ Because this value is not frequently changed, it is not configurable from a user
 
 If the party classification is POS, send: 13
 If the party classification is anything else, send: 14
+
+## XML Data
+
+<details>
+  <summary>Click to expand XML Data</summary>
+
+```xml
+<PartyClassificationGroup partyClassificationGroupId="WEB_SALES_CHANNEL" partyClassificationTypeId="ACCT_SOURCE_INFO" description="Web Sales Channel"/>
+<PartyClassificationGroup partyClassificationGroupId="INSTA_SALES_CHANNEL" partyClassificationTypeId="ACCT_SOURCE_INFO" description="Instagram Sales Channel"/>
+<PartyClassificationGroup partyClassificationGroupId="FACBK_SALES_CHANNEL" partyClassificationTypeId="ACCT_SOURCE_INFO" description="Facebook Sales Channel"/>
+<PartyClassificationGroup partyClassificationGroupId="POS_SALES_CHANNEL" partyClassificationTypeId="ACCT_SOURCE_INFO" description="POS Sales Channel"/>
+<PartyClassificationGroup partyClassificationGroupId="AMAZON_SALES_CHANNEL" partyClassificationTypeId="ACCT_SOURCE_INFO" description="Amazon Sales Channel"/>
+<PartyClassificationGroup partyClassificationGroupId="DRAFT_SALES_CHANNEL" partyClassificationTypeId="ACCT_SOURCE_INFO" description="Draft Sales Channel"/>
+```
+</details>

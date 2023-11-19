@@ -17,3 +17,5 @@ Because payment methods are not frequently changed, their NetSuite mappings are 
 | afterpay_north_america   | EXT_SHOP_AFTRPAY_NA     | AfterPay              |
 | card                     | EXT_SHOP_CARD           | Shopify Payment       |
 | shopify_installments     | EXT_SHOP_PAY_INSTALL    | ShopPay               |
+
+## XML Data
