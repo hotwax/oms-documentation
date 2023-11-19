@@ -17,6 +17,9 @@ ORDR_ORGN_SLS_CHNL
 
 <!-- add actual facility type id -->
 
+## XML Data
+
+
 ## Source Data
 ```
 {{#compare source_name '==' 'pos'}}{{#compare location_id '==' '30696177751'}}12{{else compare  location_id '==' '30696210519'}}10{{else compare location_id '==' '62714806359'}}144{{else compare  location_id '==' '62714773591'}}156{{else compare location_id '==' '31137890391'}}65{{else compare  location_id '==' '35758243927'}}94{{else compare location_id '==' '35764404311'}}43{{else compare  location_id '==' '35781869655'}}45{{else compare location_id '==' '35698901079'}}121{{else compare  location_id '==' '61327048791'}}128{{else compare location_id '==' '60903391319'}}171{{else compare  location_id '==' '60903424087'}}104{{else compare location_id '==' '60912140375'}}112{{else compare  location_id '==' '60914499671'}}110{{else compare location_id '==' '62191239255'}}139{{else compare  location_id '==' '62571642967'}}155{{else compare location_id '==' '62743052375'}}167{{else compare  location_id '==' '62762614871'}}176{{else compare location_id '==' '62739513431'}}166{{else compare  location_id '==' '34464825431'}}75{{else compare location_id '==' '62750916695'}}169{{else compare  location_id '==' '31157780567'}}69{{else compare location_id '==' '34465185879'}}26{{else compare  location_id '==' '30696341591'}}22{{else compare location_id '==' '62759370839'}}172{{else compare  location_id '==' '62050500695'}}137{{else compare location_id '==' '62778048599'}}181{{else compare  location_id '==' '62288560215'}}142{{else compare location_id '=='  
