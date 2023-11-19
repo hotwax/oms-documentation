@@ -111,6 +111,7 @@ ORDR_ORGN_SLS_CHNL
 <details>
 <summary>Sales Channels in HotWax</summary>
 This data also includes enumCode values which are used to map Order Types in NetSuite.
+
 ```xml
 <Enumeration description="Web Channel" enumCode="1" enumId="WEB_SALES_CHANNEL" enumTypeId="ORDER_SALES_CHANNEL" />
 <Enumeration description="Draft Orders Channel" enumCode="1" enumId="DRAFT_SALES_CHANNEL" enumTypeId="ORDER_SALES_CHANNEL" />
