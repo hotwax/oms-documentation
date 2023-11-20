@@ -36,16 +36,6 @@ The mapped key field only holds a single string, so the key will be logically cr
 ## XML Data
 
 <details>
-<!-- need to add service codes -->
-<summary>Shipping Method for POS Completed Orders</summary>
-
-```xml
-<ShipmentMethodType shipmentMethodTypeId="POS_COMPLETED" description="POS Completed"/>
-<CarrierShipmentMethod partyId="_NA_" roleTypeId="CARRIER" shipmentMethodTypeId="POS_COMPLETED" sequenceNumber="60" />
-```
-</details>
-
-<details>
 <summary>Production Shipping Methods</summary>
 
 ```xml

@@ -10,6 +10,7 @@
     * [Lens and Frames](Flows/SalesOrders/OrderSplitting/Lens+Frame.md)
     * [Gift Items](Flows/SalesOrders/OrderSplitting/GiftItems.md)
   * [Rx Nashville](Flows/SalesOrders/RxNashville.md)
+  * [POS Sales](Flows/SalesOrders/POSOrders.md)
   * [Subsidiary](Flows/SalesOrders/Subsidiaries.md)
   * [Account Source](Flows/SalesOrders/AccountSource.md)
   * [Deparments](Flows/SalesOrders/DeparmentMapping.md)
