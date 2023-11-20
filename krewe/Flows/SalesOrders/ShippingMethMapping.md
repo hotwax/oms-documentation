@@ -5,7 +5,10 @@ Krewe also adjusts these methods periodicially or during certain events such as 
 ## How they're setup in HotWax
 Shipping methods are setup just like any other instance. The name of the shipping method is mapped to the name of the shipping method that is received from Shopify. This may not always be the value that is configured against it in NetSuite. Often times a single method in NetSuite may be servicing multiple shipping methods in Shopify.
 
-When the shipping methods are configured, Shopify and HotWax are mapped 1:1 and the corresponding NetSuite shipping method is saved in the "Service Code" field of the shipping method. When a Shopify shipping method needs to be mapped to a different NetSuite shipping method, the value in the "Service Code" field needs to be updated in HotWax.
+To map these methods to NetSuite, they will be set up in the HotWax integration table, mapping the original carrier and shipment method combination to the corresponding method in NetSuite.
+When syncing orders to NetSuite, the integration layer will check the saved mappings for a value where the mapped key matches the carrier ID and shipment method type ID and the type field value is NetSuite.
+
+The mapped key field only holds a single string, so the key will be logically created by delimiting the carrier and shipment method type using a hyphen, ex: “fedex-2day”. Breaking this convention will cause the integration logic to break, so double check for typos and spaces. The integration layer will then use the mapped value of this record and include it in the order creation feed to NetSuite.
 
 <!-- todo: identify the mappings that are actually used in production -->
 
