@@ -6,7 +6,7 @@ To enable inventory issuance for these orders, please get in touch with the inte
 When these orders are posted to NetSuite they are posted as Cash Sales. They follow all the same order mapping rules as other orders, such as order type, channel etc.
 
 <details>
-<!-- need to add service codes -->
+
 <summary>Shipping Method for POS Completed Orders</summary>
 
 ```xml
@@ -14,3 +14,5 @@ When these orders are posted to NetSuite they are posted as Cash Sales. They fol
 <CarrierShipmentMethod partyId="_NA_" roleTypeId="CARRIER" shipmentMethodTypeId="POS_COMPLETED" sequenceNumber="60" />
 ```
 </details>
+
+<!-- need to add job details -->
