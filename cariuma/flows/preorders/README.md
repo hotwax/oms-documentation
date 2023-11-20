@@ -1,6 +1,6 @@
 # Pre-Orders
 
-## Order Creation
+## List pre-orders
 Pre-orders are facilitated through HotWax Commerce using manually uploaded purchase orders from Cariuma. HotWax Commerce tags parent products and populates metafields for pre-order product variants in Shopify.
 
 ```
@@ -10,7 +10,7 @@ parent products job
 variant product job
 ```
 
-## Order Fulfillment
+## Order Capture
 HotWax Commerce imports all orders from Shopify. During the import process, the system identifies orders containing pre-order items by verifying their memberhsip in the pre-order or backorder category. After order creation, a batch job adds relevant tags and notes in Shopify to communicate the expected ships-from date.
 ### Order tag and notes jobs
 Add pre-order tags on orders
@@ -21,10 +21,24 @@ Add backorder tags on orders
 ```
 add job details
 ```
+
+This system data is also required to populate the text in the tags on Shopify
+```xml
+<SystemProperty systemResourceId="ShopifyServiceConfig" systemPropertyId="shopify.preorder.tag" systemPropertyValue="hotwax_preorder"/>
+<SystemProperty systemResourceId="ShopifyServiceConfig" systemPropertyId="shopify.backorder.tag" systemPropertyValue="hotwax_backorder"/> 
+```
+
 Upload promise dates on new orders
 ```
 add job details
 ```
+
+This system property data is required for all Shopify Configs where promise dates need to be added onto orders when they're created.
+```xml
+<SystemProperty systemResourceId="ShopifyServiceConfig" systemPropertyId="{Shop_ID}_CONFIG.promisedate.change.comment" systemPropertyValue="[HotWax] The Promise date for ${parentProductName}, ${productName} is ${promisedDatetime}"/>
+```
+
+Replace the variable for the Shopify Shop ID with the Shop ID you want to schedule this job for.
 
 ## Order Cancellations
 Initiating the cancellation process in Cin7 takes precedence, with subsequent synchronization to Shopify. HotWax Commerce ensures the seamless syncing of cancellations from Shopify, efficiently managing the order cancellation workflow.
