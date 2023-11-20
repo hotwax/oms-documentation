@@ -60,70 +60,68 @@ When the shipping methods are configured, Shopify and HotWax are mapped 1:1 and 
 
 ```xml
 <ShipmentMethodType description="FREE 2-Day Shipping" shipmentMethodTypeId="FRE_2_DAY_SHP" parentTypeId="SECOND_DAY"/>
-<CarrierShipmentMethod partyId="FEDEX" roleTypeId="CARRIER" shipmentMethodTypeId="FRE_2_DAY_SHP" sequenceNumber="63" deliveryDays="2"/>
+<CarrierShipmentMethod partyId="FEDEX" roleTypeId="CARRIER" shipmentMethodTypeId="FRE_2_DAY_SHP" carrierServiceCode="2-Day Shipping" sequenceNumber="63" deliveryDays="2"/>
 <ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="_NA_" shipmentMethodTypeId="FRE_2_DAY_SHP" shopifyShippingMethod="FREE 2-Day Shipping"/>
 
-<ShipmentMethodType description="Overnight Shipping” shipmentMethodTypeId=”OVR_SHP" parentTypeId="NEXT_DAY"/>
-<CarrierShipmentMethod partyId="FEDEX" roleTypeId="CARRIER" shipmentMethodTypeId="OVR_SHP" sequenceNumber="68" deliveryDays="1"/>
+<ShipmentMethodType description="Overnight Shipping" shipmentMethodTypeId="OVR_SHP" parentTypeId="NEXT_DAY"/>
+<CarrierShipmentMethod partyId="FEDEX" roleTypeId="CARRIER" shipmentMethodTypeId="OVR_SHP" carrierServiceCode="FedEx Standard Overnight" sequenceNumber="68" deliveryDays="1"/>
 <ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="FEDEX" shipmentMethodTypeId="OVR_SHP" shopifyShippingMethod="Overnight Shipping"/>
 
-<ShipmentMethodType description="FREE 2 Day Shipping” shipmentMethodTypeId=”FRE_2DAY_SHP" parentTypeId="NEXT_DAY"/>
-<CarrierShipmentMethod partyId="FEDEX" roleTypeId="CARRIER" shipmentMethodTypeId="FRE_2DAY_SHP" sequenceNumber="69" deliveryDays="2"/>
+<ShipmentMethodType description="FREE 2 Day Shipping" shipmentMethodTypeId="FRE_2DAY_SHP" parentTypeId="NEXT_DAY"/>
+<CarrierShipmentMethod partyId="FEDEX" roleTypeId="CARRIER" shipmentMethodTypeId="FRE_2DAY_SHP" carrierServiceCode="FedEx Home Delivery" sequenceNumber="69" deliveryDays="2"/>
 <ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="FEDEX" shipmentMethodTypeId="FRE_2DAY_SHP" shopifyShippingMethod="FREE 2 Day Shipping"/>
 
-<CarrierShipmentMethod partyId="_NA_" roleTypeId="CARRIER" shipmentMethodTypeId="EXPEDITED" sequenceNumber="74" deliveryDays="1"/>
-<ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="_NA_" shipmentMethodTypeId="EXPEDITED" shopifyShippingMethod="EXPEDITED"/>
-
-<ShipmentMethodType description="2-Day Shipping” shipmentMethodTypeId=”2_DAY_SHP" parentTypeId="SECOND_DAY"/>
-<CarrierShipmentMethod partyId="_NA_" roleTypeId="CARRIER" shipmentMethodTypeId="2_DAY_SHP" sequenceNumber="76" deliveryDays="3"/>
+<ShipmentMethodType description="2-Day Shipping" shipmentMethodTypeId="2_DAY_SHP" parentTypeId="SECOND_DAY"/>
+<CarrierShipmentMethod partyId="_NA_" roleTypeId="CARRIER" shipmentMethodTypeId="2_DAY_SHP" carrierServiceCode="2-Day Shipping" sequenceNumber="76" deliveryDays="3"/>
 <ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="_NA_" shipmentMethodTypeId="2_DAY_SHP" shopifyShippingMethod="2-Day Shipping"/>
 
-<ShipmentMethodType description="2 Day Shipping” shipmentMethodTypeId=”2DAY_SHP" parentTypeId="SECOND_DAY"/>
-<CarrierShipmentMethod partyId="_NA_" roleTypeId="CARRIER" shipmentMethodTypeId="2DAY_SHP" sequenceNumber="77" deliveryDays="1"/>
+<ShipmentMethodType description="2 Day Shipping" shipmentMethodTypeId="2DAY_SHP" parentTypeId="SECOND_DAY"/>
+<CarrierShipmentMethod partyId="_NA_" roleTypeId="CARRIER" shipmentMethodTypeId="2DAY_SHP" carrierServiceCode="2-Day Shipping" sequenceNumber="77" deliveryDays="1"/>
 <ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="_NA_" shipmentMethodTypeId="2DAY_SHP" shopifyShippingMethod="2 Day Shipping"/>
 
 <ShipmentMethodType description="2-Day FedEx Shipping" shipmentMethodTypeId="2_DAY_FDX_SHP" parentTypeId="SECOND_DAY"/>
-<CarrierShipmentMethod partyId="FEDEX" roleTypeId="CARRIER" shipmentMethodTypeId="2_DAY_FDX_SHP" sequenceNumber="78" deliveryDays="2"/>
+<CarrierShipmentMethod partyId="FEDEX" roleTypeId="CARRIER" shipmentMethodTypeId="2_DAY_FDX_SHP" carrierServiceCode="2-Day Shipping" sequenceNumber="78" deliveryDays="2"/>
 <ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="_NA_" shipmentMethodTypeId="2_DAY_FDX_SHP" shopifyShippingMethod="2-Day FedEx Shipping"/>
 
-<ShipmentMethodType description="2-3 Day International Shipping” shipmentMethodTypeId=”2DAY_INT_SHP" parentTypeId="NEXT_DAY"/>
-<CarrierShipmentMethod partyId="FEDEX" roleTypeId="CARRIER" shipmentMethodTypeId="2DAY_INT_SHP” sequenceNumber="82" deliveryDays="2"/>
-<ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="FEDEX" shipmentMethodTypeId="2DAY_INT_SHP” shopifyShippingMethod="2-3 Day International Shipping"/>
+<ShipmentMethodType description="2-3 Day International Shipping" shipmentMethodTypeId="2DAY_INT_SHP" parentTypeId="NEXT_DAY"/>
+<CarrierShipmentMethod partyId="FEDEX" roleTypeId="CARRIER" shipmentMethodTypeId="2DAY_INT_SHP" carrierServiceCode="FedEx International Connect Plus" sequenceNumber="82" deliveryDays="2"/>
+<ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="FEDEX" shipmentMethodTypeId="2DAY_INT_SHP" shopifyShippingMethod="2-3 Day International Shipping"/>
 
-<ShipmentMethodType description="2-5 Day International Shipping” shipmentMethodTypeId=”5DAY_INT_SHP" parentTypeId="STANDARD"/>
-<CarrierShipmentMethod partyId="FEDEX" roleTypeId="CARRIER" shipmentMethodTypeId="5DAY_INT_SHP” sequenceNumber="83" deliveryDays="3"/>
-<ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="FEDEX" shipmentMethodTypeId="5DAY_INT_SHP” shopifyShippingMethod="2-5 Day International Shipping"/>
+<ShipmentMethodType description="2-5 Day International Shipping" shipmentMethodTypeId="5DAY_INT_SHP" parentTypeId="STANDARD"/>
+<CarrierShipmentMethod partyId="FEDEX" roleTypeId="CARRIER" shipmentMethodTypeId="5DAY_INT_SHP" carrierServiceCode="FedEx International Connect Plus" sequenceNumber="83" deliveryDays="3"/>
+<ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="FEDEX" shipmentMethodTypeId="5DAY_INT_SHP" shopifyShippingMethod="2-5 Day International Shipping"/>
 
-<ShipmentMethodType description="2 Day Shipping 67G” shipmentMethodTypeId=”2DAY_SHP_67G" parentTypeId="NEXT_DAY"/> 
-<CarrierShipmentMethod partyId="_NA_" roleTypeId="CARRIER" shipmentMethodTypeId="2DAY_SHP_67G” sequenceNumber="82" deliveryDays="2" /> 
-<ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="_NA_" shipmentMethodTypeId="2DAY_SHP_67G” shopifyShippingMethod="2 Day Shipping 67G"/>
+<ShipmentMethodType description="2 Day Shipping 67G" shipmentMethodTypeId="2DAY_SHP_67G" parentTypeId="NEXT_DAY"/> 
+<CarrierShipmentMethod partyId="_NA_" roleTypeId="CARRIER" shipmentMethodTypeId="2DAY_SHP_67G" carrierServiceCode="2-Day Shipping 67G" sequenceNumber="82" deliveryDays="2" /> 
+<ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="_NA_" shipmentMethodTypeId="2DAY_SHP_67G" shopifyShippingMethod="2 Day Shipping 67G"/>
 
-<ShipmentMethodType description="2 Day FedEx Shipping” shipmentMethodTypeId=”2DAY_FDX_SHP" parentTypeId="NEXT_DAY"/> 
-<CarrierShipmentMethod partyId="_NA_" roleTypeId="CARRIER" shipmentMethodTypeId="2DAY_FDX_SHP” sequenceNumber="83" deliveryDays="2" /> 
-<ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="FEDEX" shipmentMethodTypeId="2DAY_FDX_SHP” shopifyShippingMethod="2 Day FedEx Shipping"/>
+<ShipmentMethodType description="2 Day FedEx Shipping" shipmentMethodTypeId="2DAY_FDX_SHP" parentTypeId="NEXT_DAY"/> 
+<CarrierShipmentMethod partyId="_NA_" roleTypeId="CARRIER" shipmentMethodTypeId="2DAY_FDX_SHP" carrierServiceCode="FedEx Home Delivery" sequenceNumber="83" deliveryDays="2" /> 
+<ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="FEDEX" shipmentMethodTypeId="2DAY_FDX_SHP" shopifyShippingMethod="2 Day FedEx Shipping"/>
 
-<ShipmentMethodType description="3-Day Shipping” shipmentMethodTypeId=”3_DAY_SHP" parentTypeId="NEXT_DAY"/> 
-<CarrierShipmentMethod partyId="_NA_" roleTypeId="CARRIER" shipmentMethodTypeId="3_DAY_SHP” sequenceNumber="84" deliveryDays="2" /> 
-<ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="USPS" shipmentMethodTypeId="3_DAY_SHP” shopifyShippingMethod="3-Day Shipping"/>
+<ShipmentMethodType description="3-Day Shipping" shipmentMethodTypeId="3_DAY_SHP" parentTypeId="NEXT_DAY"/> 
+<CarrierShipmentMethod partyId="_NA_" roleTypeId="CARRIER" shipmentMethodTypeId="3_DAY_SHP" carrierServiceCode="USPS Shipping" sequenceNumber="84" deliveryDays="2" /> 
+<ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="USPS" shipmentMethodTypeId="3_DAY_SHP" shopifyShippingMethod="3-Day Shipping"/>
 
 <ShipmentMethodType description="3 Day Shipping" shipmentMethodTypeId="3DAY_SHP" parentTypeId="NEXT_DAY"/> 
-<CarrierShipmentMethod partyId="_NA_" roleTypeId="CARRIER" shipmentMethodTypeId="3DAY_SHP" sequenceNumber="85" deliveryDays="2" /> 
+<CarrierShipmentMethod partyId="_NA_" roleTypeId="CARRIER" shipmentMethodTypeId="3DAY_SHP" carrierServiceCode="FedEx Home Delivery" sequenceNumber="85" deliveryDays="2" /> 
 <ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="FEDEX" shipmentMethodTypeId="3DAY_SHP" shopifyShippingMethod="3 Day Shipping"/>
 
-<ShipmentMethodType description="Ground Shipping” shipmentMethodTypeId=”GRD_SHP" parentTypeId="STANDARD"/> 
-<CarrierShipmentMethod partyId="_NA_" roleTypeId="CARRIER" shipmentMethodTypeId="GRD_SHP” sequenceNumber="87" deliveryDays="3" /> 
-<ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="FEDEX" shipmentMethodTypeId="GRD_SHP” shopifyShippingMethod=”Ground Shipping"/>
+<ShipmentMethodType description="Ground Shipping" shipmentMethodTypeId="GRD_SHP" parentTypeId="STANDARD"/> 
+<CarrierShipmentMethod partyId="_NA_" roleTypeId="CARRIER" shipmentMethodTypeId="GRD_SHP" carrierServiceCode="FedEx Home Delivery" sequenceNumber="87" deliveryDays="3" /> 
+<ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="FEDEX" shipmentMethodTypeId="GRD_SHP" shopifyShippingMethod="Ground Shipping"/>
 
-<ShipmentMethodType description="Free 3-Day Shipping” shipmentMethodTypeId=”FREE_3_DAY" parentTypeId="STANDARD"/> 
-<CarrierShipmentMethod partyId="_NA_" roleTypeId="CARRIER" shipmentMethodTypeId="FREE_3_DAY” sequenceNumber="87" deliveryDays="3" /> 
-<ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="USPS" shipmentMethodTypeId="FREE_3_DAY” shopifyShippingMethod=”Ground Shipping"/>
+<ShipmentMethodType description="Free 3-Day Shipping" shipmentMethodTypeId="FREE_3_DAY" parentTypeId="STANDARD"/> 
+<CarrierShipmentMethod partyId="_NA_" roleTypeId="CARRIER" shipmentMethodTypeId="FREE_3_DAY" carrierServiceCode="USPS Shipping" sequenceNumber="87" deliveryDays="3" /> 
+<ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="USPS" shipmentMethodTypeId="FREE_3_DAY" shopifyShippingMethod="Free 3-Day Shipping"/>
 
-<ShipmentMethodType description="Ground Economy Shipping” shipmentMethodTypeId=”GRD_ECNMY" parentTypeId="STANDARD"/> 
-<CarrierShipmentMethod partyId="_NA_" roleTypeId="CARRIER" shipmentMethodTypeId="GRD_ECNMY” sequenceNumber="87" deliveryDays="3" /> 
-<ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="FEDEX" shipmentMethodTypeId="GRD_ECNMY” shopifyShippingMethod=”Ground Shipping"/>
+<ShipmentMethodType description="Ground Economy Shipping" shipmentMethodTypeId="GRD_ECNMY" parentTypeId="STANDARD"/> 
+<CarrierShipmentMethod partyId="_NA_" roleTypeId="CARRIER" shipmentMethodTypeId="GRD_ECNMY" carrierServiceCode="FedEx Ground Economy" sequenceNumber="87" deliveryDays="3" /> 
+<ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="FEDEX" shipmentMethodTypeId="GRD_ECNMY" shopifyShippingMethod="Ground Economy Shipping"/>
 
-<ShipmentMethodType description="3-Day Shipping PR” shipmentMethodTypeId=”3_DAY_SHP_PR" parentTypeId="STANDARD"/> 
-<CarrierShipmentMethod partyId="_NA_" roleTypeId="CARRIER" shipmentMethodTypeId="3_DAY_SHP_PR” sequenceNumber="87" deliveryDays="3" /> 
-<ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="USPS" shipmentMethodTypeId="3_DAY_SHP_PR” shopifyShippingMethod=”Ground Shipping"/>
+<ShipmentMethodType description="3-Day Shipping PR" shipmentMethodTypeId="3_DAY_SHP_PR" parentTypeId="STANDARD"/> 
+<CarrierShipmentMethod partyId="_NA_" roleTypeId="CARRIER" shipmentMethodTypeId="3_DAY_SHP_PR" carrierServiceCode="USPS Shipping" sequenceNumber="87" deliveryDays="3" /> 
+<ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="USPS" shipmentMethodTypeId="3_DAY_SHP_PR" shopifyShippingMethod="3-Day Shipping PR"/>
+
 ```
 </details>
