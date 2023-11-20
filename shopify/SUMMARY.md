@@ -1,7 +1,11 @@
 # Table of contents
 
 * [Shopify Integration Overview](README.md)
-* [How are Products Downloaded from Shopify to HotWax Commerce?](how-are-products-downloaded-from-shopify-to-hotwax-commerce.md)
+* [How are Products Downloaded from Shopify to HotWax Commerce?](how-are-products-downloaded-from-shopify-to-hotwax-commerce/README.md)
+  * [Product Download](how-are-products-downloaded-from-shopify-to-hotwax-commerce/product-download.md)
+  * [Updating Product Details](how-are-products-downloaded-from-shopify-to-hotwax-commerce/updating-product-details.md)
+  * [Deleting Products](how-are-products-downloaded-from-shopify-to-hotwax-commerce/deleting-products.md)
+  * [Creating/Deleting Products with Shopify Webhooks](how-are-products-downloaded-from-shopify-to-hotwax-commerce/creating-deleting-products-with-shopify-webhooks.md)
 * [How does HotWax Commerce Ensure Accurate Inventory is Synchronized to Shopify?](how-does-hotwax-commerce-ensure-accurate-inventory-is-synchronized-to-shopify.md)
 * [How are Orders Downloaded from Shopify to HotWax Commerce?](how-are-orders-downloaded-from-shopify-to-hotwax-commerce.md)
 * [How is the Order Fulfillment Status Updated to Shopify from HotWax Commerce?](how-is-the-order-fulfillment-status-updated-to-shopify-from-hotwax-commerce.md)
