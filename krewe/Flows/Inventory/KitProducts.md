@@ -18,7 +18,7 @@ Import kit components from Shopify
 Import kit product components
 ```
 
-Enable this job to sync the Shopify
+Enable this job for kit product associations
 ```
-Import kit product metafields
+Add or Update kit product associations
 ```
