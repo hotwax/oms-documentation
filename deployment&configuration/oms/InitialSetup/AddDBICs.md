@@ -43,3 +43,10 @@ To go to this page directly, use this URL with your hostname
 <GeoAssoc geoAssocTypeId="GROUP_MEMBER" geoId="AUS" geoIdTo="DBIC" sequenceNum="9"/>
 <GeoAssoc geoAssocTypeId="GROUP_MEMBER" geoId="GBR" geoIdTo="DBIC" sequenceNum="10"/>
 ```
+
+Geo IDs for countries in Great Britian have to be added in addition to the ID for Great Britian itself. This is because Shopify categorises Great Britian as a country as well.
+
+DBIC countries in Great Britian:
+- England
+- Wales
+- Scotland
