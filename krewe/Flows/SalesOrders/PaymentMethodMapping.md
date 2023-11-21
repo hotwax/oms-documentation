@@ -55,7 +55,7 @@ Because payment methods are not frequently changed, their NetSuite mappings are 
 
 <summary>Integration Type Mapping Data</summary>
 <Enum Data>
-<Enumeration description="Shipping methods mapping between HotWax and Netsuite" enumId="NETSUITE_PMT_MTHD" enumName="Netsuite Shipping Method" enumTypeId="NETSUITE" sequenceId="1"/>
+<Enumeration description="Payment methods mapping between HotWax and Netsuite" enumId="NETSUITE_PMT_MTHD" enumName="Netsuite Payment Method" enumTypeId="NETSUITE" sequenceId="1"/>
 <Integration Type Mapping>
 <IntegrationTypeMapping integrationTypeId="NETSUITE_PMT_MTHD" mappingKey="EXT_SHOP_ECOM_GFTCRD" mappingValue="Gift Card"/>
 <IntegrationTypeMapping integrationTypeId="NETSUITE_PMT_MTHD" mappingKey="EXT_SHOP_GFT_CARD" mappingValue="Gift Card"/>
