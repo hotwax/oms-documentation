@@ -100,7 +100,7 @@ Default value `HotWax` should not be changed.
 
 **7. Plugins**
 
-External system integrations in OMS are referred to as plugins. If your instance incorporates integrations with external systems, kindly include these plugins here. Each instance utilizes specific plugins based on its integrations. To identify the current versions of the plugins for deployment, please refer to the [OMS 1.0 Releases documentation](https://docs.google.com/document/d/1lfvjpqBiE__1fsCjq7VvQSSXjdRLVZg86zJIXDDK-zc/edit#heading=h.djn7rcq0batn) and locate the relevant plugin information.
+External system integrations are referred to as plugins. If your instance incorporates integrations with external systems, include those plugins here. To identify the current versions of the plugins for deployment, please refer to the [OMS 1.0 Releases documentation](https://docs.google.com/document/d/1lfvjpqBiE__1fsCjq7VvQSSXjdRLVZg86zJIXDDK-zc/edit#heading=h.djn7rcq0batn) and locate the relevant plugin information.
 
 ***You're now prepared to build your machine; simply click the build function.***
 
