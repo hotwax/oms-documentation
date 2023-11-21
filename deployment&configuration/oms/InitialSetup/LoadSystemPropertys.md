@@ -5,6 +5,15 @@ System Property data includes a variety of system level configurations that chan
 System Properties need to be added from the XML data import page in WebTools, the backend service application of HotWax Commerce.
 
 ## Default data
+
+{% hint style='info' %}
+Ensure that you include the variable before uploading the data.
+
+List of variables: 
+1. Product store
+
+{% endhint %}
+
 ```
 <!-- Generally good defaults will work -->
 <SystemProperty systemResourceId="general" systemPropertyId="ORGANIZATION_PARTY" systemPropertyValue="COMPANY" description="The default organizationPartyId for used in dropdowns and reports"/>
