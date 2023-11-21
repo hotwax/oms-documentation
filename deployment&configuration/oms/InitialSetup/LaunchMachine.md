@@ -12,7 +12,7 @@ https://jenkins.hotwax.co
 
 Login with your credentials and proceed to deploy a new instance under `oms-env-setup` segment. 
 
-Select `oms-prod-launch-deploy` from the preset options. 
+Select `oms-prod-launch-deploy` from the preset options. In case, you are setting a test production environment, use  `oms-launch-deploy`
 
 ## Configure your machine
 
