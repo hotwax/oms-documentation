@@ -1,6 +1,6 @@
 # Add DBICs
 
-DBIC stands for 'Doing Business in Countries'.
+DBIC stands for `Doing Business in Countries`
 
 This list should be retrieved from the client. If a client is using multiple instances to service multiple countries, only add the countries that this instance will be used for.
 The countries that are added here will be available in all address forms thoughout the application, so adding too many countries creates a bad experience for users.
@@ -12,7 +12,7 @@ Log into Webtools
 {hostname}.hotwax.io/webtools
 ```
 
-Under "Framework Web Tools", click "Import/Export". Then in the list of buttons below, select "XML Data Import"
+Under `Framework Web Tools`, click `Import/Export`. Then in the list of buttons below, select `XML Data Import`
 
 Alternatively you can go to this URL after loging in
 ```
@@ -40,4 +40,6 @@ To go to this page directly, use this URL with your hostname
 <GeoAssoc geoAssocTypeId="GROUP_MEMBER" geoId="WALS" geoIdTo="DBIC" sequenceNum="6"/>
 <GeoAssoc geoAssocTypeId="GROUP_MEMBER" geoId="SGP" geoIdTo="DBIC" sequenceNum="7"/>
 <GeoAssoc geoAssocTypeId="GROUP_MEMBER" geoId="NLD" geoIdTo="DBIC" sequenceNum="8"/>
+<GeoAssoc geoAssocTypeId="GROUP_MEMBER" geoId="AUS" geoIdTo="DBIC" sequenceNum="9"/>
+<GeoAssoc geoAssocTypeId="GROUP_MEMBER" geoId="GBR" geoIdTo="DBIC" sequenceNum="10"/>
 ```
