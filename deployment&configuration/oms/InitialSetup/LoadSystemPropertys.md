@@ -4,6 +4,7 @@ System Property data includes a variety of system level configurations that chan
 
 System Properties need to be added from the XML data import page in WebTools, the backend service application of HotWax Commerce.
 
+## Default data
 ```
 <!-- Generally good defaults will work -->
 <SystemProperty systemResourceId="general" systemPropertyId="ORGANIZATION_PARTY" systemPropertyValue="COMPANY" description="The default organizationPartyId for used in dropdowns and reports"/>
@@ -11,7 +12,10 @@ System Properties need to be added from the XML data import page in WebTools, th
 <SystemProperty systemResourceId="BuynowConfig" systemPropertyId="buynow.productStore.productStoreName" systemPropertyValue="{Product Store Name}"/>
 ```
 
+## Weight and metric data
+
 **Data for UK Customers**
+
 ```
 <!-- Customized in case of non US customers -->
 <SystemProperty systemResourceId="general" systemPropertyId="currency.uom.id.default" systemPropertyValue="British Pound" description="The default currency to use for prices, etc"/>
@@ -19,12 +23,11 @@ System Properties need to be added from the XML data import page in WebTools, th
 <SystemProperty systemResourceId="general" systemPropertyId="country.geo.id.default" systemPropertyValue="UK" description="The default country for drop downs, phone number validation etc"/>
 ```
 
-**Kg weight UOM:**
 ```
 <SystemProperty systemResourceId="shipment" systemPropertyId="shipment.default.weight.uom" systemPropertyValue="WT_kg" description="The shipment weight to use for shipment, etc"/>
 ```
 
-**Lb weight UOM**
+**Data for US Customers**
 ```
 <SystemProperty systemResourceId="shipment" systemPropertyId="shipment.default.weight.uom" systemPropertyValue="WT_lb" description="The shipment weight to use for shipment, etc"/>
 
@@ -41,7 +44,7 @@ System Properties need to be added from the XML data import page in WebTools, th
 <SystemProperty systemResourceId="DateTimeFormats" systemPropertyId="date.format.default" systemPropertyValue="MM-dd-yyyy hh:mm a"/>
 ```
 
-**Pre-order data**
+## Pre-order data
 ```
 <!-- Backorder and Preorder settings -->
 <SystemProperty systemResourceId="PreorderConfig" systemPropertyId="STORE.is.backorder.enabled" systemPropertyValue="Y" description="Flag to identify backorder setting for product store"/>
@@ -49,7 +52,7 @@ System Properties need to be added from the XML data import page in WebTools, th
 <SystemProperty systemResourceId="ShopifyServiceConfig" systemPropertyId="CONFIG.preorder.item.property.name" systemPropertyValue="Pre-Order"/>
 ```
 
-**Instance Specific Configs**
+## Instance Specific Configs
 ```
 <!-- Always customized -->
 <SystemProperty systemResourceId="content" systemPropertyId="baseUrl" systemPropertyValue="https://{your-instance}.hotwax.io"/>
@@ -64,8 +67,8 @@ System Properties need to be added from the XML data import page in WebTools, th
 
 
 <!-- Data set for FTP connection -->
-<SystemProperty systemResourceId="FTP_CONFIG" systemPropertyId="ftp.server.hostname"  systemPropertyValue=""/>
-<SystemProperty systemResourceId="FTP_CONFIG" systemPropertyId="ftp.server.username"  systemPropertyValue=""/>
-<SystemProperty systemResourceId="FTP_CONFIG" systemPropertyId="ftp.server.password"  systemPropertyValue=""/>
-<SystemProperty systemResourceId="FTP_CONFIG" systemPropertyId="ftp.server.port"  systemPropertyValue=""/>
+<SystemProperty systemResourceId="FTP_CONFIG" systemPropertyId="ftp.server.hostname"  systemPropertyValue="{hostname}"/>
+<SystemProperty systemResourceId="FTP_CONFIG" systemPropertyId="ftp.server.username"  systemPropertyValue="{username}"/>
+<SystemProperty systemResourceId="FTP_CONFIG" systemPropertyId="ftp.server.password"  systemPropertyValue="{password}"/>
+<SystemProperty systemResourceId="FTP_CONFIG" systemPropertyId="ftp.server.port"  systemPropertyValue="{port}"/>
 ```
