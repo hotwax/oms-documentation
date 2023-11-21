@@ -52,3 +52,18 @@ Because payment methods are not frequently changed, their NetSuite mappings are 
 <ShopifyShopTypeMapping mappedKey="shopify_installments" mappedTypeId="SHOPIFY_PAYMENT_TYPE" mappedValue="EXT_SHOP_PAY_INSTALL" shopId="SHOP"/>
 ```
 </details>
+
+<summary>Integration Type Mapping Data</summary>
+<Enum Data>
+<Enumeration description="Shipping methods mapping between HotWax and Netsuite" enumId="NETSUITE_PMT_MTHD" enumName="Netsuite Shipping Method" enumTypeId="NETSUITE" sequenceId="1"/>
+<Integration Type Mapping>
+<IntegrationTypeMapping integrationTypeId="NETSUITE_PMT_MTHD" mappingKey="EXT_SHOP_ECOM_GFTCRD" mappingValue="Gift Card"/>
+<IntegrationTypeMapping integrationTypeId="NETSUITE_PMT_MTHD" mappingKey="EXT_SHOP_GFT_CARD" mappingValue="Gift Card"/>
+<IntegrationTypeMapping integrationTypeId="NETSUITE_PMT_MTHD" mappingKey="EXT_SHOP_MANUAL" mappingValue="Shopify Payment"/>
+<IntegrationTypeMapping integrationTypeId="NETSUITE_PMT_MTHD" mappingKey="EXT_SHOP_DIRECT" mappingValue="Shopify Payment"/>
+<IntegrationTypeMapping integrationTypeId="NETSUITE_PMT_MTHD" mappingKey="EXT_SHOP_CASH_ON_DEL" mappingValue="Shopify Payment"/>
+<IntegrationTypeMapping integrationTypeId="NETSUITE_PMT_MTHD" mappingKey="EXT_SHOP_EXG_CRD" mappingValue="EXCHANGE CREDIT"/>
+<IntegrationTypeMapping integrationTypeId="NETSUITE_PMT_MTHD" mappingKey="EXT_SHOP_AMZN_MP" mappingValue="Amazon Marketplace"/>
+<IntegrationTypeMapping integrationTypeId="NETSUITE_PMT_MTHD" mappingKey="EXT_SHOP_AFTRPAY_NA" mappingValue="AfterPay"/>
+<IntegrationTypeMapping integrationTypeId="NETSUITE_PMT_MTHD" mappingKey="EXT_SHOP_CARD" mappingValue="Shopify Payment"/>
+<IntegrationTypeMapping integrationTypeId="NETSUITE_PMT_MTHD" mappingKey="EXT_SHOP_PAY_INSTALL" mappingValue="ShopPay"/>
