@@ -56,7 +56,7 @@ Select the machine size from the EC2_INSTANCETYPE dropdown. Based on the busines
 **4. Timezone**
 
 {% hint style="info" %}
-The AWS region should be selected `us-east-1` by default. 
+The default AWS region is `us-east-1`. **Do not change** this without explicit confirmation.
 {% endhint %}
 
 Select the timezone where the client’s business is headquartered.
