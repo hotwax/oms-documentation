@@ -4,7 +4,7 @@ A Product Store in HotWax Commerce is like the a company, or a brand if a retail
 
 Here are the settings that can be configured in a Product Store:
 
-**Product Store Name** This is the name of the company. If the company has multiple brands this shoudl be the name of one brand. Make sure to update this before proceeding
+**Product Store Name** This is the name of the company. If the company has multiple brands this should be the name of one brand. Make sure to update this before proceeding. 
 
 **Currency:** Fetch it from the organization’s google form. Generally, it is USD.
 
@@ -22,6 +22,11 @@ Here are the settings that can be configured in a Product Store:
 
 ### Do not edit these fields
 
+**Reserve Inventory:** OMS serves as the definitive source for inventory information, and as such, this setting should consistently remain at its default value of `Y` without alteration.
+
+**Enable Brokering:** Disabling brokering hinders OMS from optimizing inventory allocation for orders, defeating its intended purpose. Therefore, this setting should always be maintained at its default value of `Y` and should not be modified.
+
 **Explode Order Items** This setting changes if multi-quantity order items are exploded into single quantity items. The default value for this setting is "Y" indicating that it is enabled, it should not be changed to "N", may flows of the OMS are not tested for this setting.
 
 **External ID** Most retailers will never need this. Adding it will not break any flows but since it is not part of required data setup, it's recommended to leave it blank.
+
