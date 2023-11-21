@@ -50,3 +50,33 @@ For the count of variants
 ```
 "isVirtual:false"
 ```
+
+# Associate products 
+
+{% hint style='info' %}
+Only necessary for Multi-Shopify store configurations where a common product catalog is shared. Skip if not applicable.
+{% endhint %}
+
+
+
+## Multi-Shopify Store Configuration for Product Management
+
+In a multi-Shopify store setup, a streamlined process needs to be implemented for product synchronization. In OMS, products are imported from a designated Master Shopify store, serving as the primary catalog. Subsequently, these products can be linked with products from other Shopify stores, functioning as child catalogs that share and sell the same products. Synchronization is achieved through the use of SKU or UPC, ensuring a cohesive and unified product management experience across the entire network of associated stores.
+
+**Primary Catalog Sync for intial configuration:**
+
+`Job Name: To be Added`
+   - Purpose: Synchronize products from Primary catalog to HotWax Commerce.
+   - Workflow:
+     - Create a product in the Primary Catalog Shopify store.
+     - Allow at least 15 minutes for automatic synchronization with HotWax Commerce.
+
+**Child Catalog Linking:**
+
+`Job Name: To be Added`
+   - Purpose: Link products in child catalogs to the primary catalog using SKUs/UPCs.
+   - Workflow:
+     - Associate products with the all child catalogs in HotWax Commerce.
+
+
+This process ensures maintaining accuracy across multiple catalogs. Adjustments can be made for a generic document applicable to various setups.
