@@ -2,7 +2,7 @@
 
 ### Initial Product Download from Shopify to HotWax Commerce
 
-Merchants can schedule an 'Import Products in Bulk' job in HotWax Commerce to download existing product details from Shopify, including Stock Keeping Unit (SKU) code, Universal Product Code (UPC), Shopify ID, Price, Tags, and Weight. This should be done before [importing orders](../how-are-orders-downloaded-from-shopify-to-hotwax-commerce/) to ensure that products are available for incoming sales orders. The import process consists of two steps:
+Merchants can schedule an 'Import Products in Bulk' job in HotWax Commerce to download existing product details from Shopify, including Stock Keeping Unit (SKU) code, Universal Product Code (UPC), Shopify ID, Price, Tags, and Weight. This should be done before [importing orders](../how-are-orders-downloaded-from-shopify-to-hotwax-commerce.md) to ensure that products are available for incoming sales orders. The import process consists of two steps:
 
 1. **Downloading from Shopify**- HotWax Commerce sends an [API request](https://shopify.dev/docs/api/admin-rest/2022-10/resources/product#get-products?ids=632910392,921728736) to Shopify to download products. In response, Shopify returns product data in JSON format. Shopify permits downloading 250 products per API call. To prevent large data file errors, HotWax Commerce downloads only 100 products per call.
 
