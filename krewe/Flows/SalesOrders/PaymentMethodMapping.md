@@ -21,7 +21,7 @@ Because payment methods are not frequently changed, their NetSuite mappings are 
 ## XML Data
 
 <details>
-  <summary>Click to expand XML Data</summary>
+  <summary>Payment Methods in HotWax</summary>
 
 ```xml
 <PaymentMethodType description="Ext Ecomm giftcard" paymentMethodTypeId="EXT_SHOP_ECOM_GFTCRD"/>
@@ -37,7 +37,7 @@ Because payment methods are not frequently changed, their NetSuite mappings are 
 
 <details>
 <details>
-<summary>Shopify Shop Type Mapping</summary>
+<summary>Shopify Shop Payment Methods</summary>
 
 ```xml
 <ShopifyShopTypeMapping mappedKey="amazon_marketplace" mappedTypeId="SHOPIFY_PAYMENT_TYPE" mappedValue="EXT_SHOP_AMZN_MP" shopId="SHOP"/>
@@ -53,10 +53,16 @@ Because payment methods are not frequently changed, their NetSuite mappings are 
 ```
 </details>
 
-<summary>Integration Type Mapping Data</summary>
-<Enum Data>
+This is enumeration that needs to be moved to NetSuite data.
+
+```
 <Enumeration description="Payment methods mapping between HotWax and Netsuite" enumId="NETSUITE_PMT_MTHD" enumName="Netsuite Payment Method" enumTypeId="NETSUITE" sequenceId="1"/>
-<Integration Type Mapping>
+```
+
+<details>
+<summary>Integration Mapping Data</summary>
+
+```xml
 <IntegrationTypeMapping integrationTypeId="NETSUITE_PMT_MTHD" mappingKey="EXT_SHOP_ECOM_GFTCRD" mappingValue="Gift Card"/>
 <IntegrationTypeMapping integrationTypeId="NETSUITE_PMT_MTHD" mappingKey="EXT_SHOP_GFT_CARD" mappingValue="Gift Card"/>
 <IntegrationTypeMapping integrationTypeId="NETSUITE_PMT_MTHD" mappingKey="EXT_SHOP_MANUAL" mappingValue="Shopify Payment"/>
@@ -67,3 +73,5 @@ Because payment methods are not frequently changed, their NetSuite mappings are 
 <IntegrationTypeMapping integrationTypeId="NETSUITE_PMT_MTHD" mappingKey="EXT_SHOP_AFTRPAY_NA" mappingValue="AfterPay"/>
 <IntegrationTypeMapping integrationTypeId="NETSUITE_PMT_MTHD" mappingKey="EXT_SHOP_CARD" mappingValue="Shopify Payment"/>
 <IntegrationTypeMapping integrationTypeId="NETSUITE_PMT_MTHD" mappingKey="EXT_SHOP_PAY_INSTALL" mappingValue="ShopPay"/>
+```
+</details>
