@@ -21,5 +21,3 @@
   * [Map Shopify locations](ShopifyIntegration/MapLocations.md)
   * [Setup Shopify Mappings](ShopifyIntegration/SetupMappings.md)
 * [Sync with Shopify](ShopifyIntegration/SyncShopify.md)
-
-
