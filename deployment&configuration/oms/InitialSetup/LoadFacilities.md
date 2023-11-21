@@ -18,7 +18,10 @@ Here are what each of the required columns mean:
 
 ## Get a sample facility location CSV
 
-Get the sample facility CSV file by navigating to `https://<instance-name>.hotwax.io/commerce/control/ImportData?configId=IMP_FACILITY` and simply click on `Download Sample CSV template` to initiate the download.
+Get the sample facility CSV file by navigating to the following link and simply clicking on the `Download Sample CSV template` to initiate the download.
+```
+https://<instance-name>.hotwax.io/commerce/control/ImportData?configId=IMP_FACILITY
+```
 
 By default, the CSV should be filled with these values, if not provided by the retailer.
 
