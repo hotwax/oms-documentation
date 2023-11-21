@@ -40,7 +40,7 @@ For example, if wasatchski-us-oms and wasatchski-ca-oms if there will be seperat
 
 **2. Select version**
 
-The ECR_IMAGE value selects the version of the OMS to deploy the system onto. To determine the current version of the OMS for deployment, please consult the [OMS 1.0 Releases documentation](https://docs.google.com/document/d/1lfvjpqBiE__1fsCjq7VvQSSXjdRLVZg86zJIXDDK-zc/edit#heading=h.djn7rcq0batn) and locate the ECR_IMAGE value. If there's a need to deploy the system using a different ECR_IMAGE version, kindly use the specified image version accordingly.
+The ECR_IMAGE value selects the version of the OMS to deploy the system onto. To determine the current version/tag of the image for deployment, please consult the [OMS 1.0 Releases documentation](https://docs.google.com/document/d/1lfvjpqBiE__1fsCjq7VvQSSXjdRLVZg86zJIXDDK-zc/edit#heading=h.djn7rcq0batn) and locate the ECR_IMAGE value. If there's a need to deploy the system using a different ECR_IMAGE version, kindly use the specified image version accordingly.
 
 **3. Choosing a machine type**
 
