@@ -107,3 +107,31 @@ The mapped key field only holds a single string, so the key will be logically cr
 <ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="USPS" shipmentMethodTypeId="3_DAY_SHP_PR” shopifyShippingMethod=”Ground Shipping"/>
 ```
 </details>
+
+Putting this data here, need to move netsuite setup
+```
+<EnumerationType description="Netsuite Integration Type Mapping" enumTypeId="NETSUITE" hasTable="N"/>
+<Enumeration description="Shipping methods mapping between HotWax and Netsuite" enumId="NETSUITE_SHP_MTHD" enumName="Netsuite Shipping Method" enumTypeId="NETSUITE" sequenceId="1"/>
+```
+
+<details>
+<summary>Production Shipping Methods</summary>
+```xml
+<IntegrationTypeMapping integrationMappingId="1" integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="FRE_2_DAY_SHP" mappingValue="2-Day Shipping" />
+<IntegrationTypeMapping integrationMappingId="2" integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="OVR_SHP" mappingValue="FedEx Standard Overnight" />
+<IntegrationTypeMapping integrationMappingId="3" integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="FRE_2DAY_SHP" mappingValue="FedEx Home Delivery" />
+<IntegrationTypeMapping integrationMappingId="4" integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="2_DAY_SHP" mappingValue="2-Day Shipping" />
+<IntegrationTypeMapping integrationMappingId="5" integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="2DAY_SHP" mappingValue="2-Day Shipping" />
+<IntegrationTypeMapping integrationMappingId="6" integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="2_DAY_FDX_SHP" mappingValue="2-Day Shipping" />
+<IntegrationTypeMapping integrationMappingId="7" integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="2DAY_INT_SHP" mappingValue="FedEx International Connect Plus" />
+<IntegrationTypeMapping integrationMappingId="8" integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="5DAY_INT_SHP" mappingValue="FedEx International Connect Plus" />
+<IntegrationTypeMapping integrationMappingId="9" integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="2DAY_SHP_67G" mappingValue="2-Day Shipping 67G" />
+<IntegrationTypeMapping integrationMappingId="10" integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="2DAY_FDX_SHP" mappingValue="FedEx Home Delivery" />
+<IntegrationTypeMapping integrationMappingId="11" integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="3_DAY_SHP" mappingValue="2-Day Shipping" />
+<IntegrationTypeMapping integrationMappingId="12" integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="3DAY_SHP" mappingValue="FedEx Home Delivery" />
+<IntegrationTypeMapping integrationMappingId="13" integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="GRD_SHP" mappingValue="FedEx Home Delivery" />
+<IntegrationTypeMapping integrationMappingId="14" integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="FREE_3_DAY" mappingValue="USPS Shipping" />
+<IntegrationTypeMapping integrationMappingId="15" integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="GRD_ECNMY" mappingValue="FedEx Ground Economy" />
+<IntegrationTypeMapping integrationMappingId="16" integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="3_DAY_SHP_PR" mappingValue="USPS Shipping" />
+```
+</details>
