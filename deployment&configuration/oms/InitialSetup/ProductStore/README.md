@@ -30,3 +30,9 @@ Here are the settings that can be configured in a Product Store:
 
 **External ID** Most retailers will never need this. Adding it will not break any flows but since it is not part of required data setup, it's recommended to leave it blank.
 
+### For pre-order specific configurations, you will need to add certain store specific settings: 
+
+1. Go to Product store: `https://<instanceName>.hotwax.io/commerce/control/ViewStore?productStoreId=STORE`
+2. Go to `Store settings` and click `Add` function to find additional settings required for pre-orders.
+3. Select `HOLD_PRORD_PHYCL_INV` , read more [here](https://github.com/hotwax/press-release-faq/blob/main/pre-order/hold-pre-order-physical-inventory.md)
+4. Set the value `true` or `false` as required. 
