@@ -1,4 +1,6 @@
-## Schedule file processor
+{% hint style='danger' %}
+Before importing data from Shopify, it is crucial to have all default and custom mapping data in place for a smooth transition. Failure to do so may result in data discrepancies or errors during the import process.
+{% endhint %}
 
 # Import products
 
