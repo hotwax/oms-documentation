@@ -5,6 +5,11 @@ System Property data includes a variety of system level configurations that chan
 System Properties need to be added from the XML data import page in WebTools, the backend service application of HotWax Commerce.
 
 ## Default data
+
+{% hint style='info' %}
+Prior to uploading the data, please ensure that all relevant variables are included.
+{% endhint %}
+
 ```
 <!-- Generally good defaults will work -->
 <SystemProperty systemResourceId="general" systemPropertyId="ORGANIZATION_PARTY" systemPropertyValue="COMPANY" description="The default organizationPartyId for used in dropdowns and reports"/>
@@ -45,6 +50,9 @@ System Properties need to be added from the XML data import page in WebTools, th
 ```
 
 ## Pre-order data
+
+{% hint style='info' %} Prior to uploading the data, please ensure that all relevant variables are included. {% endhint %}
+
 ```
 <!-- Backorder and Preorder settings -->
 <SystemProperty systemResourceId="PreorderConfig" systemPropertyId="{STORE}.is.backorder.enabled" systemPropertyValue="Y" description="Flag to identify backorder setting for product store"/>
@@ -53,6 +61,9 @@ System Properties need to be added from the XML data import page in WebTools, th
 ```
 
 ## Instance Specific Configs
+
+{% hint style='info' %} Prior to uploading the data, please ensure that all relevant variables are included. {% endhint %}
+
 ```
 <!-- Always customized -->
 <SystemProperty systemResourceId="content" systemPropertyId="baseUrl" systemPropertyValue="https://{your-instance}.hotwax.io"/>
