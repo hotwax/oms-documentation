@@ -31,11 +31,11 @@ The name or abbreviation of the company has to be unique.
 {% hint style="info" %}
 **Multi-instance** names contain an additional identifier between the name and instance type.
 
-For example, if wasatchski-us-oms and wasatchski-ca-oms if there will be seperate instances for each country
+For example, wasatchski-us-oms and wasatchski-ca-oms will be seperate instances for each country
 {% endhint %}
 
-{% hint style="info" %}
-**Domain name** would be preset as hotwax.io which need not to be changed.
+{% hint style="danger" %}
+**Domain name** is prefilled as `hotwax.io`. Do not change this.
 {% endhint %}
 
 **2. Select version**
