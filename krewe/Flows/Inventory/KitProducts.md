@@ -11,6 +11,18 @@ During allocation, brokering is run on the kit components directly which actuall
 **Note** HotWax does not push kit product inventory to Shopify. Kit product inventory on Shopify is computed entirely by the Bundles app.
 {% endhint %}
 
+**Install Bundles app module**
+Out of the box HotWax Commerce does not come with a pre-loaded kit product integration with the Bundles app on Shopify. If a retailer is using the Bundles app for Shopify to manage kit products, use this data loader to install jobs for the Bundles app:
+
+```
+<entity-resource type="data" reader-name="ext-bundles" loader="main" location="data/commerce/optionalJobData/ExtBundlesJobData.xml"/>
+```
+
+{% hint style="danger" %}
+The Kit Component Metafields feature must be enabled for this functionality to work.
+{% endhint %}
+
+
 **Jobs to sync Kit Products from Shopify**
 
 Import kit components from Shopify
