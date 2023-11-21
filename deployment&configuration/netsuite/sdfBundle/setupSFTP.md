@@ -14,6 +14,10 @@ In the "SFTP Servers" section, click the "New SFTP Server" button.
 Choose the "Preferred SFTP Configuration" form by default.
 Complete the details in the CUSTOM FORM.
 
+{% hint style="danger" %}
+Setting up a default directory is required for the SFTP connection to work. Please obtain this from the system admin team.
+{% endhint %}
+
 | Field                      | Details                                                        | Required |
 |----------------------------|----------------------------------------------------------------|----------|
 | SFTP GUID                  | Unique identifier for the SFTP configuration in NetSuite.      | Yes      |
