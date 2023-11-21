@@ -105,10 +105,18 @@ The mapped key field only holds a single string, so the key will be logically cr
 <ShipmentMethodType description="3-Day Shipping PR” shipmentMethodTypeId=”3_DAY_SHP_PR" parentTypeId="STANDARD"/> 
 <CarrierShipmentMethod partyId="_NA_" roleTypeId="CARRIER" shipmentMethodTypeId="3_DAY_SHP_PR” sequenceNumber="87" deliveryDays="3" /> 
 <ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="USPS" shipmentMethodTypeId="3_DAY_SHP_PR” shopifyShippingMethod=”Ground Shipping"/>
+```
+</details>
 
+Putting this data here, need to move netsuite setup
+```
 <EnumerationType description="Netsuite Integration Type Mapping" enumTypeId="NETSUITE" hasTable="N"/>
 <Enumeration description="Shipping methods mapping between HotWax and Netsuite" enumId="NETSUITE_SHP_MTHD" enumName="Netsuite Shipping Method" enumTypeId="NETSUITE" sequenceId="1"/>
+```
 
+<details>
+<summary>Production Shipping Methods</summary>
+```xml
 <IntegrationTypeMapping integrationMappingId="1" integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="FRE_2_DAY_SHP" mappingValue="2-Day Shipping" />
 <IntegrationTypeMapping integrationMappingId="2" integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="OVR_SHP" mappingValue="FedEx Standard Overnight" />
 <IntegrationTypeMapping integrationMappingId="3" integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="FRE_2DAY_SHP" mappingValue="FedEx Home Delivery" />
