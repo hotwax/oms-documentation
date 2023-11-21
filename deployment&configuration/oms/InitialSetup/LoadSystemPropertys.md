@@ -47,7 +47,7 @@ System Properties need to be added from the XML data import page in WebTools, th
 ## Pre-order data
 ```
 <!-- Backorder and Preorder settings -->
-<SystemProperty systemResourceId="PreorderConfig" systemPropertyId="STORE.is.backorder.enabled" systemPropertyValue="Y" description="Flag to identify backorder setting for product store"/>
+<SystemProperty systemResourceId="PreorderConfig" systemPropertyId="{STORE}.is.backorder.enabled" systemPropertyValue="Y" description="Flag to identify backorder setting for product store"/>
 
 <SystemProperty systemResourceId="ShopifyServiceConfig" systemPropertyId="CONFIG.preorder.item.property.name" systemPropertyValue="Pre-Order"/>
 ```
