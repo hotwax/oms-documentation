@@ -2,8 +2,7 @@
 
 There is some defualt mapping data that needs to be included when connecting a Shopify store to ensure that data flows smoothly between both systems with correct mappings.
 
-
-If you're only using the default "SHOP" Shopify Shop ID, this data can be imported directly.
+If you're only using the default "SHOP" Shopify Shop ID, this data can be imported directly. However, for multiple Shopify stores, input the data individually for each store. The Shopify Shop ID will change and obtainable from the header of the View Shopify Shop page in OMS. Hint: The value in bigger font size.
 
 **Product Type Mappings**
 ```
