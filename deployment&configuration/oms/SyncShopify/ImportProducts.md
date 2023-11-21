@@ -51,12 +51,11 @@ For the count of variants
 "isVirtual:false"
 ```
 
-# Associate products 
+# Link products with multiple Shops
 
 {% hint style='info' %}
 Only necessary for Multi-Shopify store configurations where a common product catalog is shared. Skip if not applicable.
 {% endhint %}
-
 
 
 ## Multi-Shopify Store Configuration for Product Management
