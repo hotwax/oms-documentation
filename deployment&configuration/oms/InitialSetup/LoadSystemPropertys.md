@@ -7,12 +7,7 @@ System Properties need to be added from the XML data import page in WebTools, th
 ## Default data
 
 {% hint style='info' %}
-**Ensure that you include the variable before uploading the data.**
-
-**Variables** 
-
-1. Product store
-
+Prior to uploading the data, please ensure that all relevant variables are included.
 {% endhint %}
 
 ```
