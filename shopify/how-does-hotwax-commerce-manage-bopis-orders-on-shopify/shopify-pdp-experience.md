@@ -1,6 +1,4 @@
-# How does HotWax Commerce Manage BOPIS Orders on Shopify?
-
-To effectively manage the "Buy Online, Pick Up In Store" (BOPIS) inventory, it is essential to closely monitor product availability at each store location and accurately update this information on Shopify. Coordination between online orders and store operations is crucial for a smooth process.
+# Shopify PDP Experience
 
 ### How Does HotWax Commerce show immediate product availability for store pickup on the Shopify PDP?
 
@@ -22,18 +20,10 @@ This is achieved through the following steps:
 
 5. HotWax Commerce BOPIS PDP App on Shopify uses the 'checkInventory' API to confirm product availability and displays suitable pickup locations for that product.
 
-<figure><img src=".gitbook/assets/PDP without shadow.png" alt=""><figcaption><p><em>Fig.1 : Pickup locations on PDP</em></p></figcaption></figure>
+<figure><img src="../.gitbook/assets/PDP without shadow.png" alt=""><figcaption><p><em>Fig.1 : Pickup locations on PDP</em></p></figcaption></figure>
 
 6. When a customer adds a qualifying item for in-store pickup to their cart, the HotWax Commerce BOPIS PDP App on Shopify displays the reservation expiration date and time to encourage prompt purchase and reduce abandoned carts. Retailers can customize the reservation duration. If a customer's reservation expires, they can refresh their cart to view real-time in-store availability for pickup items.
 
-<figure><img src=".gitbook/assets/Reserved untill.png" alt=""><figcaption><p><em>Fig.2 : Reservation until date and time</em></p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Reserved untill.png" alt=""><figcaption><p><em>Fig.2 : Reservation until date and time</em></p></figcaption></figure>
 
-### How HotWax Commerce downloads BOPIS orders from Shopify?
-
-When a customer selects a store for pick up, the HotWax Commerce BOPIS PDP application on Shopify includes a line item property that includes the customer's preferred pick up location.\
-
-
-<figure><img src=".gitbook/assets/BOPIS Line item.png" alt=""><figcaption><p><em>Fig.4 : Line item property added by Shopify</em></p></figcaption></figure>
-
-When customers place a BOPIS order on Shopify, it is downloaded in HotWax Commerce alongside[ regular orders](how-are-orders-downloaded-from-shopify-to-hotwax-commerce.md) through the 'New Import' job. HotWax Commerce then checks the line item property and sends the order to the customer's preferred pickup location without brokering. Store associates can view BOPIS orders in their BOPIS fulfillment app and begin preparing the order for customer pick-up.
-
+###
