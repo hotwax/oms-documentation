@@ -4,7 +4,7 @@ New Shopify stores can be connected by going to "Create Shopify Shop" from the s
 
 Fill out your Shopify details:
 
-**Shop ID:** The internal name of your Shopify Store. The default value is “SHOP” but if you need to setup multiple stores, change it to a unique value. This is often needed for retailers with multiple brands.
+**Shop ID:** The internal name of your Shopify Store. The default value is “SHOP” but if you need to setup multiple stores, change it to a unique value. This is often needed for retailers with multiple brands. For example you are setting Shopify stores for Canada and US, it should be US_SHOP and CA_SHOP. 
 
 **Shopify Config ID:** ShopifyConfigId should be “SHOP_CONFIG” if you're only connecting one store. Add a unique value when connecting multiple stores.
 
