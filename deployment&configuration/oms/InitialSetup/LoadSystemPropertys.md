@@ -50,6 +50,9 @@ Prior to uploading the data, please ensure that all relevant variables are inclu
 ```
 
 ## Pre-order data
+
+{% hint style='info' %} Prior to uploading the data, please ensure that all relevant variables are included. {% endhint %}
+
 ```
 <!-- Backorder and Preorder settings -->
 <SystemProperty systemResourceId="PreorderConfig" systemPropertyId="{STORE}.is.backorder.enabled" systemPropertyValue="Y" description="Flag to identify backorder setting for product store"/>
@@ -58,6 +61,9 @@ Prior to uploading the data, please ensure that all relevant variables are inclu
 ```
 
 ## Instance Specific Configs
+
+{% hint style='info' %} Prior to uploading the data, please ensure that all relevant variables are included. {% endhint %}
+
 ```
 <!-- Always customized -->
 <SystemProperty systemResourceId="content" systemPropertyId="baseUrl" systemPropertyValue="https://{your-instance}.hotwax.io"/>
