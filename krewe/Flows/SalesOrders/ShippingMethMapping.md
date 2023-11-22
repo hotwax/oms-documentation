@@ -121,7 +121,7 @@ Putting this data here, need to move netsuite setup
 ```
 
 <details>
-<summary>Production Shipping Methods</summary>
+<summary>NetSuite Shipping Method Mappings</summary>
   
 ```xml
 <IntegrationTypeMapping integrationMappingId="1" integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="FRE_2_DAY_SHP" mappingValue="2-Day Shipping" />
