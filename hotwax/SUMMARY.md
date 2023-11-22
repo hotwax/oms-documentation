@@ -2,4 +2,4 @@
 
 * [Introduction](README.md)
 
-* [Return feed](returns/README.mdreturnFeedSample.json)
+* [Return feed](returns/README.md)
