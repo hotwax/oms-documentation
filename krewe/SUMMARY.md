@@ -4,6 +4,7 @@
 * [Why HotWax Commerce](whyHotWax.md)
 
 ## Flows
+* [Product](Flows/Products/README.md)
 * [Sales Orders](Flows/SalesOrders/README.md)
   * [Order Splitting](Flows/SalesOrders/OrderSplitting/README.md)
     * [Accessories](Flows/SalesOrders/OrderSplitting/Accessories.md)
