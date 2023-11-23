@@ -62,7 +62,7 @@ Prior to uploading the data, please ensure that all relevant variables are inclu
 
 ## Instance Specific Configs
 
-{% hint style='info' %} Prior to uploading the data, please ensure that all relevant variables are included. {% endhint %}
+{% hint style='warning' %} Prior to uploading the data, please ensure that all relevant variables are included. {% endhint %}
 
 ```
 <!-- Always customized -->
