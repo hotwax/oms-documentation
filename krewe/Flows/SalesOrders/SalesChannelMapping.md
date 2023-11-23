@@ -117,3 +117,26 @@ ORDR_ORGN_SLS_CHNL
 <ShopifyShopTypeMapping mappedKey="shopify_draft_order" mappedTypeId="SHOPIFY_ORDER_SOURCE" mappedValue="DRAFT_SALES_CHANNEL" shopId="SHOP"/>
 ```
 </details>
+
+<details>
+<summary>Facility Identification Data for Sales Channel</summary>
+
+```xml
+<FacilityIdentification facilityId="254" facilityIdenTypeId="ORDR_ORGN_SLS_CHNL" fromDate="2023-11-14 08:10:59.003" idValue="12"/>
+<FacilityIdentification facilityId="395" facilityIdenTypeId="ORDR_ORGN_SLS_CHNL" fromDate="2023-11-14 08:10:59.003" idValue="176"/>
+<FacilityIdentification facilityId="372" facilityIdenTypeId="ORDR_ORGN_SLS_CHNL" fromDate="2023-11-14 08:10:59.003" idValue="156"/>
+<FacilityIdentification facilityId="376" facilityIdenTypeId="ORDR_ORGN_SLS_CHNL" fromDate="2023-11-14 08:10:59.003" idValue="144"/>
+<FacilityIdentification facilityId="331" facilityIdenTypeId="ORDR_ORGN_SLS_CHNL" fromDate="2023-11-14 08:10:59.003" idValue="104"/>
+<FacilityIdentification facilityId="288" facilityIdenTypeId="ORDR_ORGN_SLS_CHNL" fromDate="2023-11-14 08:10:59.003" idValue="65"/>
+<FacilityIdentification facilityId="358" facilityIdenTypeId="ORDR_ORGN_SLS_CHNL" fromDate="2023-11-14 08:10:59.003" idValue="45"/>
+<FacilityIdentification facilityId="318" facilityIdenTypeId="ORDR_ORGN_SLS_CHNL" fromDate="2023-11-14 08:10:59.003" idValue="94"/>
+<FacilityIdentification facilityId="334" facilityIdenTypeId="ORDR_ORGN_SLS_CHNL" fromDate="2023-11-14 08:10:59.003" idValue="112"/>
+<FacilityIdentification facilityId="330" facilityIdenTypeId="ORDR_ORGN_SLS_CHNL" fromDate="2023-11-14 08:10:59.003" idValue="171"/>
+<FacilityIdentification facilityId="336" facilityIdenTypeId="ORDR_ORGN_SLS_CHNL" fromDate="2023-11-14 08:10:59.003" idValue="110"/>
+<FacilityIdentification facilityId="319" facilityIdenTypeId="ORDR_ORGN_SLS_CHNL" fromDate="2023-11-14 08:10:59.003" idValue="43"/>
+<FacilityIdentification facilityId="370" facilityIdenTypeId="ORDR_ORGN_SLS_CHNL" fromDate="2023-11-14 08:10:59.003" idValue="155"/>
+<FacilityIdentification facilityId="348" facilityIdenTypeId="ORDR_ORGN_SLS_CHNL" fromDate="2023-11-14 08:10:59.003" idValue="128"/>
+<FacilityIdentification facilityId="383" facilityIdenTypeId="ORDR_ORGN_SLS_CHNL" fromDate="2023-11-14 08:10:59.003" idValue="166"/>
+<FacilityIdentification facilityId="405" facilityIdenTypeId="ORDR_ORGN_SLS_CHNL" fromDate="2023-11-14 08:10:59.003" idValue="181"/>
+```
+</details>
