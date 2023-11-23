@@ -55,7 +55,7 @@ Because payment methods are not frequently changed, their NetSuite mappings are 
 
 This is enumeration that needs to be moved to NetSuite data.
 
-```
+```xml
 <Enumeration description="Payment methods mapping between HotWax and Netsuite" enumId="NETSUITE_PMT_MTHD" enumName="Netsuite Payment Method" enumTypeId="NETSUITE" sequenceId="1"/>
 ```
 
