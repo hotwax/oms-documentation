@@ -1,4 +1,4 @@
-# Map Shopify Locations to HotWax Commerce Facilities
+# Map Shopify POS Locations to HotWax Commerce Facilities
 
 {% hint style='info' %}
 While mapping locations, you will need to map default location in Shopify with Brokering queue i.e _NA_ in Hotwax, ensuring that new orders arrive at the brokering queue for allocation. For each instance, you will have one default location which will be declared by the retailer, you can find this information in the implementation document. 
@@ -16,7 +16,7 @@ On the Shopify Config Detail page for your store, follow these steps:
 
 This process establishes a direct and efficient linkage between Shopify POS locations and their counterparts in HotWax Commerce, optimizing your inventory management system.
 
-### How to extract Shopify Location ID from Shopify?
+### How to extract Shopify POS Location ID from Shopify?
 
 Follow these steps to seamlessly integrate Shopify POS locations with their corresponding store facilities in HotWax Commerce:
 
