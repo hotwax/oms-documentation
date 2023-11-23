@@ -104,5 +104,31 @@ ORDR_ORGN_DPT
 }
 ```
 
+## XML Data
+
+<details>
+<summary>Facility Identification data for Department</summary>
+
+```xml
+<FacilityIdentification facilityId="254" facilityIdenTypeId="ORDR_ORGN_DPT" fromDate="2023-11-14 08:11:41.366" idValue="212"/>
+<FacilityIdentification facilityId="395" facilityIdenTypeId="ORDR_ORGN_DPT" fromDate="2023-11-14 08:11:41.366" idValue="386"/>
+<FacilityIdentification facilityId="372" facilityIdenTypeId="ORDR_ORGN_DPT" fromDate="2023-11-14 08:11:41.366" idValue="317"/>
+<FacilityIdentification facilityId="376" facilityIdenTypeId="ORDR_ORGN_DPT" fromDate="2023-11-14 08:11:41.366" idValue="335"/>
+<FacilityIdentification facilityId="331" facilityIdenTypeId="ORDR_ORGN_DPT" fromDate="2023-11-14 08:11:41.366" idValue="313"/>
+<FacilityIdentification facilityId="288" facilityIdenTypeId="ORDR_ORGN_DPT" fromDate="2023-11-14 08:11:41.366" idValue="260"/>
+<FacilityIdentification facilityId="358" facilityIdenTypeId="ORDR_ORGN_DPT" fromDate="2023-11-14 08:11:41.366" idValue="241"/>
+<FacilityIdentification facilityId="318" facilityIdenTypeId="ORDR_ORGN_DPT" fromDate="2023-11-14 08:11:41.366" idValue="294"/>
+<FacilityIdentification facilityId="334" facilityIdenTypeId="ORDR_ORGN_DPT" fromDate="2023-11-14 08:11:41.366" idValue="322"/>
+<FacilityIdentification facilityId="330" facilityIdenTypeId="ORDR_ORGN_DPT" fromDate="2023-11-14 08:11:41.366" idValue="378"/>
+<FacilityIdentification facilityId="336" facilityIdenTypeId="ORDR_ORGN_DPT" fromDate="2023-11-14 08:11:41.366" idValue="320"/>
+<FacilityIdentification facilityId="319" facilityIdenTypeId="ORDR_ORGN_DPT" fromDate="2023-11-14 08:11:41.366" idValue="295"/>
+<FacilityIdentification facilityId="370" facilityIdenTypeId="ORDR_ORGN_DPT" fromDate="2023-11-14 08:11:41.366" idValue="364"/>
+<FacilityIdentification facilityId="348" facilityIdenTypeId="ORDR_ORGN_DPT" fromDate="2023-11-14 08:11:41.366" idValue="325"/>
+<FacilityIdentification facilityId="383" facilityIdenTypeId="ORDR_ORGN_DPT" fromDate="2023-11-14 08:11:41.366" idValue="373"/>
+<FacilityIdentification facilityId="405" facilityIdenTypeId="ORDR_ORGN_DPT" fromDate="2023-11-14 08:11:41.366" idValue="392"/>
+
+```
+</details>
+
 <!-- page links -->
 [departmentDocs]: https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_N261602.html#Departments-and-Classes-Overview
