@@ -14,5 +14,3 @@ When these orders are posted to NetSuite they are posted as Cash Sales. They fol
 <CarrierShipmentMethod partyId="_NA_" roleTypeId="CARRIER" shipmentMethodTypeId="POS_COMPLETED" sequenceNumber="60" />
 ```
 </details>
-
-<!-- need to add job details -->
