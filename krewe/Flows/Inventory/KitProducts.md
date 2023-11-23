@@ -1,3 +1,5 @@
+<!-- going forward we can remove this page from here since its already in Shopify setup -->
+
 # Kit Products
 
 The Bundles app checks inventory levels at 10-minute intervals, reducing inventory for kit products if individual item inventory decreases.
