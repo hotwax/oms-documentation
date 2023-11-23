@@ -13,5 +13,5 @@ Create Enumeration data before creating IntegrationTypeMapping data.
 
 ```xml
 <IntegrationTypeMapping integrationTypeId="NETSUITE_DISC_MTHD" mappingKey="SHOPIFY_DISC" mappingValue="SHOPIFY DISCOUNT"/>
-<IntegrationTypeMapping integrationTypeId="NETSUITE_DISC_MTHD" mappingKey="SHOPIFY_ITEM_DISC" mappingValue="41006"/>
+<IntegrationTypeMapping integrationTypeId="NETSUITE_DISC_MTHD" mappingKey="SHOPIFY_ITEM_DISC" mappingValue="41728"/>
 ```
