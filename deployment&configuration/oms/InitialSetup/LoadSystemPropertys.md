@@ -14,7 +14,7 @@ Prior to uploading the data, please ensure that all relevant variables are inclu
 <!-- Generally good defaults will work -->
 <SystemProperty systemResourceId="general" systemPropertyId="ORGANIZATION_PARTY" systemPropertyValue="COMPANY" description="The default organizationPartyId for used in dropdowns and reports"/>
 
-<SystemProperty systemResourceId="BuynowConfig" systemPropertyId="buynow.productStore.productStoreName" systemPropertyValue="{Product Store Name}"/>
+<SystemProperty systemResourceId="BuynowConfig" systemPropertyId="buynow.productStore.productStoreName" systemPropertyValue="**{Product Store Name}**"/>
 ```
 
 ## Weight and metric data
