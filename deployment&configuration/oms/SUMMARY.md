@@ -16,8 +16,8 @@
 * [Create your users](UserandGatewayConfig/CreateUser.md)
 * [Shipping gateways](UserandGatewayConfig/ShippingGateways.md)
 
-## Shopify Integration
+<!-- ## Shopify Integration
 * [Connect a Shopify Store](ShopifyIntegration/README.md)
   * [Map Shopify locations](ShopifyIntegration/MapLocations.md)
   * [Setup Shopify Mappings](ShopifyIntegration/SetupMappings.md)
-* [Sync with Shopify](ShopifyIntegration/SyncShopify.md)
+* [Sync with Shopify](ShopifyIntegration/SyncShopify.md) -->
