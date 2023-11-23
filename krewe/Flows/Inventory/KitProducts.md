@@ -36,6 +36,15 @@ Click on the "Import" button to initiate the installation process.
 
 By following these steps, you ensure that the Bundles Reader is properly integrated into OMS, allowing for accurate and efficient data communication during import configurations.
 
+### Map Shopify 'Kit' product types
+
+{% hint style='danger' %}
+The Shopify product time value is **case sensitive**
+{% endhint %}
+
+```
+<ShopifyShopTypeMapping mappedKey="KIT" mappedTypeId="SHOPIFY_PRODUCT_TYPE" mappedValue="MARKETING_PKG_PICK" shopId="SHOP"/>
+```
 
 ### Jobs to sync Kit Products from Shopify
 
