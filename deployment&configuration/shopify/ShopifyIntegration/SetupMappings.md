@@ -1,5 +1,9 @@
 # Shopfiy Mappings
 
+{% hint style='info' %}
+After incorporating the default mapping, please add any custom mappings as needed. These specific mappings should be clearly documented in the retailer's implementation guide for reference.
+{% endhint %}
+
 There is some defualt mapping data that needs to be included when connecting a Shopify store to ensure that data flows smoothly between both systems with correct mappings.
 
 If you're only using the default "SHOP" Shopify Shop ID, this data can be imported directly. However, for multiple Shopify stores, input the data individually for each store. The Shopify Shop ID will change and obtainable from the header of the View Shopify Shop page in OMS. Hint: The value in bigger font size.
@@ -32,4 +36,3 @@ If you're only using the default "SHOP" Shopify Shop ID, this data can be import
 <ShopifyShopTypeMapping shopId='SHOP' mappedTypeId='SHOPIFY_PAYMENT_TYPE' mappedValue='EXT_SHOP_PAYPAL' mappedKey='paypal'/>
 ```
 
-New Custom mappings can also be added from the the Shopify Shop Detail page.
