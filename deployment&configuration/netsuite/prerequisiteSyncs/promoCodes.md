@@ -66,6 +66,6 @@ Create Enumeration data before creating IntegrationTypeMapping data.
 ```
 <Enumeration description="Discount codes mapping between HotWax and Netsuite" enumId="NETSUITE_DISC_MTHD" enumName="Netsuite Discount Codes" enumTypeId="NETSUITE" sequenceId="1"/>
 
-<IntegrationTypeMapping integrationTypeId="NETSUITE_DISC_MTHD" mappingKey="SHOPIFY_DISC" mappingValue="SHOPIFY DISCOUNT"/>
-<IntegrationTypeMapping integrationTypeId="NETSUITE_DISC_MTHD" mappingKey="SHOPIFY_ITEM_DISC" mappingValue="SHOPIFY ITEM DISCOUNT"/>
+<IntegrationTypeMapping integrationTypeId="NETSUITE_DISC_MTHD" mappingKey="SHOPIFY_DISC" mappingValue="{NetSuite Discount Name}"/>
+<IntegrationTypeMapping integrationTypeId="NETSUITE_DISC_MTHD" mappingKey="SHOPIFY_ITEM_DISC" mappingValue="{NetSuite Discount Item Internal ID}"/>
 ```
