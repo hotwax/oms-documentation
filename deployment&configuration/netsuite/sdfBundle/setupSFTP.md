@@ -54,3 +54,12 @@ After entering the required details, click the "Save" button.
 ## Save and Retrieve SFTP GUID:
    - Save the configuration.
    - Now, in the ID column, you will find the generated key (e.g., custkey999) representing the SFTP GUID.
+
+# Create SFTP locations on the SFTP server
+
+To enable SFTP communication, it is necessary to define SFTP locations where NetSuite will put the required files in the specified format. To set up these SFTP locations, you can go ahead and execute a SuiteScript added below in NetSuite, which will generate the necessary locations on the SFTP server. 
+
+```
+HC_SC_CreateSFTPDirectory.js
+```
+
