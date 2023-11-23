@@ -2,7 +2,7 @@
 
 To deploy a new OMS instance you first have to setup a machine. These are deployed using Jenkins.
 
-{% hint style='info' %}
+{% hint style='danger' %}
 UAT environments are usually deployed internally so they may have different steps, connect with the System Admin team for that.
 {% endhint %}
 
