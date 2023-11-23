@@ -4,4 +4,4 @@
 
 ## Integration Tools
 
-* [First Page](FirstGroup/SuiteScript/README.md)
+* [First Page](integration-tools/first-page.md)
