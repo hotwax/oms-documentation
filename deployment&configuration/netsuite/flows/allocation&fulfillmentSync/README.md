@@ -53,7 +53,7 @@ Enable jobs in the HotWax Integration layer to export a feed of fulfilled order 
 
 Check fulfilled feed at SFTP location
 ```
-/home/{sftp-username}/netsuite/salesorder/update/
+/home/{sftp-username}/netsuite/fulfilledsalesorder/export
 ```
 
 Schedule SuiteScript in NetSuite to consume fulfillment from HotWax
