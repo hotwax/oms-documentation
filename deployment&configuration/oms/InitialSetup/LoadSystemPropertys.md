@@ -83,7 +83,7 @@ Prior to uploading the data, please ensure that all relevant variables are inclu
 <SystemProperty systemResourceId="FTP_CONFIG" systemPropertyId="ftp.server.password"  systemPropertyValue="{password}"/>
 <SystemProperty systemResourceId="FTP_CONFIG" systemPropertyId="ftp.server.port"  systemPropertyValue="{port}"/>
 
-<!- Data set specific to Netsuite specific configuration -->
-<SystemProperty systemResourceId="FTP_CONFIG" systemPropertyId="ftp.server.archive.dir" systemPropertyValue="archive/">
-<SystemProperty systemResourceId="FTP_CONFIG" systemPropertyId="instance.downloadDir" systemPropertyValue="runtime/datamanager/">
+<!-- Data set specific to Netsuite specific configuration -->
+<SystemProperty systemResourceId="FTP_CONFIG" systemPropertyId="ftp.server.archive.dir" systemPropertyValue="archive/"/>
+<SystemProperty systemResourceId="FTP_CONFIG" systemPropertyId="instance.downloadDir" systemPropertyValue="runtime/datamanager/"/>
 ```
