@@ -9,6 +9,7 @@
   * [Date Time Format](sdfBundle/verifyDateTimeFormat.md)
 
 ## Prerequisites
+* [Install NetSuite Jobs](prerequisiteSyncs/installNetsuiteReader.md)
 * [SFTP Locations](prerequisiteSyncs/sftpLocations.md)
 * [Shipping Methods](prerequisiteSyncs/shippingMethods.md)
 * [Price Level](prerequisiteSyncs/priceLevel.md)
