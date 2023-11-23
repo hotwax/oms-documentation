@@ -6,7 +6,7 @@ System Properties need to be added from the XML data import page in WebTools, th
 
 ## Default data
 
-{% hint style='info' %}
+{% hint style='warning' %}
 Prior to uploading the data, please ensure that all relevant variables are included.
 {% endhint %}
 
@@ -51,7 +51,7 @@ Prior to uploading the data, please ensure that all relevant variables are inclu
 
 ## Pre-order data
 
-{% hint style='info' %} Prior to uploading the data, please ensure that all relevant variables are included. {% endhint %}
+{% hint style='warning' %} Prior to uploading the data, please ensure that all relevant variables are included. {% endhint %}
 
 ```
 <!-- Backorder and Preorder settings -->
