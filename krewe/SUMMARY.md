@@ -9,6 +9,7 @@
   * [Shipping Methods](Flows/SalesOrders/ShippingMethMapping.md)
   * [Payment Methods](Flows/SalesOrders/PaymentMethodMapping.md)
   * [Item Price](Flows/SalesOrders/ItemPrice.md)
+  * [Promo Codes](Flows/SalesOrders/PromoCodes.md)
   * [Billing Information](Flows/SalesOrders/BillingAddress.md)
   * [Account Source](Flows/SalesOrders/AccountSource.md)
   * [Subsidiary](Flows/SalesOrders/Subsidiaries.md)
