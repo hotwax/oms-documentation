@@ -20,5 +20,5 @@ In the Company Detail page, click "Edit" and change the name of the company in t
 
 
 {% hint style="info" %}
-    If a brand only has one Product Store, its a good idea to reuse its name here.
+If a brand only has one Product Store, its a good idea to reuse its name here.
 {% endhint %}
