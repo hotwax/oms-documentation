@@ -1,6 +1,6 @@
 # Installing NetSuite Reader in OMS
 
-Before configuring import data in OMS (Order Management System), it's crucial to install the NetSuite Reader. Failure to do so may lead to missing configurations, resulting in improper data communication. Follow the steps below for a seamless installation:
+Before configuring NetSuite import jobs in OMS, it's crucial to install the NetSuite Reader. Failure to do so may lead to missing configurations, resulting in improper data communication. Follow the steps below for a seamless installation:
 
 ## 1. Access WebTools
 
