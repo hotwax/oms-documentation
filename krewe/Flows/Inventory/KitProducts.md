@@ -11,19 +11,33 @@ During allocation, brokering is run on the kit components directly which actuall
 **Note** HotWax does not push kit product inventory to Shopify. Kit product inventory on Shopify is computed entirely by the Bundles app.
 {% endhint %}
 
-**Install Bundles app module**
-Out of the box HotWax Commerce does not come with a pre-loaded kit product integration with the Bundles app on Shopify. If a retailer is using the Bundles app for Shopify to manage kit products, use this data loader to install jobs for the Bundles app:
+
+### Install Bundles app reader in OMS
+
+Out of the box HotWax Commerce does not come with a pre-loaded kit product integration with the Bundles app on Shopify. Before configuring Kit product data in OMS, it's crucial to install the Bundles app reader in OMS. Failure to do so may lead to missing jobs for the Bundles app. Follow the steps below for a seamless installation:
+
+{% hint style="danger" %} The Kit Component Metafields feature in the Bundles app on Shopify must be enabled for this functionality to work.{% endhint %}
+
+#### Step 1: Access WebTools
+
+Go to the WebTools for your OMS instance using the provided sample link:
 
 ```
-<entity-resource type="data" reader-name="ext-bundles" loader="main" location="data/commerce/optionalJobData/ExtBundlesJobData.xml"/>
+https://{instanceName}.hotwax.io/webtools/control/EntityImportReaders
 ```
+#### Step 2: Add Kit Product Reader
 
-{% hint style="danger" %}
-The Kit Component Metafields feature must be enabled for this functionality to work.
-{% endhint %}
+In the `Enter readers` section, add the Bundles reader extension by typing `ext-bundles`.
 
 
-**Jobs to sync Kit Products from Shopify**
+#### Step 3: Import Configuration
+
+Click on the "Import" button to initiate the installation process.
+
+By following these steps, you ensure that the Bundles Reader is properly integrated into OMS, allowing for accurate and efficient data communication during import configurations.
+
+
+### Jobs to sync Kit Products from Shopify
 
 Import kit components from Shopify
 ```
