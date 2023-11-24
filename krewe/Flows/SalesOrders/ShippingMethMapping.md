@@ -136,5 +136,6 @@ Putting this data here, need to move netsuite setup
 <IntegrationTypeMapping integrationMappingId="14" integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="FREE_3_DAY" mappingValue="USPS Shipping" />
 <IntegrationTypeMapping integrationMappingId="15" integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="GRD_ECNMY" mappingValue="FedEx Ground Economy" />
 <IntegrationTypeMapping integrationMappingId="16" integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="3_DAY_SHP_PR" mappingValue="USPS Shipping" />
+<IntegrationTypeMapping integrationMappingId="17" integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="STANDARD" mappingValue="FedEx Home Delivery" />
 ```
 </details>
