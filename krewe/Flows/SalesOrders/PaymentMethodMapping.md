@@ -4,8 +4,7 @@ This page contains the payment method mappings for Shopify <> HotWax <> NetSuite
 ## How they're setup in HotWax
 Because payment methods are not frequently changed, their NetSuite mappings are not available to edit from a UI. Instead they are stored in the integration layer between the systems.
 
-If the shipping methods from Shopify are not mapped to a corresponding shipping method in HotWax they are defaulted to an out of the box “Standard” shipping method. To ensure orders still continue to flow to NetSuite we have added a default mapping for these methods in the integration table. Any order with a Standard shipping method is mapped to “Fedex Home Delivery” in NetSuite.
-
+In case a payment method in Shopify and HotWax is not mapped to a payment method in NetSuite, the integration layer will fall back to a `DEFAULT` payment method. As of November, this fallback payment method is mapped to “Shopify Payment” in NetSuite.
 
 ## Mappings
 | Shopify Value            | HotWax ID               | Netsuite Value        |

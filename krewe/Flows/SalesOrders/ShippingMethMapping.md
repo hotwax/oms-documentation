@@ -15,6 +15,8 @@ The integration layer will then use the mapped value of this record and include 
 
 Methods in Shopify are linked directly to one carrier as well, and the methods in NetSuite also have carrier’s linked to them internally. Because of this simple mapping, we are only storing the shipment method type in the integration layer. 
 
+If the shipping methods from Shopify are not mapped to a corresponding shipping method in HotWax they are defaulted to an out of the box “Standard” shipping method. To ensure orders still continue to flow to NetSuite we have added a default mapping for these methods in the integration table. Any order with a Standard shipping method is mapped to “Fedex Home Delivery” in NetSuite.
+
 <!-- todo: identify the mappings that are actually used in production -->
 
 ## Mappings
