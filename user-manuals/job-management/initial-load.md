@@ -12,8 +12,7 @@ description: >-
 Displays the jobs for initial OMS setup to import all products and orders.​
 
 
-
-### **Characteristics**
+**Characteristics**
 
 
 
