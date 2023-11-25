@@ -10,6 +10,7 @@
   * [Payment Methods](Flows/SalesOrders/PaymentMethodMapping.md)
   * [Item Price](Flows/SalesOrders/ItemPrice.md)
   * [Promo Codes](Flows/SalesOrders/PromoCodes.md)
+  * [Gift Card](Flows/SalesOrders/GiftCards.md)
   * [Billing Information](Flows/SalesOrders/BillingAddress.md)
   * [Blanket Customer](Flows/SalesOrders/POSOrders.md)
   * [Account Source](Flows/SalesOrders/AccountSource.md)
