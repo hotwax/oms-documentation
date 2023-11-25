@@ -17,7 +17,7 @@
   * [Subsidiary](Flows/SalesOrders/Subsidiaries.md)
   * [Deparments](Flows/SalesOrders/DeparmentMapping.md)
   * [Sales Channels](Flows/SalesOrders/SalesChannelMapping.md)
-  * [Exchange Orders]()
+  * [Exchange Orders](Flows/SalesOrders/ExchangeOrders.md)
   * [Order Types](Flows/SalesOrders/OrderTypeMapping.md)
   * [Reference IDs](Flows/SalesOrders/ShopifyOrderName.md)
 * [Brokering](Flows/Brokering/README.md)
