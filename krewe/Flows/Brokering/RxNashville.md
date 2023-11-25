@@ -19,3 +19,9 @@ A report will be scheduled for orders that are linked to the facility but do not
 
 ## Syncing to NetSuite
 It is yet to be determined if this product should be included in the sync to NetSuite. Since the product is added during order capture and is visible in Shopify, syncing it to NetSuite would create simple reconciliation.
+
+
+
+| NetSuite          | Shopify ID       |
+|-------------------|------------------|
+| ROUTE-1818-RX     | 6955059413079    |

@@ -11,13 +11,29 @@ Sales channels are determined by the facility the order is placed from. Before H
 In HotWax, Krewe will be able to add custom Facility Identifications, allowing them to map custom values to each facility they setup. The identification types will have to be predetermined so that when HotWax syncs the order to NetSuite it is able to check specifically the Sales Channel type of facility identification and include it in the order.
 
 Facility Identification Type
-```
+
+```xml
 ORDR_ORGN_SLS_CHNL
 ```
 ```xml
 <Enumeration enumId="ORDR_ORGN_SLS_CHNL" description="Netsuite Sales Channel" enumCode="ORDER_ORIGIN_SALES_CHANNEL" enumTypeId="FACILITY_IDENTITY" sequenceId="01"/>
 ```
-<!-- add actual facility type id -->
+
+## XML Data
+
+<details>
+<summary>Shopify Sales Channel Mapping</summary>
+
+```xml
+<ShopifyShopTypeMapping mappedKey="pos" mappedTypeId="SHOPIFY_ORDER_SOURCE" mappedValue="POS_SALES_CHANNEL" shopId="SHOP"/>
+<ShopifyShopTypeMapping mappedKey="sell-on-amazon" mappedTypeId="SHOPIFY_ORDER_SOURCE" mappedValue="AMAZON_SALES_CHANNEL" shopId="SHOP"/>
+<ShopifyShopTypeMapping mappedKey="2329312" mappedTypeId="SHOPIFY_ORDER_SOURCE" mappedValue="INSTA_SALES_CHANNEL" shopId="SHOP"/>
+<ShopifyShopTypeMapping mappedKey="580111" mappedTypeId="SHOPIFY_ORDER_SOURCE" mappedValue="FACBK_SALES_CHANNEL" shopId="SHOP"/>
+<ShopifyShopTypeMapping mappedKey="web" mappedTypeId="SHOPIFY_ORDER_SOURCE" mappedValue="WEB_SALES_CHANNEL" shopId="SHOP"/>
+<ShopifyShopTypeMapping mappedKey="shopify_draft_order" mappedTypeId="SHOPIFY_ORDER_SOURCE" mappedValue="DRAFT_SALES_CHANNEL" shopId="SHOP"/>
+```
+</details>
+
 
 ## Source Data
 ```
@@ -26,7 +42,9 @@ ORDR_ORGN_SLS_CHNL
 
 ```
 
-## Formatted Data
+<details>
+<summary>Formatted Data</summary>
+
 ```
 {
   "#compare source_name '==' 'pos'":{
@@ -62,10 +80,13 @@ ORDR_ORGN_SLS_CHNL
   },
   "else": 1
 }
-
 ```
+</details>
 
-## Refactored
+
+<details>
+<summary>Refactored</summary>
+
 ```json
 {
   "source_name": "pos",
@@ -101,19 +122,5 @@ ORDR_ORGN_SLS_CHNL
     "62776344663": 180
   }
 }
-```
-
-## XML Data
-
-<details>
-<summary>Shopify Sales Channel Mapping</summary>
-
-```xml
-<ShopifyShopTypeMapping mappedKey="pos" mappedTypeId="SHOPIFY_ORDER_SOURCE" mappedValue="POS_SALES_CHANNEL" shopId="SHOP"/>
-<ShopifyShopTypeMapping mappedKey="sell-on-amazon" mappedTypeId="SHOPIFY_ORDER_SOURCE" mappedValue="AMAZON_SALES_CHANNEL" shopId="SHOP"/>
-<ShopifyShopTypeMapping mappedKey="2329312" mappedTypeId="SHOPIFY_ORDER_SOURCE" mappedValue="INSTA_SALES_CHANNEL" shopId="SHOP"/>
-<ShopifyShopTypeMapping mappedKey="580111" mappedTypeId="SHOPIFY_ORDER_SOURCE" mappedValue="FACBK_SALES_CHANNEL" shopId="SHOP"/>
-<ShopifyShopTypeMapping mappedKey="web" mappedTypeId="SHOPIFY_ORDER_SOURCE" mappedValue="WEB_SALES_CHANNEL" shopId="SHOP"/>
-<ShopifyShopTypeMapping mappedKey="shopify_draft_order" mappedTypeId="SHOPIFY_ORDER_SOURCE" mappedValue="DRAFT_SALES_CHANNEL" shopId="SHOP"/>
 ```
 </details>

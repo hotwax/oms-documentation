@@ -4,6 +4,6 @@ All facilities are legally under subsidiary 1 in NetSuite except for Store 67G. 
 
 Orders that are placed from the 67G facility will be sent to NetSuite under subsidiary 5, while all other orders are adding under subsidiary 1.
 
-67G facility ID `376`
-
-Verify this again before production.
+| Facility Name | NetSuite ID | Subsidiary |
+|---------------|-------------|------------|
+| 67G           | 376         | 5          |
