@@ -12,3 +12,4 @@
 
 ## NetSuite
 
+* [SuiteScript Failure](netsuite/README.md)
