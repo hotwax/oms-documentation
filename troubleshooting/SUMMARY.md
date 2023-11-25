@@ -12,4 +12,6 @@
 
 ## NetSuite
 
-* [SuiteScript Failure](netsuite/README.md)
+* [Failure Notifications](netsuite/notifications.md)
+* [Error Logs](netsuite/findingLogs.md)
+* [Failed SuiteScripts](netsuite/failedSuiteScripts.md)

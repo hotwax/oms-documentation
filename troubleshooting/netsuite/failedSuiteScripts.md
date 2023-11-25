@@ -1,29 +1,6 @@
-# SuiteScript Troubleshooting
+# Failed SuiteScripts
 
-## Error Notification Not Received
-
-All errors in HotWax SuiteScripts automations trigger an email notification to a designated mailing list for troubleshooting. The only time an error notification is not sent is for files that the CSV import module doesn’t process because of a data mapping error. If a CSV import fails before it begins processing, NetSuite will not trigger a notification email so these files have to be checked manually.
-
-Here is a list of flows where CSV imports are involved:
-
-- Customer Import
-- Order Creation
-- Inventory Adjustment (Cycle Count)
-
-Learn more about how to troubleshoot an unprocessed CSV file [here](<link to troubleshooting guide>).
-
-**Missing Notifications**
-
-If SuiteScripts are failing, but no notifications are received, check NetSuite configurations for email notifications to the Integration mailing list.
-
-
-## Failed SuiteScripts
-
-### Locating failed records
-
-All SuiteScript error records are always placed in a “failure” subdirectory in the designated directory of the sync. Check this folder any time SuiteScript failure logs need to be checked for any sync.
-
-### Export Failure
+## Export Failure
 
 If an export SuiteScript is reported in an error notification indicating a connection timeout to SFTP, this may be for two reasons.
 
@@ -41,15 +18,15 @@ At any point if you wish to export a certain set of records on demand, the sched
 
 ---
 
-### Import Failures
+## Import Failures
 
-#### N/Record import failures
+### N/Record import failures
 
 Whenever an N/Record based import fails, a CSV file of the failed records is sent in a mail notification. This file includes the exact records where errors occurred along with the error reasons.
 
 To retry the failed records, fix the errors and place the file back in the original SFTP location for the SuiteScript to reprocess in the next scheduled import. If you want to process the file right away, execute the script manually from NetSuite after uploading the corrected file to the SFTP.
 
-#### CSV Import failures
+### CSV Import failures
 
 CSV imports in NetSuite are broken down into two subprocesses, the first is validating a file for import and then actually processing the file for import. If NetSuite is unable to validate a file for import, it will discard the file and log it as an error file in its CSV import module interface. Unfortunately, there is no alert or notification system in NetSuite that can be leveraged to track these occurrences.
 
@@ -67,7 +44,7 @@ Here are the imports which use NetSuite’s CSV import module:
 - Order Creation
 - Inventory Adjustment (Cycle Count)
 
-##### Retry data from failed exports
+#### Retry data from failed exports
 
 Depending on the type of sync time based sync or attribute-based sync, the troubleshooting steps may vary.
 
