@@ -1,7 +1,5 @@
 # Job Running for Extended Duration
 
-## Problem
-
 A scheduled job has been running for a longer duration than expected (more than 15 minutes).
 
 ## Step 1: Check the Job Queue Status
