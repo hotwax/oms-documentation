@@ -7,5 +7,5 @@ When creating POS Cash Sales in store, high traffic can lead to customers not be
 The default customer will have a NetSuite party identification added to them that is the same type of identification as regular customers. By adding this default identification, the normal order sync with NetSuite works without modification.
 
 ```xml
-add netsuite mapping data
+<PartyIdentification partyId="_NA_" partyIdentificationTypeId="NETSUITE_CUSTOMER_ID" idValue="686522" />
 ```

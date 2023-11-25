@@ -17,12 +17,29 @@ If no value is provided for this facility identification, the integration will d
 
 Facility Identification Type
 
-```
+
+## XML Data
+
+```xml
 NETSUITE_ORDR_TYPE
 ```
+
 ```xml
 <Enumeration enumId="NETSUITE_ORDR_TYPE" description="Netsuite Order Type" enumCode="NETSUITE_ORDER_TYPE" enumTypeId="FACILITY_IDENTITY" sequenceId="01"/>
 ```
+
+<details>
+<summary>Sales Channels to Order Type</summary>
+
+```xml
+<Enumeration description="Web Channel" enumCode="1" enumId="WEB_SALES_CHANNEL" enumTypeId="ORDER_SALES_CHANNEL" />
+<Enumeration description="Draft Orders Channel" enumCode="1" enumId="DRAFT_SALES_CHANNEL" enumTypeId="ORDER_SALES_CHANNEL" />
+<Enumeration description="POS Channel" enumCode="6" enumId="POS_SALES_CHANNEL" enumTypeId="ORDER_SALES_CHANNEL" />
+<Enumeration description="Instagram Channel" enumCode="145" enumId="INSTA_SALES_CHANNEL" enumTypeId="ORDER_SALES_CHANNEL" />
+<Enumeration description="Facebook Channel" enumCode="151" enumId="FACBK_SALES_CHANNEL" enumTypeId="ORDER_SALES_CHANNEL" />
+<Enumeration description="Amazon Channel" enumCode="136" enumId="AMAZON_SALES_CHANNEL" enumTypeId="ORDER_SALES_CHANNEL" />
+```
+</details>
 
 ## All Order Types
 | Internal ID | Name                           |
@@ -213,18 +230,3 @@ NETSUITE_ORDR_TYPE
   }
 }
 ```
-
-## XML Data
-
-<details>
-<summary>Sales Channels to Order Type</summary>
-
-```xml
-<Enumeration description="Web Channel" enumCode="1" enumId="WEB_SALES_CHANNEL" enumTypeId="ORDER_SALES_CHANNEL" />
-<Enumeration description="Draft Orders Channel" enumCode="1" enumId="DRAFT_SALES_CHANNEL" enumTypeId="ORDER_SALES_CHANNEL" />
-<Enumeration description="POS Channel" enumCode="6" enumId="POS_SALES_CHANNEL" enumTypeId="ORDER_SALES_CHANNEL" />
-<Enumeration description="Instagram Channel" enumCode="145" enumId="INSTA_SALES_CHANNEL" enumTypeId="ORDER_SALES_CHANNEL" />
-<Enumeration description="Facebook Channel" enumCode="151" enumId="FACBK_SALES_CHANNEL" enumTypeId="ORDER_SALES_CHANNEL" />
-<Enumeration description="Amazon Channel" enumCode="136" enumId="AMAZON_SALES_CHANNEL" enumTypeId="ORDER_SALES_CHANNEL" />
-```
-</details>

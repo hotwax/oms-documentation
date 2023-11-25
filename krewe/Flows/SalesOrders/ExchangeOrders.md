@@ -4,3 +4,16 @@ Exchange orders are created in Krewe by Loop Exchanges, which also currently has
 
 ## How this works in HotWax
 In order to avoid creating duplicate orders in NetSuite, the HotWax integration layer will exclude orders that are created by the Loop Exchanges app in its order feed to NetSuite. In order to filter specifically the orders created by Loop Exchanges, HotWax will map their order source ID that is included in orders from Shopify, to a new sales channel called “Loop Exchange”.
+
+## XML Data
+
+**Sales Channel**
+
+```xml
+<Enumeration description="Loop Exchange" enumCode="1" enumId="LOOP_EXCHANGE_CHANNEL" enumTypeId="ORDER_SALES_CHANNEL" />
+```
+
+**Shopify Mapping**
+```xml
+<ShopifyShopTypeMapping mappedKey="{loop-exchange}" mappedTypeId="SHOPIFY_ORDER_SOURCE" mappedValue="LOOP_EXCHANGE_CHANNEL" shopId="SHOP"/>
+```
