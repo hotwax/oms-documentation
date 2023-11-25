@@ -139,9 +139,9 @@ Holds all uncategorised jobs
 
 ## Webhooks
 
-:::info
-Webhooks can be subscribed to from the category pages within the Job Manager app for specific categories.:::
-
+{% hint style="info" %}
+Webhooks can be subscribed to from the category pages within the Job Manager app for specific categories.
+{% endhint %}
 
 Automated messages sent from eCommerce (Shopify) to OMS whenever an event occurs. They contain data about the event and are received in OMS, allowing real time communication between eCommerce and OMS.
 
