@@ -55,12 +55,6 @@ In case a payment method in Shopify and HotWax is not mapped to a payment method
 ```
 </details>
 
-This is enumeration that needs to be moved to NetSuite data.
-
-```xml
-<Enumeration description="Payment methods mapping between HotWax and Netsuite" enumId="NETSUITE_PMT_MTHD" enumName="Netsuite Payment Method" enumTypeId="NETSUITE" sequenceId="1"/>
-```
-
 <details>
 <summary>Integration Mapping Data</summary>
 
@@ -76,6 +70,5 @@ This is enumeration that needs to be moved to NetSuite data.
 <IntegrationTypeMapping integrationTypeId="NETSUITE_PMT_MTHD" mappingKey="EXT_SHOP_CARD" mappingValue="8" description="Shopify Payment"/>
 <IntegrationTypeMapping integrationTypeId="NETSUITE_PMT_MTHD" mappingKey="EXT_SHOP_PAY_INSTALL" mappingValue="22" description="ShopPay"/>
 <IntegrationTypeMapping integrationTypeId="NETSUITE_PMT_MTHD" mappingKey="DEFAULT" mappingValue="8" description="Shopify Payment"/>
-
 ```
 </details>

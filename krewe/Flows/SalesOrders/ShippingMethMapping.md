@@ -117,13 +117,6 @@ If the shipping methods from Shopify are not mapped to a corresponding shipping 
 </details>
 
 
-Putting this data here, need to move netsuite setup
-
-```xml
-<EnumerationType description="Netsuite Integration Type Mapping" enumTypeId="NETSUITE" hasTable="N"/>
-<Enumeration description="Shipping methods mapping between HotWax and Netsuite" enumId="NETSUITE_SHP_MTHD" enumName="Netsuite Shipping Method" enumTypeId="NETSUITE" sequenceId="1"/>
-```
-
 <details>
 <summary>NetSuite Shipping Method Mappings</summary>
   

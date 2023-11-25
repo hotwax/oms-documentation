@@ -6,11 +6,6 @@ Following the Netsuite setup document, schedule all required scripts. Create cus
 
 Krewe uses Netsuite's internal ID for item level discount, so create the item level discount mapping data with the Netsuite internal ID.
 
-Create Enumeration data before creating IntegrationTypeMapping data.
-```xml
-<Enumeration description="Discount codes mapping between HotWax and Netsuite" enumId="NETSUITE_DISC_MTHD" enumName="Netsuite Discount Codes" enumTypeId="NETSUITE" sequenceId="1"/>
-```
-
 ```xml
 <IntegrationTypeMapping integrationTypeId="NETSUITE_DISC_MTHD" mappingKey="SHOPIFY_DISC" mappingValue="SHOPIFY DISCOUNT"/>
 <IntegrationTypeMapping integrationTypeId="NETSUITE_DISC_MTHD" mappingKey="SHOPIFY_ITEM_DISC" mappingValue="41728"/>

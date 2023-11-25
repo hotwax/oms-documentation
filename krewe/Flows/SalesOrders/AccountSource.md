@@ -19,9 +19,17 @@ If the party classification is anything else, send: 14
 
 ## XML Data
 
+
+{% hint style="danger" %}
+The partyClassificationGroupId must be the same as the Sales Channel enumeration ID for the account source mapping to work.
+{% endhint %}
+
+{% hint style="info" %}
+If a mapping is not found for a POS channel order, the account source will default to 14.
+{% endhint %}
+
 <details>
   <summary>Party Classifications</summary>
-The partyClassificationGroupId must be the same as the Sales Channel enumeration ID for the account source mapping to work. If a mapping is not found for a POS channel order, the account source will default to 14.
 
 ```xml
 <PartyClassificationGroup partyClassificationGroupId="WEB_SALES_CHANNEL" partyClassificationTypeId="ACCT_SOURCE_INFO" description="Web Sales Channel"/>
