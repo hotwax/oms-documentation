@@ -53,9 +53,7 @@ Comprehensive historical job data is readily accessible for analysis and trouble
 
 
 
-### Functions
-
-#### Job segmentation
+### Job segmentation
 
 {% tabs %}
 {% tab title="Pending" %}
@@ -79,7 +77,7 @@ Displays all the historical jobs. Historical jobs can be filtered by their statu
 
 ####
 
-#### **Search**
+### **Search**
 
 Easily locate specific jobs by name or category.
 
@@ -87,7 +85,7 @@ Easily locate specific jobs by name or category.
 
 ###
 
-#### Filters
+### Filters
 
 Quickly find jobs by applying filters based on category and status.
 
@@ -95,7 +93,7 @@ Quickly find jobs by applying filters based on category and status.
 
 
 
-#### **Pin job**
+### **Pin job**
 
 Keep frequently accessed jobs readily available for quick access. Pinned jobs will be visible in the footer.
 
@@ -103,7 +101,7 @@ Keep frequently accessed jobs readily available for quick access. Pinned jobs wi
 
 ####
 
-#### **Recurrence**&#x20;
+### **Recurrence**&#x20;
 
 Displays the number of counts the job is retried once failed.&#x20;
 
