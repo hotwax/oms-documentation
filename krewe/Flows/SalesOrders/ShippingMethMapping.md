@@ -23,23 +23,23 @@ If the shipping methods from Shopify are not mapped to a corresponding shipping 
 
 | Shopify Shipping Method            | HotWax Shipment Method          | HotWax Description  | NetSuite Shipping Method       | FedEx Shipping Method             |
 |------------------------------------|----------------------------------|--------------------------------------|--------------------------------|-----------------------------------|
-| 2 Day FedEx Shipping               | FEDEX_HOME_DELIVERY              | FedEx Home Delivery®                 | FedEx Home Delivery            | FedEx Home Delivery®               |
+| 2 Day FedEx Shipping               | FEDEX_HOME_DELIVERY              | FedEx Home Delivery                 | FedEx Home Delivery            | FedEx Home Delivery®               |
 | 2 Day Shipping                     | 2_DAY_SHIPPING                   | 2-Day Shipping                       | 2-Day Shipping                 | FedEx 2Day®                        |
 | 2-3 Day International Shipping     | INTERNATIONAL_CONNECT_PLUS       | FedEx International Connect Plus     | FedEx International Connect Plus | FedEx® International Connect Plus |
 | 2-5 Day International Shipping     | INTERNATIONAL_CONNECT_PLUS       | FedEx International Connect Plus     | FedEx International Connect Plus | FedEx® International Connect Plus |
 | 2-Day FedEx Shipping               | 2_DAY_SHIPPING                   | 2-Day Shipping                       | 2-Day Shipping                 | FedEx 2Day®                        |
 | 2-Day Shipping                     | 2_DAY_SHIPPING                   | 2-Day Shipping                       | 2-Day Shipping                 | FedEx 2Day®                        |
 | 2-Day Shipping 67G                  | 2_DAY_SHIPPING_67G               | 2-Day Shipping 67G                    | 2-Day Shipping 67G              | FedEx 2Day®                        |
-| 3 Day Shipping                      | USPS_PRIORITY_MAIL                | USPS Priority Mail®                  | USPS Shipping                  | USPS Priority Mail®                |
+| 3 Day Shipping                      | USPS_PRIORITY_MAIL                | USPS Shipping                      | USPS Shipping                  | USPS Priority Mail®                |
 | 3-Day Express Saver                | EXPRESS_SAVER                    | FedEx Express Saver®                 | FedEx Express Saver®           | FedEx Express Saver®               |
-| 3-Day Shipping                      | USPS_PRIORITY_MAIL                | USPS Priority Mail®                  | USPS Shipping                  | USPS Priority Mail®                |
-| 3-Day Shipping PR                   | USPS_PRIORITY_MAIL                | USPS Priority Mail®                  | USPS Shipping                  | USPS Priority Mail®                |
+| 3-Day Shipping                      | USPS_PRIORITY_MAIL                | USPS Shipping                      | USPS Shipping                  | USPS Priority Mail®                |
+| 3-Day Shipping PR                   | USPS_PRIORITY_MAIL                | USPS Shipping                       | USPS Shipping                  | USPS Priority Mail®                |
 | FedEx 2Day®                        | 2_DAY_SHIPPING                   | 2-Day Shipping                         | 2-Day Shipping                    | FedEx 2Day®                     |
-| FedEx Ground Shipping               | GROUND                           | FedEx Ground®                        | FedEx Ground                   | FedEx Ground®                      |
+| FedEx Ground Shipping               | GROUND                           | FedEx Ground                        | FedEx Ground                   | FedEx Ground®                      |
 | FedEx International Connect Plus    | INTERNATIONAL_CONNECT_PLUS       | FedEx International Connect Plus     | FedEx International Connect Plus | FedEx® International Connect Plus |
 | FedEx International Economy®        | INTERNATIONAL_ECONOMY            | FedEx International Economy®         | FedEx International Economy®   | FedEx International Economy®       |
 | FedEx International Priority®       | INTERNATIONAL_PRIORITY           | FedEx International Priority®        | FedEx International Priority®  | FedEx International Priority®      |
-| FREE 2 Day Shipping                 | FEDEX_HOME_DELIVERY              | FedEx Home Delivery®                 | FedEx Home Delivery            | FedEx Home Delivery®               |
+| FREE 2 Day Shipping                 | FEDEX_HOME_DELIVERY              | FedEx Home Delivery                 | FedEx Home Delivery            | FedEx Home Delivery®               |
 | FREE 2-Day Shipping                 | 2_DAY_SHIPPING                   | FREE 2-Day Shipping                   | 2-Day Shipping                 | FedEx 2Day®                        |
 | Free 3-Day Shipping                 | USPS_PRIORITY_MAIL                | Free 3-Day Shipping                   | USPS Shipping                  | USPS Priority Mail®                |
 | Ground Economy Shipping             | GROUND_ECONOMY                   | Ground Economy Shipping               | FedEx Ground Economy            | FedEx Ground® Economy              |
@@ -55,65 +55,67 @@ If the shipping methods from Shopify are not mapped to a corresponding shipping 
 <summary>Production Shipping Methods</summary>
 
 ```xml
-    <!-- Shipment Method Types -->
-    <ShipmentMethodType shipmentMethodTypeId="FEDEX_HOME_DELIVERY" description="FedEx Home Delivery®" parentTypeId="STANDARD"/>
-    <ShipmentMethodType shipmentMethodTypeId="2_DAY_SHIPPING" description="2-Day Shipping®" parentTypeId="SECOND_DAY"/>
-    <ShipmentMethodType shipmentMethodTypeId="2_DAY_SHIPPING_67G" description="2-Day Shipping 67G" parentTypeId="SECOND_DAY"/>
-    <ShipmentMethodType shipmentMethodTypeId="INTERNATIONAL_CONNECT_PLUS" description="FedEx International Connect Plus®" parentTypeId="STANDARD"/>
-    <ShipmentMethodType shipmentMethodTypeId="GROUND_ECONOMY" description="FedEx Ground Economy®" parentTypeId="STANDARD"/>
-    <ShipmentMethodType shipmentMethodTypeId="GROUND" description="FedEx Ground®" parentTypeId="STANDARD"/>
-    <ShipmentMethodType shipmentMethodTypeId="STANDARD_OVERNIGHT" description="FedEx Standard Overnight®" parentTypeId="NEXT_DAY"/>
-    <ShipmentMethodType shipmentMethodTypeId="EXPRESS_SAVER" description="FedEx Express Saver®" parentTypeId="THIRD_DAY"/>
-    <ShipmentMethodType shipmentMethodTypeId="INTERNATIONAL_ECONOMY" description="FedEx International Economy®" parentTypeId="STANDARD"/>
-    <ShipmentMethodType shipmentMethodTypeId="INTERNATIONAL_PRIORITY" description="FedEx International Priority®" parentTypeId="STANDARD"/>
-    <ShipmentMethodType shipmentMethodTypeId="USPS_PRIORITY_MAIL" description="USPS Priority Mail®" parentTypeId="STANDARD"/>
-    <!-- Add more ShipmentMethodType entries as needed -->
+<!-- Shipment Method Types -->
+<ShipmentMethodType shipmentMethodTypeId="FEDEX_HOME_DELIVERY" description="FedEx Home Delivery" parentTypeId="STANDARD"/>
+<ShipmentMethodType shipmentMethodTypeId="2_DAY_SHIPPING" description="2-Day Shipping" parentTypeId="SECOND_DAY"/>
+<ShipmentMethodType shipmentMethodTypeId="2_DAY_SHIPPING_67G" description="2-Day Shipping 67G" parentTypeId="SECOND_DAY"/>
+<ShipmentMethodType shipmentMethodTypeId="INTERNATIONAL_CONNECT_PLUS" description="FedEx International Connect Plus®" parentTypeId="STANDARD"/>
+<ShipmentMethodType shipmentMethodTypeId="GROUND_ECONOMY" description="FedEx Ground Economy®" parentTypeId="STANDARD"/>
+<ShipmentMethodType shipmentMethodTypeId="GROUND" description="FedEx Ground" parentTypeId="STANDARD"/>
+<ShipmentMethodType shipmentMethodTypeId="STANDARD_OVERNIGHT" description="FedEx Standard Overnight®" parentTypeId="NEXT_DAY"/>
+<ShipmentMethodType shipmentMethodTypeId="EXPRESS_SAVER" description="FedEx Express Saver®" parentTypeId="THIRD_DAY"/>
+<ShipmentMethodType shipmentMethodTypeId="INTERNATIONAL_ECONOMY" description="FedEx International Economy®" parentTypeId="STANDARD"/>
+<ShipmentMethodType shipmentMethodTypeId="INTERNATIONAL_PRIORITY" description="FedEx International Priority®" parentTypeId="STANDARD"/>
+<ShipmentMethodType shipmentMethodTypeId="USPS_PRIORITY_MAIL" description="USPS Shipping" parentTypeId="STANDARD"/>
+<!-- Add more ShipmentMethodType entries as needed -->
 
-    <!-- Carrier Shipment Methods -->
-    <CarrierShipmentMethod carrierPartyId="FEDEX" shipmentMethodTypeId="FEDEX_HOME_DELIVERY" serviceCode="FedEx Home Delivery®"/>
-    <CarrierShipmentMethod carrierPartyId="FEDEX" shipmentMethodTypeId="2_DAY_SHIPPING" serviceCode="FedEx 2Day®"/>
-    <CarrierShipmentMethod carrierPartyId="FEDEX" shipmentMethodTypeId="2_DAY_SHIPPING_67G" serviceCode="FedEx 2Day®"/>
-    <CarrierShipmentMethod carrierPartyId="FEDEX" shipmentMethodTypeId="INTERNATIONAL_CONNECT_PLUS" serviceCode="FedEx International Connect Plus®"/>
-    <CarrierShipmentMethod carrierPartyId="FEDEX" shipmentMethodTypeId="GROUND_ECONOMY" serviceCode="FedEx Ground Economy®"/>
-    <CarrierShipmentMethod carrierPartyId="FEDEX" shipmentMethodTypeId="GROUND" serviceCode="FedEx Ground®"/>
-    <CarrierShipmentMethod carrierPartyId="FEDEX" shipmentMethodTypeId="STANDARD_OVERNIGHT" serviceCode="FedEx Standard Overnight®"/>
-    <CarrierShipmentMethod carrierPartyId="FEDEX" shipmentMethodTypeId="EXPRESS_SAVER" serviceCode="FedEx Express Saver®"/>
-    <CarrierShipmentMethod carrierPartyId="FEDEX" shipmentMethodTypeId="INTERNATIONAL_ECONOMY" serviceCode="FedEx International Economy®"/>
-    <CarrierShipmentMethod carrierPartyId="FEDEX" shipmentMethodTypeId="INTERNATIONAL_PRIORITY" serviceCode="FedEx International Priority®"/>
-    <CarrierShipmentMethod carrierPartyId="USPS" shipmentMethodTypeId="USPS_PRIORITY_MAIL" serviceCode="USPS Priority Mail®"/>
-    <!-- Add more CarrierShipmentMethod entries as needed -->
+<!-- Carrier Shipment Methods -->
+<CarrierShipmentMethod carrierPartyId="FEDEX" shipmentMethodTypeId="FEDEX_HOME_DELIVERY" serviceCode="FedEx Home Delivery®"/>
+<CarrierShipmentMethod carrierPartyId="FEDEX" shipmentMethodTypeId="2_DAY_SHIPPING" serviceCode="FedEx 2Day®"/>
+<CarrierShipmentMethod carrierPartyId="FEDEX" shipmentMethodTypeId="2_DAY_SHIPPING_67G" serviceCode="FedEx 2Day®"/>
+<CarrierShipmentMethod carrierPartyId="FEDEX" shipmentMethodTypeId="INTERNATIONAL_CONNECT_PLUS" serviceCode="FedEx International Connect Plus®"/>
+<CarrierShipmentMethod carrierPartyId="FEDEX" shipmentMethodTypeId="GROUND_ECONOMY" serviceCode="FedEx Ground Economy®"/>
+<CarrierShipmentMethod carrierPartyId="FEDEX" shipmentMethodTypeId="GROUND" serviceCode="FedEx Ground®"/>
+<CarrierShipmentMethod carrierPartyId="FEDEX" shipmentMethodTypeId="STANDARD_OVERNIGHT" serviceCode="FedEx Standard Overnight®"/>
+<CarrierShipmentMethod carrierPartyId="FEDEX" shipmentMethodTypeId="EXPRESS_SAVER" serviceCode="FedEx Express Saver®"/>
+<CarrierShipmentMethod carrierPartyId="FEDEX" shipmentMethodTypeId="INTERNATIONAL_ECONOMY" serviceCode="FedEx International Economy®"/>
+<CarrierShipmentMethod carrierPartyId="FEDEX" shipmentMethodTypeId="INTERNATIONAL_PRIORITY" serviceCode="FedEx International Priority®"/>
+<CarrierShipmentMethod carrierPartyId="USPS" shipmentMethodTypeId="USPS_PRIORITY_MAIL" serviceCode="USPS Priority Mail®"/>
+<!-- Add more CarrierShipmentMethod entries as needed -->
 ```
 </details>
 
+<details>
+<summary>Shopify Mapping</summary>
 
 ```xml
-    <!-- ShopifyShopCarrierShipment entries -->
-    <ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="FEDEX" shipmentMethodTypeId="2_DAY_SHIPPING" shopifyShippingMethod="2 Day FedEx Shipping"/>
-    <ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="FEDEX" shipmentMethodTypeId="2_DAY_SHIPPING" shopifyShippingMethod="2 Day Shipping"/>
-    <ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="FEDEX" shipmentMethodTypeId="INTERNATIONAL_CONNECT_PLUS" shopifyShippingMethod="2-3 Day International Shipping"/>
-    <ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="FEDEX" shipmentMethodTypeId="INTERNATIONAL_CONNECT_PLUS" shopifyShippingMethod="2-5 Day International Shipping"/>
-    <ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="FEDEX" shipmentMethodTypeId="2_DAY_SHIPPING" shopifyShippingMethod="2-Day FedEx Shipping"/>
-    <ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="FEDEX" shipmentMethodTypeId="2_DAY_SHIPPING" shopifyShippingMethod="2-Day Shipping"/>
-    <ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="FEDEX" shipmentMethodTypeId="2_DAY_SHIPPING" shopifyShippingMethod="2-Day Shipping 67G"/>
-    <ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="USPS" shipmentMethodTypeId="USPS_PRIORITY_MAIL" shopifyShippingMethod="3 Day Shipping"/>
-    <ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="FEDEX" shipmentMethodTypeId="EXPRESS_SAVER" shopifyShippingMethod="3-Day Express Saver"/>
-    <ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="USPS" shipmentMethodTypeId="USPS_PRIORITY_MAIL" shopifyShippingMethod="3-Day Shipping"/>
-    <ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="USPS" shipmentMethodTypeId="USPS_PRIORITY_MAIL" shopifyShippingMethod="3-Day Shipping PR"/>
-    <ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="FEDEX" shipmentMethodTypeId="2_DAY_SHIPPING" shopifyShippingMethod="FedEx 2Day®"/>
-    <ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="FEDEX" shipmentMethodTypeId="GROUND" shopifyShippingMethod="FedEx Ground Shipping"/>
-    <ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="FEDEX" shipmentMethodTypeId="INTERNATIONAL_CONNECT_PLUS" shopifyShippingMethod="FedEx International Connect Plus"/>
-    <ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="FEDEX" shipmentMethodTypeId="INTERNATIONAL_ECONOMY" shopifyShippingMethod="FedEx International Economy®"/>
-    <ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="FEDEX" shipmentMethodTypeId="INTERNATIONAL_PRIORITY" shopifyShippingMethod="FedEx International Priority®"/>
-    <ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="FEDEX" shipmentMethodTypeId="FEDEX_HOME_DELIVERY" shopifyShippingMethod="FREE 2 Day Shipping"/>
-    <ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="FEDEX" shipmentMethodTypeId="2_DAY_SHIPPING" shopifyShippingMethod="FREE 2-Day Shipping"/>
-    <ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="USPS" shipmentMethodTypeId="USPS_PRIORITY_MAIL" shopifyShippingMethod="Free 3-Day Shipping"/>
-    <ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="FEDEX" shipmentMethodTypeId="GROUND_ECONOMY" shopifyShippingMethod="Ground Economy Shipping"/>
-    <ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="FEDEX" shipmentMethodTypeId="GROUND" shopifyShippingMethod="Ground Shipping"/>
-    <ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="FEDEX" shipmentMethodTypeId="STANDARD_OVERNIGHT" shopifyShippingMethod="Overnight Shipping"/>
-    <ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="FEDEX" shipmentMethodTypeId="GROUND" shopifyShippingMethod="Standard Ground Shipping"/>
-</OFBizEntityDataResource>
-
+<!-- ShopifyShopCarrierShipment entries -->
+<ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="FEDEX" shipmentMethodTypeId="2_DAY_SHIPPING" shopifyShippingMethod="2 Day FedEx Shipping"/>
+<ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="FEDEX" shipmentMethodTypeId="2_DAY_SHIPPING" shopifyShippingMethod="2 Day Shipping"/>
+<ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="FEDEX" shipmentMethodTypeId="INTERNATIONAL_CONNECT_PLUS" shopifyShippingMethod="2-3 Day International Shipping"/>
+<ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="FEDEX" shipmentMethodTypeId="INTERNATIONAL_CONNECT_PLUS" shopifyShippingMethod="2-5 Day International Shipping"/>
+<ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="FEDEX" shipmentMethodTypeId="2_DAY_SHIPPING" shopifyShippingMethod="2-Day FedEx Shipping"/>
+<ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="FEDEX" shipmentMethodTypeId="2_DAY_SHIPPING" shopifyShippingMethod="2-Day Shipping"/>
+<ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="FEDEX" shipmentMethodTypeId="2_DAY_SHIPPING" shopifyShippingMethod="2-Day Shipping 67G"/>
+<ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="USPS" shipmentMethodTypeId="USPS_PRIORITY_MAIL" shopifyShippingMethod="3 Day Shipping"/>
+<ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="FEDEX" shipmentMethodTypeId="EXPRESS_SAVER" shopifyShippingMethod="3-Day Express Saver"/>
+<ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="USPS" shipmentMethodTypeId="USPS_PRIORITY_MAIL" shopifyShippingMethod="3-Day Shipping"/>
+<ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="USPS" shipmentMethodTypeId="USPS_PRIORITY_MAIL" shopifyShippingMethod="3-Day Shipping PR"/>
+<ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="FEDEX" shipmentMethodTypeId="2_DAY_SHIPPING" shopifyShippingMethod="FedEx 2Day®"/>
+<ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="FEDEX" shipmentMethodTypeId="GROUND" shopifyShippingMethod="FedEx Ground Shipping"/>
+<ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="FEDEX" shipmentMethodTypeId="INTERNATIONAL_CONNECT_PLUS" shopifyShippingMethod="FedEx International Connect Plus"/>
+<ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="FEDEX" shipmentMethodTypeId="INTERNATIONAL_ECONOMY" shopifyShippingMethod="FedEx International Economy®"/>
+<ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="FEDEX" shipmentMethodTypeId="INTERNATIONAL_PRIORITY" shopifyShippingMethod="FedEx International Priority®"/>
+<ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="FEDEX" shipmentMethodTypeId="FEDEX_HOME_DELIVERY" shopifyShippingMethod="FREE 2 Day Shipping"/>
+<ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="FEDEX" shipmentMethodTypeId="2_DAY_SHIPPING" shopifyShippingMethod="FREE 2-Day Shipping"/>
+<ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="USPS" shipmentMethodTypeId="USPS_PRIORITY_MAIL" shopifyShippingMethod="Free 3-Day Shipping"/>
+<ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="FEDEX" shipmentMethodTypeId="GROUND_ECONOMY" shopifyShippingMethod="Ground Economy Shipping"/>
+<ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="FEDEX" shipmentMethodTypeId="GROUND" shopifyShippingMethod="Ground Shipping"/>
+<ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="FEDEX" shipmentMethodTypeId="STANDARD_OVERNIGHT" shopifyShippingMethod="Overnight Shipping"/>
+<ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="FEDEX" shipmentMethodTypeId="GROUND" shopifyShippingMethod="Standard Ground Shipping"/>
 ```
+</details>
+
 
 Putting this data here, need to move netsuite setup
 
@@ -126,23 +128,17 @@ Putting this data here, need to move netsuite setup
 <summary>NetSuite Shipping Method Mappings</summary>
   
 ```xml
-<IntegrationTypeMapping integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="FRE_2_DAY_SHP" mappingValue="2-Day Shipping" />
-<IntegrationTypeMapping integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="OVR_SHP" mappingValue="FedEx Standard Overnight" />
-<IntegrationTypeMapping integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="FRE_2DAY_SHP" mappingValue="FedEx Home Delivery" />
-<IntegrationTypeMapping integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="2_DAY_SHP" mappingValue="2-Day Shipping" />
-<IntegrationTypeMapping integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="2DAY_SHP" mappingValue="2-Day Shipping" />
-<IntegrationTypeMapping integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="2_DAY_FDX_SHP" mappingValue="2-Day Shipping" />
-<IntegrationTypeMapping integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="2DAY_INT_SHP" mappingValue="FedEx International Connect Plus" />
-<IntegrationTypeMapping integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="5DAY_INT_SHP" mappingValue="FedEx International Connect Plus" />
-<IntegrationTypeMapping integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="2DAY_SHP_67G" mappingValue="2-Day Shipping 67G" />
-<IntegrationTypeMapping integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="2DAY_FDX_SHP" mappingValue="FedEx Home Delivery" />
-<IntegrationTypeMapping integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="3_DAY_SHP" mappingValue="2-Day Shipping" />
-<IntegrationTypeMapping integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="3DAY_SHP" mappingValue="FedEx Home Delivery" />
-<IntegrationTypeMapping integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="GRD_SHP" mappingValue="FedEx Home Delivery" />
-<IntegrationTypeMapping integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="FREE_3_DAY" mappingValue="USPS Shipping" />
-<IntegrationTypeMapping integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="GRD_ECNMY" mappingValue="FedEx Ground Economy" />
-<IntegrationTypeMapping integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="3_DAY_SHP_PR" mappingValue="USPS Shipping" />
-<IntegrationTypeMapping integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="STANDARD" mappingValue="FedEx Home Delivery" />
+<IntegrationTypeMapping integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="FEDEX_HOME_DELIVERY" mappingValue="FedEx Home Delivery" />
+<IntegrationTypeMapping integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="2_DAY_SHIPPING" mappingValue="2-Day Shipping" />
+<IntegrationTypeMapping integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="INTERNATIONAL_CONNECT_PLUS" mappingValue="FedEx International Connect Plus" />
+<IntegrationTypeMapping integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="2_DAY_SHIPPING_67G" mappingValue="2-Day Shipping 67G" />
+<IntegrationTypeMapping integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="USPS_PRIORITY_MAIL" mappingValue="USPS Shipping" />
+<IntegrationTypeMapping integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="EXPRESS_SAVER" mappingValue="FedEx Express Saver®" />
+<IntegrationTypeMapping integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="GROUND" mappingValue="FedEx Ground" />
+<IntegrationTypeMapping integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="INTERNATIONAL_ECONOMY" mappingValue="FedEx International Economy®" />
+<IntegrationTypeMapping integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="INTERNATIONAL_PRIORITY" mappingValue="FedEx International Priority®" />
+<IntegrationTypeMapping integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="GROUND_ECONOMY" mappingValue="FedEx Ground Economy" />
+<IntegrationTypeMapping integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="STANDARD_OVERNIGHT" mappingValue="FedEx Standard Overnight" />
 ```
 </details>
 
