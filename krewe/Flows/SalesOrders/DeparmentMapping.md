@@ -28,7 +28,9 @@ ORDR_ORGN_DPT
 '62776344663'}}391{{else}}{{/compare}}{{else}}203{{/compare}}{{else}}203{{/compare}}
 ```
 
-## Formatted
+
+<details>
+<summary>Formatted</summary>
 
 ```
 {
@@ -65,8 +67,12 @@ ORDR_ORGN_DPT
   }
 }
 ```
+</details>
 
-## Refactored
+
+<details>
+<summary>Refactored</summary>
+
 ```json
 {
   "source_name": "pos",
@@ -103,6 +109,7 @@ ORDR_ORGN_DPT
   }
 }
 ```
+</details>
 
 <!-- page links -->
 [departmentDocs]: https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_N261602.html#Departments-and-Classes-Overview
