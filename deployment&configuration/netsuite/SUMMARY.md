@@ -12,6 +12,7 @@
 * [Install NetSuite Jobs](prerequisiteSyncs/installNetsuiteReader.md)
 * [Product Store Settings](prerequisiteSyncs/productStoreSettings.md)
 * [SFTP Locations](prerequisiteSyncs/sftpLocations.md)
+* [Historical Customers](prerequisiteSyncs/historicalCustomers.md)
 * [Shipping Methods](prerequisiteSyncs/shippingMethods.md)
 * [Price Level](prerequisiteSyncs/priceLevel.md)
 * [Payment Methods](prerequisiteSyncs/paymentMethods.md)
