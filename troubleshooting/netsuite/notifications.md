@@ -8,7 +8,7 @@ Here is a list of flows where CSV imports are used:
 - Order Creation
 - Inventory Adjustment (Cycle Count)
 
-Learn more about how to troubleshoot an unprocessed CSV file [here](failedSuiteScripts.md).
+Learn more about how to troubleshoot an unprocessed CSV file [here](failedSuiteScripts#csv-import-failures).
 
 **Missing Notifications**
 
