@@ -10,7 +10,7 @@ In order to avoid creating duplicate orders in NetSuite, the HotWax integration 
 **Sales Channel**
 
 ```xml
-<Enumeration description="Loop Exchange" enumCode="1" enumId="LOOP_EXCHANGE_CHANNEL" enumTypeId="ORDER_SALES_CHANNEL" />
+<Enumeration description="Loop Exchange" enumCode="165" enumId="LOOP_EXCHANGE_CHANNEL" enumTypeId="ORDER_SALES_CHANNEL" />
 ```
 
 **Shopify Mapping**
