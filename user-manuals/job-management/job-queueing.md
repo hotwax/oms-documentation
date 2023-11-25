@@ -7,13 +7,13 @@ description: >-
 
 # Job queueing
 
-## Pipeline page
+### Pipeline page
 
 Provides a holistic view of all jobs, including their status, scheduled time, and execution details.
 
 
 
-### **Characteristics**
+**Characteristics**
 
 
 
