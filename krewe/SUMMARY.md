@@ -11,6 +11,7 @@
   * [Item Price](Flows/SalesOrders/ItemPrice.md)
   * [Promo Codes](Flows/SalesOrders/PromoCodes.md)
   * [Billing Information](Flows/SalesOrders/BillingAddress.md)
+  * [Blanket Customer](Flows/SalesOrders/POSOrders.md)
   * [Account Source](Flows/SalesOrders/AccountSource.md)
   * [Subsidiary](Flows/SalesOrders/Subsidiaries.md)
   * [Deparments](Flows/SalesOrders/DeparmentMapping.md)

@@ -1,16 +1,11 @@
 # POS Completed
-Orders that are created and fulfilled in Shopify POS as normal cash sales are imported into HotWax as completed orders. A scheduled process identifies all these orders and issues inventory against them to maintain an accurate inventory level for all retail locations. To identify these orders, these orders are imported with a special shipping method, “POS Completed”.
 
-To enable inventory issuance for these orders, please get in touch with the integrations team.
+## Blanket Customer
+When creating POS Cash Sales in store, high traffic can lead to customers not being registered against the sale. Though most of the time the staff will log the customer details right after entering the order, it's possible that the customer is not added at all. In this case the order is mapped to a blanket customer in HotWax. When posting this order to NetSuite, Krewe has a blanket customer that orders without customers should be mapped to.
 
-When these orders are posted to NetSuite they are posted as Cash Sales. They follow all the same order mapping rules as other orders, such as order type, channel etc.
-
-<details>
-
-<summary>Shipping Method for POS Completed Orders</summary>
+### How this is setup in HotWax
+The default customer will have a NetSuite party identification added to them that is the same type of identification as regular customers. By adding this default identification, the normal order sync with NetSuite works without modification.
 
 ```xml
-<ShipmentMethodType shipmentMethodTypeId="POS_COMPLETED" description="POS Completed"/>
-<CarrierShipmentMethod partyId="_NA_" roleTypeId="CARRIER" shipmentMethodTypeId="POS_COMPLETED" sequenceNumber="60" />
+add netsuite mapping data
 ```
-</details>
