@@ -53,7 +53,7 @@ Comprehensive historical job data is readily accessible for analysis and trouble
 
 
 
-### Job segmentation
+### Segmentation
 
 {% tabs %}
 {% tab title="Pending" %}
