@@ -167,7 +167,9 @@ https://<host>:<port>/api/v1/Document/Ordertoinvoice
 ```
 </details>
 
-**Mapping table**
+**Mapping tables**
+
+
 | Parameter      | Data Type   | Max Length | Required (Y/N) | Parent          | Description                                            |
 |-----------------|-------------|------------|----------------|------------------|--------------------------------------------------------|
 | InvoicingStore  | String      | 5          | Y              | Root             | Store Code where the Order is Billed                    |
@@ -202,3 +204,30 @@ https://<host>:<port>/api/v1/Document/Ordertoinvoice
 | Qty             | Float(10,4) |            | Y              | Item             | Quantity of the Product in the Order                   |
 | StoreOrig       | String      | 5          | Y              | Item             | Store code where the fulfillment of the Product is confirmed |
 | StoreDest       | String      | 5          | N              | Item             | Store code where the Product is delivered to the customer (if applicable for in-store delivery) |
+
+This table maps the `DeliveryType` values in the API JSON. The `Id` column represents the numeric identifier for each delivery option, and the `Description` column provides a human-readable description of each option.
+
+In the API JSON, the `DeliveryType` field should take one of these values based on the desired delivery method:
+
+- For "Delivery in store" (store pickup) set `DeliveryType` to `1`.
+- For "Delivery at Home" set `DeliveryType` to `2`.
+
+| Id   | Description        |
+|------|--------------------|
+| 1    | Delivery in store  |
+| 2    | Delivery at Home   |
+
+
+
+This table maps the `PaymentType` values in the API JSON. The `Id` column represents the numeric identifier for each payment option, and the `Description` column provides a human-readable description of each option.
+
+In the API JSON, the `PaymentType` field should take one of these values based on the desired payment method:
+
+- For "Credit/Debit Card," set `PaymentType` to `1`.
+- For "Cash on delivery," set `PaymentType` to `2`.
+
+So, when constructing the API JSON for an order, you would choose the appropriate `PaymentType` value based on the payment method associated with the order.
+| Id   | Description          |
+|------|----------------------|
+| 1    | Credit/Debit Card    |
+| 2    | Cash on delivery     |
