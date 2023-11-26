@@ -25,3 +25,8 @@ It is yet to be determined if this product should be included in the sync to Net
 | NetSuite          | Shopify ID       |
 |-------------------|------------------|
 | ROUTE-1818-RX     | 6955059413079    |
+
+## Reports
+
+### 1818 Allocation Pending
+Nashville POS unfulfilled orders are always allocated to 1818. The allocation pending report will show orders that are assigned to store 1818 but do not have sufficient inventory to begin fulfillment. Tracking orders and items on this report will help replenish inventory at the store to complete fulfillment.
