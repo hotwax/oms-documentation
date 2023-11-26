@@ -166,3 +166,40 @@ https://<host>:<port>/api/v1/Document/Ordertoinvoice
 }
 ```
 </details>
+
+**Mapping table**
+
+| Parameter      | Data Type   | Max Length | Required (Y/N) | Parent          | Description                                       |
+|-----------------|-------------|------------|----------------|------------------|---------------------------------------------------|
+| InvoicingStore  | String      | 5          | Y              | Root             | Store Code in which the Order is Billed           |
+| OrderNo         | String      | 9          | Y              | Root             | Order number in Shopify                           |
+| CreatedDate     | DateTime    |            | Y              | Root             | Order Creation Date in Shopify                    |
+| DeliveryType    | Short       | 3          | Y              | Root             | Delivery Type                                     |
+| PaymentType     | Short       | 3          | Y              | Root             | Payment type                                      |
+| TotalAmt        | Float(10,4) |            | Y              | Root             | Order Total Amount                                |
+| TotalDiscAmt    | Float(10,4) |            | N              | Root             | Total Order Discount Amount                       |
+| ShippingAmt     | Float(10,4) |            | N              | Root             | Total Amount Shipping                             |
+| FirstName       | String      | 30         | Y              | CustomerBilling  | Customer First Name for Billing                   |
+| LastName        | String      | 30         | Y              | CustomerBilling  | Customer Last Name for Billing                    |
+| Email           | String      | 60         | Y              | CustomerBilling  | Customer Email for Billing                        |
+| Address1        | String      | 40         | Y              | CustomerBilling  | Customer Address1 for Billing                     |
+| Address2        | String      | 40         | N              | CustomerBilling  | Customer Address2 for Billing                     |
+| City            | String      | 40         | N              | CustomerBilling  | Customer City for Billing                         |
+| Country         | String      | 40         | N              | CustomerBilling  | Customer Country for Billing                      |
+| NoDocument      | String      | 20         | Y              | CustomerBilling  | Customer Identity Document for Billing            |
+| FirstName       | String      | 30         | Y              | CustomerShipping | Customer First Name for Shipping                  |
+| LastName        | String      | 30         | Y              | CustomerShipping | Customer Last Name for Shipping                   |
+| Email           | String      | 60         | Y              | CustomerShipping | Customer Email for Shipping                       |
+| Address1        | String      | 40         | Y              | CustomerShipping | Customer Address1 for Shipping                    |
+| Address2        | String      | 40         | N              | CustomerShipping | Customer Address2 for Shipping                    |
+| City            | String      | 40         | N              | CustomerShipping | Customer City for Shipping                        |
+| Country         | String      | 40         | N              | CustomerShipping | Customer Country for Shipping                     |
+| NoDocument      | String      | 20         | Y              | CustomerShipping | Customer Identity Document for Shipping           |
+| UPC             | String      | 19         | Y              | Item             | Product SKU Code                                  |
+| OrigPrice       | Float(10,4) |            | Y              | Item             | Original Product Price                            |
+| OrigTax         | Float(10,4) |            | Y              | Item             | Original Product Tax                              |
+| Price           | Float(10,4) |            | Y              | Item             | Final Product Price (after subtracting discounts) |
+| Tax             | Float(10,4) |            | Y              | Item             | Final Product Tax (after subtracting discounts)   |
+| Qty             | Float(10,4) |            | Y              | Item             | Product Quantity                                  |
+| StoreOrig       | String      | 5          | Y              | Item             | Store code that confirmed the fulfillment         |
+| StoreDest       | String      | 5          | N              | Item             | Store code that Delivers products to the customer (only for delivery in-store) |
