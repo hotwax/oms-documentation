@@ -15,11 +15,18 @@ HotWax Commerce imports all orders from Shopify. During the import process, the 
 ### Order tag and notes jobs
 Add pre-order tags on orders
 ```
-add job details
+Add pre-order tags
+Remove pre-order tags
 ```
+
+```
+Add backorder tags
+Remove backorder tags
+```
+
 Add backorder tags on orders
 ```
-add job details
+Preorder catalog sync
 ```
 
 This system data is also required to populate the text in the tags on Shopify
@@ -28,9 +35,9 @@ This system data is also required to populate the text in the tags on Shopify
 <SystemProperty systemResourceId="ShopifyServiceConfig" systemPropertyId="shopify.backorder.tag" systemPropertyValue="hotwax_backorder"/> 
 ```
 
-Upload promise dates on new orders
+Upload promise dates on new orders only. This job does not sync updated promise dates if they change
 ```
-add job details
+Upload promise dates on new orders
 ```
 
 This system property data is required for all Shopify Configs where promise dates need to be added onto orders when they're created.
