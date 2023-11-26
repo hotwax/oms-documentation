@@ -2,6 +2,15 @@
 
 This document includes mappings and configurations related to the cycle count sync from HotWax to NetSuite
 
+## Reports
+
+### Pending Cycle Count
+Products that have not been counted at a facility where a cycle count has been performed recently. Inactive products, where inventory is 0 and has not been added or decremented for any reason in the last month, will not be counted in this report to ensure only active products are shown in the report.
+
+### Variance By Facility
+Track which facilities are reporting higher manual negative variances. The results are sorted by the facilities reporting the highest variances which is further broken down by the reasons reported for the variance.
+
+
 ## Default Mappings
 These are the default values that are sent to NetSuite unless a flow overrides them.
 | Variable Name               | Value                            |
