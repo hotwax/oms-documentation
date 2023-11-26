@@ -11,19 +11,20 @@ The three child catalog Shopify stores:
 
 Job to sync products on primary catalog
 ```
-to be added
+Import new products
+Import product updates
 ```
 
 Job to link catalog to child stores
 ```
-to be added
+Associate products with sub catalog
 ```
 
 ## Maintaining an accurate catalog in multiple catalogs
 
 New products are imported from Cariuma US 
-- Shopify config - SHOP
-- Job Manager - CARIUMA 
+- **Shopify config:** SHOP
+- **Shop name:** CARIUMA 
 
 
 All new products are then associated with the three child catalogs using a different job in HotWax Commerce. 
@@ -36,11 +37,11 @@ The first process is fairly automated
 2. Wait for at least 15 minutes to automatically sync the new product in HotWax Commerce.
 
 ```
-Job name
+Import new products
 ```
 3. Create products in other Shopify stores. Once the product from the master catalog is synced in HotWax Commerce, the product will be associated with the child catalogs.
 ```
-Job name
+Associate products with sub catalog
 ```
 
 The second flow allows users to take manual control over the process
@@ -56,5 +57,5 @@ You can now create the synced products in the child Shopify stores.
 
 After creating products in the child stores, sync them to the OMS
 ```
-Job name
+Associate products with sub catalog
 ```
