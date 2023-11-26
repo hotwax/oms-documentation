@@ -23,11 +23,9 @@ The variance file is created for all order items from partially completed orders
 
 **Sample variance file**
 
-| facilityId | idType | idValue | availableDelta | locationSeqId | varianceReasonId | comments|
-
-|-----------|--------|--------------|-----------------|---------------|--------------------------|-|
-
-| SVC21 | UPCA   | 2050000163913| -1.0  | TLTLTLLL01| VAR_INTEGR | Inventory Variance sent as part of Reset Inventory deduction for partially completed orders |
+| facilityId | idType | idValue       | availableDelta | locationSeqId | varianceReasonId | comments |
+|------------|--------|---------------|-----------------|----------------|------------------|----------|
+| SVC21      | UPCA   | 2050000163913 | -1.0            | TLTLTLLL01     | VAR_INTEGR       | Inventory Variance sent as part of Reset Inventory deduction for partially completed orders |
 
 This file is consumed after the reset file to ensure that the variances are not overridden by the reset file. It’s also important to ensure that this file is not consumed without the reset file before it, if the variance file is imported without the reset file then inventory will be deducted for partially completed orders even though the surplus inventory was not imported.
 <!-- need to find a simpler way to write this^ -->
