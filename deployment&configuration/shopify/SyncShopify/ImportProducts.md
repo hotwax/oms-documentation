@@ -128,18 +128,23 @@ In a multi-Shopify store setup, a streamlined process needs to be implemented fo
 
 **Primary Catalog Sync for intial configuration:**
 
-`Job Name: To be Added`
-   - Purpose: Synchronize products from Primary catalog to HotWax Commerce.
-   - Workflow:
-     - Create a product in the Primary Catalog Shopify store.
-     - Allow at least 15 minutes for automatic synchronization with HotWax Commerce.
+```
+Import new products
+Import product updates
+```
+- Purpose: Synchronize products from Primary catalog to HotWax Commerce.
+- Workflow:
+  - Create a product in the Primary Catalog Shopify store.
+  - Allow at least 15 minutes for automatic synchronization with HotWax Commerce.
 
 **Child Catalog Linking:**
 
-`Job Name: To be Added`
-   - Purpose: Link products in child catalogs to the primary catalog using SKUs/UPCs.
-   - Workflow:
-     - Associate products with the all child catalogs in HotWax Commerce.
+```
+Associate products with sub catalog
+```
+- Purpose: Link products in child catalogs to the primary catalog using SKUs/UPCs.
+- Workflow:
+  - Associate products with the all child catalogs in HotWax Commerce.
 
 
 This process ensures maintaining accuracy across multiple catalogs. Adjustments can be made for a generic document applicable to various setups.
