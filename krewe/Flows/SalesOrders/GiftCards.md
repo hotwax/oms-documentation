@@ -10,3 +10,9 @@ For all of these items, the integration layer will check the integration mapping
 | -------------- | --------------- |
 | Amount         | Unit List Price |
 | Price Level    | Custom          |
+
+
+**Product Type Mapping**
+```
+<ProductType description="Gift Card" hasTable="N" isDigital="Y" isPhysical="N" parentTypeId="DIGITAL_GOOD" productTypeId="GIFT_CARD"/>
+```
