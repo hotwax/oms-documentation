@@ -22,6 +22,7 @@
   * [Reference IDs](Flows/SalesOrders/ShopifyOrderName.md)
   * [Reports](Flows/SalesOrders/Reports.md)
 * [Brokering](Flows/Brokering/README.md)
+  * [Facilities](Flows/Brokering/Facilities.md)
   * [Reports](Flows/Brokering/Reports.md)
   * [Order Splitting](Flows/Brokering/OrderSplitting/README.md)
     * [Accessories](Flows/Brokering/OrderSplitting/Accessories.md)
