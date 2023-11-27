@@ -2,12 +2,18 @@
 
 In the daily operations of Retail Pro, numerous transactions occur, ranging from receiving purchase orders and processing returns to completing physical store sales. 
 Each of these transactions directly impacts the inventory numbers in Retail Pro. To address this dynamic environment, we've implemented two approaches to synchronize 
-inventory data from Retail Pro to HotWax Commerce.The first approach involves real-time adjustments for immediate accuracy. Whenever a sale happens in physical stores, 
+inventory data from Retail Pro to HotWax Commerce.
+
+The first approach involves real-time adjustments for immediate accuracy. Whenever a sale happens in physical stores, 
 inventory numbers are dynamically adjusted in HotWax Commerce specifically for the location where the sale occurred. This real-time adjustment not only ensures the accuracy 
 of inventory records in HotWax Commerce but also facilitates the precise transfer of inventory information downstream, particularly to eCommerce platforms.
+
 The second approach introduces a daily early morning synchronization process. Scheduled to occur daily, this synchronization process resets inventory numbers 
 in HotWax Commerce, aligning them with the current state in Retail Pro. This comprehensive synchronization covers the entire inventory and accommodates transactions such as 
-receiving purchase orders, transfer orders, and returns.The combination of these two approaches is crucial for maintaining consistency. While real-time adjustments handle immediate 
+receiving purchase orders, transfer orders, and returns.
+
+
+The combination of these two approaches is crucial for maintaining consistency. While real-time adjustments handle immediate 
 changes in inventory occurring due to in-store sales, the daily synchronization addresses a broader scope, ensuring that inventory numbers in both Retail Pro and HotWax Commerce 
 remain in sync. This comprehensive strategy prevents discrepancies and provides a robust solution for managing inventory synchronization effectively
 
