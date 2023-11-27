@@ -29,25 +29,26 @@
 <summary>NetSuite Order Type Mapping</summary>
 
 ```xml
-<FacilityIdentification facilityId="254" facilityIdenTypeId="NETSUITE_ORDR_TYPE" idValue="6"/>
-<FacilityIdentification facilityId="114" facilityIdenTypeId="NETSUITE_ORDR_TYPE" idValue="1"/>
-<FacilityIdentification facilityId="372" facilityIdenTypeId="NETSUITE_ORDR_TYPE" idValue="6"/>
-<FacilityIdentification facilityId="376" facilityIdenTypeId="NETSUITE_ORDR_TYPE" idValue="6"/>
-<FacilityIdentification facilityId="420" facilityIdenTypeId="NETSUITE_ORDR_TYPE" idValue="6"/>
-<FacilityIdentification facilityId="331" facilityIdenTypeId="NETSUITE_ORDR_TYPE" idValue="6"/>
-<FacilityIdentification facilityId="288" facilityIdenTypeId="NETSUITE_ORDR_TYPE" idValue="6"/>
-<FacilityIdentification facilityId="358" facilityIdenTypeId="NETSUITE_ORDR_TYPE" idValue="6"/>
-<FacilityIdentification facilityId="318" facilityIdenTypeId="NETSUITE_ORDR_TYPE" idValue="6"/>
-<FacilityIdentification facilityId="334" facilityIdenTypeId="NETSUITE_ORDR_TYPE" idValue="6"/>
-<FacilityIdentification facilityId="421" facilityIdenTypeId="NETSUITE_ORDR_TYPE" idValue="152"/>
-<FacilityIdentification facilityId="330" facilityIdenTypeId="NETSUITE_ORDR_TYPE" idValue="6"/>
-<FacilityIdentification facilityId="422" facilityIdenTypeId="NETSUITE_ORDR_TYPE" idValue="152"/>
-<FacilityIdentification facilityId="336" facilityIdenTypeId="NETSUITE_ORDR_TYPE" idValue="6"/>
-<FacilityIdentification facilityId="319" facilityIdenTypeId="NETSUITE_ORDR_TYPE" idValue="6"/>
-<FacilityIdentification facilityId="370" facilityIdenTypeId="NETSUITE_ORDR_TYPE" idValue="6"/>
-<FacilityIdentification facilityId="348" facilityIdenTypeId="NETSUITE_ORDR_TYPE" idValue="6"/>
-<FacilityIdentification facilityId="383" facilityIdenTypeId="NETSUITE_ORDR_TYPE" idValue="6"/>
-<FacilityIdentification facilityId="405" facilityIdenTypeId="NETSUITE_ORDR_TYPE" idValue="6"/>
+<FacilityIdentification facilityId="254" facilityIdenTypeId="NETSUITE_ORDR_TYPE" fromDate="2023-11-27 05:31:34.056" idValue="6"/>
+<FacilityIdentification facilityId="254" facilityIdenTypeId="NETSUITE_ORDR_TYPE" fromDate="2023-11-27 05:31:34.056" idValue="6"/>
+<FacilityIdentification facilityId="114" facilityIdenTypeId="NETSUITE_ORDR_TYPE" fromDate="2023-11-27 05:31:34.056" idValue="1"/>
+<FacilityIdentification facilityId="372" facilityIdenTypeId="NETSUITE_ORDR_TYPE" fromDate="2023-11-27 05:31:34.056" idValue="6"/>
+<FacilityIdentification facilityId="376" facilityIdenTypeId="NETSUITE_ORDR_TYPE" fromDate="2023-11-27 05:31:34.056" idValue="6"/>
+<FacilityIdentification facilityId="420" facilityIdenTypeId="NETSUITE_ORDR_TYPE" fromDate="2023-11-27 05:31:34.056" idValue="6"/>
+<FacilityIdentification facilityId="331" facilityIdenTypeId="NETSUITE_ORDR_TYPE" fromDate="2023-11-27 05:31:34.056" idValue="6"/>
+<FacilityIdentification facilityId="288" facilityIdenTypeId="NETSUITE_ORDR_TYPE" fromDate="2023-11-27 05:31:34.056" idValue="6"/>
+<FacilityIdentification facilityId="358" facilityIdenTypeId="NETSUITE_ORDR_TYPE" fromDate="2023-11-27 05:31:34.056" idValue="6"/>
+<FacilityIdentification facilityId="318" facilityIdenTypeId="NETSUITE_ORDR_TYPE" fromDate="2023-11-27 05:31:34.056" idValue="6"/>
+<FacilityIdentification facilityId="334" facilityIdenTypeId="NETSUITE_ORDR_TYPE" fromDate="2023-11-27 05:31:34.056" idValue="6"/>
+<FacilityIdentification facilityId="421" facilityIdenTypeId="NETSUITE_ORDR_TYPE" fromDate="2023-11-27 05:31:34.056" idValue="152"/>
+<FacilityIdentification facilityId="330" facilityIdenTypeId="NETSUITE_ORDR_TYPE" fromDate="2023-11-27 05:31:34.056" idValue="6"/>
+<FacilityIdentification facilityId="422" facilityIdenTypeId="NETSUITE_ORDR_TYPE" fromDate="2023-11-27 05:31:34.056" idValue="152"/>
+<FacilityIdentification facilityId="336" facilityIdenTypeId="NETSUITE_ORDR_TYPE" fromDate="2023-11-27 05:31:34.056" idValue="6"/>
+<FacilityIdentification facilityId="319" facilityIdenTypeId="NETSUITE_ORDR_TYPE" fromDate="2023-11-27 05:31:34.056" idValue="6"/>
+<FacilityIdentification facilityId="370" facilityIdenTypeId="NETSUITE_ORDR_TYPE" fromDate="2023-11-27 05:31:34.056" idValue="6"/>
+<FacilityIdentification facilityId="348" facilityIdenTypeId="NETSUITE_ORDR_TYPE" fromDate="2023-11-27 05:31:34.056" idValue="6"/>
+<FacilityIdentification facilityId="383" facilityIdenTypeId="NETSUITE_ORDR_TYPE" fromDate="2023-11-27 05:31:34.056" idValue="6"/>
+<FacilityIdentification facilityId="405" facilityIdenTypeId="NETSUITE_ORDR_TYPE" fromDate="2023-11-27 05:31:34.056" idValue="6"/>
 ```
 </details>
 
@@ -55,25 +56,25 @@
 <summary>NetSuite Channel Mapping</summary>
 
 ```xml
-<FacilityIdentification facilityId="254" facilityIdenTypeId="ORDR_ORGN_SLS_CHNL" idValue="12"/>
-<FacilityIdentification facilityId="114" facilityIdenTypeId="ORDR_ORGN_SLS_CHNL" idValue="1"/>
-<FacilityIdentification facilityId="372" facilityIdenTypeId="ORDR_ORGN_SLS_CHNL" idValue="156"/>
-<FacilityIdentification facilityId="376" facilityIdenTypeId="ORDR_ORGN_SLS_CHNL" idValue="144"/>
-<FacilityIdentification facilityId="420" facilityIdenTypeId="ORDR_ORGN_SLS_CHNL" idValue="187"/>
-<FacilityIdentification facilityId="331" facilityIdenTypeId="ORDR_ORGN_SLS_CHNL" idValue="104"/>
-<FacilityIdentification facilityId="288" facilityIdenTypeId="ORDR_ORGN_SLS_CHNL" idValue="65"/>
-<FacilityIdentification facilityId="358" facilityIdenTypeId="ORDR_ORGN_SLS_CHNL" idValue="45"/>
-<FacilityIdentification facilityId="318" facilityIdenTypeId="ORDR_ORGN_SLS_CHNL" idValue="94"/>
-<FacilityIdentification facilityId="334" facilityIdenTypeId="ORDR_ORGN_SLS_CHNL" idValue="112"/>
-<FacilityIdentification facilityId="421" facilityIdenTypeId="ORDR_ORGN_SLS_CHNL" idValue="188"/>
-<FacilityIdentification facilityId="330" facilityIdenTypeId="ORDR_ORGN_SLS_CHNL" idValue="171"/>
-<FacilityIdentification facilityId="422" facilityIdenTypeId="ORDR_ORGN_SLS_CHNL" idValue="189"/>
-<FacilityIdentification facilityId="336" facilityIdenTypeId="ORDR_ORGN_SLS_CHNL" idValue="110"/>
-<FacilityIdentification facilityId="319" facilityIdenTypeId="ORDR_ORGN_SLS_CHNL" idValue="43"/>
-<FacilityIdentification facilityId="370" facilityIdenTypeId="ORDR_ORGN_SLS_CHNL" idValue="155"/>
-<FacilityIdentification facilityId="348" facilityIdenTypeId="ORDR_ORGN_SLS_CHNL" idValue="128"/>
-<FacilityIdentification facilityId="383" facilityIdenTypeId="ORDR_ORGN_SLS_CHNL" idValue="166"/>
-<FacilityIdentification facilityId="405" facilityIdenTypeId="ORDR_ORGN_SLS_CHNL" idValue="181"/>
+<FacilityIdentification facilityId="254" facilityIdenTypeId="ORDR_ORGN_SLS_CHNL" fromDate="2023-11-27 05:31:34.056" idValue="12"/>
+<FacilityIdentification facilityId="114" facilityIdenTypeId="ORDR_ORGN_SLS_CHNL" fromDate="2023-11-27 05:31:34.056" idValue="1"/>
+<FacilityIdentification facilityId="372" facilityIdenTypeId="ORDR_ORGN_SLS_CHNL" fromDate="2023-11-27 05:31:34.056" idValue="156"/>
+<FacilityIdentification facilityId="376" facilityIdenTypeId="ORDR_ORGN_SLS_CHNL" fromDate="2023-11-27 05:31:34.056" idValue="144"/>
+<FacilityIdentification facilityId="420" facilityIdenTypeId="ORDR_ORGN_SLS_CHNL" fromDate="2023-11-27 05:31:34.056" idValue="187"/>
+<FacilityIdentification facilityId="331" facilityIdenTypeId="ORDR_ORGN_SLS_CHNL" fromDate="2023-11-27 05:31:34.056" idValue="104"/>
+<FacilityIdentification facilityId="288" facilityIdenTypeId="ORDR_ORGN_SLS_CHNL" fromDate="2023-11-27 05:31:34.056" idValue="65"/>
+<FacilityIdentification facilityId="358" facilityIdenTypeId="ORDR_ORGN_SLS_CHNL" fromDate="2023-11-27 05:31:34.056" idValue="45"/>
+<FacilityIdentification facilityId="318" facilityIdenTypeId="ORDR_ORGN_SLS_CHNL" fromDate="2023-11-27 05:31:34.056" idValue="94"/>
+<FacilityIdentification facilityId="334" facilityIdenTypeId="ORDR_ORGN_SLS_CHNL" fromDate="2023-11-27 05:31:34.056" idValue="112"/>
+<FacilityIdentification facilityId="421" facilityIdenTypeId="ORDR_ORGN_SLS_CHNL" fromDate="2023-11-27 05:31:34.056" idValue="188"/>
+<FacilityIdentification facilityId="330" facilityIdenTypeId="ORDR_ORGN_SLS_CHNL" fromDate="2023-11-27 05:31:34.056" idValue="171"/>
+<FacilityIdentification facilityId="422" facilityIdenTypeId="ORDR_ORGN_SLS_CHNL" fromDate="2023-11-27 05:31:34.056" idValue="189"/>
+<FacilityIdentification facilityId="336" facilityIdenTypeId="ORDR_ORGN_SLS_CHNL" fromDate="2023-11-27 05:31:34.056" idValue="110"/>
+<FacilityIdentification facilityId="319" facilityIdenTypeId="ORDR_ORGN_SLS_CHNL" fromDate="2023-11-27 05:31:34.056" idValue="43"/>
+<FacilityIdentification facilityId="370" facilityIdenTypeId="ORDR_ORGN_SLS_CHNL" fromDate="2023-11-27 05:31:34.056" idValue="155"/>
+<FacilityIdentification facilityId="348" facilityIdenTypeId="ORDR_ORGN_SLS_CHNL" fromDate="2023-11-27 05:31:34.056" idValue="128"/>
+<FacilityIdentification facilityId="383" facilityIdenTypeId="ORDR_ORGN_SLS_CHNL" fromDate="2023-11-27 05:31:34.056" idValue="166"/>
+<FacilityIdentification facilityId="405" facilityIdenTypeId="ORDR_ORGN_SLS_CHNL" fromDate="2023-11-27 05:31:34.056" idValue="181"/>
 ```
 </details>
 
@@ -81,24 +82,24 @@
 <summary>NetSuite Deparment Mapping</summary>
 
 ```xml
-<FacilityIdentification facilityId="254" facilityIdenTypeId="ORDR_ORGN_DPT" idValue="212"/>
-<FacilityIdentification facilityId="114" facilityIdenTypeId="ORDR_ORGN_DPT" idValue="203"/>
-<FacilityIdentification facilityId="372" facilityIdenTypeId="ORDR_ORGN_DPT" idValue="317"/>
-<FacilityIdentification facilityId="376" facilityIdenTypeId="ORDR_ORGN_DPT" idValue="335"/>
-<FacilityIdentification facilityId="420" facilityIdenTypeId="ORDR_ORGN_DPT" idValue="398"/>
-<FacilityIdentification facilityId="331" facilityIdenTypeId="ORDR_ORGN_DPT" idValue="313"/>
-<FacilityIdentification facilityId="288" facilityIdenTypeId="ORDR_ORGN_DPT" idValue="260"/>
-<FacilityIdentification facilityId="358" facilityIdenTypeId="ORDR_ORGN_DPT" idValue="241"/>
-<FacilityIdentification facilityId="318" facilityIdenTypeId="ORDR_ORGN_DPT" idValue="294"/>
-<FacilityIdentification facilityId="334" facilityIdenTypeId="ORDR_ORGN_DPT" idValue="322"/>
-<FacilityIdentification facilityId="421" facilityIdenTypeId="ORDR_ORGN_DPT" idValue="399"/>
-<FacilityIdentification facilityId="330" facilityIdenTypeId="ORDR_ORGN_DPT" idValue="378"/>
-<FacilityIdentification facilityId="422" facilityIdenTypeId="ORDR_ORGN_DPT" idValue="400"/>
-<FacilityIdentification facilityId="336" facilityIdenTypeId="ORDR_ORGN_DPT" idValue="320"/>
-<FacilityIdentification facilityId="319" facilityIdenTypeId="ORDR_ORGN_DPT" idValue="295"/>
-<FacilityIdentification facilityId="370" facilityIdenTypeId="ORDR_ORGN_DPT" idValue="364"/>
-<FacilityIdentification facilityId="348" facilityIdenTypeId="ORDR_ORGN_DPT" idValue="325"/>
-<FacilityIdentification facilityId="383" facilityIdenTypeId="ORDR_ORGN_DPT" idValue="373"/>
-<FacilityIdentification facilityId="405" facilityIdenTypeId="ORDR_ORGN_DPT" idValue="392"/>
+<FacilityIdentification facilityId="254" facilityIdenTypeId="ORDR_ORGN_DPT" fromDate="2023-11-27 05:31:34.056" idValue="212"/>
+<FacilityIdentification facilityId="114" facilityIdenTypeId="ORDR_ORGN_DPT" fromDate="2023-11-27 05:31:34.056" idValue="203"/>
+<FacilityIdentification facilityId="372" facilityIdenTypeId="ORDR_ORGN_DPT" fromDate="2023-11-27 05:31:34.056" idValue="317"/>
+<FacilityIdentification facilityId="376" facilityIdenTypeId="ORDR_ORGN_DPT" fromDate="2023-11-27 05:31:34.056" idValue="335"/>
+<FacilityIdentification facilityId="420" facilityIdenTypeId="ORDR_ORGN_DPT" fromDate="2023-11-27 05:31:34.056" idValue="398"/>
+<FacilityIdentification facilityId="331" facilityIdenTypeId="ORDR_ORGN_DPT" fromDate="2023-11-27 05:31:34.056" idValue="313"/>
+<FacilityIdentification facilityId="288" facilityIdenTypeId="ORDR_ORGN_DPT" fromDate="2023-11-27 05:31:34.056" idValue="260"/>
+<FacilityIdentification facilityId="358" facilityIdenTypeId="ORDR_ORGN_DPT" fromDate="2023-11-27 05:31:34.056" idValue="241"/>
+<FacilityIdentification facilityId="318" facilityIdenTypeId="ORDR_ORGN_DPT" fromDate="2023-11-27 05:31:34.056" idValue="294"/>
+<FacilityIdentification facilityId="334" facilityIdenTypeId="ORDR_ORGN_DPT" fromDate="2023-11-27 05:31:34.056" idValue="322"/>
+<FacilityIdentification facilityId="421" facilityIdenTypeId="ORDR_ORGN_DPT" fromDate="2023-11-27 05:31:34.056" idValue="399"/>
+<FacilityIdentification facilityId="330" facilityIdenTypeId="ORDR_ORGN_DPT" fromDate="2023-11-27 05:31:34.056" idValue="378"/>
+<FacilityIdentification facilityId="422" facilityIdenTypeId="ORDR_ORGN_DPT" fromDate="2023-11-27 05:31:34.056" idValue="400"/>
+<FacilityIdentification facilityId="336" facilityIdenTypeId="ORDR_ORGN_DPT" fromDate="2023-11-27 05:31:34.056" idValue="320"/>
+<FacilityIdentification facilityId="319" facilityIdenTypeId="ORDR_ORGN_DPT" fromDate="2023-11-27 05:31:34.056" idValue="295"/>
+<FacilityIdentification facilityId="370" facilityIdenTypeId="ORDR_ORGN_DPT" fromDate="2023-11-27 05:31:34.056" idValue="364"/>
+<FacilityIdentification facilityId="348" facilityIdenTypeId="ORDR_ORGN_DPT" fromDate="2023-11-27 05:31:34.056" idValue="325"/>
+<FacilityIdentification facilityId="383" facilityIdenTypeId="ORDR_ORGN_DPT" fromDate="2023-11-27 05:31:34.056" idValue="373"/>
+<FacilityIdentification facilityId="405" facilityIdenTypeId="ORDR_ORGN_DPT" fromDate="2023-11-27 05:31:34.056" idValue="392"/>
 ```
 </details>
