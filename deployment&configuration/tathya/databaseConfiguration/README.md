@@ -4,6 +4,8 @@ Tathya is a data exploration and visualization platform that lets users connect 
 
 Tathya itself doesn't have a storage layer to store your data but instead pairs with your existing SQL-speaking database or data store. So, to be able to query and visualize data from Tathya, you first need to add the connection credentials of your database.
 
+Note: Skip this step if you want to create charts for a project that has a pre-configured database.
+
 ## Setup your database
 Login into Tathya with your credentials, now on the homepage go to the top right corner, go to settings and click on the "Data" menu to access the data source configuration.
 
@@ -31,7 +33,7 @@ The “database name” is the name of the specific MySQL database you want to c
 ### Username and Password
 The “username and password” are associated with the account you want to use for the connection.
 
-### Display Name:
+### Display Name
 The “display name” is how the database will display in Tathya.
 
 Note: Choose a descriptive name for the connection. For example, if a project were named Wasatch Ski, the display name should be “Wasatch Ski OMS”

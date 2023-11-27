@@ -16,6 +16,14 @@ In the event that the code is not available in NetSuite, HotWax will use a defau
 
 To check promo codes in NetSuite, HotWax syncs promo codes from NetSuite once a day.
 
+Create Enumeration data before creating IntegrationTypeMapping
+```
+<Enumeration description="Discount codes mapping between HotWax and Netsuite" enumId="NETSUITE_DISC_MTHD" enumName="Netsuite Discount Codes" enumTypeId="NETSUITE" sequenceId="1"/>
+
+<IntegrationTypeMapping integrationTypeId="NETSUITE_DISC_MTHD" mappingKey="SHOPIFY_DISC" mappingValue="{NetSuite Discount Name}"/>
+<IntegrationTypeMapping integrationTypeId="NETSUITE_DISC_MTHD" mappingKey="SHOPIFY_ITEM_DISC" mappingValue="{NetSuite Discount Item Internal ID}"/>
+```
+
 ### Export Current Promo Codes from NetSuite
 Schedule this SuiteScript to export current promo codes in NetSuite that need to be synced to HotWax
 ```
@@ -61,11 +69,3 @@ This ID of this product in NetSuite needs to be entered into the integration lay
   
 ### Create data for Integration Type Mapping entity
 Create this data to map the generic Netsuite discount values in HotWax. This universal value will serve as a fallback when the discount code provided in the Shopify order JSON is not found in Netsuite.
-
-Create Enumeration data before creating IntegrationTypeMapping data.
-```
-<Enumeration description="Discount codes mapping between HotWax and Netsuite" enumId="NETSUITE_DISC_MTHD" enumName="Netsuite Discount Codes" enumTypeId="NETSUITE" sequenceId="1"/>
-
-<IntegrationTypeMapping integrationTypeId="NETSUITE_DISC_MTHD" mappingKey="SHOPIFY_DISC" mappingValue="{NetSuite Discount Name}"/>
-<IntegrationTypeMapping integrationTypeId="NETSUITE_DISC_MTHD" mappingKey="SHOPIFY_ITEM_DISC" mappingValue="{NetSuite Discount Item Internal ID}"/>
-```
