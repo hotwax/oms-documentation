@@ -6,13 +6,13 @@ It's important to remember that if items are not allocated to a "NetSuite Facili
 
 **Actions**
 
-A job in HotWax Commerce generates a JSON file containing order line items and their respective fulfillment locations.
+A job in HotWax Commerce generates a CSV file containing order line items and their respective fulfillment locations.
 
 **SFTP Location**
 ```
 /home/{sftp-username}/netsuite/salesorder/update
 ```
-A SuiteScript in Netsuite reads the JSON file and updates fulfillment locations in sales orders by using the N/Record module. 
+A SuiteScript in Netsuite reads the CSV file and updates fulfillment locations in sales orders by using the task.CsvImportTask  of N/task module. 
 
 **SuiteScripts**
 
