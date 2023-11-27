@@ -10,3 +10,9 @@ For all of these items, the integration layer will check the integration mapping
 | -------------- | --------------- |
 | Amount         | Unit List Price |
 | Price Level    | Custom          |
+
+**NetSuite mapping**
+
+```
+<IntegrationTypeMapping integrationTypeId="NETSUITE_GIFT_CARD” mappingKey="GIFT_CARD" mappingValue="3115" description="Gift Card"/>
+```
