@@ -6,3 +6,5 @@
   * [Job queueing](job-management/job-queueing.md)
   * [Initial load](job-management/initial-load.md)
   * [Bulk Scheduling](job-management/bulk-scheduling.md)
+* [Users](users/README.md)
+  * [Create Users](users/createUser.md)
