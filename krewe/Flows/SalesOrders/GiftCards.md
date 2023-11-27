@@ -20,7 +20,7 @@ For all of these items, the integration layer will check the integration mapping
 **NetSuite mapping**
 
 ```
-<Enumeration description="Blanket Gift Card SKU in NetSuite" enumId="NETSUITE_GIFT_CARD”" enumName="Netsuite Gift Card" enumTypeId="NETSUITE" sequenceId="1"/>
+<Enumeration description="Blanket Gift Card SKU in NetSuite" enumId="NETSUITE_GIFT_CARD" enumName="Netsuite Gift Card" enumTypeId="NETSUITE" sequenceId="1"/>
 
-<IntegrationTypeMapping integrationTypeId="NETSUITE_GIFT_CARD” mappingKey="GIFT_CARD" mappingValue="3115" description="Gift Card"/>
+<IntegrationTypeMapping integrationTypeId="NETSUITE_GIFT_CARD" mappingKey="GIFT_CARD" mappingValue="3115" description="Gift Card"/>
 ```
