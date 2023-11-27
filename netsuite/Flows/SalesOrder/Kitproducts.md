@@ -22,12 +22,12 @@ NetSuite calculates the inventory of a bundle by computing the lowest available 
 
 **Post-Inventory Computation Handling**
 
-After NetSuite's inventory calculation for bundles, NetSuite synchronizes the inventory of the bundles to HotWax Commerce like [other products’ inventory](https://docs.hotwax.co/integration-resources-1/v/NetSuite-integration/supported-integrations/inventory).
+After NetSuite's inventory calculation for bundles, NetSuite synchronizes the inventory of the bundles to HotWax Commerce like [other products’ inventory](../inventory.md)
 
 ## Order Synchronization of bundles from HotWax Commerce to NetSuite
 
-When [syncing an order](https://docs.hotwax.co/integration-resources-1/v/NetSuite-integration/supported-integrations/salesorder/orderallocation) containing a bundle to NetSuite, only the bundle's product ID is sent. NetSuite does not require bundle component details as retailers already have bundle-component associations set up within NetSuite to simplify the import process.
+When [syncing an order](./OrderAllocation.md) containing a bundle to NetSuite, only the bundle's product ID is sent. NetSuite does not require bundle component details as retailers already have bundle-component associations set up within NetSuite to simplify the import process.
 
 ## Bundle Order Fulfillment Updates from NetSuite to HotWax Commerce
 
-When the bundle is [fulfilled from a location in NetSuite](https://docs.hotwax.co/integration-resources-1/v/NetSuite-integration/supported-integrations/salesorder/fulfillment), HotWax Commerce receives the bundle's ID in the fulfilled order feed from NetSuite. Processing this information, HotWax Commerce marks both the bundle and its components as fulfilled, ensuring accurate fulfillment status within the eCommerce system.
+When the bundle is [fulfilled from a location in NetSuite](./Fulfillment.md), HotWax Commerce receives the bundle's ID in the fulfilled order feed from NetSuite. Processing this information, HotWax Commerce marks both the bundle and its components as fulfilled, ensuring accurate fulfillment status within the eCommerce system.
