@@ -72,7 +72,7 @@ This way you can set a limit on the maximum number of rows to be displayed in th
 
 In your SQL queries, you can write specific details and conditions to retrieve data that matches your requirements without the need for additional filters in the chart.
 
-For example, you can use the WHERE clause in your SQL queries to filter data at the database level before it even reaches Tathaya. This can be more efficient as it reduces the amount of data transferred between the database and Tathya.
+For example, you can use the WHERE clause in your SQL queries to filter data at the database level before it even reaches Tathya. This can be more efficient as it reduces the amount of data transferred between the database and Tathya.
 
 Similarly, you can use ORDER BY in your SQL queries to specify the sorting order of the results, and LIMIT to control the number of rows returned.
 
