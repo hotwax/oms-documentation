@@ -79,6 +79,7 @@
 <FacilityIdentification facilityId="348" facilityIdenTypeId="ORDR_ORGN_SLS_CHNL" idValue="128"/>
 <FacilityIdentification facilityId="383" facilityIdenTypeId="ORDR_ORGN_SLS_CHNL" idValue="166"/>
 <FacilityIdentification facilityId="405" facilityIdenTypeId="ORDR_ORGN_SLS_CHNL" idValue="181"/>
+```
 </details>
 
 <details>
