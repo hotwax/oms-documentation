@@ -31,7 +31,7 @@
 ```xml
 <FacilityIdentification facilityId="254" facilityIdenTypeId="NETSUITE_ORDR_TYPE" fromDate="2023-11-27 05:31:34.056" idValue="6"/>
 <FacilityIdentification facilityId="254" facilityIdenTypeId="NETSUITE_ORDR_TYPE" fromDate="2023-11-27 05:31:34.056" idValue="6"/>
-<FacilityIdentification facilityId="114" facilityIdenTypeId="NETSUITE_ORDR_TYPE" fromDate="2023-11-27 05:31:34.056" idValue="1"/>
+<FacilityIdentification facilityId="WH" facilityIdenTypeId="NETSUITE_ORDR_TYPE" fromDate="2023-11-27 05:31:34.056" idValue="1"/>
 <FacilityIdentification facilityId="372" facilityIdenTypeId="NETSUITE_ORDR_TYPE" fromDate="2023-11-27 05:31:34.056" idValue="6"/>
 <FacilityIdentification facilityId="376" facilityIdenTypeId="NETSUITE_ORDR_TYPE" fromDate="2023-11-27 05:31:34.056" idValue="6"/>
 <FacilityIdentification facilityId="420" facilityIdenTypeId="NETSUITE_ORDR_TYPE" fromDate="2023-11-27 05:31:34.056" idValue="6"/>
@@ -57,7 +57,7 @@
 
 ```xml
 <FacilityIdentification facilityId="254" facilityIdenTypeId="ORDR_ORGN_SLS_CHNL" fromDate="2023-11-27 05:31:34.056" idValue="12"/>
-<FacilityIdentification facilityId="114" facilityIdenTypeId="ORDR_ORGN_SLS_CHNL" fromDate="2023-11-27 05:31:34.056" idValue="1"/>
+<FacilityIdentification facilityId="WH" facilityIdenTypeId="ORDR_ORGN_SLS_CHNL" fromDate="2023-11-27 05:31:34.056" idValue="1"/>
 <FacilityIdentification facilityId="372" facilityIdenTypeId="ORDR_ORGN_SLS_CHNL" fromDate="2023-11-27 05:31:34.056" idValue="156"/>
 <FacilityIdentification facilityId="376" facilityIdenTypeId="ORDR_ORGN_SLS_CHNL" fromDate="2023-11-27 05:31:34.056" idValue="144"/>
 <FacilityIdentification facilityId="420" facilityIdenTypeId="ORDR_ORGN_SLS_CHNL" fromDate="2023-11-27 05:31:34.056" idValue="187"/>
@@ -83,7 +83,7 @@
 
 ```xml
 <FacilityIdentification facilityId="254" facilityIdenTypeId="ORDR_ORGN_DPT" fromDate="2023-11-27 05:31:34.056" idValue="212"/>
-<FacilityIdentification facilityId="114" facilityIdenTypeId="ORDR_ORGN_DPT" fromDate="2023-11-27 05:31:34.056" idValue="203"/>
+<FacilityIdentification facilityId="WH" facilityIdenTypeId="ORDR_ORGN_DPT" fromDate="2023-11-27 05:31:34.056" idValue="203"/>
 <FacilityIdentification facilityId="372" facilityIdenTypeId="ORDR_ORGN_DPT" fromDate="2023-11-27 05:31:34.056" idValue="317"/>
 <FacilityIdentification facilityId="376" facilityIdenTypeId="ORDR_ORGN_DPT" fromDate="2023-11-27 05:31:34.056" idValue="335"/>
 <FacilityIdentification facilityId="420" facilityIdenTypeId="ORDR_ORGN_DPT" fromDate="2023-11-27 05:31:34.056" idValue="398"/>
