@@ -2,6 +2,8 @@
 
 <details>
 <summary>Shopify Location Mapping</summary>
+
+```xml
 <ShopifyShopLocation facilityId="62778277975" shopId="SHOP" shopifyLocationId="415"/>
 <ShopifyShopLocation facilityId="2562064413" shopId="SHOP" shopifyLocationId="114"/>
 <ShopifyShopLocation facilityId="30696177751" shopId="SHOP" shopifyLocationId="254"/>
@@ -25,10 +27,12 @@
 <ShopifyShopLocation facilityId="61327048791" shopId="SHOP" shopifyLocationId="348"/>
 <ShopifyShopLocation facilityId="62739513431" shopId="SHOP" shopifyLocationId="383"/>
 <ShopifyShopLocation facilityId="62778048599" shopId="SHOP" shopifyLocationId="405"/>
+```
 </details>
 
 <details>
 <summary>NetSuite Order Type Mapping</summary>
+```xml
 <FacilityIdentification facilityId="254" facilityIdenTypeId="NETSUITE_ORDR_TYPE" idValue="6"/>
 <FacilityIdentification facilityId="114" facilityIdenTypeId="NETSUITE_ORDR_TYPE" idValue="1"/>
 <FacilityIdentification facilityId="372" facilityIdenTypeId="NETSUITE_ORDR_TYPE" idValue="6"/>
@@ -48,10 +52,13 @@
 <FacilityIdentification facilityId="348" facilityIdenTypeId="NETSUITE_ORDR_TYPE" idValue="6"/>
 <FacilityIdentification facilityId="383" facilityIdenTypeId="NETSUITE_ORDR_TYPE" idValue="6"/>
 <FacilityIdentification facilityId="405" facilityIdenTypeId="NETSUITE_ORDR_TYPE" idValue="6"/>
+```
 </details>
 
 <details>
 <summary>NetSuite Channel Mapping</summary>
+
+```xml
 <FacilityIdentification facilityId="254" facilityIdenTypeId="ORDR_ORGN_SLS_CHNL" idValue="12"/>
 <FacilityIdentification facilityId="114" facilityIdenTypeId="ORDR_ORGN_SLS_CHNL" idValue="1"/>
 <FacilityIdentification facilityId="372" facilityIdenTypeId="ORDR_ORGN_SLS_CHNL" idValue="156"/>
@@ -75,6 +82,8 @@
 
 <details>
 <summary>NetSuite Deparment Mapping</summary>
+
+```xml
 <FacilityIdentification facilityId="254" facilityIdenTypeId="ORDR_ORGN_DPT" idValue="212"/>
 <FacilityIdentification facilityId="114" facilityIdenTypeId="ORDR_ORGN_DPT" idValue="203"/>
 <FacilityIdentification facilityId="372" facilityIdenTypeId="ORDR_ORGN_DPT" idValue="317"/>
@@ -94,4 +103,5 @@
 <FacilityIdentification facilityId="348" facilityIdenTypeId="ORDR_ORGN_DPT" idValue="325"/>
 <FacilityIdentification facilityId="383" facilityIdenTypeId="ORDR_ORGN_DPT" idValue="373"/>
 <FacilityIdentification facilityId="405" facilityIdenTypeId="ORDR_ORGN_DPT" idValue="392"/>
+```
 </details>
