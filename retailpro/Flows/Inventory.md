@@ -116,8 +116,7 @@ Let's delve into the intricacies of the "Partially Shipped Orders" challenge thr
 
 - Retail Pro is unaware of the partial fulfillment in HC, sends an Inventory Reset file the next morning at 7:00 AM. The file includes counts of 10 for SKU A and SKU B across both New York and Nashville, not accounting for the partial fulfillment. This file also represents the new inventory for SKU C at each location.
 
-Inventory Reset File:
-
+    Inventory Reset File:
 
     | SKU/Location | New York | Nashville |
     |--------------|----------|-----------|
