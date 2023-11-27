@@ -59,6 +59,7 @@ In case a payment method in Shopify and HotWax is not mapped to a payment method
 <summary>Integration Mapping Data</summary>
 
 ```xml
+<IntegrationTypeMapping integrationTypeId="NETSUITE_GIFT_CARD” mappingKey="GIFT_CARD" mappingValue="3115" description="Gift Card"/>
 <IntegrationTypeMapping integrationTypeId="NETSUITE_PMT_MTHD" mappingKey="EXT_SHOP_ECOM_GFTCRD" mappingValue="13" description="Gift Card"/>
 <IntegrationTypeMapping integrationTypeId="NETSUITE_PMT_MTHD" mappingKey="EXT_SHOP_GFT_CARD" mappingValue="13" description="Gift Card"/>
 <IntegrationTypeMapping integrationTypeId="NETSUITE_PMT_MTHD" mappingKey="EXT_SHOP_MANUAL" mappingValue="8" description="Shopify Payment"/>
