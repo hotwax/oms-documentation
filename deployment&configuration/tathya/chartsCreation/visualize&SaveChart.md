@@ -88,6 +88,8 @@ For example, if you choose a Line Chart, specify the columns you want on the x-a
 
 # Save and Share your Chart
 
-At the top-left corner, give a meaningful name for your chart to easily identify it in Tathya.
+In the top-left corner, give your chart a descriptive name for easy identification within Tathya.
 
-Now, click on the SAVE button at the top-right corner.
+Navigate to the top-right corner and click on the "SAVE" button. A Save Chart panel will appear with the Chart Name field auto-populated.
+
+After saving, find your chart in the Charts tab for quick access.
