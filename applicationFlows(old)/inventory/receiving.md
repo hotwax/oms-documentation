@@ -10,19 +10,18 @@ This document focuses on managing incoming shipments, purchase orders, and retur
 
 **List of pages**
 
-1. Shipments View page.
-2. Shipment Details page.
-3. Purchase Order View page.
-4. Purchase Order Details page.
-5. Return View page.
-6. Return Details page.&#x20;
+1. Shipments View page
+2. Shipment Details page
+3. Purchase Order View page
+4. Purchase Order Details page
+5. Return View page
+6. Return Details page
 
 ***
 
 ## Shipments View page
 
 Find and process incoming shipments.
-
 
 
 **Characteristics**
@@ -377,4 +376,3 @@ Once the return quantity has been received, complete the return-receiving proces
 **Related flows:**&#x20;
 
 a. [Inventory receiving](https://docs.hotwax.co/solution-flows/v/inventory-receiving/)
-

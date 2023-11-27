@@ -1,12 +1,11 @@
 ---
 description: >-
-  Give user access to the HotWax Commerce applications by assigning a security
-  group.
+  Give user access to the HotWax Commerce applications by assigning a security group.
 ---
 
 # Assign Security Group
 
-_This document outlines a step-by-step process for assigning security group to employees in the OMS._
+This document outlines a step-by-step process for assigning security group to employees in the OMS.
 
 {% hint style="info" %}
 Security group defines the permission for users to access applications functionalities.&#x20;
@@ -32,11 +31,6 @@ Video: Assign security group
 
 
 
-**Related links:** \
+**Related links:** 
 \
-1\. [Relationship](http://127.0.0.1:5000/o/l53nGvPQLhOHrKCP9HTG/s/oLmQzGATywYkwiU9sCat/)&#x20;
-
-
-
-:arrow\_left: [Go to HotWax Commerce Docs](http://127.0.0.1:5000/o/l53nGvPQLhOHrKCP9HTG/s/TefRnbhmBjhScpq172vl/)
-
+1\. [Relationship](http://127.0.0.1:5000/o/l53nGvPQLhOHrKCP9HTG/s/oLmQzGATywYkwiU9sCat/)

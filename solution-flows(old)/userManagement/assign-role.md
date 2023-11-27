@@ -1,12 +1,11 @@
 ---
 description: >-
-  Assign roles to enable employees to perform certain actions on application
-  screens.
+  Assign roles to enable employees.
 ---
 
 # Assign Role
 
-_**This document outlines a step-by-step process for assigning roles to employees in the OMS.**_
+**This document outlines a step-by-step process for assigning roles to employees in the OMS.**
 
 {% hint style="info" %}
 Upon user creation, the Application user role is automatically assigned, but it can be deleted if unnecessary. Employees can have multiple roles, such as Picker, Packer, Receiver, within a facility, allowing them to perform various actions as needed.
