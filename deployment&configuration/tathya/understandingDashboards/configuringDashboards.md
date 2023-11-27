@@ -38,6 +38,23 @@ Navigate to the Dashboards screen and go to the dashboard to which you want to a
 
 Navigate to the Dashboards screen and select + Dashboard.
 
-In the Content panel, select + Create a new chart.
+- In the Content panel, select + Create a new chart.
 
 At this stage, you can proceed with the process of creating a new chart by following the steps discussed under the section “creating a new chart”.
+
+# Removing Charts from a Dashboard
+
+To remove a chart from the Dashboards screen, select the Edit dashboard icon.
+
+- While your cursor is hovering over a chart, select the trash icon in the upper-right corner of the chart.
+
+- To delete an entire row of charts, select the trash icon on the far left side of the row.
+
+**Note:** Selecting the trash bin icon merely removes the chart(s) from your dashboard, it does not delete them from Tathya.
+
+# Deleting a Dashboard
+
+A dashboard can be deleted from the Dashboards screen by clicking on the delete icon in the Actions column header.
+
+- On clicking the delete icon, you will see a popup that confirms the deletion of a dashboard. Type 'DELETE' to delete the dashboard.
+
