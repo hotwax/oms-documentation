@@ -90,29 +90,29 @@ If the shipping methods from Shopify are not mapped to a corresponding shipping 
 
 ```xml
 <!-- ShopifyShopCarrierShipment entries -->
-<ShopifyShopCarrierShipment shopId="SHOP" partyId="FEDEX" roleTypeId="CARRIER" shipmentMethodTypeId="2_DAY_SHIPPING" shopifyShippingMethod="2 Day FedEx Shipping"/>
-<ShopifyShopCarrierShipment shopId="SHOP" partyId="FEDEX" roleTypeId="CARRIER" shipmentMethodTypeId="2_DAY_SHIPPING" shopifyShippingMethod="2 Day Shipping"/>
-<ShopifyShopCarrierShipment shopId="SHOP" partyId="FEDEX" roleTypeId="CARRIER" shipmentMethodTypeId="INTL_CONNECT_PLUS" shopifyShippingMethod="2-3 Day International Shipping"/>
-<ShopifyShopCarrierShipment shopId="SHOP" partyId="FEDEX" roleTypeId="CARRIER" shipmentMethodTypeId="INTL_CONNECT_PLUS" shopifyShippingMethod="2-5 Day International Shipping"/>
-<ShopifyShopCarrierShipment shopId="SHOP" partyId="FEDEX" roleTypeId="CARRIER" shipmentMethodTypeId="2_DAY_SHIPPING" shopifyShippingMethod="2-Day FedEx Shipping"/>
-<ShopifyShopCarrierShipment shopId="SHOP" partyId="FEDEX" roleTypeId="CARRIER" shipmentMethodTypeId="2_DAY_SHIPPING" shopifyShippingMethod="2-Day Shipping"/>
-<ShopifyShopCarrierShipment shopId="SHOP" partyId="FEDEX" roleTypeId="CARRIER" shipmentMethodTypeId="2_DAY_SHIPPING" shopifyShippingMethod="2-Day Shipping 67G"/>
-<ShopifyShopCarrierShipment shopId="SHOP" partyId="USPS" roleTypeId="CARRIER" shipmentMethodTypeId="USPS_PRIORITY" shopifyShippingMethod="3 Day Shipping"/>
-<ShopifyShopCarrierShipment shopId="SHOP" partyId="FEDEX" roleTypeId="CARRIER" shipmentMethodTypeId="EXPRESS_SAVER" shopifyShippingMethod="3-Day Express Saver"/>
-<ShopifyShopCarrierShipment shopId="SHOP" partyId="USPS" roleTypeId="CARRIER" shipmentMethodTypeId="USPS_PRIORITY" shopifyShippingMethod="3-Day Shipping"/>
-<ShopifyShopCarrierShipment shopId="SHOP" partyId="USPS" roleTypeId="CARRIER" shipmentMethodTypeId="USPS_PRIORITY" shopifyShippingMethod="3-Day Shipping PR"/>
-<ShopifyShopCarrierShipment shopId="SHOP" partyId="FEDEX" roleTypeId="CARRIER" shipmentMethodTypeId="2_DAY_SHIPPING" shopifyShippingMethod="FedEx 2Day®"/>
-<ShopifyShopCarrierShipment shopId="SHOP" partyId="FEDEX" roleTypeId="CARRIER" shipmentMethodTypeId="GROUND" shopifyShippingMethod="FedEx Ground Shipping"/>
-<ShopifyShopCarrierShipment shopId="SHOP" partyId="FEDEX" roleTypeId="CARRIER" shipmentMethodTypeId="INTL_CONNECT_PLUS" shopifyShippingMethod="FedEx International Connect Plus"/>
-<ShopifyShopCarrierShipment shopId="SHOP" partyId="FEDEX" roleTypeId="CARRIER" shipmentMethodTypeId="INTL_ECONOMY" shopifyShippingMethod="FedEx International Economy®"/>
-<ShopifyShopCarrierShipment shopId="SHOP" partyId="FEDEX" roleTypeId="CARRIER" shipmentMethodTypeId="INTL_PRIORITY" shopifyShippingMethod="FedEx International Priority®"/>
-<ShopifyShopCarrierShipment shopId="SHOP" partyId="FEDEX" roleTypeId="CARRIER" shipmentMethodTypeId="FEDEX_HOME_DELIVERY" shopifyShippingMethod="FREE 2 Day Shipping"/>
-<ShopifyShopCarrierShipment shopId="SHOP" partyId="FEDEX" roleTypeId="CARRIER" shipmentMethodTypeId="2_DAY_SHIPPING" shopifyShippingMethod="FREE 2-Day Shipping"/>
-<ShopifyShopCarrierShipment shopId="SHOP" partyId="USPS" roleTypeId="CARRIER" shipmentMethodTypeId="USPS_PRIORITY" shopifyShippingMethod="Free 3-Day Shipping"/>
-<ShopifyShopCarrierShipment shopId="SHOP" partyId="FEDEX" roleTypeId="CARRIER" shipmentMethodTypeId="GROUND_ECONOMY" shopifyShippingMethod="Ground Economy Shipping"/>
-<ShopifyShopCarrierShipment shopId="SHOP" partyId="FEDEX" roleTypeId="CARRIER" shipmentMethodTypeId="GROUND" shopifyShippingMethod="Ground Shipping"/>
-<ShopifyShopCarrierShipment shopId="SHOP" partyId="FEDEX" roleTypeId="CARRIER" shipmentMethodTypeId="STANDARD_OVERNIGHT" shopifyShippingMethod="Overnight Shipping"/>
-<ShopifyShopCarrierShipment shopId="SHOP" partyId="FEDEX" roleTypeId="CARRIER" shipmentMethodTypeId="GROUND" shopifyShippingMethod="Standard Ground Shipping"/>
+<ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="FEDEX" shipmentMethodTypeId="2_DAY_SHIPPING" shopifyShippingMethod="2 Day FedEx Shipping"/>
+<ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="FEDEX" shipmentMethodTypeId="2_DAY_SHIPPING" shopifyShippingMethod="2 Day Shipping"/>
+<ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="FEDEX" shipmentMethodTypeId="INTL_CONNECT_PLUS" shopifyShippingMethod="2-3 Day International Shipping"/>
+<ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="FEDEX" shipmentMethodTypeId="INTL_CONNECT_PLUS" shopifyShippingMethod="2-5 Day International Shipping"/>
+<ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="FEDEX" shipmentMethodTypeId="2_DAY_SHIPPING" shopifyShippingMethod="2-Day FedEx Shipping"/>
+<ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="FEDEX" shipmentMethodTypeId="2_DAY_SHIPPING" shopifyShippingMethod="2-Day Shipping"/>
+<ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="FEDEX" shipmentMethodTypeId="2_DAY_SHIPPING" shopifyShippingMethod="2-Day Shipping 67G"/>
+<ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="USPS" shipmentMethodTypeId="USPS_PRIORITY" shopifyShippingMethod="3 Day Shipping"/>
+<ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="FEDEX" shipmentMethodTypeId="EXPRESS_SAVER" shopifyShippingMethod="3-Day Express Saver"/>
+<ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="USPS" shipmentMethodTypeId="USPS_PRIORITY" shopifyShippingMethod="3-Day Shipping"/>
+<ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="USPS" shipmentMethodTypeId="USPS_PRIORITY" shopifyShippingMethod="3-Day Shipping PR"/>
+<ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="FEDEX" shipmentMethodTypeId="2_DAY_SHIPPING" shopifyShippingMethod="FedEx 2Day®"/>
+<ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="FEDEX" shipmentMethodTypeId="GROUND" shopifyShippingMethod="FedEx Ground Shipping"/>
+<ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="FEDEX" shipmentMethodTypeId="INTL_CONNECT_PLUS" shopifyShippingMethod="FedEx International Connect Plus"/>
+<ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="FEDEX" shipmentMethodTypeId="INTL_ECONOMY" shopifyShippingMethod="FedEx International Economy®"/>
+<ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="FEDEX" shipmentMethodTypeId="INTL_PRIORITY" shopifyShippingMethod="FedEx International Priority®"/>
+<ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="FEDEX" shipmentMethodTypeId="FEDEX_HOME_DELIVERY" shopifyShippingMethod="FREE 2 Day Shipping"/>
+<ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="FEDEX" shipmentMethodTypeId="2_DAY_SHIPPING" shopifyShippingMethod="FREE 2-Day Shipping"/>
+<ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="USPS" shipmentMethodTypeId="USPS_PRIORITY" shopifyShippingMethod="Free 3-Day Shipping"/>
+<ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="FEDEX" shipmentMethodTypeId="GROUND_ECONOMY" shopifyShippingMethod="Ground Economy Shipping"/>
+<ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="FEDEX" shipmentMethodTypeId="GROUND" shopifyShippingMethod="Ground Shipping"/>
+<ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="FEDEX" shipmentMethodTypeId="STANDARD_OVERNIGHT" shopifyShippingMethod="Overnight Shipping"/>
+<ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="FEDEX" shipmentMethodTypeId="GROUND" shopifyShippingMethod="Standard Ground Shipping"/>
 ```
 </details>
 
