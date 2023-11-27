@@ -325,9 +325,28 @@ Import shipped order details from an external system based on tracking codes. Or
 
 <figure><img src="../.gitbook/assets/Screenshot 2023-11-01 at 5.59.58 PM.png" alt=""><figcaption></figcaption></figure>
 
+**Functions**
+
+###
 
 ### **Saved mappings page**
 
 Access and edit saved custom field mappings.
 
+
+
+**Characteristics**
+
 <figure><img src="../.gitbook/assets/Screenshot 2023-11-01 at 6.09.03 PM.png" alt=""><figcaption><p>Image: Saved Mappings page</p></figcaption></figure>
+
+### &#x20;<a href="#usage" id="usage"></a>
+
+\
+
+
+
+
+***
+
+
+

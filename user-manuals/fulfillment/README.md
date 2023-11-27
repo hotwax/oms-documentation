@@ -1,0 +1,1 @@
+HotWax Commerce's New Store Fulfillment app enables users to pick, pack, and ship orders brokered to the respective stores from the OMS.
