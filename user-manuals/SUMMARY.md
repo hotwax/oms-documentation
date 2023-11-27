@@ -10,3 +10,6 @@
 * [Users](users/README.md)
   * [Create Users](users/createUser.md)
   * [Manage Users](users/manageUser.md)
+* [Fulfillment](fulfillment/README.md)
+  * [Ship Orders](fulfillment/shipOrders.md)
+  * [Rejection](fulfillment/rejection.md)
