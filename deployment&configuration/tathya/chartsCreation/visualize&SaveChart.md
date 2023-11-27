@@ -93,3 +93,12 @@ In the top-left corner, give your chart a descriptive name for easy identificati
 Navigate to the top-right corner and click on the "SAVE" button. A Save Chart panel will appear with the Chart Name field auto-populated.
 
 After saving, find your chart in the Charts tab for quick access.
+
+### Additional Tips
+
+Experiment with different chart types to find the most effective representation for your data.
+
+Utilize filters and additional SQL clauses for more refined queries and visualizations.
+
+Leverage Tathya’s advanced features like dashboard linking and custom CSS for enhanced customization.
+
