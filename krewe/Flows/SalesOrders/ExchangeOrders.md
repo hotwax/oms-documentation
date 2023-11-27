@@ -15,5 +15,5 @@ In order to avoid creating duplicate orders in NetSuite, the HotWax integration 
 
 **Shopify Mapping**
 ```xml
-<ShopifyShopTypeMapping mappedKey="{loop-exchange}" mappedTypeId="SHOPIFY_ORDER_SOURCE" mappedValue="LOOP_EXCHANGE_CHANNEL" shopId="SHOP"/>
+<ShopifyShopTypeMapping mappedKey="1662707" mappedTypeId="SHOPIFY_ORDER_SOURCE" mappedValue="LOOP_EXCHANGE_CHANNEL" shopId="SHOP"/>
 ```
