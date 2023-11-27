@@ -8,3 +8,4 @@
   * [Bulk Scheduling](job-management/bulk-scheduling.md)
 * [Users](users/README.md)
   * [Create Users](users/createUser.md)
+  * [Manage Users](users/manageUser.md)
