@@ -70,17 +70,17 @@ If the shipping methods from Shopify are not mapped to a corresponding shipping 
 <!-- Add more ShipmentMethodType entries as needed -->
 
 <!-- Carrier Shipment Methods -->
-<CarrierShipmentMethod carrierPartyId="FEDEX" shipmentMethodTypeId="FEDEX_HOME_DELIVERY" serviceCode="FedEx Home Delivery®"/>
-<CarrierShipmentMethod carrierPartyId="FEDEX" shipmentMethodTypeId="2_DAY_SHIPPING" serviceCode="FedEx 2Day®"/>
-<CarrierShipmentMethod carrierPartyId="FEDEX" shipmentMethodTypeId="2_DAY_SHIPPING_67G" serviceCode="FedEx 2Day®"/>
-<CarrierShipmentMethod carrierPartyId="FEDEX" shipmentMethodTypeId="INTL_CONNECT_PLUS" serviceCode="FedEx International Connect Plus®"/>
-<CarrierShipmentMethod carrierPartyId="FEDEX" shipmentMethodTypeId="GROUND_ECONOMY" serviceCode="FedEx Ground Economy®"/>
-<CarrierShipmentMethod carrierPartyId="FEDEX" shipmentMethodTypeId="GROUND" serviceCode="FedEx Ground®"/>
-<CarrierShipmentMethod carrierPartyId="FEDEX" shipmentMethodTypeId="STANDARD_OVERNIGHT" serviceCode="FedEx Standard Overnight®"/>
-<CarrierShipmentMethod carrierPartyId="FEDEX" shipmentMethodTypeId="EXPRESS_SAVER" serviceCode="FedEx Express Saver®"/>
-<CarrierShipmentMethod carrierPartyId="FEDEX" shipmentMethodTypeId="INTL_ECONOMY" serviceCode="FedEx International Economy®"/>
-<CarrierShipmentMethod carrierPartyId="FEDEX" shipmentMethodTypeId="INTL_PRIORITY" serviceCode="FedEx International Priority®"/>
-<CarrierShipmentMethod carrierPartyId="USPS" shipmentMethodTypeId="USPS_PRIORITY" serviceCode="USPS Priority Mail®"/>
+<CarrierShipmentMethod partyId="FEDEX" roleTypeId="CARRIER" shipmentMethodTypeId="FEDEX_HOME_DELIVERY" serviceCode="FedEx Home Delivery®"/>
+<CarrierShipmentMethod partyId="FEDEX" roleTypeId="CARRIER" shipmentMethodTypeId="2_DAY_SHIPPING" serviceCode="FedEx 2Day®"/>
+<CarrierShipmentMethod partyId="FEDEX" roleTypeId="CARRIER" shipmentMethodTypeId="2_DAY_SHIPPING_67G" serviceCode="FedEx 2Day®"/>
+<CarrierShipmentMethod partyId="FEDEX" roleTypeId="CARRIER" shipmentMethodTypeId="INTL_CONNECT_PLUS" serviceCode="FedEx International Connect Plus®"/>
+<CarrierShipmentMethod partyId="FEDEX" roleTypeId="CARRIER" shipmentMethodTypeId="GROUND_ECONOMY" serviceCode="FedEx Ground Economy®"/>
+<CarrierShipmentMethod partyId="FEDEX" roleTypeId="CARRIER" shipmentMethodTypeId="GROUND" serviceCode="FedEx Ground®"/>
+<CarrierShipmentMethod partyId="FEDEX" roleTypeId="CARRIER" shipmentMethodTypeId="STANDARD_OVERNIGHT" serviceCode="FedEx Standard Overnight®"/>
+<CarrierShipmentMethod partyId="FEDEX" roleTypeId="CARRIER" shipmentMethodTypeId="EXPRESS_SAVER" serviceCode="FedEx Express Saver®"/>
+<CarrierShipmentMethod partyId="FEDEX" roleTypeId="CARRIER" shipmentMethodTypeId="INTL_ECONOMY" serviceCode="FedEx International Economy®"/>
+<CarrierShipmentMethod partyId="FEDEX" roleTypeId="CARRIER" shipmentMethodTypeId="INTL_PRIORITY" serviceCode="FedEx International Priority®"/>
+<CarrierShipmentMethod partyId="USPS" roleTypeId="CARRIER" shipmentMethodTypeId="USPS_PRIORITY" serviceCode="USPS Priority Mail®"/>
 <!-- Add more CarrierShipmentMethod entries as needed -->
 ```
 </details>
