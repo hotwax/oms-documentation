@@ -55,6 +55,8 @@ For the count of variants
 
 # Kit Products
 
+{% hint style='info' %} To seamlessly import Kit products into OMS, ensure that the Shopify Config Access Scope is set to grant both read and write access to the Shopify shop. {% endhint %}
+
 The Bundles app checks inventory levels at 10-minute intervals, reducing inventory for kit products if individual item inventory decreases.
 Kit products have no physical inventory of their own, like NetSuite, the inventory calculations are based on the lowest common denominator between all individual components.
 
