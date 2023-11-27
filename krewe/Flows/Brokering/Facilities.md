@@ -32,6 +32,7 @@
 
 <details>
 <summary>NetSuite Order Type Mapping</summary>
+
 ```xml
 <FacilityIdentification facilityId="254" facilityIdenTypeId="NETSUITE_ORDR_TYPE" idValue="6"/>
 <FacilityIdentification facilityId="114" facilityIdenTypeId="NETSUITE_ORDR_TYPE" idValue="1"/>
