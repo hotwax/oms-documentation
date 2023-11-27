@@ -4,24 +4,24 @@
 <summary>Shopify Location Mapping</summary>
 
 ```xml
-<ShopifyShopLocation facilityId="62778277975" shopId="SHOP" shopifyLocationId="415"/>
-<ShopifyShopLocation facilityId="30696177751" shopId="SHOP" shopifyLocationId="254"/>
-<ShopifyShopLocation facilityId="62714773591" shopId="SHOP" shopifyLocationId="372"/>
-<ShopifyShopLocation facilityId="62714806359" shopId="SHOP" shopifyLocationId="376"/>
-<ShopifyShopLocation facilityId="63313117271" shopId="SHOP" shopifyLocationId="420"/>
-<ShopifyShopLocation facilityId="60903424087" shopId="SHOP" shopifyLocationId="331"/>
-<ShopifyShopLocation facilityId="31137890391" shopId="SHOP" shopifyLocationId="288"/>
-<ShopifyShopLocation facilityId="35781869655" shopId="SHOP" shopifyLocationId="358"/>
-<ShopifyShopLocation facilityId="35758243927" shopId="SHOP" shopifyLocationId="318"/>
-<ShopifyShopLocation facilityId="60912140375" shopId="SHOP" shopifyLocationId="334"/>
-<ShopifyShopLocation facilityId="63384748119" shopId="SHOP" shopifyLocationId="421"/>
-<ShopifyShopLocation facilityId="60903391319" shopId="SHOP" shopifyLocationId="330"/>
-<ShopifyShopLocation facilityId="63384780887" shopId="SHOP" shopifyLocationId="422"/>
-<ShopifyShopLocation facilityId="60914499671" shopId="SHOP" shopifyLocationId="336"/>
-<ShopifyShopLocation facilityId="35764404311" shopId="SHOP" shopifyLocationId="319"/>
-<ShopifyShopLocation facilityId="62571642967" shopId="SHOP" shopifyLocationId="370"/>
-<ShopifyShopLocation facilityId="61327048791" shopId="SHOP" shopifyLocationId="348"/>
-<ShopifyShopLocation facilityId="62778048599" shopId="SHOP" shopifyLocationId="405"/>
+<ShopifyShopLocation facilityId="62778277975" shopId="SHOP" fromDate="2023-11-27 shopifyLocationId="415"/>
+<ShopifyShopLocation facilityId="30696177751" shopId="SHOP" fromDate="2023-11-27 shopifyLocationId="254"/>
+<ShopifyShopLocation facilityId="62714773591" shopId="SHOP" fromDate="2023-11-27 shopifyLocationId="372"/>
+<ShopifyShopLocation facilityId="62714806359" shopId="SHOP" fromDate="2023-11-27 shopifyLocationId="376"/>
+<ShopifyShopLocation facilityId="63313117271" shopId="SHOP" fromDate="2023-11-27 shopifyLocationId="420"/>
+<ShopifyShopLocation facilityId="60903424087" shopId="SHOP" fromDate="2023-11-27 shopifyLocationId="331"/>
+<ShopifyShopLocation facilityId="31137890391" shopId="SHOP" fromDate="2023-11-27 shopifyLocationId="288"/>
+<ShopifyShopLocation facilityId="35781869655" shopId="SHOP" fromDate="2023-11-27 shopifyLocationId="358"/>
+<ShopifyShopLocation facilityId="35758243927" shopId="SHOP" fromDate="2023-11-27 shopifyLocationId="318"/>
+<ShopifyShopLocation facilityId="60912140375" shopId="SHOP" fromDate="2023-11-27 shopifyLocationId="334"/>
+<ShopifyShopLocation facilityId="63384748119" shopId="SHOP" fromDate="2023-11-27 shopifyLocationId="421"/>
+<ShopifyShopLocation facilityId="60903391319" shopId="SHOP" fromDate="2023-11-27 shopifyLocationId="330"/>
+<ShopifyShopLocation facilityId="63384780887" shopId="SHOP" fromDate="2023-11-27 shopifyLocationId="422"/>
+<ShopifyShopLocation facilityId="60914499671" shopId="SHOP" fromDate="2023-11-27 shopifyLocationId="336"/>
+<ShopifyShopLocation facilityId="35764404311" shopId="SHOP" fromDate="2023-11-27 shopifyLocationId="319"/>
+<ShopifyShopLocation facilityId="62571642967" shopId="SHOP" fromDate="2023-11-27 shopifyLocationId="370"/>
+<ShopifyShopLocation facilityId="61327048791" shopId="SHOP" fromDate="2023-11-27 shopifyLocationId="348"/>
+<ShopifyShopLocation facilityId="62778048599" shopId="SHOP" fromDate="2023-11-27 shopifyLocationId="405"/>
 ```
 </details>
 
@@ -47,7 +47,6 @@
 <FacilityIdentification facilityId="319" facilityIdenTypeId="NETSUITE_ORDR_TYPE" fromDate="2023-11-27 05:31:34.056" idValue="6"/>
 <FacilityIdentification facilityId="370" facilityIdenTypeId="NETSUITE_ORDR_TYPE" fromDate="2023-11-27 05:31:34.056" idValue="6"/>
 <FacilityIdentification facilityId="348" facilityIdenTypeId="NETSUITE_ORDR_TYPE" fromDate="2023-11-27 05:31:34.056" idValue="6"/>
-<FacilityIdentification facilityId="383" facilityIdenTypeId="NETSUITE_ORDR_TYPE" fromDate="2023-11-27 05:31:34.056" idValue="6"/>
 <FacilityIdentification facilityId="405" facilityIdenTypeId="NETSUITE_ORDR_TYPE" fromDate="2023-11-27 05:31:34.056" idValue="6"/>
 ```
 </details>
@@ -73,7 +72,6 @@
 <FacilityIdentification facilityId="319" facilityIdenTypeId="ORDR_ORGN_SLS_CHNL" fromDate="2023-11-27 05:31:34.056" idValue="43"/>
 <FacilityIdentification facilityId="370" facilityIdenTypeId="ORDR_ORGN_SLS_CHNL" fromDate="2023-11-27 05:31:34.056" idValue="155"/>
 <FacilityIdentification facilityId="348" facilityIdenTypeId="ORDR_ORGN_SLS_CHNL" fromDate="2023-11-27 05:31:34.056" idValue="128"/>
-<FacilityIdentification facilityId="383" facilityIdenTypeId="ORDR_ORGN_SLS_CHNL" fromDate="2023-11-27 05:31:34.056" idValue="166"/>
 <FacilityIdentification facilityId="405" facilityIdenTypeId="ORDR_ORGN_SLS_CHNL" fromDate="2023-11-27 05:31:34.056" idValue="181"/>
 ```
 </details>
@@ -99,7 +97,6 @@
 <FacilityIdentification facilityId="319" facilityIdenTypeId="ORDR_ORGN_DPT" fromDate="2023-11-27 05:31:34.056" idValue="295"/>
 <FacilityIdentification facilityId="370" facilityIdenTypeId="ORDR_ORGN_DPT" fromDate="2023-11-27 05:31:34.056" idValue="364"/>
 <FacilityIdentification facilityId="348" facilityIdenTypeId="ORDR_ORGN_DPT" fromDate="2023-11-27 05:31:34.056" idValue="325"/>
-<FacilityIdentification facilityId="383" facilityIdenTypeId="ORDR_ORGN_DPT" fromDate="2023-11-27 05:31:34.056" idValue="373"/>
 <FacilityIdentification facilityId="405" facilityIdenTypeId="ORDR_ORGN_DPT" fromDate="2023-11-27 05:31:34.056" idValue="392"/>
 ```
 </details>
