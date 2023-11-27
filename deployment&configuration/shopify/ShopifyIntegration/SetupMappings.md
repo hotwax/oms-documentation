@@ -10,6 +10,7 @@ If you're only using the default "SHOP" Shopify Shop ID, this data can be import
 
 **Product Type Mappings**
 ```
+<ShopifyShopTypeMapping shopId="SHOP" mappedTypeId="SHOPIFY_PRODUCT_TYPE" mappedKey="Gift Cards" mappedValue="GIFT_CARD"/>
 <ShopifyShopTypeMapping shopId="SHOP" mappedTypeId="SHOPIFY_PRODUCT_TYPE" mappedKey="donation" mappedValue="DONATION"/>
 <ShopifyShopTypeMapping shopId="SHOP" mappedTypeId="SHOPIFY_PRODUCT_TYPE" mappedKey="Gift Cards" mappedValue="DIGITAL_GOOD"/>
 <ShopifyShopTypeMapping shopId="SHOP" mappedTypeId="SHOPIFY_PRODUCT_TYPE" mappedKey="Gift Card" mappedValue="DIGITAL_GOOD"/>
