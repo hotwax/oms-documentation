@@ -15,7 +15,7 @@
   * [Blanket Customer](Flows/SalesOrders/POSOrders.md)
   * [Account Source](Flows/SalesOrders/AccountSource.md)
   * [Subsidiary](Flows/SalesOrders/Subsidiaries.md)
-  * [Deparments](Flows/SalesOrders/DeparmentMapping.md)
+  * [Departments](Flows/SalesOrders/DeparmentMapping.md)
   * [Sales Channels](Flows/SalesOrders/SalesChannelMapping.md)
   * [Exchange Orders](Flows/SalesOrders/ExchangeOrders.md)
   * [Order Types](Flows/SalesOrders/OrderTypeMapping.md)
