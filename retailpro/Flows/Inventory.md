@@ -37,7 +37,7 @@ file and updates inventory in HotWax Commerce.
 While developing this integration, several challenges surfaced, necessitating additional logic that is uncommon in typical inventory reset syncs. We will deep dive into the challenges 
 and solutions in further sections. 
 
-1. Unfiledtered inventory file
+### Unfiledtered inventory file
 
 In a usual setup, ERP systems share a file comprising all active products for inventory synchronization with HotWax Commerce. However, the client's Retail Pro version was able to share a file 
 containing all products ever created in Retail Pro, not just the active ones. This led to an inflated file size, causing prolonged processing times in HotWax Commerce. 
@@ -47,7 +47,7 @@ for online-published products, significantly reducing file size from 300MB to 70
 data accurately. 
 
 
-2. Incorrect inventory counts due to partially shipped orders in HC
+### Incorrect inventory counts due to partially shipped orders in HC
 
 
 HotWax Commerce sends orders to Retail Pro for invoicing, but only fully fulfilled orders are pushed. We will discuss in the Order section on why partially fulfilled orders are excluded. Because 
@@ -61,18 +61,9 @@ the main reset inventory file to avoid inaccuracies.
 
 Let's delve into the intricacies of the "Partially Shipped Orders" challenge through an example:
 
-- Inventory snapshot in Retail Pro Prism POS and HotWax Commerce at 8:00 AM, showing initial counts for SKUs A, B, and C in New York and Nashville.
+1. Inventory snapshot in Retail Pro Prism POS and HotWax Commerce at 8:00 AM, showing initial counts for SKUs A, B, and C in New York and Nashville.
 
-    Retail Pro:
-
-
-    | SKU/Location | New York | Nashville |
-    |--------------|----------|-----------|
-    | A            | 10       | 10        |
-    | B            | 10       | 10        |
-    | C            | 0        | 0         |
-
-    HotWax Commerce:
+    **Inventory snapshot at Retail Pro:**
 
 
     | SKU/Location | New York | Nashville |
@@ -81,9 +72,18 @@ Let's delve into the intricacies of the "Partially Shipped Orders" challenge thr
     | B            | 10       | 10        |
     | C            | 0        | 0         |
 
-- Customer Order imported in HotWax Commerce from eCommerce at 8:30 AM:
+    **Inventory snapshot at HotWax Commerce:**
 
-    Representation of the customer order captured in HotWax Commerce at 8:30 AM, specifying quantities for SKUs A, B, and C.
+
+    | SKU/Location | New York | Nashville |
+    |--------------|----------|-----------|
+    | A            | 10       | 10        |
+    | B            | 10       | 10        |
+    | C            | 0        | 0         |
+
+2. Customer Order imported in HotWax Commerce from eCommerce at 8:30 AM. Representation of the customer order captured in HotWax Commerce at 8:30 AM, specifying quantities for SKUs A, B, and C.
+
+    **Customer Order**
 
     | SKU      | Quantity |
     |----------|----------|
@@ -91,10 +91,10 @@ Let's delve into the intricacies of the "Partially Shipped Orders" challenge thr
     | B        | 2        |
     | C        | 2        |
 
-- Order is fulfilled for SKU A and B in Hotwax Commerce from NY at 9:00 AM. Inventory Snapshot after order fulfillment in Retail Pro and HotWax Commerce:
+3. Order is fulfilled for SKU A and B in Hotwax Commerce from NY at 9:00 AM. Inventory snapshot after order fulfillment in Retail Pro and HotWax Commerce:
 
 
-    Retail Pro:
+    **Inventory snapshot at Retail Pro:**
 
 
     | SKU/Location | New York | Nashville |
@@ -103,7 +103,7 @@ Let's delve into the intricacies of the "Partially Shipped Orders" challenge thr
     | B            | 10       | 10        |
     | C            | 0        | 0         |
 
-    HotWax Commerce:
+    **Inventorty snapshot at HotWax Commerce:**
 
 
     Updated inventory snapshot in HotWax Commerce after the fulfillment of the customer order, reflecting adjusted counts for SKUs A, B, and C.
@@ -114,22 +114,9 @@ Let's delve into the intricacies of the "Partially Shipped Orders" challenge thr
     | B            | 8        | 10        |
     | C            | 0        | 0         |
 
-- Retail Pro is unaware of the partial fulfillment in HC, sends an Inventory Reset file the next morning at 7:00 AM. The file includes counts of 10 for SKU A and SKU B across both New York and Nashville, not accounting for the partial fulfillment. This file also represents the new inventory for SKU C at each location.
+4. Retail Pro is unaware of the partial fulfillment in HC, sends an Inventory Reset file the next morning at 7:00 AM. The file includes counts of 10 for SKU A and SKU B across both New York and Nashville, not accounting for the partial fulfillment. This table  represents the inventory file including new inventory for SKU C at each location.
 
-    Inventory Reset File:
-
-    | SKU/Location | New York | Nashville |
-    |--------------|----------|-----------|
-    | A            | 10       | 10        |
-    | B            | 10       | 10        |
-    | C            | 5        | 5         |
-
-- When this file is read by HotWax Commerce, inventory counts of SKU A and B and C are reset. Reset for SKU C is correct; however, SKU of A & B to 10 at NY is incorrect. Ideally SKU of A and B at NY should be 8.
-
-
-
-    HotWax Commerce:
-
+    **Inventory Reset file from Retail Pro:**
 
     | SKU/Location | New York | Nashville |
     |--------------|----------|-----------|
@@ -137,10 +124,23 @@ Let's delve into the intricacies of the "Partially Shipped Orders" challenge thr
     | B            | 10       | 10        |
     | C            | 5        | 5         |
 
-- Now as per the discussed solution, Inventory variance file is generated by HotWax Commerce integration platform, this table represents the inventory variance file:
+5. When this file is read by HotWax Commerce, inventory counts of SKU A and B and C are reset. Reset for SKU C is correct; however, SKU of A & B to 10 at NY is incorrect. Ideally SKU of A and B at NY should be 8.
 
 
-    Inventory Variance file:
+
+    **Inventory snapshot at HotWax Commerce:**
+
+
+    | SKU/Location | New York | Nashville |
+    |--------------|----------|-----------|
+    | A            | 10       | 10        |
+    | B            | 10       | 10        |
+    | C            | 5        | 5         |
+
+6. Now as per the discussed solution, Inventory variance file is generated by HotWax Commerce integration platform, this table represents the inventory variance file:
+
+
+    **Inventory Variance file from HotWax Commerce:**
 
 
     | SKU/Location | New York | Nashville |
@@ -149,10 +149,10 @@ Let's delve into the intricacies of the "Partially Shipped Orders" challenge thr
     | B            | -2       | 0         |
     | C            | 0        | 0         |
 
-- Finalized and accurate inventory counts in HotWax Commerce after processing both the main reset inventory file and the inventory variance file.
+7. Finalized and accurate inventory counts in HotWax Commerce after processing both the main reset inventory file and the inventory variance file.
 
 
-    HotWax Commerce:
+    **Inventory snapshot at HotWax Commerce:**
 
 
     | SKU/Location | New York | Nashville |
