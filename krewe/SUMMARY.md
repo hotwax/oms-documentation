@@ -34,3 +34,6 @@
   * [Receiving](Flows/Inventory/Receiving.md)
   * [Kit Products](Flows/Inventory/KitProducts.md)
   * [Cycle Count](Flows/Inventory/CycleCount.md)
+
+## Go Live
+* [Go Live](goLive.md)
