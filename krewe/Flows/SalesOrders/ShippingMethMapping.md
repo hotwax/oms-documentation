@@ -137,4 +137,21 @@ If the shipping methods from Shopify are not mapped to a corresponding shipping 
 ```
 </details>
 
+<details>
+<summary>Product Store Shipment Methods in HotWax</summary>
+  
+```xml
+<ProductStoreShipmentMeth partyId="FEDEX" productStoreId="STORE" productStoreShipMethId="FEDEX_HOME_DELIVERY" roleTypeId="CARRIER" shipmentMethodTypeId="FEDEX_HOME_DELIVERY"/>
+<ProductStoreShipmentMeth partyId="FEDEX" productStoreId="STORE" productStoreShipMethId="2_DAY_SHIPPING" roleTypeId="CARRIER" shipmentMethodTypeId="2_DAY_SHIPPING"/>
+<ProductStoreShipmentMeth partyId="FEDEX" productStoreId="STORE" productStoreShipMethId="2_DAY_SHIPPING_67G" roleTypeId="CARRIER" shipmentMethodTypeId="2_DAY_SHIPPING_67G"/>
+<ProductStoreShipmentMeth partyId="FEDEX" productStoreId="STORE" productStoreShipMethId="INTL_CONNECT_PLUS" roleTypeId="CARRIER" shipmentMethodTypeId="INTL_CONNECT_PLUS"/>
+<ProductStoreShipmentMeth partyId="FEDEX" productStoreId="STORE" productStoreShipMethId="GROUND_ECONOMY" roleTypeId="CARRIER" shipmentMethodTypeId="GROUND_ECONOMY"/>
+<ProductStoreShipmentMeth partyId="FEDEX" productStoreId="STORE" productStoreShipMethId="GROUND" roleTypeId="CARRIER" shipmentMethodTypeId="GROUND"/>
+<ProductStoreShipmentMeth partyId="FEDEX" productStoreId="STORE" productStoreShipMethId="STANDARD_OVERNIGHT" roleTypeId="CARRIER" shipmentMethodTypeId="STANDARD_OVERNIGHT"/>
+<ProductStoreShipmentMeth partyId="FEDEX" productStoreId="STORE" productStoreShipMethId="EXPRESS_SAVER" roleTypeId="CARRIER" shipmentMethodTypeId="EXPRESS_SAVER"/>
+<ProductStoreShipmentMeth partyId="FEDEX" productStoreId="STORE" productStoreShipMethId="INTL_ECONOMY" roleTypeId="CARRIER" shipmentMethodTypeId="INTL_ECONOMY"/>
+<ProductStoreShipmentMeth partyId="FEDEX" productStoreId="STORE" productStoreShipMethId="INTL_PRIORITY" roleTypeId="CARRIER" shipmentMethodTypeId="INTL_PRIORITY"/>
+<ProductStoreShipmentMeth partyId="USPS" productStoreId="STORE" productStoreShipMethId="USPS_PRIORITY" roleTypeId="CARRIER" shipmentMethodTypeId="USPS_PRIORITY"/>
+```
+</details>
 
