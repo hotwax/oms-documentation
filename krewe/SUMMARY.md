@@ -36,4 +36,4 @@
   * [Cycle Count](Flows/Inventory/CycleCount.md)
 
 ## Go Live
-* [Go Live](goLive.md)
+* [Go Live](Flows/goLive.md)
