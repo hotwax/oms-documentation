@@ -70,17 +70,17 @@ If the shipping methods from Shopify are not mapped to a corresponding shipping 
 <!-- Add more ShipmentMethodType entries as needed -->
 
 <!-- Carrier Shipment Methods -->
-<CarrierShipmentMethod partyId="FEDEX" roleTypeId="CARRIER" shipmentMethodTypeId="FEDEX_HOME_DELIVERY" serviceCode="GROUND_HOME_DELIVERY"/>
-<CarrierShipmentMethod partyId="FEDEX" roleTypeId="CARRIER" shipmentMethodTypeId="2_DAY_SHIPPING" serviceCode="FEDEX_2_DAY"/>
-<CarrierShipmentMethod partyId="FEDEX" roleTypeId="CARRIER" shipmentMethodTypeId="2_DAY_SHIPPING_67G" serviceCode="FEDEX_2_DAY"/>
-<CarrierShipmentMethod partyId="FEDEX" roleTypeId="CARRIER" shipmentMethodTypeId="INTL_CONNECT_PLUS" serviceCode="FEDEX_INTERNATIONAL_CONNECT_PLUS"/>
-<CarrierShipmentMethod partyId="FEDEX" roleTypeId="CARRIER" shipmentMethodTypeId="GROUND_ECONOMY" serviceCode="SMART_POST"/>
-<CarrierShipmentMethod partyId="FEDEX" roleTypeId="CARRIER" shipmentMethodTypeId="GROUND" serviceCode="FEDEX_GROUND"/>
-<CarrierShipmentMethod partyId="FEDEX" roleTypeId="CARRIER" shipmentMethodTypeId="STANDARD_OVERNIGHT" serviceCode="STANDARD_OVERNIGHT"/>
-<CarrierShipmentMethod partyId="FEDEX" roleTypeId="CARRIER" shipmentMethodTypeId="EXPRESS_SAVER" serviceCode="FEDEX_EXPRESS_SAVER"/>
-<CarrierShipmentMethod partyId="FEDEX" roleTypeId="CARRIER" shipmentMethodTypeId="INTL_ECONOMY" serviceCode="INTERNATIONAL_ECONOMY"/>
-<CarrierShipmentMethod partyId="FEDEX" roleTypeId="CARRIER" shipmentMethodTypeId="INTL_PRIORITY" serviceCode="FEDEX_INTERNATIONAL_PRIORITY_EXPRESS"/>
-<CarrierShipmentMethod partyId="USPS" roleTypeId="CARRIER" shipmentMethodTypeId="USPS_PRIORITY" serviceCode="PRIORITY_OVERNIGHT"/>
+<CarrierShipmentMethod partyId="FEDEX" roleTypeId="CARRIER" shipmentMethodTypeId="FEDEX_HOME_DELIVERY" carrierServiceCode="GROUND_HOME_DELIVERY"/>
+<CarrierShipmentMethod partyId="FEDEX" roleTypeId="CARRIER" shipmentMethodTypeId="2_DAY_SHIPPING" carrierServiceCode="FEDEX_2_DAY"/>
+<CarrierShipmentMethod partyId="FEDEX" roleTypeId="CARRIER" shipmentMethodTypeId="2_DAY_SHIPPING_67G" carrierServiceCode="FEDEX_2_DAY"/>
+<CarrierShipmentMethod partyId="FEDEX" roleTypeId="CARRIER" shipmentMethodTypeId="INTL_CONNECT_PLUS" carrierServiceCode="FEDEX_CARGO_INTERNATIONAL_PREMIUM"/>
+<CarrierShipmentMethod partyId="FEDEX" roleTypeId="CARRIER" shipmentMethodTypeId="GROUND_ECONOMY" carrierServiceCode="SMART_POST"/>
+<CarrierShipmentMethod partyId="FEDEX" roleTypeId="CARRIER" shipmentMethodTypeId="GROUND" carrierServiceCode="FEDEX_GROUND"/>
+<CarrierShipmentMethod partyId="FEDEX" roleTypeId="CARRIER" shipmentMethodTypeId="STANDARD_OVERNIGHT" carrierServiceCode="STANDARD_OVERNIGHT"/>
+<CarrierShipmentMethod partyId="FEDEX" roleTypeId="CARRIER" shipmentMethodTypeId="EXPRESS_SAVER" carrierServiceCode="FEDEX_EXPRESS_SAVER"/>
+<CarrierShipmentMethod partyId="FEDEX" roleTypeId="CARRIER" shipmentMethodTypeId="INTL_ECONOMY" carrierServiceCode="INTERNATIONAL_ECONOMY"/>
+<CarrierShipmentMethod partyId="FEDEX" roleTypeId="CARRIER" shipmentMethodTypeId="INTL_PRIORITY" carrierServiceCode="FEDEX_INTERNATIONAL_PRIORITY"/>
+<CarrierShipmentMethod partyId="USPS" roleTypeId="CARRIER" shipmentMethodTypeId="USPS_PRIORITY" carrierServiceCode="PRIORITY_OVERNIGHT"/>
 <!-- Add more CarrierShipmentMethod entries as needed -->
 ```
 </details>
