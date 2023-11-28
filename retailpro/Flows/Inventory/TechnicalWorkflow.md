@@ -1,4 +1,3 @@
-# Technical Workflow
 
 
 ## Filter inventory file and reset inventory in HotWax Commerce

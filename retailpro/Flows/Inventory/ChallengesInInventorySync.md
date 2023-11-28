@@ -1,5 +1,4 @@
 
-# Challenges In Inventory Syc From Retail Pro to HotWax Commerce
 
 While developing this integration, several challenges surfaced, necessitating additional logic that is uncommon in typical inventory reset syncs. Here are the challenges and their solutions: 
 
@@ -13,7 +12,7 @@ for online-published products, significantly reducing file size from 300MB to 70
 data accurately. 
 
 
-## Incorrect inventory counts due to partially shipped orders in HC
+## Incorrect inventory counts due to partially shipped orders in HotWax Commerce
 
 
 HotWax Commerce sends orders to Retail Pro for invoicing, but only fully fulfilled orders are pushed. We will discuss in the Order section on why partially fulfilled orders are excluded. Because 
@@ -26,7 +25,7 @@ This file is loaded in HotWax Commerce after the main reset inventory file, corr
 the main reset inventory file to avoid inaccuracies.
 
 
-Let's delve into the intricacies of the "Partially Shipped Orders" challenge through an example:
+### Example showing intricacies of the "Partially Shipped Orders"
 
 1. Inventory snapshot in Retail Pro Prism POS and HotWax Commerce at 8:00 AM, showing initial counts for SKUs A, B, and C in New York and Nashville.
 

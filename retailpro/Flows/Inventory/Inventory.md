@@ -1,4 +1,3 @@
-# Inventory Synchronization From Retail Pro to HotWax Commerce
 
 In the daily operations of Retail Pro, numerous transactions occur, ranging from receiving purchase orders and processing returns to completing physical store sales. 
 Each of these transactions directly impacts the inventory numbers in Retail Pro. To address this dynamic environment, we've implemented two approaches to synchronize 
