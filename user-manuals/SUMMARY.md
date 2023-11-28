@@ -13,3 +13,7 @@
 * [Fulfillment](fulfillment/README.md)
   * [Ship Orders](fulfillment/shipOrders.md)
   * [Rejection](fulfillment/rejection.md)
+  * [Picking App](fulfillment/pickingApp.md)
+  * [CSV Support](fulfillment/csvSupport.md)
+* [Receiving](receiving/README.md)
+* 

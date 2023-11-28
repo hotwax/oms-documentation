@@ -14,6 +14,9 @@ description: >-
 2. ​Search for the desired order.
 3. Click the `​Report an Issue`` function.
 4. Select an appropriate reason from the dropdown.
+
+<figure><img src="../.gitbook/assets/Screenshot 2023-11-01 at 5.42.23 PM (1).png" alt=""><figcaption><p>Image: In progress Order page</p></figcaption></figure>
+
 5. Save the changes.
 
 The OMS will route the order to another facility, depending on the availability of the product at another facility, the customer's shipping preferences, and routing rules.

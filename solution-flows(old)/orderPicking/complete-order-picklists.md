@@ -1,17 +1,3 @@
----
-description: >-
-  Allows user to mark a picklists complete, communicating OMS that orders items
-  are picked and ready to be packed.
----
-
-# Complete Order Picklists
-
-_**This document outlines a step-by-step process for complete order picklist from the Picking app. Follow these instructions to scan or search the items:**_
-
-{% hint style="info" %}
-The order will be marked as complete only after it has been shipped.
-{% endhint %}
-
 1. Open the Picklists page.
 2. Select an order from the ‘In Progress’ section.
 3. Select the product that have been picked.

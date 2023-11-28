@@ -1,31 +1,36 @@
 # Order Fulfillment
 
 ### Pick orders
-1. Go to the Open Orders page.
-2. Filters search for specific orders in the desired shipping group.
+1. Go to the Open Orders page and pring a picklist
+
+This page displays all outstanding orders brokered to this facility by the OMS and are ready to be fulfilled.
+
+At the top of the page, the total number of queued orders are clearly displayed, providing an instant overview of the workload.
+
+Orders are displayed in a "First In, First Out" sequence. You can filter them based on shipping method to prioritize fulfillment.
 
 {% embed url="https://youtu.be/M3jXan3MOZc" %}
 Video: Filter Orders
 {% endembed %}
 
-3. Click the Print Picksheet function to generate the picksheet.
-4. In the Add Picker dialog box, enter the Picker Name or Employee Id to assign a picker.​
-
-{% hint style="success" %}
-Pickers can be used for performance-based commission distribution.
-{% endhint %}
+1. Click the Print Picksheet function to generate the picksheet.
+2. In the Add Picker dialog box, enter the Picker Name or Employee Id to assign a picker.​
 
 {% embed url="https://youtu.be/Yu384kR-7mU" %}
 Video: Print picklist
 {% endembed %}
 
+{% hint style="success" %}
+Pickers can be used for performance-based commission distribution.
+{% endhint %}
 
 5. You can access the Print Picksheet function again from the inprogress page to obtain the picksheet in PDF format for reference during order picking.
+
+Use the Print icon, available on the top against Picker, to reprint the picksheet.
 
 {% embed url="https://youtu.be/Zbm-8Z82laY" %}
 Video: Regenerate picklist
 {% endembed %}
-
 
 {% hint style="info" %}
 Assigned pickers can also be changed from the In progress page.
@@ -38,7 +43,10 @@ Mark orders packed when order items are ready to be shipped.
 Bulk Packing slips and Shipping labels will be generated in a new tab.
 {% endhint %}
 
-1. Go to the In-Progress Orders page.
+1. Go to the In-Progress Orders and filter out your orders
+
+**Picker Filters:** Easily search for specific orders in batch processes using Picker Filters.
+
 2. Add multiple boxes to ship large orders.
 
 {% embed url="https://youtu.be/V66o7vAf6HY" %}
@@ -58,10 +66,14 @@ Video: Generate shipping label
 Video: Generate packing slip
 {% endembed %}
 
-
 {% hint style="warning" %}
 Unpack orders when necessary, especially in cases where incorrect boxes or items need to be corrected.
 {% endhint %}
+
+{% embed url="https://youtu.be/_4vcKgJuQrE" %}
+Video: Unpack orders
+{% endembed %}
+
 
 ### Ship order
 
@@ -76,7 +88,7 @@ Video: Bulk Order fulfillment
 If `Ship Packed Orders` is enabled, all packed orders will be shipped. Enable the `isTrackingRequired` setting on shipping methods that should not be automaticlaly be shipped unless they have tracking codes.
 {% endhint %}
 
-In the even that the packing slip is damaged after packing an order, it can be regenerated from the completed tab.
+In the event that the packing slip or shipping label is damaged after packing an order, it can be regenerated from the completed tab.
 
 {% embed url="https://youtu.be/VuEEg_hYI9c" %}
 Video: Reprint customer letter
@@ -116,6 +128,10 @@ Video: Pack order
 1. Navigate to the Completed page.​
 2. Search for the order.
 3. Click on the Ship function to mark the order as shipped.
+
+{% embed url="https://youtu.be/h8hMAySgfqc" %}
+Video: Ship order
+{% endembed %}
 
 {% embed url="https://youtu.be/RCzf6Uv_CoY" %}
 
