@@ -19,6 +19,7 @@
   * [Sales Channels](Flows/SalesOrders/SalesChannelMapping.md)
   * [Exchange Orders](Flows/SalesOrders/ExchangeOrders.md)
   * [Order Types](Flows/SalesOrders/OrderTypeMapping.md)
+  * [Order cancellations](Flows/SalesOrders/OrderCancellations.md)
   * [Reference IDs](Flows/SalesOrders/ShopifyOrderName.md)
   * [Reports](Flows/SalesOrders/Reports.md)
 * [Brokering](Flows/Brokering/README.md)
