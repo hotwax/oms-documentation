@@ -1,10 +1,11 @@
 
 
+## Technical workflow of Invoice from multiple location 
 In the context of invoicing from multiple locations, all items are invoiced from the location where the last item is fulfilled, aligning with Retail Pro's constraint of allowing invoicing from a single location. The technical workflow for synchronizing orders closely mirrors the process of invoicing from a single location.
 
 The order invoicing workflow initiates with the creation of a feed of completed orders, which includes only those orders where all items have been fulfilled. The subsequent transformation of this feed into JSON format, tailored for the Order to Invoice API, ensures that all items are invoiced from the location of the last item fulfillment. The steps, including feed preparation, transformation, API calls for invoicing, failure reporting, and inventory synchronization, closely parallel the technical workflow for invoicing from a single location.
 
-## Inventory transfer technical workflow 
+## Technical workflow of Inventory transfer
 
 The inventory transfer workflow is a pivotal process aimed at addressing challenges introduced by single-location invoicing, effectively mitigating inventory discrepancies in Retail Pro. This specialized solution ensures accurate inventory records by strategically transferring inventory between fulfillment locations.
 
