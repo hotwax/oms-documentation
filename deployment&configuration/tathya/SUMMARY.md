@@ -6,7 +6,8 @@
 * [Database Configuration](databaseConfiguration/README.md)
   * [Additional Settings](databaseConfiguration/additionalConfigurations.md)
     
-* [Charts Creation](chartsCreation/selectingDatabase&ExecutingQueries.md)
+* [Charts Creation](chartsCreation/README.md)
+   *  [Selecting Database & Schema](selectingDatabase&ExecutingQueries.md)
    *  [View & Save Chart](chartsCreation/visualize&SaveChart.md)
    * [Create Multiple Charts](chartsCreation/creatingMultipleCharts.md)
 
