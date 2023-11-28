@@ -1,6 +1,6 @@
 # Alerts and Reports
 
-The Alerts & Reports feature in Tathya empowers users to effortlessly create event-triggered notifications (Alerts) or scheduled notifications (Reports).
+The Alerts & Reports feature in Tathya enables you to effortlessly create event-triggered notifications (Alerts) or scheduled notifications (Reports).
 
 ## What is an Alert?
 
@@ -15,9 +15,9 @@ A report offers a snapshot of a chart or an entire dashboard, accompanied by a l
 1. In the Toolbar, hover over Settings.
 2. From the drop-down menu, select Alerts & Reports.
 
-Upon reaching the Alerts & Reports screen, the Alerts interface is displayed by default. Users can easily toggle between the Alerts and Reports tabs to control the content they wish to view.
+Upon reaching the Alerts & Reports screen, the Alerts interface is displayed by default. You can easily toggle between the Alerts and Reports tabs to control the content they wish to view.
 
-Below the tabs, you'll find "Last Updated" information, indicating when the screen was last refreshed. Users can force a refresh by selecting the circular "Refresh" icon.
+Below the tabs, you'll find "Last Updated" information, indicating when the screen was last refreshed. you can force a refresh by selecting the circular "Refresh" icon.
 
 ## Filters and Search Features
 
@@ -55,4 +55,4 @@ The Alerts and Reports tables feature the following column headers:
 - **Actions (visible on cursor hover):**
   - Icons enabling access to the execution log, editing the entry, or deleting the entry. Detailed descriptions of each action are provided below the table.
 
-By leveraging these features, users can efficiently manage and monitor their alerts and reports, ensuring timely and relevant notifications based on predefined conditions or schedules.
+By leveraging these features, you can efficiently manage and monitor alerts and reports, ensuring timely and relevant notifications based on predefined conditions or schedules.
