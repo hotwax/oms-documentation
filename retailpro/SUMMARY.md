@@ -13,4 +13,6 @@
 * [Send Sale Order](Flows/SendSaleOrder/SendSaleOrder.md)
   * [Technical Workflow](Flows/SendSaleOrder/TechnicalWorkflow.md)
 
+* [Returns](Flows/Returns/return.md)
+
   
