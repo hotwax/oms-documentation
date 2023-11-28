@@ -52,7 +52,7 @@ The first step to ensure a complete cutoff is to switch the Shopify Access Scope
 To facilitate a controlled system shutdown, disable the following jobs:
 
 - **Order Import from Shopify**
-- **Process Uploads to Ecommerce**
+- **Hard Synce**
 
 Scheduling these jobs as instructed will keep the system operational, ensuring timely data updates and synchronization.
 
