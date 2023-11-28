@@ -25,7 +25,7 @@
   * [Order Allocation](Flows/SalesOrder/OrderAllocation.md)
   * [Fulfillment](Flows/SalesOrder/Fulfillment.md)
   * [Invoicing](Flows/SalesOrder/Invoicing.md)
-  * [Kit Products](Flows/SalesOrder/KitProducts.md)
+  * [Bundles](Flows/SalesOrder/Bundles.md)
   * [Shipping Methods](Flows/SalesOrder/ShippingMethods.md)
   * [POS Orders](Flows/SalesOrder/posOrders.md)
 * [Transfer Orders](Flows/TransferOrders.md)
