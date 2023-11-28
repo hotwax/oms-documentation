@@ -63,5 +63,6 @@ Most NetSuite Scripts will not impact operations if users are not generating rec
 The most important script to disable is the script to import new orders into NetSuite from HotWax:
 
 - **HC_importSalesOrders**
+- **HC_importCashSales**
 
 Additionally, all scripts that are prefixed with the letters “HC” can also be disabled for further precaution.
