@@ -132,6 +132,8 @@ If the shipping methods from Shopify are not mapped to a corresponding shipping 
 <IntegrationTypeMapping integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="INTERNATIONAL_PRIORITY" mappingValue="FedEx International Priority®" />
 <IntegrationTypeMapping integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="GROUND_ECONOMY" mappingValue="FedEx Ground Economy" />
 <IntegrationTypeMapping integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="STANDARD_OVERNIGHT" mappingValue="FedEx Standard Overnight" />
+<!-- fallback shipping method -->
+<IntegrationTypeMapping integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="STANDARD" mappingValue="FedEx Home Delivery" />
 ```
 </details>
 
