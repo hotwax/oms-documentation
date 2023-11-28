@@ -5,5 +5,6 @@ This document contains a step by step guide that will walk you through the proce
 - [ ] Database Configuration
 - [ ] Charts Creation
 - [ ] Understanding Dashboards
+- [ ] Configuring Automated Notifications
 - [ ] Creating Roles
 - [ ] Creating User
