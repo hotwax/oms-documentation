@@ -1,8 +1,8 @@
 # Alerts and Reports
 
-The Alerts & Reports feature in Tathya enables creating event-triggered notifications (Alerts) or scheduled notifications (Reports).
+For your created charts and dashboards, you can set up automated notifications in the form of Alerts and Reports, which can be directly sent to designated users. 
 
-Reports provide a snapshot of a dashboard or chart along with a link that enables recipients to browse directly to Tathya further explore the visualization or dashboard. Alerts provide a custom link that facilitates viewing and further exploration.
+**Note:** The Alerts & Reports feature in Tathya enables creating event-triggered notifications (Alerts) or scheduled notifications (Reports).
 
 ## What is an Alert?
 
