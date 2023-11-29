@@ -1,6 +1,6 @@
 # Creating Roles for Dashboard Access
 
-Now that you've successfully created charts and added them to dashboards, the next crucial step is to set up roles. Roles define access levels, ensuring that users with specific roles can view tailored dashboards containing multiple charts designed for them.
+Roles define access levels, ensuring that users with specific roles can view tailored dashboards containing multiple charts designed for them, directly in Tathya.
 
 ## Why Create Roles?
 

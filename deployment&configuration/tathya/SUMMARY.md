@@ -15,7 +15,11 @@
    * [Configuring Dashboards](understandingDashboards/configuringDashboards.md)
    * [Dashboard Options](understandingDashboards/dashboardOptions.md)
    * [Dashboard Cutomizations](understandingDashboards/dashboardCustomization.md)
-   
+ 
+* [Configuring Automated Notifications](automatedNotifications/README.md)
+   * [Creating Alerts](automatedNotifications/creatingAlerts.md)
+   * [Creating Reports](automatedNotifications/creatingReports.md)
+
 * [Creating Roles](creatingRoles/README.md)
   * [List & Modify Roles](creatingRoles/list&ModifyRoles.md)
 
