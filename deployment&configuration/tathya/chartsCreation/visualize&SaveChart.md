@@ -22,9 +22,7 @@ Aggregate mode is commonly used when creating charts like bar charts, pie charts
 
 Raw Records mode is useful when you need a detailed, record-level view of the data. It's suitable for creating charts that display individual data points without summarization.
 
-**As by default Tathya provides a table format, working with the Raw Data mode is recommended.**
-
-Check the reasons mentioned below that explains why the Raw Mode is beneficial:
+**How the Raw Mode works:**
 
 - **Column Names** The column names in your SQL query result set become the headers or fields in the table. Each column in the result set is mapped to a corresponding column in the visualization.
   
