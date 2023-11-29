@@ -36,7 +36,7 @@ Raw Records mode is useful when you need a detailed, record-level view of the da
 
 ## Configure Additional Chart Settings
 
-When you are in "Raw Records" mode, you have additional options such as Filters, Ordering, and Row Limit.
+You also have additional configurable options such as Filters, Ordering, and Row Limit.
 
 - **Filters** Filters allow you to narrow down the rows displayed in your result set based on specific conditions. You can filter the data to show only rows that meet certain criteria.
 
