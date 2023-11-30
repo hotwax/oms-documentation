@@ -19,7 +19,7 @@ Prior to uploading the data, please ensure that all relevant variables are inclu
 
 ## Weight and metric data
 
-**Data for UK Customers**
+**Data for Non US Customers**
 
 ```
 <!-- Customized in case of non US customers -->
