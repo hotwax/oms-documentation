@@ -8,7 +8,15 @@ So it's important to manage these keys and set up their values i.e. sales channe
 
 Here is what a key-value pair looks like:
 
-![‎sales channel 1](https://www.hotwax.co/hs-fs/hubfs/%E2%80%8Esales%20channel%201.png?width=500\&height=408\&name=%E2%80%8Esales%20channel%201.png)\
+| Key              | Value             |
+|------------------|-------------------|
+| POS              | POS Channel       |
+| WEB              | WEB Channel       |
+| 123456           | Instagram Channel |
+| 222111           | Facebook Channel  |
+| sell-on-amazon   | Amazon Channel    |
+| shopify_draft_order | Draft Sales Channel |
+
 _Table 1: Keys and their association with values i.e., Sales Channels_
 
 Previously, mapping these keys with values required assistance from the development team. This meant that if a retailer expanded their product offerings to a new channel, that channel would have a distinct key, necessitating coordination with the HotWax Commerce support team to add the new channel.&#x20;
