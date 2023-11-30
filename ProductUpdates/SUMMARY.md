@@ -11,3 +11,4 @@
   * [Customized Rebrokering Rules](september23/customized-rebrokering-rules.md)
   * [Improved Product Synchronization](september23/improved-product-synchronization.md)
   * [Unfillable Hold Parking](september23/unfillable-hold-parking.md)
+* [August '23](august-23.md)
