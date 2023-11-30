@@ -2,7 +2,7 @@
 
 ## Order Management System
 
-### 1. Order: Manage Order Item Attributes
+1. Order: Manage Order Item Attributes
 
 Customer Service representatives can now add order item attributes directly from the Sales Order View page to avoid any errors in order processing and financial reporting.
 
@@ -10,25 +10,22 @@ Customer Service representatives can now add order item attributes directly from
 
 ![Order Attribute](https://www.hotwax.co/hubfs/Order%20Attribute%20\(1\).png)
 
-###
 
-### 2. Returns: Enhanced Return Management
+2. Returns: Enhanced Return Management
 
 Merchandisers now have the enhanced capability to search for returns by Shopify return ID, order ID, and Order Name. This significantly improves their ability to manage returns efficiently on the Sales Return page.
 
 ![Lookup online orders](https://www.hotwax.co/hs-fs/hubfs/Lookup%20online%20orders.png?width=1000\&height=685\&name=Lookup%20online%20orders.png)
 
 
-
-### 3. Returns: Enhanced Refund Visibility for In-Store returns
+3. Returns: Enhanced Refund Visibility for In-Store returns
 
 Merchandisers can now view refund information when requested store credits are returned to the original payment method on customer request, enhancing transparency and simplifying return tracking.
 
 ![View refund information](https://www.hotwax.co/hs-fs/hubfs/View%20refund%20information.png?width=860\&height=327\&name=View%20refund%20information.png)
 
-###
 
-### 4. **Product Store:** Map Sales Channels with Order Source&#x20;
+4. Product Store: Map Sales Channels with Order Source
 
 Retailers can now map sales channels to order sources directly from the Shopify Shop View page to evaluate the sales performance of each channel.
 
@@ -38,7 +35,7 @@ Retailers can now map sales channels to order sources directly from the Shopify 
 
 ## Applications
 
-### 1. Fulfillment: Edit predefined Export Packed Orders CSV fields&#x20;
+1. Fulfillment: Edit predefined Export Packed Orders CSV fields
 
 Merchandisers can now edit and reorganize predefined Export Packed Orders CSV fields directly from the Export Packed Orders page.
 
@@ -47,14 +44,13 @@ Merchandisers can now edit and reorganize predefined Export Packed Orders CSV fi
 ![Export Packed Orders](https://www.hotwax.co/hubfs/Export%20Packed%20Orders.png)
 
 
-
-### 2. Fulfillment: View Quantity On Hand
+2. Fulfillment: View Quantity On Hand
 
 Store associates can now quickly see the product’s Quantity on Hand with the order information to check the records of inventory availability during the fulfillment process.&#x20;
 
 ![View Quantity On Hand](https://www.hotwax.co/hs-fs/hubfs/Frame%20170.png?width=2000\&height=461\&name=Frame%20170.png)
 
-### 3. Fulfillment: Order Detail Page
+3. Fulfillment: Order Detail Page
 
 Added Order Detail page in the Fulfillment app to view and manage the complete lifecycle for an order.
 
@@ -62,7 +58,7 @@ Added Order Detail page in the Fulfillment app to view and manage the complete l
 
 ![Order Detail page](https://www.hotwax.co/hubfs/Order%20Detail%20page-1.png)
 
-### 4. User Management App
+4. User Management App
 
 Introducing User Management App to streamline the user creation and management process.
 
