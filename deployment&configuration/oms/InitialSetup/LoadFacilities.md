@@ -15,6 +15,7 @@ Here are what each of the required columns mean:
 | **Facility name**       | Use the same name as in Shopify.                                                                  |
 | **Facility type ID**    | There are two types of facility IDs, RETAIL_STORE for stores and WAREHOUSE for warehouses.                 |
 | **Address**             | Give the complete address of the facility if given by the client or available in Shopify.         |
+| **Phone number**        | Give the phone number of the facility if given by the client or available in Shopify. Required as needed for Shipping carrier integrations        |
 | **Facility group**      | Decides if inventory for the facility will be included for online sales.                            |
 | **Product Store**       | If there is only one product store, by default the product store value will be ‘STORE’.            |
 
