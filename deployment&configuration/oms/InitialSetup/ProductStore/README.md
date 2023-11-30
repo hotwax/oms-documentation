@@ -29,7 +29,7 @@ In HotWax Commerce, a Product Store serves as a representation of a company or b
 | **Currency**                    | Fetch it from the organization’s Google form. Generally, it is USD.                                           |
 | **Auto Approve Order**          | By default, its value is N. Based on the business rules whether auto-approval of orders needs to be enabled or disabled, its value can be set from the dropdown as Y or N. |
 | **Auto Cancel Days**            | The default value is 0, indicating no auto-cancel days should be applied. If needed, enter the total number of days after which an order should be auto-canceled if it remains unallocated. |
-| **Sales Order and Purchase Order ID Prefix** | This should be checked with the retailer if they have a preference. Adding a prefix to the internal ID helps visually separate purchase orders and sales orders. |
+| **Sales Order ID Prefix** | This should be checked with the retailer if they have a preference. Adding a prefix to the internal ID helps visually separate purchase orders and sales orders. |
 | **Allow Split**                 | By default, allow split is set to Y. If we need not allow the order split, its value can be set from the dropdown as Y or N. Based on this, the orders will be split, and multiple shipments will be created. |
 | **Product Identifier**  | This setting changes which Identification of a product to use as its primary internalName.                       |
 | **External ID**  | The ID of the store in the external system, generally a subsidiary in ERPs.                      |
