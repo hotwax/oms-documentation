@@ -4,6 +4,8 @@ System Property data includes a variety of system level configurations that chan
 
 System Properties need to be added from the XML data import page in WebTools, the backend service application of HotWax Commerce.
 
+---
+
 ## Default data
 
 {% hint style='warning' %}
@@ -16,6 +18,8 @@ Prior to uploading the data, please ensure that all relevant variables are inclu
 
 <SystemProperty systemResourceId="BuynowConfig" systemPropertyId="buynow.productStore.productStoreName" systemPropertyValue="**{Product Store Name}**"/>
 ```
+
+---
 
 ## Weight and metric data
 
@@ -49,6 +53,8 @@ Prior to uploading the data, please ensure that all relevant variables are inclu
 <SystemProperty systemResourceId="DateTimeFormats" systemPropertyId="date.format.default" systemPropertyValue="MM-dd-yyyy hh:mm a"/>
 ```
 
+---
+
 ## Pre-order data
 
 {% hint style='warning' %} Prior to uploading the data, please ensure that all relevant variables are included. {% endhint %}
@@ -59,6 +65,8 @@ Prior to uploading the data, please ensure that all relevant variables are inclu
 
 <SystemProperty systemResourceId="ShopifyServiceConfig" systemPropertyId="CONFIG.preorder.item.property.name" systemPropertyValue="Pre-Order"/>
 ```
+
+---
 
 ## Instance Specific Configs
 
@@ -74,7 +82,6 @@ Prior to uploading the data, please ensure that all relevant variables are inclu
 
 <!-- Data set for Import App -->
 <SystemProperty systemResourceId="default.productstoreid" systemPropertyId="BuynowCatalog" systemPropertyValue="STORE"/>
-
 
 
 <!-- Data set for FTP connection -->
