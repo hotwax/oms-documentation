@@ -1,4 +1,4 @@
-# Add DBIC Countries in OMS Instance
+# Add DBIC
 
 ## Overview
 DBIC, or `Doing Business in Countries` is a feature that requires the retrieval of a country list from the client. When a client utilizes multiple eCommerce instances to cater to different countries, it is crucial to include only the countries relevant to the specific instance. 
