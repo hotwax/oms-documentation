@@ -1,52 +1,34 @@
-# Add DBICs
+# Add DBIC Countries in OMS Instance
 
-DBIC stands for `Doing Business in Countries`
+## Overview
+DBIC, or `Doing Business in Countries` is a feature that requires the retrieval of a country list from the client. When a client utilizes multiple eCommerce instances to cater to different countries, it is crucial to include only the countries relevant to the specific instance. 
 
-This list should be retrieved from the client. If a client is using multiple instances to service multiple countries, only add the countries that this instance will be used for.
-The countries that are added here will be available in all address forms thoughout the application, so adding too many countries creates a bad experience for users.
+Please note that the countries added here will be accessible in all address forms across the application. To ensure a positive user experience, it is advised to avoid adding an excessive number of countries.
 
-DBIC countries need to be added from the XML data import page in WebTools, the backend service application of HotWax Commerce.
+## Instructions
 
-Log into Webtools
-```
-{hostname}.hotwax.io/webtools
-```
+1. **Log into OMS Instance**
+    - Visit your OMS Instance: https://{instanceName}.hotwax.io/
 
-Under `Framework Web Tools`, click `Import/Export`. Then in the list of buttons below, select `XML Data Import`
+2. **Navigate to Company Settings**
+    - Open the Hamburger menu
+    - Go to Settings
+    - Select Company
 
-Alternatively you can go to this URL after loging in
-```
-{hostname}.hotwax.io/webtools/control/EntityImport
-```
+3. **View Company Page**
+    - Click on your company name to open the View Company page
 
-#### Get Geo IDs for your DBIC data
-GeoIds for all countries can be found in the Geo entity in Webtools. Use them to create GeoAssoc data like the sample data below. Replace the geoId and sequenceNum to create your own data for other countries.
+4. **Access DBIC Section**
+    - Find the DBIC section on the View Company page
 
-To go to this page directly, use this URL with your hostname
-```
-{hostname}.hotwax.io/webtools/control/FindGeneric?entityName=Geo
-```
+5. **Add Function for Each Country**
+    - Click on "Add function" in the DBIC section
+    - Choose "Country" from the dropdown menu
+    - Click on "Add function"
 
-{% hint style="warning" %}
-    The sequence number decides the sequencing of DBIC options in the country dropdown on the stores page.
-{% endhint %}
+6. **Repeat for Additional Countries**
+    - Repeat the process for each country you want to add
 
-```
-<GeoAssoc geoAssocTypeId="GROUP_MEMBER" geoId="USA" geoIdTo="DBIC" sequenceNum="1"/>
-<GeoAssoc geoAssocTypeId="GROUP_MEMBER" geoId="CAN" geoIdTo="DBIC" sequenceNum="2"/>
-<GeoAssoc geoAssocTypeId="GROUP_MEMBER" geoId="ENGL" geoIdTo="DBIC" sequenceNum="3"/>
-<GeoAssoc geoAssocTypeId="GROUP_MEMBER" geoId="NIRL" geoIdTo="DBIC" sequenceNum="4"/>
-<GeoAssoc geoAssocTypeId="GROUP_MEMBER" geoId="SCOT" geoIdTo="DBIC" sequenceNum="5"/>
-<GeoAssoc geoAssocTypeId="GROUP_MEMBER" geoId="WALS" geoIdTo="DBIC" sequenceNum="6"/>
-<GeoAssoc geoAssocTypeId="GROUP_MEMBER" geoId="SGP" geoIdTo="DBIC" sequenceNum="7"/>
-<GeoAssoc geoAssocTypeId="GROUP_MEMBER" geoId="NLD" geoIdTo="DBIC" sequenceNum="8"/>
-<GeoAssoc geoAssocTypeId="GROUP_MEMBER" geoId="AUS" geoIdTo="DBIC" sequenceNum="9"/>
-<GeoAssoc geoAssocTypeId="GROUP_MEMBER" geoId="GBR" geoIdTo="DBIC" sequenceNum="10"/>
-```
+By following these steps, you can  add DBIC countries to your OMS instance, ensuring that the application caters specifically to the countries relevant to your business operations.
 
-Geo IDs for countries in Great Britian have to be added in addition to the ID for Great Britian itself. This is because Shopify categorises Great Britian as a country as well.
 
-DBIC countries in Great Britian:
-- England
-- Wales
-- Scotland
