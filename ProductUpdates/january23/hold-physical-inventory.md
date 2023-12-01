@@ -14,7 +14,9 @@ Shopify retailers plan their inventory allocations between eCommerce and Brick a
 
 **Scenario 1: Retailers with Only Online Shopify Stores (No Brick and Mortar stores)**
 
-![Retailers with only online shopify stores](https://lh4.googleusercontent.com/pF3eEVrqK-21KpXIhsjn6gzWZscuchwsSorHa7DDdwubqf\_\_QtAS9jA9wu3fhbVvKfJa-imgxeQZz\_w02IQ4SxB5CFOQWCQhwnH-qDzop3Wzng6LWnGArjDE86kHaQfm7KHDLtcj2LxIBr5fOjlxJvk)
+| Received Inventory | Orders in Pre-Order Parking | eCommerce ATP (Received Inventory - Orders in Pre-order Parking) |
+| ------------------ | --------------------------- | ---------------------------------------------------------------- |
+| 100                | 80                          | 20                                                               |
 
 Retailers can take 20 regular eCommerce orders from the available inventory.
 
@@ -24,7 +26,9 @@ This inventory computation works well for pure-play digital D2C brands. But when
 
 Suppose retailers have 1 Brick and Mortar store, they may want to allocate 10 inventory items to the store.
 
-![Retailers with Brick and mortar stores](https://lh6.googleusercontent.com/sTp79DAoQjlH\_qcYzaRVOOdTXfqH5i-68BdpakMVqXD40uHXg7s0qOE7yedrJ9jk2pQZ8t6xj9UMNGHIUgTue9vZPlpmwfXX-SmASqawDkK8iIBBJ1N4zj3Eam2cJOv9-GtU0L3KY\_TyeG0WjssPVzI)
+| Received Inventory | Orders in Pre-order Parking | Invnetory reserved for Brick and Mortar Stores | eCommerce ATP (Received Inventory- Orders in Pre-order Parking- Reserved Inventory) |
+| ------------------ | --------------------------- | ---------------------------------------------- | ----------------------------------------------------------------------------------- |
+| 100                | 80                          | 10                                             | 10                                                                                  |
 
 With its latest update, HotWax Commerce allows retailers to configure a “holdPreOrderPhysicalInventory” setting for inventory computation within the Order Management System.&#x20;
 

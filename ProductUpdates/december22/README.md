@@ -40,8 +40,6 @@
 
 <figure><img src="https://www.hotwax.co/hs-fs/hubfs/demo-oms.hotwax%201.webp?width=1483&#x26;height=1092&#x26;name=demo-oms.hotwax%201.webp" alt=""><figcaption></figcaption></figure>
 
-2. Merchandisers can now subscribe to receive Google Chat notifications when there is an error while uploading or downloading files on FTP locations.\
-   \
-
+2. Merchandisers can now subscribe to receive Google Chat notifications when there is an error while uploading or downloading files on FTP locations.
 
 <figure><img src="https://www.hotwax.co/hs-fs/hubfs/RN%2010.webp?width=1483&#x26;height=1092&#x26;name=RN%2010.webp" alt=""><figcaption></figcaption></figure>

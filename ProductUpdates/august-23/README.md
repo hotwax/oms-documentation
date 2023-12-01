@@ -1,4 +1,4 @@
-# August '23
+# August'23
 
 ## Order Management System
 
@@ -18,7 +18,7 @@ Product categories such as Pre-Order/Back-Order will now be displayed on the Pro
 
 Retailers can now configure fulfillment options for rejected BOPIS orders in email notifications, providing flexibility in handling these cases.
 
-[Read update](https://www.hotwax.co/product-updates/configure-bopis-rejection-email)
+[Read update](configure-bopis-rejection-email.md)
 
 ![BOPIS rejection](https://www.hotwax.co/hubfs/BOPIS%20rejection.png)
 
@@ -32,7 +32,7 @@ Retailers can now choose if they want to save customers’ billing information d
 
 Retailers can now import Sales orders using CSV files.
 
-[Read update](https://www.hotwax.co/product-updates/import-sales-order-using-csv)
+[Read update](import-sales-order-using-csv.md)
 
 ![Sales Order CSV](https://www.hotwax.co/hubfs/Sales%20Order%20CSV-Sep-11-2023-06-10-54-5205-AM.png)
 
@@ -42,7 +42,7 @@ Retailers can now import Sales orders using CSV files.
 
 SAML based Single Sign On feature is now supported in HotWax Commerce.
 
-[Read update](https://www.hotwax.co/product-updates/single-sign-on-launched)
+[Read update](launched-single-sign-on.md)
 
 ![Single sign on](https://www.hotwax.co/hubfs/Single%20sign%20on.png)
 
@@ -62,7 +62,7 @@ Operation Managers can now **copy run time data** with job information to get gr
 
 Operation Managers can now add unique job parameters per their business requirements without external assistance when scheduling a job.
 
-[Read update](https://www.hotwax.co/product-updates/advanced-job-parameters)
+[Read update](advanced-job-parameters.md)
 
 ![job parameters](https://www.hotwax.co/hubfs/job%20parameters.png)
 

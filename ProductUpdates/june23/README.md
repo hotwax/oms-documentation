@@ -1,4 +1,4 @@
-# June '23
+# June'23
 
 ### Order Management System
 
@@ -10,11 +10,15 @@
 
 **Purchase Order**
 
-2. Merchandisers can now gain insights into inventory explainability if the Purchase Order’s future inventory is reallocated to a sales order, allowing merchandisers to effectively audit and ensure that inventory is allocated to eligible sales orders. [**Read more**](https://www.hotwax.co/product-updates/merchandisers-can-get-better-explainability-when-pos-future-inventory-is-reallocated)
+2. Merchandisers can now gain insights into inventory explainability if the Purchase Order’s future inventory is reallocated to a sales order, allowing merchandisers to effectively audit and ensure that inventory is allocated to eligible sales orders. \
+   \
+   [Read more](merchandisers-will-get-better-explainability-when-pos-future-inventory-is-reallocated.md)
 
 **Returns**
 
-3. The new “In-Store Returns” feature enables store associates to quickly and easily process eCommerce returns, making inventory available to sell online. [**Read more**](https://www.hotwax.co/product-updates/launched-in-store-returns)
+3. The new “In-Store Returns” feature enables store associates to quickly and easily process eCommerce returns, making inventory available to sell online. \
+   \
+   [Read more](launched-in-store-returns.md)
 
 **User Preferences**
 
