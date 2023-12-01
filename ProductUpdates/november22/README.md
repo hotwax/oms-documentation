@@ -10,9 +10,9 @@
 
 **Shopify Connector**
 
-1. Retailers can now connect new Shopify websites to HotWax Commerce OMS without contacting the HotWax Customer Support team.[ \
+1. Retailers can now connect new Shopify websites to HotWax Commerce OMS without contacting the HotWax Customer Support team. \
    \
-   **Read More**](https://www.hotwax.co/product-updates/easily-connect-new-shopify-sites)
+   [Read More](easily-connect-new-shopify-sites.md)
 
 ### Apps
 

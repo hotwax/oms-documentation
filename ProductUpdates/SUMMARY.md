@@ -57,3 +57,6 @@
   * [Save CSV Maps](december22/save-csv-maps.md)
 * [November'22](november22/README.md)
   * [Easily Connect New Shopify Sites](november22/easily-connect-new-shopify-sites.md)
+* [October'22](october22/README.md)
+  * [New returns receiving workflow](october22/new-returns-receiving-workflow.md)
+  * [Run Jobs Across Multiple Shopify Stores](october22/run-jobs-across-multiple-shopify-stores.md)
