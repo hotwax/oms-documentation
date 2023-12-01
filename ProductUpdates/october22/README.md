@@ -25,7 +25,7 @@
 1. Retailers will be now automatically logged in to their most recently selected product store.
 2. Returns can now be received and also looked up by sales order ID or tracking code in the returns tab. \
    \
-   [Read more](https://www.hotwax.co/product-updates/new-returns-receiving-workflow)
+   [Read more](new-returns-receiving-workflow.md)
 3. Retailers who manage multiple locations at stores can now receive inventory at specific locations.\
 
 
@@ -35,4 +35,4 @@
 
 4. Scheduled jobs can now be run on multiple Shopify stores associated with a single product catalog. \
    \
-   [Read more](https://www.hotwax.co/product-updates/run-jobs-across-multiple-shopify-stores)
+   [Read more](run-jobs-across-multiple-shopify-stores.md)
