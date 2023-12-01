@@ -55,22 +55,9 @@ Prior to uploading the data, please ensure that all relevant variables are inclu
 
 ---
 
-## Pre-order data
-
-{% hint style='warning' %} Prior to uploading the data, please ensure that all relevant variables are included. {% endhint %}
-
-```
-<!-- Backorder and Preorder settings -->
-<SystemProperty systemResourceId="PreorderConfig" systemPropertyId="{STORE}.is.backorder.enabled" systemPropertyValue="Y" description="Flag to identify backorder setting for product store"/>
-
-<SystemProperty systemResourceId="ShopifyServiceConfig" systemPropertyId="CONFIG.preorder.item.property.name" systemPropertyValue="Pre-Order"/>
-```
-
----
-
 ## Instance Specific Configs
 
-{% hint style='warning' %} Prior to uploading the data, please ensure that all relevant variables are included. {% endhint %}
+{% hint style='warning' %} Before uploading the data, please ensure that all relevant variables are included. {% endhint %}
 
 ```
 <!-- Always customized -->
@@ -81,8 +68,7 @@ Prior to uploading the data, please ensure that all relevant variables are inclu
 <SystemProperty systemPropertyId="content.url.prefix.standard" systemPropertyValue="https://{your-instance}.hotwax.io" systemResourceId="url"/>
 
 <!-- Data set for Import App -->
-<SystemProperty systemResourceId="default.productstoreid" systemPropertyId="BuynowCatalog" systemPropertyValue="STORE"/>
-
+<SystemProperty systemResourceId="BuynowCatalog" systemPropertyId="default.productstoreid" systemPropertyValue="STORE"/>
 
 <!-- Data set for FTP connection -->
 <SystemProperty systemResourceId="FTP_CONFIG" systemPropertyId="ftp.server.hostname"  systemPropertyValue="{hostname_without_sftp://}"/>
