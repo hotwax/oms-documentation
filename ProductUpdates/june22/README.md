@@ -19,7 +19,7 @@
 
 5. CSRs can now mark items as “Shipped” right from the sales order view page and bypass the brokering and fulfillment process. \
    \
-   [Read more](https://www.hotwax.co/product-updates/mark-items-shipped-right-from-the-sales-order-view-page)\
+   [Read more](mark-items-shipped-right-from-the-sales-order-view-page.md)\
 
 6. Retailers on HotWax Commerce can now set position IDs for specific locations in order to manage location priority and effectively allocate inventory for orders that contain items in in-stock in multiple fulfillment locations.
 
@@ -29,7 +29,7 @@
 
 1. CSRs can now refresh canceled orders in HotWax Commerce to retrieve newly added or removed items from Shopify. \
    \
-   [Read more](https://www.hotwax.co/product-updates/refresh-cancelled-orders-to-retrieve-changes-from-shopify)
+   [Read more](refresh-cancelled-orders-to-retrieve-changes-from-shopify.md)
 
 ### Pre-Order Management
 
