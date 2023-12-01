@@ -24,3 +24,5 @@
 * [June '23](june-23/README.md)
   * [Merchandisers will get better explainability when PO’s future inventory is reallocated](june-23/merchandisers-will-get-better-explainability-when-pos-future-inventory-is-reallocated.md)
   * [Launched In-Store Returns](june-23/launched-in-store-returns.md)
+* [May '23](may-23/README.md)
+  * [Select Pre-defined Job Run-time Options](may-23/select-pre-defined-job-run-time-options.md)
