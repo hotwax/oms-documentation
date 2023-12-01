@@ -4,17 +4,26 @@
 
 **User permissions**
 
-1. Merchants can now control and restrict employees' access to functions within Enterprise User Apps. The new security framework automatically enables or disables functions based on the designated roles, ensuring that only qualified employees perform actions that demand higher authorization. [Read More\
-   ](https://www.hotwax.co/product-updates/user-app-permissions)
+1. Merchants can now control and restrict employees' access to functions within Enterprise User Apps. The new security framework automatically enables or disables functions based on the designated roles, ensuring that only qualified employees perform actions that demand higher authorization. \
+   \
+   [Read More](user-app-permissions.md)\
+
 
 **Timezone**
 
-2. Time zones can now be configured from the Enterprise User Apps’ Settings page to view rendered information in the preferred time. [Read More](https://www.hotwax.co/product-updates/set-preferred-timezone)
+2. Time zones can now be configured from the Enterprise User Apps’ Settings page to view rendered information in the preferred time. \
+   \
+   [Read More](set-preferred-timezone.md)
 
 **Import App**
 
-3. Merchandisers can now correct facility and SKU discrepancies while uploading Purchase Orders from the Purchase Order Review page. [Read More](https://www.hotwax.co/product-updates/correct-facility-sku-errors)
-4. Merchandisers can now reset product inventory using custom CSV formats from the newly added Inventory page. [Read More](https://www.hotwax.co/product-updates/upload-inventory-from-import-app)
+3. Merchandisers can now correct facility and SKU discrepancies while uploading Purchase Orders from the Purchase Order Review page. \
+   \
+   [Read More](correct-facility-sku-errors.md)\
+
+4. Merchandisers can now reset product inventory using custom CSV formats from the newly added Inventory page. \
+   \
+   [Read More](upload-inventory-from-import-app.md)
 
 **BOPIS**
 
@@ -29,7 +38,9 @@
 
 **Threshold Management**
 
-7. Merchandisers can now easily change the order of threshold jobs using drag-and-drop functionality to prioritize job operations and automatically update job run times in bulk. [Read More](https://www.hotwax.co/product-updates/reorder-threshold-jobs)
+7. Merchandisers can now easily change the order of threshold jobs using drag-and-drop functionality to prioritize job operations and automatically update job run times in bulk. \
+   \
+   [Read More](drag-and-drop-to-re-order-threshold-rules.md)
 
 **Inventory Count**
 

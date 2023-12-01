@@ -6,13 +6,13 @@
 
 1. Improved a service flow to ensure that an order’s edited shipping address is saved in Hotwax Commerce even if an error occurs on Shopify while updating customers’ shipping addresses.\
    \
-   [Read More](https://www.hotwax.co/product-updates/improved-service-flow-to-save-shipping-address-changes)
+   [Read More](improved-service-flow-to-save-shipping-address-changes.md)
 
 **Purchase Orders**
 
 2. Merchandisers now have the ability to access in-depth descriptions of Purchase Order Item changes, allowing them to thoroughly audit modifications made to Purchase Order items. \
    \
-   [Read More](https://www.hotwax.co/product-updates/access-detailed-purchase-order-item-history)
+   [Read More](access-detailed-purchase-order-item-history.md)
 
 ### Applications
 
@@ -33,7 +33,7 @@
 
 6. Merchandisers can now schedule a job to automatically adjust Purchase Order ATP allocations upon uploading an early-dated Purchase Order, enabling them to initiate pre-order deliveries ahead of schedule. \
    \
-   [Read More](https://www.hotwax.co/product-updates/reallocate-inventory-for-early-dated-purchase-orders)
+   [Read More](reallocate-inventory-for-early-dated-purchase-orders.md)
 
 **Receiving**
 
