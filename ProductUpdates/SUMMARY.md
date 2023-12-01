@@ -21,3 +21,6 @@
   * [Save Shopify Order Metafields as Order Attributes](july-23/save-shopify-order-metafields-as-order-attributes.md)
   * [Launched New Version of the Store Fulfillment App](july-23/launched-new-version-of-the-store-fulfillment-app.md)
   * [Centralized page for auditing Pre-Order catalog](july-23/centralized-page-for-auditing-pre-order-catalog.md)
+* [June '23](june-23/README.md)
+  * [Merchandisers will get better explainability when PO’s future inventory is reallocated](june-23/merchandisers-will-get-better-explainability-when-pos-future-inventory-is-reallocated.md)
+  * [Launched In-Store Returns](june-23/launched-in-store-returns.md)
