@@ -12,7 +12,9 @@
 
 **Inventory**
 
-2. Added a new job to only sync inventory numbers for products from HotWax Commerce to Shopify whose inventory numbers are not in sync with HotWax Commerce, offering improved system performance. [Read More](sync-inventory-for-only-products-with-recent-inventory-changes.md)
+2. Added a new job to only sync inventory numbers for products from HotWax Commerce to Shopify whose inventory numbers are not in sync with HotWax Commerce, offering improved system performance. \
+   \
+   [Read More](sync-inventory-for-only-products-with-recent-inventory-changes.md)
 
 ### Applications
 
@@ -41,11 +43,16 @@
 
 **BOPIS Fulfillment**
 
-5. Store associates can now promptly remind customers to pick up their orders by re-sending the ready-for-pickup notification from the Packed Orders tab. [Read More](re-send-ready-for-pickup-notification.md)
+5. Store associates can now promptly remind customers to pick up their orders by re-sending the ready-for-pickup notification from the Packed Orders tab. \
+   \
+   [Read More](re-send-ready-for-pickup-notification.md)
 
 **Inventory Receiving**
 
-6. Stock teams can now track when a Purchase Order is fully received by verifying whether the Purchase Order status is “Completed” or not on the Find and Detail PO screen.  [Read More](view-complete-status-for-purchase-orders.md)
+6. Stock teams can now track when a Purchase Order is fully received by verifying whether the Purchase Order status is “Completed” or not on the Find and Detail PO screen.\
+   \
+   [Read More](view-complete-status-for-purchase-orders.md)\
+
 7. Stock teams can now easily identify shipments imported from external systems like ERP because the external systems' Shipment ID will now be shown as the primary identification instead of HotWax Commerce’s Internal Shipment ID on the Find Shipments page.
 
 <figure><img src="../.gitbook/assets/External Shipment ID.png" alt=""><figcaption></figcaption></figure>
@@ -56,7 +63,9 @@
 
 **Order Picking**
 
-9. Pickers can now organize their picklists by sorting order items based on the Product Name, Bin ID, or Location Sequence ID depending on how their inventory is organized at fulfillment centers. [Read More](organize-picklists-by-sorting-order-items.md)\
+9. Pickers can now organize their picklists by sorting order items based on the Product Name, Bin ID, or Location Sequence ID depending on how their inventory is organized at fulfillment centers.\
+   \
+   [Read More](organize-picklists-by-sorting-order-items.md)\
 
 10. The fulfillment team can now review recently completed picklists to double-check picked products during packing.\
 
@@ -67,7 +76,9 @@
 
 **Inventory Cycle Count**
 
-11. Stock associates can now log damaged or found inventory directly from the Product Detail page to maintain accurate inventory count levels outside of scheduled cycle counts.[ Read More](record-inventory-variances-directly-from-the-product-detail-page.md)
+11. Stock associates can now log damaged or found inventory directly from the Product Detail page to maintain accurate inventory count levels outside of scheduled cycle counts.\
+    \
+    [Read More](record-inventory-variances-directly-from-the-product-detail-page.md)
 
 **Store Fulfillment**
 
@@ -78,8 +89,12 @@
 
 **Shopify Admin Helper**
 
-13. The new Shopify Admin Helper App simplifies the process of labeling order items as backorder, pre-order, or store pick-up for CSRs while creating draft orders in Shopify.  [Read More](launched-shopify-admin-helper-app.md)
+13. The new Shopify Admin Helper App simplifies the process of labeling order items as backorder, pre-order, or store pick-up for CSRs while creating draft orders in Shopify.  \
+    \
+    [Read More](launched-shopify-admin-helper-app.md)
 
 **Reroute Fulfillment**
 
-14. The new Reroute Fulfillment App allows customers to choose an alternative pick-up store location or have their pick-up item delivered to them if their preferred store is unable to fulfill their order.  [Read More](launched-reroute-fulfillment-app.md)
+14. The new Reroute Fulfillment App allows customers to choose an alternative pick-up store location or have their pick-up item delivered to them if their preferred store is unable to fulfill their order. \
+    \
+    [Read More](launched-reroute-fulfillment-app.md)

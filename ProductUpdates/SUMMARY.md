@@ -34,3 +34,7 @@
   * [Record Inventory Variances Directly from the Product Detail Page](april23/record-inventory-variances-directly-from-the-product-detail-page.md)
   * [Launched Shopify Admin Helper App](april23/launched-shopify-admin-helper-app.md)
   * [Launched Reroute Fulfillment App](april23/launched-reroute-fulfillment-app.md)
+* [March'23](march23/README.md)
+  * [Improved service flow to save shipping address changes](march23/improved-service-flow-to-save-shipping-address-changes.md)
+  * [Access Detailed Purchase Order Item History](march23/access-detailed-purchase-order-item-history.md)
+  * [Reallocate Inventory for Early-Dated Purchase Orders](march23/reallocate-inventory-for-early-dated-purchase-orders.md)
