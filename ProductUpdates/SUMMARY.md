@@ -16,3 +16,8 @@
   * [Import Sales Order Using CSV](august-23/import-sales-order-using-csv.md)
   * [Launched Single Sign On](august-23/launched-single-sign-on.md)
   * [Advanced Job Parameters](august-23/advanced-job-parameters.md)
+* [July '23](july-23/README.md)
+  * [Support for new Shopify Fulfillment Orders API](july-23/support-for-new-shopify-fulfillment-orders-api.md)
+  * [Save Shopify Order Metafields as Order Attributes](july-23/save-shopify-order-metafields-as-order-attributes.md)
+  * [Launched New Version of the Store Fulfillment App](july-23/launched-new-version-of-the-store-fulfillment-app.md)
+  * [Centralized page for auditing Pre-Order catalog](july-23/centralized-page-for-auditing-pre-order-catalog.md)
