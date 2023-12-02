@@ -1,4 +1,4 @@
-# Updating Order Management System (OMS)
+# Update OMS version (OMS)
 
 Updating OMS is vital for security, performance, and efficiency. The latest versions often include essential security enhancements, safeguarding your business and customer data. Performance improvements lead to smoother operations, faster order processing, and enhanced user experience. Regular updates also address bugs, preventing disruptions in your order management process. In essence, OMS updates are a simple yet crucial step in maintaining the integrity and effectiveness of your business processes.
 
