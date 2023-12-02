@@ -17,7 +17,7 @@
 * [Shipping gateways](UserandGatewayConfig/ShippingGateways.md)
 
 ## Additional Resources
-* [Update Version](additionalResources/updateVersion.md)
+* [Update OMS Version](additionalResources/updateOmsVersion.md)
 
 <!-- ## Shopify Integration
 * [Connect a Shopify Store](ShopifyIntegration/README.md)
