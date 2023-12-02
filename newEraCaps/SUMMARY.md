@@ -6,5 +6,5 @@
 ## Flows
 * [Products]
 * [Inventory](flows/inventory/README.md)
-* [Brokering]
+* [Brokering](flows/brokering/README.md)
 * [Sales Order]

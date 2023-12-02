@@ -18,14 +18,20 @@ https://<host>/api/service/updateInventoryByIdentification
 ```
 
 {% hint style="info" %}
-**API Docs** for the [Update Invetory API][udpateInvAPI] are a great place to learn more about how to use this API.
+**API Docs** for the [Update Invetory API]([udpateInvAPI](https://github.com/hotwax/oms-documentation/blob/oms1.0/Inventory/Update%20Inventory.md)) are a great place to learn more about how to use this API.
 {% endhint %}
-​
+
 ### Store fulfilled inventory
 As order items are fulfilled from stores, the OMS reduces inventory in Smaregi that was used for store fulfillment. Traditionally the OMS would feed a list of shipped orders to the POS to ensure that it can maintain an accurate count of inventory in its system. New Era Caps found that this duration could actually be too long and cause retail operational issues and instead will depleted inventory in Smaregi POS as soon as orders are packed.
 
 **Packed order rejection**
+
 Once an order is packed by a store representative, New Era Caps will not allow the order to be unlocked, hence preventing any rejection and enabling them to accurately deplete store inventory at that time.
+
+Store fulfilled orders SFTP
+```
+/home/newera-uat-sftp/pos/store_fulfilled_orders/staging/outgoing
+```
 
 ## Warehouse Inventory
 New Era Caps uses a manual inventory upload procedure because their warehouse services also services their B2B business which does not flow through the OMS. The merchandising team manually splits inventory between the two channels and then uploads the inventory allotted to B2C sales manually into the OMS.
@@ -37,5 +43,3 @@ All stores that participate in online sales will post their inventory to the con
 
 
 <!-- page links -->
-
-[updateInvAPI]: https://github.com/hotwax/oms-documentation/blob/oms1.0/Inventory/Update%20Inventory.md
