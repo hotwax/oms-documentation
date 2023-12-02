@@ -78,6 +78,7 @@ Certainly! Here's the information in a structured Markdown code snippet:
    - Access `oms-update` on the OMS update page.
    - Initiate build with parameters.
    - Complete the form with the following information:
+
 | Information        | Input                                                                                          |
 |--------------------|------------------------------------------------------------------------------------------------|
 | Host               | Instance name for the update.                                                                  |
