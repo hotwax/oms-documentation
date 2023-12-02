@@ -59,10 +59,10 @@ If the shipping methods from Shopify are not mapped to a corresponding shipping 
 <ShipmentMethodType shipmentMethodTypeId="FEDEX_HOME_DELIVERY" description="FedEx Home Delivery" parentTypeId="STANDARD"/>
 <ShipmentMethodType shipmentMethodTypeId="2_DAY_SHIPPING" description="2-Day Shipping" parentTypeId="SECOND_DAY"/>
 <ShipmentMethodType shipmentMethodTypeId="2_DAY_SHIPPING_67G" description="2-Day Shipping 67G" parentTypeId="SECOND_DAY"/>
-<ShipmentMethodType shipmentMethodTypeId="INTL_CONNECT_PLUS" description="FedEx International Connect Plus®" parentTypeId="STANDARD"/>
-<ShipmentMethodType shipmentMethodTypeId="GROUND_ECONOMY" description="FedEx Ground Economy®" parentTypeId="STANDARD"/>
+<ShipmentMethodType shipmentMethodTypeId="INTL_CONNECT_PLUS" description="FedEx International Connect Plus" parentTypeId="STANDARD"/>
+<ShipmentMethodType shipmentMethodTypeId="GROUND_ECONOMY" description="FedEx Ground Economy" parentTypeId="STANDARD"/>
 <ShipmentMethodType shipmentMethodTypeId="GROUND" description="FedEx Ground" parentTypeId="STANDARD"/>
-<ShipmentMethodType shipmentMethodTypeId="STANDARD_OVERNIGHT" description="FedEx Standard Overnight®" parentTypeId="NEXT_DAY"/>
+<ShipmentMethodType shipmentMethodTypeId="STANDARD_OVERNIGHT" description="FedEx Standard Overnight" parentTypeId="NEXT_DAY"/>
 <ShipmentMethodType shipmentMethodTypeId="EXPRESS_SAVER" description="FedEx Express Saver®" parentTypeId="THIRD_DAY"/>
 <ShipmentMethodType shipmentMethodTypeId="INTL_ECONOMY" description="FedEx International Economy®" parentTypeId="STANDARD"/>
 <ShipmentMethodType shipmentMethodTypeId="INTL_PRIORITY" description="FedEx International Priority®" parentTypeId="STANDARD"/>
@@ -125,7 +125,7 @@ If the shipping methods from Shopify are not mapped to a corresponding shipping 
 <IntegrationTypeMapping integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="2_DAY_SHIPPING" mappingValue="2-Day Shipping" />
 <IntegrationTypeMapping integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="INTERNATIONAL_CONNECT_PLUS" mappingValue="FedEx International Connect Plus" />
 <IntegrationTypeMapping integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="2_DAY_SHIPPING_67G" mappingValue="2-Day Shipping 67G" />
-<IntegrationTypeMapping integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="USPS_PRIORITY_MAIL" mappingValue="USPS Shipping" />
+<IntegrationTypeMapping integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="USPS_PRIORITY" mappingValue="USPS Shipping" />
 <IntegrationTypeMapping integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="EXPRESS_SAVER" mappingValue="FedEx Express Saver®" />
 <IntegrationTypeMapping integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="GROUND" mappingValue="FedEx Ground" />
 <IntegrationTypeMapping integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="INTERNATIONAL_ECONOMY" mappingValue="FedEx International Economy®" />
@@ -154,4 +154,3 @@ If the shipping methods from Shopify are not mapped to a corresponding shipping 
 <ProductStoreShipmentMeth partyId="USPS" productStoreId="STORE" productStoreShipMethId="USPS_PRIORITY" roleTypeId="CARRIER" shipmentMethodTypeId="USPS_PRIORITY"/>
 ```
 </details>
-
