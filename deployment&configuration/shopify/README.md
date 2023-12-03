@@ -11,6 +11,6 @@ For a more in-depth understanding of the **Shopify** and **HotWax Commerce** int
 - [ ] Create Shop: Establish a corresponding shop in HotWax Commerce OMS.
 - [ ] Data Mappings: Configure accurate data mappings between Shopify and HotWax Commerce.
 - [ ] Setup Facilities: Define facilities in OMS to align with physical locations in your Shopify store.
-- [ ] Intial sync: Initiate the comprehensive synchronization process from Shopify to HotWax Commerce.
+- [ ] Initial sync: Initiate the comprehensive synchronization process from Shopify to HotWax Commerce.
 
 By completing these steps, ensure a smooth and synchronized integration between your Shopify store and HotWax Commerce OMS.
