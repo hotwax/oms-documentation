@@ -7,4 +7,6 @@
 * [Products]
 * [Inventory](flows/inventory/README.md)
 * [Brokering](flows/brokering/README.md)
+* [Fulfillment](flows/fulfillment/README.MD)
+  * [Financial Posting](flows/fulfillment/financialPosting.md)
 * [Sales Order]
