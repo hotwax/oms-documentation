@@ -6,9 +6,9 @@ Online shipping orders are always routed to the warehouse unless the customer ha
 
 When this kind of soft allocated order is imported, the soft allocated items of the order will be directly allocated to that store upon import and skip the normal brokering algorithm. Because customers must explicitly choose which items they want to be shipped from store, the OMS will split the items not soft allocated and leave them in the brokering queue to be brokered to the warehouse at scheduled times.
 
-In the event that a store cannot fulfill an order and must reject it for reallocation, those orders will be allocated to the warehouse due to the WMS's inability to differentiate between two separate shipments of the same order when creating its CSV feed of fulfilled orders.
+In the event that a store cannot fulfill an order and must reject it for reallocation, those orders will not be allocated to the warehouse due to the WMS's inability to differentiate between two separate shipments of the same order when creating its CSV feed of fulfilled orders.
 
-The rigidity of the WMS software used by New Era Caps also means that i f the warehouse cannot fulfill an order item, it is canceled on Shopify manually by a CSR. When CSRs preform this cancellation on Shopify, the also add a “Reshipped” tag on the order to indicate that HotWax needs to resend it to the WMS.
+The rigidity of the WMS software used by New Era Caps also means that if the warehouse cannot fulfill an order item, it is canceled on Shopify manually by a CSR. When CSRs preform this cancellation on Shopify, the also add a “Reshipped” tag on the order to indicate that HotWax needs to resend it to the WMS.
 
 ## How “Reshipped” works in HotWax Commerce
 After CSRs apply a reshipped tag to orders where the warehouse indicates that it is unable to ship certain order items, the OMS has a custom workflow that is executed to update the order in the WMS with the removed order items.
@@ -33,12 +33,17 @@ The job that deletes OFH records is also responsible for adding a “RESHIPPED�
 refreshExportedFulfillment
 ```
 **Parameters**
+
 externalOrderId
+
 externalLineItemId
+
 fulfillmentStatus
 
 **Attribute**
+
 Name: FULFILLMENT_STATUS
+
 Value: RESHIPPED  
 
 ## Proposed design
