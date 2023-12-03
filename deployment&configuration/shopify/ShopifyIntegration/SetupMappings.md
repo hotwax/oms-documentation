@@ -1,12 +1,27 @@
 # Shopfiy Mappings
 
 {% hint style='info' %}
-After incorporating the default mapping, please add any custom mappings as needed. These specific mappings should be clearly documented in the retailer's implementation guide for reference.
+After incorporating the default mapping, please add any custom mappings as needed. These specific mappings should be documented in the retailer's implementation guide for reference.
 {% endhint %}
 
-There is some defualt mapping data that needs to be included when connecting a Shopify store to ensure that data flows smoothly between both systems with correct mappings.
+Some default mapping data needs to be included when connecting a Shopify store to ensure that data flows smoothly between both systems with correct mappings.
 
-If you're only using the default "SHOP" Shopify Shop ID, this data can be imported directly. However, for multiple Shopify stores, input the data individually for each store. The Shopify Shop ID will change and obtainable from the header of the View Shopify Shop page in OMS. Hint: The value in bigger font size.
+If you're only using the default `SHOP` Shopify Shop ID, this data can be imported directly. However, for multiple Shopify stores, input the data individually for each store. The Shopify Shop ID will change and be obtainable from the header of the View Shopify Shop page in OMS. 
+
+**To import mappings, adhere to the following structured steps:**
+
+1. Navigate to OMS web tools at https://{instanceName}.hotwax.io/webtools/control/main.
+2. Open the Data Import page by selecting `Import/Export`.
+3. Choose `XML Data Import` from the available options.
+4. Input data into the "Complete XML document" section, encapsulated between `<entity-engine-xml>` and `</entity-engine-xml>`.
+5. Click the `Import` button to initiate the import process.
+6. Upon successful completion, a confirmation message will be displayed below, indicating that the data has been imported successfully.
+
+## The default mappings to be imported are as follows:
+
+{% hint style='warning' %}
+Modify the `shopId` for each Shopify Shop when importing data.
+{% endhint %}
 
 **Product Type Mappings**
 ```
