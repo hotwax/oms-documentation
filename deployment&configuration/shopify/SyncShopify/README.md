@@ -1,5 +1,9 @@
 # Sync with Shopify
 
+{% hint style='danger' %}
+Before importing data from Shopify, it is crucial to have all default and custom mapping data in place for a smooth transition. Failure to do so may result in data discrepancies or errors during the import process.
+{% endhint %}
+
 ## Schedule Bulk file processor
 ```
 Execute the job of processing bulk imported files by accessing the "Process Bulk Imported Files" job, located on the Miscellaneous page within the Job Manager app.
