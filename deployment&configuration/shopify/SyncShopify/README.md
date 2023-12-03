@@ -18,11 +18,7 @@ Once the job finishes, proceed to the Find Product page and verify that all prod
 
 ## Reconcile Product Sync
 
-### HotWax
-- Ensure all products are imported.
-- Cross-verify the product count within HotWax.
-
-### Shopify
+#### Shopify
 - Access the Shopify admin screen.
 - Append the following to the URL for product count:
   - For virtual products: `products/count.json`
@@ -32,6 +28,7 @@ Once the job finishes, proceed to the Find Product page and verify that all prod
 > https://admin.shopify.com/admin/{shop-name}/products/count.json
 > https://admin.shopify.com/admin/{shop-name}/variants/count.json
 
+#### HotWax 
 
 **To retrieve counts in HotWax, follow these structured steps in the webtools:**
 
