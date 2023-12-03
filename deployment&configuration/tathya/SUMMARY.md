@@ -16,10 +16,11 @@
    * [Dashboard Options](understandingDashboards/dashboardOptions.md)
    * [Dashboard Cutomizations](understandingDashboards/dashboardCustomization.md)
  
-* [Configuring Automated Notifications](automatedNotifications/README.md)
-   * [Creating Alerts](automatedNotifications/creatingAlerts.md)
-   * [Creating Reports](automatedNotifications/creatingReports.md)
-
+* [Configuring Alerts & Reports](alerts&Reports/README.md)
+   * [Creating Alerts](alerts&Reports/creatingAlerts.md)
+   * [Creating Reports](alerts&Reports/creatingReports.md)
+      * [Alternate Interfaces to Schedule Reports](automatedNotifications/alternateInterfaceReportScheduling.md)
+     
 * [Creating Roles](creatingRoles/README.md)
   * [List & Modify Roles](creatingRoles/list&ModifyRoles.md)
 

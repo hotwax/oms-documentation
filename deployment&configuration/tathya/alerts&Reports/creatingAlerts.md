@@ -6,7 +6,8 @@ The Add Alert window appears.
 
 ## Basic Details
 
-1. In the **Alert Name** field (required), enter a name for your new alert.
+1. In the **Alert Name** field (required), enter a name for your new alert.This will also serve as the subject of the email.
+
 2. In the **Owner's** field (required), select one or more owners for the alert. Owners have the ability to edit an alert and are notified in case of any execution failures.
 3. In the **Description** (optional) field, enter a short but meaningful description of the alert, to be included in the alert message.
 
@@ -31,6 +32,24 @@ The first schedule option enables you to specify a highly granular schedule base
 After setting a schedule, the subsequent **CRON** field will automatically populate with an equivalent CRON expression that represents your defined schedule.
 
 Alternatively, you can also directly enter a CRON expression by selecting the secondary radio button and entering the expression in the **CRON Schedule** field.
+
+**Note:** A CRON expression is a string representing a schedule. It is used to define the timing of recurring tasks or jobs in systems where periodic execution of tasks is required.
+
+The basic structure of a CRON expression consists of five fields, representing minute, hour, day of the month, month, and day of the week. Each field can have a specific value or a wildcard (*) to represent any possible value. Here's the general format:
+
+* * * * *
+| | | | |
+| | | | +----- Day of the week (0 - 6) (Sunday is both 0 and 7)
+| | | +------- Month (1 - 12)
+| | +--------- Day of the month (1 - 31)
+| +----------- Hour (0 - 23)
++------------- Minute (0 - 59)
+
+### For Example:
+
+- `0 0 * * *`: Check data at midnight every day.
+- `*/15 * * * *`: Check data every 15 minutes.
+- `0 2 * * 1-5`: Check data at 2:00 AM every weekday (Monday to Friday).
 
 ## Select Timezone
 
