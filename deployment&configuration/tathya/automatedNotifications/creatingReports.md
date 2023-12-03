@@ -1,4 +1,4 @@
-# How to Schedule Reports
+# How to Create Reports
 
 After successfully setting up alerts, you may also want to generate regular reports to keep track of important metrics. Tathya allows you to automate the process of creating and sending reports at specified intervals.
 
