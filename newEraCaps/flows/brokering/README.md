@@ -17,11 +17,13 @@ After CSRs apply a reshipped tag to orders where the warehouse indicates that it
 When the OMS detects that an order has canceled items which were previously allocated to the New Era Caps warehouse, NiFi will produce a file of the remaining items which are allocated to the warehouse. This file is then consumed by a job in HotWax which removes their “Fulfillment History” records in the OMS.
 
 **Order Fulfillment History**
+
 In order to understand the rest of the implementation, understanding “Fulfillment Sent History” is necessary. Order Sent History (OFH) is created for order items when their fulfillment has been posted to an external system. OFH records include a reference ID of the system the fulfillment has been shared with, allowing the OMS to track fulfillment communications of the same order with multiple systems.
 
 Using OFH, the OMS is able to accurately retry failed fulfillment communications to external systems, always guaranteeing that it has updated all dependent systems of order fulfillment.
 
 **Why Order Fulfillment History is deleted**
+
 By deleting the Order Fulfillment History records for order items that have been deemed eligible to be included in the “ReShipped” feed, the brokering feed file for the New Era Caps warehouse from the OMS automatically includes these orders in the new feed that it generates.
 
 The job that deletes OFH records is also responsible for adding a “RESHIPPED” attribute to the items which need to be included in the reshipped order item feed.
@@ -50,4 +52,4 @@ Then we have a separate NiFi "ReShipped to Warehouse" flow which identifies all 
 
 The flow would also then subsequently update the order attribute value to "<orderName>_R" indicating that the order has been included in a re-shipped feed to the warehouse?
 
-If the New Era teams to manually re-ship this item, they can manually change the value of the attribute to "pending"
+If the New Era Caps team wants to manually re-ship this item, they can manually change the value of the attribute to "pending"
