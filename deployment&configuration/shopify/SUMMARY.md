@@ -9,5 +9,6 @@
 * [Setup Facilities](ShopifyIntegration/MapLocations.md)
 
 ## Flows
-* [Initial Sync](SyncShopify/README.md)
+* [Initial Product Sync](SyncShopify/README.md)
 * [Kit Products](SyncShopify/kitProducts.md)
+* [Initial Order Sync](SyncShopify/importOrders.md)
