@@ -6,7 +6,7 @@ To link multiple Shopify stores sharing the same product catalog, create a separ
 
 Establish a corresponding shop in the HotWax Commerce OMS. This step ensures that the OMS is aware of and linked to your Shopify store, laying the foundation for coherent data exchange between the two platforms.
 
-To initiate the creation of a Shop, follow these steps:
+**To initiate the creation of a Shop, follow these steps:**
 
 1. Access the OMS platform at https://{instanceName}.hotwax.io/commerce/control/main.
 2. Navigate to the Hamburger Menu.
