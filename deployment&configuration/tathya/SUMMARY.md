@@ -19,7 +19,8 @@
 * [Configuring Automated Notifications](automatedNotifications/README.md)
    * [Creating Alerts](automatedNotifications/creatingAlerts.md)
    * [Creating Reports](automatedNotifications/creatingReports.md)
-
+      * [Alternate Interfaces to Schedule Reports](automatedNotifications/alternateInterfaceReportScheduling.md)
+     
 * [Creating Roles](creatingRoles/README.md)
   * [List & Modify Roles](creatingRoles/list&ModifyRoles.md)
 
