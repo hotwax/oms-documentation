@@ -1,20 +1,27 @@
 # Setup a Shopify Configuration
 
-New Shopify stores can be connected by going to "Create Shopify Shop" from the sidebar.
+{% hint style="info" %}
+To link multiple Shopify stores sharing the same product catalog, create a separate Shop for each store. This approach streamlines management, ensuring synchronized updates and consistent control over the shared inventory and product information across all storefronts. 
+{% endhint %}
+
+Establish a corresponding shop in the HotWax Commerce OMS. This step ensures that the OMS is aware of and linked to your Shopify store, laying the foundation for coherent data exchange between the two platforms.
+
+To initiate the creation of a Shop, follow these steps:
+
+1. Access the OMS platform at https://{instanceName}.hotwax.io/commerce/control/main.
+2. Navigate to the Hamburger Menu.
+3. In the Shopify section, click on "Create Shopify Shop" to open the dedicated page for setting up a new Shopify Shop. 
+
 
 Fill out your Shopify details:
 
-**Shop ID:** The internal name of your Shopify Store. The default value is “SHOP” but if you need to setup multiple stores, change it to a unique value. This is often needed for retailers with multiple brands. For example you are setting Shopify stores for Canada and US, it should be US_SHOP and CA_SHOP. 
-
-**Shopify Config ID:** ShopifyConfigId should be “SHOP_CONFIG” if you're only connecting one store. Add a unique value when connecting multiple stores.
-
-
-**Shopify Config Name:** ShopifyConfigName varies projectwise. Use the instance name along with Shopify Config. Ex. WSC Shopify Config
-
-**Shop:** Shop value will be the shop name from the shopify URL. For example if the URL is hc-demo.myshopify.com, the shop name will be hc-demo
-
-**Access Token and Shared Secret:**  Access Token and shared Secret will be shared by the retailer or can be fetched during custom app setup.
-
-**Product Store:** Product Store to connect Shopify store to.
-
-**WebSite:** If you changed your website name to your Product Store name, use the same name here.
+| Field                | Description                                                                                               |
+|----------------------|-----------------------------------------------------------------------------------------------------------|
+| **Shop ID**          | The internal name of your Shopify Store. The default is `SHOP`, but change it to a unique value for multiple stores (e.g., US_SHOP, CA_SHOP).                                  |
+| **Shopify Config ID**| ShopifyConfigId;  `SHOP_CONFIG` for a single store, add a unique value for multiple stores. Example: CA_SHOP_CONFIG                |
+| **Shopify Config Name**| Project-specific; use the instance name along with Shopify Config (e.g. NotNaked Shopify Config).                |
+| **Shop**             | The value is the shop name from the Shopify URL (e.g., hc-demo for hc-demo.myshopify.com).                  |
+| **Access Token**     | Provided by the retailer or obtained during custom app setup.                                              |
+| **Shared Secret**    | Provided by the retailer or obtained during custom app setup.                                              |
+| **Product Store**    | Connects the Shopify store to the Product Store.                                                            |
+| **WebSite**          | If the website name is changed to the Product Store name, use the same name here.                            |
