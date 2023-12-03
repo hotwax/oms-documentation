@@ -1,7 +1,7 @@
 # Map Shopify POS Locations to HotWax Commerce Facilities
 
 {% hint style='info' %}
-While mapping locations, you will need to map default location in Shopify with Brokering queue i.e _NA_ in Hotwax, ensuring that new orders arrive at the brokering queue for allocation. For each instance, you will have one default location which will be declared by the retailer, you can find this information in the implementation document. 
+While mapping locations, you will need to map the default location in Shopify with Brokering queue i.e. _NA_ in Hotwax, ensuring that new orders arrive at the Brokering queue for allocation. For each instance, you will have one default location which will be declared by the retailer, you can find this information in the implementation document. 
 {% endhint %}
 
 On the Shopify Config Detail page for your store, follow these steps:
