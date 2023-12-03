@@ -18,7 +18,7 @@ When the OMS detects that an order has canceled items which were previously allo
 
 **Order Fulfillment History**
 
-In order to understand the rest of the implementation, understanding “Fulfillment Sent History” is necessary. Order Sent History (OFH) is created for order items when their fulfillment has been posted to an external system. OFH records include a reference ID of the system the fulfillment has been shared with, allowing the OMS to track fulfillment communications of the same order with multiple systems.
+In order to understand the rest of the implementation, understanding “Fulfillment Sent History” is necessary. Order Fulfillment History (OFH) is created for order items when their fulfillment has been posted to an external system. OFH records include a reference ID of the system the fulfillment has been shared with, allowing the OMS to track fulfillment communications of the same order with multiple systems.
 
 Using OFH, the OMS is able to accurately retry failed fulfillment communications to external systems, always guaranteeing that it has updated all dependent systems of order fulfillment.
 
