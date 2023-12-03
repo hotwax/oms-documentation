@@ -10,4 +10,4 @@
 
 ## Flows
 * [Initial Sync](SyncShopify/README.md)
-* [Import Products](SyncShopify/ImportProducts.md)
+* [Kit Products](SyncShopify/kitProducts.md)
