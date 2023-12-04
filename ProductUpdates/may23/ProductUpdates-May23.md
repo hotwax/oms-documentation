@@ -39,7 +39,6 @@
 <figure><img src="https://www.hotwax.co/hs-fs/hubfs/View%20Old%20SKU%20values.png?width=2084&#x26;height=1520&#x26;name=View%20Old%20SKU%20values.png" alt=""><figcaption></figcaption></figure>
 
 
-
 **Inventory Cycle Count**
 
 9. The Inventory Count App now features a configurable option to display a product's QOH expected at a location during periodic cycle counts, facilitating comparisons of variances between actual inventory and system records on the Product Detail page.\
@@ -48,7 +47,7 @@
 
 <figure><img src="https://www.hotwax.co/hs-fs/hubfs/View%20QOH%20in%20Cycle%20count.png?width=2050&#x26;height=1502&#x26;name=View%20QOH%20in%20Cycle%20count.png" alt=""><figcaption></figcaption></figure>
 
-Store Fulfillment
+**Store Fulfillment*8
 
 10. The Store Fulfillment App now offers Japanese language support, allowing fulfillment teams to view product and customer details in Japanese.\
 
