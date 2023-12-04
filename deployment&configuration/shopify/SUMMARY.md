@@ -14,3 +14,4 @@
 
 ## Additional resources
 * [Kit Products](SyncShopify/kitProducts.md)
+* [POS Completed Orders](SyncShopify/posCompletedOrders.md)
