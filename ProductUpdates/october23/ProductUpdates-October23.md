@@ -2,7 +2,7 @@
 
 ## Order Management System
 
-1. Order: Manage Order Item Attributes
+*1. Order: Manage Order Item Attributes
 
 Customer Service representatives can now add order item attributes directly from the Sales Order View page to avoid any errors in order processing and financial reporting.
 
