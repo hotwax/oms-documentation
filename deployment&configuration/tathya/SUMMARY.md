@@ -19,7 +19,7 @@
 * [Configuring Alerts & Reports](alerts&Reports/README.md)
    * [Creating Alerts](alerts&Reports/creatingAlerts.md)
    * [Creating Reports](alerts&Reports/creatingReports.md)
-      * [Alternate Interfaces to Schedule Reports](automatedNotifications/alternateInterfaceReportScheduling.md)
+      * [Alternate Interfaces to Schedule Reports](alerts&Reports/alternateInterfaceReportScheduling.md)
      
 * [Creating Roles](creatingRoles/README.md)
   * [List & Modify Roles](creatingRoles/list&ModifyRoles.md)
