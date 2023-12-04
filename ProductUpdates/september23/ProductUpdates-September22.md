@@ -2,15 +2,13 @@
 
 ## Order Management System
 
-### Orders
-
-#### View Fulfillment History
+**1. Orders: View Fulfillment History**
 
 Merchants can now view order item fulfillment history on the Order View page to ensure that order fulfillment status updates are pushed to the external e-commerce system.
 
 <figure><img src="https://www.hotwax.co/hs-fs/hubfs/View%20fulfillment%20history.png?width=2000&#x26;name=View%20fulfillment%20history.png" alt=""><figcaption><p>Fulfillment History</p></figcaption></figure>
 
-#### Customize Rebrokering Rules
+**2. Orders: Customize Rebrokering Rules**
 
 Retailers can now customize rebrokering rules to exclude specific facility types.
 
@@ -18,9 +16,7 @@ Retailers can now customize rebrokering rules to exclude specific facility types
 
 <figure><img src="https://www.hotwax.co/hubfs/Customize%20Rebrokering%20rules-3.png" alt=""><figcaption><p>Customize rebrokering rule</p></figcaption></figure>
 
-### **Products**
-
-#### Improved Product Synchronization
+**3. Products: Improved Product Synchronization**
 
 Improved HotWax Commerce - Shopify product synchronization process to ensure products that are deleted and recreated under a new parent product in Shopify will now be correctly linked to the new parent product in HotWax Commerce.
 
@@ -28,9 +24,7 @@ Improved HotWax Commerce - Shopify product synchronization process to ensure pro
 
 <figure><img src="https://www.hotwax.co/hubfs/Improved%20product%20Synchronizatio-1.png" alt=""><figcaption><p>Improved Product Synchronizations</p></figcaption></figure>
 
-### **Inventory**
-
-#### Unfillable Hold Parking
+**4. Inventory: Unfillable Hold Parking**
 
 Introduced a new parking queue called "unfillable hold parking” to park orders that cannot be fulfilled immediately however they can be fulfilled at a future date.
 
@@ -40,9 +34,7 @@ Introduced a new parking queue called "unfillable hold parking” to park orders
 
 ## Applications
 
-### BOPIS
-
-#### Handling Instructions
+**1. BOPIS: Handling Instructions**
 
 Store associates can now view handling instructions with orders to prepare orders as per customers’ special requests.
 
