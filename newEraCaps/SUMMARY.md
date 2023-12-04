@@ -9,4 +9,8 @@
 * [Brokering](flows/brokering/README.md)
 * [Fulfillment](flows/fulfillment/README.MD)
   * [Financial Posting](flows/fulfillment/financialPosting.md)
+  * [BI/BW Feed](flows/fulfillment/bibwFeed.md)
+  * [Store Fulfillment Feed](flows/fulfillment/storeFulfilledDeltaFeed.md)
+  * [E Hidden 3 Feed](flows/fulfillment/eHidden3Feed.md)
+  * [WMS Feed](flows/fulfillment/wmsFeed.md)
 * [Sales Order]
