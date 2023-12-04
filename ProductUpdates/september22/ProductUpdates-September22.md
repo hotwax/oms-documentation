@@ -2,13 +2,19 @@
 
 ### Order Management System
 
+**Orders**
+
 1. If a BOPIS order is handed over to the customer but order status is not updated in HotWax Commerce, it can be marked completed on the Sales Order View page. \
    \
    [Read more](update-bopis-order-fulfillment-status.md)\
 
+**Purchase order**
+
 2. If the external Purchase Order ID is missing, HotWax Commerce will use its internal Purchase Order ID on the Find Purchase Order page.
 
 ![](https://www.hotwax.co/hs-fs/hubfs/demo-oms.hotwax%2020.png?width=890\&height=661\&name=demo-oms.hotwax%2020.png)
+
+**Products**
 
 3. On the Find Product page, merchandisers can now filter pre-order and backorder products
 
