@@ -2,7 +2,7 @@
 
 ## Order Management System
 
-#### 1. Order: General Operations Parking Queue
+#1. Order: General Operations Parking Queue
 
 All historical data for canceled and completed orders will now be stored in a new queue named **general operations parking**, during the initial setup. This change ensures that the Fulfillment, Demand, and Sales Reports exclusively showcase the data for orders fulfilled by HotWax Commerce.
 
