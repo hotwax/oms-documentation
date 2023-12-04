@@ -9,6 +9,13 @@ The feed for BI/BW is generated after full order completion to ensure that the O
 | 20231117   | 90003906     | 102         |             | 4550538204877 | 1   | 9900 | 9900.0     | 990.0| 0.0     | 10890.0        | 5                | Ext Other Gateways |
 
 
+## File Naming Scheme
+- **File Name:** JP_ECOM_HOT_YYMMDD_HHMM.csv
+- **File Path:** TBD
+- **File Frequency:** Once a day (end of day)
+
+## Field Descriptions
+
 ### Order Date
 The "Order Date" represents the date when the order is placed. It is expressed in the YYYYMMDD format.
 
