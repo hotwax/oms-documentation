@@ -8,6 +8,11 @@ When this kind of soft allocated order is imported, the soft allocated items of 
 
 In the event that a store cannot fulfill an order and must reject it for reallocation, those orders will not be allocated to the warehouse due to the WMS's inability to differentiate between two separate shipments of the same order when creating its CSV feed of fulfilled orders.
 
+
+{% hint style="danger" %}
+To support this workflow, the warehouse facility type must be passed as an excluded `type` in the Rejected Order Brokering Job.
+{% endhint %}
+
 The rigidity of the WMS software used by New Era Caps also means that if the warehouse cannot fulfill an order item, it is canceled on Shopify manually by a CSR. When CSRs preform this cancellation on Shopify, the also add a “Reshipped” tag on the order to indicate that HotWax needs to resend it to the WMS.
 
 ## How “Reshipped” works in HotWax Commerce
@@ -48,13 +53,16 @@ Value: RESHIPPED
 
 ## Proposed design
 
-Have a flow in NiFi that checks order items that have been recently (time based cursor) cancelled and adds an order attribute:
+A flow in NiFi that checks order items that have been recently (time based cursor) canceled from the warehouse and adds an order attribute:
 
 Key: "ReShipped"
+
 Value: "Pending"
 
-Then we have a separate NiFi "ReShipped to Warehouse" flow which identifies all orders with this attribute where the value is "pending" and then generates a "ReShipped" feed for the warehouse where all order names have an "_R" appended to them. Even though the attribute is at an order level, the feed would only include items currently allocated to the warehouse.
+Because canceled items are no longer located at the facility they were brokered too, NiFi will use the Order Facility Change history to identify canceled items that were at the warehouse facility before being canceled.
 
-The flow would also then subsequently update the order attribute value to "<orderName>_R" indicating that the order has been included in a re-shipped feed to the warehouse?
+A separate NiFi "ReShipped to warehouse" flow identifies all orders with this attribute where the value is "pending" and then generates a "ReShipped" feed for the warehouse where all order names have an "_R" appended to them. The flow would also then subsequently update the order attribute value to "{orderName}_R" indicating that the order has been included in a re-shipped feed to the warehouse.
 
-If the New Era Caps team wants to manually re-ship this item, they can manually change the value of the attribute to "pending"
+Regenerating the brokering feed for these items also updates the ExternalFulfillmentOrderItem record for them. It is yet to be determined if the OMS will add a new status for these items or not.
+
+If the New Era team wants to manually re-ship this item, they can manually change the value of the attribute to "pending".
