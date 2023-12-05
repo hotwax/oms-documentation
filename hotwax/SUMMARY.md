@@ -2,7 +2,8 @@
 
 * [Initial API authentication](apiAuthentication.md)
 
-## API
+
+## APIs
 
 * [Inventory](api/inventory/README.md)
   * [Check Inventory](<Inventory/Check inventory.md>)
@@ -36,7 +37,7 @@
 
 ## Additional Resources
 
-* [Fulfilled Orders Items Feed](<Fulfillment/Feed/Fulfilled order items feed.md>)
+* [Fulfilled Orders Items Feed](Fulfillment/Feed/Fulfilled order items feed.md)
 * [Fulfilled Orders Items Sample](additional-resources/fulfilled-orders-items-sample.md)
 * [Reset Inventory Sample](additional-resources/reset-inventory-sample.md)
 * [Return Feed Sample](additional-resources/return-feed-sample.md)
