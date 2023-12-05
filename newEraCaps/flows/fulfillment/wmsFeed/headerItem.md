@@ -128,11 +128,12 @@ There is no default value in case of unexpected payment methods; however, it is 
 Further clarification may be needed on how to handle orders using gift card payments.
 {% endhint %}
 
-## DLV PAYMENT (S-15)
 {% hint style="warning" %}
-**Only for Cash on Delivery orders**
+**DLV PAYMENT** fields are for Cash on Delivery orders ONLY.
 Leave empty for other payment types.
+
 {% endhint %}
+## DLV PAYMENT (S-15)
 - **Description:** Amount of Payment Including VAT (Only Cash on Delivery)
 - **Position:** 19-23
 - **Additional Information:**
@@ -144,21 +145,20 @@ Leave empty for other payment types.
 ## DLV PAYMENT (S-16)
 - **Description:** Amount of Payment Including VAT and VAT Amount (Only Cash on Delivery)
 - **Position:** 19-23
-- **Example Value:** (Numeric value representing the amount)
 - **Additional Information:**
   - This field is applicable only for orders with the payment type "Cash on Delivery" (DLV PAYMENT S-14 = 2).
   - It represents the total payment amount, including VAT, for cash on delivery orders, as well as the corresponding VAT amount.
   - There is a distinction between S-15 and S-16:
     - S-15 represents the total payment amount.
     - S-16 represents the sum of sales tax on the item and the shipping sales tax.
-  - The value for this field is calculated based on the sum of order adjustments where `orderAdjustmentTypeId` is 'SHIPPING_SALES_TAX'.
+  - The value for this field is calculated based on the sum of order adjustments where `orderAdjustmentTypeId` is `SHIPPING_SALES_TAX`.
   - Please refer to the provided Ruby code for specific details on the calculation: [Ruby Code](https://github.com/flagship-llc/newera_wms/blob/master/app/services/generate_order_file.rb#L268).
-{% hint style="warning" %}
+{% hint style="danger" %}
 The distinction between S-15 and S-16 is not clear
 {% endhint %}
 
 ## Consignee (S-17 to S-25)
-(BILL-TO INFORMATION)
+*BILL-TO INFORMATION*
 
 - **S-17:** SAP Bill-to Customer Code (Length: 10, Bytes: 10)
 - **S-18:** Bill-to Name (Length: 35, Bytes: 35)
@@ -182,9 +182,11 @@ The distinction between S-15 and S-16 is not clear
 - **S-32:** Ship-to Postal Code (Length: 9, Bytes: 9)
 - **S-33:** Not used (Length: 35, Bytes: 35)
 - **S-34:** Ship-to Phone Number (Length: 14, Bytes: 14)
+- **S-35** Not used (Length: 30, Bytes: 30)
+- **S-36** Not shared
+- **S-37** Not used (Length: 14, Bytes: 14)
 
 ## STATUS (S-38)
-
 - **S-38:** Order Status (Length: 2, Bytes: 2)
   - **Description:** Delivery status indicating the progress of the order fulfillment.
   - **Mandatory:** Yes
@@ -203,27 +205,30 @@ The distinction between S-15 and S-16 is not clear
 
 <details>
 <summary>All Mappings Options</summary>
-- 1: NAVISION (B2B) Delivery Slip Only
-- 2: EC Delivery Slip Only
-- 30: Chain Store Slip (TSA)
-- 31: Chain Store Slip (Robot)
-- 32: Chain Store Slip (DAISEN)
-- 33: Chain Store Slip (Mycal)
-- 34: Chain Store Slip (neuve-a)
-- 35: Chain Store Slip (KUROKAWA Sports)
-- 36: Chain Store Slip (MITSUHASHI)
-- 37: Chain Store Slip (AKATSUKA)
-- 38: Chain Store Slip (fithouse)
-- 4: NAVISION (B2B) Delivery Slip + Chain Store Slip
-- 5: NAV Delivery Slip without Amount
-- 6: Delivery Slip of MURASAKI Sports
-- 70: Chain Store Slip Type 1 (Mycal)
-- 71: Chain Store Slip Type 1 (KOTOBUKI SHOJI)
-- 72: Chain Store Slip Type 1 (GEAR'S JAM)
-- 73: Chain Store Slip Type 1 (YOSHIMOTO)
-- 74: Chain Store Slip Type 1 (BIG AMERICAN SHOP)
-- 75: Chain Store Slip Type 1 (YATOGOLF)
-- 99: NO Delivery Slip
+<ul>
+  <li>1: NAVISION (B2B) Delivery Slip Only</li>
+  <li>2: EC Delivery Slip Only</li>
+  <li>30: Chain Store Slip (TSA)</li>
+  <li>31: Chain Store Slip (Robot)</li>
+  <li>32: Chain Store Slip (DAISEN)</li>
+  <li>33: Chain Store Slip (Mycal)</li>
+  <li>34: Chain Store Slip (neuve-a)</li>
+  <li>35: Chain Store Slip (KUROKAWA Sports)</li>
+  <li>36: Chain Store Slip (MITSUHASHI)</li>
+  <li>37: Chain Store Slip (AKATSUKA)</li>
+  <li>38: Chain Store Slip (fithouse)</li>
+  <li>4: NAVISION (B2B) Delivery Slip + Chain Store Slip</li>
+  <li>5: NAV Delivery Slip without Amount</li>
+  <li>6: Delivery Slip of MURASAKI Sports</li>
+  <li>70: Chain Store Slip Type 1 (Mycal)</li>
+  <li>71: Chain Store Slip Type 1 (KOTOBUKI SHOJI)</li>
+  <li>72: Chain Store Slip Type 1 (GEAR'S JAM)</li>
+  <li>73: Chain Store Slip Type 1 (YOSHIMOTO)</li>
+  <li>74: Chain Store Slip Type 1 (BIG AMERICAN SHOP)</li>
+  <li>75: Chain Store Slip Type 1 (YATOGOLF)</li>
+  <li>99: NO Delivery Slip</li>
+</ul>
+
 </details>
 
 ## DC Incidental Operation Flag (S-40 to S-42)
