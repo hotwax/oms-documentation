@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Intial API authentication](README.md)
+* [Initial API authentication](apiAuthentication.md)
 
 ## API
 
