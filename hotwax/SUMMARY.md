@@ -21,7 +21,7 @@
   * [Ready To Ship Items](<Fulfillment/APIs/Ready-to-ship items.md>)
   * [Retry Shipping Label](<Fulfillment/APIs/Retry shipping label.md>)
   * [Shipping Label And PackingSlip](<Fulfillment/APIs/Shipping label and packing slip.md>)
-  * [Shipping Label PDF](<Fulfillment/APIs/Shipping label PDF..md)
+  * [Shipping Label PDF](<Fulfillment/APIs/Shipping label PDF..md>)
   * [Update Orders](<Fulfillment/APIs/Update orders.md>)
   * [Update And Import File](<Fulfillment/APIs/Upload and Import file.md>)
 * [Perform Find](<Perform find.md>)
