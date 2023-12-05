@@ -78,47 +78,47 @@ We have marked this as leave empty but this should simply be the total shipping 
 ## BUSINESS TYPE (S-12)
 - **Description:** Wholesale/EC Indicator
 - **Position:** 1-1
-- **Example Value:** 2
-- **Additional Information:**
-  - This field indicates the business type or category of the order.
-  - The values are mapped as follows:
-    - 1 = EC(B2B)
-    - 2 = EC(B2C)
-    - 3 = NAV(B2B)
-    - 4 = Transfer Order
-  - For Transfer Order, the value will be 4; for other types, the value will be 2.
-  - Consider using OrderTypeId from OrderHeader, mapping it to:
-    - 2 for SALES_ORDER
-    - 4 for TRANSFER_ORDER.
+- **OMS Value:** 2
+  
+<details>
+<summary>Additional Information</summary>
+This field indicates the business type or category of the order.
+- The values are mapped as follows:
+  - 1 = EC(B2B)
+  - 2 = EC(B2C)
+  - 3 = NAV(B2B)
+  - 4 = Transfer Order
+For Transfer Order, the value will be 4; for other types, the value will be 2.
+Consider using OrderTypeId from OrderHeader, mapping it to:
+  - 2 for SALES_ORDER
+  - 4 for TRANSFER_ORDER.
+</details>
+
 
 ## DLV SERVICE (S-13)
-
 - **Description:** Delivery Service
 - **Position:** 2-2
-- **Example Value:** 3
 - **Data Type:** Numeric
 - **Additional Information:**
   - This field represents the type delivery company used.
   - Numeric values are assigned as follows:
-    - 1=Perican
-    - 2=Air
-    - 3=Sagawa
-  - It is usually mapped with the Carrier Party of the shipgroup, and the value is populated based on the carrier party (1, 2, or 3).
-  - Provides information about the selected delivery service for the order.
+    - 1 = Perican
+    - 2 = Air
+    - 3 = Sagawa
+  - This is mapped with the Carrier Party of the shipgroup.
 
 
 ## DLV PAYMENT (S-14)
-
 - **Description:** Payment Type
 - **Position:** 1-1
 - **Example Value:** 1
 - **Additional Information:**
   - This field represents the type of payment for the order.
   - Numeric values are assigned as follows:
-    - 1=Prepaid (Credit Card)
-    - 2=Cash on Delivery
-    - 3=Amazon Pay
-    - 4=Paidy
+    - 1 = Prepaid (Credit Card)
+    - 2 = Cash on Delivery
+    - 3 = Amazon Pay
+    - 4 = Paidy
   - The payment method of the order is checked, and the value is populated accordingly (1, 2, 3, or 4).
   - The field is associated with the `paymentMethodTypeId` in the `OrderPaymentPreferenceAndType`.
 {% hint style="warning" %}
@@ -129,19 +129,19 @@ Further clarification may be needed on how to handle orders using gift card paym
 {% endhint %}
 
 ## DLV PAYMENT (S-15)
-
+{% hint style="warning" %}
+**Only for Cash on Delivery orders**
+Leave empty for other payment types.
+{% endhint %}
 - **Description:** Amount of Payment Including VAT (Only Cash on Delivery)
 - **Position:** 19-23
-- **Example Value:** (Numeric value representing the amount)
 - **Additional Information:**
   - This field is applicable only for orders with the payment type "Cash on Delivery" (DLV PAYMENT S-14 = 2).
   - It represents the total payment amount, including VAT, for cash on delivery orders.
   - The amount should correspond to the order total, not individual item totals.
-  - For payment methods other than Cash on Delivery, the field should be left empty.
   - The field is associated with the `grandTotal` in the `OrderHeader`.
 
 ## DLV PAYMENT (S-16)
-
 - **Description:** Amount of Payment Including VAT and VAT Amount (Only Cash on Delivery)
 - **Position:** 19-23
 - **Example Value:** (Numeric value representing the amount)
