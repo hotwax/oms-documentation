@@ -11,7 +11,7 @@ Bearer token authentication utilizes security tokens. After a successful login r
 Hotwax Commerce relies on robust security features provided by JWT (JSON Web Token) to ensure a safe and trustworthy API communication environment. This mechanism guarantees user authenticity, authorizes their actions, and maintains data integrity through digital signatures. To create JWT, follow these steps: 
 
 1. **User Authorization:**
-   - Create a unique user from [users.hotwax.io](https://users.hotwax.io/) and assign admin permissions, e.g., Boomi Integration.
+   - Create a unique user from [users.hotwax.io](https://users.hotwax.io/) and assign admin permissions, e.g. NetSuite Integration.
 
 2. **Access OMS Dashboard:**
    - Navigate to the Hamburger menu in OMS: `https://{instanceName}.hotwax.io/`
@@ -36,10 +36,6 @@ Hotwax Commerce relies on robust security features provided by JWT (JSON Web Tok
 
 Sample endpoint: `https://<host_name>.hotwax.io/<api_name>/login`
 
-
-### Usage
-
-The generated JWT token serves as a powerful credential, enabling authenticated access to Hotwax Commerce OMS data. Utilizing this token in API calls enhances both security and efficiency, contributing to the seamless integration and performance of the system.
 
 ## HotWax APIs Requiring Authentication
 
