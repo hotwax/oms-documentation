@@ -2,7 +2,6 @@
 
 * [Initial API authentication](README.md)
 
-
 ## APIs
 
 * [Inventory](api/inventory/README.md)
@@ -37,7 +36,7 @@
 
 ## Additional Resources
 
-* [Fulfilled Order Items Feed](Fulfillment/Feed/Fulfilled%20order%20items%20feed.md)
-* [Sample Fulfilled Orders Items Sample](Fulfillment/Samples/Fulfilled%20order%20items%20feed%20sample.json)
-* [Sample Reset Inventory csv](Inventory/Samples/Reset%20inventory%20sample.csv)
-* [Sample Return Feed Sample](returns/returnFeedSample.json)
+* [Fulfilled Order Items Feed](<Fulfillment/Feed/Fulfilled order items feed.md>)
+* [Sample Fulfilled Orders Items Sample](additional-resources/sample-fulfilled-orders-items-sample.md)
+* [Sample Reset Inventory csv](additional-resources/sample-reset-inventory-csv.md)
+* [Sample Return Feed](additional-resources/sample-return-feed.md)
