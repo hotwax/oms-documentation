@@ -291,33 +291,236 @@ As of now we expect this to be blank. Need to confirm with New Era.
 
 - **S-45:** Not used
 - **S-46:** Customer PO
+{% hint style="danger" %}
+As of now we expect this to be blank. Need to confirm with New Era.
+{% endhint %}
 - **S-47:** Not used
 - **S-48:** Not used
-- **S-49:** Sales Order Date
-- **S-50:** Payment Terms Code
-- **S-51:** Hard coded
-- **S-52:** Total retail price (Including VAT)
-- **S-53:** Sales with VAT
-- **S-54:** Sales no VAT
-- **S-55:** VAT
-- **S-56:** Total Price (JPY)
+- **S-49:** Order Date (Length: 10, Bytes: 10)
+  - **Description:** Sales Order Date field containing the value of the order date.
+  - **Notes:**
+    - The format for the date should be 'yyyy/mm/dd'.
+    - Confirmed to be the same value as ORDER DATE (S-5).
+  - **Example:** '2023/04/20'
+
+- **S-50:** Payment Term (Length: 30, Bytes: 30)
+  - **Description:** Payment Terms Code field.
+  - **Notes:**
+    - This field signifies the payment terms associated with the order.
+    - If not applicable, the field should be left blank.
+  - **Example:** 'Z624'
+{% hint style="danger" %}
+As of now we expect this to be blank. Need to confirm with New Era.
+{% endhint %}
+
+- **S-51:** Payment Due Date (Length: 10, Bytes: 10)
+  - **Description:** Hard-coded payment due date.
+  - **Notes:**
+    - This field contains a specific date, and it is hard-coded as '2/5/2031'.
+
+- **S-52:** Total Retail Price (Including VAT) (Length: 20, Bytes: 20)
+  - **Example:** '407376'
+  - **Description:** Total retail price of the order, including VAT. This represents the overall retail value of the items, including any applicable Value Added Tax (VAT).
+
+- **S-53:** Total Sales Price (Including VAT) (Length: 20, Bytes: 20)
+  - **Example:** '203688'
+  - **Description:** Total sales price of the order, including VAT. This specifically represents the final price paid by the customer, inclusive of any applicable Value Added Tax (VAT).
+
+**Note:** While both fields include VAT, the distinction lies in the nature of the amounts. The 'Total Retail Price' may reflect the full retail value of the items, whereas the 'Total Sales Price' is the actual amount paid by the customer, possibly accounting for discounts or promotions.
+
+- **S-54:** Total Price (Without VAT) (Length: 20, Bytes: 20)
+  - **Description:** Total price of the order without VAT.
+  - **Example:** '188600'
+
+- **S-55:** VAT (Length: 20, Bytes: 20)
+  - **Description:** Value Added Tax (VAT) amount associated with the order which is generally about 10%.
+  - **Additional Information:** This field is used to represent the specific VAT amount applicable to the order.
+**Note:** The VAT field should indeed include the Item Sales Tax.
+
+- **S-56:** Total Price (JPY) (Length: 20, Bytes: 20)
+{% hint style="danger" %}
+There is alot of logic here that I am not clear on. Need to review with the team.
+{% endhint %}
+
+  - **Description:** Total price in Japanese Yen (JPY) for the order item, inclusive of the item unit price, item sales tax, and item discount amounts.
+  - **Additional Information:** The total_products_price, shipping_cost, and transaction_fee contribute to the calculation of this field. If the note attribute contains a key with the value "代引き手数料" (COD fee), the transaction_fee is set accordingly, and manual_cod_fee is flagged as true.
+
+Additional Notes
+
+- **total_products_price Calculation:**
+  - The `total_products_price` is calculated as `refundable_quantity * discountedUnitPrice` for each line item.
+  - There's a discussion point regarding whether to include the sum of all item unit prices of an order in this field. Further clarification is needed from New Era team.
+
+- **Total Price (JPY) Components:**
+  - The Total Price (JPY) (S-56) is determined by the sum of S-54 (Total Price (Without VAT)) and S-55 (VAT).
+  - It's mentioned that this sum also includes the `transaction_fee`. Clarification is needed on whether to accommodate the `transaction_fee` in this field.
+  
+- **Discussion Required:**
+  - There's a note indicating the need to check the Ruby Code file for details. A specific question related to including the sum of all item unit prices in the `total_products_price` field requires discussion and clarification from the team.
+
+
 
 ## Shipping Cost (S-57 to S-103)
 
-- **S-57 to S-59:** Not used
-- **S-84 to S-92:** Not used
+**S-57** Shipping Cost
+- **Length:** 20
+- **Bytes:** 20
+
+### Description
+The Shipping Cost field represents the total shipping cost associated with an order.
+
+### Usage
+This field is used to capture the sum of shipping charges, shipping discount, and shipping tax. 
+
+The calculation involves the sum of order adjustments where the order adjustment type is SHIPPING_CHARGES, EXT_SHIP_ADJUSTMENT, or SHIPPING_SALES_TAX.
+
+### Special Considerations
+- For click_and_collect_order, the shipping cost is set to 0.
+- The formula for shipping cost preparation is (Shipping charges - shipping discount) * 1.1.
+{% hint style="danger" %}
+The last line in considerations is not clear, what is this calculation supposed to be used for?
+{% endhint %}
+
+**S-58** Handling Charge
+- **Length:** 20
+- **Bytes:** 20
+- **Data Type:** NUMERIC
+
+### Description
+The Handling Charge field is reserved for handling charges associated with an order.
+
+### Usage
+This field is currently marked as not used, and empty spaces will be added. Discussions are ongoing regarding the inclusion of the transaction_fee in this field. Transaction_fee is set in the customAttributes at the OrderLevel.
+
+### Open Discussion Topics
+1. Clarification on how transaction_fee is modeled in handling charges.
+2. Verification of the existence of transaction_fee in the differences file.
+
+- **S-59:** Not used
+  - **Length:** 20
+  - **Bytes:** 20
+  - **Data Type:** NUMERIC
+
+### Description
+The Total Retail Price (Including VAT) field (S-84) represents the total retail price of an order item, including VAT, item unit price, item sales tax, and item discount amounts.
+
+### Usage
+This field should contain the total value of the order item, which includes the sum of the item unit price, item sales tax, and item discount amounts.
+
+### Notes
+- The value in this field is calculated based on the total_products_price, which is refundable_quantity multiplied by discountedUnitPrice for each line item.
+- It includes the sum of the fields S-54 (Total Price Without VAT) and S-55 (VAT).
+- The exact calculation may need confirmation from the team.
+
+## S-85 Shop Code
+- **Field Name:** Shop Code
+- **Length:** 4
+- **Bytes:** 4
+- **Not Used**
+
+### Description
+The Shop Code field (S-85) is not used in the context of the brokered order items file.
+
+## S-86 Status
+- **Field Name:** Status
+- **Length:** 3
+- **Bytes:** 3
+- **Not Used**
+
+### Description
+The Status field (S-86) is not used in the context of the brokered order items file.
+
+## S-87 to S-93 N/A Fields
+- **Field Names:** S-87, S-88, S-89, S-90, S-91, S-92, S-93
+- **Length:** 30 for each
+- **Bytes:** 1000, 30, 30, 30, 30, 30, 30 (respectively)
+- **Not Used**
+
+### Description
+These fields (S-87 to S-93) are not used in the context of the brokered order items file.
+
 - **S-93 to S-103:** Not used
 
-## Record Kind (S-61)
+***
+# Order Item Records
 
+## Record Kind (S-61)
 - **Description:** Detail indicator
 - **Position:** 1-1
+- The Detail Indicator (S-61) field will be fixed at 1 byte and always set to 'D'.
 
 ## Item Info (S-62 to S-103)
 
-- **S-62:** SAP delivery schedule line
-- **S-63:** SAP material + size
-- **S-65:** Quantity
-- **S-66:** HARDCODE = WH
-- **S-67:** Nueve A JAN code
-- **S-68 to S-103:** Not used
+**S-62:** SAP delivery schedule line
+  - The line item sequence ID of the order item from the OMS
+{% hint style="danger" %}
+Can we just use the order line item sequence ID from the OMS?
+{% endhint %}
+
+**S-63** Item No.
+- **Length:** 25
+- **Bytes:** 25
+
+### Description
+Used to represent the SAP material and size of an item.
+
+#### Data Format
+- Example: "11308406-758"
+
+### Notes
+1. Confirmation is required regarding the goodIdentificationTypeId.
+
+**S-65:** Quantity
+
+
+**S-66:** HARDCODE = WH
+  
+**S-67:** Nueve A JAN code
+- **Length:** 13
+- **Bytes:** 13
+- **Type:** JAN code
+- **Description:** Contains the JAN (Japanese Article Number) code associated with the brokered order items. JAN code will be extracted from the GoodIdentifications list. The goodIdentificationTypeId needs to be confirmed for accurate retrieval.
+
+Note: It is recommended to use the variant barcode value for this field.
+
+**S-71:** SKU code (For Customer)
+
+- **Length:** 25
+- **Bytes:** 25
+- **Type:** Alphanumeric
+- **Description:** Represents the SKU (Stock Keeping Unit) code designated for the customer associated with the brokered order items.
+
+
+**S-72:** Product Name
+
+- **Length:** 80
+- **Bytes:** 80
+- **Type:** Alphanumeric
+- **Description:** Represents the product name or SAP material description associated with the brokered order items.
+- **Conclusion:** This field will contain the product name or SAP material description. It should be mapped using the Shopify line item's "product.title" attribute, which may not necessarily be the variant name but the overall product title.
+- **Mapping:** Shopify: `line_item["product"]["title"]`; SAP: `productName` or `itemDescription`.
+- **Usage:** Relevant to both the product and order item details in the brokered file.
+
+**S-73:** Sales Value (Including VAT)
+
+- **Length:** 20
+- **Bytes:** 20
+- **Type:** Numeric
+- **Description:** Represents the total sales value, including VAT, for the order item in the brokered file.
+- **Conclusion:** This field will contain the sum of the Item Unit Price, Item Sales Tax, and Item Discount amounts for each order item.
+- **Mapping:** Shopify: Sum of `line_item["price"]`, `line_item["tax_lines"]["price"]`, and `line_item["total_discounts"]["amount"]`.
+
+**S-74:** Sales Value (Without VAT)
+
+- **Length:** 20
+- **Bytes:** 20
+- **Type:** Numeric
+- **Description:** Represents the unit price of the item excluding VAT, as per the Ruby code.
+- **Conclusion:** This field corresponds to the `unitPrice` of the item in the order and excludes the item discount amount.
+- **Additional Notes:**
+  - This value is calculated based on the `unitPrice` of the item in the order.
+  - The item discount amount is excluded from this field.
+  - For orders with multiple items, the unit price is sent for all items.
+  - If there is more than 1 quantity, the unit price remains the same for each item.
+- **Mapping:** Shopify: `line_item["price"]` (unitPrice)
+- **Usage:** Represents the unit price of the item in the brokered file, excluding VAT and item discounts.
