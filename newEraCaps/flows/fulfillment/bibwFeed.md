@@ -1,6 +1,6 @@
 # BI/BW Feed
 
-The feed for BI/BW is generated after full order completion to ensure that the OMS can ensure that order level information can be included if not already sent to the WMS. One of the main differences of this feed from regular CSVs is that its delimiter is either `\` or a `~` which is not commonly recognized by file processors.
+The feed for BI/BW is generated after full order completion to ensure that the OMS can ensure that order level information can be included if not already sent to the WMS. One of the main differences of this feed from regular CSVs is that its delimiter is either `|` or a `~` which is not commonly recognized by file processors.
 
 | Order Date | Order Number | Item Number | Material ID | EAN/UPC       | Qty | MSRP | Sold Price | Tax  | Freight | Customer Paid | Smaregi Store No | Tender Type         |
 |------------|--------------|-------------|-------------|---------------|-----|------|------------|------|---------|---------------|------------------|---------------------|

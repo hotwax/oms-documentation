@@ -35,6 +35,9 @@ Examples of systems that commonly use fixed-width file formats include legacy sy
 
 - **Description:** Header Line #
 - **Position:** 7-7
+- **Example Value:** 0000000
+- **Additional Information:** This field represents the sequential number assigned to each order header line. It is incremented for each record in the file, ensuring a unique identifier for each header line.
+
 
 ## Cust Order No. (S-3)
 
