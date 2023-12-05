@@ -1,9 +1,6 @@
 # Table of contents
 
 * [Introduction](README.md)
-
-## API Setup
-
 * [API authentication](API%20authentication.md)
   
 ## API
