@@ -11,7 +11,7 @@
 Can we just use the order line item sequence ID from the OMS?
 {% endhint %}
 
-**S-63** Item No.
+## S-63 Item No.
 - **Length:** 25
 - **Bytes:** 25
 
@@ -29,7 +29,7 @@ Used to represent the SAP material and size of an item.
 
 **S-66:** HARDCODE = WH
   
-**S-67:** Nueve A JAN code
+## S-67: Nueve A JAN code
 - **Length:** 13
 - **Bytes:** 13
 - **Type:** JAN code
@@ -37,7 +37,7 @@ Used to represent the SAP material and size of an item.
 
 Note: It is recommended to use the variant barcode value for this field.
 
-**S-71:** SKU code (For Customer)
+## S-71: SKU code (For Customer)
 
 - **Length:** 25
 - **Bytes:** 25
@@ -45,7 +45,7 @@ Note: It is recommended to use the variant barcode value for this field.
 - **Description:** Represents the SKU (Stock Keeping Unit) code designated for the customer associated with the brokered order items.
 
 
-**S-72:** Product Name
+## S-72: Product Name
 
 - **Length:** 80
 - **Bytes:** 80
@@ -55,7 +55,7 @@ Note: It is recommended to use the variant barcode value for this field.
 - **Mapping:** Shopify: `line_item["product"]["title"]`; SAP: `productName` or `itemDescription`.
 - **Usage:** Relevant to both the product and order item details in the brokered file.
 
-**S-73:** Sales Value (Including VAT)
+## S-73: Sales Value (Including VAT)
 
 - **Length:** 20
 - **Bytes:** 20
@@ -64,7 +64,7 @@ Note: It is recommended to use the variant barcode value for this field.
 - **Conclusion:** This field will contain the sum of the Item Unit Price, Item Sales Tax, and Item Discount amounts for each order item.
 - **Mapping:** Shopify: Sum of `line_item["price"]`, `line_item["tax_lines"]["price"]`, and `line_item["total_discounts"]["amount"]`.
 
-**S-74:** Sales Value (Without VAT)
+## S-74: Sales Value (Without VAT)
 
 - **Length:** 20
 - **Bytes:** 20
@@ -75,16 +75,14 @@ Note: It is recommended to use the variant barcode value for this field.
   - The item discount amount is excluded from this field.
   - If there is more than 1 quantity, the unit price remains the same for each item.
 
-**S-75:** Subtotal of Sales Value (Including VAT)
-
+## S-75: Subtotal of Sales Value (Including VAT)
 - **Length:** 20
 - **Bytes:** 20
 - **Type:** Numeric
 - **Description:** Represents the subtotal of the unit prices of items, including VAT, as per the Ruby code.
 - **Conclusion:** This field containts the actual unit cost of the order item, including VAT and item discount amounts.
 
-**S-76:** Subtotal of Sales Value (Without VAT)
-
+## S-76: Subtotal of Sales Value (Without VAT)
 - **Length:** 20
 - **Bytes:** 20
 - **Type:** Numeric
@@ -95,16 +93,14 @@ Note: It is recommended to use the variant barcode value for this field.
   - It includes item discount amounts and excludes VAT.
 
 
-**S-77:** Retail Value (Including VAT)
-
+## S-77: Retail Value (Including VAT)
 - **Length:** 20
 - **Bytes:** 20
 - **Type:** Numeric
 - **Description:** Represents the retail value of the items, including VAT, without considering any discounts.
 - **Conclusion:** This field contains the unit prices, including VAT, without applying any item discounts. It is similar to S-73 but excludes discounts.
 
-**S-78:** Retail Value (Without VAT)
-
+## S-78: Retail Value (Without VAT)
 - **Length:** 20
 - **Bytes:** 20
 - **Type:** Numeric
@@ -145,7 +141,7 @@ Note: It is recommended to use the variant barcode value for this field.
 - **Type:** Numeric
 - **Description:** Represents the quantity to be shipped for a sales order.
 
-### S-83: Proof of Delivery Date
+## S-83: Proof of Delivery Date
 
 - **Length:** 10
 - **Bytes:** 10
@@ -156,14 +152,14 @@ Note: It is recommended to use the variant barcode value for this field.
 Not sure about the hardcoded value, need to ask New Era Team
 {% endhint %}
 
-### S-94: Subtotal of Retail Value (Without VAT)
+## S-94: Subtotal of Retail Value (Without VAT)
 
 - **Length:** 30
 - **Bytes:** 30
 - **Type:** Numeric
 - **Description:** Subtotal of retail value without VAT for an order item.
 
-**S-97 to S-103:** Reserved Fields
+## S-97 to S-103: Reserved Fields
 
 - **Length:** 30 each
 - **Bytes:** 30 each
