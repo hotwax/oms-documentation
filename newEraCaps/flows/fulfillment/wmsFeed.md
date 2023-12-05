@@ -148,15 +148,34 @@ There is no default value in case of unexpected payment methods; however, it is 
 Further clarification may be needed on how to handle orders using gift card payments.
 {% endhint %}
 
-## DLV Payment (S-15)
+## DLV PAYMENT (S-15)
 
-- **Description:** Amount of payment Including VAT (Only Cash on Delivery)
+- **Description:** Amount of Payment Including VAT (Only Cash on Delivery)
 - **Position:** 19-23
+- **Example Value:** (Numeric value representing the amount)
+- **Additional Information:**
+  - This field is applicable only for orders with the payment type "Cash on Delivery" (DLV PAYMENT S-14 = 2).
+  - It represents the total payment amount, including VAT, for cash on delivery orders.
+  - The amount should correspond to the order total, not individual item totals.
+  - For payment methods other than Cash on Delivery, the field should be left empty.
+  - The field is associated with the `grandTotal` in the `OrderHeader`.
 
-## DLV Payment (S-16)
+## DLV PAYMENT (S-16)
 
-- **Description:** Amount of payment Including VAT (Only Cash on Delivery)
+- **Description:** Amount of Payment Including VAT and VAT Amount (Only Cash on Delivery)
 - **Position:** 19-23
+- **Example Value:** (Numeric value representing the amount)
+- **Additional Information:**
+  - This field is applicable only for orders with the payment type "Cash on Delivery" (DLV PAYMENT S-14 = 2).
+  - It represents the total payment amount, including VAT, for cash on delivery orders, as well as the corresponding VAT amount.
+  - There is a distinction between S-15 and S-16:
+    - S-15 represents the total payment amount.
+    - S-16 represents the sum of sales tax on the item and the shipping sales tax.
+  - The value for this field is calculated based on the sum of order adjustments where `orderAdjustmentTypeId` is 'SHIPPING_SALES_TAX'.
+  - Please refer to the provided Ruby code for specific details on the calculation: [Ruby Code](https://github.com/flagship-llc/newera_wms/blob/master/app/services/generate_order_file.rb#L268).
+{% hint style="warning" %}
+The distinction between S-15 and S-16 is not clear
+{% endhint %}
 
 ## Consignee (S-17 to S-25)
 
