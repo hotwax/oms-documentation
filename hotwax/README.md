@@ -10,39 +10,27 @@ Bearer token authentication utilizes security tokens. After a successful login r
 
 Hotwax Commerce relies on robust security features provided by JWT (JSON Web Token) to ensure a safe and trustworthy API communication environment. This mechanism guarantees user authenticity, authorizes their actions, and maintains data integrity through digital signatures. To create JWT, follow these steps: 
 
-1. **User Authorization:**
-   - Create a unique user from [users.hotwax.io](https://users.hotwax.io/) and assign admin permissions, e.g. NetSuite Integration.
-
-2. **Access OMS Dashboard:**
-   - Navigate to the Hamburger menu in OMS: `https://{instanceName}.hotwax.io/`
-
-3. **Settings Option:**
-   - Access the Settings option and choose `Create JWT Token`.
-
-4. **User Details:**
-   - Input the user ID.
-
-5. **Token Configuration:**
+1. Create a unique user from [users.hotwax.io](https://users.hotwax.io/) and assign admin permissions, e.g. NetSuite Integration.
+2. Navigate to the Hamburger menu in OMS: `https://{instanceName}.hotwax.io/`
+3. Access the Settings option and choose `Create JWT Token`.
+4. Input the user ID.
+5. Token Configuration:**
    - Define the validation period.
    - Specify the purpose of the token.
+6. Click `Create`, and the resulting JWT token will be displayed in the dedicated section.
+7. Copy Token and use it to build connection
 
-6. **Token Creation:**
-   - Click `Create`, and the resulting JWT token will be displayed in the dedicated section.
 
-7. **Copy Token:**
-   - For ease of use, the token is equipped with a copy icon upon hovering.
-
-## HotWax Authentication Endpoint
+## Authentication Endpoint
 
 Sample endpoint: `https://<host_name>.hotwax.io/<api_name>/login`
 
 
-## HotWax APIs Requiring Authentication
+## APIs Requiring Authentication
 
 The following HotWax APIs require an authentication token:
 
 1. `updateInventory`
 
-**Note:** Before using APIs requiring an authentication token, users must request a bearer token from HotWax.
 
 For more information about Bearer token authentication, refer to this [video](https://youtu.be/n-IFlWGX1t4).
