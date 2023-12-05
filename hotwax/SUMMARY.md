@@ -17,7 +17,7 @@
   * [Add Shipment Box](<Fulfillment/APIs/Add shipment box.md>)
   * [Create Picklist](<Fulfillment/APIs/Create picklist.md>)
   * [In Progress Orders](<Fulfillment/APIs/In progress orders.md>)
-  * [Outstanding Orders](<Fulfillment/APIs/In progress orders.md>)
+  * [Outstanding Orders](<Fulfillment/APIs/Outstanding orders.md>)
   * [Packing Slip PDF](<Fulfillment/APIs/Packing slip PDF.md>)
   * [Ready To Ship Items](<Fulfillment/APIs/Ready-to-ship items.md>)
   * [Retry Shipping Label](<Fulfillment/APIs/Retry shipping label.md>)
@@ -25,7 +25,7 @@
   * [Shipping Label PDF](api/fulfillment/shipping-label-pdf.md)
   * [Update Orders](<Fulfillment/APIs/Update orders.md>)
   * [Update And Import File](<Fulfillment/APIs/Upload and Import file.md>)
-* [Search](<Perform find.md>)
+* [Perform Find](<Perform find.md>)
 
 ## Journeys
 
