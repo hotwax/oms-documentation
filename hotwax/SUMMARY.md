@@ -7,7 +7,7 @@
 * [API authentication](API%20authentication.md)
   
 ## API
-### [Inventory](Inventory)
+* [Inventory](Inventory)
   * [Check Inventory](Inventory/Check%20inventory.md)
   * [Reset Inventory](Inventory/Reset%20inventory.md)
   * [Update Inventory](Inventory/Update%20Inventory.md)
