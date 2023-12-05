@@ -39,55 +39,114 @@ Examples of systems that commonly use fixed-width file formats include legacy sy
 - **Additional Information:** This field represents the sequential number assigned to each order header line. It is incremented for each record in the file, ensuring a unique identifier for each header line.
 
 
-## Cust Order No. (S-3)
-
+## CUST ORDER NO. (S-3)
 - **Description:** SAP Delivery Number
 - **Position:** 16-16
+- **Mandatory:** Yes
+- **Example Value:** [Value from the 'orderName' column in the orderHeader]
+- **Additional Information:**
+  - This field should contain the value of the Shopify Order Name.
+  - The combination of the order number and the facility of fulfillment creates as a unique identifier even partial order fulfillment.
+
 
 ## Cust Ref No. (S-4)
-
-- **Description:** Not used
+- **Description:** Not used, leave empty
 - **Position:** 16-16
 
 ## Order Date (S-5)
-
 - **Description:** Order Date
 - **Position:** 10-10
+- **Format:** yyyy/mm/dd
+- **Example Value:** 2023/04/20
+- **Additional Information:**
+  - This field represents the date of the sales order.
+  - It contains the Order Date information for the Order Header.
 
 ## Plan Shipped Date (S-6)
 
-- **Description:** Not used
+- **Description:** Not used, leave empty
 - **Position:** 10-10
 
 ## ETA (S-7)
-
+{% hint style="danger" %}
+New Era has not marked this field as not required. Need to verify if this can be left empty.
+{% endhint %}
 - **Description:** Requested Delivery Date
 - **Position:** 10-10
 
 ## ETA (S-9)
-
+{% hint style="danger" %}
+New Era has not marked this field as not required. Need to verify if this can be left empty.
+{% endhint %}
 - **Description:** Delivery Time driven by VAS instruction
 - **Position:** 2-2
 
 ## PCS (S-10)
-
-- **Description:** Delivery quantity
+{% hint style="danger" %}
+At the header level does this include a rollup of total items shipped?
+{% endhint %}
+- **Description:** Delivery Quantity
 - **Position:** 10-10
+- **Example Value:** 8
+- **Additional Information:**
+  - The value is prepared at the line item level and includes the order item quantity.
+  - Empty spaces will be added for this field on the header row.
+  - Ensure that the data at the line item level is appropriately reflected in this field.
+  - It provides information about the total quantity to be delivered for each order.
 
-## Business Type (S-12)
+## BUSINESS TYPE (S-12)
 
-- **Description:** Wholesale/EC indicator
+- **Description:** Wholesale/EC Indicator
 - **Position:** 1-1
+- **Example Value:** 2
+- **Additional Information:**
+  - This field indicates the business type or category of the order.
+  - The values are mapped as follows:
+    - 1 = EC(B2B)
+    - 2 = EC(B2C)
+    - 3 = NAV(B2B)
+    - 4 = Transfer Order
+  - For Transfer Order, the value will be 4; for other types, the value will be 2.
+  - Consider using OrderTypeId from OrderHeader, mapping it to:
+    - 2 for SALES_ORDER
+    - 4 for TRANSFER_ORDER.
 
-## DLV Service (S-13)
+## DLV SERVICE (S-13)
 
-- **Description:** Delivery service
+- **Description:** Delivery Service
 - **Position:** 2-2
+- **Example Value:** 3
+- **Data Type:** Numeric
+- **Additional Information:**
+  - This field represents the type delivery company used.
+  - Numeric values are assigned as follows:
+    - 1=Perican
+    - 2=Air
+    - 3=Sagawa
+  - It is usually mapped with the Carrier Party of the shipgroup, and the value is populated based on the carrier party (1, 2, or 3).
+  - Provides information about the selected delivery service for the order.
 
-## DLV Payment (S-14)
 
-- **Description:** Payment type
+## DLV PAYMENT (S-14)
+
+- **Description:** Payment Type
 - **Position:** 1-1
+- **Example Value:** 1
+- **Additional Information:**
+  - This field represents the type of payment for the order.
+  - Numeric values are assigned as follows:
+    - 1=Prepaid (Credit Card)
+    - 2=Cash on Delivery
+    - 3=Amazon Pay
+    - 4=Paidy
+  - The payment method of the order is checked, and the value is populated accordingly (1, 2, 3, or 4).
+  - The field is associated with the `paymentMethodTypeId` in the `OrderPaymentPreferenceAndType`.
+{% hint style="warning" %}
+There is no default value in case of unexpected payment methods; however, it is not expected to encounter such scenarios frequently.
+{% endhint %}
+{% hint style="danger" %}
+Further clarification may be needed on how to handle orders using gift card payments.
+{% endhint %}
 
 ## DLV Payment (S-15)
 
