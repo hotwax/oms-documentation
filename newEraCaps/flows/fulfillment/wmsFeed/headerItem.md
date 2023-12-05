@@ -187,18 +187,18 @@ The distinction between S-15 and S-16 is not clear
 - **S-37** Not used (Length: 14, Bytes: 14)
 
 ## STATUS (S-38)
-- **S-38:** Order Status (Length: 2, Bytes: 2)
-  - **Description:** Delivery status indicating the progress of the order fulfillment.
-  - **Mandatory:** Yes
-  - **Validity:** Should be one of the following values:
-    - 60: SHIP ORDER (NECJ → Nittsu)
-    - 70: SHIP RECEIVED (Nittsu → NECJ)
-    - 80: SHIP CONFIRMED (Nittsu → NECJ)
-    - 90: INVOICE NO. (NECJ → Nittsu)
-  - **Default Value:** 60 (fixed value for warehouse brokered order items to be fulfilled)
+- **Description:** Delivery status indicating the progress of the order fulfillment.
+- **Position** (Length: 2, Bytes: 2)
+- **Mandatory:** Yes
+- **Default Value:** 60 (fixed value for warehouse brokered order items to be fulfilled)
+Other values:
+- 60: SHIP ORDER (NECJ → Nittsu)
+- 70: SHIP RECEIVED (Nittsu → NECJ)
+- 80: SHIP CONFIRMED (Nittsu → NECJ)
+- 90: INVOICE NO. (NECJ → Nittsu)
+
 
 ## Invoice (S-39)
-
 - **Description:** Delivery Slip Instuctions - Driven by VAS
 - **Position:** 2-2
 - **Default Value:** Always a fixed value of 2
@@ -228,7 +228,6 @@ The distinction between S-15 and S-16 is not clear
   <li>75: Chain Store Slip Type 1 (YATOGOLF)</li>
   <li>99: NO Delivery Slip</li>
 </ul>
-
 </details>
 
 ## DC Incidental Operation Flag (S-40 to S-42)
@@ -274,13 +273,13 @@ As of now we expect this to be blank. Need to confirm with New Era.
 
 ## Delivery Slip / Invoice (S-45 to S-56)
 
-- **S-45:** Not used
-- **S-46:** Customer PO
+- **S-45:** Not used (Length: 16, Bytes: 16)
+- **S-46:** Customer PO (Length: 16, Bytes: 16)
 {% hint style="danger" %}
 As of now we expect this to be blank. Need to confirm with New Era.
 {% endhint %}
-- **S-47:** Not used
-- **S-48:** Not used
+- **S-47:** Not used (Length: 16, Bytes: 16)
+- **S-48:** Not used (Length: 10, Bytes: 10)
 - **S-49:** Order Date (Length: 10, Bytes: 10)
   - **Description:** Sales Order Date field containing the value of the order date.
   - **Notes:**
@@ -295,13 +294,11 @@ As of now we expect this to be blank. Need to confirm with New Era.
     - If not applicable, the field should be left blank.
   - **Example:** 'Z624'
 {% hint style="danger" %}
-As of now we expect this to be blank. Need to confirm with New Era.
+As of now we will default to Z624. Need to confirm with New Era for mapping conditions.
 {% endhint %}
 
 - **S-51:** Payment Due Date (Length: 10, Bytes: 10)
-  - **Description:** Hard-coded payment due date.
-  - **Notes:**
-    - This field contains a specific date, and it is hard-coded as '2/5/2031'.
+  - **Description:** Hard-coded payment due date as '2/5/2031'.
 
 - **S-52:** Total Retail Price (Including VAT) (Length: 20, Bytes: 20)
   - **Example:** '407376'
@@ -319,8 +316,7 @@ As of now we expect this to be blank. Need to confirm with New Era.
 
 - **S-55:** VAT (Length: 20, Bytes: 20)
   - **Description:** Value Added Tax (VAT) amount associated with the order which is generally about 10%.
-  - **Additional Information:** This field is used to represent the specific VAT amount applicable to the order.
-**Note:** The VAT field should indeed include the Item Sales Tax.
+  - **Note:** The VAT field should indeed include the Item Sales Tax.
 
 - **S-56:** Total Price (JPY) (Length: 20, Bytes: 20)
 {% hint style="danger" %}
@@ -355,8 +351,6 @@ Additional Notes
 The Shipping Cost field represents the total shipping cost associated with an order.
 
 ### Usage
-This field is used to capture the sum of shipping charges, shipping discount, and shipping tax. 
-
 The calculation involves the sum of order adjustments where the order adjustment type is SHIPPING_CHARGES, EXT_SHIP_ADJUSTMENT, or SHIPPING_SALES_TAX.
 
 ### Special Considerations
@@ -366,25 +360,21 @@ The calculation involves the sum of order adjustments where the order adjustment
 The last line in considerations is not clear, what is this calculation supposed to be used for?
 {% endhint %}
 
-**S-58** Handling Charge
+**S-58** Not used
 - **Length:** 20
 - **Bytes:** 20
 - **Data Type:** NUMERIC
 
-### Description
-The Handling Charge field is reserved for handling charges associated with an order.
-
-### Usage
 This field is currently marked as not used, and empty spaces will be added. Discussions are ongoing regarding the inclusion of the transaction_fee in this field. Transaction_fee is set in the customAttributes at the OrderLevel.
 
-### Open Discussion Topics
+*Open Discussion Topics*
 1. Clarification on how transaction_fee is modeled in handling charges.
 2. Verification of the existence of transaction_fee in the differences file.
 
-- **S-59:** Not used
-  - **Length:** 20
-  - **Bytes:** 20
-  - **Data Type:** NUMERIC
+**S-59:** Not used
+- **Length:** 20
+- **Bytes:** 20
+- **Data Type:** NUMERIC
 
 ### Description
 The Total Retail Price (Including VAT) field (S-84) represents the total retail price of an order item, including VAT, item unit price, item sales tax, and item discount amounts.
@@ -396,6 +386,18 @@ This field should contain the total value of the order item, which includes the 
 - The value in this field is calculated based on the total_products_price, which is refundable_quantity multiplied by discountedUnitPrice for each line item.
 - It includes the sum of the fields S-54 (Total Price Without VAT) and S-55 (VAT).
 - The exact calculation may need confirmation from the team.
+
+### S-84: Total Retail Price (Including VAT)
+
+- **Length:** 20 characters
+- **Bytes:** 20 bytes
+- **Type:** Numeric
+
+**Description:**
+This field represents the total retail price, including VAT, for the order.
+
+**Example:**
+
 
 ## S-85 Shop Code
 - **Field Name:** Shop Code
