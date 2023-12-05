@@ -121,19 +121,19 @@ If the shipping methods from Shopify are not mapped to a corresponding shipping 
 <summary>NetSuite Shipping Method Mappings</summary>
   
 ```xml
-<IntegrationTypeMapping integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="FEDEX_HOME_DELIVERY" mappingValue="FedEx Home Delivery" />
-<IntegrationTypeMapping integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="2_DAY_SHIPPING" mappingValue="2-Day Shipping" />
-<IntegrationTypeMapping integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="INTERNATIONAL_CONNECT_PLUS" mappingValue="FedEx International Connect Plus" />
-<IntegrationTypeMapping integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="2_DAY_SHIPPING_67G" mappingValue="2-Day Shipping 67G" />
-<IntegrationTypeMapping integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="USPS_PRIORITY" mappingValue="USPS Shipping" />
-<IntegrationTypeMapping integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="EXPRESS_SAVER" mappingValue="FedEx Express Saver®" />
-<IntegrationTypeMapping integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="GROUND" mappingValue="FedEx Ground" />
-<IntegrationTypeMapping integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="INTERNATIONAL_ECONOMY" mappingValue="FedEx International Economy®" />
-<IntegrationTypeMapping integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="INTERNATIONAL_PRIORITY" mappingValue="FedEx International Priority®" />
-<IntegrationTypeMapping integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="GROUND_ECONOMY" mappingValue="FedEx Ground Economy" />
-<IntegrationTypeMapping integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="STANDARD_OVERNIGHT" mappingValue="FedEx Standard Overnight" />
+<IntegrationTypeMapping integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="FEDEX_HOME_DELIVERY" mappingValue="4236" />
+<IntegrationTypeMapping integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="2_DAY_SHIPPING" mappingValue="711" />
+<IntegrationTypeMapping integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="INTL_CONNECT_PLUS" mappingValue="38045" />
+<IntegrationTypeMapping integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="2_DAY_SHIPPING_67G" mappingValue="38980" />
+<IntegrationTypeMapping integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="USPS_PRIORITY" mappingValue="28394" />
+<IntegrationTypeMapping integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="EXPRESS_SAVER" mappingValue="39610" />
+<IntegrationTypeMapping integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="GROUND" mappingValue="4164" />
+<IntegrationTypeMapping integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="INTERNATIONAL_ECONOMY" mappingValue="4366" />
+<IntegrationTypeMapping integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="INTERNATIONAL_PRIORITY" mappingValue="4367" />
+<IntegrationTypeMapping integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="GROUND_ECONOMY" mappingValue="39920" />
+<IntegrationTypeMapping integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="STANDARD_OVERNIGHT" mappingValue="27483" />
 <!-- fallback shipping method -->
-<IntegrationTypeMapping integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="STANDARD" mappingValue="FedEx Home Delivery" />
+<IntegrationTypeMapping integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="STANDARD" mappingValue="4236" />
 ```
 </details>
 
