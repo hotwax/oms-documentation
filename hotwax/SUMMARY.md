@@ -37,7 +37,7 @@
 
 ## Additional Resources
 
-* [Fulfilled Orders Items Feed](Fulfillment/Feed/Fulfilled order items feed.md)
-* [Fulfilled Orders Items Sample](additional-resources/fulfilled-orders-items-sample.md)
-* [Reset Inventory Sample](additional-resources/reset-inventory-sample.md)
-* [Return Feed Sample](additional-resources/return-feed-sample.md)
+* [Fulfilled Order Items Feed](Fulfillment/Feed/Fulfilled%20order%20items%20feed.md)
+* [Fulfilled Orders Items Sample](Fulfillment/Samples/Fulfilled%20order%20items%20feed%20sample.json)
+* [Reset Inventory Sample](Inventory/Samples/Reset%20inventory%20sample.csv)
+* [Return Feed Sample](returns/returnFeedSample.json)
