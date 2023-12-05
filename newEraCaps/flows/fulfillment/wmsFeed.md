@@ -518,9 +518,101 @@ Note: It is recommended to use the variant barcode value for this field.
 - **Description:** Represents the unit price of the item excluding VAT, as per the Ruby code.
 - **Conclusion:** This field corresponds to the `unitPrice` of the item in the order and excludes the item discount amount.
 - **Additional Notes:**
-  - This value is calculated based on the `unitPrice` of the item in the order.
   - The item discount amount is excluded from this field.
-  - For orders with multiple items, the unit price is sent for all items.
   - If there is more than 1 quantity, the unit price remains the same for each item.
-- **Mapping:** Shopify: `line_item["price"]` (unitPrice)
-- **Usage:** Represents the unit price of the item in the brokered file, excluding VAT and item discounts.
+
+**S-75:** Subtotal of Sales Value (Including VAT)
+
+- **Length:** 20
+- **Bytes:** 20
+- **Type:** Numeric
+- **Description:** Represents the subtotal of the unit prices of items, including VAT, as per the Ruby code.
+- **Conclusion:** This field containts the actual unit cost of the order item, including VAT and item discount amounts.
+
+**S-76:** Subtotal of Sales Value (Without VAT)
+
+- **Length:** 20
+- **Bytes:** 20
+- **Type:** Numeric
+- **Description:** Represents the subtotal of the order line item, excluding VAT, as per the Ruby code.
+
+- **Additional Notes:**
+  - The value is derived from the sum of `unitPrice` multiplied by `quantity` for each item in the order.
+  - It includes item discount amounts and excludes VAT.
+
+
+**S-77:** Retail Value (Including VAT)
+
+- **Length:** 20
+- **Bytes:** 20
+- **Type:** Numeric
+- **Description:** Represents the retail value of the items, including VAT, without considering any discounts.
+- **Conclusion:** This field contains the unit prices, including VAT, without applying any item discounts. It is similar to S-73 but excludes discounts.
+
+**S-78:** Retail Value (Without VAT)
+
+- **Length:** 20
+- **Bytes:** 20
+- **Type:** Numeric
+- **Description:** Represents the retail value of the items, excluding VAT, without considering any discounts.
+- **Conclusion:** This field contains unit price, excluding VAT, without applying any item discounts. It is the same as S-74 but without considering discounts.
+
+**S-79:** Subtotal of Retail Value (Including VAT)
+
+- **Length:** 20
+- **Bytes:** 20
+- **Type:** Numeric
+- **Description:** Represents the subtotal of the retail value of items, including VAT, without considering any discounts.
+- **Conclusion:** This field contains the order item subtotal, including VAT, without applying any item discounts. It is the same as S-75 but without considering discounts.
+
+**S-80:** Size/Color (Delivery Slip with Amount, Delivery Slip without Amount, Chain Store Slip, etc)
+
+- **Length:** 30
+- **Bytes:** 30
+- **Type:** Alphanumeric
+- **Description:** Represents the size or color information of the ordered item.
+- **Additional Notes:**
+  - The mapping involves: `orderItem.productId -> ProductFeatureAppl.productFeatureId -> ProductFeature`.
+  - The desired information is found in `ProductFeature.description` where `productFeatureTypeId = 'SIZE'`.
+- **Usage:** Represents the size or color details of the ordered items for specific slip types, facilitating the understanding of product features.
+  
+**S-81:** OUT INFO - Shipment Date-Posting Date Header
+
+- **Length:** 10
+- **Bytes:** 10
+- **Type:** Date
+- **Conclusion:** This field is hardcoded with the value "2030/12/30".
+- **Usage:** Serves as a fixed value header for shipment and posting dates.
+
+**S-82:** Sales Order and Purchase Credit Memo Quantity
+
+- **Length:** 9
+- **Bytes:** 9
+- **Type:** Numeric
+- **Description:** Represents the quantity to be shipped for a sales order.
+
+### S-83: Proof of Delivery Date
+
+- **Length:** 10
+- **Bytes:** 10
+- **Type:** Date
+- **Description:** Use the hardcoded value `2016/07/06`
+
+{% hint style="danger" %}
+Not sure about the hardcoded value, need to ask New Era Team
+{% endhint %}
+
+### S-94: Subtotal of Retail Value (Without VAT)
+
+- **Length:** 30
+- **Bytes:** 30
+- **Type:** Numeric
+- **Description:** Subtotal of retail value without VAT for an order item.
+
+**S-97 to S-103:** Reserved Fields
+
+- **Length:** 30 each
+- **Bytes:** 30 each
+- **Type:** Not Applicable (N/A)
+- **Description:** Reserved fields with no specified purpose.
+- **Usage:** Reserved for potential future use or expansion.
