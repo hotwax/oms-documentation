@@ -1,7 +1,7 @@
 # Table of contents
 
 * [Introduction](README.md)
-* [API authentication](API%20authentication.md)
+* [API Setup](API%20authentication.md)
   
 ## API
 * [Inventory](Inventory)
