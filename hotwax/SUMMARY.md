@@ -1,7 +1,7 @@
 # Table of contents
 
 * [Introduction](README.md)
-* [API Setup](API%20authentication.md)
+* [Intial API authentication](hotwax/apiAuthentication.md)
   
 ## API
 * [Inventory](Inventory)
