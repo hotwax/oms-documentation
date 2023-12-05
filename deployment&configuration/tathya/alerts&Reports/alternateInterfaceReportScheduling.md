@@ -4,11 +4,11 @@ A report can also be scheduled via a dashboard or via a chart.
 
 ## Via a Dashboard
 
-1. View a dashboard and, in the top right corner, select the ellipsis icon and then Manage email report > Set up an email report.
+- View a dashboard and, in the top right corner, select the ellipsis icon and then Manage email report > Set up an email report.
 
 ## Via a Chart
 
-1. View a chart and, in the top right corner, select the ellipsis icon and then Manage email report > Set up an email report.
+- View a chart and, in the top right corner, select the ellipsis icon and then Manage email report > Set up an email report.
 
 ## Configure the Scheduled Report
 
