@@ -12,5 +12,7 @@
   * [BI/BW Feed](flows/fulfillment/bibwFeed.md)
   * [Store Fulfillment Feed](flows/fulfillment/storeFulfilledDeltaFeed.md)
   * [E Hidden 3 Feed](flows/fulfillment/eHidden3Feed.md)
-  * [WMS Feed](flows/fulfillment/wmsFeed.md)
+  * [WMS Feed](flows/fulfillment/wmsFeed/README.md)
+    * [Header Item](flows/fulfillment/wmsFeed/headerItem.md)
+    * [Detail Item](flows/fulfillment/wmsFeed/detailItem.md)
 * [Sales Order]
