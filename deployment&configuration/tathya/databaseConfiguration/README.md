@@ -36,7 +36,7 @@ The “username and password” are associated with the account you want to use 
 ### Display Name
 The “display name” is how the database will display in Tathya.
 
-**Note:** Choose a descriptive name for the connection. For example, if a project were named Wasatch Ski, the display name should be “Wasatch Ski OMS”
+Choose a descriptive name for the connection. For example, if a project were named Wasatch Ski, the display name should be “Wasatch Ski OMS”
 
 
 **Note:** Database configuration details are usually maintained by the DevOps team so connect with them for any additional information.
