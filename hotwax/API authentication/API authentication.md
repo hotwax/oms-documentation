@@ -6,7 +6,7 @@ To ensure secure transactions on HotWax's platform, all applications connecting 
 
 Bearer token authentication utilizes security tokens. After a successful login request, the server generates a secret string known as a bearer token. When making requests for protected resources, the user must include the token in the authorization header.
 
-## Hotwax Commerce JWT Token Generation
+## How to generate a bearer token? 
 
 Hotwax Commerce relies on robust security features provided by JWT (JSON Web Token) to ensure a safe and trustworthy API communication environment. This mechanism guarantees user authenticity, authorizes their actions, and maintains data integrity through digital signatures.
 
