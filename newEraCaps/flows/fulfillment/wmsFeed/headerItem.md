@@ -1,9 +1,11 @@
 # Order Header
+The header item is the first row of a new order in the brokered order feed. Instead of repeating header level details on every time, this file format has a seperate line for header details.
 
 ## Record Kind (S-1)
 
 - **Description:** Header Indicator
 - **Position:** 1-1
+- **Value:** H
 
 ## Record Line (S-2)
 
@@ -17,10 +19,9 @@
 - **Description:** SAP Delivery Number
 - **Position:** 16-16
 - **Mandatory:** Yes
-- **Example Value:** [Value from the 'orderName' column in the orderHeader]
 - **Additional Information:**
   - This field should contain the value of the Shopify Order Name.
-  - The combination of the order number and the facility of fulfillment creates as a unique identifier even partial order fulfillment.
+  - The combination of the order number and the facility of fulfillment creates as a unique identifier even partial order fulfillment when receiving fulfilled orders from the WMS.
 
 
 ## Cust Ref No. (S-4)
@@ -33,8 +34,7 @@
 - **Format:** yyyy/mm/dd
 - **Example Value:** 2023/04/20
 - **Additional Information:**
-  - This field represents the date of the sales order.
-  - It contains the Order Date information for the Order Header.
+  - Contains the Order Date information for the Order Header.
 
 ## Plan Shipped Date (S-6)
 
@@ -47,6 +47,7 @@ New Era has not marked this field as not required. Need to verify if this can be
 {% endhint %}
 - **Description:** Requested Delivery Date
 - **Position:** 10-10
+- Potential hardcoded value found in mapping sheet: `7/6/2016`
 
 ## ETA (S-9)
 {% hint style="danger" %}
@@ -54,22 +55,27 @@ New Era has not marked this field as not required. Need to verify if this can be
 {% endhint %}
 - **Description:** Delivery Time driven by VAS instruction
 - **Position:** 2-2
+We should pick a default option from here if we don't know where to source this from.
+  - 60: 8:00 AM to 12:00 PM
+  - 62: 12:00 PM to 2:00 PM
+  - 63: 2:00 PM to 4:00 PM
+  - 64: 4:00 PM to 6:00 PM
+  - 65: 6:00 PM to 8:00 PM
+  - 66: 8:00 PM to 9:00 PM
 
 ## PCS (S-10)
 {% hint style="danger" %}
-At the header level does this include a rollup of total items shipped?
+We have marked this as leave empty but this should simply be the total shipping qty from the warehouse on the order.
 {% endhint %}
 - **Description:** Delivery Quantity
 - **Position:** 10-10
 - **Example Value:** 8
 - **Additional Information:**
-  - The value is prepared at the line item level and includes the order item quantity.
-  - Empty spaces will be added for this field on the header row.
-  - Ensure that the data at the line item level is appropriately reflected in this field.
   - It provides information about the total quantity to be delivered for each order.
 
-## BUSINESS TYPE (S-12)
+## S-11 (Missing)
 
+## BUSINESS TYPE (S-12)
 - **Description:** Wholesale/EC Indicator
 - **Position:** 1-1
 - **Example Value:** 2
