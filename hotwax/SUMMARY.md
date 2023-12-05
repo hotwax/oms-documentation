@@ -4,7 +4,7 @@
 
 ## API Setup
 
-* [API authentication](hotwax/API authentication.md)
+* [API authentication](API%20authentication.md)
   
 ## API
 ### [Inventory](Inventory)
