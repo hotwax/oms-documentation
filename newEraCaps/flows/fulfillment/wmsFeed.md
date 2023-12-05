@@ -178,49 +178,114 @@ The distinction between S-15 and S-16 is not clear
 {% endhint %}
 
 ## Consignee (S-17 to S-25)
+(BILL-TO INFORMATION)
 
-- **S-17:** SAP Sold-to Customer code
-- **S-18:** Sold-to Name
-- **S-19:** Sold-to Address
-- **S-20:** Sold-to Address 2
-- **S-21:** Not used
-- **S-22:** Not used
-- **S-23:** Sold-to Postal Code
-- **S-24:** Not used
-- **S-25:** Sold-to Phone number
+- **S-17:** SAP Bill-to Customer Code (Length: 10, Bytes: 10)
+- **S-18:** Bill-to Name (Length: 35, Bytes: 35)
+- **S-19:** Bill-to Address1 (Length: 75, Bytes: 75)
+- **S-20:** Bill-to Address2 (Length: 75, Bytes: 75)
+- **S-21:** Not used (Length: 35, Bytes: 35)
+- **S-22:** Not used (Length: 35, Bytes: 35)
+- **S-23:** Bill-to Postal Code (Length: 9, Bytes: 9)
+- **S-24:** Not used (Length: 35, Bytes: 35)
+- **S-25:** Bill-to Phone Number (Length: 14, Bytes: 14)
+
 
 ## Delivery (S-26 to S-34)
 
-- **S-26:** SAP Ship-to Customer code
-- **S-27:** Ship-to Name
-- **S-28:** Ship-to address
-- **S-29:** Ship-to address 2
-- **S-30:** Not used
-- **S-31:** Not used
-- **S-32:** Ship-to Postal code
-- **S-33:** Not used
-- **S-34:** Ship-to Phone number
+- **S-26:** SAP Ship-to Customer Code (Length: 10, Bytes: 10)
+- **S-27:** Ship-to Name (Length: 35, Bytes: 35)
+- **S-28:** Ship-to Address1 (Length: 75, Bytes: 75)
+- **S-29:** Ship-to Address2 (Length: 75, Bytes: 75)
+- **S-30:** Not used (Length: 35, Bytes: 35)
+- **S-31:** Not used (Length: 35, Bytes: 35)
+- **S-32:** Ship-to Postal Code (Length: 9, Bytes: 9)
+- **S-33:** Not used (Length: 35, Bytes: 35)
+- **S-34:** Ship-to Phone Number (Length: 14, Bytes: 14)
 
-## Status (S-38)
+## STATUS (S-38)
 
-- **Description:** Delivery status (Delivery or confirmation)
-- **Position:** 2-2
+- **S-38:** Order Status (Length: 2, Bytes: 2)
+  - **Description:** Delivery status indicating the progress of the order fulfillment.
+  - **Mandatory:** Yes
+  - **Validity:** Should be one of the following values:
+    - 60: SHIP ORDER (NECJ → Nittsu)
+    - 70: SHIP RECEIVED (Nittsu → NECJ)
+    - 80: SHIP CONFIRMED (Nittsu → NECJ)
+    - 90: INVOICE NO. (NECJ → Nittsu)
+  - **Default Value:** 60 (fixed value for warehouse brokered order items to be fulfilled)
 
 ## Invoice (S-39)
 
 - **Description:** Delivery Slip Instuctions - Driven by VAS
 - **Position:** 2-2
+- **Default Value:** Always a fixed value of 2
+
+<details>
+<summary>All Mappings Options</summary>
+- 1: NAVISION (B2B) Delivery Slip Only
+- 2: EC Delivery Slip Only
+- 30: Chain Store Slip (TSA)
+- 31: Chain Store Slip (Robot)
+- 32: Chain Store Slip (DAISEN)
+- 33: Chain Store Slip (Mycal)
+- 34: Chain Store Slip (neuve-a)
+- 35: Chain Store Slip (KUROKAWA Sports)
+- 36: Chain Store Slip (MITSUHASHI)
+- 37: Chain Store Slip (AKATSUKA)
+- 38: Chain Store Slip (fithouse)
+- 4: NAVISION (B2B) Delivery Slip + Chain Store Slip
+- 5: NAV Delivery Slip without Amount
+- 6: Delivery Slip of MURASAKI Sports
+- 70: Chain Store Slip Type 1 (Mycal)
+- 71: Chain Store Slip Type 1 (KOTOBUKI SHOJI)
+- 72: Chain Store Slip Type 1 (GEAR'S JAM)
+- 73: Chain Store Slip Type 1 (YOSHIMOTO)
+- 74: Chain Store Slip Type 1 (BIG AMERICAN SHOP)
+- 75: Chain Store Slip Type 1 (YATOGOLF)
+- 99: NO Delivery Slip
+</details>
 
 ## DC Incidental Operation Flag (S-40 to S-42)
 
-- **S-40:** Tag Instructions Driven by VAS
-- **S-41:** Special Slip Instructions Driven by VAS
-- **S-42:** Packling List instructions - Driven by VAS
+- **S-40:** DC Incidental Operation Flag (Length: 1, Bytes: 1)
+  - **Description:** Instructions for incidental operations related to the delivery.
+  - **Examples:**
+    - 1: Attach Special Tag
+    - 2: Bundle Special Tag
+    - 3: Without Tag (Detach NECJ Tag)
+    - 4: Attach 8% TAX Tag (*Print specific sentence according to NAV Flag on Jun 2012)
+{% hint style="danger" %}
+As of now we expect this to be blank. Need to confirm with New Era.
+{% endhint %}
+
+- **S-41:** DC Incidental Operation Flag (Length: 1, Bytes: 1)
+  - **Description:** Instructions for incidental operations related to the delivery of special slips to the customer.
+  - **Notes:**
+    - 1: Send mail of Customer Special Slip
+    - 2: Deliver Customer Special Slip
+    - 3: Deliver Customer Special Slip in handwriting (*Print specific sentence according to NAV Flag on Jun 2012)
+{% hint style="danger" %}
+As of now we expect this to be blank. Need to confirm with New Era.
+{% endhint %}
+
+- **S-42:** DC Incidental Operation Flag (Length: 1, Bytes: 1)
+  - **Description:** Instructions for incidental operations related to the attachment of packing lists.
+  - **Notes:**
+    - 1: Attach NewEra Packing List
+    - 2: Attach each customer's Packing List
+    - 3: Attach appendix
+    - 4: XXX (Not fixed yet)
+{% hint style="danger" %}
+As of now we expect this to be blank. Need to confirm with New Era.
+{% endhint %}
 
 ## DC Incidental Operation Comment (S-43 to S-44)
 
 - **S-43:** DC comments 1 Driven by VAS
+  - **OMS Mapping:**```Ship Group handling instructions```
 - **S-44:** DC comments 2 Driven by VAS
+  - Empty
 
 ## Delivery Slip / Invoice (S-45 to S-56)
 
