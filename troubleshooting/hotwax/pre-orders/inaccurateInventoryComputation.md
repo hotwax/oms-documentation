@@ -1,6 +1,6 @@
 # Inaccurate Inventory Computation in HotWax Commerce
 
-## Challenge: Unavailability of Pre-Order Option for a product on Shopify Store Despite 0 Inventory and Linkage to HotWax Commerce**
+## Challenge: Unavailability of Pre-Order Option for a product on Shopify Store Despite 0 Inventory and Linkage to HotWax Commerce
 
 HotWax is encountering issues accurately reflecting product availability, notably during pre-orders for specific items. The problem arises when HotWax depends on Shopify for inventory data, resulting in products being inaccurately displayed as in stock when they are, in fact, out of stock. 
 
