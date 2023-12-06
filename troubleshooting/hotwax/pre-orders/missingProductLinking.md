@@ -32,13 +32,13 @@ In instances where a common product catalog is employed across multiple Shopify 
 
 ## Troubleshooting Steps
 
-### Step 1: Verify Product Association with the Shopify Store
+**Step 1: Verify Product Association with the Shopify Store**
 
 1. **Locate the Product in HotWax**
    - Navigate to the [Pre-order Catalog](https://preorder.hotwax.io/catalog) within HotWax Commerce.
    - Open the Audit page and examine the Shop listing status card to check the stores to which the product is currently listed. If it's not linked to the desired store, proceed with the following steps:
 
-### Step 2: Link product to Shopify store
+**Step 2: Link product to Shopify store**
 
 2. **Access the Find Product Page**
    - Visit the Find Product page:https://{instanceName}.hotwax.io/commerce/control/FindProduct.
@@ -52,7 +52,7 @@ In instances where a common product catalog is employed across multiple Shopify 
    - Select the Shopify store designated as the Shop in OMS.
    - Input the Shopify product ID and Inventory ID (extracted from the product on the Shopify store).
 
-## Step 3: Refresh products to reflect changes
+**Step 3: Refresh products to reflect changes**
 
 5. **Execute Jobs in the Job Manager App**
    - Within the Job Manager app, initiate the following jobs: `Auto refresh pre-order catalog` and `Sync variant details` by searching them from the pipeline page.
