@@ -16,53 +16,21 @@ To support this workflow, the warehouse facility type must be passed as an exclu
 The rigidity of the WMS software used by New Era Caps also means that if the warehouse cannot fulfill an order item, it is canceled on Shopify manually by a CSR. When CSRs preform this cancellation on Shopify, the also add a “Reshipped” tag on the order to indicate that HotWax needs to resend it to the WMS.
 
 ## How “Reshipped” works in HotWax Commerce
-After CSRs apply a reshipped tag to orders where the warehouse indicates that it is unable to ship certain order items, the OMS has a custom workflow that is executed to update the order in the WMS with the removed order items.
-
-### Current Design
-When the OMS detects that an order has canceled items which were previously allocated to the New Era Caps warehouse, NiFi will produce a file of the remaining items which are allocated to the warehouse. This file is then consumed by a job in HotWax which removes their “Fulfillment History” records in the OMS.
-
-**Order Fulfillment History**
-
-In order to understand the rest of the implementation, understanding “Fulfillment Sent History” is necessary. Order Fulfillment History (OFH) is created for order items when their fulfillment has been posted to an external system. OFH records include a reference ID of the system the fulfillment has been shared with, allowing the OMS to track fulfillment communications of the same order with multiple systems.
-
-Using OFH, the OMS is able to accurately retry failed fulfillment communications to external systems, always guaranteeing that it has updated all dependent systems of order fulfillment.
-
-**Why Order Fulfillment History is deleted**
-
-By deleting the Order Fulfillment History records for order items that have been deemed eligible to be included in the “ReShipped” feed, the brokering feed file for the New Era Caps warehouse from the OMS automatically includes these orders in the new feed that it generates.
-
-The job that deletes OFH records is also responsible for adding a “RESHIPPED” attribute to the items which need to be included in the reshipped order item feed.
-
-**Service to delete OFH records**
-```
-refreshExportedFulfillment
-```
-**Parameters**
-
-externalOrderId
-
-externalLineItemId
-
-fulfillmentStatus
-
-**Attribute**
-
-Name: FULFILLMENT_STATUS
-
-Value: RESHIPPED  
-
-## Proposed design
-
-A flow in NiFi that checks order items that have been recently (time based cursor) canceled from the warehouse and adds an order attribute:
+A flow in NiFi checks order items that have been recently (time based cursor) canceled from the warehouse and does the following: 
+Add an order level attribute that helps users track Reshipped progress and identify that the order name needs to be appended with “_R”
 
 Key: "ReShipped"
-
 Value: "Pending"
 
-Because canceled items are no longer located at the facility they were brokered too, NiFi will use the Order Facility Change history to identify canceled items that were at the warehouse facility before being canceled.
+Delete the External Fulfillment Order Item for all items in the ship group where the item was canceled from.
 
-A separate NiFi "ReShipped to warehouse" flow identifies all orders with this attribute where the value is "pending" and then generates a "ReShipped" feed for the warehouse where all order names have an "_R" appended to them. The flow would also then subsequently update the order attribute value to "{orderName}_R" indicating that the order has been included in a re-shipped feed to the warehouse.
+Because canceled items are no longer located at the facility they were brokered too, NiFi will use the Order Facility Change history to identify canceled items that were at the warehouse facility before being canceled. This entity will also contain details of which shipgroup the item was removed from, helping identify which order items to delete the fulfillment history for.
 
-Regenerating the brokering feed for these items also updates the ExternalFulfillmentOrderItem record for them. It is yet to be determined if the OMS will add a new status for these items or not.
+Now that the External Fulfillment Order Item record is deleted for the items that need to be reshipped, the brokered items feed will automatically include these items the next time it runs. When this feed is then consumed by NiFi to be transformed into the custom New Era Caps WMS fixed byte file format, the “ReShipped: Pending” order attributes will be used as an identifier that the order name needs to have “_R” appended to it.
 
-If the New Era team wants to manually re-ship this item, they can manually change the value of the attribute to "pending".
+The field in the WMS feed where this change is made:
+CUST ORDER NO. (S-3)
+
+Parallel to the WMS feed transformation of the brokered feed, another processor will consume the same file to update all orders with the value of the ReShipped order attribute from Pending to the new constructed order name with the appended “_R” value.
+
+New attribute value ```{orderName}_R```
