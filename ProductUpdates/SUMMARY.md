@@ -60,7 +60,7 @@
 * [October'22](october22/ProductUpdates-October22.md)
   * [New returns receiving workflow](october22/new-returns-receiving-workflow.md)
   * [Run Jobs Across Multiple Shopify Stores](october22/run-jobs-across-multiple-shopify-stores.md)
-* [September'22](september22/ProductUpdates-Setember22.md)
+* [September'22](september22/ProductUpdates-September22.md)
   * [Update BOPIS order fulfillment status](september22/update-bopis-order-fulfillment-status.md)
   * [Display a Store’s Daywise Unique Operating Hours on PDP](september22/display-a-stores-daywise-unique-operating-hours-on-pdp.md)
   * [Use One Product Catalog for Multiple Shopify Stores](september22/use-one-product-catalog-for-multiple-shopify-stores.md)
