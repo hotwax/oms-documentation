@@ -12,30 +12,25 @@ HotWax is encountering issues accurately reflecting product availability, notabl
   
 
 ### HotWax's Inventory Computation when reading inventory from Shopify:
-- HotWax has intentionally disabled certain functionalities to reserve inventory for committed orders. This action prevents the deduction of committed inventory twice, as Shopify already includes committed inventory in its shared inventory levels.
-- HotWax relies on Shopify's inventory-level webhooks as a key mechanism to determine the available inventory for products.
-- Negative inventory from Shopify is treated as zero in HotWax, causing inaccurate stock calculations.
-- The primary issue arises when HotWax reads inventory from multiple locations. This process can result in inaccurate product availability computations, especially when Shopify indicates negative stock levels.
+- HotWax deliberately disables specific functionalities to reserve inventory for committed orders, ensuring that committed inventory is not deducted twice. This precaution is taken because Shopify already incorporates committed inventory within its shared inventory levels.
 
-| *Location*  | *Shopify* | *HotWax*  |
-|-----------|---------|---------|
-| **Canada**    | 1      | 1     |
-| **Belgium**  | -1      | 0       |
-| **Available** | **0**  | **1**      |
+**Current State of Inventory Deduction in HotWax**
 
-
-### Disabled Functionalities:
-- In these cases, 
-- Enabling deduction of committed orders while reading from Shopify would lead to inaccurate pre-order listings.
-
-
-### Current State of Inventory Deduction in HotWax
 |                             | Reserve Inventory Enabled                      | Reserve Inventory Disabled                     |
 |-----------------------------|-------------------------------------------------|--------------------------------------------------|
 | QOH Inventory in ERP        | 20                                              | 20                                               |
 | Committed orders             | 10                                              | 10 (ignored)                                     |
 | Inventory from Shopify       | 10                                              | 10                                               |
 | Available to sell in HotWax   | 0 (=20-10-10)                                   | 10 (=20-10)                                      |
+
+
+- HotWax relies on Shopify's inventory-level webhooks as a crucial mechanism to determine the available inventory for its products. In HotWax, negative inventory values from Shopify are systematically treated as zero, mitigating the risk of inaccurate stock calculations. The issue arises when HotWax reads inventory from multiple locations. This process introduces a potential for inaccuracies in product availability computations, particularly when Shopify indicates negative stock levels.
+
+| *Location*  | *Shopify* | *HotWax*  |
+|-----------|---------|---------|
+| **Canada**    | 1      | 1     |
+| **Belgium**  | -1      | 0       |
+| **Available** | **0**  | **1**      |
 
 
 
