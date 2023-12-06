@@ -46,22 +46,19 @@ HotWax is encountering issues accurately reflecting product availability, notabl
 1. **Navigate to the Product on Shopify:**
    - Locate the specific product within your Shopify admin panel.
 
-2. **Check Inventory on Warehouse One:**
-   - Review the inventory level for the product in the first warehouse.
+2. **Check Inventory:**
+   - Review the inventory level for the product at all the locations. Hint: There must be locations with negative inventory numbers.
 
-3. **Check Inventory on Warehouse Two:**
-   - Similarly, assess the inventory for the same product in the second warehouse.
-
-4. **Verify Sum of Warehouse Inventories:**
-   - Ensure that the combined inventory from both warehouses sums to 0.
+3. **Verify the sum of Warehouse Inventories:**
+   - Ensure that the combined inventory from all locations sums to 0.
 
 **For HotWax**
 
-5. **Find the Product in HotWax:**
-   - Locate the corresponding product on https://preorder.hotwax.io/catalog, go to the product audit page to see more details.
+4. **Find the Product in HotWax:**
+   - Locate the corresponding product in the HotWax Commerce Pre-order app's [Catalog page](https://preorder.hotwax.io/catalog) and click the product to open the Product Audit page. 
 
-6. **Check Inventory in the Online ATP calculation card:**
-   - Examine the inventory level for the product in within HotWax. The online ATP would be more than 0.
+5. **Check Inventory in the Online ATP calculation card:**
+   - Examine the inventory level for the product within HotWax. The online ATP would be more than 0.
 
 
 To see how HotWax allocates pre-orders to physical inventory when HotWax is the source of inventory, check out this blog: https://www.hotwax.co/blog/how-to-capture-and-release-shopify-pre-orders-with-ease
