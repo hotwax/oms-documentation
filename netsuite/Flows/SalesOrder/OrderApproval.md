@@ -65,7 +65,7 @@ Capturing orders in HotWax Commerce initiates the creation of orders in "created
 
 
 #### Export new orders to NetSuite
-A job in HotWax Commerce creates a CSV file of orders in "created" status that have not yet been sent to Netsuite. When creating this file HotWax Commerce also ensures that the customer already exists in NetSutie using the customer ID saved in the last step.
+A job in HotWax Commerce Integration platform creates a CSV file of orders in "created" status that have not yet been sent to Netsuite. When creating this file HotWax Commerce also ensures that the customer already exists in NetSutie using the customer ID saved in the last step.
 
 The file contains details such as unit prices, order adjustments, and shipping costs, excluding direct tax amounts. HotWax Commerce omits the tax amount from the file and sends tax codes for the individual order items because Netsuite independently computes the taxes based on these codes and applies them accurately to each order item, ensuring precise tax calculations within Netsuite.
 
