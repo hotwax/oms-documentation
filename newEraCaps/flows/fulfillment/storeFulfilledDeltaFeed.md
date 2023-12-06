@@ -20,6 +20,6 @@ While initially it was expected that this feed would be generated using the out 
 | 90003913 | 4550538204877   | 5           | 1 |
 
 1. **Order Id:** Unique identifier for each order by Shopify order name.
-2. **Product Id:** Identifies the specific product in the order using the Shopify product SKU.
-3. **Facility Id:** Represents the identifier of the store or facility from which the product is fulfilled. For this to work the internal ID of the facilities in the OMS and Smaregi must be the same. Otherwise custom facility identification types would have to be used.
+2. **Product Id:** Identifies the specific product in the order using the Shopify product UPCA.
+3. **Facility Id:** Represents the identifier of the store or facility from which the product is fulfilled. This is currently mapped with external ID of the facility.
 4. **Quantity:** The quantity of the product fulfilled from the store inventory for the given order.
