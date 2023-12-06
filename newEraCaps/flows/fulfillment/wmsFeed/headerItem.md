@@ -50,12 +50,13 @@ New Era has not marked this field as not required. Need to verify if this can be
 - Potential hardcoded value found in mapping sheet: `7/6/2016`
 
 ## ETA (S-9)
-{% hint style="danger" %}
-New Era has not marked this field as not required. Need to verify if this can be left empty.
+{% hint style="info" %}
+This value is not part of the Shopify order and so it's not saved in the OMS. So instead it defaults to 64 which an assumed average delivery time.
 {% endhint %}
 - **Description:** Delivery Time driven by VAS instruction
 - **Position:** 2-2
-We should pick a default option from here if we don't know where to source this from.
+- **OMS Value:** 64 (4pm - 6pm)
+A default option will be selected from here if we don't know where to source this from.
   - 60: 8:00 AM to 12:00 PM
   - 62: 12:00 PM to 2:00 PM
   - 63: 2:00 PM to 4:00 PM
@@ -288,14 +289,9 @@ As of now we expect this to be blank. Need to confirm with New Era.
   - **Example:** '2023/04/20'
 
 - **S-50:** Payment Term (Length: 30, Bytes: 30)
-  - **Description:** Payment Terms Code field.
-  - **Notes:**
-    - This field signifies the payment terms associated with the order.
-    - If not applicable, the field should be left blank.
-  - **Example:** 'Z624'
-{% hint style="danger" %}
-As of now we will default to Z624. Need to confirm with New Era for mapping conditions.
-{% endhint %}
+  - **Description:** This field signifies the payment terms associated with the order.
+  - **OMS Value** This value will be left empty for all B2C orders since payment terms are only applicable for B2B orders which the OMS is not processing.
+
 
 - **S-51:** Payment Due Date (Length: 10, Bytes: 10)
   - **Description:** Hard-coded payment due date as '2/5/2031'.
