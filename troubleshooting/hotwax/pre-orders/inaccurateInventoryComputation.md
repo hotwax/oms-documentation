@@ -49,7 +49,7 @@ HotWax is encountering issues accurately reflecting product availability, notabl
 2. **Check Inventory:**
    - Review the inventory level for the product at all the locations. Hint: There must be locations with negative inventory numbers.
 
-3. **Verify the sum of Warehouse Inventories:**
+3. **Verify the sum of location Inventories:**
    - Ensure that the combined inventory from all locations sums to 0.
 
 **For HotWax**
