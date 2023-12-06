@@ -12,7 +12,7 @@ A Map Reduce SuiteScript generates a CSV file containing fulfilled orders and pl
 HC_MR_ExportedSalesOrderFulfillmentCSV
 ```
 
-A job in HotWax Commerce reads the file, marking order items as fulfilled in the HotWax Commerce.
+A job in HotWax Commerce integration platform reads the file, marking order items as fulfilled in the HotWax Commerce.
 
 **Job in HotWax Commerce**
 ```
