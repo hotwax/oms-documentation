@@ -10,7 +10,7 @@ HotWax Commerce encounters difficulties in showcasing products for pre-orders on
 
 ## Explanation
 
-### Products within Shopify
+**Products within Shopify**
 
   Retailers streamline their operations by employing a unified product catalog across multiple Shopify stores. Consequently, products obtain distinct internal IDs on each store, while retaining a consistent and unique identifier, typically the SKU. It's important to note that not all stores carry the entire product range; instead, a hierarchical structure is established with one store functioning as the master catalog and others as child catalogs, each tailored to specific product offerings. This approach facilitates efficient management and customization of product availability across diverse Shopify storefronts.
 
@@ -19,7 +19,7 @@ HotWax Commerce encounters difficulties in showcasing products for pre-orders on
 | **SKU1234**    | 1543      | 1462    |
 
 
-### Products in HotWax
+**Products in HotWax**
 
 In instances where a common product catalog is employed across multiple Shopify stores, HotWax adopts a structured approach. It designates one specific Shopify store as the master catalog, responsible for comprehensive product information. The same set of products is then associated with other Shopify stores, considering them as child catalogs. To establish a connection with HotWax, a product must be initially configured in the parent store and subsequently linked to the corresponding child store. Failure to follow this setup process inhibits HotWax from establishing a connection with the Shopify store and transmitting updated product information. This systematic approach ensures a cohesive and organized integration between HotWax and the various Shopify stores within the shared product ecosystem.
 
