@@ -17,6 +17,12 @@ For all of these items, the integration layer will check the integration mapping
 <ProductType description="Gift Card" hasTable="N" isDigital="Y" isPhysical="N" parentTypeId="DIGITAL_GOOD" productTypeId="GIFT_CARD"/>
 ```
 
+**Shopify Shop type mapping**
+
+```
+ <ShopifyShopTypeMapping mappedKey="Gift Cards" mappedTypeId="SHOPIFY_PRODUCT_TYPE" mappedValue="GIFT_CARD" shopId="SHOP"/>
+```
+
 **NetSuite mapping**
 
 ```
