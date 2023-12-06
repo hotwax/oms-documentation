@@ -23,9 +23,11 @@
 **Receiving App**
 
 1. Retailers will be now automatically logged in to their most recently selected product store.
+
 2. Returns can now be received and also looked up by sales order ID or tracking code in the returns tab. \
    \
    [Read more](new-returns-receiving-workflow.md)
+
 3. Retailers who manage multiple locations at stores can now receive inventory at specific locations.\
 
 

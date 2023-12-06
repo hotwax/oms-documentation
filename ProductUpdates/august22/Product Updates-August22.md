@@ -2,9 +2,13 @@
 
 ### Order Management System
 
+**Order**
+
 1. Retailers can now move items from the brokering queue to the backorder queue, helping them avoid overselling. \
    \
    [Read more](moving-order-items-from-the-brokering-to-the-backorder-queue.md)\
+
+**Products**
 
 2. Product type will now be shown on the “Product View” page helping retailers know whether it's finished goods, digital products, gift cards, etc.
 
@@ -28,8 +32,6 @@
 
 2. Added a new link for all items on the Purchase Order view page that shows the associated Sales Orders received for the Purchase Order item, helping merchandisers to get clarity on what Purchase Order items are allocated to which Sales Orders.
 
-\
-
 
 <figure><img src="https://www.hotwax.co/hs-fs/hubfs/Link%20to%20allocated%20Sales%20order%201.png?width=830&#x26;height=611&#x26;name=Link%20to%20allocated%20Sales%20order%201.png" alt=""><figcaption></figcaption></figure>
 
@@ -44,6 +46,8 @@
    [Read more](reserving-in-stock-inventory-for-pre-orders.md)
 
 ### Applications
+
+**Fulfillment**
 
 1. To ensure that packages can be grouped together and sent as one shipment, HotWax Commerce introduced an “Order Merging” feature in its Fulfillment App to reduce shipping costs and increase profitability. \
    \

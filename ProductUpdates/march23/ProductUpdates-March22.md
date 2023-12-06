@@ -18,12 +18,14 @@
 
 **BOPIS**
 
-3.  Store managers can now assign and track store pick up orders to store associates.\
+1.  Store managers can now assign and track store pick up orders to store associates.\
 
 
     <figure><img src="https://www.hotwax.co/hs-fs/hubfs/bopis-uat.hotwax%202.png?width=2064&#x26;height=1533&#x26;name=bopis-uat.hotwax%202.png" alt=""><figcaption></figcaption></figure>
-4. Store associates can now view retained product search results when navigating back from other pages to the Catalog page.
-5.  The BOPIS app is now available in Spanish.\
+
+2. Store associates can now view retained product search results when navigating back from other pages to the Catalog page.
+
+3.  The BOPIS app is now available in Spanish.\
     \
 
 
@@ -31,13 +33,13 @@
 
 **Job Manager**
 
-6. Merchandisers can now schedule a job to automatically adjust Purchase Order ATP allocations upon uploading an early-dated Purchase Order, enabling them to initiate pre-order deliveries ahead of schedule. \
+4. Merchandisers can now schedule a job to automatically adjust Purchase Order ATP allocations upon uploading an early-dated Purchase Order, enabling them to initiate pre-order deliveries ahead of schedule. \
    \
    [Read More](reallocate-inventory-for-early-dated-purchase-orders.md)
 
 **Receiving**
 
-7.  Store associates will now see a red progress bar when received inventory surpasses the expected quantity, allowing them to quickly track when they have received more/less inventory than expected.\
+5.  Store associates will now see a red progress bar when received inventory surpasses the expected quantity, allowing them to quickly track when they have received more/less inventory than expected.\
     \
 
 

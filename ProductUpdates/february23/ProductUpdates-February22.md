@@ -33,6 +33,7 @@
 
 
     <figure><img src="https://www.hotwax.co/hs-fs/hubfs/RN5.png?width=1403&#x26;height=1033&#x26;name=RN5.png" alt=""><figcaption></figcaption></figure>
+
 6. Fulfillment teams can now view product inventory availability across all retail locations on the Product Detail Page, accessible from the newly added Catalog page.\
 
 

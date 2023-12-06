@@ -2,6 +2,8 @@
 
 ### Order Management System
 
+**Purchase Orders**
+
 1. Purchase order CSV export will now include parent product name to facilitate mapping between different reports and make them more readable.
 
 <figure><img src="https://www.hotwax.co/hs-fs/hubfs/RN%201-3.webp?width=808&#x26;height=621&#x26;name=RN%201-3.webp" alt=""><figcaption></figcaption></figure>
