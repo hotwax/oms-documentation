@@ -11,6 +11,7 @@
 * [Bulk Data Import](hotwax/bulkDataImport.md)
 * [Pre-order](hotwax/preOrders.md)
   * [Inaccurate Inventory computation](hotwax/pre-orders/inaccurateInventoryComputation.md)
+  * [Missing Product Linking](hotwax/pre-orders/missingProductLinking.md)
 
 ## NetSuite
 
