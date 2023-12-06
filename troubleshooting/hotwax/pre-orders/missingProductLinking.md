@@ -32,25 +32,31 @@ In instances where a common product catalog is employed across multiple Shopify 
 
 ## Troubleshooting Steps
 
-### Step 1: Verify Product Association with Shopify Store
+### Step 1: Verify Product Association with the Shopify Store
 
-1. **Locate the Product in HotWax:**
+1. **Locate the Product in HotWax**
    - Navigate to the [Pre-order Catalog](https://preorder.hotwax.io/catalog) within HotWax Commerce.
    - Open the Audit page and examine the Shop listing status card to check the stores to which the product is currently listed. If it's not linked to the desired store, proceed with the following steps:
 
-2. **Access the Find Product Page:**
-   - Visit the [Find Product page](https://{instanceName}.hotwax.io/commerce/control/FindProduct).
+### Step 2: Link product to Shopify store
+
+2. **Access the Find Product Page**
+   - Visit the Find Product page:https://{instanceName}.hotwax.io/commerce/control/FindProduct.
    - Open the detailed page for the specific product.
 
-3. **Inspect the Shopify Shop Product Section:**
+3. **Inspect the Shopify Shop Product Section**
    - On the detailed page, review the Shopify shop product section to identify the store with which the product is currently connected.
 
-4. **Establish the Connection:**
+4. **Establish the Connection**
    - Initiate the connection by clicking the `Add` button.
    - Select the Shopify store designated as the Shop in OMS.
    - Input the Shopify product ID and Inventory ID (extracted from the product on the Shopify store).
 
-5. **Execute Jobs in the Job Manager App:**
+## Step 3: Refresh products to reflect changes
+
+5. **Execute Jobs in the Job Manager App**
    - Within the Job Manager app, initiate the following jobs: `Auto refresh pre-order catalog` and `Sync variant details` by searching them from the pipeline page.
+
+6. **Review products in Hotwax and Shopify**
 
 By following these steps meticulously, you ensure a seamless and accurate linking of products, ultimately improving the functionality of the pre-order option on the Shopify store.
