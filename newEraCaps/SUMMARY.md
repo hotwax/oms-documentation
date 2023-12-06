@@ -15,4 +15,5 @@
   * [WMS Feed](flows/fulfillment/wmsFeed/README.md)
     * [Header Item](flows/fulfillment/wmsFeed/headerItem.md)
     * [Detail Item](flows/fulfillment/wmsFeed/detailItem.md)
+    * [Completed Feed](flows/fulfillment/wmsFeed/completeOrder.md)
 * [Sales Order]
