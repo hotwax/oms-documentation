@@ -41,7 +41,7 @@ HotWax is encountering issues accurately reflecting product availability, notabl
 
 ## Troubleshooting Steps:
 
-### For Shopify:
+**For Shopify**
 
 1. **Navigate to the Product on Shopify:**
    - Locate the specific product within your Shopify admin panel.
@@ -55,7 +55,7 @@ HotWax is encountering issues accurately reflecting product availability, notabl
 4. **Verify Sum of Warehouse Inventories:**
    - Ensure that the combined inventory from both warehouses sums to 0.
 
-### For HotWax:
+**For HotWax**
 
 5. **Find the Product in HotWax:**
    - Locate the corresponding product on https://preorder.hotwax.io/catalog, go to the product audit page to see more details.
