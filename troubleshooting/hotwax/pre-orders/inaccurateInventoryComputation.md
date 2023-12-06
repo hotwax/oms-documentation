@@ -39,7 +39,7 @@ HotWax is encountering issues accurately reflecting product availability, notabl
 
 
 
-## Troubleshooting Steps:
+## Troubleshooting Steps
 
 **For Shopify**
 
