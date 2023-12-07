@@ -18,3 +18,4 @@
 * [Receiving](receiving/README.md)
   * [Receiving Incoming Shipments](receiving/Receiving-Incoming-Shipments.md)
   * [Receiving Purchase orders](receiving/Receiving-Purchase-Orders.md)
+  * [Receiving returns](receiving/Receiving-Returns.md)
