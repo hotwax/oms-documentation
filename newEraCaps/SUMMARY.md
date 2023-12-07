@@ -16,4 +16,5 @@
     * [Header Item](flows/fulfillment/wmsFeed/headerItem.md)
     * [Detail Item](flows/fulfillment/wmsFeed/detailItem.md)
     * [Completed Feed](flows/fulfillment/wmsFeed/completeOrder.md)
-* [Sales Order]
+* [Sales Order](flows/salesOrder/README.md)
+  * [Soft Allocation](flows/salesOrder/softAllocationFlow.md)
