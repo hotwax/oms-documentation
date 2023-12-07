@@ -9,9 +9,7 @@ description: >-
 
 **This document outlines key pages and functions within the Launchpad.**
 
-
-
-**Key items:**&#x20;
+**Key items:**
 
 1. Home page
 2. Application categories
@@ -21,49 +19,39 @@ description: >-
 
 ### Home page
 
-Allows accessing all HotWax Commerce applications.&#x20;
+Allows accessing all HotWax Commerce applications.
 
-**Characteristics:**&#x20;
+**Characteristics:**
 
 **1. Single Sign-On (SSO):** Enables users to log in applications using their credentials. After the initial login in the Launchpad, they gain automatic access to all associated applications without the need to enter their login details again.
 
 <figure><img src=".gitbook/assets/LaunchPad.png" alt=""><figcaption><p>Image: Launchpad</p></figcaption></figure>
 
-
-
 ### **Application categories**
 
 Shows how apps are categorized on basis of their characteristics.
 
-#### **Orders**&#x20;
+#### **Orders**
 
 This category revolves around managing the orders using the three apps: BOPIS, Pre-Order Management and Fulfillment.
 
-* **BOPIS (Buy Online, Pickup In-Store)** \
-  HotWax Commerce’s BOPIS app enables users to handover store pick up orders to customers.\
-
-* **Pre-Order Management** \
-  HotWax Commerce’s Pre-Order Management app enables users to manage pre-orders and backorders, with planned future inventory to fulfill the orders.\
-
-* **Fulfillment** \
+* **BOPIS (Buy Online, Pickup In-Store)**\
+  HotWax Commerce’s BOPIS app enables users to handover store pick up orders to customers.\\
+* **Pre-Order Management**\
+  HotWax Commerce’s Pre-Order Management app enables users to manage pre-orders and backorders, with planned future inventory to fulfill the orders.\\
+* **Fulfillment**\
   HotWax Commerce's Fulfillment app enables users to pick, pack, and ship orders brokered to the stores from the OMS.
-
-
 
 #### Workflow
 
 This category revolves around managing the workflow using the three apps: Threshold Management, Job Manager and Import.
 
-* **Threshold Management** \
-  HotWax Commerce’s Threshold Management app enables merchandisers to set inventory thresholds for a group of products.\
-
-* **Job Manager** \
-  HotWax Commerce’s Job Manager app helps the operations teams to manage jobs by scheduling new jobs, skipping or canceling scheduled jobs and finding failed jobs that need attention.\
-
-* **Import** \
+* **Threshold Management**\
+  HotWax Commerce’s Threshold Management app enables merchandisers to set inventory thresholds for a group of products.\\
+* **Job Manager**\
+  HotWax Commerce’s Job Manager app helps the operations teams to manage jobs by scheduling new jobs, skipping or canceling scheduled jobs and finding failed jobs that need attention.\\
+* **Import**\
   HotWax Commerce’s Import app enables users to import inventory and purchase orders.
-
-
 
 #### Inventory
 
@@ -90,21 +78,15 @@ Users can access specific instances of the HotWax apps.
 
 **3. Dev (Development) Instance:** Users can access the dev instance by clicking on the bottom left icon of the respective app card.
 
-
-
 {% embed url="https://youtu.be/J2imie7z0eU" %}
 Video: Application Instance
 {% endembed %}
 
 ***
 
-**Related flows:**&#x20;
+**Related flows:**
 
-1. [User management](http://127.0.0.1:5000/o/l53nGvPQLhOHrKCP9HTG/s/vsbL9DiW8kFNTItD6870/)
-2. [Configurations](http://127.0.0.1:5000/o/l53nGvPQLhOHrKCP9HTG/s/PoTFyo0cPPGdyZu8kxeb/)
+1. [User management](https://app.gitbook.com/o/l53nGvPQLhOHrKCP9HTG/s/vsbL9DiW8kFNTItD6870/)
+2. [Configurations](https://app.gitbook.com/o/l53nGvPQLhOHrKCP9HTG/s/PoTFyo0cPPGdyZu8kxeb/)
 
-
-
-
-
-:arrow\_left:[ Go to HotWax Commerce Docs](http://127.0.0.1:5000/o/l53nGvPQLhOHrKCP9HTG/s/TefRnbhmBjhScpq172vl/)
+:arrow\_left:[ Go to HotWax Commerce Docs](https://app.gitbook.com/o/l53nGvPQLhOHrKCP9HTG/s/TefRnbhmBjhScpq172vl/)

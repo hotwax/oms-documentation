@@ -1,2 +1,0 @@
-# Receiving Incoming Shipments
-

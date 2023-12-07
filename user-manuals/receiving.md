@@ -64,7 +64,7 @@ Video: Complete shipment
 
 Purchase orders are buyer-generated documents detailing product specifics, quantities, and prices. Retailers use these purchase orders to order from suppliers. Upon delivery, retailers need to verify the received inventory against the purchase order, ensuring accurate shipments and inventory counts.
 
-The process of receiving purchase order is similar to [receiving inbound shipments](./#receive-asn). Store associates need to navigate to the Purchase order page and search for the Purchase order ID to start the receiving process.
+The process of receiving purchase order is similar to [receiving inbound shipments](receiving.md#receive-asn). Store associates need to navigate to the Purchase order page and search for the Purchase order ID to start the receiving process.
 
 Store associates can also see the status of purchase orders i.e. whether they are created or approved in the Purchase order page. The comprehensive details of all the Purchase Orders received is also available for the store associates for future reconcilations.
 
@@ -88,4 +88,4 @@ The Returns Page categorizes returns into three distinct categories:
 * Received
 * Canceled
 
-Store associates can lookup the incoming return shipments by navigating to the Returns page and identifying the shipments with the Return ID. Store associates can receive the returned shipment similarly to the [inbound shipments](Receiving-incoming-shipments.md)[.](./#receive-asn)
+Store associates can lookup the incoming return shipments by navigating to the Returns page and identifying the shipments with the Return ID. Store associates can receive the returned shipment similarly to the [inbound shipments](receiving/Receiving-incoming-shipments.md)[.](receiving.md#receive-asn)
