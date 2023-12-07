@@ -70,7 +70,7 @@ Video: Location
 
 5. **Saving and Finalizing:**
 
-   a. Store associates should click 'Save' to conclude the receiving process and update the inventory system.
+   a. Store associates should click double checkmarks to conclude the receiving process and update the inventory system.
    
    b. Notably, inbound shipments are removed from the page only when inventory for all the Products is received.
 

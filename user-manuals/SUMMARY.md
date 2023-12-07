@@ -16,4 +16,5 @@
   * [Picking App](fulfillment/pickingApp.md)
   * [CSV Support](fulfillment/csvSupport.md)
 * [Receiving](receiving/README.md)
-* 
+  * [Receiving Incoming Shipments](receiving/Receiving-Incoming-Shipments.md)
+  * [Receiving Purchase orders](receiving/Receiving-Purchase-Orders.md)
