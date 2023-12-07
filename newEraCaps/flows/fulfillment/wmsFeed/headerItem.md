@@ -65,14 +65,9 @@ A default option will be selected from here if we don't know where to source thi
   - 66: 8:00 PM to 9:00 PM
 
 ## PCS (S-10)
-{% hint style="danger" %}
-We have marked this as leave empty but this should simply be the total shipping qty from the warehouse on the order.
-{% endhint %}
 - **Description:** Delivery Quantity
 - **Position:** 10-10
-- **Example Value:** 8
-- **Additional Information:**
-  - It provides information about the total quantity to be delivered for each order.
+- **Ussage** The total quantity to be delivered for an order. A sum of all the item qty in the brokered feed to the warehouse.
 
 ## S-11 (Missing)
 
