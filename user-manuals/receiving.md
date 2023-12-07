@@ -10,7 +10,12 @@ Additionally, the Inventory Receiving App streamlines the receiving process by a
 
 **1. Accessing the Shipments Page:**
 
-Store associates can log in to the receiving app if they are associated with a facility. The first page users see when they log into the app is the Shipments page which houses a complete list of inbound shipments from warehouses or other stores, each accompanied by an Advanced Shipment Notice. To locate specific shipments, store associates can scan the unique identifier such as ASN. Store associates can also manually input the identifier in the 'Search' box to locate the shipment.
+The first page users see when they log into the app is the `Shipments` page which houses a complete list of inbound shipments from warehouses or other stores, each accompanied by an Advanced Shipment Notice. To locate specific shipments, store associates can scan the unique identifier such as ASN. Store associates can also manually input the identifier in the 'Search' box to locate the shipment.\
+
+
+{% hint style="info" %}
+Store associates can log in to the receiving app only if they are [associated with a facility. ](users/manageUser.md#add-facilities)
+{% endhint %}
 
 {% embed url="https://youtu.be/MUkSgK9VrfY" %}
 Video: Search shipments
