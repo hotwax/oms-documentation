@@ -20,4 +20,4 @@ If a product is only available at stores, customers will also be shown the addit
 
 <!-- page links -->
 
-[checkInvAPI]:(https://docs.hotwax.co/integration-resources-1/v/hotwax-commerce/apis/inventory/check-inventory)
+[checkInvAPI]:(https://docs.hotwax.co/integration-resources-1/v/hotwax-commerce/apis/inventory/check-inventory/)

@@ -3,6 +3,8 @@
 * [Introduction](README.md)
 * [Why HotWax Commerce](whyHotWax.md)
 
+* [Glossary](GLOSSARY.md)
+
 ## Flows
 * [Product](Flows/Products/README.md)
 * [Sales Orders](Flows/SalesOrders/README.md)
