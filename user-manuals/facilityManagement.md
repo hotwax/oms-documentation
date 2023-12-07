@@ -4,7 +4,7 @@ HotWax Commerce allows retailers to independently manage fulfillment and Buy Onl
 
 ## Managing Online Fulfillment
 
-### Generic Steps
+***Generic Steps***
 
 1. Go to the Facilities app through Launchpad: [HotWax Launchpad](https://launchpad.hotwax.io/home)
 2. On the home page, click on Facilities and choose the particular facility for which you wish to modify specifications.
@@ -33,17 +33,17 @@ Order allocation is controlled using the max order limit function.
 1. Go to the Online Order Fulfillment card to configure the order limit.
 2. The current limit is displayed at the bottom of the card.
 
-### Order Limit Options
+***Order Limit Options***
 
-- **Unlimited:**
+**Unlimited:**
   - Allows the OMS to allocate as many orders as there is inventory.
   - Not recommended for stores to prevent overallocation.
 
-- **No Capacity:**
+**No Capacity:**
   - Sets the fulfillment capacity to zero, preventing any orders from being allocated.
   - If disabling fulfillment capacity, ensure online inventory is turned off to prevent overselling.
 
-- **Custom:**
+**Custom:**
   - Allows setting a specific order limit for the facility.
   - Use for stores to prevent overallocation based on the staff's capacity.
 
