@@ -16,4 +16,5 @@
   * [Rejection](fulfillment/rejection.md)
   * [Picking App](fulfillment/pickingApp.md)
   * [CSV Support](fulfillment/csvSupport.md)
+* [Facility management](facilityManagement.md)
 * [Receiving](receiving.md)
