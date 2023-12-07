@@ -9,7 +9,7 @@ HotWax Commerce allows retailers to independently manage fulfillment and Buy Onl
 1. Go to the Facilities app through Launchpad: [HotWax Launchpad](https://launchpad.hotwax.io/home)
 2. On the home page, click on Facilities and choose the particular facility for which you wish to modify specifications
 
-
+---
 ### Linking Facility with Shopify
 
 Before adjusting any specifications, ensure the facility is mapped to its corresponding location on Shopify:
@@ -23,12 +23,12 @@ Before adjusting any specifications, ensure the facility is mapped to its corres
 
 This ensures a seamless integration between the facility and Shopify, laying the groundwork for streamlined configuration and operation.
 
-
+---
 ### Publish Inventory Online
 
 Enable the Sell Inventory Online setting in the Fulfillment Settings card.
 
-
+---
 ### Toggle Order Allocation
 
 Order allocation is controlled using the max order limit function.
@@ -52,17 +52,17 @@ Order allocation is controlled using the max order limit function.
 
 **Note:** When setting a custom limit, consider the facility's staff capacity to fulfill orders in a day. Unlimited is not recommended for stores, and No Capacity should be used cautiously.
 
-
+---
 ### Enabling BOPIS for a Store
 
 Toggle the Allow pickup option to enable BOPIS for the selected facility in the Fulfillment Setting card.
 
-
+---
 ### Disabling BOPIS for a Store
 
 Under the Fulfillment Settings card, disable the Allow pickup toggle.
 
-
+---
 ### Designate a Primary Product Store for a Facility
 
 1. Open the Overflow menu located within the product store card.
