@@ -1,4 +1,4 @@
-# Receiving Purchase Orders
+# Receiving Purchase orders
 
 Purchase orders are buyer-generated documents detailing product specifics, quantities, and prices. Retailers use these purchase orders to order from suppliers. Upon delivery, retailers need to verify the received inventory against the purchase order, ensuring accurate shipments and inventory counts.
 
@@ -12,8 +12,8 @@ Video: Receiving history
 
 The purchase order detail page also have the option to quickly copy the Purchase Order ID to communicate with external systems.
 
+
 {% embed url="https://youtu.be/BF7ddyxyGkw" %}
 Video: Copy purchase order ID
 {% endembed %}
-
 

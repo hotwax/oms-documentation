@@ -2,11 +2,12 @@
 
 Retailers often transfer their products from warehouses to stores for various reasons, aiming to optimize inventory management and meet customer demands efficiently. Some common reasons for this intra-company transfer include:
 
-- Stock Replenishment
-- Inventory Balancing
-- Geographical Demand
+* Stock Replenishment
+* Inventory Balancing
+* Geographical Demand
 
 ## Receive Inbound Shipments
+
 
 **1. Accessing the Shipments Page:**
 
@@ -20,10 +21,11 @@ Video: Search shipments
 **2. Opening Shipment Details Page:**
 Upon identifying the desired shipment, store associates can select it to access comprehensive details. The detailed information includes expected SKUs with product names, SKU codes, images, and expected inventory counts.
 
+
 **3. Finding Specific Products within a Shipment:**
 Inbound shipments can contain multiple product items, store associates can utilize the search function or scan individual product barcodes within the shipment to pinpoint specific items. The platform's enlarged image feature aids in clearer product identification for store associates.
 
-{% embed url="https://youtu.be/OwVIBaKY4ds" %}
+{% embed url="https://youtu.be/OwVIBaKY4ds" fullWidth="false" %}
 Video: Search shipment items
 {% endembed %}
 
@@ -34,6 +36,7 @@ Video: Scan items
 **4. Receiving Items:**
 
 Store associates can tap for 'Receive All' to accept the entire received inventory of an item at once, aligning it with the recorded inventory. This action increases the inventory of the product in HotWax Commerce and subsequently on e-commerce.
+
 
 {% embed url="https://youtu.be/2Cq1HfctoL0" %}
 Video: Receive all items

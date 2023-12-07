@@ -1,5 +1,6 @@
 # Table of contents
 
+* [README](README.md)
 * [Launchpad](launchpad/README.md)
 * [Job management](jobManager/README.md)
   * [Job details](jobManager/flows/job-details.md)
