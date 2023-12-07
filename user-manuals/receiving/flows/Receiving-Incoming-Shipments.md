@@ -44,4 +44,7 @@ When Receiving Inventory, retailers can also select the pre-defined location in 
    
    b. Notably, inbound shipments are removed from the page only when inventory for all the Products is received.
 
+{% embed url="https://youtu.be/m94MBKjJYzE" %}
+Video: Receive incoming shipments
+{% endembed %}
 
