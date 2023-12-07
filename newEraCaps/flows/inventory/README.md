@@ -41,5 +41,7 @@ HotWax pushes available to sell inventory levels to Shopify. Because New Era Cap
 
 All stores that participate in online sales will post their inventory to the consolidated inventory location on Shopify. During the add to cart experience New Era Caps will add a soft allocation to the order items that the customer has selected to have shipped from store to their house at a higher shipping fee.
 
+{% content-ref url="../salesOrder/omnichannelOrders.md" %} Learn more about omnichannel orders {% endcontent-ref %}
+
 
 <!-- page links -->

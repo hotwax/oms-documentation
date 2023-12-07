@@ -17,4 +17,5 @@
     * [Detail Item](flows/fulfillment/wmsFeed/detailItem.md)
     * [Completed Feed](flows/fulfillment/wmsFeed/completeOrder.md)
 * [Sales Order](flows/salesOrder/README.md)
+  * [Omnichannel Orders](flows/salesOrder/omnichannelOrders.md)
   * [Soft Allocation](flows/salesOrder/softAllocationFlow.md)

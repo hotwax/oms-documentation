@@ -45,6 +45,36 @@ Here is a smaple table along with the Japanese headers translated to English and
 | お問い合せ送り状No.                   | Tracking Number                              |                                               |
 
 
+### Field mappings
+
+**Cool Shipping:** Always send `001`. New Era Caps doesn't need refridgerated shipping, their products are cool on their own.
+001 : No data
+002 : Chilled product
+003 : Frozen product
+
+**COD Fee:**
+{% hint style="danger" %}
+The rules of how this is computed are unclear. Is this derived during label generation or this a value that we get from the order and shipping charges?
+{% endhint %}
+
+**Tax:**
+{% hint style="danger" %}
+Which taxes is this? Item VAT or order level shipping tax?
+{% endhint %}
+
+**Payment type:** 
+0 ：No data
+1 ：All accepted
+2 ：Only Cash
+3 ：Debit and Credit
+
+{% hint style="danger" %}
+Currently we do not know which of these values maps to COD and the difference between `All accepted` and `Debit and Credit`.
+{% endhint %}
+
+**Client Information:** Client information reffers to the billing information of an order.
+
+
 ## Import tracking codes
 Once tracking codes are generated for orders from the carrier’s portal, the store staff will reupload it into the fulfillment application. The app will then automatically save these tracking codes to the order shipments allowing them to be automatically fulfilled at the end of the day using the `Ship Packed Orders` job in the OMS.
 
