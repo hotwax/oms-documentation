@@ -34,7 +34,9 @@ Retailers often transfer their products from warehouses to stores for various re
    
    b. For larger quantities or instances where all inventory can't be counted together, store associates have the option to manually input the received quantities. This incremental process helps update the inventory count in the system. This feature is especially useful in cases of under-received inventory.
    
-   c. Retailers can also mandate store associates to scan the unique barcode of each SKU. When Receiving Inventory, retailers can also select the pre-defined location in the store where the inventory will be put away. This will help in the picking process as the picker would have easy access to the item during fulfillment.
+   c. Retailers can also mandate store associates to scan the unique barcode of each SKU. 
+
+When Receiving Inventory, retailers can also select the pre-defined location in the store where the inventory will be put away. This will help in the picking process as the picker would have easy access to the item during fulfillment.
 
 5. **Saving and Finalizing:**
 
