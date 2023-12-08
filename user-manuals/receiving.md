@@ -38,7 +38,7 @@ Video: Scan items
 
 **4. Receive Items:**
 
-If store associates have verified that the physical inventory count matches the anticipated inventory in the ASN, they can tap on the `Receive All` button to accept the entire received inventory at once. 
+If store associates have verified that the physical inventory count matches the anticipated inventory in the ASN, they can tap on the `Receive All` button to accept the entire received inventory at once.
 
 {% embed url="https://youtu.be/2Cq1HfctoL0" %}
 Video: Receive all items
@@ -84,6 +84,6 @@ Video: Copy purchase order ID
 
 ## Receive Returns
 
-Retailers who accept return shipments at their stores need to accurately receive and record the returned inventory for potential resale on e-commerce.
+Retailers who accept return at their stores need to accurately receive and record the returned inventory for potential resale on e-commerce.
 
-Store associates can lookup the incoming return shipments by navigating to the `Returns` page and identifying the shipments with the `Return ID`. Store associates can receive the returned shipment similarly to the [inbound shipments](receiving.md#receive-asn)
+Store associates can lookup the incoming returns by navigating to the `Returns` page and identifying the returns with the `Return ID`. Store associates can receive the returned items similarly to the [inbound shipments](receiving.md#receive-asn).
