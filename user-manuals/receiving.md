@@ -8,9 +8,9 @@ Additionally, the Inventory Receiving App streamlines the receiving process by a
 
 ### Receive ASN
 
-**1. Accessing the Shipments Page:**
+**1. Locating ASN:**
 
-The first page users see when they log into the app is the `Shipments` page which houses a complete list of inbound shipments from warehouses or other stores, each accompanied by an Advanced Shipment Notice. To locate specific shipments, store associates can scan the unique identifier such as ASN. Store associates can also manually input the identifier in the 'Search' box to locate the shipment.
+The first page users see when they log into the app is the `Shipments` page which houses a complete list of ASN from ERP or WMS. To locate specific ASN, store associates can scan the ASN barcode from the physical paper received along with the package. Store associates can also manually input the ASN in the `Search` box to locate the shipment.
 
 {% hint style="info" %}
 Store associates can log in to the receiving app only if they are [associated with a facility.](users/manageUser.md#add-facilities)
