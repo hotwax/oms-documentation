@@ -6,27 +6,27 @@ The Inventory Receiving App enables retailers to precisely track the physical in
 
 Additionally, the Inventory Receiving App streamlines the receiving process by allowing store associates to efficiently enter or scan products using handheld devices like mobile phones or iPads. As a Progressive Web App (PWA), it offers flexible browser-based access or can be easily saved as an icon on store associates' devices, providing convenient one-click accessibility. This adaptability ensures a seamless and expedited inventory-receiving experience, enhancing overall operational efficiency.
 
-### Receive ASN
+## Receive ASN
 
-**1. Locating ASN:**
+**1. Locate ASN:**
 
-The first page users see when they log into the app is the `Shipments` page which houses a complete list of ASN from ERP or WMS. To locate specific ASN, store associates can scan the ASN barcode from the physical paper received along with the package. Store associates can also manually input the ASN in the `Search` box to locate the shipment.
+The first page users see when they log into the app is the `Shipments` page which houses a complete list of ASN from ERP or WMS. To locate specific ASN, store associates can scan the ASN barcode from the physical copy received along with the package. Store associates can also manually input the ASN in the `Search` box to locate the shipment.
 
 {% hint style="info" %}
-Store associates can log in to the receiving app only if they are [associated with a facility.](users/manageUser.md#add-facilities)
+Store associates can log in to the Inventory Receiving App only if they are [associated with a facility.](users/manageUser.md#add-facilities)
 {% endhint %}
 
 {% embed url="https://youtu.be/MUkSgK9VrfY" %}
 Video: Search shipments
 {% endembed %}
 
-**2. Opening Shipment Details Page:**
+**2. View ASN Details:**
 
-Upon identifying the desired shipment, store associates can select it to access comprehensive details. The detailed information includes expected SKUs with product names, SKU codes, images, and expected inventory counts.
+Once ASN is located, store associates can tap to view the ASN details including expected SKUs along with product names, SKU codes, images, and expected inventory counts.
 
-**3. Finding Specific Products within a Shipment:**
+**3. Locate Items:**
 
-Inbound shipments can contain multiple product items, store associates can utilize the search function or scan individual product barcodes within the shipment to pinpoint specific items. The platform's enlarged image feature aids in clearer product identification for store associates.
+The inbound shipments generally contain multiple product items, store associates can either scan individual product barcodes or search SKUs to locate specific items and start receiving. In case you are not managing barcodes, tap to the image icon to see the enlarged to easily identify the product before receiving.
 
 {% embed url="https://youtu.be/OwVIBaKY4ds" fullWidth="false" %}
 Video: Search shipment items
@@ -36,21 +36,21 @@ Video: Search shipment items
 Video: Scan items
 {% endembed %}
 
-**4. Receiving Items:**
+**4. Receive Items:**
 
-Store associates can tap for 'Receive All' to accept the entire received inventory of an item at once, aligning it with the recorded inventory. This action increases the inventory of the product in HotWax Commerce and subsequently on e-commerce.
+If store associates have verified that the physical inventory count matches the anticipated inventory in the ASN, they can tap on the 'Receive All' button to accept the entire received inventory at once. 
 
 {% embed url="https://youtu.be/2Cq1HfctoL0" %}
 Video: Receive all items
 {% endembed %}
 
-For larger quantities or instances where all inventory can't be counted together, store associates have the option to manually input the received quantities. This incremental process helps update the inventory count in the system. This feature is especially useful in cases of under-received inventory. Furthermore Retailers can also mandate store associates to scan the unique barcode of each SKU.
+If store associates encounter any discrepancy between the physical count and the anticipated inventory, they can manually input the received quantities. Retailers have the option to mandate store associates to scan the unique barcode of each SKU for enhanced accuracy and inventory management.
 
 {% embed url="https://youtu.be/nosDR5BY9W8" %}
 Video: Enter quantity
 {% endembed %}
 
-When Receiving Inventory retailers can also select the pre-defined location in the store where the inventory will be put away. This will help in the picking process as the picker would have easy access to the item during fulfillment.
+When receiving inventory, retailers can also select the pre-defined location in the store where the inventory will be put away. This will help in the picking process as the picker would have easy access to the item during fulfillment.
 
 {% embed url="https://youtu.be/CKL2uOo715A" %}
 Video: Location
@@ -58,13 +58,13 @@ Video: Location
 
 **5. Saving and Finalizing:**
 
-Store associates need to tap on the double checkmarks at the bottom of the page to conclude the receiving process and update the inventory in the system. The inbound shipments are removed from the page only when inventory for all the Products is received.
+Store associates need to tap on the double checkmarks at the bottom of the page to conclude the receiving process and update the inventory in the system. The inbound shipments are removed from the page only when inventory for all the products is received.
 
 {% embed url="https://youtu.be/sNETVOLPNEU" %}
 Video: Complete shipment
 {% endembed %}
 
-### Receive Purchase Orders
+## Receive Purchase Orders
 
 Purchase orders are buyer-generated documents detailing product specifics, quantities, and prices. Retailers use these purchase orders to order from suppliers. Upon delivery, retailers need to verify the received inventory against the purchase order, ensuring accurate shipments and inventory counts.
 
@@ -82,7 +82,7 @@ The purchase order detail page also have the option to quickly copy the Purchase
 Video: Copy purchase order ID
 {% endembed %}
 
-### Receive Returns
+## Receive Returns
 
 Customers create return requests via mail or online, sending purchased items back to the warehouse or store. This returned inventory, physically shipped by the customer, must be accurately received for potential resale in e-commerce.
 
