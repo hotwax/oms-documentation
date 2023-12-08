@@ -76,14 +76,29 @@ Store associates can also see the status of purchase orders i.e. whether they ar
 Video: Receiving history
 {% endembed %}
 
-The `Purchase Order Detail` page also have the option to quickly copy the Purchase Order ID to communicate with external systems.
-
 {% embed url="https://youtu.be/BF7ddyxyGkw" %}
-Video: Copy purchase order ID
-{% endembed %}
 
 ## Receive Returns
 
 Retailers who accept return at their stores need to accurately receive and record the returned inventory for potential resale on e-commerce.
 
-Store associates can lookup the incoming returns by navigating to the `Returns` page and identifying the returns with the `Return ID`. Store associates can receive the returned items similarly to the [inbound shipments](receiving.md#receive-asn).
+Store associates can lookup the incoming returns by navigating to the `Returns` page and identifying the returns with the `Return ID`. Store associates can receive the returned items similarly to the [inbound shipments](receiving.md#receive-asn).\
+
+
+## Handle Discrepancies:
+
+**Receiving Extra Inventory**
+
+Sometimes stores receive more items than expected, leading to scenarios where, for instance, a store might receive 110 product items instead of the anticipated 100. Shipping back the extra items incurs additional costs for the retailer, necessitating a solution to receive this surplus inventory effectively.
+
+HotWax Commerce facilitates the receiving of extra inventory to address this concern. The progress bar highlights over-received items, turning red to identify items with excess inventory easily. Furthermore, the platform generates reports for over-received items, allowing retailers to receive this extra inventory efficiently within their ERP system.\
+\
+**Receiving Unexpected Items**
+
+At times, stores receive items that differ from the recorded shipment. This discrepancy could arise from mispicking at the warehouse or inadvertently shipping more items than intended. When stores unexpectedly receive these extra Items, they require a process to receive and record these additional items effectively.
+
+{% embed url="https://youtu.be/UQ4XKINQeTE" %}
+Add Shipment Item
+{% endembed %}
+
+\
