@@ -10,9 +10,11 @@ Having free text fields for CSRs to enter critical information such as municipio
 In an effort to combat this, HotWax recommended that a custom draft order entry application be developed which includes an enumerated list of all the valid muncipios, cantons or distrio options for the CSR to simply select from. This eliminates the possibility of incorrect values being entered by the CSR and guarantees shipping label creation to a much greater extent.
 
 ## Send Sales
-Send Sale orders created by Retail Pro and sent to Shopify. HotWax imports these orders from Shopify. These orders are identified as POS orders in the OMS using the source name mapping with the sales channel and OrderFacility attribute. The source name of the POS channel is unique on every Shopify store because Retail Pro is integrated using a custom app which generates its own custom source name. The easiest way to obtain the source name of POS orders on a Shopify store is to check the JSON of an order created by the custom app.
+Send Sale orders created by Retail Pro and sent to Shopify. HotWax imports these orders from Shopify. These orders are identified as POS orders in the OMS using the source name mapping with the sales channel and OrderFacility attribute. The source name of the POS channel is unique on every Shopify store because Retail Pro is integrated using a custom app which generates its own unique source name. The easiest way to obtain the source name of POS orders on a Shopify store is to check the JSON of an order created by the custom app.
 
-<!-- add field in json to check -->
+{% hint style="info" %}
+The source name in the JSON can be found by searching for the keyword `source` in the JSON
+{% endhint %}
 
 This order is then processed and fulfilled as a normal order but it is not sent back to RetailPro for invoicing as it was already invoiced while placing the order.
 

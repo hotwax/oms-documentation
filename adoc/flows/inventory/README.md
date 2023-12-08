@@ -35,10 +35,6 @@ Retail Pro calls the [Update Inventory API][updateInventoryDocs] in HotWax Comme
 
 Because inventory for in store POS sales is deducted using API calls, actual POS orders are not imported into the OMS from Retail Pro.
 
-<!-- page links -->
-[updateInventoryDocs]:(https://github.com/hotwax/oms-documentation/blob/oms1.0/Inventory/Update%20Inventory.md)
-
-
 ## Inventory sync to Shopify
 
 ### Full Reset
@@ -46,3 +42,6 @@ After processing inventory rules like safety stock, threshold and product facili
 
 ### Frequent Delta Syncs
 Throughout the day HotWax pushes inventory updates to Shopify every 15 minutes. These are necessary to keep Shopify up to date about in store sold inventory and avoid over selling. These changes are pushed to Shopify using the “Upload recent inventory change” job in the Job Manager.
+
+<!-- page links -->
+[updateInventoryDocs]:(https://github.com/hotwax/oms-documentation/blob/oms1.0/Inventory/Update%20Inventory.md)

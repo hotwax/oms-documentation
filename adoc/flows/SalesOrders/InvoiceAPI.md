@@ -182,7 +182,9 @@ https://<host>:<port>/api/v1/Document/Ordertoinvoice
 | StoreOrig       | String      | 5          | Y              | Item             | Store code where the fulfillment of the Product is confirmed |
 | StoreDest       | String      | 5          | N              | Item             | Store code where the Product is delivered to the customer (if applicable for in-store delivery) |
 
-This table maps the `DeliveryType` values in the API JSON. The `Id` column represents the numeric identifier for each delivery option, and the `Description` column provides a human-readable description of each option.
+This table maps the `DeliveryType` values in the API JSON. 
+
+The `Id` column represents the numeric identifier for each delivery option, and the `Description` column provides a human-readable description of each option.
 
 In the API JSON, the `DeliveryType` field should take one of these values based on the desired delivery method:
 
@@ -196,7 +198,8 @@ In the API JSON, the `DeliveryType` field should take one of these values based 
 
 
 
-This table maps the `PaymentType` values in the API JSON. The `Id` column represents the numeric identifier for each payment option, and the `Description` column provides a human-readable description of each option.
+This table maps the `PaymentType` values in the API JSON. 
+The `Id` column represents the numeric identifier for each payment option, and the `Description` column provides a human-readable description of each option.
 
 In the API JSON, the `PaymentType` field should take one of these values based on the desired payment method:
 
@@ -208,3 +211,5 @@ So, when constructing the API JSON for an order, you would choose the appropriat
 |------|----------------------|
 | 1    | Credit/Debit Card    |
 | 2    | Cash on delivery     |
+
+During invoicing, HotWax also uses inventory transfers in Retail Pro to ensure inventory is depleted at the actual shipping store as well. Read more about that API on the next page.
