@@ -9,18 +9,18 @@
 
 The Import Orders job is designed to import new orders recently created on eCommerce platforms into HotWax Commerce. New orders are identified by checking those created since the last time the job was executed. If the job is run for the first time, it defaults to orders created in the last 15 minutes from the execution time. This default duration can be adjusted using the "frequency" custom parameter.
 
-#### Recommended Frequency
+##### Recommended Frequency
 
 Importing new orders every 15 minutes is generally sufficient to ensure customers have a grace period for order cancellations and to process expedited orders on time. However:
 
 - **Low Order Volume:** For instances with lower order volume and more demanding fulfillment SLAs, consider increasing the frequency to every five minutes.
 - **High Order Volume:** During periods of higher order volume, importing orders every 15 minutes is recommended to leverage HotWax Commerce's bulk import capabilities fully.
 
-#### Common Troubleshooting Use Cases
+##### Common Troubleshooting Use Cases
 
 The Import Orders job is primarily used for the regular flow of orders and is not commonly employed for troubleshooting. Custom parameter descriptions may provide insights into how the job can be adapted for different use cases.
 
-#### Custom Parameters
+##### Custom Parameters
 
 | **Parameter**    | **Type**     | **Description**                                                                                                   | **Default Value** | **Example Value** |
 |-------------------|--------------|-------------------------------------------------------------------------------------------------------------------|-------------------|-------------------|
@@ -37,15 +37,15 @@ The Import Orders job is primarily used for the regular flow of orders and is no
 - **Job Enum ID:** JOB_IMP_ORD_UPD
 - **Job Name:** Import Order Updates from Shopify
 
-#### Description
+##### Description
 
 The Import Order Updates from Shopify job is specifically designed to handle the import of order updates from the eCommerce platform into HotWax Commerce. This job caters to a variety of order modifications, including the addition of new items, changes in item quantities, and the cancellation of items or entire orders.
 
-#### Recommended Frequency
+##### Recommended Frequency
 
 The job is configured to run every 60 minutes, ensuring frequent updates and maintaining synchronization between Shopify and HotWax Commerce.
 
-#### Common troubleshooting Use Case
+##### Common troubleshooting Use Case
 
 **Issue 1: Order Updates Not Reflecting in HotWax Commerce**
 
@@ -54,7 +54,7 @@ The job is configured to run every 60 minutes, ensuring frequent updates and mai
 **Resolution Steps** 
 Review the `frequency` parameter to ensure it aligns with the intended import frequency. Occasional delays may occur in the immediate reflection of order updates when the frequency is set high.
 
-#### Custom Parameters
+##### Custom Parameters
 
 | **Parameter**    | **Type**     | **Description**                                                                                                   | **Default Value** | **Example Value** |
 |-------------------|--------------|-------------------------------------------------------------------------------------------------------------------|-------------------|-------------------|
@@ -68,15 +68,15 @@ Review the `frequency` parameter to ensure it aligns with the intended import fr
 - **Job ID:** JOB_IMP_ITM_CNCL
 - **Job Name:** Import Canceled Items
 
-#### Description
+##### Description
 
 The Import Canceled Items job is designed to actively monitor eCommerce platforms for order items that have been canceled. Unlike canceling the entire order, this job specifically targets canceled items and ensures their corresponding status is updated within HotWax Commerce. This job is crucial for maintaining accurate inventory records and order status in HotWax Commerce. By identifying and canceling individual items that have been canceled on the eCommerce platform, it prevents discrepancies and ensures that the system reflects the most up-to-date order information.
 
-#### Recommended frequency
+##### Recommended frequency
 
 The job is configured to run every 15 minutes, ensuring a regular check for canceled items and prompt updates within HotWax Commerce.
 
-#### Troubleshooting Use Case
+##### Troubleshooting Use Case
 
 **Issue:** Cancelled Order item Not Reflecting in HotWax Commerce
 
@@ -86,7 +86,7 @@ The job is configured to run every 15 minutes, ensuring a regular check for canc
 Review the `frequency` parameter to ensure it aligns with the intended import frequency. Occasional delays may occur in the immediate reflection of order updates when the frequency is set high.
 
 
-#### Custom Parameters
+##### Custom Parameters
 
 | **Parameter**    | **Type**     | **Description**                                                                                                   | **Default Value** | **Example Value** |
 |-------------------|--------------|-------------------------------------------------------------------------------------------------------------------|-------------------|-------------------|
@@ -101,7 +101,7 @@ Review the `frequency` parameter to ensure it aligns with the intended import fr
 - **Job ID:** JOB_IMP_RTN
 - **Job Name:** Import Order Returns
 
-#### Description
+##### Description
 
 The Import Order Returns job plays a crucial role in managing returned orders seamlessly between eCommerce platforms and HotWax Commerce. This job actively monitors eCommerce platforms to identify orders that have been returned. Subsequently, it initiates the creation of return transactions within HotWax Commerce. In cases where inventory is damaged, the job ensures accurate logging of Damaged variances in HotWax.
 
@@ -109,12 +109,12 @@ The Import Order Returns job plays a crucial role in managing returned orders se
   
 - **Restocking:** If the inventory is damaged and marked as returnable, the job ensures that returned items are restocked appropriately.
 
-#### Recommended frequency
+##### Recommended frequency
 
 The job is configured to run every 15 minutes, ensuring a regular check for returned orders and facilitates swift updates within HotWax Commerce.
 
 
-#### Troubleshooting Use Case
+##### Troubleshooting Use Case
 
 **Issue 1:** Orders marked as returned on the eCommerce platform are not creating return transactions in HotWax Commerce
 
@@ -129,7 +129,7 @@ The job is configured to run every 15 minutes, ensuring a regular check for retu
 **Resolution steps:** Verify that the return handling settings allow for restocking of returnable items.
 
 
-#### Custom Parameters
+##### Custom Parameters
 
 | **Parameter**      | **Type**     | **Description**                                                                                                   | **Default Value** | **Example Value** |
 |--------------------|--------------|-------------------------------------------------------------------------------------------------------------------|-------------------|-------------------|
@@ -145,15 +145,15 @@ The job is configured to run every 15 minutes, ensuring a regular check for retu
 - **Job ID:** JOB_UL_CMPLT_ORD
 - **Job Name:** Upload Completed Orders
 
-#### Description
+##### Description
 
 The Upload Completed Orders job is designed to update the order status of fulfilled orders to the eCommerce platform. This ensures that the eCommerce platform accurately reflects the current status of orders that have been successfully fulfilled by OMS.
 
-#### Recommended frequency
+##### Recommended frequency
 
 The job is configured to run at a frequency that suits the needs of your business, ensuring timely updates for fulfilled orders.
 
-#### Troubleshooting Use Case
+##### Troubleshooting Use Case
 
 **Issue 1:** Orders are not updating their status on the eCommerce platform after being fulfilled.
 
@@ -161,7 +161,7 @@ The job is configured to run at a frequency that suits the needs of your busines
 
 **Resolution Steps:** Review the `frequency` parameter to ensure it aligns with the intended frequency for updating the order status. Lower frequencies might result in delays in processing fulfillment. 
 
-#### Custom Parameters
+##### Custom Parameters
 
 | **Parameter**           | **Type**     | **Description**                                                                                                   | **Default Value** | **Example Value** |
 |--------------------------|--------------|-------------------------------------------------------------------------------------------------------------------|-------------------|-------------------|
