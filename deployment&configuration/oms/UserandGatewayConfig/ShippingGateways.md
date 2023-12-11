@@ -8,7 +8,7 @@ To enable the integration with Carriers, retailers must set up their preferred c
 ## Load Carrier Data
 
 1. Navigate to the `General Settings` page under the settings header in the hamburger menu of HotWax Commerce.
-2. Locate and click on the option related to your carrier in the header. For instance, select `Load Fedex Data` to designate Fedex as your carrier.
+2. Locate and click on the option related to your carrier in the header. For instance, click on `Load Fedex Data` button to designate Fedex as your carrier.
 3. After loading the data, a new menu option specific to the chosen carrier will be added to the hamburger menu. For example, if you load Fedex data, you will find a new menu titled `FedEx Carrier Setup` under the settings section.
 
 ## Carrier Configuration Setup
