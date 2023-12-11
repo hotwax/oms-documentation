@@ -15,6 +15,14 @@ Store associates periodically count real-time inventory to identify any discrepa
 
 Store associates can quickly locate products by searching products using product IDs, and SKUs from the `Search` box or utilizing the scan feature by tapping the `Scan` button to quickly scan the product barcodes. They can also view enlarged product images by tapping on the image to identify products without barcodes.
 
+{% embed url="https://youtu.be/SEANjTlBxhQ" %}
+Video: Search a product
+{% endembed %}
+
+{% embed url="https://youtu.be/vyB2zpTzvPE" %}
+Video: Scan function
+{% endembed %}
+
 2. View Product Details
 
 After locating the products for inventory counting, associates can tap on the item to access enlarged images and view variant details.
@@ -25,19 +33,30 @@ Once the physical counting process concludes, store associates can manually ente
 
 Store associates also have the ability to access and modify the recorded location of inventory within the store or warehouse by tapping the `locations` field. This feature allows adjustments if discrepancies arise between the system's recorded location and the actual placement of inventory, ensuring precise tracking and placement accuracy.
 
+{% embed url="https://youtu.be/HtGKVOeLjyE" %}
+Video: Count segment
+{% endembed %}
+
 4. Save Inventory count
 
 Store associates need to tap on the `Save` button at the bottom of the page to conclude the counting process.
 
 5- Upload Inventory
 
-Following this, the inventory count undergoes review by an authorized store or warehouse manager for accuracy. The supervisor evaluates the variance between actual and recorded inventory levels, approving or rejecting them based on their assessment.
+Following this, the inventory count undergoes review by an authorized store or warehouse manager for accuracy. Store managers can see all the variances in bulk and evaluate the variance between actual and recorded inventory levels, approving or rejecting them based on their assessment.
 Store managers have access to all submitted inventory counts by navigating to the `Upload` page. Here, they can reconcile physical inventory, analyze variances against recorded inventory, and take action:
 
 A. Managers can approve the inventory by tapping the `Upload` icon, triggering inventory updates in the Order Management System and subsequently on the e-commerce platform and ERP systems.
+
+{% embed url="https://youtu.be/Q9QAKSx2YYY" %}
+Video: Upload function
+{% endembed %}
+
 B. In cases where the manager is unsatisfied with the counting process, inventory adjustments made can be removed by tapping on the `Remove` button.
 
-
+{% embed url="https://youtu.be/GcQ0j2qNyKY" %}
+Video: Remove function
+{% endembed %}
 
 ## Adjust inventory variance
 
@@ -51,9 +70,13 @@ Store associates can input the desired increment or decrement of inventory from 
 
 Associates are also prompted to select a `Variance Reason` from a dropdown menu, detailing the specific cause such as 'damaged' or 'found.'
 
-Upon completion, tapping `log variance` updates the inventory count in the Order Management System and subsequently on the e-commerce platform.
+Upon completion, tapping `Log Variance` updates the inventory count in the Order Management System and subsequently on the e-commerce platform.
 
-> **Note:** Inventory adjustments do not require approval from store managers. Only authorized users with appropriate permissions are able to log inventory variances.
+{% embed url="https://youtu.be/Cg3pRqpxGfM" %}
+Video: Variance segment
+{% endembed %}
+
+> **Note:** Inventory adjustments do not require approval from store managers. Only authorized users with appropriate permissions are able to nventory variances.
 
 
 
