@@ -8,7 +8,7 @@
   * [Job queueing](jobManager/flows/job-queueing.md)
   * [Initial load](jobManager/flows/initial-load.md)
   * [Bulk Scheduling](jobManager/flows/bulk-scheduling.md)
-* [Job workflows](jobWorkflows.md/README.md)
+* [Job workflows](jobWorkflows/README.md)
   * [Shopify](jobWorkflows/shopify.md)
   * [Netsuite](jobWorkflows/netsuite.md)
 * [Users](users/README.md)
