@@ -11,7 +11,7 @@ The feed for BI/BW is generated after full order completion to ensure that the O
 
 ## File Naming Scheme
 - **File Name:** JP_ECOM_HOT_YYMMDD_HHMM.csv
-- **File Path:** TBD
+- **File Path:** /home/newera-uat-sftp/bi-bw/store_fulfilled_orders/staging/outgoing
 - **File Frequency:** Once a day (end of day)
 
 ## Field Descriptions
