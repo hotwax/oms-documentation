@@ -16,7 +16,7 @@ To enable the integration with Carriers, retailers must set up their preferred c
 Video: Load carrier data
 {% endembed %}
 
-### Add Shipment Gateway
+### Add Shipment Gateway Configurations
 
 After loading Carrier data into HotWax Commerce, the next critical step is to establish communication with shipping gateways. In this section, we'll explore the essential parameters needed to enable integration with FedEx and the same steps can be applied to other carriers.
 
@@ -37,7 +37,7 @@ Connect URL, Access Account Nbr, Access Meter Number, Access User Key, Access Us
 * **Access User Pwd** - This is the password associated with the access key. Together with the access key, it provides a secure means of authentication, preventing unauthorized access to your FedEx account.
 * **Label Image Type** - Label Image Type is a mandatory field that determines the format or type of the shipping label image generated and returned by FedEx. Choosing the correct type, such as PDF or PNG.
 
-After completing all field entries, you can save the shipment gateway configurations by clicking the `Add` button within the form. If a user has entered any incorrect information in any field they can delete the configuration by clicking on the `Delete` icon in the last column. We will be soon releasing the edit feature to modify the configurations.
+After completing all field entries, you can save the shipment gateway configurations by clicking the `Add` button within the form. If a user has entered any incorrect information in any field they can delete the configuration by clicking on the `Delete` icon in the last column and add a new shipping gateway configuration with the correct information. We will be soon releasing the edit feature to modify the configurations.
 
 <figure><img src="../.gitbook/assets/demo-oms.hotwax.io_commerce_control_CarrierSetup_partyId=FEDEX.png" alt=""><figcaption><p>Image: Add Shipment Gateway Configuration</p></figcaption></figure>
 
@@ -53,7 +53,7 @@ During the fulfillment process, as packers prepare packages and request shipping
 * **Shipment Method Type** - Choose the Shipping Method that you want to add.
 * **Carrier Service Code** - "The 'Carrier Service Code' serves as a unique identifier for a specific shipping method offered by a carrier, such as FedEx. Shipping Gateways utilize this distinctive code to identify and distinguish various shipping methods. When you enter this code in the designated field, you are essentially mapping the shipping methods from HotWax Commerce to the corresponding services provided by the Shipping Gateway.
 
-In essence, the 'Carrier Service Code' facilitates seamless communication between HotWax Commerce and the Shipping Gateway, ensuring accurate alignment of shipping methods for streamlined order fulfillment.
+&#x20;      In essence, the 'Carrier Service Code' facilitates seamless communication between HotWax Commerce and the Shipping Gateway, ensuring accurate alignment of shipping methods for streamlined order fulfillment.
 
 * **Delivery Days** - The 'Delivery Days' field represents the number of days committed by shipping methods for order delivery. This information is crucial for the HotWax Commerce Store Fulfillment App, particularly during the rate shopping process before obtaining shipping labels. The 'Delivery Days' field guides the app in shortlisting shipping methods eligible for rate shopping based on the specified delivery timeframe.
 
