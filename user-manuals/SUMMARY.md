@@ -18,3 +18,4 @@
   * [CSV Support](fulfillment/csvSupport.md)
 * [Facility management](facilityManagement.md)
 * [Receiving](receiving.md)
+* [Inventory Count](Inventory-count.md)
