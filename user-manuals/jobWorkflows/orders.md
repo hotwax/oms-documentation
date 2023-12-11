@@ -169,3 +169,288 @@ The job is configured to run at a frequency that suits the needs of your busines
 | **`orderID`**            | Required     | The ID associated with the order to be updated on the eCommerce platform.                                         | Not specified     | "ORD789012"       |
 | **`shipmentCreatedDate`** | Required     | The timestamp associated with the creation of shipments.                                                         | Not specified     | "1649883480000"  |
 
+### Order Item Attribute
+
+- **Job ID:** JOB_ORDER_ITM_ATTR
+- **Job Name:** Order Item Attribute
+
+#### Description
+
+The Order Item Attribute job is designed to create or update Order Item Attribute records. This job ensures the accurate maintenance of order item attributes within the system.
+
+#### Recommended frequency
+
+The job is configured to run at a frequency that suits the needs of your business, ensuring timely updates for order item attributes.
+
+#### Troubleshooting Use Case
+
+**Issue 1:** Order Item Attributes are not being created or updated as expected.
+
+**Possible Causes:** Configuration or Data Issues
+
+**Resolution Steps:**
+1. Review the `propertyResource` parameter to ensure it is correctly set to FTP_CONFIG.
+2. Verify that the `configId` parameter is set to IMP_ORDER_ITM_ATTR for the intended configuration.
+
+#### Custom Parameters
+
+| **Parameter**           | **Type**     | **Description**                                                                                                   | **Default Value** | **Example Value** |
+|--------------------------|--------------|-------------------------------------------------------------------------------------------------------------------|-------------------|-------------------|
+| **`propertyResource`**   | Required     | Specifies the property resource for configuration.                                                                | Not specified     | FTP_CONFIG        |
+| **`configId`**           | Required     | Identifies the configuration for Order Item Attribute records.                                                   | Not specified     | IMP_ORDER_ITM_ATTR|
+| **`remoteFilename`**     | Optional     | Specifies the remote filename for processing.                                                                     | Not specified     | Order_Attribute.csv|
+| **`groupBy`**            | Optional     | Specifies a grouping parameter for the job.                                                                      | Not specified     | AttributeType      |
+| **`additionalParameters`** | Optional   | Additional parameters for job customization.                                                                     | Not specified     | param1=value1,param2=value2|
+| **`fileNameRegex`**      | Optional     | Specifies a regular expression for filtering filenames.                                                          | Not specified     | ^OrderAttr_\d+\.csv$|
+| **`scheduleNow`**        | Optional     | When importing files into the OMS, forces the system to pick the file out of sequence for immediate processing. Enabled by default when importing files from FTP, but can be disabled during high-volume syncs for system stability. | Enabled     | false             |
+
+---
+
+## Approve Sales Order
+
+- **Job ID:** JOB_APR_SALES_ORD
+- **Job Name:** Approve Sales Order
+
+### Description
+
+The Approve Sales Order job is designed to facilitate the approval of sales orders within the system. This ensures that sales orders are processed and approved in a timely manner.
+
+### Recommended frequency
+
+The job is configured to run at a frequency that aligns with the business needs for timely approval of sales orders.
+
+### Troubleshooting Use Case
+
+**Issue 1:** Sales orders are not being approved as expected.
+
+**Possible Causes:** Configuration or Authorization Issues
+
+**Resolution Steps:**
+1. Review the `propertyResource` parameter to ensure it is correctly set to FTP_CONFIG.
+2. Verify that the `configId` parameter is set to IMP_APR_SALES_ORD for the intended configuration.
+
+### Custom Parameters
+
+| **Parameter**           | **Type**     | **Description**                                                                                                   | **Default Value** | **Example Value** |
+|--------------------------|--------------|-------------------------------------------------------------------------------------------------------------------|-------------------|-------------------|
+| **`propertyResource`**   | Required     | Specifies the property resource for configuration.                                                                | Not specified     | FTP_CONFIG        |
+| **`configId`**           | Required     | Identifies the configuration for Order Item Attribute records.                                                   | Not specified     | IMP_ORDER_ITM_ATTR|
+| **`remoteFilename`**     | Optional     | Specifies the remote filename for processing.                                                                     | Not specified     | Order_Attribute.csv|
+| **`groupBy`**            | Optional     | Specifies a grouping parameter for the job.                                                                      | Not specified     | AttributeType      |
+| **`additionalParameters`** | Optional   | Additional parameters for job customization.                                                                     | Not specified     | param1=value1,param2=value2|
+| **`fileNameRegex`**      | Optional     | Specifies a regular expression for filtering filenames.                                                          | Not specified     | ^OrderAttr_\d+\.csv$|
+| **`scheduleNow`**        | Optional     | When importing files into the OMS, forces the system to pick the file out of sequence for immediate processing. Enabled by default when importing files from FTP, but can be disabled during high-volume syncs for system stability. | Enabled     | false             |
+
+---
+
+## Import Order Attribute
+
+- **Job ID:** JOB_MOD_ORD_ATTR
+- **Job Name:** Import Order Attribute
+
+### Description
+
+The Import Order Attribute job is designed to import order attributes from an SFTP location into the OMS. This job ensures that order attributes are updated and synchronized with the latest information.
+
+### Recommended frequency
+
+The job is configured to run at a frequency that suits the business needs for regular updates of order attributes.
+
+### Troubleshooting Use Case
+
+**Issue 1:** Order attributes are not being imported as expected.
+
+**Possible Causes:** Configuration or Connectivity Issues
+
+**Resolution Steps:**
+1. Review the `propertyResource` parameter to ensure it is correctly set to FTP_CONFIG.
+2. Verify that the `configId` parameter is set to MOD_ORD_ATTR for the intended configuration.
+3. Check for any connectivity issues between the system and the specified SFTP location.
+
+### Custom Parameters
+
+| **Parameter**           | **Type**     | **Description**                                                                                                   | **Default Value** | **Example Value** |
+|--------------------------|--------------|-------------------------------------------------------------------------------------------------------------------|-------------------|-------------------|
+| **`propertyResource`**   | Required     | Specifies the property resource for configuration.                                                                | Not specified     | FTP_CONFIG        |
+| **`configId`**           | Required     | Identifies the configuration for importing order attributes.                                                      | Not specified     | MOD_ORD_ATTR      |
+| **`remoteFilename`**     | Optional     | Specifies the remote filename for processing.                                                                     | Not specified     | Order_Attribute.csv|
+| **`groupBy`**            | Optional     | Specifies a grouping parameter for the job.                                                                      | Not specified     | AttributeType      |
+| **`additionalParameters`** | Optional   | Additional parameters for job customization.                                                                     | Not specified     | param1=value1,param2=value2|
+| **`fileNameRegex`**      | Optional     | Specifies a regular expression for filtering filenames.                                                          | Not specified     | ^OrderAttr_\d+\.csv$|
+| **`scheduleNow`**        | Optional     | When importing files into the OMS, forces the system to pick the file out of sequence for immediate processing. Enabled by default when importing files from FTP, but can be disabled during high-volume syncs for system stability. | Enabled     | false             |
+
+---
+
+## Order Identification
+
+- **Job ID:** JOB_ORDER_IDENT
+- **Job Name:** Order Identification
+
+### Description
+
+The Order Identification job is designed to create or update Order Identification records within the OMS. This job ensures accurate and up-to-date identification of orders.
+
+### Recommended frequency
+
+The job is configured to run at a frequency that aligns with the business needs for regular updates of order identification records.
+
+### Troubleshooting Use Case
+
+**Issue 1:** Order identification records are not being created or updated as expected.
+
+**Possible Causes:** Configuration or Data Issues
+
+**Resolution Steps:**
+1. Review the `propertyResource` parameter to ensure it is correctly set to FTP_CONFIG.
+2. Verify that the `configId` parameter is set to IMP_ORDER_IDENT for the intended configuration.
+
+### Custom Parameters
+
+| **Parameter**           | **Type**     | **Description**                                                                                                   | **Default Value** | **Example Value** |
+|--------------------------|--------------|-------------------------------------------------------------------------------------------------------------------|-------------------|-------------------|
+| **`propertyResource`**   | Required     | Specifies the property resource for configuration.                                                                | Not specified     | FTP_CONFIG        |
+| **`configId`**           | Required     | Identifies the configuration for importing order attributes.                                                      | Not specified     | MOD_ORD_ATTR      |
+| **`remoteFilename`**     | Optional     | Specifies the remote filename for processing.                                                                     | Not specified     | Order_Attribute.csv|
+| **`groupBy`**            | Optional     | Specifies a grouping parameter for the job.                                                                      | Not specified     | AttributeType      |
+| **`additionalParameters`** | Optional   | Additional parameters for job customization.                                                                     | Not specified     | param1=value1,param2=value2|
+| **`fileNameRegex`**      | Optional     | Specifies a regular expression for filtering filenames.                                                          | Not specified     | ^OrderAttr_\d+\.csv$|
+| **`scheduleNow`**        | Optional     | When importing files into the OMS, forces the system to pick the file out of sequence for immediate processing. Enabled by default when importing files from FTP, but can be disabled during high-volume syncs for system stability. | Enabled     | false             |
+
+---
+
+## Order Item Fulfillment
+
+- **Job ID:** JOB_ODR_ITM_FLFLMNT
+- **Job Name:** Order Item Fulfillment
+
+### Description
+
+The Order Item Fulfillment job is designed to complete order items using a JSON file in MDM (Master Data Management). This job ensures the fulfillment of order items and synchronization with the provided JSON file.
+
+### Recommended frequency
+
+The job is configured to run at a frequency that aligns with the business needs for completing order items using the MDM JSON file.
+
+### Troubleshooting Use Case
+
+**Issue 1:** Order item fulfillment is not completing as expected.
+
+**Possible Causes:** Configuration or Data Issues
+
+**Resolution Steps:**
+1. Review the `propertyResource` parameter to ensure it is correctly set to FTP_CONFIG.
+2. Verify that the `configId` parameter is set to IMP_ODR_ITM_FLFLMNT for the intended configuration.
+
+### Custom Parameters
+
+| **Parameter**           | **Type**     | **Description**                                                                                                   | **Default Value** | **Example Value** |
+|--------------------------|--------------|-------------------------------------------------------------------------------------------------------------------|-------------------|-------------------|
+| **`propertyResource`**   | Required     | Specifies the property resource for configuration.                                                                | Not specified     | FTP_CONFIG        |
+| **`configId`**           | Required     | Identifies the configuration for importing order attributes.                                                      | Not specified     | MOD_ORD_ATTR      |
+| **`remoteFilename`**     | Optional     | Specifies the remote filename for processing.                                                                     | Not specified     | Order_Attribute.csv|
+| **`groupBy`**            | Optional     | Specifies a grouping parameter for the job.                                                                      | Not specified     | AttributeType      |
+| **`additionalParameters`** | Optional   | Additional parameters for job customization.                                                                     | Not specified     | param1=value1,param2=value2|
+| **`fileNameRegex`**      | Optional     | Specifies a regular expression for filtering filenames.                                                          | Not specified     | ^OrderAttr_\d+\.csv$|
+| **`scheduleNow`**        | Optional     | When importing files into the OMS, forces the system to pick the file out of sequence for immediate processing. Enabled by default when importing files from FTP, but can be disabled during high-volume syncs for system stability. | Enabled     | false             |
+
+---
+
+## Party Identification
+
+- **Job ID:** JOB_PARTY_IDENT
+- **Job Name:** Party Identification
+
+### Description
+
+The Party Identification job is designed to create or update Party Identification records within the system. This job ensures accurate and up-to-date identification of parties involved.
+
+### Recommended frequency
+
+The job is configured to run at a frequency that aligns with the business needs for regular updates of party identification records.
+
+### Troubleshooting Use Case
+
+**Issue 1:** Party identification records are not being created or updated as expected.
+
+**Possible Causes:** Configuration or Data Issues
+
+**Resolution Steps:**
+1. Review the `propertyResource` parameter to ensure it is correctly set to FTP_CONFIG.
+2. Verify that the `configId` parameter is set to IMP_PARTY_IDENT for the intended configuration.
+
+### Custom Parameters
+
+| **Parameter**           | **Type**     | **Description**                                                                                                   | **Default Value** | **Example Value** |
+|--------------------------|--------------|-------------------------------------------------------------------------------------------------------------------|-------------------|-------------------|
+| **`propertyResource`**   | Required     | Specifies the property resource for configuration.                                                                | Not specified     | FTP_CONFIG        |
+| **`configId`**           | Required     | Identifies the configuration for importing order attributes.                                                      | Not specified     | MOD_ORD_ATTR      |
+| **`remoteFilename`**     | Optional     | Specifies the remote filename for processing.                                                                     | Not specified     | Order_Attribute.csv|
+| **`groupBy`**            | Optional     | Specifies a grouping parameter for the job.                                                                      | Not specified     | AttributeType      |
+| **`additionalParameters`** | Optional   | Additional parameters for job customization.                                                                     | Not specified     | param1=value1,param2=value2|
+| **`fileNameRegex`**      | Optional     | Specifies a regular expression for filtering filenames.                                                          | Not specified     | ^OrderAttr_\d+\.csv$|
+| **`scheduleNow`**        | Optional     | When importing files into the OMS, forces the system to pick the file out of sequence for immediate processing. Enabled by default when importing files from FTP, but can be disabled during high-volume syncs for system stability. | Enabled     | false             |
+
+---
+
+## Import Order Metafield
+
+- **Job ID:** IMP_ORD_META_FLD
+- **Job Name:** Import Order Metafield
+
+### Description
+
+The Import Order Metafield job is designed to schedule a job for downloading order metafields. This job ensures the timely synchronization of order metafields from the specified namespace.
+
+### Recommended frequency
+
+The job is configured to run at a frequency that aligns with the business needs for regular updates of order metafields.
+
+### Troubleshooting Use Case
+
+**Issue 1:** Order metafields are not downloading as expected.
+
+**Possible Causes:** Configuration or Timing Issues
+
+**Resolution Steps:**
+1. Ensure that the `shopifyConfigId` parameter is appropriately configured or set to null for the intended source.
+2. Review the `bufferTime` parameter to ensure it aligns with the desired duration for scheduling job downloads.
+3. Verify that the `namespace` parameter is set to HotwaxOrderDetails for the intended metafield source.
+
+### Custom Parameters
+
+| **Parameter**      | **Type**   | **Description**                                                            | **Default Value** | **Example Value**    |
+|--------------------|------------|----------------------------------------------------------------------------|-------------------|----------------------|
+| **`namespace`**    | Required   | Specifies the namespace for order metafields.                               | Not specified     | HotwaxOrderDetails   |
+| **`bufferTime`**   | Optional   | Specifies the buffer time (in minutes) for scheduling job downloads.       | 1                 | 5                    |
+| **`thruDateBuffer`** | Optional | Specifies the buffer time (in minutes) for processing orders after the through date. | 0               | 10                   |
+| **`filterQuery`**  | Optional   | Specifies a filter query for more targeted metafield downloads.             | Not specified     | "field_name: value"  |
+| **`frequency`**    | Optional   | Specifies the frequency (in minutes) for running the job.                    | Not specified     | 15                   |
+
+---
+
+## Update Order Tags
+
+- **Job ID:** UPDATE_ORDER_TAGS
+- **Job Name:** Update Order Tags
+
+### Description
+
+The Update Order Tags job, identified by Job ID UPDATE_ORDER_TAGS, is designed to perform bulk updates to order tags on the eCommerce platform. This job facilitates efficient and large-scale modifications to order tags, ensuring synchronization with the latest data.
+
+### Recommended Frequency
+
+The job frequency can be configured based on the business needs and the desired frequency of updating order tags in bulk.
+
+### Troubleshooting Use Case
+
+**Issue 1:** Bulk updates to order tags are not reflected on the eCommerce platform.
+
+**Possible Causes:** Configuration or Data Issues
+
+**Resolution Steps:**
+1. Check the configuration settings to ensure they align with the eCommerce platform's requirements.
+2. Verify that the provided order tags for updating are correct and match the expected format.
+
+### Custom Parameters
+
+No specific custom parameters
