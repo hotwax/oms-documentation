@@ -120,7 +120,7 @@ The job is configured to run every 15 minutes, ensuring a regular check for retu
 
 **Possible Causes:** Job Frequency
 
-**Resolution steps:** Review the `frequency` parameter to ensure it aligns with the intended frequency for checking and creating return transactions.Lower frequencies might result in delays in processing returns. 
+**Resolution steps:** Review the `frequency` parameter to ensure it aligns with the intended frequency for checking and creating return transactions. Lower frequencies might result in delays in processing returns. 
 
 **Issue 2:** Damaged variances are not being logged as expected
 
@@ -206,20 +206,20 @@ The job is configured to run at a frequency that suits the needs of your busines
 
 ---
 
-## Approve Sales Order
+### Approve Sales Order
 
 - **Job ID:** JOB_APR_SALES_ORD
 - **Job Name:** Approve Sales Order
 
-### Description
+#### Description
 
-The Approve Sales Order job is designed to facilitate the approval of sales orders within the system. This ensures that sales orders are processed and approved in a timely manner.
+The Approve Sales Order job is designed to facilitate the approval of sales orders within the system. This ensures that sales orders are processed and approved promptly.
 
-### Recommended frequency
+#### Recommended frequency
 
 The job is configured to run at a frequency that aligns with the business needs for timely approval of sales orders.
 
-### Troubleshooting Use Case
+#### Troubleshooting Use Case
 
 **Issue 1:** Sales orders are not being approved as expected.
 
@@ -229,7 +229,7 @@ The job is configured to run at a frequency that aligns with the business needs 
 1. Review the `propertyResource` parameter to ensure it is correctly set to FTP_CONFIG.
 2. Verify that the `configId` parameter is set to IMP_APR_SALES_ORD for the intended configuration.
 
-### Custom Parameters
+#### Custom Parameters
 
 | **Parameter**           | **Type**     | **Description**                                                                                                   | **Default Value** | **Example Value** |
 |--------------------------|--------------|-------------------------------------------------------------------------------------------------------------------|-------------------|-------------------|
@@ -243,20 +243,20 @@ The job is configured to run at a frequency that aligns with the business needs 
 
 ---
 
-## Import Order Attribute
+### Import Order Attribute
 
 - **Job ID:** JOB_MOD_ORD_ATTR
 - **Job Name:** Import Order Attribute
 
-### Description
+#### Description
 
 The Import Order Attribute job is designed to import order attributes from an SFTP location into the OMS. This job ensures that order attributes are updated and synchronized with the latest information.
 
-### Recommended frequency
+#### Recommended frequency
 
 The job is configured to run at a frequency that suits the business needs for regular updates of order attributes.
 
-### Troubleshooting Use Case
+#### Troubleshooting Use Case
 
 **Issue 1:** Order attributes are not being imported as expected.
 
@@ -267,7 +267,7 @@ The job is configured to run at a frequency that suits the business needs for re
 2. Verify that the `configId` parameter is set to MOD_ORD_ATTR for the intended configuration.
 3. Check for any connectivity issues between the system and the specified SFTP location.
 
-### Custom Parameters
+#### Custom Parameters
 
 | **Parameter**           | **Type**     | **Description**                                                                                                   | **Default Value** | **Example Value** |
 |--------------------------|--------------|-------------------------------------------------------------------------------------------------------------------|-------------------|-------------------|
@@ -281,20 +281,20 @@ The job is configured to run at a frequency that suits the business needs for re
 
 ---
 
-## Order Identification
+### Order Identification
 
 - **Job ID:** JOB_ORDER_IDENT
 - **Job Name:** Order Identification
 
-### Description
+#### Description
 
 The Order Identification job is designed to create or update Order Identification records within the OMS. This job ensures accurate and up-to-date identification of orders.
 
-### Recommended frequency
+#### Recommended frequency
 
 The job is configured to run at a frequency that aligns with the business needs for regular updates of order identification records.
 
-### Troubleshooting Use Case
+#### Troubleshooting Use Case
 
 **Issue 1:** Order identification records are not being created or updated as expected.
 
@@ -304,7 +304,7 @@ The job is configured to run at a frequency that aligns with the business needs 
 1. Review the `propertyResource` parameter to ensure it is correctly set to FTP_CONFIG.
 2. Verify that the `configId` parameter is set to IMP_ORDER_IDENT for the intended configuration.
 
-### Custom Parameters
+#### Custom Parameters
 
 | **Parameter**           | **Type**     | **Description**                                                                                                   | **Default Value** | **Example Value** |
 |--------------------------|--------------|-------------------------------------------------------------------------------------------------------------------|-------------------|-------------------|
@@ -318,20 +318,20 @@ The job is configured to run at a frequency that aligns with the business needs 
 
 ---
 
-## Order Item Fulfillment
+### Order Item Fulfillment
 
 - **Job ID:** JOB_ODR_ITM_FLFLMNT
 - **Job Name:** Order Item Fulfillment
 
-### Description
+#### Description
 
 The Order Item Fulfillment job is designed to complete order items using a JSON file in MDM (Master Data Management). This job ensures the fulfillment of order items and synchronization with the provided JSON file.
 
-### Recommended frequency
+#### Recommended frequency
 
 The job is configured to run at a frequency that aligns with the business needs for completing order items using the MDM JSON file.
 
-### Troubleshooting Use Case
+#### Troubleshooting Use Case
 
 **Issue 1:** Order item fulfillment is not completing as expected.
 
@@ -341,7 +341,7 @@ The job is configured to run at a frequency that aligns with the business needs 
 1. Review the `propertyResource` parameter to ensure it is correctly set to FTP_CONFIG.
 2. Verify that the `configId` parameter is set to IMP_ODR_ITM_FLFLMNT for the intended configuration.
 
-### Custom Parameters
+#### Custom Parameters
 
 | **Parameter**           | **Type**     | **Description**                                                                                                   | **Default Value** | **Example Value** |
 |--------------------------|--------------|-------------------------------------------------------------------------------------------------------------------|-------------------|-------------------|
@@ -355,20 +355,20 @@ The job is configured to run at a frequency that aligns with the business needs 
 
 ---
 
-## Party Identification
+### Party Identification
 
 - **Job ID:** JOB_PARTY_IDENT
 - **Job Name:** Party Identification
 
-### Description
+#### Description
 
 The Party Identification job is designed to create or update Party Identification records within the system. This job ensures accurate and up-to-date identification of parties involved.
 
-### Recommended frequency
+#### Recommended frequency
 
 The job is configured to run at a frequency that aligns with the business needs for regular updates of party identification records.
 
-### Troubleshooting Use Case
+#### Troubleshooting Use Case
 
 **Issue 1:** Party identification records are not being created or updated as expected.
 
@@ -378,7 +378,7 @@ The job is configured to run at a frequency that aligns with the business needs 
 1. Review the `propertyResource` parameter to ensure it is correctly set to FTP_CONFIG.
 2. Verify that the `configId` parameter is set to IMP_PARTY_IDENT for the intended configuration.
 
-### Custom Parameters
+#### Custom Parameters
 
 | **Parameter**           | **Type**     | **Description**                                                                                                   | **Default Value** | **Example Value** |
 |--------------------------|--------------|-------------------------------------------------------------------------------------------------------------------|-------------------|-------------------|
@@ -392,20 +392,20 @@ The job is configured to run at a frequency that aligns with the business needs 
 
 ---
 
-## Import Order Metafield
+### Import Order Metafield
 
 - **Job ID:** IMP_ORD_META_FLD
 - **Job Name:** Import Order Metafield
 
-### Description
+#### Description
 
 The Import Order Metafield job is designed to schedule a job for downloading order metafields. This job ensures the timely synchronization of order metafields from the specified namespace.
 
-### Recommended frequency
+#### Recommended frequency
 
 The job is configured to run at a frequency that aligns with the business needs for regular updates of order metafields.
 
-### Troubleshooting Use Case
+#### Troubleshooting Use Case
 
 **Issue 1:** Order metafields are not downloading as expected.
 
@@ -416,7 +416,7 @@ The job is configured to run at a frequency that aligns with the business needs 
 2. Review the `bufferTime` parameter to ensure it aligns with the desired duration for scheduling job downloads.
 3. Verify that the `namespace` parameter is set to HotwaxOrderDetails for the intended metafield source.
 
-### Custom Parameters
+#### Custom Parameters
 
 | **Parameter**      | **Type**   | **Description**                                                            | **Default Value** | **Example Value**    |
 |--------------------|------------|----------------------------------------------------------------------------|-------------------|----------------------|
@@ -428,20 +428,20 @@ The job is configured to run at a frequency that aligns with the business needs 
 
 ---
 
-## Update Order Tags
+### Update Order Tags
 
 - **Job ID:** UPDATE_ORDER_TAGS
 - **Job Name:** Update Order Tags
 
-### Description
+#### Description
 
 The Update Order Tags job, identified by Job ID UPDATE_ORDER_TAGS, is designed to perform bulk updates to order tags on the eCommerce platform. This job facilitates efficient and large-scale modifications to order tags, ensuring synchronization with the latest data.
 
-### Recommended Frequency
+#### Recommended Frequency
 
 The job frequency can be configured based on the business needs and the desired frequency of updating order tags in bulk.
 
-### Troubleshooting Use Case
+#### Troubleshooting Use Case
 
 **Issue 1:** Bulk updates to order tags are not reflected on the eCommerce platform.
 
@@ -451,6 +451,9 @@ The job frequency can be configured based on the business needs and the desired 
 1. Check the configuration settings to ensure they align with the eCommerce platform's requirements.
 2. Verify that the provided order tags for updating are correct and match the expected format.
 
-### Custom Parameters
+#### Custom Parameters
 
 No specific custom parameters
+
+
+## Netsuite
