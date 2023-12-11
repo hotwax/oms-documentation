@@ -1,7 +1,4 @@
-
-### Orders
-
-#### Import Orders
+### Import Orders
 
 - **Job Enum ID:** JOB_IMP_ORD
 - **Job Name:** Import Orders
@@ -33,7 +30,7 @@ The Import Orders job is primarily used for the regular flow of orders and is no
 
 ---
 
-#### Import Order Updates from Shopify
+### Import Order Updates from Shopify
 
 - **Job Enum ID:** JOB_IMP_ORD_UPD
 - **Job Name:** Import Order Updates from Shopify
@@ -64,7 +61,7 @@ Review the `frequency` parameter to ensure it aligns with the intended import fr
 
 ---
 
-#### Import Canceled Items
+### Import Canceled Items
 
 - **Job ID:** JOB_IMP_ITM_CNCL
 - **Job Name:** Import Canceled Items
@@ -97,7 +94,7 @@ Review the `frequency` parameter to ensure it aligns with the intended import fr
 
 ---
 
-#### Import Order Returns
+### Import Order Returns
 
 - **Job ID:** JOB_IMP_RTN
 - **Job Name:** Import Order Returns
@@ -141,7 +138,7 @@ The job is configured to run every 15 minutes, ensuring a regular check for retu
 
 ---
 
-#### Upload Completed Orders
+### Upload Completed Orders
 
 - **Job ID:** JOB_UL_CMPLT_ORD
 - **Job Name:** Upload Completed Orders
