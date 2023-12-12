@@ -1,16 +1,17 @@
 # Inventory Count
 
-HotWax Commerce's Inventory Count App streamlines inventory management in stores and warehouses by empowering store associates to seamlessly match physical inventory with system inventory. This user-friendly Progressive Web Application (PWA), accessible via browsers or handheld devices, simplifies inventory counting. Store associates can efficiently scan products using mobile phones or external devices, ensuring accuracy and speed in the counting process.
+HotWax Commerce's Inventory Count App streamlines inventory management in stores and warehouses by empowering store associates to seamlessly match physical inventory with system inventory. This intuitive Progressive Web Application (PWA), accessible through browsers or icons on handheld devices, streamlines inventory counting. Store associates can swiftly scan products using mobile phone or tablet cameras, ensuring a precise and efficient counting process. Specific [permissions]((users/manageUser.md) are necessary for full utilization of the Inventory Count App. Store associates with `Order Fulfillment` permissions can conduct inventory counts, while store managers with `Order Fulfillment Manager` permissions have the added capability to review counts and log inventory variances.
 
-Within this app, store associates have two options to reconcile inventory:
+> **Note-** Users can log in to the Inventory Counting App only if they are [associated with a facility](users/manageUser.md#add-facilities).
+
+The Inventory Count App offers two options to reconcile inventory:
 
 - Perform Complete Inventory Count
 - Adjust Inventory Variances
 
-
 ## Count Complete Inventory
 
-Store associates periodically count real-time inventory to identify any discrepancies between physical and system inventory. Store associates who are associated with a facility can conduct inventory counts for specific products using the Inventory Count App through the following steps:
+Store associates periodically count real-time inventory to identify any discrepancies between physical and system inventory counts. Store associates can conduct inventory counts for specific products using the Inventory Count App through the following steps:
 
 1. Search Product
 
@@ -32,13 +33,17 @@ After locating the products for inventory counting, associates can tap on the it
 
 Once the physical counting process concludes, store associates can manually enter the counted quantities into the `Stock` field of the `Product Detail` page. 
 
-Store associates also have the ability to access and modify the recorded location of inventory within the store or warehouse by tapping the `locations` field. This feature allows adjustments if discrepancies arise between the system's recorded location and the actual placement of inventory, ensuring precise tracking and placement accuracy.
+Store associates also have the ability to view and modify the existing inventory location within the store or warehouse by selecting the `locations` field. This functionality empowers store associates to confirm the accuracy of inventory placement or update the location if inventory has been relocated.
 
 {% embed url="https://youtu.be/HtGKVOeLjyE" %}
 Video: Count segment
 {% endembed %}
 
-**Show Systematic Inventory-** During inventory counting, store associates can view systematic inventory for reference. However, retailers sometimes prefer not to display systematic inventory to ensure store associates accurately count without relying on system data. To hide systematic inventory, users with `Order Fulfillment Manager` permissions can access the `Settings` page by clicking the settings icon in the app footer. On this page, they will find a card labeled `Quantity on Hand`, providing the option to toggle the `Show Systematic Inventory` on or off.
+**Show Systematic Inventory-** During inventory counting, store associates can view systematic inventory for reference. However,store managers sometimes prefer not to display systematic inventory to ensure store associates accurately count without relying on system data. To hide systematic inventory, store managers can access the `Settings` page by tapping the settings icon in the app footer. On this page, they will find a card labeled `Quantity on Hand`, providing the option to toggle the `Show Systematic Inventory` on or off.
+
+{% embed url="https://youtu.be/JdNC7bFgHfw" %}
+Video: Show Systematic Inventory
+{% endembed %}
 
 4. Save Inventory count
 
@@ -46,15 +51,15 @@ Store associates need to tap on the `Save` button at the bottom of the page to c
 
 ## Approve Inventory Counts and Record Variance
 
-Once store associates complete the inventory count, it undergoes review by users `Order Fulfillment Manager` permissions. The user can view all submitted inventory counts by navigating to the `Upload` page from the bottom of the footer. Here, they can cross-verify the physically counted inventory against the systematic inventory and either approve or reject the count performed by the store associates.
+Once store associates complete the inventory count, it undergoes review by store managers. The store managers can navigate to the `Upload` page from the bottom of the footer to view all submitted inventory counts. Here, they can review and either approve or reject the inventory count performed by the store associates.
 
-A. Managers can approve the inventory by tapping the blue `Upload` icon situated at the bottom right of the page. This action prompts a confirmation pop-up card, where managers select the `Upload` button to approve the inventory count. Upon approval, the inventory updates within HotWax Commerce and subsequently reflects on the e-commerce platform and ERP systems.
+A. Store managers can approve the inventory count by tapping the blue `Upload` icon situated at the bottom right of the page. This action prompts a confirmation pop-up card, where managers can tap on the `Upload` button to approve the inventory count. Upon approval, the inventory count updates within HotWax Commerce and subsequently reflects on the e-commerce platform and ERP systems.
 
 {% embed url="https://youtu.be/Q9QAKSx2YYY" %}
 Video: Upload function
 {% endembed %}
 
-B. In cases where the manager is unsatisfied with the counting process, inventory counts can be removed by tapping on the `Remove` button below the items.
+B. In cases where the store manager is unsatisfied with the counting process, inventory counts can be removed by tapping on the `Remove` button below the items.
 
 {% embed url="https://youtu.be/GcQ0j2qNyKY" %}
 Video: Remove function
@@ -62,23 +67,21 @@ Video: Remove function
 
 ## Adjust inventory variance
 
-At times, store associates may not require a complete inventory count to address inventory variances. For instance, in cases an item gets damaged, prompt adjustments are vital to prevent potential overselling on the e-commerce platform.
+At times, store managers may not require a complete inventory count to address inventory variances. For instance, in cases an item gets damaged, prompt adjustments are vital to prevent potential overselling on the e-commerce platform.
 
-To address inventory variances, store associates need to locate the product and access the `Product Details` page —following a process similar to inventory counting.
+To address inventory variances, store managers need to locate the product and access the `Product Details` page —following a process similar to inventory counting.
 
 Within the `Product Detail` page, a dedicated `Variance` tab is available for logging inventory discrepancies.
 
-Store associates can input the desired increment or decrement of inventory from the total stock in the `Quantity` field. For instance, entering 5 adds to the inventory in case of finding any misplaced item, while -5 subtracts from the count due to damage or loss.
+Store managers can input the desired increment or decrement of inventory from the total stock in the `Quantity` field. For instance, entering 5 adds to the inventory in case of finding any misplaced item, while -5 subtracts from the count due to damage or loss.
 
-Associates are also prompted to select a `Variance Reason` from a dropdown menu, detailing the specific cause such as 'damaged' or 'found.'
+Store managers are also prompted to select a `Variance Reason` from a dropdown menu, detailing the specific cause such as 'damaged' or 'found.'
 
 Upon completion, tapping `Log Variance` button updates the inventory count in the HotWax Commerce and subsequently on the e-commerce platform and ERP systems.
 
 {% embed url="https://youtu.be/Cg3pRqpxGfM" %}
 Video: Variance segment
 {% endembed %}
-
-> **Note:** Inventory adjustments do not require approval from store managers. Only users with `Order Fulfillment Manager` permissions can log inventory variances.
 
 
 
