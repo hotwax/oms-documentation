@@ -9,7 +9,7 @@ In the event that the order is a “ReShipped” order, then the order name in t
 **SFTP Path**
 
 ```
-TBD
+/home/newera-uat-sftp/wms/completed_order/staging/incoming
 ```
 
 | DO#         | 日付       | 個数    | 問い合せNo        | 便名    |
@@ -47,7 +47,7 @@ To sync the fulfillment back into the OMS from the warehouse, a job will be used
 **SFTP Path**
 
 ```
-TBD
+/home/newera-uat-sftp/hotwax/completed_orders
 ```
 
 **Job Name**
