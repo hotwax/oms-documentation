@@ -1,6 +1,6 @@
 # Guatex
 
-Root field table:
+## Request label
 GUATEX Field                                  | English Translation           | Value                             | Max Length | Required
 --------------------------------------------- | ----------------------------- | ---------------------------------- | ---------- | ---------
 <USUARIO>                                     | User                          | ${USUARIO!}                       | 50         | YES
@@ -119,7 +119,7 @@ The `<TIPO_ENVIO_DETALLE>` field represents the type of shipment for a specific 
 | `<PESO_DETALLE>`              | Line weight                                       | YES      | 8          |
 
 
-Error response:
+## Error response
 ```xml
 <RESPUESTA>
     <SERVICIO>
