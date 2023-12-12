@@ -11,6 +11,7 @@
 * [Job workflows](job-workflows/README.md)
   * [Orders](jobWorkflows/orders.md)
   * [Inventory](jobWorkflows/inventory.md)
+  * [Products](jobWorkflows/products.md)
 * [Users](users/README.md)
   * [Create Users](users/createUser.md)
   * [Manage Users](users/manageUser.md)
