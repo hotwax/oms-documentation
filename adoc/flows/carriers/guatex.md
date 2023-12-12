@@ -30,11 +30,29 @@ GUATEX Field                                  | English Translation           | 
 <PESO_DETALLE>                                | Line Weight                   | ${shipmentPackage.weight!}       | 8          | YES
 
 Mapping logic details:
+
+### **Field: `<ESTA_LISTO>`**
+The `<ESTA_LISTO>` field indicates whether the package is ready for pickup or not.
+
+#### **Possible Values:**
+- **Y:** Yes, the package is ready for pickup.
+- **N:** No, the package is not yet ready for pickup.
+
+#### **Example:**
+```xml
+<ESTA_LISTO>Y</ESTA_LISTO> <!-- Indicates that the package is ready for pickup -->
+```
+#### **Constraints:**
+- **Length:** 1 character (Y or N)
+
+{% hint style="danger" %}
+Guatex API documentation specifies that the values should be either "Y" (Yes) or "N" (No). However, in our existing code, we observe that an "S" value is being sent.
+{% endhint %}
+
+---
+
 ### **Field: `<TIPO_ENVIO_DETALLE>`**
 The `<TIPO_ENVIO_DETALLE>` field represents the type of shipment for a specific line in the shipment details.
-
-#### **Description:**
-This field indicates whether the line corresponds to an envelope or a package.
 
 #### **Usage:**
 - **1:** Envelope: Use this value when the line represents an envelope.
@@ -45,13 +63,7 @@ This field indicates whether the line corresponds to an envelope or a package.
 <TIPO_ENVIO_DETALLE>2</TIPO_ENVIO_DETALLE> <!-- Represents Packages -->
 ```
 
-#### **Notes:**
-- Ensure that the correct value is provided based on the nature of the shipment line.
-- This field is used to distinguish between envelope and package details.
-
 ---
-
-Feel free to ask if you have any more questions or need further clarification!
 
 ```xml
 <RESPUESTA>
