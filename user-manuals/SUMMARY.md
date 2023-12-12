@@ -1,5 +1,6 @@
 # Table of contents
 
+* [README](README.md)
 * [Launchpad](launchpad/README.md)
 * [Job management](jobManager/README.md)
   * [Job details](jobManager/flows/job-details.md)
@@ -7,7 +8,7 @@
   * [Job queueing](jobManager/flows/job-queueing.md)
   * [Initial load](jobManager/flows/initial-load.md)
   * [Bulk Scheduling](jobManager/flows/bulk-scheduling.md)
-* [Job workflows](jobWorkflows/README.md)
+* [Job workflows](job-workflows/README.md)
   * [Orders](jobWorkflows/orders.md)
   * [Inventory](jobWorkflows/inventory.md)
 * [Users](users/README.md)
