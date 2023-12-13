@@ -80,6 +80,23 @@ The `<ESTA_LISTO>` field indicates whether the package is ready for pickup or no
 
 ---
 
+### Field: DESCRIPCION_ENVIO
+
+The `DESCRIPCION_ENVIO` field is used to specify the description of the shipment. This field provides information about the nature or content of the shipment.
+
+### Field Details
+
+- **English Translation**: Shipment Description
+- **Value**: CAJAS (constant value)
+- **Max Length**: 100 characters
+- **Required**: No
+
+### Usage
+
+The `DESCRIPCION_ENVIO` field accepts the constant value "CAJAS," indicating that the shipment consists of boxes. This field is optional and can be used to provide additional information about the content or nature of the shipment.
+
+---
+
 ### **Field: `<TIPO_ENVIO_DETALLE>`**
 The `<TIPO_ENVIO_DETALLE>` field represents the type of shipment for a specific line in the shipment details.
 
