@@ -35,19 +35,17 @@ Mapping logic details:
 The `<ESTA_LISTO>` field indicates whether the package is ready for pickup or not.
 
 #### **Possible Values:**
-- **Y:** Yes, the package is ready for pickup.
+- **S:** Yes, the package is ready for pickup.
 - **N:** No, the package is not yet ready for pickup.
 
 #### **Example:**
 ```xml
-<ESTA_LISTO>Y</ESTA_LISTO> <!-- Indicates that the package is ready for pickup -->
+<ESTA_LISTO>S</ESTA_LISTO> <!-- Indicates that the package is ready for pickup -->
 ```
 #### **Constraints:**
-- **Length:** 1 character (Y or N)
+- **Length:** 1 character (S or N)
 
-{% hint style="danger" %}
-Guatex API documentation specifies that the values should be either "Y" (Yes) or "N" (No). However, in our existing code, we observe that an "S" value is being sent.
-{% endhint %}
+> With a lot of failures and nothing working, I started to translate back to spanish and eventually figured out that 'S/N' are the default indicators in that language.
 
 ---
 
