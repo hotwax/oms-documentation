@@ -29,7 +29,19 @@ PIEZAS_DETALLE                                | Pieces in Line                | 
 TIPO_ENVIO_DETALLE                            | Shipment Type                 | 2 (constant value, type of shipment) | 10  | YES
 PESO_DETALLE                                  | Line Weight                   | ${shipmentPackage.weight!}       | 8          | YES
 
-Mapping logic details:
+
+
+| Detail Element            | Description                                       | Required | Length     |
+|---------------------------|---------------------------------------------------|----------|------------|
+| DETALLE_GUIA              | Tag containing the list of detail lines of the guide | YES      | Indefinite  |
+| LINEA_DETALLE_GUIA        | Tag containing data of the detail line of the guide | YES      | Indefinite  |
+| NUMERO_GUIA_DETALLE       | Guide number for the detail                        | NO       | 20         |
+| PIEZAS_DETALLE            | Number of pieces in the line                       | YES      | 5          |
+| TIPO_ENVIO_DETALLE        | Type of shipment of the line                       | YES      | 10         |
+| PESO_DETALLE              | Line weight                                       | YES      | 8          |
+
+
+## Field mappings
 
 ### **Field `<CODIGO_COBRO>`**
 
@@ -84,14 +96,14 @@ The `<ESTA_LISTO>` field indicates whether the package is ready for pickup or no
 
 The `DESCRIPCION_ENVIO` field is used to specify the description of the shipment. This field provides information about the nature or content of the shipment.
 
-### Field Details
+#### Field Details
 
 - **English Translation**: Shipment Description
 - **Value**: CAJAS (constant value)
 - **Max Length**: 100 characters
 - **Required**: No
 
-### Usage
+#### Usage
 
 The `DESCRIPCION_ENVIO` field accepts the constant value "CAJAS," indicating that the shipment consists of boxes. This field is optional and can be used to provide additional information about the content or nature of the shipment.
 
@@ -100,7 +112,7 @@ The `DESCRIPCION_ENVIO` field accepts the constant value "CAJAS," indicating tha
 ### **Field: `<TIPO_ENVIO_DETALLE>`**
 The `<TIPO_ENVIO_DETALLE>` field represents the type of shipment for a specific line in the shipment details.
 
-#### **Usage:**
+##### **Usage:**
 - **1:** Envelope: Use this value when the line represents an envelope.
 - **2:** Packages: Use this value when the line represents one or more packages.
 
@@ -111,6 +123,10 @@ The `<TIPO_ENVIO_DETALLE>` field represents the type of shipment for a specific 
 
 ---
 
+## Success response
+
+<details>
+<summary>Sample response</summary>
 ```xml
 <RESPUESTA>
     <SERVICIO>
@@ -154,18 +170,11 @@ The `<TIPO_ENVIO_DETALLE>` field represents the type of shipment for a specific 
     </SERVICIO>
 </RESPUESTA>
 ```
-
-| Detail Element                | Description                                       | Required | Length     |
-|-------------------------------|---------------------------------------------------|----------|------------|
-| `<DETALLE_GUIA>`              | Tag containing the list of detail lines of the guide | YES      | Indefinite  |
-| `<LINEA_DETALLE_GUIA>`        | Tag containing data of the detail line of the guide | YES      | Indefinite  |
-| `<NUMERO_GUIA_DETALLE>`       | Guide number for the detail                        | NO       | 20         |
-| `<PIEZAS_DETALLE>`            | Number of pieces in the line                       | YES      | 5          |
-| `<TIPO_ENVIO_DETALLE>`        | Type of shipment of the line                       | YES      | 10         |
-| `<PESO_DETALLE>`              | Line weight                                       | YES      | 8          |
-
+</details>
 
 ## Error response
+<detials>
+<summary>Sample response</summary>
 ```xml
 <RESPUESTA>
     <SERVICIO>
@@ -187,6 +196,7 @@ The `<TIPO_ENVIO_DETALLE>` field represents the type of shipment for a specific 
     </SERVICIO>
 </RESPUESTA>
 ```
+</detials>
 
 | Code  | Description                                                |
 |-------|------------------------------------------------------------|
