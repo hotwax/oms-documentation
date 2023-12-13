@@ -17,4 +17,4 @@ If you’re setting up an Admin user, set their Security Group to “Administrat
 For other users simply add the user to the facility from the users app. To learn more about how users are added to facilites checkout the [user managment guide][userMngment].
 
 <!-- page links -->
-[userMngment]: (https://docs.hotwax.co/user-guides/users/manageuser#add-facilities){:target="_blank"}
+[userMngment]: https://docs.hotwax.co/user-guides/users/manageuser#add-facilities {:target="_blank"}
