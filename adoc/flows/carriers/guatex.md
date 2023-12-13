@@ -3,33 +3,64 @@
 ## Request label
 GUATEX Field                                  | English Translation           | Value                             | Max Length | Required
 --------------------------------------------- | ----------------------------- | ---------------------------------- | ---------- | ---------
-<USUARIO>                                     | User                          | ${USUARIO!}                       | 50         | YES
-<PASSWORD>                                    | Password                      | ${PASSWORD!}                      | 10         | YES
-<CODIGO_COBRO>                                | Collection Code               | ${CODIGO_COBRO!}                  | 10         | YES
-<TIPO_USUARIO>                                | User Type                     | C (constant value)               | 1          | YES
-<NOMBRE_REMITENTE>                            | Sender Name                   | ${shipFromName!}                  | 100        | YES
-<TELEFONO_REMITENTE>                          | Sender Phone                  | ${shipFromPhone!}                 | 20         | NO
-<DIRECCION_REMITENTE>                         | Sender Address                | ${shipFromAddressLine1!},${shipFromAddressLine2!} | 100 | NO
-<MUNICIPIO_ORIGEN>                            | Origin Municipality           | ${shipFromCity!}                  | 50         | YES
-<PUNTO_ORIGEN>                                | Origin Point                  | ${shipFromCityPointCoverageCode!} | 10         | YES
-<ESTA_LISTO>                                  | Ready Status                  | S (constant value)               | 1          | NO
-<CODORIGEN>                                   | Origin Code                   | ${shipFromCityCode!}              | 15         | NO
-<LLAVE_CLIENTE>                               | Customer Key                  | ${shipToName!}                   | 200        | YES
-<CODIGO_COBRO_GUIA>                           | Collection Code (Guide)       | ${CODIGO_COBRO!}                  | 10         | NO
-<NOMBRE_DESTINATARIO>                         | Recipient Name                | ${shipToName!}                   | 100        | NO
-<TELEFONO_DESTINATARIO>                       | Recipient Phone               | ${shipToPhone!}                  | 20         | NO
-<DIRECCION_DESTINATARIO>                      | Recipient Address             | ${shipToAddressLine1!},${shipToAddressLine2!} | 100 | NO
-<MUNICIPIO_DESTINO>                           | Destination Municipality      | ${shipToCity!}                   | 50         | YES
-<PUNTO_DESTINO>                               | Destination Point             | ${shipToCityPointCoverageCode!} | 10         | YES
-<DESCRIPCION_ENVIO>                           | Shipment Description          | CAJAS (constant value)           | 100        | NO
-<PAGO_CONTADO_SEGURO>                         | Cash Payment                  | S (conditional value based on isCOD) | 1 | NO
-<RECOGE_OFICINA>                              | Collect at Office             | N (constant value)               | 1          | NO
-<CODDESTINO>                                  | Destination Code              | ${shipToCityCode!}               | 15         | NO
-<PIEZAS_DETALLE>                              | Pieces in Line                | 1 (constant value, number of pieces) | 5   | YES
-<TIPO_ENVIO_DETALLE>                          | Shipment Type                 | 2 (constant value, type of shipment) | 10  | YES
-<PESO_DETALLE>                                | Line Weight                   | ${shipmentPackage.weight!}       | 8          | YES
+USUARIO                                       | User                          | ${USUARIO!}                       | 50         | YES
+PASSWORD                                      | Password                      | ${PASSWORD!}                      | 10         | YES
+CODIGO_COBRO                                  | Collection Code               | ${CODIGO_COBRO!}                  | 10         | YES
+TIPO_USUARIO                                  | User Type                     | C (constant value)               | 1          | YES
+NOMBRE_REMITENTE                              | Sender Name                   | ${shipFromName!}                  | 100        | YES
+TELEFONO_REMITENTE                            | Sender Phone                  | ${shipFromPhone!}                 | 20         | NO
+DIRECCION_REMITENTE                           | Sender Address                | ${shipFromAddressLine1!},${shipFromAddressLine2!} | 100 | NO
+MUNICIPIO_ORIGEN                              | Origin Municipality           | ${shipFromCity!}                  | 50         | YES
+PUNTO_ORIGEN                                  | Origin Point                  | ${shipFromCityPointCoverageCode!} | 10         | YES
+ESTA_LISTO                                    | Ready Status                  | S (constant value)               | 1          | NO
+CODORIGEN                                     | Origin Code                   | ${shipFromCityCode!}              | 15         | NO
+LLAVE_CLIENTE                                 | Customer Key                  | ${shipToName!}                   | 200        | YES
+CODIGO_COBRO_GUIA                             | Collection Code (Guide)       | ${CODIGO_COBRO!}                  | 10         | NO
+NOMBRE_DESTINATARIO                           | Recipient Name                | ${shipToName!}                   | 100        | NO
+TELEFONO_DESTINATARIO                         | Recipient Phone               | ${shipToPhone!}                  | 20         | NO
+DIRECCION_DESTINATARIO                        | Recipient Address             | ${shipToAddressLine1!},${shipToAddressLine2!} | 100 | NO
+MUNICIPIO_DESTINO                             | Destination Municipality      | ${shipToCity!}                   | 50         | YES
+PUNTO_DESTINO                                 | Destination Point             | ${shipToCityPointCoverageCode!} | 10         | YES
+DESCRIPCION_ENVIO                             | Shipment Description          | CAJAS (constant value)           | 100        | NO
+PAGO_CONTADO_SEGURO                           | Cash Payment                  | S (conditional value based on isCOD) | 1 | NO
+RECOGE_OFICINA                                | Collect at Office             | N (constant value)               | 1          | NO
+CODDESTINO                                    | Destination Code              | ${shipToCityCode!}               | 15         | NO
+PIEZAS_DETALLE                                | Pieces in Line                | 1 (constant value, number of pieces) | 5   | YES
+TIPO_ENVIO_DETALLE                            | Shipment Type                 | 2 (constant value, type of shipment) | 10  | YES
+PESO_DETALLE                                  | Line Weight                   | ${shipmentPackage.weight!}       | 8          | YES
 
 Mapping logic details:
+
+### **Field `<CODIGO_COBRO>`**
+
+#### Overview
+
+The `<CODIGO_COBRO>` field is a parameter required by the Guatex API for service connection and login. It represents the collection code assigned by Guatex of the client that will be used to log in to the security module of the Web Service. This code is also inherited to the guides in case it is not explicitly specified.
+
+#### Usage
+
+- **Field Name:** `<CODIGO_COBRO>`
+- **Type:** String
+- **Required:** Yes
+- **Max Length:** 10 characters
+
+#### Integration Details
+
+##### Purpose
+
+The primary purpose of `<CODIGO_COBRO>` is to identify and authenticate the client when connecting to the Guatex Web Service for processing shipments. Include `<CODIGO_COBRO>` in each request to authenticate and authorize the client.
+
+##### Inheritance
+
+If `<CODIGO_COBRO>` is not explicitly specified in a particular request, the collection code assigned during login will be inherited for that request. It ensures consistency and simplifies the login process.
+
+#### Example
+
+```xml
+<CODIGO_COBRO>1234567890</CODIGO_COBRO>
+```
+
+---
 
 ### **Field: `<ESTA_LISTO>`**
 The `<ESTA_LISTO>` field indicates whether the package is ready for pickup or not.
@@ -45,7 +76,7 @@ The `<ESTA_LISTO>` field indicates whether the package is ready for pickup or no
 #### **Constraints:**
 - **Length:** 1 character (S or N)
 
-> With a lot of failures and nothing working, I started to translate back to spanish and eventually figured out that 'S/N' are the default indicators in that language.
+> With a lot of failures and nothing working, I started to translate back to spanish and eventually figured out that 'S/N' are the default indicators in that language. - Arvind Singh Tomar
 
 ---
 
