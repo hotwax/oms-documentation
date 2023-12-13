@@ -30,17 +30,6 @@ TIPO_ENVIO_DETALLE                            | Shipment Type                 | 
 PESO_DETALLE                                  | Line Weight                   | ${shipmentPackage.weight!}       | 8          | YES
 
 
-
-| Detail Element            | Description                                       | Required | Length     |
-|---------------------------|---------------------------------------------------|----------|------------|
-| DETALLE_GUIA              | Tag containing the list of detail lines of the guide | YES      | Indefinite  |
-| LINEA_DETALLE_GUIA        | Tag containing data of the detail line of the guide | YES      | Indefinite  |
-| NUMERO_GUIA_DETALLE       | Guide number for the detail                        | NO       | 20         |
-| PIEZAS_DETALLE            | Number of pieces in the line                       | YES      | 5          |
-| TIPO_ENVIO_DETALLE        | Type of shipment of the line                       | YES      | 10         |
-| PESO_DETALLE              | Line weight                                       | YES      | 8          |
-
-
 ## Field mappings
 
 ### **Field `<CODIGO_COBRO>`**
