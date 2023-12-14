@@ -116,6 +116,7 @@ The `<TIPO_ENVIO_DETALLE>` field represents the type of shipment for a specific 
 
 <details>
 <summary>Sample response</summary>
+
 ```xml
 <RESPUESTA>
     <SERVICIO>
@@ -164,6 +165,7 @@ The `<TIPO_ENVIO_DETALLE>` field represents the type of shipment for a specific 
 ## Error response
 <detials>
 <summary>Sample response</summary>
+
 ```xml
 <RESPUESTA>
     <SERVICIO>
