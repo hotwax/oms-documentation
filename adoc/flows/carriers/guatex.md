@@ -217,3 +217,51 @@ The `<TIPO_ENVIO_DETALLE>` field represents the type of shipment for a specific 
 | 0024  | The indicated guide number is already registered           |
 | 9999  | Invalid credentials                                       |
 | 9999  | System error, contact Guatex                               |
+
+## Shipping label
+
+1. **Variable: `trackingCode`**
+   - Description: Tracking code for the shipment.
+
+2. **Variable: `orderHeader`**
+   - Sub-Variables:
+     - `orderName`: Order name associated with the shipment.
+
+3. **Variable: `oppCount`**
+   - Description: Count of Order Payment Preferences for cash on delivery.
+The oppCount variable is computed by querying the database for the count of Order Payment Preferences associated with the primary order ID, where the payment method type is "EXT_SHOP_CASH_ON_DEL" and the status is "PAYMENT_NOT_RECEIVED." If there is at least one such payment preference, it indicates the use of cash on delivery, and this information is reflected in the generated shipping label.
+
+{% hint style="danger" %}
+It seems like Guatex want's HotWax to show the payment method even if it is not Cash on Delivery.
+{% endhint %}
+
+1. **Variable: `totalWeight`**
+   - Description: Total weight of the shipment.
+
+2. **Variable: `shippingDetailsResponse`**
+   - Sub-Variables:
+     - `response`:
+       - `shipToName`: Recipient's name.
+       - `packages`: Number of packages in the shipment.
+       - `shipToPhone`: Recipient's phone number.
+       - `shipToEmail`: Recipient's email address.
+       - `shipToStateName`: Recipient's state name.
+       - `shipDate`: Shipment date.
+       - `shipFromCompanyName`: Sender's company name.
+       - `shipFromAddressLine1`: Sender's address line 1.
+       - `shipFromAddressLine2`: Sender's address line 2.
+       - `shipFromCity`: Sender's city.
+       - `shipFromStateName`: Sender's state name.
+       - `shipFromCountryName`: Sender's country name.
+       - `carrierPartyId`: Carrier's party ID.
+
+3. **Variable: `logoImageUrl`**
+   - Description: URL of the company logo for the carrier.
+
+4. **Variable: `labelQrCodeLink`**
+   - Description: Link to the QR code for the label.
+
+5. **Variable: `toCityGeoAssoc`**
+   - Sub-Variables:
+     - `geoId`: Geo ID associated with the recipient's city.
+
