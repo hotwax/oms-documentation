@@ -38,6 +38,28 @@ PESO_DETALLE                                  | Line Weight                   | 
 
 The `<CODIGO_COBRO>` field is a parameter required by the Guatex API for service connection and login. It represents the collection code assigned by Guatex of the client that will be used to log in to the security module of the Web Service. This code is also inherited to the guides in case it is not explicitly specified.
 
+**Test code:**
+GUA6928
+
+| Charge Code | Description                 |
+|-------------|-----------------------------|
+| GUA6928     | Credit Code                 |
+| GUA6937     | Credit Code                 |
+| GUA6939     | Credit Code                 |
+| GUA6940     | Credit Code                 |
+| GUA6941     | Credit Code                 |
+| COD0094     | Cash on Delivery Code       |
+| COD0097     | Cash on Delivery Code       |
+| COD0098     | Cash on Delivery Code       |
+| COD0099     | Cash on Delivery Code       |
+| COD0100     | Cash on Delivery Code       |
+
+Ensure that these codes are correctly used in the system based on the context of the shipment, and they are appropriately reflected in the generated guide and PDF document. 
+
+{% hint style="danger" %}
+If there are specific criteria for choosing between credit codes and cash on delivery codes, that needs to be shared by Guatex.
+{% endhint %}
+
 #### Usage
 
 - **Field Name:** `<CODIGO_COBRO>`

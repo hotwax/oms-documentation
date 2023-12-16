@@ -16,7 +16,6 @@ You can ensure that this job is running as expected by auditing the Shopify Grap
 By default all GraphQL syncs will show here. 
 
 To identify the exact GraphQL operations for importing order metafields:
-
 1. Select the Shopify Config that you want to check sync from
 2. Select `Import Shopify Order Metafields` from the GraphQL Config dropdown.
 3. Click find to filter the results based on the selected criteria.
@@ -37,5 +36,18 @@ You can use the “Missing Order Attribute” report to identify orders where th
 ## Metafields created on Shopify but not imported into HotWax
 Go to Shopify order details page > add /metafields.json in the url > verify the order creation and metafields input time.
 Prerequisite: Metafields created after 30 minutes of order creation will not sync in OMS.
+
+
 If you cannot wait for metafields to be imported or the job is not working as expected, order attributes can be created manually from the Order Detail page.
-<add template values to be used by HotWax BA>
+
+Mapping Cetneral American region types to the OMS's North American Region types help when troublshooting order approval flows in the OMS. If the address entered into the order is not mapped correctly to the type of region, then the order will not be approved ven if the region name exists.
+
+| Central American Region | North American Region Type |
+|------------------------|-----------------------------|
+| Departamento           | State                       |
+| Municipio              | Municipality                |
+| Canton                 | Canton                      |
+| Distrito               | District                    |
+
+
+Read [the Glossary](../GLOSSARY.md) to learn more about how the Cetneral American Regions maps to the Carrier Geo Mapping enteries in the OMS
