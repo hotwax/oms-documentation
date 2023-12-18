@@ -19,3 +19,4 @@
 * [Sales Order](flows/salesOrder/README.md)
   * [Omnichannel Orders](flows/salesOrder/omnichannelOrders.md)
   * [Soft Allocation](flows/salesOrder/softAllocationFlow.md)
+  * [Note Attributes](flows/salesOrder/noteAttributes.md)
