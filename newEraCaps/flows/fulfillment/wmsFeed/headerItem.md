@@ -127,31 +127,27 @@ Further clarification may be needed on how to handle orders using gift card paym
 {% hint style="warning" %}
 **DLV PAYMENT** fields are for Cash on Delivery orders ONLY.
 Leave empty for other payment types.
-
 {% endhint %}
+
 ## DLV PAYMENT (S-15)
-- **Description:** Amount of Payment Including VAT (Only Cash on Delivery)
+- **Description:** Amount of Payment Including VAT
 - **Position:** 19-23
 - **Additional Information:**
   - This field is applicable only for orders with the payment type "Cash on Delivery" (DLV PAYMENT S-14 = 2).
   - It represents the total payment amount, including VAT, for cash on delivery orders.
   - The amount should correspond to the order total, not individual item totals.
-  - The field is associated with the `grandTotal` in the `OrderHeader`.
+  - The field is associated with the `grandTotal` in the `OrderHeader` along with the COD fee imported from Shopify order note attributes as order attributes in the OMS.
 
 ## DLV PAYMENT (S-16)
-- **Description:** Amount of Payment Including VAT and VAT Amount (Only Cash on Delivery)
+- **Description:** Amount VAT due on Delivery (Only Cash on Delivery)
 - **Position:** 19-23
 - **Additional Information:**
   - This field is applicable only for orders with the payment type "Cash on Delivery" (DLV PAYMENT S-14 = 2).
-  - It represents the total payment amount, including VAT, for cash on delivery orders, as well as the corresponding VAT amount.
+  - It represents the total VAT due for cash on delivery orders.
   - There is a distinction between S-15 and S-16:
     - S-15 represents the total payment amount.
     - S-16 represents the sum of sales tax on the item and the shipping sales tax.
-  - The value for this field is calculated based on the sum of order adjustments where `orderAdjustmentTypeId` is `SHIPPING_SALES_TAX`.
-  - Please refer to the provided Ruby code for specific details on the calculation: [Ruby Code](https://github.com/flagship-llc/newera_wms/blob/master/app/services/generate_order_file.rb#L268).
-{% hint style="danger" %}
-The distinction between S-15 and S-16 is not clear
-{% endhint %}
+  - The value for this field is calculated based on the sum of order adjustments where `orderAdjustmentTypeId` is `SHIPPING_SALES_TAX` and 10% of the COD fee in the order attribute.
 
 ## Consignee (S-17 to S-25)
 *BILL-TO INFORMATION*
