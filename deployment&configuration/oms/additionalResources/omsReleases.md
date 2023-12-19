@@ -28,9 +28,7 @@ This document provides comprehensive details on every OMS release generated sinc
 # Plugins
 
 <details>
-
-<summary>Plugins</summary>
-
+<summary>
 | Plugin           | Version | Repository                                             |
 |------------------|---------|--------------------------------------------------------|
 | **netsuite**     | v4.16.0 | [netsuite](https://git.hotwax.co/plugins/netsuite.git) |
@@ -41,6 +39,6 @@ This document provides comprehensive details on every OMS release generated sinc
 | **guatex**       | v4.19.0 | [guatex](https://git.hotwax.co/plugins/shipping-integrations/guatex.git) |
 | **terminal-express** | v4.19.0 | [terminal-express](https://git.hotwax.co/plugins/shipping-integrations/terminal-express.git) |
 | **cargotrans**   | v4.19.0 | [cargotrans](https://git.hotwax.co/plugins/shipping-integrations/cargotrans.git) |
-
+</summary>
 </details>
 
