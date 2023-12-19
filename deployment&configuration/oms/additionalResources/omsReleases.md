@@ -3,11 +3,37 @@ This document provides comprehensive details on every OMS release generated sinc
 
 # Latest release
 
-## Release Information
+**Release Information**
 
 | Information         | Value                                                                                                   |
 |---------------------|---------------------------------------------------------------------------------------------------------|
 | Release Version     | v5.1.0                                                                                                  |
+| Release Type        | Hotfix                                                                                                  |
+| Image Tag           | v5.1.5                                                                                                  |
+| Image URL           | (289432782788.dkr.ecr.us-east-1.amazonaws.com/omscoreimage:omscoreimage-v5.1.5)                         |
+| Diff                | NA                                                                                                      |
+| Changelog           | NA                                       |
+
+
+{% tabs %}
+
+{% tab title="Upgrade Data" %} [Link to Upgrade data](https://git.hotwax.co/commerce/oms/-/blob/v5.1.0/applications/hwmapps/upgrade/current/UpgradeData.xml?ref_type=tags){% endtab %}
+
+{% tab title="Upgrade SQL" %} [Link to Upgrade SQL](https://git.hotwax.co/commerce/oms/-/blob/v5.1.0/applications/hwmapps/upgrade/current/UpgradeSQL.sql?ref_type=tags) {% endtab %}
+
+{% tab title="Upgrade Steps" %} [Link to Upgrade Steps](https://git.hotwax.co/commerce/oms/-/blob/v5.1.0/applications/hwmapps/upgrade/current/UpgradeSteps.md?ref_type=tags) {% endtab %}
+
+{% endtabs %}
+
+
+# Old release
+
+**Release Information**
+
+| Information         | Value                                                                                                   |
+|---------------------|---------------------------------------------------------------------------------------------------------|
+| Release Version     | v5.1.0                                                                                                  |
+| Release Type        | Minor                                                                                                |
 | Image Tag           | v5.1.0                                                                                                  |
 | Image URL           | (289432782788.dkr.ecr.us-east-1.amazonaws.com/omscoreimage:omscoreimage-v5.1.0)                         |
 | Diff                | [Link to Difference](https://git.hotwax.co/commerce/oms/-/compare/v5.0.0...v5.1.0?from_project_id=161&straight=false)         |
@@ -25,7 +51,7 @@ This document provides comprehensive details on every OMS release generated sinc
 {% endtabs %}
 
 
-# Plugins
+# Optional Plugins
 
 <details>
 
