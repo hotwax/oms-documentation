@@ -17,6 +17,7 @@
 
 ## Additional Resources
 * [Update OMS Version](additionalResources/updateOmsVersion.md)
+* [OMS Release versions](additionalResources/omsReleases.md)
 
 <!-- ## Shopify Integration
 * [Connect a Shopify Store](ShopifyIntegration/README.md)
