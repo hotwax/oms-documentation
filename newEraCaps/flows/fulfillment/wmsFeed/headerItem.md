@@ -310,22 +310,7 @@ As of now we expect this to be blank. Need to confirm with New Era.
 There is alot of logic here that I am not clear on. Need to review with the team.
 {% endhint %}
 
-  - **Description:** Total price in Japanese Yen (JPY) for the order item, inclusive of the item unit price, item sales tax, and item discount amounts.
-  - **Additional Information:** The total_products_price, shipping_cost, and transaction_fee contribute to the calculation of this field. If the note attribute contains a key with the value "代引き手数料" (COD fee), the transaction_fee is set accordingly, and manual_cod_fee is flagged as true.
-
-Additional Notes
-
-- **total_products_price Calculation:**
-  - The `total_products_price` is calculated as `refundable_quantity * discountedUnitPrice` for each line item.
-  - There's a discussion point regarding whether to include the sum of all item unit prices of an order in this field. Further clarification is needed from New Era team.
-
-- **Total Price (JPY) Components:**
-  - The Total Price (JPY) (S-56) is determined by the sum of S-54 (Total Price (Without VAT)) and S-55 (VAT).
-  - It's mentioned that this sum also includes the `transaction_fee`. Clarification is needed on whether to accommodate the `transaction_fee` in this field.
-  
-- **Discussion Required:**
-  - There's a note indicating the need to check the Ruby Code file for details. A specific question related to including the sum of all item unit prices in the `total_products_price` field requires discussion and clarification from the team.
-
+  - **Description:** Total price in Japanese Yen (JPY) for the order item, inclusive of the item unit price, item sales tax, and item discount amounts. Effectivley the order grand total plus the COD Fee if applicable to the order. The order total shoudl come out to the same as S-53
 
 
 ## Shipping Cost (S-57 to S-103)
