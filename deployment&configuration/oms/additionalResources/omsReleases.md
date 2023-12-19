@@ -10,17 +10,17 @@ This document provides comprehensive details on every OMS release generated sinc
 | Release Version     | v5.1.0                                                                                                  |
 | Image Tag           | v5.1.0                                                                                                  |
 | Image URL           | (289432782788.dkr.ecr.us-east-1.amazonaws.com/omscoreimage:omscoreimage-v5.1.0)                         |
-| Diff                | https://git.hotwax.co/commerce/oms/-/compare/v5.0.0...v5.1.0?from_project_id=161&straight=false         |
-| Changelog           | https://git.hotwax.co/commerce/oms/-/blob/main/CHANGELOG.md)                                            |
+| Diff                | ```https://git.hotwax.co/commerce/oms/-/compare/v5.0.0...v5.1.0?from_project_id=161&straight=false```         |
+| Changelog           | ```https://git.hotwax.co/commerce/oms/-/blob/main/CHANGELOG.md```                                            |
 
 
 {% tabs %}
 
-{% tab title="Upgrade Data" %} https://git.hotwax.co/commerce/oms/-/blob/v5.1.0/applications/hwmapps/upgrade/current/UpgradeData.xml?ref_type=tags {% endtab %}
+{% tab title="Upgrade Data" %} ```https://git.hotwax.co/commerce/oms/-/blob/v5.1.0/applications/hwmapps/upgrade/current/UpgradeData.xml?ref_type=tags``` {% endtab %}
 
-{% tab title="Upgrade SQL" %} https://git.hotwax.co/commerce/oms/-/blob/v5.1.0/applications/hwmapps/upgrade/current/UpgradeSQL.sql?ref_type=tags {% endtab %}
+{% tab title="Upgrade SQL" %} ```https://git.hotwax.co/commerce/oms/-/blob/v5.1.0/applications/hwmapps/upgrade/current/UpgradeSQL.sql?ref_type=tags``` {% endtab %}
 
-{% tab title="Upgrade Steps" %} https://git.hotwax.co/commerce/oms/-/blob/v5.1.0/applications/hwmapps/upgrade/current/UpgradeSteps.md?ref_type=tags {% endtab %}
+{% tab title="Upgrade Steps" %} ```https://git.hotwax.co/commerce/oms/-/blob/v5.1.0/applications/hwmapps/upgrade/current/UpgradeSteps.md?ref_type=tags``` {% endtab %}
 
 {% endtabs %}
 
