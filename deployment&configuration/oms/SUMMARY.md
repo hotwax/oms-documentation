@@ -9,7 +9,6 @@
 * [Load facility data](InitialSetup/LoadFacilities.md)
 * [Configure Product Store](InitialSetup/ProductStore/README.md)
   * [Add more Product Stores](InitialSetup/ProductStore/AddMoreProductStores.md)
-* [Add company name](InitialSetup/AddCompanyName.md)
 * [Load System Property data](InitialSetup/LoadSystemPropertys.md)
 
 ## User and Gateway Configuration
