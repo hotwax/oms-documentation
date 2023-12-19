@@ -5,7 +5,8 @@ This document provides comprehensive details on every OMS release generated sinc
 
 For configurations during instance launch and subsequent updates, please provide the latest versions/tags of optional plugins, starting from release v4.13.0 onwards.
 
-# Expandable blocks
+# Plugins
+
 <details>
 <summary>
 
