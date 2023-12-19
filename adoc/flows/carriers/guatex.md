@@ -287,3 +287,129 @@ It seems like Guatex want's HotWax to show the payment method even if it is not 
    - Sub-Variables:
      - `geoId`: Geo ID associated with the recipient's city.
 
+
+## Fetch all Geo IDs
+
+**Endpoint URL:** 
+[https://jcl.guatex.gt:443/WSMunicipiosGTXGF/WSMunicipiosGTXGF](https://jcl.guatex.gt:443/WSMunicipiosGTXGF/WSMunicipiosGTXGF)
+
+#### Description
+
+The "Consult Municipalities" Web Service allows the retrieval of department and municipality data in bulk from Guatex. This information is crucial for associating Guatex's internal codes with municipalities, aiding in label generation.
+
+#### Input Parameters
+
+The web service expects a String type object containing an XML with the following data:
+
+```xml
+<CONSULTA_MUNICIPIOS>
+    <!-- Root tag of the XML -->
+    <USUARIO>[Your_User_Name]</USUARIO>
+    <!-- User used for logging into the Web Service -->
+    <PASSWORD>[Your_Password]</PASSWORD>
+    <!-- Password used for logging into the Web Service -->
+    <CODIGO_COBRO>[Your_Collection_Code]</CODIGO_COBRO>
+    <!-- Collection code assigned by Guatex -->
+</CONSULTA_MUNICIPIOS>
+```
+
+**Input Parameters:**
+
+- **USUARIO (User):** User for logging into the Web Service. *(Mandatory, Maximum Length: 50)*
+
+- **PASSWORD:** Password for logging into the Web Service. *(Mandatory, Maximum Length: 10)*
+
+- **CODIGO_COBRO (Collection Code):** Collection code assigned by Guatex for the client used for logging into the security module. *(Mandatory, Maximum Length: 10)*
+
+#### Sample Request
+
+```xml
+<CONSULTA_MUNICIPIOS>
+    <USUARIO>YourUserName</USUARIO>
+    <PASSWORD>YourPassword</PASSWORD>
+    <CODIGO_COBRO>YourCollectionCode</CODIGO_COBRO>
+</CONSULTA_MUNICIPIOS>
+```
+
+#### Response
+
+The web service responds with the relevant department and municipality data.
+
+#### Sample Response
+
+```xml
+<RESPUESTA>
+    <!-- List of destination details -->
+    <DESTINOS>
+        <!-- Details of a specific destination -->
+        <DESTINO>
+            <!-- Destination code -->
+            <CODIGO>718</CODIGO>
+            <!-- Destination name -->
+            <NOMBRE>BOCA DEL MONTE (GUA)</NOMBRE>
+            <!-- Coverage point -->
+            <PUNTO_COBERTURA>GUA</PUNTO_COBERTURA>
+            <!-- Type of rate -->
+            <TIPO_TARIFA>N</TIPO_TARIFA>
+            <!-- Department name -->
+            <DEPARTAMENTO>GUATEMALA</DEPARTAMENTO>
+            <!-- Municipality name -->
+            <MUNICIPIO>VILLA CANALES</MUNICIPIO>
+            <!-- Visit frequency -->
+            <FRECUENCIA_VISITA>LU,MA,MI,JU,VI,SA</FRECUENCIA_VISITA>
+            <!-- Pickup office indicator -->
+            <RECOGE_OFICINA>0</RECOGE_OFICINA>
+        </DESTINO>
+        <!-- Additional DESTINO elements with similar structure -->
+    </DESTINOS>
+    <!-- List of shipping types -->
+    <TIPOS_ENVIO>
+        <!-- Details of a specific shipping type -->
+        <TIPO_ENVIO>
+            <!-- Shipping type code -->
+            <CODIGO>1</CODIGO>
+            <!-- Shipping type name -->
+            <NOMBRE>SOBRES</NOMBRE>
+        </TIPO_ENVIO>
+        <!-- Additional TIPO_ENVIO elements with similar structure -->
+    </TIPOS_ENVIO>
+</RESPUESTA>
+```
+
+Here's a translation map for the frequency days:
+- **LU**: Monday
+- **MA**: Tuesday
+- **MI**: Wednesday
+- **JU**: Thursday
+- **VI**: Friday
+- **SA**: Saturday
+- **DO**: Sunday
+
+For example, `<FRECUENCIA_VISITA>LU,MA,MI,JU,VI,SA</FRECUENCIA_VISITA>`, means the carrier services that location every Monday through Saturday.
+
+### Error Response
+
+If an error occurs in the municipal consultation process, the Web Service will return the following XML, presenting the error that occurred:
+
+```xml
+<RESPUESTA>
+    <!-- Details of the error -->
+    <ERROR>
+        <!-- Error code -->
+        <CODIGO>9999</CODIGO>
+        <!-- Error description -->
+        <DESCRIPCION>CREDENCIALES INVALIDAS</DESCRIPCION>
+    </ERROR>
+</RESPUESTA>
+```
+
+### Possible Errors:
+
+The following list shows the possible errors returned by the Web Service:
+
+| Code | Description                |
+|------|----------------------------|
+| 999  | Invalid credentials        |
+| 999  | System error, contact Guatex|
+
+- Regularly update the department and municipality data in your system based on Guatex's updates.
