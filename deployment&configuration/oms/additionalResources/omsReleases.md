@@ -17,11 +17,11 @@ This document provides comprehensive details on every OMS release generated sinc
 
 {% tabs %}
 
-{% tab title="Upgrade Data" %} [Link to Upgrade data](https://git.hotwax.co/commerce/oms/-/blob/v5.1.0/applications/hwmapps/upgrade/current/UpgradeData.xml?ref_type=tags){% endtab %}
+{% tab title="Upgrade Data" %} <a href="https://git.hotwax.co/commerce/oms/-/blob/v5.1.0/applications/hwmapps/upgrade/current/UpgradeData.xml?ref_type=tags">Link to Upgrade Data</a>{% endtab %}
 
-{% tab title="Upgrade SQL" %} [Link to Upgrade SQL](https://git.hotwax.co/commerce/oms/-/blob/v5.1.0/applications/hwmapps/upgrade/current/UpgradeSQL.sql?ref_type=tags) {% endtab %}
+{% tab title="Upgrade SQL" %} <a href="https://git.hotwax.co/commerce/oms/-/blob/v5.1.0/applications/hwmapps/upgrade/current/UpgradeSQL.sql?ref_type=tags">Link to Upgrade SQL</a> {% endtab %}
 
-{% tab title="Upgrade Steps" %} [Link to Upgrade Steps](https://git.hotwax.co/commerce/oms/-/blob/v5.1.0/applications/hwmapps/upgrade/current/UpgradeSteps.md?ref_type=tags) {% endtab %}
+{% tab title="Upgrade Steps" %} <a href="https://git.hotwax.co/commerce/oms/-/blob/v5.1.0/applications/hwmapps/upgrade/current/UpgradeSteps.md?ref_type=tags">Link to Upgrade Steps</a> {% endtab %}
 
 {% endtabs %}
 
@@ -45,9 +45,9 @@ This document provides comprehensive details on every OMS release generated sinc
 {% tab title="Upgrade Data" %} <a href="https://git.hotwax.co/commerce/oms/-/blob/v5.1.0/applications/hwmapps/upgrade/current/UpgradeSteps.md?ref_type=tags">Link to Upgrade Steps</a>
 {% endtab %}
 
-{% tab title="Upgrade SQL" %} [Link to Upgrade SQL](https://git.hotwax.co/commerce/oms/-/blob/v5.1.0/applications/hwmapps/upgrade/current/UpgradeSQL.sql?ref_type=tags) {% endtab %}
+{% tab title="Upgrade SQL" %} <a href="https://git.hotwax.co/commerce/oms/-/blob/v5.1.0/applications/hwmapps/upgrade/current/UpgradeSQL.sql?ref_type=tags">Link to Upgrade SQL</a> {% endtab %}
 
-{% tab title="Upgrade Steps" %} [Link to Upgrade Steps](https://git.hotwax.co/commerce/oms/-/blob/v5.1.0/applications/hwmapps/upgrade/current/UpgradeSteps.md?ref_type=tags) {% endtab %}
+{% tab title="Upgrade Steps" %} <a href="https://git.hotwax.co/commerce/oms/-/blob/v5.1.0/applications/hwmapps/upgrade/current/UpgradeSteps.md?ref_type=tags">Link to Upgrade Steps</a> {% endtab %}
 
 {% endtabs %}
 
@@ -105,5 +105,6 @@ This document provides comprehensive details on every OMS release generated sinc
     <td><a href="https://git.hotwax.co/plugins/shipping-integrations/cargotrans.git">cargotrans</a></td>
   </tr>
 </table>
+
 
 </details>
