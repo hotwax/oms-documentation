@@ -13,7 +13,11 @@ https://jenkins.hotwax.co
 
 Login with your credentials and proceed to deploy a new instance under `oms-env-setup` segment. 
 
-Select `oms-prod-launch-deploy` from the preset options. In case, you are setting a test production environment, use  `oms-launch-deploy`
+Select `oms-prod-launch-deploy` from the preset options. 
+
+{% hint style='info' %}
+In case, you are setting a test production environment, use  `oms-launch-deploy`. Test production accounts are basically replica of production accounts, helping test real challenges faced during production spin up. 
+{% endhint %}
 
 ## Configure your machine
 
