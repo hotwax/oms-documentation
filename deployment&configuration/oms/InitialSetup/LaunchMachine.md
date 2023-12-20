@@ -2,18 +2,13 @@
 
 To deploy a new OMS instance you first have to setup a machine. These are deployed using Jenkins.
 
-
 {% hint style='warning' %}
 UAT environments are usually deployed internally so they may have different steps, connect with the System Admin team for that.
 {% endhint %}
 
-```
-https://jenkins.hotwax.co
-```
-
-Login with your credentials and proceed to deploy a new instance under `oms-env-setup` segment. 
-
-Select `oms-prod-launch-deploy` from the preset options. 
+1. Go to [Jenkins](https://jenkins.hotwax.co)
+2. Login with your credentials and proceed to deploy a new instance under `oms-env-setup` segment. 
+3. Select `oms-prod-launch-deploy` from the preset options. 
 
 {% hint style='info' %}
 In case, you are setting a test production environment, use  `oms-launch-deploy`. Test production accounts are basically replica of production accounts, helping test real challenges faced during production spin up. 
