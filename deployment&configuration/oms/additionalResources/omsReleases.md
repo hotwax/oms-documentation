@@ -1,5 +1,11 @@
 # Introduction
-This document provides comprehensive details on every OMS release generated since December 1, 2023.
+{% hint style="info" %}
+1. For information on previous releases, please consult the [previous document](https://docs.google.com/document/d/1lfvjpqBiE__1fsCjq7VvQSSXjdRLVZg86zJIXDDK-zc/edit). 
+   
+2. To find details about SOLR versions, refer to the [SOLR version document](https://docs.google.com/spreadsheets/d/1H-iEVG-hS9FTsYOf5YiUH-5KOJUcu0_TiPG8aVYjaHU/edit#gid=0).
+{% endhint %}
+
+This document provides details about all OMS releases created after December 1, 2023.
 
 # Latest release
 
