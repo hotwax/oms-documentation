@@ -54,10 +54,6 @@ This document provides comprehensive details on every OMS release generated sinc
 
 # Optional Plugins
 
-<details>
-
-<summary> Optional plugins in OMS</summary>
-
 <table>
   <tr>
     <th>Plugin</th>
@@ -104,6 +100,3 @@ This document provides comprehensive details on every OMS release generated sinc
     <td>v4.19.0</td>
     <td><a href="https://git.hotwax.co/plugins/shipping-integrations/cargotrans.git">cargotrans</a></td>
   </tr>
-</table>
-
-</details>
