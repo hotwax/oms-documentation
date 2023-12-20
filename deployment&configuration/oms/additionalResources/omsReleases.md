@@ -35,7 +35,7 @@ This document provides comprehensive details on every OMS release generated sinc
 | Release Version     | v5.1.0                                                                                                  |
 | Release Type        | Minor                                                                                                |
 | Image Tag           | v5.1.0                                                                                                  |
-| Image URL           | (289432782788.dkr.ecr.us-east-1.amazonaws.com/omscoreimage:omscoreimage-v5.1.0)                         |
+| Image URL           | `289432782788.dkr.ecr.us-east-1.amazonaws.com/omscoreimage:omscoreimage-v5.1.0`                           |
 | Diff                | [Link to Difference](https://git.hotwax.co/commerce/oms/-/compare/v5.0.0...v5.1.0?from_project_id=161&straight=false)         |
 | Changelog           | [Link to Changelog](https://git.hotwax.co/commerce/oms/-/blob/main/CHANGELOG.md)                                       |
 
@@ -54,49 +54,13 @@ This document provides comprehensive details on every OMS release generated sinc
 
 # Optional Plugins
 
-<table>
-  <tr>
-    <th>Plugin</th>
-    <th>Version</th>
-    <th>Repository</th>
-  </tr>
-  <tr>
-    <td><strong>netsuite</strong></td>
-    <td>v4.16.0</td>
-    <td><a href="https://git.hotwax.co/plugins/netsuite.git">netsuite</a></td>
-  </tr>
-  <tr>
-    <td><strong>klaviyo</strong></td>
-    <td>v4.12.0</td>
-    <td><a href="https://git.hotwax.co/plugins/klaviyo.git">klaviyo</a></td>
-  </tr>
-  <tr>
-    <td><strong>shipstation</strong></td>
-    <td>v4.12.0</td>
-    <td><a href="https://git.hotwax.co/plugins/shipping-integrations/shipstation.git">shipstation</a></td>
-  </tr>
-  <tr>
-    <td><strong>shipt</strong></td>
-    <td>v4.12.0</td>
-    <td><a href="https://git.hotwax.co/plugins/shipping-integrations/shipt.git">shipt</a></td>
-  </tr>
-  <tr>
-    <td><strong>c807</strong></td>
-    <td>v4.19.0</td>
-    <td><a href="https://git.hotwax.co/plugins/shipping-integrations/c807.git">c807</a></td>
-  </tr>
-  <tr>
-    <td><strong>guatex</strong></td>
-    <td>v4.19.0</td>
-    <td><a href="https://git.hotwax.co/plugins/shipping-integrations/guatex.git">guatex</a></td>
-  </tr>
-  <tr>
-    <td><strong>terminal-express</strong></td>
-    <td>v4.19.0</td>
-    <td><a href="https://git.hotwax.co/plugins/shipping-integrations/terminal-express.git">terminal-express</a></td>
-  </tr>
-  <tr>
-    <td><strong>cargotrans</strong></td>
-    <td>v4.19.0</td>
-    <td><a href="https://git.hotwax.co/plugins/shipping-integrations/cargotrans.git">cargotrans</a></td>
-  </tr>
+| Plugin            | Version | Repository                                                    |
+|-------------------|---------|---------------------------------------------------------------|
+| **netsuite**      | v4.16.0 | [netsuite](https://git.hotwax.co/plugins/netsuite.git)       |
+| **klaviyo**       | v4.12.0 | [klaviyo](https://git.hotwax.co/plugins/klaviyo.git)         |
+| **shipstation**   | v4.12.0 | [shipstation](https://git.hotwax.co/plugins/shipping-integrations/shipstation.git) |
+| **shipt**         | v4.12.0 | [shipt](https://git.hotwax.co/plugins/shipping-integrations/shipt.git) |
+| **c807**          | v4.19.0 | [c807](https://git.hotwax.co/plugins/shipping-integrations/c807.git) |
+| **guatex**        | v4.19.0 | [guatex](https://git.hotwax.co/plugins/shipping-integrations/guatex.git) |
+| **terminal-express** | v4.19.0 | [terminal-express](https://git.hotwax.co/plugins/shipping-integrations/terminal-express.git) |
+| **cargotrans**    | v4.19.0 | [cargotrans](https://git.hotwax.co/plugins/shipping-integrations/cargotrans.git) |
