@@ -56,6 +56,7 @@ This document provides comprehensive details on every OMS release generated sinc
 <details>
 
 <summary> Optional plugins in OMS</summary>
+
 | Plugin           | Version | Repository                                             |
 |------------------|---------|--------------------------------------------------------|
 | **netsuite**     | v4.16.0 | [netsuite](https://git.hotwax.co/plugins/netsuite.git) |
