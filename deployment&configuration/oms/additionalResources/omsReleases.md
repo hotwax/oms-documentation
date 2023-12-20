@@ -105,6 +105,4 @@ This document provides comprehensive details on every OMS release generated sinc
     <td><a href="https://git.hotwax.co/plugins/shipping-integrations/cargotrans.git">cargotrans</a></td>
   </tr>
 </table>
-
-
 </details>
