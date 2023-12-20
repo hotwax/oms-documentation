@@ -1,23 +1,8 @@
-# Load System Property Data
+# Add System Property Data
 
 System Property data includes a variety of system level configurations that change the lower level configurations of how an instance runs. Double checking these is very important.
 
-System Properties need to be added from the XML data import page in WebTools, the backend service application of HotWax Commerce.
-
----
-
-## Default data
-
-{% hint style='warning' %}
-Prior to uploading the data, please ensure that all relevant variables are included.
-{% endhint %}
-
-```
-<!-- Generally good defaults will work -->
-<SystemProperty systemResourceId="general" systemPropertyId="ORGANIZATION_PARTY" systemPropertyValue="COMPANY" description="The default organizationPartyId for used in dropdowns and reports"/>
-
-<SystemProperty systemResourceId="BuynowConfig" systemPropertyId="buynow.productStore.productStoreName" systemPropertyValue="**{Product Store Name}**"/>
-```
+System Properties can be configured from the General page in Settings section of the OMS. To change these configurations, Go to Hamburger Menu > Settings Section > Click on General to open the General settings page. 
 
 ---
 
