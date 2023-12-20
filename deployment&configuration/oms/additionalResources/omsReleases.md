@@ -296,18 +296,29 @@ Manual Upgrade Steps: (v5.1.1)
 | Diff                | [Link to Diff](https://git.hotwax.co/commerce/oms/-/compare/v4.0.0...v5.0.0?from_project_id=161&straight=false) |
 | Changelog           | [Link to Changelog](https://git.hotwax.co/commerce/oms/-/blob/main/CHANGELOG.md) |
 
+
 {% tabs %}
 
 {% tab title="Upgrade Data" %}
-[Link to Upgrade Data](old_upgrade_data_link)
+OMS:
+[Link to Upgrade Data](https://git.hotwax.co/commerce/oms/-/blob/v5.0.0/applications/hwmapps/upgrade/current/UpgradeData.xml?ref_type=tags)
+
+Omssetup:
+[Link to Upgrade Data](https://git.hotwax.co/tools/omssetup/-/blob/v5.0.0/upgrade/current/UpgradeData.xml?ref_type=tags)
 {% endtab %}
 
 {% tab title="Upgrade SQL" %}
-[Link to Upgrade SQL](old_upgrade_sql_link)
+[Link to Upgrade SQL](https://git.hotwax.co/commerce/oms/-/blob/v5.0.0/applications/hwmapps/upgrade/current/UpgradeSQL.sql?ref_type=tags)
+
+Omssetup:
+[Link to Upgrade SQL](https://git.hotwax.co/tools/omssetup/-/blob/v5.0.0/upgrade/current/UpgradeSQL.sql?ref_type=tags)
 {% endtab %}
 
 {% tab title="Upgrade Steps" %}
-[Link to Upgrade Steps](old_upgrade_steps_link)
+[Link to Upgrade Steps](https://git.hotwax.co/commerce/oms/-/blob/v5.0.0/applications/hwmapps/upgrade/current/UpgradeSteps.md?ref_type=tags)
+
+Omssetup:
+[Link to Upgrade Steps](https://git.hotwax.co/tools/omssetup/-/blob/v5.0.0/upgrade/current/UpgradeSteps.md?ref_type=tags)
 {% endtab %}
 
 {% endtabs %}
