@@ -7,27 +7,30 @@ Please note that the countries added here will be accessible in all address form
 
 ## Instructions
 
-1. **Log into OMS Instance**
-    - Visit your OMS Instance: `https://{instanceName}.hotwax.io/`
+### Log into OMS Instance
 
-2. **Navigate to Company Settings**
-    - Open the Hamburger menu
-    - Go to Settings
-    - Select Company
+Visit your OMS Instance at [https://{instanceName}.hotwax.io/](https://{instanceName}.hotwax.io/).
 
-3. **View Company Page**
-    - Click on your company name to open the View Company page
+### Navigate to Company Settings
 
-4. **Access DBIC Section**
-    - Find the DBIC section on the View Company page
+1. Open the Hamburger menu.
+2. Go to Settings.
+3. Select Companies.
 
-5. **Add Function for Each Country**
-    - Click on `Add function` in the DBIC section
-    - Choose "Country" from the dropdown menu
-    - Click on `Add function` again
+### View Company Page
 
-6. **Repeat for Additional Countries**
-    - Repeat the process for each country you want to add
+Click on your company name to open the View Company page.
+
+### Access DBIC Section
+
+Find the DBIC section on the View Company page.
+
+### Add Function for Each Country
+
+1. Click on `Add function` in the DBIC section.
+2. Choose "Country" from the dropdown menu.
+3. Click on `Add function` again.
+
 
 By following these steps, you can  add DBIC countries to your OMS instance, ensuring that the application caters specifically to the countries relevant to your business operations.
 
