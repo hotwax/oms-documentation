@@ -53,9 +53,7 @@ Here is a smaple table along with the Japanese headers translated to English and
 003 : Frozen product
 
 **COD Fee:**
-{% hint style="danger" %}
-The rules of how this is computed are unclear. Is this derived during label generation or this a value that we get from the order and shipping charges?
-{% endhint %}
+This is the COD fee found in the Shopify order note attributes which is mapped to the HotWax order attribute field. 
 
 **Tax:**
 {% hint style="danger" %}
