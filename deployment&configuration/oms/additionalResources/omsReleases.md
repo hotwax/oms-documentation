@@ -230,3 +230,8 @@ Omssetup:
 | **guatex**        | v4.19.0 | [guatex](https://git.hotwax.co/plugins/shipping-integrations/guatex.git) |
 | **terminal-express** | v4.19.0 | [terminal-express](https://git.hotwax.co/plugins/shipping-integrations/terminal-express.git) |
 | **cargotrans**    | v4.19.0 | [cargotrans](https://git.hotwax.co/plugins/shipping-integrations/cargotrans.git) |
+
+
+
+
+If you are preparing a new release, use this [template].(https://github.com/hotwax/oms-documentation/blob/user-guides/deployment%26configuration/oms/additionalResources/omsReleaseTemplate.md)
