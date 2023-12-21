@@ -101,7 +101,7 @@ Neglecting to update the upgrade steps and SQL may lead to version management co
 {% endhint %}
 
    - Go to [webtools](https://{instanceName}.hotwax.io/webtools).
-   - Refer to [this document](https://docs.google.com/document/d/1lfvjpqBiE__1fsCjq7VvQSSXjdRLVZg86zJIXDDK-zc/edit?hl=en&forcehl=1#heading=h.djn7rcq0batn) for the chosen release version and upgrade steps.
+   - Refer to [this document](https://docs.hotwax.co/deployment-and-configurations/additional-resources/omsreleases) for the chosen release version and upgrade steps.
    - Copy the data from the document.
    - In web tools, go to Import/Export > XML data import > Complete XML document.
    - Enter the data between `<entity-engine-xml>{put the data here}</entity-engine-xml>` and click Import Text.
