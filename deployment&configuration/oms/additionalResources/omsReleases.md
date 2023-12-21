@@ -16,7 +16,7 @@ This document provides details about all OMS releases created after 1 Decemeber 
 Review and execute all Upgrade Steps and Upgrade SQL for each hotfix.
 {% endhint %}
 
-### Release Information
+***Release Information***
 
 #### Hotfix - v5.1.5 (20th Dec)
 
@@ -149,7 +149,7 @@ Manual Upgrade Steps: (v5.1.1)
 
 ## Latest Release
 
-### Release Information
+***Release Information***
 
 | Information         | Value                                           |
 |---------------------|-------------------------------------------------|
@@ -178,7 +178,7 @@ Manual Upgrade Steps: (v5.1.1)
 
 ## Old Release
 
-### Release Information
+***Release Information***
 
 | Information         | Value                                           |
 |---------------------|-------------------------------------------------|
