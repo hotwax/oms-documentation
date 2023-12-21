@@ -163,7 +163,7 @@ Manual Upgrade Steps: (v5.1.1)
 {% tabs %}
 
 {% tab title="Upgrade Data" %}
-[Link to Upgrade Data]((https://git.hotwax.co/commerce/oms/-/blob/v5.1.0/applications/hwmapps/upgrade/current/UpgradeData.xml?ref_type=tags)
+[Link to Upgrade Data](https://git.hotwax.co/commerce/oms/-/blob/v5.1.0/applications/hwmapps/upgrade/current/UpgradeData.xml?ref_type=tags)
 {% endtab %}
 
 {% tab title="Upgrade SQL" %}
