@@ -8,8 +8,6 @@
 * [Add DBICs](InitialSetup/AddDBICs.md)
 * [Load facility data](InitialSetup/LoadFacilities.md)
 * [Configure Product Store](InitialSetup/ProductStore/README.md)
-  * [Add more Product Stores](InitialSetup/ProductStore/AddMoreProductStores.md)
-* [Load System Property data](InitialSetup/LoadSystemPropertys.md)
 
 ## User and Gateway Configuration
 * [Create your users](UserandGatewayConfig/CreateUser.md)
