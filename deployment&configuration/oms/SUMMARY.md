@@ -8,6 +8,8 @@
 * [Add DBICs](InitialSetup/AddDBICs.md)
 * [Load facility data](InitialSetup/LoadFacilities.md)
 * [Configure Product Store](InitialSetup/ProductStore/README.md)
+* [Configure System Property data](InitialSetup/setSystemPropertys.md)
+* [Configure SFTP data](InitialSetup/ProductStore/setupSftpConfigurations.md)
 
 ## User and Gateway Configuration
 * [Create your users](UserandGatewayConfig/CreateUser.md)
