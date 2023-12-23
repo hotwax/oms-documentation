@@ -48,12 +48,13 @@ Here is a smaple table along with the Japanese headers translated to English and
 ### Field mappings
 
 **Cool Shipping:** Always send `001`. New Era Caps doesn't need refridgerated shipping, their products are cool on their own.
-001 : No data
-002 : Chilled product
-003 : Frozen product
+
+- 001 : No data
+- 002 : Chilled product
+- 003 : Frozen product
 
 **COD Fee:**
-This is the COD fee found in the Shopify order note attributes which is mapped to the HotWax order attribute field. 
+This is the COD fee found in the Shopify order note attributes. To learn more about how these are saved in HotWax sync th
 
 **Tax:**
 {% hint style="danger" %}
@@ -61,14 +62,13 @@ Which taxes is this? Item VAT or order level shipping tax?
 {% endhint %}
 
 **Payment type:** 
+Fixed value of 0
+
 0 ：No data
 1 ：All accepted
 2 ：Only Cash
 3 ：Debit and Credit
 
-{% hint style="danger" %}
-Currently we do not know which of these values maps to COD and the difference between `All accepted` and `Debit and Credit`.
-{% endhint %}
 
 **Client Information:** Client information reffers to the billing information of an order.
 
