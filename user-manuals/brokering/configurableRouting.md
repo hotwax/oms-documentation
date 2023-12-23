@@ -17,17 +17,17 @@ For unfillable orders that did not meet routing criterias under any rule-set, me
 Order lookup is broken down into multiple facets. Each facet is designed to find orders on a metric that is relevant to retailers. Once results for orders are obtained, their sequence (sort order) is also configurable by retailers to ensure that even within a batch of orders, they are not bound to just first in first out sequencing of orders.
 
 **Available filters:**
-Queue: the parking location to fetch orders from
-Shipping method: SLA promised to the customer
-Order priority: escalated orders
-Promise date: the promised delivery date on a pre-order item
-Sales channel: where the order was captured
+- Queue: the parking location to fetch orders from
+- Shipping method: SLA promised to the customer
+- Order priority: escalated orders
+- Promise date: the promised delivery date on a pre-order item
+- Sales channel: where the order was captured
 
 **Sorting orders:**
-Ship by
-Ship after
-Order date: order placed by the customer
-Shipping method: the delivery days of the SLA on an order
+- Ship by
+- Ship after
+- Order date: order placed by the customer
+- Shipping method: the delivery days of the SLA on an order
 
 ### Finding inventory
 Once a batch of orders is identified, inventory lookup conditions are used to find the correct inventory. To optimize inventory lookup performance, facilities are first filtered out to ensure that inventory lookup is only performed on facilities that qualify for fulfillment.
