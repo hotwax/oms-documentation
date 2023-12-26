@@ -70,6 +70,30 @@ https://api.easypost.com/v2/shipments
 }
 ```
 
+| Field in EasyPost                  | Field in HotWax                |
+|----------------------------------|----------------------------------|
+| `name` in `to_address`            | `shipToName`                     |
+| `street1` in `to_address`         | `shipToAddressLine1`             |
+| `city` in `to_address`            | `shipToCity`                     |
+| `state` in `to_address`           | `shipToState`                    |
+| `zip` in `to_address`             | `shipToPostalCode`               |
+| `country` in `to_address`         | `shipToCountryCode`              |
+| `phone` in `to_address`           | `shipToPhone`                    |
+| `email` in `to_address`           | `shipToEmail`                    |
+| `name` in `from_address`          | `shipFromName`                   |
+| `name` (nested in `from_address`) | `shipFromCompanyName`            |
+| `street1` in `from_address`       | `shipFromAddressLine1`           |
+| `city` in `from_address`          | `shipFromCity`                   |
+| `state` in `from_address`         | `shipFromState`                  |
+| `zip` in `from_address`           | `shipFromPostalCode`             |
+| `country` in `from_address`       | `shipFromCountryCode`            |
+| `phone` in `from_address`         | `shipFromPhone`                  |
+| `email` in `from_address`         | `shipFromEmail`                  |
+| `length` in `parcel`              | `length`                         |
+| `width` in `parcel`               | `width`                          |
+| `height` in `parcel`              | `height`                         |
+| `weight` in `parcel`              | `weight`                         |
+
 #### Response:
 ```json
 {
@@ -284,6 +308,11 @@ https://api.easypost.com/v2/shipments/shp_7383fa71161645259664060fb5c41c32/buy
     }
 }
 ```
+
+| Field in EasyPost     | Field in HotWax |
+|-----------------------|------------------|
+| `id`                  | `rateId`         |
+
 
 #### Response:
 ```json
