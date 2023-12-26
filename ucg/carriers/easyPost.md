@@ -70,29 +70,29 @@ https://api.easypost.com/v2/shipments
 }
 ```
 
-| Field in EasyPost                  | Field in HotWax                |
-|----------------------------------|----------------------------------|
-| `name` in `to_address`            | `shipToName`                     |
-| `street1` in `to_address`         | `shipToAddressLine1`             |
-| `city` in `to_address`            | `shipToCity`                     |
-| `state` in `to_address`           | `shipToState`                    |
-| `zip` in `to_address`             | `shipToPostalCode`               |
-| `country` in `to_address`         | `shipToCountryCode`              |
-| `phone` in `to_address`           | `shipToPhone`                    |
-| `email` in `to_address`           | `shipToEmail`                    |
-| `name` in `from_address`          | `shipFromName`                   |
-| `name` (nested in `from_address`) | `shipFromCompanyName`            |
-| `street1` in `from_address`       | `shipFromAddressLine1`           |
-| `city` in `from_address`          | `shipFromCity`                   |
-| `state` in `from_address`         | `shipFromState`                  |
-| `zip` in `from_address`           | `shipFromPostalCode`             |
-| `country` in `from_address`       | `shipFromCountryCode`            |
-| `phone` in `from_address`         | `shipFromPhone`                  |
-| `email` in `from_address`         | `shipFromEmail`                  |
-| `length` in `parcel`              | `length`                         |
-| `width` in `parcel`               | `width`                          |
-| `height` in `parcel`              | `height`                         |
-| `weight` in `parcel`              | `weight`                         |
+| Field in EasyPost                            | Field in HotWax                |
+|----------------------------------------------|----------------------------------|
+| `to_address.name`                            | `shipToName`                     |
+| `to_address.street1`                         | `shipToAddressLine1`             |
+| `to_address.city`                            | `shipToCity`                     |
+| `to_address.state`                           | `shipToState`                    |
+| `to_address.zip`                             | `shipToPostalCode`               |
+| `to_address.country`                         | `shipToCountryCode`              |
+| `to_address.phone`                           | `shipToPhone`                    |
+| `to_address.email`                           | `shipToEmail`                    |
+| `from_address.name`                          | `shipFromName`                   |
+| `from_address.name` (nested in `from_address`) | `shipFromCompanyName`            |
+| `from_address.street1`                       | `shipFromAddressLine1`           |
+| `from_address.city`                          | `shipFromCity`                   |
+| `from_address.state`                         | `shipFromState`                  |
+| `from_address.zip`                           | `shipFromPostalCode`             |
+| `from_address.country`                       | `shipFromCountryCode`            |
+| `from_address.phone`                         | `shipFromPhone`                  |
+| `from_address.email`                         | `shipFromEmail`                  |
+| `parcel.length`                              | `length`                         |
+| `parcel.width`                               | `width`                          |
+| `parcel.height`                              | `height`                         |
+| `parcel.weight`                              | `weight`                         |
 
 #### Response:
 ```json
