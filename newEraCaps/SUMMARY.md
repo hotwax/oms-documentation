@@ -20,3 +20,4 @@
   * [Omnichannel Orders](flows/salesOrder/omnichannelOrders.md)
   * [Soft Allocation](flows/salesOrder/softAllocationFlow.md)
   * [Note Attributes](flows/salesOrder/noteAttributes.md)
+  * [Payment Methods](flows/salesOrder/paymentMethods.md)
