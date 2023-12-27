@@ -19,6 +19,10 @@ The added staff members will be listed, showcasing:
 
 To remove a staff member from the facility, click on the `cross` button located on the right side of each staff member's name within the staff details section.
 
+{% embed url="https://youtu.be/JAL_KKJyAyU" %}
+Video: Add Staff
+{% endembed %}
+
 ### Manage Locations
 
 Users can specify the locations with the facilities such as Aisle, Section, Level or sequence which will help store associates to define an exact place where inventory can be kept when received and where the inventory can be picked from.
@@ -54,3 +58,7 @@ Finally, Click on the `save` icon to save the location within the facility.
 
 1. To remove a location from the facility, click on the overflow menu presented towards the right of each location.
 2. Click on the `remove location` button to remove location from the facility.
+
+{% embed url="https://youtu.be/AZDnicdjnqA" %}
+Video: Add Locations
+{% endembed %}

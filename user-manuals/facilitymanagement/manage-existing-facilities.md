@@ -9,6 +9,10 @@ Users need to navigate to the `Homepage`> `Find Facilities` page to manage the e
 1. To locate a specific facility, user can search the facility by name from the `search` functionality on the left.
 2. Users can apply filters such as Product Store and facility Type to narrow down the list and find the facility manually.
 
+{% embed url="https://youtu.be/v3AOhHhjZO4" %}
+Video: Locate Facilities
+{% endembed %}
+
 ### Linking Facility with External Systems
 
 Before configuring any settings, it's crucial to establish a connection between the facility in HotWax Commerce and facilities in the external Systems such as e-commerce platforms, ERP systems, and third-party logistics systems for accurate fulfillment and inventory management. Users can map the HotWax Commerce facilities with external systems by following steps:
@@ -28,3 +32,7 @@ Before configuring any settings, it's crucial to establish a connection between 
 ### Rename Facilities
 
 Users can seamlessly rename facilities by clicking on the `Pencil` Icon near the facility's name. this will open a pop-up where users can edit the name and click on `apply` to save the name.
+
+{% embed url="https://youtu.be/bO46oT-e1kM" %}
+Video: Rename Facilities
+{% endembed %}

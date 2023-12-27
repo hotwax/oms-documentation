@@ -29,7 +29,7 @@
   * [Manage Existing facilities](facilitymanagement/manage-existing-facilities.md)
   * [Add Facility Address](facilitymanagement/add-facility-address.md)
   * [Manage Operating Hours](facilitymanagement/manage-operating-hours.md)
-  * [Add Product Stores](facilitymanagement/add-product-stores.md)
+  * [Manage Product Stores](facilitymanagement/manage-product-stores.md)
   * [Configure Fulfillment](facilitymanagement/configure-fulfillment.md)
   * [Manage Staff and locations](facilitymanagement/manage-staff-and-locations.md)
 * [Receiving](receiving.md)
