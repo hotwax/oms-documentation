@@ -34,3 +34,6 @@
   * [Manage Staff and locations](facilitymanagement/manage-staff-and-locations.md)
 * [Receiving](receiving.md)
 * [Inventory Count](Inventory-count.md)
+* [Data Manager](datamanager/README.md)
+  * [Data Imports](datamanager/dataImports.md)
+  * Data Exports](datamanager/dataExports.md)
