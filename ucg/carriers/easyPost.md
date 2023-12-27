@@ -48,6 +48,7 @@ The `postage_label` parameter generates labels with specific size and format req
 
 <details>
 <summary>Sample request</summary>
+
 ```json
 {
   "origin": {
@@ -111,7 +112,8 @@ The `postage_label` parameter generates labels with specific size and format req
 
 <details>
 <summary>Sample response</summary>
-{
+
+```json
 {
      "created_at": "2023-12-26T12:30:22Z",
     "is_return": false,
@@ -298,11 +300,10 @@ The `postage_label` parameter generates labels with specific size and format req
     "object": "Shipment"
 }
 }
-}
 ```
 </details>
 
-### 2. Buy a Shipment API
+### Buy a Shipment API
 
 #### Purpose:
 The Buy a Shipment API is employed to share the rate ID of a specific shipment with EasyPost. This API facilitates the retrieval of a shipping label corresponding to the provided rate ID.
@@ -343,6 +344,7 @@ In this response, HotWax relies on two vital fields: `tracking_code` provides th
 
 <details>
 <summary>Sample response</summary>
+
 ```json
 {
     "created_at": "2023-12-26T12:35:58Z",
@@ -427,7 +429,7 @@ In this response, HotWax relies on two vital fields: `tracking_code` provides th
 ```
 </details>
 
-### 3. Refund a Shipment API
+### Refund a Shipment API
 
 #### Purpose:
 The Refund a Shipment API is employed to void the shipping label generated for a specific shipment. This is useful in cases where a shipment needs to be canceled or rerouted.
@@ -445,6 +447,7 @@ https://api.easypost.com/v2/shipments/shp_a88f34ee108f4e82ab04b3570863f7fb/refun
 
 <details>
 <summary>Sample request</summary>
+
 ```json
 {
   "shipment_id": "abc123"
@@ -452,7 +455,6 @@ https://api.easypost.com/v2/shipments/shp_a88f34ee108f4e82ab04b3570863f7fb/refun
 ```
 </details>
 
-#### Response:
 #### Response:
 {% hint style="info" %}
 `EasyPost` consistently structures its responses, maintaining a common format. Unique details specified in each request are appended to this structure, ensuring dynamic adaptability while preserving a standardized response format.
@@ -463,6 +465,7 @@ In this response, HotWax relies on a key field, specifically `refund_status`. Ba
 
 <details>
 <summary>Sample response</summary>
+
 ```json
 {
     "refund_status": "refunded",
