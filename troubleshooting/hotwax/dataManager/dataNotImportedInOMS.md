@@ -22,17 +22,21 @@ You scheduled a job to import data into OMS, but the imported data is not loaded
    - Navigate to the import menu to find the files you have imported in OMS.
    - Check the status of the files; they should transition from Pending to Finished.
 
+-- 
+
 ## Data Not Imported in OMS Despite Scheduled Jobs
 
 All required Jobs are properly scheduled, but the data import into OMS is still not successful. This generally happens when the imported file has missing or incorrect information.
 
 **Steps to Resolve**
 
-1. **Check Data Manager Logs:**
+**Check Data Manager Logs:**
    - Go to Hamburger Menu > MDM > EXIM > Import section.
    - Navigate to the import menu to find the files you have imported in OMS.
    - Click on the menu you want to see.
    - Below the importing files section, find results in the EXIM Result Section.
+
+-- 
 
 **In the result section, you will see following columns**
 
@@ -48,6 +52,8 @@ All required Jobs are properly scheduled, but the data import into OMS is still 
 | Action           | Action to delete the record.                           |
 
 
+--
+
 **Status types**
 
 | Status   | Description                               |
@@ -58,6 +64,8 @@ All required Jobs are properly scheduled, but the data import into OMS is still 
 | Finished | Transaction success.                      |
 | Failed   | Transaction has failed.                   |
 
+
+--
 
 **How to analyze Failed Records:**
 
