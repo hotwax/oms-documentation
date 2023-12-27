@@ -15,7 +15,7 @@ Video: Locate Facilities
 
 ### Linking Facility with External Systems
 
-Before configuring any settings, it's crucial to establish a connection between the facility in HotWax Commerce and facilities in the external Systems such as e-commerce platforms, ERP systems, and third-party logistics systems for accurate fulfillment and inventory management. Users can map the HotWax Commerce facilities with external systems by following steps:
+Before configuring any settings, it's crucial to establish a connection between the facilities in HotWax Commerce and facilities in the external Systems such as e-commerce platforms, ERP systems, and third-party logistics systems for accurate fulfillment and inventory management. Users can map the HotWax Commerce facilities with external systems by following steps:
 
 1. **Access Facility Details:** Users can click on the desired facility's name which will be redirected to the facility details page, providing a comprehensive overview of the chosen facility.
 2. **External Mapping:** Scroll down to the `External Mapping` segment located at the bottom of the facility details page.
