@@ -6,7 +6,7 @@ If you are not receiving BOPIS notifications, consider the following troubleshoo
 
 Ensure that your device has a stable internet connection. Notifications rely on an active connection for delivery.
 
-## Verify App settings
+## Verify BOPIS App settings
 
 Confirm that the BOPIS app has the necessary settings to send notifications. Go to the BOPIS app's settings page, and ensure that notifications are enabled for required topics.
 
