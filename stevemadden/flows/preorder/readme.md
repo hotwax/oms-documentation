@@ -29,3 +29,15 @@
 2. In following scenarios the orders are considered eligible for auto-releasing:
     a. Pre-order promise date has arrived
     b. Inventory for the style is available
+
+**Manual Pre-order Releasing:**
+1. If product inventory is available in HotWax, user can release the pre-orders manually through Pre-order App.
+2. Following features are available in the pre-order app:
+   a. Search by Order - User can search orders of a style by following search options:
+            UPC
+            Order ID
+            Product Name
+   b. Search by Product - User can search products by following search options:
+            UPC
+            Order ID
+            Product Name
