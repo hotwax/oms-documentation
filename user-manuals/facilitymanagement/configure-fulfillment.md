@@ -1,4 +1,6 @@
-# Configure Online Fulfillment
+# Configure Fulfillment
+
+### Configure Online Fulfillment
 
 The Fulfillment settings card on the facility details page allows users to quickly configure the facility-specific configure to manage the scope of participation in online fulfillment. Users can configure the following settings for the facility:
 

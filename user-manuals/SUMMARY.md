@@ -30,7 +30,7 @@
   * [Add Facility Address](facilitymanagement/add-facility-address.md)
   * [Manage Operating Hours](facilitymanagement/manage-operating-hours.md)
   * [Add Product Stores](facilitymanagement/add-product-stores.md)
-  * [Configure Online Fulfillment](facilitymanagement/configure-online-fulfillment.md)
+  * [Configure Fulfillment](facilitymanagement/configure-fulfillment.md)
   * [Manage Staff and locations](facilitymanagement/manage-staff-and-locations.md)
 * [Receiving](receiving.md)
 * [Inventory Count](Inventory-count.md)
