@@ -5,6 +5,8 @@
 ## HotWax Commerce
 
 * [Fulfillment](hotwax/fulfillment/README.md)
+* [BOPIS](hotwax/bopis/README.md)
+  * [Notifications](hotwax/bopis/notifications.md)
 * [Job Manager](hotwax/jobManager.md)
   * [Unable to Schedule](hotwax/jobManager/scheduleJob.md)
   * [Job Failed](hotwax/jobManager/jobFailed.md)
