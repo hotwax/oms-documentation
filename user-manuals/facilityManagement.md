@@ -7,7 +7,7 @@ HotWax Commerce's Facility Management App is a seamless tool for retailers overs
 Retailers can initiate facility setup in HotWax Commerce using a CSV import. However, if a new store is opened, it must be added to HotWax Commerce to ensure its participation in online fulfillment. The process of adding a new facility involves the following steps:
 Navigate to the `facility management app` in the `Launchpad` and login to access the app.
 
-**Note:** Only Users with Admin permissions can log in to the facility management app.
+**Note:** Only Users with Admin permissions can log in to the `facility management app`.
 
 1. Select the `facilities` option on the homepage to view all the existing facilities and the option to create new facilities.
 
@@ -45,9 +45,9 @@ Once the facilities are created, users can manage the facilities within the Faci
 
 ### Locate Facilities
 
-Users need to navivigate to the `Homepage`> `Find Facilities` page to manage the existing facilities. There are tow ways to locate the facilities for which users need to manage the configurations:
+Users need to navigate to the `Homepage`> `Find Facilities` page to manage the existing facilities. There are two ways to locate the facilities for which users need to manage the configurations:
 
-1- To locate a specific facility, user cans earch the facility by name from the `search` functionality on the left.
+1- To locate a specific facility, user can search the facility by name from the `search` functionality on the left.
 2- Users can apply filters such as Product Store and facility Type to narrow down the list and find the facility manually.
 
 ### Linking Facility with External Systems
@@ -58,15 +58,15 @@ Before configuring any settings, it's crucial to establish a connection between 
 
 2. External Mapping: Scroll down to the `External Mapping` segment located at the bottom of the facility details page.
 
-3. Map Facility to External System: Click on the `Add MAP FACILITY TO EXTERNAL SYSTEM` button to initiate the mapping process.
+3. Map Facility to External System: Click on the `Add Map Facility to External System` button to initiate the mapping process.
 
-5. Choose External System: In the modal that appears, choose external system for which the user wants to create the mapping. 
+5. Choose External System: In the modal that appears, choose the external system for which the user wants to create the mapping. 
 
 6. Fill in Required details: 
 
 - For Shopify: Choose the appropriate Shopify store from the dropdown menu and add the location ID of the facilities that can be obtained from the Shopify admin panel.
 
-- For other Systems: USers can create mapping by add the Mapping Name ( External system for which mapping needs to be done) and the Mapping Value (External ID of the Facility)
+- For other Systems: Users can create mapping by adding the Mapping Name ( External system for which mapping needs to be done) and the Mapping Value (External ID of the Facility)
 
 7. Save Mapping: Once the required information is filled in, click on the `save` button to save the configuration. This integration lays the groundwork for a cohesive connection between the facility in HotWax Commerce and facility in the external system, facilitating streamlined configuration and operational processes.
 
@@ -103,7 +103,7 @@ Users need to setup the operating hours of the facilities to show the informatio
 
 ### Add Product Stores
 
-Users maanging multiple product stores in HotWax Commerce can mention the facility is associated with which product store. For facilities selling products from multiple product store can specify the `Primary` Product store associated with the facility. Users can add the product store by following steps:
+Users managing multiple product stores in HotWax Commerce can mention the facility is associated with which product store. For facilities selling products from multiple product stores, users can specify the `Primary` Product store associated with the facility. Users can add the product store by following steps:
 
 1. Click on the `Add` button within the product store card to initiate the process of adding a new product store.
 2. A pop-up menu will appear, presenting a list of available product stores. Choose the relevant product store(s) that you want to associate with the selected facility.
@@ -112,15 +112,15 @@ Users maanging multiple product stores in HotWax Commerce can mention the facili
 
 ### Configure Online Fulfillment
 
-The Fulfillment settings card in the facility details page allow users to quickly configure the facility specific configure to manage the scope of participation in online fulfillment. Users can configure following settings for the facility:
+The Fulfillment settings card on the facility details page allows users to quickly configure the facility-specific configure to manage the scope of participation in online fulfillment. Users can configure the following settings for the facility:
 
-1. Sell Inventory Online: `Sell inventory online` function helps users to simply choose whether they want to sell inventory online for that facility. Stores or warehouses can temporarily choose to turn online fulfillment off for several reasons such as high footfall, natural calamities, lack of resources for fulfillment, etc. hence in such situations stores and warehouses are turned off for online fulfillment to avoid order brokering. Users also have the quick access to turn online fulfillment on/off in the `find facilities` page
+1. Sell Inventory Online: `Sell inventory online` function helps users to simply choose whether they want to sell inventory online for that facility. Stores or warehouses can temporarily choose to turn online fulfillment off for several reasons such as high footfall, natural calamities, lack of resources for fulfillment, etc. Hence in such situations stores and warehouses are turned off for online fulfillment to avoid order brokering. Users also have quick access to turn online fulfillment on/off on the find facilities page.
 
-2. Allow Pickup: BOPIS operations require a staging area where customers can collect their orders. However retailers can decide whether they have the capacity to fulfill BOPIS orders by simply toggle on/off the `allow pickup` settings to enable or disable BOPIS for the selected facility.
+2. Allow Pickup: BOPIS operations require a staging area where customers can collect their orders. However, retailers can decide whether they have the capacity to fulfill BOPIS orders by simply toggling on/off the `allow pickup` settings to enable or disable BOPIS for the selected facility.
 
-3. Use Native Fulfillment App: `Native fulfillment app` setting enables retailers to select whether the facility use HotWax Commerce’s fulfillment app or any third party fulfillment app.
+3. Use Native Fulfillment App: `Native fulfillment app` setting enables retailers to select whether the facility uses HotWax Commerce’s fulfillment app or any third-party fulfillment app.
 
-4. Generate Shipping Labels: HotWax Commerce  enables retailers to integrate with carrier partners so at the time of fulfillment via HotWax Commerce’s Fulfillment app, Shipping labels can be generated for this shipment process. Retailers opting not to integrate HotWax Commerce with the carrier partners and prefer to insert tracking ID in HotWax commerce to update o Shopify can toggle off the `Generate Shipping Labels` settings.
+4. Generate Shipping Labels: HotWax Commerce enables retailers to integrate with carrier partners so at the time of fulfillment via HotWax Commerce’s Fulfillment app, Shipping labels can be generated for this shipment process. Retailers opting not to integrate HotWax Commerce with the carrier partners and prefer to insert tracking ID in HotWax Commerce to update os Shopify can toggle off the `Generate Shipping Labels` settings.
 
 5. Days to Ship: `Days to` ship are the maximum number of days the facility will take to ship the order post brokering. Enter the days to ship and click on `Update Days To Ship` button to save the configurations for the facility.
 
@@ -128,10 +128,10 @@ The Fulfillment settings card in the facility details page allow users to quickl
 
 Fulfillment capacity is defined based on the number of orders a facility will be able to fulfill in a day. It is set up considering various resources such as facility size, staff, and footfall. Users can set up the maximum order limit that can be allocated to that facility through the `Online Order Fulfillment' Card. Users can manage the order capacity of the facility by following steps:
 
-1. On the online order fulfillment card, a fulfillment capacity overflow menu on the right is presented. From the menu retailers can define facilities fulfillment capacity to take order against it.
+1. On the online order fulfillment card, a fulfillment capacity overflow menu on the right is presented. From the menu, retailers can define facility fulfillment capacity to take orders against it.
 
-- Unlimited capacity: Removes the fulfillment capacity limit, allowing the facility to handle an unrestricted number of orders. This setting is no recommended for retail stores.
-- No capacity: Sets the fulfillment capacity to 0, preventing any new orders from being brokerred to the facility. The capacity is only set to 0 if the facility is unavailable to fulfill any upcoming orders and this should be used cautiously.
+- Unlimited capacity: RRemoves the fulfillment capacity limit, allowing the facility to handle an unrestricted number of orders. This setting is not recommended for retail stores.
+- No capacity: Sets the fulfillment capacity to 0, preventing any new orders from being brokered to the facility. The capacity is only set to 0 if the facility is unavailable to fulfill any upcoming orders and this should be used cautiously.
 - Custom: Enter a custom number for the order fulfillment capacity. 
 
 2. Click on "Apply" to save the capacity. Retailers can view the consumed capacity, out of the added fulfillment capacity in the card.
@@ -140,7 +140,7 @@ The ability to configure fulfillment capcity is also available in the `Find faci
 
 Users can also see the facility order count history by clicking on the View order count history button. This will help them in setting up the capacity based on their previous record.
 
-### Manage faciity Staff
+### Manage facility Staff
 
 This feature allows retailers to efficiently handle facility-specific staff, assigning role-specific permissions for accessing HotWax Commerce and other HotWax Commerce applications. Users can manage facility staff by the following steps:
 
@@ -165,7 +165,7 @@ Users can specify the locations with the facilities such as Aisle, Section, Leve
 
 **Add Locations**
 
-To add anew location within the facility, click on the `Add Locations To Facility` button to open a location pop-up menu.
+To add a new location within the facility, click on the `Add Locations To Facility` button to open a location pop-up menu.
 
 Fill in the required information to add location to the facility.
 
@@ -189,7 +189,7 @@ Fill in the required information to add location to the facility.
 
 6. Sequence: This term is closely related to picking and usually refers to a specific order in which items need to be picked to optimize efficiency. It could be based on product location, order size, or customer priority.
 
-Finally Click on the `save` icon to save the location within the facility.
+Finally, Click on the `save` icon to save the location within the facility.
 
 **Edit Locations**
 
