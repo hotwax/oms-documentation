@@ -20,6 +20,7 @@
   * [Rejection](fulfillment/rejection.md)
   * [Picking App](fulfillment/pickingApp.md)
   * [CSV Support](fulfillment/csvSupport.md)
+  * [Reports](fulfillment/reports.md)
 * [Order Routing](brokering/configurableRouting.md)
 * [Facility management](facilityManagement.md)
 * [Receiving](receiving.md)
