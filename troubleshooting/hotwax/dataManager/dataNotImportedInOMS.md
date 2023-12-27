@@ -34,9 +34,22 @@ All required Jobs are properly scheduled, but the data import into OMS is still 
    - Click on the menu you want to see.
    - Below the importing files section, find results in the EXIM Result Section.
 
-   - In the result section, you will see columns such as Log Id, User, Date, Uploaded File, View Log, Failed Records, Status, and Action.
+**In the result section, you will see following columns**
 
-   - Types of Status:
+| Column          | Explanation                                           |
+|------------------|-------------------------------------------------------|
+| Log Id           | A unique identifier for the transaction.              |
+| User             | The user who performed the action.                    |
+| Date             | The date and time the event occurred.                  |
+| Uploaded File    | The CSV file that was uploaded.                       |
+| View Log         | Provides detailed transaction logs for the entire event with timestamps. |
+| Failed Records   | A CSV file containing records that failed to upload, along with error messages for each failed record. |
+| Status           | The status of the upload or download (Pending, Queued, Running, Finished, or Failed). |
+| Action           | Action to delete the record.                           |
+
+
+**Status types**
+
 | Status   | Description                               |
 |----------|-------------------------------------------|
 | Pending  | Transaction is yet to be initiated.       |
@@ -46,8 +59,9 @@ All required Jobs are properly scheduled, but the data import into OMS is still 
 | Failed   | Transaction has failed.                   |
 
 
-2. **Analyze Failed Records:**
-   - Download the failed records file to see the reasons for failed records and fix them before reuploading.
+**How to analyze Failed Records:**
+
+Download the failed records file to see the reasons for failed records and fix them before reuploading.
 
 | Error Type        | Description                                            |
 |-------------------|--------------------------------------------------------|
