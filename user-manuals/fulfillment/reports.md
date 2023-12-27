@@ -104,7 +104,7 @@ Insider reports that 39% of consumers prefer using BOPIS when placing online ord
 
 When customers can’t come to the store to pick up their orders, store managers need a detailed report on the unpicked BOPIS orders.  
 
-The Daily BOPIS Orders Report provides cumulative details of all the BOPIS orders of the last 30 days. This Shopify report also shows the status of these BOPIS orders if orders are picked up, canceled, or not picked up. 
+The **Daily BOPIS Orders Report** provides cumulative details of all the BOPIS orders of the last 30 days. This Shopify report also shows the status of these BOPIS orders if orders are picked up, canceled, or not picked up. 
 
 With this detailed report, store managers also look for long pending BOPIS orders. These orders keep the inventory blocked which can be used to fulfill other orders. With the knowledge of pending BOPIS orders, merchants can cancel all long-pending orders and use the inventory for new orders. 
 
@@ -142,7 +142,7 @@ Merchants use third-party services to ship orders to customers' addresses. Order
 
 Because multiple shipments are sent out daily, merchants require a centralized view of order shipment details. This Shopify report helps merchants quickly identify an order's tracking ID, shipping address, and dispatch location.
 
-The Shipment Tracking Report shows the daily shipment details for each order. Using this report, merchants can quickly resolve questions related to order tracking by finding the tracking ID and the shipping address for the order.
+The **Shipment Tracking Report** shows the daily shipment details for each order. Using this report, merchants can quickly resolve questions related to order tracking by finding the tracking ID and the shipping address for the order.
 
 #### User
 Fulfillment team
@@ -162,3 +162,61 @@ Fulfillment team
 
 ---
 
+## Problematic Orders
+
+These reports help retailers find where orders are falling through the cracks and ensure that all orders are beign shipped out on time.
+
+### Daily Unfulfilled Expedited Orders
+According to the State of Shipping Report, 62% of consumers expect their orders to arrive in less than three business days. To help expedite shipping, many brands have started implementing same-day/next-day delivery. That sounds like an easy fix, right?
+
+Well, sometimes omnichannel order fulfillment teams can't fulfill same-day/next-day orders due to inventory discrepancies or other reasons. Orders go unfulfilled, which leads to increased order cancellations, poor customer service, and broken promises.
+
+To provide a better customer experience, merchants have dedicated Customer Success Teams. The Customer Success Team wants to be on top of unfulfilled expedited delivery orders and continuously work on decreasing the order cancellation rate.
+
+To effectively manage unfulfilled expedited orders, Customer Success Teams need a **Daily Unfulfilled Expedited Orders Report**. This report provides a granular view of all the unfulfilled same-day/next-day delivery orders. It also helps identify the order’s last brokered location with brokering time.
+
+Furthermore, the report will help Customer Success Teams to evaluate the efficiency of their expedited shipping fulfillment process. Due to the large volume of expedited orders handled by an OMS daily, merchants prefer to have a daily report of all unfulfilled orders.
+
+#### User
+Head of eCommerce, Vice President of Retail
+
+**Report Glossary**
+
+| Item            | Item Details                                          |
+|------------------|------------------------------------------------------|
+| Order ID         | The ID of order in HotWax Commerce                    |
+| Shopify ID       | The ID of order in Shopify                             |
+| Order Date       | The date when the customer placed the order           |
+| Brokered Date    | The date when the order is brokered to a fulfillment location |
+| Brokering Time   | The time when the order was brokered                   |
+| Shipping         | The preference of shipping selected by the customer    |
+| Customer Name    | The name of the customer                               |
+| UPC/SKU          | The unique product code                                |
+| Style            | The category of the product/item                      |
+| Color            | The color of the product                               |
+| Size             | The size of the product                                |
+| Store ID         | The last brokered location of the order               |
+
+### Daily Unfulfilled Orders
+Merchants set benchmarks for fulfilling orders. Generally, merchants intend to complete order fulfillment within a seven-day maximum time frame. If any order’s fulfillment takes more than seven days, it draws a merchant’s attention.
+
+To avoid order delays, merchants prefer to check all the pending orders at the facilities and alert fulfillment locations to speed up order fulfillment.
+
+The **Daily Unfulfilled Orders Report** provides the data for all unfulfilled orders at different fulfillment locations. These can be standard, same-day/next-day delivery or store pick-up orders. The report also shows the last brokered facility and order brokered time which helps retailers analyze unfulfilled orders and mitigate challenges in the omnichannel order fulfillment pipeline.
+
+#### User
+Head of eCommerce, Vice President of Retail
+
+**Report Glossary**
+
+| Item              | Item Details                                          |
+|-------------------|-------------------------------------------------------------|
+| HC_Order_ID       | The ID of order in HotWax Commerce                       |
+| Shopify ID        | The ID of order in Shopify                               |
+| Location          | The location of the order                                |
+| Item Description  | The style, color, size of the item                       |
+| Style             | The category of the product/item                        |
+| Color             | The color of the item                                     |
+| Size              | The size of the item                                      |
+| Brokered Date     | The date when the order is brokered to a fulfillment location |
+| Brokering Time    | The time when the order was brokered                      |
