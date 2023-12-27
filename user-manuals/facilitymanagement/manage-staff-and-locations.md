@@ -48,6 +48,10 @@ Fill in the required information to add location to the facility.
 
 Finally, Click on the `save` icon to save the location within the facility.
 
+{% embed url="https://youtu.be/AZDnicdjnqA" %}
+Video: Add Locations
+{% endembed %}
+
 **Edit Locations**
 
 1. To edit the location of the facility, click on the overflow menu presented towards the right of each location.
@@ -59,6 +63,6 @@ Finally, Click on the `save` icon to save the location within the facility.
 1. To remove a location from the facility, click on the overflow menu presented towards the right of each location.
 2. Click on the `remove location` button to remove location from the facility.
 
-{% embed url="https://youtu.be/AZDnicdjnqA" %}
-Video: Add Locations
+{% embed url="https://youtu.be/I3wGqeJUAXc" %}
+Video: Edit or Remove Locations
 {% endembed %}
