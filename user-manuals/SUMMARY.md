@@ -1,6 +1,6 @@
 # Table of contents
 
-* [README](README.md)
+* [Introduction](README.md)
 * [Launchpad](launchpad/README.md)
 * [Job management](jobManager/README.md)
   * [Job details](jobManager/flows/job-details.md)
@@ -15,6 +15,8 @@
 * [Users](users/README.md)
   * [Create Users](users/createUser.md)
   * [Manage Users](users/manageUser.md)
+* [BOPIS](bopis/README.md)
+  * [Notifications](bopis/appNotifications.md)
 * [Fulfillment](fulfillment/README.md)
   * [Ship Orders](fulfillment/shipOrders.md)
   * [Rejection](fulfillment/rejection.md)
