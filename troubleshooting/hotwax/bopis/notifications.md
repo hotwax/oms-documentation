@@ -30,7 +30,7 @@ If you have blocked notifications in your browser, follow these steps to unblock
 - **Chrome:** [Unblock Notifications on Chrome](https://support.google.com/chrome/answer/3220216?co=GENIE.Platform%3DDesktop&hl=en)
 - **Firefox:** [Unblock Notifications on Firefox](https://support.mozilla.org/en-US/kb/push-notifications-firefox)
 
-## 5. Operating System Notification Settings
+## 5. Review Operating System Notification Settings
 
 Ensure that operating system notifications are enabled:
 
@@ -38,7 +38,7 @@ Ensure that operating system notifications are enabled:
 - **Windows:** [Change Notification Settings on Windows](https://support.microsoft.com/en-us/windows/change-notification-settings-in-windows-10-ddcbbcd4-0a02-6584-7a4e-294e1c0e7a46)
 
 
-## 6. Missing Reminder Notifications
+## 6. Handle Missing Reminder Notifications
 
 If you are not receiving reminder notifications, follow these steps to check the configuration of the `Open BOPIS Order Notifications` job in the Job Manager app's Fulfillment category:
 
