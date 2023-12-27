@@ -652,6 +652,8 @@ Description: The server encountered an internal error.
 Handling: Report the issue to the API provider. Retry the request later.
 
 ## References
+```
 - https://www.easypost.com/docs/api#create-a-shipment
 - https://www.easypost.com/docs/api#buy-a-shipment
 - https://www.easypost.com/docs/api#refund-a-shipment
+```
