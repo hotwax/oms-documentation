@@ -16,7 +16,7 @@
   * [Create Users](users/createUser.md)
   * [Manage Users](users/manageUser.md)
 * [BOPIS](bopis/README.md)
-  * [Notifications](bopis/notifications.md)
+  * [Notifications](bopis/appNotifications.md)
 * [Fulfillment](fulfillment/README.md)
   * [Ship Orders](fulfillment/shipOrders.md)
   * [Rejection](fulfillment/rejection.md)
