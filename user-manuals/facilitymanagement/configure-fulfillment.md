@@ -10,6 +10,10 @@ The Fulfillment settings card on the facility details page allows users to quick
 4. **Generate Shipping Labels:** HotWax Commerce enables retailers to integrate with carrier partners so at the time of fulfillment via HotWax Commerce’s Fulfillment app, Shipping labels can be generated for this shipment process. Retailers opting not to integrate HotWax Commerce with the carrier partners and prefer to insert tracking ID in HotWax Commerce to update os Shopify can toggle off the `Generate Shipping Labels` settings.
 5. **Days to Ship:** `Days to` ship are the maximum number of days the facility will take to ship the order post brokering. Enter the days to ship and click on `Update Days To Ship` button to save the configurations for the facility.
 
+
+
+<figure><img src="../.gitbook/assets/Fulfillment Settings.png" alt=""><figcaption><p>Image: Configure Online Fulfillment</p></figcaption></figure>
+
 ### Configure Fulfillment Capacity
 
 Fulfillment capacity is defined based on the number of orders a facility will be able to fulfill in a day. It is set up considering various resources such as facility size, staff, and footfall. Users can set up the maximum order limit that can be allocated to that facility through the \`Online Order Fulfillment' Card. Users can manage the order capacity of the facility by following steps:
@@ -22,6 +26,8 @@ Fulfillment capacity is defined based on the number of orders a facility will be
 
 2. Click on "Apply" to save the capacity. Retailers can view the consumed capacity, out of the added fulfillment capacity in the card.
 
-The ability to configure fulfillment capcity is also available in the `Find facility page` for quick access.
+The ability to configure fulfillment capacity is also available in the `Find facility page` for quick access.
 
 Users can also see the facility order count history by clicking on the View order count history button. This will help them in setting up the capacity based on their previous record.
+
+<figure><img src="../.gitbook/assets/Online Order Fulfillment.png" alt=""><figcaption><p>Image: Configure Fulfillment Capacity</p></figcaption></figure>
