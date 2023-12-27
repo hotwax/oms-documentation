@@ -95,3 +95,70 @@ Head of eCommerce, Head of Stores, Vice President of Retail
 | Pickup Date       | The date when the order is picked up       |
 | Canceled Date     | The date when the order was canceled      |
 | Shipping Method   | The Shipping method by which order is     |
+
+---
+
+### Daily BOPIS Orders
+
+Insider reports that 39% of consumers prefer using BOPIS when placing online orders because they get their orders faster. During their BOPIS journey, customers also expect prompt notifications from the brand on the status of their orders. 
+
+When customers can’t come to the store to pick up their orders, store managers need a detailed report on the unpicked BOPIS orders.  
+
+The Daily BOPIS Orders Report provides cumulative details of all the BOPIS orders of the last 30 days. This Shopify report also shows the status of these BOPIS orders if orders are picked up, canceled, or not picked up. 
+
+With this detailed report, store managers also look for long pending BOPIS orders. These orders keep the inventory blocked which can be used to fulfill other orders. With the knowledge of pending BOPIS orders, merchants can cancel all long-pending orders and use the inventory for new orders. 
+
+The report is essential to improve the BOPIS order fulfillment rate. Again, the fewer the unpicked orders, the better the order fill rate. Additionally, the problem diagnosis with the report helps retailers to clear the challenges in the omnichannel order fulfillment cycle.
+
+#### User
+Head of eCommerce, Head of Stores, Vice President of Retail
+
+**Report Glossary**
+
+| Item              | Item Details                              |
+| ------------------ | ------------------------------------------- |
+| Order ID          | The ID of order in HotWax Commerce          |
+| Shopify ID        | The ID of order in Shopify                 |
+| Import Date       | The date when the order was imported       |
+| Confirm Date      | The date when the order found inventory     |
+| Item Description  | The style, color, size of the item         |
+| UPC/SKU           | The unique product code                   |
+| Customer Name     | The name of the customer                   |
+| Status            | The status of order pick up                |
+| Store             | The store which customer chose            |
+| Brokered Date     | The date when the order is brokered        |
+| Pickup Date       | The date when the order is picked up       |
+| Canceled Date     | The date when the order was canceled      |
+| Shipping Method   | The Shipping method by which order is     |
+
+
+## Customer support
+
+These reports help customer service representatives answer customer questions about their order
+
+### Shipment Tracking Report
+
+Merchants use third-party services to ship orders to customers' addresses. Orders are picked, packed, and handed to third-party logistics (3PL) companies like FedEx and UPS. All shipments dispatched have their unique tracking ID. This tracking ID is provided by the 3PLs and helps customers keep track of their orders. 
+
+Because multiple shipments are sent out daily, merchants require a centralized view of order shipment details. This Shopify report helps merchants quickly identify an order's tracking ID, shipping address, and dispatch location.
+
+The Shipment Tracking Report shows the daily shipment details for each order. Using this report, merchants can quickly resolve questions related to order tracking by finding the tracking ID and the shipping address for the order.
+
+#### User
+Fulfillment team
+
+**Report Glossary**
+
+| Item                 | Item Details                                 |
+| --------------------- | --------------------------------------------- |
+| Order ID              | The ID of Order in Shopify                       |
+| Shipped Date           | The date when order was shipped                 |
+| Fulfillment location code | The code of the fulfillment location          |
+| Tracking Number        | The tracking number of the shipped order       |
+| Customer Address       | The shipping address of the customer           |
+| Carrier                | The shipping carrier who shipped order        |
+| Units                  | The number of units shipped in order           |
+| Revenue                | The revenue generated from the shipped order    |
+
+---
+
