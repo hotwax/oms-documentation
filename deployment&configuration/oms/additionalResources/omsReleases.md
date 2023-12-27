@@ -8,7 +8,7 @@
 2. To find details about SOLR versions, refer to the [SOLR version document]([solr_version_document_link](https://docs.google.com/spreadsheets/d/1H-iEVG-hS9FTsYOf5YiUH-5KOJUcu0_TiPG8aVYjaHU/edit#gid=0))
 {% endhint %}
 
-This document provides details about all OMS releases created after 1 Decemeber 2023.
+This document provides details about all OMS releases created after 15th Decemeber 2023.
 
 ## HotFix
 
