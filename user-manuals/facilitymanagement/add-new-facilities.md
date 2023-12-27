@@ -12,7 +12,7 @@ Only Users with Admin permissions can log in to the `facility management app`.
 4. On the next page, the user will get the option to add the facility address along with the exact geolocation of the facility. This geolocation helps in two ways:
 
 * **Efficient Brokering:** At the time of order brokering, the brokering engine finds the nearest store from the customer’s location for fast delivery and lower shipping costs.
-* **BOPIS Convenience:** Customers can choose their desired pickup locations for their orders by seeing distances to available facilities.
+* **BOPIS Convenience:** Customers can choose the desired pickup locations for their orders by seeing current distances from the available facilities.&#x20;
 
 {% hint style="info" %}
 Retailers can manually add the facility-associated latitude and longitude, or use the `Generate` icon to automatically generate latitude and longitude based on the provided address.
