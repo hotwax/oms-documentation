@@ -107,7 +107,7 @@ The `postage_label` parameter generates labels with specific size and format req
 #### Response:
 
 {% hint style="info" %}
-`EasyPost` consistently structures its responses, maintaining a common format. Unique details specified in each request are appended to this structure, ensuring dynamic adaptability while preserving a standardized response format."
+`EasyPost` consistently structures its responses, maintaining a common format. Unique details specified in each request are appended to this structure, ensuring dynamic adaptability while preserving a standardized response format.
 {% endhint %}
 
 <details>
@@ -321,6 +321,7 @@ https://api.easypost.com/v2/shipments/shp_7383fa71161645259664060fb5c41c32/buy
 
 <details>
 <summary>Sample request</summary>
+
 ```json
 {
     "rate": {
@@ -629,7 +630,6 @@ In this response, HotWax relies on a key field, specifically `refund_status`. Ba
 }
 ```
 </details>
-
 
 These three APIs form the core of the integration, allowing HotWax to seamlessly create shipments, obtain rates, purchase shipping labels, and refund shipments as needed using EasyPost's extensive carrier network. Refer to the respective API documentation for detailed information on request and response parameters.
 
