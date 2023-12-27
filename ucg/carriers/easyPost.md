@@ -635,21 +635,21 @@ These three APIs form the core of the integration, allowing HotWax to seamlessly
 
 ## Error handling
 
-1. Bad Request (HTTP 400)
-Description: The request was malformed or missing required parameters.
-Handling: Check your request parameters and ensure they comply with the API documentation.
+**Bad Request (HTTP 400)**
+- Description: The request was malformed or missing required parameters.
+- Handling: Check your request parameters and ensure they comply with the API documentation.
 
-2. Unauthorized (HTTP 401)
-Description: The request lacks proper authentication credentials or the provided credentials are invalid.
-Handling: Double-check your API key or authentication credentials.
+**Unauthorized (HTTP 401)**
+- Description: The request lacks proper authentication credentials or the provided credentials are invalid.
+- Handling: Double-check your API key or authentication credentials.
 
-3. Not Found (HTTP 404)
-Description: The requested resource could not be found.
-Handling: Review the API endpoint to ensure it is correct.
+**Not Found (HTTP 404)**
+- Description: The requested resource could not be found.
+- Handling: Review the API endpoint to ensure it is correct.
 
-4. Server Error (HTTP 5xx)
-Description: The server encountered an internal error.
-Handling: Report the issue to the API provider. Retry the request later.
+**Server Error (HTTP 5xx)**
+- Description: The server encountered an internal error.
+- Handling: Report the issue to the API provider. Retry the request later.
 
 ## References
 ```
