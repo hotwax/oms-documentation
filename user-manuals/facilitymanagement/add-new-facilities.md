@@ -11,16 +11,18 @@ Only Users with Admin permissions can log in to the `facility management app`.
 3. This will open a `create facility page` where users can add the name of the facility and add internal IDs and external IDs of the facility. Finally, click on the `Create facility` button.
 4. On the next page, the user will get the option to add the facility address along with the exact geolocation of the facility. This geolocation helps in two ways:
 
-* Efficient Brokering: At the time of order brokering, the brokering engine finds the nearest store from the customer’s location for fast delivery and lower shipping costs.
-* BOPIS Convenience: Customers can choose their desired pickup locations for their orders by seeing distances to available facilities.
+* **Efficient Brokering:** At the time of order brokering, the brokering engine finds the nearest store from the customer’s location for fast delivery and lower shipping costs.
+* **BOPIS Convenience:** Customers can choose their desired pickup locations for their orders by seeing distances to available facilities.
 
-Note- Retailers can manually add the facility-associated latitude and longitude, or use the `Generate` icon to automatically generate latitude and longitude based on the provided address.
+{% hint style="info" %}
+Retailers can manually add the facility-associated latitude and longitude, or use the `Generate` icon to automatically generate latitude and longitude based on the provided address.
+{% endhint %}
 
 In the next step, users will get a configurations page from which users can specify the facility-specific configurations. Such as:
 
-* Product Store: Users can specify which product stores are associated with that specific facility i.e. which brands are available for fulfillment from that facility.
-* Sell Inventory Online: Retailers can configure whether the facility’s inventory should be available to sell on an e-commerce platform.
-* Allow Pickup: Users can configure whether the facility has the capacity to manage BOPIS operations.
-* Use Native Fulfillment App: Finally, retailers can specify whether the facility uses HotWax Commerce’s native fulfillment app or third-party fulfillment apps.
+* **Product Store:** Users can specify which product stores are associated with that specific facility i.e. which brands are available for fulfillment from that facility.
+* **Sell Inventory Online:** Retailers can configure whether the facility’s inventory should be available to sell on an e-commerce platform.
+* **Allow Pickup:** Users can configure whether the facility has the capacity to manage BOPIS operations.
+* **Use Native Fulfillment App:** Finally, retailers can specify whether the facility uses HotWax Commerce’s native fulfillment app or third-party fulfillment apps.
 
 Click `Save Configurations` to create the facility with the specified settings. Alternatively, users can choose to add configurations at a later time. Once facilities are added, users can manage and further modify these configurations within the Facility Management App as needed.
