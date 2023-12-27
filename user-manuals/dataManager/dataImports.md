@@ -30,7 +30,7 @@ HotWax Commerce's Master Data Manager application includes a robust feature for 
 - Inventory Reset
 - Sales Order Import
 - Purchase Order Upload
-- Safety Stock Update
+- Safety Stock
 - Order Item Parking Facilities
 - Product Category Association
 - Carrier Postal Code Association
