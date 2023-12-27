@@ -6,6 +6,10 @@ If the user has skipped adding address and latitude & longitude information duri
 2. After filling in the required details, click on the `Save` icon to save the facility address.
 3. Retailers have the option to edit the address by clicking the `edit` button below the address. Remember to save the edits using the `save` icon to update the address.
 
+{% embed url="https://youtu.be/rUmDHUBmBxE" %}
+Video: Add Facility Address
+{% endembed %}
+
 ### Add Latitude & Longitude
 
 1. Click on the `Add` Button in the Latitude & Longitude card on the facility details page. A pop-up menu will appear, allowing users to input latitude and longitude information.
