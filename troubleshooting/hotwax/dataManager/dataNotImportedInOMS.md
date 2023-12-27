@@ -2,10 +2,9 @@
 
 ## Data Not Imported in OMS
 
-### Problem:
 You scheduled a job to import data into OMS, but the imported data is not loaded. This could be due to the job `Process bulk imported files` not being scheduled.
 
-### Steps to Resolve:
+**Steps to Resolve**
 
 1. **Verify Job Status:**
    - Check the status of the job that imports data in bulk. Ensure it is scheduled and completed successfully in the Job Manager app.
@@ -25,10 +24,9 @@ You scheduled a job to import data into OMS, but the imported data is not loaded
 
 ## Data Not Imported in OMS Despite Scheduled Jobs
 
-### Problem:
-Jobs are properly scheduled, but the data import into OMS is still not successful. This generally happens when the imported file has missing or incorrect information.
+All required Jobs are properly scheduled, but the data import into OMS is still not successful. This generally happens when the imported file has missing or incorrect information.
 
-### Steps to Resolve:
+**Steps to Resolve**
 
 1. **Check Data Manager Logs:**
    - Go to Hamburger Menu > MDM > EXIM > Import section.
