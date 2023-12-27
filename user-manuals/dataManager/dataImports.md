@@ -4,13 +4,11 @@ HotWax Commerce's Master Data Manager application includes a robust feature for 
 
 ## Categories
 
- 
    - **Procurement:** Involves importing data related to the procurement process, such as purchase orders and ATP.
    - **Warehouse:** Includes data related to warehouse operations, like inventory and facility locations.
    - **PIM:** Deals with importing product information, including details about products and categories.
    - **Order Management:** Involves importing data related to sales orders and order fulfillment processes.
    - **Miscellaneous:** Covers diverse information that doesn't fit into specific categories.
-
 
 ### How to Import Data in OMS:
 1. Navigate to Hamburger Menu > MDM > EXIM > Import.
