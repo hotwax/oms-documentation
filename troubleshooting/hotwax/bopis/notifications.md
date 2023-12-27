@@ -1,4 +1,4 @@
-# Scenario 1: Not Receiving Notifications
+# Not Receiving Notifications
 
 If you are not receiving BOPIS notifications, consider the following troubleshooting scenarios:
 
@@ -38,7 +38,7 @@ Ensure that operating system notifications are enabled:
 - **Windows:** [Change Notification Settings on Windows](https://support.microsoft.com/en-us/windows/change-notification-settings-in-windows-10-ddcbbcd4-0a02-6584-7a4e-294e1c0e7a46)
 
 
-## Scenario 2:  Not Receiving Reminder Notifications
+# Not Receiving Reminder Notifications
 
 If you are not receiving reminder notifications, follow these steps to check the configuration of the `Open BOPIS Order Notifications` job in the Job Manager app's Fulfillment category:
 
