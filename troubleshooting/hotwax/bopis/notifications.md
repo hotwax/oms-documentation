@@ -1,22 +1,22 @@
-# Troubleshooting: Not Receiving Notifications
+# Scenario 1: Not Receiving Notifications
 
 If you are not receiving BOPIS notifications, consider the following troubleshooting scenarios:
 
-## 1. Check Internet Connection
+## Check Internet Connection
 
 Ensure that your device has a stable internet connection. Notifications rely on an active connection for delivery.
 
-## 2. Verify App settings
+## Verify App settings
 
 Confirm that the BOPIS app has the necessary settings to send notifications. Go to the BOPIS app's settings page, and ensure that notifications are enabled for required topics.
 
-## 3. Confirm System Compatibility
+## Confirm System Compatibility
 
 Verify that OMS instance meets compatibility requirements:
 
 - For BOPIS notifications to work, the instance should be on v.5.2.0. or above
 
-## 4. Review Browser Notification Settings
+## Review Browser Notification Settings
 
 If you are using browser notifications, check the settings for your specific browser:
 
@@ -30,7 +30,7 @@ If you have blocked notifications in your browser, follow these steps to unblock
 - **Chrome:** [Unblock Notifications on Chrome](https://support.google.com/chrome/answer/3220216?co=GENIE.Platform%3DDesktop&hl=en)
 - **Firefox:** [Unblock Notifications on Firefox](https://support.mozilla.org/en-US/kb/push-notifications-firefox)
 
-## 5. Review Operating System Notification Settings
+## Review Operating System Notification Settings
 
 Ensure that operating system notifications are enabled:
 
@@ -38,7 +38,7 @@ Ensure that operating system notifications are enabled:
 - **Windows:** [Change Notification Settings on Windows](https://support.microsoft.com/en-us/windows/change-notification-settings-in-windows-10-ddcbbcd4-0a02-6584-7a4e-294e1c0e7a46)
 
 
-## 6. Handle Missing Reminder Notifications
+## Scenario 2:  Not Receiving Reminder Notifications
 
 If you are not receiving reminder notifications, follow these steps to check the configuration of the `Open BOPIS Order Notifications` job in the Job Manager app's Fulfillment category:
 
