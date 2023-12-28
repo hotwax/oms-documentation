@@ -42,27 +42,26 @@ The header item is the first row of a new order in the brokered order feed. Inst
 - **Position:** 10-10
 
 ## ETA (S-7)
-{% hint style="danger" %}
-New Era has not marked this field as not required. Need to verify if this can be left empty.
-{% endhint %}
 - **Description:** Requested Delivery Date
 - **Position:** 10-10
-- Potential hardcoded value found in mapping sheet: `7/6/2016`
+This field is stored in the orders **Note Attributes** in Shopify and is synced an a seperate *order enrichment* process. It is then store on every order item of the order in the `TBD` field.
+
+Leave empty when not available on order item.
 
 ## ETA (S-9)
-{% hint style="info" %}
-This value is not part of the Shopify order and so it's not saved in the OMS. So instead it defaults to 64 which an assumed average delivery time.
-{% endhint %}
-- **Description:** Delivery Time driven by VAS instruction
+- **Description:** Delivery Time
+Similar to the delivery date field, this is stored in Shopify as a **Note Attribute**. When synced to the OMS it's also saved in the `TBD` field.
 - **Position:** 2-2
 - **OMS Value:** 64 (4pm - 6pm)
-A default option will be selected from here if we don't know where to source this from.
+A default option will be selected from here.
   - 60: 8:00 AM to 12:00 PM
   - 62: 12:00 PM to 2:00 PM
   - 63: 2:00 PM to 4:00 PM
   - 64: 4:00 PM to 6:00 PM
   - 65: 6:00 PM to 8:00 PM
   - 66: 8:00 PM to 9:00 PM
+
+If no value is found, then leave this field empty.
 
 ## PCS (S-10)
 - **Description:** Delivery Quantity
