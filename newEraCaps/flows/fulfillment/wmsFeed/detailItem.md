@@ -6,10 +6,9 @@
 - The Detail Indicator (S-61) field will be fixed at 1 byte and always set to 'D'.
 
 ## S-62: SAP delivery schedule line
-  - The line item sequence ID of the order item from the OMS
-{% hint style="danger" %}
-Can we just use the order line item sequence ID from the OMS?
-{% endhint %}
+- **Length:** 7
+- **Bytes:** 7
+- The line item sequence ID of the order item from the OMS. Padding may need to be added to maintain fixed lenght.
 
 ## S-63 Item No.
 - **Length:** 25
@@ -146,10 +145,11 @@ Note: It is recommended to use the variant barcode value for this field.
 - **Length:** 10
 - **Bytes:** 10
 - **Type:** Date
-- **Description:** Use the hardcoded value `2016/07/06`
+- **Description:** In the sample data provided this is the same as the requested delivery date but in this format: `2016/07/06`
 
-{% hint style="danger" %}
-Not sure about the hardcoded value, need to ask New Era Team
+
+{% hint style="warning" %}
+For now we should copy over the value from S-7
 {% endhint %}
 
 ## S-94: Subtotal of Retail Value (Without VAT)
