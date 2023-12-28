@@ -1,7 +1,6 @@
 # Table of contents
 
 * [Launchpad](launchpad/README.md)
-
 ## Workflow
 * [Job management](job-manager/README.md)
   * [Job details](job-manager/flows/job-details.md)
