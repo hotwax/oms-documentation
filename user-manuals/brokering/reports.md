@@ -5,6 +5,8 @@ These reports are essential for monitoring the brokering of orders to facilities
 ## Brokered Items Report
 View this report to understand which items have been brokered to facilities for fulfillment. Compare this information with new orders received in the OMS to track allocation rates. Any discrepancies between new orders from eCommerce and entries in this report may indicate issues with orders not progressing to fulfillment.
 
+**In the NetSuite context**, the Brokered Items Report is vital for a streamlined fulfillment process. By cross-referencing brokered items with new orders, retailers ensure alignment between NetSuite and eCommerce platforms. Inconsistencies may highlight integration issues, risking order fulfillment disruptions. A misalignment between new orders from eCommerce and entries in this report may indicate that orders are not progressing to fulfillment in NetSuite.
+
 **User:**
 Operations team
 
