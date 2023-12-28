@@ -12,7 +12,7 @@ In the context of NetSuite, this monitoring system becomes particularly benefici
 **User:**
 Operations team
 
-| Field                    | Value                                 |
+| Field                    | Detials                                 |
 |--------------------------|---------------------------------------|
 | Shipment_Id              | The ID of the shipment in external system    |
 | HotWax_Shipment_Id       | The ID of the shipment in HotWax |
