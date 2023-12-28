@@ -12,7 +12,7 @@ Only Users with Admin permissions can log in to the `facility management app`.
 4. On the next page, the user will get the option to add the facility address along with the exact geolocation of the facility. This geolocation helps in two ways:
 
 * **Efficient Brokering:** At the time of order brokering, the brokering engine finds the nearest store from the customer’s location for fast delivery and lower shipping costs.
-* **BOPIS Convenience:** Customers can choose the desired pickup locations for their orders by seeing current distances from the available facilities.&#x20;
+* **BOPIS Convenience:** Retailers can empower their customers with the capability to choose a pickup location or store by identifying the nearest store that has the required product for their order.
 
 {% hint style="info" %}
 Retailers can manually add the facility-associated latitude and longitude, or use the `Generate` icon to automatically generate latitude and longitude based on the provided address.
@@ -23,6 +23,7 @@ In the next step, users will get a configurations page from which users can spec
 * **Product Store:** Users can specify which product stores are associated with that specific facility i.e. which brands are available for fulfillment from that facility.
 * **Sell Inventory Online:** Retailers can configure whether the facility’s inventory should be available to sell on an e-commerce platform.
 * **Allow Pickup:** Retailers can configure whether the store is equipped to handle BOPIS operations.
-* **Use Native Fulfillment App:** Finally, retailers can specify whether the facility uses HotWax Commerce’s native fulfillment app or third-party fulfillment apps.
+* **Use Native Fulfillment App:** Finally, retailers can specify whether the facility uses HotWax Commerce’s native fulfillment app or third-party fulfillment apps. \
+  For Warehouses employing a Warehouse Management System (WMS) for fulfillment, retailers can turn off the toggle, signifying that HotWax's fulfillment app will not be utilised.
 
 Click `Save Configurations` to create the facility with the specified settings. Alternatively, users can choose to add configurations at a later time. Once facilities are added, users can manage and further modify these configurations within the Facility Management App as needed.
