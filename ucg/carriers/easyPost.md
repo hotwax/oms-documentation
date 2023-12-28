@@ -30,7 +30,7 @@ HotWax integrates with EasyPost using three key APIs, each serving a distinct pu
 ### Create a Shipment API
 
 #### Purpose:
-The Create a Shipment API is utilized to share all necessary details of a shipment with EasyPost. This includes shipment information such as package dimensions, weight, origin, and destination. In return, the API fetches rates available from different carriers for shipping the specified package.
+The Create a Shipment API is utilized to share all necessary details of a shipment with EasyPost. This includes shipment information such as package dimensions, weight, origin, and destination. In return, the API fetches rates available from different carriers for shipping the specified package. 
 
 #### Method
 
@@ -109,6 +109,8 @@ The `postage_label` parameter generates labels with specific size and format req
 {% hint style="info" %}
 `EasyPost` consistently structures its responses, maintaining a common format. Unique details specified in each request are appended to this structure, ensuring dynamic adaptability while preserving a standardized response format.
 {% endhint %}
+
+In response, `Easy Post` shares three types of rates, and in our integration, we're utilizing the rates found in the `rate` attribute for rate shopping. For further details about the rates, you can refer to [this](https://www.easypost.com/docs/api#shipments) documentation provided by Easy Post.
 
 <details>
 <summary>Sample response</summary>
