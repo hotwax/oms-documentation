@@ -25,3 +25,10 @@ Payment mapping data-
 
 <ShopifyShopTypeMapping mappedKey="Paidy" mappedTypeId="SHOPIFY_PAYMENT_TYPE" mappedValue="EXT_SHP_PAIDY" shopId="SHOP"/>
 ```
+
+**Actual values from shopify**
+Need to use these in the mapping values
+“shopify sbペイメント sbps”  = Prepaid (Credit Card) (1)
+“代金引換” or “cash on delivery (cod)” = Cash on Delivery (2)
+“amazon” = Amazon Pay (3)
+“paidy” or “ペイディ” = Paidy (4)

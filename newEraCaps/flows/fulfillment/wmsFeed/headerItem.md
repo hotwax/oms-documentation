@@ -71,22 +71,25 @@ If no value is found, then leave this field empty.
 ## S-11 (Missing)
 
 ## BUSINESS TYPE (S-12)
-- **Description:** Wholesale/EC Indicator
+- **Description:** Wholesale/eCommerce Indicator
 - **Position:** 1-1
 - **OMS Value:** 2
   
 <details>
 <summary>Additional Information</summary>
 This field indicates the business type or category of the order.
-- The values are mapped as follows:
-  - 1 = EC(B2B)
-  - 2 = EC(B2C)
-  - 3 = NAV(B2B)
-  - 4 = Transfer Order
+<ul>
+  <li>1 - EC(B2B)</li>
+  <li>2 - EC(B2C)</li>
+  <li>3 - NAV(B2B)</li>
+  <li>4 - Transfer Order</li>
+</ul>
 For Transfer Order, the value will be 4; for other types, the value will be 2.
 Consider using OrderTypeId from OrderHeader, mapping it to:
-  - 2 for SALES_ORDER
-  - 4 for TRANSFER_ORDER.
+<ul>
+  <li>2 - SALES_ORDER</li>
+  <li>4 - TRANSFER_ORDER</li>
+</ul>
 </details>
 
 
@@ -104,9 +107,9 @@ Consider using OrderTypeId from OrderHeader, mapping it to:
 
 
 ## DLV PAYMENT (S-14)
-- **Description:** Payment Type
+- **Description:** Payment Type/Gateway
 - **Position:** 1-1
-- **Example Value:** 1
+- **OMS Value:** 2
 - **Additional Information:**
   - This field represents the type of payment for the order.
   - Numeric values are assigned as follows:
@@ -116,20 +119,20 @@ Consider using OrderTypeId from OrderHeader, mapping it to:
     - 4 = Paidy
   - The payment method of the order is checked, and the value is populated accordingly (1, 2, 3, or 4).
   - The field is associated with the `paymentMethodTypeId` in the `OrderPaymentPreferenceAndType`.
-{% hint style="warning" %}
-There is no default value in case of unexpected payment methods; however, it is not expected to encounter such scenarios frequently.
-{% endhint %}
-{% hint style="danger" %}
-Further clarification may be needed on how to handle orders using gift card payments.
-{% endhint %}
+    - 1 - EXT_SHP_SHPFY_PYMT
+    - 2 - EXT_SHOP_CASH_ON_DEL
+    - 3 - EXT_SHP_AMZN_PAY
+    - 4 - EXT_SHP_ PAIDY
+  - Gift card payments are still processed through Shopify Payments which is will be mapped to `1`
+
 
 {% hint style="warning" %}
-**DLV PAYMENT** fields are for Cash on Delivery orders ONLY.
+**DLV PAYMENT S-15 and S-16** fields are for Cash on Delivery orders ONLY.
 Leave empty for other payment types.
 {% endhint %}
 
 ## DLV PAYMENT (S-15)
-- **Description:** Amount of Payment Including VAT
+- **Description:** Amount of Payment Including VAT (Only Cash on Delivery)
 - **Position:** 19-23
 - **Additional Information:**
   - This field is applicable only for orders with the payment type "Cash on Delivery" (DLV PAYMENT S-14 = 2).
@@ -305,10 +308,6 @@ As of now we expect this to be blank. Need to confirm with New Era.
   - **Note:** The VAT field should indeed include the Item Sales Tax.
 
 - **S-56:** Total Price (JPY) (Length: 20, Bytes: 20)
-{% hint style="danger" %}
-There is alot of logic here that I am not clear on. Need to review with the team.
-{% endhint %}
-
   - **Description:** Total price in Japanese Yen (JPY) for the order item, inclusive of the item unit price, item sales tax, and item discount amounts. Effectivley the order grand total plus the COD Fee if applicable to the order. The order total shoudl come out to the same as S-53
 
 
