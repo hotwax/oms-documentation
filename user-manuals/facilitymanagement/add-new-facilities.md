@@ -6,7 +6,7 @@ Retailers can initiate facility setup in HotWax Commerce using a CSV import. How
 Only Users with Admin permissions can log in to the `facility management app`.
 {% endhint %}
 
-1. Select the `facilities` option on the homepage to view all the existing facilities and the option to create new facilities.
+1. Select the `facilities` option on the homepage to view all the existing facilities.
 2. To create a new facility users need to click on the `+` button at the bottom right corner and then select the type of facility, whether the facility is a Warehouse or Store.
 3. This will open a `create facility page` where users can add the name of the facility and add internal IDs and external IDs of the facility. Finally, click on the `Create facility` button.
 4. On the next page, the user will get the option to add the facility address along with the exact geolocation of the facility. This geolocation helps in two ways:
