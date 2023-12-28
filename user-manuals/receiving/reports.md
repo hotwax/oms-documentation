@@ -3,11 +3,9 @@ Reports designed to meticulously monitor and manage discrepancies arising from f
 
 # Receiving Discrepancy report
 
-**Generic Description:**
-
 Monitor and identify discrepancies at facilities where the actual receipt does not align with the expected shipped amount. This systematic approach allows for a meticulous tracking of fulfilled transfer orders, ensuring that the actual receipt quantities are in sync with the expectations. Facilities reporting higher discrepancies are strategically prioritized, enabling a focused investigation into potential issues. 
 
-**Specific to NetSuite and Benefits:**
+**In case of NetSuite**
 
 In the context of NetSuite, this monitoring system becomes particularly beneficial. By aligning the actual receipt with the expected shipped amount from NetSuite for fulfilled transfer orders, organizations gain a targeted insight into the accuracy of their inventory management. 
 
