@@ -69,3 +69,16 @@ The Canceled Order Report provides a comprehensive tracking mechanism for all or
 | Price           | The monetary value associated with the canceled item      |
 | REASON          | Reason behind the cancellation          |
 | External_Id     | The ID of the order in the external system |
+
+---
+
+## Allocation Pending Report
+
+The Allocation Pending Report displays orders assigned to facilities that currently lack sufficient inventory for immediate fulfillment. Monitoring the orders and items listed in this report is essential for initiating replenishment actions at the store. By doing so, retailers can ensure that inventory levels are maintained adequately, facilitating the successful completion of fulfillment for the identified orders.
+
+| Field            | Description                                        |
+|------------------|----------------------------------------------------|
+| FACILITY_ID      | The identifier of the facility in external systems |
+| FACILITY_NAME    | The name of the facility in external systems       |
+| SKU              | Unique identifier                                  |
+| QUANTITY         | Quantity required of the SKU                       |
