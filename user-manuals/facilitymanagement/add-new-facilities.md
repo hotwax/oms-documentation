@@ -20,10 +20,10 @@ Retailers can manually add the facility-associated latitude and longitude, or us
 
 In the next step, users will get a configurations page from which users can specify the facility-specific configurations. Such as:
 
-* **Product Store:** Users can specify which product stores are associated with that specific facility i.e. which brands are available for fulfillment from that facility.
+* **Product Store:** Retailers can specify which facilities are associated with a particular product store, meaning they can define the facilities available for fulfilling products of a certain brand.
 * **Sell Inventory Online:** Retailers can configure whether the facility’s inventory should be available to sell on an e-commerce platform.
 * **Allow Pickup:** Retailers can configure whether the store is equipped to handle BOPIS operations.
 * **Use Native Fulfillment App:** Finally, retailers can specify whether the facility uses HotWax Commerce’s native fulfillment app or third-party fulfillment apps. \
-  For Warehouses employing a Warehouse Management System (WMS) for fulfillment, retailers can turn off the toggle, signifying that HotWax's fulfillment app will not be utilised.
+  For Warehouses employing a Warehouse Management System (WMS) for fulfillment, retailers can turn off the toggle, signifying that HotWax's fulfillment app is not being utilised.
 
 Click `Save Configurations` to create the facility with the specified settings. Alternatively, users can choose to add configurations at a later time. Once facilities are added, users can manage and further modify these configurations within the Facility Management App as needed.
