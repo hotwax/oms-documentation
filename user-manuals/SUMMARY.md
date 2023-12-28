@@ -36,4 +36,4 @@
 * [Inventory Count](Inventory-count.md)
 * [Data Manager](dataManager/README.md)
   * [Data Imports](dataManager/dataImports.md)
-  * [Data Exports](datamanager/dataExports.md)
+  * [Data Exports](datamanager/data-exports.md)

@@ -22,7 +22,7 @@ In the next step, users will get a configurations page from which users can spec
 
 * **Product Store:** Users can specify which product stores are associated with that specific facility i.e. which brands are available for fulfillment from that facility.
 * **Sell Inventory Online:** Retailers can configure whether the facility’s inventory should be available to sell on an e-commerce platform.
-* **Allow Pickup:** Users can configure whether the facility has the capacity to manage BOPIS operations.
+* **Allow Pickup:** Retailers can configure whether the facility is equipped to handle BOPIS operations.
 * **Use Native Fulfillment App:** Finally, retailers can specify whether the facility uses HotWax Commerce’s native fulfillment app or third-party fulfillment apps.
 
 Click `Save Configurations` to create the facility with the specified settings. Alternatively, users can choose to add configurations at a later time. Once facilities are added, users can manage and further modify these configurations within the Facility Management App as needed.
