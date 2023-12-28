@@ -36,7 +36,9 @@
 * [Receiving](receiving/README.md)
   * [Inventory Receiving](receiving/receiving.md)
   * [Reports](receiving/reports.md)
-* [Inventory Count](Inventory-count.md)
+* [Cycle Counting](inventory-count/README.md)
+  * [Inventory count](inventory-count/inventory-count.md)
+  * [Reports](inventory-count/reports.md)
   
 ## Administration
 * [Users](users/README.md)
