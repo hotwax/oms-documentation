@@ -1,6 +1,6 @@
 # Manage Product Stores
 
-Users managing multiple product stores in HotWax Commerce can mention the facility is associated with which product store. For facilities selling products from multiple product stores, users can specify the `Primary` Product store associated with the facility. Users can add the product store by following steps:
+Users managing multiple product stores in HotWax Commerce can define the facility associated with which product store. For facilities selling products from multiple product stores, users can specify the `Primary` Product store associated with the facility. Users can add the product store by following steps:
 
 1. Click on the `Add` button within the product store card to initiate the process of adding a new product store.
 2. A pop-up menu will appear, presenting a list of available product stores. Choose the relevant product store(s) that you want to associate with the selected facility.

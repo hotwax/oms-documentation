@@ -1,6 +1,6 @@
 # Add Facility Address
 
-If the user has skipped adding address and latitude & longitude information during the facility setup, it can be seamlessly added by following these steps:
+To ensure accurate facility management and fulfillment, it is important for retailers to add address and latitude & longitude information. If the user has skipped adding this information initially, it can be seamlessly added by following these steps:
 
 1. Click on the Add button in the Address card which will open a pop-up menu. Users can add Address Line, City, Country, State and Zip codes.
 2. After filling in the required details, click on the `Save` icon to save the facility address.

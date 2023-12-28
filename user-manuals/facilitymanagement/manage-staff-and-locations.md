@@ -2,7 +2,7 @@
 
 ### Manage facility Staff
 
-This feature allows retailers to efficiently handle facility-specific staff, assigning role-specific permissions for accessing HotWax Commerce and other HotWax Commerce applications. Users can manage facility staff by the following steps:
+Efficiently managing facility-specific staff is facilitated through this feature, enabling retailers to assign role-specific permissions for accessing HotWax Commerce and other associated applications. Users can manage facility staff by the following steps:
 
 **Add Staff Member**
 
@@ -17,7 +17,7 @@ The added staff members will be listed, showcasing:
 * Assigned role
 * Date on which the staff member was added to the facility.
 
-To remove a staff member from the facility, click on the `cross` button located on the right side of each staff member's name within the staff details section.
+To remove an inactive staff member from the facility, click on the `cross` button located on the right side of each staff member's name within the staff details section.
 
 {% embed url="https://youtu.be/JAL_KKJyAyU" %}
 Video: Add Staff
@@ -25,7 +25,7 @@ Video: Add Staff
 
 ### Manage Locations
 
-Users can specify the locations with the facilities such as Aisle, Section, Level or sequence which will help store associates to define an exact place where inventory can be kept when received and where the inventory can be picked from.
+To enable store associates to establish precise locations for receiving and storing inventory, as well as facilitating the picking process, ​​retailers can define specific locations within facilities, such as Aisle, Section, Level, or sequence. Users can manage locations by the following steps:
 
 **Add Locations**
 

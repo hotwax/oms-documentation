@@ -1,6 +1,6 @@
 # Manage Existing facilities
 
-Once the facilities are created, users can manage the facilities within the Facility Management App to ensure accurate online fulfillment.
+After the creation of facilities, retailers need to utilise the Facility Management App to manage facility information. This includes tasks such as renaming facilities or managing external mappings in case of any updations.
 
 ### Locate Facilities
 
@@ -33,7 +33,7 @@ Before configuring any settings, it's crucial to establish a connection between 
 
 ### Rename Facilities
 
-Users can seamlessly rename facilities by clicking on the `Pencil` Icon near the facility's name. this will open a pop-up where users can edit the name and click on `apply` to save the name.
+For any facility name updations made, retailer can seamlessly rename facilities by clicking on the `Pencil` Icon near the facility's name. this will open a pop-up where users can edit the name and click on `apply` to save the name.
 
 {% embed url="https://youtu.be/bO46oT-e1kM" %}
 Video: Rename Facilities
