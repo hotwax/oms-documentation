@@ -27,7 +27,6 @@ The POS Cash Sale Exp Failed Report is a tool for tracking synchronization failu
 
 **In the context of NetSuite,** the POS Cash Sale Exp Failed Report focuses on tracking synchronization failures specifically for POS cash sales exported to NetSuite. By pinpointing instances where synchronization has failed, this report helps in promptly identifying and addressing any discrepancies in POS cash sales data within NetSuite. This level of transparency and quick response is crucial for maintaining accurate financial records and ensuring that NetSuite reflects the most up-to-date information from POS transactions.
 
-```markdown
 | Field          | Description                                |
 |-----------------|--------------------------------------------|
 | ORDER_ID        | The ID of the cash sale order in HotWax Commerce   |
@@ -37,7 +36,7 @@ The POS Cash Sale Exp Failed Report is a tool for tracking synchronization failu
 | DATE            | The date of the cash sale                   |
 | CUSTOMER        | The customer associated with the cash sale order     |
 | SUBSIDIARY      | The subsidiary information for the cash sale    |
-```
+
 
 ## HotWax Order Count Report
 The HotWax Order Count Report offers a daily snapshot of new orders in the Order Management System (OMS), providing a quick reference for monitoring overall order activity and facilitating proactive decision-making.
