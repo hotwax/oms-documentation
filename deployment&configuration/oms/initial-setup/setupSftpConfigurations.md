@@ -6,7 +6,7 @@ Configuring SFTP (Secure File Transfer Protocol) settings is a critical step in 
 Before uploading data, ensure all relevant variables are included.
 {% endhint %}
 
-1. **Access FTP Connection Settings:**
+**Access FTP Connection Settings:**
 
 Locate the following configuration key and input the value: 
    
@@ -17,7 +17,10 @@ Locate the following configuration key and input the value:
 | `systemPropertyId="ftp.server.password"`     | {password}                       |
 | `systemPropertyId="ftp.server.port"`         | {port}                           |
 
-2. **Netsuite-specific Configuration:**
+
+---
+
+**Netsuite-specific Configuration:**
    
 {% hint style="info" %}
 This is essential only when utilizing Netsuite as an ERP; otherwise, it can be omitted.
