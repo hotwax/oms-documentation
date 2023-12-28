@@ -18,6 +18,7 @@
     * [Completed Feed](flows/fulfillment/wmsFeed/completeOrder.md)
 * [Sales Order](flows/salesOrder/README.md)
   * [Omnichannel Orders](flows/salesOrder/omnichannelOrders.md)
+  * [Digital Items](flows/salesOrder/digital-items.md)
   * [Soft Allocation](flows/salesOrder/softAllocationFlow.md)
   * [Note Attributes](flows/salesOrder/noteAttributes.md)
   * [Payment Methods](flows/salesOrder/paymentMethods.md)
