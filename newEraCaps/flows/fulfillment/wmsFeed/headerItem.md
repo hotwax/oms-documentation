@@ -323,12 +323,6 @@ The Shipping Cost field represents the total shipping cost associated with an or
 ### Usage
 The calculation involves the sum of order adjustments where the order adjustment type is SHIPPING_CHARGES, EXT_SHIP_ADJUSTMENT, or SHIPPING_SALES_TAX.
 
-### Special Considerations
-- For click_and_collect_order, the shipping cost is set to 0.
-- The formula for shipping cost preparation is (Shipping charges - shipping discount) * 1.1.
-{% hint style="danger" %}
-The last line in considerations is not clear, what is this calculation supposed to be used for?
-{% endhint %}
 
 **S-58** Not used
 - **Length:** 20
