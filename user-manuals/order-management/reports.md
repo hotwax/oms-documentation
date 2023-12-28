@@ -1,6 +1,7 @@
 # Order Sync Assurance Reports
 
-These reports play a crucial role in ensuring seamless order synchronization across Shopify, HotWax, and NetSuite.
+These reports play a crucial role in ensuring order synchronization across Shopify, HotWax, and NetSuite.
+
 
 ## Missing Order Attribute Report
 
@@ -21,6 +22,7 @@ The Missing Order Attribute Report is a vital tool for tracking order synchroniz
 | NETSUITE_ORDER_EXPORTED | Status if the order has been exported to NetSuite or not |
 | NETSUITE_CUSTOMER_ID    | The customer identifier in NetSuite               |
 
+---
 
 ## POS Cash Sale Exp Failed Report
 The POS Cash Sale Exp Failed Report is a tool for tracking synchronization failures related to Point of Sale (POS) cash sales. This report is instrumental in identifying instances where the synchronization process encountered issues, allowing for a proactive approach to address and resolve these failures. By leveraging this report, organizations can ensure the accuracy and completeness of their POS cash sale data, contributing to a more reliable and efficient sales reporting process.
@@ -38,6 +40,8 @@ The POS Cash Sale Exp Failed Report is a tool for tracking synchronization failu
 | SUBSIDIARY      | The subsidiary information for the cash sale    |
 
 
+---
+
 ## HotWax Order Count Report
 The HotWax Order Count Report offers a daily snapshot of new orders in the Order Management System (OMS), providing a quick reference for monitoring overall order activity and facilitating proactive decision-making.
 
@@ -46,6 +50,9 @@ The HotWax Order Count Report offers a daily snapshot of new orders in the Order
 | Field          | Description                                |
 |-----------------|--------------------------------------------|
 | ORDER_COUNT       | The count of the orders in HotWax Commerce   |
+
+
+---
 
 ## Canceled Order Report
 The Canceled Order Report provides a comprehensive tracking mechanism for all orders that have entered the OMS and subsequently been canceled. This report ensures a systematic record of cancellations, offering visibility into the cancellation process. 
@@ -62,3 +69,16 @@ The Canceled Order Report provides a comprehensive tracking mechanism for all or
 | Price           | The monetary value associated with the canceled item      |
 | REASON          | Reason behind the cancellation          |
 | External_Id     | The ID of the order in the external system |
+
+---
+
+## Allocation Pending Report
+
+The Allocation Pending Report displays orders assigned to facilities that currently lack sufficient inventory for immediate fulfillment. Monitoring the orders and items listed in this report is essential for initiating replenishment actions at the store. By doing so, retailers can ensure that inventory levels are maintained adequately, facilitating the successful completion of fulfillment for the identified orders.
+
+| Field            | Description                                        |
+|------------------|----------------------------------------------------|
+| FACILITY_ID      | The identifier of the facility in external systems |
+| FACILITY_NAME    | The name of the facility in external systems       |
+| SKU              | Unique identifier                                  |
+| QUANTITY         | Quantity required of the SKU                       |
