@@ -110,7 +110,7 @@ The `postage_label` parameter generates labels with specific size and format req
 `EasyPost` consistently structures its responses, maintaining a common format. Unique details specified in each request are appended to this structure, ensuring dynamic adaptability while preserving a standardized response format.
 {% endhint %}
 
-In response, `Easy Post` shares three types of rates, and in our integration, we're utilizing the rates found in the `rate` attribute for rate shopping. For further details about the rates, you can refer to [this](https://www.easypost.com/docs/api#shipments) documentation provided by Easy Post.
+In response, `Easy Post` shares three types of rates, and in our integration, we're utilizing the rates found in the `rate` attribute for rate shopping. For further details about the rates, you can refer to [this](https://www.easypost.com/docs/api#rate-object) documentation provided by Easy Post.
 
 <details>
 <summary>Sample response</summary>
