@@ -2,13 +2,11 @@
 
 The Data Manager Configurations page in the OMS empowers users to effectively manage data flow into and out of OMS. This guide provides step-by-step instructions on adding and editing configurations, as well as integrating SFTP users into the configurations.
 
-## Accessing the Data Manager Configurations Page
+**Accessing the Data Manager Configurations Page**
 
 1. Navigate to the Hamburger menu.
 2. Select `Settings`.
 3. Click on `Data manager configurations`.
-
-## Key Functions:
 
 ### Add a New Configuration
 
