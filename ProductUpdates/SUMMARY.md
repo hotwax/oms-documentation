@@ -1,6 +1,7 @@
 # Table of contents
 
 * [Product Releases- Overview](README.md)
+* [Nov-Dec'23](nov-dec23.md)
 * [October'23](october23/ProductUpdates-October23.md)
   * [Manage order item attributes](october23/manage-order-item-attributes.md)
   * [Map Sales Channels with Order Source](october23/map-sales-channels-with-order-source.md)
