@@ -2,13 +2,11 @@
 
 ## Order Management System
 
-
-
 1. **General: Added a new General Settings Page**
 
 Introduced General Settings page for retailers to set up default company details, manage FTP connections, define date formats, and handle shipping methods along with box sizes.&#x20;
 
-[Read update](https://www.hotwax.co/product-updates/general-settings-page)
+[Read update](added-a-new-general-settings-page.md)
 
 <figure><img src="https://www.hotwax.co/hubfs/Nov-Dec%202023%20PU/General%20Settings.png" alt=""><figcaption><p>General Settings Page</p></figcaption></figure>
 
@@ -18,19 +16,15 @@ Introduced General Settings page for retailers to set up default company details
 
 Introduced a Company Settings page that offers retailers the ability to define the countries where they conduct business and their preferred payment methods.
 
-[Read update](https://www.hotwax.co/product-updates/company-settings-page)
+[Read update](added-a-new-company-settings-page.md)
 
 <figure><img src="https://www.hotwax.co/hubfs/Nov-Dec%202023%20PU/Company%20settings%20Page.png" alt=""><figcaption><p>Company Settings Page</p></figcaption></figure>
-
-
-
-
 
 3. **Shipping Carrier: Added a new Page to Setup Shipping Carriers**
 
 Introduced a new dedicated page for seamless shipping carrier setup within HotWax Commerce to facilitate integration between HotWax Commerce and shipping carriers.&#x20;
 
-[Read update](https://www.hotwax.co/product-updates/setup-shipping-gateway-configurations)
+[Read update](added-a-new-page-to-setup-shipping-carriers.md)
 
 <figure><img src="https://www.hotwax.co/hubfs/Nov-Dec%202023%20PU/Carrier%20Setup%20Page.png" alt=""><figcaption><p>Setup Shipping Carrier Page</p></figcaption></figure>
 
@@ -40,7 +34,7 @@ Introduced a new dedicated page for seamless shipping carrier setup within HotWa
 
 Retailers can now directly manage product associations between Shopify Shops from the View Products page.
 
-[Read update](https://www.hotwax.co/product-updates/manage-shopify-shop-product-associations)
+[Read update](manage-shopify-shop-product-associations.md)
 
 <figure><img src="https://www.hotwax.co/hubfs/Product%20association.png" alt=""><figcaption><p><strong>Manage Shopify Shop Product Associations</strong></p></figcaption></figure>
 
@@ -50,7 +44,7 @@ Retailers can now directly manage product associations between Shopify Shops fro
 
 Introducing the Data Manager Configurations page to facilitate the management of data imports and exports between HotWax Commerce and External Systems such as ERP and eCommerce platforms.
 
-[Read update](https://www.hotwax.co/product-updates/data-manager-configurations-page)
+[Read update](added-a-new-data-manager-configurations-page.md)
 
 <figure><img src="https://www.hotwax.co/hubfs/Nov-Dec%202023%20PU/Data%20Manager%20Configurations.png" alt=""><figcaption><p><strong>Data Manager Configurations Page</strong></p></figcaption></figure>
 
@@ -60,7 +54,7 @@ Introducing the Data Manager Configurations page to facilitate the management of
 
 Retailers can now manage shipment methods of Shopify Shops directly from the View Shopify Shop page.
 
-[Read update](https://www.hotwax.co/product-updates/manage-shopify-shop-shipment-methods)
+[Read update](manage-shopify-shop-shipment-methods.md)
 
 <figure><img src="https://www.hotwax.co/hubfs/Nov-Dec%202023%20PU/Shipping%20Methods.png" alt=""><figcaption><p><strong>Manage Shopify Shop Shipment Methods</strong></p></figcaption></figure>
 
@@ -68,7 +62,7 @@ Retailers can now manage shipment methods of Shopify Shops directly from the Vie
 
 Introducing NetSuite configurations page that allows retailers to establish various mappings such as Payment Methods, Discount Codes, and Shipment Methods between HotWax Commerce and NetSuite without the need for external support.
 
-<figure><img src="https://www.hotwax.co/hs-fs/hubfs/Nov-Dec%202023%20PU/iPad.png?width=1024&#x26;height=773&#x26;name=iPad.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://www.hotwax.co/hs-fs/hubfs/Nov-Dec%202023%20PU/iPad.png?width=1024&#x26;height=773&#x26;name=iPad.png" alt="" width="563"><figcaption></figcaption></figure>
 
 ## Applications
 
@@ -90,7 +84,7 @@ Store associates will now see payment methods when fulfilling orders to identify
 
 The BOPIS Fulfillment App now includes a new feature called "Ship to Store," allowing retailers to offer store pickup at later dates for products that are out-of-stock at the customer’s preferred store.
 
-[Read update](https://www.hotwax.co/product-updates/launched-ship-to-store-feature-in-the-bopis-fulfillment-app)
+[Read update](launched-ship-to-store-feature-in-the-bopis-fulfillment-app.md)
 
 <figure><img src="https://www.hotwax.co/hubfs/Nov-Dec%202023%20PU/Ship%20To%20store.png" alt=""><figcaption><p><strong>Ship to Store feature</strong></p></figcaption></figure>
 
@@ -120,7 +114,7 @@ Store associates can now hide the item with all inventory received or completed.
 
 Pickers can now effortlessly scan QR codes in the Fulfillment app, instantly accessing their respective picklists in the picking app.
 
-[Read update](https://www.hotwax.co/product-updates/scan-qr-code-to-open-picklist)
+[Read update](scan-qr-code-to-open-picklist.md)
 
 <figure><img src="https://www.hotwax.co/hubfs/Nov-Dec%202023%20PU/Scan%20QR.png" alt=""><figcaption><p><strong>Scan QR Code to open Picklist</strong></p></figcaption></figure>
 
@@ -136,13 +130,13 @@ Store associates can now also view shipping label errors on the In Progress orde
 
 
 
-<figure><img src="https://www.hotwax.co/hs-fs/hubfs/Nov-Dec%202023%20PU/Shipping%20Label%20Error.png?width=1024&#x26;height=441&#x26;name=Shipping%20Label%20Error.png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="https://www.hotwax.co/hs-fs/hubfs/Nov-Dec%202023%20PU/Shipping%20Label%20Error.png?width=1024&#x26;height=441&#x26;name=Shipping%20Label%20Error.png" alt="" width="563"><figcaption><p>Shipping Label Error</p></figcaption></figure>
 
 18. **Facility: Launched Facility Management App**
 
 Introducing Facility Management App to streamline the facility creation and management process.
 
-Read update\
-
+[Read update\
+](launched-facility-management-app.md)
 
 <figure><img src="https://www.hotwax.co/hubfs/Facility%20Managment%20App.png" alt=""><figcaption><p><strong>Facility Management App</strong></p></figcaption></figure>
