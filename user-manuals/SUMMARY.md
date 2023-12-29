@@ -20,6 +20,7 @@
 ## Orders
 * [Order management](order-management/README.md)
   * [Reports](order-management/reports.md)
+  * [Soft allocation](order-management/soft-allocations.md)
 * [BOPIS](bopis/README.md)
   * [Notifications](bopis/appNotifications.md)
 * [Fulfillment](fulfillment/README.md)
