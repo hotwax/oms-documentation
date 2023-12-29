@@ -17,6 +17,7 @@
 * [Data Manager](data-manager/README.md)
   * [Data Imports](data-manager/dataImports.md)
   * [Data Exports](data-manager/data-exports.md)
+  * [Data Configurations](data-manager/data-configurations.md)
 
 ## Orders
 
