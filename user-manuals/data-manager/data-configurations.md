@@ -19,17 +19,17 @@ To add a new configuration, follow these steps:
    a. Click the `Add` button on the configurations page.
    b. In the modal that appears, provide the following information:
 
-    | Field               | Description                                         |
-    |---------------------|-----------------------------------------------------|
-    | **Config ID**       | A unique identifier for the configuration.           |
-    | **Description**     | A brief description of the configuration.            |
-    | **Import Service**  | The OMS service or workflow for importing data.     |
-    | **Import Path**     | The path from which the data will be imported.       |
-    | **Export Content ID**| Content ID for exporting data.                       |
-    | **Export Service**  | The OMS service or workflow for exporting data.     |
-    | **Export Path**     | The path to which the data will be exported.         |
-    | **File Name Pattern**| A pattern for naming files.                          |
-    | **Multi-threading** | Y/N configuration for processing multiple files.    |
+| Field               | Description                                         |
+|---------------------|-----------------------------------------------------|
+| **Config ID**       | A unique identifier for the configuration.           |
+| **Description**     | A brief description of the configuration.            |
+| **Import Service**  | The OMS service or workflow for importing data.     |
+| **Import Path**     | The path from which the data will be imported.       |
+| **Export Content ID**| Content ID for exporting data.                       |
+| **Export Service**  | The OMS service or workflow for exporting data.     |
+| **Export Path**     | The path to which the data will be exported.         |
+| **File Name Pattern**| A pattern for naming files.                          |
+| **Multi-threading** | Y/N configuration for processing multiple files.    |
 
     c. Click `Add` again and you will find the newly configurations in the list.       
 
@@ -42,16 +42,16 @@ To edit configurations, follow these steps:
    b. Click the `Edit` button at the end of the search result.
    c. In the modal, configure the following values:
 
-    | Field               | Description                                                 |
-    |---------------------|-------------------------------------------------------------|
-    | **Description**     | Modify the description of the configuration.                |
-    | **Import Service**  | Change the OMS service or workflow for importing data.      |
-    | **Import Path**     | Modify the path from which the data will be imported.        |
-    | **Export Content ID**| Change the content ID for exporting data.                    |
-    | **Export Service**  | Change the OMS service or workflow for exporting data.      |
-    | **Export Path**     | Modify the path to which the data will be exported.          |
-    | **File Name Pattern**| Adjust the pattern for naming files.                         |
-    | **Multi-threading** | Modify the Y/N configuration for processing multiple files.|
+| Field               | Description                                                 |
+|---------------------|-------------------------------------------------------------|
+| **Description**     | Modify the description of the configuration.                |
+| **Import Service**  | Change the OMS service or workflow for importing data.      |
+| **Import Path**     | Modify the path from which the data will be imported.        |
+| **Export Content ID**| Change the content ID for exporting data.                    |
+| **Export Service**  | Change the OMS service or workflow for exporting data.      |
+| **Export Path**     | Modify the path to which the data will be exported.          |
+| **File Name Pattern**| Adjust the pattern for naming files.                         |
+| **Multi-threading** | Modify the Y/N configuration for processing multiple files.|
 
 {% hint style="info" %}
 Config ID can not be changed by default. 
