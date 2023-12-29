@@ -31,6 +31,6 @@
   * [Reports](Flows/SalesOrder/reports.md)
 * [Transfer Orders](Flows/transfer-order/README.md)
   * [Transfer Order](Flows/transfer-order/TransferOrders.md)
-  * [Repors](Flows/transfer-order/reports.md)
+  * [Reports](Flows/transfer-order/reports.md)
 * [Cycle Count](Flows/cycle-count.md)
 * [Purchase Orders](Flows/purchase-orders.md)

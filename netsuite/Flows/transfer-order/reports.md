@@ -1,3 +1,6 @@
+# Transfer Order reports
+Transfer Order reports play a crucial role in monitoring and managing the movement of goods between facilities. Here are two types of Transfer Order reports:
+
 ## Open Transfer Order Shipment Older Than One Day Report
 
 This Open Transfer Order Shipment Older Than One Day report provides a comprehensive overview of transfer orders that have been imported from NetSuite to HotWax but have not yet been received within the last one day. The absence of reception indicates a lapse in communication to complete these orders in NetSuite. This report assists in identifying and addressing transfer orders that require attention for completion in NetSuite, ensuring a timely and accurate synchronization between HotWax and NetSuite systems.
@@ -17,7 +20,7 @@ This Open Transfer Order Shipment Older Than One Day report provides a comprehen
 | Imported_Date          | The date when the transfer order was imported into HotWax |
 
 
-# Transfer Order Shipment Completed Today Report
+## Transfer Order Shipment Completed Today Report
 
 This Transfer Order Shipment Completed Today report provides a comprehensive list of transfer orders that have been received in HotWax and marked as completed.
 
