@@ -1,7 +1,16 @@
 # Table of contents
 
 * [Product Releases- Overview](README.md)
-* [Nov-Dec'23](nov-dec23.md)
+* [Nov-Dec'23](nov-dec23/README.md)
+  * [Added a New General Settings Page](nov-dec23/added-a-new-general-settings-page.md)
+  * [Added a New Company Settings Page](nov-dec23/added-a-new-company-settings-page.md)
+  * [Added a new Page to Setup Shipping Carriers](nov-dec23/added-a-new-page-to-setup-shipping-carriers.md)
+  * [Manage Shopify Shop Product Associations](nov-dec23/manage-shopify-shop-product-associations.md)
+  * [Added a new Data Manager Configurations page](nov-dec23/added-a-new-data-manager-configurations-page.md)
+  * [Manage Shopify Shop Shipment Methods](nov-dec23/manage-shopify-shop-shipment-methods.md)
+  * [Launched Ship to Store feature in the BOPIS Fulfillment App](nov-dec23/launched-ship-to-store-feature-in-the-bopis-fulfillment-app.md)
+  * [Scan QR Code to open Picklist](nov-dec23/scan-qr-code-to-open-picklist.md)
+  * [Launched Facility Management App](nov-dec23/launched-facility-management-app.md)
 * [October'23](october23/ProductUpdates-October23.md)
   * [Manage order item attributes](october23/manage-order-item-attributes.md)
   * [Map Sales Channels with Order Source](october23/map-sales-channels-with-order-source.md)
