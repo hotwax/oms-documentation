@@ -7,9 +7,9 @@ After the creation of facilities, retailers need to utilise the Facility Managem
 Retailers may often seek a particular facility or specific type of facilities. The locate facilities functionality will enable users to effortlessly find their desired facility by navigating to the `Homepage`> `Find Facilities` page to manage the existing facilities. There are two ways to locate the facilities for which users need to manage the configurations:
 
 1. While looking for a specific facility, user can search the facility by name from the `search` functionality on the left.
-2. To narrow down the list of facilities and locate facilities manually, retailers can utilise Product Store and facility Type filters.\
-   For instance, if an organisation has multiple product stores and the retailer aims to access the facility associated with a specific product store, the dropdown menu in the product store filter will present all the product stores. \
-   Similarly, if a retailer is seeking all the outlet stores, they can apply the type filter, select outlet store to obtain the desired facility list.
+2. To narrow down the list of facilities and locate facilities manually, user can utilise Product Store and facility Type filters.\
+   For instance, if an organisation has multiple product stores and the user aims to access the facility associated with a specific product store, the dropdown menu in the product store filter will present all the product stores. \
+   Similarly, if a user is seeking all the outlet stores, they can apply the type filter, select outlet store to obtain the desired facility list.
 
 {% embed url="https://youtu.be/v3AOhHhjZO4" %}
 Video: Locate Facilities
@@ -33,7 +33,7 @@ Before configuring any settings, it's crucial to establish a connection between 
 
 ### Rename Facilities
 
-For any facility name updations made, retailer can seamlessly rename facilities by clicking on the `Pencil` Icon near the facility's name. this will open a pop-up where users can edit the name and click on `apply` to save the name.
+For any facility name updations made, user can seamlessly rename facilities by clicking on the `Pencil` Icon near the facility's name. this will open a pop-up where users can edit the name and click on `apply` to save the name.
 
 {% embed url="https://youtu.be/bO46oT-e1kM" %}
 Video: Rename Facilities

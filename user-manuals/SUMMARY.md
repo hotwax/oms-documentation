@@ -1,8 +1,9 @@
 # Table of contents
 
-* [Launchpad](launchpad/README.md)
+* [Launchpad](README.md)
 
 ## Workflow
+
 * [Job management](job-manager/README.md)
   * [Job details](job-manager/flows/job-details.md)
   * [Job categories](job-manager/flows/job-categories.md)
@@ -16,32 +17,35 @@
 * [Data Manager](data-manager/README.md)
   * [Data Imports](data-manager/dataImports.md)
   * [Data Exports](data-manager/data-exports.md)
-  
+
 ## Orders
-* [Order management](order-management/README.md)
+
+* [Order management](orders/order-management/README.md)
   * [Reports](order-management/reports.md)
   * [Soft allocation](order-management/soft-allocations.md)
 * [BOPIS](bopis/README.md)
   * [Notifications](bopis/appNotifications.md)
-* [Fulfillment](fulfillment/README.md)
+* [Fulfillment](<README (1).md>)
   * [Ship Orders](fulfillment/shipOrders.md)
   * [Rejection](fulfillment/rejection.md)
   * [Picking App](fulfillment/pickingApp.md)
   * [CSV Support](fulfillment/csvSupport.md)
   * [Reports](fulfillment/reports.md)
-* [Brokering](brokering/README.md)
+* [Brokering](orders/brokering/README.md)
   * [Order Routing](brokering/configurableRouting.md)
   * [Reports](brokering/reports.md)
 
 ## Inventory
-* [Receiving](receiving/README.md)
+
+* [Receiving](inventory/receiving/README.md)
   * [Inventory Receiving](receiving/receiving.md)
   * [Reports](receiving/reports.md)
-* [Cycle Counting](inventory-count/README.md)
+* [Cycle Counting](inventory/cycle-counting/README.md)
   * [Inventory count](inventory-count/inventory-count.md)
   * [Reports](inventory-count/reports.md)
-  
+
 ## Administration
+
 * [Users](users/README.md)
   * [Create Users](users/createUser.md)
   * [Manage Users](users/manageUser.md)

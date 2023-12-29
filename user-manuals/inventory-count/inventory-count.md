@@ -1,9 +1,9 @@
-# Inventory Count
+# Inventory count
 
-HotWax Commerce's Inventory Count App streamlines inventory management in stores and warehouses by empowering store associates to seamlessly match physical inventory with system inventory. This intuitive Progressive Web Application (PWA), accessible through browsers or icons on handheld devices, streamlines inventory counting. Store associates can swiftly scan products using mobile phone or tablet cameras, ensuring a precise and efficient counting process. Specific [permissions](users/manageUser.md) are necessary for full utilization of the Inventory Count App. Store associates with `Order Fulfillment` permissions can conduct inventory counts, while store managers with `Order Fulfillment Manager` permissions have the added capability to review counts and log inventory variances.
+HotWax Commerce's Inventory Count App streamlines inventory management in stores and warehouses by empowering store associates to seamlessly match physical inventory with system inventory. This intuitive Progressive Web Application (PWA), accessible through browsers or icons on handheld devices, streamlines inventory counting. Store associates can swiftly scan products using mobile phone or tablet cameras, ensuring a precise and efficient counting process. Specific [permissions](../users/manageUser.md) are necessary for full utilization of the Inventory Count App. Store associates with `Order Fulfillment` permissions can conduct inventory counts, while store managers with `Order Fulfillment Manager` permissions have the added capability to review counts and log inventory variances.
 
 {% hint style="info" %}
-Users can log in to the Inventory Counting App only if they are [associated with a facility](users/manageUser.md#add-facilities).
+Users can log in to the Inventory Counting App only if they are [associated with a facility](../users/manageUser.md#add-facilities).
 {% endhint %}
 
 ## Count Complete Inventory
