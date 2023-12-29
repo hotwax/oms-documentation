@@ -11,28 +11,19 @@ description: >-
 
 Displays the jobs for initial OMS setup to import all products and orders.​
 
-
 **Characteristics**
 
-
-
 **One time Execution**These jobs are executed only once during the initial setup and rarely during instance redeployments.
-
-
 
 **Product and Order Importation**
 
 Facilitate the importation of all products and orders from the eCommerce platform for the initial instance setup.
 
-
-
 **Scheduling Functionality**
 
 Empower users to schedule the import process, enabling them to select the desired execution time.
 
-
-
-<figure><img src="../.gitbook/assets/Screenshot 2023-11-07 at 4.30.14 PM.png" alt=""><figcaption><p>Image: Initial load page</p></figcaption></figure>
+<figure><img src="../../jobManager/.gitbook/assets/Screenshot%202023-11-07%20at%204.30.14%20PM.png" alt=""><figcaption><p>Image: Initial load page</p></figcaption></figure>
 
 ***
 
@@ -59,8 +50,6 @@ Empower users to schedule the import process, enabling them to select the desire
 11. Execute the import process.
 12. Go to Miscellaneous Jobs page.
 13. Initiate the `Process bulk imported files` job.
-
-
 
 {% embed url="https://youtu.be/r41dQJIVcpo" %}
 Video: Initial load
