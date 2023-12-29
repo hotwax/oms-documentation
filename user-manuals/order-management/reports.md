@@ -24,24 +24,6 @@ The Missing Order Attribute Report is a vital tool for tracking order synchroniz
 
 ---
 
-## POS Cash Sale Exp Failed Report
-The POS Cash Sale Exp Failed Report is a tool for tracking synchronization failures related to Point of Sale (POS) cash sales. This report is instrumental in identifying instances where the synchronization process encountered issues, allowing for a proactive approach to address and resolve these failures. By leveraging this report, organizations can ensure the accuracy and completeness of their POS cash sale data, contributing to a more reliable and efficient sales reporting process.
-
-**In the context of NetSuite,** the POS Cash Sale Exp Failed Report focuses on tracking synchronization failures specifically for POS cash sales exported to NetSuite. By pinpointing instances where synchronization has failed, this report helps in promptly identifying and addressing any discrepancies in POS cash sales data within NetSuite. This level of transparency and quick response is crucial for maintaining accurate financial records and ensuring that NetSuite reflects the most up-to-date information from POS transactions.
-
-| Field          | Description                                |
-|-----------------|--------------------------------------------|
-| ORDER_ID        | The ID of the cash sale order in HotWax Commerce   |
-| EXTERNAL_ID     | The ID of the  cash sale order in external systems |
-| SALES_CHANNEL   | The channel through which the sale was made |
-| LOCATION        | The location where the cash sale order was placed       |
-| DATE            | The date of the cash sale                   |
-| CUSTOMER        | The customer associated with the cash sale order     |
-| SUBSIDIARY      | The subsidiary information for the cash sale    |
-
-
----
-
 ## HotWax Order Count Report
 The HotWax Order Count Report offers a daily snapshot of new orders in the Order Management System (OMS), providing a quick reference for monitoring overall order activity and facilitating proactive decision-making.
 

@@ -28,6 +28,7 @@
   * [Sync Customer](flows/orderSync/syncCustomer.md)
   * [Sync Order IDs](flows/orderSync/syncOrderIds.md)
   * [Approve Orders](flows/orderSync/approveOrders.md)
+  * [Reports](flows/orderSync/reports.md)
 * [Allocation & Fulfillment](flows/allocation&fulfillmentSync/README.md)
 * [Transfer Orders](flows/transferOrderSync/README.md)
 * [Purchase Orders](flows/purchaseOrderSync/README.md)
