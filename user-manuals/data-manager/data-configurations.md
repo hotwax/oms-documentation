@@ -10,12 +10,15 @@ The Data Manager Configurations page in the OMS empowers users to effectively ma
 
 ## Key Functions:
 
-### 1. Add a New Configuration:
+### Add a New Configuration
+
+Adding a new data configuration in OMS is essential for customizing data processes to meet specific requirements. It enables users to specify how data is imported and exported, ensuring seamless integration with OMS services. 
 
 To add a new configuration, follow these steps:
 
    a. Click the `Add` button on the configurations page.
    b. In the modal that appears, provide the following information:
+
     | Field               | Description                                         |
     |---------------------|-----------------------------------------------------|
     | **Config ID**       | A unique identifier for the configuration.           |
@@ -27,15 +30,18 @@ To add a new configuration, follow these steps:
     | **Export Path**     | The path to which the data will be exported.         |
     | **File Name Pattern**| A pattern for naming files.                          |
     | **Multi-threading** | Y/N configuration for processing multiple files.    |
+
     c. Click `Add` again and you will find the newly configurations in the list.       
 
-### 2. Edit Configurations:
+### Edit Configurations
 
+Editing an existing Data Manager Configuration is crucial for maintaining adaptability and precision in data workflows within OMS. It allows users to update configurations based on evolving business needs or changing data sources. Whether adjusting import/export paths, modifying file-naming patterns, or updating service workflows, editing configurations ensures the ongoing relevance and effectiveness of data management processes. 
 To edit configurations, follow these steps:
 
    a. Search for the desired configuration by name or ID.
    b. Click the `Edit` button at the end of the search result.
    c. In the modal, configure the following values:
+
     | Field               | Description                                                 |
     |---------------------|-------------------------------------------------------------|
     | **Description**     | Modify the description of the configuration.                |
@@ -51,13 +57,15 @@ To edit configurations, follow these steps:
 Config ID can not be changed by default. 
 {% endhint %}
 
-### 3. Add SFTP User to Config:
+### Add SFTP User to Data Configuration
+
+Adding an SFTP user to a Data Configuration is crucial for bulk SFTP user setup within OMS. This feature streamlines the process of associatin SFTP user with various configurations import paths. By incorporating specific SFTP users into configurations, users can manage and assign appropriate access permissions for different data paths, facilitating a seamless and controlled flow of information. 
 
 This function enables the addition of an SFTP user to configurations. Follow these steps:
 
    a. Select `Add SFTP User to Config`.
    b. Choose the SFTP user configuration path.
-   c. Select the Config ID.
+   c. Select the `FTP Config` and `Config ID`.
    d. Save the configuration.
 
 By following these steps, users can seamlessly manage data configurations within the OMS, ensuring efficient data flow and integration.
