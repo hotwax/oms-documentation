@@ -8,7 +8,7 @@ Flagship will produce a custom experience on the product detail page for store p
 When customers select the store that they want to pick up their product at, Flaship’s custom interface ensures that line item properties are added to the item which the OMS will parse when importing the order from Shopify.
 
 ## Ship from Store
-Shipping products from stores is significantly more expensive for New Era Caps than shipping from their warehouse. However, if an item is not available at the warehouse, New Era Caps still wants to allow customers a choice to pay more and get an item shipped from a nearby store using a product detail page experience developed by Flagship.
+Shipping products from stores is significantly more expensive for New Era Caps than shipping from their warehouse. However, if an item is not available at the warehouse, New Era Caps still wants to allow customers a choice to pay more and get an item shipped from a nearby store using a product detail page experience developed by Flagship. For this experience, the product detail page utilizes HotWax Commerce's `Soft Allocation API`. Refer to this manual for detailed instructions on how soft allocted orders are configured in HotWax.
 
 In addition to covering the additional cost of shipping from store, New Era Caps expects that by showing inventory for products at nearby stores with additional shipping fees but free pickup will encourage customers to simply come into stores for pickup rather than having items shipped to their home.
 
