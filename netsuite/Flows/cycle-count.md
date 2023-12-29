@@ -65,3 +65,6 @@ The automated synchronization of inventory variances from HotWax Commerce to Net
 **Operational Transparency:** With near real-time synchronization, retailers gain insight into inventory variances as they occur, facilitating quicker decision-making and enhanced operational transparency.
 
 This integration not only simplifies the process of managing in-store inventory but also plays a vital role in maintaining consistency across multiple systems, ultimately improving operational efficiency and inventory accuracy in the omnichannel retail environment.
+
+
+HotWax Commerce provides out of the box reports to get an overview of inventory cycle counts, which you can read [here](https://docs.hotwax.co/user-guides/inventory/cycle-counting/reports)
