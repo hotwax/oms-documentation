@@ -187,7 +187,7 @@ The frequency for running this job depends on the frequency of updates to produc
 
 ### Description
 
-The Associate Products with Sub Catalog job, identified by Job ID JOB_UPD_PROD_ASSOC, is designed to associate products in the Order Management System (OMS) with products in a system that is not the product catalog master. This job is crucial for maintaining accurate product associations across different systems.
+The job identified by Job ID `JOB_UPD_PROD_ASSOC` is specifically crafted to link products within a child product catalog (typically a non-master catalog) with those in the master product catalog in OMS. This process is vital for ensuring accurate product associations across multiple Shopify stores utilizing the same product catalog, thereby enhancing consistency in the system.
 
 ### Recommended Frequency
 
