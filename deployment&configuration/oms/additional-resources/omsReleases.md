@@ -1,8 +1,3 @@
----
-description: This document provides details about all OMS releases created after 15th Decemeber 2023.
----
-
-
 # Release Documentation
 
 ## Introduction
