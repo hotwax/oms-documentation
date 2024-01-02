@@ -11,7 +11,7 @@
 
 ## HotFix
 
-{% hint style="Danger" %}
+{% hint style="danger" %}
 Review and execute all Upgrade Steps and Upgrade SQL for each hotfix.
 {% endhint %}
 
