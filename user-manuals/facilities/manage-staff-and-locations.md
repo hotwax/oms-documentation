@@ -1,31 +1,7 @@
-# Manage Staff and locations
+# Manage Locations
 
-### Manage facility Staff
-
-Efficiently managing facility-specific staff is facilitated through this feature, enabling retailers to assign role-specific permissions for accessing HotWax Commerce and other associated applications. Users can manage facility staff by the following steps:
-
-**Add Staff Member**
-
-1. Navigate to the Staff section available at the bottom of the page. Click on `Add Staff Member To Facility` button to open a staff pop-up menu.
-2. In the `search` tab, users can either type the staff member's name and press enter or scroll down the list of staff to find the desired member.
-3. The staff member's name and ID will be displayed, accompanied by a drop-down menu on the right.
-4. Select the staff role from the drop-down menu and click the `save` icon to add the staff member to the facility.
-
-The added staff members will be listed, showcasing:
-
-* Name and ID
-* Assigned role
-* Date on which the staff member was added to the facility.
-
-To remove an inactive staff member from the facility, click on the `cross` button located on the right side of each staff member's name within the staff details section.
-
-{% embed url="https://youtu.be/JAL_KKJyAyU" %}
-Video: Add Staff
-{% endembed %}
-
-### Manage Locations
-
-To enable store associates to establish precise locations for receiving and storing inventory, as well as facilitating the picking process, ​​retailers can define specific locations within facilities, such as Aisle, Section, Level, or sequence. Users can manage locations by the following steps:
+Effective stock management relies on proficient location management.\
+To enable store associates to establish precise locations for managing stock which will ease in receiving and storing inventory, as well as facilitating the picking process, ​​retailers can define specific locations within facilities, such as Aisle, Section, Level, or sequence. Users can manage locations by the following steps:
 
 **Add Locations**
 

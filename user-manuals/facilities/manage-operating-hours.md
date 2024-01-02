@@ -1,6 +1,6 @@
 # Manage Operating Hours
 
-Users need to setup the operating hours of the facilities to show the information in the ecommerce PDP for BOPIS operations so that customers will know at what time they can visit the facility to collect their orders. Furthermore, adding operating hours is also essential to communicate to the shipping carriers about the store's timing.
+It is crucial to display the operating hours of each store on the e-commerce Product Display Page (PDP) to enhance customer experience, especially for Buy Online, Pick Up In Store (BOPIS) orders. Failing to showcase this information may result in customers arriving to collect their orders beyond operating hours, leading to disappointment and potentially increasing the order cancellation rate. Additionally, providing operating hours is vital for communicating with shipping carriers about the store's timing.
 
 1. Users can select the operating hours by clicking on any of the pre-existing calendars in the `Operating Hours` Card. Once the calendar is selected they can click on the `Add Operating hours` button.
 2. Users can also create a custom calendar for the store by following steps:
