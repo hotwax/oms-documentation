@@ -210,4 +210,4 @@ Omssetup:
 {% endtabs %}
 
 
-If you are preparing a new release, use this [template](https://github.com/hotwax/oms-documentation/blob/user-guides/deployment%26configuration/oms/additionalResources/omsReleaseTemplate.md)
+If you are preparing a new release, use this [template](https://github.com/hotwax/oms-documentation/blob/user-guides/deployment%26configuration/oms/additional-resources/omsReleaseTemplate.md)
