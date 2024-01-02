@@ -144,7 +144,34 @@ Manual Upgrade Steps: (v5.1.1)
 
 {% endtabs %}
 
-## Latest Release - v5.1.0
+## Latest Release - v5.2.0 (2nd Jan 2024)
+
+| Information         | Value                                |
+|---------------------|--------------------------------------|
+| Release Version     | [v5.2.0]                             |
+| Release Type        | [Minor]                               |
+| Image Tag           | [v5.2.0]                             |
+| Image URL           | [289432782788.dkr.ecr.us-east-1.amazonaws.com/omscoreimage:omscoreimage-latest] |
+| Diff                | [https://git.hotwax.co/commerce/oms/-/compare/v5.1.0...v5.2.0?from_project_id=161&straight=false] |
+| Changelog           | [https://git.hotwax.co/commerce/oms/-/blob/main/CHANGELOG.md]                  |
+
+{% tabs %}
+
+{% tab title="Upgrade Data" %}
+[Link to Upgrade Data](https://git.hotwax.co/commerce/oms/-/blob/v5.2.0/applications/hwmapps/upgrade/current/UpgradeData.xml?ref_type=tags)
+{% endtab %}
+
+{% tab title="Upgrade SQL" %}
+[Link to Upgrade SQL](https://git.hotwax.co/commerce/oms/-/blob/v5.2.0/applications/hwmapps/upgrade/current/UpgradeSQL.sql?ref_type=tags)
+{% endtab %}
+
+{% tab title="Upgrade Steps" %}
+[Link to Upgrade Steps](https://git.hotwax.co/commerce/oms/-/blob/v5.2.0/applications/hwmapps/upgrade/current/UpgradeSteps.md?ref_type=tags)
+{% endtab %}
+
+{% endtabs %}
+
+## Release - v5.1.0
 
 | Information         | Value                                           |
 |---------------------|-------------------------------------------------|
