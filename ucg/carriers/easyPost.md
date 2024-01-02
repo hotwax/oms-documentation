@@ -64,4 +64,4 @@ Frank and Oak only uses one carrier for each country, Canada and the United Stat
 
 <!-- page links -->
 
-[easyPostDoc](https://docs.hotwax.co/integration-resources/v/carriers/easy-post)
+[easyPostDoc]:https://docs.hotwax.co/integration-resources/v/carriers/easy-post
