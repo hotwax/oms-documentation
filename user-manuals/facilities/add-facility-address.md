@@ -1,6 +1,6 @@
 # Add Facility Address
 
-To ensure accurate facility management and fulfillment, it is important for admin user to add address and latitude & longitude information. If the user has skipped adding this information initially, it can be seamlessly added by following these steps:
+To ensure accurate facility management and fulfillment, it is crucial for the admin user to add address and latitude & longitude information. This foundational data not only facilitates seamless integration with external systems but also plays a vital role in optimizing logistical processes within HotWax Commerce. If the user has skipped adding this information initially, it can be added by following these steps:
 
 1. Click on the Add button in the Address card which will open a pop-up menu. Users can add Address Line, City, Country, State and Zip codes.
 2. After filling in the required details, click on the `Save` icon to save the facility address.

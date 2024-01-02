@@ -8,7 +8,7 @@ Retailers may often seek a particular facility or specific type of facilities. T
 
 1. While looking for a specific facility, user can search the facility by name from the `search` functionality on the left.
 2. To narrow down the list of facilities and locate facilities manually, user can utilise Product Store and facility Type filters.\
-   For instance, if an organisation has multiple product stores and the user aims to access the facility associated with a specific product store, the dropdown menu in the product store filter will present all the product stores. \
+   For instance, if an organisation has multiple product stores and the user aims to access the facility associated with a specific product store, the dropdown menu in the product store filter will present all the product stores.\
    Similarly, if a user is seeking all the outlet stores, they can apply the type filter, select outlet store to obtain the desired facility list.
 
 {% embed url="https://youtu.be/v3AOhHhjZO4" %}
@@ -17,7 +17,7 @@ Video: Locate Facilities
 
 ### Linking Facility with External Systems
 
-Before configuring any settings, it's crucial to establish a connection between the facilities in HotWax Commerce and facilities in the external Systems such as e-commerce platforms, ERP systems, and third-party logistics systems for accurate fulfillment and inventory management. Users can map the HotWax Commerce facilities with external systems by following steps:
+Before configuring any settings, it's crucial to establish a connection between the facilities within HotWax Commerce and external systems like e-commerce platforms, ERP systems, and third-party logistics systems. Each facility in HotWax Commerce manages inventory, and the Available To Promise (ATP) is also controlled by retailers through ERP integration, ensuring accurate fulfillment and inventory management across the system. Users can map the HotWax Commerce facilities with external systems by following steps:
 
 1. **Access Facility Details:** Users can click on the desired facility's name which will be redirected to the facility details page, providing a comprehensive overview of the chosen facility.
 2. **External Mapping:** Scroll down to the `External Mapping` segment located at the bottom of the facility details page.
