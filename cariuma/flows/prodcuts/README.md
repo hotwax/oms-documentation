@@ -2,60 +2,69 @@
 
 Products are first synced from Cin7 to Shopify. HotWax Commerce syncs these products into its system from Shopify. 
 
-Cariuma uses a multi Shopify store configuration for one Product Store. To simplify product sync from Shopify to HotWax, one Shopify store, Cariuma US, is selected as a product data source and other, child, stores are limited to product linking. Products are linked to child catalogs using the primary product identifier set in the Product Store settings, SKUs/UPCs.
+Cariuma uses a multi Shopify store configuration for one Product Store. To simplify product sync from Shopify to HotWax, one Shopify store, `Cariuma US` as `Cariuma` in OMS, is selected as a product data source and other, child stores are limited to product linking. Products are linked to child catalogs using the primary product identifier set in the Product Store settings, SKUs. This process is done by job workflows which can configured from [the Job Manager app](https://docs.hotwax.co/user-guides/workflow/job-manager). 
+
 
 The three child catalog Shopify stores: 
-- Cariuma INT
-- Cariuma EUR
-- Cariuma Gifting
+- Cariuma INT : CI_SHOP
+- Cariuma EUR : CN_SHOP
+- Cariuma Gifting : CG_SHOP
 
 Job to sync products on primary catalog
-```
-Import new products
-Import product updates
-```
+
+
+- [Import new products](https://docs.hotwax.co/user-guides/workflow/job-workflows/products#import-new-products)
+- [Import product updates](https://docs.hotwax.co/user-guides/workflow/job-workflows/products#import-product-updates)
 
 Job to link catalog to child stores
-```
-Associate products with sub catalog
-```
 
-## Maintaining an accurate catalog in multiple catalogs
-
-New products are imported from Cariuma US 
-- **Shopify config:** SHOP
-- **Shop name:** CARIUMA 
+- [Associate products with sub catalog](https://docs.hotwax.co/user-guides/workflow/job-workflows/products#associate-products-with-sub-catalog)
 
 
-All new products are then associated with the three child catalogs using a different job in HotWax Commerce. 
+# How to Maintain an Accurate Catalog in Multiple Catalogs
 
-There are two flows that will ensure accurate product creation in HotWax as well linking to all child stores.
+## Initial Product Creation in Cariuma US Shopify Store:
 
-The first process is fairly automated
+1. **Create Product in Cariuma US Shopify Store:**
+   - Go the `Cariuma US` Shopify store.
+   - Create new products.
 
-1. Create a product in the **Cariuma US** Shopify store first.
-2. Wait for at least 15 minutes to automatically sync the new product in HotWax Commerce.
+2. **Automatic Sync with HotWax Commerce:**
+   - Wait for at least 15 minutes for the automatic sync with HotWax Commerce.
+   - Product details should be automatically imported into HotWax Commerce.
 
-```
-Import new products
-```
-3. Create products in other Shopify stores. Once the product from the master catalog is synced in HotWax Commerce, the product will be associated with the child catalogs.
-```
-Associate products with sub catalog
-```
+3. **Manual Sync (if needed):**
+   - If immediate sync is required, go to the Job Manager App.
+   - Switch to the `CARIUMA` shop in the quick switcher.
+   - Navigate to Products page > Sync section and run the `Import products` job by clicking the `Run now` button.
 
-The second flow allows users to take manual control over the process
-
-1. Create the product in the **Cariuma US** Shopify store.
-2. Login to the Job Manager app and select the **Cariuma US** Shopify from the quick switcher in the botom left corner
-3. In the Products job page,  select the **Import Products** job and click `Run Now`
-4. Verify that the product has been created in the OMS
+4. **Verify Product Import:**
+   - Go to the Catalog page in the Pre-order app.
+   - Search for the product by its SKU.
+   - Open the details page and check the Shop listing status for `Cariuma` with the value `No listing data`.
 
 {% hint style="success" %}
-You can now create the synced products in the child Shopify stores.
+Products are successfully imported in OMS for `Cariuma` store. 
 {% endhint %}
 
-After creating products in the child stores, sync them to the OMS
-```
-Associate products with sub catalog
-```
+## Product Association with Child Catalogs:
+
+5. **Create Products in Other Shopify Stores:**
+   - After the product sync in HotWax Commerce for `Cariuma` store, create products in other Shopify stores and they will be automatically associated in OMS with other Shopify stores. 
+
+6. **Manual Association (if needed):**
+   - Once the product from the master catalog is in HotWax Commerce, associate it with child catalogs using the `Associate products with sub-catalog` job.
+   - In the Job Manager app, switch to the child Shopify store.
+   - Navigate to the Products job page and run the `Associate products with sub-catalog` job.
+
+7. **Verify Association:**
+   - In the Catalog page of the Pre-order app, search for the product by SKU.
+   - Open the details page and verify that the shop other than `Cariuma US` shows with the value `No listing data`, indicating a successful linkage.
+   - Check that the product has been associated with the master catalog.
+   - You can now create synced products in the child Shopify stores.
+
+## Cautionary Note:
+
+8. **Avoid Unwanted Job Execution:**
+   - **Do not schedule or run `Import products` and `Import Product updates` jobs for child catalogs.** Scheduling these jobs for child catalogs can lead to catalog management issues.
+  
