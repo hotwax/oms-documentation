@@ -32,7 +32,7 @@ To create a user in the HotWax Order Management System, follow these steps:
 Before entering any details, toggle the “Facility user” switch if you are creating a common facility login for fulfilling. The user creation form dynamically adjusts based on your selection.
 {% endhint %}
 
-4. If creating an individual user, provide the following details:
+4. If you're creating an individual user, provide the following details:
    - First Name
    - Last Name
    - Employee ID
@@ -41,7 +41,7 @@ Before entering any details, toggle the “Facility user” switch if you are cr
 
 5. If you’re creating a facility login, provide the following details:
    - Select a Facility from the list
-   - The username will be pre-filled automatically, but you can change this if you’d like.
+   - The username will be pre-filled automatically, but you can change this if you’d like
    - Reset Password Email
    - Facility Contact Number
 
@@ -61,13 +61,13 @@ Quick setup provides defined templates that autofill information and speed up th
 
 Manual setup allows manual control over creating a user. Follow these steps:
 
-1. **Add Credentials for the User:**
+1. **Add Credentials for the User:** Add username and password.
    
-2. **Verify and Update Contact Information:**
+2. **Verify and Update Contact Information:** Enter contact details of the user. 
    
-3. **Manage User Permissions:**
-   - Give clearances in OMS specific to the user role.
+3. **Manage User Permissions:** Give clearances in OMS specific to the user role.
 
-4. **Associate Facilities for a User in a Fulfillment Role:**
-   
-5. **Add Them to Brands for Merchandise Management:**
+4. **Add Them to Brands for Merchandise Management:** Add user to specific product store. 
+
+5. **Associate Facilities for a User in a Fulfillment Role:** Add user to facilities and assign them fulfillment role.
+
