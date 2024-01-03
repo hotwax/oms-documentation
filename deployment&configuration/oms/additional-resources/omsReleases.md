@@ -12,9 +12,9 @@
 
 | Information         | Value                                |
 |---------------------|--------------------------------------|
-| Release Version     | [v5.2.0]                             |
-| Release Type        | [Minor]                               |
-| Image Tag           | [v5.2.0]                             |
+| Release Version     | v5.2.0                           |
+| Release Type        | Minor                             |
+| Image Tag           | v5.2.0                          |
 | Image URL           | `289432782788.dkr.ecr.us-east-1.amazonaws.com/omscoreimage:omscoreimage-latest` |
 | Diff                | [Link to diff](https://git.hotwax.co/commerce/oms/-/compare/v5.1.0...v5.2.0?from_project_id=161&straight=false) |
 | Changelog           | [Link to changelog](https://git.hotwax.co/commerce/oms/-/blob/main/CHANGELOG.md)                  |
