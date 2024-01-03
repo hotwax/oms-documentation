@@ -35,7 +35,6 @@
 
 {% endtabs %}
 
-
 ## Previous Release - v5.1.0
 
 | Information         | Value                                           |
