@@ -1,10 +1,10 @@
 # Data Imports
 
-HotWax Commerce's Master Data Manager application includes a robust feature for importing data into the Order Management System (OMS). This data import functionality allows users to efficiently add, modify, and audit information in bulk, providing a streamlined process for handling various categories of data within the OMS. The Data Import feature in OMS allows users to create and update records in bulk, saving time compared to manual input. The interface also provides real-time updates on the processing status and allows users to download any failed records or errors encountered during the update.
+HotWax Commerce's Master Data Manager application includes a robust feature for importing data into the Order Management System (OMS). This data import functionality allows users to efficiently add, modify, and audit information in bulk, providing a streamlined process for handling various categories of data within the OMS. The interface also provides real-time updates on the processing status and allows users to download any failed records or errors encountered during the update.
 
 ## Categories
 
-   - **Procurement:** Involves importing data related to the procurement process, such as purchase orders and ATP.
+   - **Procurement:** Involves data related to the procurement process, such as purchase orders and ATP.
    - **Warehouse:** Includes data related to warehouse operations, like inventory and facility locations.
    - **PIM:** Deals with importing product information, including details about products and categories.
    - **Order Management:** Involves importing data related to sales orders and order fulfillment processes.
@@ -12,7 +12,7 @@ HotWax Commerce's Master Data Manager application includes a robust feature for 
 
 ## Importing Data in OMS:
 
-To import data into the Order Management System (OMS), follow these simple steps:
+To import data into the Order Management System manually, follow these steps:
 
 1. Navigate to the Hamburger Menu.
 2. Go to MDM (Master Data Management) > EXIM (Data Import/Export) > Import.
@@ -21,21 +21,15 @@ To import data into the Order Management System (OMS), follow these simple steps
 5. Input the necessary details into the downloaded CSV template.
 6. Save the file with the entered information.
 7. Return to the Import section.
-8. Click on Choose File to select the saved CSV file containing your data.
-9. Complete the process by clicking `Upload.`
+8. Click on `Choose File` to select the saved CSV file containing your data.
+9. Submit the file for processing by clicking `Upload.`
 10. The system will initiate the import, processing the provided data according to the chosen import topic.
 
-## Data Manager Logs:
+### Data Manager Logs:
 
-Data manager logs are crucial for verifying the status of imported data, ensuring accuracy and completeness in the OMS. By providing a transparent overview, Data Manager Logs play a key role in maintaining data integrity and facilitating effective data management processes.
+Data manager logs help verify the status of imported data, ensuring accuracy and completeness of data imported into the OMS.
 
-To access Data Manager Logs and verify the status of imported data in the OMS, follow these steps:
-
-1. Go to the Hamburger Menu.
-2. Select MDM (Master Data Management) > EXIM (Data Import/Export) > Import.
-3. Click on the specific menu you want to review, corresponding to the imported data.
-4. Below the importing files section, you'll find detailed results in the EXIM Result Section.
-5. Utilize these logs to verify the status of the imported data, ensuring accuracy and completeness.
+Logs are located at below the import function on all Data Manager detail page.
 
 **In the result section, you will see following columns**
 
@@ -58,14 +52,14 @@ Understand the different status types in the data logs:
 | Status   | Description                               |
 |----------|-------------------------------------------|
 | Pending  | Transaction is yet to be initiated.       |
-| Running  | Download or Upload is getting processed.  |
+| Running  | Download or Import is getting processed.  |
 | Finished | Transaction success.                      |
 | Failed   | Transaction has failed.                   |
 
 
 **File Upload Failed:**
 
-This situation typically occurs when the file format does not align with the required CSV format. To resolve this, consider converting the file to CSV format before attempting to upload it again.
+This typically occurs when the file format does not align with the required CSV format. To resolve this, consider converting the file to CSV format before attempting to upload it again.
 
 
 **File upload is partailly failed**
