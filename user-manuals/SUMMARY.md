@@ -15,9 +15,9 @@
   * [Inventory](job-workflows/inventory.md)
   * [Products](job-workflows/products.md)
 * [Data Manager](data-manager/README.md)
-  * [Data Imports](data-manager/imports.md)
-  * [Data Exports](data-manager/exports.md)
-  * [Data Configurations](data-manager/configurations.md)
+  * [Configurations](data-manager/configurations.md)
+  * [Imports](data-manager/imports.md)
+  
 
 ## Orders
 
