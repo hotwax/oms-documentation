@@ -15,9 +15,9 @@
 | Release Version     | [v5.2.0]                             |
 | Release Type        | [Minor]                               |
 | Image Tag           | [v5.2.0]                             |
-| Image URL           | [289432782788.dkr.ecr.us-east-1.amazonaws.com/omscoreimage:omscoreimage-latest] |
-| Diff                | [https://git.hotwax.co/commerce/oms/-/compare/v5.1.0...v5.2.0?from_project_id=161&straight=false] |
-| Changelog           | [https://git.hotwax.co/commerce/oms/-/blob/main/CHANGELOG.md]                  |
+| Image URL           | `289432782788.dkr.ecr.us-east-1.amazonaws.com/omscoreimage:omscoreimage-latest` |
+| Diff                | [Link to diff](https://git.hotwax.co/commerce/oms/-/compare/v5.1.0...v5.2.0?from_project_id=161&straight=false) |
+| Changelog           | [Link to changelog](https://git.hotwax.co/commerce/oms/-/blob/main/CHANGELOG.md)                  |
 
 {% tabs %}
 
@@ -173,7 +173,7 @@ Manual Upgrade Steps: (v5.1.1)
 
 
 
-## Release - v5.1.0
+## Previous Release - v5.1.0
 
 | Information         | Value                                           |
 |---------------------|-------------------------------------------------|
@@ -196,44 +196,6 @@ Manual Upgrade Steps: (v5.1.1)
 
 {% tab title="Upgrade Steps" %}
 [Link to Upgrade Steps](https://git.hotwax.co/commerce/oms/-/blob/v5.1.0/applications/hwmapps/upgrade/current/UpgradeSteps.md?ref_type=tags)
-{% endtab %}
-
-{% endtabs %}
-
-## Old Release - v5.0.0
-
-| Information         | Value                                           |
-|---------------------|-------------------------------------------------|
-| Release Version     | v5.0.0                                          |
-| Release Type        | Minor                                           |
-| Image Tag           | v5.0.0                                          |
-| Image URL           | [Old Image URL]                                 |
-| Diff                | [Link to Diff](https://git.hotwax.co/commerce/oms/-/compare/v4.0.0...v5.0.0?from_project_id=161&straight=false) |
-| Changelog           | [Link to Changelog](https://git.hotwax.co/commerce/oms/-/blob/main/CHANGELOG.md) |
-
-
-{% tabs %}
-
-{% tab title="Upgrade Data" %}
-OMS:
-[Link to Upgrade Data](https://git.hotwax.co/commerce/oms/-/blob/v5.0.0/applications/hwmapps/upgrade/current/UpgradeData.xml?ref_type=tags)
-
-Omssetup:
-[Link to Upgrade Data](https://git.hotwax.co/tools/omssetup/-/blob/v5.0.0/upgrade/current/UpgradeData.xml?ref_type=tags)
-{% endtab %}
-
-{% tab title="Upgrade SQL" %}
-[Link to Upgrade SQL](https://git.hotwax.co/commerce/oms/-/blob/v5.0.0/applications/hwmapps/upgrade/current/UpgradeSQL.sql?ref_type=tags)
-
-Omssetup:
-[Link to Upgrade SQL](https://git.hotwax.co/tools/omssetup/-/blob/v5.0.0/upgrade/current/UpgradeSQL.sql?ref_type=tags)
-{% endtab %}
-
-{% tab title="Upgrade Steps" %}
-[Link to Upgrade Steps](https://git.hotwax.co/commerce/oms/-/blob/v5.0.0/applications/hwmapps/upgrade/current/UpgradeSteps.md?ref_type=tags)
-
-Omssetup:
-[Link to Upgrade Steps](https://git.hotwax.co/tools/omssetup/-/blob/v5.0.0/upgrade/current/UpgradeSteps.md?ref_type=tags)
 {% endtab %}
 
 {% endtabs %}
