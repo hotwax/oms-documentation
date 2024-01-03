@@ -1,6 +1,6 @@
 # Add New Facilities
 
-The process of adding a new facility involves the following steps: Navigate to the `Facilities app` in the `Launchpad` and login to access the app.
+The process of adding a new facility involves the following steps: Navigate to the `Facilities App` in the `Launchpad` and login to access the app.
 
 {% hint style="info" %}
 Only Users with Admin permissions can log in to the `Facilities app`. Users in Administration security group have admin permissions.
