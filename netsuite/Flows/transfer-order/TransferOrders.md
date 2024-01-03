@@ -28,12 +28,6 @@ Generate Fulfilled Transfer Order file:
 HC_generateCSV_FulfilledTransferOrders
 ```
 
-*Deprecated* Move Fulfilled Transfer Order file to SFTP:
-```
-HC_uploadCSV_FulfilledTransferOrders
-```
-
-
 ### Import Transfer Orders into HotWax Commerce
 In HotWax Commerce, a dedicated job monitors the SFTP location, regularly checking for new Transfer Order CSV files. This job utilizes the powerful APIs provided by HotWax Commerce's Export/Import tools to import these Transfer Orders.
 
