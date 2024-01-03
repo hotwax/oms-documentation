@@ -39,7 +39,7 @@ FTP Configuration
 
 
 {% hint style="success" %}
-    Transfer orders are now available to receive in the HotWax Receiving application.
+Transfer orders are now available to receive in the HotWax Receiving application.
 {% endhint %}
 
 ## Export received transfer order from HotWax
