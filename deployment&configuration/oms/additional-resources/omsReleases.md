@@ -12,9 +12,9 @@
 
 | Information         | Value                                |
 |---------------------|--------------------------------------|
-| Release Version     | [v5.2.0]                             |
-| Release Type        | [Minor]                               |
-| Image Tag           | [v5.2.0]                             |
+| Release Version     | v5.2.0                           |
+| Release Type        | Minor                             |
+| Image Tag           | v5.2.0                          |
 | Image URL           | `289432782788.dkr.ecr.us-east-1.amazonaws.com/omscoreimage:omscoreimage-latest` |
 | Diff                | [Link to diff](https://git.hotwax.co/commerce/oms/-/compare/v5.1.0...v5.2.0?from_project_id=161&straight=false) |
 | Changelog           | [Link to changelog](https://git.hotwax.co/commerce/oms/-/blob/main/CHANGELOG.md)                  |
@@ -34,144 +34,6 @@
 {% endtab %}
 
 {% endtabs %}
-
-
-## HotFix
-
-{% hint style="danger" %}
-Review and execute all Upgrade Steps and Upgrade SQL for each hotfix.
-{% endhint %}
-
-#### Hotfix - v5.1.5 (20th Dec)
-
-| Information         | Value                                           |
-|---------------------|-------------------------------------------------|
-| Release Version     | v5.1.5                                          |
-| Release Type        | Hotfix                                          |
-| Image Tag           | v5.1.5                                          |
-| Image URL           | (your_hotfix_image_url_for_v5.1.5)              |
-| Diff                | [Link to Diff](https://git.hotwax.co/commerce/oms/-/compare/v5.1.3...v5.1.5?from_project_id=161&straight=false) |
-| Changelog           | [Link to Changelog](your_hotfix_changelog_link) |
-
-{% tabs %}
-
-{% tab title="Upgrade Data" %}
-No upgrade data required
-{% endtab %}
-
-{% tab title="Upgrade SQL" %}
-No upgrade SQL required
-{% endtab %}
-
-{% tab title="Upgrade Steps" %}
-No upgrade steps required
-{% endtab %}
-
-{% endtabs %}
-
-#### Hotfix - v5.1.3 (18th Dec)
-
-| Information         | Value                                           |
-|---------------------|-------------------------------------------------|
-| Release Version     | v5.1.3                                          |
-| Release Type        | Hotfix                                          |
-| Image Tag           | v5.1.3                                          |
-| Image URL           | (your_hotfix_image_url_for_v5.1.3)              |
-| Diff                | [Link to Diff](https://git.hotwax.co/commerce/oms/-/compare/v5.1.2...v5.1.3?from_project_id=161&straight=false) |
-| Changelog           | Security fixes backported from OFBiz            |
-
-{% tabs %}
-
-{% tab title="Upgrade Data" %}
-No upgrade data required
-{% endtab %}
-
-{% tab title="Upgrade SQL" %}
-No upgrade SQL required
-{% endtab %}
-
-{% tab title="Upgrade Steps" %}
-No upgrade steps required
-{% endtab %}
-
-{% endtabs %}
-
-#### Hotfix - v5.1.2 (15th Dec)
-
-| Information         | Value                                           |
-|---------------------|-------------------------------------------------|
-| Release Version     | v5.1.2                                          |
-| Release Type        | Hotfix                                          |
-| Image Tag           | v5.1.2                                          |
-| Image URL           | (your_hotfix_image_url_for_v5.1.2)              |
-| Diff                | Security fixes on username and password         |
-
-{% tabs %}
-
-{% tab title="Upgrade Data" %}
-No upgrade data required
-{% endtab %}
-
-{% tab title="Upgrade SQL" %}
-No upgrade SQL required
-{% endtab %}
-
-{% tab title="Upgrade Steps" %}
-No upgrade steps required
-{% endtab %}
-
-{% endtabs %}
-
-#### Hotfix - v5.1.1 (14th Dec)
-
-| Information         | Value                                           |
-|---------------------|-------------------------------------------------|
-| Release Version     | v5.1.1                                          |
-| Release Type        | Hotfix                                          |
-| Image Tag           | v5.1.1                                          |
-| Image URL           | (your_hotfix_image_url_for_v5.1.1)              |
-| Changes             | Solr boosting, Order Note, customer data setup changes for phone and email |
-| Diff                | [Link to Diff](https://git.hotwax.co/commerce/oms/-/compare/v5.1.0...v5.1.1?from_project_id=161&straight=false) |
-
-{% tabs %}
-
-{% tab title="Upgrade Data" %}
-<CommunicationEventType communicationEventTypeId="ORDER_COMMUNICATION" description="Order Communications" hasTable="N"/>
-<CommunicationEventType communicationEventTypeId="ORDER_NOTE" parentTypeId="ORDER_COMMUNICATION" description="Order Note" hasTable="N" contactMechTypeId="INTERNAL_PARTYID"/>
-{% endtab %}
-
-{% tab title="Upgrade SQL" %}
-Manual Upgrade SQL: (v5.1.1)
-[Link to Upgrade SQL](manual_upgrade_sql_link)
-{% endtab %}
-
-{% tab title="Upgrade Steps" %}
-Manual Upgrade Steps: (v5.1.1)
-
-**Action Required: Update Runtime Data for Communication Event Purge Job**
-
-1. **Job Verification:**
-   Ensure that you are actively engaged in purging communicationEvent data on the instance before proceeding with the update.
-
-2. **New Communication Event Type:**
-   A new communication event type has been established for creating order notes.
-
-3. **Job Details:**
-   - **Service Name:** purgeOrderCommunicationEvent
-   - **Service ID:** PRG_COMM_EVNT
-
-4. **Runtime Data Update:**
-   Add the following Communication Event Type ID for purging order notes:
-   - **Communication Event Type ID:** ORDER_NOTE
-
-5. **Important Note:**
-   Do not remove any existing Communication Event Type IDs from the runtime data. Simply append the new Communication Event Type ID without affecting the current configurations.
-
-{% endtab %}
-
-{% endtabs %}
-
-
 
 ## Previous Release - v5.1.0
 

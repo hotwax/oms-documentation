@@ -17,14 +17,14 @@
    ```markdown
    | Placeholder              | Actual Value                                      |
    |--------------------------|---------------------------------------------------|
-   | Hotfix Image URL         | [Actual Hotfix Image URL]                         |
-   | Link to Diff             | [Actual Diff Link]                                |
-   | Link to Changelog        | [Actual Changelog Link]                           |
-   | Latest Image URL         | [Actual Latest Image URL]                         |
-   | Link to Upgrade Data     | [Actual Upgrade Data Link]                        |
-   | Link to Upgrade SQL      | [Actual Upgrade SQL Link]                         |
-   | Link to Upgrade Steps    | [Actual Upgrade Steps Link]                       |
-   | ... and others           | [Actual Value]                                    |
+   | Hotfix Image URL         | Actual Hotfix Image URL                       |
+   | Link to Diff             | Actual Diff Link                                |
+   | Link to Changelog        | Actual Changelog Link                           |
+   | Latest Image URL         | Actual Latest Image URL                         |
+   | Link to Upgrade Data     | Actual Upgrade Data Link                       |
+   | Link to Upgrade SQL      | Actual Upgrade SQL Link                        |
+   | Link to Upgrade Steps    | Actual Upgrade Steps Link                    |
+   | ... and others           | Actual Value                                    |
    ```
 
 4. **Paste the table:**
@@ -51,16 +51,14 @@ This approach helps maintain a structured document with the necessary informatio
 Review and execute all Upgrade Steps and Upgrade SQL for each hotfix.
 {% endhint %}
 
-***Release Information***
-
 | Information         | Value                                |
 |---------------------|--------------------------------------|
-| Release Version     | [Hotfix Version]                     |
+| Release Version     | Hotfix Version                     |
 | Release Type        | Hotfix                               |
-| Image Tag           | [Hotfix Image Tag]                   |
-| Image URL           | [Hotfix Image URL]                   |
-| Diff                | [Link to Diff]                       |
-| Changelog           | [Link to Changelog]                  |
+| Image Tag           | Hotfix Image Tag                  |
+| Image URL           | Hotfix Image URL                   |
+| Diff                | (Link to diff)[Link to Diff]                       |
+| Changelog           | (Link to changelog)[Link to Changelog]                  |
 
 {% tabs %}
 
@@ -88,8 +86,8 @@ Review and execute all Upgrade Steps and Upgrade SQL for each hotfix.
 | Release Type        | [Release Type]                       |
 | Image Tag           | [Latest Image Tag]                   |
 | Image URL           | [Latest Image URL]                   |
-| Diff                | [Link to Diff]                       |
-| Changelog           | [Link to Changelog]                  |
+| Diff                |  (Link to diff)[Link to Diff]                       |
+| Changelog           | (Link to changelog)[Link to Changelog]                 |
 
 {% tabs %}
 
@@ -117,8 +115,8 @@ Review and execute all Upgrade Steps and Upgrade SQL for each hotfix.
 | Release Type        | [Old Release Type]                   |
 | Image Tag           | [Old Image Tag]                      |
 | Image URL           | [Old Image URL]                      |
-| Diff                | [Link to Diff]                       |
-| Changelog           | [Link to Changelog]                  |
+| Diff                | (Link to diff)[Link to Diff]                       |
+| Changelog           | (Link to changelog)[Link to Changelog]                   |
 
 {% tabs %}
 
