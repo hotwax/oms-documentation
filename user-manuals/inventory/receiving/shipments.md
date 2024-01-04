@@ -29,7 +29,7 @@ Video: Search shipments
 
 **b. Load More Shipments**
 
-The user can view extended shipments lists by scrolling down and loading more shipments.
+The user can view extended shipments lists by scrolling down and loading more shipments by clicking on the `Load More Shipments` button.
 
 {% embed url="https://youtu.be/nUdae2KgrqY" %}
 Video: Load more shipments
