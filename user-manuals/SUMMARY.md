@@ -17,7 +17,6 @@
 * [Data Manager](data-manager/README.md)
   * [Configurations](data-manager/configurations.md)
   * [Imports](data-manager/imports.md)
-  
 
 ## Orders
 
@@ -36,7 +35,7 @@
   * [Ship to Store](orders/bopis/ship-to-store.md)
   * [Catalog Page](orders/bopis/catalog-page.md)
   * [Settings Page](orders/bopis/settings-page.md)
-* [Fulfillment](<README (1).md>)
+* [Fulfillment](orders/fulfillment/README.md)
   * [Ship Orders](fulfillment/shipOrders.md)
   * [Rejection](fulfillment/rejection.md)
   * [Picking App](fulfillment/pickingApp.md)
