@@ -14,9 +14,9 @@ Adding a new data configuration in OMS enables users to specify how data is impo
 
 ### Steps:
 
-- Click the `Add` button on the configurations page.
-- In the modal that appears, provide information for fields such as Config ID, Description, Import Service, Import Path, Export Content ID, Export Service, Export Path, File Name Pattern, and Multi-threading.
-- Click `Add` again to save the new configuration.
+1. Click the `Add` button on the configurations page.
+2. In the modal that appears, provide information for fields such as Config ID, Description, Import Service, Import Path, Export Content ID, Export Service, Export Path, File Name Pattern, and Multi-threading.
+3. Click `Add` again to save the new configuration.
 
 ### Configuration Information Table:
 
@@ -65,16 +65,15 @@ Editing an existing Data Manager Configuration allows users to update configurat
 Config ID cannot be changed after creation. Create a new Config if a new Config ID is needed.
 {% endhint %}
 
-## Add SFTP User to Data Configuration
 # SFTP User Integration in Data Configuration
 
 In the OMS data import/export process, setting up SFTP users is essential for smooth operations. Server paths, beginning with the SFTP username (e.g., `dummySftpUser/HotWax/SalesOrders/`), follow a consistent convention. HotWax simplifies user integration, minimizing manual errors. This streamlined setup is crucial for bulk user integration, allowing easy association with diverse import paths. By incorporating specific SFTP users into configurations, users can efficiently manage data flow, ensuring secure and error-free transactions within the OMS.
 
 ### Steps:
 
-- Select `Add SFTP User to Config`.
-- Choose the SFTP user configuration path.
-- Select the `FTP Config` and `Config ID`.
-- Save the configuration.
+1. Select `Add SFTP User to Config`.
+2. Choose the SFTP user configuration path.
+3. Select the `FTP Config` and `Config ID`.
+4. Save the configuration.
 
 By following these steps, users can manage data configurations within the OMS, ensuring efficient data flow and integration.
