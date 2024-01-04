@@ -6,8 +6,8 @@ HotWax Commerce’s Receiving app enables stock associates to receive items quic
 
 This section focuses on managing incoming shipments, returns, and  purchase orders through the Receiving app.
 
-### List of pages
+### List of Topics
 
-1. Shipments
-2. Returns
-3. Purchase Orders
+1. Receiving Shipments
+2. Receiving Returns
+3. Receiving Purchase Orders
