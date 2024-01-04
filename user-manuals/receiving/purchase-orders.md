@@ -1,4 +1,4 @@
-# Purchase Orders
+# Receiving Purchase Orders
 
 ## Purchase Order View page
 
