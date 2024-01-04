@@ -1,7 +1,7 @@
 # Manage Locations
 
 Effective stock management relies on proficient location management.\
-To enable store associates to establish precise locations for managing stock which will ease in receiving and storing inventory, as well as facilitating the picking process, ​​retailers can define specific locations within facilities, such as Aisle, Section, Level, or Sequence. Users can manage locations by the following steps:
+To enable store associates to establish precise locations for managing stock which will ease in receiving and storing inventory, as well as facilitating the picking process, ​​retailers can define specific locations within facilities, such as Aisle, Section, Level, or Position. Users can manage locations by the following steps:
 
 **Add Locations**
 
