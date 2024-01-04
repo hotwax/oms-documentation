@@ -15,9 +15,8 @@
   * [Inventory](job-workflows/inventory.md)
   * [Products](job-workflows/products.md)
 * [Data Manager](data-manager/README.md)
-  * [Data Imports](data-manager/dataImports.md)
-  * [Data Exports](data-manager/data-exports.md)
-  * [Data Configurations](data-manager/data-configurations.md)
+  * [Configurations](data-manager/configurations.md)
+  * [Imports](data-manager/imports.md)
 
 ## Orders
 
@@ -36,7 +35,7 @@
   * [Ship to Store](orders/bopis/ship-to-store.md)
   * [Catalog Page](orders/bopis/catalog-page.md)
   * [Settings Page](orders/bopis/settings-page.md)
-* [Fulfillment](<README (1).md>)
+* [Fulfillment](orders/fulfillment/README.md)
   * [Ship Orders](fulfillment/shipOrders.md)
   * [Rejection](fulfillment/rejection.md)
   * [Picking App](fulfillment/pickingApp.md)
@@ -45,6 +44,14 @@
 * [Brokering](orders/brokering/README.md)
   * [Order Routing](brokering/configurableRouting.md)
   * [Reports](brokering/reports.md)
+* [Pre-orders](pre-orders/README.md)
+  * [Purchase Order Upload](pre-orders/purchase-order-uploads.md)
+  * [Purchase Order Management](pre-orders/purchase-order-management.md)
+  * [Pre-order Jobs](pre-orders/pre-order-jobs.md)
+  * [Audit](pre-orders/audit-pre-order.md)
+  * [Pre-order Allocation](pre-orders/pre-order-allocation.md)
+  * [Release Pre-orders](pre-orders/release-pre-orders.md)
+  * [Reports](pre-orders/reports.md)
 
 ## Inventory
 

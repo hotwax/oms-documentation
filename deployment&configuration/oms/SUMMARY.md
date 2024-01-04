@@ -17,5 +17,6 @@
 
 ## Additional Resources
 * [Update OMS Version](additional-resources/updateOmsVersion.md)
+* [Rollback OMS Version](additional-resources/rollback-release.md)
 * [OMS Release versions](additional-resources/omsReleases.md)
 * [Optional Plugins](additional-resources/optional-plugins.md)
