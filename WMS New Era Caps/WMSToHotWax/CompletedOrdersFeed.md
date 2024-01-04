@@ -101,6 +101,3 @@ Streamline the process to read the Completed Orders Feed Excel file format of sh
 | 個数    | Quantity  | The quantity of an order in the system. | quantity |
 | 問い合せNo | Numeric or Alphanumeric | The tracking no. of an order item in the system. | trackingNumber |
 | 便名    | String    | The shipping carrier which is used to ship an order. | carrier |
-
-
-
