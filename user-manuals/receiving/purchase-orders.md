@@ -1,8 +1,9 @@
 # Receiving Purchase Orders
+The user can find the `Purchase Orders` option on the third number in the top left corner in the Receiving app below the facility name. On clicking it, the default page that will open will be the Purchase Orders View page. 
 
 ## Purchase Order View page
 
-Purchase Orders (PO) page enables processing and receiving of incoming purchase orders.
+The users can view, process, and receive incoming purchase orders on this page.
 
 
 
@@ -12,15 +13,17 @@ Purchase Orders (PO) page enables processing and receiving of incoming purchase 
 Only purchase orders with approved status are processed further in the OMS.
 {% endhint %}
 
-* **Purchase Order Information:** Each purchase order has an unique identifier, date, and status. The status of a purchase order can be either 'Created' or 'Approved'.a. Created: PO is prepared and pending for approval. b. Approved: PO is approved and awaiting inventory.
+* **Purchase Order Information:** Each purchase order has an unique identifier, date, and status. The status of a purchase order can be either 'Created' or 'Approved'.
+ 
+     a. Created: PO is prepared and pending for approval.
+  
+     b. Approved: PO is approved and awaiting inventory.
 
 <figure><img src="../.gitbook/assets/Screenshot 2023-10-19 at 6.17.15 PM.png" alt=""><figcaption><p>Image: Purchase Order page</p></figcaption></figure>
 
 **Functions:**
 
-**a. Search purchase order**
-
-Search for a purchase order by unique identifier.
+**a. Search purchase order:** Search for a purchase order by unique identifier.
 
 {% embed url="https://youtu.be/ohOatyj-8PA" %}
 Video: Search purchase order
@@ -28,9 +31,7 @@ Video: Search purchase order
 
 
 
-**b. Load more purchase orders**
-
-View extended lists of purchase orders.
+**b. Load more purchase orders:** View extended lists of purchase orders.
 
 {% embed url="https://youtu.be/7JX_Ip7pX-s" %}
 Video: Load more purchase orders
@@ -40,21 +41,20 @@ Video: Load more purchase orders
 
 ## Purchase Order Details page
 
-Purchase order details page provides users with detailed information about a specific purchase order.
+
+The users can open the Purchase Order Details page for a specific purchase order by clicking on the selected purchse order. The Purchase Order Details page provides a detailed view of the selected purchase order and the users can find information about it here.
 
 
 
 **Characteristics:**
 
-* **PO Comprehensive Details:** The user can see the details of a specific purchase order, including the purchase order number, date, status, and product image.
+* **PO Comprehensive Details:** The user can see the details of a specific purchase order, including the purchase order number, date, status, and product image here.
 
 
 
 **Functions:**&#x20;
 
-**a. Search items**
-
-Search purchase order items by unique identifier.
+**a. Search items:** Search purchase order items by unique identifier.
 
 {% embed url="https://youtu.be/7cwZ7a7ZUIM" %}
 Video: Search purchase order items
@@ -62,9 +62,7 @@ Video: Search purchase order items
 
 
 
-**b. Scan**
-
-Scan product’s code to search the purchase order items.
+**b. Scan:** Scan product’s code to search the purchase order items.
 
 {% embed url="https://youtu.be/SExsxdEGYtY" %}
 Video: Scan&#x20;
@@ -72,9 +70,7 @@ Video: Scan&#x20;
 
 
 
-**c. Copy purchase order ID**\
-\
-Quickly copy purchase order ID with just one click to communicate externally.&#x20;
+**c. Copy purchase order ID:** Quickly copy purchase order ID with just one click to communicate externally.
 
 {% embed url="https://youtu.be/BF7ddyxyGkw" %}
 Video: Copy purchase order ID
@@ -82,9 +78,7 @@ Video: Copy purchase order ID
 
 
 
-**d. Receiving history**&#x20;
-
-Comprehensive details of all the Purchase Orders received.
+**d. Receiving history:** Comprehensive details of all the Purchase Orders received.
 
 {% embed url="https://youtu.be/1WX_kG5IZYs" %}
 Video: Receiving history
@@ -92,25 +86,23 @@ Video: Receiving history
 
 
 
-**e. Add a product**&#x20;
-
-Add a product to the purchase order at the time of receiving.
+**e. Add a product:** Add a product to the purchase order at the time of receiving.
 
 {% embed url="https://youtu.be/fHLBYF-Xp9I" %}
 Video: Add product
 {% endembed %}
 
-**f. Receive all**
 
-Receive all the quantity of an item at once.
+
+**f. Receive all:** Receive all the quantity of an item at once.
 
 {% embed url="https://youtu.be/iL4Dm-_4e9M" %}
 Video: Receive all
 {% endembed %}
 
-**g. Location**
 
-Find the exact location where the purchase order is going to be received in the facility.
+
+**g. Location:** Find the exact location where the purchase order is going to be received in the facility.
 
 {% embed url="https://youtu.be/PFZr6eZkJN4" %}
 Video: Location
@@ -118,17 +110,15 @@ Video: Location
 
 
 
-**h. Purchase order item history**&#x20;
-
-View the receiving history of a dedicated purchase order item.
+**h. Purchase order item history:** View the receiving history of a dedicated purchase order item.
 
 {% embed url="https://youtu.be/rHjhp5xo-oU" %}
 Video: Purchase order item history
 {% endembed %}
 
-**i. Input quantity**
 
-Input the quantity of the item received in a purchase order.
+
+**i. Input quantity:** Input the quantity of the item received in a purchase order.
 
 {% embed url="https://youtu.be/RnA7hC-5dGs" %}
 Video: Input quantity
@@ -136,9 +126,7 @@ Video: Input quantity
 
 
 
-**j. Save function**
-
-Once the purchase order quantity has been received, complete the purchase order receiving process.
+**j. Save function:** Once the purchase order quantity has been received, complete the purchase order receiving process.
 
 {% embed url="https://youtu.be/Jquu2VThXyg" %}
 Video: Save purchase Order
