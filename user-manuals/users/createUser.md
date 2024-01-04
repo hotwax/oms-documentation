@@ -45,7 +45,7 @@ Before entering any details, toggle the “Facility user” switch if you are cr
    - Reset Password Email
    - Facility Contact Number
   
-6. Upon clicking 'Create User' button, user will be created and you will reach User Setup page where you can pick between Quick Setup and Manual Setup. 
+6. Upon clicking 'Create User' button, user will be created and you will reach the `User Setup` page where you can pick between Quick Setup and Manual Setup. 
 
 ## Step 2: User Setup
 
