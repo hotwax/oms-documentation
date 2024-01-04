@@ -1,11 +1,11 @@
 # Manage Locations
 
 Effective stock management relies on proficient location management.\
-To enable store associates to establish precise locations for managing stock which will ease in receiving and storing inventory, as well as facilitating the picking process, ​​retailers can define specific locations within facilities, such as Aisle, Section, Level, or sequence. Users can manage locations by the following steps:
+To enable store associates to establish precise locations for managing stock which will ease in receiving and storing inventory, as well as facilitating the picking process, ​​retailers can define specific locations within facilities, such as Aisle, Section, Level, or Position. Users can manage locations by the following steps:
 
 **Add Locations**
 
-To add a new location within the facility, click on the `Add Locations To Facility` button to open a location pop-up menu.
+To add a new location within the facility, click on the `Internal Locations` button to open a location pop-up menu.
 
 Fill in the required information to add location to the facility.
 
@@ -14,7 +14,7 @@ Fill in the required information to add location to the facility.
 * _Bulk_ - This area stores large quantities of inventory not intended for immediate picking or display. This is a long-term storage space for excess stock, or bulk materials.
 * _Pick/Primary_ - This is where the most frequently accessed items are stored. It's designed for efficient order fulfillment, with easy access for pickers and quick movement of goods.
 * _Receiving Bay_ - This is the designated area for incoming deliveries. It allows for unloading, inspection, and initial processing of new inventory before it's moved to its designated storage location.
-* _Staging_ - This area acts as a temporary holding space for goods in various stages of processing. It could be used for preparing orders for shipment, kitting products, or holding returns before processing.
+* _Staging_ - This area acts as a temporary holding space for goods in various stages of processing. It could be used for preparing orders for shipment, kitting products or holding returns before processing.
 
 2. **Area:** A designated section within a warehouse or store with a specific function, department, or purpose.
 3. **Aisle:** This is a designated walkway between sections within the warehouse or retail store. Aisles are numbered or named for easy navigation and identification.
@@ -31,13 +31,13 @@ Video: Add Locations
 **Edit Locations**
 
 1. To edit the location of the facility, click on the overflow menu presented towards the right of each location.
-2. Select the `edit location` button and edit the required updates that need to be made.
+2. Select the `Edit location` button and edit the required updates that need to be made.
 3. Click on the `save` icon to update the location.
 
 **Remove location**
 
 1. To remove a location from the facility, click on the overflow menu presented towards the right of each location.
-2. Click on the `remove location` button to remove location from the facility.
+2. Click on the `Remove location` button to remove location from the facility.
 
 {% embed url="https://youtu.be/I3wGqeJUAXc" %}
 Video: Edit or Remove Locations
