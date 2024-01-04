@@ -1,5 +1,5 @@
 ---
-Description: >-
+description: >-
   Launchpad serves as the central hub for all HotWax Commerce applications,
   providing seamless access to development, user acceptance testing (UAT), and
   production versions.
