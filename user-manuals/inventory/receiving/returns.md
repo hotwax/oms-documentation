@@ -1,4 +1,4 @@
-# Returns
+# Receiving Returns
 
 ## Returns View page
 
