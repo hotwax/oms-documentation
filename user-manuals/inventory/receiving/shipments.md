@@ -1,4 +1,4 @@
-# Shipments
+# Receiving Shipments
 
 ## Shipments View page 
 
