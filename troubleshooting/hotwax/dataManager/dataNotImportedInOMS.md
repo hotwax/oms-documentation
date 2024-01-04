@@ -2,7 +2,7 @@
 
 ## Data Not Imported in OMS
 
-You scheduled a job to import data into OMS, but the imported data is not loaded. This could be due to the job `Process bulk imported files` not being scheduled.
+You scheduled a job to import data into OMS, but the imported data is not loaded. This could be due to the job `Process bulk imported files` not being scheduled in the Job Manager application.
 
 **Steps to Resolve**
 

@@ -64,7 +64,7 @@ This typically occurs when the file format does not align with the required CSV 
 
 **File upload is partailly failed**
 
-Failed records are generated when a file is successfully processed, but discrepancies in the uploaded data lead to some records failing. In the logs, you'll find a failed records file associated with such cases. By examining this file, you can easily identify and comprehend data errors in the uploaded file. Details about the errors in the records are available in the failed records file, providing clarity on what went wrong. After addressing the identified errors, you can confidently reupload the file without encountering further issues. Some of the possible error types are as follows: 
+Failed records are generated when a file is successfully processed, but discrepancies in the uploaded data lead to some records failing. In these scenario, the record with correct data gets processed and a file containing all failed records which have invalid data gets available in the Failed records section. In the logs, you'll find a failed records file associated with such cases. By examining this file, you can easily identify and comprehend data errors in the uploaded file. Details about the errors in the records are available in the failed records file, providing clarity on what went wrong. After addressing the identified errors, you can confidently reupload the failed record file after removing the error reason column  without encountering further issues. Some of the possible error types are as follows: 
 
 | Error Type        | Description                                            |
 |-------------------|--------------------------------------------------------|
