@@ -47,12 +47,12 @@
   * [Reports](brokering/reports.md)
 * [Pre-orders](pre-orders/README.md)
   * [Purchase Order Upload](pre-orders/purchase-order-uploads.md)
-  * [Purchase Order Management](pre-orders/purchase-order-manaagement.md)
-  * [Pre-order jobs](pre-orders/pre-order-jobs.md)
-  * [Pre-order Audit](pre-orders/audit-pre-order.md)
+  * [Purchase Order Management](pre-orders/purchase-order-management.md)
+  * [Pre-order Jobs](pre-orders/pre-order-jobs.md)
+  * [Audit](pre-orders/audit-pre-order.md)
   * [Pre-order Allocation](pre-orders/pre-order-allocation.md)
   * [Release Pre-orders](pre-orders/release-pre-orders.md)
-  * [Pre-order Reports](pre-orders/reports.md)
+  * [Reports](pre-orders/reports.md)
 
 ## Inventory
 
