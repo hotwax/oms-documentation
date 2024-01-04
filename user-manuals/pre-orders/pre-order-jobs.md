@@ -32,3 +32,38 @@ For more comprehensive details, read our ecommerce integration page.
 
 You can schedule the job by accessing the `Job Manager App` > `Pre-order page` and selecting the `checkbox` next to the `Auto refresh pre-sell catalog` job name.
 
+## Jobs for Synchronizing the Pre-Order Catalog with eCommerce:
+
+To schedule the job, Merchandisers navigate to the `Job Manager` > `Pre Orders` page, where they can schedule the `presell catalog sync` by checking the box next to `Sync variant details`. This job facilitates updates to the Presell catalog on Shopify, working through these steps:
+
+1. HotWax Commerce generates a GraphQL file encapsulating all pre-order-related changes, including promised delivery dates, product categories, and statuses. This file is placed in an SFTP location.
+
+2. Shopify processes these GraphQL files in sequence from the SFTP location to execute the required updates. However, for multiple sequential GraphQL file uploads, Shopify doesn’t fetch the next file automatically. To initiate processing for the subsequent files, Merchandisers should schedule Process Upload jobs in HotWax Commerce through the following steps:
+
+- Navigate to `Job Manager` > `Initial Load` > `Process uploads` card.
+- Activate the `File Upload Status` job, which monitors file processing and potential errors via the Shopify webhook.
+- Schedule the `Upload Pending Proces`s job to prompt Shopify for the next GraphQL file upon receiving `Upload` Status updates.
+- After confirming the activation of `Process Upload` jobs, Merchandisers can schedule the `presell catalog sync` job. To delve deeper into understanding how pre-orders are listed on Shopify, comprehensive insights are available in our Shopify Pre-order integration guide.
+
+Upon listing all products on Shopify, it's crucial to appropriately tag them with `HC: Preorder` or `HC: Backorder`. This tagging process is easily managed by enabling the checkbox for the `Add pre-order tags` and `Add backorder tags` jobs, running every 15 minutes. These jobs utilize the preorder category in the meta fields to add the suitable tag to the parent product on Shopify.
+
+The HotWax Commerce Preorder PDP app employs tags and meta fields to modify the `Add to Cart` button and display the expected delivery date on Shopify PDP. Products labeled with `HC: Preorder` tags will alter the `Add to Cart` button to `Pre-Order`, while those with `HC: Backorder` tags will display `Backorder`.
+
+Likewise, it's essential to schedule the `Remove pre-order tags` and `Remove backorder tags` jobs to eliminate the `HC: Preorder` and `HC: Backorder` tags when a product is removed from the pre-order catalog.
+
+## Jobs for Sales Orders with Pre-Order Items
+
+Ensuring accurate representation of pre-order information and changes in customer sales orders post their e-commerce purchase is crucial. While pre-orders are downloaded alongside regular orders, specific notes are included in these sales orders for easy identification of pre-orders. Here are the various jobs that can be scheduled in HotWax Commerce for managing sales orders with pre-order items:
+
+**Add Pre-order/Backorder Tags**- These jobs assign pre-order/backorder tags to orders containing pre-selling items. This simplifies identification for the operations team. The job is scheduled by selecting the respective checkbox against the `Add Pre-Order Tag` or `Add Backorder Tag`.
+
+**Add Promise Date**- Adding promise dates to sales orders, mirroring the dates provided to customers upon order placement. This job, when activated via checkbox, appends promise date notes to sales orders.
+
+**Update Promise Date**-  In cases where promise dates change due to shifts in the arrival date of purchase orders, updates to the promise dates in sales orders are necessary. To handle instances with multiple purchase order changes, HotWax Commerce has divided this job into two parts. The `update promise date` job creates a file for all the changes and places it in a SFTP location. Then `Update the Preorder Category Item Arrival Date job` update product category member through date based on PO Item ETA change.
+
+**Adjust ATP on Early PO in Bulk**– Merchandisers frequently handle multiple Purchase Orders for identical SKUs. Sometimes, they might upload a new Purchase Order with an earlier promised date, even if there's an existing Purchase Order for the same SKU in the system. In such cases, reallocating sales orders from the initial Purchase Order to the latest one with an earlier date becomes vital. This ensures that customers who placed pre-orders first are given priority, guaranteeing timely delivery. The task automatically adjusts Purchase Order ATP allocations and reallocates pre-orders accordingly. To schedule this, enable and set up the `Adjust ATP on Early PO in Bulk` job found in the More Jobs section.
+
+**Email Customers**-  To efficiently manage customer expectations regarding changes in promised dates, activating the `Email customers` checkbox initiates a job that triggers automatic emails to customers. This action ensures customers are informed whenever there's a modification in the promised date.
+
+
+
