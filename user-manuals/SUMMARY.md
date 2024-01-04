@@ -45,6 +45,10 @@
 * [Brokering](orders/brokering/README.md)
   * [Order Routing](brokering/configurableRouting.md)
   * [Reports](brokering/reports.md)
+* [Pre-orders](pre-orders/README.md)
+  * [Purchase Order Upload](pre-orders/purchase-order-uploads.md)
+  * [Purchase Order Management](pre-orders/purchase-order-manaagement.md)
+  * [Pre-order jobs](pre-orders/pre-order-jobs.md)
 
 ## Inventory
 
