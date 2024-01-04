@@ -10,7 +10,7 @@ Users can log in to the Inventory Counting App only if they are [associated with
 
 Store associates periodically count real-time inventory to identify any discrepancies between physical and system inventory counts. Store associates can conduct inventory counts for specific products using the Inventory Count App through the following steps:
 
-1. Search Product
+#### 1. Search Product
 
 Store associates can quickly locate products by searching products using product IDs, and SKUs from the `Search` box or utilizing the scan feature by tapping on the `Scan` button at the bottom of the page to quickly scan the product barcodes. They can also view enlarged product images by tapping on the `Image` to identify products without barcodes.
 
@@ -22,11 +22,11 @@ Video: Search a product
 Video: Scan function
 {% endembed %}
 
-2. View Product Details
+#### 2. View Product Details
 
 After locating the products for inventory counting, associates can tap on the item to view the `Product Detail` page with enlarged images and variant details.
 
-3. Adjust Inventory Count
+#### 3. Adjust Inventory Count
 
 Once the physical counting process concludes, store associates can manually enter the counted quantities into the `Stock` field of the `Product Detail` page.
 
@@ -36,13 +36,13 @@ Store associates also have the ability to view and modify the existing inventory
 Video: Count segment
 {% endembed %}
 
-**Show Systematic Inventory-** During inventory counting, store associates can view systematic inventory for reference. However,store managers sometimes prefer not to display systematic inventory to ensure store associates accurately count without relying on system data. To hide systematic inventory, store managers can access the `Settings` page by tapping the settings icon in the app footer. On this page, they will find a card labeled `Quantity on Hand`, providing the option to toggle the `Show Systematic Inventory` on or off.
+**Show Systematic Inventory:** During inventory counting, store associates can view systematic inventory for reference. However,store managers sometimes prefer not to display systematic inventory to ensure store associates accurately count without relying on system data. To hide systematic inventory, store managers can access the `Settings` page by tapping the settings icon in the app footer. On this page, they will find a card labeled `Quantity on Hand`, providing the option to toggle the `Show Systematic Inventory` on or off.
 
 {% embed url="https://youtu.be/JdNC7bFgHfw" %}
 Video: Show Systematic Inventory
 {% endembed %}
 
-4. Save Inventory count
+#### 4. Save Inventory count
 
 Store associates need to tap on the `Save` button at the bottom of the page to conclude the counting process.
 
