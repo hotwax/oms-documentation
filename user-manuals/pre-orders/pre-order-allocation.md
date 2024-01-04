@@ -4,14 +4,14 @@ Once a customer places an order for a pre-order item, the sales order is automat
 
 ## Review Allocations
 
-The Review Allocations page allows users to review associated sales orders for a selected item, providing an overview of the total quantity ordered and consumed ATP for that specific purchase order item. Merchandisers can view all the sales orders associated with that purchase order to get holistic information about who ordered how much quantity and the promise date for the order. Reviewing allocations involves the following steps:
+TMerchandisers need to review associated sales orders for a selected item to get overview of the total quantity ordered and consumed ATP for that specific purchase order item. Merchandisers can view all the sales orders associated with that purchase order through the following steps:
 
 1. Navigate to the `Procurement` > `Purchase Orders View` > `Purchase Order Detail` page
 2. Click on `Review Allocation` in the line item field to view all associated orders with that purchase order.
-3. This will open up a `review allocations` page where merchandisers get a holistic view of all the sales orders allocated with that purchase order and take multiple actuons such as:
+3. This will open up a `review allocations` page where merchandisers get a holistic view of all the sales orders allocated with that purchase order and take actions such as removing allocations.
 
 {% embed url="https://youtu.be/MqQGtQRkkDQ" %}
-Revoew Allocations
+Review Allocations
 {% endembed %}
 
 ## Allocate Sales Orders
@@ -40,10 +40,10 @@ Sync SO Date changes
 
 ## Remove Allocations
 
-Merchandisers may sometimes make mistakes in fulfilling orders with the incorrect purchase order, leading to double allocation of ATP. This can be rectified by removing incorrect allocations. Here's how:
+Merchandisers may sometimes encounter inaccurate allocations of sales orders with purchase orders or they want to remove allocations to utilise that invnetory for in-store sales. Such issues can be rectified by removing allocations through following steps:
 
 1. Navigate to the `Procurement` > `Purchase Orders View` > `Purchase Order Detail` page
-2. Click `Remove Allocation` in the line item field to open the Remove Allocations page.
+2. Click `Remove Allocation` in the line item field to open the `Review Allocations` page.
 3. This will display all the sales orders for which the inventory is allocated. Merchandisers can select the sales orders they want to remove the allocation for by clicking on the checkbox and then clicking on the `Remove Allocations` button.
 
 {% embed url="https://youtu.be/XWbW_jeiZYM" %}

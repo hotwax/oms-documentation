@@ -59,7 +59,9 @@ The HotWax Commerce Preorder PDP app employs tags and meta fields to modify the 
 
 Likewise, it's essential to schedule the `Remove pre-order tags` and `Remove backorder tags` jobs to eliminate the `HC: Preorder` and `HC: Backorder` tags when a product is removed from the pre-order catalog.
 
+**Update Pre-Order Category Item Arrival Date**
 
+The Sync Variant Details job ensure that if there is any change in the purchase order arrival date the promise dates of the product is also updated on Shopify. However, when there are changes in the arrival dates of the multiple items in the purchase orders, the promise dates need to be first updated in HotWax Commerce pre-sell category. These changes happen through `Update Pre-Order Category Item Arrival Date` job which creates a file and process all the updated date changes in HotWax Commerce category, after this the Sync Variant Details updates the changes on Shopify.
 
 <figure><img src="../.gitbook/assets/job-manager.hotwax.io_pre-order (1).png" alt=""><figcaption></figcaption></figure>
 
@@ -71,7 +73,7 @@ Ensuring accurate representation of pre-order information and changes in custome
 
 **Add Promise Date**- Adding promise dates to sales orders, mirroring the dates provided to customers upon order placement. This job, when activated via checkbox, appends promise date notes to sales orders.
 
-**Update Promise Date**- In cases where promise dates change due to shifts in the arrival date of purchase orders, updates to the promise dates in sales orders are necessary. To handle instances with multiple purchase order changes, HotWax Commerce has divided this job into two parts. The `update promise date` job creates a file for all the changes and places it in a SFTP location. Then `Update the Preorder Category Item Arrival Date job` update product category member through date based on PO Item ETA change.
+**Update Promise Date**- In cases where promise dates change due to shifts in the arrival date of purchase orders, updates to the promise dates in sales orders are necessary. The `update promise date` job update the promise date notes of the sales orders.
 
 
 
