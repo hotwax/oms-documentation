@@ -25,6 +25,7 @@ Here's the process for releasing pre-orders by products:
 4. To release a specific quantity, merchandisers can input the desired quantity in the `Pieces` field. Alternatively, to release all pre-ordered quantities, simply click on the badge to insert the total quantity at once.
 5. Finally, click on the `release` button at the bottom of the page to release the ordered quantities from the pre-order queue to the brokering queue for fulfillment.
 6. Merchandisers can also select the `Release to the Warehouse` button to specify the location for brokering. This action bypasses the brokering queue and directly releases the order from the pre-order queue to the warehouse for fulfillment.
+7. Merchandisers can also cancel a specific quantity of pre-orders by clicking on the `cancel` button.
 
 ### Releasing by Orders:
 
@@ -46,3 +47,4 @@ Here are the steps to release pre-orders by orders:
 - Release: Initiate orders for brokering and fulfillment.
 - Release to a warehouse: Release the pre-order to a specified location for fulfillment.
 - Edit Promise date: Set a new promise date for these orders, which will be used for inventory allocation and order fulfillment.
+- Cancel: Cancel all listed orders
