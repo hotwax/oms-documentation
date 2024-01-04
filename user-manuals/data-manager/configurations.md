@@ -26,7 +26,7 @@ Adding a new data configuration in OMS enables users to specify how data is impo
 | **Description**     | A brief description of the configuration.            |
 | **Import Service**  | The OMS service for importing data into OMS.         |
 | **Import Path**     | The path from which the data is kept for OMS to import.|
-| **Export Content ID**| Content ID for exporting data.                       |
+| **Export Content ID**| Content ID for exporting data.                       | 
 | **Export Service**  | The OMS service or workflow for exporting data.      |
 | **Export Path**     | The path to which the data will be exported.         |
 | **File Name Pattern**| A pattern for naming files.                          |
