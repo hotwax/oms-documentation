@@ -22,7 +22,7 @@ Frank and Oak uses a custom create order file from HotWax that is slightly diffe
 | Tax Code            | Code for tax calculation purposes. Vertex for FaO                |
 | Shipping Tax Code   | **Will include the actual shipping tax amount from the order**   |
 | Date                | Date and time when the order was placed                          |
-| Customer            | Customer's name                                                 |
+| Customer            | NetSuite Customer ID                                             |
 | Addressee           | Customer's name for shipping purposes                            |
 | Address 1           | Address line 1 for shipping                                      |
 | Address 2           | Address line 2 for shipping                                      |
@@ -32,7 +32,7 @@ Frank and Oak uses a custom create order file from HotWax that is slightly diffe
 | Zip                 | ZIP or postal code for the shipping address                      |
 | Email               | Customer's email address from the order                          |
 | Phone               | Customer's phone number from the order                          |
-| Tag                 | Tag associated with the order                                    |
+| Tag                 | Not used                                                         |
 | Closed              | Indicates whether the order is closed or not. Will be empty in the created feed |
 | Discount Item       | Name of the order level discount                                 |
 | Rate                | Discount rate applied to the order                               |
@@ -81,7 +81,7 @@ Because an order can have multiple payment preferences, each preference will be 
 | Phone                 | 555 555 5555                                            |
 | Tag                   |                                                         |
 | Closed                |                                                         |
-| Discount Item         | BDC                                                     |
+| Discount Item         |                                                         |
 | Rate                  |                                                         |
 | Demand Location       | BDC                                                     |
 | Price Level           | Payment_Prefrence                                       |
