@@ -7,3 +7,5 @@
 * [Permissions](plugins/casl-ability.md)
 * [Theme](plugins/global-theme.md)
 * [CSV Parsing](plugins/papa-parse.md)
+* [Scanner](./plugins/scanner.md)
+* [Date Time Formatting](./plugins/luxon.md)
