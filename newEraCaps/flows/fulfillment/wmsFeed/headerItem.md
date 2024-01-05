@@ -68,7 +68,6 @@ If no value is found, then leave this field empty.
 - **Position:** 10-10
 - **Ussage** The total quantity to be delivered for an order. A sum of all the item qty in the brokered feed to the warehouse.
 
-## S-11 (Missing)
 
 ## BUSINESS TYPE (S-12)
 - **Description:** Wholesale/eCommerce Indicator
@@ -272,6 +271,7 @@ As of now we expect this to be blank. Need to confirm with New Era.
 {% hint style="danger" %}
 As of now we expect this to be blank. Need to confirm with New Era.
 {% endhint %}
+
 - **S-47:** Not used (Length: 16, Bytes: 16)
 - **S-48:** Not used (Length: 10, Bytes: 10)
 - **S-49:** Order Date (Length: 10, Bytes: 10)
