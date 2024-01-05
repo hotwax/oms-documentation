@@ -2,5 +2,7 @@
 * [Introduction](README.md)
 * [Why HotWax](why-hotwax.md)
 
-* [Create Orders](createOrderFeed.md)
+## Flows
+* [Sales Orders](flows/sales-orders/createOrderFeed.md)
+* [Products](flows/products/README.md)
 * [Easy Post Integration](carriers/easyPost.md)
