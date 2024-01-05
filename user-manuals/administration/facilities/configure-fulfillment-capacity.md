@@ -12,14 +12,13 @@ Fulfillment capacity is defined on the basis of the number of orders a facility 
 2. Click on `Apply` to save the chosen capacity. The users can also view the consumed capacity, out of the added fulfillment capacity on the card. 
 
 
+
 Users can also see the facility order count history by clicking on the `View order count history` button on the `Online Order Fulfillment` card. This will help them in setting up the capacity based on their previous records.
+
 
 
 Furthermore, the `Find Facilities` page also offers the ability to view consumed capacity and configure fulfillment capacity seamlessly.
 
+
+
 <figure><img src="../../.gitbook/assets/Online Order Fulfillment.png" alt=""><figcaption><p>Image: Configure Fulfillment Capacity</p></figcaption></figure>
-
-
-
-
-
