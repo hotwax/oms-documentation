@@ -1,6 +1,6 @@
 # Fulfilled Order Items Feed
 
-This feed is used to get the order items fulfilled in OMS. The format of the feed is JSON, 
+This feed is used to get the fulfilled order items in OMS. The format of the feed is JSON, 
 and it can be further used to send to external systems as-is or transformed as per custom 
 format of the external system.
 
@@ -95,9 +95,23 @@ The job to generate the fulfilled order items feed has some configurable paramet
     2. This can be needed if historical orders need to be skipped which are not required to sync 
     to any external system from OMS.
 
+## FTP locations for the fulfilled order items feed variation
+
+Based on the available parameters, the feed is kept on its respective locations.
+| Feed Type                                 | Location                                            |
+|-----------------------------------------------|--------------------------------------------------|
+| Feed for all fulfilled Order Items Feed     | /home/${sftpUsername}/hotwax/FulfilledOrderItems       |
+| Feed for Order Items fulfilled from Stores | /home/${sftpUsername}/hotwax/StoreFulfilledItemsFeed |
+| Feed for Order Items fulfilled from Stores  | /home/${sftpUsername}/hotwax/WHFulfilledItemsFeed  |
+| Feed for Ecommerce Orders Items fulfilled from Stores | /home/${sftpUsername}/hotwax/EcomStoreFulfilledItemsFeed                |
+| Feed for POS orders fulfilled from Stores | /home/${sftpUsername}/hotwax/PosStoreFulfilledItemsFeed        |
+| Feed for all fulfilled Order Items with only finished good type products | /home/${sftpUsername}/hotwax/FinishedGoodFulfilledItemsFeed |
+| Feed for all fulfilled Order Items with only digital good type products | /home/${sftpUsername}/hotwax/DigitalGoodFulfilledItemsFeed  |
+
+
 ## Sample Fulfilled Order Items Feed JSON
 
-```dtd
+```json
 [ {
   "productStoreId" : "STORE",
   "orderId" : "100000",
