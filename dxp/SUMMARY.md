@@ -1,4 +1,5 @@
 # Table of Contents
+* [Introduction](README.md)
 
 ## Plugins
 * [App Version](./plugins/app-version.md)
