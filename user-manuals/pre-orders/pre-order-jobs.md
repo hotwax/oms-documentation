@@ -1,6 +1,6 @@
 # Pre-order Jobs
 
-Once Purchase orders have successfully been uploaded to HotWax Commerce, the subsequent step involves seamlessly syncing the pre-orders with the e-commerce platform. Merchandisers can set up various jobs in HotWax Commerce to ensure the accurate listing of pre-orders on the e-commerce platform. Some of these jobs are internal to HotWax Commerce and facilitate the creation of jobs within the system.
+Once Purchase Orders have successfully been uploaded to HotWax Commerce, the subsequent step involves seamlessly syncing the pre-orders with the e-commerce platform. Merchandisers can set up various jobs in HotWax Commerce to ensure the accurate listing of pre-orders on the e-commerce platform. Some of these jobs are internal to HotWax Commerce and facilitate the creation of jobs within the system.
 
 All Pre-order jobs have a defined frequency of 15 minutes to ensure the smooth running of the process. However, should the merchandiser wish to modify the job frequency, they can do so by following these steps:
 
@@ -21,7 +21,7 @@ In HotWax Commerce, merchandisers have the option to schedule the `Auto Refresh 
 * Status of PO items must be created or approved, ensuring canceled PO items are not considered for Pre-Order.
 * Promise date of a PO item must be in the future, guaranteeing that purchase order items will arrive in the future, not from an old PO.
 * Current inventory of the item must be 0, indicating it's out of stock and qualified for Pre-Order or backorder.
-* If the 'isNewStyle' field of a PO is marked as “yes”, it’s identified as a Pre-Order product; if marked “no”, it's categorized as a backorder product.
+* If the 'isNewProoduct' field of a PO is marked as “yes”, it’s identified as a Pre-Order product; if marked “no”, it's categorized as a backorder product.
 
 Products from purchase orders that don't meet these criteria won't be listed in HotWax Commerce's pre-order catalog. It's important to ensure that purchase order items adhere to these criteria for accurate listing.
 
@@ -47,8 +47,6 @@ To schedule the job, Merchandisers navigate to the `Job Manager` > `Pre Orders` 
 * Activate the `File Upload Status` job, which monitors file processing and potential errors via the Shopify webhook.
 * Schedule the `Upload Pending Proces`s job to prompt Shopify for the next GraphQL file upon receiving `Upload` Status updates.
 
-
-
 <figure><img src="../.gitbook/assets/job-manager.hotwax.io_pre-order (5).png" alt=""><figcaption><p>Process Upload</p></figcaption></figure>
 
 * After confirming the activation of `Process Upload` jobs, Merchandisers can schedule the `presell catalog sync` job. To delve deeper into understanding how pre-orders are listed on Shopify, comprehensive insights are available in our [Shopify Pre-order integration guide.](https://app.gitbook.com/s/HuLroZUG7riNx5fMTaPy/how-are-pre-orderable-and-backorderable-products-listed-or-delisted-on-shopify/presell-catalog-synchronization)
@@ -61,7 +59,7 @@ Likewise, it's essential to schedule the `Remove pre-order tags` and `Remove bac
 
 **Update Pre-Order Category Item Arrival Date**
 
-The Sync Variant Details job ensure that if there is any change in the purchase order arrival date the promise dates of the product is also updated on Shopify. However, when there are changes in the arrival dates of the multiple items in the purchase orders, the promise dates need to be first updated in HotWax Commerce pre-sell category. These changes happen through `Update Pre-Order Category Item Arrival Date` job which creates a file and process all the updated date changes in HotWax Commerce category, after this the Sync Variant Details updates the changes on Shopify.
+The `Sync Variant Details` job ensure that if there is any change in the purchase order arrival date the promise dates of the product is also updated on Shopify. However, when there are changes in the arrival dates of the multiple items in the purchase orders, the promise dates need to be first updated in HotWax Commerce pre-sell category. These changes happen through `Update Pre-Order Category Item Arrival Date` job which creates a file and process all the updated date changes in HotWax Commerce category, after this the Sync Variant Details updates the changes on Shopify.
 
 <figure><img src="../.gitbook/assets/job-manager.hotwax.io_pre-order (1).png" alt=""><figcaption></figcaption></figure>
 
@@ -75,13 +73,9 @@ Ensuring accurate representation of pre-order information and changes in custome
 
 **Update Promise Date**- In cases where promise dates change due to shifts in the arrival date of purchase orders, updates to the promise dates in sales orders are necessary. The `update promise date` job update the promise date notes of the sales orders.
 
-
-
 <figure><img src="../.gitbook/assets/job-manager.hotwax.io_pre-order (2).png" alt=""><figcaption><p>Sales order jobs</p></figcaption></figure>
 
 **Adjust ATP on Early PO in Bulk**– Merchandisers frequently handle multiple Purchase Orders for identical SKUs. Sometimes, they might upload a new Purchase Order with an earlier promised date, even if there's an existing Purchase Order for the same SKU in the system. In such cases, reallocating sales orders from the initial Purchase Order to the latest one with an earlier date becomes vital. This ensures that customers who placed pre-orders first are given priority, guaranteeing timely delivery. The task automatically adjusts Purchase Order ATP allocations and reallocates pre-orders accordingly. To schedule this, enable and set up the `Adjust ATP on Early PO in Bulk` job found in the More Jobs section.
-
-
 
 <figure><img src="../.gitbook/assets/job-manager.hotwax.io_pre-order (6).png" alt=""><figcaption><p>Adjust ATP on Early PO in Bulk</p></figcaption></figure>
 
@@ -90,4 +84,3 @@ Ensuring accurate representation of pre-order information and changes in custome
 **Email Customers**- To efficiently manage customer expectations regarding changes in promised dates, activating the `Email customers` checkbox initiates a job that triggers automatic emails to customers. This action ensures customers are informed whenever there's a modification in the promised date.
 
 <figure><img src="../.gitbook/assets/job-manager.hotwax.io_pre-order (3).png" alt=""><figcaption><p>Update Promise date changes to customers</p></figcaption></figure>
-

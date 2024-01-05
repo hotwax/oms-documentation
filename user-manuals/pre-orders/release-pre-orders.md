@@ -6,9 +6,8 @@ HotWax Commerce automatically handles the release and brokering of Shopify Pre-O
 
 HotWax Commerce strategically organizes all pre-orders in a dedicated queue until their physical inventory is received. This approach ensures that brokering processes are not initiated for orders lacking available inventory. Once the pre-order inventory arrives, HotWax Commerce transfers all orders from the pre-order queue to the brokering queue. This allows the system's engine to efficiently match the most suitable inventory with specific orders for fulfillment. To accommodate diverse retailer preferences, HotWax Commerce offers two methods for automatically releasing Pre-Orders:
 
-1. Daily Job: Merchandisers can schedule this job through the `Job Manager App` > `Pre Order Page` by enabling the `Run Daily` checkbox in the auto-releasing card. This automated process releases pre-orders where the shipping date has arrived and inventory is available for release.
-2. Immediate Release: This method doesn't require scheduling. Merchandisers can trigger instant release by clicking the `release` button associated with the `Release Preorders` job name. This action promptly releases all pre-orders in the queue, facilitating their allocation to the respective fulfillment locations.
-
+1. **Daily Job**: Merchandisers can schedule this job through the `Job Manager App` > `Pre Order Page` by enabling the `Run Daily` checkbox in the auto-releasing card. This automated process releases pre-orders where the shipping date has arrived and inventory is available for release.
+2. **Immediate Release:** This method doesn't require scheduling. Merchandisers can trigger instant release by clicking the `release` button associated with the `Release Preorders` job name. This action promptly releases all pre-orders in the queue, facilitating their allocation to the respective fulfillment locations.
 
 <figure><img src="../.gitbook/assets/job-manager.hotwax.io_pre-order (4).png" alt=""><figcaption><p>Pre-order Automatic release</p></figcaption></figure>
 
@@ -49,16 +48,16 @@ This method becomes valuable when a customer requests expedited delivery, and if
 2. Search for specific orders using order ID, product name, style name, SKU customer name, UPCA, or external ID from the `search` bar.
 3. Merchandisers can utilize filters for orders, such as:
 
-* Order After Date: Lists all orders after the specified date.
-* Order Before Date: Lists all orders before the specified date.
-* Promised After Date: Lists orders with a promised date after a specific date.
-* Promise Before Date: Lists orders before a specific promise date.
-* Loyalty Status: Filters orders based on loyalty status awarded to customers based on their purchase history.
+* **Order After Date:** Lists all orders after the specified date.
+* **Order Before Date:** Lists all orders before the specified date.
+* **Promised After Date:** Lists orders with a promised date after a specific date.
+* **Promise Before Date:** Lists orders before a specific promise date.
+* **Loyalty Status:** Filters orders based on loyalty status awarded to customers based on their purchase history.
 
 4. Once orders are filtered, merchandisers can select multiple orders or use the options icon on individual orders to perform actions like:
 
-* Release: Initiate orders for brokering and fulfillment.
-* Release to a warehouse: Release the pre-order to a specified location for fulfillment.
+* **Release**: Initiate orders for brokering and fulfillment.
+* **Release to a warehouse:** Release the pre-order to a specified location for fulfillment.
 
 {% embed url="https://youtu.be/O45su6_H53w" %}
 Release Individual Orders
@@ -68,11 +67,11 @@ Release Individual Orders
 Release orders in Bulk
 {% endembed %}
 
-* Edit Promise date: Set a new promise date for these orders, which will be used for inventory allocation and order fulfillment.
+* **Edit Promise date:** Set a new promise date for these orders, which will be used for inventory allocation and order fulfillment.
 
 {% embed url="https://youtu.be/3wIz-bWpILY" %}
 
-* Cancel: Cancel all listed orders
+* **Cancel:** Cancel all selected orders with the cancel button available at the bottom right.
 
 {% embed url="https://youtu.be/e69ppcQ82PM" %}
 Cancel orders in Bulk

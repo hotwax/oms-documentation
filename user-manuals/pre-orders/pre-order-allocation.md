@@ -4,11 +4,11 @@ Once a customer places an order for a pre-order item, the sales order is automat
 
 ## Review Allocations
 
-TMerchandisers need to review associated sales orders for a selected item to get overview of the total quantity ordered and consumed ATP for that specific purchase order item. Merchandisers can view all the sales orders associated with that purchase order through the following steps:
+In order to review associated sales orders for a selected item and get overview of the total quantity ordered and consumed ATP for that specific purchase order item, merchandisers can view all the sales orders associated with that purchase order through the following steps:
 
 1. Navigate to the `Procurement` > `Purchase Orders View` > `Purchase Order Detail` page
 2. Click on `Review Allocation` in the line item field to view all associated orders with that purchase order.
-3. This will open up a `review allocations` page where merchandisers get a holistic view of all the sales orders allocated with that purchase order and take actions such as removing allocations.
+3. This will open up a `review allocations` page where merchandisers get a holistic view of all the sales orders allocated with that purchase order and they can take actions such as removing allocations.
 
 {% embed url="https://youtu.be/MqQGtQRkkDQ" %}
 Review Allocations
