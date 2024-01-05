@@ -38,9 +38,7 @@ Store associates also have the ability to view and modify the existing inventory
 Video: Count segment
 {% endembed %}
 
-{% hint style="info" %}
 **Show Systematic Inventory:** During inventory counting, store associates can view systematic inventory for reference. However,store managers sometimes prefer not to display systematic inventory to ensure store associates accurately count without relying on system data. To hide systematic inventory, store managers can access the `Settings` page by tapping the settings icon in the app footer. On this page, they will find a card labeled `Quantity on Hand`, providing the option to toggle the `Show Systematic Inventory` on or off. If this option is on, on the product detail page `In stock` quantity is displayed, and in case of an inventory discrepancy, `Variance` is automatically calculated and displayed.
-{% endhint %}
 
 {% embed url="https://youtu.be/JdNC7bFgHfw" %}
 Video: Show Systematic Inventory
