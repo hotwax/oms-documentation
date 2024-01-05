@@ -43,6 +43,7 @@
   * [Reports](fulfillment/reports.md)
 * [Brokering](orders/brokering/README.md)
   * [Order Routing](brokering/configurableRouting.md)
+  * [Rule Builder](brokering/rule-builder.md)
   * [Reports](brokering/reports.md)
 * [Pre-orders](pre-orders/README.md)
   * [Purchase Order Upload](pre-orders/purchase-order-uploads.md)
