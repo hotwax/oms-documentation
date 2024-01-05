@@ -4,7 +4,7 @@ HotWax Commerce aids in automating pre-order and back-order management by levera
 
 Purchase orders (POs) provide crucial details about item specifics and upcoming inventory arrivals. Retailers can integrate their ERP systems with HotWax Commerce to synchronize purchase orders automatically or utilize the Import App to manually import purchase order CSV files.
 
-To know how you can manage your purchase orders from your ERP system like NetSuite, please refer to the integration guide. For users who want to import their purchase orders manually, HotWax Commerce’s Import app simplifies the process of importing purchase orders and their inventory into HotWax Commerce. Here’s how retailers can upload purchase orders using the Import App:
+To know how you can manage your purchase orders from your ERP system like NetSuite, please refer to the [integration guide](https://app.gitbook.com/s/WAGxTeFJP4I4AIlfs1Gf/supported-integrations/purchase-orders). For users who want to import their purchase orders manually, HotWax Commerce’s Import app simplifies the process of importing purchase orders and their inventory into HotWax Commerce. Here’s how retailers can upload purchase orders using the Import App:
 
 ## Purchase Order Page
 
@@ -28,7 +28,7 @@ Video: Upload Purchase Order CSV
 
 Users can easily map these fields by selecting the exact field from dropdown menus. For added convenience, HotWax Commerce allows Merchandisers to save these mappings within the Import App by clicking on the `New mapping` button, streamlining future uploads. Saved mappings appear as buttons above the mapping field for quick access.
 
-Apart from this merchandisers need to create a new field i.e. `IsNewStyle` and mark the field as either ‘Yes’ or ‘No’. This field helps HotWax commerce identify whether a product is a new style and added to the pre-order catalog or the product was already being sold on the e-commerce and currently it is currently out of stock, in such cases, it is added to the backorder catalog.
+Apart from this merchandisers need to create a new field i.e. `IsNewProduct` and mark the field as either ‘Yes’ or ‘No’. This field helps HotWax commerce identify whether a product is a new product and should be added to the pre-order catalog or the product was already being sold on the e-commerce and currently it is currently out of stock, in such cases, it is added to the backorder catalog.
 
 {% embed url="https://youtu.be/X96Qrj-v0a0" %}
 Map Purchase Orders
@@ -42,9 +42,7 @@ Review Purchase Order
 
 ## Purchase Order Review page
 
-The `PO Review page` provides a detailed overview of PO CSV data and assists users in identifying and correcting errors within the CSV file.&#x20;
-
-
+The `PO Review page` provides a detailed overview of PO CSV data and assists users in identifying and correcting errors within the CSV file.
 
 <figure><img src="../.gitbook/assets/spaces_WoOehPvuUvxQygGoR81q_uploads_HCxGoQnkj1w0rx95fDvg_3.webp" alt=""><figcaption><p>Purchase Order review page</p></figcaption></figure>
 

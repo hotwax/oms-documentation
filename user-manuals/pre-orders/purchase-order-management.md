@@ -19,8 +19,6 @@ Additional functionalities that are available on the `Find Purchase Orders` page
 
 Once the merchandiser have located their desired purchase order, they can execute various flows to ensure precise synchronization of pre-order information with the eCommerce platform.
 
-
-
 <figure><img src="../.gitbook/assets/Purchase Order Page.png" alt=""><figcaption><p>Find Purchase Order</p></figcaption></figure>
 
 ## Cancel Purchase Order
@@ -31,7 +29,7 @@ Merchandisers may opt to cancel purchase orders due to various reasons such as s
 2. Select the `desired purchase order` > Open `Purchase Order Detail page`.
 3. The `cancel` button, located at the top left of the page, facilitates the cancellation process, changing the purchase order status to `canceled`.
 
-{% embed url="https://youtu.be/YdbGD4HLtMg" %}
+{% embed url="https://www.youtube.com/watch?v=YdbGD4HLtMg" %}
 Cancel Purchase Order
 {% endembed %}
 
