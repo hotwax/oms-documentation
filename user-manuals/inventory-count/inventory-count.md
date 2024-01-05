@@ -1,4 +1,4 @@
-# Inventory count
+# Inventory Cycle Count
 
 HotWax Commerce's Inventory Count App streamlines inventory management in stores and warehouses by empowering store associates and managers to seamlessly match physical inventory with system inventory. This intuitive Progressive Web Application (PWA), accessible through browsers or icons on handheld devices, optimizes the inventory counting process. Store associates can swiftly scan products using mobile phone or tablet cameras, ensuring a precise and efficient counting process. Specific [permissions](../users/manageUser.md) are necessary for full utilization of the Inventory Count App. Store associates with `Order Fulfillment` permissions can conduct inventory counts, while store managers with `Order Fulfillment Manager` permissions have the added capability to review counts and log inventory variances.
 
@@ -66,7 +66,7 @@ B. In cases where the store manager is unsatisfied with the counting process, in
 Video: Remove function
 {% endembed %}
 
-## Adjust inventory variance
+## Adjust Inventory Variance
 
 At times, store managers may not require a complete inventory count to address inventory variances. For instance, in case an item gets damaged, prompt adjustments are vital to prevent potential overselling on the e-commerce platform. Store managers can log inventory variances for specific products using the Inventory Count App through the following steps:
 
