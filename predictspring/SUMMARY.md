@@ -2,7 +2,7 @@
 
 * [Introduction](README.md)
 
-##Inventory
+## Inventory
 *[Inventory](inventory/README.md)
 
 ## Orders
