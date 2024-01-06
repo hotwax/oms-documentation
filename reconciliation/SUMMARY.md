@@ -1,3 +1,3 @@
 # Table of Contents
 
-* [All Orders](oms&shopify/Orders/all-orders.md)
+* [All Orders](oms&shopify/orders/all-orders.md)
