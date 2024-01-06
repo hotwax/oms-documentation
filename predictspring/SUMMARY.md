@@ -2,5 +2,10 @@
 
 * [Introduction](README.md)
 
-## Orders
-* [Orders](README.md)
+## Flows
+
+* [Inventory](inventory/README.md)
+
+* [Orders](orders/README.md)
+
+* [Returns](returns/README.md)
