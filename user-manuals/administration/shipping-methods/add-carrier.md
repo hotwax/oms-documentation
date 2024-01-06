@@ -14,6 +14,7 @@ Import this XML data using the web tools' import XML data function.
 
 {% hint style="info" %}
 Insert a unique custom party ID for your carrier and proceed to import it into the system.
+The party ID cannot be longer than 20 characters
 {% endhint %}
 
 
