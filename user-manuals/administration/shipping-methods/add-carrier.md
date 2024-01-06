@@ -19,4 +19,6 @@ Insert a unique custom party ID for your carrier and proceed to import it into t
 
 Now that the carrier party is created, you have to assing a carrier role to it. Add the party ID to this sample data and import it into the OMS to give the party a carrier role:
 
+```xml
 <PartyRole partyId="{partyId}" roleTypeId="CARRIER"/>
+```
