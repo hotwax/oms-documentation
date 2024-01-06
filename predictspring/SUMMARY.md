@@ -4,7 +4,7 @@
 
 ## Flows
 
-*[Inventory](inventory/README.md)
+* [Inventory](inventory/README.md)
 
 * [Orders](orders/README.md)
 
