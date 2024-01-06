@@ -78,3 +78,5 @@
   * [Configure Fulfillment Capacity](administration/facilities/configure-fulfillment-capacity.md)
   * [Manage facility Staff](administration/facilities/manage-facility-staff.md)
   * [Manage Locations](facilities/manage-staff-and-locations.md)
+* [Shipping Methods](administration/README.md)
+  * [Create Carrier](administration/shipping-methods/add-carrier.md)
