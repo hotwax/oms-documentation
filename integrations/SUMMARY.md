@@ -4,7 +4,8 @@
 
 ## OMS
 
-* [Fulfilled Order Items ](oms/fulfilledOrderItems/fulfilledOrderItemsFeed.md)
+* [Introduction](oms/README.md)
+* [Fulfilled Order Items](oms/fulfilledOrderItems/fulfilledOrderItemsFeed.md)
 
 ## M3
 
