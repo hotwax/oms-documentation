@@ -9,12 +9,3 @@ Configuring the scope of participation of a facility in online fulfillment is ma
 *   **Days to Ship:** `Days to ship` are the maximum number of days the facility will take to ship the order post brokering. Enter the number of days to ship and click on `Update Days To Ship` button to save the configuration for the facility.
 
 <figure><img src="../.gitbook/assets/Fulfillment Settings.png" alt=""><figcaption><p>Image: Configure Online Fulfillment</p></figcaption></figure>
-
-
-
-
-
-
-
-
-
