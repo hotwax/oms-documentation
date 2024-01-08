@@ -1,2 +1,0 @@
-# Shipment Receipt Feed
-
