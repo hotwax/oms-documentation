@@ -4,18 +4,18 @@ Before configuring NetSuite import jobs in OMS, it's crucial to install the NetS
 
 ## 1. Access WebTools
 
-Go to the `WebTools: Import readers page` for your OMS instance using the provided sample link:
+Go to the `General Settings page` in your OMS instance using the provided sample link.
 
 ```
-https://{instanceName}.hotwax.io/webtools/control/EntityImportReaders
+
+https://{instanceName}.hotwax.io/commerce/control/GeneralSettings
+
 ```
 
 ## 2. Add NetSuite Reader
 
-In the `Enter readers` section, add the NetSuite reader extension by typing `ext-netsuite`.
+On the page, you will see `Load Netsuite` button, click on it to Load the reader.
 
-## 3. Import Configuration
+## 3. Verify Reader
 
-Click on the "Import" button to initiate the installation process.
-
-By following these steps, you ensure that the NetSuite Reader is properly integrated into OMS, allowing for accurate and efficient data communication during import configurations.
+After clicking the button, you will see a new Netsuite page in the Settings section in the Hamburger menu of OMS.

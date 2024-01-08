@@ -1,7 +1,7 @@
 # Cash Sales
 
 The POS orders are already in “Completed” status in OMS.
-A feed file for these orders is prepared and kept on SFTP. SFTP path: /home/krewe-uat-sftp/netsuite/cashsale/export/archive
+A feed file for these orders is prepared and kept on SFTP. SFTP path: /home/{sftpUserName}/netsuite/cashsale/export/archive
 “HC_SC_ImportCashSale” Suitescript will download the CSV file from SFTP and create sales records in NetSuite. To check whether the CSV file is successfully imported: Customisation>Import/Export>View CSV records
 “HC_MR_ExportedCashSalesCSV” will export the CSV file with NetSuite internal id value and put it on the SFTP.
 “Order Identification” job in OMS will consume the CSV file from SFTP and make Order Identification records in OMS.
