@@ -2,7 +2,6 @@
 
 Effective stock management relies on proficient location management. To enable store associates to establish precise locations for managing stock, which will ease in receiving and storing inventory, as well as facilitating the picking process, ​​retailers can define specific locations within facilities, such as Aisle, Section, Level, or Position. Users can manage locations in the facility using the `Locations` tab in the footer on the `Facility details` page. 
 
-&nbsp;
 
 **Add Location**
 
@@ -27,7 +26,6 @@ Finally, Click on the `save` icon to save the location within the facility.
 Video: Add Locations
 {% endembed %}
 
-&nbsp;
 
 **Edit Location**
 
@@ -35,7 +33,6 @@ Video: Add Locations
 2. Select the `Edit Location` button and edit the required fields that need to be updated.
 3. Click on the `save` icon to update the location details.
 
-&nbsp;
 
 **Remove Location**
 
