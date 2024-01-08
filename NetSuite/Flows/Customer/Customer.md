@@ -1,7 +1,10 @@
 # Customer Feed
-Implementing a customer data sync process from our HotWax to NetSuite. 
-This synchronization is designed to ensure that customer information remains consistent and up-to-date across both systems. By establishing this integration.
-After the successful sync of customer data with NetSuite, the corresponding 'NetSuite_Customer_Id' will be automatically assigned and recorded in the Party Identification entity.
+
+To successfully create a sales order in NetSuite, it is a prerequisite to have the customer information pre-existing within NetSuite's database. Therefore, it is important to synchronize customer data from OMS to NetSuite before order creation.
+
+This integration flow is responsible to send the customer information from OMS to NetSuite. To ensure that the customer data is not repeatedly sent to NetSuite, this flow uses the NetSuite Customer ID to filter out the customers which are already sent to NetSuite.
+
+The  NetSuite Customer ID gets assigned once this file is successfully consumed and customers created in NetSuite. A separate job takes care to export these customers from NetSuite and record the ID in Party Identification entity on OMS. The Party Identification Type ID used for this is 'NETSUITE_CUSTOMER_ID'. 
 
 ### CSV Schema
 
