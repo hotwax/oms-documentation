@@ -25,7 +25,7 @@ Certain settings are essential for every Product Store to ensure efficient opera
 
 Furthermore, retailers can configure additional settings based on the specific business needs of Krewe:
 
-| **Store Settings **       | **Description**                                                                                                      | **Value**  |
+| **Store Settings**       | **Description**                                                                                                      | **Value**  |
 |-----------------------|------------------------------------------------------------------------------------------------------------------|--------|
 | RTN_RSTCK_FAC         | This configuration allows users to specify the facility where returns are restocked. When a return is processed and restocked, the inventory for that particular facility increases accordingly. | WH     |
 | PRICE_LEVEL_NETSUITE  | This configuration allows users to send price levels to NetSuite instead of actual prices. NetSuite identifies item prices based on these assigned price levels. | "Base Price (MSRP)" |
