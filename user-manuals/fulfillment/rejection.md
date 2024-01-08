@@ -57,3 +57,24 @@ From the in-progess screen, click on the ​'Reject All' icon at the top right c
 {% embed url="https://youtu.be/fCEWxw6guGA" %}
 Video: Reject in progress orders in bulk
 {% endembed %}
+
+# Manage Reasons
+
+Retailers can configure which rejection reasons they want to offer for their staff to choose from if they're unable to fulfill items in an order. This section walks through how those reasons are managed in the OMS today.
+
+They can also configure whether a rejection reason from the fulfillment app should impact inventory at the store. Users have the flexibility to choose whether specific rejection reasons result in an actual change to the store's inventory or merely serve as a rejection without affecting stock levels.
+
+## Configuration Details
+
+If the reason (Enumeration) `enumTypeId` is not `REPORT_NO_VAR`, the rejection will impact inventory. If inventory should be depleted when a rejection reason is used, `REPORT_VAR` `enumTypeId` will lead to changes in store inventory.
+
+#### Out Of The Box Rejection Reasons
+
+| Enum Id           | Enum Type Id       | Enum Code         | Sequence Id | Description      | Enum Name       | Sequence Num |
+|-------------------|--------------------|-------------------|-------------|------------------|-----------------|--------------|
+| INACTIVE_STORE    | REPORT_NO_VAR      | INACTIVE_STORE    | 40          | Inactive store   |                 |              |
+| MISMATCH          | REPORT_VAR         | MISMATCH          | 40          | Mismatch         |                 |              |
+| NOT_IN_STOCK      | REPORT_ALL_VAR     | NOT_IN_STOCK      | 10          | Not in Stock     |                 |              |
+| NO_VARIANCE_LOG   | REPORT_NO_VAR      | NO_VARIANCE_LOG   | 40          | No variance      |                 |              |
+| REJ_RSN_DAMAGED   | REPORT_VAR         | DAMAGED           | 30          | Damaged          |                 |              |
+| WORN_DISPLAY      | REPORT_VAR         | WORN_DISPLAY      | 20          | Worn Display     |                 |              |
