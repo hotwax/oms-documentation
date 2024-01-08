@@ -7,3 +7,4 @@
 * [Products](flows/products/README.md)
 * [Inventory](flows/inventory/README.md)
 * [Easy Post Integration](carriers/easyPost.md)
+* [Product store](flows/product-store/readme.md)
