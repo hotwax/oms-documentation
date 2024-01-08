@@ -3,6 +3,13 @@
 ### Requirement
 Prepare the Inventory Variance CSV file format which will be used to update the product inventory in HotWax for POS In-Store orders that are in the completed status.
 
+This is a sample JSON containing records of a Deduct Inventory in HotWax for In-Store POS Orders feed-
+
+| facilityId | idType | idValue | availableDelta | locationSeqId | varianceReasonId | comments |
+| ---------- | ------ | ------- | -------------- | ------------- | ---------------- | -------- |
+| STORE_1818 | SKU | RX12-03 | -1.000000 | TLTLTLLL01 | VAR_INTEGR | Inventory Variance sent as part of Inventory Delta Feed for POS In-Store type of orders |
+| STORE_1818 | SKU | 19-08S | -1.000000 | TLTLTLLL01 | VAR_INTEGR | Inventory Variance sent as part of Inventory Delta Feed for POS In-Store type of orders |
+
 ### Implementation Flow
 This flow will be implemented in NiFi.
 1. Using SQL, fetch the product inventory for In-Store POS orders that are in the completed status.
