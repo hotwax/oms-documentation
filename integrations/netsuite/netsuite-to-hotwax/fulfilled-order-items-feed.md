@@ -87,3 +87,12 @@ Streamline the process to read the Fulfilled Order Items Feed CSV file format se
 1. **shippedDate**
    1. From NetSuite, the shippedDate format in the Fulfilled Order Items Feed CSV is 7/3/2023 6:36 am (M/D/YYYY hh:mm am/pm).
    2. But at HotWax the required date format is 'YYYY-MM-DD HH:MM:SS'.
+   3. Below is the custom implementation made in the NiFi to prepare the required date format of HotWax.
+      1. In the ConvertRecord processor, Record Reader and Record Writer are the mandatory properties to configure the ConvertRecord processor to read the certain file format and convert it to another file format.   
+      2. Since the NetSuite feed file in the CSV format, Record Reader is set to CSVReader and Record Writer is set to JSONRecordWriter which are the controller services.
+         1. **CSVReader** 
+            1. Using **Schema Text** property defined the CSV schema, and added the logicalType as 'timestamp-micros' for the date field in the schema.
+            2. In the **Timestamp Format** property added the value as 'MM/dd/yyyy hh:mm a'.
+            
+         2. **JSONRecordWriter**
+            1. In the **Timestamp Format** property added the value as 'yyyy-MM-dd HH:mm' to align with the required format (YYYY-MM-DD HH:MM:SS).
