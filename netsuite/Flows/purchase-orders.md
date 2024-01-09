@@ -26,12 +26,11 @@ Here's how purchase order fields are mapped in NetSuite and HotWax Commerce:
 
 | S.No. | Fields in NetSuite                       | Fields in HotWax Commerce |
 | ----- | ---------------------------------------- | ------------------------- |
-| 1     | Internal ID                              | Order External ID         |
-| 2     | Line ID                                  | Order Item External ID    |
-| 3     | Item                                     | Product ID                |
-| 4     | Quantity                                 | Quantity                  |
-| 5     | Location                                 | Facility ID               |
-| 6     | OrderItemShipGroup.estimatedDeliveryDate | Expected Receipt Date     |
+| 1     | Internal ID                              | External ID               |
+| 2     | Item                                     | Product ID                |
+| 3     | Quantity                                 | Quantity                  |
+| 4     | Location                                 | Facility ID               |
+| 5     | OrderItemShipGroup.estimatedDeliveryDate | Expected Receipt Date     |
 
 **SuiteScript**
 
