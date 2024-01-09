@@ -16,7 +16,6 @@ This document presents pages and functions where the user performs various actio
 * Settings page
 
 
-
 ***
 
 ### **Search Product page** <a href="#_ro7603c0etu6" id="_ro7603c0etu6"></a>
