@@ -10,9 +10,9 @@ To circumvent such complexities and ensure a seamless process, a strategic shift
 Orders will only be allocated for fulfillment after they have been approved.
 {% endhint %}
 
-## Synchronize Customers from HotWax Commerce to Netsuite
+## Synchronize Customers from HotWax Commerce to NetSuite
 
-To successfully create a sales order in NetSuite, [it is a prerequisite to have the customer information pre-existing within Netsuite's database](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section\_162886247923.html#Best-Practices-for-Order-Sync). If the order contains a new customer not present in NetSuite, the system won't allow the order to be pushed. Therefore, it's vital to synchronize customer data from HotWax Commerce to NetSuite before order creation.
+To successfully create a sales order in NetSuite, [it is a prerequisite to have the customer information pre-existing within NetSuite's database](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section\_162886247923.html#Best-Practices-for-Order-Sync). If the order contains a new customer not present in NetSuite, the system won't allow the order to be pushed. Therefore, it's vital to synchronize customer data from HotWax Commerce to NetSuite before order creation.
 
 **Actions**
 
@@ -46,7 +46,7 @@ HC_SC_ImportCustomer
 
 #### Export customers IDs from NetSuite and import into HotWax
 
-Once customers are created in NetSuite, a scheduled script exports recenlty created customers in a file at an SFTP location to be imported by HotWax Commerce. After HotWax imports this file, the OMS now has confirmation of customer syncronization.
+Once customers are created in NetSuite, a scheduled script exports recently created customers in a file at an SFTP location to be imported by HotWax Commerce. After HotWax imports this file, the OMS now has confirmation of customer synchronization.
 
 **SuiteScripts**
 
@@ -85,7 +85,7 @@ Item level discounts have special handling as well. They are synced as a separat
 
 #### Item Price
 
-The price for products is not sent by HotWax when the order syncs to NetSuite. Instead NetSuite automatically adds the value of the product apon order creation based on the price of the product in NetSuite.
+The price for products is not sent by HotWax when the order syncs to NetSuite. Instead NetSuite automatically adds the value of the product upon order creation based on the price of the product in NetSuite.
 
 #### Tax Codes
 
@@ -211,7 +211,7 @@ FTP Config: IMP_ORDER_IDENT
 
 ## Approval of Sales Order
 
-This step involves marking of orders as "Approved" for further processing and fulfillment.This step ensures that orders are appropriately marked "Approved" once all necessary details and required references are established. This authorization triggers the routing of orders to their designated fulfillment locations.
+This step involves marking of orders as "Approved" for further processing and fulfillment. This step ensures that orders are appropriately marked "Approved" once all necessary details and required references are established. This authorization triggers the routing of orders to their designated fulfillment locations.
 
 **Actions**
 
