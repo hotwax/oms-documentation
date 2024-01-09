@@ -18,14 +18,14 @@ The procurement process begins within the NetSuite ERP system, where Purchase Or
 
 Here's how purchase order fields are mapped in NetSuite and HotWax Commerce:
 
-| S.No. | Fields in NetSuite                       | Fields in HotWax Commerce     |
-| ----- | ---------------------------------------- | ----------------------------- |
-| 1     | Internal ID                              | OrderHeader.externalId        |
-| 2     | Line ID                                  | OrderItem.externalId          |
-| 3     | Item                                     | OrderItem.productId           |
-| 4     | Quantity                                 | OrderItem.quantity            |
-| 5     | Location                                 | OrderItemShipGroup.facilityId |
-| 6     | OrderItemShipGroup.estimatedDeliveryDate | Expected Receipt Date         |
+| S.No. | Fields in NetSuite                       | Fields in HotWax Commerce |
+| ----- | ---------------------------------------- | ------------------------- |
+| 1     | Internal ID                              | Order External ID         |
+| 2     | Line ID                                  | Order Item External ID    |
+| 3     | Item                                     | Product ID                |
+| 4     | Quantity                                 | Quantity                  |
+| 5     | Location                                 | Facility ID               |
+| 6     | OrderItemShipGroup.estimatedDeliveryDate | Expected Receipt Date     |
 
 ### Export Purchase Orders from NetSuite
 
