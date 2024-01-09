@@ -18,24 +18,15 @@ This scenario emphasizes the synchronization of Transfer Orders from NetSuite to
 
 Transfer Orders are initiated within the NetSuite ERP system, facilitating the internal transfer of inventory from warehouses to stores or between stores.
 
-Here's how transfer orders fields are mapped in NetSuite and HotWax Commerce:
-
-| S.No. | Fields in NetSuite | Fields in HotWax Commerce             |
-| ----- | ------------------ | ------------------------------------- |
-| 1     | Order#             | ShipmentAttribute.attrValue           |
-| 2     | Internal ID        | External ID                           |
-| 3     | Item               | Product ID                            |
-| 4     | Quantity           | Quantity                              |
-| 5     | Line ID            | Shipment Item External ID             |
-| 6     | From Location      | Origin Facility ID                    |
-| 7     | To Location        | Destination Facility ID               |
-| 8     | Tracking#          | ShipmentRouteSegment.trackingIdNumber |
-
 ### Export Transfer Orders from NetSuite
 
 Similar to Purchase Orders, a Map Reduce Script is executed. This script runs a specific Saved Search to identify Transfer Orders in "Pending" status within NetSuite. It compiles the relevant data into a CSV file, which is then securely placed in an SFTP location.
 
 The script runs periodically, typically every 15 minutes, to ensure it fetches only the latest and pending Transfer Orders from NetSuite, optimizing efficiency.
+
+Here's how transfer orders fields are mapped in NetSuite and HotWax Commerce:
+
+<table><thead><tr><th width="155">S.No.</th><th>Fields in NetSuite</th><th>Fields in HotWax Commerce</th></tr></thead><tbody><tr><td>1</td><td>Order#</td><td>ShipmentAttribute.attrValue</td></tr><tr><td>2</td><td>Internal ID</td><td>External ID</td></tr><tr><td>3</td><td>Item</td><td>Product ID</td></tr><tr><td>4</td><td>Quantity</td><td>Quantity</td></tr><tr><td>5</td><td>Line ID</td><td>Shipment Item External ID</td></tr><tr><td>6</td><td>From Location</td><td>Origin Facility ID</td></tr><tr><td>7</td><td>To Location</td><td>Destination Facility ID</td></tr><tr><td>8</td><td>Tracking#</td><td>ShipmentRouteSegment.trackingIdNumber</td></tr></tbody></table>
 
 **SuiteScripts**
 
