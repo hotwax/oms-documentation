@@ -53,6 +53,7 @@
   * [Pre-order Allocation](pre-orders/pre-order-allocation.md)
   * [Release Pre-orders](pre-orders/release-pre-orders.md)
   * [Reports](pre-orders/reports.md)
+* [Shipping Box](carrier-management/shipping-box.md)
 
 ## Inventory
 
