@@ -26,7 +26,7 @@ The script runs periodically, typically every 15 minutes, to ensure it fetches o
 
 Here's how transfer orders fields are mapped in NetSuite and HotWax Commerce:
 
-<table><thead><tr><th width="155">S.No.</th><th>Fields in NetSuite</th><th>Fields in HotWax Commerce</th></tr></thead><tbody><tr><td>1</td><td>Order#</td><td>ShipmentAttribute.attrValue</td></tr><tr><td>2</td><td>Internal ID</td><td>External ID</td></tr><tr><td>3</td><td>Item</td><td>Product ID</td></tr><tr><td>4</td><td>Quantity</td><td>Quantity</td></tr><tr><td>5</td><td>Line ID</td><td>Shipment Item External ID</td></tr><tr><td>6</td><td>From Location</td><td>Origin Facility ID</td></tr><tr><td>7</td><td>To Location</td><td>Destination Facility ID</td></tr><tr><td>8</td><td>Tracking#</td><td>ShipmentRouteSegment.trackingIdNumber</td></tr></tbody></table>
+<table><thead><tr><th width="155">S.No.</th><th>Fields in NetSuite</th><th>Fields in HotWax Commerce</th></tr></thead><tbody><tr><td>1</td><td>Order#</td><td>ShipmentAttribute.attrValue</td></tr><tr><td>2</td><td>Internal ID</td><td>External ID</td></tr><tr><td>3</td><td>Item</td><td>Product ID</td></tr><tr><td>4</td><td>Quantity</td><td>Quantity</td></tr><tr><td>5</td><td>To Location</td><td>Destination Facility ID</td></tr><tr><td>6</td><td>Tracking#</td><td>ShipmentRouteSegment.trackingIdNumber</td></tr></tbody></table>
 
 **SuiteScripts**
 
