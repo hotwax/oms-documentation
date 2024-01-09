@@ -1,14 +1,13 @@
-# Catalog Page
+# Catalog
 
-Displays all the products available for store pickup options at Ecom stores, with respective inventory availability. Provides an overview of individual product descriptions of available inventory across all facilities. Individual details can also be viewed for each product variant.
+The Catalog can be accessed by clicking on the `Catalog` button on the bottom tab of the BOPIS app. It displays a list of all the products available for store pickup on the e-commerce platform, and it can be used to search for products, view product details, and their check inventory availability.
 
-1. **Search Product**
+### Search Product
 
-Search product by entering product names or product id to quickly find products, available for store pickup options at eCom stores using the search bar.
+The users can search for a specific product within the catalog by entering the product name or product ID in the `Search` bar located at the top of the Catalog page.
 
-2. **View Product Details**
+### View Product Details
 
-Select a product to view product details with available inventory for all variants.\
-By clicking on the other stores in stock quantity on the product details page, a pop up menu will appear showcasing the other stores inventory for that product.
+On clicking any specific product card, the users will be redirected to the `Product details` page. The product details page provides an overview of the product including its image, available variants and their respective inventory across all the associated facilities. By clicking on the stock quantity button next to the `Other stores` option, a pop-up window will appear displaying the inventory for that product in the other facilities. 
 
 <figure><img src="../../.gitbook/assets/Screenshot 2024-01-01 at 11.56.13 PM.png" alt=""><figcaption><p>Image: Catalog Page</p></figcaption></figure>
