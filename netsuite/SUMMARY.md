@@ -29,7 +29,7 @@
   * [Shipping Methods](Flows/SalesOrder/ShippingMethods.md)
   * [POS Orders](Flows/SalesOrder/posOrders.md)
   * [Reports](Flows/SalesOrder/reports.md)
-* [Transfer Orders](Flows/transfer-order/README.md)
+* [Transfer Orders](supported-integrations/transfer-orders/README.md)
   * [Transfer Order](Flows/transfer-order/TransferOrders.md)
   * [Reports](Flows/transfer-order/reports.md)
 * [Cycle Count](Flows/cycle-count.md)
