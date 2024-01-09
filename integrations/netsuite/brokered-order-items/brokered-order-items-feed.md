@@ -1,15 +1,12 @@
 ### Brokered Order Items Feed HotWax to NetSuite
 
+Streamline the process of transferring the brokered order items from HotWax to NetSuite by introducing an automated system for preparing the CSV file format with the required details of the brokered order items.
+
 ### Sample CSV schema of Brokered Order Items Feed For NetSuite
 | Line Id | External Id | Item  | Closed | Quantity | Location |
 |---------|-------------|-------|--------|----------|----------|
 | 1       | KR16360     | 28198 |        |          | 114      |
 | 5       | KR16360     | 28198 |        |          | 114      |
-
-
-### Requirement
-
-Streamline the process of transferring the brokered order items from HotWax to NetSuite by introducing an automated system for preparing the CSV file format with the required details of the brokered order items.
 
 ### Design and Decisions
 1. First, the Brokered Order Items Feed HotWax JSON will be generated using Moqui, and it will be kept on the SFTP.
