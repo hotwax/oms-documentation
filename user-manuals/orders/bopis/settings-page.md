@@ -10,7 +10,7 @@ Users can use this setting to select the facility they want to operate from. Ord
 If an order is rejected by the store, the customer receives an email notifying them of the rejection and outlining the alternate fulfillment options that are available. Users can use toggle buttons to conveniently enable or disable permissions for various aspects of the orders that customers are allowed to edit when updating their orders on Re-route Fulfillment. 
    * **Delivery Method:** Enable or disable the permission for customers to edit the delivery method for their orders. 
    * **Delivery Address:** Enable or disable the permission for customers to edit the delivery address for their orders. 
-   * **Pick up Location:** Enable or disable the permission for customers to edit the pick up location for their orders. 
+   * **Pickup Location:** Enable or disable the permission for customers to edit the pickup location for their orders. 
    * **Cancel Order Before Fulfillment:** Enable or disable the permission for customers to cancel their order before it’s fulfilled. 
    * **Shipment Method:** Allow the customers to edit the shipment method for their orders using a dropdown menu with available options. 
  
@@ -33,12 +33,12 @@ For stores managing both `BOPIS` and `Ship from Store` orders, switching between
 Packing slips help customers reconcile their orders against the delivered items. Store managers can use the Generate Packing Slip toggle to control whether or not packing slips are generated for orders.
 
 #### Track Pickers
-Store managers can assign store pick up orders to store associates and track associates who picked orders, by entering their picker IDs when packing an order. They can use the `Track Pickers` toggle to enable tracking. This is essential to manage picker commission.
+Store managers can assign store pickup orders to store associates and track associates who picked orders, by entering their picker IDs when packing an order. They can use the `Track Pickers` toggle to enable tracking. This is essential to manage picker commission.
 
 #### Notification Preferences
 Users can select the notifications they want to receive in the BOPIS app.
    * **New order notification:** Enable or disable notifications for any new orders. 
    * **Open order notification:** Enable or disable notifications for pending open orders. 
-   * **Ready for pick up order notification:** Enable or disable notifications for orders that are ready to be picked up by customers. 
+   * **Ready for pickup order notification:** Enable or disable notifications for orders that are ready to be picked up by customers. 
 
 
