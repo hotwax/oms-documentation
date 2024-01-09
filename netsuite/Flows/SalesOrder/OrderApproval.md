@@ -71,6 +71,28 @@ FTP Config: IMP_PARTY_IDENT
 
 Capturing orders in HotWax Commerce initiates the creation of orders in "created" status. In this step, created sales orders are pushed from HotWax Commerce to NetSuite for further processing.
 
+#### Export new orders to NetSuite
+
+A job in HotWax Commerce Integration platform creates a CSV file of orders in "created" status that have not yet been sent to NetSuite. When creating this file HotWax Commerce also ensures that the customer already exists in NetSuite using the customer ID saved in the last step.
+
+The file contains details such as unit prices, order adjustments, and shipping costs, excluding direct tax amounts. HotWax Commerce omits the tax amount from the file and sends tax codes for the individual order items because NetSuite independently computes the taxes based on these codes and applies them accurately to each order item, ensuring precise tax calculations within NetSuite.
+
+#### Order and Item Discounts
+
+If an order has a discount code applied to it, during order sync to NetSuite, HotWax checks if the applied code is available in NetSuite. If the code is available then the exact code is used and the value of the discount is shared as the "Rate". In the event that the code is not available in NetSuite, HotWax will use a default discount code 'SHOPIFY DISCOUNT' along with the value of the discount.
+
+Item level discounts have special handling as well. They are synced as a separate line item in the order using a "SHOPIFY DISCOUNT ITEM" item, however HotWax does not send an order line id for this item. The amount of the adjustment is added in the "Amount" field when preparing the CSV for NetSuite and the "Price Level" is always set to "Custom".
+
+#### Item Price
+
+The price for products is not sent by HotWax when the order syncs to NetSuite. Instead NetSuite automatically adds the value of the product apon order creation based on the price of the product in NetSuite.
+
+#### Tax Codes
+
+For retailers that use Avatax, the Tax Code and Shipping Tax Code will always contain "AVATAX" when sent from HotWax. Avalara Tax calculation will automatically compute taxes on the order in NetSuite when the order is created.
+
+Here's how sales order fields are mapped in HotWax Commerce and NetSuite:
+
 | S.No. | Fields in HotWax Commerce                   | Fields in NetSuite     |
 | ----- | ------------------------------------------- | ---------------------- |
 | 1     | Shopify Order Name                          | PO#                    |
@@ -96,26 +118,6 @@ Capturing orders in HotWax Commerce initiates the creation of orders in "created
 | 21    | Communications (communicationEvent.content) | Memo                   |
 | 22    | ProductStore.externalId                     | Subsidiary             |
 | 23    | OrderContactMech                            | Email                  |
-
-#### Export new orders to NetSuite
-
-A job in HotWax Commerce Integration platform creates a CSV file of orders in "created" status that have not yet been sent to NetSuite. When creating this file HotWax Commerce also ensures that the customer already exists in NetSuite using the customer ID saved in the last step.
-
-The file contains details such as unit prices, order adjustments, and shipping costs, excluding direct tax amounts. HotWax Commerce omits the tax amount from the file and sends tax codes for the individual order items because NetSuite independently computes the taxes based on these codes and applies them accurately to each order item, ensuring precise tax calculations within NetSuite.
-
-#### Order and Item Discounts
-
-If an order has a discount code applied to it, during order sync to NetSuite, HotWax checks if the applied code is available in NetSuite. If the code is available then the exact code is used and the value of the discount is shared as the "Rate". In the event that the code is not available in NetSuite, HotWax will use a default discount code 'SHOPIFY DISCOUNT' along with the value of the discount.
-
-Item level discounts have special handling as well. They are synced as a separate line item in the order using a "SHOPIFY DISCOUNT ITEM" item, however HotWax does not send an order line id for this item. The amount of the adjustment is added in the "Amount" field when preparing the CSV for NetSuite and the "Price Level" is always set to "Custom".
-
-#### Item Price
-
-The price for products is not sent by HotWax when the order syncs to NetSuite. Instead NetSuite automatically adds the value of the product apon order creation based on the price of the product in NetSuite.
-
-#### Tax Codes
-
-For retailers that use Avatax, the Tax Code and Shipping Tax Code will always contain "AVATAX" when sent from HotWax. Avalara Tax calculation will automatically compute taxes on the order in NetSuite when the order is created.
 
 ### Handling NetSuite file size limits
 
