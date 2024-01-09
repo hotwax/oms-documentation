@@ -22,6 +22,29 @@ HotWax identifies POS completed orders that need to be synced to NetSuite by che
 
 Orders that match these criteria are exported to an SFTP location in a CSV file.
 
+Here's how POS order fields are mapped in HotWax Commerce and NetSuite:
+
+| S.No. | Fields in HotWax Commerce   | Fields in NetSuite     |
+| ----- | --------------------------- | ---------------------- |
+| 1     | Shopify Order Name          | PO#                    |
+| 2     | Order ID                    | External ID            |
+| 3     | NetSuite Order ID           | Internal ID            |
+| 4     | Order Item Seq ID           | External Order Line ID |
+| 5     | NetSuite Item Line Id       | Line ID                |
+| 6     | Shopify Order ID            | HC Shopify Order ID    |
+| 7     | Sales Channel               | HC Sales Channel       |
+| 8     | Order Date                  | Date                   |
+| 9     | Bill to Party               | Customer               |
+| 10    | Product                     | Item                   |
+| 11    | Quantity                    | Quantity               |
+| 12    | Price Level NetSuite        | Price Level            |
+| 13    | Order Item Tax Code         | Tax Code               |
+| 14    | ProductPromo.productPromoId | Discount Item          |
+| 15    | OrderAdjustment.amount      | Rate                   |
+| 16    | Shipping Address            | Shipping Address       |
+| 17    | Ship From                   | Location               |
+| 18    | Product Store External ID   | Subsidiary             |
+
 **SFTP Locations**
 
 ```
