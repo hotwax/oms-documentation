@@ -16,6 +16,12 @@ In this scenario, when a Purchase Order is raised in NetSuite's ERP system, it n
 
 The procurement process begins within the NetSuite ERP system, where Purchase Orders are generated to replenish inventory in physical stores. This step is integral to initiating the flow of inventory into the retail locations.
 
+### Export Purchase Orders from NetSuite
+
+To initiate the synchronization process, a Map Reduce Script, running a specific Saved Search, identifies Purchase Orders in "Pending" status within NetSuite. This script compiles the relevant Purchase Order data into a CSV file, which is then placed in an SFTP location.
+
+This Map Reduce script runs at regular intervals, typically every 15 minutes, ensuring that only the latest and pending Purchase Orders are fetched from NetSuite. It is meticulously designed to minimize the data transferred and processed, maintaining optimal efficiency.
+
 Here's how purchase order fields are mapped in NetSuite and HotWax Commerce:
 
 | S.No. | Fields in NetSuite                       | Fields in HotWax Commerce |
@@ -26,12 +32,6 @@ Here's how purchase order fields are mapped in NetSuite and HotWax Commerce:
 | 4     | Quantity                                 | Quantity                  |
 | 5     | Location                                 | Facility ID               |
 | 6     | OrderItemShipGroup.estimatedDeliveryDate | Expected Receipt Date     |
-
-### Export Purchase Orders from NetSuite
-
-To initiate the synchronization process, a Map Reduce Script, running a specific Saved Search, identifies Purchase Orders in "Pending" status within NetSuite. This script compiles the relevant Purchase Order data into a CSV file, which is then placed in an SFTP location.
-
-This Map Reduce script runs at regular intervals, typically every 15 minutes, ensuring that only the latest and pending Purchase Orders are fetched from NetSuite. It is meticulously designed to minimize the data transferred and processed, maintaining optimal efficiency.
 
 **SuiteScript**
 
