@@ -52,22 +52,25 @@ Only necessary for Multi-Shopify store configurations where a common product cat
 
 In a multi-Shopify store setup, a streamlined process needs to be implemented for product synchronization. In OMS, products are imported from a designated Master Shopify store, serving as the primary catalog. Subsequently, these products can be linked with products from other Shopify stores, functioning as child catalogs that share and sell the same products. Synchronization is achieved through the use of SKU or UPC, ensuring a cohesive and unified product management experience across the entire network of associated stores.
 
-### Primary Catalog Sync for Initial Configuration:
+Once the product from the master catalog is in HotWax Commerce, retailers need to associate it with child catalogs using the `Associate products with sub-catalog` job. This is a one-time action needed when initially importing all products to establish their associations,  ensuring a comprehensive association between the master catalog and child catalogs. Thereafter, regular job needs to be schedule to create association whenever a new product is created in Shopify and downloaded in HotWax Commerce.
 
-- **Purpose:** Synchronize products from the Primary catalog to HotWax Commerce.
-- **Workflow:**
-  1. Create a product in the Primary Catalog Shopify store.
-  2. Allow at least 15 minutes for automatic synchronization with HotWax Commerce.
-- **Jobs**
-  - Import new products
-  - Import product updates
+Follow these steps to schedule the job:
 
-### Child Catalog Linking:
+1. Log in to the `Job Manager` App
+2. Click on the quick switcher menu positioned at the bottom left corner of the `Job Manager app` interface and select the child store for which the association needs to be created.
+3. Navigate to the `Product` page and go to the job title `Associate products with sub-catalog`.
+4. Click on the job title to open the job card and then select the custom parameters icon to configure the job settings.
+5. Within the custom parameters modal, locate `includeAll` field and input `true` to include the products for the association.
+6. In the `scheduleNow` field, insert `N` to ensure that the job runs instantaneously.
+7. Save the changes to schedule and execute the job.
 
-- **Purpose:** Link products in child catalogs to the primary catalog using SKUs/UPCs.
-- **Workflow:**
-  - Associate products with all child catalogs in HotWax Commerce.
-- **Job:**
-  - Associate products with sub-catalog
+[Click here](user-manuals/job-workflows/products.md) to read about regular product association jobs.
 
-This process ensures maintaining accuracy across multiple catalogs. Adjustments can be made for a generic document applicable to various setups.
+## Verifying Associations
+
+Associations may take some time, depending on the number of products being linked. To confirm product associations, follow these steps:
+
+1. Log in to your HotWax Commerce user instance.
+2. Go to `Import Create Shopify shop product data` page by clicking [here](https://demo-oms.hotwax.io/commerce/control/ImportData?configId=IMP_SHPFY_SHOP_PROD). Change `demo-oms` with your user instance and log in to the HotWax Commerce to access the page.
+3. Check that the import status reads as `finished`.
+4. Further, you can go to the `Products` page and click on the preferred product to navigate to` Product Detail` page and see the associated shopify shop under `Shopify Shop Product` section.
