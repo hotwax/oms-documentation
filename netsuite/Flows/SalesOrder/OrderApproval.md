@@ -93,31 +93,7 @@ For retailers that use Avatax, the Tax Code and Shipping Tax Code will always co
 
 Here's how sales order fields are mapped in HotWax Commerce and NetSuite:
 
-| S.No. | Fields in HotWax Commerce                   | Fields in NetSuite     |
-| ----- | ------------------------------------------- | ---------------------- |
-| 1     | Shopify Order Name                          | PO#                    |
-| 2     | Order ID                                    | External ID            |
-| 3     | NetSuite Order ID                           | Internal ID            |
-| 4     | Order Item Seq ID                           | External Order Line ID |
-| 5     | NetSuiteItem Line ID                        | Line ID                |
-| 6     | Shopify Order ID                            | HC Shopify Order ID    |
-| 7     | Sales Channel                               | HC Sales Channel       |
-| 8     | Order Date                                  | Date                   |
-| 9     | Bill to Party                               | Customer               |
-| 10    | Product                                     | Item                   |
-| 11    | Quantity                                    | Quantity               |
-| 12    | Price Level NetSuite                        | Price Level            |
-| 13    | OrderItem.taxCode                           | Tax Code               |
-| 14    | ProductPromo.productPromoId                 | Discount Item          |
-| 15    | OrderAdjustment.amount                      | Rate                   |
-| 16    | Shipping Charges                            | Shipping Amount        |
-| 17    | Shipping Address                            | Shipping Address       |
-| 18    | Shipping Method                             | Shipping Method        |
-| 19    | Billing Address                             | Billing Address        |
-| 20    | Shipfrom (FacilityExternalId)               | Location               |
-| 21    | Communications (communicationEvent.content) | Memo                   |
-| 22    | ProductStore.externalId                     | Subsidiary             |
-| 23    | OrderContactMech                            | Email                  |
+<table><thead><tr><th width="141">S.No.</th><th>Fields in HotWax Commerce</th><th>Fields in NetSuite</th></tr></thead><tbody><tr><td>1</td><td>Shopify Order Name</td><td>PO#</td></tr><tr><td>2</td><td>Order ID</td><td>External ID</td></tr><tr><td>3</td><td>NetSuite Order ID</td><td>Internal ID</td></tr><tr><td>4</td><td>Order Item Seq ID</td><td>External Order Line ID</td></tr><tr><td>5</td><td>NetSuiteItem Line ID</td><td>Line ID</td></tr><tr><td>6</td><td>Shopify Order ID</td><td>HC Shopify Order ID</td></tr><tr><td>7</td><td>Sales Channel</td><td>HC Sales Channel</td></tr><tr><td>8</td><td>Order Date</td><td>Date</td></tr><tr><td>9</td><td>Bill to Party</td><td>Customer</td></tr><tr><td>10</td><td>Product</td><td>Item</td></tr><tr><td>11</td><td>Quantity</td><td>Quantity</td></tr><tr><td>12</td><td>Price Level NetSuite</td><td>Price Level</td></tr><tr><td>13</td><td>Order Item Tax Code</td><td>Tax Code</td></tr><tr><td>14</td><td>Product Promo</td><td>Discount Item</td></tr><tr><td>15</td><td>Order Adjustment Amount</td><td>Rate</td></tr><tr><td>16</td><td>Shipping Charges</td><td>Shipping Amount</td></tr><tr><td>17</td><td>Shipping Address</td><td>Shipping Address</td></tr><tr><td>18</td><td>Shipping Method</td><td>Shipping Method</td></tr><tr><td>19</td><td>Billing Address</td><td>Billing Address</td></tr><tr><td>20</td><td>Ship From</td><td>Location</td></tr><tr><td>21</td><td>Communications</td><td>Memo</td></tr><tr><td>22</td><td>Product Store External ID</td><td>Subsidiary</td></tr><tr><td>23</td><td>OrderContactMech</td><td>Email</td></tr></tbody></table>
 
 ### Handling NetSuite file size limits
 
