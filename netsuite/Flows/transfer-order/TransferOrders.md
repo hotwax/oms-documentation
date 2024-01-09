@@ -23,12 +23,12 @@ Here's how transfer orders fields are mapped in NetSuite and HotWax Commerce:
 | S.No. | Fields in NetSuite | Fields in HotWax Commerce             |
 | ----- | ------------------ | ------------------------------------- |
 | 1     | Order#             | ShipmentAttribute.attrValue           |
-| 2     | Internal ID        | Shipment.externalId                   |
-| 3     | Item               | ShipmentItem.productId                |
-| 4     | Quantity           | ShipmentItem.quantity                 |
-| 5     | Line ID            | ShipmentItem.externalId               |
-| 6     | From Location      | Shipment.originFacilityId             |
-| 7     | To Location        | Shipment.destinationFacilityId        |
+| 2     | Internal ID        | External ID                           |
+| 3     | Item               | Product ID                            |
+| 4     | Quantity           | Quantity                              |
+| 5     | Line ID            | Shipment Item External ID             |
+| 6     | From Location      | Origin Facility ID                    |
+| 7     | To Location        | Destination Facility ID               |
 | 8     | Tracking#          | ShipmentRouteSegment.trackingIdNumber |
 
 ### Export Transfer Orders from NetSuite
