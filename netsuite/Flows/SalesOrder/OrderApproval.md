@@ -94,7 +94,8 @@ Capturing orders in HotWax Commerce initiates the creation of orders in "created
 | 19    | Billing Address                             | Billing Address        |
 | 20    | Shipfrom (FacilityExternalId)               | Location               |
 | 21    | Communications (communicationEvent.content) | Memo                   |
-| 22    | OrderContactMech                            | Email                  |
+| 22    | ProductStore.externalId                     | Subsidiary             |
+| 23    | OrderContactMech                            | Email                  |
 
 #### Export new orders to NetSuite
 
