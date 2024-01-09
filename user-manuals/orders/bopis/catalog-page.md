@@ -11,3 +11,4 @@ The users can search for a specific product within the catalog by entering the p
 On clicking any specific product card, the users will be redirected to the `Product details` page. The product details page provides an overview of the product including its image, available variants and their respective inventory across all the associated facilities. By clicking on the stock quantity button next to the `Other stores` option, a pop-up window will appear displaying the inventory for that product in the other facilities. 
 
 <figure><img src="../../.gitbook/assets/Screenshot 2024-01-01 at 11.56.13 PM.png" alt=""><figcaption><p>Image: Catalog Page</p></figcaption></figure>
+
