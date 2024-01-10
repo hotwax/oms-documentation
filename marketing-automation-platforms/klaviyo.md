@@ -100,9 +100,9 @@ After setup, import the following data to help Klaviyo integration data mapping 
 
 ## Run service to create an Event on Klaviyo
 
-Run the sendKlaviyoEmail service to create an event on Klaviyo. To do this, go to: https://<instanceName>.hotwax.io/webtools/control/ServiceList.
+Run the createKlaviyoEvent service to create an event on Klaviyo. To do this, go to: https://<instanceName>.hotwax.io/webtools/control/ServiceList.
 
-Find the service with the name sendKlaviyoEmail, click on it, and select Run Service.
+Find the service with the name createKlaviyoEvent, click on it, and select Run Service.
 
 <!-- Add parameters here -->
 
@@ -142,5 +142,3 @@ Once you have configured the necessary settings and templates in HotWax Commerce
 
 
 By following these steps, you ensure that Klaviyo is set up to seamlessly respond to the "Ready for Pickup" event triggered by HotWax Commerce, providing a cohesive and automated customer communication experience.
-
-
