@@ -26,9 +26,9 @@ A scheduled job in HotWax Commerce operates at defined intervals to generate a C
 Identify new customers by checking the Person table for entries where the roleTypeId is 'CUSTOMER' and where the PartyIdentification record for identification type 'NETSUITE\_CUSTOMER\_ID' is not created.
 {% endhint %}
 
-Here's how customer fields are mapped in HotWax Commerce and NetSuite:
+#### Here's how customer fields are mapped in HotWax Commerce and NetSuite
 
-<table><thead><tr><th width="169">S.No.</th><th>Fields in HotWax Commerce</th><th>Fields in NetSuite</th></tr></thead><tbody><tr><td>1</td><td>Party ID</td><td>External ID</td></tr><tr><td>2</td><td>Shopify Customer ID</td><td>Internal ID</td></tr><tr><td>3</td><td>First Name</td><td>Name</td></tr><tr><td>4</td><td>Last Name</td><td>Name</td></tr><tr><td>5</td><td>Email and Phones</td><td>Email</td></tr><tr><td>6</td><td>Email and Phones</td><td>Phone</td></tr><tr><td>7</td><td>NetSuite Customer ID</td><td>HC Shopify Customer ID</td></tr><tr><td>8</td><td>Classification</td><td>Initial Lead Source</td></tr></tbody></table>
+<table><thead><tr><th width="169">S.No.</th><th>Fields in HotWax Commerce</th><th>Fields in NetSuite</th></tr></thead><tbody><tr><td>1</td><td>Shopify Customer ID</td><td>Internal ID</td></tr><tr><td>2</td><td>NetSuite Customer ID</td><td>Customer ID</td></tr><tr><td>3</td><td>First Name</td><td>Name</td></tr><tr><td>4</td><td>Last Name</td><td>Name</td></tr><tr><td>5</td><td>Email and Phones</td><td>Email</td></tr><tr><td>6</td><td>Email and Phones</td><td>Phone</td></tr></tbody></table>
 
 **SFTP Location**
 
