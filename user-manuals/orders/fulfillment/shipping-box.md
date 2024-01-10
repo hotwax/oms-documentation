@@ -4,7 +4,7 @@ Retailers employ specific packing boxes tailored to their unique product packagi
 
 This guide outlines a step-by-step process for retailers to establish and manage boxes within HotWax Commerce which can be readily accessible for store associates to specify during fulfillment.
 
-## 1. Creating Boxes in HotWax Commerce
+## Creating Boxes in HotWax Commerce
 
 Configuring boxes in the general settings ensures packaging consistency and accuracy throughout the application, aiding store associates in selecting appropriate boxes during order fulfillment. Incorrect box selection may result in extra shipping charges for retailers. Users can create shipping boxes through the following steps:
 
@@ -24,7 +24,7 @@ Configuring boxes in the general settings ensures packaging consistency and accu
 
 The added box sizes can now be mapped from in the shipment carrier setup page.
 
-## 2. Adding Shipment Boxes for Specific Carriers
+## Adding Shipment Boxes for Specific Carriers
 
 Retailers often integrate with multiple shipping carriers. When sending box details to a carrier using just the box name, this association helps the carrier identify the box size and calculate shipping costs accordingly. Users can associate the shipment boxes for shipment carriers through the following steps:
 
