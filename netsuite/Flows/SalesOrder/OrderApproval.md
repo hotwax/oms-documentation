@@ -28,7 +28,7 @@ Identify new customers by checking the Person table for entries where the roleTy
 
 #### Here's how customer fields are mapped in HotWax Commerce and NetSuite
 
-<table><thead><tr><th width="169">S.No.</th><th>Fields in HotWax Commerce</th><th>Fields in NetSuite</th></tr></thead><tbody><tr><td>1</td><td>Shopify Customer ID</td><td>HC Shopify Customer ID</td></tr><tr><td>2</td><td>NetSuite Customer ID</td><td>Customer ID</td></tr><tr><td>3</td><td>Name</td><td>Name</td></tr><tr><td>4</td><td>Emails</td><td>E-mail</td></tr><tr><td>5</td><td>Phones</td><td>Phone</td></tr></tbody></table>
+<table><thead><tr><th width="138">S.No.</th><th>Fields in HotWax Commerce</th><th>Fields in NetSuite</th></tr></thead><tbody><tr><td>1</td><td>Shopify Customer ID</td><td>HC Shopify Customer ID</td></tr><tr><td>2</td><td>NetSuite Customer ID</td><td>Internal Customer ID</td></tr><tr><td>3</td><td>Name</td><td>Name</td></tr><tr><td>4</td><td>Emails</td><td>E-mail</td></tr><tr><td>5</td><td>Phones</td><td>Phone</td></tr></tbody></table>
 
 **SFTP Location**
 
@@ -95,9 +95,9 @@ The price for products is not sent by HotWax when the order syncs to NetSuite. I
 
 For retailers that use Avatax, the Tax Code and Shipping Tax Code will always contain "AVATAX" when sent from HotWax. Avalara Tax calculation will automatically compute taxes on the order in NetSuite when the order is created.
 
-Here's how sales order fields are mapped in HotWax Commerce and NetSuite:
+[#heres-how-sales-order-fields-are-mapped-in-hotwax-commerce-and-netsuite](OrderApproval.md#heres-how-sales-order-fields-are-mapped-in-hotwax-commerce-and-netsuite "mention")
 
-<table><thead><tr><th width="141">S.No.</th><th>Fields in HotWax Commerce</th><th>Fields in NetSuite</th></tr></thead><tbody><tr><td>1</td><td>Shopify Order Name</td><td>PO#</td></tr><tr><td>2</td><td>Order ID</td><td>External ID</td></tr><tr><td>3</td><td>NetSuite Order ID</td><td>Internal ID</td></tr><tr><td>4</td><td>NetSuite Item Line ID</td><td>Line ID</td></tr><tr><td>5</td><td>Shopify Order ID</td><td>HC Shopify Order ID</td></tr><tr><td>6</td><td>Sales Channel</td><td>HC Sales Channel</td></tr><tr><td>7</td><td>Order Date</td><td>Date</td></tr><tr><td>8</td><td>Bill To</td><td>Customer</td></tr><tr><td>9</td><td>Product</td><td>Item</td></tr><tr><td>10</td><td>Qty</td><td>Quantity</td></tr><tr><td>11</td><td>Order Adjustment Amount</td><td>Rate</td></tr><tr><td>12</td><td>Shipping Charges</td><td>Shipping Amount</td></tr><tr><td>13</td><td>Ship To</td><td>Shipping Address</td></tr><tr><td>14</td><td>Ship Method</td><td>Shipping Method</td></tr><tr><td>15</td><td>Bill To</td><td>Billing Address</td></tr><tr><td>16</td><td>Ship From</td><td>Location</td></tr><tr><td>17</td><td>Communications</td><td>Memo</td></tr></tbody></table>
+<table><thead><tr><th width="131">S.No.</th><th>Fields in HotWax Commerce</th><th>Fields in NetSuite</th></tr></thead><tbody><tr><td>1</td><td>NetSuite Sales Order ID</td><td>Internal Sales Order ID </td></tr><tr><td>2</td><td>Shopify Order ID</td><td>HC Shopify Order ID</td></tr><tr><td>3</td><td>Shopify Order Name</td><td>PO#</td></tr><tr><td>4</td><td>Sales Channel</td><td>HC Sales Channel</td></tr><tr><td>5</td><td>Bill To</td><td>Customer</td></tr><tr><td>6</td><td>Order Date</td><td>Date</td></tr><tr><td>7</td><td>Product</td><td>Item</td></tr><tr><td>8</td><td>Qty</td><td>Quantity</td></tr><tr><td>9</td><td>Ship To</td><td>Shipping Address</td></tr><tr><td>10</td><td>Ship Method</td><td>Shipping Method</td></tr><tr><td>11</td><td>Ship From</td><td>Location</td></tr><tr><td>12</td><td>Communications</td><td>Memo</td></tr></tbody></table>
 
 ### Handling NetSuite file size limits
 
