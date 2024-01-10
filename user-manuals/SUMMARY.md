@@ -41,6 +41,7 @@
   * [Picking App](fulfillment/pickingApp.md)
   * [CSV Support](fulfillment/csvSupport.md)
   * [Reports](fulfillment/reports.md)
+  * [Create Shipping Boxes](orders/fulfillment/shipping-box.md)
 * [Brokering](orders/brokering/README.md)
   * [Order Routing](brokering/configurableRouting.md)
   * [Rule Builder](brokering/rule-builder.md)
@@ -53,7 +54,6 @@
   * [Pre-order Allocation](pre-orders/pre-order-allocation.md)
   * [Release Pre-orders](pre-orders/release-pre-orders.md)
   * [Reports](pre-orders/reports.md)
-* [Shipping Box](carrier-management/shipping-box.md)
 
 ## Inventory
 
@@ -78,6 +78,6 @@
   * [Configure Online Fulfillment](facilities/configure-fulfillment.md)
   * [Configure Fulfillment Capacity](administration/facilities/configure-fulfillment-capacity.md)
   * [Manage facility Staff](administration/facilities/manage-facility-staff.md)
-  * [Manage Locations](facilities/manage-staff-and-locations.md)
-* [Shipping Methods](administration/README.md)
+  * [Manage Locations](administration/facilities/manage-locations.md)
+* [Shipping Methods](administration/shipping-methods/README.md)
   * [Create Carrier](administration/shipping-methods/add-carrier.md)
