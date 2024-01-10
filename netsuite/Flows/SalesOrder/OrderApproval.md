@@ -30,6 +30,16 @@ Identify new customers by checking the Person table for entries where the roleTy
 
 <table><thead><tr><th width="138">S.No.</th><th>Fields in HotWax Commerce</th><th>Fields in NetSuite</th></tr></thead><tbody><tr><td>1</td><td>Shopify Customer ID</td><td>HC Shopify Customer ID</td></tr><tr><td>2</td><td>NetSuite Customer ID</td><td>Internal Customer ID</td></tr><tr><td>3</td><td>Name</td><td>Name</td></tr><tr><td>4</td><td>Emails</td><td>E-mail</td></tr><tr><td>5</td><td>Phones</td><td>Phone</td></tr></tbody></table>
 
+{% tabs %}
+{% tab title="Customer Fields in HotWax Commerce" %}
+<figure><img src="../../.gitbook/assets/customer fields in hotwax.png" alt=""><figcaption><p>Customer Field Mappings in HotWax Commerce</p></figcaption></figure>
+{% endtab %}
+
+{% tab title="Customer Fields in NetSuite" %}
+<figure><img src="../../.gitbook/assets/customer fields in netsuite.png" alt=""><figcaption><p>Customer Field Mappings in NetSuite</p></figcaption></figure>
+{% endtab %}
+{% endtabs %}
+
 **SFTP Location**
 
 ```
