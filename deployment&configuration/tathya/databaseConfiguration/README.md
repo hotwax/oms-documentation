@@ -4,7 +4,7 @@ Tathya is a data exploration and visualization platform that lets users connect 
 
 Tathya itself doesn't have a storage layer to store your data but instead pairs with your existing SQL-speaking database or data store. So, to be able to query and visualize data from Tathya, you first need to add the connection credentials of your database.
 
-{% hint style="info" %}
+{% hint style="warning" %}
 Skip this step if you want to create charts for a project that has a pre-configured database.
 {% endhint %}
 
