@@ -28,7 +28,7 @@ Identify new customers by checking the Person table for entries where the roleTy
 
 #### Here's how customer fields are mapped in HotWax Commerce and NetSuite
 
-<table><thead><tr><th width="169">S.No.</th><th>Fields in HotWax Commerce</th><th>Fields in NetSuite</th></tr></thead><tbody><tr><td>1</td><td>Shopify Customer ID</td><td>Internal ID</td></tr><tr><td>2</td><td>NetSuite Customer ID</td><td>Customer ID</td></tr><tr><td>3</td><td>First Name</td><td>Name</td></tr><tr><td>4</td><td>Last Name</td><td>Name</td></tr><tr><td>5</td><td>Email and Phones</td><td>Email</td></tr><tr><td>6</td><td>Email and Phones</td><td>Phone</td></tr></tbody></table>
+<table><thead><tr><th width="169">S.No.</th><th>Fields in HotWax Commerce</th><th>Fields in NetSuite</th></tr></thead><tbody><tr><td>1</td><td>Shopify Customer ID</td><td>HC Shopify Customer ID</td></tr><tr><td>2</td><td>NetSuite Customer ID</td><td>Customer ID</td></tr><tr><td>3</td><td>Name</td><td>Name</td></tr><tr><td>4</td><td>Emails</td><td>E-mail</td></tr><tr><td>5</td><td>Phones</td><td>Phone</td></tr></tbody></table>
 
 **SFTP Location**
 
