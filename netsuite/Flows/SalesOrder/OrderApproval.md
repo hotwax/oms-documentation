@@ -32,11 +32,11 @@ Identify new customers by checking the Person table for entries where the roleTy
 
 {% tabs %}
 {% tab title="Customer Fields in HotWax Commerce" %}
-<figure><img src="../../.gitbook/assets/customer fields in hotwax.png" alt=""><figcaption><p>Customer Field Mappings in HotWax Commerce</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/customer fields in hotwax.png" alt=""><figcaption><p>Customer Fields Mapping in HotWax Commerce</p></figcaption></figure>
 {% endtab %}
 
 {% tab title="Customer Fields in NetSuite" %}
-<figure><img src="../../.gitbook/assets/customer fields in netsuite.png" alt=""><figcaption><p>Customer Field Mappings in NetSuite</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/customer fields in netsuite.png" alt=""><figcaption><p>Customer Fields Mapping in NetSuite</p></figcaption></figure>
 {% endtab %}
 {% endtabs %}
 
