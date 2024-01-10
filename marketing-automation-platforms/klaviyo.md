@@ -100,9 +100,9 @@ After setup, import the following data to help Klaviyo integration data mapping 
 
 ## Run service to create an Event on Klaviyo
 
-Run the createKlaviyoEvent service to create an event on Klaviyo. To do this, go to: https://<instanceName>.hotwax.io/webtools/control/ServiceList.
+Run the `createKlaviyoEvent` service to create an event on Klaviyo. To do this, go to: https://<instanceName>.hotwax.io/webtools/control/ServiceList.
 
-Find the service with the name createKlaviyoEvent, click on it, and select Run Service.
+Find the service with the name `createKlaviyoEvent`, click on it, and select Run Service.
 
 <!-- Add parameters here -->
 
