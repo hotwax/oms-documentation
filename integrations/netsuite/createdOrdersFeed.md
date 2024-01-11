@@ -1,4 +1,4 @@
-# Created Orders Feed 
+# Created Orders Feed from OMS to NetSuite
 
 This integration flow is responsible to send the Sales Orders information from OMS to NetSuite.
 
