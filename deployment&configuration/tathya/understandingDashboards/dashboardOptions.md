@@ -41,8 +41,5 @@ Select the ellipsis icon (3 dots) while in editing mode to view the following op
   - **Copy permalink to clipboard:** Copies a shareable chart link to the system's clipboard.
   - **Share permalink by email:** Launches the system's default email client and composes a new message featuring your chart URL.
 
-- **Manage email report (WIP)**
-  - **Set up an email report**
-
 - **Set auto-refresh interval**
   - Select to specify an automatic refresh rate for the dashboard. Options include seconds (10 or 30), minutes (1, 5, or 30), or hours (1, 6, 12, or 24). Note that this will be only applied to the current session.
