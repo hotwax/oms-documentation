@@ -2,7 +2,11 @@
 
 With roles set up to manage access to dashboards and charts, the next step is to create user profiles and assign the appropriate roles.
 
+{% hint style="warning" %}
 **Note:** Skip this step if the user is already listed on Tathya.
+{% endhint %}
+
+To initiate this process, it is essential to first “list” the user on the Tathya platform.
 
 ## Prerequisites
 
