@@ -26,7 +26,19 @@ The script runs periodically, typically every 15 minutes, to ensure it fetches o
 
 #### Here's how transfer orders fields are mapped in NetSuite and HotWax Commerce
 
-<table><thead><tr><th width="112">S.No.</th><th width="224">Fields in NetSuite</th><th>Fields in HotWax Commerce</th></tr></thead><tbody><tr><td>1</td><td>Order #</td><td>Shipment Attribute</td></tr><tr><td>2</td><td>Transfer Order Internal ID</td><td>External ID</td></tr><tr><td>3</td><td>Item</td><td>SKU</td></tr><tr><td>4</td><td>Quantity</td><td>Ordered Quantity</td></tr><tr><td>5</td><td>Destination Location</td><td>Facility</td></tr><tr><td>6</td><td>Tracking #</td><td>Tracking ID</td></tr></tbody></table>
+<table><thead><tr><th width="112">S.No.</th><th width="224">Fields in NetSuite</th><th>Fields in HotWax Commerce</th></tr></thead><tbody><tr><td>1</td><td>Order #</td><td>Shipment Attribute</td></tr><tr><td>2</td><td>Transfer Order Internal ID</td><td>External ID</td></tr><tr><td>3</td><td>Items</td><td>SKU</td></tr><tr><td>4</td><td>Quantity</td><td>Ordered Quantity</td></tr><tr><td>5</td><td>Destination Location</td><td>Facility</td></tr><tr><td>6</td><td>Tracking #</td><td>Tracking ID</td></tr></tbody></table>
+
+
+
+{% tabs %}
+{% tab title="Transfer Order Fields in NetSuite" %}
+<figure><img src="../../.gitbook/assets/TO mapping netsuite (1).png" alt=""><figcaption><p>Transfer Order Fields Mapping in HotWax Commerce</p></figcaption></figure>
+{% endtab %}
+
+{% tab title="Transfer Order Fields in HotWax Commerce" %}
+<figure><img src="../../.gitbook/assets/HC TO mappings.png" alt=""><figcaption><p>Transfer Order Fields Mapping in HotWax Commerce</p></figcaption></figure>
+{% endtab %}
+{% endtabs %}
 
 **SuiteScripts**
 
