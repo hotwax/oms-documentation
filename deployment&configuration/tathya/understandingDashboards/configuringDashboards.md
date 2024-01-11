@@ -22,7 +22,7 @@ Locate and click on the "Dashboards" option in the top navigation menu. This wil
 
 **Note:** Annotations provide additional context or explanations for specific data points, enhancing the interpretability of your dashboard.
 
-- Save your dashboard once satisfied with the layout and content.
+- Publish your dashboard once satisfied with the layout and content.
 
 # Add Charts When Editing a Dashboard
 
@@ -32,7 +32,7 @@ Navigate to the Dashboards screen and go to the dashboard to which you want to a
 - Select the Charts tab.
 - The Charts tab contains a list of all charts that you have access to (i.e., charts that you have created or a team member has shared ownership access).
 - To add a chart, just drag & drop the chart card into a space on the dashboard.
-- Save your dashboard once you have added all the required charts.
+- Publish your dashboard once you have added all the required charts.
 
 # Creating a New Chart from an Empty Dashboard
 
