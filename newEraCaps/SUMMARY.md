@@ -1,9 +1,10 @@
-# Table of Contents
+# Table of contents
 
 * [Introduction](README.md)
 * [Why HotWax Commerce](whyHotWax.md)
 
 ## Flows
+
 * [Products](flows/products/README.md)
 * [Inventory](flows/inventory/README.md)
 * [Brokering](flows/brokering/README.md)
@@ -16,7 +17,7 @@
     * [Header Item](flows/fulfillment/wmsFeed/headerItem.md)
     * [Detail Item](flows/fulfillment/wmsFeed/detailItem.md)
     * [Completed Feed](flows/fulfillment/wmsFeed/completeOrder.md)
-* [Sales Order](flows/salesOrder/README.md)
+* [Sales Order](flows/sales-order/README.md)
   * [Omnichannel Orders](flows/salesOrder/omnichannelOrders.md)
   * [Digital Items](flows/salesOrder/digital-items.md)
   * [Soft Allocation](flows/salesOrder/softAllocationFlow.md)
