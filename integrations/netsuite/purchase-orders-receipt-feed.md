@@ -1,6 +1,6 @@
 # OMS Purchase Orders Receipt Feed to NetSuite
 
-The OMS transmits the Purchase Orders Receipt Feed to Netsuite.
+Purchase Orders are created in NetSuite and synced in OMS. Once the shipments are received, the Purchase Order Shipments Receipt feed is sent to NetSuite
 
 ### Implementation Flow
 
@@ -46,9 +46,9 @@ In the NiFi flow set up to sync OMS Purchase Orders Receipt Feed, the below proc
        
 7. **PutSftp**
     1. Two PutSFTP processors are used here: the first for eligible records for NetSuite, the second for logging this feed file for OMS.
-This is a sample JSON containing records of a Purchase Orders Receipt feed-
 
-#### NetSuite OMS Purchase Orders Receipt feed Sample
+
+#### NetSuite Purchase Orders Receipt feed Sample
 If a PO has 4 items and we receive 2 items today, then the feed will include all 4 items with the first 2 items having their receipt details and the last two items having empty receipt details.
 Now, if we receive only the 3rd item by the next day, then the feed will include the 3rd item with the receipt details and the 4th item with empty receipt details. Here, the feed will not include the first two items again, as the order items were already sent in the earlier feed.
 If we receive the 4th Item now, we will include only the 4th item with its received details.
@@ -84,7 +84,7 @@ If we receive the 4th Item now, we will include only the 4th item with its recei
 Krewe_PurchaseOrderReceiptFeed_2023-12-26-16_10_00_086.json
 ```
 
-### Data model mapping
+### Data Model mMpping
 
 | Fields  | Data Type | Description | OMS Field Mapping  |
 |---------|-----------|-------------|-------------------|
