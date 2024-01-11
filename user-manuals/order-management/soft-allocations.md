@@ -40,6 +40,6 @@ By following these steps, you'll create a specialized workflow that seamlessly t
    - Go to the Hamburger Menu in OMS.
    - Navigate to Settings > Store to open the Product Store page for your dedicated store > Store Settings section.
    - Click "Add" and select the setting from the dropdown: `Preselected facility for same day shipping`. Input the value with the same tag added in Shopify `HC_PRE_SELECTED_FAC`. This setting ensures that orders imported with this tag have their line items checked for pre-selected facilities to fulfill them.
-   - Add one more setting named: `ORD_ITM_SHIP_FAC` and add value `hcShippingFacility`. This line item property on the item that needs to be read to determine the facility of the order.
+   - Add one more setting named: `Preselected facility tag` and add value `hcShippingFacility`. This line item property on the item that needs to be read to determine the facility of the order.
 
 By following these steps in both Shopify and OMS, you establish a seamless Soft Allocation flow, ensuring accurate fulfillment based on specified criteria.
