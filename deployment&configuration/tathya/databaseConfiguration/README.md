@@ -22,15 +22,27 @@ The required MySQL credentials includes the following fields:
 
 ### Host
 
+<<<<<<< HEAD
+{% hint style="info" %}
+For example, if the database is hosted on a MySQL server with the IP address 172.20.20.40, that would be the host.
+{% endhint %}
+=======
 The "host" refers to the network address or hostname of the MySQL server where your database or data source is located. It is the address that Tathya will use to reach the database.
 
 **Note:** For example, if the database is hosted on a MySQL server with the IP address 172.20.20.40, that would be the host.
+>>>>>>> 1f4416dca4e0b85b85988e54ad328589701ef932
 
 ### Port
 
+<<<<<<< HEAD
+{% hint style="info" %}
+Different types of services use different default ports, the default port for MySQL is 3306.
+{% endhint %}
+=======
 The "port" is a specific endpoint on the host machine. The port number is essential for Tathya to know where to communicate with the database service.
 
 **Note:** Different types of services use different default ports, the default port for MySQL is 3306.
+>>>>>>> 1f4416dca4e0b85b85988e54ad328589701ef932
 
 ### Database Name
 
@@ -46,6 +58,15 @@ The “display name” is how the database will display in Tathya.
 
 Choose a descriptive name for the connection. For example, if a project were named Wasatch Ski, the display name should be “Wasatch Ski OMS”
 
+<<<<<<< HEAD
+{% hint style="info" %}
+Database configuration details are usually maintained by the DevOps team so connect with them for any additional information.
+{% endhint %}
+
+{% hint style="success" %}
+=======
 **Note:** Database configuration details are usually maintained by the DevOps team so connect with them for any additional information.
 
+>>>>>>> 1f4416dca4e0b85b85988e54ad328589701ef932
 You're now ready to connect your database. Click “Connect” in the modal to proceed.
+{% endhint %}

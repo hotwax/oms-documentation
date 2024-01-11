@@ -2,7 +2,9 @@
 
 You will now be redirected to the “Main Chart Panel” where your chart is ready to view.
 
-**Note:** When creating charts using SQL queries, Tathya by default provides visualization in a “table” format, but you can customize it based on your requirement.
+{% hint style="info" %}
+When creating charts using SQL queries, Tathya by default provides visualization in a “table” format, but you can customize it based on your requirement.
+{% endhint %}
 
 ## Data Visualization
 
@@ -44,7 +46,9 @@ You also have additional configurable options such as Filters, Ordering, and Row
 
 - **Row Limit** Row Limit allows you to control the number of rows displayed in the result set. This is particularly useful when dealing with large datasets, allowing you to view a manageable subset of the data.
 
-**Note:** Be cautious when using row limits, especially when conducting analysis or reporting. Setting a too-low limit might lead to incomplete insights, and it's essential to balance performance considerations with the need for comprehensive data.
+{% hint style="info" %}
+Be cautious when using row limits, especially when conducting analysis or reporting. Setting a too-low limit might lead to incomplete insights, and it's essential to balance performance considerations with the need for comprehensive data.
+{% endhint %}
 
 ### Optimizing Queries for Specific Results
 
@@ -58,7 +62,9 @@ Writing precise and optimized SQL queries can streamline the data retrieval proc
 
 Adjust other settings such as colors, labels, and tooltips as needed from the “Customize” option, present right next to the data tab.
 
-**Note:** You can also choose the type of chart that best suits your data. (e.g. A Line Chart can be ideal for displaying trends over time, a Bar Chart can be useful for comparing values across different categories, a Pie Chart can be effective for illustrating parts of a whole.)
+{% hint style="info" %}
+You can also choose the type of chart that best suits your data. (e.g. A Line Chart can be ideal for displaying trends over time, a Bar Chart can be useful for comparing values across different categories, a Pie Chart can be effective for illustrating parts of a whole.)
+{% endhint %}
 
 For example, if you choose a Line Chart, specify the columns you want on the x-axis and y-axis. the date might be on the x-axis, and total sales on the y-axis.
 
@@ -72,6 +78,7 @@ Navigate to the top-right corner and click on the "SAVE" button. A Save Chart pa
 
 After saving, find your chart in the Charts tab for quick access.
 
+{% hint style="info" %}
 ## Additional Tips:
 
 - Experiment with different chart types to find the most effective representation for your data.
@@ -79,6 +86,4 @@ After saving, find your chart in the Charts tab for quick access.
 - Utilize filters and additional SQL clauses for more refined queries and visualizations.
 
 - Leverage Tathya’s advanced features like dashboard linking and custom CSS for enhanced customization.
-
-
-
+{% endhint %}
