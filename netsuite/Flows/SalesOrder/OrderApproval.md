@@ -111,11 +111,19 @@ For retailers that use Avatax, the Tax Code and Shipping Tax Code will always co
 
 {% tabs %}
 {% tab title="Sales Order Fields in HotWax Commerce" %}
+<div data-full-width="false">
+
 <figure><img src="../../.gitbook/assets/sales order mapping hotwax.png" alt=""><figcaption><p>Sales Order Fields Mapping in HotWax Commerce</p></figcaption></figure>
+
+</div>
 {% endtab %}
 
 {% tab title="Sales Order Fields in NetSuite" %}
-<figure><img src="../../.gitbook/assets/netsuite sales orders mappings.png" alt=""><figcaption><p>Sales Order Fields Mapping in NetSuite</p></figcaption></figure>
+<div data-full-width="false">
+
+<figure><img src="../../.gitbook/assets/netsuite sales orders mappings (1).png" alt=""><figcaption><p>Sales Order Fields Mapping in NetSuite</p></figcaption></figure>
+
+</div>
 {% endtab %}
 {% endtabs %}
 
