@@ -2,7 +2,9 @@
 
 Once the access is granted, the user is automatically listed in Tathya and by default gets assigned a “public” role.
 
-**Note:** The user's account is not yet fully configured. The auto-assigned public role does not give the required access to view charts or dashboards. To grant access, you have to assign the necessary roles and permissions to the user's account.
+{% hint style="warning" %}
+The user's account is not yet fully configured. The auto-assigned public role does not give the required access to view charts or dashboards. To grant access, you have to assign the necessary roles and permissions to the user's account.
+{% endhint %}
 
 To complete the setup, proceed by logging into Tathya with your credentials.
 
@@ -20,19 +22,27 @@ Now to update the user, locate the newly listed user that you created in the pre
 
 **Username:** The "Username" is the same LDAP-generated ID that will be used to log into Tathya (firstn.lastn). Ensure that the provided username matches the user's LDAP identifier.
 
-**Note:** Ensure that the provided username aligns with the LDAP-generated ID for seamless authentication.
+{% hint style="info" %}
+Ensure that the provided username aligns with the LDAP-generated ID for seamless authentication.
+{% endhint %}
 
 **Is Active?:** The "Is Active?" field determines whether the user account is currently active or inactive. If set to "True," the user can log in and access Tathya.
 
-**Note:** Mark check in the Is Active field. If it is set to "False," the user account is deactivated, and the user cannot log in. Use this field to manage user access based on their current status within the organization.
+{% hint style="warning" %}
+Mark check in the Is Active field. If it is set to "False," the user account is deactivated, and the user cannot log in. Use this field to manage user access based on their current status within the organization.
+{% endhint %}
 
 **Email:** The "Email" is the email address associated with each user's account.
 
-**Note:** Email addresses are crucial for communication and account recovery purposes. They serve as a means of contact and are often used for sending notifications or alerts related to the user's account.
+{% hint style="info" %}
+Email addresses are crucial for communication and account recovery purposes. They serve as a means of contact and are often used for sending notifications or alerts related to the user's account.
+{% endhint %}
 
 **Roles:** The "Roles" column indicates the roles assigned to each user. Select the default role “HotwaxBasicPermissionUser” for the user.
 
-**Note:** The HotWax Basic Permissions role is designed to provide a limited scope of access within Tathya, ensuring focused functionality for users.
+{% hint style="info" %}
+The HotWax Basic Permissions role is designed to provide a limited scope of access within Tathya, ensuring focused functionality for users.
+{% endhint %}
 
 Here are key details about this role:
 
@@ -46,13 +56,17 @@ Here are key details about this role:
 
 Finally, add the project-specific roles that you have created, which grants permission to view the project-specific charts from the Dashboard panel. (Check the section “Creating Roles for Dashboard Access” for more information)
 
-**Note:** Assign roles carefully, considering both default roles and project-specific roles for accurate access permissions.
+{% hint style="warning" %}
+Assign roles carefully, considering both default roles and project-specific roles for accurate access permissions.
+{% endhint %}
 
 Once all the fields that are required to add a user have been filled, click on “Save.”
 
 Now, you have successfully listed the new user on Tathya and provided the roles and permissions necessary to manage their project’s charts and dashboards.
 
+{% hint style="success" %}
 The account is now ready to be used by the user.
+{% endhint %}
 
 ## Periodic Review and Update of User Roles
 

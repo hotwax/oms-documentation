@@ -16,7 +16,9 @@ In Tathya, permissions play a crucial role in determining access levels to dashb
 
 Start by searching for and listing all the charts created for your project. This ensures that users with this role can access dashboards containing these specific charts.
 
-**Note:** A single chart can be present in multiple dashboards. If a chart is listed in the permissions of a role, any dashboard containing that specific chart becomes eligible for access by users assigned to that role.
+{% hint style="info" %} 
+A single chart can be present in multiple dashboards. If a chart is listed in the permissions of a role, any dashboard containing that specific chart becomes eligible for access by users assigned to that role.
+{% endhint %}
 
 Once you've filled in the necessary details, click "Save" to create the new role.
 
@@ -34,6 +36,8 @@ If there's a need to revise permissions for an existing role, for example, when 
 
 5. After making the necessary modifications, click "Save" to update the permissions for the existing role.
 
-**Note:** Regularly review and update permissions to align with any changes in the project, such as the creation of new charts.
+{% hint style="info" %}
+Regularly review and update permissions to align with any changes in the project, such as the creation of new charts.
 
 Modifying permissions allows you to grant access to the latest project developments, ensuring users with the role can view the most up-to-date dashboards.
+{% endhint %}

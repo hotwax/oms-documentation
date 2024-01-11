@@ -61,6 +61,8 @@ The Alerts and Reports tables include the following column headers:
   - A toggle switch indicating whether the alert or report is currently enabled or not.
 
 - **Actions (visible on cursor hover):**
-  - Icons that enable you to access the execution log, edit the entry, or delete the entry (please see descriptions of each below).
+  - Icons that enable you to access the execution log, edit the entry, or delete the entry.
 
+{% hint style="success" %}
 By leveraging these features, you can efficiently manage and monitor alerts and reports, ensuring timely and relevant notifications based on predefined conditions or schedules.
+{% endhint %}
