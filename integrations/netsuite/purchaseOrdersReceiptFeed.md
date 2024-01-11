@@ -1,4 +1,4 @@
-# OMS Purchase Orders Receipt Feed to NetSuite
+# Purchase Orders Receipt Feed from OMS to NetSuite
 
 Purchase Orders are created in NetSuite and synced in OMS. Once the shipments are received, the Purchase Order Shipments Receipt feed is sent to NetSuite
 
