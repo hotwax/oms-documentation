@@ -1,7 +1,13 @@
 # Created Orders Feed 
-To successfully create a sales order in NetSuite, it is a prerequisite to have the customer information pre-existing within NetSuite's database. Therefore, it is important to synchronize customer data from OMS to NetSuite before order creation.
-This integration flow is responsible to send the sales orders information from OMS to NetSuite. To ensure that the sales orders data is not repeatedly sent to NetSuite, this flow uses the NetSuite Item Line Id to filter out the sales orders which are already sent to NetSuite.
-The NetSuite Item Line Id gets assigned once this file is successfully consumed and sales order created in NetSuite. A separate job takes care to export these sales order from NetSuite and record the attr name in Order Item Attribute entity on OMS. The Attr Name used for this is 'NetsuiteItemLineId'.
+
+This integration flow is responsible to send the Sales Orders information from OMS to NetSuite.
+
+To successfully create a sales order in NetSuite, it is a prerequisite to have the customer information pre-existing within NetSuite's database. Refer to the Customer Feed for NetSuite" for more details.
+
+To ensure that the Sales Orders data are not repeatedly sent to NetSuite, this flow uses the NetSuite Item Line Id to filter out the sales orders which are already sent to NetSuite.
+The NetSuite Item Line Id gets assigned once this file is successfully consumed and sales order created in NetSuite. A separate job takes care to export these sales order from NetSuite and record the attr name in OrderItemAttribute entity in OMS. The attr Name used for this is 'NetsuiteItemLineId'.
+
+So we will fetch sales orders which are in ORDER_CREATED status for which PartyIdentification record exists for NETSUITE_CUSTOMER_ID type, and the for which the OrderItemAttribute NetsuiteItemLineId does not exist.
 
 ## Technical Implementation
 
@@ -10,8 +16,9 @@ This feed is generated in the integration layer using Apache NiFi.
 In NiFi, the required sales order data is fetched by connecting to the OMS transactional database, and this data is prepared in the format required by NetSuite.
 
 Some of the important conditions for sales order data are:
-1. To identify sales order, order_type_id = 'SALES_ORDER' in OrderHeader entity is used
-2. The sales order which already have attr_name = 'NetsuiteItemLineId' in Order_Item_Attribute entity are excluded since they are already synced to NetSuite and so should not be included again in the feed
+1. To identify sales order, order_type_id = 'SALES_ORDER' in OrderHeader entity is used.
+2. The sales order which already have attr_name = 'NetsuiteItemLineId' in Order_Item_Attribute entity are excluded since they are already synced to NetSuite and so should not be included again in the feed.
+3. TODO Add required fields missing handling
 
 <details>
   <summary>SQL to fetch customer data from OMS</summary>
