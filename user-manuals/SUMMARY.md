@@ -63,6 +63,7 @@
 * [Cycle Counting](inventory/cycle-counting/README.md)
   * [Inventory count](inventory-count/inventory-count.md)
   * [Reports](inventory-count/reports.md)
+* [Inventory Upload](import-app/inventory.md)
 
 ## Administration
 
