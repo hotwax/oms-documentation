@@ -28,7 +28,7 @@ Orders that match these criteria are exported to an SFTP location in a CSV file.
 
 {% tabs %}
 {% tab title="POS Order Fields in HotWax Commerce" %}
-<figure><img src="../../.gitbook/assets/HC pos order mapping.png" alt=""><figcaption><p>POS Order Fields Mapping in HotWax Commerce</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/HC pos order mapping (1).png" alt=""><figcaption><p>POS Order Fields Mapping in HotWax Commerce</p></figcaption></figure>
 {% endtab %}
 
 {% tab title="POS Order Fields in NetSuite" %}
