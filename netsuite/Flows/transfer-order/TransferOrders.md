@@ -30,11 +30,11 @@ The script runs periodically, typically every 15 minutes, to ensure it fetches o
 
 {% tabs %}
 {% tab title="Transfer Order Fields in NetSuite" %}
-<figure><img src="../../.gitbook/assets/TO mapping netsuite.png" alt=""><figcaption><p>Transfer Order Fields Mapping in NetSuite</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/TO mapping netsuite (2).png" alt=""><figcaption><p>Transfer Order Fields Mapping in NetSuite</p></figcaption></figure>
 {% endtab %}
 
 {% tab title="Transfer Order Fields in HotWax Commerce" %}
-<figure><img src="../../.gitbook/assets/HC TO mappings.png" alt=""><figcaption><p>Transfer Order Fields Mapping in HotWax Commerce</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/HC TO mappings (1).png" alt=""><figcaption><p>Transfer Order Fields Mapping in HotWax Commerce</p></figcaption></figure>
 {% endtab %}
 {% endtabs %}
 
