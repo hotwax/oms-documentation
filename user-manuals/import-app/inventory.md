@@ -1,6 +1,6 @@
 # Upload Inventory
 
-The `HotWax Commerce Import App` is a valuable tool for merchandisers who require quick bulk updates to their inventory, especially when dealing with legacy systems that lack easy API-based integration. This app eliminates the need for manual editing of CSV formats. Merchandisers can efficiently upload CSV files, map inventory fields directly, and identify errors before finalizing the upload.
+The `HotWax Commerce Import App` enables bulk updates to inventory, especially when dealing with legacy systems that lack API-based integration. This app eliminates the need for manual editing of CSV formats. Merchandisers can efficiently upload CSV files, map CSV fields directly, and identify errors before finalizing the upload.
 
 ## Step-by-Step Guide: Updating Inventory in Bulk through CSV File
 
@@ -28,7 +28,7 @@ Only users with Super or Admin user permissions can access the `inventory` page 
      | Facility ID         | Identifies the specific facility associated with the product.|
    
 
-`Shopify Product SKU` field is the default product identifier but users can choose the preferred product identifier from the options in the dropdown menu. HotWax Commerce supports the following product identifiers
+`Shopify Product SKU` field is the default product identifier but users can choose the preferred product identifier from the options in the dropdown menu. HotWax Commerce supports the following product identifiers.
 
 | Field                        | Description                                                             |
 |-----------------------------|-------------------------------------------------------------------------|
@@ -39,7 +39,6 @@ Only users with Super or Admin user permissions can access the `inventory` page 
 | Manufacturer (Model) Number  | Unique number issued by manufacturers to identify individual products  |
 | Shopify Product ID           | Unique product identifier on Shopify                                    |
 | UPCA                         | Universal Product Code is the unique barcode of the product             |
-
 
 
 5. **Saving Custom CSV Mappings:**
@@ -61,9 +60,9 @@ Only users with Super or Admin user permissions can access the `inventory` page 
    - This will open up a confirmation module; confirm inventory upload by clicking on the `Upload` Button.
    - You will get a success message indicating that the inventory has been updated successfully.
 
-9. **Verification:**
+9. **Item Inventory Verification:**
 
-Once the inventory is updated you can verify whether the inventory is accurately reflected in HotWax Commerce 
+Once the inventory is updated you can verify whether the inventory is accurately reflected in HotWax Commerce. 
 
    - Confirm the updated inventory by going to the `Product` page in your OMS instance.
    - Find the product SKU by utilizing the search bar. You can also search for products using the product name or HotWax Commerce ID.
@@ -72,5 +71,5 @@ Once the inventory is updated you can verify whether the inventory is accurately
    - Here you will be able to verify the inventory changes under the `Inventory Items` section.
 
    {% hint style="warning" %}
-Please ensure that all the products are synchronized in HotWax Commerce from ecommerce. If a product does not exist in HotWax Commerce, the corresponding records will not be processed.
+Please ensure that all the products are synchronized in HotWax Commerce from e-commerce. If a product does not exist in HotWax Commerce, the corresponding records will not be processed.
 {% endhint %}
