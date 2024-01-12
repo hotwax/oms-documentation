@@ -1,6 +1,6 @@
 # Shipping Method Mapping between HotWax Commerce and NetSuite
 
-The shipping method mapping between HotWax Commerce and NetSuite ensures that the shipping methods selected in Shopify correspond accurately to their counterparts in both HotWax Commerce and NetSuite. HotWax Commerce facilitates the mapping of shipping methods chosen from Shopify, providing accurate information to NetSuite. This process establishes coherence across platforms, maintaining consistency in order processing and fulfillment workflows. 
+Shipping methods in Shopify are mapped in HotWax Commerce, responsible for order and fulfillment. When orders are synced from HotWax Commerce to NetSuite, it's essential to communicate the shipping method information to NetSuite. However, NetSuite may have a single method servicing multiple Shopify shipping methods. To address this, the HotWax integration table maps the original carrier and shipment method to the corresponding method in NetSuite. During order syncing to NetSuite, the integration layer checks saved mappings, ensuring accurate correspondence. This shipping method mapping guarantees alignment between selected Shopify methods and their counterparts in both HotWax Commerce and NetSuite, facilitating order processing.
 
 ## Creating a Shipping Method in HotWax Commerce:
 
@@ -23,7 +23,7 @@ Once shipping methods are created, they need to be mapped with NetSuite to provi
 1. Access NetSuite Integration Page: Go to `Settings` > `NetSuite Integration`.
 
  {% hint style="info" %}
-   If the page is not visible, navigate to the `General Settings` page and click on `Add NetSuite Data` button at the top.
+   If the page is not visible, navigate to the `General Settings` page and click on the `Load NetSuite Data` button at the top. This ensures that the Netsuite Data is uploaded to HotWax Commerce and the Netsuite configurations page will be now available to the users
    {% endhint %}
 
 2. Locate Shipping Methods Mapping: Look for the `Shipping Methods Mapping between HotWax and NetSuite` section.
