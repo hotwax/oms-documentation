@@ -67,32 +67,33 @@ Config ID cannot be changed after creation. Create a new Config if a new Config 
 
 ## Verify the Data flow of Data Configurations
 
-In HotWax Commerce, the significance of the Data Manager Configurations feature extends beyond the management of data flow. A crucial aspect of this tool lies in the Data Manager Logs, which play a pivotal role in ensuring the accuracy and completeness of data imported into the Order Management System (OMS). These logs provide essential insights into the status of imported data, allowing users to verify the success of their operations and identify potential issues promptly.
+In HotWax Commerce, the ability to view data logs is crucial for verifying the accuracy and completeness of imported data. These logs offer insights into the status of imported data, allowing users to verify the success of operations during the verification process.
 
 ### Steps
 
 
-1. Search for the Desired Service:
+1. Locate Desired Service:
 
-- Navigate to the search bar within HotWax Commerce Data Manager Confirgurations page.
-- Search service with the name of the desired service.
+- Navigate to the `search` bar within the `HotWax Commerce Data Manager Configurations` page.
+- Search service with the name of the desired service or locate the desired service from the list.
 
 2. Open the Import Data for the Service:
 
 - Identify the relevant service in the search results.
-- Click on the blue open icon located in front of the service name.
+- Click on the blue `open link` icon located in front of the service name.
 - The system will open the [Import Data page](data-manager/imports.md) for the selected service.
 
 3. Check the Status of the Service:
 
 - Review the displayed information to check the status of the service.
 - Ensure that the status of the service is finished. You can view different data status types [here.](https://docs.hotwax.co/user-guides/workflow/data-manager/imports#data-manager-logs)
+- If any of the services fails, users can read the failed records through the data logs.
 
 **View Logs for Detailed Information:**
 
-- Click on the `Log` button in `Import data page` to access detailed logs related to the service.
+- Click on the `Log` button in the `Import data page` to access detailed logs related to the service.
 - Use the logs to gather information about the service flow and identify the cause of any potential failures.
-- Non-technical users can utilize AI tools like ChatGPT to interpret log information and understan the service status.
+- Non-technical users can utilize AI tools like ChatGPT to interpret log information and understand the service status.
 
 
 # SFTP User Integration in Data Configuration
