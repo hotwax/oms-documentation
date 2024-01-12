@@ -32,7 +32,7 @@ This Map Reduce script runs at regular intervals, typically every 15 minutes, en
 {% endtab %}
 
 {% tab title="Purchase Order Fields in HotWax Commerce" %}
-<figure><img src="../.gitbook/assets/HC po field mapping.png" alt=""><figcaption><p>Purchase Order Fields Mapping in HotWax Commerce</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/HC po field mapping (1).png" alt=""><figcaption><p>Purchase Order Fields Mapping in HotWax Commerce</p></figcaption></figure>
 {% endtab %}
 {% endtabs %}
 
