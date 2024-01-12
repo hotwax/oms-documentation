@@ -65,29 +65,29 @@ Editing an existing Data Manager Configuration allows users to update configurat
 Config ID cannot be changed after creation. Create a new Config if a new Config ID is needed.
 {% endhint %}
 
-## Verify the Data flow of Data Configurations
+## Verify the Data flow
 
 In HotWax Commerce, the ability to view data logs is crucial for verifying the accuracy and completeness of imported data. These logs offer insights into the status of imported data, allowing users to verify the success of operations during the verification process.
 
 ### Steps
 
 
-1. Locate Desired Service:
+1. Locate Desired Configuration:
 
 - Navigate to the `search` bar within the `HotWax Commerce Data Manager Configurations` page.
-- Search service with the name of the desired service or locate the desired service from the list.
+- Search the configuration with the service/keyword or locate the desired service from the list.
 
-2. Open the Import Data for the Service:
+2. Open the Data manager logs for the Configurations:
 
-- Identify the relevant service in the search results.
-- Click on the blue `open link` icon located in front of the service name.
+- Identify the relevant configurations in the search results.
+- Click on the `open link` icon located in front of the service name.
 - The system will open the [Import Data page](data-manager/imports.md) for the selected service.
 
 3. Check the Status of the Service:
 
 - Review the displayed information to check the status of the service.
 - Ensure that the status of the service is finished. You can view different data status types [here.](https://docs.hotwax.co/user-guides/workflow/data-manager/imports#data-manager-logs)
-- If any of the services fails, users can read the failed records through the data logs.
+- If any of the services fails, users can read the failed records through the data logs. Failed records are simply JSON/CSV file which has the failed reason appended at the end of the record, which can be used for troubleshooting. 
 
 **View Logs for Detailed Information:**
 
