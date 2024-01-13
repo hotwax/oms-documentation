@@ -1,4 +1,4 @@
-# All return adjustment types
+## All return adjustment types
 
 Return adjustments are used to categorize different return-level charges. By storing all adjustments as types of adjustments that can be applied to the return, instead of including them in the return header, they can be extended based on the needs of custom implementations and integrations.
 
@@ -23,3 +23,11 @@ Return adjustments are used to categorize different return-level charges. By sto
 | RET_VAT_PC_ADJ         |                    | Return VAT Price Correction               |
 | RET_VAT_TAX_ADJ        |                    | Return VAT Tax                            |
 | RET_WARRANTY_ADJ       |                    | Return Warranty                           |
+
+## Return channels
+
+| Enum Id            | Enum Type Id     | Description            | Enum Name         | Sequence Id |
+|---------------------|------------------|------------------------|-------------------|-------------|
+| ECOM_RTN_CHANNEL   | RETURN_CHANNEL   | Ecom Return Channel    |                   | 01          |
+| POS_RTN_CHANNEL    | RETURN_CHANNEL   | POS Return Channel     |                   | 02          |
+
