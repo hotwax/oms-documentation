@@ -30,7 +30,7 @@ Once an order is packed by a store representative, New Era Caps will not allow t
 
 Store fulfilled orders SFTP
 ```
-/home/newera-uat-sftp/pos/store_fulfilled_orders/staging/outgoing
+/home/newera-uat-sftp/pos/store_fulfilled_orders/outgoing
 ```
 
 ## Warehouse Inventory
