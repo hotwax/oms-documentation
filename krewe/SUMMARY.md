@@ -2,10 +2,10 @@
 
 * [Introduction](README.md)
 * [Why HotWax Commerce](whyHotWax.md)
-
 * [Glossary](GLOSSARY.md)
 
 ## Flows
+
 * [Product](Flows/Products/README.md)
 * [Sales Orders](Flows/SalesOrders/README.md)
   * [Shipping Methods](Flows/SalesOrders/ShippingMethMapping.md)
@@ -24,7 +24,7 @@
   * [Order cancellations](Flows/SalesOrders/OrderCancellations.md)
   * [Reference IDs](Flows/SalesOrders/ShopifyOrderName.md)
   * [Reports](Flows/SalesOrders/Reports.md)
-* [Brokering](Flows/Brokering/README.md)
+* [Brokering](flows/brokering/README.md)
   * [Facilities](Flows/Brokering/Facilities.md)
   * [Reports](Flows/Brokering/Reports.md)
   * [Order Splitting](Flows/Brokering/OrderSplitting/README.md)
@@ -39,4 +39,5 @@
 * [Product Store](Flows/product-store/README.md)
 
 ## Go Live
+
 * [Go Live](Flows/goLive.md)
