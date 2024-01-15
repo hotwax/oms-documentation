@@ -5,7 +5,18 @@
 ## OMS
 
 * [Introduction](oms/README.md)
-* [Fulfilled Order Items](oms/fulfilledOrderItems/fulfilledOrderItemsFeed.md)
+* [Fulfilled Order Items](oms/SalesOrders/fulfilledOrderItemsFeed.md)
+
+## NetSuite
+
+* [Create Customer](netsuite/createCustomer.md)
+* [Create Orders](netsuite/createdOrdersFeed.md)
+* [Brokered Order Items](netsuite/brokeredOrderItemsFeed.md)
+* [NetSuite Fulfilled Order Items](netsuite/netsuite-to-hotwax/fulfilledOrderItemsFeed.md)
+* [OMS Fulfilled Order Items](netsuite/omsFulfilledOrderItems.md)
+* [Customer Deposit](netsuite/customerDepositFeed.md)
+* [Inventory Item Variance](netsuite/InventoryItemVarianceFeed.md)
+* [Purchase Order Shipments Receipt](netsuite/purchaseOrdersReceiptFeed.md)
 
 ## M3
 
