@@ -1,5 +1,5 @@
 ## Quantity on Hand (QOH)
-Physical quantity of a product in stock at a specific location, crucial for real-time inventory management.
+The physical quantity of a product in stock at a specific location, crucial for real-time inventory management.
 
 ## Reserved Quantity
 On-hand inventory earmarked for online sales, excluded from "available to promise" calculations to prevent overselling.
@@ -29,7 +29,7 @@ Facilities temporarily unable to participate in online order fulfillment due to 
 The quantity of inventory available to a customer, derived by deducting unsellable inventories (reserved quantities, safety stock, threshold, brokering queue orders, excluded facilities' ATP) from Quantity on Hand (QOH).
 
 ## Rejected Orders
-Orders brokered for fulfillment but rejected by warehouse or store due to physical inventory unavailability, often caused by damaged, lost, or stolen items. Rejected orders return to the brokering queue for reassignment.
+Orders brokered for fulfillment but rejected by warehouse or store due to physical inventory unavailability, often caused by damaged, lost, or stolen items. Rejected orders return to the brokering queue for rebrokering.
 
 ## Split Shipment
 Breaking an order with multiple items into separate shipments for fulfillment across multiple locations when all items are not available at a single facility.
@@ -38,7 +38,7 @@ Breaking an order with multiple items into separate shipments for fulfillment ac
 Combining multiple orders of the same customer with the same address into one shipment to save logistics costs. Configurable in an omnichannel order management system.
 
 ## Pre-Orders
-Advance orders for future inventory not yet released in the market, often taken during planning or production stages.
+Advance orders for future inventory not yet released in the market, are often taken during planning or production stages.
 
 ## Backorders
 Orders for temporarily out-of-stock products, named "backorders" as these items were previously in stock and will be available again soon.
