@@ -47,7 +47,7 @@ To sync the fulfillment back into the OMS from the warehouse, a job will be used
 **SFTP Path**
 
 ```
-/home/newera-uat-sftp/hotwax/completed_orders
+/home/newera-uat-sftp/hotwax/oms/fulfilled_orders
 ```
 
 **Job Name**
