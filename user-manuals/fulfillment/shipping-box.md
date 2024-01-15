@@ -9,8 +9,8 @@ This guide outlines a step-by-step process for retailers to establish and manage
 Configuring boxes in the general settings ensures packaging consistency and accuracy throughout the application, aiding store associates in selecting appropriate boxes during order fulfillment. Incorrect box selection may result in extra shipping charges for retailers. Users can create shipping boxes through the following steps:
 
 * Navigate to `HotWax Commerce` > `Hamburger Menu` > `Settings` > `General Settings` Page.
-* Scroll down to find the 'Shipment Box' section.
-* Click 'Add' to open the box creation form and add details such as:
+* Scroll down to find the `Shipment Box` section.
+* Click `Add` to open the box creation form and add details such as:
 
 | Field                         | Description                                                                                                                                            |
 | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |

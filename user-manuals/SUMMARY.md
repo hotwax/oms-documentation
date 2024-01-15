@@ -41,7 +41,7 @@
   * [Picking App](fulfillment/pickingApp.md)
   * [CSV Support](fulfillment/csvSupport.md)
   * [Reports](fulfillment/reports.md)
-  * [Create Shipping Boxes](orders/fulfillment/shipping-box.md)
+  * [Create Shipping Boxes](fulfillment/shipping-box.md)
 * [Brokering](orders/brokering/README.md)
   * [Order Routing](brokering/configurableRouting.md)
   * [Rule Builder](brokering/rule-builder.md)
@@ -63,6 +63,7 @@
 * [Cycle Counting](inventory/cycle-counting/README.md)
   * [Inventory count](inventory-count/inventory-count.md)
   * [Reports](inventory-count/reports.md)
+* [Inventory Upload](import-app/inventory.md)
 
 ## Administration
 
