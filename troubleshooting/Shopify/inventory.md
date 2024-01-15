@@ -1,8 +1,8 @@
 #  Inventory Auditing
 
-**Scenario:** Inventory Not Synced from Shopify to HotWax Commerce
+**Scenario:** Inventory Not Synced from HotWax Commerce to Shopify
 
-Sometimes retailers may encounter inventory disparities between HotWax Commerce ATP and Shopify Inventory. This discrepancy could result in inventory appearing out of stock in Shopify despite being available in HotWax Commerce.
+Sometimes retailers may encounter inventory disparities between HotWax Commerce and Shopify Inventory. This discrepancy could result in inventory appearing out of stock in Shopify despite being available in HotWax Commerce.
 
 ## Steps to Troubleshoot
 
