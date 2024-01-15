@@ -24,6 +24,10 @@ Configuring boxes in the general settings ensures packaging consistency and accu
 
 The added box sizes can now be mapped from in the shipment carrier setup page.
 
+{% embed url="https://youtu.be/B_-s6FOtlok" %}
+Add Shipping Box
+{% endembed %}
+
 ## Adding Shipment Boxes for Specific Carriers
 
 Retailers often integrate with multiple shipping carriers. When sending box details to a carrier using just the box name, this association helps the carrier identify the box size and calculate shipping costs accordingly. Users can associate the shipment boxes for shipment carriers through the following steps:
@@ -38,6 +42,10 @@ Retailers often integrate with multiple shipping carriers. When sending box deta
 
 These configured boxes are now ready for selection by packers during the order fulfillment process, ensuring accurate packaging aligned with specific carriers for efficient shipping.
 
+{% embed url="https://youtu.be/dFkeW5U1F3I" %}
+Add SHipping Box to Carrier
+{% endembed %}
+
 ## Adding Shipment Box to Order During Fulfillment
 
 Store associates can select appropriate boxes through the following steps:
@@ -49,3 +57,7 @@ Store associates can select appropriate boxes through the following steps:
 * After appropriately packing all items and selecting box types click `Pack` to update the shipping carrier for shipping label generation with the least shipping charges for the selected boxes.
 
 By diligently specifying both the total box quantity for the entire order and the appropriate box types for individual order items, store associates ensure accurate shipping labels, cost-effective packaging, and efficient utilization of available space, ultimately reducing shipping expenses for retailers.
+
+{% embed url="https://youtu.be/385HSXa8Pdc" %}
+Add Shipment Box During Fulfillment
+{% endembed %}

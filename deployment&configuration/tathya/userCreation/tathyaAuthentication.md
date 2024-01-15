@@ -6,4 +6,6 @@ Tathya forwards the authentication request to the LDAP server, which verifies th
 
 ## Access to Tathya
 
+{% hint style="success" %}
 If the LDAP authentication is successful, Tathya grants access to the user.
+{% endhint %}

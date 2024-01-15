@@ -14,7 +14,7 @@
 * [Understanding Dashboards](understandingDashboards/README.md)
    * [Configuring Dashboards](understandingDashboards/configuringDashboards.md)
    * [Dashboard Options](understandingDashboards/dashboardOptions.md)
-   * [Dashboard Cutomizations](understandingDashboards/dashboardCustomization.md)
+   * [Dashboard Customizations](understandingDashboards/dashboardCustomization.md)
  
 * [Configuring Alerts & Reports](alerts&Reports/README.md)
    * [Creating Alerts](alerts&Reports/creatingAlerts.md)
