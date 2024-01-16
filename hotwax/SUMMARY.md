@@ -24,7 +24,7 @@
   * [Create Picklist](Fulfillment/APIs/create-picklist.md)
   * [In Progress Orders](Fulfillment/APIs/in-progress-orders.md)
   * [Outstanding Orders](Fulfillment/APIs/outstanding-orders.md)
-  * [Packing Slip PDF](<fulfillment/apis/Packing slip PDF.md>)
+  * [Packing Slip PDF](Fulfillment/APIs/packing-slip-PDF.md)
   * [Ready To Ship Items](<fulfillment/apis/Ready-to-ship items.md>)
   * [Retry Shipping Label](<fulfillment/apis/Retry shipping label.md>)
   * [Shipping Label And PackingSlip](<fulfillment/apis/Shipping label and packing slip.md>)
