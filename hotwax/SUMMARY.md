@@ -20,7 +20,7 @@
   * [Post Code Lookup](Facility/post-code-lookup.md)
   * [Store Lookup](Facility/store-lookup.md)
 * [Fulfillment](api/fulfillment/README.md)
-  * [Add Shipment Box](<fulfillment/apis/Add shipment box.md>)
+  * [Add Shipment Box](Fulfillment/APIs/add-shipment-box.md)
   * [Create Picklist](<fulfillment/apis/Create picklist.md>)
   * [In Progress Orders](<fulfillment/apis/In progress orders.md>)
   * [Outstanding Orders](<fulfillment/apis/Outstanding orders.md>)
