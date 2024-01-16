@@ -7,7 +7,7 @@ To successfully create a sales order in NetSuite, it is a prerequisite to have t
 To ensure that the Sales Orders data are not repeatedly sent to NetSuite, this flow uses the NetSuite Item Line Id to filter out the sales orders which are already sent to NetSuite.
 The NetSuite Item Line Id gets assigned once this file is successfully consumed and sales order created in NetSuite. A separate job takes care to export these sales order from NetSuite and record the attr name in OrderItemAttribute entity in OMS. The attr Name used for this is 'NetsuiteItemLineId'.
 
-So we will fetch sales orders which are in ORDER_CREATED status for which PartyIdentification record exists for NETSUITE_CUSTOMER_ID type, and the for which the OrderItemAttribute NetsuiteItemLineId does not exist.
+So we will fetch sales orders which are in ORDER_CREATED status and item status != ITEM_CANCELLED and for which PartyIdentification record exists for NETSUITE_CUSTOMER_ID type, and the for which the OrderItemAttribute NetsuiteItemLineId does not exist.
 
 ## Technical Implementation
 
