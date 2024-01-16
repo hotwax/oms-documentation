@@ -25,7 +25,7 @@
   * [In Progress Orders](Fulfillment/APIs/in-progress-orders.md)
   * [Outstanding Orders](Fulfillment/APIs/outstanding-orders.md)
   * [Packing Slip PDF](Fulfillment/APIs/packing-slip-PDF.md)
-  * [Ready To Ship Items](<fulfillment/apis/Ready-to-ship items.md>)
+  * [Ready To Ship Items](Fulfillment/APIs/ready-to-ship-items.md)
   * [Retry Shipping Label](<fulfillment/apis/Retry shipping label.md>)
   * [Shipping Label And PackingSlip](<fulfillment/apis/Shipping label and packing slip.md>)
   * [Shipping Label PDF](<fulfillment/apis/Shipping label PDF..md>)
