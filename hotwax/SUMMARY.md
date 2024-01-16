@@ -9,7 +9,7 @@
   * [Order Adjustments](orders/adjustmentTypes.md)
   * [Order Reconcillations](orders/order-reconciliations.md)
 * [Inventory](api/inventory/README.md)
-  * [Check Inventory](<inventory/Check inventory.md>)
+  * [Check Inventory](hotwax/Inventory/check-inventory.md)
   * [Reset Inventory](<inventory/Reset inventory.md>)
   * [Update Inventory](<inventory/Update Inventory.md>)
 * [Inbound Shipment](./inbount-shipment/README.md)
