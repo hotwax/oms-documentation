@@ -18,7 +18,7 @@
   * [Return Adjustments](returns/adjustmentTypes.md)
 * [Facility](api/facility/README.md)..
   * [Post Code Lookup](Facility/post-code-lookup.md)
-  * [Store Lookup](<facility/Store lookup.md>)
+  * [Store Lookup](Facility/store-lookup.md)
 * [Fulfillment](api/fulfillment/README.md)
   * [Add Shipment Box](<fulfillment/apis/Add shipment box.md>)
   * [Create Picklist](<fulfillment/apis/Create picklist.md>)
