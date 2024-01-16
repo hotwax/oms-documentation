@@ -10,7 +10,7 @@
   * [Order Reconcillations](orders/order-reconciliations.md)
 * [Inventory](api/inventory/README.md)
   * [Check Inventory](Inventory/check-inventory.md)
-  * [Reset Inventory](<inventory/Reset inventory.md>)
+  * [Reset Inventory](Inventory/reset-inventory.md)
   * [Update Inventory](Inventory/update-inventory.md)
 * [Inbound Shipment](./inbount-shipment/README.md)
   * [Import](./inbount-shipment/import.md)
