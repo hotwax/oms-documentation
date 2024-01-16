@@ -11,7 +11,7 @@
 * [Inventory](api/inventory/README.md)
   * [Check Inventory](Inventory/check-inventory.md)
   * [Reset Inventory](<inventory/Reset inventory.md>)
-  * [Update Inventory](<inventory/Update Inventory.md>)
+  * [Update Inventory](Inventory/update-inventory.md)
 * [Inbound Shipment](./inbount-shipment/README.md)
   * [Import](./inbount-shipment/import.md)
 * [Returns](returns/README.md)
