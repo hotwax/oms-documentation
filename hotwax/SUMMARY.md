@@ -23,7 +23,7 @@
   * [Add Shipment Box](Fulfillment/APIs/add-shipment-box.md)
   * [Create Picklist](Fulfillment/APIs/create-picklist.md)
   * [In Progress Orders](Fulfillment/APIs/in-progress-orders.md)
-  * [Outstanding Orders](<fulfillment/apis/Outstanding orders.md>)
+  * [Outstanding Orders](Fulfillment/APIs/outstanding-orders.md)
   * [Packing Slip PDF](<fulfillment/apis/Packing slip PDF.md>)
   * [Ready To Ship Items](<fulfillment/apis/Ready-to-ship items.md>)
   * [Retry Shipping Label](<fulfillment/apis/Retry shipping label.md>)
