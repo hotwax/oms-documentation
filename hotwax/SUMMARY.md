@@ -21,7 +21,7 @@
   * [Store Lookup](Facility/store-lookup.md)
 * [Fulfillment](api/fulfillment/README.md)
   * [Add Shipment Box](Fulfillment/APIs/add-shipment-box.md)
-  * [Create Picklist](<fulfillment/apis/Create picklist.md>)
+  * [Create Picklist](Fulfillment/APIs/create-picklist.md)
   * [In Progress Orders](<fulfillment/apis/In progress orders.md>)
   * [Outstanding Orders](<fulfillment/apis/Outstanding orders.md>)
   * [Packing Slip PDF](<fulfillment/apis/Packing slip PDF.md>)
