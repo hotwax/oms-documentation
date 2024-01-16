@@ -176,8 +176,6 @@ Here's the XML structure that generates the `Ready for Pickup` email template in
 </ElectronicText>
 ```
 
-## Run service to create an Event on Klaviyo
-
 ## Run Service to Create an Event on Klaviyo
 
 In HotWax Commerce, when orders are packed and ready for pickup, Klaviyo triggers an email to customers containing their specific details. However, it's important to note that Klaviyo does not have a ready-to-pickup email event that can be triggered for action by default. Retailers need to run this service once before setting up the email flow in Klaviyo to ensure that this event is created in Klaviyo. This step is essential for the effective initiation of the email communication process.
@@ -185,42 +183,6 @@ In HotWax Commerce, when orders are packed and ready for pickup, Klaviyo trigger
 1. **Access the Service List:** Go to `HotWax Commerce Service List` through this link- `https://<instanceName>.io/webtools/control/ServiceList`
 2. **Locate `createKlaviyoEvent` Service:** Find the service named `createKlaviyoEvent'` within the Service List interface. Click on the `createKlaviyoEvent` service to access its details.
 3. **Run the Service:** Look for the `Run Service` button available against the service name and click on it. Finally, click on `Submit` to execute the service.
-
-
-## Create a Flow on Klaviyo
-
-Once you have configured the necessary settings and templates in HotWax Commerce, the next step is to create a corresponding flow on Klaviyo to trigger the "Ready for Pickup" email. Follow the detailed steps below:
-
-1. **Log in to your Klaviyo Account:**
-   - Open your web browser and navigate to Klaviyo's login page.
-   - Enter your credentials to access your Klaviyo account.
-
-2. **Navigate to Flows:**
-   - In the Klaviyo dashboard, locate and click on the "Flows" tab. This section is where you manage automated workflows.
-
-3. **Create a New Flow:**
-   - Look for an option to create a new flow or automation from the page labeled as `Flow`.
-
-4. **Set the Trigger Event:**
-   - Choose the trigger event that will initiate the flow. In this case, set the trigger event as "Ready for Pickup."
-
-5. **Set Email Trigger:**
-   - Add an action step to send an email as part of the flow.
-   - Choose the email template that corresponds to the "Ready for Pickup" scenario. This template should match the one you set up in HotWax Commerce.
-
-6. **Configure Email Settings:**
-   - Customize the email settings, including the sender information, subject line, and any dynamic content that should be populated based on customer data.
-
-7. **Test the Flow:**
-   - Before activating the flow, use Klaviyo's testing tools to simulate the trigger event and ensure that the email is sent as expected.
-   - Verify that the dynamic data, such as customer names and order details, are correctly populated in the test emails.
-
-8. **Activate the Flow:**
-   - Once you are satisfied with the configuration and testing, activate the flow to make it live.
-   - Klaviyo will now automatically trigger the "Ready for Pickup" email based on the defined conditions.
-
-
-By following these steps, you ensure that Klaviyo is set up to seamlessly respond to the "Ready for Pickup" event triggered by HotWax Commerce, providing a cohesive and automated customer communication experience.
 
 ## Create a Flow on Klaviyo
 
