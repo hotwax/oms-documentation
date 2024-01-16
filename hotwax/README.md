@@ -10,10 +10,11 @@ Bearer token authentication utilizes security tokens. After a successful login r
 
 Hotwax Commerce relies on robust security features provided by JWT (JSON Web Token) to ensure a safe and trustworthy API communication environment. This mechanism guarantees user authenticity, authorizes their actions, and maintains data integrity through digital signatures. To create JWT, follow these steps: 
 
-1. Create a unique user from [users.hotwax.io](https://users.hotwax.io/) and assign admin permissions, e.g. NetSuite Integration.
-2. Navigate to the Hamburger menu in OMS: `https://{instanceName}.hotwax.io/`
+1. Create a unique user from [users.hotwax.io](https://users.hotwax.io/) by using integration template or assign the integration permissions.
+2. Make sure that Reset Password on Login is unchecked.
+3. Navigate to the Hamburger menu in OMS: `https://{instanceName}.hotwax.io/`
 3. Access the Settings option and choose `Create JWT Token`.
-4. Input the user ID.
+4. Input the user ID.It will display only the users having integration permissions.
 5. Token Configuration:**
    - Define the validation period.
    - Specify the purpose of the token.
