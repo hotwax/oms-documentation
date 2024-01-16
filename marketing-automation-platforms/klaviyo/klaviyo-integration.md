@@ -204,7 +204,656 @@ Follow these steps to create the email flow in Klaviyo:
 5. **Configure Action:** Add an action step to the flow that involves sending an email. Look for the action that corresponds to sending emails.
 
 6. **Choose Email Template:** Select an existing email template that aligns with the `Ready for Pickup` scenario. Alternatively, create a new email template specifically tailored for these notifications.
-   - If creating a new template, consider elements like subject line, body content, and any dynamic data placeholders for customer-specific details.
+   - If creating a new template, consider elements like subject line, body content, and any dynamic data placeholders for customer-specific details. Here's and HTML template for the Ready to Pickup Notifications that you can use for your product store.
+
+``` html
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:v="urn:schemas-microsoft-com:vml">
+<head>
+<title>
+</title>
+<!--[if !mso]><!-->
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<!--<![endif]-->
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<!--[if mso]>
+<noscript>
+<xml>
+<o:OfficeDocumentSettings>
+<o:AllowPNG/>
+<o:PixelsPerInch>96</o:PixelsPerInch>
+</o:OfficeDocumentSettings>
+</xml>
+</noscript>
+<![endif]-->
+<!--[if lte mso 11]>
+<style type="text/css" data-inliner="ignore">
+.mj-outlook-group-fix { width:100% !important; }
+</style>
+<![endif]-->
+<style>a:link {color:#197bbd;font-weight:normal;text-decoration:underline;font-style:normal}
+a:visited {color:#197bbd;font-weight:normal;text-decoration:underline;font-style:normal}
+a:active {color:#197bbd;font-weight:normal;text-decoration:underline;font-style:normal}
+a:hover {color:#197bbd;font-weight:normal;text-decoration:underline;font-style:normal}</style><style>#outlook a {
+padding: 0
+}
+body {
+margin: 0;
+padding: 0;
+-webkit-text-size-adjust: 100%;
+-ms-text-size-adjust: 100%
+}
+table, td {
+border-collapse: collapse;
+mso-table-lspace: 0;
+mso-table-rspace: 0
+}
+img {
+border: 0;
+line-height: 100%;
+outline: none;
+text-decoration: none;
+-ms-interpolation-mode: bicubic
+}
+p {
+display: block;
+margin: 13px 0
+}
+@media only screen and (min-width: 480px) {
+.mj-column-per-100 {
+width: 100% !important;
+max-width: 100%
+}
+}
+.moz-text-html .mj-column-per-100 {
+width: 100% !important;
+max-width: 100%
+}
+@media only screen and (max-width: 480px) {
+div.kl-row.colstack div.kl-column {
+display: block !important;
+width: 100% !important
+}
+}
+.hlb-subblk td {
+word-break: normal
+}
+@media only screen and (max-width: 480px) {
+.hlb-wrapper .hlb-block-settings-content {
+padding: 9px !important
+}
+.hlb-logo {
+padding-bottom: 9px !important
+}
+.r2-tbl {
+width: 100%
+}
+.r2-tbl .lnk {
+width: 100%
+}
+.r2-tbl .hlb-subblk:last-child {
+padding-right: 0 !important
+}
+.r2-tbl .hlb-subblk {
+padding-right: 10px !important
+}
+.kl-hlb-stack {
+display: block !important;
+width: 100% !important;
+padding-right: 0 !important
+}
+.kl-hlb-stack.vspc {
+margin-bottom: 9px
+}
+.kl-hlb-wrap {
+display: inline-block !important;
+width: auto !important
+}
+.kl-hlb-no-wrap {
+display: table-cell !important
+}
+.kl-hlb-wrap.nospc.nospc {
+padding-right: 0 !important
+}
+}
+@media only screen and (max-width: 480px) {
+.component-wrapper .mob-no-spc {
+padding-left: 0 !important;
+padding-right: 0 !important
+}
+}
+@media only screen and (max-width: 480px) {
+.kl-text {
+padding-right: 18px !important;
+padding-left: 18px !important
+}
+}
+@media only screen and (max-width: 480px) {
+.kl-table-subblock.use-legacy-mobile-padding {
+padding-left: 9px !important;
+padding-right: 9px !important
+}
+}
+@media only screen and (max-width: 480px) {
+td.kl-img-base-auto-width {
+width: 100% !important
+}
+}
+@media only screen and (max-width: 480px) {
+table.mj-full-width-mobile {
+width: 100% !important
+}
+td.mj-full-width-mobile {
+width: auto !important
+}
+}
+img {
+border: 0;
+height: auto;
+line-height: 100%;
+outline: none;
+text-decoration: none;
+max-width: 100%
+}
+.root-container {
+background-repeat: repeat !important;
+background-size: auto !important;
+background-position: left top !important
+}
+.root-container-spacing {
+padding-top: 50px !important;
+padding-bottom: 20px !important;
+font-size: 0 !important
+}
+.content-padding {
+padding-left: 0 !important;
+padding-right: 0 !important
+}
+.content-padding.first {
+padding-top: 0 !important
+}
+.content-padding.last {
+padding-bottom: 0 !important
+}
+@media only screen and (max-width: 480px) {
+td.mobile-only {
+display: table-cell !important
+}
+div.mobile-only {
+display: block !important
+}
+table.mobile-only {
+display: table !important
+}
+.desktop-only {
+display: none !important
+}
+}
+@media only screen and (max-width: 480px) {
+.table-mobile-only {
+display: table-cell !important;
+max-height: none !important
+}
+.table-mobile-only.block {
+display: block !important
+}
+.table-mobile-only.inline-block {
+display: inline-block !important
+}
+.table-desktop-only {
+max-height: 0 !important;
+display: none !important;
+mso-hide: all !important;
+overflow: hidden !important
+}
+}
+p {
+margin-left: 0;
+margin-right: 0;
+margin-top: 0;
+margin-bottom: 0;
+padding-bottom: 1em
+}
+@media only screen and (max-width: 480px) {
+.kl-text > div, .kl-table-subblock div, .kl-split-subblock > div {
+font-size: 14px !important;
+line-height: 1.3 !important
+}
+}
+h1 {
+color: #222427;
+font-family: "Helvetica Neue", Arial;
+font-size: 40px;
+font-style: normal;
+font-weight: normal;
+line-height: 1.1;
+letter-spacing: 0;
+margin: 0;
+margin-bottom: 20px;
+text-align: left
+}
+@media only screen and (max-width: 480px) {
+h1 {
+font-size: 40px !important;
+line-height: 1.1 !important
+}
+}
+h2 {
+color: #222427;
+font-family: "Helvetica Neue", Arial;
+font-size: 32px;
+font-style: normal;
+font-weight: bold;
+line-height: 1.1;
+letter-spacing: 0;
+margin: 0;
+margin-bottom: 16px;
+text-align: left
+}
+@media only screen and (max-width: 480px) {
+h2 {
+font-size: 32px !important;
+line-height: 1.1 !important
+}
+}
+h3 {
+color: #222427;
+font-family: "Helvetica Neue", Arial;
+font-size: 24px;
+font-style: normal;
+font-weight: bold;
+line-height: 1.1;
+letter-spacing: 0;
+margin: 0;
+margin-bottom: 12px;
+text-align: left
+}
+@media only screen and (max-width: 480px) {
+h3 {
+font-size: 24px !important;
+line-height: 1.1 !important
+}
+}
+h4 {
+color: #222427;
+font-family: "Helvetica Neue", Arial;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 1.1;
+letter-spacing: 0;
+margin: 0;
+margin-bottom: 9px;
+text-align: left
+}
+@media only screen and (max-width: 480px) {
+h4 {
+font-size: 18px !important;
+line-height: 1.1 !important
+}
+}
+@media only screen and (max-width: 480px) {
+.root-container {
+width: 100% !important
+}
+.root-container-spacing {
+padding: 10px !important
+}
+.content-padding {
+padding-left: 0 !important;
+padding-right: 0 !important
+}
+.content-padding.first {
+padding-top: 0 !important
+}
+.content-padding.last {
+padding-bottom: 0 !important
+}
+.component-wrapper {
+padding-left: 0 !important;
+padding-right: 0 !important
+}
+}</style></head>
+<body style="word-spacing:normal;background-color:#f7f7f7;">
+<div class="root-container" id="bodyTable" style="background-color:#f7f7f7;">
+<div class="root-container-spacing">
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="kl-section" role="presentation" style="width:100%;">
+<tbody>
+<tr>
+<td>
+<!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="kl-section-outlook" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+<div style="margin:0px auto;max-width:600px;">
+<table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+<tbody>
+<tr>
+<td style="direction:ltr;font-size:0px;padding:0px;text-align:center;">
+<!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" bgcolor="#ffffff" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+<div style="background:#ffffff;background-color:#ffffff;margin:0px auto;border-radius:0px 0px 0px 0px;max-width:600px;">
+<table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#ffffff;background-color:#ffffff;width:100%;border-radius:0px 0px 0px 0px;">
+<tbody>
+<tr>
+<td style="direction:ltr;font-size:0px;padding:20px 0;padding-bottom:0px;padding-left:0px;padding-right:0px;padding-top:0px;text-align:center;">
+<!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+<div class="content-padding first">
+<!--[if true]><table border="0" cellpadding="0" cellspacing="0" width="600" style="width:600px;direction:ltr"><tr><![endif]-->
+<div class="kl-row colstack" style="display:table;table-layout:fixed;width:100%;">
+<!--[if true]><td style="vertical-align:top;width:600px;"><![endif]-->
+<div class="kl-column" style="display:table-cell;vertical-align:top;width:100%;">
+<div class="mj-column-per-100 mj-outlook-group-fix component-wrapper hlb-wrapper" style="font-size:0px;text-align:left;direction:ltr;vertical-align:top;width:100%;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;" width="100%">
+<tbody>
+<tr>
+<td class="hlb-block-settings-content" style="vertical-align:top;padding-top:32px;padding-right:20px;padding-bottom:8px;padding-left:20px;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="" width="100%">
+<tbody>
+<tr>
+<td align="top" class="kl-header-link-bar" style="font-size:0px;padding:0px 0px 0px 0px;word-break:break-word;">
+<table border="0" cellpadding="0" cellspacing="0" style="color:#000000;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;border:0;" width="100%">
+<tbody>
+<tr>
+<td align="center" class="hlb-logo" style="display:table-cell;width:100%;padding-bottom:10px;">
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;border-spacing:0px;">
+<tbody>
+<tr>
+<!--[if true]><td style="width:120px;" bgcolor="transparent"><![endif]-->
+<!--[if !true]><!--><td style="width:120px;"><!--<![endif]-->
+<img src="https://d3k81ch9hvuctc.cloudfront.net/company/YidwsB/images/dab32609-cfb3-420a-bd8a-83099cf5bcd7.png" style="display:block;outline:none;text-decoration:none;height:auto;width:100%;background-color:transparent;" width="120"/>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!--[if true]></td><![endif]-->
+</div>
+<!--[if true]></tr></table><![endif]-->
+</div>
+<!--[if mso | IE]></table><![endif]-->
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!--[if mso | IE]></td></tr></table></table><![endif]-->
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!--[if mso | IE]></td></tr></table><![endif]-->
+</td>
+</tr>
+</tbody>
+</table>
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="kl-section" role="presentation" style="width:100%;">
+<tbody>
+<tr>
+<td>
+<!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="kl-section-outlook" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+<div style="margin:0px auto;max-width:600px;">
+<table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+<tbody>
+<tr>
+<td style="direction:ltr;font-size:0px;padding:0px;text-align:center;">
+<!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" bgcolor="#FFFFFF" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+<div style="background:#FFFFFF;background-color:#FFFFFF;margin:0px auto;border-radius:0px 0px 0px 0px;max-width:600px;">
+<table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#FFFFFF;background-color:#FFFFFF;width:100%;border-radius:0px 0px 0px 0px;">
+<tbody>
+<tr>
+<td style="direction:ltr;font-size:0px;padding:20px 0;padding-bottom:0px;padding-left:0px;padding-right:0px;padding-top:0px;text-align:center;">
+<!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+<div class="content-padding">
+<!--[if true]><table border="0" cellpadding="0" cellspacing="0" width="600" style="width:600px;direction:ltr"><tr><![endif]-->
+<div class="kl-row colstack" style="display:table;table-layout:fixed;width:100%;">
+<!--[if true]><td style="vertical-align:top;width:600px;"><![endif]-->
+<div class="kl-column" style="display:table-cell;vertical-align:top;width:100%;">
+<div class="mj-column-per-100 mj-outlook-group-fix component-wrapper" style="font-size:0px;text-align:left;direction:ltr;vertical-align:top;width:100%;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;" width="100%">
+<tbody>
+<tr>
+<td class="" style="vertical-align:top;padding-top:9px;padding-right:18px;padding-bottom:9px;padding-left:18px;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="" width="100%">
+<tbody>
+<tr>
+<td align="left" class="kl-text" style="font-size:0px;padding:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;word-break:break-word;">
+<div style="font-family:'Helvetica Neue',Arial;font-size:14px;font-style:normal;font-weight:400;letter-spacing:0px;line-height:1.3;text-align:left;color:#222427;"><div>
+<div><span>
+<p class="p1" style="padding-bottom:0"><span class="s1">Hello </span>{{ event.first_name }} {{ event.last_name }},</p>
+</span></div>
+<div><span> </span><span> </span></div>
+<div><span>
+<h2>
+</h2><p class="p1"><span class="s1" style="font-weight: bold; font-size: 32px;">Your order is ready for pickup:</span></p>
+<h4>
+<p class="p1" style="padding-bottom:0"><span class="s1">Withdrawal information:</span></p>
+<p class="p1" style="padding-bottom:0"><span style="font-weight: 400; font-size: 14px;">{{ event.ship_from.to_name }}</span></p>
+</span>
+<div><span style="font-weight: 400;">
+<p class="p1">{{ event.ship_from.address1 }}</p>
+<p class="p1">{{ event.ship_from.address2 }}</p>
+<p class="p1">{{ event.ship_from.city }}</p>
+<p class="p1">{{ event.ship_from.state_name }}</p>
+<br/></span></div>
+<div><strong>
+<p class="p1" style="padding-bottom:0"><span class="s1">Note:</span> <span class="s1" style="font-weight: 400;">Present the confirmation of your order sent by email when you collect your order</span></p>
+<span><br/></span><hr/><span>
+<h2>
+<p class="p1" style="padding-bottom:0"><span class="s1" style="font-weight: bold; font-size: 32px;">Summary of your order.</span></p>
+<p class="p1" style="padding-bottom:0"><span class="s1">Shopify order number:</span><strong style="font-size: 24px;">{{event.order_name}}</strong></p>
+</span><span>
+<div> </div>
+<div> </div>
+<div> </div>
+</span></div>
+</div></div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!--[if true]></td><![endif]-->
+</div>
+<!--[if true]></tr></table><![endif]-->
+</div>
+<!--[if mso | IE]></table><![endif]-->
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!--[if mso | IE]></td></tr></table></table><![endif]-->
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!--[if mso | IE]></td></tr></table><![endif]-->
+</td>
+</tr>
+</tbody>
+</table>
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="kl-section" role="presentation" style="width:100%;">
+<tbody>
+<tr>
+<td>
+<!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="kl-section-outlook" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+<div style="margin:0px auto;max-width:600px;">
+<table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+<tbody>
+<tr>
+<td style="direction:ltr;font-size:0px;padding:0px;text-align:center;">
+<!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" bgcolor="#ffffff" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+<div style="background:#ffffff;background-color:#ffffff;margin:0px auto;border-radius:0px 0px 0px 0px;max-width:600px;">
+<table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#ffffff;background-color:#ffffff;width:100%;border-radius:0px 0px 0px 0px;">
+<tbody>
+<tr>
+<td style="direction:ltr;font-size:0px;padding:20px 0;padding-bottom:0px;padding-left:0px;padding-right:0px;padding-top:0px;text-align:center;">
+<!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+<div class="content-padding">
+<!--[if true]><table border="0" cellpadding="0" cellspacing="0" width="600" style="width:600px;direction:ltr"><tr><![endif]-->
+<div class="kl-row colstack" style="display:table;table-layout:fixed;width:100%;">
+<!--[if true]><td style="vertical-align:top;width:600px;"><![endif]-->
+<div class="kl-column" style="display:table-cell;vertical-align:top;width:100%;">
+<div class="mj-column-per-100 mj-outlook-group-fix component-wrapper" style="font-size:0px;text-align:left;direction:ltr;vertical-align:top;width:100%;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;" width="100%">
+<tbody>
+<tr>
+<td class="" style="vertical-align:top;padding-top:9px;padding-right:18px;padding-bottom:9px;padding-left:18px;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="" width="100%">
+<tbody>
+<tr>
+<td align="left" class="kl-table" style="font-size:0px;padding:0px;word-break:break-word;">
+<table border="0" cellpadding="0" cellspacing="0" style="color:#000000;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;table-layout:fixed;width:100%;border:none;" width="100%">
+{% if event.order_items %}
+<thead>
+<tr>
+<th class="kl-table-subblock" style="width:auto;overflow:hidden;padding-top:4px;padding-right:0px;padding-bottom:4px;padding-left:0px;">
+<div style="font-family:Arial;font-size:14px;font-weight:700;letter-spacing:0px;line-height:1.3;text-align:left;color:#222222;"></div>
+</th>
+<th class="kl-table-subblock" style="width:auto;overflow:hidden;padding-top:4px;padding-right:0px;padding-bottom:4px;padding-left:0px;">
+<div style="font-family:Arial;font-size:14px;font-weight:700;letter-spacing:0px;line-height:1.3;text-align:left;color:#222222;">Product Name</div>
+</th>
+<th class="kl-table-subblock" style="width:auto;overflow:hidden;padding-top:4px;padding-right:0px;padding-bottom:4px;padding-left:0px;">
+<div style="font-family:Arial;font-size:14px;font-weight:700;letter-spacing:0px;line-height:1.3;text-align:left;color:#222222;">Quantity</div>
+</th>
+<th class="kl-table-subblock" style="width:auto;overflow:hidden;padding-top:4px;padding-right:0px;padding-bottom:4px;padding-left:0px;">
+<div style="font-family:Arial;font-size:14px;font-weight:700;letter-spacing:0px;line-height:1.3;text-align:left;color:#222222;">Price</div>
+</th>
+</tr>
+</thead>
+<tbody>
+{% for item in event.order_items %}
+
+
+<tr>
+<td class="kl-table-subblock" style="width:auto;overflow:hidden;vertical-align:top;padding-top:4px;padding-right:0px;padding-bottom:4px;padding-left:0px;">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td align="left" class="" style="font-size:0px;word-break:break-word;">
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;border-spacing:0px;">
+<tbody>
+<tr>
+<td class="kl-img-base-auto-width" style="border:0;padding:0;width:600px;" valign="top">
+<img alt="" style="display:block;outline:none;text-decoration:none;height:auto;font-size:13px;width:100%;" title="" width="600"/>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</table>
+</td>
+<td class="kl-table-subblock" style="width:auto;overflow:hidden;vertical-align:top;padding-top:4px;padding-right:0px;padding-bottom:4px;padding-left:0px;">
+<div style="font-family:'Helvetica Neue',Arial;font-size:14px;font-style:normal;font-weight:400;letter-spacing:0px;line-height:1.3;text-align:left;color:#222427;"><div>{{ items.product }}</div></div>
+</td>
+<td class="kl-table-subblock" style="width:auto;overflow:hidden;vertical-align:top;padding-top:4px;padding-right:0px;padding-bottom:4px;padding-left:0px;">
+<div style="font-family:'Helvetica Neue',Arial;font-size:14px;font-style:normal;font-weight:400;letter-spacing:0px;line-height:1.3;text-align:left;color:#222427;"><div>{{ items.quantity }}</div></div>
+</td>
+<td class="kl-table-subblock" style="width:auto;overflow:hidden;vertical-align:top;padding-top:4px;padding-right:0px;padding-bottom:4px;padding-left:0px;">
+<div style="font-family:'Helvetica Neue',Arial;font-size:14px;font-style:normal;font-weight:400;letter-spacing:0px;line-height:1.3;text-align:left;color:#222427;"><div>{{ items.price }}</div></div>
+</td>
+</tr>
+
+
+{% endfor %}
+
+
+
+</tbody>
+{% else %}
+<tbody>
+</tbody>
+{% endif %}
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!--[if true]></td><![endif]-->
+</div>
+<!--[if true]></tr></table><![endif]-->
+</div>
+<!--[if mso | IE]></table><![endif]-->
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!--[if mso | IE]></td></tr></table></table><![endif]-->
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!--[if mso | IE]></td></tr></table><![endif]-->
+</td>
+</tr>
+</tbody>
+</table>
+<!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+<div style="margin:0px auto;max-width:600px;">
+<table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+<tbody>
+<tr>
+<td style="direction:ltr;font-size:0px;padding:0px;text-align:center;">
+<!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:600px;" ><![endif]-->
+<div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;vertical-align:top;width:100%;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;width:100%;" width="100%">
+<tbody>
+<tr>
+<td align="center" class="klBranding" style="font-size:0px;padding:25px 0;word-break:break-word;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border-spacing:0px;">
+<tbody>
+<tr>
+<td style="width:122px;">
+<a href="https://www.klaviyo.com/?utm_medium=freebie&amp;utm_source=brand&amp;utm_term=YidwsB" style="color:#197bbd; font-style:normal; font-weight:normal; text-decoration:underline" target="_blank">
+<img alt="Powered by Klaviyo" height="50" src="https://d3k81ch9hvuctc.cloudfront.net/assets/email/branding/klaviyo-branding-option-0.png" style="border:0;display:block;outline:none;text-decoration:none;height:50px;width:100%;font-size:13px;" width="122"/>
+</a>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!--[if mso | IE]></td></tr></table><![endif]-->
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!--[if mso | IE]></td></tr></table><![endif]-->
+</div>
+</div>
+</body>
+</html>
+```
 
 7. **Customize Email Settings:** Adjust the email settings, including the sender information, subject line, and the dynamic content that should be populated based on specific customer order details.
    - Ensure placeholders for dynamic data (such as customer names and order details) are correctly configured to pull the relevant information.
