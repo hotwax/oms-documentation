@@ -18,7 +18,7 @@ These settings are mandatory for every Product Store to ensure efficient operati
 | Sales Order ID Prefix  | Adding a prefix to the internal ID helps visually separate purchase orders and sales orders.                                                                                                   | -           |
 
 
-<br></br>
+<br>
 Additionally, users have the flexibility to configure additional settings based on the specific business needs of Perry Ellis.
 
 | Settings            | Description                                                                                                                                        | Value                                                |
