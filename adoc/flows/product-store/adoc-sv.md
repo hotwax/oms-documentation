@@ -17,7 +17,7 @@ These settings are mandatory for every Product Store to ensure efficient operati
 | Product Identifier   | This setting allows users to configure which identification of a product is used as primary `internalName` in HotWax Commerce.                                                                | Shopify product SKU |
 | Sales Order ID Prefix | Adding a prefix to the internal ID helps visually separate purchase orders and sales orders.                                                                                                   | ADOC           |
 
-<br></br>
+<br>
 Additionally, users have the flexibility to configure additional settings based on the specific business needs of ADOC El Salvador.
 | Settings            | Description                                                                                                                                        | Value   |
 |---------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|---------|
