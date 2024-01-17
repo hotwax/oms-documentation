@@ -1,6 +1,6 @@
 # ADOC Honduras
 
-Certain settings are mandatory for every Product Store to ensure efficient operations.
+These settings are mandatory for every Product Store to ensure efficient operations.
 
 | Field                   | Description                                                                                                       | Value       |
 |-------------------------|-------------------------------------------------------------------------------------------------------------------|-------------|
