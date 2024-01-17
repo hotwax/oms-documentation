@@ -54,6 +54,11 @@
   * [Pre-order Allocation](pre-orders/pre-order-allocation.md)
   * [Release Pre-orders](pre-orders/release-pre-orders.md)
   * [Reports](pre-orders/reports.md)
+* [Returns](returns/readme.md)
+  * [Import Returns](returns/import-returns.md)
+  * [In-Store Returns](returns/in-store-returns.md)
+  * [Restocking](returns/restock-return.md)
+
 
 ## Inventory
 
