@@ -64,6 +64,9 @@
   * [Inventory count](inventory-count/inventory-count.md)
   * [Reports](inventory-count/reports.md)
 * [Inventory Upload](import-app/inventory.md)
+* [Safety Stock](inventory/safety-stock/README.md)
+  * [Set Bulk Safety Stock](inventory/safety-stock/set-bulk-safety-stock.md)
+  * [Set Individual Safety Stock](inventory/safety-stock/set-individual-safety-stock.md)
 
 ## Administration
 
