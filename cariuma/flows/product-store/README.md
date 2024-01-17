@@ -6,7 +6,8 @@ This section displays the default settings configured for Cariuma, specifically 
 
 Users have the flexibility to adjust these configurations as necessary to align with their specific business requirements or evolving needs.
 
-**Certain settings are mandatory for every Product Store to ensure efficient operations.**
+<br>
+Certain settings are mandatory for every Product Store to ensure efficient operations.
 
 | Field                 | Description                                                                                                                                                                                      | Value          |
 |-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------|
@@ -23,9 +24,8 @@ Users have the flexibility to adjust these configurations as necessary to align 
 | Product Identifier    | This setting allows users to configure which identification of a product is used as the primary `internalName` in HotWax Commerce.                                                                | Shopify product SKU |
 | Sales Order ID Prefix  | Adding a prefix to the internal ID helps visually separate purchase orders and sales orders.                                                                                                   | -           |
 
-
-<br></br>
-**Additionally, users have the flexibility to configure additional settings based on the specific business needs of Cariuma.**
+<br>
+Additionally, users have the flexibility to configure additional settings based on the specific business needs of Cariuma.
 
 | Settings            | Description                                                                                                                                        | Value                                                |
 |---------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------|
