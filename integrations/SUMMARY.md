@@ -6,6 +6,7 @@
 
 * [Introduction](oms/README.md)
 * [Fulfilled Order Items](oms/SalesOrders/fulfilledOrderItemsFeed.md)
+* [Returns](oms/returns/REAME.md)
 
 ## NetSuite
 
