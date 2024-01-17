@@ -58,8 +58,10 @@ To do so:
 4. Expand the ADVANCED section.
 5. Create a new section inside the JSON METADATA named label_colors, specifying the desired colors for each metric/dimension.
 
+{% hint style="info" %}
 ## Additional Tips:
 - **Drag-and-Drop Functionality:** Use the drag-and-drop feature to rearrange tabs, rows, columns, headers, markdown, and dividers effortlessly. This enables quick adjustments to your dashboard layout.
 - **Responsive Design:** Keep in mind that your dashboard layout is responsive, ensuring an optimal viewing experience across different devices. Test the layout on various screen sizes to ensure consistency.
+{% endhint %}
 
 By understanding and utilizing these dashboard layout elements, you'll be able to craft visually appealing and well-organized dashboards in Tathya.

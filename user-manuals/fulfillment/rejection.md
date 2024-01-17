@@ -66,7 +66,7 @@ They can also configure whether a rejection reason from the fulfillment app shou
 
 ## Configuration Details
 
-If the reason (Enumeration) `enumTypeId` is not `REPORT_NO_VAR`, the rejection will impact inventory. If inventory should be depleted when a rejection reason is used, `REPORT_VAR` `enumTypeId` will lead to changes in store inventory.
+If the reason (Enumeration) `enumTypeId` is not `REPORT_NO_VAR`, the rejection will impact inventory. If inventory should be depleted when a rejection reason is used, `REPORT_VAR` `enumTypeId` will lead to changes in store inventory. When a rejection reason should elminate all remaining inventory for the item being rejected, set the type to `REPORT_ALL_VAR`.
 
 #### Out Of The Box Rejection Reasons
 

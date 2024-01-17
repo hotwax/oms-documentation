@@ -18,7 +18,9 @@ Choose the chart type that best suits the insights you want to convey.
 
 Configure the new chart using the selected dataset. You can define metrics, dimensions, and customize the chart settings.
 
-**Note:** When creating charts directly from SQL queries, columns are pre-mapped based on the query's output. However, using the "Create Chart" option allows you to drag and drop individual columns so that you have fine-grained control over what data is visualized. This is especially useful when dealing with large datasets where not all columns are relevant to every analysis.
+{% hint style="info" %}
+When creating charts directly from SQL queries, columns are pre-mapped based on the query's output. However, using the "Create Chart" option allows you to drag and drop individual columns so that you have fine-grained control over what data is visualized. This is especially useful when dealing with large datasets where not all columns are relevant to every analysis.
+{% endhint %}
 
 **Save the New Chart**
 

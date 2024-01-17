@@ -20,9 +20,11 @@ Locate and click on the "Dashboards" option in the top navigation menu. This wil
 - Use the drag-and-drop functionality to arrange the selected charts on your dashboard. This allows you to create a customized layout that visually communicates your insights effectively.
 - Fine-tune the layout by adjusting the size and position of each slice using the drag-and-drop feature. Customize the dashboard title, description, and other settings. Consider adding annotations for clarity.
 
-**Note:** Annotations provide additional context or explanations for specific data points, enhancing the interpretability of your dashboard.
+{% hint style="info" %}
+**Annotations** provide additional context or explanations for specific data points, enhancing the interpretability of your dashboard.
+{% endhint %}
 
-- Save your dashboard once satisfied with the layout and content.
+- Publish your dashboard once satisfied with the layout and content.
 
 # Add Charts When Editing a Dashboard
 
@@ -32,7 +34,7 @@ Navigate to the Dashboards screen and go to the dashboard to which you want to a
 - Select the Charts tab.
 - The Charts tab contains a list of all charts that you have access to (i.e., charts that you have created or a team member has shared ownership access).
 - To add a chart, just drag & drop the chart card into a space on the dashboard.
-- Save your dashboard once you have added all the required charts.
+- Publish your dashboard once you have added all the required charts.
 
 # Creating a New Chart from an Empty Dashboard
 
@@ -50,11 +52,12 @@ To remove a chart from the Dashboards screen, select the Edit dashboard icon.
 
 - To delete an entire row of charts, select the trash icon on the far left side of the row.
 
-**Note:** Selecting the trash bin icon merely removes the chart(s) from your dashboard, it does not delete them from Tathya.
+{% hint style="info" %}
+Selecting the trash bin icon merely removes the chart(s) from your dashboard, it does not delete them from Tathya.
+{% endhint %}
 
 # Deleting a Dashboard
 
 A dashboard can be deleted from the Dashboards screen by clicking on the delete icon in the Actions column header.
 
 - On clicking the delete icon, you will see a popup that confirms the deletion of a dashboard. Type 'DELETE' to delete the dashboard.
-

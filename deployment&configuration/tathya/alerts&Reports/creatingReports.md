@@ -50,7 +50,9 @@ When sending a chart, be sure to indicate whether a screenshot will be sent (in 
 
 - **Screenshot Width:** This is an optional parameter that allows you to customize the width (in pixels) for your dashboard / chart screenshot.
 
-  **Note:** Your custom width can be between 600 and 2400 pixels. The format is the plain number (e.g., 2000). Utilizing the custom screenshot width may allow you to show more columns in a wide table chart which would normally be cut off by the typical screenshot width; please note that tables wider than the maximum limit of 2400 pixels will be cut off.
+  {% hint style="info" %}
+  Your custom width can be between 600 and 2400 pixels. The format is the plain number (e.g., 2000). Utilizing the custom screenshot width may allow you to show more columns in a wide table chart which would normally be cut off by the typical screenshot width; please note that tables wider than the maximum limit of 2400 pixels will be cut off.
+  {% endhint %}
 
 - **Ignore Cache:** Check this box to generate real-time data and invalidate cache.
 

@@ -82,8 +82,7 @@ Video: Receiving history
 
 Retailers who accept return at their stores need to accurately receive and record the returned inventory for potential resale on e-commerce.
 
-Store associates can lookup the incoming returns by navigating to the `Returns` page and identifying the returns with the `Return ID`. Store associates can receive the returned items similarly to the [inbound shipments](receiving.md#receive-asn).\
-
+Store associates can lookup the incoming returns by navigating to the `Returns` page and identifying the returns with the `Return ID`. Store associates can receive the returned items similarly to the [inbound shipments](receiving.md#receive-asn).\\
 
 ## Handle Discrepancies:
 
@@ -91,7 +90,11 @@ Store associates can lookup the incoming returns by navigating to the `Returns` 
 
 Sometimes stores receive more items than expected, leading to scenarios where, for instance, a store might receive 110 product items instead of the anticipated 100. Shipping back the extra items incurs additional costs for the retailer, necessitating a solution to receive this surplus inventory effectively.
 
-HotWax Commerce facilitates the receiving of extra inventory to address this concern. The progress bar highlights over-received items, turning red to identify items with excess inventory easily. Furthermore, the platform generates reports for over-received items, allowing retailers to receive this extra inventory efficiently within their ERP system.\
+HotWax Commerce facilitates the receiving of extra inventory to address this concern. The progress bar highlights over-received items, turning red to identify items with excess inventory easily. Furthermore, the platform generates reports for over-received items, allowing retailers to receive this extra inventory efficiently within their ERP system.
+
+<figure><img src="../.gitbook/assets/Excess Inventory Received.png" alt="" width="563"><figcaption><p>Receiving Extra Inventory</p></figcaption></figure>
+
+\
 \
 **Receiving Unexpected Items**
 
@@ -101,4 +104,4 @@ At times, stores receive items that differ from the recorded shipment. This disc
 Add Shipment Item
 {% endembed %}
 
-\
+\\

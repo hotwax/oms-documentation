@@ -32,3 +32,4 @@
 * [Allocation & Fulfillment](flows/allocation&fulfillmentSync/README.md)
 * [Transfer Orders](flows/transferOrderSync/README.md)
 * [Purchase Orders](flows/purchaseOrderSync/README.md)
+# [Shipping Method Mapping](flows/shipping-method-mapping/readme.md)
