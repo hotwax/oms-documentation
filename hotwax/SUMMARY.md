@@ -7,7 +7,7 @@
 * [Orders](orders/README.md)
   * [Created Orders](orders/createdOrderFeed.md)
   * [Order Adjustments](orders/adjustmentTypes.md)
-  * [Order Reconcillations](orders/order-reconciliations.md)
+  * [Order Reconciliations](orders/order-reconciliations.md)
 * [Inventory](api/inventory/README.md)
   * [Check Inventory](Inventory/check-inventory.md)
   * [Reset Inventory](Inventory/reset-inventory.md)
@@ -27,19 +27,19 @@
   * [Packing Slip PDF](Fulfillment/APIs/packing-slip-PDF.md)
   * [Ready To Ship Items](Fulfillment/APIs/ready-to-ship-items.md)
   * [Retry Shipping Label](Fulfillment/APIs/retry-shipping-label.md)
-  * [Shipping Label And PackingSlip](<fulfillment/apis/Shipping label and packing slip.md>)
-  * [Shipping Label PDF](<fulfillment/apis/Shipping label PDF..md>)
-  * [Update Orders](<fulfillment/apis/Update orders.md>)
-  * [Update And Import File](<fulfillment/apis/Upload and Import file.md>)
-* [Perform Find](<perform-find.md>)
+  * [Shipping Label And PackingSlip](Fulfillment/APIs/shipping-label-and-packing-slip.md)
+  * [Shipping Label PDF](Fulfillment/APIs/shipping-label-PDF..md)
+  * [Update Orders](Fulfillment/APIs/update-orders.md)
+  * [Update And Import File](Fulfillment/APIs/upload-and-Import-file.md)
+* [Perform Find](perform-find.md)
 
 ## Journeys
 
 * [Email Integration](journeys/email-integration/README.md)
-  * [Promise Date Change Communication](<Journeys/Email integration/Promise date change communication.md>)
-  * [Ready For Pickup Email](<Journeys/Email integration/Ready for pickup email.md>)
-* [Bopis PDP Experience](<Journeys/BOPIS PDP Experience.md>)
-* [Soft Allocation](<Journeys/Soft Allocation.md>)
+  * [Promise Date Change Communication](Journeys/Email%20integration/promise-date-change-communication.md)
+  * [Ready For Pickup Email](Journeys/Email%20integration/ready-for-pickup-email.md)
+* [Bopis PDP Experience](Journeys/BOPIS-PDP-Experience.md)
+* [Soft Allocation](Journeys/Soft-Allocation.md)
 
 ## Additional Resources
 

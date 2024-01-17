@@ -10,7 +10,7 @@ Downloads a shipping label in PDF format for the shipment. To download the shipp
 
 ### Header
 
-#### Params
+#### Params 
 
 ```
  https://demo-oms.hotwax.io/api/LabelAndPackingSlip.pdf?shipmentIds=<>
