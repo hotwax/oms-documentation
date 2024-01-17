@@ -8,15 +8,21 @@ In the top navigation menu, locate and click on the "SQL Lab" option. This actio
 
 In SQL Lab, Tathya provides dropdown menus where you can choose the desired database and schema before writing and executing your SQL queries. This step is crucial for accurately pinpointing the location of your data and ensuring that your queries fetch information from the correct database and schema.
 
-**Note:** We have access to multiple databases as we are dealing with data from different projects and sources. All the configured databases will be visible here.
+{% hint style="info" %}
+We have access to multiple databases as we are dealing with data from different projects and sources. All the configured databases will be visible here.
+{% endhint %}
 
+{% hint style="info" %}
 **Additional information:** In MySQL, the term "schema" is synonymous with a "database," while in PostgreSQL, schemas represent different categorizations within a project. If your data source supports schemas, selecting the correct schema ensures that your SQL queries target the specific subset of data you intend to analyze.
+{% endhint %}
 
 ## Executing SQL Queries
 
 Utilize various clauses such as SELECT, FROM, WHERE, GROUP BY, and others to shape the logic of your SQL query.
 
-**Note:** Tathya offers a multi-tab environment, enabling you to work on multiple queries simultaneously.
+{% hint style="info" %}
+Tathya offers a multi-tab environment, enabling you to work on multiple queries simultaneously.
+{% endhint %}
 
 Based on the output you desire, insert the query here and click the "Run Query" button to execute the query.
 
@@ -42,11 +48,13 @@ Ensure the dataset returned aligns with your expectations. This is the dataset t
 
 Now, navigate to Save and then select “Save dataset” from the dropdown menu, so that you can use the same dataset to create multiple charts in future.
 
-**Note:** There are a number of query errors that can occur due to a misalignment between your query and the database. Some examples include:
+{% hint style="info" %}
+There are a number of query errors that can occur due to a misalignment between your query and the database. Some examples include:
 
 - **Bad Reference:** A query can fail because it is referencing a column and/or table that no longer exists in the datasource. You can either modify the query accordingly or remove the column from the query.
 
 - **Unsubmitted Query:** A query will not even be submitted to the database if it is missing required parameters. You should define all the parameters referenced in the query in a valid JSON document.
+{% endhint %}
 
 ## Creating a Chart
 
