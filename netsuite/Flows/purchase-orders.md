@@ -22,20 +22,6 @@ To initiate the synchronization process, a Map Reduce Script, running a specific
 
 This Map Reduce script runs at regular intervals, typically every 15 minutes, ensuring that only the latest and pending Purchase Orders are fetched from NetSuite. It is meticulously designed to minimize the data transferred and processed, maintaining optimal efficiency.
 
-#### Here's how purchase order fields are mapped in NetSuite and HotWax Commerce
-
-<table><thead><tr><th width="113">S.No.</th><th width="284">Fields in NetSuite</th><th>Fields in HotWax Commerce</th></tr></thead><tbody><tr><td>1</td><td>Purchase Order Internal ID</td><td>External ID</td></tr><tr><td>2</td><td>Item</td><td>SKU</td></tr><tr><td>3</td><td>Quantity</td><td>Qty</td></tr><tr><td>4</td><td>Location</td><td>Facility</td></tr><tr><td>5</td><td>Expected Receipt Date</td><td>Expected Receipt Date</td></tr></tbody></table>
-
-{% tabs %}
-{% tab title="Purchase Order Fields in NetSuite" %}
-<figure><img src="../.gitbook/assets/PO netsuite field mapping.png" alt=""><figcaption><p>Purchase Order Fields Mapping in NetSuite</p></figcaption></figure>
-{% endtab %}
-
-{% tab title="Purchase Order Fields in HotWax Commerce" %}
-<figure><img src="../.gitbook/assets/HC po field mapping (1).png" alt=""><figcaption><p>Purchase Order Fields Mapping in HotWax Commerce</p></figcaption></figure>
-{% endtab %}
-{% endtabs %}
-
 **SuiteScript**
 
 Create file of open purchase orders
@@ -53,6 +39,20 @@ HC_uploadCSV_OpenPurchaseOrders
 ### Import Purchase Orders into HotWax Commerce
 
 In HotWax Commerce, a designated job monitors the SFTP location, periodically checking for new Purchase Order CSV files. The job uses the robust APIs provided by HotWax Commerce's Export/Import tools to import these Purchase Orders.
+
+#### Here's how purchase order fields are mapped in NetSuite and HotWax Commerce
+
+<table><thead><tr><th width="113">S.No.</th><th width="284">Fields in NetSuite</th><th>Fields in HotWax Commerce</th></tr></thead><tbody><tr><td>1</td><td>Purchase Order Internal ID</td><td>External ID</td></tr><tr><td>2</td><td>Item</td><td>SKU</td></tr><tr><td>3</td><td>Quantity</td><td>Qty</td></tr><tr><td>4</td><td>Location</td><td>Facility</td></tr><tr><td>5</td><td>Expected Receipt Date</td><td>Expected Receipt Date</td></tr></tbody></table>
+
+{% tabs %}
+{% tab title="Purchase Order Fields in NetSuite" %}
+<figure><img src="../.gitbook/assets/PO netsuite field mapping.png" alt=""><figcaption><p>Purchase Order Fields Mapping in NetSuite</p></figcaption></figure>
+{% endtab %}
+
+{% tab title="Purchase Order Fields in HotWax Commerce" %}
+<figure><img src="../.gitbook/assets/HC po field mapping (1).png" alt=""><figcaption><p>Purchase Order Fields Mapping in HotWax Commerce</p></figcaption></figure>
+{% endtab %}
+{% endtabs %}
 
 **Job in HotWax Commerce**
 
