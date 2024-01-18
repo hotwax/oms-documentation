@@ -7,6 +7,7 @@
 * [Introduction](oms/README.md)
 * [Fulfilled Order Items](oms/SalesOrders/fulfilledOrderItemsFeed.md)
 * [Returns](oms/returns/README.md)
+* [Inventory Item Variance](oms/Inventory/inventoryItemVarianceFeed.md)
 
 ## NetSuite
 
