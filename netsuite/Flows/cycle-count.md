@@ -1,7 +1,7 @@
 # Cycle Count
 Managing inventory accuracy in a retail business is a perpetual challenge. Store managers often encounter discrepancies between the recorded inventory in their systems and the actual physical stock on hand. To address these discrepancies, retailers periodically conduct inventory cycle counts. An inventory cycle count is a methodical approach that involves periodically counting a specific subset of items. Unlike a full physical inventory count, which requires tallying every item at once, cycle counts distribute the counting process over time, improving efficiency.
 
-To support this process, HotWax Commerce provides the Cycle Count App. The app enables store associates to perform scheduled periodic cycle counts while also allowing them to record inventory variances identified outside of the cycle counts. Associates can also specify reasons such as lost, stolen, damaged, or found for discrepancies identified. Synchronizing this crucial data from HotWax Commerce to NetSuite is essential to ensure that all systems within the retailer’s technology stack have accurate and up-to-date inventory information.
+To support this process, HotWax Commerce provides the Cycle Count App. The app enables store associates to perform scheduled periodic cycle counts while also allowing them to record inventory variances identified outside of the cycle counts. Associates can specify reasons such as lost, stolen, damaged, or found for discrepancies identified. Synchronizing this crucial data from HotWax Commerce to NetSuite is essential to ensure that all systems within the retailer’s technology stack have accurate and up-to-date inventory information.
 
 ### Key Objectives
 - The main goal of this integration is to keep in-store product inventory counts consistent between Netsuite and HotWax Commerce.
@@ -11,7 +11,7 @@ To support this process, HotWax Commerce provides the Cycle Count App. The app e
 ## Workflow
 
 ## Conduct Periodic Inventory Cycle Count in the Store
-The inventory count process initiates within the store, where store associates leverage the Cycle Count App to count the physical inventory. Upon completion of the cycle count, associates record the new inventory count into the app. Subsequently, the app automatically identifies the difference between the actual physical count and the corresponding systemic inventory levels, facilitating accurate and efficient inventory reconciliation.
+The inventory count process initiates within the store, where store associates leverage the Cycle Count App to conduct the cycle count. Upon completion of the cycle count, associates record the new inventory count into the app. Subsequently, the app automatically identifies the difference between the actual physical count and the corresponding systemic inventory levels, facilitating accurate and efficient inventory reconciliation.
 
 ### Pushing Cycle Count File to HotWax Commerce
 Store associates upload the Cycle Count file from the app to the HotWax Commerce server. Store managers review this file, approve it, and subsequently, inventory cycle count variances are recorded in HotWax Commerce.
