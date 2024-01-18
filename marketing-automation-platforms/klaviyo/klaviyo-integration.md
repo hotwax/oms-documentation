@@ -178,10 +178,10 @@ Here's the XML structure that generates the `Ready for Pickup` email template in
 
 ## Run Service to Create an Event on Klaviyo
 
-In HotWax Commerce, when orders are packed and ready for pickup, Klaviyo triggers an email to customers containing their specific details. However, it's important to note that Klaviyo does not have a ready-to-pickup email event that can be triggered for action by default. Retailers need to run this service once before setting up the email flow in Klaviyo to ensure that this event is created in Klaviyo. This step is essential for the effective initiation of the email communication process.
+In HotWax Commerce, when orders are packed and ready for pickup, Klaviyo triggers an email to customers containing their specific details. However, it's important to note that Klaviyo does not have a ready-to-pickup email event that can be triggered for action by default. Retailers need to run service named `createKlaviyoEvent` once before setting up the email flow in Klaviyo to ensure that this event is created in Klaviyo. This step is essential for the effective initiation of the email communication process.
 
 1. **Access the Service List:** Go to `HotWax Commerce Service List` through this link- `https://<instanceName>.io/webtools/control/ServiceList`
-2. **Locate `createKlaviyoEvent` Service:** Find the service named `createKlaviyoEvent'` within the Service List interface. Click on the `createKlaviyoEvent` service to access its details.
+2. **Locate `createKlaviyoEvent` Service:** Find the service named `createKlaviyoEvent` within the Service List interface. Click on the `createKlaviyoEvent` service to access its details.
 3. **Run the Service:** Look for the `Run Service` button available against the service name and click on it. Finally, click on `Submit` to execute the service.
 
 ## Create a Flow on Klaviyo
