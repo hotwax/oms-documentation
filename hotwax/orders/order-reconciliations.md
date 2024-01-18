@@ -9,8 +9,6 @@ This API call provides users with log insights for failed orders that may not ha
 
 Example: `https://demo-oms.hotwax.io/api/solr-query`
 
-### Headers
-`Content-Type: application/json`
 
 ### Request Format
 ```json
@@ -31,9 +29,6 @@ Example: `https://demo-oms.hotwax.io/api/solr-query`
 | `coreName`       | A single index or associated transaction log and configuration files |
 
 ## Response
-
-### Headers
-`Content-Type: application/json`
 
 ### Body
 ```json
