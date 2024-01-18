@@ -7,6 +7,7 @@
   * [Create Orders](flows/sales-orders/createOrderFeed.md)
   * [Gift Cards](flows/sales-orders/gift-cards.md)
   * [Shipping Methods](flows/sales-orders/shipping-methods.md)
+  * [Multi Package Fulfillment](flows/sales-orders/multi-package-fulfillment.md)
   * [Easy Post Integration](carriers/easyPost.md)
 * [Products](flows/products/README.md)
 * [Inventory](flows/inventory/README.md)
