@@ -6,7 +6,7 @@ The Bulk Safety Stock feature in the HotWax Commerce platform is a powerful tool
 
 1. Navigate to the `Hamburger Menu > PIM > Products` to open the View Products page.
 
-2. Choose filters to select multiple products or search for the specific product for which you want to set up safety stock in multiple facilities.
+2. Choose filters to select multiple products or search for the specific product for which you want to set up safety stock on all facilities.
 
 3. Click the `Manage Safety Stock` button to set the safety stock.
 
