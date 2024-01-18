@@ -6,7 +6,7 @@ HotWax Commerce takes the lead in order processing and fulfillment, ensuring eff
 
 Follow the steps provided in this guide to integrate with Klaviyo, enabling automated email notifications and improving the pickup experience for your customers:
 
-## Generate API Key
+## Generate API Key from Klaviyo
 
 The API key is a secure passkey that validates and authorizes interactions between HotWax Commerce and Klaviyo. Follow these steps to generate API Key from Klaviyo:
 
