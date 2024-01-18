@@ -95,3 +95,7 @@ The type of a return item often defines the handing of the returned item for the
 
 How the return was issued is stored at an item level in the form of types to allow retailers to create mixed returns where each item can be returned as different methods. For example, a store rep can issue a refund for some items of an order while offering an exchange for other items in the same transaction instead of being forced to create separate transactions.
 
+## Issuing refunds
+The type of a return item helps the OMS select the refund method. To issue refunds to customers, a new payment preference is created in the original sales order with the type “refund” and the method corresponding to the type of the return item. Payment type and method are used in combination to identify how the customer received their refund, for example if a customer received store credit in the form of a gift card, it will be presented as a refund type payment with the method of “gift card” or “store credit” depending on what the retailer chooses to configure.
+
+The amount that needs to be refunded to the customer is computed based on the sum of the refund item totals and the return adjustments. This computed sum is not actually stored in the OMS and is instead a computed value when return details are fetched. The final tender amount is then applied to the refund payment preference created on the order the returned order item was placed in.
