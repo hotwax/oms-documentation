@@ -8,6 +8,7 @@ To support UCG’s situation where both products are typed as GIFT CARDs, but so
 Digital Gift Card SKU:
 
 ```
+virtual_giftcard
 ```
 
 Physical Gift Card SKU:
