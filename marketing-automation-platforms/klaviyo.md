@@ -54,14 +54,23 @@ After generating API keys in Klaviyo, it's crucial to integrate them into HotWax
 
 Set up API Key in HotWax Commerce:
 
-1. Access the HotWax Commerce platform and navigate to: `https://<instanceName>.io/webtools/control/EntityImport`
+1. Access the HotWax Commerce platform and navigate to: `https://{instanceName}.io/webtools/control/EntityImport`
 
-2. In the `Complete XML document` section, add the below given XML information, replacing `{Key}` in `sharedSecret="{Key}` with the private key generated in Klaviyo:
+2. In the `Complete XML document` section, add the below given XML information, replacing `privateket` in `publicKey=Klaviyo-API-Key privateKey` with the private key generated in Klaviyo:
 
 ```xml
-<SystemMessageRemote description="Send Klaviyo Email" sendServiceName="sendKlaviyoEmail" sendUrl="https://a.klaviyo.com/api/track" sharedSecret="{Key}" systemMessageRemoteId="KLAVIYO-STORE"/>
-
+<SystemMessageRemote systemMessageRemoteId="KLAVIYO-STORE" description="Klaviyo API Configuration" sendUrl="https://a.klaviyo.com/api/" username="" messageAuthEnumId="" authHeaderName="Authorization" currentPassword="" publicKey="Klaviyo-API-Key privateKey"/>
 ```
+```xml
+<SystemProperty systemResourceId="KLAVIYO-STORE" systemPropertyId="endPoint.events" systemPropertyValue="events"/>
+```
+```xml
+<SystemProperty systemResourceId="KLAVIYO-STORE" systemPropertyId="endPoint.track" systemPropertyValue="track"/>
+```
+```xml
+<SystemProperty systemResourceId="KLAVIYO-STORE" systemPropertyId="revision" systemPropertyValue="2023-12-15" description="API version identified by this revision date (v2023-12-15) used for Klaviyo integration as of the specified release."/>
+```
+
 **The XML information contains the following details:**
 
 | Attribute                   | Description                                                 |
@@ -72,14 +81,14 @@ Set up API Key in HotWax Commerce:
 | Shared Secret               | Private API key for HotWax Commerce to interact with Klaviyo.|
 | System Message Remote ID    | Identification of the third-party system in HotWax Commerce.|
 
-You can verify the newly added entity here- `https://<instanceName>.io/webtools/control/FindGeneric?entityName=SystemMessageRemote``.
+You can verify the newly added entity here- `https://{instanceName}.io/webtools/control/FindGeneric?entityName=SystemMessageRemote``.
 
 
 ## Add Product Store Setting in HotWax Commerce
 
 Setting up Product Store email settings in HotWax Commerce is crucial as it automates tailored communication, like the `Ready for Pickup` email for that product store. Follow these steps to Add Product Store Setting:
 
-1. Visit `https://<instanceName>.io/webtools/control/EntityImport` to access the Entity Import interface.
+1. Visit `https://{instanceName}.io/webtools/control/EntityImport` to access the Entity Import interface.
 
 2. In the `Complete XML document` section, add the following XML information:
 
@@ -103,6 +112,8 @@ Setting up Product Store email settings in HotWax Commerce is crucial as it auto
 
 Within Klaviyo, customized email templates are employed for `Ready to Pickup` notifications, where the content varies for each order. When a `Ready to Pickup` email needs to be dispatched, HotWax Commerce generates order-specific data and transfers it to Klaviyo. To enable this process, HotWax Commerce develops and updates individualized data templates for each order, facilitating accurate and personalized email notifications sent through Klaviyo.
 
+This configuration data is sent for 
+
 | Key             | Description                                   |
 |-----------------|-----------------------------------------------|
 | first_name      | Customer's first name                          |
@@ -123,7 +134,7 @@ Within Klaviyo, customized email templates are employed for `Ready to Pickup` no
 
 
 
-To create the `Ready for Pickup` email template in HotWax Commerce, the provided XML data file needs to be imported via the following link- `https://<instanceName>.io/webtools/control/EntityImport`
+To create the `Ready for Pickup` email template in HotWax Commerce, the provided XML data file needs to be imported via the following link- `https://{instanceName}.io/webtools/control/EntityImport`
 
 Here's the XML structure that generates the `Ready for Pickup` email template in HotWax Commerce:
 
@@ -184,6 +195,15 @@ In HotWax Commerce, when orders are packed and ready for pickup, Klaviyo trigger
 2. **Locate `createKlaviyoEvent` Service:** Find the service named `createKlaviyoEvent` within the Service List interface. Click on the `createKlaviyoEvent` service to access its details.
 3. **Run the Service:** Look for the `Run Service` button available against the service name and click on it. Finally, click on `Submit` to execute the service.
 
+To ensure accurate email dispatch for this service, two essential parameters must be provided:
+
+| Parameters             | Value                                                         |
+|-------------------------|------------------------------------------------------------------------|
+| productStoreId          | Enter the name of the product store for which emails will be dispatched.|
+| emailType               | Specify the type of email (e.g., "PRDS_READY_TO_PICKUP" for "Ready for Pickup").|
+
+
+
 ## Create a Flow on Klaviyo
 
 Once you have configured the necessary settings and templates in HotWax Commerce, the next step is to create a corresponding flow and template email in Klaviyo to trigger the `Ready for Pickup` email of the retailer’s choice with the specific details for the customer. This feature focuses on Klaviyo's response when a specific trigger, such as the `Ready for Pickup` event in HotWax Commerce, occurs. It manages the generation and dispatch of tailored `Ready for Pickup` emails to customers via Klaviyo, initiated by specific actions, like clicking the `Ready to Pick Up` button within HotWax Commerce.
@@ -204,7 +224,7 @@ Follow these steps to create the email flow in Klaviyo:
 5. **Configure Action:** Add an action step to the flow that involves sending an email. Look for the action that corresponds to sending emails.
 
 6. **Choose Email Template:** Select an existing email template that aligns with the `Ready for Pickup` scenario. Alternatively, create a new email template specifically tailored for these notifications.
-   - If creating a new template, consider elements like subject line, body content, and any dynamic data placeholders for customer-specific details. Here's and HTML template for the Ready to Pickup Notifications that you can use for your product store.
+   - If creating a new template, consider elements like subject line, body content, and any dynamic data placeholders for customer-specific details. Here's an HTML template for the Ready to Pickup Notifications that you can use for your product store.
 
 ``` html
 <!DOCTYPE html>
@@ -558,7 +578,7 @@ padding-right: 0 !important
 <tr>
 <!--[if true]><td style="width:120px;" bgcolor="transparent"><![endif]-->
 <!--[if !true]><!--><td style="width:120px;"><!--<![endif]-->
-<img src="https://d3k81ch9hvuctc.cloudfront.net/company/YidwsB/images/dab32609-cfb3-420a-bd8a-83099cf5bcd7.png" style="display:block;outline:none;text-decoration:none;height:auto;width:100%;background-color:transparent;" width="120"/>
+<img src="{Image-link}" style="display:block;outline:none;text-decoration:none;height:auto;width:100%;background-color:transparent;" width="120"/>
 </td>
 </tr>
 </tbody>
@@ -854,6 +874,10 @@ padding-right: 0 !important
 </body>
 </html>
 ```
+
+{% hint style="warning" %}
+replace {image link} with the link of your desired image file
+{% endhint %}
 
 7. **Customize Email Settings:** Adjust the email settings, including the sender information, subject line, and the dynamic content that should be populated based on specific customer order details.
    - Ensure placeholders for dynamic data (such as customer names and order details) are correctly configured to pull the relevant information.
