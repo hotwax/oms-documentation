@@ -54,7 +54,7 @@ After generating API keys in Klaviyo, it's crucial to integrate them into HotWax
 
 Set up API Key in HotWax Commerce:
 
-1. Access the HotWax Commerce platform and navigate to: `https://<instanceName>.io/webtools/control/EntityImport`
+1. Access the HotWax Commerce platform and navigate to: `https://{instanceName}.io/webtools/control/EntityImport`
 
 2. In the `Complete XML document` section, add the below given XML information, replacing `{Key}` in `sharedSecret="{Key}` with the private key generated in Klaviyo:
 
