@@ -4,3 +4,14 @@ Frank and Oak has two types of gift cards, physical and digital. Currently both 
 If the retailer chooses to map the GIFT CARD Shopify product type to `digital` type products in the OMS, then the OMS will automatically mark gift card order items as completed as soon as they’re imported into the OMS.
 
 To support UCG’s situation where both products are typed as GIFT CARDs, but some are digital and some are physical, during setup HotWax will have to manually disable the “isDigital” flag on the gift cards that are not digital gift cards and actually require fulfillment.
+
+Digital Gift Card SKU:
+
+```
+```
+
+Physical Gift Card SKU:
+
+```
+5500000-000
+```
