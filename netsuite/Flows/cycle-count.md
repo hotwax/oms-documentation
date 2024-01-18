@@ -17,7 +17,7 @@ The inventory count process initiates within the store, where store associates l
 Store associates upload the Cycle Count file from the app to the HotWax Commerce server. Store managers review this file, approve it, and subsequently, inventory cycle count variances are recorded in HotWax Commerce.
 
 ### Export Inventory Variances from HotWax Commerce
-Once inventory cycle count variances are successfully logged in HotWax Commerce, a specific job is executed to create a CSV file containing all the cycle count inventory variance records. This file is then placed in an SFTP location, ensuring that it is readily accessible for further processing.
+Once inventory cycle count variances are successfully logged in HotWax Commerce, a specific job runs in our integration platform that creates a CSV file containing all the cycle count inventory variance records. This file is then placed in an SFTP location, ensuring that it is readily accessible for further processing.
 
 Successful logging of an inventory count is indicated by its status being "INV_COUNT_COMPLETED"
 
@@ -63,7 +63,7 @@ Unlike cycle counting, where an inventory count is conducted periodically, this 
 Upon approval by the store manager, store associates log the inventory variances through the app, along with providing the relevant reasons, these recorded inventory variances automatically update the inventory in HotWax Commerce.
 
 ### Export Inventory Variance from HotWax Commerce
-Once inventory variances are successfully updated in HotWax Commerce, a specific job is executed to create a CSV file containing all the inventory variance records. This file is then placed in an SFTP location from where NetSuite can read it.
+Once inventory variances are successfully updated in HotWax Commerce, a specific job runs in our integration platform that creates a CSV file containing all the inventory variance records. This file is then placed in an SFTP location from where NetSuite can read it.
 
 **Jobs in HotWax Commerce**
 
