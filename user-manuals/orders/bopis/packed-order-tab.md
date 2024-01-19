@@ -1,34 +1,19 @@
-# Packed Order Tab
+# Packed Orders Tab
 
-Orders that are packed and ready to handover to the customer appear on the packed order tab. An email is triggered to the customer that their order is ready for pickup and in case the customer overlooks the email and doesn't come to pick up their order, store associates can re-send email notification to the customer addressing the challenge of delayed pick-ups, misunderstandings, and even order cancellations.&#x20;
+All orders that are packed and ready to be handed over to customers are displayed on the `Packed` tab on Orders page. Users can also use the `Search` bar on this page to find packed orders using customer name, product name, or order ID. Some key attributes on the order cards available on this page are listed below.  
 
-1. **Packing Slip**
+* **Generate Packing Slip:** A packing slip is a document listing the contents of a package. It serves as a quick reference for both the sender and the recipient to verify products in the package. With the generate packing slip feature, store associates can generate packing slips manually using the `print` icon, available on each order card.
 
-A packing slip is a document listing the contents of a shipped package. It serves as a quick reference for both the sender and the recipient to verify the accuracy of the delivered goods.
+{% hint style="info" %} For packing slip (document) generation, the app opens a new tab. Ensure that the pop-Up blocker is disabled to allow seamless access. {% endhint %}
 
-With the generate packing slip feature, store associates can generate packing slips manually from the Packed Tab using the print icon, available on each order.
+* **Email:** In case a customer doesn’t come to pick up their order, users can re-send ready for pickup email notification to the customer using the `mail` icon available on the order card, a pop-up card will appear confirming re-sending the email. This feature addresses the challenge of delayed pick-ups, misunderstandings, and even order cancellations. This action can also be performed from the order details page. 
 
-{% hint style="info" %}
-For packing slip (document) generation, the app opens a new tab. Ensure that the Pop-Up blocker is disabled to allow seamless access.
-{% endhint %}
+* **Handover:** When customers arrive to receive their orders and the store associates handover the order to the customer, they need to click on the `Handover` button to mark the order as delivered. Alternatively, this can also be done on the order details page of the packed order.
 
-2. **Handover Order**
+Stock information, order timeline, and handling instructions are also visible on the order card on this page. 
 
-When the customer arrives to receive the order, the store associate will handover the order to the customer and will mark the order delivered by clicking on the Handover button.
-
-Store associates can also access the handover functionality from the order details page of the packed order.
-
-{% hint style="info" %}
-After clicking the handover button, the orders are marked complete and moved to Completed Orders Tab.
-{% endhint %}
-
-3. **Resend Email Notifications**
-
-Store associates can promptly remind customers to pick-up their orders by re-sending the ready-for-pickup notification from the Packed Orders tab by clicking on the mail icon, a pop up menu will appear confirming re-sending the email. Click on the send button to resend pickup email to the customer.&#x20;
-
-Store associates can also access the resend customer email functionality from the order details page of the packed order.
-
-\
+{% hint style="info" %} After clicking the `Handover` button, the orders are marked completed and moved to `Completed` tab. {% endhint %}
 
 
 <figure><img src="../../.gitbook/assets/Screenshot 2024-01-01 at 11.54.09 PM.png" alt=""><figcaption><p>Image; Packed Order Tab</p></figcaption></figure>
+
