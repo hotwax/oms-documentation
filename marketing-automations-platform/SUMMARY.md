@@ -1,3 +1,3 @@
 # Table of contents
 
-* [Klaviyo](klaviyo.md)
+* [Klaviyo](marketing-automations-platform/klaviyo.md)
