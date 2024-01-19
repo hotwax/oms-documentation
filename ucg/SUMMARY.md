@@ -5,6 +5,8 @@
 ## Flows
 * [Sales Orders](flows/sales-orders/README.md)
   * [Create Orders](flows/sales-orders/createOrderFeed.md)
+  * [Approval](flows/sales-orders/approval.md)
+  * [Payment Methods](flows/sales-orders/payment-methods.md)
   * [Gift Cards](flows/sales-orders/gift-cards.md)
   * [Shipping Methods](flows/sales-orders/shipping-methods.md)
   * [Easy Post Integration](carriers/easyPost.md)
