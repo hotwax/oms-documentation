@@ -5,6 +5,7 @@
 ## Flows
 * [Sales Orders](flows/sales-orders/README.md)
   * [Imoprt Error](flows/sales-orders/import-error.md)
+  * [Blanket Customer](flows/sales-orders/blanket-customer.md)
   * [Create Orders](flows/sales-orders/createOrderFeed.md)
   * [Approval](flows/sales-orders/approval.md)
   * [Payment Methods](flows/sales-orders/payment-methods.md)
