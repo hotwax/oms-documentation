@@ -1,42 +1,31 @@
 # Order Details Page
 
-Access the Order Details page by clicking on an order card, it will display all order-related information such as customer name, order id, customer's email address, item details, reason for rejection and order item rejection history.
+Users can access the Order Details page by clicking on any order card from any of the tabs on Order page, it will display all order-related information for that order such as customer’s name, order ID, customer's contact details, item details, reason for rejection and order item rejection history.
 
-Access the open order page, select an order card. Users will then be directed to the order details page. The order details page enables store associates to perform the following functions:
+On clicking on any order card in the Open or Packed tab, users will be directed to the order details page. The order details page displays key details of an order and also enables store associates to perform the certain functions. 
 
-**Reject Orders**
+### Reject Orders
 
-During peak hours or promotional events, brick-and-mortar retail locations often face increased in-store traffic, heightening the risk that the requested item for pick-up may become unavailable due to in-store purchases. In such instances, store associates may need to reject the order or reject partial order in case the order item inventory is insufficient at the store. This feature can be enabled using the toggle on the settings page.
+During peak hours or promotional events, brick-and-mortar retail locations often face increased in-store traffic, heightening the risk that the requested item for pick-up may become unavailable due to in-store purchases. In such instances, store associates may need to reject an order or reject an order partially in case the order item inventory is insufficient at the store. Partial order rejection feature can be enabled using the toggle on the settings page.
 
-To reject an order, access the open order page. Select the order card to navigate to the order details page. Choose reasons for rejection. Click on the 'Report an Issue' button to access a pop-up menu bar for selecting rejection reasons. Confirm the rejection by clicking on the save icon.
+To reject an order, click on the order card in the `Open` tab to open the order details page. Click on `Reject Order` to reject the order, select an appropriate reason for rejecting the order in the pop-up window that appears and click on the `save` icon. Another pop-up will appear to confirm order rejection, select `Reject` to reject the order. 
 
-{% hint style="info" %}
-Upon rejecting an item, customers will receive an email with alternate fulfillment options, and the rejected order item will be promptly removed from your dashboard.
-{% endhint %}
+{% hint style="info" %} Upon rejecting an item, customers will receive an email with alternate fulfillment options, and the rejected order item will be removed from your dashboard. {% endhint %}
 
-The reasons for rejection are as followed:
+The available reasons for rejection are:
+* **Not in Stock:** If items are out of stock or exhausted at the store, the store associate can select `Not In Stock` as a reason for rejection. In that case the inventory ATP (Available to Promise) and QOH (Quantity on Hand) are set to 0 for that product for the selected store and all open orders with respective items are auto-rejected from the store.
+* **No Reason:** If there is no specific reason for rejection the store associate can select `No Reason`. When a store associate selects this option, the inventory ATP and QOH is increased by the same quantity.
 
-**a. Not in Stock**
+{% hint style="info" %} Selecting a specific issue for rejection triggers distinct inventory responses within OMS. {% endhint %}
 
-Items are out of stock or exhausted at the store. When the store associate selects Not In Stock as a reason for rejection, the Inventory ATP (Available to Promise) and QOH (Quantity on Hand) are set to 0 for that product for the selected store.\
-All open orders with respective items are auto-rejected from the store.\
-\
-**b. No Reason**
 
-There is no specific reason for rejection.  When the store associate selects Not Reason as a reason for rejection, the inventory ATP is increased by the same quantity and QOH is increased by the same quantity.
+### Customer and Payment Details 
+Customer details that are mentioned on the order such as customer’s name, and contact details can be viewed and copied from this page. Along with that payment mode is also displayed on the page for store associates to know if it is a paid order or payment needs to be collected at the time of order handover. Payment method is displayed on the right side of the order details page. 
 
-{% hint style="info" %}
-Selecting a specific issue for rejection triggers distinct inventory responses within OMS.
-{% endhint %}
 
-1. **Payment Mode**
+### Assign Picker
+During the process of fulfilling a BOPIS order, store associates can assign and track pickers to ensure the pickers' commission eligibility. For open orders, users can assign pickers from a pop-up that will open on clicking the `Ready for Pickup` button on the order details page. In case they want to edit the picker for an order, they can do that using the `Edit` button on the order details page of a packed order. 
 
-Payment mode is reflected for store associates to know if it is a paid order or the payment needs to be collected at the time of order handover. Payment method is reflected at the right side of the order details page.
-
-2. **Enable Tracking**
-
-Enables store managers to assign and track pickers efforts for commission eligibility. Access the open orders page and select the ready for pickup icon. An assign picker pop up menu will appear. Select from the displayed list of search for the desired picker to assign picker.\
-\
-Once orders are packed, store associate will click on the Ready for pickup button that will move the order to the Packed order Tab.
 
 <figure><img src="../../../.gitbook/assets/Screenshot 2024-01-01 at 11.50.51 PM (1).png" alt=""><figcaption><p>Image: Order Details Page</p></figcaption></figure>
+
