@@ -1,3 +1,3 @@
 # Table of contents
 
-* [Klaviyo](README.md)
+* [Klaviyo](Klaviyo.md)
