@@ -50,7 +50,7 @@ In HotWax Commerce, a designated job monitors the SFTP location, periodically ch
 {% endtab %}
 
 {% tab title="Purchase Order Fields in HotWax Commerce" %}
-<figure><img src="../.gitbook/assets/HC po field mapping (2).png" alt=""><figcaption><p>Purchase Order Fields Mapping in HotWax Commerce</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/HC po field mapping (2).png" alt=""><figcaption><p>Purchase Order Fields Mapping in HotWax Commerce "Inventory Receiving App"</p></figcaption></figure>
 {% endtab %}
 {% endtabs %}
 
