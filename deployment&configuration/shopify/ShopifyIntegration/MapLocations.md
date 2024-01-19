@@ -1,7 +1,8 @@
 # Map Shopify POS Locations to HotWax Commerce Facilities
 
 {% hint style='info' %}
-While mapping locations, you need to create a location in Shopify called `eCom Inventory' and map the location with the Brokering queue i.e. _NA_ in Hotwax, ensuring that new orders arrive at the Brokering queue for allocation. For each instance, you will have one default location which will be declared by the retailer, you can find this information in the implementation document. 
+
+When mapping locations, set up a Shopify location named eCom Inventory and link it to the Brokering queue (_NA_ in Hotwax). This ensures that unified inventory across retailers' facilities is updated to a single location in Shopify. When an order is placed on Shopify, inventory is reduced from eCom Inventory, and the order is sent to the HotWax Commerce Brokering queue for brokering to the optimized location for fulfillment.
 {% endhint %}
 
 On the Shopify Config Detail page for your store, follow these steps:
