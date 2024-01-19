@@ -42,7 +42,7 @@ In HotWax Commerce, a designated job monitors the SFTP location, periodically ch
 
 #### Here's how purchase order fields are mapped in NetSuite and HotWax Commerce
 
-<table><thead><tr><th width="113">S.No.</th><th width="284">Fields in NetSuite</th><th>Fields in HotWax Commerce</th></tr></thead><tbody><tr><td>1</td><td>Purchase Order Internal ID</td><td>External ID</td></tr><tr><td>2</td><td>Item</td><td>SKU</td></tr><tr><td>3</td><td>Quantity</td><td>Qty</td></tr><tr><td>4</td><td>Location</td><td>Facility</td></tr><tr><td>5</td><td>Expected Receipt Date</td><td>Expected Receipt Date</td></tr></tbody></table>
+<table><thead><tr><th width="113">S.No.</th><th width="284">Fields in NetSuite</th><th>Fields in HotWax Commerce</th></tr></thead><tbody><tr><td>1</td><td>Purchase Order Internal ID</td><td>External ID</td></tr><tr><td>2</td><td>Item</td><td>SKU</td></tr><tr><td>3</td><td>Quantity</td><td>Qty</td></tr><tr><td>4</td><td>Location</td><td>Facility</td></tr><tr><td>5</td><td>Expected Receipt Date</td><td>Estimated Delivery Date</td></tr></tbody></table>
 
 {% tabs %}
 {% tab title="Purchase Order Fields in NetSuite" %}
