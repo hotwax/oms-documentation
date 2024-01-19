@@ -139,52 +139,52 @@ To create the `Ready for Pickup` email template in HotWax Commerce, the provided
 Here's the XML structure that generates the `Ready for Pickup` email template in HotWax Commerce:
 
 ```xml
-    <DataResource dataResourceId="READY_FOR_PICKUP" dataResourceTypeId="ELECTRONIC_TEXT"  dataTemplateTypeId="FTL" statusId="CTNT_PUBLISHED"/>
-    <Content contentId="READY_FOR_PICKUP" contentTypeId="DOCUMENT" contentName="Template for klaviyo ready for pickup email" dataResourceId="READY_FOR_PICKUP" statusId="CTNT_PUBLISHED"/>
-    <ElectronicText dataResourceId="READY_FOR_PICKUP">
-        <textData><![CDATA[
-		<#assign shipment = EntityQuery.use(delegator).from("Shipment").where("shipmentId", shipmentId!).queryOne()!/>
-		<#assign primaryShipGroup = EntityQuery.use(delegator).from("OrderItemShipGroup").where("orderId", shipment.primaryOrderId!, "shipGroupSeqId", shipment.primaryShipGroupSeqId!).queryOne()!/>
-		<#assign originFacility = EntityQuery.use(delegator).from("Facility").where("facilityId", shipment.originFacilityId!).queryOne()!/>
-		<#assign postalAddress = EntityQuery.use(delegator).from("PostalAddressAndGeo").where("contactMechId", shipment.originContactMechId!).queryOne()!/>
-		<#assign orderHeader = EntityQuery.use(delegator).from("OrderHeader").where("orderId", orderId!).queryOne()!/>
-		<#assign customer = EntityQuery.use(delegator).from("Person").where("partyId", shipment.partyIdTo!).queryOne()!/>
-		<#assign shipmentItems = EntityQuery.use(delegator).from("ShipmentItem").where("shipmentId", shipmentId!).queryList()!/>
-		<#assign shipGroupTotalItemAmount = CsrOrderHelper.getShipGroupItemsTotalWithItemAdjustments(delegator, orderId, primaryShipGroup)! />
-		<#assign shipGroupTotal = CsrOrderHelper.getShipGroupTotal(delegator, orderId, primaryShipGroup)! />
+<DataResource dataResourceId="READY_FOR_PICKUP" dataResourceTypeId="ELECTRONIC_TEXT" dataTemplateTypeId="FTL" statusId="CTNT_PUBLISHED"/>
+<Content contentId="READY_FOR_PICKUP" contentTypeId="DOCUMENT" contentName="Template for klaviyo ready for pickup email" dataResourceId="READY_FOR_PICKUP" statusId="CTNT_PUBLISHED"/>
+<ElectronicText dataResourceId="READY_FOR_PICKUP">
+    <textData><![CDATA[
+        <#assign shipment = EntityQuery.use(delegator).from("Shipment").where("shipmentId", shipmentId!).queryOne()!/>
+        <#assign primaryShipGroup = EntityQuery.use(delegator).from("OrderItemShipGroup").where("orderId", shipment.primaryOrderId!, "shipGroupSeqId", shipment.primaryShipGroupSeqId!).queryOne()!/>
+        <#assign originFacility = EntityQuery.use(delegator).from("Facility").where("facilityId", shipment.originFacilityId!).queryOne()!/>
+        <#assign postalAddress = EntityQuery.use(delegator).from("PostalAddressAndGeo").where("contactMechId", shipment.originContactMechId!).queryOne()!/>
+        <#assign orderHeader = EntityQuery.use(delegator).from("OrderHeader").where("orderId", orderId!).queryOne()!/>
+        <#assign customer = EntityQuery.use(delegator).from("Person").where("partyId", shipment.partyIdTo!).queryOne()!/>
+        <#assign shipmentItems = EntityQuery.use(delegator).from("ShipmentItem").where("shipmentId", shipmentId!).queryList()!/>
+        <#assign shipGroupTotalItemAmount = CsrOrderHelper.getShipGroupItemsTotalWithItemAdjustments(delegator, orderId, primaryShipGroup)! />
+        <#assign shipGroupTotal = CsrOrderHelper.getShipGroupTotal(delegator, orderId, primaryShipGroup)! />
 
-		{
-		  "first_name": "${customer.firstName!}",
-		  "last_name": "${customer.lastName!}",
-		  "ship_from": {
-		    "to_name": "${originFacility.facilityName!}",
-		    "address1": "${postalAddress.address1!}",
-		    "address2": "${postalAddress.address2!}",
-		    "city": "${postalAddress.city!}",
-		    "state_name": "${postalAddress.stateName!}",
-		    "country_name":"${postalAddress.countryName!}"
-		  },
-		  "order_name": "${orderHeader.orderName!}",
-		  "order_items": [
-		    <#list shipmentItems as shipmentItem>
-		      <#assign orderShipment = EntityQuery.use(delegator).from("OrderShipment").where("shipmentId", shipmentId!,"shipmentItemSeqId", shipmentItem.shipmentItemSeqId!,"shipGroupSeqId", shipment.primaryShipGroupSeqId!).queryFirst()! />
-		      <#assign orderItem = EntityQuery.use(delegator).from("OrderItem").where("orderId", orderId!,"orderItemSeqId", orderShipment.orderItemSeqId!).queryOne()!/>
-		      <#assign product = EntityQuery.use(delegator).from("Product").where("productId", shipmentItem.productId).queryOne()!/>
-		      <#assign productUrl = (ProductContentWrapper.getProductContentAsText(product, "IMAGE", locale, dispatcher, "string")) !/>
-		      {
-		  	"image_url": "${productUrl!}",
-		  	"product_name": "${orderItem.itemDescription!} ${product.productName!}",
-		  	"quantity": "${shipmentItem.quantity!}",
-		  	"price": "${orderItem.unitPrice}"
-		      } <#if shipmentItem_has_next>,</#if>
-		    </#list>
-		  ],
-		  "subtotal":"${shipGroupTotalItemAmount}",
-		  "grand_total": "${shipGroupTotal!}"
-		}
-        ]]></textData>
-    </ElectronicText>
+        {
+          "first_name": "${customer.firstName!}",
+          "last_name": "${customer.lastName!}",
+          "ship_from": {
+            "to_name": "${originFacility.facilityName!}",
+            "address1": "${postalAddress.address1!}",
+            "address2": "${postalAddress.address2!}",
+            "city": "${postalAddress.city!}",
+            "state_name": "${postalAddress.stateName!}",
+            "country_name":"${postalAddress.countryName!}"
+          },
+          "order_name": "${orderHeader.orderName!}",
+          "order_items": [
+            <#list shipmentItems as shipmentItem>
+              <#assign orderShipment = EntityQuery.use(delegator).from("OrderShipment").where("shipmentId", shipmentId!,"shipmentItemSeqId", shipmentItem.shipmentItemSeqId!,"shipGroupSeqId", shipment.primaryShipGroupSeqId!).queryFirst()! />
+              <#assign orderItem = EntityQuery.use(delegator).from("OrderItem").where("orderId", orderId!,"orderItemSeqId", orderShipment.orderItemSeqId!).queryOne()!/>
+              <#assign product = EntityQuery.use(delegator).from("Product").where("productId", shipmentItem.productId).queryOne()!/>
+              <#assign productUrl = (ProductContentWrapper.getProductContentAsText(product, "IMAGE", locale, dispatcher, "string")) !/>
+              {
+                "image_url": "${productUrl!}",
+                "product_name": "${orderItem.itemDescription!} ${product.productName!}",
+                "quantity": "${shipmentItem.quantity!}",
+                "price": "${orderItem.unitPrice}"
+              } <#if shipmentItem_has_next>,</#if>
+            </#list>
+          ],
+          "subtotal":"${shipGroupTotalItemAmount}",
+          "grand_total": "${shipGroupTotal!}"
+        }
+    ]]></textData>
 </ElectronicText>
+
 ```
 
 ## Run Service to Create an Event on Klaviyo
