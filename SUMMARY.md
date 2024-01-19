@@ -1,4 +1,3 @@
 # Table of contents
 
-* [README](README.md)
-* [Klaviyo](klaviyo.md)
+* [Klaviyo](marketing-automations-platform/klaviyo.md)
