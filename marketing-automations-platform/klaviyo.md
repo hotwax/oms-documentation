@@ -56,12 +56,21 @@ Set up API Key in HotWax Commerce:
 
 1. Access the HotWax Commerce platform and navigate to: `https://{instanceName}.io/webtools/control/EntityImport`
 
-2. In the `Complete XML document` section, add the below given XML information, replacing `{Key}` in `sharedSecret="{Key}` with the private key generated in Klaviyo:
+2. In the `Complete XML document` section, add the below given XML information, replacing `privateket` in `publicKey=Klaviyo-API-Key privateKey` with the private key generated in Klaviyo:
 
 ```xml
-<SystemMessageRemote description="Send Klaviyo Email" sendServiceName="sendKlaviyoEmail" sendUrl="https://a.klaviyo.com/api/track" sharedSecret="{Key}" systemMessageRemoteId="KLAVIYO-STORE"/>
-
+<SystemMessageRemote systemMessageRemoteId="KLAVIYO-STORE" description="Klaviyo API Configuration" sendUrl="https://a.klaviyo.com/api/" username="" messageAuthEnumId="" authHeaderName="Authorization" currentPassword="" publicKey="Klaviyo-API-Key privateKey"/>
 ```
+```xml
+<SystemProperty systemResourceId="KLAVIYO-STORE" systemPropertyId="endPoint.events" systemPropertyValue="events"/>
+```
+```xml
+<SystemProperty systemResourceId="KLAVIYO-STORE" systemPropertyId="endPoint.track" systemPropertyValue="track"/>
+```
+```xml
+<SystemProperty systemResourceId="KLAVIYO-STORE" systemPropertyId="revision" systemPropertyValue="2023-12-15" description="API version identified by this revision date (v2023-12-15) used for Klaviyo integration as of the specified release."/>
+```
+
 **The XML information contains the following details:**
 
 | Attribute                   | Description                                                 |
@@ -72,14 +81,14 @@ Set up API Key in HotWax Commerce:
 | Shared Secret               | Private API key for HotWax Commerce to interact with Klaviyo.|
 | System Message Remote ID    | Identification of the third-party system in HotWax Commerce.|
 
-You can verify the newly added entity here- `https://<instanceName>.io/webtools/control/FindGeneric?entityName=SystemMessageRemote``.
+You can verify the newly added entity here- `https://{instanceName}.io/webtools/control/FindGeneric?entityName=SystemMessageRemote``.
 
 
 ## Add Product Store Setting in HotWax Commerce
 
 Setting up Product Store email settings in HotWax Commerce is crucial as it automates tailored communication, like the `Ready for Pickup` email for that product store. Follow these steps to Add Product Store Setting:
 
-1. Visit `https://<instanceName>.io/webtools/control/EntityImport` to access the Entity Import interface.
+1. Visit `https://{instanceName}.io/webtools/control/EntityImport` to access the Entity Import interface.
 
 2. In the `Complete XML document` section, add the following XML information:
 
@@ -103,6 +112,8 @@ Setting up Product Store email settings in HotWax Commerce is crucial as it auto
 
 Within Klaviyo, customized email templates are employed for `Ready to Pickup` notifications, where the content varies for each order. When a `Ready to Pickup` email needs to be dispatched, HotWax Commerce generates order-specific data and transfers it to Klaviyo. To enable this process, HotWax Commerce develops and updates individualized data templates for each order, facilitating accurate and personalized email notifications sent through Klaviyo.
 
+This configuration data is sent for 
+
 | Key             | Description                                   |
 |-----------------|-----------------------------------------------|
 | first_name      | Customer's first name                          |
@@ -123,57 +134,57 @@ Within Klaviyo, customized email templates are employed for `Ready to Pickup` no
 
 
 
-To create the `Ready for Pickup` email template in HotWax Commerce, the provided XML data file needs to be imported via the following link- `https://<instanceName>.io/webtools/control/EntityImport`
+To create the `Ready for Pickup` email template in HotWax Commerce, the provided XML data file needs to be imported via the following link- `https://{instanceName}.io/webtools/control/EntityImport`
 
 Here's the XML structure that generates the `Ready for Pickup` email template in HotWax Commerce:
 
 ```xml
-<DataResource dataResourceId="READY_FOR_PICKUP" dataResourceTypeId="ELECTRONIC_TEXT" dataTemplateTypeId="FTL" statusId="CTNT_PUBLISHED"/>
-<Content contentId="READY_FOR_PICKUP" contentTypeId="DOCUMENT" contentName="Template for klaviyo ready for pickup email" dataResourceId="READY_FOR_PICKUP" statusId="CTNT_PUBLISHED"/>
-<ElectronicText dataResourceId="READY_FOR_PICKUP">
-    <textData><![CDATA[
-        <#assign shipment = EntityQuery.use(delegator).from("Shipment").where("shipmentId", shipmentId!).queryOne()!/>
-        <#assign primaryShipGroup = EntityQuery.use(delegator).from("OrderItemShipGroup").where("orderId", shipment.primaryOrderId!, "shipGroupSeqId", shipment.primaryShipGroupSeqId!).queryOne()!/>
-        <#assign originFacility = EntityQuery.use(delegator).from("Facility").where("facilityId", shipment.originFacilityId!).queryOne()!/>
-        <#assign postalAddress = EntityQuery.use(delegator).from("PostalAddressAndGeo").where("contactMechId", shipment.originContactMechId!).queryOne()!/>
-        <#assign orderHeader = EntityQuery.use(delegator).from("OrderHeader").where("orderId", orderId!).queryOne()!/>
-        <#assign customer = EntityQuery.use(delegator).from("Person").where("partyId", shipment.partyIdTo!).queryOne()!/>
-        <#assign shipmentItems = EntityQuery.use(delegator).from("ShipmentItem").where("shipmentId", shipmentId!).queryList()!/>
-        <#assign shipGroupTotalItemAmount = CsrOrderHelper.getShipGroupItemsTotalWithItemAdjustments(delegator, orderId, primaryShipGroup)! />
-        <#assign shipGroupTotal = CsrOrderHelper.getShipGroupTotal(delegator, orderId, primaryShipGroup)! />
+    <DataResource dataResourceId="READY_FOR_PICKUP" dataResourceTypeId="ELECTRONIC_TEXT"  dataTemplateTypeId="FTL" statusId="CTNT_PUBLISHED"/>
+    <Content contentId="READY_FOR_PICKUP" contentTypeId="DOCUMENT" contentName="Template for klaviyo ready for pickup email" dataResourceId="READY_FOR_PICKUP" statusId="CTNT_PUBLISHED"/>
+    <ElectronicText dataResourceId="READY_FOR_PICKUP">
+        <textData><![CDATA[
+		<#assign shipment = EntityQuery.use(delegator).from("Shipment").where("shipmentId", shipmentId!).queryOne()!/>
+		<#assign primaryShipGroup = EntityQuery.use(delegator).from("OrderItemShipGroup").where("orderId", shipment.primaryOrderId!, "shipGroupSeqId", shipment.primaryShipGroupSeqId!).queryOne()!/>
+		<#assign originFacility = EntityQuery.use(delegator).from("Facility").where("facilityId", shipment.originFacilityId!).queryOne()!/>
+		<#assign postalAddress = EntityQuery.use(delegator).from("PostalAddressAndGeo").where("contactMechId", shipment.originContactMechId!).queryOne()!/>
+		<#assign orderHeader = EntityQuery.use(delegator).from("OrderHeader").where("orderId", orderId!).queryOne()!/>
+		<#assign customer = EntityQuery.use(delegator).from("Person").where("partyId", shipment.partyIdTo!).queryOne()!/>
+		<#assign shipmentItems = EntityQuery.use(delegator).from("ShipmentItem").where("shipmentId", shipmentId!).queryList()!/>
+		<#assign shipGroupTotalItemAmount = CsrOrderHelper.getShipGroupItemsTotalWithItemAdjustments(delegator, orderId, primaryShipGroup)! />
+		<#assign shipGroupTotal = CsrOrderHelper.getShipGroupTotal(delegator, orderId, primaryShipGroup)! />
 
-        {
-          "first_name": "${customer.firstName!}",
-          "last_name": "${customer.lastName!}",
-          "ship_from": {
-            "to_name": "${originFacility.facilityName!}",
-            "address1": "${postalAddress.address1!}",
-            "address2": "${postalAddress.address2!}",
-            "city": "${postalAddress.city!}",
-            "state_name": "${postalAddress.stateName!}",
-            "country_name":"${postalAddress.countryName!}"
-          },
-          "order_name": "${orderHeader.orderName!}",
-          "order_items": [
-            <#list shipmentItems as shipmentItem>
-              <#assign orderShipment = EntityQuery.use(delegator).from("OrderShipment").where("shipmentId", shipmentId!,"shipmentItemSeqId", shipmentItem.shipmentItemSeqId!,"shipGroupSeqId", shipment.primaryShipGroupSeqId!).queryFirst()! />
-              <#assign orderItem = EntityQuery.use(delegator).from("OrderItem").where("orderId", orderId!,"orderItemSeqId", orderShipment.orderItemSeqId!).queryOne()!/>
-              <#assign product = EntityQuery.use(delegator).from("Product").where("productId", shipmentItem.productId).queryOne()!/>
-              <#assign productUrl = (ProductContentWrapper.getProductContentAsText(product, "IMAGE", locale, dispatcher, "string")) !/>
-              {
-                "image_url": "${productUrl!}",
-                "product_name": "${orderItem.itemDescription!} ${product.productName!}",
-                "quantity": "${shipmentItem.quantity!}",
-                "price": "${orderItem.unitPrice}"
-              } <#if shipmentItem_has_next>,</#if>
-            </#list>
-          ],
-          "subtotal":"${shipGroupTotalItemAmount}",
-          "grand_total": "${shipGroupTotal!}"
-        }
-    ]]></textData>
+		{
+		  "first_name": "${customer.firstName!}",
+		  "last_name": "${customer.lastName!}",
+		  "ship_from": {
+		    "to_name": "${originFacility.facilityName!}",
+		    "address1": "${postalAddress.address1!}",
+		    "address2": "${postalAddress.address2!}",
+		    "city": "${postalAddress.city!}",
+		    "state_name": "${postalAddress.stateName!}",
+		    "country_name":"${postalAddress.countryName!}"
+		  },
+		  "order_name": "${orderHeader.orderName!}",
+		  "order_items": [
+		    <#list shipmentItems as shipmentItem>
+		      <#assign orderShipment = EntityQuery.use(delegator).from("OrderShipment").where("shipmentId", shipmentId!,"shipmentItemSeqId", shipmentItem.shipmentItemSeqId!,"shipGroupSeqId", shipment.primaryShipGroupSeqId!).queryFirst()! />
+		      <#assign orderItem = EntityQuery.use(delegator).from("OrderItem").where("orderId", orderId!,"orderItemSeqId", orderShipment.orderItemSeqId!).queryOne()!/>
+		      <#assign product = EntityQuery.use(delegator).from("Product").where("productId", shipmentItem.productId).queryOne()!/>
+		      <#assign productUrl = (ProductContentWrapper.getProductContentAsText(product, "IMAGE", locale, dispatcher, "string")) !/>
+		      {
+		  	"image_url": "${productUrl!}",
+		  	"product_name": "${orderItem.itemDescription!} ${product.productName!}",
+		  	"quantity": "${shipmentItem.quantity!}",
+		  	"price": "${orderItem.unitPrice}"
+		      } <#if shipmentItem_has_next>,</#if>
+		    </#list>
+		  ],
+		  "subtotal":"${shipGroupTotalItemAmount}",
+		  "grand_total": "${shipGroupTotal!}"
+		}
+        ]]></textData>
+    </ElectronicText>
 </ElectronicText>
-
 ```
 
 ## Run Service to Create an Event on Klaviyo
@@ -183,6 +194,15 @@ In HotWax Commerce, when orders are packed and ready for pickup, Klaviyo trigger
 1. **Access the Service List:** Go to `HotWax Commerce Service List` through this link- `https://<instanceName>.io/webtools/control/ServiceList`
 2. **Locate `createKlaviyoEvent` Service:** Find the service named `createKlaviyoEvent` within the Service List interface. Click on the `createKlaviyoEvent` service to access its details.
 3. **Run the Service:** Look for the `Run Service` button available against the service name and click on it. Finally, click on `Submit` to execute the service.
+
+To ensure accurate email dispatch for this service, two essential parameters must be provided:
+
+| Parameters             | Value                                                         |
+|-------------------------|------------------------------------------------------------------------|
+| productStoreId          | Enter the name of the product store for which emails will be dispatched.|
+| emailType               | Specify the type of email (e.g., "PRDS_READY_TO_PICKUP" for "Ready for Pickup").|
+
+
 
 ## Create a Flow on Klaviyo
 
@@ -204,7 +224,7 @@ Follow these steps to create the email flow in Klaviyo:
 5. **Configure Action:** Add an action step to the flow that involves sending an email. Look for the action that corresponds to sending emails.
 
 6. **Choose Email Template:** Select an existing email template that aligns with the `Ready for Pickup` scenario. Alternatively, create a new email template specifically tailored for these notifications.
-   - If creating a new template, consider elements like subject line, body content, and any dynamic data placeholders for customer-specific details. Here's and HTML template for the Ready to Pickup Notifications that you can use for your product store.
+   - If creating a new template, consider elements like subject line, body content, and any dynamic data placeholders for customer-specific details. Here's an HTML template for the Ready to Pickup Notifications that you can use for your product store.
 
 ``` html
 <!DOCTYPE html>
@@ -558,7 +578,7 @@ padding-right: 0 !important
 <tr>
 <!--[if true]><td style="width:120px;" bgcolor="transparent"><![endif]-->
 <!--[if !true]><!--><td style="width:120px;"><!--<![endif]-->
-<img src="https://d3k81ch9hvuctc.cloudfront.net/company/YidwsB/images/dab32609-cfb3-420a-bd8a-83099cf5bcd7.png" style="display:block;outline:none;text-decoration:none;height:auto;width:100%;background-color:transparent;" width="120"/>
+<img src="{Image-link}" style="display:block;outline:none;text-decoration:none;height:auto;width:100%;background-color:transparent;" width="120"/>
 </td>
 </tr>
 </tbody>
@@ -855,6 +875,10 @@ padding-right: 0 !important
 </html>
 ```
 
+{% hint style="warning" %}
+replace {image link} with the link of your desired image file
+{% endhint %}
+
 7. **Customize Email Settings:** Adjust the email settings, including the sender information, subject line, and the dynamic content that should be populated based on specific customer order details.
    - Ensure placeholders for dynamic data (such as customer names and order details) are correctly configured to pull the relevant information.
 
@@ -862,5 +886,7 @@ padding-right: 0 !important
    - Verify that the dynamic data populates correctly in the test emails, ensuring the personalized touch for each recipient.
 
 9. **Activate the Flow:** Once satisfied with the configuration and testing, activate the flow to make it live.
-   - Klaviyo will now automatically trigger the `Ready for Pickup`` email based on the defined conditions whenever the corresponding event occurs in HotWax Commerce.
+   - Klaviyo will now automatically trigger the `Ready for Pickup` email based on the defined conditions whenever the corresponding event occurs in HotWax Commerce.
+
+
 
