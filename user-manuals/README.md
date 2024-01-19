@@ -86,7 +86,6 @@ Video: Application Instance
 
 **Related flows:**
 1. [Launchpad](https://launchpad.hotwax.io/home/)
-2. [User management](https://app.gitbook.com/o/l53nGvPQLhOHrKCP9HTG/s/vsbL9DiW8kFNTItD6870/)
-3. [Configurations](https://app.gitbook.com/o/l53nGvPQLhOHrKCP9HTG/s/PoTFyo0cPPGdyZu8kxeb/)
+2. [User management](https://docs.hotwax.co/user-guides/administration/users)
 
 :arrow\_left:[ Go to HotWax Commerce Docs](https://app.gitbook.com/o/l53nGvPQLhOHrKCP9HTG/s/TefRnbhmBjhScpq172vl/)
