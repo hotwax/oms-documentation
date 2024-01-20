@@ -15,6 +15,7 @@
   * [Multi Package Fulfillment](flows/sales-orders/multi-package-fulfillment.md)
   * [Rejections](flows/sales-orders/rejection.md)
 * [Products](flows/products/README.md)
+* [Historical Customer](flows/sales-orders/historical-customer.md)
 * [Inventory](flows/inventory/README.md)
 * [Transfer Orders](flows/transfer-orders/README.md)
 * [Returns](flows/returns/README.md)
