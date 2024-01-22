@@ -14,16 +14,21 @@ If the payment processing is done on a redirected link, then the payment process
 <PaymentMethodType description="Amazon Pay" paymentMethodTypeId="EXT_SHP_AMZN_PAY"/>
 
 <PaymentMethodType description="Paidy" paymentMethodTypeId="EXT_SHP_ PAIDY"/>
+```
 
-Payment mapping data-
 
-<ShopifyShopTypeMapping mappedKey="Ext Shopify Payment" mappedTypeId="SHOPIFY_PAYMENT_TYPE" mappedValue="EXT_SHP_SHPFY_PYMT" shopId="SHOP"/>
+**Payment mapping data**
 
-<ShopifyShopTypeMapping mappedKey="Softbank Payment" mappedTypeId="SHOPIFY_PAYMENT_TYPE" mappedValue="EXT_SHP_SFTBNK_PYMT" shopId="SHOP"/>
+```xml
+
+<ShopifyShopTypeMapping mappedKey="shopify_payments" mappedTypeId="SHOPIFY_PAYMENT_TYPE" mappedValue="EXT_SHP_SHPFY_PYMT" shopId="SHOP"/>
+
+<ShopifyShopTypeMapping mappedKey="楽天ペイ - SBPS" mappedTypeId="SHOPIFY_PAYMENT_TYPE" mappedValue="EXT_SHP_SFTBNK_PYMT" shopId="SHOP"/>
 
 <ShopifyShopTypeMapping mappedKey="Amazon Pay" mappedTypeId="SHOPIFY_PAYMENT_TYPE" mappedValue="EXT_SHP_AMZN_PAY" shopId="SHOP"/>
 
-<ShopifyShopTypeMapping mappedKey="Paidy" mappedTypeId="SHOPIFY_PAYMENT_TYPE" mappedValue="EXT_SHP_PAIDY" shopId="SHOP"/>
+<ShopifyShopTypeMapping mappedKey="あと払い（ペイディ)" mappedTypeId="SHOPIFY_PAYMENT_TYPE" mappedValue="EXT_SHP_PAIDY" shopId="SHOP"/>
+
 ```
 
 **Actual values from shopify**
