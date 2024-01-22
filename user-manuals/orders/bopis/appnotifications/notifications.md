@@ -4,7 +4,7 @@ Timely notifications are crucial for store associates upon the arrival of a new 
 
 Store managers can customise the following notification preferences. 
 
-* **New Orders:** Receive notifications as new orders become available for preparation at the facility.
+* **New Orders:** Receive notifications as new orders become available for fulfillment at the facility.
 * **Open Orders Reminder:** Receive periodic reminders for open orders at the facility, helping users stay organised.
 * **Ready for Pickup Orders Reminder:** Receive reminders for orders ready for pickup at the facility, ensuring timely customer communication.
 
