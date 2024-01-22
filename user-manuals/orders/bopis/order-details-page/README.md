@@ -2,7 +2,7 @@
 
 Users can access the Order Details page by clicking on any order card from any of the tabs on Order page, it will display all order-related information for that order such as customer’s name, order ID, customer's contact details, item details, reason for rejection and order item rejection history.
 
-On clicking on any order card in the Open or Packed tab, users will be directed to the order details page. The order details page displays key details of an order and also enables store associates to perform the certain functions. 
+On clicking on any order card in the Open, Packed or Completed tab, users will be directed to the order details page. The order details page displays key details of an order and also enables store associates to perform the certain functions. 
 
 ### Reject Orders
 
