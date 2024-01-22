@@ -10,7 +10,7 @@ Store managers can customise the following notification preferences.
 
 The frequency of reminder notifications can be configured through the `Open BOPIS order notifications` job in the Job Manager app's Fulfillment category.  
 
->To manage notification frequency, go to the HotWax Commerce launchpad, access the job manager app, and go to the fulfillment page from the left menu. Click on the Open BOPIS order notification button on the Notification card. A extended menu will appear on the right where you can select the run time and schedule according to your preference and click on save to regulate the reminder frequency of the notifications. Administration permissions are required for access to this feature.
+>To manage notification frequency, go to the HotWax Commerce launchpad, access the job manager app, and go to the fulfillment page from the left menu. Click on the Open BOPIS order notification button on the Notification card. A extended menu will appear on the right where you can select the run time and schedule according to your preference and click on save to regulate the reminder frequency of the notifications. `Admin` permissions are required to access this feature.
 
 Users can configure the notification settings in two ways. 
 1. Users can click on the `bell` icon on the top right corner of the Orders page, this will open the Notifications page. Once they have accessed the Notifications page, they can click on the `settings` icon at the top right corner of the page and configure notification preferences. 
