@@ -17,6 +17,7 @@
 * [Products](flows/products/README.md)
 * [Historical Customer](flows/sales-orders/historical-customer.md)
 * [Inventory](flows/inventory/README.md)
+  * [Customer Support](flows/inventory/csr-view.md)
 * [Transfer Orders](flows/transfer-orders/README.md)
 * [Returns](flows/returns/README.md)
 * [Product store](flows/product-store/readme.md)
