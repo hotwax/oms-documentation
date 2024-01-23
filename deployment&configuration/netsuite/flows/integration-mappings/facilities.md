@@ -19,12 +19,12 @@ When HotWax routes orders, if an item is brokered to a facility within this grou
 By making these associations, the integration layer ensures that when an order is brokered to a facility within the NetSuite Fulfillment group, the allocation details are updated in NetSuite.
 
 {% hint style="info" %}
-You can simply click on `bin` icon to remove a facility from the NetSuite Fulfillment Group.
+You can simply click on the`bin` icon to remove a facility from the NetSuite Fulfillment Group.
 {% endhint %}
 
 ## Example:
 
-| Facility Group ID             | Facility  |
-|------------------------|-----------------------|
-| Central Warehouse      | NetSuite Fulfillment  |
-| East Coast Warehouse    | NetSuite Fulfillment  |
+| Facility Group ID    | Facility             |
+| -------------------- | -------------------- |
+| Central Warehouse    | NetSuite Fulfillment |
+| East Coast Warehouse | NetSuite Fulfillment |
