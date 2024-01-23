@@ -7,7 +7,7 @@
 * [Orders](orders/README.md)
   * [Created Orders](orders/createdOrderFeed.md)
   * [Order Adjustments](orders/adjustmentTypes.md)
-  * [Order Reconcillations](orders/order-reconciliations.md)
+  * [Order Reconciliations](orders/order-reconciliations.md)
 * [Inventory](api/inventory/README.md)
   * [Check Inventory](api/inventory/check-inventory.md)
   * [Reset Inventory](api/inventory/reset-inventory.md)
