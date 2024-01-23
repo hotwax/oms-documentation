@@ -10,21 +10,21 @@ The dedicated NetSuite Integration page within the OMS lets you manage integrati
 
 The out-of-the-box integration mappings that can be configured are:
 
-- Payment Method
-- Shipping Method
-- Price Levels
-- Discount Codes
-- Facility Group
+- [Payment Method](flows/integration-mappings/payment-methods.md)
+- [Shipping Method](flows/integration-mappings/shipping-methods.md)
+- [Price Levels](flows/integration-mappings/price-levels.md)
+- [Discount Codes](flows/integration-mappings/discount-codes.md)
+- [Facility Group](flows/integration-mappings/facilities.md)
 
 Here’s how you can configure these mappings between HotWax Commerce and NetSuite:
 
 {% hint style="warning" %}
-If you cannot find the NetSuite Integration page, navigate to the General Settings page, and at the top, click on “Load NetSuite Data” to initiate the upload of NetSuite data.
+If you cannot find the NetSuite Integration page, navigate to the General Settings page, and at the top, click on `Load NetSuite Data` to initiate the upload of NetSuite data.
 {% endhint %}
 
-1. Navigate to Settings and select the option “NetSuite Integration” from the menu.
+1. Navigate to Settings and select the option `NetSuite Integration` from the menu.
 2. Locate the Specific Mapping that you want to configure.
-3. Click on the "Add" and fill-in the mandatory details mentioned in the input fields.
+3. Click on the `Add` and fill-in the mandatory details mentioned in the input fields.
 
 | Field                   | Description                                      |
 |-------------------------|--------------------------------------------------|
@@ -32,7 +32,7 @@ If you cannot find the NetSuite Integration page, navigate to the General Settin
 | **Integration Mapping Value**   | Corresponding value present in NetSuite.         |
 | **Description**                | Briefly describe the method.                     |
 
-4. Confirm establishing the new mapping by clicking on the “Add”.
+4. Confirm establishing the new mapping by clicking on the `Add`.
 
 {% hint style="info" %}
 The integration layer maps the original entities in HotWax Commerce to their corresponding representations in NetSuite. This mapping is established through a key-value pair, where the key denotes the original entity, and the value signifies its counterpart in NetSuite.
@@ -50,7 +50,7 @@ In case you want to set up a custom integration mapping you can simply navigate 
 | **Description**                 | Write brief information about the integration type.         |
 | **Sequence ID**                 | Provide the human-readable label for the integration type.  |
 
-Confirm establishing the new custom mapping by clicking on the “Add”.
+Confirm establishing the new custom mapping by clicking on the `Add`.
 
 {% hint style="success" %}
 Now, you're ready to utilize out-of-the-box mappings and also create custom integration mappings.{% endhint %}
