@@ -42,6 +42,10 @@ Identify new customers by checking the Person table for entries where the roleTy
 
 **SFTP Location**
 
+{% hint style="warning" %}
+To sync customer data from HotWax Commerce to NetSuite, the CSV file of customers should have these required fields: Status, Individual, and Subsidiary.
+{% endhint %}
+
 ```
 /home/{sftp-username}/netsuite/customer/export
 ```
