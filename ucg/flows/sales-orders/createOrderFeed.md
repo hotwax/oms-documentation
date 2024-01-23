@@ -8,7 +8,7 @@ An order can have two types of discounts, order level discounts and item level d
 
 ### Order Level Discounts
 
-Order level discounts are saved as order adjustments in the OMS. In the create order feeds to NetSuite the header level discount is added in the `Rate` column. Instead of the absolute value the amount is presented as a negative as requested by the UCG team to help with integrations. This value indicates the exact amount reduced from the order total, **not the percentage**.
+Order level discounts are saved as order adjustments in the OMS. In the create order feeds to NetSuite the header level discount is added in the `Rate` column. Instead of the absolute value the amount is presented as a negative as requested by the UCG team to help with integrations. This value indicates the exact amount reduced from the order total, **not the percentage**. Ihe value will be repeated on all order itmes because this is a header level field. If the value is empty different for any one item, this disqualfies it for import into NetSuite.
 
 ### Order Line Level Discounts
 
