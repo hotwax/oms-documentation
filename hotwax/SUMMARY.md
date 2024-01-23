@@ -5,9 +5,9 @@
 ## APIs
 
 * [Orders](orders/README.md)
-  * [Created Orders](orders/createdOrderFeed.md)
-  * [Order Adjustments](orders/adjustmentTypes.md)
-  * [Order Reconciliations](orders/order-reconciliations.md)
+  * [Created Orders](api/orders/createdOrderFeed.md)
+  * [Order Adjustments](api/orders/adjustmentTypes.md)
+  * [Order Reconciliations](api/orders/order-reconciliations.md)
 * [Inventory](api/inventory/README.md)
   * [Check Inventory](api/inventory/check-inventory.md)
   * [Reset Inventory](api/inventory/reset-inventory.md)
