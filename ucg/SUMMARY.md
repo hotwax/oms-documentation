@@ -1,10 +1,12 @@
-# Tabel of Contents
+# Table of contents
+
 * [Introduction](README.md)
 * [Why HotWax](why-hotwax.md)
 
 ## Flows
+
 * [Sales Orders](flows/sales-orders/README.md)
-  * [Imoprt Error](flows/sales-orders/import-error.md)
+  * [Import Error](flows/sales-orders/import-error.md)
   * [Blanket Customer](flows/sales-orders/blanket-customer.md)
   * [Create Orders](flows/sales-orders/createOrderFeed.md)
   * [Approval](flows/sales-orders/approval.md)
