@@ -107,13 +107,13 @@ For retailers that use Avatax, the Tax Code and Shipping Tax Code will always co
 
 #### Here's how sales order fields are mapped in HotWax Commerce and NetSuite
 
-<table><thead><tr><th width="131">S.No.</th><th>Fields in HotWax Commerce</th><th>Fields in NetSuite</th></tr></thead><tbody><tr><td>1</td><td>NetSuite Sales Order ID</td><td>Internal Sales Order ID </td></tr><tr><td>2</td><td>Shopify Order ID</td><td>HC Shopify Order ID</td></tr><tr><td>3</td><td>Shopify Order Name</td><td>PO#</td></tr><tr><td>4</td><td>Sales Channel</td><td>HC Sales Channel</td></tr><tr><td>5</td><td>Bill To</td><td>Customer</td></tr><tr><td>6</td><td>Order Date</td><td>Date</td></tr><tr><td>7</td><td>Product</td><td>Item</td></tr><tr><td>8</td><td>Qty</td><td>Quantity</td></tr><tr><td>9</td><td>Ship To</td><td>Shipping Address</td></tr><tr><td>10</td><td>Ship Method</td><td>Shipping Method</td></tr><tr><td>11</td><td>Ship From</td><td>Location</td></tr><tr><td>12</td><td>Communications</td><td>Memo</td></tr></tbody></table>
+<table><thead><tr><th width="131">S.No.</th><th>Fields in HotWax Commerce</th><th>Fields in NetSuite</th></tr></thead><tbody><tr><td>1</td><td>NetSuite Sales Order ID</td><td>Internal Sales Order ID </td></tr><tr><td>2</td><td>Shopify Order ID</td><td>HC Shopify Order ID</td></tr><tr><td>3</td><td>Shopify Order Name</td><td>PO#</td></tr><tr><td>4</td><td>Sales Channel</td><td>HC Sales Channel</td></tr><tr><td>5</td><td>Customer</td><td>Customer</td></tr><tr><td>6</td><td>Bill To Address</td><td>Billing Address</td></tr><tr><td>7</td><td>Order Date</td><td>Date</td></tr><tr><td>8</td><td>Product</td><td>Item</td></tr><tr><td>9</td><td>Qty</td><td>Quantity</td></tr><tr><td>10</td><td>Ship To</td><td>Shipping Address</td></tr><tr><td>11</td><td>Ship Method</td><td>Shipping Method</td></tr><tr><td>12</td><td>Ship From</td><td>Location</td></tr><tr><td>13</td><td>Communications</td><td>Memo</td></tr></tbody></table>
 
 {% tabs %}
 {% tab title="Sales Order Fields in HotWax Commerce" %}
 <div data-full-width="false">
 
-<figure><img src="../../.gitbook/assets/sales order mapping hotwax.png" alt=""><figcaption><p>Sales Order Fields Mapping in HotWax Commerce</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/sales order mapping hotwax (2).png" alt=""><figcaption><p>Sales Order Fields Mapping in HotWax Commerce</p></figcaption></figure>
 
 </div>
 {% endtab %}
@@ -121,7 +121,7 @@ For retailers that use Avatax, the Tax Code and Shipping Tax Code will always co
 {% tab title="Sales Order Fields in NetSuite" %}
 <div data-full-width="false">
 
-<figure><img src="../../.gitbook/assets/netsuite sales orders mappings (3).png" alt=""><figcaption><p>Sales Order Fields Mapping in NetSuite</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/netsuite sales orders mappings (4).png" alt=""><figcaption><p>Sales Order Fields Mapping in NetSuite</p></figcaption></figure>
 
 </div>
 {% endtab %}
