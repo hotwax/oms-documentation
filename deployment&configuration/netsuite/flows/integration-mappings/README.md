@@ -10,13 +10,7 @@ The dedicated NetSuite Integration page within the OMS lets you manage integrati
 
 The out-of-the-box integration mappings that can be configured are:
 
-<table data-view="cards" data-full-width="false"><thead><tr><th align="center"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td align="center">Payment Methods</td><td><a href="payment-methods.md">payment-methods.md</a></td></tr></tbody></table>
-
-* [Payment Method](flows/integration-mappings/payment-methods.md)
-* [Shipping Method](flows/integration-mappings/shipping-methods.md)
-* [Price Levels](flows/integration-mappings/price-levels.md)
-* [Discount Codes](flows/integration-mappings/discount-codes.md)
-* [Facility Group](flows/integration-mappings/facilities.md)
+<table data-view="cards" data-full-width="false"><thead><tr><th align="center"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td align="center">Payment Methods</td><td><a href="payment-methods.md">payment-methods.md</a></td></tr><tr><td align="center">Discount Codes</td><td><a href="discount-codes.md">discount-codes.md</a></td></tr><tr><td align="center">Price Levels</td><td><a href="price-levels.md">price-levels.md</a></td></tr><tr><td align="center">Shipping Methods</td><td><a href="shipping-methods.md">shipping-methods.md</a></td></tr><tr><td align="center">Facility Group</td><td><a href="facilities.md">facilities.md</a></td></tr></tbody></table>
 
 Here’s how you can configure these mappings between HotWax Commerce and NetSuite:
 
