@@ -3,12 +3,14 @@
 * [Introduction](README.md)
 
 ## Deploy SDF
+
 * [Setup SDF Bundle](sdfBundle/README.md)
   * [Install SDF](sdfBundle/installSDF.md)
   * [Setup SFTP](sdfBundle/setupSFTP.md)
   * [Date Time Format](sdfBundle/verifyDateTimeFormat.md)
 
 ## Prerequisites
+
 * [Install NetSuite Jobs](prerequisiteSyncs/installNetsuiteReader.md)
 * [Product Store Settings](prerequisiteSyncs/productStoreSettings.md)
 * [SFTP Locations](prerequisiteSyncs/sftpLocations.md)
@@ -20,7 +22,8 @@
 * [NetSuite Faciliy Group](prerequisiteSyncs/netsuiteFulfillment.md)
 
 ## Flows
-* [Products and Inventory](flows/productInventorySync/README.md)
+
+* [Products and Inventory](flows/products-and-inventory/README.md)
   * [Product IDs](flows/productInventorySync/importProductId.md)
   * [Inventory Reset](flows/productInventorySync/inventoryReset.md)
 * [Orders](flows/orderSync/README.md)
@@ -29,7 +32,7 @@
   * [Sync Order IDs](flows/orderSync/syncOrderIds.md)
   * [Approve Orders](flows/orderSync/approveOrders.md)
   * [Reports](flows/orderSync/reports.md)
-* [Allocation & Fulfillment](flows/allocation&fulfillmentSync/README.md)
+* [Allocation & Fulfillment](flows/allocation\&fulfillmentSync/README.md)
 * [Transfer Orders](flows/transferOrderSync/README.md)
 * [Purchase Orders](flows/purchaseOrderSync/README.md)
 * [Integration Mappings](flows/integration-mappings/README.md)
