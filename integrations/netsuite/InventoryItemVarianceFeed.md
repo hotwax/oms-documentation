@@ -249,4 +249,4 @@ ${clientName}_InventoryTransferFeed_2023-12-20-00_46_40_660.csv
 | Memo           | string | The memo field is used to keep a log regarding the inventory variance imported in system.        | VarianceReason.varianceDescription                                                                                                                 |
 | Subsidiary     | string | The subsidiary associated with the inventory variance in the system.                             | 1. The value for this field is prepared using the configurable parameter **default.subsidiary** in NiFi. <br/> 2. Sample value - Inventory cycle count by HotWax |
 
-**NOTE:** The Inventory Variance format remains unchanged, and reference can be made to the format described above.
+**NOTE:** The Inventory Adjustment format remains unchanged, and reference can be made to the format described above.
