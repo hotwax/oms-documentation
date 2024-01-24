@@ -198,6 +198,38 @@ FTP Config: IMP_ORDER_ITM_ATTR
 
 * [x] Sync order line items
 
+## Sync Sales Order IDs from NetSuite to HotWax Commerce
+
+This step synchronizes NetSuite sales order IDs with orders in HotWax Commerce for tracking and identification. This step enables cross-referencing and linkage between orders in both systems, paving the way for accurate tracking and management.
+
+The synchronization of Sales Order IDs from NetSuite to HotWax Commerce is a critical step as it serves as an indicator that the orders in HotWax Commerce have been successfully integrated into NetSuite. Additionally, it is an essential step for various functions, including the creation of item fulfillment, return authorization, and customer deposit records in NetSuite.
+
+**Actions**
+
+#### Export order IDs from NetSuite
+
+A Map Reduce SuiteScript in NetSuite fetches pending fulfillment orders and generates a CSV file with internal sales order IDs.
+
+**SuiteScript**
+
+```
+HC_MR_ExportedSalesOrderCSV
+```
+
+#### Import order IDs into HotWax Commerce
+
+A job in HotWax Commerce imports the CSV to associate NetSuite order IDs with corresponding orders.
+
+**Job in HotWax Commerce**
+
+```
+Order Identification
+FTP Config: IMP_ORDER_IDENT
+```
+
+* [x] Sync order ids
+
+
 ## Create Customer Deposit in NetSuite
 
 This step creates customer deposit records in NetSuite for authorized payments of sales orders. Generating a customer deposit in NetSuite is essential to represent authorized payments for orders. This step signifies the initiation of the financial transaction for orders.
@@ -229,37 +261,6 @@ A SuiteScript in NetSuite creates customer deposit records in "undeposited" stat
 ```
 HC_SC_CreateCustomerDeposit
 ```
-
-## Sync Sales Order IDs from NetSuite to HotWax Commerce
-
-This step synchronizes NetSuite sales order IDs with orders in HotWax Commerce for tracking and identification. This step enables cross-referencing and linkage between orders in both systems, paving the way for accurate tracking and management.
-
-The synchronization of Sales Order IDs from NetSuite to HotWax Commerce is a critical step as it serves as an indicator that the orders in HotWax Commerce have been successfully integrated into NetSuite. Additionally, it is an essential step for various functions, including the creation of item fulfillment, return authorization, and customer deposit records in NetSuite.
-
-**Actions**
-
-#### Export order IDs from NetSuite
-
-A Map Reduce SuiteScript in NetSuite fetches pending fulfillment orders and generates a CSV file with internal sales order IDs.
-
-**SuiteScript**
-
-```
-HC_MR_ExportedSalesOrderCSV
-```
-
-#### Import order IDs into HotWax Commerce
-
-A job in HotWax Commerce imports the CSV to associate NetSuite order IDs with corresponding orders.
-
-**Job in HotWax Commerce**
-
-```
-Order Identification
-FTP Config: IMP_ORDER_IDENT
-```
-
-* [x] Sync order ids
 
 ## Approval of Sales Order
 
