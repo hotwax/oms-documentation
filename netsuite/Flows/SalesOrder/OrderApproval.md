@@ -45,7 +45,7 @@ Identify new customers by checking the Person table for entries where the roleTy
 <table><thead><tr><th width="170">S.No.</th><th>Fields in HotWax Commerce</th><th>Fields in NetSuite</th></tr></thead><tbody><tr><td>1</td><td>Product Store External ID</td><td>Subsidiary *</td></tr><tr><td>2</td><td>Customer-Closed Won</td><td>Status *</td></tr><tr><td>3</td><td>Individual</td><td>Type * </td></tr><tr><td>4</td><td>Party ID</td><td>External ID</td></tr><tr><td>5</td><td>Party Classification</td><td>Initial Lead Source</td></tr><tr><td>6</td><td>True</td><td>Taxable</td></tr></tbody></table>
 
 {% hint style="danger" %}
-"\*" denotes fields that are required to be sent to NetSuite for the sync to work
+"\*" denotes fields that are required to be sent to NetSuite for the customer sync to work
 {% endhint %}
 
 **SFTP Location**
@@ -144,7 +144,7 @@ To sync sales orders from HotWax Commerce to NetSuite, a required field is the "
 {% endhint %}
 
 {% hint style="danger" %}
-"\*" denotes fields that are required to be sent to NetSuite for the sync to work
+"\*" denotes fields that are required to be sent to NetSuite for the sales order sync to work
 {% endhint %}
 
 ### Handling NetSuite file size limits
