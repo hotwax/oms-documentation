@@ -18,9 +18,9 @@ Entity Engine is accessible through the `Entity Engine` button on the second row
 * Use filters such as `Group Name` and `Entity Name` to find specific records.
 * An alphabetical list of all entities is also displayed on this page.
 * Click on the name of a specific entity to view its dataset.
-* Explore functions and filters to streamline the search process within the entity.
+* Explore functions and filters to search data within the entity.
 * For a comprehensive view of all records of an entity, click the `Search` button.
-* Utilize the `View Relations` option to explore relationships with other entities.
+* Utilize the `View Relations` option to explore relationships with other entities. For example, if we consider the entity ‘Facility’, we can see that it is related to entities ‘FacilityGroup’, ‘ProductStore’, ‘Party’ and so on. 
 
 
 ### Entity SQL Processor
@@ -58,9 +58,11 @@ Users can also click on the `Find` button to view a complete list of all jobs wi
 
 
 #### Schedule a Job
-The `Schedule Job` tab is a feature that enables users to manage and automate the execution of specific jobs or services within the system. This functionality provides users with an interface to schedule tasks at specific times, set intervals for repetition, and customize job execution parameters.
+The `Schedule Job` tab is a feature that enables users to manage and automate the execution of specific jobs or services within the system. 
 
-The `Run As System` checkbox option allows users to execute scheduled jobs as a system.
+* Clicking on the `Schedule Job` tab, directs the users to a page where they can schedule a specific job or service.
+* Here, users can input details such as date, time, frequency, and more to schedule a job at a specific time and set intervals for repetition.
+* Additionally, users have the option to check the `Run As System` checkbox to execute the job as a system.
 
 ___
 
