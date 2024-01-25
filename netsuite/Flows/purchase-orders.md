@@ -97,8 +97,11 @@ In NetSuite, a scheduled script retrieves the JSON files with item receipt data 
 **SuiteScript**
 
 ```
-HC_imortPurchaseOrderReceipts
+HC_imortPurchaseOrderReceipts HC_SC_ImportPurchaseOrderReceipts
 ```
+{% hint style="info" %}
+The HC_SC_ImportPurchaseOrderReceipts SuiteScript also generates a CSV file highlighting erroneous records found during processing and uploads the file to the SFTP server. Simultaneously, an email alert is automatically triggered to designated personnel, helping them quickly pinpoint the source of the issue and accelerating troubleshooting.
+{% endhint %}
 
 ### Automated Purchase Order Status Update
 

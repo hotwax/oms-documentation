@@ -124,8 +124,11 @@ In NetSuite, a scheduled Suite Script reads the JSON files containing Item Recei
 Import received Transfer Order file:
 
 ```
-HC_importTransferOrderReceipts
+HC_SC_ImportTransferOrderReceipts
 ```
+{% hint style="info" %}
+The HC_SC_ImportTransferOrderReceipts SuiteScript also generates a CSV file highlighting erroneous records found during processing and uploads the file to the SFTP server. Simultaneously, an email alert is automatically triggered to designated personnel, helping them quickly pinpoint the source of the issue and accelerating troubleshooting.
+{% endhint %}
 
 ### Automated Transfer Order Status Update
 
