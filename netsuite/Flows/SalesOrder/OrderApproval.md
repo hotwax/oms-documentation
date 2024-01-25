@@ -261,6 +261,9 @@ A SuiteScript in NetSuite creates customer deposit records in "undeposited" stat
 ```
 HC_SC_CreateCustomerDeposit
 ```
+{% hint style="info" %}
+The `HC_SC_CreateCustomerDeposit` SuiteScript also generates a CSV file highlighting erroneous records found during processing and uploads the file to the SFTP server. Simultaneously, an email alert is automatically triggered to designated personnel, helping them quickly pinpoint the source of the issue and accelerating troubleshooting.
+{% endhint %}
 
 ## Approval of Sales Order
 

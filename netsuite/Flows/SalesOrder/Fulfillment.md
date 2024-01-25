@@ -2,7 +2,7 @@
 
 ## Fulfillment in NetSuite
 
-When a warehouse fulfills order items in Netsuite, fulfilled order information is synchronized from Netsuite to HotWax Commerce. This synchronization step ensures that orders marked as "fulfilled" in Netsuite are accurately reflected in HotWax Commerce. It ensures that the order status is consistent and updated across both systems
+When a warehouse fulfills order items in NetSuite, fulfilled order information is synchronized from NetSuite to HotWax Commerce. This synchronization step ensures that orders marked as "fulfilled" in NetSuite are accurately reflected in HotWax Commerce. It ensures that the order status is consistent and updated across both systems
 
 **Actions**
 
@@ -24,9 +24,9 @@ FTP Config: IMP_ODR_ITM_FLFLMNT
 
 ## Fulfillment in HotWax
 
-The primary difference in this context is the approach to sending fulfillment location data from HotWax Commerce to Netsuite.
+The primary difference in this context is the approach to sending fulfillment location data from HotWax Commerce to NetSuite.
 
-While fulfillment locations are indeed transmitted to Netsuite after in-store orders are fulfilled within HotWax Commerce, it's important to understand that this data transmission isn't critical for the actual fulfillment of orders. The fulfillment location data is conveyed to Netsuite once orders are fulfilled within HotWax Commerce. Its significance lies in enabling the subsequent creation of invoices, the application of payments to these invoices, and the accurate marking of orders as completed within the Netsuite system. This step occurs post-fulfillment in HotWax Commerce to ensure proper financial processing and completion of orders in Netsuite.
+While fulfillment locations are indeed transmitted to NetSuite after in-store orders are fulfilled within HotWax Commerce, it's important to understand that this data transmission isn't critical for the actual fulfillment of orders. The fulfillment location data is conveyed to NetSuite once orders are fulfilled within HotWax Commerce. Its significance lies in enabling the subsequent creation of invoices, the application of payments to these invoices, and the accurate marking of orders as completed within the NetSuite system. This step occurs post-fulfillment in HotWax Commerce to ensure proper financial processing and completion of orders in NetSuite.
 
 **Actions**
 
@@ -34,7 +34,7 @@ A scheduled job within HotWax Commerce creates a feed of outbound shipments as a
 
 *to be added*
 
-A Scheduled Script in Netsuite reads the JSON file from SFTP, allocating locations to the orders within Netsuite by updating order records. Additionally, it creates fulfillment records in Netsuite based on the HotWax Commerce shipment data using the N/Record module of Netsuite. 
+A Scheduled Script in NetSuite reads the JSON file from SFTP, allocating locations to the orders within NetSuite by updating order records. Additionally, it creates fulfillment records in NetSuite based on the HotWax Commerce shipment data using the N/Record module of NetSuite. 
 
 **SuiteScript**
 ```
@@ -43,8 +43,11 @@ HC_SC_CreateItemFulfillment
 
 Upon completion of this process, the orders transition to "pending_billing" status, signifying that they are fulfilled and ready for billing.
 
-- [x] Sync order item fulfillment details from HotWax to NetSuite
+{% hint style="info" %}
+The `HC_SC_CreateItemFulfillment` SuiteScript also generates a CSV file highlighting erroneous records found during processing and uploads the file to the SFTP server. Simultaneously, an email alert is automatically triggered to designated personnel, helping them quickly pinpoint the source of the issue and accelerating troubleshooting.
+{% endhint %}
 
+- [x] Sync order item fulfillment details from HotWax to NetSuite
 
 **Overall sync progress**
 

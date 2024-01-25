@@ -12,7 +12,7 @@ A job in HotWax Commerce generates a CSV file containing order line items and th
 ```
 /home/{sftp-username}/netsuite/salesorder/update
 ```
-A SuiteScript in Netsuite reads the CSV file and updates fulfillment locations in sales orders by using the task.CsvImportTask  of N/task module. 
+A SuiteScript in NetSuite reads the CSV file and updates fulfillment locations in sales orders by using the task.CsvImportTask  of N/task module. 
 
 **SuiteScripts**
 
