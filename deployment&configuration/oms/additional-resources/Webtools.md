@@ -1,108 +1,128 @@
 # Web Tools
 
-The backend and development team can utilize Web Tools to view and manage data, view logs, import and export data, run various jobs and services, and more within an OMS instance. These tools play a crucial role in enhancing visibility, streamlining processes, and automating tasks, thereby improving efficiency within the OMS. 
+Web Tools serve as a valuable resource for both the backend and development teams, offering a comprehensive suite of functionalities for data management, log viewing, data import/export, job execution, and more within an Order Management System (OMS) instance. 
 
-Web Tools are conveniently accessible through the following URL in a web browser: https://_**user-instance**_.hotwax.io/webtools/
+Accessing Web Tools is straightforward. Users can conveniently navigate to the following URL in their web browsers: https://_**user-instance**_.hotwax.io/webtools. For example, for demo-oms, the corresponding URL would be https://demo-oms.hotwax.io/webtools.
 
-For example for demo-oms, the url would be - https://demo-oms.hotwax.io/webtools
-
-After entering the URL, the users have to login using their credentials to be able to access web tools. 
+Upon reaching the Web Tools portal, users are prompted to log in using their credentials.
 
 ___
 
 ## Entity Engine
 
-One of the primary functions of web tools is to facilitate the viewing and management of data through the use of the `Entity Engine`. Entity Engine is accessible through the `Entity Engine` button on the second row of tabs on the main web tools page. Alternatively, users can also find a list of `Entity Engine Tools` directly on the web tools main page.
+The `Entity Engine` feature within the HotWax Commerce Web Tools plays a crucial role in facilitating the viewing and management of data. It is designed to enhance the user experience by providing a platform for handling entities within the system. This feature is particularly relevant for backend and development teams, allowing them to manage data efficiently.
 
+Entity Engine is accessible through the `Entity Engine` button on the second row of tabs on the main web tools page. Alternatively, users can also find a list of `Entity Engine Tools` directly on the web tools main page.
 
-* Clicking the `Entity Engine` button redirects the user to the `Entity Data Maintenance` page, where options are available to find a record using filters such as `Group Name` and `Entity Name`. 
-* An alphabetical list of all entities is also conveniently displayed on this page. 
-* Clicking on an entity name allows users to view the dataset of that particular entity. 
-* The page provides functions and filters to streamline the search process for specific records within the entity. Search results are displayed below the search, enhancing user accessibility.
-* For a comprehensive view of all records of an entity, users can click the `Search` button. 
-* Additionally, the `View Relations` option at the top of the page enables users to explore the relationships shared by the selected entity with other entities in the database. For example, if we consider the entity ‘Facility’, we can see that it is related to entities ‘FacilityGroup’, ‘ProductStore’, ‘Party’ and so on. 
-
+* Click on the `Entity Engine` button to be redirected to the `Entity Data Maintenance` page. 
+* Use filters such as `Group Name` and `Entity Name` to find specific records.
+* An alphabetical list of all entities is also displayed on this page.
+* Click on the name of a specific entity to view its dataset.
+* Explore functions and filters to streamline the search process within the entity.
+* For a comprehensive view of all records of an entity, click the `Search` button.
+* Utilize the `View Relations` option to explore relationships with other entities.
 
 
 ### Entity SQL Processor
 
-The Entity SQL Processor is a component of web tools, and it serves as a valuable tool for interpreting and executing SQL commands, facilitating efficient viewing and management of data.
+The Entity SQL Processor in Web Tools, serves as a valuable component for interpreting and executing SQL commands. This tool is designed to enhance the efficiency of data viewing and management by providing users with the capability to execute SQL queries in the system. 
 
-* To access the Entity SQL Processor, navigate to the `Entity Engine` page and click on `Entity SQL Processor`. Alternatively, find this option under `Entity Engine Tools` on the main web tools page. This will open the `Entity SQL Processor`.
-* Once on the `Entity SQL Processor` page, change the group to 'org.apache.ofbiz' and input the required query in the `SQL command` field. 
-* If required, use the `Limit Rows` function to limit the number of results displayed, with search results presented in chronologically descending order. 
+* Navigate to the `Entity Engine` page within Web Tools. Click on `Entity SQL Processor` within the `Entity Engine` page. Alternatively, users can find the `Entity SQL Processor` option under `Entity Engine Tools` on the main Web Tools page and click on it.
+* This opens the `Entity SQL Processor` page.
+* Change the group to 'org.apache.ofbiz’. 
+* Input the required SQL query in the `SQL command` field.
+* If required, use the `Limit Rows` function to limit the number of results displayed.
+* Click on `Send` to initiate the execution of the SQL query.
+
+ The search results are presented in chronologically descending order, providing users with the output of the executed SQL command.
 
 ___
 
 ## Service Engine
 
-One of the key functions of web tools is to run and manage services. Users can search for a specific service, run a service or schedule a job by utilizing the `Service Engine` button on the second row of tabs on the web tools main page. Alternatively, a list of `Service Engine Tools` is also available on the web tools main page. 
+The `Service Engine` is a useful component for running and managing services within the OMS. This functionality is designed to provide users with a platform for searching, running, and scheduling various jobs and services. 
 
+Service Engine is accessible through the `Service Engine` button on the second row of tabs on the main web tools page. Alternatively, users can also find a list of `Service Engine Tools` on the web tools main page.
 
-* Upon clicking the `Service Engine` button on the tab, users are directed to the `Service Reference` page. 
-* An alphabetical list of all the services is available on this page, users can use the alphabets displayed at the top of the page, below the service engine tools tab, to quickly locate a service by its name. 
-* Clicking on a specific service opens a page where users can access details, in parameters, and out parameters of the service. 
-* In parameters: (add details)
-* Out parameters: (add details)
+* Clicking the `Service Engine` button directs users to the `Service Reference` page.
+* An alphabetical list of all the services is available on this page. Use the alphabets displayed at the top of the page to quickly locate a service by its name.
+* Click on a specific service to open a dedicated page containing details, in parameters, and out parameters of the selected service.
+* Depending on the requirements, users can run or schedule a service or job.
 
 #### Job List
-* On clicking on the `Job List` tab, users can view the list of jobs that are associated with the OMS instance, enabling them to check the job details and status within the OMS instance. 
-* In order to search for a specific job, users can use the drop-down menu to select the function and enter relevant data in the data field. The search results obtained with this action are displayed below, and the users can click on any particular job to view its details. 
-* For a complete list of all jobs, users can click on the `Find` button.
+The `Job List` tab assists users to view and manage jobs associated with the OMS instance. This functionality provides users with a comprehensive view of the job details and their current status, allowing for efficient tracking and management of various tasks within the OMS environment.
+
+The search functionality allows users to find specific jobs by selecting a function from the drop-down menu and entering relevant data. This feature streamlines the process of locating specific jobs within the OMS instance. The search results obtained with this action are displayed below, and the users can click on any particular job to view its details. 
+
+Users can also click on the `Find` button to view a complete list of all jobs within the OMS instance.
+
 
 #### Schedule a Job
-* When users click on the `Schedule Job` tab, they are directed to a page where they can schedule a specific job or service.
-* Here, users can input details such as date, time, frequency, and more to schedule a job at a specific time and set intervals for repetition.
-* Additionally, users have the option to check the `Run As System` checkbox to execute the job as a system."
+The `Schedule Job` tab is a feature that enables users to manage and automate the execution of specific jobs or services within the system. This functionality provides users with an interface to schedule tasks at specific times, set intervals for repetition, and customize job execution parameters.
 
+The `Run As System` checkbox option allows users to execute scheduled jobs as a system.
 
 ___
 
 ## Reader 
 
-A Reader is a type of plugin used for importing data from various integrations that clients use for automation, etc. 
+A Reader is a type of plugin that allows users to import data from various integrations that clients use for automation, and more. 
 
-* When users click on the `XML Data Import Readers` button within the `Import/Export` tab, they are directed to the `XML Import to DataSource(s)` page. 
-* Here, in the `Enter Readers` field, users should input 'ext-*name*', where 'name' represents the name of the integration from which data needs to be imported.
-* Upon clicking the `Import` button, data is imported, and the `Results` section below displays file names and a summary of the data import process.   
-
+* Clicking on the `XML Data Import Readers` button within the `Import/Export` tab redirects the users to the `XML Import to DataSource(s)` page.
+* Users should input 'ext-_**name**_', where 'name' represents the name of the integration from which data needs to be imported in the `Enter Readers` field.
+* Clicking on the `Import` button initiates the data import process into the designated data sources.
+The `Results` section displays file names and a summary of the import process, allowing users to quickly verify the success of the operation.
+ 
 ___
 
 ## Logs 
 
-The `Logging` button on the second row of tabs in web tools will open up the logs for all actions being performed in the OMS instance. Users can view logs and utilize 'Command+F' or 'Ctrl+F' to search for specific logs. Error logs are displayed in red and enclosed within a red box for easy identification. 
+Logs, accessible through the `Logging` button on the second row of tabs in Web Tools, provides users with a location for viewing logs of various actions being performed within the OMS instance. 
+
+Users can use 'Command+F' or 'Ctrl+F' within the logs to locate specific logs.
+
+Error logs are highlighted in red and enclosed within a red box, making them easily identifiable.
 
 ___
 
 ## Facility
 
-The`Facilities` page allows users to view and search all physical as well as virtual facilities associated with the OMS instance. 
+The `Facilities` page enables users to view, search, and manage both physical and virtual facilities associated with the OMS instance. 
 
-* Clicking the `Facility` button on the first row of tabs redirects the user to the `Facilities` page, where options are available for searching specific facilities. 
-* Users can utilize the drop-down menu to select the function and enter data in the field to search for particular facilities. The search results will be displayed below.
-* If a user clicks the `Find` button without selecting any function or entering data, an alphabetical list of all facilities is displayed as a result. 
-* Clicking on any facility redirects the user to the `Edit Facility` page, where they can update details about the selected facility. 
+* Click on the `Facility` button located on the first row of tabs. This action opens the `Facilities` page. Once on the `Facilities` page, options are available for searching specific facilities.
+* In the search section, use the drop-down menu to select a specific function and enter relevant data to filter the facilities.
+* Click the `Find` button to initiate the search based on the selected function and entered data. The search results will be displayed below. 
+* If you click the `Find` button without selecting any function or entering data, an alphabetical list of all facilities is displayed as a result. 
+* Click on any facility to view the `Edit Facility` page.
+* On the `Edit Facility` page, users can update the details about the selected facility as needed. 
 
 ___
 
 ## Import Data 
 
 There are two methods for adding data into an entity. One approach involves navigating to the entity using the `Entity Engine` and utilizing the `Create New` button to input data directly into the entity. Alternatively, data can be imported using XML. 
- 
+
 
 #### Using the `Create New` button in `Entity Engine`
-* From the Entity Engine, go to the particular entity in which you want to enter data and click on the `Create New` button.
-* Enter data in all the relevant fields and click on the `Create` button. 
-* This will create the relevant dataset for that entity and open the `View Value` page.
-* The XML format for creating dataset is also available at the bottom of the `View Value` page in the `Entity XML Representation` section.
+* Go to the `Entity Engine` and select the specific entity where you want to enter data.
+* Click on the `Create New` button.
+* Fill in the relevant fields with the data you want to input.
+* After entering the data, click on the `Create` button to create the dataset for the selected entity.
+* The system will create the relevant dataset and redirect you to the `View Value` page for the newly created data.
+* At the bottom of the `View Value` page, find the `Entity XML Representation` section. Here, you can view the XML format for the dataset.
+
 
 #### Importing XML Data 
 
-After obtaining the XML data format, users can import the data directly from the `XML Import to DataSource(s)` page. Follow these steps:
+After obtaining the XML data format, users can import the data directly from the `XML Import to DataSource(s)` page using these steps:
 
-* Click on `Import/Export` > `XML Data Import` button to navigate to the `XML Import to DataSource(s)` page.
-* In the `Complete XML document` field, insert the data in the correct XML format between the `<entity-engine-xml>` and `</entity-engine-xml>` tags.
-* Click on the `Import Text` button. 
+* Click on `Import/Export` and select the `XML Data Import` button to access the `XML Import to DataSource(s)` page.
+* In the `Complete XML document` field on the page, insert the data in the correct XML format. The data has to be placed between the `<entity-engine-xml>` and `</entity-engine-xml>` tags.
+* Once the XML data is inserted, click on the `Import Text` button to initiate the data import process.
+
+{% hint style="info" %} Ensure that the XML data adheres to the required format for successful import.  {% endhint %}
+
+
 
 
 
