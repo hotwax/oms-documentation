@@ -54,6 +54,10 @@ In HotWax Commerce, a designated job monitors the SFTP location, periodically ch
 {% endtab %}
 {% endtabs %}
 
+#### Here's how purchase order fields are mapped in NetSuite and HotWax Commerce that remains hidden in the user interface but included in the purchase order CSV file
+
+<table><thead><tr><th width="113">S.No.</th><th width="284">Fields in NetSuite</th><th>Fields in HotWax Commerce</th></tr></thead><tbody><tr><td>1</td><td>Line ID</td><td>Order Item External ID</td></tr></tbody></table>
+
 **Job in HotWax Commerce**
 
 ```
