@@ -28,7 +28,7 @@ Identify new customers by checking the Person table for entries where the roleTy
 
 #### Here's how customer fields are mapped in HotWax Commerce and NetSuite
 
-<table><thead><tr><th width="138">S.No.</th><th width="279">Fields in HotWax Commerce</th><th>Fields in NetSuite</th></tr></thead><tbody><tr><td>1</td><td>Shopify Customer ID</td><td>HC Shopify Customer ID</td></tr><tr><td>2</td><td>NetSuite Customer ID</td><td>Internal Customer ID</td></tr><tr><td>3</td><td>Name</td><td>Name</td></tr><tr><td>4</td><td>Emails</td><td>E-mail</td></tr><tr><td>5</td><td>Phones</td><td>Phone</td></tr></tbody></table>
+<table><thead><tr><th width="145.2998379254457">S.No.</th><th width="279">Fields in HotWax Commerce</th><th>Fields in NetSuite</th></tr></thead><tbody><tr><td>1</td><td>Shopify Customer ID</td><td>HC Shopify Customer ID</td></tr><tr><td>2</td><td>NetSuite Customer ID</td><td>Internal Customer ID</td></tr><tr><td>3</td><td>Name</td><td>Name</td></tr><tr><td>4</td><td>Emails</td><td>E-mail</td></tr><tr><td>5</td><td>Phones</td><td>Phone</td></tr></tbody></table>
 
 {% tabs %}
 {% tab title="Customer Fields in HotWax Commerce" %}
@@ -42,7 +42,7 @@ Identify new customers by checking the Person table for entries where the roleTy
 
 #### Here's how customer fields are mapped in HotWax Commerce and NetSuite that remains hidden in the user interface but included in the customer CSV file
 
-<table><thead><tr><th width="170">S.No.</th><th>Fields in HotWax Commerce</th><th>Fields in NetSuite</th></tr></thead><tbody><tr><td>1</td><td>Product Store External ID</td><td>Subsidiary *</td></tr><tr><td>2</td><td>Customer-Closed Won</td><td>Status *</td></tr><tr><td>3</td><td>Individual</td><td>Type *</td></tr><tr><td>4</td><td>Party ID</td><td>External ID</td></tr><tr><td>5</td><td>Party Classification</td><td>Initial Lead Source</td></tr><tr><td>6</td><td>True</td><td>Taxable</td></tr></tbody></table>
+<table><thead><tr><th width="137.08771929824562">S.No.</th><th>Fields in HotWax Commerce</th><th>Fields in NetSuite</th></tr></thead><tbody><tr><td>1</td><td>Product Store External ID</td><td>Subsidiary *</td></tr><tr><td>2</td><td>Customer-Closed Won</td><td>Status *</td></tr><tr><td>3</td><td>Individual</td><td>Type *</td></tr><tr><td>4</td><td>Party ID</td><td>External ID</td></tr><tr><td>5</td><td>Party Classification</td><td>Initial Lead Source</td></tr><tr><td>6</td><td>True</td><td>Taxable</td></tr></tbody></table>
 
 {% hint style="danger" %}
 "\*" denotes fields that are required to be sent to NetSuite for the customer sync to work
@@ -115,7 +115,7 @@ For retailers that use Avatax, the Tax Code and Shipping Tax Code will always co
 
 #### Here's how sales order fields are mapped in HotWax Commerce and NetSuite
 
-<table><thead><tr><th width="131">S.No.</th><th>Fields in HotWax Commerce</th><th>Fields in NetSuite</th></tr></thead><tbody><tr><td>1</td><td>NetSuite Sales Order ID</td><td>Internal Sales Order ID</td></tr><tr><td>2</td><td>Shopify Order ID</td><td>HC Shopify Order ID</td></tr><tr><td>3</td><td>Shopify Order Name</td><td>PO#</td></tr><tr><td>4</td><td>Sales Channel</td><td>HC Sales Channel</td></tr><tr><td>5</td><td>Customer</td><td>Customer *</td></tr><tr><td>6</td><td>Bill To Address</td><td>Billing Address *</td></tr><tr><td>7</td><td>Order Date</td><td>Date *</td></tr><tr><td>8</td><td>Product</td><td>Item</td></tr><tr><td>9</td><td>Qty</td><td>Quantity</td></tr><tr><td>10</td><td>Ship To</td><td>Shipping Address *</td></tr><tr><td>11</td><td>Ship Method</td><td>Shipping Method</td></tr><tr><td>12</td><td>Ship From</td><td>Location</td></tr><tr><td>13</td><td>Communications</td><td>Memo</td></tr></tbody></table>
+<table><thead><tr><th width="146.53483992467045">S.No.</th><th>Fields in HotWax Commerce</th><th>Fields in NetSuite</th></tr></thead><tbody><tr><td>1</td><td>NetSuite Sales Order ID</td><td>Internal Sales Order ID</td></tr><tr><td>2</td><td>Shopify Order ID</td><td>HC Shopify Order ID</td></tr><tr><td>3</td><td>Shopify Order Name</td><td>PO#</td></tr><tr><td>4</td><td>Sales Channel</td><td>HC Sales Channel</td></tr><tr><td>5</td><td>Customer</td><td>Customer *</td></tr><tr><td>6</td><td>Bill To Address</td><td>Billing Address *</td></tr><tr><td>7</td><td>Order Date</td><td>Date *</td></tr><tr><td>8</td><td>Product</td><td>Item</td></tr><tr><td>9</td><td>Qty</td><td>Quantity</td></tr><tr><td>10</td><td>Ship To</td><td>Shipping Address *</td></tr><tr><td>11</td><td>Ship Method</td><td>Shipping Method</td></tr><tr><td>12</td><td>Ship From</td><td>Location</td></tr><tr><td>13</td><td>Communications</td><td>Memo</td></tr></tbody></table>
 
 {% tabs %}
 {% tab title="Sales Order Fields in HotWax Commerce" %}
@@ -137,7 +137,7 @@ For retailers that use Avatax, the Tax Code and Shipping Tax Code will always co
 
 #### Here's how sales order fields are mapped in HotWax Commerce and NetSuite that remains hidden in the user interface but included in the sales order CSV file
 
-<table><thead><tr><th width="166">S.No.</th><th>Fields in HotWax Commerce</th><th>Fields in NetSuite</th></tr></thead><tbody><tr><td>1</td><td>Order Item Seq ID</td><td>External Order Line ID</td></tr><tr><td>2</td><td>Price Level NetSuite</td><td>Price Level</td></tr><tr><td>3</td><td>Tax Code</td><td>Tax Code</td></tr><tr><td>4</td><td>Product Promo ID</td><td>Discount Item</td></tr><tr><td>5</td><td>Product Store External ID</td><td>Subsidiary</td></tr><tr><td>6</td><td>Email</td><td>E-mail</td></tr></tbody></table>
+<table><thead><tr><th width="144.37809187279154">S.No.</th><th>Fields in HotWax Commerce</th><th>Fields in NetSuite</th></tr></thead><tbody><tr><td>1</td><td>Order Item Seq ID</td><td>External Order Line ID</td></tr><tr><td>2</td><td>Price Level NetSuite</td><td>Price Level</td></tr><tr><td>3</td><td>Tax Code</td><td>Tax Code</td></tr><tr><td>4</td><td>Product Promo ID</td><td>Discount Item</td></tr><tr><td>5</td><td>Product Store External ID</td><td>Subsidiary</td></tr><tr><td>6</td><td>Email</td><td>E-mail</td></tr></tbody></table>
 
 {% hint style="info" %}
 To sync sales orders from HotWax Commerce to NetSuite, a required field is the "Order Status." As a part of our integration strategy, we have opted to directly set the value of "Order Status" in NetSuite as "Pending Fulfillment".
