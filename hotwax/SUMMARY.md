@@ -15,7 +15,7 @@
 * [Inbound Shipment](/inbount-shipment/README.md)
   * [Import](/inbount-shipment/import.md)
 * [Returns](returns/README.md)
-  * [Return Adjustments](returns/adjustmentTypes.md)
+  * [Enumerations](returns/field-options.md)
 * [Facility](api/facility/README.md)
   * [Post Code Lookup](api/facility/postcode-lookup.md)
   * [Store Lookup](api/facility/store-lookup.md)
