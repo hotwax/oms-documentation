@@ -4,7 +4,7 @@ When syncing orders to NetSuite it's very important to have the correct shipping
 
 Here is a sample table of how shipping methods are mapped between Shopify HotWax and NetSuite.
 
-| #   | Shopify Value                            | HotWax ID          | Netsuite Value                                      |
+| #   | Shopify Value                            | HotWax ID          | NetSuite Value                                      |
 | --- | ---------------------------------------- | ------------------ | --------------------------------------------------- |
 | 1   | Priority Shipping (3-5 Day)              | PRI_SHP_3DAY       | Priority Shipping (3-5 Day)                         |
 | 2   | FREE 2-Day Shipping                      | FRE_2_DAY_SHP      | 2-Day Shipping                                     |

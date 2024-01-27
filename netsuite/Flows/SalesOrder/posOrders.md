@@ -24,7 +24,7 @@ Orders that match these criteria are exported to an SFTP location in a CSV file.
 
 #### Here's how POS order fields are mapped in HotWax Commerce and NetSuite
 
-<table><thead><tr><th width="152">S.No.</th><th>Fields in HotWax Commerce</th><th>Fields in NetSuite</th></tr></thead><tbody><tr><td>1</td><td>Shopify Order Name</td><td>PO #</td></tr><tr><td>3</td><td>NetSuite Order ID</td><td>POS Order Internal ID</td></tr><tr><td>5</td><td>Shopify Order ID</td><td>HC Shopify Order ID</td></tr><tr><td>6</td><td>Sales Channel</td><td>HC Sales Channel</td></tr><tr><td>7</td><td>Order Date</td><td>Date</td></tr><tr><td>8</td><td>Bill To</td><td>Customer</td></tr><tr><td>9</td><td>Product</td><td>Item</td></tr><tr><td>10</td><td>Qty</td><td>Quantity</td></tr><tr><td>13</td><td>Ship From</td><td>Location</td></tr></tbody></table>
+<table><thead><tr><th width="152">S.No.</th><th>Fields in HotWax Commerce</th><th>Fields in NetSuite</th></tr></thead><tbody><tr><td>1</td><td>Shopify Order Name</td><td>PO #</td></tr><tr><td>2</td><td>NetSuite Order ID</td><td>POS Order Internal ID</td></tr><tr><td>3</td><td>Shopify Order ID</td><td>HC Shopify Order ID</td></tr><tr><td>4</td><td>Sales Channel</td><td>HC Sales Channel</td></tr><tr><td>5</td><td>Order Date</td><td>Date*</td></tr><tr><td>6</td><td>Bill To</td><td>Customer*</td></tr><tr><td>7</td><td>Product</td><td>Item</td></tr><tr><td>8</td><td>Qty</td><td>Quantity</td></tr><tr><td>9</td><td>Ship From</td><td>Shipping Address*</td></tr></tbody></table>
 
 {% tabs %}
 {% tab title="POS Order Fields in HotWax Commerce" %}
@@ -35,6 +35,14 @@ Orders that match these criteria are exported to an SFTP location in a CSV file.
 <figure><img src="../../.gitbook/assets/POS order mapping netsuite.png" alt=""><figcaption><p>POS Order Fields Mapping in NetSuite</p></figcaption></figure>
 {% endtab %}
 {% endtabs %}
+
+#### Here's how POS order fields are mapped in HotWax Commerce and NetSuite that remains hidden in the user interface but included in the POS order CSV file
+
+<table><thead><tr><th width="170">S.No.</th><th>Fields in HotWax Commerce</th><th>Fields in NetSuite</th></tr></thead><tbody><tr><td>1</td><td>Order Item Seq ID</td><td>External Order Line ID</td></tr><tr><td>2</td><td>Price Level NetSuite</td><td>Price Level</td></tr><tr><td>3</td><td>Tax Code</td><td>Tax Code</td></tr><tr><td>4</td><td>Product Promo ID</td><td>Discount Item</td></tr><tr><td>5</td><td>Product Store External ID</td><td>Subsidiary</td></tr></tbody></table>
+
+{% hint style="danger" %}
+"\*" denotes fields that are required to be sent to NetSuite for the POS order sync to work
+{% endhint %}
 
 **SFTP Locations**
 
