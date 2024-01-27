@@ -42,7 +42,7 @@ Identify new customers by checking the Person table for entries where the roleTy
 
 #### Here's how customer fields are mapped in HotWax Commerce and NetSuite that remains hidden in the user interface but included in the customer CSV file
 
-<table><thead><tr><th width="170">S.No.</th><th>Fields in HotWax Commerce</th><th>Fields in NetSuite</th></tr></thead><tbody><tr><td>1</td><td>Product Store External ID</td><td>Subsidiary *</td></tr><tr><td>2</td><td>Customer-Closed Won</td><td>Status *</td></tr><tr><td>3</td><td>Individual</td><td>Type * </td></tr><tr><td>4</td><td>Party ID</td><td>External ID</td></tr><tr><td>5</td><td>Party Classification</td><td>Initial Lead Source</td></tr><tr><td>6</td><td>True</td><td>Taxable</td></tr></tbody></table>
+<table><thead><tr><th width="170">S.No.</th><th>Fields in HotWax Commerce</th><th>Fields in NetSuite</th></tr></thead><tbody><tr><td>1</td><td>Product Store External ID</td><td>Subsidiary *</td></tr><tr><td>2</td><td>Customer-Closed Won</td><td>Status *</td></tr><tr><td>3</td><td>Individual</td><td>Type *</td></tr><tr><td>4</td><td>Party ID</td><td>External ID</td></tr><tr><td>5</td><td>Party Classification</td><td>Initial Lead Source</td></tr><tr><td>6</td><td>True</td><td>Taxable</td></tr></tbody></table>
 
 {% hint style="danger" %}
 "\*" denotes fields that are required to be sent to NetSuite for the customer sync to work
@@ -115,13 +115,13 @@ For retailers that use Avatax, the Tax Code and Shipping Tax Code will always co
 
 #### Here's how sales order fields are mapped in HotWax Commerce and NetSuite
 
-<table><thead><tr><th width="131">S.No.</th><th>Fields in HotWax Commerce</th><th>Fields in NetSuite</th></tr></thead><tbody><tr><td>1</td><td>NetSuite Sales Order ID</td><td>Internal Sales Order ID </td></tr><tr><td>2</td><td>Shopify Order ID</td><td>HC Shopify Order ID</td></tr><tr><td>3</td><td>Shopify Order Name</td><td>PO#</td></tr><tr><td>4</td><td>Sales Channel</td><td>HC Sales Channel</td></tr><tr><td>5</td><td>Customer</td><td>Customer *</td></tr><tr><td>6</td><td>Bill To Address</td><td>Billing Address *</td></tr><tr><td>7</td><td>Order Date</td><td>Date *</td></tr><tr><td>8</td><td>Product</td><td>Item</td></tr><tr><td>9</td><td>Qty</td><td>Quantity</td></tr><tr><td>10</td><td>Ship To</td><td>Shipping Address *</td></tr><tr><td>11</td><td>Ship Method</td><td>Shipping Method</td></tr><tr><td>12</td><td>Ship From</td><td>Location</td></tr><tr><td>13</td><td>Communications</td><td>Memo</td></tr></tbody></table>
+<table><thead><tr><th width="131">S.No.</th><th>Fields in HotWax Commerce</th><th>Fields in NetSuite</th></tr></thead><tbody><tr><td>1</td><td>NetSuite Sales Order ID</td><td>Internal Sales Order ID</td></tr><tr><td>2</td><td>Shopify Order ID</td><td>HC Shopify Order ID</td></tr><tr><td>3</td><td>Shopify Order Name</td><td>PO#</td></tr><tr><td>4</td><td>Sales Channel</td><td>HC Sales Channel</td></tr><tr><td>5</td><td>Customer</td><td>Customer *</td></tr><tr><td>6</td><td>Bill To Address</td><td>Billing Address *</td></tr><tr><td>7</td><td>Order Date</td><td>Date *</td></tr><tr><td>8</td><td>Product</td><td>Item</td></tr><tr><td>9</td><td>Qty</td><td>Quantity</td></tr><tr><td>10</td><td>Ship To</td><td>Shipping Address *</td></tr><tr><td>11</td><td>Ship Method</td><td>Shipping Method</td></tr><tr><td>12</td><td>Ship From</td><td>Location</td></tr><tr><td>13</td><td>Communications</td><td>Memo</td></tr></tbody></table>
 
 {% tabs %}
 {% tab title="Sales Order Fields in HotWax Commerce" %}
 <div data-full-width="false">
 
-<figure><img src="../../.gitbook/assets/sales order mapping hotwax (2).png" alt=""><figcaption><p>Sales Order Fields Mapping in HotWax Commerce</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/sales order mapping hotwax.png" alt=""><figcaption><p>Sales Order Fields Mapping in HotWax Commerce</p></figcaption></figure>
 
 </div>
 {% endtab %}
@@ -229,7 +229,6 @@ FTP Config: IMP_ORDER_IDENT
 
 * [x] Sync order ids
 
-
 ## Create Customer Deposit in NetSuite
 
 This step creates customer deposit records in NetSuite for authorized payments of sales orders. Generating a customer deposit in NetSuite is essential to represent authorized payments for orders. This step signifies the initiation of the financial transaction for orders.
@@ -261,6 +260,7 @@ A SuiteScript in NetSuite creates customer deposit records in "undeposited" stat
 ```
 HC_SC_CreateCustomerDeposit
 ```
+
 {% hint style="info" %}
 The `HC_SC_CreateCustomerDeposit` SuiteScript also generates a CSV file highlighting erroneous records found during processing and uploads the file to the SFTP server. Simultaneously, an email alert is automatically triggered to designated personnel, helping them quickly pinpoint the source of the issue and accelerating troubleshooting.
 {% endhint %}
