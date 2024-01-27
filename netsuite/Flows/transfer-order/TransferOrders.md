@@ -54,7 +54,7 @@ If HotWax is only being used for receiving transfer orders, the Transfer Order f
 
 #### Here's how transfer order fields are mapped in NetSuite and HotWax Commerce that remains hidden in the user interface but included in the transfer order CSV file
 
-<table><thead><tr><th width="112">S.No.</th><th width="281">Fields in NetSuite</th><th>Fields in HotWax Commerce</th></tr></thead><tbody><tr><td>1</td><td>Line ID</td><td>Shipment Item External ID</td></
+<table><thead><tr><th width="112">S.No.</th><th width="214.44856661045532">Fields in NetSuite</th><th>Fields in HotWax Commerce</th></tr></thead><tbody><tr><td>1</td><td>Line ID</td><td>Shipment Item External ID</td></tr></tbody></table>
 
 **SFTP Locations**
 
@@ -130,8 +130,9 @@ Import received Transfer Order file:
 ```
 HC_SC_ImportTransferOrderReceipts
 ```
+
 {% hint style="info" %}
-The HC_SC_ImportTransferOrderReceipts SuiteScript also generates a CSV file highlighting erroneous records found during processing and uploads the file to the SFTP server. Simultaneously, an email alert is automatically triggered to designated personnel, helping them quickly pinpoint the source of the issue and accelerating troubleshooting.
+The HC\_SC\_ImportTransferOrderReceipts SuiteScript also generates a CSV file highlighting erroneous records found during processing and uploads the file to the SFTP server. Simultaneously, an email alert is automatically triggered to designated personnel, helping them quickly pinpoint the source of the issue and accelerating troubleshooting.
 {% endhint %}
 
 ### Automated Transfer Order Status Update
