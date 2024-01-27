@@ -24,15 +24,15 @@ Orders that match these criteria are exported to an SFTP location in a CSV file.
 
 #### Here's how POS order fields are mapped in HotWax Commerce and NetSuite
 
-<table><thead><tr><th width="152">S.No.</th><th>Fields in HotWax Commerce</th><th>Fields in NetSuite</th></tr></thead><tbody><tr><td>1</td><td>Shopify Order Name</td><td>PO #</td></tr><tr><td>2</td><td>NetSuite Order ID</td><td>POS Order Internal ID</td></tr><tr><td>3</td><td>Shopify Order ID</td><td>HC Shopify Order ID</td></tr><tr><td>4</td><td>Sales Channel</td><td>HC Sales Channel</td></tr><tr><td>5</td><td>Order Date</td><td>Date*</td></tr><tr><td>6</td><td>Bill To</td><td>Customer*</td></tr><tr><td>7</td><td>Product</td><td>Item</td></tr><tr><td>8</td><td>Qty</td><td>Quantity</td></tr><tr><td>9</td><td>Ship From</td><td>Shipping Address*</td></tr></tbody></table>
+<table><thead><tr><th width="152">S.No.</th><th>Fields in HotWax Commerce</th><th>Fields in NetSuite</th></tr></thead><tbody><tr><td>1</td><td>Shopify Order Name</td><td>PO #</td></tr><tr><td>2</td><td>NetSuite Order ID</td><td>POS Order Internal ID</td></tr><tr><td>3</td><td>Shopify Order ID</td><td>HC Shopify Order ID</td></tr><tr><td>4</td><td>Sales Channel</td><td>HC Sales Channel</td></tr><tr><td>5</td><td>Order Date</td><td>Date *</td></tr><tr><td>6</td><td>Bill To</td><td>Customer *</td></tr><tr><td>7</td><td>Product</td><td>Item</td></tr><tr><td>8</td><td>Qty</td><td>Quantity</td></tr><tr><td>9</td><td>Ship From</td><td>Shipping Address *</td></tr></tbody></table>
 
 {% tabs %}
 {% tab title="POS Order Fields in HotWax Commerce" %}
-<figure><img src="broken-reference" alt=""><figcaption><p>POS Order Fields Mapping in HotWax Commerce</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/HC pos order mapping.png" alt=""><figcaption><p>POS Order Fields Mapping in HotWax Commerce</p></figcaption></figure>
 {% endtab %}
 
 {% tab title="POS Order Fields in NetSuite" %}
-<figure><img src="broken-reference" alt=""><figcaption><p>POS Order Fields Mapping in NetSuite</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/POS order mapping netsuite.png" alt=""><figcaption><p>POS Order Fields Mapping in NetSuite</p></figcaption></figure>
 {% endtab %}
 {% endtabs %}
 
