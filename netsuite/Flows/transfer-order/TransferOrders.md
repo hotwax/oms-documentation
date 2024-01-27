@@ -40,7 +40,7 @@ If HotWax is only being used for receiving transfer orders, the Transfer Order f
 
 #### Here's how transfer orders fields are mapped in NetSuite and HotWax Commerce
 
-<table><thead><tr><th width="112">S.No.</th><th width="281">Fields in NetSuite</th><th>Fields in HotWax Commerce</th></tr></thead><tbody><tr><td>1</td><td>Order #</td><td>Shipment Attribute</td></tr><tr><td>2</td><td>Transfer Order Internal ID</td><td>External ID</td></tr><tr><td>3</td><td>Items</td><td>SKU</td></tr><tr><td>4</td><td>Quantity</td><td>Ordered Quantity</td></tr><tr><td>5</td><td>Destination Location</td><td>Facility</td></tr><tr><td>6</td><td>Tracking #</td><td>Tracking ID</td></tr></tbody></table>
+<table><thead><tr><th width="112">S.No.</th><th width="244.44856661045532">Fields in NetSuite</th><th>Fields in HotWax Commerce</th></tr></thead><tbody><tr><td>1</td><td>Order #</td><td>Shipment Attribute</td></tr><tr><td>2</td><td>Transfer Order Internal ID</td><td>External ID</td></tr><tr><td>3</td><td>Items</td><td>SKU</td></tr><tr><td>4</td><td>Quantity</td><td>Ordered Quantity</td></tr><tr><td>5</td><td>Destination Location</td><td>Facility</td></tr><tr><td>6</td><td>Tracking #</td><td>Tracking ID</td></tr></tbody></table>
 
 {% tabs %}
 {% tab title="Transfer Order Fields in NetSuite" %}
@@ -54,7 +54,7 @@ If HotWax is only being used for receiving transfer orders, the Transfer Order f
 
 #### Here's how transfer order fields are mapped in NetSuite and HotWax Commerce that remains hidden in the user interface but included in the transfer order CSV file
 
-<table><thead><tr><th width="112">S.No.</th><th width="214.44856661045532">Fields in NetSuite</th><th>Fields in HotWax Commerce</th></tr></thead><tbody><tr><td>1</td><td>Line ID</td><td>Shipment Item External ID</td></tr></tbody></table>
+<table><thead><tr><th width="112">S.No.</th><th width="217.44856661045532">Fields in NetSuite</th><th>Fields in HotWax Commerce</th></tr></thead><tbody><tr><td>1</td><td>Line ID</td><td>Shipment Item External ID</td></tr><tr><td>2</td><td>From Location</td><td>Shipment Destination Facility ID</td></tr></tbody></table>
 
 **SFTP Locations**
 
