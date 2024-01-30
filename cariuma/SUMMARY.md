@@ -7,3 +7,4 @@
 * [Inventory](flows/inventory/README.md)
 * [Products](flows/prodcuts/README.md)
 * [Pre-orders](flows/preorders/README.md)
+* [Product Store](flows/product-store/README.md)
