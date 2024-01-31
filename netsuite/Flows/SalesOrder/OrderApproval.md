@@ -6,8 +6,6 @@ Initially, we attempted to synchronize approved orders from HotWax Commerce to N
 
 To circumvent such complexities and ensure a seamless process, a strategic shift was made. Orders, upon their creation within HotWax Commerce, are designated as "Created" status. It is at this phase that critical order information is captured and assembled into CSV files for transmission to NetSuite. By choosing the "Created" status for order synchronization, HotWax Commerce retains control of the integration process and its sequence of interactions with NetSuite, enhancing accuracy and mitigating errors that arose from attempts to synchronize orders in an "Approved" status.
 
-<figure><img src="../../.gitbook/assets/order sync from hotwax to netsuite.png" alt=""><figcaption><p>Orders in Created status pushed to NetSuite</p></figcaption></figure>
-
 {% hint style="info" %}
 Orders will only be allocated for fulfillment after they have been approved.
 {% endhint %}
@@ -98,6 +96,8 @@ Capturing orders in HotWax Commerce initiates the creation of orders in "created
 #### Export new orders to NetSuite
 
 A job in HotWax Commerce Integration platform creates a CSV file of orders in "created" status that have not yet been sent to NetSuite. When creating this file HotWax Commerce also ensures that the customer already exists in NetSuite using the customer ID saved in the last step.
+
+<figure><img src="../../.gitbook/assets/order sync from hotwax to netsuite.png" alt=""><figcaption><p>Orders in Created status pushed to NetSuite</p></figcaption></figure>
 
 The file contains details such as unit prices, order adjustments, and shipping costs, excluding direct tax amounts. HotWax Commerce omits the tax amount from the file and sends tax codes for the individual order items because NetSuite independently computes the taxes based on these codes and applies them accurately to each order item, ensuring precise tax calculations within NetSuite.
 
