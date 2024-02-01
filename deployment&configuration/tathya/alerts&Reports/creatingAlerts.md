@@ -33,7 +33,9 @@ After setting a schedule, the subsequent **CRON** field will automatically popul
 
 Alternatively, you can also directly enter a CRON expression by selecting the secondary radio button and entering the expression in the **CRON Schedule** field.
 
-**Note:** A CRON expression is a string representing a schedule. It is used to define the timing of recurring tasks or jobs in systems where periodic execution of tasks is required.
+{% hint style="info" %}
+A CRON expression is a string representing a schedule. It is used to define the timing of recurring tasks or jobs in systems where periodic execution of tasks is required.
+{% endhint %}
 
 The basic structure of a CRON expression consists of five fields, representing minute, hour, day of the month, month, and day of the week. Each field can have a specific value or a wildcard (*) to represent any possible value. Here's the general format:
 
@@ -45,7 +47,7 @@ The basic structure of a CRON expression consists of five fields, representing m
 | +----------- Hour (0 - 23)
 +------------- Minute (0 - 59)
 
-### For Example:
+### For example:
 
 - `0 0 * * *`: Check data at midnight every day.
 - `*/15 * * * *`: Check data every 15 minutes.
@@ -82,4 +84,6 @@ Set conditions for the count of unfillable orders in a day to be greater than 20
 
 ### Outcome
 
+{% hint style="success" %}
 Tathya will automatically trigger the alert and notify the designated team members via email whenever the daily count of unfillable orders exceeds 20.
+{% endhint %}

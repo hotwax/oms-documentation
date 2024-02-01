@@ -1,6 +1,9 @@
-# Order Fulfillment
+# Ship Orders
 
-### Pick orders
+## Order Fulfillment
+
+#### Pick orders
+
 1. Go to the Open Orders page and pring a picklist
 
 This page displays all outstanding orders brokered to this facility by the OMS and are ready to be fulfilled.
@@ -36,7 +39,8 @@ Video: Regenerate picklist
 Assigned pickers can also be changed from the In progress page.
 {% endhint %}
 
-### Pack Orders:
+#### Pack Orders:
+
 Mark orders packed when order items are ready to be shipped.
 
 {% hint style="info" %}
@@ -47,7 +51,7 @@ Bulk Packing slips and Shipping labels will be generated in a new tab.
 
 **Picker Filters:** Easily search for specific orders in batch processes using Picker Filters.
 
-2. Add multiple boxes to ship large orders.
+2. Add [multiple boxes](../orders/fulfillment/shipping-box.md#adding-shipment-box-to-order-during-fulfillment) to ship large orders.
 
 {% embed url="https://youtu.be/V66o7vAf6HY" %}
 Video: Add box
@@ -74,8 +78,7 @@ Unpack orders when necessary, especially in cases where incorrect boxes or items
 Video: Unpack orders
 {% endembed %}
 
-
-### Ship order
+#### Ship order
 
 1. Go to the Completed tab.​
 2. Click Ship Orders function at the top to mark the orders as shipped in bulk.
@@ -94,11 +97,11 @@ In the event that the packing slip or shipping label is damaged after packing an
 Video: Reprint customer letter
 {% endembed %}
 
----
+***
 
-# Individual Order Fulfillment
+## Individual Order Fulfillment
 
-### Pick order
+#### Pick order
 
 1. Navigate to the Open page.
 2. Use the search field to input HotWax Commerce Order Id, Shopify Order Id, or Customer name for order search.
@@ -111,7 +114,7 @@ Image: Search an order
 4. In the Add Picker dialog box, enter the Picker Name or Employee Id to assign a picker.​
 5. Access the Print Picksheet function again to obtain the picksheet in PDF format to reference during order picking.
 
-### Pack Order
+#### Pack Order
 
 1. Navigate to the In-Progress page.​
 2. Search for the order.
@@ -122,8 +125,7 @@ Image: Search an order
 Video: Pack order
 {% endembed %}
 
-
-### Ship order
+#### Ship order
 
 1. Navigate to the Completed page.​
 2. Search for the order.
@@ -134,4 +136,3 @@ Video: Ship order
 {% endembed %}
 
 {% embed url="https://youtu.be/RCzf6Uv_CoY" %}
-
