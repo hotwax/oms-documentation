@@ -26,8 +26,8 @@ The Import Orders job is primarily used for the regular flow of orders and is no
 |-------------------|--------------|-------------------------------------------------------------------------------------------------------------------|-------------------|-------------------|
 | **`frequency`**   | Required     | Defines the default duration for syncing orders if there is no `Last Sync Time`.                                 | 15 minutes        | 10                |
 | **`limit`**       | Optional     | Sets a limit on the order import job, restricting the number of orders fetched from eCommerce.                    | Not specified     | 100               |
-| **`bufferTime`**  | Optional     | Ensures orders are not imported until they have aged past a desired duration, accommodating post-processing workflows in eCommerce platforms. | Not specified | 30 minutes        |
-| **`thruDateBuffer`** | Optional  | Skips Shopify orders created within the specified time interval. For example, if `thruDateBuffer` is set to 1, it implies that orders created in Shopify within the last 1 minute will be skipped during the import process. | Not specified     | 1 m,minute                |
+| **`bufferTime`**  | Optional     | Ensures orders are not imported until they have aged past a desired duration, accommodating post-processing workflows in eCommerce platforms. | 5 minutes | 30 minutes        |
+| **`thruDateBuffer`** | Optional  | Skips Shopify orders created within the specified time interval. For example, if `thruDateBuffer` is set to 1, it implies that orders created in Shopify within the last 1 minute will be skipped during the import process. | 2 minutes     | 1 minute                |
 | **`scheduleNow`** | Optional     | When importing files into the OMS, forces the system to pick the file out of sequence for immediate processing. Enabled by default when importing files from FTP, but can be disabled during high-volume syncs for system stability. | Enabled     | false             |
 
 ---
@@ -58,7 +58,7 @@ Review the `frequency` parameter to ensure it aligns with the intended import fr
 
 | **Parameter**    | **Type**     | **Description**                                                                                                   | **Default Value** | **Example Value** |
 |-------------------|--------------|-------------------------------------------------------------------------------------------------------------------|-------------------|-------------------|
-| **`frequency`**   | Required     | Defines the default duration for syncing orders if there is no `Last Sync Time`.                                 | 60 minutes        | 
+| **`frequency`**   | Required     | Defines the default duration for syncing orders if there is no `Last Sync Time`.                                 | 60 minutes        | 10
 | **`bufferTime`**  | Optional     | Ensures orders are not imported until they have aged past a desired duration, accommodating post-processing workflows in Shopify. | Not specified | 15 minutes        |
 
 ---
@@ -90,8 +90,8 @@ Review the `frequency` parameter to ensure it aligns with the intended import fr
 
 | **Parameter**    | **Type**     | **Description**                                                                                                   | **Default Value** | **Example Value** |
 |-------------------|--------------|-------------------------------------------------------------------------------------------------------------------|-------------------|-------------------|
-| **`frequency`**   | Required     | Defines the default duration for syncing orders if there is no `Last Sync Time`.                                 | 15 minutes        | 
-| **`bufferTime`**  | Optional     | Ensures orders are not imported until they have aged past a desired duration, accommodating post-processing workflows in Shopify. | Not specified |        |
+| **`frequency`**   | Required     | Defines the default duration for syncing orders if there is no `Last Sync Time`.                                 | 15 minutes        | 10
+| **`bufferTime`**  | Optional     | Ensures orders are not imported until they have aged past a desired duration, accommodating post-processing workflows in Shopify. | Not specified |    5 minutes    |
 
 
 ---
@@ -196,12 +196,12 @@ The job is configured to run at a frequency that suits the needs of your busines
 
 | **Parameter**           | **Type**     | **Description**                                                                                                   | **Default Value** | **Example Value** |
 |--------------------------|--------------|-------------------------------------------------------------------------------------------------------------------|-------------------|-------------------|
-| **`propertyResource`**   | Required     | Specifies the property resource for configuration.                                                                | Not specified     | FTP_CONFIG        |
-| **`configId`**           | Required     | Identifies the configuration for Order Item Attribute records.                                                   | Not specified     | IMP_ORDER_ITM_ATTR|
-| **`remoteFilename`**     | Optional     | Specifies the remote filename for processing.                                                                     | Not specified     | Order_Attribute.csv|
-| **`groupBy`**            | Optional     | Specifies a grouping parameter for the job.                                                                      | Not specified     | AttributeType      |
-| **`additionalParameters`** | Optional   | Additional parameters for job customization.                                                                     | Not specified     | param1=value1,param2=value2|
-| **`fileNameRegex`**      | Optional     | Specifies a regular expression for filtering filenames.                                                          | Not specified     | ^OrderAttr_\d+\.csv$|
+| **`propertyResource`**   | Required     | Specifies the property resource for configuration.                                                       | Not specified     | FTP_CONFIG        |
+| **`configId`**           | Required     | Identifies the configuration for Order Item Attribute records.                                           | Not specified     | IMP_ORDER_ITM_ATTR|
+| **`remoteFilename`**     | Optional     | Specifies the remote filename for processing.                                                            | Not specified     | Order_Attribute.csv|
+| **`groupBy`**            | Optional     | Specifies a grouping parameter for the job.                                                              | Not specified     | AttributeType      |
+| **`additionalParameters`** | Optional   | Additional parameters for job customization.                                                             | Not specified     | param1=value1,param2=value2|
+| **`fileNameRegex`**      | Optional     | Specifies a regular expression for filtering filenames.                                                  | Not specified     | ^OrderAttr_\d+\.csv$|
 | **`scheduleNow`**        | Optional     | When importing files into the OMS, forces the system to pick the file out of sequence for immediate processing. Enabled by default when importing files from FTP, but can be disabled during high-volume syncs for system stability. | Enabled     | false             |
 
 ---
@@ -234,7 +234,7 @@ The job is configured to run at a frequency that aligns with the business needs 
 | **Parameter**           | **Type**     | **Description**                                                                                                   | **Default Value** | **Example Value** |
 |--------------------------|--------------|-------------------------------------------------------------------------------------------------------------------|-------------------|-------------------|
 | **`propertyResource`**   | Required     | Specifies the property resource for configuration.                                                                | Not specified     | FTP_CONFIG        |
-| **`configId`**           | Required     | Identifies the configuration for Order Item Attribute records.                                                   | Not specified     | IMP_ORDER_ITM_ATTR|
+| **`configId`**           | Required     | Identifies the configuration for Order Item Attribute records.                                                   | Not specified     | IMP_APR_SALES_ORD|
 | **`remoteFilename`**     | Optional     | Specifies the remote filename for processing.                                                                     | Not specified     | Order_Attribute.csv|
 | **`groupBy`**            | Optional     | Specifies a grouping parameter for the job.                                                                      | Not specified     | AttributeType      |
 | **`additionalParameters`** | Optional   | Additional parameters for job customization.                                                                     | Not specified     | param1=value1,param2=value2|
@@ -309,7 +309,7 @@ The job is configured to run at a frequency that aligns with the business needs 
 | **Parameter**           | **Type**     | **Description**                                                                                                   | **Default Value** | **Example Value** |
 |--------------------------|--------------|-------------------------------------------------------------------------------------------------------------------|-------------------|-------------------|
 | **`propertyResource`**   | Required     | Specifies the property resource for configuration.                                                                | Not specified     | FTP_CONFIG        |
-| **`configId`**           | Required     | Identifies the configuration for importing order attributes.                                                      | Not specified     | MOD_ORD_ATTR      |
+| **`configId`**           | Required     | Identifies the configuration for importing order attributes.                                                      | Not specified     | IMP_ORDER_IDENT      |
 | **`remoteFilename`**     | Optional     | Specifies the remote filename for processing.                                                                     | Not specified     | Order_Attribute.csv|
 | **`groupBy`**            | Optional     | Specifies a grouping parameter for the job.                                                                      | Not specified     | AttributeType      |
 | **`additionalParameters`** | Optional   | Additional parameters for job customization.                                                                     | Not specified     | param1=value1,param2=value2|
@@ -346,7 +346,7 @@ The job is configured to run at a frequency that aligns with the business needs 
 | **Parameter**           | **Type**     | **Description**                                                                                                   | **Default Value** | **Example Value** |
 |--------------------------|--------------|-------------------------------------------------------------------------------------------------------------------|-------------------|-------------------|
 | **`propertyResource`**   | Required     | Specifies the property resource for configuration.                                                                | Not specified     | FTP_CONFIG        |
-| **`configId`**           | Required     | Identifies the configuration for importing order attributes.                                                      | Not specified     | MOD_ORD_ATTR      |
+| **`configId`**           | Required     | Identifies the configuration for importing order attributes.                                                      | Not specified     | ODR_ITM_FLFLMNT     |
 | **`remoteFilename`**     | Optional     | Specifies the remote filename for processing.                                                                     | Not specified     | Order_Attribute.csv|
 | **`groupBy`**            | Optional     | Specifies a grouping parameter for the job.                                                                      | Not specified     | AttributeType      |
 | **`additionalParameters`** | Optional   | Additional parameters for job customization.                                                                     | Not specified     | param1=value1,param2=value2|
@@ -383,7 +383,7 @@ The job is configured to run at a frequency that aligns with the business needs 
 | **Parameter**           | **Type**     | **Description**                                                                                                   | **Default Value** | **Example Value** |
 |--------------------------|--------------|-------------------------------------------------------------------------------------------------------------------|-------------------|-------------------|
 | **`propertyResource`**   | Required     | Specifies the property resource for configuration.                                                                | Not specified     | FTP_CONFIG        |
-| **`configId`**           | Required     | Identifies the configuration for importing order attributes.                                                      | Not specified     | MOD_ORD_ATTR      |
+| **`configId`**           | Required     | Identifies the configuration for importing order attributes.                                                      | Not specified     | IMP_PARTY_IDENT      |
 | **`remoteFilename`**     | Optional     | Specifies the remote filename for processing.                                                                     | Not specified     | Order_Attribute.csv|
 | **`groupBy`**            | Optional     | Specifies a grouping parameter for the job.                                                                      | Not specified     | AttributeType      |
 | **`additionalParameters`** | Optional   | Additional parameters for job customization.                                                                     | Not specified     | param1=value1,param2=value2|
@@ -420,9 +420,9 @@ The job is configured to run at a frequency that aligns with the business needs 
 
 | **Parameter**      | **Type**   | **Description**                                                            | **Default Value** | **Example Value**    |
 |--------------------|------------|----------------------------------------------------------------------------|-------------------|----------------------|
-| **`namespace`**    | Required   | Specifies the namespace for order metafields.                               | Not specified     | HotwaxOrderDetails   |
-| **`bufferTime`**   | Optional   | Specifies the buffer time (in minutes) for scheduling job downloads.       | 1                 | 5                    |
-| **`thruDateBuffer`** | Optional | Specifies the buffer time (in minutes) for processing orders after the through date. | 0               | 10                   |
+| **`namespace`**    | Required   | Specifies the namespace for order metafields.                               | HotwaxOrderDetails     | HotwaxOrderDetails   |
+| **`bufferTime`**   | Optional   | Specifies the buffer time (in minutes) for scheduling job downloads.       | 1 minute          | 5 minutes           |
+| **`thruDateBuffer`** | Optional | Specifies the buffer time (in minutes) for processing orders after the through date. | Not specified               | 10                   |
 | **`filterQuery`**  | Optional   | Specifies a filter query for more targeted metafield downloads.             | Not specified     | "field_name: value"  |
 | **`frequency`**    | Optional   | Specifies the frequency (in minutes) for running the job.                    | Not specified     | 15                   |
 
