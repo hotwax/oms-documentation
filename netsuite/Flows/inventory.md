@@ -13,7 +13,7 @@ To ensure that HotWax Commerce remains continually synchronized with the latest 
 
 ## Workflow
 
-<figure><img src="../.gitbook/assets/inventory data.png" alt=""><figcaption><p>Inventory Sync from NetSuite to HotWax Commerce</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/inventory sync.png" alt=""><figcaption><p>Inventory Sync from NetSuite to HotWax Commerce</p></figcaption></figure>
 
 A Scheduled Script, equipped with the capability to utilize the Search Task from the N/task module, is executed. The objective of this script is to retrieve inventory records for all products stored within NetSuite. This is achieved through the execution of a saved search, specifically tailored for this purpose. Once the search is complete, the script generates a CSV file containing the inventory data and puts it within NetSuite's File Cabinet.
 
