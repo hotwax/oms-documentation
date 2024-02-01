@@ -10,7 +10,7 @@ Establish a corresponding shop in the HotWax Commerce OMS. This step ensures tha
 
 1. Access the OMS platform at https://{instanceName}.hotwax.io/commerce/control/main.
 2. Navigate to the Hamburger Menu.
-3. In the Shopify section, click on "Create Shopify Shop" to open the dedicated page for setting up a new Shopify Shop. 
+3. In the Shopify section, click on `Create Shopify Shop` to open the dedicated page for setting up a new Shopify Shop. 
 
 
 Fill out your Shopify details:
@@ -25,3 +25,5 @@ Fill out your Shopify details:
 | **Shared Secret**    | Provided by the retailer or obtained during custom app setup.                                              |
 | **Product Store**    | Connects the Shopify store to the Product Store.                                                            |
 | **WebSite**          | If the website name is changed to the Product Store name, use the same name here.                            |
+
+Once the Shopify Shop config is created, further editing can be performed on the `Shopify Shop` page
