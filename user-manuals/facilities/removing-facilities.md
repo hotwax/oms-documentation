@@ -17,6 +17,8 @@ Only users with Admin permissions can log in to the `Facilities App`. Users in t
 6. Unlink all 'Product Stores' associated with the facility by clicking on the overflow menu button in front of the product store name and selecting the `Unlink` option from the menu.
 7. Set the order capacity of the facility to '0' by clicking on the `Fulfillment Capacity chip` on the `Online Order Fulfillment` card and selecting the `No Capacity` option from the menu.
 8. Go to the `External Mappings` tab at the bottom of the `Facility Details` page and unlink all mappings that exist for the facility by clicking on the `Remove` button on the mapping card.
-9. Proceed to the `Groups` tab at the bottom of the `Facility Details` page and unlink all groups linked with the facility by clicking on the `Link icon` in front of the group name."
 
 After completing all the above steps, the specific facility will be disabled. 
+
+{% embed url="https://youtu.be/T3rp1ziv4Ko" %} Video: Removing Facilities {% endembed %}
+
