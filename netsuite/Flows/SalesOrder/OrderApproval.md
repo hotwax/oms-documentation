@@ -14,6 +14,8 @@ Orders will only be allocated for fulfillment after they have been approved.
 
 To successfully create a sales order in NetSuite, [it is a prerequisite to have the customer information pre-existing within NetSuite's database](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section\_162886247923.html#Best-Practices-for-Order-Sync). If the order contains a new customer not present in NetSuite, the system won't allow the order to be pushed. Therefore, it's vital to synchronize customer data from HotWax Commerce to NetSuite before order creation.
 
+<figure><img src="../../.gitbook/assets/customer sync.png" alt=""><figcaption><p>Customer Sync from HotWax Commerce to NetSuite</p></figcaption></figure>
+
 **Actions**
 
 #### Export customers from HotWax Commerce
@@ -237,6 +239,8 @@ This step creates customer deposit records in NetSuite for authorized payments o
 
 Sync status of customer deposits to NetSuite is time driven, this means that we check the entry date of an order into HotWax Commerce and manage a cursor for the last exported timestamp. If an customer deposit creation fails, it will not be automatically retried because it will have passed the order entry time condition.
 
+<figure><img src="../../.gitbook/assets/customer deposit sync.png" alt=""><figcaption><p>Creating customer deposits in NetSuite</p></figcaption></figure>
+
 To ensure that only applicable customer deposits are created in NetSuite, orders that have been canceled or refunded will not have their deposit created. However if an order is canceled or refunded after the deposit has been created in NetSuite, it will have to be manually handled by a NetSuite user. HotWax provides a report for all orders that have been canceled or refunded where the customer deposit may need to be dealt with manually.
 
 **Actions**
@@ -270,6 +274,8 @@ The `HC_SC_CreateCustomerDeposit` SuiteScript also generates a CSV file highligh
 ## Approval of Sales Order
 
 This step involves marking of orders as "Approved" for further processing and fulfillment. This step ensures that orders are appropriately marked "Approved" once all necessary details and required references are established. This authorization triggers the routing of orders to their designated fulfillment locations.
+
+<figure><img src="../../.gitbook/assets/order approval.png" alt=""><figcaption><p>Approved orders ready to be brokered</p></figcaption></figure>
 
 **Actions**
 
