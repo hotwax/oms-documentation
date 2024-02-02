@@ -36,3 +36,11 @@ If you want to set up a custom integration mapping, navigate to the section `Sho
 | Description              | Write brief information about the integration type. |
 
 Confirm establishing the new custom mapping by clicking on the `Add` button. Now, you're ready to utilize out-of-the-box mappings and also create custom integration mappings.
+
+## Creating Default Integration Mapping data for Shopify Shop Types
+
+Some default mapping data needs to be added when connecting a Shopify store to ensure that data flows smoothly between both systems with correct mappings.
+
+If you're only using the default SHOP Shopify Shop ID, this data needs to be created only once. However, for multiple Shopify stores, input the data individually for each store. The Shopify Shop ID will change and be obtainable from the header of the View Shopify Shop page in OMS.
+
+{% hint style='info' %} After incorporating the default mapping, please add any custom mappings as needed. You can find steps to map the integration for each Shopify Shop type on their respective page {% endhint %}
