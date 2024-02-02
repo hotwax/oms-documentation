@@ -1,6 +1,6 @@
 # Web Tools
 
-Web Tools serve as a valuable resource for both the backend and development teams, offering a comprehensive suite of functionalities for data management, log viewing, data import/export, job execution, and more within an Order Management System (OMS) instance. 
+Web Tools are a resource for backend and development teams, providing functionalities for data management, log viewing, data import/export, job execution, and more within an Order Management System (OMS) instance.
 
 Accessing Web Tools is straightforward. Users can conveniently navigate to the following URL in their web browsers: https://_**user-instance**_.hotwax.io/webtools. For example, for demo-oms, the corresponding URL would be https://demo-oms.hotwax.io/webtools.
 
@@ -10,7 +10,7 @@ ___
 
 ## Entity Engine
 
-The `Entity Engine` feature within the HotWax Commerce Web Tools plays a crucial role in facilitating the viewing and management of data. It is designed to enhance the user experience by providing a platform for handling entities within the system. This feature is particularly relevant for backend and development teams, allowing them to manage data efficiently.
+The Entity Engine in HotWax Commerce Web Tools is essential for viewing and managing data. It offers a platform for handling entities within the system, particularly benefiting backend and development teams by enabling efficient data management.
 
 Entity Engine is accessible through the `Entity Engine` button on the second row of tabs on the main web tools page. Alternatively, users can also find a list of `Entity Engine Tools` directly on the web tools main page.
 
@@ -25,7 +25,7 @@ Entity Engine is accessible through the `Entity Engine` button on the second row
 
 ### Entity SQL Processor
 
-The Entity SQL Processor in Web Tools, serves as a valuable component for interpreting and executing SQL commands. This tool is designed to enhance the efficiency of data viewing and management by providing users with the capability to execute SQL queries in the system. 
+The Entity SQL Processor in Web Tools interprets and executes SQL commands, improving data viewing and management efficiency by providing users with the capability to execute SQL queries in the system. 
 
 {% hint style="info" %} Users must always use the `Select` query first, and then use subsequent queries to perform relevant actions. Furthermore, it is recommended to refrain from using `Delete` queries. {% endhint %}
 
@@ -42,7 +42,7 @@ ___
 
 ## Service Engine
 
-The `Service Engine` is a useful component for running and managing services within the OMS. This functionality is designed to provide users with a platform for searching, running, and scheduling various jobs and services. 
+The `Service Engine` is a useful component for running and managing services within the OMS. This functionality provides users with a platform for searching, running, and scheduling various jobs and services.
 
 Service Engine is accessible through the `Service Engine` button on the second row of tabs on the main web tools page. Alternatively, users can also find a list of `Service Engine Tools` on the web tools main page.
 
