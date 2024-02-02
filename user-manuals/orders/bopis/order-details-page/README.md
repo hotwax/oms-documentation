@@ -16,7 +16,7 @@ The available reasons for rejection are:
 * **Not in Stock:** If items are out of stock or exhausted at the store, the store associate can select `Not In Stock` as a reason for rejection. In that case the inventory ATP (Available to Promise) and QOH (Quantity on Hand) are set to 0 for that product for the selected store and all open orders with respective items are auto-rejected from the store.
 * **No Reason:** "If store associates cannot fulfill an order due to high in-store demand and want to maintain the current inventory count, they can choose 'No Reason.' Selecting this option releases reserved inventory, reverting ATP to the original count before the order was received."
 
-{% hint style="info" %} Upon rejecting an item or order, customers will receive an email with [alternate fulfillment options](https://docs.hotwax.co/user-guides/orders/bopis/settings-page#order-edit-permissions) of retailer's choice, and the rejected order or order item will be removed from your dashboard. {% endhint %}
+{% hint style="info" %} Upon rejecting an item or order, customers will receive an email with [alternate fulfillment options](../settings-page.md#order-edit-permissions) of retailer's choice, and the rejected order or order item will be removed from your dashboard. {% endhint %}
 
 
 ### Customer and Payment Details 
