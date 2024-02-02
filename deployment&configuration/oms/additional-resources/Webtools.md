@@ -36,6 +36,8 @@ The Entity SQL Processor in Web Tools, serves as a valuable component for interp
 
  The search results are presented in chronologically descending order, providing users with the output of the executed SQL command.
 
+{% hint style="info" %} Users must always use the `Select` query first, and then use subsequent queries to perform relevant actions. Furthermore, it is recommended to refrain from using `Delete` queries. {% endhint %}
+
 ___
 
 ## Service Engine
