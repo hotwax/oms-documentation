@@ -27,6 +27,8 @@ Entity Engine is accessible through the `Entity Engine` button on the second row
 
 The Entity SQL Processor in Web Tools, serves as a valuable component for interpreting and executing SQL commands. This tool is designed to enhance the efficiency of data viewing and management by providing users with the capability to execute SQL queries in the system. 
 
+{% hint style="info" %} Users must always use the `Select` query first, and then use subsequent queries to perform relevant actions. Furthermore, it is recommended to refrain from using `Delete` queries. {% endhint %}
+
 * Navigate to the `Entity Engine` page within Web Tools. Click on `Entity SQL Processor` within the `Entity Engine` page. Alternatively, users can find the `Entity SQL Processor` option under `Entity Engine Tools` on the main Web Tools page and click on it.
 * This opens the `Entity SQL Processor` page.
 * Change the group to 'org.apache.ofbiz’. 
@@ -35,8 +37,6 @@ The Entity SQL Processor in Web Tools, serves as a valuable component for interp
 * Click on `Send` to initiate the execution of the SQL query.
 
  The search results are presented in chronologically descending order, providing users with the output of the executed SQL command.
-
-{% hint style="info" %} Users must always use the `Select` query first, and then use subsequent queries to perform relevant actions. Furthermore, it is recommended to refrain from using `Delete` queries. {% endhint %}
 
 ___
 
