@@ -16,11 +16,11 @@ In this scenario, when a Purchase Order is raised in NetSuite's ERP system, it n
 
 The procurement process begins within the NetSuite ERP system, where Purchase Orders are generated to replenish inventory in physical stores. This step is integral to initiating the flow of inventory into the retail locations.
 
+<figure><img src="../.gitbook/assets/Purchase order sync.png" alt=""><figcaption><p>Purchase Order sync from NetSuite to HotWax Commerce</p></figcaption></figure>
+
 ### Export Purchase Orders from NetSuite
 
-To initiate the synchronization process, a Map Reduce Script, running a specific Saved Search, identifies Purchase Orders in "Pending" status within NetSuite. This script compiles the relevant Purchase Order data into a CSV file, which is then placed in an SFTP location.
-
-This Map Reduce script runs at regular intervals, typically every 15 minutes, ensuring that only the latest and pending Purchase Orders are fetched from NetSuite. It is meticulously designed to minimize the data transferred and processed, maintaining optimal efficiency.
+1. To initiate the synchronization process, a Map Reduce Script, running a specific Saved Search, identifies Purchase Orders in "Pending" status within NetSuite. This script compiles the relevant Purchase Order data into a CSV file, which is then placed in an SFTP location. This Map Reduce script runs at regular intervals, typically every 15 minutes, ensuring that only the latest and pending Purchase Orders are fetched from NetSuite. It is meticulously designed to minimize the data transferred and processed, maintaining optimal efficiency.
 
 **SuiteScript**
 
@@ -36,9 +36,16 @@ _Deprecated_ move file to SFTP location
 HC_uploadCSV_OpenPurchaseOrders
 ```
 
+**Job in HotWax Commerce**
+
+```
+Import purchase orders
+IMP_ASN_PO_FEED
+```
+
 ### Import Purchase Orders into HotWax Commerce
 
-In HotWax Commerce, a designated job monitors the SFTP location, periodically checking for new Purchase Order CSV files. The job uses the robust APIs provided by HotWax Commerce's Export/Import tools to import these Purchase Orders.
+2. In HotWax Commerce, a designated job monitors the SFTP location, periodically checking for new Purchase Order CSV files. The job uses the robust APIs provided by HotWax Commerce's Export/Import tools to import these Purchase Orders.
 
 #### Here's how purchase order fields are mapped in NetSuite and HotWax Commerce
 
@@ -57,13 +64,6 @@ In HotWax Commerce, a designated job monitors the SFTP location, periodically ch
 #### Here's how purchase order fields are mapped in NetSuite and HotWax Commerce that remains hidden in the user interface but included in the purchase order CSV file
 
 <table><thead><tr><th width="113">S.No.</th><th width="300.83249581239534">Fields in NetSuite</th><th>Fields in HotWax Commerce</th></tr></thead><tbody><tr><td>1</td><td>Line ID</td><td>Order Item External ID</td></tr></tbody></table>
-
-**Job in HotWax Commerce**
-
-```
-Import purchase orders
-IMP_ASN_PO_FEED
-```
 
 ### Receiving Inventory in the Store
 
