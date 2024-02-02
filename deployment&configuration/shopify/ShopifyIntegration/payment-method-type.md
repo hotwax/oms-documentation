@@ -1,6 +1,6 @@
 # Payment Methods
 
-Before initiating order synchronization from Shopify to HotWax Commerce, it is essential to configure payment methods in HotWax Commerce. This step is crucial for seamless integration with Shopify. The HotWax integration layer facilitates the mapping of payment methods in Shopify to their corresponding counterparts in HotWax Commerce. This mapping is vital for creating customer payments and optimizing order fulfillment.
+Before initiating order synchronization from Shopify to HotWax Commerce, it is essential to configure payment methods in HotWax Commerce. This step is crucial for seamless integration with Shopify. The HotWax integration layer facilitates the mapping of payment methods in Shopify to their corresponding counterparts in HotWax Commerce. This mapping is vital for creating customer payments and optimizing order fulfillment. 
 
 Mapping payment methods becomes particularly important for Cash-On-Delivery (COD) orders. Aligning payment methods allows fulfillment teams to identify orders with pending payments, enabling swift payment collection during order fulfillment. HotWax is relied upon for reporting, and accurate data aggregation of orders and payment methods provides insights into payment trends and customer behavior.
 
@@ -24,7 +24,7 @@ Retailers can follow these steps:
 
 7. To remove existing payment methods, click on the `delete` icon in the respective payment method row.
 
-## Example of Shopify Shop Payment Method Types:
+## Mandatory Shopify Shop Payment Method Types:
 
 | Mapped Key                | Mapped Value         |
 |---------------------------|----------------------|
@@ -39,3 +39,6 @@ Retailers can follow these steps:
 | paypal                    | EXT_SHOP_PAYPAL      |
 | shopify_installments      | EXT_SHOP_PAY_INSTALL |
 | VISA                      | EXT_SHOP_VISA        |
+
+{% hint style='info' %} After incorporating these mandatory mappings, please add any custom mappings as needed. 
+{% endhint %}
