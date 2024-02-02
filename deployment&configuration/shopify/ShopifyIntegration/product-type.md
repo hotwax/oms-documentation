@@ -13,10 +13,13 @@ The significance of Shopify Product Type Mapping lies in its ability to integrat
 5. After entering the required information, save the changes by clicking on the `Add` button. This ensures that the product types are successfully mapped between Shopify and HotWax Commerce.
 6. Existing product type mappings can be deleted by clicking on the `delete` icon in the specific product type mapping row.
 
-## Examples
+## Mandatory Mapping for Product Type
 
 | Mapped Key   | Mapped Value  |
 |--------------|---------------|
 | donation     | DONATION      |
-| Gift Card    | DIGITAL_GOOD  |
+| Gift Cards    | GIFT_CARD  |
 | Loyalty Card | DIGITAL_GOOD  |
+
+{% hint style='info' %} After incorporating these mandatory mappings, please add any custom mappings as needed. 
+{% endhint %}
