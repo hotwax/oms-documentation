@@ -1,7 +1,6 @@
-# Removing Facilities
+# Disabling Facilities
 
-The process of removing a facility involves the following steps: 
-To remove a facility, users need to disable all fulfillment permissions for that specific facility and unlink all associations it has with various product stores, groups, and others from the `Facility Details` page.
+In order to disable a facility, users need to disable all fulfillment permissions for that specific facility and unlink all associations it has with various product stores, groups, and others from the `Facility Details` page. Users can disable any facility using the following steps. 
 
 {% hint style="info" %}
 Only users with Admin permissions can log in to the `Facilities App`. Users in the Administration security group have admin permissions.
