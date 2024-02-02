@@ -96,7 +96,7 @@ FTP Config: IMP_PARTY_IDENT
 
 Capturing orders in HotWax Commerce initiates the creation of orders in "created" status. In this step, created sales orders are pushed from HotWax Commerce to NetSuite for further processing.
 
-<figure><img src="../../.gitbook/assets/created orders.png" alt=""><figcaption><p>Orders in Created status pushed to NetSuite</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/created orders.png" alt=""><figcaption><p>Orders in Created status synced to NetSuite</p></figcaption></figure>
 
 #### Export new orders to NetSuite
 
@@ -178,11 +178,13 @@ To sync sales orders from HotWax Commerce to NetSuite, a required field is the "
 
 This step syncs NetSuite sales order line item IDs with HotWax Commerce order items. This step is crucial as it helps in mapping and aligning the order line items in HotWax Commerce with their corresponding line item IDs in NetSuite. This synchronization enables a smooth and accurate cross-referencing of items and their relevant details between the two systems. Without syncing order line item IDs, any attempt to update an order item in NetSuite would result in a new order item being created.
 
+<figure><img src="../../.gitbook/assets/order line item id.png" alt=""><figcaption><p>Order line item IDs synced from NetSuite to HotWax Commerce</p></figcaption></figure>
+
 **Actions**
 
 #### Export order line item IDs from NetSuite
 
-A Map Reduce SuiteScript in NetSuite retrieves order line item IDs and generates a CSV file.
+1. A Map Reduce SuiteScript in NetSuite retrieves order line item IDs and generates a CSV file.
 
 **SuiteScript**
 
@@ -192,7 +194,7 @@ HC_MR_ExportedSalesOrderItemCSV
 
 #### Import order line item IDs into HotWax Commerce
 
-A job in HotWax Commerce imports the CSV to pair NetSuite order line item IDs with appropriate order items.
+2. A job in HotWax Commerce imports the CSV to pair NetSuite order line item IDs with appropriate order items.
 
 **Job in HotWax Commerce**
 
@@ -209,11 +211,13 @@ This step synchronizes NetSuite sales order IDs with orders in HotWax Commerce f
 
 The synchronization of Sales Order IDs from NetSuite to HotWax Commerce is a critical step as it serves as an indicator that the orders in HotWax Commerce have been successfully integrated into NetSuite. Additionally, it is an essential step for various functions, including the creation of item fulfillment, return authorization, and customer deposit records in NetSuite.
 
+<figure><img src="../../.gitbook/assets/Sync sales order IDs.png" alt=""><figcaption><p>Sales order IDs synced from NetSuite to HotWax Commerce</p></figcaption></figure>
+
 **Actions**
 
 #### Export order IDs from NetSuite
 
-A Map Reduce SuiteScript in NetSuite fetches pending fulfillment orders and generates a CSV file with internal sales order IDs.
+1. A Map Reduce SuiteScript in NetSuite fetches pending fulfillment orders and generates a CSV file with internal sales order IDs.
 
 **SuiteScript**
 
@@ -223,7 +227,7 @@ HC_MR_ExportedSalesOrderCSV
 
 #### Import order IDs into HotWax Commerce
 
-A job in HotWax Commerce imports the CSV to associate NetSuite order IDs with corresponding orders.
+2. A job in HotWax Commerce imports the CSV to associate NetSuite order IDs with corresponding orders.
 
 **Job in HotWax Commerce**
 
@@ -240,9 +244,9 @@ This step creates customer deposit records in NetSuite for authorized payments o
 
 Sync status of customer deposits to NetSuite is time driven, this means that we check the entry date of an order into HotWax Commerce and manage a cursor for the last exported timestamp. If an customer deposit creation fails, it will not be automatically retried because it will have passed the order entry time condition.
 
-<figure><img src="../../.gitbook/assets/customer deposit sync.png" alt=""><figcaption><p>Creating customer deposits in NetSuite</p></figcaption></figure>
-
 To ensure that only applicable customer deposits are created in NetSuite, orders that have been canceled or refunded will not have their deposit created. However if an order is canceled or refunded after the deposit has been created in NetSuite, it will have to be manually handled by a NetSuite user. HotWax provides a report for all orders that have been canceled or refunded where the customer deposit may need to be dealt with manually.
+
+<figure><img src="../../.gitbook/assets/customer deposit sync.png" alt=""><figcaption><p>Creating customer deposits in NetSuite</p></figcaption></figure>
 
 **Actions**
 
