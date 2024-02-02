@@ -18,15 +18,55 @@ To successfully create a sales order in NetSuite, [it is a prerequisite to have 
 
 **Actions**
 
-#### Export customers from HotWax Commerce
+Export customers from HotWax Commerce
 
-A scheduled job in HotWax Commerce operates at defined intervals to generate a CSV file comprising customers who have not been synchronized to NetSuite. This job can be configured to run at regular intervals, typically set at an hourly frequency. Customers who haven't been synchronized within the last hour are included in this CSV file for synchronization with NetSuite.
+1. A scheduled job in HotWax Commerce operates at defined intervals to generate a CSV file comprising customers who have not been synchronized to NetSuite. This job can be configured to run at regular intervals, typically set at an hourly frequency. Customers who haven't been synchronized within the last hour are included in this CSV file for synchronization with NetSuite.
 
 {% hint style="info" %}
 **HotWax Internals**
 
 Identify new customers by checking the Person table for entries where the roleTypeId is 'CUSTOMER' and where the PartyIdentification record for identification type 'NETSUITE\_CUSTOMER\_ID' is not created.
 {% endhint %}
+
+**SFTP Location**
+
+```
+/home/{sftp-username}/netsuite/customer/export
+```
+
+#### Import customers into NetSuite
+
+2. A Scheduled Script in NetSuite is responsible for downloading the CSV file of customers not yet synchronized and utilizes the ImportTask function of the N/Task module. This script processes and creates customer records within NetSuite, ensuring that the necessary customer information is available in NetSuite for order creation.
+
+**SuiteScripts**
+
+Import new customers from SFTP
+
+```
+HC_SC_ImportCustomer
+```
+
+#### Export customers IDs from NetSuite and import into HotWax
+
+3. Once customers are created in NetSuite, a scheduled script exports recently created customers in a file at an SFTP location to be imported by HotWax Commerce.&#x20;
+4. After HotWax imports this file, the OMS now has confirmation of customer synchronization.
+
+**SuiteScripts**
+
+Export recently created customers to SFTP
+
+```
+HC_MR_ExportedCustomerCSV
+```
+
+**Job in HotWax Commerce**
+
+Import NetSuite Customer IDs from SFTP
+
+```
+Import Party Identification
+FTP Config: IMP_PARTY_IDENT
+```
 
 #### Here's how customer fields are mapped in HotWax Commerce and NetSuite
 
@@ -50,56 +90,17 @@ Identify new customers by checking the Person table for entries where the roleTy
 "\*" denotes fields that are required to be sent to NetSuite for the customer sync to work
 {% endhint %}
 
-**SFTP Location**
-
-```
-/home/{sftp-username}/netsuite/customer/export
-```
-
-#### Import customers into NetSuite
-
-A Scheduled Script in NetSuite is responsible for downloading the CSV file of customers not yet synchronized and utilizes the ImportTask function of the N/Task module. This script processes and creates customer records within NetSuite, ensuring that the necessary customer information is available in NetSuite for order creation.
-
-**SuiteScripts**
-
-Import new customers from SFTP
-
-```
-HC_SC_ImportCustomer
-```
-
-#### Export customers IDs from NetSuite and import into HotWax
-
-Once customers are created in NetSuite, a scheduled script exports recently created customers in a file at an SFTP location to be imported by HotWax Commerce. After HotWax imports this file, the OMS now has confirmation of customer synchronization.
-
-**SuiteScripts**
-
-Export recenlty created customers to SFTP
-
-```
-HC_MR_ExportedCustomerCSV
-```
-
-**Job in HotWax Commerce**
-
-Import NetSuite Customer IDs from SFTP
-
-```
-Import Party Identification
-FTP Config: IMP_PARTY_IDENT
-```
-
 * [x] Sync customers
 
 ## Synchronize Sales Order from HotWax Commerce to NetSuite
 
 Capturing orders in HotWax Commerce initiates the creation of orders in "created" status. In this step, created sales orders are pushed from HotWax Commerce to NetSuite for further processing.
 
+<figure><img src="../../.gitbook/assets/created orders.png" alt=""><figcaption><p>Orders in Created status pushed to NetSuite</p></figcaption></figure>
+
 #### Export new orders to NetSuite
 
-A job in HotWax Commerce Integration platform creates a CSV file of orders in "created" status that have not yet been sent to NetSuite. When creating this file HotWax Commerce also ensures that the customer already exists in NetSuite using the customer ID saved in the last step.
-
-<figure><img src="../../.gitbook/assets/order sync from hotwax to netsuite.png" alt=""><figcaption><p>Orders in Created status pushed to NetSuite</p></figcaption></figure>
+1. A job in HotWax Commerce Integration platform creates a CSV file of orders in "created" status that have not yet been sent to NetSuite. When creating this file HotWax Commerce also ensures that the customer already exists in NetSuite using the customer ID saved in the last step.
 
 The file contains details such as unit prices, order adjustments, and shipping costs, excluding direct tax amounts. HotWax Commerce omits the tax amount from the file and sends tax codes for the individual order items because NetSuite independently computes the taxes based on these codes and applies them accurately to each order item, ensuring precise tax calculations within NetSuite.
 
@@ -116,6 +117,28 @@ The price for products is not sent by HotWax when the order syncs to NetSuite. I
 #### Tax Codes
 
 For retailers that use Avatax, the Tax Code and Shipping Tax Code will always contain "AVATAX" when sent from HotWax. Avalara Tax calculation will automatically compute taxes on the order in NetSuite when the order is created.
+
+### Handling NetSuite file size limits
+
+We've added a limit to how many orders can be synced in one file to NetSuite to ensure the NetSuite file size limit is not breached. NetSuite has a limit of 25,000 rows in one CSV, so if your order volume in one sync duration exceeds this limit, we automatically paginate the file to ensure NetSuite does not reject the file. Another thing we kept in mind is that during pagination, one order should not be split into seperate files because this could lead to errors in the order import process in NetSuite. Assuming that most e-Commerce orders contain 10 or less items, we've set an upper limit of 1000 orders per file. This should keep the file size well below NetSuite's limit while also leaving buffer for orders with more line items.
+
+Though it may seem like this would significanlty slow down the order sync, this is not actually the case. All valid orders are still exported from HotWax Commerce at once and then paginated for NetSuite, this means all the order files are available for NetSuite to process and the speed at which they're processed is determined by the configuration of NetSuite used by the retailer. Higher configurations will have faster and more concurrent file process capabilites.
+
+**SFTP Locations**
+
+Export 'Created' orders with verified customers
+
+```
+/home/{sftp-username}/netsuite/salesorder/export
+```
+
+2. A scheduled SuiteScript in NetSuite reads the CSV file from the SFTP location and creates sales order records using the CSV Import function of the N/Task module.
+
+**SuiteScript**
+
+```
+HC_importSalesOrders
+```
 
 #### Here's how sales order fields are mapped in HotWax Commerce and NetSuite
 
@@ -150,28 +173,6 @@ To sync sales orders from HotWax Commerce to NetSuite, a required field is the "
 {% hint style="danger" %}
 "\*" denotes fields that are required to be sent to NetSuite for the sales order sync to work
 {% endhint %}
-
-### Handling NetSuite file size limits
-
-We've added a limit to how many orders can be synced in one file to NetSuite to ensure the NetSuite file size limit is not breached. NetSuite has a limit of 25,000 rows in one CSV, so if your order volume in one sync duration exceeds this limit, we automatically paginate the file to ensure NetSuite does not reject the file. Another thing we kept in mind is that during pagination, one order should not be split into seperate files because this could lead to errors in the order import process in NetSuite. Assuming that most e-Commerce orders contain 10 or less items, we've set an upper limit of 1000 orders per file. This should keep the file size well below NetSuite's limit while also leaving buffer for orders with more line items.
-
-Though it may seem like this would significanlty slow down the order sync, this is not actually the case. All valid orders are still exported from HotWax Commerce at once and then paginated for NetSuite, this means all the order files are available for NetSuite to process and the speed at which they're processed is determined by the configuration of NetSuite used by the retailer. Higher configurations will have faster and more concurrent file process capabilites.
-
-**SFTP Locations**
-
-Export 'Created' orders with verified customers
-
-```
-/home/{sftp-username}/netsuite/salesorder/export
-```
-
-A scheduled SuiteScript in NetSuite reads the CSV file from the SFTP location and creates sales order records using the CSV Import function of the N/Task module.
-
-**SuiteScript**
-
-```
-HC_importSalesOrders
-```
 
 ## Sync Sales Order Item Line IDs from NetSuite to HotWax Commerce
 
@@ -247,11 +248,11 @@ To ensure that only applicable customer deposits are created in NetSuite, orders
 
 #### Export Customer Deposit from HotWax Commerce
 
-HotWax Commerce runs a scheduled job that generates a JSON file with order details and their respective grand totals.
+1. HotWax Commerce runs a scheduled job that generates a JSON file with order details and their respective grand totals.
 
 **SFTP Locations**
 
-Export customer despot for orders with NetSuite order identification
+Export customer deposit for orders with NetSuite order identification
 
 ```
 /home/{sftp-username}/netsuite/salesorder/customerdeposit
@@ -259,7 +260,7 @@ Export customer despot for orders with NetSuite order identification
 
 #### Import Customer Deposit into NetSuite
 
-A SuiteScript in NetSuite creates customer deposit records in "undeposited" status based on the JSON file from the SFTP server. It employs the N/Record module for record creation.
+2. A SuiteScript in NetSuite creates customer deposit records in "undeposited" status based on the JSON file from the SFTP server. It employs the N/Record module for record creation.
 
 **SuiteScript**
 
