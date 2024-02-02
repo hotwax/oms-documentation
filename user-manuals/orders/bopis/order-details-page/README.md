@@ -20,7 +20,7 @@ The available reasons for rejection are:
 
 
 ### Customer and Payment Details 
-Customer details that are mentioned on the order such as customer’s name, and contact details can be viewed and copied from this page. Along with that paymerder-edit-permissionst mode is also displayed on the page for store associates to know if it is a paid order or payment needs to be collected at the time of order handover. Payment method is displayed on the right side of the order details page. 
+Customer details on the order such as customer’s name, and contact details can be viewed and copied from this page. Along with that payment method details are also displayed on the page for store associates to know if it is a paid order or payment needs to be collected at the time of order handover. Payment method is displayed on the right side of the order details page. 
 
 
 ### Assign Picker
