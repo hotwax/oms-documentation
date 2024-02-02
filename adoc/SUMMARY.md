@@ -18,6 +18,7 @@
   * [Order Invoicing](flows/SalesOrders/OrderInvoicing.md)
     * [Invoice API](flows/SalesOrders/InvoiceAPI.md)
     * [Inventory Transfer API](flows/SalesOrders/InvTransfer.md)
+* [Product Store](flows/product-store/README.md)
 
 ## Troubleshooting
 * [Order Approval](troubleshooting/orderApproval.md)
