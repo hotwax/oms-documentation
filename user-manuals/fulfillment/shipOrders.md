@@ -4,7 +4,7 @@
 
 #### Pick orders
 
-1. Go to the Open Orders page and pring a picklist
+1. Go to the Open Orders page and print a picklist
 
 This page displays all outstanding orders brokered to this facility by the OMS and are ready to be fulfilled.
 
@@ -51,7 +51,7 @@ Bulk Packing slips and Shipping labels will be generated in a new tab.
 
 **Picker Filters:** Easily search for specific orders in batch processes using Picker Filters.
 
-2. Add [multiple boxes](../orders/fulfillment/shipping-box.md#adding-shipment-box-to-order-during-fulfillment) to ship large orders.
+2. Add [multiple boxes](shipping-box.md#adding-shipment-box-to-order-during-fulfillment) to ship large orders.
 
 {% embed url="https://youtu.be/V66o7vAf6HY" %}
 Video: Add box
