@@ -16,7 +16,7 @@ The synchronization of POS sales from HotWax Commerce to NetSuite involves the c
 
 ### Sync POS orders to NetSuite
 
-HotWax identifies POS completed orders that need to be synced to NetSuite by checking the following conditions.
+1. HotWax identifies POS completed orders that need to be synced to NetSuite by checking the following conditions.
 
 * Order Status: Completed.
 * Sales Channel: POS\_Channel.
@@ -34,7 +34,7 @@ Orders that match these criteria are exported to an SFTP location in a CSV file.
 **Time based sync** HotWax uses a time based cursor to track which orders have been synced. This means if sync fails for an order, it will not be automatically retried.
 {% endhint %}
 
-A Scheduled Suite Script in NetSuite imports the file from the SFTP server. The SuiteScript uses the CSV ImportTask function of the N/Task module to import the POS order details as Cash Sale records directly into NetSuite.
+2. A Scheduled Suite Script in NetSuite imports the file from the SFTP server. The SuiteScript uses the CSV ImportTask function of the N/Task module to import the POS order details as Cash Sale records directly into NetSuite.
 
 **SuiteScript**
 
@@ -72,7 +72,7 @@ To sync POS orders from HotWax Commerce to NetSuite, a required field is the "Sh
 
 <figure><img src="../../.gitbook/assets/POS orders ID.png" alt=""><figcaption><p>POS order IDs synced from NetSuite to HotWax Commerce</p></figcaption></figure>
 
-A MapReduce SuiteScript is utilized in NetSuite to export a CSV file to an SFTP location containing the internal NetSuite IDs corresponding to the processed POS orders.
+1. A MapReduce SuiteScript is utilized in NetSuite to export a CSV file to an SFTP location containing the internal NetSuite IDs corresponding to the processed POS orders.
 
 **SuiteScript**
 
@@ -86,7 +86,7 @@ Add suitescript name
 add sftp location
 ```
 
-The Import Order Identification job in HotWax Commerce then retrieves the exported CSV file from the SFTP server and creates Order Identification records in the OMS, linking the POS orders with their respective NetSuite internal IDs.
+2. The Import Order Identification job in HotWax Commerce then retrieves the exported CSV file from the SFTP server and creates Order Identification records in the OMS, linking the POS orders with their respective NetSuite internal IDs.
 
 **Job in HotWax Commerce**
 
