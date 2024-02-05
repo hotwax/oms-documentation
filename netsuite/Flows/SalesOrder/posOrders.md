@@ -58,6 +58,10 @@ Add suitescript name
 
 <table><thead><tr><th width="132.08771929824562">S.No.</th><th>Fields in HotWax Commerce</th><th>Fields in NetSuite</th></tr></thead><tbody><tr><td>1</td><td>Order Item Seq ID</td><td>External Order Line ID</td></tr><tr><td>2</td><td>Price Level NetSuite</td><td>Price Level</td></tr><tr><td>3</td><td>Tax Code</td><td>Tax Code</td></tr><tr><td>4</td><td>Product Promo ID</td><td>Discount Item</td></tr><tr><td>5</td><td>Product Store External ID</td><td>Subsidiary</td></tr></tbody></table>
 
+{% hint style="info" %}
+To sync POS orders from HotWax Commerce to NetSuite, a required field is the "Shipping Address." HotWax Commerce syncs the store's address in the "Ship To" field in NetSuite
+{% endhint %}
+
 {% hint style="danger" %}
 "\*" denotes fields that are required to be sent to NetSuite for the POS order sync to work
 {% endhint %}
