@@ -58,6 +58,11 @@ Export recently created customers to SFTP
 ```
 HC_MR_ExportedCustomerCSV
 ```
+**SFTP Location**
+
+```
+/home/{sftp-username}/netsuite/customer/import
+```
 
 **Job in HotWax Commerce**
 
@@ -192,6 +197,11 @@ This step syncs NetSuite sales order line item IDs with HotWax Commerce order it
 HC_MR_ExportedSalesOrderItemCSV
 ```
 
+**SFTP Location**
+
+```
+/home/{sftp-username}/netsuite/salesorder/import/orderitemattribute
+```
 #### Import order line item IDs into HotWax Commerce
 
 2. A job in HotWax Commerce imports the CSV to pair NetSuite order line item IDs with appropriate order items.
@@ -224,7 +234,11 @@ The synchronization of Sales Order IDs from NetSuite to HotWax Commerce is a cri
 ```
 HC_MR_ExportedSalesOrderCSV
 ```
+**SFTP Location**
 
+```
+/home/{sftp-username}/netsuite/salesorder/import/orderidentification
+```
 #### Import order IDs into HotWax Commerce
 
 2. A job in HotWax Commerce imports the CSV to associate NetSuite order IDs with corresponding orders.

@@ -39,7 +39,7 @@ Orders that match these criteria are exported to an SFTP location in a CSV file.
 **SuiteScript**
 
 ```
-Add suitescript name
+HC_SC_ImportCashSale
 ```
 
 #### Here's how POS order fields are mapped in HotWax Commerce and NetSuite
@@ -77,13 +77,13 @@ To sync POS orders from HotWax Commerce to NetSuite, a required field is the "Sh
 **SuiteScript**
 
 ```
-Add suitescript name
+HC_MR_ExportedCashSaleCSV
 ```
 
 **SFTP Locations**
 
 ```
-add sftp location
+/home/{sftp-username}/netsuite/salesorder/import/orderidentification
 ```
 
 2. The Import Order Identification job in HotWax Commerce then retrieves the exported CSV file from the SFTP server and creates Order Identification records in the OMS, linking the POS orders with their respective NetSuite internal IDs.
