@@ -1,18 +1,12 @@
 # Table of contents
 
 * [Product Releases- Overview](README.md)
-
-# 2024
-
 * [January'24](january-24/README.md)
   * [Manage Multiple ATP Inventories for Channels](january-24/manage-multiple-atp-inventories.md)
   * [Introducing Create Product Store Page](january-24/create-product-store.md)
   * [Bundle product fulfillment](january-24/bundle-products.md)
   * [Introducing Facility Groups Page](january-24/facility-groups-page.md)
   * [Introducing Order Routing App](january-24/order-routing-app.md)
-
-# 2023
-
 * [Nov-Dec'23](nov-dec23/README.md)
   * [Added a New General Settings Page](nov-dec23/added-a-new-general-settings-page.md)
   * [Added a New Company Settings Page](nov-dec23/added-a-new-company-settings-page.md)
@@ -73,9 +67,6 @@
   * [Custom Date Format](january23/custom-date-format.md)
   * [Shopify Webhooks](january23/shopify-webhooks.md)
   * [Pre-Order Listing-Delisting](january23/pre-order-listing-delisting.md)
-
-# 2022
-
 * [December'22](december22/ProductUpdates-December22.md)
   * [Revamped Product Store](december22/revamped-product-store.md)
   * [Choose Preferred Product Identifiers](december22/choose-preferred-product-identifiers.md)

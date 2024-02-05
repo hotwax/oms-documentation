@@ -1,9 +1,10 @@
 ---
-description: >-
-  Retailers can now have multiple "ATP" inventories, one for each channel.
+description: Retailers can now have multiple "ATP" inventories, one for each channel.
 ---
 
 # Manage Multiple ATP Inventories for Channels
+
+<figure><img src="https://www.hotwax.co/hubfs/Multichannel%20Inventory-2.png" alt=""><figcaption></figcaption></figure>
 
 Retail brands sell products across various channels, such as offline stores, marketplaces, social media, and their own website. However, challenges arise when dealing with diverse platforms, each with its own set of rules and penalties. For instance, marketplaces like Amazon impose charges for delayed fulfillment or rejected orders.
 
@@ -28,4 +29,3 @@ Retail brands can now view Available-to-Promise (ATP) inventory for different ch
 Retail brands can set inventory thresholds for different channels, preventing overselling and ensuring compliance with each channel's rules.
 
 This update empowers retailers to make informed decisions, minimize the risk of overselling, and comply with channel-specific rules, ultimately enhancing their operational efficiency and customer satisfaction.
-
