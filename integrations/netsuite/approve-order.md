@@ -1,71 +1,32 @@
 # Approve Order
 
+The OOTB order approval flow of OMS is not used, because certain checks and data need to be verified and updated before the order is approved. So, a custom order approval flow is implemented in NiFi which will perform the extra validations based on the custom requirements and keep the file ready to approve orders for OMS. This file will be read by OMS the orders in the file will be marked as approved. For this, the orders are in CREATED status in OMS until the orders are approved.
+
+### Requirement:
+
+The process mandates that an order is approved only when it possesses the essential attribute 'NETSUITE_ORDER_EXPORTED'. This attribute confirms that the order has been properly exported to the NetSuite system. However, because different brands may have unique requirements, the approval process includes extra checks for brand-specific conditions. So, while the basic NetSuite approval demands the 'NETSUITE_ORDER_EXPORTED' attribute, it can also consider additional brand-related criteria. To get the thumbs up, an order must meet all these conditions, ensuring a thorough and adaptable approval process that suits both generic and brand-specific needs in NetSuite order processing.
+
 ### **NetsuiteItemLineId Attribute:**&#x20;
 
-The NetsuiteItemLineId is generated and associated with OMS order items during a specific synchronization step after the sales order has been created in Netsuite. This synchronization step is crucial for mapping and aligning the order line items in OMS with their corresponding line item IDs in Netsuite. Verification of the presence of the NetsuiteItemLineId order item attribute is necessary. If all items of an order possess the NetsuiteItemLineId, the NETSUITE\_ORDER\_EXPORTED order attribute will be created.
+The NetsuiteItemLineId is generated and associated with OMS order items during a specific synchronization step after the sales order has been created in Netsuite. This synchronization step is crucial for mapping and aligning the order line items in OMS with their corresponding line item IDs in Netsuite. Verification of the presence of the NetsuiteItemLineId order item attribute is necessary. If all items of an order possess the NetsuiteItemLineId, the NETSUITE_ORDER_EXPORTED order attribute will be created.
 
-### **Handling RX Products:**&#x20;
+### **Implementation Flow:**
 
-If an order includes RX products (prescription), it should be transferred to facility 1818. This process involves utilizing the OMS API for updating order items' ship group, specifically the updateOrderItemShipGroup service. Once the order is successfully moved to facility 1818, an order attribute named RX\_PRODUCT\_VERIFIED will be created. Importantly, this attribute is also created directly for non-RX products without any additional updates.
+The approval process for eligible orders will be implemented by NiFi. This workflow is divided into creating order attributes in the OMS database and then approving the eligible orders.&#x20;
 
-An order is eligible for approval only if it possesses both the **NETSUITE\_ORDER\_EXPORTED** and **RX\_PRODUCT\_VERIFIED** attributes.
+1.  For creating order attributes, an SQL with required checks is executed and a CSV file is kept for the OMS job to read, which creates the order attribute. The name of the job is createUpdateOrderAttribute. The file is read from the directory -
 
-## **Implementation Flow:**
+    `hotwax/ApproveOrderAttributes`
+2.  For approving orders, a CSV file containing eligible order IDs is kept on SFTP. This file is generated based on the presence of required order attributes. The OMS job consumes this file to approve orders. The file is read from the directory -
 
-The approval process for eligible orders will be implemented by NiFi. This workflow is divided into four segments:
+    `hotwax/ApproveOrders`
 
-1. **Order Attribute creation for NetSuite Exported Orders**
-2. **Order Attribute creation for Orders with RX Products**
-3. **Order Attribute creation for Orders without RX Products**
-4. **Approve Order**
+### NiFi Flow:
 
-To create OrderAttributes, a CSV file will be generated. The HC job will then use this file to generate or import the corresponding data. Afterward, eligible orders for the approval feed will be fetched, and the HC job will proceed to approve them.
+The NiFi setup employs the same set of processors for both flows – one for creating order attributes and the other for approving orders. The sequence for these processors is as follows:
 
-
-
-<details>
-
-<summary>NiFi Flow</summary>
-
-#### **All process groups except, order attribute creation for Orders with RX Products :**&#x20;
-
-* All process groups, except for Order Attribute creation for Orders with RX Products, share the same NiFi flow.
-* The **ExecuteSQLRecord** processor is used to execute distinct SQL queries, generating CSV files based on the defined Avro schema for creating order attributes.
-* The subsequent processor, **RouteOnAttribute**, checks whether the flow file contains any records.
-* The filename is then updated to the required format using the **UpdateAttribute** processor.
-* The final step involves transferring the file to the SFTP location using the **PutSFTP** processor.
-* The stored files will be accessed via HC to create order attributes.
-
-**Process group order attribute creation for Orders with RX Products :**&#x20;
-
-* The **ExecuteSQLRecord** processor is utilized to execute a SQL query.
-* The file is then split into individual JSON objects by the **SplitJSON** processor.
-* The **SplitJSON** processor generates two significant attributes: `fragment.count` and `fragment.identifier`.
-* These JSON objects serve as the request body for API calls.
-* For each JSON object, a POST request is made to the specified API endpoint using the **InvokeHTTP** processor.
-* The **RouteOnAttribute** processor is configured with two dynamic properties: Failure and Success. Any status code other than 200 is considered a failure.
-* Two relations are established based on these properties:
-
-**Success:**
-
-* In the success relations, the subsequent processor is **Wait**, which stays waiting until it receives notification from the **Notify** processor.
-* Following a **MergeRecord** processor which will merge all the incoming flow files, the default fields along with required values are added here.
-* Updating the file name using the **UpdateAttribute** processor.
-* The file is kept on SFTP using the **PutSFTP** processor.
-
-**Failure:**
-
-* In the case of Failure relations, the subsequent processor is **Wait**, which stays waiting until it receives notification from the **Notify** processor.
-* The coordination between **Wait** and **Notify** is facilitated through the use of the DistributedMapCacheService controller service and utilities the `fragment.count` and `fragment.identifier` attributes.
-* Following the **Wait**, the **UpdateRecord** processor is used to log the orderId and its corresponding response generated by the API call.
-* Finally, all the failure flow files are merged and placed under a directory named "http\_error\_log" using the **PutSFTP** processor.
-
-**Failure, Success, and Unmatched:**
-
-* For the combined Failure, Success, and Unmatched relations, the next processor is **UpdateRecord**. This processor adds the response corresponding to the orderId in the flow file.
-* Subsequently, the **MergeRecord** processor is utilized with the Merge Strategy set to Defragment, waiting until the `fragment.count` becomes equal.
-* For all the failure and original relations from **MergeRecord**, there is a Notify processor, and for all merged relations, there are **UpdateAttribute** and **PutSFTP** processors, directing flow files under the directory named "http\_log."
-
-</details>
-
-### &#x20;<a href="#user-content-nifi-flow" id="user-content-nifi-flow"></a>
+1. The **ExecuteSQLRecord** processor is used to execute distinct SQL queries, generating CSV files based on the defined Avro schema for creating order attributes.
+2. The subsequent processor, **RouteOnAttribute**, checks whether the flow file contains any records.
+3. The filename is then updated to the required format using the **UpdateAttribute** processor.
+4. The final step involves transferring the file to the SFTP location using the **PutSFTP** processor.
+5. The stored files will be accessed via HC to create order attributes.
