@@ -1,9 +1,13 @@
 ---
 description: >-
-  Added Facility groups page for retailers to add facilities in various groups to manage the scope of facilities for online order fulfillment and inventory computation.
+  Added Facility groups page for retailers to add facilities in various groups
+  to manage the scope of facilities for online order fulfillment and inventory
+  computation.
 ---
 
 # Introducing Facility Groups Page
+
+<figure><img src="https://www.hotwax.co/hubfs/Facility%20Groups%20Page.png" alt=""><figcaption></figcaption></figure>
 
 In omnichannel retail, effective organization and categorization of retailers’ facilities are paramount. Facility groups serve as a crucial mechanism to define the scope and purpose of various facilities within the **HotWax Commerce** platform.
 
@@ -13,19 +17,19 @@ HotWax Commerce addresses this with the new Facility Group Page. Now, retailers 
 
 Retailers can create multiple facility groups such as:
 
-- **Order Routing Facility Group:** For facilities that allow order routing.
-- **Online Facility Group:** For facilities selling inventory online.
-- **Featuring Facility Group:** For facilities featuring products of other brands.
-- **Fulfillment Group Type:** For facilities that allow online fulfillment from the store.
-- **Inspection Group Type:** For facilities requiring inspection.
-- **Required Picking:** For facilities that require picking items for fulfillment.
-- **Store Pickup:** For facilities allowing store pickup.
-- **Same Day Shipping:** For facilities equipped to ship orders the same day.
-- **Shipping Label:** For facilities allowing shipping label generation.
+* **Order Routing Facility Group:** For facilities that allow order routing.
+* **Online Facility Group:** For facilities selling inventory online.
+* **Featuring Facility Group:** For facilities featuring products of other brands.
+* **Fulfillment Group Type:** For facilities that allow online fulfillment from the store.
+* **Inspection Group Type:** For facilities requiring inspection.
+* **Required Picking:** For facilities that require picking items for fulfillment.
+* **Store Pickup:** For facilities allowing store pickup.
+* **Same Day Shipping:** For facilities equipped to ship orders the same day.
+* **Shipping Label:** For facilities allowing shipping label generation.
 
 Retailers can also add facility groups to define the scope of inventory computation and order fulfillment, such as:
 
-- **Online Facility Group for Amazon:** For facilities that are selling their inventory on Amazon.
-- **NetSuite Fulfillment:** For facilities where orders will be fulfilled from NetSuite.
+* **Online Facility Group for Amazon:** For facilities that are selling their inventory on Amazon.
+* **NetSuite Fulfillment:** For facilities where orders will be fulfilled from NetSuite.
 
 Retailers can easily create new groups and manage the existing facility groups with the new Facility Groups page to simplify inventory and order management.
