@@ -28,6 +28,7 @@ Certain settings are mandatory for every Product Store to ensure efficient opera
 | Setting              | Perry Ellis         | Cubavera           | Original Penguin     | 
 | -------------------- | ----------------    | ------------------ | -------------------- | 
 | Store Name           | Perry Ellis         | Cubavera           | Original Penguin     | 
+| Store ID             | PE_STORE            | CU_STORE           | STORE                |
 | Inventory Facility   | 74                  | 113                | 74                   | 
 | ORD_ITM_SHIP_FAC     | _hcShippingFacility | -                  | _hcShippingFacility  | 
 | PRE_SLCTD_FAC_TAG    | HC_PRE_SELECTED_FAC | -                  | HC_PRE_SELECTED_FAC  | 
@@ -37,5 +38,6 @@ Certain settings are mandatory for every Product Store to ensure efficient opera
 | PRDT_IDEN_PREF       | -                   | -                  | -                    | 
 | RTN_RSTCK_FAC        | -                   | -                  | WH                   | 
 | SAVE_BILL_TO_INF     | -                   | -                  | N                    | 
+| FULFILL_NOTIF        | Y                   | Y                  | -                    |
 
 > Table 2: Details specific to various Perry Ellis Product Stores.
