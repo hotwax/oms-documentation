@@ -15,6 +15,11 @@ When a warehouse fulfills order items in NetSuite, fulfilled order information i
 ```
 HC_MR_ExportedSalesOrderFulfillmentCSV
 ```
+**SFTP Locations**
+
+```
+/home/{sftp-username}/netsuite/salesorder/import/fulfillment
+```
 
 2. A job in HotWax Commerce integration platform reads the file, marking order items as fulfilled in the HotWax Commerce.
 
@@ -47,6 +52,12 @@ _to be added_
 
 ```
 HC_SC_CreateItemFulfillment
+```
+
+**SFTP Locations**
+
+```
+/home/{sftp-username}/netsuite/fulfilledsalesorder/export
 ```
 
 Upon completion of this process, the orders transition to "pending\_billing" status, signifying that they are fulfilled and ready for billing.

@@ -27,14 +27,18 @@ The procurement process begins within the NetSuite ERP system, where Purchase Or
 Create file of open purchase orders
 
 ```
-HC_generateCSV_OpenPurchaseOrders
+HC_MR_ExportedPurchaseOrderCSV
 ```
 
-_Deprecated_ move file to SFTP location
+**SFTP Locations**
 
 ```
-HC_uploadCSV_OpenPurchaseOrders
+/home/{sftp-username}/netsuite/purchaseorder/fulfillment
 ```
+
+### Import Purchase Orders into HotWax Commerce
+
+2. In HotWax Commerce, a designated job monitors the SFTP location, periodically checking for new Purchase Order CSV files. The job uses the robust APIs provided by HotWax Commerce's Export/Import tools to import these Purchase Orders.
 
 **Job in HotWax Commerce**
 
@@ -42,10 +46,6 @@ HC_uploadCSV_OpenPurchaseOrders
 Import purchase orders
 IMP_ASN_PO_FEED
 ```
-
-### Import Purchase Orders into HotWax Commerce
-
-2. In HotWax Commerce, a designated job monitors the SFTP location, periodically checking for new Purchase Order CSV files. The job uses the robust APIs provided by HotWax Commerce's Export/Import tools to import these Purchase Orders.
 
 #### Here's how purchase order fields are mapped in NetSuite and HotWax Commerce
 

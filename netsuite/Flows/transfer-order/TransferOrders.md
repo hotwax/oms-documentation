@@ -128,7 +128,7 @@ Received Transfer Orders NetSuite JSON:
 Import received Transfer Order file:
 
 ```
-HC_SC_ImportTransferOrderReceipts
+HC_MR_ExportedTransferOrderCSV
 ```
 
 {% hint style="info" %}
