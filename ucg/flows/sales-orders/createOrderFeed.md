@@ -2,6 +2,18 @@
 
 Frank and Oak uses a custom create order file from HotWax that is slightly different than the out of the box used with the native NetSuite integration. Frank and Oak has their own trasnformation middleware in a platform called Boomi that has the business logic for how the order needs to be entered into NetSuite.
 
+## Handling Discounts
+
+An order can have two types of discounts, order level discounts and item level discounts.
+
+### Order Level Discounts
+
+Order level discounts are saved as order adjustments in the OMS. In the create order feeds to NetSuite the header level discount is added in the `Rate` column. Instead of the absolute value the amount is presented as a negative as requested by the UCG team to help with integrations. This value indicates the exact amount reduced from the order total, **not the percentage**. Ihe value will be repeated on all order itmes because this is a header level field. If the value is empty different for any one item, this disqualfies it for import into NetSuite.
+
+### Order Line Level Discounts
+
+Line level discounts are saved in the OMS as order line item adjustments. In the NetSuite create order feeds, line level discounts are added as new line items directly below the item being discounted. The value of this field will be the internal ID of the discount item configured in NetSuite. The amount being discounted from the corresponding order item is stored in the `Amount` column.
+
 ## Order Feed Mapping
 
 | Header              | Description                                                     |

@@ -99,15 +99,15 @@ The Smaregi facility ID which is stored in the external ID of the facility in th
 **OMS field:** ```facilityExternalId```
 
 ### Tender Type
-The "Tender Type" field denotes the payment method used for the order.
+The "Tender Type" field denotes the payment gateway used for the order. Possible values include:
 
-#### Notes
-- For multiple payment methods, the tender types are sent as a list separated by hyphens (e.g., Visa-Mastercard).
-- HotWax will display the tender type based on the information stored in the payment preferences of the OMS.
+* Shopify Payment
+* Softbank Payment
+* Amazon Pay
+* Paidy
 
-#### Example
-- **Value:** Visa
-- **Multiple Methods Example:** Visa-Mastercard-Amex
+HotWax will display the tender type based on the information stored in the payment preferences of the OMS.
+
 
 **OMS field:** 
 ```sql
