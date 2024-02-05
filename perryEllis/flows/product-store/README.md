@@ -37,5 +37,6 @@ Certain settings are mandatory for every Product Store to ensure efficient opera
 | PRDT_IDEN_PREF       | -                   | -                  | -                    | 
 | RTN_RSTCK_FAC        | -                   | -                  | WH                   | 
 | SAVE_BILL_TO_INF     | -                   | -                  | N                    | 
+| FULFILL_NOTIF        | Y                   | Y                  | -                    |
 
 > Table 2: Details specific to various Perry Ellis Product Stores.

@@ -12,7 +12,7 @@ Certain settings are mandatory for every Product Store to ensure efficient opera
 | Field                    | Description                                           | Value          |
 |--------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|
 | Store Name               | Product Store serves as a representation of a company or brand, particularly useful for retailers managing multiple brands. Make sure to specify the brand name before proceeding.                                                                                                | Refer [Table 3](#Details-specific-to-various-ADOC-OMS-instances)         |                    
-| Inventory Facility       | It is the default facility used to push inventory counts from HotWax Commerce to eCommerce.                                                                                                                                                                                       | `_NA_`              |
+| Inventory Facility       | It is the default facility used to push inventory counts from HotWax Commerce to eCommerce.                                                                                                                                                                                       | \_NA_              |
 | Reserve inventory        | HotWax Commerce serves as Inventory Master therefore it reserves inventory for all online orders. This setting should consistently remain at its default value of Y without alteration to ensure accurate inventory management.                                                   | Y                   |
 | Enable Brokering         | Brokering ensures optimized inventory allocation for orders. Therefore, this setting should always be maintained at its default value of Y and should not be modified.                                                                                                            | Y                   |
 | Pre-order auto releasing | This setting enables users to configure whether the inventory for pre-order items should be automatically released when the shipping date arrives. The settings should be changed to N if the user wants manual control over releasing pre-orders.                                | N                   |
@@ -35,6 +35,7 @@ Additionally, users have the flexibility to configure additional settings based 
 | SAVE_BILL_TO_INF  | Save customers' `Bill To` information on orders from Shopify in HotWax Commerce.                                                                                        | Y               |
 | RATE_SHOPPING     | Rate Shopping feature allows HotWax Commerce to find the lowest possible shipping option that can deliver the order within SLA.                                         | N               |
 | DEFAULT_CARRIER   | Retailers can assign a default shipping carrier to handle the transportation and delivery of products within a specific product store.                                  | Refer [Table 3](#Details-specific-to-various-ADOC-OMS-instances)     |
+| FULFILL_NOTIF     | Retailers can send a fulfillment notification to customers when there is a fulfillment update on their order.                                                           | Y               |
 <br>
 
 ### Details specific to various ADOC OMS instances 
@@ -45,7 +46,7 @@ Additionally, users have the flexibility to configure additional settings based 
 | Currency    | USD   | NIO      | HNL                  | GTQ          | CRC         |
 | Sales Order ID Prefix | ADOC | ADOC | ADOC0 | ADOC | ADOC | 
 | PRDT_IDEN_PREF | {"primaryId":"internalName", "secondaryId":"parentProductName"}  | {"primaryId":"parentProductName", "secondaryId":"title"}         | {"primaryId":"parentProductName", "secondaryId":"SHOPIFY_PROD_SKU"} | {"primaryId":"internalName", "secondaryId":"parentProductName"} | {"primaryId":"internalName", "secondaryId":"title"} | 
- | DEFAULT_CARRIER | C807 | CARGOTRANS | HN_DEFAULT_CARRIER | - | TERMINAL_EXPRESS | 
+| DEFAULT_CARRIER | C807 | CARGOTRANS | HN_DEFAULT_CARRIER | - | TERMINAL_EXPRESS | 
 
 > Table 3: Details specific to various ADOC OMS instances.
 

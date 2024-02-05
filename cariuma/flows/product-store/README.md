@@ -34,3 +34,4 @@ Additionally, users have the flexibility to configure additional settings based 
 | PRDT_IDEN_PREF       | Retailers can set a preferred `Product Identifier` for employees to view products with defined product identifiers.                                         |          |
 | SAVE_BILL_TO_INF     | Save customers' `Bill To` information on orders from Shopify in HotWax Commerce.                                                                  | N                   |
 | HOLD_PRORD_PHYCL_INV | This setting enables retailers to determine whether they prefer to reserve excess physical inventory for their brick-and-mortar stores or make it fully available for online orders. The value can be set to `true` in order to hold excess physical inventory.  | false     |
+| FULFILL_NOTIF | Send a fulfillment notification to customers when there is a fulfillment update on their order. | Y | 
