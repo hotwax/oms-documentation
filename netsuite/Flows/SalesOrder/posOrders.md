@@ -22,9 +22,27 @@ HotWax identifies POS completed orders that need to be synced to NetSuite by che
 
 Orders that match these criteria are exported to an SFTP location in a CSV file.
 
+**SFTP Locations**
+
+```
+/home/{sftp-username}/netsuite/cashsale/export
+```
+
+{% hint style="warning" %}
+**Time based sync** HotWax uses a time based cursor to track which orders have been synced. This means if sync fails for an order, it will not be automatically retried.
+{% endhint %}
+
+A Scheduled Suite Script in NetSuite imports the file from the SFTP server. The SuiteScript uses the CSV ImportTask function of the N/Task module to import the POS order details as Cash Sale records directly into NetSuite.
+
+**SuiteScript**
+
+```
+Add suitescript name
+```
+
 #### Here's how POS order fields are mapped in HotWax Commerce and NetSuite
 
-<table><thead><tr><th width="144.97101449275362">S.No.</th><th>Fields in HotWax Commerce</th><th>Fields in NetSuite</th></tr></thead><tbody><tr><td>1</td><td>Shopify Order Name</td><td>PO #</td></tr><tr><td>2</td><td>NetSuite Order ID</td><td>POS Order Internal ID</td></tr><tr><td>3</td><td>Shopify Order ID</td><td>HC Shopify Order ID</td></tr><tr><td>4</td><td>Sales Channel</td><td>HC Sales Channel</td></tr><tr><td>5</td><td>Order Date</td><td>Date *</td></tr><tr><td>6</td><td>Bill To</td><td>Customer *</td></tr><tr><td>7</td><td>Product</td><td>Item</td></tr><tr><td>8</td><td>Qty</td><td>Quantity</td></tr><tr><td>9</td><td>Ship From</td><td>Shipping Address *</td></tr></tbody></table>
+<table><thead><tr><th width="144.97101449275362">S.No.</th><th>Fields in HotWax Commerce</th><th>Fields in NetSuite</th></tr></thead><tbody><tr><td>1</td><td>Shopify Order Name</td><td>PO #</td></tr><tr><td>2</td><td>NetSuite Order ID</td><td>POS Order Internal ID</td></tr><tr><td>3</td><td>Shopify Order ID</td><td>HC Shopify Order ID</td></tr><tr><td>4</td><td>Sales Channel</td><td>HC Sales Channel</td></tr><tr><td>5</td><td>Order Date</td><td>Date *</td></tr><tr><td>6</td><td>Bill To</td><td>Customer *</td></tr><tr><td>7</td><td>Product</td><td>Item</td></tr><tr><td>8</td><td>Qty</td><td>Quantity</td></tr><tr><td>9</td><td>Location</td><td>Location</td></tr></tbody></table>
 
 {% tabs %}
 {% tab title="POS Order Fields in HotWax Commerce" %}
@@ -43,24 +61,6 @@ Orders that match these criteria are exported to an SFTP location in a CSV file.
 {% hint style="danger" %}
 "\*" denotes fields that are required to be sent to NetSuite for the POS order sync to work
 {% endhint %}
-
-**SFTP Locations**
-
-```
-/home/{sftp-username}/netsuite/cashsale/export
-```
-
-{% hint style="warning" %}
-**Time based sync** HotWax uses a time based cursor to track which orders have been synced. This means if sync fails for an order, it will not be automatically retried.
-{% endhint %}
-
-A Scheduled Suite Script in NetSuite imports the file from the SFTP server. The SuiteScript uses the CSV ImportTask function of the N/Task module to import the POS order details as Cash Sale records directly into NetSuite.
-
-**SuiteScript**
-
-```
-Add suitescript name
-```
 
 ### Synchronize NetSuite POS Order ID to HotWax Commerce
 
