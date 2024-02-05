@@ -2,6 +2,15 @@
 
 * [Product Releases- Overview](README.md)
 
+# 2024
+
+* [January'24](january-24/README.md)
+  * [Manage Multiple ATP Inventories for Channels](january-24/manage-multiple-atp-inventories.md)
+  * [Introducing Create Product Store Page](january-24/create-product-store.md)
+  * [Bundle product fulfillment](january-24/bundle-products.md)
+  * [Introducing Facility Groups Page](january-24/facility-groups-page.md)
+  * [Introducing Order Routing App](january-24/order-routing-app.md)
+
 # 2023
 
 * [Nov-Dec'23](nov-dec23/README.md)
