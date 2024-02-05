@@ -20,13 +20,15 @@ The inventory count process initiates within the store, where store associates l
 
 ### Pushing Cycle Count Inventory Variance File to HotWax Commerce
 
-Store associates upload the Cycle Count file from the app to the HotWax Commerce server. Store managers review this file, approve it, and subsequently, inventory cycle count variances are recorded in HotWax Commerce.
+1. Store associates upload the Cycle Count file from the app to the HotWax Commerce server. Store managers review this file, approve it, and subsequently, inventory cycle count variances are recorded in HotWax Commerce.
 
 ### Export Cycle Count Inventory Variances from HotWax Commerce
 
-Once inventory cycle count variances are successfully logged in HotWax Commerce, a specific job in our integration platform creates a CSV file containing all the cycle count inventory variance records. This file is then placed in an SFTP location, ensuring that it is readily accessible for further processing.
+2. Once inventory cycle count variances are successfully logged in HotWax Commerce, a specific job in our integration platform creates a CSV file containing all the cycle count inventory variance records. This file is then placed in an SFTP location, ensuring that it is readily accessible for further processing.
 
+{% hint style="info" %}
 Successful logging of an inventory count is indicated by its status being "INV\_COUNT\_COMPLETED"
+{% endhint %}
 
 **Jobs in HotWax Commerce**
 
@@ -53,7 +55,7 @@ Cycle Count Inventory Variance of Actual vs Systemic:
 
 ### Import Cycle Count Inventory Variance in NetSuite
 
-In NetSuite, a Scheduled Suite Script is employed to download and import the CSV files from the SFTP location. This script leverages the native CSV Import tool provided by NetSuite to create Inventory Adjustment records. The use of the NetSuite CSV Import tool for Inventory Adjustments eliminates the need for the N/record module in this specific integration, offering an efficient and accurate synchronization method.
+3. In NetSuite, a Scheduled Suite Script is employed to download and import the CSV files from the SFTP location. This script leverages the native CSV Import tool provided by NetSuite to create Inventory Adjustment records. The use of the NetSuite CSV Import tool for Inventory Adjustments eliminates the need for the N/record module in this specific integration, offering an efficient and accurate synchronization method.
 
 **SuiteScripts**
 
@@ -77,11 +79,11 @@ Unlike cycle counting, where an inventory count is conducted periodically, this 
 
 ### Pushing Inventory Variance to HotWax Commerce
 
-Upon approval by the store manager, store associates log the inventory variances through the app, along with providing the relevant reasons, these recorded inventory variances automatically update the inventory in HotWax Commerce.
+1. Upon approval by the store manager, store associates log the inventory variances through the app, along with providing the relevant reasons, these recorded inventory variances automatically update the inventory in HotWax Commerce.
 
 ### Export Inventory Variance from HotWax Commerce
 
-Once inventory variances are successfully updated in HotWax Commerce, a specific job in our integration platform creates a CSV file containing all the inventory variance records. This file is then placed in an SFTP location from where NetSuite can read it.
+2. Once inventory variances are successfully updated in HotWax Commerce, a specific job in our integration platform creates a CSV file containing all the inventory variance records. This file is then placed in an SFTP location from where NetSuite can read it.
 
 **Jobs in HotWax Commerce**
 
@@ -116,7 +118,7 @@ To circumvent this issue, retailers can set up variance locations in NetSuite. T
 
 When variances are tracked using variance locations in NetSuite, variances logged by HotWax Commerce are actually registered as an Inventory Transfer from the affected store location to the variance location. For example, if a store wants to damage out 5 units of a product, they’d log an inventory transfer of that product from their store to the Damaged location. This reduces the inventory from the store and increments that inventory at the Damaged location. Now retailers can use this movement to analyze which facilities are logging damaged inventory at higher rates than others and potentially track down operational and planning issues.
 
-In NetSuite, another Scheduled Suite Script is employed to download and import the CSV files from the SFTP location. This script leverages the native CSV Import tool provided by NetSuite to create Inventory Adjustment records.
+3. In NetSuite, another Scheduled Suite Script is employed to download and import the CSV files from the SFTP location. This script leverages the native CSV Import tool provided by NetSuite to create Inventory Adjustment records.
 
 **SuiteScripts**
 
