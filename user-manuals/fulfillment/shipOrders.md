@@ -27,11 +27,13 @@ Video: Print picklist
 Pickers can be used for performance-based commission distribution.
 {% endhint %}
 
-5. You can access the Print Picksheet function again from the inprogress page to obtain the picksheet in PDF format for reference during order picking.
+3. The user can choose to reprint the picklist by clicking on the `Print Picklist` button located in the bottom right corner on the In Progress tab.
 
-Use the Print icon, available on the top against Picker, to reprint the picksheet.
+4. Users can modify the assigned picker on the In Progress page by selecting the `Edit Picker` button located next to the `Print Picklist` button in the bottom right corner.
 
-{% embed url="https://youtu.be/Zbm-8Z82laY" %}
+5. Store managers have the option to generate a QR code by clicking the `GENERATE QR CODE` button in the bottom-left corner, pickers can scan this QR code to access their picklist directly on their mobile devices.
+
+{% embed url="https://youtu.be/AaSwHxMoGPM" %}
 Video: Regenerate picklist
 {% endembed %}
 
@@ -121,7 +123,7 @@ Image: Search an order
 3. Click the Pack function.
 4. The Shipping Label and Packing Slip will be generated in a new tab.
 
-{% embed url="https://youtu.be/7UrUJ7LRkb0" %}
+{% embed url="https://youtu.be/5Gma-9Ki7cc" %}
 Video: Pack order
 {% endembed %}
 
@@ -131,8 +133,10 @@ Video: Pack order
 2. Search for the order.
 3. Click on the Ship function to mark the order as shipped.
 
-{% embed url="https://youtu.be/h8hMAySgfqc" %}
+{% embed url="https://youtu.be/0udHzKRcP_0" %}
 Video: Ship order
 {% endembed %}
 
 {% embed url="https://youtu.be/RCzf6Uv_CoY" %}
+Video: Complete process for individual order fulfillment
+{% endembed %}
