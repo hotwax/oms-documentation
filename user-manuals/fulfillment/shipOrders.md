@@ -31,7 +31,7 @@ Pickers can be used for performance-based commission distribution.
 
 4. Users can modify the assigned picker on the In Progress page by selecting the `Edit Picker` button located next to the `Print Picklist` button in the bottom right corner.
 
-5. Store managers have the option to generate a QR code by clicking the `GENERATE QR CODE` button in the bottom-left corner,pickers can scan this QR code to access their picklist directly on their mobile phones.
+5. Store managers have the option to generate a QR code by clicking the `GENERATE QR CODE` button in the bottom-left corner, pickers can scan this QR code to access their picklist directly on their mobile devices.
 
 {% embed url="https://youtu.be/AaSwHxMoGPM" %}
 Video: Regenerate picklist
