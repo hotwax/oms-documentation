@@ -85,3 +85,16 @@ By performing these steps, you essentially map the Packaging box from HotWax Com
 {% embed url="https://youtu.be/9XefekAuxr8" %}
 Video: Remove Shipment Box
 {% endembed %}
+
+### Add Career Facility
+
+In HotWax Commerce, the ability to add shipping carriers to facilities is essential for order fulfillment. Once a shipment gateway is set, adding carriers to facilities enables rate shopping and shipping label generation specifically for those carriers associated with the selected facility. This feature enhances workflow efficiency by allowing the HotWax Commerce Store Fulfillment App to intelligently select the most cost-effective shipping carrier for each order. To add careers to a facility follow these steps:
+
+1. Navigate to the `Career Facility` section.
+2. Within the Career Facility section, look for the `Add` button and click on it. This action will open a pop-up box where you can specify details for adding a new carrier to a facility.
+3. In the pop-up box, enter the name of the facility where you want to add the carrier
+4. Once you've entered the facility name, click on the `Add` button to confirm and add the respective carrier to that facility.
+5. If needed, you can remove the association between a carrier and a facility by clicking on the `Delete` icon in the last column.
+
+
+
