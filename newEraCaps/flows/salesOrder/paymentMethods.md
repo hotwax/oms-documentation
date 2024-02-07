@@ -31,9 +31,11 @@ If the payment processing is done on a redirected link, then the payment process
 
 ```
 
-**Actual values from shopify**
-Need to use these in the mapping values
-“shopify sbペイメント sbps”  = Prepaid (Credit Card) (1)
-“代金引換” or “cash on delivery (cod)” = Cash on Delivery (2)
-“amazon” = Amazon Pay (3)
-“paidy” or “ペイディ” = Paidy (4)
+** Payments types from shopify**
+
+| Payment Keys                     | Description            | 
+|-----------------------------------|------------------------|
+| shopify sbペイメント sbps          | Prepaid (Credit Card) | 
+| 代金引換 or cash on delivery (cod) | Cash on Delivery       | 
+| amazon                            | Amazon Pay             | 
+| paidy or ペイディ                  | Paidy                  | 
