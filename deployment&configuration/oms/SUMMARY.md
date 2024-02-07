@@ -7,13 +7,16 @@
 * [Initial login](initial-setup/IntialLogin.md)
 * [Add DBICs](initial-setup/AddDBICs.md)
 * [Load facility data](initial-setup/LoadFacilities.md)
-* [Configure Product Store](initial-setup/product-store/README.md)
 * [Configure System Property data](initial-setup/setSystemPropertys.md)
 * [Configure SFTP data](initial-setup/setupSftpConfigurations.md)
 
 ## User and Gateway Configuration
 * [Create your users](user-and-gateway-config/CreateUser.md)
 * [Shipping gateways](user-and-gateway-config/ShippingGateways.md)
+
+## Product Store
+* [Configure Product Store](initial-setup/product-store/README.md)
+* [Add More Product Stores](initial-setup/product-store/add-more-product-stores.md)
 
 ## Additional Resources
 * [Update OMS Version](additional-resources/updateOmsVersion.md)
