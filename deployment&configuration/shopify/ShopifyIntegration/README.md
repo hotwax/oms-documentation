@@ -20,10 +20,12 @@ Fill out your Shopify details:
 | **Shop ID**          | The internal name of your Shopify Store. The default is `SHOP`, but change it to a unique value for multiple stores (e.g., US_SHOP, CA_SHOP).                                  |
 | **Shopify Config ID**| ShopifyConfigId;  `SHOP_CONFIG` for a single store, add a unique value for multiple stores. Example: CA_SHOP_CONFIG                |
 | **Shopify Config Name**| Project-specific; use the instance name along with Shopify Config (e.g. NotNaked Shopify Config).                |
-| **Shop**             | The value is the shop name from the Shopify URL (e.g., hc-demo for hc-demo.myshopify.com).                  |
+| **Connect URL**             | The value is the shop name from the Shopify URL (e.g., hc-demo for hc-demo.myshopify.com).                  |
 | **Access Token**     | Provided by the retailer or obtained during custom app setup.                                              |
+| **Access Scope**     | Make sure you have given read and write access to make changes for the Shopify shop                                            |
 | **Shared Secret**    | Provided by the retailer or obtained during custom app setup.                                              |
 | **Product Store**    | Connects the Shopify store to the Product Store.                                                            |
+| **Process Refund**    | Select whether you want to process refunds through this Shopify Shop.                                                         |
 | **WebSite**          | If the website name is changed to the Product Store name, use the same name here.                            |
 
 Once the Shopify Shop config is created, further editing can be performed on the `Shopify Shop` page
