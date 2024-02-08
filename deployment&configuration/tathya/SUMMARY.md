@@ -9,10 +9,12 @@
 * [Charts Creation](chartsCreation/README.md)
    * [Selecting Database & Schema](chartsCreation/selectingDatabase&ExecutingQueries.md)
    * [View & Save Chart](chartsCreation/visualize&SaveChart.md)
+   * [Charts Access](chartsCreation/chartsaccess.md)
    * [Create Multiple Charts](chartsCreation/creatingMultipleCharts.md)
 
 * [Understanding Dashboards](understandingDashboards/README.md)
    * [Configuring Dashboards](understandingDashboards/configuringDashboards.md)
+   * [Dashboards Access](understandingDashboards/dashboardsaccess.md)
    * [Dashboard Options](understandingDashboards/dashboardOptions.md)
    * [Dashboard Customizations](understandingDashboards/dashboardCustomization.md)
  
