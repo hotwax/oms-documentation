@@ -1,8 +1,8 @@
-# User Listing
+# Listing User in Tathya
 
 Once the access is granted, the user is automatically listed in Tathya and by default gets assigned a “public” role.
 
-{% hint style="warning" %}
+{% hint style="danger" %}
 The user's account is not yet fully configured. The auto-assigned public role does not give the required access to view charts or dashboards. To grant access, you have to assign the necessary roles and permissions to the user's account.
 {% endhint %}
 
@@ -46,17 +46,16 @@ The HotWax Basic Permissions role is designed to provide a limited scope of acce
 
 Here are key details about this role:
 
-- The HotWax Basic Permissions role restricts access to specific areas in Tathya.
-
-- Users with the HotWax Basic Permissions role will only have access to the "Dashboard" panel. Users cannot view any charts here until and unless they are assigned to them in the form of a role.
-
-- In the "Settings," users with this role will see a limited set of options. The displayed options include user profile details, general information, and the logout function.
-
-- This role ensures a high level of security by preventing users from accessing areas beyond the designated dashboard and settings sections.
-
-Finally, add the project-specific roles that you have created, which grants permission to view the project-specific charts from the Dashboard panel. (Check the section “Creating Roles for Dashboard Access” for more information)
+* The HotWax Basic Permissions role restricts access to specific areas in Tathya.
+* Users with the HotWax Basic Permissions role will only have access to the "Dashboard" panel. Users cannot view any charts here until and unless they are assigned to them in the form of a role.
+* In the "Settings," users with this role will see a limited set of options. The displayed options include user profile details, general information, and the logout function.
+* This role ensures a high level of security by preventing users from accessing areas beyond the designated dashboard and settings sections.
 
 {% hint style="warning" %}
+Finally, add the project-specific roles that you have created, which grants permission to view the project-specific charts from the Dashboard panel. (Check the section [“List Roles” ](../creatingRoles/list\&ModifyRoles.md)for more information)
+{% endhint %}
+
+{% hint style="danger" %}
 Assign roles carefully, considering both default roles and project-specific roles for accurate access permissions.
 {% endhint %}
 
