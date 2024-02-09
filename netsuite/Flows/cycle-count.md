@@ -116,7 +116,7 @@ To circumvent this issue, retailers can set up variance locations in NetSuite. T
 
 When variances are tracked using variance locations in NetSuite, variances logged by HotWax Commerce are actually registered as an Inventory Transfer from the affected store location to the variance location. For example, if a store wants to damage out 5 units of a product, they’d log an inventory transfer of that product from their store to the Damaged location. This reduces the inventory from the store and increments that inventory at the Damaged location. Now retailers can use this movement to analyze which facilities are logging damaged inventory at higher rates than others and potentially track down operational and planning issues.
 
-The CSV file containing inventory variances is also stored in the designated SFTP location for NetSuite:
+The CSV file containing inventory item variance feed is also stored in the designated SFTP location for NetSuite as invenotry trasfer file:
 
 ```
 /home/{sftp-username}/netsuite/inventorytransfer/csv
