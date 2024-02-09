@@ -1,5 +1,7 @@
 # Granting Access on Dashboards
 
+In Tathya, it's essential to grant access to dashboards to other users so that they can add their charts to them without encountering visibility issues. Here's how to grant access:
+
 1. Navigate to the Dashboards section within Tathya.
 2. Find the specific dashboard you wish to grant access to.
 3. Go to the dashboard and locate the "Actions" section, located on the right-hand side.
