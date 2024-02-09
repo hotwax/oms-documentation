@@ -9,6 +9,7 @@
 * [Load facility data](initial-setup/LoadFacilities.md)
 * [Configure System Property data](initial-setup/setSystemPropertys.md)
 * [Configure SFTP data](initial-setup/setupSftpConfigurations.md)
+* [Add Solr Indexes](initial-setup/search-admin.md)
 
 ## User and Gateway Configuration
 * [Create your users](user-and-gateway-config/CreateUser.md)
