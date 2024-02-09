@@ -1,4 +1,4 @@
-# Facilities App
+# Parkings
 
 The `Facilities app` within HotWax Commerce offers an efficient solution for overseeing queues or parking spaces designated for orders awaiting fulfillment. These queues serve as digital storage areas for various order types, including those awaiting brokering or pre-orders lacking inventory. Through representing these queues as virtual facilities within the app, users can conveniently establish, oversee, archive, and modify them as necessary. This functionality optimizes workflow by effectively organizing orders and facilitating seamless order management procedures.
 
