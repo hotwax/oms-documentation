@@ -69,17 +69,17 @@ HC_SC_ImportInventoryAdjustment.js
 
 While cycle counting in stores follows a periodic schedule, stores frequently encounter sudden inventory discrepancies in various scenarios. For example, if store associates identify 5 damaged units at their location, they’d want to record a variance of -5 for the damaged inventory. Similarly, if they discover 2 units of previously missing inventory, they’d want to record +2 for the newly found items.
 
-To address these unexpected inventory changes, store associates can directly record these identified inventory variances into the Cycle Count App and ask their store managers to approve it so that this variance can be pushed into HotWax Commerce.
+To address these unexpected inventory changes, store managers can directly record these identified inventory variances and theses variances are pushed into HotWax Commerce.
 
 {% hint style="info" %}
-Unlike cycle counting, where an inventory count is conducted periodically, this process involves store associates directly recording the variance amount without physically counting the entire store inventory.
+Unlike cycle counting, where an inventory count is conducted periodically, this process involves store managers directly recording the variance amount without physically counting the entire store inventory.
 {% endhint %}
 
 <figure><img src="../.gitbook/assets/unexpected inventory variance.png" alt=""><figcaption><p>Inventory Variance Synced from HotWax Commerce to NetSuite</p></figcaption></figure>
 
 ### Pushing Inventory Variance to HotWax Commerce
 
-1. Upon approval by the store manager, store associates log the inventory variances through the app, along with providing the relevant reasons, these recorded inventory variances automatically update the inventory in HotWax Commerce.
+1. Store managers log the inventory variances through the app, along with providing the relevant reasons, these recorded inventory variances automatically update the inventory in HotWax Commerce.
 
 ### Export Inventory Variance from HotWax Commerce
 
@@ -108,15 +108,19 @@ Inventory Variance:
 /home/{sftp-username}/netsuite/inventoryadjustment/csv
 ```
 
-### Inventory Variances in NetSuite
+### Import Inventory Variance Reason in NetSuite
 
 Retailers learn a lot about their product and operations using the reasons for variance in inventory but NetSuite’s Inventory Adjustment function only provides limited information relating to variance, mostly restricted to a “Comments” free text field. When trying to perform analytics on variance reasons, the free text nature of the comments field makes it difficult to obtain predictable results.
 
 To circumvent this issue, retailers can set up variance locations in NetSuite. These locations are set up as “undefined” type locations, meaning that they are neither a retail location nor a warehouse, rather just a holding location. Retailers can set up as many variance locations as they need to help accurately segregate types of variances in their operations.
 
-### Import Inventory Variance in NetSuite
-
 When variances are tracked using variance locations in NetSuite, variances logged by HotWax Commerce are actually registered as an Inventory Transfer from the affected store location to the variance location. For example, if a store wants to damage out 5 units of a product, they’d log an inventory transfer of that product from their store to the Damaged location. This reduces the inventory from the store and increments that inventory at the Damaged location. Now retailers can use this movement to analyze which facilities are logging damaged inventory at higher rates than others and potentially track down operational and planning issues.
+
+The CSV file containing inventory item variance feed is also stored in the designated SFTP location for NetSuite as invenotry trasfer file:
+
+```
+/home/{sftp-username}/netsuite/inventorytransfer/csv
+```
 
 3. In NetSuite, another Scheduled Suite Script is employed to download and import the CSV files from the SFTP location. This script leverages the native CSV Import tool provided by NetSuite to create Inventory Adjustment records.
 
