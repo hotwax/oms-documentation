@@ -1,7 +1,7 @@
 # Table of contents
 
 * [Introduction](README.md)
-* [Glossary](glossary.md)
+* [Glossary](GLOSSARY.md)
 
 ## HotWax Commerce
 
@@ -13,6 +13,7 @@
   * [Job Failed](hotwax/jobManager/jobFailed.md)
   * [Jobs Stuck](hotwax/jobManager/jobStuck.md)
 * [Data Imports](hotwax/dataManager/dataNotImportedInOMS.md)
+  * [Schedule Error Mails](hotwax/dataManager/schedule-error-mail.md)
 * [Pre-order](hotwax/preOrders.md)
   * [Inaccurate Inventory computation](hotwax/pre-orders/inaccurateInventoryComputation.md)
   * [Missing Product Linking](hotwax/pre-orders/missingProductLinking.md)
