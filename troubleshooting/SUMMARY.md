@@ -1,6 +1,7 @@
 # Table of contents
 
 * [Introduction](README.md)
+* [Glossary](glossary.md)
 
 ## HotWax Commerce
 
@@ -21,3 +22,10 @@
 * [Failure Notifications](netsuite/notifications.md)
 * [Error Logs](netsuite/findingLogs.md)
 * [Failed SuiteScripts](netsuite/failedSuiteScripts.md)
+
+## Shopify
+
+* [Product Sync](shopify/products.md)
+* [Inventory Sync](shopify/inventory.md)
+* [Order Sync](shopify/order.md)
+
