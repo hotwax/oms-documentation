@@ -94,3 +94,27 @@ Frank and Oak only uses one carrier for each country, Canada and the United Stat
 <!-- page links -->
 
 [easyPostDoc]:https://docs.hotwax.co/integration-resources/v/carriers/easy-post
+
+
+
+For facility specific carrier account IDs, we need to import the below added data, without it the shipping labels will default to Canada Post: 
+
+```xml
+<FacilityAttribute facilityId="CLVST" attrName="CARRIER_ACCOUNTS" attrValue="ca_3b4eac328c544c8995974d7585f881f5"/>
+<FacilityAttribute facilityId="DIXST" attrName="CARRIER_ACCOUNTS" attrValue="ca_50d68dc2a9a94528b71e367f004512fe"/>
+<FacilityAttribute facilityId="DONST" attrName="CARRIER_ACCOUNTS" attrValue="ca_a9459b96af6d46d58af5ed8b77147cec"/>
+<FacilityAttribute facilityId="FOYST" attrName="CARRIER_ACCOUNTS" attrValue="ca_fbb9b2700aeb4afea6848ff71fc2502f"/>
+<FacilityAttribute facilityId="FPCST" attrName="CARRIER_ACCOUNTS" attrValue="ca_93bb427be6de40769987bf8dd9530405"/>
+<FacilityAttribute facilityId="HALST" attrName="CARRIER_ACCOUNTS" attrValue="ca_4393721c708a4be9b49f661f39309830"/>
+<FacilityAttribute facilityId="KITST" attrName="CARRIER_ACCOUNTS" attrValue="ca_3d6f73970410430aae4ec944080327cc"/>
+<FacilityAttribute facilityId="MTLST" attrName="CARRIER_ACCOUNTS" attrValue="ca_b6625dcaf3304eec8455fcf96ded7f9a"/>
+<FacilityAttribute facilityId="RIDST" attrName="CARRIER_ACCOUNTS" attrValue="ca_21b9fe5380cd4cc28cf3273d0d6ea4ae"/>
+<FacilityAttribute facilityId="SQOST" attrName="CARRIER_ACCOUNTS" attrValue="ca_50a709534e414a60bda0cd32b23ced8e"/>
+<FacilityAttribute facilityId="STANST" attrName="CARRIER_ACCOUNTS" attrValue="ca_5e8d38f2c14d440083c0f8e271656724"/>
+<FacilityAttribute facilityId="STWST" attrName="CARRIER_ACCOUNTS" attrValue="ca_a8224a64df0f4bc6b87fbb868aa49425"/>
+<FacilityAttribute facilityId="TECST" attrName="CARRIER_ACCOUNTS" attrValue="ca_f35eea517540457a953f43f986e619dd"/>
+<FacilityAttribute facilityId="TOST" attrName="CARRIER_ACCOUNTS" attrValue="ca_1980d579aed84abdb7ac112e9b98c344"/>
+<FacilityAttribute facilityId="VIAST" attrName="CARRIER_ACCOUNTS" attrValue="ca_51460ba6e703417ba3c3d8a900d3de51"/>
+<FacilityAttribute facilityId="VANST" attrName="CARRIER_ACCOUNTS" attrValue="ca_faf342ba506b43d6ada2d9cc2011ea71"/>
+```xml
+
