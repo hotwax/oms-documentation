@@ -116,5 +116,4 @@ For facility specific carrier account IDs, we need to import the below added dat
 <FacilityAttribute facilityId="TOST" attrName="CARRIER_ACCOUNTS" attrValue="ca_1980d579aed84abdb7ac112e9b98c344"/>
 <FacilityAttribute facilityId="VIAST" attrName="CARRIER_ACCOUNTS" attrValue="ca_51460ba6e703417ba3c3d8a900d3de51"/>
 <FacilityAttribute facilityId="VANST" attrName="CARRIER_ACCOUNTS" attrValue="ca_faf342ba506b43d6ada2d9cc2011ea71"/>
-```xml
-
+```
