@@ -14,7 +14,7 @@ Merchandisers can easily view individual Purchase orders by searching Purchase O
 \
 Additional functionalities that are available on the `Find Purchase Orders` page are:
 
-* Grouping: Merchandisers have various options to view purchase order items, they can group the items by order items, products and their arrival dates, etc. For example if a merchandiser change the grouping to parent product, they will be able to see all the parent products and the inventory overview of that product, irresepctive of the variant's interview
+* Grouping: Merchandisers have various options to view purchase order items, they can group the items by order items, products, and their arrival dates, etc. For example, if a merchandiser changes the grouping to a parent product, they will be able to see all the parent products and the inventory overview of that product, irrespective of the variant's inventory.
 * Export CSV: Merchandisers can export the CSV files of all the purchase orders for external auditing purposes.
 
 Once the merchandiser have located their desired purchase order, they can execute various flows to ensure precise synchronization of pre-order information with the eCommerce platform.
