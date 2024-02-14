@@ -18,7 +18,7 @@ This scenario emphasizes the synchronization of Transfer Orders from NetSuite to
 
 Transfer Orders are initiated within the NetSuite ERP system, facilitating the internal transfer of inventory from warehouses to stores or between stores.
 
-<figure><img src="../../.gitbook/assets/TO NetSuite.png" alt=""><figcaption><p>Transfer Order Sync from NetSuite to HotWax Commerce</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/sync to.png" alt=""><figcaption><p>Transfer Order Sync from NetSuite to HotWax Commerce</p></figcaption></figure>
 
 ### Export Transfer Orders from NetSuite
 
@@ -34,7 +34,7 @@ HC_generateCSV_FulfilledTransferOrders
 
 ### Import Transfer Orders into HotWax Commerce
 
-2. In HotWax Commerce, a dedicated job monitors the SFTP location, regularly checking for new Transfer Order CSV files. This job utilizes the powerful APIs provided by HotWax Commerce's Export/Import tools to import these Transfer Orders. If HotWax is only being used for receiving transfer orders, the Transfer Order file produced by NetSuite is pre-processed to generate an inventory variance file that reduces inventory for transferred products from the origin facility.&#x20;
+2. In HotWax Commerce, a dedicated job monitors the SFTP location, regularly checking for new Transfer Order CSV files. This job utilizes the powerful APIs provided by HotWax Commerce's Export/Import tools to import these Transfer Orders. If HotWax is only being used for receiving transfer orders, the Transfer Order file produced by NetSuite is pre-processed to generate an inventory variance file that reduces inventory for transferred products from the origin facility.
 3. After this variance file is produced, the pending receipt transfer order file is moved by HotWax to another internal FTP location where a scheduled job will process it to create "inbound shipments in the OMS at the destination facility."
 
 **SFTP Locations**
@@ -95,7 +95,7 @@ Add job name here
 
 Store associates use the HotWax Commerce Receiving App to receive transferred inventory. The user-friendly interface of this app ensures a smooth and efficient receiving process, even for users with minimal training.
 
-<figure><img src="../../.gitbook/assets/TO received.png" alt=""><figcaption><p>Item Receipts Sync from HotWax Commerce to NetSuite</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/to received.png" alt=""><figcaption><p>Item Receipts Sync from HotWax Commerce to NetSuite</p></figcaption></figure>
 
 ### Export Item Receipts from HotWax Commerce
 
