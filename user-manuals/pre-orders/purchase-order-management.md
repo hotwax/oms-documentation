@@ -8,22 +8,22 @@ The `Find Purchase Orders` page showcases the following details:
 * Purchase Order Specifications: Presents purchase orders in an exploded pattern, revealing distinct specifications for each item.
 * Purchase Order Status: Indicates the current status of the purchase order, whether it's in a created, approved, completed, or canceled state.
 * On-Hand Inventory Overview: Provides insights into available quantities and available-to-promise inventory on Shopify.
-* Created Date and Arrival Date: Merchadisers can easily view when the purchase order was created in HotWax Commerce and when will the inventory of the pruchase order items arrive.
+* Created Date and Arrival Date: Merchandisers can easily view when the purchase order was created in HotWax Commerce and when will the inventory of the purchase order items arrive.
 
 Merchandisers can easily view individual Purchase orders by searching Purchase Order ID, HotWax Commerce ID, or Product name from the search bar. Moreover, they have the ability to filter search results based on PO status, arrival date, or facilities.\
 \
 Additional functionalities that are available on the `Find Purchase Orders` page are:
 
-* Grouping: Merchandisers have various options to view purchase order items, they can group the items by order items, products and their arrival dates, etc. For example if a merchandiser change the grouping to parent product, they will be able to see all the parent products and the inventory overview of that product, irresepctive of the variant's interview
+* Grouping: Merchandisers have various options to view purchase order items, they can group the items by order items, products, and their arrival dates, etc. For example, if a merchandiser changes the grouping to a parent product, they will be able to see all the parent products and the inventory overview of that product, irrespective of the variant's inventory.
 * Export CSV: Merchandisers can export the CSV files of all the purchase orders for external auditing purposes.
 
-Once the merchandiser have located their desired purchase order, they can execute various flows to ensure precise synchronization of pre-order information with the eCommerce platform.
+Once the merchandiser has located their desired purchase order, they can execute various flows to ensure precise synchronization of pre-order information with the eCommerce platform.
 
 <figure><img src="../.gitbook/assets/Purchase Order Page.png" alt=""><figcaption><p>Find Purchase Order</p></figcaption></figure>
 
 ## Cancel Purchase Order
 
-Merchandisers may opt to cancel purchase orders due to various reasons such as supplier issues or lack of demand. HotWax Commerce allows cancellation of uploaded purchase orders by following these steps:
+Merchandisers may opt to cancel purchase orders due to various reasons such as supplier issues or lack of demand. HotWax Commerce allows the cancellation of uploaded purchase orders by following these steps:
 
 1. Navigate to `Procurement` > `Purchase Orders` > `Find Purchase Order`.
 2. Select the `desired purchase order` > Open `Purchase Order Detail page`.
