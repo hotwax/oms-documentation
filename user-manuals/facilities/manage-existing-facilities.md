@@ -19,8 +19,16 @@ Video: Locate Facilities
 
 For any facility name updations made, user can seamlessly rename facilities by clicking on the `Edit` button near the facility's name. this will open a pop-up where users can edit the name and click on `Apply` to save the name.
 
-{% embed url="https://youtu.be/bO46oT-e1kM" %}
+{% embed url="https://youtu.be/twdlWgNTsTc" %}
 Video: Rename Facilities
+{% endembed %}
+
+### Change Facility Type
+
+Users can now change the facility type of a facility from the facility details page to provide flexibility and accommodate changes in business requirements.
+
+{% embed url="https://youtu.be/1Z4Y6QVThFc" %}
+Video: Change Facility Type
 {% endembed %}
 
 ### Linking Facility with External Systems
