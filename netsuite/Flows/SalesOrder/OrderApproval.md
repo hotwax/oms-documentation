@@ -298,6 +298,8 @@ The `HC_SC_CreateCustomerDeposit` SuiteScript also generates a CSV file highligh
 
 This step involves marking of orders as "Approved" for further processing and fulfillment. This step ensures that orders are appropriately marked "Approved" once all necessary details and required references are established. This authorization triggers the routing of orders to their designated fulfillment locations.
 
+<figure><img src="../../.gitbook/assets/approve orders.png" alt=""><figcaption><p>Order approval flow in HotWax Commerce</p></figcaption></figure>
+
 **Actions**
 
 A scheduled job in HotWax Commerce validates order items and marks them "Approved."
