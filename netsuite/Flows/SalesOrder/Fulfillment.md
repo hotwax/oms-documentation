@@ -4,7 +4,7 @@
 
 When a warehouse fulfills order items in NetSuite, fulfilled order information is synchronized from NetSuite to HotWax Commerce. This synchronization step ensures that orders marked as "fulfilled" in NetSuite are accurately reflected in HotWax Commerce. It ensures that the order status is consistent and updated across both systems.
 
-<figure><img src="../../.gitbook/assets/Fulfillment update NetSuite.png" alt=""><figcaption><p>Fulfilled order updates synced from NetSuite to HotWax Commerce</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/fulfillment update in netsuite.png" alt=""><figcaption><p>Fulfilled order updates synced from NetSuite to HotWax Commerce</p></figcaption></figure>
 
 **Actions**
 
@@ -15,6 +15,7 @@ When a warehouse fulfills order items in NetSuite, fulfilled order information i
 ```
 HC_MR_ExportedSalesOrderFulfillmentCSV
 ```
+
 **SFTP Locations**
 
 ```
@@ -38,7 +39,7 @@ The primary difference in this context is the approach to sending fulfillment lo
 
 While fulfillment locations are indeed transmitted to NetSuite after in-store orders are fulfilled within HotWax Commerce, it's important to understand that this data transmission isn't critical for the actual fulfillment of orders. The fulfillment location data is conveyed to NetSuite once orders are fulfilled within HotWax Commerce. Its significance lies in enabling the subsequent creation of invoices, the application of payments to these invoices, and the accurate marking of orders as completed within the NetSuite system. This step occurs post-fulfillment in HotWax Commerce to ensure proper financial processing and completion of orders in NetSuite.
 
-<figure><img src="../../.gitbook/assets/Fulfillment update HotWax.png" alt=""><figcaption><p>Fulfillment location data and order updates synced from HotWax Commerce to NetSuite</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/fulfillment update HotWax.png" alt=""><figcaption><p>Fulfillment location data and order updates synced from HotWax Commerce to NetSuite</p></figcaption></figure>
 
 **Actions**
 
