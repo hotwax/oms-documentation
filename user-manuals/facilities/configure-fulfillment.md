@@ -1,8 +1,11 @@
-# Configure Online Fulfillment
+# Manage Facility Participation
 
-Configuring the scope of participation of a facility in online fulfillment is made convenient through the `Fulfillment Settings` card on the facility details page, allowing users to quickly set up facility-specific configurations. Users can configure the following settings for the facility:
+Configuring the scope of participation of a facility in online fulfillment is made convenient through the `Sell inventory online` card on the facility details page. Retailers can now manage whether a facility will participate in inventory computation for a channel from the `Sell inventory online` card.
 
-* **Sell Inventory Online:** `Sell Inventory Online` function helps users to simply choose whether they want to sell inventory online for that facility. Stores or warehouses can temporarily choose to turn online fulfillment off for several reasons such as high footfall, natural calamities, lack of resources for fulfillment, etc. Hence in such situations stores and warehouses are turned off for online fulfillment to avoid order brokering. Users also have quick access to turn online fulfillment on/off on the find facilities page.
+# Configure Fulfillment Settings
+
+Users can configure the following settings for the facility:
+
 *  **Allow Pickup:** BOPIS operations require a staging area where customers can collect their orders. However, user can decide whether they have the capacity to fulfill BOPIS orders by simply toggling on/off the `Allow pickup` settings to enable or disable BOPIS for the selected facility.
 *   **Use Native Fulfillment App:** `Use native fulfillment app` setting enables user to specify whether the facility uses HotWax Commerce’s fulfillment app or third-party fulfillment apps. For warehouses employing a Warehouse Management System (WMS) for fulfillment, retailers can turn off the toggle, signifying that HotWax Commerce's fulfillment app will not be utilised.
 *  **Generate Shipping Labels:** HotWax Commerce allows users to integrate with carrier partners, so that at the time of fulfillment via HotWax Commerce’s Fulfillment app, shipping labels can be automatically generated for the shipment process. Retailers who opt not to integrate HotWax Commerce with their carrier partners and prefer to manually enter tracking IDs in HotWax Commerce to update on Shopify can toggle off the `Generate Shipping Labels` settings.
