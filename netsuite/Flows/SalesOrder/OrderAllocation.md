@@ -1,14 +1,12 @@
 # Order Allocation
 
-After an order's items are allocated, the OMS begins syncing them to systems that are responsible for fulfillment of those items. When items are allocated to stores for fulfillment, they show up in the HotWax Store Fulfillment application.&#x20;
-
-<figure><img src="../../.gitbook/assets/HC fulfillment.png" alt=""><figcaption><p>Items allocated to stores appear in HotWax Commerce Store Fulfillment App</p></figcaption></figure>
+After an order's items are allocated, the OMS begins syncing them to systems that are responsible for fulfillment of those items. When items are allocated to stores for fulfillment, they show up in the HotWax Store Fulfillment App.
 
 If the facility where an item is allocated uses NetSuite for fulfillment, usually a warehouse, then the OMS syncs those items' allocation with NetSuite.
 
 It's important to remember that if items are not allocated to a "NetSuite Facility" their allocation is not synced to NetSuite until after fulfillment is complete.
 
-<figure><img src="../../.gitbook/assets/Fulfillment in NetSuite.png" alt=""><figcaption><p>Items' allocations synced from HotWax Commerce to NetSuite</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/fulfillment in NetSuite.png" alt=""><figcaption><p>Items' allocations synced from HotWax Commerce to NetSuite</p></figcaption></figure>
 
 **Actions**
 
@@ -53,6 +51,7 @@ A scheduled job in HotWax Commerce imports this rejected order item feed and mov
 ```
 HC_MR_ExportedRejectedSalesOrderItemCSV
 ```
+
 **SFTP Location**
 
 ```
@@ -67,7 +66,7 @@ IMP_ORDER_ITM_RJCT
 
 ## Order Rejection from HotWax Commerce
 
-If an order is rejected from the HotWax Store Fulfillment app with a valid inventory issue reason, then inventory delta's are also pushed to NetSuite. These are the valid inventory variance reasons to be pushed to NetSuite:
+If an order is rejected from the HotWax Store Fulfillment App with a valid inventory issue reason, then inventory delta's are also pushed to NetSuite. These are the valid inventory variance reasons to be pushed to NetSuite:
 
 * VAR\_STOLEN
 * VAR\_DAMANGED
