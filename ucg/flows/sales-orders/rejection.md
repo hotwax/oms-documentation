@@ -24,15 +24,15 @@ The NetSuite facility ID that will be used for rejections are:
 
 ```xml
 
-<Enumeration enumId="CN_FL_EO" enumTypeId="REPORT_NO_VAR" enumName="Can not fulfill entire order" enumCode="CN_FL_EO" description="Cannot Fulfill Entire Order" />
+<Enumeration enumId="CN_FL_EO" enumTypeId="REPORT_NO_VAR" enumName="Cannot fulfill entire order - Will not affect inventory" enumCode="CN_FL_EO" description="Cannot Fulfill Entire Order" />
 <VarianceReason varianceReasonId="CN_FL_EO" description="Cannot fulfill entire order" />
 
-<Enumeration enumId="NOT_BE_ATP" enumTypeId="REPORT_NO_VAR" enumName="Should not be ATP" enumCode="NOT_BE_ATP" description="Not be ATP" />
+<Enumeration enumId="NOT_BE_ATP" enumTypeId="REPORT_NO_VAR" enumName="Item should not be ATP - Zero out ATP inventory" enumCode="NOT_BE_ATP" description="Not be ATP" />
 <VarianceReason varianceReasonId="NOT_BE_ATP" description="Should not be ATP" />
 
-<Enumeration enumId="NOT_FOUND" enumTypeId="REPORT_ALL_VAR" enumName="Not found" enumCode="NOT_FOUND" description="Not found" />
+<Enumeration enumId="NOT_FOUND" enumTypeId="REPORT_ALL_VAR" enumName="Not found" enumCode="NOT_FOUND" description="Not found - Zero out ATP inventory" />
 <VarianceReason varianceReasonId="NOT_FOUND" description="Inventory not found hence rejected order" />
 
 ```
 
-Also, change the `enum type ID` for Damaged reason already in OMS to REPORT_ALL_VAR. 
+Also, change the `enumTypeId` for Damaged reason already in OMS to REPORT_ALL_VAR and `description` to `Damaged - Zero out ATP inventory`
