@@ -6,8 +6,8 @@
 ## HotWax Commerce
 
 * [Fulfillment](hotwax/fulfillment/README.md)
- * [Order Approval](hotwax/fulfillment/orderApproval.md)
- * [Shipping Label Generation](hotwax/fulfillment/shipping-label-generation.md)
+  * [Order Approval](hotwax/fulfillment/orderApproval.md)
+  * [Shipping Label Generation](hotwax/fulfillment/shipping-label-generation.md)
 * [BOPIS](hotwax/bopis/README.md)
   * [Notifications](hotwax/bopis/notifications.md)
 * [Job Manager](hotwax/jobManager.md)
