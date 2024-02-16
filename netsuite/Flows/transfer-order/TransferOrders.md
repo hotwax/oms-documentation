@@ -29,15 +29,13 @@ Transfer Orders are initiated within the NetSuite ERP system, facilitating the i
 Generate Fulfilled Transfer Order file:
 
 ```
-HC_generateCSV_FulfilledTransferOrders
+HC_MR_ExportedTransferOrderCSV
 ```
 
 ### Import Transfer Orders into HotWax Commerce
 
 2. A scheduled job within HotWax Commerce Integration Platform monitors the SFTP location, regularly checking for new Transfer Order CSV files. Upon identifying a new Transfer Order CSV file, the job generates two additional CSV files: one for inventory variance and the other for pending receipt transfer orders.
-
 3. A scheduled job within HotWax Commerce OMS reads the inventory variance CSV file and reduces inventory for transferred products from the origin facility.
-
 4. Another scheduled job within HotWax Commerce OMS is employed that reads the pending receipt transfer orders CSV file and creates inbound shipments in the OMS at the destination facility.
 
 **SFTP Locations**
