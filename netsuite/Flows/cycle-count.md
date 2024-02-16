@@ -20,11 +20,11 @@ The inventory count process initiates within the store, where store associates l
 
 ### Pushing Cycle Count Inventory Variance File to HotWax Commerce
 
-1. Store associates upload the Cycle Count file from the app to the HotWax Commerce server. Store managers review this file, approve it, and subsequently, inventory cycle count variances are recorded in HotWax Commerce.
+Store associates upload the Cycle Count file from the app to the HotWax Commerce server. Store managers review this file, approve it, and subsequently, inventory cycle count variances are recorded in HotWax Commerce.
 
 ### Export Cycle Count Inventory Variances from HotWax Commerce
 
-2. Once inventory cycle count variances are successfully logged in HotWax Commerce, a specific job in our integration platform creates a CSV file containing all the cycle count inventory variance records. This file is then placed in an SFTP location, ensuring that it is readily accessible for further processing.
+1. Once inventory cycle count variances are successfully logged in HotWax Commerce OMS, a scheduled job within HotWax Commerce Integration Platform generates a CSV file containing all the cycle count inventory variance records. This file is then placed in an SFTP location, ensuring that it is readily accessible for further processing.
 
 {% hint style="info" %}
 Successful logging of an inventory count is indicated by its status being "INV\_COUNT\_COMPLETED"
@@ -55,7 +55,7 @@ Cycle Count Inventory Variance of Actual vs Systemic:
 
 ### Import Cycle Count Inventory Variance in NetSuite
 
-3. In NetSuite, a Scheduled Suite Script is employed to download and import the CSV files from the SFTP location. This script leverages the native CSV Import tool provided by NetSuite to create Inventory Adjustment records. The use of the NetSuite CSV Import tool for Inventory Adjustments eliminates the need for the N/record module in this specific integration, offering an efficient and accurate synchronization method.
+2. In NetSuite, a Scheduled Suite Script is employed to download and import the CSV files from the SFTP location. This script leverages the native CSV Import tool provided by NetSuite to create Inventory Adjustment records. The use of the NetSuite CSV Import tool for Inventory Adjustments eliminates the need for the N/record module in this specific integration, offering an efficient and accurate synchronization method.
 
 **SuiteScripts**
 
@@ -79,11 +79,11 @@ Unlike cycle counting, where an inventory count is conducted periodically, this 
 
 ### Pushing Inventory Variance to HotWax Commerce
 
-1. Store managers log the inventory variances through the app, along with providing the relevant reasons, these recorded inventory variances automatically update the inventory in HotWax Commerce.
+Store managers log the inventory variances through the app, along with providing the relevant reasons, these recorded inventory variances automatically update the inventory in HotWax Commerce.
 
 ### Export Inventory Variance from HotWax Commerce
 
-2. Once inventory variances are successfully updated in HotWax Commerce, a specific job in our integration platform creates a CSV file containing all the inventory variance records. This file is then placed in an SFTP location from where NetSuite can read it.
+1. Once inventory variances are successfully updated in HotWax Commerce, a scheduled job within HotWax Commerce integration platform generates a CSV file containing updated inventory data with all the inventory variance records. This file is then placed in an SFTP location from where NetSuite can read it.
 
 **Jobs in HotWax Commerce**
 
@@ -122,7 +122,7 @@ The CSV file containing inventory item variance feed is also stored in the desig
 /home/{sftp-username}/netsuite/inventorytransfer/csv
 ```
 
-3. In NetSuite, another Scheduled Suite Script is employed to download and import the CSV files from the SFTP location. This script leverages the native CSV Import tool provided by NetSuite to create Inventory Adjustment records.
+2. In NetSuite, another Scheduled Suite Script is employed to import the CSV files from the SFTP location and update the inventory records. This script leverages the native CSV Import tool provided by NetSuite to create Inventory Adjustment records.
 
 **SuiteScripts**
 

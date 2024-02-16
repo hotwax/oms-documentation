@@ -20,7 +20,7 @@ To successfully create a sales order in NetSuite, [it is a prerequisite to have 
 
 Export customers from HotWax Commerce
 
-1. A scheduled job in HotWax Commerce operates at defined intervals to generate a CSV file comprising customers who have not been synchronized to NetSuite. This job can be configured to run at regular intervals, typically set at an hourly frequency. Customers who haven't been synchronized within the last hour are included in this CSV file for synchronization with NetSuite.
+1. A scheduled job within HotWax Commerce Integration Platform operates at defined intervals to generate a CSV file comprising customers who have not been synchronized to NetSuite. This job can be configured to run at regular intervals, typically set at an hourly frequency. Customers who haven't been synchronized within the last hour are included in this CSV file and placed at an SFTP location for synchronization with NetSuite.
 
 {% hint style="info" %}
 **HotWax Internals**
@@ -48,8 +48,9 @@ HC_SC_ImportCustomer
 
 #### Export customers IDs from NetSuite and import into HotWax
 
-3. Once customers are created in NetSuite, a scheduled script exports recently created customers in a file at an SFTP location to be imported by HotWax Commerce.
-4. After HotWax imports this file, the OMS now has confirmation of customer synchronization.
+3. Once customers are created in NetSuite, a scheduled script exports recently created customers in a CSV file at an SFTP location to be imported by HotWax Commerce.
+
+4. A scheduled job within Hotwax Commerce OMS reads this file from the SFTP location and syncs the NetSuite customer IDs, confirming the customer synchronization in the OMS.
 
 **SuiteScripts**
 
@@ -106,9 +107,9 @@ Capturing orders in HotWax Commerce initiates the creation of orders in "created
 
 #### Export new orders to NetSuite
 
-1. A job in HotWax Commerce Integration platform creates a CSV file of orders in "created" status that have not yet been sent to NetSuite. When creating this file HotWax Commerce also ensures that the customer already exists in NetSuite using the customer ID saved in the last step.
+  1. A job within HotWax Commerce Integration Platform generates a CSV file of orders in "created" status that have not yet been sent to NetSuite and places this file at an SFTP location. When creating this file HotWax Commerce also ensures that the customer already exists in NetSuite using the customer ID saved in the last step.
 
-The file contains details such as unit prices, order adjustments, and shipping costs, excluding direct tax amounts. HotWax Commerce omits the tax amount from the file and sends tax codes for the individual order items because NetSuite independently computes the taxes based on these codes and applies them accurately to each order item, ensuring precise tax calculations within NetSuite.
+  The file contains details such as unit prices, order adjustments, and shipping costs, excluding direct tax amounts. HotWax Commerce omits the tax amount from the file and sends tax codes for the individual order items because NetSuite independently computes the taxes based on these codes and applies them accurately to each order item, ensuring precise tax calculations within NetSuite.
 
 #### Order and Item Discounts
 
@@ -138,7 +139,7 @@ Export 'Created' orders with verified customers
 /home/{sftp-username}/netsuite/salesorder/export
 ```
 
-2. A scheduled SuiteScript in NetSuite reads the CSV file from the SFTP location and creates sales order records using the CSV Import function of the N/Task module.
+2. A scheduled SuiteScript in NetSuite reads this CSV file from the SFTP location and creates sales order records using the CSV Import function of the N/Task module.
 
 **SuiteScript**
 
@@ -190,7 +191,7 @@ This step syncs NetSuite sales order line item IDs with HotWax Commerce order it
 
 #### Export order line item IDs from NetSuite
 
-1. A Map Reduce SuiteScript in NetSuite retrieves order line item IDs and generates a CSV file.
+1. A Map Reduce SuiteScript in NetSuite retrieves order line item IDs, generates and places the CSV file at an SFTP location.
 
 **SuiteScript**
 
@@ -206,7 +207,7 @@ HC_MR_ExportedSalesOrderItemCSV
 
 #### Import order line item IDs into HotWax Commerce
 
-2. A job in HotWax Commerce imports the CSV to pair NetSuite order line item IDs with appropriate order items.
+2. A job within HotWax Commerce OMS imports this CSV file from the SFTP location and associates NetSuite order line item IDs with corresponding order items.
 
 **Job in HotWax Commerce**
 
@@ -229,7 +230,7 @@ The synchronization of Sales Order IDs from NetSuite to HotWax Commerce is a cri
 
 #### Export order IDs from NetSuite
 
-1. A Map Reduce SuiteScript in NetSuite fetches pending fulfillment orders and generates a CSV file with internal sales order IDs.
+1. A Map Reduce SuiteScript in NetSuite fetches pending fulfillment orders, generates a CSV file with internal sales order IDs and place this file at an SFTP location.
 
 **SuiteScript**
 
@@ -245,7 +246,7 @@ HC_MR_ExportedSalesOrderCSV
 
 #### Import order IDs into HotWax Commerce
 
-2. A job in HotWax Commerce imports the CSV to associate NetSuite order IDs with corresponding orders.
+2. A job within HotWax Commerce OMS imports this CSV file and associates NetSuite order IDs with corresponding orders.
 
 **Job in HotWax Commerce**
 
@@ -270,7 +271,7 @@ To ensure that only applicable customer deposits are created in NetSuite, orders
 
 #### Export Customer Deposit from HotWax Commerce
 
-1. HotWax Commerce runs a scheduled job that generates a JSON file with order details and their respective grand totals.
+1. HotWax Commerce Integration Platform runs a scheduled job that generates a JSON file comprising of order details with their respective grand totals and places this file at an SFTP location.
 
 **SFTP Locations**
 
@@ -282,7 +283,7 @@ Export customer deposit for orders with NetSuite order identification
 
 #### Import Customer Deposit into NetSuite
 
-2. A SuiteScript in NetSuite creates customer deposit records in "undeposited" status based on the JSON file from the SFTP server. It employs the N/Record module for record creation.
+2. A SuiteScript in NetSuite reads this JSON file from the SFTP location and creates customer deposit records in "undeposited" status. It employs the N/Record module for record creation.
 
 **SuiteScript**
 
@@ -302,7 +303,7 @@ This step involves marking of orders as "Approved" for further processing and fu
 
 **Actions**
 
-A scheduled job in HotWax Commerce validates order items and marks them "Approved."
+A scheduled job within HotWax Commerce Integration Platform validates order items, generates and place the CSV file at an SFTP location. A scheduled job within HotWax Commerce OMS reads this CSV file from the SFTP location and marks order items "Approved".
 
 <details>
 

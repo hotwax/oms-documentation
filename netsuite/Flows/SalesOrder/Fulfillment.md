@@ -8,7 +8,7 @@ When a warehouse fulfills order items in NetSuite, fulfilled order information i
 
 **Actions**
 
-1. A Map Reduce SuiteScript generates a CSV file containing fulfilled orders and places it on the SFTP server.
+1. A Map Reduce SuiteScript generates a CSV file containing fulfilled orders and places it at an SFTP location.
 
 **SuiteScript**
 
@@ -22,7 +22,9 @@ HC_MR_ExportedSalesOrderFulfillmentCSV
 /home/{sftp-username}/netsuite/salesorder/import/fulfillment
 ```
 
-2. A job in HotWax Commerce integration platform reads the file, marking order items as fulfilled in the HotWax Commerce.
+2. A scheduled job within HotWax Commerce Integration Platform reads and transforms this CSV file into the JSON format so that OMS can consume this file. This JSON file is then placed at an SFTP location.
+
+3. A scheduled job within HotWax Commerce OMS reads this JSON file from the SFTP location, marking order items as fulfilled in the HotWax Commerce.
 
 **Job in HotWax Commerce**
 
@@ -43,11 +45,11 @@ While fulfillment locations are indeed transmitted to NetSuite after in-store or
 
 **Actions**
 
-1. A scheduled job within HotWax Commerce creates a feed of outbound shipments as a JSON file and places it in an SFTP file.
+1. A scheduled job within HotWax Commerce Integration Platform retrieves fulfilled order items and creates a feed of outbound shipments as a JSON file and places it at an SFTP location.
 
 _to be added_
 
-2. A Scheduled Script in NetSuite reads the JSON file from SFTP, allocating locations to the orders within NetSuite by updating order records. Additionally, it creates fulfillment records in NetSuite based on the HotWax Commerce shipment data using the N/Record module of NetSuite.
+2. A Scheduled Script in NetSuite reads this JSON file from the SFTP location, allocating locations to the orders within NetSuite by updating order records. Additionally, it creates fulfillment records in NetSuite based on the HotWax Commerce shipment data using the N/Record module of NetSuite.
 
 **SuiteScript**
 
