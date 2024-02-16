@@ -100,9 +100,7 @@ Store associates use the HotWax Commerce Receiving App to receive transferred in
 
 ### Export Item Receipts from HotWax Commerce
 
-1. Item Receipt records are created within HotWax Commerce when Transfer Orders are received. These records are essential for updating inventory numbers and ensuring that the available stock is accurately represented. To maintain a comprehensive record, a designated job within HotWax Commerce Integration Platform exports the Item Receipts created within the system Each Item Receipt is mapped to the corresponding Transfer Order, ensuring efficient reconciliation and further processing.
-
-To facilitate the subsequent processing of this data, the JSON file is securely placed in an SFTP location, making it accessible for NetSuite.
+1. Item Receipt records are created within HotWax Commerce when Transfer Orders are received. These records are essential for updating inventory numbers and ensuring that the available stock is accurately represented. To maintain a comprehensive record, a designated job within HotWax Commerce Integration Platform exports the Item Receipts created within the system Each Item Receipt is mapped to the corresponding Transfer Order, ensuring efficient reconciliation and further processing. To facilitate the subsequent processing of this data, the JSON file is securely placed in an SFTP location, making it accessible for NetSuite.
 
 **SFTP Locations**
 
