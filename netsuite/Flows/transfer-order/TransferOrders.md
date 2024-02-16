@@ -134,7 +134,7 @@ The synchronization process extends to the automated status update of the associ
 Import received Transfer Order file:
 
 ```
-HC_MR_ExportedTransferOrderCSV
+HC_SC_ImportTransferOrderReceipts
 ```
 
 {% hint style="info" %}
