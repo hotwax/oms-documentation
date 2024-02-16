@@ -106,3 +106,7 @@ Resolution:
 3. Save and Broker Order: After adding the contact number, save the changes, and broker the order again for fulfillment.
 
 If the issues persist despite following the troubleshooting steps, consider reviewing the specific requirements of the shipping method or contacting HotWax Commerce support for further assistance.
+
+{% hint style="info" %}
+If you are using test APIs, then there may be a slight delay in shipping label generation, wait for a few minutes and try generating label again, if it's not generated on the first try.
+{% endhint %}
