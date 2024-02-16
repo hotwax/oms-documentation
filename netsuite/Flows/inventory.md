@@ -41,7 +41,7 @@ HC_uploadCSV_InventoryItems
 /home/{sftp.user}/netsuite/inventoryitem/csv
 ```
 
-3. The final step in the workflow involves a scheduled job within HotWax Commerce. This job is responsible for reading the Inventory Sync CSV files from the SFTP location. It utilizes this data to reset the inventory numbers for products within the HotWax Commerce system.
+3. The final step in the workflow involves a scheduled job within HotWax Commerce OMS. This job is responsible for reading the Inventory Sync CSV files from the SFTP location. It utilizes this data to reset the inventory numbers for products within the HotWax Commerce system.
 
 **Job in HotWax Commerce**
 

@@ -16,13 +16,13 @@ The synchronization of POS sales from HotWax Commerce to NetSuite involves the c
 
 ### Sync POS orders to NetSuite
 
-1. HotWax identifies POS completed orders that need to be synced to NetSuite by checking the following conditions.
+1. A job within HotWax Commerce Integration Platform identifies POS completed orders that need to be synced to NetSuite by checking the following conditions:
 
 * Order Status: Completed.
 * Sales Channel: POS\_Channel.
 * Shipping Method: POS\_COMPLETED.
 
-Orders that match these criteria are exported to an SFTP location in a CSV file.
+POS orders that match these criteria are exported to an SFTP location in a CSV file.
 
 **SFTP Locations**
 
@@ -34,7 +34,7 @@ Orders that match these criteria are exported to an SFTP location in a CSV file.
 **Time based sync** HotWax uses a time based cursor to track which orders have been synced. This means if sync fails for an order, it will not be automatically retried.
 {% endhint %}
 
-2. A Scheduled Suite Script in NetSuite imports the file from the SFTP server. The SuiteScript uses the CSV ImportTask function of the N/Task module to import the POS order details as Cash Sale records directly into NetSuite.
+2. A Scheduled SuiteScript in NetSuite imports this CSV file from the SFTP server. The SuiteScript uses the CSV ImportTask function of the N/Task module to import the POS order details as Cash Sale records directly into NetSuite.
 
 **SuiteScript**
 
@@ -86,7 +86,7 @@ HC_MR_ExportedCashSaleCSV
 /home/{sftp-username}/netsuite/salesorder/import/orderidentification
 ```
 
-2. The Import Order Identification job in HotWax Commerce then retrieves the exported CSV file from the SFTP server and creates Order Identification records in the OMS, linking the POS orders with their respective NetSuite internal IDs.
+2. The Import Order Identification job within HotWax Commerce OMS then retrieves the exported CSV file from the SFTP server and creates Order Identification records in the OMS, linking the POS orders with their respective NetSuite internal IDs.
 
 **Job in HotWax Commerce**
 

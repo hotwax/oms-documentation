@@ -38,7 +38,7 @@ HC_MR_ExportedPurchaseOrderCSV
 
 ### Import Purchase Orders into HotWax Commerce
 
-2. In HotWax Commerce, a designated job monitors the SFTP location, periodically checking for new Purchase Order CSV files. The job uses the robust APIs provided by HotWax Commerce's Export/Import tools to import these Purchase Orders.
+2. A scheduled job within HotWax Commerce OMS monitors the SFTP location, periodically checking for new Purchase Order CSV files. The job uses the robust APIs provided by HotWax Commerce's Export/Import tools to import these Purchase Orders.
 
 **Job in HotWax Commerce**
 
@@ -71,11 +71,11 @@ Once the Purchase Orders are synchronized, store associates use the Receiving Ap
 
 <figure><img src="../.gitbook/assets/po received.png" alt=""><figcaption><p>Item Receipts Sync from HotWax Commerce to NetSuite</p></figcaption></figure>
 
-1. Once the Purchase Orders (POs) are received by store associates using the HotWax Commerce Receiving App, the process involves the creation of Item Receipt records within HotWax Commerce. These records play a crucial role in increasing inventory numbers for the received products, ensuring that newly received inventory is readily available for eCommerce platforms to sell.
+Once the Purchase Orders (POs) are received by store associates using the HotWax Commerce Receiving App, the process involves the creation of Item Receipt records within HotWax Commerce. These records play a crucial role in increasing inventory numbers for the received products, ensuring that newly received inventory is readily available for eCommerce platforms to sell.
 
 ### Export Item Receipts from HotWax Commerce
 
-2. To ensure a comprehensive and accurate record of the items received are synchronized back to NetSuite, HotWax Commerce employs a specific job to export Item Receipts created within the system. Each Item Receipt record is associated with its respective Purchase Order. The mapping between Item Receipts and Purchase Orders is critical for reconciliation and further processing. This job runs at defined intervals, typically on a schedule that aligns with the retailer's specific requirements. It gathers the Item Receipt data and creates a JSON file, capturing all the essential details.
+1. To ensure a comprehensive and accurate record of the items received are synchronized back to NetSuite, a scheduled job within HotWax Commerce Integration Platform is employed to export Item Receipts created within the system. Each Item Receipt record is associated with its respective Purchase Order. The mapping between Item Receipts and Purchase Orders is critical for reconciliation and further processing. This job runs at defined intervals, typically on a schedule that aligns with the retailer's specific requirements. It gathers the Item Receipt data and creates a JSON file, capturing all the essential details.
 
 Internal location where HotWax places CSV to convert it to NetSuite format
 
@@ -96,7 +96,11 @@ To facilitate the subsequent processing of this data, the JSON file is securely 
 
 ### Import Item Receipts into NetSuite
 
-3. In NetSuite, a scheduled script retrieves the JSON files with item receipt data from the SFTP location. It then goes through each record and generates new item receipt records within NetSuite. The script uses the N/record module because the CSV import task in NetSuite doesn't accommodate item receipt records, making the JSON file the method used to transmit receipts to NetSuite.
+2. In NetSuite, a scheduled script retrieves the JSON files with item receipt data from the SFTP location. It then goes through each record and generates new item receipt records within NetSuite. The script uses the N/record module because the CSV import task in NetSuite doesn't accommodate item receipt records, making the JSON file the method used to transmit receipts to NetSuite.
+
+### Automated Purchase Order Status Update
+
+The synchronization process doesn't stop at the creation of Item Receipts; it extends to automating the change in status for the associated Purchase Orders. Upon successful creation of Item Receipt records, the status of the respective Purchase Orders in NetSuite is automatically updated from "Pending" to "Received."
 
 **SuiteScript**
 
@@ -107,7 +111,3 @@ HC_SC_ImportPurchaseOrderReceipts
 {% hint style="info" %}
 The HC\_SC\_ImportPurchaseOrderReceipts SuiteScript also generates a CSV file highlighting erroneous records found during processing and uploads the file to the SFTP server. Simultaneously, an email alert is automatically triggered to designated personnel, helping them quickly pinpoint the source of the issue and accelerating troubleshooting.
 {% endhint %}
-
-### Automated Purchase Order Status Update
-
-4. The synchronization process doesn't stop at the creation of Item Receipts; it extends to automating the change in status for the associated Purchase Orders. Upon successful creation of Item Receipt records, the status of the respective Purchase Orders in NetSuite is automatically updated from "Pending" to "Received."

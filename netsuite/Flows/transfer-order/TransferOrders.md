@@ -34,8 +34,11 @@ HC_generateCSV_FulfilledTransferOrders
 
 ### Import Transfer Orders into HotWax Commerce
 
-2. In HotWax Commerce, a dedicated job monitors the SFTP location, regularly checking for new Transfer Order CSV files. This job utilizes the powerful APIs provided by HotWax Commerce's Export/Import tools to import these Transfer Orders. If HotWax is only being used for receiving transfer orders, the Transfer Order file produced by NetSuite is pre-processed to generate an inventory variance file that reduces inventory for transferred products from the origin facility.
-3. After this variance file is produced, the pending receipt transfer order file is moved by HotWax to another internal FTP location where a scheduled job will process it to create "inbound shipments in the OMS at the destination facility."
+2. A scheduled job within HotWax Commerce Integration Platform monitors the SFTP location, regularly checking for new Transfer Order CSV files. Upon identifying a new Transfer Order CSV file, the job generates two additional CSV files: one for inventory variance and the other for pending receipt transfer orders.
+
+3. A scheduled job within HotWax Commerce OMS reads the inventory variance CSV file and reduces inventory for transferred products from the origin facility.
+
+4. Another scheduled job within HotWax Commerce OMS is employed that reads the pending receipt transfer orders CSV file and creates inbound shipments in the OMS at the destination facility.
 
 **SFTP Locations**
 
@@ -99,8 +102,9 @@ Store associates use the HotWax Commerce Receiving App to receive transferred in
 
 ### Export Item Receipts from HotWax Commerce
 
-1. Item Receipt records are created within HotWax Commerce when Transfer Orders are received. These records are essential for updating inventory numbers and ensuring that the available stock is accurately represented. To maintain a comprehensive record, a designated job in HotWax Commerce exports the Item Receipts created within the system. Each Item Receipt is mapped to the corresponding Transfer Order, ensuring efficient reconciliation and further processing.
-2. To facilitate the subsequent processing of this data, the JSON file is securely placed in an SFTP location, making it accessible for NetSuite.
+1. Item Receipt records are created within HotWax Commerce when Transfer Orders are received. These records are essential for updating inventory numbers and ensuring that the available stock is accurately represented. To maintain a comprehensive record, a designated job within HotWax Commerce Integration Platform exports the Item Receipts created within the system Each Item Receipt is mapped to the corresponding Transfer Order, ensuring efficient reconciliation and further processing.
+
+To facilitate the subsequent processing of this data, the JSON file is securely placed in an SFTP location, making it accessible for NetSuite.
 
 **SFTP Locations**
 
@@ -121,7 +125,11 @@ Received Transfer Orders NetSuite JSON:
 
 ### Import Item Receipts into NetSuite
 
-3. In NetSuite, a scheduled Suite Script reads the JSON files containing Item Receipt data from the SFTP location. It iterates through each record and seamlessly creates new Item Receipt records within NetSuite. The script uses the versatile N/record module to ensure a smooth transition.
+2. In NetSuite, a scheduled SuiteScript reads this JSON file containing Item Receipt data from the SFTP location. It iterates through each record and seamlessly creates new Item Receipt records within NetSuite. The script uses the versatile N/record module to ensure a smooth transition.
+
+### Automated Transfer Order Status Update
+
+The synchronization process extends to the automated status update of the associated Transfer Orders. Upon successful creation of Item Receipt records, the status of the Transfer Orders in NetSuite is automatically changed from "Pending" to "Received."
 
 **SuiteScripts**
 
@@ -134,7 +142,3 @@ HC_MR_ExportedTransferOrderCSV
 {% hint style="info" %}
 The HC\_SC\_ImportTransferOrderReceipts SuiteScript also generates a CSV file highlighting erroneous records found during processing and uploads the file to the SFTP server. Simultaneously, an email alert is automatically triggered to designated personnel, helping them quickly pinpoint the source of the issue and accelerating troubleshooting.
 {% endhint %}
-
-### Automated Transfer Order Status Update
-
-4. The synchronization process extends to the automated status update of the associated Transfer Orders. Upon successful creation of Item Receipt records, the status of the Transfer Orders in NetSuite is automatically changed from "Pending" to "Received."
