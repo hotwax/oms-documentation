@@ -21,7 +21,7 @@
 {% tabs %}
 
 {% tab title="Upgrade Data" %}
-[Link to Upgrade Data](https://git.hotwax.co/commerce/oms/-/blob/v5.4.3/applications/hwmapps/upgrade/current/UpgradeData.xml?ref_type=tags)
+(<ReturnAdjustmentType description="Appeasement" hasTable="N" returnAdjustmentTypeId="APPEASEMENT"/>)
 {% endtab %}
 
 
