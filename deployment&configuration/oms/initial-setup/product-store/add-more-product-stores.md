@@ -2,12 +2,12 @@
 
 In HotWax Commerce, managing multiple product stores is valuable for retailers with diverse brands. Each store can be tailored to represent a specific retail brand, enabling efficient and customized management. This feature streamlines operations to meet the unique needs of each retail brand.
 
-When retailers deploy HotWax Commerce, a default product store is automatically created. The settings for this default store can be configured on the 'View Product Store Page.' Visit the product store configuration page to explore the various configurations that can be set from this view.
+When retailers deploy HotWax Commerce, a default product store is automatically created. The settings for this default store can be configured on the `View Product Store Page`. Visit the [product store configuration page](./) to explore the various configurations that can be set from this view.
 
-However, if a retailer has multiple brands, an additional product store needs to be created. Follow these steps to create a new product store in HotWax Commerce,
+However, if a retailer has multiple brands, additional product stores need to be created. Follow these steps to create a new product store in HotWax Commerce,
 
 1. **Create Product Store Groups-** In HotWax Commerce, retailers can define product store groups linked to the company. When creating a product store, it is automatically added to the group of the default product store.
-2. **Create Product Store-** You can create a product store through the 'Create Store' page. Simply click on 'Create Store' from the hamburger menu. This action will open a form for creating a new product store. Retailers should fill out specific attributes with defined values. For instance, consider the details needed for a product store named WasatchSki. Adjust the following attributes according to your retail brand.
+2. **Create Product Store-** You can create a product store through the `Create Store` page. Simply click on `Create Store` from the hamburger menu. This action will open a form for creating a new product store. Retailers should fill out specific attributes with defined values. For instance, consider the details needed for a product store named WasatchSki. Adjust the following attributes according to your retail brand.
 
 | Attribute           | Value                  | Description              |
 | ------------------- | ---------------------- | ------------------------ |
@@ -59,7 +59,7 @@ Replace "WS\_CATALOG" and "WasatchSki Catalog" with the desired value for the ne
 
 </details>
 
-4. **Associate product store with product catalog** After creating a product store and product catalog in HotWax Commerce, the next crucial step is to associate them. This ensures accurate mapping, allowing the correct products to be linked with the designated product store. Utilize the following XML template for creating the association:
+4. **Associate product store with product catalog-** After creating a product store and product catalog in HotWax Commerce, the next crucial step is to associate them. This ensures accurate mapping, allowing the correct products to be linked with the designated product store. Utilize the following XML template for creating the association:
 
 <details>
 
@@ -71,9 +71,7 @@ Adjust "WS\_STORE" and "WS\_CATALOG" to match the respective product store and c
 
 </details>
 
-5. **Create Product Category**
-
-In HotWax Commerce, effective product management involves creating product categories, especially for handling pre-order and backorder products. The following attributes are essential for accurately defining product categories:
+5. **Create Product Category-** In HotWax Commerce, effective product management involves creating product categories, especially for handling pre-order and backorder products. The following attributes are essential for accurately defining product categories:
 
 The following fields need to be inserted to create the product category
 
@@ -131,7 +129,7 @@ Make sure to customize all product category IDs and names, and consider adding a
 
 </details>
 
-In this dataset, input the previously created product catalog ID and category IDs. Maintain the existing type IDs without alterations. Set the "from date" in the data either as the project's go-live date or 10 days past. Additionally, verify the sequence numbers in the data for accuracy.
+In this dataset, input the previously created product catalog ID and category IDs. Maintain the existing type IDs without alterations. Set the `from date` in the data either as the project's go-live date or 10 days past. Additionally, verify the sequence numbers in the data for accuracy.
 
 7. **Add Default data-** To ensure the seamless establishment of the product store, it's essential to integrate default data via XML import. However, moving forward, this default data will be omitted to streamline the product store creation process.
 
@@ -149,6 +147,6 @@ In this dataset, input the previously created product catalog ID and category ID
 
 These steps create the product store in HotWax Commerce. Ensure facilities that sell products of that brand are linked to the respective store. This association can be accomplished through the following steps:
 
-* Go to the EXIM page from the hamburger menu
-* Locate the facility page in the Warehouse section
+* Go to the `EXIM` page from the hamburger menu
+* Locate the `facility` page in the `Warehouse` section
 * Upload the CSV file for the Facility along with the facility name and location for the WS\_STORE product store. You can download the sample CSV to add the data according to the template provided.
