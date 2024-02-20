@@ -24,6 +24,10 @@ However, if a retailer has multiple brands, additional product stores need to be
 **Warning hints** Add company and product store details as per your retail brand
 {% endhint %}
 
+{% hint style="danger" %}
+Make sure your product store ID ends with `_store` for accurate product store representation.
+{% endhint %}
+
 Adjust the additional Product Store settings according to your specific requirements for the following details:
 
 | Attribute                   | Value                                                                                                         | Description                                                                  |
