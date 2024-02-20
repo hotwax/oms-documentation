@@ -18,10 +18,6 @@ Understanding the hierarchy of processors within process groups and parent proce
 
 5. **View Processors:** Double-click on the identified process group to view all the processors contained within it. Processors are represented as individual components responsible for performing various tasks on data as it flows through the NiFi system.
 
-6. **Manage Processors:** Once you've accessed the list of processors, you can manage them as needed. This may involve configuring properties, adjusting settings, or monitoring their performance to ensure efficient data processing.
-
-By following these steps within the Apache NiFi interface, users can effectively locate and manage processors, facilitating the smooth flow of data and ensuring the optimal performance of their data workflows.
-
 ## Manage Processors
 
 The feature to manage Process Groups within the HotWax Commerce platform is integral for users orchestrating complex data workflows. By offering a multitude of options through the context menu, users gain control over the configuration, monitoring, and optimization of their data pipelines.

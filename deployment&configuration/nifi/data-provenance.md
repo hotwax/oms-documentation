@@ -3,6 +3,7 @@
 NiFi's Data Provenance feature is a critical tool for users involved in monitoring and troubleshooting dataflows. It provides detailed information about the journey of data objects (FlowFiles) as they move through the system, enabling users to track, analyze, and understand data transformations, routing decisions, and processing events in real-time. By offering insights into data lineage, event details, and attribute modifications, Data Provenance empowers users to ensure dataflow compliance, optimize performance, and swiftly identify and resolve issues.
 
 ### Step-by-Step Usage Instructions:
+
 1. **Access Data Provenance Page:**
    - Right-click on the desired dataflow within the NiFi interface.
    - Select the "View Data Provenance" option from the menu.
@@ -27,7 +28,7 @@ Replaying FlowFiles within NiFi is a crucial feature that empowers users to insp
 
 **Access FlowFile Details:**
 
-1. Right-click on the desired FlowFile within the NiFi interface.
+1. Right-click on the desired processor within the NiFi interface.
 2. Select the "View Details" option from the context menu.
 
 **Navigate to Content Tab:**
@@ -38,7 +39,7 @@ Replaying FlowFiles within NiFi is a crucial feature that empowers users to insp
 
 1. Review information about the FlowFile's content, such as its location and size.
 2. Click the "Submit" button to replay the FlowFile at its current point in the flow.
-3. Optionally, click the "Download" button to download a copy of the FlowFile's content.
+3. Optionally, click the `Download` button to download a copy of the FlowFile's content.
 
 **Replay Last Event from Processor:**
 
