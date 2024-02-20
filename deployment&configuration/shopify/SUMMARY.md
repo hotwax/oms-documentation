@@ -23,3 +23,9 @@
 ## Additional resources
 * [Kit Products](SyncShopify/kitProducts.md)
 * [POS Completed Orders](SyncShopify/posCompletedOrders.md)
+* [End to End Order Flow](additional-resources/order-flow/README.md)
+    * [Order Creation](additional-resources/order-flow/order-creation.md)
+    * [Order Import](additional-resources/order-flow/orders-import.md)  
+    * [Order Brokering](additional-resources/order-flow/order-brokering.md)
+    * [Order Fulfillment](additional-resources/order-flow/order-fulfillment.md)
+    * [fulfillment-update](additional-resources/order-flow/fulfillment-update.md)
