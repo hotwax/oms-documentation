@@ -28,7 +28,7 @@ There are some default parkings available when you deploy HotWax Commerce, you c
 
 **Brokering Queue**
 
-Order brokering is the process of analyzing the order priority and determining the optimal fulfillment location, with proximity and inventory availability.  Brokering Queue serves as a waiting area for orders awaiting processing, ensuring that they are handled efficiently. If multiple brokering engines are scheduled to run at various times throughout the day, Orders placed between each brokering session will wait in the queue until the next scheduled processing time.
+Order brokering is the process of analyzing the order priority and determining the optimal fulfillment location, with proximity and inventory availability.  Brokering Queue serves as a waiting area for orders awaiting processing, ensuring that they are handled efficiently. If brokering engine is scheduled to run at various times throughout the day, Orders placed between each brokering session will wait in the queue until the next scheduled processing time.
 
 For example, if brokering engines are scheduled to run at 9:00 A.M. and 12:00 P.M.,orders placed between 9:00 A.M. and 12:00 P.M. will remain in the queue until 12:00 P.M. brokering session.
 
