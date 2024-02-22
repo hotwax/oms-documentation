@@ -20,7 +20,7 @@ Understanding the hierarchy of processors within process groups and parent proce
 
 ## Manage Processors
 
-The feature to manage Process Groups within the HotWax Commerce platform is integral for users orchestrating complex data workflows. By offering a multitude of options through the context menu, users gain control over the configuration, monitoring, and optimization of their data pipelines.
+The feature to manage Process Groups within NiFi is integral for users orchestrating complex data workflows. By offering a multitude of options through the context menu, users gain control over the configuration, monitoring, and optimization of their data pipelines.
 
 ### Step-by-Step Usage Instructions:
 
@@ -40,7 +40,7 @@ The feature to manage Process Groups within the HotWax Commerce platform is inte
     - Start or stop the Process Group based on operational requirements, ensuring efficient resource utilization and workflow execution.
 
 6. **Run Once**
-    - Execute a selected Processor exactly once, based on configured execution settings. Works only with Timer driven and CRON driven scheduling strategies.
+    - Execute a selected Processor exactly once, based on configured execution settings. However, this only works with Timer-driven and CRON-driven scheduling strategies.
 
 7. **Enable/Disable:**
     - Enable or disable all processors within the Process Group to control data processing activities and optimize system performance.
