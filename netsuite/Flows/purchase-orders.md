@@ -96,7 +96,7 @@ To facilitate the subsequent processing of this data, the JSON file is securely 
 
 ### Import Item Receipts into NetSuite
 
-2. In NetSuite, a scheduled script retrieves the JSON files with item receipt data from the SFTP location. It then goes through each record and generates new item receipt records within NetSuite. The script uses the N/record module because the CSV import task in NetSuite doesn't accommodate item receipt records, making the JSON file the method used to transmit receipts to NetSuite.
+2. In NetSuite, a scheduled script retrieves the JSON files with item receipt data from the SFTP location. It then goes through each record, generates new item receipt records and updates inventory numbers within NetSuite. The script uses the N/record module because the CSV import task in NetSuite doesn't accommodate item receipt records, making the JSON file the method used to transmit receipts to NetSuite.
 
 ### Automated Purchase Order Status Update
 
