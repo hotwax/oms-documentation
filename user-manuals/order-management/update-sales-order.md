@@ -2,6 +2,12 @@
 # Update Sales Order 
 _**This document outlines a step-by-step process to update order related details of the sales order in the HotWax Commerce Order management system.**_
 
+To perform the order allocation tasks, we first navigate to the View Sales Order page:
+
+1. Go to  the Hamburger Menu in the OMS > Order Management section > Sales Orders to open the Find Sales Order page.
+2. Select the order ID to open the View Sales Order page.
+
+
 ## Update Shipping details
 
 _**This document outlines a step-by-step process to update shipping details of the sales order in the HotWax Commerce Order management system:**_
@@ -14,12 +20,11 @@ Edit function is available only for approved orders.
 Details need to be updated for each shipgroup of an order.
 {% endhint %}
 
-1. Go to  the Hamburger Menu in the OMS > Order Management section > Sales Orders to open the Find Sales Order page.
-2. Select the order to open the View Sales Order page.
-3. Click the Edit function.
-4. Enter the required details in the form and save.
-5. Click the edit function against the Shipping method.
-6. Choose the method from the list and Save.
+
+1. Click the Edit function.
+2. Enter the required details in the form and save.
+3. Click the edit function against the Shipping method.
+4. Choose the method from the list and Save.
 
 {% embed url="https://youtu.be/11nFbayax3I" %}
 Video: Update Shipping Details
@@ -35,10 +40,9 @@ _**This document outlines a step-by-step process to cancel sales orders in the H
 Cancelling a sales order will automatically cancel all other sales order items in the order.
 {% endhint %}
 
-1. Go to the Hamburger Menu > Order Management > Sales Orders.&#x20;
-2. Select required order to open the Sales Order Detail page.
-3. Click the Status dropdown.&#x20;
-4. Select the Cancel function to cancel the entire sales order.&#x20;
+
+1. Click the Status dropdown.&#x20;
+2. Select the Cancel function to cancel the entire sales order.&#x20;
 
 {% embed url="https://youtu.be/u-CtB-pw-Kc" %}
 Video: Cancel sales order
@@ -50,12 +54,11 @@ Video: Cancel sales order
 
 _**This document outlines a step-by-step process to cancel sales order item in the HotWax Commerce Order management system.**_
 
-1. Go to the Hamburger Menu > Order Management > Sales Orders.&#x20;
-2. Select order to open the View Sales Order page.
-3. Go to the Item section.&#x20;
-4. Click the Edit Items function.
-5. Click the Delete function for  the respective line item/s.
-6. Click the Save function.
+
+1. Go to the Item section.&#x20;
+2. Click the Edit Items function.
+3. Click the Delete function for  the respective line item/s.
+4. Click the Save function.
 
 {% embed url="https://youtu.be/xFU28XyELd4" %}
 Video: Cancel Sales Order items
@@ -65,11 +68,16 @@ Video: Cancel Sales Order items
 
 ## Refresh Sales Order
 
-_**This document outlines a step-by-step process to reject the sales order items in the HotWax Commerce Order management system.**_
+_**Refreshing sales order allows retailers to reimport a sales order from Shopify to HotWax Commerce. Refreshing is required if an order update in Shopify is not included in the 'sync order update job'.**_
 
-1. Go to the Hamburger Menu > Order Management > Sales Orders to search order.
-2. Select the order to open the View Sales Order page.
-3. Check the existing order items in HotWax Commerce.
+HotWax Commerce can update the following details from Shopify:
+1. Adding items to an order
+2. Removing items from an order
+3. Changing item quantities
+4. Changing shipping addresses
+5. Changing customer contact detail
+
+
 
 **Verification at Shopify**
 

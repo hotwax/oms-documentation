@@ -1,6 +1,11 @@
 # Order Allocation
 _**This document outlines a step-by-step process to allocate the sales order items in the HotWax Commerce Order management system.**_
 
+To perform the order allocation tasks, we first navigate to the View Sales Order page:
+
+1. Go to  the Hamburger Menu in the OMS > Order Management section > Sales Orders to open the Find Sales Order page.
+2. Select the order ID to open the View Sales Order page.
+
 ## Release Items
 
 _**This document outlines a step-by-step process to release the sales order items in the HotWax Commerce Order management system.**_
@@ -9,12 +14,11 @@ _**This document outlines a step-by-step process to release the sales order item
 For automated facility selection, user can either wait next brokering run or use Broker Now function to broker items immediately.&#x20;
 {% endhint %}
 
-1. Go to  the Hamburger Menu in the OMS > Order Management section > Sales Orders to open the Find Sales Order page.
-2. Select the order to open the View Sales Order page.
-3. Select the line item and click Release function.&#x20;
-4. View the inventory and select any facility using the radio button.&#x20;
-5. Release the item to the selected facility.&#x20;
-6. Click the history function to view the changes.
+
+1. Select the line item and click Release function.&#x20;
+2. View the inventory and select any facility using the radio button.&#x20;
+3. Release the item to the selected facility.&#x20;
+4. Click the history function to view the changes.
 
 {% embed url="https://youtu.be/_8XcDyvb3sY" %}
 Video: Release item
@@ -24,12 +28,10 @@ Video: Release item
 
 _**This document outlines a step-by-step process to reject the sales order items in the HotWax Commerce Order management system.**_
 
-1. Go to  the Hamburger Menu in the OMS > Order Management section > Sales Orders to open the Find Sales Order page.
-2. Select the order to open the View Sales Order page.
-3. Select the line item and click the Reject function.&#x20;
-4. Select the reason using the radio button and Save.&#x20;
-5. Confirm rejection.&#x20;
-6. Click the history function to view the changes.
+1. Select the line item and click the Reject function.&#x20;
+2. Select the reason using the radio button and Save.&#x20;
+3. Confirm rejection.&#x20;
+4. Click the history function to view the changes.
 
 
 
@@ -41,13 +43,11 @@ Video: Reject sales order items
 
 _**This document outlines a step-by-step process to ship the sales order items in the HotWax Commerce Order management system.**_
 
-1. Go to  the Hamburger Menu in the OMS > Order Management section > Sales Orders to open the Find Sales Order page.
-2. Select the order to open the View Sales Order page.
-3. Click the Ship Items function.
-4. Select the line item/s to be marked as shipped.
-5. Select the Carrier party from the dropdown and enter the Tracking number.
-6. Mark the item as Shipped&#x20;
-7. Click the history function to view the changes.
+1. Click the Ship Items function.
+2. Select the line item/s to be marked as shipped.
+3. Select the Carrier party from the dropdown and enter the Tracking number.
+4. Mark the item as Shipped&#x20;
+5. Click the history function to view the changes.
 
 
 
@@ -61,21 +61,18 @@ _**This document outlines a step-by-step process to manage the order's auto-canc
 
 ### Update Auto-cancel Date on single order
 
-1. Go to  the Hamburger Menu > Order Management > Sales Order.
-2. Select the required order and go to the Sales Order View page.
-3. Go to the Item section and click on the edit function next to the auto-cancel date.
-4. Update the date from the Calendar&#x20;
-5. Click on Save function to save changes.
+1. Go to the Item section and click on the edit function next to the auto-cancel date.
+2. Update the date from the Calendar&#x20;
+3. Click on Save function to save changes.
 
 
 
 ### Remove Auto-cancel Date from single order
 
-1. Go to  the Hamburger Menu > Order Management > Sales Order.
-2. Select the required order and go to the Sales Order View page.
-3. Go to the Item Section and click on the edit function next to the auto-cancel date.
-4. Click on the delete icon to remove the auto cancel date.
-5. Click on Save function to save changes.
+
+1. Go to the Item Section and click on the edit function next to the auto-cancel date.
+2. Click on the delete icon to remove the auto cancel date.
+3. Click on Save function to save changes.
 
 
 
@@ -83,11 +80,10 @@ _**This document outlines a step-by-step process to manage the order's auto-canc
 
 _**This document outlines a step-by-step process to move items to order parking in the HotWax Commerce Order management system.**_
 
-1. Go to  the Hamburger Menu in the OMS > Order Management section > Sales Orders to open the Find Sales Order page.
-2. Select the order to open the View Sales Order page.
-3. Click the Move Items to Parking function.
-4. Choose the parking using the Radio button and Save.
-5. Confirm the Ship From column to view the selected parking.
+
+1. Click the Move Items to Parking function.
+2. Choose the parking using the Radio button and Save.
+3. Confirm the Ship From column to view the selected parking.
 
 Refer to the table below for parking description and purpose.
 
