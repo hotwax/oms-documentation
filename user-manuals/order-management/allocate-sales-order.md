@@ -1,5 +1,5 @@
 # Order Allocation
-_**This document outlines a step-by-step process to allocate the sales order items in the HotWax Commerce Order management system.**_
+
 
 To perform the order allocation tasks, we first navigate to the View Sales Order page:
 
@@ -8,7 +8,6 @@ To perform the order allocation tasks, we first navigate to the View Sales Order
 
 ## Release Items
 
-_**This document outlines a step-by-step process to release the sales order items in the HotWax Commerce Order management system.**_
 
 {% hint style="info" %}
 For automated facility selection, user can either wait next brokering run or use Broker Now function to broker items immediately.&#x20;
@@ -26,7 +25,7 @@ Video: Release item
 
 ## Reject Sales Order Items
 
-_**This document outlines a step-by-step process to reject the sales order items in the HotWax Commerce Order management system.**_
+
 
 1. Select the line item and click the Reject function.&#x20;
 2. Select the reason using the radio button and Save.&#x20;
@@ -41,7 +40,7 @@ Video: Reject sales order items
 
 ## Mark items shipped in OMS
 
-_**This document outlines a step-by-step process to ship the sales order items in the HotWax Commerce Order management system.**_
+
 
 1. Click the Ship Items function.
 2. Select the line item/s to be marked as shipped.
@@ -56,8 +55,6 @@ Video: Ship items in OMS
 {% endembed %}
 
 ## Manage Auto-Cancel Date
-
-_**This document outlines a step-by-step process to manage the order's auto-cancel dates in the HotWax Commerce Order management system.**_
 
 ### Update Auto-cancel Date on single order
 
@@ -77,8 +74,6 @@ _**This document outlines a step-by-step process to manage the order's auto-canc
 
 
 ## Move Items to Order Parking
-
-_**This document outlines a step-by-step process to move items to order parking in the HotWax Commerce Order management system.**_
 
 
 1. Click the Move Items to Parking function.

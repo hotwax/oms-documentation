@@ -1,6 +1,5 @@
 
 # Update Sales Order 
-_**This document outlines a step-by-step process to update order related details of the sales order in the HotWax Commerce Order management system.**_
 
 To perform the order allocation tasks, we first navigate to the View Sales Order page:
 
@@ -9,8 +8,6 @@ To perform the order allocation tasks, we first navigate to the View Sales Order
 
 
 ## Update Shipping details
-
-_**This document outlines a step-by-step process to update shipping details of the sales order in the HotWax Commerce Order management system:**_
 
 {% hint style="info" %}
 Edit function is available only for approved orders.
@@ -34,7 +31,6 @@ Video: Update Shipping Details
 
 ## Cancel Sales Order
 
-_**This document outlines a step-by-step process to cancel sales orders in the HotWax Commerce Order management system.**_
 
 {% hint style="info" %}
 Cancelling a sales order will automatically cancel all other sales order items in the order.
@@ -51,8 +47,6 @@ Video: Cancel sales order
 ---
 
 ## Cancel Sales Order Items
-
-_**This document outlines a step-by-step process to cancel sales order item in the HotWax Commerce Order management system.**_
 
 
 1. Go to the Item section.&#x20;
