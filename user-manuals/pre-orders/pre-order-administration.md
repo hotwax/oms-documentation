@@ -1,6 +1,6 @@
 # Pre-Order Administration
 
-_**This document walks through how to use the HotWax Commerce  administration  screens to manage pre-order allocation from purchase orders to sales orders.**_
+_**This document walks through how to use the HotWax Commerce administration  screens to manage pre-order allocation from purchase orders to sales orders.**_
 
 {% hint style="info" %}
  Go to  the Hamburger Menu in the OMS > Order Management section > Sales Orders to open the Find Sales Order page.
