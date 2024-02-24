@@ -11,6 +11,14 @@
 ## Flows
 * [Initial Product Sync](SyncShopify/README.md)
 * [Initial Order Sync](SyncShopify/importOrders.md)
+* [Integrations](ShopifyIntegration/integration-mapping.md)
+    * [Locations](ShopifyIntegration/MapLocations.md)
+    * [Shipping Method](ShopifyIntegration/shipping-method.md)
+    * [Sales channel](ShopifyIntegration/sales-channel-mapping)
+    * [Payment Method](ShopifyIntegration/payment-method-type.md)
+    * [Product Type](ShopifyIntegration/product-type.md)
+
+
 
 ## Additional resources
 * [Kit Products](SyncShopify/kitProducts.md)

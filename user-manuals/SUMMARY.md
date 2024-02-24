@@ -54,6 +54,11 @@
   * [Pre-order Allocation](pre-orders/pre-order-allocation.md)
   * [Release Pre-orders](pre-orders/release-pre-orders.md)
   * [Reports](pre-orders/reports.md)
+* [Returns](returns/readme.md)
+  * [Import Returns](returns/import-returns.md)
+  * [In-Store Returns](returns/in-store-returns.md)
+  * [Restocking](returns/restock-return.md)
+
 
 ## Inventory
 
@@ -64,6 +69,9 @@
   * [Inventory count](inventory-count/inventory-count.md)
   * [Reports](inventory-count/reports.md)
 * [Inventory Upload](import-app/inventory.md)
+* [Safety Stock](inventory/safety-stock/README.md)
+  * [Set Bulk Safety Stock](inventory/safety-stock/set-bulk-safety-stock.md)
+  * [Set Individual Safety Stock](inventory/safety-stock/set-individual-safety-stock.md)
 
 ## Administration
 
@@ -77,8 +85,10 @@
   * [Manage Operating Hours](facilities/manage-operating-hours.md)
   * [Manage Product Stores](facilities/manage-product-stores.md)
   * [Configure Online Fulfillment](facilities/configure-fulfillment.md)
-  * [Configure Fulfillment Capacity](administration/facilities/configure-fulfillment-capacity.md)
-  * [Manage facility Staff](administration/facilities/manage-facility-staff.md)
-  * [Manage Locations](administration/facilities/manage-locations.md)
+  * [Configure Fulfillment Capacity](facilities/configure-fulfillment-capacity.md)
+  * [Manage Facility Staff](facilities/manage-facility-staff.md)
+  * [Manage Locations](facilities/manage-locations.md)
+  * [Disabling facilities](facilities/disabling-facilities.md)
+  * [Manage parkings](facilities/manage-parkings.md)
 * [Shipping Methods](administration/shipping-methods/README.md)
   * [Create Carrier](administration/shipping-methods/add-carrier.md)

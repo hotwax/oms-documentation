@@ -52,13 +52,15 @@ Store associates need to tap on the `Save` button at the bottom of the page to c
 
 Once store associates complete the inventory count, it undergoes review by store managers. The store managers can navigate to the `Upload` page from the footer on the bottom of the app to view all submitted inventory counts. Here, they can review and either approve or reject the inventory count performed by the store associates.
 
-A. Store managers can approve the inventory count by tapping the blue `Upload` icon situated at the bottom right of the page. This action prompts a confirmation pop-up card, where managers can tap on the `Upload` button to approve the inventory count. Upon approval, the inventory count updates within HotWax Commerce OMS, and subsequently reflects on the e-commerce platform and ERP systems.
+A. Store managers can approve the inventory count by tapping the blue `Upload` icon situated at the bottom right of the page. This action prompts a confirmation pop-up card, where managers can tap on the `Upload` button to approve the inventory count. 
+
+B. After the upload from the app, the next step involves the admin user's approval of the cycle count within the OMS. To do this, the admin should navigate to the `Reconcile Inventory` option situated in the warehouse section of the hamburger menu. Once there, by clicking on the `Invenotry Count Import ID`, the admin can access the view inventory count import page. Here, product selection is flexible, allowing the admin to choose individual products by checking the corresponding boxes or opt for a bulk selection using the checkbox located to the left of the product header. To complete the process, the admin can then click on the `Record Variance` button. This action finalizes the approval of the cycle count.
 
 {% embed url="https://youtu.be/Q9QAKSx2YYY" %}
 Video: Upload function
 {% endembed %}
 
-B. In cases where the store manager is unsatisfied with the counting process, inventory counts can be rejected by tapping on the `Remove` button below the items.
+C. In cases where the store manager is unsatisfied with the counting process, inventory counts can be rejected by tapping on the `Remove` button below the items.
 
 {% embed url="https://youtu.be/GcQ0j2qNyKY" %}
 Video: Remove function
