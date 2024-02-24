@@ -1,4 +1,7 @@
-# Pre Order administration
+# Pre-Order Administration
+
+_**This document walks through how to use the HotWax Commerce  administration  screens to manage pre-order allocation from purchase orders to sales orders.**_
+
 
 ## Allocate Sales Orders items
 
@@ -13,6 +16,10 @@ _**This document outlines a step-by-step process to allocate the sales order ite
 Video: Associate Sales orders to Purchase order items
 {% endembed %}
 
+{% hint style="info" %}
+**Info hints** Go to  the Hamburger Menu in the OMS > Order Management section > Click Sales Orders to open the Find Sales Order page.
+{% endhint %}
+
 ## Edit Promise Dates on Presell Orders
 
 _**This document outlines a step-by-step process to update shipping date of the sales order in the HotWax Commerce Order management system.**_
@@ -26,13 +33,12 @@ To update dates in bulk use CSV import in the EXIM menu.
 {% endhint %}
 
 
-1. Go to  the Hamburger Menu in the OMS > Order Management section > Click Sales Orders to open the Find Sales Order page.
-2. Select the order to open the View Sales Order page.
-3. Go to the Item section
-4. Select the line item you want to change date for.
-5. Click the Edit function.
-6. Select the required date from the Calendar and save changes.
-7. Click the Order item change history function to view the changes.
+1. Select the order to open the View Sales Order page.
+2. Go to the Item section
+3. Select the line item you want to change date for.
+4. Click the Edit function.
+5. Select the required date from the Calendar and save changes.
+6. Click the Order item change history function to view the changes.
 
 {% embed url="https://youtu.be/UoVkERwLDeo" %}
 
@@ -48,11 +54,10 @@ _**This document outlines a step-by-step process for syncing dates of purchase o
 Arrival date will be changed only for the selected line item orders.&#x20;
 {% endhint %}
 
-1. Go to the Hamburger Menu > Procurement > Purchase Orders to open the View Purchase Order page.
-2. Select desired purchase order to open the Purchase Order Detail page.
-3. Update the arrival date of required items.
-4. Click the Sync date with SO function
-5. Select orders to sync with the updated date.&#x20;
+1. Select desired purchase order to open the Purchase Order Detail page.
+2. Update the arrival date of required items.
+3. Click the Sync date with SO function
+4. Select orders to sync with the updated date.&#x20;
 
 {% embed url="https://youtu.be/6VvY4l1cJfE" %}
 Video : Sync Date with Sales Orders
@@ -67,10 +72,9 @@ description: Associate unallocated sales orders to the purchase order (PO) items
 
 _**This document outlines a step-by-step process for allocating sales orders with purchase order items in the OMS.**_
 
-1. Go to the Hamburger Menu > Procurement > Purchase Orders to open the View Purchase Order page.
-2. Select desired purchase order to open the Purchase Order Detail page.
-3. Click the allocate sales order function to view the Sales orders.
-4. Select orders to associate with existing PO.
+1. Select desired purchase order to open the Purchase Order Detail page.
+2. Click the allocate sales order function to view the Sales orders.
+3. Select orders to associate with existing PO.
 
 {% embed url="https://youtu.be/uYNI3zrTzxo" %}
 Video: Allocate Sales Orders
@@ -84,9 +88,9 @@ description: Manage sales order allocations with purchase order.
 
 _**This document outlines a step-by-step process for reviewing allocations in the OMS.**_
 
-1. Go to the Hamburger Menu > Procurement > Purchase Orders to open the View Purchase Order page.
-2. Select desired purchase order to open the Purchase Order Detail page.
-3. Click the review allocation function to view all associated orders to the selected line item.
+
+1. Select desired purchase order to open the Purchase Order Detail page.
+2. Click the review allocation function to view all associated orders to the selected line item.
 
 {% embed url="https://youtu.be/MqQGtQRkkDQ" %}
 Video: Review Allocations
@@ -100,11 +104,10 @@ description: Remove all associated sales orders with purchase order items.
 
 _**This document outlines a step-by-step process for removing allocations in the OMS.**_
 
-1. Go to the Hamburger Menu > Procurement > Purchase Orders to open the View Purchase Order page.
-2. Select desired purchase order to open the Purchase Order Detail page.
-3. Click the Remove allocation function to open the Remove Allocations page
-4. Select items to remove
-5. Click remove allocations.
+1. Select desired purchase order to open the Purchase Order Detail page.
+2. Click the Remove allocation function to open the Remove Allocations page
+3. Select items to remove
+4. Click remove allocations.
 
 
 
