@@ -1,6 +1,7 @@
 # Table of contents
 
 * [Launchpad](README.md)
+* [Glossary](GLOSSARY.md)
 
 ## Workflow
 
@@ -91,3 +92,4 @@
   * [Disabling facilities](facilities/disabling-facilities.md)
 * [Shipping Methods](administration/shipping-methods/README.md)
   * [Create Carrier](administration/shipping-methods/add-carrier.md)
+* [Delete Customers](delete-customers.md)
