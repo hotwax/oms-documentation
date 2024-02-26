@@ -1,5 +1,5 @@
 
-# Order Fulfillment update on Shopify 
+# Order update notification on Shopify 
 
 When orders are packed and shipped in HotWax Commerce, the fulfillment status is promptly updated. This real-time synchronization ensures that Shopify receives accurate updates on order statuses, automatically marking them as `Fulfilled.` This feature is vital for maintaining transparency and providing customers with real-time visibility into their order status. It also streamlines workflow efficiency by automating the fulfillment process and reducing manual tasks.
 
