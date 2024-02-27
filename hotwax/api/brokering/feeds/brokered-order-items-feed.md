@@ -17,8 +17,6 @@ To use the Brokered Order Items feed, specify the required parameters and genera
 | `systemMessageTypeId`    | Specifies the System Message Type ID used for generating the Brokered Order Items Feed.                    |
 | `systemMessageRemoteId`  | Specifies the System Message Remote ID used for generating the Brokered Order Items Feed.                  |
 
-# Sample Brokered Order Items feed
-
 <details>
 
 <summary>Sample Brokered Order Items feed</summary>
@@ -704,5 +702,4 @@ To use the Brokered Order Items feed, specify the required parameters and genera
 
 </details>
 
-## Example
 
