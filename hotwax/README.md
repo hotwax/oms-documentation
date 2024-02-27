@@ -1,37 +1,12 @@
-# API Authentication Overview
+# Introduction
 
-To ensure secure transactions on HotWax's platform, all applications connecting with the HotWax API require authentication when making API requests. The primary method of authentication employed is **Bearer token authentication**.
+HotWax Commerce Technical Documentation is designed to provide you with a comprehensive understanding of our platform's capabilities and how to leverage them effectively. We have structured our documentation to help you navigate through the various aspects of our platform, including Journeys, APIs, and Data Feeds.
 
-## Bearer Token Authentication
+## Journeys
+Journeys represent the interactions of multiple APIs and feeds to deliver specific user experiences. Our documentation will guide you through the various out-of-the-box Journeys available, helping you understand how to configure and customize them to meet specific business needs.
 
-Bearer token authentication utilizes security tokens. After a successful login request, the server generates a secret string known as a bearer token. When making requests for protected resources, the user must include the token in the authorization header.
+## APIs
+HotWax Commerce offers a wide range of APIs that allow you to interact with different aspects. Whether you're looking to manage products, process orders, or analyze data, our APIs provide the flexibility and power you need. Our documentation provides detailed information on each API, including how to authenticate, make requests, and handle responses.
 
-## How to generate a bearer token? 
-
-Hotwax Commerce relies on robust security features provided by JWT (JSON Web Token) to ensure a safe and trustworthy API communication environment. This mechanism guarantees user authenticity, authorizes their actions, and maintains data integrity through digital signatures. To create JWT, follow these steps: 
-
-1. Create a unique user from [users.hotwax.io](https://users.hotwax.io/) by using integration template or assign the integration permissions.
-2. Make sure that Reset Password on Login is unchecked.
-3. Navigate to the Hamburger menu in OMS: `https://{instanceName}.hotwax.io/`
-3. Access the Settings option and choose `Create JWT Token`.
-4. Input the user ID.It will display only the users having integration permissions.
-5. Token Configuration:**
-   - Define the validation period.
-   - Specify the purpose of the token.
-6. Click `Create`, and the resulting JWT token will be displayed in the dedicated section.
-7. Copy Token and use it to build connection
-
-
-## Authentication Endpoint
-
-Sample endpoint: `https://<host_name>.hotwax.io/<api_name>/login`
-
-
-## APIs Requiring Authentication
-
-The following HotWax APIs require an authentication token:
-
-1. `updateInventory`
-
-
-For more information about Bearer token authentication, refer to this [video](https://youtu.be/n-IFlWGX1t4).
+## Data Feeds
+HotWax Commerce also includes out-of-the-box data feeds that enable integration between systems. Whether you're looking to synchronize inventory, update product, or import/export data, our data feeds make it easy to connect HotWax Commerce with other systems. Our documentation provides step-by-step instructions on how to use data feeds to meet integration needs.
