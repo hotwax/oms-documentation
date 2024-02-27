@@ -23,11 +23,6 @@ To use the Brokered Order Items feed, specify the required parameters and genera
 
 <summary>Sample Brokered Order Items feed</summary>
 
-
-</details>
-
-## Example
-
 ```json
 [
   {
@@ -706,3 +701,8 @@ To use the Brokered Order Items feed, specify the required parameters and genera
   }
 ]
 ```
+
+</details>
+
+## Example
+
