@@ -1,1 +1,1 @@
-The APIs and data feeds that connect to deliver uy Online Pickup in Store experience.
+The APIs and data feeds that connect to deliver Buy Online Pickup in Store experience.
