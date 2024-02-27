@@ -1,8 +1,17 @@
 # Table of contents
 
-* [Initial API authentication](README.md)
+* [Introduction](README.md)
+* [Initial API authentication](initial-api-authentication.md)
 
-## APIs
+## Journeys
+
+* [Email Integration](journeys/email-integration/README.md)
+  * [Promise Date Change Communication](journeys/email-integration/promise-date-change-communication.md)
+  * [Ready For Pickup Email](journeys/email-integration/ready-for-pickup-email.md)
+* [Bopis PDP Experience](journeys/bopis-pdp-experience.md)
+* [Soft Allocation](journeys/soft-allocation.md)
+
+## APIs and Data feeds
 
 * [Orders](orders/README.md)
   * [Created Orders](api/orders/createdOrderFeed.md)
@@ -32,14 +41,6 @@
   * [Update Orders](api/fulfillment/apis/update-orders.md)
   * [Update And Import File](api/fulfillment/apis/upload-and-import-file.md)
 * [Perform Find](api/perform-find.md)
-
-## Journeys
-
-* [Email Integration](journeys/email-integration/README.md)
-  * [Promise Date Change Communication](journeys/email-integration/promise-date-change-communication.md)
-  * [Ready For Pickup Email](journeys/email-integration/ready-for-pickup-email.md)
-* [Bopis PDP Experience](journeys/bopis-pdp-experience.md)
-* [Soft Allocation](journeys/soft-allocation.md)
 
 ## Additional Resources
 
