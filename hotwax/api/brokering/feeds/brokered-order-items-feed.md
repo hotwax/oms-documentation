@@ -1,3 +1,33 @@
+# Introduction
+
+# Brokered Order Items Feed
+
+The Brokered Order Items feed is a JSON-formatted feed generated from the HotWax Commerce OMS. This feed contains details about brokered order items, which can be brokered from either Warehouse or Store Type facilities. The feed is generated order-wise containing information about each order individually.
+
+To use the Brokered Order Items feed, specify the required parameters and generate the feed using the HotWax Commerce OMS. The feed will be generated in JSON format and can be used for various purposes, such as reporting, analysis, and integration with other systems.
+
+## Parameters
+
+| **Parameter**           | **Description**                                                                                           |
+|--------------------------|-----------------------------------------------------------------------------------------------------------|
+| `parentFacilityTypeIds`  | Specifies the type of facility from which the brokered order items are being fetched.                     |
+| `orderId`                | Allows you to generate the feed for a specific order ID.                                                   |
+| `orderItemSeqId`         | Allows you to generate the feed for a specific order item sequence ID within an order.                     |
+| `productStoreIds`        | Allows you to set the product store IDs to generate brand-specific feeds.                                  |
+| `systemMessageTypeId`    | Specifies the System Message Type ID used for generating the Brokered Order Items Feed.                    |
+| `systemMessageRemoteId`  | Specifies the System Message Remote ID used for generating the Brokered Order Items Feed.                  |
+
+# Sample Brokered Order Items feed
+
+<details>
+
+<summary>Sample Brokered Order Items feed</summary>
+
+
+</details>
+
+## Example
+
 ```json
 [
   {
