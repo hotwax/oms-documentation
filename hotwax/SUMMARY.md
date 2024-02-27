@@ -23,6 +23,8 @@
   * [Check Inventory](api/inventory/check-inventory.md)
   * [Reset Inventory](api/inventory/reset-inventory.md)
   * [Update Inventory](api/inventory/update-inventory.md)
+* [Brokering](api/brokering/README.md)
+  * [Brokered Order Items Feed](api/brokering/feeds/brokered-order-items-feed.md)
 * [Inbound Shipment](/inbount-shipment/README.md)
   * [Import](/inbount-shipment/import.md)
 * [Returns](returns/README.md)
