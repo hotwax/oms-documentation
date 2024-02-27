@@ -1,1 +1,1 @@
-The APIs and data feeds that connect to deliver a specific experience around Buy Online Pickup in Store experience through OMS.
+The APIs and data feeds that connect to deliver uy Online Pickup in Store experience.

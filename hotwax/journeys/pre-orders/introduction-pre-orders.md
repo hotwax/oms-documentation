@@ -1,1 +1,1 @@
-The APIs and data feeds that connect to deliver a specific experience around accepting Pre-orders and Backorders through OMS.
+The APIs and data feeds that connect to deliver Pre-orders and Backorders experience.
