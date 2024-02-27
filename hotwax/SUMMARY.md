@@ -14,7 +14,7 @@
   
 ## API and Data feeds
 
-* [Initial API authentication](api/initial-api-authentication.md)
+* [Authentication](api/initial-api-authentication.md)
 * [Orders](orders/README.md)
   * [Created Orders](api/orders/createdOrderFeed.md)
   * [Order Adjustments](api/orders/adjustmentTypes.md)
@@ -42,7 +42,8 @@
   * [Shipping Label PDF](api/fulfillment/apis/shipping-label-PDF.md)
   * [Update Orders](api/fulfillment/apis/update-orders.md)
   * [Update And Import File](api/fulfillment/apis/upload-and-import-file.md)
-* [Perform Find](api/perform-find.md)
+* [Miscellaneous]
+  * [Perform Find](api/perform-find.md)
 
 ## Additional Resources
 
