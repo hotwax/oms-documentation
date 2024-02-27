@@ -7,6 +7,18 @@
    
 2. To find details about SOLR versions, refer to the [SOLR version document]([solr_version_document_link](https://docs.google.com/spreadsheets/d/1H-iEVG-hS9FTsYOf5YiUH-5KOJUcu0_TiPG8aVYjaHU/edit#gid=0))
 {% endhint %}
+## Hotfix Release - v5.4.5 (27th Feb 2024)
+
+| Information         | Value                                |
+|---------------------|--------------------------------------|
+| Release Version     | v5.4.5                           |
+| Release Type        | Hotfix                             |
+| Image Tag           | v5.4.5                          |
+| Image URL           | `289432782788.dkr.ecr.us-east-1.amazonaws.com/omscoreimage:omscoreimage-v5.4.5` |
+| Diff                | [Link to diff](https://git.hotwax.co/tools/omssetup/-/compare/v5.4.4...v5.4.5?from_project_id=242&straight=false) |
+| Changelog           | [Link to changelog](https://git.hotwax.co/commerce/oms/-/blob/v5.4.1/CHANGELOG.md?ref_type=tags)
+
+
 ## Hotfix Release - v5.4.3 (19th Feb 2024)
 
 | Information         | Value                                |
