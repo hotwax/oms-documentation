@@ -4,12 +4,14 @@
 
 ## Journeys
 
-* [Email Integration](journeys/email-integration/introduction-email-integration.md)
-  * [Promise Date Communication](journeys/email-integration/promise-date-change-communication.md)
-  * [Ready For Pickup Email](journeys/email-integration/ready-for-pickup-email.md)
-* [Bopis PDP Experience](journeys/bopis-pdp-experience.md)
-* [Soft Allocation](journeys/soft-allocation.md)
-
+* [Buy Online Pickup in Store]
+  * [Shopify PDP Experience](journeys/bopis-pdp-experience.md)
+  * [Ready For Pickup Notification](journeys/email-integration/ready-for-pickup-email.md)
+* [Brokering and Allocation]
+  * [Order Soft Allocation](journeys/soft-allocation.md)
+* [Pre-orders]
+  * [Promise Date Change Notification](journeys/email-integration/promise-date-change-communication.md)
+  
 ## API and Data feeds
 
 * [Initial API authentication](api/initial-api-authentication.md)
