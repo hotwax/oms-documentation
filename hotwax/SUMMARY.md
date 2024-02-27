@@ -12,7 +12,7 @@
 
 ## API and Data feeds
 
-* [Initial API authentication](initial-api-authentication.md)
+* [Initial API authentication](api/initial-api-authentication.md)
 * [Orders](orders/README.md)
   * [Created Orders](api/orders/createdOrderFeed.md)
   * [Order Adjustments](api/orders/adjustmentTypes.md)
