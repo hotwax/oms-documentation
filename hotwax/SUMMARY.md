@@ -5,7 +5,7 @@
 ## Journeys
 
 * [Email Integration](journeys/email-integration/introduction-email-integration.md)
-  * [Promise Date Change Communication](journeys/email-integration/promise-date-change-communication.md)
+  * [Promise Date Communication](journeys/email-integration/promise-date-change-communication.md)
   * [Ready For Pickup Email](journeys/email-integration/ready-for-pickup-email.md)
 * [Bopis PDP Experience](journeys/bopis-pdp-experience.md)
 * [Soft Allocation](journeys/soft-allocation.md)
