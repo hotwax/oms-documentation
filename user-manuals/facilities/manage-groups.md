@@ -43,3 +43,7 @@ These are default facilities groups, which are available when you deploy HotWax 
 
 - **OMS Fulfillment**
   - This group will encompass facilities that support the shipping of inventory for E-commerce orders. However, if a facility prefers to exclusively reserve its inventory for walk-in customers and does not wish to participate in e-commerce order fulfillment, it has the option to be removed from this group. No orders will be brokered to the facilities that are not part of the OMS fulfillment group.
+
+{% hint style="info" %}
+Users can see groups linked to specific facility in the facilities details page.
+{% endhint %}
