@@ -21,7 +21,6 @@ Hotwax Commerce relies on robust security features provided by JWT (JSON Web Tok
 6. Click `Create`, and the resulting JWT token will be displayed in the dedicated section.
 7. Copy Token and use it to build connection
 
-
 ## Authentication Endpoint
 
 Sample endpoint: `https://<host_name>.hotwax.io/<api_name>/login`
