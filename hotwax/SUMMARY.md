@@ -11,7 +11,7 @@
 * [Bopis PDP Experience](journeys/bopis-pdp-experience.md)
 * [Soft Allocation](journeys/soft-allocation.md)
 
-## APIs and Data feeds
+## API and Data feeds
 
 * [Orders](orders/README.md)
   * [Created Orders](api/orders/createdOrderFeed.md)
