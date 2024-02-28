@@ -435,11 +435,11 @@ The Brokered Order Items feed has certain out-of-the-box customizations that all
 
 </details>
 
-## Attributes
+# Attributes
 
 **The following attributes have been prepared in the feed:**
 
-| Field Name | Description | Value |
+| Field Name | Description | Sample value |
 |------------|-------------|-------|
 | productStoreId | The ID of the product store | STORE |
 | orderId | The unique identifier for the order | 12082 |
@@ -491,7 +491,7 @@ The Brokered Order Items feed has certain out-of-the-box customizations that all
 
 **This object contains the following attributes, each of which has internal nesting:**
 
-| Field Name | Description | Value |
+| Field Name | Description | Sample value |
 |------------|-------------|-------|
 | billTo | The billing information | See below |
 | orderIdentifications | The order identifications | See below |
@@ -503,7 +503,7 @@ The Brokered Order Items feed has certain out-of-the-box customizations that all
 
 
 ### billTo
-| Field Name | Description | Value |
+| Field Name | Description | Sample value |
 |------------|-------------|-------|
 | countryGeoCode | The country geo code | JP |
 | stateProvinceGeoCode | The state province geo code | null |
@@ -532,7 +532,7 @@ The Brokered Order Items feed has certain out-of-the-box customizations that all
 | phone | The phone information | See below |
 
 ### phone
-| Field Name | Description | Value |
+| Field Name | Description | Sample value |
 |------------|-------------|-------|
 | contactMechId | The contact mechanism ID | 18228 |
 | countryCode | The country code | 1 |
@@ -542,7 +542,7 @@ The Brokered Order Items feed has certain out-of-the-box customizations that all
 | lastUpdatedStamp | The date and time of the last update | 2024-02-23T03:50:12+09:00 |
 
 ### orderIdentifications
-| Field Name | Description | Value |
+| Field Name | Description | Sample value |
 |------------|-------------|-------|
 | idValue | The ID value | 5384320450749 |
 | orderId | The order ID | 12082 |
@@ -552,7 +552,7 @@ The Brokered Order Items feed has certain out-of-the-box customizations that all
 | thruDate | The thru date | null |
 
 ### customerPartyIdentifications
-| Field Name | Description | Value |
+| Field Name | Description | Sample value |
 |------------|-------------|-------|
 | lastUpdatedStamp | The date and time of the last update | 2024-02-23T01:50:16+09:00 |
 | partyIdentificationTypeId | The party identification type ID | SHOPIFY_CUST_ID |
@@ -560,7 +560,7 @@ The Brokered Order Items feed has certain out-of-the-box customizations that all
 | partyId | The party ID | 10290 |
 
 ### payments
-| Field Name | Description | Value |
+| Field Name | Description | Sample value |
 |------------|-------------|-------|
 | paymentMethodCode | The payment method code | null |
 | amount | The amount | 1870 |
@@ -572,7 +572,7 @@ The Brokered Order Items feed has certain out-of-the-box customizations that all
 | createdDate | The date and time of creation | 2024-02-23T03:50:12+09:00 |
 
 ### orderAdjustments
-| Field Name | Description | Value |
+| Field Name | Description | Sample value |
 |------------|-------------|-------|
 | customerReferenceId | The customer reference ID | null |
 | correspondingProductId | The corresponding product ID | null |
@@ -612,7 +612,7 @@ The Brokered Order Items feed has certain out-of-the-box customizations that all
 | sourcePercentage | The source percentage | null |
 
 ### orderAttributes
-| Field Name | Description | Value |
+| Field Name | Description | Sample value |
 |------------|-------------|-------|
 | lastUpdatedStamp | The date and time of the last update | 2024-02-23T04:05:15+09:00 |
 | orderId | The order ID | 12082 |
@@ -621,7 +621,7 @@ The Brokered Order Items feed has certain out-of-the-box customizations that all
 | attrValue | The attribute value | true |
 
 ### orderItems
-| Field Name | Description | Value |
+| Field Name | Description | Sample value |
 |------------|-------------|-------|
 | productStoreId | The ID of the product store | STORE |
 | orderId | The unique identifier for the order | 12082 |
@@ -672,7 +672,7 @@ The Brokered Order Items feed has certain out-of-the-box customizations that all
 | productFeatures | The product features | See below |
 
 ### shipTo
-| Field Name | Description | Value |
+| Field Name | Description | Sample value |
 |------------|-------------|-------|
 | countryGeoCode | The country geo code | JP |
 | stateProvinceGeoCode | The state province geo code | null |
@@ -701,7 +701,7 @@ The Brokered Order Items feed has certain out-of-the-box customizations that all
 | phone | The phone information | See below |
 
 ### goodIdentifications
-| Field Name | Description | Value |
+| Field Name | Description | Sample value |
 |------------|-------------|-------|
 | idValue | The ID value | 37639003275453 |
 | fromDate | The from date | 2023-12-25T03:48:21+09:00 |
@@ -711,7 +711,7 @@ The Brokered Order Items feed has certain out-of-the-box customizations that all
 | thruDate | The thru date | null |
 
 ### orderItemAdjustments
-| Field Name | Description | Value |
+| Field Name | Description | Sample value |
 |------------|-------------|-------|
 | customerReferenceId | The customer reference ID | null |
 | correspondingProductId | The corresponding product ID | null |
@@ -750,7 +750,7 @@ The Brokered Order Items feed has certain out-of-the-box customizations that all
 | sourcePercentage | The source percentage | null |
 
 ### orderItemAttributes
-| Field Name | Description | Value |
+| Field Name | Description | Sample value |
 |------------|-------------|-------|
 | lastUpdatedStamp | The date and time of the last update | 2024-02-23T03:50:12+09:00 |
 | orderId | The order ID | 12082 |
@@ -759,7 +759,7 @@ The Brokered Order Items feed has certain out-of-the-box customizations that all
 | attrValue | The attribute value | true |
 
 ### facilityGroupMembers
-| Field Name | Description | Value |
+| Field Name | Description | Sample value |
 |------------|-------------|-------|
 | facilityId | The facility ID | WH0615 |
 | facilityGroupId | The facility group ID | 22 |
@@ -769,7 +769,7 @@ The Brokered Order Items feed has certain out-of-the-box customizations that all
 | facilityGroupTypeId | The facility group type ID | WAREHOUSE |
 
 ### fromOrderItemAssocs
-| Field Name | Description | Value |
+| Field Name | Description | Sample value |
 |------------|-------------|-------|
 | orderId | The order ID | 12082 |
 | orderItemSeqId | The order item sequence ID | 00101 |
@@ -784,7 +784,7 @@ The Brokered Order Items feed has certain out-of-the-box customizations that all
 | lastModifiedByUserLogin | The ID of the last user login that modified the association | null |
 
 ### toOrderItemAssocs
-| Field Name | Description | Value |
+| Field Name | Description | Sample value |
 |------------|-------------|-------|
 | orderId | The order ID | 12082 |
 | orderItemSeqId | The order item sequence ID | 00101 |
@@ -799,7 +799,7 @@ The Brokered Order Items feed has certain out-of-the-box customizations that all
 | lastModifiedByUserLogin | The ID of the last user login that modified the association | null |
 
 ### productFeatures
-| Field Name | Description | Value |
+| Field Name | Description | Sample value |
 |------------|-------------|-------|
 | lastUpdatedStamp | The date and time of the last update | 2024-02-23T03:50:12+09:00 |
 | orderId | The order ID | 12082 |
