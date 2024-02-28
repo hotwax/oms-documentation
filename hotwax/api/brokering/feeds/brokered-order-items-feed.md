@@ -29,847 +29,781 @@ The Brokered Order Items feed has certain out-of-the-box parameters that allow u
 <summary>Sample Brokered Order Items feed</summary>
 
 ```json
-[
-  {
-    "productStoreId": "NN_STORE",
-    "orderId": "21042",
-    "orderName": "NNUS#6280",
-    "orderDate": "2020-10-21T12:56:11-04:00",
-    "orderStatusId": "ORDER_APPROVED",
-    "entryDate": "2020-10-21T17:57:18-04:00",
-    "currency": "USD",
-    "grandTotal": 79.99,
-    "orderItemSeqId": null,
-    "itemStatusId": null,
-    "quantity": null,
-    "unitPrice": null,
-    "orderItemExternalId": null,
-    "shipGroupSeqId": null,
-    "shipmentMethodTypeId": "NEXT_DAY",
-    "postalContactMechId": "71256",
-    "telecomContactMechId": "71257",
-    "externalFulfillmentOrderItemId": null,
-    "fulfillmentStatus": null,
-    "customerFirstName": "Ashish",
-    "customerLastName": "Sharma",
-    "facilityId": null,
-    "facilityExternalId": null,
-    "facilityTypeId": null,
-    "parentFacilityTypeId": null,
-    "statusDatetime": null,
-    "productId": null,
-    "productTypeId": null,
-    "salesChannel": "WEB_CHANNEL",
-    "customerPartyId": "10990",
-    "isShippingChargesSent": "N",
-    "billTo": {
-      "countryGeoCode": "US",
-      "stateProvinceGeoCode": "NY",
-      "contactMechId": "71259",
-      "toName": "Petter William",
-      "attnName": null,
-      "address1": "Wall street",
-      "address2": "Tax user",
-      "houseNumber": null,
-      "houseNumberExt": null,
-      "directions": null,
-      "city": "Ohio",
-      "cityGeoId": null,
-      "postalCode": "10001",
-      "postalCodeExt": null,
-      "countryGeoId": "USA",
-      "stateProvinceGeoId": "NY",
-      "countyGeoId": null,
-      "municipalityGeoId": null,
-      "postalCodeGeoId": null,
-      "geoPointId": null,
-      "encodedAddressKey": null,
-      "isResidentialAddress": "Y"
+[ {
+  "productStoreId" : "STORE",
+  "orderId" : "12082",
+  "orderName" : "9000004032",
+  "orderDate" : "2024-02-23T03:43:23+09:00",
+  "orderStatusId" : "ORDER_APPROVED",
+  "entryDate" : "2024-02-23T03:50:12+09:00",
+  "orderExternalId" : "5384320450749",
+  "currency" : "JPY",
+  "grandTotal" : 1870,
+  "orderItemSeqId" : null,
+  "itemStatusId" : null,
+  "orderItemQuantity" : null,
+  "reservedItemQuantity" : null,
+  "reservedDatetime" : null,
+  "unitPrice" : null,
+  "orderItemExternalId" : null,
+  "itemDescription" : null,
+  "requestedDeliveryDate" : null,
+  "requestedDeliveryTime" : null,
+  "deliveryWindow" : null,
+  "shipGroupSeqId" : null,
+  "shipmentMethodTypeId" : null,
+  "postalContactMechId" : null,
+  "telecomContactMechId" : null,
+  "orderFacilityId" : null,
+  "carrierPartyId" : null,
+  "externalFulfillmentOrderItemId" : null,
+  "fulfillmentStatus" : null,
+  "customerFirstName" : "jhon",
+  "customerLastName" : "deo",
+  "facilityId" : null,
+  "facilityExternalId" : null,
+  "facilityTypeId" : null,
+  "parentFacilityTypeId" : null,
+  "statusDatetime" : null,
+  "productId" : null,
+  "productTypeId" : null,
+  "salesChannel" : "WEB_CHANNEL",
+  "customerPartyId" : "10290",
+  "isShippingChargesSent" : "Y",
+  "billTo" : {
+    "countryGeoCode" : "JP",
+    "stateProvinceGeoCode" : null,
+    "contactMechId" : "18227",
+    "toName" : "jhon deo",
+    "attnName" : null,
+    "address1" : "足立",
+    "address2" : null,
+    "houseNumber" : null,
+    "houseNumberExt" : null,
+    "directions" : null,
+    "city" : "足立区",
+    "cityGeoId" : null,
+    "postalCode" : "120-0015",
+    "postalCodeExt" : null,
+    "countryGeoId" : "JPN",
+    "stateProvinceGeoId" : null,
+    "countyGeoId" : null,
+    "municipalityGeoId" : null,
+    "postalCodeGeoId" : null,
+    "geoPointId" : "11795",
+    "encodedAddressKey" : null,
+    "latitude" : null,
+    "longitude" : null,
+    "isResidentialAddress" : "Y",
+    "phone" : {
+      "contactMechId" : "18228",
+      "countryCode" : "1",
+      "areaCode" : null,
+      "contactNumber" : "0593785656",
+      "askForName" : null,
+      "lastUpdatedStamp" : "2024-02-23T03:50:12+09:00"
+    }
+  },
+  "orderIdentifications" : [ {
+    "idValue" : "5384320450749",
+    "orderId" : "12082",
+    "fromDate" : "2024-02-23T03:50:12+09:00",
+    "lastUpdatedStamp" : "2024-02-23T03:50:12+09:00",
+    "orderIdentificationTypeId" : "SHOPIFY_ORD_ID",
+    "thruDate" : null
+  }, {
+    "orderId" : "12082",
+    "fromDate" : "2024-02-23T03:50:12+09:00",
+    "orderIdentificationTypeId" : "SHOPIFY_ORD_NAME",
+    "lastUpdatedStamp" : "2024-02-23T03:50:12+09:00",
+    "idValue" : "9000004032",
+    "thruDate" : null
+  }, {
+    "lastUpdatedStamp" : "2024-02-23T03:50:12+09:00",
+    "orderId" : "12082",
+    "fromDate" : "2024-02-23T03:50:12+09:00",
+    "orderIdentificationTypeId" : "SHOPIFY_ORD_NO",
+    "idValue" : "4032",
+    "thruDate" : null
+  } ],
+  "customerPartyIdentifications" : [ {
+    "lastUpdatedStamp" : "2024-02-23T01:50:16+09:00",
+    "partyIdentificationTypeId" : "SHOPIFY_CUST_ID",
+    "idValue" : "7053008306365",
+    "partyId" : "10290"
+  } ],
+  "payments" : [ {
+    "paymentMethodCode" : null,
+    "amount" : 1870,
+    "paymentMethodTypeId" : "EXT_SHOP_OTHR_GTWAY",
+    "paymentMethodDescription" : "Ext Other Gateways",
+    "orderId" : "12082",
+    "statusId" : "PAYMENT_AUTHORIZED",
+    "returnId" : null,
+    "createdDate" : "2024-02-23T03:50:12+09:00"
+  } ],
+  "orderAdjustments" : [ {
+    "customerReferenceId" : null,
+    "correspondingProductId" : null,
+    "orderItemSeqId" : "_NA_",
+    "includeInShipping" : null,
+    "description" : null,
+    "exemptAmount" : null,
+    "productPromoId" : null,
+    "taxAuthPartyId" : null,
+    "lastModifiedByUserLogin" : null,
+    "oldPercentage" : null,
+    "orderAdjustmentTypeId" : "SHIPPING_SALES_TAX",
+    "primaryGeoId" : null,
+    "taxAuthGeoId" : null,
+    "originalAdjustmentId" : null,
+    "amount" : 50,
+    "secondaryGeoId" : null,
+    "createdByUserLogin" : null,
+    "orderAdjustmentId" : null,
+    "amountAlreadyIncluded" : null,
+    "lastUpdatedStamp" : null,
+    "comments" : null,
+    "orderId" : "12082",
+    "recurringAmount" : null,
+    "lastModifiedDate" : null,
+    "sourceReferenceId" : null,
+    "productPromoRuleId" : null,
+    "isManual" : null,
+    "productFeatureId" : null,
+    "taxAuthorityRateSeqId" : null,
+    "overrideGlAccountId" : null,
+    "oldAmountPerQuantity" : null,
+    "shipGroupSeqId" : null,
+    "includeInTax" : null,
+    "createdDate" : null,
+    "productPromoActionSeqId" : null,
+    "sourcePercentage" : null
+  }, {
+    "customerReferenceId" : null,
+    "correspondingProductId" : null,
+    "orderItemSeqId" : "_NA_",
+    "includeInShipping" : null,
+    "description" : null,
+    "exemptAmount" : null,
+    "productPromoId" : null,
+    "taxAuthPartyId" : null,
+    "lastModifiedByUserLogin" : null,
+    "oldPercentage" : null,
+    "primaryGeoId" : null,
+    "taxAuthGeoId" : null,
+    "originalAdjustmentId" : null,
+    "secondaryGeoId" : null,
+    "createdByUserLogin" : null,
+    "orderAdjustmentId" : null,
+    "amount" : 500,
+    "amountAlreadyIncluded" : null,
+    "lastUpdatedStamp" : null,
+    "comments" : null,
+    "orderId" : "12082",
+    "recurringAmount" : null,
+    "lastModifiedDate" : null,
+    "sourceReferenceId" : null,
+    "productPromoRuleId" : null,
+    "isManual" : null,
+    "productFeatureId" : null,
+    "taxAuthorityRateSeqId" : null,
+    "overrideGlAccountId" : null,
+    "oldAmountPerQuantity" : null,
+    "shipGroupSeqId" : null,
+    "includeInTax" : null,
+    "createdDate" : null,
+    "productPromoActionSeqId" : null,
+    "sourcePercentage" : null,
+    "orderAdjustmentTypeId" : "SHIPPING_CHARGES"
+  } ],
+  "orderAttributes" : [ {
+    "lastUpdatedStamp" : "2024-02-23T04:05:15+09:00",
+    "orderId" : "12082",
+    "attrDescription" : null,
+    "attrName" : "COD_FEE_ADJ_CREATED",
+    "attrValue" : "true"
+  } ],
+  "orderItems" : [ {
+    "productStoreId" : "STORE",
+    "orderId" : "12082",
+    "orderName" : "9000004032",
+    "orderDate" : "2024-02-23T03:43:23+09:00",
+    "orderStatusId" : "ORDER_APPROVED",
+    "entryDate" : "2024-02-23T03:50:12+09:00",
+    "orderExternalId" : "5384320450749",
+    "currency" : "JPY",
+    "grandTotal" : 1870,
+    "orderItemSeqId" : "00101",
+    "itemStatusId" : "ITEM_APPROVED",
+    "orderItemQuantity" : 1,
+    "reservedItemQuantity" : 1,
+    "reservedDatetime" : "2024-02-23T04:20:07+09:00",
+    "unitPrice" : 1200,
+    "orderItemExternalId" : "12915436126397",
+    "itemDescription" : "ソックス クルー 3ペア ホワイト",
+    "requestedDeliveryDate" : null,
+    "requestedDeliveryTime" : null,
+    "deliveryWindow" : null,
+    "shipGroupSeqId" : "00001",
+    "shipmentMethodTypeId" : "STANDARD",
+    "postalContactMechId" : "18224",
+    "telecomContactMechId" : "18225",
+    "orderFacilityId" : null,
+    "carrierPartyId" : "_NA_",
+    "externalFulfillmentOrderItemId" : null,
+    "fulfillmentStatus" : null,
+    "customerFirstName" : "jhon",
+    "customerLastName" : "deo",
+    "facilityId" : "WH0615",
+    "facilityExternalId" : "22",
+    "facilityTypeId" : "WAREHOUSE",
+    "parentFacilityTypeId" : "DISTRIBUTION_CENTER",
+    "statusDatetime" : "2024-02-23T04:05:15+09:00",
+    "productId" : "60757",
+    "productTypeId" : "FINISHED_GOOD",
+    "salesChannel" : "WEB_CHANNEL",
+    "customerPartyId" : "10290",
+    "shipTo" : {
+      "countryGeoCode" : "JP",
+      "stateProvinceGeoCode" : null,
+      "contactMechId" : "18224",
+      "toName" : "jhon deo",
+      "attnName" : null,
+      "address1" : "足立",
+      "address2" : null,
+      "houseNumber" : null,
+      "houseNumberExt" : null,
+      "directions" : null,
+      "city" : "足立区",
+      "cityGeoId" : null,
+      "postalCode" : "120-0015",
+      "postalCodeExt" : null,
+      "countryGeoId" : "JPN",
+      "stateProvinceGeoId" : null,
+      "countyGeoId" : null,
+      "municipalityGeoId" : null,
+      "postalCodeGeoId" : null,
+      "geoPointId" : "11794",
+      "encodedAddressKey" : null,
+      "latitude" : 35.7610621,
+      "longitude" : 139.8073929,
+      "isResidentialAddress" : "Y",
+      "phone" : {
+        "contactMechId" : "18225",
+        "countryCode" : "1",
+        "areaCode" : null,
+        "contactNumber" : "0593785656",
+        "askForName" : null,
+        "lastUpdatedStamp" : "2024-02-23T03:50:12+09:00"
+      }
     },
-    "orderIdentifications": [
-      {
-        "fromDate": "2020-10-21T17:57:18-04:00",
-        "lastUpdatedStamp": "2020-10-21T17:57:18-04:00",
-        "orderId": "21042",
-        "idValue": "2729470132295",
-        "orderIdentificationTypeId": "SHOPIFY_ORD_ID",
-        "thruDate": null
-      },
-      {
-        "idValue": "NNUS#6280",
-        "orderIdentificationTypeId": "SHOPIFY_ORD_NAME",
-        "fromDate": "2020-10-21T17:57:18-04:00",
-        "lastUpdatedStamp": "2020-10-21T17:57:18-04:00",
-        "orderId": "21042",
-        "thruDate": null
-      },
-      {
-        "lastUpdatedStamp": "2020-10-21T17:57:18-04:00",
-        "orderIdentificationTypeId": "SHOPIFY_ORD_NO",
-        "fromDate": "2020-10-21T17:57:18-04:00",
-        "orderId": "21042",
-        "idValue": "5280",
-        "thruDate": null
-      }
-    ],
-    "customerPartyIdentifications": [
-      {
-        "lastUpdatedStamp": "2022-05-18T10:00:13-04:00",
-        "idValue": "5644891291719",
-        "partyIdentificationTypeId": "SHOPIFY_CUST_ID",
-        "partyId": "10990"
-      }
-    ],
-    "payments": [
-      {
-        "paymentMethodCode": null,
-        "paymentMethodDescription": "Shopify Payment",
-        "amount": 79.99,
-        "statusId": "PAYMENT_SETTLED",
-        "paymentMethodTypeId": "EXT_SHOPIFY",
-        "orderId": "21042",
-        "createdDate": "2020-10-21T17:57:18-04:00"
-      }
-    ],
-    "orderAdjustments": [
-      {
-        "customerReferenceId": null,
-        "correspondingProductId": null,
-        "orderItemSeqId": "_NA_",
-        "includeInShipping": null,
-        "description": null,
-        "exemptAmount": null,
-        "productPromoId": null,
-        "taxAuthPartyId": null,
-        "lastModifiedByUserLogin": null,
-        "oldPercentage": null,
-        "orderAdjustmentTypeId": "SHIPPING_SALES_TAX",
-        "primaryGeoId": null,
-        "taxAuthGeoId": null,
-        "originalAdjustmentId": null,
-        "secondaryGeoId": null,
-        "createdByUserLogin": null,
-        "orderAdjustmentId": null,
-        "amountAlreadyIncluded": null,
-        "lastUpdatedStamp": null,
-        "amount": 10,
-        "comments": null,
-        "recurringAmount": null,
-        "lastModifiedDate": null,
-        "sourceReferenceId": null,
-        "productPromoRuleId": null,
-        "iNNanual": null,
-        "productFeatureId": null,
-        "taxAuthorityRateSeqId": null,
-        "overrideGlAccountId": null,
-        "oldAmountPerQuantity": null,
-        "shipGroupSeqId": null,
-        "includeInTax": null,
-        "createdDate": null,
-        "productPromoActionSeqId": null,
-        "sourcePercentage": null,
-        "orderId": "21042"
-      },
-      {
-        "customerReferenceId": null,
-        "correspondingProductId": null,
-        "orderItemSeqId": "_NA_",
-        "includeInShipping": null,
-        "description": null,
-        "exemptAmount": null,
-        "productPromoId": null,
-        "taxAuthPartyId": null,
-        "lastModifiedByUserLogin": null,
-        "oldPercentage": null,
-        "orderAdjustmentTypeId": "SHIPPING_SALES_TAX",
-        "primaryGeoId": null,
-        "taxAuthGeoId": null,
-        "originalAdjustmentId": null,
-        "secondaryGeoId": null,
-        "createdByUserLogin": null,
-        "orderAdjustmentId": null,
-        "amountAlreadyIncluded": null,
-        "lastUpdatedStamp": null,
-        "amount": 10,
-        "comments": null,
-        "recurringAmount": null,
-        "lastModifiedDate": null,
-        "sourceReferenceId": null,
-        "productPromoRuleId": null,
-        "iNNanual": null,
-        "productFeatureId": null,
-        "taxAuthorityRateSeqId": null,
-        "overrideGlAccountId": null,
-        "oldAmountPerQuantity": null,
-        "shipGroupSeqId": null,
-        "includeInTax": null,
-        "createdDate": null,
-        "productPromoActionSeqId": null,
-        "sourcePercentage": null,
-        "orderId": "21042"
-      },
-      {
-        "customerReferenceId": null,
-        "correspondingProductId": null,
-        "orderItemSeqId": "_NA_",
-        "includeInShipping": null,
-        "description": null,
-        "exemptAmount": null,
-        "productPromoId": null,
-        "taxAuthPartyId": null,
-        "lastModifiedByUserLogin": null,
-        "oldPercentage": null,
-        "orderAdjustmentTypeId": "SHIPPING_SALES_TAX",
-        "primaryGeoId": null,
-        "taxAuthGeoId": null,
-        "originalAdjustmentId": null,
-        "secondaryGeoId": null,
-        "createdByUserLogin": null,
-        "orderAdjustmentId": null,
-        "amountAlreadyIncluded": null,
-        "lastUpdatedStamp": null,
-        "amount": 10,
-        "comments": null,
-        "recurringAmount": null,
-        "lastModifiedDate": null,
-        "sourceReferenceId": null,
-        "productPromoRuleId": null,
-        "iNNanual": null,
-        "productFeatureId": null,
-        "taxAuthorityRateSeqId": null,
-        "overrideGlAccountId": null,
-        "oldAmountPerQuantity": null,
-        "shipGroupSeqId": null,
-        "includeInTax": null,
-        "createdDate": null,
-        "productPromoActionSeqId": null,
-        "sourcePercentage": null,
-        "orderId": "21042"
-      },
-      {
-        "amount": 40,
-        "customerReferenceId": null,
-        "correspondingProductId": null,
-        "orderItemSeqId": "_NA_",
-        "includeInShipping": null,
-        "description": null,
-        "exemptAmount": null,
-        "productPromoId": null,
-        "taxAuthPartyId": null,
-        "lastModifiedByUserLogin": null,
-        "oldPercentage": null,
-        "primaryGeoId": null,
-        "taxAuthGeoId": null,
-        "originalAdjustmentId": null,
-        "secondaryGeoId": null,
-        "createdByUserLogin": null,
-        "orderAdjustmentId": null,
-        "amountAlreadyIncluded": null,
-        "lastUpdatedStamp": null,
-        "comments": null,
-        "recurringAmount": null,
-        "lastModifiedDate": null,
-        "sourceReferenceId": null,
-        "productPromoRuleId": null,
-        "iNNanual": null,
-        "productFeatureId": null,
-        "taxAuthorityRateSeqId": null,
-        "overrideGlAccountId": null,
-        "oldAmountPerQuantity": null,
-        "shipGroupSeqId": null,
-        "includeInTax": null,
-        "createdDate": null,
-        "productPromoActionSeqId": null,
-        "sourcePercentage": null,
-        "orderAdjustmentTypeId": "SHIPPING_CHARGES",
-        "orderId": "21042"
-      }
-    ],
-    "orderItems": [
-      {
-        "productStoreId": "NN_STORE",
-        "orderId": "21042",
-        "orderName": "NNUS#6280",
-        "orderDate": "2020-10-21T12:56:11-04:00",
-        "orderStatusId": "ORDER_APPROVED",
-        "entryDate": "2020-10-21T17:57:18-04:00",
-        "currency": "USD",
-        "grandTotal": 79.99,
-        "orderItemSeqId": "00001",
-        "itemStatusId": "ITEM_APPROVED",
-        "quantity": 1,
-        "unitPrice": 49.99,
-        "orderItemExternalId": "5983287705671",
-        "shipGroupSeqId": "00002",
-        "shipmentMethodTypeId": "NEXT_DAY",
-        "postalContactMechId": "71256",
-        "telecomContactMechId": "71257",
-        "externalFulfillmentOrderItemId": null,
-        "fulfillmentStatus": null,
-        "customerFirstName": "Ashish",
-        "customerLastName": "Sharma",
-        "facilityId": "902",
-        "facilityExternalId": "902",
-        "facilityTypeId": "WAREHOUSE",
-        "parentFacilityTypeId": "DISTRIBUTION_CENTER",
-        "statusDatetime": "2020-10-21T17:57:18-04:00",
-        "productId": "20479",
-        "productTypeId": "FINISHED_GOOD",
-        "salesChannel": "WEB_CHANNEL",
-        "customerPartyId": "10990",
-        "shipTo": {
-          "countryGeoCode": "US",
-          "stateProvinceGeoCode": "NY",
-          "contactMechId": "71256",
-          "toName": "Petter William",
-          "attnName": null,
-          "address1": "Wall street",
-          "address2": "Tax user",
-          "houseNumber": null,
-          "houseNumberExt": null,
-          "directions": null,
-          "city": "Ohio",
-          "cityGeoId": null,
-          "postalCode": "10001",
-          "postalCodeExt": null,
-          "countryGeoId": "USA",
-          "stateProvinceGeoId": "NY",
-          "countyGeoId": null,
-          "municipalityGeoId": null,
-          "postalCodeGeoId": null,
-          "geoPointId": null,
-          "encodedAddressKey": null,
-          "isResidentialAddress": "Y"
-        },
-        "goodIdentifications": [
-          {
-            "fromDate": "2020-06-11T16:11:35-04:00",
-            "idValue": "ABBY",
-            "productId": "20479",
-            "lastUpdatedStamp": "2022-08-10T05:58:22-04:00",
-            "goodIdentificationTypeId": "SHOPIFY_PROD_SKU",
-            "thruDate": null
-          },
-          {
-            "idValue": "ABBY",
-            "goodIdentificationTypeId": "SKU",
-            "productId": "20479",
-            "fromDate": "2022-04-20T12:00:14-04:00",
-            "lastUpdatedStamp": "2022-08-10T05:58:22-04:00",
-            "thruDate": null
-          },
-          {
-            "lastUpdatedStamp": "2022-03-22T06:00:19-04:00",
-            "fromDate": "2020-06-11T16:11:35-04:00",
-            "idValue": "829105016156",
-            "productId": "20479",
-            "goodIdentificationTypeId": "UPCA",
-            "thruDate": null
-          }
-        ],
-        "orderItemAdjustments": [
-          {
-            "customerReferenceId": null,
-            "correspondingProductId": null,
-            "includeInShipping": null,
-            "description": null,
-            "exemptAmount": null,
-            "productPromoId": null,
-            "taxAuthPartyId": null,
-            "lastModifiedByUserLogin": null,
-            "oldPercentage": null,
-            "primaryGeoId": null,
-            "taxAuthGeoId": null,
-            "originalAdjustmentId": null,
-            "secondaryGeoId": null,
-            "createdByUserLogin": null,
-            "orderAdjustmentId": null,
-            "amountAlreadyIncluded": null,
-            "orderAdjustmentTypeId": "SALES_TAX",
-            "lastUpdatedStamp": null,
-            "amount": 10,
-            "comments": null,
-            "recurringAmount": null,
-            "lastModifiedDate": null,
-            "sourceReferenceId": null,
-            "productPromoRuleId": null,
-            "iNNanual": null,
-            "productFeatureId": null,
-            "taxAuthorityRateSeqId": null,
-            "overrideGlAccountId": null,
-            "oldAmountPerQuantity": null,
-            "shipGroupSeqId": null,
-            "includeInTax": null,
-            "createdDate": null,
-            "productPromoActionSeqId": null,
-            "sourcePercentage": null,
-            "orderId": "21042",
-            "orderItemSeqId": "00001"
-          },
-          {
-            "customerReferenceId": null,
-            "correspondingProductId": null,
-            "includeInShipping": null,
-            "description": null,
-            "exemptAmount": null,
-            "productPromoId": null,
-            "taxAuthPartyId": null,
-            "lastModifiedByUserLogin": null,
-            "oldPercentage": null,
-            "primaryGeoId": null,
-            "taxAuthGeoId": null,
-            "originalAdjustmentId": null,
-            "secondaryGeoId": null,
-            "createdByUserLogin": null,
-            "orderAdjustmentId": null,
-            "amountAlreadyIncluded": null,
-            "orderAdjustmentTypeId": "SALES_TAX",
-            "lastUpdatedStamp": null,
-            "amount": 0.5,
-            "comments": null,
-            "recurringAmount": null,
-            "lastModifiedDate": null,
-            "sourceReferenceId": null,
-            "productPromoRuleId": null,
-            "iNNanual": null,
-            "productFeatureId": null,
-            "taxAuthorityRateSeqId": null,
-            "overrideGlAccountId": null,
-            "oldAmountPerQuantity": null,
-            "shipGroupSeqId": null,
-            "includeInTax": null,
-            "createdDate": null,
-            "productPromoActionSeqId": null,
-            "sourcePercentage": null,
-            "orderId": "21042",
-            "orderItemSeqId": "00001"
-          },
-          {
-            "customerReferenceId": null,
-            "correspondingProductId": null,
-            "includeInShipping": null,
-            "description": null,
-            "exemptAmount": null,
-            "productPromoId": null,
-            "taxAuthPartyId": null,
-            "lastModifiedByUserLogin": null,
-            "oldPercentage": null,
-            "primaryGeoId": null,
-            "taxAuthGeoId": null,
-            "originalAdjustmentId": null,
-            "secondaryGeoId": null,
-            "createdByUserLogin": null,
-            "orderAdjustmentId": null,
-            "amountAlreadyIncluded": null,
-            "orderAdjustmentTypeId": "SALES_TAX",
-            "lastUpdatedStamp": null,
-            "amount": 5,
-            "comments": null,
-            "recurringAmount": null,
-            "lastModifiedDate": null,
-            "sourceReferenceId": null,
-            "productPromoRuleId": null,
-            "iNNanual": null,
-            "productFeatureId": null,
-            "taxAuthorityRateSeqId": null,
-            "overrideGlAccountId": null,
-            "oldAmountPerQuantity": null,
-            "shipGroupSeqId": null,
-            "includeInTax": null,
-            "createdDate": null,
-            "productPromoActionSeqId": null,
-            "sourcePercentage": null,
-            "orderId": "21042",
-            "orderItemSeqId": "00001"
-          }
-        ],
-        "orderItemAttributes": [
-          {
-            "attrValue": "Pre-ordered items",
-            "lastUpdatedStamp": "2020-10-21T17:57:18-04:00",
-            "attrDescription": "Pre-order item property",
-            "orderId": "21042",
-            "orderItemSeqId": "00001",
-            "attrName": "PreOrderItemProperty"
-          }
-        ]
-      },
-      {
-        "productStoreId": "NN_STORE",
-        "orderId": "21042",
-        "orderName": "NNUS#6280",
-        "orderDate": "2020-10-21T12:56:11-04:00",
-        "orderStatusId": "ORDER_APPROVED",
-        "entryDate": "2020-10-21T17:57:18-04:00",
-        "currency": "USD",
-        "grandTotal": 79.99,
-        "orderItemSeqId": "00001",
-        "itemStatusId": "ITEM_APPROVED",
-        "quantity": 1,
-        "unitPrice": 49.99,
-        "orderItemExternalId": "5983287705671",
-        "shipGroupSeqId": "00002",
-        "shipmentMethodTypeId": "NEXT_DAY",
-        "postalContactMechId": "71256",
-        "telecomContactMechId": "71257",
-        "externalFulfillmentOrderItemId": null,
-        "fulfillmentStatus": null,
-        "customerFirstName": "Ashish",
-        "customerLastName": "Sharma",
-        "facilityId": "902",
-        "facilityExternalId": "902",
-        "facilityTypeId": "WAREHOUSE",
-        "parentFacilityTypeId": "DISTRIBUTION_CENTER",
-        "statusDatetime": "2020-10-21T17:57:18-04:00",
-        "productId": "20479",
-        "productTypeId": "FINISHED_GOOD",
-        "salesChannel": "WEB_CHANNEL",
-        "customerPartyId": "10990",
-        "shipTo": {
-          "countryGeoCode": "US",
-          "stateProvinceGeoCode": "NY",
-          "contactMechId": "71256",
-          "toName": "Petter William",
-          "attnName": null,
-          "address1": "Wall street",
-          "address2": "Tax user",
-          "houseNumber": null,
-          "houseNumberExt": null,
-          "directions": null,
-          "city": "Ohio",
-          "cityGeoId": null,
-          "postalCode": "10001",
-          "postalCodeExt": null,
-          "countryGeoId": "USA",
-          "stateProvinceGeoId": "NY",
-          "countyGeoId": null,
-          "municipalityGeoId": null,
-          "postalCodeGeoId": null,
-          "geoPointId": null,
-          "encodedAddressKey": null,
-          "isResidentialAddress": "Y"
-        },
-        "goodIdentifications": [
-          {
-            "fromDate": "2020-06-11T16:11:35-04:00",
-            "idValue": "ABBY",
-            "productId": "20479",
-            "lastUpdatedStamp": "2022-08-10T05:58:22-04:00",
-            "goodIdentificationTypeId": "SHOPIFY_PROD_SKU",
-            "thruDate": null
-          },
-          {
-            "idValue": "ABBY",
-            "goodIdentificationTypeId": "SKU",
-            "productId": "20479",
-            "fromDate": "2022-04-20T12:00:14-04:00",
-            "lastUpdatedStamp": "2022-08-10T05:58:22-04:00",
-            "thruDate": null
-          },
-          {
-            "lastUpdatedStamp": "2022-03-22T06:00:19-04:00",
-            "fromDate": "2020-06-11T16:11:35-04:00",
-            "idValue": "829105016156",
-            "productId": "20479",
-            "goodIdentificationTypeId": "UPCA",
-            "thruDate": null
-          }
-        ],
-        "orderItemAdjustments": [
-          {
-            "customerReferenceId": null,
-            "correspondingProductId": null,
-            "includeInShipping": null,
-            "description": null,
-            "exemptAmount": null,
-            "productPromoId": null,
-            "taxAuthPartyId": null,
-            "lastModifiedByUserLogin": null,
-            "oldPercentage": null,
-            "primaryGeoId": null,
-            "taxAuthGeoId": null,
-            "originalAdjustmentId": null,
-            "secondaryGeoId": null,
-            "createdByUserLogin": null,
-            "orderAdjustmentId": null,
-            "amountAlreadyIncluded": null,
-            "orderAdjustmentTypeId": "SALES_TAX",
-            "lastUpdatedStamp": null,
-            "amount": 0,
-            "comments": null,
-            "recurringAmount": null,
-            "lastModifiedDate": null,
-            "sourceReferenceId": null,
-            "productPromoRuleId": null,
-            "iNNanual": null,
-            "productFeatureId": null,
-            "taxAuthorityRateSeqId": null,
-            "overrideGlAccountId": null,
-            "oldAmountPerQuantity": null,
-            "shipGroupSeqId": null,
-            "includeInTax": null,
-            "createdDate": null,
-            "productPromoActionSeqId": null,
-            "sourcePercentage": null,
-            "orderId": "21042",
-            "orderItemSeqId": "00002"
-          },
-          {
-            "customerReferenceId": null,
-            "correspondingProductId": null,
-            "includeInShipping": null,
-            "description": null,
-            "exemptAmount": null,
-            "productPromoId": null,
-            "taxAuthPartyId": null,
-            "lastModifiedByUserLogin": null,
-            "oldPercentage": null,
-            "primaryGeoId": null,
-            "taxAuthGeoId": null,
-            "originalAdjustmentId": null,
-            "secondaryGeoId": null,
-            "createdByUserLogin": null,
-            "orderAdjustmentId": null,
-            "amountAlreadyIncluded": null,
-            "orderAdjustmentTypeId": "SALES_TAX",
-            "lastUpdatedStamp": null,
-            "amount": 0,
-            "comments": null,
-            "recurringAmount": null,
-            "lastModifiedDate": null,
-            "sourceReferenceId": null,
-            "productPromoRuleId": null,
-            "iNNanual": null,
-            "productFeatureId": null,
-            "taxAuthorityRateSeqId": null,
-            "overrideGlAccountId": null,
-            "oldAmountPerQuantity": null,
-            "shipGroupSeqId": null,
-            "includeInTax": null,
-            "createdDate": null,
-            "productPromoActionSeqId": null,
-            "sourcePercentage": null,
-            "orderId": "21042",
-            "orderItemSeqId": "00002"
-          },
-          {
-            "customerReferenceId": null,
-            "correspondingProductId": null,
-            "includeInShipping": null,
-            "description": null,
-            "exemptAmount": null,
-            "productPromoId": null,
-            "taxAuthPartyId": null,
-            "lastModifiedByUserLogin": null,
-            "oldPercentage": null,
-            "primaryGeoId": null,
-            "taxAuthGeoId": null,
-            "originalAdjustmentId": null,
-            "secondaryGeoId": null,
-            "createdByUserLogin": null,
-            "orderAdjustmentId": null,
-            "amountAlreadyIncluded": null,
-            "orderAdjustmentTypeId": "SALES_TAX",
-            "lastUpdatedStamp": null,
-            "amount": 0,
-            "comments": null,
-            "recurringAmount": null,
-            "lastModifiedDate": null,
-            "sourceReferenceId": null,
-            "productPromoRuleId": null,
-            "iNNanual": null,
-            "productFeatureId": null,
-            "taxAuthorityRateSeqId": null,
-            "overrideGlAccountId": null,
-            "oldAmountPerQuantity": null,
-            "shipGroupSeqId": null,
-            "includeInTax": null,
-            "createdDate": null,
-            "productPromoActionSeqId": null,
-            "sourcePercentage": null,
-            "orderId": "21042",
-            "orderItemSeqId": "00002"
-          }
-        ],
-        "orderItemAttributes": [
-          {
-            "attrValue": "Pre-ordered items",
-            "lastUpdatedStamp": "2020-10-21T17:57:18-04:00",
-            "attrDescription": "Pre-order item property",
-            "orderId": "21042",
-            "orderItemSeqId": "00002",
-            "attrName": "PreOrderItemProperty"
-          }
-        ]
-      }
-    ]
-  }
-]
+    "goodIdentifications" : [ {
+      "idValue" : "37639003275453",
+      "fromDate" : "2023-12-25T03:48:21+09:00",
+      "productId" : "60757",
+      "goodIdentificationTypeId" : "SHOPIFY_PROD_ID",
+      "lastUpdatedStamp" : "2023-12-25T03:48:31+09:00",
+      "thruDate" : null
+    }, {
+      "lastUpdatedStamp" : "2023-12-25T03:48:31+09:00",
+      "idValue" : "12674027-2527",
+      "fromDate" : "2023-12-25T03:48:21+09:00",
+      "productId" : "60757",
+      "goodIdentificationTypeId" : "SHOPIFY_PROD_SKU",
+      "thruDate" : null
+    }, {
+      "idValue" : "12674027-2527",
+      "fromDate" : "2023-12-25T03:48:21+09:00",
+      "productId" : "60757",
+      "lastUpdatedStamp" : "2023-12-25T03:48:31+09:00",
+      "goodIdentificationTypeId" : "SKU",
+      "thruDate" : null
+    }, {
+      "lastUpdatedStamp" : "2023-12-25T03:48:21+09:00",
+      "fromDate" : "2023-12-25T03:48:21+09:00",
+      "productId" : "60757",
+      "idValue" : "4550236388084",
+      "goodIdentificationTypeId" : "UPCA",
+      "thruDate" : null
+    } ],
+    "orderItemAdjustments" : [ {
+      "customerReferenceId" : null,
+      "correspondingProductId" : null,
+      "includeInShipping" : null,
+      "description" : null,
+      "exemptAmount" : null,
+      "productPromoId" : null,
+      "taxAuthPartyId" : null,
+      "lastModifiedByUserLogin" : null,
+      "oldPercentage" : null,
+      "primaryGeoId" : null,
+      "taxAuthGeoId" : null,
+      "amount" : 120,
+      "originalAdjustmentId" : null,
+      "secondaryGeoId" : null,
+      "createdByUserLogin" : null,
+      "orderAdjustmentId" : null,
+      "amountAlreadyIncluded" : null,
+      "orderAdjustmentTypeId" : "SALES_TAX",
+      "lastUpdatedStamp" : null,
+      "comments" : null,
+      "orderId" : "12082",
+      "recurringAmount" : null,
+      "lastModifiedDate" : null,
+      "sourceReferenceId" : null,
+      "productPromoRuleId" : null,
+      "isManual" : null,
+      "productFeatureId" : null,
+      "taxAuthorityRateSeqId" : null,
+      "overrideGlAccountId" : null,
+      "oldAmountPerQuantity" : null,
+      "shipGroupSeqId" : null,
+      "includeInTax" : null,
+      "createdDate" : null,
+      "productPromoActionSeqId" : null,
+      "sourcePercentage" : null,
+      "orderItemSeqId" : "00101"
+    } ],
+    "orderItemAttributes" : [ ],
+    "facilityGroupMembers" : [ {
+      "sequenceNum" : null,
+      "fromDate" : "2023-12-26T08:25:24+09:00",
+      "facilityId" : "WH0615",
+      "lastUpdatedStamp" : "2023-12-26T08:25:24+09:00",
+      "facilityGroupId" : "FAC_GRP",
+      "thruDate" : null
+    }, {
+      "facilityGroupId" : "OMS_FULFILLMENT",
+      "lastUpdatedStamp" : "2023-12-26T08:25:24+09:00",
+      "sequenceNum" : null,
+      "facilityId" : "WH0615",
+      "fromDate" : "2023-12-26T08:25:24+09:00",
+      "thruDate" : null
+    }, {
+      "lastUpdatedStamp" : "2024-02-05T05:45:04+09:00",
+      "facilityGroupId" : "PICKUP",
+      "sequenceNum" : null,
+      "facilityId" : "WH0615",
+      "fromDate" : "2024-02-05T05:44:57+09:00",
+      "thruDate" : null
+    } ],
+    "fromOrderItemAssocs" : [ ],
+    "toOrderItemAssocs" : [ ],
+    "productFeatures" : [ {
+      "amount" : null,
+      "productFeatureApplTypeId" : "STANDARD_FEATURE",
+      "recurringAmount" : null,
+      "sequenceNum" : 2,
+      "idCode" : null,
+      "contentId" : null,
+      "numberSpecified" : null,
+      "productFeatureCategoryId" : null,
+      "uomId" : null,
+      "productFeatureId" : "10016",
+      "productFeatureTypeId" : "COLOR",
+      "thruDate" : null,
+      "fromDate" : "2023-12-25T03:48:21+09:00",
+      "productId" : "60757",
+      "defaultSequenceNum" : null,
+      "defaultAmount" : null,
+      "imageUrl" : null,
+      "abbrev" : null,
+      "description" : "ホワイト"
+    }, {
+      "productFeatureId" : "10396",
+      "amount" : null,
+      "productFeatureApplTypeId" : "STANDARD_FEATURE",
+      "recurringAmount" : null,
+      "idCode" : null,
+      "sequenceNum" : 1,
+      "contentId" : null,
+      "numberSpecified" : null,
+      "productFeatureCategoryId" : null,
+      "description" : "2527",
+      "uomId" : null,
+      "thruDate" : null,
+      "fromDate" : "2023-12-25T03:48:21+09:00",
+      "productId" : "60757",
+      "defaultSequenceNum" : null,
+      "defaultAmount" : null,
+      "imageUrl" : null,
+      "abbrev" : null,
+      "productFeatureTypeId" : "SIZE"
+    } ]
+  } ]
+} ]
 ```
 
 </details>
 
+## Attributes: 
 
-| Attribute | Description |
-| --- | --- |
-| productStoreId | The product store unique identifier |
-**| orderId | HotWax Commerce unique order identifier |**
-| orderName | Shopify's unique order name |
-| orderDate | Order creation date. |
-| orderStatusId | Status of the order. Only orders with `ORDER_APPROVED` are brokered|
-| entryDate | The date when order is imported in HotWax Commerce OMS |
-| currency | Currency UOM of order |
-| grandTotal | The sum of all the individual order item prices |
-| shipmentMethodTypeId | The Shipment method type used in the Order |
-OrderItemSeqID
-ItemStatusID
-quantity
-unitPrice
-orderItemExternalId
-shipGroupSeqId
-**| postalContactMechId | This attribute contains the Contact Mech Id of ship to address. postalContactMechId is the alias name of the contactMechId |**
-**| telecomContactMechId | This attribute contains the telecom Contact Mech Id of ship to address. |**
-externalFulfillmentOrderItemId
-fulfillmentStatus
-| customerFirstName | This attribute contains first name of the bill to customer. customerFirstName is the alias name of the firstName |
-| customerLastName | This attribute contains last name of the bill to customer. customerLastName is the alias name of the firstName |
-facilityId
-facilityExternalId
-facilityTypeId
-parentFacilityTypeId
-statusDatetime
-productId
-productTypeId
-| salesChannel | This attribute contains the SalesChannel enumCode. salesChannel is the alias name of the enumCode. |
-| customerPartyId | This attribute contains the billTo customer partyId. customerPartyId is the alias name of the partyId |
-| isShippingChargesSent | Define the custom variable to identify shipping charges, shipping sales tax, and whether shipping adjustments were sent or not. |
-billto
-| billTo.contactMechId | This attribute contains the bill to contact Mech Id. |
-| billTo.PostalCode | This attribute contains the postal code of the bill to address. |
-| billTo.address1 | This attribute contains the address1 of the bill to address. |
-| billTo.stateProvinceGeoId | This attribute contains State Province Geo ID of the bill to address. |
-| billTo.address2 | This attribute contains the address2 of the bill to address. |
-| billTo.city | This attribute contains the city of the bill to address. |
-| billTo.stateProvinceGeoCode | This attribute contains the State Province Geo ID of the bill to address. stateProvinceGeoCode is the alias name of the geoCode. |
-| billTo.toName | This attribute contains the To Name of the bill to customer. |
-billTo.attrName
-"houseNumber": null,
-"houseNumberExt": null,
-"directions": null,
-cityGeoId
-postalCode
-postalCodeExt
-municipalityGeoId
-postalCodeGeoId
-geoPointId
-encodedAddressKey
-isResidentialAddress
-orderIdentifications
-orderIdentifications.fromDate
-orderIdentifications.lastUpdatedStamp
-orderIdentifications.orderId
-orderIdentifications.idValue
-orderIdentifications.orderIdentificationTypeId
-orderIdentificationTypeId.thruDate
-customerPartyIdentifications.lastUpdatedStamp
-customerPartyIdentifications.idValue
-customerPartyIdentifications.idValue
-customerPartyIdentifications.partyIdentificationTypeId
-customerPartyIdentifications.partyId
-payments.paymentMethodCode
-payments.paymentMethodDescription
-payments.amount
-payments.orderId
-payments.createdDate
-| billTo.countryGeoCode | This attribute contains the Country Geo Code of the bill to address |
-| OrderHeader.orderId | This is the unique ID assigned to an order in the system. |
-| OrderItem.orderId | This is the unique ID assigned to an order in the system. |
-| OrderItem.orderItemSeqId | This is the unique ID assigned to an order item in the system. |
-| OrderItemShipGroupAssoc.orderId | This is the unique ID assigned to an order in the system. |
-| OrderItemShipGroupAssoc.shipGroupSeqId | This is the unique ID assigned to a ship group in the system. |
-| OrderItemShipGroup.contactMechId | This is the unique ID assigned to a contact mechaniNN in the system. |
-| PostalAddress.countryGeoId | This is the unique ID assigned to a country in the system. |
-| OrderContactMech.contactMechPurposeTypeId | This is the unique ID assigned to a contact mechaniNN purpose type in the system. |
-| OrderIdentification.idValue | This attribute contains the value of the order Identification of the order. |
-| OrderIdentification.orderIdentificationTypeId | This attribute contains the type ID of the Order Identification of the order. |
-| PartyIdentification.idValue | This attribute contains the value of the Party Identification of the customer. |
-| PartyIdentification.partyIdentificationTypeId | This attribute contains the type ID of the Party Identification of the customer. |
-| OrderPaymentPreference.paymentMethodTypeId | This attribute contains the paymentMethodTypeId. |
-| OrderPaymentPreference.createdDate | This attribute contains the createdDate. |
-| OrderPaymentPreference.paymentMethodCode | This attribute contains the paymentMethodCode. |
-| OrderPaymentPreference.paymentMethodDescription | This attribute contains the paymentMethodDescription. |
-| OrderPaymentPreference.statusId | This attribute contains the statusId. |
-| OrderPaymentPreference.amount | This attribute contains the amount. |
-| OrderPaymentPreference.orderId | This attribute contains the orderId. |
-| OrderAdjustment.orderAdjustmentTypeId | This attribute contains the Type Id of the Order Adjustment. |
-| OrderAdjustment.orderId | This attribute contains the Order Id. |
-| OrderAdjustment.orderItemSeqId | This attribute contains the Order Item Seq Id. |
-| OrderAdjustment.amount | This attribute contains the Order Adjustment amount. |
-| OrderItem.productStoreId | This attribute contains the product store ID. |
-| OrderItem.orderName | This attribute contains the name of the order. |
-| OrderItem.orderDate | This attribute contains the order date. |
-| OrderItem.orderStatusId | This attribute contains the status ID of the order. |
-| OrderItem.entryDate | This attribute defines the entry date of order in the system. |
-| OrderItem.currency | This attribute contains the currency UOM in the order. |
-| OrderItem.grandTotal | This attribute contains the grand total of the order. |
-| OrderItem.orderItemSeqId | This attribute contains the order item sequence id. |
-| OrderItem.itemStatusId | This attribute represents the status of the order item. |
-| OrderItem.quantity | This attribute contains the sum of quantity for the same orderId, orderItemSeqId, shipGroupSeqId. |
-| OrderItem.unitPrice | This attribute contains the unit price of the order item. |
-| OrderItem.orderItemExternalId | This attribute contains the externalId of the order item. |
-| OrderItem.shipGroupSeqId | This attribute contains ship group sequence of the order item. |
-| OrderItem.shipmentMethodTypeId | This attribute contains shipment Method Type Id of ship to address. |
-| OrderItem.postalContactMechId | This attribute contains the Contact Mech Id of ship to address. |
-| OrderItem.telecomContactMechId | This attribute contains the telecom Contact Mech Id of ship to address. |
-| OrderItem.externalFulfillmentOrderItemId | This attribute contains the ID of External Fulfillment Order Item record which helps in maintaining history of the items sent for fulfillment. |
-| OrderItem.fulfillmentStatus | This attribute contains the status of External Fulfillment Order Item record sent for fulfillment. |
-| OrderItem.customerFirstName | This attribute contains first name of the bill to customer. |
-| OrderItem.customerLastName | This attribute contains last name of the bill to customer. |
-| OrderItem.salesChannel | This attribute contains the SalesChannel enumCode. |
-| OrderItem.customerPartyId | This attribute contains the billTo customer partyId. |
-| OrderItem.isShippingChargesSent | Define the custom variable to identify shipping charges, shipping sales tax, and whether shipping adjustments were sent or not. |
-| OrderItem.billTo.contactMechId | This attribute contains the bill to contact Mech Id. |
-| OrderItem.billTo.PostalCode | This attribute contains the postal code of the bill to address. |
-| OrderItem.billTo.address1 | This attribute contains the address1 of the bill to address. |
-| OrderItem.billTo.stateProvinceGeoId | This attribute contains State Province Geo ID of the bill to address. |
-| OrderItem.billTo.address2 | This attribute contains the address2 of the bill to address. |
-| OrderItem.billTo.city | This attribute contains the city of the bill to address. |
-| OrderItem.billTo.stateProvinceGeoCode | This attribute contains the State Province Geo ID of the bill to address. |
-| OrderItem.billTo.toName | This attribute contains the To Name of the bill to customer. |
-| OrderItem.billTo.countryGeoCode | This attribute contains the Country Geo Code of the bill to address |
-| orderItems.orderId                                | This is the unique ID assigned to an order in the system.                                                         |
-| orderItems.customerFirstName                      | This attribute contains the first name of the customer.                                                           |
-| orderItems.customerLastName                       | This attribute contains last name of the bill to customer.                                                        |
-| orderItems.facilityId                             | This attribute contains the facility ID.                                                                         |
-| orderItems.facilityExternalId                     | This attribute contains the external facility/warehouse ID.                                                       |
-| orderItems.facilityTypeId                         | This attribute contains the facility Type Id.                                                                    |
-| orderItems.parentFacilityTypeId                   | This attribute contains ID of the parent facility for facilityId. Defaults to DISTRIBUTION_CENTER.               |
-| orderItems.statusDatetime                         | This attribute contains the datetime corresponding to the Order Item Status record of ITEM_APPROVED.            |
-| orderItems.productId                              | This attribute contains the unique product ID in the system for the order item.                                  |
-| orderItems.productTypeId                          | This attribute contains the order item productTypeId.                                                            |
-| orderItems.salesChannel                           | This attribute contains the SalesChannel enumCode.                                                               |
-| orderItems.customerPartyId                        | This attribute contains the billTo customer partyId. customerPartyId is the alias name of the partyId           |
-| orderItems.shipTo                                 | Map of the ship to address.                                                                                     |
-| orderItems.shipTo.contactMechId                   | This attribute contains the Contact Mech Id of the ship to address.                                               |
-| orderItems.shipTo.PostalCode                      | This attribute contains the postal code of the ship to address.                                                   |
-| orderItems.shipTo.address1                        | This attribute contains the address1 of the ship to address.                                                      |
-| orderItems.shipTo.stateProvinceGeoId              | This attribute contains State Province Geo ID of the ship to address.                                             |
-| orderItems.shipTo.address2                        | This attribute contains the address2 of the ship to address.                                                      |
-| orderItems.shipTo.city                            | This attribute contains the city of the ship to address.                                                          |
-| orderItems.shipTo.stateProvinceGeoCode            | This attribute contains the State Province Geo ID of the ship to address. stateProvinceGeoCode is the alias name of the geoCode.                                            |
-| orderItems.shipTo.toName                          | This attribute contains the To Name of the ship to customer.                                                      |
-| orderItems.shipTo.countryGeoCode                 | This attribute contains the Country Geo Code of the ship to address                                               |
-| orderItems.shipTo.isResidentialAddress            | OrderContactMech.contactMechPurposeTypeId='HOME_LOCATION' then isResidentialAddress should be 'Y' if OrderContactMech.contactMechPurposeTypeId='WORK_LOCATION' then isResidentialAddress should be 'N'. If contactMechPurposeTypeId neither 'HOME_LOCATION' nor 'WORK_LOCATION' then isResidentialAddress will be null. |
-| orderItems.goodIdentifications                    | List of good Identifications.                                                                                    |
-| orderItems.goodIdentifications.idValue           | This attribute contains the value of the good Identification of the product.                                    |
-| orderItems.goodIdentifications.goodIdentificationTypeId | This attribute contains the type ID of the Good Identification of the product. Defaults to SKU, UPCA. The SKU, UPCA, defines the unique identification of the order item.                                                            |
-| orderItems.orderItemAdjustments                   | List of Order Item Level Adjustments.                                                                            |
-| orderItems.orderItemAdjustments.orderAdjustmentTypeId | This attribute contains the Type Id of the Order Adjustment.                                                      |
-| orderItems.orderItemAdjustments.orderId          | This attribute contains the Order Id.                                                                            |
-| orderItems.orderItemAdjustments.orderItemSeqId   | This attribute contains the order Item Seq Id.                                                                   |
-| orderItems.orderItemAdjustments.amount           | This attribute contains the Order Item Adjustment amount.                                                        |
-| orderItemAttributes.orderId                       | This is the unique ID assigned to an order in the system.                                                         |
-| orderItems.orderItemAttributes.attrValue           | This attribute contains the order attribute value like **Pre-ordered items**.                                    |
-| orderItems.orderItemAttributes.attrDescription     | This attribute contains the order item attribute description like **Pre-order item property**.                   |
-| orderItems.orderItemAttributes.orderItemSeqId  | Order item sequence id.                                                                                          |
-| orderItems.orderItemAttributes.attrName        | This attribute contains the order item attribute Name like **PreOrderItemProperty**.                            |
+
+| Field Name | Description | Value |
+|------------|-------------|-------|
+| productStoreId | The ID of the product store | STORE |
+| orderId | The unique identifier for the order | 12082 |
+| orderName | The name of the order | 9000004032 |
+| orderDate | The date and time the order was placed | 2024-02-23T03:43:23+09:00 |
+| orderStatusId | The status of the order | ORDER_APPROVED |
+| entryDate | The date and time the order was entered | 2024-02-23T03:50:12+09:00 |
+| orderExternalId | The external ID of the order | 5384320450749 |
+| currency | The currency used for the order | JPY |
+| grandTotal | The total amount of the order | 1870 |
+| orderItemSeqId | The sequence ID of the order item | null |
+| itemStatusId | The status of the item | null |
+| orderItemQuantity | The quantity of the order item | null |
+| reservedItemQuantity | The quantity of reserved items | null |
+| reservedDatetime | The date and time the items were reserved | null |
+| unitPrice | The unit price of the item | null |
+| orderItemExternalId | The external ID of the order item | null |
+| itemDescription | The description of the item | null |
+| requestedDeliveryDate | The requested delivery date | null |
+| requestedDeliveryTime | The requested delivery time | null |
+| deliveryWindow | The delivery window | null |
+| shipGroupSeqId | The sequence ID of the ship group | null |
+| shipmentMethodTypeId | The shipment method type ID | null |
+| postalContactMechId | The postal contact mechanism ID | null |
+| telecomContactMechId | The telecom contact mechanism ID | null |
+| orderFacilityId | The order facility ID | null |
+| carrierPartyId | The carrier party ID | null |
+| externalFulfillmentOrderItemId | The external fulfillment order item ID | null |
+| fulfillmentStatus | The fulfillment status | null |
+| customerFirstName | The first name of the customer | jhon |
+| customerLastName | The last name of the customer | deo |
+| facilityId | The facility ID | null |
+| facilityExternalId | The external ID of the facility | null |
+| facilityTypeId | The facility type ID | null |
+| parentFacilityTypeId | The parent facility type ID | null |
+| statusDatetime | The date and time of the status | null |
+| productId | The product ID | null |
+| productTypeId | The product type ID | null |
+| salesChannel | The sales channel | WEB_CHANNEL |
+| customerPartyId | The customer party ID | 10290 |
+| isShippingChargesSent | Indicates if shipping charges are sent | Y |
+| billTo | The billing information | See below |
+| orderIdentifications | The order identifications | See below |
+| customerPartyIdentifications | The customer party identifications | See below |
+| payments | The payments | See below |
+| orderAdjustments | The order adjustments | See below |
+| orderAttributes | The order attributes | See below |
+| orderItems | The order items | See below |
+
+**This object contains following attributes which have internal nesting:**
+
+| Field Name | Description | Value |
+|------------|-------------|-------|
+| billTo | The billing information | See below |
+| orderIdentifications | The order identifications | See below |
+| customerPartyIdentifications | The customer party identifications | See below |
+| payments | The payments | See below |
+| orderAdjustments | The order adjustments | See below |
+| orderAttributes | The order attributes | See below |
+| orderItems | The order items | See below |
+
+
+### billTo
+| Field Name | Description | Value |
+|------------|-------------|-------|
+| countryGeoCode | The country geo code | JP |
+| stateProvinceGeoCode | The state province geo code | null |
+| contactMechId | The contact mechanism ID | 18227 |
+| toName | The name of the recipient | jhon deo |
+| attnName | The attention name | null |
+| address1 | The first line of the address | 足立 |
+| address2 | The second line of the address | null |
+| houseNumber | The house number | null |
+| houseNumberExt | The house number extension | null |
+| directions | The directions | null |
+| city | The city | 足立区 |
+| cityGeoId | The city geo ID | null |
+| postalCode | The postal code | 120-0015 |
+| postalCodeExt | The postal code extension | null |
+| countryGeoId | The country geo ID | JPN |
+| stateProvinceGeoId | The state province geo ID | null |
+| countyGeoId | The county geo ID | null |
+| municipalityGeoId | The municipality geo ID | null |
+| postalCodeGeoId | The postal code geo ID | null |
+| geoPointId | The geo point ID | 11795 |
+| encodedAddressKey | The encoded address key | null |
+| latitude | The latitude | null |
+| longitude | The longitude | null |
+| isResidentialAddress | Indicates if the address is residential | Y |
+| phone | The phone information | See below |
+
+### phone
+| Field Name | Description | Value |
+|------------|-------------|-------|
+| contactMechId | The contact mechanism ID | 18228 |
+| countryCode | The country code | 1 |
+| areaCode | The area code | null |
+| contactNumber | The contact number | 0593785656 |
+| askForName | The name to ask for | null |
+| lastUpdatedStamp | The date and time of the last update | 2024-02-23T03:50:12+09:00 |
+
+### orderIdentifications
+| Field Name | Description | Value |
+|------------|-------------|-------|
+| idValue | The ID value | 5384320450749 |
+| orderId | The order ID | 12082 |
+| fromDate | The from date | 2024-02-23T03:50:12+09:00 |
+| lastUpdatedStamp | The date and time of the last update | 2024-02-23T03:50:12+09:00 |
+| orderIdentificationTypeId | The order identification type ID | SHOPIFY_ORD_ID |
+| thruDate | The thru date | null |
+
+### customerPartyIdentifications
+| Field Name | Description | Value |
+|------------|-------------|-------|
+| lastUpdatedStamp | The date and time of the last update | 2024-02-23T01:50:16+09:00 |
+| partyIdentificationTypeId | The party identification type ID | SHOPIFY_CUST_ID |
+| idValue | The ID value | 7053008306365 |
+| partyId | The party ID | 10290 |
+
+### payments
+| Field Name | Description | Value |
+|------------|-------------|-------|
+| paymentMethodCode | The payment method code | null |
+| amount | The amount | 1870 |
+| paymentMethodTypeId | The payment method type ID | EXT_SHOP_OTHR_GTWAY |
+| paymentMethodDescription | The payment method description | Ext Other Gateways |
+| orderId | The order ID | 12082 |
+| statusId | The status ID | PAYMENT_AUTHORIZED |
+| returnId | The return ID | null |
+| createdDate | The date and time of creation | 2024-02-23T03:50:12+09:00 |
+
+### orderAdjustments
+| Field Name | Description | Value |
+|------------|-------------|-------|
+| customerReferenceId | The customer reference ID | null |
+| correspondingProductId | The corresponding product ID | null |
+| orderItemSeqId | The order item sequence ID | _NA_ |
+| includeInShipping | Indicates if the adjustment is included in shipping | null |
+| description | The description of the adjustment | null |
+| exemptAmount | The exempt amount | null |
+| productPromoId | The product promo ID | null |
+| taxAuthPartyId | The tax authority party ID | null |
+| lastModifiedByUserLogin | The ID of the last user login that modified the adjustment | null |
+| oldPercentage | The old percentage | null |
+| orderAdjustmentTypeId | The order adjustment type ID | SHIPPING_SALES_TAX |
+| primaryGeoId | The primary geo ID | null |
+| taxAuthGeoId | The tax authority geo ID | null |
+| originalAdjustmentId | The original adjustment ID | null |
+| amount | The amount | 50 |
+| secondaryGeoId | The secondary geo ID | null |
+| createdByUserLogin | The ID of the user login that created the adjustment | null |
+| orderAdjustmentId | The order adjustment ID | null |
+| amountAlreadyIncluded | The amount already included | null |
+| lastUpdatedStamp | The date and time of the last update | null |
+| comments | The comments | null |
+| orderId | The order ID | 12082 |
+| recurringAmount | The recurring amount | null |
+| lastModifiedDate | The date and time of the last modification | null |
+| sourceReferenceId | The source reference ID | null |
+| productPromoRuleId | The product promo rule ID | null |
+| isManual | Indicates if the adjustment is manual | null |
+| productFeatureId | The product feature ID | null |
+| taxAuthorityRateSeqId | The tax authority rate sequence ID | null |
+| overrideGlAccountId | The override GL account ID | null |
+| oldAmountPerQuantity | The old amount per quantity | null |
+| shipGroupSeqId | The ship group sequence ID | null |
+| includeInTax | Indicates if the adjustment is included in tax | null |
+| createdDate | The date and time of creation | null |
+| productPromoActionSeqId | The product promo action sequence ID | null |
+| sourcePercentage | The source percentage | null |
+
+### orderAttributes
+| Field Name | Description | Value |
+|------------|-------------|-------|
+| lastUpdatedStamp | The date and time of the last update | 2024-02-23T04:05:15+09:00 |
+| orderId | The order ID | 12082 |
+| attrDescription | The attribute description | null |
+| attrName | The attribute name | COD_FEE_ADJ_CREATED |
+| attrValue | The attribute value | true |
+
+### orderItems
+| Field Name | Description | Value |
+|------------|-------------|-------|
+| productStoreId | The ID of the product store | STORE |
+| orderId | The unique identifier for the order | 12082 |
+| orderName | The name of the order | 9000004032 |
+| orderDate | The date and time the order was placed | 2024-02-23T03:43:23+09:00 |
+| orderStatusId | The status of the order | ORDER_APPROVED |
+| entryDate | The date and time the order was entered | 2024-02-23T03:50:12+09:00 |
+| orderExternalId | The external ID of the order | 5384320450749 |
+| currency | The currency used for the order | JPY |
+| grandTotal | The total amount of the order | 1870 |
+| orderItemSeqId | The sequence ID of the order item | 00101 |
+| itemStatusId | The status of the item | ITEM_APPROVED |
+| orderItemQuantity | The quantity of the order item | 1 |
+| reservedItemQuantity | The quantity of reserved items | 1 |
+| reservedDatetime | The date and time the items were reserved | 2024-02-23T04:20:07+09:00 |
+| unitPrice | The unit price of the item | 1200 |
+| orderItemExternalId | The external ID of the order item | 12915436126397 |
+| itemDescription | The description of the item | ソックス クルー 3ペア ホワイト |
+| requestedDeliveryDate | The requested delivery date | null |
+| requestedDeliveryTime | The requested delivery time | null |
+| deliveryWindow | The delivery window | null |
+| shipGroupSeqId | The sequence ID of the ship group | 00001 |
+| shipmentMethodTypeId | The shipment method type ID | STANDARD |
+| postalContactMechId | The postal contact mechanism ID | 18224 |
+| telecomContactMechId | The telecom contact mechanism ID | 18225 |
+| orderFacilityId | The order facility ID | null |
+| carrierPartyId | The carrier party ID | _NA_ |
+| externalFulfillmentOrderItemId | The external fulfillment order item ID | null |
+| fulfillmentStatus | The fulfillment status | null |
+| customerFirstName | The first name of the customer | jhon |
+| customerLastName | The last name of the customer | deo |
+| facilityId | The facility ID | WH0615 |
+| facilityExternalId | The external ID of the facility | 22 |
+| facilityTypeId | The facility type ID | WAREHOUSE |
+| parentFacilityTypeId | The parent facility type ID | DISTRIBUTION_CENTER |
+| statusDatetime | The date and time of the status | 2024-02-23T04:05:15+09:00 |
+| productId | The product ID | 60757 |
+| productTypeId | The product type ID | FINISHED_GOOD |
+| salesChannel | The sales channel | WEB_CHANNEL |
+| customerPartyId | The customer party ID | 10290 |
+| shipTo | The shipping information | See below |
+| goodIdentifications | The good identifications | See below |
+| orderItemAdjustments | The order item adjustments | See below |
+| orderItemAttributes | The order item attributes | See below |
+| facilityGroupMembers | The facility group members | See below |
+| fromOrderItemAssocs | The from order item associations | See below |
+| toOrderItemAssocs | The to order item associations | See below |
+| productFeatures | The product features | See below |
+
+### shipTo
+| Field Name | Description | Value |
+|------------|-------------|-------|
+| countryGeoCode | The country geo code | JP |
+| stateProvinceGeoCode | The state province geo code | null |
+| contactMechId | The contact mechanism ID | 18224 |
+| toName | The name of the recipient | jhon deo |
+| attnName | The attention name | null |
+| address1 | The first line of the address | 足立 |
+| address2 | The second line of the address | null |
+| houseNumber | The house number | null |
+| houseNumberExt | The house number extension | null |
+| directions | The directions | null |
+| city | The city | 足立区 |
+| cityGeoId | The city geo ID | null |
+| postalCode | The postal code | 120-0015 |
+| postalCodeExt | The postal code extension | null |
+| countryGeoId | The country geo ID | JPN |
+| stateProvinceGeoId | The state province geo ID | null |
+| countyGeoId | The county geo ID | null |
+| municipalityGeoId | The municipality geo ID | null |
+| postalCodeGeoId | The postal code geo ID | null |
+| geoPointId | The geo point ID | 11794 |
+| encodedAddressKey | The encoded address key | null |
+| latitude | The latitude | 35.7610621 |
+| longitude | The longitude | 139.8073929 |
+| isResidentialAddress | Indicates if the address is residential | Y |
+| phone | The phone information | See below |
+
+### goodIdentifications
+| Field Name | Description | Value |
+|------------|-------------|-------|
+| idValue | The ID value | 37639003275453 |
+| fromDate | The from date | 2023-12-25T03:48:21+09:00 |
+| productId | The product ID | 60757 |
+| goodIdentificationTypeId | The good identification type ID | SHOPIFY_PROD_ID |
+| lastUpdatedStamp | The date and time of the last update | 2023-12-25T03:48:31+09:00 |
+| thruDate | The thru date | null |
+
+### orderItemAdjustments
+| Field Name | Description | Value |
+|------------|-------------|-------|
+| customerReferenceId | The customer reference ID | null |
+| correspondingProductId | The corresponding product ID | null |
+| includeInShipping | Indicates if the adjustment is included in shipping | null |
+| description | The description of the adjustment | null |
+| exemptAmount | The exempt amount | null |
+| productPromoId | The product promo ID | null |
+| taxAuthPartyId | The tax authority party ID | null |
+| lastModifiedByUserLogin | The ID of the last user login that modified the adjustment | null |
+| oldPercentage | The old percentage | null |
+| primaryGeoId | The primary geo ID | null |
+| taxAuthGeoId | The tax authority geo ID | null |
+| amount | The amount | 120 |
+| originalAdjustmentId | The original adjustment ID | null |
+| secondaryGeoId | The secondary geo ID | null |
+| createdByUserLogin | The ID of the user login that created the adjustment | null |
+| orderAdjustmentId | The order adjustment ID | null |
+| amountAlreadyIncluded | The amount already included | null |
+| orderAdjustmentTypeId | The order adjustment type ID | SALES_TAX |
+| lastUpdatedStamp | The date and time of the last update | null |
+| comments | The comments | null |
+| orderId | The order ID | 12082 |
+| recurringAmount | The recurring amount | null |
+| lastModifiedDate | The date and time of the last modification | null |
+| sourceReferenceId | The source reference ID | null |
+| productPromoRuleId | The product promo rule ID | null |
+| isManual | Indicates if the adjustment is manual | null |
+| productFeatureId | The product feature ID | null |
+| taxAuthorityRateSeqId | The tax authority rate sequence ID | null |
+| overrideGlAccountId | The override GL account ID | null |
+| oldAmountPerQuantity | The old amount per quantity | null |
+| shipGroupSeqId | The ship group sequence ID | null |
+| includeInTax | Indicates if the adjustment is included in tax | null |
+| createdDate | The date and time of creation | null |
+| productPromoActionSeqId | The product promo action sequence ID | null |
+| sourcePercentage | The source percentage | null |
+
+### orderItemAttributes
+| Field Name | Description | Value |
+|------------|-------------|-------|
+| lastUpdatedStamp | The date and time of the last update | 2024-02-23T03:50:12+09:00 |
+| orderId | The order ID | 12082 |
+| attrDescription | The attribute description | null |
+| attrName | The attribute name | COD_FEE_ADJ_CREATED |
+| attrValue | The attribute value | true |
+
+### facilityGroupMembers
+| Field Name | Description | Value |
+|------------|-------------|-------|
+| facilityId | The facility ID | WH0615 |
+| facilityGroupId | The facility group ID | 22 |
+| thruDate | The thru date | null |
+| fromDate | The from date | 2024-02-23T03:50:12+09:00 |
+| sequenceNum | The sequence number | 1 |
+| facilityGroupTypeId | The facility group type ID | WAREHOUSE |
+
+### fromOrderItemAssocs
+| Field Name | Description | Value |
+|------------|-------------|-------|
+| orderId | The order ID | 12082 |
+| orderItemSeqId | The order item sequence ID | 00101 |
+| toOrderId | The to order ID | null |
+| fromDate | The from date | 2024-02-23T03:50:12+09:00 |
+| lastUpdatedStamp | The date and time of the last update | 2024-02-23T03:50:12+09:00 |
+| toOrderItemSeqId | The to order item sequence ID | null |
+| sequenceNum | The sequence number | 1 |
+| lastModifiedDate | The date and time of the last modification | null |
+| createdByUserLogin | The ID of the user login that created the association | null |
+| createdDate | The date and time of creation | null |
+| lastModifiedByUserLogin | The ID of the last user login that modified the association | null |
+
+### toOrderItemAssocs
+| Field Name | Description | Value |
+|------------|-------------|-------|
+| orderId | The order ID | 12082 |
+| orderItemSeqId | The order item sequence ID | 00101 |
+| toOrderId | The to order ID | null |
+| fromDate | The from date | 2024-02-23T03:50:12+09:00 |
+| lastUpdatedStamp | The date and time of the last update | 2024-02-23T03:50:12+09:00 |
+| toOrderItemSeqId | The to order item sequence ID | null |
+| sequenceNum | The sequence number | 1 |
+| lastModifiedDate | The date and time of the last modification | null |
+| createdByUserLogin | The ID of the user login that created the association | null |
+| createdDate | The date and time of creation | null |
+| lastModifiedByUserLogin | The ID of the last user login that modified the association | null |
+
+### productFeatures
+| Field Name | Description | Value |
+|------------|-------------|-------|
+| lastUpdatedStamp | The date and time of the last update | 2024-02-23T03:50:12+09:00 |
+| orderId | The order ID | 12082 |
+| attrDescription | The attribute description | null |
+| attrName | The attribute name | COD_FEE_ADJ_CREATED |
+| attrValue | The attribute value | true |
