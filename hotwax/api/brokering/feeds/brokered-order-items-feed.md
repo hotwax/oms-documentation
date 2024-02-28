@@ -1,6 +1,6 @@
 # Introduction
 
-The Brokered Order Items feed is an order-wise JSON-formatted feed generated from the HotWax Commerce OMS. This feed contains details about brokered order items, which can be brokered to either Warehouse or Store Type facilities. The feed can be used for various purposes, such as reporting, analysis, and integration with other systems.
+The Brokered Order Items feed is an order-wise JSON-formatted feed generated from the HotWax Commerce OMS. This feed contains details about brokered order items, which can be brokered to either Warehouse or Store Type facilities. The feed can be used for various purposes, such as integration with other external systems, reporting and analysis.
 
 # Use case
 
@@ -10,14 +10,12 @@ The Brokered Order Items feed is useful for retailers who would like to do fulfi
 
 # Customization
 
-The Brokered Order Items feed has certain out-of-the-box parameters that allow users to generate the feed as per their requirements.
-
-## Parameters
+The Brokered Order Items feed has certain out-of-the-box customizations that allow users to generate the feed as per the requirements.
 
 | **Parameter**           | **Description**                                                                                           |
 |--------------------------|-----------------------------------------------------------------------------------------------------------|
-| `orderId`                | Allows you to generate the feed for a specific order ID.                                                   |
-| `orderItemSeqId`         | Allows you to generate the feed for a specific order item sequence ID within an order.                     |
+| `orderId`                | Allows to generate the feed for a specific order ID.                                                   |
+| `orderItemSeqId`         | Allows to generate the feed for a specific order item sequence ID within an order.                     |
 | `parentFacilityTypeIds`  | Specifies the type of facility from which the brokered order items are being fetched.                     |
 | `productStoreIds`        | Allows you to set the product store IDs to generate brand-specific feeds.                                  |
 | `systemMessageTypeId`    | Specifies the System Message Type ID used for generating the Brokered Order Items Feed.                    |
@@ -437,8 +435,9 @@ The Brokered Order Items feed has certain out-of-the-box parameters that allow u
 
 </details>
 
-## Attributes: 
+## Attributes
 
+**The following attributes have been prepared in the feed:**
 
 | Field Name | Description | Value |
 |------------|-------------|-------|
@@ -490,7 +489,7 @@ The Brokered Order Items feed has certain out-of-the-box parameters that allow u
 | orderAttributes | The order attributes | See below |
 | orderItems | The order items | See below |
 
-**This object contains following attributes which have internal nesting:**
+**This object contains the following attributes, each of which has internal nesting:**
 
 | Field Name | Description | Value |
 |------------|-------------|-------|
@@ -807,3 +806,4 @@ The Brokered Order Items feed has certain out-of-the-box parameters that allow u
 | attrDescription | The attribute description | null |
 | attrName | The attribute name | COD_FEE_ADJ_CREATED |
 | attrValue | The attribute value | true |
+
