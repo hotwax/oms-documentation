@@ -31,6 +31,14 @@ Users can now change the facility type of a facility from the facility details p
 Video: Change Facility Type
 {% endembed %}
 
+### Create Facility Log ins
+
+Users can create facility logins which can be used by the staff of the respective facility by clicking on the retail/warehouse login card through following steps:
+
+1. Click on the `Add` Button in the Log in card
+2. This will open up a new form, Add Facility user name, password and a reset password link
+3. Click on the save icon to save the facility login.
+
 ### Linking Facility with External Systems
 
 Before configuring any settings, it's crucial to establish a connection between the facilities within HotWax Commerce and external systems like e-commerce platforms, ERP systems, and third-party logistics systems. Each facility in HotWax Commerce manages inventory; and the Available To Promise (ATP) is also controlled by retailers through ERP integration, ensuring accurate fulfillment and inventory management across the system. Users can map the HotWax Commerce facilities with external systems using the following steps:
