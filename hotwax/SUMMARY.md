@@ -51,7 +51,5 @@
 
 ## Additional Resources
 
-* [Fulfilled Order Items Feed](api/fulfillment/feed/fulfilled-order-items-feed.md)
-* [Sample Fulfilled Orders Items Feed](additional-resources/sample-fulfilled-orders-items-feed.md)
 * [Sample Reset Inventory csv](additional-resources/sample-reset-inventory-csv.md)
 * [Sample Return Feed](additional-resources/sample-return-feed.md)
