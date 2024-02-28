@@ -26,7 +26,7 @@ Once the returns are downloaded into HotWax Commerce, they need to be synced to 
 
 When the online returns are synchronized in NetSuite, a return is generated in NetSuite, the order item is marked as returned and the payment is marked as refunded. Subsequently, the inventory is restocked against the created item receipt.
 
-<figure><img src="../../.gitbook/assets/online return with hotwax.png" alt=""><figcaption><p>Sync online returns to NetSuite using HotWax Commerce</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/online returns with hotwax.png" alt=""><figcaption><p>Sync online returns to NetSuite using HotWax Commerce</p></figcaption></figure>
 
 ### Synchronizing Returns to NetSuite using Loop as middleware
 
