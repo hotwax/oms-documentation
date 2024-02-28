@@ -4,7 +4,7 @@ Orders that are in "Created" status in HotWax Commerce are pushed to NetSuite ra
 
 Initially, we attempted to synchronize approved orders from HotWax Commerce to NetSuite. However, this posed challenges when dealing with orders that contained both available and unavailable inventory items for fulfillment. In such cases, only a partial order could be pushed to NetSuite, causing complications. If the order was partially fulfilled in NetSuite due to certain available items, a subsequent attempt to send the remaining items led to conflicts. NetSuite recognized the initial order as complete and did not accept the remaining partial order, causing system errors and duplication.
 
-To circumvent such complexities and ensure a seamless process, a strategic shift was made. Orders, upon their creation within HotWax Commerce, are designated as "Created" status. It is at this phase that critical order information is captured and assembled into CSV files for transmission to NetSuite. By choosing the "Created" status for order synchronization, HotWax Commerce retains control of the integration process and its sequence of interactions with NetSuite, enhancing accuracy and mitigating errors that arose from attempts to synchronize orders in an "Approved" status.
+To circumvent such complexities and ensure a seamless process, a strategic shift was made. Orders, upon their creation within HotWax Commerce, are designated as "Created" status. It is at this phase that critical order information is captured and assembled into CSV files for transmission to NetSuite. By choosing the "Created" status for order synchronization, HotWax Commerce retains control of the integration process and its sequence of interactions with NetSuite, enhancing accuracy and mitigating errors that arose from attempts to synchronize orders in "Approved" status.
 
 {% hint style="info" %}
 Orders will only be allocated for fulfillment after they have been approved.
@@ -49,7 +49,6 @@ HC_SC_ImportCustomer
 #### Export customers IDs from NetSuite and import into HotWax
 
 3. Once customers are created in NetSuite, a scheduled script exports recently created customers in a CSV file at an SFTP location to be imported by HotWax Commerce.
-
 4. A scheduled job within Hotwax Commerce OMS reads this file from the SFTP location and syncs the NetSuite customer IDs, confirming the customer synchronization in the OMS.
 
 **SuiteScripts**
@@ -89,7 +88,7 @@ FTP Config: IMP_PARTY_IDENT
 {% endtab %}
 {% endtabs %}
 
-#### Here's how customer fields are mapped in HotWax Commerce and NetSuite that remains hidden in the user interface but included in the customer CSV file
+#### Here's how customer fields are mapped in HotWax Commerce and NetSuite that remain hidden in the user interface but are included in the customer CSV file
 
 <table><thead><tr><th width="137.08771929824562">S.No.</th><th>Fields in HotWax Commerce</th><th>Fields in NetSuite</th></tr></thead><tbody><tr><td>1</td><td>Product Store External ID</td><td>Subsidiary *</td></tr><tr><td>2</td><td>Customer-Closed Won</td><td>Status *</td></tr><tr><td>3</td><td>Individual</td><td>Type *</td></tr><tr><td>4</td><td>Party ID</td><td>External ID</td></tr><tr><td>5</td><td>Party Classification</td><td>Initial Lead Source</td></tr><tr><td>6</td><td>True</td><td>Taxable</td></tr></tbody></table>
 
@@ -107,19 +106,19 @@ Capturing orders in HotWax Commerce initiates the creation of orders in "created
 
 #### Export new orders to NetSuite
 
-  1. A job within HotWax Commerce Integration Platform generates a CSV file of orders in "created" status that have not yet been sent to NetSuite and places this file at an SFTP location. When creating this file HotWax Commerce also ensures that the customer already exists in NetSuite using the customer ID saved in the last step.
+1. A job within HotWax Commerce Integration Platform generates a CSV file of orders in "created" status that have not yet been sent to NetSuite and places this file at an SFTP location. When creating this file HotWax Commerce also ensures that the customer already exists in NetSuite using the customer ID saved in the last step.
 
-  The file contains details such as unit prices, order adjustments, and shipping costs, excluding direct tax amounts. HotWax Commerce omits the tax amount from the file and sends tax codes for the individual order items because NetSuite independently computes the taxes based on these codes and applies them accurately to each order item, ensuring precise tax calculations within NetSuite.
+The file contains details such as unit prices, order adjustments, and shipping costs, excluding direct tax amounts. HotWax Commerce omits the tax amount from the file and sends tax codes for the individual order items because NetSuite independently computes the taxes based on these codes and applies them accurately to each order item, ensuring precise tax calculations within NetSuite.
 
 #### Order and Item Discounts
 
 If an order has a discount code applied to it, during order sync to NetSuite, HotWax checks if the applied code is available in NetSuite. If the code is available then the exact code is used and the value of the discount is shared as the "Rate". In the event that the code is not available in NetSuite, HotWax will use a default discount code 'SHOPIFY DISCOUNT' along with the value of the discount.
 
-Item level discounts have special handling as well. They are synced as a separate line item in the order using a "SHOPIFY DISCOUNT ITEM" item, however HotWax does not send an order line id for this item. The amount of the adjustment is added in the "Amount" field when preparing the CSV for NetSuite and the "Price Level" is always set to "Custom".
+Item-level discounts have special handling as well. They are synced as a separate line item in the order using a "SHOPIFY DISCOUNT ITEM" item, however, HotWax does not send an order line ID for this item. The amount of the adjustment is added in the "Amount" field when preparing the CSV for NetSuite and the "Price Level" is always set to "Custom".
 
 #### Item Price
 
-The price for products is not sent by HotWax when the order syncs to NetSuite. Instead NetSuite automatically adds the value of the product upon order creation based on the price of the product in NetSuite.
+The price for products is not sent by HotWax when the order syncs to NetSuite. Instead, NetSuite automatically adds the value of the product upon order creation based on the price of the product in NetSuite.
 
 #### Tax Codes
 
@@ -127,9 +126,9 @@ For retailers that use Avatax, the Tax Code and Shipping Tax Code will always co
 
 ### Handling NetSuite file size limits
 
-We've added a limit to how many orders can be synced in one file to NetSuite to ensure the NetSuite file size limit is not breached. NetSuite has a limit of 25,000 rows in one CSV, so if your order volume in one sync duration exceeds this limit, we automatically paginate the file to ensure NetSuite does not reject the file. Another thing we kept in mind is that during pagination, one order should not be split into seperate files because this could lead to errors in the order import process in NetSuite. Assuming that most e-Commerce orders contain 10 or less items, we've set an upper limit of 1000 orders per file. This should keep the file size well below NetSuite's limit while also leaving buffer for orders with more line items.
+We've added a limit to how many orders can be synced in one file to NetSuite to ensure the NetSuite file size limit is not breached. NetSuite has a limit of 25,000 rows in one CSV, so if your order volume in one sync duration exceeds this limit, we automatically paginate the file to ensure NetSuite does not reject the file. Another thing we kept in mind is that during pagination, one order should not be split into separate files because this could lead to errors in the order import process in NetSuite. Assuming that most eCommerce orders contain 10 or fewer items, we've set an upper limit of 1000 orders per file. This should keep the file size well below NetSuite's limit while also leaving a buffer for orders with more line items.
 
-Though it may seem like this would significanlty slow down the order sync, this is not actually the case. All valid orders are still exported from HotWax Commerce at once and then paginated for NetSuite, this means all the order files are available for NetSuite to process and the speed at which they're processed is determined by the configuration of NetSuite used by the retailer. Higher configurations will have faster and more concurrent file process capabilites.
+Though it may seem like this would significantly slow down the order sync, this is not actually the case. All valid orders are still exported from HotWax Commerce at once and then paginated for NetSuite, this means all the order files are available for NetSuite to process and the speed at which they're processed is determined by the configuration of NetSuite used by the retailer. Higher configurations will have faster and more concurrent file process capabilities.
 
 **SFTP Locations**
 
@@ -230,7 +229,7 @@ The synchronization of Sales Order IDs from NetSuite to HotWax Commerce is a cri
 
 #### Export order IDs from NetSuite
 
-1. A Map Reduce SuiteScript in NetSuite fetches pending fulfillment orders, generates a CSV file with internal sales order IDs and place this file at an SFTP location.
+1. A Map Reduce SuiteScript in NetSuite fetches pending fulfillment orders, generates a CSV file with internal sales order IDs, and places this file at an SFTP location.
 
 **SuiteScript**
 
@@ -261,15 +260,15 @@ FTP Config: IMP_ORDER_IDENT
 
 This step creates customer deposit records in NetSuite for authorized payments of sales orders. Generating a customer deposit in NetSuite is essential to represent authorized payments for orders. This step signifies the initiation of the financial transaction for orders.
 
-Sync status of customer deposits to NetSuite is time driven, this means that we check the entry date of an order into HotWax Commerce and manage a cursor for the last exported timestamp. If an customer deposit creation fails, it will not be automatically retried because it will have passed the order entry time condition.
+Sync status of customer deposits to NetSuite is time-driven, this means that we check the entry date of an order into HotWax Commerce and manage a cursor for the last exported timestamp. If a customer deposit creation fails, it will not be automatically retried because it will have passed the order entry time condition.
 
-To ensure that only applicable customer deposits are created in NetSuite, orders that have been canceled or refunded will not have their deposit created. However if an order is canceled or refunded after the deposit has been created in NetSuite, it will have to be manually handled by a NetSuite user. HotWax provides a report for all orders that have been canceled or refunded where the customer deposit may need to be dealt with manually.
+To ensure that only applicable customer deposits are created in NetSuite, orders that have been canceled or refunded will not have their deposit created. However, if an order is canceled or refunded after the deposit has been created in NetSuite, it will have to be manually handled by a NetSuite user. HotWax provides a report for all orders that have been canceled or refunded where the customer deposit may need to be dealt with manually.
 
 <figure><img src="../../.gitbook/assets/customer deposits.png" alt=""><figcaption><p>Creating customer deposits in NetSuite</p></figcaption></figure>
 
 **Actions**
 
-#### Export Customer Deposit from HotWax Commerce
+#### Export Customer Deposits from HotWax Commerce
 
 1. HotWax Commerce Integration Platform runs a scheduled job that generates a JSON file comprising of order details with their respective grand totals and places this file at an SFTP location.
 
@@ -281,7 +280,7 @@ Export customer deposit for orders with NetSuite order identification
 /home/{sftp-username}/netsuite/salesorder/customerdeposit
 ```
 
-#### Import Customer Deposit into NetSuite
+#### Import Customer Deposits into NetSuite
 
 2. A SuiteScript in NetSuite reads this JSON file from the SFTP location and creates customer deposit records in "undeposited" status. It employs the N/Record module for record creation.
 
@@ -303,7 +302,7 @@ This step involves marking of orders as "Approved" for further processing and fu
 
 **Actions**
 
-A scheduled job within HotWax Commerce Integration Platform validates order items, generates and place the CSV file at an SFTP location. A scheduled job within HotWax Commerce OMS reads this CSV file from the SFTP location and marks order items "Approved".
+A scheduled job within HotWax Commerce Integration Platform validates order items, generates and places the CSV file at an SFTP location. A scheduled job within HotWax Commerce OMS reads this CSV file from the SFTP location and marks order items "Approved".
 
 <details>
 
