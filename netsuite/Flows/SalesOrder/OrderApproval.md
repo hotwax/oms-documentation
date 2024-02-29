@@ -37,7 +37,7 @@ Identify new customers by checking the Person table for entries where the roleTy
 #### Import customers into NetSuite
 
 2. A Scheduled Script in NetSuite is responsible for downloading the CSV file of customers not yet synchronized and utilizes the ImportTask function of the N/Task module. This script processes and creates customer records within NetSuite, ensuring that the necessary customer information is available in NetSuite for order creation.
-   
+
 **SuiteScripts**
 
 Import new customers from SFTP
@@ -50,7 +50,7 @@ HC_SC_ImportCustomer
 
 3. Once customers are created in NetSuite, a scheduled script exports recently created customers in a CSV file at an SFTP location to be imported by HotWax Commerce.
 4. A scheduled job within Hotwax Commerce OMS reads this file from the SFTP location and syncs the NetSuite customer IDs, confirming the customer synchronization in the OMS.
-   
+
 **SuiteScripts**
 
 Export recently created customers to SFTP
@@ -96,15 +96,7 @@ FTP Config: IMP_PARTY_IDENT
 "\*" denotes fields that are required to be sent to NetSuite for the customer sync to work
 {% endhint %}
 
-<details>
-  <summary>Customers Sample Feed</summary>
-  
-  | External id | Individual | First Name | Last Name | Status          | Subsdiary | Taxable | Default Order Priority | Account Origin | HC Shopify Customer Id |
-  |-------------|------------|------------|-----------|-----------------|-----------|---------|------------------------|----------------|-----------------------|
-  | HC10081     | T          | Rafael     | Depillis  | CUSTOMER-closed | 1         | TRUE    | 5                      | 1              | 6578498371671         |
-  | HC10080     | T          | Patrick    | Connell   | CUSTOMER-closed | 1         | TRUE    | 5                      | 1              | 6578280628311         |
-
-</details>
+{% file src="../../.gitbook/assets/Customers Sample Feed.csv" %}
 
 * [x] Sync customers
 
@@ -116,9 +108,9 @@ Capturing orders in HotWax Commerce initiates the creation of orders in "created
 
 #### Export new orders to NetSuite
 
-1. A job within HotWax Commerce Integration Platform generates a CSV file of orders in "created" status that have not yet been sent to NetSuite and places this file at an SFTP location. When creating this file HotWax Commerce also ensures that the customer already exists in NetSuite using the customer ID saved in the last step.
+1.  A job within HotWax Commerce Integration Platform generates a CSV file of orders in "created" status that have not yet been sent to NetSuite and places this file at an SFTP location. When creating this file HotWax Commerce also ensures that the customer already exists in NetSuite using the customer ID saved in the last step.
 
-   The file contains details such as unit prices, order adjustments, and shipping costs, excluding direct tax amounts. HotWax Commerce omits the tax amount from the file and sends tax codes for the individual order items because NetSuite independently computes the taxes based on these codes and applies them accurately to each order item, ensuring precise tax calculations within NetSuite.
+    The file contains details such as unit prices, order adjustments, and shipping costs, excluding direct tax amounts. HotWax Commerce omits the tax amount from the file and sends tax codes for the individual order items because NetSuite independently computes the taxes based on these codes and applies them accurately to each order item, ensuring precise tax calculations within NetSuite.
 
 **Order and Item Discounts**
 
@@ -178,7 +170,7 @@ HC_importSalesOrders
 {% endtab %}
 {% endtabs %}
 
-#### Here's how sales order fields are mapped in HotWax Commerce and NetSuite that remains hidden in the user interface but included in the sales order CSV file
+#### Here's how sales order fields are mapped in HotWax Commerce and NetSuite that remain hidden in the user interface but are included in the sales order CSV file
 
 <table><thead><tr><th width="144.37809187279154">S.No.</th><th>Fields in HotWax Commerce</th><th>Fields in NetSuite</th></tr></thead><tbody><tr><td>1</td><td>Order Item Seq ID</td><td>External Order Line ID</td></tr><tr><td>2</td><td>Price Level NetSuite</td><td>Price Level</td></tr><tr><td>3</td><td>Tax Code</td><td>Tax Code</td></tr><tr><td>4</td><td>Product Promo ID</td><td>Discount Item</td></tr><tr><td>5</td><td>Product Store External ID</td><td>Subsidiary</td></tr><tr><td>6</td><td>Email</td><td>E-mail</td></tr></tbody></table>
 
@@ -189,19 +181,8 @@ To sync sales orders from HotWax Commerce to NetSuite, a required field is the "
 {% hint style="danger" %}
 "\*" denotes fields that are required to be sent to NetSuite for the sales order sync to work
 {% endhint %}
- 
-  <details>
-  <summary>Created Order Item Sample Feed</summary>
-  
-  | Order Id      | Order Line Id | External Id | Sales Channel | Item                                               | Quantity | Amount | Price Level | Shipping Method    | Shipping Cost | Tax Code | Shipping Tax Code | Date       | Customer  | Addressee        | Address 1          | Address 2 | City          | State | Country | Zip   | Email                        | Phone           | Tag | Closed | Discount Item     | Rate | Subsidiary |
-  |---------------|---------------|-------------|---------------|----------------------------------------------------|----------|--------|-------------|--------------------|---------------|----------|-------------------|------------|-----------|------------------|--------------------|-----------|---------------|-------|---------|-------|------------------------------|----------------|-----|--------|-------------------|------|------------|
-  | #NOTNAKED2022 | 101           | NN10436     | Web           | "WJ08-XS-Gray \| Adrienne Trek Jacket"            | 1        |        |             | FedEx Home Delivery | 0             | AVATAX   | AVATAX            | 2/29/2024  | 5314749   | Margaret Connell | 175,S Main St Suite 1310 |            | Salt Lake city | UT    | US      | 84111 | `margaret.col@gmail.com` | 1(347)920-9671 |     | FALSE  |                   |      | 1          |
-  | #NOTNAKED2022 | 102           | NN10436     | Web           | WT08-XS-Black \| Antonia Racer Tank              | 1        |        |             | FedEx Home Delivery | 0             | AVATAX   | AVATAX            | 2/29/2024  | 5314749   | Margaret Connell | 175,S Main St Suite 1310 |            | Salt Lake city | UT    | US      | 84111 | `margaret.col@gmail.com` | 1(347)920-9671 |     | FALSE  |                   |      | 1          |
-  | #NOTNAKED2021 | 101           | NN10435     | Web           | MH09-XS-Blue \| Abominable Hoodie                | 1        |        |             | 1-Day Shipping     | 0             | AVATAX   | AVATAX            | 2/29/2024  | 5315560   | Ethan Floquet    | 601 HILL ST              |            | New Orleans    | LA    | US      | 70121 | `ethanfloquet@gmail.com` | 1(801)706-3196 |     | FALSE  | SHOPIFY DISCOUNT  | -30  | 1          |
-  | #NOTNAKED2020 | 101           | NN10434     | Instagram     | WJ03-L-Red \| Augusta Pullover Jacket            | 1        |        |             | 2-Day Shipping     | 0             | AVATAX   | AVATAX            | 2/29/2024  | 5315322   | Nia Jordon       | 77, Central Park        |            | New York city  | NY    | US      | 10001 | `niamy.j@gmail.com`      | 1(251)607-2218 |     | FALSE  |                   |      | 1          |
 
-</details>
-
+{% file src="../../.gitbook/assets/Created Order Items Sample Feed.csv" %}
 
 ## Sync Sales Order Item Line IDs from NetSuite to HotWax Commerce
 
@@ -252,7 +233,7 @@ The synchronization of Sales Order IDs from NetSuite to HotWax Commerce is a cri
 
 #### Export order IDs from NetSuite
 
-1. A Map Reduce SuiteScript in NetSuite fetches pending fulfillment orders, generates a CSV file with internal sales order IDs, and places this file at an SFTP location.
+1. A Map Reduce SuiteScript in NetSuite fetches pending fulfillment orders, generates a CSV file with internal sales order IDs and places this file at an SFTP location.
 
 **SuiteScript**
 
@@ -319,7 +300,9 @@ The `HC_SC_CreateCustomerDeposit` SuiteScript also generates a CSV file highligh
 
 ## Approval of Sales Order
 
-This step involves marking of orders as "Approved" for further processing and fulfillment. This step ensures that orders are appropriately marked "Approved" once all necessary details and required references are established. This authorization triggers the routing of orders to their designated fulfillment locations.
+{% file src="../../.gitbook/assets/Customer Deposits Sample Feed.txt" %}
+
+This step involves marking orders as "Approved" for further processing and fulfillment. This step ensures that orders are appropriately marked "Approved" once all necessary details and required references are established. This authorization triggers the routing of orders to their designated fulfillment locations.
 
 <figure><img src="../../.gitbook/assets/approve orders.png" alt=""><figcaption><p>Order approval flow in HotWax Commerce</p></figcaption></figure>
 
