@@ -171,11 +171,16 @@ Note: If a facility has 0 inventory for the product, you can still display it fo
 
 #### Sample: 
 
-Method: `GET`
+Method: `POST`
 
 ##### Request
 ```
-https://dev-apps.hotwax.io/api/checkInventory?productId=10249&facilityId=STORE_9&facilityId=STORE_20&facilityId=STORE_15
+{
+  "filters": {
+    "sku": "MSH02-32-Black",
+    "facilityId": "STORE_15, STORE_20, STORE_9 "
+  }
+}
 ```
 
 ##### Response
@@ -184,17 +189,17 @@ https://dev-apps.hotwax.io/api/checkInventory?productId=10249&facilityId=STORE_9
 "count": "1",
   "docs": [
     {
-    "facilityId": "STORE_9",
-    "atp": 13.000000
+    "facilityId": "STORE_15",
+    "atp": 3.000000
     },
     {
     "facilityId": "STORE_20",
     "atp": 8.000000
     },
     {
-    "facilityId": "STORE_15",
-    "atp": 0.000000
-    }
+    "facilityId": "STORE_9",
+    "atp": 14.000000
+    },
   ]
 }
 ```

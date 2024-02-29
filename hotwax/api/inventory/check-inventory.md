@@ -1,6 +1,6 @@
 # Check Inventory API
 
-Get the stock details of the product on the specific locations. To get the stock details, you will need to call the `/checkInventory` endpoint with the GET method. 
+Get the stock details of the product on the specific locations. To get the stock details, you will need to call the `/checkInventory` endpoint with the POST method. 
 
 ## Request
 
@@ -14,6 +14,31 @@ Content-Type: application/json
 
 
 ### Body
+
+In case of checking a product's inventory at multiple facility.
+```
+{
+  "filters": {
+    "sku": "<sku>",
+    "facilityId": ["<facilityId1>", "<facilityId2>", "<facilityId3>"],
+    "facilityId_op": "in"
+  }
+}
+```
+
+In case of checking multiple product's inventory at single facility.
+
+```
+{
+  "filters": {
+    "sku": ["<sku1>", "<sku2>", "<sku3>"],
+    "sku_op": "in",
+    "facilityId": "<facilityId>"
+  }
+}
+```
+
+**Sample**
 ```
 {
   "filters": {
@@ -23,12 +48,15 @@ Content-Type: application/json
 }
 ```
 
+
 | Parameter Name | Description | Required (Y/N) |
 | --- | --- | --- |
 | `sku` | The SKU of the product | N |
+|  `sku_op` | The operator to be used for the sku field | N |
 | `productId` | HotWax Commerce internal product Id | N |
 | `facilityId` | The HotWax Commerce facility Id where product inventory is located | N |
-
+| `facilityId_op` | The operator to be used for the facility Id | N |
+|  `sku_op` | The operator to be used for the sku field | N |
 Note: It is required to pass either `sku` or `productId`. 
 
 
