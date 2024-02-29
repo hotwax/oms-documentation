@@ -678,7 +678,7 @@ The Brokered Order Items feed has certain out-of-the-box customizations that all
 | stateProvinceGeoCode | The state province geo code | null |
 | contactMechId | The contact mechanism ID | 18224 |
 | toName | The name of the recipient | jhon deo |
-| attnName | The attention name | null |
+| **attnName** | The attention name | null |
 | address1 | The first line of the address | 足立 |
 | address2 | The second line of the address | null |
 | houseNumber | The house number | null |
@@ -694,7 +694,7 @@ The Brokered Order Items feed has certain out-of-the-box customizations that all
 | municipalityGeoId | The municipality geo ID | null |
 | postalCodeGeoId | The postal code geo ID | null |
 | geoPointId | The geo point ID | 11794 |
-| encodedAddressKey | The encoded address key | null |
+| **encodedAddressKey** | The encoded address key | null |
 | latitude | The latitude | 35.7610621 |
 | longitude | The longitude | 139.8073929 |
 | isResidentialAddress | Indicates if the address is residential | Y |
@@ -703,22 +703,22 @@ The Brokered Order Items feed has certain out-of-the-box customizations that all
 ### goodIdentifications
 | Field Name | Description | Sample value |
 |------------|-------------|-------|
-| idValue | The ID value | 37639003275453 |
-| fromDate | The from date | 2023-12-25T03:48:21+09:00 |
-| productId | The product ID | 60757 |
-| goodIdentificationTypeId | The good identification type ID | SHOPIFY_PROD_ID |
+| idValue | The good identifications ID value | 37639003275453 |
+| fromDate | The identification creation date | 2023-12-25T03:48:21+09:00 |
+| productId | The HotWax Commerce's product ID | 60757 |
+| goodIdentificationTypeId | The type of good identification | SHOPIFY_PROD_ID |
 | lastUpdatedStamp | The date and time of the last update | 2023-12-25T03:48:31+09:00 |
-| thruDate | The thru date | null |
+| thruDate | The identification expiration date | null |
 
-### orderItemAdjustments
+### orderItemAdjustments: WIP
 | Field Name | Description | Sample value |
 |------------|-------------|-------|
-| customerReferenceId | The customer reference ID | null |
-| correspondingProductId | The corresponding product ID | null |
-| includeInShipping | Indicates if the adjustment is included in shipping | null |
+| **customerReferenceId** | The customer reference ID | null |
+| **correspondingProductId** | The corresponding product ID | null |
+| **includeInShipping** | Indicates if the adjustment is included in shipping | null |
 | description | The description of the adjustment | null |
-| exemptAmount | The exempt amount | null |
-| productPromoId | The product promo ID | null |
+| **exemptAmount** | The exempt amount | null |
+| **productPromoId** | The product promo ID | null |
 | taxAuthPartyId | The tax authority party ID | null |
 | lastModifiedByUserLogin | The ID of the last user login that modified the adjustment | null |
 | oldPercentage | The old percentage | null |
@@ -765,10 +765,25 @@ The Brokered Order Items feed has certain out-of-the-box customizations that all
 | facilityGroupId | The facility group ID | 22 |
 | thruDate | The thru date | null |
 | fromDate | The from date | 2024-02-23T03:50:12+09:00 |
-| sequenceNum | The sequence number | 1 |
-| facilityGroupTypeId | The facility group type ID | WAREHOUSE |
+| **sequenceNum** | The sequence number | 1 |
+| facilityGroupTypeId | The type of facility group | WAREHOUSE |
 
-### fromOrderItemAssocs
+### fromOrderItemAssocs: WIP
+| Field Name | Description | Sample value |
+|------------|-------------|-------|
+| **orderId** | The order ID | 12082 |
+| orderItemSeqId | The order item sequence ID | 00101 |
+| toOrderId | The to order ID | null |
+| fromDate | The from date | 2024-02-23T03:50:12+09:00 |
+| lastUpdatedStamp | The date and time of the last update | 2024-02-23T03:50:12+09:00 |
+| toOrderItemSeqId | The to order item sequence ID | null |
+| sequenceNum | The sequence number | 1 |
+| lastModifiedDate | The date and time of the last modification | null |
+| createdByUserLogin | The ID of the user login that created the association | null |
+| createdDate | The date and time of creation | null |
+| lastModifiedByUserLogin | The ID of the last user login that modified the association | null |
+
+### toOrderItemAssocs: WIP
 | Field Name | Description | Sample value |
 |------------|-------------|-------|
 | orderId | The order ID | 12082 |
@@ -783,22 +798,7 @@ The Brokered Order Items feed has certain out-of-the-box customizations that all
 | createdDate | The date and time of creation | null |
 | lastModifiedByUserLogin | The ID of the last user login that modified the association | null |
 
-### toOrderItemAssocs
-| Field Name | Description | Sample value |
-|------------|-------------|-------|
-| orderId | The order ID | 12082 |
-| orderItemSeqId | The order item sequence ID | 00101 |
-| toOrderId | The to order ID | null |
-| fromDate | The from date | 2024-02-23T03:50:12+09:00 |
-| lastUpdatedStamp | The date and time of the last update | 2024-02-23T03:50:12+09:00 |
-| toOrderItemSeqId | The to order item sequence ID | null |
-| sequenceNum | The sequence number | 1 |
-| lastModifiedDate | The date and time of the last modification | null |
-| createdByUserLogin | The ID of the user login that created the association | null |
-| createdDate | The date and time of creation | null |
-| lastModifiedByUserLogin | The ID of the last user login that modified the association | null |
-
-### productFeatures
+### productFeatures: WIP
 | Field Name | Description | Sample value |
 |------------|-------------|-------|
 | lastUpdatedStamp | The date and time of the last update | 2024-02-23T03:50:12+09:00 |
@@ -806,4 +806,3 @@ The Brokered Order Items feed has certain out-of-the-box customizations that all
 | attrDescription | The attribute description | null |
 | attrName | The attribute name | COD_FEE_ADJ_CREATED |
 | attrValue | The attribute value | true |
-
