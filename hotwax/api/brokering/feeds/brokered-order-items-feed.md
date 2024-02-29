@@ -18,8 +18,8 @@ The Brokered Order Items feed has certain out-of-the-box customizations that all
 | `orderItemSeqId`         | Allows to generate the feed for a specific order item sequence ID within an order.                     |
 | `parentFacilityTypeIds`  | Specifies the type of facility from which the brokered order items are being fetched.                     |
 | `productStoreIds`        | Allows you to set the product store IDs to generate brand-specific feeds.                                  |
-| `systemMessageTypeId`    | Specifies the System Message Type ID used for generating the Brokered Order Items Feed.                    |
-| `systemMessageRemoteId`  | Specifies the System Message Remote ID used for generating the Brokered Order Items Feed.                  |
+| `systemMessageTypeId`    | The SFTP path where the feed will be stored.                    |
+| `systemMessageRemoteId`  | The SFTP credentials required to access the SFTP location.                  |
 
 
 <details>
@@ -442,38 +442,38 @@ The Brokered Order Items feed has certain out-of-the-box customizations that all
 | Field Name | Description | Sample value |
 |------------|-------------|-------|
 | productStoreId | The ID of the product store | STORE |
-| orderId | The unique identifier for the order | 12082 |
-| orderName | The name of the order | 9000004032 |
-| orderDate | The date and time the order was placed | 2024-02-23T03:43:23+09:00 |
-| orderStatusId | The status of the order | ORDER_APPROVED |
-| entryDate | The date and time the order was entered | 2024-02-23T03:50:12+09:00 |
+| orderId | The HotWax Commerce unique identifier for the order | 12082 |
+| orderName | The eCommerce order identifier | 9000004032 |
+| orderDate | The date and time the order was placed on eCommerce | 2024-02-23T03:43:23+09:00 |
+| orderStatusId | Order status | ORDER_APPROVED |
+| entryDate | The date and time the order was imported in HotWax Commerce OMS | 2024-02-23T03:50:12+09:00 |
 | orderExternalId | The external ID of the order | 5384320450749 |
-| currency | The currency used for the order | JPY |
-| grandTotal | The total amount of the order | 1870 |
-| orderItemSeqId | The sequence ID of the order item | null |
-| itemStatusId | The status of the item | null |
-| orderItemQuantity | The quantity of the order item | null |
-| reservedItemQuantity | The quantity of reserved items | null |
+| currency | The payment currency used for the order | JPY |
+| grandTotal | The total sum of all costs associated with an order | 1870 |
+| orderItemSeqId | The sequence ID of the order item in order object | null |
+| itemStatusId | Item status  | null |
+| orderItemQuantity | Order item quantity | null |
+| **reservedItemQuantity** | Reserved item quantity from the Order | null |
 | reservedDatetime | The date and time the items were reserved | null |
 | unitPrice | The unit price of the item | null |
 | orderItemExternalId | The external ID of the order item | null |
 | itemDescription | The description of the item | null |
-| requestedDeliveryDate | The requested delivery date | null |
-| requestedDeliveryTime | The requested delivery time | null |
-| deliveryWindow | The delivery window | null |
+| requestedDeliveryDate | The requested delivery date of the order | null |
+| requestedDeliveryTime | The requested delivery time of the order | null |
+| deliveryWindow | The time frame during which a delivery is expected | null |
 | shipGroupSeqId | The sequence ID of the ship group | null |
 | shipmentMethodTypeId | The shipment method type ID | null |
 | postalContactMechId | The postal contact mechanism ID | null |
 | telecomContactMechId | The telecom contact mechanism ID | null |
-| orderFacilityId | The order facility ID | null |
-| carrierPartyId | The carrier party ID | null |
-| externalFulfillmentOrderItemId | The external fulfillment order item ID | null |
+| **orderFacilityId** | The order facility ID | null |
+| **carrierPartyId** | The carrier party ID | null |
+| **externalFulfillmentOrderItemId** | The external fulfillment order item ID | null |
 | fulfillmentStatus | The fulfillment status | null |
 | customerFirstName | The first name of the customer | jhon |
 | customerLastName | The last name of the customer | deo |
-| facilityId | The facility ID | null |
+| facilityId | The facility where order is brokered | null |
 | facilityExternalId | The external ID of the facility | null |
-| facilityTypeId | The facility type ID | null |
+| facilityTypeId | The facility type ID, which can be Retail store or Warehouse | null |
 | parentFacilityTypeId | The parent facility type ID | null |
 | statusDatetime | The date and time of the status | null |
 | productId | The product ID | null |
@@ -655,20 +655,20 @@ The Brokered Order Items feed has certain out-of-the-box customizations that all
 | customerLastName | The last name of the customer | deo |
 | facilityId | The facility ID | WH0615 |
 | facilityExternalId | The external ID of the facility | 22 |
-| facilityTypeId | The facility type ID | WAREHOUSE |
-| parentFacilityTypeId | The parent facility type ID | DISTRIBUTION_CENTER |
-| statusDatetime | The date and time of the status | 2024-02-23T04:05:15+09:00 |
-| productId | The product ID | 60757 |
-| productTypeId | The product type ID | FINISHED_GOOD |
+| **facilityTypeId** | The facility type ID | WAREHOUSE |
+| **parentFacilityTypeId** | The parent facility type ID | DISTRIBUTION_CENTER |
+| **statusDatetime** | The date and time of the status | 2024-02-23T04:05:15+09:00 |
+| productId | The product's unique identifier in HotWax Commerce | 60757 |
+| productTypeId | The type of product identification | FINISHED_GOOD |
 | salesChannel | The sales channel | WEB_CHANNEL |
-| customerPartyId | The customer party ID | 10290 |
+| customerPartyId | The customer's unique identification in HotWax Commerce | 10290 |
 | shipTo | The shipping information | See below |
-| goodIdentifications | The good identifications | See below |
+| goodIdentifications | The product/good identifications | See below |
 | orderItemAdjustments | The order item adjustments | See below |
 | orderItemAttributes | The order item attributes | See below |
 | facilityGroupMembers | The facility group members | See below |
-| fromOrderItemAssocs | The from order item associations | See below |
-| toOrderItemAssocs | The to order item associations | See below |
+| **fromOrderItemAssocs** | The from order item associations | See below |
+| **toOrderItemAssocs** | The to order item associations | See below |
 | productFeatures | The product features | See below |
 
 ### shipTo
