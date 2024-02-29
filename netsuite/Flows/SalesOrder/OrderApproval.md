@@ -18,7 +18,7 @@ To successfully create a sales order in NetSuite, [it is a prerequisite to have 
 
 **Actions**
 
-Export customers from HotWax Commerce
+#### Export customers from HotWax Commerce
 
 1. A scheduled job within HotWax Commerce Integration Platform operates at defined intervals to generate a CSV file comprising customers who have not been synchronized to NetSuite. This job can be configured to run at regular intervals, typically set at an hourly frequency. Customers who haven't been synchronized within the last hour are included in this CSV file and placed at an SFTP location for synchronization with NetSuite.
 
@@ -37,7 +37,7 @@ Identify new customers by checking the Person table for entries where the roleTy
 #### Import customers into NetSuite
 
 2. A Scheduled Script in NetSuite is responsible for downloading the CSV file of customers not yet synchronized and utilizes the ImportTask function of the N/Task module. This script processes and creates customer records within NetSuite, ensuring that the necessary customer information is available in NetSuite for order creation.
-
+   
 **SuiteScripts**
 
 Import new customers from SFTP
@@ -50,7 +50,7 @@ HC_SC_ImportCustomer
 
 3. Once customers are created in NetSuite, a scheduled script exports recently created customers in a CSV file at an SFTP location to be imported by HotWax Commerce.
 4. A scheduled job within Hotwax Commerce OMS reads this file from the SFTP location and syncs the NetSuite customer IDs, confirming the customer synchronization in the OMS.
-
+   
 **SuiteScripts**
 
 Export recently created customers to SFTP
@@ -96,6 +96,16 @@ FTP Config: IMP_PARTY_IDENT
 "\*" denotes fields that are required to be sent to NetSuite for the customer sync to work
 {% endhint %}
 
+<details>
+  <summary>Customers Sample Feed</summary>
+  
+  | External id | Individual | First Name | Last Name | Status          | Subsdiary | Taxable | Default Order Priority | Account Origin | HC Shopify Customer Id |
+  |-------------|------------|------------|-----------|-----------------|-----------|---------|------------------------|----------------|-----------------------|
+  | HC10081     | T          | Rafael     | Depillis  | CUSTOMER-closed | 1         | TRUE    | 5                      | 1              | 6578498371671         |
+  | HC10080     | T          | Patrick    | Connell   | CUSTOMER-closed | 1         | TRUE    | 5                      | 1              | 6578280628311         |
+
+</details>
+
 * [x] Sync customers
 
 ## Synchronize Sales Order from HotWax Commerce to NetSuite
@@ -108,19 +118,19 @@ Capturing orders in HotWax Commerce initiates the creation of orders in "created
 
 1. A job within HotWax Commerce Integration Platform generates a CSV file of orders in "created" status that have not yet been sent to NetSuite and places this file at an SFTP location. When creating this file HotWax Commerce also ensures that the customer already exists in NetSuite using the customer ID saved in the last step.
 
-The file contains details such as unit prices, order adjustments, and shipping costs, excluding direct tax amounts. HotWax Commerce omits the tax amount from the file and sends tax codes for the individual order items because NetSuite independently computes the taxes based on these codes and applies them accurately to each order item, ensuring precise tax calculations within NetSuite.
+   The file contains details such as unit prices, order adjustments, and shipping costs, excluding direct tax amounts. HotWax Commerce omits the tax amount from the file and sends tax codes for the individual order items because NetSuite independently computes the taxes based on these codes and applies them accurately to each order item, ensuring precise tax calculations within NetSuite.
 
-#### Order and Item Discounts
+**Order and Item Discounts**
 
 If an order has a discount code applied to it, during order sync to NetSuite, HotWax checks if the applied code is available in NetSuite. If the code is available then the exact code is used and the value of the discount is shared as the "Rate". In the event that the code is not available in NetSuite, HotWax will use a default discount code 'SHOPIFY DISCOUNT' along with the value of the discount.
 
 Item-level discounts have special handling as well. They are synced as a separate line item in the order using a "SHOPIFY DISCOUNT ITEM" item, however, HotWax does not send an order line ID for this item. The amount of the adjustment is added in the "Amount" field when preparing the CSV for NetSuite and the "Price Level" is always set to "Custom".
 
-#### Item Price
+**Item Price**
 
 The price for products is not sent by HotWax when the order syncs to NetSuite. Instead, NetSuite automatically adds the value of the product upon order creation based on the price of the product in NetSuite.
 
-#### Tax Codes
+**Tax Codes**
 
 For retailers that use Avatax, the Tax Code and Shipping Tax Code will always contain "AVATAX" when sent from HotWax. Avalara Tax calculation will automatically compute taxes on the order in NetSuite when the order is created.
 
@@ -132,7 +142,7 @@ Though it may seem like this would significantly slow down the order sync, this 
 
 **SFTP Locations**
 
-Export 'Created' orders with verified customers
+#### Export 'Created' orders with verified customers
 
 ```
 /home/{sftp-username}/netsuite/salesorder/export
@@ -179,6 +189,19 @@ To sync sales orders from HotWax Commerce to NetSuite, a required field is the "
 {% hint style="danger" %}
 "\*" denotes fields that are required to be sent to NetSuite for the sales order sync to work
 {% endhint %}
+ 
+  <details>
+  <summary>Created Order Item Sample Feed</summary>
+  
+  | Order Id      | Order Line Id | External Id | Sales Channel | Item                                               | Quantity | Amount | Price Level | Shipping Method    | Shipping Cost | Tax Code | Shipping Tax Code | Date       | Customer  | Addressee        | Address 1          | Address 2 | City          | State | Country | Zip   | Email                        | Phone           | Tag | Closed | Discount Item     | Rate | Subsidiary |
+  |---------------|---------------|-------------|---------------|----------------------------------------------------|----------|--------|-------------|--------------------|---------------|----------|-------------------|------------|-----------|------------------|--------------------|-----------|---------------|-------|---------|-------|------------------------------|----------------|-----|--------|-------------------|------|------------|
+  | #NOTNAKED2022 | 101           | NN10436     | Web           | "WJ08-XS-Gray \| Adrienne Trek Jacket"            | 1        |        |             | FedEx Home Delivery | 0             | AVATAX   | AVATAX            | 2/29/2024  | 5314749   | Margaret Connell | 175,S Main St Suite 1310 |            | Salt Lake city | UT    | US      | 84111 | `margaret.col@gmail.com` | 1(347)920-9671 |     | FALSE  |                   |      | 1          |
+  | #NOTNAKED2022 | 102           | NN10436     | Web           | WT08-XS-Black \| Antonia Racer Tank              | 1        |        |             | FedEx Home Delivery | 0             | AVATAX   | AVATAX            | 2/29/2024  | 5314749   | Margaret Connell | 175,S Main St Suite 1310 |            | Salt Lake city | UT    | US      | 84111 | `margaret.col@gmail.com` | 1(347)920-9671 |     | FALSE  |                   |      | 1          |
+  | #NOTNAKED2021 | 101           | NN10435     | Web           | MH09-XS-Blue \| Abominable Hoodie                | 1        |        |             | 1-Day Shipping     | 0             | AVATAX   | AVATAX            | 2/29/2024  | 5315560   | Ethan Floquet    | 601 HILL ST              |            | New Orleans    | LA    | US      | 70121 | `ethanfloquet@gmail.com` | 1(801)706-3196 |     | FALSE  | SHOPIFY DISCOUNT  | -30  | 1          |
+  | #NOTNAKED2020 | 101           | NN10434     | Instagram     | WJ03-L-Red \| Augusta Pullover Jacket            | 1        |        |             | 2-Day Shipping     | 0             | AVATAX   | AVATAX            | 2/29/2024  | 5315322   | Nia Jordon       | 77, Central Park        |            | New York city  | NY    | US      | 10001 | `niamy.j@gmail.com`      | 1(251)607-2218 |     | FALSE  |                   |      | 1          |
+
+</details>
+
 
 ## Sync Sales Order Item Line IDs from NetSuite to HotWax Commerce
 
