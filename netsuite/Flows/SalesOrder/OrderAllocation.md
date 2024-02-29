@@ -28,6 +28,8 @@ Import NetSuite fulfillment item allocations:
 HC_SC_UpdateSalesOrders
 ```
 
+{% file src="../../.gitbook/assets/Brokered Order Items Sample Feed.csv" %}
+
 * [x] Sync new orders from HotWax to NetSuite
   * [x] Sync customers
   * [x] Sync order line items
@@ -74,7 +76,7 @@ If an order is rejected from the HotWax Store Fulfillment App with a valid inven
 
 **SFTP Locations**
 
-Inventory variance of actual vs progromatic:
+Inventory variance of actual vs programmatic:
 
 ```
 /home/{sftp-username}/netsuite/inventoryadjustment/csv
