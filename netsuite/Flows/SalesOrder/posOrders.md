@@ -56,7 +56,7 @@ HC_SC_ImportCashSale
 {% endtab %}
 {% endtabs %}
 
-#### Here's how POS order fields are mapped in HotWax Commerce and NetSuite that remains hidden in the user interface but included in the POS order CSV file
+#### Here's how POS order fields are mapped in HotWax Commerce and NetSuite that remain hidden in the user interface but are included in the POS order CSV file
 
 <table><thead><tr><th width="132.08771929824562">S.No.</th><th>Fields in HotWax Commerce</th><th>Fields in NetSuite</th></tr></thead><tbody><tr><td>1</td><td>Order Item Seq ID</td><td>External Order Line ID</td></tr><tr><td>2</td><td>Price Level NetSuite</td><td>Price Level</td></tr><tr><td>3</td><td>Tax Code</td><td>Tax Code</td></tr><tr><td>4</td><td>Product Promo ID</td><td>Discount Item</td></tr><tr><td>5</td><td>Product Store External ID</td><td>Subsidiary</td></tr></tbody></table>
 
@@ -94,3 +94,5 @@ HC_MR_ExportedCashSaleCSV
 Order Identification
 FTP Config: IMP_ORDER_IDENT
 ```
+
+{% file src="../../.gitbook/assets/POS Orders Sample Feed.csv" %}
