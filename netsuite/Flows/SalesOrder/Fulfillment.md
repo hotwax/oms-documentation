@@ -23,8 +23,7 @@ HC_MR_ExportedSalesOrderFulfillmentCSV
 ```
 
 2. A scheduled job within HotWax Commerce Integration Platform reads and transforms this CSV file into the JSON format so that OMS can consume this file. This JSON file is then placed at an SFTP location.
-
-3. A scheduled job within HotWax Commerce OMS reads this JSON file from the SFTP location, marking order items as fulfilled in the HotWax Commerce.
+3. A scheduled job within HotWax Commerce OMS reads this JSON file from the SFTP location, marking order items as fulfilled in HotWax Commerce.
 
 **Job in HotWax Commerce**
 
@@ -32,6 +31,8 @@ HC_MR_ExportedSalesOrderFulfillmentCSV
 Order Item Fulfillment
 FTP Config: IMP_ODR_ITM_FLFLMNT
 ```
+
+{% file src="../../.gitbook/assets/Fulfilled Order Items Sample Feed.txt" %}
 
 * [x] Sync order item fulfillment details from NetSuite to HotWax
 

@@ -1,0 +1,36 @@
+﻿[
+  {
+    "order_id": "71501",
+    "orderAttributes": [
+      {
+        "attrName": "shopify_user_id",
+        "attrValue": "82614649032",
+        "orderId": "NN10436",
+        "lastUpdatedStamp": "2024-2-08T12:26:38-06:00",
+        "attrDescription": "Shopify User Id"
+      },
+      {
+        "orderId": "NN10436",
+        "attrName": "NETSUITE_ORDER_EXPORTED",
+        "attrDescription": "",
+        "lastUpdatedStamp": "2024-2-08T12:26:38-06:00",
+        "attrValue": "true"
+      },
+      {
+        "orderId": "NN10436",
+        "attrDescription": null,
+        "lastUpdatedStamp": "2024-2-08T12:32:19-06:00",
+        "attrName": "ORDER_LEVEL_FULFILLMENT",
+        "attrValue": "true"
+      }
+    ],
+    "items": [
+      {
+        "line_id": "2",
+        "quantity": "1",
+        "location_id": "2",
+        "tags": "hotwax-fulfilled"
+      }
+    ]
+  }
+]
