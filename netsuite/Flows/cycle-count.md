@@ -12,7 +12,7 @@ To support this process, HotWax Commerce provides the Cycle Count App. The app e
 
 ## Workflow
 
-## Conduct Periodic Inventory Cycle Count in the Store
+## Conduct Periodic Inventory Cycle Counts in the Store
 
 The inventory count process initiates within the store, where store associates leverage the Cycle Count App to conduct the cycle count. Upon completion of the cycle count, associates record the new inventory count into the app. Subsequently, the app automatically identifies the difference between the actual physical count and the corresponding systemic inventory levels, facilitating accurate and efficient inventory reconciliation.
 
@@ -67,9 +67,11 @@ HC_SC_ImportInventoryAdjustment.js
 
 ## Record Unexpected Store Inventory Variances Outside of Cycle Counts
 
+{% file src="../.gitbook/assets/Inventory Cycle Count Variances Sample Feed.csv" %}
+
 While cycle counting in stores follows a periodic schedule, stores frequently encounter sudden inventory discrepancies in various scenarios. For example, if store associates identify 5 damaged units at their location, they’d want to record a variance of -5 for the damaged inventory. Similarly, if they discover 2 units of previously missing inventory, they’d want to record +2 for the newly found items.
 
-To address these unexpected inventory changes, store managers can directly record these identified inventory variances and theses variances are pushed into HotWax Commerce.
+To address these unexpected inventory changes, store managers can directly record these identified inventory variances, and these variances are pushed into HotWax Commerce.
 
 {% hint style="info" %}
 Unlike cycle counting, where an inventory count is conducted periodically, this process involves store managers directly recording the variance amount without physically counting the entire store inventory.
@@ -132,6 +134,8 @@ Import Inventory Variance from SFTP:
 HC_SC_ImportInventoryAdjustment.js
 ```
 
+{% file src="../.gitbook/assets/Inventory Item Variances Sample Feed.csv" %}
+
 ## Benefits:
 
 The automated synchronization of inventory variances from HotWax Commerce to NetSuite offers numerous advantages:
@@ -144,4 +148,4 @@ The automated synchronization of inventory variances from HotWax Commerce to Net
 
 This integration not only simplifies the process of managing in-store inventory but also plays a vital role in maintaining consistency across multiple systems, ultimately improving operational efficiency and inventory accuracy in the omnichannel retail environment.
 
-**HotWax Commerce provides out of the box reports to get an overview of inventory cycle counts, which you can read** [**here**](https://docs.hotwax.co/user-guides/inventory/cycle-counting/reports)
+**HotWax Commerce provides out-of-the-box reports to get an overview of inventory cycle counts, which you can read** [**here**](https://docs.hotwax.co/user-guides/inventory/cycle-counting/reports)
