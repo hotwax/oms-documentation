@@ -74,7 +74,7 @@ Import Inventory Deduction from Origin Facility from SFTP:
 Add job name here
 ```
 
-#### Here's how transfer orders fields are mapped in NetSuite and HotWax Commerce
+#### Here's how transfer order fields are mapped in NetSuite and HotWax Commerce
 
 <table><thead><tr><th width="112">S.No.</th><th width="244.44856661045532">Fields in NetSuite</th><th>Fields in HotWax Commerce</th></tr></thead><tbody><tr><td>1</td><td>Order #</td><td>Shipment Attribute</td></tr><tr><td>2</td><td>Transfer Order Internal ID</td><td>External ID</td></tr><tr><td>3</td><td>Items</td><td>SKU</td></tr><tr><td>4</td><td>Quantity</td><td>Ordered Quantity</td></tr><tr><td>5</td><td>Destination Location</td><td>Facility</td></tr><tr><td>6</td><td>Tracking #</td><td>Tracking ID</td></tr></tbody></table>
 
@@ -88,7 +88,7 @@ Add job name here
 {% endtab %}
 {% endtabs %}
 
-#### Here's how transfer order fields are mapped in NetSuite and HotWax Commerce that remains hidden in the user interface but included in the transfer order CSV file
+#### Here's how transfer order fields are mapped in NetSuite and HotWax Commerce that remain hidden in the user interface but are included in the transfer order CSV file
 
 <table><thead><tr><th width="112">S.No.</th><th width="217.44856661045532">Fields in NetSuite</th><th>Fields in HotWax Commerce</th></tr></thead><tbody><tr><td>1</td><td>Line ID</td><td>Shipment Item External ID</td></tr><tr><td>2</td><td>From Location</td><td>Shipment Destination Facility ID</td></tr></tbody></table>
 
@@ -121,7 +121,7 @@ Received Transfer Orders NetSuite JSON:
 
 ### Import Item Receipts into NetSuite
 
-2. In NetSuite, a scheduled SuiteScript reads this JSON file containing Item Receipt data from the SFTP location. It iterates through each record and seamlessly creates new Item Receipt records and updates inventory numbers within NetSuite. The script uses the versatile N/record module to ensure a smooth transition.
+2. In NetSuite, a scheduled SuiteScript reads this JSON file containing Item Receipt data from the SFTP location. It iterates through each record, seamlessly creates new Item Receipt records, and updates inventory numbers within NetSuite. The script uses the versatile N/record module to ensure a smooth transition.
 
 ### Automated Transfer Order Status Update
 
@@ -138,3 +138,5 @@ HC_SC_ImportTransferOrderReceipts
 {% hint style="info" %}
 The HC\_SC\_ImportTransferOrderReceipts SuiteScript also generates a CSV file highlighting erroneous records found during processing and uploads the file to the SFTP server. Simultaneously, an email alert is automatically triggered to designated personnel, helping them quickly pinpoint the source of the issue and accelerating troubleshooting.
 {% endhint %}
+
+{% file src="../../.gitbook/assets/Transfer Order Receipts Sample Feed.txt" %}

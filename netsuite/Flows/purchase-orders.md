@@ -24,7 +24,7 @@ The procurement process begins within the NetSuite ERP system, where Purchase Or
 
 **SuiteScript**
 
-Create file of open purchase orders
+Create a file of open purchase orders
 
 ```
 HC_MR_ExportedPurchaseOrderCSV
@@ -61,7 +61,7 @@ IMP_ASN_PO_FEED
 {% endtab %}
 {% endtabs %}
 
-#### Here's how purchase order fields are mapped in NetSuite and HotWax Commerce that remains hidden in the user interface but included in the purchase order CSV file
+#### Here's how purchase order fields are mapped in NetSuite and HotWax Commerce that remain hidden in the user interface but are included in the purchase order CSV file
 
 <table><thead><tr><th width="113">S.No.</th><th width="300.83249581239534">Fields in NetSuite</th><th>Fields in HotWax Commerce</th></tr></thead><tbody><tr><td>1</td><td>Line ID</td><td>Order Item External ID</td></tr></tbody></table>
 
@@ -96,7 +96,7 @@ To facilitate the subsequent processing of this data, the JSON file is securely 
 
 ### Import Item Receipts into NetSuite
 
-2. In NetSuite, a scheduled script retrieves the JSON files with item receipt data from the SFTP location. It then goes through each record, generates new item receipt records and updates inventory numbers within NetSuite. The script uses the N/record module because the CSV import task in NetSuite doesn't accommodate item receipt records, making the JSON file the method used to transmit receipts to NetSuite.
+2. In NetSuite, a scheduled script retrieves the JSON files with item receipt data from the SFTP location. It then goes through each record, generates new item receipt records, and updates inventory numbers within NetSuite. The script uses the N/record module because the CSV import task in NetSuite doesn't accommodate item receipt records, making the JSON file the method used to transmit receipts to NetSuite.
 
 ### Automated Purchase Order Status Update
 
@@ -111,3 +111,5 @@ HC_SC_ImportPurchaseOrderReceipts
 {% hint style="info" %}
 The HC\_SC\_ImportPurchaseOrderReceipts SuiteScript also generates a CSV file highlighting erroneous records found during processing and uploads the file to the SFTP server. Simultaneously, an email alert is automatically triggered to designated personnel, helping them quickly pinpoint the source of the issue and accelerating troubleshooting.
 {% endhint %}
+
+{% file src="../.gitbook/assets/Purchase Orders Receipts Sample Feed.txt" %}
