@@ -46,10 +46,11 @@ Before configuring any settings, it's crucial to establish a connection between 
 3. **Map Facility to an External System:** Click on the `Map Facility to an External System` button to initiate the mapping process.
 4. **Choose External System:** In the menu that appears, choose the external system for which a mapping has to be created.
 5. **Fill in Required details:**
-   * _For Shopify:_ Choose the appropriate Shopify store from the dropdown menu and add the location ID of the facilities that can be obtained from the Shopify admin panel.
-   * _For Custom Mapping:_ Users can create custom mapping by selecting `Custom` option from the menu, adding the `Mapping ID`, `Mapping Name` (external system for which mapping needs to be done) and the Mapping Value (1xternal ID of the facility).
+   
+      * _For Shopify:_ Choose the appropriate Shopify store from the dropdown menu and add the location ID of the facility that can be obtained from the URL of that specific location in the Shopify admin panel.
+      * _For Custom Mapping:_ Users can create custom mapping by selecting `Custom` option from the menu, adding the `Mapping ID`, `Mapping Name` (external system for which mapping needs to be done) and the Mapping Value (1xternal ID of the facility).
 
 <figure><img src="../.gitbook/assets/Screenshot 2024-02-29 at 10.58.39 AM.png" alt=""><figcaption><p>Image: Location ID on Shopify</p></figcaption></figure>
 
-1. **Save Mapping:** Once the required information is filled in, click on the `save` icon to save the configuration. This integration lays the groundwork for a cohesive connection between the facility in HotWax Commerce and facility in the external system, facilitating streamlined configuration and operational processes.
-2. **Edit and Remove:** Users can further edit the external ID in case of any modification of the facility on the external system using the `Edit` button or remove any mapping by clicking on the `Remove` button.
+6. **Save Mapping:** Once the required information is filled in, click on the `save` icon to save the configuration. This integration lays the groundwork for a cohesive connection between the facility in HotWax Commerce and facility in the external system, facilitating streamlined configuration and operational processes.
+7. **Edit and Remove:** Users can further edit the external ID in case of any modification of the facility on the external system using the `Edit` button or remove any mapping by clicking on the `Remove` button.
