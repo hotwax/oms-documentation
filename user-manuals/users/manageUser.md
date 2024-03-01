@@ -33,3 +33,9 @@ The "Show as Picker" function allows picklists to be assigned to a user. This ro
 ## Add Facilities
 
 The "Add Facilities" function allows administrators to associate a user with multiple facilities in the OMS. This flexibility enables users to access and manage fulfillment operations across different locations. Additionally, administrators can assign facility-specific login credentials, ensuring that users have the necessary access privileges for activities related to specific facilities.
+
+## Add Favorites
+
+The Favorites function allows users to pin their most frequently used Product store and Shopify shop, ensuring these selections are automatically applied each time they log in to any HotWax Commerce App. 
+
+This feature is particularly valuable when users need to run specific jobs on a parent Shopify shop. If the shop is not set correctly, users might inadvertently run a job on the child shop, potentially leading to unexpected changes in OMS behavior.
