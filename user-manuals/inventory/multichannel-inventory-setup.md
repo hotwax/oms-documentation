@@ -8,7 +8,7 @@ With the `Facilities App` in HotWax Commerce, retail brands can create distinct 
 
 1. **Access Facility Group Page:**
    - Log in to the `Facilities App` from the Launchpad.
-   - Navigate to the `Facility Group` [page](facilities/manage-facility-groups.md) within the `Facilities App`
+   - Navigate to the `Facility Group` [page](facilities/manage-facility-groups.md) within the `Facilities App`.
 
 2. **Create New Group:**
    - Scroll to the bottom of the page and click on the `Create group` button to create a new group for the sales channel you want to set up inventory.
@@ -35,9 +35,9 @@ With the `Facilities App` in HotWax Commerce, retail brands can create distinct 
    - Select the desired channel, such as Shopify or Amazon from the quick switcher located at the left bottom of the page.
 
 9. **Schedule Inventory Synchronization Jobs:**
-   - HotWax Commerce has [two inventory synchronization jobs](job-manager/job-workflows/inventory.md): `Hard Sync` and `Upload Recent Inventory Changes`.
+   - HotWax Commerce has [two inventory synchronization jobs](job-workflows/inventory.md) : `Hard Sync` and `Upload Recent Inventory Changes`.
    - Schedule both jobs by specifying the Facility's internal ID in the `facilityGroupId` parameter.
-   - This ensures that the inventory for the chosen channel is updated according to the `facilities` added to the corresponding `facility group`.
+   - This ensures that the inventory for the chosen channel is updated according to the `facilities` added to the corresponding `facility group`.  
 
 By following these steps, users can efficiently set up multi-channel inventory management within HotWax Commerce, enabling seamless synchronization of inventory across various online sales channels.
 
