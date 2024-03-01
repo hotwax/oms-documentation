@@ -1,0 +1,1333 @@
+{
+  "orderId": "PS00000284",
+  "requestId": "cat",
+  "orderStatus": "COMPLETED",
+  "status": "COMPLETED",
+  "creationDate": "2024-01-12 16:47:01",
+  "email": "daysky001@yahoo.com",
+  "totalAmount": 454.14,
+  "shippingSubTotal": 30,
+  "shippingTax": 0,
+  "isSplitCart": false,
+  "taxSubTotal": 34.14,
+  "taxExemption": 0,
+  "orderSubTotal": 390,
+  "paymentCards": [
+    {
+      "isManualCardEntry": false
+    }
+  ],
+  "tenders": [
+    {
+      "merchantId": "DOLCEVITA947078",
+      "locale": "en_US",
+      "region": "US",
+      "orderId": "PS00000284",
+      "transactionId": "254-ANY-20240112184656-9-3",
+      "paymentId": "e3e6205a-ab71-48da-be50-1ac465b9bf01",
+      "paymentMethod": "Miscellaneous",
+      "paymentStatus": "APPROVED",
+      "paymentDevice": "NoReader",
+      "amountAuthorized": 454.14,
+      "captureDate": "2024-01-12T16:46:56Z",
+      "requestId": "cat",
+      "totalRefundedAmount": 0,
+      "totalAmountCarriedOverForExchange": 0,
+      "paymentSequenceNumber": 1,
+      "accountNumber": "cat",
+      "externalPaymentSystemId": "External",
+      "externalPaymentReferenceId": "cat",
+      "authStatus": "SALE",
+      "captureStatus": "CAPTURED",
+      "cardPresent": false,
+      "expiryDate": "2025-07-12T00:00:00Z"
+    }
+  ],
+  "shippingAddress": {
+    "firstName": "Catalin",
+    "lastName": "Linlin",
+    "addressLine1": "830 bay blvd",
+    "addressLine2": "",
+    "city": "chula vista",
+    "state": "CA",
+    "postalCode": "91911",
+    "countryCode": "",
+    "phone": "+16154440004",
+    "preferred": false,
+    "emailAddress": "daysky001@yahoo.com"
+  },
+  "billingAddress": {
+    "firstName": "Catalin",
+    "lastName": "Linlin",
+    "preferred": false
+  },
+  "productList": [
+    {
+      "productId": "VLAKOTA0001050",
+      "variantGroupId": "LAKOTA",
+      "name": "LAKOTA HEELS BLACK LEATHER",
+      "price": 130,
+      "quantity": 1,
+      "productTax": {
+        "totalTax": 11.38,
+        "taxRates": [
+          {
+            "countryCode": "US",
+            "taxType": "CITY",
+            "taxRate": 0.01,
+            "taxClass": "PC040144",
+            "taxCode": "US-CITY---CA CITY TAX-0.01",
+            "taxAmount": 1.3,
+            "perUnitTaxAmount": 1.3,
+            "taxName": "CA CITY TAX",
+            "displayTaxName": "CA CITY TAX - 0.01%",
+            "printTaxName": "CA CITY TAX - 0.01%"
+          },
+          {
+            "countryCode": "US",
+            "taxType": "COUNTY",
+            "taxRate": 0.0025,
+            "taxClass": "PC040144",
+            "taxCode": "US-COUNTY---CA COUNTY TAX-0.0025",
+            "taxAmount": 0.33,
+            "perUnitTaxAmount": 0.33,
+            "taxName": "CA COUNTY TAX",
+            "displayTaxName": "CA COUNTY TAX - 0.0025%",
+            "printTaxName": "CA COUNTY TAX - 0.0025%"
+          },
+          {
+            "countryCode": "US",
+            "taxType": "SPECIAL",
+            "taxRate": 0.005,
+            "taxClass": "PC040144",
+            "taxCode": "US-SPECIAL---CA SPECIAL TAXEMBD0 0.005000-0.005",
+            "taxAmount": 0.65,
+            "perUnitTaxAmount": 0.65,
+            "taxName": "CA SPECIAL TAXEMBD0 0.005000",
+            "displayTaxName": "CA SPECIAL TAXEMBD0 0.005000 - 0.005%",
+            "printTaxName": "CA SPECIAL TAXEMBD0 0.005000 - 0.005%"
+          },
+          {
+            "countryCode": "US",
+            "taxType": "SPECIAL",
+            "taxRate": 0.01,
+            "taxClass": "PC040144",
+            "taxCode": "US-SPECIAL---CA SPECIAL TAXEMTU0 0.010000-0.01",
+            "taxAmount": 1.3,
+            "perUnitTaxAmount": 1.3,
+            "taxName": "CA SPECIAL TAXEMTU0 0.010000",
+            "displayTaxName": "CA SPECIAL TAXEMTU0 0.010000 - 0.01%",
+            "printTaxName": "CA SPECIAL TAXEMTU0 0.010000 - 0.01%"
+          },
+          {
+            "countryCode": "US",
+            "taxType": "STATE",
+            "taxRate": 0.06,
+            "taxClass": "PC040144",
+            "taxCode": "US-STATE---CA STATE TAX-0.06",
+            "taxAmount": 7.8,
+            "perUnitTaxAmount": 7.8,
+            "taxName": "CA STATE TAX",
+            "displayTaxName": "CA STATE TAX - 0.06%",
+            "printTaxName": "CA STATE TAX - 0.06%"
+          }
+        ]
+      },
+      "orderStatus": "COMPLETED",
+      "tax": 11.38,
+      "orderItemId": "1",
+      "productTaxCode": "PC040144",
+      "imageURL": "https://cdn.shopify.com/s/files/1/0037/3807/5202/files/DOLCEVITA-HEELS_LAKOTA_BLACKLEATHER-02.jpg?v=1687897830",
+      "subTotal": 130,
+      "total": 141.38,
+      "orderStatusText": "Completed",
+      "itemStatusText": "Completed",
+      "size": "5.0",
+      "color": "BLACK",
+      "itemStatus": "COMPLETED",
+      "isVirtual": false,
+      "additionalCharges": [],
+      "gtin": "197076109628",
+      "fulfillmentType": "ONLINE",
+      "fulfillmentSubType": "DEFAULT",
+      "salesAssociateId": "cat01",
+      "salesAssociateAttribution": [
+        {
+          "orderItemId": "1",
+          "storeId": "254",
+          "storeAssociateId": "cat01",
+          "contributionPercentage": 100,
+          "orderId": "PS00000284",
+          "expiryDate": "2025-07-12T00:00:00Z"
+        }
+      ],
+      "returnsEligibility": "ELIGIBLE_FOR_RETURNS",
+      "productClass": "Merchandise",
+      "isReturnRelated": false,
+      "productCondition": "NEW",
+      "reasons": [],
+      "fulfillmentTypeChanged": false,
+      "omniFulfillmentType": "SHIP_TO_HOME"
+    },
+    {
+      "productId": "VLAKOTA0001055",
+      "variantGroupId": "LAKOTA",
+      "name": "LAKOTA HEELS BLACK LEATHER",
+      "price": 130,
+      "quantity": 1,
+      "productTax": {
+        "totalTax": 11.38,
+        "taxRates": [
+          {
+            "countryCode": "US",
+            "taxType": "CITY",
+            "taxRate": 0.01,
+            "taxClass": "PC040144",
+            "taxCode": "US-CITY---CA CITY TAX-0.01",
+            "taxAmount": 1.3,
+            "perUnitTaxAmount": 1.3,
+            "taxName": "CA CITY TAX",
+            "displayTaxName": "CA CITY TAX - 0.01%",
+            "printTaxName": "CA CITY TAX - 0.01%"
+          },
+          {
+            "countryCode": "US",
+            "taxType": "COUNTY",
+            "taxRate": 0.0025,
+            "taxClass": "PC040144",
+            "taxCode": "US-COUNTY---CA COUNTY TAX-0.0025",
+            "taxAmount": 0.33,
+            "perUnitTaxAmount": 0.33,
+            "taxName": "CA COUNTY TAX",
+            "displayTaxName": "CA COUNTY TAX - 0.0025%",
+            "printTaxName": "CA COUNTY TAX - 0.0025%"
+          },
+          {
+            "countryCode": "US",
+            "taxType": "SPECIAL",
+            "taxRate": 0.005,
+            "taxClass": "PC040144",
+            "taxCode": "US-SPECIAL---CA SPECIAL TAXEMBD0 0.005000-0.005",
+            "taxAmount": 0.65,
+            "perUnitTaxAmount": 0.65,
+            "taxName": "CA SPECIAL TAXEMBD0 0.005000",
+            "displayTaxName": "CA SPECIAL TAXEMBD0 0.005000 - 0.005%",
+            "printTaxName": "CA SPECIAL TAXEMBD0 0.005000 - 0.005%"
+          },
+          {
+            "countryCode": "US",
+            "taxType": "SPECIAL",
+            "taxRate": 0.01,
+            "taxClass": "PC040144",
+            "taxCode": "US-SPECIAL---CA SPECIAL TAXEMTU0 0.010000-0.01",
+            "taxAmount": 1.3,
+            "perUnitTaxAmount": 1.3,
+            "taxName": "CA SPECIAL TAXEMTU0 0.010000",
+            "displayTaxName": "CA SPECIAL TAXEMTU0 0.010000 - 0.01%",
+            "printTaxName": "CA SPECIAL TAXEMTU0 0.010000 - 0.01%"
+          },
+          {
+            "countryCode": "US",
+            "taxType": "STATE",
+            "taxRate": 0.06,
+            "taxClass": "PC040144",
+            "taxCode": "US-STATE---CA STATE TAX-0.06",
+            "taxAmount": 7.8,
+            "perUnitTaxAmount": 7.8,
+            "taxName": "CA STATE TAX",
+            "displayTaxName": "CA STATE TAX - 0.06%",
+            "printTaxName": "CA STATE TAX - 0.06%"
+          }
+        ]
+      },
+      "orderStatus": "COMPLETED",
+      "tax": 11.38,
+      "orderItemId": "2",
+      "productTaxCode": "PC040144",
+      "imageURL": "https://cdn.shopify.com/s/files/1/0037/3807/5202/files/DOLCEVITA-HEELS_LAKOTA_BLACKLEATHER-02.jpg?v=1687897830",
+      "subTotal": 130,
+      "total": 141.38,
+      "orderStatusText": "Completed",
+      "itemStatusText": "Completed",
+      "size": "5.5",
+      "color": "BLACK",
+      "itemStatus": "COMPLETED",
+      "isVirtual": false,
+      "additionalCharges": [],
+      "gtin": "197076109635",
+      "fulfillmentType": "ONLINE",
+      "fulfillmentSubType": "DEFAULT",
+      "salesAssociateId": "cat01",
+      "salesAssociateAttribution": [
+        {
+          "orderItemId": "2",
+          "storeId": "254",
+          "storeAssociateId": "cat01",
+          "contributionPercentage": 100,
+          "orderId": "PS00000284",
+          "expiryDate": "2025-07-12T00:00:00Z"
+        }
+      ],
+      "returnsEligibility": "ELIGIBLE_FOR_RETURNS",
+      "productClass": "Merchandise",
+      "isReturnRelated": false,
+      "productCondition": "NEW",
+      "reasons": [],
+      "fulfillmentTypeChanged": false,
+      "omniFulfillmentType": "SHIP_TO_HOME"
+    },
+    {
+      "productId": "VLAKOTA0001060",
+      "variantGroupId": "LAKOTA",
+      "name": "LAKOTA HEELS BLACK LEATHER",
+      "price": 130,
+      "quantity": 1,
+      "productTax": {
+        "totalTax": 11.38,
+        "taxRates": [
+          {
+            "countryCode": "US",
+            "taxType": "CITY",
+            "taxRate": 0.01,
+            "taxClass": "PC040144",
+            "taxCode": "US-CITY---CA CITY TAX-0.01",
+            "taxAmount": 1.3,
+            "perUnitTaxAmount": 1.3,
+            "taxName": "CA CITY TAX",
+            "displayTaxName": "CA CITY TAX - 0.01%",
+            "printTaxName": "CA CITY TAX - 0.01%"
+          },
+          {
+            "countryCode": "US",
+            "taxType": "COUNTY",
+            "taxRate": 0.0025,
+            "taxClass": "PC040144",
+            "taxCode": "US-COUNTY---CA COUNTY TAX-0.0025",
+            "taxAmount": 0.33,
+            "perUnitTaxAmount": 0.33,
+            "taxName": "CA COUNTY TAX",
+            "displayTaxName": "CA COUNTY TAX - 0.0025%",
+            "printTaxName": "CA COUNTY TAX - 0.0025%"
+          },
+          {
+            "countryCode": "US",
+            "taxType": "SPECIAL",
+            "taxRate": 0.005,
+            "taxClass": "PC040144",
+            "taxCode": "US-SPECIAL---CA SPECIAL TAXEMBD0 0.005000-0.005",
+            "taxAmount": 0.65,
+            "perUnitTaxAmount": 0.65,
+            "taxName": "CA SPECIAL TAXEMBD0 0.005000",
+            "displayTaxName": "CA SPECIAL TAXEMBD0 0.005000 - 0.005%",
+            "printTaxName": "CA SPECIAL TAXEMBD0 0.005000 - 0.005%"
+          },
+          {
+            "countryCode": "US",
+            "taxType": "SPECIAL",
+            "taxRate": 0.01,
+            "taxClass": "PC040144",
+            "taxCode": "US-SPECIAL---CA SPECIAL TAXEMTU0 0.010000-0.01",
+            "taxAmount": 1.3,
+            "perUnitTaxAmount": 1.3,
+            "taxName": "CA SPECIAL TAXEMTU0 0.010000",
+            "displayTaxName": "CA SPECIAL TAXEMTU0 0.010000 - 0.01%",
+            "printTaxName": "CA SPECIAL TAXEMTU0 0.010000 - 0.01%"
+          },
+          {
+            "countryCode": "US",
+            "taxType": "STATE",
+            "taxRate": 0.06,
+            "taxClass": "PC040144",
+            "taxCode": "US-STATE---CA STATE TAX-0.06",
+            "taxAmount": 7.8,
+            "perUnitTaxAmount": 7.8,
+            "taxName": "CA STATE TAX",
+            "displayTaxName": "CA STATE TAX - 0.06%",
+            "printTaxName": "CA STATE TAX - 0.06%"
+          }
+        ]
+      },
+      "orderStatus": "COMPLETED",
+      "tax": 11.38,
+      "orderItemId": "3",
+      "productTaxCode": "PC040144",
+      "imageURL": "https://cdn.shopify.com/s/files/1/0037/3807/5202/files/DOLCEVITA-HEELS_LAKOTA_BLACKLEATHER-02.jpg?v=1687897830",
+      "subTotal": 130,
+      "total": 141.38,
+      "orderStatusText": "Completed",
+      "itemStatusText": "Completed",
+      "size": "6.0",
+      "color": "BLACK",
+      "itemStatus": "COMPLETED",
+      "isVirtual": false,
+      "additionalCharges": [],
+      "gtin": "197076109642",
+      "fulfillmentType": "ONLINE",
+      "fulfillmentSubType": "DEFAULT",
+      "salesAssociateId": "cat01",
+      "salesAssociateAttribution": [
+        {
+          "orderItemId": "3",
+          "storeId": "254",
+          "storeAssociateId": "cat01",
+          "contributionPercentage": 100,
+          "orderId": "PS00000284",
+          "expiryDate": "2025-07-12T00:00:00Z"
+        }
+      ],
+      "returnsEligibility": "ELIGIBLE_FOR_RETURNS",
+      "productClass": "Merchandise",
+      "isReturnRelated": false,
+      "productCondition": "NEW",
+      "reasons": [],
+      "fulfillmentTypeChanged": false,
+      "omniFulfillmentType": "SHIP_TO_HOME"
+    }
+  ],
+  "orderProductList": [
+    {
+      "productId": "VLAKOTA0001050",
+      "variantGroupId": "LAKOTA",
+      "name": "LAKOTA HEELS BLACK LEATHER",
+      "price": 130,
+      "quantity": 1,
+      "productTax": {
+        "totalTax": 11.38,
+        "taxRates": [
+          {
+            "countryCode": "US",
+            "taxType": "CITY",
+            "taxRate": 0.01,
+            "taxClass": "PC040144",
+            "taxCode": "US-CITY---CA CITY TAX-0.01",
+            "taxAmount": 1.3,
+            "perUnitTaxAmount": 1.3,
+            "taxName": "CA CITY TAX",
+            "displayTaxName": "CA CITY TAX - 0.01%",
+            "printTaxName": "CA CITY TAX - 0.01%"
+          },
+          {
+            "countryCode": "US",
+            "taxType": "COUNTY",
+            "taxRate": 0.0025,
+            "taxClass": "PC040144",
+            "taxCode": "US-COUNTY---CA COUNTY TAX-0.0025",
+            "taxAmount": 0.33,
+            "perUnitTaxAmount": 0.33,
+            "taxName": "CA COUNTY TAX",
+            "displayTaxName": "CA COUNTY TAX - 0.0025%",
+            "printTaxName": "CA COUNTY TAX - 0.0025%"
+          },
+          {
+            "countryCode": "US",
+            "taxType": "SPECIAL",
+            "taxRate": 0.005,
+            "taxClass": "PC040144",
+            "taxCode": "US-SPECIAL---CA SPECIAL TAXEMBD0 0.005000-0.005",
+            "taxAmount": 0.65,
+            "perUnitTaxAmount": 0.65,
+            "taxName": "CA SPECIAL TAXEMBD0 0.005000",
+            "displayTaxName": "CA SPECIAL TAXEMBD0 0.005000 - 0.005%",
+            "printTaxName": "CA SPECIAL TAXEMBD0 0.005000 - 0.005%"
+          },
+          {
+            "countryCode": "US",
+            "taxType": "SPECIAL",
+            "taxRate": 0.01,
+            "taxClass": "PC040144",
+            "taxCode": "US-SPECIAL---CA SPECIAL TAXEMTU0 0.010000-0.01",
+            "taxAmount": 1.3,
+            "perUnitTaxAmount": 1.3,
+            "taxName": "CA SPECIAL TAXEMTU0 0.010000",
+            "displayTaxName": "CA SPECIAL TAXEMTU0 0.010000 - 0.01%",
+            "printTaxName": "CA SPECIAL TAXEMTU0 0.010000 - 0.01%"
+          },
+          {
+            "countryCode": "US",
+            "taxType": "STATE",
+            "taxRate": 0.06,
+            "taxClass": "PC040144",
+            "taxCode": "US-STATE---CA STATE TAX-0.06",
+            "taxAmount": 7.8,
+            "perUnitTaxAmount": 7.8,
+            "taxName": "CA STATE TAX",
+            "displayTaxName": "CA STATE TAX - 0.06%",
+            "printTaxName": "CA STATE TAX - 0.06%"
+          }
+        ]
+      },
+      "orderStatus": "COMPLETED",
+      "tax": 11.38,
+      "orderItemId": "1",
+      "productTaxCode": "PC040144",
+      "imageURL": "https://cdn.shopify.com/s/files/1/0037/3807/5202/files/DOLCEVITA-HEELS_LAKOTA_BLACKLEATHER-02.jpg?v=1687897830",
+      "subTotal": 130,
+      "total": 141.38,
+      "orderStatusText": "Completed",
+      "itemStatusText": "Completed",
+      "size": "5.0",
+      "color": "BLACK",
+      "itemStatus": "COMPLETED",
+      "isVirtual": false,
+      "additionalCharges": [],
+      "gtin": "197076109628",
+      "fulfillmentType": "ONLINE",
+      "fulfillmentSubType": "DEFAULT",
+      "salesAssociateId": "cat01",
+      "salesAssociateAttribution": [
+        {
+          "orderItemId": "1",
+          "storeId": "254",
+          "storeAssociateId": "cat01",
+          "contributionPercentage": 100,
+          "orderId": "PS00000284",
+          "expiryDate": "2025-07-12T00:00:00Z"
+        }
+      ],
+      "returnsEligibility": "ELIGIBLE_FOR_RETURNS",
+      "productClass": "Merchandise",
+      "isReturnRelated": false,
+      "productCondition": "NEW",
+      "reasons": [],
+      "fulfillmentTypeChanged": false,
+      "omniFulfillmentType": "SHIP_TO_HOME"
+    },
+    {
+      "productId": "VLAKOTA0001055",
+      "variantGroupId": "LAKOTA",
+      "name": "LAKOTA HEELS BLACK LEATHER",
+      "price": 130,
+      "quantity": 1,
+      "productTax": {
+        "totalTax": 11.38,
+        "taxRates": [
+          {
+            "countryCode": "US",
+            "taxType": "CITY",
+            "taxRate": 0.01,
+            "taxClass": "PC040144",
+            "taxCode": "US-CITY---CA CITY TAX-0.01",
+            "taxAmount": 1.3,
+            "perUnitTaxAmount": 1.3,
+            "taxName": "CA CITY TAX",
+            "displayTaxName": "CA CITY TAX - 0.01%",
+            "printTaxName": "CA CITY TAX - 0.01%"
+          },
+          {
+            "countryCode": "US",
+            "taxType": "COUNTY",
+            "taxRate": 0.0025,
+            "taxClass": "PC040144",
+            "taxCode": "US-COUNTY---CA COUNTY TAX-0.0025",
+            "taxAmount": 0.33,
+            "perUnitTaxAmount": 0.33,
+            "taxName": "CA COUNTY TAX",
+            "displayTaxName": "CA COUNTY TAX - 0.0025%",
+            "printTaxName": "CA COUNTY TAX - 0.0025%"
+          },
+          {
+            "countryCode": "US",
+            "taxType": "SPECIAL",
+            "taxRate": 0.005,
+            "taxClass": "PC040144",
+            "taxCode": "US-SPECIAL---CA SPECIAL TAXEMBD0 0.005000-0.005",
+            "taxAmount": 0.65,
+            "perUnitTaxAmount": 0.65,
+            "taxName": "CA SPECIAL TAXEMBD0 0.005000",
+            "displayTaxName": "CA SPECIAL TAXEMBD0 0.005000 - 0.005%",
+            "printTaxName": "CA SPECIAL TAXEMBD0 0.005000 - 0.005%"
+          },
+          {
+            "countryCode": "US",
+            "taxType": "SPECIAL",
+            "taxRate": 0.01,
+            "taxClass": "PC040144",
+            "taxCode": "US-SPECIAL---CA SPECIAL TAXEMTU0 0.010000-0.01",
+            "taxAmount": 1.3,
+            "perUnitTaxAmount": 1.3,
+            "taxName": "CA SPECIAL TAXEMTU0 0.010000",
+            "displayTaxName": "CA SPECIAL TAXEMTU0 0.010000 - 0.01%",
+            "printTaxName": "CA SPECIAL TAXEMTU0 0.010000 - 0.01%"
+          },
+          {
+            "countryCode": "US",
+            "taxType": "STATE",
+            "taxRate": 0.06,
+            "taxClass": "PC040144",
+            "taxCode": "US-STATE---CA STATE TAX-0.06",
+            "taxAmount": 7.8,
+            "perUnitTaxAmount": 7.8,
+            "taxName": "CA STATE TAX",
+            "displayTaxName": "CA STATE TAX - 0.06%",
+            "printTaxName": "CA STATE TAX - 0.06%"
+          }
+        ]
+      },
+      "orderStatus": "COMPLETED",
+      "tax": 11.38,
+      "orderItemId": "2",
+      "productTaxCode": "PC040144",
+      "imageURL": "https://cdn.shopify.com/s/files/1/0037/3807/5202/files/DOLCEVITA-HEELS_LAKOTA_BLACKLEATHER-02.jpg?v=1687897830",
+      "subTotal": 130,
+      "total": 141.38,
+      "orderStatusText": "Completed",
+      "itemStatusText": "Completed",
+      "size": "5.5",
+      "color": "BLACK",
+      "itemStatus": "COMPLETED",
+      "isVirtual": false,
+      "additionalCharges": [],
+      "gtin": "197076109635",
+      "fulfillmentType": "ONLINE",
+      "fulfillmentSubType": "DEFAULT",
+      "salesAssociateId": "cat01",
+      "salesAssociateAttribution": [
+        {
+          "orderItemId": "2",
+          "storeId": "254",
+          "storeAssociateId": "cat01",
+          "contributionPercentage": 100,
+          "orderId": "PS00000284",
+          "expiryDate": "2025-07-12T00:00:00Z"
+        }
+      ],
+      "returnsEligibility": "ELIGIBLE_FOR_RETURNS",
+      "productClass": "Merchandise",
+      "isReturnRelated": false,
+      "productCondition": "NEW",
+      "reasons": [],
+      "fulfillmentTypeChanged": false,
+      "omniFulfillmentType": "SHIP_TO_HOME"
+    },
+    {
+      "productId": "VLAKOTA0001060",
+      "variantGroupId": "LAKOTA",
+      "name": "LAKOTA HEELS BLACK LEATHER",
+      "price": 130,
+      "quantity": 1,
+      "productTax": {
+        "totalTax": 11.38,
+        "taxRates": [
+          {
+            "countryCode": "US",
+            "taxType": "CITY",
+            "taxRate": 0.01,
+            "taxClass": "PC040144",
+            "taxCode": "US-CITY---CA CITY TAX-0.01",
+            "taxAmount": 1.3,
+            "perUnitTaxAmount": 1.3,
+            "taxName": "CA CITY TAX",
+            "displayTaxName": "CA CITY TAX - 0.01%",
+            "printTaxName": "CA CITY TAX - 0.01%"
+          },
+          {
+            "countryCode": "US",
+            "taxType": "COUNTY",
+            "taxRate": 0.0025,
+            "taxClass": "PC040144",
+            "taxCode": "US-COUNTY---CA COUNTY TAX-0.0025",
+            "taxAmount": 0.33,
+            "perUnitTaxAmount": 0.33,
+            "taxName": "CA COUNTY TAX",
+            "displayTaxName": "CA COUNTY TAX - 0.0025%",
+            "printTaxName": "CA COUNTY TAX - 0.0025%"
+          },
+          {
+            "countryCode": "US",
+            "taxType": "SPECIAL",
+            "taxRate": 0.005,
+            "taxClass": "PC040144",
+            "taxCode": "US-SPECIAL---CA SPECIAL TAXEMBD0 0.005000-0.005",
+            "taxAmount": 0.65,
+            "perUnitTaxAmount": 0.65,
+            "taxName": "CA SPECIAL TAXEMBD0 0.005000",
+            "displayTaxName": "CA SPECIAL TAXEMBD0 0.005000 - 0.005%",
+            "printTaxName": "CA SPECIAL TAXEMBD0 0.005000 - 0.005%"
+          },
+          {
+            "countryCode": "US",
+            "taxType": "SPECIAL",
+            "taxRate": 0.01,
+            "taxClass": "PC040144",
+            "taxCode": "US-SPECIAL---CA SPECIAL TAXEMTU0 0.010000-0.01",
+            "taxAmount": 1.3,
+            "perUnitTaxAmount": 1.3,
+            "taxName": "CA SPECIAL TAXEMTU0 0.010000",
+            "displayTaxName": "CA SPECIAL TAXEMTU0 0.010000 - 0.01%",
+            "printTaxName": "CA SPECIAL TAXEMTU0 0.010000 - 0.01%"
+          },
+          {
+            "countryCode": "US",
+            "taxType": "STATE",
+            "taxRate": 0.06,
+            "taxClass": "PC040144",
+            "taxCode": "US-STATE---CA STATE TAX-0.06",
+            "taxAmount": 7.8,
+            "perUnitTaxAmount": 7.8,
+            "taxName": "CA STATE TAX",
+            "displayTaxName": "CA STATE TAX - 0.06%",
+            "printTaxName": "CA STATE TAX - 0.06%"
+          }
+        ]
+      },
+      "orderStatus": "COMPLETED",
+      "tax": 11.38,
+      "orderItemId": "3",
+      "productTaxCode": "PC040144",
+      "imageURL": "https://cdn.shopify.com/s/files/1/0037/3807/5202/files/DOLCEVITA-HEELS_LAKOTA_BLACKLEATHER-02.jpg?v=1687897830",
+      "subTotal": 130,
+      "total": 141.38,
+      "orderStatusText": "Completed",
+      "itemStatusText": "Completed",
+      "size": "6.0",
+      "color": "BLACK",
+      "itemStatus": "COMPLETED",
+      "isVirtual": false,
+      "additionalCharges": [],
+      "gtin": "197076109642",
+      "fulfillmentType": "ONLINE",
+      "fulfillmentSubType": "DEFAULT",
+      "salesAssociateId": "cat01",
+      "salesAssociateAttribution": [
+        {
+          "orderItemId": "3",
+          "storeId": "254",
+          "storeAssociateId": "cat01",
+          "contributionPercentage": 100,
+          "orderId": "PS00000284",
+          "expiryDate": "2025-07-12T00:00:00Z"
+        }
+      ],
+      "returnsEligibility": "ELIGIBLE_FOR_RETURNS",
+      "productClass": "Merchandise",
+      "isReturnRelated": false,
+      "productCondition": "NEW",
+      "reasons": [],
+      "fulfillmentTypeChanged": false,
+      "omniFulfillmentType": "SHIP_TO_HOME"
+    }
+  ],
+  "returnProductList": [],
+  "orderStatusText": "Completed",
+  "discount": 0,
+  "storeId": "254",
+  "store": {
+    "storeId": "254",
+    "name": "DV SOHO STORE",
+    "addressLine1": "489 Broadway",
+    "city": "New York",
+    "state": "NY",
+    "postalCode": "10012",
+    "countryCode": "US",
+    "latitude": 40.722036,
+    "longitude": -73.99994989999999,
+    "storeType": "Regular",
+    "allowTryAtStore": false,
+    "productScanCodeType": "GTIN",
+    "timeZoneId": "UTC",
+    "customString0": ""
+  },
+  "storeAssociateId": "cat01",
+  "orderSource": "IN_STORE",
+  "paymentSource": "Miscellaneous",
+  "shippingMethodId": "003",
+  "installationId": "af8cbe73-b523-4633-ab49-d493a5a9eaa4",
+  "lastDateToReturnTimeStamp": 1712854021000,
+  "taxRates": [
+    {
+      "taxType": "CITY",
+      "chargeType": "TAX",
+      "taxRate": 0.01,
+      "taxAmount": 3.9,
+      "taxName": "CA CITY TAX",
+      "displayTaxName": "CA CITY TAX - 0.01%",
+      "returnedTaxAmount": 0,
+      "remainingTaxAmount": 3.9,
+      "printTaxName": "CA CITY TAX - 0.01%"
+    },
+    {
+      "taxType": "COUNTY",
+      "chargeType": "TAX",
+      "taxRate": 0.0025,
+      "taxAmount": 0.99,
+      "taxName": "CA COUNTY TAX",
+      "displayTaxName": "CA COUNTY TAX - 0.0025%",
+      "returnedTaxAmount": 0,
+      "remainingTaxAmount": 0.99,
+      "printTaxName": "CA COUNTY TAX - 0.0025%"
+    },
+    {
+      "taxType": "SPECIAL",
+      "chargeType": "TAX",
+      "taxRate": 0.005,
+      "taxAmount": 1.95,
+      "taxName": "CA SPECIAL TAXEMBD0 0.005000",
+      "displayTaxName": "CA SPECIAL TAXEMBD0 0.005000 - 0.005%",
+      "returnedTaxAmount": 0,
+      "remainingTaxAmount": 1.95,
+      "printTaxName": "CA SPECIAL TAXEMBD0 0.005000 - 0.005%"
+    },
+    {
+      "taxType": "SPECIAL",
+      "chargeType": "TAX",
+      "taxRate": 0.01,
+      "taxAmount": 3.9,
+      "taxName": "CA SPECIAL TAXEMTU0 0.010000",
+      "displayTaxName": "CA SPECIAL TAXEMTU0 0.010000 - 0.01%",
+      "returnedTaxAmount": 0,
+      "remainingTaxAmount": 3.9,
+      "printTaxName": "CA SPECIAL TAXEMTU0 0.010000 - 0.01%"
+    },
+    {
+      "taxType": "STATE",
+      "chargeType": "TAX",
+      "taxRate": 0.06,
+      "taxAmount": 23.4,
+      "taxName": "CA STATE TAX",
+      "displayTaxName": "CA STATE TAX - 0.06%",
+      "returnedTaxAmount": 0,
+      "remainingTaxAmount": 23.4,
+      "printTaxName": "CA STATE TAX - 0.06%"
+    }
+  ],
+  "taxExemptions": [],
+  "shippingName": "Next Day",
+  "shippingDescription": "Next Day",
+  "phoneNumber": "+16154440004",
+  "orderDate": 1705078021000,
+  "coupons": [],
+  "merchantPromotionIds": [],
+  "customerProfile": {
+    "customerId": "daysky001@yahoo.com",
+    "email": "daysky001@yahoo.com",
+    "firstName": "Catalin",
+    "lastName": "Linlin",
+    "address": {
+      "addressLine1": "830 bay blvd",
+      "city": "chula vista",
+      "state": "CA",
+      "postalCode": "91911",
+      "preferred": false
+    },
+    "phoneMobile": "+16154440004"
+  },
+  "updateDate": 1705078205000,
+  "taxableAmount": 390,
+  "fulfillmentType": "ONLINE",
+  "children": {},
+  "notesList": [],
+  "rewardAmount": 0,
+  "cartId": "PS00000284",
+  "paymentDetails": [
+    {
+      "merchantId": "DOLCEVITA947078",
+      "locale": "en_US",
+      "region": "US",
+      "orderId": "PS00000284",
+      "transactionId": "254-ANY-20240112184656-9-3",
+      "paymentId": "e3e6205a-ab71-48da-be50-1ac465b9bf01",
+      "paymentMethod": "Miscellaneous",
+      "paymentStatus": "APPROVED",
+      "paymentDevice": "NoReader",
+      "amountAuthorized": 454.14,
+      "captureDate": "2024-01-12T16:46:56Z",
+      "requestId": "cat",
+      "totalRefundedAmount": 0,
+      "totalAmountCarriedOverForExchange": 0,
+      "paymentSequenceNumber": 1,
+      "accountNumber": "cat",
+      "externalPaymentSystemId": "External",
+      "externalPaymentReferenceId": "cat",
+      "authStatus": "SALE",
+      "captureStatus": "CAPTURED",
+      "cardPresent": false,
+      "expiryDate": "2025-07-12T00:00:00Z"
+    }
+  ],
+  "refundPaymentDetails": [],
+  "noReceiptReturns": false,
+  "twoPhaseCommitReferenceId": "PS00000284",
+  "orderAttribution": {
+    "storeRegisterId": "ANY",
+    "registerTransactionId": "9"
+  },
+  "partiallyPaid": false,
+  "orderActivityLog": [
+    {
+      "transactionId": "254-ANY-20240112184656-9-3",
+      "installationId": "af8cbe73-b523-4633-ab49-d493a5a9eaa4",
+      "storeId": "254",
+      "transactionDate": "2024-01-12T16:47:01Z",
+      "transactionType": "CREATE",
+      "appTransactionId": "9",
+      "transactionData": {
+        "transactionId": "254-ANY-20240112184656-9-3",
+        "transactionTimeStamp": 1705078020644,
+        "transactionType": "SALE",
+        "orderId": "PS00000284",
+        "summary": {
+          "saleSummary": {
+            "subTotal": 390,
+            "tax": 34.14,
+            "taxExemption": 0,
+            "shippingCharges": 30,
+            "total": 454.14,
+            "netSubTotal": 390
+          },
+          "refundSummary": {
+            "subTotal": 0,
+            "tax": 0,
+            "taxExemption": 0,
+            "valueAddedTax": 0,
+            "total": 0,
+            "netSubTotal": 0
+          },
+          "netSummary": {
+            "subTotal": 390,
+            "discount": 0,
+            "transactionDiscountAmount": 0,
+            "tax": 34.14,
+            "taxExemption": 0,
+            "valueAddedTax": 0,
+            "shippingCharges": 30,
+            "total": 454.14,
+            "amountToBeCharged": 454.14,
+            "netSubTotal": 390,
+            "inStoreTotal": 0
+          }
+        },
+        "storeAttribution": {
+          "transactionId": "9",
+          "storeAssociateId": "cat01",
+          "storeId": "254",
+          "eventId": "3",
+          "storeRegisterId": "ANY",
+          "eventTimeStamp": 1705078020229,
+          "storeAssociateRole": "STORE_MANAGER",
+          "secondsFromGMT": 7200,
+          "activePaymentReader": "Adyen",
+          "tillSessionId": "cd185a9a-3399-4f43-8d19-70021840a3b4",
+          "tillId": "89629"
+        },
+        "receiptPrintCount": 1,
+        "taxRates": [
+          {
+            "countryCode": "US",
+            "taxType": "SPECIAL",
+            "chargeType": "TAX",
+            "taxRate": 0.01,
+            "taxClass": "PC040144",
+            "taxCode": "US-SPECIAL---CA SPECIAL TAXEMTU0 0.010000-0.01",
+            "taxAmount": 3.9,
+            "taxName": "CA SPECIAL TAXEMTU0 0.010000",
+            "displayTaxName": "CA SPECIAL TAXEMTU0 0.010000 - 0.01%",
+            "printTaxName": "CA SPECIAL TAXEMTU0 0.010000 - 0.01%"
+          },
+          {
+            "countryCode": "US",
+            "taxType": "SPECIAL",
+            "chargeType": "TAX",
+            "taxRate": 0.005,
+            "taxClass": "PC040144",
+            "taxCode": "US-SPECIAL---CA SPECIAL TAXEMBD0 0.005000-0.005",
+            "taxAmount": 1.95,
+            "taxName": "CA SPECIAL TAXEMBD0 0.005000",
+            "displayTaxName": "CA SPECIAL TAXEMBD0 0.005000 - 0.005%",
+            "printTaxName": "CA SPECIAL TAXEMBD0 0.005000 - 0.005%"
+          },
+          {
+            "countryCode": "US",
+            "taxType": "CITY",
+            "chargeType": "TAX",
+            "taxRate": 0.01,
+            "taxClass": "PC040144",
+            "taxCode": "US-CITY---CA CITY TAX-0.01",
+            "taxAmount": 3.9,
+            "taxName": "CA CITY TAX",
+            "displayTaxName": "CA CITY TAX - 0.01%",
+            "printTaxName": "CA CITY TAX - 0.01%"
+          },
+          {
+            "countryCode": "US",
+            "taxType": "STATE",
+            "chargeType": "TAX",
+            "taxRate": 0.06,
+            "taxClass": "PC040144",
+            "taxCode": "US-STATE---CA STATE TAX-0.06",
+            "taxAmount": 23.4,
+            "taxName": "CA STATE TAX",
+            "displayTaxName": "CA STATE TAX - 0.06%",
+            "printTaxName": "CA STATE TAX - 0.06%"
+          },
+          {
+            "countryCode": "US",
+            "taxType": "COUNTY",
+            "chargeType": "TAX",
+            "taxRate": 0.0025,
+            "taxClass": "PC040144",
+            "taxCode": "US-COUNTY---CA COUNTY TAX-0.0025",
+            "taxAmount": 0.99,
+            "taxName": "CA COUNTY TAX",
+            "displayTaxName": "CA COUNTY TAX - 0.0025%",
+            "printTaxName": "CA COUNTY TAX - 0.0025%"
+          }
+        ],
+        "tenders": [
+          {
+            "merchantId": "DOLCEVITA947078",
+            "locale": "en_US",
+            "region": "US",
+            "orderId": "PS00000284",
+            "transactionId": "254-ANY-20240112184656-9-3",
+            "paymentId": "e3e6205a-ab71-48da-be50-1ac465b9bf01",
+            "paymentMethod": "Miscellaneous",
+            "paymentStatus": "APPROVED",
+            "paymentDevice": "NoReader",
+            "amountAuthorized": 454.14,
+            "captureDate": "2024-01-12T16:46:56.405Z",
+            "requestId": "cat",
+            "totalRefundedAmount": 0,
+            "paymentSequenceNumber": 1,
+            "accountNumber": "cat",
+            "externalPaymentSystemId": "External",
+            "externalPaymentReferenceId": "cat",
+            "authStatus": "SALE",
+            "captureStatus": "CAPTURED",
+            "cardPresent": false,
+            "expiryDate": "2025-07-12T00:00:00Z"
+          }
+        ],
+        "shippingAddress": {
+          "addressName": "Catalin Linlin",
+          "firstName": "Catalin",
+          "lastName": "Linlin",
+          "addressLine1": "830 bay blvd",
+          "addressLine2": "",
+          "addressLine3": "",
+          "addressLine4": "",
+          "city": "chula vista",
+          "state": "CA",
+          "postalCode": "91911",
+          "countryCode": "",
+          "phone": "+16154440004",
+          "addressType": "Shipping",
+          "preferred": false,
+          "emailAddress": "daysky001@yahoo.com"
+        },
+        "productList": [
+          {
+            "productId": "VLAKOTA0001050",
+            "variantGroupId": "LAKOTA",
+            "name": "LAKOTA HEELS BLACK LEATHER",
+            "price": 130,
+            "quantity": 1,
+            "productTax": {
+              "totalTax": 11.38,
+              "taxRates": [
+                {
+                  "countryCode": "US",
+                  "taxType": "STATE",
+                  "taxRate": 0.06,
+                  "taxClass": "PC040144",
+                  "taxCode": "US-STATE---CA STATE TAX-0.06",
+                  "taxAmount": 7.8,
+                  "perUnitTaxAmount": 7.8,
+                  "taxName": "CA STATE TAX"
+                },
+                {
+                  "countryCode": "US",
+                  "taxType": "COUNTY",
+                  "taxRate": 0.0025,
+                  "taxClass": "PC040144",
+                  "taxCode": "US-COUNTY---CA COUNTY TAX-0.0025",
+                  "taxAmount": 0.33,
+                  "perUnitTaxAmount": 0.33,
+                  "taxName": "CA COUNTY TAX"
+                },
+                {
+                  "countryCode": "US",
+                  "taxType": "CITY",
+                  "taxRate": 0.01,
+                  "taxClass": "PC040144",
+                  "taxCode": "US-CITY---CA CITY TAX-0.01",
+                  "taxAmount": 1.3,
+                  "perUnitTaxAmount": 1.3,
+                  "taxName": "CA CITY TAX"
+                },
+                {
+                  "countryCode": "US",
+                  "taxType": "SPECIAL",
+                  "taxRate": 0.005,
+                  "taxClass": "PC040144",
+                  "taxCode": "US-SPECIAL---CA SPECIAL TAXEMBD0 0.005000-0.005",
+                  "taxAmount": 0.65,
+                  "perUnitTaxAmount": 0.65,
+                  "taxName": "CA SPECIAL TAXEMBD0 0.005000"
+                },
+                {
+                  "countryCode": "US",
+                  "taxType": "SPECIAL",
+                  "taxRate": 0.01,
+                  "taxClass": "PC040144",
+                  "taxCode": "US-SPECIAL---CA SPECIAL TAXEMTU0 0.010000-0.01",
+                  "taxAmount": 1.3,
+                  "perUnitTaxAmount": 1.3,
+                  "taxName": "CA SPECIAL TAXEMTU0 0.010000"
+                }
+              ],
+              "taxableAmount": 130
+            },
+            "tax": 11.38,
+            "orderItemId": "1",
+            "imageURL": "https://cdn.shopify.com/s/files/1/0037/3807/5202/files/DOLCEVITA-HEELS_LAKOTA_BLACKLEATHER-02.jpg?v=1687897830",
+            "subTotal": 130,
+            "total": 141.38,
+            "size": "5.0",
+            "color": "BLACK",
+            "isVirtual": false,
+            "gtin": "197076109628",
+            "fulfillmentType": "ONLINE",
+            "fulfillmentSubType": "DEFAULT",
+            "salesAssociateId": "cat01",
+            "salesAssociateAttribution": [
+              {
+                "storeAssociateId": "cat01"
+              }
+            ],
+            "productClass": "Merchandise",
+            "isReturnRelated": false,
+            "productCondition": "NEW",
+            "fulfillmentTypeChanged": false,
+            "omniFulfillmentType": "SHIP_TO_HOME"
+          },
+          {
+            "productId": "VLAKOTA0001055",
+            "variantGroupId": "LAKOTA",
+            "name": "LAKOTA HEELS BLACK LEATHER",
+            "price": 130,
+            "quantity": 1,
+            "productTax": {
+              "totalTax": 11.38,
+              "taxRates": [
+                {
+                  "countryCode": "US",
+                  "taxType": "STATE",
+                  "taxRate": 0.06,
+                  "taxClass": "PC040144",
+                  "taxCode": "US-STATE---CA STATE TAX-0.06",
+                  "taxAmount": 7.8,
+                  "perUnitTaxAmount": 7.8,
+                  "taxName": "CA STATE TAX"
+                },
+                {
+                  "countryCode": "US",
+                  "taxType": "COUNTY",
+                  "taxRate": 0.0025,
+                  "taxClass": "PC040144",
+                  "taxCode": "US-COUNTY---CA COUNTY TAX-0.0025",
+                  "taxAmount": 0.33,
+                  "perUnitTaxAmount": 0.33,
+                  "taxName": "CA COUNTY TAX"
+                },
+                {
+                  "countryCode": "US",
+                  "taxType": "CITY",
+                  "taxRate": 0.01,
+                  "taxClass": "PC040144",
+                  "taxCode": "US-CITY---CA CITY TAX-0.01",
+                  "taxAmount": 1.3,
+                  "perUnitTaxAmount": 1.3,
+                  "taxName": "CA CITY TAX"
+                },
+                {
+                  "countryCode": "US",
+                  "taxType": "SPECIAL",
+                  "taxRate": 0.005,
+                  "taxClass": "PC040144",
+                  "taxCode": "US-SPECIAL---CA SPECIAL TAXEMBD0 0.005000-0.005",
+                  "taxAmount": 0.65,
+                  "perUnitTaxAmount": 0.65,
+                  "taxName": "CA SPECIAL TAXEMBD0 0.005000"
+                },
+                {
+                  "countryCode": "US",
+                  "taxType": "SPECIAL",
+                  "taxRate": 0.01,
+                  "taxClass": "PC040144",
+                  "taxCode": "US-SPECIAL---CA SPECIAL TAXEMTU0 0.010000-0.01",
+                  "taxAmount": 1.3,
+                  "perUnitTaxAmount": 1.3,
+                  "taxName": "CA SPECIAL TAXEMTU0 0.010000"
+                }
+              ],
+              "taxableAmount": 130
+            },
+            "tax": 11.38,
+            "orderItemId": "2",
+            "imageURL": "https://cdn.shopify.com/s/files/1/0037/3807/5202/files/DOLCEVITA-HEELS_LAKOTA_BLACKLEATHER-02.jpg?v=1687897830",
+            "subTotal": 130,
+            "total": 141.38,
+            "size": "5.5",
+            "color": "BLACK",
+            "isVirtual": false,
+            "gtin": "197076109635",
+            "fulfillmentType": "ONLINE",
+            "fulfillmentSubType": "DEFAULT",
+            "salesAssociateId": "cat01",
+            "salesAssociateAttribution": [
+              {
+                "storeAssociateId": "cat01"
+              }
+            ],
+            "productClass": "Merchandise",
+            "isReturnRelated": false,
+            "productCondition": "NEW",
+            "fulfillmentTypeChanged": false,
+            "omniFulfillmentType": "SHIP_TO_HOME"
+          },
+          {
+            "productId": "VLAKOTA0001060",
+            "variantGroupId": "LAKOTA",
+            "name": "LAKOTA HEELS BLACK LEATHER",
+            "price": 130,
+            "quantity": 1,
+            "productTax": {
+              "totalTax": 11.38,
+              "taxRates": [
+                {
+                  "countryCode": "US",
+                  "taxType": "STATE",
+                  "taxRate": 0.06,
+                  "taxClass": "PC040144",
+                  "taxCode": "US-STATE---CA STATE TAX-0.06",
+                  "taxAmount": 7.8,
+                  "perUnitTaxAmount": 7.8,
+                  "taxName": "CA STATE TAX"
+                },
+                {
+                  "countryCode": "US",
+                  "taxType": "COUNTY",
+                  "taxRate": 0.0025,
+                  "taxClass": "PC040144",
+                  "taxCode": "US-COUNTY---CA COUNTY TAX-0.0025",
+                  "taxAmount": 0.33,
+                  "perUnitTaxAmount": 0.33,
+                  "taxName": "CA COUNTY TAX"
+                },
+                {
+                  "countryCode": "US",
+                  "taxType": "CITY",
+                  "taxRate": 0.01,
+                  "taxClass": "PC040144",
+                  "taxCode": "US-CITY---CA CITY TAX-0.01",
+                  "taxAmount": 1.3,
+                  "perUnitTaxAmount": 1.3,
+                  "taxName": "CA CITY TAX"
+                },
+                {
+                  "countryCode": "US",
+                  "taxType": "SPECIAL",
+                  "taxRate": 0.005,
+                  "taxClass": "PC040144",
+                  "taxCode": "US-SPECIAL---CA SPECIAL TAXEMBD0 0.005000-0.005",
+                  "taxAmount": 0.65,
+                  "perUnitTaxAmount": 0.65,
+                  "taxName": "CA SPECIAL TAXEMBD0 0.005000"
+                },
+                {
+                  "countryCode": "US",
+                  "taxType": "SPECIAL",
+                  "taxRate": 0.01,
+                  "taxClass": "PC040144",
+                  "taxCode": "US-SPECIAL---CA SPECIAL TAXEMTU0 0.010000-0.01",
+                  "taxAmount": 1.3,
+                  "perUnitTaxAmount": 1.3,
+                  "taxName": "CA SPECIAL TAXEMTU0 0.010000"
+                }
+              ],
+              "taxableAmount": 130
+            },
+            "tax": 11.38,
+            "orderItemId": "3",
+            "imageURL": "https://cdn.shopify.com/s/files/1/0037/3807/5202/files/DOLCEVITA-HEELS_LAKOTA_BLACKLEATHER-02.jpg?v=1687897830",
+            "subTotal": 130,
+            "total": 141.38,
+            "size": "6.0",
+            "color": "BLACK",
+            "isVirtual": false,
+            "gtin": "197076109642",
+            "fulfillmentType": "ONLINE",
+            "fulfillmentSubType": "DEFAULT",
+            "salesAssociateId": "cat01",
+            "salesAssociateAttribution": [
+              {
+                "storeAssociateId": "cat01"
+              }
+            ],
+            "productClass": "Merchandise",
+            "isReturnRelated": false,
+            "productCondition": "NEW",
+            "fulfillmentTypeChanged": false,
+            "omniFulfillmentType": "SHIP_TO_HOME"
+          }
+        ],
+        "numberOfLineItems": 3,
+        "receiptId": "254-ANY-2024-00000015",
+        "store": {
+          "storeId": "254",
+          "name": "DV SOHO STORE",
+          "addressLine1": "489 Broadway",
+          "city": "New York",
+          "state": "NY",
+          "postalCode": "10012",
+          "countryCode": "US",
+          "latitude": 40.722036,
+          "longitude": -73.99994989999999,
+          "storeType": "Regular",
+          "allowTryAtStore": false,
+          "productScanCodeType": "GTIN",
+          "timeZoneId": "UTC",
+          "customString0": ""
+        },
+        "profile": {
+          "customerId": "daysky001@yahoo.com",
+          "email": "daysky001@yahoo.com",
+          "firstName": "Catalin",
+          "lastName": "Linlin",
+          "address": {
+            "addressLine1": "830 bay blvd",
+            "city": "chula vista",
+            "state": "CA",
+            "postalCode": "91911",
+            "preferred": false
+          },
+          "phoneMobile": "+16154440004"
+        },
+        "productPriceAdjustments": [],
+        "customerEmail": "daysky001@yahoo.com",
+        "offlineMode": false,
+        "storeAssociate": {
+          "storeAssociateID": "cat01",
+          "storeAssociatePasswordFlag": false,
+          "merchantPasswordFlag": false,
+          "storeAssociateSecretFlag": false,
+          "incorrectLoginCount": 0,
+          "firstLoginPasswordReset": false
+        },
+        "noReceiptReturns": false
+      },
+      "s3KeyTransactionData": "STAGING/DOLCEVITA947078/en_US/US/2024/1/PS00000284_254-ANY-20240112184656-9-3.txt",
+      "transactionStartDate": "2024-01-12T16:46:05Z",
+      "receiptPrintCount": 0,
+      "orderId": "PS00000284",
+      "expiryDate": "2025-07-12T00:00:00Z"
+    }
+  ],
+  "editOrderMode": false,
+  "availableDate": 0,
+  "totalAssembledQty": 0,
+  "totalBoxedQty": 0,
+  "orderFiscalData": [],
+  "offlineMode": false,
+  "productPriceAdjustments": []
+}

@@ -1,0 +1,102 @@
+[ {
+  "dataList" : [ {
+    "serviceName" : "createSalesOrder",
+    "data" : {
+      "order" : {
+        "externalId" : "PS00000284",
+        "orderName" : "PS00000284",
+        "channel" : "POS_SALES_CHANNEL",
+        "customerExternalId" : "daysky001yahoo.com",
+        "firstName" : "Catalin",
+        "LastName" : "Linlin",
+        "email" : "daysky001@yahoo.com",
+        "phone" : "+16154440004",
+        "priority" : "2",
+        "orderDate" : "2024-01-12 16:47:01",
+        "statusId" : "ORDER_APPROVED",
+        "productStoreId" : "DV_STORE",
+        "externalProductStoreId" : "DV_STORE",
+        "currencyCode" : "USD",
+        "grandTotal" : 454.14,
+        "orderIdentifications" : [ {
+          "orderIdentificationTypeId" : "PS_ORD_ID",
+          "idValue" : "PS00000284"
+        } ],
+        "shipGroup" : [ {
+          "facilityId" : "_NA_",
+          "shipmentMethodTypeId" : "NEXT_DAY",
+          "shipTo" : {
+            "postalAddress" : {
+              "name" : "Catalin Linlin",
+              "address1" : "830 bay blvd",
+              "address2" : "",
+              "city" : "chula vista",
+              "state" : "CA",
+              "postalCode" : "91911",
+              "country" : "",
+              "residentialAddress" : "Y"
+            },
+            "email" : {
+              "infoString" : "daysky001@yahoo.com"
+            },
+            "phoneNumber" : {
+              "contactNumber" : "+16154440004"
+            }
+          },
+          "orderFacilityId" : "254",
+          "maySplit" : "Y",
+          "carrierPartyId" : "_NA_",
+          "items" : [ {
+            "idType" : "UPCA",
+            "idValue" : "197076109628",
+            "status" : "ITEM_APPROVED",
+            "quantity" : 1,
+            "unitPrice" : 130,
+            "itemAdjustments" : [ {
+              "type" : "SALES_TAX",
+              "amount" : 11.38
+            } ]
+          }, {
+            "idType" : "UPCA",
+            "idValue" : "197076109635",
+            "status" : "ITEM_APPROVED",
+            "quantity" : 1,
+            "unitPrice" : 130,
+            "itemAdjustments" : [ {
+              "type" : "SALES_TAX",
+              "amount" : 11.38
+            } ]
+          }, {
+            "idType" : "UPCA",
+            "idValue" : "197076109642",
+            "status" : "ITEM_APPROVED",
+            "quantity" : 1,
+            "unitPrice" : 130,
+            "itemAdjustments" : [ {
+              "type" : "SALES_TAX",
+              "amount" : 11.38
+            } ]
+          } ]
+        } ],
+        "orderAdjustments" : [ {
+          "type" : "SHIPPING_CHARGES",
+          "amount" : 30
+        }, {
+          "type" : "SHIPPING_SALES_TAX",
+          "amount" : 0
+        } ],
+        "orderPaymentPref" : [ {
+          "statusId" : "PAYMENT_SETTLED",
+          "paymentMethodTypeId" : "EXT_MISC",
+          "maxAmount" : 454.14
+        } ]
+      }
+    }
+  }, {
+    "serviceName" : "createExcludedOrderFacilityForOrder",
+    "data" : {
+      "externalId" : "PS00000284",
+      "orderFacilityId" : "254"
+    }
+  } ]
+} ]
