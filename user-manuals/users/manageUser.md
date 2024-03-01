@@ -38,4 +38,4 @@ The "Add Facilities" function allows administrators to associate a user with mul
 
 The Favorites function allows users to pin their most frequently used Product store and Shopify shop, ensuring these selections are automatically applied each time they log in to any HotWax Commerce App. 
 
-This feature is particularly valuable when users need to run specific jobs on a parent Shopify shop. If the shop is not set correctly, users might inadvertently run a job on the child shop, potentially leading to unexpected changes in OMS behavior.
+This feature is particularly valuable when users need to schedule specific jobs from the Job Manager app, such as `Import new products`, on a parent Shopify shop. If the shop is not set correctly or the default Shop is not the parent, users might mistakenly run a job on the child shop, which could lead to unexpected changes in OMS behavior.
