@@ -1,6 +1,9 @@
 # Table of contents
 
 * [Product Releases- Overview](README.md)
+* [February'24](february24/README.md)
+  * [Avoid Splitting for Low-value Items Using Thresholds](february24/avoid-splitting-for-low-value-items-using-thresholds.md)
+  * [Performance Improvements While Importing Large Data Files](february24/performance-improvements-while-importing-large-data-files.md)
 * [January'24](january-24/README.md)
   * [Manage Multiple ATP Inventories for Channels](january-24/manage-multiple-atp-inventories.md)
   * [Introducing Create Product Store Page](january-24/create-product-store.md)
