@@ -45,6 +45,8 @@
   * [Update Orders](api/fulfillment/apis/update-orders.md)
   * [Update And Import File](api/fulfillment/apis/upload-and-import-file.md)
   * [Fulfilled Order Items Feed](api/fulfillment/feed/fulfilled-order-items-feed.md)
+* [Appeasements WIP](api/appeasements/README.md)
+  * [Appeasements feed](api/appeasements/appeasements-financial-feed.md)
 
 * [Miscellaneous](api/Miscellaneous/readme.md)
   * [Perform Find](api/perform-find.md)
