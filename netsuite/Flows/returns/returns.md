@@ -24,7 +24,7 @@ Once the returns are downloaded into HotWax Commerce, they need to be synced to 
 1. **Returns Feed from HotWax Commerce:** HotWax Commerce gives a feed of returns that the dev team of retailers can use and transform as per the specification and file format expected by NetSuite or any third-party ERP system.
 2. **HotWax Commerce Integration Platform:** Alternatively, HotWax Commerce Integration Platform offers integration with NetSuite where online returns can be synced to NetSuite.
 
-When the online returns are synchronized in NetSuite, a return is generated in NetSuite, the order item is marked as returned and the payment is marked as refunded. Subsequently, the inventory is restocked against the created item receipt.
+When online returns are synchronized in NetSuite, a return is generated in NetSuite, the order item is marked as returned and the payment is marked as refunded. Subsequently, the inventory is restocked against the created item receipt.
 
 <figure><img src="../../.gitbook/assets/online returns with hotwax.png" alt=""><figcaption><p>Sync online returns to NetSuite using HotWax Commerce</p></figcaption></figure>
 
