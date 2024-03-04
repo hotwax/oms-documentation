@@ -16,7 +16,7 @@ Exchanges can be handled in various ways by different retailers, each employing 
     Retailers can issue a store credit to a customer for the amount that is equal to the returned order item, and use this store credit against the new exchanged item.
 3.  **Integrated Platform Approach:**
 
-    Many retailers use platforms where eCommerce, OMS, Return Management System (RMS), and Accounting can be managed in one single platform. In such cases, they can easily unlink the payment reference from the original order and apply it on the exchanged order.
+    Many retailers use platforms where eCommerce, OMS, Return Management System (RMS), and Accounting can be managed in one single platform. In such cases, they can easily unlink the payment reference from the original order and apply it to the exchanged order.
 4.  **Separate Systems:**
 
     Many retailers also use a separate Return Management System along with independent eCommerce, OMS, and Accounting Systems.
@@ -37,7 +37,7 @@ Exchanges can be handled in various ways by different retailers, each employing 
 
 Exchange orders that are created in Shopify are imported into HotWax Commerce just like regular sales orders. Given that exchanges are created by Loop in Shopify, they are assigned the sales channel "Loop Exchange" within Shopify. Consequently, all exchange orders imported into HotWax Commerce have a "Loop Exchange” sales channel as well.
 
-When it comes to pushing sales order data from HotWax Commerce to NetSuite, the handling of all web orders remains consistent irrespective of the sales channel they originate from. The generated order feed from HotWax commerce is also generic, similar to that of regular orders. This means that HotWax is able to synchronize web exchange orders with NetSuite in the same manner it synchronizes regular orders.
+When it comes to pushing sales order data from HotWax Commerce to NetSuite, the handling of all web orders remains consistent irrespective of the sales channel they originate from. The generated order feed from HotWax commerce is also generic, similar to that of regular orders. This means that HotWax can synchronize web exchange orders with NetSuite in the same manner it synchronizes regular orders.
 
 More specifically, for all web exchange orders, the sync for Customers, Sales Order Item Line IDs, Sales Order IDs, Order Allocation, and Fulfillment remains consistent between [HotWax Commerce and NetSuite](https://docs.hotwax.co/integration-resources/v/netsuite-integration/supported-integrations/salesorder/orderapproval).
 
@@ -45,7 +45,7 @@ More specifically, for all web exchange orders, the sync for Customers, Sales Or
 
 However, there are certain distinctions to note:
 
-* References to the original order stored in Shopify notes are saved in the HotWax Commerce as a “communication event” and subsequently sent to NetSuite as a “memo” on the order.
+* References to the original order stored in Shopify notes are saved in HotWax Commerce as a “communication event” and subsequently sent to NetSuite as a “memo” on the order.
 * Exchange orders have a discount code labeled "loop-discount" applied to them. This discount code is also present in NetSuite. Consequently, HotWax Commerce ensures that the exchange order is synchronized to NetSuite with this exact code, with the discount amount shared as the "Rate."
 * All exchange orders have a discount code applied to them. When the amount of the exchange order item is the same as that of the original order item, the value of the exchange order becomes zero due to the applied discount. In these instances, there is no need to create customer deposits in NetSuite. In the event the value of an exchange order item exceeds the value of the original order item, customer deposits should be created in NetSuite to reflect the authorized payments.
 
