@@ -22,7 +22,7 @@ Transfer Orders are initiated within the NetSuite ERP system, facilitating the i
 
 ### Export Transfer Orders from NetSuite
 
-1. A Map Reduce Script script runs a specific Saved Search to identify Transfer Orders in "Pending" status within NetSuite. It compiles the relevant data into a CSV file, which is then securely placed in an SFTP location. The script runs periodically, typically every 15 minutes, to ensure it fetches only the latest and pending Transfer Orders from NetSuite, optimizing efficiency.
+1. A Map Reduce Script runs a specific Saved Search to identify Transfer Orders in "Pending" status within NetSuite. It compiles the relevant data into a CSV file, which is then securely placed in an SFTP location. The script runs periodically, typically every 15 minutes, to ensure it fetches only the latest and pending Transfer Orders from NetSuite, optimizing efficiency.
 
 **SuiteScripts**
 
