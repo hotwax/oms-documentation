@@ -26,7 +26,7 @@
 
 
 
-## Latest Release - v5.5.0 (27th Feb 2024)
+## Release - v5.5.0 (27th Feb 2024)
 
 | Information         | Value                                |
 |---------------------|--------------------------------------|
@@ -54,7 +54,7 @@
 {% endtabs %}
 
 
-## Hotfix Release - v5.4.5 (27th Feb 2024)
+## Hotfix - v5.4.5 (27th Feb 2024)
 
 | Information         | Value                                |
 |---------------------|--------------------------------------|
@@ -66,7 +66,7 @@
 | Changelog           | [Link to changelog](https://git.hotwax.co/commerce/oms/-/blob/v5.4.1/CHANGELOG.md?ref_type=tags)
 
 
-## Hotfix Release - v5.4.3 (19th Feb 2024)
+## Hotfix - v5.4.3 (19th Feb 2024)
 
 | Information         | Value                                |
 |---------------------|--------------------------------------|
@@ -77,14 +77,14 @@
 | Diff                | [Link to diff](https://git.hotwax.co/commerce/oms/-/compare/v5.4.2...v5.4.3?from_project_id=161&straight=false) |
 | Changelog           | [Link to changelog](https://git.hotwax.co/commerce/oms/-/blob/v5.4.3/CHANGELOG.md?ref_type=tags)                  |
 
-### Upgrade Data
+**Upgrade Data**
 
 ```xml
 ReturnAdjustmentType description="Appeasement" hasTable="N" returnAdjustmentTypeId="APPEASEMENT">
 ```
 
 
-## Hotfix Release - v5.4.1 (10th Feb 2024)
+## Hotfix - v5.4.1 (10th Feb 2024)
 
 | Information         | Value                                |
 |---------------------|--------------------------------------|
@@ -97,7 +97,7 @@ ReturnAdjustmentType description="Appeasement" hasTable="N" returnAdjustmentType
 
 
 
-## Latest Release - v5.4.0 (8th Feb 2024)
+## Release - v5.4.0 (8th Feb 2024)
 
 | Information         | Value                                |
 |---------------------|--------------------------------------|
@@ -124,7 +124,7 @@ ReturnAdjustmentType description="Appeasement" hasTable="N" returnAdjustmentType
 
 {% endtabs %}
 
-## Hotfix Release - v5.3.3 (7th Feb 2024)
+## Hotfix - v5.3.3 (7th Feb 2024)
 
 | Information         | Value                                |
 |---------------------|--------------------------------------|
@@ -136,10 +136,7 @@ ReturnAdjustmentType description="Appeasement" hasTable="N" returnAdjustmentType
 | Changelog           | [Link to changelog](https://git.hotwax.co/commerce/oms/-/blob/v5.3.3/CHANGELOG.md?ref_type=tags)
 
 
-
-
-
-## Hotfix Release - v5.3.2 (6th Feb 2024)
+## Hotfix - v5.3.2 (6th Feb 2024)
 
 | Information         | Value                                |
 |---------------------|--------------------------------------|
@@ -152,7 +149,7 @@ ReturnAdjustmentType description="Appeasement" hasTable="N" returnAdjustmentType
 
 
 
-## Latest Release - v5.3.0 (19nd Jan 2024)
+## Release - v5.3.0 (19nd Jan 2024)
 
 | Information         | Value                                |
 |---------------------|--------------------------------------|
@@ -180,7 +177,7 @@ ReturnAdjustmentType description="Appeasement" hasTable="N" returnAdjustmentType
 {% endtabs %}
 
 
-## Hotfix Release - v5.2.1 (11th Jan 2024)
+## Hotfix - v5.2.1 (11th Jan 2024)
 
 | Information         | Value                                |
 |---------------------|--------------------------------------|
@@ -192,7 +189,7 @@ ReturnAdjustmentType description="Appeasement" hasTable="N" returnAdjustmentType
 | Changelog           | [Link to changelog](https://git.hotwax.co/commerce/oms/-/blob/main/CHANGELOG.md)                  |
 
 
-## Latest Release - v5.2.0 (2nd Jan 2024)
+## Release - v5.2.0 (2nd Jan 2024)
 
 | Information         | Value                                |
 |---------------------|--------------------------------------|
@@ -219,7 +216,7 @@ ReturnAdjustmentType description="Appeasement" hasTable="N" returnAdjustmentType
 
 {% endtabs %}
 
-## Previous Release - v5.1.0
+## Release - v5.1.0
 
 | Information         | Value                                           |
 |---------------------|-------------------------------------------------|
