@@ -79,7 +79,9 @@
 {% tabs %}
 
 {% tab title="Upgrade Data" %}
-(<ReturnAdjustmentType description="Appeasement" hasTable="N" returnAdjustmentTypeId="APPEASEMENT"/>)
+```xml
+ReturnAdjustmentType description="Appeasement" hasTable="N" returnAdjustmentTypeId="APPEASEMENT">
+```
 {% endtab %}
 
 
