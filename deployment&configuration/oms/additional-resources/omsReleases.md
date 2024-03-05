@@ -24,6 +24,16 @@
 [Link to Upgrade Data](https://git.hotwax.co/commerce/oms/-/blob/v5.5.1/applications/hwmapps/upgrade/UpcomingRelease/UpgradeData.xml?ref_type=tags)
 {% endtab %}
 
+{% tab title="Upgrade SQL" %}
+No SQL data to upload.
+{% endtab %}
+
+{% tab title="Upgrade Steps" %}
+No upgrade steps to follow.
+{% endtab %}
+
+{% endtabs %}
+
 
 
 ## Release - v5.5.0 (27th Feb 2024)
