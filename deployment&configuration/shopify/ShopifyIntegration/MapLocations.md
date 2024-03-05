@@ -1,9 +1,6 @@
 # Map Shopify POS Locations to HotWax Commerce Facilities
 
-{% hint style='info' %}
-
-When mapping locations, set up a Shopify location named eCom Inventory and link it to the Brokering queue (_NA_ in Hotwax). This ensures that unified inventory across retailers' facilities is updated to a single location in Shopify. When an order is placed on Shopify, inventory is reduced from eCom Inventory, and the order is sent to the HotWax Commerce Brokering queue for brokering to the optimized location for fulfillment.
-{% endhint %}
+When mapping locations, map the default Shopify location with the Brokering queue (_NA_ in Hotwax). This ensures that unified inventory across facilities is updated to a single location in Shopify. When an order is placed on Shopify, inventory is reduced from the default location, and the order is sent to the HotWax Commerce `Brokering queue` for brokering to the optimized location for fulfillment.
 
 On the Shopify Config Detail page for your store, follow these steps:
 
@@ -11,11 +8,15 @@ On the Shopify Config Detail page for your store, follow these steps:
 
 2. Click on `Add` to include new facilities.
 
-3. Ensure accurate mapping of all Shopify POS locations to their corresponding store facilities in HotWax Commerce.
+3. Select the Brokering queue from the facility dropdown and add the default Shopify location ID in the Shopify Location ID input.
 
-4. Copy the location ID of a facility from Shopify by extracting it from the URL of the facility detail page.
+{% hint style='info' %}
+If you are using Shopify POS, you need to map the Shopify location ID with all the POS locations.
+{% endhint %}
 
-This process establishes a direct and efficient linkage between Shopify POS locations and their counterparts in HotWax Commerce, optimizing your inventory management system.
+4. Click on `Add` to include new facilities, search for the facility from the dropdown, and add the Shopify location ID of the location from Shopify.
+   
+5. Follow this process for all facilities.
 
 ### How to extract Shopify POS Location ID from Shopify?
 
