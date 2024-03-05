@@ -7,6 +7,7 @@
    
 2. To find details about SOLR versions, refer to the [SOLR version document]([solr_version_document_link](https://docs.google.com/spreadsheets/d/1H-iEVG-hS9FTsYOf5YiUH-5KOJUcu0_TiPG8aVYjaHU/edit#gid=0))
 {% endhint %}
+
 ## Latest Release - v5.5.1 (28th Feb 2024)
 | Information         | Value                                |
 |---------------------|--------------------------------------|
@@ -76,14 +77,11 @@
 | Diff                | [Link to diff](https://git.hotwax.co/commerce/oms/-/compare/v5.4.2...v5.4.3?from_project_id=161&straight=false) |
 | Changelog           | [Link to changelog](https://git.hotwax.co/commerce/oms/-/blob/v5.4.3/CHANGELOG.md?ref_type=tags)                  |
 
-{% tabs %}
+### Upgrade Data
 
-{% tab title="Upgrade Data" %}
 ```xml
 ReturnAdjustmentType description="Appeasement" hasTable="N" returnAdjustmentTypeId="APPEASEMENT">
 ```
-{% endtab %}
-
 
 
 ## Hotfix Release - v5.4.1 (10th Feb 2024)
