@@ -90,7 +90,7 @@ Video: Bulk Order fulfillment
 {% endembed %}
 
 {% hint style="info" %}
-If `Ship Packed Orders` is enabled, all packed orders will be shipped. Enable the `isTrackingRequired` setting on shipping methods that should not be automaticlaly be shipped unless they have tracking codes.
+If `Ship Packed Orders` Job is enabled in the Job Manager App, all packed orders will be automatically mark shipped. Enable the `isTrackingRequired` setting on shipping methods that should not be automatically shipped unless they have tracking codes.
 {% endhint %}
 
 In the event that the packing slip or shipping label is damaged after packing an order, it can be regenerated from the completed tab.
