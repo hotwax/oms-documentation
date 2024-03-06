@@ -37,7 +37,7 @@ Exchanges can be handled in various ways by different retailers, each employing 
 
 Exchange orders that are created in Shopify are imported into HotWax Commerce just like regular sales orders. Given that exchanges are created by Loop in Shopify, they are assigned the sales channel "Loop Exchange" within Shopify. Consequently, all exchange orders imported into HotWax Commerce have a "Loop Exchange” sales channel as well.
 
-When it comes to pushing sales order data from HotWax Commerce to NetSuite, the handling of all web orders remains consistent irrespective of the sales channel they originate from. The generated order feed from HotWax commerce is also generic, similar to that of regular orders. This means that HotWax can synchronize web exchange orders with NetSuite in the same manner it synchronizes regular orders.
+When it comes to pushing sales order data from HotWax Commerce to NetSuite, the handling of all web orders remains consistent irrespective of the sales channel they originate from. The generated order feed from HotWax commerce is also generic, similar to that of regular orders. This means that HotWax can synchronize web exchange orders to NetSuite in the same manner it synchronizes regular orders.
 
 More specifically, for all web exchange orders, the sync for Customers, Sales Order Item Line IDs, Sales Order IDs, Order Allocation, and Fulfillment remains consistent between [HotWax Commerce and NetSuite](https://docs.hotwax.co/integration-resources/v/netsuite-integration/supported-integrations/salesorder/orderapproval).
 
@@ -52,6 +52,12 @@ However, there are certain distinctions to note:
 Since our current customers are not capturing additional payments for exchanges in Shopify, payment preferences are not being created in HotWax, and subsequently, customer deposits are not being generated in NetSuite.
 
 In the event, payments are captured in Shopify and payment records are created in HotWax Commerce, customer deposits should also be created in NetSuite.
+
+#### Restocking Item from the Original Order
+
+Exchanges involve returning a purchased item for a different product. Therefore, it’s crucial to restock the inventory from the original order.
+
+Upon physically receiving the returned inventory from the original order, NetSuite generates item receipt records and updates the inventory count accordingly. Subsequently, HotWax Commerce synchronizes these item receipt records from NetSuite and accurately updates the inventory count.
 
 ### Synchronize POS Exchanges to NetSuite
 
@@ -75,8 +81,16 @@ Because of these distinctions between POS sales and POS exchange sales, HotWax C
 
 * The order status is “Completed”
 * The sales channel is "Loop Exchange"
-* The NetSuite order identification is absent. This condition also helps make sure that in-store exchange orders are segregated from online exchange orders and these orders are not sent to NetSuite twice.
+* The NetSuite order identification is absent. This condition also helps make sure that in-store exchange orders are segregated from web exchange orders and these orders are not sent to NetSuite twice.
 
 As previously discussed, the [synchronization of POS sales from HotWax Commerce to NetSuite](https://docs.hotwax.co/integration-resources/v/netsuite-integration/supported-integrations/salesorder/posorders) involves the creation of Cash Sale records. All the eligible POS exchange sales are then synchronized to NetSuite just like any other POS sales and Cash Sales are created in NetSuite for POS exchange sales.
 
+#### Restocking Item from the Original Order
+
+When an item from the original order is returned on Shopify POS, HotWax Commerce downloads the return data, including the facility ID where the returned items are received. If the restocking flag is enabled, HotWax Commerce also restocks the inventory based on the captured facility ID.
+
 <figure><img src="../../.gitbook/assets/in-store exchange orders flow.png" alt=""><figcaption><p>Sync POS exchanges to NetSutie</p></figcaption></figure>
+
+{% hint style="info" %}
+In our integration, web exchange orders are handled similarly to regular orders, while POS exchange sales are handled similarly to POS sales. Therefore, the SFTP location, SuiteScripts, as well as the jobs within the HotWax Commerce Integration Platform and OMS, remain unchanged.
+{% endhint %}
