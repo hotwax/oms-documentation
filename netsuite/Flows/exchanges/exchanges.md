@@ -27,7 +27,7 @@ Exchanges can be handled in various ways by different retailers, each employing 
 
     As returns are initiated in Loop, it is also responsible for creating exchange orders in Shopify, whether they take place in-store or online. Loop treats the new order in Shopify as an entirely separate order that is only linked to the original order through references in extended fields.
 
-    When the customer completes their exchange process, Loop marks the original order as returned in both Shopify and NetSuite. Additionally, marks payment as refunded in NetSuite. Refunds in Shopify are intentionally not processed, because Loop uses the pending refund amount as a “discount” on the new order created as a replacement for the original order.
+    When the customer completes their exchange process, Loop marks the original order as returned in both Shopify and NetSuite. Additionally, marks payment as refunded in NetSuite. Refunds in Shopify are intentionally not processed, because Loop uses the pending refund amount as a `discount` on the new order created as a replacement for the original order.
 
     If the new order total is less than the pending refund amount, then the leftover refund amount is processed as a refund on Shopify based on the customer's selected preference which could be either store credit or the original payment method. In the event that the new order total exceeds the pending refund amount, the outstanding balance will be captured from the customer.
 
@@ -35,7 +35,7 @@ Exchanges can be handled in various ways by different retailers, each employing 
 
 ### Synchronize Web Exchanges to NetSuite
 
-Exchange orders that are created in Shopify are imported into HotWax Commerce just like regular sales orders. Given that exchanges are created by Loop in Shopify, they are assigned the sales channel "Loop Exchange" within Shopify. Consequently, all exchange orders imported into HotWax Commerce have a "Loop Exchange” sales channel as well.
+Exchange orders that are created in Shopify are imported into HotWax Commerce just like regular sales orders. Given that exchanges are created by Loop in Shopify, they are assigned the sales channel `Loop Exchange` within Shopify. Consequently, all exchange orders imported into HotWax Commerce have a `Loop Exchange` sales channel as well.
 
 When it comes to pushing sales order data from HotWax Commerce to NetSuite, the handling of all web orders remains consistent irrespective of the sales channel they originate from. The generated order feed from HotWax commerce is also generic, similar to that of regular orders. This means that HotWax can synchronize web exchange orders to NetSuite in the same manner it synchronizes regular orders.
 
@@ -45,8 +45,8 @@ More specifically, for all web exchange orders, the sync for Customers, Sales Or
 
 However, there are certain distinctions to note:
 
-* References to the original order stored in Shopify notes are saved in HotWax Commerce as a “communication event” and subsequently sent to NetSuite as a “memo” on the order.
-* Exchange orders have a discount code labeled "loop-discount" applied to them. This discount code is also present in NetSuite. Consequently, HotWax Commerce ensures that the exchange order is synchronized to NetSuite with this exact code, with the discount amount shared as the "Rate."
+* References to the original order stored in Shopify notes are saved in HotWax Commerce as a `communication event` and subsequently sent to NetSuite as a `memo` on the order.
+* Exchange orders have a discount code labeled `loop-discount` applied to them. This discount code is also present in NetSuite. Consequently, HotWax Commerce ensures that the exchange order is synchronized to NetSuite with this exact code, with the discount amount shared as the `Rate.`
 * All exchange orders have a discount code applied to them. When the amount of the exchange order item is the same as that of the original order item, the value of the exchange order becomes zero due to the applied discount. In these instances, there is no need to create customer deposits in NetSuite. In the event the value of an exchange order item exceeds the value of the original order item, customer deposits should be created in NetSuite to reflect the authorized payments.
 
 Since our current customers are not capturing additional payments for exchanges in Shopify, payment preferences are not being created in HotWax, and subsequently, customer deposits are not being generated in NetSuite.
@@ -61,13 +61,13 @@ Upon physically receiving the returned inventory from the original order, NetSui
 
 ### Synchronize POS Exchanges to NetSuite
 
-Exchange orders that are created in Shopify POS are imported into HotWax Commerce just like regular POS sales. Given that POS exchanges are created by Loop in Shopify, they are assigned the sales channel "Loop Exchange" within Shopify. Consequently, all POS exchanges imported into HotWax Commerce have a "Loop Exchange” sales channel as well.
+Exchange orders that are created in Shopify POS are imported into HotWax Commerce just like regular POS sales. Given that POS exchanges are created by Loop in Shopify, they are assigned the sales channel `Loop Exchange` within Shopify. Consequently, all POS exchanges imported into HotWax Commerce have a `Loop Exchange` sales channel as well.
 
 POS exchange sales are similar to other POS sales as both transactions are recorded within the physical store.
 
-When POS sales are downloaded in HotWax Commerce, POS sales have a "Completed" order status, the sales channel is set to “POS\_Channel”, and the shipping method is set to “POS\_COMPLETED”.
+When POS sales are downloaded in HotWax Commerce, POS sales have a `Completed` order status, the sales channel is set to `POS\_Channel`, and the shipping method is set to `POS\_COMPLETED`.
 
-While, in the case of POS exchange sales, although they also have a "Completed" order status, their sales channel is "Loop Exchange." Due to this distinction, HotWax Commerce is unable to assign their shipping method as POS\_COMPLETED. Instead, it is designated as "Two-Day Shipping" as default.
+While, in the case of POS exchange sales, although they also have a `Completed` order status, their sales channel is `Loop Exchange.` Due to this distinction, HotWax Commerce is unable to assign their shipping method as POS\_COMPLETED. Instead, it is designated as `Two-Day Shipping` as default.
 
 | Attribute       | POS Sales      | POS Exchange Sales |
 | --------------- | -------------- | ------------------ |
@@ -79,8 +79,8 @@ Because of these distinctions between POS sales and POS exchange sales, HotWax C
 
 **How HotWax Commerce identifies POS exchange sales to sync to NetSuite:**
 
-* The order status is “Completed”
-* The sales channel is "Loop Exchange"
+* The order status is `Completed`
+* The sales channel is `Loop Exchange`
 * The NetSuite order identification is absent. This condition also helps make sure that in-store exchange orders are segregated from web exchange orders and these orders are not sent to NetSuite twice.
 
 As previously discussed, the [synchronization of POS sales from HotWax Commerce to NetSuite](https://docs.hotwax.co/integration-resources/v/netsuite-integration/supported-integrations/salesorder/posorders) involves the creation of Cash Sale records. All the eligible POS exchange sales are then synchronized to NetSuite just like any other POS sales and Cash Sales are created in NetSuite for POS exchange sales.
