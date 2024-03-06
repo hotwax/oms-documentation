@@ -32,13 +32,13 @@ When an item from the original order is returned on Shopify, it provides an opti
 
 POS exchange sales are similar to other POS sales as both the transactions recorded in Shopify POS. POS exchange sales created in Shopify POS are imported into HotWax Commerce just like regular POS sales.
 
-Given that POS exchanges are created in Loop POS and synced by Loop to Shopify, they are assigned the sales channel `Loop Exchange` within Shopify. Consequently, all POS exchanges imported into HotWax Commerce have a `Loop Exchange” sales channel as well.
+Given that POS exchanges are created in Loop POS and synced by Loop to Shopify, they are assigned the sales channel `Loop Exchange` within Shopify. Consequently, all POS exchanges imported into HotWax Commerce have a `Loop Exchange` sales channel as well.
 
-When POS sales are downloaded in HotWax Commerce, POS sales have a `Completed` status, the sales channel is set to “POS_Channel”, and shipping method is set to “POS_COMPLETED”. While, in the case of POS exchange sales, although they also have a `Completed` status, their sales channel is `Loop Exchange.` Due to this distinction, HotWax Commerce is unable to assign their shipping method as POS_COMPLETED. Instead, it is designated as `Two-Day Shipping` as default.
+When POS sales are downloaded in HotWax Commerce, POS sales have a `Completed` status, the sales channel is set to `POS_Channel`, and shipping method is set to `POS_COMPLETED`. While, in the case of POS exchange sales, although they also have a `Completed` status, their sales channel is `Loop Exchange.` Due to this distinction, HotWax Commerce is unable to assign their shipping method as POS_COMPLETED. Instead, it is designated as `Two-Day Shipping` as default.
 
 #### Linking New Exchange Orders with the Original Order
 
-Similar to web exchanges, in case POS exchanges references to the original order stored in Shopify notes are also saved in HotWax Commerce as a “communication event”.
+Similar to web exchanges, in case POS exchanges references to the original order stored in Shopify notes are also saved in HotWax Commerce as a `communication event`.
 
 These POS exchange sales are also synchronized to NetSuite for further processing. Learn more about [synchronization of POS exchange sales from HotWax Commerce to NetSuite ERP.](https://docs.hotwax.co/integration-resources/v/netsuite-integration/supported-integrations/exchanges)
 
