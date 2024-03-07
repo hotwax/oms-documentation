@@ -7,6 +7,7 @@
    
 2. To find details about SOLR versions, refer to the [SOLR version document]([solr_version_document_link](https://docs.google.com/spreadsheets/d/1H-iEVG-hS9FTsYOf5YiUH-5KOJUcu0_TiPG8aVYjaHU/edit#gid=0))
 {% endhint %}
+
 ## Latest Release - v5.5.1 (28th Feb 2024)
 | Information         | Value                                |
 |---------------------|--------------------------------------|
@@ -23,9 +24,19 @@
 [Link to Upgrade Data](https://git.hotwax.co/commerce/oms/-/blob/v5.5.1/applications/hwmapps/upgrade/UpcomingRelease/UpgradeData.xml?ref_type=tags)
 {% endtab %}
 
+{% tab title="Upgrade SQL" %}
+No SQL data to upload.
+{% endtab %}
+
+{% tab title="Upgrade Steps" %}
+No upgrade steps to follow.
+{% endtab %}
+
+{% endtabs %}
 
 
-## Latest Release - v5.5.0 (27th Feb 2024)
+
+## Release - v5.5.0 (27th Feb 2024)
 
 | Information         | Value                                |
 |---------------------|--------------------------------------|
@@ -53,7 +64,7 @@
 {% endtabs %}
 
 
-## Hotfix Release - v5.4.5 (27th Feb 2024)
+## Hotfix - v5.4.5 (27th Feb 2024)
 
 | Information         | Value                                |
 |---------------------|--------------------------------------|
@@ -65,7 +76,7 @@
 | Changelog           | [Link to changelog](https://git.hotwax.co/commerce/oms/-/blob/v5.4.1/CHANGELOG.md?ref_type=tags)
 
 
-## Hotfix Release - v5.4.3 (19th Feb 2024)
+## Hotfix - v5.4.3 (19th Feb 2024)
 
 | Information         | Value                                |
 |---------------------|--------------------------------------|
@@ -76,15 +87,14 @@
 | Diff                | [Link to diff](https://git.hotwax.co/commerce/oms/-/compare/v5.4.2...v5.4.3?from_project_id=161&straight=false) |
 | Changelog           | [Link to changelog](https://git.hotwax.co/commerce/oms/-/blob/v5.4.3/CHANGELOG.md?ref_type=tags)                  |
 
-{% tabs %}
+**Upgrade Data**
 
-{% tab title="Upgrade Data" %}
-(<ReturnAdjustmentType description="Appeasement" hasTable="N" returnAdjustmentTypeId="APPEASEMENT"/>)
-{% endtab %}
+```xml
+ReturnAdjustmentType description="Appeasement" hasTable="N" returnAdjustmentTypeId="APPEASEMENT">
+```
 
 
-
-## Hotfix Release - v5.4.1 (10th Feb 2024)
+## Hotfix - v5.4.1 (10th Feb 2024)
 
 | Information         | Value                                |
 |---------------------|--------------------------------------|
@@ -97,7 +107,7 @@
 
 
 
-## Latest Release - v5.4.0 (8th Feb 2024)
+## Release - v5.4.0 (8th Feb 2024)
 
 | Information         | Value                                |
 |---------------------|--------------------------------------|
@@ -124,7 +134,7 @@
 
 {% endtabs %}
 
-## Hotfix Release - v5.3.3 (7th Feb 2024)
+## Hotfix - v5.3.3 (7th Feb 2024)
 
 | Information         | Value                                |
 |---------------------|--------------------------------------|
@@ -136,10 +146,7 @@
 | Changelog           | [Link to changelog](https://git.hotwax.co/commerce/oms/-/blob/v5.3.3/CHANGELOG.md?ref_type=tags)
 
 
-
-
-
-## Hotfix Release - v5.3.2 (6th Feb 2024)
+## Hotfix - v5.3.2 (6th Feb 2024)
 
 | Information         | Value                                |
 |---------------------|--------------------------------------|
@@ -152,7 +159,7 @@
 
 
 
-## Latest Release - v5.3.0 (19nd Jan 2024)
+## Release - v5.3.0 (19nd Jan 2024)
 
 | Information         | Value                                |
 |---------------------|--------------------------------------|
@@ -180,7 +187,7 @@
 {% endtabs %}
 
 
-## Hotfix Release - v5.2.1 (11th Jan 2024)
+## Hotfix - v5.2.1 (11th Jan 2024)
 
 | Information         | Value                                |
 |---------------------|--------------------------------------|
@@ -192,7 +199,7 @@
 | Changelog           | [Link to changelog](https://git.hotwax.co/commerce/oms/-/blob/main/CHANGELOG.md)                  |
 
 
-## Latest Release - v5.2.0 (2nd Jan 2024)
+## Release - v5.2.0 (2nd Jan 2024)
 
 | Information         | Value                                |
 |---------------------|--------------------------------------|
@@ -219,7 +226,7 @@
 
 {% endtabs %}
 
-## Previous Release - v5.1.0
+## Release - v5.1.0
 
 | Information         | Value                                           |
 |---------------------|-------------------------------------------------|

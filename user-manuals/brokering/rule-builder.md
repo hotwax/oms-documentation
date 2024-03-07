@@ -32,7 +32,9 @@ Great! Let's continue fleshing out the manual with details about brokering runs:
 2. **Run Details:**
    * Click on a specific run to open its details. Here, you can explore information about the run and find options to edit details such as its description.
 
-{% @figma/embed fileId="bVPRRw282CqGKMdbz7dciH" nodeId="32295:84077" url="https://www.figma.com/file/bVPRRw282CqGKMdbz7dciH/HC-Ionic-design-system?mode=design&node-id=32295-84077&t=JtG5xhIjZi59a5Gy-11&type=design" %}
+
+
+<figure><img src="../.gitbook/assets/Brokering Runs (1).png" alt=""><figcaption><p>Brokering Runs</p></figcaption></figure>
 
 ### Scheduling Brokering Runs
 
@@ -49,7 +51,7 @@ Brokering runs are scheduled using two essential parameters:
 
 Understanding how to view, schedule, and manage brokering runs is essential for optimizing your order routing strategies. Now, let's explore routings within a run.
 
-{% @figma/embed fileId="bVPRRw282CqGKMdbz7dciH" nodeId="32295:83079" url="https://www.figma.com/file/bVPRRw282CqGKMdbz7dciH/HC-Ionic-design-system?mode=design&node-id=32295-83079&t=JtG5xhIjZi59a5Gy-11&type=design" %}
+<figure><img src="../.gitbook/assets/Brokering Run Routes.png" alt=""><figcaption><p>Scheduling brokering Runs</p></figcaption></figure>
 
 ## Routing
 
@@ -62,7 +64,7 @@ A **routing** in the brokering system defines the criteria for processing orders
 1. Click the **Add** button next to the "Order batches" label to create a new routing.
 2. Provide a name for the routing and click **Save** to add it to the routing list of a run.
 
-{% @figma/embed fileId="bVPRRw282CqGKMdbz7dciH" nodeId="32320:85887" url="https://www.figma.com/file/bVPRRw282CqGKMdbz7dciH/HC-Ionic-design-system?mode=design&node-id=32320-85887&t=JtG5xhIjZi59a5Gy-4&type=design" %}
+<figure><img src="../.gitbook/assets/List.png" alt=""><figcaption><p>Add New Routing</p></figcaption></figure>
 
 ### Archiving a Routing Rule
 
@@ -73,7 +75,9 @@ When a routing is no longer needed in a brokering run:
 
 Archived routings can be reactivated if needed and are accessible from the archive drawer at the bottom of the list.
 
-{% @figma/embed fileId="bVPRRw282CqGKMdbz7dciH" nodeId="32409:87928" url="https://www.figma.com/file/bVPRRw282CqGKMdbz7dciH/HC-Ionic-design-system?mode=design&node-id=32409-87928&t=JtG5xhIjZi59a5Gy-4&type=design" %}
+{% embed url="https://youtu.be/qE_J-Gp0Tf0" %}
+Archive Routing
+{% endembed %}
 
 ### Sequencing Routings
 
@@ -82,7 +86,9 @@ Adjust the sequence of order routings:
 * Click and drag the chip on the top right of the routing card.
 * The sequence number on the card will automatically update based on the card's position.
 
-{% @figma/embed fileId="bVPRRw282CqGKMdbz7dciH" nodeId="32381:87641" url="https://www.figma.com/file/bVPRRw282CqGKMdbz7dciH/HC-Ionic-design-system?mode=design&node-id=32381-87641&t=JtG5xhIjZi59a5Gy-4&type=design" %}
+{% embed url="https://youtu.be/bljIuLi7Q7o" %}
+Routing sequence
+{% endembed %}
 
 ### Configuring a Routing
 
@@ -95,35 +101,41 @@ Adjust the sequence of order routings:
 3. **Allocation Actions:**
    * Specify actions related to order allocation.
 
-{% @figma/embed fileId="bVPRRw282CqGKMdbz7dciH" nodeId="32272:35263" url="https://www.figma.com/file/bVPRRw282CqGKMdbz7dciH/HC-Ionic-design-system?mode=design&node-id=32272-35263&t=JtG5xhIjZi59a5Gy-11&type=design" %}
+
+
+<figure><img src="../.gitbook/assets/Brokering Route Queries.png" alt=""><figcaption></figcaption></figure>
 
 **Managing Order Filters**
 
 * Click on the options icon in the "Filters" section to add or remove filters.
 * Ensure orders are routed based on specific criteria that align with your fulfillment strategy.
 
-{% @figma/embed fileId="bVPRRw282CqGKMdbz7dciH" nodeId="32273:68221" url="https://www.figma.com/file/bVPRRw282CqGKMdbz7dciH/HC-Ionic-design-system?mode=design&node-id=32273-68221&t=JtG5xhIjZi59a5Gy-4&type=design" %}
+
+
+<figure><img src="../.gitbook/assets/Frame 674 (1).png" alt=""><figcaption></figcaption></figure>
 
 #### Managing Inventory Rules
 
 * Rearrange the sequence of inventory rules by clicking and dragging items using the reorder icon on each rule.
 * Add a new inventory rule by clicking on the "Add Inventory Rule" button.
 
-{% @figma/embed fileId="bVPRRw282CqGKMdbz7dciH" nodeId="32273:68367" url="https://www.figma.com/file/bVPRRw282CqGKMdbz7dciH/HC-Ionic-design-system?mode=design&node-id=32273-68367&t=JtG5xhIjZi59a5Gy-4&type=design" %}
+
+
+<figure><img src="../.gitbook/assets/Inventory Rule.png" alt=""><figcaption></figcaption></figure>
 
 #### Managing Inventory Rule Filters
 
 * Click on the options icon on the "Filters" card to manage filters for inventory rules.
 * Sorting inventory filters optimizes the allocation process by prioritizing available inventory based on specific criteria.
 
-{% @figma/embed fileId="bVPRRw282CqGKMdbz7dciH" nodeId="32273:68626" url="https://www.figma.com/file/bVPRRw282CqGKMdbz7dciH/HC-Ionic-design-system?mode=design&node-id=32273-68626&t=JtG5xhIjZi59a5Gy-4&type=design" %}
+<figure><img src="../.gitbook/assets/Filters (1).png" alt=""><figcaption><p>Manage Filters</p></figcaption></figure>
 
 #### Managing Sorting Options
 
 * Click on the options icon on the "Sort" card to add or remove sorting options.
 * Adjust the priority of sort options by clicking and dragging them to the desired sequence.
 
-{% @figma/embed fileId="bVPRRw282CqGKMdbz7dciH" nodeId="32273:68694" url="https://www.figma.com/file/bVPRRw282CqGKMdbz7dciH/HC-Ionic-design-system?mode=design&node-id=32273-68694&t=JtG5xhIjZi59a5Gy-4&type=design" %}
+<figure><img src="../.gitbook/assets/Card.png" alt=""><figcaption><p>Manage Sorting</p></figcaption></figure>
 
 Understanding how to configure routings is essential for optimizing the order routing and brokering process. Next, let's delve into the detailed configuration options for order filters, inventory filters, and allocation actions.
 

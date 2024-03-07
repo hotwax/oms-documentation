@@ -20,8 +20,12 @@ However, if a retailer has multiple brands, additional product stores need to be
 | subtitle            | WS                     | Subtitle for the store.  |
 | title               | WasatchSki             | Title of the store.      |
 
-{% hint style="warning" %}
-**Warning hints** Add company and product store details as per your retail brand
+{% hint style="info" %}
+Add company and product store details as per your retail brand
+{% endhint %}
+
+{% hint style="danger" %}
+Make sure your product store ID ends with `_store` for accurate product store representation.
 {% endhint %}
 
 Adjust the additional Product Store settings according to your specific requirements for the following details:

@@ -42,3 +42,6 @@ Retailers can follow these steps:
 
 {% hint style='info' %} After incorporating these mandatory mappings, please add any custom mappings as needed. 
 {% endhint %}
+
+{% hint style='info' %} In HotWax Commerce, retailers can map both payment gateways and payment methods. However, due to the hierarchical structure of mapping, if payment gateways are mapped, payment methods won't be stored within HotWax Commerce. Instead, users will only see the gateway name alongside order details, regardless of the payment method used. If the intention is to retain payment method data, it's necessary to remove the mapping of the payment gateway from HotWax Commerce. 
+{% endhint %}
