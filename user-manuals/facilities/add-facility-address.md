@@ -7,11 +7,20 @@ To ensure accurate facility management and fulfillment, it is crucial for the ad
 3. After filling in the required details, click on the `Save` icon to save the facility address.
 4. Users have the option to edit the address by clicking the `Edit` button below the address. Remember to save the edits using the `save` icon to update the address.
 
+{% hint style="info" %}
+HotWax Commerce employs zone-based routing to allocate the most suitable inventory for orders. This routing is based on zip codes, ensuring efficient order allocation. It's crucial to ensure that zip codes are added to each facility. Otherwise, orders won't be brokered to that facility for fulfillment.
+{% endhint %}
+
 {% embed url="https://youtu.be/gBCNHmIcy9E" %}
 Video: Add Facility Address
 {% endembed %}
 
 ### Add Latitude & Longitude
+
+
+HotWax Commerce BOPIS PDP App enhances the Shopify Product Detail Page (PDP) experience for the customers by displaying the distance of stores from a customer's current location. This functionality is achieved through the utilization of the "storeLookup" API, which retrieves all available pickup locations within a specified radius from the customer's location. The API relies on the latitude and longitude coordinates of facilities to determine their proximity to the customer.
+
+To add the latitude and longitude coordinates for a facility, follow these steps:
 
 1. On the `Facility details` page, click on the `Add` Button in the Latitude & Longitude card. A pop-up menu will appear, allowing users to input latitude and longitude information.
 2. Users can manually add the facility-associated latitude and longitude, or use the `Generate` icon located at the top right corner of the pop-up menu. This option automatically generates latitude and longitude based on the provided address.

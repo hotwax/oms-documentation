@@ -1,6 +1,7 @@
 # Table of contents
 
 * [Launchpad](README.md)
+* [Glossary](GLOSSARY.md)
 
 ## Workflow
 
@@ -72,6 +73,7 @@
 * [Safety Stock](inventory/safety-stock/README.md)
   * [Set Bulk Safety Stock](inventory/safety-stock/set-bulk-safety-stock.md)
   * [Set Individual Safety Stock](inventory/safety-stock/set-individual-safety-stock.md)
+* [Multichannel Inventory Setup](inventory/multichannel-inventory-setup.md)
 
 ## Administration
 
@@ -92,3 +94,4 @@
   * [Manage parkings](facilities/manage-parkings.md)
 * [Shipping Methods](administration/shipping-methods/README.md)
   * [Create Carrier](administration/shipping-methods/add-carrier.md)
+* [Delete Customers](delete-customers.md)

@@ -16,18 +16,18 @@ Orders are displayed in a "First In, First Out" sequence. You can filter them ba
 Video: Filter Orders
 {% endembed %}
 
-1. Click the Print Picksheet function to generate the picksheet.
-2. In the Add Picker dialog box, enter the Picker Name or Employee Id to assign a picker.​
+1. Click the Print Picksheet function to generate the picksheet. This will create picklist of multiple orders to support wave-picking, ensuring pickers can pick items for all orders in one go.
+2. In the Add Picker dialog box, enter the Picker Name or Employee Id to assign a picker. Adding Pickers can be used for performance-based commission distribution.
+
 
 {% embed url="https://youtu.be/Yu384kR-7mU" %}
 Video: Print picklist
 {% endembed %}
 
 {% hint style="success" %}
-Pickers can be used for performance-based commission distribution.
+Users can create individual order's picklist by clicking on the order ID which will open a dropbox where the user can select the `Pick Orders` option to create the picklist for the individual order.
 {% endhint %}
-
-3. The user can choose to reprint the picklist by clicking on the `Print Picklist` button located in the bottom right corner on the In Progress tab.
+3. The user can reprint the picklist by clicking on the `Print Picklist` button in the bottom right corner on the In Progress tab.
 
 4. Users can modify the assigned picker on the In Progress page by selecting the `Edit Picker` button located next to the `Print Picklist` button in the bottom right corner.
 
@@ -83,14 +83,14 @@ Video: Unpack orders
 #### Ship order
 
 1. Go to the Completed tab.​
-2. Click Ship Orders function at the top to mark the orders as shipped in bulk.
+2. Click the `Ship Orders` function at the top to mark the orders as shipped in bulk.
 
 {% embed url="https://youtu.be/GlOIz9scB3s" %}
 Video: Bulk Order fulfillment
 {% endembed %}
 
 {% hint style="info" %}
-If `Ship Packed Orders` is enabled, all packed orders will be shipped. Enable the `isTrackingRequired` setting on shipping methods that should not be automaticlaly be shipped unless they have tracking codes.
+If `Ship Packed Orders` Job is enabled in the Job Manager App, all packed orders will be automatically mark shipped. Enable the `isTrackingRequired` setting on shipping methods that should not be automatically shipped unless they have tracking codes.
 {% endhint %}
 
 In the event that the packing slip or shipping label is damaged after packing an order, it can be regenerated from the completed tab.
@@ -106,14 +106,14 @@ Video: Reprint customer letter
 #### Pick order
 
 1. Navigate to the Open page.
-2. Use the search field to input HotWax Commerce Order Id, Shopify Order Id, or Customer name for order search.
+2. Use the search field to input HotWax Commerce Order ID, Shopify Order ID, or Customer name for order search.
 
 {% embed url="https://youtu.be/oOgIiRsnDRA" %}
 Image: Search an order
 {% endembed %}
 
 3. Click the Print Picksheet function to generate the picksheet.
-4. In the Add Picker dialog box, enter the Picker Name or Employee Id to assign a picker.​
+4. In the Add Picker dialog box, enter the Picker Name or Employee ID to assign a picker.​
 5. Access the Print Picksheet function again to obtain the picksheet in PDF format to reference during order picking.
 
 #### Pack Order
