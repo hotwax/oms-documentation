@@ -60,7 +60,6 @@
   * [In-Store Returns](returns/in-store-returns.md)
   * [Restocking](returns/restock-return.md)
 
-
 ## Inventory
 
 * [Receiving](inventory/receiving/README.md)
@@ -96,5 +95,5 @@
   * [Create Carrier](administration/shipping-methods/add-carrier.md)
 * [Delete Customers](delete-customers.md)
 * [Company](company/README.md)
-  * [Create Product Store](company/create-product-store)
-  * [Manage Product Store](company/manage-product-store)
+  * [Create Product Store](administration/company/create-product-store.md)
+  * [Manage Product Store](administration/company/manage-product-store.md)
