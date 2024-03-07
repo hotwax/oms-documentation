@@ -92,3 +92,6 @@
   * [Manage parkings](facilities/manage-parkings.md)
 * [Shipping Methods](administration/shipping-methods/README.md)
   * [Create Carrier](administration/shipping-methods/add-carrier.md)
+* [Company](company/README.md)
+  * [Create Product Store](company/create-product-store)
+  * [Manage Product Store](company/manage-product-store)
