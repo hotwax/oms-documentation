@@ -7,7 +7,7 @@ HotWax Commerce’s Picking app allows users to manage the picklists assigned to
 
 **Filters:**
 Using filters provides a focused view, highlighting the tasks that still need attention.
-- Only show my picklists: Only show picklists associated with the logged in user.
+- Only show my picklists: Only show picklists associated with the logged-in user. Users can also see a picklist of other users by turning the toggle off to view other team members' picklists within a facility to make collaboration during fulfillment simpler.
 - Hide completed picklists: Don't show recently completed picklists.
 
 <figure><img src="../.gitbook/assets/Screenshot 2023-10-19 at 12.44.33 PM.png" alt=""><figcaption><p>Image: Picklists Page</p></figcaption></figure>
@@ -32,16 +32,19 @@ Video: Search an item
 ### Scan
 Use the built-in scanner to scan products to search the picklist items, eliminating the manual effort of searching an item.
 
+### Select Item
+
+Select the picklist items by clicking on the checkbox for the picked item.
 
 ### Select all
 
-Select all the picklist items with a single click to quickly acknowledge the completeion of all picklist items.
+Select all the picklist items with a single click to quickly acknowledge the completion of all picklist items.
 
 {% embed url="https://youtu.be/zllJ_IKgVEw" %}
 
 ### Complete a Picklist
 
-Complete a picklist to initaite the packing process.
+Complete a picklist to initiate the packing process.
 
 {% embed url="https://youtu.be/ceLyIXTE9gk" %}
 Video: Complete picklist
