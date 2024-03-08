@@ -76,6 +76,9 @@
 
 ## Administration
 
+* [Company](company/README.md)
+  * [Create Product Store](administration/company/create-product-store.md)
+  * [Manage Product Store](administration/company/manage-product-store.md)
 * [Users](users/README.md)
   * [Create Users](users/createUser.md)
   * [Manage Users](users/manageUser.md)
@@ -94,6 +97,3 @@
 * [Shipping Methods](administration/shipping-methods/README.md)
   * [Create Carrier](administration/shipping-methods/add-carrier.md)
 * [Delete Customers](delete-customers.md)
-* [Company](company/README.md)
-  * [Create Product Store](administration/company/create-product-store.md)
-  * [Manage Product Store](administration/company/manage-product-store.md)
