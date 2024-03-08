@@ -76,7 +76,7 @@
 
 ## Administration
 
-* [Company](company/README.md)
+* [Company](administration/company/README.md)
   * [Create Product Store](administration/company/create-product-store.md)
   * [Manage Product Store](administration/company/manage-product-store.md)
 * [Users](users/README.md)

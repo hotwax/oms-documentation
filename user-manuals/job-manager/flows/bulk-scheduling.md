@@ -20,7 +20,7 @@ Easily search and select the jobs you want to execute or configure. You can also
 
 Conveniently configure and schedule all selected jobs simultaneously to streamline your workflow.
 
-<figure><img src="../../jobManager/.gitbook/assets/Screenshot%202023-11-07%20at%207.23.11%20PM.png" alt=""><figcaption><p>Image: Bulk Edit page</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/kkkk.png" alt=""><figcaption></figcaption></figure>
 
 ### **Configurations**
 
@@ -39,6 +39,8 @@ Search Jobs and use the Add function to select jobs to be scheduled.
 **Scheduler**
 
 Configure and schedule all selected jobs simultaneously.
+
+
 
 {% hint style="info" %}
 Scheduled run time and frequency, set on bulk scheduler, will be applied to all the selected jobs.
