@@ -4,7 +4,7 @@ Product store management is a straightforward process accomplished through the F
 
 # Configurations
 
-# Edit Product Store Name
+## Edit Product Store Name
 
 {% hint style="info" %}
  The scope is limited to the product store name, as the company name and product store ID cannot be changed once configured.
@@ -12,7 +12,7 @@ Product store management is a straightforward process accomplished through the F
 
 1. Navigate to the product card in the Product Store details page.
 2. Locate and click on the 'Edit' button associated with the product store card. You may find this button labeled 'Edit.'
-3. Once clicked, a modal will appear, allowing you to make changes to the product store name.
+3. Once clicked, a dialog box will appear, allowing you to make changes to the product store name.
 4. In the provided field, modify the product store name to your desired new name.
 5. After making the necessary changes, click on `confirm` to save your edits. 
 6. Verify that the changes have been applied by checking the updated product store name. 
@@ -20,11 +20,11 @@ Product store management is a straightforward process accomplished through the F
 
 ## Manage Operational Countries
 
-1. Select the `Operating Countries detail` button on the product card in the Product Store details page to open the modal.
-2. Within the modal, you'll find a list of countries available for selection. If you need to add a new operating country, use the search functionality provided. You can search for countries by their GeoIDs, which may include country names.
+1. Select the `Operating Countries detail` button on the product card in the Product Store details page to open the dialog box.
+2. Within the dialog box, you'll find a list of countries available for selection. If you need to add a new operating country, use the search functionality provided. You can search for countries by their GeoIDs, which may include country names.
 3. To add a country, simply check the checkbox next to its name in the list. This indicates that the selected country will be included as an operating country forthe product store.
 4. Conversely, if you need to remove a country, uncheck the checkbox next to its name. This will exclude the deselected country from the list of operating countries for the product store.
-5. Once you've made the necessary changes, ensure to save selections. This might involve clicking on a 'Save' or 'Apply' button within the modal.
+5. Once you've made the necessary changes, ensure to save selections. This might involve clicking on a 'Save' or 'Apply' button within the dialog box.
 6. After saving, confirm that the operating countries for the product store have been updated accordingly.
 
 ## Administration
@@ -114,11 +114,24 @@ Control what your customers are allowed to edit on their order when they are edi
 
 ## Manage Facility
 
-Associating a product store with a facility allows the product store to add the facility for the brand. This configuration defines in OMS to make the facility available for order fulfillment related operations.
+Associating a product store with a facility allows the product store to add the facility for the brand. This configuration defines in OMS to make the facility available for order fulfillment related operations for the brand. A facility can be associated with multiple product store.
 
 1. Navigate to the facility tab in the Product store details page. 
-2. Choose the facility you want to associate product store with.
-3. Once you've configured the association between the product store and the facility, save your changes 
+2. Click on the `Add Facility` button.
+3. Choose the facility you want to associate product store with from the Add Facility method dialog box.
+4. Once you've configured the association between the product store and the facility, save your changes.
+
+**Remove Facility mapping**
+
+To remove an association between a product store and a shipping method, follow these steps:
+
+1. Go to the Shipping Method tab.
+2. Locate the shipping method that you want to disassociate from the product store.
+3. Click on the overflow menu (typically represented by three vertical dots) next to the shipping method.
+4. From the menu, select Remove Association option.
+5. Confirm the action.
+
+This will remove the association between the selected shipping method and the product store.
 
 ## Manage Shipping Method
 
@@ -126,10 +139,23 @@ The shipment method dictates how products are delivered from seller to buyer. Du
 
 Before creating the Shipment method, we need to ensure carriers are available in HotWax Commerce.
 
-To integrate a new shipment method into your product store within HotWax Commerce, it's vital to follow these detailed steps for a seamless implementation:
+To integrate a new shipment method into your product store within HotWax Commerce, follow these detailed steps:
 
-1. Navigate to the Shipping method tab, click on Add Shipping method to add a new method.
-2. Choose preferred carrier, note the shipping methods related to the carrier will appear in the next dropdown.
-3. Select the exact shipment method offered by the chosen carrier (e.g., Next Day, Same Day, Standard).
-4. Choose the appropriate gateway configuration to facilitate the shipping process effectively.
-5. Save your changes.
+1. Navigate to the Shipping method tab.
+2. Click on the `Add Shipping method` button.
+3. Choose your preferred carrier from the Add shipping method dialog box.
+4. Select the specific shipment method offered by the chosen carrier (e.g., Next Day, Same Day, Standard) from the dropdown menu.
+5. Choose the appropriate gateway configuration to facilitate the shipping process effectively.
+6. Save your changes.
+
+**Remove Shipping method**
+
+To remove an association between a product store and a shipping method, follow these steps:
+
+1. Go to the Shipping Method tab.
+2. Locate the shipping method that you want to disassociate from the product store.
+3. Click on the overflow menu (typically represented by three vertical dots) next to the shipping method.
+4. From the menu, select Remove Association option.
+5. Confirm the action.
+
+This will remove the association between the selected shipping method and the product store.
