@@ -1,6 +1,8 @@
-Product store management is a straightforward process accomplished through the Find Product Store and the Product store details page. Follow these steps for product store management:
+Product store management is a straightforward process accomplished through the Find Product Store and the Product store details page. Follow these steps to manage product store configurations:
 
 1. Go to the Find Product Store page and select the Product store you want to manage to open the Product Store details page.
+
+# Configurations
 
 # Edit Product Store Name
 
@@ -15,7 +17,6 @@ Product store management is a straightforward process accomplished through the F
 5. After making the necessary changes, click on `confirm` to save your edits. 
 6. Verify that the changes have been applied by checking the updated product store name. 
 
-# Configurations
 
 ## Manage Operational Countries
 
@@ -79,7 +80,7 @@ Administration settings require special permissions and, if mismanaged, can impa
 - **Auto Order Cancellations:** Configure the cancellation threshold for unfulfilled orders. To adjust this setting, navigate to the cancellation settings section in the fulfillment card, find the `Auto Order Cancellations` option, and and toggle it as needed.
 - **Auto Cancellations Days:** Specify the number of days after which the order should be automatically marked as cancelled if not fulfilled. This setting can be adjusted in the cancellation settings section alongside the "Auto Order Cancellations" option.
 
-## Store Pickup:
+## Store Pickup
 
 - **Partial Order Rejection:** Specify whether to reject a BOPIS (Buy Online, Pickup In Store) order partially when any order item inventory is insufficient at the store. This setting can be found in the store pickup settings section. Navigate to this section in your dashboard, locate the `Partial Order Rejection` option, and toggle it as required.
 
