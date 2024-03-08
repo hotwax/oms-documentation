@@ -1,10 +1,8 @@
-# Manage Product Store
-
 Product store management is a straightforward process accomplished through the Find Product Store and the Product store details page. Follow these steps for product store management:
 
 1. Go to the Find Product Store page and select the Product store you want to manage to open the Product Store details page.
 
-## Edit Product Store Name
+# Edit Product Store Name
 
 {% hint style="info" %}
  The scope is limited to the product store name, as the company name and product store ID cannot be changed once configured.
@@ -17,6 +15,8 @@ Product store management is a straightforward process accomplished through the F
 5. After making the necessary changes, click on `confirm` to save your edits. 
 6. Verify that the changes have been applied by checking the updated product store name. 
 
+# Configurations
+
 ## Manage Operational Countries
 
 1. Select the `Operating Countries detail` button on the product card in the Product Store details page to open the modal.
@@ -26,9 +26,8 @@ Product store management is a straightforward process accomplished through the F
 5. Once you've made the necessary changes, ensure to save selections. This might involve clicking on a 'Save' or 'Apply' button within the modal.
 6. After saving, confirm that the operating countries for the product store have been updated accordingly.
 
-## Configurations
+## Administration
 
-### Administration
 {% hint style="danger" %}
 Administration settings require special permissions and, if mismanaged, can impact the workflow of OMS. Hence, it is recommended to not change these flows without approvals.
 {% endhint %}
@@ -40,7 +39,8 @@ Administration settings require special permissions and, if mismanaged, can impa
    
    - **Order Brokering:** Disabling brokering hinders OMS from optimizing inventory allocation for orders, defeating its intended purpose. Therefore, this setting should always be maintained at its default value of Y and should not be modified.
 
-### Orders
+
+## Orders
 
 1. Navigate to the Order card in the Product Store details page.
 
@@ -56,7 +56,8 @@ Administration settings require special permissions and, if mismanaged, can impa
 - **Creation Deadline Days:** Specify the number of days permitted for creating returns for in-store. Adjust this value based on your return policy and operational needs.
 
 
-### Brokering
+
+## Brokering
 
 1. Navigate to the Brokering card in the Product Store details page.
 
@@ -100,7 +101,7 @@ Administration settings require special permissions and, if mismanaged, can impa
 
 - **Preferred Identifier View:** Opting for a preferred product identifier enables you to view products using your preferred identification across HotWax Commerce Apps. To set your preferred identifier view, access the identifier settings in your dashboard. Find the `Preferred Identifier View` option and select the desired product identifier from the available options.
 
-# Reroute Fulfillment
+## Reroute Fulfillment
 
 Control what your customers are allowed to edit on their order when they are editing their order on Reroute Fulfillment. Configurations are:
 
