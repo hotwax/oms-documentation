@@ -28,4 +28,4 @@
     * [Order Import](additional-resources/order-flow/orders-import.md)  
     * [Order Brokering](additional-resources/order-flow/order-brokering.md)
     * [Order Fulfillment](additional-resources/order-flow/order-fulfillment.md)
-    * [Order Update Notification](additional-resources/order-flow/order-update.md)
+    * [Order Fulfillment Notification](additional-resources/order-flow/order-fulfillment-notification.md)
