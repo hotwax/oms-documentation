@@ -41,6 +41,7 @@
   * [Rejection](fulfillment/rejection.md)
   * [Picking App](fulfillment/pickingApp.md)
   * [CSV Support](fulfillment/csvSupport.md)
+  * [Settings Page](fulfillment/fulfillment-setting-page.md)
   * [Reports](fulfillment/reports.md)
   * [Create Shipping Boxes](fulfillment/shipping-box.md)
 * [Brokering](orders/brokering/README.md)

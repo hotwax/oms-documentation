@@ -8,12 +8,12 @@ Furthermore, you can utilize features such as scheduled jobs for importing new o
 1. **Setting Up Scheduled Job for Importing Orders:**
 
    - Log in to your HotWax Commerce user account and navigate to the Job Manager app.
-   - Select the "Orders" option from the menu, Navigate to the Import Orders job to create a  new scheduled job for importing orders.
+   - Select the `Orders` option from the menu, Navigate to the Import Orders job to create a  new scheduled job for importing orders.
    - Configure the job settings, including the frequency of import (e.g., daily, hourly) and any specific parameters required for the import [process](https://docs.hotwax.co/user-guides/workflow/job-workflows).
    - Save the job settings to activate the scheduled import of orders from Shopify to HotWax Commerce.
 
 2. **Automatically Approving Orders:**
-   - Set up a scheduled job named "Approved Orders" within the Job Manager app.
+   - Set up a scheduled job named `Approved Orders` within the Job Manager app.
    - Configure the job to check the approval status of Shopify orders based on parameters defined by Shopify Merchants.
    - Save the job settings to enable automatic approval of orders in HotWax Commerce.
  
