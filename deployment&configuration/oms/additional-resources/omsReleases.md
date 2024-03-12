@@ -8,6 +8,34 @@
 2. To find details about SOLR versions, refer to the [SOLR version document]([solr_version_document_link](https://docs.google.com/spreadsheets/d/1H-iEVG-hS9FTsYOf5YiUH-5KOJUcu0_TiPG8aVYjaHU/edit#gid=0))
 {% endhint %}
 
+## Release - v5.6.0 (11th Mar 2024)
+
+| Information         | Value                                |
+|---------------------|--------------------------------------|
+| Release Version     | v5.6.0                           |
+| Release Type        | Minor                             |
+| Image Tag           | v5.6.0                          |
+| Image URL           | `289432782788.dkr.ecr.us-east-1.amazonaws.com/omscoreimage:omscoreimage-latest` |
+| Diff                | [Link to diff](https://git.hotwax.co/commerce/oms/-/compare/v5.5.0...v5.6.0?from_project_id=161&straight=false) |
+| Changelog           | [Link to changelog](https://git.hotwax.co/commerce/oms/-/blob/main/CHANGELOG.md)                  |
+
+{% tabs %}
+
+{% tab title="Upgrade Data" %}
+[Link to Upgrade Data](https://git.hotwax.co/commerce/oms/-/blob/v5.6.0/applications/hwmapps/upgrade/current/UpgradeData.xml?ref_type=tags)
+{% endtab %}
+
+{% tab title="Upgrade SQL" %}
+[Link to Upgrade SQL](https://git.hotwax.co/commerce/oms/-/blob/v5.6.0/applications/hwmapps/upgrade/current/UpgradeSQL.sql?ref_type=tags)
+{% endtab %}
+
+{% tab title="Upgrade Steps" %}
+[Link to Upgrade Steps](https://git.hotwax.co/commerce/oms/-/blob/v5.6.0/applications/hwmapps/upgrade/current/UpgradeSteps.md?ref_type=tags)
+{% endtab %}
+
+{% endtabs %}
+
+
 ## Latest Release - v5.5.1 (28th Feb 2024)
 | Information         | Value                                |
 |---------------------|--------------------------------------|
