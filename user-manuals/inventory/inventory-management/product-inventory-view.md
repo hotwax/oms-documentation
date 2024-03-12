@@ -24,7 +24,7 @@ Navigate to the `Overview` section on the `Product Inventory View` page to acces
 This section displays orders that currently lack allocated inventory. Orders in different queues, such as brokering queue, unfillable hold queue, pre-order queue, and backorder queue, are listed here. Explore further details about these queues [here](facilities/manage-parkings.md).
 
 **B. Threshold:**
-Retailers can establish a global threshold for products through the  `Threshold Management` app. This quantity is subtracted from the overall Quantity on Hand (QOH) to prevent overselling on e-commerce platforms. Users can see the inventory that needs to be subtracted from the overall QOH as threshold.
+Retailers can establish a global threshold for products through the  `Threshold Management` app. This quantity is subtracted from the overall Quantity on Hand (QOH) to prevent overselling on e-commerce platforms. Users can see the inventory that is subtracted from the overall QOH as the threshold.
 
 **C. Physical ATP:**
 HotWax Commerce calculates Physical Available to Promise (ATP) by considering various factors, such as safety stock, threshold, reserved quantity, and orders in the queue. The excluded ATP comprises safety stock and reserved quantities, with adjustments made at the facility level.
@@ -49,14 +49,14 @@ The item inventory section allows users to get a detailed breakdown of the recei
 
 **View `Inventory Logs`**
 
-The `Inventory Logs` feature within item inventory section offers users the ability to access detailed logs of inventory transactions for the selected product across all facilities. This feature is essential for maintaining transparency and accountability in inventory management, allowing users to track inventory movements, monitor changes, and identify any discrepancies or trends promptly.
+The `Inventory Logs` feature within the item inventory section offers users the ability to access detailed logs of inventory transactions for the selected product across all facilities. This feature is essential for maintaining transparency and accountability in inventory management, allowing users to track inventory movements, monitor changes, and identify any discrepancies or trends promptly.
 
 **Step-by-Step Usage Instructions:**
 
-- On the `View Product inventory` page, navigate to the item inventory section
-- Locate the `Inventory Logs` checkbox and check the box to activate the inventory logs feature.
-   - Once activated, detailed logs of each inventory transaction for the selected product across all facilities will be displayed.
-   - Review these logs to track inventory movements, monitor changes, and identify any discrepancies or trends.
+1. On the `View Product inventory` page, navigate to the item inventory section
+2. Locate the `Inventory Logs` checkbox and check the box to activate the inventory logs feature.
+3. Once activated, detailed logs of each inventory transaction for the selected product across all facilities will be displayed.
+4. Review these logs to track inventory movements, monitor changes, and identify any discrepancies or trends.
 
 If you want to view inventory details for a specific facility, use the facility dropdown menu to select the desired facility.
 
