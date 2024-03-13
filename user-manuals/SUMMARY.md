@@ -95,6 +95,7 @@
   * [Manage Locations](facilities/manage-locations.md)
   * [Disabling facilities](facilities/disabling-facilities.md)
   * [Manage parkings](facilities/manage-parkings.md)
+  * [Manage Groups](facilities/manage-groups.md)
 * [Shipping Methods](administration/shipping-methods/README.md)
   * [Create Carrier](administration/shipping-methods/add-carrier.md)
 * [Delete Customers](delete-customers.md)
