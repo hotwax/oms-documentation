@@ -10,7 +10,7 @@ This page displays all outstanding orders brokered to this facility by the OMS a
 
 At the top of the page, the total number of queued orders are clearly displayed, providing an instant overview of the workload.
 
-Orders are displayed in a "First In, First Out" sequence. You can filter them based on shipping method to prioritize fulfillment.
+Orders are arranged in a "First In, First Out" sequence by default. However, users have the option to filter them based on the shipping method to prioritize fulfillment. For instance, Same-day shipping orders can be prioritized by selecting the corresponding filter checkbox at the top of the page. 
 
 {% embed url="https://youtu.be/M3jXan3MOZc" %}
 Video: Filter Orders
