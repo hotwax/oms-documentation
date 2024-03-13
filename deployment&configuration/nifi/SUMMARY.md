@@ -5,10 +5,10 @@
 
 # Setup
 
-* View and Manage Processors [view-and-manage-processors.md]
-* Schedule Processors [schedule-processors.md]
+* [View and Manage Processors](view-and-manage-processors.md)
+* [Schedule Processors](schedule-processors.md)
 
 # Troubleshooting
 
-* Data Provenance[data-provenance.md]
-* Bulletins [bulletins.md]
+* [Data Provenance](data-provenance.md)
+* [Bulletins](bulletins.md)
