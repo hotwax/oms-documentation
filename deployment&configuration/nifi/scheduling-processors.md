@@ -1,4 +1,4 @@
-# Scheduling processors
+# Schedule processors
 
 The Scheduling tab within the Processor Configuration dialog in NiFi offers crucial settings for managing how a Processor operates, impacting the flow of data within the platform. Let's break down its significance and provide step-by-step instructions on how users can utilize this feature effectively.
 
