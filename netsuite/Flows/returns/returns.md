@@ -8,9 +8,8 @@ For customers who favor the convenience of online shopping, initiating returns f
 
 **Scenarios where web returns are accepted:**
 
-- **Buy Online Return Online (BORO):** Customers initiate online returns for their eCommerce orders.
-  
-- **Endless Aisle Return Online (EARO):** Customers initiate online returns for their in-store ordered items which they received home delivery for.
+* **Buy Online Return Online (BORO):** Customers initiate online returns for their eCommerce orders.
+* **Endless Aisle Return Online (EARO):** Customers initiate online returns for their in-store ordered items which they received home delivery for.
 
 Retailers we work with, use Shopify as their eCommerce platform, NetSuite as their ERP system, Loop as their RMS, and HotWax Commerce as their OMS. When synchronizing web returns to NetSuite, some opt to use Loop as middleware, while others leverage HotWax Commerce for this. Let's explore how these two distinct approaches work:
 
@@ -20,7 +19,7 @@ Retailers we work with, use Shopify as their eCommerce platform, NetSuite as the
 
 Loop being an RMS, lets customers directly initiate returns against their web orders. Once the return is initiated by the customer, Loop creates the return in Shopify.
 
-To synchronize returns from Loop to NetSuite, many retailers use the Novamodule Integration App. When returns are created in Shopify, Loop simultaneously generates an RMA in NetSuite using the Novamodule Integration App, which gives the warehouse a heads up that the order item will be coming back.
+To synchronize returns from Loop to NetSuite, many retailers use the Novamodule Integration App. When returns are created in Shopify, Loop simultaneously generates an RMA in NetSuite using the Novamodule Integration App, which gives the warehouse a heads-up that the order item will be coming back.
 
 It's crucial to note that refunds against the RMA will only be processed once customers have shipped their order item, its receipt has been processed in the warehouse, item receipt records have been created in NetSuite and this information has been synchronized to Shopify.
 
@@ -34,13 +33,15 @@ A scheduled job in HotWax Commerce then proceeds to download returns from Shopif
 
 **Export Item Receipts from NetSuite**
 
-When downloading returns from Shopify, HotWax Commerce does not restock the inventory even if restocking flag is enabled on Shopify because HotWax Commerce lacks visibility into the specific location where the inventory is received.
+When downloading returns from Shopify, HotWax Commerce does not restock the inventory even if the restocking flag is enabled on Shopify because HotWax Commerce lacks visibility into the specific location where the inventory is received.
 
 A scheduled SuiteScript in NetSuite retrieves item receipt records, generates a CSV file, and places this file at an SFTP location from where HotWax Commerce can read this data.
 
 **Import Item Receipt Records in HotWax Commerce**
 
 A job within HotWax Commerce OMS imports the item receipt records CSV file and restocks inventory for corresponding returns. This ensures that the restocked inventory is accurately updated at the facility in HotWax Commerce.
+
+<figure><img src="../../.gitbook/assets/online return with loop (1).png" alt=""><figcaption><p>Sync web returns to NetSuite using Loop</p></figcaption></figure>
 
 ### Synchronizing Web Returns to NetSuite when HotWax Commerce is used
 
@@ -55,7 +56,6 @@ A scheduled job in HotWax Commerce is responsible for fetching web returns gener
 These returns should then be synchronized to NetSuite for further processing. There are two methods for pushing web returns to NetSuite:
 
 1. **Third-Party Integration Platform:** HotWax Commerce gives a feed of returns that a dev team of retailers can use and transform it as per the specification and file format expected by NetSuite or any third-party ERP system.
-  
 2. **HotWax Commerce Integration Platform:** Alternatively, HotWax Commerce Integration Platform offers integration with NetSuite where web returns can be synced to NetSuite.
 
 **Export Returns from HotWax Commerce**
@@ -84,17 +84,17 @@ To facilitate this, a scheduled job in HotWax Commerce is responsible for synchr
 
 Once returns are completed in Shopify, a scheduled job in HotWax Commerce also marks the order item as returned and updates the payment by marking it as refunded. Subsequently, the order item is marked returned and the payment as refunded in NetSuite.
 
+<figure><img src="../../.gitbook/assets/online returns with hotwax (1).png" alt=""><figcaption><p>Sync web returns to NetSuite using HotWax Commerce</p></figcaption></figure>
+
 ## POS Returns
 
 Customers who live near a brick-and-mortar store or those who prefer to get instant refunds opt for returning their purchases directly in-store.
 
 **Scenarios where POS returns are accepted:**
 
-- **Buy In-Store Return In-Store (BISRIS):** Customers return their in-store purchases to a nearby store location.
-  
-- **Buy Online Return In-Store (BORIS):** Customers directly return their online purchases to a nearby store location.
-  
-- **Endless Aisle Return In-Store (EARIS):** Customers return orders made through an endless aisle feature, such as items ordered in-store for home delivery, to a nearby store location.
+* **Buy In-Store Return In-Store (BISRIS):** Customers return their in-store purchases to a nearby store location.
+* **Buy Online Return In-Store (BORIS):** Customers directly return their online purchases to a nearby store location.
+* **Endless Aisle Return In-Store (EARIS):** Customers return orders made through an endless aisle feature, such as items ordered in-store for home delivery, to a nearby store location.
 
 Retailers we work with, use Shopify POS as their POS system, NetSuite as their ERP system, Loop as their RMS, and HotWax Commerce as their OMS. Some retailers initiate in-store returns using the Loop Returns POS App, while others opt to use their Shopify POS system. Let's explore how these two distinct approaches work:
 
@@ -118,6 +118,8 @@ A scheduled job in HotWax Commerce downloads these returns from Shopify POS, inc
 
 As POS returns are already synced to NetSuite by Loop, they are not synced again by HotWax commerce.
 
+<figure><img src="../../.gitbook/assets/in-store return with loop (1).png" alt=""><figcaption><p>Sync POS returns to NetSuite using Loop</p></figcaption></figure>
+
 ### Synchronizing POS Returns to NetSuite when Shopify POS is used
 
 Leveraging Shopify POS for in-store returns ensures that store associates are not required to navigate through a separate interface to handle them.
@@ -135,3 +137,5 @@ A scheduled job within HotWax Commerce Integration Platform generates a CSV file
 **Import POS Returns in NetSuite**
 
 A scheduled SuiteScript in NetSuite reads this CSV file from the SFTP location, generates a Cash Sale return in NetSuite, creates item receipt records, marks the order item as returned and the payment is marked as refunded.
+
+<figure><img src="../../.gitbook/assets/in-store return with hotwax (1).png" alt=""><figcaption><p>Sync POS returns to NetSuite using HotWax Commerce</p></figcaption></figure>
