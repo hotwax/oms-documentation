@@ -238,3 +238,19 @@ NETSUITE_ORDR_TYPE
 }
 ```
 </details>
+
+## How to manage Sales Channel Enumeration? 
+
+1. Login to OMS.
+2. Click on the Hamburger menu icon to expand the menu options. 
+3. Scroll down to the end of the menu to find the settings section.
+4. Click on the settings section and find the general settings.
+5. After accessing the General Settings, scroll down the page to find a section for Sales Channel Enumeration.
+6. Within the Sales Channel Enumeration table, locate the specific sales channel entry that you want to edit. 
+7. Once you've found the desired sales channel, look for a pencil button option associated with that particular entry.
+8. Click on the pencil option to proceed with modifying the enumeration code for that channel.
+9. A modal window will appear, allowing you to make changes to the enumeration code for the  selected sales channel.
+10. Modify the enum code field as required.
+11. After making the necessary changes, click on the add button to update the enumeration code for the selected sales channel.
+
+Once the changes are saved, review the updated enumeration code to ensure it reflects your intended modifications accurately.
