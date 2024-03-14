@@ -3,6 +3,9 @@
 * [Launchpad](README.md)
 * [Glossary](GLOSSARY.md)
 
+## Business Process Models
+* [Order Lifecycle](business-process-models/orderlifecycle.md) 
+
 ## Workflow
 
 * [Job management](job-manager/README.md)
