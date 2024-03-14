@@ -34,7 +34,7 @@ Great! Let's continue fleshing out the manual with details about brokering runs:
 
 
 
-<figure><img src="../.gitbook/assets/Brokering Runs.png" alt=""><figcaption><p>Brokering Runs</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Brokering Runs.png" alt=""><figcaption><p>Brokering runs</p></figcaption></figure>
 
 ### Scheduling Brokering Runs
 
@@ -51,7 +51,7 @@ Brokering runs are scheduled using two essential parameters:
 
 Understanding how to view, schedule, and manage brokering runs is essential for optimizing your order routing strategies. Now, let's explore routings within a run.
 
-<figure><img src="../.gitbook/assets/Brokering Run Routes (1).png" alt=""><figcaption><p>Scheduling brokering Runs</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Brokering Run Routes (1).png" alt=""><figcaption><p>Scheduling brokering runs</p></figcaption></figure>
 
 ## Routing
 
@@ -64,7 +64,7 @@ A **routing** in the brokering system defines the criteria for processing orders
 1. Click the **Add** button next to the "Order batches" label to create a new routing.
 2. Provide a name for the routing and click **Save** to add it to the routing list of a run.
 
-<figure><img src="../.gitbook/assets/Order batches.png" alt="" width="251"><figcaption><p>Add a New Routing</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Order batches.png" alt="" width="251"><figcaption><p>Add a new routing</p></figcaption></figure>
 
 ### Archiving a Routing Rule
 
@@ -76,7 +76,7 @@ When a routing is no longer needed in a brokering run:
 Archived routings can be reactivated if needed and are accessible from the archive drawer at the bottom of the list.
 
 {% embed url="https://youtu.be/qE_J-Gp0Tf0" %}
-Archive Routing
+Archive routing
 {% endembed %}
 
 ### Sequencing Routings
@@ -124,14 +124,14 @@ Routing sequence
 * Click on the options icon on the "Filters" card to manage filters for inventory rules.
 * Sorting inventory filters optimizes the allocation process by prioritizing available inventory based on specific criteria.
 
-<figure><img src="../.gitbook/assets/filters (1).png" alt="" width="358"><figcaption><p>Manage Filters</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/filters (1).png" alt="" width="358"><figcaption><p>Manage filters</p></figcaption></figure>
 
 #### Managing Sorting Options
 
 * Click on the options icon on the "Sort" card to add or remove sorting options.
 * Adjust the priority of sort options by clicking and dragging them to the desired sequence.
 
-<figure><img src="../.gitbook/assets/sorting.png" alt=""><figcaption><p>Manage Sorting</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/sorting.png" alt=""><figcaption><p>Manage sorting</p></figcaption></figure>
 
 Understanding how to configure routings is essential for optimizing the order routing and brokering process. Next, let's delve into the detailed configuration options for order filters, inventory filters, and allocation actions.
 
