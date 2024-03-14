@@ -24,17 +24,17 @@ Similarly, retailers have the flexibility to set their own set of criteria to en
 
 If an order fails to pass the approval, it remains in the “Created” status. Once these orders have satisfied the validation parameters, retailers have two options to mark them as "Approved":
 
-- In the next scheduled run, the order approval job again picks orders that previously failed the approval to re-validate them, automatically marking them as "Approved" upon successful validation.
-- Alternatively, Customer Service Representatives (CSRs) have the option to manually update the order status from "Created" to "Approved" to bypass the waiting period for the next job run.
+* In the next scheduled run, the order approval job again picks orders that previously failed the approval to re-validate them, automatically marking them as "Approved" upon successful validation.
+* Alternatively, Customer Service Representatives (CSRs) have the option to manually update the order status from "Created" to "Approved" to bypass the waiting period for the next job run.
 
 ## Check Order Type
 
 HotWax Commerce supports the processing of various types of orders, including standard orders, BOPIS (Buy Online, Pick Up In Store) orders, Pre-Orders, and Backorders. Here’s a brief explanation of each type:
 
-- **Standard orders:** Standard shipping orders placed online for home delivery.
-- **BOPIS orders:** Orders placed online with the intention of picking up the items in-store.
-- **Pre-Orders:** Orders placed for products that are not yet available for delivery and will be available on a future date.
-- **Backorders:** Orders placed for products that are currently out-of-stock, with delivery scheduled for a future promised date.
+* **Standard orders:** Standard shipping orders placed online for home delivery.
+* **BOPIS orders:** Orders placed online with the intention of picking up the items in-store.
+* **Pre-Orders:** Orders placed for products that are not yet available for delivery and will be available on a future date.
+* **Backorders:** Orders placed for products that are currently out-of-stock, with delivery scheduled for a future promised date.
 
 Each order has its own distinct fulfillment process, making it essential to recognize and handle them accordingly for efficient processing. Now, let's explore how HotWax Commerce processes different order types:
 
@@ -45,7 +45,8 @@ All the approved standard orders are sent to the “Brokering Queue” that serv
 {% hint style="info" %}
 **What are brokering runs:**
 
-Brokering runs are scheduled by retailers to execute at specified intervals, allowing for effective and timely order routing. Retailers need to set a frequency and run time for brokering. For example, setting the frequency of a run to "Daily" and the runtime to "7 am" will execute the brokering run every morning at 7 am. {% endhint %}
+Brokering runs are scheduled by retailers to execute at specified intervals, allowing for effective and timely order routing. Retailers need to set a frequency and run time for brokering. For example, setting the frequency of a run to "Daily" and the runtime to "7 am" will execute the brokering run every morning at 7 am.
+{% endhint %}
 
 In the brokering run, the order routing engine looks for the best fulfillment location to fulfill orders from.
 
@@ -69,8 +70,8 @@ These orders are then automatically sent to the brokering queue so that they can
 
 When an order includes multiple items and inventory for one of them is unavailable for fulfillment, retailers have two options for handling the situation:
 
-- **Partial Rejection:** Retailers can choose to partially reject the order by rejecting only the unavailable item. In this scenario, the order will be split, and the store will ship the available items while the unavailable item will be rebrokered.
-- **Full Rejection:** Alternatively, retailers who prefer not to split the order, can reject all items in the order if any one item is unavailable for fulfillment. This ensures that the entire order is rejected, prompting the entire order to be rebrokered.
+* **Partial Rejection:** Retailers can choose to partially reject the order by rejecting only the unavailable item. In this scenario, the order will be split, and the store will ship the available items while the unavailable item will be rebrokered.
+* **Full Rejection:** Alternatively, retailers who prefer not to split the order, can reject all items in the order if any one item is unavailable for fulfillment. This ensures that the entire order is rejected, prompting the entire order to be rebrokered.
 
 Learn more about [Store Fulfillment](https://docs.hotwax.co/user-guides/orders/fulfillment/shiporders).
 
@@ -161,3 +162,5 @@ If an approved order has been allocated to the store, HotWax Commerce also autom
 Now, let's explore what happens when orders are canceled in HotWax Commerce:
 
 Similar to order cancellations initiated on the eCommerce platform, in HotWax Commerce, orders can be canceled whether they are in the "Created" or "Approved" status, provided that the order has not yet been shipped. When an order is canceled, its status is updated from "Created" to "Cancelled" or from "Approved" to "Cancelled," depending on the current stage of the order.
+
+<figure><img src="../.gitbook/assets/order life cycle.png" alt=""><figcaption><p>Order lifecycle model</p></figcaption></figure>

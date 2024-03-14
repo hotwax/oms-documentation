@@ -4,7 +4,8 @@
 * [Glossary](GLOSSARY.md)
 
 ## Business Process Models
-* [Order Lifecycle](business-process-models/orderlifecycle.md) 
+
+* [Order Lifecycle Business Process Model](business-process-models/orderlifecycle.md)
 
 ## Workflow
 
