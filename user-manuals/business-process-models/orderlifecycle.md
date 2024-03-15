@@ -2,7 +2,9 @@
 
 The Order Lifecycle Process Model illustrates how HotWax Commerce orchestrates the journey of an order from creation to approval, routing, and fulfillment, ensuring efficiency and accuracy at every stage.
 
-<figure><img src="../.gitbook/assets/order life cycle.png" alt=""><figcaption><p>Order lifecycle model</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/order life cycle bpm.png" alt=""><figcaption><p>Order lifecycle model</p></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/notations.png" alt=""><figcaption><p>Notations</p></figcaption></figure>
 
 ## Order Creation
 
@@ -117,7 +119,7 @@ After an order has been picked up by the customer, the order status is updated f
 
 ### BOPIS Fulfillment Failure:
 
-In the event that inventory cannot be located to fulfill a pick-up order during the fulfillment process, for reasons such as items being out of stock or damaged, a store manager has the authority to reject the fulfillment of the pick-up order.
+In the event that inventory cannot be located to fulfill a pick-up order during the fulfillment process, for reasons such as items being out of stock or damaged, a store manager has the authority to reject the fulfillment of the pick-up order. All the rejected BOPIS orders are then relocated to the `BOPIS Rejected Queue`.
 
 In this scenario, an email is automatically sent to the customer for <mark style="color:orange;">**alternative fulfillment options such as pickup from another store or home delivery**</mark>. Retailers can configure these options based on their order fulfillment strategy.
 
