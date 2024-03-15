@@ -224,3 +224,12 @@ In case the customer's location is not available, you can display all the availa
 }
 ```
 
+## Additioinal information: 
+
+**Identifying In-Store Pickup Orders:**
+
+When customers add qualifying items for in-store pickup, the HotWax Commerce BOPIS PDP App on Shopify adds a line item property indicating the pickup store location and reservation expiration date/time. 
+
+**Order Download Process:**
+
+BOPIS orders placed on Shopify are downloaded into HotWax Commerce alongside regular orders via the 'New Import' job. HotWax Commerce checks the line item property and sends the order to the customer's selected pickup location without brokering. Store associates access BOPIS orders through their BOPIS fulfillment app, preparing orders for customer pickup.
