@@ -33,3 +33,5 @@
   * [In-Store Returns](how-does-hotwax-commerce-manage-order-returns/in-store-returns.md)
   * [Appeasements](how-does-hotwax-commerce-manage-order-returns/appeasements.md)
   * [Exchanges](how-does-hotwax-commerce-manage-order-returns/exchanges.md)
+* [Multiple Store Setup](multiple-store-setup.md)
+* [Required Permissions from Shopify](shopify-permissions.md)
