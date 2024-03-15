@@ -225,10 +225,11 @@ In case the customer's location is not available, you can display all the availa
 ```
 
 ## Additioinal information: 
-
 **Identifying In-Store Pickup Orders:**
 
-When customers add qualifying items for in-store pickup, the HotWax Commerce BOPIS PDP App on Shopify adds a line item property indicating the pickup store location and reservation expiration date/time. 
+When customers add qualifying items for in-store pickup, HotWax OMS will require the order to have the line item property `_pickupstore` prefilled with the pickup store location. 
+
+Note: The line item property can be added  by the merchant development team. 
 
 **Order Download Process:**
 
