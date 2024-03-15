@@ -125,7 +125,7 @@ Learn more about [BOPIS Fulfillment](https://docs.hotwax.co/user-guides/orders/b
 
 ## Fulfillment of Pre-Orders
 
-When customers place a Pre-Order order on eCommerce, it is downloaded in HotWax Commerce alongside standard orders through the `Import Orders` job.
+When customers place a Pre-Order order on eCommerce, it is downloaded in HotWax Commerce alongside standard orders by the `Import Orders` job.
 
 Orders that have a pre-order tag and are assigned a promise date are automatically moved to the `Pre-Order Parking` in HotWax Commerce. This dedicated queue holds all pre-orders until their physical inventory is received. This ensures that the brokering process is not initiated for Pre-Orders that currently lack inventory but have inventory scheduled to arrive on a future date.
 
