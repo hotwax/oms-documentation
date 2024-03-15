@@ -1,3 +1,5 @@
+# Required Permissions from Shopify
+
 HotWax Commerce Integration App aids merchants in managing sales orders and store inventory efficiently. It simplifies the process by strategically allocating inventory to fulfill orders promptly, whether for same-day or next-day delivery, using options like Buy Online Pick Up In Store (BOPIS) and Ship from Store. It consolidates orders from online and physical stores, optimizing inventory management to ensure timely delivery to customers. Additionally, HotWax Commerce provides reporting capabilities, giving retailers insights into their business performance for informed decision-making. 
 
 As with any Shopify-integrated application, HotWax Commerce requires specific permissions to access and utilize essential store data effectively. This guide outlines the comprehensive list of access scopes required by HotWax Commerce to operates seamlessly within the Shopify ecosystem to deliver optimal performance and value to merchants.
