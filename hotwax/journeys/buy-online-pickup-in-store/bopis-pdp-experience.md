@@ -224,7 +224,7 @@ In case the customer's location is not available, you can display all the availa
 }
 ```
 
-## Additioinal information: 
+## Additioinal information
 **Identifying In-Store Pickup Orders:**
 
 When customers add qualifying items for in-store pickup, HotWax OMS will require the order to have the line item property `_pickupstore` prefilled with the pickup store location. 
