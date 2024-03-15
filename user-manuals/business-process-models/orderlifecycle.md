@@ -62,7 +62,7 @@ A fulfillment location can primarily be a store or a warehouse location. Let’s
 
 ### Store Fulfillment Success and Order Completion:
 
-If an order has been routed to a store location, it can be fulfilled using the <mark style="color:orange;">**HotWax Commerce Store Fulfillment App.**</mark>
+If an order has been routed to a store location, it can be fulfilled using the HotWax Commerce <mark style="color:orange;">**Store Fulfillment App.**</mark>
 
 After all the order items in the order are shipped, the order status is updated from <mark style="color:orange;">**“Approved” to "Completed"**</mark> within HotWax Commerce. A `Completed Orders` job in HotWax Commerce also updates tracking details and marks orders as <mark style="color:orange;">**“Fulfilled” in eCommerce.**</mark>
 
