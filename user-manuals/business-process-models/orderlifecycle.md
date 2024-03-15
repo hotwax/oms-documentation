@@ -2,6 +2,8 @@
 
 The Order Lifecycle Process Model illustrates how HotWax Commerce orchestrates the journey of an order from creation to approval, routing, and fulfillment, ensuring efficiency and accuracy at every stage.
 
+<figure><img src="../.gitbook/assets/order life cycle.png" alt=""><figcaption><p>Order lifecycle model</p></figcaption></figure>
+
 ## Order Creation
 
 In HotWax Commerce there’s a dedicated "New Orders" job that downloads new orders from eCommerce in bulk so that they can be further processed. These downloaded orders are automatically assigned a "created" status.
@@ -162,5 +164,3 @@ If an approved order has been allocated to the store, HotWax Commerce also autom
 Now, let's explore what happens when orders are canceled in HotWax Commerce:
 
 Similar to order cancellations initiated on the eCommerce platform, in HotWax Commerce, orders can be canceled whether they are in the "Created" or "Approved" status, provided that the order has not yet been shipped. When an order is canceled, its status is updated from "Created" to "Cancelled" or from "Approved" to "Cancelled," depending on the current stage of the order.
-
-<figure><img src="../.gitbook/assets/order life cycle.png" alt=""><figcaption><p>Order lifecycle model</p></figcaption></figure>
