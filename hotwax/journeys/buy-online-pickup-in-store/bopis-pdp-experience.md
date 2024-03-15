@@ -210,8 +210,8 @@ In case the customer's location is not available, you can display all the availa
 <ul>
 <li> Step 1: Call the storeLookup API without passing latitude and longitude coordinates to retrieve all facilities allowing BOPIS</li>
 <li> Step 2: Use the facility IDs returned in the response of the storeLookup API with the checkInventory API to get the facilities having inventory for the product </li>
-  <li> Step 3: Display all the locations with non-zero inventory on the PDP </li>
-</ol>
+<li> Step 3: Display all the locations with non-zero inventory on the PDP </li>
+</ul>
 
 #### Sample: 
 
