@@ -6,7 +6,6 @@ description: >-
 
 # Refresh Sales Order
 
-_**This document outlines a step-by-step process to reject the sales order items in the HotWax Commerce Order management system.**_
 
 1. Go to the Hamburger Menu > Order Management > Sales Orders to search order.
 2. Select the order to open the View Sales Order page.
