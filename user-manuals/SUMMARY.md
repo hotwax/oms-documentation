@@ -5,7 +5,7 @@
 
 ## Business Process Models
 
-* [Order Lifecycle Business Process Model](business-process-models/orderlifecycle.md)
+* [Order Lifecycle](business-process-models/orderlifecycle.md)
 
 ## Workflow
 
