@@ -37,8 +37,8 @@ Cancelling a sales order will automatically cancel all other sales order items i
 {% endhint %}
 
 
-1. Click the Status dropdown.&#x20;
-2. Select the Cancel function to cancel the entire sales order.&#x20;
+1. Click the Status dropdown.
+2. Select the Cancel function to cancel the entire sales order.
 
 {% embed url="https://youtu.be/u-CtB-pw-Kc" %}
 Video: Cancel sales order
@@ -49,7 +49,7 @@ Video: Cancel sales order
 ## Cancel Sales Order Items
 
 
-1. Go to the Item section.&#x20;
+1. Go to the Item section.
 2. Click the Edit Items function.
 3. Click the Delete function for  the respective line item/s.
 4. Click the Save function.
@@ -75,22 +75,22 @@ HotWax Commerce can update the following details from Shopify:
 
 **Verification at Shopify**
 
-1. Go to Shopify admin portal and search the order.&#x20;
-2. Verify the changes done on the existing order or perform the updation as required.&#x20;
+1. Go to Shopify admin portal and search the order.
+2. Verify the changes done on the existing order or perform the updation as required.
 3. Save the changes on Shopify.
 
 **Refresh Order in HotWax Commerce**
 
 1. Go back to the order view page
-2. Click the Refresh Order button from the header section.&#x20;
+2. Click the Refresh Order button from the header section.
 3. Verify that the order status and item status gets canceled.
 4. Go back to the Sales Order Find Page and select Approved and Canceled status from the order status filter dropdown.
 5. Verify the changes.
 
-**Note:**&#x20;
+**Note:**
 
 * The Canceled order status with  ‘Old Version’ tag signifies the previous order.
-* New Order with the same Shopify Order ID is created in HotWax Commerce OMS with updated information in the item section.&#x20;
+* New Order with the same Shopify Order ID is created in HotWax Commerce OMS with updated information in the item section.
 
 {% embed url="https://youtu.be/_e1VDQUgICs" %}
 Video: Refresh Sales Order

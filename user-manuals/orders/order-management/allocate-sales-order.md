@@ -10,13 +10,13 @@ To perform the order allocation tasks, we first navigate to the View Sales Order
 
 
 {% hint style="info" %}
-For automated facility selection, user can either wait next brokering run or use Broker Now function to broker items immediately.&#x20;
+For automated facility selection, user can either wait next brokering run or use Broker Now function to broker items immediately.
 {% endhint %}
 
 
-1. Select the line item and click Release function.&#x20;
-2. View the inventory and select any facility using the radio button.&#x20;
-3. Release the item to the selected facility.&#x20;
+1. Select the line item and click Release function.
+2. View the inventory and select any facility using the radio button.
+3. Release the item to the selected facility.
 4. Click the history function to view the changes.
 
 {% embed url="https://youtu.be/_8XcDyvb3sY" %}
@@ -27,9 +27,9 @@ Video: Release item
 
 
 
-1. Select the line item and click the Reject function.&#x20;
-2. Select the reason using the radio button and Save.&#x20;
-3. Confirm rejection.&#x20;
+1. Select the line item and click the Reject function.
+2. Select the reason using the radio button and Save.
+3. Confirm rejection.
 4. Click the history function to view the changes.
 
 
@@ -45,7 +45,7 @@ Video: Reject sales order items
 1. Click the Ship Items function.
 2. Select the line item/s to be marked as shipped.
 3. Select the Carrier party from the dropdown and enter the Tracking number.
-4. Mark the item as Shipped&#x20;
+4. Mark the item as Shipped
 5. Click the history function to view the changes.
 
 
@@ -59,7 +59,7 @@ Video: Ship items in OMS
 ### Update Auto-cancel Date on single order
 
 1. Go to the Item section and click on the edit function next to the auto-cancel date.
-2. Update the date from the Calendar&#x20;
+2. Update the date from the Calendar.
 3. Click on Save function to save changes.
 
 

@@ -21,8 +21,10 @@
 ## Orders
 
 * [Order management](orders/order-management/README.md)
-  * [Reports](order-management/reports.md)
-  * [Soft allocation](order-management/soft-allocations.md)
+  * [Update orders](orders/order-management/update-sales-order.md)
+  * [Allocation](orders/order-management/allocate-sales-order.md)
+  * [Soft allocation](orders/order-management/soft-allocations.md)
+  * [Reports](orders/order-management/reports.md)
 * [BOPIS Fulfillment App](bopis/README.md)
   * [Orders Page](orders/bopis/appnotifications/README.md)
     * [Notifications](orders/bopis/appnotifications/notifications.md)
