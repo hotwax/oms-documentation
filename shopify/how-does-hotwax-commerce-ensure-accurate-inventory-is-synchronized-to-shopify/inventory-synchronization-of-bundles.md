@@ -1,8 +1,12 @@
+---
+description: >-
+  Discover how HotWax Commerce ensures precise inventory synchronization of
+  bundles to Shopify.
+---
+
 # Inventory Synchronization of Bundles
 
 ### How does HotWax Commerce Ensure Accurate Inventory of Bundle is Synchronized to Shopify?
-
-
 
 In HotWax Commerce, components of bundles are associated with a parent product defined as a marketing package. This package, being a virtual product, doesn't have its own inventory. As a result, HotWax Commerce doesn't synchronize inventory data for this product.
 
@@ -23,7 +27,7 @@ For instance, if a customer buys a belt and its inventory reduces to 6, the Bund
 
 **Inventory Calculation without Bundles App**
 
-In the absence of the Bundles app, HotWax Commerce can also calculate inventory for bundles by considering the lowest available quantity among all components.&#x20;
+In the absence of the Bundles app, HotWax Commerce can also calculate inventory for bundles by considering the lowest available quantity among all components.
 
 For multi-location inventory, availability and levels of each component at every location are considered. Only when all products are available at a specific facility, the bundle’s inventory for that facility is counted.
 
@@ -37,4 +41,4 @@ Let's consider a bundle with Belts and Wallets as its components across differen
 
 HotWax Commerce ensures precise inventory management by calculating the inventory based on the lowest available quantity at a single facility. In this example, it would push an inventory of 3 to Shopify for this bundle, representing the available quantity of the scarcest component among all locations in the bundle.
 
-\
+\\
