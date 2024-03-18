@@ -3,6 +3,10 @@
 * [Launchpad](README.md)
 * [Glossary](GLOSSARY.md)
 
+## Business Process Models
+
+* [Order lifecycle](business-process-models/orderlifecycle.md)
+
 ## Workflow
 
 * [Job management](job-manager/README.md)
@@ -10,20 +14,22 @@
   * [Job categories](job-manager/flows/job-categories.md)
   * [Job queueing](job-manager/flows/job-queueing.md)
   * [Initial load](job-manager/flows/initial-load.md)
-  * [Bulk Scheduling](job-manager/flows/bulk-scheduling.md)
+  * [Bulk scheduling](job-manager/flows/bulk-scheduling.md)
 * [Job workflows](job-workflows/README.md)
   * [Orders](job-workflows/orders.md)
   * [Inventory](job-workflows/inventory.md)
   * [Products](job-workflows/products.md)
-* [Data Manager](data-manager/README.md)
+* [Data manager](data-manager/README.md)
   * [Configurations](data-manager/configurations.md)
   * [Imports](data-manager/imports.md)
 
 ## Orders
 
 * [Order management](orders/order-management/README.md)
-  * [Reports](order-management/reports.md)
-  * [Soft allocation](order-management/soft-allocations.md)
+  * [Update orders](orders/order-management/update-sales-order.md)
+  * [Allocation](orders/order-management/allocate-sales-order.md)
+  * [Soft allocation](orders/order-management/soft-allocations.md)
+  * [Reports](orders/order-management/reports.md)
 * [BOPIS Fulfillment App](bopis/README.md)
   * [Orders Page](orders/bopis/appnotifications/README.md)
     * [Notifications](orders/bopis/appnotifications/notifications.md)
@@ -48,7 +54,7 @@
   * [Order Routing](brokering/configurableRouting.md)
   * [Rule Builder](brokering/rule-builder.md)
   * [Reports](brokering/reports.md)
-* [Pre-orders](pre-orders/README.md)
+* [Pre-Orders](pre-orders/README.md)
   * [Purchase Order Upload](pre-orders/purchase-order-uploads.md)
   * [Purchase Order Management](pre-orders/purchase-order-management.md)
   * [Pre-order Jobs](pre-orders/pre-order-jobs.md)
@@ -66,14 +72,14 @@
 * [Receiving](inventory/receiving/README.md)
   * [Inventory Receiving](receiving/receiving.md)
   * [Reports](receiving/reports.md)
-* [Cycle Counting](inventory/cycle-counting/README.md)
+* [Cycle counting](inventory/cycle-counting/README.md)
   * [Inventory count](inventory-count/inventory-count.md)
   * [Reports](inventory-count/reports.md)
-* [Inventory Upload](import-app/inventory.md)
-* [Safety Stock](inventory/safety-stock/README.md)
+* [Inventory upload](import-app/inventory.md)
+* [Safety stock](inventory/safety-stock/README.md)
   * [Set Bulk Safety Stock](inventory/safety-stock/set-bulk-safety-stock.md)
   * [Set Individual Safety Stock](inventory/safety-stock/set-individual-safety-stock.md)
-* [Multichannel Inventory Setup](inventory/multichannel-inventory-setup.md)
+* [Multichannel inventory setup](inventory/multichannel-inventory-setup.md)
 
 ## Administration
 
@@ -96,6 +102,6 @@
   * [Disabling facilities](facilities/disabling-facilities.md)
   * [Manage parkings](facilities/manage-parkings.md)
   * [Manage Groups](facilities/manage-groups.md)
-* [Shipping Methods](administration/shipping-methods/README.md)
+* [Shipping methods](administration/shipping-methods/README.md)
   * [Create Carrier](administration/shipping-methods/add-carrier.md)
-* [Delete Customers](delete-customers.md)
+* [Delete customers](delete-customers.md)
