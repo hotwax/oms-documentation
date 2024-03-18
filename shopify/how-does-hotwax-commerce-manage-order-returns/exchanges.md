@@ -1,3 +1,9 @@
+---
+description: >-
+  Discover how HotWax Commerce efficiently handles exchanges. Simplify your
+  exchange processes seamlessly.
+---
+
 # Exchanges
 
 ## How Does HotWax Commerce Handle Exchanges?
@@ -34,7 +40,7 @@ POS exchange sales are similar to other POS sales as both the transactions recor
 
 Given that POS exchanges are created in Loop POS and synced by Loop to Shopify, they are assigned the sales channel `Loop Exchange` within Shopify. Consequently, all POS exchanges imported into HotWax Commerce have a `Loop Exchange` sales channel as well.
 
-When POS sales are downloaded in HotWax Commerce, POS sales have a `Completed` status, the sales channel is set to `POS_Channel`, and shipping method is set to `POS_COMPLETED`. While, in the case of POS exchange sales, although they also have a `Completed` status, their sales channel is `Loop Exchange.` Due to this distinction, HotWax Commerce is unable to assign their shipping method as POS_COMPLETED. Instead, it is designated as `Two-Day Shipping` as default.
+When POS sales are downloaded in HotWax Commerce, POS sales have a `Completed` status, the sales channel is set to `POS_Channel`, and shipping method is set to `POS_COMPLETED`. While, in the case of POS exchange sales, although they also have a `Completed` status, their sales channel is `Loop Exchange.` Due to this distinction, HotWax Commerce is unable to assign their shipping method as POS\_COMPLETED. Instead, it is designated as `Two-Day Shipping` as default.
 
 #### Linking New Exchange Orders with the Original Order
 

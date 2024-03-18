@@ -1,7 +1,12 @@
+---
+description: >-
+  Discover how to handle partial order cancellations in Shopify and their
+  updates in HotWax Commerce.
+---
+
 # Partial Order Cancellation
 
-**Partial Cancellations in Shopify and updated in HotWax Commerce**\
-
+**Partial Cancellations in Shopify and updated in HotWax Commerce**\\
 
 When some items from an order are fulfilled and the rest are canceled, it is called partial cancellation. For partial cancellation, the order status in Shopify does not change, only the last updated date for the order changes. HotWax Commerce Cancels the order through the following steps:
 

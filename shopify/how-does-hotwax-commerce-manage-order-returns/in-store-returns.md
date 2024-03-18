@@ -1,10 +1,16 @@
+---
+description: >-
+  Learn how retailers can process in-store returns for online orders seamlessly
+  with HotWax Commerce.
+---
+
 # In-Store Returns
 
 ### How Can Retailers take In-store returns for Online Orders?
 
 Shopify retailers can efficiently manage in-store returns for online orders in two scenarios:
 
-**When Using Shopify POS:** In this case, Shopify POS is already linked with Shopify e-commerce, providing access to online order IDs within the POS system. When in-store returns are created in Shopify POS for online orders, these return details are stored in Shopify. HotWax Commerce utilizes the 'Import Order Return' job, which works seamlessly for both Shopify e-commerce and Shopify POS, to download refund information and transfer transaction details to the ERP.&#x20;
+**When Using Shopify POS:** In this case, Shopify POS is already linked with Shopify e-commerce, providing access to online order IDs within the POS system. When in-store returns are created in Shopify POS for online orders, these return details are stored in Shopify. HotWax Commerce utilizes the 'Import Order Return' job, which works seamlessly for both Shopify e-commerce and Shopify POS, to download refund information and transfer transaction details to the ERP.
 
 The key difference is that when in-store returns occur in Shopify POS, HotWax Commerce captures the facility ID where the returned inventory is received, alongside the refund information. Subsequently, HotWax Commerce manages the inventory restocking based on the facility ID.
 

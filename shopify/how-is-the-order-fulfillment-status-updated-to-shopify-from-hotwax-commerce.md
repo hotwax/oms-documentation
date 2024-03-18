@@ -1,4 +1,10 @@
-# How is the Order Fulfillment Status Updated to Shopify from HotWax Commerce?
+---
+description: >-
+  Optimize workflow by fulfilling orders in HotWax Commerce with the Fulfillment
+  app or external systems like Warehouse Management Systems.
+---
+
+# Order Fulfillment
 
 Once the order is routed to the fulfillment center in HotWax Commerce, it can be fulfilled using either the HotWax Commerce Fulfillment app or an external system such as a Warehouse Management System (WMS).
 
@@ -8,7 +14,7 @@ HotWax Commerce provides a Fulfillment app that enables the picking, packing, an
 
 2. **Fulfillment By An External System**
 
-For orders fulfilled by an external system, HotWax Commerce only receives the fulfillment status from the external system and marks the order as 'Completed'. Once the order is marked as completed in HotWax Commerce, it sends the tracking details (if they are provided by the external system) to Shopify and marks the orders 'Fulfilled' in Shopify.&#x20;
+For orders fulfilled by an external system, HotWax Commerce only receives the fulfillment status from the external system and marks the order as 'Completed'. Once the order is marked as completed in HotWax Commerce, it sends the tracking details (if they are provided by the external system) to Shopify and marks the orders 'Fulfilled' in Shopify.
 
 In HotWax Commerce, users can schedule the 'Completed Orders' job to generate a file containing all orders that have been completed since the last upload. This file is then uploaded to an SFTP location. HotWax Commerce subsequently uses the API to send the fulfillment status of each completed order to Shopify. Shopify processes these requests and updates the order status to 'fulfilled'.
 
@@ -18,4 +24,4 @@ It is recommended that this task be done every 30 minutes. During each run, it w
 
 <figure><img src=".gitbook/assets/Completed Orders (1).png" alt=""><figcaption><p><em>Fig. 1: Configuration of the completed orders job in the Job Manager App</em></p></figcaption></figure>
 
-\
+\\

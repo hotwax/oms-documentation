@@ -1,9 +1,12 @@
+---
+description: Discover how HotWax Commerce efficiently downloads BOPIS orders from Shopify.
+---
+
 # BOPIS Order Download
 
 ### How HotWax Commerce downloads BOPIS orders from Shopify?
 
-When a customer selects a store for pick up, the HotWax Commerce BOPIS PDP application on Shopify includes a line item property that includes the customer's preferred pick up location.\
-
+When a customer selects a store for pick up, the HotWax Commerce BOPIS PDP application on Shopify includes a line item property that includes the customer's preferred pick up location.\\
 
 <figure><img src="../.gitbook/assets/BOPIS Line item.png" alt=""><figcaption><p><em>Fig.4 : Line item property added by Shopify</em></p></figcaption></figure>
 

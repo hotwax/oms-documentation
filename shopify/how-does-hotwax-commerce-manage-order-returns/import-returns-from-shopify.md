@@ -1,3 +1,9 @@
+---
+description: >-
+  Discover how HotWax Commerce seamlessly imports returns from Shopify for
+  online returns.
+---
+
 # Import Returns from Shopify
 
 ### How Does HotWax Commerce Import Returns from Shopify for Online Returns?
@@ -6,8 +12,7 @@ The process of importing returns from Shopify to HotWax Commerce typically invol
 
 * Retailers can schedule the "Import Order Returns" job in HotWax Commerce to efficiently manage the import of order returns. HotWax Commerce initiates this process by sending an API request to Shopify, specifically targeting orders with a "Refund" status in Shopify, provided they were created after the last job run. In response, Shopify returns detailed return data in JSON format, facilitating the integration of return information. The frequency at which the "Import Order Returns" job is executed can be configured, but a recommended time interval for this job is 6 hours.
 
-Shopify allows the download of up to 250 returns per API call. To ensure data accuracy and prevent potential issues arising from multiple orders within a single return, HotWax Commerce restricts each API call to download a maximum of 100 returns.\
-
+Shopify allows the download of up to 250 returns per API call. To ensure data accuracy and prevent potential issues arising from multiple orders within a single return, HotWax Commerce restricts each API call to download a maximum of 100 returns.\\
 
 <figure><img src="../.gitbook/assets/Order Returns.png" alt=""><figcaption><p>Fig.1(i): Import Order Returns in HotWax Commerce</p></figcaption></figure>
 

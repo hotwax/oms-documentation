@@ -1,3 +1,9 @@
+---
+description: >-
+  Explore how HotWax Commerce efficiently manages appeasements to streamline
+  customer service processes effortlessly.
+---
+
 # Appeasements
 
 ### How Does HotWax Commerce Handle Appeasements?
