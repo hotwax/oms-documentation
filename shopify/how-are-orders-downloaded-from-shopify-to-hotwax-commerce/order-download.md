@@ -1,3 +1,9 @@
+---
+description: >-
+  Discover the process of downloading initial orders from Shopify to HotWax
+  Commerce. Streamline your order management effortlessly.
+---
+
 # Order Download
 
 ### Initial Order Download From Shopify To Hotwax Commerce
