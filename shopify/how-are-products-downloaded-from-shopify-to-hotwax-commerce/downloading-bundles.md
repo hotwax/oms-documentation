@@ -1,3 +1,9 @@
+---
+description: >-
+  Learn how bundles are efficiently downloaded from Shopify to HotWax Commerce
+  for enhanced product management.
+---
+
 # Downloading Bundles
 
 ### How are Bundles downloaded from Shopify to HotWax Commerce?
