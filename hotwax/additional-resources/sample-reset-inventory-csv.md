@@ -1,3 +1,9 @@
+---
+description: >-
+  Explore API and data feeds within the 'Sample Reset Inventory csv'
+  documentation.
+---
+
 # Sample Reset Inventory csv
 
 ```csv
