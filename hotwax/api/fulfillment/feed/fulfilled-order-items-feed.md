@@ -1,7 +1,7 @@
 ---
 description: >-
-  Explore details on order items fulfilled from a specific facility within
-  HotWax Commerce's 'Update Orders' subcategory.
+  Explore the Fulfilled Order Items Feed, containing items fulfilled from a
+  specific facility in HotWax Commerce
 ---
 
 # Fulfilled Order Items Feed
