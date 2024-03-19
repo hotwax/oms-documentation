@@ -12,4 +12,4 @@
 | **guatex**        | v4.19.0 | `https://git.hotwax.co/plugins/shipping-integrations/guatex.git` |
 | **terminal-express** | v4.19.0 | `https://git.hotwax.co/plugins/shipping-integrations/terminal-express.git` |
 | **cargotrans**    | v4.19.0 | `https://git.hotwax.co/plugins/shipping-integrations/cargotrans.git` |
-| **easypost**    | v5.3.0 | `https://git.hotwax.co/plugins/shipping-integrations/easypost.git` |
+| **easypost**    | v5.5.0 | `https://git.hotwax.co/plugins/shipping-integrations/easypost.git` |

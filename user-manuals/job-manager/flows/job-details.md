@@ -10,8 +10,6 @@ description: >-
 
 Every automation task is organized within a dedicated Job Details page, providing a clear overview of job information and actions. This centralized approach ensures quick access to job configurations and facilitates job management.
 
-<figure><img src="../../jobManager/.gitbook/assets/Screenshot%202023-11-06%20at%207.16.27%20PM.png" alt=""><figcaption><p>Image: Job details page</p></figcaption></figure>
-
 ***
 
 ## Job information
