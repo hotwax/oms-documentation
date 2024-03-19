@@ -1,4 +1,11 @@
-# Our Approach
+---
+description: >-
+  Learn how our integration methodologies for NetSuite ensure seamless and
+  efficient data transfer, prioritizing reliability and scalability over
+  real-time REST APIs for improved data integrity and erro
+---
+
+# Introduction
 
 Integrating data between NetSuite and HotWax Commerce is a critical aspect of our system, and it's accomplished through a well-thought-out methodology.
 
