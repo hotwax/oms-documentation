@@ -1,17 +1,22 @@
-# Easy Post Integration
+---
+description: >-
+  Discover how Hotwax Commerce integrates with EasyPost, providing businesses of
+  all sizes with a streamlined shipping solution.
+---
+
+# Easy Post
 
 ## Introduction
-Hotwax Commerce integrates with EasyPost to empower businesses, ranging from small enterprises to large corporations, with a streamlined shipping solution. This integration enables users to leverage the full capabilities of EasyPost, including rate shopping across a diverse range of carriers and real-time package tracking. 
+
+Hotwax Commerce integrates with EasyPost to empower businesses, ranging from small enterprises to large corporations, with a streamlined shipping solution. This integration enables users to leverage the full capabilities of EasyPost, including rate shopping across a diverse range of carriers and real-time package tracking.
 
 ## Authentication
 
 Authentication and identification to the EasyPost API are accomplished by utilizing an API Key in every request. This API Key serves as your Basic Auth username, and no password is required. The authentication process ensures secure communication with the EasyPost API, and it is imperative to note the following details:
 
-- **Authentication Type**: EasyPost employs API Key-based authentication for requests. Each request must include the API Key as the Basic Auth username. The absence of a valid API Key or the use of an incorrect key will result in authentication failure.
-
-- **Security Protocol**: EasyPost mandates that all communication with the API is secured using TLS v1.2. Transport Layer Security (TLS) ensures the confidentiality and integrity of data exchanged between Hotwax Commerce and EasyPost, providing a secure environment for API interactions.
-
-- **HTTP Restrictions**: Requests made over HTTP are not supported. It is crucial to utilize HTTPS for all communication with the EasyPost API. Any attempt to make requests over HTTP will result in failure.
+* **Authentication Type**: EasyPost employs API Key-based authentication for requests. Each request must include the API Key as the Basic Auth username. The absence of a valid API Key or the use of an incorrect key will result in authentication failure.
+* **Security Protocol**: EasyPost mandates that all communication with the API is secured using TLS v1.2. Transport Layer Security (TLS) ensures the confidentiality and integrity of data exchanged between Hotwax Commerce and EasyPost, providing a secure environment for API interactions.
+* **HTTP Restrictions**: Requests made over HTTP are not supported. It is crucial to utilize HTTPS for all communication with the EasyPost API. Any attempt to make requests over HTTP will result in failure.
 
 By adhering to these authentication specifications, Hotwax Commerce ensures the secure and authenticated exchange of data with EasyPost. The API Key serves as the access credential, and the implementation of TLS v1.2 guarantees the confidentiality and integrity of the information transmitted during the integration process. Please refer to the following example to understand how to include the API Key in your requests:
 
@@ -23,14 +28,15 @@ Authorization: Basic YOUR_API_KEY
 
 Replace `YOUR_API_KEY` with the actual API Key provided by EasyPost for your integration. This authentication mechanism ensures a seamless and secure connection between Hotwax Commerce and the EasyPost API for shipping label generation.
 
-## APIs used 
+## APIs used
 
 HotWax integrates with EasyPost using three key APIs, each serving a distinct purpose in the shipping label generation process.
 
 ### Create a Shipment API
 
 #### Purpose:
-The Create a Shipment API is utilized to share all necessary details of a shipment with EasyPost. This includes shipment information such as package dimensions, weight, origin, and destination. In return, the API fetches rates available from different carriers for shipping the specified package. 
+
+The Create a Shipment API is utilized to share all necessary details of a shipment with EasyPost. This includes shipment information such as package dimensions, weight, origin, and destination. In return, the API fetches rates available from different carriers for shipping the specified package.
 
 #### Method
 
@@ -43,10 +49,11 @@ https://api.easypost.com/v2/shipments
 #### Request:
 
 {% hint style="info" %}
-The `postage_label` parameter generates labels with specific size and format requirements tailored for use with `Frank and Oak` i.e. `4 x 6`. Users have the flexibility to configure parameters to customize the label, and in cases where specific values are not provided, the function will default to a predefined size and format. 
+The `postage_label` parameter generates labels with specific size and format requirements tailored for use with `Frank and Oak` i.e. `4 x 6`. Users have the flexibility to configure parameters to customize the label, and in cases where specific values are not provided, the function will default to a predefined size and format.
 {% endhint %}
 
 <details>
+
 <summary>Sample request</summary>
 
 ```json
@@ -77,32 +84,32 @@ The `postage_label` parameter generates labels with specific size and format req
   }
 }
 ```
+
 </details>
 
-
-| Field in EasyPost                            | Field in HotWax                  |
-|----------------------------------------------|----------------------------------|
-| `to_address.name`                            | `shipToName`                     |
-| `to_address.street1`                         | `shipToAddressLine1`             |
-| `to_address.city`                            | `shipToCity`                     |
-| `to_address.state`                           | `shipToState`                    |
-| `to_address.zip`                             | `shipToPostalCode`               |
-| `to_address.country`                         | `shipToCountryCode`              |
-| `to_address.phone`                           | `shipToPhone`                    |
-| `to_address.email`                           | `shipToEmail`                    |
-| `from_address.name`                          | `shipFromName`                   |
-| `from_address.name` (nested in `from_address`) | `shipFromCompanyName`          |
-| `from_address.street1`                       | `shipFromAddressLine1`           |
-| `from_address.city`                          | `shipFromCity`                   |
-| `from_address.state`                         | `shipFromState`                  |
-| `from_address.zip`                           | `shipFromPostalCode`             |
-| `from_address.country`                       | `shipFromCountryCode`            |
-| `from_address.phone`                         | `shipFromPhone`                  |
-| `from_address.email`                         | `shipFromEmail`                  |
-| `parcel.length`                              | `length`                         |
-| `parcel.width`                               | `width`                          |
-| `parcel.height`                              | `height`                         |
-| `parcel.weight`                              | `weight`                         |
+| Field in EasyPost                              | Field in HotWax        |
+| ---------------------------------------------- | ---------------------- |
+| `to_address.name`                              | `shipToName`           |
+| `to_address.street1`                           | `shipToAddressLine1`   |
+| `to_address.city`                              | `shipToCity`           |
+| `to_address.state`                             | `shipToState`          |
+| `to_address.zip`                               | `shipToPostalCode`     |
+| `to_address.country`                           | `shipToCountryCode`    |
+| `to_address.phone`                             | `shipToPhone`          |
+| `to_address.email`                             | `shipToEmail`          |
+| `from_address.name`                            | `shipFromName`         |
+| `from_address.name` (nested in `from_address`) | `shipFromCompanyName`  |
+| `from_address.street1`                         | `shipFromAddressLine1` |
+| `from_address.city`                            | `shipFromCity`         |
+| `from_address.state`                           | `shipFromState`        |
+| `from_address.zip`                             | `shipFromPostalCode`   |
+| `from_address.country`                         | `shipFromCountryCode`  |
+| `from_address.phone`                           | `shipFromPhone`        |
+| `from_address.email`                           | `shipFromEmail`        |
+| `parcel.length`                                | `length`               |
+| `parcel.width`                                 | `width`                |
+| `parcel.height`                                | `height`               |
+| `parcel.weight`                                | `weight`               |
 
 #### Response:
 
@@ -113,6 +120,7 @@ The `postage_label` parameter generates labels with specific size and format req
 In response, `Easy Post` shares three types of rates, and in our integration, we're utilizing the rates found in the `rate` attribute for rate shopping. For further details about the rates, you can refer to [this](https://www.easypost.com/docs/api#rate-object) documentation provided by Easy Post.
 
 <details>
+
 <summary>Sample response</summary>
 
 ```json
@@ -303,18 +311,21 @@ In response, `Easy Post` shares three types of rates, and in our integration, we
 }
 }
 ```
+
 </details>
 
 ### Buy a Shipment API
 
 #### Purpose:
+
 The Buy a Shipment API is employed to share the rate ID of a specific shipment with EasyPost. This API facilitates the retrieval of a shipping label corresponding to the provided rate ID.
 
-#### Method 
+#### Method
 
 `POST`
 
 #### Endpoint:
+
 ```
 https://api.easypost.com/v2/shipments/shp_7383fa71161645259664060fb5c41c32/buy
 ```
@@ -322,6 +333,7 @@ https://api.easypost.com/v2/shipments/shp_7383fa71161645259664060fb5c41c32/buy
 #### Request:
 
 <details>
+
 <summary>Sample request</summary>
 
 ```json
@@ -331,14 +343,15 @@ https://api.easypost.com/v2/shipments/shp_7383fa71161645259664060fb5c41c32/buy
     }
 }
 ```
+
 </details>
 
-| Field in EasyPost     | Field in HotWax |
-|-----------------------|------------------|
-| `id`                  | `rateId`         |
-
+| Field in EasyPost | Field in HotWax |
+| ----------------- | --------------- |
+| `id`              | `rateId`        |
 
 #### Response:
+
 {% hint style="info" %}
 `EasyPost` consistently structures its responses, maintaining a common format. Unique details specified in each request are appended to this structure, ensuring dynamic adaptability while preserving a standardized response format.
 
@@ -346,6 +359,7 @@ In this response, HotWax relies on two vital fields: `tracking_code` provides th
 {% endhint %}
 
 <details>
+
 <summary>Sample response</summary>
 
 ```json
@@ -430,18 +444,21 @@ In this response, HotWax relies on two vital fields: `tracking_code` provides th
         "label_file": null
     }
 ```
+
 </details>
 
 ### Refund a Shipment API
 
 #### Purpose:
+
 The Refund a Shipment API is employed to void the shipping label generated for a specific shipment. This is useful in cases where a shipment needs to be canceled or rerouted.
 
-#### Method 
+#### Method
 
 `POST`
 
 #### Endpoint:
+
 ```
 https://api.easypost.com/v2/shipments/shp_a88f34ee108f4e82ab04b3570863f7fb/refund
 ```
@@ -449,6 +466,7 @@ https://api.easypost.com/v2/shipments/shp_a88f34ee108f4e82ab04b3570863f7fb/refun
 #### Request:
 
 <details>
+
 <summary>Sample request</summary>
 
 ```json
@@ -456,17 +474,19 @@ https://api.easypost.com/v2/shipments/shp_a88f34ee108f4e82ab04b3570863f7fb/refun
   "shipment_id": "abc123"
 }
 ```
+
 </details>
 
 #### Response:
+
 {% hint style="info" %}
 `EasyPost` consistently structures its responses, maintaining a common format. Unique details specified in each request are appended to this structure, ensuring dynamic adaptability while preserving a standardized response format.
 
 In this response, HotWax relies on a key field, specifically `refund_status`. Based on the response, HotWax confirms whether the label is void or not.
 {% endhint %}
 
-
 <details>
+
 <summary>Sample response</summary>
 
 ```json
@@ -631,6 +651,7 @@ In this response, HotWax relies on a key field, specifically `refund_status`. Ba
 }
 }
 ```
+
 </details>
 
 These three APIs form the core of the integration, allowing HotWax to seamlessly create shipments, obtain rates, purchase shipping labels, and refund shipments as needed using EasyPost's extensive carrier network. Refer to the respective API documentation for detailed information on request and response parameters.
@@ -638,22 +659,27 @@ These three APIs form the core of the integration, allowing HotWax to seamlessly
 ## Error handling
 
 **Bad Request (HTTP 400)**
-- Description: The request was malformed or missing required parameters.
-- Handling: Check your request parameters and ensure they comply with the API documentation.
+
+* Description: The request was malformed or missing required parameters.
+* Handling: Check your request parameters and ensure they comply with the API documentation.
 
 **Unauthorized (HTTP 401)**
-- Description: The request lacks proper authentication credentials or the provided credentials are invalid.
-- Handling: Double-check your API key or authentication credentials.
+
+* Description: The request lacks proper authentication credentials or the provided credentials are invalid.
+* Handling: Double-check your API key or authentication credentials.
 
 **Not Found (HTTP 404)**
-- Description: The requested resource could not be found.
-- Handling: Review the API endpoint to ensure it is correct.
+
+* Description: The requested resource could not be found.
+* Handling: Review the API endpoint to ensure it is correct.
 
 **Server Error (HTTP 5xx)**
-- Description: The server encountered an internal error.
-- Handling: Report the issue to the API provider. Retry the request later.
+
+* Description: The server encountered an internal error.
+* Handling: Report the issue to the API provider. Retry the request later.
 
 ## References
+
 ```
 - https://www.easypost.com/docs/api#create-a-shipment
 - https://www.easypost.com/docs/api#buy-a-shipment
