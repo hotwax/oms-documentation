@@ -1,3 +1,9 @@
+---
+description: >-
+  Learn how HotWax Commerce's Cycle Count App enhances inventory accuracy by
+  seamlessly synchronizing with NetSuite for consistent records.
+---
+
 # Cycle Count
 
 Managing inventory accuracy in a retail business is a perpetual challenge. Store managers often encounter discrepancies between the recorded inventory in their systems and the actual physical stock on hand. To address these discrepancies, retailers periodically conduct inventory cycle counts. An inventory cycle count is a methodical approach that involves periodically counting a specific subset of items. Unlike a full physical inventory count, which requires tallying every item at once, cycle counts distribute the counting process over time, improving efficiency.
@@ -134,9 +140,9 @@ Import Inventory Variance from SFTP:
 HC_SC_ImportInventoryAdjustment.js
 ```
 
-{% file src="../.gitbook/assets/Inventory Item Variances Sample Feed.csv" %}
-
 ## Benefits:
+
+{% file src="../.gitbook/assets/Inventory Item Variances Sample Feed.csv" %}
 
 The automated synchronization of inventory variances from HotWax Commerce to NetSuite offers numerous advantages:
 

@@ -1,3 +1,9 @@
+---
+description: >-
+  Discover how transfer orders in NetSuite synchronize with HotWax Commerce,
+  streamlining inventory movement and ensuring efficient stock allocation.
+---
+
 # Transfer Orders
 
 Transfer orders are instrumental in the internal movement of inventory within an omnichannel retail environment. They are used to transfer inventory from warehouses to stores or between stores. This process is typically initiated when stores require additional inventory to meet customer demands. Retail merchandisers strategically plan inventory transfers, sourcing them either from centralized warehouses or from stores with an excess of stock that isn't selling.
