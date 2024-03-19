@@ -1,3 +1,9 @@
+---
+description: >-
+  Explore the automated daily synchronization of inventory data from NetSuite to
+  HotWax Commerce, ensuring real-time inventory updates.
+---
+
 # Inventory
 
 NetSuite serves as the central system of record for tracking product inventories across various retail locations. Inventory transactions in Netsuite, encompassing the creation and reception of purchase orders (POs) in warehouses, as well as the fulfillment of online orders from these warehouses, are vital components for maintaining real-time and precise inventory records.

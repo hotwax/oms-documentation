@@ -1,3 +1,9 @@
+---
+description: >-
+  Discover how order approval in HotWax Commerce ensures seamless integration
+  with NetSuite, preventing conflicts and errors in order fulfillment.
+---
+
 # Order Approval
 
 Orders that are in "Created" status in HotWax Commerce are pushed to NetSuite rather than orders that are in "Approved" status. It's important to note the rationale behind this decision.

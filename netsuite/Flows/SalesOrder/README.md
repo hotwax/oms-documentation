@@ -1,3 +1,10 @@
+---
+description: >-
+  Learn how HotWax Commerce seamlessly processes and fulfills online sales
+  orders from e-Commerce platforms like Shopify, efficiently routing orders
+  based on inventory availability, cost, and time.
+---
+
 # Sales Orders
 
 In the dynamic world of e-commerce, the efficient fulfillment of online sales orders is a critical aspect of a retailer's success. When online orders are placed via e-Commerce platforms like Shopify, they need to be quickly processed and fulfilled to meet promised delivery timelines while optimizing operational costs.Online orders placed on platforms like Shopify are downloaded into the HotWax Commerce for processing and fulfillment. HotWax Commerce plays a pivotal role in this process by seamlessly routing orders to the most suitable fulfillment locations. The decision is based on factors such as inventory availability, cost, and time, ensuring efficient order processing.
