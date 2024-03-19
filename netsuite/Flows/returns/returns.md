@@ -1,3 +1,10 @@
+---
+description: >-
+  Explore how retailers synchronize web returns from Shopify to NetSuite using
+  Loop as middleware or HotWax Commerce as the Order Management System (OMS),
+  ensuring efficient processing of returns across
+---
+
 # Returns
 
 In omnichannel retailing, retailers provide customers with the options for online returns as well as in-store returns.
