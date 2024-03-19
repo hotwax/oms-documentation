@@ -1,16 +1,21 @@
+---
+description: >-
+  Explore how the Order Reconciliations API call offers insights into failed
+  orders, aiding in Shopify to HotWax Commerce synchronization.
+---
+
 # Order Reconciliations
 
 This API call provides users with log insights for failed orders that may not have been successfully downloaded from Shopify to HotWax Commerce. To retrieve the log details of these failed orders, make a GET request to the `/solr-query` endpoint.
 
 ## Request
 
-**End Point**
-`https://<instance.name>.hotwax.io/api/solr-query`
+**End Point** `https://<instance.name>.hotwax.io/api/solr-query`
 
 Example: `https://demo-oms.hotwax.io/api/solr-query`
 
-
 ### Request Format
+
 ```json
 {
   "json": {
@@ -21,16 +26,18 @@ Example: `https://demo-oms.hotwax.io/api/solr-query`
   "coreName": "logInsights"
 }
 ```
+
 ### Parameter Table
 
-| Parameter Name | Description                             |
-| -------------- | --------------------------------------- |
-| `docType`        | The Type of the document                |
-| `coreName`       | A single index or associated transaction log and configuration files |
+| Parameter Name | Description                                                          |
+| -------------- | -------------------------------------------------------------------- |
+| `docType`      | The Type of the document                                             |
+| `coreName`     | A single index or associated transaction log and configuration files |
 
 ## Response
 
 ### Body
+
 ```json
 {
     "responseHeader": {
@@ -100,17 +107,18 @@ Example: `https://demo-oms.hotwax.io/api/solr-query`
     }
 }
 ```
+
 ### Parameter Table
 
-| Parameter Name       | Description                                                |
-| -------------------- | ---------------------------------------------------------- |
-| `site`                 | Shopify Store URL containing order details                 |
-| `shopifyOrderName`     | Unique identifier of the order in Shopify                   |
-| `orderCreatedDate`     | Date when the order was created on Shopify                  |
+| Parameter Name         | Description                                                                    |
+| ---------------------- | ------------------------------------------------------------------------------ |
+| `site`                 | Shopify Store URL containing order details                                     |
+| `shopifyOrderName`     | Unique identifier of the order in Shopify                                      |
+| `orderCreatedDate`     | Date when the order was created on Shopify                                     |
 | `firstAttemptedImport` | Date when the order import from Shopify to HotWax Commerce was first attempted |
-| `docType`              | The type of the document                                    |
-| `ttl`               | Time duration of the data, also called time to live         |
-| `errorMessage`        | The error message for the job failure                       |
-| `timestamp`            | The timestamp for the API call                               |
-| `expire_at`            | Data expiry date            |
-| `document-id`         | Unique identifier of the document                            |
+| `docType`              | The type of the document                                                       |
+| `ttl`                  | Time duration of the data, also called time to live                            |
+| `errorMessage`         | The error message for the job failure                                          |
+| `timestamp`            | The timestamp for the API call                                                 |
+| `expire_at`            | Data expiry date                                                               |
+| `document-id`          | Unique identifier of the document                                              |

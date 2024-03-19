@@ -1,6 +1,12 @@
-# Create picklist API
+---
+description: >-
+  Learn how to create picklists for order item pickups efficiently within the
+  'Brokering WIP' documentation.
+---
 
-Creates a picklist of the order items to be picked up. To create a picklist, you will need to call the /createPicklist endpoint with the POST method. 
+# Create Picklist
+
+Creates a picklist of the order items to be picked up. To create a picklist, you will need to call the /createPicklist endpoint with the POST method.
 
 ## Request
 
@@ -30,24 +36,23 @@ _rowSubmit_o_0: Y
 pickerIds: 10000
 ```
 
-Note: Pass the data in form format. 
+Note: Pass the data in form format.
 
-| Parameter        | Description                                               | Required (Y/N) |
-|------------------|-----------------------------------------------------------|----------------|
-| `facilityId`        | The ID of the facility                         |            |
-| `facilityId_o_0`        | The ID of the picklist bin                          |            |
-| `shipmentMethodTypeId_o_0`        | The ID of the shipment method type                      |            |
-| `itemStatusId_o_0`        | The ID of the item status                  |            |
-| `shipGroupSeqId_o_0`        | The ID of the ship group sequence                          |            |
-| `orderId_o_0`        | The ID of the order             |            |
-| `orderItemSeqId_o_0`        | The ID of the order item sequence                          |            |
-| `productId_o_0`        | The ID of the product                     |            |
-| `quantity_o_0`        | The quantity of the items                      |            |
-| `inventoryItemId_o_0`        | The ID of the inventory item                         |            |
-| `picked_o_0`        | The number of items to be picked                        |            |
-| `_rowSubmit_o_0`        |                       |            |
-| `pickerIds`        | The ID of the picker                          |            |
-
+| Parameter                  | Description                        | Required (Y/N) |
+| -------------------------- | ---------------------------------- | -------------- |
+| `facilityId`               | The ID of the facility             |                |
+| `facilityId_o_0`           | The ID of the picklist bin         |                |
+| `shipmentMethodTypeId_o_0` | The ID of the shipment method type |                |
+| `itemStatusId_o_0`         | The ID of the item status          |                |
+| `shipGroupSeqId_o_0`       | The ID of the ship group sequence  |                |
+| `orderId_o_0`              | The ID of the order                |                |
+| `orderItemSeqId_o_0`       | The ID of the order item sequence  |                |
+| `productId_o_0`            | The ID of the product              |                |
+| `quantity_o_0`             | The quantity of the items          |                |
+| `inventoryItemId_o_0`      | The ID of the inventory item       |                |
+| `picked_o_0`               | The number of items to be picked   |                |
+| `_rowSubmit_o_0`           |                                    |                |
+| `pickerIds`                | The ID of the picker               |                |
 
 ## Response
 
@@ -78,11 +83,11 @@ Note: Pass the data in form format.
 
 ```
 
-| Parameter                | Description                                                  |
-|--------------------------|--------------------------------------------------------------|
-| `picklistId_o_0` | The ID of the picklist                       |
-| `picklistBinId_o_0`        | The ID of the picklist bin                      |
-| `itemStatusId_o_0`        | The ID of the item status                        |
-| `picklistId`   | The ID of the picklist               |
-| `picklistBinId` | The ID of the picklist bin                        |
-| `productId_o_0`        | The ID of the product                      |
+| Parameter           | Description                |
+| ------------------- | -------------------------- |
+| `picklistId_o_0`    | The ID of the picklist     |
+| `picklistBinId_o_0` | The ID of the picklist bin |
+| `itemStatusId_o_0`  | The ID of the item status  |
+| `picklistId`        | The ID of the picklist     |
+| `picklistBinId`     | The ID of the picklist bin |
+| `productId_o_0`     | The ID of the product      |

@@ -1,13 +1,21 @@
+---
+description: >-
+  Explore details on order items fulfilled from a specific facility within
+  HotWax Commerce's 'Update Orders' subcategory.
+---
+
 # Fulfilled Order Items Feed
 
 Contains the order items that have been fulfilled from a particular facility. External systems that did not fulfill those orders but require an update of the inventory delta to maintain accurate inventory levels can use this feed to ensure their inventory accuracy. It's important to understand that this feed only contains orders that have been successfully fulfilled, orders that have only been reserved but not shipped are not included in this feed because they may still be rejected and re-brokered to another facility for fulfillment.
 
 The feed in produced in a JSON format and can be placed at a designated FTP location.
 
-## Body 
-[Link to full JSON sample file](https://github.com/Dhiraj1405/oms-documentation/blob/BOPIS_API/Fulfillment/Samples/Fulfilled%20order%20items%20feed.json#L767)
+## Body
 
-Sample snippet from full JSON file: 
+[Link to full JSON sample file](https://github.com/Dhiraj1405/oms-documentation/blob/BOPIS\_API/Fulfillment/Samples/Fulfilled%20order%20items%20feed.json#L767)
+
+Sample snippet from full JSON file:
+
 ```
 "shipmentItems" : [ {
      "shipmentId" : "27091",
@@ -37,20 +45,18 @@ Sample snippet from full JSON file:
      }
 ```
 
-
-
-| Parameter | Description |
-| ---- | ----------- | 
-| `itemQuantity` | Ordered quantity | 
-| `productId` | The internal Id of the product in HotWax | 
-| `facilityId` | The internal Id of the facility in HotWax | 
-| `facilityExternalId` | The Id of the facility in the external systems | 
-| `facilityTypeId` | The type of the facility | 
-| `ParentFacilityTypeId` | The type of the parent facility, used to group various facility types. | 
-| `shippedQuantity` | The quantity of items shipped from the ordered quantity. | 
-| `goodIdentifications` | All identifications of the product in HotWax Commerce used to identify the product in external systems |
-| `goodIdentificationTypeId` | The type of the unique product Identifier in the external systems (e.g. Shopify product SKU) | 
-| `IdValue` | The value of the GoodIdentificationTypeId | 
+| Parameter                  | Description                                                                                            |
+| -------------------------- | ------------------------------------------------------------------------------------------------------ |
+| `itemQuantity`             | Ordered quantity                                                                                       |
+| `productId`                | The internal Id of the product in HotWax                                                               |
+| `facilityId`               | The internal Id of the facility in HotWax                                                              |
+| `facilityExternalId`       | The Id of the facility in the external systems                                                         |
+| `facilityTypeId`           | The type of the facility                                                                               |
+| `ParentFacilityTypeId`     | The type of the parent facility, used to group various facility types.                                 |
+| `shippedQuantity`          | The quantity of items shipped from the ordered quantity.                                               |
+| `goodIdentifications`      | All identifications of the product in HotWax Commerce used to identify the product in external systems |
+| `goodIdentificationTypeId` | The type of the unique product Identifier in the external systems (e.g. Shopify product SKU)           |
+| `IdValue`                  | The value of the GoodIdentificationTypeId                                                              |
 
 <details>
 

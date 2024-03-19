@@ -1,6 +1,12 @@
-# Add shipment box API
+---
+description: >-
+  Learn how to add a shipment box for order fulfillment with the 'Add Shipment
+  Box' feature.
+---
 
-Adds a shipment box for the order for fulfillment. To add a shipment box, you will need to call the /addShipmentPackage endpoint with the POST method. 
+# Add Shipment Box
+
+Adds a shipment box for the order for fulfillment. To add a shipment box, you will need to call the /addShipmentPackage endpoint with the POST method.
 
 ## Request
 
@@ -21,11 +27,10 @@ Example: https://demo-oms.hotwax.io/api/addShipmentPackage
 }
 ```
 
-| Parameter        | Description                                               | Required (Y/N) |
-|------------------|-----------------------------------------------------------|----------------|
-| `picklistBinId`        | The ID of the picklist bin                          |                |
-| `shipmentBoxTypeId`    | The ID of the shipment box type                     |                |
-
+| Parameter           | Description                     | Required (Y/N) |
+| ------------------- | ------------------------------- | -------------- |
+| `picklistBinId`     | The ID of the picklist bin      |                |
+| `shipmentBoxTypeId` | The ID of the shipment box type |                |
 
 ## Response
 
@@ -45,9 +50,9 @@ Example: https://demo-oms.hotwax.io/api/addShipmentPackage
 
 ```
 
-| Parameter                | Description                                                  |
-|--------------------------|--------------------------------------------------------------|
-| `shipmentPackageSeqId`   | The ID of the shipment package sequence                      |
-| `shipmentRouteSegmentId` | The ID of the shipment route segment                         |
-| `shipmentId`             | The ID of the shipment                                       |
-| `_EVENT_MESSAGE_`        | The communication message of the event                       |
+| Parameter                | Description                             |
+| ------------------------ | --------------------------------------- |
+| `shipmentPackageSeqId`   | The ID of the shipment package sequence |
+| `shipmentRouteSegmentId` | The ID of the shipment route segment    |
+| `shipmentId`             | The ID of the shipment                  |
+| `_EVENT_MESSAGE_`        | The communication message of the event  |

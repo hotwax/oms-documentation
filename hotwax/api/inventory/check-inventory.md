@@ -1,21 +1,29 @@
-# Check Inventory API
+---
+description: >-
+  Discover how to retrieve stock details for products at specific locations with
+  the 'Check Inventory' subcategory.
+---
 
-Get the stock details of the product on the specific locations. To get the stock details, you will need to call the `/checkInventory` endpoint with the POST method. 
+# Check Inventory
+
+Get the stock details of the product on the specific locations. To get the stock details, you will need to call the `/checkInventory` endpoint with the POST method.
 
 ## Request
 
 ### End Point
+
 `https://<host>/api/checkInventory`
 
 Example: https://demo-oms.hotwax.io/api/checkInventory
 
 ### Header
-Content-Type: application/json
 
+Content-Type: application/json
 
 ### Body
 
 In case of checking a product's inventory at multiple facility.
+
 ```
 {
   "filters": {
@@ -39,6 +47,7 @@ In case of checking multiple product's inventory at single facility.
 ```
 
 **Sample**
+
 ```
 {
   "filters": {
@@ -48,29 +57,28 @@ In case of checking multiple product's inventory at single facility.
 }
 ```
 
-
-| Parameter Name | Description | Required (Y/N) |
-| --- | --- | --- |
-| `sku` | The SKU of the product | N |
-|  `sku_op` | The operator to be used for the sku field | N |
-| `productId` | HotWax Commerce internal product Id | N |
-| `facilityId` | The HotWax Commerce facility Id where product inventory is located | N |
-| `facilityId_op` | The operator to be used for the facility Id | N |
-|  `sku_op` | The operator to be used for the sku field | N |
-Note: It is required to pass either `sku` or `productId`. 
-
+| Parameter Name                                            | Description                                                        | Required (Y/N) |
+| --------------------------------------------------------- | ------------------------------------------------------------------ | -------------- |
+| `sku`                                                     | The SKU of the product                                             | N              |
+| `sku_op`                                                  | The operator to be used for the sku field                          | N              |
+| `productId`                                               | HotWax Commerce internal product Id                                | N              |
+| `facilityId`                                              | The HotWax Commerce facility Id where product inventory is located | N              |
+| `facilityId_op`                                           | The operator to be used for the facility Id                        | N              |
+| `sku_op`                                                  | The operator to be used for the sku field                          | N              |
+| Note: It is required to pass either `sku` or `productId`. |                                                                    |                |
 
 ## Response
 
 ### Status Code
+
 HTTP/1.1 200 OK
 
 ### Headers
+
 Content-Type: application/json
 
-
 ### Body
-  
+
 ```
 {
   "count": "1",
@@ -83,9 +91,9 @@ Content-Type: application/json
 }
 ```
 
-| Parameter Name | Description |
-| --- | --- |
-| `count`| Results count |
-| `docs` | The array of results found |
-| `facilityId` | The Id of the facility in HotWax |
-| `atp` | The available to promise inventory of the product |
+| Parameter Name | Description                                       |
+| -------------- | ------------------------------------------------- |
+| `count`        | Results count                                     |
+| `docs`         | The array of results found                        |
+| `facilityId`   | The Id of the facility in HotWax                  |
+| `atp`          | The available to promise inventory of the product |

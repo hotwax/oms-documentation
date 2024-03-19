@@ -1,7 +1,12 @@
-# Created Order
+---
+description: >-
+  Discover how the created order feed JSON assists external systems in tracking
+  and consuming new orders entering the OMS.
+---
+
+# Created Orders
 
 The created order feed JSON helps external systems track new orders that are entering the OMS and consume them for their linked actions.
-
 
 Here is a sample feed of that the created order feed looks like
 

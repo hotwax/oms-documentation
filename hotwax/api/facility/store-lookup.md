@@ -1,3 +1,9 @@
+---
+description: >-
+  Discover how the Store Lookup API facilitates finding stores accepting BOPIS
+  orders near the customer's location using the POST method.
+---
+
 # Store Lookup
 
 The API allows to look up the stores accepting BOPIS orders near the customer’s location using the POST method.
@@ -126,8 +132,7 @@ Content-Type: application/json
 | `<day_of_week>_close`      | The closing time of the store on the day of a week                                                                                                  |
 
 \
-\
-
+\\
 
 ## Note:
 

@@ -1,3 +1,9 @@
+---
+description: >-
+  Discover how the Post Code Lookup API fetches information related to postal
+  codes, aiding developers in various applications.
+---
+
 # Post Code Lookup
 
 The Post Code Lookup API provides developers with the ability to fetch information related to postal codes. This API offers three main functionalities:
@@ -7,8 +13,7 @@ The Post Code Lookup API provides developers with the ability to fetch informati
 * Fetching latitude and longitude for a partial postal code
 
 \
-\
-
+\\
 
 ## Fetch Postal Code for Latitude Longitude in a Given Range
 
@@ -103,8 +108,7 @@ Content-Type: application/json
 | `location`        | The latitude and longitude points of the postal code    |
 
 \
-\
-
+\\
 
 ## Fetch latitude longitude for a postal code
 
@@ -184,8 +188,7 @@ Content-Type: application/json
 | `location`        | The latitude and longitude points of the postal code    |
 
 \
-\
-
+\\
 
 ## Fetch latitude longitude for a partial postal code
 

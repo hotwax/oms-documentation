@@ -1,4 +1,12 @@
-# Returns feed
+---
+description: >-
+  Discover how returns are generated Return Header wise, with each return
+  containing the list of returned items.
+---
+
+# Returns
+
+## Returns feed
 
 The feed will be generated Return Header wise, with each return containing the list of items returned.
 
@@ -11,57 +19,57 @@ Parameters which can be variable for the Returns Financial Feed Feed are
 5. sinceReturnDate - Parameter to fetch Returns after a specific Return Date. This date corresponds to the ReturnHeader.returnDate in HC.
 6. sinceReturnCompletedDate - Parameter to fetch Returns which are completed in HC after a specific Date. This date corresponds to the ReturnStatus.completedDatetime for Return Items in HC.
 7. sinceEntryDate - Parameter to fetch Returns created after a specific Date in HC. This date corresponds to the ReturnHeader.entryDate in HC.
-8. productStoreIds - to set the product store ids to generate brand specific feeds. eg. WSC_STORE
+8. productStoreIds - to set the product store ids to generate brand specific feeds. eg. WSC\_STORE
 9. returnChannelEnumId - Identify the Returns being made from different channels like Ecom Returns, In-Store etc.
-10. customParamatersMap - This map defines custom conditions, allowing flexibility in defining new conditions. Eg. {"returnReasonId_op": "empty", "returnReasonId_not": "Y"}
+10. customParamatersMap - This map defines custom conditions, allowing flexibility in defining new conditions. Eg. {"returnReasonId\_op": "empty", "returnReasonId\_not": "Y"}
 
-## Feed Generation
+### Feed Generation
+
 1. **Views used**
-    1. FinancialReturnItemsSyncQueue
-    2. ReturnItemView
+   1. FinancialReturnItemsSyncQueue
+   2. ReturnItemView
 2. In the first entity, find on the FinancialReturnItemsSyncQueue view fetches the eligible records for the feed.
 3. The conditions on the FinancialReturnItemsSyncQueue are:
-    1. productStoreId - Support for productStoreId was added to generate brand specific feeds.
+   1. productStoreId - Support for productStoreId was added to generate brand specific feeds.
 4. If productStoreId comes from the in-parameter productStoreIds which is a list then the productStoreId field is prepared based on the following cases:
-    1. If only one value comes in the productStoreIds list then the productStoreId field will be set from that value in the list.
-    2. If nothing is passed in the productStoreIds list or there are more than one value in the list then the productStoreId field will be a default prefix that will be set from the property added in the Moqui conf file. In this case, the default prefix will be 'HOTWAX'.
+   1. If only one value comes in the productStoreIds list then the productStoreId field will be set from that value in the list.
+   2. If nothing is passed in the productStoreIds list or there are more than one value in the list then the productStoreId field will be a default prefix that will be set from the property added in the Moqui conf file. In this case, the default prefix will be 'HOTWAX'.
 5. **NOTE:** If the view does not return any records, the Feed file of HotWax will not generate, and logs the message, `"No eligible returns to prepare Returns Financial Feed at ${nowDate}, not generating the HotWax Feed file."`
 6. If FinancialReturnItemsSyncQueue has eligible returns to prepare the feed then prepare the Return level details in the service:
-    - billTo
-    - returnAdjustments
-    - customerPartyIdentifications
-    - payments
+   * billTo
+   * returnAdjustments
+   * customerPartyIdentifications
+   * payments
 7. Prepared the returnItems list i.e. fetched the returns items through eligible returns:
-    - shipTo
-    - productIdentifications
-    - returnItemAdjustments
-8. Prepare the **isShippingChargesSent** field and fetch Return level adjustments with return adjustment type 'RET_SHIPPING_ADJ', 'RET_SALES_TAX_ADJ' to create **ReturnAdjustmentHistory** records:
-    - **ReturnAdjustmentAndHistory** View is created for the purpose to maintain the Return level Adjustments history which are sent as part of Feed to external systems.
-    - The condition on the view is such that it will fetch Return level adjustments which are not sent to external systems.
-    - The ReturnAdjustmentHistory record will be created for the Shipping Charges and Shipping Sales Tax.
-    - If for a Return some items that are completed later and are eligible to appear in the next feed, then the isShippingChargesSent value will be sent as 'Y'.
-    - Based on the value of isShippingChargesSent, the custom transformations can be prepared.
-    - This is done so that financials can be done in the right way and order level adjustments are not computed multiple times which may cause discrepancies in the order totals when reconciliations are done.
-    - **NOTE:** For now only Shipping Charges and Shipping Sales Tax are considered as the Order level Adjustments for which we are maintaining the history.
+   * shipTo
+   * productIdentifications
+   * returnItemAdjustments
+8. Prepare the **isShippingChargesSent** field and fetch Return level adjustments with return adjustment type 'RET\_SHIPPING\_ADJ', 'RET\_SALES\_TAX\_ADJ' to create **ReturnAdjustmentHistory** records:
+   * **ReturnAdjustmentAndHistory** View is created for the purpose to maintain the Return level Adjustments history which are sent as part of Feed to external systems.
+   * The condition on the view is such that it will fetch Return level adjustments which are not sent to external systems.
+   * The ReturnAdjustmentHistory record will be created for the Shipping Charges and Shipping Sales Tax.
+   * If for a Return some items that are completed later and are eligible to appear in the next feed, then the isShippingChargesSent value will be sent as 'Y'.
+   * Based on the value of isShippingChargesSent, the custom transformations can be prepared.
+   * This is done so that financials can be done in the right way and order level adjustments are not computed multiple times which may cause discrepancies in the order totals when reconciliations are done.
+   * **NOTE:** For now only Shipping Charges and Shipping Sales Tax are considered as the Order level Adjustments for which we are maintaining the history.
 9. If FinancialReturnItemsSyncQueue has eligible returns to prepare feed then to prepare values of other fields as per the Chain Drive format, for each return item fetched from the first view, entity find is done on the second view, ReturnItemView.
 10. The **Return Level Adjustments list** (shipping charges, shipping sales tax, etc) for the feed is prepared in the service.
 11. The **Return Item Level Adjustments list** (return item sales tax, return item discount, etc) for the feed is prepared in the service.
-    - **NOTE:** The specific amount for returnAdjustmentTypeIds from the Return Header Level Adjustments list and Return Item Level Adjustments list will be prepared in the Jolt Transform.
-12. **To Prepare total amount (TENDER_AMOUNT)**
-    1. Logic used -> **ReturnPrice * quantity + sum of the Item Level Adjustments**
-    2. For TENDER_AMOUNT, there is the scenario: If the Return has three items and two of them are completed today and eligible for today's feed then in the feed TENDER_AMOUNT will be the sum(of amounts) of only these two items + shipping charges and shipping sales tax.
-    3. Next day if the third item will be completed and eligible for the feed then in the feed TENDER_AMOUNT will be the sum(of amounts) of only this item + shipping charges and shipping sales tax.
-    4. **Note** - This is part of special handling used the ReturnItemAndAdjustment view to prepare the TENDER_AMOUNT using the formula ReturnPrice * quantity + sum of the Item Level Adjustments(sum function used on the amounts in the view).
+    * **NOTE:** The specific amount for returnAdjustmentTypeIds from the Return Header Level Adjustments list and Return Item Level Adjustments list will be prepared in the Jolt Transform.
+12. **To Prepare total amount (TENDER\_AMOUNT)**
+    1. Logic used -> **ReturnPrice \* quantity + sum of the Item Level Adjustments**
+    2. For TENDER\_AMOUNT, there is the scenario: If the Return has three items and two of them are completed today and eligible for today's feed then in the feed TENDER\_AMOUNT will be the sum(of amounts) of only these two items + shipping charges and shipping sales tax.
+    3. Next day if the third item will be completed and eligible for the feed then in the feed TENDER\_AMOUNT will be the sum(of amounts) of only this item + shipping charges and shipping sales tax.
+    4. **Note** - This is part of special handling used the ReturnItemAndAdjustment view to prepare the TENDER\_AMOUNT using the formula ReturnPrice \* quantity + sum of the Item Level Adjustments(sum function used on the amounts in the view).
 13. For preparing ShipToAddress, PostalAddressView is used with the condition on shipToContactMechId from ReturnItemView.
-14. For preparing BillToAddress, first OrderContactMech is used to get contactMechId for the contactMechPurposeTypeId = 'BILLING_LOCATION'. Then PostalAddressView is used with a condition on contactMechId from OrderContactMech.
+14. For preparing BillToAddress, first OrderContactMech is used to get contactMechId for the contactMechPurposeTypeId = 'BILLING\_LOCATION'. Then PostalAddressView is used with a condition on contactMechId from OrderContactMech.
 15. For **maintaining the history of records** sent as part of the Financial feed, the entity record for **FinancialReturnHistory is created in the service itself.**
 
-# Sample generated for the HotWax Financial Feed JSON
+## Sample generated for the HotWax Financial Feed JSON
 
 <details>
-    <summary>
-        Sample JSON
-    </summary>
+
+<summary>Sample JSON</summary>
 
 ```json
 [
@@ -430,86 +438,87 @@ Parameters which can be variable for the Returns Financial Feed Feed are
     }
   ]
 ```
+
 </details>
 
-| Attribute                                   | Mapping from HC                                                                                    |
-|---------------------------------------------|----------------------------------------------------------------------------------------------------|
-| returnId                                    | ReturnItem.returnId                                                                               |
-| returnItemSeqId                             | ReturnItem.returnItemSeqId                                                                        |
-| entryDate                                   | ReturnHeader.entryDate                                                                            |
-| returnDate                                  | ReturnItem.returnId -> ReturnHeader.returnDate                                                    |
-| returnChannelEnumId                         | ReturnHeader.returnChannelEnumId                                                                  |
-| orderSalesChannelEnumId                     | OrderHeader.salesChannelEnumId                                                                    |
-| orderSalesChannel                           | OrderHeader.salesChannelEnumId -> Enumeration.enumCode                                            |
-| orderId                                     | ReturnItem.orderId                                                                                |
-| orderItemSeqId                              | ReturnItem.orderItemSeqId                                                                         |
-| returnItemAmountTotal                       | ReturnItem.returnItemPrice                                                                        |
-| statusId                                    | ReturnItem.returnId, ReturnItem.returnItemSeqId -> ReturnStatus.statusId                          |
-| completedDatetime                           | ReturnItem.returnId, ReturnItem.returnItemSeqId -> ReturnStatus.completedDatetime                |
-| productStoreId                              | ReturnItem.orderId -> OrderHeader.orderId                                                         |
-| orderName                                   | ReturnItem.orderId -> OrderHeader.orderName                                                       |
-| productStoreExternalId                      | ReturnItem.orderId -> OrderHeader.productStoreId -> ProductStore.productStoreId                   |
-| customerPartyId                             | ReturnItem.returnId -> ReturnHeader.fromPartyId                                                   |
-| billTo                                      | ReturnItem.orderId -> orderContactMech.contactMechId -> PostalAddress                             |
-| billTo.countryGeoCode                       | orderContactMech.contactMechId -> PostalAddress.countryGeoId -> Geo.geoId                         |
-| billTo.stateProvinceGeoCode                  | orderContactMech.contactMechId -> PostalAddress.stateGeoId -> Geo.geoId                            |
-| billTo.contactMechId                        | orderContactMech.contactMechId -> PostalAddress.contactMechId                                     |
-| billTo.toName                                | orderContactMech.contactMechId -> PostalAddress.toName                                            |
-| billTo.attnName                              | orderContactMech.contactMechId -> PostalAddress.attnName                                          |
-| billTo.address1                              | orderContactMech.contactMechId -> PostalAddress.address1                                          |
-| billTo.address2                              | orderContactMech.contactMechId -> PostalAddress.address2                                          |
-| billTo.houseNumber                           | orderContactMech.contactMechId -> PostalAddress.houseNumber                                       |
-| billTo.houseNumberExt                        | orderContactMech.contactMechId -> PostalAddress.houseNumberExt                                    |
-| billTo.city                                  | orderContactMech.contactMechId -> PostalAddress.city                                              |
-| billTo.cityGeoId                             | orderContactMech.contactMechId -> PostalAddress.cityGeoId                                          |
-| billTo.postalCode                            | orderContactMech.contactMechId -> PostalAddress.postalCode                                         |
-| billTo.postalCodeExt                         | orderContactMech.contactMechId -> PostalAddress.postalCodeExt                                      |
-| billTo.countryGeoId                          | orderContactMech.contactMechId -> PostalAddress.countryGeoId                                       |
-| billTo.stateProvinceGeoId                    | orderContactMech.contactMechId -> PostalAddress.stateProvinceGeoId                                 |
-| billTo.countyGeoId                           | orderContactMech.contactMechId -> PostalAddress.countyGeoId                                        |
-| billTo.municipalityGeoId                     | orderContactMech.contactMechId -> PostalAddress.municipalityGeoId                                  |
-| billTo.postalCodeGeoId                       | orderContactMech.contactMechId -> PostalAddress.postalCodeGeoId                                    |
-| billTo.geoPointId                            | orderContactMech.contactMechId -> PostalAddress.geoPointId                                         |
-| billTo.encodedAddressKey                     | orderContactMech.contactMechId -> PostalAddress.encodedAddressKey                                  |
-| isShippingChargesSent                        | Define the custom variable to identify shipping charges, shipping sales tax, and whether shipping adjustments were sent or not.|
-| returnAdjustments                           | List of Return Level Adjustments                                                                   |
-| returnAdjustments.returnAdjustmentId        | ReturnItem.returnId -> ReturnAdjustment.returnAdjustmentId                                        |
-| returnAdjustments.returnId                   | ReturnItem.returnId -> ReturnAdjustment.returnId                                                   |
-| returnAdjustments.returnItemSeqId           | ReturnItem.returnId -> ReturnAdjustment.returnItemSeqId                                           |
-| returnAdjustments.returnAdjustmentTypeId    | ReturnItem.returnId -> ReturnAdjustment.returnAdjustmentTypeId                                    |
-| returnAdjustments.amount                     | ReturnItem.returnId -> ReturnAdjustment.amount                                                    |
-| customerPartyIdentifications                 | List of the partyIdentifications                                                                   |
-| customerPartyIdentifications.partyId         | ReturnItem.returnId -> ReturnHeader.fromPartyId -> PartyIdentification.partyId                     |
-| customerPartyIdentifications.partyIdentificationTypeId | ReturnItem.returnId -> ReturnHeader.fromPartyId -> PartyIdentification.partyIdentificationTypeId |
-| customerPartyIdentifications.idValue         | ReturnItem.returnId -> ReturnHeader.fromPartyId -> PartyIdentification.idValue                     |
-| customerPartyIdentifications.lastUpdatedStamp| ReturnItem.returnId -> ReturnHeader.fromPartyId -> PartyIdentification.lastUpdatedStamp            |
-| payments                                    | List of the Payment related                                                                        |
-| payments.paymentMethodCode                   | ReturnItem.returnId -> ReturnItemResponse.orderPaymentPreferenceId -> OrderPaymentPreference.paymentMethodTypeId -> PaymentMethodType.paymentMethodCode |
-| payments.createdDate                         | ReturnItem.returnId -> ReturnItemResponse.orderPaymentPreferenceId -> OrderPaymentPreference.createdDate |
-| payments.paymentMethodTypeId                 | ReturnItem.returnId -> ReturnItemResponse.orderPaymentPreferenceId -> OrderPaymentPreference.paymentMethodTypeId -> PaymentMethodType.paymentMethodTypeId |
-| payments.paymentMethodDescription            | ReturnItem.returnId -> ReturnItemResponse.orderPaymentPreferenceId -> OrderPaymentPreference.paymentMethodTypeId -> PaymentMethodType.paymentMethodDescription |
-| payments.statusId                            | ReturnItem.returnId -> ReturnItemResponse.orderPaymentPreferenceId -> OrderPaymentPreference.statusId |
-| payments.amount                              | ReturnItem.returnId -> ReturnItemResponse.orderPaymentPreferenceId -> OrderPaymentPreference.amount |
-| payments.orderId                             | ReturnItem.returnId -> OrderPaymentPreference.orderId                                              |
-| tenderAmount                                | ReturnItem.returnId -> ReturnAdjustment.amount (Return Price * Quantity + Return Item Adjustments) |
-| returnItems                                 | List of the return items.                                                                         |
-| returnItems.returnId                        | ReturnItem.returnId                                                                               |
-| returnItems.returnItemSeqId                  | ReturnItem.returnItemSeqId                                                                        |
-| returnItems.orderId                          | ReturnItem.orderId                                                                               |
-| returnItems.orderItemSeqId                   | ReturnItem.orderItemSeqId                                                                        |
-| returnItems.returnItemPrice                  | ReturnItem.returnItemPrice                                                                        |
-| returnItems.returnQuantity                   | ReturnItem.returnQuantity                                                                        |
-| returnItems.returnReasonId                   | ReturnItem.returnReasonId                                                                         |
-| returnItems.returnReasonNote                 | ReturnItem.reason                                                                                 |
-| returnItems.orderItemRequestedShipMethTypeId | OrderItem.returnReasonId                                                                          |
-| returnItems.productId                        | ReturnItem.productId                                                                              |
-| returnItems.orderName                        | ReturnItem.orderId -> OrderHeader.orderName                                                        |
-| returnItems.facilityExternalId               | ReturnItem.returnId -> ReturnHeader.destinationFacilityId -> Facility.externalId                  |
-| returnItems.facilityId                       | ReturnItem.returnId -> ReturnHeader.destinationFacilityId -> Facility.facilityId                   |
-| returnItems.productStoreExternalId           | ReturnItem.orderId -> OrderHeader.productStoreId -> ProductStore.externalId                        |
-| returnItems.currencyUom                      | ReturnItem.returnId -> ReturnHeader.currencyUomId -> Uom.abbreviation                              |
-| returnItems.customerPartyId                  | ReturnItem.returnId -> ReturnHeader.fromPartyId                                                   |
-| returnItems.shipToContactMechId              | ReturnItem.returnId -> ReturnHeader.originContactMechId                                           |
-| returnItems.shipTo                           | ReturnItem.orderId -> orderContactMech.contactMechId -> PostalAddress                               |
-| returnItems.billToContactMechId              | ReturnItem.orderId -> orderContactMech.contactMechId -> PostalAddress.contactMechId                |
-| returnItems.billTo                           | ReturnItem.orderId -> orderContactMech.contactMechId -> PostalAddress                               |
+| Attribute                                              | Mapping from HC                                                                                                                                                |
+| ------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| returnId                                               | ReturnItem.returnId                                                                                                                                            |
+| returnItemSeqId                                        | ReturnItem.returnItemSeqId                                                                                                                                     |
+| entryDate                                              | ReturnHeader.entryDate                                                                                                                                         |
+| returnDate                                             | ReturnItem.returnId -> ReturnHeader.returnDate                                                                                                                 |
+| returnChannelEnumId                                    | ReturnHeader.returnChannelEnumId                                                                                                                               |
+| orderSalesChannelEnumId                                | OrderHeader.salesChannelEnumId                                                                                                                                 |
+| orderSalesChannel                                      | OrderHeader.salesChannelEnumId -> Enumeration.enumCode                                                                                                         |
+| orderId                                                | ReturnItem.orderId                                                                                                                                             |
+| orderItemSeqId                                         | ReturnItem.orderItemSeqId                                                                                                                                      |
+| returnItemAmountTotal                                  | ReturnItem.returnItemPrice                                                                                                                                     |
+| statusId                                               | ReturnItem.returnId, ReturnItem.returnItemSeqId -> ReturnStatus.statusId                                                                                       |
+| completedDatetime                                      | ReturnItem.returnId, ReturnItem.returnItemSeqId -> ReturnStatus.completedDatetime                                                                              |
+| productStoreId                                         | ReturnItem.orderId -> OrderHeader.orderId                                                                                                                      |
+| orderName                                              | ReturnItem.orderId -> OrderHeader.orderName                                                                                                                    |
+| productStoreExternalId                                 | ReturnItem.orderId -> OrderHeader.productStoreId -> ProductStore.productStoreId                                                                                |
+| customerPartyId                                        | ReturnItem.returnId -> ReturnHeader.fromPartyId                                                                                                                |
+| billTo                                                 | ReturnItem.orderId -> orderContactMech.contactMechId -> PostalAddress                                                                                          |
+| billTo.countryGeoCode                                  | orderContactMech.contactMechId -> PostalAddress.countryGeoId -> Geo.geoId                                                                                      |
+| billTo.stateProvinceGeoCode                            | orderContactMech.contactMechId -> PostalAddress.stateGeoId -> Geo.geoId                                                                                        |
+| billTo.contactMechId                                   | orderContactMech.contactMechId -> PostalAddress.contactMechId                                                                                                  |
+| billTo.toName                                          | orderContactMech.contactMechId -> PostalAddress.toName                                                                                                         |
+| billTo.attnName                                        | orderContactMech.contactMechId -> PostalAddress.attnName                                                                                                       |
+| billTo.address1                                        | orderContactMech.contactMechId -> PostalAddress.address1                                                                                                       |
+| billTo.address2                                        | orderContactMech.contactMechId -> PostalAddress.address2                                                                                                       |
+| billTo.houseNumber                                     | orderContactMech.contactMechId -> PostalAddress.houseNumber                                                                                                    |
+| billTo.houseNumberExt                                  | orderContactMech.contactMechId -> PostalAddress.houseNumberExt                                                                                                 |
+| billTo.city                                            | orderContactMech.contactMechId -> PostalAddress.city                                                                                                           |
+| billTo.cityGeoId                                       | orderContactMech.contactMechId -> PostalAddress.cityGeoId                                                                                                      |
+| billTo.postalCode                                      | orderContactMech.contactMechId -> PostalAddress.postalCode                                                                                                     |
+| billTo.postalCodeExt                                   | orderContactMech.contactMechId -> PostalAddress.postalCodeExt                                                                                                  |
+| billTo.countryGeoId                                    | orderContactMech.contactMechId -> PostalAddress.countryGeoId                                                                                                   |
+| billTo.stateProvinceGeoId                              | orderContactMech.contactMechId -> PostalAddress.stateProvinceGeoId                                                                                             |
+| billTo.countyGeoId                                     | orderContactMech.contactMechId -> PostalAddress.countyGeoId                                                                                                    |
+| billTo.municipalityGeoId                               | orderContactMech.contactMechId -> PostalAddress.municipalityGeoId                                                                                              |
+| billTo.postalCodeGeoId                                 | orderContactMech.contactMechId -> PostalAddress.postalCodeGeoId                                                                                                |
+| billTo.geoPointId                                      | orderContactMech.contactMechId -> PostalAddress.geoPointId                                                                                                     |
+| billTo.encodedAddressKey                               | orderContactMech.contactMechId -> PostalAddress.encodedAddressKey                                                                                              |
+| isShippingChargesSent                                  | Define the custom variable to identify shipping charges, shipping sales tax, and whether shipping adjustments were sent or not.                                |
+| returnAdjustments                                      | List of Return Level Adjustments                                                                                                                               |
+| returnAdjustments.returnAdjustmentId                   | ReturnItem.returnId -> ReturnAdjustment.returnAdjustmentId                                                                                                     |
+| returnAdjustments.returnId                             | ReturnItem.returnId -> ReturnAdjustment.returnId                                                                                                               |
+| returnAdjustments.returnItemSeqId                      | ReturnItem.returnId -> ReturnAdjustment.returnItemSeqId                                                                                                        |
+| returnAdjustments.returnAdjustmentTypeId               | ReturnItem.returnId -> ReturnAdjustment.returnAdjustmentTypeId                                                                                                 |
+| returnAdjustments.amount                               | ReturnItem.returnId -> ReturnAdjustment.amount                                                                                                                 |
+| customerPartyIdentifications                           | List of the partyIdentifications                                                                                                                               |
+| customerPartyIdentifications.partyId                   | ReturnItem.returnId -> ReturnHeader.fromPartyId -> PartyIdentification.partyId                                                                                 |
+| customerPartyIdentifications.partyIdentificationTypeId | ReturnItem.returnId -> ReturnHeader.fromPartyId -> PartyIdentification.partyIdentificationTypeId                                                               |
+| customerPartyIdentifications.idValue                   | ReturnItem.returnId -> ReturnHeader.fromPartyId -> PartyIdentification.idValue                                                                                 |
+| customerPartyIdentifications.lastUpdatedStamp          | ReturnItem.returnId -> ReturnHeader.fromPartyId -> PartyIdentification.lastUpdatedStamp                                                                        |
+| payments                                               | List of the Payment related                                                                                                                                    |
+| payments.paymentMethodCode                             | ReturnItem.returnId -> ReturnItemResponse.orderPaymentPreferenceId -> OrderPaymentPreference.paymentMethodTypeId -> PaymentMethodType.paymentMethodCode        |
+| payments.createdDate                                   | ReturnItem.returnId -> ReturnItemResponse.orderPaymentPreferenceId -> OrderPaymentPreference.createdDate                                                       |
+| payments.paymentMethodTypeId                           | ReturnItem.returnId -> ReturnItemResponse.orderPaymentPreferenceId -> OrderPaymentPreference.paymentMethodTypeId -> PaymentMethodType.paymentMethodTypeId      |
+| payments.paymentMethodDescription                      | ReturnItem.returnId -> ReturnItemResponse.orderPaymentPreferenceId -> OrderPaymentPreference.paymentMethodTypeId -> PaymentMethodType.paymentMethodDescription |
+| payments.statusId                                      | ReturnItem.returnId -> ReturnItemResponse.orderPaymentPreferenceId -> OrderPaymentPreference.statusId                                                          |
+| payments.amount                                        | ReturnItem.returnId -> ReturnItemResponse.orderPaymentPreferenceId -> OrderPaymentPreference.amount                                                            |
+| payments.orderId                                       | ReturnItem.returnId -> OrderPaymentPreference.orderId                                                                                                          |
+| tenderAmount                                           | ReturnItem.returnId -> ReturnAdjustment.amount (Return Price \* Quantity + Return Item Adjustments)                                                            |
+| returnItems                                            | List of the return items.                                                                                                                                      |
+| returnItems.returnId                                   | ReturnItem.returnId                                                                                                                                            |
+| returnItems.returnItemSeqId                            | ReturnItem.returnItemSeqId                                                                                                                                     |
+| returnItems.orderId                                    | ReturnItem.orderId                                                                                                                                             |
+| returnItems.orderItemSeqId                             | ReturnItem.orderItemSeqId                                                                                                                                      |
+| returnItems.returnItemPrice                            | ReturnItem.returnItemPrice                                                                                                                                     |
+| returnItems.returnQuantity                             | ReturnItem.returnQuantity                                                                                                                                      |
+| returnItems.returnReasonId                             | ReturnItem.returnReasonId                                                                                                                                      |
+| returnItems.returnReasonNote                           | ReturnItem.reason                                                                                                                                              |
+| returnItems.orderItemRequestedShipMethTypeId           | OrderItem.returnReasonId                                                                                                                                       |
+| returnItems.productId                                  | ReturnItem.productId                                                                                                                                           |
+| returnItems.orderName                                  | ReturnItem.orderId -> OrderHeader.orderName                                                                                                                    |
+| returnItems.facilityExternalId                         | ReturnItem.returnId -> ReturnHeader.destinationFacilityId -> Facility.externalId                                                                               |
+| returnItems.facilityId                                 | ReturnItem.returnId -> ReturnHeader.destinationFacilityId -> Facility.facilityId                                                                               |
+| returnItems.productStoreExternalId                     | ReturnItem.orderId -> OrderHeader.productStoreId -> ProductStore.externalId                                                                                    |
+| returnItems.currencyUom                                | ReturnItem.returnId -> ReturnHeader.currencyUomId -> Uom.abbreviation                                                                                          |
+| returnItems.customerPartyId                            | ReturnItem.returnId -> ReturnHeader.fromPartyId                                                                                                                |
+| returnItems.shipToContactMechId                        | ReturnItem.returnId -> ReturnHeader.originContactMechId                                                                                                        |
+| returnItems.shipTo                                     | ReturnItem.orderId -> orderContactMech.contactMechId -> PostalAddress                                                                                          |
+| returnItems.billToContactMechId                        | ReturnItem.orderId -> orderContactMech.contactMechId -> PostalAddress.contactMechId                                                                            |
+| returnItems.billTo                                     | ReturnItem.orderId -> orderContactMech.contactMechId -> PostalAddress                                                                                          |

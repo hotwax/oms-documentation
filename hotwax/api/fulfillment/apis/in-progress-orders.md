@@ -1,4 +1,10 @@
-# In progress Orders API
+---
+description: >-
+  Discover how the 'In Progress Orders' API fetches a comprehensive list of
+  orders currently in the process of pickup for fulfillment.
+---
+
+# In Progress Orders
 
 Fetches a comprehensive list of all orders which are in process of pickup for fulfillment. To get in progress orders, you will need to call the /solr-query endpoint with the POST method.
 
@@ -39,35 +45,32 @@ Example: https://demo-oms.hotwax.io/api/solr-query
   }
 }
 ```
-##### Query Parameters
 
-| Parameter       | Description                                      | Required (Y/N) |
-|-----------------|--------------------------------------------------|----------------|
-| `rows`          | The number of groups                            | No           |
-| `sort`          | The order of search results                     | No           |                                                    
-| `group`         | Filter to group orders                          | Yes          |
-| `group.field`   | The field to be grouped                         | Yes          |
-| `group.limit`   | The maximum number of items allowed in the group| Yes          |
-| `group.ngroups` | The number of groups that have matched the query in the results. The default value is false | No |
-| `defType`       | Selects the query parser to be used to process the query | No |
-| `q.op`          | Specifies the default operator for query expressions, overriding the default operator specified in the Schema. Possible values are "AND" or "OR" | No |
-| `qf`            | The query fields                                 | No |
-| `docType`       | Reference index                                  | No |
-| `start`         | Index page number                                | No |
+**Query Parameters**
 
-##### API Parameters
+| Parameter       | Description                                                                                                                                      | Required (Y/N) |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------- |
+| `rows`          | The number of groups                                                                                                                             | No             |
+| `sort`          | The order of search results                                                                                                                      | No             |
+| `group`         | Filter to group orders                                                                                                                           | Yes            |
+| `group.field`   | The field to be grouped                                                                                                                          | Yes            |
+| `group.limit`   | The maximum number of items allowed in the group                                                                                                 | Yes            |
+| `group.ngroups` | The number of groups that have matched the query in the results. The default value is false                                                      | No             |
+| `defType`       | Selects the query parser to be used to process the query                                                                                         | No             |
+| `q.op`          | Specifies the default operator for query expressions, overriding the default operator specified in the Schema. Possible values are "AND" or "OR" | No             |
+| `qf`            | The query fields                                                                                                                                 | No             |
+| `docType`       | Reference index                                                                                                                                  | No             |
+| `start`         | Index page number                                                                                                                                | No             |
 
-| Parameter       | Description                                      | Required (Y/N) |
-|-----------------|--------------------------------------------------|----------------|
-| `orderTypeId`   | The ID of the order type in HotWax               | Yes |
-| `picklistItemStatusID` | The picking status of the order item      | No |
-| `shipmentMethodTypeId` | The ID of the shipment method type | No |
-| `fulfillmentStatus` | The status of fulfillment which needs to be neglected | No |
-| `facilityId`    | The ID of the facility where fulfillment is taking place | No |
+**API Parameters**
 
-
-
-
+| Parameter              | Description                                              | Required (Y/N) |
+| ---------------------- | -------------------------------------------------------- | -------------- |
+| `orderTypeId`          | The ID of the order type in HotWax                       | Yes            |
+| `picklistItemStatusID` | The picking status of the order item                     | No             |
+| `shipmentMethodTypeId` | The ID of the shipment method type                       | No             |
+| `fulfillmentStatus`    | The status of fulfillment which needs to be neglected    | No             |
+| `facilityId`           | The ID of the facility where fulfillment is taking place | No             |
 
 ## Response
 
@@ -133,42 +136,41 @@ Example: https://demo-oms.hotwax.io/api/solr-query
 }
 ```
 
-| Parameter                | Description                                                   |
-|--------------------------|---------------------------------------------------------------|
-| `orderId`                | The ID of the order.                                           |
-| `orderItemSeqId`         | The ID of the order item sequence.                             |
-| `shipGroupSeqId`         | The ID of the ship group sequence.                             |
-| `inventoryItemId`        | The ID of the inventory item.                                  |
-| `reservedDatetime`       | The time and date of reservation.                              |
-| `itemQuantity`           | The item quantity.                                             |
-| `quantityNotAvailable`   | The item quantity not available at the location.               |
-| `productId`              | The ID of the product in HotWax.                               |
-| `keywordSearchText`      | The keyword used for search.                                   |
-| `productName`            | The name of the product.                                       |
-| `spellchecker`           | The spellchecker.                                              |
-| `productSku`             | The SKU ID of the product.                                     |
-| `virtualProductName`     | The name of the parent product.                                |
-| `uniqueOrderItemsCount`  | The count of the unique order items.                           |
-| `picklistBinId`          | The ID of the picklist bin.                                    |
-| `picklistId`             | The ID of the picklist.                                        |
-| `picklistItemStatusId`   | The ID of the picklist item status.                            |
-| `picklistItemStatusDesc` | The description of the picklist item status.                   |
-| `fulfillmentStatus`      | The current fulfillment status of the item.                    |
-| `orderDate`              | The date when the order was placed.                            |
-| `orderTypeId`            | The ID of the order type.                                      |
-| `productStoreId`         | The ID of the product store.                                   |
-| `orderStatusId`          | The ID of the order status.                                    |
-| `customerId`             | The ID of the customer.                                        |
-| `customerName`           | The name of the customer.                                      |
-| `shipmentMethodTypeId`   | The ID of the shipment method type.                            |
-| `shipmentMethodTypeDesc` | The description of the shipment method type.                   |
-| `shipmentMethodTypeSeqNum`| The sequence number of the shipment method type.              |
-| `facilityId`             | The ID of the facility.                                        |
-| `facilityName`           | The name of the facility.                                      |
-| `facilityTypeId`         | The ID of the facility type.                                   |
-| `companyIds`             | The IDs of the companies associated with the order.            |
-| `orderIdentifications`   | The secondary unique identifier of the order.                  |
-| `docType`                | The type of the document.                                      |
-| `identifier`             | The identifier of the document.                                |
-| `docType-identifier`      | The type and identifier of the document.                      |
-
+| Parameter                  | Description                                         |
+| -------------------------- | --------------------------------------------------- |
+| `orderId`                  | The ID of the order.                                |
+| `orderItemSeqId`           | The ID of the order item sequence.                  |
+| `shipGroupSeqId`           | The ID of the ship group sequence.                  |
+| `inventoryItemId`          | The ID of the inventory item.                       |
+| `reservedDatetime`         | The time and date of reservation.                   |
+| `itemQuantity`             | The item quantity.                                  |
+| `quantityNotAvailable`     | The item quantity not available at the location.    |
+| `productId`                | The ID of the product in HotWax.                    |
+| `keywordSearchText`        | The keyword used for search.                        |
+| `productName`              | The name of the product.                            |
+| `spellchecker`             | The spellchecker.                                   |
+| `productSku`               | The SKU ID of the product.                          |
+| `virtualProductName`       | The name of the parent product.                     |
+| `uniqueOrderItemsCount`    | The count of the unique order items.                |
+| `picklistBinId`            | The ID of the picklist bin.                         |
+| `picklistId`               | The ID of the picklist.                             |
+| `picklistItemStatusId`     | The ID of the picklist item status.                 |
+| `picklistItemStatusDesc`   | The description of the picklist item status.        |
+| `fulfillmentStatus`        | The current fulfillment status of the item.         |
+| `orderDate`                | The date when the order was placed.                 |
+| `orderTypeId`              | The ID of the order type.                           |
+| `productStoreId`           | The ID of the product store.                        |
+| `orderStatusId`            | The ID of the order status.                         |
+| `customerId`               | The ID of the customer.                             |
+| `customerName`             | The name of the customer.                           |
+| `shipmentMethodTypeId`     | The ID of the shipment method type.                 |
+| `shipmentMethodTypeDesc`   | The description of the shipment method type.        |
+| `shipmentMethodTypeSeqNum` | The sequence number of the shipment method type.    |
+| `facilityId`               | The ID of the facility.                             |
+| `facilityName`             | The name of the facility.                           |
+| `facilityTypeId`           | The ID of the facility type.                        |
+| `companyIds`               | The IDs of the companies associated with the order. |
+| `orderIdentifications`     | The secondary unique identifier of the order.       |
+| `docType`                  | The type of the document.                           |
+| `identifier`               | The identifier of the document.                     |
+| `docType-identifier`       | The type and identifier of the document.            |
