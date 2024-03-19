@@ -46,6 +46,15 @@ Adding facilities is crucial for retailers operating in multiple regions or coun
 - Click on the `Add Facility` function in the Inventory configuration section to open a dialog box.
 - Select the desired facility and its location from the dropdown menu.
 - Click `Add` to confirm the addition of the facility.
+  
+### Add Location:
+
+Adding locations within each facility helps in optimizing product storage and organization. It enables businesses to effectively manage their warehouse space, improve inventory visibility, and streamline order picking and packing processes, resulting in enhanced operational efficiency and customer satisfaction.
+
+- Click on the `Add Location` function to open a dialog box.
+- Choose the facility to which you want to add a location from the dropdown menu.
+- Select the geographical information or address for the location from the dropdown menu.
+- Click `Add` to confirm the addition of the new location to the selected facility.
 
 ### Editing Safety Stock:
 
@@ -55,11 +64,3 @@ Editing safety stock levels ensures maintaining an adequate level of stock to me
 - Update the minimum stock (Safety Stock) as required.
 - Click `Add` to confirm the changes in safety stock.
 
-### Add Location:
-
-Adding locations within each facility helps in optimizing product storage and organization. It enables businesses to effectively manage their warehouse space, improve inventory visibility, and streamline order picking and packing processes, resulting in enhanced operational efficiency and customer satisfaction.
-
-- Click on the `Add Location` function to open a dialog box.
-- Choose the facility to which you want to add a location from the dropdown menu.
-- Select the geographical information or address for the location from the dropdown menu.
-- Click `Add` to confirm the addition of the new location to the selected facility.
