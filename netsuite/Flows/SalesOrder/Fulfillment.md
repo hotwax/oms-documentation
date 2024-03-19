@@ -1,3 +1,9 @@
+---
+description: >-
+  Learn how fulfillment information is synchronized between NetSuite and HotWax
+  Commerce, ensuring accurate order status updates and financial processing.
+---
+
 # Fulfillment
 
 ## Fulfillment in NetSuite
@@ -31,8 +37,6 @@ HC_MR_ExportedSalesOrderFulfillmentCSV
 Order Item Fulfillment
 FTP Config: IMP_ODR_ITM_FLFLMNT
 ```
-
-{% file src="../../.gitbook/assets/Fulfilled Order Items Sample Feed.txt" %}
 
 * [x] Sync order item fulfillment details from NetSuite to HotWax
 
@@ -71,6 +75,8 @@ The `HC_SC_CreateItemFulfillment` SuiteScript also generates a CSV file highligh
 {% endhint %}
 
 * [x] Sync order item fulfillment details from HotWax to NetSuite
+
+{% file src="../../.gitbook/assets/Fulfilled Order Items Sample Feed.txt" %}
 
 **Overall sync progress**
 
