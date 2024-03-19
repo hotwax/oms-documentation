@@ -46,6 +46,8 @@ Adding facilities is crucial for retailers operating in multiple regions or coun
 - Click on the `Add Facility` function in the Inventory configuration section to open a dialog box.
 - Select the desired facility and its location from the dropdown menu.
 - Click `Add` to confirm the addition of the facility.
+
+{% embed url="https://youtu.be/EIilDUEtTM8" %} Video: Add Facility {% endembed %}
   
 ### Add Location:
 
@@ -55,6 +57,8 @@ Adding locations within each facility helps in optimizing product storage and or
 - Choose the facility to which you want to add a location from the dropdown menu.
 - Select the geographical information or address for the location from the dropdown menu.
 - Click `Add` to confirm the addition of the new location to the selected facility.
+
+{% embed url="https://youtu.be/nogcu-J6iWo" %} Video: Add Location {% endembed %}
 
 ### Editing Safety Stock:
 
