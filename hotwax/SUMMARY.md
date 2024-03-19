@@ -11,11 +11,11 @@
   * [Order Soft Allocation](journeys/brokering-and-allocation/soft-allocation.md)
 * [Pre-orders](journeys/pre-orders/introduction-pre-orders.md)
   * [Promise Date Change Notification](journeys/pre-orders/promise-date-change-communication.md)
-  
+
 ## API and Data feeds
 
 * [Authentication](api/initial-api-authentication.md)
-* [Orders](orders/README.md)
+* [Orders](api-and-data-feeds/orders/README.md)
   * [Created Orders](api/orders/createdOrderFeed.md)
   * [Order Adjustments](api/orders/adjustmentTypes.md)
   * [Order Reconciliations](api/orders/order-reconciliations.md)
@@ -23,16 +23,16 @@
   * [Check Inventory](api/inventory/check-inventory.md)
   * [Reset Inventory](api/inventory/reset-inventory.md)
   * [Update Inventory](api/inventory/update-inventory.md)
-* [Brokering WIP](api/brokering/README.md)
+* [Brokering WIP](api-and-data-feeds/brokering-wip/README.md)
   * [Brokered Order Items Feed](api/brokering/feeds/brokered-order-items-feed.md)
-* [Inbound Shipment](/inbount-shipment/README.md)
-  * [Import](/inbount-shipment/import.md)
+* [Inbound Shipment](api-and-data-feeds/inbound-shipment/README.md)
+  * [Import](inbount-shipment/import.md)
 * [Returns](returns/README.md)
   * [Enumerations](returns/field-options.md)
 * [Facility](api/facility/README.md)
   * [Post Code Lookup](api/facility/postcode-lookup.md)
   * [Store Lookup](api/facility/store-lookup.md)
-* [Fulfillment](api/fulfillment/README.md)
+* [Fulfillment](api-and-data-feeds/fulfillment/README.md)
   * [Add Shipment Box](api/fulfillment/apis/add-shipment-box.md)
   * [Create Picklist](api/fulfillment/apis/create-picklist.md)
   * [In Progress Orders](api/fulfillment/apis/in-progress-orders.md)
@@ -40,16 +40,15 @@
   * [Packing Slip PDF](api/fulfillment/apis/packing-slip-pdf.md)
   * [Ready To Ship Items](api/fulfillment/apis/ready-to-ship-items.md)
   * [Retry Shipping Label](api/fulfillment/apis/retry-shipping-label.md)
-  * [Shipping Label And PackingSlip](api/fulfillment/apis/shipping-label-and-packing-slip.md)
-  * [Shipping Label PDF](api/fulfillment/apis/shipping-label-PDF.md)
+  * [Shipping Label And PackingSlip](api-and-data-feeds/fulfillment/shipping-label-and-packingslip.md)
+  * [Shipping Label PDF](api-and-data-feeds/fulfillment/shipping-label-pdf.md)
   * [Update Orders](api/fulfillment/apis/update-orders.md)
-  * [Update And Import File](api/fulfillment/apis/upload-and-import-file.md)
+  * [Update And Import File](api-and-data-feeds/fulfillment/update-and-import-file.md)
   * [Fulfilled Order Items Feed](api/fulfillment/feed/fulfilled-order-items-feed.md)
-* [Appeasements WIP](api/appeasements/README.md)
+* [Appeasements WIP](api-and-data-feeds/appeasements-wip/README.md)
   * [Appeasements feed](api/appeasements/appeasements-feed.md)
-
-* [Miscellaneous](api/Miscellaneous/readme.md)
-  * [Perform Find](api/perform-find.md)
+* [Miscellaneous](api-and-data-feeds/miscellaneous/README.md)
+  * [Perform Find](api-and-data-feeds/miscellaneous/perform-find.md)
 
 ## Additional Resources
 

@@ -1,4 +1,10 @@
-# Getting started with BOPIS PDP experience
+---
+description: >-
+  Discover HotWax Commerce's BOPIS PDP experience enabling customers to browse
+  all pickup store options for desired products on Shopify's PDP.
+---
+
+# BOPIS PDP Experience
 
 ### HotWax's BOPIS PDP experience allows customers to browse all available pickup stores (facilities) for their desired products on the Shopify product detail page (PDP)
 
@@ -7,18 +13,18 @@
 ### Step 1: Obtain the customer's latitude and longitude
 
 To show available pickup facilities near the customer, the latitude and longitude coordinates of the customer are required. There are two ways to obtain these coordinates:
-<ol>
-<li>If the customer inputs their postal code,
-<ul> <li>Use the postcodeLookup API to convert the postal code into latitude and longitude coordinates </ul>
-<li>If the customer allows access to their system location, 
-<ul> <li>Obtain the  latitude and longitude coordinates directly from their device</ul>
-</ol>
 
-#### Sample: 
+1. If the customer inputs their postal code,
+   * Use the postcodeLookup API to convert the postal code into latitude and longitude coordinates
+2. If the customer allows access to their system location,
+   * Obtain the latitude and longitude coordinates directly from their device
+
+#### Sample:
 
 Method: `POST`
 
-##### Request
+**Request**
+
 ```
 {
   "json": {
@@ -27,7 +33,8 @@ Method: `POST`
 }
 ```
 
-##### Response
+**Response**
+
 ```
 {
   "responseHeader": {
@@ -58,14 +65,14 @@ Method: `POST`
 
 ### Step 2: Fetch all stores allowing BOPIS
 
-Using the latitude and longitude coordinates,  call the storeLookup API to fetch all the facilities within a given distance that allow BOPIS. 
-Note: The distance parameter is configurable to narrow down the search results. You can allow customers to input their preferred distance or set a default value.
+Using the latitude and longitude coordinates, call the storeLookup API to fetch all the facilities within a given distance that allow BOPIS. Note: The distance parameter is configurable to narrow down the search results. You can allow customers to input their preferred distance or set a default value.
 
-#### Sample: 
+#### Sample:
 
 Method: `POST`
 
-##### Request
+**Request**
+
 ```
 {
   "viewSize": 40,
@@ -76,7 +83,8 @@ Method: `POST`
 
 ```
 
-##### Response
+**Response**
+
 ```
 {
   "responseHeader": {
@@ -163,17 +171,18 @@ Method: `POST`
 }
 ```
 
-### Step 3: Check inventory at each store allowing BOPIS 
+### Step 3: Check inventory at each store allowing BOPIS
 
-For each store that allows BOPIS, use the checkInventory API to check the available to promise (ATP) inventory for the desired product. Display all the facilities with non-zero inventory numbers on the product detail page (PDP) for customers to select and place a BOPIS order. 
+For each store that allows BOPIS, use the checkInventory API to check the available to promise (ATP) inventory for the desired product. Display all the facilities with non-zero inventory numbers on the product detail page (PDP) for customers to select and place a BOPIS order.
 
 Note: If a facility has 0 inventory for the product, you can still display it for the Ship-to-store PDP experience.
 
-#### Sample: 
+#### Sample:
 
 Method: `POST`
 
-##### Request
+**Request**
+
 ```
 {
   "filters": {
@@ -183,7 +192,8 @@ Method: `POST`
 }
 ```
 
-##### Response
+**Response**
+
 ```
 {
 "count": "1",
@@ -207,15 +217,14 @@ Method: `POST`
 ### Handle cases when customer location is not available:
 
 In case the customer's location is not available, you can display all the available store pickup locations for the product using the storeLookup API and checkInventory API. Here's how to handle this scenario:
-<ul>
-<li> Step 1: Call the storeLookup API without passing latitude and longitude coordinates to retrieve all facilities allowing BOPIS</li>
-<li> Step 2: Use the facility IDs returned in the response of the storeLookup API with the checkInventory API to get the facilities having inventory for the product </li>
-<li> Step 3: Display all the locations with non-zero inventory on the PDP </li>
-</ul>
 
-#### Sample: 
+* Step 1: Call the storeLookup API without passing latitude and longitude coordinates to retrieve all facilities allowing BOPIS
+* Step 2: Use the facility IDs returned in the response of the storeLookup API with the checkInventory API to get the facilities having inventory for the product
+* Step 3: Display all the locations with non-zero inventory on the PDP
 
-##### Request
+#### Sample:
+
+**Request**
 
 ```
 {
@@ -225,11 +234,12 @@ In case the customer's location is not available, you can display all the availa
 ```
 
 ## Additioinal information
+
 **Identifying In-Store Pickup Orders:**
 
-When customers add qualifying items for in-store pickup, HotWax OMS will require the order to have the line item property `_pickupstore` prefilled with the pickup store location. 
+When customers add qualifying items for in-store pickup, HotWax OMS will require the order to have the line item property `_pickupstore` prefilled with the pickup store location.
 
-Note: The line item property can be added  by the merchant development team. 
+Note: The line item property can be added by the merchant development team.
 
 **Order Download Process:**
 
