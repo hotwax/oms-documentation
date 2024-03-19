@@ -1,3 +1,9 @@
+---
+description: >-
+  Explore a list of shipping methods mapped between Shopify, HotWax Commerce,
+  and NetSuite, ensuring accurate order syncing.
+---
+
 # Shipping Methods
 
 When syncing orders to NetSuite it's very important to have the correct shipping methods mapped. If shipping methods are not mapped correctly the order import process may fail.

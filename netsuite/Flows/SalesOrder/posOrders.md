@@ -1,3 +1,10 @@
+---
+description: >-
+  Discover how HotWax Commerce synchronizes POS sales to NetSuite, ensuring
+  accurate inventory and accounting updates for a consolidated view of online
+  and in-store sales.
+---
+
 # POS Orders
 
 In a retail environment, POS (Point of Sale) transactions play a vital role, reflecting the real-time sales happening in physical stores. POS sales are posted to NetSuite to manage inventory and conduct relevant accounting. While many businesses integrate their POS systems directly with their ERP (Enterprise Resource Planning) systems, some retailers choose to centralize their sales data, routing all transactions through an Order Management System (OMS) to synchronize both online and in-store sales data with the ERP. This scenario focuses on this synchronization where HotWax Commerce acts as the intermediary to push POS sales to NetSuite.
