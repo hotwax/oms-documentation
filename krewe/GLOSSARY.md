@@ -1,3 +1,9 @@
+---
+description: >-
+  Unlock the language of Krewe's eyewear world with our comprehensive glossary,
+  covering terms like Rx products, Nashville brokering, and more.
+---
+
 # Glossary
 
 ## Frame product

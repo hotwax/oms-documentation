@@ -1,29 +1,39 @@
-# Payment Method Mappings
+---
+description: >-
+  Explore Krewe's payment method mappings across Shopify, HotWax, and NetSuite
+  for seamless transaction processing and integration.
+---
+
+# Payment Methods
+
 This page contains the payment method mappings for Shopify <> HotWax <> NetSuite
 
 ## How they're setup in HotWax
+
 Because payment methods are not frequently changed, their NetSuite mappings are not available to edit from a UI. Instead they are stored in the integration layer between the systems.
 
 In case a payment method in Shopify and HotWax is not mapped to a payment method in NetSuite, the integration layer will fall back to a `DEFAULT` payment method. As of November, this fallback payment method is mapped to “Shopify Payment” in NetSuite.
 
 ## Mappings
-| Shopify Value            | HotWax ID               | Netsuite Value        |
-|--------------------------|-------------------------|-----------------------|
-| Ecomm giftcard           | EXT_SHOP_ECOM_GFTCRD    | Gift Card             |
-| gift_card                | EXT_SHOP_GFT_CARD       | Gift Card             |
-| manual                   | EXT_SHOP_MANUAL         | Shopify Payment       |
-| direct                   | EXT_SHOP_ DIRECT        | Shopify Payment       |
-| cash                     | EXT_SHOP_CASH_ON_DEL    | Shopify Payment       |
-| exchange-credit          | EXT_SHOP_EXG_CRD        | EXCHANGE CREDIT       |
-| amazon_marketplace       | EXT_SHOP_AMZN_MP        | Amazon Marketplace    |
-| afterpay_north_america   | EXT_SHOP_AFTRPAY_NA     | AfterPay              |
-| card                     | EXT_SHOP_CARD           | Shopify Payment       |
-| shopify_installments     | EXT_SHOP_PAY_INSTALL    | ShopPay               |
+
+| Shopify Value            | HotWax ID                | Netsuite Value     |
+| ------------------------ | ------------------------ | ------------------ |
+| Ecomm giftcard           | EXT\_SHOP\_ECOM\_GFTCRD  | Gift Card          |
+| gift\_card               | EXT\_SHOP\_GFT\_CARD     | Gift Card          |
+| manual                   | EXT\_SHOP\_MANUAL        | Shopify Payment    |
+| direct                   | EXT\_SHOP\_ DIRECT       | Shopify Payment    |
+| cash                     | EXT\_SHOP\_CASH\_ON\_DEL | Shopify Payment    |
+| exchange-credit          | EXT\_SHOP\_EXG\_CRD      | EXCHANGE CREDIT    |
+| amazon\_marketplace      | EXT\_SHOP\_AMZN\_MP      | Amazon Marketplace |
+| afterpay\_north\_america | EXT\_SHOP\_AFTRPAY\_NA   | AfterPay           |
+| card                     | EXT\_SHOP\_CARD          | Shopify Payment    |
+| shopify\_installments    | EXT\_SHOP\_PAY\_INSTALL  | ShopPay            |
 
 ## XML Data
 
 <details>
-  <summary>Payment Methods in HotWax</summary>
+
+<summary>Payment Methods in HotWax</summary>
 
 ```xml
 <PaymentMethodType description="Ext Ecomm giftcard" paymentMethodTypeId="EXT_SHOP_ECOM_GFTCRD"/>
@@ -34,11 +44,11 @@ In case a payment method in Shopify and HotWax is not mapped to a payment method
 <PaymentMethodType description="Ext amazon_marketplace" paymentMethodTypeId="EXT_SHOP_AMZN_MP"/>
 <PaymentMethodType description="Ext card" paymentMethodTypeId="EXT_SHOP_CARD"/>
 ```
+
 </details>
 
+<details>
 
-<details>
-<details>
 <summary>Shopify Shop Payment Methods</summary>
 
 ```xml
@@ -53,9 +63,11 @@ In case a payment method in Shopify and HotWax is not mapped to a payment method
 <ShopifyShopTypeMapping mappedKey="manual" mappedTypeId="SHOPIFY_PAYMENT_TYPE" mappedValue="EXT_SHOP_MANUAL" shopId="SHOP"/>
 <ShopifyShopTypeMapping mappedKey="shopify_installments" mappedTypeId="SHOPIFY_PAYMENT_TYPE" mappedValue="EXT_SHOP_PAY_INSTALL" shopId="SHOP"/>
 ```
+
 </details>
 
 <details>
+
 <summary>Integration Mapping Data</summary>
 
 ```xml
@@ -71,4 +83,5 @@ In case a payment method in Shopify and HotWax is not mapped to a payment method
 <IntegrationTypeMapping integrationTypeId="NETSUITE_PMT_MTHD" mappingKey="EXT_SHOP_PAY_INSTALL" mappingValue="22" description="ShopPay"/>
 <IntegrationTypeMapping integrationTypeId="NETSUITE_PMT_MTHD" mappingKey="DEFAULT" mappingValue="8" description="Shopify Payment"/>
 ```
+
 </details>

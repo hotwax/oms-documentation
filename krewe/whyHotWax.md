@@ -1,10 +1,17 @@
-# Why HotWax Commerce?
+---
+description: >-
+  Explore the advantages of choosing HotWax Commerce for seamless inventory
+  management, flexible order fulfillment, and efficient brick-and-mortar
+  operations.
+---
+
+# Why HotWax Commerce
 
 ## Key Omnichannel Initiatives
 
 Enable a non-channel restricted use of inventory, ensuring that stock from both their warehouse and retail locations could be seamlessly utilized for online and in-store sales.
 
-Implement a fulfillment system that could handle three distinct purchasing patterns, including same-day buy-online-pick-up-in-store (BOPIS), regular warehouse fulfilled eCommerce orders and online orders fulfilled by the store.
+Implement a fulfillment system that could handle three distinct purchasing patterns, including same-day buy-online-pick-up-in-store (BOPIS), regular warehouse-fulfilled eCommerce orders and online orders fulfilled by the store.
 
 Implement flexible order fulfillment rules based on specific product classes, such as those for prescription (Rx) lenses, which may differ by location to ensure that orders are fulfilled in compliance with applicable state laws. It's imperative to fulfill orders exclusively through retail stores that have an on-site doctor available as mandated by the law.
 

@@ -1,57 +1,59 @@
+---
+description: >-
+  Discover Krewe's shipping method setup, including mappings between Shopify and
+  HotWax, ensuring seamless order fulfillment and integration with NetSuite.
+---
+
 # Shipping Methods
-Shipping methods in Shopify are mapped directly to specific methods in HotWax, but NetSuite has certain shipping methods being reused to serve multiple methods in HotWax.
-Krewe also adjusts these methods periodicially or during certain events such as sales. Because of this semi-frequent editing, they should have access to updating these mappings themselves.
+
+Shipping methods in Shopify are mapped directly to specific methods in HotWax, but NetSuite has certain shipping methods being reused to serve multiple methods in HotWax. Krewe also adjusts these methods periodicially or during certain events such as sales. Because of this semi-frequent editing, they should have access to updating these mappings themselves.
 
 ## How they're setup in HotWax
+
 Shipping methods are setup just like any other instance. The name of the shipping method is mapped to the name of the shipping method that is received from Shopify. This may not always be the value that is configured against it in NetSuite. Often times a single method in NetSuite may be servicing multiple shipping methods in Shopify.
 
 To map these methods to NetSuite, they will be set up in the HotWax integration table, mapping the original carrier and shipment method combination to the corresponding method in NetSuite.
 
-When syncing orders to NetSuite, the integration layer will check saved shipping method mappings for a value where
-type field value is NetSuite
-the mapped key matches shipment method type ID of the order ship group
+When syncing orders to NetSuite, the integration layer will check saved shipping method mappings for a value where type field value is NetSuite the mapped key matches shipment method type ID of the order ship group
 
 The integration layer will then use the mapped value of this record and include it in the order creation feed to NetSuite.
 
-Methods in Shopify are linked directly to one carrier as well, and the methods in NetSuite also have carrier’s linked to them internally. Because of this simple mapping, we are only storing the shipment method type in the integration layer. 
+Methods in Shopify are linked directly to one carrier as well, and the methods in NetSuite also have carrier’s linked to them internally. Because of this simple mapping, we are only storing the shipment method type in the integration layer.
 
 If the shipping methods from Shopify are not mapped to a corresponding shipping method in HotWax they are defaulted to an out of the box “Standard” shipping method. To ensure orders still continue to flow to NetSuite we have added a default mapping for these methods in the integration table. Any order with a Standard shipping method is mapped to “Fedex Home Delivery” in NetSuite.
 
-<!-- todo: identify the mappings that are actually used in production -->
-
 ## Mappings
 
-| Shopify Shipping Method            | HotWax Shipment Method          | HotWax Description  | NetSuite Shipping Method       | FedEx Shipping Method             |
-|------------------------------------|----------------------------------|--------------------------------------|--------------------------------|-----------------------------------|
-| 2 Day FedEx Shipping               | FEDEX_HOME_DELIVERY              | FedEx Home Delivery                 | FedEx Home Delivery            | FedEx Home Delivery®               |
-| 2 Day Shipping                     | 2_DAY_SHIPPING                   | 2-Day Shipping                       | 2-Day Shipping                 | FedEx 2Day®                        |
-| 2-3 Day International Shipping     | INTERNATIONAL_CONNECT_PLUS       | FedEx International Connect Plus     | FedEx International Connect Plus | FedEx® International Connect Plus |
-| 2-5 Day International Shipping     | INTERNATIONAL_CONNECT_PLUS       | FedEx International Connect Plus     | FedEx International Connect Plus | FedEx® International Connect Plus |
-| 2-Day FedEx Shipping               | 2_DAY_SHIPPING                   | 2-Day Shipping                       | 2-Day Shipping                 | FedEx 2Day®                        |
-| 2-Day Shipping                     | 2_DAY_SHIPPING                   | 2-Day Shipping                       | 2-Day Shipping                 | FedEx 2Day®                        |
-| 2-Day Shipping 67G                  | 2_DAY_SHIPPING_67G               | 2-Day Shipping 67G                    | 2-Day Shipping 67G              | FedEx 2Day®                        |
-| 3 Day Shipping                      | USPS_PRIORITY_MAIL                | USPS Shipping                      | USPS Shipping                  | USPS Priority Mail®                |
-| 3-Day Express Saver                | EXPRESS_SAVER                    | FedEx Express Saver®                 | FedEx Express Saver®           | FedEx Express Saver®               |
-| 3-Day Shipping                      | USPS_PRIORITY_MAIL                | USPS Shipping                      | USPS Shipping                  | USPS Priority Mail®                |
-| 3-Day Shipping PR                   | USPS_PRIORITY_MAIL                | USPS Shipping                       | USPS Shipping                  | USPS Priority Mail®                |
-| FedEx 2Day®                        | 2_DAY_SHIPPING                   | 2-Day Shipping                         | 2-Day Shipping                    | FedEx 2Day®                     |
-| FedEx Ground Shipping               | GROUND                           | FedEx Ground                        | FedEx Ground                   | FedEx Ground®                      |
-| FedEx International Connect Plus    | INTERNATIONAL_CONNECT_PLUS       | FedEx International Connect Plus     | FedEx International Connect Plus | FedEx® International Connect Plus |
-| FedEx International Economy®        | INTERNATIONAL_ECONOMY            | FedEx International Economy®         | FedEx International Economy®   | FedEx International Economy®       |
-| FedEx International Priority®       | INTERNATIONAL_PRIORITY           | FedEx International Priority®        | FedEx International Priority®  | FedEx International Priority®      |
-| FREE 2 Day Shipping                 | FEDEX_HOME_DELIVERY              | FedEx Home Delivery                 | FedEx Home Delivery            | FedEx Home Delivery®               |
-| FREE 2-Day Shipping                 | 2_DAY_SHIPPING                   | FREE 2-Day Shipping                   | 2-Day Shipping                 | FedEx 2Day®                        |
-| Free 3-Day Shipping                 | USPS_PRIORITY_MAIL                | Free 3-Day Shipping                   | USPS Shipping                  | USPS Priority Mail®                |
-| Ground Economy Shipping             | GROUND_ECONOMY                   | Ground Economy Shipping               | FedEx Ground Economy            | FedEx Ground® Economy              |
-| Ground Shipping                     | GROUND                           | Ground Shipping                       | FedEx Home Delivery            | FedEx Home Delivery®               |
-| Overnight Shipping                  | STANDARD_OVERNIGHT               | Overnight Shipping                    | Fedex Standard Overnight        | FedEx Standard Overnight®          |
-| Standard Ground Shipping            | STANDARD_GROUND                  | Standard Ground Shipping               | FedEx Home Delivery            | FedEx Home Delivery®               |
-
-
+| Shopify Shipping Method          | HotWax Shipment Method       | HotWax Description               | NetSuite Shipping Method         | FedEx Shipping Method             |
+| -------------------------------- | ---------------------------- | -------------------------------- | -------------------------------- | --------------------------------- |
+| 2 Day FedEx Shipping             | FEDEX\_HOME\_DELIVERY        | FedEx Home Delivery              | FedEx Home Delivery              | FedEx Home Delivery®              |
+| 2 Day Shipping                   | 2\_DAY\_SHIPPING             | 2-Day Shipping                   | 2-Day Shipping                   | FedEx 2Day®                       |
+| 2-3 Day International Shipping   | INTERNATIONAL\_CONNECT\_PLUS | FedEx International Connect Plus | FedEx International Connect Plus | FedEx® International Connect Plus |
+| 2-5 Day International Shipping   | INTERNATIONAL\_CONNECT\_PLUS | FedEx International Connect Plus | FedEx International Connect Plus | FedEx® International Connect Plus |
+| 2-Day FedEx Shipping             | 2\_DAY\_SHIPPING             | 2-Day Shipping                   | 2-Day Shipping                   | FedEx 2Day®                       |
+| 2-Day Shipping                   | 2\_DAY\_SHIPPING             | 2-Day Shipping                   | 2-Day Shipping                   | FedEx 2Day®                       |
+| 2-Day Shipping 67G               | 2\_DAY\_SHIPPING\_67G        | 2-Day Shipping 67G               | 2-Day Shipping 67G               | FedEx 2Day®                       |
+| 3 Day Shipping                   | USPS\_PRIORITY\_MAIL         | USPS Shipping                    | USPS Shipping                    | USPS Priority Mail®               |
+| 3-Day Express Saver              | EXPRESS\_SAVER               | FedEx Express Saver®             | FedEx Express Saver®             | FedEx Express Saver®              |
+| 3-Day Shipping                   | USPS\_PRIORITY\_MAIL         | USPS Shipping                    | USPS Shipping                    | USPS Priority Mail®               |
+| 3-Day Shipping PR                | USPS\_PRIORITY\_MAIL         | USPS Shipping                    | USPS Shipping                    | USPS Priority Mail®               |
+| FedEx 2Day®                      | 2\_DAY\_SHIPPING             | 2-Day Shipping                   | 2-Day Shipping                   | FedEx 2Day®                       |
+| FedEx Ground Shipping            | GROUND                       | FedEx Ground                     | FedEx Ground                     | FedEx Ground®                     |
+| FedEx International Connect Plus | INTERNATIONAL\_CONNECT\_PLUS | FedEx International Connect Plus | FedEx International Connect Plus | FedEx® International Connect Plus |
+| FedEx International Economy®     | INTERNATIONAL\_ECONOMY       | FedEx International Economy®     | FedEx International Economy®     | FedEx International Economy®      |
+| FedEx International Priority®    | INTERNATIONAL\_PRIORITY      | FedEx International Priority®    | FedEx International Priority®    | FedEx International Priority®     |
+| FREE 2 Day Shipping              | FEDEX\_HOME\_DELIVERY        | FedEx Home Delivery              | FedEx Home Delivery              | FedEx Home Delivery®              |
+| FREE 2-Day Shipping              | 2\_DAY\_SHIPPING             | FREE 2-Day Shipping              | 2-Day Shipping                   | FedEx 2Day®                       |
+| Free 3-Day Shipping              | USPS\_PRIORITY\_MAIL         | Free 3-Day Shipping              | USPS Shipping                    | USPS Priority Mail®               |
+| Ground Economy Shipping          | GROUND\_ECONOMY              | Ground Economy Shipping          | FedEx Ground Economy             | FedEx Ground® Economy             |
+| Ground Shipping                  | GROUND                       | Ground Shipping                  | FedEx Home Delivery              | FedEx Home Delivery®              |
+| Overnight Shipping               | STANDARD\_OVERNIGHT          | Overnight Shipping               | Fedex Standard Overnight         | FedEx Standard Overnight®         |
+| Standard Ground Shipping         | STANDARD\_GROUND             | Standard Ground Shipping         | FedEx Home Delivery              | FedEx Home Delivery®              |
 
 ## XML Data
 
 <details>
+
 <summary>Production Shipping Methods</summary>
 
 ```xml
@@ -83,9 +85,11 @@ If the shipping methods from Shopify are not mapped to a corresponding shipping 
 <CarrierShipmentMethod partyId="USPS" roleTypeId="CARRIER" shipmentMethodTypeId="USPS_PRIORITY" carrierServiceCode="PRIORITY_OVERNIGHT"/>
 <!-- Add more CarrierShipmentMethod entries as needed -->
 ```
+
 </details>
 
 <details>
+
 <summary>Shopify Mapping</summary>
 
 ```xml
@@ -114,12 +118,13 @@ If the shipping methods from Shopify are not mapped to a corresponding shipping 
 <ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="FEDEX" shipmentMethodTypeId="STANDARD_OVERNIGHT" shopifyShippingMethod="Overnight Shipping"/>
 <ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="FEDEX" shipmentMethodTypeId="GROUND" shopifyShippingMethod="Standard Ground Shipping"/>
 ```
+
 </details>
 
-
 <details>
+
 <summary>NetSuite Shipping Method Mappings</summary>
-  
+
 ```xml
 <IntegrationTypeMapping integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="FEDEX_HOME_DELIVERY" mappingValue="4236" />
 <IntegrationTypeMapping integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="2_DAY_SHIPPING" mappingValue="711" />
@@ -135,11 +140,13 @@ If the shipping methods from Shopify are not mapped to a corresponding shipping 
 <!-- fallback shipping method -->
 <IntegrationTypeMapping integrationTypeId="NETSUITE_SHP_MTHD" mappingKey="STANDARD" mappingValue="4236" />
 ```
+
 </details>
 
 <details>
+
 <summary>Product Store Shipment Methods in HotWax</summary>
-  
+
 ```xml
 <ProductStoreShipmentMeth partyId="FEDEX" productStoreId="STORE" productStoreShipMethId="FEDEX_HOME_DELIVERY" roleTypeId="CARRIER" shipmentMethodTypeId="FEDEX_HOME_DELIVERY"/>
 <ProductStoreShipmentMeth partyId="FEDEX" productStoreId="STORE" productStoreShipMethId="2_DAY_SHIPPING" roleTypeId="CARRIER" shipmentMethodTypeId="2_DAY_SHIPPING"/>
@@ -153,4 +160,5 @@ If the shipping methods from Shopify are not mapped to a corresponding shipping 
 <ProductStoreShipmentMeth partyId="FEDEX" productStoreId="STORE" productStoreShipMethId="INTL_PRIORITY" roleTypeId="CARRIER" shipmentMethodTypeId="INTL_PRIORITY"/>
 <ProductStoreShipmentMeth partyId="USPS" productStoreId="STORE" productStoreShipMethId="USPS_PRIORITY" roleTypeId="CARRIER" shipmentMethodTypeId="USPS_PRIORITY"/>
 ```
+
 </details>

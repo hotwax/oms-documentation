@@ -1,4 +1,7 @@
 ---
+description: >-
+  Explore Krewe's innovative eyewear retailing approach. Learn about their focus
+  on seamless integration with NetSuite for efficient sales channel management.
 cover: .gitbook/assets/IMG_2942.heic
 coverY: 0
 layout:
@@ -8,7 +11,7 @@ layout:
   title:
     visible: true
   description:
-    visible: false
+    visible: true
   tableOfContents:
     visible: true
   outline:
