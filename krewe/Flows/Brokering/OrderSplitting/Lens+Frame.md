@@ -1,4 +1,11 @@
-# Shipping lenses with frames
+---
+description: >-
+  Discover how Krewe seamlessly integrates custom lenses with frames in HotWax
+  Commerce, ensuring efficient fulfillment by linking them as kits to be shipped
+  together.
+---
+
+# Lens and Frames
 
 Custom lenses that are added to cart by customers in Shopify for frames will be shipped with those frames in the same shipment. To support the special linking between the frames and lenses added to cart by the customer, a special line item property will be added to the lenses when added to cart that will identify which SKU in the cart they are linked to.
 

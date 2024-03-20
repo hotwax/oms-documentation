@@ -1,6 +1,13 @@
-# Facility Setup
+---
+description: Page Description - Facilities
+---
+
+# Facilities
+
+
 
 <details>
+
 <summary>Shopify Location Mapping</summary>
 
 ```xml
@@ -23,9 +30,11 @@
 <ShopifyShopLocation facilityId="61327048791" shopId="SHOP" fromDate="2023-11-27 shopifyLocationId="348"/>
 <ShopifyShopLocation facilityId="62778048599" shopId="SHOP" fromDate="2023-11-27 shopifyLocationId="405"/>
 ```
+
 </details>
 
 <details>
+
 <summary>NetSuite Order Type Mapping</summary>
 
 ```xml
@@ -49,9 +58,11 @@
 <FacilityIdentification facilityId="348" facilityIdenTypeId="NETSUITE_ORDR_TYPE" fromDate="2023-11-27 05:31:34.056" idValue="6"/>
 <FacilityIdentification facilityId="405" facilityIdenTypeId="NETSUITE_ORDR_TYPE" fromDate="2023-11-27 05:31:34.056" idValue="6"/>
 ```
+
 </details>
 
 <details>
+
 <summary>NetSuite Channel Mapping</summary>
 
 ```xml
@@ -74,9 +85,11 @@
 <FacilityIdentification facilityId="348" facilityIdenTypeId="ORDR_ORGN_SLS_CHNL" fromDate="2023-11-27 05:31:34.056" idValue="128"/>
 <FacilityIdentification facilityId="405" facilityIdenTypeId="ORDR_ORGN_SLS_CHNL" fromDate="2023-11-27 05:31:34.056" idValue="181"/>
 ```
+
 </details>
 
 <details>
+
 <summary>NetSuite Deparment Mapping</summary>
 
 ```xml
@@ -99,4 +112,5 @@
 <FacilityIdentification facilityId="348" facilityIdenTypeId="ORDR_ORGN_DPT" fromDate="2023-11-27 05:31:34.056" idValue="325"/>
 <FacilityIdentification facilityId="405" facilityIdenTypeId="ORDR_ORGN_DPT" fromDate="2023-11-27 05:31:34.056" idValue="392"/>
 ```
+
 </details>

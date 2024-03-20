@@ -1,3 +1,9 @@
+---
+description: >-
+  Explore Krewe's inventory management process, leveraging HotWax's Unified
+  Inventory capabilities for seamless flow from NetSuite to Shopify.
+---
+
 # Inventory
 
 ## Sync Inventory

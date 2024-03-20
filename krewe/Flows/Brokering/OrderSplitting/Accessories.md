@@ -1,4 +1,11 @@
-# Accessory Order Splitting
+---
+description: >-
+  Explore how Krewe seamlessly integrates accessories with product orders in
+  HotWax Commerce, ensuring efficient allocation and fulfillment without
+  splitting them from their parent products.
+---
+
+# Accessories
 
 If accessories are configured for a product, whenever a new order is created in HotWax Commerce for it, its accessories will automatically be added to the order along with it. Whenever a product with accessories is allocated to a fulfillment location, its accessory items will also be allocated along with it to ensure it’s shipped with the parent product. HotWax Commerce will never attempt to split accessory items from their parent product.
 

@@ -1,3 +1,10 @@
+---
+description: >-
+  Explore how Krewe handles gift items in HotWax Commerce, ensuring they are
+  only shipped alongside standard order items, enhancing customer experience and
+  fulfillment efficiency.
+---
+
 # Gift Items
 
 Gift items are added to an order directly from Shopify when the order is captured. During allocation, gift items will only be allocated to a fulfillment location if a standard order item from the same order is also being allocated to the same fulfillment location, ensuring that gift items are never shipped alone.

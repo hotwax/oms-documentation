@@ -1,15 +1,21 @@
+---
+description: >-
+  Explore Krewe's specialized approach to handling returns across subsidiaries,
+  ensuring accurate accounting and inventory management in NetSuite.
+---
+
 # Returns
 
 ## Cross Subsidiary Returns
+
 Krewe operates between two subsidiaries within the same overarching company structure. When returns span across these subsidiaries, a unique approach is required to ensure accurate posting to NetSuite accounting.
 
 If Subsidiary 67G has participated in the sales order or return, a specialized flow is triggered to populate custom return subsidiary and return location fields in NetSuite.
 
 1. **Custom Return Subsidiary Field:**
-   - Captures the true subsidiary of the return.
-
+   * Captures the true subsidiary of the return.
 2. **Custom Return Location Field:**
-   - Records the true location where the order was returned.
+   * Records the true location where the order was returned.
 
 The native location field in NetSuite always reflects the location from which the original order was dispatched. Whereas the custom return location field always captures the location where the order was returned.
 
