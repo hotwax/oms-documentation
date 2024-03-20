@@ -2,7 +2,7 @@
 description: >-
   The Order Lifecycle Process Model illustrates how HotWax Commerce orchestrates
   the journey of an order from creation to approval, routing, and fulfillment,
-  ensuring efficiency and accuracy at every st
+  ensuring accuracy at every stage.
 ---
 
 # Order lifecycle
