@@ -1,13 +1,20 @@
-# Store Fulfillment Business Process Model
+---
+description: >-
+  The Store Fulfillment Process Model illustrates how HotWax Commerce Store
+  Fulfillment Suite enables Pick, Pack & Ship of online orders received at
+  stores.
+---
 
-The Store Fulfillment Process Model illustrates how HotWax Commerce Store Fulfillment Suite enables Pick, Pack & Ship of online orders received at stores.
+# Store fulfillment
+
+<figure><img src="../.gitbook/assets/store fulfillment bpm.png" alt=""><figcaption><p>Store fulfillment business process model</p></figcaption></figure>
 
 ## Orders Allocated to Stores
 
 As outlined in the Order Lifecycle Business Process Model, HotWax Commerce order routing engine looks for the optimal fulfillment location to allocate approved orders. Once order items have been successfully allocated to stores, two actions take place in HotWax Commerce:
 
-- The allocation status for the order item is set as "Brokered".
-- The fulfillment status for the order item is set as "Reserved".
+* The allocation status for the order item is set as "Brokered".
+* The fulfillment status for the order item is set as "Reserved".
 
 ## Pick, Pack & Ship
 
@@ -27,14 +34,14 @@ Once store managers determine the batch of orders they wish to fulfill first, th
 
 There are two options using which pickers can start the picking process:
 
-- **Direct Printing:** Picklists can be directly printed from the Store Fulfillment App.
-- **QR Code Generation:** Store managers can generate QR codes for picklists from the Store Fulfillment App. The assigned picker can then scan this QR code using their mobile device and view their picklist directly in the Order Picking App.
+* **Direct Printing:** Picklists can be directly printed from the Store Fulfillment App.
+* **QR Code Generation:** Store managers can generate QR codes for picklists from the Store Fulfillment App. The assigned picker can then scan this QR code using their mobile device and view their picklist directly in the Order Picking App.
 
 HotWax Commerce recommends using the Order Picking mobile app for efficient order fulfillment because it allows pickers to:
 
-- Sort order items in the picklist based on preferred criteria, including Product Name, Bin ID, or Location Sequence ID.
-- Scan barcodes for accurate item verification.
-- View enlarged product images for easier identification.
+* Sort order items in the picklist based on preferred criteria, including Product Name, Bin ID, or Location Sequence ID.
+* Scan barcodes for accurate item verification.
+* View enlarged product images for easier identification.
 
 These features maximize picker efficiency and minimize errors during the picking process.
 
@@ -78,7 +85,7 @@ Once the order has been correctly repacked, the team marks it as "Packed." Subse
 
 After the carrier collects the packed orders, fulfillment teams have two options:
 
-- **Auto ship:** The Ship Packed Orders Job in HotWax Commerce checks if packed orders have tracking codes and automatically marks them as “Ship Now”.
-- **Manual ship:** Fulfillment teams can manually mark orders as "Ship Now" once the shipping provider collects them.
+* **Auto ship:** The Ship Packed Orders Job in HotWax Commerce checks if packed orders have tracking codes and automatically marks them as “Ship Now”.
+* **Manual ship:** Fulfillment teams can manually mark orders as "Ship Now" once the shipping provider collects them.
 
 Once orders are marked as shipped in the Store Fulfillment App, the order item status in HotWax Commerce is updated from "Approved" to "Completed," and the fulfillment status is updated from "Packed" to "Shipped".
