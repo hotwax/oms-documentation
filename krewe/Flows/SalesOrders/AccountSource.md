@@ -1,3 +1,10 @@
+---
+description: >-
+  Discover how Krewe utilizes account source data to track customer acquisition
+  channels, enabling effective marketing campaign attribution and analysis
+  across sales channels.
+---
+
 # Account Source
 
 ## What is Account Source?

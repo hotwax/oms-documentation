@@ -1,3 +1,10 @@
+---
+description: >-
+  Explore how Krewe handles unregistered POS Cash Sales by mapping them to a
+  blanket customer in HotWax for seamless order processing and integration with
+  NetSuite.
+---
+
 # Blanket Customer
 
 ## Blanket Customer

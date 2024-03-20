@@ -1,35 +1,45 @@
+---
+description: >-
+  Discover how Krewe customizes facility identifications in HotWax for seamless
+  order syncing and integration with NetSuite, ensuring accurate departmental
+  mapping.
+---
+
 # Departments
 
 ## What are Departments?
+
 Departments are listed first on transactions, and are useful when designating transactions and employees as part of an internal team.
 
 They're also used to track income and expenses by each department over any time period in the reports
 
-[Reference][departmentDocs]
+[Reference](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section\_N261602.html#Departments-and-Classes-Overview)
 
 ## How they're setup in HotWax
+
 The department, from a business perspective, is determined by the facility the order is placed from. Before HotWax this information was mapped from Shopify Location ID to NetSuite Department using a Celigo Script.
 
 In HotWax, Krewe will be able to add custom Facility Identifications, allowing them to map custom values to each facility they setup. The identification types will have to be predetermined so that when HotWax syncs the order to NetSuite it is able to check specifically the Department type of facility identification and include it in the order.
 
 Facility Identification Type
+
 ```
 ORDR_ORGN_DPT
 ```
+
 ```xml
 <Enumeration enumId="ORDR_ORGN_DPT" description="Netsuite Department Code" enumCode="ORDER_ORIGIN_DEPARTMENT" enumTypeId="FACILITY_IDENTITY" sequenceId="01"/>
 ```
 
-<!-- add actual facility type id -->
-
 ## Source Data
+
 ```
 {{#compare source_name '==' 'pos'}}{{#compare location_id '==' '30696177751'}}212{{else compare  location_id '==' '30696210519'}}210{{else compare location_id '==' '62714806359'}}335{{else compare  location_id '==' '62714773591'}}317{{else compare location_id '==' '31137890391'}}260{{else compare  location_id '==' '35758243927'}}294{{else compare location_id '==' '35764404311'}}295{{else compare  location_id '==' '35781869655'}}241{{else compare location_id '==' '35698901079'}}327{{else compare  location_id '==' '61327048791'}}325{{else compare location_id '==' '60903391319'}}378{{else compare  location_id '==' '60903424087'}}313{{else compare location_id '==' '60912140375'}}322{{else compare  location_id '==' '60914499671'}}320{{else compare location_id '==' '62191239255'}}356{{else compare  location_id '==' '62571642967'}}364{{else compare location_id '==' '62743052375'}}375{{else compare  location_id '==' '62762614871'}}386{{else compare location_id '==' '62739513431'}}373{{else compare  location_id '==' '34464825431'}}273{{else compare location_id '==' '62750916695'}}377{{else compare  location_id '==' '31157780567'}}266{{else compare location_id '==' '34465185879'}}222{{else compare  location_id '==' '30696341591'}}218{{else compare location_id '==' '62759370839'}}382{{else compare  location_id '==' '62050500695'}}353{{else compare location_id '==' '62778048599'}}392{{else compare  location_id '==' '62288560215'}}358{{else compare location_id '=='  
 '62776344663'}}391{{else}}{{/compare}}{{else}}203{{/compare}}{{else}}203{{/compare}}
 ```
 
-
 <details>
+
 <summary>Formatted</summary>
 
 ```
@@ -67,10 +77,11 @@ ORDR_ORGN_DPT
   }
 }
 ```
+
 </details>
 
-
 <details>
+
 <summary>Refactored</summary>
 
 ```json
@@ -109,7 +120,5 @@ ORDR_ORGN_DPT
   }
 }
 ```
-</details>
 
-<!-- page links -->
-[departmentDocs]: https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_N261602.html#Departments-and-Classes-Overview
+</details>
