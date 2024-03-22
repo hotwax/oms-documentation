@@ -47,6 +47,18 @@
 
 {% endtabs %}
 
+## Hotfix - v5.5.5 (22th Mar 2024)
+
+| Information         | Value                                |
+|---------------------|--------------------------------------|
+| Release Version     | v5.5.5                           |
+| Release Type        | Hotfix                             |
+| Image Tag           | v5.5.5                        |
+| Image URL           | `289432782788.dkr.ecr.us-east-1.amazonaws.com/omscoreimage:omscoreimage-v5.5.5` |
+| Diff                | [Link to diff](https://git.hotwax.co/tools/omssetup/-/compare/v5.5.4...v5.5.5?from_project_id=242&straight=false) |
+| Changelog           | [Link to changelog](https://git.hotwax.co/commerce/oms/-/blob/v5.5.5/CHANGELOG.md?ref_type=tags)
+
+
 ## Hotfix - v5.5.4 (21th Mar 2024)
 
 | Information         | Value                                |
