@@ -1,3 +1,9 @@
+---
+description: >-
+  Effortlessly manage ASN, Purchase Orders, and Returns while maintaining
+  precise inventory counts.
+---
+
 # Inventory Receiving
 
 HotWax Commerce’s Inventory Receiving App empowers stock associates to efficiently receive ASN, Purchase Orders, and Returns and update the inventory count in the HotWax Commerce Order Management System.

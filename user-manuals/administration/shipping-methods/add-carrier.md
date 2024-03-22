@@ -1,4 +1,10 @@
-# How to Set Up a Carrier
+---
+description: >-
+  Efficiently set up carriers for shipping methods in HotWax Commerce's Order
+  Management System (OMS).
+---
+
+# Create Carrier
 
 Before configuring a shipping method, it is necessary to set up a carrier corresponding to that shipping method. The OMS comes with a default placeholder carrier that can be utilized when an exact carrier shipment method doesn't need to be mapped or when Service Level Agreements (SLAs) are used to rateshop with carriers and determine an optimized shipping method.
 
@@ -13,10 +19,8 @@ Import this XML data using the web tools' import XML data function.
 ```
 
 {% hint style="info" %}
-Insert a unique custom party ID for your carrier and proceed to import it into the system.
-The party ID cannot be longer than 20 characters
+Insert a unique custom party ID for your carrier and proceed to import it into the system. The party ID cannot be longer than 20 characters
 {% endhint %}
-
 
 Now that the carrier party is created, you have to assing a carrier role to it. Add the party ID to this sample data and import it into the OMS to give the party a carrier role:
 

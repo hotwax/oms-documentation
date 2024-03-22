@@ -1,13 +1,16 @@
-# User Management
+---
+description: >-
+  Simplify user management in the Order Management System (OMS) with HotWax
+  Commerce.
+---
+
+# Manage Users
 
 In the Order Management System (OMS), user management is a straightforward process accomplished through the Find User page and the User Details page. Follow these steps for efficient user management:
 
 1. Go to the Find User page within OMS.
-
 2. Utilize the search by user name and filtering options such as clearance and status to find the specific user you want to manage.
-
 3. Once the user is identified, click on the user to access the dedicated User Details page.
-
 4. On the User Details page, you can update contact information, adjust roles, or manage permissions.
 
 ## Block or Unblock User Login
@@ -36,6 +39,6 @@ The "Add Facilities" function allows administrators to associate a user with mul
 
 ## Add Favorites
 
-The Favorites function allows users to pin their most frequently used Product store and Shopify shop, ensuring these selections are automatically applied each time they log in to any HotWax Commerce App. 
+The Favorites function allows users to pin their most frequently used Product store and Shopify shop, ensuring these selections are automatically applied each time they log in to any HotWax Commerce App.
 
 This feature is particularly valuable when users need to schedule specific jobs from the Job Manager app, such as `Import new products`, on a parent Shopify shop. If the shop is not set correctly or the default Shop is not the parent, users might mistakenly run a job on the child shop, which could lead to unexpected changes in OMS behavior.
