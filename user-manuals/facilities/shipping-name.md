@@ -17,3 +17,6 @@ The shipping name feature in HotWax Commerce offers retailers flexibility and br
 6. **Ensure Correct Zipcode:** Alongside entering the shipping name, ensure that you input the correct Zipcode for the facility. This is crucial, as the Zipcode is required for setting the shipping name.
 
 7. **Save Changes:** After entering the shipping name and verifying the Zipcode, save the changes to update the facility's details effectively.
+
+{% embed url="https://youtu.be/gRkDyZT9jqs" %} Video: Set Shipping name {% endembed %}
+
