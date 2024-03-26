@@ -47,14 +47,8 @@ Adding facilities is crucial for retailers operating in multiple regions or coun
 - Select the desired facility and its location from the dropdown menu.
 - Click `Add` to confirm the addition of the facility.
 
-### Editing Safety Stock:
-
-Editing safety stock levels ensures maintaining an adequate level of stock to meet demand and prevent stockouts. Safety stock is set to ensure stores have stock that can be used in case of any inventory variance or to reserve stock for in-store sales. By adjusting safety stock levels, businesses can optimize inventory investment, minimize carrying costs, and mitigate the risk of stockouts, thereby enhancing customer satisfaction and revenue generation.
-
-- Locate and click on the edit icon of the facility for which you want to adjust the safety stock.
-- Update the minimum stock (Safety Stock) as required.
-- Click `Add` to confirm the changes in safety stock.
-
+{% embed url="https://youtu.be/EIilDUEtTM8" %} Video: Add Facility {% endembed %}
+  
 ### Add Location:
 
 Adding locations within each facility helps in optimizing product storage and organization. It enables businesses to effectively manage their warehouse space, improve inventory visibility, and streamline order picking and packing processes, resulting in enhanced operational efficiency and customer satisfaction.
@@ -63,3 +57,14 @@ Adding locations within each facility helps in optimizing product storage and or
 - Choose the facility to which you want to add a location from the dropdown menu.
 - Select the geographical information or address for the location from the dropdown menu.
 - Click `Add` to confirm the addition of the new location to the selected facility.
+
+{% embed url="https://youtu.be/nogcu-J6iWo" %} Video: Add Location {% endembed %}
+
+### Editing Safety Stock:
+
+Editing safety stock levels ensures maintaining an adequate level of stock to meet demand and prevent stockouts. Safety stock is set to ensure stores have stock that can be used in case of any inventory variance or to reserve stock for in-store sales. By adjusting safety stock levels, businesses can optimize inventory investment, minimize carrying costs, and mitigate the risk of stockouts, thereby enhancing customer satisfaction and revenue generation.
+
+- Locate and click on the edit icon of the facility for which you want to adjust the safety stock.
+- Update the minimum stock (Safety Stock) as required.
+- Click `Add` to confirm the changes in safety stock.
+

@@ -71,3 +71,5 @@ The `Record Variance` feature” allows users to manually document any discrepan
 3. Choose the specific location within the selected facility and enter the quantity of the inventory adjustment.
 4. From the dropdown menu, choose the relevant reasons for the inventory variance. This could include factors such as damaged goods, discrepancies in shipment, or theft.
 5. After confirming all details are accurate, click the `Save` button to record the variance in the system.
+
+{% embed url="https://youtu.be/aFldyrTTU7c" %} Video: Record Variance {% endembed %}
