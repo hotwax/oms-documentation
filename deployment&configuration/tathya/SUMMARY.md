@@ -12,11 +12,12 @@
    * [Charts Access](chartsCreation/chartsaccess.md)
    * [Create Multiple Charts](chartsCreation/creatingMultipleCharts.md)
 
-* [Understanding Dashboards](understandingDashboards/README.md)
-   * [Configuring Dashboards](understandingDashboards/configuringDashboards.md)
-   * [Dashboards Access](understandingDashboards/dashboardsaccess.md)
-   * [Dashboard Options](understandingDashboards/dashboardOptions.md)
-   * [Dashboard Customizations](understandingDashboards/dashboardCustomization.md)
+* [Understanding Dashboards](understanding-dashboards/README.md)
+   * [Configuring Dashboards](understanding-dashboards/configuringDashboards.md)
+   * [Dashboards Access](understanding-dashboards/dashboardsaccess.md)
+   * [Dashboard Options](understanding-dashboards/dashboardOptions.md)
+   * [Dashboard Customizations](understanding-dashboards/dashboardCustomization.md)
+   * [Link Configuration](understanding-dashboards/link-configuratin.md)
  
 * [Configuring Alerts & Reports](alerts&Reports/README.md)
    * [Creating Alerts](alerts&Reports/creatingAlerts.md)
