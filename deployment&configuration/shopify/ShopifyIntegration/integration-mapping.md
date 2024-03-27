@@ -1,4 +1,10 @@
-# Shopify Shop Mappings
+---
+description: >-
+  Learn how to configure integrations between HotWax Commerce and Shopify Shops
+  with ease.
+---
+
+# Integrations
 
 The HotWax Commerce integration layer maintains a structured repository of integration mappings between Shopify and HotWax Commerce, covering locations, payment methods, shipping methods, product types, and price levels.
 
@@ -12,14 +18,13 @@ Here’s how you can configure these mappings between HotWax Commerce and Shopif
 
 1. Navigate to the `Shopify Shop Page` from the menu.
 2. Locate the specific mapping you want to configure.
-3. Click on the `Add` button and fill in the mandatory details mentioned in the input fields.
+3.  Click on the `Add` button and fill in the mandatory details mentioned in the input fields.
 
-   | Field                    | Description                                         |
-   |--------------------------|-----------------------------------------------------|
-   | Integration Mapping Key   | The mapping ID present in HotWax Commerce.          |
-   | Integration Mapping Value | Corresponding value present in NetSuite.             |
-   | Description              | Briefly describe the method.                         |
-
+    | Field                     | Description                                |
+    | ------------------------- | ------------------------------------------ |
+    | Integration Mapping Key   | The mapping ID present in HotWax Commerce. |
+    | Integration Mapping Value | Corresponding value present in NetSuite.   |
+    | Description               | Briefly describe the method.               |
 4. Confirm establishing the new mapping by clicking on the `Add` button.
 
 The integration layer maps entities in Shopify to their corresponding representations in HotWax Commerce. This mapping is established through a key-value pair, where the key denotes the original entity, and the value signifies its counterpart in HotWax Commerce.
@@ -28,12 +33,12 @@ The integration layer maps entities in Shopify to their corresponding representa
 
 If you want to set up a custom integration mapping, navigate to the section `Shopify Shop Type Mapping` and click on `Add Type`. Add the following details to create the corresponding Integration type mapping.
 
-| Field                    | Description                                       |
-|--------------------------|---------------------------------------------------|
-| Integration Type Enum ID  | Provide the unique identifier for the integration type.  |
-| Integration Type Enum Code | Provide the shorthand code representing the integration type.  |
-| Integration Type Enum Name | Provide the human-readable label for the integration type. |
-| Description              | Write brief information about the integration type. |
+| Field                      | Description                                                   |
+| -------------------------- | ------------------------------------------------------------- |
+| Integration Type Enum ID   | Provide the unique identifier for the integration type.       |
+| Integration Type Enum Code | Provide the shorthand code representing the integration type. |
+| Integration Type Enum Name | Provide the human-readable label for the integration type.    |
+| Description                | Write brief information about the integration type.           |
 
 Confirm establishing the new custom mapping by clicking on the `Add` button. Now, you're ready to utilize out-of-the-box mappings and also create custom integration mappings.
 
@@ -43,4 +48,6 @@ Some default mapping data needs to be added when connecting a Shopify store to e
 
 If you're only using the default SHOP Shopify Shop ID, this data needs to be created only once. However, for multiple Shopify stores, input the data individually for each store. The Shopify Shop ID will change and be obtainable from the header of the View Shopify Shop page in OMS.
 
-{% hint style='info' %} After incorporating the default mapping, please add any custom mappings as needed. You can find steps to map the integration for each Shopify Shop type on their respective page {% endhint %}
+{% hint style="info" %}
+After incorporating the default mapping, please add any custom mappings as needed. You can find steps to map the integration for each Shopify Shop type on their respective page
+{% endhint %}

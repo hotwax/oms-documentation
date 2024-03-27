@@ -1,7 +1,14 @@
-# Import Orders
+---
+description: >-
+  Discover how to initiate the initial order sync process between HotWax
+  Commerce and Shopify to seamlessly import open and unfulfilled orders.
+---
+
+# Initial Order Sync
 
 ## Open and Unfulfilled Orders
-To download all open sales orders from a specific period in HotWax Commerce, users can schedule the 'Import Orders in Bulk' job by adding the last Shopify Order ID. This job imports all orders since the last Shopify Order ID, along with details such as order number, customer information, shipping address, billing details, and payment information. 
+
+To download all open sales orders from a specific period in HotWax Commerce, users can schedule the 'Import Orders in Bulk' job by adding the last Shopify Order ID. This job imports all orders since the last Shopify Order ID, along with details such as order number, customer information, shipping address, billing details, and payment information.
 
 **To import orders in HotWax Commerce, follow these steps:**
 
@@ -10,9 +17,9 @@ To download all open sales orders from a specific period in HotWax Commerce, use
 3. Click on "Import Orders in bulk."
 4. Choose the desired run time.
 5. Specify the following criteria:
-   - Order status: Open
-   - Fulfillment status: Unfulfilled
-   - Add the Last Shopify Order ID from where you want to import Shopify orders.
+   * Order status: Open
+   * Fulfillment status: Unfulfilled
+   * Add the Last Shopify Order ID from where you want to import Shopify orders.
 6. Initiate the import by clicking the "Run Import" button.
 7. Access the Pipeline, specifically the Pending jobs section, to confirm that the job is scheduled as per the selected time.
 8. Wait until the job is completed.
