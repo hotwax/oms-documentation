@@ -103,7 +103,6 @@
   * [Disabling facilities](facilities/disabling-facilities.md)
   * [Manage parkings](facilities/manage-parkings.md)
   * [Manage Groups](facilities/manage-groups.md)
-  * [Set Shipping name](facilities/shipping-name.md)
 * [Shipping methods](administration/shipping-methods/README.md)
   * [Create Carrier](administration/shipping-methods/add-carrier.md)
 * [Delete customers](delete-customers.md)
