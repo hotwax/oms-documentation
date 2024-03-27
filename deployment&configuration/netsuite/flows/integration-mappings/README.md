@@ -1,3 +1,9 @@
+---
+description: >-
+  Discover the seamless integration between HotWax Commerce and NetSuite through
+  configurable mappings.
+---
+
 # Integration Mappings
 
 HotWax Commerce integration layer stores a structured repository of integration mappings between HotWax and NetSuite, including payment methods, shipping methods, promo codes, and price levels.

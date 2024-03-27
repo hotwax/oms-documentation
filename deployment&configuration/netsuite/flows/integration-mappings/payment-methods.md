@@ -1,3 +1,9 @@
+---
+description: >-
+  Learn how to configure and map payment methods in HotWax Commerce for seamless
+  synchronization with eCommerce platforms and NetSuite.
+---
+
 # Payment Methods
 
 Before initiating order sync, it is crucial to configure payment methods in HotWax Commerce and establish mappings with both eCommerce and NetSuite.
@@ -14,7 +20,7 @@ In the event a payment method in eCommerce and HotWax is not mapped to a payment
 
 ## Example Mapping:
 
-| HotWax ID          | NetSuite Value |
-|---------------------|----------------|
-| EXT_SHOP_ECOM_GFTCRD| Gift Card      |
-| EXT_SHOP_CASH_ON_DEL| Shopify Payment|
+| HotWax ID                | NetSuite Value  |
+| ------------------------ | --------------- |
+| EXT\_SHOP\_ECOM\_GFTCRD  | Gift Card       |
+| EXT\_SHOP\_CASH\_ON\_DEL | Shopify Payment |

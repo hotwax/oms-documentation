@@ -1,4 +1,10 @@
-# Sync NetSuite Product ID
+---
+description: >-
+  Ensure seamless synchronization of product data between HotWax and NetSuite by
+  utilizing NetSuite's internal product IDs
+---
+
+# Product IDs
 
 Syncing the NetSuite internal ID for products from NetSuite ensures that subsequent product dependent syncs like order, transfer shipment, and cycle counts are always successful. Trying to reliably use a well known name of products like SKU or UPC, often leads to conflicts with customizations of the CSV import forms in NetSuite. To avoid having to handle these custom identification formats for each deployment, HotWax syncs NetSuite’s internal product ID.
 
@@ -17,6 +23,7 @@ SFTP Location: /home/{sftp-username}/netsuite/product/csv
 ```
 
 **To import product in OMS, a import job need to be configured in OMS with recommended frequency 1 hour**
+
 ```
 Config ID: IMP_PROD_IDENT
 
