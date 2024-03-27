@@ -1,4 +1,10 @@
-# Shipping methods
+---
+description: >-
+  Ensure smooth order import processes by correctly mapping shipping methods
+  between eCommerce platforms and NetSuite.
+---
+
+# Shipping Methods
 
 When syncing orders to NetSuite it's very important to have the correct shipping methods mapped. If shipping methods are not mapped correctly the order import process may fail.
 
@@ -9,14 +15,19 @@ Depending on the NetSuite order import configuration, the ‘service code’ fie
 ## Sample data:
 
 **Shipping method:**
+
 ```
 <ShipmentMethodType description="FREE 2-Day Shipping" shipmentMethodTypeId="FRE_2_DAY_SHP" parentTypeId="SECOND_DAY"/>
 ```
+
 **Carrier and Shipment Method:**
+
 ```
 <CarrierShipmentMethod partyId="FEDEX" roleTypeId="CARRIER" shipmentMethodTypeId="FRE_2_DAY_SHP" carrierServiceCode=”NetSuiteName” sequenceNumber="63" deliveryDays="2"/>
 ```
+
 **Shopify and carrier shipment method mapping**
+
 ```
 <ShopifyShopCarrierShipment shopId="SHOP" carrierPartyId="_NA_" shipmentMethodTypeId="FRE_2_DAY_SHP" shopifyShippingMethod="FREE 2-Day Shipping"/>
 ```
