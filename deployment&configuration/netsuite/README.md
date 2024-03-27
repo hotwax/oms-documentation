@@ -1,4 +1,10 @@
-# A step by step guide to deploy NetSuite with HotWax Commerce
+---
+description: >-
+  Explore the comprehensive guide to deploying a NetSuite integration with
+  HotWax Commerce.
+---
+
+# Introduction
 
 This document will take you through all the steps of deploying a NetSuite integration with HotWax Commerce for all the supported flows.
 
