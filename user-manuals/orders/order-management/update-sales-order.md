@@ -23,13 +23,13 @@ Details need to be updated for each shipgroup of an order.
 
 Here's how you can update shipping address for the order:
 
-Updating Shipping Address:
+**Updating Shipping Address:**
 
 - Click on the `Edit` function available for the order.
 - Fill in the required shipping details that needs to be changed in the form provided.
 - Save the changes by clicking on the `save` button
 
-Updating Shipping Method:
+**Updating Shipping Method:**
 
 - Within the order, locate the shipping method section.
 - Click on the `Edit` function next to the current shipping method.
@@ -115,4 +115,20 @@ The existing orders get canceled with the `Old Version` tag. A new Order with th
 Video: Refresh Sales Order
 {% endembed %}
 
-***
+### Allow Splitting
+
+Splitting an order into separate shipments for fulfillment across multiple locations occurs when all items are not available at a single facility. The order splitting settings on the order view page is shown as per the product store settings. However, if the CSR team want to split a specific order, they can click on the checkbox against the allow splitting function.
+
+### Add Gift Message
+
+CSR teams can manually input personalized messages on behalf of customers upon request. These gift messages can be added along with the order at the time of fulfillment by the store associates by clicking on the `Add` Buttion against the gift message
+
+### Add Handling instructions
+
+Any special instructions or handling requirements associated with the items in the group can be added by clicking on the `Add` button against Handling instruct. The handling instructions added here will be visible in the fulfillment app for store associates
+
+### Add Ship By and Ship After Date
+
+Ship By specifies the date by which the items should be shipped to ensure timely delivery, while Ship After indicates the date after which the items need to be shipped. Both Ship By and Ship After details can only be added upon customers' requests.
+
+
