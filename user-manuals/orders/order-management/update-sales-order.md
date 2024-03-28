@@ -11,6 +11,8 @@ To perform the order allocation tasks, we first navigate to the View Sales Order
 
 ## Update Shipping details
 
+Users can easily access and review the shipping details associated with orders. This includes shipping address, communication details, shipping method, estimated delivery date, and tracking details.
+
 {% hint style="info" %}
 Edit function is available only for approved orders.
 {% endhint %}
@@ -19,25 +21,41 @@ Edit function is available only for approved orders.
 Details need to be updated for each shipgroup of an order.
 {% endhint %}
 
-1. Click the Edit function.
-2. Enter the required details in the form and save.
-3. Click the edit function against the Shipping method.
-4. Choose the method from the list and Save.
+Here's how you can update shipping address for the order:
+
+Updating Shipping Address:
+
+- Click on the `Edit` function available for the order.
+- Fill in the required shipping details that needs to be changed in the form provided.
+- Save the changes by clicking on the `save` button
+
+Updating Shipping Method:
+
+- Within the order, locate the shipping method section.
+- Click on the `Edit` function next to the current shipping method.
+- Choose the desired shipping method from the provided list.
+- Save the changes.
 
 {% embed url="https://youtu.be/11nFbayax3I" %}
 Video: Update Shipping Details
 {% endembed %}
 
+
+{% hint style="warning" %}
+Users only change the shipping method directly for orders in the brokering queue. If inventory has already been allocated to the order, users need to reject the item from the store, update the shipping method, and then broker the order again.{% endhint %}
+
 ***
 
 ## Cancel Sales Order
 
-{% hint style="info" %}
-Cancelling a sales order will automatically cancel all other sales order items in the order.
-{% endhint %}
+Orders can only be canceled in HotWax Commerce when they are in the `created` state. Additionally, it's important to note that the sales orders canceled on HotWax Commerce are not automatically updated on Shopify. Therefore, it is recommended for users to cancel orders  directly on Shopify for seamless synchronization and accurate order status across platforms. Cancelling a sales order will automatically cancel all other sales order items in the order.
 
-1. Click the Status dropdown.
-2. Select the Cancel function to cancel the entire sales order.
+**Cancellation Process:**
+
+1. Select the required order to open the Sales Order Detail page.
+2. Click the Status dropdown located at the top left of the page.
+3. Select the Cancel function to cancel the entire sales order.
+
 
 {% embed url="https://youtu.be/u-CtB-pw-Kc" %}
 Video: Cancel sales order
@@ -47,10 +65,10 @@ Video: Cancel sales order
 
 ## Cancel Sales Order Items
 
-1. Go to the Item section.
-2. Click the Edit Items function.
-3. Click the Delete function for the respective line item/s.
-4. Click the Save function.
+1. Once the `View Sales Order` page is open, scroll down to locate the `Item` section. This section displays all items included in the selected order.
+2. Within the Item section, locate and click on the `Edit Items` function. This action will enable editing options for the items within the order.
+3. Identify the line item/s that need to be canceled due to inability to fulfill and click on the `Delete` function next to each respective item.
+4. After deleting the unwanted items, ensure to click on the `Save` function to apply the changes to the order.
 
 {% embed url="https://youtu.be/xFU28XyELd4" %}
 Video: Cancel Sales Order items
@@ -60,7 +78,7 @@ Video: Cancel Sales Order items
 
 ## Refresh Sales Order
 
-_**Refreshing sales order allows retailers to reimport a sales order from Shopify to HotWax Commerce. Refreshing is required if an order update in Shopify is not included in the 'sync order update job'.**_
+Refreshing sales order allows retailers to reimport a sales order from Shopify to HotWax Commerce. Refreshing is required if an order update in Shopify is not included in the `sync order update job`.
 
 HotWax Commerce can update the following details from Shopify:
 
@@ -69,25 +87,29 @@ HotWax Commerce can update the following details from Shopify:
 3. Changing item quantities
 4. Changing shipping addresses
 5. Changing customer contact detail
+6. Change in Order Fulfillment Status
 
-**Verification at Shopify**
+### Step-by-Step Usage Instructions:
 
-1. Go to Shopify admin portal and search the order.
-2. Verify the changes done on the existing order or perform the updation as required.
-3. Save the changes on Shopify.
+**Verification at Shopify:**
 
-**Refresh Order in HotWax Commerce**
+1. Log in to the Shopify admin portal.
+2. Locate the specific order that requires updates.
+3. Review the order details to verify any changes or make necessary updates, such as adding/removing items, adjusting quantities, or modifying customer and shipping information.
+4. Once verified or updated, ensure to save the changes within Shopify.
 
-1. Go back to the order view page
-2. Click the Refresh Order button from the header section.
-3. Verify that the order status and item status gets canceled.
-4. Go back to the Sales Order Find Page and select Approved and Canceled status from the order status filter dropdown.
-5. Verify the changes.
+**Refresh Order in HotWax Commerce:**
 
-**Note:**
+1. Return to the HotWax Commerce platform and access the order view page for the corresponding order.
+2. Locate and click on the "Refresh Order" button available in the header section of the order view page.
+3. After refreshing, verify that the order status and item status are updated accordingly. This may involve checking for any cancellations or changes in item availability.
+4. Go back to the Sales Order Find Page and select "Approved" and "Canceled" statuses from the order status filter dropdown.
+5. Review the refreshed order details to ensure that the updates from Shopify have been successfully synchronized with HotWax Commerce.
 
-* The Canceled order status with ‘Old Version’ tag signifies the previous order.
-* New Order with the same Shopify Order ID is created in HotWax Commerce OMS with updated information in the item section.
+{% hint style="info" %}
+The existing orders get canceled with the `Old Version` tag. A new Order with the same order ID gets created with updated items in HotWax Commerce. The updated information will be reflected in the item section on the sales order detail page.
+{% endhint %}
+
 
 {% embed url="https://youtu.be/_e1VDQUgICs" %}
 Video: Refresh Sales Order
