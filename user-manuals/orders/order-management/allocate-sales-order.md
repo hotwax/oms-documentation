@@ -96,8 +96,10 @@ This feature allows users to easily modify or remove auto-cancel dates from orde
 
 ## Move Items to Order Parking
 
-1. Click the Move Items to Parking function.
-2. Choose the parking using the Radio button and Save.
+HotWax Commerce features various parking areas serving as virtual facilities for storing orders awaiting fulfillment. Users frequently need to transfer orders between these parking areas to ensure accurate inventory allocation. For instance, if there are unfulfillable orders and retailers are aware of when will inventory arrive, they may opt not to run brokering for such orders until that day. In such scenarios, these orders can be moved from the brokering queue to the unfulfillable hold queue. Here's how you can relocate items to different parking areas:
+
+1. In the items section, click the `Move Items to Parking` function.
+2. Choose the parking using the `Radio` button and Save.
 3. Confirm the Ship From column to view the selected parking.
 
 Refer to the table below for parking description and purpose.
