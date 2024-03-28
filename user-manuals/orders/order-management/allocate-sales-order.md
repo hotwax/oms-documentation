@@ -12,7 +12,7 @@ To perform the order allocation tasks, we first navigate to the View Sales Order
 ## Release Items
 
 {% hint style="info" %}
-For automated facility selection, user can either wait next brokering run or use Broker Now function to broker items immediately.
+For automated facility selection, the user can either wait for the next brokering run or use the Broker Now function to broker items immediately.
 {% endhint %}
 
 1. Select the line item and click Release function.
@@ -24,12 +24,17 @@ For automated facility selection, user can either wait next brokering run or use
 Video: Release item
 {% endembed %}
 
-## Reject Sales Order Items
+## Reject Items
 
-1. Select the line item and click the Reject function.
-2. Select the reason using the radio button and Save.
-3. Confirm rejection.
-4. Click the history function to view the changes.
+The `Reject Items` feature within the HotWax Commerce platform serves as a crucial tool for managing orders efficiently and maintaining customer satisfaction. It allows users to reject specific items from sales orders, providing valid reasons such as stock unavailability, damages, mismatches, or inactive stores. By enabling users to address issues promptly and accurately, this feature contributes significantly to workflow efficiency and customer service quality.
+
+1. Identify the item(s) you wish to reject and click on the corresponding line item.
+2. Look for the `Reject` function and click on it to initiate the rejection process.
+3. Choose the appropriate reason for rejection from the available options using radio buttons (e.g., Not in Stock, Damaged, Mismatch).    
+4. After selecting the rejection reason, save your changes to confirm the rejection.
+
+Check the order item history by clicking on the radio button
+
 
 {% embed url="https://youtu.be/3bT6-DgK5tY" %}
 Video: Reject sales order items
@@ -37,11 +42,32 @@ Video: Reject sales order items
 
 ## Mark items shipped in OMS
 
-1. Click the Ship Items function.
-2. Select the line item/s to be marked as shipped.
-3. Select the Carrier party from the dropdown and enter the Tracking number.
-4. Mark the item as Shipped
-5. Click the history function to view the changes.
+Sometimes there are instances when customers may connect with CSR to receive the order urgently, in such cases CSR has the option to ship the order from the order details page without waiting for the fulfillment center to mark the order item shipped. Here's how users can mark the order items as shipped in the OMS:
+
+**Scenario 1: Marking Items as Shipped that is still Unassigned to a Facility**
+
+1. **Locate the Order:** Navigate to the desired order and open it to view details from the `View Sales Order` page.
+2. **Release Item to Facility:** Select the line item, click `Release`, and choose the target facility for shipment.
+3. **Mark Items as Shipped:** Scroll to the item section on the `View Sales Order` page and click `Ship Items`.
+4. **Select Line Items:** Choose the items to be marked as shipped in the popup window.
+5. **Enter Tracking Details:** Select the carrier party from the dropdown and input the tracking number.
+6. **Confirm Shipment:** Verify the details and confirm the shipment to mark the selected item(s) as shipped.
+
+**Scenario 2: Marking Items as Shipped that are assigned to a different facility**
+
+1. **Reject Line Item:** Identify the line item on the `View Order` page, click `Reject`, choose `No Variance` as the reason, and confirm the rejection.
+2. **Release Item to Facility:** Select the rejected item, click `Release`, and choose the necessary facility.
+3. **Mark Items as Shipped:** Proceed to click `Ship Items`, select line item(s), input tracking details, and confirm the shipment.
+
+**Scenario 3: Marking BOPIS Sales Order Items as Shipped**
+
+1. **Modify Shipping Method:** Scroll to the item section on the `View Order` page, click `Edit`, and modify the shipping method to `Standard`.
+2. **Reject Line Item:** Reject the line item, choosing `No Variance` as the reason.
+3. **Release Item to Facility:** Select the rejected item, click `Release`, and choose the necessary facility.
+4. **Mark Items as Shipped:** Click `Ship Items`, select line item(s), input tracking details, and confirm the shipment.
+
+{% hint style="info" %}
+Click the history function in the status column to view when the item is marked completed and the user who marked the item completed.{% endhint %}
 
 {% embed url="https://youtu.be/RwpJ86nFnAo" %}
 Video: Ship items in OMS
@@ -49,17 +75,24 @@ Video: Ship items in OMS
 
 ## Manage Auto-Cancel Date
 
-### Update Auto-cancel Date on single order
+Managing orders is a complex process, and sometimes, items fail to be fulfilled due to inventory unavailability across facilities. When this occurs, it's crucial to set an auto-cancel date to streamline operations and ensure resource allocation is optimized.
 
-1. Go to the Item section and click on the edit function next to the auto-cancel date.
-2. Update the date from the Calendar.
-3. Click on Save function to save changes.
+This feature allows users to easily modify or remove auto-cancel dates from orders that are marked unfillable due to failed brokering attempts. By providing this functionality, HotWax Commerce empowers users to maintain control over their orders, preventing unnecessary delays and potential customer dissatisfaction.
 
-### Remove Auto-cancel Date from single order
+**Update the Auto-cancel Date on a single order:**
 
-1. Go to the Item Section and click on the edit function next to the auto-cancel date.
-2. Click on the delete icon to remove the auto cancel date.
-3. Click on Save function to save changes.
+1. Choose the specific order you want to manage and click on it to enter the Sales Order View page.
+2. In the Item section of the Sales Order View page, locate the auto-cancel date and click on the edit function next to it.
+3. From the Calendar that appears, select the new date for the auto-cancelation.
+4. After updating the date, click on the `Save` function to apply the changes.
+
+**Remove Auto-cancel Date from single order:**
+
+1. Choose the specific order you want to modify and enter the Sales Order View page.
+2. In the Item section, locate the auto-cancel date and click on the edit function next to it.
+3. Click on the delete icon next to the auto-cancel date to remove it from the order.
+4. Confirm the changes by clicking on the `Save` function.
+
 
 ## Move Items to Order Parking
 
