@@ -7,6 +7,7 @@
   * [Deleting Products](how-are-products-downloaded-from-shopify-to-hotwax-commerce/deleting-products.md)
   * [Creating/Deleting Products with Shopify Webhooks](how-are-products-downloaded-from-shopify-to-hotwax-commerce/creating-deleting-products-with-shopify-webhooks.md)
   * [Downloading Bundles](how-are-products-downloaded-from-shopify-to-hotwax-commerce/downloading-bundles.md)
+  * [Product Synchronization for Multiple Shopify Stores](multiple-store-setup.md)
 * [Inventory](how-does-hotwax-commerce-ensure-accurate-inventory-is-synchronized-to-shopify.md)
   * [Inventory Synchronization](how-does-hotwax-commerce-ensure-accurate-inventory-is-synchronized-to-shopify/inventory-synchronization.md)
   * [Location Mapping](how-does-hotwax-commerce-ensure-accurate-inventory-is-synchronized-to-shopify/location-mapping.md)
@@ -32,3 +33,5 @@
   * [In-Store Returns](how-does-hotwax-commerce-manage-order-returns/in-store-returns.md)
   * [Appeasements](how-does-hotwax-commerce-manage-order-returns/appeasements.md)
   * [Exchanges](how-does-hotwax-commerce-manage-order-returns/exchanges.md)
+* [Multiple Store Setup](multiple-store-setup.md)
+* [Required Permissions from Shopify](shopify-permissions.md)

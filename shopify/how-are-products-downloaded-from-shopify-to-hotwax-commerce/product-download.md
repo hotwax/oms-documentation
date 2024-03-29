@@ -6,13 +6,13 @@ description: Learn how to seamlessly launch the initial product download from Sh
 
 ### Initial Product Download from Shopify to HotWax Commerce
 
-Merchants can schedule an 'Import Products in Bulk' job in HotWax Commerce to download existing product details from Shopify, including Stock Keeping Unit (SKU) code, Universal Product Code (UPC), Shopify ID, Price, Tags, and Weight. This should be done before [importing orders](../how-are-orders-downloaded-from-shopify-to-hotwax-commerce.md) to ensure that products are available for incoming sales orders. The import process consists of two steps:
+Merchants can schedule an `Import Products in Bulk` job in HotWax Commerce to download existing product details from Shopify, including Stock Keeping Unit (SKU) code, Universal Product Code (UPC), Shopify ID, Price, Tags, and Weight. This should be done before [importing orders](../how-are-orders-downloaded-from-shopify-to-hotwax-commerce.md) to ensure that products are available for incoming sales orders. The import process consists of two steps:
 
 1. **Downloading from Shopify**- HotWax Commerce sends an [API request](https://shopify.dev/docs/api/admin-rest/2022-10/resources/product#get-products?ids=632910392,921728736) to Shopify to download products. In response, Shopify returns product data in JSON format. Shopify permits downloading 250 products per API call. To prevent large data file errors, HotWax Commerce downloads only 100 products per call.
 
-<figure><img src="../.gitbook/assets/Import Products in Bulk.png" alt=""><figcaption><p><em>Fig.1: Configuration to run “Import Products in Bulk” in the Job Manager App</em></p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Import Products in Bulk.png" alt=""><figcaption><p><em>Fig.1: Configuration to run `Import Products in Bulk` in the `Job Manager` App</em></p></figcaption></figure>
 
-2. **Product Creation in HotWax Commerce**- After downloading, the JSON files are read from the file system, and product records are created in HotWax Commerce's database through ‘Process bulk imported files’ job. If any data issues arise, error logs are recorded for later correction.
+2. **Product Creation in HotWax Commerce**- After downloading, the JSON files are read from the file system, and product records are created in HotWax Commerce's database through the `Process bulk imported files` job. If any data issues arise, error logs are recorded for later correction.
 
 ### Product data from Shopify is mapped in HotWax Commerce fields as outlined in the following table:
 
@@ -56,6 +56,8 @@ The parent product comes in various sizes and colors, resulting in multiple vari
 {% endtab %}
 {% endtabs %}
 
+Shopify has multiple product identifiers, such as Shopify Product ID, Product SKU, Product Name, and UPCA. Therefore before importing products, it is important to set up the primary product identifier that will be mapped with the product ID in HotWax Commerce. The primary product identifier can be set up in HotWax Commerce when [setting up a new product store](https://docs.hotwax.co/deployment-and-configurations/product-store/product-store) as per retailers' requirements. 
+
 #### Importing Newly Added Products Regularly
 
 Shopify merchants create new products for two reasons::
@@ -63,9 +65,9 @@ Shopify merchants create new products for two reasons::
 1. When a new product is added to the catalog.
 2. When users prefer to delete the existing product and create a new one with updated fields
 
-To make it easier to keep both Shopify and HotWax Commerce's product catalogs up to date, Shopify merchants can schedule an 'Import Products' job that runs every 15 minutes. This job checks the 'created\_at' field of products in Shopify and identifies any products that were created after the last run of the job. Any newly created products are then imported into HotWax Commerce's product catalog through ‘Process bulk imported files’ job. By doing this, HotWax Commerce's catalog stays synchronized with Shopify's catalog, ensuring that merchants have access to the most up-to-date product information.
+To make it easier to keep both Shopify and HotWax Commerce's product catalogs up to date, Shopify merchants can schedule an `Import Products` job that runs every 15 minutes. This job checks the `created_at` field of products in Shopify and identifies any products that were created after the last run of the job. Any newly created products are then imported into HotWax Commerce's product catalog through the `Process bulk imported files` job. By doing this, HotWax Commerce's catalog stays synchronized with Shopify's catalog, ensuring that merchants have access to the most up-to-date product information.
 
-<figure><img src="../.gitbook/assets/Import Products.png" alt=""><figcaption><p><em>Fig.4: Configuration to run “Import Products” in the Job Manager App</em></p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Import Products.png" alt=""><figcaption><p><em>Fig.4: Configuration to run `Import Products` in the Job Manager App</em></p></figcaption></figure>
 
 {% hint style="info" %}
 It is recommended to run this job every 15 minutes. However, the frequency of the job can be set as per a merchant’s business needs.
