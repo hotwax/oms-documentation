@@ -6,11 +6,12 @@
 * [Database Configuration](databaseConfiguration/README.md)
   * [Additional Settings](databaseConfiguration/additionalConfigurations.md)
     
-* [Charts Creation](chartsCreation/README.md)
-   * [Selecting Database & Schema](chartsCreation/selectingDatabase&ExecutingQueries.md)
-   * [View & Save Chart](chartsCreation/visualize&SaveChart.md)
-   * [Charts Access](chartsCreation/chartsaccess.md)
-   * [Create Multiple Charts](chartsCreation/creatingMultipleCharts.md)
+* [Charts Creation](charts-creation/README.md)
+   * [Selecting Database & Schema](chartscreation/selectingDatabase&ExecutingQueries.md)
+   * [View & Save Chart](charts-creation/visualize&SaveChart.md)
+   * [Charts Access](charts-creation/chartsaccess.md)
+   * [Create Multiple Charts](charts-creation/creatingMultipleCharts.md)
+   * [LogInsight Charts](charts-creation/log-insight-charts.md)
 
 * [Understanding Dashboards](understanding-dashboards/README.md)
    * [Configuring Dashboards](understanding-dashboards/configuringDashboards.md)
