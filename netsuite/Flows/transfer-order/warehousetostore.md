@@ -81,7 +81,7 @@ HC_SC_ImportTOFulfillmentReceipts.js
 Once all the transfer order item fulfillment records have been successfully received in-store and their item receipt records have been synchronized with NetSuite, the transfer order status is updated from `Pending Receipt` to `Received`.
 
 <details>
-  <summary>Let's delve into the process with an example:</summary>
+  <summary>Let's delve into the process with an example</summary>
   
   Consider a scenario where a retailer operates a store named Brooklyn, alongside a central warehouse. The Brooklyn store is experiencing low stock levels for a particular product, so the store manager requests a transfer of 100 quantities from the central warehouse. In this event, a warehouse-to-store transfer order is created for 100 quantities in NetSuite. 
 
