@@ -108,7 +108,7 @@ Routing sequence
 * Click on the options icon in the "Filters" section to add or remove filters.
 * Ensure orders are routed based on specific criteria that align with your fulfillment strategy.
 
-<figure><img src="../.gitbook/assets/filters.png" alt="" width="358"><figcaption><p>Order filters</p></figcaption></figure>
+<figure><img src="broken-reference" alt="" width="358"><figcaption><p>Order filters</p></figcaption></figure>
 
 #### Managing Inventory Rules
 
@@ -124,7 +124,7 @@ Routing sequence
 * Click on the options icon on the "Filters" card to manage filters for inventory rules.
 * Sorting inventory filters optimizes the allocation process by prioritizing available inventory based on specific criteria.
 
-<figure><img src="../.gitbook/assets/filters (1).png" alt="" width="358"><figcaption><p>Manage filters</p></figcaption></figure>
+<figure><img src="broken-reference" alt="" width="358"><figcaption><p>Manage filters</p></figcaption></figure>
 
 #### Managing Sorting Options
 
