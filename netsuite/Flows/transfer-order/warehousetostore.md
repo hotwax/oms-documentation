@@ -14,6 +14,8 @@ Whenever an item fulfillment record is marked as `Shipped` in NetSuite, it means
 
 ## Workflow
 
+<figure><img src="../../.gitbook/assets/warehousetostore.png" alt=""><figcaption><p>Warehouse to store transfer order</p></figcaption></figure>
+
 ### Fulfilling Transfer Order Items
 
 1. **Export Transfer Order Item Fulfillment Records from NetSuite:** A Map Reduce script runs a specific Saved Search to identify transfer order item fulfillment records in `Shipped` status, that have the source location as the warehouse and destination location set as the store. It compiles the relevant data into a CSV file, which is then securely placed in an SFTP location. The script runs periodically, typically every 15 minutes, to ensure it fetches only the latest shipped transfer order item fulfillment records from NetSuite, optimizing efficiency.

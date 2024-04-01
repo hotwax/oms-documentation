@@ -6,6 +6,10 @@ Now, let’s look at how store to store transfer orders are processed:
 
 ## Workflow
 
+<figure><img src="../../.gitbook/assets/storetostore.png" alt=""><figcaption><p>Fulfilling store to store transfer order</p></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/storetostorereceiving.png" alt=""><figcaption><p>Receiving store to store transfer order</p></figcaption></figure>
+
 ### Create Transfer Orders in NetSuite
 
 1.  **Export Created Transfer Orders from NetSuite:**
