@@ -75,6 +75,22 @@ HC_SC_ImportTOFulfillmentReceipts.js
 
 Once all the transfer order item fulfillment records have been successfully received in-store and their item receipt records have been synchronized with NetSuite, the transfer order status is updated from `Pending Receipt` to `Received`.
 
+
+
+**Here's how transfer order fields are mapped in NetSuite and HotWax Commerce**
+
+<table><thead><tr><th width="157">S.No.	</th><th>Fields in NetSuite</th><th>Fields in HotWax Commerce</th></tr></thead><tbody><tr><td>1</td><td>Item Fulfillment Internal ID</td><td>External ID</td></tr><tr><td>2</td><td>Transfer Order Name</td><td>Transfer Order Name</td></tr><tr><td>3</td><td>Items</td><td>SKU</td></tr><tr><td>4</td><td>Quantity</td><td>Ordered Quantity</td></tr><tr><td>5</td><td>Destination Location</td><td>Facility</td></tr><tr><td>6</td><td>Tracking #</td><td>Tracking ID</td></tr></tbody></table>
+
+{% tabs %}
+{% tab title="Transfer Order Fields in NetSuite" %}
+<figure><img src="../../.gitbook/assets/mapping warehouse to store transfer order netsuite.png" alt=""><figcaption><p>Transfer Order Fields Mapping in NetSuite</p></figcaption></figure>
+{% endtab %}
+
+{% tab title="Transfer Order Fields in HotWax Commerce" %}
+<figure><img src="../../.gitbook/assets/mapping hc warehouse to store receiving app to.png" alt=""><figcaption><p>Inbound Shipment Fields Mapping in HotWax Commerce "Inventory Receiving App"</p></figcaption></figure>
+{% endtab %}
+{% endtabs %}
+
 <details>
 
 <summary>Let's delve into the process with an example</summary>
