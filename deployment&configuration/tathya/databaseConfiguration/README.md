@@ -1,3 +1,10 @@
+---
+description: >-
+  Learn how to configure your database for Tathya, a data exploration and
+  visualization platform that connects to your existing SQL-speaking database or
+  data store.
+---
+
 # Database Configuration
 
 Tathya is a data exploration and visualization platform that lets users connect to various data sources, explore data, and create interactive dashboards.

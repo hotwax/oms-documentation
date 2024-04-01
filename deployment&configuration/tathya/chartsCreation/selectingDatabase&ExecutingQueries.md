@@ -1,4 +1,10 @@
-# Selecting Database and Schema
+---
+description: >-
+  Learn how to navigate the SQL Lab interface in Tathya and execute SQL queries
+  by selecting the appropriate database and schema.
+---
+
+# Selecting Database & Schema
 
 To effectively navigate through the SQL Lab interface in Tathya and execute SQL queries, follow these steps for selecting the database and schema.
 
@@ -51,9 +57,8 @@ Now, navigate to Save and then select “Save dataset” from the dropdown menu,
 {% hint style="info" %}
 There are a number of query errors that can occur due to a misalignment between your query and the database. Some examples include:
 
-- **Bad Reference:** A query can fail because it is referencing a column and/or table that no longer exists in the datasource. You can either modify the query accordingly or remove the column from the query.
-
-- **Unsubmitted Query:** A query will not even be submitted to the database if it is missing required parameters. You should define all the parameters referenced in the query in a valid JSON document.
+* **Bad Reference:** A query can fail because it is referencing a column and/or table that no longer exists in the datasource. You can either modify the query accordingly or remove the column from the query.
+* **Unsubmitted Query:** A query will not even be submitted to the database if it is missing required parameters. You should define all the parameters referenced in the query in a valid JSON document.
 {% endhint %}
 
 ## Creating a Chart
@@ -69,14 +74,13 @@ The ability to create charts based on specific queries within Tathya empowers us
 #### Step-by-Step Usage Instructions:
 
 1. **Access SQL Lab:** Log in to Tathya and navigate to the SQL Lab feature.
-2. **Craft SQL Query:** Select the database for which you want to create the Query. Write an SQL query with a WHERE clause specifying the desired criteria. For example, to create a chart showing orders created in the past hour:
+2.  **Craft SQL Query:** Select the database for which you want to create the Query. Write an SQL query with a WHERE clause specifying the desired criteria. For example, to create a chart showing orders created in the past hour:
 
     ```sql
     SELECT *
     FROM order_header oh
     WHERE oh.ENTRY_DATE >= NOW() - INTERVAL 1 HOUR;
     ```
-
 3. **Execute Query:** Click the `Run Query` button to execute the SQL query and generate the dataset.
 4. **Save Dataset:** Once the dataset is generated, save it by following the prompted steps. This will open a new page with options to customize the dataset.
 5. **Add Chart Details:** Enter a descriptive name for the chart, select the desired chart type, and configure additional settings as needed.
@@ -87,24 +91,23 @@ The ability to create charts based on specific queries within Tathya empowers us
 Creating charts in Tathya without specific queries is essential for flexible data analysis. This feature allows users to prepare for future data scenarios by initially including all available data, even when subsets may not exist at the time of dataset creation.
 
 #### Step-by-Step Usage Instructions:
+
 1. **Access SQL Lab:** Navigate to the SQL Lab within Tathya.
-2. **Craft General SQL Query:** Select the database and write a general SQL query to retrieve all available data without specific conditions. For example:
+2.  **Craft General SQL Query:** Select the database and write a general SQL query to retrieve all available data without specific conditions. For example:
 
     ```sql
     SELECT *
     FROM order_header oh;
     ```
-
 3. **Execute Query:** Click the `Run Query` button to execute the SQL query and generate the dataset containing all available data.
 4. **Save Dataset:** Once the dataset is generated, save it by clicking on the save button. This will open a new page with options to customize the dataset.
 5. **Create Chart:** Proceed to create a chart from the dataset to visualize the overall data trends.
 6. **Unlock Dataset:** Click on the options icon against the dataset's name to open a new form. Unlock the dataset by clicking on the lock icon to make changes.
-7. **Add WHERE Clause:** If necessary, add a WHERE clause to the SQL query to filter the dataset based on specific criteria whenever there is data that follows the WHERE clause. For example:
+7.  **Add WHERE Clause:** If necessary, add a WHERE clause to the SQL query to filter the dataset based on specific criteria whenever there is data that follows the WHERE clause. For example:
 
     ```sql
     WHERE oh.ENTRY_DATE >= NOW() - INTERVAL 1 HOUR;
     ```
-
 8. **Save Dataset:** Save the dataset by clicking on the save button to retain the modifications made.
 9. **Update Chart:** After saving the dataset, update the chart to reflect the changes made to the dataset and visualize the updated insights.
 
@@ -120,5 +123,3 @@ Creating datasets with empty data is crucial in Tathya. It prepares charts for f
 4. **Name the Chart:** Provide a descriptive name for the chart to identify its purpose or intended data source.
 5. **Custom SQL:** Under `Custom SQL,` paste the names of columns one by one to define the dataset structure accurately.
 6. **Save Chart:** Click on the save chart button to save the chart configuration for future use.
-
-
