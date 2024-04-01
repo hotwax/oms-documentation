@@ -10,4 +10,4 @@ Transfer orders are initiated in the NetSuite ERP system, facilitating the movem
 
 
 
-<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td>Warehouse to Store</td><td></td><td></td><td><a href="warehousetostore.md">warehousetostore.md</a></td></tr><tr><td>Store to Warehouse</td><td></td><td></td><td><a href="storetowarehouse.md">storetowarehouse.md</a></td></tr><tr><td>Store to Store</td><td></td><td></td><td><a href="storetostore.md">storetostore.md</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td>Warehouse to Store</td><td><a href="warehousetostore.md">warehousetostore.md</a></td></tr><tr><td>Store to Warehouse</td><td><a href="storetowarehouse.md">storetowarehouse.md</a></td></tr><tr><td>Store to Store</td><td><a href="storetostore.md">storetostore.md</a></td></tr></tbody></table>
