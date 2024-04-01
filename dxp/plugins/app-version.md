@@ -1,4 +1,10 @@
-# Display app version with @hotwax/app-version-info Package
+---
+description: >-
+  Discover the App Version info package by HotWax Commerce, designed to retrieve
+  and display version information within your application's user interface.
+---
+
+# App Version
 
 ### Overview
 

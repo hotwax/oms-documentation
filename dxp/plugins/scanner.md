@@ -1,4 +1,10 @@
-# Vue Barcode Reader package
+---
+description: >-
+  Discover the Vue Barcode Reader package, a versatile Vue.js component library
+  enabling barcode and QR code scanning in HotWax Commerce apps.
+---
+
+# Scanner
 
 ## Overview
 
@@ -16,7 +22,7 @@ When a store receives a shipment, store staff receives the inventory for the pro
 
 ### Case 3: Picking Order Items in the Picking App
 
-Store staff uses the picking app to pick up order items to prepare them for shipping carriers. By scanning the barcode, store staff can quickly search for the item in the app and mark it as picked, thereby checking it off the list. 
+Store staff uses the picking app to pick up order items to prepare them for shipping carriers. By scanning the barcode, store staff can quickly search for the item in the app and mark it as picked, thereby checking it off the list.
 
 ## Usage
 

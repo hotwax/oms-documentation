@@ -1,4 +1,10 @@
-# CSV Mapping with Papa Parse
+---
+description: >-
+  Explore the Papa Parse package, a versatile in-browser CSV parser used by
+  HotWax Commerce apps to seamlessly convert CSV data into JSON and vice versa.
+---
+
+# CSV Parsing
 
 ## Overview
 

@@ -1,3 +1,9 @@
+---
+description: >-
+  Explore our comprehensive documentation hub for JavaScript applications
+  powered by the Digital Experience Platform (DXP).
+---
+
 # Introduction
 
 Welcome to the documentation hub for JavaScript applications built on our Digital Experience Platform (DXP). This comprehensive guide is designed to provide developers, architects, and enthusiasts with a deep understanding of the architecture and development principles behind the JavaScript applications crafted with Vue.js and enriched by the Ionic UI library.
@@ -8,11 +14,9 @@ HotWax DXP is a Digital Experience Platform that empowers developers to build Pr
 
 ## Key Features
 
-- **Vue.js Integration:** Learn how Vue.js, a progressive JavaScript framework, is seamlessly integrated into our platform to facilitate efficient development and maintenance.
-
-- **Ionic UI Library:** Understand the usage of Ionic, a robust UI library, to build visually stunning and highly responsive user interfaces that adapt seamlessly across devices.
-
-- **Module based architecture:** Dive into how we've used a module based architecture to make building enterprise apps fast and easy for all developers.
+* **Vue.js Integration:** Learn how Vue.js, a progressive JavaScript framework, is seamlessly integrated into our platform to facilitate efficient development and maintenance.
+* **Ionic UI Library:** Understand the usage of Ionic, a robust UI library, to build visually stunning and highly responsive user interfaces that adapt seamlessly across devices.
+* **Module based architecture:** Dive into how we've used a module based architecture to make building enterprise apps fast and easy for all developers.
 
 ## Let's Get Started
 

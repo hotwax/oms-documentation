@@ -1,4 +1,10 @@
-# Manage app styling with @hotwax-apps-theme Package
+---
+description: >-
+  Discover the Apps theme package by HotWax Commerce, a powerful library for
+  deploying consistent styles across all applications.
+---
+
+# Theme
 
 ### Overview
 
@@ -6,4 +12,4 @@ The Apps theme package is a software library developed by HotWax Commerce to dep
 
 ## Usage
 
-To use  Apps theme package, refer to the [official documentation](https://www.papaparse.com/docs) for detailed instructions and customization options. Make sure to check the compatibility of the package version with your application before integration.
+To use Apps theme package, refer to the [official documentation](https://www.papaparse.com/docs) for detailed instructions and customization options. Make sure to check the compatibility of the package version with your application before integration.
