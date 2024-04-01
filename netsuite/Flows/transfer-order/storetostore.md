@@ -29,6 +29,7 @@ HC_MR_ExportedStoreTransferOrderCSV.js
 **SFTP Location**
 
 ```
+/home/{sftp-username}/netsuite/transferorder/csv
 ```
 
 2.  **Import Transfer Orders into HotWax Commerce:**
@@ -42,11 +43,13 @@ HC_MR_ExportedStoreTransferOrderCSV.js
 Import Transfer Orders from SFTP
 
 ```
+Import Transfer Order
 ```
 
 Approve Transfer Orders
 
 ```
+Approve transfer orders
 ```
 
 Export Fulfilled Transfer Order Items to SFTP
@@ -57,6 +60,7 @@ Export Fulfilled Transfer Order Items to SFTP
 **SFTP Location**
 
 ```
+/home/{sftp-username}/netsuite/transferorder/oms-fulfillment
 ```
 
 **SuiteScript**
@@ -78,12 +82,13 @@ HC_SC_ImportTOItemFulfillment.js
 Export Item Fulfillment Records to SFTP
 
 ```
-HC_MR_ExportedStoreTOFulfillmentCSV.js
+HC_MR_ExportedStoreTOFulfillmentCSV.jsd
 ```
 
 **SFTP Location**
 
 ```
+/home/{sftp-username}/netsuite/transferorder/fulfillment
 ```
 
 4.  **Receive Transfer Orders in HotWax Commerce:**
@@ -95,6 +100,7 @@ HC_MR_ExportedStoreTOFulfillmentCSV.js
 Import Item Fulfillment Records from SFTP
 
 ```
+Import Inbound Shipment
 ```
 
 Export Item Receipts to SFTP
@@ -105,6 +111,7 @@ Export Item Receipts to SFTP
 **SFTP Location**
 
 ```
+/home/{sftp-username}/netsuite/transferorder/receipt
 ```
 
 **SuiteScript**
@@ -116,8 +123,6 @@ HC_SC_ImportTOFulfillmentReceipts.js
 ```
 
 Following this approach, store associates at the destination store can efficiently receive inbound shipments at their store, synchronize the item receipts with NetSuite, and ultimately mark the completion of store to store transfer orders, with the transfer order status updating in NetSuite from `Pending Receipt` to `Received`.
-
-
 
 **Here's how transfer order fields are mapped in NetSuite and HotWax Commerce for store fulfillment:**
 
@@ -138,8 +143,6 @@ Following this approach, store associates at the destination store can efficient
 **Here's how transfer order fields are mapped in NetSuite and HotWax Commerce for receiving in store:**
 
 <table data-full-width="false"><thead><tr><th width="157">S.No.	</th><th>Fields in NetSuite</th><th>Fields in HotWax Commerce</th></tr></thead><tbody><tr><td>1</td><td>Item Fulfillment Internal ID</td><td>External ID</td></tr><tr><td>2</td><td>Transfer Order Name</td><td>Transfer Order Name</td></tr><tr><td>3</td><td>Items</td><td>SKU</td></tr><tr><td>4</td><td>Quantity</td><td>Ordered Quantity</td></tr><tr><td>5</td><td>Destination Location</td><td>Facility</td></tr><tr><td>6</td><td>Tracking #</td><td>Tracking ID</td></tr></tbody></table>
-
-
 
 
 
@@ -180,3 +183,7 @@ Following this, a scheduled job in HotWax Commerce Integration Platform generate
 In NetSuite, a scheduled SuiteScript reads this JSON file containing item receipt records from the SFTP location and increases the quantities by 100 for the transfer order received at the Times Square store, and the transfer order status is updated from `Pending Receipt` to `Received`.
 
 </details>
+
+{% file src="../../.gitbook/assets/Transfer Order Fulfilled Items Feed.txt" %}
+
+{% file src="../../.gitbook/assets/Transfer Order Receipt Feed.txt" %}
