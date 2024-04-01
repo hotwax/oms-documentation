@@ -2,7 +2,7 @@
 
 Transfer orders originate in NetSuite, but there is a distinction in how they are fulfilled. When a transfer order is initiated from a warehouse, NetSuite's fulfillment solution is employed to fulfill the transfer order, ensuring the correct allocation of inventory.
 
-Let’s first look at how warehouse to store transfer orders are processed:
+Now, let’s look at how warehouse to store transfer orders are processed:
 
 Warehouse managers create transfer orders in NetSuite, and then the corresponding item fulfillment records are generated. Each transfer order can result in either a single item fulfillment record or multiple records, depending on the scenario:
 
