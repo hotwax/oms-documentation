@@ -25,6 +25,7 @@ HC_MR_ExportedStoreTransferOrderCSV.js
 **SFTP Location**
 
 ```
+/home/{sftp-username}/netsuite/transferorder/csv
 ```
 
 2. **Import Transfer Orders into HotWax Commerce:** A scheduled job in HotWax Commerce OMS reads the transfer orders CSV file from the SFTP location and downloads transfer orders in HotWax Commerce with a default “Created” status.
@@ -72,6 +73,7 @@ Export Fulfilled Transfer Order Items to SFTP
 **SFTP Location**
 
 ```
+/home/{sftp-username}/netsuite/transferorder/oms-fulfillment
 ```
 
 5.  **Import Fulfilled Transfer Orders Items in NetSuite:** In NetSuite, a scheduled SuiteScript reads this JSON file containing fulfilled transfer order items from the SFTP location. The script iterates through each record, creates item fulfillment records, and reduces inventory count in NetSuite for items shipped from the store.
