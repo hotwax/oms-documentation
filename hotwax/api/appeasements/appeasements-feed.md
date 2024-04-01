@@ -26,7 +26,7 @@ The Appeasements Financial Feeed Order Items feed has certain out-of-the-box cus
 
 <details>
 
-<summary>Sample Brokered Order Items feed</summary>
+<summary> Sample Appeasements feed</summary>
 
 ```json
 [ {
@@ -193,9 +193,7 @@ The Appeasements Financial Feeed Order Items feed has certain out-of-the-box cus
 
 **The following attributes have been prepared in the feed:**
 
-Certainly! Here's the JSON data transformed into a Markdown table:
-
-#### Return 1
+#### Return 
 
 | Field Name                   | Description                                  | Value                       |
 | ---------------------------- | -------------------------------------------- | --------------------------- |
