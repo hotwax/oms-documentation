@@ -1,8 +1,6 @@
 
 # Create return API
 
-# Create Return
-
 To create a return for a customer's order that has already been fulfilled and completed, you will need to call the `/createReturn` endpoint with the `POST` method.
 
 ## Request
@@ -98,10 +96,9 @@ To create a return for a customer's order that has already been fulfilled and co
 ```
 
 
-**In the request body, include the information necessary for creating a return, including all the parameters listed below:****
-**
+**In the request body, include the information necessary for creating a return, including all the parameters listed below:**
 
-| Parameter Name               | Description                                                     |
+| **Parameter Name**| **Description**                                                     |
 |------------------------------|-----------------------------------------------------------------|
 | externalId                   | Order identification in the external system (e.g. Shopify or Netsuite)          |
 | customerId                   | Customer’s Identification in HotWax Commerce (partyId)                       |
@@ -203,8 +200,10 @@ To create a return for a customer's order that has already been fulfilled and co
        ]
    }
 }
+```
 
 </details>
+
 
 ## Response
 
