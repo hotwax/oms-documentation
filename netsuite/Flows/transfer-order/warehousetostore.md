@@ -31,6 +31,7 @@ HC_MR_ExportedWHTOFulfillmentCSV.js
 **SFTP Location**
 
 ```
+/home/{sftp-username}/netsuite/transferorder/fulfillment
 ```
 
 2. **Import Transfer Order Item Fulfillment Records in HotWax Commerce:** A scheduled job in HotWax Commerce OMS reads the transfer order item fulfillment CSV file from the SFTP location and creates inbound shipments in the OMS at the destination facility.
@@ -61,6 +62,7 @@ Export Item Receipts to SFTP
 **SFTP Location**
 
 ```
+/home/{sftp-username}/netsuite/transferorder/receipt
 ```
 
 **SuiteScript**
