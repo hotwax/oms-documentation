@@ -148,7 +148,7 @@ To create a return for a customer's order that has already been fulfilled and co
 
 <details>
 
-<summary>Sample request </summary>
+<summary>Sample response </summary>
 
 ```json
 
@@ -212,3 +212,64 @@ To create a return for a customer's order that has already been fulfilled and co
 
 ### Body
 The response will include all the parameters provided in the request body, along with any error messages and login information.
+
+<details>
+
+<summary>Sample response </summary>
+
+```json
+
+_LOGIN_PASSED_": "T{
+   "_ERROR_MESSAGE_": "",
+   "payLoad": {
+       "externalId": "5758438048028",
+       "type": "CUSTOMER_RETURN",
+       "customerId": "10317",
+       "externalCustomerId": "",
+       "companyId": "COMPANY",
+       "companyExternalId": "",
+       "status": "RETURN_RECEIVED",
+       "currencyCode": "CAD",
+       "grandTotal": 150.01,
+       "returnIdentifications": [
+           {
+               "returnIdentificationTypeId": "SHOPIFY_RTN_ID",
+               "returnIdentificationDesc": "MarketPlace Return",
+               "idValue": "5758438048028"
+           }
+       ],
+       "shipFrom": {
+           "postalAddress": {
+               "id": "",
+               "externalId": ""
+           }
+       },
+       "shipTo": {
+           "facilityId": "KITST"
+       },
+       "items": [
+           {
+               "id": "10243",
+               "sku": "",
+               "idType": "UPCA",
+               "idValue": "1110352-7AY-M",
+               "itemExternalId": "",
+               "itemSeqId": "",
+               "itemTypeId": "PRODUCT_ORDER_ITEM",
+               "status": "RETURN_RECEIVED",
+               "orderId": "FAO11428",
+               "orderExternalId": "5758438048028",
+               "orderName": "101010236",
+               "orderItemSeqId": "00101",
+               "orderItemExternalId": "",
+               "quantity": 1,
+               "price": 89.5
+           }
+       ]
+   },
+   "USERNAME": "hotwax.user",
+   "RUE"
+}
+```
+
+</details>
