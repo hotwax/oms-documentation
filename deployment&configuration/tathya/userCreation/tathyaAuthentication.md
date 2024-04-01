@@ -1,4 +1,10 @@
-# User Authentication in Tathya
+---
+description: >-
+  Learn how to authenticate LDAP user accounts in Tathya, ensuring secure access
+  to the platform using LDAP credentials.
+---
+
+# Tathya Authentication
 
 After successfully creating an LDAP user account, log in to Tathya using the generated credentials.
 
