@@ -1,3 +1,9 @@
+---
+description: >-
+  Learn how to create customized packing boxes in HotWax Commerce, ensuring
+  precise shipping cost calculations and accurate label generation.
+---
+
 # Create Shipping Boxes
 
 Retailers employ specific packing boxes tailored to their unique product packaging needs. HotWax Commerce provides users with the ability to define their customized packing boxes. Creating customized box configurations ensures precise shipping cost calculations and accurate label generation, aligning with the retailer's specific packaging standards.

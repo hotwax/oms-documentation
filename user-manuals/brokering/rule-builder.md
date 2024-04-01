@@ -1,3 +1,9 @@
+---
+description: >-
+  Learn how to configure order routing and brokering rules in HotWax Commerce to
+  enhance and optimize fulfillment operations with this user manual.
+---
+
 # Rule Builder
 
 Welcome to the Routing Configurations User Manual! This guide will lead you through the process of configuring your order routing and brokering rules to enhance and optimize your fulfillment operations. Before diving into the configuration steps, it's crucial to have a solid understanding of the various routing parameters. Ensure you grasp how these parameters function to guarantee the accurate setup of your rules. If you need more information, refer to the [Routing Rules](rule-builder.md) page.

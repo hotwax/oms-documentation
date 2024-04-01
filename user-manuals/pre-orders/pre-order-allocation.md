@@ -1,3 +1,10 @@
+---
+description: >-
+  Discover how HotWax Commerce automatically allocates sales orders for
+  pre-order items on a first-in, first-out (FIFO) basis, with the flexibility
+  for manual allocation when needed.
+---
+
 # Pre-order Allocation
 
 Once a customer places an order for a pre-order item, the sales order is automatically allocated to the purchase order inventory on a first-in, first-out (FIFO) basis. This ensures that customers who place orders first receive their inventory first. However, there are instances when merchandisers need to manually manage these allocations, either due to errors or the need for reallocation. HotWax Commerce provides the flexibility for merchandisers to manually manage purchase orders through the following methods:

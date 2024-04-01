@@ -1,3 +1,9 @@
+---
+description: >-
+  Learn about setting up pre-order jobs in HotWax Commerce to sync pre-orders
+  with the eCommerce platform, ensuring accurate listing and seamless operations
+---
+
 # Pre-order Jobs
 
 Once Purchase Orders have successfully been uploaded to HotWax Commerce, the subsequent step involves seamlessly syncing the pre-orders with the e-commerce platform. Merchandisers can set up various jobs in HotWax Commerce to ensure the accurate listing of pre-orders on the e-commerce platform. Some of these jobs are internal to HotWax Commerce and facilitate the creation of jobs within the system.

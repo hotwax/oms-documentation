@@ -1,3 +1,10 @@
+---
+description: >-
+  Learn how HotWax Commerce automates pre-order and back-order management
+  through the use of purchase orders, offering integration with ERP systems and
+  a simplified process for manual import.
+---
+
 # Purchase Order Upload
 
 HotWax Commerce aids in automating pre-order and back-order management by leveraging purchase orders. This automation includes the automatic listing and de-listing of products which is particularly beneficial for retailers who have large purchase order catalogs.

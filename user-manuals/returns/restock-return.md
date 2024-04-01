@@ -1,4 +1,11 @@
-# Restock Returns
+---
+description: >-
+  Discover how HotWax Commerce manages restock returns for both online and
+  in-store orders, ensuring accurate inventory management and syncing with
+  Shopify.
+---
+
+# Restocking
 
 ## Restock Returns for Online Orders
 
