@@ -1,20 +1,18 @@
-# Inventory Item Variance Feed
+---
+description: Learn about managing inventory item variances in OMS with JSON feed format.
+---
 
-This feed is used to get the inventory variances logged for any products in OMS. The feed file format is JSON format.
-The feed file can be sent to external systems as is or can be transformed as per the format required by the external system.
+# Inventory Item Variance
 
-## Technical implementation 
+This feed is used to get the inventory variances logged for any products in OMS. The feed file format is JSON format. The feed file can be sent to external systems as is or can be transformed as per the format required by the external system.
 
-This feed is generated in the integration layer using a Moqui component. The integration
-component connects with OMS transactional database and fetches the required details for
-the inventory variances for a product using certain database views. These views are generated using
-OMS entities, and logic is implemented in the Moqui services to get inventory variances, and prepare the JSON in a fixed format. This JSON is then kept on
-a directory on SFTP.
+## Technical implementation
+
+This feed is generated in the integration layer using a Moqui component. The integration component connects with OMS transactional database and fetches the required details for the inventory variances for a product using certain database views. These views are generated using OMS entities, and logic is implemented in the Moqui services to get inventory variances, and prepare the JSON in a fixed format. This JSON is then kept on a directory on SFTP.
 
 A Service Job can be scheduled that will prepare the feed file and keep it on SFTP.
 
-The service fetches the inventory variances after the last run of the service. This service saves the last run time
-of the service and in the next run fetches the records after the last run time so that sam inventory variances are sent again.
+The service fetches the inventory variances after the last run of the service. This service saves the last run time of the service and in the next run fetches the records after the last run time so that sam inventory variances are sent again.
 
 ### Configurable Parameters for the feed
 
@@ -22,48 +20,38 @@ The following configurable parameters are used for generating the inventory item
 
 1. daysBefore
    1. This is used to generate the feed for n previous days from today.
-   
 2. fromDate
    1. Used fetch records of Inventory Item Variance after a specific date.
    2. This parameter corresponds to the physicalInventoryDate of PhysicalInventory entity.
-   
 3. thruDate
    1. Used fetch records of Inventory Item Variance before a specific date.
    2. This parameter corresponds to the physicalInventoryDate of PhysicalInventory entity.
-
 4. jobName
    1. The name of the scheduled job to fetch the last run time for preparing the feed.
-
 5. parentFacilityTypeIds
    1. This is a list of parent facility type ids for generating feed.
-   2. For generating the feed for a single parent facility type ids use values like - PHYSICAL_STORE 
-   3. For generating the feed for multiple parent facility type ids use values like - PHYSICAL_STORE,DISTRIBUTION_CENTER
-
+   2. For generating the feed for a single parent facility type ids use values like - PHYSICAL\_STORE
+   3. For generating the feed for multiple parent facility type ids use values like - PHYSICAL\_STORE,DISTRIBUTION\_CENTER
 6. productStoreIds
    1. This is a list of product store ids for generating feed.
-   2. For generating the feed for a single product store use values like - STORE_A
-   3. For generating the feed for multiple product stores use values like - STORE_A, STORE_B
-
+   2. For generating the feed for a single product store use values like - STORE\_A
+   3. For generating the feed for multiple product stores use values like - STORE\_A, STORE\_B
 7. skipLastRunTimeUpdate
    1. skip the LastRunTime update, mainly used while debugging.
-
 8. systemMessageRemoteId
    1. The System Message Remote ID to send the Inventory Item Variance Feed.
-
 9. systemMessageTypeId
    1. The System Message Type ID for generating Inventory Item Variance Feed.
-
 10. varianceReasonIds
-    1. This is a list of variance reason ids for generating the feed. 
-    2. For generating the feed for a single variance reason id use values like - VAR_STOLEN
-    3. For generating the feed for multiple product stores use values like - VAR_STOLEN, VAR_DAMAGED
+    1. This is a list of variance reason ids for generating the feed.
+    2. For generating the feed for a single variance reason id use values like - VAR\_STOLEN
+    3. For generating the feed for multiple product stores use values like - VAR\_STOLEN, VAR\_DAMAGED
 
 ## FTP location for Inventory Item Variance Feed
 
-```text
+```
 /home/${sftpUsername}/hotwax/InventoryItemVarianceFeed
 ```
-
 
 ## Sample Inventory Item Variance Feed JSON
 
@@ -107,4 +95,3 @@ The following configurable parameters are used for generating the inventory item
   "varianceReasonId" : "VAR_FOUND"
 } ]
 ```
-

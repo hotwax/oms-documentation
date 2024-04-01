@@ -1,113 +1,78 @@
-# Fulfilled Order Items Feed
+---
+description: Learn how to utilize JSON feeds for retrieving fulfilled order items in OMS.
+---
 
-This feed is used to get the fulfilled order items in OMS. The format of the feed is JSON, 
-and it can be further used to send to external systems as-is or transformed as per custom 
-format of the external system.
+# Fulfilled Order Items
 
-Eg. The fulfilled orders items feed can be sent to external system like ERP for financial 
-posting and also to Shopify to update the fulfillment status as fulfilled.
+This feed is used to get the fulfilled order items in OMS. The format of the feed is JSON, and it can be further used to send to external systems as-is or transformed as per custom format of the external system.
 
-## Technical implementation 
+Eg. The fulfilled orders items feed can be sent to external system like ERP for financial posting and also to Shopify to update the fulfillment status as fulfilled.
 
-This feed is generated in the integration layer using a Moqui component. The integration 
-component connects with OMS transactional database and fetches the required details for 
-the fulfilled order items using certain database views. These views are generated using 
-OMS entities, and logic is implemented in the Moqui service to get the fulfilled order 
-and its item details, and prepare the JSON in a fixed format. This JSON is then kept on 
-a directory on SFTP.
+## Technical implementation
 
-The feed is generated order wise, meaning each object in JSON represents an order which 
-has 1 or more fulfilled order items. Each order will have a list of its shipments grouped 
-by trackingIdNumber, carrierPartyId, shipmentMethodTypeId and shipToContactMechId. Each 
-shipment will have list of shipped items.
+This feed is generated in the integration layer using a Moqui component. The integration component connects with OMS transactional database and fetches the required details for the fulfilled order items using certain database views. These views are generated using OMS entities, and logic is implemented in the Moqui service to get the fulfilled order and its item details, and prepare the JSON in a fixed format. This JSON is then kept on a directory on SFTP.
+
+The feed is generated order wise, meaning each object in JSON represents an order which has 1 or more fulfilled order items. Each order will have a list of its shipments grouped by trackingIdNumber, carrierPartyId, shipmentMethodTypeId and shipToContactMechId. Each shipment will have list of shipped items.
 
 A Service Job can be scheduled which will prepare the feed and keep it on SFTP.
 
-To ensure that the same order items are not sent repetitively in the feeds, history is 
-maintained in the OrderFulfillmentHistory entity table of OMS for all the order items 
-included in a feed. Whenever a feed is generated, a record for this entity is created 
-and the views to fetch the fulfilled order item details are implemented in a way that it  
-includes the condition to exclude order items for which history exists. So in every job 
-run, the service wil fetch the new fulfilled order items and prepare the feed.
+To ensure that the same order items are not sent repetitively in the feeds, history is maintained in the OrderFulfillmentHistory entity table of OMS for all the order items included in a feed. Whenever a feed is generated, a record for this entity is created and the views to fetch the fulfilled order item details are implemented in a way that it\
+includes the condition to exclude order items for which history exists. So in every job run, the service wil fetch the new fulfilled order items and prepare the feed.
 
 ### Configurable Parameters for the feed
 
 The job to generate the fulfilled order items feed has some configurable parameters.
 
 1. excludeSalesChannel
-   1. This is a list type parameter and could be used to generate the feed by excluding 
-   orders from a specific sale channel.
-   2. Eg. To exclude orders from POS, set the value as  POS_CHANNEL. To pass multiple 
-   values, set the value as POS_CHANNEL,POS_SALES_CHANNEL
-
+   1. This is a list type parameter and could be used to generate the feed by excluding orders from a specific sale channel.
+   2. Eg. To exclude orders from POS, set the value as POS\_CHANNEL. To pass multiple values, set the value as POS\_CHANNEL,POS\_SALES\_CHANNEL
 2. includeSalesChannel
-   1. This is a list type parameter and could be used to generate the feed for orders 
-   received from a specific sale channel.
-   2. Eg. To include orders only from Web, set the value as  WEB_CHANNEL. To pass multiple
-      values, set the value as WEB_CHANNEL,CSR_CHANNEL
-   
+   1. This is a list type parameter and could be used to generate the feed for orders received from a specific sale channel.
+   2. Eg. To include orders only from Web, set the value as WEB\_CHANNEL. To pass multiple values, set the value as WEB\_CHANNEL,CSR\_CHANNEL
 3. isPhysical
    1. This could be used to specify to only include physical type product order items.
    2. The possible values to set for this parameter are:
       1. isPhysical = 'Y' - Includes only Physical good type items.
       2. isPhysical = 'N' - Include all the type of goods excluding the Physical good type items.
-      3. If we are not passing anything in the isPhysical then all the fulfilled order items 
-      will be considered for the feed.
-
+      3. If we are not passing anything in the isPhysical then all the fulfilled order items will be considered for the feed.
 4. orderId
    1. This could be used to generate the feed for a specific order.
-   
 5. orderItemSeqId
-   1. This could be used to generate the feed for a specific order item. To use this, 
-   make sure to set the orderId as well.
-   
+   1. This could be used to generate the feed for a specific order item. To use this, make sure to set the orderId as well.
 6. orderStatusId
    1. This could be used to generate the feed for a specific order status.
-   2. The use case for this is to generate the feed only when all items in the order 
-   are fulfilled, so this can be set to ORDER_COMPLETED.
-   
+   2. The use case for this is to generate the feed only when all items in the order are fulfilled, so this can be set to ORDER\_COMPLETED.
 7. parentFacilityTypeIds
-   1. This is a list type parameter and could be used to generate the feed for the 
-   specific parent facility type IDs from which orders are being fulfilled.
-   2. If this is left as empty, feed will be generated for all the fulfilled order items
-   irrespective of the parent facility type it is fulfilled from. 
-   3. To generate feed for order items fulfilled from Stores, set the value as PHYSICAL_STORE.
-   4. To generate feed for order items fulfilled from warehouses, set the value DISTRIBUTION_CENTER.
-   5. To generate feed for multiple types, set the value as PHYSICAL_STORE,DISTRIBUTION_CENTER.
-
+   1. This is a list type parameter and could be used to generate the feed for the specific parent facility type IDs from which orders are being fulfilled.
+   2. If this is left as empty, feed will be generated for all the fulfilled order items irrespective of the parent facility type it is fulfilled from.
+   3. To generate feed for order items fulfilled from Stores, set the value as PHYSICAL\_STORE.
+   4. To generate feed for order items fulfilled from warehouses, set the value DISTRIBUTION\_CENTER.
+   5. To generate feed for multiple types, set the value as PHYSICAL\_STORE,DISTRIBUTION\_CENTER.
 8. productStoreIds
-   1. This is a list type parameter and could be used to set the Product Store Ids for 
-   generating the feed.
-   2. For eg. if the OMS is set up for a client with multiple brands, each brand may be set up
-   as a separate Product Store in OMS. To generate the feed for a single brand, set the value like 
-   STORE.
-
+   1. This is a list type parameter and could be used to set the Product Store Ids for generating the feed.
+   2. For eg. if the OMS is set up for a client with multiple brands, each brand may be set up as a separate Product Store in OMS. To generate the feed for a single brand, set the value like STORE.
 9. productTypeIds
-   1. This is a list type parameter and could be used to include certain product types in the 
-   fulfilled order items feed. 
-   2. To include only physical type goods, set the value as FINISHED_GOOD.
-   3. To include multiple product type goods, set the value as FINISHED_GOOD,DIGITAL_GOOD.
-   4. If this is left as empty, feed will be generated for all the fulfilled order items
-      irrespective of the product type of the order items.
-
+   1. This is a list type parameter and could be used to include certain product types in the fulfilled order items feed.
+   2. To include only physical type goods, set the value as FINISHED\_GOOD.
+   3. To include multiple product type goods, set the value as FINISHED\_GOOD,DIGITAL\_GOOD.
+   4. If this is left as empty, feed will be generated for all the fulfilled order items irrespective of the product type of the order items.
 10. sinceDate
     1. This could be used to generate the feed for order items fulfilled after a specified date.
-    2. This can be needed if historical orders need to be skipped which are not required to sync 
-    to any external system from OMS.
+    2. This can be needed if historical orders need to be skipped which are not required to sync to any external system from OMS.
 
 ## FTP locations for the fulfilled order items feed variation
 
 Based on the available parameters, the feed is kept on its respective locations.
-| Feed Type                                 | Location                                            |
-|-----------------------------------------------|--------------------------------------------------|
-| Feed for all fulfilled Order Items Feed     | /home/${sftpUsername}/hotwax/FulfilledOrderItems       |
-| Feed for Order Items fulfilled from Stores | /home/${sftpUsername}/hotwax/StoreFulfilledItemsFeed |
-| Feed for Order Items fulfilled from Stores  | /home/${sftpUsername}/hotwax/WHFulfilledItemsFeed  |
-| Feed for Ecommerce Orders Items fulfilled from Stores | /home/${sftpUsername}/hotwax/EcomStoreFulfilledItemsFeed                |
-| Feed for POS orders fulfilled from Stores | /home/${sftpUsername}/hotwax/PosStoreFulfilledItemsFeed        |
-| Feed for all fulfilled Order Items with only finished good type products | /home/${sftpUsername}/hotwax/FinishedGoodFulfilledItemsFeed |
-| Feed for all fulfilled Order Items with only digital good type products | /home/${sftpUsername}/hotwax/DigitalGoodFulfilledItemsFeed  |
 
+| Feed Type                                                                | Location                                                    |
+| ------------------------------------------------------------------------ | ----------------------------------------------------------- |
+| Feed for all fulfilled Order Items Feed                                  | /home/${sftpUsername}/hotwax/FulfilledOrderItems            |
+| Feed for Order Items fulfilled from Stores                               | /home/${sftpUsername}/hotwax/StoreFulfilledItemsFeed        |
+| Feed for Order Items fulfilled from Stores                               | /home/${sftpUsername}/hotwax/WHFulfilledItemsFeed           |
+| Feed for Ecommerce Orders Items fulfilled from Stores                    | /home/${sftpUsername}/hotwax/EcomStoreFulfilledItemsFeed    |
+| Feed for POS orders fulfilled from Stores                                | /home/${sftpUsername}/hotwax/PosStoreFulfilledItemsFeed     |
+| Feed for all fulfilled Order Items with only finished good type products | /home/${sftpUsername}/hotwax/FinishedGoodFulfilledItemsFeed |
+| Feed for all fulfilled Order Items with only digital good type products  | /home/${sftpUsername}/hotwax/DigitalGoodFulfilledItemsFeed  |
 
 ## Sample Fulfilled Order Items Feed JSON
 

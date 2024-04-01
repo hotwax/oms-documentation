@@ -1,27 +1,34 @@
-# POS Cash Sale Feed HotWax to NetSuite
+---
+description: >-
+  Efficiently synchronize in-store orders from OMS to NetSuite with Apache NiFi
+  integration.
+---
+
+# POS Cash Sale Orders
 
 This integration flow is responsible to send the In-Store Orders information from OMS to NetSuite.
 
-When using Shopify POS, these orders are fetched in OMS using Shopify Orders import, and these type of orders have the shipping method set as "POS_COMPLETED" in OMS.
+When using Shopify POS, these orders are fetched in OMS using Shopify Orders import, and these type of orders have the shipping method set as "POS\_COMPLETED" in OMS.
 
 ## Technical Implementation
 
-This feed is generated in the integration layer using Apache NiFi. 
+This feed is generated in the integration layer using Apache NiFi.
 
 In NiFi, the required POS Cash Sales order data is fetched by connecting to the OMS transactional database, and this data is prepared in the format required by NetSuite.
 
 Some of the important conditions for POS Cash sales order data are:
-1. To identify sales order, order_type_id = 'SALES_ORDER' in OrderHeader entity is used.
-2. The order status should be 'ORDER_COMPLETED'.
-3. The Sales Channel for the order is 'POS_SALES_CHANNEL'.
-4. The Shipment Method set on Order Item Ship group is 'POS_COMPLETED'.
-5. The sales order for which value for order_identification_type_id = 'NETSUITE_ORDER_ID' are fetched to be sent to NetSuite, so that same order is not sent once created in NetSuite.
 
+1. To identify sales order, order\_type\_id = 'SALES\_ORDER' in OrderHeader entity is used.
+2. The order status should be 'ORDER\_COMPLETED'.
+3. The Sales Channel for the order is 'POS\_SALES\_CHANNEL'.
+4. The Shipment Method set on Order Item Ship group is 'POS\_COMPLETED'.
+5. The sales order for which value for order\_identification\_type\_id = 'NETSUITE\_ORDER\_ID' are fetched to be sent to NetSuite, so that same order is not sent once created in NetSuite.
 
 <details>
-  <summary>SQL to fetch customer data from OMS</summary>
 
-``` SQL
+<summary>SQL to fetch customer data from OMS</summary>
+
+```SQL
 SELECT
   oh.order_name AS 'Order Id',
   os.status_datetime,
@@ -239,61 +246,62 @@ order by
   oi.order_id,
   oi.order_item_seq_id
 ```
+
 </details>
 
-## Implementation flow 
+## Implementation flow
+
 1. This feed will be generated using a SQL to fetch data from HotWax. SQL outputs the feed in JSON format
 2. The generated feed has a limit on total number of Orders in each file as external system can not accept more than 25k records in a single file.
-3. Then the feed undergoes a JOLT transformation where an extra object is added to the JSON if there is any discount on the same item other than the discount due to discount_code.
+3. Then the feed undergoes a JOLT transformation where an extra object is added to the JSON if there is any discount on the same item other than the discount due to discount\_code.
 4. JOLT also does the mapping for fields- Order Type, Department and Sales channel based on the value of Source name field fetche through SQL from HC.
 5. Then the format of feed is converted from JSON to CSV.
 6. Then the feed is sent to an sftp location.
 
 ## NetSuite POS Cash Sale Feed Sample
 
-
-   | Order Id        | Order Line Id | External Id   | Sales Channel   | Item                                      | Price | Amount | Quantity | Tax Code | Location           | Date       | Customer | Discount Item     | Rate    | Subsidiary | Address 1             | Address 2 | City            | Country | State | Zip   | Order Type | Department | Krewe Sales Channel | Price Level        | Shopify Order Number | Order Note                                                             |
-   | --------------- | ------------- |---------------|-----------------|-------------------------------------------|-------|--------|----------|----------|--------------------| ---------- | -------- | ------------------| ------- |------------| --------------------- | --------- | --------------- | ------- | ----- | ----- | -----------| -----------| --------------------|--------------------|----------------------|------------------------------------------------------------------------|
-   | "#KREWE37312"   | 00101         | KR10236       | POS Channel     | 19-08S BRETON &#124; Matte Oyster 24K     |       |        | 1.000000 | AVATAX   | 254                | 9/8/2023   | 5313849  |                   |         | 1          | 1,818 Magazine Street |           | New Orleans     | US      | LA    | 70130 | 6          | 212        | 12                  | Base Price (MSRP)  | 36,167               | New Exchange order @ 2023-12-14 11:27:56 exchange for order KR10236    |
-   | "#KREWE37312"   | 00102         | KR10236       | POS Channel     | RX12-03 ORLEANS II &#124; Titanium        |       |        | 1.000000 | AVATAX   | 254                | 9/8/2023   | 5313849  |                   |         | 1          | 1,818 Magazine Street |           | New Orleans     | US      | LA    | 70130 | 6          | 212        | 12                  | Base Price (MSRP)  | 36,179               |                                                                        |
-   | "#KREWE37310"   | 00101         | KR10237       | POS Channel     | 19-08S BRETON &#124; Matte Oyster 24K     |       |        | 1.000000 | AVATAX   | 372                | 9/8/2023   | 5313850  |                   |         | 1          | 619 Royal Street      |           | New Orleans     | US      | LA    | 70130 | 6          | 317        | 156                 | Base Price (MSRP)  |                      |                                                                        |
-   | "#KREWE37307"   | 00101         | KR10238       | POS Channel     | 30-01S OCTAVIA &#124; Crystal + Black 24K |       |        | 1.000000 | AVATAX   | 376                | 9/8/2023   | 5313849  | SHOPIFY DISCOUNT  | -82.500 | 5          | Gansevoort Street     |           | New York        | US      | NY    | 10014 | 6          | 335        | 144                 | Base Price (MSRP)  | 36,123               |                                                                        |
-   | "#KREWE37307"   | 00102         | KR10238       | POS Channel     | 19-08S BRETON &#124; Matte Oyster 24K     |       |        | 1.000000 | AVATAX   | 376                | 9/8/2023   | 5313849  | SHOPIFY DISCOUNT  | -82.500 | 5          | Gansevoort Street     |           | New York        | US      | NY    | 10014 | 6          | 335        | 144                 |                    |                      | New Exchange order @ 2023-12-14 11:27:56 exchange for order KREWE37307 |
+| Order Id      | Order Line Id | External Id | Sales Channel | Item                                  | Price | Amount | Quantity | Tax Code | Location | Date     | Customer | Discount Item    | Rate    | Subsidiary | Address 1             | Address 2 | City        | Country | State | Zip   | Order Type | Department | Krewe Sales Channel | Price Level       | Shopify Order Number | Order Note                                                             |
+| ------------- | ------------- | ----------- | ------------- | ------------------------------------- | ----- | ------ | -------- | -------- | -------- | -------- | -------- | ---------------- | ------- | ---------- | --------------------- | --------- | ----------- | ------- | ----- | ----- | ---------- | ---------- | ------------------- | ----------------- | -------------------- | ---------------------------------------------------------------------- |
+| "#KREWE37312" | 00101         | KR10236     | POS Channel   | 19-08S BRETON \| Matte Oyster 24K     |       |        | 1.000000 | AVATAX   | 254      | 9/8/2023 | 5313849  |                  |         | 1          | 1,818 Magazine Street |           | New Orleans | US      | LA    | 70130 | 6          | 212        | 12                  | Base Price (MSRP) | 36,167               | New Exchange order @ 2023-12-14 11:27:56 exchange for order KR10236    |
+| "#KREWE37312" | 00102         | KR10236     | POS Channel   | RX12-03 ORLEANS II \| Titanium        |       |        | 1.000000 | AVATAX   | 254      | 9/8/2023 | 5313849  |                  |         | 1          | 1,818 Magazine Street |           | New Orleans | US      | LA    | 70130 | 6          | 212        | 12                  | Base Price (MSRP) | 36,179               |                                                                        |
+| "#KREWE37310" | 00101         | KR10237     | POS Channel   | 19-08S BRETON \| Matte Oyster 24K     |       |        | 1.000000 | AVATAX   | 372      | 9/8/2023 | 5313850  |                  |         | 1          | 619 Royal Street      |           | New Orleans | US      | LA    | 70130 | 6          | 317        | 156                 | Base Price (MSRP) |                      |                                                                        |
+| "#KREWE37307" | 00101         | KR10238     | POS Channel   | 30-01S OCTAVIA \| Crystal + Black 24K |       |        | 1.000000 | AVATAX   | 376      | 9/8/2023 | 5313849  | SHOPIFY DISCOUNT | -82.500 | 5          | Gansevoort Street     |           | New York    | US      | NY    | 10014 | 6          | 335        | 144                 | Base Price (MSRP) | 36,123               |                                                                        |
+| "#KREWE37307" | 00102         | KR10238     | POS Channel   | 19-08S BRETON \| Matte Oyster 24K     |       |        | 1.000000 | AVATAX   | 376      | 9/8/2023 | 5313849  | SHOPIFY DISCOUNT | -82.500 | 5          | Gansevoort Street     |           | New York    | US      | NY    | 10014 | 6          | 335        | 144                 |                   |                      | New Exchange order @ 2023-12-14 11:27:56 exchange for order KREWE37307 |
 
 ## Data Model Mapping
-| Fields                        | Data Type | Description                                   | HC Field Mapping                 |
-|-------------------------------|-----------|-----------------------------------------------|---------------------------------|
-| Order Id                      | String    | Order ID                                      | OrderHeader.ORDER_NAME                    |
-| Order Line Id                 | String    | Order Line ID                                 | OrderItem.ORDER_ITEM_SEQ_ID             |
-| External Id                   | String    | External Order ID                             | OrderHeader.ORDER_ID                      |
-| Sales Channel                 | String    | Description of the sales channel              | Enumeration.DESCRIPTION                    |
-| Item                          | String    | Concatenated product and item description     | CONCAT(P.INTERNAL_NAME, OI.ITEM_DESCRIPTION) |
-| Price                         | String    | Empty field (price calculated externally)     | Default empty                    |
-| Amount          | Unknown   | Adjustments where discount is due to reason other than discount_code | adjustment.ITEM_DISC_AMOUNT             |
-| Quantity                      | Unknown   | Quantity of items                             | OrderItem.QUANTITY                      |
-| Tax Code                      | String    | Tax code                                      | "AVATAX"                         |
-| Location                      | Number    | Location external ID                          | Facility.EXTERNAL_ID                    |
-| Date                          | Date      | order date                                    | OrderHeader.ORDER_DATE in format D/M/YYYY |
-| Customer                      | Unknown   | Customer ID                                   | PartyIdentification.ID_VALUE  where party_identification_type_id = 'NETSUITE_CUSTOMER_ID'|
-| Discount Item                 | String    | Discount Code                                 | orderAdjustmentAttribute.ATTR_VALUE where ORDER_ADJUSTMENT_TYPE_ID = 'EXT_PROMO_ADJUSTMENT'|
-| Rate                          | Numbwe    | Adjustments where discount is due to discount_code | order_adjustment.Rate                         |
-| Subsidiary                    | String    | Subsidiary based on external ID               | Mapping based on Facility external id        |
-| Address 1                     | String    | Address line 1                                | postalAddress.address1                      |
-| Address 2                     | String    | Address line 2                                | PostalAddress.address2                      |
-| City                          | String    | City                                          | PostalAddress.city                          |
-| Country                       | String    | Country                                       | geo.geo_code                       |
-| State                         | Unknown   | State or province                             | PostalAddress.state_province_geo_id         |
-| Zip                           | String    | Postal code                                   | PostalAddress.postal_code                   |
-| Order Type                    | Number    | Order Type                                    | Mapping based on Source           |
-| Department                    | Number    | Department                                    | Mapping based on Source Name |
-| Krewe Sales Channel           | Number    | Sales Channel                                 | Mapping based on Source   |
-| Price Level                   | String    | Price level sent as custom for duplicate fields created due to discount other than discount code| default value "custom" for discount details rows and ProductStoreSetting.SettingValue where SettingTypeEnumId = 'PRICE_LEVEL_NETSUITE' for rest of the rows |
 
+| Fields              | Data Type | Description                                                                                      | HC Field Mapping                                                                                                                                              |
+| ------------------- | --------- | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Order Id            | String    | Order ID                                                                                         | OrderHeader.ORDER\_NAME                                                                                                                                       |
+| Order Line Id       | String    | Order Line ID                                                                                    | OrderItem.ORDER\_ITEM\_SEQ\_ID                                                                                                                                |
+| External Id         | String    | External Order ID                                                                                | OrderHeader.ORDER\_ID                                                                                                                                         |
+| Sales Channel       | String    | Description of the sales channel                                                                 | Enumeration.DESCRIPTION                                                                                                                                       |
+| Item                | String    | Concatenated product and item description                                                        | CONCAT(P.INTERNAL\_NAME, OI.ITEM\_DESCRIPTION)                                                                                                                |
+| Price               | String    | Empty field (price calculated externally)                                                        | Default empty                                                                                                                                                 |
+| Amount              | Unknown   | Adjustments where discount is due to reason other than discount\_code                            | adjustment.ITEM\_DISC\_AMOUNT                                                                                                                                 |
+| Quantity            | Unknown   | Quantity of items                                                                                | OrderItem.QUANTITY                                                                                                                                            |
+| Tax Code            | String    | Tax code                                                                                         | "AVATAX"                                                                                                                                                      |
+| Location            | Number    | Location external ID                                                                             | Facility.EXTERNAL\_ID                                                                                                                                         |
+| Date                | Date      | order date                                                                                       | OrderHeader.ORDER\_DATE in format D/M/YYYY                                                                                                                    |
+| Customer            | Unknown   | Customer ID                                                                                      | PartyIdentification.ID\_VALUE where party\_identification\_type\_id = 'NETSUITE\_CUSTOMER\_ID'                                                                |
+| Discount Item       | String    | Discount Code                                                                                    | orderAdjustmentAttribute.ATTR\_VALUE where ORDER\_ADJUSTMENT\_TYPE\_ID = 'EXT\_PROMO\_ADJUSTMENT'                                                             |
+| Rate                | Numbwe    | Adjustments where discount is due to discount\_code                                              | order\_adjustment.Rate                                                                                                                                        |
+| Subsidiary          | String    | Subsidiary based on external ID                                                                  | Mapping based on Facility external id                                                                                                                         |
+| Address 1           | String    | Address line 1                                                                                   | postalAddress.address1                                                                                                                                        |
+| Address 2           | String    | Address line 2                                                                                   | PostalAddress.address2                                                                                                                                        |
+| City                | String    | City                                                                                             | PostalAddress.city                                                                                                                                            |
+| Country             | String    | Country                                                                                          | geo.geo\_code                                                                                                                                                 |
+| State               | Unknown   | State or province                                                                                | PostalAddress.state\_province\_geo\_id                                                                                                                        |
+| Zip                 | String    | Postal code                                                                                      | PostalAddress.postal\_code                                                                                                                                    |
+| Order Type          | Number    | Order Type                                                                                       | Mapping based on Source                                                                                                                                       |
+| Department          | Number    | Department                                                                                       | Mapping based on Source Name                                                                                                                                  |
+| Krewe Sales Channel | Number    | Sales Channel                                                                                    | Mapping based on Source                                                                                                                                       |
+| Price Level         | String    | Price level sent as custom for duplicate fields created due to discount other than discount code | default value "custom" for discount details rows and ProductStoreSetting.SettingValue where SettingTypeEnumId = 'PRICE\_LEVEL\_NETSUITE' for rest of the rows |
 
 ## Special handling
-1. **Order Item Discount**- 
-    1. An extra record is sent for an order item if the item sent has an extra discount amount other than the discount due to discount_code.
-    2. This row does not contain line id field and price level is sent as "custom" for these fields.
-       
+
+1. **Order Item Discount**-
+   1. An extra record is sent for an order item if the item sent has an extra discount amount other than the discount due to discount\_code.
+   2. This row does not contain line id field and price level is sent as "custom" for these fields.
 2. **Limit on number of orders**-
-    1. This flow returns only a limited number orders. If the external system has some limit on total number of orders in the output. It can be configured from the queryRecord processor.
+   1. This flow returns only a limited number orders. If the external system has some limit on total number of orders in the output. It can be configured from the queryRecord processor.

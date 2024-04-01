@@ -1,29 +1,36 @@
-# Created Orders Feed from OMS to NetSuite
+---
+description: >-
+  Efficiently synchronize sales orders from OMS to NetSuite with Apache NiFi
+  integration.
+---
+
+# Create Orders
 
 This integration flow is responsible to send the Sales Orders information from OMS to NetSuite.
 
 To successfully create a sales order in NetSuite, it is a prerequisite to have the customer information pre-existing within NetSuite's database. Refer to the Customer Feed for NetSuite" for more details.
 
-To ensure that the Sales Orders data are not repeatedly sent to NetSuite, this flow uses the NetSuite Item Line Id to filter out the sales orders which are already sent to NetSuite.
-The NetSuite Item Line Id gets assigned once this file is successfully consumed and sales order created in NetSuite. A separate job takes care to export these sales order from NetSuite and record the attr name in OrderItemAttribute entity in OMS. The attr Name used for this is 'NetsuiteItemLineId'.
+To ensure that the Sales Orders data are not repeatedly sent to NetSuite, this flow uses the NetSuite Item Line Id to filter out the sales orders which are already sent to NetSuite. The NetSuite Item Line Id gets assigned once this file is successfully consumed and sales order created in NetSuite. A separate job takes care to export these sales order from NetSuite and record the attr name in OrderItemAttribute entity in OMS. The attr Name used for this is 'NetsuiteItemLineId'.
 
-So we will fetch sales orders which are in ORDER_CREATED status and item status != ITEM_CANCELLED and for which PartyIdentification record exists for NETSUITE_CUSTOMER_ID type, and the for which the OrderItemAttribute NetsuiteItemLineId does not exist.
+So we will fetch sales orders which are in ORDER\_CREATED status and item status != ITEM\_CANCELLED and for which PartyIdentification record exists for NETSUITE\_CUSTOMER\_ID type, and the for which the OrderItemAttribute NetsuiteItemLineId does not exist.
 
 ## Technical Implementation
 
-This feed is generated in the integration layer using Apache NiFi. 
+This feed is generated in the integration layer using Apache NiFi.
 
 In NiFi, the required sales order data is fetched by connecting to the OMS transactional database, and this data is prepared in the format required by NetSuite.
 
 Some of the important conditions for sales order data are:
-1. To identify sales order, order_type_id = 'SALES_ORDER' in OrderHeader entity is used.
-2. The sales order which already have attr_name = 'NetsuiteItemLineId' in Order_Item_Attribute entity are excluded since they are already synced to NetSuite and so should not be included again in the feed.
+
+1. To identify sales order, order\_type\_id = 'SALES\_ORDER' in OrderHeader entity is used.
+2. The sales order which already have attr\_name = 'NetsuiteItemLineId' in Order\_Item\_Attribute entity are excluded since they are already synced to NetSuite and so should not be included again in the feed.
 3. TODO Add required fields missing handling
 
 <details>
-  <summary>SQL to fetch customer data from OMS</summary>
 
-``` SQL SELECT 
+<summary>SQL to fetch customer data from OMS</summary>
+
+```SQL
   distinct oh.order_name AS "Order Id", 
   p.product_type_id AS "Product Type Id", 
   oi.order_item_seq_id AS "Order Line Id", 
@@ -311,106 +318,100 @@ order by
   oi.order_id, 
   oi.order_item_seq_id
 ```
+
 </details>
 
 ### NiFi flow
 
 In the NiFi flow set up to sync Create Sales Order Feed, below processors are used.
 
-1. **ExecuteSQLRecord**\
-    1. This processor is used to fetch sales order details using the SQL query from OMS database. The processor runs at regular intervals, ensuring updated data is fetched in each feed.
-
-2. **RouteOnAttribute**\
+1. **ExecuteSQLRecord**\\
+   1. This processor is used to fetch sales order details using the SQL query from OMS database. The processor runs at regular intervals, ensuring updated data is fetched in each feed.
+2. **RouteOnAttribute**\\
    1. This processor is used to determine the count of rows fetched from OMS database using which it ensures that the flow is further executed only if the rows returned are greater than 0. This is done to avoid creation of empty sales order feeds.
-   
-3. **QueryRecord**\
+3. **QueryRecord**\\
    1. The QueryRecord processor limits the number of orders in a single file. This is required as the Netsuite system can not accept more than 25 thousands records.
-
-4. **JoltTransformJSON**\
-   1. The JoltTransformJSON processor introduces an additional JOSN object in cases where there is a discount on an item beyond the discount associated with a discount code. 
-
-5. **QueryRecord**\
+4. **JoltTransformJSON**\\
+   1. The JoltTransformJSON processor introduces an additional JOSN object in cases where there is a discount on an item beyond the discount associated with a discount code.
+5. **QueryRecord**\\
    1. This processor is used to filter records into two flow files, the ones which are valid and having data for all the required fields of NetSuite. The second is for the records which have 1 or more data missing for the required fields.
-
-6. **UpdateAttribute**\
+6. **UpdateAttribute**\\
    1. Here the file name is prepared for the valid records feed by appending the current time as per the timezone configured in OMS. This helps in identifying the time at which feed is being kept for NetSuite.
-
 7. **PutSFTP**\
    Three PutSFTP processors are used here: the first for eligible records, the second for logging the eligible records for OMS, and the third for invalid records.
-
-8. **PutEmail**\
+8. **PutEmail**\\
    1. This processor is used to send an email notification for the invalid records which are are missing some required fields the Sales Order Feed. This helps in notifying invalid records for further data correction and processing if required.
-   
+
 ### NetSuite create sales order Feed File details
 
 #### FTP location
 
-```text
+```
 /home/${sftpUsername}/netsuite/salesorder/export
 ```
 
 #### Sample Feed file Name format
 
-```text
+```
 KREWE_CreatedOrderItemsFeed_2023-12-28-22_15_02_792.csv
 ```
 
 #### Sample Feed File
 
-| Order Id      | Order Line Id | External Id | Sales Channel         | Item  | Price | Amount | Quantity | Shipping Method     | Shipping Cost | Tax Code | Shipping Tax Code | Date      | Customer | Addressee   | Address 1                     | Address 2 | City       | State | Country | Zip   | Email                             | Phone          | Tag | Closed | Discount Item         | Rate | Subsidiary | Order Type | Department | Krewe Sales Channel | Price Level | Billing Addressee | Billing Address1                 | Billing Address 2 | Billing City | Billing State | Billing Country | Billing Zip | Billing Phone  | HC Shopify Sales Order Id | Order Note               |
-|---------------|---------------|-------------|-----------------------|-------|-------|--------|----------|----------------------|---------------|----------|---------------------|-----------|----------|-------------|------------------------------|-----------|------------|-------|---------|-------|-----------------------------------|----------------|-----|--------|------------------------|------|------------|------------|------------|----------------------|-------------|-------------------|-----------------------------------|-------------------|--------------|---------------|------------------|-------------|-----------------|-----------------------------|--------------------------|
-| "#KREWE37479" | 00101         | KRWE10181   | Draft Orders Channel  | 110   |       |        | 1.000000 | FedEx Home Delivery | 0.000         | AVATAX   | AVATAX             | 12/6/2023 | 5320866  | Shruti K    | 18327 Johnnie B Hall Memorial Highway |           | Rosepine    | LA    | US      | 70659 | shruti.khandelwal@hotwax.co       |               |     |        |                        | 1    | 1          | 203        | 1          | Base Price (MSRP)    | Shruti K       | 18327 Johnnie B Hall Memorial Highway |                   | Rosepine      | LA            | US               | 70659       | 504-684-2939    | 5497412354248               |                           |
-| "#KREWE37478" | 00101         | KRWE10182   | Draft Orders Channel  | 3115  | 50.000| 1.000  | 1.000000 | FedEx Home Delivery | 0.000         | AVATAX   | AVATAX             | 11/28/2023| 5313850  | Sonam Vohra | Baker City                     |           | Baker City  | OR    | US      | 97814 | sovohra12@gmail.com              | 1 831 6265757  |     |        | Custom                 | 1    | 1          | 203        | 1          | Custom              | Sonam Vohra    | Baker City         |                               |                   | Baker City    | OR            | US               | 97814       | 504-684-2939    | 5480949219528               |                           |
-| "#KREWE37478" | 00102         | KRWE10182   | Draft Orders Channel  | 40677 |       |        | 1.000000 | FedEx Home Delivery | 0.000         | AVATAX   | AVATAX             | 11/28/2023| 5313850  | Sonam Vohra | Baker City                     |           | Baker City  | OR    | US      | 97814 | sovohra12@gmail.com              | 1 831 6265757  |     |        |                        | 1    | 1          | 203        | 1          | Base Price (MSRP)    | Sonam Vohra    | Baker City         |                               |                   | Baker City    | OR            | US               | 97814       | 504-684-2939    | 5480949219528               |                           |
+| Order Id      | Order Line Id | External Id | Sales Channel        | Item  | Price  | Amount | Quantity | Shipping Method     | Shipping Cost | Tax Code | Shipping Tax Code | Date       | Customer | Addressee   | Address 1                             | Address 2 | City       | State | Country | Zip   | Email                       | Phone         | Tag | Closed | Discount Item | Rate | Subsidiary | Order Type | Department | Krewe Sales Channel | Price Level | Billing Addressee                     | Billing Address1 | Billing Address 2 | Billing City | Billing State | Billing Country | Billing Zip  | Billing Phone | HC Shopify Sales Order Id | Order Note |
+| ------------- | ------------- | ----------- | -------------------- | ----- | ------ | ------ | -------- | ------------------- | ------------- | -------- | ----------------- | ---------- | -------- | ----------- | ------------------------------------- | --------- | ---------- | ----- | ------- | ----- | --------------------------- | ------------- | --- | ------ | ------------- | ---- | ---------- | ---------- | ---------- | ------------------- | ----------- | ------------------------------------- | ---------------- | ----------------- | ------------ | ------------- | --------------- | ------------ | ------------- | ------------------------- | ---------- |
+| "#KREWE37479" | 00101         | KRWE10181   | Draft Orders Channel | 110   |        |        | 1.000000 | FedEx Home Delivery | 0.000         | AVATAX   | AVATAX            | 12/6/2023  | 5320866  | Shruti K    | 18327 Johnnie B Hall Memorial Highway |           | Rosepine   | LA    | US      | 70659 | shruti.khandelwal@hotwax.co |               |     |        |               | 1    | 1          | 203        | 1          | Base Price (MSRP)   | Shruti K    | 18327 Johnnie B Hall Memorial Highway |                  | Rosepine          | LA           | US            | 70659           | 504-684-2939 | 5497412354248 |                           |            |
+| "#KREWE37478" | 00101         | KRWE10182   | Draft Orders Channel | 3115  | 50.000 | 1.000  | 1.000000 | FedEx Home Delivery | 0.000         | AVATAX   | AVATAX            | 11/28/2023 | 5313850  | Sonam Vohra | Baker City                            |           | Baker City | OR    | US      | 97814 | sovohra12@gmail.com         | 1 831 6265757 |     |        | Custom        | 1    | 1          | 203        | 1          | Custom              | Sonam Vohra | Baker City                            |                  |                   | Baker City   | OR            | US              | 97814        | 504-684-2939  | 5480949219528             |            |
+| "#KREWE37478" | 00102         | KRWE10182   | Draft Orders Channel | 40677 |        |        | 1.000000 | FedEx Home Delivery | 0.000         | AVATAX   | AVATAX            | 11/28/2023 | 5313850  | Sonam Vohra | Baker City                            |           | Baker City | OR    | US      | 97814 | sovohra12@gmail.com         | 1 831 6265757 |     |        |               | 1    | 1          | 203        | 1          | Base Price (MSRP)   | Sonam Vohra | Baker City                            |                  |                   | Baker City   | OR            | US              | 97814        | 504-684-2939  | 5480949219528             |            |
 
 ### Special handling for Create Sales Order Feed HotWax to NetSuite
 
-   1. JOLT transformation is applied to the JSON feed, introducing an additional JOSN object in cases where there is a discount on an item beyond the discount associated with a discount code. 
-
+1. JOLT transformation is applied to the JSON feed, introducing an additional JOSN object in cases where there is a discount on an item beyond the discount associated with a discount code.
 
 ### Data model mapping
 
-## Mapping of the fields of HC to NetSuite 
-| Fields               | Data Type | Description                                                     | HC Field Mapping                         |
-|----------------------|-----------|-----------------------------------------------------------------|------------------------------------------|
-| Order Id             | String    | Order ID                                                        | OrderHeader.ORDER_NAME                   |
-| Order Line Id        | Number    | Order Line ID                                                   | OrderItem.ORDER_ITEM_SEQ_ID              |
-| External Id          | Number    | External Order ID                                               | OrderHeader.ORDER_ID                     |
-| Sales Channel        | String    | Description of the sales channel                                | Enumeration.DESCRIPTION                  |
-| Item                 | String    | Concatenated product and item description                       | CONCAT(P.INTERNAL_NAME, OI.ITEM_DESCRIPTION) |
-| Price                | Number    | unit price                       | OrderItem.UnitPrice                            |
-| Amount               | Number   | Adjustments where discount is due to reason other than discount_code | adjustment.ITEM_DISC_AMOUNT         |
-| Quantity             | Number    | Quantity of items                                               | OrderItem.QUANTITY                       |
-| Shipping Method      | String    | Shipping Method                                                 | orderItemShipGroup.ShippingMehodTypeId   |
-| Shipping Cost        | Number    | Shipping Cost                                                   | orderAdjustment.amount                   |
-| Tax Code             | String    | Tax code                                                        | "AVATAX"                                 |
-| Shipping Tax Code    | String    | Shipping Tax Code                                               | "AVATAX"                                 |
-| Date                 | Date      | Order date                                                      | OrderHeader.ORDER_DATE in format D/M/YYYY|
-| Customer             | Number   | Customer ID                                                     | PartyIdentification.ID_VALUE where party_identification_type_id = 'NETSUITE_CUSTOMER_ID' |
-| Addressee            | String    | Name of addressee                                               | postalAddress.to_name                     |
-| Address 1            | String    | Address line 1                                                  | postalAddress.address1                    |
-| Address 2            | String    | Address line 2                                                  | PostalAddress.address2                    |
-| City                 | String    | City                                                            | PostalAddress.city                        |
-| Country              | String    | Country                                                         | geo.geo_code                              |
-| State                | String   | State or province                                               | PostalAddress.state_province_geo_id       |
-| Zip                  | String    | Postal code                                                     | PostalAddress.postal_code                 |
-| Email                | String    | Email address                                                   | contactMech.InfoString                    |
-| Phone                | Number    | Phone Number                                                    | TelecomNumber.countryCode + TelecomNumber.area_code + TelecomNumber.contact_number |
-| Tag                  | String    | Tags                                                            | "" empty value                            |
-| Closed               | String    | Indicates if orders is cancelled or not                         | "" empty value                            |
-| Discount Item        | String    | Discount Code                                                   | orderAdjustmentAttribute.ATTR_VALUE where ORDER_ADJUSTMENT_TYPE_ID = 'EXT_PROMO_ADJUSTMENT' |
-| Rate                 | Number    | Adjustments where discount is due to discount_code              | order_adjustment.Rate                     |
-| Subsidiary           | Number    | Subsidiary based on external ID                                 | Mapping based on Facility external id     |
-| Order Type           | String    | Order Type                                                      | FacilityIdentification.idValue where facility_iden_type_id = 'NETSUITE_ORDR_TYPE'                   |
-| Department           | String    | Department                                                      | FacilityIdentification.idValue where facility_iden_type_id = 'ORDR_ORGN_DPT'              |
-| Krewe Sales Channel  | String    | Sales Channel                                                   | FacilityIdentification.idValue where facility_iden_type_id = 'ORDR_ORGN_SLS_CHNL'                   |
-| Price Level          | String    | Price level sent as custom for duplicate fields created due to discount other than discount code | default value "custom" for duplicate and ProductStoreSetting.SettingValue where SettingTypeEnumId = 'PRICE_LEVEL_NETSUITE' |
-| Billing Addressee            | String    | Name of addressee                                               | postalAddress.to_name                     |
-| Billing Address 1            | String    | Address line 1                                                  | postalAddress.address1                    |
-| Billing Address 2            | String    | Address line 2                                                  | PostalAddress.address2                    |
-| Billing City                 | String    | City                                                            | PostalAddress.city                        |
-| Billing Country              | String    | Country                                                         | geo.geo_code                              |
-| Billing State                | String   | State or province                                               | PostalAddress.state_province_geo_id       |
-| Billing Zip                  | String    | Postal code                                                     | PostalAddress.postal_code                 |
-| Email                | String    | Email address                                                   | contactMech.InfoString                    |
-| Phone                | Number    | Phone Number                                                    | TelecomNumber.countryCode + TelecomNumber.area_code + TelecomNumber.contact_number |
+## Mapping of the fields of HC to NetSuite
+
+| Fields              | Data Type | Description                                                                                      | HC Field Mapping                                                                                                             |
+| ------------------- | --------- | ------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------- |
+| Order Id            | String    | Order ID                                                                                         | OrderHeader.ORDER\_NAME                                                                                                      |
+| Order Line Id       | Number    | Order Line ID                                                                                    | OrderItem.ORDER\_ITEM\_SEQ\_ID                                                                                               |
+| External Id         | Number    | External Order ID                                                                                | OrderHeader.ORDER\_ID                                                                                                        |
+| Sales Channel       | String    | Description of the sales channel                                                                 | Enumeration.DESCRIPTION                                                                                                      |
+| Item                | String    | Concatenated product and item description                                                        | CONCAT(P.INTERNAL\_NAME, OI.ITEM\_DESCRIPTION)                                                                               |
+| Price               | Number    | unit price                                                                                       | OrderItem.UnitPrice                                                                                                          |
+| Amount              | Number    | Adjustments where discount is due to reason other than discount\_code                            | adjustment.ITEM\_DISC\_AMOUNT                                                                                                |
+| Quantity            | Number    | Quantity of items                                                                                | OrderItem.QUANTITY                                                                                                           |
+| Shipping Method     | String    | Shipping Method                                                                                  | orderItemShipGroup.ShippingMehodTypeId                                                                                       |
+| Shipping Cost       | Number    | Shipping Cost                                                                                    | orderAdjustment.amount                                                                                                       |
+| Tax Code            | String    | Tax code                                                                                         | "AVATAX"                                                                                                                     |
+| Shipping Tax Code   | String    | Shipping Tax Code                                                                                | "AVATAX"                                                                                                                     |
+| Date                | Date      | Order date                                                                                       | OrderHeader.ORDER\_DATE in format D/M/YYYY                                                                                   |
+| Customer            | Number    | Customer ID                                                                                      | PartyIdentification.ID\_VALUE where party\_identification\_type\_id = 'NETSUITE\_CUSTOMER\_ID'                               |
+| Addressee           | String    | Name of addressee                                                                                | postalAddress.to\_name                                                                                                       |
+| Address 1           | String    | Address line 1                                                                                   | postalAddress.address1                                                                                                       |
+| Address 2           | String    | Address line 2                                                                                   | PostalAddress.address2                                                                                                       |
+| City                | String    | City                                                                                             | PostalAddress.city                                                                                                           |
+| Country             | String    | Country                                                                                          | geo.geo\_code                                                                                                                |
+| State               | String    | State or province                                                                                | PostalAddress.state\_province\_geo\_id                                                                                       |
+| Zip                 | String    | Postal code                                                                                      | PostalAddress.postal\_code                                                                                                   |
+| Email               | String    | Email address                                                                                    | contactMech.InfoString                                                                                                       |
+| Phone               | Number    | Phone Number                                                                                     | TelecomNumber.countryCode + TelecomNumber.area\_code + TelecomNumber.contact\_number                                         |
+| Tag                 | String    | Tags                                                                                             | "" empty value                                                                                                               |
+| Closed              | String    | Indicates if orders is cancelled or not                                                          | "" empty value                                                                                                               |
+| Discount Item       | String    | Discount Code                                                                                    | orderAdjustmentAttribute.ATTR\_VALUE where ORDER\_ADJUSTMENT\_TYPE\_ID = 'EXT\_PROMO\_ADJUSTMENT'                            |
+| Rate                | Number    | Adjustments where discount is due to discount\_code                                              | order\_adjustment.Rate                                                                                                       |
+| Subsidiary          | Number    | Subsidiary based on external ID                                                                  | Mapping based on Facility external id                                                                                        |
+| Order Type          | String    | Order Type                                                                                       | FacilityIdentification.idValue where facility\_iden\_type\_id = 'NETSUITE\_ORDR\_TYPE'                                       |
+| Department          | String    | Department                                                                                       | FacilityIdentification.idValue where facility\_iden\_type\_id = 'ORDR\_ORGN\_DPT'                                            |
+| Krewe Sales Channel | String    | Sales Channel                                                                                    | FacilityIdentification.idValue where facility\_iden\_type\_id = 'ORDR\_ORGN\_SLS\_CHNL'                                      |
+| Price Level         | String    | Price level sent as custom for duplicate fields created due to discount other than discount code | default value "custom" for duplicate and ProductStoreSetting.SettingValue where SettingTypeEnumId = 'PRICE\_LEVEL\_NETSUITE' |
+| Billing Addressee   | String    | Name of addressee                                                                                | postalAddress.to\_name                                                                                                       |
+| Billing Address 1   | String    | Address line 1                                                                                   | postalAddress.address1                                                                                                       |
+| Billing Address 2   | String    | Address line 2                                                                                   | PostalAddress.address2                                                                                                       |
+| Billing City        | String    | City                                                                                             | PostalAddress.city                                                                                                           |
+| Billing Country     | String    | Country                                                                                          | geo.geo\_code                                                                                                                |
+| Billing State       | String    | State or province                                                                                | PostalAddress.state\_province\_geo\_id                                                                                       |
+| Billing Zip         | String    | Postal code                                                                                      | PostalAddress.postal\_code                                                                                                   |
+| Email               | String    | Email address                                                                                    | contactMech.InfoString                                                                                                       |
+| Phone               | Number    | Phone Number                                                                                     | TelecomNumber.countryCode + TelecomNumber.area\_code + TelecomNumber.contact\_number                                         |
