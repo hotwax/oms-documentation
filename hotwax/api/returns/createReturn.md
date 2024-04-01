@@ -131,20 +131,21 @@ To create a return for a customer's order that has already been fulfilled and co
 
 **Types of Return Adjustments:**
 
-| Adjustment Type        |
-|------------------------|
-| RET_ADD_FEATURE_ADJ    |
-| RET_DISCOUNT_ADJ       |
-| RET_FEE_ADJ            |
-| RET_MAN_ADJ            |
-| RET_MISC_ADJ           |
-| RET_MKTG_PKG_ADJ       |
-| RET_PROMOTION_ADJ      |
-| RET_REPLACE_ADJ        |
-| RET_SALES_TAX_ADJ      |
-| RET_SHIPPING_ADJ       |
-| RET_SURCHARGE_ADJ      |
-| RET_WARRANTY_ADJ       |
+| Adjustment Type        | Description                                |
+|------------------------|--------------------------------------------|
+| RET_ADD_FEATURE_ADJ    |  Additional Feature                   |
+| RET_DISCOUNT_ADJ       |  Discount                             |
+| RET_FEE_ADJ            |  Fee                                  |
+| RET_MAN_ADJ            |  Manual Adjustment                    |
+| RET_MISC_ADJ           |  Miscellaneous Charges                |
+| RET_MKTG_PKG_ADJ       |  Marketing Package Adjustment         |
+| RET_PROMOTION_ADJ      |  Promotion                            |
+| RET_REPLACE_ADJ        |  Replacement                          |
+| RET_SALES_TAX_ADJ      |  Sales Tax                            |
+| RET_SHIPPING_ADJ       |  Shipping and Handling                |
+| RET_SURCHARGE_ADJ      |  Surcharge                            |
+| RET_WARRANTY_ADJ       |  Warranty                             |
+
 
 <details>
 
