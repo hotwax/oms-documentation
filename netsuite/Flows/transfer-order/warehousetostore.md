@@ -7,7 +7,7 @@ Now, let’s look at how warehouse to store transfer orders are processed:
 Warehouse managers create transfer orders in NetSuite, and then the corresponding item fulfillment records are generated. Each transfer order can result in either a single item fulfillment record or multiple records, depending on the scenario:
 
 * **Single item fulfillment record:** This happens when all products in a transfer order are fulfilled simultaneously, resulting in the creation of a single shipment and, consequently, a single item fulfillment record.
-* **Multiple item fulfillment record:** This happens when products in a transfer order are fulfilled separately, leading to the creation of multiple shipments due to some products being shipped later and, consequently, multiple item fulfillment records.
+* **Multiple item fulfillment records:** This happens when products in a transfer order are fulfilled separately, leading to the creation of multiple shipments due to some products being shipped later and, consequently, multiple item fulfillment records.
 * **Multiple item fulfillment records for a single product:** This happens when a transfer order is created for a single product, but its quantity is shipped in multiple shipments and, consequently, multiple item fulfillment records.
 
 Whenever an item fulfillment record is marked as `Shipped` in NetSuite, it means that the corresponding items have been dispatched from the warehouse and are in transit to the store. HotWax Commerce synchronizes any new item fulfillment record that is marked `Shipped` in NetSuite so that in-store inventory can be received against them.
