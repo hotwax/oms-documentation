@@ -70,6 +70,7 @@ Multiple shipments against a single transfer order can be created in the Store F
 Export Fulfilled Transfer Order Items to SFTP
 
 ```
+generate_TransferOrderFulfilledItemsFeed
 ```
 
 **SFTP Location**

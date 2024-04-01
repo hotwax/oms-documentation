@@ -55,6 +55,7 @@ Approve transfer orders
 Export Fulfilled Transfer Order Items to SFTP
 
 ```
+generate_TransferOrderFulfilledItemsFeed
 ```
 
 **SFTP Location**
@@ -106,6 +107,7 @@ Import Inbound Shipment
 Export Item Receipts to SFTP
 
 ```
+generate_TransferOrderShipmentsReceiptFeed
 ```
 
 **SFTP Location**

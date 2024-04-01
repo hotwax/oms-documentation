@@ -58,6 +58,7 @@ Inbound shipments that have been created are automatically reflected in the Inve
 Export Item Receipts to SFTP
 
 ```
+generate_TransferOrderShipmentsReceiptFeed
 ```
 
 **SFTP Location**
