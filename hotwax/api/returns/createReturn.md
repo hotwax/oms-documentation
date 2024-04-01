@@ -15,7 +15,7 @@ To create a return for a customer's order that has already been fulfilled and co
 
 ### Body
 
-```json
+```
 {
     "payLoad": {
         "externalId": "",
@@ -95,6 +95,7 @@ To create a return for a customer's order that has already been fulfilled and co
         ]
     }
 }
+```
 
 
 **In the request body, include the information necessary for creating a return, including all the parameters listed below:****
@@ -145,6 +146,7 @@ To create a return for a customer's order that has already been fulfilled and co
 | RET_SHIPPING_ADJ       |  Shipping and Handling                |
 | RET_SURCHARGE_ADJ      |  Surcharge                            |
 | RET_WARRANTY_ADJ       |  Warranty                             |
+
 
 
 <details>
