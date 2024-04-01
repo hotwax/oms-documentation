@@ -98,7 +98,7 @@ Inventory for transfer order items received in the warehouse is synchronized whe
 
 **Here's how transfer order fields are mapped in NetSuite and HotWax Commerce**
 
-<table data-full-width="false"><thead><tr><th width="157">S.No.	</th><th>Fields in NetSuite</th><th>Fields in HotWax Commerce</th></tr></thead><tbody><tr><td>1</td><td>Internal ID</td><td>External ID</td></tr><tr><td>2</td><td>Transfer Order Name</td><td>Transfer Order Name</td></tr><tr><td>3</td><td>Date</td><td>Date</td></tr><tr><td>4</td><td>Item</td><td>Product</td></tr><tr><td>5</td><td>Quantity</td><td>Qty</td></tr><tr><td>6</td><td>Source Location</td><td>Ship From</td></tr><tr><td>7</td><td>Destination Location</td><td>Ship To</td></tr><tr><td>8</td><td>Shipping Address</td><td>Ship To Address</td></tr><tr><td>9</td><td>Shipping Method</td><td>Shipping Method</td></tr></tbody></table>
+<table data-full-width="false"><thead><tr><th width="157">S.No.	</th><th width="257">Fields in NetSuite</th><th>Fields in HotWax Commerce</th></tr></thead><tbody><tr><td>1</td><td>Internal ID</td><td>External ID</td></tr><tr><td>2</td><td>Transfer Order Name</td><td>Transfer Order Name</td></tr><tr><td>3</td><td>Date</td><td>Date</td></tr><tr><td>4</td><td>Item</td><td>Product</td></tr><tr><td>5</td><td>Quantity</td><td>Qty</td></tr><tr><td>6</td><td>Source Location</td><td>Ship From</td></tr><tr><td>7</td><td>Destination Location</td><td>Ship To</td></tr><tr><td>8</td><td>Shipping Address</td><td>Ship To Address</td></tr><tr><td>9</td><td>Shipping Method</td><td>Shipping Method</td></tr></tbody></table>
 
 
 
