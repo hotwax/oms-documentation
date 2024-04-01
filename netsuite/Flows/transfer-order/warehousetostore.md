@@ -83,7 +83,7 @@ Once all the transfer order item fulfillment records have been successfully rece
 
 {% tabs %}
 {% tab title="Transfer Order Fields in NetSuite" %}
-<figure><img src="../../.gitbook/assets/mapping warehouse to store transfer order netsuite.png" alt=""><figcaption><p>Transfer Order Fields Mapping in NetSuite</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/warehouse to store transfer order mapping.png" alt=""><figcaption><p>Transfer Order Fields Mapping in NetSuite</p></figcaption></figure>
 {% endtab %}
 
 {% tab title="Transfer Order Fields in HotWax Commerce" %}
