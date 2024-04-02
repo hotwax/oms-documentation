@@ -6,13 +6,27 @@ description: >-
 
 # Fulfilled Order Items Feed
 
-Contains the order items that have been fulfilled from a particular facility. External systems that did not fulfill those orders but require an update of the inventory delta to maintain accurate inventory levels can use this feed to ensure their inventory accuracy. It's important to understand that this feed only contains orders that have been successfully fulfilled, orders that have only been reserved but not shipped are not included in this feed because they may still be rejected and re-brokered to another facility for fulfillment.
+## Introduction
 
-The feed in produced in a JSON format and can be placed at a designated FTP location.
+The Fulfilled Order Items Feed is a JSON-formatted feed generated from HotWax Commerce OMS, organized by order. It includes order items that have been successfully fulfilled from a specific facility. This feed is crucial for updating inventory deltas to ensure accurate inventory levels in external systems like ERP. Notably, it only includes orders that have been fully fulfilled; orders with reserved items that have not yet shipped are excluded as they may still undergo rejection and re-brokering to another facility for fulfillment.
+
+## Use case
+
+### Communication with the External Order fulfillment system
+
+The Fulfilled Order Items Feed helps retailers who use fulfill orders through external systems but require updates to inventory deltas for maintaining accurate inventory levels, particularly within their inventory management systems like ERPs. This feed provides essential raw data directly from OMS, enabling retailers to utilize it as is or after transformation for seamless integration into external systems via file-based methods. This ensures that inventory records remain precise and up-to-date across various platforms. 
+
+## Customization
+
+The Appeasements Financial Feeed Order Items feed has certain out-of-the-box customizations that allow users to generate the feed as per the requirements.
+
+| **Parameter**    | **Description**                                                          |
+| ---------------- | ------------------------------------------------------------------------ |
+| `productStoreId` | Allows you to set the product store IDs to generate brand-specific feed. |
+
+
 
 ## Body
-
-[Link to full JSON sample file](https://github.com/Dhiraj1405/oms-documentation/blob/BOPIS\_API/Fulfillment/Samples/Fulfilled%20order%20items%20feed.json#L767)
 
 Sample snippet from full JSON file:
 
