@@ -12,7 +12,7 @@ The Fulfilled Order Items Feed is a JSON-formatted feed generated from HotWax Co
 
 ## Use case
 
-### Communication with the External Order fulfillment system
+### Synchronizing Inventory Changes with ERP Systems
 
 The Fulfilled Order Items Feed helps retailers who use fulfill orders through external systems but require updates to inventory deltas for maintaining accurate inventory levels, particularly within their inventory management systems like ERPs. This feed provides essential raw data directly from OMS, enabling retailers to utilize it as is or after transformation for seamless integration into external systems via file-based methods. This ensures that inventory records remain precise and up-to-date across various platforms. 
 
@@ -23,54 +23,6 @@ The Appeasements Financial Feeed Order Items feed has certain out-of-the-box cus
 | **Parameter**    | **Description**                                                          |
 | ---------------- | ------------------------------------------------------------------------ |
 | `productStoreId` | Allows you to set the product store IDs to generate brand-specific feed. |
-
-
-
-## Body
-
-Sample snippet from full JSON file:
-
-```
-"shipmentItems" : [ {
-     "shipmentId" : "27091",
-     "shipmentItemSeqId" : "00001",
-     "orderId" : "39670",
-     "orderItemSeqId" : "00101",
-     "orderItemExternalId" : "12073761243207",
-     "shipGroupSeqId" : "00003",
-     "itemStatusId" : "ITEM_COMPLETED",
-     "itemQuantity" : 1,
-     "slaShipmentMethodTypeId" : "NEXT_DAY",
-     "statusDatetime" : "2023-01-30T03:50:02-05:00",
-     "productId" : "136845",
-     "unitPrice" : 65.97,
-     "facilityId" : "15",
-     "facilityExternalId" : "15",
-     "facilityTypeId" : "RETAIL_STORE",
-     "parentFacilityTypeId" : "PHYSICAL_STORE",
-     "shippedQuantity" : 1,
-     "goodIdentifications" : [ {
-       "fromDate" : "2021-08-12T23:38:08-04:00",
-       "productId" : "136845",
-       "IdValue" : "ABSOLUTE",
-       "lastUpdatedStamp" : "2022-08-10T02:58:52-04:00",
-       "goodIdentificationTypeId" : "SHOPIFY_PROD_SKU",
-       "thruDate" : null
-     }
-```
-
-| Parameter                  | Description                                                                                            |
-| -------------------------- | ------------------------------------------------------------------------------------------------------ |
-| `itemQuantity`             | Ordered quantity                                                                                       |
-| `productId`                | The internal Id of the product in HotWax                                                               |
-| `facilityId`               | The internal Id of the facility in HotWax                                                              |
-| `facilityExternalId`       | The Id of the facility in the external systems                                                         |
-| `facilityTypeId`           | The type of the facility                                                                               |
-| `ParentFacilityTypeId`     | The type of the parent facility, used to group various facility types.                                 |
-| `shippedQuantity`          | The quantity of items shipped from the ordered quantity.                                               |
-| `goodIdentifications`      | All identifications of the product in HotWax Commerce used to identify the product in external systems |
-| `goodIdentificationTypeId` | The type of the unique product Identifier in the external systems (e.g. Shopify product SKU)           |
-| `IdValue`                  | The value of the GoodIdentificationTypeId                                                              |
 
 <details>
 
@@ -2178,3 +2130,48 @@ Sample snippet from full JSON file:
 ```
 
 </details>
+
+
+## Sample snippet from full JSON file to make inventory corrections:
+
+```
+"shipmentItems" : [ {
+     "shipmentId" : "27091",
+     "shipmentItemSeqId" : "00001",
+     "orderId" : "39670",
+     "orderItemSeqId" : "00101",
+     "orderItemExternalId" : "12073761243207",
+     "shipGroupSeqId" : "00003",
+     "itemStatusId" : "ITEM_COMPLETED",
+     "itemQuantity" : 1,
+     "slaShipmentMethodTypeId" : "NEXT_DAY",
+     "statusDatetime" : "2023-01-30T03:50:02-05:00",
+     "productId" : "136845",
+     "unitPrice" : 65.97,
+     "facilityId" : "15",
+     "facilityExternalId" : "15",
+     "facilityTypeId" : "RETAIL_STORE",
+     "parentFacilityTypeId" : "PHYSICAL_STORE",
+     "shippedQuantity" : 1,
+     "goodIdentifications" : [ {
+       "fromDate" : "2021-08-12T23:38:08-04:00",
+       "productId" : "136845",
+       "IdValue" : "ABSOLUTE",
+       "lastUpdatedStamp" : "2022-08-10T02:58:52-04:00",
+       "goodIdentificationTypeId" : "SHOPIFY_PROD_SKU",
+       "thruDate" : null
+     }
+```
+
+| Parameter                  | Description                                                                                            |
+| -------------------------- | ------------------------------------------------------------------------------------------------------ |
+| `itemQuantity`             | Ordered quantity                                                                                       |
+| `productId`                | The internal Id of the product in HotWax                                                               |
+| `facilityId`               | The internal Id of the facility in HotWax                                                              |
+| `facilityExternalId`       | The Id of the facility in the external systems                                                         |
+| `facilityTypeId`           | The type of the facility                                                                               |
+| `ParentFacilityTypeId`     | The type of the parent facility, used to group various facility types.                                 |
+| `shippedQuantity`          | The quantity of items shipped from the ordered quantity.                                               |
+| `goodIdentifications`      | All identifications of the product in HotWax Commerce used to identify the product in external systems |
+| `goodIdentificationTypeId` | The type of the unique product Identifier in the external systems (e.g. Shopify product SKU)           |
+| `IdValue`                  | The value of the GoodIdentificationTypeId                                                              |
