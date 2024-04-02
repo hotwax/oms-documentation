@@ -1,6 +1,15 @@
 # Table of contents
 
 * [Shopify Integration Overview](README.md)
+
+## Setup
+
+* [Install HotWax Commerce App](shopify-app-installation.md)
+* [Multiple Store Setup](multiple-store-setup.md)
+* [Required Permissions from Shopify](shopify-permissions.md)
+
+## Products
+
 * [Products](how-are-products-downloaded-from-shopify-to-hotwax-commerce/README.md)
   * [Product Download](how-are-products-downloaded-from-shopify-to-hotwax-commerce/product-download.md)
   * [Updating Product Details](how-are-products-downloaded-from-shopify-to-hotwax-commerce/updating-product-details.md)
@@ -8,10 +17,16 @@
   * [Creating/Deleting Products with Shopify Webhooks](how-are-products-downloaded-from-shopify-to-hotwax-commerce/creating-deleting-products-with-shopify-webhooks.md)
   * [Downloading Bundles](how-are-products-downloaded-from-shopify-to-hotwax-commerce/downloading-bundles.md)
   * [Product Synchronization for Multiple Shopify Stores](multiple-store-setup.md)
+ 
+## Inventory
+
 * [Inventory](how-does-hotwax-commerce-ensure-accurate-inventory-is-synchronized-to-shopify.md)
   * [Inventory Synchronization](how-does-hotwax-commerce-ensure-accurate-inventory-is-synchronized-to-shopify/inventory-synchronization.md)
   * [Location Mapping](how-does-hotwax-commerce-ensure-accurate-inventory-is-synchronized-to-shopify/location-mapping.md)
   * [Inventory Synchronization of Bundles](how-does-hotwax-commerce-ensure-accurate-inventory-is-synchronized-to-shopify/inventory-synchronization-of-bundles.md)
+ 
+## Orders
+
 * [Orders](how-are-orders-downloaded-from-shopify-to-hotwax-commerce.md)
   * [Order Download](how-are-orders-downloaded-from-shopify-to-hotwax-commerce/order-download.md)
   * [Order Approval for Fulfillment](how-are-orders-downloaded-from-shopify-to-hotwax-commerce/order-approval-for-fulfillment.md)
@@ -33,5 +48,4 @@
   * [In-Store Returns](how-does-hotwax-commerce-manage-order-returns/in-store-returns.md)
   * [Appeasements](how-does-hotwax-commerce-manage-order-returns/appeasements.md)
   * [Exchanges](how-does-hotwax-commerce-manage-order-returns/exchanges.md)
-* [Multiple Store Setup](multiple-store-setup.md)
-* [Required Permissions from Shopify](shopify-permissions.md)
+
