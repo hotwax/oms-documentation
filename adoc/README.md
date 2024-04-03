@@ -1,4 +1,7 @@
 ---
+description: >-
+  Learn about ADOC, a leading footwear retailer that operates in five countries
+  in Central America.
 cover: .gitbook/assets/ADOC_Brand.HEIC
 coverY: 0
 ---
