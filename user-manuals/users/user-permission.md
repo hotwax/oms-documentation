@@ -22,7 +22,7 @@ Suppose retailers have different users for sales order fulfillment and managing 
    - Locate the `Create Security Group` option, typically found in the last section of the permissions interface.
 
 2. **Creating a Security Group:**
-   - Click on the +` Create Security Group` button.
+   - Click on the `+ Create Security Group` button.
    - Input relevant details such as the Name, internal ID, and description for the new security group.
 
 3. **Adding Permissions:**
@@ -53,7 +53,7 @@ Store associates often have permission and access to manage orders both for the 
 
 3. **Modify Permissions:** Review the permissions assigned to the security group. You can adjust permissions by checking or unchecking the checkbox against the permission to add or remove access to specific functionalities.
 
-4. **Edit Name and Description:** You can also change the name and description of the user permissions by clicking on the edit button available in front of the permission's name.
+4. **Edit Name and Description:** You can also change the name and description of the user permissions by clicking on the `edit button` available in front of the permission's name.
 
 {% embed url="https://youtu.be/Ud0hYiHqLBk" %}
 Video: Edit Security Group
