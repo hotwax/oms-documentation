@@ -1,10 +1,16 @@
-# Job Running for Extended Duration
+---
+description: >-
+  Learn how to troubleshoot job stuck issues in the HotWax Commerce Job Manager
+  app for seamless job processing.
+---
+
+# Jobs Stuck
 
 A scheduled job has been running for a longer duration than expected (more than 15 minutes).
 
 ## Step 1: Check the Job Queue Status
 
-1. Go to [https://<instanceName>.hotwax.io/webtools/control/FindJob](https://<instanceName>.hotwax.io/webtools/control/FindJob).
+1. Go to [https://.hotwax.io/webtools/control/FindJob](https:/%3CinstanceName%3E.hotwax.io/webtools/control/FindJob/).
 2. Navigate to the status field and click on "Pending."
 
 ## Step 2: Verify Pending Jobs
