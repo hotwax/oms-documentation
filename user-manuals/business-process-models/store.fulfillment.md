@@ -62,6 +62,6 @@ Once the order has been correctly repacked, the fulfillment status in HotWax Com
 
 Finally, the fulfillment team hands over the packed orders to the shipping carrier.&#x20;
 
-The `Ship Packed Orders` Job in HotWax Commerce checks if packed orders have tracking codes assigned and automatically ships them. Fulfillment teams can also manually ship orders once the shipping provider collects them.
+The `Ship Packed Orders` Job in HotWax Commerce checks if packed orders have tracking codes assigned and automatically ships them. Fulfillment teams can also manually ship orders once the carrier collects them.
 
 Once orders are shipped, the fulfillment status is updated from `Packed` to `Shipped` and the order status is updated from `Approved` to `Completed` in HotWax Commerce.
