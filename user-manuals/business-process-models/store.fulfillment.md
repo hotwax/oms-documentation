@@ -14,7 +14,7 @@ description: >-
 
 Order items that have been successfully allocated to stores have fulfillment status  `Reserved` in HotWax Commerce.
 
-Retailers use HotWax Commerce [Store Fulfillment App](../orders/fulfillment/) to fulfill orders allocated to stores. Orders are by default arranged in a "First In, First Out" sequence, ensuring that orders placed earlier are prioritized. Store managers can filter them based on the shipping method (such as same-day, next-day, or standard) or customer loyalty status.
+Retailers use HotWax Commerce [Store Fulfillment App](../orders/fulfillment/) to fulfill orders allocated to stores. By default orders are arranged in a "First In, First Out" sequence, ensuring that orders placed earlier are prioritized. Store managers can filter them based on the shipping method (such as same-day, next-day, or standard) or customer loyalty status.
 
 For example, in the event a store manager wishes to prioritize orders with tight SLAs, selecting the filter “same-day” will display all the orders that have a same-day shipping method. This way they can initiate batch processing of these orders.
 
@@ -38,7 +38,7 @@ It's crucial to note that shipping labels are valid only when orders consist of 
 
 ### Picking Failure
 
-When a picker is unable to locate the order item listed in their picklist in the store, store managers have the authority to reject that specific order. In this event, its fulfillment status `Picking` automatically is removed in HotWax Commerce.
+When a picker is unable to locate the order item listed in their picklist in the store, store managers have the authority to reject that specific order. In this scenario, its fulfillment status `Picking` is automatically removed in HotWax Commerce.
 
 Learn more about [Rejections and their reasons](../fulfillment/rejection.md)
 
@@ -50,7 +50,7 @@ Once orders have been packed, the packing team places them at the designated loc
 
 The fulfillment status for packed orders is updated from `Picking` to `Packed` in HotWax Commerce.
 
-In the event that an order has multiple items and one box isn’t suitable to fit all the items, packing teams can add more boxes or choose the size that suits best for the order items. In this scenario, the pre-generated shipping label will not serve that purpose and the packing team will have to regenerate the shipping label.
+In the event that an order has multiple items and one box isn’t suitable to fit all the items, the packing team can add more boxes or choose the size that suits best for the order items. In this scenario, the pre-generated shipping label will not serve that purpose and the packing team will have to regenerate the shipping label.
 
 ### Unpack Orders
 
