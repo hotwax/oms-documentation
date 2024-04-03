@@ -1,17 +1,26 @@
+---
+description: >-
+  Discover how Perry Ellis leveraged HotWax Commerce to enhance their
+  omnichannel capabilities, offering features like BOPIS, Same-day delivery for
+  efficient order handling and a seamless CX.
+---
+
 # Why HotWax Commerce
 
 ## Key omnichannel initiatives
+
 Seamlessly integrate their online and physical stores, allowing customers to access inventory without channel restrictions.
 
-Implement a flexible order fulfillment system that could handle two distinct purchasing patterns, same-day buy-online-pick-up-in-store (BOPIS) and Ship from Store that includes two shipping methods, Same Day Delivery (SDD) and Next Day Delivery (NDD).
-Enhance the user experience by offering pickup options within the product display page (PDP).
+Implement a flexible order fulfillment system that could handle two distinct purchasing patterns, same-day buy-online-pick-up-in-store (BOPIS) and Ship from Store that includes two shipping methods, Same Day Delivery (SDD) and Next Day Delivery (NDD). Enhance the user experience by offering pickup options within the product display page (PDP).
 
 Utilize the "Mixed Cart" feature to boost the average order value and offer a more diverse range of products to customers.
 
 ## Prior Initiatives
+
 BOPIS Integration: Perry Ellis was using Shopify, but they faced challenges in marking orders as ready for customer pickup. The absence of REST API calls for this purpose created complexities and limitations in their BOPIS workflow. Their desired approach was to facilitate customers' easy and secure order pickups at their convenience.
 
 ## HotWax Commerce Solutions
+
 To accomplish these objectives, Perry Ellis selected HotWax Commerce as their Order Management System (OMS) of choice:
 
 **BOPIS:** HotWax Commerce introduced BOPIS that enabled Perry Ellis to enhance their omnichannel capabilities. With a "Buy Online, Pick Up in Store" application, Perry Ellis offered customers the convenience of selecting their preferred store, establishing it as their "My store." The default store setting remained even as customers browsed other products on the website, simplifying the order pickup process.
