@@ -1,3 +1,9 @@
+---
+description: >-
+  Discover how Frank and Oak handles multi-package fulfillment scenarios,
+  ensuring accurate tracking information for customers on Shopify.
+---
+
 # Multi Package Fulfillment
 
 Frank and Oak sells a catalog of outerwear for colder climates. Though most of the time a B2C sales order is shipped in one package, sometimes a single item fulfillment in NetSuite may contain multiple packages, each with its unique tracking code. When importing these fulfilments into the OMS its important to ensure that we import both trackign codes against the fulfillment in HotWax to ensure that customers on Shopify get all of their tracking info.

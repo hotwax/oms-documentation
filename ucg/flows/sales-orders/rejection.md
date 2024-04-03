@@ -1,26 +1,27 @@
-# Rejection
+---
+description: Documentation page for rejection workflow in Frank and Oak.
+---
+
+# Rejections
 
 Frank and Oak will use HotWax's native rejection workflow. To read more about how rejections work in HotWax OMS, click here.
 
 The NetSuite facility ID that will be used for rejections are:
 
-**Testing:** 
+**Testing:**
 
 **Production:** 157
 
+## For store rejections, the following reasons are configured:
 
+| Status                      | Effect on Inventory       |
+| --------------------------- | ------------------------- |
+| Cannot fulfill entire order | Will not affect inventory |
+| Should not be ATP           | Will not affect inventory |
+| Not found                   | Zero out inventory        |
+| Damaged                     | Zero out inventory        |
 
-## For store rejections, the following reasons are configured: 
-
-| Status                        | Effect on Inventory       |
-|-------------------------------|---------------------------|
-| Cannot fulfill entire order  | Will not affect inventory |
-| Should not be ATP            | Will not affect inventory |
-| Not found                    | Zero out inventory         |
-| Damaged                      | Zero out inventory         |
-
-
-### To configure these reasons, import the below data from web tools: 
+### To configure these reasons, import the below data from web tools:
 
 ```xml
 
@@ -35,4 +36,4 @@ The NetSuite facility ID that will be used for rejections are:
 
 ```
 
-Also, change the `enumTypeId` for Damaged reason already in OMS to REPORT_ALL_VAR and `description` to `Damaged - Zero out ATP inventory`
+Also, change the `enumTypeId` for Damaged reason already in OMS to REPORT\_ALL\_VAR and `description` to `Damaged - Zero out ATP inventory`

@@ -1,11 +1,16 @@
-# Why HotWax Commerce?
+---
+description: >-
+  Explore HotWax Commerce's key omnichannel initiatives and solutions tailored
+  for retailers like Frank and Oak.
+---
+
+# Why HotWax
 
 ## Key Omnichannel Initiatives
 
-
 ## HotWax Commerce solutions
-The main solutions used by Frank and Oak are similar to most other NetSuite and Shopify retailers.
-Streamlined Inventory Management:
+
+The main solutions used by Frank and Oak are similar to most other NetSuite and Shopify retailers. Streamlined Inventory Management:
 
 HotWax Commerce provides the tools and functionalities to streamline Krewe's inventory management processes. From handling partial receipts to managing cycle counts efficiently, the system offers solutions that align with Krewe's needs. This translates to reduced manual intervention, enhanced accuracy, and improved inventory control.
 

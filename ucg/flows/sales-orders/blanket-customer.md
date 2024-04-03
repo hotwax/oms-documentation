@@ -1,3 +1,9 @@
+---
+description: >-
+  Discover how HotWax handles blanket customers for POS Cash Sales, ensuring
+  smooth order processing and integration with NetSuite for retailers.
+---
+
 # Blanket Customer
 
 ## Blanket Customer
