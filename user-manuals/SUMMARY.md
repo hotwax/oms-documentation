@@ -111,3 +111,9 @@
 * [Shipping methods](administration/shipping-methods/README.md)
   * [Create Carrier](administration/shipping-methods/add-carrier.md)
 * [Delete customers](delete-customers.md)
+
+## How-to documents
+
+* [Add shipping method](how-to/add-shipping-method.md)
+
+  
