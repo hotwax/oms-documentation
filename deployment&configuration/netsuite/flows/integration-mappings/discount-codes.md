@@ -15,3 +15,5 @@ In the event HotWax identifies that the code provided by eCommerce is not availa
 Item level discounts are synced as a separate line item in the order. When HotWax identifies the order has an item level discount, the integration layer adds the discounted amount added in the `Amount` field.
 
 You can simply add a new discount code mapping or modify an existing one by navigating to the `NetSuite Discount Codes` section on the NetSuite Integration page.
+
+Here's how you can [create mappings for discount codes](README.md#configuring-mappings-between-hotwax-commerce-and-netsuite)
