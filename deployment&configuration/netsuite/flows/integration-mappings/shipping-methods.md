@@ -18,3 +18,5 @@ Shipping methods that are supported by the retailer need to be created in HotWax
 Once shipping methods are created, they need to be mapped with NetSuite to provide accurate information for order processing and fulfillment.
 
 You can simply add a new shipping method mapping or modify an existing one by navigating to the `NetSuite Shipping Method` section on the NetSuite Integration page.
+
+Here's a breakdown of how to [create mappings for shipping method](README.md#configuring-mappings-between-hotwax-commerce-and-netsuite)
