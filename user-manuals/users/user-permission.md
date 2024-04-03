@@ -1,3 +1,8 @@
+---
+description: >-
+  HotWax Commerce offers advanced security permissions tailored to employee roles, ensuring operational integrity and preventing unauthorized actions across all Enterprise User Apps.
+---
+
 # User Permission
 
 HotWax Commerce provides retailers with a suite of Enterprise User Apps to ensure seamless omnichannel operations such as same-day BOPIS, Ship From Store, and Pre-Order management. The Enterprise User App suite is accessible to all employees across the organization, from pickers to the head of operations, with each user assigned a specific role and provided with appropriate training.
@@ -28,6 +33,10 @@ Suppose retailers have different users for sales order fulfillment and managing 
 
 By enabling the creation of customized security groups and precise assignment of permissions, this feature ensures that users have access only to the functionalities necessary for their roles, thereby minimizing security risks and optimizing productivity within the platform.
 
+{% embed url="https://youtu.be/KFs_FsSTC30" %}
+Video: Create Security Group
+{% endembed %
+
 ## Edit Security Group
 
 By allowing users to edit security group details such as name, internal ID, description, and permissions, HotWax Commerce empowers retailers to adapt security settings according to evolving organizational needs and user roles. This feature significantly contributes to workflow efficiency by streamlining the process of managing user access rights and maintaining a secure environment for business operations.
@@ -45,3 +54,7 @@ Store associates often have permission and access to manage orders both for the 
 3. **Modify Permissions:** Review the permissions assigned to the security group. You can adjust permissions by checking or unchecking the checkbox against the permission to add or remove access to specific functionalities.
 
 4. **Edit Name and Description:** You can also change the name and description of the user permissions by clicking on the edit button available in front of the permission's name.
+
+{% embed url="https://youtu.be/Ud0hYiHqLBk" %}
+Video: Edit Security Group
+{% endembed %
