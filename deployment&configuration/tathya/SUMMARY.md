@@ -18,7 +18,7 @@
    * [Dashboards Access](understanding-dashboards/dashboardsaccess.md)
    * [Dashboard Options](understanding-dashboards/dashboardOptions.md)
    * [Dashboard Customizations](understanding-dashboards/dashboardCustomization.md)
-   * [Link Configuration](understanding-dashboards/link-configuratin.md)
+   * [Link Configuration](understanding-dashboards/link-configuration.md)
  
 * [Configuring Alerts & Reports](alerts&Reports/README.md)
    * [Creating Alerts](alerts&Reports/creatingAlerts.md)
