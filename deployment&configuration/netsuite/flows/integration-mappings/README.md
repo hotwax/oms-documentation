@@ -34,20 +34,4 @@ If you cannot find the NetSuite Integration page, navigate to the General Settin
 The integration layer maps the original entities in HotWax Commerce to their corresponding representations in NetSuite. This mapping is established through a key-value pair, where the key denotes the original entity, and the value signifies its counterpart in NetSuite.
 {% endhint %}
 
-## Creating Custom Integration Mappings
 
-In case you want to set up a custom integration mapping you can simply navigate to the section “Integration Type Mapping” and click on “Add Type”.
-
-| Field                          | Description                                                   |
-| ------------------------------ | ------------------------------------------------------------- |
-| **Integration Type Enum ID**   | Provide the unique identifier for the integration type.       |
-| **Integration Type Enum Code** | Provide the shorthand code representing the integration type. |
-| **Integration Type Enum Name** | Provide the human-readable label for the integration type.    |
-| **Description**                | Write brief information about the integration type.           |
-| **Sequence ID**                | Provide the human-readable label for the integration type.    |
-
-Confirm establishing the new custom mapping by clicking on the `Add`.
-
-{% hint style="success" %}
-Now, you're ready to utilize out-of-the-box mappings and also create custom integration mappings.
-{% endhint %}
