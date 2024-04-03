@@ -6,17 +6,15 @@ description: >-
 
 # Store fulfillment
 
-Once order items have been successfully allocated to stores, the fulfillment status for the order item is set as `Reserved`.
-
 <figure><img src="../.gitbook/assets/store fulfillment bpm (2).png" alt=""><figcaption><p>Store fulfillment business process model</p></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/notations.png" alt=""><figcaption><p>Notations</p></figcaption></figure>
 
 ## Analyze Orders and Generate Picklist
 
-Retailers use HotWax Commerce Store Fulfillment App to fulfill orders allocated to stores.
+Order items that have been successfully allocated to stores have fulfillment status  `Reserved` in HotWax Commerce.
 
-Orders are by default arranged in a "First In, First Out" sequence, ensuring that orders placed earlier are prioritized. Store managers can filter them based on the shipping method (such as same-day, next-day, or standard) or customer loyalty status.
+Retailers use HotWax Commerce [Store Fulfillment App](../orders/fulfillment/) to fulfill orders allocated to stores. Orders are by default arranged in a "First In, First Out" sequence, ensuring that orders placed earlier are prioritized. Store managers can filter them based on the shipping method (such as same-day, next-day, or standard) or customer loyalty status.
 
 For example, in the event a store manager wishes to prioritize orders with tight SLAs, selecting the filter “same-day” will display all the orders that have a same-day shipping method. This way they can initiate batch processing of these orders.
 
@@ -42,7 +40,7 @@ It's crucial to note that shipping labels are valid only when orders consist of 
 
 When a picker is unable to locate the order item listed in their picklist in the store, store managers have the authority to reject that specific order. In this event, its fulfillment status `Picking` automatically is removed in HotWax Commerce.
 
-Learn more about Rejections and their reasons
+Learn more about [Rejections and their reasons](../fulfillment/rejection.md)
 
 ## Pack Orders
 
