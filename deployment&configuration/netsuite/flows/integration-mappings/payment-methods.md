@@ -18,3 +18,5 @@ In the event a payment method in eCommerce and HotWax is not mapped to a payment
 |---------------------|----------------|
 | EXT_SHOP_ECOM_GFTCRD| Gift Card      |
 | EXT_SHOP_CASH_ON_DEL| Shopify Payment|
+
+Here's how you can [create mappings for payment methods](README.md#configuring-mappings-between-hotwax-commerce-and-netsuite)
