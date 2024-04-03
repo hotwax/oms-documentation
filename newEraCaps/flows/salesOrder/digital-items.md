@@ -1,3 +1,9 @@
+---
+description: >-
+  Discover how New Era Caps handles digital items like gift cards in their order
+  fulfillment process.
+---
+
 # Digital Items
 
 Digital items often require different handling than regular items because their fulfillment is not the same as actual physical items. Digital items such as a gift card, may be configured by retailers to be auto completed at order creation in Shopify or auto completed by the OMS during import if the product type is configured to “isDigital”.

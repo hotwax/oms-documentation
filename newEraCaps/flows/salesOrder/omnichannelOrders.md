@@ -1,3 +1,10 @@
+---
+description: >-
+  Explore how New Era Caps seamlessly integrates online and in-store inventory
+  management with Shopify, facilitating options like BOPIS (Buy Online Pick-Up
+  In Store) and Ship from Store.
+---
+
 # Omnichannel Orders
 
 All stores that participate in online sales will post their inventory to the consolidated inventory location on Shopify. New Era also supports mixed card so cart items will be tagged with line item properties to identify if they are pickup or ship from store as well as the facility the customer chose for fulfillment.

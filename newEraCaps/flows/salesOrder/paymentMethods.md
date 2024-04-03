@@ -1,3 +1,10 @@
+---
+description: >-
+  Gain insights into how payment processing is managed by New Era Caps,
+  including redirected links and specific gateway specifications, ensuring
+  seamless transactions for customers.
+---
+
 # Payment Methods
 
 This document contains all the payment methods used by New Era Caps.
@@ -16,7 +23,6 @@ If the payment processing is done on a redirected link, then the payment process
 <PaymentMethodType description="Paidy" paymentMethodTypeId="EXT_SHP_ PAIDY"/>
 ```
 
-
 **Payment mapping data**
 
 ```xml
@@ -31,11 +37,11 @@ If the payment processing is done on a redirected link, then the payment process
 
 ```
 
-** Payments types from shopify**
+\*\* Payments types from shopify\*\*
 
-| Payment Keys                     | Description            | 
-|-----------------------------------|------------------------|
-| shopify sbペイメント sbps          | Prepaid (Credit Card) | 
-| 代金引換 or cash on delivery (cod) | Cash on Delivery       | 
-| amazon                            | Amazon Pay             | 
-| paidy or ペイディ                  | Paidy                  | 
+| Payment Keys                   | Description           |
+| ------------------------------ | --------------------- |
+| shopify sbペイメント sbps           | Prepaid (Credit Card) |
+| 代金引換 or cash on delivery (cod) | Cash on Delivery      |
+| amazon                         | Amazon Pay            |
+| paidy or ペイディ                  | Paidy                 |

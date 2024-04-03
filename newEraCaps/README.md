@@ -1,3 +1,10 @@
+---
+description: >-
+  Dive into the essence of New Era Caps Japan, a leader in headwear
+  distribution. Explore their strategic business model and dominance in the
+  retail domain.
+---
+
 # Introduction
 
 ## Business Model
