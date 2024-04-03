@@ -1,13 +1,14 @@
 ---
 description: >-
-  The Store Fulfillment Process Model illustrates how HotWax Commerce enables store associates to Pick, Pack & Ship online orders received at stores.
+  The Store Fulfillment Process Model illustrates how HotWax Commerce enables
+  store associates to Pick, Pack & Ship online orders received at stores.
 ---
 
 # Store fulfillment
 
 Once order items have been successfully allocated to stores, the fulfillment status for the order item is set as `Reserved`.
 
-<figure><img src="../.gitbook/assets/store fulfillment bpm.png" alt=""><figcaption><p>Store fulfillment business process model</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/store fulfillment bpm (2).png" alt=""><figcaption><p>Store fulfillment business process model</p></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/notations.png" alt=""><figcaption><p>Notations</p></figcaption></figure>
 
@@ -52,7 +53,6 @@ Once orders have been packed, the packing team places them at the designated loc
 The fulfillment status for packed orders is updated from `Picking` to `Packed` in HotWax Commerce.
 
 In the event that an order has multiple items and one box isn’t suitable to fit all the items, packing teams can add more boxes or choose the size that suits best for the order items. In this scenario, the pre-generated shipping label will not serve that purpose and the packing team will have to regenerate the shipping label.
-
 
 ### Unpack Orders
 
