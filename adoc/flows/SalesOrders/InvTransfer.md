@@ -1,31 +1,33 @@
-# Inventory Transfer Slip
+---
+description: >-
+  Explore how the Inventory Transfer API enables seamless inventory transfers
+  between stores in the Retail Pro system, ensuring accurate inventory
+  management.
+---
+
+# Inventory Transfer API
 
 This API is designed for creating inventory transfers from one store to another within the Retail Pro system. It facilitates the movement of products between stores, allowing for accurate tracking and management of inventory levels. Below are the key parameters and their descriptions:
 
-- **SlipNo**: The unique slip number associated with the inventory transfer.
-
-- **FromStore**: The code or identifier of the store from which the inventory is being transferred.
-
-- **ToStore**: The code or identifier of the destination store where the inventory is intended to be transferred.
-
-- **CreatedDate**: The date and time when the inventory transfer is created.
-
-- **TotalQty**: The total quantity of items being transferred in the inventory transfer.
-
-- **Items**: An array containing details about each item being transferred, including:
-
-  - **UPC**: The Universal Product Code that uniquely identifies each product.
-  
-  - **Qty**: The quantity of the respective item to be transferred.
+* **SlipNo**: The unique slip number associated with the inventory transfer.
+* **FromStore**: The code or identifier of the store from which the inventory is being transferred.
+* **ToStore**: The code or identifier of the destination store where the inventory is intended to be transferred.
+* **CreatedDate**: The date and time when the inventory transfer is created.
+* **TotalQty**: The total quantity of items being transferred in the inventory transfer.
+* **Items**: An array containing details about each item being transferred, including:
+  * **UPC**: The Universal Product Code that uniquely identifies each product.
+  * **Qty**: The quantity of the respective item to be transferred.
 
 This API is essential for managing stock levels between different stores efficiently. By providing the necessary details, including the origin and destination stores along with specific product quantities, Retail Pro users can initiate and track inventory transfers seamlessly. This ensures accurate and up-to-date inventory management across various locations.
 
----
+***
+
 **Endpoint**
 
-```https://<host>:<port>/api/v1/Transfer/Slip```
+`https://<host>:<port>/api/v1/Transfer/Slip`
 
 <details>
+
 <summary>Body</summary>
 
 ```json
@@ -47,9 +49,11 @@ This API is essential for managing stock levels between different stores efficie
   ]
 }
 ```
+
 </details>
 
 <details>
+
 <summary>Sample Body</summary>
 
 ```json
@@ -71,4 +75,5 @@ This API is essential for managing stock levels between different stores efficie
   ]
 }
 ```
+
 </details>

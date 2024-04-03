@@ -1,3 +1,10 @@
+---
+description: >-
+  Learn about the two-step order approval process at ADOC, ensuring orders are
+  processed for fulfillment only if they meet specific criteria for updated
+  customer information and shipping addresses.
+---
+
 # Order Approval
 
 Order approval in ADOC involves a two-step process. Initially, the shipping address is updated through an API call, and subsequently, a new order attribute named “SHIPTO\_ADDRESS\_UPDATED” is generated with a value of “true” after the address update. Orders qualify for approval only if they possess order attributes for both a government mandated Customer ID and SHIPTO\_ADDRESS\_UPDATED. This two-criteria condition ensures that only orders with both updated customer information and shipping addresses are processed for fulfillment.

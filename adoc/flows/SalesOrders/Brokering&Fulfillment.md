@@ -1,4 +1,8 @@
 ---
+description: >-
+  Explore how ADOC manages brokering and fulfillment, relying on its store
+  network for order fulfillment and using a custom zone mapping system for
+  routing in countries without numerical zip codes.
 cover: ../../.gitbook/assets/ADOC_Fulfillment.HEIC
 coverY: 0
 ---

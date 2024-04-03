@@ -1,3 +1,10 @@
+---
+description: >-
+  Learn about the order approval process at ADOC, including address validation
+  and the requirement for a government-mandated Customer ID, with a focus on
+  importing order metafields from Shopify to HC.
+---
+
 # Order Approval
 
 ADOC uses a custom flow where certain orders are only approved after the address is validated and a government-mandated Customer ID is present. After an order is imported, ADOC has a job enabled for importing order metafields, under the namespace “HotwaxOrderDetails”, from Shopify by an independent job as Order Attributes in HotWax Commerce.
