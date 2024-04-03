@@ -4,7 +4,7 @@ description: >-
   store associates to Pick, Pack & Ship online orders received at stores.
 ---
 
-# Store fulfillment
+# Store fulfillment lifecycle
 
 <figure><img src="../.gitbook/assets/store fulfillment bpm (2).png" alt=""><figcaption><p>Store fulfillment business process model</p></figcaption></figure>
 
