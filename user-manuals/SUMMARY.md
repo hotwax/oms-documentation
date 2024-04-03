@@ -6,7 +6,7 @@
 ## Business Process Models
 
 * [Order lifecycle](business-process-models/orderlifecycle.md)
-* [Store fulfillment](business-process-models/store.fulfillment.md)
+* [Store fulfillment lifecycle](business-process-models/store.fulfillment.md)
 
 ## Workflow
 
