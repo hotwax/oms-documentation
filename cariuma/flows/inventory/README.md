@@ -1,3 +1,9 @@
+---
+description: >-
+  Discover how Cariuma manages inventory flow, syncing levels from Cin7 to all
+  Shopify stores, and enabling pre-orders when inventory reaches zero.
+---
+
 # Inventory
 
 Inventory levels are synchronized from Cin7 to all Shopify Stores, and subsequently, HotWax Commerce mirrors this synchronization from the Cariuma US Shopify using inventory webhooks. When a product/item's inventory reaches zero in the Cariuma US Shopify Store, HotWax Commerce promptly designates the product as eligible for pre-order across all Shopify stores, including Cariuma US.
