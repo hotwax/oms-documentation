@@ -7,7 +7,7 @@ description: >-
 
 # Order lifecycle
 
-<figure><img src="../.gitbook/assets/order life cycle bpm.png" alt=""><figcaption><p>Order lifecycle business process model</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/order life cycle bpm (1).png" alt=""><figcaption><p>Order lifecycle business process model</p></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/notations.png" alt=""><figcaption><p>Notations</p></figcaption></figure>
 
