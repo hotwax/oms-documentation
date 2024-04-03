@@ -1,7 +1,7 @@
 ---
 description: >-
-  Discover user manuals for pages that help in fulfilment process for Store
-  Fulfillment orders.
+  Discover user manuals for HotWax Commerce Store Fulfillment App that helps
+  store associates in fulfilling orders from the store.
 ---
 
 # Fulfillment
