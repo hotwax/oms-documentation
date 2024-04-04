@@ -59,13 +59,13 @@ Once approved, transfer orders are automatically reflected at the source locatio
 * Store associates pick the transfer order items they want to fulfill from their store.
 * After picking the items, store associates pack them and proceed to create shipments for each item.
 * Once the shipment has been created, store associates fetch shipping labels from the carrier and the corresponding tracking codes.
-* After all items are shipped, transfer orders status is automatically updated from `Approved` to `Shipped` in HotWax Commerce.
+* After all items are shipped, transfer orders status is automatically updated from `Approved` to `Completed` in HotWax Commerce.
 
 {% hint style="info" %}
-Multiple shipments against a single transfer order can be created in the Store Fulfillment App. For example, if a transfer order contains multiple items, the store might choose to dispatch some items initially and fulfill the remaining ones later. In this event, the transfer order remains in the “Approved” status in HotWax Commerce and transitions to “Shipped” status when all items within the transfer order have been fulfilled.
+Multiple shipments against a single transfer order can be created in the Store Fulfillment App. For example, if a transfer order contains multiple items, the store might choose to dispatch some items initially and fulfill the remaining ones later. In this event, the transfer order remains in the `Approved` status in HotWax Commerce and transitions to `Completed` status when all items within the transfer order have been fulfilled.
 {% endhint %}
 
-4. **Export Fulfilled Transfer Orders Items from HotWax Commerce:** A scheduled job in HotWax Commerce Integration Platform generates a JSON file with all the transfer order items that are in the `Shipped` status and securely places the file in an SFTP location, making it accessible for NetSuite.
+4. **Export Fulfilled Transfer Orders Items from HotWax Commerce:** A scheduled job in HotWax Commerce Integration Platform generates a JSON file with all the transfer order items that are in the `Completed` status and securely places the file in an SFTP location, making it accessible for NetSuite.
 
 **Job in HotWax Commerce**
 
