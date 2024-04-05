@@ -16,4 +16,6 @@ By understanding the different events that trigger actions and the resulting out
 
 ## Notations
 
-Before we delve into the specifics of each business process model, let's familiarize ourselves with the notations used in our BPM flow charts. Refer to the image below for an explanation of the symbols and annotations you'll encounter throughout the models:
+Before we delve into the specifics of each business process model, let's familiarize ourselves with the notations used in our BPM flow charts.&#x20;
+
+<figure><img src="../.gitbook/assets/notations (1).png" alt="" width="375"><figcaption><p>Notations</p></figcaption></figure>
