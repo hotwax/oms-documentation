@@ -122,7 +122,7 @@ HotWax Commerce then checks the custom tag on orders, if the tag is present on a
 
 Store associates can view BOPIS orders in their [<mark style="color:orange;">**BOPIS Fulfillment App**</mark>](../bopis/) and begin preparing the order for customer pick-up.
 
-Once the order is packed, customer receives an email informing them that their order is ready for pickup. After an order has been picked up by the customer, the order status is updated from <mark style="color:orange;">**“Approved” to “Completed”**</mark> in HotWax Commerce. A `Completed Orders` job in HotWax Commerce also marks orders as <mark style="color:orange;">**"Fulfilled" in eCommerce.**</mark>
+Once the order is prepared, customer receives an email informing them that their order is ready for pickup. After an order has been picked up by the customer, the order status is updated from <mark style="color:orange;">**“Approved” to “Completed”**</mark> in HotWax Commerce. A `Completed Orders` job in HotWax Commerce also marks orders as <mark style="color:orange;">**"Fulfilled" in eCommerce.**</mark>
 
 ### BOPIS Fulfillment Failure:
 
@@ -136,7 +136,11 @@ Learn more about [BOPIS Fulfillment](https://docs.hotwax.co/user-guides/orders/b
 
 When customers place a Pre-Order order on eCommerce, it is downloaded in HotWax Commerce alongside standard orders by the `Import Orders` job.
 
-Orders that have a pre-order tag and are assigned a promise date are automatically moved to the `Pre-Order Parking` in HotWax Commerce. This dedicated queue holds all pre-orders until their physical inventory is received. This ensures that the brokering process is not initiated for Pre-Orders that currently lack inventory but have inventory scheduled to arrive on a future date.
+In case of Shopify, HotWax Commerce provides a custom app that&#x20;
+
+In case of Shopify, HotWax Commerce provides a custom app that is deployed on Shopify. When the customer places a Pre-Order, the app adds a pre-order tag and promise date on line items in order to specific that it is a Pre-Order item.
+
+HotWax Commerce checks orders that have a pre-order tag and a promise date applied and automatically moves them to the `Pre-Order Parking`. This dedicated queue holds all pre-orders until their physical inventory is received. This ensures that the brokering process is not initiated for Pre-Orders that currently lack inventory but have inventory scheduled to arrive on a future date.
 
 Once the pre-order inventory arrives and the promise date is reached, a scheduled `Auto Releasing` Pre-Order job in HotWax Commerce automatically releases all orders from the `Pre-Order Parking` to the `Brokering Queue`.This enables inventory to be allocated to them for fulfillment.
 
