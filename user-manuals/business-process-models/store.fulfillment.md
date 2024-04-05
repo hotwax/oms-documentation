@@ -10,15 +10,13 @@ description: >-
 
 ## Analyze Items and Generate Picklist
 
-Order items that have been successfully allocated to stores have fulfillment status <mark style="color:orange;">**"Reserved"**</mark> in HotWax Commerce.
+Items that have been successfully allocated to stores have fulfillment status <mark style="color:orange;">**"Reserved"**</mark> in HotWax Commerce.&#x20;
 
-Retailers use HotWax Commerce [Store Fulfillment App](../orders/fulfillment/) to fulfill orders allocated to stores.&#x20;
+Retailers use HotWax Commerce [Store Fulfillment App](../orders/fulfillment/) to fulfill items allocated to stores. By default items are arranged in a "First In, First Out" sequence, ensuring that placed earlier are prioritized. Store managers can filter them based on the shipping method (such as same-day, next-day, or standard) or customer loyalty status.
 
-By default orders are arranged in a "First In, First Out" sequence, ensuring that orders placed earlier are prioritized. Store managers can filter them based on the shipping method (such as same-day, next-day, or standard) or customer loyalty status.
+For example, in the event a store manager wishes to prioritize items with tight SLAs, they can filter items that have a same-day shipping method to initiate batch processing for them.
 
-For example, in the event a store manager wishes to prioritize orders with tight SLAs, they can filter orders that have a same-day shipping method to initiate batch processing of these orders.
-
-Once store managers determine the batch of orders they wish to fulfill first, they proceed to generate a picklist for them. Subsequently, they assign a picker to the picklist so that they can start picking the order items listed in their assigned picklist and begin the fulfillment process.
+Once store managers determine items they wish to fulfill first, they generate a picklist for them and subsequently, assign a picker so that they can start picking items.
 
 Once the picklist has been generated, the fulfillment status is updated from <mark style="color:orange;">**"Reserved"**</mark> to <mark style="color:orange;">**"Picking"**</mark> in HotWax Commerce.
 
@@ -48,9 +46,9 @@ Now, when the items have been picked and brought to the packing station, they ca
 
 Once items have been packed, the packing team places them at the designated location in the store, where the carrier will collect them.
 
-The fulfillment status for packed orders is updated from <mark style="color:orange;">**"Picking"**</mark> to <mark style="color:orange;">**"Packed"**</mark> in HotWax Commerce.
+The fulfillment status for packed items is updated from <mark style="color:orange;">**"Picking"**</mark> to <mark style="color:orange;">**"Packed"**</mark> in HotWax Commerce.
 
-In the event that an order has multiple items and one box isn’t suitable to fit all the items, the packing team can add more boxes or choose the size that suits best for the order items. In this scenario, the pre-generated shipping label will not serve that purpose and the packing team will have to regenerate the shipping label.
+In the event that an order has multiple items and one box isn’t suitable to fit all the items, the packing team can add more boxes or choose the size that suits best for the items. In this scenario, the pre-generated shipping label will not serve that purpose and the packing team will have to regenerate the shipping label.
 
 ### Unpack Items
 
@@ -58,9 +56,9 @@ In the event the packing team discovers that they have mispacked an item, they h
 
 Once the item has been correctly repacked, the fulfillment status in HotWax Commerce is updated to <mark style="color:orange;">**"Packed"**</mark> once again.
 
-## Ship Orders
+## Ship Items
 
-Finally, the fulfillment team hands over the packed orders to the shipping carrier.
+Finally, the fulfillment team hands over the packed items to the shipping carrier.
 
 The `Ship Packed Orders` Job in HotWax Commerce checks if packed items have tracking codes assigned and automatically ships them. Fulfillment teams can also manually ship items once the carrier collects them.
 
