@@ -106,7 +106,7 @@ A dedicated job checks if the auto-cancellation date has been reached for unfill
 
 ### Avoid Auto-Cancellation
 
-Retailers with prior knowledge of future inventory through their purchase orders can move these unfillable orders in bulk from  `Unfillable Parking` to the `Unfillable Hold Parking` using a CSV file. This action prevents these orders from being automatically canceled and allows them to be fulfilled in the future.
+Retailers with prior knowledge of future inventory through their purchase orders can move these unfillable orders in bulk from `Unfillable Parking` to the `Unfillable Hold Parking` using a CSV file. This action prevents these orders from being automatically canceled and allows them to be fulfilled in the future.
 
 When the inventory arrives, retailers can execute a brokering run that looks at the orders present in the `Unfillable Hold Parking` and allocates inventory for them.
 
@@ -114,7 +114,9 @@ When the inventory arrives, retailers can execute a brokering run that looks at 
 
 When customers place a BOPIS order on eCommerce, it is downloaded in HotWax Commerce alongside standard orders by the `Import Orders` job.
 
-HotWax Commerce then checks the line item property and sends the order to the customer's preferred pickup location without brokering. This is because the fulfillment location is pre-selected for BOPIS orders by customers.
+In case of Shopify, HotWax Commerce provides a custom app that is deployed on Shopify. When the customer places a BOPIS order, the app adds a custom tag on line items in order to specific that it is a BOPIS order.
+
+HotWax Commerce then checks the custom tag on orders, if the tag is present on a order, then it is sent to customer's preferred pickup location without brokering. This is because the fulfillment location is pre-selected for BOPIS orders by customers.
 
 ### BOPIS Fulfillment Success and Order Completion:
 
@@ -124,7 +126,7 @@ Once the order is packed, customer receives an email informing them that their o
 
 ### BOPIS Fulfillment Failure:
 
-In the event store associates cannit find the inventory to fulfill a pick-up order, for reasons such as items being out of stock or damaged, a store manager has the authority to reject the pick-up order. All the rejected BOPIS orders are then moved to the `BOPIS Rejected Queue`.
+In the event store associates cannot find the inventory to fulfill a pick-up order, for reasons such as items being out of stock or damaged, a store manager has the authority to reject the pick-up order. All the rejected BOPIS orders are then moved to the `BOPIS Rejected Queue`.
 
 In this scenario, an email is automatically sent to the customer for <mark style="color:orange;">**alternative fulfillment options such as pickup from another store or home delivery**</mark>. Retailers can configure these options based on their order fulfillment strategy.
 

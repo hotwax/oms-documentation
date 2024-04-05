@@ -28,7 +28,7 @@
 ## Orders
 
 * [Order management](orders/order-management/README.md)
-  * [Find Sales orders](orders/order-management/find-sales-order.md)
+  * [Find Sales orders](orders/order-management/find-sales-orders.md)
   * [View Order Details](orders/order-management/view-order-details.md)
   * [Update orders](orders/order-management/update-sales-order.md)
   * [Allocation](orders/order-management/allocate-sales-order.md)
