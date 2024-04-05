@@ -6,9 +6,7 @@ description: >-
 
 # Store fulfillment lifecycle
 
-<figure><img src="../.gitbook/assets/store fulfillment bpm (2).png" alt=""><figcaption><p>Store fulfillment business process model</p></figcaption></figure>
-
-<figure><img src="../.gitbook/assets/notations.png" alt=""><figcaption><p>Notations</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/store fulfillment bpm.png" alt=""><figcaption><p>Store fulfillment lifecycle business process model</p></figcaption></figure>
 
 ## Analyze Orders and Generate Picklist
 
