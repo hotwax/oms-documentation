@@ -1,6 +1,6 @@
 ---
 description: >-
-  The Store Fulfillment Process Model illustrates how HotWax Commerce enables
+  The Store Fulfillment Lifecycle BPM illustrates how HotWax Commerce enables
   store associates to Pick, Pack & Ship online orders received at stores.
 ---
 
