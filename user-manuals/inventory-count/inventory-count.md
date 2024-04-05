@@ -1,4 +1,10 @@
-# Inventory Cycle Count
+---
+description: >-
+  Seamlessly reconcile physical inventory with system data for precise tracking,
+  empowered by intuitive mobile scanning technology.
+---
+
+# Inventory count
 
 HotWax Commerce's Inventory Count App streamlines inventory management in stores and warehouses by empowering store associates and managers to seamlessly match physical inventory with system inventory. This intuitive Progressive Web Application (PWA), accessible through browsers or icons on handheld devices, optimizes the inventory counting process. Store associates can swiftly scan products using mobile phone or tablet cameras, ensuring a precise and efficient counting process. Specific [permissions](../users/manageUser.md) are necessary for full utilization of the Inventory Count App. Store associates with `Order Fulfillment` permissions can conduct inventory counts, while store managers with `Order Fulfillment Manager` permissions have the added capability to review counts and log inventory variances.
 
@@ -52,13 +58,15 @@ Store associates need to tap on the `Save` button at the bottom of the page to c
 
 Once store associates complete the inventory count, it undergoes review by store managers. The store managers can navigate to the `Upload` page from the footer on the bottom of the app to view all submitted inventory counts. Here, they can review and either approve or reject the inventory count performed by the store associates.
 
-A. Store managers can approve the inventory count by tapping the blue `Upload` icon situated at the bottom right of the page. This action prompts a confirmation pop-up card, where managers can tap on the `Upload` button to approve the inventory count. Upon approval, the inventory count updates within HotWax Commerce OMS, and subsequently reflects on the e-commerce platform and ERP systems.
+A. Store managers can approve the inventory count by tapping the blue `Upload` icon situated at the bottom right of the page. This action prompts a confirmation pop-up card, where managers can tap on the `Upload` button to approve the inventory count.
+
+B. After the upload from the app, the next step involves the admin user's approval of the cycle count within the OMS. To do this, the admin should navigate to the `Reconcile Inventory` option situated in the warehouse section of the hamburger menu. Once there, by clicking on the `Invenotry Count Import ID`, the admin can access the view inventory count import page. Here, product selection is flexible, allowing the admin to choose individual products by checking the corresponding boxes or opt for a bulk selection using the checkbox located to the left of the product header. To complete the process, the admin can then click on the `Record Variance` button. This action finalizes the approval of the cycle count.
 
 {% embed url="https://youtu.be/Q9QAKSx2YYY" %}
 Video: Upload function
 {% endembed %}
 
-B. In cases where the store manager is unsatisfied with the counting process, inventory counts can be rejected by tapping on the `Remove` button below the items.
+C. In cases where the store manager is unsatisfied with the counting process, inventory counts can be rejected by tapping on the `Remove` button below the items.
 
 {% embed url="https://youtu.be/GcQ0j2qNyKY" %}
 Video: Remove function
@@ -69,13 +77,9 @@ Video: Remove function
 At times, store managers may not require a complete inventory count to address inventory variances. For instance, in case an item gets damaged, prompt adjustments are vital to prevent potential overselling on the e-commerce platform. Store managers can log inventory variances for specific products using the Inventory Count App through the following steps:
 
 1. Locate the product and access the `Product Details` page — following a process similar to inventory counting.
-
 2. Within the `Product Detail` page, a dedicated `Variance` tab is available for logging inventory discrepancies below the product image.
-
 3. Store managers can input the desired increment or decrement of inventory from the total stock in the `Quantity` field. For instance, entering 5 adds to the inventory in case of finding any misplaced item, while -5 subtracts from the count due to damage or loss.
-
 4. Store managers are also prompted to select a `Variance Reason` from a dropdown menu, detailing the specific cause such as 'damaged' or 'found.'
-
 5. Upon completion, tapping `Log Variance` button updates the inventory count in the HotWax Commerce OMS and subsequently on the e-commerce platform and ERP systems.
 
 {% embed url="https://youtu.be/Cg3pRqpxGfM" %}

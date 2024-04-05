@@ -33,13 +33,15 @@ Scheduled job parameters can be modified directly from the Job Pipeline page, en
 
 Comprehensive historical job data is readily accessible for analysis and troubleshooting purposes. Users can identify patterns, optimize job performance, and resolve recurring issues by examining historical job execution details.
 
-<figure><img src="../../jobManager/.gitbook/assets/Screenshot%202023-10-30%20at%2011.39.59%20AM.png" alt=""><figcaption><p>Image: Job Pipeline page</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Frame 1.png" alt=""><figcaption></figcaption></figure>
 
 ### Segmentation
 
 {% tabs %}
 {% tab title="Pending" %}
 Displays all the jobs queued for execution.
+
+<figure><img src="../../.gitbook/assets/Pending 1.png" alt="" width="563"><figcaption></figcaption></figure>
 
 <figure><img src="../../jobManager/.gitbook/assets/Screenshot%202023-11-07%20at%204.09.42%20PM.png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
@@ -53,9 +55,11 @@ Displays all the jobs running in the system.
 {% tab title="History" %}
 Displays all the historical jobs. Historical jobs can be filtered by their status.
 
-<figure><img src="../../jobManager/.gitbook/assets/Screenshot%202023-11-07%20at%204.13.48%20PM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/history 1.png" alt="" width="563"><figcaption></figcaption></figure>
 {% endtab %}
 {% endtabs %}
+
+
 
 ####
 
@@ -63,7 +67,7 @@ Displays all the historical jobs. Historical jobs can be filtered by their statu
 
 Easily locate specific jobs by name or category.
 
-<figure><img src="../../jobManager/.gitbook/assets/Screenshot%202023-11-07%20at%203.23.12%20PM.png" alt=""><figcaption><p>Image: Search Jobs</p></figcaption></figure>
+{% embed url="https://youtu.be/HbBndcYS36Q" %}
 
 ###
 
@@ -71,18 +75,19 @@ Easily locate specific jobs by name or category.
 
 Quickly find jobs by applying filters based on category and status.
 
-<figure><img src="../../jobManager/.gitbook/assets/Screenshot%202023-11-07%20at%203.24.01%20PM.png" alt=""><figcaption><p>Image: Filters</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Frame 2.png" alt=""><figcaption></figcaption></figure>
 
 ### **Pin job**
 
 Keep frequently accessed jobs readily available for quick access. Pinned jobs will be visible in the footer.
 
-<figure><img src="../../jobManager/.gitbook/assets/Screenshot%202023-11-07%20at%204.14.50%20PM.png" alt=""><figcaption><p>Image: Pinned jobs in the footer</p></figcaption></figure>
+{% embed url="https://youtu.be/YSSfLXV9qP0" %}
 
-####
+
 
 ### **Recurrence**
 
 Displays the number of counts the job is retried once failed.
 
-<figure><img src="../../jobManager/.gitbook/assets/Screenshot%202023-11-07%20at%203.49.27%20PM%20(1).png" alt=""><figcaption><p>Image: Recurrence</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/recurrence.png" alt="" width="375"><figcaption></figcaption></figure>
+

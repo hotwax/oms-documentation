@@ -1,3 +1,9 @@
+---
+description: >-
+  Target high-demand scenarios by setting up customized safety stock levels for
+  specific products at designated facilities.
+---
+
 # Set Individual Safety Stock
 
 The ability to `Set Individual Safety Stocks`in the HotWax Commerce platform provides retailers with a targeted solution for addressing high in-store demand scenarios. This feature is particularly significant for retailers aiming to set up safety stock for specific products at a designated facility

@@ -1,6 +1,10 @@
-# Product Store settings
-In order to make sure all flows run as expected, some configurations need to be made in the Product Store settings in HotWax.
+---
+description: Optimize your HotWax integration by configuring Product Store settings
+---
 
+# Product Store Settings
+
+In order to make sure all flows run as expected, some configurations need to be made in the Product Store settings in HotWax.
 
 **Auto Approve**
 

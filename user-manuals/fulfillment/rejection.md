@@ -54,6 +54,10 @@ From the in-progess screen, click on the ​'Reject All' icon at the top right c
 Video: Reject in progress orders in bulk
 {% endembed %}
 
+{% hint style="info" %}
+`Reject all` button does not have any effect on the inventory of the facility. Users need to set the fulfillment capacity of the facility to 0 to ensure that orders are not brokered again to that facility.
+{% endhint %}
+
 ## Manage Reasons
 
 Retailers can configure which rejection reasons they want to offer for their staff to choose from if they're unable to fulfill items in an order. This section walks through how those reasons are managed in the OMS today.

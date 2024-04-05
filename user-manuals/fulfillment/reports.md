@@ -220,3 +220,72 @@ Head of eCommerce, Vice President of Retail
 | Size              | The size of the item                                      |
 | Brokered Date     | The date when the order is brokered to a fulfillment location |
 | Brokering Time    | The time when the order was brokered                      |
+
+## Order Rejection
+
+### Rejected Order Items Report
+
+It is common for fulfillment locations to reject online orders due to various factors such as inventory discrepancies or fulfillment issues. However, minimizing these rejections holds importance for retailers striving to uphold customer satisfaction and streamline operations. HotWax Commerce recognizes this need and offers a report on rejected orders from multi-fulfillment locations.
+
+This report serves as a crucial tool for retailers in their efforts to reduce rejection rates. By providing insights into rejection occurrences—including timing, locations, SKUs, and order IDs—it empowers users to identify patterns and root causes behind rejections. Armed with this information, retailers can take measures to optimize inventory management, streamline fulfillment processes, and enhance staff training.
+
+Leveraging HotWax Commerce's rejection report enables users to make decisions aimed at improving overall operational efficiency. By understanding which items are rejected more frequently and in which locations, retailers can implement strategies to minimize rejections and ensure accurate, timely order fulfillment. Ultimately, this proactive approach not only enhances customer satisfaction but also strengthens the retailer's competitive edge in the market.
+
+#### User
+Head of eCommerce, Head of Stores, Vice President of Retail
+
+**Report Glossary**
+
+| Item              | Item details                                                     |
+|-------------------|------------------------------------------------------------------|
+| Shopify Order ID  | Identifies the order within the Shopify platform                 |
+| Location          | Indicates the location of the order fulfilment                    |
+| HC Order ID       | HotWax Commerce Order ID for internal tracking                    |
+| Style             | Specifies the style or type of the product                       |
+| demand            | Reflects the demand or quantity ordered                           |
+| SKU               | Stock Keeping Unit for inventory tracking                         |
+| Product Name      | Name of the product ordered                                      |
+| ATP               | Indicates the quantity of the product available for shipment      |
+| Safety Stock      | Quantity of stock kept in reserve to meet unexpected demand       |
+| Rejected Datetime| A timestamp indicating when the rejection occurred               |
+| Reason            | Specifies the reason for rejection                               |
+| Comments          | Additional comments or notes regarding the rejection             |
+
+### Store Rejections with Reasons
+
+Rejection reason reports provide valuable insights into rejection rates and reasons across different facilities. These reports outline the number of rejections at each facility along with the underlying reasons behind them. This allows retailers to pinpoint facilities with higher rejection rates and take targeted actions to enhance their performance.
+
+For example, if a store frequently experiences rejections due to items being out of stock, conducting cycle counts can help reconcile discrepancies between the system's available inventory and the physical stock in the store. Moreover, by identifying facilities where damaged items are more prevalent, retailers can streamline operations to mitigate such occurrences.
+
+Ultimately, the aim of these reports is to pinpoint the location and frequency of rejections and implement measures to minimize them, thereby optimizing overall store performance.
+
+#### User
+Head of eCommerce, Head of Stores, Vice President of Retail
+
+**Report Glossary**
+
+| Item                  | Item Details                                                                                       |
+|-----------------------|---------------------------------------------------------------------------------------------------|
+| Location              | The physical location or facility from which an order item was rejected.              |
+| Reason                | The reason for the rejection of an order item.                                         |
+| Shopify Order ID      | A unique identifier for an order within the Shopify platform.                                     |
+| HC Order ID           | The order ID within the system, possibly a reference to internal order management.               |
+| Style                 | The description of the style of the product.                                                      |
+| SKU                   | Stock Keeping Unit, a unique identifier for a product.                                            |
+| Product Name          | The name of the product associated with the order item.                                           |
+| ATP                   | Available-to-Promise, indicating the available inventory of a product at a particular location.   |
+| Rejected_Datetime     | The date and time when an order item was rejected.                                                |
+| NOT_FOUND              | Inventory is not found in the facility                                                            |
+| CN_FL_EO     | Entire order cannot be fulfilled from the facility                                                  |
+| REJ_RSN_DAMAGED       | Order is rejected due to unavailable inventory                                |
+| NO_VARIANCE_LOG | Order rejected without any variance so inventory won't get affected.                                            |
+
+
+
+
+
+
+
+
+
+

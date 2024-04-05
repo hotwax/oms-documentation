@@ -1,8 +1,14 @@
+---
+description: >-
+  Effortlessly manage ASN, Purchase Orders, and Returns while maintaining
+  precise inventory counts.
+---
+
 # Inventory Receiving
 
-HotWax Commerce’s Inventory Receiving App empowers stock associates to efficiently receive ASN, Purchase Orders, and Returns and update the inventory count in HotWax Commerce Order Management System.
+HotWax Commerce’s Inventory Receiving App empowers stock associates to efficiently receive ASN, Purchase Orders, and Returns and update the inventory count in the HotWax Commerce Order Management System.
 
-The Inventory Receiving App enables retailers to precisely track the physical inventory received at their locations and recording them in the system. For example, if a store anticipates 100 shirts in an incoming shipment but physically receives only 90, the app facilitates in recording exact inventory counts. This distinction is crucial as it prevents potential order rejections during fulfillment due to discrepancies in inventory levels.
+The Inventory Receiving App enables retailers to precisely track the physical inventory received at their locations and record them in the system. For example, if a store anticipates 100 shirts in an incoming shipment but physically receives only 90, the app facilitates in recording exact inventory counts. This distinction is crucial as it prevents potential order rejections during fulfillment due to discrepancies in inventory levels.
 
 Additionally, the Inventory Receiving App streamlines the receiving process by allowing store associates to efficiently enter or scan products using handheld devices like mobile phones or iPads. As a Progressive Web App (PWA), it offers flexible browser-based access or can be easily saved as an icon on store associates' devices, providing convenient one-click accessibility. This adaptability ensures a seamless and expedited inventory-receiving experience, enhancing overall operational efficiency.
 
@@ -10,7 +16,7 @@ Additionally, the Inventory Receiving App streamlines the receiving process by a
 
 **1. Locate ASN:**
 
-The first page users see when they log into the app is the `Shipments` page which houses a complete list of ASN receivied from ERP or WMS. To locate specific ASN, store associates can scan the ASN barcode from the physical copy received along with the package. Store associates can also manually input the ASN ID in the `Search` box to locate the shipment.
+The first page users see when they log into the app is the `Shipments` page which houses a complete list of ASNs received from ERP or WMS. To locate specific ASNs, store associates can scan the ASN barcode from the physical copy received along with the package. Store associates can also manually input the ASN ID in the `Search` box to locate the shipment.
 
 {% hint style="info" %}
 Store associates can log in to the Inventory Receiving App only if they are [associated with a facility.](../users/manageUser.md#add-facilities)
@@ -26,7 +32,7 @@ Once ASN is located, store associates can tap to view the `ASN details` includin
 
 **3. Locate Items:**
 
-The inbound shipments generally contain multiple product items, store associates can either scan individual product barcodes or search SKUs to locate specific items and start receiving. In case you are not managing barcodes, tap to the `image icon` to see the enlarged to easily identify the product before receiving.
+The inbound shipments generally contain multiple product items, store associates can either scan individual product barcodes or search SKUs to locate specific items and start receiving. In case you are not managing barcodes, tap on the `image icon` to see the enlarged to easily identify the product before receiving it. Users can also change their product identifiers from the settings page.
 
 {% embed url="https://youtu.be/OwVIBaKY4ds" %}
 Video: Search shipment items
@@ -38,7 +44,7 @@ Video: Scan items
 
 **4. Receive Items:**
 
-If store associates have verified that the physical inventory count matches the anticipated inventory in the ASN, they can tap on the `Receive All` button to accept the entire received inventory at once.
+If store associates have verified that the physical inventory count matches the anticipated inventory in the ASN, they can tap on the `Receive All` button to accept the entire received inventory of the product at once.
 
 {% embed url="https://youtu.be/2Cq1HfctoL0" %}
 Video: Receive all items
@@ -56,9 +62,13 @@ When receiving inventory, retailers can also select the pre-defined location in 
 Video: Location
 {% endembed %}
 
+{% hint style="info" %}
+The `Receive All` button should only be utilized if the received inventory count matches the expected inventory. HotWax Commerce does not offer a single button to receive inventory for all products, as this could result in discrepancies between the system's inventory count and the actual count. This precaution is taken because a store associate may click on the `Receive All` button without accurately counting the inventory.
+{% endhint %}
+
 **5. Save and Finalize:**
 
-Store associates need to tap on the `double checkmarks` at the bottom of the page to conclude the receiving process and update the inventory in the system. The inbound shipments are removed from the page only when inventory for all the products is received.
+Store associates must tap on the 'double checkmarks' at the bottom of the page to finalize the receiving process and update the inventory in the system. Inbound shipments are only removed from the page when inventory for all products is received. Once the shipment is saved, users cannot receive any additional products for the same shipment. Therefore, users must ensure that all inventory that could be received is indeed received, and no further inventory remains pending for the shipment.
 
 {% embed url="https://youtu.be/sNETVOLPNEU" %}
 Video: Complete shipment
@@ -68,9 +78,9 @@ Video: Complete shipment
 
 Purchase orders are buyer-generated documents detailing product specifics, quantities, and prices. Retailers use these purchase orders to order from suppliers. Upon delivery, retailers need to verify the received inventory against the purchase order, ensuring accurate shipments and inventory counts.
 
-The process of receiving purchase order is similar to [receiving inbound shipments](receiving.md#receive-asn). Store associates need to navigate to the `Purchase Orders` page and search for the `Purchase order ID` to start the receiving process.
+The process of receiving purchase orders is similar to [receiving inbound shipments](receiving.md#receive-asn). Store associates need to navigate to the `Purchase Orders` page and search for the `Purchase order ID` to start the receiving process.
 
-Store associates can also see the status of purchase orders i.e. whether they are created or approved in the `Purchase Orders` page. The comprehensive details of all the purchase orders received is also available for the store associates for future reconcilations.
+Store associates can also see the status of purchase orders i.e. whether they are created or approved on the `Purchase Orders` page. The comprehensive details of all the purchase orders received are also available for the store associates for future reconciliations.
 
 {% embed url="https://youtu.be/1WX_kG5IZYs" %}
 Video: Receiving history
@@ -80,9 +90,9 @@ Video: Receiving history
 
 ## Receive Returns
 
-Retailers who accept return at their stores need to accurately receive and record the returned inventory for potential resale on e-commerce.
+Retailers who accept returns at their stores need to accurately receive and record the returned inventory for potential resale on e-commerce.
 
-Store associates can lookup the incoming returns by navigating to the `Returns` page and identifying the returns with the `Return ID`. Store associates can receive the returned items similarly to the [inbound shipments](receiving.md#receive-asn).\\
+Store associates can lookup the incoming returns by navigating to the `Returns` page and identifying the returns with the `Return ID`. Store associates can receive the returned items similarly to the [inbound shipments](receiving.md#receive-asn).
 
 ## Handle Discrepancies:
 
@@ -94,8 +104,6 @@ HotWax Commerce facilitates the receiving of extra inventory to address this con
 
 <figure><img src="../.gitbook/assets/Excess Inventory Received.png" alt="" width="563"><figcaption><p>Receiving Extra Inventory</p></figcaption></figure>
 
-\
-\
 **Receiving Unexpected Items**
 
 At times, stores receive items that differ from the recorded shipment. This discrepancy could arise from mispicking at the warehouse or inadvertently shipping more items than intended. When stores unexpectedly receive these extra Items, they require a process to receive and record these additional items effectively.
@@ -103,5 +111,3 @@ At times, stores receive items that differ from the recorded shipment. This disc
 {% embed url="https://youtu.be/UQ4XKINQeTE" %}
 Add Shipment Item
 {% endembed %}
-
-\\

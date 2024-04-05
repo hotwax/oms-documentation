@@ -1,3 +1,9 @@
+---
+description: >-
+  Discover how to manage Shopify product types in HotWax Commerce for
+  streamlined inventory and order processing.
+---
+
 # Product Type
 
 Shopify Product Type Mapping within HotWax Commerce addresses the needs of retailers selling non-physical products like gift cards, loyalty cards, or digital goods. These products lack a physical presence, requiring a distinctive approach to inventory management and order fulfillment. HotWax Commerce automates this by marking digital products as completed upon download, eliminating the need for a traditional fulfillment process.
@@ -16,10 +22,11 @@ The significance of Shopify Product Type Mapping lies in its ability to integrat
 ## Mandatory Mapping for Product Type
 
 | Mapped Key   | Mapped Value  |
-|--------------|---------------|
+| ------------ | ------------- |
 | donation     | DONATION      |
-| Gift Cards    | GIFT_CARD  |
-| Loyalty Card | DIGITAL_GOOD  |
+| Gift Cards   | GIFT\_CARD    |
+| Loyalty Card | DIGITAL\_GOOD |
 
-{% hint style='info' %} After incorporating these mandatory mappings, please add any custom mappings as needed. 
+{% hint style="info" %}
+After incorporating these mandatory mappings, please add any custom mappings as needed.
 {% endhint %}

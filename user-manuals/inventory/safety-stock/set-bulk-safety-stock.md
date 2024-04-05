@@ -1,3 +1,9 @@
+---
+description: >-
+  Streamline stock control for multiple products across diverse facilities
+  effortlessly.
+---
+
 # Set Bulk Safety Stock
 
 The Bulk Safety Stock feature in the HotWax Commerce platform is a powerful tool that enhances users' ability to efficiently manage safety stock for multiple products across various facilities.

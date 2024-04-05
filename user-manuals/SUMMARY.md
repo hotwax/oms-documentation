@@ -1,6 +1,12 @@
 # Table of contents
 
 * [Launchpad](README.md)
+* [Glossary](GLOSSARY.md)
+
+## Business Process Models
+
+* [Order lifecycle](business-process-models/orderlifecycle.md)
+* [Store fulfillment](business-process-models/store.fulfillment.md)
 
 ## Workflow
 
@@ -9,20 +15,24 @@
   * [Job categories](job-manager/flows/job-categories.md)
   * [Job queueing](job-manager/flows/job-queueing.md)
   * [Initial load](job-manager/flows/initial-load.md)
-  * [Bulk Scheduling](job-manager/flows/bulk-scheduling.md)
+  * [Bulk scheduling](job-manager/flows/bulk-scheduling.md)
 * [Job workflows](job-workflows/README.md)
   * [Orders](job-workflows/orders.md)
   * [Inventory](job-workflows/inventory.md)
   * [Products](job-workflows/products.md)
-* [Data Manager](data-manager/README.md)
+* [Data manager](data-manager/README.md)
   * [Configurations](data-manager/configurations.md)
   * [Imports](data-manager/imports.md)
 
 ## Orders
 
 * [Order management](orders/order-management/README.md)
-  * [Reports](order-management/reports.md)
-  * [Soft allocation](order-management/soft-allocations.md)
+  * [Find Sales orders](orders/order-management/find-sales-order.md)
+  * [View Order Details](orders/order-management/view-order-details.md)
+  * [Update orders](orders/order-management/update-sales-order.md)
+  * [Allocation](orders/order-management/allocate-sales-order.md)
+  * [Soft allocation](orders/order-management/soft-allocations.md)
+  * [Reports](orders/order-management/reports.md)
 * [BOPIS Fulfillment App](bopis/README.md)
   * [Orders Page](orders/bopis/appnotifications/README.md)
     * [Notifications](orders/bopis/appnotifications/notifications.md)
@@ -40,13 +50,14 @@
   * [Rejection](fulfillment/rejection.md)
   * [Picking App](fulfillment/pickingApp.md)
   * [CSV Support](fulfillment/csvSupport.md)
+  * [Settings Page](fulfillment/fulfillment-setting-page.md)
   * [Reports](fulfillment/reports.md)
   * [Create Shipping Boxes](fulfillment/shipping-box.md)
 * [Brokering](orders/brokering/README.md)
   * [Order Routing](brokering/configurableRouting.md)
   * [Rule Builder](brokering/rule-builder.md)
   * [Reports](brokering/reports.md)
-* [Pre-orders](pre-orders/README.md)
+* [Pre-Orders](pre-orders/README.md)
   * [Purchase Order Upload](pre-orders/purchase-order-uploads.md)
   * [Purchase Order Management](pre-orders/purchase-order-management.md)
   * [Pre-order Jobs](pre-orders/pre-order-jobs.md)
@@ -59,22 +70,25 @@
   * [In-Store Returns](returns/in-store-returns.md)
   * [Restocking](returns/restock-return.md)
 
-
 ## Inventory
 
 * [Receiving](inventory/receiving/README.md)
   * [Inventory Receiving](receiving/receiving.md)
   * [Reports](receiving/reports.md)
-* [Cycle Counting](inventory/cycle-counting/README.md)
+* [Cycle counting](inventory/cycle-counting/README.md)
   * [Inventory count](inventory-count/inventory-count.md)
   * [Reports](inventory-count/reports.md)
-* [Inventory Upload](import-app/inventory.md)
-* [Safety Stock](inventory/safety-stock/README.md)
+* [Inventory upload](import-app/inventory.md)
+* [Safety stock](inventory/safety-stock/README.md)
   * [Set Bulk Safety Stock](inventory/safety-stock/set-bulk-safety-stock.md)
   * [Set Individual Safety Stock](inventory/safety-stock/set-individual-safety-stock.md)
+* [Multichannel inventory setup](inventory/multichannel-inventory-setup.md)
 
 ## Administration
 
+* [Company](administration/company/README.md)
+  * [Create Product Store](administration/company/create-product-store.md)
+  * [Manage Product Store](administration/company/manage-product-store.md)
 * [Users](users/README.md)
   * [Create Users](users/createUser.md)
   * [Manage Users](users/manageUser.md)
@@ -89,5 +103,8 @@
   * [Manage Facility Staff](facilities/manage-facility-staff.md)
   * [Manage Locations](facilities/manage-locations.md)
   * [Disabling facilities](facilities/disabling-facilities.md)
-* [Shipping Methods](administration/shipping-methods/README.md)
+  * [Manage parkings](facilities/manage-parkings.md)
+  * [Manage Groups](facilities/manage-groups.md)
+* [Shipping methods](administration/shipping-methods/README.md)
   * [Create Carrier](administration/shipping-methods/add-carrier.md)
+* [Delete customers](delete-customers.md)
