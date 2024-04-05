@@ -23,13 +23,11 @@ Only orders with approved status are eligible for fulfillment in HotWax Commerce
 
 **Order Approval Process:**
 
-In HotWax Commerce, open orders can be automatically approved by the scheduled job `Approve Orders`. This job validates orders based on the specified parameters for order approval, which may include out-of-the-box parameters provided by HotWax Commerce or custom parameters set by retailers. If an order satisfies the criteria set for auto-approval, its status is automatically updated to <mark style="color:orange;">**"Approved"**</mark><mark style="color:orange;">.</mark>
+In HotWax Commerce, open orders can be automatically approved by the scheduled job `Approve Orders`. This job validates orders based on the predefined criteria for order approval, which may include out-of-the-box criterias or custom criterias set by retailers. If an order satisfies the criteria set for auto-approval, its status is automatically updated to <mark style="color:orange;">**"Approved"**</mark><mark style="color:orange;">.</mark>
 
-For example, to approve orders, some of our clients use the Riskified App to check any fraudulent payments. In such cases, the Riskified App adds an ‘approved’ tag once all the security checks are done.
+For example, some of our customers use the Riskified App to check for fraudulent payments. If the payments are found to be non-fraudulent, orders can be auto-approved.
 
-Similarly, retailers have the flexibility to set their own set of criteria to ensure only <mark style="color:orange;">**"Approved"**</mark> orders are sent for fulfillment.
-
-If an order fails to pass the approval, it remains in the <mark style="color:orange;">**“Created”**</mark> status. Once these orders have satisfied the validation parameters, retailers have two options to approve them:
+If an order fails to pass the approval, it remains in the <mark style="color:orange;">**“Created”**</mark> status. Once these orders have satisfied the validation criterias, retailers have two options to approve them:
 
 * In the next scheduled run, the order approval job again picks orders that previously failed the approval to re-validate them, automatically marking them as <mark style="color:orange;">**"Approved"**</mark> upon successful validation.
 * Alternatively, Customer Service Representatives (CSRs) have the option to manually update the order status from <mark style="color:orange;">**"Created"**</mark> to <mark style="color:orange;">**"Approved"**</mark> to bypass the waiting period for the next job run.
@@ -71,9 +69,9 @@ After all the order items in the order are shipped, the order status is updated 
 
 ### Store Fulfillment Failure:
 
-In the event that inventory cannot be located to fulfill an order during the fulfillment process, for reasons such as items being out of stock or damaged, a store manager has the authority to reject the fulfillment of the order.
+In the event store associates do not find the inventory to fulfill the order, for reasons such as items being out of stock or damaged, a store manager has the authority to reject that order.
 
-These orders are then automatically sent to the `Rejected Queue`  so that they can be rebrokered and routed to another fulfillment location.
+These orders are then automatically sent to the `Rejected Queue`. A dedicated brokering run executes that looks at the orders present in the`Rejected Queue` and allocates inventory for them.
 
 When an order includes multiple items and inventory for one of them is unavailable for fulfillment, retailers have two options for handling the situation:
 
@@ -94,19 +92,23 @@ In the event, that a fulfillment location cannot fulfill an order that has been 
 
 ## Failed Inventory Allocation
 
-When inventory is unavailable for orders at any location, the order routing engine relocates them from the `Brokering Queue` to the `Unfillable Parking`. During the next brokering run, orders present in the `Unfillable Parking` are given priority for inventory allocation before orders in the brokering queue. This ensures that the fulfillment of these orders is prioritized to prevent further delays.
+When inventory is unavailable for orders at any location, the order routing engine moves them from the `Brokering Queue` to the `Unfillable Parking`. A dedicated brokering run executes that looks at the orders present in the `Unfillable Parking` and allocates inventory for them.
 
 ### Auto-Cancellation
 
-Given that orders in the Unfillable Parking didn't receive inventory during the initial brokering run, there's a possibility that these orders may go unallocated in future brokering runs. Therefore, retailers can specify the number of days to automatically cancel orders that could not be allocated. Throughout this period, these orders are automatically included in the brokering run and rebrokered so that inventory can be allocated for them.
+**Assigning Auto-Cancel Date**
 
-In the event an order's auto-cancellation date is reached without successful inventory allocation, it automatically gets canceled. The order status is then automatically updated from <mark style="color:orange;">**“Approved” to “Canceled”**</mark> in HotWax Commerce.
+A dedicated job in HotWax Commerce assigns an auto-cancellation date on orders present in the `Unfillable Parking`. Retailers can configure the number of days after which unfillable orders should be automatically canceled, by default the period is 7-days.
+
+**Auto-Cancellation of Unfillable Orders**
+
+A dedicated job checks if the auto-cancellation date has been reached for unfillable orders and automatically cancels them once the date is reached. The order status is then automatically updated from <mark style="color:orange;">**“Approved” to “Canceled”**</mark> in HotWax Commerce.
 
 ### Avoid Auto-Cancellation
 
-Retailers with prior knowledge of future inventory through their purchase orders can relocate these unfillable orders in bulk from  `Unfillable Parking` to the `Unfillable Hold Parking` using a CSV file. This action prevents these orders from being automatically canceled and allows them to be fulfilled in the future.
+Retailers with prior knowledge of future inventory through their purchase orders can move these unfillable orders in bulk from  `Unfillable Parking` to the `Unfillable Hold Parking` using a CSV file. This action prevents these orders from being automatically canceled and allows them to be fulfilled in the future.
 
-When the inventory arrives, retailers can include orders present in the "Unfillable Hold Parking" in their brokering run so that the order routing engine can allocate inventory for them.
+When the inventory arrives, retailers can execute a brokering run that looks at the orders present in the `Unfillable Hold Parking` and allocates inventory for them.
 
 ## Fulfillment of BOPIS Orders
 
@@ -118,11 +120,11 @@ HotWax Commerce then checks the line item property and sends the order to the cu
 
 Store associates can view BOPIS orders in their [<mark style="color:orange;">**BOPIS Fulfillment App**</mark>](../bopis/) and begin preparing the order for customer pick-up.
 
-After an order has been picked up by the customer, the order status is updated from <mark style="color:orange;">**“Approved” to “Completed”**</mark> in HotWax Commerce. A `Completed Orders` job in HotWax Commerce also marks orders as <mark style="color:orange;">**"Fulfilled" in eCommerce.**</mark>
+Once the order is packed, customer receives an email informing them that their order is ready for pickup. After an order has been picked up by the customer, the order status is updated from <mark style="color:orange;">**“Approved” to “Completed”**</mark> in HotWax Commerce. A `Completed Orders` job in HotWax Commerce also marks orders as <mark style="color:orange;">**"Fulfilled" in eCommerce.**</mark>
 
 ### BOPIS Fulfillment Failure:
 
-In the event that inventory cannot be located to fulfill a pick-up order during the fulfillment process, for reasons such as items being out of stock or damaged, a store manager has the authority to reject the fulfillment of the pick-up order. All the rejected BOPIS orders are then relocated to the `BOPIS Rejected Queue`.
+In the event store associates cannit find the inventory to fulfill a pick-up order, for reasons such as items being out of stock or damaged, a store manager has the authority to reject the pick-up order. All the rejected BOPIS orders are then moved to the `BOPIS Rejected Queue`.
 
 In this scenario, an email is automatically sent to the customer for <mark style="color:orange;">**alternative fulfillment options such as pickup from another store or home delivery**</mark>. Retailers can configure these options based on their order fulfillment strategy.
 
@@ -134,7 +136,7 @@ When customers place a Pre-Order order on eCommerce, it is downloaded in HotWax 
 
 Orders that have a pre-order tag and are assigned a promise date are automatically moved to the `Pre-Order Parking` in HotWax Commerce. This dedicated queue holds all pre-orders until their physical inventory is received. This ensures that the brokering process is not initiated for Pre-Orders that currently lack inventory but have inventory scheduled to arrive on a future date.
 
-Once the pre-order inventory arrives and the promise date is reached, a scheduled `Run Daily` Pre-Order job in HotWax Commerce automatically releases all orders from the `Pre-Order Parking` to the `Brokering Queue`.This enables inventory to be allocated to them for fulfillment.
+Once the pre-order inventory arrives and the promise date is reached, a scheduled `Auto Releasing` Pre-Order job in HotWax Commerce automatically releases all orders from the `Pre-Order Parking` to the `Brokering Queue`.This enables inventory to be allocated to them for fulfillment.
 
 In the event, retailers want control over releasing and fulfilling their Pre-Orders, they can leverage the HotWax Commerce <mark style="color:orange;">**Pre-Order Management App**</mark> to manually release Pre-Orders from the `Pre-Order Parking` to the `Brokering Queue`.
 
@@ -142,9 +144,9 @@ Learn more about [Pre-Orders Management](https://docs.hotwax.co/user-guides/orde
 
 ## Fulfillment of Backorders
 
-Similar to Pre-Orders, Backorders are processed in the same manner in HotWax Commerce. The distinction lies in the fact that orders with a backorder tag and an assigned promise date are automatically moved to the `Backorder Parking` in HotWax Commerce. The releasing and brokering process for Backorders remains unchanged.
+Similar to Pre-Orders, Backorders are processed in the same manner in HotWax Commerce. The distinction lies in the fact that orders with a backorder tag and an assigned promise date are automatically moved to the `Backorder Parking` in HotWax Commerce. The releasing and brokering process for Backorders is the same as for Pre-Orders.
 
-For Pre-Orders and Backorders, once they are present in the `Brokering Queue`, HotWax Commerce treats them as standard orders and allocates inventory for them by assigning the optimal fulfillment location.
+For Pre-Orders and Backorders, once they are moved in the `Brokering Queue`, HotWax Commerce treats them as standard orders and allocates inventory for them by assigning the optimal fulfillment location.
 
 ## Order Cancellations
 
@@ -158,7 +160,7 @@ A dedicated job `Canceled Items` in HotWax Commerce downloads order cancellation
 
 **For orders in the "Created" status:**
 
-These are orders for which fulfillment has not yet commenced in HotWax Commerce. Once all canceled orders are downloaded, HotWax Commerce processes the file to verify the order IDs of the canceled orders and updates their status from <mark style="color:orange;">**"Created" to "Canceled".**</mark>
+These are orders for which fulfillment has not yet commenced in HotWax Commerce. Once all canceled orders are downloaded from eCommerce, HotWax Commerce processes the file to verify the order IDs of the canceled orders and updates their status from <mark style="color:orange;">**"Created" to "Canceled".**</mark>
 
 **For orders in the "Approved" status:**
 
@@ -166,6 +168,6 @@ These are orders for which fulfillment has commenced in HotWax Commerce but they
 
 If an approved order has been allocated to the store, HotWax Commerce also automatically rejects it in the Store Fulfillment App.
 
-Now, let's explore what happens when orders are canceled in HotWax Commerce:
+**Orders canceled in HotWax Commerce:**
 
 Similar to order cancellations initiated on the eCommerce platform, in HotWax Commerce, orders can be canceled whether they are in the "Created" or "Approved" status, provided that the order has not yet been shipped. When an order is canceled, its status is updated from <mark style="color:orange;">**"Created" to "Canceled"**</mark> or from <mark style="color:orange;">**"Approved" to "Canceled,"**</mark> depending on the current stage of the order.
