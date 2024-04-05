@@ -1,10 +1,18 @@
-# Login for the first time
+---
+description: >-
+  After the instance is online, you'll be prompted to login. All instances are
+  deployed with a default user. For security reasons the default user is not
+  documented here.
+---
 
-After the instance is online, you'll be prompted to login. All instances are deployed with a default user.
-For security reasons the default user is not documented here.
+# Initial login
+
+
 
 {% hint style="danger" %}
-    After subsequent users are created, this default user should be disabled.
+```
+After subsequent users are created, this default user should be disabled.
+```
 {% endhint %}
 
 Because it's your first time login, you'll be prompted to reset your password.

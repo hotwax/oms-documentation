@@ -1,3 +1,10 @@
+---
+description: >-
+  Gain a clear understanding of your presell catalog with HC's Audit feature,
+  allowing you to track the status of pre-orders and back orders, and confirm
+  listed items on the eCommerce platform.
+---
+
 # Audit
 
 Merchandisers need a clear picture of their presell catalog to understand the status of pre-orders and back orders. This helps them figure out when these pre-orders will show up on Shopify. This overview also lets them check and confirm listed items, even after they're on the e-commerce platform.

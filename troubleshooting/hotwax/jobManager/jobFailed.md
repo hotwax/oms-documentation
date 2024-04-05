@@ -1,4 +1,10 @@
-# Scheduled Job Failed
+---
+description: >-
+  Learn how to troubleshoot failed job issues in the HotWax Commerce Job Manager
+  app.
+---
+
+# Job Failed
 
 You scheduled a job, but it failed. This issue often occurs when the configuration data in the OMS is incorrect.
 

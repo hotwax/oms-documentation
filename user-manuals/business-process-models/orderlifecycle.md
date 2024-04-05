@@ -1,15 +1,13 @@
 ---
 description: >-
-  The Order Lifecycle Process Model illustrates how HotWax Commerce orchestrates
-  the journey of an order from creation to approval, routing, and fulfillment,
+  The Order Lifecycle BPM illustrates how HotWax Commerce orchestrates the
+  journey of an order from creation to approval, routing, and fulfillment,
   ensuring accuracy at every stage.
 ---
 
 # Order lifecycle
 
-<figure><img src="../.gitbook/assets/order life cycle bpm.png" alt=""><figcaption><p>Order lifecycle business process model</p></figcaption></figure>
-
-<figure><img src="../.gitbook/assets/notations.png" alt=""><figcaption><p>Notations</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/order life cycle bpm (1).png" alt=""><figcaption><p>Order lifecycle business process model</p></figcaption></figure>
 
 ## Order Creation
 
@@ -20,7 +18,7 @@ In HotWax Commerce there’s a dedicated `Import Orders` job that downloads new 
 {% hint style="info" %}
 **Why is order approval necessary?**
 
-Only orders with approved status are eligible for fulfillment in HotWax Commerce and orders without approval remain in the "Created" status.
+Only orders with approved status are eligible for fulfillment in HotWax Commerce and orders without approval remain in the <mark style="color:orange;">**"Created"**</mark> status.
 {% endhint %}
 
 **Order Approval Process:**
@@ -29,12 +27,12 @@ In HotWax Commerce, open orders can be automatically approved by the scheduled j
 
 For example, to approve orders, some of our clients use the Riskified App to check any fraudulent payments. In such cases, the Riskified App adds an ‘approved’ tag once all the security checks are done.
 
-Similarly, retailers have the flexibility to set their own set of criteria to ensure only "Approved" orders are sent for fulfillment.
+Similarly, retailers have the flexibility to set their own set of criteria to ensure only <mark style="color:orange;">**"Approved"**</mark> orders are sent for fulfillment.
 
-If an order fails to pass the approval, it remains in the “Created” status. Once these orders have satisfied the validation parameters, retailers have two options to mark them as "Approved":
+If an order fails to pass the approval, it remains in the <mark style="color:orange;">**“Created”**</mark> status. Once these orders have satisfied the validation parameters, retailers have two options to approve them:
 
-* In the next scheduled run, the order approval job again picks orders that previously failed the approval to re-validate them, automatically marking them as "Approved" upon successful validation.
-* Alternatively, Customer Service Representatives (CSRs) have the option to manually update the order status from "Created" to "Approved" to bypass the waiting period for the next job run.
+* In the next scheduled run, the order approval job again picks orders that previously failed the approval to re-validate them, automatically marking them as <mark style="color:orange;">**"Approved"**</mark> upon successful validation.
+* Alternatively, Customer Service Representatives (CSRs) have the option to manually update the order status from <mark style="color:orange;">**"Created"**</mark> to <mark style="color:orange;">**"Approved"**</mark> to bypass the waiting period for the next job run.
 
 ## Check Order Type
 
@@ -75,7 +73,7 @@ After all the order items in the order are shipped, the order status is updated 
 
 In the event that inventory cannot be located to fulfill an order during the fulfillment process, for reasons such as items being out of stock or damaged, a store manager has the authority to reject the fulfillment of the order.
 
-These orders are then automatically sent to the brokering queue so that they can be rebrokered and routed to another fulfillment location.
+These orders are then automatically sent to the `Rejected Queue`  so that they can be rebrokered and routed to another fulfillment location.
 
 When an order includes multiple items and inventory for one of them is unavailable for fulfillment, retailers have two options for handling the situation:
 
@@ -96,7 +94,7 @@ In the event, that a fulfillment location cannot fulfill an order that has been 
 
 ## Failed Inventory Allocation
 
-When inventory is unavailable for orders at any location, the order routing engine relocates them from the `Brokering Queue` to the `Unfillable Parking`.During the next brokering run, orders present in the `Unfillable Parking` are given priority for inventory allocation before orders in the brokering queue. This ensures that the fulfillment of these orders is prioritized to prevent further delays.
+When inventory is unavailable for orders at any location, the order routing engine relocates them from the `Brokering Queue` to the `Unfillable Parking`. During the next brokering run, orders present in the `Unfillable Parking` are given priority for inventory allocation before orders in the brokering queue. This ensures that the fulfillment of these orders is prioritized to prevent further delays.
 
 ### Auto-Cancellation
 
@@ -118,7 +116,7 @@ HotWax Commerce then checks the line item property and sends the order to the cu
 
 ### BOPIS Fulfillment Success and Order Completion:
 
-Store associates can view BOPIS orders in their <mark style="color:orange;">**BOPIS Fulfillment App**</mark> and begin preparing the order for customer pick-up.
+Store associates can view BOPIS orders in their [<mark style="color:orange;">**BOPIS Fulfillment App**</mark>](../bopis/) and begin preparing the order for customer pick-up.
 
 After an order has been picked up by the customer, the order status is updated from <mark style="color:orange;">**“Approved” to “Completed”**</mark> in HotWax Commerce. A `Completed Orders` job in HotWax Commerce also marks orders as <mark style="color:orange;">**"Fulfilled" in eCommerce.**</mark>
 

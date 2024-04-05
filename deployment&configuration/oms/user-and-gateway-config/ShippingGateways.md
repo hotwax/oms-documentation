@@ -1,3 +1,10 @@
+---
+description: >-
+  Learn how to set up shipping gateways in HotWax Commerce to integrate with
+  Third-Party Logistics companies (Carriers) for efficient fulfillment of online
+  orders.
+---
+
 # Shipping gateways
 
 ### Introduction
@@ -53,7 +60,7 @@ During the fulfillment process, as packers prepare packages and request shipping
 * **Shipment Method Type** - Choose the Shipping Method that you want to add.
 * **Carrier Service Code** - "The 'Carrier Service Code' serves as a unique identifier for a specific shipping method offered by a carrier, such as FedEx. Shipping Gateways utilize this distinctive code to identify and distinguish various shipping methods. When you enter this code in the designated field, you are essentially mapping the shipping methods from HotWax Commerce to the corresponding services provided by the Shipping Gateway.
 
-&#x20;      In essence, the 'Carrier Service Code' facilitates seamless communication between HotWax Commerce and the Shipping Gateway, ensuring accurate alignment of shipping methods for streamlined order fulfillment. Here are quick links to USPS and FEDEX service code for reference: [FedEx](https://www.google.com/url?sa=j&url=https%3A%2F%2Fdeveloper.fedex.com%2Fapi%2Fen-us%2Fguides%2Fapi-reference.html%23servicetypes&uct=1689741491&usg=scWBo6V4MkfoIZm4C8msbxS0lxQ.&opi=73833047&source=chat) and [UPS](https://www.ups.com/worldshiphelp/WSA/ENG/AppHelp/mergedProjects/CORE/Codes/UPS_Service_Codes.htm)
+In essence, the 'Carrier Service Code' facilitates seamless communication between HotWax Commerce and the Shipping Gateway, ensuring accurate alignment of shipping methods for streamlined order fulfillment. Here are quick links to USPS and FEDEX service code for reference: [FedEx](https://www.google.com/url?sa=j\&url=https%3A%2F%2Fdeveloper.fedex.com%2Fapi%2Fen-us%2Fguides%2Fapi-reference.html%23servicetypes\&uct=1689741491\&usg=scWBo6V4MkfoIZm4C8msbxS0lxQ.\&opi=73833047\&source=chat) and [UPS](https://www.ups.com/worldshiphelp/WSA/ENG/AppHelp/mergedProjects/CORE/Codes/UPS\_Service\_Codes.htm)
 
 * **Delivery Days** - The 'Delivery Days' field represents the number of days committed by shipping methods for order delivery. This information is crucial for the HotWax Commerce Store Fulfillment App, particularly during the rate shopping process before obtaining shipping labels. The 'Delivery Days' field guides the app in shortlisting shipping methods eligible for rate shopping based on the specified delivery timeframe.
 
@@ -95,6 +102,3 @@ In HotWax Commerce, the ability to add shipping carriers to facilities is essent
 3. In the pop-up box, enter the name of the facility where you want to add the carrier
 4. Once you've entered the facility name, click on the `Add` button to confirm and add the respective carrier to that facility.
 5. If needed, you can remove the association between a carrier and a facility by clicking on the `Delete` icon in the last column.
-
-
-

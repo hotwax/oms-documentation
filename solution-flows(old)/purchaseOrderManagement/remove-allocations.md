@@ -12,8 +12,6 @@ _**This document outlines a step-by-step process for removing allocations in the
 4. Select items to remove
 5. Click remove allocations.
 
-
-
 {% embed url="https://youtu.be/XWbW_jeiZYM" %}
 Video: Remove Allocations
 {% endembed %}
@@ -23,7 +21,5 @@ Video: Remove Allocations
 1. [Purchase Order View page](http://127.0.0.1:5000/s/oLmQzGATywYkwiU9sCat/procurement/purchase-order)
 2. [Purchase Order Detail page](http://127.0.0.1:5000/s/oLmQzGATywYkwiU9sCat/procurement/purchase-order-view-page)
 3. [Remove allocation](broken-reference)
-
-
 
 :arrow\_left: [Go to HotWax Commerce Docs](broken-reference)

@@ -1,3 +1,9 @@
+---
+description: >-
+  Discover how to manage uploaded purchase orders in HotWax Commerce, including
+  viewing, editing, making changes, or canceling purchase orders.
+---
+
 # Purchase Order Management
 
 Once the Purchase order has successfully been uploaded to HotWax Commerce, Merchandisers can view the purchase orders via the `Find Purchase Order` Page. This can be done by clicking on `Procurement` > `Purchase Orders` from the HotWax Commerce’s Hamburger menu.

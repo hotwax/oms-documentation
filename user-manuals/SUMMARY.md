@@ -5,8 +5,9 @@
 
 ## Business Process Models
 
+* [Introduction](business-process-models/README.md)
 * [Order lifecycle](business-process-models/orderlifecycle.md)
-* [Store fulfillment](business-process-models/store.fulfillment.md)
+* [Store fulfillment lifecycle](business-process-models/store.fulfillment.md)
 
 ## Workflow
 
@@ -72,6 +73,10 @@
 
 ## Inventory
 
+* [Inventory Mangaemnet](inventory/inventory-management/README.md)
+  * [Find Product Inventory](inventory/inventory-management/find-product-inventory.md)
+  * [Product Inventory View Page](inventory/inventory-management/product-inventory-view.md)
+  * [Inventory Configurations](inventory/inventory-management/inventory-configurations.md)
 * [Receiving](inventory/receiving/README.md)
   * [Inventory Receiving](receiving/receiving.md)
   * [Reports](receiving/reports.md)
@@ -108,3 +113,7 @@
 * [Shipping methods](administration/shipping-methods/README.md)
   * [Create Carrier](administration/shipping-methods/add-carrier.md)
 * [Delete customers](delete-customers.md)
+
+## How-to documents
+
+* [Add shipping method](how-to/add-shipping-method.md)

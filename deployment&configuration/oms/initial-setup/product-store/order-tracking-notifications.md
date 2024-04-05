@@ -1,8 +1,16 @@
-# Order Tracking Notification Settings for Product Store
+---
+description: >-
+  Discover how Fulfillment Notifications feature in HotWax Commerce update
+  tracking information on Shopify, ensuring customers receive timely order
+  updates.
+---
+
+# Order Tracking Notification
 
 The `Fulfillment Notifications` feature in HotWax Commerce streamlines the order fulfillment process by updating tracking information on Shopify. By utilizing the `Fulfillment Notifications` settings, retailers can ensure that their customers receive timely and accurate updates on the progress of their orders through Shopify's established notification system.
 
 ## Step-by-Step Usage Instructions:
+
 1. Login to HotWax Commerce using your credentials.
 2. Access the settings by clicking on the Hamburger menu, then select `Settings` and navigate to `Stores`.
 3. Identify and click on the `store` for which you want to configure Fulfillment Notifications. This directs you to the `View Store` page.

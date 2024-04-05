@@ -1,6 +1,12 @@
+---
+description: >-
+  In HotWax Commerce, a Product Store serves as a representation of a company or
+  brand, particularly useful for retailers managing multiple brands.
+---
+
 # Configure Product Store
 
-In HotWax Commerce, a Product Store serves as a representation of a company or brand, particularly useful for retailers managing multiple brands.
+
 
 ## Configuration Steps:
 
@@ -46,7 +52,7 @@ In HotWax Commerce, a Product Store serves as a representation of a company or b
 
 To configure pre-order settings for a specific store, follow these steps:
 
-1. Visit the Product Store: [https://.hotwax.io/commerce/control/ViewStore?productStoreId=STORE](https:/%3CinstanceName%3E.hotwax.io/commerce/control/ViewStore)
+1. Visit the Product Store: [https://.hotwax.io/commerce/control/ViewStore?productStoreId=STORE](https:/%3CinstanceName%3E.hotwax.io/commerce/control/ViewStore/)
 2. Navigate to `Store Settings` and click on `Add Function` to access additional settings for pre-orders.
 3. Select `HOLD_PRORD_PHYCL_INV`. For more information, refer to the documentation [here](https://github.com/hotwax/press-release-faq/blob/main/pre-order/hold-pre-order-physical-inventory.md).
 4. Set the value to `true` or `false` based on your pre-order requirements.

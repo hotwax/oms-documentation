@@ -1,6 +1,13 @@
-# Creating Roles for Dashboard Access
+---
+description: >-
+  Roles define access levels, ensuring that users with specific roles can view
+  tailored dashboards containing multiple charts designed for them, directly in
+  Tathya.
+---
 
-Roles define access levels, ensuring that users with specific roles can view tailored dashboards containing multiple charts designed for them, directly in Tathya.
+# Creating Roles
+
+
 
 ## Why Create Roles?
 

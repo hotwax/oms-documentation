@@ -1,27 +1,32 @@
-## View Data Provenance
+---
+description: >-
+  Discover how NiFi's Data Provenance feature enables users to monitor,
+  troubleshoot, and optimize dataflows by tracking the journey of data objects
+  in real-time.
+---
+
+# Data Provenance
+
+### View Data Provenance
 
 NiFi's Data Provenance feature is a critical tool for users involved in monitoring and troubleshooting dataflows. It provides detailed information about the journey of data objects (FlowFiles) as they move through the system, enabling users to track, analyze, and understand data transformations, routing decisions, and processing events in real-time. By offering insights into data lineage, event details, and attribute modifications, Data Provenance empowers users to ensure dataflow compliance, optimize performance, and swiftly identify and resolve issues.
 
-### Step-by-Step Usage Instructions:
+#### Step-by-Step Usage Instructions:
 
 1. **Access Data Provenance Page:**
-   - Right-click on the desired dataflow within the NiFi interface.
-   - Select the `View Data Provenance` option from the menu.
-   
+   * Right-click on the desired dataflow within the NiFi interface.
+   * Select the `View Data Provenance` option from the menu.
 2. **Explore Data Provenance Information:**
-   - In the Data Provenance dialog window, review the most recent Data Provenance information available.
-   - Utilize search and filter options to locate specific items or events within the dataflow.
-   
+   * In the Data Provenance dialog window, review the most recent Data Provenance information available.
+   * Utilize search and filter options to locate specific items or events within the dataflow.
 3. **View Event Details:**
-   - Click the `View Details` icon (i) for each event to open a dialog window with three tabs: Details, Attributes, and Content.
-   - Review event details on the Details tab, including event type, timestamp, component, and associated FlowFile UUIDs.
-   
+   * Click the `View Details` icon (i) for each event to open a dialog window with three tabs: Details, Attributes, and Content.
+   * Review event details on the Details tab, including event type, timestamp, component, and associated FlowFile UUIDs.
 4. **Analyze Attributes:**
+   * Navigate to the Attributes tab to view the attributes present on the FlowFile at the time of the event.
+   * Optionally, select the `Only show modified` checkbox to display only the attributes that were modified as a result of the processing event.
 
-   - Navigate to the Attributes tab to view the attributes present on the FlowFile at the time of the event.
-   - Optionally, select the `Only show modified` checkbox to display only the attributes that were modified as a result of the processing event.
-
-## Replay FlowFiles
+### Replay FlowFiles
 
 Replaying FlowFiles within NiFi is a crucial feature that empowers users to inspect, troubleshoot, and validate data processing within their workflows. Whether it's verifying the correctness of data transformations or testing configuration changes, the ability to replay FlowFiles provides users with a powerful tool for ensuring the reliability and efficiency of their dataflow.
 

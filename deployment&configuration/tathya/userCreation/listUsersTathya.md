@@ -1,6 +1,12 @@
+---
+description: >-
+  Once the access is granted, the user is automatically listed in Tathya and by
+  default gets assigned a “public” role.
+---
+
 # Listing User in Tathya
 
-Once the access is granted, the user is automatically listed in Tathya and by default gets assigned a “public” role.
+
 
 {% hint style="danger" %}
 The user's account is not yet fully configured. The auto-assigned public role does not give the required access to view charts or dashboards. To grant access, you have to assign the necessary roles and permissions to the user's account.

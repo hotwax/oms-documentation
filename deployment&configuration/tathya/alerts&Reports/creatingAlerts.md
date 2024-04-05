@@ -1,4 +1,10 @@
-# How to Create an Alert
+---
+description: >-
+  Learn how to create alerts in Tathya to stay informed about important data
+  changes and trends.
+---
+
+# Creating Alerts
 
 On the Alerts interface, select `+ Alert` to create a new alert.
 
@@ -7,7 +13,6 @@ The Add Alert window appears.
 ## Basic Details
 
 1. In the **Alert Name** field (required), enter a name for your new alert.This will also serve as the subject of the email.
-
 2. In the **Owner's** field (required), select one or more owners for the alert. Owners have the ability to edit an alert and are notified in case of any execution failures.
 3. In the **Description** (optional) field, enter a short but meaningful description of the alert, to be included in the alert message.
 
@@ -37,21 +42,17 @@ Alternatively, you can also directly enter a CRON expression by selecting the se
 A CRON expression is a string representing a schedule. It is used to define the timing of recurring tasks or jobs in systems where periodic execution of tasks is required.
 {% endhint %}
 
-The basic structure of a CRON expression consists of five fields, representing minute, hour, day of the month, month, and day of the week. Each field can have a specific value or a wildcard (*) to represent any possible value. Here's the general format:
+The basic structure of a CRON expression consists of five fields, representing minute, hour, day of the month, month, and day of the week. Each field can have a specific value or a wildcard (\*) to represent any possible value. Here's the general format:
 
-* * * * *
-| | | | |
-| | | | +----- Day of the week (0 - 6) (Sunday is both 0 and 7)
-| | | +------- Month (1 - 12)
-| | +--------- Day of the month (1 - 31)
-| +----------- Hour (0 - 23)
-+------------- Minute (0 - 59)
+***
+
+\| | | | | | | | | +----- Day of the week (0 - 6) (Sunday is both 0 and 7) | | | +------- Month (1 - 12) | | +--------- Day of the month (1 - 31) | +----------- Hour (0 - 23) +------------- Minute (0 - 59)
 
 ### For example:
 
-- `0 0 * * *`: Check data at midnight every day.
-- `*/15 * * * *`: Check data every 15 minutes.
-- `0 2 * * 1-5`: Check data at 2:00 AM every weekday (Monday to Friday).
+* `0 0 * * *`: Check data at midnight every day.
+* `*/15 * * * *`: Check data every 15 minutes.
+* `0 2 * * 1-5`: Check data at 2:00 AM every weekday (Monday to Friday).
 
 ## Select Timezone
 
@@ -67,8 +68,8 @@ In the **Timezone** field, select the drop-down menu and choose your timezone.
 
 In the **Message Content** section, select either the **Dashboard** or **Chart** radio button. Then, in the drop-down field, select the relevant dashboard or chart, a custom link will be prepared and sent based on the defined notification method.
 
-- **Screenshot Width:** An optional parameter that allows you to customize the width (in pixels) for your alert dashboard/chart screenshot.
-- **Ignore cache when generating screenshot:** Checkbox to produce real-time data (invalidating cache).
+* **Screenshot Width:** An optional parameter that allows you to customize the width (in pixels) for your alert dashboard/chart screenshot.
+* **Ignore cache when generating screenshot:** Checkbox to produce real-time data (invalidating cache).
 
 ## Notification Method
 
