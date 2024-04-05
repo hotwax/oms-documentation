@@ -1,7 +1,8 @@
 ---
 description: >-
-  Introducing Create Product Store Page to add new product stores and define
-  product store settings without any external support.
+  Introducing the Create Product Store Page, allowing users to add new product
+  stores and configure their settings independently, without requiring external
+  support.
 ---
 
 # Introducing Create Product Store Page

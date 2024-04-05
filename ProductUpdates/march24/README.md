@@ -1,6 +1,6 @@
 ---
 description: >-
-  Discover our March updates include a Transfer Order page to fulfill transfer
+  In March, HotWax Commerce added a Transfer Order page for fulfilling transfer
   orders, customizable rejection reasons, and a Permissions Tab for managing
   security groups and user permissions.
 ---

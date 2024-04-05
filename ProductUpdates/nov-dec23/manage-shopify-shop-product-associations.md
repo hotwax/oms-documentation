@@ -1,6 +1,6 @@
 ---
 description: >-
-  Retailers can now directly manage product associations between Shopify Shops
+  Retailers can now manage product associations between Shopify shops directly
   from the View Products page.
 ---
 
@@ -16,4 +16,4 @@ With the latest update, HotWax Commerce allows retailers to manually manage prod
 
 This enhancement not only offers retailers greater control but also mitigates errors in product associations, enhancing overall operational efficiency within HotWax Commerce.
 
-\
+\\

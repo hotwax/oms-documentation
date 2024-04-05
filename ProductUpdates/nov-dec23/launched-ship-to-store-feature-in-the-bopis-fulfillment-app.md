@@ -1,8 +1,8 @@
 ---
 description: >-
-  The BOPIS Fulfillment App now includes a new feature called "Ship to Store,"
-  allowing retailers to offer store pickup at later date for products that are
-  out-of-stock at the customer’s preferred store
+  The BOPIS Fulfillment App introduces "Ship to Store," enabling retailers to
+  provide store pickup for products unavailable at the customer's chosen
+  location on a later date.
 ---
 
 # Launched Ship to Store feature in the BOPIS Fulfillment App

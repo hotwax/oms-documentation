@@ -1,14 +1,14 @@
 ---
 description: >-
-  HotWax Commerce is now compatible with the new Shopify Fulfillment Orders
-  APIs.
+  HotWax Commerce has been updated to seamlessly integrate with the latest
+  Shopify Fulfillment Orders APIs.
 ---
 
 # Support for new Shopify Fulfillment Orders API
 
 <figure><img src="https://www.hotwax.co/hubfs/PU%202%20-%20Support%20for%20new%20Shopify%20Fulfillment%20Orders%20API.png" alt=""><figcaption></figcaption></figure>
 
-In order to support modern workflows, improve compatibility with third party systems, and enhance its performance, Shopify deprecated its old fulfillment API and introduced the new [Fulfillment Orders API](https://www.shopify.com/in/partners/blog/shopify-fulfillment-orders-api).&#x20;
+In order to support modern workflows, improve compatibility with third party systems, and enhance its performance, Shopify deprecated its old fulfillment API and introduced the new [Fulfillment Orders API](https://www.shopify.com/in/partners/blog/shopify-fulfillment-orders-api).
 
 With Shopify’s new Fulfillment Orders API, Order Management Systems and 3PLs can communicate more accurate fulfillment data on an order item and shipment level. This API helps apps model the entire fulfillment process more accurately, easily implement new features like local delivery & pickup, order splitting, fulfillment holds, subscriptions and more. Simply put: Omnichannel retailers get a more granular and complete view of order fulfillment data on a line item level in Shopify, when they are fulfilled from multiple locations.
 

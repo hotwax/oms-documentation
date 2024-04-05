@@ -1,15 +1,13 @@
 ---
 description: >-
-  Launched a Pre-order catalog dashboard that helps merchandisers get a
-  consolidated view of all items in pre-order, Purchase orders of pre-order
-  items, on-hand inventory, and jobs.
+  Introduced a new Pre-order catalog dashboard, providing merchandisers with a
+  unified overview of pre-order items, purchase orders for pre-order items,
+  available inventory, and ongoing tasks.
 ---
 
 # Centralized page for auditing Pre-Order catalog
 
 <figure><img src="https://www.hotwax.co/hubfs/Product%20Updates%20and%20Release%20Notes/2023/July%202023/Feature%20Image/PU%203%20-Centralized%20page%20for%20auditing%20Pre-Order%20catalog.png" alt=""><figcaption></figcaption></figure>
-
-&#x20;
 
 With HotWax Commerce, retailers can utilize their upcoming inventory on Purchase Orders to offer Pre-Order options for their products. When a product is deemed suitable for Pre-Order, it will automatically start accepting Pre-Orders across all Shopify stores where it is sold. The assessment of a product's eligibility for Pre-Order is a complex, automated process. While keeping an eye on Pre-Orders, merchants may need to check multiple data points to confirm if a product has been approved for Pre-Orders and is actively accepting them on their store.
 

@@ -1,8 +1,8 @@
 ---
 description: >-
-  Introduced General Settings page for retailers to set up default company
-  configurations, manage FTP connections, define date formats, and handle
-  shipping methods along with box sizes.
+  Established a General Settings page for retailers to customize company
+  defaults, oversee FTP connections, select date formats, and control shipping
+  methods and box dimensions.
 ---
 
 # Added a New General Settings Page
@@ -11,7 +11,7 @@ description: >-
 
 When setting up HotWax Commerce, crucial details like eCommerce connections, carrier integrations, and shipping methods are important for seamless operations. While these are initially configured during setup, the need for subsequent changes often arises. However, the lack of flexibility in making these adjustments without technical assistance became a hindrance for the retailers as they had to depend on the HotWax Commerce development team.
 
-Retailers faced constraints when wanting to modify established settings, such as changing their FTP connection settings or adding additional shipping methods, without having direct control.&#x20;
+Retailers faced constraints when wanting to modify established settings, such as changing their FTP connection settings or adding additional shipping methods, without having direct control.
 
 To empower retailers with autonomy in managing their HotWax Commerce configurations, we introduced the General Settings page. This comprehensive page enables retailers to:
 
@@ -24,7 +24,6 @@ To empower retailers with autonomy in managing their HotWax Commerce configurati
 
 This update grants retailers control over HotWax Commerce configurations. With the flexibility to modify settings independently, retailers can seamlessly manage and overview operations without constant reliance on development teams.
 
-\
+\\
 
-
-\
+\\

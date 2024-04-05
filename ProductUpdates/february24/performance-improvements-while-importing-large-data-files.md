@@ -1,7 +1,8 @@
 ---
 description: >-
-  HotWax Commerce now imports inventory reset files sequentially from the SFTP
-  location, resulting in better CPU utilization, stability, and performance.
+  HotWax Commerce's improvement includes sequentially importing inventory reset
+  files from the SFTP location, resulting in enhanced CPU utilization,
+  stability, and performance.
 ---
 
 # Performance Improvements While Importing Large Data Files

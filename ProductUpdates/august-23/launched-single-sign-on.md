@@ -1,5 +1,5 @@
 ---
-description: SAML-based Single Sign On feature is now supported in HotWax Commerce.
+description: HotWax Commerce now supports the SAML-based Single Sign-On feature.
 ---
 
 # Launched Single Sign On

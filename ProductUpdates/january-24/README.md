@@ -1,7 +1,7 @@
 ---
 description: >-
-  HotWax Commerce's January updates feature the newly added Facility Groups page
-  and the new Order Routing App.
+  In January, HotWax Commerce introduced the Facility Groups page and the Order
+  Routing App as part of its updates.
 ---
 
 # January'24

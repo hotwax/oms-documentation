@@ -1,7 +1,8 @@
 ---
 description: >-
-  Retailers can now configure fulfillment options for rejected BOPIS orders in
-  email notifications, providing flexibility in handling these cases.
+  Retailers now have the ability to customize fulfillment choices for declined
+  BOPIS orders in email notifications, offering versatility in managing such
+  scenarios.
 ---
 
 # Configure BOPIS Rejection Email

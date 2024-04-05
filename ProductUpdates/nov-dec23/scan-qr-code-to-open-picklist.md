@@ -1,7 +1,7 @@
 ---
 description: >-
-  Pickers can now effortlessly scan QR codes in the Fulfillment app, instantly
-  accessing their respective picklists in the picking app.
+  Now, pickers can swiftly scan QR codes within the Fulfillment app, gaining
+  instant access to their assigned picklists on the picking application.
 ---
 
 # Scan QR Code to open Picklist

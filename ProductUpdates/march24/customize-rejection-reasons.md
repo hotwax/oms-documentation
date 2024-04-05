@@ -1,7 +1,7 @@
 ---
 description: >-
-  Learn how can retailers customize the rejection reasons they provide to store
-  managers and decide how these reasons will affect their store's ATP inventory.
+  Retailers can customize rejection reasons for store managers and control how
+  these reasons impact their store's ATP inventory.
 ---
 
 # Customize Rejection Reasons

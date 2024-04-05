@@ -1,14 +1,12 @@
 ---
 description: >-
-  Launched a new version of the Store Fulfillment App for improved user
-  experience.
+  A revamped edition of the Store Fulfillment App has been released to enhance
+  user experience.
 ---
 
 # Launched New Version of the Store Fulfillment App
 
 <figure><img src="https://www.hotwax.co/hubfs/Product%20Updates%20and%20Release%20Notes/2023/July%202023/Feature%20Image/PU%204%20-%20Launched%20New%20Store%20Fulfillment%20App.png" alt=""><figcaption></figcaption></figure>
-
-&#x20;
 
 HotWax Commerce has launched a completely redesigned Store Fulfillment App, built on modern Progressive Web App (PWA) technologies that delivers a faster and more responsive experience for customers.
 

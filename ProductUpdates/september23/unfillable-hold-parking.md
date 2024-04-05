@@ -1,7 +1,7 @@
 ---
 description: >-
-  Introduced a new parking queue called "unfillable hold parking” to park orders
-  that cannot be fulfilled immediately however they can be fulfilled at a future
+  A new "unfillable hold parking" queue is introduced to temporarily store
+  orders that cannot be immediately fulfilled but can be fulfilled at a later
   date.
 ---
 
@@ -9,7 +9,7 @@ description: >-
 
 <figure><img src="https://www.hotwax.co/hubfs/Unfillable%20Hold%20Queue.png" alt=""><figcaption><p>Unfillable Hold Parking</p></figcaption></figure>
 
-HotWax Commerce has introduced a feature in the past that automatically assigns an auto-cancel date to all unfulfilled orders. This feature ensures that if inventory is not allocated to an order within seven days, the corresponding order will be automatically canceled, preventing customers from awaiting orders that might never be delivered.&#x20;
+HotWax Commerce has introduced a feature in the past that automatically assigns an auto-cancel date to all unfulfilled orders. This feature ensures that if inventory is not allocated to an order within seven days, the corresponding order will be automatically canceled, preventing customers from awaiting orders that might never be delivered.
 
 However, there are instances where merchandisers have prior knowledge of upcoming inventory through their purchase orders. This advanced knowledge can be leveraged to fulfill orders at a subsequent date, thereby retaining sales and satisfying customer demands. Previously, in such scenarios, merchandisers were required to manually remove the auto-cancel date to ensure the fulfillment of orders upon inventory replenishment.
 

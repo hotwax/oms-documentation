@@ -1,3 +1,9 @@
+---
+description: >-
+  HotWax Commerce's August update features SAML-based Single Sign-On support and
+  customizable job parameters for tailored business needs.
+---
+
 # August'23
 
 ## Order Management System
@@ -38,7 +44,7 @@ Retailers can now import Sales orders using CSV files.
 
 ## Applications
 
-**1. User Authentication: Launched Single Sign On&#x20;**
+**1. User Authentication: Launched Single Sign On**
 
 SAML based Single Sign On feature is now supported in HotWax Commerce.
 

@@ -1,8 +1,8 @@
 ---
 description: >-
-  Introduced a new dedicated page for seamless shipping carrier setup within
-  HotWax Commerce to facilitate integration between HotWax Commerce and shipping
-  carriers.
+  Implemented a specialized page to streamline shipping carrier setup within
+  HotWax Commerce, facilitating seamless integration between the platform and
+  shipping carriers.
 ---
 
 # Added a new Page to Setup Shipping Carriers

@@ -1,16 +1,21 @@
+---
+description: >-
+  HotWax Commerce's November-December updates included multiple Configuration
+  pages for user autonomy and a new facility management app for seamless online
+  fulfillment from facilities.
+---
+
 # Nov-Dec'23
 
 ## Order Management System
 
 1. **General: Added a new General Settings Page**
 
-Introduced General Settings page for retailers to set up default company details, manage FTP connections, define date formats, and handle shipping methods along with box sizes.&#x20;
+Introduced General Settings page for retailers to set up default company details, manage FTP connections, define date formats, and handle shipping methods along with box sizes.
 
 [Read update](added-a-new-general-settings-page.md)
 
 <figure><img src="https://www.hotwax.co/hubfs/Nov-Dec%202023%20PU/General%20Settings.png" alt=""><figcaption><p>General Settings Page</p></figcaption></figure>
-
-
 
 2. **Company: Added a new Company Settings Page**
 
@@ -22,13 +27,11 @@ Introduced a Company Settings page that offers retailers the ability to define t
 
 3. **Shipping Carrier: Added a new Page to Setup Shipping Carriers**
 
-Introduced a new dedicated page for seamless shipping carrier setup within HotWax Commerce to facilitate integration between HotWax Commerce and shipping carriers.&#x20;
+Introduced a new dedicated page for seamless shipping carrier setup within HotWax Commerce to facilitate integration between HotWax Commerce and shipping carriers.
 
 [Read update](added-a-new-page-to-setup-shipping-carriers.md)
 
 <figure><img src="https://www.hotwax.co/hubfs/Nov-Dec%202023%20PU/Carrier%20Setup%20Page.png" alt=""><figcaption><p>Setup Shipping Carrier Page</p></figcaption></figure>
-
-
 
 4. **Product: Manage Shopify Shop Product Associations**
 
@@ -38,8 +41,6 @@ Retailers can now directly manage product associations between Shopify Shops fro
 
 <figure><img src="https://www.hotwax.co/hubfs/Product%20association.png" alt=""><figcaption><p><strong>Manage Shopify Shop Product Associations</strong></p></figcaption></figure>
 
-
-
 5. **Data Manager Configuration: Added a new Data Manager Configurations Page**
 
 Introducing the Data Manager Configurations page to facilitate the management of data imports and exports between HotWax Commerce and External Systems such as ERP and eCommerce platforms.
@@ -47,8 +48,6 @@ Introducing the Data Manager Configurations page to facilitate the management of
 [Read update](added-a-new-data-manager-configurations-page.md)
 
 <figure><img src="https://www.hotwax.co/hubfs/Nov-Dec%202023%20PU/Data%20Manager%20Configurations.png" alt=""><figcaption><p><strong>Data Manager Configurations Page</strong></p></figcaption></figure>
-
-
 
 6. **Shopify Shop: Manage Shopify Shop Shipment Methods**
 
@@ -77,8 +76,6 @@ Store associates can now partially reject order items that are unavailable for f
 Store associates will now see payment methods when fulfilling orders to identify the COD (Cash on Delivery) orders.
 
 <figure><img src="https://www.hotwax.co/hs-fs/hubfs/Nov-Dec%202023%20PU/View%20Payment%20Methods-1.png?width=1024&#x26;height=501&#x26;name=View%20Payment%20Methods-1.png" alt="" width="563"><figcaption><p><strong>View Payment Methods</strong></p></figcaption></figure>
-
-
 
 10. **BOPIS: Launched Ship to Store feature in the BOPIS Fulfillment App**
 
@@ -118,7 +115,7 @@ Pickers can now effortlessly scan QR codes in the Fulfillment app, instantly acc
 
 <figure><img src="https://www.hotwax.co/hubfs/Nov-Dec%202023%20PU/Scan%20QR.png" alt=""><figcaption><p><strong>Scan QR Code to open Picklist</strong></p></figcaption></figure>
 
-16. **Fulfillment:  Identify COD Orders**
+16. **Fulfillment: Identify COD Orders**
 
 Store associates will now see a warning chip for Cash On Delivery orders to ensure payments are received before fulfilling orders.
 
@@ -127,8 +124,6 @@ Store associates will now see a warning chip for Cash On Delivery orders to ensu
 17. **Fulfillment: Shipping Label Error**
 
 Store associates can now also view shipping label errors on the In Progress orders tab, so that they only pack orders after resolving the errors, minimizing their efforts and increasing productivity.
-
-
 
 <figure><img src="https://www.hotwax.co/hs-fs/hubfs/Nov-Dec%202023%20PU/Shipping%20Label%20Error.png?width=1024&#x26;height=441&#x26;name=Shipping%20Label%20Error.png" alt="" width="563"><figcaption><p>Shipping Label Error</p></figcaption></figure>
 

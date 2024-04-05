@@ -1,7 +1,7 @@
 ---
 description: >-
-  Added Order Detail page in the Fulfillment App to view and manage the complete
-  lifecycle for an order.
+  Introducing the new Order Detail page within the Fulfillment App, allowing
+  users to oversee and control the entire order lifecycle seamlessly.
 ---
 
 # Order Detail Page

@@ -1,7 +1,7 @@
 ---
 description: >-
-  Added a Permissions Tab to manage security groups and customize permissions
-  for HotWax Commerce Users.
+  Implemented a Permissions Tab to facilitate the management of security groups
+  and the customization of permissions for HotWax Commerce Users.
 ---
 
 # Customize User Permissions

@@ -1,7 +1,7 @@
 ---
 description: >-
-  Introducing Order Routing App for retailers to manage their order brokering
-  rules and customize rules as per their business requirements.
+  Introducing the Order Routing App, empowering retailers to oversee their order
+  brokering rules and tailor them according to their specific business needs.
 ---
 
 # Introducing Order Routing App

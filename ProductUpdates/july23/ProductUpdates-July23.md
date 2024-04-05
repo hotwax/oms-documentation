@@ -1,4 +1,11 @@
-# July '23
+---
+description: >-
+  In July, enhancements to the Fulfillment app were introduced, along with the
+  debut of a fresh Pre-Order catalog for tracking item status and reasons for
+  their inclusion or removal.
+---
+
+# July'23
 
 ## Order Management System
 
@@ -9,8 +16,6 @@ HotWax Commerce is now compatible with the new Shopify Fulfillment Orders API
 [Read update](support-for-new-shopify-fulfillment-orders-api.md)
 
 <figure><img src="https://www.hotwax.co/hubfs/Product%20Updates%20and%20Release%20Notes/2023/July%202023/Product%20Updates/PU%202%20-%20Support%20for%20new%20Shopify%20Fulfillment%20Orders%20API-1.png" alt=""><figcaption><p>New Shopify Fulfillment Orders API</p></figcaption></figure>
-
-
 
 **2. Order: Save Shopify Order Metafields as Order Attributes**
 
@@ -42,8 +47,7 @@ Launched a new version of the Store Fulfillment App for improved user experience
 
 <figure><img src="https://www.hotwax.co/hubfs/Product%20Updates%20and%20Release%20Notes/2023/July%202023/Product%20Updates/PU%204%20-%20Launched%20New%20Store%20Fulfillment%20App.png" alt=""><figcaption><p>Fulfillment App</p></figcaption></figure>
 
-
-**2. Pre-Order App: Centralized page for auditing Pre-Order catalog*8
+\*\*2. Pre-Order App: Centralized page for auditing Pre-Order catalog\*8
 
 Launched a Pre-Order catalog dashboard that helps merchandisers get a consolidated view of all items in pre-order, Purchase orders of pre-order items, on-hand inventory, and jobs responsible for listing and delisting pre-order items on Shopify.
 

@@ -1,8 +1,8 @@
 ---
 description: >-
-  Added Facility groups page for retailers to add facilities in various groups
-  to manage the scope of facilities for online order fulfillment and inventory
-  computation.
+  Introduced the Facility Groups page, enabling retailers to categorize
+  facilities into different groups for streamlined management of online order
+  fulfillment and inventory calculation scopes.
 ---
 
 # Introducing Facility Groups Page

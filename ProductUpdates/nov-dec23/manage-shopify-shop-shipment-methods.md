@@ -1,12 +1,10 @@
 ---
 description: >-
-  Shopify retailers can now manage Shopify shop shipment methods directly from
-  the View Shopify Shop page.
+  Shopify vendors now have the capability to oversee shipment methods for their
+  Shopify shops directly within the View Shopify Shop interface.
 ---
 
 # Manage Shopify Shop Shipment Methods
-
-
 
 <figure><img src="https://www.hotwax.co/hubfs/Shipping%20Methods.png" alt=""><figcaption></figcaption></figure>
 

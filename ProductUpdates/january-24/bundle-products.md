@@ -1,7 +1,7 @@
 ---
 description: >-
-  Store associates can now easily distinguish bundle products and identify the
-  constituent items that make up each bundle.
+  Store associates now have a simplified process for identifying bundle products
+  and discerning the individual items that compose each bundle.
 ---
 
 # Bundle product fulfillment

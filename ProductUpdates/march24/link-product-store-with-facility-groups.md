@@ -1,7 +1,7 @@
 ---
 description: >-
-  Users can now be link product stores with facility groups to enable
-  group-specific order routing.
+  Users can now connect product stores with facility groups, enabling order
+  routing specific to each group.
 ---
 
 # Link Product Store with Facility Groups

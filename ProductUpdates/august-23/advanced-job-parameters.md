@@ -1,5 +1,5 @@
 ---
-description: Retailers can now import Sales orders using CSV files
+description: Retailers now have the capability to import sales orders through CSV files.
 ---
 
 # Advanced Job Parameters
@@ -8,7 +8,7 @@ description: Retailers can now import Sales orders using CSV files
 
 Each job in the Job Manager performs a specific task based on a fixed set up input parameters. Merchandisers, Operations Managers, or System Administrators can review already running jobs and schedule new jobs from the Job Manager application. However, not all input parameters are always used to perform a specific task. Until now, the value of these parameters could not be changed, and a new parameter could not be activated from the Job Manager application. This constraint made business users fully dependent on their IT team.\
 \
-With our latest update, input parameters for any job can be changed from the Job Manager application, putting more control in the hands of business users.&#x20;
+With our latest update, input parameters for any job can be changed from the Job Manager application, putting more control in the hands of business users.
 
 Let’s break down the benefits of this feature with an example:
 

@@ -1,7 +1,7 @@
 ---
 description: >-
-  When splitting orders, retailers can now set brokering shipment thresholds to
-  prevent low-value items from being sent to a single fulfillment location.
+  Now retailers can establish brokering shipment thresholds when splitting
+  orders to avoid sending low-value items to a single fulfillment location.
 ---
 
 # Avoid Splitting for Low-value Items Using Thresholds

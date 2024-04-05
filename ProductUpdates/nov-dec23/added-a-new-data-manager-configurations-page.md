@@ -1,8 +1,8 @@
 ---
 description: >-
-  Introducing Data Manager Configurations page to facilitate the management of
-  data imports and exports between HotWax Commerce and External Systems such as
-  ERP and eCommerce platforms.
+  Introducing a Data Manager Configurations page aimed at streamlining the
+  administration of data transfers between HotWax Commerce and External Systems
+  like ERP and eCommerce platforms.
 ---
 
 # Added a new Data Manager Configurations page
@@ -13,4 +13,4 @@ HotWax Commerce integrates with various third-party systems such as ERP, eCommer
 
 Previously, retailers relied on backend support from the HotWax Commerce development team for specifying import and export paths. However, to provide autonomy and flexibility to users, HotWax Commerce has introduced dedicated pages for retailers to effortlessly manage SFTP locations and data configurations. Retailers can set up FTP configurations from the general settings page and manage the paths of the data exchange from the Data Manager Configurations page.
 
-Retailers can now precisely add or edit SFTP paths for both importing and exporting data by simply inserting the correct SFTP path and file name pattern. This update significantly enhances user control, reducing dependency on backend support and mitigating errors in SFTP location management.&#x20;
+Retailers can now precisely add or edit SFTP paths for both importing and exporting data by simply inserting the correct SFTP path and file name pattern. This update significantly enhances user control, reducing dependency on backend support and mitigating errors in SFTP location management.

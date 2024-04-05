@@ -1,5 +1,7 @@
 ---
-description: Retailers can now have multiple "ATP" inventories, one for each channel.
+description: >-
+  Retailers now have the capability to maintain multiple "ATP" inventories, with
+  one designated for each channel.
 ---
 
 # Manage Multiple ATP Inventories for Channels

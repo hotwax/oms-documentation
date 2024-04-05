@@ -1,6 +1,11 @@
+---
+description: >-
+  Now, Customer Service representatives have the capability to input order item
+  attributes directly within the Sales Order View page, reducing the risk of
+  errors during order processing.
+---
+
 # Manage order item attributes
-
-
 
 <figure><img src="https://www.hotwax.co/hubfs/Order%20Attribute%20(1).png" alt=""><figcaption></figcaption></figure>
 

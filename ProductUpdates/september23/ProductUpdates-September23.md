@@ -1,3 +1,10 @@
+---
+description: >-
+  HotWax Commerce introduced tailored rebrokering guidelines to omit certain
+  facility types, alongside a fresh 'Unfillable Hold Parking' feature for
+  storing unfulfillable orders with upcoming.
+---
+
 # September'23
 
 ## Order Management System

@@ -1,7 +1,7 @@
 ---
 description: >-
-  Added Transfer Order page in the Fulfilment app for store associates to
-  simplify the process of fulfilling transfer orders.
+  Introduced a Transfer Order page in the Fulfillment app to streamline the
+  fulfillment of transfer orders for store associates.
 ---
 
 # Fulfill Transfer orders

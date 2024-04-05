@@ -1,8 +1,8 @@
 ---
 description: >-
-  HotWax Commerce's February updates include configuration to set order
-  brokering thresholds to prevent splitting of low-value items, and improved CPU
-  utilization through sequential file imports.
+  February updates for HotWax Commerce include setting order brokering
+  thresholds to prevent splitting of low-value items and enhancing CPU
+  utilization via sequential file imports.
 ---
 
 # February'24

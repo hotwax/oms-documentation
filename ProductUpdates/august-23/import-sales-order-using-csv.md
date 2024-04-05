@@ -1,5 +1,5 @@
 ---
-description: Retailers can now import Sales orders using CSV files.
+description: Retailers now have the capability to import sales orders via CSV files.
 ---
 
 # Import Sales Order Using CSV

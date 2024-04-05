@@ -1,14 +1,16 @@
 ---
 description: >-
-  Retailers can now customize rebrokering rules to exclude specific facility
-  types
+  Retailers now have the option to personalize rebrokering regulations, allowing
+  them to exclude particular facility types.
 ---
 
 # Customized Rebrokering Rules
 
+
+
 <figure><img src="https://www.hotwax.co/hubfs/Customize%20Rebrokering%20rules-1.png" alt=""><figcaption></figcaption></figure>
 
-HotWax Commerce re-brokers orders that are rejected by a store or warehouse due to inventory unavailability to ensure orders are fulfilled. However, challenges arise when certain facility types are ill-equipped to handle rebrokered orders. A case in point involves one of our clients dealing with the challenge of managing split orders, wherein fulfillment is executed partially at a store and partially at a warehouse.&#x20;
+HotWax Commerce re-brokers orders that are rejected by a store or warehouse due to inventory unavailability to ensure orders are fulfilled. However, challenges arise when certain facility types are ill-equipped to handle rebrokered orders. A case in point involves one of our clients dealing with the challenge of managing split orders, wherein fulfillment is executed partially at a store and partially at a warehouse.
 
 Issues surface when an order rejected by the store is rebrokered to the warehouse as the Warehouse Management System (WMS) recognizes orders as fulfilled at the aggregate level, rather than at the individual item level. This poses a significant challenge, as the WMS marks the complete order fulfilled even if only one order item is fulfilled.
 
