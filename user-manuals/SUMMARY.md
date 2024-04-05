@@ -5,7 +5,7 @@
 
 ## Business Process Models
 
-* [Business process models](business-process-models/README.md)
+* [Introduction](business-process-models/README.md)
   * [Order lifecycle](business-process-models/orderlifecycle.md)
   * [Store fulfillment lifecycle](business-process-models/store.fulfillment.md)
 
@@ -71,7 +71,6 @@
 
 ## Inventory
 
-
 * [Inventory Mangaemnet](inventory/inventory-management/README.md)
   * [Find Product Inventory](inventory/inventory-management/find-product-inventory.md)
   * [Product Inventory View Page](inventory/inventory-management/product-inventory-view.md)
@@ -116,5 +115,3 @@
 ## How-to documents
 
 * [Add shipping method](how-to/add-shipping-method.md)
-
-  
