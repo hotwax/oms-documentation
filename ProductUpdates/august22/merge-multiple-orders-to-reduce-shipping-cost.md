@@ -1,23 +1,22 @@
 ---
 description: >-
-  To ensure that packages can be grouped together and sent as one shipment,
-  HotWax Commerce introduced an “Order Merging” feature to reduce shipping costs
-  and increase profitability.
+  HotWax Commerce introduced the "Order Merging" feature to consolidate packages
+  for cost-effective shipping and improved profitability.
 ---
 
 # Merge Multiple Orders to Reduce Shipping Cost
 
 <figure><img src="https://www.hotwax.co/hubfs/Product%20Updates%20and%20Release%20Notes/2022/August%202022/Product%20Updates/Featured%20images/Merge%20Multiple%20Orders%20to%20Reduce%20Shipping%20Cost.png" alt=""><figcaption></figcaption></figure>
 
-&#x20;In an effort to minimize shipping costs, retailers can group multiple orders for one customer and send them as one shipment, a process known as “Order Merging.” It can be very helpful in the following scenarios:  &#x20;
+In an effort to minimize shipping costs, retailers can group multiple orders for one customer and send them as one shipment, a process known as “Order Merging.” It can be very helpful in the following scenarios:
 
-**Scenario 1:** If a customer orders a dress while online shopping, but a few hours later, they want to purchase shoes from the same retailer.&#x20;
+**Scenario 1:** If a customer orders a dress while online shopping, but a few hours later, they want to purchase shoes from the same retailer.
 
-**Scenario 2:** If a customer places multiple Pre-Orders and the orders are expected to arrive on the same day, the items can be merged and sent in one single shipment to the customer's address.&#x20;
+**Scenario 2:** If a customer places multiple Pre-Orders and the orders are expected to arrive on the same day, the items can be merged and sent in one single shipment to the customer's address.
 
 **Scenario 3:** If a customer places a Pre-Order and a regular order at different times, but the shipping date for both is at the same time.
 
-Previously, like in the scenarios above, if the inventory of both products were available at the same warehouse, rather than shipping all the items together, they would be shipped out in multiple orders.&#x20;
+Previously, like in the scenarios above, if the inventory of both products were available at the same warehouse, rather than shipping all the items together, they would be shipped out in multiple orders.
 
 To avoid multiple shipments in the future, HotWax Commerce has introduced an “Order Merging” feature which merges orders that:
 

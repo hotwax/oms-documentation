@@ -1,8 +1,8 @@
 ---
 description: >-
-  Added a new job to only sync inventory numbers for products from HotWax
-  Commerce to Shopify whose inventory numbers are not in sync with HotWax
-  Commerce, offering improved system performance
+  Implemented a new task to synchronize inventory exclusively for products in
+  HotWax Commerce and Shopify that are out of sync, leading to enhanced system
+  efficiency.
 ---
 
 # Sync Inventory for Only Products with Recent Inventory Changes

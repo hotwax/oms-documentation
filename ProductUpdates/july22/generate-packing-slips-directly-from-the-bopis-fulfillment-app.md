@@ -1,15 +1,14 @@
 ---
 description: >-
-  To drive a smoother omnichannel customer experience, HotWax Commerce now
-  allows store associates to generate packing slips from the BOPIS Fulfillment
-  App.
+  HotWax Commerce now enables store associates to create packing slips through
+  the BOPIS Fulfillment App, enhancing omnichannel customer experience.
 ---
 
 # Generate Packing Slips Directly from the BOPIS Fulfillment App
 
 <figure><img src="https://www.hotwax.co/hubfs/Product%20Updates%20and%20Release%20Notes/2022/July%202022/Product%20Updates/Featured%20Images/BOPIS%20Packing%20Slips-3.png" alt=""><figcaption></figcaption></figure>
 
-&#x20;The HotWax Commerce [Buy Online Pick-Up In Store (BOPIS) Fulfillment App](https://www.hotwax.co/apps/bopis-fulfillment-app) helps store associates streamline the BOPIS order fulfillment process. With this app’s help, store associates can easily open and update the status of upcoming orders as soon as they’re ready for pick-up.&#x20;
+The HotWax Commerce [Buy Online Pick-Up In Store (BOPIS) Fulfillment App](https://www.hotwax.co/apps/bopis-fulfillment-app) helps store associates streamline the BOPIS order fulfillment process. With this app’s help, store associates can easily open and update the status of upcoming orders as soon as they’re ready for pick-up.
 
 Customers frequently request packing slips to be included with their BOPIS orders, which contain information including the name, price, and item quantity of their click-and-collect order. The packing slip serves as an extra precaution for the customer and the retailer to ensure the customer is receiving the correct order.
 

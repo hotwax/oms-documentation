@@ -1,7 +1,7 @@
 ---
 description: >-
-  Merchandisers can now reset product inventory using custom CSV formats from
-  the newly added Inventory page.
+  Merchandisers can now reset product inventory using custom CSV formats
+  directly from the new Inventory page.
 ---
 
 # Upload Inventory from Import App

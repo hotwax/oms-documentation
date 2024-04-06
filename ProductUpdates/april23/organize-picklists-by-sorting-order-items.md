@@ -1,7 +1,7 @@
 ---
 description: >-
-  Pickers can now organize their picklists by sorting order items based on the
-  Product Name, Bin ID, or Location Sequence ID.
+  Pickers now have the ability to arrange their picklists by sorting items
+  according to Product Name, Bin ID, or Location Sequence ID.
 ---
 
 # Organize Picklists by Sorting Order Items

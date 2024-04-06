@@ -1,7 +1,8 @@
 ---
 description: >-
-  Store associates can now promptly remind customers to pick-up their orders by
-  re-sending the ready-for-pickup notification from the Packed Orders tab
+  Now, store associates have the capability to quickly prompt customers to
+  collect their orders by resending the ready-for-pickup notification directly
+  from the Packed Orders tab.
 ---
 
 # Re-Send Ready-for-Pickup Notification

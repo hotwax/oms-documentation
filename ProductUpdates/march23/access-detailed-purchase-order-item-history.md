@@ -1,8 +1,7 @@
 ---
 description: >-
-  Merchandisers now have the ability to access in-depth descriptions of Purchase
-  Order Item changes, allowing them to thoroughly audit modifications made to
-  Purchase Order items
+  Merchandisers can now access detailed descriptions of Purchase Order item
+  changes, enabling thorough auditing of modifications.
 ---
 
 # Access Detailed Purchase Order Item History

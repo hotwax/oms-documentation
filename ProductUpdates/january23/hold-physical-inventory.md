@@ -1,14 +1,13 @@
 ---
 description: >-
-  Shopify retailers can now configure inventory computation to not make physical
-  inventory available online for products with orders in the Pre-Order parking.
+  Shopify retailers now have the option to configure inventory computation to
+  withhold physical inventory online for products with orders in Pre-Order
+  status.
 ---
 
 # Hold Physical Inventory
 
 <figure><img src="https://www.hotwax.co/hubfs/Product%20Updates%20and%20Release%20Notes/2023/January%202023/Product%20Update/Feature%20Image/PU%202-%20Hold%20Physical%20Inventory.png" alt=""><figcaption></figcaption></figure>
-
-&#x20;
 
 Shopify retailers plan their inventory allocations between eCommerce and Brick and Mortar stores for Pre-Order products after receiving the Purchase Order inventory. When a Purchase Order arrives at a warehouse, Pre-Order inventory is first allocated to items in Pre-Order parking to fulfill pending Pre-Orders, any surplus inventory is pushed to eCommerce for new orders. When planning their inventory allocation, Shopify retailers prefer one of two inventory computation scenarios based on their offline presence:
 
@@ -30,7 +29,7 @@ Suppose retailers have 1 Brick and Mortar store, they may want to allocate 10 in
 | ------------------ | --------------------------- | ---------------------------------------------- | ----------------------------------------------------------------------------------- |
 | 100                | 80                          | 10                                             | 10                                                                                  |
 
-With its latest update, HotWax Commerce allows retailers to configure a “holdPreOrderPhysicalInventory” setting for inventory computation within the Order Management System.&#x20;
+With its latest update, HotWax Commerce allows retailers to configure a “holdPreOrderPhysicalInventory” setting for inventory computation within the Order Management System.
 
 * Shopify retailers with Brick and Mortar stores can enable “holdPreOrderPhysicalInventory” to ensure that the excess physical inventory count of the Pre-Orders is not pushed to eCommerce to allow retailers to reserve inventory for their Brick and Mortar Stores and push it online after enough inventory has been allocated to their physical store.
 * Shopify retailers who only have eCommerce stores can disable the “holdPreOrderPhysicalInventory” setting so that the surplus Pre-Order inventory can be made available online to sell right after it is received at the warehouse.

@@ -1,7 +1,7 @@
 ---
 description: >-
-  Time zones can now be configured from the Enterprise User Apps’ Settings page
-  to view rendered information in the preferred time
+  Now, time zones can be set within Enterprise User Apps' Settings, allowing
+  users to view information according to their preferred time.
 ---
 
 # Set Preferred Timezone

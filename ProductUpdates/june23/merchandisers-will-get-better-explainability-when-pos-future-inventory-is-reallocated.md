@@ -1,18 +1,16 @@
 ---
 description: >-
-  Merchandisers will now gain insights into inventory explainability if the
-  Purchase Order’s future inventory is reallocated to a sales order.
+  Merchandisers will now acquire better understanding of inventory allocation by
+  reallocating future inventory from purchase orders to sales orders.
 ---
 
 # Merchandisers will get better explainability when PO’s future inventory is reallocated
-
-
 
 <figure><img src="https://www.hotwax.co/hubfs/Inventory%20explainability.png" alt=""><figcaption></figcaption></figure>
 
 HotWax Commerce reads and analyzes Purchase Orders (PO) to display eligible pre-order items on Shopify. Once pre-orders are captured on these items, PO ATP is allocated to these sales orders.
 
-Merchandisers often place multiple POs for the same products.&#x20;
+Merchandisers often place multiple POs for the same products.
 
 > For example: If a merchandiser initially placed a PO (#1258) for a blue polo t-shirt with an expected arrival date of June 30th. However, a few days later, they decided to place another PO (#1275) for the same t-shirt, but with an earlier due date of June 25th. Suppose there is a Sales Order (#306) that was originally intended to be fulfilled using the inventory from the initial PO (#1258). To ensure timely delivery and align with customer expectations, the system automatically reallocates the inventory from the latest PO (#1275) to fulfill this specific Sales Order (#306). This adjustment guarantees that customers who placed pre-orders first receive their items on time.
 

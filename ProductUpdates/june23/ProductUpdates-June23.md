@@ -1,3 +1,10 @@
+---
+description: >-
+  In the June 2023 update, HotWax Commerce introduces Purchase Order inventory
+  reallocation visibility and enhances in-store return management for store
+  associates, streamlining the process.
+---
+
 # June'23
 
 ### Order Management System
@@ -10,13 +17,13 @@
 
 **Purchase Order**
 
-2. Merchandisers can now gain insights into inventory explainability if the Purchase Order’s future inventory is reallocated to a sales order, allowing merchandisers to effectively audit and ensure that inventory is allocated to eligible sales orders. \
+2. Merchandisers can now gain insights into inventory explainability if the Purchase Order’s future inventory is reallocated to a sales order, allowing merchandisers to effectively audit and ensure that inventory is allocated to eligible sales orders.\
    \
    [Read more](merchandisers-will-get-better-explainability-when-pos-future-inventory-is-reallocated.md)
 
 **Returns**
 
-3. The new “In-Store Returns” feature enables store associates to quickly and easily process eCommerce returns, making inventory available to sell online. \
+3. The new “In-Store Returns” feature enables store associates to quickly and easily process eCommerce returns, making inventory available to sell online.\
    \
    [Read more](launched-in-store-returns.md)
 
@@ -31,9 +38,6 @@
 **BOPIS Fulfillment**
 
 1.  Store associates can now view customer’s contact information such as email and phone number directly on the Order Details page to quickly and easily reach out to customers if needed.\
-    \
-
+    \\
 
     <figure><img src="https://www.hotwax.co/hs-fs/hubfs/Customer%20details.png?width=2064&#x26;height=1520&#x26;name=Customer%20details.png" alt=""><figcaption></figcaption></figure>
-
-

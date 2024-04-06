@@ -1,7 +1,7 @@
 ---
 description: >-
-  Merchandisers can now view and select their preferred date format in the
-  Import App
+  Merchandisers now have the option to choose their preferred date format within
+  the Import App.
 ---
 
 # Custom Date Format

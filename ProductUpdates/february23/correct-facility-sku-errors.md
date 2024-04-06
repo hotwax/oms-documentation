@@ -1,14 +1,12 @@
 ---
 description: >-
-  Merchandisers can now correct facility and SKU discrepancies while uploading
-  Purchase Orders from the Purchase Order Review page.
+  Merchandisers can now rectify facility and SKU discrepancies directly from the
+  Purchase Order Review page when uploading orders.
 ---
 
 # Correct Facility-SKU Errors
 
 <figure><img src="https://www.hotwax.co/hubfs/Product%20Updates%20and%20Release%20Notes/2023/February%202023/Product%20Update/Feature%20Image/PU3%20(1).png" alt=""><figcaption></figcaption></figure>
-
-&#x20;
 
 Merchandisers may choose to upload purchase orders in HotWax Commerce Import App manually. Previously, merchandisers could inadvertently input incorrect facility identification or SKU codes when uploading purchase orders. These undetected errors would cause pre-order items to appear as out-of-stock on eCommerce platforms, leading to lost sales. In order to correct the errors, merchandisers had to edit and re-upload the purchase orders, resulting in a time-consuming process.
 

@@ -1,8 +1,8 @@
 ---
 description: >-
-  Operations managers can now easily schedule jobs by selecting pre-defined
-  run-time options instead of manually choosing a date and time when scheduling
-  a job
+  Operations managers can now effortlessly schedule tasks by opting for
+  predefined runtime options instead of manually setting dates and times for job
+  scheduling.
 ---
 
 # Select Pre-defined Job Run-time Options

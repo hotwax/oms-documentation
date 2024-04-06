@@ -1,6 +1,6 @@
 ---
 description: >-
-  Jobs can now be run on multiple Shopify stores associated with a single
+  Now, jobs can be executed across multiple Shopify stores linked to a single
   product catalog.
 ---
 

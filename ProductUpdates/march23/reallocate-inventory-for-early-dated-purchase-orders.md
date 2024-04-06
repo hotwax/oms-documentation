@@ -1,14 +1,12 @@
 ---
 description: >-
-  Merchandisers can now schedule a job to automatically adjust Purchase Order
-  ATP allocations upon uploading an early-dated Purchase Order.
+  Merchandisers can now automate Purchase Order ATP allocation adjustments when
+  uploading early-dated Purchase Orders by scheduling a job.
 ---
 
 # Reallocate Inventory for Early-Dated Purchase Orders
 
 <figure><img src="https://www.hotwax.co/hubfs/Product%20Updates%20and%20Release%20Notes/2023/March%202023/Product%20Update/Featured%20Image/Reallocate%20Purchase%20Orders.png" alt=""><figcaption></figcaption></figure>
-
-&#x20;
 
 HotWax Commerce reads and analyzes Purchase Orders to display eligible pre-order items on Shopify. Merchandisers often manage multiple Purchase Orders for the same SKUs. Occasionally they may upload a new Purchase Order with an earlier promise date, even if there is already an existing Purchase Order for the same SKU in the system. In such cases, it is essential to reassign sales orders from the initial Purchase Order to the latest early-dated Purchase Order, prioritizing customers who placed pre-orders first and ensuring they receive their items in a timely manner.
 

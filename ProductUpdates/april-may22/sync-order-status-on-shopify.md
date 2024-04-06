@@ -1,16 +1,14 @@
 ---
 description: >-
-  Retailers can now easily keep track of missed orders and ensure that missed
-  orders’ statuses are synchronized from HotWax to Shopify
+  Retailers can now efficiently monitor and synchronize missed order statuses
+  between HotWax and Shopify.
 ---
 
 # Sync Order Status on Shopify
 
 <figure><img src="https://www.hotwax.co/hubfs/Product%20Updates%20and%20Release%20Notes/2022/April%20and%20May%202022/Product%20Updates/Featured%20image/Sync%20Order%20Status%20on%20Shopify.png" alt=""><figcaption></figcaption></figure>
 
-&#x20;
-
-HotWax Commerce downloads orders from Shopify, routes them to an optimal fulfillment location, and updates the order fulfillment status in Shopify.&#x20;
+HotWax Commerce downloads orders from Shopify, routes them to an optimal fulfillment location, and updates the order fulfillment status in Shopify.
 
 Once the order is fulfilled, its status must be updated in Shopify in order to communicate accurate order status to customers. If CSR cancels the order in HotWax Commerce, it needs to be updated so that customers can see their orders marked as “Canceled” on Shopify. Whenever an order is fulfilled or canceled in HotWax Commerce, it should be automatically updated in Shopify.
 

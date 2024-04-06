@@ -1,14 +1,12 @@
 ---
 description: >-
-  Merchants can now control and restrict employees' access to functions within 
-  Enterprise User Apps.
+  Merchants now have the ability to manage and limit employees' access to
+  specific functions within Enterprise User Apps.
 ---
 
 # User App Permissions
 
 <figure><img src="https://www.hotwax.co/hubfs/Product%20Updates%20and%20Release%20Notes/2023/February%202023/Product%20Update/Feature%20Image/PU1-1.png" alt=""><figcaption></figcaption></figure>
-
-&#x20;
 
 HotWax Commerce provides merchants with a suite of Enterprise User Apps to ensure seamless omnichannel operations such as same-day BOPIS, Ship From Store, and Pre-Order management. The Enterprise User App suite is accessible to all employees across the organization, from pickers to the head of operations, with each user assigned a specific role and provided with appropriate training.
 

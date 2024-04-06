@@ -1,8 +1,7 @@
 ---
 description: >-
-  Merchants can now save, update, and delete their frequently used Purchase
-  Order (PO) CSV mappings within the Import App, allowing merchants to quickly
-  upload a PO.
+  Merchants can now manage frequently used Purchase Order (PO) CSV mappings in
+  the Import App, enabling quick uploading, updating, and deletion of mappings.
 ---
 
 # Save CSV Maps

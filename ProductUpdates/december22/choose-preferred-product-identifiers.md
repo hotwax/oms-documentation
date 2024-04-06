@@ -1,14 +1,12 @@
 ---
 description: >-
-  Primary and secondary product identifiers are now configurable for HotWax
-  Commerce application interfaces.
+  HotWax Commerce application interfaces now allow configuration of primary and
+  secondary product identifiers.
 ---
 
 # Choose Preferred Product Identifiers
 
 <figure><img src="https://www.hotwax.co/hubfs/Product%20Updates%20and%20Release%20Notes/2022/December%202022/Product%20Updates/Feature%20image/Sample%20Product%20Update%20frame.png" alt=""><figcaption></figcaption></figure>
-
-&#x20;
 
 Employees may prefer different identifiers based on the department they belong to. For example, store associates may use product SKUs to verify received inventory, while merchandising teams may find it more convenient to use the parent product name when setting inventory thresholds.
 

@@ -1,14 +1,14 @@
 ---
 description: >-
-  The new “In-Store Returns” feature simplifies the process of accepting returns
-  for online orders at physical retail outlets.
+  The introduction of the "In-Store Returns" feature streamlines the procedure
+  for handling returns of online orders at brick-and-mortar retail locations.
 ---
 
 # Launched In-Store Returns
 
 <figure><img src="https://www.hotwax.co/hubfs/Returns%20flow.png" alt=""><figcaption></figcaption></figure>
 
-&#x20;The Buy Online Return In Store (BORIS) feature now enables customers to return online purchases at physical retail stores. It offers several benefits, including efficient return handling by store associates for faster transactions, improved operational efficiency, cost reduction through accurate record-keeping, and analysis of centralized returns data for insights into return reasons, product performance, and customer behavior. Additionally, store associates can engage with customers through this feature, providing personalized recommendations and opportunities to convert returns into exchanges or new sales.&#x20;
+The Buy Online Return In Store (BORIS) feature now enables customers to return online purchases at physical retail stores. It offers several benefits, including efficient return handling by store associates for faster transactions, improved operational efficiency, cost reduction through accurate record-keeping, and analysis of centralized returns data for insights into return reasons, product performance, and customer behavior. Additionally, store associates can engage with customers through this feature, providing personalized recommendations and opportunities to convert returns into exchanges or new sales.
 
 HotWax Commerce now offers a new In-Store Returns feature that simplifies the process of BORIS by allowing store associates to:
 
@@ -27,4 +27,4 @@ HotWax Commerce now offers a new In-Store Returns feature that simplifies the pr
 
 With In-Store Returns, HotWax Commerce enhances customer experience and reduces the manual workload of store associates.
 
-\
+\\
