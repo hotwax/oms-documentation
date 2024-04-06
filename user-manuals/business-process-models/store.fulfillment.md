@@ -1,6 +1,6 @@
 ---
 description: >-
-  The Store Fulfillment Lifecycle BPM illustrates how HotWax Commerce enables
+  The Store Fulfillment Lifecycle BPM illustrates how HotWax Commerce [Store Fulfillment App](../orders/fulfillment/) enables
   store associates to Pick, Pack & Ship online orders received at stores.
 ---
 
@@ -12,7 +12,7 @@ description: >-
 
 Items that have been successfully allocated to stores have fulfillment status <mark style="color:orange;">**"Reserved"**</mark> in HotWax Commerce.&#x20;
 
-Retailers use HotWax Commerce [Store Fulfillment App](../orders/fulfillment/) to fulfill items allocated to stores. By default items are arranged in a "First In, First Out" sequence, ensuring that placed earlier are prioritized. Store managers can filter them based on the shipping method (such as same-day, next-day, or standard) or customer loyalty status.
+By default items are arranged in a "First In, First Out" sequence, ensuring that placed earlier are prioritized. Store managers can filter them based on the shipping method (such as same-day, next-day, or standard) or customer loyalty status.
 
 For example, in the event a store manager wishes to prioritize items with tight SLAs, they can filter items that have a same-day shipping method to initiate batch processing for them.
 
@@ -44,7 +44,7 @@ Learn more about [Rejections and their reasons](../fulfillment/rejection.md)
 
 Now, when the items have been picked and brought to the packing station, they can be quickly packed since the shipment has already been booked and shipping labels have been pre-generated.
 
-Once items have been packed, the packing team places them at the designated location in the store, where the carrier will collect them.
+Once items have been packed, the packing team places them at the designated location in the store from where the carrier will collect them.
 
 The fulfillment status for packed items is updated from <mark style="color:orange;">**"Picking"**</mark> to <mark style="color:orange;">**"Packed"**</mark> in HotWax Commerce.
 
