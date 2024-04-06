@@ -1,6 +1,6 @@
 ---
 description: >-
-  The Store Fulfillment Lifecycle BPM illustrates how HotWax Commerce [Store Fulfillment App](../orders/fulfillment/) enables
+  The Store Fulfillment Lifecycle BPM illustrates how HotWax Commerce Store Fulfillment App enables
   store associates to Pick, Pack & Ship online orders received at stores.
 ---
 
