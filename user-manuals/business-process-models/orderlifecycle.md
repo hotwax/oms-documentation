@@ -82,7 +82,7 @@ Learn more about [Store Fulfillment](https://docs.hotwax.co/user-guides/orders/f
 
 ### Warehouse Fulfillment Success and Order Completion:
 
-If an order has been routed to a warehouse location, it can be fulfilled using external systems like NetSuite or a Warehouse[^1] Management System (WMS).
+If an order has been routed to a warehouse location, it can be fulfilled using external systems like NetSuite or a Warehouse Management System (WMS).
 
 For orders fulfilled by an external system, HotWax Commerce receives the fulfillment status from the external system and marks the order as <mark style="color:orange;">**“Completed”**</mark>. Once the order status is updated from <mark style="color:orange;">**“Approved” to “Completed”**</mark>, HotWax Commerce sends the tracking details (if they are provided by the external system) to eCommerce and marks the orders <mark style="color:orange;">**“Fulfilled” in eCommerce**</mark>.
 
@@ -108,13 +108,13 @@ A scheduled job checks if the auto-cancellation date for unfillable orders has b
 
 Retailers with prior knowledge of future inventory through their purchase orders can move these unfillable orders in bulk from `Unfillable Parking` to the `Unfillable Hold Parking` using a CSV file. This action prevents these orders from being automatically canceled and allows them to be fulfilled in the future.
 
-When the inventory arrives, retailers can perform a brokering run that looks at the orders present in the `Unfillable Hold Parking` and allocates inventory for them.
+When the inventory arrives, retailers can schedule a brokering run that looks at the orders present in the `Unfillable Hold Parking` and allocates inventory for them.
 
 ## Fulfillment of BOPIS Orders
 
 When customers place a BOPIS order on eCommerce, it is downloaded in HotWax Commerce alongside standard orders by the `Import Orders` job.
 
-In case of Shopify, HotWax Commerce provides a custom app deployed on Shopify. When a customer places a BOPIS order, the app adds a custom tag on line items to indicate that it is a BOPIS order.
+In case of Shopify, HotWax Commerce provides a custom app deployed on Shopify. When a customer places a BOPIS order, the app adds a custom tag on line items to specify that it is a BOPIS order.
 
 HotWax Commerce then checks the custom tag on orders. If the tag is present on an order, it is automatically sent to the customer's preferred pickup location without brokering. This is because the fulfillment location is pre-selected for BOPIS orders by customers.
 
@@ -126,7 +126,7 @@ Once the order is prepared, customer receives an email informing them that their
 
 ### BOPIS Fulfillment Failure:
 
-In the event store associates cannot find the inventory to fulfill a pick-up order, for reasons such as items being out of stock or damaged, a store manager has the authority to reject the pick-up order. All the rejected BOPIS orders are then moved to the `BOPIS Rejected Queue`.
+In the event store associates cannot find the inventory to fulfill a pick-up order, for reasons such as items being out of stock or damaged, a store manager has the authority to reject that order. All the rejected BOPIS orders are then automatically sent to the `BOPIS Rejected Queue`.
 
 In this scenario, an email is automatically sent to the customer for <mark style="color:orange;">**alternative fulfillment options such as pickup from another store or home delivery**</mark>. Retailers can configure these options based on their order fulfillment strategy.
 
@@ -136,13 +136,11 @@ Learn more about [BOPIS Fulfillment](https://docs.hotwax.co/user-guides/orders/b
 
 When customers place a Pre-Order order on eCommerce, it is downloaded in HotWax Commerce alongside standard orders by the `Import Orders` job.
 
-In case of Shopify, HotWax Commerce provides a custom app that&#x20;
+In case of Shopify, HotWax Commerce provides a custom app deployed on Shopify. When a customer places a Pre-Order, the app adds a pre-order tag on line items to specific that it is a Pre-Order item.
 
-In case of Shopify, HotWax Commerce provides a custom app that is deployed on Shopify. When the customer places a Pre-Order, the app adds a pre-order tag and promise date on line items in order to specific that it is a Pre-Order item.
+HotWax Commerce checks if an order has a pre-order tag applied and automatically moves it to the `Pre-Order Parking`. This dedicated queue holds all pre-orders until their physical inventory is received. This ensures that the brokering process is not initiated for Pre-Orders that currently lack inventory but have inventory scheduled to arrive on a future date.
 
-HotWax Commerce checks orders that have a pre-order tag and a promise date applied and automatically moves them to the `Pre-Order Parking`. This dedicated queue holds all pre-orders until their physical inventory is received. This ensures that the brokering process is not initiated for Pre-Orders that currently lack inventory but have inventory scheduled to arrive on a future date.
-
-Once the pre-order inventory arrives and the promise date is reached, a scheduled `Auto Releasing` Pre-Order job in HotWax Commerce automatically releases all orders from the `Pre-Order Parking` to the `Brokering Queue`.This enables inventory to be allocated to them for fulfillment.
+Once the pre-order inventory arrives and the promise date is reached, a dedicated `Auto Releasing` Pre-Order job in HotWax Commerce automatically releases all orders from the `Pre-Order Parking` to the `Brokering Queue`.This enables inventory to be allocated to them for fulfillment.
 
 In the event, retailers want control over releasing and fulfilling their Pre-Orders, they can leverage the HotWax Commerce <mark style="color:orange;">**Pre-Order Management App**</mark> to manually release Pre-Orders from the `Pre-Order Parking` to the `Brokering Queue`.
 
@@ -150,7 +148,7 @@ Learn more about [Pre-Orders Management](https://docs.hotwax.co/user-guides/orde
 
 ## Fulfillment of Backorders
 
-Similar to Pre-Orders, Backorders are processed in the same manner in HotWax Commerce. The distinction lies in the fact that orders with a backorder tag and an assigned promise date are automatically moved to the `Backorder Parking` in HotWax Commerce. The releasing and brokering process for Backorders is the same as for Pre-Orders.
+Similar to Pre-Orders, Backorders are processed in the same manner in HotWax Commerce. The distinction lies in the fact that orders with a backorder tag are automatically moved to the `Backorder Parking` in HotWax Commerce. The releasing and brokering process for Backorders is the same as for Pre-Orders.
 
 For Pre-Orders and Backorders, once they are moved in the `Brokering Queue`, HotWax Commerce treats them as standard orders and allocates inventory for them by assigning the optimal fulfillment location.
 
