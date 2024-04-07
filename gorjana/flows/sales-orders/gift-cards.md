@@ -6,6 +6,9 @@ Gorjana currently sets the value for gift cards before they have been sold. They
 
 The down side of this implementation is that now they only have a set amount of each denomination gift card. From a financial standpoint, they also have created a corresponding liability in Shopify for the grand total of gift card inventory they hold at anypoint even before a customer has actually paid for it.
 
+### Digital gift cards
+Digital gift cards sold on Shopify will also be auto fulfilled on Shopify. Today their auto fulfilled in NetSuite but this will be transitioned.
+
 ### Gift cards in store
 
 Gift Cards sold in store are sold similar to how most retailers fulfill gift cards traditionally. Each store has an inventory of serialized gift cards without any value applied to them, in other words "blank gift cards". Each serialized gift card is only applied value once the customer purchases the card, with the order containing the same SKU as an online order fulfilled by warehouse.
