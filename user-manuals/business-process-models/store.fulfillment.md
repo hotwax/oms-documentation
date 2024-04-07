@@ -1,7 +1,8 @@
 ---
 description: >-
-  The Store Fulfillment Lifecycle BPM illustrates how HotWax Commerce Store Fulfillment App enables
-  store associates to Pick, Pack & Ship online orders received at stores.
+  The Store Fulfillment Lifecycle BPM illustrates how HotWax Commerce Store
+  Fulfillment App enables store associates to Pick, Pack & Ship online orders
+  received at stores.
 ---
 
 # Store fulfillment lifecycle
@@ -24,7 +25,7 @@ Once the picklist has been generated, the fulfillment status is updated from <ma
 
 ### Rate Shop & Book Shipment
 
-While pickers scan and pick items, HotWax Commerce rate shops to determine the most cost-effective shipping method offered by the carrier that also meets the SLA,  then proceeds to book the shipment.
+While pickers scan and pick items, HotWax Commerce rate shops to determine the most cost-effective shipping method offered by the carrier that also meets the SLA, then proceeds to book the shipment.
 
 For example, when a customer opts for 2-day delivery, rate shopping compares shipping methods offered by carriers capable of meeting the specified timeframe. Let's say FedEx provides both Air and Ground Shipping options. In this scenario, HotWax Commerce evaluates these shipping methods, and if both Air and Ground Shipping can deliver the order item within two days, Ground Shipping is automatically booked, as it achieves the same delivery timeframe at a lower cost.
 
@@ -64,4 +65,4 @@ Finally, the fulfillment team hands over the packed items to the shipping carrie
 
 The `Ship Packed Orders` Job in HotWax Commerce checks if packed items have tracking codes assigned and automatically ships them. Fulfillment teams can also manually ship items once the carrier collects them.
 
-Once an item is shipped, its fulfillment status is updated from <mark style="color:orange;">**"Packed"**</mark> to <mark style="color:orange;">**"Shipped" in HotWax Commerce. When all items of an order are "Shipped", the order status is updated from <mark style="color:orange;">**"Approved"**</mark> to <mark style="color:orange;">**"Completed"**</mark> in HotWax Commerce.
+Once an item is shipped, its fulfillment status is updated from  <mark style="color:orange;">**"Packed"**</mark> to <mark style="color:orange;">**"Shipped"**</mark> in HotWax Commerce. When all items of an order are <mark style="color:orange;">**"Shipped"**</mark>, the order status is updated from <mark style="color:orange;">**"Approved"**</mark> to <mark style="color:orange;">**"Completed"**</mark> in HotWax Commerce.
