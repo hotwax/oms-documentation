@@ -16,9 +16,7 @@ By default items are arranged in a "First In, First Out" sequence, ensuring that
 
 For example, if store managers wish to prioritize items with tight SLAs, they can filter out those that have a same-day shipping method to initiate batch processing for them.
 
-Once store managers determine items they wish to fulfill first, they generate a picklist for them and subsequently, assign a picker so that they can start picking items.
-
-Once store managers determine items they wish to fulfill first, they generate a picklist for them and subsequently, assign a picker so that they can start picking items.
+When store managers determine items they wish to fulfill first, they generate a picklist for them and subsequently, assign a picker so that they can start picking items.
 
 Once the picklist has been generated, the fulfillment status is updated from <mark style="color:orange;">**"Reserved"**</mark> to <mark style="color:orange;">**"Picking"**</mark> in HotWax Commerce.
 
@@ -54,9 +52,9 @@ In the event that an order has multiple items and one box isn’t suitable to fi
 
 ### Unpack Items
 
-In the event the packing team discovers that they have mispacked an item, they have to unpack it. The fulfillment status is then updated from <mark style="color:orange;">**"Packed"**</mark> to <mark style="color:orange;">**"Picking"**</mark> in HotWax Commerce.
+If the packing team discovers that they have mispacked an item, they have to unpack it. The fulfillment status is then updated from <mark style="color:orange;">**"Packed"**</mark> to <mark style="color:orange;">**"Picking"**</mark> in HotWax Commerce.
 
-When the item has been correctly repacked, the fulfillment status in HotWax Commerce is updated to <mark style="color:orange;">**"Packed"**</mark> once again.
+Once the item has been correctly repacked, the fulfillment status in HotWax Commerce is updated to <mark style="color:orange;">**"Packed"**</mark> once again.
 
 ## Ship Items
 
