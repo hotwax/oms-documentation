@@ -23,7 +23,7 @@ Parameter contexts manage dynamic values shared across processors or components 
 
 1. Right-click on the processor's canvas.
 2. Select `parameter` from the options.
-3. Navigate to the Inheritance tab and remove the parameter contexts of the source processor.
+3. Navigate to the `Inheritance` tab and remove the parameter contexts of the source processor.
 4. Select the desired parameter context from the left.
 5. Click `Apply` to save the inheritance of the parameter context.
 
@@ -66,7 +66,7 @@ The Record Writers service facilitates writing data records to various data stor
 
 ### Verify DBCP and SFTP
 
-Before executing any flow, check the DBCP and SFTP connections to ensure credentials are accurate.
+Before executing any flow, check the [DBCP](verify-processor-properties.md) and [SFTP]((verify-processor-properties.md)) connections to ensure credentials are accurate.
 
 ### Execute the Flow
 
