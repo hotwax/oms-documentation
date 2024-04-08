@@ -20,6 +20,7 @@
    * [Dashboard Options](understanding-dashboards/dashboardOptions.md)
    * [Dashboard Customizations](understanding-dashboards/dashboardCustomization.md)
    * [Link Configuration](understanding-dashboards/link-configuration.md)
+   * [Set Multi-Day Filters](understanding-dashboards/multi-day-filters.md)
  
 * [Configuring Alerts & Reports](alerts&Reports/README.md)
    * [Creating Alerts](alerts&Reports/creatingAlerts.md)
