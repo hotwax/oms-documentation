@@ -5,6 +5,7 @@
 
 ## Business Process Models
 
+* [Introduction](business-process-models/README.md)
 * [Order lifecycle](business-process-models/orderlifecycle.md)
 * [Store fulfillment lifecycle](business-process-models/store.fulfillment.md)
 
@@ -27,6 +28,8 @@
 ## Orders
 
 * [Order management](orders/order-management/README.md)
+  * [Find Sales orders](orders/order-management/find-sales-orders.md)
+  * [View Order Details](orders/order-management/view-order-details.md)
   * [Update orders](orders/order-management/update-sales-order.md)
   * [Allocation](orders/order-management/allocate-sales-order.md)
   * [Soft allocation](orders/order-management/soft-allocations.md)
@@ -70,7 +73,6 @@
   * [Restocking](returns/restock-return.md)
 
 ## Inventory
-
 
 * [Inventory Mangaemnet](inventory/inventory-management/README.md)
   * [Find Product Inventory](inventory/inventory-management/find-product-inventory.md)
@@ -116,5 +118,3 @@
 ## How-to documents
 
 * [Add shipping method](how-to/add-shipping-method.md)
-
-  

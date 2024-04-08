@@ -22,8 +22,8 @@ Here’s how you can configure these mappings between HotWax Commerce and Shopif
 
     | Field                     | Description                                |
     | ------------------------- | ------------------------------------------ |
-    | Integration Mapping Key   | The mapping ID present in HotWax Commerce. |
-    | Integration Mapping Value | Corresponding value present in NetSuite.   |
+    | Integration Mapping Key   | The mapping ID present in Shopify. |
+    | Integration Mapping Value | Corresponding value present in HotWax Commerce.   |
     | Description               | Briefly describe the method.               |
 4. Confirm establishing the new mapping by clicking on the `Add` button.
 
