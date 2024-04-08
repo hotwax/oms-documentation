@@ -1,3 +1,9 @@
+---
+description: >-
+  Explore the significance of facility groups in HotWax Commerce for efficient
+  order routing and fulfillment.
+---
+
 # Facility Group
 
 HotWax Commerce routes orders to optimal fulfillment locations. To facilitate order routing, it’s imperative to configure all facilities, including both stores and warehouses, within HotWax Commerce.

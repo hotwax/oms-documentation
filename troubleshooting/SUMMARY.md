@@ -8,15 +8,15 @@
 * [Fulfillment](hotwax/fulfillment/README.md)
   * [Order Approval](hotwax/fulfillment/orderApproval.md)
   * [Shipping Label Generation](hotwax/fulfillment/shipping-label-generation.md)
-* [BOPIS](hotwax/bopis/README.md)
+* [BOPIS](hotwax-commerce/bopis/README.md)
   * [Notifications](hotwax/bopis/notifications.md)
-* [Job Manager](hotwax/jobManager.md)
+* [Job Manager](hotwax-commerce/job-manager/README.md)
   * [Unable to Schedule](hotwax/jobManager/scheduleJob.md)
   * [Job Failed](hotwax/jobManager/jobFailed.md)
   * [Jobs Stuck](hotwax/jobManager/jobStuck.md)
 * [Data Imports](hotwax/dataManager/dataNotImportedInOMS.md)
   * [Schedule Error Mails](hotwax/dataManager/schedule-error-mail.md)
-* [Pre-order](hotwax/preOrders.md)
+* [Pre-order](hotwax-commerce/pre-order/README.md)
   * [Inaccurate Inventory computation](hotwax/pre-orders/inaccurateInventoryComputation.md)
   * [Missing Product Linking](hotwax/pre-orders/missingProductLinking.md)
 
@@ -31,4 +31,3 @@
 * [Product Sync](shopify/products.md)
 * [Inventory Sync](shopify/inventory.md)
 * [Order Sync](shopify/order.md)
-

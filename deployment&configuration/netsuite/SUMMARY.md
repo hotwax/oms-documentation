@@ -19,9 +19,10 @@
 * [Price Level](prerequisiteSyncs/priceLevel.md)
 * [Payment Methods](prerequisiteSyncs/paymentMethods.md)
 * [Promo Codes](prerequisiteSyncs/promoCodes.md)
-* [NetSuite Faciliy Group](prerequisiteSyncs/netsuiteFulfillment.md)
+* [NetSuite Facility Group](prerequisiteSyncs/netsuiteFulfillment.md)
 
 ## Flows
+
 * [Auditing](flows/integration-audit/README.md)
 * [Products and Inventory](flows/products-and-inventory/README.md)
   * [Product IDs](flows/productInventorySync/importProductId.md)

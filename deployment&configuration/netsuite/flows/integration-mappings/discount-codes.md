@@ -1,3 +1,9 @@
+---
+description: >-
+  Explore how discount codes are managed and synchronized between HotWax
+  Commerce and NetSuite for seamless order processing.
+---
+
 # Discount Codes
 
 On a daily basis, HotWax Commerce syncs discount codes from NetSuite. The HotWax integration layer maps discount codes in HotWax to their corresponding counterparts in NetSuite.

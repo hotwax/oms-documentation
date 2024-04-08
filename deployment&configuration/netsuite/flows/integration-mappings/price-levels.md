@@ -1,3 +1,9 @@
+---
+description: >-
+  Discover how price levels facilitate the management of product pricing
+  variations based on factors like sales channels and events.
+---
+
 # Price Levels
 
 Price levels are used to manage multiple prices for a product. This is especially useful when a product is priced differently based on conditions like sales channel, events, or employee-specific pricing. NetSuite provides flexibility to set up different price levels for each item.

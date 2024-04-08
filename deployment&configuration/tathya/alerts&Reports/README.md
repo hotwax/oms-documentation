@@ -1,4 +1,11 @@
-# Alerts and Reports
+---
+description: >-
+  Discover how to configure Alerts & Reports in Tathya, enabling event-triggered
+  notifications and scheduled notifications for effective data monitoring and
+  analysis.
+---
+
+# Configuring Alerts & Reports
 
 Now that you've successfully created charts and added them to dashboards, the next crucial step is to set up Alerts and Reports. The Alerts & Reports feature in Tathya enables creating event-triggered notifications (Alerts) or scheduled notifications (Reports).
 
@@ -23,45 +30,37 @@ The filters and search features enable you to quickly find the alert or report t
 
 ## Filters and Search Features
 
-- **Created By:**
-  - Select a user to display alerts or reports created by that individual.
-
-- **Status:**
-    - Select an option to display alerts or reports that match the selected status. Available status options include:
-    - Default: Displays all entries regardless of status.
-    - Success: Displays entries that ran successfully.
-    - Working: Displays entries that are currently being processed.
-    - Error: Displays entries that did not successfully run.
-    - Not Triggered: Displays entries with a trigger that has not yet been activated.
-    - On Grace: Displays entries that are currently in a defined grace period.
-
-- **Search:**
-    - To use the Search feature, simply enter a term in the text-entry field and hit <Enter> or select the magnifying glass icon. A list of entries that include your search criteria will appear in the table.
+* **Created By:**
+  * Select a user to display alerts or reports created by that individual.
+* **Status:**
+  * Select an option to display alerts or reports that match the selected status. Available status options include:
+  * Default: Displays all entries regardless of status.
+  * Success: Displays entries that ran successfully.
+  * Working: Displays entries that are currently being processed.
+  * Error: Displays entries that did not successfully run.
+  * Not Triggered: Displays entries with a trigger that has not yet been activated.
+  * On Grace: Displays entries that are currently in a defined grace period.
+* **Search:**
+  * To use the Search feature, simply enter a term in the text-entry field and hit or select the magnifying glass icon. A list of entries that include your search criteria will appear in the table.
 
 ## Table Column Headers
 
 The Alerts and Reports tables include the following column headers:
 
-- **Last Run:**
-  - Displays the date, time, and UTC hour difference when the entry last ran.
-
-- **Name:**
-  - Represents the name of the alert or report, as defined when adding or editing the entry.
-
-- **Schedule:**
-  - Indicates the defined schedule of the alert or report (e.g., every hour, every minute, etc.).
-
-- **Notification Method:**
-  - Displays an icon indicating that notifications will be sent via email.
-
-- **Owners:**
-  - Icons indicating the owner(s) of the alert or report.
-
-- **Active:**
-  - A toggle switch indicating whether the alert or report is currently enabled or not.
-
-- **Actions (visible on cursor hover):**
-  - Icons that enable you to access the execution log, edit the entry, or delete the entry.
+* **Last Run:**
+  * Displays the date, time, and UTC hour difference when the entry last ran.
+* **Name:**
+  * Represents the name of the alert or report, as defined when adding or editing the entry.
+* **Schedule:**
+  * Indicates the defined schedule of the alert or report (e.g., every hour, every minute, etc.).
+* **Notification Method:**
+  * Displays an icon indicating that notifications will be sent via email.
+* **Owners:**
+  * Icons indicating the owner(s) of the alert or report.
+* **Active:**
+  * A toggle switch indicating whether the alert or report is currently enabled or not.
+* **Actions (visible on cursor hover):**
+  * Icons that enable you to access the execution log, edit the entry, or delete the entry.
 
 {% hint style="success" %}
 By leveraging these features, you can efficiently manage and monitor alerts and reports, ensuring timely and relevant notifications based on predefined conditions or schedules.

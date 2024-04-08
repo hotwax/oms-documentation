@@ -1,4 +1,10 @@
-# Add users
+---
+description: >-
+  Learn how to create users for HotWax Commerce Users Management Application to
+  set up initial users, including yourself and other team members.
+---
+
+# Create your users
 
 Now that the OMS is setup, its time to create actual users for HotWax Commerce [Users Management Application](https://users.hotwax.io)
 

@@ -1,3 +1,10 @@
+---
+description: >-
+  Learn how HC automatically handles the release and brokering of Shopify
+  Pre-Orders, with the option for manual release preferred by merchants managing
+  both physical stores and eCommerce platforms.
+---
+
 # Release Pre-orders
 
 HotWax Commerce automatically handles the release and brokering of Shopify Pre-Orders, ensuring fulfillment from the most suitable location without requiring manual intervention. However, for merchandisers seeking greater control over online Pre-Order inventory, manual release becomes preferable over automatic processing. This preference often emerges among merchants managing both physical stores and eCommerce platforms. They opt for manual release to prevent allocating all available inventory solely to online Pre-Orders, reserving a portion for their physical stores instead.

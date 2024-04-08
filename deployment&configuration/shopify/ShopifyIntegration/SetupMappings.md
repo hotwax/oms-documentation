@@ -1,12 +1,18 @@
-# Shopfiy Mappings
+---
+description: >-
+  Explore the intricacies of data mappings between Shopify and HotWax Commerce
+  with detailed instructions and default mappings.
+---
 
-{% hint style='info' %}
+# Data Mappings
+
+{% hint style="info" %}
 After incorporating the default mapping, please add any custom mappings as needed. These specific mappings should be documented in the retailer's implementation guide for reference.
 {% endhint %}
 
 Some default mapping data needs to be included when connecting a Shopify store to ensure that data flows smoothly between both systems with correct mappings.
 
-If you're only using the default `SHOP` Shopify Shop ID, this data can be imported directly. However, for multiple Shopify stores, input the data individually for each store. The Shopify Shop ID will change and be obtainable from the header of the View Shopify Shop page in OMS. 
+If you're only using the default `SHOP` Shopify Shop ID, this data can be imported directly. However, for multiple Shopify stores, input the data individually for each store. The Shopify Shop ID will change and be obtainable from the header of the View Shopify Shop page in OMS.
 
 **To import mappings, adhere to the following structured steps:**
 
@@ -19,11 +25,12 @@ If you're only using the default `SHOP` Shopify Shop ID, this data can be import
 
 ## The default mappings to be imported are as follows:
 
-{% hint style='warning' %}
+{% hint style="warning" %}
 Modify the `shopId` for each Shopify Shop when importing data.
 {% endhint %}
 
 **Product Type Mappings**
+
 ```
 <ShopifyShopTypeMapping shopId="SHOP" mappedTypeId="SHOPIFY_PRODUCT_TYPE" mappedKey="Gift Cards" mappedValue="GIFT_CARD"/>
 <ShopifyShopTypeMapping shopId="SHOP" mappedTypeId="SHOPIFY_PRODUCT_TYPE" mappedKey="donation" mappedValue="DONATION"/>
@@ -33,6 +40,7 @@ Modify the `shopId` for each Shopify Shop when importing data.
 ```
 
 **Channel Mappings**
+
 ```
 <ShopifyShopTypeMapping shopId="SHOP" mappedTypeId="SHOPIFY_ORDER_SOURCE" mappedKey="exchange" mappedValue="EXCHG_SALES_CHANNEL"/>
 <ShopifyShopTypeMapping shopId="SHOP" mappedTypeId="SHOPIFY_ORDER_SOURCE" mappedKey="shopify_draft_order" mappedValue="CSR_SALES_CHANNEL"/>
@@ -42,6 +50,7 @@ Modify the `shopId` for each Shopify Shop when importing data.
 ```
 
 **Payment Methods**
+
 ```
 <ShopifyShopTypeMapping shopId='SHOP' mappedTypeId='SHOPIFY_PAYMENT_TYPE' mappedValue='EXT_SHOP_AFTRPAY' mappedKey='afterpay'/>
 <ShopifyShopTypeMapping shopId='SHOP' mappedTypeId='SHOPIFY_PAYMENT_TYPE' mappedValue='EXT_SHOP_AFTRPAY_NA' mappedKey='afterpay_north_america'/>
@@ -51,4 +60,3 @@ Modify the `shopId` for each Shopify Shop when importing data.
 <ShopifyShopTypeMapping shopId='SHOP' mappedTypeId='SHOPIFY_PAYMENT_TYPE' mappedValue='EXT_SHOP_MASTERCARD' mappedKey='Mastercard'/>
 <ShopifyShopTypeMapping shopId='SHOP' mappedTypeId='SHOPIFY_PAYMENT_TYPE' mappedValue='EXT_SHOP_PAYPAL' mappedKey='paypal'/>
 ```
-

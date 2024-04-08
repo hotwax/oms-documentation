@@ -1,3 +1,9 @@
+---
+description: >-
+  Explore the intricacies of shipping methods in eCommerce and their
+  synchronization with HotWax Commerce and NetSuite.
+---
+
 # Shipping Methods
 
 Shipping methods in eCommerce are mapped in HotWax Commerce, responsible for order and fulfillment. When orders are synced from HotWax Commerce to NetSuite, it's essential to communicate the shipping method information to NetSuite. However, NetSuite may have a single method servicing multiple eCommerce shipping methods.
@@ -11,8 +17,8 @@ Shipping methods that are supported by the retailer need to be created in HotWax
 1. Log in to your user instance and navigate to Settings > General Settings.
 2. Locate the shipment method section and click on the `Add`, which will open up a form.
 3. Fill in the required fields:
-   - Shipment Method Type ID: The name used to identify the shipping method within HotWax Commerce.
-   - Description: A brief explanation of the shipping method's intended purpose.
+   * Shipment Method Type ID: The name used to identify the shipping method within HotWax Commerce.
+   * Description: A brief explanation of the shipping method's intended purpose.
 4. After entering the necessary details, click on the `Add` to save the shipping method in HotWax Commerce.
 
 Once shipping methods are created, they need to be mapped with NetSuite to provide accurate information for order processing and fulfillment.

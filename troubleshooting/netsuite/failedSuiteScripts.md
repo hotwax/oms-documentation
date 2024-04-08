@@ -1,3 +1,9 @@
+---
+description: >-
+  Troubleshoot failed SuiteScript executions for effective resolution and system
+  optimization.
+---
+
 # Failed SuiteScripts
 
 ## Export Failure
@@ -7,7 +13,6 @@ If an export SuiteScript is reported in an error notification indicating a conne
 **Steps to Troubleshoot:**
 
 1. Review the custom NetSuite entity setup by the SDF bundle for SFTP configurations. Ensure that the default directory is set up correctly for your project. It should look something like this: `/home/{client-name}sftp/netsuite/`.
-   
 2. If the connection issue still persists, try logging into the SFTP directly with credentials provided by HotWax. If you are unable to connect to the SFTP directly, this most likely indicates that the OMS instance is experiencing availability issues. Connect with the HotWax Support team for this.
 
 **Retry data from failed exports**
@@ -16,7 +21,7 @@ HotWax SuiteScripts maintain a time-based cursor to track the last exported date
 
 At any point if you wish to export a certain set of records on demand, the scheduled scripts can also be run on demand, but to fully complete the sync, it’s important to also run the corresponding import job in HotWax or else the sync will not be complete.
 
----
+***
 
 ## Import Failures
 
@@ -40,9 +45,9 @@ Netsuite will still consider this file valid, but it’ll create an error log CS
 
 Here are the imports which use NetSuite’s CSV import module:
 
-- Customer Import
-- Order Creation
-- Inventory Adjustment (Cycle Count)
+* Customer Import
+* Order Creation
+* Inventory Adjustment (Cycle Count)
 
 #### Retry data from failed exports
 
@@ -54,8 +59,8 @@ Attribute-based flows ensure that a sync is automatically retried until an attri
 
 Here are the flows which use an attribute-based sync when exporting data to NetSuite:
 
-- Customer Sync
-- Order Sync
+* Customer Sync
+* Order Sync
 
 **Time-based sync**
 
@@ -63,4 +68,4 @@ All other synchronizations with NetSuite use a time-based cursor to track which 
 
 Currently, there is only one flow that is time-based and uses the CSV import module in NetSuite:
 
-- Inventory adjustments from Cycle Counts
+* Inventory adjustments from Cycle Counts

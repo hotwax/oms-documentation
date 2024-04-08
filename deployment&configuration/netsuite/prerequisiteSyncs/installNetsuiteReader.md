@@ -1,4 +1,10 @@
-# Installing NetSuite Reader in OMS
+---
+description: >-
+  Ensure smooth data communication by installing the NetSuite Reader before
+  configuring import jobs in OMS.
+---
+
+# Install NetSuite Jobs
 
 Before configuring NetSuite import jobs in OMS, it's crucial to install the NetSuite Reader. Failure to do so may lead to missing configurations, resulting in improper data communication. Follow the steps below for a seamless installation:
 

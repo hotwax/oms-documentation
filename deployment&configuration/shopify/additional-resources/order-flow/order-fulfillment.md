@@ -1,5 +1,10 @@
-# Order Fulfillment
+---
+description: >-
+  Explore the streamlined process of order fulfillment in HotWax Commerce, from
+  receiving order details to final shipment.
+---
 
+# Order Fulfillment
 
 Upon receiving order details from the HotWax Commerce, the designated fulfillment center facility is promptly notified, initiating the next phase of the order fulfillment process. Store associates efficiently receive the order instructions in the fulfillment app, ensuring seamless communication and coordination, where the regular orders will move to the fulfillment app and customers who have opted for the BOPIS will move to the BOPIS app.
 
