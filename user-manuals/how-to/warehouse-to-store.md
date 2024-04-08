@@ -4,7 +4,7 @@ description: >-
 ---
 
 
-## Warehouse to Store
+# Warehouse to Store
 
 Transfer orders originate in NetSuite, but there is a distinction in how they are fulfilled. When a transfer order is initiated from a warehouse, NetSuite's fulfillment solution is employed to fulfill the transfer order, ensuring accurate order fulfillment.
 
