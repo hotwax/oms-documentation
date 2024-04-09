@@ -170,9 +170,9 @@ A scheduled job in HotWax Commerce OMS reads this CSV file from the SFTP locatio
 
 Following this, a scheduled job in HotWax Commerce OMS marks this transfer order as `Approved`. Upon approval, this transfer order is reflected in the Store Fulfillment App at the Broadway store, and the Available to Promise inventory for the transfer order item is reduced by 100 quantities.
 
-Once the store associates create a shipment for this transfer order and ship the 100 quantities for the product from the Broadway store, the transfer order status automatically updates from `Approved` to `Shipped` in HotWax Commerce.
+Once the store associates create a shipment for this transfer order and ship the 100 quantities for the product from the Broadway store, the transfer order status automatically updates from `Approved` to `Completed` in HotWax Commerce.
 
-Now, a scheduled job in HotWax Commerce Integration Platform generates a JSON file containing details of all these 100 shipped quantities of a transfer order and places the file at an SFTP location.
+Now, a scheduled job in HotWax Commerce Integration Platform generates a JSON file containing details of all these 100 fulfilled transfer order items and places the file at an SFTP location.
 
 In NetSuite, a scheduled SuiteScript reads this JSON file containing a fulfilled transfer order item with 100 quantities from the SFTP location and creates an item fulfillment record of 100 quantities, reducing inventory count by 100 quantities in NetSuite at the Broadway store. Now the transfer order in NetSuite is updated from `Pending Fulfillment` to `Pending Receipt`.
 

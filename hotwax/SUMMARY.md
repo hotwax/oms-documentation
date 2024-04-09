@@ -30,6 +30,7 @@
 * [Returns](returns/README.md)
   * [Enumerations](returns/field-options.md)
   * [Create Return](api/returns/create-return.md)
+  * [Returns Financial Feed](api/returns/returns-financial-feed.md)
 * [Facility](api/facility/README.md)
   * [Post Code Lookup](api/facility/postcode-lookup.md)
   * [Store Lookup](api/facility/store-lookup.md)
