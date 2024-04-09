@@ -1,3 +1,10 @@
+---
+description: >-
+  Learn how to configure and verify crucial properties like Database Connection
+  Pooling (DBCP) and Secure File Transfer Protocol (SFTP) for efficient data
+  handling in NiFi.
+---
+
 # Verify Processor Properties
 
 Processors are components designed to execute tasks on data within a system's dataflows. They handle tasks like data ingestion, transformation, routing, and interaction. Properties within processors are settings dictating how a processor operates and handles data. These settings allow users to customize processor behavior, including parameters like database connections (DBCP), SFTP details, etc.&#x20;

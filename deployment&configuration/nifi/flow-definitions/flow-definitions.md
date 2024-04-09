@@ -1,3 +1,9 @@
+---
+description: >-
+  Learn how to efficiently manage and reuse data flow designs in Apache NiFi
+  using Flow Definitions.
+---
+
 # Flow Definitions
 
 Flow Definitions are akin to Templates, referring to reusable data flow components and configurations for saving and reusing in various instances. They enable users to create reusable flow templates, which can be shared, imported, and customized across different NiFi instances, fostering consistency, standardization, and reuse of data flow designs.
@@ -44,9 +50,11 @@ While most parameters are inherited from the parent processor groups, some param
 * **Feed File Name with Prefix:** Here, a meaningful file name with a prefix such as time needs to be added for easy identification.
 * **Source SQL Query:** This parameter contains the SQL query required for the processor to perform its action.
 * **Date Time Format:** Specifies the date time format for the files. It's crucial for accurate representation.
-* **File Name Extension:** Selects whether the file is .csv or .json to ensure compatibility with other systems and accurate file reading.
+* **File Name Extension:** Select whether the file is .csv or .json to ensure compatibility with other systems and accurate file reading.
 
-**Hint:** To configure the file name, locate the flow file named `Update file name.` Right-click and select the configure option. Go to properties and enter the query in the filename field.
+{% hint style="info" %}
+To configure the file name, locate the flow file named `Update file name.` Right-click and select the configure option. Go to properties and enter the query in the filename field.
+{% endhint %}
 
 ### Select Database Connection Pooling Service (DBCP service)
 
@@ -59,10 +67,12 @@ The Record Writers service facilitates writing data records to various data stor
 1. Right-click on the processor and select `Configure.`
 2. Navigate to the property `Record writer.`
 3. Select the appropriate record writer from the dropdown menu.
-4. Configure the record writer service by clicking the arrow against the service. Click on the settings icon to configure the service.
+4. Configure the record writer service by clicking the arrow against the service. Click on the `settings` icon to configure the service.
 5. Navigate to the properties tab and update the service as per your requirements.
 
-**Hint:** Services can only be updated once disabled. Be cautious as disabling the service affects all associated processors.
+{% hint style="warning" %}
+Services can only be updated once disabled. Be cautious as disabling the service affects all associated processors. Once the services are updated, right-click on the canvas and select enable all controller services to enable the services.
+{% endhint %}
 
 ### Verify DBCP and SFTP
 
