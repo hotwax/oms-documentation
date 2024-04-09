@@ -446,55 +446,29 @@ The Brokered Order Items feed has certain out-of-the-box customizations that all
 
 **The following attributes have been prepared in the feed:**
 
-| Field Name                         | Description                                                     | Sample value              |
-| ---------------------------------- | --------------------------------------------------------------- | ------------------------- |
-| productStoreId                     | The ID of the product store                                     | STORE                     |
-| orderId                            | The HotWax Commerce unique identifier for the order             | 12082                     |
-| orderName                          | The eCommerce order identifier                                  | 9000004032                |
-| orderDate                          | The date and time the order was placed on eCommerce             | 2024-02-23T03:43:23+09:00 |
-| orderStatusId                      | Order status                                                    | ORDER\_APPROVED           |
-| entryDate                          | The date and time the order was imported in HotWax Commerce OMS | 2024-02-23T03:50:12+09:00 |
-| orderExternalId                    | The external ID of the order                                    | 5384320450749             |
-| currency                           | The payment currency used for the order                         | JPY                       |
-| grandTotal                         | The total sum of all costs associated with an order             | 1870                      |
-| orderItemSeqId                     | The sequence ID of the order item in order object               | null                      |
-| itemStatusId                       | Item status                                                     | null                      |
-| orderItemQuantity                  | Order item quantity                                             | null                      |
-| **reservedItemQuantity**           | Reserved item quantity from the Order                           | null                      |
-| reservedDatetime                   | The date and time the items were reserved                       | null                      |
-| unitPrice                          | The unit price of the item                                      | null                      |
-| orderItemExternalId                | The external ID of the order item                               | null                      |
-| itemDescription                    | The description of the item                                     | null                      |
-| requestedDeliveryDate              | The requested delivery date of the order                        | null                      |
-| requestedDeliveryTime              | The requested delivery time of the order                        | null                      |
-| deliveryWindow                     | The time frame during which a delivery is expected              | null                      |
-| shipGroupSeqId                     | The sequence ID of the ship group                               | null                      |
-| shipmentMethodTypeId               | The shipment method type ID                                     | null                      |
-| postalContactMechId                | The postal contact mechanism ID                                 | null                      |
-| telecomContactMechId               | The telecom contact mechanism ID                                | null                      |
-| **orderFacilityId**                | The order facility ID                                           | null                      |
-| **carrierPartyId**                 | The carrier party ID                                            | null                      |
-| **externalFulfillmentOrderItemId** | The external fulfillment order item ID                          | null                      |
-| fulfillmentStatus                  | The fulfillment status                                          | null                      |
-| customerFirstName                  | The first name of the customer                                  | jhon                      |
-| customerLastName                   | The last name of the customer                                   | deo                       |
-| facilityId                         | The facility where order is brokered                            | null                      |
-| facilityExternalId                 | The external ID of the facility                                 | null                      |
-| facilityTypeId                     | The facility type ID, which can be Retail store or Warehouse    | null                      |
-| parentFacilityTypeId               | The parent facility type ID                                     | null                      |
-| statusDatetime                     | The date and time of the status                                 | null                      |
-| productId                          | The product ID                                                  | null                      |
-| productTypeId                      | The product type ID                                             | null                      |
-| salesChannel                       | The sales channel                                               | WEB\_CHANNEL              |
-| customerPartyId                    | The customer party ID                                           | 10290                     |
-| isShippingChargesSent              | Indicates if shipping charges are sent                          | Y                         |
-| billTo                             | The billing information                                         | See below                 |
-| orderIdentifications               | The order identifications                                       | See below                 |
-| customerPartyIdentifications       | The customer party identifications                              | See below                 |
-| payments                           | The payments                                                    | See below                 |
-| orderAdjustments                   | The order adjustments                                           | See below                 |
-| orderAttributes                    | The order attributes                                            | See below                 |
-| orderItems                         | The order items                                                 | See below                 |
+| Field Name                   | Description                                                     | Sample value              |
+| ---------------------------- | --------------------------------------------------------------- | ------------------------- |
+| productStoreId               | The ID of the product store                                     | STORE                     |
+| orderId                      | The HotWax Commerce unique identifier for the order             | 12082                     |
+| orderName                    | The eCommerce order identifier                                  | 9000004032                |
+| orderDate                    | The date and time the order was placed on eCommerce             | 2024-02-23T03:43:23+09:00 |
+| orderStatusId                | Order status                                                    | ORDER_APPROVED            |
+| entryDate                    | The date and time the order was imported in HotWax Commerce OMS | 2024-02-23T03:50:12+09:00 |
+| orderExternalId              | The external ID of the order                                    | 5384320450749             |
+| currency                     | The payment currency used for the order                         | JPY                       |
+| grandTotal                   | The total sum of all costs associated with an order             | 1870                      |
+| customerFirstName            | The first name of the customer                                  | jhon                      |
+| customerLastName             | The last name of the customer                                   | deo                       |
+| salesChannel                 | The sales channel                                               | WEB_CHANNEL               |
+| customerPartyId              | The customer party ID                                           | 10290                     |
+| isShippingChargesSent        | Indicates if shipping charges are sent                          | Y                         |
+| billTo                       | The billing information                                         | See below                 |
+| orderIdentifications         | The order identifications                                       | See below                 |
+| customerPartyIdentifications | The customer party identifications                              | See below                 |
+| payments                     | The payments                                                    | See below                 |
+| orderAdjustments             | The order adjustments                                           | See below                 |
+| orderAttributes              | The order attributes                                            | See below                 |
+| orderItems                   | The order items                                                 | See below                 |
 
 **This object contains the following attributes, each of which has internal nesting:**
 
@@ -508,323 +482,221 @@ The Brokered Order Items feed has certain out-of-the-box customizations that all
 | orderAttributes              | The order attributes               | See below    |
 | orderItems                   | The order items                    | See below    |
 
-#### billTo
-
+**billTo**
 | Field Name           | Description                             | Sample value |
 | -------------------- | --------------------------------------- | ------------ |
 | countryGeoCode       | The country geo code                    | JP           |
 | stateProvinceGeoCode | The state province geo code             | null         |
 | contactMechId        | The contact mechanism ID                | 18227        |
 | toName               | The name of the recipient               | jhon deo     |
-| attnName             | The attention name                      | null         |
-| address1             | The first line of the address           | 足立           |
+| address1             | The first line of the address           | 足立          |
 | address2             | The second line of the address          | null         |
-| houseNumber          | The house number                        | null         |
-| houseNumberExt       | The house number extension              | null         |
-| directions           | The directions                          | null         |
-| city                 | The city                                | 足立区          |
-| cityGeoId            | The city geo ID                         | null         |
+| city                 | The city                                | 足立区        |
 | postalCode           | The postal code                         | 120-0015     |
-| postalCodeExt        | The postal code extension               | null         |
 | countryGeoId         | The country geo ID                      | JPN          |
 | stateProvinceGeoId   | The state province geo ID               | null         |
-| countyGeoId          | The county geo ID                       | null         |
-| municipalityGeoId    | The municipality geo ID                 | null         |
-| postalCodeGeoId      | The postal code geo ID                  | null         |
-| geoPointId           | The geo point ID                        | 11795        |
-| encodedAddressKey    | The encoded address key                 | null         |
-| latitude             | The latitude                            | null         |
-| longitude            | The longitude                           | null         |
 | isResidentialAddress | Indicates if the address is residential | Y            |
 | phone                | The phone information                   | See below    |
 
-#### phone
+**billTo.phone**
 
-| Field Name       | Description                          | Sample value              |
-| ---------------- | ------------------------------------ | ------------------------- |
-| contactMechId    | The contact mechanism ID             | 18228                     |
-| countryCode      | The country code                     | 1                         |
-| areaCode         | The area code                        | null                      |
-| contactNumber    | The contact number                   | 0593785656                |
-| askForName       | The name to ask for                  | null                      |
-| lastUpdatedStamp | The date and time of the last update | 2024-02-23T03:50:12+09:00 |
+| Field Name    | Description              | Sample value |
+| ------------- | ------------------------ | ------------ |
+| contactMechId | The contact mechanism ID | 18228        |
+| countryCode   | The country code         | 1            |
+| areaCode      | The area code            | null         |
+| contactNumber | The contact number       | 0593785656   |
 
-#### orderIdentifications
+**orderIdentifications**
 
-| Field Name                | Description                          | Sample value              |
-| ------------------------- | ------------------------------------ | ------------------------- |
-| idValue                   | The ID value                         | 5384320450749             |
-| orderId                   | The order ID                         | 12082                     |
-| fromDate                  | The from date                        | 2024-02-23T03:50:12+09:00 |
-| lastUpdatedStamp          | The date and time of the last update | 2024-02-23T03:50:12+09:00 |
-| orderIdentificationTypeId | The order identification type ID     | SHOPIFY\_ORD\_ID          |
-| thruDate                  | The thru date                        | null                      |
+| Field Name | Description   | Sample value              |
+| ---------- | ------------- | ------------------------- |
+| idValue    | The ID value  | 5384320450749             |
+| orderId    | The order ID  | 12082                     |
+| fromDate   | The from date | 2024-02-23T03:50:12+09:00 |
+| thruDate   | The thru date | null                      |
 
-#### customerPartyIdentifications
+**customerPartyIdentifications**
 
-| Field Name                | Description                          | Sample value              |
-| ------------------------- | ------------------------------------ | ------------------------- |
-| lastUpdatedStamp          | The date and time of the last update | 2024-02-23T01:50:16+09:00 |
-| partyIdentificationTypeId | The party identification type ID     | SHOPIFY\_CUST\_ID         |
-| idValue                   | The ID value                         | 7053008306365             |
-| partyId                   | The party ID                         | 10290                     |
+| Field Name                | Description                      | Sample value    |
+| ------------------------- | -------------------------------- | --------------- |
+| partyIdentificationTypeId | The party identification type ID | SHOPIFY_CUST_ID |
+| idValue                   | The ID value                     | 7053008306365   |
+| partyId                   | The party ID                     | 10290           |
 
-#### payments
+**payments**
 
 | Field Name               | Description                    | Sample value              |
 | ------------------------ | ------------------------------ | ------------------------- |
 | paymentMethodCode        | The payment method code        | null                      |
 | amount                   | The amount                     | 1870                      |
-| paymentMethodTypeId      | The payment method type ID     | EXT\_SHOP\_OTHR\_GTWAY    |
+| paymentMethodTypeId      | The payment method type ID     | EXT_SHOP_OTHR_GTWAY       |
 | paymentMethodDescription | The payment method description | Ext Other Gateways        |
 | orderId                  | The order ID                   | 12082                     |
-| statusId                 | The status ID                  | PAYMENT\_AUTHORIZED       |
+| statusId                 | The status ID                  | PAYMENT_AUTHORIZED        |
 | returnId                 | The return ID                  | null                      |
 | createdDate              | The date and time of creation  | 2024-02-23T03:50:12+09:00 |
 
-#### orderAdjustments
+**orderAdjustments**
 
-| Field Name              | Description                                                | Sample value         |
-| ----------------------- | ---------------------------------------------------------- | -------------------- |
-| customerReferenceId     | The customer reference ID                                  | null                 |
-| correspondingProductId  | The corresponding product ID                               | null                 |
-| orderItemSeqId          | The order item sequence ID                                 | _NA_                 |
-| includeInShipping       | Indicates if the adjustment is included in shipping        | null                 |
-| description             | The description of the adjustment                          | null                 |
-| exemptAmount            | The exempt amount                                          | null                 |
-| productPromoId          | The product promo ID                                       | null                 |
-| taxAuthPartyId          | The tax authority party ID                                 | null                 |
-| lastModifiedByUserLogin | The ID of the last user login that modified the adjustment | null                 |
-| oldPercentage           | The old percentage                                         | null                 |
-| orderAdjustmentTypeId   | The order adjustment type ID                               | SHIPPING\_SALES\_TAX |
-| primaryGeoId            | The primary geo ID                                         | null                 |
-| taxAuthGeoId            | The tax authority geo ID                                   | null                 |
-| originalAdjustmentId    | The original adjustment ID                                 | null                 |
-| amount                  | The amount                                                 | 50                   |
-| secondaryGeoId          | The secondary geo ID                                       | null                 |
-| createdByUserLogin      | The ID of the user login that created the adjustment       | null                 |
-| orderAdjustmentId       | The order adjustment ID                                    | null                 |
-| amountAlreadyIncluded   | The amount already included                                | null                 |
-| lastUpdatedStamp        | The date and time of the last update                       | null                 |
-| comments                | The comments                                               | null                 |
-| orderId                 | The order ID                                               | 12082                |
-| recurringAmount         | The recurring amount                                       | null                 |
-| lastModifiedDate        | The date and time of the last modification                 | null                 |
-| sourceReferenceId       | The source reference ID                                    | null                 |
-| productPromoRuleId      | The product promo rule ID                                  | null                 |
-| isManual                | Indicates if the adjustment is manual                      | null                 |
-| productFeatureId        | The product feature ID                                     | null                 |
-| taxAuthorityRateSeqId   | The tax authority rate sequence ID                         | null                 |
-| overrideGlAccountId     | The override GL account ID                                 | null                 |
-| oldAmountPerQuantity    | The old amount per quantity                                | null                 |
-| shipGroupSeqId          | The ship group sequence ID                                 | null                 |
-| includeInTax            | Indicates if the adjustment is included in tax             | null                 |
-| createdDate             | The date and time of creation                              | null                 |
-| productPromoActionSeqId | The product promo action sequence ID                       | null                 |
-| sourcePercentage        | The source percentage                                      | null                 |
+| Field Name            | Description                  | Sample value       |
+| --------------------- | ---------------------------- | ------------------ |
+| orderAdjustmentTypeId | The order adjustment type ID | SHIPPING_SALES_TAX |
+| amount                | The amount                   | 50                 |
+| orderAdjustmentId     | The order adjustment ID      | null               |
+| orderId               | The order ID                 | 12082              |
 
-#### orderAttributes
+**orderAttributes**
 
-| Field Name       | Description                          | Sample value              |
-| ---------------- | ------------------------------------ | ------------------------- |
-| lastUpdatedStamp | The date and time of the last update | 2024-02-23T04:05:15+09:00 |
-| orderId          | The order ID                         | 12082                     |
-| attrDescription  | The attribute description            | null                      |
-| attrName         | The attribute name                   | COD\_FEE\_ADJ\_CREATED    |
-| attrValue        | The attribute value                  | true                      |
+| Field Name      | Description               | Sample value        |
+| --------------- | ------------------------- | ------------------- |
+| orderId         | The order ID              | 12082               |
+| attrDescription | The attribute description | null                |
+| attrName        | The attribute name        | COD_FEE_ADJ_CREATED |
+| attrValue       | The attribute value       | true                |
 
-#### orderItems
+**orderItems**
 
-| Field Name                     | Description                                             | Sample value              |
-| ------------------------------ | ------------------------------------------------------- | ------------------------- |
-| productStoreId                 | The ID of the product store                             | STORE                     |
-| orderId                        | The unique identifier for the order                     | 12082                     |
-| orderName                      | The name of the order                                   | 9000004032                |
-| orderDate                      | The date and time the order was placed                  | 2024-02-23T03:43:23+09:00 |
-| orderStatusId                  | The status of the order                                 | ORDER\_APPROVED           |
-| entryDate                      | The date and time the order was entered                 | 2024-02-23T03:50:12+09:00 |
-| orderExternalId                | The external ID of the order                            | 5384320450749             |
-| currency                       | The currency used for the order                         | JPY                       |
-| grandTotal                     | The total amount of the order                           | 1870                      |
-| orderItemSeqId                 | The sequence ID of the order item                       | 00101                     |
-| itemStatusId                   | The status of the item                                  | ITEM\_APPROVED            |
-| orderItemQuantity              | The quantity of the order item                          | 1                         |
-| reservedItemQuantity           | The quantity of reserved items                          | 1                         |
-| reservedDatetime               | The date and time the items were reserved               | 2024-02-23T04:20:07+09:00 |
-| unitPrice                      | The unit price of the item                              | 1200                      |
-| orderItemExternalId            | The external ID of the order item                       | 12915436126397            |
-| itemDescription                | The description of the item                             | ソックス クルー 3ペア ホワイト         |
-| requestedDeliveryDate          | The requested delivery date                             | null                      |
-| requestedDeliveryTime          | The requested delivery time                             | null                      |
-| deliveryWindow                 | The delivery window                                     | null                      |
-| shipGroupSeqId                 | The sequence ID of the ship group                       | 00001                     |
-| shipmentMethodTypeId           | The shipment method type ID                             | STANDARD                  |
-| postalContactMechId            | The postal contact mechanism ID                         | 18224                     |
-| telecomContactMechId           | The telecom contact mechanism ID                        | 18225                     |
-| orderFacilityId                | The order facility ID                                   | null                      |
-| carrierPartyId                 | The carrier party ID                                    | _NA_                      |
-| externalFulfillmentOrderItemId | The external fulfillment order item ID                  | null                      |
-| fulfillmentStatus              | The fulfillment status                                  | null                      |
-| customerFirstName              | The first name of the customer                          | jhon                      |
-| customerLastName               | The last name of the customer                           | deo                       |
-| facilityId                     | The facility ID                                         | WH0615                    |
-| facilityExternalId             | The external ID of the facility                         | 22                        |
-| **facilityTypeId**             | The facility type ID                                    | WAREHOUSE                 |
-| **parentFacilityTypeId**       | The parent facility type ID                             | DISTRIBUTION\_CENTER      |
-| **statusDatetime**             | The date and time of the status                         | 2024-02-23T04:05:15+09:00 |
-| productId                      | The product's unique identifier in HotWax Commerce      | 60757                     |
-| productTypeId                  | The type of product identification                      | FINISHED\_GOOD            |
-| salesChannel                   | The sales channel                                       | WEB\_CHANNEL              |
-| customerPartyId                | The customer's unique identification in HotWax Commerce | 10290                     |
-| shipTo                         | The shipping information                                | See below                 |
-| goodIdentifications            | The product/good identifications                        | See below                 |
-| orderItemAdjustments           | The order item adjustments                              | See below                 |
-| orderItemAttributes            | The order item attributes                               | See below                 |
-| facilityGroupMembers           | The facility group members                              | See below                 |
-| **fromOrderItemAssocs**        | The from order item associations                        | See below                 |
-| **toOrderItemAssocs**          | The to order item associations                          | See below                 |
-| productFeatures                | The product features                                    | See below                 |
+| Field Name                                                  | Description                                                       | Sample value              |
+|-------------------------------------------------------------|-------------------------------------------------------------------|---------------------------|
+| productStoreId                                              | The ID of the product store                                       | STORE                     |
+| orderId                                                     | The unique identifier for the order                               | 12082                     |
+| orderName                                                   | The name of the order                                             | 9000004032                |
+| orderDate                                                   | The date and time the order was placed                            | 2024-02-23T03:43:23+09:00 |
+| orderStatusId                                               | The status of the order                                           | ORDER_APPROVED            |
+| entryDate                                                   | The date and time the order was entered                           | 2024-02-23T03:50:12+09:00 |
+| orderExternalId                                             | The external ID of the order                                      | 5384320450749             |
+| currency                                                    | The currency used for the order                                   | JPY                       |
+| grandTotal                                                  | The total amount of the order                                     | 1870                      |
+| orderItemSeqId                                              | The sequence ID of the order item                                 | 00101                     |
+| itemStatusId                                                | The status of the item                                            | ITEM_APPROVED             |
+| orderItemQuantity                                           | The quantity of the order item                                    | 1                         |
+| reservedItemQuantity                                        | The quantity of reserved items                                    | 1                         |
+| unitPrice                                                   | The unit price of the item                                        | 1200                      |
+| orderItemExternalId                                         | The external ID of the order item                                 | 12915436126397            |
+| itemDescription                                             | The description of the item                                       | ソックス クルー 3ペア ホワイト |
+| shipGroupSeqId                                              | The sequence ID of the ship group                                 | 00001                     |
+| shipmentMethodTypeId                                        | The shipment method type ID                                       | STANDARD                  |
+| postalContactMechId                                         | The postal contact mechanism ID                                   | 18224                     |
+| telecomContactMechId                                        | The telecom contact mechanism ID                                  | 18225                     |
+| carrierPartyId                                              | The carrier party ID                                              | NA                        |
+| externalFulfillmentOrderItemId                              | The external fulfillment order item ID                            | null                      |
+| fulfillmentStatus                                           | The fulfillment status                                            | null                      |
+| customerFirstName                                           | The first name of the customer                                    | jhon                      |
+| customerLastName                                            | The last name of the customer                                     | deo                       |
+| facilityId                                                  | The facility ID                                                   | WH0615                    |
+| facilityExternalId                                          | The external ID of the facility                                   | 22                        |
+| facilityTypeId                                              | This attribute contains the facility Type Id.                     | WAREHOUSE                 | 
+| parentFacilityTypeId                                        | This attribute contains ID of the parent facility for facilityId. |  DISTRIBUTION_CENTER
+| statusDatetime                                              | The date and time of the status                                   | 2024-02-23T04:05:15+09:00 |
+| productId                                                   | The product's unique identifier in HotWax Commerce                | 60757                     |
+| productTypeId                                               | The type of product identification                                | FINISHED_GOOD             |
+| internalName                                                | String                                                            | \-                        |
+| salesChannel                                                | The sales channel                                                 | WEB_CHANNEL               |
+| customerPartyId                                             | The customer's unique identification in HotWax Commerce           | 10290                     |
+| shipTo                                                      | The shipping information                                          | See below                 |
+| goodIdentifications                                         | The product/good identifications                                  | See below                 |
+| orderItemAdjustments                                        | The order item adjustments                                        | See below                 |
+| orderItemAttributes                                         | The order item attributes                                         | See below                 |
+| facilityGroupMembers                                        | The facility group members                                        | See below                 |
+| fromOrderItemAssocs                                         | The from order item associations                                  | See below                 |
+| toOrderItemAssocs                                           | The to order item associations                                    | See below                 |
+| productFeatures                                             | The product features                                              | See below                 |
 
-#### shipTo
+**orderItems.shipTo**
+| Field Name           | Description                             | Sample value |
+| -------------------- | --------------------------------------- | ------------ |
+| countryGeoCode       | The country geo code                    | JP           |
+| stateProvinceGeoCode | The state province geo code             | null         |
+| contactMechId        | The contact mechanism ID                | 18224        |
+| toName               | The name of the recipient               | jhon deo     |
+| address1             | The first line of the address           | 足立          |
+| address2             | The second line of the address          | null         |
+| city                 | The city                                | 足立区        |
+| postalCode           | The postal code                         | 120-0015     |
+| countryGeoId         | The country geo ID                      | JPN          |
+| stateProvinceGeoId   | The state province geo ID               | null         |
+| countyGeoId          | The county geo ID                       | null         |
+| isResidentialAddress | Indicates if the address is residential | Y            |
+| phone                | The phone information                   | See below    |
 
-| Field Name            | Description                             | Sample value |
-| --------------------- | --------------------------------------- | ------------ |
-| countryGeoCode        | The country geo code                    | JP           |
-| stateProvinceGeoCode  | The state province geo code             | null         |
-| contactMechId         | The contact mechanism ID                | 18224        |
-| toName                | The name of the recipient               | jhon deo     |
-| **attnName**          | The attention name                      | null         |
-| address1              | The first line of the address           | 足立           |
-| address2              | The second line of the address          | null         |
-| houseNumber           | The house number                        | null         |
-| houseNumberExt        | The house number extension              | null         |
-| directions            | The directions                          | null         |
-| city                  | The city                                | 足立区          |
-| cityGeoId             | The city geo ID                         | null         |
-| postalCode            | The postal code                         | 120-0015     |
-| postalCodeExt         | The postal code extension               | null         |
-| countryGeoId          | The country geo ID                      | JPN          |
-| stateProvinceGeoId    | The state province geo ID               | null         |
-| countyGeoId           | The county geo ID                       | null         |
-| municipalityGeoId     | The municipality geo ID                 | null         |
-| postalCodeGeoId       | The postal code geo ID                  | null         |
-| geoPointId            | The geo point ID                        | 11794        |
-| **encodedAddressKey** | The encoded address key                 | null         |
-| latitude              | The latitude                            | 35.7610621   |
-| longitude             | The longitude                           | 139.8073929  |
-| isResidentialAddress  | Indicates if the address is residential | Y            |
-| phone                 | The phone information                   | See below    |
+**orderItems.phone.shipTo**
 
-#### goodIdentifications
+| Field Name    | Description              | Sample value |
+| ------------- | ------------------------ | ------------ |
+| contactMechId | The contact mechanism ID | 18228        |
+| countryCode   | The country code         | 1            |
+| areaCode      | The area code            | null         |
+| contactNumber | The contact number       | 0593785656   |
 
-| Field Name               | Description                          | Sample value              |
-| ------------------------ | ------------------------------------ | ------------------------- |
-| idValue                  | The good identifications ID value    | 37639003275453            |
-| fromDate                 | The identification creation date     | 2023-12-25T03:48:21+09:00 |
-| productId                | The HotWax Commerce's product ID     | 60757                     |
-| goodIdentificationTypeId | The type of good identification      | SHOPIFY\_PROD\_ID         |
-| lastUpdatedStamp         | The date and time of the last update | 2023-12-25T03:48:31+09:00 |
-| thruDate                 | The identification expiration date   | null                      |
+**orderItem.goodIdentification**
 
-#### orderItemAdjustments: WIP
+| Field Name               | Description                        | Sample value              |
+| ------------------------ | ---------------------------------- | ------------------------- |
+| idValue                  | The good identifications ID value  | 37639003275453            |
+| fromDate                 | The identification creation date   | 2023-12-25T03:48:21+09:00 |
+| productId                | The HotWax Commerce's product ID   | 60757                     |
+| goodIdentificationTypeId | The type of good identification    | SHOPIFY_PROD_ID           |
+| thruDate                 | The identification expiration date | null                      |
 
-| Field Name                 | Description                                                | Sample value |
-| -------------------------- | ---------------------------------------------------------- | ------------ |
-| **customerReferenceId**    | The customer reference ID                                  | null         |
-| **correspondingProductId** | The corresponding product ID                               | null         |
-| **includeInShipping**      | Indicates if the adjustment is included in shipping        | null         |
-| description                | The description of the adjustment                          | null         |
-| **exemptAmount**           | The exempt amount                                          | null         |
-| **productPromoId**         | The product promo ID                                       | null         |
-| taxAuthPartyId             | The tax authority party ID                                 | null         |
-| lastModifiedByUserLogin    | The ID of the last user login that modified the adjustment | null         |
-| oldPercentage              | The old percentage                                         | null         |
-| primaryGeoId               | The primary geo ID                                         | null         |
-| taxAuthGeoId               | The tax authority geo ID                                   | null         |
-| amount                     | The amount                                                 | 120          |
-| originalAdjustmentId       | The original adjustment ID                                 | null         |
-| secondaryGeoId             | The secondary geo ID                                       | null         |
-| createdByUserLogin         | The ID of the user login that created the adjustment       | null         |
-| orderAdjustmentId          | The order adjustment ID                                    | null         |
-| amountAlreadyIncluded      | The amount already included                                | null         |
-| orderAdjustmentTypeId      | The order adjustment type ID                               | SALES\_TAX   |
-| lastUpdatedStamp           | The date and time of the last update                       | null         |
-| comments                   | The comments                                               | null         |
-| orderId                    | The order ID                                               | 12082        |
-| recurringAmount            | The recurring amount                                       | null         |
-| lastModifiedDate           | The date and time of the last modification                 | null         |
-| sourceReferenceId          | The source reference ID                                    | null         |
-| productPromoRuleId         | The product promo rule ID                                  | null         |
-| isManual                   | Indicates if the adjustment is manual                      | null         |
-| productFeatureId           | The product feature ID                                     | null         |
-| taxAuthorityRateSeqId      | The tax authority rate sequence ID                         | null         |
-| overrideGlAccountId        | The override GL account ID                                 | null         |
-| oldAmountPerQuantity       | The old amount per quantity                                | null         |
-| shipGroupSeqId             | The ship group sequence ID                                 | null         |
-| includeInTax               | Indicates if the adjustment is included in tax             | null         |
-| createdDate                | The date and time of creation                              | null         |
-| productPromoActionSeqId    | The product promo action sequence ID                       | null         |
-| sourcePercentage           | The source percentage                                      | null         |
+**orderItems.orderItemAdjustments:**
 
-#### orderItemAttributes
+| Field Name            | Description                    | Sample value |
+| --------------------- | ------------------------------ | ------------ |
+| amount                | The amount of order adjustment | 120          |
+| orderAdjustmentTypeId | The order adjustment type ID   | SALES_TAX    |
+| orderId               | The order ID                   | 12082        |
+| orderItemSeqId        | The Order Item Seq ID.         | 0001         |
 
-| Field Name       | Description                          | Sample value              |
-| ---------------- | ------------------------------------ | ------------------------- |
-| lastUpdatedStamp | The date and time of the last update | 2024-02-23T03:50:12+09:00 |
-| orderId          | The order ID                         | 12082                     |
-| attrDescription  | The attribute description            | null                      |
-| attrName         | The attribute name                   | COD\_FEE\_ADJ\_CREATED    |
-| attrValue        | The attribute value                  | true                      |
+**orderItemAttributes**
 
-#### facilityGroupMembers
+| Field Name      | Description                 | Sample value        |
+| --------------- | --------------------------- | ------------------- |
+| orderId         | The order ID                | 12082               |
+| attrDescription | The attribute description   | null                |
+| attrName        | The attribute name          | COD_FEE_ADJ_CREATED |
+| attrValue       | The attribute value         | true                |
+| orderItemSeqId  | the Order item sequence id. | 00001               |
 
-| Field Name          | Description                | Sample value              |
-| ------------------- | -------------------------- | ------------------------- |
-| facilityId          | The facility ID            | WH0615                    |
-| facilityGroupId     | The facility group ID      | 22                        |
-| thruDate            | The thru date              | null                      |
-| fromDate            | The from date              | 2024-02-23T03:50:12+09:00 |
-| **sequenceNum**     | The sequence number        | 1                         |
-| facilityGroupTypeId | The type of facility group | WAREHOUSE                 |
+**facilityGroupMembers**
+| Field Name      | Description                         | Sample value              |
+| --------------- | ----------------------------------- | ------------------------- |
+| facilityId      | The facility ID                     | WH0615                    |
+| facilityGroupId | The facility group ID               | 22                        |
+| thruDate        | The thru date                       | null                      |
+| fromDate        | The from date                       | 2024-02-23T03:50:12+09:00 |
+| sequenceNum     | The sequence number for the member. | 1                         |
 
-#### fromOrderItemAssocs: WIP
+**fromOrderItemAssocs:**
+| Field Name           | Description                                      | Sample value  |
+| -------------------- | ------------------------------------------------ | ------------- |
+| orderId              | The order ID of kit product                      | 12082         |
+| orderItemSeqId       | The order items seq ID of the kit product.       | 00101         |
+| toOrderId            | The order ID of the component product.           | null          |
+| toOrderItemSeqId     | The order items seq ID of the component product. | 00001         |
+| shipGroupSeqId       | The ship group seq ID of the kit product.        | 00002         |
+| toShipGroupSeqId     | The ship group seq ID of the component product.  | 00003         |
+| orderItemAssocTypeId | The order item assoc type ID.                    | KIT_COMPONENT |
 
-| Field Name              | Description                                                 | Sample value              |
-| ----------------------- | ----------------------------------------------------------- | ------------------------- |
-| **orderId**             | The order ID                                                | 12082                     |
-| orderItemSeqId          | The order item sequence ID                                  | 00101                     |
-| toOrderId               | The to order ID                                             | null                      |
-| fromDate                | The from date                                               | 2024-02-23T03:50:12+09:00 |
-| lastUpdatedStamp        | The date and time of the last update                        | 2024-02-23T03:50:12+09:00 |
-| toOrderItemSeqId        | The to order item sequence ID                               | null                      |
-| sequenceNum             | The sequence number                                         | 1                         |
-| lastModifiedDate        | The date and time of the last modification                  | null                      |
-| createdByUserLogin      | The ID of the user login that created the association       | null                      |
-| createdDate             | The date and time of creation                               | null                      |
-| lastModifiedByUserLogin | The ID of the last user login that modified the association | null                      |
+**toOrderItemAssocs:**
 
-#### toOrderItemAssocs: WIP
+| Field Name           | Description                                      | Sample value  |
+| -------------------- | ------------------------------------------------ | ------------- |
+| orderId              | The order ID of kit product                      | 12082         |
+| orderItemSeqId       | The order items seq ID of the kit product.       | 00101         |
+| toOrderId            | The order ID of the component product.           | null          |
+| toOrderItemSeqId     | The order items seq ID of the component product. | 00001         |
+| shipGroupSeqId       | The ship group seq ID of the kit product.        | 00002         |
+| toShipGroupSeqId     | The ship group seq ID of the component product.  | 00003         |
+| orderItemAssocTypeId | The order item assoc type ID like.               | KIT_COMPONENT |
 
-| Field Name              | Description                                                 | Sample value              |
-| ----------------------- | ----------------------------------------------------------- | ------------------------- |
-| orderId                 | The order ID                                                | 12082                     |
-| orderItemSeqId          | The order item sequence ID                                  | 00101                     |
-| toOrderId               | The to order ID                                             | null                      |
-| fromDate                | The from date                                               | 2024-02-23T03:50:12+09:00 |
-| lastUpdatedStamp        | The date and time of the last update                        | 2024-02-23T03:50:12+09:00 |
-| toOrderItemSeqId        | The to order item sequence ID                               | null                      |
-| sequenceNum             | The sequence number                                         | 1                         |
-| lastModifiedDate        | The date and time of the last modification                  | null                      |
-| createdByUserLogin      | The ID of the user login that created the association       | null                      |
-| createdDate             | The date and time of creation                               | null                      |
-| lastModifiedByUserLogin | The ID of the last user login that modified the association | null                      |
+**productFeatures:**
 
-#### productFeatures: WIP
-
-| Field Name       | Description                          | Sample value              |
-| ---------------- | ------------------------------------ | ------------------------- |
-| lastUpdatedStamp | The date and time of the last update | 2024-02-23T03:50:12+09:00 |
-| orderId          | The order ID                         | 12082                     |
-| attrDescription  | The attribute description            | null                      |
-| attrName         | The attribute name                   | COD\_FEE\_ADJ\_CREATED    |
-| attrValue        | The attribute value                  | true                      |
+| Field Name               | Description                      | Sample value     |
+| ------------------------ | -------------------------------- | ---------------- |
+| productFeatureApplTypeId | the feature Appl type like       | STANDARD_FEATURE |
+| productFeatureId         | the unique feature ID.           | 10000            |
+| productFeatureCategoryId | the product feature category ID. | 10015            |
+| description              | the description of the feature.  | Red, L           |
+| productId                | the Product ID.                  | 10000            |
+| productFeaturTypeId      | the feature type like            | COLOR            |
