@@ -4,13 +4,21 @@ Transfer orders originate in NetSuite, but there is a distinction in how they ar
 
 Now, let’s look at how warehouse to store transfer orders are processed:
 
-Warehouse managers create transfer orders in NetSuite, and then the corresponding item fulfillment records are generated. Each transfer order can result in either a single item fulfillment record or multiple records, depending on the scenario:
+Warehouse managers create transfer orders in NetSuite. On fulfilling transfer order items in Netsuite, corresponding item fulfillment records are generated and transfer orders are automatically assigned a `Pending Receipt` status in NetSuite.
+
+Each transfer order can result in either a single item fulfillment record or multiple records, depending on the scenario:
 
 * **Single item fulfillment record:** This happens when all products in a transfer order are fulfilled simultaneously, resulting in the creation of a single shipment and, consequently, a single item fulfillment record.
 * **Multiple item fulfillment records:** This happens when products in a transfer order are fulfilled separately, leading to the creation of multiple shipments due to some products being shipped later and, consequently, multiple item fulfillment records.
 * **Multiple item fulfillment records for a single product:** This happens when a transfer order is created for a single product, but its quantity is shipped in multiple shipments and, consequently, multiple item fulfillment records.
 
-Whenever an item fulfillment record is marked as `Shipped` in NetSuite, it means that the corresponding items have been dispatched from the warehouse and are in transit to the store. HotWax Commerce synchronizes any new item fulfillment record that is marked `Shipped` in NetSuite so that in-store inventory can be received against them.
+Whenever an item is fulfilled and the item fulfillment record is marked as `Shipped` in NetSuite, the inventory count for corresponding items is reduced in NetSuite. This also signifies that the items have been dispatched from the warehouse and are in transit to the store.
+
+Inbound shipments are automatically created in HotWax Commerce so that the store can receive the transferred inventory. HotWax Commerce provides a dedicated Inventory Receiving App for store associates to receive in inventory stores. When the store associates verifies the inbound shipments and receives them, inventory counts for the corresponding items are automatically increased in HotWax Commerce.
+ 
+Upon successful receipt of inventory, HotWax Commerce synchronizes item receipts with NetSuite. This ensures that the inventory count at store is accurately increased in NetSuite and the status of transfer orders status is updated from `Pending Receipt` to `Received`.
+
+As mentioned earlier, in NetSuite, the inventory count for transfer order items shipped from the warehouse is reduced. It’s crucial to note that in HotWax Commerce, this reduction takes place during its daily inventory sync from NetSuite.
 
 ## Workflow
 
