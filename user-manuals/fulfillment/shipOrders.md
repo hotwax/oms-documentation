@@ -142,3 +142,7 @@ Video: Ship order
 {% embed url="https://youtu.be/RCzf6Uv_CoY" %}
 Video: Complete process for individual order fulfillment
 {% endembed %}
+
+{% hint style="info" %}
+If you face any issue during shipping label generation, you can refer to our [troubleshoot document](https://docs.hotwax.co/user-guides/v/troubleshooting/hotwax-commerce/fulfillment/shipping-label-generation)
+{% endhint %}
