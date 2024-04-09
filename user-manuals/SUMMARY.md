@@ -54,7 +54,7 @@
   * [Settings Page](fulfillment/fulfillment-setting-page.md)
   * [Reports](fulfillment/reports.md)
   * [Create Shipping Boxes](fulfillment/shipping-box.md)
-  * [Create Pickers](fulfillment/create-pickers.md)
+  * [Create Pickers](fulfillment/add-pickers.md)
 * [Brokering](orders/brokering/README.md)
   * [Order Routing](brokering/configurableRouting.md)
   * [Rule Builder](brokering/rule-builder.md)
