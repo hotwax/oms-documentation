@@ -33,7 +33,7 @@ Customers print the shipping label provided by loop and prepare the return packa
 When the return package reaches the warehouse, the warehouse teams initiate receiving of the return item against the RMA and the following actions take place:
 
 * Item receipt records are created in NetSuite against the RMA, and the returned inventory is restocked.
-* The status of RMA is updated from “Pending Receipt” to `Pending Refund`.
+* The status of RMA is updated from `Pending Receipt` to `Pending Refund`.
 
 Now that the customer has shipped the return item back, its item receipt has been processed against the RMA in NetSuite, refunds should be processed to the customer.
 
@@ -55,7 +55,7 @@ Refunds issued from Shopify are received by the customer. This concludes the ref
 
 ## Returns downloaded in HotWax Commerce
 
-When the return process is completed on Shopify, a scheduled job in HotWax Commerce downloads the return data. These returns are downloaded in “Completed” status and the payment in `Refunded` status in HotWax Commerce.
+When the return process is completed on Shopify, a scheduled job in HotWax Commerce downloads the return data. These returns are downloaded in `Completed` status and the payment in `Refunded` status in HotWax Commerce.
 
 A scheduled job in HotWax Commerce performs a daily sync of inventory data from NetSuite, this ensures that inventory updates from any new receipts that are received in warehouses from returns or purchase orders are accurately synchronized in HotWax Commerce.
 
