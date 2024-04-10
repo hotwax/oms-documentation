@@ -7,7 +7,7 @@ description: >-
 
 # Store fulfillment lifecycle
 
-<figure><img src="../.gitbook/assets/store fulfillment lifecycle bpm.png" alt=""><figcaption><p>Store fulfillment lifecycle business process model</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/store fulfillment bpm.png" alt=""><figcaption><p>Store fulfillment lifecycle business process model</p></figcaption></figure>
 
 An order will have multiple fulfillments in case it has been split. Each fulfillment will have its independent lifecycle. For example, consider an order containing two items: one item is backordered while the other is in stock. Once the in-stock item is fulfilled, it will follow its lifecycle, and when the backordered item is fulfilled later, it will have its own separate lifecycle.
 
