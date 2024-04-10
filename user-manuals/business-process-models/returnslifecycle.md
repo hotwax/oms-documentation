@@ -1,4 +1,4 @@
-# Return Lifecycle Business Process Model
+# Return Lifecycle
 
 The Return Lifecycle Business Process Model illustrates how returns are managed between RMS, eCommerce, ERP, and HotWax Commerce.
 
