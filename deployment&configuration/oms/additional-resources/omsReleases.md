@@ -25,17 +25,18 @@ description: Discover  the versions of HotWax Commerce OMS releases.
  
 {% tabs %}
 {% tab title="Upgrade Data" %}
-[Link to Upgrade Data](https://git.hotwax.co/commerce/oms/-/blob/v5.8.0/upgrade/v5.8.0/UpgradeData.xml?ref_type=tags)
+[Link to Upgrade Data](https://git.hotwax.co/commerce/oms/-/blob/develop/upgrade/v5.8.0/UpgradeData.xml?ref_type=heads)
 {% endtab %}
 
 {% tab title="Upgrade SQL" %}
-[Link to Upgrade SQL](https://git.hotwax.co/commerce/oms/-/blob/v5.8.0/upgrade/v5.8.0/UpgradeSQL.sql?ref_type=tags)
+[Link to Upgrade SQL](https://git.hotwax.co/commerce/oms/-/blob/develop/upgrade/v5.8.0/UpgradeSQL.sql?ref_type=heads)
 {% endtab %}
 
 {% tab title="Upgrade Steps" %}
-[Link to Upgrade Steps](https://git.hotwax.co/commerce/oms/-/blob/v5.8.0/upgrade/v5.8.0/UpgradeSteps.md?ref_type=tags)
+[Link to Upgrade Steps](https://git.hotwax.co/commerce/oms/-/blob/develop/upgrade/v5.8.0/UpgradeSteps.md?ref_type=heads)
 {% endtab %}
 {% endtabs %}
+
 
 ## Hotfix - v5.7.4 (09th Apr 2024)
 
