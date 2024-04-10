@@ -1,6 +1,12 @@
-# Return Lifecycle
+---
+description: >-
+  The Return Lifecycle Business Process Model illustrates how returns are
+  managed between RMS, eCommerce, ERP, and HotWax Commerce.
+---
 
-The Return Lifecycle Business Process Model illustrates how returns are managed between RMS, eCommerce, ERP, and HotWax Commerce.
+# Returns lifecycle
+
+<figure><img src="../.gitbook/assets/returns bpm.png" alt=""><figcaption><p>Returns lifecycle business process model</p></figcaption></figure>
 
 HotWax Commerce, being an Order Management System, forwards the responsibility of managing returns to specialized Return Management Systems. This means that most of the process in the return lifecycle will be handled by a third-party Return Management System (RMS).
 
@@ -26,9 +32,8 @@ Customers print the shipping label provided by loop and prepare the return packa
 
 When the return package reaches the warehouse, the warehouse teams initiate receiving of the return item against the RMA and the following actions take place:
 
-- Item receipt records are created in NetSuite against the RMA, and the returned inventory is restocked.
-
-- The status of RMA is updated from “Pending Receipt” to `Pending Refund`.
+* Item receipt records are created in NetSuite against the RMA, and the returned inventory is restocked.
+* The status of RMA is updated from “Pending Receipt” to `Pending Refund`.
 
 Now that the customer has shipped the return item back, its item receipt has been processed against the RMA in NetSuite, refunds should be processed to the customer.
 
@@ -40,11 +45,9 @@ Item receipt records created in NetSuite are synchronized to Loop using a third-
 
 Processing refunds to the customers marks the completion of returns. During this process, multiple actions take place in Loop, NetSuite, and eCommerce. Let’s understand them:
 
-- Return receipt records trigger the creation of refund records in Loop. Once refund records are created, Loop creates customer refund records in NetSuite using a third-party integration app. This marks the completion of RMA in NetSuite, with its status updating from `Pending Refund` to `Refunded`.
-
-- The creation of refund records in Loop also marks the completion of RMA in Loop, with its status updating from `Open` to `Close`.
-
-- Return receipt records in Loop triggers the refund process on Shopify and refunds are then issued to the customer. This marks the completion of return in Shopify, with the creation of payment records in `Refunded` status and the order status updated as `Returned`.
+* Return receipt records trigger the creation of refund records in Loop. Once refund records are created, Loop creates customer refund records in NetSuite using a third-party integration app. This marks the completion of RMA in NetSuite, with its status updating from `Pending Refund` to `Refunded`.
+* The creation of refund records in Loop also marks the completion of RMA in Loop, with its status updating from `Open` to `Close`.
+* Return receipt records in Loop triggers the refund process on Shopify and refunds are then issued to the customer. This marks the completion of return in Shopify, with the creation of payment records in `Refunded` status and the order status updated as `Returned`.
 
 ## Customer Receives Refund
 
