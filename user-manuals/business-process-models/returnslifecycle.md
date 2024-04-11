@@ -14,7 +14,7 @@ HotWax Commerce simply downloads completed returns for auditing purposes, ensuri
 
 ## Returns Initiated in Loop
 
-Loop lets customers directly initiate returns against their web orders. When customers complete their return process, a Return Merchandise Authorization (RMA) is created in Loop in the `Open` status.
+Loop lets customers directly initiate returns against their web orders. When customers complete their return process, a Return Merchandise Authorization (RMA) is created in Loop in the <mark style="color:orange;">**"Open"**</mark> status.
 
 ## Creates Return on Order in Shopify
 
@@ -24,7 +24,7 @@ Loop updates the order details in Shopify reflecting that a return has been requ
 
 Many retailers use third-party integration apps like Novamodule to synchronize returns from Loop to NetSuite.
 
-Loop generates the RMA in the `Pending Receipt` status in NetSuite using a third-party integration app. This gives the warehouse teams a heads-up that an order item will be coming back.
+Loop generates the RMA in the <mark style="color:orange;">**"Pending Receipt"**</mark> status in NetSuite using a third-party integration app. This gives the warehouse teams a heads-up that an order item will be coming back.
 
 ## Return Item Successfully Received in the Warehouse
 
@@ -33,7 +33,7 @@ Customers print the shipping label provided by loop and prepare the return packa
 When the return package reaches the warehouse, the warehouse teams initiate receiving of the return item against the RMA and the following actions take place:
 
 * Item receipt records are created in NetSuite against the RMA, and the returned inventory is restocked.
-* The status of RMA is updated from `Pending Receipt` to `Pending Refund`.
+* The status of RMA is updated from <mark style="color:orange;">**"Pending Receipt"**</mark> to <mark style="color:orange;">**"Pending Refund"**</mark>.
 
 Now that the customer has shipped the return item back, its item receipt has been processed against the RMA in NetSuite, refunds should be processed to the customer.
 
@@ -45,9 +45,9 @@ Item receipt records created in NetSuite are synchronized to Loop using a third-
 
 Processing refunds to the customers marks the completion of returns. During this process, multiple actions take place in Loop, NetSuite, and eCommerce. Let’s understand them:
 
-* Return receipt records trigger the creation of refund records in Loop. Once refund records are created, Loop creates customer refund records in NetSuite using a third-party integration app. This marks the completion of RMA in NetSuite, with its status updating from `Pending Refund` to `Refunded`.
-* The creation of refund records in Loop also marks the completion of RMA in Loop, with its status updating from `Open` to `Close`.
-* Return receipt records in Loop triggers the refund process on Shopify and refunds are then issued to the customer. This marks the completion of return in Shopify, with the creation of payment records in `Refunded` status and the order status updated as `Returned`.
+* Return receipt records trigger the creation of refund records in Loop. Once refund records are created, Loop creates customer refund records in NetSuite using a third-party integration app. This marks the completion of RMA in NetSuite, with its status updating from <mark style="color:orange;">**"Pending Refund"**</mark> to <mark style="color:orange;">**"Refunded"**</mark>.
+* The creation of refund records in Loop also marks the completion of RMA in Loop, with its status updating from <mark style="color:orange;">**"Open"**</mark> to <mark style="color:orange;">**"Close"**</mark>.
+* Return receipt records in Loop triggers the refund process on Shopify and refunds are then issued to the customer. This marks the completion of return in Shopify, with the creation of payment records in <mark style="color:orange;">**"Refunded"**</mark> status and the order status updated as <mark style="color:orange;">**"Returned"**</mark>.
 
 ## Customer Receives Refund
 
@@ -55,7 +55,7 @@ Refunds issued from Shopify are received by the customer. This concludes the ref
 
 ## Returns downloaded in HotWax Commerce
 
-When the return process is completed on Shopify, a scheduled job in HotWax Commerce downloads the return data. These returns are downloaded in `Completed` status and the payment in `Refunded` status in HotWax Commerce.
+When the return process is completed on Shopify, a scheduled job in HotWax Commerce downloads the return data. These returns are downloaded in <mark style="color:orange;">**"Completed"**</mark> status and the payment in "<mark style="color:orange;">**Refunded"**</mark> status in HotWax Commerce.
 
 A scheduled job in HotWax Commerce performs a daily sync of inventory data from NetSuite, this ensures that inventory updates from any new receipts that are received in warehouses from returns or purchase orders are accurately synchronized in HotWax Commerce.
 
