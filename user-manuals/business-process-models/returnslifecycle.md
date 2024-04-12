@@ -14,7 +14,7 @@ HotWax Commerce simply downloads completed returns for auditing purposes, ensuri
 
 ## Returns Initiated in Loop
 
-Loop lets customers directly initiate returns against their web orders. When customers complete the initiating the return process, a Return Merchandise Authorization (RMA) is created in Loop in the <mark style="color:orange;">**"Open"**</mark> status.
+Loop lets customers directly initiate returns against their web orders. When customers complete  initiating the return process, a Return Merchandise Authorization (RMA) is created in Loop in the <mark style="color:orange;">**"Open"**</mark> status.
 
 ## Creates Return on Order in Shopify
 
