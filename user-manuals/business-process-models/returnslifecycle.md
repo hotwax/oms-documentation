@@ -57,6 +57,10 @@ Refunds issued from Shopify are received by the customer. This concludes the ref
 
 When the return process is completed on Shopify, a scheduled job in HotWax Commerce downloads the return data. These returns are downloaded in <mark style="color:orange;">**"Completed"**</mark> status and the payment in <mark style="color:orange;">**"Refunded"**</mark> status in HotWax Commerce.
 
+### Inventory Updates
+
+HotWax Commerce does not automatically increase the inventory count of the returned item after downloading the return order from Shopify. This is because HotWax Commerce lacks visibility into the specific location where the inventory is received. Instead, inventory is updated only when new item receipt records are synchronized to HotWax Commerce from NetSuite.
+
 A scheduled job in HotWax Commerce performs a daily sync of inventory data from NetSuite, this ensures that inventory updates from any new receipts that are received in warehouses from returns or purchase orders are accurately synchronized in HotWax Commerce.
 
 HotWax Commerce also performs regular inventory synchronization to Shopify by comparing the inventory totals between HotWax Commerce and Shopify. Following the comparison, HotWax Commerce updates Shopify with any differences in inventory numbers, ensuring that any changes in inventory in HotWax Commerce, such as increases resulting from returns, are accurately reflected on Shopify.
