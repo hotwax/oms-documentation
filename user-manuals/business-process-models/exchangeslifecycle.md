@@ -12,21 +12,21 @@ In the context of returns, an exchange refers to a transaction in which a custom
 
 To explain the exchange lifecycle, we've taken Loop as the RMS, Shopify as the eCommerce platform, and NetSuite as the ERP system, while HotWax Commerce serves as the OMS.
 
-## Exchanges Initiated in Loop
+## 1. Exchanges Initiated in Loop
 
 As discussed in [Returns Lifecycle](https://docs.hotwax.co/user-guides/business-process-models/returnslifecycle), Loop lets customers directly initiate returns against their web orders. If customers want to buy another product by returning an item, the Loop customer portal lets them submit an exchange request.
 
 When customers complete their exchange process, a Return Merchandise Authorization (RMA) is created in Loop in the <mark style="color:orange;">**“Open”**</mark> status against the return item.
 
-## Creates Return on Order in Shopify
+## 2. Creates Return on Order in Shopify
 
 Loop updates the order details in Shopify reflecting that a return has been requested by the customer.
 
-## Creates RMA in NetSuite
+## 3. Creates RMA in NetSuite
 
 Loop also generates an RMA in the <mark style="color:orange;">**“Pending Receipt”**</mark> status in NetSuite using a third-party integration app like Novamodule. This gives the warehouse teams a heads-up that an order item will be coming back.
 
-## Return Item Successfully Received in the Warehouse
+## 4. Return Item Successfully Received in the Warehouse
 
 To receive the requested new order item in exchange, customers must return the original order.
 
@@ -37,11 +37,11 @@ When the return package reaches the warehouse, the warehouse teams initiate rece
 * Item receipt records are created in NetSuite against the RMA, and the returned inventory is restocked.
 * The status of RMA is updated from <mark style="color:orange;">**“Pending Receipt”**</mark> to <mark style="color:orange;">**“Pending Refund”**</mark>.
 
-## Creates Return Receipt Records in Loop
+## 5. Creates Return Receipt Records in Loop
 
 Item receipt records created in NetSuite are synchronized to Loop using a third-party integration app. Consequently, return receipt records are generated in Loop.
 
-## Create Refund Records
+## 6. Create Refund Records
 
 When item receipt records are generated in Loop, multiple actions take place in NetSuite and Shopify, let’s understand them in detail:
 
@@ -55,7 +55,7 @@ Creating refund records is essential to mark the completion of the return proces
 * The creation of refund records in Loop also marks the completion of RMA in Loop, with its status updating from <mark style="color:orange;">**“Open”**</mark> to <mark style="color:orange;">**“Closed”**</mark>.
 * Return receipt records in Loop trigger marking the original order as <mark style="color:orange;">**“Returned”**</mark> in Shopify and creating a new order in the <mark style="color:orange;">**“Unfulfilled”**</mark> status. Loop also applies a 100% Loop discount on the new order and links the original order in the extended fields.
 
-## Exchange Orders Downloaded in HotWax Commerce
+## 7. Exchange Orders Downloaded in HotWax Commerce
 
 Exchange orders are basically new web orders that require fulfillment, so HotWax Commerce processes them similar to how regular web orders are fulfilled.
 
@@ -65,7 +65,7 @@ An important aspect to note is that for an exchange order, Loop saves details of
 
 Learn more about how [HotWax Commerce fulfills web orders](https://docs.hotwax.co/integration-resources/how-are-orders-downloaded-from-shopify-to-hotwax-commerce)
 
-## Exchange Orders Synchronized to NetSuite
+## 8. Exchange Orders Synchronized to NetSuite
 
 HotWax Commerce synchronizes all web orders to NetSuite in the <mark style="color:orange;">**“Created”**</mark> status and similarly, exchange orders in the <mark style="color:orange;">**“Created”**</mark> status are also synchronized to NetSuite. When NetSuite imports them, they are automatically assigned a <mark style="color:orange;">**“Pending Fulfillment”**</mark> status and the details of the original order are saved in the memo.
 
