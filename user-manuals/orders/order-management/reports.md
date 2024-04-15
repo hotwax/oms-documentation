@@ -6,7 +6,24 @@ description: >-
 
 # Reports
 
+## Sales Order Count by Channel Report
 
+Retailers receive orders through various channels, including eCommerce websites, social media platforms, online marketplaces, and point-of-sale (POS) systems. Retailers need visibility of their sales into channel performance. The Sales Order Count by Channel report offers a clear summary of order counts per channel, enabling retailers to identify high-performing channels and areas needing improvement.
+
+Retailers can easily discern the total count of orders per channel, whether it's from POS, Shopify, or any other channel enabling effective tracking and analysis.
+
+## User
+- Vice President of Retail, Warehouse Fulfillment team
+
+## Report Glossary
+
+| Channel                    | Description                                                 |
+|----------------------------|-------------------------------------------------------------|
+| Shopify Online Sales       | Orders received through the Shopify online sales channel.   |
+| POS Sales                  | Orders received through the Point-of-Sale (POS) system.     |
+| Other Channels             | Orders received through other channels (e.g., social media platforms, online marketplaces). |
+
+##
 
 ## Missing Order Attribute Report
 
@@ -70,3 +87,4 @@ The Allocation Pending Report displays orders assigned to facilities that curren
 | FACILITY\_NAME | The name of the facility in external systems       |
 | SKU            | Unique identifier                                  |
 | QUANTITY       | Quantity required of the SKU                       |
+
