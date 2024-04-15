@@ -68,6 +68,6 @@ If you encounter any issues with Shopify integration, you can manually run the j
 
 In job scheduling systems, a semaphore could be used to manage the allocation of resources (like CPU time, memory, or disk space) among competing processes or jobs. This ensures that resources are efficiently utilized and that no single job monopolizes 
 Semaphore issues in job scheduling can lead to various consequences when a job fails. These include resource starvation, deadlocks, performance degradation, job abandonment, and system instability. These issues can result in failed or incomplete tasks, resource contention, and system-wide slowdowns, emphasizing the importance of proper monitoring and mitigation strategies.
-If you encounter any issues with Semaphore, you can manually run the job by clicking on the `Run Now` button or wait for the next scheduled job.
+If you encounter any issues with semaphore, you can manually run the job by clicking on the `Run Now` button or wait for the next scheduled job.
 
 
