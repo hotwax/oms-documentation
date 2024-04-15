@@ -8,7 +8,9 @@ description: >-
 
 Flow Definitions are akin to Templates, referring to reusable data flow components and configurations for saving and reusing in various instances. They enable users to create reusable flow templates, which can be shared, imported, and customized across different NiFi instances, fostering consistency, standardization, and reuse of data flow designs.
 
-Users can customize imported Flow Definitions by adjusting parameter values, modifying connections, or adding components to meet specific requirements. Follow these steps to reuse existing flow files:
+Users can customize imported Flow Definitions by adjusting parameter values, modifying connections, or adding components to meet specific requirements. The existing flows can be used both in the same instance or in altogether a new instance
+
+## Reusing Flow Definitions in Same Instance
 
 ### Export Flow:
 
@@ -21,11 +23,29 @@ Once the flow definition is downloaded, import it into the processor for reuse i
 
 1. Navigate to the parent process group where you want to create a new processor.
 2. Drag `Process Group` from the menu to the canvas.
-3. Click the `Browse icon`, upload the file, and provide appropriate naming as per the required process flow.
+3. Click the `Browse` icon, upload the file, and provide appropriate naming as per the required process flow.
+
+### Create Parameter Context
+
+When creating a processor using the flow definition within the same file, it is important to create a new parameter context for the new flow. If the parameter context remains the same, any changes in the parameter will be reflected in the source flow file. To avoid this, follow these steps:
+
+1. Right-click on the Canvas and Select `Configure to edit` the processor configuration.
+Locate 'Process Group Parameter Context' in the General Tab:
+
+2. Switch to the `General` tab. Here, you'll find the option labeled as `Process Group Parameter Context.`
+
+3. Click on the dropdown menu next to "Process Group Parameter Context." Scroll down to the bottom of the list where you'll find the option to "Create New Parameter Context." Choose this option to create a new parameter context for the flow.
+
+4. Add the Name of the Parameter Context. Choose a descriptive name that reflects the purpose or function of the flow to maintain clarity and organization.
+
+5. Click on `Apply` to Save the Parameter Context:
+
+This ensures that any modifications made to parameters within this flow will be isolated to its specific context, preventing unintended effects on other parts of the system.
+
 
 ### Inherit Parameter Context
 
-Parameter contexts manage dynamic values shared across processors or components within a data flow, containing details from the original flow definition. When transferring the flow definition between instances, replace the parameter context with the correct parent processor's parameter context for inheritance. Follow these steps:
+Parameter contexts manage dynamic values shared across processors or components within a data flow, containing details from the original flow definition. When transferring the flow definition between instances, replace the parent parameter context with the correct parent processor's parameter context for inheritance. Follow these steps:
 
 1. Right-click on the processor's canvas.
 2. Select `parameter` from the options.
@@ -85,3 +105,4 @@ Once all settings are set up and verified, run the processor to verify:
 1. Right-click on the canvas of the processor group, then click on `Start.` All flows will start processing.
 2. If you want to run each flow manually, right-click on the flow file.
 3. Click on `Run Once,` and repeat the same for each flow file.
+
