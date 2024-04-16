@@ -12,10 +12,10 @@ Retailers receive orders through various channels, including eCommerce websites,
 
 Retailers can easily discern the total count of orders per channel, whether it's from POS, Shopify, or any other channel enabling effective tracking and analysis.
 
-## User
+**User**
 - Vice President of Retail, Warehouse Fulfillment team
 
-## Report Glossary
+**Report Glossary**
 
 | Channel                    | Description                                                 |
 |----------------------------|-------------------------------------------------------------|
@@ -23,7 +23,134 @@ Retailers can easily discern the total count of orders per channel, whether it's
 | POS Sales                  | Orders received through the Point-of-Sale (POS) system.     |
 | Other Channels             | Orders received through other channels (e.g., social media platforms, online marketplaces). |
 
-##
+***
+
+## Missing Netsuite Order ID Report
+
+Retailers often encounter synchronization issues between Shopify and Netsuite, leading to orders not being properly recorded. This can result in delays and disruptions in order processing and fulfillment, impacting customer satisfaction and revenue.
+
+This report is helpful for retailers to troubleshoot issues when orders, that have all the necessary attributes like “SIGNIFYD_APPROVED”, and “NETSUITE_CUSTOMER_ID” are not synchronized with Netsuite. It highlights orders in approved or completed status that lack Netsuite order IDs, indicating synchronization problems. Retailers can view this report to identify problematic orders and rectify errors to ensure all orders are synced with Netsuite.
+
+The synchronization process between HotWax and Netsuite may encounter delays. Therefore, this report exclusively displays orders without NetSuite order IDs for over 4 hours.
+
+**User**
+- Head of e-commerce, Vice President of Retail
+
+**Report Glossary**
+  
+| Field Name         | Description                                                                               |
+|--------------------|-------------------------------------------------------------------------------------------|
+| ORDER_NAME         | This refers to the name or identifier of the order.                                         |
+| HC_ORDER_ID        | This could be an internal order ID.                                                        |
+| HC_ENTRY_DATE      | This column represents the date when the order was entered into OMS.                        |
+| TIME_SINCE_ENTRY   | This might show the duration since the order was entered into OMS.                          |
+| SALES_CHANNEL      | This could indicate the channel through which the sale was made, such as Shopify, POS, etc. |
+
+***
+
+## POS Cash Sale Exp Failed Report
+
+The POS Cash Sale Exp Failed Report is a tool for tracking synchronization failures related to Point of Sale (POS) cash sales. This report is instrumental in identifying instances where the synchronization process encountered issues, allowing for a proactive approach to address and resolve these failures. By leveraging this report, organizations can ensure the accuracy and completeness of their POS cash sale data, contributing to a more reliable and efficient sales reporting process.
+
+**In the context of NetSuite,** the POS Cash Sale Exp Failed Report focuses on tracking synchronization failures specifically for POS cash sales exported to NetSuite. By pinpointing instances where synchronization has failed, this report helps in promptly identifying and addressing any discrepancies in POS cash sales data within NetSuite. This level of transparency and quick response is crucial for maintaining accurate financial records and ensuring that NetSuite reflects the most up-to-date information from POS transactions.
+
+**User**
+- Head of eCommerce, Vice President of Retail.
+
+**Report Glossary**
+
+| Field          | Description                                       |
+| -------------- | ------------------------------------------------- |
+| ORDER\_ID      | The ID of the cash sale order in HotWax Commerce  |
+| EXTERNAL\_ID   | The ID of the cash sale order in external systems |
+| SALES\_CHANNEL | The channel through which the sale was made       |
+| LOCATION       | The location where the cash sale order was placed |
+| DATE           | The date of the cash sale                         |
+| CUSTOMER       | The customer associated with the cash sale order  |
+| SUBSIDIARY     | The subsidiary information for the cash sale      |
+
+***
+
+## Duplicate Order
+
+Retailers often face the issue of duplicate orders, which can cause inventory discrepancies and financial losses. For instance, if an order is duplicated and subsequently brokered differently, it can result in ATP (Available to Promise) discrepancies and financial losses for the retailer. Furthermore, it may cause errors when reconciling orders with Netsuite.
+
+The "Duplicate Order" report provides crucial insights into the frequency of duplicate orders by presenting the total count of duplicate orders associated with the same order name.
+
+By understanding the extent of duplicate orders, retailers can take necessary actions to ensure that duplicate orders are removed from the system.
+
+**User** 
+- Head of eCommerce, Vice President of Retail
+
+**Report Glossary**
+
+| Field Name    | Description                                                     |
+|---------------|-----------------------------------------------------------------|
+| ORDER_NAME    | This refers to the name or identifier of the order.             |
+| COUNT         | The total number of duplicate orders associated with the same order name. |
+
+***
+
+## Shopify Order Import Error
+
+When an order fails to transfer from Shopify to Hotwax, it doesn't show up in the OMS, and an error is logged in the EXIM Import record for Shopify orders. The Shopify Order Import Error report details these failed imports, providing the specific errors generated by the system. There are several potential causes for these errors, including data exported from Shopify not being compatible with the OMS, or issues with specific API endpoints, such as inadequate permissions or temporary unavailability. Retailers can use this report to identify problematic orders and troubleshoot accordingly.
+
+**User**
+- Head of eCommerce, Vice President of Retail
+
+**Report Glossary**
+
+| Field Name          | Description                                    |
+|---------------------|------------------------------------------------|
+| Shopify Website     | URL of the order on the Shopify website.       |
+| Error Message       | System-generated error message.                |
+| Shopify Order Name  | Name of the order in Shopify.                  |
+| Order Created Date  | Date when the order was created.               |
+
+***
+
+## Cancelled Order Report
+
+Retailers often face challenges in managing and reducing order cancellations.
+
+Customers or CSRs may cancel orders due to reasons such as changes in preference, product unavailability, errors in orders, delivery delays, financial constraints, product defects, better offers elsewhere, and miscommunication.
+
+The Cancelled Order Report provides weekly insights into cancellation rates, enabling retailers to pinpoint peak cancellation weeks and address underlying causes. It outlines the total number of canceled orders within the OMS, helping retailers businesses enhance customer satisfaction and operational efficiency by addressing root issues effectively.
+
+A weekly report is generated for retailers, and the frequency of the report can be updated as per the requirements.
+
+
+**User**
+- Head of eCommerce, Vice President of Retail.
+
+**Report Glossary**
+
+| Field Name        | Description                                                            |
+|-------------------|------------------------------------------------------------------------|
+| CANCELLED_DATE    | The date range during which orders were cancelled (2024-01-28 to 2024-02-04). |
+| COUNT_DISTINCT(ORDER_ID) | The count of distinct order IDs for cancelled orders (11).             |
+
+***
+
+## Order Approval Duration Graph
+
+Order approval delays can happen due to missing order attributes such as missing customer ID or municipio ID. Delays in order approval can lead to missed delivery deadlines and potential revenue loss.
+
+The Order Approval Duration graph provides information on how long it takes the OMS to approve orders. It has two main attributes: order volume and average approval duration in minutes.
+
+This Graph helps in tracking the average approval duration over time. This helps in identifying any deviations from expected performance levels and taking corrective actions promptly.
+
+**User**
+- Head of eCommerce, Vice President of Retail.
+
+**Report Glossary** 
+
+| Field Name                            | Description                                                                                   |
+|---------------------------------------|-----------------------------------------------------------------------------------------------|
+| Order Volume                         | This refers to the number of orders received by the system over a specific period. Order volume can fluctuate based on various factors such as time of day, seasonality, marketing promotions, etc. |
+| Average Approval Duration in Minutes | This is the average amount of time it takes for the OMS to approve an order. Approval duration can depend on several factors including the complexity of orders, system efficiency, etc. |
+
+***
 
 ## Missing Order Attribute Report
 
