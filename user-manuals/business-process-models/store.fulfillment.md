@@ -7,7 +7,7 @@ description: >-
 
 # Store fulfillment lifecycle
 
-<figure><img src="../.gitbook/assets/store fulfillment bpm (3).png" alt=""><figcaption><p>Store fulfillment lifecycle business process model</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/store fulfillment bpm.png" alt=""><figcaption><p>Store fulfillment lifecycle business process model</p></figcaption></figure>
 
 An order will have multiple fulfillments in case it has been split. Each fulfillment will have its independent lifecycle. For example, consider an order containing two items: one item is backordered while the other is in stock. Once the in-stock item is fulfilled, it will follow its lifecycle, and when the backordered item is fulfilled later, it will have its own separate lifecycle.
 
@@ -67,7 +67,7 @@ The `Ship Packed Orders` Job in HotWax Commerce checks if packed items have trac
 
 Once an item is shipped, its fulfillment status is updated from <mark style="color:orange;">**"Packed"**</mark> to <mark style="color:orange;">**"Shipped"**</mark> in HotWax Commerce.&#x20;
 
-In the event of a partial shipment, the fulfillment status of the shipped items will be updated to <mark style="color:orange;">**"shipped"**</mark>, while the order itself will remain in the <mark style="color:orange;">**"approved"**</mark> status until all items have been shipped.
+In the event of a partial shipment, the fulfillment status of the shipped items will be updated to <mark style="color:orange;">**"Shipped"**</mark>, while the order itself will remain in the <mark style="color:orange;">**"Approved"**</mark> status until all items have been shipped.
 
 When all items of an order are <mark style="color:orange;">**"Shipped"**</mark>, the order status is updated from <mark style="color:orange;">**"Approved"**</mark> to <mark style="color:orange;">**"Completed"**</mark> in HotWax Commerce.
 

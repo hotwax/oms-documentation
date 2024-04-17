@@ -5,7 +5,7 @@ description: >-
   operational efficiency.
 ---
 
-# Reports
+# Inventory Reports
 
 Effective inventory management is integral to ensuring operational efficiency and accuracy in supply chain processes. The following reports play a crucial role in providing insights into inventory status and discrepancies:
 

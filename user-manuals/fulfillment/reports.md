@@ -4,7 +4,7 @@ description: >-
   box to help monitor and track your fulfillment operations.
 ---
 
-# Reports
+# Fulfillment Reports
 
 Explore all the fulfillment reports that HotWax Commerce OMS offers out of the box to help monitor and track your fulfillment operations. Putting all of these reports together, retailers can ensure that they're always shipping items on time.
 

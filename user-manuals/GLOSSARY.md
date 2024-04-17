@@ -73,3 +73,48 @@ A separate queue ("pre-order parking") where pre-orders are placed until the shi
 ### Backorder Parking
 
 Similar to pre-order parking, a queue where backorders are held until the dedicated purchase order arrives in the fulfillment center, making them eligible for brokering.
+
+### Inventory Reconciliation
+
+It involves cross-referencing the actual counts of items in stock with the recorded quantities to pinpoint any disparities and guarantee precision.
+
+### Expedited Shipping 
+
+Shipping method that prioritizes the delivery of products by reducing delivery time through efficient shipping methods.
+
+### Appeasement 
+
+A gesture or action taken by a company to reconcile with a dissatisfied customer, often involving concessions or compensation to resolve an issue or complaint. 
+
+### CSR (Customer Service Representative) 
+
+An individual or team responsible for interacting with customers to address inquiries, assist, resolve complaints, and ensure customer satisfaction. 
+
+### ASN (Advanced Shipping Notice)
+
+A notification sent by a supplier to a recipient detailing the contents and expected arrival of a shipment, often sent in advance of the physical delivery.
+
+### Item Fulfillment Status 
+
+The current stage or status of an item within the fulfillment process, including options such as Reserved, Picking, Packed, Shipped or Delivered
+
+### Order Fulfillment Status 
+
+The status of an order throughout the fulfillment process, including stages such as Created, Approved, Completed, or Cancelled.
+
+### Facility 
+
+A physical location such as a warehouse, distribution center, or store where inventory is stored, managed, and processed.
+
+### Facility Type
+
+The categorization of a facility based on its primary function or purpose, such as warehouse & retail store.
+
+### Facility Group
+
+A collection or category of facilities that share common characteristics, such as location, function, or ownership.
+
+### Proximity
+
+The nearness or closeness of one entity to another, often used in logistics to refer to the distance between facilities or customers.
+

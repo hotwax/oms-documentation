@@ -21,6 +21,10 @@ Follow the steps below to create and schedule reports:
 
 The **"Active"** toggle switch is enabled by default.
 
+{% hint style="info" %}
+Ensure that the `Superset Admin` user is added as the owner whenever scheduling a new report to prevent the report from being disabled if the current owner is deactivated. 
+{% endhint %}
+
 ## Defining the Report Schedule:
 
 This panel is used to define how frequently the report will be sent to a defined notification channel(s).

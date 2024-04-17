@@ -8,6 +8,8 @@
 * [Introduction](business-process-models/README.md)
 * [Order lifecycle](business-process-models/orderlifecycle.md)
 * [Store fulfillment lifecycle](business-process-models/store.fulfillment.md)
+* [Returns lifecycle](business-process-models/returnslifecycle.md)
+* [Exchanges lifecycle](business-process-models/exchangeslifecycle.md)
 
 ## Workflow
 
@@ -54,6 +56,7 @@
   * [Settings Page](fulfillment/fulfillment-setting-page.md)
   * [Reports](fulfillment/reports.md)
   * [Create Shipping Boxes](fulfillment/shipping-box.md)
+  * [Create Pickers](fulfillment/add-picker.md)
 * [Brokering](orders/brokering/README.md)
   * [Order Routing](brokering/configurableRouting.md)
   * [Rule Builder](brokering/rule-builder.md)
@@ -73,7 +76,7 @@
 
 ## Inventory
 
-* [Inventory Mangaemnet](inventory/inventory-management/README.md)
+* [Inventory Management](inventory/inventory-management/README.md)
   * [Find Product Inventory](inventory/inventory-management/find-product-inventory.md)
   * [Product Inventory View Page](inventory/inventory-management/product-inventory-view.md)
   * [Inventory Configurations](inventory/inventory-management/inventory-configurations.md)

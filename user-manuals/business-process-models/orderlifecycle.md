@@ -7,7 +7,7 @@ description: >-
 
 # Order lifecycle
 
-<figure><img src="../.gitbook/assets/order life cycle bpm (1).png" alt=""><figcaption><p>Order lifecycle business process model</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/order lifecycle bpm.png" alt=""><figcaption><p>Order lifecycle business process model</p></figcaption></figure>
 
 ## Order Creation
 
@@ -45,7 +45,7 @@ Each order has its distinct fulfillment process, making it essential to recogniz
 
 ## Fulfillment of Standard Orders
 
-All the approved standard orders are sent to the `Brokering Queue` which serves as a waiting area for orders awaiting processing. Orders in the brokering queue are analyzed and picked in the brokering run.
+All the approved standard orders are sent to the [`Brokering Queue`](https://docs.hotwax.co/user-guides/administration/facilities/manage-parkings) which serves as a waiting area for orders awaiting processing. Orders in the brokering queue are analyzed and picked in the brokering run.
 
 {% hint style="info" %}
 **What are brokering runs:**
@@ -92,7 +92,7 @@ In the event, that a fulfillment location cannot fulfill an order that has been 
 
 ## Failed Inventory Allocation
 
-When inventory is unavailable for orders at any location, the order routing engine moves them from the `Brokering Queue` to the `Unfillable Parking`. A dedicated brokering run is performed to check the orders in the `Unfillable Parking` and allocate inventory to them.
+When inventory is unavailable for orders at any location, the order routing engine moves them from the `Brokering Queue` to the [`Unfillable Parking`](https://docs.hotwax.co/user-guides/administration/facilities/manage-parkings). A dedicated brokering run is performed to check the orders in the `Unfillable Parking` and allocate inventory to them.
 
 ### Auto-Cancellation
 
@@ -106,7 +106,7 @@ A scheduled job checks if the auto-cancellation date for unfillable orders has b
 
 ### Avoid Auto-Cancellation
 
-Retailers with prior knowledge of future inventory through their purchase orders can move these unfillable orders in bulk from `Unfillable Parking` to the `Unfillable Hold Parking` using a CSV file. This action prevents these orders from being automatically canceled and allows them to be fulfilled in the future.
+Retailers with prior knowledge of future inventory through their purchase orders can move these unfillable orders in bulk from `Unfillable Parking` to the [`Unfillable Hold Parking`](https://docs.hotwax.co/user-guides/administration/facilities/manage-parkings) using a CSV file. This action prevents these orders from being automatically canceled and allows them to be fulfilled in the future.
 
 When the inventory arrives, retailers can schedule a brokering run that looks at the orders present in the `Unfillable Hold Parking` and allocates inventory for them.
 
@@ -126,7 +126,7 @@ Once the order is prepared, customer receives an email informing them that their
 
 ### BOPIS Fulfillment Failure:
 
-In the event store associates cannot find the inventory to fulfill a pick-up order, for reasons such as items being out of stock or damaged, a store manager has the authority to reject that order. All the rejected BOPIS orders are then automatically sent to the `BOPIS Rejected Queue`.
+In the event store associates cannot find the inventory to fulfill a pick-up order, for reasons such as items being out of stock or damaged, a store manager has the authority to reject that order. All the rejected BOPIS orders are then automatically sent to the [`BOPIS Rejected Queue`](https://docs.hotwax.co/user-guides/administration/facilities/manage-parkings).
 
 In this scenario, an email is automatically sent to the customer for <mark style="color:orange;">**alternative fulfillment options such as pickup from another store or home delivery**</mark>. Retailers can configure these options based on their order fulfillment strategy.
 
@@ -175,5 +175,3 @@ If an approved order has been allocated to the store, HotWax Commerce also autom
 **Orders canceled in HotWax Commerce:**
 
 Similar to order cancellations initiated on the eCommerce platform, in HotWax Commerce, orders can be canceled whether they are in the "Created" or "Approved" status, provided that the order has not yet been shipped. When an order is canceled, its status is updated from <mark style="color:orange;">**"Created" to "Canceled"**</mark> or from <mark style="color:orange;">**"Approved" to "Canceled,"**</mark> depending on the current stage of the order.
-
-[^1]: 

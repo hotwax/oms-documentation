@@ -5,7 +5,7 @@ description: >-
   pre-orders.
 ---
 
-# Reports
+# Pre-Order Reports
 
 HotWax Commerce OMS offers out of the box pre-order reports to help monitor and track your pre-order operations. Putting all of these reports together, retailers can ensure that they're efficiently managing all their pre-orders.
 

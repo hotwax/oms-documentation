@@ -1,3 +1,8 @@
+---
+description: >-
+  Learn how to set multi-day filter in Tathya
+---
+
 # Set Multi-day Filter for Charts
 
 The `Multi-day Filter` feature in Tathya provides retailers with flexible options to view reports on various frequencies beyond daily reports. This functionality is pivotal for retailers who must analyze their operations on different time scales, such as weekly or monthly data.
