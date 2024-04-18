@@ -11,7 +11,7 @@
 * [Returns lifecycle](business-process-models/returns-lifecycle.md)
   * [Web returns lifecycle](business-process-models/returnslifecycle.md)
   * [POS returns lifecycle](business-process-models/POSreturnslifecycle.md)
-* [Exchanges lifecycle](business-process-models/exchanges-lifecycle.md)
+* [Exchanges lifecycle](business-process-models/exchanges-lifecycle/README.md)
   * [Web exchanges lifecycle](business-process-models/exchangeslifecycle.md)
   * [POS exchanges lifecycle](business-process-models/POSexchangeslifecycle.md)
 
