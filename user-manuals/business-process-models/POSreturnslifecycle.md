@@ -1,10 +1,10 @@
 ---
 description: >-
-  The POS Returns Lifecycle Business Process Model illustrates how in-store
+  The In-Store Returns Lifecycle Business Process Model illustrates how in-store
   returns are managed between RMS, POS, ERP, and HotWax Commerce.
 ---
 
-# POS returns lifecycle
+# In-store returns lifecycle with Loop
 
 <figure><img src="../.gitbook/assets/POS returns bpm.png" alt=""><figcaption><p>POS returns lifecycle business process model</p></figcaption></figure>
 

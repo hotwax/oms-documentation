@@ -1,10 +1,11 @@
 ---
 description: >-
-  The POS Exchanges Lifecycle Business Process Model illustrates how in-store
-  exchanges are managed between RMS, eCommerce, ERP, and HotWax Commerce.
+  The In-Store Exchanges Lifecycle Business Process Model illustrates how
+  in-store exchanges are managed between RMS, eCommerce, ERP, and HotWax
+  Commerce.
 ---
 
-# POS exchanges lifecycle
+# In-store exchanges lifecycle
 
 <figure><img src="../.gitbook/assets/POS exchanges bpm.png" alt=""><figcaption><p>POS exchanges lifecycle business process model</p></figcaption></figure>
 

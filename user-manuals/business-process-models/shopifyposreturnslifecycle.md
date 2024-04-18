@@ -1,6 +1,12 @@
-# Shopify POS Returns Lifecycle
+---
+description: >-
+  The In-Store Returns Lifecycle Business Process Model illustrates how in-store
+  returns are managed between POS as RMS, ERP, and HotWax Commerce.
+---
 
-The Shopify POS Returns Lifecycle Business Process Model illustrates how in-store returns are managed between POS as RMS, ERP, and HotWax Commerce.
+# In-store returns lifecycle with Shopify POS
+
+<figure><img src="../.gitbook/assets/Shopify POS returns bpm.png" alt=""><figcaption><p>Returns lifecycle business process model</p></figcaption></figure>
 
 Some of our Shopify customers use the Shopify POS App to accept in-store returns. The app lets them check all of their store's orders in a single view, whether they were placed online or in person, review its details, and perform a refund or exchange.
 
@@ -20,14 +26,14 @@ Store associates choose the item being returned, designate the restock location 
 
 Once the refund process is completed in the Shopify POS, multiple actions take place:
 
-- Returned inventory is restocked at the designated store location.
-- A return under the order is created in Shopify POS with the returned item marked as “Returned”, and the payment status is updated as “Refunded”.
+* Returned inventory is restocked at the designated store location.
+* A return under the order is created in Shopify POS with the returned item marked as <mark style="color:orange;">**“Returned”**</mark>, and the payment status is updated as <mark style="color:orange;">**“Refunded”**</mark>.
 
 It's crucial to understand that in-store returns are instantaneous because the return request and receipt happen simultaneously, unlike web returns.
 
 ## POS Returns Downloaded from Shopify to HotWax Commerce
 
-A scheduled job in HotWax Commerce downloads the return data from Shopify POS. These returns are downloaded in “Completed” status and the payment in “Refunded” status in HotWax Commerce.
+A scheduled job in HotWax Commerce downloads the return data from Shopify POS. These returns are downloaded in <mark style="color:orange;">**“Completed”**</mark> status and the payment in <mark style="color:orange;">**“Refunded”**</mark> status in HotWax Commerce.
 
 HotWax Commerce also restocks the returned inventory because of the visibility into the specific location where the inventory is received.
 
@@ -35,6 +41,6 @@ HotWax Commerce also restocks the returned inventory because of the visibility i
 
 A scheduled job in HotWax Commerce synchronizes POS returns to NetSuite. This triggers multiple actions:
 
-- A cash refund record is generated against the original cash sale.
-- The returned inventory is automatically restocked.
-- The link to the cash refund record is added to the original cash sale.
+* A cash refund record is generated against the original cash sale.
+* The returned inventory is automatically restocked.
+* The link to the cash refund record is added to the original cash sale.
