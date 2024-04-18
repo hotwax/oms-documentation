@@ -9,9 +9,9 @@
 * [Order lifecycle](business-process-models/orderlifecycle.md)
 * [Store fulfillment lifecycle](business-process-models/store.fulfillment.md)
 * [Returns lifecycle](business-process-models/returns-lifecycle.md)
-  * [Web Returns lifecycle](business-process-models/returnslifecycle.md)
-  * [POS Returns lifecycle](business-process-models/POSreturnslifecycle.md)
-* [Web Exchanges lifecycle](business-process-models/exchangeslifecycle.md)
+  * [Web returns lifecycle](business-process-models/returnslifecycle.md)
+  * [POS returns lifecycle](business-process-models/POSreturnslifecycle.md)
+* [Web exchanges lifecycle](business-process-models/exchangeslifecycle.md)
 
 ## Workflow
 
