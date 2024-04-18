@@ -40,7 +40,7 @@ Once the return process is completed in the Loop POS Returns App, multiple actio
 It's crucial to understand that in-store returns are instantaneous because the return request and receipt happen simultaneously. This is the reason why these returns are initially processed and completed in Loop and subsequently sent to other systems like Shopify POS, NetSuite, and HotWax Commerce, unlike web returns.
 {% endhint %}
 
-## POS Returns Downloaded from Shopify to HotWax Commerce
+## POS Returns Downloaded from Shopify POS to HotWax Commerce
 
 A scheduled job in HotWax Commerce downloads the return data from Shopify POS. These returns are downloaded in <mark style="color:orange;">**“Completed”**</mark> status and the payment in <mark style="color:orange;">**“Refunded”**</mark> status in HotWax Commerce.
 
