@@ -1,4 +1,4 @@
-# Duplicate Order Report Implementation Overview
+# Duplicate Order Report Overview
 # Introduction
 In cases where HotWax Commerce imports an order twice due to synchronization error, each order is processed independently, leading to separate fulfillments for what was originally a single order. This duplication often results in inventory discrepancies as it generates two reserved items instead of one. To address this issue and enhance visibility concerning duplicated orders within the OMS, we've introduced the Duplicate Order Report.
 
