@@ -22,3 +22,4 @@
 
 ## Troubleshooting
 * [Order Approval](troubleshooting/orderApproval.md)
+* [Report](report.md)

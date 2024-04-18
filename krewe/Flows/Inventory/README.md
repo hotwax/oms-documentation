@@ -8,7 +8,10 @@ description: >-
 
 ## Sync Inventory
 
-The overal flow of inventory in Krewe is from NetSuite to HotWax and then to Shopify. With HotWax in the middle Krewe is able to take advantage of HotWax's Unified Inventory capabities. There are some exception cases that are coverd in more detail in this and other linked documents.
+The overall flow of inventory in Krewe is from NetSuite to HotWax and then to Shopify. With HotWax in the middle Krewe is able to take advantage of HotWax's Unified Inventory capabities. There are some exception cases that are coverd in more detail in this and other linked documents.
+
+> [!WARNING]
+ When adding a new facility in HotWax, it is required that the NetSuite location ID for the newly added facility is added into the `Export Inventory Item` saved search on Netsuite to synchronize inventory data for that location from NetSuite to HotWax.
 
 ### Kit Products
 
