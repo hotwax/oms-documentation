@@ -4,7 +4,7 @@ description: >-
   returns are managed between RMS, POS, ERP, and HotWax Commerce.
 ---
 
-# POS Returns lifecycle
+# POS returns lifecycle
 
 <figure><img src="../.gitbook/assets/POS returns bpm.png" alt=""><figcaption><p>POS returns lifecycle business process model</p></figcaption></figure>
 
@@ -14,7 +14,7 @@ To explain the POS Returns lifecycle, we've taken Loop POS App as the RMS, Shopi
 
 ## Customers Return in Store
 
-Customers visit their preferred store to return their web order. Upon arrival, they provide order details to the store associate, who then looks up the order using either the order number or the customer's name.
+Customers visit their preferred store to return their purchases. Upon arrival, they provide order details to the store associate, who then looks up the order using either the order number or the customer's name.
 
 ## Look-up Specific Order
 
@@ -47,3 +47,11 @@ A scheduled job in HotWax Commerce downloads the return data from Shopify POS. T
 HotWax Commerce also restocks the returned inventory because of the visibility into the specific location where the inventory is received.
 
 These POS returns are not synchronized to NetSuite again because this part has already been handled by Loop.
+
+#### Why is downloading POS returns crucial in HotWax Commerce? <a href="#why-is-downloading-returns-crucial-in-hotwax-commerce" id="why-is-downloading-returns-crucial-in-hotwax-commerce"></a>
+
+To ensure data integrity, HotWax Commerce provides an auditing tool OReSA that automatically compares in-store return totals of the POS system with the ERP.
+
+In case any inconsistencies are found, the returns audit dashboard provides a gap analysis report that highlights the monetary gaps in both systems.
+
+\
