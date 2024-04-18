@@ -124,3 +124,4 @@
   * [Warehouse to store](how-to/warehouse-to-store.md)
   * [Store to Warehouse](how-to/store-to-warehouse.md)
   * [Store to store](how-to/store-to-store.md)
+* [Cancel Orders](how-to/order-cancellations.md)
