@@ -156,6 +156,8 @@ This Graph helps in tracking the average approval duration over time. This helps
 
 The Missing Order Attribute Report is a vital tool for tracking order synchronization. By monitoring the presence of essential attributes, it identifies orders lacking crucial information, ensuring a seamless synchronization process. This report enables proactive resolution of discrepancies, preventing any orders from failing to synchronize effectively.
 
+**Report Glossary**
+
 | Field       | Description                                                                                                     |
 | ----------- | --------------------------------------------------------------------------------------------------------------- |
 | ORDER\_NAME | The identifier for the order                                                                                    |
@@ -163,6 +165,8 @@ The Missing Order Attribute Report is a vital tool for tracking order synchroniz
 | STATUS      | The status if the order has essential attributes or not                                                         |
 
 **In the NetSuite context**, the report ensures accurate order synchronization by verifying essential attributes. By highlighting orders lacking these attributes, it prevents synchronization issues, providing assurance that orders seamlessly integrate with NetSuite.
+
+**Report Glossary**
 
 | Field                     | Description                                                                                                    |
 | ------------------------- | -------------------------------------------------------------------------------------------------------------- |
@@ -179,6 +183,8 @@ The HotWax Order Count Report offers a daily snapshot of new orders in the Order
 
 **In the Shopify context,** this report ensures seamless synchronization by comparing daily order counts. It serves as a vital tool for merchants, quickly identifying and addressing any discrepancies in the synchronization process, ensuring accurate and efficient order fulfillment.
 
+**Report Glossary**
+
 | Field        | Description                                |
 | ------------ | ------------------------------------------ |
 | ORDER\_COUNT | The count of the orders in HotWax Commerce |
@@ -190,6 +196,8 @@ The HotWax Order Count Report offers a daily snapshot of new orders in the Order
 The Canceled Order Report provides a comprehensive tracking mechanism for all orders that have entered the OMS and subsequently been canceled. This report ensures a systematic record of cancellations, offering visibility into the cancellation process.
 
 **In the context of NetSuite,** the Canceled Order Report becomes indispensable due to the non-automatic synchronization of cancellations by HotWax. This report ensures that canceled orders align with expectations in NetSuite, whether through Celigo or NetSuite user actions. By using this report, organizations leveraging NetSuite gain a proactive means to verify and reconcile cancellation records, preventing discrepancies. This meticulous approach contributes to the accuracy of cancellation data across systems, enhancing the reliability of financial and operational records within NetSuite.
+
+**Report Glossary**
 
 | Field             | Description                                          |
 | ----------------- | ---------------------------------------------------- |
@@ -207,6 +215,8 @@ The Canceled Order Report provides a comprehensive tracking mechanism for all or
 ## Allocation Pending Report
 
 The Allocation Pending Report displays orders assigned to facilities that currently lack sufficient inventory for immediate fulfillment. Monitoring the orders and items listed in this report is essential for initiating replenishment actions at the store. By doing so, retailers can ensure that inventory levels are maintained adequately, facilitating the successful completion of fulfillment for the identified orders.
+
+**Report Glossary**
 
 | Field          | Description                                        |
 | -------------- | -------------------------------------------------- |
