@@ -4,7 +4,7 @@ description: >-
   managed between RMS, eCommerce, ERP, and HotWax Commerce.
 ---
 
-# Returns lifecycle
+# Web Returns lifecycle
 
 <figure><img src="../.gitbook/assets/returns bpm.png" alt=""><figcaption><p>Returns lifecycle business process model</p></figcaption></figure>
 
