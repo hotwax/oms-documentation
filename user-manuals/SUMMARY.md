@@ -10,10 +10,11 @@
 * [Store fulfillment lifecycle](business-process-models/store.fulfillment.md)
 * [Returns lifecycle](business-process-models/returns-lifecycle.md)
   * [Web returns lifecycle](business-process-models/returnslifecycle.md)
-  * [POS returns lifecycle](business-process-models/POSreturnslifecycle.md)
+  * [In-store returns lifecycle with Shopify POS](business-process-models/shopifyposreturnslifecycle.md)
+  * [In-store returns lifecycle with Loop](business-process-models/POSreturnslifecycle.md)
 * [Exchanges lifecycle](business-process-models/exchanges-lifecycle/README.md)
   * [Web exchanges lifecycle](business-process-models/exchangeslifecycle.md)
-  * [POS exchanges lifecycle](business-process-models/POSexchangeslifecycle.md)
+  * [In-store exchanges lifecycle](business-process-models/POSexchangeslifecycle.md)
 
 ## Workflow
 
