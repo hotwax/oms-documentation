@@ -14,13 +14,13 @@ HotWax Commerce simply downloads completed returns for auditing purposes, ensuri
 
 ## 1. Returns Initiated in Loop
 
-Loop lets customers directly initiate returns against their web orders. When customers complete  initiating the return process, a Return Merchandise Authorization (RMA) is created in Loop in the <mark style="color:orange;">**"Open"**</mark> status.
+Loop lets customers directly initiate returns against their web orders. When customers complete initiating the return process, a Return Merchandise Authorization (RMA) is created in Loop in the <mark style="color:orange;">**"Open"**</mark> status.
 
-## 2. Creates Return on Order in Shopify
+## 2. Return Under Order Created in Shopify
 
-Loop updates the order details in Shopify reflecting that a return has been requested by the customer.
+Loop updates the order details in Shopify by creating a return under order, reflecting that a return has been requested by the customer.
 
-## 3. Creates RMA in NetSuite
+## 3. RMA Created in NetSuite
 
 Many retailers use third-party integration apps like Novamodule to synchronize returns from Loop to NetSuite.
 
@@ -41,13 +41,15 @@ Now that the customer has shipped the return item back, its item receipt has bee
 
 Item receipt records created in NetSuite are synchronized to Loop using a third-party integration app. Consequently, return receipt records are generated in Loop. This means that refunds can now be initiated to customers.
 
-## 6. Process Refunds
+## 6. Refunds Processed
 
 Processing refunds to the customers marks the completion of returns. During this process, multiple actions take place in Loop, NetSuite, and Shopify. Let’s understand them:
 
-* Return receipt records trigger the creation of refund records in Loop. Once refund records are created, Loop creates customer refund records in NetSuite using a third-party integration app. This marks the completion of RMA in NetSuite, with its status updating from <mark style="color:orange;">**"Pending Refund"**</mark> to <mark style="color:orange;">**"Refunded"**</mark>.
+*   Return receipt records trigger the creation of refund records in Loop. Once refund records are created, Loop creates a credit memo in <mark style="color:orange;">**“Open”**</mark> status using a third party integration app. Creating credit memo marks the completion of RMA in NetSuite, with its status updating from <mark style="color:orange;">**“Pending Refund”**</mark> to <mark style="color:orange;">**“Refunded”**</mark>.
+
+    Loop also creates a customer refund record to reflect that the customer has received the refund against the credit memo and then the status of the credit memo is updated from <mark style="color:orange;">**“Open”**</mark> to <mark style="color:orange;">**“Fully Applied”**</mark>.
 * The creation of refund records in Loop also marks the completion of RMA in Loop, with its status updating from <mark style="color:orange;">**"Open"**</mark> to <mark style="color:orange;">**"Closed"**</mark>.
-* Return receipt records in Loop triggers the refund process on Shopify and refunds are then issued to the customer. This marks the completion of return in Shopify, with the creation of payment records in <mark style="color:orange;">**"Refunded"**</mark> status and the order status updated as <mark style="color:orange;">**"Returned"**</mark>.
+* Return receipt records in Loop triggers the refund process on Shopify and refunds are then issued to the customer. This marks the completion of return in Shopify, with the creation of payment records in <mark style="color:orange;">**"Refunded"**</mark> status and the return under order marked as <mark style="color:orange;">**“Returned”**</mark>.
 
 ## 7. Customer Receives Refund
 
