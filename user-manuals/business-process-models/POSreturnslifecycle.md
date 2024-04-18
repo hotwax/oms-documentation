@@ -36,8 +36,8 @@ Once the return process is completed in the Loop POS Returns App, multiple actio
 * For a return under order, Loop marks the returned item as <mark style="color:orange;">**“Returned”**</mark>, updates the payment status as <mark style="color:orange;">**“Refunded”**</mark> and restocks the returned inventory in Shopify POS.
 * Loop creates a cash refund record in NetSuite and also adds the associated cash sale ID in the memo so that the original order can be easily looked up. When cash refund records are created, inventory is automatically restocked in NetSuite.
 
-{% hint style="info" %}
-It's crucial to understand that in-store returns are instantaneous because the return request and receipt happen simultaneously. This is the reason why these returns are initially processed and completed in Loop and subsequently sent to other systems like Shopify POS, NetSuite, and HotWax Commerce, unlike web returns.
+{% hint style="success" %}
+It's crucial to understand that in-store returns are instantaneous because the return request and receipt happen simultaneously. This is the reason why these in-store returns are initially processed and completed in Loop and subsequently sent to other systems like Shopify POS, NetSuite, and HotWax Commerce, unlike web returns.
 {% endhint %}
 
 ## POS Returns Downloaded from Shopify POS to HotWax Commerce

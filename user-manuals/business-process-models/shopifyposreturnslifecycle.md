@@ -29,7 +29,9 @@ Once the refund process is completed in the Shopify POS, multiple actions take p
 * Returned inventory is restocked at the designated store location.
 * A return under the order is created in Shopify POS with the returned item marked as <mark style="color:orange;">**“Returned”**</mark>, and the payment status is updated as <mark style="color:orange;">**“Refunded”**</mark>.
 
-It's crucial to understand that in-store returns are instantaneous because the return request and receipt happen simultaneously, unlike web returns.
+{% hint style="success" %}
+It's crucial to understand that in-store returns are instantaneous because the return request and receipt happen simultaneously, unlike web returns. Once these in-store returns are completed in Shopify POS, they are synchronized to HotWax Commerce and subsequently to NetSuite.
+{% endhint %}
 
 ## POS Returns Downloaded from Shopify to HotWax Commerce
 
