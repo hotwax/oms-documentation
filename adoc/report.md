@@ -28,8 +28,10 @@ User can manages duplicate orders through the following steps:
 1. **Moving Less Preferred Orders:** Items from less preferred orders should be transferred to the general ops parking, preventing further processing.
 2. **Changing Order Status:** The status of less preferred duplicate orders should be changed to "cancel," effectively cancelling one of the duplicates.
 
-> [!NOTE]
+{% hint style="info" %}
 Duplicate orders with a completed status are excluded from the report as no further action is required. Similarly, orders where one duplicate is already cancelled are also omitted. Orders are included in the report based on their fulfillment status. If order items are moved to general ops parking but the order status is not marked as cancelled, they will appear in the report.
+{% endhint %}
+
 
 ```sql
 
