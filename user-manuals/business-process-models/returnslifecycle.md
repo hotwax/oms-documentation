@@ -45,9 +45,9 @@ Item receipt records created in NetSuite are synchronized to Loop using a third-
 
 Processing refunds to the customers marks the completion of returns. During this process, multiple actions take place in Loop, NetSuite, and Shopify. Let’s understand them:
 
-*   Return receipt records trigger the creation of refund records in Loop. Once refund records are created, Loop creates a credit memo in <mark style="color:orange;">**“Open”**</mark> status using a third party integration app. Creating credit memo marks the completion of RMA in NetSuite, with its status updating from <mark style="color:orange;">**“Pending Refund”**</mark> to <mark style="color:orange;">**“Refunded”**</mark>.
+*   Return receipt records trigger the creation of refund records in Loop. Once refund records are created, Loop creates a credit memo in <mark style="color:orange;">**“Open”**</mark> status using a third party integration app. Creating credit memo marks the completion of RMA in NetSuite, with its status updating from <mark style="color:orange;">**“Pending Refund”**</mark> to <mark style="color:orange;">**“Refunded”.**</mark>
 
-    Loop also creates a customer refund record to reflect that the customer has received the refund against the credit memo and then the status of the credit memo is updated from <mark style="color:orange;">**“Open”**</mark> to <mark style="color:orange;">**“Fully Applied”**</mark>.
+    Loop also creates a customer refund record to reflect that the customer has received the refund against the credit memo and then the status of the credit memo is updated from “Open” to “Fully Applied”.
 * The creation of refund records in Loop also marks the completion of RMA in Loop, with its status updating from <mark style="color:orange;">**"Open"**</mark> to <mark style="color:orange;">**"Closed"**</mark>.
 * Return receipt records in Loop triggers the refund process on Shopify and refunds are then issued to the customer. This marks the completion of return in Shopify, with the creation of payment records in <mark style="color:orange;">**"Refunded"**</mark> status and the return under order marked as <mark style="color:orange;">**“Returned”**</mark>.
 
