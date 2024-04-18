@@ -4,11 +4,9 @@ description: >-
   eCommerce, ERP, and HotWax Commerce.
 ---
 
-# Web returns lifecycle
+# Web returns with Loop
 
 <figure><img src="../.gitbook/assets/returns bpm.png" alt=""><figcaption><p>Web returns lifecycle business process model</p></figcaption></figure>
-
-HotWax Commerce, being an Order Management System, forwards the responsibility of managing returns to specialized Return Management Systems. This means that most of the process in the return lifecycle will be handled by a third-party Return Management System (RMS).
 
 HotWax Commerce simply downloads completed returns for auditing purposes, ensuring reconciliation of returns in both Shopify and NetSuite. To explain the return lifecycle, we've taken Loop as the RMS, Shopify as eCommerce platform, and NetSuite as the ERP system, while HotWax Commerce serves as the OMS.
 
