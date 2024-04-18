@@ -4,7 +4,7 @@ description: >-
   RMS, eCommerce, ERP, and HotWax Commerce.
 ---
 
-# Web exchanges lifecycle
+# Web exchanges with Loop
 
 
 
@@ -81,4 +81,6 @@ When an item from the original order is returned on Shopify, it provides an opti
 
 A scheduled job in HotWax Commerce performs a daily sync of inventory data from NetSuite which means new receipts from returns are automatically synchronized to HotWax Commerce. HotWax Commerce also performs regular inventory synchronization to Shopify which means that any changes in inventory in HotWax Commerce, such as increases resulting from returns, are also synchronized to Shopify.
 
-For the new exchanged item, after downloading an exchange order from Shopify, HotWax Commerce automatically reduces inventory from the online sellable count once that exchange item is in the brokering queue and reduces the quantity on hand once it is fulfilled just like HotWax Commerce does for other web orders. HotWax Commerce sends fulfillment updates to NetSuite which updates inventory levels in NetSuite and regular inventory updates to Shopify which also keeps inventory up-to-date in Shopify.
+Upon downloading an exchange order from Shopify, HotWax Commerce automatically reduces inventory from the online sellable count once the exchange item enters the brokering queue. Subsequently, it decreases the quantity on hand once the exchange item is fulfilled, just like HotWax Commerce updates inventory for other web orders.
+
+HotWax Commerce also sends fulfillment updates to NetSuite which updates inventory levels in NetSuite, and provides regular inventory updates to Shopify which also keeps inventory up-to-date in Shopify.
