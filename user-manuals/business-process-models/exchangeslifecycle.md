@@ -18,9 +18,9 @@ As discussed in [Returns Lifecycle](https://docs.hotwax.co/user-guides/business-
 
 When customers complete their exchange process, a Return Merchandise Authorization (RMA) is created in Loop in the <mark style="color:orange;">**“Open”**</mark> status against the return item.
 
-## 2. Creates Return on Order in Shopify
+## 2. Creates Return Under Order in Shopify
 
-Loop updates the order details in Shopify reflecting that a return has been requested by the customer.
+Loop updates the order details in Shopify by creating a return under order, reflecting that a return has been requested by the customer.
 
 ## 3. Creates RMA in NetSuite
 
@@ -51,8 +51,10 @@ Creating refund records is essential to mark the completion of the return proces
 
     Customers receive their refund amount when they return an item. In the event where they are returning an item in exchange for another, refunds will not be issued to them because that amount is used as payment for the exchanged product.
 
-    Once refund records are created, Loop creates customer refund records of $0 in NetSuite using a third-party integration app. This marks the completion of RMA in NetSuite, with its status updating from <mark style="color:orange;">**“Pending Refund”**</mark> to <mark style="color:orange;">**“Refunded”**</mark>.
+    Once refund records are created, Loop creates a credit memo in Open status of $0 in NetSuite using a third party integration app. This marks the completion of RMA in NetSuite, with its status updating from <mark style="color:orange;">**“Pending Refund”**</mark> to <mark style="color:orange;">**“Refunded”**</mark>.. Loop also creates a customer refund record against the credit memo and then the status of the credit memo is updated from “Open” to “Fully Applied”.
+
 * The creation of refund records in Loop also marks the completion of RMA in Loop, with its status updating from <mark style="color:orange;">**“Open”**</mark> to <mark style="color:orange;">**“Closed”**</mark>.
+  
 * Return receipt records in Loop trigger marking the original order as <mark style="color:orange;">**“Returned”**</mark> in Shopify and creating a new order in the <mark style="color:orange;">**“Unfulfilled”**</mark> status. Loop also applies a 100% Loop discount on the new order and links the original order in the extended fields.
 
 ## 7. Exchange Orders Downloaded in HotWax Commerce
