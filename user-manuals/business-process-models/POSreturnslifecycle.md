@@ -6,7 +6,7 @@ description: >-
 
 # In-store returns lifecycle with Loop
 
-<figure><img src="../.gitbook/assets/POS returns bpm.png" alt=""><figcaption><p>POS returns lifecycle business process model</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/POS returns bpm.png" alt=""><figcaption><p>In-store returns lifecycle business process model</p></figcaption></figure>
 
 Customers who live near a brick-and-mortar store or those who prefer to get instant refunds opt for returning their purchases directly in-store.
 

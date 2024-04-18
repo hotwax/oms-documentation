@@ -6,7 +6,7 @@ description: >-
 
 # Web returns lifecycle
 
-<figure><img src="../.gitbook/assets/returns bpm.png" alt=""><figcaption><p>Returns lifecycle business process model</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/returns bpm.png" alt=""><figcaption><p>Web returns lifecycle business process model</p></figcaption></figure>
 
 HotWax Commerce, being an Order Management System, forwards the responsibility of managing returns to specialized Return Management Systems. This means that most of the process in the return lifecycle will be handled by a third-party Return Management System (RMS).
 

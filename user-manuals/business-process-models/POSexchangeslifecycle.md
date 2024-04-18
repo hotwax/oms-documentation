@@ -7,7 +7,7 @@ description: >-
 
 # In-store exchanges lifecycle
 
-<figure><img src="../.gitbook/assets/POS exchanges bpm.png" alt=""><figcaption><p>POS exchanges lifecycle business process model</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/POS exchanges bpm.png" alt=""><figcaption><p>In-store exchanges lifecycle business process model</p></figcaption></figure>
 
 The process of returning an item mirrors the steps previously discussed in the [POS Returns Lifecycle](POSreturnslifecycle.md) Business Process Model. More specifically, customers visiting the store location, store associates looking up the customer’s order in the Loop POS App, and initiating the return process remains the same.
 
