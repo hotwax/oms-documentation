@@ -1,7 +1,7 @@
 ---
 description: >-
-  The Web Exchange Lifecycle Business Process Model illustrates how exchanges
-  are processed between RMS, eCommerce, ERP, and HotWax Commerce.
+  The Web Exchange Lifecycle BPM illustrates how exchanges are processed between
+  RMS, eCommerce, ERP, and HotWax Commerce.
 ---
 
 # Web exchanges lifecycle

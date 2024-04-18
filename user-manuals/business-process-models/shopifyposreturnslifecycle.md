@@ -1,7 +1,7 @@
 ---
 description: >-
-  The In-Store Returns Lifecycle Business Process Model illustrates how in-store
-  returns are managed between POS as RMS, ERP, and HotWax Commerce.
+  The In-Store Returns Lifecycle BPM illustrates how in-store returns are
+  managed between POS as RMS, ERP, and HotWax Commerce.
 ---
 
 # In-store returns lifecycle with Shopify POS

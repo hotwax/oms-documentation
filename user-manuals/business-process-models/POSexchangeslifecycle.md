@@ -1,8 +1,7 @@
 ---
 description: >-
-  The In-Store Exchanges Lifecycle Business Process Model illustrates how
-  in-store exchanges are managed between RMS, eCommerce, ERP, and HotWax
-  Commerce.
+  The In-Store Exchanges Lifecycle BPM illustrates how in-store exchanges are
+  managed between RMS, eCommerce, ERP, and HotWax Commerce.
 ---
 
 # In-store exchanges lifecycle

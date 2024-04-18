@@ -1,7 +1,7 @@
 ---
 description: >-
-  The Web Return Lifecycle Business Process Model illustrates how returns are
-  managed between RMS, eCommerce, ERP, and HotWax Commerce.
+  The Web Return Lifecycle BPM illustrates how returns are managed between RMS,
+  eCommerce, ERP, and HotWax Commerce.
 ---
 
 # Web returns lifecycle
