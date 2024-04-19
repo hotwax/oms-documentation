@@ -32,7 +32,7 @@
   * [Configurations](data-manager/configurations.md)
   * [Imports](data-manager/imports.md)
 
-## Orders
+## Products
 * [Product Management](products.md)
 
 ## Orders
