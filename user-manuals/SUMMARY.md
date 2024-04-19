@@ -14,7 +14,7 @@
   * [In-store returns with Loop](business-process-models/returns-lifecycle/loopposreturnslifecycle.md)
 * [Exchanges lifecycle](business-process-models/exchanges-lifecycle/README.md)
   * [Web exchanges with Loop](business-process-models/exchanges-lifecycle/loopwebexchangeslifecycle.md)
-  * [In-store exchanges with Loop](exchanges-lifecycle/loopposexchangeslifecycle.md)
+  * [In-store exchanges with Loop](business-process-models/exchanges-lifecycle/loopposexchangeslifecycle.md)
 
 ## Workflow
 
