@@ -33,6 +33,9 @@
   * [Imports](data-manager/imports.md)
 
 ## Orders
+* [Product Management](products.md)
+
+## Orders
 
 * [Order management](orders/order-management/README.md)
   * [Find Sales orders](orders/order-management/find-sales-orders.md)
