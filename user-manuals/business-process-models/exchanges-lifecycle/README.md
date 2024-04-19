@@ -6,4 +6,4 @@ For both web returns and in-store exchanges, HotWax Commerce being an OMS takes 
 
 We are currently in the process of designing the workflow for in-store exchanges when Shopify POS is used. In the meantime, let's delve into how the lifecycle of web and in-store exchanges is managed with these systems in play:
 
-<table data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td>Web exchanges with Loop</td><td><a href="../exchangeslifecycle.md">exchangeslifecycle.md</a></td></tr><tr><td>In-store exchanges with Loop</td><td><a href="../POSexchangeslifecycle.md">POSexchangeslifecycle.md</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td>Web exchanges with Loop</td><td><a href="loopwebexchangeslifecycle.md">loopwebexchangeslifecycle.md</a></td></tr><tr><td>In-store exchanges with Loop</td><td><a href="loopposexchangeslifecycle.md">loopposexchangeslifecycle.md</a></td></tr></tbody></table>

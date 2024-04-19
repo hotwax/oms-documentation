@@ -8,5 +8,4 @@ When Loop processes web returns and the Loop POS App handles in-store returns, H
 
 Now, let's delve into how the lifecycle of web and in-store returns is managed with these systems in play:
 
-<table data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td>Web returns with Loop</td><td><a href="returnslifecycle.md">returnslifecycle.md</a></td></tr><tr><td>In-store returns with Shopify POS</td><td></td></tr><tr><td>In-store returns with Loop</td><td><a href="POSreturnslifecycle.md">POSreturnslifecycle.md</a></td></tr></tbody></table>
-
+<table data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td>Web returns with Loop</td><td><a href="loopwebreturnslifecycle.md">loopwebreturnslifecycle.md</a></td></tr><tr><td>In-store returns with Shopify POS</td><td><a href="shopifyposreturnslifecycle.md">shopifyposreturnslifecycle.md</a></td></tr><tr><td>In-store returns with Loop</td><td><a href="loopposreturnslifecycle.md">loopposreturnslifecycle.md</a></td></tr></tbody></table>
