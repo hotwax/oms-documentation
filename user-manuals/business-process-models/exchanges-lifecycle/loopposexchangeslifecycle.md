@@ -8,7 +8,7 @@ description: >-
 
 <figure><img src="../../.gitbook/assets/POS exchanges bpm.png" alt=""><figcaption><p>In-store exchanges lifecycle business process model</p></figcaption></figure>
 
-The process of returning an item mirrors the steps previously discussed in the [POS Returns Lifecycle](POSreturnslifecycle.md) Business Process Model. More specifically, customers visiting the store location, store associates looking up the customer’s order in the Loop POS App, and initiating the return process remains the same.
+The process of returning an item mirrors the steps previously discussed in the [In-Store Returns Lifecycle Business Process Model](../returns-lifecycle/loopposreturnslifecycle.md). More specifically, customers visiting the store location, store associates looking up the customer’s order in the Loop POS App, and initiating the return process remains the same.
 
 ## Exchange Processed
 
@@ -23,9 +23,9 @@ Once the return process is completed in the Loop POS Returns App, multiple actio
 * Loop creates a return under the order in Shopify POS and marks the returned item as <mark style="color:orange;">**“Returned”**</mark>, restocks the returned inventory and updates the payment status as <mark style="color:orange;">**“Refunded”**</mark>. In case of exchanges, Loop also creates a new <mark style="color:orange;">**“Fulfilled”**</mark> order in Shopify POS.
 * Loop creates a cash refund record in NetSuite and also adds the associated cash sale ID in the memo so that the original order can be easily looked up. When cash refund records are created, returned inventory is automatically restocked in NetSuite.
 
-## POS Returns Downloaded from Shopify POS to HotWax Commerce
+## In-store Returns Downloaded from Shopify POS to HotWax Commerce
 
-This process again mirrors the steps discussed in the [POS Return Lifecycle](POSreturnslifecycle.md). The only additional step performed is creating a new exchange order.
+This process again mirrors the steps discussed in the [In-Store Return Lifecycle](../returns-lifecycle/loopposreturnslifecycle.md). The only additional step performed is creating a new exchange order.
 
 * As discussed earlier, for exchanges, Loop creates a new exchange order in Shopify POS. Exchange orders that are created in Shopify POS are downloaded in HotWax Commerce just like regular POS sales. A scheduled job downloads exchanges from Shopify POS in the <mark style="color:orange;">**"Completed”**</mark> status and also reduces the inventory for the item sold as part of the exchange process.
 
