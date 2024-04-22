@@ -8,7 +8,7 @@ description: >-
 
 
 
-<figure><img src="../.gitbook/assets/exchanges bpm.png" alt=""><figcaption><p>Web exchanges lifecycle business process model</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/exchanges bpm.png" alt=""><figcaption><p>Web exchanges lifecycle business process model</p></figcaption></figure>
 
 In the context of returns, an exchange refers to a transaction in which a customer returns a purchased item and, instead of receiving a refund or store credit, opts to swap the returned item for a different product. This lets the customer exchange the initially purchased item for another one.
 
@@ -16,7 +16,7 @@ To explain the exchange lifecycle, we've taken Loop as the RMS, Shopify as the e
 
 ## 1. Exchanges Initiated in Loop
 
-As discussed in [Returns Lifecycle](https://docs.hotwax.co/user-guides/business-process-models/returnslifecycle), Loop lets customers directly initiate returns against their web orders. If customers want to buy another product by returning an item, the Loop customer portal lets them submit an exchange request.
+As discussed in [Web Returns Lifecycle](../returns-lifecycle/loopwebreturnslifecycle.md), Loop lets customers directly initiate returns against their web orders. If customers want to buy another product by returning an item, the Loop customer portal lets them submit an exchange request.
 
 When customers complete their exchange process, a Return Merchandise Authorization (RMA) is created in Loop in the <mark style="color:orange;">**“Open”**</mark> status against the return item.
 
@@ -75,7 +75,7 @@ Learn more about [order synchronization between HotWax Commerce and NetSuite](ht
 
 ### What about Inventory Updates for the Returned & New Exchange Item?
 
-Inventory synchronization process remains the same for the returned item that we discussed in the [Returns Lifecycle](https://docs.hotwax.co/user-guides/business-process-models/returnslifecycle).
+Inventory synchronization process remains the same for the returned item that we discussed in the [Web Returns Lifecycle](../returns-lifecycle/loopwebreturnslifecycle.md).
 
 When an item from the original order is returned on Shopify, it provides an option to enable the restock returned inventory flag. However, HotWax Commerce does not automatically increase the inventory count even if the restocked return flag is enabled on Shopify. This is because HotWax Commerce lacks visibility into the specific location where the inventory is received. Instead, inventory is updated only when new item receipt records are synchronized to HotWax Commerce from NetSuite.
 
