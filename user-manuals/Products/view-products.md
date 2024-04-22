@@ -1,12 +1,14 @@
-#View Product Details
+# View Product Details
 
 The comprehensive Product View Page within HotWax Commerce enhances user efficiency and facilitates streamlined product management. This page consolidates all essential information related to a specific product, providing users with a holistic view that encompasses key details of product identifications and product information such as “product specifications”, “features price”, and “associated sales channels”. To access the Product View Page, search for the required product on the Find Product Page and simply click on the Product ID to view extensive details about the product. It also facilitates users to update product types, shipping dimensions, features, and identifications and empowers them to add or edit product ecom details, sales channels, product prices, and product contents.
 
 HotWax Commerce offers the following features on the Product View Page:
 
+### Overview Section
+
 The overview section contains essential information related to “product specifications”, “features”, and “identifications”. Here's a summary of each element:
 
-| ###Specifications     | ###Description                                                                                                                                                                                                                                                                                                                                                      |
+|Specifications     | Description                                                                                                                                                                                                                                                                                                                                                      |
 |-----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Product Type          | Displays Product Type as “Finished Goods”, “Digital goods”, “Accessories”, or others as specified.                                                                                                                                                                                                                                                              |
 | Product Name          | Universal name or title assigned to the Product.                                                                                                                                                                                                                                                                                                                  |
@@ -20,7 +22,7 @@ The overview section contains essential information related to “product specif
 
 This information provides a comprehensive overview facilitating effective management and customization of a product and also empowers users to add and delete any product specifications.
 
-###Add Shopify Shop Association
+### Add Shopify Shop Association
 
 Retailers who operate in multiple countries use Shopify shops in Hotwax commerce to manage product catalogs in different countries. A master catalog holds all products, while associations are formed to sync these products across different country-specific catalogs. These associations are automated through a job in HotWax Commerce that creates associations between products in the master catalog and the product catalog of other countries by matching the SKU codes.
 
@@ -31,7 +33,7 @@ Retailers can view the product association with the different shop in the Shopif
 3. Add Shopify Product ID and Shopify Inventory ID
 4. Click on Add button to save the product association
 
-###Add Product Content
+### Add Product Content
 
 HotWax Commerce allows users to add and update product summaries, product descriptions, images, and videos with meta descriptions for enhanced product display. The details are readily available for the users in this section.
                                                                                                                                                                                                                                                                                                         |
