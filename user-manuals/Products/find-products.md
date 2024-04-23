@@ -1,3 +1,8 @@
+---
+description: >-
+  HotWax Commerce's Product pages enables users to have a consolidated view of all existing products allowing users to access a detailed view of all product and variants facilitating a quick and refine product search. 
+---
+
 # Find Product
 
 The Find Product page within HotWax Commerce serves as a centralized hub for managing products. This page offers a consolidated view of all the products with individual variant information, displaying product category, product name, product ID, and product features viz, size, colors, etc. It enables users to have a quick view of all existing products and carry out product management efficiently.
