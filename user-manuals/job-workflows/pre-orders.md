@@ -54,10 +54,10 @@ Products from purchase orders that don't meet these criteria won't be listed in 
 
 ### **Custom Parameters**
 
-| Parameter       | Type   | Description                                                 | Default Value | Example Value            |
-|----------------------|-----------------|--------|------------------------------------------------------------------------|---------------|--------------------------|
-| RunTime              | String          | String | Specifies the Runtime scheduled for a job, which can be customized.    | null          | April 17, 2024, 1:15 PM  |
-| Schedule Frequency   | String          | String | Schedules frequency from the dropdown as every 5 minutes, Hourly, Daily, Weekly, etc. which can be customized as required. | Daily Once   | 11:30:00:00 AM           |
+| Parameter          | Type   | Description                                                             | Default Value | Example Value          |
+|--------------------|--------|-------------------------------------------------------------------------|---------------|------------------------|
+| RunTime            | String | Specifies the Runtime scheduled for a job, which can be customized.     | null          | April 17, 2024, 1:15 PM |
+| Schedule Frequency | String | Schedules frequency from the dropdown as every 5 minutes, Hourly, Daily, Weekly, etc. which can be customized as required. | Daily Once   | 11:30:00:00 AM          |
 
 ## Jobs for Synchronizing the Pre-Order Catalog with eCommerce
 
