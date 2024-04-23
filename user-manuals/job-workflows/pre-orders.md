@@ -2,6 +2,7 @@
 |--------------------------------------------------------------------------------------------------------------------------------|
 | Learn about the Import New Products job in HotWax Commerce. Keep your product catalog updated for accurate representation on your platform. |
 
+
 # Jobs for Pre-Order Catalog Management in HotWax Commerce
 
 ### Frequency for Pre-Order Jobs
@@ -18,6 +19,7 @@ Users can follow the given steps to execute any changes in the existing jobs to 
 5. Ensure to save the changes. 
 6. Users can add custom parameters to the jobs and schedule them accordingly.
 7. Users can also “Skip” or “Cancel” the jobs from the same job detailed card.
+
 
 ## Pre-sell Catalog (Auto Refresh Presell Catalog)
 
@@ -58,6 +60,7 @@ Products from purchase orders that don't meet these criteria won't be listed in 
 |--------------------|--------|-------------------------------------------------------------------------|---------------|------------------------|
 | RunTime            | String | Specifies the Runtime scheduled for a job, which can be customized.     | null          | April 17, 2024, 1:15 PM |
 | Schedule Frequency | String | Schedules frequency from the dropdown as every 5 minutes, Hourly, Daily, Weekly, etc. which can be customized as required. | Daily Once   | 11:30:00:00 AM          |
+
 
 ## Jobs for Synchronizing the Pre-Order Catalog with eCommerce
 
@@ -102,6 +105,7 @@ Products from purchase orders that don't meet these criteria won't be listed in 
 |--------------------|--------|-----------------------------------------------------------------------------------------------|---------------|------------------------|
 | RunTime            | String | Specifies the Runtime scheduled for a job, which can be customized.                           | null          | April 17, 2024, 1:15 PM |
 | Schedule Frequency | String | Schedules frequency from the dropdown as every 5 minutes, Hourly, Daily, Weekly, etc.        | Daily Once    | 23:59:00:00 PM         |
+
 
 ## Promise Date Changes (Update Pre-Order Category Item Arrival Date)
 
@@ -167,6 +171,7 @@ Merchants can change the promise dates in sales orders if there are any changes 
 
 **Description:**
 To efficiently manage customer expectations regarding changes in promised dates, activating the Email customers checkbox initiates a job that triggers automatic emails to customers. This action ensures customers are informed whenever there's a modification in the promised date since the job notifies customers of any changed promise dates for their orders.
+
 
 # Release Pre-orders
 
