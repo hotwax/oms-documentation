@@ -1,4 +1,4 @@
-# Store to Store
+# Manage transfer order from Store to Store
 
 Stores looking to transfer surplus inventory to another store in need of it work alongside the warehouse manager to create a store-to-store transfer order in NetSuite. This facilitates the transfer of inventory from one store location to another.
 
