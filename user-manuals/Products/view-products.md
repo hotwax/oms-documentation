@@ -1,3 +1,8 @@
+---
+description: >-
+  HotWax Commerce's View Product pages displays and allows users to add and edit product’s overview with product specifications, product categories, prices, associated sales channel and product content. 
+---
+
 # View Product Details
 
 The comprehensive Product View Page within HotWax Commerce enhances user efficiency and facilitates streamlined product management. This page consolidates all essential information related to a specific product, providing users with a holistic view that encompasses key details of product identifications and product information such as “product specifications”, “features price”, and “associated sales channels”. To access the Product View Page, search for the required product on the Find Product Page and simply click on the Product ID to view extensive details about the product. It also facilitates users to update product types, shipping dimensions, features, and identifications and empowers them to add or edit product ecom details, sales channels, product prices, and product contents.
