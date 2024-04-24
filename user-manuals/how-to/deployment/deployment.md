@@ -89,7 +89,7 @@ HotWax Commerce's Users application allows businesses to create and manage users
 
 ## Checklist
 
-- [ ] **Launch Machine**
+  - [ ] **Launch Machine**
 
 - **Initial Login**
   - [ ] Log in to the instance.
@@ -124,7 +124,7 @@ HotWax Commerce's Users application allows businesses to create and manage users
   - [ ] Configure shipping gateways for seamless integration with third-party logistics companies.
   - [ ] Add shipping boxes for accurate shipping cost calculation and label generation.
 
-- [ ] **Install HotWax Commerce integration app on Shopify store**
+  - [ ] **Install HotWax Commerce integration app on Shopify store**
 
 - **Configure Mappings between HotWax Commerce and Shopify**
   - [ ] Manage integration mappings between HotWax Commerce and Shopify Shop.
@@ -142,10 +142,9 @@ HotWax Commerce's Users application allows businesses to create and manage users
 - **Sync Inventory to Shopify**
   - [ ] Upload inventory from HotWax Commerce to Shopify.
 
-- [ ] **Schedule brokering runs for order routing.**
-  - [ ] 
+  - [ ] **Schedule brokering runs for order routing.**
 
-- [ ] **Create users for Fulfillment**
+- **Create users for Fulfillment**
   - [ ] Set up user accounts for fulfillment operations.
   - [ ] Create Pickers for picking order items
 
