@@ -4,17 +4,23 @@ description: >-
   the 'getProductOnlineAtp' API
 ---
 
-# Get Online ATP of Product
+# Get Online ATP of Products
 
-Store Associates need to access the online Available to Promise (ATP) of products on their POS systems for sendsales orders. The `c` API facilitates retrieving the online ATP of a product from all locations except the one it's being ordered from. To fetch the online ATP details, make a POST request to the `/getProductOnlineAtp` endpoint.
+Store Associates need to access the online Available to Promise (ATP) of products on their POS systems for sendsales orders. The `getProductOnlineAtp` API facilitates retrieving the online ATP of a product from all locations except the one it's being ordered from. The API does not count the Online ATP of a facility in the following scenarios:
+
+1. Inventory for the store placing the order
+2. Inventory from stores with sell online turned off
+3. Inventory for an SKU where the inventory is turned off in specific locations&#x20;
+
+To fetch the online ATP details, make a POST request to the `/getProductOnlineAtp` endpoint.
 
 ## Request
 
 ### End Point
+
 `https://<host>/api/service/getProductOnlineAtp`
 
-**Example**
-`https://demo-oms.hotwax.io/api/service/getProductOnlineAtp`
+**Example** `https://demo-oms.hotwax.io/api/service/getProductOnlineAtp`
 
 ### Header
 
@@ -50,14 +56,14 @@ Content-Type: application/json
 
 ### Parameters
 
-| Parameter Name          | Description                                                                   |
-|-------------------------|-------------------------------------------------------------------------------|
-| idType                  | Specifies the type of identifier being used (e.g., "SKU")                     |
-| idValue                 | The specific value of the SKU being referenced                                |
-| productStoreId          | Identifies the store or location within the system where the product is available |
-| conditionMap            | Contains conditions for filtering or specifying attributes related to the request |
-| externalFacilityId_value | The value of the external facility ID                                         |
-| externalFacilityId_op   | The operation or condition applied to the external facility ID (e.g., "notEqual") |
+| Parameter Name            | Description                                                                       |
+| ------------------------- | --------------------------------------------------------------------------------- |
+| idType                    | Specifies the type of identifier being used (e.g., "SKU")                         |
+| idValue                   | The specific value of the SKU being referenced                                    |
+| productStoreId            | Identifies the store or location within the system where the product is available |
+| conditionMap              | Contains conditions for filtering or specifying attributes related to the request |
+| externalFacilityId\_value | The value of the external facility ID                                             |
+| externalFacilityId\_op    | The operation or condition applied to the external facility ID (e.g., "notEqual") |
 
 ## Response
 
@@ -76,6 +82,7 @@ Content-Type: application/json
     "onlineAtp": "<Value>"
 }
 ```
+
 ### Sample
 
 ```json
@@ -86,6 +93,6 @@ Content-Type: application/json
 
 ## Parameters
 
-| Parameter Name | Description                                         |
-|----------------|-----------------------------------------------------|
+| Parameter Name | Description                                              |
+| -------------- | -------------------------------------------------------- |
 | onlineAtp      | The online available to promise inventory of the product |
