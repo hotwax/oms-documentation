@@ -1,10 +1,10 @@
 ---
 description: >-
-  Search and select multiple jobs to schedule and execute them collectively for
-  multiple shop configs.
+  Effortlessly schedule and manage bulk jobs with ease. Configure, select, and
+  streamline workflows seamlessly.
 ---
 
-# Bulk Scheduling
+# Bulk scheduling
 
 ## Bulk edit page
 
