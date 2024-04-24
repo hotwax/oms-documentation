@@ -127,6 +127,7 @@
 
 ## How-to documents
 
+* [Deploy HotWax Commerce](how-to/deployment/deployment.md)
 * [Add shipping method](how-to/add-shipping-method.md)
 * [Transfer orders](how-to/transfer-orders.md)
   * [Warehouse to store](how-to/warehouse-to-store.md)
