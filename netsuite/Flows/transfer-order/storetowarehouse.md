@@ -4,6 +4,16 @@ Stores wishing to return excess or unsold inventory to the warehouse collaborate
 
 Now, let’s look at how store to warehouse transfer orders are processed:
 
+Warehouse managers create transfer orders in NetSuite, specifying the source location as the designated store and the destination location as the warehouse. These transfer orders are automatically assigned a `Pending Fulfillment` status.
+
+These transfer orders are synchronized to HotWax Commerce so that they can be fulfilled from stores.  HotWax Commerce provides a dedicated Store Fulfillment App for store associates to fulfill transfer order items from stores. Once transfer order items are shipped from stores, their status is updated from `Approved` to `Completed` and subsequently inventory count for the shipped items is reduced in HotWax Commerce.
+
+The transfer order items shipped from the store are synchronized to NetSuite so that incoming inventory can be received in the warehouse. This step also updates transfer order status from `Pending Fulfillment` to `Pending Receipt`.
+
+When transfer order items are received in the warehouse, inventory counts for the corresponding items are automatically increased in NetSuite and the transfer order status is updated from `Pending Receipt` to `Received`.
+
+It’s crucial to note that the inventory count for transfer order items received in the warehouse is increased in HotWax Commerce on performing its daily inventory sync from NetSuite.
+
 ## Workflow
 
 <figure><img src="../../.gitbook/assets/storetowarehouse.png" alt=""><figcaption><p>Store to warehouse transfer order</p></figcaption></figure>
@@ -57,12 +67,14 @@ Approve transfer orders
 Once approved, transfer orders are automatically reflected at the source location in the Store Fulfillment App so that store associates can create shipments and ship transfer order items.
 
 * Store associates pick the transfer order items they want to fulfill from their store.
-* After picking the items, store associates pack them and proceed to create shipments for each item.
+* After picking the items, store associates pack them and proceed to create fulfillments for each item.
 * Once the shipment has been created, store associates fetch shipping labels from the carrier and the corresponding tracking codes.
 * After all items are shipped, transfer orders status is automatically updated from `Approved` to `Completed` in HotWax Commerce.
 
+Once transfer order items are fulfilled from the store, the inventory count for the corresponding items is automatically reduced in HotWax Commerce.
+
 {% hint style="info" %}
-Multiple shipments against a single transfer order can be created in the Store Fulfillment App. For example, if a transfer order contains multiple items, the store might choose to dispatch some items initially and fulfill the remaining ones later. In this event, the transfer order remains in the `Approved` status in HotWax Commerce and transitions to `Completed` status when all items within the transfer order have been fulfilled.
+Multiple fulfillments against a single transfer order can be created in the Store Fulfillment App. For example, if a transfer order contains multiple items, the store might choose to dispatch some items initially and fulfill the remaining ones later. In this event, the transfer order remains in the `Approved` status in HotWax Commerce and transitions to `Completed` status when all items within the transfer order have been fulfilled.
 {% endhint %}
 
 4. **Export Fulfilled Transfer Orders Items from HotWax Commerce:** A scheduled job in HotWax Commerce Integration Platform generates a JSON file with all the transfer order items that are in the `Completed` status and securely places the file in an SFTP location, making it accessible for NetSuite.
