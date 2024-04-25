@@ -11,6 +11,34 @@ description: Discover  the versions of HotWax Commerce OMS releases.
 2. To find details about SOLR versions, refer to the [SOLR version document](\[solr\_version\_document\_link]\(https:/docs.google.com/spreadsheets/d/1H-iEVG-hS9FTsYOf5YiUH-5KOJUcu0\_TiPG8aVYjaHU/edit/#gid=0\))
 {% endhint %}
 
+## Release - v5.9.0 (25th Apr 2024)
+
+| Information     | Value                                                                                                              |
+| --------------- | ------------------------------------------------------------------------------------------------------------------ |
+| Release Version | v5.9.0                                                                                                             |
+| Release Type    | Minor                                                                                                              |
+| Image Tag       | v5.9.0                                                                                                             |
+| Image URL       | `289432782788.dkr.ecr.us-east-1.amazonaws.com/omscoreimage:v5.9.0`                                    |
+| Diff            | [Link to diff](https://git.hotwax.co/commerce/oms/-/compare/v5.8.0...v5.9.0?from_project_id=161&straight=false)    |
+| Changelog       | [Link to changelog](https://git.hotwax.co/commerce/oms/-/blob/v5.9.0/CHANGELOG.md?ref_type=tags)                   |
+                                                                                                                                       | 
+ 
+{% tabs %}
+{% tab title="Upgrade Data" %}
+[Link to Upgrade Data](https://git.hotwax.co/commerce/oms/-/blob/v5.9.0/upgrade/v5.9.0/UpgradeData.xml)
+{% endtab %}
+
+{% tab title="Upgrade SQL" %}
+[Link to Upgrade SQL](https://git.hotwax.co/commerce/oms/-/blob/v5.9.0/upgrade/v5.9.0/UpgradeSQL.sql)
+{% endtab %}
+
+{% tab title="Upgrade Steps" %}
+[Link to Upgrade Steps](https://git.hotwax.co/commerce/oms/-/blob/v5.9.0/upgrade/v5.9.0/UpgradeSteps.md)
+{% endtab %}
+{% endtabs %}
+
+
+
 
 ## Hotfix - v5.8.1 (18th Apr 2024)
 
