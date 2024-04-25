@@ -15,6 +15,7 @@
 * [Exchanges lifecycle](business-process-models/exchanges-lifecycle/README.md)
   * [Web exchanges with Loop](business-process-models/exchanges-lifecycle/loopwebexchangeslifecycle.md)
   * [In-store exchanges with Loop](business-process-models/exchanges-lifecycle/loopposexchangeslifecycle.md)
+* [Inventory lifecycle](business-process-models/inventorylifecycle.md)
 
 ## Workflow
 
