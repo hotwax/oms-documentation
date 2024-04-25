@@ -10,19 +10,19 @@ description: >-
 
 Some of our Shopify customers use the Shopify POS App to accept in-store returns. The app lets them check all of their store's orders in a single view, whether they were placed online or in person, review its details, and perform a refund or exchange.
 
-## Customers Return in Store
+## Customers return in store
 
 Customers visit their preferred store to return their purchases. Upon arrival, they provide order details to the store associate.
 
-## Look-up Specific Order
+## Look-up specific order
 
 Store associates search the customer's order ID and once identified, they start processing the in-store return.
 
-## Returns Processed
+## Returns processed
 
 Store associates choose the item being returned, designate the restock location to facilitate inventory replenishment, and also specify the reason for the return. Finally, store associates complete the return process by processing the refunds to customers.
 
-## Returns Created in Shopify POS
+## Returns created in Shopify POS
 
 Once the refund process is completed in the Shopify POS, multiple actions take place:
 
@@ -33,13 +33,13 @@ Once the refund process is completed in the Shopify POS, multiple actions take p
 It's crucial to understand that in-store returns are instantaneous because the return request and receipt happen simultaneously, unlike web returns. Once these in-store returns are completed in Shopify POS, they are synchronized to HotWax Commerce and subsequently to NetSuite.
 {% endhint %}
 
-## POS Returns Downloaded from Shopify to HotWax Commerce
+## POS returns downloaded from Shopify to HotWax Commerce
 
 A scheduled job in HotWax Commerce downloads the return data from Shopify POS. These returns are downloaded in <mark style="color:orange;">**“Completed”**</mark> status and the payment in <mark style="color:orange;">**“Refunded”**</mark> status in HotWax Commerce.
 
 HotWax Commerce also restocks the returned inventory because of the visibility into the specific location where the inventory is received.
 
-## Synchronize POS Returns from HotWax Commerce to NetSuite
+## Synchronize POS returns from HotWax Commerce to NetSuite
 
 A scheduled job in HotWax Commerce synchronizes POS returns to NetSuite. This triggers multiple actions:
 

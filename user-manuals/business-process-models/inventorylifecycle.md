@@ -17,7 +17,7 @@ In HotWax Commerce, you'll come across three inventory-related terms: **Quantity
 * <mark style="color:orange;">**ATP**</mark><mark style="color:orange;">:</mark> Represents the physical quantity of a product at stores or warehouses after deducting the reserved inventory, that is, inventory that has been allocated to online orders from the QOH.
 * <mark style="color:orange;">**Online ATP**</mark><mark style="color:orange;">:</mark> Represents the unified inventory pool of actual sellable inventory count that is published on eCommerce platforms and can be promised to customers.
 
-### Calculating online ATP
+### Calculating Online ATP
 
 To calculate `Online ATP`, HotWax Commerce deducts inventory that is not available for sale from the ATP. This includes items such as safety stock, threshold quantities, orders in the brokering queue, and excluded facilities' ATP.
 
@@ -124,7 +124,7 @@ When a product’s QOH and ATP is updated in HotWax Commerce, its `Online ATP` i
 
 Online orders are captured on the eCommerce platform, a scheduled job in HotWax Commerce downloads these orders so that inventory can be allocated for them.
 
-### Inventory Allocated to Online Orders
+### Inventory allocated to online orders
 
 **How does HotWax Commerce reduce inventory promised to online sales?**
 
