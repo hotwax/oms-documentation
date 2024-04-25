@@ -15,7 +15,7 @@ HotWax Commerce, being as an Order Management System, finds the best location to
 
 Items that have been successfully allocated to warehouses have fulfillment status <mark style="color:orange;">**"Reserved"**</mark> in HotWax Commerce. A scheduled job in HotWax Commerce then synchronizes the allocation details of orders with the ERP or WMS leveraged to fulfill warehouse orders.
 
-For example, most of our customers use NetSuite ERP to fulfill orders from their warehouses. In this scenario, the order is already present in NetSuite with a status of "Pending Fulfillment" because HotWax Commerce synchronizes orders to NetSuite as soon as they are <mark style="color:orange;">**"Created"**</mark> in HotWax Commerce.
+For example, most of our customers use NetSuite ERP to fulfill orders from their warehouses. In this scenario, the order is already present in NetSuite with a status of <mark style="color:orange;">**"Pending Fulfillment"**</mark> because HotWax Commerce synchronizes orders to NetSuite as soon as they are <mark style="color:orange;">**"Created"**</mark> in HotWax Commerce.
 
 For orders allocated to warehouses, a scheduled job in HotWax Commerce generates a feed containing order line items with their respective fulfillment locations and synchronizes it with NetSuite. Once NetSuite’s script reads and consumes this feed, the fulfillment location details is updated on the order item.
 
