@@ -1,3 +1,3 @@
 # Table of contents
 
-* [Klaviyo](Klaviyo.md)
+* [Klaviyo](klaviyo.md)
