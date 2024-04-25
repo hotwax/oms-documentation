@@ -9,7 +9,7 @@ description: >-
 
 The inventory count of a product is regularly updated due to various factors such as customer purchases made both in-store and online, as well as the receipt of new inventory. These transactions are recorded across different systems. In the Inventory Lifecycle BPM, we've provided detailed insights into how these operational inventory transactions impact the sellable inventory count, that is, `Online ATP` of a product.
 
-Before delving into the specifics of Inventory Lifecycle BPM, it's crucial to understand HotWax Commerce's role in maintaining inventory levels and calculating inventory availability. HotWax Commerce serves as the master of inventory availability. Now, what exactly does this mean, and how does HotWax Commerce compute it? Let's see:
+Before delving into the specifics of Inventory Lifecycle BPM, it's crucial to understand HotWax Commerce's role in maintaining inventory levels and calculating inventory availability. <mark style="color:orange;">**HotWax Commerce serves as the master of inventory availability**</mark>. Now, what exactly does this mean, and how does HotWax Commerce compute it? Let's see:
 
 In HotWax Commerce, you'll come across three inventory-related terms: **Quantity On Hand (QOH), Available To Promise (ATP), and Online ATP**
 
@@ -21,10 +21,10 @@ In HotWax Commerce, you'll come across three inventory-related terms: **Quantity
 
 To calculate `Online ATP`, HotWax Commerce deducts inventory that is not available for sale from the ATP. This includes items such as safety stock, threshold quantities, orders in the brokering queue, and excluded facilities' ATP.
 
-* **Safety stock**: Inventory reserved at each store specifically for walk-in customers.
-* **Threshold**: Inventory buffer established at a company level to prevent inventory discrepancies and overselling on eCommerce platforms.
-* **Orders in the brokering queue**: eCommerce orders awaiting inventory allocation.
-* **Excluded facilities' ATP**: Inventory at fulfillment locations temporarily unable to participate in online order fulfillment due to factors like insufficient labor, natural disasters, or holidays.
+* <mark style="color:orange;">**Safety stock**</mark><mark style="color:orange;">:</mark> Inventory reserved at each store specifically for walk-in customers.
+* <mark style="color:orange;">**Threshold**</mark><mark style="color:orange;">:</mark> Inventory buffer established at a company level to prevent inventory discrepancies and overselling on eCommerce platforms.
+* <mark style="color:orange;">**Orders in the brokering queue**</mark><mark style="color:orange;">:</mark> eCommerce orders awaiting inventory allocation.
+* <mark style="color:orange;">**Excluded facilities' ATP**</mark><mark style="color:orange;">:</mark> Inventory at fulfillment locations temporarily unable to participate in online order fulfillment due to factors like insufficient labor, natural disasters, or holidays.
 
 #### How it works:
 
@@ -64,7 +64,7 @@ When new purchase orders are created in the ERP, a scheduled job in HotWax Comme
 
 When a product’s QOH and ATP is updated in HotWax Commerce, its `Online ATP` is recomputed to ensure sellable inventory for eCommerce is calculated on the latest stock levels.
 
-Learn more about purchase orders
+Learn more about [purchase orders](https://docs.hotwax.co/integration-resources/v/netsuite-integration/supported-integrations/purchase-orders)
 
 #### Transfer orders
 
@@ -140,7 +140,7 @@ This step ensures that the count for physical available inventory is accurately 
 
 All the inventory transactions happening across various systems and scenarios discussed above primarily explains how HotWax Commerce, being the master of inventory availability, consistently recalculates and updates the `Online ATP`.
 
-Other factors that impact the `Online ATP` calculation in HotWax Commerce include updating safety stock, adjusting product thresholds, and reconfiguring participating fulfillment locations.
+Other factors that impact the `Online ATP` calculation in HotWax Commerce include <mark style="color:orange;">**updating safety stock, adjusting product thresholds, and reconfiguring participating fulfillment locations**</mark>.
 
 For example, let's consider a scenario where the initial ATP for a product is 100. The safety stock for a product is set at 5 for four locations, the global threshold is 10, and one of the fulfillment locations, the Brooklyn store, is not participating in fulfillment and has an inventory count of 50 for that product.
 
