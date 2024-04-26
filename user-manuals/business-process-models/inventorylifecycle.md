@@ -9,6 +9,8 @@ description: >-
 
 The inventory count of a product is regularly updated due to various factors such as customer purchases made both in-store and online, as well as the receipt of new inventory. These transactions are recorded across different systems. In the Inventory Lifecycle BPM, we've provided detailed insights into how these operational inventory transactions impact the sellable inventory count, that is, `Online ATP` of a product.
 
+<figure><img src="../.gitbook/assets/web returns bpm.png" alt=""><figcaption><p>Inventory lifecycle business process model</p></figcaption></figure>
+
 Before delving into the specifics of Inventory Lifecycle BPM, it's crucial to understand HotWax Commerce's role in maintaining inventory levels and calculating inventory availability. <mark style="color:orange;">**HotWax Commerce serves as the master of inventory availability**</mark>. Now, what exactly does this mean, and how does HotWax Commerce compute it? Let's see:
 
 In HotWax Commerce, you'll come across three inventory-related terms: **Quantity On Hand (QOH), Available To Promise (ATP), and Online ATP**
@@ -31,8 +33,6 @@ To calculate `Online ATP`, HotWax Commerce deducts inventory that is not availab
 HotWax Commerce integrates with ERP, POS, and WMS, to create a unified pool of inventory. After synchronizing inventory totals from all systems, HotWax Commerce calculates the `Online ATP` for eCommerce by subtracting any inventory set aside as safety stock, thresholds, orders in the brokering queue, and inventory at excluded facilities from the physical ATP. This makes HotWax Commerce the ultimate authority on inventory availability and prevents overcommitting on eCommerce platforms.
 
 **Now, let’s understand the breakdown of inventory transactions involved throughout the inventory lifecycle and their recording across various systems:**
-
-<figure><img src="../.gitbook/assets/inventory bpm.png" alt=""><figcaption><p>Inventory lifecycle business process model</p></figcaption></figure>
 
 ## Inventory transactions in ERP/WMS
 
