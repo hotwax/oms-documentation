@@ -36,7 +36,7 @@
   * [Imports](data-manager/imports.md)
 
 ## Products
-* [Product Management](products.md)
+* [Product Management](products/products.md)
 
 ## Orders
 

@@ -9,15 +9,28 @@ HotWax Commerce `Find Product` page also empowers users to use multiple filter o
 2. Within the hamburger menu, find and select the `PIM` (Product Information Management) option. This will open a submenu with various product-related functionalities.
 3. From the PIM submenu, choose the `Product` option. This action will direct you to the `Find Product` page.
 
+{% embed url="https://youtu.be/4eSmmv8y6to" %}
+Video: Find Product Page
+{% endembed %}
+
 ### Search Products
 The `Search Bar` on the `Find Product` page provides users quick access to get information regarding any product. It streamlines the search process about various identifiers such as Product ID, Product name, SKU, UPC, Parent product, or any other related keywords. For a search with any keywords, all related products and variants are listed alphabetically as per the parent product name.
-(Video: Search Product)
+
+{% embed url="https://youtu.be/TppZjVwepbs" %}
+Video: Search Product Page
+{% endembed %}
 
 ### Search Products using Filters
 
 Enables users to search products, simultaneously using `single` or “multiple filters'', and allows users to choose required options from the selected filter dropdowns to refine the search results. This feature is significant for looking up the required set of products to efficiently manage and monitor the specified products and their variants by “Category”, “Features”, “Tags”, and “Price”, or group search by Preorders and Backorders.
 
 Generally, for a keyword search, all the related products appear and are displayed on the screen. To search for a specific product, users can either choose the options from available filters or enter a value set of product names and features or any other value together to excel the search. For example, if a product has different sizes and is available in multiple colors, and want to search “Checked Shirt, Size S, and Colour Black” users can put in the value in the search bar as “Check Shirt” and use `Feature` Filter to get the specific product.
+
+
+{% embed url="https://youtu.be/srkwSCZh_gA" %}
+Video: Search Product Page
+{% endembed %}
+
 
 **Filter Type** | **Description**
 --- | ---
