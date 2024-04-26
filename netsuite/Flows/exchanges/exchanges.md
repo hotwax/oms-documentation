@@ -1,3 +1,9 @@
+---
+description: >-
+  Explore how retailers handle exchanges, ensuring smooth operations across
+  Shopify, NetSuite, Loop, and HotWax Commerce.
+---
+
 # Exchanges
 
 Retailers often use different return options, such as store credit, replacement, refund, and exchange, to accommodate varying customer requests and preferences.
