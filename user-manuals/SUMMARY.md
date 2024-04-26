@@ -37,6 +37,7 @@
 
 ## Products
 * [Product Management](products/products.md)
+  * [Reports](products/reports.md)
 
 ## Orders
 
