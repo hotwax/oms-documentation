@@ -7,7 +7,7 @@ In case a payment method in Shopify and HotWax is not mapped to a payment method
 
 <details>
 
-<summary>Integration Type Mapping</summary>
+<summary>NetSuite Payment Methods Mapping</summary>
 
 ```xml
 <IntegrationTypeMapping createdStamp="2024-04-26 02:53:43.025" createdTxStamp="2024-04-26 02:53:43.025" description="Afterpay" integrationMappingId="10002" integrationTypeId="NETSUITE_PMT_MTHD" lastUpdatedStamp="2024-04-26 02:53:43.025" lastUpdatedTxStamp="2024-04-26 02:53:43.025" mappingKey="EXT_SHOP_AFTRPAY" mappingValue="21"/>
