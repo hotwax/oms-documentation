@@ -24,18 +24,31 @@ With the `Facilities App` in HotWax Commerce, retail brands can create distinct 
    * Click on the `+` icon to save the newly created inventory group.
 5. **Quick Edit Facilities:**
    * Once the facility is created, click on the number displayed on the facility card corresponding to the created group.
-   * Select `Quick Edit` to efficiently manage facilities associated with this group.
+
+<figure><img src="../.gitbook/assets/facilities.hotwax 8.png" alt=""><figcaption></figcaption></figure>
+
+* Select `Quick Edit` to efficiently manage facilities associated with this group.
+
 6. **Add Facilities:**
-   * Add all relevant facilities to the inventory group you want to include for selling inventory on the chosen channel.
-   * Facilities can also be added from the `Facility Details` page by turning on the toggle for that channel in the `sell online` card, which will automatically add that facility to the online facility group of that channel.
-7. **Navigate to Job Manager App:**
-   * Access the `Job Manager` app from the Launchpad.
+
+* Add all relevant facilities to the inventory group you want to include for selling inventory on the chosen channel.
+* Facilities can also be added from the `Facility Details` page by turning on the toggle for that channel in the `sell online` card, which will automatically add that facility to the online facility group of that channel.
+
+7. **Navigate to the Job Manager App:**
+
+* Access the `Job Manager` app from the Launchpad.
+
 8. **Select Channel:**
-   * Select the desired channel, such as Shopify or Amazon from the quick switcher located at the left bottom of the page.
+
+* Select the desired channel, such as Shopify or Amazon from the quick switcher located at the left bottom of the page.
+
 9. **Schedule Inventory Synchronization Jobs:**
-   * HotWax Commerce has [two inventory synchronization jobs](job-workflows/inventory.md) : `Hard Sync` and `Upload Recent Inventory Changes`.
-   * Schedule both jobs by specifying the Facility's internal ID in the `facilityGroupId` parameter.
-   * This ensures that the inventory for the chosen channel is updated according to the `facilities` added to the corresponding `facility group`.
+
+* HotWax Commerce has [two inventory synchronization jobs](job-workflows/inventory.md) : `Hard Sync` and `Upload Recent Inventory Changes`.
+* Schedule both jobs by specifying the Facility's internal ID in the `facilityGroupId` parameter.
+* This ensures that the inventory for the chosen channel is updated according to the `facilities` added to the corresponding `facility group`.
+
+<figure><img src="../.gitbook/assets/job-manager.hotwax.io_inventory.png" alt="" width="375"><figcaption><p>Sync Inventory</p></figcaption></figure>
 
 By following these steps, users can efficiently set up multi-channel inventory management within HotWax Commerce, enabling seamless synchronization of inventory across various online sales channels.
 
