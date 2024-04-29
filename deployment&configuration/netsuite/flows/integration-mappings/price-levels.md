@@ -17,3 +17,5 @@ The price level to be sent into NetSuite is set to `Base Price (MSRP)` by defaul
 For example, if NetSuite has a Price Level named `Online Price` adjusting the value of PRICE\_LEVEL\_NETSUITE ID from `Base Price (MSRP)` to `Online Price` ensures the integration layer syncs orders with this specific price level. NetSuite then applies the actual price based on the configurations set for the `Online Price` level.
 
 You can simply add a new price level mapping or modify an existing one by navigating to the `NetSuite Price Level` section on the NetSuite Integration page.
+
+Here's a breakdown of how to [create mappings for price levels](README.md#configuring-mappings-between-hotwax-commerce-and-netsuite)

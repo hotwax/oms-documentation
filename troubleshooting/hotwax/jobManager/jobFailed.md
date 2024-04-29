@@ -32,11 +32,13 @@ Scheduled jobs can fail due to incorrect parameter settings. If users are facing
 3. Pick any instance and open its details.
 4. In the details, find the `Custom Parameters` option and click on it to view all custom parameters.
 
+
 **Step 2: Verify Custom Parameters**
 
 1. Verify the custom parameters against the expected values for the service.
 2. You can find the expected custom values in the setup manual for the process you are troubleshooting.
 3. If the parameters are incorrect, proceed to the next step.
+
 
 **Step 3: Disable the Job**
 
@@ -47,6 +49,7 @@ Scheduled jobs can fail due to incorrect parameter settings. If users are facing
 
 1. Click on "Custom Parameters" and correct the parameters.
 2. Schedule the job again.
+
 
 **Step 5: Check Job Status**
 
@@ -60,8 +63,6 @@ By following these steps, you can address configuration data issues that may lea
 Shopify integration issues may arise if Shopify experiences downtime during the day, leading to job failures reliant on accessing its API calls. These failures can be attributed to internal errors within the Shopify platform.
 
 If you encounter any issues with Shopify integration, you can manually run the job by clicking on the `Run Now` button or wait for the next scheduled job to resolve the problem.
-
-
 
 
 ### Reason 3: Errors due to Semaphore Issues
