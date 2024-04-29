@@ -1,12 +1,12 @@
 ---
 description: >-
-  Learn how to efficiently manage and reuse data flow designs in Apache NiFi
+  Learn how to efficiently manage and reuse data flow designs in Napita
   using Flow Definitions.
 ---
 
 # Flow Definitions
 
-Flow Definitions are akin to Templates, referring to reusable data flow components and configurations for saving and reusing in various instances. They enable users to create reusable flow templates, which can be shared, imported, and customized across different NiFi instances, fostering consistency, standardization, and reuse of data flow designs.
+Flow Definitions are akin to Templates, referring to reusable data flow components and configurations for saving and reusing in various instances. They enable users to create reusable flow templates, which can be shared, imported, and customized across different Napita instances, fostering consistency, standardization, and reuse of data flow designs.
 
 Users can customize imported Flow Definitions by adjusting parameter values, modifying connections, or adding components to meet specific requirements. The existing flows can be used both in the same instance or in altogether a new instance
 
@@ -14,7 +14,7 @@ Users can customize imported Flow Definitions by adjusting parameter values, mod
 
 ### Export Flow:
 
-1. In NiFi, you can download the flow definition by right-clicking on the processor desired for other instances and selecting 'Download Flow Definition'. A JSON file containing the flow definition will be downloaded.
+1. In Napita, you can download the flow definition by right-clicking on the processor desired for other instances and selecting 'Download Flow Definition'. A JSON file containing the flow definition will be downloaded.
 2. Ensure downloading `without external services`, as their defined schemas for controller services may not suit all flow definitions. For instance, DB connection details are external services differing for clients. Hence, such details should not be saved in flow templates.
 
 ### Import Flow Definition:
@@ -78,7 +78,7 @@ To configure the file name, locate the flow file named `Update file name.` Right
 
 ### Select Database Connection Pooling Service (DBCP service)
 
-The Database Connection Pooling (DBCP) service enables efficient and reliable connections to relational databases. It essentially acts as a pool manager for database connections, allowing NiFi processors to reuse existing connections instead of creating new ones for each operation. DBCP services are not part of the parameters; therefore, Configure properties and select the DBCP service from the dropdown menu.
+The Database Connection Pooling (DBCP) service enables efficient and reliable connections to relational databases. It essentially acts as a pool manager for database connections, allowing processors to reuse existing connections instead of creating new ones for each operation. DBCP services are not part of the parameters; therefore, Configure properties and select the DBCP service from the dropdown menu.
 
 ### Set Record Writer
 

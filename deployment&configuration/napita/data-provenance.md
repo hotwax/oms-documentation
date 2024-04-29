@@ -1,6 +1,6 @@
 ---
 description: >-
-  Discover how NiFi's Data Provenance feature enables users to monitor,
+  Discover how Napita's Data Provenance feature enables users to monitor,
   troubleshoot, and optimize dataflows by tracking the journey of data objects
   in real-time.
 ---
@@ -9,12 +9,12 @@ description: >-
 
 ### View Data Provenance
 
-NiFi's Data Provenance feature is a critical tool for users involved in monitoring and troubleshooting dataflows. It provides detailed information about the journey of data objects (FlowFiles) as they move through the system, enabling users to track, analyze, and understand data transformations, routing decisions, and processing events in real-time. By offering insights into data lineage, event details, and attribute modifications, Data Provenance empowers users to ensure dataflow compliance, optimize performance, and swiftly identify and resolve issues.
+Napita's Data Provenance feature is a critical tool for users involved in monitoring and troubleshooting dataflows. It provides detailed information about the journey of data objects (FlowFiles) as they move through the system, enabling users to track, analyze, and understand data transformations, routing decisions, and processing events in real-time. By offering insights into data lineage, event details, and attribute modifications, Data Provenance empowers users to ensure dataflow compliance, optimize performance, and swiftly identify and resolve issues.
 
 #### Step-by-Step Usage Instructions:
 
 1. **Access Data Provenance Page:**
-   * Right-click on the desired dataflow within the NiFi interface.
+   * Right-click on the desired dataflow within Napita.
    * Select the `View Data Provenance` option from the menu.
 2. **Explore Data Provenance Information:**
    * In the Data Provenance dialog window, review the most recent Data Provenance information available.
@@ -28,13 +28,13 @@ NiFi's Data Provenance feature is a critical tool for users involved in monitori
 
 ### Replay FlowFiles
 
-Replaying FlowFiles within NiFi is a crucial feature that empowers users to inspect, troubleshoot, and validate data processing within their workflows. Whether it's verifying the correctness of data transformations or testing configuration changes, the ability to replay FlowFiles provides users with a powerful tool for ensuring the reliability and efficiency of their dataflow.
+Replaying FlowFiles in Napita empowers users to inspect, troubleshoot, and validate data processing within their workflows. Whether it's verifying the correctness of data transformations or testing configuration changes, the ability to replay FlowFiles provides users with a powerful tool for ensuring the reliability and efficiency of their dataflow.
 
 **Step-by-Step Usage Instructions:**
 
 **Access FlowFile Details:**
 
-1. Right-click on the desired processor within the NiFi interface.
+1. Right-click on the desired processor within Napita
 2. Select the `View Details` option from the context menu.
 
 **Navigate to Content Tab:**
@@ -49,6 +49,6 @@ Replaying FlowFiles within NiFi is a crucial feature that empowers users to insp
 
 **Replay Last Event from Processor:**
 
-1. Right-click on the desired Processor within the NiFi interface.
+1. Right-click on the desired Processor within Napita
 2. Select the `Replay last event` option from the context menu.
 3. Choose whether to replay the last event from just the Primary Node or from all nodes.

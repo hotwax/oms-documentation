@@ -1,6 +1,6 @@
 # Add Parameters
 
-Parameters within NiFi offer users the ability to configure settings on a hierarchical level, providing a streamlined approach to managing data processing workflows. When parameters are set at the parent process group level, they automatically propagate to child process groups and processors, ensuring consistency and efficiency across the entire data flow. This hierarchical setup is particularly significant for maintaining uniformity and simplifying configuration management within complex data processing environments.
+Napita Parameters offer users the ability to configure settings on a hierarchical level, providing a streamlined approach to managing data processing workflows. When parameters are set at the parent process group level, they automatically propagate to child process groups and processors, ensuring consistency and efficiency across the entire data flow. This hierarchical setup is particularly significant for maintaining uniformity and simplifying configuration management within complex data processing environments.
 
 The hierarchical nature of parameter settings enables users to define configurations at parent process group levels reducing the need for redundant configurations across multiple components. By setting parameters at the parent process group level, users can ensure consistency in settings such as default time zone, SFTP configurations, and database configurations throughout the entire data flow.
 
