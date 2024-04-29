@@ -25,16 +25,16 @@ Select the ellipsis icon (3 dots) while in editing mode to view the following op
 * **Set auto-refresh interval**
   * Select to specify an automatic refresh rate for the dashboard. Options include seconds (10 or 30), minutes (1, 5, or 30), or hours (1, 6, 12, or 24). Note that this will be only applied to the current session.
 * **Setting a permanent auto-refresh**
-  * If you would like to set a permanent auto-refresh instead, you would need to modify the JSON metadata in the Dashboard Properties. For that, set a value (in seconds) to the "refresh\_frequency" parameter (default value is 0). For example, to set a 1-hour refresh-rate, set the parameter value as 3600.
+  * If you would like to set a permanent auto-refresh instead, you would need to modify the JSON metadata in the Dashboard Properties. For that, set a value (in seconds) to the "refresh\_frequency" parameter (default value is 0). For example, to set a 1-hour refresh rate, set the parameter value as 3600.
 
 ## View Mode
 
 * **Refresh dashboard**
   * Select to refresh the chart's data. The time duration since the last cache is also provided.
 * **Enter fullscreen**
-  * View the chart in full screen mode (i.e., just the chart occupies the entire screen).
-* **Download as image**
-  * Downloads an image of the entire chart in JPEG format.
+  * View the chart in full-screen mode (i.e., just the chart occupies the entire screen).
+* **Download as an image, CSV, or Excel**
+  * Download the entire chart in jpeg, CSV, or xlsx format.
 * **Share**
   * **Copy permalink to clipboard:** Copies a shareable chart link to the system's clipboard.
   * **Share permalink by email:** Launches the system's default email client and composes a new message featuring your chart URL.
