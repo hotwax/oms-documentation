@@ -10,15 +10,15 @@ Clients have access to multiple predefined dashboards to review their performanc
 
 For internal users, we generally provide two types of permissions:
 
-- **Basic Business Analyst Permission**: Grants access to create their chart dashboards and view any existing ones. However, users with this permission do not have default access to the SQL lab, nor can they view any draft dashboards or charts, nor edit other owners' charts. If we add SQL permission to the Basic Business Analyst permission, users gain access to the SQL lab that allows them to save queries and view query history.
+- **Basic Business Analyst Permission**: Grants access to create their chart dashboards and view any existing ones. However, users with this permission do not have default access to the SQL lab, nor can they view any draft dashboards or charts, nor edit other owners' charts. If we add SQL permission to the [**Basic Business Analyst permission**](./#Here-is-tthe-list-of-Permission), users gain access to the SQL lab that allows them to save queries and view query history.
 
 - **SuperBusinessAnalyst Permission**: Grants access to more advanced users familiar with dashboard reporting. Users with this permission can access the SQL lab by default but cannot edit dashboards or reports owned by others without explicit permission. If they wish to edit another user's chart, they must request the admin or creator to include them in the owners' section of the chart/dashboard.
 
-    - **Note**: SuperBusinessAnalyst users can request Admin Permission, which grants them access to all permissions except for creating and managing users and their roles. This permission allows them to edit dashboards or reports owned by others.
+    - **Note**: [**SuperBusinessAnalyst**]((./#Here-is-tthe-list-of-Permission)) users can request [**Admin**](./#Here-is-tthe-list-of-Permission) Permission, which grants them access to all permissions except for creating and managing users and their roles. This permission allows them to edit dashboards or reports owned by others.
 
 ## 3. Admin-Main Users
 
-Admin users in Tathya hold the highest level of access, responsible for system management and administration. Admin users have all the **SuperBusinessAnalyst** permissions along with access to view and edit charts owned by others. Furthermore, they have authority over various aspects, including managing user registrations, handling access requests, and organizing data through tagging for efficient categorization. Additionally, admins oversee role management, which involves editing, deleting, adding, and listing dashboards, charts, and reports of other users and their draft dashboards.
+[**Admin**](./#Here-is-tthe-list-of-Permission) users in Tathya hold the highest level of access, responsible for system management and administration. Admin users have all the **SuperBusinessAnalyst** permissions along with access to view and edit charts owned by others. Furthermore, they have authority over various aspects, including managing user registrations, handling access requests, and organizing data through tagging for efficient categorization. Additionally, admins oversee role management, which involves editing, deleting, adding, and listing dashboards, charts, and reports of other users and their draft dashboards.
 
 #### Here is the list of Permission
 
