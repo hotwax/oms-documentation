@@ -18,6 +18,7 @@
   * [Price Level](flows/sales-orders/price-level.md)
   * [Promotions and Discounts](flows/sales-orders/promotions-and-discounts.md)
   * [Shipping Methods](flows/sales-orders/shipping-methods.md)
+* [Brokering](flows/brokering/facilities.md)
 * [Returns](flows/returns/README.md)
   * [Happiness Guarenteed](flows/returns/happiness-guaranteed.md)
 * [Transfer Orders](flows/transfer-orders/README.md)
