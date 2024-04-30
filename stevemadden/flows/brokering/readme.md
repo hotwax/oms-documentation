@@ -1,3 +1,4 @@
+# Brokering Jobs
 
 There are several types of brokering jobs operating within SM-USA production. These jobs broker specific orders to facilities with available inventory. If inventory is unavailable, the order item becomes unfulfillable, and an auto cancellation date is set on the items based on the auto-cancel days defined in ProductStore.DaysToCancelNonPay.
 
