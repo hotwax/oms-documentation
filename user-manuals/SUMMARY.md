@@ -35,6 +35,10 @@
   * [Configurations](data-manager/configurations.md)
   * [Imports](data-manager/imports.md)
 
+## Products
+* [Product Management](products/products.md)
+  * [Reports](products/reports.md)
+
 ## Orders
 
 * [Order management](orders/order-management/README.md)
@@ -127,8 +131,10 @@
 
 ## How-to documents
 
+* [Deploy HotWax Commerce](how-to/deployment/deployment.md)
 * [Add shipping method](how-to/add-shipping-method.md)
 * [Transfer orders](how-to/transfer-orders.md)
   * [Warehouse to store](how-to/warehouse-to-store.md)
   * [Store to Warehouse](how-to/store-to-warehouse.md)
   * [Store to store](how-to/store-to-store.md)
+* [Cancel Orders](how-to/order-cancellations.md)

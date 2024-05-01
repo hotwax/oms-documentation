@@ -18,7 +18,6 @@
 ## Product Store
 * [Configure Product Store](initial-setup/product-store/README.md)
 * [Add More Product Stores](initial-setup/product-store/add-more-product-stores.md)
-* [Order Tracking Notification](initial-setup/product-store/order-tracking-notifications.md)
 
 ## Additional Resources
 * [Update OMS Version](additional-resources/updateOmsVersion.md)

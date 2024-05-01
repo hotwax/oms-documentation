@@ -1,18 +1,18 @@
 ---
 description: >-
-  Discover how to effectively manage Apache NiFi Processors' operations using
+  Discover how to effectively manage Napita's Processors' operations using
   the Scheduling tab, influencing data flow within the platform.
 ---
 
 # Schedule Processors
 
-The Scheduling tab within the Processor Configuration dialog in NiFi offers crucial settings for managing how a Processor operates, impacting the flow of data within the platform. Let's break down its significance and provide step-by-step instructions on how users can utilize this feature effectively.
+The Scheduling tab within the Processor Configuration dialog in Napita offers crucial settings for managing how a Processor operates, impacting the flow of data within the platform. Let's break down its significance and provide step-by-step instructions on how users can utilize this feature effectively.
 
 ### Step-by-Step Usage Instructions:
 
 **Accessing the Scheduling Tab:**
 
-1. Right-click on the Processor within the NiFi interface.
+1. Right-click on the Processor within Napita.
 2. Select the `Configure` option from the context menu. Alternatively, double-click on the Processor.
 3. Navigate to the `Scheduling` tab within the Configuration dialog.
 
@@ -20,7 +20,7 @@ Step-by-Step Usage Instructions:
 
 **Accessing the Scheduling Tab:**
 
-* Right-click on the Processor within the NiFi interface.
+* Right-click on the Processor within Napita.
 * Select the `Configure` option from the context menu. Alternatively, double-click on the Processor.
 * Navigate to the `Scheduling` tab within the Configuration dialog.
 
