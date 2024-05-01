@@ -84,7 +84,7 @@ Once transfer order items are fulfilled from the store, the inventory count for 
 * As discussed in `warehouse to store` transfer orders lifecycle, for store to store transfer orders, the receiving process in stores remains consistent. A scheduled SuiteScript in NetSuite exports the feed of item fulfillment records in <mark style="color:orange;">**“Shipped”**</mark> status. After that, a scheduled job in HotWax Commerce reads this feed and creates inbound shipments at the destination facility.
 *   Inbound shipments that have been created are automatically reflected in the `Inventory Receiving App`, allowing store associates to receive them in store.
 
-    For example, if a transfer order specifies the Times Square Store as the source and the Brooklyn Store as the destination, the items from this transfer order will be automatically reflected in the Inventory Receiving App at the Brooklyn Store.
+    For example, if a transfer order specifies the Times Square Store as the source and the Brooklyn Store as the destination, the items from this transfer order will be automatically reflected in the `Inventory Receiving App` at the Brooklyn Store.
 * Store associates scan the transfer order items and start receiving inventory. Upon receiving shipments, item receipt records are generated in HotWax Commerce and subsequently, the inventory counts for the items received in the store are increased.
 
 ### 6. Generate and export item receipt feed from HotWax Commerce
@@ -112,3 +112,7 @@ Similar to the `store to store` transfer order lifecycle we discussed above, <ma
 
 * Finally, warehouse managers manually initiate the receiving process in NetSuite for the store transferred inventory upon its arrival at the warehouse.
 * After the receiving process is completed, the transfer order status is automatically updated from <mark style="color:orange;">**“Pending Receipt”**</mark> to <mark style="color:orange;">**“Received”**</mark>, indicating that all transfer order items have been successfully received at the warehouse. Additionally, the inventory count for the newly received inventory is updated in NetSuite.
+
+{% hint style="success" %}
+It’s crucial to note that inventory counts for the items received in the warehouse are increased in HotWax Commerce on performing daily inventory sync with NetSuite.
+{% endhint %}
