@@ -1,10 +1,10 @@
 ---
 description: >-
-  This document provides a detailed, sequential walkthrough on deploying a fresh instance of HotWax Commerce.
+  This document provides a detailed, sequential walkthrough on deploying a fresh
+  instance of HotWax Commerce.
 ---
 
-
-# How to Deploy HotWax Commerce for Your Company
+# Deploy HotWax Commerce
 
 This document offers a detailed guide for deploying HotWax Commerce tailored to meet the specific requirements of enterprise retailers
 
@@ -36,7 +36,7 @@ Facilities are physical locations such as a warehouse, distribution center, or s
 
 In Hotwax commerce facility groups are used to define the scope and functionality of the facility for omnichannel order management. For instance, including a facility in the Online Facility group indicates that this facility will be available to sell its inventory to online channels. Facilities in the Pickup group will be available for BOPIS and Facilities under the Brokering subtype will be the facilities where orders can be brokered. You can learn how to add facilities and [manage facility groups](facilities/manage-groups.md) through our detailed document.
 
-## Configure System Property Data 
+## Configure System Property Data
 
 HotWax Commerce has default settings tailored for US retailers, For non-US retailers adjustments are needed to align with their business location. The System Property data encompasses a range of configurations that influence the fundamental settings governing how your instance operates. Ensuring accuracy in these configurations is essential. Read our document on [System Property Data](https://docs.hotwax.co/deployment-and-configurations/initial-setup/setsystempropertys) to learn how you can configure system property data such as currency, country, and shipment Weight Units.
 
@@ -80,8 +80,7 @@ HotWax Commerce determines the "Available to Promise (ATP)" or the amount of inv
 
 ## Start Brokering Runs
 
-Order routing allows the OMS to determine the best location to fulfill an order according to a set of criteria. The criteria are with respect to selecting which order (part of order) to broker and the criteria to find inventory.
-Merchants use configurable routing to create order fulfillment strategies best suited for their business. User configurable routing rules allow merchants to optimize fulfillment cost, inventory, and workload based on arbitrary order and fulfillment location parameters such as order total, SKUs, product category, facility type, operating hours, or fulfillment capacity. Read our comprehensive document to learn how to [schedule brokering runs](https://docs.hotwax.co/user-guides/orders/brokering) for order routing.
+Order routing allows the OMS to determine the best location to fulfill an order according to a set of criteria. The criteria are with respect to selecting which order (part of order) to broker and the criteria to find inventory. Merchants use configurable routing to create order fulfillment strategies best suited for their business. User configurable routing rules allow merchants to optimize fulfillment cost, inventory, and workload based on arbitrary order and fulfillment location parameters such as order total, SKUs, product category, facility type, operating hours, or fulfillment capacity. Read our comprehensive document to learn how to [schedule brokering runs](https://docs.hotwax.co/user-guides/orders/brokering) for order routing.
 
 ## Create Users for Fulfillment
 
@@ -89,62 +88,138 @@ HotWax Commerce's Users application allows businesses to create and manage users
 
 ## Checklist
 
-  - [ ] **Launch Machine**
+* **Launch Machine**
+* **Initial Login**
 
-- **Initial Login**
-  - [ ] Log in to the instance.
-  - [ ] Reset the default password.
-  - [ ] Check Sidebar and EXIM screen for correct loading.
+<!---->
 
-- **Add DBIC**
-  - [ ] Configure DBIC for specific countries relevant to the instance.
+* [ ] Log in to the instance.
+* [ ] Reset the default password.
+* [ ] Check Sidebar and EXIM screen for correct loading.
 
-- **Add Product Store**
-  - [ ] Configure default product store as per requirement.
-  - [ ] Create new product stores for multiple brands if needed.
+<!---->
 
-- **Load Facility**
-  - [ ] Utilize facilities CSV or Facility management application for efficient bulk creation.
+* **Add DBIC**
 
-- **Create Facility Groups**
-  - [ ] Define facility groups for omnichannel order management.
-  - [ ] Assign facilities to appropriate groups based on functionality.
+<!---->
 
-- **Configure System Property Data**
-  - [ ] Adjust system property data for non-US retailers.
-  - [ ] Configure settings such as currency, country, and shipment weight units.
+* [ ] Configure DBIC for specific countries relevant to the instance.
 
-- **Configure SFTP**
-  - [ ] Set up SFTP for secure data transfer within the system.
+<!---->
 
-- **Add Solr Indexes**
-  - [ ] Configure Solr indexing for efficient data retrieval and search operations.
+* **Add Product Store**
 
-- **Add Shipping Gateways**
-  - [ ] Configure shipping gateways for seamless integration with third-party logistics companies.
-  - [ ] Add shipping boxes for accurate shipping cost calculation and label generation.
+<!---->
 
-  - [ ] **Install HotWax Commerce integration app on Shopify store**
+* [ ] Configure default product store as per requirement.
+* [ ] Create new product stores for multiple brands if needed.
 
-- **Configure Mappings between HotWax Commerce and Shopify**
-  - [ ] Manage integration mappings between HotWax Commerce and Shopify Shop.
-  - [ ] Ensure correct mappings for locations, payment methods, shipping methods, product types, and price levels.
+<!---->
 
-- **Sync Products**
-  - [ ] Import products created in Shopify to HotWax Commerce.
+* **Load Facility**
 
-- **Sync Orders**
-  - [ ] Initiate initial order sync process between HotWax Commerce and Shopify.
+<!---->
 
-- **Import Inventory**
-  - [ ] Sync inventory from various technology systems or manually import through CSV.
+* [ ] Utilize facilities CSV or Facility management application for efficient bulk creation.
 
-- **Sync Inventory to Shopify**
-  - [ ] Upload inventory from HotWax Commerce to Shopify.
+<!---->
 
-  - [ ] **Schedule brokering runs for order routing.**
+* **Create Facility Groups**
 
-- **Create users for Fulfillment**
-  - [ ] Set up user accounts for fulfillment operations.
-  - [ ] Create Pickers for picking order items
+<!---->
 
+* [ ] Define facility groups for omnichannel order management.
+* [ ] Assign facilities to appropriate groups based on functionality.
+
+<!---->
+
+* **Configure System Property Data**
+
+<!---->
+
+* [ ] Adjust system property data for non-US retailers.
+* [ ] Configure settings such as currency, country, and shipment weight units.
+
+<!---->
+
+* **Configure SFTP**
+
+<!---->
+
+* [ ] Set up SFTP for secure data transfer within the system.
+
+<!---->
+
+* **Add Solr Indexes**
+
+<!---->
+
+* [ ] Configure Solr indexing for efficient data retrieval and search operations.
+
+<!---->
+
+* **Add Shipping Gateways**
+
+<!---->
+
+* [ ] Configure shipping gateways for seamless integration with third-party logistics companies.
+* [ ] Add shipping boxes for accurate shipping cost calculation and label generation.
+* [ ] Install HotWax Commerce integration app on Shopify store
+
+<!---->
+
+* **Configure Mappings between HotWax Commerce and Shopify**
+
+<!---->
+
+* [ ] Manage integration mappings between HotWax Commerce and Shopify Shop.
+* [ ] Ensure correct mappings for locations, payment methods, shipping methods, product types, and price levels.
+
+<!---->
+
+* **Sync Products**
+
+<!---->
+
+* [ ] Import products created in Shopify to HotWax Commerce.
+
+<!---->
+
+* **Sync Orders**
+
+<!---->
+
+* [ ] Initiate initial order sync process between HotWax Commerce and Shopify.
+
+<!---->
+
+* **Import Inventory**
+
+<!---->
+
+* [ ] Sync inventory from various technology systems or manually import through CSV.
+
+<!---->
+
+* **Sync Inventory to Shopify**
+
+<!---->
+
+* [ ] Upload inventory from HotWax Commerce to Shopify.
+
+<!---->
+
+* **Schedule Brokering**&#x20;
+
+<!---->
+
+* [ ] Schedule brokering runs for order routing.
+
+<!---->
+
+* **Create users for Fulfillment**
+
+<!---->
+
+* [ ] Set up user accounts for fulfillment operations.
+* [ ] Create Pickers for picking order items
