@@ -62,12 +62,13 @@ A scheduled job in HotWax Commerce identifies transfer orders that have a <mark 
 
 **What happens when transfer orders are approved?**
 
+* Upon approval, HotWax Commerce  reduces the Available to Promise inventory for the transfer order items that will be fulfilled from the store.
 * Approved transfer orders are automatically reflected in the `Store Fulfillment App`.
 * Store associates pick the transfer order items they want to fulfill from their store. After picking the items, store associates pack them and proceed to create fulfillments for each item.
 * Once the fulfillment has been created, store associates fetch shipping labels from the carrier and the corresponding tracking codes.
 * After all items are shipped, transfer orders status is automatically updated from <mark style="color:orange;">**“Approved”**</mark> to <mark style="color:orange;">**“Completed”**</mark> in HotWax Commerce.
 
-Once transfer order items are fulfilled from the store, the inventory count for the corresponding items is automatically reduced in HotWax Commerce.
+Once transfer order items are fulfilled from the store, the QOH for the corresponding items is automatically reduced in HotWax Commerce.
 
 ### 3. Generate and export item fulfilled feed from HotWax Commerce
 
