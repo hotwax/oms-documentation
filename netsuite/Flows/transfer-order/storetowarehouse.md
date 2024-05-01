@@ -6,7 +6,7 @@ Now, let’s look at how store to warehouse transfer orders are processed:
 
 Warehouse managers create transfer orders in NetSuite, specifying the source location as the designated store and the destination location as the warehouse. These transfer orders are automatically assigned a `Pending Fulfillment` status.
 
-These transfer orders are synchronized to HotWax Commerce in the default 'Created' status. HotWax Commerce provides a dedicated Store Fulfillment App for store associates to fulfill transfer order items from stores. Once transfer order items are shipped from stores, their status is updated from `Approved` to `Completed` and subsequently inventory count for the shipped items is reduced in HotWax Commerce.
+These transfer orders are synchronized to HotWax Commerce in the default `Created` status. HotWax Commerce provides a dedicated Store Fulfillment App for store associates to fulfill transfer order items from stores. Once transfer order items are shipped from stores, their status is updated from `Approved` to `Completed` and subsequently inventory count for the shipped items is reduced in HotWax Commerce.
 
 The transfer order items shipped from the store are synchronized to NetSuite so that incoming inventory can be received in the warehouse. This step also updates transfer order status from `Pending Fulfillment` to `Pending Receipt`.
 
