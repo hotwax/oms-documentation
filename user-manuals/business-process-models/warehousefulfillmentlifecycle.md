@@ -15,7 +15,7 @@ HotWax Commerce, being as an Order Management System, finds the best location to
 
 Items that have been successfully allocated to warehouses have fulfillment status <mark style="color:orange;">**"Reserved"**</mark> in HotWax Commerce. A scheduled job in HotWax Commerce then synchronizes the allocation details of orders with the ERP or WMS leveraged to fulfill warehouse orders.
 
-For example, most of our customers use NetSuite ERP to fulfill orders from their warehouses. In this scenario, the order is already present in NetSuite with a status of <mark style="color:orange;">**"Pending Fulfillment"**</mark> because HotWax Commerce synchronizes orders to NetSuite as soon as they are <mark style="color:orange;">**"Created"**</mark> in HotWax Commerce.
+Most of our customers use NetSuite ERP to fulfill orders from their warehouses. In this scenario, the order is already present in NetSuite with a status of <mark style="color:orange;">**"Pending Fulfillment"**</mark> because HotWax Commerce synchronizes orders to NetSuite as soon as they are <mark style="color:orange;">**"Created"**</mark> in HotWax Commerce.
 
 For orders allocated to warehouses, a scheduled job in HotWax Commerce generates a feed containing order line items with their respective fulfillment locations and synchronizes it with NetSuite. Once NetSuite’s script reads and consumes this feed, the fulfillment location details is updated on the order item.
 
@@ -26,7 +26,7 @@ Learn more about [order synchronization from HotWax Commerce to NetSuite](https:
 When the warehouse fulfillment team begins the fulfillment process for an order item, an item fulfillment record is automatically generated in NetSuite. Upon picking, packing, and shipping the item, multiple actions take place in NetSuite:
 
 * The item fulfillment record is marked as <mark style="color:orange;">**"Shipped"**</mark>.
-* The initial order status is updated from <mark style="color:orange;">**"Pending Fulfillment"**</mark> to <mark style="color:orange;">**"Pending Billing"**</mark>.
+* The initial order status <mark style="color:orange;">**"Pending Fulfillment"** </mark> is updated to <mark style="color:orange;">**"Pending Billing"**</mark>.
 * Finally, once the invoice is auto generated, the order status is updated from <mark style="color:orange;">**“Pending Billing”**</mark> to <mark style="color:orange;">**“Billed”**</mark>. This marks the completion of the order lifecycle in NetSuite.
 
 ### Fulfillment failure
