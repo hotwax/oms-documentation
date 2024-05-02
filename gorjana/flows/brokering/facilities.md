@@ -53,8 +53,7 @@
 **Enumeration**
 
 ```xml
-<Enumeration description="Netsuite Department Code" enumId="ORDR_ORGN_DPT"
-             enumCode="ORDER_ORIGIN_DEPARTMENT" enumTypeId="FACILITY_IDENTITY" />
+<Enumeration description="Netsuite Department Code" enumId="ORDR_ORGN_DPT" enumCode="ORDER_ORIGIN_DEPARTMENT" enumTypeId="FACILITY_IDENTITY" />
 ```
 
 **Facility Identification**
