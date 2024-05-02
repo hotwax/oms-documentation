@@ -28,6 +28,7 @@
   * [Bundles](Flows/SalesOrder/Bundles.md)
   * [Shipping Methods](Flows/SalesOrder/ShippingMethods.md)
   * [POS Orders](Flows/SalesOrder/posOrders.md)
+  * [Send Sale Orders](Flows/SalesOrder/sendsaleorders.md)
   * [Reports](Flows/SalesOrder/reports.md)
 * [Returns](Flows/returns/returns.md)
 * [Exchanges](Flows/exchanges/exchanges.md) 
