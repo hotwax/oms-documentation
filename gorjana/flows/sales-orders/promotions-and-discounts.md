@@ -9,8 +9,12 @@ While "cart level" discounts appear to be discounting the cart total and so shou
 
 To maintain data integrity and traceability down stream, all discounts coming from Shopify will be pushed to NetSuite as item level discounts using the generic discount item created in NetSuite.
 
-Internal ID of the NetSuite discount item:
+NetSuite Integration data for Internal ID of the NetSuite discount item:
 
 ```
-TBD
+<IntegrationTypeMapping integrationTypeId="NETSUITE_DISC_MTHD" mappingKey="SHOPIFY_DISC"
+    mappingValue="SHOPIFY DISCOUNT" />  
+
+<IntegrationTypeMapping integrationTypeId="NETSUITE_DISC_MTHD" mappingKey="SHOPIFY_ITEM_DISC"
+    mappingValue="12637" />  
 ```
