@@ -12,9 +12,7 @@ To maintain data integrity and traceability down stream, all discounts coming fr
 NetSuite Integration data for Internal ID of the NetSuite discount item:
 
 ```
-<IntegrationTypeMapping integrationTypeId="NETSUITE_DISC_MTHD" mappingKey="SHOPIFY_DISC"
-    mappingValue="SHOPIFY DISCOUNT" />  
+<IntegrationTypeMapping integrationTypeId="NETSUITE_DISC_MTHD" mappingKey="SHOPIFY_DISC" mappingValue="SHOPIFY DISCOUNT" />  
 
-<IntegrationTypeMapping integrationTypeId="NETSUITE_DISC_MTHD" mappingKey="SHOPIFY_ITEM_DISC"
-    mappingValue="12637" />  
+<IntegrationTypeMapping integrationTypeId="NETSUITE_DISC_MTHD" mappingKey="SHOPIFY_ITEM_DISC" mappingValue="12637" />  
 ```
