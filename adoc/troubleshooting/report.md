@@ -1,5 +1,12 @@
+---
+description: >-
+   Duplicate order report for handling order duplications in OMS
+---
+
+
+
 # Duplicate Order Report Overview
-# Introduction
+
 In cases where HotWax Commerce imports an order twice due to synchronization error, each order is processed independently, leading to separate fulfillments for what was originally a single order. This duplication often results in inventory discrepancies as it generates two reserved items instead of one. To address this issue and enhance visibility concerning duplicated orders within the OMS, we've introduced the Duplicate Order Report.
 
 ### Report Structure
@@ -14,25 +21,15 @@ The Duplicate Order Report comprises the following sections
 | Other Order Status       | Specifies the status of the other duplicate order.                                                                         |
 | Recent Order Date        | Reflects the date of the most recent order among the duplicates.                                                           |
 
-## Prioritization Logic:
-Orders for fulfillment are prioritized based on the attributes associated with each duplicate order. Orders with a greater number of attributes receive priority. Additionally, completed duplicate orders are given top priority. The preferred order ID for fulfillment will be in the "Preferred Order ID" column. The other duplicated orders, which are less preferred for fulfillment, will be listed in the "Other Order ID" field, which we can cancel.
 
 
-**Example:** For instance, if one duplicate order includes attributes like customer ID and municipio, it will be designated as the preferred order due to its higher significance. Conversely, the other duplicate order, lacking these attributes, is considered less preferred and need to be cancelled.
-
-## Handling Duplicate Orders:
 
 
-User can manages duplicate orders through the following steps:
+<details>
 
-1. **Moving Less Preferred Orders:** Items from less preferred orders should be transferred to the general ops parking, preventing further processing.
-2. **Changing Order Status:** The status of less preferred duplicate orders should be changed to "cancel," effectively cancelling one of the duplicates.
-
-> [!NOTE]
-Duplicate orders with a completed status are excluded from the report as no further action is required. Similarly, orders where one duplicate is already cancelled are also omitted. Orders are included in the report based on their fulfillment status. If order items are moved to general ops parking but the order status is not marked as cancelled, they will appear in the report.
+**<summary> SQL query to generate Duplicate Order Report</summary>**
 
 ```sql
-
 SELECT order_name AS order_name,
        prefered_order_id AS prefered_order_id,
        prefered_order_status AS prefered_order_status,
@@ -68,3 +65,34 @@ FROM
    having count(*)>1
    and sum(temp.status_id = "ORDER_COMPLETED") <> count(*)) AS virtual_table
 LIMIT 1000;
+```
+
+
+
+</details>
+
+
+## Query Logic
+
+The SQL query selects data from the `order_header` table. It joins the `order_attribute` table to retrieve additional attributes like `customerId` and `municipio` for each order.
+
+### Calculation of Weight
+
+A weight is calculated for each order based on the presence of `customerId`, `municipio`, and the status of the order (`ORDER_COMPLETED`). 
+If `customerId` or `municipio` is not null, it contributes 1 to the weight. If the order status is `ORDER_COMPLETED`, it contributes 10. This weighting scheme prioritizes completed orders and those with customer information.
+
+### Aggregation
+
+The innermost subquery groups the data by `order_name` and calculates aggregates for each group.
+For each group, it selects the order with the highest weight as the preferred order. This is done using `group_concat` to concatenate order IDs and statuses sorted by weight and order ID, and then `substring_index` to select the first (highest weighted) order ID and status.
+
+### Selection of Preferred Order
+
+The preferred order is the one with the highest weight within each group `order_name`. This order is selected based on its highest weight, prioritizing completed orders and those with customer information.
+The `prefered_order_id` and `prefered_order_status` columns store the ID and status of the preferred order that needs to be fulfilled.
+
+All other orders are considered secondary and are analyzed in conjunction with the preferred orders. These are the orders that have less weight as compared to the preferred order because they have fewer attributes and should be cancelled.
+
+### Handling of Duplicate Order
+
+Less preferred orders need to be manually cancelled and the order items should be transferred to the general ops parking, preventing further processing. If order items are transferred to general ops parking without the order being marked as cancelled, they will still be included in the report.
