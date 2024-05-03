@@ -20,6 +20,15 @@ When variances are tracked using variance locations in NetSuite, variances logge
 
 HotWax Commerce OMS supports logging variances with actual enumerated reasons that can be chosen by users. Each variance reason is mapped to a NetSuite Facility ID in the custom integration mapping table. When recent variances are pushed to NetSuite, the integration layer prepares an Inventory Transfer CSV for NetSuite where the `from facility` is where the variance was actually logged and the variance reason ID is used to find the `to facility` from the integration integration mapping table.
 
+Krewe only allows inventory variances for stolen, damaged, and found reasons to synced to Netsuite. Therefore, HotWax Commerce has only mapped these three variances with Netsuite. As a result, variances will only be logged if the user selects any of these three reasons from the product detail page or the cycle count app. Any variances with other reasons won't be synced with Netsuite.
+
+| Variance Reason ID | Description |
+| ------------------ | ----------- |
+| VAR_STOLEN         | Stolen      |
+| VAR_DAMAGED        | Damaged     |
+| VAR_FOUND          | Found       |
+
+
 ## Reports
 
 ### Pending Cycle Count
