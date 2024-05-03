@@ -51,5 +51,5 @@ Because the customer already paid Gorjana when the bought the gift card, when th
 Gift Card Payment Item NetSuite Product ID:
 
 ```
-TBD
+<IntegrationTypeMapping integrationTypeId="NETSUITE_GIFT_CARD" mappingKey="GIFT_CARD" mappingValue="22677" description="Gift Card"/>
 ```
