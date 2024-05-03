@@ -5,6 +5,5 @@ Gorjana uses custom price levels on all order items to ensure that the order ite
 NetSuite mapping for Price level:
 
 ```
-<IntegrationTypeMapping integrationTypeId="NETSUITE_PRICE_LEVEL" mappingKey="PRICE_LEVEL"
-    mappingValue="Custom" />
+<IntegrationTypeMapping integrationTypeId="NETSUITE_PRICE_LEVEL" mappingKey="PRICE_LEVEL" mappingValue="Custom" description="Custom Price Level"/>
 ```
