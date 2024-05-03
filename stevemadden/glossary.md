@@ -1,3 +1,9 @@
+---
+description: Explore the glossary of terms used in ADOC's implementation.
+---
+
+# Glossary
+
 | System                   | Function                                                          |
 |--------------------------|-------------------------------------------------------------------|
 | ORSI or Infor M3         | ERP, Inventory master for HotWax                                  |
