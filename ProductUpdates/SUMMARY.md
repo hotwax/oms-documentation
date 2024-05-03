@@ -1,6 +1,8 @@
 # Table of contents
 
 * [Product Releases- Overview](README.md)
+* [April'24](april24/README.md)
+  * [Configure Shopify BOPIS/Pre-order Scripts](april24/configure-shopify-bopis-pre-order-scripts.md)
 * [March'24](march24/README.md)
   * [Customize Rejection Reasons](march24/customize-rejection-reasons.md)
   * [Fulfill Transfer orders](march24/fulfill-transfer-orders.md)
