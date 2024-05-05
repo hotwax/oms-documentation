@@ -14,7 +14,11 @@ After physical gift cards are allocated, HotWax Commerce begins syncing them to 
 
 As part of the fulfillment process, store associates assign a unique serial number to each gift card and load the corresponding value onto it. This ensures that when customers receive their orders, they can easily redeem the value by using the serial number provided on the gift card.
 
+Once the gift card order is fulfilled in the Store Fulfillment App, it is automatically marked as "Completed" in HotWax Commerce.
+
 The fulfillment update for gift card orders, along with tracking details, is synchronized to Shopify using the `Completed Orders` job.
+
+Learn more about [order fulfillment updates from HotWax Commerce to Shopify](https://docs.hotwax.co/integration-resources-1/how-is-the-order-fulfillment-status-updated-to-shopify-from-hotwax-commerce)
 
 {% hint style="info" %}
 It’s crucial to note that the gift cards are not functional until they are activated on Shopify. The activation process in Shopify is a necessary step to ensure that the gift cards are redeemable and fully functional upon receipt by customers.
@@ -38,6 +42,8 @@ Learn more about fulfillment in NetSuite
 
 Similar to how store associates assign serial numbers and load values onto gift cards in-store, warehouse fulfillment teams also undertake these tasks to prepare gift card orders for shipment.
 
-HotWax Commerce Integration Platform retrieves gift card items, their assigned serial numbers, and corresponding values from NetSuite and generates a JSON file. Subsequently, it calls the Shopify API to request activation for the gift card. 
+HotWax Commerce Integration Platform retrieves gift card items, their assigned serial numbers, and corresponding values from NetSuite and generates a JSON file. Subsequently, it calls the Shopify API to request activation for the gift card.
 
 Once the gift card is activated on Shopify, customers can conveniently redeem it.
+
+The fulfillment update for gift card orders, along with tracking details, is synchronized to Shopify using the `Completed Orders` job.
