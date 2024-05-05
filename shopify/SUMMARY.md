@@ -15,7 +15,8 @@
   * [Updating Product Details](how-are-products-downloaded-from-shopify-to-hotwax-commerce/updating-product-details.md)
   * [Deleting Products](how-are-products-downloaded-from-shopify-to-hotwax-commerce/deleting-products.md)
   * [Creating/Deleting Products with Shopify Webhooks](how-are-products-downloaded-from-shopify-to-hotwax-commerce/creating-deleting-products-with-shopify-webhooks.md)
-  * [Downloading Bundles](how-are-products-downloaded-from-shopify-to-hotwax-commerce/downloading-bundles.md)
+  * [Gift Cards Download](how-are-products-downloaded-from-shopify-to-hotwax-commerce/giftcardsdownload.md)
+  * [Bundles Download](how-are-products-downloaded-from-shopify-to-hotwax-commerce/downloading-bundles.md)
   * [Product Synchronization for Multiple Shopify Stores](multiple-store-setup.md)
  
 ## Inventory
@@ -23,6 +24,7 @@
 * [Inventory](how-does-hotwax-commerce-ensure-accurate-inventory-is-synchronized-to-shopify.md)
   * [Inventory Synchronization](how-does-hotwax-commerce-ensure-accurate-inventory-is-synchronized-to-shopify/inventory-synchronization.md)
   * [Location Mapping](how-does-hotwax-commerce-ensure-accurate-inventory-is-synchronized-to-shopify/location-mapping.md)
+  * [Inventory Synchronization of Gift Cards](how-does-hotwax-commerce-ensure-accurate-inventory-is-synchronized-to-shopify/inventorysynchronizationgiftcards.md)
   * [Inventory Synchronization of Bundles](how-does-hotwax-commerce-ensure-accurate-inventory-is-synchronized-to-shopify/inventory-synchronization-of-bundles.md)
  
 ## Orders
@@ -31,7 +33,8 @@
   * [Order Download](how-are-orders-downloaded-from-shopify-to-hotwax-commerce/order-download.md)
   * [Order Approval for Fulfillment](how-are-orders-downloaded-from-shopify-to-hotwax-commerce/order-approval-for-fulfillment.md)
   * [Order Updates](how-are-orders-downloaded-from-shopify-to-hotwax-commerce/order-updates.md)
-  * [Downloading Orders for Bundles](how-are-orders-downloaded-from-shopify-to-hotwax-commerce/downloading-orders-for-bundles.md)
+  * [Gift Cards Order Download](how-are-orders-downloaded-from-shopify-to-hotwax-commerce/giftcardordersdownload.md)
+  * [Bundles Order Download](how-are-orders-downloaded-from-shopify-to-hotwax-commerce/downloading-orders-for-bundles.md)
 * [Order Fulfillment](how-is-the-order-fulfillment-status-updated-to-shopify-from-hotwax-commerce.md)
   * [Order Fulfillment for Bundles](how-is-the-order-fulfillment-status-updated-to-shopify-from-hotwax-commerce/order-fulfillment-for-bundles.md)
 * [Order Cancellations](how-does-hotwax-commerce-manage-order-cancellations.md)

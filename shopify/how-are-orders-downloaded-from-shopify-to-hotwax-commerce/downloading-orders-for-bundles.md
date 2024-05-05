@@ -4,7 +4,7 @@ description: >-
   Commerce.
 ---
 
-# Downloading Orders for Bundles
+# Bundles Order Download
 
 ### How are Orders for Bundles Downloaded from Shopify to HotWax Commerce?
 
