@@ -16,14 +16,4 @@ Alternatively, if the retailer chooses to map the GIFT CARD Shopify product type
 
 Some of the retailers we work with offer both physical and digital gift cards which have product type as `GIFT CARD` in Shopify. In such cases, gift cards product type is not set up as either `DIGITAL` or `FINISHED GOODS` but are specifically set up as the `GIFT_CARD` product type in HotWax Commerce.
 
-In this setup, digital gift cards are configured for auto-fulfillment directly in Shopify, while physical gift cards require the traditional fulfillment process. Here's how it works:
-
-## Digital gift cards:
-
-When customers order a digital gift card on Shopify, after the order is created, Shopify immediately auto fulfills the order, assigns a serial number to digital gift card, loads the value to activate the gift card and consequently, when HotWax Commerce downloads that order from Shopify, it is automatically marked as “Completed”.
-
-Customers receive the gift card in their registered email along with the serial number that can be used to redeem the gift card.
-
-## Physical gift cards:
-
-Orders with physical gift cards are not auto-fulfilled in Shopify. Therefore, HotWax Commerce routes them through the traditional fulfillment process.
+In this setup, digital gift cards are configured for auto-fulfillment directly in Shopify, while physical gift cards require the traditional fulfillment process.
