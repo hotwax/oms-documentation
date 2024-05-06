@@ -4,7 +4,7 @@ Gift cards are prepaid stored-value cards that carry a value determined at the t
 
 Retailers set up both physical and digital gift cards in their eCommerce platform. Both physical and digital gift cards have a unique serial number or GC number that customers need to enter to redeem the card's value.
 
-Learn more about [gift cards set up in eCommerce ](shopify/how-are-products-downloaded-from-shopify-to-hotwax-commerce/giftcardsdownload.md)
+Learn more about [gift cards set up in eCommerce ](giftcardsdownload.md)
 
 **Physical Gift Cards:**
 
@@ -16,7 +16,7 @@ Digital gift cards, also known as e-gift cards, are virtual equivalents of physi
 
 A scheduled job in HotWax Commerce downloads both physical and digital gift card orders from the eCommerce platform like Shopify.
 
-Learn more about [gift card orders synchronization to HotWax Commerce](shopify/how-are-orders-downloaded-from-shopify-to-hotwax-commerce/giftcardordersdownload.md)
+Learn more about [gift card orders synchronization to HotWax Commerce](giftcardordersdownload.md)
 
 ## Workflow
 
@@ -50,7 +50,7 @@ A scheduled job in HotWax Commerce marks physical gift card orders that are fulf
 
 It’s crucial to note that the gift cards are not functional until they are activated on the eCommerce platform. The activation process in eCommerce is a necessary step to ensure that the gift cards are redeemable and fully functional upon receipt by customers.
 
-Learn more about [synchronization of fulfillment data](netsuite/Flows/SalesOrder/Fulfillment.md)
+Learn more about [synchronization of fulfillment data](Fulfillment.md)
 
 ### Activation of Gift Cards
 
