@@ -48,7 +48,9 @@ Once the gift card order item is successfully fulfilled, it is synchronized from
 
 A scheduled job in HotWax Commerce marks physical gift card orders that are fulfilled in NetSuite as “Completed”.
 
+{% hint style="info" %}
 It’s crucial to note that the gift cards are not functional until they are activated on the eCommerce platform. The activation process in eCommerce is a necessary step to ensure that the gift cards are redeemable and fully functional upon receipt by customers.
+{% endhint %}
 
 Learn more about [synchronization of fulfillment data](Fulfillment.md)
 
@@ -72,7 +74,11 @@ Once gift card order items are successfully fulfilled in stores, a scheduled job
 
 Upon synchronizing fulfilled orders data, the gift card order status in NetSuite is updated from “Pending Fulfillment” to “Pending Billing”, subsequently, invoice is auto generated in NetSuite in the status “Paid”, and the customer deposit status is automatically updated from “Not Deposited” to “Fully Applied”.
 
-This marks the completion of gift card orders in NetSuite
+This marks the completion of gift card orders in NetSuite.
+
+{% hint style="info" %}
+In our integration, gift card orders are handled similarly to regular orders. Therefore, the SFTP location, SuiteScripts, as well as the jobs within the HotWax Commerce Integration Platform and OMS, remains the same.
+{% endhint %}
 
 ### Activation of Gift Cards
 
