@@ -1,4 +1,4 @@
-# Product Inventory View
+# View Consilidated Product Inventory
 
 The `Product Inventory View Page` within HotWax Commerce offers users a comprehensive snapshot of a product's inventory information. This feature is crucial for retailers as it empowers them to make informed decisions regarding sales and overall inventory management for their products.
 
@@ -10,11 +10,11 @@ The `Product Inventory View Page` within HotWax Commerce offers users a comprehe
 
 **Alternate Access Method:**
 
-1. Click on the `PIM` section, then select `Products` to access the Find Products Page.
-2. Browse through the list of available products or search for the product name. Click on the name of the desired product to open its Product View Page.
+1. Click on the `PIM` section, then select `Products` to access the `Find Products` Page.
+2. Browse through the list of available products or search for the product name. Click on the name of the desired product to open its `Product View` Page.
 3. On the Product View Page, locate and click on the `View Inventory` button to access the Product Inventory View Page, offering comprehensive inventory information for the selected product.
 
-### Overview
+### View comeplete detail of product's inventory
 
 Navigate to the `Overview` section on the `Product Inventory View` page to access essential product information, including product name, SKU, size, and color variants.
 
@@ -43,13 +43,13 @@ Shopify Online ATP = ATP - Excluded Facilities’ ATP
 Online ATP may vary for each sales channel.
 {% endhint %}
 
-### Item Inventory
+### View Item Inventory
 
-The item inventory section allows users to get a detailed breakdown of the received inventory at each facility, along with the date and time of each transaction and where the inventory is located within the facility. Users can click on the inventory Item ID available in the records to view the complete breakdown of where the inventory is received from.
+The `item inventory` section allows users to get a detailed breakdown of the received inventory at each facility, along with the date and time of each transaction and where the inventory is located within the facility. Users can click on the `inventory Item ID` available in the records to view the complete breakdown of where the inventory is received from.
 
 **View `Inventory Logs`**
 
-The `Inventory Logs` feature within the item inventory section offers users the ability to access detailed logs of inventory transactions for the selected product across all facilities. This feature is essential for maintaining transparency and accountability in inventory management, allowing users to track inventory movements, monitor changes, and identify any discrepancies or trends promptly.
+Retailers need a feature that offers transparency and accountability in inventory management, allowing users to track inventory movements, monitor changes, and identify any discrepancies or trends promptly. The `Inventory Logs` feature within the item inventory section offers users the ability to access detailed logs of inventory transactions for the selected product across all facilities. 
 
 **Step-by-Step Usage Instructions:**
 
@@ -66,7 +66,7 @@ The `Record Variance` feature” allows users to manually document any discrepan
 
 **Step-by-Step Usage Instructions:**
 
-1. Within the View Products Inventory page, locate and click on the `Record Variance` function, available at the top of the page.
+1. Within the View `Products Inventory page`, locate and click on the `Record Variance` function, available at the top of the page.
 2. This will open a new form, select the relevant facility where the inventory adjustment is taking place from the dropdown menu.
 3. Choose the specific location within the selected facility and enter the quantity of the inventory adjustment.
 4. From the dropdown menu, choose the relevant reasons for the inventory variance. This could include factors such as damaged goods, discrepancies in shipment, or theft.
