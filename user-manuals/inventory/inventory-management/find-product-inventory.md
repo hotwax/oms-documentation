@@ -1,6 +1,6 @@
 # Find Product Inventory
 
-Retailers need real-time insights into their product inventory, to esnure informed decision-making and efficient inventory management. The `Find Product Inventory` page within HotWax Commerce serves as a centralized hub for managing specific inventory details of products. It offers a comprehensive view of various reservations and availability statuses, including reserved, committed, and available ATP (Available to Promise). Retailers can get visibility into reservations, queues, and excluded facilities, the `Find Product Inventory` page empowers users to optimize their inventory allocation and fulfillment processes.  Users can see all the columns in which inventory is reserved and the available-to-promise in the end. Following details are available for the inventory on the page:
+Retailers need real-time insights into their product inventory, to ensure informed decision-making and efficient inventory management. The `Find Product Inventory` page within HotWax Commerce serves as a centralized hub for managing specific inventory details of products. It offers a comprehensive view of various reservations and availability statuses, including reserved, committed, and available ATP (Available to Promise). Retailers can get visibility into reservations, queues, and excluded facilities, and the `Find Product Inventory` page empowers users to optimize their inventory allocation and fulfillment processes.  Users can see all the columns in which inventory is reserved and the available-to-promise at the end. The following details are available for the inventory on the page:
 
 | Queue Type              | Description                                            |
 |-------------------------|--------------------------------------------------------|
@@ -38,13 +38,15 @@ Retailers operating multiple warehouses or stores need facility-specific invento
 3. Once you've selected a facility from the dropdown menu, the page will display a list of products associated with the chosen facility. Review product availability, quantities, and details related to inventory management at this location.
 4. Use the search filter option to find specific products within the selected facility. Enter the product identifier of the product to access its inventory breakdown at the chosen facility.
 
+For example: If you'd like to search for the available product inventory of the SKU "WJ08-XS-Gray" in the Times Square facility, search for the SKU in the search bar and select 'Times Square' from the facility filter.
+
 {% embed url="https://youtu.be/O81H0h7thuc" %} Video: Filter Facility {% endembed %}
 
-## Seacrh Products by Inventory Channel
+## Search Products by Inventory Channel
 
-In a multi-channel retail environment, efficient inventory management across various sales channels is crucial for success. The Inventory Channel Filter in HotWax Commerce provides users with the ability to view available products and its inventory on specific inventory channels. This feature enables retailers to view separate Available-to-Promise (ATP) inventories for each channel, minimizing risks and ensuring streamlined operations.
+In a multi-channel retail environment, efficient inventory management across various sales channels is crucial for success. The Inventory Channel Filter in HotWax Commerce provides users with the ability to view available products and their inventory on specific inventory channels. This feature enables retailers to view separate Available-to-Promise (ATP) inventories for each channel, minimizing risks and ensuring streamlined operations.
 
-For example, if a retailer chooses the Amazon sales channel, they will get the breakdown of the ATP that is available to sell online on Amazon.
+For example, if a retailer chooses the Amazon sales channel and searches for SKU "WJ08-XS-Gray" in the search bar they will get the breakdown of the product ATP that is available to sell online on Amazon.
 
 #### Step-by-Step Usage Instructions:
 
