@@ -13,6 +13,7 @@
   * [Billing Address](flows/sales-orders/billing-address.md)
   * [Gift Cards](flows/sales-orders/gift-cards.md)
   * [Header Location](flows/sales-orders/header-location.md)
+  * [Departments](flows/sales-orders/departments.md)
   * [Payment Methods](flows/sales-orders/payment-methods.md)
   * [POS Orders](flows/sales-orders/pos-orders.md)
   * [Price Level](flows/sales-orders/price-level.md)
