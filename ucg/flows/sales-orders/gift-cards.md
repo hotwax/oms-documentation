@@ -11,7 +11,7 @@ Frank and Oak has two types of gift cards, physical and digital. Currently both 
 
 If the retailer chooses to map the GIFT CARD Shopify product type to `digital` type products in the OMS, then the OMS will automatically mark gift card order items as completed as soon as they’re imported into the OMS.
 
-To support UCG’s situation where both products are typed as GIFT CARDs, but some are digital and some are physical, all gift cards will be configured as finished goods in HotWax and the responsibility of auto fulfilling digital gift cards will rest in Shopify. When an order for a digital gift card is placed on Shopify, after the order is created, Shopify will auto fulfill the digital item before it is imported into HotWax, eliminating the need for the OMS to complete the gift card based on type. Physical gift card orders will not be auto fulfilled by Shopify so the OMS will link route them through the traditional fulfillment processes.
+To support UCG’s situation where both products are typed as GIFT CARDs, but some are digital and some are physical, all gift cards will be configured as `GIFT_CARD` product type in HotWax and the responsibility of auto fulfilling digital gift cards will rest in Shopify. When an order for a digital gift card is placed on Shopify, after the order is created, Shopify will auto fulfill the digital item before it is imported into HotWax, eliminating the need for the OMS to complete the gift card based on type. Physical gift card orders will not be auto fulfilled by Shopify so the OMS will link route them through the traditional fulfillment processes.
 
 ## Custom Amount Gift Cards
 
