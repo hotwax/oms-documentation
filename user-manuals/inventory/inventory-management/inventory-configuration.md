@@ -11,23 +11,23 @@ The `Global Settings` section enables users to customize various product configu
 
 To avoid overselling due to inventory inaccuracies, merchandisers prefer not to promise all the inventory to the online sales channel. So the merchandising team keeps a buffer stock on a company level before promising the inventory to online channels, also called Inventory Threshold. Adjusting the threshold is crucial for maintaining optimal inventory levels. During peak seasons, increasing the threshold prevents stockouts, while reducing it during slower periods prevents excess inventory. Here's how retailers can adjust thresholds
 
-- Navigate to the `Global Settings` section in `Product Inventory Configurations` page.
+- Navigate to the `Global Settings` section on the `Product Inventory Configurations` page.
 - Click on `Threshold` to access the dialog box.
 - Modify the threshold value to match your requirements.
 
 ### Enable/Disable Order Brokering for Products:
 
-Retailers may sometime want to ensure that some products are routed to only specific locations and they may want manual control on these products. Enabling or disabling order brokering based on product-specific requirements ensures optimal order routing for the products. This step is essential particularly for bespoke products that cannot be fulfilled from all the locations.
+Retailers may sometimes want to ensure that some products are routed to only specific locations and they may want manual control on these products. Enabling or disabling order brokering based on product-specific requirements ensures optimal order routing for the products. This step is essential, particularly for bespoke products that cannot be fulfilled from all locations.
 
-- Navigate to the `Global Settings` section in `Product Inventory Configurations` page.
+- Navigate to the `Global Settings` section on the `Product Inventory Configurations` page.
 - Open the dialog box by selecting `Order Brokering`.
 - Toggle the setting to enable (Y) or disable (N) order brokering based on your business needs.
 
 ### Enable/Disable Store Pickup for Products:
 
-Retailers sometime have bulky items in their catalogue that are not optimized for store pickup. Enabling or disabling store pickup options ensures accurate order fulfillment options, to the customer. 
+Retailers sometimes have bulky items in their catalogs that are not optimized for store pickup. Enabling or disabling store pickup options ensures accurate order fulfillment options, for the customer. 
 
-- Navigate to the `Global Settings` section in `Product Inventory Configurations` page.
+- Navigate to the `Global Settings` section on the `Product Inventory Configurations` page.
 - Access the dialog box for `Store Pickup`.
 - Toggle the setting to allow (Y) or disallow (N) store pickup according to your business model.
 
@@ -35,7 +35,7 @@ Retailers sometime have bulky items in their catalogue that are not optimized fo
 
 Setting minimal days to ship the product is crucial for meeting customer expectations and optimizing order fulfillment timelines. For example, bespoke items may require a minimum of 2 days to ship, therefore, they cannot be available for same-day or next-day delivery.
 
-- Navigate to the `Global Settings` section in `Product Inventory Configurations` page.
+- Navigate to the `Global Settings` section on the `Product Inventory Configurations` page.
 - Open the dialog box by selecting `Days to Ship`.
 - Edit the number of days required for order shipment.
 
