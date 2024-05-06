@@ -4,7 +4,7 @@
 
 ## Setup
 
-* [Install HotWax Commerce App](shopify-app-installation.md)
+* [Install HotWax Commerce App](setup/install-hotwax-commerce-app.md)
 * [Multiple Store Setup](multiple-store-setup.md)
 * [Required Permissions from Shopify](shopify-permissions.md)
 
@@ -18,7 +18,7 @@
   * [Gift Cards Download](how-are-products-downloaded-from-shopify-to-hotwax-commerce/giftcardsdownload.md)
   * [Bundles Download](how-are-products-downloaded-from-shopify-to-hotwax-commerce/downloading-bundles.md)
   * [Product Synchronization for Multiple Shopify Stores](multiple-store-setup.md)
- 
+
 ## Inventory
 
 * [Inventory](how-does-hotwax-commerce-ensure-accurate-inventory-is-synchronized-to-shopify.md)
@@ -26,7 +26,7 @@
   * [Location Mapping](how-does-hotwax-commerce-ensure-accurate-inventory-is-synchronized-to-shopify/location-mapping.md)
   * [Inventory Synchronization of Gift Cards](how-does-hotwax-commerce-ensure-accurate-inventory-is-synchronized-to-shopify/inventorysynchronizationgiftcards.md)
   * [Inventory Synchronization of Bundles](how-does-hotwax-commerce-ensure-accurate-inventory-is-synchronized-to-shopify/inventory-synchronization-of-bundles.md)
- 
+
 ## Orders
 
 * [Orders](how-are-orders-downloaded-from-shopify-to-hotwax-commerce.md)
@@ -52,4 +52,3 @@
   * [In-Store Returns](how-does-hotwax-commerce-manage-order-returns/in-store-returns.md)
   * [Appeasements](how-does-hotwax-commerce-manage-order-returns/appeasements.md)
   * [Exchanges](how-does-hotwax-commerce-manage-order-returns/exchanges.md)
-

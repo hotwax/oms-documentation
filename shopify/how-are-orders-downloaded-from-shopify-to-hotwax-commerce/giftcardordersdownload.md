@@ -4,4 +4,4 @@ HotWax Commerce downloads both physical and digital gift cards orders from Shopi
 
 Learn more about [order download from Shopify to HotWax Commerce](https://docs.hotwax.co/integration-resources-1/how-are-orders-downloaded-from-shopify-to-hotwax-commerce)
 
-The distinction lies in how gift cards are fulfilled based on their configured product type in HotWax Commerce. Learn more about [gift card orders fulfillment](giftcardsfulfillment.md) 
+The distinction lies in how gift cards are fulfilled based on their configured product type in HotWax Commerce. Learn more about [gift card orders fulfillment](../how-is-the-order-fulfillment-status-updated-to-shopify-from-hotwax-commerce/giftcardsfulfillment.md)
