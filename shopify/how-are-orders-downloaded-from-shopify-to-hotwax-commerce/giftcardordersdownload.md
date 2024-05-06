@@ -1,8 +1,6 @@
 # Gift Cards Order Download
 
-The process of downloading orders from Shopify for both digital and physical products remains straightforward like any other order item.
-
-HotWax Commerce downloads physical and digital gift cards orders from Shopify in the same manner as other order with the `Import Orders` job.
+HotWax Commerce downloads both physical and digital gift cards orders from Shopify with the `Import Orders` job. This process remains straightforward for gift cards orders, just as it does for other orders.
 
 Learn more about [order download from Shopify to HotWax Commerce](https://docs.hotwax.co/integration-resources-1/how-are-orders-downloaded-from-shopify-to-hotwax-commerce)
 
