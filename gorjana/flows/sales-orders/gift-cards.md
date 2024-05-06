@@ -42,9 +42,9 @@ Because HotWax will now perceive all gift card orders as orders for a single phy
 
 ## Gift card payments
 
-When gift card payments are applied to an order, they are not processed like traditional transactions. Instead they impact the GL in NetSuite as "deffered revenue". In order to correctly post this payment to NetSuite, it should not be sent as a customer deposit, which would post it as a regular transaction and instead be posted as a "payment item" in the order when pushed to NetSuite.
+When gift card payments are applied to an order, they are not processed like traditional transactions. Instead they impact the GL in NetSuite as "deferred revenue". In order to correctly post this payment to NetSuite, it should not be sent as a customer deposit, which would post it as a regular transaction and instead be posted as a "payment item" in the order when pushed to NetSuite.
 
-## Understanding deffered revenue
+## Understanding deferred revenue
 
 Because the customer already paid Gorjana when the bought the gift card, when the apply the gift card as a payment method, Gorjana is not actually gaining new revenue and hence should not post a customer deposit for that gift card payment in NetSuite. Instead it will show up as a payment item so that when payouts from Shopify are reconciled with Customer Deposits in NetSuite, they match correctly.
 
