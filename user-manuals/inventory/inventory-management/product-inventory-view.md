@@ -43,13 +43,13 @@ Shopify Online ATP = ATP - Excluded Facilities’ ATP
 Online ATP may vary for each sales channel.
 {% endhint %}
 
-### View Item Inventory
+### View Item Inventory History
 
-The `item inventory` section allows users to get a detailed breakdown of the received inventory at each facility, along with the date and time of each transaction and where the inventory is located within the facility. Users can click on the `inventory Item ID` available in the records to view the complete breakdown of where the inventory is received from.
+The `item inventory` section allows users to get a detailed breakdown of the received inventory at each facility, along with the date and time of each transaction and where the inventory is located within the facility. 
 
 **View `Inventory Logs`**
 
-Retailers need a feature that offers transparency and accountability in inventory management, allowing users to track inventory movements, monitor changes, and identify any discrepancies or trends promptly. The `Inventory Logs` feature within the item inventory section offers users the ability to access detailed logs of inventory transactions for the selected product across all facilities. 
+ The `Inventory Logs` feature within the item inventory section offers users the ability to access detailed logs of inventory transactions for the selected product across all facilities. Users can track inventory movements, monitor changes, and identify any discrepancies or trends promptly.
 
 **Step-by-Step Usage Instructions:**
 
@@ -57,8 +57,9 @@ Retailers need a feature that offers transparency and accountability in inventor
 2. Locate the `Inventory Logs` checkbox and check the box to activate the inventory logs feature.
 3. Once activated, detailed logs of each inventory transaction for the selected product across all facilities will be displayed.
 4. Review these logs to track inventory movements, monitor changes, and identify any discrepancies or trends.
-
-If you want to view inventory details for a specific facility, use the facility dropdown menu to select the desired facility.
+5. If you want to view inventory details for a specific facility, use the facility dropdown menu to select the desired facility.
+6. You can click on the `Inventory Item ID` available in the records to view the complete breakdown of when and where the inventory is received.
+   
 
 ## Record Variance
 
