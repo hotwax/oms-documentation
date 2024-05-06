@@ -53,18 +53,20 @@ Once the gift card order item is successfully fulfilled, it is synchronized from
 A scheduled job in HotWax Commerce marks physical gift card orders that are fulfilled in NetSuite as “Completed”.
 
 {% hint style="info" %}
-It’s crucial to note that the gift cards are not functional until they are activated on the eCommerce platform. The activation process in eCommerce is a necessary step to ensure that the gift cards are redeemable and fully functional upon receipt by customers.
+It’s crucial to note that the gift cards are not functional until they are activated in the eCommerce platform. The activation process in eCommerce is a necessary step to ensure that the gift cards are redeemable and fully functional upon receipt by customers.
 {% endhint %}
 
 Learn more about [synchronization of fulfillment data](Fulfillment.md)
 
 ### Activation of Gift Cards
 
-A scheduled SuiteScript in NetSuite generates a CSV file for gift card activation containing the serial numbers corresponding to the gift card orders and places this file at an SFTP location.
+A scheduled SuiteScript in NetSuite generates a CSV file containing gift card items, their assigned serial numbers, and values corresponding to the gift card orders.
 
 A scheduled job in HotWax Commerce Integration Platform reads the generated CSV file from the SFTP location, runs transformation and generates a JSON file with the relevant data required for the gift card activation, including, gift card items, their assigned serial numbers, corresponding values in NetSuite.
 
-Finally, once the JSON is prepared, HotWax Commerce Integration Platform activates the gift card in the eCommerce platform. Because most of our customers are using Shopify as their eCommerce platform, in this scenario HotWax Commerce Integration Platform calls Shopify API to activate the gift card.
+Finally, once the JSON is prepared, HotWax Commerce Integration Platform initiates gift card activation process in the eCommerce platform. Because most of our customers are using Shopify as their eCommerce platform, in this scenario HotWax Commerce Integration Platform calls Shopify API to activate the gift card.
+
+<figure><img src="../../.gitbook/assets/gift card activation.png" alt=""><figcaption><p>Physical Gift Card Activation</p></figcaption></figure>
 
 Once the gift card is activated in eCommerce, customers can conveniently redeem it.
 
