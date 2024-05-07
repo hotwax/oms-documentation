@@ -102,4 +102,13 @@ A scheduled job in HotWax Commerce Integration Platform generates a CSV file of 
 
 A scheduled SuiteScript in NetSuite reads the CSV file from the SFTP location and creates gift card orders in the “Pending Billing” status.
 
-HotWax Commerce retrieves NetSuite sales order item line IDs and NetSuite sales order IDs, and creates customer deposits in NetSuite in the “Undeposited” status. Subsequently, invoice is auto generated in NetSuite in the status “Paid”, and the customer deposit status is automatically updated from “Not Deposited” to “Fully Applied”.
+HotWax Commerce retrieves NetSuite sales order item line IDs, NetSuite sales order IDs, and creates customer deposits in NetSuite in the “Undeposited” status. Subsequently, invoice is auto generated in NetSuite in the status “Paid”, and the customer deposit status is automatically updated from “Not Deposited” to “Fully Applied”.
+
+{% hint style="info" %}
+**What happens when customers redeem their gift card to pay for a new order?**
+
+When gift card payments are applied to an order, they are not processed like traditional transactions. Instead they impact the GL in NetSuite as "deferred revenue". In order to correctly post this payment to NetSuite, it is not sent as a customer deposit and instead posted as a "payment item" in the order when pushed to NetSuite.
+
+If gift card payments were recorded as customer deposits, there could be a risk of double counting the revenue. This is because the revenue from gift card sales would already have been recorded when the gift cards were initially sold. Treating gift card payments as payment items avoids this double counting since they're simply offsetting existing revenue rather than creating new revenue.
+{% endhint %}
+
