@@ -14,13 +14,15 @@ Online shipping orders are always routed to the warehouse unless the customer ha
 
 When this kind of soft allocated order is imported, the soft allocated items of the order will be directly allocated to that store upon import and skip the normal brokering algorithm. Because customers must explicitly choose which items they want to be shipped from store, the OMS will split the items not soft allocated and leave them in the brokering queue to be brokered to the warehouse at scheduled times.
 
-In the event that a store cannot fulfill an order and must reject it for reallocation, those orders will not be allocated to the warehouse.
+In the event that a store cannot fulfill an order and must reject it for reallocation, those orders will not be allocated to the warehouse because soft allocation only happens when the inventory is not available in the warehouse but in stores.
 
 {% hint style="danger" %}
 To support this workflow, the warehouse facility type must be passed as an excluded `type` in the Rejected Order Brokering Job.
 {% endhint %}
 
-The WMS software used by New Era Caps is not able to differentiate between two separate shipments of the same order when creating its CSV feed of fulfilled orders. Due to this rigidity, if the WMS cannot fulfill an order item, then a CSR manually cancels the whole order on Shopify. When CSRs perform this cancellation on Shopify, they also add a “Reshipped” tag on the order to indicate that HotWax needs to resend it to the WMS.
+The WMS software used by New Era Caps is not able to differentiate between two separate shipments of the same order when creating its CSV feed of fulfilled orders. Due to this rigidity, if the WMS cannot fulfill an order item, then CSR will ask the customer whether to cancel the item or replace it with a different item.
+1. If the item is canceled then the OMS will reshipped the order to WMS. When CSRs cancel order item on Shopify, they add a “Reshipped” tag on the order to indicate that HotWax needs to resend it to the WMS.
+2. If the item is replaced with another item then the whole order is canceled manually by CSR and the new order is created on Shopify.
 
 **Note**: The reshipping process is only applicable to orders that are brokered to the warehouse.
 
