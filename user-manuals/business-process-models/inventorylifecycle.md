@@ -30,7 +30,7 @@ To calculate `Online ATP`, HotWax Commerce deducts inventory that is not availab
 
 #### How it works:
 
-HotWax Commerce integrates with ERP, POS, and WMS, to create a unified pool of inventory. After synchronizing inventory totals from all systems, HotWax Commerce calculates the `Online ATP` for eCommerce by subtracting any inventory set aside as safety stock, thresholds, orders in the brokering queue, and inventory at excluded facilities from the physical ATP. This makes HotWax Commerce the ultimate authority on inventory availability and prevents overcommitting on eCommerce platforms.
+HotWax Commerce integrates with ERP, POS, and WMS, to create a unified pool of inventory. After synchronizing inventory totals from all systems, HotWax Commerce calculates the `Online ATP` for eCommerce by subtracting any inventory set aside as safety stock, thresholds, orders in the brokering queue, and inventory at non participating facilities from the physical ATP. This makes HotWax Commerce the ultimate authority on inventory availability and prevents overcommitting on eCommerce platforms.
 
 **Now, let’s understand the breakdown of inventory transactions involved throughout the inventory lifecycle and their recording across various systems:**
 
