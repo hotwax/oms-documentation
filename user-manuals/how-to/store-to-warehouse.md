@@ -1,4 +1,4 @@
-# Store to Warehouse
+# Manage transfer order from Store to Warehouse
 
 Stores wishing to return excess or unsold inventory to the warehouse collaborate with the warehouse manager to generate a transfer order. This facilitates the transfer of inventory from the store location back to the warehouse.
 
