@@ -114,7 +114,7 @@ When the inventory arrives, retailers can schedule a brokering run that looks at
 
 When customers place a BOPIS order on eCommerce, it is downloaded in HotWax Commerce alongside standard orders by the `Import Orders` job.
 
-In case of Shopify, HotWax Commerce provides a custom app deployed on Shopify. When a customer places a BOPIS order, the app adds a custom tag on line items to specify that it is a BOPIS order.
+HotWax Commerce provides an Integration App that can be installed on Shopify. When a customer places a BOPIS order, the app adds a custom tag on line items to specify that it is a BOPIS order.
 
 HotWax Commerce then checks the custom tag on orders. If the tag is present on an order, it is automatically sent to the customer's preferred pickup location without brokering. This is because the fulfillment location is pre-selected for BOPIS orders by customers.
 
@@ -134,9 +134,9 @@ Learn more about [BOPIS Fulfillment](https://docs.hotwax.co/user-guides/orders/b
 
 ## Fulfillment of Pre-Orders
 
-When customers place a Pre-Order order on eCommerce, it is downloaded in HotWax Commerce alongside standard orders by the `Import Orders` job.
+Pre-Orders placed on eCommerce are downloaded in HotWax Commerce alongside standard orders by the `Import Orders` job.
 
-In case of Shopify, HotWax Commerce provides a custom app deployed on Shopify. When a customer places a Pre-Order, the app adds a pre-order tag on line items to specify that it is a Pre-Order item.
+When a customer places a Pre-Order, HotWax Commerce Integration App adds a pre-order tag on line items to specify that it is a Pre-Order item.
 
 HotWax Commerce checks if an order has a pre-order tag applied and automatically moves it to the `Pre-Order Parking`. This dedicated queue holds all pre-orders until their physical inventory is received. This ensures that the brokering process is not initiated for Pre-Orders that currently lack inventory but have inventory scheduled to arrive on a future date.
 
