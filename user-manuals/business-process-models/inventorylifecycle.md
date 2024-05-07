@@ -21,12 +21,12 @@ In HotWax Commerce, you'll come across three inventory-related terms: **Quantity
 
 ### Calculating Online ATP
 
-To calculate `Online ATP`, HotWax Commerce deducts inventory that is not available for sale from the ATP. This includes items such as safety stock, threshold quantities, orders in the brokering queue, and excluded facilities' ATP.
+To calculate `Online ATP`, HotWax Commerce deducts inventory that is not available for sale from the ATP. This includes items such as safety stock, threshold quantities, orders in the brokering queue, and inventory from locations that are not participating in online selling.
 
 * <mark style="color:orange;">**Safety stock**</mark><mark style="color:orange;">:</mark> Inventory reserved at each store specifically for walk-in customers.
 * <mark style="color:orange;">**Threshold**</mark><mark style="color:orange;">:</mark> Inventory buffer established at a company level to prevent inventory discrepancies and overselling on eCommerce platforms.
 * <mark style="color:orange;">**Orders in the brokering queue**</mark><mark style="color:orange;">:</mark> eCommerce orders awaiting inventory allocation.
-* <mark style="color:orange;">**Excluded facilities' ATP**</mark><mark style="color:orange;">:</mark> Inventory at fulfillment locations temporarily unable to participate in online order fulfillment due to factors like insufficient labor, natural disasters, or holidays.
+* <mark style="color:orange;">**Non participating facilities' ATP**</mark><mark style="color:orange;">:</mark> Inventory at fulfillment locations that have online selling disabled in HotWax Commerce.
 
 #### How it works:
 
@@ -140,15 +140,15 @@ This step ensures that the count for physical available inventory is accurately 
 
 All the inventory transactions happening across various systems and scenarios discussed above primarily explains how HotWax Commerce, being the master of inventory availability, consistently recalculates and updates the `Online ATP`.
 
-Other factors that impact the `Online ATP` calculation in HotWax Commerce include <mark style="color:orange;">**updating safety stock, adjusting product thresholds, and reconfiguring participating fulfillment locations**</mark>.
+Other factors that impact the `Online ATP` calculation in HotWax Commerce include <mark style="color:orange;">**updating safety stock, adjusting product thresholds, and reconfiguring fulfillment locations participating in online selling**</mark>.
 
-For example, let's consider a scenario where the initial ATP for a product is 100. The safety stock for a product is set at 5 for four locations, the global threshold is 10, and one of the fulfillment locations, the Brooklyn store, is not participating in fulfillment and has an inventory count of 50 for that product.
+For example, let's consider a scenario where the initial ATP for a product is 100. The safety stock for a product is set at 5 for four locations, the global threshold is 10, and one of the fulfillment locations, the Brooklyn store, is not participating in online selling and has an inventory count of 50 for that product.
 
 In this scenario, the `Online ATP` would be calculated as follows:
 
 100 - (5 \* 4) - 10 - 50 = <mark style="color:orange;">**20**</mark>
 
-Now, if the safety stock is updated to 2 for four locations, the global threshold to 5, and the Brooklyn store with 50 inventory is made available for selling, then HotWax Commerce will recalculate online ATP and the updated online ATP would be:
+Now, if the safety stock is updated to 2 for four locations, the global threshold to 5, and the Brooklyn store with 50 inventory is made available for online selling, then HotWax Commerce will recalculate online ATP and the updated online ATP would be:
 
 100 - (2 \* 4) - 5 = <mark style="color:orange;">**87**</mark>
 
