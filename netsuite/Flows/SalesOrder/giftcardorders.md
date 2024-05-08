@@ -60,12 +60,31 @@ Learn more about [synchronization of fulfillment data](Fulfillment.md)
 
 ### Activation of Gift Cards
 
-A scheduled SuiteScript in NetSuite generates a CSV file containing gift card items, their assigned serial numbers, and values corresponding to the gift card orders.
+A scheduled SuiteScript in NetSuite generates a CSV file containing gift card items, their assigned serial numbers, and values corresponding to the gift card orders. The generated CSV is then placed at an desginated SFTP location.
+
+**SuiteScripts**
+
+Export NetSuite gift card fulfillment details:
+
+```
+HC_MR_ExportedGiftCardFulfillmentCSV.js
+```
+
+**SFTP Location**
+
+```
+/home/{sftp-username}/netsuite/salesorder/giftcard-fulfillment
+```
 
 A scheduled job in HotWax Commerce Integration Platform reads the generated CSV file from the SFTP location, runs transformation and generates a JSON file with the relevant data required for the gift card activation, including, gift card items, their assigned serial numbers, corresponding values in NetSuite.
 
 Finally, once the JSON is prepared, HotWax Commerce Integration Platform initiates gift card activation process in the eCommerce platform. Because most of our customers are using Shopify as their eCommerce platform, in this scenario HotWax Commerce Integration Platform calls Shopify API to activate the gift card.
 
+**Shopify API**
+
+```
+[Bulk data import GraphlQL API](https://shopify.dev/docs/api/usage/bulk-operations/imports) used along with [gift card create mutation](https://shopify.dev/docs/api/admin-graphql/2024-04/mutations/giftcardcreate)
+```
 <figure><img src="../../.gitbook/assets/gift card activation.png" alt=""><figcaption><p>Physical Gift Card Activation</p></figcaption></figure>
 
 Once the gift card is activated in eCommerce, customers can conveniently redeem it.
