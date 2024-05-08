@@ -133,6 +133,7 @@
 
 * [Deploy HotWax Commerce](how-to/deployment/deployment.md)
 * [Add shipping method](how-to/add-shipping-method.md)
+* [Setup BOPIS](how-to/bopis/implement-bopis.md)
 * [Transfer orders](how-to/transfer-orders.md)
   * [Warehouse to store](how-to/warehouse-to-store.md)
   * [Store to Warehouse](how-to/store-to-warehouse.md)
