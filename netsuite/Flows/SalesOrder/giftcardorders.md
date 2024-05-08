@@ -82,7 +82,7 @@ Finally, once the JSON is prepared, HotWax Commerce Integration Platform initiat
 
 **Shopify API**
 
-Bulk data import GraphlQL API](https://shopify.dev/docs/api/usage/bulk-operations/imports) used along with [gift card create mutation](https://shopify.dev/docs/api/admin-graphql/2024-04/mutations/giftcardcreate)
+[Bulk data import GraphlQL API](https://shopify.dev/docs/api/usage/bulk-operations/imports) used along with [gift card create mutation](https://shopify.dev/docs/api/admin-graphql/2024-04/mutations/giftcardcreate)
 
 <figure><img src="../../.gitbook/assets/gift card activation.png" alt=""><figcaption><p>Physical Gift Card Activation</p></figcaption></figure>
 
