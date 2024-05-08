@@ -58,7 +58,7 @@ HotWax Commerce Integration Platform retrieves gift card items, their assigned s
 
 **Shopify API**
 
-Bulk data import GraphlQL API](https://shopify.dev/docs/api/usage/bulk-operations/imports) used along with [gift card create mutation](https://shopify.dev/docs/api/admin-graphql/2024-04/mutations/giftcardcreate)
+[Bulk data import GraphlQL API](https://shopify.dev/docs/api/usage/bulk-operations/imports) used along with [gift card create mutation](https://shopify.dev/docs/api/admin-graphql/2024-04/mutations/giftcardcreate)
 
 Once the gift card is activated in Shopify, customers can conveniently redeem it.
 
