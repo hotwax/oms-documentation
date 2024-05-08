@@ -56,6 +56,10 @@ Similar to how store associates assign serial numbers and load values onto gift 
 
 HotWax Commerce Integration Platform retrieves gift card items, their assigned serial numbers, and corresponding values from NetSuite and generates a JSON file. Subsequently, it calls the Shopify API to request activation for the gift card.
 
+**Shopify API**
+
+Bulk data import GraphlQL API](https://shopify.dev/docs/api/usage/bulk-operations/imports) used along with [gift card create mutation](https://shopify.dev/docs/api/admin-graphql/2024-04/mutations/giftcardcreate)
+
 Once the gift card is activated in Shopify, customers can conveniently redeem it.
 
 The fulfillment update for gift card orders, along with tracking details, is synchronized to Shopify using the `Completed Orders` job.
