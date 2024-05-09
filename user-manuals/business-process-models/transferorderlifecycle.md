@@ -13,13 +13,13 @@ Transfer orders are created in the ERP system, they serve various purposes, incl
 * <mark style="color:orange;">**Between Stores:**</mark> In cases where one store has excess inventory that another store requires, transfer orders can be used to transfer inventory directly between stores, optimizing stock levels across the retail network.
 * <mark style="color:orange;">**Store to Warehouse:**</mark> Sometimes, stores might need to return excess or unsold inventory back to the warehouse for consolidation or redistribution. Transfer orders facilitate this movement from the stores back to the warehouse.
 
-<figure><img src="../.gitbook/assets/transfer order bpm.png" alt=""><figcaption><p>Transfer orders lifecycle business process model</p></figcaption></figure>
-
 To explain the Transfer Order Lifecycle BPM, we've opted NetSuite as the ERP system, Shopify for eCommerce, and HotWax Commerce for the OMS because most of our customers use this tech stack.
 
 ## Warehouse to Store Transfer Orders
 
 ### 1. Transfer orders created in NetSuite
+
+<figure><img src="../.gitbook/assets/warehouse to store transfer order bpm.png" alt=""><figcaption><p>Warehouse to store transfer orders lifecycle business process model</p></figcaption></figure>
 
 * Warehouse managers create transfer orders in NetSuite, specifying the source location as warehouse and the destination location as store. These transfer orders are automatically assigned a <mark style="color:orange;">**“Pending Fulfillment”**</mark> status.
 * Fulfillment teams start preparing the transfer order items for dispatch from the warehouse. Once they pick, pack and ship the transfer order items, item fulfillment records are automatically generated in NetSuite with the status <mark style="color:orange;">**“Shipped”**</mark>.
@@ -50,6 +50,8 @@ It’s crucial to note that inventory counts for the items shipped from the ware
 
 ## Store to Store Transfer Orders
 
+<figure><img src="../.gitbook/assets/store to store transfer order bpm.png" alt=""><figcaption><p>Store to store transfer orders lifecycle business process model</p></figcaption></figure>
+
 ### 1. Transfer orders created in NetSuite and imported into HotWax Commerce
 
 * Similar to warehouse to store transfer orders, store to store transfer orders are also created in NetSuite, specifying the source location as store and the destination location also as a store. These transfer orders are automatically assigned a <mark style="color:orange;">**“Pending Fulfillment”**</mark> status.
@@ -62,7 +64,7 @@ A scheduled job in HotWax Commerce identifies transfer orders that have a <mark 
 
 **What happens when transfer orders are approved?**
 
-* Upon approval, HotWax Commerce  reduces the Available to Promise inventory for the transfer order items that will be fulfilled from the store.
+* Upon approval, HotWax Commerce reduces the Available to Promise inventory for the transfer order items that will be fulfilled from the store.
 * Approved transfer orders are automatically reflected in the `Store Fulfillment App`.
 * Store associates pick the transfer order items they want to fulfill from their store. After picking the items, store associates pack them and proceed to create fulfillments for each item.
 * Once the fulfillment has been created, store associates fetch shipping labels from the carrier and the corresponding tracking codes.
@@ -99,6 +101,8 @@ Once transfer order items are fulfilled from the store, the QOH for the correspo
   * The transfer order status is updated from <mark style="color:orange;">**“Pending Receipt”**</mark> to <mark style="color:orange;">**“Received”**</mark>. This step concludes the store to store transfer orders flow.
 
 ## Store to Warehouse Transfer Orders
+
+<figure><img src="../.gitbook/assets/store to warehouse transfer order bpm.png" alt=""><figcaption><p>Store to warehouse transfer orders lifecycle business process model</p></figcaption></figure>
 
 ### 1. Transfer orders created in NetSuite
 
