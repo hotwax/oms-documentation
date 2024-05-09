@@ -19,6 +19,8 @@
   * [Promotions and Discounts](flows/sales-orders/promotions-and-discounts.md)
   * [Shipping Methods](flows/sales-orders/shipping-methods.md)
 * [Brokering](flows/brokering/facilities.md)
+  * [Facilities](flows/brokering/facilities.md)
+  * [Shipsi](flows/brokering/shipsi.md)
 * [Returns](flows/returns/README.md)
   * [Happiness Guarenteed](flows/returns/happiness-guaranteed.md)
 * [Transfer Orders](flows/transfer-orders/README.md)
