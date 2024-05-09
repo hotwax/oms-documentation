@@ -17,9 +17,9 @@ To explain the Transfer Order Lifecycle BPM, we've opted NetSuite as the ERP sys
 
 ## Warehouse to Store Transfer Orders
 
-### 1. Transfer orders created in NetSuite
-
 <figure><img src="../.gitbook/assets/warehouse to store transfer order bpm.png" alt=""><figcaption><p>Warehouse to store transfer orders lifecycle business process model</p></figcaption></figure>
+
+### 1. Transfer orders created in NetSuite
 
 * Warehouse managers create transfer orders in NetSuite, specifying the source location as warehouse and the destination location as store. These transfer orders are automatically assigned a <mark style="color:orange;">**“Pending Fulfillment”**</mark> status.
 * Fulfillment teams start preparing the transfer order items for dispatch from the warehouse. Once they pick, pack and ship the transfer order items, item fulfillment records are automatically generated in NetSuite with the status <mark style="color:orange;">**“Shipped”**</mark>.
