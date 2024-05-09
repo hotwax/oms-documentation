@@ -1,4 +1,4 @@
-## Shipsi
+# Shipsi 
 
 This document outlines the integrated workflow between Shipsi, a hyperlocal delivery solution, Shopify, an e-commerce platform, and our upcoming Order Management System (OMS). The focus is on the streamlined purchase-to-fulfillment journey for customers selecting Shipsi's same-day delivery option directly from Shopify stores.
 
