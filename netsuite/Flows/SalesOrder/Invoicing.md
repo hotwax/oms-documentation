@@ -55,7 +55,7 @@ HotWax Commerce runs a scheduled job every 15 minutes to synchronize order cance
 
 **Actions**
 
-1. A scheduled job in HotWax Commerce Integration Platform 15 identifies order items that have been canceled in HotWax Commerce, generates a JSON file comprising the canceled order items and places this file at a designated SFTP location.
+1. A scheduled job in HotWax Commerce Integration Platform runs every 15 minutes and identifies order items that have been canceled in HotWax Commerce. Subsequently, generates a JSON file comprising the canceled order items and places this file at a designated SFTP location.
 
 **SFTP Location**
 
