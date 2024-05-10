@@ -8,7 +8,7 @@ Most of our customers opt for Shopify as their eCommerce platform, along with Sh
 
 ### How are send sale orders different from regular eCommerce orders?
 
-While both send sale orders and regular eCommerce orders are placed to be shipped to the customer's address, the only distinction lies in the sales channel they originate from. Send sale orders are initiated by store associates on behalf of the customer so they have Shopify POS as their sales channel. This sets them apart from regular eCommerce orders, where customers directly place their orders through traditional online channels.
+While both send sale orders and regular eCommerce orders are placed to be shipped to the customer's address, the only distinction lies is the sales channel they originate from. Send sale orders are initiated by store associates on behalf of the customer so they have Shopify POS as their sales channel. This sets them apart from regular eCommerce orders, where customers directly place their orders through traditional online channels.
 
 As discussed above, despite the fact that send sale orders originate from the POS sales channel, their treatment remains same as regular orders. A scheduled job in HotWax Commerce downloads all new orders, including send sale orders from Shopify, so that they can be brokered and fulfilled. Consequently, upon download, these orders are automatically assigned the default "Created" status in HotWax Commerce.
 
