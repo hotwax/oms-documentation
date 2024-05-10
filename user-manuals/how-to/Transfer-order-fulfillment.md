@@ -24,6 +24,8 @@ Once approved, transfer orders are automatically reflected at the source locatio
     - The `Open` tab displays items that have not yet been shipped.
     
     - The `Completed` tab displays items that have been shipped.
+ 
+After processing a partial shipment of a transfer order item, it will be listed in the `completed tab`. Store associates have the option to ship the remaining items in the transfer order at a later time, and these remaining items will then be visible in the `Open tab`.
 
 5. Store associates can scan barcodes or manually enter the quantity of items to be shipped in the Item cards.
 
@@ -33,7 +35,7 @@ Once approved, transfer orders are automatically reflected at the source locatio
 
 8. Click on the `arrow icon` located at the bottom right corner of the page to complete the shipment.
 
-Once a partial ship transfer order item is processed, it will appear in the completed tab. No modifications can be made to the items after they have been shipped. However, adjustments can still be made to the transfer order itself.
+ 
 
 > [!NOTE]  
 > Store associates are not allowed to insert more than the intended item quantities. The bar turns red if the user tries to overship item quantities.
