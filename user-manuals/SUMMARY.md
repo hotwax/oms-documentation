@@ -125,7 +125,7 @@
 ## How-to documents
 
 * [Add shipping method](how-to/add-shipping-method.md)
-* [Transfer orders](how-to/transfer-orders.md)
-  * [Warehouse to store](how-to/warehouse-to-store.md)
-  * [Store to Warehouse](how-to/store-to-warehouse.md)
-  * [Store to store](how-to/store-to-store.md)
+* [Transfer Order management](how-to/transfer-order-management.md)
+  * [Transfer order Fulfillment](how-to/transfer-order-fulfillment.md)
+  * [Transfer order Receiving](how-to/transfer-order-receiving.md)
+  
