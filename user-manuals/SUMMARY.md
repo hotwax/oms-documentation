@@ -103,6 +103,7 @@
   * [Set Bulk Safety Stock](inventory/safety-stock/set-bulk-safety-stock.md)
   * [Set Individual Safety Stock](inventory/safety-stock/set-individual-safety-stock.md)
 * [Multichannel inventory setup](inventory/multichannel-inventory-setup.md)
+* [Reports](inventory/reports.md)
 
 ## Administration
 
