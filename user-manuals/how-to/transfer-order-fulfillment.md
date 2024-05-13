@@ -34,8 +34,8 @@ After processing a partial shipment of a transfer order item, it will be listed 
 7. On clicking the `create shipment button`, the user will land on the transfer shipment review page. Click on `generate shipping label` to fetch the tracking code and carrier information or you can manually add the shipping label information.
 
 8. Click on the `arrow icon` located at the bottom right corner of the page to complete the shipment.
-
  
-
 > [!NOTE]  
 > Store associates are not allowed to insert more than the intended item quantities. The bar turns red if the user tries to overship item quantities.
+
+For more details on Transfer order lifecycle refer to this [document](https://docs.hotwax.co/user-guides/business-process-models/transferorderlifecycle) 
