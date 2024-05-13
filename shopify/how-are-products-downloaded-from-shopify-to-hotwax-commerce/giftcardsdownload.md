@@ -1,6 +1,6 @@
 # Gift Cards
 
-Gift cards are prepaid stored-value cards that carry a value determined at the time of the card's purchase. They are often given as gifts or rewards and are redeemable for products up to the value stored on the card.
+Gift cards are stored-value cards that carry a value determined at the time of the card's purchase. They are often given as gifts or rewards and are redeemable for products up to the value stored on the card.
 
 ## Gift Cards in Shopify
 
@@ -8,7 +8,9 @@ Retailers set up both physical and digital gift cards in Shopify. Both physical 
 
 ### Physical Gift Cards:
 
-Physical gift cards are tangible cards that customers order to get them delivered to their home. When customers receive their order, they get a unique serial number on the gift card that they can use to redeem the value stored in the card.
+Physical gift cards are tangible cards that customers can buy online or in-store. These cards come with a unique serial number that customers can use to redeem the value stored in the card.
+
+Let’s see what happens when customers place online orders for physical gift cards:
 
 - **Preparation and Processing:** These cards are assigned a unique serial number and predefined value loaded onto them when they are processed and prepared for shipping.
 
