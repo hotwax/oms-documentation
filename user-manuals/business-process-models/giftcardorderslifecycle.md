@@ -1,6 +1,6 @@
 ---
 description: >-
-  The Gift Card Fulfillment Lifecycle BPM illustrates the process of fulfilling
+  The Gift Card Orders Lifecycle BPM illustrates the process of fulfilling
   digital as well as physical gift card orders placed by customers on eCommerce.
 ---
 
@@ -8,7 +8,7 @@ description: >-
 
 Gift cards are stored-value cards that carry a value determined at the time of the card's purchase. They are often given as gifts or rewards and are redeemable for products up to the value stored on the card.
 
-To explain the Gift Card Fulfillment Lifecycle BPM, we've opted NetSuite as the ERP system, Shopify for eCommerce, and HotWax Commerce for the OMS because most of our customers use this tech stack.
+To explain the Gift Card Orders Lifecycle BPM, we've opted NetSuite as the ERP system, Shopify for eCommerce, and HotWax Commerce for the OMS because most of our customers use this tech stack.
 
 **What is the role of NetSuite?**
 
