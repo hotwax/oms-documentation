@@ -11,6 +11,7 @@
 * [Warehouse fulfillment lifecycle](business-process-models/warehousefulfillmentlifecycle.md)
 * [Inventory lifecycle](business-process-models/inventorylifecycle.md)
 * [Transfer orders lifecycle](business-process-models/transferorderlifecycle.md)
+* [Gift card orders lifecycle](business-process-models/giftcardorderslifecycle.md)
 * [Returns lifecycle](business-process-models/returns-lifecycle/README.md)
   * [Web returns with Loop](business-process-models/returns-lifecycle/loopwebreturnslifecycle.md)
   * [In-store returns with Shopify POS](business-process-models/returns-lifecycle/shopifyposreturnslifecycle.md )
