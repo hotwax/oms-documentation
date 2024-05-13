@@ -52,25 +52,26 @@ description: >-
 
 Apart from these default configurations, retailers can add new configurations specific to their product store by clicking `Add` in the store settings section. Here are the available store settings that retailers can add:
 
-| Setting Name            | Value              | Description                                                                                                     |
-|-------------------------|--------------------|-----------------------------------------------------------------------------------------------------------------|
-| BOPIS_PART_ODR_REJ      | Y                  | Indicates whether store associates can partially reject "buy online, pick up in-store" (BOPIS) orders.          |
-| CUST_ALLOW_CNCL         | Y                  | Determines if customers can cancel orders on Shopify.                                                           |
-| FULFILL_NOTIF           | Y                  | Enables the updating of tracking information on Shopify.                                                         |
-| PRDT_IDEN_PREF          | {"primaryId":"sku","secondaryId":"internalName"} | Defines the preferred primary identifier used across the system.                                        |
-| CUST_DLVRADR_UPDATE     | Y                  | Allows updating the delivery address of customers.                                                              |
-| CUST_DLVRMTHD_UPDATE    | Y                  | Allows updating the delivery method chosen by customers.                                                        |
-| CUST_PCKUP_UPDATE       | Y                  | Allows changing the pickup address for customers.                                                               |
-| HOLD_PRORD_PHYCL_INV    | Y                  | If preorder queue exists, physical inventory will be considered as 0. Default value is true.                   |
-| INV_CNT_VIEW_QOH        | Y                  | Enables users to see current Quantity On Hand (QOH) from HotWax OMS on the product detail page of the Inventory Count app, aiding users during periodic cycle counts. |
-| ORD_ITM_PICKUP_FAC      | _pickupstore       | Orders imported with this tag will have their line items checked for pre-selected facilities to pickup orders from. |
-| PRE_SLCTD_FAC_TAG       | HC_PRE_SELECTED_FAC | Orders imported with this tag will have their line items checked for pre-selected facilities to fulfill them from. |
-| RATE_SHOPPING           | Y                  | Configures rate shopping.                                                                                        |
-| RETURN_DEADLINE_DAYS    | 30                 | Sets the deadline allowed for customer returns.                                                                  |
-| SAVE_BILL_TO_INF        | Y                  | Saves customers' Bill To information of orders from Shopify in HotWax.                                          |
-| RTN_RSTCK_FAC           | WH                 | Specifies the default location to restock return items.                                                         |
-| RF_SHIPPING_METHOD      | SECOND_DAY         | Sets the default shipping method for rerouted orders.                                                           |
-| BRK_SHPMNT_THRESHOLD   | 50                 | Orders will split into separate shipgroups only if the total order item value exceeds this threshold.           |
+| Setting Name                          | Value              | Description                                                                                                     |
+|---------------------------------------|--------------------|-----------------------------------------------------------------------------------------------------------------|
+| BOPIS Partial Order Rejection | Y | Indicates whether store associates can partially reject "buy online, pick up in-store" (BOPIS) orders. |
+| Customer Order Cancellation           | Y                  | Determines if customers can cancel orders on Shopify.                                                           |
+| Fulfillment Notification             | Y                  | Enables the updating of tracking information on Shopify.                                                         |
+| Product Identifier Preference        | {"primaryId":"sku","secondaryId":"internalName"} | Defines the preferred primary identifier used across the system.                                        |
+| Customer Delivery Address Update     | Y                  | Allows updating the delivery address of customers.                                                              |
+| Customer Delivery Method Update      | Y                  | Allows updating the delivery method chosen by customers.                                                        |
+| Customer Pickup Address Update       | Y                  | Allows changing the pickup address for customers.                                                               |
+| Hold Preordered Physical Inventory   | Y                  | If preorder queue exists, physical inventory will be considered as 0. Default value is true.                   |
+| Inventory Count View QOH| Y                  | Enables users to see current Quantity On Hand (QOH) from HotWax OMS on the product detail page of the Inventory Count app, aiding users during periodic cycle counts. |
+| Order Item Pickup Facility           | _pickupstore       | Orders imported with this tag will have their line items checked for pre-selected facilities to pickup orders from. |
+| Preselected Facility Tag             | HC_PRE_SELECTED_FAC | Orders imported with this tag will have their line items checked for pre-selected facilities to fulfill them from. |
+| Rate Shopping Configuration          | Y                  | Configures rate shopping.                                                                                        |
+| Return Deadline Days                 | 30                 | Sets the deadline allowed for customer returns.                                                                  |
+| Save Billing Information             | Y                  | Saves customers' Bill To information of orders from Shopify in HotWax.                                          |
+| Return Restock Facility               | WH                 | Specifies the default location to restock return items.                                                         |
+| Rerouted Shipping Method             | SECOND_DAY         | Sets the default shipping method for rerouted orders.                                                           |
+| Bokering Shipment Threshold             | 50                 | Orders will split into separate shipgroups only if the total order item value exceeds this threshold.           |
+
 
 
 
