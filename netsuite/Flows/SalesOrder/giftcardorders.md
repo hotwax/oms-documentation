@@ -1,6 +1,6 @@
 # Gift Card Orders
 
-Gift cards are prepaid stored-value cards that carry a value determined at the time of the card's purchase. They are often given as gifts or rewards and are redeemable for products up to the value stored on the card.
+Gift cards are stored-value cards that carry a value determined at the time of the card's purchase. They are often given as gifts or rewards and are redeemable for products up to the value stored on the card.
 
 Retailers set up both physical and digital gift cards in their eCommerce platform. Both physical and digital gift cards have a unique serial number or GC number that customers need to enter to redeem the card's value.
 
@@ -8,7 +8,7 @@ Learn more about [gift cards set up in eCommerce](https://docs.hotwax.co/integra
 
 **Physical Gift Cards:**
 
-Physical gift cards are tangible cards that customers order to get them delivered to their home. When customers receive their order, they get a unique serial number on the gift card that they can use to redeem the value stored in the card.
+Physical gift cards are tangible cards that customers can buy online or in-store. These cards come with a unique serial number that customers can use to redeem the value stored in the card.
 
 **Digital Gift Cards:**
 
@@ -79,6 +79,10 @@ HC_MR_ExportedGiftCardFulfillmentCSV.js
 A scheduled job in HotWax Commerce Integration Platform reads the generated CSV file from the SFTP location, runs transformation and generates a JSON file with the relevant data required for the gift card activation, including, gift card items, their assigned serial numbers, corresponding values in NetSuite.
 
 Finally, once the JSON is prepared, HotWax Commerce Integration Platform initiates gift card activation process in the eCommerce platform. Because most of our customers are using Shopify as their eCommerce platform, in this scenario HotWax Commerce Integration Platform calls Shopify API to activate the gift card.
+
+{% hint style="info" %}
+HotWax Commerce Integration Platform communicates directly with Shopify for gift card activation, without any intermediary involvement from the HotWax Commerce OMS.
+{% endhint %}
 
 **Shopify API**
 
