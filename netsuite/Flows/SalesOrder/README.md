@@ -28,13 +28,14 @@ Customers place their online orders on Shopify. HotWax Commerce being an Order M
 
 A dedicated job in HotWax Commerce prepares and exports a feed of orders marked as <mark style="color:orange;">**"Created"**</mark> to NetSuite.
 
-NetSuite's SuiteScript then consumes this order data, generating orders in the <mark style="color:orange;">**"Pending Fulfillment"**</mark> status, while also creating customer deposit records in the "Undeposited" status.
+NetSuite's SuiteScript then consumes this order data, generating orders in the <mark style="color:orange;">**"Pending Fulfillment"**</mark> status.
 
 ### 3. Synchronize Orders ID and Item Line IDs to HotWax Commerce
 
-HotWax Commerce ensures confirmation of successful order item synchronization with NetSuite. To achieve this, a dedicated job in HotWax Commerce downloads NetSuite's internal IDs, while another job downloads NetSuite's item line IDs. This process also triggers order approval in HotWax Commerce.
+HotWax Commerce ensures confirmation of successful order item synchronization with NetSuite. To achieve this, a dedicated job in HotWax Commerce downloads NetSuite's internal IDs, while another job downloads NetSuite's item line IDs. This process also triggers multiple actions in HotWax Commerce and NetSuite:
 
-Once the NetSuite order ID and item line IDs are synced to HotWax Commerce, a scheduled job in HotWax Commerce updates the order status from <mark style="color:orange;">**"Created"**</mark> to <mark style="color:orange;">**"Approved"**</mark>.
+* A scheduled job in HotWax Commerce creates customer deposit records for corresponding orders in the "Undeposited" status in NetSuite.
+* A scheduled job in HotWax Commerce updates the order status from <mark style="color:orange;">**"Created"**</mark> to <mark style="color:orange;">**"Approved"**</mark> in HotWax Commerce.
 
 {% hint style="warning" %}
 **Why is order approval necessary?**
