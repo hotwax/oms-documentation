@@ -16,7 +16,7 @@ Here is the **NetSuite Order Lifecycle Business Process Model** that provides st
 
 ## NetSuite Order Lifecycle BPM
 
-<figure><img src="../../.gitbook/assets/NetSuite order lifecycle bpm.png" alt=""><figcaption><p>NetSuite order lifecycle business process model</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/NetSuite order lifecycle bpm (1).png" alt=""><figcaption><p>NetSuite order lifecycle business process model</p></figcaption></figure>
 
 Most of our customers use Shopify as their eCommerce platform along with NetSuite as their ERP and warehouse fulfillment solution. Therefore, to explain the NetSuite Order Lifecycle BPM, we have taken Shopify as the eCommerce platform, NetSuite as the ERP and warehouse fulfillment solution, with HotWax Commerce as the Order Management System.
 
@@ -48,7 +48,7 @@ Only orders with approved status are eligible to be brokered in HotWax Commerce 
 Now that orders have been approved, they are automatically sent to the Brokering Queue which serves as a waiting area for orders awaiting processing. Orders in the brokering queue are analyzed and picked in the brokering run.
 
 {% hint style="info" %}
-#### What are brokering runs:
+**What are brokering runs:**
 
 Brokering runs are scheduled by retailers to execute at specified intervals, allowing for effective and timely order routing. Retailers need to set a frequency and run time for brokering. For example, setting the frequency of a run to "Daily" and the runtime to "7 am" will execute the brokering run every morning at 7 am.
 {% endhint %}
@@ -120,8 +120,6 @@ This process remains consistent regardless of whether the order fulfillment is p
 
 When an order is marked <mark style="color:orange;">**"Completed"**</mark> in HotWax Commerce, either through the fulfillment feed from NetSuite or the `Store Fulfillment App`, HotWax Commerce automatically identifies these completed orders and marks them as <mark style="color:orange;">**"Fulfilled"**</mark> in Shopify.
 
-
-
 **Overview of how sync works:**
 
 * [ ] Sync new orders from HotWax to NetSuite
@@ -135,8 +133,6 @@ When an order is marked <mark style="color:orange;">**"Completed"**</mark> in Ho
 * [ ] Sync order item fulfillment details from NetSuite to HotWax
 * [ ] Sync order item fulfillment details from HotWax to NetSuite
 * [ ] Invoice orders in NetSuite
-
-
 
 ### Designating NetSuite Fulfillment Locations
 
