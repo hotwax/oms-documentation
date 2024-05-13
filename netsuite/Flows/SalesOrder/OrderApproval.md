@@ -146,7 +146,7 @@ Though it may seem like this would significantly slow down the order sync, this 
 /home/{sftp-username}/netsuite/salesorder/export
 ```
 
-2. A scheduled SuiteScript in NetSuite reads this CSV file from the SFTP location and creates sales order records using the CSV Import function of the N/Task module.
+2. A scheduled SuiteScript in NetSuite reads this CSV file from the SFTP location and creates sales order records in the "Pending Fulfillment" status using the CSV Import function of the N/Task module.
 
 **SuiteScript**
 
