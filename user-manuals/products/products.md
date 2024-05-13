@@ -10,7 +10,7 @@ HotWax Commerce `Find Product` page also empowers users to use multiple filter o
 2. Within the hamburger menu, find and select the `PIM` (Product Information Management) option. This will open a submenu with various product-related functionalities.
 3. From the PIM submenu, choose the `Product` option. This action will direct you to the `Find Product` page.
 
-{% embed url="https://youtu.be/4eSmmv8y6to" %}
+{% embed url="https://youtu.be/FOqIwH1EoGU" %}
 Video: Find Product Page
 {% endembed %}
 

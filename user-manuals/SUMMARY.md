@@ -110,6 +110,7 @@
 * [Company](administration/company/README.md)
   * [Create Product Store](administration/company/create-product-store.md)
   * [Manage Product Store](administration/company/manage-product-store.md)
+  * [Manage Shopify connection](administration/company/manage-shopify-shop.md)
 * [Users](users/README.md)
   * [Create Users](users/createUser.md)
   * [Manage Users](users/manageUser.md)
