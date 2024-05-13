@@ -132,7 +132,7 @@ This marks the completion of the physical gift card order lifecycle.
 
 <figure><img src="../.gitbook/assets/digital gift cards.png" alt=""><figcaption><p>Digital gift card orders lifecycle business process model</p></figcaption></figure>
 
-## 1. Order creation
+### 1. Order creation
 
 When customers order a digital gift card on Shopify, after the order is created, Shopify immediately auto fulfills the order, assigns a serial number to digital gift card, loads the value to activate the gift card and consequently, when HotWax Commerce downloads that order from Shopify, it is automatically marked as <mark style="color:orange;">**“Completed”**</mark>.
 
@@ -140,14 +140,14 @@ When customers order a digital gift card on Shopify, after the order is created,
 Digital gift cards are auto-activated and customers can directly redeem them by entering a unique serial number provided with the card.
 {% endhint %}
 
-## 2. Order synchronization
+### 2. Order synchronization
 
 Digital gift cards are already in the <mark style="color:orange;">**“Completed”**</mark> status in HotWax Commerce. HotWax Commerce also synchronizes them with NetSuite so that customer deposits can be created against them and invoices can be generated.
 
 * A scheduled job in HotWax Commerce Integration Platform generates a feed gift card orders that are in “Completed” status and do not have a NetSuite order item line IDs. This helps make sure that only relevant orders are synchronized to NetSuite and regular orders that are <mark style="color:orange;">**“Completed”**</mark> in HotWax Commerce are not synchronized again to NetSuite.
 * NetSuite’s script reads this feed and creates gift card orders in the <mark style="color:orange;">**“Pending Fulfillment”**</mark> status.
 
-## 3. Synchronize Orders ID and Item Line IDs to HotWax Commerce
+### 3. Synchronize Orders ID and Item Line IDs to HotWax Commerce
 
 A dedicated job in HotWax Commerce downloads NetSuite's internal IDs, while another job downloads NetSuite's item line IDs.
 
