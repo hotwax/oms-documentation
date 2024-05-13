@@ -69,6 +69,38 @@ The job frequency can be configured based on the business needs and the frequenc
 
 ***
 
+### Upload Recent Inventory Changes:
+
+* **Job ID:** UL\_RCNT\_INV
+* **Job Name:** Upload Recent Inventory Changes
+
+#### Description
+
+The `Upload recent inventory changes` job examines the inventory records of HotWax Commerce's products. It identifies products that have undergone inventory changes since the last synchronization. 
+
+To update inventory records, HotWax Commerce initiates an API call to retrieve information from Shopify about products that have undergone changes in HotWax Commerce. The inventory counts for these products in Shopify are then compared with the inventory counts that HotWax Commerce has on file.
+
+After comparing inventory changes, the `Upload recent inventory changes` job records the difference and generates a GraphQL file for the affected products. This file is then uploaded to Shopify, which reads it and updates the `available adjustments` field to either add or deduct inventory based on the changes.
+
+#### Recommended Frequency 
+
+The recommended frequency for this job is 15 minutes, but it can be configured based on the business needs and the desired frequency of updating inventory levels. 
+
+#### Common Troubleshooting Cases
+
+**Scenario:** Inventory Not Synced from HotWax Commerce to Shopify
+
+Read our [user guide](https://docs.hotwax.co/user-guides/v/troubleshooting/shopify/inventory) to troubleshoot the inventory synchronization errors
+
+#### Custom Parameters
+
+| **Parameter**    | **Type**       | **Description**                              | **Default Value** |
+|---------------|------------|------------------------------------------|---------------|
+| **`facilityGroupID`** | Required | Specifies which facilitygroup to be      | FAC\_GRP       |
+| **`includeAll`**    | Optional   | Specifies whether to include all inventory levels. | true          |
+
+***
+
 ### Import Inbound Shipment
 
 * **Job ID:** JOB\_IMP\_TO\_SHPMNT

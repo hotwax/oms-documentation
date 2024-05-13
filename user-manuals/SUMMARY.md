@@ -8,6 +8,9 @@
 * [Introduction](business-process-models/README.md)
 * [Order lifecycle](business-process-models/orderlifecycle.md)
 * [Store fulfillment lifecycle](business-process-models/store.fulfillment.md)
+* [Warehouse fulfillment lifecycle](business-process-models/warehousefulfillmentlifecycle.md)
+* [Inventory lifecycle](business-process-models/inventorylifecycle.md)
+* [Transfer orders lifecycle](business-process-models/transferorderlifecycle.md)
 * [Returns lifecycle](business-process-models/returns-lifecycle/README.md)
   * [Web returns with Loop](business-process-models/returns-lifecycle/loopwebreturnslifecycle.md)
   * [In-store returns with Shopify POS](business-process-models/returns-lifecycle/shopifyposreturnslifecycle.md )
@@ -31,6 +34,10 @@
 * [Data manager](data-manager/README.md)
   * [Configurations](data-manager/configurations.md)
   * [Imports](data-manager/imports.md)
+
+## Products
+* [Product Management](products/products.md)
+  * [Reports](products/reports.md)
 
 ## Orders
 
@@ -96,6 +103,7 @@
   * [Set Bulk Safety Stock](inventory/safety-stock/set-bulk-safety-stock.md)
   * [Set Individual Safety Stock](inventory/safety-stock/set-individual-safety-stock.md)
 * [Multichannel inventory setup](inventory/multichannel-inventory-setup.md)
+* [Reports](inventory/reports.md)
 
 ## Administration
 
@@ -124,8 +132,11 @@
 
 ## How-to documents
 
+* [Deploy HotWax Commerce](how-to/deployment/deployment.md)
 * [Add shipping method](how-to/add-shipping-method.md)
-* [Transfer Order management](how-to/transfer-order-management.md)
-  * [Transfer order Fulfillment](how-to/transfer-order-fulfillment.md)
-  * [Transfer order Receiving](how-to/transfer-order-receiving.md)
-  
+* [Setup BOPIS](how-to/bopis/implement-bopis.md)
+* [Transfer orders](how-to/transfer-orders.md)
+  * [Warehouse to store](how-to/warehouse-to-store.md)
+  * [Store to Warehouse](how-to/store-to-warehouse.md)
+  * [Store to store](how-to/store-to-store.md)
+* [Cancel Orders](how-to/order-cancellations.md)

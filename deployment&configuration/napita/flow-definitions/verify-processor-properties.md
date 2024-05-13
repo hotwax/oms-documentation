@@ -2,18 +2,18 @@
 description: >-
   Learn how to configure and verify crucial properties like Database Connection
   Pooling (DBCP) and Secure File Transfer Protocol (SFTP) for efficient data
-  handling in NiFi.
+  handling in Napita.
 ---
 
 # Verify Processor Properties
 
 Processors are components designed to execute tasks on data within a system's dataflows. They handle tasks like data ingestion, transformation, routing, and interaction. Properties within processors are settings dictating how a processor operates and handles data. These settings allow users to customize processor behavior, including parameters like database connections (DBCP), SFTP details, etc.&#x20;
 
-Users configure these properties through the NiFi user interface during processor setup. Verifying processor properties during creation ensures that entered values are acceptable. While additional properties may need configuration based on specific requirements, database connection (DBCP) and SFTP properties are mandatory for processor execution. If a property's value is invalid, the processor cannot be executed or utilized until the value is verified.&#x20;
+Users configure these properties through Napita during processor setup. Verifying processor properties during creation ensures that entered values are acceptable. While additional properties may need configuration based on specific requirements, database connection (DBCP) and SFTP properties are mandatory for processor execution. If a property's value is invalid, the processor cannot be executed or utilized until the value is verified.&#x20;
 
 ## Database Connection Pooling (DBCP)
 
-Database Connection Pooling (DBCP) within NiFi is crucial for efficient management and reuse of database connections. By implementing DBCP, users can enhance workflow efficiency, particularly when using processors like `ExecuteSQLRecord` and `QueryDatabaseTableRecord`.
+Database Connection Pooling (DBCP) within Napita is crucial for efficient management and reuse of database connections. By implementing DBCP, users can enhance workflow efficiency, particularly when using processors like `ExecuteSQLRecord` and `QueryDatabaseTableRecord`.
 
 This feature reduces the overhead of creating new database connections for each operation, optimizing resource utilization and improving performance. DBCP streamlines database operations by managing and sharing connections among different processors, reducing the time and resources needed for connection establishment.
 
@@ -28,7 +28,7 @@ Verifying the DBCP service at the parent level ensures consistency and validity 
 
 ## Secure File Transfer Protocol
 
-The SFTP (Secure File Transfer Protocol) service in NiFi facilitates secure file transfer between the platform and remote servers. By using SFTP, users can exchange files securely with external systems, ensuring data integrity and confidentiality. SFTP enables seamless and secure file transfer operations within the HotWax Commerce. Whether retrieving files from remote servers or uploading files securely, SFTP provides a reliable method for data exchange with external systems. This is relevant for integrating HotWax Commerce with other systems or performing data exchange operations with external partners. Verifying SFTP properties confirms that connection details are correctly configured, preventing data corruption or loss during file transfers.
+The SFTP (Secure File Transfer Protocol) service in Napita facilitates secure file transfer between the platform and remote servers. By using SFTP, users can exchange files securely with external systems, ensuring data integrity and confidentiality. SFTP enables seamless and secure file transfer operations within the HotWax Commerce. Whether retrieving files from remote servers or uploading files securely, SFTP provides a reliable method for data exchange with external systems. This is relevant for integrating HotWax Commerce with other systems or performing data exchange operations with external partners. Verifying SFTP properties confirms that connection details are correctly configured, preventing data corruption or loss during file transfers.
 
 ### Step-by-Step Usage Instructions:
 

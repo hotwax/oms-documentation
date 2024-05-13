@@ -43,6 +43,46 @@ Vice President of Retail, Warehouse Fulfillment team
 | Brokering Time      | The time when the order was brokered                          |
 
 ***
+### Shopify Fulfillment Status Report
+
+The Shopify Fulfillment Status Report offers retailers valuable insights into their order processing. It highlights the number of orders fulfilled and those still pending, aiding in the assessment of operational efficiency. Retailers can leverage reports from Hotwax to access historical data and current statistics, enabling them to track performance over time and promptly address any issues. It serves as a progress report for order fulfillment, ensuring smooth operations.
+
+#### User
+Head of eCommerce, Head of Stores, Vice President of Retail
+
+**Report Glossary**
+
+| Item                      | Item Details                                     |
+|---------------------------|-------------------------------------------------|
+| Hotwax Order ID           | Unique identifier for the order in Hotwax system|
+| Shopify Order Name        | Name or identifier associated with the order in Shopify system|
+| SKU                       | Stock Keeping Unit, a unique code assigned to each product|
+| Facility Name             | Name of the facility where inventory is stored|
+| Item Status               | Status of the item (e.g., available, out of stock, backordered)|
+| Hotwax Shipment Status    | Status of the shipment in Hotwax|
+| Hotwax Fulfillment Time   | Time taken to fulfill the order in Hotwax|
+| Created Time              | Time when the order was created|
+| Shopify Fulfillment ID    | Unique identifier for the fulfillment process in Shopify system|
+| Shopify Fulfillment Status| Status of the fulfillment process in Shopify system|
+| Shopify Fulfillment Entry Time | Time when the fulfillment process was initiated in the Shopify system|
+
+***
+
+### Store Daily Orders Fulfillment Report
+
+The Store Daily Orders Fulfillment Report empowers retailers to monitor the efficiency and effectiveness of their store operations. By tracking the daily number of orders fulfilled per store, retailers can identify trends and patterns, facilitating individual store performance assessments. This insight aids in recognizing top-performing stores and pinpointing areas for improvement in underperforming ones. 
+With Store Daily Orders Fulfillment Reports, retailers can optimize store operations, enhance customer satisfaction, and ultimately drive revenue growth.
+
+#### User
+Head of eCommerce, Head of Stores, Vice President of Retail
+
+**Report Glossary**
+| Item                    | Item Details                                     |
+|---------------------------|-------------------------------------------------|
+| Store                 | Store Name
+| Count                 | Count of orders fulfilled in a store|
+
+***
 
 ### Daily Store Shipment Performance Report
 
@@ -50,7 +90,7 @@ Merchants measure their stores’ omnichannel order fulfillment rates and want a
 
 The **Daily Store Shipment Performance Report** shows the number of daily shipped orders for each store, giving an overview of the store’s daily performance.
 
-This performance report also yields valuable insight into the most active and least active stores within a set timeframe. With this data, retailers can work with underperforming stores to understand the reason for low activity, identify the cause of under performance, and resolve the issue.
+This performance report also yields valuable insight into the most active and least active stores within a set timeframe. With this data, retailers can work with underperforming stores to understand the reason for low activity, identify the cause of underperformance, and resolve the issue.
 
 Similarly, the retailer wants to see product-level shipping performance. The report also includes product-level performance. This information helps retailers understand a newly launched product's performance in a given area or region. Retailers can plan their inventory accordingly after knowing which products perform best at a given store.
 
@@ -78,11 +118,11 @@ Omnichannel retailers use stores as their order fulfillment locations. Fulfillme
 
 Many reasons contribute to stores delaying and rejecting orders, including low operational strength and inventory shortages. Customer order cancellations are also common. Tracking store fulfillment performance enables retailers to identify and resolve these order fulfillment issues.
 
-Likewise, merchants prefer to keep a company-wide order fulfillment goal for daily processed, shipped, rejected, and canceled orders. Any facility performing below the set goal raises a concern for merchants and puts their focus on improving performance of these facilities.
+Likewise, merchants prefer to keep a company-wide order fulfillment goal for daily processed, shipped, rejected, and canceled orders. Any facility performing below the set goal raises a concern for merchants and puts their focus on improving the performance of these facilities.
 
 The **Store Dashboard** shows the storewide data where the orders were brokered, rejected, canceled, and then fulfilled in a day.
 
-The report shows the percentage of shipped, processed, and canceled orders of the stores. Retailers can compare the actual fulfillment performance against the set goal to assess performance of each store.
+The report shows the percentage of shipped, processed, and canceled orders of the stores. Retailers can compare the actual fulfillment performance against the set goal to assess the performance of each store.
 
 #### User
 
@@ -141,7 +181,7 @@ Head of eCommerce, Head of Stores, Vice President of Retail
 | Pickup Date      | The date when the order is picked up    |
 | Canceled Date    | The date when the order was canceled    |
 | Shipping Method  | The Shipping method by which order is   |
-
+***
 ## Customer support
 
 These reports help customer service representatives answer customer questions about their order
@@ -294,11 +334,6 @@ Head of eCommerce, Head of Stores, Vice President of Retail
 | CN_FL_EO     | Entire order cannot be fulfilled from the facility                                                  |
 | REJ_RSN_DAMAGED       | Order is rejected due to unavailable inventory                                |
 | NO_VARIANCE_LOG | Order rejected without any variance so inventory won't get affected.                                            |
-
-
-
-
-
 
 
 

@@ -12,6 +12,7 @@
 
 * [Initial Product Sync](SyncShopify/README.md)
 * [Initial Order Sync](SyncShopify/importOrders.md)
+* [Initial Inventory Sync](SyncShopify/upload-inventory.md)
 * [Integrations](ShopifyIntegration/integration-mapping.md)
   * [Locations](ShopifyIntegration/MapLocations.md)
   * [Shipping Method](ShopifyIntegration/shipping-method.md)

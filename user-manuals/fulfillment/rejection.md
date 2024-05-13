@@ -35,9 +35,16 @@ Video: Single Order Rejection
 
 ## Bulk Order Rejection
 
+In HotWax Commerce, store managers have a Reject All feature that allows rejecting all orders that are in an open state or in-progress state coming for fulfillment. This feature is particularly valuable during times of high demand or when logistical hurdles arise, such as when a carrier truck cannot pick up the items from their store.
+
+By rejecting all online orders, store managers can ensure that orders can be fulfilled from other locations in case their facility is unavailable for fulfillment to avoid delays and order cancellations.
+
+Note: The store manager needs to select `Online order fulfillment` capacity to `No Capacity` to ensure that no new orders are  brokered to this facility
+
+
 #### Reject outstanding orders in bulk
 
-1. In[ ](https://app.gitbook.com/s/nxEFZBvpZaE6aiGObuBX/adminstration-settings/fulfillment-section)the open screen, click on 'Reject All' icon at the top right corner.
+1. In the open screen, click on 'Reject All' icon at the top right corner.
 2. All open orders will be rejected and removed from the Open Orders page.​
 
 {% embed url="https://youtu.be/4eSmmv8y6to" %}
