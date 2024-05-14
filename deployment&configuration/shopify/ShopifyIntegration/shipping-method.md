@@ -10,7 +10,16 @@ Shipping methods in Shopify must be mapped in HotWax Commerce for efficient orde
 
 To address this, the HotWax integration layer maps the original carrier and shipment method from Shopify to the corresponding method in HotWax Commerce. During order syncing from Shopify, the integration layer checks saved mappings, ensuring accurate correspondence. This shipping method mapping guarantees alignment between the selected shipping method in Shopify and its counterpart in HotWax Commerce, facilitating seamless order processing.
 
-## Creating a Shipping Method in HotWax Commerce:
+## Locating Shipping Method on Shopify
+
+Retailers create shipping methods on Shopify to choose where they ship and how much they charge for shipping to the customer's location. Here's how you can locate existing shipping methods on Shopify:
+
+1. Log in to your Shopify storefront's admin panel with your user credentials.
+2. Navigate to `Settings` > `Shipping and Delivery`
+3. Shipping methods available to customers on the checkout page are created as per the shipping zones. To view the shipping methods, click on the `general shipping rates` available in the `Shipping` section.
+4. All the shipping rates will be visible in the shipping origins sections.
+
+## Creating a Shipping Method in HotWax Commerce
 
 Shipping methods supported by the retailer need to be created in HotWax Commerce to ensure the accurate transmission of shipping information to the carrier. Follow these steps:
 
@@ -23,7 +32,7 @@ Shipping methods supported by the retailer need to be created in HotWax Commerce
 
 Once shipping methods are created, they need to be mapped with the Shopify Shop to receive accurate information for order processing and fulfillment.
 
-## Steps to Map Shipping Method with Shopify:
+## Steps to Map Shipping Method with Shopify
 
 1. Navigate to the `Shopify Shop Carrier Shipment` section on the Shopify Shop Page.
 2. Click on the `Add` button, which will open up a new pop-up box.
