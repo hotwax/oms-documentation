@@ -16,7 +16,7 @@ The HotWax Commerce support team initiates the launch of a machine to deploy a H
 
 Once the instance is operational, retailers will get a login prompt. Each instance comes with a default user, which is omitted here for security purposes.
 
-During initial login, you'll likely be prompted to reset your password for security purposes. Once you log in ensure that all menus within the Sidebar and EXIM screen have loaded correctly. It is recommended that you create new [users](users/createUser.md) and disable the default user.
+During initial login, you'll likely be prompted to reset your password for security purposes. Once you log in ensure that all menus within the Sidebar and EXIM screen have loaded correctly. It is recommended that you create new [users](../../users/createUser.md) and disable the default user.
 
 ## Add DBIC
 
@@ -30,11 +30,11 @@ When you deploy HotWax Commerce, one default product store is already created, w
 
 ## Load Facility
 
-Facilities are physical locations such as a warehouse, distribution center, or store where inventory is stored, managed, and processed. To establish facilities, it is necessary to create both the facilities and their internal locations within OMS. Typically, upon creating facilities, the associated locations are generated automatically. In cases where they are not generated, manual addition of location data is required. For an efficient bulk creation of facilities and their corresponding locations during the initial setup, it is advisable to utilize the [facilities CSV](https://docs.hotwax.co/deployment-and-configurations/initial-setup/loadfacilities), or you can [create facilities](facilities/add-new-facilities.md) with our `Facility management application`.
+Facilities are physical locations such as a warehouse, distribution center, or store where inventory is stored, managed, and processed. To establish facilities, it is necessary to create both the facilities and their internal locations within OMS. Typically, upon creating facilities, the associated locations are generated automatically. In cases where they are not generated, manual addition of location data is required. For an efficient bulk creation of facilities and their corresponding locations during the initial setup, it is advisable to utilize the [facilities CSV](https://docs.hotwax.co/deployment-and-configurations/initial-setup/loadfacilities), or you can [create facilities](../../facilities/) with our `Facility management application`.
 
 ## Create Facility Groups
 
-In Hotwax commerce facility groups are used to define the scope and functionality of the facility for omnichannel order management. For instance, including a facility in the Online Facility group indicates that this facility will be available to sell its inventory to online channels. Facilities in the Pickup group will be available for BOPIS and Facilities under the Brokering subtype will be the facilities where orders can be brokered. You can learn how to add facilities and [manage facility groups](facilities/manage-groups.md) through our detailed document.
+In Hotwax commerce facility groups are used to define the scope and functionality of the facility for omnichannel order management. For instance, including a facility in the Online Facility group indicates that this facility will be available to sell its inventory to online channels. Facilities in the Pickup group will be available for BOPIS and Facilities under the Brokering subtype will be the facilities where orders can be brokered. You can learn how to add facilities and [manage facility groups](../../facilities/manage-groups.md) through our detailed document.
 
 ## Configure System Property Data
 
@@ -50,7 +50,7 @@ Solr, an open-source enterprise search platform, provides powerful search capabi
 
 ## Add Shipping Gateways
 
-Discover how to configure shipping gateways in HotWax Commerce to seamlessly integrate HotWax Commerce's Store Fulfillment App empowers retailers to efficiently manage online order fulfillment from their stores. By integrating with multiple Third-Party Logistics companies, known as Carriers, HotWax Commerce enables the generation of shipping labels based on store and customer addresses, as well as package weight and dimensions. Each Carrier offers a Shipping Gateway software system, facilitating the request for shipment quotations and labels during the fulfillment process. [Read our document](https://docs.hotwax.co/deployment-and-configurations/user-and-gateway-configuration/shippinggateways) to learn how to set up shipping carriers, shipping methods, and integration with the shipment gateway, ensuring a streamlined and cost-effective-order-fulfillment process. Users are also required to [add shipping boxes](fulfillment/shipping-box.md) to ensure precise shipping cost calculation and accurate label generation.
+HotWax Commerce's Store Fulfillment App empowers retailers to efficiently manage online order fulfillment from their stores. By integrating with multiple Third-Party Logistics companies, known as Carriers, HotWax Commerce enables the generation of shipping labels based on store and customer addresses, as well as package weight and dimensions. Each Carrier offers a Shipping Gateway software system, facilitating the request for shipment quotations and labels during the fulfillment process. [Read our document](https://docs.hotwax.co/deployment-and-configurations/user-and-gateway-configuration/shippinggateways) to learn how to set up shipping carriers, shipping methods, and integration with the shipment gateway, ensuring a streamlined and cost-effective order fulfillment process. Users are also required to add [shipping boxes](../../fulfillment/shipping-box.md) to ensure precise shipping cost calculation and accurate label generation.
 
 ## Install the HotWax commerce App
 
@@ -76,7 +76,7 @@ HotWax Commerce provides a unified view of inventory by seamlessly connecting wi
 
 ## Sync Inventory to Shopify
 
-HotWax Commerce determines the "Available to Promise (ATP)" or the amount of inventory that can be sold and then sends it to Shopify. This makes HotWax Commerce the ultimate authority on inventory availability. Here’s how you can upload inventory from HotWax Commerce to Shopify. **(Link Need to be Added)**
+HotWax Commerce determines the "Available to Promise (ATP)" or the amount of inventory that can be sold and then sends it to Shopify. This makes HotWax Commerce the ultimate authority on inventory availability. Here’s how you can [upload inventory](https://docs.hotwax.co/deployment-and-configurations/v/shopify/flows/upload-inventory) from HotWax Commerce to Shopify.&#x20;
 
 ## Start Brokering Runs
 
