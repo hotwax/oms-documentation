@@ -105,7 +105,7 @@ LIMIT 1000;
 
 ### Query Logic
 
-**Data Selection:** The query starts by selecting specific data from a table named `order_header`. This table likely contains information about orders, including the order name, order ID, entry date, and sales channel.
+**Data Selection:** The query starts by selecting specific data from a table named `order_header`. This table contains information about orders, including the order name, order ID, entry date, and sales channel.
 
 **Defining Criteria for Missing IDs:** The report specifically targets orders without a Netsuite order ID (`ORDER_IDENTIFICATION_TYPE_ID = 'NETSUITE_ORDER_ID'`) by filtering data where the Netsuite order ID is null or not present in the database.
 
@@ -131,7 +131,9 @@ The POS Cash Sale Exp Failed Report is a tool for tracking synchronization failu
 | CUSTOMER       | The customer associated with the cash sale order                           | OrderHeader.CUSTOMER_CLASSIFICATION_ID |
 | SUBSIDIARY     | The subsidiary information for the cash sale                              | F.EXTERNAL_ID (Subsidiary is set to 5 specifically for facility 376; rest of the facilities have subsidiary 1) |
 
-### SQL Query to Generate POS Cash Sales Exp Failed Report
+<details>
+
+**<summary>SQL Query to Generate POS Cash Sales Exp Failed Report</summary>**
 
 ```sql
 SELECT `ORDER_ID` AS `ORDER_ID`,
@@ -179,6 +181,8 @@ FROM
 LIMIT 1000;
 ```
 
+</details>
+
 ### Query Logic
 
 **Data Selection**: The query selects specific data from the `ORDER_HEADER` table, including order names, IDs, entry dates, sales channels, and customer information.
@@ -210,7 +214,9 @@ The "Duplicate Order" report provides crucial insights into the frequency of dup
 | HC_Order_Ids   | Comma-separated list of HotWax Commerce Order IDs             |                      |
 | Netsuite_Order_Ids | Comma-separated list of NetSuite Order IDs                   |                      |
 
-### SQL Query to Generate Duplicate Order Report
+<details>
+
+**<summary>SQL Query to Generate Duplicate Order Report</summary>**
 
 ```sql
 SELECT `ORDER_NAME` AS `ORDER_NAME`,
@@ -233,6 +239,8 @@ FROM
 ORDER BY max_entry_date DESC
 LIMIT 1000;
 ```
+
+</details>
 
 ### Query Logic
 
@@ -261,7 +269,9 @@ When an order fails to transfer from Shopify to Hotwax, it doesn't show up in th
 | Shopify Order Name  | Name of the order in Shopify                             | OrderHeader.ORDER_NAME  |
 | Order Created Date  | Date when the order was created                           | OrderHeader.ORDER_DATE  |
 
-### SQL Query to Generate Shopify Order Import Error
+<details>
+       
+**<summary>SQL Query to Generate Shopify Order Import Error</summary>**
 
 ```sql
 SELECT `Shopify Website` AS `Shopify Website`,
@@ -280,6 +290,8 @@ FROM
    ORDER BY orderCreatedDate_dt DESC) AS virtual_table
 LIMIT 1000;
 ```
+
+</details>
 
 ### Query Logic
 
@@ -300,7 +312,9 @@ Retailers often face challenges in managing and reducing order cancellations. Cu
 | CANCELLED_DATE          | The date range during which orders were cancelled (2024-01-28 to 2024-02-04) | OrderStatus.STATUS_DATETIME |
 | COUNT_DISTINCT(ORDER_ID)| The count of distinct order IDs for cancelled orders (11) | OrderIdentification.ID_VALUE |
 
-### SQL Query to Generate Canceled Order Report
+<details>
+
+**<summary>SQL Query to Generate Canceled Order Report</summary>**
 
 ```sql
 SELECT DATE(DATE_SUB(`CANCELLED_DATE`, INTERVAL DAYOFWEEK(`CANCELLED_DATE`) - 1 DAY)) AS `CANCELLED_DATE`,
@@ -339,6 +353,8 @@ GROUP BY DATE(DATE_SUB(`CANCELLED_DATE`, INTERVAL DAYOFWEEK(`CANCELLED_DATE`) - 
 LIMIT 100000;
 ```
 
+</details>
+
 ### Query Logic
 
 **Data Selection**: Specific data is selected from various tables likely containing information about orders, order items, order statuses, and product details.
@@ -368,7 +384,9 @@ The Order Approval Duration graph provides information on how long it takes the 
 | Order Volume                      | This refers to the number of orders received by the system over a specific period.                   | OrderHeader.ORDER_ID     |
 | Average Approval Duration (Minutes) | This is the average amount of time it takes for the OMS to approve an order.                         | Calculated difference of OrderHeader.ORDER_DATE and OrderStatus.STATUS_DATETIME(For “APPROVED” status) divided by 60 to display in minutes |
 
-### SQL Query to Generate Order Approval Duration Graph
+<details>
+
+**<summary>SQL Query to Generate Order Approval Duration Graph</summary>**
 
 ```sql
 SELECT DATE(`ENTRY_DATE`) AS `ENTRY_DATE`,
@@ -396,6 +414,8 @@ GROUP BY DATE(`ENTRY_DATE`)
 ORDER BY `Average approval duration in minutes` DESC
 LIMIT 10000;
 ```
+
+</details>
 
 **Data Selection:** The SQL query begins by selecting specific data from two tables: `order_header` and `order_status`. These tables likely contain information about orders and their statuses.
 
@@ -427,7 +447,9 @@ The Missing Order Attribute Report is a vital tool for tracking order synchroniz
 | NETSUITE_ORDER_EXPORTED      | Indicates whether the order has been exported to NetSuite                                           | OrderAttribute.ATTR_NAME with value as “NETSUITE_ORDER_EXPORTED” and OrderAttribute.ATTR_VALUE |
 | NETSUITE_CUSTOMER_ID         | The customer identifier in NetSuite                                                                 | PartyIdentification.ID_VALUE with PartyIdentification.PARTY_IDENTIFICATION_TYPE_ID as “NETSUITE_CUSTOMER_ID” |
 
-### SQL Query to Generate Missing Order Attribute Report
+<details>
+
+**<summary>SQL Query to Generate Missing Order Attribute Report</summary>**
 
 ```sql
 SELECT `ORDER_NAME` AS `ORDER_NAME`,
@@ -477,6 +499,8 @@ ORDER BY `ENTRY_DATE` ASC
 LIMIT 1000;
 ```
 
+</details>
+
 ### Query Logic
 
 **Data Selection:** The SQL query starts by selecting specific data fields relevant to the report. This typically includes information about orders and their attributes.
@@ -503,7 +527,9 @@ The HotWax Order Count Report offers a daily snapshot of new orders in the Order
 |-----------------------|-------------------------------------------------------------|----------------------------|
 | ORDER_COUNT           | The count of the orders in the HotWax Commerce              | Count of OrderHeader.EXTERNAL_ID |
 
-### SQL Query to Generate HotWax Order Count Report
+<details>
+
+**<summary>SQL Query to Generate HotWax Order Count Report</summary>**
 
 ```sql
 SELECT count(`EXTERNAL_ID`) AS `COUNT(EXTERNAL_ID)`
@@ -523,6 +549,8 @@ WHERE (`STATUS_ID` NOT IN ('ORDER_CANCELLED'))
   AND `ORDER_DATE` < STR_TO_DATE('2024-05-08 00:00:00.000000', '%Y-%m-%d %H:%i:%s.%f')
 LIMIT 100000;
 ```
+
+</details>
 
 ### Query Logic
 
