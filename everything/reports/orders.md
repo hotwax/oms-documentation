@@ -1,15 +1,19 @@
-# Sales Order Count by Channel Report
+# Order Reports
+
+## Sales Order Count by Channel Report
 
 Retailers receive orders through various channels, including eCommerce websites, social media platforms, online marketplaces, and point-of-sale (POS) systems. Retailers need visibility of their sales into channel performance. The Sales Order Count by Channel report offers a clear summary of order counts per channel, enabling retailers to identify high-performing channels and areas needing improvement. Retailers can easily discern the total count of orders per channel, whether it's from POS, Shopify, or any other channel enabling effective tracking and analysis.
 
-#### Field Header
+### Field Header
 
 | Field Header         | Description                                                         | HC Entity                      |
 |----------------------|---------------------------------------------------------------------|--------------------------------|
 | Sales Channel        | Indicates the sales channel, either "POS" or "Shopify".            | OrderHeader.SALES_CHANNEL_ENUM_ID |
 | COUNT(EXTERNAL_ID)   | Denotes the total number of orders received through each sales channel. | OrderHeader.ORDER_ID               |
 
-#### SQL Query to Generate Sales Order Count by Channel Report
+<details>
+
+ **<summary>SQL Query to Generate Sales Order Count by Channel Report</summary>**
 
 ```sql
 SELECT `SALES_CHANNEL` AS `SALES_CHANNEL`,
@@ -33,7 +37,9 @@ ORDER BY `COUNT(EXTERNAL_ID)` DESC
 LIMIT 100;
 ```
 
-#### Query Logic
+</details>
+
+### Query Logic
 
 **Data Selection:** The SQL query selects data from the `order_header` table, focusing on sales orders. It calculates the count of orders received through each sales channel, excluding cancelled orders, within a specific date range.
 
@@ -47,11 +53,11 @@ LIMIT 100;
 
 **Limitation:** The query limits the output to the top 100 sales channels by order count.
 
-# Missing Netsuite Order ID Report
+## Missing Netsuite Order ID Report
 
 Retailers often encounter synchronization issues between Shopify and Netsuite, leading to orders not being properly recorded. This can result in delays and disruptions in order processing and fulfillment, impacting customer satisfaction and revenue. This report is helpful for retailers to troubleshoot issues when orders, that have all the necessary attributes like "SIGNIFYD_APPROVED", and "NETSUITE_CUSTOMER_ID" are not synchronized with Netsuite. It highlights orders in approved or completed status that lack Netsuite order IDs, indicating synchronization problems. Retailers can view this report to identify problematic orders and rectify errors to ensure all orders are synced with Netsuite. The synchronization process between HotWax and Netsuite may encounter delays. Therefore, this report exclusively displays orders without NetSuite order IDs for over 4 hours.
 
-#### Field Header
+### Field Header
 
 | Field Header      | Description                                               | HC Entity                    |
 |-------------------|-----------------------------------------------------------|------------------------------|
@@ -62,7 +68,9 @@ Retailers often encounter synchronization issues between Shopify and Netsuite, l
 |                   | (Calculated difference of current system datetime with the datetime when order entered in OMS) | |
 | SALES_CHANNEL     | Indicates the sales channel through which the order was received | OrderHeader.SALES_CHANNEL_ENUM_ID |
 
-#### SQL Query to Generate Missing Netsuite Order ID Report
+<details>
+
+**<summary>SQL Query to Generate Missing Netsuite Order ID Report</summary>**
 
 ```sql
 SELECT `ORDER_NAME` AS `ORDER_NAME`,
@@ -93,7 +101,9 @@ ORDER BY `ENTRY_DATE` ASC
 LIMIT 1000;
 ```
 
-#### Query Logic
+</details>
+
+### Query Logic
 
 **Data Selection:** The query starts by selecting specific data from a table named `order_header`. This table likely contains information about orders, including the order name, order ID, entry date, and sales channel.
 
@@ -105,11 +115,11 @@ LIMIT 1000;
 
 **Ordering Results:** The results are ordered by the `ENTRY_DATE` in ascending order, which arranges the orders from oldest to most recent. This organization aids in identifying patterns or trends over time.
 
-# POS Cash Sale Exp Failed Report
+## POS Cash Sale Exp Failed Report
 
 The POS Cash Sale Exp Failed Report is a tool for tracking synchronization failures related to Point of Sale (POS) cash sales. This report is instrumental in identifying instances where the synchronization process encountered issues, allowing for a proactive approach to address and resolve these failures. By leveraging this report, organizations can ensure the accuracy and completeness of their POS cash sale data, contributing to a more reliable and efficient sales reporting process.
 
-#### Report Structure
+### Report Structure
 
 | Field Header   | Description                                                               | HC Entity            |
 |----------------|---------------------------------------------------------------------------|----------------------|
@@ -121,7 +131,7 @@ The POS Cash Sale Exp Failed Report is a tool for tracking synchronization failu
 | CUSTOMER       | The customer associated with the cash sale order                           | OrderHeader.CUSTOMER_CLASSIFICATION_ID |
 | SUBSIDIARY     | The subsidiary information for the cash sale                              | F.EXTERNAL_ID (Subsidiary is set to 5 specifically for facility 376; rest of the facilities have subsidiary 1) |
 
-#### SQL Query to Generate POS Cash Sales Exp Failed Report
+### SQL Query to Generate POS Cash Sales Exp Failed Report
 
 ```sql
 SELECT `ORDER_ID` AS `ORDER_ID`,
@@ -169,29 +179,29 @@ FROM
 LIMIT 1000;
 ```
 
-#### Query Logic
+### Query Logic
 
-- **Data Selection**: The query selects specific data from the `ORDER_HEADER` table, including order names, IDs, entry dates, sales channels, and customer information.
+**Data Selection**: The query selects specific data from the `ORDER_HEADER` table, including order names, IDs, entry dates, sales channels, and customer information.
 
-- **Data Filtering**: Only completed orders (`STATUS_ID = 'ORDER_COMPLETED'`) from the POS sales channel (`SALES_CHANNEL_ENUM_ID = 'POS_SALES_CHANNEL'`) with no associated Netsuite order ID are included.
+**Data Filtering**: Only completed orders (`STATUS_ID = 'ORDER_COMPLETED'`) from the POS sales channel (`SALES_CHANNEL_ENUM_ID = 'POS_SALES_CHANNEL'`) with no associated Netsuite order ID are included.
 
-- **Defining Criteria for Failed Export**: The report targets POS cash sales transactions with failed expense exports.
+**Defining Criteria for Failed Export**: The report targets POS cash sales transactions with failed expense exports.
 
-- **Joining Relevant Tables**: Tables are joined based on common fields to identify transactions and associated details such as sales channels and error information.
+**Joining Relevant Tables**: Tables are joined based on common fields to identify transactions and associated details such as sales channels and error information.
 
-- **Selecting Necessary Information**: Selected columns provide context for identifying failed POS cash sales transactions.
+**Selecting Necessary Information**: Selected columns provide context for identifying failed POS cash sales transactions.
 
-- **Grouping Data**: The query implicitly groups records based on filtering criteria to focus solely on transactions with failed expense exports.
+**Grouping Data**: The query implicitly groups records based on filtering criteria to focus solely on transactions with failed expense exports.
 
-- **Calculating Subsidiary**: A conditional statement determines the subsidiary based on the facility's external ID, adding context to the order data.
+**Calculating Subsidiary**: A conditional statement determines the subsidiary based on the facility's external ID, adding context to the order data.
 
-# Duplicate Order
+## Duplicate Order
 
 Retailers often face the issue of duplicate orders, which can cause inventory discrepancies and financial losses. For instance, if an order is duplicated and subsequently brokered differently, it can result in ATP (Available to Promise) discrepancies and financial losses for the retailer. Furthermore, it may cause errors when reconciling orders with Netsuite.
 
 The "Duplicate Order" report provides crucial insights into the frequency of duplicate orders by presenting the total count of duplicate orders associated with the same order name. By understanding the extent of duplicate orders, retailers can take necessary actions to ensure that duplicate orders are removed from the system.
 
-#### Report Structure
+### Report Structure
 
 | Field Header   | Description                                                   | HC Entity            |
 |----------------|---------------------------------------------------------------|----------------------|
@@ -200,7 +210,7 @@ The "Duplicate Order" report provides crucial insights into the frequency of dup
 | HC_Order_Ids   | Comma-separated list of HotWax Commerce Order IDs             |                      |
 | Netsuite_Order_Ids | Comma-separated list of NetSuite Order IDs                   |                      |
 
-#### SQL Query to Generate Duplicate Order Report
+### SQL Query to Generate Duplicate Order Report
 
 ```sql
 SELECT `ORDER_NAME` AS `ORDER_NAME`,
@@ -224,25 +234,25 @@ ORDER BY max_entry_date DESC
 LIMIT 1000;
 ```
 
-#### Query Logic
+### Query Logic
 
-- **Data Selection**: The query selects four columns: `ORDER_NAME`, `COUNT`, `HC_Order_Ids`, and `Netsuite_Order_Ids` from the `order_header` and `order_identification` tables.
+**Data Selection**: The query selects four columns: `ORDER_NAME`, `COUNT`, `HC_Order_Ids`, and `Netsuite_Order_Ids` from the `order_header` and `order_identification` tables.
 
-- **Counting Duplicate Orders**: Duplicate orders are identified based on their `ORDER_NAME` and `EXTERNAL_ID`, and the `COUNT()` function calculates the number of occurrences of each unique `EXTERNAL_ID`.
+**Counting Duplicate Orders**: Duplicate orders are identified based on their `ORDER_NAME` and `EXTERNAL_ID`, and the `COUNT()` function calculates the number of occurrences of each unique `EXTERNAL_ID`.
 
-- **Concatenation of Order IDs**: For each duplicated order, the associated `HC_Order_Ids` (HotWax Commerce Order IDs) and `Netsuite_Order_Ids` (NetSuite Order IDs) are concatenated into comma-separated lists using the `GROUP_CONCAT()` function.
+**Concatenation of Order IDs**: For each duplicated order, the associated `HC_Order_Ids` (HotWax Commerce Order IDs) and `Netsuite_Order_Ids` (NetSuite Order IDs) are concatenated into comma-separated lists using the `GROUP_CONCAT()` function.
 
-- **Filtering Criteria**: Orders with a status of "ORDER_CANCELLED" and a specific `ORDER_NAME` are excluded from the analysis.
+**Filtering Criteria**: Orders with a status of "ORDER_CANCELLED" and a specific `ORDER_NAME` are excluded from the analysis.
 
-- **Grouping and Aggregation**: Data is grouped by `EXTERNAL_ID` and `ORDER_NAME` to aggregate duplicate orders, and the `HAVING` clause filters out orders with a count of occurrences less than 1, ensuring that only duplicate orders are included.
+**Grouping and Aggregation**: Data is grouped by `EXTERNAL_ID` and `ORDER_NAME` to aggregate duplicate orders, and the `HAVING` clause filters out orders with a count of occurrences less than 1, ensuring that only duplicate orders are included.
 
-- **Ordering by Entry Date**: Results are ordered based on the maximum entry date (`max_entry_date`) of the duplicated orders in descending order, prioritizing the most recent occurrences of duplicate orders for resolution.
+**Ordering by Entry Date**: Results are ordered based on the maximum entry date (`max_entry_date`) of the duplicated orders in descending order, prioritizing the most recent occurrences of duplicate orders for resolution.
 
-# Shopify Order Import Error
+## Shopify Order Import Error
 
 When an order fails to transfer from Shopify to Hotwax, it doesn't show up in the OMS, and an error is logged in the EXIM Import record for Shopify orders. The Shopify Order Import Error report details these failed imports, providing the specific errors generated by the system. There are several potential causes for these errors, including data exported from Shopify not being compatible with the OMS, or issues with specific API endpoints, such as inadequate permissions or temporary unavailability. Retailers can use this report to identify problematic orders and troubleshoot accordingly.
 
-#### Report Structure
+### Report Structure
 
 | Field Header        | Description                                              | HC Entity               |
 |---------------------|----------------------------------------------------------|-------------------------|
@@ -251,7 +261,7 @@ When an order fails to transfer from Shopify to Hotwax, it doesn't show up in th
 | Shopify Order Name  | Name of the order in Shopify                             | OrderHeader.ORDER_NAME  |
 | Order Created Date  | Date when the order was created                           | OrderHeader.ORDER_DATE  |
 
-#### SQL Query to Generate Shopify Order Import Error
+### SQL Query to Generate Shopify Order Import Error
 
 ```sql
 SELECT `Shopify Website` AS `Shopify Website`,
@@ -271,26 +281,26 @@ FROM
 LIMIT 1000;
 ```
 
-#### Query Logic
+### Query Logic
 
-- **Data Selection**: The query selects specific data from the `logInsights` table, likely containing information related to Shopify orders, including the Shopify website name, error messages, Shopify order names, tags, and order creation dates.
+**Data Selection**: The query selects specific data from the `logInsights` table, likely containing information related to Shopify orders, including the Shopify website name, error messages, Shopify order names, tags, and order creation dates.
 
-- **Defining Selection Criteria**: Data is filtered to include only entries where the document type is 'SHOPIFY_ORDER', ensuring that only relevant Shopify order information is retrieved.
+**Defining Selection Criteria**: Data is filtered to include only entries where the document type is 'SHOPIFY_ORDER', ensuring that only relevant Shopify order information is retrieved.
 
-- **Identification of Shopify Order Errors**: Within a subquery (`virtual_table`), records with a `docType` of 'SHOPIFY_ORDER' are isolated, capturing entries specific to Shopify order imports. The `errorMessage_txt_en` field captures system-generated error messages, providing insights into the nature of import failures.
+**Identification of Shopify Order Errors**: Within a subquery (`virtual_table`), records with a `docType` of 'SHOPIFY_ORDER' are isolated, capturing entries specific to Shopify order imports. The `errorMessage_txt_en` field captures system-generated error messages, providing insights into the nature of import failures.
 
-# Canceled Order Report
+## Canceled Order Report
 
 Retailers often face challenges in managing and reducing order cancellations. Customers or CSRs may cancel orders due to reasons such as changes in preference, product unavailability, errors in orders, delivery delays, financial constraints, product defects, better offers elsewhere, and miscommunication. The Cancelled Order Report provides weekly insights into cancellation rates, enabling retailers to pinpoint peak cancellation weeks and address underlying causes. It outlines the total number of canceled orders within the OMS, helping retailers businesses enhance customer satisfaction and operational efficiency by addressing root issues effectively. A weekly report is generated for retailers, and the frequency of the report can be updated as per the requirements.
 
-#### Report Structure
+### Report Structure
 
 | Field Header            | Description                                    | HC Entity                   |
 |-------------------------|------------------------------------------------|-----------------------------|
 | CANCELLED_DATE          | The date range during which orders were cancelled (2024-01-28 to 2024-02-04) | OrderStatus.STATUS_DATETIME |
 | COUNT_DISTINCT(ORDER_ID)| The count of distinct order IDs for cancelled orders (11) | OrderIdentification.ID_VALUE |
 
-#### SQL Query to Generate Canceled Order Report
+### SQL Query to Generate Canceled Order Report
 
 ```sql
 SELECT DATE(DATE_SUB(`CANCELLED_DATE`, INTERVAL DAYOFWEEK(`CANCELLED_DATE`) - 1 DAY)) AS `CANCELLED_DATE`,
@@ -329,36 +339,36 @@ GROUP BY DATE(DATE_SUB(`CANCELLED_DATE`, INTERVAL DAYOFWEEK(`CANCELLED_DATE`) - 
 LIMIT 100000;
 ```
 
-#### Query Logic
+### Query Logic
 
-- **Data Selection**: Specific data is selected from various tables likely containing information about orders, order items, order statuses, and product details.
+**Data Selection**: Specific data is selected from various tables likely containing information about orders, order items, order statuses, and product details.
 
-- **Defining Cancellation Criteria**: The query filters the data to include only orders where the status indicates cancellation (e.g., `STATUS_ID = 'ITEM_CANCELLED'`).
+**Defining Cancellation Criteria**: The query filters the data to include only orders where the status indicates cancellation (e.g., `STATUS_ID = 'ITEM_CANCELLED'`).
 
-- **Joining Relevant Tables**: The SQL query joins these tables together based on common fields (e.g., `ORDER_ID`, `ORDER_ITEM_SEQ_ID`, `PRODUCT_ID`) to compile a comprehensive dataset.
+**Joining Relevant Tables**: The SQL query joins these tables together based on common fields (e.g., `ORDER_ID`, `ORDER_ITEM_SEQ_ID`, `PRODUCT_ID`) to compile a comprehensive dataset.
 
-- **Selecting Necessary Information**: Relevant columns are selected from the joined tables, such as order IDs, cancellation dates, SKUs (product identifiers), item descriptions, prices, cancellation reasons, and external IDs.
+**Selecting Necessary Information**: Relevant columns are selected from the joined tables, such as order IDs, cancellation dates, SKUs (product identifiers), item descriptions, prices, cancellation reasons, and external IDs.
 
-- **Grouping Data**: The selected data is grouped based on certain criteria, such as order ID, canceled date, SKU, item description, price, cancellation reason, and external ID, to summarize and organize it for analysis.
+**Grouping Data**: The selected data is grouped based on certain criteria, such as order ID, canceled date, SKU, item description, price, cancellation reason, and external ID, to summarize and organize it for analysis.
 
-- **Counting Distinct Orders**: Within each group, the query counts the number of distinct order IDs, providing insights into how many unique orders were canceled on each date.
+**Counting Distinct Orders**: Within each group, the query counts the number of distinct order IDs, providing insights into how many unique orders were canceled on each date.
 
-- **Calculating Date**: The query calculates the date of the canceled orders by finding the first day of the week for each canceled date, facilitating grouping the cancellations by week.
+**Calculating Date**: The query calculates the date of the canceled orders by finding the first day of the week for each canceled date, facilitating grouping the cancellations by week.
 
-# Order Approval Duration Graph
+## Order Approval Duration Graph
 
 Order approval delays can happen due to missing order attributes such as missing customer ID or municipio ID. Delays in order approval can lead to missed delivery deadlines and potential revenue loss.
 
 The Order Approval Duration graph provides information on how long it takes the OMS to approve orders. It has two main attributes: order volume and average approval duration in minutes. This Graph helps in tracking the average approval duration over time. This helps in identifying any deviations from expected performance levels and taking corrective actions promptly.
 
-#### Field Header
+### Field Header
 
 | Field Header                      | Description                                                                                         | HC Entity                 |
 |-----------------------------------|-----------------------------------------------------------------------------------------------------|---------------------------|
 | Order Volume                      | This refers to the number of orders received by the system over a specific period.                   | OrderHeader.ORDER_ID     |
 | Average Approval Duration (Minutes) | This is the average amount of time it takes for the OMS to approve an order.                         | Calculated difference of OrderHeader.ORDER_DATE and OrderStatus.STATUS_DATETIME(For “APPROVED” status) divided by 60 to display in minutes |
 
-#### SQL Query to Generate Order Approval Duration Graph
+### SQL Query to Generate Order Approval Duration Graph
 
 ```sql
 SELECT DATE(`ENTRY_DATE`) AS `ENTRY_DATE`,
@@ -387,39 +397,25 @@ ORDER BY `Average approval duration in minutes` DESC
 LIMIT 10000;
 ```
 
-#### Data Selection
+**Data Selection:** The SQL query begins by selecting specific data from two tables: `order_header` and `order_status`. These tables likely contain information about orders and their statuses.
 
-The SQL query begins by selecting specific data from two tables: `order_header` and `order_status`. These tables likely contain information about orders and their statuses.
+**Defining Criteria:** The query filters the data to include only orders with a specific status, in this case, orders that are approved. This is achieved by specifying the condition `os.status_id = 'ORDER_APPROVED'`.
 
-#### Defining Criteria
+**Joining Relevant Tables:** To combine relevant information from both tables, the query joins `order_header` and `order_status` using the common field `ORDER_ID`.
 
-The query filters the data to include only orders with a specific status, in this case, orders that are approved. This is achieved by specifying the condition `os.status_id = 'ORDER_APPROVED'`.
+**Selecting Necessary Information:** From the joined tables, the query selects columns such as order ID, Shopify order ID, approval duration (calculated in seconds), creation date (`ORDER_DATE`), and approval date (`status_datetime`).
 
-#### Joining Relevant Tables
+**Grouping Data:** The query groups the selected data by order ID. This means that all entries with the same order ID are grouped together, allowing for aggregation and analysis of approval durations for each order. The query groups the results by the date part of the creation date (`ENTRY_DATE`), allowing for a summary of average approval durations and order volumes for each day.
 
-To combine relevant information from both tables, the query joins `order_header` and `order_status` using the common field `ORDER_ID`.
+**Calculating Average Approval Duration:** Within each group, the query calculates the average approval duration in minutes (`AVG(duration in sec) / 60`).
 
-#### Selecting Necessary Information
+**Counting Distinct Orders:** Additionally, the query counts the number of distinct order IDs to determine the volume of orders for each day.
 
-From the joined tables, the query selects columns such as order ID, Shopify order ID, approval duration (calculated in seconds), creation date (`ORDER_DATE`), and approval date (`status_datetime`).
-
-#### Grouping Data
-
-The query groups the selected data by order ID. This means that all entries with the same order ID are grouped together, allowing for aggregation and analysis of approval durations for each order. The query groups the results by the date part of the creation date (`ENTRY_DATE`), allowing for a summary of average approval durations and order volumes for each day.
-
-#### Calculating Average Approval Duration
-
-Within each group, the query calculates the average approval duration in minutes (`AVG(duration in sec) / 60`).
-
-#### Counting Distinct Orders
-
-Additionally, the query counts the number of distinct order IDs to determine the volume of orders for each day.
-
-# Missing Order Attribute Report
+## Missing Order Attribute Report
 
 The Missing Order Attribute Report is a vital tool for tracking order synchronization. By monitoring the presence of essential attributes, it identifies orders lacking crucial information, ensuring a seamless synchronization process. This report enables proactive resolution of discrepancies, preventing any orders from failing to synchronize effectively. In the NetSuite context, the report ensures accurate order synchronization by verifying essential attributes. By highlighting orders lacking these attributes, it prevents synchronization issues, providing assurance that orders seamlessly integrate with NetSuite.
 
-#### Field Header
+### Field Header
 
 | Field Header                 | Description                                                                                         | HC Entity                 |
 |------------------------------|-----------------------------------------------------------------------------------------------------|---------------------------|
@@ -431,7 +427,7 @@ The Missing Order Attribute Report is a vital tool for tracking order synchroniz
 | NETSUITE_ORDER_EXPORTED      | Indicates whether the order has been exported to NetSuite                                           | OrderAttribute.ATTR_NAME with value as “NETSUITE_ORDER_EXPORTED” and OrderAttribute.ATTR_VALUE |
 | NETSUITE_CUSTOMER_ID         | The customer identifier in NetSuite                                                                 | PartyIdentification.ID_VALUE with PartyIdentification.PARTY_IDENTIFICATION_TYPE_ID as “NETSUITE_CUSTOMER_ID” |
 
-#### SQL Query to Generate Missing Order Attribute Report
+### SQL Query to Generate Missing Order Attribute Report
 
 ```sql
 SELECT `ORDER_NAME` AS `ORDER_NAME`,
@@ -481,7 +477,7 @@ ORDER BY `ENTRY_DATE` ASC
 LIMIT 1000;
 ```
 
-#### Query Logic
+### Query Logic
 
 **Data Selection:** The SQL query starts by selecting specific data fields relevant to the report. This typically includes information about orders and their attributes.
 
@@ -497,17 +493,17 @@ LIMIT 1000;
 
 **Counting Missing Attributes:** Within each group, the query counts the number of orders with missing attributes. This provides insights into the frequency and distribution of missing attributes across orders.
 
-# HotWax Order Count Report
+## HotWax Order Count Report
 
 The HotWax Order Count Report offers a daily snapshot of new orders in the Order Management System (OMS), providing a quick reference for monitoring overall order activity and facilitating proactive decision-making. In the Shopify context, this report ensures seamless synchronization by comparing daily order counts. It serves as a vital tool for merchants, quickly identifying and addressing any discrepancies in the synchronization process, ensuring accurate and efficient order fulfillment.
 
-#### Field Header
+### Field Header
 
 | Field Header          | Description                                                 | HC Entity                  |
 |-----------------------|-------------------------------------------------------------|----------------------------|
 | ORDER_COUNT           | The count of the orders in the HotWax Commerce              | Count of OrderHeader.EXTERNAL_ID |
 
-#### SQL Query to Generate HotWax Order Count Report
+### SQL Query to Generate HotWax Order Count Report
 
 ```sql
 SELECT count(`EXTERNAL_ID`) AS `COUNT(EXTERNAL_ID)`
@@ -528,7 +524,7 @@ WHERE (`STATUS_ID` NOT IN ('ORDER_CANCELLED'))
 LIMIT 100000;
 ```
 
-#### Query Logic
+### Query Logic
 
 **Data Selection:** The SQL query selects specific data fields required for the report. This typically includes information about orders, such as order IDs and other relevant details.
 
