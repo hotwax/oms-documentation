@@ -22,7 +22,7 @@ Retailers can follow these steps:
 
 1. Go to the `Shopify Shop` Page and locate the `Shopify Payment Method Type` section. If the section is not present, navigate to the `Shopify Shop Type` section and click the `Add` button to create any new Shopify Shop Type, including the Payment Method Type.
 2. In the `Shopify Shop Payment Method Type` section, click on `Add payment method type` to create new payment methods in HotWax Commerce.
-3. A pop-up box will appear. Here, add the Payment Method Type, starting with EXT\_SHOP, and provide a brief description of the payment method type.
+3. A pop-up box will appear. Here, add the Payment Method Type as per your naming preferences, starting with EXT\_SHOP, and provide a brief description of the payment method type.
 4. After creating the payment method, click on the `Add` button in the `Shopify Payment Method Type` section to map the payment method with the Shopify Shop.
 5. In the pop-up box, input the `key`, which is the mapping ID present in Shopify, and add the corresponding `value` available in HotWax Commerce.
 6. Click on the `Add` button to save the Payment Method Type mapping.
