@@ -11,13 +11,13 @@ After an order's items are allocated, the OMS begins syncing them to systems tha
 
 If the facility where an item is allocated uses NetSuite for fulfillment, usually a warehouse, then the OMS syncs those items' allocation with NetSuite.
 
-It's important to remember that if items are not allocated to a "NetSuite Facility" their allocation is not synced to NetSuite until after fulfillment is complete.
+It's important to remember that if items are not allocated to a `NetSuite Facility` their allocation is not synced to NetSuite until after fulfillment is complete.
 
 <figure><img src="../../.gitbook/assets/fulfillment in NetSuite.png" alt=""><figcaption><p>Items' allocations synced from HotWax Commerce to NetSuite</p></figcaption></figure>
 
 **Actions**
 
-1. A scheduled job within HotWax Commerce Integration Platform generates a CSV file containing order line items with their respective fulfillment locations and places this file at an SFTP location.
+1. A scheduled job in HotWax Commerce Integration Platform generates a CSV file containing order line items with their respective fulfillment locations and places this file at an SFTP location.
 
 **SFTP Location**
 
@@ -51,7 +51,7 @@ HC_SC_UpdateSalesOrders
 
 ## Order Rejection from NetSuite
 
-If a NetSuite fulfillment location cannot fulfill an order item that has been allocated to them, it is moved to a "Rejected Orders" facility. The "Rejected Orders" facility is an "undefined" type of facility, which means it is not mapped to a physical location. A SuiteScript periodically exports all the order items at this facility and places them at an SFTP location.
+If a NetSuite fulfillment location cannot fulfill an order item that has been allocated to them, it is moved to a `Rejected Orders` facility. The `Rejected Orders` facility is an "undefined" type of facility, which means it is not mapped to a physical location. A SuiteScript periodically exports all the order items at this facility and places them at an SFTP location.
 
 A scheduled job in HotWax Commerce imports this rejected order item feed and moves those items back to the brokering queue to be reallocated to a new facility.
 

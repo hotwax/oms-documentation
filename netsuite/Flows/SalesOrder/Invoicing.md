@@ -7,15 +7,13 @@ description: >-
 
 # Invoicing
 
-## Invoicing
-
 Generating invoices in NetSuite for orders streamlines the financial processes. This step finalizes payment transactions and accounting entries for completed orders, contributing to accurate financial reporting. This step remains the same for orders whether items are fulfilled in NetSuite or not.
 
 **Actions**
 
-A scheduled SuiteScript in NetSuite identifies sales orders in "pending\_billing" status, which have corresponding customer deposits already created.
+A scheduled SuiteScript in NetSuite identifies sales orders in "Pending\_Billing" status, which have corresponding customer deposits already created.
 
-Upon generating the invoice, the status of the customer deposit is marked as "Fully Applied", and the invoice status changes to "PAID IN FULL," signifying payment reception and application to the invoice. This process also ensures all necessary accounting postings are handled in NetSuite.
+Upon generating the invoice, the status of the customer deposit status is updated from "Undeposited" to "Fully Applied", and the invoice is marked as "PAID IN FULL," signifying payment reception and application to the invoice. This process also ensures all necessary accounting postings are handled in NetSuite.
 
 This step has not external dependency on jobs running in HotWax Commerce.
 
