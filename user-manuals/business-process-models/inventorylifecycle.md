@@ -15,7 +15,7 @@ Before delving into the specifics of Inventory Lifecycle BPM, it's crucial to un
 
 In HotWax Commerce, you'll come across three inventory-related terms: **Quantity On Hand (QOH), Available To Promise (ATP), and Online ATP**
 
-* <mark style="color:orange;">**QOH**</mark><mark style="color:orange;">:</mark> Represents the total physical quantity of a product available at stores or warehouses. HotWax Commerce receives daily inventory feeds from the ERP system to update and maintain inventory data. Additionally, in cases where an ERP system isn't in use, HotWax Commerce may also receive inventory feeds from Warehouse Management Systems (WMS) and Point of Sale (POS) systems.
+* <mark style="color:orange;">**QOH**</mark><mark style="color:orange;">:</mark> Represents the total physical quantity of a product available at stores or warehouses. HotWax Commerce receives daily inventory feeds from the ERP system to update and maintain inventory data. Additionally, in cases where an ERP system isn't in use, HotWax Commerce also receives inventory feeds from Warehouse Management Systems (WMS) and Point of Sale (POS) systems.
 * <mark style="color:orange;">**ATP**</mark><mark style="color:orange;">:</mark> Represents the physical quantity of a product at stores or warehouses after deducting the reserved inventory, that is, inventory that has been allocated to online orders from the QOH.
 * <mark style="color:orange;">**Online ATP**</mark><mark style="color:orange;">:</mark> Represents the unified inventory pool of actual sellable inventory count that is published on eCommerce platforms and can be promised to customers.
 
