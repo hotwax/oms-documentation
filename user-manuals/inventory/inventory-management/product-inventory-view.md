@@ -1,4 +1,4 @@
-# View Consilidated Product Inventory
+# Product Inventory View Page
 
 The `Product Inventory View Page` within HotWax Commerce offers users a comprehensive snapshot of a product's inventory information. This feature is crucial for retailers as it empowers them to make informed decisions regarding sales and overall inventory management for their products.
 
@@ -20,24 +20,17 @@ Navigate to the `Overview` section on the `Product Inventory View` page to acces
 
 **Sections within Overview**
 
-**A. Order Queue:**
-This section displays orders that currently lack allocated inventory. Orders in different queues, such as brokering queue, unfillable hold queue, pre-order queue, and backorder queue, are listed here. Explore further details about these queues [here](facilities/manage-parkings.md).
+**A. Order Queue:** This section displays orders that currently lack allocated inventory. Orders in different queues, such as brokering queue, unfillable hold queue, pre-order queue, and backorder queue, are listed here. Explore further details about these queues [here](../../facilities/manage-parkings.md).
 
-**B. Threshold:**
-Retailers can establish a global threshold for products through the  `Threshold Management` app. This quantity is subtracted from the overall Quantity on Hand (QOH) to prevent overselling on e-commerce platforms. Users can see the inventory that is subtracted from the overall QOH as the threshold.
+**B. Threshold:** Retailers can establish a global threshold for products through the `Threshold Management` app. This quantity is subtracted from the overall Quantity on Hand (QOH) to prevent overselling on e-commerce platforms. Users can see the inventory that is subtracted from the overall QOH as the threshold.
 
-**C. Physical ATP:**
-HotWax Commerce calculates Physical Available to Promise (ATP) by considering various factors, such as safety stock, threshold, reserved quantity, and orders in the queue. The excluded ATP comprises safety stock and reserved quantities, with adjustments made at the facility level.
+**C. Physical ATP:** HotWax Commerce calculates Physical Available to Promise (ATP) by considering various factors, such as safety stock, threshold, reserved quantity, and orders in the queue. The excluded ATP comprises safety stock and reserved quantities, with adjustments made at the facility level.
 
-*Example*: Consider a product `blue shirt` from Brand ABC with a QOH of 100 units. If 10 units are excluded ATP, 5 units are the threshold, and 5 units are in the brokering queue, the ATP can be calculated as follows:
+_Example_: Consider a product `blue shirt` from Brand ABC with a QOH of 100 units. If 10 units are excluded ATP, 5 units are the threshold, and 5 units are in the brokering queue, the ATP can be calculated as follows:
 
-ATP = QOH - (Excluded ATP + Threshold + Orders in brokering queue)
-ATP = 100 - (10 + 5 + 5) = 100 - 20 = 80
+ATP = QOH - (Excluded ATP + Threshold + Orders in brokering queue) ATP = 100 - (10 + 5 + 5) = 100 - 20 = 80
 
-**D. Online ATP:**
-Online ATP is derived by subtracting the excluded facilities' ATP, i.e., facilities not participating in online fulfillment, from the total ATP. The excluded facilities' ATP can be different for different online facility groups. For instance, if the total ATP is 100 across 10 facilities and 5 facilities with a cumulative quantity of 60 are excluded for online selling on Shopify, the Shopify Online ATP can be calculated as:
-Shopify Online ATP = ATP - Excluded Facilities’ ATP
-= 100 - 60 = 40
+**D. Online ATP:** Online ATP is derived by subtracting the excluded facilities' ATP, i.e., facilities not participating in online fulfillment, from the total ATP. The excluded facilities' ATP can be different for different online facility groups. For instance, if the total ATP is 100 across 10 facilities and 5 facilities with a cumulative quantity of 60 are excluded for online selling on Shopify, the Shopify Online ATP can be calculated as: Shopify Online ATP = ATP - Excluded Facilities’ ATP = 100 - 60 = 40
 
 {% hint style="info" %}
 Online ATP may vary for each sales channel.
@@ -45,11 +38,11 @@ Online ATP may vary for each sales channel.
 
 ### View Item Inventory History
 
-The `item inventory` section allows users to get a detailed breakdown of the received inventory at each facility, along with the date and time of each transaction and where the inventory is located within the facility. 
+The `item inventory` section allows users to get a detailed breakdown of the received inventory at each facility, along with the date and time of each transaction and where the inventory is located within the facility.
 
 **View `Inventory Logs`**
 
- The `Inventory Logs` feature within the item inventory section offers users the ability to access detailed logs of inventory transactions for the selected product across all facilities. Users can track inventory movements, monitor changes, and identify any discrepancies or trends promptly.
+The `Inventory Logs` feature within the item inventory section offers users the ability to access detailed logs of inventory transactions for the selected product across all facilities. Users can track inventory movements, monitor changes, and identify any discrepancies or trends promptly.
 
 **Step-by-Step Usage Instructions:**
 
@@ -59,11 +52,10 @@ The `item inventory` section allows users to get a detailed breakdown of the rec
 4. Review these logs to track inventory movements, monitor changes, and identify any discrepancies or trends.
 5. If you want to view inventory details for a specific facility, use the facility dropdown menu to select the desired facility.
 6. You can click on the `Inventory Item ID` available in the records to view the complete breakdown of when and where the inventory is received.
-   
 
 ## Record Variance
 
-The `Record Variance` feature” allows users to manually document any discrepancies in inventory levels and manage adjustments effectively. This feature is crucial for maintaining accurate inventory records and ensuring transparency. 
+The `Record Variance` feature” allows users to manually document any discrepancies in inventory levels and manage adjustments effectively. This feature is crucial for maintaining accurate inventory records and ensuring transparency.
 
 **Step-by-Step Usage Instructions:**
 
@@ -73,4 +65,6 @@ The `Record Variance` feature” allows users to manually document any discrepan
 4. From the dropdown menu, choose the relevant reasons for the inventory variance. This could include factors such as damaged goods, discrepancies in shipment, or theft.
 5. After confirming all details are accurate, click the `Save` button to record the variance in the system.
 
-{% embed url="https://youtu.be/aFldyrTTU7c" %} Video: Record Variance {% endembed %}
+{% embed url="https://youtu.be/aFldyrTTU7c" %}
+Video: Record Variance
+{% endembed %}

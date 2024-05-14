@@ -14,7 +14,7 @@
 * [Gift card orders lifecycle](business-process-models/giftcardorderslifecycle.md)
 * [Returns lifecycle](business-process-models/returns-lifecycle/README.md)
   * [Web returns with Loop](business-process-models/returns-lifecycle/loopwebreturnslifecycle.md)
-  * [In-store returns with Shopify POS](business-process-models/returns-lifecycle/shopifyposreturnslifecycle.md )
+  * [In-store returns with Shopify POS](business-process-models/returns-lifecycle/shopifyposreturnslifecycle.md)
   * [In-store returns with Loop](business-process-models/returns-lifecycle/loopposreturnslifecycle.md)
 * [Exchanges lifecycle](business-process-models/exchanges-lifecycle/README.md)
   * [Web exchanges with Loop](business-process-models/exchanges-lifecycle/loopwebexchangeslifecycle.md)
@@ -37,6 +37,7 @@
   * [Imports](data-manager/imports.md)
 
 ## Products
+
 * [Product Management](products/products.md)
   * [Reports](products/reports.md)
 
@@ -134,11 +135,11 @@
 
 ## How-to documents
 
-* [Deploy HotWax Commerce](how-to/deployment/deployment.md)
-* [Add shipping method](how-to/add-shipping-method.md)
-* [Setup BOPIS](how-to/bopis/implement-bopis.md)
+* [How to configure HotWax Commerce when deploying new instance](how-to/deployment/deployment.md)
+* [How to map shipping method in HotWax Commerce to Netsuite](how-to/add-shipping-method.md)
+* [How to configure BOPIS with HotWax Commerce and Shopify](how-to/bopis/implement-bopis.md)
 * [Transfer orders](how-to/transfer-orders.md)
   * [Warehouse to store](how-to/warehouse-to-store.md)
   * [Store to Warehouse](how-to/store-to-warehouse.md)
   * [Store to store](how-to/store-to-store.md)
-* [Cancel Orders](how-to/order-cancellations.md)
+* [How to manage order cancellations](how-to/order-cancellations.md)
