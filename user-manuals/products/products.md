@@ -49,7 +49,7 @@ For having a quick view of a certain set of products, users can filter out the p
 
 ### Manage Safety Stock
 
-Enables users to search selected products and export CSV by specifying safety stock value and uploading it back using EXIM for bulk products. Safety Stock will be established at all the associated facilities for the entire set of selected products. Users are allowed to manually create CSV, set safety stocks, and upload using EXIM for bulk products. Read more about safety stock in our complete [document](../inventory/safety-stock/).
+Enables users to search selected products and export CSV by specifying safety stock value and uploading it back using EXIM for bulk products. Safety Stock will be established at all the associated facilities for the entire set of selected products. Users are allowed to manually create CSV, set safety stocks, and upload using EXIM for bulk products. Read more about safety stock in our complete [document](../inventory/safety-stock/README.md).
 
 ### Threshold:
 
@@ -67,7 +67,7 @@ The overview section contains essential information related to “product specif
 
 | **Specifications**      | **Description**                                                                                                                                                                                                                                         |
 | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Product Type            | Displays Product Type as “Finished Goods”, “Digital goods”, “Accessories”, or others as specified.                                                                                                                                                      |
+| Product Type            | Displays Product Type as “Finished Goods”, “Digital Goods”, “Accessories”, or others as specified.                                                                                                                                                      |
 | Product Name            | Universal name or title assigned to the Product.                                                                                                                                                                                                        |
 | Product SKU             | Universal product identifier, that retailers assign to products to keep track of stock levels internally at ecom stores which acts as a unique identifier for HotWax Commerce and ERP.                                                                  |
 | Product Brand           | Specifies the brand the product is associated with. Multiple Brands may have the same Product but have a unique SKU for each brand. Product Brand name determines the products to which it belongs when multiple brands are configured.                 |
@@ -79,9 +79,9 @@ The overview section contains essential information related to “product specif
 
 This information provides a comprehensive overview facilitating effective management and customization of a product and also empowers users to add and delete any product specifications.
 
-**Add Shopify Shop Association**
+### Sync Products to Multiple Shopify Shop
 
-Retailers who operate in multiple countries use Shopify shops in Hotwax commerce to manage product catalogs in different countries. A master catalog holds all products, while associations are formed to sync these products across different country-specific catalogs. These associations are automated through a job in HotWax Commerce that creates associations between products in the master catalog and the product catalog of other countries by matching the SKU codes. Retailers can view the product association with the different shops in the Shopify Shop section and Add new product associations with Shopify Shop by following these steps:
+Retailers who operate in multiple countries use Shopify shops in Hotwax commerce to manage the same product catalogs in different countries. A master catalog holds all products, while associations are formed to sync these products across different country-specific catalogs. These associations are automated through a job in HotWax Commerce that creates associations between products in the master catalog and the product catalog of other countries by matching the SKU codes. Retailers can view the product association with the different shops in the Shopify Shop section and Add new product associations with Shopify Shop by following these steps:
 
 1. Click on the `Add` button in the `Shopify Shop` section, this will open a new module
 2. Select the `Shop` from the dropdown menu, for which you want to create the association.
@@ -90,6 +90,3 @@ Retailers who operate in multiple countries use Shopify shops in Hotwax commerce
 
 <figure><img src="https://www.hotwax.co/hubfs/Product%20Updates%20and%20Release%20Notes/2023/Nov-Dec%202023%20PU/Manage%20Shopify%20Shop%20Product%20Associations.png" alt=""><figcaption></figcaption></figure>
 
-**Add Product Content**
-
-HotWax Commerce allows users to add and update product summaries, product descriptions, images, and videos with meta descriptions for enhanced product display. The details are readily available for the users in this section.

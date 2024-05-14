@@ -10,7 +10,7 @@ This document gives a sequential walkthrough of how to enable your facilities fo
 
 ## Create a Facility for Store Pickup Options
 
-To facilitate BOPIS operations, retailers need to [set up and configure facilities](facilities.md) for store pickups where customers can collect their purchases by ordering online.
+To facilitate BOPIS operations, retailers need to [set up and configure facilities](../../facilities/) for store pickups where customers can collect their purchases by ordering online.
 
 ### Set up Facilities
 
