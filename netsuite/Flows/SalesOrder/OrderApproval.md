@@ -31,7 +31,7 @@ To successfully create a sales order in NetSuite, [it is a prerequisite to have 
 {% hint style="info" %}
 **HotWax Internals**
 
-Identify new customers by checking the Person table for entries where the roleTypeId is 'CUSTOMER' and where the PartyIdentification record for identification type 'NETSUITE\_CUSTOMER\_ID' is not created.
+Identify new customers by checking the Person table for entries where the roleTypeId is `CUSTOMER` and where the `PartyIdentification` record for identification type `NETSUITE\_CUSTOMER\_ID` is not created.
 {% endhint %}
 
 **SFTP Location**
@@ -55,7 +55,7 @@ HC_SC_ImportCustomer
 #### Export customers IDs from NetSuite and import into HotWax
 
 3. Once customers are created in NetSuite, a scheduled script exports recently created customers in a CSV file at an SFTP location to be imported by HotWax Commerce.
-4. A scheduled job within Hotwax Commerce OMS reads this file from the SFTP location and syncs the NetSuite customer IDs, confirming the customer synchronization in the OMS.
+4. A scheduled job in Hotwax Commerce OMS reads this file from the SFTP location and syncs the NetSuite customer IDs, confirming the customer synchronization in the OMS.
 
 **SuiteScripts**
 
@@ -108,21 +108,21 @@ FTP Config: IMP_PARTY_IDENT
 
 ## Synchronize Sales Order from HotWax Commerce to NetSuite
 
-Capturing orders in HotWax Commerce initiates the creation of orders in "created" status. In this step, created sales orders are pushed from HotWax Commerce to NetSuite for further processing.
+Capturing orders in HotWax Commerce initiates the creation of orders in "Created" status. In this step, created sales orders are pushed from HotWax Commerce to NetSuite for further processing.
 
 <figure><img src="../../.gitbook/assets/created orders.png" alt=""><figcaption><p>Orders in Created status synced to NetSuite</p></figcaption></figure>
 
 #### Export new orders to NetSuite
 
-1.  A job within HotWax Commerce Integration Platform generates a CSV file of orders in "created" status that have not yet been sent to NetSuite and places this file at an SFTP location. When creating this file HotWax Commerce also ensures that the customer already exists in NetSuite using the customer ID saved in the last step.
+1.  A job within HotWax Commerce Integration Platform generates a CSV file of orders in "Created" status that have not yet been sent to NetSuite and places this file at an SFTP location. When creating this file HotWax Commerce also ensures that the customer already exists in NetSuite using the customer ID saved in the last step.
 
     The file contains details such as unit prices, order adjustments, and shipping costs, excluding direct tax amounts. HotWax Commerce omits the tax amount from the file and sends tax codes for the individual order items because NetSuite independently computes the taxes based on these codes and applies them accurately to each order item, ensuring precise tax calculations within NetSuite.
 
 **Order and Item Discounts**
 
-If an order has a discount code applied to it, during order sync to NetSuite, HotWax checks if the applied code is available in NetSuite. If the code is available then the exact code is used and the value of the discount is shared as the "Rate". In the event that the code is not available in NetSuite, HotWax will use a default discount code 'SHOPIFY DISCOUNT' along with the value of the discount.
+If an order has a discount code applied to it, during order sync to NetSuite, HotWax checks if the applied code is available in NetSuite. If the code is available then the exact code is used and the value of the discount is shared as the `Rate`. In the event that the code is not available in NetSuite, HotWax will use a default discount code `SHOPIFY DISCOUNT` along with the value of the discount.
 
-Item-level discounts have special handling as well. They are synced as a separate line item in the order using a "SHOPIFY DISCOUNT ITEM" item, however, HotWax does not send an order line ID for this item. The amount of the adjustment is added in the "Amount" field when preparing the CSV for NetSuite and the "Price Level" is always set to "Custom".
+Item-level discounts have special handling as well. They are synced as a separate line item in the order using a `SHOPIFY DISCOUNT ITEM` item, however, HotWax does not send an order line ID for this item. The amount of the adjustment is added in the `Amount` field when preparing the CSV for NetSuite and the `Price Level` is always set to `Custom`.
 
 **Item Price**
 
@@ -130,7 +130,7 @@ The price for products is not sent by HotWax when the order syncs to NetSuite. I
 
 **Tax Codes**
 
-For retailers that use Avatax, the Tax Code and Shipping Tax Code will always contain "AVATAX" when sent from HotWax. Avalara Tax calculation will automatically compute taxes on the order in NetSuite when the order is created.
+For retailers that use Avatax, the Tax Code and Shipping Tax Code will always contain `AVATAX` when sent from HotWax. Avalara Tax calculation will automatically compute taxes on the order in NetSuite when the order is created.
 
 ### Handling NetSuite file size limits
 
@@ -320,15 +320,15 @@ A scheduled job within HotWax Commerce Integration Platform validates order item
 
 <summary>Step by step breakdown</summary>
 
-​Once the NetSuite order ID and line item IDs have been saved, HotWax internally adds an order attribute, "NETSUITE\_ORDER\_EXPORTED", to these orders. This attribute is added in batches through a scheduled job.
+​Once the NetSuite order ID and line item IDs have been saved, HotWax internally adds an order attribute, `NETSUITE\_ORDER\_EXPORTED`, to these orders. This attribute is added in batches through a scheduled job.
 
 A seperate job checks for orders that have this attribute added to them and internally hands them off for approval in the OMS. This is a two step process because it allows us to abstract the order approval checks from the actual order approval job, thus enabling extensiblity in the validations required for order approval for different retailers.
 
-For example, some retailers may have an additional fraud detection check that needs to be completed before an order can be approved. Completetion of the fraud detection would add its own attribute (ex. "FRAUD\_VERIFIED") to the order and the final order approval job would check both attributes before internally approving the order.
+For example, some retailers may have an additional fraud detection check that needs to be completed before an order can be approved. Completetion of the fraud detection would add its own attribute (ex. `FRAUD\_VERIFIED`) to the order and the final order approval job would check both attributes before internally approving the order.
 
 **SFTP Locations**
 
-Export a file of orders where "NETSUITE\_ORDER\_EXPORTED" should be added
+Export a file of orders where `NETSUITE\_ORDER\_EXPORTED` should be added
 
 ```
 /home/{sftp-username}/hotwax/ApproveOrderAttributes
