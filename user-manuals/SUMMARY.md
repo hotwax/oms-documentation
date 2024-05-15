@@ -105,6 +105,9 @@
   * [Set Bulk Safety Stock](inventory/safety-stock/set-bulk-safety-stock.md)
   * [Set Individual Safety Stock](inventory/safety-stock/set-individual-safety-stock.md)
 * [Multichannel inventory setup](inventory/multichannel-inventory-setup.md)
+* [Transfer orders](inventory/transfer-order/transfer-order-management.md)
+  * [Transfer order fulfillment](inventory/transfer-order/transfer-order-fulfillment.md)
+  * [Transfer order receiving](inventory/transfer-order/transfer-order-receiving.md)
 * [Reports](inventory/reports.md)
 
 ## Administration
@@ -138,8 +141,8 @@
 * [How to configure HotWax Commerce when deploying new instance](how-to/deployment/deployment.md)
 * [How to map shipping method in HotWax Commerce to Netsuite](how-to/add-shipping-method.md)
 * [How to configure BOPIS with HotWax Commerce and Shopify](how-to/bopis/implement-bopis.md)
-* [Transfer orders](how-to/transfer-orders.md)
-  * [Warehouse to store](how-to/warehouse-to-store.md)
-  * [Store to Warehouse](how-to/store-to-warehouse.md)
-  * [Store to store](how-to/store-to-store.md)
 * [How to manage order cancellations](how-to/order-cancellations.md)
+
+
+
+ 
