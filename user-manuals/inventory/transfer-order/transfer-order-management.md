@@ -1,3 +1,9 @@
+---
+description: >-
+ How to manage transfer orders in HotWax commerce
+---
+
+
 # Managing Transfer Orders in HotWax Commerce
 
 Transfer orders are integral to maintaining inventory balance, minimizing stockouts, and optimizing inventory allocation across different stores or warehouses. By effectively managing transfer orders, organizations can enhance their operational efficiency, reduce costs associated with excess inventory or unnecessary transportation, and ultimately improve customer satisfaction through timely order fulfillment. Inventory transfers can be of various types, such as:
