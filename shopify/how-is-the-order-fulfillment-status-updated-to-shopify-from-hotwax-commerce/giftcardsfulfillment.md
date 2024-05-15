@@ -42,7 +42,7 @@ Digital gift cards are auto-activated and customers can directly redeem them by 
 
 When the fulfillment location where a gift card item is allocated leverages NetSuite for fulfillment, usually a warehouse, then the HotWax Commerce syncs those items' allocation with NetSuite.
 
-Learn more about fulfillment in NetSuite
+Learn more about [fulfillment in NetSuite](https://docs.hotwax.co/integration-resources/v/netsuite-integration/supported-integrations/salesorder/fulfillment)
 
 ### Activation of Gift Cards
 
