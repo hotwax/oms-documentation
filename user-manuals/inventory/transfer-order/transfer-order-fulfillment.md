@@ -1,3 +1,9 @@
+---
+description: >-
+  How to fulfill transfer orders in HotWax commerce
+---
+
+
 # Introduction
 
 When transferring inventory from a store to a warehouse or between stores, the HotWax Commerce Store Fulfillment App facilitates this transfer order fulfillment process. The application streamlines the movement of inventory within the retail network, ensuring efficient handling of stock transfers and accurate inventory tracking.
