@@ -148,10 +148,9 @@ Import Inventory Variance from SFTP:
 ```
 HC_SC_ImportInventoryAdjustment.js
 ```
+{% file src="../.gitbook/assets/Inventory Item Variances Sample Feed.csv" %}
 
 ## Benefits:
-
-{% file src="../.gitbook/assets/Inventory Item Variances Sample Feed.csv" %}
 
 The automated synchronization of inventory variances from HotWax Commerce to NetSuite offers numerous advantages:
 
