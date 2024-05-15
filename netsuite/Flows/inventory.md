@@ -71,3 +71,48 @@ Subsequently, we transitioned to Map Reduce scripts to manage the synchronizatio
 ### Harnessing SearchTask Function
 
 To optimize the process and achieve rapid synchronization, we adopted Suite Script in combination with the Search Task function from the N/Task module. The results were remarkable, with the execution time reduced to a mere 10-15 seconds for a million inventory records. The search was executed swiftly, the CSV file was generated, and it was deposited in NetSuite's File Cabinet within a matter of seconds. This extraordinary speed and efficiency led us to the conclusion that the Search Task of the N/Task module was the ideal choice for synchronizing inventory records from NetSuite to HotWax Commerce.
+
+## Inventory Transfers in NetSuite
+
+Retailers we work with often configure two warehouse type facilities in NetSuite, as an eCommerce warehouse and the other as wholesale warehouse. While the eCommerce warehouse handles online orders for fulfillment, the wholesale warehouse primarily serves for B2B operations, transfer orders and inventory transfers.
+
+Transfer orders are created for relocating inventory between different locations: from warehouse to store, store to warehouse, or between store transfers. These transactions involve the creation and fulfillment of transfer orders. While in case of inventory transfers between warehouses, fulfillment isn't usually involved. Instead, inventory is directly moved, and the impact on inventory levels is immediately recorded.
+
+{% hint style="info" %}
+Transfer orders are created for warehouse to store, store to warehouse or between store transfers which involves creation and fulfillment of transfer orders. While in case of inventory transfers between warehouses, fulfillment isn't usually involved. Instead, inventory is directly moved, and the impact on inventory levels is immediately recorded.
+{% endhint %}
+
+Learn more about [transfer orders](https://docs.hotwax.co/integration-resources/v/netsuite-integration/supported-integrations/transfer-order)
+
+When the eCommerce warehouse's inventory dips below expected levels, retailers perform inventory transfers from the wholesale warehouse to quickly replenish stock in the eCommerce warehouse.
+
+The  effectiveness of this process relies on timely synchronization. If inventory receipts at the eCommerce warehouse are synchronized when performing daily sync with NetSuite, then HotWax Commerce will have outdated inventory levels and subsequently, will synchronize this inventory to eCommerce, leading to missed sales opportunities.
+
+Therefore, whenever retailers perform inventory transfers, HotWax Commerce timely increases the inventory for the eCommerce warehouse.
+
+In certain rare scenarios, retailers may also transfer inventory from their eCommerce warehouse to their wholesale warehouse. In such cases, HotWax Commerce also accounts for the reduced inventory and maintains the most real-time synchronization with NetSuite inventory levels.
+
+**Actions**
+
+1. A SuiteScript in NetSuite generates a CSV file containing product details, increase or decrease in inventory at the eCommerce warehouse and places this file at the designated SFTP location.
+
+**SuiteScript**
+
+Export inventory transfer records
+```
+```
+
+**SFTP Locations**
+
+```
+```
+
+2. A scheduled job in HotWax Commerce reads the CSV file from the SFTP location and increases inventory count of the product at the eCommerce warehouse in case inventory is transferred to the eCommerce warehouse and reduces the inventory count of the product at the eCommerce warehouse in case inventory is transferred from the eCommerce warehouse.
+
+**Job in HotWax Commerce**
+
+Import inventory transfer records  
+
+```
+```
+
