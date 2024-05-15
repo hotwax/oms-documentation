@@ -86,7 +86,7 @@ The ability to create charts based on specific queries within Tathya empowers us
 5. **Add Chart Details:** Enter a descriptive name for the chart, select the desired chart type, and configure additional settings as needed.
 6. **Create Chart:** Click on the `Create Chart` button to generate the chart based on the dataset created from the specific query.
 
-### 2- Creating Chart When Specific Subset is not Available
+### 2. Creating Chart When Specific Subset is Not Available
 
 Creating charts in Tathya without specific queries is essential for flexible data analysis. This feature allows users to prepare for future data scenarios by initially including all available data, even when subsets may not exist at the time of dataset creation.
 
@@ -111,7 +111,7 @@ Creating charts in Tathya without specific queries is essential for flexible dat
 8. **Save Dataset:** Save the dataset by clicking on the save button to retain the modifications made.
 9. **Update Chart:** After saving the dataset, update the chart to reflect the changes made to the dataset and visualize the updated insights.
 
-### 3- Creating Chart with Empty Dataset
+### 3. Creating Chart with Empty Dataset
 
 Creating datasets with empty data is crucial in Tathya. It prepares charts for future data arrivals, enabling users to proactively set up their analytics. By allowing users to create charts with empty datasets, this feature fosters adaptability to changing data conditions.
 
