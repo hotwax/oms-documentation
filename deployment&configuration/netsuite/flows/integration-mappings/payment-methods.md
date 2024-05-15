@@ -21,7 +21,7 @@ In the event a payment method in eCommerce and HotWax is not mapped to a payment
 ## Example Mapping:
 
 Here's how you can [create mappings for payment methods](README.md#configuring-mappings-between-hotwax-commerce-and-netsuite)
-=======
+
 | HotWax ID                | NetSuite Value  |
 | ------------------------ | --------------- |
 | EXT\_SHOP\_ECOM\_GFTCRD  | Gift Card       |
