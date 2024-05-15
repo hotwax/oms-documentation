@@ -6,15 +6,15 @@ description: >-
 
 # Introduction
 
-When transferring inventory from a store to a warehouse or between stores, the HotWax Commerce Store Fulfillment App facilitates this transfer order fulfillment process. The application streamlines the movement of inventory within the retail network, ensuring efficient handling of stock transfers and accurate inventory tracking.
+When transferring inventory from a store to a warehouse or between stores, the HotWax Commerce Store Fulfillment App facilitates this transfer order fulfillment process. The application streamlines the movement of inventory within the retail network, ensuring efficient handling of stock transfers and accurate inventory tracking. In the case of warehouse-to-store, transfer orders are fulfilled in WMS.
 
-## Transfer order Fulfillment 
+## Transfer Order Fulfillment 
 
 Warehouse managers create transfer orders in NetSuite, specifying the source location as the designated store and the destination location as the warehouse. These transfer orders are automatically assigned a Pending Fulfillment status
 
 A scheduled job Import Transfer Order in HotWax Commerce OMS reads the transfer orders CSV file from the SFTP location and downloads transfer orders in HotWax Commerce with a default Created status.
 
-A scheduled job Approve transfer orders in HotWax Commerce OMS identifies all transfer orders in the Created status and automatically marks them as Approved.
+A scheduled job Approves transfer orders in HotWax Commerce OMS identifies all transfer orders in the Created status and automatically marks them as Approved.
 
 
 Once approved, transfer orders are automatically reflected at the source location in the Store Fulfillment App so that store associates can create shipments and ship transfer order items. Here’s how store associates can fulfill transfer orders from the Fulfillment App:
@@ -40,6 +40,7 @@ After processing a partial shipment of a transfer order item, it will be listed 
 7. On clicking the `create shipment button`, the user will land on the transfer shipment review page. Click on `generate shipping label` to fetch the tracking code and carrier information or you can manually add the shipping label information.
 
 8. Click on the `arrow icon` located at the bottom right corner of the page to complete the shipment.
+
  
 > [!NOTE]  
 > Store associates are not allowed to insert more than the intended item quantities. The bar turns red if the user tries to overship item quantities.
