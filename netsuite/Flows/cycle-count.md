@@ -80,10 +80,9 @@ Import Inventory Cycle Count Variance from SFTP:
 ```
 HC_SC_ImportInventoryAdjustment.js
 ```
+{% file src="../.gitbook/assets/Inventory Cycle Count Variances Sample Feed.csv" %}
 
 ## Record Unexpected Store Inventory Variances Outside of Cycle Counts
-
-{% file src="../.gitbook/assets/Inventory Cycle Count Variances Sample Feed.csv" %}
 
 While cycle counting in stores follows a periodic schedule, stores frequently encounter sudden inventory discrepancies in various scenarios. For example, if store associates identify 5 damaged units at their location, they’d want to record a variance of -5 for the damaged inventory. Similarly, if they discover 2 units of previously missing inventory, they’d want to record +2 for the newly found items.
 
