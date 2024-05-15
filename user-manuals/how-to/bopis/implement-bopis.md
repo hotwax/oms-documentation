@@ -1,4 +1,8 @@
-# How to Setup BOPIS for your Shopify Store
+---
+description: Learn how to configure BOPIS when setting up HotWax Commerce
+---
+
+# How to configure BOPIS with HotWax Commerce and Shopify
 
 BOPIS, or Buy Online, Pick Up In-Store, is a feature offered by HotWax Commerce that increases conversions on PDP by showing real-time inventory availability to customers for immediate pickup at their preferred stores so that they pick up their orders on the same day.
 
@@ -6,7 +10,7 @@ This document gives a sequential walkthrough of how to enable your facilities fo
 
 ## Create a Facility for Store Pickup Options
 
-To facilitate BOPIS operations, retailers need to [set up and configure facilities](facilities.md) for store pickups where customers can collect their purchases by ordering online.
+To facilitate BOPIS operations, retailers need to [set up and configure facilities](../../facilities/) for store pickups where customers can collect their purchases by ordering online.
 
 ### Set up Facilities
 
@@ -24,9 +28,9 @@ To facilitate BOPIS operations, retailers need to [set up and configure faciliti
 2. Select country and state from the dropdown.
 3. Add the contact number and further add `latitude and longitude` details (to ensure the exact geolocation of the facility).
 
-{% hint style="info" %} HotWax Commerce App uses ["storeLookup"](https://docs.hotwax.co/integration-resources/v/hotwax-commerce/journeys/introduction-buy-online-pickup-in-store/bopis-pdp-experience) API to display the distance of stores from a customer's current location. The API relies on the latitude and longitude coordinates of facilities to determine their proximity to the customer. Make sure that latitude and longitudes are added for both new and existing facilities. 
+{% hint style="info" %}
+HotWax Commerce App uses ["storeLookup"](https://docs.hotwax.co/integration-resources/v/hotwax-commerce/journeys/introduction-buy-online-pickup-in-store/bopis-pdp-experience) API to display the distance of stores from a customer's current location. The API relies on the latitude and longitude coordinates of facilities to determine their proximity to the customer. Make sure that latitude and longitudes are added for both new and existing facilities.
 {% endhint %}
-
 
 ### Add Product Store
 
@@ -36,10 +40,9 @@ Facilities can have products from multiple brands which are configured as produc
 2. Select the store/s from the dropdown menu
 3. Click the `Save` icon to save the changes.
 
-
 ## Fulfillment Configuration of Facilities
 
-The Facility groups are used to define the scope and functionality of the facility for omnichannel order management. If a retailer wants to configure the fulfillment settings of facilities in bulk, they can add facilities to the group (link to manage group page). `Pickup` is a default facilities group type to ensure that facilities are available to the customer on Shopify PDP as a pickup option. Only facilities that are added to this group will be available to the customer on Shopify PDP. Turning the toggle `on` when creating facilities or from the facility details page for `allow pickup` adds the facility to this facility group.
+The Facility groups are used to define the scope and functionality of the facility for omnichannel order management. If a retailer wants to configure the fulfillment settings of facilities in bulk, they can add facilities to the[ group](../../facilities/manage-groups.md). `Pickup` is a default facilities group type to ensure that facilities are available to the customer on Shopify PDP as a pickup option. Only facilities that are added to this group will be available to the customer on Shopify PDP. Turning the toggle `on` when creating facilities or from the facility details page for `allow pickup` adds the facility to this facility group.
 
 Facilities have the option to choose whether or not to participate in selling their inventory online. If a facility is capable of fulfilling orders and wants its inventory to be sold online, it has to be included in the `Online facility` group. Retailers can also turn the toggle on from 'sell online card' to add the facility to `Online facility` group. Similarly, if the facility supports HotWax Commerce Fulfillment app, then turn the toggle on of `Use Native Fulfillment App` or add the facility to `OMS Fulfillment group`.
 
@@ -57,12 +60,12 @@ ATP = QOH - (Reserved quantities + Safety stock + Threshold + Orders in brokerin
 
 For each store that allows BOPIS, HotWax Commerce uses the [checkInventory](https://docs.hotwax.co/integration-resources/v/hotwax-commerce/api-and-data-feeds/inventory/check-inventory) API to check the available to promise (ATP) inventory for the desired product. Display all the facilities with non-zero inventory numbers on the product detail page (PDP) for customers to select and place a BOPIS order.
 
-
 ## Configure Shopify BOPIS Scripts
 
 Retailers can configure Shopify BOPIS scripts from the Shopify Shop page in HotWax Commerce, enabling PDP changes on Shopify. Retailers who install the HotWax Commerce Integration App gain access to PDP customization functionality as a default feature. By installing the default JavaScript (JS) and Cascading Style Sheets (CSS) scripts from the Shopify Shop page into HotWax Commerce, retailers can effortlessly start offering BOPIS to their customers.
 
 ### Steps to add scripts:
+
 1. Login to HotWax Commerce.
 2. Open the Hamburger menu and navigate to Shopify Shop Menu.
 3. Click the Shop Id and go down to the Shopify Script section.
@@ -88,3 +91,5 @@ Once you have set up a facility for BOPIS, you can verify the BOPIS availability
 7. Use `Facility` filter to view all the products and its inventory available on the selected facility. (Ensure that the selected facility is the same as selected from the Facility app, associated with the pickup group type.).
 8. Search for the selected product on Shopify and navigate to the product display page.
 9. Ensure the `Pickup` button is available for the product. Click on `Pickup` button to view the facilities available for pickup.
+
+{% embed url="https://youtu.be/Ra7nEUeW5lc" %}

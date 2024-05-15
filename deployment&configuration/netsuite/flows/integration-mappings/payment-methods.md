@@ -16,12 +16,12 @@ When orders are synced from HotWax to NetSuite, it's critical to communicate the
 
 You can simply create a new payment method mapping or edit an existing one by navigating to the `NetSuite Payment Method` section on the NetSuite Integration page.
 
-In the event a payment method in eCommerce and HotWax is not mapped to a payment method in NetSuite, the integration layer will fall back to a `DEFAULT` payment method.
+In the event a payment method in eCommerce and HotWax is not mapped to a payment method in NetSuite, the integration layer will fall back to a `DEFAULT` payment method. Currently, this fallback payment method is mapped to `Shopify Payment` in NetSuite.
 
 ## Example Mapping:
 
 Here's how you can [create mappings for payment methods](README.md#configuring-mappings-between-hotwax-commerce-and-netsuite)
-=======
+
 | HotWax ID                | NetSuite Value  |
 | ------------------------ | --------------- |
 | EXT\_SHOP\_ECOM\_GFTCRD  | Gift Card       |
