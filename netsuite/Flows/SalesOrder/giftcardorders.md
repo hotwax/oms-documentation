@@ -84,6 +84,14 @@ Finally, once the JSON is prepared, HotWax Commerce Integration Platform initiat
 HotWax Commerce Integration Platform communicates directly with Shopify for gift card activation, without any intermediary involvement from the HotWax Commerce OMS.
 {% endhint %}
 
+**Job in HotWax Commerce**
+
+Gift card activation:
+
+```
+poll_SystemMessageFileSftp_GiftCardActivationFeed
+```
+
 **Shopify API**
 
 [Bulk data import GraphlQL API](https://shopify.dev/docs/api/usage/bulk-operations/imports) used along with [gift card create mutation](https://shopify.dev/docs/api/admin-graphql/2024-04/mutations/giftcardcreate)
