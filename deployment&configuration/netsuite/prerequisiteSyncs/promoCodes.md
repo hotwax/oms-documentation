@@ -40,7 +40,12 @@ Schedule this SuiteScript to export current promo codes in NetSuite that need to
 HC_MR_ExportedDiscountItemCSV
 ```
 
-Job to save new promo codes:
+SFTP location
+```
+/home/{sftp-username}/netsuite/discountitem/import
+```
+
+Job to save new promo codes
 
 ```
 JOB_IMP_PRMO_CODE
@@ -55,8 +60,12 @@ Schedule this SuiteScript to export removed promo codes in NetSuite that need to
 ```
 HC_MR_ExportedInActiveDiscountCSV
 ```
+SFTP location
+```
+/home/{sftp-username}/netsuite/discountitem/delete
+```
 
-Job to remove promo codes no longer active in NetSuite:
+Job to remove promo codes no longer active in NetSuite
 
 ```
 JOB_RMV_PRMO_CODE
