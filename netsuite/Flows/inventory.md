@@ -77,18 +77,16 @@ To optimize the process and achieve rapid synchronization, we adopted SuiteScrip
 Retailers we work with set up two types of warehouse facilities in NetSuite: one for eCommerce and the other for wholesale. The eCommerce warehouse is responsible for fulfilling online orders, while the wholesale warehouse is mainly used for B2B operations, transfer orders and inventory transfers.
 
 {% hint style="info" %}
-Transfer orders are created for relocating inventory between different locations: from warehouse to store, store to warehouse, or between store transfers. These transactions involve the creation and fulfillment of transfer orders. While in case of inventory transfers between warehouses, fulfillment isn't usually involved. Instead, inventory is directly moved, and the impact on inventory levels is immediately recorded.
+Transfer orders are created for relocating inventory between different locations: from warehouse to store, store to warehouse, or between store transfers. These transactions involve the fulfillment and receiving of transfer orders. While in case of inventory transfers between warehouses, fulfillment and receiving isn't involved, instead, inventory is directly moved, and the impact on inventory levels is immediately recorded.
 {% endhint %}
 
 Learn more about [transfer orders](https://docs.hotwax.co/integration-resources/v/netsuite-integration/supported-integrations/transfer-order)
 
 When the eCommerce warehouse's inventory dips below expected levels, retailers perform inventory transfers from the wholesale warehouse to quickly replenish stock in the eCommerce warehouse.
 
-The effectiveness of this process relies on timely synchronization. If inventory transfer receipts at the eCommerce warehouse are synchronized with HotWax Commerce during the daily inventory sync with NetSuite, there's a risk of ending up with outdated inventory levels. As discussed, this daily sync is scheduled during off-peak hours, such as late at night or early in the morning. As a result, this timing could potentially result in missed sales opportunities.
+The effectiveness of this process relies on timely synchronization. If inventory transfer receipts at the eCommerce warehouse are synchronized with HotWax Commerce during the daily inventory sync with NetSuite, there's a risk of ending up with outdated inventory levels. As discussed, this daily sync is scheduled during off-peak hours, such as late at night or early in the morning. As a result, this timing could potentially result in missed sales opportunities. Sometimes retailers may also transfer inventory from their eCommerce warehouse to their wholesale warehouse, in this case as well it is necessary to update inventory levels in HotWax Commerce to avoid overpromising online.
 
-Therefore, whenever retailers perform inventory transfers to eCommerce warehouse, HotWax Commerce timely updates the inventory counts.
-
-Sometimes retailers may also transfer inventory from their eCommerce warehouse to their wholesale warehouse. In such cases, HotWax Commerce also accounts for the reduced inventory and maintains the most real-time synchronization with NetSuite inventory levels.
+Therefore, whenever retailers perform inventory transfers to or from eCommerce warehouse, HotWax Commerce timely updates the inventory counts and maintains the most real-time synchronization with NetSuite inventory levels.
 
 <figure><img src="../.gitbook/assets/inventory transfer.png" alt=""><figcaption><p>Inventory Transfer Sync from NetSuite to HotWax Commerce</p></figcaption></figure>
 
