@@ -74,7 +74,7 @@ To optimize the process and achieve rapid synchronization, we adopted SuiteScrip
 
 ## Inventory Movement Between B2C and B2B Warehouse Locations
 
-Retailers operating a single physical warehouse but catering to both B2C and B2B customers, managing inventory effectively is crucial. They configure two distinct logical locations in NetSuite: one for B2C (eCommerce) and another for B2B (wholesale) operations. This setup allows them to allocate inventory strategically between B2C and B2B business needs.
+For retailers operating a single physical warehouse but catering to both B2C and B2B customers, managing inventory effectively is crucial. They configure two distinct logical locations in NetSuite: one for B2C (eCommerce) and another for B2B (wholesale) operations. This setup allows them to allocate inventory strategically between B2C and B2B business needs.
 
 The B2C warehouse handles fulfillment of online orders, while the B2B warehouse manages bulk operations. When inventory in the B2C warehouse is depleted, retailers transfer stock from the B2B warehouse to replenish it, and vice versa when the B2B warehouse needs restocking, retailers transfer inventory from the B2C warehouse.
 
