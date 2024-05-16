@@ -72,27 +72,21 @@ Subsequently, we transitioned to Map Reduce scripts to manage the synchronizatio
 
 To optimize the process and achieve rapid synchronization, we adopted SuiteScript in combination with the Search Task function from the N/Task module. The results were remarkable, with the execution time reduced to a mere 10-15 seconds for a million inventory records. The search was executed swiftly, the CSV file was generated, and it was deposited in NetSuite's File Cabinet within a matter of seconds. This extraordinary speed and efficiency led us to the conclusion that the Search Task of the N/Task module was the ideal choice for synchronizing inventory records from NetSuite to HotWax Commerce.
 
-## Inventory Transfers
+## Inventory Movement Between B2C and B2B Warehouse Locations
 
-Retailers we work with set up two types of warehouse facilities in NetSuite: one for eCommerce and the other for wholesale. The eCommerce warehouse is responsible for fulfilling online orders, while the wholesale warehouse is mainly used for B2B operations, transfer orders and inventory transfers.
+Retailers operating a single physical warehouse but catering to both B2C and B2B customers, managing inventory effectively is crucial. They configure two distinct logical locations in NetSuite: one for B2C (eCommerce) and another for B2B (wholesale) operations. This setup allows them to allocate inventory strategically between B2C and B2B business needs.
 
-{% hint style="info" %}
-Transfer orders are created for relocating inventory between different locations: from warehouse to store, store to warehouse, or between store transfers. These transactions involve the fulfillment and receiving of transfer orders. While in case of inventory transfers between warehouses, fulfillment and receiving isn't involved, instead, inventory is directly moved, and the impact on inventory levels is immediately recorded.
-{% endhint %}
+The B2C warehouse handles online order fulfillment, while the B2B warehouse manages bulk operations. When inventory in the B2C warehouse is depleted, retailers transfer stock from the B2B warehouse to replenish it, and vice versa when the B2B warehouse needs restocking, retailers transfer inventory from the B2C warehouse.
 
-Learn more about [transfer orders](https://docs.hotwax.co/integration-resources/v/netsuite-integration/supported-integrations/transfer-order)
+The effectiveness of this process relies on timely synchronization. If inventory movements to or from the B2C warehouse are only updated during the daily sync with NetSuite, there's a risk of operating with outdated inventory levels. This daily sync, scheduled during off-peak hours such as late at night or early in the morning, can result in missed sales opportunities on eCommerce if recent inventory transfers to the B2C warehouse are not promptly reflected in HotWax Commerce. Additionally, it can lead to overpromising on eCommerce if inventory transfers from the B2C warehouse are not timely updated in HotWax Commerce.
 
-When the eCommerce warehouse's inventory dips below expected levels, retailers perform inventory transfers from the wholesale warehouse to quickly replenish stock in the eCommerce warehouse.
-
-The effectiveness of this process relies on timely synchronization. If inventory transfer receipts at the eCommerce warehouse are synchronized with HotWax Commerce during the daily inventory sync with NetSuite, there's a risk of ending up with outdated inventory levels. As discussed, this daily sync is scheduled during off-peak hours, such as late at night or early in the morning. As a result, this timing could potentially result in missed sales opportunities. Sometimes retailers may also transfer inventory from their eCommerce warehouse to their wholesale warehouse, in this case as well it is necessary to update inventory levels in HotWax Commerce to avoid overpromising online.
-
-Therefore, whenever retailers perform inventory transfers to or from eCommerce warehouse, HotWax Commerce timely updates the inventory counts and maintains the most real-time synchronization with NetSuite inventory levels.
+Therefore, it's essential for HotWax Commerce to sync recent inventory updates from NetSuite whenever retailers move inventory between B2C and B2B warehouse. This ensures that the inventory levels in NetSuite are accurately reflected in HotWax Commerce and, consequently, on the eCommerce platform. This prevents underselling and overselling of stock, thereby maintaining operational efficiency.
 
 <figure><img src="../.gitbook/assets/inventory transfer.png" alt=""><figcaption><p>Inventory Transfer Sync from NetSuite to HotWax Commerce</p></figcaption></figure>
 
 **Actions**
 
-1. A Map Reduce Script in NetSuite runs every 15 minutes and generates a inventory transfer CSV file. This file contains product details, inventory delta reflecting increase or decrease in a product's inventory at the eCommerce warehouse and places this file at the designated SFTP location.
+1. Map Reduce Script in NetSuite runs every 15 minutes, generates an inventory transfer CSV file and places it at the designated SFTP location. This file contains inventory deltas, specifying increases or decreases in product inventory at the B2C warehouse.
 
 **SuiteScript**
 
@@ -108,13 +102,13 @@ HC_MR_ExportedInventoryTransferCSV.js
 /home/{sftp-username}/netsuite/inventorytransfer/import
 ```
 
-2. A scheduled job in HotWax Commerce reads the CSV file from the SFTP location and adjusts the inventory records in HotWax Commerce. When inventory is transferred to the eCommerce warehouse, the scheduled job increases the inventory count for the respective product. Conversely, when inventory is transferred from the eCommerce warehouse, the job reduces the inventory count accordingly.
+2. A scheduled job in HotWax Commerce reads the CSV file from the SFTP location and adjusts the inventory records in HotWax Commerce. When inventory is transferred to the B2C warehouse, the scheduled job increases the inventory count for the product. Conversely, when inventory is transferred from the B2C warehouse, the job reduces the product's inventory count.
 
 **Job in HotWax Commerce**
 
 Import inventory transfer records
 
 ```
-IMP_INV_TRANS
 Import Inventory Transfer
+FTP Config: IMP_INV_TRANS
 ```
