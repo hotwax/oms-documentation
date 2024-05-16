@@ -74,7 +74,7 @@ To optimize the process and achieve rapid synchronization, we adopted SuiteScrip
 
 ## Inventory Transfers
 
-Retailers we work with often configure two warehouse type facilities in NetSuite, as an eCommerce warehouse and the other as wholesale warehouse. While the eCommerce warehouse handles online orders for fulfillment, the wholesale warehouse primarily serves for B2B operations, transfer orders and inventory transfers.
+Retailers we work with set up two types of warehouse facilities in NetSuite: one for eCommerce and the other for wholesale. The eCommerce warehouse is responsible for fulfilling online orders, while the wholesale warehouse is mainly used for B2B operations, transfer orders and inventory transfers.
 
 {% hint style="info" %}
 Transfer orders are created for relocating inventory between different locations: from warehouse to store, store to warehouse, or between store transfers. These transactions involve the creation and fulfillment of transfer orders. While in case of inventory transfers between warehouses, fulfillment isn't usually involved. Instead, inventory is directly moved, and the impact on inventory levels is immediately recorded.
