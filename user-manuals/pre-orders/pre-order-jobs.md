@@ -1,3 +1,9 @@
+---
+description: >-
+  Learn about setting up pre-order jobs in HotWax Commerce to sync pre-orders
+  with the eCommerce platform, ensuring accurate listing and seamless operations
+---
+
 # Pre-order Jobs
 
 Once Purchase Orders have successfully been uploaded to HotWax Commerce, the subsequent step involves seamlessly syncing the pre-orders with the e-commerce platform. Merchandisers can set up various jobs in HotWax Commerce to ensure the accurate listing of pre-orders on the e-commerce platform. Some of these jobs are internal to HotWax Commerce and facilitate the creation of jobs within the system.
@@ -32,7 +38,7 @@ Moreover, this job also manages the removal of pre-sell items from the pre-order
 * Upon physical receipt of inventory at the fulfillment center.
 * When the Purchase Order arrival date (promised fulfillment date) has passed.
 
-For more comprehensive details, read our [ecommerce integration page.](https://app.gitbook.com/s/HuLroZUG7riNx5fMTaPy/how-are-pre-orderable-and-backorderable-products-listed-or-delisted-on-shopify/presell-catalog-management)
+For more comprehensive details, read our [ecommerce integration page.](https://app.gitbook.com/s/HuLroZUG7riNx5fMTaPy/orders/how-are-pre-orderable-and-backorderable-products-listed-or-delisted-on-shopify/presell-catalog-management)
 
 You can schedule the job by accessing the `Job Manager App` > `Pre-order page` and selecting the `checkbox` next to the `Auto refresh pre-sell catalog` job name.
 
@@ -49,7 +55,7 @@ To schedule the job, Merchandisers navigate to the `Job Manager` > `Pre Orders` 
 
 <figure><img src="../.gitbook/assets/job-manager.hotwax.io_pre-order (5).png" alt=""><figcaption><p>Process Upload</p></figcaption></figure>
 
-* After confirming the activation of `Process Upload` jobs, Merchandisers can schedule the `presell catalog sync` job. To delve deeper into understanding how pre-orders are listed on Shopify, comprehensive insights are available in our [Shopify Pre-order integration guide.](https://app.gitbook.com/s/HuLroZUG7riNx5fMTaPy/how-are-pre-orderable-and-backorderable-products-listed-or-delisted-on-shopify/presell-catalog-synchronization)
+* After confirming the activation of `Process Upload` jobs, Merchandisers can schedule the `presell catalog sync` job. To delve deeper into understanding how pre-orders are listed on Shopify, comprehensive insights are available in our [Shopify Pre-order integration guide.](https://app.gitbook.com/s/HuLroZUG7riNx5fMTaPy/orders/how-are-pre-orderable-and-backorderable-products-listed-or-delisted-on-shopify/presell-catalog-synchronization)
 
 Upon listing all products on Shopify, it's crucial to appropriately tag them with `HC: Preorder` or `HC: Backorder`. This tagging process is easily managed by enabling the checkbox for the `Add pre-order tags` and `Add backorder tags` jobs, running every 15 minutes. These jobs utilize the preorder category in the meta fields to add the suitable tag to the parent product on Shopify.
 

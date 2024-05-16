@@ -5,8 +5,20 @@
 
 ## Business Process Models
 
+* [Introduction](business-process-models/README.md)
 * [Order lifecycle](business-process-models/orderlifecycle.md)
-* [Store fulfillment](business-process-models/store.fulfillment.md)
+* [Store fulfillment lifecycle](business-process-models/store.fulfillment.md)
+* [Warehouse fulfillment lifecycle](business-process-models/warehousefulfillmentlifecycle.md)
+* [Inventory lifecycle](business-process-models/inventorylifecycle.md)
+* [Transfer orders lifecycle](business-process-models/transferorderlifecycle.md)
+* [Gift card orders lifecycle](business-process-models/giftcardorderslifecycle.md)
+* [Returns lifecycle](business-process-models/returns-lifecycle/README.md)
+  * [Web returns with Loop](business-process-models/returns-lifecycle/loopwebreturnslifecycle.md)
+  * [In-store returns with Shopify POS](business-process-models/returns-lifecycle/shopifyposreturnslifecycle.md)
+  * [In-store returns with Loop](business-process-models/returns-lifecycle/loopposreturnslifecycle.md)
+* [Exchanges lifecycle](business-process-models/exchanges-lifecycle/README.md)
+  * [Web exchanges with Loop](business-process-models/exchanges-lifecycle/loopwebexchangeslifecycle.md)
+  * [In-store exchanges with Loop](business-process-models/exchanges-lifecycle/loopposexchangeslifecycle.md)
 
 ## Workflow
 
@@ -24,10 +36,15 @@
   * [Configurations](data-manager/configurations.md)
   * [Imports](data-manager/imports.md)
 
+## Products
+
+* [Product Management](products/products.md)
+  * [Reports](products/reports.md)
+
 ## Orders
 
 * [Order management](orders/order-management/README.md)
-  * [Find Sales orders](orders/order-management/find-sales-order.md)
+  * [Find Sales orders](orders/order-management/find-sales-orders.md)
   * [View Order Details](orders/order-management/view-order-details.md)
   * [Update orders](orders/order-management/update-sales-order.md)
   * [Allocation](orders/order-management/allocate-sales-order.md)
@@ -53,6 +70,7 @@
   * [Settings Page](fulfillment/fulfillment-setting-page.md)
   * [Reports](fulfillment/reports.md)
   * [Create Shipping Boxes](fulfillment/shipping-box.md)
+  * [Create Pickers](fulfillment/add-picker.md)
 * [Brokering](orders/brokering/README.md)
   * [Order Routing](brokering/configurableRouting.md)
   * [Rule Builder](brokering/rule-builder.md)
@@ -72,6 +90,10 @@
 
 ## Inventory
 
+* [Inventory Management](inventory/inventory-management/README.md)
+  * [Find Product Inventory](inventory/inventory-management/find-product-inventory.md)
+  * [Product Inventory View Page](inventory/inventory-management/product-inventory-view.md)
+  * [Inventory Configurations](inventory/inventory-management/inventory-configurations.md)
 * [Receiving](inventory/receiving/README.md)
   * [Inventory Receiving](receiving/receiving.md)
   * [Reports](receiving/reports.md)
@@ -83,12 +105,17 @@
   * [Set Bulk Safety Stock](inventory/safety-stock/set-bulk-safety-stock.md)
   * [Set Individual Safety Stock](inventory/safety-stock/set-individual-safety-stock.md)
 * [Multichannel inventory setup](inventory/multichannel-inventory-setup.md)
+* [Transfer orders](inventory/transfer-order/transfer-order-management.md)
+  * [Transfer order fulfillment](inventory/transfer-order/transfer-order-fulfillment.md)
+  * [Transfer order receiving](inventory/transfer-order/transfer-order-receiving.md)
+* [Reports](inventory/reports.md)
 
 ## Administration
 
 * [Company](administration/company/README.md)
   * [Create Product Store](administration/company/create-product-store.md)
   * [Manage Product Store](administration/company/manage-product-store.md)
+  * [Manage Shopify connection](administration/company/manage-shopify-shop.md)
 * [Users](users/README.md)
   * [Create Users](users/createUser.md)
   * [Manage Users](users/manageUser.md)
@@ -108,3 +135,14 @@
 * [Shipping methods](administration/shipping-methods/README.md)
   * [Create Carrier](administration/shipping-methods/add-carrier.md)
 * [Delete customers](delete-customers.md)
+
+## How-to documents
+
+* [How to configure HotWax Commerce when deploying new instance](how-to/deployment/deployment.md)
+* [How to map shipping method in HotWax Commerce to Netsuite](how-to/add-shipping-method.md)
+* [How to configure BOPIS with HotWax Commerce and Shopify](how-to/bopis/implement-bopis.md)
+* [How to manage order cancellations](how-to/order-cancellations.md)
+
+
+
+ 

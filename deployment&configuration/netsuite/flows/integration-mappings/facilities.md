@@ -34,3 +34,5 @@ You can simply click on the`bin` icon to remove a facility from the NetSuite Ful
 | -------------------- | -------------------- |
 | Central Warehouse    | NetSuite Fulfillment |
 | East Coast Warehouse | NetSuite Fulfillment |
+
+Here's a guide to [create mappings for facilities](README.md#configuring-mappings-between-hotwax-commerce-and-netsuite)

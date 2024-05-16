@@ -4,7 +4,7 @@ description: >-
   alignment between expected and received quantities.
 ---
 
-# Reports
+# Receiving Reports
 
 ## Discrepancy Tracking for Fulfilled Transfer Orders
 

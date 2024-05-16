@@ -36,3 +36,4 @@ To update dates in bulk use CSV import in the EXIM menu.
 
 
 :arrow\_left: Go to HotWax Commerce Docs
+

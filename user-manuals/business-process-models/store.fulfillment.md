@@ -1,97 +1,74 @@
 ---
 description: >-
-  The Store Fulfillment Process Model illustrates how HotWax Commerce Store
-  Fulfillment Suite enables Pick, Pack & Ship of online orders received at
-  stores.
+  The Store Fulfillment Lifecycle BPM illustrates how HotWax Commerce Store
+  Fulfillment App enables store associates to Pick, Pack & Ship online orders
+  received at stores.
 ---
 
-# Store fulfillment
+# Store fulfillment lifecycle
 
-<figure><img src="../.gitbook/assets/store fulfillment bpm.png" alt=""><figcaption><p>Store fulfillment business process model</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/store fulfillment bpm.png" alt=""><figcaption><p>Store fulfillment lifecycle business process model</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/notations.png" alt=""><figcaption><p>Notations</p></figcaption></figure>
+An order will have multiple fulfillments in case it has been split. Each fulfillment will have its independent lifecycle. For example, consider an order containing two items: one item is backordered while the other is in stock. Once the in-stock item is fulfilled, it will follow its lifecycle, and when the backordered item is fulfilled later, it will have its own separate lifecycle.
 
-## Orders Allocated to Stores
+## Analyze items and generate picklist
 
-As outlined in the [Order Lifecycle Business Process Model](https://docs.hotwax.co/user-guides/business-process-models/orderlifecycle), HotWax Commerce order routing engine looks for the optimal fulfillment location to allocate approved orders. Once order items have been successfully allocated to stores, two actions take place in HotWax Commerce:
+Items that have been successfully allocated to stores have fulfillment status <mark style="color:orange;">**"Reserved"**</mark> in HotWax Commerce.
 
-* The allocation status for the order item is set as <mark style="color:orange;">**"Brokered".**</mark>
-* The fulfillment status for the order item is set as <mark style="color:orange;">**"Reserved".**</mark>
+By default items are arranged in a "First In, First Out" sequence, ensuring that the ones ordered earlier are prioritized. Store managers can filter them based on the shipping method (such as same-day, next-day, or standard) or customer loyalty status.
 
-## Pick, Pack & Ship
+For example, if store managers wish to prioritize items with tight SLAs, they can filter out those that have a same-day shipping method to initiate batch processing for them.
 
-HotWax Commerce provides a dedicated <mark style="color:orange;">**Store Fulfillment Suite**</mark> comprising user-friendly apps such as the <mark style="color:orange;">**Store Fulfillment App**</mark> and <mark style="color:orange;">**Order Picking App**</mark> to quickly and accurately fulfill orders. These apps are specifically designed to facilitate easy adoption and minimize the learning curve for store personnel.
+When store managers determine items they wish to fulfill first, they generate a picklist for them and subsequently, assign a picker so that they can start picking items.
 
-### Push Orders to Store Fulfillment App
+Once the picklist has been generated, the fulfillment status is updated from <mark style="color:orange;">**"Reserved"**</mark> to <mark style="color:orange;">**"Picking"**</mark> in HotWax Commerce.
 
-Orders are automatically reflected at their allocated store location in the Store Fulfillment App.
+### Rate shop & book shipment
 
-### Analyze Orders and Generate Picklist
+While pickers scan and pick items, HotWax Commerce rate shops to determine the most cost-effective shipping method offered by the carrier that also meets the SLA, then proceeds to book the shipment.
 
-Orders are by default arranged in a "First In, First Out" sequence, ensuring that orders placed earlier are prioritized. The app also provides options to filter orders based on their shipping method (such as same-day, next-day, or standard) or customer loyalty status.
+For example, when a customer opts for 2-day delivery, rate shopping compares shipping methods offered by carriers capable of meeting the specified timeframe. Let's say FedEx provides both Air and Ground Shipping options. In this scenario, HotWax Commerce evaluates these shipping methods, and if both Air and Ground Shipping can deliver the order item within two days, Ground Shipping is automatically booked, as it achieves the same delivery timeframe at a lower cost.
 
-For example, in the event a store manager wishes to prioritize orders with tight SLAs, selecting the filter “same-day” will display all the orders that have a same-day shipping method. This way they can initiate batch processing of these orders.
+### Generate shipping labels in advance
 
-Once store managers determine the batch of orders they wish to fulfill first, they proceed to generate a picklist for them. Subsequently, they assign a picker to the picklist so that they can start picking the order items listed in their assigned picklist and begin the fulfillment process.
-
-There are two options using which pickers can start the picking process:
-
-* **Direct Printing:** Picklists can be directly printed from the Store Fulfillment App.
-* **QR Code Generation:** Store managers can generate QR codes for picklists from the Store Fulfillment App. The assigned picker can then scan this QR code using their mobile device and view their picklist directly in the Order Picking App.
-
-HotWax Commerce recommends using the Order Picking mobile app for efficient order fulfillment because it allows pickers to:
-
-* Sort order items in the picklist based on preferred criteria, including Product Name, Bin ID, or Location Sequence ID.
-* Scan barcodes for accurate item verification.
-* View enlarged product images for easier identification.
-
-These features maximize picker efficiency and minimize errors during the picking process.
-
-Open picklists appear in the <mark style="color:orange;">**“In-Progress”**</mark> status in the Order Picking App. Once pickers scan all order items listed in their picklist, they can mark their picklist as <mark style="color:orange;">**"Complete".**</mark>
-
-### Book Shipment
-
-As pickers pick order items, HotWax Commerce rate shops to determine the most cost-effective shipping method offered by the carrier that also meets the SLA.
-
-For example, if a customer opts for 2-day delivery, rate shopping evaluates shipping methods provided by carriers capable of meeting the specified timeframe. Let's consider FedEx as the carrier. In this scenario, HotWax Commerce will evaluate the shipping methods provided by FedEx. If both Air and Ground Shipping methods can deliver the order within two days, Ground Shipping will be automatically selected, as it achieves the same delivery timeframe at a lower cost.
-
-### Generate Shipping Labels in Advance
-
-Once the shipping method has been selected, HotWax Commerce fetches shipping labels in bulk with tracking codes from the carrier in advance to reduce the packing time.
+After booking the shipment, HotWax Commerce fetches advance shipping labels in bulk with tracking codes from the carrier, thereby reducing packing time.
 
 {% hint style="info" %}
-It's crucial to note that shipping labels are valid only when orders consist of a single package. In the event the packaging team uses two boxes to pack the order items, the pre-generated shipping label will not be suitable as it has been auto-generated for a single package.
+It's crucial to note that shipping labels are valid only when an item requires a single package. In the event where an order has multiple items and the packing team uses more than one box for packing, the pre-generated shipping label will not be applicable, as it has been auto-generated for a single package.
 {% endhint %}
 
-### Picking Failure
+### Picking failure
 
-In the event a picker is unable to locate the order item listed in their picklist in the store, store managers have the authority to reject the fulfillment of that specific order item.
+When a picker is unable to find the item that is listed in their picklist, store managers have the authority to reject that specific item. In this scenario, its fulfillment status <mark style="color:orange;">**"Picking"**</mark> is automatically removed in HotWax Commerce.
 
-When fulfillment for an order item is rejected in the Store Fulfillment App, its allocation status is updated from <mark style="color:orange;">**"Brokered"**</mark> to <mark style="color:orange;">**"Rejected,"**</mark> and the fulfillment status <mark style="color:orange;">**"Reserved"**</mark> is automatically removed in HotWax Commerce.
+Learn more about [Rejections and their reasons](../fulfillment/rejection.md)
 
-The rejected order item is automatically sent to the  `Brokering Queue` so that they can be rebrokered and routed to another fulfillment location.
+## Pack items
 
-When the order routing engine allocates this item to a new fulfillment location, its allocation status reverts to <mark style="color:orange;">**"Brokered"**</mark> and the fulfillment status is once again updated to <mark style="color:orange;">**"Reserved".**</mark>
+Now, when the items have been picked and brought to the packing station, they can be quickly packed since the shipment has already been booked and shipping labels have been pre-generated.
 
-### Pack Orders
+If an order contains multiple items and one box isn’t sufficient to fit all of them, the packing team can add more boxes. In this scenario, the pre-generated shipping label will not serve the purpose, as it has been generated by default for a single package. While packing, the packing teams can regenerate shipping labels as needed.
 
-Now, when the order items have been picked and brought to the packing station, they can be quickly packed since the shipment has already been booked and shipping labels have been pre-generated.
+Once items have been packed, the packing team places them at the designated location in the store from where the carrier will collect them.
 
-Once orders have been packed, the packaging team places them at the designated location in the store, where the carrier will collect them, and then marks orders as <mark style="color:orange;">**"Packed."**</mark> The fulfillment status for packed orders is updated from <mark style="color:orange;">**“Reserved”**</mark> to <mark style="color:orange;">**“Packed”**</mark> in HotWax Commerce.
+The fulfillment status for packed items is updated from <mark style="color:orange;">**"Picking"**</mark> to <mark style="color:orange;">**"Packed"**</mark> in HotWax Commerce.
 
-In the event that an order has multiple items and one box isn’t suitable to fit all the items, packaging teams can add more boxes or choose the size that suits best for the order items. In this scenario, the pre-generated shipping label will not serve that purpose and the packing team will have to regenerate the shipping label from the app.
+### Unpack items
 
-### Unpack Orders
+If the packing team discovers that they have mispacked an item, they have to unpack it. The fulfillment status is then updated from <mark style="color:orange;">**"Packed"**</mark> to <mark style="color:orange;">**"Picking"**</mark> in HotWax Commerce.
 
-In the event the packaging team discovers that they have mispacked an order, the app offers an option to unpack it. The fulfillment status is then updated from <mark style="color:orange;">**“Packed”**</mark> to <mark style="color:orange;">**“Reserved”**</mark> in HotWax Commerce.
+Once the item has been correctly repacked, the fulfillment status in HotWax Commerce is updated to <mark style="color:orange;">**"Packed"**</mark> once again.
 
-Once the order has been correctly repacked, the team marks it as <mark style="color:orange;">**"Packed."**</mark> Subsequently, the fulfillment status in HotWax Commerce is updated to <mark style="color:orange;">**"Packed"**</mark> once again.
+## Ship items
 
-### Ship Orders
+Finally, the fulfillment team hands over the packed items to the shipping carrier.
 
-After the carrier collects the packed orders, fulfillment teams have two options:
+The `Ship Packed Orders` Job in HotWax Commerce checks if packed items have tracking codes assigned and automatically ships them. Fulfillment teams can also manually ship items once the carrier collects them.
 
-* **Auto ship:** The `Ship Packed Orders` Job in HotWax Commerce checks if packed orders have tracking codes and automatically marks them as <mark style="color:orange;">**“Ship Now”.**</mark>
-* **Manual ship:** Fulfillment teams can manually mark orders as <mark style="color:orange;">**"Ship Now"**</mark> once the shipping provider collects them.
+Once an item is shipped, its fulfillment status is updated from <mark style="color:orange;">**"Packed"**</mark> to <mark style="color:orange;">**"Shipped"**</mark> in HotWax Commerce.&#x20;
 
-Once orders are marked as shipped in the Store Fulfillment App, the order item status in HotWax Commerce is updated from <mark style="color:orange;">**"Approved"**</mark> to <mark style="color:orange;">**"Completed,"**</mark> and the fulfillment status is updated from <mark style="color:orange;">**"Packed"**</mark> to <mark style="color:orange;">**"Shipped".**</mark>
+In the event of a partial shipment, the fulfillment status of the shipped items will be updated to <mark style="color:orange;">**"Shipped"**</mark>, while the order itself will remain in the <mark style="color:orange;">**"Approved"**</mark> status until all items have been shipped.
+
+When all items of an order are <mark style="color:orange;">**"Shipped"**</mark>, the order status is updated from <mark style="color:orange;">**"Approved"**</mark> to <mark style="color:orange;">**"Completed"**</mark> in HotWax Commerce.
+
+\

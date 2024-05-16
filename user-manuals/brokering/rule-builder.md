@@ -1,3 +1,9 @@
+---
+description: >-
+  Learn how to configure order routing and brokering rules in HotWax Commerce to
+  enhance and optimize fulfillment operations with this user manual.
+---
+
 # Rule Builder
 
 Welcome to the Routing Configurations User Manual! This guide will lead you through the process of configuring your order routing and brokering rules to enhance and optimize your fulfillment operations. Before diving into the configuration steps, it's crucial to have a solid understanding of the various routing parameters. Ensure you grasp how these parameters function to guarantee the accurate setup of your rules. If you need more information, refer to the [Routing Rules](rule-builder.md) page.
@@ -108,7 +114,7 @@ Routing sequence
 * Click on the options icon in the "Filters" section to add or remove filters.
 * Ensure orders are routed based on specific criteria that align with your fulfillment strategy.
 
-<figure><img src="../.gitbook/assets/filters.png" alt="" width="358"><figcaption><p>Order filters</p></figcaption></figure>
+<figure><img src="broken-reference" alt="" width="358"><figcaption><p>Order filters</p></figcaption></figure>
 
 #### Managing Inventory Rules
 
@@ -124,7 +130,7 @@ Routing sequence
 * Click on the options icon on the "Filters" card to manage filters for inventory rules.
 * Sorting inventory filters optimizes the allocation process by prioritizing available inventory based on specific criteria.
 
-<figure><img src="../.gitbook/assets/filters (1).png" alt="" width="358"><figcaption><p>Manage filters</p></figcaption></figure>
+<figure><img src="broken-reference" alt="" width="358"><figcaption><p>Manage filters</p></figcaption></figure>
 
 #### Managing Sorting Options
 

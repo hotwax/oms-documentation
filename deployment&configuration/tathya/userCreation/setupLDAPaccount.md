@@ -1,6 +1,13 @@
+---
+description: >-
+  You can create “Organizational Units” (OU) and “Customer Units” (CU) in the
+  LDAP directory. For a new project, before creating a user (CU), it is
+  recommended to create an OU.
+---
+
 # Creating LDAP Account
 
-You can create “Organizational Units” (OU) and “Customer Units” (CU) in the LDAP directory. For a new project, before creating a user (CU), it is recommended to create an OU.
+
 
 ### Why OU?
 

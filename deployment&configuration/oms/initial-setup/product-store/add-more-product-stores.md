@@ -1,3 +1,10 @@
+---
+description: >-
+  Learn how to add more product stores in HotWax Commerce to cater to diverse
+  retail brands, enabling efficient and customized management tailored to each
+  brand's unique needs.
+---
+
 # Add More Product Stores
 
 In HotWax Commerce, managing multiple product stores is valuable for retailers with diverse brands. Each store can be tailored to represent a specific retail brand, enabling efficient and customized management. This feature streamlines operations to meet the unique needs of each retail brand.

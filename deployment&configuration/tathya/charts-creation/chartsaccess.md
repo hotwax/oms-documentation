@@ -1,4 +1,10 @@
-# Granting Access on Created Charts
+---
+description: >-
+  Discover how to grant access to charts in Tathya for seamless collaboration
+  and editing, as well as adding charts to dashboards without visibility issues.
+---
+
+# Charts Access
 
 In Tathya, it's essential to grant access to charts to other users to facilitate seamless collaboration and editing processes. Moreover, granting access allows users to add the chart to dashboards without encountering visibility issues. Here's how to grant access:
 
@@ -12,6 +18,5 @@ In Tathya, it's essential to grant access to charts to other users to facilitate
 8. Once you've added the relevant users, save your changes. This ensures that the specified users have the necessary permissions to edit the chart and include it in dashboards.
 
 {% hint style="warning" %}
-Editing a chart without access rights creates a new chart instead of modifying the original, leading to duplication. Access is crucial to maintain chart integrity and avoid unnecessary duplication.
-Additionally, lacking access to a chart prevents it from appearing in the list of options when adding charts to an existing dashboard.
+Editing a chart without access rights creates a new chart instead of modifying the original, leading to duplication. Access is crucial to maintain chart integrity and avoid unnecessary duplication. Additionally, lacking access to a chart prevents it from appearing in the list of options when adding charts to an existing dashboard.
 {% endhint %}

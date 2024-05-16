@@ -1,6 +1,10 @@
-# Configure Product Store
+---
+description: >-
+  In HotWax Commerce, a Product Store serves as a representation of a company or
+  brand, particularly useful for retailers managing multiple brands.
+---
 
-In HotWax Commerce, a Product Store serves as a representation of a company or brand, particularly useful for retailers managing multiple brands.
+# Configure Product Store
 
 ## Configuration Steps:
 
@@ -28,7 +32,7 @@ In HotWax Commerce, a Product Store serves as a representation of a company or b
 | **Auto Cancel Days**      | The default value is 0, indicating no auto-cancel days should be applied. If needed, enter the total number of days after which an order should be auto-canceled if it remains unallocated.                   |
 | **Sales Order ID Prefix** | This should be checked with the retailer if they have a preference. Adding a prefix to the internal ID helps visually separate purchase orders and sales orders.                                              |
 | **Allow Split**           | By default, allow split is set to Y. If we need not allow the order split, its value can be set from the dropdown as Y or N. Based on this, the orders will be split, and multiple shipments will be created. |
-| **Product Identifier**    | This setting changes which Identification of a product to use as its primary internalName.                                                                                                                    |
+| **Product Identifier**    | This setting changes which identification of a product to use as its primary internal name in HotWax Commerce.                                                                                                                  |
 | **External ID**           | The ID of the store in the external system, generally a subsidiary in ERPs.                                                                                                                                   |
 
 #### Do not edit these fields
@@ -37,18 +41,36 @@ In HotWax Commerce, a Product Store serves as a representation of a company or b
 | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Reserve Inventory**   | OMS serves as the definitive source for inventory information, and as such, this setting should consistently remain at its default value of `Y` without alteration.                                                                                             |
 | **Enable Brokering**    | Disabling brokering hinders OMS from optimizing inventory allocation for orders, defeating its intended purpose. Therefore, this setting should always be maintained at its default value of `Y` and should not be modified.                                    |
-| **Explode Order Items** | This setting changes if multi-quantity order items are exploded into single quantity items. The default value for this setting is "Y" indicating that it is enabled, it should not be changed to "N", as many flows of the OMS are not tested for this setting. |
-| **External ID**         | Most retailers will never need this. Adding it will not break any flows but since it is not part of required data setup, it's recommended to leave it blank.                                                                                                    |
+| **Explode Order Items** | This setting changes if multi-quantity order items are exploded into single-quantity items. The default value for this setting is "Y" indicating that it is enabled, it should not be changed to "N", as many flows of the OMS are not tested for this setting. |
+| **External ID**         | Most retailers will never need this. Adding it will not break any flows but since it is not part of the required data setup, it's recommended to leave it blank.                                                                                                    |
 
 ***
 
-### Pre-Order Specific Configurations
+### Add additional configurations
 
-To configure pre-order settings for a specific store, follow these steps:
+Apart from these default configurations, retailers can add new configurations specific to their product store by clicking `Add` in the store settings section. Here are the available store settings that retailers can add:
 
-1. Visit the Product Store: [https://.hotwax.io/commerce/control/ViewStore?productStoreId=STORE](https:/%3CinstanceName%3E.hotwax.io/commerce/control/ViewStore)
-2. Navigate to `Store Settings` and click on `Add Function` to access additional settings for pre-orders.
-3. Select `HOLD_PRORD_PHYCL_INV`. For more information, refer to the documentation [here](https://github.com/hotwax/press-release-faq/blob/main/pre-order/hold-pre-order-physical-inventory.md).
-4. Set the value to `true` or `false` based on your pre-order requirements.
+| Setting Code             | Setting Name                          | Value              | Description                                                                                                     |
+|--------------------------|---------------------------------------|--------------------|-----------------------------------------------------------------------------------------------------------------|
+| BOPIS_PART_ODR_REJ      | BOPIS Partial Order Rejection | Y | Indicates whether store associates can partially reject "buy online, pick up in-store" (BOPIS) orders. |
+| CUST_ALLOW_CNCL         | Customer Order Cancellation           | Y                  | Determines if customers can cancel orders on Shopify.                                                           |
+| FULFILL_NOTIF           | Fulfillment Notification             | Y                  | Enables the updating of tracking information on Shopify.                                                         |
+| PRDT_IDEN_PREF          | Product Identifier Preference        | {"primaryId": "SKU", "secondaryId": "internalName"} | Defines the preferred primary identifier used across the system.                                        |
+| CUST_DLVRADR_UPDATE     | Customer Delivery Address Update     | Y                  | Allows updating the delivery address of customers.                                                              |
+| CUST_DLVRMTHD_UPDATE    | Customer Delivery Method Update      | Y                  | Allows updating the delivery method chosen by customers.                                                        |
+| CUST_PCKUP_UPDATE       | Customer Pickup Address Update       | Y                  | Allows changing the pickup address for customers.                                                               |
+| HOLD_PRORD_PHYCL_INV    | Hold Pre-ordered Physical Inventory   | Y                  | If a pre-order queue exists, physical inventory will be considered as 0. The default value is true.                   |
+| INV_CNT_VIEW_QOH        | Inventory Count View QOH| Y                  | Enables users to see current Quantity On Hand (QOH) from HotWax OMS on the product detail page of the Inventory Count app, aiding users during periodic cycle counts. |
+| ORD_ITM_PICKUP_FAC      | Order Item Pickup Facility           | _pickupstore       | Orders imported with this tag will have their line items checked for pre-selected facilities to pick up orders from. |
+| PRE_SLCTD_FAC_TAG       | Preselected Facility Tag             | HC_PRE_SELECTED_FAC | Orders imported with this tag will have their line items checked for pre-selected facilities to fulfill them from. |
+| RATE_SHOPPING           | Rate Shopping Configuration          | Y                  | Configures rate shopping.                                                                                        |
+| RETURN_DEADLINE_DAYS    | Return Deadline Days                 | 30                 | Sets the deadline allowed for customer returns.                                                                  |
+| SAVE_BILL_TO_INF        | Save Billing Information             | Y                  | Saves customers' bill to information on orders from Shopify in HotWax.                                          |
+| RTN_RSTCK_FAC           | Return Restock Facility               | WH                 | Specifies the default location to restock return items.                                                         |
+| RF_SHIPPING_METHOD      | Rerouted Shipping Method             | SECOND_DAY         | Sets the default shipping method for rerouted orders.                                                           |
+| BRK_SHPMNT_THRESHOLD   | Brokering Shipment Threshold             | 50                 | Orders will split into separate shipgroups only if the total order item value exceeds this threshold.           |
 
-By following these steps, you can customize pre-order configurations for the specified store.
+
+
+
+

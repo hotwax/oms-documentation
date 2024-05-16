@@ -1,13 +1,21 @@
-# Additional Configurations
+---
+description: >-
+  Explore additional settings in Tathya's database configuration, including the
+  'Advance' tab for fine-tuning aspects like SQL Lab and Performance.
+---
+
+# Additional Settings
 
 Once you have established the connection, you can check the “Advance” tab to access additional settings. These allow you to fine-tune various aspects of the database connection.
 
 The two important configurations here are **SQL Lab and Performance**:
 
 ## SQL lab
+
 Enable “Expose database in SQL Lab” to make the database available in SQL Lab and Enable “Allow this database to be explored” to allow database exploration and interaction.
 
 ## Performance
+
 Set the CHART CACHE TIMEOUT. This is a configuration parameter related to how Tathya caches (stores temporarily) the results of chart queries. Caching is a technique used to improve performance by storing and reusing previously fetched data.
 
 {% hint style="info" %}

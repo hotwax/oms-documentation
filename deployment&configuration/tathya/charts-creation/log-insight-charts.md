@@ -4,7 +4,7 @@ HotWax Commerce facilitates the exchange of data between systems, but errors can
 
 LogInSight charts can be set with the following steps:
 
-### LogInsights Core Creation for a specific instance
+### LogInsights Core Creation for a Specific Instance
 
 The `logInsights` core within HotWax Commerce provides users with valuable insights derived from system logs, facilitating the generation of superset reports. This feature is crucial for users who need to analyze system performance, troubleshoot issues, and make informed decisions based on data-driven insights.
 
@@ -29,7 +29,7 @@ NiFi, an open-source data integration tool, is utilized to automate data flow be
 
 After the flow setup, it is imperative to insert dummy data. This step is crucial for querying as fields are dynamically indexed in the Solr core based on the dummy data. The dummy data should be inserted with a docType of `TEST` to ensure exclusion from Superset charts.
 
-### Solr Database Creation in Superset
+### Solr Database Creation in Tathya
 
 System administrators can utilize the Solr database creation feature to set up and manage databases for log data, facilitating effective monitoring and troubleshooting of system performance.
 

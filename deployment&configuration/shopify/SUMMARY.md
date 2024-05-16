@@ -4,8 +4,8 @@
 
 ## Setup Shopify Integration
 
-* [Install Custom App](ShopifyIntegration/installCustomApp.md)
-* [Create Shop](ShopifyIntegration/README.md)
+* [Install HotWax commerce App](ShopifyIntegration/README.md)
+* [Enable BOPIS/Preorder on Shopify](ShopifyIntegration/bopis-preorder-scripts.md)
 * [Data Mappings](ShopifyIntegration/SetupMappings.md)
 * [Setup Facilities](ShopifyIntegration/MapLocations.md)
 
@@ -13,6 +13,7 @@
 
 * [Initial Product Sync](SyncShopify/README.md)
 * [Initial Order Sync](SyncShopify/importOrders.md)
+* [Initial Inventory Sync](SyncShopify/upload-inventory.md)
 * [Integrations](ShopifyIntegration/integration-mapping.md)
   * [Locations](ShopifyIntegration/MapLocations.md)
   * [Shipping Method](ShopifyIntegration/shipping-method.md)

@@ -1,6 +1,12 @@
-# User Creation
+---
+description: >-
+  With roles set up to manage access to dashboards and charts, the next step is
+  to create user profiles and assign the appropriate roles.
+---
 
-With roles set up to manage access to dashboards and charts, the next step is to create user profiles and assign the appropriate roles.
+# Creating User
+
+
 
 {% hint style="warning" %}
 Skip this step if the user is already listed on Tathya.
