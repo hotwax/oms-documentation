@@ -86,7 +86,7 @@ Therefore, it's essential for HotWax Commerce to sync recent inventory updates f
 
 **Actions**
 
-1. Map Reduce Script in NetSuite runs every 15 minutes, generates an inventory transfer CSV file and places it at the designated SFTP location. This file contains inventory deltas, specifying increases or decreases in product inventory at the B2C warehouse.
+1. Map Reduce Script in NetSuite runs every 15 minutes, generates an inventory transfer CSV file and places it at the designated SFTP location. This file contains inventory deltas, specifying increases or decreases in a product's inventory at the B2C warehouse.
 
 **SuiteScript**
 
