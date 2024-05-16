@@ -25,7 +25,7 @@ At any point if you wish to export a certain set of records on demand, the sched
 
 **Exported flag** 
 
-Certain SuiteScripts maintain an "exported" flag to ensure all records are synced with HotWax. These scripts mark check on the exported flag of each record exported from NetSuite and deposited at an SFTP location. If a SuiteScript fails to deposit the file due to reasons like network failure or connection timeout with the SFTP, the generated file is automatically relocated to the NetSuite File Cabinet. Subsequently, another SuiteScript is triggered to read these records and uncheck the exported flag in NetSuite for those records that couldn't be exported. This process ensures that any flagged export from NetSuite can be replayed by unchecking the exported flag on the record.
+Certain SuiteScripts maintain an "exported" flag to ensure all records are synced with HotWax. These scripts mark check on the exported flag of each record exported from NetSuite and deposited at an SFTP location. If a SuiteScript fails to deposit the file due to reasons like connection timeout with the SFTP, the generated file is automatically relocated to the NetSuite File Cabinet. Subsequently, another SuiteScript is triggered to read these records and uncheck the exported flag in NetSuite for those records that couldn't be exported. This process ensures that any flagged export from NetSuite can be replayed by unchecking the exported flag on the record.
 
 ***
 
