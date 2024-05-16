@@ -15,7 +15,7 @@ If an export SuiteScript is reported in an error notification indicating a conne
 1. Review the custom NetSuite entity setup by the SDF bundle for SFTP configurations. Ensure that the default directory is set up correctly for your project. It should look something like this: `/home/{client-name}sftp/netsuite/`.
 2. If the connection issue still persists, try logging into the SFTP directly with credentials provided by HotWax. If you are unable to connect to the SFTP directly, this most likely indicates that the OMS instance is experiencing availability issues. Connect with the HotWax Support team for this.
 
-#### Retry data from failed exports**
+#### Retry data from failed exports
 
 **Time-based cursor**
 
