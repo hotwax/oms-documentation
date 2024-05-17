@@ -1,14 +1,8 @@
 # Gift Card Orders Fulfillment
 
-Retailers configure both physical and digital gift cards with the product type `GIFT CARD` in Shopify. When retailers offer only one type of gift card on Shopify, HotWax Commerce decides whether it should be auto-completed or if it requires actual fulfillment, based on its specified type.
+Retailers we work with offer both physical and digital gift cards which have product type as “GIFT CARD” in Shopify. 
 
-For example, if the retailer chooses to map the GIFT CARD Shopify product type to `DIGITAL` type products in the HotWax Commerce, then HotWax Commerce automatically marks gift card order items as “Completed” as soon as they’re imported because these gift cards do not require actual fulfillment.
-
-Alternatively, if the retailer chooses to map the GIFT CARD Shopify product type to `FINISHED GOODS` type products in HotWax Commerce, then HotWax Commerce routes them to the optimal fulfillment location.
-
-Some of the retailers we work with offer both physical and digital gift cards which have product type as `GIFT CARD` in Shopify. In such cases, gift cards product type is not set up as either `DIGITAL` or `FINISHED GOODS` but are specifically set up as the `GIFT_CARD` product type in HotWax Commerce.
-
-In this setup, digital gift cards are configured for auto-fulfillment directly in Shopify, while physical gift cards require the traditional fulfillment process.
+In HotWax Commerce gift cards have their product type set up as “GIFT_CARD”. In this set up, digital gift cards are configured for auto fulfillment directly in Shopify, while physical gift cards require the traditional fulfillment process. Here's how it works:
 
 ### Digital gift cards:
 
@@ -48,13 +42,25 @@ Digital gift cards are auto-activated and customers can directly redeem them by 
 
 When the fulfillment location where a gift card item is allocated leverages NetSuite for fulfillment, usually a warehouse, then the HotWax Commerce syncs those items' allocation with NetSuite.
 
-Learn more about fulfillment in NetSuite
+Learn more about [fulfillment in NetSuite](https://docs.hotwax.co/integration-resources/v/netsuite-integration/supported-integrations/salesorder/fulfillment)
 
 ### Activation of Gift Cards
 
 Similar to how store associates assign serial numbers and load values onto gift cards in-store, warehouse fulfillment teams also undertake these tasks to prepare gift card orders for shipment.
 
 HotWax Commerce Integration Platform retrieves gift card items, their assigned serial numbers, and corresponding values from NetSuite and generates a JSON file. Subsequently, it calls the Shopify API to request activation for the gift card.
+
+{% hint style="info" %}
+HotWax Commerce Integration Platform communicates directly with Shopify for gift card activation, without any intermediary involvement from the HotWax Commerce OMS.
+{% endhint %}
+
+**Job in HotWax Commerce**
+
+Gift card activation:
+
+```
+poll_SystemMessageFileSftp_GiftCardActivationFeed
+```
 
 **Shopify API**
 
