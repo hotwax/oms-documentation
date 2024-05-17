@@ -36,7 +36,6 @@
 * [Brokering](orders/brokering/README.md)
   * [Order Routing](brokering/configurableRouting.md)
   * [Rule Builder](brokering/rule-builder.md)
-  * [Reports](brokering/reports.md)
 * [Pre-Orders](pre-orders/README.md)
   * [Purchase Order Upload](pre-orders/purchase-order-uploads.md)
   * [Purchase Order Management](pre-orders/purchase-order-management.md)
@@ -44,7 +43,6 @@
   * [Audit](pre-orders/audit-pre-order.md)
   * [Pre-order Allocation](pre-orders/pre-order-allocation.md)
   * [Release Pre-orders](pre-orders/release-pre-orders.md)
-  * [Reports](pre-orders/reports.md)
 * [Returns](returns/readme.md)
   * [Import Returns](returns/import-returns.md)
   * [In-Store Returns](returns/in-store-returns.md)
@@ -62,14 +60,8 @@
   * [Set Individual Safety Stock](inventory/safety-stock/set-individual-safety-stock.md)
 * [Multichannel inventory setup](inventory/multichannel-inventory-setup.md)
 * [Transfer orders](inventory/transfer-order/transfer-order-management.md)
-  * [Transfer order fulfillment](inventory/transfer-order/transfer-order-fulfillment.md)
-  * [Transfer order receiving](inventory/transfer-order/transfer-order-receiving.md)
-
-## How-to documents
-
-* [How to configure HotWax Commerce when deploying new instance](how-to/deployment/deployment.md)
-* [How to map shipping method in HotWax Commerce to Netsuite](how-to/add-shipping-method.md)
-* [How to configure BOPIS with HotWax Commerce and Shopify](how-to/bopis/implement-bopis.md)
+  * [Transfer order fulfillment](transfer-order/transfer-order-fulfillment.md)
+  * [Transfer order receiving](transfer-order/transfer-order-receiving.md)
 
 
 
