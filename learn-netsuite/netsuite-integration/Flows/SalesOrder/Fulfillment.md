@@ -8,13 +8,16 @@ description: >-
 
 ## Fulfillment in NetSuite
 
-When a warehouse fulfills order items in NetSuite, fulfilled order information is synchronized from NetSuite to HotWax Commerce. This synchronization step ensures that orders marked as "fulfilled" in NetSuite are accurately reflected in HotWax Commerce. It ensures that the order status is consistent and updated across both systems.
+
+When the warehouse fulfillment team begins the fulfillment of the order item, an item fulfillment record is created in NetSuite. As soon as the order item is picked, packed and shipped, the item fulfillment record is marked as “Shipped” and the order status is updated from "Pending Fulfillment" to "Pending "Billing".
+
+Synchronizing shipped order items from NetSuite to HotWax Commerce ensures that the order status is consistent and updated across both systems.
 
 <figure><img src="../../.gitbook/assets/fulfillment update in netsuite.png" alt=""><figcaption><p>Fulfilled order updates synced from NetSuite to HotWax Commerce</p></figcaption></figure>
 
 **Actions**
 
-1. A Map Reduce SuiteScript generates a CSV file containing fulfilled orders and places it at an SFTP location.
+1. A Map Reduce SuiteScript generates a CSV file containing item fulfillment records in the Shipped status and places it at an SFTP location.
 
 **SuiteScript**
 
@@ -44,17 +47,17 @@ FTP Config: IMP_ODR_ITM_FLFLMNT
 
 The primary difference in this context is the approach to sending fulfillment location data from HotWax Commerce to NetSuite.
 
-While fulfillment locations are indeed transmitted to NetSuite after in-store orders are fulfilled within HotWax Commerce, it's important to understand that this data transmission isn't critical for the actual fulfillment of orders. The fulfillment location data is conveyed to NetSuite once orders are fulfilled within HotWax Commerce. Its significance lies in enabling the subsequent creation of invoices, the application of payments to these invoices, and the accurate marking of orders as completed within the NetSuite system. This step occurs post-fulfillment in HotWax Commerce to ensure proper financial processing and completion of orders in NetSuite.
+While fulfillment locations are indeed transmitted to NetSuite after in-store orders are fulfilled within HotWax Commerce, it's important to understand that this data transmission isn't critical for the actual fulfillment of orders. The fulfillment location data is conveyed to NetSuite once orders are fulfilled in HotWax Commerce. Its significance lies in updating order status in NetSuite, subsequent creation of invoices and the application of payments to these invoices. This step occurs post-fulfillment in HotWax Commerce to ensure proper financial processing and completion of orders in NetSuite.
 
 <figure><img src="../../.gitbook/assets/fulfillment update HotWax.png" alt=""><figcaption><p>Fulfillment location data and order updates synced from HotWax Commerce to NetSuite</p></figcaption></figure>
 
 **Actions**
 
-1. A scheduled job within HotWax Commerce Integration Platform retrieves fulfilled order items and creates a feed of outbound shipments as a JSON file and places it at an SFTP location.
+1. A scheduled job in HotWax Commerce Integration Platform retrieves fulfilled order items and creates a feed of outbound shipments as a JSON file and places it at an SFTP location.
 
 _to be added_
 
-2. A Scheduled Script in NetSuite reads this JSON file from the SFTP location, allocating locations to the orders within NetSuite by updating order records. Additionally, it creates fulfillment records in NetSuite based on the HotWax Commerce shipment data using the N/Record module of NetSuite.
+2. A Scheduled Script in NetSuite reads this JSON file from the SFTP location, allocating locations to the orders in NetSuite by updating order records. Additionally, it creates fulfillment records in Shipped status in NetSuite based on the HotWax Commerce shipment data using the N/Record module of NetSuite.
 
 **SuiteScript**
 
@@ -68,7 +71,7 @@ HC_SC_CreateItemFulfillment
 /home/{sftp-username}/netsuite/fulfilledsalesorder/export
 ```
 
-Upon completion of this process, the orders transition to "pending\_billing" status, signifying that they are fulfilled and ready for billing.
+Upon completion of this process, the orders transition from "Pending Fulfillment" to "Pending Billing" status, signifying that they are fulfilled and ready for billing.
 
 {% hint style="info" %}
 The `HC_SC_CreateItemFulfillment` SuiteScript also generates a CSV file highlighting erroneous records found during processing and uploads the file to the SFTP server. Simultaneously, an email alert is automatically triggered to designated personnel, helping them quickly pinpoint the source of the issue and accelerating troubleshooting.

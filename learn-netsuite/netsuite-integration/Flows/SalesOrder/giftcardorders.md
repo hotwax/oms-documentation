@@ -1,6 +1,6 @@
 # Gift Card Orders
 
-Gift cards are prepaid stored-value cards that carry a value determined at the time of the card's purchase. They are often given as gifts or rewards and are redeemable for products up to the value stored on the card.
+Gift cards are stored-value cards that carry a value determined at the time of the card's purchase. They are often given as gifts or rewards and are redeemable for products up to the value stored on the card.
 
 Retailers set up both physical and digital gift cards in their eCommerce platform. Both physical and digital gift cards have a unique serial number or GC number that customers need to enter to redeem the card's value.
 
@@ -8,7 +8,7 @@ Learn more about [gift cards set up in eCommerce](https://docs.hotwax.co/integra
 
 **Physical Gift Cards:**
 
-Physical gift cards are tangible cards that customers order to get them delivered to their home. When customers receive their order, they get a unique serial number on the gift card that they can use to redeem the value stored in the card.
+Physical gift cards are tangible cards that customers can buy online or in-store. These cards come with a unique serial number that customers can use to redeem the value stored in the card.
 
 **Digital Gift Cards:**
 
@@ -26,7 +26,7 @@ Learn more about [gift card orders synchronization to HotWax Commerce](https://d
 
 The process of synchronizing physical gift card orders from HotWax Commerce to NetSuite remains straightforward like any other order item.
 
-Upon downloading physical gift card orders, HotWax Commerce synchronizes them with NetSuite in the “Created” status. Once these orders are synchronized, they have their status as “Pending Fulfillment” in NetSuite. HotWax Commerce retrieves NetSuite sales order item line IDs and NetSuite sales order IDs, creates customer deposits in NetSuite in the “Undeposited” status, and approves physical gift card orders in HotWax Commerce.
+Upon downloading physical gift card orders, HotWax Commerce synchronizes them with NetSuite in the “Created” status. Once these orders are synchronized, they have their status as “Pending Fulfillment” in NetSuite. HotWax Commerce retrieves NetSuite sales order item line IDs and NetSuite sales order IDs. After that HotWax Commerce creates customer deposits in NetSuite in the “Undeposited” status, and approves physical gift card orders in HotWax Commerce.
 
 Approved physical gift card order items are brokered in HotWax Commerce, upon allocation, HotWax Commerce begins syncing them to systems that are responsible for fulfillment of those gift card items.
 
@@ -80,6 +80,18 @@ A scheduled job in HotWax Commerce Integration Platform reads the generated CSV 
 
 Finally, once the JSON is prepared, HotWax Commerce Integration Platform initiates gift card activation process in the eCommerce platform. Because most of our customers are using Shopify as their eCommerce platform, in this scenario HotWax Commerce Integration Platform calls Shopify API to activate the gift card.
 
+{% hint style="info" %}
+HotWax Commerce Integration Platform communicates directly with Shopify for gift card activation, without any intermediary involvement from the HotWax Commerce OMS.
+{% endhint %}
+
+**Job in HotWax Commerce**
+
+Gift card activation:
+
+```
+poll_SystemMessageFileSftp_GiftCardActivationFeed
+```
+
 **Shopify API**
 
 [Bulk data import GraphlQL API](https://shopify.dev/docs/api/usage/bulk-operations/imports) used along with [gift card create mutation](https://shopify.dev/docs/api/admin-graphql/2024-04/mutations/giftcardcreate)
@@ -118,9 +130,13 @@ Digital gift cards are auto-activated and customers can directly redeem them by 
 
 A scheduled job in HotWax Commerce Integration Platform generates a CSV file of gift card orders that are in “Completed” status and do not have a NetSuite order item line IDs. This helps make sure that only relevant orders are synchronized to NetSuite and regular orders that are “Completed” in HotWax Commerce are not synchronized again to NetSuite.
 
-A scheduled SuiteScript in NetSuite reads the CSV file from the SFTP location and creates gift card orders in the “Pending Billing” status.
+A scheduled SuiteScript in NetSuite reads the CSV file from the SFTP location and creates gift card orders in the “Pending Fulfillment” status.
 
-HotWax Commerce retrieves NetSuite sales order item line IDs, NetSuite sales order IDs, and creates customer deposits in NetSuite in the “Undeposited” status. Subsequently, invoice is auto generated in NetSuite in the status “Paid”, and the customer deposit status is automatically updated from “Not Deposited” to “Fully Applied”.
+HotWax Commerce retrieves NetSuite sales order item line IDs, NetSuite sales order IDs, and creates customer deposits in NetSuite in the “Undeposited” status. 
+
+By default non inventory items like digital gift cards are configured to be not eligible for fulfillment in NetSuite. Therefore digital gift cards are automatically fulfilled in NetSuite and their status updated from “Pending Fulfillment” to “Pending Billing”.
+
+Subsequently, invoice is auto generated in NetSuite in the status “Paid”, and the customer deposit status is automatically updated from “Not Deposited” to “Fully Applied”.
 
 {% hint style="info" %}
 **What happens when customers redeem their gift card to pay for a new order?**

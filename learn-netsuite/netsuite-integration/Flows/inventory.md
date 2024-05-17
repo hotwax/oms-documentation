@@ -1,7 +1,7 @@
 ---
 description: >-
-  Explore the automated daily synchronization of inventory data from NetSuite to
-  HotWax Commerce, ensuring real-time inventory updates.
+  Automated sync of inventory data from NetSuite to HotWax Commerce to ensure
+  accurate inventory counts.
 ---
 
 # Inventory
@@ -17,9 +17,9 @@ To ensure that HotWax Commerce remains continually synchronized with the latest 
 * Automate the daily synchronization of inventory data from Netsuite to HotWax Commerce.
 * Ensure that HotWax Commerce reflects the most recent inventory numbers, as recorded in NetSuite.
 
-## Workflow
-
 <figure><img src="../.gitbook/assets/inventory sync.png" alt=""><figcaption><p>Inventory Sync from NetSuite to HotWax Commerce</p></figcaption></figure>
+
+**Actions**
 
 1. A Scheduled Script, equipped with the capability to utilize the Search Task from the N/task module, is executed. The objective of this script is to retrieve inventory records for all products stored within NetSuite. This is achieved through the execution of a saved search, specifically tailored for this purpose. Once the search is complete, the script generates a CSV file containing the inventory data and puts it within NetSuite's File Cabinet.
 
@@ -56,18 +56,59 @@ Import inventory
 FTP Config: RESET_INVENTORY
 ```
 
-## Why Search Task
+### Why Search Task
 
 In this particular use case, we have employed the Search Task function of the N/Task module for exporting inventory data from NetSuite. This approach is distinct from other scenarios where we utilized Map Reduce scripts and regular saved searches using the N/Search module. Our decision to implement Search Task for this specific purpose is based on our practical experience with various methods of exporting data from NetSuite, which revealed compelling reasons for this choice:
 
-### Handling Extensive Inventory Records
+#### Handling Extensive Inventory Records
 
 Initially, we attempted to synchronize inventory data from NetSuite to HotWax Commerce using Suite Script with a standard saved search through the N/Search module. However, this approach proved to be impractical when dealing with a high volume of inventory records. The script execution time exceeded the maximum threshold of one hour for Scheduled Scripts. NetSuite's documentation reinforced that SuiteScript is best suited for handling smaller data sets, making it evident that an alternative approach was required.
 
-### Efficiency of Map Reduce Scripts
+#### Efficiency of Map Reduce Scripts
 
-Subsequently, we transitioned to Map Reduce scripts to manage the synchronization of inventory between NetSuite and HotWax Commerce. Map Reduce scripts are designed to handle large datasets efficiently and demonstrated significantly improved performance compared to Scheduled Scripts. Notably, even if the script execution extends beyond one hour, Map Reduce jobs are designed to manage NetSuite resources effectively, allowing them to complete the task. Based on our experience, processing a million inventory records required approximately two hours.
+Subsequently, we transitioned to Map Reduce scripts to manage the synchronization of inventory between NetSuite and HotWax Commerce. Map Reduce scripts are designed to handle large datasets efficiently and demonstrated significantly improved performance compared to Scheduled Scripts. Notably, even if the script ~~execution~~ extends beyond one hour, Map Reduce jobs are designed to manage NetSuite resources effectively, allowing them to complete the task. Based on our experience, processing a million inventory records required approximately two hours.
 
-### Harnessing SearchTask Function
+#### Harnessing SearchTask Function
 
-To optimize the process and achieve rapid synchronization, we adopted Suite Script in combination with the Search Task function from the N/Task module. The results were remarkable, with the execution time reduced to a mere 10-15 seconds for a million inventory records. The search was executed swiftly, the CSV file was generated, and it was deposited in NetSuite's File Cabinet within a matter of seconds. This extraordinary speed and efficiency led us to the conclusion that the Search Task of the N/Task module was the ideal choice for synchronizing inventory records from NetSuite to HotWax Commerce.
+To optimize the process and achieve rapid synchronization, we adopted SuiteScript in combination with the Search Task function from the N/Task module. The results were remarkable, with the execution time reduced to a mere 10-15 seconds for a million inventory records. The search was executed swiftly, the CSV file was generated, and it was deposited in NetSuite's File Cabinet within a matter of seconds. This extraordinary speed and efficiency led us to the conclusion that the Search Task of the N/Task module was the ideal choice for synchronizing inventory records from NetSuite to HotWax Commerce.
+
+## Inventory Movement Between B2C and B2B Warehouse Locations
+
+For retailers operating a single physical warehouse but catering to both B2C and B2B customers, managing inventory effectively is crucial. The B2C warehouse handles fulfillment of online orders, while the B2B warehouse manages bulk operations. In this scenario, retailers configure two distinct logical locations in NetSuite: one for B2C (eCommerce) and another for B2B (wholesale) operations. This setup allows them to allocate inventory strategically between B2C and B2B business needs.
+
+In the event where inventory in the B2C warehouse is depleted, retailers transfer stock from the B2B warehouse to replenish it, and vice versa when the B2B warehouse needs restocking, retailers transfer inventory from the B2C warehouse.
+
+The effectiveness of this process relies on timely synchronization. If inventory movements to or from the B2C warehouse are updated in HotWax Commerce during the daily sync with NetSuite, there's a risk of operating on outdated inventory levels. The daily sync, scheduled during off-peak hours such as late at night or early in the morning, can result in missed sales opportunities on eCommerce if recent inventory transfers to the B2C warehouse are not promptly reflected in HotWax Commerce. Additionally, it can lead to overpromising on eCommerce if inventory transfers from the B2C warehouse are not timely updated in HotWax Commerce.
+
+Therefore, it's essential for HotWax Commerce to sync recent inventory updates from NetSuite whenever retailers move inventory between B2C and B2B warehouse. This ensures that the inventory levels in NetSuite are accurately reflected in HotWax Commerce and, consequently, on the eCommerce platform, preventing underselling and overselling of stock.
+
+<figure><img src="../.gitbook/assets/inventory transfer.png" alt=""><figcaption><p>Inventory Transfer Sync from NetSuite to HotWax Commerce</p></figcaption></figure>
+
+**Actions**
+
+1. Map Reduce Script in NetSuite runs every 15 minutes, generates an inventory transfer CSV file and places it at the designated SFTP location. This file contains inventory deltas, specifying increases or decreases in a product's inventory at the B2C warehouse.
+
+**SuiteScript**
+
+Export inventory transfer records
+
+```
+HC_MR_ExportedInventoryTransferCSV.js
+```
+
+**SFTP Locations**
+
+```
+/home/{sftp-username}/netsuite/inventorytransfer/import
+```
+
+2. A scheduled job in HotWax Commerce reads the CSV file from the SFTP location and adjusts the inventory records in HotWax Commerce. When inventory is transferred to the B2C warehouse, the scheduled job increases the inventory count for the product. Conversely, when inventory is transferred from the B2C warehouse, the job reduces the product's inventory count.
+
+**Job in HotWax Commerce**
+
+Import inventory transfer records
+
+```
+Import Inventory Transfer
+FTP Config: IMP_INV_TRANS
+```

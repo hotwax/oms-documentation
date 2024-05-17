@@ -24,13 +24,23 @@ The inventory count process initiates within the store, where store associates l
 
 <figure><img src="../.gitbook/assets/cycle count.png" alt=""><figcaption><p>Cycle Count Inventory Variance Synced from HotWax Commerce to NetSuite</p></figcaption></figure>
 
-### Pushing Cycle Count Inventory Variance File to HotWax Commerce
+### Pushing Cycle Count Inventory Variances to HotWax Commerce
 
-Store associates upload the Cycle Count file from the app to the HotWax Commerce server. Store managers review this file, approve it, and subsequently, inventory cycle count variances are recorded in HotWax Commerce.
+Cycle count inventory variances recorded by store associates in the Cycle Counting App require approval from the head office before they affect the inventory counts in HotWax Commerce. These recorded inventory variances are automatically reflected in HotWax Commerce OMS for approval.
+
+Initially, cycle count inventory variances are in the "Created" status. When store managers review and approve them, the inventory variance record is marked as "Completed," and inventory counts in HotWax Commerce are automatically adjusted accordingly. However, it's crucial to note that not all recorded variances may receive approval. Some variances may be rejected.
+
+In the event where a store associate has requested a cycle count for multiple products, if only some of the inventory variances are approved while others are rejected, HotWax Commerce will adjust the inventory count only for the products for which the inventory variance has been approved and is now in the "Completed" status. The rejected variances will have their status updated from "Created" to "Rejected."
 
 ### Export Cycle Count Inventory Variances from HotWax Commerce
 
-1. Once inventory cycle count variances are successfully logged in HotWax Commerce OMS, a scheduled job within HotWax Commerce Integration Platform generates a CSV file containing all the cycle count inventory variance records. This file is then placed in an SFTP location, ensuring that it is readily accessible for further processing.
+1. Once inventory cycle count variances are successfully logged in HotWax Commerce OMS, a scheduled job in HotWax Commerce Integration Platform generates a CSV file containing products for which inventory variance recorded that are in the “Completed” status.
+
+   This means that when exporting inventory adjustments, only the variances that have been approved and are marked as "Completed" will be included in the CSV file, while those that are rejected or still in the "Created" status will be excluded.
+
+   For example, suppose we have three products: Product A, Product B, and Product C. If variances for Product A and Product B are approved and marked as "Completed," while the variance for Product C is rejected, only the inventory adjustments for Product A and Product B will be synced.
+
+   This generated CSV file is then placed in an SFTP location, ensuring that it is readily accessible for further processing.
 
 {% hint style="info" %}
 Successful logging of an inventory count is indicated by its status being "INV\_COUNT\_COMPLETED"
@@ -70,10 +80,9 @@ Import Inventory Cycle Count Variance from SFTP:
 ```
 HC_SC_ImportInventoryAdjustment.js
 ```
+{% file src="../.gitbook/assets/Inventory Cycle Count Variances Sample Feed.csv" %}
 
 ## Record Unexpected Store Inventory Variances Outside of Cycle Counts
-
-{% file src="../.gitbook/assets/Inventory Cycle Count Variances Sample Feed.csv" %}
 
 While cycle counting in stores follows a periodic schedule, stores frequently encounter sudden inventory discrepancies in various scenarios. For example, if store associates identify 5 damaged units at their location, they’d want to record a variance of -5 for the damaged inventory. Similarly, if they discover 2 units of previously missing inventory, they’d want to record +2 for the newly found items.
 
@@ -139,10 +148,9 @@ Import Inventory Variance from SFTP:
 ```
 HC_SC_ImportInventoryAdjustment.js
 ```
+{% file src="../.gitbook/assets/Inventory Item Variances Sample Feed.csv" %}
 
 ## Benefits:
-
-{% file src="../.gitbook/assets/Inventory Item Variances Sample Feed.csv" %}
 
 The automated synchronization of inventory variances from HotWax Commerce to NetSuite offers numerous advantages:
 
