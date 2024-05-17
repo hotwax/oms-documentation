@@ -19,7 +19,7 @@ If an export SuiteScript is reported in an error notification indicating a conne
 
 **Time-based cursor**
 
-HotWax SuiteScripts maintain a time-based cursor to track the last exported date and time to ensure all records are synced to HotWax. In the event that a SuiteScript fails to execute, the last sync time of the SuiteScript is not updated. This ensures that the next time the script runs successfully it will sync all records introduced since the last successful sync with HotWax and no data loss.
+HotWax Integration SuiteScripts maintain a time-based cursor to track the last exported date and time to ensure all records are synced to HotWax. In the event that a SuiteScript fails to execute, the last sync time of the SuiteScript is not updated. This ensures that the next time the script runs successfully it will sync all records introduced since the last successful sync with HotWax and no data loss.
 
 At any point if you wish to export a certain set of records on demand, the scheduled scripts can also be run on demand, but to fully complete the sync, it’s important to also run the corresponding import job in HotWax or else the sync will not be complete.
 
@@ -31,7 +31,7 @@ Here are the flows which use time-based cursor when exporting data from NetSuite
 
 **Exported flag** 
 
-Certain SuiteScripts maintain an "exported" flag to ensure all records are synced with HotWax. These scripts mark check on the exported flag of each record exported from NetSuite and deposited at an SFTP location. If a SuiteScript fails to deposit the file due to reasons like connection timeout with the SFTP, the generated file is automatically relocated to the NetSuite File Cabinet. Subsequently, another SuiteScript is triggered to read these records and uncheck the exported flag in NetSuite for those records that couldn't be exported. This process ensures that any flagged export from NetSuite can be replayed by unchecking the exported flag on the record.
+Certain SuiteScripts maintain an "exported" flag to ensure all records are synced to HotWax. These scripts apply a checkmark on the exported flag of each record exported from NetSuite and deposited at an SFTP location. If a SuiteScript fails to deposit the file due to reasons like connection timeout with the SFTP, the generated file is automatically relocated to the NetSuite File Cabinet. Subsequently, another SuiteScript is triggered to read these records and uncheck the exported flag in NetSuite for those records that couldn't be exported. This process ensures that any flagged export from NetSuite can be replayed by unchecking the exported flag on the record.
 
 Here are the flows which use exported flag when exporting data from NetSuite:
 
