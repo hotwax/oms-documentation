@@ -1,23 +1,21 @@
 ---
 description: >-
-  Welcome to the Business Process Models (BPM) designed to provide insights into
-  the inner workings of HotWax Commerce.
+  Explore HotWax Commerce's technical documentation for insights on integrating
+  with ERP, WMS, and POS systems.
 ---
 
 # Introduction
 
-* [**Order Lifecycle BPM:** ](business-process-models/orderlifecycle.md)The model outlines the end-to-end flow of an order, from its creation to fulfillment. Learn about the different stages and transitions that an order undergoes as it progresses towards completion.
-* [**Store Fulfillment Lifecycle BPM:**](business-process-models/store.fulfillment.md) The model outlines the journey of fulfilling orders allocated to stores, and the status changes they undergo throughout the process. Learn about how orders are processed and fulfilled within the store network.
-* [**Warehouse Lifecycle BPM:**](business-process-models/warehousefulfillmentlifecycle.md) The model outlines the journey of fulfilling orders allocated to warehouses, and the status changes they undergo throughout the process. Learn about how HotWax Commerce stays updated on orders fulfilled within the warehouse network.
-* [**Inventory Lifecycle BPM:**](business-process-models/Inventorylifecycle.md) The model outlines the process of synchronizing inventory data from various systems, calculating Available-to-Promise (ATP), and the changes inventory undergoes. Learn about the events that trigger increases or decreases in inventory.
-* [**Transfer Order Lifecycle BPM:**](business-process-models/transferorderlifecycle.md) The model outlines the process of inventory movement involving three types of transfer orders, from warehouses to stores, between stores, or from stores to warehouses.
-* [**Returns Lifecycle BPM:**](business-process-models/returns-lifecycle/)The model outlines the journey of web and in-store returns creation and completion, and the interactions between different systems involved in the return process. Learn about how web and in-store returns are managed in HotWax Commerce.
-* [**Exchanges Lifecycle BPM:**](business-process-models/exchanges-lifecycle/) The model outlines the journey of web and in-store exchange creation and completion, and the interactions between different systems involved in the exchange process. Learn about how web and in-store exchanges are processed in HotWax Commerce.
+HotWax Commerce Technical Documentation is designed to provide a comprehensive understanding of the platform's integration capabilities with systems such as ERP, WMS, and POS, and how to leverage them effectively. This documentation will help navigate through the various aspects of HotWax Commerce OMS, including  Business Process Models, Journeys, APIs, and Data Feeds.
 
-By understanding the different events that trigger actions and the resulting outcomes, you'll gain a comprehensive understanding of our operations. Stay tuned as we continue to update and expand upon these models to offer even greater insights into our operations.
+## Journeys
 
-## Notations
+Journeys represent the interactions of multiple APIs and feeds to deliver specific user experiences. The documentation will guide through the various out-of-the-box Journeys available, helping understand how to configure and customize them to meet specific business and integration needs.
 
-Before we delve into the specifics of each business process model, let's familiarize ourselves with the notations used in our BPM flow charts.
+## APIs
 
-<figure><img src=".gitbook/assets/notations.png" alt="" width="375"><figcaption><p>Notations</p></figcaption></figure>
+APIs allow other systems to interact with different aspects of OMS such as Orders and Inventory. The APIs provide the flexibility to perform operations such as managing inventory and fulfilling orders. The documentation provides detailed information on each API, including how to authenticate, make requests, and handle responses.
+
+## Data Feeds
+
+Out-of-the-box data feeds enable integration between systems such as ERP, WMS, POS, and OMS. Whether looking to synchronize inventory, update product, or import/export data, data feeds make it easy to connect HotWax Commerce with other systems. The documentation provides step-by-step instructions on how to use data feeds such as CSVs and Jsons to meet integration requirements.
