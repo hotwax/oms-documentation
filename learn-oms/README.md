@@ -6,7 +6,7 @@ description: >-
 
 # Introduction
 
-HotWax Commerce Technical Documentation is designed to provide a comprehensive understanding of the platform's integration capabilities with systems such as ERP, WMS, and POS, and how to leverage them effectively. This documentation will help navigate through the various aspects of HotWax Commerce OMS, including Journeys, APIs, and Data Feeds.
+HotWax Commerce Technical Documentation is designed to provide a comprehensive understanding of the platform's integration capabilities with systems such as ERP, WMS, and POS, and how to leverage them effectively. This documentation will help navigate through the various aspects of HotWax Commerce OMS, including  Business Process Models, Journeys, APIs, and Data Feeds.
 
 ## Journeys
 
