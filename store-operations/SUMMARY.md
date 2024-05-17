@@ -31,10 +31,9 @@
 * [Receiving](receiving/README.md)
   * [Inventory Receiving](receiving/receiving.md)
 * [Inventory count](inventory-count/inventory-count.md)
-* [Transfer orders](inventory/transfer-order/transfer-order-management.md)
-  * [Transfer order fulfillment](inventory/transfer-order/transfer-order-fulfillment.md)
-  * [Transfer order receiving](inventory/transfer-order/transfer-order-receiving.md)
-
+* [Transfer orders](transfer-order/transfer-order-management.md)
+  * [Transfer order fulfillment](transfer-order/transfer-order-fulfillment.md)
+  * [Transfer order receiving](transfer-order/transfer-order-receiving.md)
 
 
  
