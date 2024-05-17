@@ -31,15 +31,9 @@
 * [Receiving](receiving/README.md)
   * [Inventory Receiving](receiving/receiving.md)
 * [Inventory count](inventory-count/inventory-count.md)
-* [Inventory upload](import-app/inventory.md)
-* [Safety stock](inventory/safety-stock/README.md)
-  * [Set Bulk Safety Stock](inventory/safety-stock/set-bulk-safety-stock.md)
-  * [Set Individual Safety Stock](inventory/safety-stock/set-individual-safety-stock.md)
-* [Multichannel inventory setup](inventory/multichannel-inventory-setup.md)
 * [Transfer orders](transfer-order/transfer-order-management.md)
   * [Transfer order fulfillment](transfer-order/transfer-order-fulfillment.md)
   * [Transfer order receiving](transfer-order/transfer-order-receiving.md)
-
 
 
  
