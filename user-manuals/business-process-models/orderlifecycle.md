@@ -7,7 +7,7 @@ description: >-
 
 # Order lifecycle
 
-<figure><img src="../.gitbook/assets/order lifecycle bpm.png" alt=""><figcaption><p>Order lifecycle business process model</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/order life cycle bpm.png" alt=""><figcaption><p>Order lifecycle business process model</p></figcaption></figure>
 
 ## Order creation
 
@@ -120,7 +120,7 @@ HotWax Commerce then checks the custom tag on orders. If the tag is present on a
 
 ### BOPIS fulfillment success and order completion:
 
-Store associates can view BOPIS orders in their [<mark style="color:orange;">**BOPIS Fulfillment App**</mark>](../bopis/) and begin preparing the order for customer pick-up.
+Store associates can view BOPIS orders in their [<mark style="color:orange;">**BOPIS Fulfillment App**</mark>](broken-reference) and begin preparing the order for customer pick-up.
 
 Once the order is prepared, customer receives an email informing them that their order is ready for pickup. After an order has been picked up by the customer, the order status is updated from <mark style="color:orange;">**“Approved” to “Completed”**</mark> in HotWax Commerce. A `Completed Orders` job in HotWax Commerce also marks orders as <mark style="color:orange;">**"Fulfilled" in eCommerce.**</mark>
 

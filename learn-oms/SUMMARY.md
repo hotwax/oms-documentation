@@ -1,10 +1,8 @@
 # Table of contents
 
-* [Introduction](README.md)
-
 ## Business Process Models
 
-* [Introduction](business-process-models/README.md)
+* [Introduction](README.md)
 * [Order lifecycle](business-process-models/orderlifecycle.md)
 * [Store fulfillment lifecycle](business-process-models/store.fulfillment.md)
 * [Warehouse fulfillment lifecycle](business-process-models/warehousefulfillmentlifecycle.md)
