@@ -14,6 +14,8 @@ Because payment methods are not frequently changed, their NetSuite mappings are 
 
 In case a payment method in Shopify and HotWax is not mapped to a payment method in NetSuite, the integration layer will fall back to a `DEFAULT` payment method. As of November, this fallback payment method is mapped to “Shopify Payment” in NetSuite.
 
+As of January 25th, cash sale payment method is mapped to “Shopify Payment” in NetSuite.
+
 ## Mappings
 
 | Shopify Value            | HotWax ID                | Netsuite Value     |
