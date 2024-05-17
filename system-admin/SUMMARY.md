@@ -5,7 +5,7 @@
 
 ## Setup HotWax Commerce
 
-* [How to configure HotWax Commerce when deploying new instance](how-to/deployment/deployment.md)
+* [How to configure HotWax Commerce when deploying new instance](deployment/deployment.md)
 * [How to configure BOPIS with HotWax Commerce and Shopify](how-to-bopis/implement-bopis.md)
 * [Multichannel inventory setup](inventory/multichannel-inventory-setup.md)
 
@@ -41,11 +41,11 @@
 
 # Fulfillment
 
-* [Shipping methods](administration/shipping-methods/README.md)
-  * [Create Carrier](administration/shipping-methods/add-carrier.md)
+* [Shipping methods](fulfillment/shipping-methods/README.md)
+  * [Create Carrier](fulfillment/shipping-methods/add-carrier.md)
   * [Create Shipping Boxes](fulfillment/shipping-box.md)
-  * [Shipping gateways](user-and-gateway-config/ShippingGateways.md)
-* [How to map shipping method in HotWax Commerce to Netsuite](how-to/add-shipping-method.md)
+  * [Shipping gateways](fulfillment/ShippingGateways.md)
+* [How to map shipping method in HotWax Commerce to Netsuite](fulfillment/add-shipping-method.md)
  
 ## Setup Shopify
 
@@ -65,6 +65,28 @@
 * [Initial Order Sync](shopify-integration/SyncShopify/importOrders.md)
 * [Initial Inventory Sync](shopify-integration/SyncShopify/upload-inventory.md)
 
+## RetailPro Integration
+
+* [Introduction](retailpro/README.md)
+
+* [Inventory Sync](retailpro/Flows/Inventory/InventorySync.md)
+  * [Challenges](retailpro/Flows/Inventory/ChallengesInInventorySync.md)
+  * [Technical Workflow](retailpro/Flows/Inventory/TechnicalWorkflow.md)
+
+* [Order Sync](retailpro/Flows/Order/OrderSync.md)
+  * [Technical Workflow of Invoicing from Single Location](retailpro/Flows/Order/InvoiceFromSingleLocationTechWorkflow.md)
+  * [Technical Workflow of Invoicing from Multiple Location](retailpro/Flows/Order/InvoiceFromMultipleLocationTechWorkflow.md)
+
+* [Send Sale Order](retailpro/Flows/SendSaleOrder/SendSaleOrder.md)
+  * [Technical Workflow](retailpro/Flows/SendSaleOrder/TechnicalWorkflow.md)
+
+* [Returns](retailpro/Flows/Returns/return.md)
+
+##  Additional Resources
+
+* [Klaviyo Integration](marketing-automations-platform/klaviyo.md)
+* [EasyPost Integration](carriers/easy-post.md)
+* [OMS Versions](additional-resources/omsReleases.md)
 
 
 
