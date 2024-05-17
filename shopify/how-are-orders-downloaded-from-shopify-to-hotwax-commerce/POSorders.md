@@ -1,4 +1,4 @@
-# POS Orders
+# POS Orders Download
 
 Point of Sale (POS) orders are purchases made by customers directly at physical retail locations. These orders involve immediate payment and fulfillment, occurring in real-time.
 
@@ -14,10 +14,22 @@ During import, HotWax Commerce differentiates between POS orders and regular ord
 
 1. The orders are already fulfilled in Shopify.
 2. The orders originated from the POS channel.
-3. The orders have their shipping method set to POS_Completed.
+3. The orders have their shipping method set to POS\_Completed.
 
 If these conditions are satisfied, HotWax Commerce automatically marks the orders as "Completed".
 
 {% hint style="info" %}
 HotWax Commerce automatically deducts inventory against the POS sale upon import. This ensures that the actual physical inventory available at the retail store is accurately reflected in HotWax Commerce.
 {% endhint %}
+
+Order fields in Shopify mapped in HotWax Commerce remains straightforward like the any regular orders.
+
+{% tabs %}
+{% tab title="POS order in Shopify" %}
+<figure><img src="../.gitbook/assets/Order Details - Shopify.png" alt=""><figcaption><p>POS orders field mapping</p></figcaption></figure>
+{% endtab %}
+
+{% tab title="POS order in HotWax Commerce" %}
+<figure><img src="../.gitbook/assets/Order Details - HC.png" alt=""><figcaption></figcaption></figure>
+{% endtab %}
+{% endtabs %}
