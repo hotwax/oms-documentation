@@ -53,12 +53,12 @@
   * [Appeasements](integration/how-does-hotwax-commerce-manage-order-returns/appeasements.md)
   * [Exchanges](integration/how-does-hotwax-commerce-manage-order-returns/exchanges.md)
 
-* [Integration-Mapping](ShopifyIntegration/integration-mapping.md)
-  * [Locations](ShopifyIntegration/MapLocations.md)
-  * [Shipping Method](ShopifyIntegration/shipping-method.md)
-  * [Sales channel](flows/integration-mapping/sales-channel.md)
-  * [Payment Method](ShopifyIntegration/payment-method-type.md)
-  * [Product Type](ShopifyIntegration/product-type.md)
+* [Integration-Mapping](shopify-setup/integration-mapping.md)
+  * [Locations](shopify-setup/MapLocations.md)
+  * [Shipping Method](shopify-setup/shipping-method.md)
+  * [Sales channel](shopify-setup/sales-channel.md)
+  * [Payment Method](shopify-setup/payment-method-type.md)
+  * [Product Type](shopify-setup/product-type.md)
 
 ## Additional resources
 
