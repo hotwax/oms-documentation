@@ -5,9 +5,9 @@
 
 ## Setup HotWax Commerce
 
-* [How to configure HotWax Commerce when deploying new instance](how-to/deployment/deployment.md)
-* [How to configure BOPIS with HotWax Commerce and Shopify](how-to/bopis/implement-bopis.md)
-* [Multichannel inventory setup](inventory/multichannel-inventory-setup.md)
+* [How to configure HotWax Commerce when deploying new instance](deployment/deployment.md)
+* [How to configure BOPIS with HotWax Commerce and Shopify](how-to-bopis/implement-bopis.md)
+* [Multichannel inventory setup](multichannel-inventory-setup.md)
 
 ## Administration
 
@@ -35,34 +35,59 @@
 * [Delete customers](delete-customers.md)
 
 ## Product Store
-* [Configure Product Store](initial-setup/product-store/README.md)
-* [Add More Product Stores](initial-setup/product-store/add-more-product-stores.md)
- 
-## Setup Shopify
 
-* [Install HotWax commerce App](ShopifyIntegration/README.md)
-* [Enable BOPIS/Preorder on Shopify](ShopifyIntegration/bopis-preorder-scripts.md)
-* [Data Mappings](ShopifyIntegration/SetupMappings.md)
-* [Integrations](ShopifyIntegration/integration-mapping.md)
-  * [Locations](ShopifyIntegration/MapLocations.md)
-  * [Shipping Method](ShopifyIntegration/shipping-method.md)
-  * [Sales channel](flows/integration-mapping/sales-channel.md)
-  * [Payment Method](ShopifyIntegration/payment-method-type.md)
-  * [Product Type](ShopifyIntegration/product-type.md)
-
-## Flows
-
-* [Initial Product Sync](SyncShopify/README.md)
-* [Initial Order Sync](SyncShopify/importOrders.md)
-* [Initial Inventory Sync](SyncShopify/upload-inventory.md)
+* [Configure Product Store](product-store/README.md)
+* [Add More Product Stores](product-store/add-more-product-stores.md)
 
 # Fulfillment
 
-* [Shipping methods](administration/shipping-methods/README.md)
-  * [Create Carrier](administration/shipping-methods/add-carrier.md)
+* [Shipping methods](fulfillment/shipping-methods/README.md)
+  * [Create Carrier](fulfillment/shipping-methods/add-carrier.md)
   * [Create Shipping Boxes](fulfillment/shipping-box.md)
-  * [Shipping gateways](user-and-gateway-config/ShippingGateways.md)
-* [How to map shipping method in HotWax Commerce to Netsuite](how-to/add-shipping-method.md)
+  * [Shipping gateways](fulfillment/ShippingGateways.md)
+* [How to map shipping method in HotWax Commerce to Netsuite](fulfillment/add-shipping-method.md)
+ 
+## Setup Shopify
+
+* [Install HotWax commerce App](shopify-integration/ShopifyIntegration/README.md)
+* [Enable BOPIS/Preorder on Shopify](shopify-integration/ShopifyIntegration/bopis-preorder-scripts.md)
+* [Data Mappings](shopify-integration/ShopifyIntegration/SetupMappings.md)
+* [Integrations](shopify-integration/ShopifyIntegration/integration-mapping.md)
+  * [Locations](shopify-integration/ShopifyIntegration/MapLocations.md)
+  * [Shipping Method](shopify-integration/ShopifyIntegration/shipping-method.md)
+  * [Sales channel](shopify-integration/flows/integration-mapping/sales-channel.md)
+  * [Payment Method](shopify-integration/ShopifyIntegration/payment-method-type.md)
+  * [Product Type](shopify-integration/ShopifyIntegration/product-type.md)
+
+## Synchronization Flows
+
+* [Initial Product Sync](shopify-integration/SyncShopify/README.md)
+* [Initial Order Sync](shopify-integration/SyncShopify/importOrders.md)
+* [Initial Inventory Sync](shopify-integration/SyncShopify/upload-inventory.md)
+
+## RetailPro Integration
+
+* [Introduction](retailpro/README.md)
+
+* [Inventory Sync](retailpro/Flows/Inventory/InventorySync.md)
+  * [Challenges](retailpro/Flows/Inventory/ChallengesInInventorySync.md)
+  * [Technical Workflow](retailpro/Flows/Inventory/TechnicalWorkflow.md)
+
+* [Order Sync](retailpro/Flows/Order/OrderSync.md)
+  * [Technical Workflow of Invoicing from Single Location](retailpro/Flows/Order/InvoiceFromSingleLocationTechWorkflow.md)
+  * [Technical Workflow of Invoicing from Multiple Location](retailpro/Flows/Order/InvoiceFromMultipleLocationTechWorkflow.md)
+
+* [Send Sale Order](retailpro/Flows/SendSaleOrder/SendSaleOrder.md)
+  * [Technical Workflow](retailpro/Flows/SendSaleOrder/TechnicalWorkflow.md)
+
+* [Returns](retailpro/Flows/Returns/return.md)
+
+##  Additional Resources
+
+* [Klaviyo Integration](marketing-automations-platform/klaviyo.md)
+* [EasyPost Integration](carriers/easy-post.md)
+* [OMS Versions](additional-resources/omsReleases.md)
+
 
 
 
