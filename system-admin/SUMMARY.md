@@ -7,7 +7,7 @@
 
 * [How to configure HotWax Commerce when deploying new instance](deployment/deployment.md)
 * [How to configure BOPIS with HotWax Commerce and Shopify](how-to-bopis/implement-bopis.md)
-* [Multichannel inventory setup](inventory/multichannel-inventory-setup.md)
+* [Multichannel inventory setup](multichannel-inventory-setup.md)
 
 ## Administration
 
