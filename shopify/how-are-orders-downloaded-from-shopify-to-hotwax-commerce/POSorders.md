@@ -1,19 +1,17 @@
 ---
 description: >-
-  Point of Sale (POS) orders are purchases made by customers directly at
+  Point of Sale (POS) sales are purchases made by customers directly at
   physical retail locations. These orders involve immediate payment and
   fulfillment, occurring in real-time.
 ---
 
-# POS Orders Download
+# POS Sales
 
-## POS Order Download
+## POS Sales Download
 
-HotWax Commerce downloads POS sales from Shopify similarly to regular orders. The scheduled `New Orders` job, which downloads new orders in bulk from Shopify, also includes POS sales.
+The scheduled 'New Orders' job in HotWax Commerce that downloads new orders in bulk from Shopify also includes POS sales. Because POS sales in Shopify have already been fulfilled to customers at the point of sale in-store, they are automatically marked as "Completed" in HotWax Commerce upon import.
 
-Since POS sales from Shopify have already been fulfilled to customers at the point of sale in-store, they are automatically marked as "Completed" in HotWax Commerce upon import.
-
-Differentiating POS Orders from Regular Orders:
+**Differentiating POS Orders from Regular Orders:**
 
 During import, HotWax Commerce differentiates between POS orders and regular orders by checking if the following conditions are met:
 
@@ -27,7 +25,7 @@ If these conditions are satisfied, HotWax Commerce automatically marks the order
 HotWax Commerce automatically deducts inventory against the POS sale upon import. This ensures that the actual physical inventory available at the retail store is accurately reflected in HotWax Commerce.
 {% endhint %}
 
-Order fields in Shopify mapped in HotWax Commerce remains straightforward like the any regular orders.
+Order fields in Shopify are mapped in HotWax Commerce just like any regular order. Certain fields such as Sales Channel, Status, and Shipping Method have different values for POS sales, reflecting how POS sales differ from regular orders.
 
 {% tabs %}
 {% tab title="POS order in Shopify" %}
