@@ -33,6 +33,7 @@
   * [Order Download](how-are-orders-downloaded-from-shopify-to-hotwax-commerce/order-download.md)
   * [Order Approval for Fulfillment](how-are-orders-downloaded-from-shopify-to-hotwax-commerce/order-approval-for-fulfillment.md)
   * [Order Updates](how-are-orders-downloaded-from-shopify-to-hotwax-commerce/order-updates.md)
+  * [POS Sales Download](how-are-orders-downloaded-from-shopify-to-hotwax-commerce/possales.md)
   * [Gift Cards Order Download](how-are-orders-downloaded-from-shopify-to-hotwax-commerce/giftcardordersdownload.md)
   * [Bundles Order Download](how-are-orders-downloaded-from-shopify-to-hotwax-commerce/downloading-orders-for-bundles.md)
 * [Order Fulfillment](how-is-the-order-fulfillment-status-updated-to-shopify-from-hotwax-commerce.md)
