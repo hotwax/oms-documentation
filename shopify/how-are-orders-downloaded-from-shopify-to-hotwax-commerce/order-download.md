@@ -55,7 +55,7 @@ Order fields in Shopify are mapped in HotWax Commerce as follows:
 {% endtab %}
 
 {% tab title="Order Details in HotWax Commerce" %}
-<figure><img src="../.gitbook/assets/Order Details- HC (1).png" alt=""><figcaption><p>Fig.3(ii): Order Details in HotWax Commerce</p></figcaption></figure>
+<figure><img src="broken-reference" alt=""><figcaption><p>Fig.3(ii): Order Details in HotWax Commerce</p></figcaption></figure>
 {% endtab %}
 {% endtabs %}
 

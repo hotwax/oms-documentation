@@ -1,6 +1,11 @@
-# POS Orders Download
+---
+description: >-
+  Point of Sale (POS) orders are purchases made by customers directly at
+  physical retail locations. These orders involve immediate payment and
+  fulfillment, occurring in real-time.
+---
 
-Point of Sale (POS) orders are purchases made by customers directly at physical retail locations. These orders involve immediate payment and fulfillment, occurring in real-time.
+# POS Orders Download
 
 ## POS Order Download
 
@@ -30,6 +35,6 @@ Order fields in Shopify mapped in HotWax Commerce remains straightforward like t
 {% endtab %}
 
 {% tab title="POS order in HotWax Commerce" %}
-<figure><img src="../.gitbook/assets/Order Details - HC.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Order Details - HC.png" alt=""><figcaption><p>POS orders field mapping</p></figcaption></figure>
 {% endtab %}
 {% endtabs %}
