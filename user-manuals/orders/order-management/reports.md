@@ -1,4 +1,3 @@
-
 ---
 description: >-
   Discover how reports play a crucial role in ensuring order synchronization
