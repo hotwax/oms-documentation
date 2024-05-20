@@ -1,4 +1,3 @@
-
 ---
 description: Learn how the sales orders are allocated efficiently in different scenarios.
 ---
