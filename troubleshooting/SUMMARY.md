@@ -21,8 +21,8 @@
 * [Pre-order](hotwax-commerce/pre-order/README.md)
   * [Inaccurate Inventory computation](hotwax/pre-orders/inaccurateInventoryComputation.md)
   * [Missing Product Linking](hotwax/pre-orders/missingProductLinking.md)
-* [Order Management]
-  *[Order Status Discrepancy](hotwax/orderManagement/orderStatusDiscrepancy.md)
+* [Order Management]()
+  * [Order Status Discrepancy](hotwax/orderManagement/orderStatusDiscrepancy.md)
 
 ## NetSuite
 
