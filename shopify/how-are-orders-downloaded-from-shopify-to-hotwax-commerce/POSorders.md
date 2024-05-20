@@ -1,9 +1,10 @@
 ---
 description: >-
-  Point of Sale (POS) sales are purchases made by customers directly at
-  physical retail locations. These involve immediate payment and
-  fulfillment, occurring in real-time.
+  Point of Sale (POS) sales are purchases made by customers directly at physical
+  retail locations. These involve immediate payment and fulfillment, occurring
+  in real-time.
 ---
+
 # POS Sales Download
 
 The scheduled 'New Orders' job in HotWax Commerce that downloads new orders in bulk from Shopify also includes POS sales. Because POS sales in Shopify have already been fulfilled to customers at the point of sale in-store, they are automatically marked as "Completed" in HotWax Commerce upon import.
@@ -26,10 +27,10 @@ POS sale fields in Shopify are mapped in HotWax Commerce just like any regular o
 
 {% tabs %}
 {% tab title="POS sale in Shopify" %}
-<figure><img src="../.gitbook/assets/Order Details - Shopify.png" alt=""><figcaption><p>POS sale field mapping</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Order Details - Shopify (2).png" alt=""><figcaption><p>POS sale field mapping</p></figcaption></figure>
 {% endtab %}
 
 {% tab title="POS sale in HotWax Commerce" %}
-<figure><img src="../.gitbook/assets/Order Details - HC.png" alt=""><figcaption><p>POS sale field mapping</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Order Details - HC (1).png" alt=""><figcaption><p>POS sale field mapping</p></figcaption></figure>
 {% endtab %}
 {% endtabs %}
