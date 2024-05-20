@@ -9,7 +9,7 @@ description: >-
 
 <figure><img src="../.gitbook/assets/warehouse fulfillment bpm.png" alt=""><figcaption><p>Warehouse fulfillment lifecycle business process model</p></figcaption></figure>
 
-HotWax Commerce, being as an Order Management System, finds the best location to fulfill an online order from. In the event where an order is routed to warehouse fulfillment location, HotWax Commerce synchronizes allocation details with the Warehouse Management System (WMS) or ERP systems like NetSuite. Once the order is fulfilled, HotWax Commerce then also synchronizes the fulfillment updates from the WMS or ERP systems.
+HotWax Commerce, as an Order Management System, identifies the optimal location to fulfill an online order. When an approved order is allocated to a warehouse, HotWax Commerce synchronizes the allocation details with the Warehouse Management System (WMS) or ERP systems like NetSuite for further processing and fulfillment and the order status is automatically updated to "Reserved" in HotWax. Once the order is fulfilled, HotWax also synchronizes the fulfillment updates from the WMS or ERP systems.
 
 ## Orders pending fulfillment
 
