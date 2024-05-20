@@ -2,7 +2,7 @@
 description: >-
   The Store Fulfillment Lifecycle BPM illustrates how HotWax Commerce Store
   Fulfillment App enables store associates to Pick, Pack & Ship online orders
-  received at stores.
+  received at stores. When approved orders are brokered in HotWax, they are allocated to the appropriate store location. These orders are then reflected in the Store Fulfillment app, where store associates can fulfill them and their fulfillment status is automatically updated to "Reserved".
 ---
 
 # Store fulfillment lifecycle
