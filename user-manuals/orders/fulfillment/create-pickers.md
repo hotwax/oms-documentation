@@ -1,4 +1,3 @@
-
 ---
 description: Create a new user for order picking at facilities
 ---
