@@ -21,6 +21,7 @@
   * [Approve Orders](flows/order/approve-orders.md)
   * [Order Fulfillment](flows/order/order-fulfillment)
   * [Backorders](flows/order/preorders/backorders)
+  * [XStore POSLog](flows/order/xstore-poslog.md)
 
 * [Products](flows/order/products/readme.md)
   * [Sync Products](flows/order/products/sync-products)
