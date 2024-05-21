@@ -134,7 +134,7 @@
   * [Manage Groups](facilities/manage-groups.md)
 * [Shipping methods](administration/shipping-methods/README.md)
   * [Create Carrier](administration/shipping-methods/add-carrier.md)
-* [Delete customers](delete-customers.md)
+  * [Delete customers](administration/delete-customers.md)
 
 ## How-to documents
 
