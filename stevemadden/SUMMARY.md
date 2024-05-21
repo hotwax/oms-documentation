@@ -9,6 +9,7 @@
   * [Brokering Logic](flows/brokering/brokeringlogic.md)
 
 * [Inventory](flows/inventory/readme.md)
+  * [Troubleshooting](flows/inventory/troubleshooting.md)
 
 * [Orders](flows/order/orders.md)
   * [Import Orders](flows/order/import-orders)
