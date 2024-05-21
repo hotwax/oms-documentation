@@ -1,4 +1,3 @@
-Absolutely! Here's a comparison of the SendSale Order Brokering Logic between the current ORSI system and the new M3 system, highlighting the key differences:
 
 | Feature                 | ORSI System                                                                                                                                                                                                                                                                                                                                           | M3 System                                                                                                                                                                                                                                                                                      |
 | ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -15,5 +14,3 @@ Absolutely! Here's a comparison of the SendSale Order Brokering Logic between th
 *   **Shipment Method Filtering:** M3 explicitly filters orders based on shipping methods (NEXT_DAY, TWO_DAY, STANDARD).
 *   **Combined Brokering Logic:** M3 does not distinguish between single-line and multi-line item orders for most of its brokering logic.
 *   **Multi-Line Item Splitting:** M3 has a more sophisticated approach to splitting multi-line item orders when items are not available at a single location, prioritizing warehouses for individual items.
-
-Let me know if you'd like any clarification or further analysis!
