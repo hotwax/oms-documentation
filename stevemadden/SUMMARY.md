@@ -17,9 +17,7 @@
   * [Order Fulfillment](flows/order/order-fulfillment)
   * [Backorders](flows/order/preorders/backorders)
 
-* [Readme](flows/order/products/readme.md)
-  * [Products](flows/order/products/products.md)
+* [Products](flows/order/products/readme.md)
   * [Sync Products](flows/order/products/sync-products)
 
-* [Readme](flows/order/return-exchange/readme.md)
-  * [Returns](flows/order/return-exchange/returns.md)
+* [Returns](flows/order/return-exchange/returns.md)
