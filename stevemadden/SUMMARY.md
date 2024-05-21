@@ -20,4 +20,4 @@
 * [Products](flows/order/products/readme.md)
   * [Sync Products](flows/order/products/sync-products)
 
-* [Returns](flows/order/return-exchange/returns.md)
+* [Returns](flows/return-exchange/returns.md)
