@@ -6,8 +6,11 @@
 ## Flows
 
 * [Brokering](flows/brokering/brokering.md)
-  * [Brokering Logic](flows/brokering/brokeringlogic.md)
-
+  * [ORSI Brokering](flows/brokering/orsi-brokering.md)
+  * [Scenarios](flows/brokering/scenarios.md)
+  * [SM Pass](flows/brokering/sm-pass.md)
+  * [M3 vs ORSI](flows/brokering/m3-vs-orsi.md)
+ 
 * [Inventory](flows/inventory/readme.md)
   * [Troubleshooting](flows/inventory/troubleshooting.md)
 
