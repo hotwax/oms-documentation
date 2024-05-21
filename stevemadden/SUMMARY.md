@@ -5,6 +5,8 @@
 
 ## Flows
 
+* [Jobs](flows/jobs/README.md)
+
 * [Brokering](flows/brokering/brokering.md)
   * [ORSI Brokering](flows/brokering/orsi-brokering.md)
   * [Scenarios](flows/brokering/scenarios.md)
