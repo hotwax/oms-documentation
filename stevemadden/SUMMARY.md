@@ -5,8 +5,8 @@
 
 ## Deployment
 
-[Infrastructure](./infrastructure/README.md)
-  [Integration DB](./infrastructure/mssql-issues.md)
+[Infrastructure](infrastructure/README.md)
+  [Integration DB](infrastructure/mssql-issues.md)
 
 ## Flows
 
@@ -37,4 +37,4 @@
 ## New Architechture
 
 * [Systems](new-architechture/user-interaction.md)
-  * [Users]
+  * [Users]()
