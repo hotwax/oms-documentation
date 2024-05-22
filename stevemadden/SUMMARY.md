@@ -38,3 +38,4 @@
 
 * [Systems](new-architechture/README.md)
   * [Users](new-architechture/user-interaction.md)
+* [Predict Spring](new-architechture/predict-spring.md)
