@@ -6,6 +6,7 @@
 ## Flows
 
 * [Jobs](flows/jobs/README.md)
+  * [Legacy Systems](flows/jobs/legacy-systems.md)
 
 * [Brokering](flows/brokering/brokering.md)
   * [ORSI Brokering](flows/brokering/orsi-brokering.md)
