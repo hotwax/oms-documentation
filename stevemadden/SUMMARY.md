@@ -5,8 +5,8 @@
 
 ## Deployment
 
-[Infrastructure](infrastructure/README.md)
-  [Integration DB](infrastructure/mssql-issues.md)
+* [Infrastructure](infrastructure/README.md)
+ * [Integration DB](infrastructure/mssql-issues.md)
 
 ## Flows
 
