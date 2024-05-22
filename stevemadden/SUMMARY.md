@@ -36,5 +36,5 @@
 
 ## New Architechture
 
-* [Systems](new-architechture/user-interaction.md)
+* [Systems](new-architechture/README.md)
   * [Users](new-architechture/user-interaction.md)
