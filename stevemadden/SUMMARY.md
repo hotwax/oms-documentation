@@ -3,6 +3,11 @@
 * [Introduction](README.md)
 * [Glossary](glossary.md)
 
+## Deployment
+
+[Infrastructure](./infrastructure/README.md)
+  [Integration DB](./infrastructure/mssql-issues.md)
+
 ## Flows
 
 * [Jobs](flows/jobs/README.md)
@@ -28,3 +33,8 @@
   * [Sync Products](flows/order/products/sync-products)
 
 * [Returns](flows/return-exchange/returns.md)
+
+## New Architechture
+
+* [Systems](new-architechture/user-interaction.md)
+  * [Users]
