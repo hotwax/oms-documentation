@@ -13,7 +13,7 @@ If the facility where an item is allocated uses NetSuite for fulfillment, usuall
 
 It's important to remember that if items are not allocated to a `NetSuite Facility` their allocation is not synced to NetSuite until after fulfillment is complete.
 
-<figure><img src="../../.gitbook/assets/fulfillment in NetSuite.png" alt=""><figcaption><p>Items' allocations synced from HotWax Commerce to NetSuite</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/16.png" alt=""><figcaption><p>Items' allocations synced from HotWax Commerce to NetSuite</p></figcaption></figure>
 
 **Actions**
 
@@ -34,8 +34,6 @@ Import NetSuite fulfillment item allocations:
 ```
 HC_SC_UpdateSalesOrders
 ```
-
-{% file src="../../.gitbook/assets/Brokered Order Items Sample Feed.csv" %}
 
 * [x] Sync new orders from HotWax to NetSuite
   * [x] Sync customers

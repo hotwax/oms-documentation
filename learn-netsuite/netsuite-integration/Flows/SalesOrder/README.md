@@ -10,13 +10,13 @@ Orders are intelligently routed to the optimal fulfillment locations, which may 
 
 The flow of order and fulfillment information in the sales order integration varies depending on the responsibilities a retailer has designated to NetSuite. Oftentimes NetSuite is used for is accounting and GL posting functionalities with all fulfillment happening in external systems such as a 3PL, dedicated WMS system, or specialized fulfillment software in stores. Other times retailers may be using NetSuite’s fulfillment capabilities as well, usually in their main warehouse. While most parts of the order sync remain the same, the stage at which order item allocation is pushed to NetSuite varies based on NetSuite’s fulfillment responsibilities.
 
-<figure><img src="../../.gitbook/assets/order sync between hotwax and ns.png" alt=""><figcaption><p>Order sync between HotWax Commerce &#x26; NetSuite</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/4.png" alt=""><figcaption><p>Order sync between HotWax Commerce &#x26; NetSuite</p></figcaption></figure>
 
 Here is the **NetSuite Order Lifecycle Business Process Model** that provides step by step overview of how the sync works before we dive into elaborate details.
 
 ## NetSuite Order Lifecycle BPM
 
-<figure><img src="../../.gitbook/assets/NetSuite order lifecycle bpm (1).png" alt=""><figcaption><p>NetSuite order lifecycle business process model</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/5.png" alt=""><figcaption><p>NetSuite order lifecycle business process model</p></figcaption></figure>
 
 Most of our customers use Shopify as their eCommerce platform along with NetSuite as their ERP and warehouse fulfillment solution. Therefore, to explain the NetSuite Order Lifecycle BPM, we have taken Shopify as the eCommerce platform, NetSuite as the ERP and warehouse fulfillment solution, with HotWax Commerce as the Order Management System.
 

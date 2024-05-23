@@ -15,14 +15,14 @@ Each transfer order can result in either a single item fulfillment record or mul
 Whenever an item is fulfilled and the item fulfillment record is marked as `Shipped` in NetSuite, the inventory count for corresponding items is reduced in NetSuite. This also signifies that the items have been dispatched from the warehouse and are in transit to the store.
 
 Inbound shipments are automatically created in HotWax Commerce so that the store can receive the transferred inventory. HotWax Commerce provides a dedicated Inventory Receiving App for store associates to receive in inventory stores. When the store associates verifies the inbound shipments and receives them, inventory counts for the corresponding items are automatically increased in HotWax Commerce.
- 
+
 Upon successful receipt of inventory, HotWax Commerce synchronizes item receipts with NetSuite. This ensures that the inventory count at store is accurately increased in NetSuite and the status of transfer orders status is updated from `Pending Receipt` to `Received`.
 
 As mentioned earlier, in NetSuite, the inventory count for transfer order items shipped from the warehouse is reduced. It’s crucial to note that in HotWax Commerce, this reduction takes place during its daily inventory sync from NetSuite.
 
 ## Workflow
 
-<figure><img src="../../.gitbook/assets/warehousetostore.png" alt=""><figcaption><p>Warehouse to store transfer order</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/33.png" alt=""><figcaption><p>Warehouse to store transfer order</p></figcaption></figure>
 
 ### Fulfilling Transfer Order Items
 
@@ -87,19 +87,17 @@ HC_SC_ImportTOFulfillmentReceipts.js
 
 Once all the transfer order item fulfillment records have been successfully received in-store and their item receipt records have been synchronized with NetSuite, the transfer order status is updated from `Pending Receipt` to `Received`.
 
-
-
 **Here's how transfer order fields are mapped in NetSuite and HotWax Commerce**
 
-<table data-full-width="false"><thead><tr><th width="157">S.No.	</th><th>Fields in NetSuite</th><th>Fields in HotWax Commerce</th></tr></thead><tbody><tr><td>1</td><td>Item Fulfillment Internal ID</td><td>External ID</td></tr><tr><td>2</td><td>Transfer Order Name</td><td>Transfer Order Name</td></tr><tr><td>3</td><td>Items</td><td>SKU</td></tr><tr><td>4</td><td>Quantity</td><td>Ordered Quantity</td></tr><tr><td>5</td><td>Destination Location</td><td>Facility</td></tr><tr><td>6</td><td>Tracking #</td><td>Tracking ID</td></tr></tbody></table>
+<table data-full-width="false"><thead><tr><th width="157">S.No.</th><th>Fields in NetSuite</th><th>Fields in HotWax Commerce</th></tr></thead><tbody><tr><td>1</td><td>Item Fulfillment Internal ID</td><td>External ID</td></tr><tr><td>2</td><td>Transfer Order Name</td><td>Transfer Order Name</td></tr><tr><td>3</td><td>Items</td><td>SKU</td></tr><tr><td>4</td><td>Quantity</td><td>Ordered Quantity</td></tr><tr><td>5</td><td>Destination Location</td><td>Facility</td></tr><tr><td>6</td><td>Tracking #</td><td>Tracking ID</td></tr></tbody></table>
 
 {% tabs %}
 {% tab title="Transfer Order Fields in NetSuite" %}
-<figure><img src="../../.gitbook/assets/warehouse to store transfer order mapping.png" alt=""><figcaption><p>Transfer Order Fields Mapping in NetSuite</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/34.png" alt=""><figcaption><p>Transfer Order Fields Mapping in NetSuite</p></figcaption></figure>
 {% endtab %}
 
 {% tab title="Transfer Order Fields in HotWax Commerce" %}
-<figure><img src="../../.gitbook/assets/mapping hc warehouse to store receiving app to.png" alt=""><figcaption><p>Inbound Shipment Fields Mapping in HotWax Commerce "Inventory Receiving App"</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/35.png" alt=""><figcaption><p>Inbound Shipment Fields Mapping in HotWax Commerce "Inventory Receiving App"</p></figcaption></figure>
 {% endtab %}
 {% endtabs %}
 
@@ -120,5 +118,3 @@ Once the second item fulfillment record is fulfilled in NetSuite and shipped fro
 A scheduled job in HotWax Commerce OMS reads this CSV file and creates another inbound shipment at the Brooklyn store location. Upon receiving, item receipt records are generated in HotWax Commerce, increasing the product inventory by 40 quantities at the Brooklyn store location. Subsequently, these item receipt records are synchronized to NetSuite, marking the completion of the transfer order in NetSuite, updating inventory counts and updating transfer order status from `Pending Receipt` to `Received`.
 
 </details>
-
-{% file src="../../.gitbook/assets/Transfer Order Receipt Feed (1).txt" %}

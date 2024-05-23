@@ -1,5 +1,6 @@
 # Table of contents
 
+* [README](README.md)
 * [Introduction](netsuite-integration/README.md)
 
 ## Integration Tools
@@ -85,6 +86,3 @@
   * [Price Levels](netsuite-deployment/flows/integration-mappings/price-levels.md)
   * [Shipping Methods](netsuite-deployment/flows/integration-mappings/shipping-methods.md)
   * [Facility Group](netsuite-deployment/flows/integration-mappings/facilities.md)
-
-
-

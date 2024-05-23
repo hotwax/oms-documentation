@@ -48,7 +48,7 @@ A scheduled SuiteScript in NetSuite retrieves item receipt records, generates a 
 
 A job within HotWax Commerce OMS imports the item receipt records CSV file and restocks inventory for corresponding returns. This ensures that the restocked inventory is accurately updated at the facility in HotWax Commerce.
 
-<figure><img src="../../.gitbook/assets/online return with loop (1).png" alt=""><figcaption><p>Sync web returns to NetSuite using Loop</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/27.png" alt=""><figcaption><p>Sync web returns to NetSuite using Loop</p></figcaption></figure>
 
 ### Synchronizing Web Returns to NetSuite when HotWax Commerce is used
 
@@ -91,7 +91,7 @@ To facilitate this, a scheduled job in HotWax Commerce is responsible for synchr
 
 Once returns are completed in Shopify, a scheduled job in HotWax Commerce also marks the order item as returned and updates the payment by marking it as refunded. Subsequently, the order item is marked returned and the payment as refunded in NetSuite.
 
-<figure><img src="../../.gitbook/assets/online returns with hotwax (1).png" alt=""><figcaption><p>Sync web returns to NetSuite using HotWax Commerce</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/28.png" alt=""><figcaption><p>Sync web returns to NetSuite using HotWax Commerce</p></figcaption></figure>
 
 ## POS Returns
 
@@ -125,7 +125,7 @@ A scheduled job in HotWax Commerce downloads these returns from Shopify POS, inc
 
 As POS returns are already synced to NetSuite by Loop, they are not synced again by HotWax commerce.
 
-<figure><img src="../../.gitbook/assets/in-store return with loop (1).png" alt=""><figcaption><p>Sync POS returns to NetSuite using Loop</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/29.png" alt=""><figcaption><p>Sync POS returns to NetSuite using Loop</p></figcaption></figure>
 
 ### Synchronizing POS Returns to NetSuite when Shopify POS is used
 
@@ -145,4 +145,4 @@ A scheduled job within HotWax Commerce Integration Platform generates a CSV file
 
 A scheduled SuiteScript in NetSuite reads this CSV file from the SFTP location, generates a Cash Sale return in NetSuite, creates item receipt records, marks the order item as returned and the payment is marked as refunded.
 
-<figure><img src="../../.gitbook/assets/in-store return with hotwax (1).png" alt=""><figcaption><p>Sync POS returns to NetSuite using HotWax Commerce</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/30.png" alt=""><figcaption><p>Sync POS returns to NetSuite using HotWax Commerce</p></figcaption></figure>

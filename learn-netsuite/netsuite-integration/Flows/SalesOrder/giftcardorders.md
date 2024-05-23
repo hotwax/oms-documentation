@@ -96,7 +96,7 @@ poll_SystemMessageFileSftp_GiftCardActivationFeed
 
 [Bulk data import GraphlQL API](https://shopify.dev/docs/api/usage/bulk-operations/imports) used along with [gift card create mutation](https://shopify.dev/docs/api/admin-graphql/2024-04/mutations/giftcardcreate)
 
-<figure><img src="../../.gitbook/assets/gift card activation.png" alt=""><figcaption><p>Physical Gift Card Activation</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/21.png" alt=""><figcaption><p>Physical Gift Card Activation</p></figcaption></figure>
 
 Once the gift card is activated in eCommerce, customers can conveniently redeem it.
 
@@ -124,7 +124,7 @@ Digital gift cards are already in the “Completed” status in HotWax Commerce.
 Digital gift cards are auto-activated and customers can directly redeem them by entering a unique serial number provided with the card.
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/digital gift card HotWax.png" alt=""><figcaption><p>Digital Gift Card Order Sync from HotWax Commerce to NetSuite</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/22.png" alt=""><figcaption><p>Digital Gift Card Order Sync from HotWax Commerce to NetSuite</p></figcaption></figure>
 
 ### Synchronize Digital Gift Card Orders from HotWax Commerce to NetSuite
 
@@ -132,7 +132,7 @@ A scheduled job in HotWax Commerce Integration Platform generates a CSV file of 
 
 A scheduled SuiteScript in NetSuite reads the CSV file from the SFTP location and creates gift card orders in the “Pending Fulfillment” status.
 
-HotWax Commerce retrieves NetSuite sales order item line IDs, NetSuite sales order IDs, and creates customer deposits in NetSuite in the “Undeposited” status. 
+HotWax Commerce retrieves NetSuite sales order item line IDs, NetSuite sales order IDs, and creates customer deposits in NetSuite in the “Undeposited” status.
 
 By default non inventory items like digital gift cards are configured to be not eligible for fulfillment in NetSuite. Therefore digital gift cards are automatically fulfilled in NetSuite and their status updated from “Pending Fulfillment” to “Pending Billing”.
 
@@ -145,4 +145,3 @@ When gift card payments are applied to an order, they are not processed like tra
 
 If gift card payments were recorded as customer deposits, there could be a risk of double counting the revenue. This is because the revenue from gift card sales would already have been recorded when the gift cards were initially sold. Treating gift card payments as payment items avoids this double counting since they're simply offsetting existing revenue rather than creating new revenue.
 {% endhint %}
-

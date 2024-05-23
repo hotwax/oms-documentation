@@ -17,7 +17,7 @@ To ensure that HotWax Commerce remains continually synchronized with the latest 
 * Automate the daily synchronization of inventory data from Netsuite to HotWax Commerce.
 * Ensure that HotWax Commerce reflects the most recent inventory numbers, as recorded in NetSuite.
 
-<figure><img src="../.gitbook/assets/inventory sync.png" alt=""><figcaption><p>Inventory Sync from NetSuite to HotWax Commerce</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2.png" alt=""><figcaption><p>Inventory Sync from NetSuite to HotWax Commerce</p></figcaption></figure>
 
 **Actions**
 
@@ -82,7 +82,7 @@ The effectiveness of this process relies on timely synchronization. If inventory
 
 Therefore, it's essential for HotWax Commerce to sync recent inventory updates from NetSuite whenever retailers move inventory between B2C and B2B warehouse. This ensures that the inventory levels in NetSuite are accurately reflected in HotWax Commerce and, consequently, on the eCommerce platform, preventing underselling and overselling of stock.
 
-<figure><img src="../.gitbook/assets/inventory transfer.png" alt=""><figcaption><p>Inventory Transfer Sync from NetSuite to HotWax Commerce</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/3.png" alt=""><figcaption><p>Inventory Transfer Sync from NetSuite to HotWax Commerce</p></figcaption></figure>
 
 **Actions**
 

@@ -19,7 +19,7 @@ We took the approach of directly creating cash sales for POS sales data in NetSu
 
 The synchronization of POS sales from HotWax Commerce to NetSuite involves the creation of Cash Sale records in NetSuite, ensuring that sales data from physical stores is accurately reflected in the ERP system. By channeling all POS transactions through HotWax Commerce, retailers can leverage this integration to keep their inventory updated, perform relevant accounting postings, and maintain a consolidated view of both online and in-store sales within NetSuite.
 
-<figure><img src="../../.gitbook/assets/pos orders.png" alt=""><figcaption><p>POS orders synced from HotWax Commerce to NetSuite</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/23.png" alt=""><figcaption><p>POS orders synced from HotWax Commerce to NetSuite</p></figcaption></figure>
 
 ### Sync POS orders to NetSuite
 
@@ -55,11 +55,11 @@ HC_SC_ImportCashSale
 
 {% tabs %}
 {% tab title="POS Order Fields in HotWax Commerce" %}
-<figure><img src="../../.gitbook/assets/HC pos order mapping.png" alt=""><figcaption><p>POS Order Fields Mapping in HotWax Commerce</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/24.png" alt=""><figcaption><p>POS Order Fields Mapping in HotWax Commerce</p></figcaption></figure>
 {% endtab %}
 
 {% tab title="POS Order Fields in NetSuite" %}
-<figure><img src="../../.gitbook/assets/POS order mapping netsuite.png" alt=""><figcaption><p>POS Order Fields Mapping in NetSuite</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/25.png" alt=""><figcaption><p>POS Order Fields Mapping in NetSuite</p></figcaption></figure>
 {% endtab %}
 {% endtabs %}
 
@@ -77,7 +77,7 @@ To sync POS orders from HotWax Commerce to NetSuite, a required field is the "Sh
 
 ### Synchronize NetSuite POS Order ID to HotWax Commerce
 
-<figure><img src="../../.gitbook/assets/sync POS order IDs.png" alt=""><figcaption><p>POS order IDs synced from NetSuite to HotWax Commerce</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/26.png" alt=""><figcaption><p>POS order IDs synced from NetSuite to HotWax Commerce</p></figcaption></figure>
 
 1. A MapReduce SuiteScript is utilized in NetSuite to export a CSV file to an SFTP location containing the internal NetSuite IDs corresponding to the processed POS orders.
 
@@ -101,5 +101,3 @@ HC_MR_ExportedCashSaleCSV
 Order Identification
 FTP Config: IMP_ORDER_IDENT
 ```
-
-{% file src="../../.gitbook/assets/POS Orders Sample Feed.csv" %}

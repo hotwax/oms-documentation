@@ -8,12 +8,11 @@ description: >-
 
 ## Fulfillment in NetSuite
 
-
 When the warehouse fulfillment team begins the fulfillment of the order item, an item fulfillment record is created in NetSuite. As soon as the order item is picked, packed and shipped, the item fulfillment record is marked as “Shipped” and the order status is updated from "Pending Fulfillment" to "Pending "Billing".
 
 Synchronizing shipped order items from NetSuite to HotWax Commerce ensures that the order status is consistent and updated across both systems.
 
-<figure><img src="../../.gitbook/assets/fulfillment update in netsuite.png" alt=""><figcaption><p>Fulfilled order updates synced from NetSuite to HotWax Commerce</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/17.png" alt=""><figcaption><p>Fulfilled order updates synced from NetSuite to HotWax Commerce</p></figcaption></figure>
 
 **Actions**
 
@@ -49,7 +48,7 @@ The primary difference in this context is the approach to sending fulfillment lo
 
 While fulfillment locations are indeed transmitted to NetSuite after in-store orders are fulfilled within HotWax Commerce, it's important to understand that this data transmission isn't critical for the actual fulfillment of orders. The fulfillment location data is conveyed to NetSuite once orders are fulfilled in HotWax Commerce. Its significance lies in updating order status in NetSuite, subsequent creation of invoices and the application of payments to these invoices. This step occurs post-fulfillment in HotWax Commerce to ensure proper financial processing and completion of orders in NetSuite.
 
-<figure><img src="../../.gitbook/assets/fulfillment update HotWax.png" alt=""><figcaption><p>Fulfillment location data and order updates synced from HotWax Commerce to NetSuite</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/18.png" alt=""><figcaption><p>Fulfillment location data and order updates synced from HotWax Commerce to NetSuite</p></figcaption></figure>
 
 **Actions**
 
@@ -78,8 +77,6 @@ The `HC_SC_CreateItemFulfillment` SuiteScript also generates a CSV file highligh
 {% endhint %}
 
 * [x] Sync order item fulfillment details from HotWax to NetSuite
-
-{% file src="../../.gitbook/assets/Fulfilled Order Items Sample Feed.txt" %}
 
 **Overall sync progress**
 

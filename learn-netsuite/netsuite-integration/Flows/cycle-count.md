@@ -22,7 +22,7 @@ To support this process, HotWax Commerce provides the Cycle Count App. The app e
 
 The inventory count process initiates within the store, where store associates leverage the Cycle Count App to conduct the cycle count. Upon completion of the cycle count, associates record the new inventory count into the app. Subsequently, the app automatically identifies the difference between the actual physical count and the corresponding systemic inventory levels, facilitating accurate and efficient inventory reconciliation.
 
-<figure><img src="../.gitbook/assets/cycle count.png" alt=""><figcaption><p>Cycle Count Inventory Variance Synced from HotWax Commerce to NetSuite</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/47.png" alt=""><figcaption><p>Cycle Count Inventory Variance Synced from HotWax Commerce to NetSuite</p></figcaption></figure>
 
 ### Pushing Cycle Count Inventory Variances to HotWax Commerce
 
@@ -34,13 +34,13 @@ In the event where a store associate has requested a cycle count for multiple pr
 
 ### Export Cycle Count Inventory Variances from HotWax Commerce
 
-1. Once inventory cycle count variances are successfully logged in HotWax Commerce OMS, a scheduled job in HotWax Commerce Integration Platform generates a CSV file containing products for which inventory variance recorded that are in the “Completed” status.
+1.  Once inventory cycle count variances are successfully logged in HotWax Commerce OMS, a scheduled job in HotWax Commerce Integration Platform generates a CSV file containing products for which inventory variance recorded that are in the “Completed” status.
 
-   This means that when exporting inventory adjustments, only the variances that have been approved and are marked as "Completed" will be included in the CSV file, while those that are rejected or still in the "Created" status will be excluded.
+    This means that when exporting inventory adjustments, only the variances that have been approved and are marked as "Completed" will be included in the CSV file, while those that are rejected or still in the "Created" status will be excluded.
 
-   For example, suppose we have three products: Product A, Product B, and Product C. If variances for Product A and Product B are approved and marked as "Completed," while the variance for Product C is rejected, only the inventory adjustments for Product A and Product B will be synced.
+    For example, suppose we have three products: Product A, Product B, and Product C. If variances for Product A and Product B are approved and marked as "Completed," while the variance for Product C is rejected, only the inventory adjustments for Product A and Product B will be synced.
 
-   This generated CSV file is then placed in an SFTP location, ensuring that it is readily accessible for further processing.
+    This generated CSV file is then placed in an SFTP location, ensuring that it is readily accessible for further processing.
 
 {% hint style="info" %}
 Successful logging of an inventory count is indicated by its status being "INV\_COUNT\_COMPLETED"
@@ -80,7 +80,6 @@ Import Inventory Cycle Count Variance from SFTP:
 ```
 HC_SC_ImportInventoryAdjustment.js
 ```
-{% file src="../.gitbook/assets/Inventory Cycle Count Variances Sample Feed.csv" %}
 
 ## Record Unexpected Store Inventory Variances Outside of Cycle Counts
 
@@ -92,7 +91,7 @@ To address these unexpected inventory changes, store managers can directly recor
 Unlike cycle counting, where an inventory count is conducted periodically, this process involves store managers directly recording the variance amount without physically counting the entire store inventory.
 {% endhint %}
 
-<figure><img src="../.gitbook/assets/unexpected inventory variance.png" alt=""><figcaption><p>Inventory Variance Synced from HotWax Commerce to NetSuite</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/48.png" alt=""><figcaption><p>Inventory Variance Synced from HotWax Commerce to NetSuite</p></figcaption></figure>
 
 ### Pushing Inventory Variance to HotWax Commerce
 
@@ -148,7 +147,6 @@ Import Inventory Variance from SFTP:
 ```
 HC_SC_ImportInventoryAdjustment.js
 ```
-{% file src="../.gitbook/assets/Inventory Item Variances Sample Feed.csv" %}
 
 ## Benefits:
 

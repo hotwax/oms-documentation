@@ -20,7 +20,7 @@ Orders will only be allocated for fulfillment after they have been approved.
 
 To successfully create a sales order in NetSuite, [it is a prerequisite to have the customer information pre-existing within NetSuite's database](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section\_162886247923.html#Best-Practices-for-Order-Sync). If the order contains a new customer not present in NetSuite, the system won't allow the order to be pushed. Therefore, it's vital to synchronize customer data from HotWax Commerce to NetSuite before order creation.
 
-<figure><img src="../../.gitbook/assets/customer sync.png" alt=""><figcaption><p>Customer Sync from HotWax Commerce to NetSuite</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/6.png" alt=""><figcaption><p>Customer Sync from HotWax Commerce to NetSuite</p></figcaption></figure>
 
 **Actions**
 
@@ -86,11 +86,11 @@ FTP Config: IMP_PARTY_IDENT
 
 {% tabs %}
 {% tab title="Customer Fields in HotWax Commerce" %}
-<figure><img src="../../.gitbook/assets/customer fields in hotwax.png" alt=""><figcaption><p>Customer Fields Mapping in HotWax Commerce</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/7.png" alt=""><figcaption><p>Customer Fields Mapping in HotWax Commerce</p></figcaption></figure>
 {% endtab %}
 
 {% tab title="Customer Fields in NetSuite" %}
-<figure><img src="../../.gitbook/assets/customer fields in netsuite.png" alt=""><figcaption><p>Customer Fields Mapping in NetSuite</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/15.png" alt=""><figcaption><p>Customer Fields Mapping in NetSuite</p></figcaption></figure>
 {% endtab %}
 {% endtabs %}
 
@@ -102,15 +102,13 @@ FTP Config: IMP_PARTY_IDENT
 "\*" denotes fields that are required to be sent to NetSuite for the customer sync to work
 {% endhint %}
 
-{% file src="../../.gitbook/assets/Customers Sample Feed.csv" %}
-
 * [x] Sync customers
 
 ## Synchronize Sales Order from HotWax Commerce to NetSuite
 
 Capturing orders in HotWax Commerce initiates the creation of orders in "Created" status. In this step, created sales orders are pushed from HotWax Commerce to NetSuite for further processing.
 
-<figure><img src="../../.gitbook/assets/created orders.png" alt=""><figcaption><p>Orders in Created status synced to NetSuite</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/8.png" alt=""><figcaption><p>Orders in Created status synced to NetSuite</p></figcaption></figure>
 
 #### Export new orders to NetSuite
 
@@ -162,7 +160,7 @@ HC_importSalesOrders
 {% tab title="Sales Order Fields in HotWax Commerce" %}
 <div data-full-width="false">
 
-<figure><img src="../../.gitbook/assets/sales order mapping hotwax.png" alt=""><figcaption><p>Sales Order Fields Mapping in HotWax Commerce</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/9.png" alt=""><figcaption><p>Sales Order Fields Mapping in HotWax Commerce</p></figcaption></figure>
 
 </div>
 {% endtab %}
@@ -170,7 +168,7 @@ HC_importSalesOrders
 {% tab title="Sales Order Fields in NetSuite" %}
 <div data-full-width="false">
 
-<figure><img src="../../.gitbook/assets/netsuite sales orders mappings (4).png" alt=""><figcaption><p>Sales Order Fields Mapping in NetSuite</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/10.png" alt=""><figcaption><p>Sales Order Fields Mapping in NetSuite</p></figcaption></figure>
 
 </div>
 {% endtab %}
@@ -188,13 +186,11 @@ To sync sales orders from HotWax Commerce to NetSuite, a required field is the "
 "\*" denotes fields that are required to be sent to NetSuite for the sales order sync to work
 {% endhint %}
 
-{% file src="../../.gitbook/assets/Created Order Items Sample Feed.csv" %}
-
 ## Sync Sales Order Item Line IDs from NetSuite to HotWax Commerce
 
 This step syncs NetSuite sales order line item IDs with HotWax Commerce order items. This step is crucial as it helps in mapping and aligning the order line items in HotWax Commerce with their corresponding line item IDs in NetSuite. This synchronization enables a smooth and accurate cross-referencing of items and their relevant details between the two systems. Without syncing order line item IDs, any attempt to update an order item in NetSuite would result in a new order item being created.
 
-<figure><img src="../../.gitbook/assets/order line item id.png" alt=""><figcaption><p>Order line item IDs synced from NetSuite to HotWax Commerce</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/11.png" alt=""><figcaption><p>Order line item IDs synced from NetSuite to HotWax Commerce</p></figcaption></figure>
 
 **Actions**
 
@@ -233,7 +229,7 @@ This step synchronizes NetSuite sales order IDs with orders in HotWax Commerce f
 
 The synchronization of Sales Order IDs from NetSuite to HotWax Commerce is a critical step as it serves as an indicator that the orders in HotWax Commerce have been successfully integrated into NetSuite. Additionally, it is an essential step for various functions, including the creation of item fulfillment, return authorization, and customer deposit records in NetSuite.
 
-<figure><img src="../../.gitbook/assets/sync sales order IDs.png" alt=""><figcaption><p>Sales order IDs synced from NetSuite to HotWax Commerce</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/12.png" alt=""><figcaption><p>Sales order IDs synced from NetSuite to HotWax Commerce</p></figcaption></figure>
 
 **Actions**
 
@@ -274,7 +270,7 @@ Sync status of customer deposits to NetSuite is time-driven, this means that we 
 
 To ensure that only applicable customer deposits are created in NetSuite, orders that have been canceled or refunded will not have their deposit created. However, if an order is canceled or refunded after the deposit has been created in NetSuite, it will have to be manually handled by a NetSuite user. HotWax provides a report for all orders that have been canceled or refunded where the customer deposit may need to be dealt with manually.
 
-<figure><img src="../../.gitbook/assets/customer deposits.png" alt=""><figcaption><p>Creating customer deposits in NetSuite</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/13.png" alt=""><figcaption><p>Creating customer deposits in NetSuite</p></figcaption></figure>
 
 **Actions**
 
@@ -306,11 +302,9 @@ The `HC_SC_CreateCustomerDeposit` SuiteScript also generates a CSV file highligh
 
 ## Approval of Sales Order
 
-{% file src="../../.gitbook/assets/Customer Deposits Sample Feed.txt" %}
-
 This step involves marking orders as "Approved" for further processing and fulfillment. This step ensures that orders are appropriately marked "Approved" once all necessary details and required references are established. This authorization triggers the routing of orders to their designated fulfillment locations.
 
-<figure><img src="../../.gitbook/assets/approve orders.png" alt=""><figcaption><p>Order approval flow in HotWax Commerce</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/14.png" alt=""><figcaption><p>Order approval flow in HotWax Commerce</p></figcaption></figure>
 
 **Actions**
 
