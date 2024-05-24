@@ -17,4 +17,4 @@ To sync cancellation updates from Shopify to HotWax Commerce, there are two opti
 The recommended frequency for this job is every 30 minutes, however, it can be adjusted to a different time interval using the Job Manager App.
 {% endhint %}
 
-<figure><img src="../.gitbook/assets/Cancel Orders.png" alt=""><figcaption><p><em>Fig. 1: Configuration in Job Manager app to download canceled orders in HotWax Commerce</em></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/26.png" alt=""><figcaption><p><em>Fig. 1: Configuration in Job Manager app to download canceled orders in HotWax Commerce</em></p></figcaption></figure>

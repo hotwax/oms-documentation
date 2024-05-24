@@ -13,4 +13,4 @@ Shopify offers webhooks for real-time communication between apps. HotWax Commerc
 * It only tracks the creation or deletion of parent products and not product variants.
 * Shopify states that [webhook delivery isn't always guaranteed](https://shopify.dev/apps/webhooks#limitation), and suggests implementing reconciliation jobs to periodically fetch data from Shopify.
 
-<figure><img src="../.gitbook/assets/Product webhook.png" alt=""><figcaption><p><em>Fig.6: Product webhooks for Shopify</em></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/9.png" alt=""><figcaption><p><em>Fig.6: Product webhooks for Shopify</em></p></figcaption></figure>

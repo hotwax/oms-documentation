@@ -21,7 +21,7 @@
 
 ## Inventory
 
-* [Inventory](integration/how-does-hotwax-commerce-ensure-accurate-inventory-is-synchronized-to-shopify.md)
+* [Inventory](inventory/inventory/README.md)
   * [Inventory Synchronization](integration/how-does-hotwax-commerce-ensure-accurate-inventory-is-synchronized-to-shopify/inventory-synchronization.md)
   * [Location Mapping](integration/how-does-hotwax-commerce-ensure-accurate-inventory-is-synchronized-to-shopify/location-mapping.md)
   * [Inventory Synchronization of Gift Cards](integration/how-does-hotwax-commerce-ensure-accurate-inventory-is-synchronized-to-shopify/inventorysynchronizationgiftcards.md)
@@ -33,7 +33,7 @@
   * [Order Download](integration/how-are-orders-downloaded-from-shopify-to-hotwax-commerce/order-download.md)
   * [Order Approval for Fulfillment](integration/how-are-orders-downloaded-from-shopify-to-hotwax-commerce/order-approval-for-fulfillment.md)
   * [Order Updates](integration/how-are-orders-downloaded-from-shopify-to-hotwax-commerce/order-updates.md)
-  * [POS Sales Download](/integration/how-are-orders-downloaded-from-shopify-to-hotwax-commerce/possales.md)
+  * [POS Sales Download](integration/how-are-orders-downloaded-from-shopify-to-hotwax-commerce/possales.md)
   * [Gift Cards Order Download](integration/how-are-orders-downloaded-from-shopify-to-hotwax-commerce/giftcardordersdownload.md)
   * [Bundles Order Download](integration/how-are-orders-downloaded-from-shopify-to-hotwax-commerce/downloading-orders-for-bundles.md)
 * [Order Fulfillment](integration/how-is-the-order-fulfillment-status-updated-to-shopify-from-hotwax-commerce/how-is-the-order-fulfillment-status-updated-to-shopify-from-hotwax-commerce.md)
@@ -53,15 +53,14 @@
   * [In-Store Returns](integration/how-does-hotwax-commerce-manage-order-returns/in-store-returns.md)
   * [Appeasements](integration/how-does-hotwax-commerce-manage-order-returns/appeasements.md)
   * [Exchanges](integration/how-does-hotwax-commerce-manage-order-returns/exchanges.md)
-
 * [Integration-Mapping](shopify-setup/integration-mapping.md)
   * [Locations](shopify-setup/MapLocations.md)
   * [Shipping Method](shopify-setup/shipping-method.md)
-  * [Sales channel](shopify-setup/sales-channel.md)
+  * [Sales channel](orders/integration-mapping/sales-channel.md)
   * [Payment Method](shopify-setup/payment-method-type.md)
   * [Product Type](shopify-setup/product-type.md)
 
 ## Additional resources
 
-* [Kit Products](SyncShopify/kitProducts.md)
-* [POS Completed Orders](SyncShopify/posCompletedOrders.md)
+* [Kit Products](additional-resources/kit-products.md)
+* [POS Completed Orders](additional-resources/pos-completed-orders.md)

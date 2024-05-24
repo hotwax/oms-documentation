@@ -17,4 +17,4 @@ When some items from an order are fulfilled and the rest are canceled, it is cal
 Recommended time frequency is once an hour but the time interval is configurable through the Job Manager App.
 {% endhint %}
 
-<figure><img src="../.gitbook/assets/Order Item Cancellation.png" alt=""><figcaption><p><em>Fig. 2: Cancel order items in HotWax Commerce</em></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/27.png" alt=""><figcaption><p><em>Fig. 2: Cancel order items in HotWax Commerce</em></p></figcaption></figure>

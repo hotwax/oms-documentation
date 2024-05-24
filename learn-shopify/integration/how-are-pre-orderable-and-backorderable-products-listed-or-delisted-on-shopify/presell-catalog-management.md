@@ -32,6 +32,4 @@ The job called "Auto Refresh Pre-Sell Catalog" also eliminates pre-sell items fr
 * When inventory is physically received at the fulfillment center.
 * When the Purchase Order arrival date that is the promised fulfillment date has been passed.
 
-<figure><img src="../.gitbook/assets/Auto refresh pre sell.png" alt=""><figcaption><p><em>Fig. 1 : Configurations of 'Auto refresh pre-sell catalog' job in Job Managers App</em></p></figcaption></figure>
-
-####
+<figure><img src="../../.gitbook/assets/31.png" alt=""><figcaption><p><em>Fig. 1 : Configurations of 'Auto refresh pre-sell catalog' job in Job Managers App</em></p></figcaption></figure>

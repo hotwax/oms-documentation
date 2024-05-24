@@ -40,5 +40,3 @@ Let's consider a bundle with Belts and Wallets as its components across differen
 * Broadway Store: 3 Belts and 7 Wallets
 
 HotWax Commerce ensures precise inventory management by calculating the inventory based on the lowest available quantity at a single facility. In this example, it would push an inventory of 3 to Shopify for this bundle, representing the available quantity of the scarcest component among all locations in the bundle.
-
-\\

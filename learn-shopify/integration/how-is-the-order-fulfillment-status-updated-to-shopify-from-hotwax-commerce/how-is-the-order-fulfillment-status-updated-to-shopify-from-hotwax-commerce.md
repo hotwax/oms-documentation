@@ -22,6 +22,4 @@ In HotWax Commerce, users can schedule the 'Completed Orders' job to generate a 
 It is recommended that this task be done every 30 minutes. During each run, it will collect all completed orders within the past 30 minutes. The time interval can be adjusted to meet the specific needs of the merchant.
 {% endhint %}
 
-<figure><img src=".gitbook/assets/Completed Orders (1).png" alt=""><figcaption><p><em>Fig. 1: Configuration of the completed orders job in the Job Manager App</em></p></figcaption></figure>
-
-\\
+<figure><img src="../../.gitbook/assets/25.png" alt=""><figcaption><p><em>Fig. 1: Configuration of the completed orders job in the Job Manager App</em></p></figcaption></figure>

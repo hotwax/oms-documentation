@@ -10,7 +10,7 @@ description: >-
 
 The items that are available for pre-order or backorder are transferred from HotWax Commerce to Shopify through the "presell catalog sync" job. This job is set to run every 15 minutes by default and updates the product listings on Shopify based on any changes made to the pre-order/backorder category in HotWax Commerce within the last 15 minutes.
 
-<figure><img src="../.gitbook/assets/Sync Variant Details.png" alt=""><figcaption><p><em>Fig. 2 : Configurations of 'Sync Variant Details' job in Job Managers App</em></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/32.png" alt=""><figcaption><p><em>Fig. 2 : Configurations of 'Sync Variant Details' job in Job Managers App</em></p></figcaption></figure>
 
 The products are listed/delisted from Shopify through the following steps:
 
@@ -26,7 +26,7 @@ Once all the products are listed on Shopify, it's important to add the HC:Preord
 
 The HotWax Commerce Preorder PDP app utilizes tags and meta fields to modify the 'Add to Cart' button and show the expected delivery date on Shopify PDP. Products labeled with 'HC:Preorder' tags will have the 'Add to Cart' button changed to 'Pre-Order', while products with 'HC:Backorder' tags will display 'Backorder' instead.
 
-<figure><img src="../.gitbook/assets/hc-demo.myshopify 25.png" alt=""><figcaption><p><em>Fig.3 : Pre-order button on PDP</em></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/33.png" alt=""><figcaption><p><em>Fig.3 : Pre-order button on PDP</em></p></figcaption></figure>
 
 When a product is delisted from presell, its status changes to inactive and the option to 'continue selling out of stock' is set to false. There are three conditions that may require inventory to be delisted from Shopify.
 
@@ -44,6 +44,6 @@ When the arrival date of a purchase order is passed:
 
 After delisting pre-orderable products from Shopify, merchants can use the 'Remove pre-order tags' and 'Remove backorder tags' jobs to get rid of the HC:Preorder and HC:Backorder tags. This will happen automatically every 15 minutes.
 
-If a pre-orderable product is delisted from Shopify, the buttons for 'Pre-order' and 'Backorder' will switch to 'Add to Cart' on the Shopify PDP page as long as there is inventory for any upcoming orders. If the available to promise (ATP) quantity runs out and becomes zero, the "Pre-order" and "Backorder" buttons will switch to "Out of Stock". \\
+If a pre-orderable product is delisted from Shopify, the buttons for 'Pre-order' and 'Backorder' will switch to 'Add to Cart' on the Shopify PDP page as long as there is inventory for any upcoming orders. If the available to promise (ATP) quantity runs out and becomes zero, the "Pre-order" and "Backorder" buttons will switch to "Out of Stock".&#x20;
 
-<figure><img src="../.gitbook/assets/hc-demo.myshopify 26.png" alt=""><figcaption><p><em>Fig.4 : Out of Stock button on PDP</em></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/34.png" alt=""><figcaption><p><em>Fig.4 : Out of Stock button on PDP</em></p></figcaption></figure>
