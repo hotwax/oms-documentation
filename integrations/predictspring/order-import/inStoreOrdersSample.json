@@ -1,0 +1,1037 @@
+{
+  "orderId": "PS00000283",
+  "orderStatus": "COMPLETED",
+  "status": "COMPLETED",
+  "creationDate": "2024-01-12 16:45:27",
+  "email": "daysky001@yahoo.com",
+  "totalAmount": 424.62,
+  "isSplitCart": false,
+  "taxSubTotal": 34.62,
+  "taxExemption": 0,
+  "orderSubTotal": 390,
+  "tenders": [
+    {
+      "merchantId": "DOLCEVITA947078",
+      "locale": "en_US",
+      "region": "US",
+      "orderId": "PS00000283",
+      "transactionId": "254-ANY-20240112184523-8-3",
+      "paymentId": "845a07f1-002c-4303-9483-3deac40aef15",
+      "paymentMethod": "Cash",
+      "paymentStatus": "APPROVED",
+      "paymentDevice": "NoReader",
+      "amountAuthorized": 424.62,
+      "captureDate": "2024-01-12T16:45:24Z",
+      "totalRefundedAmount": 0,
+      "totalAmountCarriedOverForExchange": 0,
+      "paymentSequenceNumber": 1,
+      "authStatus": "SALE",
+      "captureStatus": "CAPTURED",
+      "cardPresent": false,
+      "expiryDate": "2025-07-12T00:00:00Z",
+      "tenderedAmount": 424.62,
+      "changeBackAmount": 0
+    }
+  ],
+  "billingAddress": {
+    "firstName": "Catalin",
+    "lastName": "Linlin",
+    "preferred": false
+  },
+  "productList": [
+    {
+      "productId": "VLAKOTA0001050",
+      "variantGroupId": "LAKOTA",
+      "name": "LAKOTA HEELS BLACK LEATHER",
+      "price": 130,
+      "quantity": 1,
+      "productTax": {
+        "totalTax": 11.54,
+        "taxRates": [
+          {
+            "countryCode": "US",
+            "taxType": "CITY",
+            "taxRate": 0.045,
+            "taxClass": "PC040144",
+            "taxCode": "US-CITY---NY CITY TAX-0.045",
+            "taxAmount": 5.85,
+            "perUnitTaxAmount": 5.85,
+            "taxName": "NY CITY TAX",
+            "displayTaxName": "NY CITY TAX - 0.045%",
+            "printTaxName": "NY CITY TAX - 0.045%"
+          },
+          {
+            "countryCode": "US",
+            "taxType": "SPECIAL",
+            "taxRate": 0.00375,
+            "taxClass": "PC040144",
+            "taxCode": "US-SPECIAL---NY SPECIAL TAX359071-0.00375",
+            "taxAmount": 0.49,
+            "perUnitTaxAmount": 0.49,
+            "taxName": "NY SPECIAL TAX359071",
+            "displayTaxName": "NY SPECIAL TAX359071 - 0.00375%",
+            "printTaxName": "NY SPECIAL TAX359071 - 0.00375%"
+          },
+          {
+            "countryCode": "US",
+            "taxType": "STATE",
+            "taxRate": 0.04,
+            "taxClass": "PC040144",
+            "taxCode": "US-STATE---NY STATE TAX-0.04",
+            "taxAmount": 5.2,
+            "perUnitTaxAmount": 5.2,
+            "taxName": "NY STATE TAX",
+            "displayTaxName": "NY STATE TAX - 0.04%",
+            "printTaxName": "NY STATE TAX - 0.04%"
+          }
+        ]
+      },
+      "orderStatus": "COMPLETED",
+      "tax": 11.54,
+      "orderItemId": "1",
+      "productTaxCode": "PC040144",
+      "imageURL": "https://cdn.shopify.com/s/files/1/0037/3807/5202/files/DOLCEVITA-HEELS_LAKOTA_BLACKLEATHER-02.jpg?v=1687897830",
+      "subTotal": 130,
+      "total": 141.54,
+      "orderStatusText": "Completed",
+      "itemStatusText": "Completed",
+      "size": "5.0",
+      "color": "BLACK",
+      "itemStatus": "COMPLETED",
+      "isVirtual": false,
+      "additionalCharges": [],
+      "gtin": "197076109628",
+      "fulfillmentType": "IN_STORE",
+      "fulfillmentSubType": "DEFAULT",
+      "salesAssociateId": "cat01",
+      "salesAssociateAttribution": [
+        {
+          "orderItemId": "1",
+          "storeId": "254",
+          "storeAssociateId": "cat01",
+          "contributionPercentage": 100,
+          "orderId": "PS00000283",
+          "expiryDate": "2025-07-12T00:00:00Z"
+        }
+      ],
+      "returnsEligibility": "ELIGIBLE_FOR_RETURNS",
+      "productClass": "Merchandise",
+      "isReturnRelated": false,
+      "productCondition": "NEW",
+      "reasons": [],
+      "fulfillmentTypeChanged": false,
+      "omniFulfillmentType": "IN_STORE"
+    },
+    {
+      "productId": "VLAKOTA0001055",
+      "variantGroupId": "LAKOTA",
+      "name": "LAKOTA HEELS BLACK LEATHER",
+      "price": 130,
+      "quantity": 1,
+      "productTax": {
+        "totalTax": 11.54,
+        "taxRates": [
+          {
+            "countryCode": "US",
+            "taxType": "CITY",
+            "taxRate": 0.045,
+            "taxClass": "PC040144",
+            "taxCode": "US-CITY---NY CITY TAX-0.045",
+            "taxAmount": 5.85,
+            "perUnitTaxAmount": 5.85,
+            "taxName": "NY CITY TAX",
+            "displayTaxName": "NY CITY TAX - 0.045%",
+            "printTaxName": "NY CITY TAX - 0.045%"
+          },
+          {
+            "countryCode": "US",
+            "taxType": "SPECIAL",
+            "taxRate": 0.00375,
+            "taxClass": "PC040144",
+            "taxCode": "US-SPECIAL---NY SPECIAL TAX359071-0.00375",
+            "taxAmount": 0.49,
+            "perUnitTaxAmount": 0.49,
+            "taxName": "NY SPECIAL TAX359071",
+            "displayTaxName": "NY SPECIAL TAX359071 - 0.00375%",
+            "printTaxName": "NY SPECIAL TAX359071 - 0.00375%"
+          },
+          {
+            "countryCode": "US",
+            "taxType": "STATE",
+            "taxRate": 0.04,
+            "taxClass": "PC040144",
+            "taxCode": "US-STATE---NY STATE TAX-0.04",
+            "taxAmount": 5.2,
+            "perUnitTaxAmount": 5.2,
+            "taxName": "NY STATE TAX",
+            "displayTaxName": "NY STATE TAX - 0.04%",
+            "printTaxName": "NY STATE TAX - 0.04%"
+          }
+        ]
+      },
+      "orderStatus": "COMPLETED",
+      "tax": 11.54,
+      "orderItemId": "2",
+      "productTaxCode": "PC040144",
+      "imageURL": "https://cdn.shopify.com/s/files/1/0037/3807/5202/files/DOLCEVITA-HEELS_LAKOTA_BLACKLEATHER-02.jpg?v=1687897830",
+      "subTotal": 130,
+      "total": 141.54,
+      "orderStatusText": "Completed",
+      "itemStatusText": "Completed",
+      "size": "5.5",
+      "color": "BLACK",
+      "itemStatus": "COMPLETED",
+      "isVirtual": false,
+      "additionalCharges": [],
+      "gtin": "197076109635",
+      "fulfillmentType": "IN_STORE",
+      "fulfillmentSubType": "DEFAULT",
+      "salesAssociateId": "cat01",
+      "salesAssociateAttribution": [
+        {
+          "orderItemId": "2",
+          "storeId": "254",
+          "storeAssociateId": "cat01",
+          "contributionPercentage": 100,
+          "orderId": "PS00000283",
+          "expiryDate": "2025-07-12T00:00:00Z"
+        }
+      ],
+      "returnsEligibility": "ELIGIBLE_FOR_RETURNS",
+      "productClass": "Merchandise",
+      "isReturnRelated": false,
+      "productCondition": "NEW",
+      "reasons": [],
+      "fulfillmentTypeChanged": false,
+      "omniFulfillmentType": "IN_STORE"
+    },
+    {
+      "productId": "VLAKOTA0001060",
+      "variantGroupId": "LAKOTA",
+      "name": "LAKOTA HEELS BLACK LEATHER",
+      "price": 130,
+      "quantity": 1,
+      "productTax": {
+        "totalTax": 11.54,
+        "taxRates": [
+          {
+            "countryCode": "US",
+            "taxType": "CITY",
+            "taxRate": 0.045,
+            "taxClass": "PC040144",
+            "taxCode": "US-CITY---NY CITY TAX-0.045",
+            "taxAmount": 5.85,
+            "perUnitTaxAmount": 5.85,
+            "taxName": "NY CITY TAX",
+            "displayTaxName": "NY CITY TAX - 0.045%",
+            "printTaxName": "NY CITY TAX - 0.045%"
+          },
+          {
+            "countryCode": "US",
+            "taxType": "SPECIAL",
+            "taxRate": 0.00375,
+            "taxClass": "PC040144",
+            "taxCode": "US-SPECIAL---NY SPECIAL TAX359071-0.00375",
+            "taxAmount": 0.49,
+            "perUnitTaxAmount": 0.49,
+            "taxName": "NY SPECIAL TAX359071",
+            "displayTaxName": "NY SPECIAL TAX359071 - 0.00375%",
+            "printTaxName": "NY SPECIAL TAX359071 - 0.00375%"
+          },
+          {
+            "countryCode": "US",
+            "taxType": "STATE",
+            "taxRate": 0.04,
+            "taxClass": "PC040144",
+            "taxCode": "US-STATE---NY STATE TAX-0.04",
+            "taxAmount": 5.2,
+            "perUnitTaxAmount": 5.2,
+            "taxName": "NY STATE TAX",
+            "displayTaxName": "NY STATE TAX - 0.04%",
+            "printTaxName": "NY STATE TAX - 0.04%"
+          }
+        ]
+      },
+      "orderStatus": "COMPLETED",
+      "tax": 11.54,
+      "orderItemId": "3",
+      "productTaxCode": "PC040144",
+      "imageURL": "https://cdn.shopify.com/s/files/1/0037/3807/5202/files/DOLCEVITA-HEELS_LAKOTA_BLACKLEATHER-02.jpg?v=1687897830",
+      "subTotal": 130,
+      "total": 141.54,
+      "orderStatusText": "Completed",
+      "itemStatusText": "Completed",
+      "size": "6.0",
+      "color": "BLACK",
+      "itemStatus": "COMPLETED",
+      "isVirtual": false,
+      "additionalCharges": [],
+      "gtin": "197076109642",
+      "fulfillmentType": "IN_STORE",
+      "fulfillmentSubType": "DEFAULT",
+      "salesAssociateId": "cat01",
+      "salesAssociateAttribution": [
+        {
+          "orderItemId": "3",
+          "storeId": "254",
+          "storeAssociateId": "cat01",
+          "contributionPercentage": 100,
+          "orderId": "PS00000283",
+          "expiryDate": "2025-07-12T00:00:00Z"
+        }
+      ],
+      "returnsEligibility": "ELIGIBLE_FOR_RETURNS",
+      "productClass": "Merchandise",
+      "isReturnRelated": false,
+      "productCondition": "NEW",
+      "reasons": [],
+      "fulfillmentTypeChanged": false,
+      "omniFulfillmentType": "IN_STORE"
+    }
+  ],
+  "orderProductList": [
+    {
+      "productId": "VLAKOTA0001050",
+      "variantGroupId": "LAKOTA",
+      "name": "LAKOTA HEELS BLACK LEATHER",
+      "price": 130,
+      "quantity": 1,
+      "productTax": {
+        "totalTax": 11.54,
+        "taxRates": [
+          {
+            "countryCode": "US",
+            "taxType": "CITY",
+            "taxRate": 0.045,
+            "taxClass": "PC040144",
+            "taxCode": "US-CITY---NY CITY TAX-0.045",
+            "taxAmount": 5.85,
+            "perUnitTaxAmount": 5.85,
+            "taxName": "NY CITY TAX",
+            "displayTaxName": "NY CITY TAX - 0.045%",
+            "printTaxName": "NY CITY TAX - 0.045%"
+          },
+          {
+            "countryCode": "US",
+            "taxType": "SPECIAL",
+            "taxRate": 0.00375,
+            "taxClass": "PC040144",
+            "taxCode": "US-SPECIAL---NY SPECIAL TAX359071-0.00375",
+            "taxAmount": 0.49,
+            "perUnitTaxAmount": 0.49,
+            "taxName": "NY SPECIAL TAX359071",
+            "displayTaxName": "NY SPECIAL TAX359071 - 0.00375%",
+            "printTaxName": "NY SPECIAL TAX359071 - 0.00375%"
+          },
+          {
+            "countryCode": "US",
+            "taxType": "STATE",
+            "taxRate": 0.04,
+            "taxClass": "PC040144",
+            "taxCode": "US-STATE---NY STATE TAX-0.04",
+            "taxAmount": 5.2,
+            "perUnitTaxAmount": 5.2,
+            "taxName": "NY STATE TAX",
+            "displayTaxName": "NY STATE TAX - 0.04%",
+            "printTaxName": "NY STATE TAX - 0.04%"
+          }
+        ]
+      },
+      "orderStatus": "COMPLETED",
+      "tax": 11.54,
+      "orderItemId": "1",
+      "productTaxCode": "PC040144",
+      "imageURL": "https://cdn.shopify.com/s/files/1/0037/3807/5202/files/DOLCEVITA-HEELS_LAKOTA_BLACKLEATHER-02.jpg?v=1687897830",
+      "subTotal": 130,
+      "total": 141.54,
+      "orderStatusText": "Completed",
+      "itemStatusText": "Completed",
+      "size": "5.0",
+      "color": "BLACK",
+      "itemStatus": "COMPLETED",
+      "isVirtual": false,
+      "additionalCharges": [],
+      "gtin": "197076109628",
+      "fulfillmentType": "IN_STORE",
+      "fulfillmentSubType": "DEFAULT",
+      "salesAssociateId": "cat01",
+      "salesAssociateAttribution": [
+        {
+          "orderItemId": "1",
+          "storeId": "254",
+          "storeAssociateId": "cat01",
+          "contributionPercentage": 100,
+          "orderId": "PS00000283",
+          "expiryDate": "2025-07-12T00:00:00Z"
+        }
+      ],
+      "returnsEligibility": "ELIGIBLE_FOR_RETURNS",
+      "productClass": "Merchandise",
+      "isReturnRelated": false,
+      "productCondition": "NEW",
+      "reasons": [],
+      "fulfillmentTypeChanged": false,
+      "omniFulfillmentType": "IN_STORE"
+    },
+    {
+      "productId": "VLAKOTA0001055",
+      "variantGroupId": "LAKOTA",
+      "name": "LAKOTA HEELS BLACK LEATHER",
+      "price": 130,
+      "quantity": 1,
+      "productTax": {
+        "totalTax": 11.54,
+        "taxRates": [
+          {
+            "countryCode": "US",
+            "taxType": "CITY",
+            "taxRate": 0.045,
+            "taxClass": "PC040144",
+            "taxCode": "US-CITY---NY CITY TAX-0.045",
+            "taxAmount": 5.85,
+            "perUnitTaxAmount": 5.85,
+            "taxName": "NY CITY TAX",
+            "displayTaxName": "NY CITY TAX - 0.045%",
+            "printTaxName": "NY CITY TAX - 0.045%"
+          },
+          {
+            "countryCode": "US",
+            "taxType": "SPECIAL",
+            "taxRate": 0.00375,
+            "taxClass": "PC040144",
+            "taxCode": "US-SPECIAL---NY SPECIAL TAX359071-0.00375",
+            "taxAmount": 0.49,
+            "perUnitTaxAmount": 0.49,
+            "taxName": "NY SPECIAL TAX359071",
+            "displayTaxName": "NY SPECIAL TAX359071 - 0.00375%",
+            "printTaxName": "NY SPECIAL TAX359071 - 0.00375%"
+          },
+          {
+            "countryCode": "US",
+            "taxType": "STATE",
+            "taxRate": 0.04,
+            "taxClass": "PC040144",
+            "taxCode": "US-STATE---NY STATE TAX-0.04",
+            "taxAmount": 5.2,
+            "perUnitTaxAmount": 5.2,
+            "taxName": "NY STATE TAX",
+            "displayTaxName": "NY STATE TAX - 0.04%",
+            "printTaxName": "NY STATE TAX - 0.04%"
+          }
+        ]
+      },
+      "orderStatus": "COMPLETED",
+      "tax": 11.54,
+      "orderItemId": "2",
+      "productTaxCode": "PC040144",
+      "imageURL": "https://cdn.shopify.com/s/files/1/0037/3807/5202/files/DOLCEVITA-HEELS_LAKOTA_BLACKLEATHER-02.jpg?v=1687897830",
+      "subTotal": 130,
+      "total": 141.54,
+      "orderStatusText": "Completed",
+      "itemStatusText": "Completed",
+      "size": "5.5",
+      "color": "BLACK",
+      "itemStatus": "COMPLETED",
+      "isVirtual": false,
+      "additionalCharges": [],
+      "gtin": "197076109635",
+      "fulfillmentType": "IN_STORE",
+      "fulfillmentSubType": "DEFAULT",
+      "salesAssociateId": "cat01",
+      "salesAssociateAttribution": [
+        {
+          "orderItemId": "2",
+          "storeId": "254",
+          "storeAssociateId": "cat01",
+          "contributionPercentage": 100,
+          "orderId": "PS00000283",
+          "expiryDate": "2025-07-12T00:00:00Z"
+        }
+      ],
+      "returnsEligibility": "ELIGIBLE_FOR_RETURNS",
+      "productClass": "Merchandise",
+      "isReturnRelated": false,
+      "productCondition": "NEW",
+      "reasons": [],
+      "fulfillmentTypeChanged": false,
+      "omniFulfillmentType": "IN_STORE"
+    },
+    {
+      "productId": "VLAKOTA0001060",
+      "variantGroupId": "LAKOTA",
+      "name": "LAKOTA HEELS BLACK LEATHER",
+      "price": 130,
+      "quantity": 1,
+      "productTax": {
+        "totalTax": 11.54,
+        "taxRates": [
+          {
+            "countryCode": "US",
+            "taxType": "CITY",
+            "taxRate": 0.045,
+            "taxClass": "PC040144",
+            "taxCode": "US-CITY---NY CITY TAX-0.045",
+            "taxAmount": 5.85,
+            "perUnitTaxAmount": 5.85,
+            "taxName": "NY CITY TAX",
+            "displayTaxName": "NY CITY TAX - 0.045%",
+            "printTaxName": "NY CITY TAX - 0.045%"
+          },
+          {
+            "countryCode": "US",
+            "taxType": "SPECIAL",
+            "taxRate": 0.00375,
+            "taxClass": "PC040144",
+            "taxCode": "US-SPECIAL---NY SPECIAL TAX359071-0.00375",
+            "taxAmount": 0.49,
+            "perUnitTaxAmount": 0.49,
+            "taxName": "NY SPECIAL TAX359071",
+            "displayTaxName": "NY SPECIAL TAX359071 - 0.00375%",
+            "printTaxName": "NY SPECIAL TAX359071 - 0.00375%"
+          },
+          {
+            "countryCode": "US",
+            "taxType": "STATE",
+            "taxRate": 0.04,
+            "taxClass": "PC040144",
+            "taxCode": "US-STATE---NY STATE TAX-0.04",
+            "taxAmount": 5.2,
+            "perUnitTaxAmount": 5.2,
+            "taxName": "NY STATE TAX",
+            "displayTaxName": "NY STATE TAX - 0.04%",
+            "printTaxName": "NY STATE TAX - 0.04%"
+          }
+        ]
+      },
+      "orderStatus": "COMPLETED",
+      "tax": 11.54,
+      "orderItemId": "3",
+      "productTaxCode": "PC040144",
+      "imageURL": "https://cdn.shopify.com/s/files/1/0037/3807/5202/files/DOLCEVITA-HEELS_LAKOTA_BLACKLEATHER-02.jpg?v=1687897830",
+      "subTotal": 130,
+      "total": 141.54,
+      "orderStatusText": "Completed",
+      "itemStatusText": "Completed",
+      "size": "6.0",
+      "color": "BLACK",
+      "itemStatus": "COMPLETED",
+      "isVirtual": false,
+      "additionalCharges": [],
+      "gtin": "197076109642",
+      "fulfillmentType": "IN_STORE",
+      "fulfillmentSubType": "DEFAULT",
+      "salesAssociateId": "cat01",
+      "salesAssociateAttribution": [
+        {
+          "orderItemId": "3",
+          "storeId": "254",
+          "storeAssociateId": "cat01",
+          "contributionPercentage": 100,
+          "orderId": "PS00000283",
+          "expiryDate": "2025-07-12T00:00:00Z"
+        }
+      ],
+      "returnsEligibility": "ELIGIBLE_FOR_RETURNS",
+      "productClass": "Merchandise",
+      "isReturnRelated": false,
+      "productCondition": "NEW",
+      "reasons": [],
+      "fulfillmentTypeChanged": false,
+      "omniFulfillmentType": "IN_STORE"
+    }
+  ],
+  "returnProductList": [],
+  "orderStatusText": "Completed",
+  "discount": 0,
+  "storeId": "254",
+  "store": {
+    "storeId": "254",
+    "name": "DV SOHO STORE",
+    "addressLine1": "489 Broadway",
+    "city": "New York",
+    "state": "NY",
+    "postalCode": "10012",
+    "countryCode": "US",
+    "latitude": 40.722036,
+    "longitude": -73.99994989999999,
+    "storeType": "Regular",
+    "allowTryAtStore": false,
+    "productScanCodeType": "GTIN",
+    "timeZoneId": "UTC",
+    "customString0": ""
+  },
+  "storeAssociateId": "cat01",
+  "orderSource": "IN_STORE",
+  "paymentSource": "Cash",
+  "installationId": "af8cbe73-b523-4633-ab49-d493a5a9eaa4",
+  "lastDateToReturnTimeStamp": 1712853927000,
+  "taxRates": [
+    {
+      "taxType": "CITY",
+      "chargeType": "TAX",
+      "taxRate": 0.045,
+      "taxAmount": 17.55,
+      "taxName": "NY CITY TAX",
+      "displayTaxName": "NY CITY TAX - 0.045%",
+      "returnedTaxAmount": 0,
+      "remainingTaxAmount": 17.55,
+      "printTaxName": "NY CITY TAX - 0.045%"
+    },
+    {
+      "taxType": "SPECIAL",
+      "chargeType": "TAX",
+      "taxRate": 0.00375,
+      "taxAmount": 1.47,
+      "taxName": "NY SPECIAL TAX359071",
+      "displayTaxName": "NY SPECIAL TAX359071 - 0.00375%",
+      "returnedTaxAmount": 0,
+      "remainingTaxAmount": 1.47,
+      "printTaxName": "NY SPECIAL TAX359071 - 0.00375%"
+    },
+    {
+      "taxType": "STATE",
+      "chargeType": "TAX",
+      "taxRate": 0.04,
+      "taxAmount": 15.6,
+      "taxName": "NY STATE TAX",
+      "displayTaxName": "NY STATE TAX - 0.04%",
+      "returnedTaxAmount": 0,
+      "remainingTaxAmount": 15.6,
+      "printTaxName": "NY STATE TAX - 0.04%"
+    }
+  ],
+  "taxExemptions": [],
+  "phoneNumber": "+16154440004",
+  "orderDate": 1705077927000,
+  "coupons": [],
+  "merchantPromotionIds": [],
+  "customerProfile": {
+    "customerId": "daysky001@yahoo.com",
+    "email": "daysky001@yahoo.com",
+    "firstName": "Catalin",
+    "lastName": "Linlin",
+    "address": {
+      "addressLine1": "830 bay blvd",
+      "city": "chula vista",
+      "state": "CA",
+      "postalCode": "91911",
+      "preferred": false
+    },
+    "phoneMobile": "+16154440004"
+  },
+  "updateDate": 1705078110000,
+  "taxableAmount": 390,
+  "cashTotal": 424.62,
+  "cashPaymentTransactionId": "254-ANY-20240112184523-8-3",
+  "cashPaymentId": "845a07f1-002c-4303-9483-3deac40aef15",
+  "fulfillmentType": "IN_STORE",
+  "children": {},
+  "notesList": [],
+  "rewardAmount": 0,
+  "cartId": "PS00000283",
+  "paymentDetails": [
+    {
+      "merchantId": "DOLCEVITA947078",
+      "locale": "en_US",
+      "region": "US",
+      "orderId": "PS00000283",
+      "transactionId": "254-ANY-20240112184523-8-3",
+      "paymentId": "845a07f1-002c-4303-9483-3deac40aef15",
+      "paymentMethod": "Cash",
+      "paymentStatus": "APPROVED",
+      "paymentDevice": "NoReader",
+      "amountAuthorized": 424.62,
+      "captureDate": "2024-01-12T16:45:24Z",
+      "totalRefundedAmount": 0,
+      "totalAmountCarriedOverForExchange": 0,
+      "paymentSequenceNumber": 1,
+      "authStatus": "SALE",
+      "captureStatus": "CAPTURED",
+      "cardPresent": false,
+      "expiryDate": "2025-07-12T00:00:00Z",
+      "tenderedAmount": 424.62,
+      "changeBackAmount": 0
+    }
+  ],
+  "refundPaymentDetails": [],
+  "noReceiptReturns": false,
+  "twoPhaseCommitReferenceId": "PS00000283",
+  "orderAttribution": {
+    "storeRegisterId": "ANY",
+    "registerTransactionId": "8"
+  },
+  "partiallyPaid": false,
+  "orderActivityLog": [
+    {
+      "transactionId": "254-ANY-20240112184523-8-3",
+      "installationId": "af8cbe73-b523-4633-ab49-d493a5a9eaa4",
+      "storeId": "254",
+      "transactionDate": "2024-01-12T16:45:27Z",
+      "transactionType": "CREATE",
+      "appTransactionId": "8",
+      "transactionData": {
+        "transactionId": "254-ANY-20240112184523-8-3",
+        "transactionTimeStamp": 1705077926877,
+        "transactionType": "SALE",
+        "orderId": "PS00000283",
+        "summary": {
+          "saleSummary": {
+            "subTotal": 390,
+            "tax": 34.62,
+            "taxExemption": 0,
+            "total": 424.62,
+            "netSubTotal": 390
+          },
+          "refundSummary": {
+            "subTotal": 0,
+            "tax": 0,
+            "taxExemption": 0,
+            "valueAddedTax": 0,
+            "total": 0,
+            "netSubTotal": 0
+          },
+          "netSummary": {
+            "subTotal": 390,
+            "discount": 0,
+            "transactionDiscountAmount": 0,
+            "tax": 34.62,
+            "taxExemption": 0,
+            "valueAddedTax": 0,
+            "total": 424.62,
+            "amountToBeCharged": 424.62,
+            "netSubTotal": 390,
+            "inStoreTotal": 424.62
+          }
+        },
+        "storeAttribution": {
+          "transactionId": "8",
+          "storeAssociateId": "cat01",
+          "storeId": "254",
+          "eventId": "3",
+          "storeRegisterId": "ANY",
+          "eventTimeStamp": 1705077926227,
+          "storeAssociateRole": "STORE_MANAGER",
+          "secondsFromGMT": 7200,
+          "activePaymentReader": "Adyen",
+          "tillSessionId": "cd185a9a-3399-4f43-8d19-70021840a3b4",
+          "tillId": "89629"
+        },
+        "receiptPrintCount": 1,
+        "taxRates": [
+          {
+            "countryCode": "US",
+            "taxType": "STATE",
+            "chargeType": "TAX",
+            "taxRate": 0.04,
+            "taxClass": "PC040144",
+            "taxCode": "US-STATE---NY STATE TAX-0.04",
+            "taxAmount": 15.6,
+            "taxName": "NY STATE TAX",
+            "displayTaxName": "NY STATE TAX - 0.04%",
+            "printTaxName": "NY STATE TAX - 0.04%"
+          },
+          {
+            "countryCode": "US",
+            "taxType": "CITY",
+            "chargeType": "TAX",
+            "taxRate": 0.045,
+            "taxClass": "PC040144",
+            "taxCode": "US-CITY---NY CITY TAX-0.045",
+            "taxAmount": 17.55,
+            "taxName": "NY CITY TAX",
+            "displayTaxName": "NY CITY TAX - 0.045%",
+            "printTaxName": "NY CITY TAX - 0.045%"
+          },
+          {
+            "countryCode": "US",
+            "taxType": "SPECIAL",
+            "chargeType": "TAX",
+            "taxRate": 0.00375,
+            "taxClass": "PC040144",
+            "taxCode": "US-SPECIAL---NY SPECIAL TAX359071-0.00375",
+            "taxAmount": 1.47,
+            "taxName": "NY SPECIAL TAX359071",
+            "displayTaxName": "NY SPECIAL TAX359071 - 0.00375%",
+            "printTaxName": "NY SPECIAL TAX359071 - 0.00375%"
+          }
+        ],
+        "tenders": [
+          {
+            "merchantId": "DOLCEVITA947078",
+            "locale": "en_US",
+            "region": "US",
+            "orderId": "PS00000283",
+            "transactionId": "254-ANY-20240112184523-8-3",
+            "paymentId": "845a07f1-002c-4303-9483-3deac40aef15",
+            "paymentMethod": "Cash",
+            "paymentStatus": "APPROVED",
+            "paymentDevice": "NoReader",
+            "amountAuthorized": 424.62,
+            "captureDate": "2024-01-12T16:45:24.081Z",
+            "totalRefundedAmount": 0,
+            "paymentSequenceNumber": 1,
+            "authStatus": "SALE",
+            "captureStatus": "CAPTURED",
+            "cardPresent": false,
+            "expiryDate": "2025-07-12T00:00:00Z",
+            "tenderedAmount": 424.62,
+            "changeBackAmount": 0
+          }
+        ],
+        "productList": [
+          {
+            "productId": "VLAKOTA0001050",
+            "variantGroupId": "LAKOTA",
+            "name": "LAKOTA HEELS BLACK LEATHER",
+            "price": 130,
+            "quantity": 1,
+            "productTax": {
+              "totalTax": 11.54,
+              "taxRates": [
+                {
+                  "countryCode": "US",
+                  "taxType": "STATE",
+                  "taxRate": 0.04,
+                  "taxClass": "PC040144",
+                  "taxCode": "US-STATE---NY STATE TAX-0.04",
+                  "taxAmount": 5.2,
+                  "perUnitTaxAmount": 5.2,
+                  "taxName": "NY STATE TAX"
+                },
+                {
+                  "countryCode": "US",
+                  "taxType": "CITY",
+                  "taxRate": 0.045,
+                  "taxClass": "PC040144",
+                  "taxCode": "US-CITY---NY CITY TAX-0.045",
+                  "taxAmount": 5.85,
+                  "perUnitTaxAmount": 5.85,
+                  "taxName": "NY CITY TAX"
+                },
+                {
+                  "countryCode": "US",
+                  "taxType": "SPECIAL",
+                  "taxRate": 0.00375,
+                  "taxClass": "PC040144",
+                  "taxCode": "US-SPECIAL---NY SPECIAL TAX359071-0.00375",
+                  "taxAmount": 0.49,
+                  "perUnitTaxAmount": 0.49,
+                  "taxName": "NY SPECIAL TAX359071"
+                }
+              ],
+              "taxableAmount": 130
+            },
+            "tax": 11.54,
+            "orderItemId": "1",
+            "imageURL": "https://cdn.shopify.com/s/files/1/0037/3807/5202/files/DOLCEVITA-HEELS_LAKOTA_BLACKLEATHER-02.jpg?v=1687897830",
+            "subTotal": 130,
+            "total": 141.54,
+            "size": "5.0",
+            "color": "BLACK",
+            "isVirtual": false,
+            "gtin": "197076109628",
+            "fulfillmentType": "IN_STORE",
+            "fulfillmentSubType": "DEFAULT",
+            "salesAssociateId": "cat01",
+            "salesAssociateAttribution": [
+              {
+                "storeAssociateId": "cat01"
+              }
+            ],
+            "productClass": "Merchandise",
+            "isReturnRelated": false,
+            "productCondition": "NEW",
+            "fulfillmentTypeChanged": false,
+            "omniFulfillmentType": "IN_STORE"
+          },
+          {
+            "productId": "VLAKOTA0001055",
+            "variantGroupId": "LAKOTA",
+            "name": "LAKOTA HEELS BLACK LEATHER",
+            "price": 130,
+            "quantity": 1,
+            "productTax": {
+              "totalTax": 11.54,
+              "taxRates": [
+                {
+                  "countryCode": "US",
+                  "taxType": "STATE",
+                  "taxRate": 0.04,
+                  "taxClass": "PC040144",
+                  "taxCode": "US-STATE---NY STATE TAX-0.04",
+                  "taxAmount": 5.2,
+                  "perUnitTaxAmount": 5.2,
+                  "taxName": "NY STATE TAX"
+                },
+                {
+                  "countryCode": "US",
+                  "taxType": "CITY",
+                  "taxRate": 0.045,
+                  "taxClass": "PC040144",
+                  "taxCode": "US-CITY---NY CITY TAX-0.045",
+                  "taxAmount": 5.85,
+                  "perUnitTaxAmount": 5.85,
+                  "taxName": "NY CITY TAX"
+                },
+                {
+                  "countryCode": "US",
+                  "taxType": "SPECIAL",
+                  "taxRate": 0.00375,
+                  "taxClass": "PC040144",
+                  "taxCode": "US-SPECIAL---NY SPECIAL TAX359071-0.00375",
+                  "taxAmount": 0.49,
+                  "perUnitTaxAmount": 0.49,
+                  "taxName": "NY SPECIAL TAX359071"
+                }
+              ],
+              "taxableAmount": 130
+            },
+            "tax": 11.54,
+            "orderItemId": "2",
+            "imageURL": "https://cdn.shopify.com/s/files/1/0037/3807/5202/files/DOLCEVITA-HEELS_LAKOTA_BLACKLEATHER-02.jpg?v=1687897830",
+            "subTotal": 130,
+            "total": 141.54,
+            "size": "5.5",
+            "color": "BLACK",
+            "isVirtual": false,
+            "gtin": "197076109635",
+            "fulfillmentType": "IN_STORE",
+            "fulfillmentSubType": "DEFAULT",
+            "salesAssociateId": "cat01",
+            "salesAssociateAttribution": [
+              {
+                "storeAssociateId": "cat01"
+              }
+            ],
+            "productClass": "Merchandise",
+            "isReturnRelated": false,
+            "productCondition": "NEW",
+            "fulfillmentTypeChanged": false,
+            "omniFulfillmentType": "IN_STORE"
+          },
+          {
+            "productId": "VLAKOTA0001060",
+            "variantGroupId": "LAKOTA",
+            "name": "LAKOTA HEELS BLACK LEATHER",
+            "price": 130,
+            "quantity": 1,
+            "productTax": {
+              "totalTax": 11.54,
+              "taxRates": [
+                {
+                  "countryCode": "US",
+                  "taxType": "STATE",
+                  "taxRate": 0.04,
+                  "taxClass": "PC040144",
+                  "taxCode": "US-STATE---NY STATE TAX-0.04",
+                  "taxAmount": 5.2,
+                  "perUnitTaxAmount": 5.2,
+                  "taxName": "NY STATE TAX"
+                },
+                {
+                  "countryCode": "US",
+                  "taxType": "CITY",
+                  "taxRate": 0.045,
+                  "taxClass": "PC040144",
+                  "taxCode": "US-CITY---NY CITY TAX-0.045",
+                  "taxAmount": 5.85,
+                  "perUnitTaxAmount": 5.85,
+                  "taxName": "NY CITY TAX"
+                },
+                {
+                  "countryCode": "US",
+                  "taxType": "SPECIAL",
+                  "taxRate": 0.00375,
+                  "taxClass": "PC040144",
+                  "taxCode": "US-SPECIAL---NY SPECIAL TAX359071-0.00375",
+                  "taxAmount": 0.49,
+                  "perUnitTaxAmount": 0.49,
+                  "taxName": "NY SPECIAL TAX359071"
+                }
+              ],
+              "taxableAmount": 130
+            },
+            "tax": 11.54,
+            "orderItemId": "3",
+            "imageURL": "https://cdn.shopify.com/s/files/1/0037/3807/5202/files/DOLCEVITA-HEELS_LAKOTA_BLACKLEATHER-02.jpg?v=1687897830",
+            "subTotal": 130,
+            "total": 141.54,
+            "size": "6.0",
+            "color": "BLACK",
+            "isVirtual": false,
+            "gtin": "197076109642",
+            "fulfillmentType": "IN_STORE",
+            "fulfillmentSubType": "DEFAULT",
+            "salesAssociateId": "cat01",
+            "salesAssociateAttribution": [
+              {
+                "storeAssociateId": "cat01"
+              }
+            ],
+            "productClass": "Merchandise",
+            "isReturnRelated": false,
+            "productCondition": "NEW",
+            "fulfillmentTypeChanged": false,
+            "omniFulfillmentType": "IN_STORE"
+          }
+        ],
+        "numberOfLineItems": 3,
+        "receiptId": "254-ANY-2024-00000014",
+        "store": {
+          "storeId": "254",
+          "name": "DV SOHO STORE",
+          "addressLine1": "489 Broadway",
+          "city": "New York",
+          "state": "NY",
+          "postalCode": "10012",
+          "countryCode": "US",
+          "latitude": 40.722036,
+          "longitude": -73.99994989999999,
+          "storeType": "Regular",
+          "allowTryAtStore": false,
+          "productScanCodeType": "GTIN",
+          "timeZoneId": "UTC",
+          "customString0": ""
+        },
+        "profile": {
+          "customerId": "daysky001@yahoo.com",
+          "email": "daysky001@yahoo.com",
+          "firstName": "Catalin",
+          "lastName": "Linlin",
+          "address": {
+            "addressLine1": "830 bay blvd",
+            "city": "chula vista",
+            "state": "CA",
+            "postalCode": "91911",
+            "preferred": false
+          },
+          "phoneMobile": "+16154440004"
+        },
+        "productPriceAdjustments": [],
+        "customerEmail": "daysky001@yahoo.com",
+        "offlineMode": false,
+        "storeAssociate": {
+          "storeAssociateID": "cat01",
+          "storeAssociatePasswordFlag": false,
+          "merchantPasswordFlag": false,
+          "storeAssociateSecretFlag": false,
+          "incorrectLoginCount": 0,
+          "firstLoginPasswordReset": false
+        },
+        "noReceiptReturns": false
+      },
+      "s3KeyTransactionData": "STAGING/DOLCEVITA947078/en_US/US/2024/1/PS00000283_254-ANY-20240112184523-8-3.txt",
+      "transactionStartDate": "2024-01-12T16:44:28Z",
+      "receiptPrintCount": 0,
+      "orderId": "PS00000283",
+      "expiryDate": "2025-07-12T00:00:00Z"
+    }
+  ],
+  "editOrderMode": false,
+  "availableDate": 0,
+  "totalAssembledQty": 0,
+  "totalBoxedQty": 0,
+  "orderFiscalData": [],
+  "offlineMode": false,
+  "productPriceAdjustments": []
+}
