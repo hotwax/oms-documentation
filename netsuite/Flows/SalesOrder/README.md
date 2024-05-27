@@ -8,7 +8,6 @@ In the dynamic world of eCommerce, the efficient fulfillment of online sales ord
 
 Upon arrival in HotWax Commerce, orders are initially flagged as "created," awaiting further processing. The pivotal step follows as these orders are pushed into Netsuite ERP for creation, ensuring that all essential order information, including order IDs, is accurately transmitted. This synchronization process typically takes no longer than 30 minutes per order, ensuring a swift transition into Netsuite.
 
-
 After creation in Netsuite, the system communicates back to HotWax Commerce, confirming the successful integration and prompting a transition of the order to an "approved" state within HC. At this juncture, the order is deemed ready for allocation, where it is assigned to a specific location within the inventory network, facilitating the subsequent fulfillment process.
 
 While the synchronization process is efficient, it is also scalable to accommodate varying order volumes. HotWax Commerce can handle up to 600 orders per 15-minute interval, and by strategically batching orders, this capacity can be further augmented to approximately 1200 orders within a 30-minute timeframe. Despite potential fluctuations in processing times during peak periods, typically taking around 45 minutes to 1 hour 20 minutes, the integration mechanism ensures that orders are seamlessly synchronized between Shopify and Netsuite ERP.
@@ -21,7 +20,7 @@ Here is the **NetSuite Order Lifecycle Business Process Model** that provides st
 
 ## NetSuite Order Lifecycle BPM
 
-<figure><img src="../../.gitbook/assets/NetSuite order lifecycle bpm (1).png" alt=""><figcaption><p>NetSuite order lifecycle business process model</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/NetSuite order lifecycle bpm (2).png" alt=""><figcaption><p>NetSuite order lifecycle business process model</p></figcaption></figure>
 
 Most of our customers use Shopify as their eCommerce platform along with NetSuite as their ERP and warehouse fulfillment solution. Therefore, to explain the NetSuite Order Lifecycle BPM, we have taken Shopify as the eCommerce platform, NetSuite as the ERP and warehouse fulfillment solution, with HotWax Commerce as the Order Management System.
 
