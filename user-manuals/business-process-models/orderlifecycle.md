@@ -7,6 +7,8 @@ description: >-
 
 # Order lifecycle
 
+Customers place their online orders on eCommerce platforms. The order lifecycle in HotWax Commerce starts when these orders are downloaded from eCommerce to HotWax Commerce.
+
 <figure><img src="../.gitbook/assets/order life cycle bpm - new.png" alt=""><figcaption><p>Order lifecycle business process model</p></figcaption></figure>
 
 ## Order creation
