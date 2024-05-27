@@ -2,13 +2,12 @@
 description: >-
   The Order Lifecycle BPM illustrates how HotWax Commerce orchestrates the
   journey of an order from creation to approval, routing, and fulfillment,
-  ensuring accuracy at every stage. The order lifecycle in HotWax Commerce begins once an order is downloaded from an eCommerce platform into HotWax Commerce. Customers place their orders on various eCommerce platforms, and these orders are subsequently downloaded into HotWax Commerce. The lifecycle process starts at the moment the order download is completed.
- 
+  ensuring accuracy at every stage. The order lifecycle
 ---
 
 # Order lifecycle
 
-<figure><img src="../.gitbook/assets/order lifecycle bpm.png" alt=""><figcaption><p>Order lifecycle business process model</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/order%20lifecycle%20bpm.png" alt=""><figcaption><p>Order lifecycle business process model</p></figcaption></figure>
 
 ## Order creation
 
