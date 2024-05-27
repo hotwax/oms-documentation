@@ -13,3 +13,7 @@ Steps to change Product Store:
 1. Navigate to the Product Store detail page
 2. Click the edit icon next to the Store name
 3. Select Shopify Product SKU for the `Product Identifier` setting
+
+[HotWax Shopify Product Sync](https://docs.hotwax.co/integration-resources/products/how-are-products-downloaded-from-shopify-to-hotwax-commerce)
+
+[HotWax Netsuite Product Sync](https://docs.hotwax.co/deployment-and-configurations/v/netsuite/flows/products-and-inventory/importproductid)
