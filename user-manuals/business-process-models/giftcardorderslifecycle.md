@@ -130,7 +130,7 @@ This marks the completion of the physical gift card order lifecycle.
 
 ## Digital gift cards
 
-<figure><img src="../.gitbook/assets/digital gift cards (2).png" alt=""><figcaption><p>Digital gift card orders lifecycle business process model</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/digital gift cards.png" alt=""><figcaption><p>Digital gift card orders lifecycle business process model</p></figcaption></figure>
 
 ### 1. Order creation
 
