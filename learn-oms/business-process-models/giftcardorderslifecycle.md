@@ -59,9 +59,9 @@ Approved physical gift card order items are brokered in HotWax Commerce, upon al
 
 ### 4. Order Brokering in HotWax Commerce
 
-Now that physical gift card orders have been approved, they are automatically sent to the `Brokering Queue` which serves as a waiting area for orders awaiting processing. Just like regular orders in the brokering queue are analyzed and picked in the brokering run, for gift card order items also the brokering run, the order routing engine looks for the best fulfillment location to fulfill them from.
+Now that physical gift card orders have been approved, they are automatically sent to the `Brokering Queue` which serves as a waiting area for orders awaiting processing. Just like regular order items in this queue, gift card items are also analyzed and picked in the brokering run and subsequently the order routing engine allocates them to optimal fulfillment location.
 
-In the event where a gift card order is routed to a warehouse fulfillment location, HotWax Commerce synchronizes allocation details to NetSuite.
+In the event where a gift card order is allocated to a warehouse fulfillment location, HotWax Commerce synchronizes allocation details to NetSuite.
 
 When a gift card is allocated to stores for fulfillment, they automatically show up in the HotWax Commerce `Store Fulfillment App`.
 
