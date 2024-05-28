@@ -14,5 +14,5 @@
 ### Troubleshooting
   * [Bulletins](napita/bulletins.md)
   * [Data Provenance](napita/data-provenance.md)
-  * [Empty Queues](troubleshooting-queue-files.md)
+  * [Empty Queues](napita/troubleshooting-queue-files.md)
 
