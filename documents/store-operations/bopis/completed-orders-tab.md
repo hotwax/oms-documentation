@@ -10,4 +10,4 @@ Completed BOPIS orders can be accessed from the `Completed` tab available on Ord
 
 Order attributes such as customer details, order ID, order items, stock information of items, order timeline, and handling instructions are also visible on the order card on this page.
 
-<figure><img src="../../.gitbook/assets/Screenshot 2024-01-01 at 11.55.10 PM.png" alt=""><figcaption><p>Image: Completed Orders Tab</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot 2024-01-01 at 11.55.10 PM.png" alt=""><figcaption><p>Image: Completed Orders Tab</p></figcaption></figure>
