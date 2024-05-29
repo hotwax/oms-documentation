@@ -14,8 +14,8 @@
 
 ## Troubleshooting
 
-* [Facility Mapping](troubleshooting/facility-mapping.md)
-* [Indexing Troubleshooting](troubleshooting/indexing-issue.md)
+* [Facility Mapping](sop/facility-mapping.md)
+* [Indexing Troubleshooting](sop/indexing-issue.md)
 
 ## SOP Documents
 
