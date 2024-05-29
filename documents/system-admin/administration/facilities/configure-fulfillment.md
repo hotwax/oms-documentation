@@ -11,7 +11,7 @@ Users can configure the following settings for the facility:
 *  **Generate Shipping Labels:** HotWax Commerce allows users to integrate with carrier partners so that at the time of fulfillment via HotWax Commerce’s Fulfillment app, shipping labels can be automatically generated for the shipment process. Retailers who opt not to integrate HotWax Commerce with their carrier partners and prefer to manually enter tracking IDs in HotWax Commerce to update on Shopify can toggle off the `Generate Shipping Labels` settings. If the generated shipping label is not toggled on for that facility then the user may face a shipping label error when generating shipping labels on the `Fulfillment` App.
 *   **Days to Ship:** `Days to ship` are the minimum number of days the facility will take to ship the order post brokering. Enter the number of days to ship and click on the `Update Days To Ship` button to save the configuration for the facility. This ensures that if the facility takes more days to ship than the SLA, the orders won't be brokered to that facility.
 
-<figure><img src="../.gitbook/assets/Fulfillment Settings.png" alt=""><figcaption><p>Image: Configure Online Fulfillment</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Fulfillment Settings.png" alt=""><figcaption><p>Image: Configure Online Fulfillment</p></figcaption></figure>
 
 ## Configure Inventory Computation
 

@@ -23,7 +23,7 @@ The "Block User Login" function allows administrators to control user access to 
 
 
 
-<figure><img src="../.gitbook/assets/block1 .png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/block1 .png" alt="" width="375"><figcaption></figcaption></figure>
 
 ## Reset Password
 
@@ -31,19 +31,19 @@ The "Reset Password" function enables administrators to initiate a password rese
 
 
 
-<figure><img src="../.gitbook/assets/resetpass.png" alt="" width="375"><figcaption><p>Image: Reset Password</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/resetpass.png" alt="" width="375"><figcaption><p>Image: Reset Password</p></figcaption></figure>
 
 ## Update Contact Details
 
 The "Update Contact Details" function enables administrators to modify a user's contact information, including email, phone number, or external ID. The on file email of a customer is important for ensuring that reset password emails are sent to the correct address. The external ID of a user is helpful for tracking their commissions during order fulfillment.
 
-<figure><img src="../.gitbook/assets/contact details 2 .png" alt="" width="375"><figcaption><p>Image: Update Contact Details </p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/contact details 2 .png" alt="" width="375"><figcaption><p>Image: Update Contact Details </p></figcaption></figure>
 
 ## Update User’s Role and Permissions
 
 The "Update User’s Role and Permissions" function empowers administrators to modify a user's role or security group within the OMS. This function allows for the adjustment of access levels and permissions, ensuring that users have the appropriate privileges based on their evolving responsibilities within the organization.
 
-<figure><img src="../.gitbook/assets/permission786.png" alt=""><figcaption><p>Image: Update user role and permission</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/permission786.png" alt=""><figcaption><p>Image: Update user role and permission</p></figcaption></figure>
 
 ## Create a Picker Role
 
@@ -51,7 +51,7 @@ The "Show as Picker" function allows picklists to be assigned to a user. This ro
 
 
 
-<figure><img src="../.gitbook/assets/Picker Fill.png" alt="" width="375"><figcaption><p>Image: Show as a Picker. </p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Picker Fill.png" alt="" width="375"><figcaption><p>Image: Show as a Picker. </p></figcaption></figure>
 
 
 
@@ -61,7 +61,7 @@ The "Add Facilities" function allows administrators to associate a user with mul
 
 
 
-<figure><img src="../.gitbook/assets/Frame 2 (1).png" alt="" width="563"><figcaption><p>Image: Add Facilities</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Frame 2 (1).png" alt="" width="563"><figcaption><p>Image: Add Facilities</p></figcaption></figure>
 
 ## Add Favorites
 
@@ -71,4 +71,4 @@ This feature is particularly valuable when users need to schedule specific jobs 
 
 
 
-<figure><img src="../.gitbook/assets/favourites (1).png" alt="" width="375"><figcaption><p>Image: Favourites</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/favourites (1).png" alt="" width="375"><figcaption><p>Image: Favourites</p></figcaption></figure>

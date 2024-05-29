@@ -16,7 +16,7 @@
   * [Manage Product Store](administration/company/manage-product-store.md)
   * [Manage Shopify connection](administration/company/manage-shopify-shop.md)
 * [Users](administration/users/README.md)
-  * [Create Users](administration/users/createuser.md)
+  * [Create Users](administration/users/createUser.md)
   * [Manage Users](administration/users/manageUser.md)
   * [Create Pickers](fulfillment/add-picker.md)
 * [Facilities](facilities/README.md)
@@ -39,7 +39,7 @@
 * [Configure Product Store](product-store/README.md)
 * [Add More Product Stores](product-store/add-more-product-stores.md)
 
-# Fulfillment
+## Fulfillment
 
 * [Shipping methods](fulfillment/shipping-methods/README.md)
   * [Create Carrier](fulfillment/shipping-methods/add-carrier.md)
@@ -55,15 +55,15 @@
 * [Integrations](shopify-integration/ShopifyIntegration/integration-mapping.md)
   * [Locations](shopify-integration/ShopifyIntegration/MapLocations.md)
   * [Shipping Method](shopify-integration/ShopifyIntegration/shipping-method.md)
-  * [Sales channel](shopify-integration/flows/integration-mapping/sales-channel.md)
+  * [Sales channel](shopify-integration/flows/integration-mapping/sales-channel-mapping.md)
   * [Payment Method](shopify-integration/ShopifyIntegration/payment-method-type.md)
   * [Product Type](shopify-integration/ShopifyIntegration/product-type.md)
 
 ## Synchronization Flows
 
-* [Initial Product Sync](shopify-integration/SyncShopify/README.md)
-* [Initial Order Sync](shopify-integration/SyncShopify/importOrders.md)
-* [Initial Inventory Sync](shopify-integration/SyncShopify/upload-inventory.md)
+* [Initial Product Sync](shopify-integration/sync-shopify/README.md)
+* [Initial Order Sync](shopify-integration/sync-shopify/importOrders.md)
+* [Initial Inventory Sync](shopify-integration/sync-shopify/upload-inventory.md)
 
 ## RetailPro Integration
 

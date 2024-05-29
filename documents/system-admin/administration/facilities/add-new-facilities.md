@@ -17,7 +17,7 @@ Video: Add Facility
 
 
 
-<figure><img src="../.gitbook/assets/facilities.hotwax.io_create-facility_type=PHYSICAL_STORE.png" alt=""><figcaption><p>Image: Create Facility</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/facilities.hotwax.io_create-facility_type=PHYSICAL_STORE.png" alt=""><figcaption><p>Image: Create Facility</p></figcaption></figure>
 
 4. On the next page, the user will get the option to add the facility address along with the exact geolocation of the facility. This geolocation helps in two ways:
 
@@ -31,7 +31,7 @@ Admin user can manually add the facility-associated latitude and longitude, or u
 
 5. In the next step, users will get a configurations page from which users can specify the facility-specific configurations. Such as:
 
-<figure><img src="../.gitbook/assets/facilities.hotwax.io_add-facility-config_WEST_STREET.png" alt=""><figcaption><p>Image: Setup Facility</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/facilities.hotwax.io_add-facility-config_WEST_STREET.png" alt=""><figcaption><p>Image: Setup Facility</p></figcaption></figure>
 
 * **Product Store:** User can specify the facilities available for fulfilling products of a certain brand.
 * **Sell Inventory Online:** User can configure whether the facility’s inventory should be available to sell on an e-commerce platform.

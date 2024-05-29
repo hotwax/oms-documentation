@@ -23,4 +23,4 @@ Stock information, order timeline, and handling instructions are also visible on
 After clicking the \`Handover\` button, the orders are marked completed and moved to \`Completed\` tab.
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/Screenshot 2024-01-01 at 11.54.09 PM.png" alt=""><figcaption><p>Image; Packed Order Tab</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot 2024-01-01 at 11.54.09 PM.png" alt=""><figcaption><p>Image; Packed Order Tab</p></figcaption></figure>

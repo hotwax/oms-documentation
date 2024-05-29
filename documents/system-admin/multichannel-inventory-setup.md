@@ -48,7 +48,7 @@ With the `Facilities App` in HotWax Commerce, retail brands can create distinct 
 * Schedule both jobs by specifying the Facility's internal ID in the `facilityGroupId` parameter.
 * This ensures that the inventory for the chosen channel is updated according to the `facilities` added to the corresponding `facility group`.
 
-<figure><img src="../.gitbook/assets/job-manager.hotwax.io_inventory.png" alt="" width="375"><figcaption><p>Sync Inventory</p></figcaption></figure>
+<figure><img src=".gitbook/assets/job-manager.hotwax.io_inventory.png" alt="" width="375"><figcaption><p>Sync Inventory</p></figcaption></figure>
 
 By following these steps, users can efficiently set up multi-channel inventory management within HotWax Commerce, enabling seamless synchronization of inventory across various online sales channels.
 

@@ -50,10 +50,10 @@
 
 ## Inventory
 
-* [Inventory Management](inventory/inventory-management/README.md)
-  * [Find Product Inventory](inventory/inventory-management/find-product-inventory.md)
-  * [Product Inventory View Page](inventory/inventory-management/product-inventory-view.md)
-  * [Inventory Configurations](inventory/inventory-management/inventory-configurations.md)
+* [Inventory Management](inventory-management/README.md)
+  * [Find Product Inventory](inventory-management/find-product-inventory.md)
+  * [Product Inventory View Page](inventory-management/product-inventory-view.md)
+  * [Inventory Configurations](inventory-management/inventory-configurations.md)
 * [Inventory upload](import-app/inventory.md)
 * [Safety stock](inventory/safety-stock/README.md)
   * [Set Bulk Safety Stock](inventory/safety-stock/set-bulk-safety-stock.md)
