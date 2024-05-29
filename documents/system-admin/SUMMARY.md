@@ -39,7 +39,7 @@
 * [Configure Product Store](product-store/README.md)
 * [Add More Product Stores](product-store/add-more-product-stores.md)
 
-# Fulfillment
+## Fulfillment
 
 * [Shipping methods](fulfillment/shipping-methods/README.md)
   * [Create Carrier](fulfillment/shipping-methods/add-carrier.md)
