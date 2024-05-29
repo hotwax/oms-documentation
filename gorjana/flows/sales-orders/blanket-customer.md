@@ -5,11 +5,11 @@ description: >-
   NetSuite.
 ---
 
-# Blanket Customer
+# Blanket Customers
 
-## Blanket Customer
+## Blanket Customers
 
-When creating POS Cash Order in store, high traffic can lead to customers not being registered against the sale. Though most of the time the staff will log the customer details right after entering the order, it's possible that the customer is not added at all. In this case the order is mapped to a blanket customer in HotWax. When posting this order to NetSuite, gorjana has a many blanket customer's that orders without customers should be mapped to.
+When creating POS Cash Order in store, high traffic can lead to customers not being registered against the sale. Though most of the time the staff will log the customer details right after entering the order, it's possible that the customer is not added at all. In this case the order is mapped to a blanket customer in HotWax. When posting this order to NetSuite, gorjana has many blanket customers which maps with orders without customer information based on the POS location they are placed from.
 
 ### How gorjana Manages the Blanket Customers?
 
@@ -21,11 +21,11 @@ While syncing the POS sale orders with blanket customers from HotWax to NetSuite
 
 For orders lacking specific customer details, they are associated with the `_NA_` party_ID in HotWax. However, to ensure these orders can be synced with NetSuite, the corresponding customer must have a `NETSUITE_CUSTOMER_ID` in NetSuite.
 
-The `_NA_` party_ID doesn't have a `NETSUITE_CUSTOMER_ID`, making such orders ineligible for synchronization. To address this, it's crucial to create a party identification `_NA_` ID with the type `NETSUITE_CUSTOMER_ID` and assign it a dummy value. This ensures that orders with an `_NA_` party_ID are eligible for POS order feed synchronization.
+The `_NA_` party doesn't have a Netsuite customer id, making such orders ineligible for synchronization. To address this, it's crucial to create a party identification for `_NA_` party with the type `NETSUITE_CUSTOMER_ID` and assign it a dummy value. This ensures that orders with an `_NA_` party_ID are eligible for POS order feed synchronization.
 
 To accurately populate the Customer field, the correct store-specific `NETSUITE_CUSTOMER_ID` must be retrieved. This mapping between facilities and their respective values is managed using Facility Identification.
 
-In Facility Identification, each facility's `NETSUITE_CUSTOMER_ID` is stored using the Facility Identification Type: `FAC_BLKT_CUST`.
+In Facility Identification, each facility's Netsuite customer id is stored using the Facility Identification Type: `FAC_BLKT_CUST`.
 
 During the POS orders feed process, if an order's party_Id is `_NA_`, the system fetches the appropriate from the Facility Identification of the store where the order was fulfilled. This ensures the correct customer information is included in the synchronization feed to NetSuite.
 
