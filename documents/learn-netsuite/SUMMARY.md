@@ -1,6 +1,6 @@
 # Table of contents
 
-* [README](netsuite-integration/README.md)
+* [Introduction](netsuite-integration/README.md)
 
 ## Integration Tools
 
