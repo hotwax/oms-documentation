@@ -107,7 +107,7 @@ Once the order items have been picked, they can be quickly packed as HotWax Comm
 - In the event the packaging team discovers a mispacked order, the app offers an option to unpack it and then begin repacking.
 - Store associates have the flexibility to search for and prioritize specific orders for packing.
 
-Learn more about [packing](https://docs.hotwax.co/documents/orders/fulfillment/shiporders)
+Learn more about [packing](store-operations/fulfillment/shipOrders.md/#pack-orders)
 
 ## Order cancellations when item is being prepared for shipping
 
