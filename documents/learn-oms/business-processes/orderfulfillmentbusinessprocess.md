@@ -1,8 +1,10 @@
-# Order Fulfillment
+# Order fulfillment
 
 ## About order fulfillment
 
 Order fulfillment stands as a critical component for retailers, the process orchestrates the journey from order allocation to making it ready for shipping, ensuring the timely delivery of order items to the customers' doorstep.
+
+<figure><img src="../.gitbook/assets/Order fulfillment BP.png" alt=""><figcaption><p>Order fulfillment business process</p></figcaption></figure>
 
 ## How order fulfillment works
 
@@ -48,9 +50,9 @@ HotWax Commerce provides two options using which pickers can start the picking p
 
 **HotWax Commerce recommends using the Picking mobile app for efficient order fulfillment because it allows pickers to:**
 
-- Sort order items in the picklist based on preferred criteria, including Product Name, Bin ID, or Location Sequence ID.
-- Scan barcodes for accurate item verification.
-- View enlarged product images for easier identification.
+* Sort order items in the picklist based on preferred criteria, including Product Name, Bin ID, or Location Sequence ID.
+* Scan barcodes for accurate item verification.
+* View enlarged product images for easier identification.
 
 These features maximize picker efficiency and minimize errors during the picking process.
 
@@ -84,12 +86,12 @@ They can also configure whether any rejection, predefined or new, should impact 
 
 Let’s see how the out of the box rejection reasons offered by HotWax Commerce impact inventory:
 
-| Rejection Reason | ATP Inventory Change | QOH Inventory Change | Selling Impact |
-|------------------|----------------------|----------------------|----------------|
-| NOT IN STOCK     | Set to 0             | Set to 0             | Prevents new orders until product is back in stock |
-| MISMATCH         | Decrease by rejected quantity | Decrease by rejected quantity | Product still available but not in specific size or color |
-| DAMAGE           | Decrease by rejected quantity | Unchanged            | Product remains in stock but cannot be sold due to damage |
-| WORN DISPLAY     | Decrease by rejected quantity | Unchanged            | Product remains in stock but cannot be sold due to being worn |
+| Rejection Reason | ATP Inventory Change          | QOH Inventory Change          | Selling Impact                                                |
+| ---------------- | ----------------------------- | ----------------------------- | ------------------------------------------------------------- |
+| NOT IN STOCK     | Set to 0                      | Set to 0                      | Prevents new orders until product is back in stock            |
+| MISMATCH         | Decrease by rejected quantity | Decrease by rejected quantity | Product still available but not in specific size or color     |
+| DAMAGE           | Decrease by rejected quantity | Unchanged                     | Product remains in stock but cannot be sold due to damage     |
+| WORN DISPLAY     | Decrease by rejected quantity | Unchanged                     | Product remains in stock but cannot be sold due to being worn |
 
 Learn more about [rejections](https://docs.hotwax.co/documents/orders/fulfillment/rejection)
 
@@ -103,9 +105,9 @@ Once the order items have been picked, they can be quickly packed as HotWax Comm
 
 ### How HotWax Commerce further streamlines packing process:
 
-- Store associates can add additional boxes or select the most suitable size for order items, directly from the app.
-- In the event the packaging team discovers a mispacked order, the app offers an option to unpack it and then begin repacking.
-- Store associates have the flexibility to search for and prioritize specific orders for packing.
+* Store associates can add additional boxes or select the most suitable size for order items, directly from the app.
+* In the event the packaging team discovers a mispacked order, the app offers an option to unpack it and then begin repacking.
+* Store associates have the flexibility to search for and prioritize specific orders for packing.
 
 Learn more about [packing](https://docs.hotwax.co/documents/orders/fulfillment/shiporders#pack-orders)
 
@@ -115,7 +117,7 @@ Customers often request CSRs to cancel their orders. If the order hasn't been sh
 
 ## Ship order items
 
-After the order items are packed, the carrier collects them from the store.  This marks completion of the fulfillment process in HotWax Commerce.
+After the order items are packed, the carrier collects them from the store. This marks completion of the fulfillment process in HotWax Commerce.
 
 Once an order has been Completed in HotWax Commerce, this data is also synced with the eCommerce platform along with the tracking number. This ensures customers stay informed about their order progress.
 
