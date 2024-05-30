@@ -2,6 +2,10 @@
 
 * [Introduction](README.md)
 
+## Business Processes
+
+* [Order fulfillment](business processes/orderfulfillmentbusinessprocess.md)
+
 ## Business Process Models
 
 * [Introduction](business-process-models/README.md)
