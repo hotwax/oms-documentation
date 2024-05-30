@@ -4,7 +4,7 @@
 
 ## Business Processes
 
-* [Order fulfillment](business processes/orderfulfillmentbusinessprocess.md)
+* [Order fulfillment](business-processes/orderfulfillmentbusinessprocess.md)
 
 ## Business Process Models
 
