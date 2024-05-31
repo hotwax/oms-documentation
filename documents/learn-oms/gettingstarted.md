@@ -12,7 +12,7 @@ Order and inventory management are at the heart of omnichannel retailing. Let’
 
 #### Source of orders and returns
 
-<figure><img src=".gitbook/assets/Returns.png" alt=""><figcaption><p>Downloading orders and returns</p></figcaption></figure>
+<figure><img src=".gitbook/assets/Orders and Returns.png" alt=""><figcaption><p>Downloading orders and returns</p></figcaption></figure>
 
 HotWax Commerce downloads orders and returns from sales channels like eCommerce and POS.
 
@@ -31,7 +31,7 @@ HotWax Commerce handles various types of eCommerce orders, including standard or
 * **Pre-Orders:** Orders placed for new launch products that are not yet available for delivery and will be available on a future promised date.
 * **Backorders:** Orders placed for products that are currently out-of-stock, with delivery scheduled for a future promised date. HotWax Commerce `Integration App` adds a custom tag on order line items to specify that it is a Pre-Order or a Backorder. HotWax Commerce then checks the custom tag on orders. If the tag is present on an order, a dedicated parking holds all pre-orders/backorders until their physical inventory is received, and HotWax Commerce automatically releases and brokers them once the inventory arrives just like standard orders. For Pre-Orders and Backorders, HotWax Commerce also provides a dedicated Pre-Order Management App to help merchandisers manually release them for fulfillment based on their order fulfillment strategies. Learn more about [order lifecycle in HotWax Commerce](https://docs.hotwax.co/documents/v/learn-hotwax-oms/business-process-models/orderlifecycle)
 
-HotWax  also syncs eCommerce orders data to ERP systems, ensuring accurate accounting and posting.
+HotWax also syncs eCommerce orders data to ERP systems, ensuring accurate accounting and posting.
 
 {% hint style="success" %}
 Once orders are fulfilled, HotWax Commerce synchronizes fulfillment updates with the eCommerce platform.
