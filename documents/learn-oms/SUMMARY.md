@@ -2,6 +2,8 @@
 
 * [Introduction](README.md)
 
+* [Getting started with HotWax Commerce](gettingstarted.md)
+
 ## Business Processes
 
 * [Order fulfillment](business-processes/orderfulfillmentbusinessprocess.md)
