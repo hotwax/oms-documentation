@@ -1,20 +1,23 @@
+---
+description: >-
+  Order fulfillment is a critical business process for retailers, orchestrating
+  the journey from order allocation to making it ready for shipping, ensuring
+  timely delivery to the customers' doorstep.
+---
+
 # Order fulfillment
-
-## About order fulfillment
-
-Order fulfillment stands as a critical component for retailers, the process orchestrates the journey from order allocation to making it ready for shipping, ensuring the timely delivery of order items to the customers' doorstep.
-
-<figure><img src="../.gitbook/assets/Order fulfillment BP.png" alt=""><figcaption><p>Order fulfillment business process</p></figcaption></figure>
 
 ## How order fulfillment works
 
 Approved orders are eligible for brokering in HotWax Commerce. The order routing engine brokers orders and looks for the best fulfillment location to allocate them.
 
+<figure><img src="../.gitbook/assets/Order fulfillment BP.png" alt=""><figcaption><p>Order fulfillment business process</p></figcaption></figure>
+
 ## Automatically send fulfillment request
 
 Once an order item is allocated, a fulfillment request is sent to the assigned fulfillment location. If this location happens to be a warehouse, the allocation details are synced to the WMS or ERP systems, such as NetSuite, used for warehouse fulfillment.
 
-If an order item is allocated to a store, they are automatically reflected in the HotWax Commerce Store Fulfillment App.
+If an order item is allocated to a store, they are automatically reflected in the HotWax Commerce [Store Fulfillment App](https://app.gitbook.com/o/l53nGvPQLhOHrKCP9HTG/s/NfzAzAbnWQnRfRXiK6m4/).
 
 {% hint style="info" %}
 HotWax Commerce provides a Store Fulfillment Suite comprising user-friendly apps such as the Store Fulfillment App and Picking App to quickly and accurately fulfill orders. These apps are specifically designed to facilitate easy adoption and minimize the learning curve for store personnel.
