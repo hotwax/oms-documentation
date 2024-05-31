@@ -12,7 +12,7 @@ Order and inventory management are at the heart of omnichannel retailing. Let’
 
 #### Source of orders and returns
 
-<figure><img src=".gitbook/assets/Orders and Returns.png" alt=""><figcaption><p>Downloading orders and returns</p></figcaption></figure>
+<figure><img src=".gitbook/assets/Order Returns.png" alt=""><figcaption><p>Downloading orders and returns</p></figcaption></figure>
 
 HotWax Commerce downloads orders and returns from sales channels like eCommerce and POS.
 
