@@ -6,6 +6,7 @@
 
 ## Business Processes
 
+* [Introduction](business-processes/README.md)
 * [Order fulfillment](business-processes/orderfulfillmentbusinessprocess.md)
 
 ## Business Process Models
