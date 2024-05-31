@@ -17,7 +17,7 @@ Approved orders are eligible for brokering in HotWax Commerce. The order routing
 
 Once an order item is allocated, a fulfillment request is sent to the assigned fulfillment location. If this location happens to be a warehouse, the allocation details are synced to the WMS or ERP systems, such as NetSuite, used for warehouse fulfillment.
 
-If an order item is allocated to a store, they are automatically reflected in the HotWax Commerce [Store Fulfillment App](https://app.gitbook.com/o/l53nGvPQLhOHrKCP9HTG/s/NfzAzAbnWQnRfRXiK6m4/).
+If an order item is allocated to a store, they are automatically reflected in the HotWax Commerce [Store Fulfillment App](https://docs.hotwax.co/documents/orders/fulfillment).
 
 {% hint style="info" %}
 HotWax Commerce provides a Store Fulfillment Suite comprising user-friendly apps such as the Store Fulfillment App and Picking App to quickly and accurately fulfill orders. These apps are specifically designed to facilitate easy adoption and minimize the learning curve for store personnel.
@@ -138,4 +138,4 @@ In specific circumstances, store managers may opt to stop order fulfillment enti
 
 In specific circumstances, store managers may need to temporarily remove their store's inventory from online selling. This could be due to various reasons such as low stock levels, prioritizing in-store customer sales, or other internal considerations. In such cases, store managers have the option to directly disable online selling for their store. This flexibility allows managers to focus on fulfilling in-store demand while conserving inventory. Additionally, they can easily re-enable online selling in the future when the situation aligns with their business needs.
 
-Learn more about [additional scenarios supported in Fulfillment App](https://docs.hotwax.co/documents/orders/fulfillment/fulfillment-setting-page)
+Learn more about [additional scenarios supported in Store Fulfillment App](https://docs.hotwax.co/documents/orders/fulfillment/fulfillment-setting-page)
