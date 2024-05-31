@@ -1,6 +1,11 @@
-# Introduction
+---
+description: >-
+  Welcome to the Business Processes guide, designed to provide a detailed
+  understanding of our key operational workflows, including order fulfillment, 
+  inventory management, and order routing.
+---
 
-Welcome to the Business Processes guide for HotWax Commerce. This comprehensive resource is designed to provide a detailed understanding of our key operational procedures, including order fulfillment, inventory management, and order routing.
+# Introduction
 
 * [**Order Fulfillment:**](https://docs.hotwax.co/documents/v/learn-hotwax-oms/business-processes/orderfulfillmentbusinessprocess)This section delves into key stages involved in order fulfillment, including order allocation, picking, packing, and shipping. Learn about how each step is designed to maintain efficiency and accuracy in fulfilling customer orders.
 * **Inventory Management (Upcoming):** Here, we outline the strategies and practices used to manage inventory across the network. Learn about how inventory levels are monitored, updated, and synchronized with real-time data to ensure optimal stock availability and accurate fulfillment.
