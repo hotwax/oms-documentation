@@ -57,7 +57,7 @@ The inventory count of a product is regularly updated due to various factors suc
 
 #### Sources of inventory
 
-HotWax Commerce integrates with ERP, POS, and WMS, to create a unified pool of inventory. HotWax Commerce receives daily inventory feeds from the ERP system to update and maintain inventory data. Additionally, in cases where an ERP system isn't in use, HotWax Commerce also receives inventory feeds from Warehouse Management Systems (WMS) and Point of Sale (POS) systems.
+HotWax Commerce integrates with ERP, POS, and WMS, to create a unified pool of inventory. HotWax Commerce receives daily inventory feeds from the ERP system to update and maintain inventory data. Additionally, in cases where an ERP system isn't in use, HotWax Commerce also receives inventory feeds from WMS and POS systems.
 
 After synchronizing inventory totals from all systems, HotWax Commerce calculates the Online ATP for eCommerce by deducting any inventory set aside as safety stock, thresholds, orders in the brokering queue, and inventory at non-participating facilities from the physical ATP.
 
