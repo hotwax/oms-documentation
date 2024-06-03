@@ -53,5 +53,3 @@ These POS returns are not synchronized to NetSuite again because this part has a
 To ensure data integrity, HotWax Commerce provides an auditing tool OReSA that automatically compares in-store return totals of the POS system with the ERP.
 
 In case any inconsistencies are found, the returns audit dashboard provides a gap analysis report that highlights the monetary gaps in both systems.
-
-\
