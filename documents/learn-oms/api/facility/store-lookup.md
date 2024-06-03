@@ -131,8 +131,7 @@ Content-Type: application/json
 | `<day_of_week>_open`       | The opening time of the store on the day of a week                                                                                                  |
 | `<day_of_week>_close`      | The closing time of the store on the day of a week                                                                                                  |
 
-\
-\\
+
 
 ## Note:
 
