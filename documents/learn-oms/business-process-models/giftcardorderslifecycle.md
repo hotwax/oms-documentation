@@ -128,6 +128,10 @@ This process remains consistent regardless of whether the gift card order fulfil
 This marks the completion of the physical gift card order lifecycle.
 {% endhint %}
 
+{% hint style="info" %}
+When walk-in customers purchase a physical gift card from the store, it is treated as a regular POS order in HotWax Commerce. HotWax Commerce syncs those orders with NetSuite in the POS sales synchronization to NetSuite.
+{% endhint %}
+
 ## Digital gift cards
 
 <figure><img src="../.gitbook/assets/digital gift cards.png" alt=""><figcaption><p>Digital gift card orders lifecycle business process model</p></figcaption></figure>
