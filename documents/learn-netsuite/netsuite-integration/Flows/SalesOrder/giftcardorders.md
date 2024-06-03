@@ -138,6 +138,10 @@ By default non inventory items like digital gift cards are configured to be not 
 
 Subsequently, invoice is auto generated in NetSuite in the status “Paid”, and the customer deposit status is automatically updated from “Not Deposited” to “Fully Applied”.
 
+{% hint style="success" %}
+When walk-in customers purchase a gift card from the store, it is treated as a regular POS order in HotWax Commerce. HotWax Commerce syncs those orders with NetSuite in the POS sales synchronization to NetSuite.
+{% endhint %}
+
 {% hint style="info" %}
 **What happens when customers redeem their gift card to pay for a new order?**
 
