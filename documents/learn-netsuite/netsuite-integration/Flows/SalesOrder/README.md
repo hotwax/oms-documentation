@@ -6,17 +6,21 @@ description: Learn how sales orders are processed in HotWax Commerce and NetSuit
 
 In the dynamic world of eCommerce, the efficient fulfillment of online sales orders is a critical aspect of a retailer's success. When online orders are placed via e-Commerce platforms like Shopify, they need to be quickly processed and fulfilled to meet promised delivery timelines while optimizing operational costs.Online orders placed on platforms like Shopify are downloaded into the HotWax Commerce for processing and fulfillment. HotWax Commerce plays a pivotal role in this process by seamlessly routing orders to the most suitable fulfillment locations. The decision is based on factors such as inventory availability, cost, and time, ensuring efficient order processing.
 
-Orders are intelligently routed to the optimal fulfillment locations, which may involve warehouses, stores, or a combination of both. Each scenario necessitates a distinct process for pushing orders to Netsite.
+Upon arrival in HotWax Commerce, orders are initially flagged as "created," awaiting further processing. The pivotal step follows as these orders are pushed into Netsuite ERP for creation, ensuring that all essential order information, including order IDs, is accurately transmitted. This synchronization process typically takes no longer than 30 minutes per order, ensuring a swift transition into Netsuite.
+
+After creation in Netsuite, the system communicates back to HotWax Commerce, confirming the successful integration and prompting a transition of the order to an "approved" state within HC. At this juncture, the order is deemed ready for allocation, where it is assigned to a specific location within the inventory network, facilitating the subsequent fulfillment process.
+
+While the synchronization process is efficient, it is also scalable to accommodate varying order volumes. HotWax Commerce can handle up to 600 orders per 15-minute interval, and by strategically batching orders, this capacity can be further augmented to approximately 1200 orders within a 30-minute timeframe. Despite potential fluctuations in processing times during peak periods, typically taking around 45 minutes to 1 hour 20 minutes, the integration mechanism ensures that orders are seamlessly synchronized between Shopify and Netsuite ERP.
 
 The flow of order and fulfillment information in the sales order integration varies depending on the responsibilities a retailer has designated to NetSuite. Oftentimes NetSuite is used for is accounting and GL posting functionalities with all fulfillment happening in external systems such as a 3PL, dedicated WMS system, or specialized fulfillment software in stores. Other times retailers may be using NetSuite’s fulfillment capabilities as well, usually in their main warehouse. While most parts of the order sync remain the same, the stage at which order item allocation is pushed to NetSuite varies based on NetSuite’s fulfillment responsibilities.
 
-<figure><img src="../../../.gitbook/assets/4.png" alt=""><figcaption><p>Order sync between HotWax Commerce &#x26; NetSuite</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/order sync between hotwax and ns.png" alt=""><figcaption><p>Order sync between HotWax Commerce &#x26; NetSuite</p></figcaption></figure>
 
 Here is the **NetSuite Order Lifecycle Business Process Model** that provides step by step overview of how the sync works before we dive into elaborate details.
 
 ## NetSuite Order Lifecycle BPM
 
-<figure><img src="../../../.gitbook/assets/NetSuite order lifecycle bpm.png" alt=""><figcaption><p>NetSuite order lifecycle business process model</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/NetSuite order lifecycle bpm (2).png" alt=""><figcaption><p>NetSuite order lifecycle business process model</p></figcaption></figure>
 
 Most of our customers use Shopify as their eCommerce platform along with NetSuite as their ERP and warehouse fulfillment solution. Therefore, to explain the NetSuite Order Lifecycle BPM, we have taken Shopify as the eCommerce platform, NetSuite as the ERP and warehouse fulfillment solution, with HotWax Commerce as the Order Management System.
 
