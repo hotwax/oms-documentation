@@ -12,8 +12,7 @@ The Post Code Lookup API provides developers with the ability to fetch informati
 * Fetching latitude and longitude for a given postal code
 * Fetching latitude and longitude for a partial postal code
 
-\
-\\
+
 
 ## Fetch Postal Code for Latitude Longitude in a Given Range
 
@@ -107,8 +106,7 @@ Content-Type: application/json
 | `country-code-ID` | The country code ID of the provided country             |
 | `location`        | The latitude and longitude points of the postal code    |
 
-\
-\\
+
 
 ## Fetch latitude longitude for a postal code
 
@@ -187,8 +185,7 @@ Content-Type: application/json
 | `country-code-ID` | The country code ID of the provided country             |
 | `location`        | The latitude and longitude points of the postal code    |
 
-\
-\\
+
 
 ## Fetch latitude longitude for a partial postal code
 
