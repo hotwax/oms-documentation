@@ -69,6 +69,8 @@ Store managers can replace an assigned picker with a new one for various reasons
 As pickers pick order items, HotWax Commerce rate shops to determine the most cost-effective shipping method offered by the carrier that also meets the SLA. Once the shipping method has been selected, HotWax Commerce fetches shipping labels in bulk with tracking codes from the carrier in advance to reduce the packing time.
 {% endhint %}
 
+Learn more about [Picking](https://docs.hotwax.co/documents/orders/fulfillment/shiporders#pick-orders)
+
 ## Reject fulfillment request
 
 When a picker is unable to find the order item listed in their picklist in the store, store managers have the authority to reject the fulfillment of that specific order item.
@@ -116,7 +118,7 @@ Learn more about [packing](https://docs.hotwax.co/documents/orders/fulfillment/s
 
 ## Order cancellations when item is being prepared for shipping
 
-Customers often request CSRs to cancel their orders. If the order hasn't been shipped yet, it can be canceled. If HotWax Commerce has already allocated the order to a store, store associates may have already picked or packed the order. In this scenario, the order is canceled in HotWax Commerce and automatically removed from the Store Fulfillment App, preventing any further actions on the canceled order.
+Customers often request CSRs to cancel their orders. If the order hasn't been shipped yet, it can be canceled. If HotWax Commerce has already allocated the order to a store, store associates may have already picked or packed the order. In this scenario, the order is canceled in HotWax Commerce and automatically rejected from the Store Fulfillment App, preventing any further actions on the canceled order.
 
 ## Ship order items
 

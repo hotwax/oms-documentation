@@ -1,14 +1,12 @@
 ---
-description: Discover the process to ship orders from the Fulfillment app.
+description: Discover the process to Fulfill orders from the Fulfillment App.
 ---
 
-# Ship Orders
+# Order Fulfillment
 
-## Order Fulfillment
+## Pick orders
 
-#### Pick orders
-
-1. Go to the Open Orders page and print a picklist
+1. Go to the `Open Orders` page and print a picklist
 
 This page displays all outstanding orders brokered to this facility by the OMS and are ready to be fulfilled.
 
@@ -21,7 +19,7 @@ Video: Filter Orders
 {% endembed %}
 
 1. Click the Print Picksheet function to generate the picksheet. This will create picklist of multiple orders to support wave-picking, ensuring pickers can pick items for all orders in one go.
-2. In the Add Picker dialog box, enter the Picker Name or Employee Id to assign a picker. Adding Pickers can be used for performance-based commission distribution.
+2. In the Add Picker dialog box, enter the Picker Name or Employee ID to assign a picker. Adding Pickers can be used for performance-based commission distribution.
 
 {% embed url="https://youtu.be/Yu384kR-7mU" %}
 Video: Print picklist
@@ -32,18 +30,14 @@ Users can create individual order's picklist by clicking on the order ID which w
 {% endhint %}
 
 3. The user can reprint the picklist by clicking on the `Print Picklist` button in the bottom right corner on the In Progress tab.
-4. Users can modify the assigned picker on the In Progress page by selecting the `Edit Picker` button located next to the `Print Picklist` button in the bottom right corner.
+4. Users can modify the assigned picker on the `In Progress` page by selecting the `Edit Picker` button located next to the `Print Picklist` button in the bottom right corner.
 5. Store managers have the option to generate a QR code by clicking the `GENERATE QR CODE` button in the bottom-left corner, pickers can scan this QR code to access their picklist directly on their mobile devices.
 
 {% embed url="https://youtu.be/AaSwHxMoGPM" %}
 Video: Regenerate picklist
 {% endembed %}
 
-{% hint style="info" %}
-Assigned pickers can also be changed from the In progress page.
-{% endhint %}
-
-#### Pack Orders:
+## Pack Orders:
 
 Mark orders packed when order items are ready to be shipped.
 
@@ -74,15 +68,15 @@ Video: Generate shipping label
 Video: Generate packing slip
 {% endembed %}
 
-{% hint style="warning" %}
-Unpack orders when necessary, especially in cases where incorrect boxes or items need to be corrected.
+**Unpack Orders**
+Unpack orders by clicking the unpack button in the 'Completed Page' when necessary, especially in cases where incorrect boxes or items need to be corrected. The unpacked orders will disappear from the completed page and become visible again on the `In Progress` page for packing.
 {% endhint %}
 
 {% embed url="https://youtu.be/_4vcKgJuQrE" %}
 Video: Unpack orders
 {% endembed %}
 
-#### Ship order
+## Ship order
 
 1. Go to the Completed tab.​
 2. Click the `Ship Orders` function at the top to mark the orders as shipped in bulk.
@@ -92,7 +86,7 @@ Video: Bulk Order fulfillment
 {% endembed %}
 
 {% hint style="info" %}
-If `Ship Packed Orders` Job is enabled in the Job Manager App, all packed orders will be automatically mark shipped. Enable the `isTrackingRequired` setting on shipping methods that should not be automatically shipped unless they have tracking codes.
+If the `Ship Packed Orders` Job is enabled in the Job Manager App, all packed orders will be automatically mark shipped. Enable the `isTrackingRequired` setting on shipping methods that should not be automatically shipped unless they have tracking codes.
 {% endhint %}
 
 In the event that the packing slip or shipping label is damaged after packing an order, it can be regenerated from the completed tab.
