@@ -16,14 +16,6 @@ The Scheduling tab within the Processor Configuration dialog in Napita offers cr
 2. Select the `Configure` option from the context menu. Alternatively, double-click on the Processor.
 3. Navigate to the `Scheduling` tab within the Configuration dialog.
 
-Step-by-Step Usage Instructions:
-
-**Accessing the Scheduling Tab:**
-
-* Right-click on the Processor within Napita.
-* Select the `Configure` option from the context menu. Alternatively, double-click on the Processor.
-* Navigate to the `Scheduling` tab within the Configuration dialog.
-
 **Selecting Scheduling Strategy:**
 
 * Choose a scheduling strategy based on processing needs:

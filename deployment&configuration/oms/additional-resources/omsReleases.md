@@ -37,7 +37,29 @@ description: Discover  the versions of HotWax Commerce OMS releases.
 {% endtab %}
 {% endtabs %}
 
-## Release - v5.10.0 (21th May 2024)
+## Hotfix - v5.10.2 (5th June 2024)
+
+| Information     | Value                                                                                                                |
+| --------------- | -------------------------------------------------------------------------------------------------------------------- |
+| Release Version | v5.10.2                                                                                                            |
+| Release Type    | Hotfix                                                                                                               |
+| Image Tag       | v5.10.2                                                                                                            |
+| Image URL       | `289432782788.dkr.ecr.us-east-1.amazonaws.com/omscoreimage:omscoreimage-v5.10.2`                                      |
+| Diff            | [Link to diff](https://git.hotwax.co/tools/omssetup/-/compare/v5.10.1...v5.10.2?from_project_id=242&straight=false) |
+| Changelog       | [Link to changelog](https://git.hotwax.co/commerce/oms/-/blob/v5.10.2/CHANGELOG.md?ref%5C_type=tags&ref_type=tags) |
+
+## Hotfix - v5.10.1 (28th May 2024)
+
+| Information     | Value                                                                                                                |
+| --------------- | -------------------------------------------------------------------------------------------------------------------- |
+| Release Version | v5.10.1                                                                                                             |
+| Release Type    | Hotfix                                                                                                               |
+| Image Tag       | v5.10.1                                                                                                           |
+| Image URL       | `289432782788.dkr.ecr.us-east-1.amazonaws.com/omscoreimage:omscoreimage-v5.10.1`                                      |
+| Diff            | [Link to diff](https://git.hotwax.co/tools/omssetup/-/compare/v5.10.0...v5.10.1?from_project_id=242&straight=false) |
+| Changelog       | [Link to changelog](https://git.hotwax.co/commerce/oms/-/blob/v5.10.1/CHANGELOG.md?ref%5C_type=tags&ref_type=tags) |
+
+## Release - v5.10.0 (21st May 2024)
 
 | Information     | Value                                                                                                              |
 | --------------- | ------------------------------------------------------------------------------------------------------------------ |
@@ -59,11 +81,11 @@ description: Discover  the versions of HotWax Commerce OMS releases.
 {% endtab %}
 
 {% tab title="Upgrade Steps" %}
-[Link to Upgrade Steps](https://git.hotwax.co/commerce/oms/-/blob/develop/upgrade/v5.8.0/UpgradeSteps.md?ref_type=heads)
+[Link to Upgrade Steps](https://git.hotwax.co/commerce/oms/-/blob/develop/upgrade/v5.10.0/UpgradeSteps.md?ref_type=heads)
 {% endtab %}
 {% endtabs %}
 
-## Hotfix - v5.9.5 (21th May 2024)
+## Hotfix - v5.9.5 (21st May 2024)
 
 | Information     | Value                                                                                                                |
 | --------------- | -------------------------------------------------------------------------------------------------------------------- |
@@ -74,7 +96,7 @@ description: Discover  the versions of HotWax Commerce OMS releases.
 | Diff            | [Link to diff](https://git.hotwax.co/tools/omssetup/-/compare/v5.9.4...v5.9.4?from_project_id=242&straight=false) |
 | Changelog       | [Link to changelog](https://git.hotwax.co/commerce/oms/-/blob/v5.9.5/CHANGELOG.md?ref%5C_type=tags&ref_type=tags) |
 
-## Hotfix - v5.9.4 (21th May 2024)
+## Hotfix - v5.9.4 (21st May 2024)
 
 | Information     | Value                                                                                                                |
 | --------------- | -------------------------------------------------------------------------------------------------------------------- |
@@ -85,7 +107,7 @@ description: Discover  the versions of HotWax Commerce OMS releases.
 | Diff            | [Link to diff](https://git.hotwax.co/tools/omssetup/-/compare/v5.9.3...v5.9.3?from_project_id=242&straight=false) |
 | Changelog       | [Link to changelog](https://git.hotwax.co/commerce/oms/-/blob/v5.9.4/CHANGELOG.md?ref%5C_type=tags&ref_type=tags) |
 
-## Hotfix - v5.9.3 (21th May 2024)
+## Hotfix - v5.9.3 (21st May 2024)
 
 | Information     | Value                                                                                                                |
 | --------------- | -------------------------------------------------------------------------------------------------------------------- |
@@ -144,7 +166,7 @@ description: Discover  the versions of HotWax Commerce OMS releases.
 {% endtab %}
 {% endtabs %}
 
-## Hotfix - v5.8.10 (21th May 2024)
+## Hotfix - v5.8.10 (21st May 2024)
 
 | Information     | Value                                                                                                                |
 | --------------- | -------------------------------------------------------------------------------------------------------------------- |
@@ -371,7 +393,7 @@ description: Discover  the versions of HotWax Commerce OMS releases.
 | Diff            | [Link to diff](https://git.hotwax.co/tools/omssetup/-/compare/v5.5.4...v5.5.5?from\_project\_id=242\&straight=false) |
 | Changelog       | [Link to changelog](https://git.hotwax.co/commerce/oms/-/blob/v5.5.5/CHANGELOG.md?ref\_type=tags)                    |
 
-## Hotfix - v5.5.4 (21th Mar 2024)
+## Hotfix - v5.5.4 (21st Mar 2024)
 
 | Information     | Value                                                                                                                |
 | --------------- | -------------------------------------------------------------------------------------------------------------------- |
