@@ -4,6 +4,8 @@
 
 This report identifies active orders and the products associated with it that are missing from NetSuite. It checks each order to see if it has a corresponding NetSuite Order ID and if the products within those orders have NetSuite Product IDs. Orders without a NetSuite Order ID and products without a NetSuite Product ID are highlighted. The query excludes canceled orders, joins relevant tables to gather necessary data, and groups it by order ID and product ID.
 
+### Glossary
+
 | Field Header                 | Description                                          | HC Entity                |
 |------------------------------|------------------------------------------------------|--------------------------|
 | **Order ID**                 | It helps in distinguishing one order from another.  | OrderHeader.ORDER_ID     |
@@ -52,62 +54,13 @@ LIMIT 1000;
 
 **Grouping Data:** The selected data is grouped by order ID and product ID to ensure that each combination is considered individually. This helps in organizing the data for further analysis.
 
-**Identifying Missing NetSuite IDs:*8 Within each group, the query checks if there are any corresponding NetSuite Order IDs or Product IDs. If both are missing, it highlights these records as the ones missing from NetSuite.
+**Identifying Missing NetSuite IDs:** Within each group, the query checks if there are any corresponding NetSuite Order IDs or Product IDs. If both are missing, it highlights these records as the ones missing from NetSuite.
 
 ## Products without Netsuite Order ID Report
 
 This report identifies products listed on Shopify that are missing from NetSuite. It checks each product to see if it has a corresponding NetSuite Product ID. Products without a NetSuite Product ID are highlighted. The query joins relevant tables to gather necessary data, filters for active products, and groups it by product SKU, Shopify product ID, and Hotwax product ID.
 
-| Field Header           | Description                                 | HC Entity              |
-|------------------------|---------------------------------------------|------------------------|
-| **Shopify Product ID** | Identifies the product within Shopify       |                        |
-| **HotWax Product ID**  |                                             |                        |
-
-<details>
-  
-  <summary>SQL Query to Generate Product without Netsuite Order ID Report</summary>
-
-```sql
-SELECT sku AS sku,
-       shopify_product_id AS shopify_product_id,
-       hotwax_product_id AS hotwax_product_id
-FROM
-  (SELECT p.INTERNAL_NAME AS sku ,
-          gi.ID_VALUE AS shopify_product_id ,
-          gi.PRODUCT_ID AS hotwax_product_id
-   FROM good_identification gi
-   LEFT JOIN good_identification gi2 ON gi.PRODUCT_ID = gi2.PRODUCT_ID
-   AND gi2.GOOD_IDENTIFICATION_TYPE_ID = 'NETSUITE_PRODUCT_ID'
-   AND (gi2.THRU_DATE IS NULL
-        OR gi2.THRU_DATE > NOW())
-   JOIN product p ON gi.PRODUCT_ID = p.PRODUCT_ID
-   WHERE gi.GOOD_IDENTIFICATION_TYPE_ID = 'SHOPIFY_PROD_ID'
-     AND (gi.THRU_DATE IS NULL
-          OR gi.THRU_DATE > NOW())
-     AND p.IS_VIRTUAL = 'N'
-     AND p.IS_VARIANT = 'Y'
-     AND gi2.PRODUCT_ID IS NULL
-     AND gi.ID_VALUE <> p.INTERNAL_NAME) AS virtual_table
-LIMIT 1000;
-```
-
-</details>
-
-### Query Logic
-
-**Data Selection:** The query starts by selecting data from tables related to product identifications. These tables store information about product SKUs, Shopify product IDs, and internal Hotwax product IDs. The query selects specific columns that include the product SKU, Shopify product ID, and HotWax product ID.
-
-**Filtering Active Products:** The main focus of the report is to identify Shopify products missing NetSuite IDs. Criteria are set to include only active product identifications (those with no end date or an end date in the future).
-
-**Joining Relevant Tables:** To compile a comprehensive dataset, the SQL query joins multiple tables: good identifications (for product IDs) and products (for additional product details). It also joins the good identifications table to check for NetSuite Product IDs.
-
-**Grouping Data:** The selected data is grouped by product ID and identification type to ensure that each product's information is uniquely considered.
-
-**Identifying Missing NetSuite IDs:** Within each group, the query checks for missing NetSuite Product IDs. If a product does not have a corresponding NetSuite ID, it is highlighted.
-
-## Products without Netsuite Order ID Report
-
-This report identifies products listed on Shopify that are missing from NetSuite. It checks each product to see if it has a corresponding NetSuite Product ID. Products without a NetSuite Product ID are highlighted. The query joins relevant tables to gather necessary data, filters for active products, and groups it by product SKU, Shopify product ID, and Hotwax product ID.
+### Glossary
 
 | Field Header           | Description                                 | HC Entity              |
 |------------------------|---------------------------------------------|------------------------|
@@ -159,6 +112,8 @@ LIMIT 1000;
 ## Deleted Shopify Product Report
 
 This SQL query generates a report listing products that have been deleted from Shopify. It selects key details such as the Hotwax product ID, product SKU, the date when the product was discontinued in Hotwax, and any comments related to the deletion. The query specifically looks for products with comments indicating they were "Deleted from Shopify." It then groups the data by product ID, SKU, discontinuation date, and comments to ensure each product's details are uniquely considered.
+
+### Glossary
 
 | Field Header             | Description                                  | HC Entity            |
 |--------------------------|----------------------------------------------|----------------------|
@@ -269,6 +224,8 @@ LIMIT 1000;
 
 This report identifies fulfilled order items that have not been synced to NetSuite. The report focuses on items marked as completed, joining relevant data from multiple tables to provide a comprehensive view. Items that have not yet been exported to NetSuite are highlighted, ensuring that all discrepancies are captured. The results are organized by fulfillment log ID and status datetime.
 
+### Glossary
+
 | Field Header            | Description                           | HC Entity                 |
 |-------------------------|---------------------------------------|---------------------------|
 | **Order ID**            | It helps in distinguishing one order from another. | OrderHeader.ORDER_ID     |
@@ -329,6 +286,8 @@ LIMIT 1000;
 ## POS Orders vs POS Variance
 
 This report compares the sales of POS (Point of Sale) orders with inventory variances, helping to identify discrepancies. It provides details such as order ID, order name, entry date, SKU, sales quantity, and quantity on hand (QOH) variance. The report focuses on POS orders completed after a particular date, and includes both sales data and inventory variance information. By joining relevant tables, it highlights orders where there is a variance between the recorded sales and the inventory quantity on hand.
+
+### Glossary
 
 | Field Header       | Description                           | HC Entity                 |
 |--------------------|---------------------------------------|---------------------------|
@@ -412,10 +371,12 @@ LIMIT 1000;
 
 This report generates a pie chart comparing POS (Point of Sale) orders with inventory variances, categorizing them into "Orders without Error" and "Orders with Error." It helps to visualize the proportion of orders where sales quantities match the inventory quantities on hand versus those where discrepancies exist. The report includes order details such as order ID, order name, entry date, SKU, sales quantity, and quantity on hand (QOH) variance. It focuses on POS orders completed after a particular date, and aggregates the data to count the number of orders with and without variances, providing a clear visual summary of inventory accuracy.
 
-| Field Header | Description | HC Entity | Sum |
-|--------------|-------------|-----------|-----|
-| **Sum**      |             |           |     |
-| **Count**    | The total number of orders associated with the same order name. | OrderHeader.EXTERNAL_ID (Count of all the unique ids of orders as stored in the external system) |     |
+### Glossary
+
+| Field Header | Description | HC Entity |
+|--------------|-------------|-----------|
+| **Sum**      |             |           |
+| **Count**    | The total number of orders associated with the same order name. | OrderHeader.EXTERNAL_ID (Count of all the unique ids of orders as stored in the external system) |
 
 <details>
   
@@ -486,6 +447,8 @@ LIMIT 100;
 
 This report identifies POS (Point of Sale) return transactions and compares them against restocked quantities. It provides insights into how many items were returned versus how many were restocked back into inventory. The report includes details such as return ID, entry date, order ID, product name, facility ID, returned quantity, and restocked quantity. It focuses on returns directed to specific facilities and excludes those directed to 'BDC'.
 
+### Glossary
+
 | Field Header       | Description                                      | HC Entity       |
 |--------------------|--------------------------------------------------|-----------------|
 | **Return ID**      |                                                  |                 |
@@ -547,9 +510,11 @@ LIMIT 1000;
 
 This report generates a pie chart to visualize the comparison between returned items and their restocked status in the POS (Point of Sale) system. It categorizes items into "Restocked" and "Not Restocked" based on whether the returned quantity matches the received (restocked) quantity. The report helps in quickly identifying the proportion of items that have been successfully restocked after being returned.
 
-| Field Header | Description | HC Entity | My column |
-|--------------|-------------|-----------|-----------|
-| **Count**    | The total number of orders associated with the same order name. | OrderHeader.EXTERNAL_ID (Count of all the unique ids of orders as stored in the external system) |           |
+### Glossary
+
+| Field Header | Description | HC Entity |
+|--------------|-------------|-----------|
+| **Count**    | The total number of orders associated with the same order name. | OrderHeader.EXTERNAL_ID (Count of all the unique ids of orders as stored in the external system) |
 
 <details>
   
