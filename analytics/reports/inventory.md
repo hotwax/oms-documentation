@@ -6,7 +6,7 @@
 
 This discrepancy report helps retailers maintain inventory accuracy and uphold customer satisfaction. By highlighting inventory received that does not match the expected quantities, such as the example of shoes-M-38 with a discrepancy of 4 units, retailers can identify and rectify issues like shipment errors, theft, or miscounts. Timely detection of such discrepancies enables corrective actions like adjusting stock levels, investigating root causes, and improving receiving processes, ultimately ensuring that customers receive the products they desire when they expect them.
 
-### Field Header
+### Glossary
 
 | Field Header | Description                         | HC Entity                                 |
 |--------------|-------------------------------------|-------------------------------------------|
@@ -76,7 +76,7 @@ LIMIT 10000;
 
 **Data Selection:** Data selection involves gathering essential details from various tables. It selects shipment IDs, product SKUs, quantities, and facility information, providing insights into discrepancies in received shipments. This curated data forms the foundation for the report, enabling effective analysis and resolution of discrepancies.
 
-Joining Relevant Tables:** To compile a comprehensive dataset, the SQL query fetches information about shipments, products, facilities, and statuses. By joining these tables, the query gathers all the necessary information needed to understand discrepancies in received shipments.
+**Joining Relevant Tables:** To compile a comprehensive dataset, the SQL query fetches information about shipments, products, facilities, and statuses. By joining these tables, the query gathers all the necessary information needed to understand discrepancies in received shipments.
 
 **Selecting Necessary Information:** Once the tables are connected, the query selects specific details crucial for the report. It picks essential information like shipment IDs, product SKUs, facility IDs, expected and received quantities, and dates. These details provide insights into where the discrepancies occur, what products are involved, and when the shipments were received. This approach allows the report to focus on the key aspects of receiving discrepancies, enabling users to pinpoint issues and take corrective actions effectively.
 
@@ -256,7 +256,7 @@ LIMIT 50000;
 
 By analyzing this report, retailers can gain insights into the incoming inventory flow, associated transfer orders, and the receiving method employed. This information enables them to track and manage inventory accurately, ensuring optimal stock levels and efficient warehouse operations.
 
-It provides a comprehensive overview of received inventory, aiding retailers in managing their store or warehouse inventory effectively. It includes details such as received date, origin and destination facility IDs, expected quantities, shipment IDs, transfer orders, SKUs, received quantities, differences, and shipment statuses.
+It provides a comprehensive overview of received inventory, aiding retailers in managing their store or warehouse inventory effectively. It includes details such as received date, origin and destination facility IDs, expected quantities, shipment IDs, transfer orders, SKUs, received quantities, differences, and shipment statuses. Additionally, the receiving method (e.g., manual count, automated scanning) is tracked to understand the process employed for inventory reception and to identify any potential issues in the receiving workflow.
 
 ### Glossary
 
@@ -351,11 +351,11 @@ LIMIT 100;
 **Data Selection:** The SQL query retrieves data from the `shipment` table along with relevant attributes and statuses. It selects fields such as received date, origin and destination facility IDs, expected quantity, shipment ID, transfer order, SKU, received quantity, difference, and status. These fields provide comprehensive information about the receiving process for inbound transfers.
 
 **Filtering Criteria:** To generate the report for receiving, the query applies specific filtering criteria:
-- It selects inbound transfer shipments with a status of 'PURCH_SHIP_RECEIVED', indicating that they have been received.
+- It selects inbound transfer shipments with a status of `PURCH_SHIP_RECEIVED`, indicating that they have been received.
 - The query further refines the dataset by specifying a date range for the received date, ensuring that only shipments received within the specified timeframe are included in the report.
 - Additionally, only shipments with an external order name attribute are considered, indicating that they are part of a transfer order.
 
-**Column Selection:** Essential columns such as received date, origin and destination facility IDs, expected quantity, shipment ID, transfer order, SKU, received quantity, difference, and status are selected. These columns provide insights into the receiving process for inbound transfers, allowing users to track and manage received quantities effectively.
+**Column Selection:** Columns such as received date, origin and destination facility IDs, expected quantity, shipment ID, transfer order, SKU, received quantity, difference, and status are selected. These columns provide insights into the receiving process for inbound transfers, allowing users to track and manage received quantities effectively.
 
 **Calculating Difference and Status:** The query calculates the difference between the expected and received quantities for each shipment item. Based on this difference and other conditions such as the presence of an external order name and the status of the shipment, it assigns a status to each item indicating whether it was received correctly, over-received, under-received, or not received at all.
 
