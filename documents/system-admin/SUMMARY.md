@@ -45,7 +45,9 @@
   * [Create Carrier](fulfillment/shipping-methods/add-carrier.md)
   * [Create Shipping Boxes](fulfillment/shipping-box.md)
   * [Shipping gateways](fulfillment/ShippingGateways.md)
+  * [Map Career Shipment Methods](fulfillment/carrier-and-shipment-methods.md)
 * [How to map shipping method in HotWax Commerce to Netsuite](fulfillment/add-shipping-method.md)
+* [Configure Rate Shopping](fulfillment/configure-rate-shopping.md)
  
 ## Setup Shopify
 
