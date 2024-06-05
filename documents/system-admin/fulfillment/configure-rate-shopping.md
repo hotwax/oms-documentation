@@ -1,3 +1,8 @@
+---
+description: >-
+  This guide walks you through setting up rate shopping in HotWax Commerce.
+---
+
 # Configure Rate Shopping in HotWax Commerce
 
 ## Introduction
