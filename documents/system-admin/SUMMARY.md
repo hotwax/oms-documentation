@@ -18,6 +18,7 @@
 * [Users](administration/users/README.md)
   * [Create Users](administration/users/createUser.md)
   * [Manage Users](administration/users/manageUser.md)
+  * [Manage User Permissions](administration/users/user-permission.md)
   * [Create Pickers](fulfillment/add-picker.md)
 * [Facilities](facilities/README.md)
   * [Add New Facilities](administration/facilities/add-new-facilities.md)
