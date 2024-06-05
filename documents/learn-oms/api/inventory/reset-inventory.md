@@ -35,4 +35,4 @@ The Reset Inventory API accepts the following parameters:
 
 Note: `sku` `upca` and `shopifyProductId` are commonly used product Identifiers.
 
-[Reset inventory sample.csv](https://github.com/Dhiraj1405/oms-documentation/blob/BOPIS\_API/Inventory/Samples/Reset%20inventory%20sample.csv)
+[Reset inventory sample.csv](https://github.com/Dhiraj1405/oms-documentation/blob/BOPIS_API/Inventory/Samples/Reset%20inventory%20sample.csv)

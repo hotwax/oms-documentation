@@ -64,7 +64,7 @@ When new purchase orders are created in the ERP, a scheduled job in HotWax Comme
 
 When a product’s QOH and ATP is updated in HotWax Commerce, its `Online ATP` is recomputed to ensure sellable inventory for eCommerce is calculated on the latest stock levels.
 
-Learn more about [purchase orders](https://docs.hotwax.co/integration-resources/v/netsuite-integration/supported-integrations/purchase-orders)
+Learn more about [purchase orders](https://docs.hotwax.co/documents/v/learn-netsuite/supported-integrations/purchase-orders)
 
 #### Transfer orders
 
@@ -76,7 +76,7 @@ When a product’s QOH and ATP is updated in HotWax Commerce, its `Online ATP` i
 
 Transfer orders can be categorized into three types: store to store, warehouse to store, and store to warehouse. To explore each type, refer to the Transfer Order Lifecycle BPM. In the Inventory Lifecycle BPM, we have taken warehouse to store to explain the concept.
 
-Learn more about [transfer orders](https://docs.hotwax.co/integration-resources/v/netsuite-integration/supported-integrations/transfer-order)
+Learn more about [transfer orders](https://docs.hotwax.co/documents/v/learn-netsuite/supported-integrations/transfer-order)
 
 ## Inventory variances in stores
 
@@ -108,7 +108,7 @@ HotWax Commerce generates an inventory variance feed and synchronizes it with th
 
 For example, in case of NetSuite as the ERP, HotWax Commerce generates the inventory variance feed, after that HotWax Commerce integration platform transforms this feed and synchronizes it to NetSuite. Once NetSuite’s script consumes this feed, inventory levels of the affected products are automatically updated.
 
-Learn more about [inventory variance synchronization](https://docs.hotwax.co/integration-resources/v/netsuite-integration/supported-integrations/cycle-count)
+Learn more about [inventory variance synchronization](https://docs.hotwax.co/documents/v/learn-netsuite/supported-integrations/cycle-count)
 
 Similarly, in the event where inventory is managed in another third party system, HotWax Commerce inventory variance feed can be used to update inventory in other ERP or WMS.
 
@@ -160,6 +160,6 @@ A scheduled job in HotWax Commerce checks the inventory records of HotWax Commer
 
 HotWax Commerce then retrieves information from Shopify about products that have undergone changes in HotWax Commerce. The inventory counts for these products in Shopify are then compared with the inventory counts that HotWax Commerce. After comparing inventory changes, a scheduled job in HotWax Commerce records the difference and generates an inventory feed for the affected products. This feed is then pushed to Shopify, which reads it and updates to either add or deduct inventory based on the changes.
 
-Learn more about [inventory synchronization](https://docs.hotwax.co/integration-resources/inventory/how-does-hotwax-commerce-ensure-accurate-inventory-is-synchronized-to-shopify)
+Learn more about [inventory synchronization](https://docs.hotwax.co/documents/v/learn-shopify/inventory/inventory)
 
 Similarly, in the event where a retailer has another eCommerce platform, HotWax Commerce can generate a sellable inventory feed with additional development efforts. HotWax Commerce will then calculate sellable inventory, retrieve the products inventory counts from that eCommerce platform, and synchronize the latest inventory difference.

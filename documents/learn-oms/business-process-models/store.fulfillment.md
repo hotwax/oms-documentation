@@ -73,4 +73,4 @@ In the event of a partial shipment, the fulfillment status of the shipped items 
 
 When all items of an order are <mark style="color:orange;">**"Shipped"**</mark>, the order status is updated from <mark style="color:orange;">**"Approved"**</mark> to <mark style="color:orange;">**"Completed"**</mark> in HotWax Commerce.
 
-\
+
