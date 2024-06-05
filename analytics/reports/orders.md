@@ -4,7 +4,7 @@
 
 Retailers receive orders through various channels, including eCommerce websites, social media platforms, online marketplaces, and point-of-sale (POS) systems. Retailers need visibility of their sales into channel performance. The Sales Order Count by Channel report offers a clear summary of order counts per channel, enabling retailers to identify high-performing channels and areas needing improvement. Retailers can easily discern the total count of orders per channel, whether it's from POS, Shopify, or any other channel enabling effective tracking and analysis.
 
-### Field Header
+### Glossary
 
 | Field Header         | Description                                                         | HC Entity                      |
 |----------------------|---------------------------------------------------------------------|--------------------------------|
@@ -43,7 +43,7 @@ LIMIT 100;
 
 **Data Selection:** The SQL query selects data from the `order_header` table, focusing on sales orders. It calculates the count of orders received through each sales channel, excluding cancelled orders, within a specific date range.
 
-**Sales Channel:** This field extracts the sales channel information from the `SALES_CHANNEL_ENUM_ID` column in the `order_header` table. If the `SALES_CHANNEL_ENUM_ID` is 'POS_SALES_CHANNEL', it assigns "POS" to the `SALES_CHANNEL` column; otherwise, it assigns "Shopify".
+**Sales Channel:** This field extracts the sales channel information from the `SALES_CHANNEL_ENUM_ID` column in the `order_header` table. If the `SALES_CHANNEL_ENUM_ID` is `POS_SALES_CHANNEL`, it assigns "POS" to the `SALES_CHANNEL` column; otherwise, it assigns "Shopify".
 
 **Count of Orders:** This field calculates the count of orders for each sales channel. It uses the `count()` function to count the occurrences of `EXTERNAL_ID`, representing each order in the dataset. The query aggregates the data by sales channel, counting the number of orders for each channel.
 
@@ -57,7 +57,7 @@ LIMIT 100;
 
 Retailers often encounter synchronization issues between Shopify and Netsuite, leading to orders not being properly recorded. This can result in delays and disruptions in order processing and fulfillment, impacting customer satisfaction and revenue. This report is helpful for retailers to troubleshoot issues when orders, that have all the necessary attributes like `SIGNIFYD_APPROVED`, and `NETSUITE_CUSTOMER_ID` are not synchronized with Netsuite. It highlights orders in approved or completed status that lack Netsuite order IDs, indicating synchronization problems. Retailers can view this report to identify problematic orders and rectify errors to ensure all orders are synced with Netsuite. The synchronization process between HotWax and Netsuite may encounter delays. Therefore, this report exclusively displays orders without NetSuite order IDs for over 4 hours.
 
-### Field Header
+### Glossary
 
 | Field Header      | Description                                               | HC Entity                    |
 |-------------------|-----------------------------------------------------------|------------------------------|
@@ -119,7 +119,7 @@ LIMIT 1000;
 
 The POS Cash Sale Exp Failed Report is a tool for tracking synchronization failures related to Point of Sale (POS) cash sales. This report is instrumental in identifying instances where the synchronization process encountered issues, allowing for a proactive approach to address and resolve these failures. By leveraging this report, organizations can ensure the accuracy and completeness of their POS cash sale data, contributing to a more reliable and efficient sales reporting process.
 
-### Report Structure
+### Glossary
 
 | Field Header   | Description                                                               | HC Entity            |
 |----------------|---------------------------------------------------------------------------|----------------------|
@@ -197,7 +197,8 @@ LIMIT 1000;
 
 **Grouping Data**: The query implicitly groups records based on filtering criteria to focus solely on transactions with failed expense exports.
 
-**Calculating Subsidiary**: A conditional statement determines the subsidiary based on the facility's external ID, adding context to the order data.
+**Calculating Subsidiary**: In this report, "subsidiary" is the division responsible for each transaction, based on the facility's external ID. Facility ID "376" maps to subsidiary "5," while all others map to subsidiary "1." This helps in financial tracking, operational management, and regulatory compliance.
+A conditional statement determines the subsidiary based on the facility's external ID, adding context to the order data.
 
 ## Duplicate Order
 
@@ -205,7 +206,7 @@ Retailers often face the issue of duplicate orders, which can cause inventory di
 
 The "Duplicate Order" report provides crucial insights into the frequency of duplicate orders by presenting the total count of duplicate orders associated with the same order name. By understanding the extent of duplicate orders, retailers can take necessary actions to ensure that duplicate orders are removed from the system.
 
-### Report Structure
+### Glossary
 
 | Field Header   | Description                                                   | HC Entity            |
 |----------------|---------------------------------------------------------------|----------------------|
@@ -260,7 +261,7 @@ LIMIT 1000;
 
 When an order fails to transfer from Shopify to Hotwax, it doesn't show up in the OMS, and an error is logged in the EXIM Import record for Shopify orders. The Shopify Order Import Error report details these failed imports, providing the specific errors generated by the system. There are several potential causes for these errors, including data exported from Shopify not being compatible with the OMS, or issues with specific API endpoints, such as inadequate permissions or temporary unavailability. Retailers can use this report to identify problematic orders and troubleshoot accordingly.
 
-### Report Structure
+### Glossary
 
 | Field Header        | Description                                              | HC Entity               |
 |---------------------|----------------------------------------------------------|-------------------------|
@@ -305,7 +306,7 @@ LIMIT 1000;
 
 Retailers often face challenges in managing and reducing order cancellations. Customers or CSRs may cancel orders due to reasons such as changes in preference, product unavailability, errors in orders, delivery delays, financial constraints, product defects, better offers elsewhere, and miscommunication. The Cancelled Order Report provides weekly insights into cancellation rates, enabling retailers to pinpoint peak cancellation weeks and address underlying causes. It outlines the total number of canceled orders within the OMS, helping retailers businesses enhance customer satisfaction and operational efficiency by addressing root issues effectively. A weekly report is generated for retailers, and the frequency of the report can be updated as per the requirements.
 
-### Report Structure
+### Glossary
 
 | Field Header            | Description                                    | HC Entity                   |
 |-------------------------|------------------------------------------------|-----------------------------|
@@ -357,7 +358,11 @@ LIMIT 100000;
 
 ### Query Logic
 
-**Data Selection**: Specific data is selected from various tables likely containing information about orders, order items, order statuses, and product details.
+**Data Selection**: 
+- **Order IDs and Statuses**: The query selects `oid.ID_VALUE` (order ID) and `os.STATUS_DATETIME` (cancellation date) to track canceled orders.
+- **Order Details**: Additional information like `oi.ITEM_DESCRIPTION` (item description), `oi.UNIT_PRICE` (price), and `oi.EXTERNAL_ID` (external ID) is also selected.
+- **Product Information**: The query includes `gi.ID_VALUE` (SKU) to identify specific products.
+- **Cancellation Reasons**: `en.DESCRIPTION` provides reasons for cancellations.
 
 **Defining Cancellation Criteria**: The query filters the data to include only orders where the status indicates cancellation (e.g., `STATUS_ID = 'ITEM_CANCELLED'`).
 
@@ -377,7 +382,7 @@ Order approval delays can happen due to missing order attributes such as missing
 
 The Order Approval Duration graph provides information on how long it takes the OMS to approve orders. It has two main attributes: order volume and average approval duration in minutes. This Graph helps in tracking the average approval duration over time. This helps in identifying any deviations from expected performance levels and taking corrective actions promptly.
 
-### Field Header
+### Glossary
 
 | Field Header                      | Description                                                                                         | HC Entity                 |
 |-----------------------------------|-----------------------------------------------------------------------------------------------------|---------------------------|
@@ -433,9 +438,11 @@ LIMIT 10000;
 
 ## Missing Order Attribute Report
 
-The Missing Order Attribute Report is a vital tool for tracking order synchronization. By monitoring the presence of essential attributes, it identifies orders lacking crucial information, ensuring a seamless synchronization process. This report enables proactive resolution of discrepancies, preventing any orders from failing to synchronize effectively. In the NetSuite context, the report ensures accurate order synchronization by verifying essential attributes. By highlighting orders lacking these attributes, it prevents synchronization issues, providing assurance that orders seamlessly integrate with NetSuite.
+The Missing Order Attribute Report is a vital report for tracking order synchronization. By monitoring the presence of essential attributes, it identifies orders lacking crucial information, ensuring a seamless synchronization process. This report enables proactive resolution of discrepancies, preventing any orders from failing to synchronize effectively. In the NetSuite context, the report ensures accurate order synchronization by verifying essential attributes. By highlighting orders lacking these attributes, it prevents synchronization issues, providing assurance that orders seamlessly integrate with NetSuite.
 
-### Field Header
+Order attributes are specific pieces of information or data associated with an order that are essential for its processing and synchronization. These attributes can include details such as whether an order has been approved by a fraud detection system (e.g., Signifyd), whether it has been exported to NetSuite, or customer identification numbers. Ensuring these attributes are correctly populated is crucial for smooth order management and integration across different systems.
+
+### Glossary
 
 | Field Header                 | Description                                                                                         | HC Entity                 |
 |------------------------------|-----------------------------------------------------------------------------------------------------|---------------------------|
@@ -503,7 +510,7 @@ LIMIT 1000;
 
 ### Query Logic
 
-**Data Selection:** The SQL query starts by selecting specific data fields relevant to the report. This typically includes information about orders and their attributes.
+**Data Selection:** The SQL query starts by selecting specific data fields relevant to the report. This includes information about orders and their attributes.
 
 **Defining Missing Attributes:** The primary objective of the report is to identify orders with missing attributes. Therefore, criteria are established to filter the data and include only orders where certain attributes are absent or null.
 
@@ -511,7 +518,7 @@ LIMIT 1000;
 
 **Selecting Necessary Information:** From the joined tables, the query selects columns related to order attributes and any other relevant information needed for analysis or reporting.
 
-**Filtering Data:** Conditions are applied to filter the data and include only orders with missing attributes. This might involve checking if certain attribute values are null or absent in the dataset.
+**Filtering Data:** Conditions are applied to filter the data and include only orders with missing attributes. This involves checking if certain attribute values are null or absent in the dataset.
 
 **Grouping Data:** The query groups the selected data based on certain criteria, such as order ID or attribute type. Grouping data helps summarize and organize it for analysis.
 
@@ -521,7 +528,7 @@ LIMIT 1000;
 
 The HotWax Order Count Report offers a daily snapshot of new orders in the Order Management System (OMS), providing a quick reference for monitoring overall order activity and facilitating proactive decision-making. In the Shopify context, this report ensures seamless synchronization by comparing daily order counts. It serves as a vital tool for merchants, quickly identifying and addressing any discrepancies in the synchronization process, ensuring accurate and efficient order fulfillment.
 
-### Field Header
+### Glossary
 
 | Field Header          | Description                                                 | HC Entity                  |
 |-----------------------|-------------------------------------------------------------|----------------------------|
