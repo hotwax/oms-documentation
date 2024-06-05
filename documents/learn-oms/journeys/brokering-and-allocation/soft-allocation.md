@@ -18,7 +18,7 @@ To check eligible shipping facilities near the customer, the latitude and longit
 
 a. If the customer inputs their postal code:
 
-* Use the [postcodeLookup](https://github.com/hotwax/oms-documentation/blob/oms1.0/Facility/Post%20code%20lookup.md) API to convert the postal code into latitude and longitude coordinates. Learn more about how to use the postCodeLookup API and convert postal codes into latitudes and longitudes.
+* Use the [postcodeLookup](https://docs.hotwax.co/documents/v/learn-hotwax-oms/api-and-data-feeds/facility/postcode-lookup) API to convert the postal code into latitude and longitude coordinates. Learn more about how to use the postCodeLookup API and convert postal codes into latitudes and longitudes.
 
 b. If the customer allows access to their system location:
 

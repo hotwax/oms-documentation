@@ -4,7 +4,7 @@ Gift cards are stored-value cards that carry a value determined at the time of t
 
 Retailers set up both physical and digital gift cards in their eCommerce platform. Both physical and digital gift cards have a unique serial number or GC number that customers need to enter to redeem the card's value.
 
-Learn more about [gift cards set up in eCommerce](https://docs.hotwax.co/integration-resources/products/how-are-products-downloaded-from-shopify-to-hotwax-commerce/giftcardsdownload)
+Learn more about [gift cards set up in eCommerce](https://docs.hotwax.co/documents/v/learn-shopify/products/how-are-products-downloaded-from-shopify-to-hotwax-commerce/giftcardsdownload)
 
 **Physical Gift Cards:**
 
@@ -16,7 +16,7 @@ Digital gift cards, also known as e-gift cards, are virtual equivalents of physi
 
 A scheduled job in HotWax Commerce downloads both physical and digital gift card orders from the eCommerce platform like Shopify.
 
-Learn more about [gift card orders synchronization to HotWax Commerce](https://docs.hotwax.co/integration-resources/orders/how-are-orders-downloaded-from-shopify-to-hotwax-commerce/giftcardordersdownload)
+Learn more about [gift card orders synchronization to HotWax Commerce](https://docs.hotwax.co/documents/v/learn-shopify/orders/how-are-orders-downloaded-from-shopify-to-hotwax-commerce/giftcardordersdownload)
 
 ## Workflow
 

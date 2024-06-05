@@ -47,7 +47,7 @@ Each order has its distinct fulfillment process, making it essential to recogniz
 
 ## Fulfillment of standard orders
 
-All the approved standard orders are sent to the [`Brokering Queue`](https://docs.hotwax.co/user-guides/administration/facilities/manage-parkings) which serves as a waiting area for orders awaiting processing. Orders in the brokering queue are analyzed and picked in the brokering run.
+All the approved standard orders are sent to the [`Brokering Queue`](https://docs.hotwax.co/documents/v/system-admins/administration/facilities/manage-parkings) which serves as a waiting area for orders awaiting processing. Orders in the brokering queue are analyzed and picked in the brokering run.
 
 {% hint style="info" %}
 **What are brokering runs:**
@@ -57,7 +57,7 @@ Brokering runs are scheduled by retailers to execute at specified intervals, all
 
 In the brokering run, the `order routing engine` looks for the best fulfillment location to fulfill orders from.
 
-Learn more about [order brokering and routing](https://docs.hotwax.co/user-guides/orders/brokering/configurablerouting)
+Learn more about [order brokering and routing](https://docs.hotwax.co/documents/v/retail-operations/orders/brokering/configurablerouting)
 
 ## Successful inventory allocation
 
@@ -94,7 +94,7 @@ In the event, that a fulfillment location cannot fulfill an order that has been 
 
 ## Failed inventory allocation
 
-When inventory is unavailable for orders at any location, the order routing engine moves them from the `Brokering Queue` to the [`Unfillable Parking`](https://docs.hotwax.co/user-guides/administration/facilities/manage-parkings). A dedicated brokering run is performed to check the orders in the `Unfillable Parking` and allocate inventory to them.
+When inventory is unavailable for orders at any location, the order routing engine moves them from the `Brokering Queue` to the [`Unfillable Parking`](https://docs.hotwax.co/documents/v/system-admins/administration/facilities/manage-parkings). A dedicated brokering run is performed to check the orders in the `Unfillable Parking` and allocate inventory to them.
 
 ### Auto-cancellation
 
@@ -108,7 +108,7 @@ A scheduled job checks if the auto-cancellation date for unfillable orders has b
 
 ### Avoid auto-cancellation
 
-Retailers with prior knowledge of future inventory through their purchase orders can move these unfillable orders in bulk from `Unfillable Parking` to the [`Unfillable Hold Parking`](https://docs.hotwax.co/user-guides/administration/facilities/manage-parkings) using a CSV file. This action prevents these orders from being automatically canceled and allows them to be fulfilled in the future.
+Retailers with prior knowledge of future inventory through their purchase orders can move these unfillable orders in bulk from `Unfillable Parking` to the [`Unfillable Hold Parking`](https://docs.hotwax.co/documents/v/system-admins/administration/facilities/manage-parkings) using a CSV file. This action prevents these orders from being automatically canceled and allows them to be fulfilled in the future.
 
 When the inventory arrives, retailers can schedule a brokering run that looks at the orders present in the `Unfillable Hold Parking` and allocates inventory for them.
 
@@ -122,13 +122,13 @@ HotWax Commerce then checks the custom tag on orders. If the tag is present on a
 
 ### BOPIS fulfillment success and order completion:
 
-Store associates can view BOPIS orders in their [<mark style="color:orange;">**BOPIS Fulfillment App**</mark>](../bopis/) and begin preparing the order for customer pick-up.
+Store associates can view BOPIS orders in their [<mark style="color:orange;">**BOPIS Fulfillment App**</mark>](https://docs.hotwax.co/documents/orders/bopis) and begin preparing the order for customer pick-up.
 
 Once the order is prepared, customer receives an email informing them that their order is ready for pickup. After an order has been picked up by the customer, the order status is updated from <mark style="color:orange;">**“Approved” to “Completed”**</mark> in HotWax Commerce. A `Completed Orders` job in HotWax Commerce also marks orders as <mark style="color:orange;">**"Fulfilled" in eCommerce.**</mark>
 
 ### BOPIS fulfillment failure:
 
-In the event store associates cannot find the inventory to fulfill a pick-up order, for reasons such as items being out of stock or damaged, a store manager has the authority to reject that order. All the rejected BOPIS orders are then automatically sent to the [`BOPIS Rejected Queue`](https://docs.hotwax.co/user-guides/administration/facilities/manage-parkings).
+In the event store associates cannot find the inventory to fulfill a pick-up order, for reasons such as items being out of stock or damaged, a store manager has the authority to reject that order. All the rejected BOPIS orders are then automatically sent to the [`BOPIS Rejected Queue`](https://docs.hotwax.co/documents/v/system-admins/administration/facilities/manage-parkings).
 
 In this scenario, an email is automatically sent to the customer for <mark style="color:orange;">**alternative fulfillment options such as pickup from another store or home delivery**</mark>. Retailers can configure these options based on their order fulfillment strategy.
 
@@ -146,7 +146,7 @@ Once the pre-order inventory arrives and the promise date is reached, a dedicate
 
 In the event, retailers want control over releasing and fulfilling their Pre-Orders, they can leverage the HotWax Commerce <mark style="color:orange;">**Pre-Order Management App**</mark> to manually release Pre-Orders from the `Pre-Order Parking` to the `Brokering Queue`.
 
-Learn more about [Pre-Orders Management](https://docs.hotwax.co/user-guides/orders/pre-orders)
+Learn more about [Pre-Orders Management](https://docs.hotwax.co/documents/v/retail-operations/orders/pre-orders)
 
 ## Fulfillment of Backorders
 
