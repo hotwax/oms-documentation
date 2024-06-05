@@ -8,6 +8,7 @@ This report serves as a crucial tool for retailers in their efforts to reduce re
 
 HotWax Commerce's rejection report enables users to make decisions aimed at improving overall operational efficiency. By understanding which items are rejected more frequently and in which locations, retailers can implement strategies to minimize rejections and ensure accurate, timely order fulfillment. Ultimately, this proactive approach not only enhances customer satisfaction but also strengthens the retailer's competitive edge in the market.
 
+### Glossary
 
 | Item                 | Item Details                                                                                 | HC Entity                         |
 |----------------------|----------------------------------------------------------------------------------------------|-----------------------------------|
@@ -100,6 +101,8 @@ LIMIT 50000;
 
 Rejection reason reports provide valuable insights into rejection rates and reasons across different facilities. These reports outline the number of rejections at each facility along with the underlying reasons behind them. This allows retailers to pinpoint facilities with higher rejection rates and take targeted actions to enhance their performance. For example, if a store frequently experiences rejections due to items being out of stock, conducting cycle counts can help reconcile discrepancies between the system's available inventory and the physical stock in the store. Moreover, by identifying facilities where damaged items are more prevalent, retailers can streamline operations to mitigate such occurrences. Ultimately, the aim of these reports is to pinpoint the location and frequency of rejections and implement measures to minimize them, thereby optimizing overall store performance.
 
+### Glossary
+
 | Item                 | Item Details                                                                                 | HC Entity                         |
 |----------------------|----------------------------------------------------------------------------------------------|-----------------------------------|
 | **Location**         | The physical location or facility from which an order item was rejected.                      | OrderFacilityChange.FROM_FACILITY_ID |
@@ -181,6 +184,7 @@ LIMIT 5000;
 
 Merchants use third-party services to ship orders to customers' addresses. Orders are picked, packed, and handed to third-party logistics (3PL) companies like FedEx and UPS. All shipments dispatched have their unique tracking ID. This tracking ID is provided by the 3PLs and helps customers keep track of their orders. Because multiple shipments are sent out daily, merchants require a centralized view of order shipment details. This Shopify report helps merchants quickly identify an order's tracking ID, shipping address, and dispatch location. The Shipment Tracking Report shows the daily shipment details for each order. Using this report, merchants can quickly resolve questions related to order tracking by finding the tracking ID and the shipping address for the order.
 
+### Glossary
 
 | Item                 | Item Details                                                                                   | HC Entity                         |
 |----------------------|------------------------------------------------------------------------------------------------|-----------------------------------|
@@ -265,6 +269,8 @@ LIMIT 10;
 
 The Shopify Fulfillment Status Report offers retailers valuable insights into their order processing. It highlights the number of orders fulfilled and those still pending, aiding in the assessment of operational efficiency. Retailers can leverage reports from Hotwax to access historical data and current statistics, enabling them to track performance over time and promptly address any issues. It serves as a progress report for order fulfillment, ensuring smooth operations.
 
+### Glossary
+
 | Item                        | Item Details                                                                                                  | HC Entity                               |
 |-----------------------------|---------------------------------------------------------------------------------------------------------------|-----------------------------------------|
 | **Hotwax Order ID**         | Unique identifier for the order in Hotwax system                                                             | OrderFulfillmentHistory.ORDER_ID        |
@@ -348,6 +354,8 @@ LIMIT 100;
 ## Daily Store Shipment Performance Report
 
 Merchants measure their stores’ omnichannel order fulfillment rates and want a clear, accurate view of their daily shipping performance. Therefore, merchants seek a detailed storewide report that displays every store’s daily shipping performance. The Daily Store Shipment Performance Report shows the number of daily shipped orders for each store, giving an overview of the store’s daily performance. This performance report also yields valuable insight into the most active and least active stores within a set timeframe. With this data, retailers can work with underperforming stores to understand the reason for low activity, identify the cause of underperformance, and resolve the issue. Similarly, the retailer wants to see product-level shipping performance. The report also includes product-level performance. This information helps retailers understand a newly launched product's performance in a given area or region. Retailers can plan their inventory accordingly after knowing which products perform best at a given store.
+
+### Glossary
 
 | Item          | Item Details                                                                                     | HC Entity                               |
 |---------------|--------------------------------------------------------------------------------------------------|-----------------------------------------|
@@ -446,6 +454,7 @@ LIMIT 1000;
 
 The Store Daily Orders Fulfillment Report empowers retailers to monitor the efficiency and effectiveness of their store operations. By tracking the daily number of orders fulfilled per store, retailers can identify trends and patterns, facilitating individual store performance assessments. This insight aids in recognizing top-performing stores and pinpointing areas for improvement in underperforming ones. With Store Daily Orders Fulfillment Reports, retailers can optimize store operations, enhance customer satisfaction, and ultimately drive revenue growth.
 
+### Glossary
 
 | Item          | Item Details                              | HC Entity                          |
 |---------------|-------------------------------------------|------------------------------------|
