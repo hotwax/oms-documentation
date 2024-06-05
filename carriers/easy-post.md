@@ -113,10 +113,11 @@ The `postage_label` parameter generates labels with specific size and format req
 
 **In case of international shipping:**
 
-Fulfilling international orders requires accurate customs information for generating shipping labels and obtaining customs documents. While HotWax stores product details, it lacks the essential HS Tariff number for customs purposes.
+Fulfilling international orders requires accurate customs information for generating shipping labels and obtaining customs documents. While HotWax stores product details, it lacks the essential `HS Tariff number` and `Custom Signer information` for customs purposes.
 
-HotWax integrates with your ERP system, automatically fetching HS Tariff numbers for products during order fulfillment. This daily synchronization ensures readily available HS codes whenever new products are added. HotWax stores these retrieved HS Tariff numbers alongside existing `Good identifications` for each product. EasyPost requires a `custom_signer` value during shipment creation to validate the request.
-HotWax retrieves the designated custom signer value assigned by retailer stored in system properties in OMS. 
+HotWax integrates with your ERP system, automatically fetching HS Tariff numbers for products during order fulfillment. This daily synchronization ensures readily available HS codes whenever new products are added. HotWax stores these retrieved HS Tariff numbers alongside existing `Good identifications` for each product. 
+
+Alongside, HS tariff number of the product, EasyPost also requires a `custom_signer` value during shipment creation to validate the request. HotWax retrieves the designated custom signer value assigned by retailer stored in system properties in OMS. 
 
 Once both HS Tariff numbers and custom signer information are available, HotWax constructs a streamlined create shipment API request to EasyPost and generate shipping label.
 
