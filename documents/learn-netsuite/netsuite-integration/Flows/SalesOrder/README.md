@@ -59,7 +59,7 @@ Brokering runs are scheduled by retailers to execute at specified intervals, all
 
 In the brokering run, the order routing engine looks for the best fulfillment location to fulfill orders from.
 
-Learn more about [order brokering and routing](https://docs.hotwax.co/user-guides/orders/brokering/configurablerouting)
+Learn more about [order brokering and routing](https://docs.hotwax.co/documents/v/retail-operations/orders/brokering/configurablerouting)
 
 In the event where an order is routed to a warehouse fulfillment location, HotWax Commerce synchronizes allocation details to NetSuite.
 

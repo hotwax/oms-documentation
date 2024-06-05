@@ -66,7 +66,7 @@ Initially, we attempted to synchronize inventory data from NetSuite to HotWax Co
 
 #### Efficiency of Map Reduce Scripts
 
-Subsequently, we transitioned to Map Reduce scripts to manage the synchronization of inventory between NetSuite and HotWax Commerce. Map Reduce scripts are designed to handle large datasets efficiently and demonstrated significantly improved performance compared to Scheduled Scripts. Notably, even if the script ~~execution~~ extends beyond one hour, Map Reduce jobs are designed to manage NetSuite resources effectively, allowing them to complete the task. Based on our experience, processing a million inventory records required approximately two hours.
+Subsequently, we transitioned to Map Reduce scripts to manage the synchronization of inventory between NetSuite and HotWax Commerce. Map Reduce scripts are designed to handle large datasets efficiently and demonstrated significantly improved performance compared to Scheduled Scripts. Notably, even if the script execution extends beyond one hour, Map Reduce jobs are designed to manage NetSuite resources effectively, allowing them to complete the task. Based on our experience, processing a million inventory records required approximately two hours.
 
 #### Harnessing SearchTask Function
 

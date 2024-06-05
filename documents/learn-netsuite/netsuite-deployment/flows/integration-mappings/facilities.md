@@ -8,7 +8,7 @@ description: >-
 
 HotWax Commerce routes orders to optimal fulfillment locations. To facilitate order routing, it’s imperative to configure all facilities, including both stores and warehouses, within HotWax Commerce.
 
-You can easily add facilities existing in your network using the HotWax Commerce Facility App. To learn how you can add new facilities in HotWax Commerce, please refer to the [Facility App Documentation](https://docs.hotwax.co/user-guides/administration/facilities/add-new-facilities).
+You can easily add facilities existing in your network using the HotWax Commerce Facility App. To learn how you can add new facilities in HotWax Commerce, please refer to the [Facility App Documentation](https://docs.hotwax.co/documents/v/system-admins/administration/facilities).
 
 Once all the facilities have been set up, those facilities that will be using NetSuite for fulfillment should be added to the NetSuite Fulfillment group.
 
