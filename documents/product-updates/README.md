@@ -1,3 +1,3 @@
-# Monthly Product Updates
+# Product Releases- Overview
 
-This sapce have monthly product updates of HotWax Commerce
+This space has monthly product updates of HotWax Commerce
