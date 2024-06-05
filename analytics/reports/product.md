@@ -4,6 +4,8 @@
 
 Sometimes store associates place a custom gift card order that is not mapped to the parent product in Shopify and NetSuite. In such cases, retailers face synchronization issues between Shopify and NetSuite due to unmapped gift cards. The custom gift card report serves as a solution to address these synchronization issues. This report shows unmapped products, enabling retailers to manually map these products to NetSuite, inventory them, and associate them with NetSuite IDs.
 
+## Glossary
+
 | Field Header  | Description                                                                 | HC Entity                |
 |---------------|-----------------------------------------------------------------------------|--------------------------|
 | **ORDER_ID**  | It helps in distinguishing one order from another.                          | OrderHeader.ORDER_ID     |
