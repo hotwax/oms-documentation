@@ -1,5 +1,54 @@
 # Order Reports
 
+## HotWax Order Count Report
+
+The HotWax Order Count Report offers a daily snapshot of new orders in the Order Management System (OMS), providing a quick reference for monitoring overall order activity and facilitating proactive decision-making. In the Shopify context, this report ensures seamless synchronization by comparing daily order counts. It serves as a vital tool for merchants, quickly identifying and addressing any discrepancies in the synchronization process, ensuring accurate and efficient order fulfillment.
+
+### Glossary
+
+| Field Header          | Description                                                 | HC Entity                  |
+|-----------------------|-------------------------------------------------------------|----------------------------|
+| ORDER_COUNT           | The count of the orders in the HotWax Commerce              | Count of OrderHeader.EXTERNAL_ID |
+
+<details>
+
+**<summary>SQL Query to Generate HotWax Order Count Report</summary>**
+
+```sql
+SELECT count(`EXTERNAL_ID`) AS `COUNT(EXTERNAL_ID)`
+FROM
+  (SELECT oh.ORDER_ID ,
+          oh.EXTERNAL_ID ,
+          CASE
+              WHEN oh.SALES_CHANNEL_ENUM_ID = 'POS_SALES_CHANNEL' THEN 'POS'
+              ELSE 'Shopify'
+          END AS SALES_CHANNEL ,
+          oh.STATUS_ID ,
+          oh.ORDER_DATE
+   FROM order_header oh
+   WHERE oh.ORDER_TYPE_ID = 'SALES_ORDER') AS virtual_table
+WHERE (`STATUS_ID` NOT IN ('ORDER_CANCELLED'))
+  AND `ORDER_DATE` >= STR_TO_DATE('2023-05-08 00:00:00.000000', '%Y-%m-%d %H:%i:%s.%f')
+  AND `ORDER_DATE` < STR_TO_DATE('2024-05-08 00:00:00.000000', '%Y-%m-%d %H:%i:%s.%f')
+LIMIT 100000;
+```
+
+</details>
+
+### Query Logic
+
+**Data Selection:** The SQL query selects specific data fields required for the report. This typically includes information about orders, such as order IDs and other relevant details.
+
+**Filtering HotWax Orders:** The primary objective of the report is to count orders processed by the HotWax system. Therefore, the query includes conditions to filter the data and include only orders processed by HotWax.
+
+**Joining Relevant Tables:** To compile a comprehensive dataset, the SQL query joins tables containing order information. This typically involves joining the `order_header` table with other relevant tables based on common fields like `ORDER_ID`.
+
+**Selecting Necessary Information:** From the joined tables, the query selects columns related to order details needed for analysis or reporting. This could include order IDs, order dates, and other relevant information.
+
+**Filtering and Grouping Data:** Conditions are applied to filter the data and include only orders processed by HotWax. This might involve checking if certain attributes or flags indicate that the order was processed by HotWax. The query groups the selected data based on certain criteria, such as order IDs or dates. Grouping data helps summarize and organize it for analysis.
+
+**Counting HotWax Orders:** Within each group, the query counts the number of orders processed by HotWax. This provides insights into the volume of orders processed by the system over a specified period.
+
 ## Sales Order Count by Channel Report
 
 Retailers receive orders through various channels, including eCommerce websites, social media platforms, online marketplaces, and point-of-sale (POS) systems. Retailers need visibility of their sales into channel performance. The Sales Order Count by Channel report offers a clear summary of order counts per channel, enabling retailers to identify high-performing channels and areas needing improvement. Retailers can easily discern the total count of orders per channel, whether it's from POS, Shopify, or any other channel enabling effective tracking and analysis.
