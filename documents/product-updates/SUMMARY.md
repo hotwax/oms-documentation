@@ -1,6 +1,13 @@
 # Table of contents
 
 * [Product Releases- Overview](README.md)
+* [May'24](may24/README.md)
+  * [Added support for configurable products](may24/added-support-for-configurable-products.md)
+  * [Manage multi-currency sales orders and returns](may24/manage-multi-currency-sales-orders-and-returns.md)
+  * [Added support for FedEx REST APIs](may24/added-support-for-fedex-rest-apis.md)
+  * [View ATP Computation](may24/view-atp-computation.md)
+  * [Introducing Order Lookup page](may24/introducing-order-lookup-page.md)
+  * [Introducing Available to Promise App](may24/introducing-available-to-promise-app.md)
 * [April'24](april24/README.md)
   * [Configure Shopify BOPIS/Pre-order Scripts](april24/configure-shopify-bopis-pre-order-scripts.md)
 * [March'24](march24/README.md)
