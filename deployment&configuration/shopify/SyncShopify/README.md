@@ -62,7 +62,7 @@ Only necessary for Multi-Shopify store configurations where a common product cat
 
 In a multi-Shopify store setup, a streamlined process needs to be implemented for product synchronization. In OMS, products are imported from a designated Master Shopify store, serving as the primary catalog. Subsequently, these products can be linked with products from other Shopify stores, functioning as child catalogs that share and sell the same products. Synchronization is achieved through the use of SKU or UPC, ensuring a cohesive and unified product management experience across the entire network of associated stores.
 
-Once the product from the master catalog is in HotWax Commerce, retailers need to associate it with child catalogs using the `Associate products with sub-catalog` job. This is a one-time action needed when initially importing all products to establish their associations, ensuring a comprehensive association between the master catalog and child catalogs. Thereafter, regular job needs to be schedule to create association whenever a new product is created in Shopify and downloaded in HotWax Commerce.
+Once the product from the master catalog is in HotWax Commerce, retailers need to associate it with child catalogs using the `Associate products with sub-catalog` job. This is a one-time action needed when initially importing all products to establish their associations, ensuring a comprehensive association between the master catalog and child catalogs. Thereafter, a regular job needs to be scheduled to create associations whenever a new product is created in Shopify and downloaded in HotWax Commerce.
 
 Follow these steps to schedule the job:
 
