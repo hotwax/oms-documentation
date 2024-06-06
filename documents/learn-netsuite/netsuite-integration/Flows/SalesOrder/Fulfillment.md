@@ -8,7 +8,7 @@ description: >-
 
 ## Fulfillment in NetSuite
 
-When the warehouse fulfillment team begins the fulfillment of the order item, an item fulfillment record is created in NetSuite. As soon as the order item is picked, packed and shipped, the item fulfillment record is marked as “Shipped” and the order status is updated from "Pending Fulfillment" to "Pending "Billing".
+When the warehouse fulfillment team begins the fulfillment of the order item, an item fulfillment record is created in NetSuite. As soon as the order item is picked, packed and shipped, the item fulfillment record is marked as “Shipped” and the order status is updated from "Pending Fulfillment" to "Pending Billing".
 
 Synchronizing shipped order items from NetSuite to HotWax Commerce ensures that the order status is consistent and updated across both systems.
 
