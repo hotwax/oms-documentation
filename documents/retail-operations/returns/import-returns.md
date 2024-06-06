@@ -19,4 +19,4 @@ Here's how returns can be imported from Shopify to HotWax Commerce:
 5. Specify the job run time and preferred frequency based on your operational needs.
 6. Click on `Save Changes` to schedule the job according to the defined run time and frequency.
 
-Refer to our [Shopify Integration guide](https://docs.hotwax.co/integration-resources/how-does-hotwax-commerce-manage-order-returns/import-returns-from-shopify) for detailed insights into how the `import return` job facilitates the import of order returns from Shopify.
+Refer to our [Shopify Integration guide](../../learn-shopify/integration/how-does-hotwax-commerce-manage-order-returns/import-returns-from-shopify.md) for detailed insights into how the `import return` job facilitates the import of order returns from Shopify.

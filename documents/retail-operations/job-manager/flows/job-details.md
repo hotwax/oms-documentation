@@ -75,7 +75,7 @@ Make changes to the job's parameters, settings, or execution details as necessar
 Video: Schedule a job
 {% endembed %}
 
-***
+
 
 ## Debugging
 
@@ -83,4 +83,4 @@ Video: Schedule a job
 
 Quickly share the important job related information such as job's ID, name, description, and runtime for debugging.
 
-***
+
