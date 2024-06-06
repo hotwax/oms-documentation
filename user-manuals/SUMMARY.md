@@ -71,6 +71,7 @@
   * [Reports](orders/fulfillment/reports.md)
   * [Create Shipping Boxes](orders/fulfillment/create-shipping-boxes.md)
   * [Create Pickers](orders/fulfillment/create-pickers.md)
+  * [Order Lookup Page](orders/fulfillment/order-lookup.md)
 * [Brokering](orders/brokering/README.md)
   * [Order Routing](brokering/configurableRouting.md)
   * [Rule Builder](brokering/rule-builder.md)
