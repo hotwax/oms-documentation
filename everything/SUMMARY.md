@@ -50,3 +50,7 @@
   * [Tathya Authentication](tathya/userCreation/tathyaAuthentication.md)
   * [Listing User in Tathya](tathya/userCreation/listUsersTathya.md)
   * [User Permissions](tathya/userCreation/user-permissions.md)
+
+## Reports
+
+* [UCG Order Reports](reports/orders.md)
