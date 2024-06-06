@@ -45,7 +45,7 @@ Exchange orders that are created in Shopify are imported into HotWax Commerce ju
 
 When it comes to pushing sales order data from HotWax Commerce to NetSuite, the handling of all web orders remains consistent irrespective of the sales channel they originate from. The generated order feed from HotWax commerce is also generic, similar to that of regular orders. This means that HotWax can synchronize web exchange orders to NetSuite in the same manner it synchronizes regular orders.
 
-More specifically, for all web exchange orders, the sync for Customers, Sales Order Item Line IDs, Sales Order IDs, Order Allocation, and Fulfillment remains consistent between [HotWax Commerce and NetSuite](https://docs.hotwax.co/documents/v/learn-netsuite/supported-integrations/salesorder/orderapproval).
+More specifically, for all web exchange orders, the sync for Customers, Sales Order Item Line IDs, Sales Order IDs, Order Allocation, and Fulfillment remains consistent between [HotWax Commerce and NetSuite](../SalesOrder/OrderApproval.md).
 
 <figure><img src="../../../.gitbook/assets/31.png" alt=""><figcaption><p>Sync web exchanges to NetSuite</p></figcaption></figure>
 
@@ -89,7 +89,7 @@ Because of these distinctions between POS sales and POS exchange sales, HotWax C
 * The sales channel is `Loop Exchange`
 * The NetSuite order identification is absent. This condition also helps make sure that in-store exchange orders are segregated from web exchange orders and these orders are not sent to NetSuite twice.
 
-As previously discussed, the [synchronization of POS sales from HotWax Commerce to NetSuite](https://docs.hotwax.co/documents/v/learn-netsuite/supported-integrations/salesorder/posorders) involves the creation of Cash Sale records. All the eligible POS exchange sales are then synchronized to NetSuite just like any other POS sales and Cash Sales are created in NetSuite for POS exchange sales.
+As previously discussed, the [synchronization of POS sales from HotWax Commerce to NetSuite](../SalesOrder/posOrders.md) involves the creation of Cash Sale records. All the eligible POS exchange sales are then synchronized to NetSuite just like any other POS sales and Cash Sales are created in NetSuite for POS exchange sales.
 
 #### Restocking Item from the Original Order
 

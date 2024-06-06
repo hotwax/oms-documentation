@@ -10,7 +10,7 @@ description: >-
 
 HotWax Commerce manages order downloads for bundles through two distinct jobs:
 
-Job-1: [Import Orders:](https://docs.hotwax.co/integration-resources-1/how-are-orders-downloaded-from-shopify-to-hotwax-commerce)
+Job-1: [Import Orders](how-are-orders-downloaded-from-shopify-to-hotwax-commerce.md):
 
 This job downloads orders for product bundles alongside other open sales orders.
 

@@ -24,7 +24,7 @@ Once the gift card order is fulfilled in the Store Fulfillment App, it is automa
 
 The fulfillment update for gift card orders, along with tracking details, is synchronized to Shopify using the `Completed Orders` job.
 
-Learn more about [order fulfillment updates from HotWax Commerce to Shopify](https://docs.hotwax.co/integration-resources-1/how-is-the-order-fulfillment-status-updated-to-shopify-from-hotwax-commerce)
+Learn more about [order fulfillment updates from HotWax Commerce to Shopify](how-is-the-order-fulfillment-status-updated-to-shopify-from-hotwax-commerce.md)
 
 {% hint style="info" %}
 It’s crucial to note that the gift cards are not functional until they are activated on Shopify. The activation process in Shopify is a necessary step to ensure that the gift cards are redeemable and fully functional upon receipt by customers.
@@ -46,7 +46,7 @@ Digital gift cards are auto-activated and customers can directly redeem them by 
 
 When the fulfillment location where a gift card item is allocated leverages NetSuite for fulfillment, usually a warehouse, then the HotWax Commerce syncs those items' allocation with NetSuite.
 
-Learn more about [fulfillment in NetSuite](https://docs.hotwax.co/integration-resources/v/netsuite-integration/supported-integrations/salesorder/fulfillment)
+Learn more about [fulfillment in NetSuite](https://docs.hotwax.co/documents/v/learn-netsuite/supported-integrations/salesorder/fulfillment)
 
 ### Activation of Gift Cards
 
