@@ -18,7 +18,7 @@ Orders will only be allocated for fulfillment after they have been approved.
 
 ## Synchronize Customers from HotWax Commerce to NetSuite
 
-To successfully create a sales order in NetSuite, [it is a prerequisite to have the customer information pre-existing within NetSuite's database](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section\_162886247923.html#Best-Practices-for-Order-Sync). If the order contains a new customer not present in NetSuite, the system won't allow the order to be pushed. Therefore, it's vital to synchronize customer data from HotWax Commerce to NetSuite before order creation.
+To successfully create a sales order in NetSuite, [it is a prerequisite to have the customer information pre-existing within NetSuite's database](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section\_162886247923.html#Best-Practices-for-Order-Sync). If the order contains a new customer not present in NetSuite, the system won't allow the order to be pushed.
 
 <figure><img src="../../../.gitbook/assets/6.png" alt=""><figcaption><p>Customer Sync from HotWax Commerce to NetSuite</p></figcaption></figure>
 
