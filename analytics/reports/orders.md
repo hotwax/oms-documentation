@@ -114,7 +114,6 @@ Retailers often encounter synchronization issues between Shopify and Netsuite, l
 | HC_ORDER_ID       | The ID assigned to the order in the OMS                    | OrderHeader.ORDER_ID        |
 | HC_ENTRY_DATE     | The date and time when the order was entered into the OMS  | OrderHeader.ENTRY_DATE      |
 | TIME_SINCE_ENTRY  | The time elapsed since the order was entered into the OMS | OrderHeader.ENTRY_DATE      |
-|                   | (Calculated difference of current system datetime with the datetime when order entered in OMS) | |
 | SALES_CHANNEL     | Indicates the sales channel through which the order was received | OrderHeader.SALES_CHANNEL_ENUM_ID |
 
 <details>
@@ -261,8 +260,8 @@ The "Duplicate Order" report provides crucial insights into the frequency of dup
 |----------------|---------------------------------------------------------------|----------------------|
 | ORDER_NAME     | Refers to the name or identifier of the order                 | OrderHeader.ORDER_NAME |
 | COUNT          | The total number of duplicate orders associated with the same order name | OrderHeader.EXTERNAL_ID (Count of all the unique ids of orders as stored in the external system) |
-| HC_Order_Ids   | Comma-separated list of HotWax Commerce Order IDs             |                      |
-| Netsuite_Order_Ids | Comma-separated list of NetSuite Order IDs                   |                      |
+| HC_Order_Ids   | Comma-separated list of HotWax Commerce Order IDs             | OrderHeader.ORDER_ID |
+| Netsuite_Order_Ids | Comma-separated list of NetSuite Order IDs                   | oid.ORDER_IDENTIFICATION_TYPE_ID |
 
 <details>
 
