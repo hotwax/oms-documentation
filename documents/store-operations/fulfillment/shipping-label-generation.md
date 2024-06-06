@@ -17,7 +17,7 @@ HotWax Commerce relies on the accurate setup of shipping carriers to facilitate 
 Resolution:
 
 1. Verify if the shipping carrier corresponding to the desired shipping method is set up in HotWax Commerce.
-2. Follow the documentation on creating a carrier in HotWax Commerce [here](https://docs.hotwax.co/user-guides/administration/shipping-methods/add-carrier).
+2. Follow the documentation on creating a carrier in HotWax Commerce [here](https://docs.hotwax.co/documents/v/system-admins/fulfillment/shipping-methods/add-carrier).
 3. Ensure the carrier setup includes accurate details relevant to the shipping method.
 
 **Case: Shipping Gateway Configurations Missing**
@@ -27,7 +27,7 @@ Shipping gateway configurations are essential for HotWax Commerce to communicate
 Resolution:
 
 1. Check if the carrier data has been successfully loaded into HotWax Commerce.
-2. Follow the steps outlined in the documentation to add shipping gateway configurations [here](https://docs.hotwax.co/deployment-and-configurations/user-and-gateway-configuration/shippinggateways).
+2. Follow the steps outlined in the documentation to add shipping gateway configurations [here](https://docs.hotwax.co/documents/v/system-admins/fulfillment/shipping-methods/shippinggateways).
 3. Ensure that the shipping gateway configurations are accurately entered and correspond to the carrier data.
 
 **Case: Shipping Method Not Configured**
@@ -37,7 +37,7 @@ Shipping methods need to be configured within HotWax Commerce to map the shippin
 Resolution:
 
 1. Verify if the shipment method corresponding to the carrier is set up in HotWax Commerce.
-2. Follow the documentation to set up shipping methods [here](https://docs.hotwax.co/deployment-and-configurations/user-and-gateway-configuration/shippinggateways#add-shipment-methods).
+2. Follow the documentation to set up shipping methods [here](https://docs.hotwax.co/documents/v/system-admins/fulfillment/shipping-methods/shippinggateways#add-shipment-methods).
 
 **Case: Shipment Boxes Not Configured for Carrier**
 
@@ -45,7 +45,7 @@ Proper configuration of shipment boxes within HotWax Commerce ensures accurate l
 
 Resolution:
 
-1. Follow the steps outlined in the documentation to configure shipment boxes for the carrier [here](https://docs.hotwax.co/user-guides/orders/fulfillment/shipping-box).
+1. Follow the steps outlined in the documentation to configure shipment boxes for the carrier [here](https://docs.hotwax.co/documents/v/system-admins/fulfillment/shipping-methods/shipping-box).
 2. Ensure that the dimensions and specifications of the shipping boxes are accurately entered to facilitate accurate label generation.
 
 ## Check Facility Association
@@ -56,7 +56,7 @@ In HotWax Commerce, shipping labels are generated based on the association betwe
 
 Resolution:
 
-Verify Facility Association: Confirm that the facility for which the shipping label is being generated is properly associated with the corresponding shipping carrier. Refer to the documentation [here](https://docs.hotwax.co/deployment-and-configurations/user-and-gateway-configuration/shippinggateways) for guidance on associating facilities with carriers.
+Verify Facility Association: Confirm that the facility for which the shipping label is being generated is properly associated with the corresponding shipping carrier. Refer to the documentation [here](https://docs.hotwax.co/documents/v/system-admins/fulfillment/shipping-methods/shippinggateways) for guidance on associating facilities with carriers.
 
 **Case: Shipping Label Generation Disabled for Facility**
 

@@ -11,4 +11,4 @@ The Inventory Receiving App enables retailers to precisely track the physical in
 
 Additionally, the Inventory Receiving App streamlines the receiving process by allowing store associates to efficiently enter or scan products using handheld devices like mobile phones or iPads. As a Progressive Web App (PWA), it offers flexible browser-based access or can be easily saved as an icon on store associates' devices, providing convenient one-click accessibility. This adaptability ensures a seamless and expedited inventory-receiving experience, enhancing overall operational efficiency.
 
-For a step-by-step guide on receiving the shipment, refer to this [user guide](https://docs.hotwax.co/user-guides/inventory/receiving/receiving).
+For a step-by-step guide on receiving the shipment, refer to this [user guide](../receiving/receiving.md).

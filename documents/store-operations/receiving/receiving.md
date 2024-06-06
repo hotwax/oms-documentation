@@ -19,7 +19,7 @@ Additionally, the Inventory Receiving App streamlines the receiving process by a
 The first page users see when they log into the app is the `Shipments` page which houses a complete list of ASNs received from ERP or WMS. To locate specific ASNs, store associates can scan the ASN barcode from the physical copy received along with the package. Store associates can also manually input the ASN ID in the `Search` box to locate the shipment.
 
 {% hint style="info" %}
-Store associates can log in to the Inventory Receiving App only if they are [associated with a facility.](../users/manageUser.md#add-facilities)
+Store associates can log in to the Inventory Receiving App only if they are [associated with a facility.](https://docs.hotwax.co/documents/v/system-admins/administration/users/user-permission)
 {% endhint %}
 
 {% embed url="https://youtu.be/MUkSgK9VrfY" %}

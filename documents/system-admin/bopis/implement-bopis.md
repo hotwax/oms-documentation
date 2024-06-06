@@ -10,7 +10,7 @@ This document gives a sequential walkthrough of how to enable your facilities fo
 
 ## Create a Facility for Store Pickup Options
 
-To facilitate BOPIS operations, retailers need to [set up and configure facilities](../../facilities/) for store pickups where customers can collect their purchases by ordering online.
+To facilitate BOPIS operations, retailers need to [set up and configure facilities](../administration/facilities/add-new-facilities.md) for store pickups where customers can collect their purchases by ordering online.
 
 ### Set up Facilities
 
@@ -29,7 +29,7 @@ To facilitate BOPIS operations, retailers need to [set up and configure faciliti
 3. Add the contact number and further add `latitude and longitude` details (to ensure the exact geolocation of the facility).
 
 {% hint style="info" %}
-HotWax Commerce App uses ["storeLookup"](https://docs.hotwax.co/integration-resources/v/hotwax-commerce/journeys/introduction-buy-online-pickup-in-store/bopis-pdp-experience) API to display the distance of stores from a customer's current location. The API relies on the latitude and longitude coordinates of facilities to determine their proximity to the customer. Make sure that latitude and longitudes are added for both new and existing facilities.
+HotWax Commerce App uses ["storeLookup"](../../learn-oms/api/facility/store-lookup.md) API to display the distance of stores from a customer's current location. The API relies on the latitude and longitude coordinates of facilities to determine their proximity to the customer. Make sure that latitude and longitudes are added for both new and existing facilities.
 {% endhint %}
 
 ### Add Product Store
@@ -42,7 +42,7 @@ Facilities can have products from multiple brands which are configured as produc
 
 ## Fulfillment Configuration of Facilities
 
-The Facility groups are used to define the scope and functionality of the facility for omnichannel order management. If a retailer wants to configure the fulfillment settings of facilities in bulk, they can add facilities to the[ group](../../facilities/manage-groups.md). `Pickup` is a default facilities group type to ensure that facilities are available to the customer on Shopify PDP as a pickup option. Only facilities that are added to this group will be available to the customer on Shopify PDP. Turning the toggle `on` when creating facilities or from the facility details page for `allow pickup` adds the facility to this facility group.
+The Facility groups are used to define the scope and functionality of the facility for omnichannel order management. If a retailer wants to configure the fulfillment settings of facilities in bulk, they can add facilities to the[ group](../administration/facilities/manage-groups.md). `Pickup` is a default facilities group type to ensure that facilities are available to the customer on Shopify PDP as a pickup option. Only facilities that are added to this group will be available to the customer on Shopify PDP. Turning the toggle `on` when creating facilities or from the facility details page for `allow pickup` adds the facility to this facility group.
 
 Facilities have the option to choose whether or not to participate in selling their inventory online. If a facility is capable of fulfilling orders and wants its inventory to be sold online, it has to be included in the `Online facility` group. Retailers can also turn the toggle on from 'sell online card' to add the facility to `Online facility` group. Similarly, if the facility supports HotWax Commerce Fulfillment app, then turn the toggle on of `Use Native Fulfillment App` or add the facility to `OMS Fulfillment group`.
 
@@ -50,7 +50,7 @@ Facilities have the option to choose whether or not to participate in selling th
 
 ### Inventory Sync in HotWax Commerce
 
-For a product to be available for pickup at Shopify PDP, it must have inventory at the retail store (facility). HotWax Commerce offers automated and manual bulk [Inventory upload through CSV](import-app.inventory.md). Additionally HotWax commerce gets [inventory feed from ERP, WMS, or POS systems](business-process-models/inventorylifecycle.md), to update the inventory in its system. The external system places the order on the SFTP location HotWax commerce processes these files and updates the inventory in its system.
+For a product to be available for pickup at Shopify PDP, it must have inventory at the retail store (facility). HotWax Commerce offers automated and manual bulk [Inventory upload through CSV](../../retail-operations/inventory-management/inventory-upload.md). Additionally HotWax commerce gets [inventory feed from ERP, WMS, or POS systems](../../learn-oms/business-process-models/inventorylifecycle.md), to update the inventory in its system. The external system places the order on the SFTP location HotWax commerce processes these files and updates the inventory in its system.
 
 ### ATP Computation
 
@@ -58,7 +58,7 @@ When the inventory is received, a product’s QOH and ATP is updated in HotWax C
 
 ATP = QOH - (Reserved quantities + Safety stock + Threshold + Orders in brokering queue)
 
-For each store that allows BOPIS, HotWax Commerce uses the [checkInventory](https://docs.hotwax.co/integration-resources/v/hotwax-commerce/api-and-data-feeds/inventory/check-inventory) API to check the available to promise (ATP) inventory for the desired product. Display all the facilities with non-zero inventory numbers on the product detail page (PDP) for customers to select and place a BOPIS order.
+For each store that allows BOPIS, HotWax Commerce uses the [checkInventory](../../learn-oms/api/inventory/check-inventory.md) API to check the available to promise (ATP) inventory for the desired product. Display all the facilities with non-zero inventory numbers on the product detail page (PDP) for customers to select and place a BOPIS order.
 
 ## Configure Shopify BOPIS Scripts
 
