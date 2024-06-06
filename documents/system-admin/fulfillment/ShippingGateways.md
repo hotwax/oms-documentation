@@ -46,7 +46,7 @@ Connect URL, Access Account Nbr, Access Meter Number, Access User Key, Access Us
 
 After completing all field entries, you can save the shipment gateway configurations by clicking the `Add` button within the form. If a user has entered any incorrect information in any field they can delete the configuration by clicking on the `Delete` icon in the last column and add a new shipping gateway configuration with the correct information. We will be soon releasing the edit feature to modify the configurations.
 
-<figure><img src="../.gitbook/assets/demo-oms.hotwax.io_commerce_control_CarrierSetup_partyId=FEDEX.png" alt=""><figcaption><p>Image: Add Shipment Gateway Configuration</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/demo-oms.hotwax.io_commerce_control_CarrierSetup_partyId=FEDEX.png" alt=""><figcaption><p>Image: Add Shipment Gateway Configuration</p></figcaption></figure>
 
 ### Add Shipment Methods
 
