@@ -33,4 +33,4 @@
   * [Creating LDAP Account](userCreation/setupLDAPaccount.md)
   * [Tathya Authentication](userCreation/tathyaAuthentication.md)
   * [Listing User in Tathya](userCreation/listUsersTathya.md)
-  * [User Permissions](userCreation/user-permissions.md)
+  * [User Permissions](userCreation/user-permission.md)

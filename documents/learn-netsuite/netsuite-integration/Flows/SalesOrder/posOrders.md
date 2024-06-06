@@ -101,3 +101,4 @@ HC_MR_ExportedCashSaleCSV
 Order Identification
 FTP Config: IMP_ORDER_IDENT
 ```
+{% file src="../../../.gitbook/assets/POS Orders Sample Feed.csv" %}

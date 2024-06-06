@@ -4,7 +4,7 @@ Transfer orders originate in NetSuite, but there is a distinction in how they ar
 
 Now, let’s look at how warehouse to store transfer orders are processed:
 
-Warehouse managers create transfer orders in NetSuite. On fulfilling transfer order items in Netsuite, corresponding item fulfillment records are generated and transfer orders are automatically assigned a `Pending Receipt` status in NetSuite.
+Warehouse managers create transfer orders in NetSuite. On fulfilling transfer order items in NetSuite, corresponding item fulfillment records are generated and transfer orders are automatically assigned a `Pending Receipt` status in NetSuite.
 
 Each transfer order can result in either a single item fulfillment record or multiple records, depending on the scenario:
 
@@ -118,3 +118,6 @@ Once the second item fulfillment record is fulfilled in NetSuite and shipped fro
 A scheduled job in HotWax Commerce OMS reads this CSV file and creates another inbound shipment at the Brooklyn store location. Upon receiving, item receipt records are generated in HotWax Commerce, increasing the product inventory by 40 quantities at the Brooklyn store location. Subsequently, these item receipt records are synchronized to NetSuite, marking the completion of the transfer order in NetSuite, updating inventory counts and updating transfer order status from `Pending Receipt` to `Received`.
 
 </details>
+
+{% file src="../../../.gitbook/assets/Transfer Order Receipt Feed (1).txt" %}
+

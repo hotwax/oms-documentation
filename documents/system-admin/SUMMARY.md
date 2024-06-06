@@ -18,6 +18,7 @@
 * [Users](administration/users/README.md)
   * [Create Users](administration/users/createUser.md)
   * [Manage Users](administration/users/manageUser.md)
+  * [Manage User Permissions](administration/users/user-permission.md)
   * [Create Pickers](fulfillment/add-picker.md)
 * [Facilities](facilities/README.md)
   * [Add New Facilities](administration/facilities/add-new-facilities.md)
@@ -45,7 +46,9 @@
   * [Create Carrier](fulfillment/shipping-methods/add-carrier.md)
   * [Create Shipping Boxes](fulfillment/shipping-box.md)
   * [Shipping gateways](fulfillment/ShippingGateways.md)
+  * [Map Career Shipment Methods](fulfillment/carrier-and-shipment-methods.md)
 * [How to map shipping method in HotWax Commerce to Netsuite](fulfillment/add-shipping-method.md)
+* [Configure Rate Shopping](fulfillment/configure-rate-shopping.md)
  
 ## Setup Shopify
 

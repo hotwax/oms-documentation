@@ -19,7 +19,7 @@ Most of our customers use NetSuite ERP to fulfill orders from their warehouses. 
 
 For orders allocated to warehouses, a scheduled job in HotWax Commerce generates a feed containing order line items with their respective fulfillment locations and synchronizes it with NetSuite. Once NetSuite’s script reads and consumes this feed, the fulfillment location details is updated on the order item.
 
-Learn more about [order synchronization from HotWax Commerce to NetSuite](https://docs.hotwax.co/integration-resources/v/netsuite-integration/supported-integrations/salesorder/orderapproval)
+Learn more about [order synchronization from HotWax Commerce to NetSuite](https://docs.hotwax.co/documents/v/learn-netsuite/supported-integrations/salesorder/orderapproval)
 
 ## Prepare shipment
 

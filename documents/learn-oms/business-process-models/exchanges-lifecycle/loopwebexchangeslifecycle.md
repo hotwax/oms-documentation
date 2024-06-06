@@ -65,13 +65,13 @@ A dedicated `Import Orders` job in HotWax Commerce downloads web orders from Sho
 
 An important aspect to note is that for an exchange order, Loop saves details of the original order in the extended fields in Shopify. Therefore, when downloading exchange orders from Shopify, HotWax Commerce also retrieves these details of the original order and saves them in the communication event.
 
-Learn more about how [HotWax Commerce fulfills web orders](https://docs.hotwax.co/integration-resources/how-are-orders-downloaded-from-shopify-to-hotwax-commerce)
+Learn more about how [HotWax Commerce fulfills web orders](https://docs.hotwax.co/documents/v/learn-shopify/orders/how-are-orders-downloaded-from-shopify-to-hotwax-commerce)
 
 ## 8. Exchange orders synchronized to NetSuite
 
 HotWax Commerce synchronizes all web orders to NetSuite in the <mark style="color:orange;">**“Created”**</mark> status and similarly, exchange orders in the <mark style="color:orange;">**“Created”**</mark> status are also synchronized to NetSuite. When NetSuite imports them, they are automatically assigned a <mark style="color:orange;">**“Pending Fulfillment”**</mark> status and the details of the original order are saved in the memo.
 
-Learn more about [order synchronization between HotWax Commerce and NetSuite](https://docs.hotwax.co/integration-resources/v/netsuite-integration/supported-integrations/salesorder)
+Learn more about [order synchronization between HotWax Commerce and NetSuite](https://docs.hotwax.co/documents/v/learn-netsuite/supported-integrations/salesorder)
 
 ### What about inventory updates for the returned & new exchange item?
 
