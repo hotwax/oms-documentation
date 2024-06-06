@@ -78,6 +78,8 @@ The `HC_SC_CreateItemFulfillment` SuiteScript also generates a CSV file highligh
 
 * [x] Sync order item fulfillment details from HotWax to NetSuite
 
+{% file src="../../../.gitbook/assets/Fulfilled Order Items Sample Feed.txt" %}
+
 **Overall sync progress**
 
 Order fulfillment is completed and now the only step remaining is invoicing.
