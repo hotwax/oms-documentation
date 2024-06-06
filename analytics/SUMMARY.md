@@ -3,7 +3,7 @@
 ## Reports
 
 * [Orders](README.md)
-* [Products](reports/products.md)
+* [Product](reports/product.md)
 * [Inventory](reports/inventory.md)
 * [Fulfillment](reports/fulfillment.md)
 * [Netsuite Sync](reports/netsuitesync.md)
