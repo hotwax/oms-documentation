@@ -201,4 +201,4 @@ const data = {
 };
 ```
 
-### By following these steps, you can send Ready-for-pickup email notifications from the OMS to the marketing automation platform.
+**By following these steps, you can send Ready-for-pickup email notifications from the OMS to the marketing automation platform.**
