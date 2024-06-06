@@ -8,4 +8,4 @@ In order to make sure all flows run as expected, some configurations need to be 
 
 **Auto Approve**
 
-The NetSuite integration uses a custom auto approval workflow. To make sure the custom flow doesn’t get overridden, turn off the native auto approve workflow from the Product Store settings.
+HotWax has an Auto Approve flow out of the box. If you have a custom auto approval workflow in NetSuite make sure to turn off this native auto approve workflow in Product Store Setting
