@@ -6,10 +6,10 @@ description: >-
 
 # Inventory count
 
-HotWax Commerce's Inventory Count App streamlines inventory management in stores and warehouses by empowering store associates and managers to seamlessly match physical inventory with system inventory. This intuitive Progressive Web Application (PWA), accessible through browsers or icons on handheld devices, optimizes the inventory counting process. Store associates can swiftly scan products using mobile phone or tablet cameras, ensuring a precise and efficient counting process. Specific [permissions](../users/manageUser.md) are necessary for full utilization of the Inventory Count App. Store associates with `Order Fulfillment` permissions can conduct inventory counts, while store managers with `Order Fulfillment Manager` permissions have the added capability to review counts and log inventory variances.
+HotWax Commerce's Inventory Count App streamlines inventory management in stores and warehouses by empowering store associates and managers to seamlessly match physical inventory with system inventory. This intuitive Progressive Web Application (PWA), accessible through browsers or icons on handheld devices, optimizes the inventory counting process. Store associates can swiftly scan products using mobile phone or tablet cameras, ensuring a precise and efficient counting process. Specific [permissions](https://docs.hotwax.co/documents/v/system-admins/administration/users/user-permission) are necessary for full utilization of the Inventory Count App. Store associates with `Order Fulfillment` permissions can conduct inventory counts, while store managers with `Order Fulfillment Manager` permissions have the added capability to review counts and log inventory variances.
 
 {% hint style="info" %}
-Users can log in to the Inventory Counting App only if they are [associated with a facility](../users/manageUser.md#add-facilities).
+Users can log in to the Inventory Counting App only if they are [associated with a facility](https://docs.hotwax.co/documents/v/system-admins/administration/users/user-permission).
 {% endhint %}
 
 ## Count Complete Inventory
