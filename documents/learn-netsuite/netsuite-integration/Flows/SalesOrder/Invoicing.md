@@ -69,7 +69,7 @@ HotWax Commerce runs a scheduled job every 15 minutes to synchronize order cance
 HC_SC_UpdateSalesOrders
 ```
 
-When orders are created in NetSuite, corresponding customer deposits are also generated. In cases where an order is canceled, HotWax Commerce initiates a customer refund against the customer deposit in NetSuite to ensure accurate accounting and posting. It's crucial to note that an order may contain multiple items, and if only a few items within the order are canceled, the refund is created only for the amount corresponding to the canceled items.
+When orders are created in NetSuite, corresponding customer deposits are also generated. In cases where an order is canceled, HotWax Commerce initiates a customer refund against the customer deposit in NetSuite to ensure accurate accounting and posting. If only a few items within a order are canceled, the refund is created only for the amount corresponding to the canceled items.
 
 <figure><img src="../../../.gitbook/assets/20.png" alt=""><figcaption><p>Customer refund record created in NetSuite</p></figcaption></figure>
 
