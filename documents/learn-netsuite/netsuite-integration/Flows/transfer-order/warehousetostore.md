@@ -118,3 +118,6 @@ Once the second item fulfillment record is fulfilled in NetSuite and shipped fro
 A scheduled job in HotWax Commerce OMS reads this CSV file and creates another inbound shipment at the Brooklyn store location. Upon receiving, item receipt records are generated in HotWax Commerce, increasing the product inventory by 40 quantities at the Brooklyn store location. Subsequently, these item receipt records are synchronized to NetSuite, marking the completion of the transfer order in NetSuite, updating inventory counts and updating transfer order status from `Pending Receipt` to `Received`.
 
 </details>
+
+{% file src="../../../.gitbook/assets/Transfer Order Receipt Feed (1).txt" %}
+
