@@ -102,6 +102,8 @@ FTP Config: IMP_PARTY_IDENT
 "\*" denotes fields that are required to be sent to NetSuite for the customer sync to work
 {% endhint %}
 
+{% file src="../../../.gitbook/assets/Customers Sample Feed.csv" %}
+
 * [x] Sync customers
 
 ## Synchronize Sales Order from HotWax Commerce to NetSuite
@@ -185,6 +187,9 @@ To sync sales orders from HotWax Commerce to NetSuite, a required field is the "
 {% hint style="danger" %}
 "\*" denotes fields that are required to be sent to NetSuite for the sales order sync to work
 {% endhint %}
+
+{% file src="../../../.gitbook/assets/Created Order Items Sample Feed.csv" %}
+
 
 ## Sync Sales Order Item Line IDs from NetSuite to HotWax Commerce
 
@@ -301,6 +306,8 @@ The `HC_SC_CreateCustomerDeposit` SuiteScript also generates a CSV file highligh
 {% endhint %}
 
 ## Approval of Sales Order
+
+{% file src="../../../.gitbook/assets/Customer Deposits Sample Feed.txt" %}
 
 This step involves marking orders as "Approved" for further processing and fulfillment. This step ensures that orders are appropriately marked "Approved" once all necessary details and required references are established. This authorization triggers the routing of orders to their designated fulfillment locations.
 

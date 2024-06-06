@@ -193,3 +193,7 @@ Following this, a scheduled job in HotWax Commerce Integration Platform generate
 In NetSuite, a scheduled SuiteScript reads this JSON file containing item receipt records from the SFTP location and increases the quantities by 100 for the transfer order received at the Times Square store, and the transfer order status is updated from `Pending Receipt` to `Received`.
 
 </details>
+
+{% file src="../../../.gitbook/assets/Transfer Order Fulfilled Items Feed.txt" %}
+
+{% file src="../../../.gitbook/assets/Transfer Order Receipt Feed.txt" %}

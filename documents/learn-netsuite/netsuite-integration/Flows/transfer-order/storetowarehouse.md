@@ -130,3 +130,7 @@ Inventory for transfer order items received in the warehouse is synchronized whe
 {% endtabs %}
 
 <figure><img src="../../../.gitbook/assets/39.png" alt=""><figcaption><p>Transfer Order Items Fulfilled in HotWax Commerce "Store Fulfillment App"</p></figcaption></figure>
+
+{% file src="../../../.gitbook/assets/Transfer Order Fulfilled Items Feed (1).txt" %}
+
+
