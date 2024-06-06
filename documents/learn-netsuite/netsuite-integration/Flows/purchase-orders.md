@@ -118,3 +118,5 @@ HC_SC_ImportPurchaseOrderReceipts
 {% hint style="info" %}
 The HC\_SC\_ImportPurchaseOrderReceipts SuiteScript also generates a CSV file highlighting erroneous records found during processing and uploads the file to the SFTP server. Simultaneously, an email alert is automatically triggered to designated personnel, helping them quickly pinpoint the source of the issue and accelerating troubleshooting.
 {% endhint %}
+
+{% file src="../../.gitbook/assets/Purchase Orders Receipts Sample Feed.txt" %}
