@@ -2,7 +2,7 @@
 
 ## Reports
 
-* [Orders](reports/orders.md)
+* [Orders](README.md)
 * [Products](reports/products.md)
 * [Inventory](reports/inventory.md)
 * [Fulfillment](reports/fulfillment.md)

@@ -1,4 +1,8 @@
-# Fulfillmant Reports
+---
+description: Discover Fulfillment reports provided by HotWax Commerce
+---
+
+# Fulfillment
 
 ## Rejected Order Items Report
 
@@ -10,24 +14,24 @@ HotWax Commerce's rejection report enables users to make decisions aimed at impr
 
 ### Glossary
 
-| Item                 | Item Details                                                                                 | HC Entity                         |
-|----------------------|----------------------------------------------------------------------------------------------|-----------------------------------|
-| **Shopify Order ID** | Identifies the order within the Shopify platform                                              | OrderHeader.ORDER_NAME            |
-| **Location**         | Indicates the location of the order fulfillment                                              | OrderFacilityChange.FROM_FACILITY_ID |
-| **HC Order ID**      | HotWax Commerce Order ID for internal tracking                                               | OrderHeader.ORDER_ID              |
-| **Style**            | Specifies the style or type of the product                                                   | OrderItem.ITEM_DESCRIPTION        |
-| **Demand**           | Reflects the demand or quantity ordered                                                      | OrderItem.QUANTITY                |
-| **SKU**              | Stock Keeping Unit for inventory tracking                                                    | GoodIdentification.ID_VALUE where GoodIdentification.GOOD_IDENTIFICATION_TYPE_ID is set to ‘UPCA’ |
-| **Product Name**     | Name of the product ordered                                                                  | Product.PRODUCT_NAME              |
-| **ATP**              | Indicates the quantity of the product available for shipment                                 | ProductFacility.LAST_INVENTORY_COUNT |
-| **Safety Stock**     | Quantity of stock kept in reserve to meet unexpected demand                                   | ProductFacility.MINIMUM_STOCK     |
-| **Rejected Datetime**| A timestamp indicating when the rejection occurred                                           | OrderFacilityChange.CHANGE_DATETIME |
-| **Reason**           | Specifies the reason for rejection                                                           | OrderFacilityChange.CHANGE_REASON_ENUM_ID |
-| **Comments**         | Additional comments or notes regarding the rejection                                         | OrderFacilityChange.COMMENTS      |
+| Item                  | Item Details                                                 | HC Entity                                                                                             |
+| --------------------- | ------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------- |
+| **Shopify Order ID**  | Identifies the order within the Shopify platform             | OrderHeader.ORDER\_NAME                                                                               |
+| **Location**          | Indicates the location of the order fulfillment              | OrderFacilityChange.FROM\_FACILITY\_ID                                                                |
+| **HC Order ID**       | HotWax Commerce Order ID for internal tracking               | OrderHeader.ORDER\_ID                                                                                 |
+| **Style**             | Specifies the style or type of the product                   | OrderItem.ITEM\_DESCRIPTION                                                                           |
+| **Demand**            | Reflects the demand or quantity ordered                      | OrderItem.QUANTITY                                                                                    |
+| **SKU**               | Stock Keeping Unit for inventory tracking                    | GoodIdentification.ID\_VALUE where GoodIdentification.GOOD\_IDENTIFICATION\_TYPE\_ID is set to ‘UPCA’ |
+| **Product Name**      | Name of the product ordered                                  | Product.PRODUCT\_NAME                                                                                 |
+| **ATP**               | Indicates the quantity of the product available for shipment | ProductFacility.LAST\_INVENTORY\_COUNT                                                                |
+| **Safety Stock**      | Quantity of stock kept in reserve to meet unexpected demand  | ProductFacility.MINIMUM\_STOCK                                                                        |
+| **Rejected Datetime** | A timestamp indicating when the rejection occurred           | OrderFacilityChange.CHANGE\_DATETIME                                                                  |
+| **Reason**            | Specifies the reason for rejection                           | OrderFacilityChange.CHANGE\_REASON\_ENUM\_ID                                                          |
+| **Comments**          | Additional comments or notes regarding the rejection         | OrderFacilityChange.COMMENTS                                                                          |
 
-<details> 
-  
-  <summary>SQL Query to Generate Rejected Order Items Report</summary>
+<details>
+
+<summary>SQL Query to Generate Rejected Order Items Report</summary>
 
 ```sql
 SELECT `Shopify Order ID` AS `Shopify Order ID`,
@@ -80,7 +84,6 @@ WHERE `Rejected_Datetime` >= STR_TO_DATE('2024-05-06 00:00:00.000000', '%Y-%m-%d
 LIMIT 50000;
 ```
 
-
 </details>
 
 ### Query Logic
@@ -103,15 +106,15 @@ Rejection reason reports provide valuable insights into rejection rates and reas
 
 ### Glossary
 
-| Item                 | Item Details                                                                                 | HC Entity                         |
-|----------------------|----------------------------------------------------------------------------------------------|-----------------------------------|
-| **Location**         | The physical location or facility from which an order item was rejected.                      | OrderFacilityChange.FROM_FACILITY_ID |
-| **Reason**           | The reason for the rejection of an order item.                                                | OrderFacilityChange.CHANGE_REASON_ENUM_ID |
-| **COUNT(Shopify Order ID)** | The count of Shopify order IDs associated with each rejection reason.                    | OrderHeader.ORDER_NAME            |
+| Item                        | Item Details                                                             | HC Entity                                    |
+| --------------------------- | ------------------------------------------------------------------------ | -------------------------------------------- |
+| **Location**                | The physical location or facility from which an order item was rejected. | OrderFacilityChange.FROM\_FACILITY\_ID       |
+| **Reason**                  | The reason for the rejection of an order item.                           | OrderFacilityChange.CHANGE\_REASON\_ENUM\_ID |
+| **COUNT(Shopify Order ID)** | The count of Shopify order IDs associated with each rejection reason.    | OrderHeader.ORDER\_NAME                      |
 
 <details>
-  
-  <summary>SQL Query to Generate Store Rejections with Reasons</summary>
+
+<summary>SQL Query to Generate Store Rejections with Reasons</summary>
 
 ```sql
 SELECT `Location` AS `Location`,
@@ -186,14 +189,14 @@ Merchants use third-party services to ship orders to customers' addresses. Order
 
 ### Glossary
 
-| Item                 | Item Details                                                                                   | HC Entity                         |
-|----------------------|------------------------------------------------------------------------------------------------|-----------------------------------|
-| **Shopify Id**       | The ID of Order in Shopify.                                                                    | OrderHeader.ORDER_NAME            |
-| **Tracking Number**  | The tracking number of the shipped order.                                                      | ShipmentPackageRouteSegment.TRACKING_CODE |
-| **Shipping Method**  | The shipping method used for the order shipment.                                               | OrderItemShipGroup.SHIPMENT_METHOD_TYPE_ID |
-| **Shipping Location**| The code of the fulfillment location.                                                          | OrderItemShipGroup.FACILITY_ID    |
-| **Ship To Address**  | The shipping address of the customer. Concatenation (Appended string of) PostalAddress.ADDRESS1, PostalAddress.STATE_PROVINCE_GEO_ID and PostalAddress.POSTAL_CODE) | Concatenation (Appended string of) PostalAddress.ADDRESS1, PostalAddress.STATE_PROVINCE_GEO_ID and PostalAddress.POSTAL_CODE) |
-| **UNITS SHIPPED**    | The number of units shipped in order.                                                          | Total count of OrderItem.ORDER_ITEM_SEQ_ID |
+| Item                  | Item Details                                                                                                                                                            | HC Entity                                                                                                                         |
+| --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| **Shopify Id**        | The ID of Order in Shopify.                                                                                                                                             | OrderHeader.ORDER\_NAME                                                                                                           |
+| **Tracking Number**   | The tracking number of the shipped order.                                                                                                                               | ShipmentPackageRouteSegment.TRACKING\_CODE                                                                                        |
+| **Shipping Method**   | The shipping method used for the order shipment.                                                                                                                        | OrderItemShipGroup.SHIPMENT\_METHOD\_TYPE\_ID                                                                                     |
+| **Shipping Location** | The code of the fulfillment location.                                                                                                                                   | OrderItemShipGroup.FACILITY\_ID                                                                                                   |
+| **Ship To Address**   | The shipping address of the customer. Concatenation (Appended string of) PostalAddress.ADDRESS1, PostalAddress.STATE\_PROVINCE\_GEO\_ID and PostalAddress.POSTAL\_CODE) | Concatenation (Appended string of) PostalAddress.ADDRESS1, PostalAddress.STATE\_PROVINCE\_GEO\_ID and PostalAddress.POSTAL\_CODE) |
+| **UNITS SHIPPED**     | The number of units shipped in order.                                                                                                                                   | Total count of OrderItem.ORDER\_ITEM\_SEQ\_ID                                                                                     |
 
 <details>
 
@@ -248,7 +251,6 @@ LIMIT 10;
 
 </details>
 
-
 ### Query Logic
 
 **Data Selection:** The SQL query is structured to extract specific data for generating a Shipment Tracking Report. It selects information from various tables, and containing details about orders, order items, shipments, shipment statuses, and shipping addresses.
@@ -271,19 +273,19 @@ The Shopify Fulfillment Status Report offers retailers valuable insights into th
 
 ### Glossary
 
-| Item                        | Item Details                                                                                                  | HC Entity                               |
-|-----------------------------|---------------------------------------------------------------------------------------------------------------|-----------------------------------------|
-| **Hotwax Order ID**         | Unique identifier for the order in Hotwax system                                                             | OrderFulfillmentHistory.ORDER_ID        |
-| **Shopify Order Name**      | Name or identifier associated with the order in Shopify system                                                | OrderHeader.ORDER_NAME                  |
-| **SKU**                     | Stock Keeping Unit, a unique code assigned to each product                                                    | Product.INTERNAL_NAME                   |
-| **Facility Name**           | Name of the facility where inventory is stored                                                                | Facility.FACILITY_NAME                  |
-| **Item Status**             | Status of the item (e.g., available, out of stock, backordered)                                                | StatusItem.DESCRIPTION                  |
-| **Hotwax Shipment Status**  | Status of the shipment in Hotwax                                                                             | StatusItem.DESCRIPTION                  |
-| **Hotwax Fulfillment Time** | Time taken to fulfill the order in Hotwax                                                                    | ShipmentStatus.STATUS_DATETIME          |
-| **Created Time**            | Time when the order was created                                                                              | OrderFulfillmentHistory.CREATED_DATE    |
-| **Shopify Fulfillment ID**  | Unique identifier for the fulfillment process in Shopify system                                               | OrderFulfillmentHistory.EXTERNAL_FULFILLMENT_ID |
-| **Shopify Fulfillment Status** | Status of the fulfillment process in Shopify system                                                        | Set to ‘pending’ if OrderFulfillmentHistory.EXTERNAL_FULFILLMENT_ID is set to '_NA_' else ‘success’ |
-| **Shopify Fulfillment Entry Time** | Time when the fulfillment process was initiated in the Shopify system                                   | OrderFulfillmentHistory.LAST_UPDATED_STAMP |
+| Item                               | Item Details                                                          | HC Entity                                                                                             |
+| ---------------------------------- | --------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| **Hotwax Order ID**                | Unique identifier for the order in Hotwax system                      | OrderFulfillmentHistory.ORDER\_ID                                                                     |
+| **Shopify Order Name**             | Name or identifier associated with the order in Shopify system        | OrderHeader.ORDER\_NAME                                                                               |
+| **SKU**                            | Stock Keeping Unit, a unique code assigned to each product            | Product.INTERNAL\_NAME                                                                                |
+| **Facility Name**                  | Name of the facility where inventory is stored                        | Facility.FACILITY\_NAME                                                                               |
+| **Item Status**                    | Status of the item (e.g., available, out of stock, backordered)       | StatusItem.DESCRIPTION                                                                                |
+| **Hotwax Shipment Status**         | Status of the shipment in Hotwax                                      | StatusItem.DESCRIPTION                                                                                |
+| **Hotwax Fulfillment Time**        | Time taken to fulfill the order in Hotwax                             | ShipmentStatus.STATUS\_DATETIME                                                                       |
+| **Created Time**                   | Time when the order was created                                       | OrderFulfillmentHistory.CREATED\_DATE                                                                 |
+| **Shopify Fulfillment ID**         | Unique identifier for the fulfillment process in Shopify system       | OrderFulfillmentHistory.EXTERNAL\_FULFILLMENT\_ID                                                     |
+| **Shopify Fulfillment Status**     | Status of the fulfillment process in Shopify system                   | Set to ‘pending’ if OrderFulfillmentHistory.EXTERNAL\_FULFILLMENT\_ID is set to '_NA_' else ‘success’ |
+| **Shopify Fulfillment Entry Time** | Time when the fulfillment process was initiated in the Shopify system | OrderFulfillmentHistory.LAST\_UPDATED\_STAMP                                                          |
 
 <details>
 
@@ -341,7 +343,7 @@ LIMIT 100;
 
 **Data Selection:** The SQL query is crafted to gather data for generating a Shopify Fulfillment Status Since Last Day Pie Chart. It selects specific information from various tables, including details about orders, order items, order fulfillment history, shipments, statuses, products, and facilities.
 
-**Defining Criteria:** The primary objective of the report is to analyze the fulfillment status of Shopify orders within the last day. To achieve this, the query defines criteria to filter the data, including only orders of type "SALES_ORDER" and fulfillment history associated with shipments. Additionally, it focuses on orders where the Shopify fulfillment status is either 'pending' or has been updated within the last day.
+**Defining Criteria:** The primary objective of the report is to analyze the fulfillment status of Shopify orders within the last day. To achieve this, the query defines criteria to filter the data, including only orders of type "SALES\_ORDER" and fulfillment history associated with shipments. Additionally, it focuses on orders where the Shopify fulfillment status is either 'pending' or has been updated within the last day.
 
 **Joining Relevant Tables:** To compile a comprehensive dataset, the SQL query joins several tables together based on common fields such as order IDs, order item sequence IDs, shipment IDs, and status IDs. By doing so, it gathers interconnected information about order fulfillment, order items, shipments, statuses, products, and facilities.
 
@@ -357,18 +359,18 @@ Merchants measure their stores’ omnichannel order fulfillment rates and want a
 
 ### Glossary
 
-| Item          | Item Details                                                                                     | HC Entity                               |
-|---------------|--------------------------------------------------------------------------------------------------|-----------------------------------------|
-| **Store**     | The fulfillment store location of the retailer                                                   | OrderFacilityChange.FACILITY_ID        |
-| **UPC/SKU**   | The unique product code                                                                          | GoodIdentification.ID_VALUE where GoodIdentification.GOOD_IDENTIFICATION_TYPE_ID is set to 'SHOPIFY_PROD_SKU' |
-| **Style**     | The category of the product/item                                                                 | Product.PRODUCT_NAME                   |
-| **Color**     | The color of the product                                                                         | ProductFacility.DESCRIPTION when ProductFeature.PRODUCT_FEATURE_TYPE_ID is set to  'COLOR' |
-| **Size**      | The size of the product                                                                          | ProductFacility.DESCRIPTION when ProductFeature.PRODUCT_FEATURE_TYPE_ID is set to  ‘SIZE' |
-| **Units**     | The units shipped of the product                                                                 | Total sum of OrderItem.QUANTITY        |
+| Item        | Item Details                                   | HC Entity                                                                                                           |
+| ----------- | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Store**   | The fulfillment store location of the retailer | OrderFacilityChange.FACILITY\_ID                                                                                    |
+| **UPC/SKU** | The unique product code                        | GoodIdentification.ID\_VALUE where GoodIdentification.GOOD\_IDENTIFICATION\_TYPE\_ID is set to 'SHOPIFY\_PROD\_SKU' |
+| **Style**   | The category of the product/item               | Product.PRODUCT\_NAME                                                                                               |
+| **Color**   | The color of the product                       | ProductFacility.DESCRIPTION when ProductFeature.PRODUCT\_FEATURE\_TYPE\_ID is set to 'COLOR'                        |
+| **Size**    | The size of the product                        | ProductFacility.DESCRIPTION when ProductFeature.PRODUCT\_FEATURE\_TYPE\_ID is set to ‘SIZE'                         |
+| **Units**   | The units shipped of the product               | Total sum of OrderItem.QUANTITY                                                                                     |
 
 <details>
-  
-  <summary>SQL Query to Generate Daily Store Shipment Performance Report</summary>
+
+<summary>SQL Query to Generate Daily Store Shipment Performance Report</summary>
 
 ```sql
 SELECT `STORE` AS `STORE`,
@@ -440,7 +442,7 @@ LIMIT 1000;
 
 **Data Selection:** The SQL query is intended to generate a Daily Store Shipment Performance Report. It begins by selecting specific data from various tables, including order items, order headers, order facility changes, order statuses, facilities, product features, products, and product associations.
 
-**Defining Criteria:** The primary objective of the report is to analyze the shipment performance of retail stores on a daily basis. To achieve this, the query sets criteria to filter the data. It focuses on orders completed on the previous day (current_date() - INTERVAL 1 DAY), marked with a status ID of 'ITEM_COMPLETED', and involving a change reason enum ID of 'BROKERED'. Additionally, it specifically targets retail stores by filtering facility types.
+**Defining Criteria:** The primary objective of the report is to analyze the shipment performance of retail stores on a daily basis. To achieve this, the query sets criteria to filter the data. It focuses on orders completed on the previous day (current\_date() - INTERVAL 1 DAY), marked with a status ID of 'ITEM\_COMPLETED', and involving a change reason enum ID of 'BROKERED'. Additionally, it specifically targets retail stores by filtering facility types.
 
 **Joining Relevant Tables:** To compile a comprehensive dataset, the SQL query joins multiple tables together based on common fields such as order IDs, order item sequence IDs, facility IDs, product IDs, and status date. By doing so, it gathers interconnected information about order items, order headers, order facility changes, order statuses, facilities, product features, products, and product associations.
 
@@ -456,15 +458,15 @@ The Store Daily Orders Fulfillment Report empowers retailers to monitor the effi
 
 ### Glossary
 
-| Item          | Item Details                              | HC Entity                          |
-|---------------|-------------------------------------------|------------------------------------|
-| **Store**     | Store Name                                | OrderFacilityChange.FACILITY_ID   |
-| **Count**     | Count of orders fulfilled in a store      | Total count of OrderFacilityChange.ORDER_ITEM_SEQ_ID where facilities are of type ‘RETAIL_STORE’ |
-| **Quantity**  | Total items/units fulfilled by a store   | Total sum of OrderItem.QUANTITY grouped by facilities that are ‘STORE’ |
+| Item         | Item Details                           | HC Entity                                                                                            |
+| ------------ | -------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| **Store**    | Store Name                             | OrderFacilityChange.FACILITY\_ID                                                                     |
+| **Count**    | Count of orders fulfilled in a store   | Total count of OrderFacilityChange.ORDER\_ITEM\_SEQ\_ID where facilities are of type ‘RETAIL\_STORE’ |
+| **Quantity** | Total items/units fulfilled by a store | Total sum of OrderItem.QUANTITY grouped by facilities that are ‘STORE’                               |
 
 <details>
-  
-  <summary>SQL Query to Generate Store Daily Order Fulfillment Report</summary>
+
+<summary>SQL Query to Generate Store Daily Order Fulfillment Report</summary>
 
 ```sql
 SELECT `STORE` AS `STORE`,
@@ -507,11 +509,10 @@ LIMIT 100;
 
 **Data Selection:** The SQL query is designed to generate a Store Daily Order Fulfillment Report. It begins by selecting specific data from various tables, including order facility changes, order statuses, facilities, order headers, and order items.
 
-**Defining Criteria:** The primary objective of the report is to analyze the daily order fulfillment performance of retail stores. To achieve this, the query sets criteria to filter the data. It focuses on orders completed on the previous day, marked with a status ID of 'ITEM_COMPLETED', and involving a change reason enum ID of 'BROKERED'. Additionally, it specifically targets retail stores by filtering facility types and a particular product store ID.
+**Defining Criteria:** The primary objective of the report is to analyze the daily order fulfillment performance of retail stores. To achieve this, the query sets criteria to filter the data. It focuses on orders completed on the previous day, marked with a status ID of 'ITEM\_COMPLETED', and involving a change reason enum ID of 'BROKERED'. Additionally, it specifically targets retail stores by filtering facility types and a particular product store ID.
 
 **Joining Relevant Tables:** To compile a comprehensive dataset, the SQL query joins multiple tables together based on common fields such as order IDs, order item sequence IDs, facility IDs, and status dates. By doing so, it gathers interconnected information about order facility changes, order statuses, facilities, order headers, and order items.
 
 **Grouping and Summarizing Data:** The query groups the selected data based on store IDs (facility IDs) and calculates the sum of quantities of order items fulfilled for each store. Grouping and summarizing the data in this manner allows for a clear overview of the total quantity of items fulfilled by each store.
 
 **Sorting and Limiting Results:** Finally, the query sorts the results based on the sum of quantities in descending order and limits the output to a maximum of 100 records. This step ensures that the report focuses on the stores with the highest order fulfillment quantities, providing insights into their performance while maintaining a manageable dataset for analysis.
-

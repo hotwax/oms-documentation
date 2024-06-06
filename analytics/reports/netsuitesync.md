@@ -1,4 +1,8 @@
-# Netsuite Sync Reports
+---
+description: Discover Netsuite synchronization reports provided by HotWax Commerce
+---
+
+# Netsuite Sync
 
 ## Missing Products from Order
 
@@ -6,14 +10,14 @@ This report identifies active orders and the products associated with it that ar
 
 ### Glossary
 
-| Field Header                 | Description                                          | HC Entity                |
-|------------------------------|------------------------------------------------------|--------------------------|
-| **Order ID**                 | It helps in distinguishing one order from another.  | OrderHeader.ORDER_ID     |
-| **SKU**                      | SKU of the product                                   | Product.INTERNAL_NAME    |
+| Field Header | Description                                        | HC Entity              |
+| ------------ | -------------------------------------------------- | ---------------------- |
+| **Order ID** | It helps in distinguishing one order from another. | OrderHeader.ORDER\_ID  |
+| **SKU**      | SKU of the product                                 | Product.INTERNAL\_NAME |
 
 <details>
-  
-  <summary>SQL Query to Generate Missing Products from Order</summary>
+
+<summary>SQL Query to Generate Missing Products from Order</summary>
 
 ```sql
 SELECT order_id AS order_id,
@@ -62,14 +66,14 @@ This report identifies products listed on Shopify that are missing from NetSuite
 
 ### Glossary
 
-| Field Header           | Description                                 | HC Entity              |
-|------------------------|---------------------------------------------|------------------------|
-| **Shopify Product ID** | Identifies the product within Shopify       | gi.GOOD_IDENTIFICATION_TYPE_ID |
-| **HotWax Product ID**  | The internal product identifier within the HotWax Commerce system | gi.PRODUCT_ID |
+| Field Header           | Description                                                       | HC Entity                         |
+| ---------------------- | ----------------------------------------------------------------- | --------------------------------- |
+| **Shopify Product ID** | Identifies the product within Shopify                             | gi.GOOD\_IDENTIFICATION\_TYPE\_ID |
+| **HotWax Product ID**  | The internal product identifier within the HotWax Commerce system | gi.PRODUCT\_ID                    |
 
 <details>
-  
-  <summary>SQL Query to Generate Product without Netsuite Order ID Report</summary>
+
+<summary>SQL Query to Generate Product without Netsuite Order ID Report</summary>
 
 ```sql
 SELECT sku AS sku,
@@ -115,16 +119,16 @@ This SQL query generates a report listing products that have been deleted from S
 
 ### Glossary
 
-| Field Header             | Description                                  | HC Entity            |
-|--------------------------|----------------------------------------------|----------------------|
-| **HotWax product ID**    | The internal product identifier within the HotWax Commerce system | product.PRODUCT_ID |
-| **SKU**                  | SKU of the product                           | product.INTERNAL_NAME |
-| **HotWax Discontinuation date** | The date when the product was discontinued in the HotWax system, formatted as mm-dd-yyyy | product.SUPPORT_DISCONTINUATION_DATE |
-| **comments**             | Any comments related to the product | product.COMMENTS |
+| Field Header                    | Description                                                                              | HC Entity                              |
+| ------------------------------- | ---------------------------------------------------------------------------------------- | -------------------------------------- |
+| **HotWax product ID**           | The internal product identifier within the HotWax Commerce system                        | product.PRODUCT\_ID                    |
+| **SKU**                         | SKU of the product                                                                       | product.INTERNAL\_NAME                 |
+| **HotWax Discontinuation date** | The date when the product was discontinued in the HotWax system, formatted as mm-dd-yyyy | product.SUPPORT\_DISCONTINUATION\_DATE |
+| **comments**                    | Any comments related to the product                                                      | product.COMMENTS                       |
 
 <details>
-  
-  <summary>SQL query to generate Deleted Shopify Product Report</summary>
+
+<summary>SQL query to generate Deleted Shopify Product Report</summary>
 
 ```sql
 SELECT hotwax_product_id,
@@ -159,17 +163,17 @@ LIMIT 1000;
 
 This SQL query generates a report listing customers who have a Shopify customer ID but are missing a corresponding NetSuite customer ID. It fetches details including the Hotwax customer ID, first name, last name, Shopify customer ID, and the number of orders placed by each customer. By joining relevant tables and applying specific filters, the query identifies and provides a concise list of customers not present in the NetSuite system.
 
-| Field Header           | Description                                                                                   | HC Entity                 |
-|------------------------|-----------------------------------------------------------------------------------------------|---------------------------|
-| **HotWax Customer ID** | The unique identifier for the customer within the Hotwax Commerce system.                     | party.PARTY_ID          |
-| **First Name**         | The first name of the customer.                                                               | person.FIRST_NAME       |
-| **Last Name**          | The last name of the customer.                                                                | person.LAST_NAME        |
-| **Shopify Customer ID**| The unique identifier for the customer within the Shopify platform.                           | party_identification.ID_VALUE (where PARTY_IDENTIFICATION_TYPE_ID = 'SHOPIFY_CUST_ID') |
-| **Order Count**        | The total number of distinct orders placed by the customer, reflecting their purchase activity.| Derived from order_role.ORDER_ID |
+| Field Header            | Description                                                                                     | HC Entity                                                                                     |
+| ----------------------- | ----------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| **HotWax Customer ID**  | The unique identifier for the customer within the Hotwax Commerce system.                       | party.PARTY\_ID                                                                               |
+| **First Name**          | The first name of the customer.                                                                 | person.FIRST\_NAME                                                                            |
+| **Last Name**           | The last name of the customer.                                                                  | person.LAST\_NAME                                                                             |
+| **Shopify Customer ID** | The unique identifier for the customer within the Shopify platform.                             | party\_identification.ID\_VALUE (where PARTY\_IDENTIFICATION\_TYPE\_ID = 'SHOPIFY\_CUST\_ID') |
+| **Order Count**         | The total number of distinct orders placed by the customer, reflecting their purchase activity. | Derived from order\_role.ORDER\_ID                                                            |
 
 <details>
-  
-  <summary>SQL query to generate Customer Without NetSuite ID Report</summary>
+
+<summary>SQL query to generate Customer Without NetSuite ID Report</summary>
 
 ```sql
 SELECT hotwax_customer_id AS hotwax_customer_id,
@@ -226,19 +230,19 @@ This report identifies fulfilled order items that have not been synced to NetSui
 
 ### Glossary
 
-| Field Header            | Description                           | HC Entity                 |
-|-------------------------|---------------------------------------|---------------------------|
-| **Order ID**            | It helps in distinguishing one order from another. | OrderHeader.ORDER_ID     |
-| **Order Name**          |                                       |                           |
-| **Order Type ID**       |                                       |                           |
-| **Order Item Seq ID**   |                                       |                           |
-| **SKU**                 | SKU of the product                    | Product.INTERNAL_NAME    |
-| **Status Date and Time**|                                       |                           |
-| **Fulfillment Exported**|                                       |                           |
+| Field Header             | Description                                        | HC Entity              |
+| ------------------------ | -------------------------------------------------- | ---------------------- |
+| **Order ID**             | It helps in distinguishing one order from another. | OrderHeader.ORDER\_ID  |
+| **Order Name**           |                                                    |                        |
+| **Order Type ID**        |                                                    |                        |
+| **Order Item Seq ID**    |                                                    |                        |
+| **SKU**                  | SKU of the product                                 | Product.INTERNAL\_NAME |
+| **Status Date and Time** |                                                    |                        |
+| **Fulfillment Exported** |                                                    |                        |
 
 <details>
-  
-  <summary>SQL query to generate Fulfilled Items Not Synced to NetSuite Report</summary>
+
+<summary>SQL query to generate Fulfilled Items Not Synced to NetSuite Report</summary>
 
 ```sql
 SELECT `ORDER_ID` AS `ORDER_ID`,
@@ -279,7 +283,7 @@ LIMIT 1000;
 
 **Data Selection:** The query starts by selecting data from various tables related to orders and order items. It retrieves key details including the order ID, order name, order type, order item sequence ID, SKU, status datetime, and a flag indicating whether the fulfillment items has been exported to NetSuite.
 
-**Filtering for Completed Items:** The query focuses on order items that have been marked as completed. It joins to the order status table to ensure that only items with a status ID of "ITEM_COMPLETED" are included.
+**Filtering for Completed Items:** The query focuses on order items that have been marked as completed. It joins to the order status table to ensure that only items with a status ID of "ITEM\_COMPLETED" are included.
 
 **Identifying Unexported Fulfillment Items:** The query joins to the order fulfillment history table to check if each fulfilled item has been exported to NetSuite. It sets a flag (`IS_FULFILLMENT_EXPORTED`) to "N" if the fulfillment log ID is null, indicating that the item has not been exported.
 
@@ -289,19 +293,19 @@ This report compares the sales of POS (Point of Sale) orders with inventory vari
 
 ### Glossary
 
-| Field Header            | Description                                                | HC Entity                    |
-|-------------------------|------------------------------------------------------------|------------------------------|
-| **Order ID**            | It helps in distinguishing one order from another.         | order_header.ORDER_ID      |
-| **Order Name**          | The name or identifier for the order.                      | order_header.ORDER_NAME    |
-| **Order Type ID**       | The type of order, identifying the category of the order.  | order_header.ORDER_TYPE_ID |
-| **Order Item Seq ID**   | The sequence identifier for items within an order.         | order_item.ORDER_ITEM_SEQ_ID |
-| **SKU**                 | SKU of the product.                                        | product.INTERNAL_NAME      |
-| **Status Date and Time**| The date and time when the order item status was updated.  | order_status.STATUS_DATETIME |
-| **Fulfillment Exported**| Indicates whether the fulfillment has been exported to NetSuite (Y or N). | Derived from order_fulfillment_history.FULFILLMENT_LOG_ID |
+| Field Header             | Description                                                               | HC Entity                                                     |
+| ------------------------ | ------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| **Order ID**             | It helps in distinguishing one order from another.                        | order\_header.ORDER\_ID                                       |
+| **Order Name**           | The name or identifier for the order.                                     | order\_header.ORDER\_NAME                                     |
+| **Order Type ID**        | The type of order, identifying the category of the order.                 | order\_header.ORDER\_TYPE\_ID                                 |
+| **Order Item Seq ID**    | The sequence identifier for items within an order.                        | order\_item.ORDER\_ITEM\_SEQ\_ID                              |
+| **SKU**                  | SKU of the product.                                                       | product.INTERNAL\_NAME                                        |
+| **Status Date and Time** | The date and time when the order item status was updated.                 | order\_status.STATUS\_DATETIME                                |
+| **Fulfillment Exported** | Indicates whether the fulfillment has been exported to NetSuite (Y or N). | Derived from order\_fulfillment\_history.FULFILLMENT\_LOG\_ID |
 
 <details>
-  
-  <summary>SQL query to generate POS Orders vs POS Variance</summary>
+
+<summary>SQL query to generate POS Orders vs POS Variance</summary>
 
 ```sql
 SELECT `ORDER_ID` AS `ORDER_ID`,
@@ -374,14 +378,14 @@ This report generates a pie chart comparing POS (Point of Sale) orders with inve
 
 ### Glossary
 
-| Field Header | Description | HC Entity |
-|--------------|-------------|-----------|
-| **Sum**      | Indicates the categorization of orders as Orders without Error or Orders with Error. | order_item.quantity |
-| **Count**    | The total number of orders associated with the same order name. | OrderHeader.EXTERNAL_ID (Count of all the unique ids of orders as stored in the external system) |
+| Field Header | Description                                                                          | HC Entity                                                                                         |
+| ------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------- |
+| **Sum**      | Indicates the categorization of orders as Orders without Error or Orders with Error. | order\_item.quantity                                                                              |
+| **Count**    | The total number of orders associated with the same order name.                      | OrderHeader.EXTERNAL\_ID (Count of all the unique ids of orders as stored in the external system) |
 
 <details>
-  
-  <summary>SQL query to generate POS Orders vs POS Variance Pie Chart</summary>
+
+<summary>SQL query to generate POS Orders vs POS Variance Pie Chart</summary>
 
 ```sql
 SELECT IF(`SALES`+`QOH`=0, "Orders without Error", "Orders with Error") AS `Sum`,
@@ -450,21 +454,19 @@ This report identifies POS (Point of Sale) return transactions and compares them
 
 ### Glossary
 
-| Field Header       | Description                                      | HC Entity       |
-|--------------------|--------------------------------------------------|-----------------|
-| **Return ID**      | Unique identifier for the return transaction.   | return_header.RETURN_ID |
-| **Entry Date**     | Date and time when the return transaction was recorded. | return_header.ENTRY_DATE |
-| **Order Name**     | Name or identifier for the associated order.    | order_header.ORDER_NAME |
-| **Internal Name**  | Internal name or SKU of the returned product.   | product.INTERNAL_NAME |
-| **Facility ID**    | Identifier for the facility where the return was processed. | return_header.DESTINATION_FACILITY_ID |
-| **Returned Quantity** | Quantity of the product returned in the transaction. | return_item.RETURN_QUANTITY |
-| **Restocked Quantity** | Quantity of the product restocked back into inventory. | return_item.RECEIVED_QUANTITY |
-
-
+| Field Header           | Description                                                 | HC Entity                                |
+| ---------------------- | ----------------------------------------------------------- | ---------------------------------------- |
+| **Return ID**          | Unique identifier for the return transaction.               | return\_header.RETURN\_ID                |
+| **Entry Date**         | Date and time when the return transaction was recorded.     | return\_header.ENTRY\_DATE               |
+| **Order Name**         | Name or identifier for the associated order.                | order\_header.ORDER\_NAME                |
+| **Internal Name**      | Internal name or SKU of the returned product.               | product.INTERNAL\_NAME                   |
+| **Facility ID**        | Identifier for the facility where the return was processed. | return\_header.DESTINATION\_FACILITY\_ID |
+| **Returned Quantity**  | Quantity of the product returned in the transaction.        | return\_item.RETURN\_QUANTITY            |
+| **Restocked Quantity** | Quantity of the product restocked back into inventory.      | return\_item.RECEIVED\_QUANTITY          |
 
 <details>
-  
-  <summary>SQL query to generate POS Returns vs POS Restock</summary>
+
+<summary>SQL query to generate POS Returns vs POS Restock</summary>
 
 ```sql
 SELECT `RETURN_ID` AS `RETURN_ID`,
@@ -501,7 +503,7 @@ LIMIT 1000;
 
 **Data Selection:** The query begins by selecting data from various tables that hold information on return transactions, products, and orders. Key details include return ID, entry date, order name, internal product name (SKU), facility ID, returned quantity, and restocked quantity.
 
-**Filtering Return Transactions:*8 The report specifically looks at returns that are not directed to the generic facility '_NA_'. This helps in focusing on relevant return transactions.
+\*\*Filtering Return Transactions:\*8 The report specifically looks at returns that are not directed to the generic facility '_NA_'. This helps in focusing on relevant return transactions.
 
 **Joining Relevant Tables:** To gather comprehensive data, the SQL query joins multiple tables. The return header table (rh) contains general return information such as destination facility ID and entry date. The return item table (ri) provides details on individual returned items and their quantities. The product table (p) includes product details such as internal name (SKU), and the order header table (oh) links returns to their corresponding orders.
 
@@ -515,13 +517,13 @@ This report generates a pie chart to visualize the comparison between returned i
 
 ### Glossary
 
-| Field Header | Description | HC Entity |
-|--------------|-------------|-----------|
-| **Count**    | The total number of orders associated with the same order name. | OrderHeader.EXTERNAL_ID (Count of all the unique ids of orders as stored in the external system) |
+| Field Header | Description                                                     | HC Entity                                                                                         |
+| ------------ | --------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| **Count**    | The total number of orders associated with the same order name. | OrderHeader.EXTERNAL\_ID (Count of all the unique ids of orders as stored in the external system) |
 
 <details>
-  
-  <summary>SQL query to generate POS Returns vs POS Restock Pie Chart</summary>
+
+<summary>SQL query to generate POS Returns vs POS Restock Pie Chart</summary>
 
 ```sql
 SELECT IF(`RETURN_QUANTITY` = IFNULL(`RECEIVED_QUANTITY`, 0), "Restocked", "Not Restocked") AS `My column`,
