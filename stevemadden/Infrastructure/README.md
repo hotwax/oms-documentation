@@ -1,7 +1,7 @@
 # Infrastructure
 
 | AWS Tool/Instance          | Specification                               | Purpose                     |
-| :-------------------------- | :-------------------------------------------- | :------------------------- |
+|  -------------------------- | -------------------------------------------- | ------------------------- |
 | **Production Environment** |                                               |                            |
 | AWS EC2 for OFBiz          | C5.2xlarge (8 CPU, 16GB RAM)                 | OFBiz                      |
 | AWS EC2 for OFBiz Async     | C5.2xlarge (8 CPU, 16GB RAM)                 | Async OFBiz                |
