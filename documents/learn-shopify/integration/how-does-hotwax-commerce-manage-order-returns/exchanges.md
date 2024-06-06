@@ -26,7 +26,7 @@ When a customer exchanges an item for another, it's crucial to link it to the or
 
 The downloaded exchange orders are then brokered to the optimal fulfillment locations by HotWax Commerce.
 
-These exchange orders are also synchronized to NetSuite for further processing. Learn more about [synchronization of exchange orders from HotWax Commerce to NetSuite ERP.](https://docs.hotwax.co/integration-resources/v/netsuite-integration/supported-integrations/exchanges)
+These exchange orders are also synchronized to NetSuite for further processing. Learn more about [synchronization of exchange orders from HotWax Commerce to NetSuite ERP.](https://docs.hotwax.co/documents/v/learn-netsuite/supported-integrations/exchanges#synchronize-web-exchanges-to-netsuite)
 
 **Restocking Item from the Original Order**
 
@@ -46,7 +46,7 @@ When POS sales are downloaded in HotWax Commerce, POS sales have a `Completed` s
 
 Similar to web exchanges, in case POS exchanges references to the original order stored in Shopify notes are also saved in HotWax Commerce as a `communication event`.
 
-These POS exchange sales are also synchronized to NetSuite for further processing. Learn more about [synchronization of POS exchange sales from HotWax Commerce to NetSuite ERP.](https://docs.hotwax.co/integration-resources/v/netsuite-integration/supported-integrations/exchanges)
+These POS exchange sales are also synchronized to NetSuite for further processing. Learn more about [synchronization of POS exchange sales from HotWax Commerce to NetSuite ERP.](https://docs.hotwax.co/documents/v/learn-netsuite/supported-integrations/exchanges#synchronize-pos-exchanges-to-netsuite)
 
 **Restocking Item from the Original Order**
 

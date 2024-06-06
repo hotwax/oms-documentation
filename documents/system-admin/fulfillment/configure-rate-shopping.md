@@ -13,7 +13,11 @@ In HotWax Commerce, the shipping method mapping can be different based on the re
 
 ## Mapping for Specified Shipping Methods
 
-For retailers with agreements with carrier service providers, shipping method options are directly offered to customers. Customers can then choose their preferred shipping method, and charges are applied accordingly. In such scenarios, carrier providers automatically offer retailers the best shipping prices. In these instances, HotWax simplifies the process by only requiring the mapping of shipping methods from Shopify to HotWax for generating shipping labels. For instance, if a customer selects FedEx Two-Day Shipping on Shopify, this method would have been pre-mapped by the retailer, including rates, zones, and other pertinent information. When an order transitions from Shopify to HotWax, this shipping method seamlessly transfers over. Learn how to map shipping methods effectively [here](carrier-and-shipment-methods.md).
+For retailers with agreements with carrier service providers, shipping method options are directly offered to customers. Customers can then choose their preferred shipping method, and charges are applied accordingly. In such scenarios, carrier providers automatically offer retailers the best shipping prices. In these instances, HotWax simplifies the process by only requiring the mapping of shipping methods from Shopify to HotWax for generating shipping labels. For instance, if a customer selects FedEx Two-Day Shipping on Shopify, this method would have been pre-mapped by the retailer, including rates, zones, and other pertinent information. When an order transitions from Shopify to HotWax, this shipping method seamlessly transfers over. 
+
+### Carrier Shipment Method Mapping
+
+Retailers need to create carrier and shipment methods in HotWax Commerce and ensure that product store shipment mapping is also completed for the existing shipment methods. Learn how to map carrier shipment methods [here](carrier-and-shipment-methods.md).
 
 ### Shopify Shop Carrier Shipment Mapping
 
@@ -46,7 +50,7 @@ Retailers who want to rate shop need to set up configurations for rate shopping 
 
 ### Creating Shipping Methods in HotWax Commerce
 
-Shipping methods are created in a [regular manner](carrier-and-shipment-methods.md). For shipping based on SLA, retailers don’t have to map the Shopify shop carrier shipment methods.
+Shipping methods are created and mapped with the carrier, product store, and facility in [regular manner](carrier-and-shipment-methods.md). For shipping based on SLA, retailers don’t have to map the Shopify shop carrier shipment methods.
 
 ### Setting Service Level Agreement
 
@@ -55,7 +59,7 @@ Setting Service Level Agreements (SLAs) within HotWax Commerce allows retailers 
 **Step-by-Step Usage Instructions:**
 
 1. Visit the following page: https://{instance-name}.hotwax.io/commerce/control/CarrierSetup?partyId=\_NA\_ or modify the party ID to \_NA\_ from any carrier integrations page.
-2. Go to the `Product Store Shipment Methods` section and click on `configure shipment method.`
+2. Go to the `Product Store Shipment Methods` section and click on `Configure shipment method.`
 3. In the newly opened module, select the desired `product store`, `shipment gateway config ID`, and `shipment method type` from the dropdown menu.
 4. Add the `delivery date` to specify the service level agreement for the selected shipment method.
 

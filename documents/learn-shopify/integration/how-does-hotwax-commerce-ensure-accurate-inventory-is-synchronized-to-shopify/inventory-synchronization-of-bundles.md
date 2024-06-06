@@ -21,7 +21,7 @@ The bundled product's inventory becomes 7, as it matches the lowest quantity ava
 
 **Inventory Updates and Frequency**
 
-HotWax Commerce synchronizes the inventory of components as regular products using the '[Upload recent inventory change](https://docs.hotwax.co/integration-resources-1/how-does-hotwax-commerce-ensure-accurate-inventory-is-synchronized-to-shopify)' job. The Bundles app checks for inventory changes every 10 minutes and computes the bundle's inventory.
+HotWax Commerce synchronizes the inventory of components as regular products using the '[Upload recent inventory changes job](https://docs.hotwax.co/documents/v/retail-operations/workflow/job-workflows/inventory#upload-recent-inventory-changes)'. The Bundles app checks for inventory changes every 10 minutes and computes the bundle's inventory.
 
 For instance, if a customer buys a belt and its inventory reduces to 6, the Bundles app also decreases the inventory of the bundled product.
 
