@@ -6,7 +6,7 @@ description: >-
 
 # Historical Customers
 
-Retailers that have been using NetSuite and Shopify prior to implementing HotWax Commerce already have a large database of customers already in NetSuite. HotWax has a historical customer sync with NetSuite that imports all customers from NetSuite along with their Shopify ID and saves them in HotWax. Now when a returning customer places an order on Shopify, HotWax will be able to link it to the existing customer based on their Shopify ID and then push their order to NetSuite using their existing NetSuite internal ID instead of creating a new customer.
+Retailers that have been using NetSuite and Shopify prior to implementing HotWax Commerce already have a large database of customers in NetSuite. HotWax has a historical customer sync job that imports all customers from NetSuite along with their Shopify and NetSuite Internal IDs and saves them in HotWax. Now when a returning customer places an order on Shopify, HotWax will be able to link it to the existing customer based on their Shopify ID and then push their order to NetSuite using their existing NetSuite internal ID.
 
 **SuiteScript to generate a CSV of historical customers**
 
