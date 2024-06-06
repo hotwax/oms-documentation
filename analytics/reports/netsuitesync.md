@@ -64,8 +64,8 @@ This report identifies products listed on Shopify that are missing from NetSuite
 
 | Field Header           | Description                                 | HC Entity              |
 |------------------------|---------------------------------------------|------------------------|
-| **Shopify Product ID** | Identifies the product within Shopify       |                        |
-| **HotWax Product ID**  |                                             |                        |
+| **Shopify Product ID** | Identifies the product within Shopify       | gi.GOOD_IDENTIFICATION_TYPE_ID |
+| **HotWax Product ID**  | The internal product identifier within the HotWax Commerce system | gi.PRODUCT_ID |
 
 <details>
   
@@ -117,10 +117,10 @@ This SQL query generates a report listing products that have been deleted from S
 
 | Field Header             | Description                                  | HC Entity            |
 |--------------------------|----------------------------------------------|----------------------|
-| **HotWax product ID**    |                                              |                      |
-| **SKU**                  | SKU of the product                           | Product.INTERNAL_NAME |
-| **HotWax Discontinuation date** |                                        |                      |
-| **comments**             |                                              |                      |
+| **HotWax product ID**    | The internal product identifier within the HotWax Commerce system | product.PRODUCT_ID |
+| **SKU**                  | SKU of the product                           | product.INTERNAL_NAME |
+| **HotWax Discontinuation date** | The date when the product was discontinued in the HotWax system, formatted as mm-dd-yyyy | product.SUPPORT_DISCONTINUATION_DATE |
+| **comments**             | Any comments related to the product | product.COMMENTS |
 
 <details>
   
@@ -159,13 +159,13 @@ LIMIT 1000;
 
 This SQL query generates a report listing customers who have a Shopify customer ID but are missing a corresponding NetSuite customer ID. It fetches details including the Hotwax customer ID, first name, last name, Shopify customer ID, and the number of orders placed by each customer. By joining relevant tables and applying specific filters, the query identifies and provides a concise list of customers not present in the NetSuite system.
 
-| Field Header           | Description                                      | HC Entity                 |
-|------------------------|--------------------------------------------------|---------------------------|
-| **HotWax Customer ID** |                                                  |                           |
-| **First Name**         |                                                  |                           |
-| **Last Name**          |                                                  |                           |
-| **Shopify Customer ID**|                                                  |                           |
-| **Order Count**        |                                                  |                           |
+| Field Header           | Description                                                                                   | HC Entity                 |
+|------------------------|-----------------------------------------------------------------------------------------------|---------------------------|
+| **HotWax Customer ID** | The unique identifier for the customer within the Hotwax Commerce system.                     | party.PARTY_ID          |
+| **First Name**         | The first name of the customer.                                                               | person.FIRST_NAME       |
+| **Last Name**          | The last name of the customer.                                                                | person.LAST_NAME        |
+| **Shopify Customer ID**| The unique identifier for the customer within the Shopify platform.                           | party_identification.ID_VALUE (where PARTY_IDENTIFICATION_TYPE_ID = 'SHOPIFY_CUST_ID') |
+| **Order Count**        | The total number of distinct orders placed by the customer, reflecting their purchase activity.| Derived from order_role.ORDER_ID |
 
 <details>
   
@@ -289,14 +289,15 @@ This report compares the sales of POS (Point of Sale) orders with inventory vari
 
 ### Glossary
 
-| Field Header       | Description                           | HC Entity                 |
-|--------------------|---------------------------------------|---------------------------|
-| **Order ID**       | It helps in distinguishing one order from another. | OrderHeader.ORDER_ID     |
-| **Order Name**     |                                       |                           |
-| **Entry Date**     |                                       |                           |
-| **SKU**            | SKU of the product                    | Product.INTERNAL_NAME    |
-| **Sales**          |                                       |                           |
-| **QOH Variance**   |                                       |                           |
+| Field Header            | Description                                                | HC Entity                    |
+|-------------------------|------------------------------------------------------------|------------------------------|
+| **Order ID**            | It helps in distinguishing one order from another.         | order_header.ORDER_ID      |
+| **Order Name**          | The name or identifier for the order.                      | order_header.ORDER_NAME    |
+| **Order Type ID**       | The type of order, identifying the category of the order.  | order_header.ORDER_TYPE_ID |
+| **Order Item Seq ID**   | The sequence identifier for items within an order.         | order_item.ORDER_ITEM_SEQ_ID |
+| **SKU**                 | SKU of the product.                                        | product.INTERNAL_NAME      |
+| **Status Date and Time**| The date and time when the order item status was updated.  | order_status.STATUS_DATETIME |
+| **Fulfillment Exported**| Indicates whether the fulfillment has been exported to NetSuite (Y or N). | Derived from order_fulfillment_history.FULFILLMENT_LOG_ID |
 
 <details>
   
@@ -375,7 +376,7 @@ This report generates a pie chart comparing POS (Point of Sale) orders with inve
 
 | Field Header | Description | HC Entity |
 |--------------|-------------|-----------|
-| **Sum**      |             |           |
+| **Sum**      | Indicates the categorization of orders as Orders without Error or Orders with Error. | order_item.quantity |
 | **Count**    | The total number of orders associated with the same order name. | OrderHeader.EXTERNAL_ID (Count of all the unique ids of orders as stored in the external system) |
 
 <details>
@@ -451,13 +452,15 @@ This report identifies POS (Point of Sale) return transactions and compares them
 
 | Field Header       | Description                                      | HC Entity       |
 |--------------------|--------------------------------------------------|-----------------|
-| **Return ID**      |                                                  |                 |
-| **Entry Date**     |                                                  |                 |
-| **Order Name**     |                                                  |                 |
-| **Internal Name**  |                                                  |                 |
-| **Facility ID**    |                                                  |                 |
-| **Returned Quantity** |                                              |                 |
-| **Restocked Quantity** |                                             |                 |
+| **Return ID**      | Unique identifier for the return transaction.   | return_header.RETURN_ID |
+| **Entry Date**     | Date and time when the return transaction was recorded. | return_header.ENTRY_DATE |
+| **Order Name**     | Name or identifier for the associated order.    | order_header.ORDER_NAME |
+| **Internal Name**  | Internal name or SKU of the returned product.   | product.INTERNAL_NAME |
+| **Facility ID**    | Identifier for the facility where the return was processed. | return_header.DESTINATION_FACILITY_ID |
+| **Returned Quantity** | Quantity of the product returned in the transaction. | return_item.RETURN_QUANTITY |
+| **Restocked Quantity** | Quantity of the product restocked back into inventory. | return_item.RECEIVED_QUANTITY |
+
+
 
 <details>
   
