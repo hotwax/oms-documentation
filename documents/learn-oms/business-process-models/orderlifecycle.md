@@ -80,7 +80,7 @@ When an order includes multiple items and inventory for one of them is unavailab
 * **Partial rejection:** Retailers can choose to partially reject the order by rejecting only the unavailable item. In this scenario, the order will be split, and the store will ship the available items while the unavailable item will be rebrokered.
 * **Full rejection:** Alternatively, retailers who prefer not to split the order, can reject all items in the order if any one item is unavailable for fulfillment. This ensures that the entire order is rejected, prompting the entire order to be rebrokered.
 
-Learn more about [Store Fulfillment](https://docs.hotwax.co/user-guides/orders/fulfillment/shiporders)
+Learn more about [Store Fulfillment](https://docs.hotwax.co/documents/orders/fulfillment)
 
 ### Warehouse fulfillment success and order completion:
 
@@ -122,7 +122,7 @@ HotWax Commerce then checks the custom tag on orders. If the tag is present on a
 
 ### BOPIS fulfillment success and order completion:
 
-Store associates can view BOPIS orders in their [<mark style="color:orange;">**BOPIS Fulfillment App**</mark>](https://docs.hotwax.co/documents/orders/bopis) and begin preparing the order for customer pick-up.
+Store associates can view BOPIS orders in their <mark style="color:orange;">**BOPIS Fulfillment App**</mark> and begin preparing the order for customer pick-up.
 
 Once the order is prepared, customer receives an email informing them that their order is ready for pickup. After an order has been picked up by the customer, the order status is updated from <mark style="color:orange;">**“Approved” to “Completed”**</mark> in HotWax Commerce. A `Completed Orders` job in HotWax Commerce also marks orders as <mark style="color:orange;">**"Fulfilled" in eCommerce.**</mark>
 
@@ -132,7 +132,7 @@ In the event store associates cannot find the inventory to fulfill a pick-up ord
 
 In this scenario, an email is automatically sent to the customer for <mark style="color:orange;">**alternative fulfillment options such as pickup from another store or home delivery**</mark>. Retailers can configure these options based on their order fulfillment strategy.
 
-Learn more about [BOPIS Fulfillment](https://docs.hotwax.co/user-guides/orders/bopis)
+Learn more about [BOPIS Fulfillment](https://docs.hotwax.co/documents/orders/bopis)
 
 ## Fulfillment of Pre-Orders
 

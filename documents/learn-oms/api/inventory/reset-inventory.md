@@ -35,4 +35,4 @@ The Reset Inventory API accepts the following parameters:
 
 Note: `sku` `upca` and `shopifyProductId` are commonly used product Identifiers.
 
-[Reset inventory sample.csv](https://docs.hotwax.co/documents/v/learn-hotwax-oms/additional-resources/sample-reset-inventory-csv)
+[Reset inventory sample.csv](samples/reset-inventory-sample.csv)

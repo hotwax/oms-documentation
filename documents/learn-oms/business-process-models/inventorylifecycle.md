@@ -23,7 +23,7 @@ In HotWax Commerce, you'll come across three inventory-related terms: **Quantity
 
 To calculate `Online ATP`, HotWax Commerce deducts inventory that is not available for sale from the ATP. This includes items such as safety stock, threshold quantities, orders in the brokering queue, and inventory from locations that are not participating in online selling.
 
-* <mark style="color:orange;">**Safety stock**</mark><mark style="color:orange;">:</mark> Inventory reserved at each store specifically for walk-in customers.
+* <mark style="color:orange;">**Safety stock**</mark><mark style="color:orange;">:</mark> Inventory set aside at each store specifically for walk-in customers.
 * <mark style="color:orange;">**Threshold**</mark><mark style="color:orange;">:</mark> Inventory buffer established at a company level to prevent inventory discrepancies and overselling on eCommerce platforms.
 * <mark style="color:orange;">**Orders in the brokering queue**</mark><mark style="color:orange;">:</mark> eCommerce orders awaiting inventory allocation.
 * <mark style="color:orange;">**Non participating facilities' ATP**</mark><mark style="color:orange;">:</mark> Inventory at fulfillment locations that have online selling disabled in HotWax Commerce.

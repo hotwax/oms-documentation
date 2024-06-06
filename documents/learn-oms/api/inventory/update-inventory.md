@@ -34,7 +34,7 @@ To access this endpoint, you need to include the authorization token in the requ
 
 `Authorization: Bearer <access_token>`
 
-To learn more about Bearer token authentication, read this [document](https://docs.hotwax.co/documents/v/learn-hotwax-oms/api-and-data-feeds/initial-api-authentication)
+To learn more about Bearer token authentication, read this [document](../initial-api-authentication.md)
 
 ### Body
 

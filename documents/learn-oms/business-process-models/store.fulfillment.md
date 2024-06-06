@@ -43,7 +43,7 @@ It's crucial to note that shipping labels are valid only when an item requires a
 
 When a picker is unable to find the item that is listed in their picklist, store managers have the authority to reject that specific item. In this scenario, its fulfillment status <mark style="color:orange;">**"Picking"**</mark> is automatically removed in HotWax Commerce.
 
-Learn more about [Rejections and their reasons](../fulfillment/rejection.md)
+Learn more about [Rejections and their reasons](https://docs.hotwax.co/documents/orders/fulfillment/rejection)
 
 ## Pack items
 
