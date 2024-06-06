@@ -23,6 +23,7 @@
   * [Picking App](fulfillment/pickingApp.md)
   * [CSV Support](fulfillment/csvSupport.md)
   * [Settings Page](fulfillment/fulfillment-setting-page.md)
+  * [Order Lookup Page](fulfillment/order-lookup.md)
 * [Returns](returns/readme.md)
   * [In-Store Returns](returns/in-store-returns.md)
 
