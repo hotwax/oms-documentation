@@ -188,7 +188,7 @@ To sync sales orders from HotWax Commerce to NetSuite, a required field is the "
 
 ## Sync Sales Order Item Line IDs from NetSuite to HotWax Commerce
 
-This step syncs NetSuite sales order line item IDs with HotWax Commerce order items. This step is crucial as it helps in mapping and aligning the order line items in HotWax Commerce with their corresponding line item IDs in NetSuite. This synchronization enables a smooth and accurate cross-referencing of items and their relevant details between the two systems. Without syncing order line item IDs, any attempt to update an order item in NetSuite would result in a new order item being created.
+This step syncs NetSuite sales order line item IDs with HotWax Commerce order items. This step helps in mapping and aligning the order line items in HotWax Commerce with their corresponding line item IDs in NetSuite. This synchronization enables a smooth and accurate cross-referencing of items and their relevant details between the two systems. Without syncing order line item IDs, any attempt to update an order item in NetSuite would result in a new order item being created.
 
 <figure><img src="../../../.gitbook/assets/11.png" alt=""><figcaption><p>Order line item IDs synced from NetSuite to HotWax Commerce</p></figcaption></figure>
 
@@ -227,7 +227,7 @@ FTP Config: IMP_ORDER_ITM_ATTR
 
 This step synchronizes NetSuite sales order IDs with orders in HotWax Commerce for tracking and identification. This step enables cross-referencing and linkage between orders in both systems, paving the way for accurate tracking and management.
 
-The synchronization of Sales Order IDs from NetSuite to HotWax Commerce is a critical step as it serves as an indicator that the orders in HotWax Commerce have been successfully integrated into NetSuite. Additionally, it is an essential step for various functions, including the creation of item fulfillment, return authorization, and customer deposit records in NetSuite.
+The synchronization of Sales Order IDs from NetSuite to HotWax Commerce  serves as an indicator that the orders in HotWax Commerce have been successfully integrated into NetSuite. Additionally, it is an essential step for various functions, including the creation of item fulfillment, return authorization, and customer deposit records in NetSuite. *** NOTE
 
 <figure><img src="../../../.gitbook/assets/12.png" alt=""><figcaption><p>Sales order IDs synced from NetSuite to HotWax Commerce</p></figcaption></figure>
 
