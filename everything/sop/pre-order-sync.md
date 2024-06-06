@@ -1,20 +1,21 @@
 # Pre-orders sync 
-HotWax Commerce enhances pre-order and back-order management by leveraging purchase orders, benefiting retailers with large catalogues. POs detail item specifics and upcoming inventory. Retailers can integrate their ERP systems for automatic PO synchronization or use the Import App to manually import PO CSV files.
+HotWax Commerce automates pre-order and back-order management by leveraging purchase orders (POs), aiding in the automatic listing and de-listing of products, which is beneficial for retailers with extensive catalogs. POs provide crucial details about item specifics and upcoming inventory arrivals. Retailers can integrate their ERP systems with HotWax Commerce for automatic PO synchronization or use the Import App to manually import PO CSV files.
 
-To know more about how the pre-order process is automated in HotWax refer to this user guide.  
+To know more about how the pre-order process is automated in HotWax refer to this user guide.
+
 In HotWax, we have two relevant entities:
 
 **Product Category:** Defines different types of product categories (e.g., shop-tops, shop-outerwear, shop-bottoms). The `PREORDER_CAT` category is used to manage pre-order products.
 
 **Product Category Member:** Tracks the members or products in a category. When a new product is added to the `PREORDER_CAT` category, a record is created in this entity.  
-The presell catalogue synchronization job synchronizes pre-order products to Shopify whenever a product is added to the PREORDER_CAT category. Here's an overview of the process and some key points to understand:
+The presell catalog synchronization job synchronizes pre-order products to Shopify whenever a product is added to the PREORDER_CAT category. Here's an overview of the process and some key points to understand:
 
 ### Downloading Products from Shopify to Hotwax Commerce
 - Hotwax Commerce downloads products from the parent Shopify store.
 - These downloaded products are initially not associated with any child shops within Hotwax Commerce.
 
 ### Associating Products with Child Shops
-- A separate job, known as the `Associate products with sub-catalogue` job, is responsible for associating these downloaded products with various child shops. This step is crucial for ensuring that the products are associated with the child shops.
+- A separate job, known as the `Associate products with sub-catalog` job, is responsible for associating these downloaded products with various child shops. This step is crucial for ensuring that the products are associated with the child shops.
 
 ### Importing Purchase Orders
 - There are instances where purchase orders for these downloaded products are imported into Hotwax Commerce before the products get associated with the child shops.
