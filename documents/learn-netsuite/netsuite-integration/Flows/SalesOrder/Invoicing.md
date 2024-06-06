@@ -15,7 +15,7 @@ A scheduled SuiteScript in NetSuite identifies sales orders in "Pending\_Billing
 
 Upon generating the invoice, the status of the customer deposit status is updated from "Undeposited" to "Fully Applied", and the invoice is marked as "PAID IN FULL," signifying payment reception and application to the invoice. This process also ensures all necessary accounting postings are handled in NetSuite.
 
-This step has not external dependency on jobs running in HotWax Commerce.
+This step has no external dependency on jobs running in HotWax Commerce.
 
 **SuiteScript**
 
