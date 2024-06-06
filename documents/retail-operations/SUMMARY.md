@@ -54,7 +54,7 @@
   * [Find Product Inventory](inventory-management/find-product-inventory.md)
   * [Product Inventory View Page](inventory-management/product-inventory-view.md)
   * [Inventory Configurations](inventory-management/inventory-configurations.md)
-* [Inventory upload](import-app/inventory.md)
+* [Inventory upload](inventory-management/inventory-upload.md)
 * [Safety stock](inventory/safety-stock/README.md)
   * [Set Bulk Safety Stock](inventory/safety-stock/set-bulk-safety-stock.md)
   * [Set Individual Safety Stock](inventory/safety-stock/set-individual-safety-stock.md)
