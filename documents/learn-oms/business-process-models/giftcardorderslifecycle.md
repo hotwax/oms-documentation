@@ -34,7 +34,7 @@ Digital gift cards, also known as e-gift cards, are virtual equivalents of physi
 
 ## Physical Gift Cards
 
-<figure><img src="broken-reference" alt=""><figcaption><p>Physical gift card orders lifecycle business process model</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Physical gift card lifecycle bpm.png" alt=""><figcaption><p>Physical gift card orders lifecycle business process model</p></figcaption></figure>
 
 ### 1. Order creation
 
