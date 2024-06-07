@@ -98,6 +98,8 @@ For Transfer Order, the value will be 4; for other types, the value will be 2. C
 * 2 - SALES\_ORDER
 * 4 - TRANSFER\_ORDER
 
+We expect it to be hardcoded "2".
+
 </details>
 
 ## DLV SERVICE (S-13)
@@ -112,12 +114,14 @@ For Transfer Order, the value will be 4; for other types, the value will be 2. C
     * 2 = Air
     * 3 = Sagawa
   * This is mapped with the Carrier Party of the shipgroup.
+  * We expect it to be hardcoded "3".
 
 ## DLV PAYMENT (S-14)
 
 * **Description:** Payment Type/Gateway
 * **Position:** 1-1
 * **OMS Value:** 2
+* **Default Value:** 2
 * **Additional Information:**
   * This field represents the type of payment for the order.
   * Numeric values are assigned as follows:
@@ -351,6 +355,12 @@ _Open Discussion Topics_
 * **Bytes:** 20
 * **Data Type:** NUMERIC
 
+## S-84: Total Retail Price (Including VAT)
+
+* **Length:** 20 characters
+* **Bytes:** 20 bytes
+* **Type:** Numeric
+
 ### Description
 
 The Total Retail Price (Including VAT) field (S-84) represents the total retail price of an order item, including VAT, item unit price, item sales tax, and item discount amounts.
@@ -364,16 +374,6 @@ This field should contain the total value of the order item, which includes the 
 * The value in this field is calculated based on the total\_products\_price, which is refundable\_quantity multiplied by discountedUnitPrice for each line item.
 * It includes the sum of the fields S-54 (Total Price Without VAT) and S-55 (VAT).
 * The exact calculation may need confirmation from the team.
-
-### S-84: Total Retail Price (Including VAT)
-
-* **Length:** 20 characters
-* **Bytes:** 20 bytes
-* **Type:** Numeric
-
-**Description:** This field represents the total retail price, including VAT, for the order.
-
-**Example:**
 
 ## S-85 Shop Code
 
