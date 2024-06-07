@@ -134,7 +134,7 @@ When walk-in customers purchase a physical gift card from the store, it is treat
 
 ## Digital gift cards
 
-<figure><img src="broken-reference" alt=""><figcaption><p>Digital gift card orders lifecycle business process model</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/digital gift cards.png" alt=""><figcaption><p>Digital gift card orders lifecycle business process model</p></figcaption></figure>
 
 ### 1. Order creation
 
