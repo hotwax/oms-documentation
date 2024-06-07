@@ -20,7 +20,7 @@ Here is the **NetSuite Order Lifecycle Business Process Model** that provides st
 
 ## NetSuite Order Lifecycle BPM
 
-<figure><img src="../../../.gitbook/assets/NetSuite order lifecycle bpm (2).png" alt=""><figcaption><p>NetSuite order lifecycle business process model</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/NetSuite order lifecycle bpm.png" alt=""><figcaption><p>NetSuite order lifecycle business process model</p></figcaption></figure>
 
 Most of our customers use Shopify as their eCommerce platform along with NetSuite as their ERP and warehouse fulfillment solution. Therefore, to explain the NetSuite Order Lifecycle BPM, we have taken Shopify as the eCommerce platform, NetSuite as the ERP and warehouse fulfillment solution, with HotWax Commerce as the Order Management System.
 

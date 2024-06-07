@@ -1,6 +1,8 @@
+---
+description: Discover Inventory reports provided by HotWax Commerce
+---
 
-
-# Inventory Reports
+# Inventory
 
 ## Receiving Discrepancies by Product
 
@@ -8,14 +10,14 @@ This discrepancy report helps retailers maintain inventory accuracy and uphold c
 
 ### Glossary
 
-| Field Header | Description                         | HC Entity                                 |
-|--------------|-------------------------------------|-------------------------------------------|
-| SKU          | SKU of the product                  | Product.INTERNAL_NAME                     |
-| Difference   | Discrepancies in receiving          | Difference of ShipmentReceipt.QUANTITY_ACCEPTED with ShipmentItem.QUANTITY |
+| Field Header | Description                | HC Entity                                                                   |
+| ------------ | -------------------------- | --------------------------------------------------------------------------- |
+| SKU          | SKU of the product         | Product.INTERNAL\_NAME                                                      |
+| Difference   | Discrepancies in receiving | Difference of ShipmentReceipt.QUANTITY\_ACCEPTED with ShipmentItem.QUANTITY |
 
 <details>
 
-**<summary>SQL Query to Generate Receiving Discrepancies by Product Report</summary>**
+<summary><strong>SQL Query to Generate Receiving Discrepancies by Product Report</strong></summary>
 
 ```sql
 SELECT `SKU` AS `SKU`,
@@ -86,7 +88,6 @@ LIMIT 10000;
 
 **Ordering:** The query orders the results in descending order based on the total discrepancies, ensuring the product with more discrepancies appears first.
 
-
 ## Recorded Variances Report
 
 This report provides retailers with detailed insights into discrepancies in inventory levels across different products and facilities. By highlighting specific product SKUs that have experienced variances and outlining the reasons behind these discrepancies, the report allows retailers to pinpoint areas of concern swiftly and accurately. Understanding the root causes of inventory discrepancies enables retailers to take proactive measures to rectify issues, whether they stem from inaccuracies in recording, theft, damage, or other factors.
@@ -95,21 +96,21 @@ This report helps in optimizing inventory management by ensuring that stock leve
 
 ### Glossary
 
-| Field Header    | Description                                                                  | HC Entity                               |
-|-----------------|------------------------------------------------------------------------------|-----------------------------------------|
-| Facility        | Location of a physical store or warehouse                                    | Facility.FACILITY_NAME                  |
-| Facility ID     | An identifier used to distinguish one facility from another uniquely         | Facility.FACILITY_ID                    |
-| SKU             | Each product's unique code assigned for inventory management and tracking    | GoodIdentification.ID_VALUE             |
-| Adjustment date | The date on which a change or modification is made                           | InventoryItemVariance.CREATED_STAMP     |
-| User            | A person or system that interacts with the system                            | InventoryItemVariance.CHANGE_BY_USER_LOGIN_ID |
-| Quantity        | The numerical amount or count of a product                                   | InventoryItemVariance.QUANTITY_ON_HAND_VAR |
-| Description     | A detailed explanation often used to provide information about products      | VarianceReason.DESCRIPTION              |
-| Enum ID         | Short for "Enumeration Identifier," it refers to a unique identifier within an enumeration | Enumeration.ENUM_TYPE_ID        |
-| Comments        | Additional remarks or information provided to explain                        | InventoryItemVariance.COMMENTS          |
+| Field Header    | Description                                                                                | HC Entity                                         |
+| --------------- | ------------------------------------------------------------------------------------------ | ------------------------------------------------- |
+| Facility        | Location of a physical store or warehouse                                                  | Facility.FACILITY\_NAME                           |
+| Facility ID     | An identifier used to distinguish one facility from another uniquely                       | Facility.FACILITY\_ID                             |
+| SKU             | Each product's unique code assigned for inventory management and tracking                  | GoodIdentification.ID\_VALUE                      |
+| Adjustment date | The date on which a change or modification is made                                         | InventoryItemVariance.CREATED\_STAMP              |
+| User            | A person or system that interacts with the system                                          | InventoryItemVariance.CHANGE\_BY\_USER\_LOGIN\_ID |
+| Quantity        | The numerical amount or count of a product                                                 | InventoryItemVariance.QUANTITY\_ON\_HAND\_VAR     |
+| Description     | A detailed explanation often used to provide information about products                    | VarianceReason.DESCRIPTION                        |
+| Enum ID         | Short for "Enumeration Identifier," it refers to a unique identifier within an enumeration | Enumeration.ENUM\_TYPE\_ID                        |
+| Comments        | Additional remarks or information provided to explain                                      | InventoryItemVariance.COMMENTS                    |
 
 <details>
 
-**<summary>SQL Query to Generate Recorded Variances Report</summary>**
+<summary><strong>SQL Query to Generate Recorded Variances Report</strong></summary>
 
 ```sql
 SELECT `Facility Id` AS `Facility Id`,
@@ -155,6 +156,7 @@ WHERE `Description` != 'Adjustment'
   AND `Adjustment Date` < STR_TO_DATE('2024-05-08 00:00:00.000000', '%Y-%m-%d %H:%i:%s.%f')
 LIMIT 50000;
 ```
+
 </details>
 
 ### Query Logic
@@ -162,11 +164,12 @@ LIMIT 50000;
 **Data Selection:** The SQL query gathers data from multiple tables including `physical_inventory`, `inventory_item_variance`, `product`, `facility`, and others. These tables provide essential information such as facility IDs, SKUs, adjustment dates, quantities, users, descriptions, and comments necessary for analyzing inventory variances.
 
 **Filtering Criteria:** To focus the report on relevant variances, the query applies several filtering criteria:
-- It selects adjustments made for products identified by their UPC code (`good_identification_type_id = "UPCA"`).
-- Only adjustments related to products with the product category `PURCHASE_ALLOW` are included.
-- Adjustments labeled as `POS_SALE` are excluded, as they typically do not represent inventory discrepancies.
-- Adjustments associated with a specific facility ID ("BDC") are also excluded, based on business requirements.
-- The query further refines the dataset by specifying a date range for the adjustment date, ensuring that only adjustments within the specified timeframe are included in the report.
+
+* It selects adjustments made for products identified by their UPC code (`good_identification_type_id = "UPCA"`).
+* Only adjustments related to products with the product category `PURCHASE_ALLOW` are included.
+* Adjustments labeled as `POS_SALE` are excluded, as they typically do not represent inventory discrepancies.
+* Adjustments associated with a specific facility ID ("BDC") are also excluded, based on business requirements.
+* The query further refines the dataset by specifying a date range for the adjustment date, ensuring that only adjustments within the specified timeframe are included in the report.
 
 **Column Selection:** Essential columns such as facility IDs, SKUs, adjustment dates, quantities, users, descriptions, and comments are selected to provide insights into inventory adjustments. This selection enables retailers to identify specific products, facilities, and reasons behind variances.
 
@@ -180,16 +183,16 @@ For retailers, this report helps monitor the status of inbound shipments, tracks
 
 ### Glossary
 
-| Field Header     | Description                                                 | HC Entity                           |
-|------------------|-------------------------------------------------------------|-------------------------------------|
-| External ID (WMS)| Identification code used in the WMS to track items externally | Shipment.EXTERNAL_ID                |
-| External ID      | An identification code used externally for tracking purposes | Shipment.SHIPMENT_ID                |
-| Tracking code    | Code used to monitor the orders                             | ShipmentRouteSegment.TRACKING_ID_NUMBER |
-| Facility         | Location of a physical store or warehouse                   | Facility.FACILITY_NAME              |
+| Field Header      | Description                                                   | HC Entity                                 |
+| ----------------- | ------------------------------------------------------------- | ----------------------------------------- |
+| External ID (WMS) | Identification code used in the WMS to track items externally | Shipment.EXTERNAL\_ID                     |
+| External ID       | An identification code used externally for tracking purposes  | Shipment.SHIPMENT\_ID                     |
+| Tracking code     | Code used to monitor the orders                               | ShipmentRouteSegment.TRACKING\_ID\_NUMBER |
+| Facility          | Location of a physical store or warehouse                     | Facility.FACILITY\_NAME                   |
 
 <details>
 
-**<summary>SQL Query to Generate Open Inbound Shipment Report</summary>**
+<summary><strong>SQL Query to Generate Open Inbound Shipment Report</strong></summary>
 
 ```sql
 SELECT shipment_id AS shipment_id,
@@ -240,6 +243,7 @@ GROUP BY shipment_id,
 ORDER BY quantity DESC
 LIMIT 50000;
 ```
+
 </details>
 
 ### Query Logic
@@ -260,21 +264,21 @@ It provides a comprehensive overview of received inventory, aiding retailers in 
 
 ### Glossary
 
-| Field Header             | Description                                                                              | HC Entity                                                                                           |
-|--------------------------|------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
-| Original Facility ID     | ID of the facility where the shipment originated                                          | Shipment.ORIGIN_FACILITY_ID                                                                         |
-| Destination Facility ID  | ID of the facility where the shipment was delivered                                       | Shipment.DESTINATION_FACILITY_ID                                                                    |
-| Expected                 | Expected quantity of items                                                                | ShipmentItem.QUANTITY                                                                               |
-| Shipment ID              | Unique identifier for the shipment                                                        | Shipment.EXTERNAL_ID                                                                                |
-| Transfer Order           | Transfer order number associated with the shipment                                        | ShipmentAttribute.ATTR_VALUE where the ShipmentAttribute.ATTR_NAME is set to EXTERNAL_ORDER_NAME    |
-| SKU                      | SKU of the product                                                                        | Product.INTERNAL_ID                                                                                 |
-| Received                 | Quantity of items received                                                                | ShipmentReceipt.QUANTITY_ACCEPTED                                                                   |
-| Difference               | Discrepancies in receiving                                                                | Difference of ShipmentReceipt.QUANTITY_ACCEPTED and ShipmentItem.QUANTITY                           |
-| Status                   | The status of the order based on the difference between expected and received quantities  | Conditions applied to ShipmentItem.QUANTITY - ShipmentReceipt.QUANTITY_ACCEPTED (e.g., Completed, NotReceived, OverReceived, UnderReceived, Manually added item to transfer order) |
+| Field Header            | Description                                                                              | HC Entity                                                                                                                                                                           |
+| ----------------------- | ---------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Original Facility ID    | ID of the facility where the shipment originated                                         | Shipment.ORIGIN\_FACILITY\_ID                                                                                                                                                       |
+| Destination Facility ID | ID of the facility where the shipment was delivered                                      | Shipment.DESTINATION\_FACILITY\_ID                                                                                                                                                  |
+| Expected                | Expected quantity of items                                                               | ShipmentItem.QUANTITY                                                                                                                                                               |
+| Shipment ID             | Unique identifier for the shipment                                                       | Shipment.EXTERNAL\_ID                                                                                                                                                               |
+| Transfer Order          | Transfer order number associated with the shipment                                       | ShipmentAttribute.ATTR\_VALUE where the ShipmentAttribute.ATTR\_NAME is set to EXTERNAL\_ORDER\_NAME                                                                                |
+| SKU                     | SKU of the product                                                                       | Product.INTERNAL\_ID                                                                                                                                                                |
+| Received                | Quantity of items received                                                               | ShipmentReceipt.QUANTITY\_ACCEPTED                                                                                                                                                  |
+| Difference              | Discrepancies in receiving                                                               | Difference of ShipmentReceipt.QUANTITY\_ACCEPTED and ShipmentItem.QUANTITY                                                                                                          |
+| Status                  | The status of the order based on the difference between expected and received quantities | Conditions applied to ShipmentItem.QUANTITY - ShipmentReceipt.QUANTITY\_ACCEPTED (e.g., Completed, NotReceived, OverReceived, UnderReceived, Manually added item to transfer order) |
 
 <details>
 
-**<summary>SQL Query to Generate Receiving Report</summary>**
+<summary><strong>SQL Query to Generate Receiving Report</strong></summary>
 
 ```sql
 SELECT DATE(`Received_Date`) AS `Received_Date`,
@@ -343,17 +347,18 @@ GROUP BY DATE(`Received_Date`),
          `Status`
 LIMIT 100;
 ```
-</details>
 
+</details>
 
 ### Query Logic
 
 **Data Selection:** The SQL query retrieves data from the `shipment` table along with relevant attributes and statuses. It selects fields such as received date, origin and destination facility IDs, expected quantity, shipment ID, transfer order, SKU, received quantity, difference, and status. These fields provide comprehensive information about the receiving process for inbound transfers.
 
 **Filtering Criteria:** To generate the report for receiving, the query applies specific filtering criteria:
-- It selects inbound transfer shipments with a status of `PURCH_SHIP_RECEIVED`, indicating that they have been received.
-- The query further refines the dataset by specifying a date range for the received date, ensuring that only shipments received within the specified timeframe are included in the report.
-- Additionally, only shipments with an external order name attribute are considered, indicating that they are part of a transfer order.
+
+* It selects inbound transfer shipments with a status of `PURCH_SHIP_RECEIVED`, indicating that they have been received.
+* The query further refines the dataset by specifying a date range for the received date, ensuring that only shipments received within the specified timeframe are included in the report.
+* Additionally, only shipments with an external order name attribute are considered, indicating that they are part of a transfer order.
 
 **Column Selection:** Columns such as received date, origin and destination facility IDs, expected quantity, shipment ID, transfer order, SKU, received quantity, difference, and status are selected. These columns provide insights into the receiving process for inbound transfers, allowing users to track and manage received quantities effectively.
 
