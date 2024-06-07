@@ -31,11 +31,17 @@ Once shipping methods are created, retailers have to also map Shopify Shop carri
 6. **Add Shopify Shipment Method**: Add the `Shopify Shipment Method` name that will correspond to the above-selected shipment method.
 7. **Save Mapping**: Click on the `Add` button to save the shipment method.
 
-Once the shipment method is saved and mapped, HotWax Commerce runs a carrier-specific API call to generate a shipping label based on the shipment method selected by the customer during checkout. Since all shipment methods are mapped, HotWax Commerce directly generates the shipping label based on the shipment method, shipping distance and the box size from the carrier.
+### Add Carrier Facility
+
+In HotWax Commerce, the ability to add shipping carriers to facilities is essential for order fulfillment. Once a shipment gateway is set, adding carriers to facilities enables shipping label generation specifically for those carriers associated with the selected facility. To learn more about how to add a carrier party to the facility, read our [user manual](ShippingGateways.md#add-carrier-facility) 
+
+Once the shipment method is saved and mapped, HotWax Commerce runs a carrier-specific API call to generate a shipping label based on the shipment method selected by the customer during checkout. Since all shipment methods are mapped, HotWax Commerce directly generates the shipping label based on the shipment method, shipping distance, and the box size from the carrier.
+
+{% embed url="https://youtu.be/D7aoyRRIdMU" %} Shopify Shop Carrier Shipment Mapping {% endembed %}
 
 ## Mapping for SLA Based Shipment
 
-For retailers without specific carrier integrations, offering customers the choice between standard and expedited delivery is common practice. Default delivery charges are applied for both options, but actual shipping costs may vary depending on the carrier and the chosen method. For example, if a customer selects Standard Shipping and the retailer charges $20, but the carrier offers Air Shipping for $30 and Ground Shipping for $10, it's crucial to select the most cost-effective option, such as Ground Shipping. HotWax Commerce facilitates this through rate shopping, querying different service levels or shipping methods provided by carrier partners to find the best option for each shipment.
+For retailers without specific carrier integrations, offering customers the choice between standard and expedited delivery is common practice. Default delivery charges are applied for both options, but actual shipping costs may vary depending on the carrier and the chosen method. For example, if a customer selects Standard Shipping and the retailer charges $20, but the carrier offers Air Shipping for $30 and Ground Shipping for $10, it's crucial to select the most cost-effective option, such as Ground Shipping. HotWax Commerce facilitates this through rate shopping, querying different service levels, or shipping methods provided by carrier partners to find the best option for each shipment.
 
 ### Enabling Rate Shopping
 
@@ -46,7 +52,9 @@ Retailers who want to rate shop need to set up configurations for rate shopping 
 3. **Select Store**: Choose the relevant product store where you want to enable rate shopping to proceed to the configurations page.
 4. **Add Configuration**: Under the store settings section, click on the "Add" button to create a new configuration.
 5. **Configure Rate Shopping**: From the dropdown menu, choose "Configuration for Rate Shopping" and set the value as "Y" to enable rate shopping.
-6. **Save Configuration**: Click on the "Add" button to save the configuration changes. You will be able to see `RATE_SHOPPING ` configuration in the setting type.
+6. **Save Configuration**: Click on the "Add" button to save the configuration changes. You will be able to see the `RATE_SHOPPING ` configuration in the setting type.
+
+{% embed url="https://youtu.be/F8sxNrDd6N8" %} Enable Rate Shopping {% endembed %}
 
 ### Creating Shipping Methods in HotWax Commerce
 
@@ -63,9 +71,13 @@ Setting Service Level Agreements (SLAs) within HotWax Commerce allows retailers 
 3. In the newly opened module, select the desired `product store`, `shipment gateway config ID`, and `shipment method type` from the dropdown menu.
 4. Add the `delivery date` to specify the service level agreement for the selected shipment method.
 
-### Generating Shipping Label with Rate Shopping
+{% embed url="https://youtu.be/AQiKK_bRmJE" %} Setting Service Level Agreement {% endembed %}
 
-HotWax Commerce streamlines shipping label generation by automating the process based on order specifics like shipping method, box size, and delivery distance. The system initiates an API call in the background when a picklist is created, leveraging SLA data to fetch shipping methods and charges. This ensures efficient selection of the most cost-effective shipping method within the specified delivery timeframe, saving time and resources for retailers.
+### Generating Shipping Labels with Rate Shopping
+
+HotWax Commerce streamlines shipping label generation by automating the process based on order specifics like shipping method, box size, and delivery distance. Retailers need to associate carrier ID with the Facility to generate shipping labels with rate shopping. [Read here](ShippingGateways.md#add-carrier-facility) for more information.
+
+The system initiates an API call in the background when a picklist is created, leveraging SLA data to fetch shipping methods and charges. This ensures efficient selection of the most cost-effective shipping method within the specified delivery timeframe, saving time and resources for retailers.
 
 ### Step-by-Step Usage Instructions
 
