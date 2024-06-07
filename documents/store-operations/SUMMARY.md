@@ -17,12 +17,16 @@
   * [Ship to Store](bopis/ship-to-store.md)
   * [Catalog Page](bopis/catalog-page.md)
   * [Settings Page](bopis/settings-page.md)
+  * [Troubleshooting](bopis/bopis-troubleshooting.md)
+    *[Notifications](bopis/notifications.md)
 * [Fulfillment](fulfillment/README.md)
   * [Order Fulfillment](fulfillment/shipOrders.md)
   * [Rejection](fulfillment/rejection.md)
   * [Picking App](fulfillment/pickingApp.md)
   * [CSV Support](fulfillment/csvSupport.md)
   * [Settings Page](fulfillment/fulfillment-setting-page.md)
+  * [Troubleshooting]
+    *[Shipping Label Generations](fulfillment/shipping-label-generation.md)
 * [Returns](returns/readme.md)
   * [In-Store Returns](returns/in-store-returns.md)
 

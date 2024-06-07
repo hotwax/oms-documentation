@@ -18,6 +18,7 @@
   * [Gift Cards Download](integration/how-are-products-downloaded-from-shopify-to-hotwax-commerce/giftcardsdownload.md)
   * [Bundles Download](integration/how-are-products-downloaded-from-shopify-to-hotwax-commerce/downloading-bundles.md)
   * [Product Synchronization for Multiple Shopify Stores](integration/multiple-store-setup.md)
+  * [Troubleshooting Product sync](troubleshooting/products.md)
 
 ## Inventory
 
@@ -26,6 +27,7 @@
   * [Location Mapping](integration/how-does-hotwax-commerce-ensure-accurate-inventory-is-synchronized-to-shopify/location-mapping.md)
   * [Inventory Synchronization of Gift Cards](integration/how-does-hotwax-commerce-ensure-accurate-inventory-is-synchronized-to-shopify/inventorysynchronizationgiftcards.md)
   * [Inventory Synchronization of Bundles](integration/how-does-hotwax-commerce-ensure-accurate-inventory-is-synchronized-to-shopify/inventory-synchronization-of-bundles.md)
+  * [Troubleshooting Inventory sync](troubleshooting/inventory.md)
 
 ## Orders
 
@@ -53,6 +55,10 @@
   * [In-Store Returns](integration/how-does-hotwax-commerce-manage-order-returns/in-store-returns.md)
   * [Appeasements](integration/how-does-hotwax-commerce-manage-order-returns/appeasements.md)
   * [Exchanges](integration/how-does-hotwax-commerce-manage-order-returns/exchanges.md)
+* [Troubleshooting order sync](troubleshooting/order.md)
+
+## Shopify Mapping
+
 * [Integration-Mapping](shopify-setup/integration-mapping.md)
   * [Locations](shopify-setup/MapLocations.md)
   * [Shipping Method](shopify-setup/shipping-method.md)
@@ -64,3 +70,4 @@
 
 * [Kit Products](additional-resources/kit-products.md)
 * [POS Completed Orders](additional-resources/pos-completed-orders.md)
+
