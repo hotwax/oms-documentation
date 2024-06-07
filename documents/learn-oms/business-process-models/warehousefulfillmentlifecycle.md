@@ -7,7 +7,7 @@ description: >-
 
 # Warehouse fulfillment lifecycle
 
-<figure><img src="../.gitbook/assets/warehouse fulfillment bpm.png" alt=""><figcaption><p>Warehouse fulfillment lifecycle business process model</p></figcaption></figure>
+<figure><img src="broken-reference" alt=""><figcaption><p>Warehouse fulfillment lifecycle business process model</p></figcaption></figure>
 
 HotWax Commerce, being as an Order Management System, finds the best location to fulfill an online order from. In the event where an approved order is brokered and allocated to warehouse fulfillment location, HotWax Commerce synchronizes allocation details with the Warehouse Management System (WMS) or ERP systems like NetSuite. Once the order is fulfilled, HotWax Commerce then also synchronizes the fulfillment updates from the WMS or ERP systems.
 
@@ -26,7 +26,7 @@ Learn more about [order synchronization from HotWax Commerce to NetSuite](https:
 When the warehouse fulfillment team begins the fulfillment process for an order item, an item fulfillment record is automatically generated in NetSuite. Upon picking, packing, and shipping the item, multiple actions take place in NetSuite:
 
 * The item fulfillment record is marked as <mark style="color:orange;">**"Shipped"**</mark>.
-* The initial order status <mark style="color:orange;">**"Pending Fulfillment"** </mark> is updated to <mark style="color:orange;">**"Pending Billing"**</mark>.
+* The initial order status <mark style="color:orange;">**"Pending Fulfillment"**</mark> is updated to <mark style="color:orange;">**"Pending Billing"**</mark>.
 * Finally, once the invoice is auto generated, the order status is updated from <mark style="color:orange;">**“Pending Billing”**</mark> to <mark style="color:orange;">**“Billed”**</mark>. This marks the completion of the order lifecycle in NetSuite.
 
 ### Fulfillment failure
