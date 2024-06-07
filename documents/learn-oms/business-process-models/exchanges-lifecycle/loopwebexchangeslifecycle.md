@@ -6,7 +6,7 @@ description: >-
 
 # Web exchanges with Loop
 
-<figure><img src="broken-reference" alt=""><figcaption><p>Web exchanges lifecycle business process model</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/exchanges bpm.png" alt=""><figcaption><p>Web exchanges lifecycle business process model</p></figcaption></figure>
 
 In the context of returns, an exchange refers to a transaction in which a customer returns a purchased item and, instead of receiving a refund or store credit, opts to swap the returned item for a different product. This lets the customer exchange the initially purchased item for another one.
 
