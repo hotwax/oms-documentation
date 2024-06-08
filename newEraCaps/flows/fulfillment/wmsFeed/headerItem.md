@@ -19,7 +19,7 @@ The header item is the first row of a new order in the brokered order feed. Inst
 * **Description:** Header Line #
 * **Position:** 7-7
 * **Example Value:** 0000000
-* **Additional Information:** This field represents the sequential number assigned to each order header line. It is incremented for each record in the file, ensuring a unique identifier for each header line.
+* **Additional Information:** This field represents the sequential number assigned to each order header line. It is incremented for each record in the file, ensuring a unique identifier for each header line. It should be padded with 0's and should cover entire 7 bytes
 
 ## CUST ORDER NO. (S-3)
 
@@ -303,12 +303,15 @@ As of now we expect this to be blank. Need to confirm with New Era.
   * **OMS Value** This value will be left empty for all B2C orders since payment terms are only applicable for B2B orders which the OMS is not processing.
 * **S-51:** Payment Due Date (Length: 10, Bytes: 10)
   * **Description:** Hard-coded payment due date as '2/5/2031'.
+  * **OMS Value:** Not used, leave empty
 * **S-52:** Total Retail Price (Including VAT) (Length: 20, Bytes: 20)
   * **Example:** '407376'
   * **Description:** Total retail price of the order, including VAT. This represents the overall retail value of the items, including any applicable Value Added Tax (VAT).
+  * **OMS Value:** Not used, leave empty
 * **S-53:** Total Sales Price (Including VAT) (Length: 20, Bytes: 20)
   * **Example:** '203688'
   * **Description:** Total sales price of the order, including VAT. This specifically represents the final price paid by the customer, inclusive of any applicable Value Added Tax (VAT).
+  * **OMS Value:** Not used, leave empty
 
 **Note:** While both fields include VAT, the distinction lies in the nature of the amounts. The 'Total Retail Price' may reflect the full retail value of the items, whereas the 'Total Sales Price' is the actual amount paid by the customer, possibly accounting for discounts or promotions.
 
@@ -336,18 +339,19 @@ The Shipping Cost field represents the total shipping cost associated with an or
 
 The calculation involves the sum of order adjustments where the order adjustment type is SHIPPING\_CHARGES, EXT\_SHIP\_ADJUSTMENT, or SHIPPING\_SALES\_TAX.
 
-**S-58** Not used
+**S-58** Handling Charge
 
 * **Length:** 20
 * **Bytes:** 20
 * **Data Type:** NUMERIC
-
-This field is currently marked as not used, and empty spaces will be added. Discussions are ongoing regarding the inclusion of the transaction\_fee in this field. Transaction\_fee is set in the customAttributes at the OrderLevel.
+* **Description:** The Handling Charges will be the Cash on Delivery Fees.
+* **OMS Value:** COD fee + COD fee tax
+<!-- This field is currently marked as not used, and empty spaces will be added. Discussions are ongoing regarding the inclusion of the transaction\_fee in this field. Transaction\_fee is set in the customAttributes at the OrderLevel.
 
 _Open Discussion Topics_
 
 1. Clarification on how transaction\_fee is modeled in handling charges.
-2. Verification of the existence of transaction\_fee in the differences file.
+2. Verification of the existence of transaction\_fee in the differences file. -->
 
 **S-59:** Not used
 
@@ -368,6 +372,8 @@ The Total Retail Price (Including VAT) field (S-84) represents the total retail 
 ### Usage
 
 This field should contain the total value of the order item, which includes the sum of the item unit price, item sales tax, and item discount amounts.
+
+**Keep it blank, empty spaces will be added**
 
 ### Notes
 
