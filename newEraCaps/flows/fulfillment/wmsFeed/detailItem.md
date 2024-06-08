@@ -56,6 +56,7 @@ It is recommended to use the variant barcode value for this field.
 - **Bytes:** 25
 - **Type:** Alphanumeric
 - **Description:** Represents the SKU (Stock Keeping Unit) code designated for the customer associated with the brokered order items.
+- **OMS Value:** Not used, leave empty
 
 
 ## S-72: Product Name
