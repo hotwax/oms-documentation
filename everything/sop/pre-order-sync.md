@@ -1,7 +1,7 @@
 # Pre-orders sync 
 HotWax Commerce automates pre-order and back-order management by leveraging purchase orders (POs), aiding in the automatic listing and de-listing of products, which is beneficial for retailers with extensive catalogs. POs provide crucial details about item specifics and upcoming inventory arrivals. Retailers can integrate their ERP systems with HotWax Commerce for automatic PO synchronization or use the Import App to manually import PO CSV files.
 
-To know more about how the pre-order process is automated in HotWax refer to this user guide.
+To know more about how the pre-order process is automated in HotWax refer to this [user guide](https://docs.hotwax.co/user-guides/orders/pre-orders).
 
 In HotWax, we have two relevant entities:
 
