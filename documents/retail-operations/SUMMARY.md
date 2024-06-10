@@ -45,6 +45,7 @@
   * [Order Cancellations](order-management/order-cancellations.md)
   * Troubleshooting
     * [Order Status Discrepancy](order-management/orderStatusDiscrepancy.md)
+    * [Order Indexing Discrepancy](order-management/indexing-issue.md)
 
 * [Brokering](orders/brokering/README.md)
   * [Order Routing](brokering/configurableRouting.md)
