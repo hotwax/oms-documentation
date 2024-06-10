@@ -121,7 +121,6 @@ We expect it to be hardcoded "2".
 * **Description:** Payment Type/Gateway
 * **Position:** 1-1
 * **OMS Value:** 2
-* **Default Value:** 2
 * **Additional Information:**
   * This field represents the type of payment for the order.
   * Numeric values are assigned as follows:

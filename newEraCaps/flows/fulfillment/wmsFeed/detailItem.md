@@ -33,15 +33,6 @@ Used to represent the SAP material and size of an item.
 - **Bytes:** 13
 - **Type:** JAN code
 - **Description:** Contains the JAN (Japanese Article Number) code associated with the brokered order items. JAN code will be extracted from the GoodIdentifications list. The goodIdentificationTypeId needs to be confirmed for accurate retrieval.
-It is recommended to use the variant barcode value for this field.
-- **OMS Value:** Not used, leave empty
-
-## S-67: Nueve A JAN code
-- **Length:** 13
-- **Bytes:** 13
-- **Type:** JAN code
-- **Description:** Contains the JAN (Japanese Article Number) code associated with the brokered order items. JAN code will be extracted from the GoodIdentifications list. The goodIdentificationTypeId needs to be confirmed for accurate retrieval.
-It is recommended to use the variant barcode value for this field.
 - **OMS Value:** Not used, leave empty
 
 ## S-70: JAN code
