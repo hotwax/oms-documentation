@@ -25,8 +25,10 @@
   * [Picking App](fulfillment/pickingApp.md)
   * [CSV Support](fulfillment/csvSupport.md)
   * [Settings Page](fulfillment/fulfillment-setting-page.md)
+  * [Order Lookup](fulfillment/order-lookup.md)
   * [Troubleshooting]
     *[Shipping Label Generations](fulfillment/shipping-label-generation.md)
+
 * [Returns](returns/readme.md)
   * [In-Store Returns](returns/in-store-returns.md)
 
