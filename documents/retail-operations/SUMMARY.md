@@ -20,6 +20,7 @@
   * [Orders](job-workflows/orders.md)
   * [Inventory](job-workflows/inventory.md)
   * [Products](job-workflows/products.md)
+  * [Pre-Orders](job-workflows/pre-orders.md)
 * [Data manager](data-manager/README.md)
   * [Configurations](data-manager/configurations.md)
   * [Imports](data-manager/imports.md)
