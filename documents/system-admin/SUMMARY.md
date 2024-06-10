@@ -61,6 +61,8 @@
   * [Sales channel](shopify-integration/flows/integration-mapping/sales-channel-mapping.md)
   * [Payment Method](shopify-integration/ShopifyIntegration/payment-method-type.md)
   * [Product Type](shopify-integration/ShopifyIntegration/product-type.md)
+* Troubleshooting
+ * [Facility Mapping Discrepancy](shopify-integration/ShopifyIntegration/facility-mapping-troubleshoot.md)  
 
 ## Synchronization Flows
 
