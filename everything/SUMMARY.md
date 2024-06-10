@@ -20,6 +20,7 @@
 ## SOP Documents
 
 * [SFTP Issue](sop/sftp-issue.md)
+* [Pre order catalog sync](sop/pre-order-sync.md)
 
 ## Tathya
 
