@@ -12,19 +12,19 @@ In HotWax Commerce, the `createUpdateOrder` is used to import orders from Shopif
 
 During the order creation process, `OrderPaymentPreference` saves the payment preference currency and conversion rate. For example, if the payment preference currency is USD, the converted amount is stored in the `currentPaymentAmount` field, while the original amount paid in the local currency (e.g., MXN) is saved in the `presentmentAmount` field. This detailed record helps in maintaining clear financial records and simplifies financial reconciliation.
 
-4. **Fallback Mechanism for Exchange Rates:**
+3. **Fallback Mechanism for Exchange Rates:**
 
 If the exchange rate is missing during order import, the system uses the `UomConversion` to check for conversion details in the Order Management System (OMS). This ensures that even in the absence of an immediate exchange rate, the order can still be processed correctly, minimizing disruptions in workflow.
 
-5. **ERP Sync:**
+4. **ERP Sync:**
 
 During ERP synchronization, the system retrieves the converted order amount from the `OrderPaymentPreference` entity, where it was stored during the order creation process. This converted amount, already in the retailer’s base currency, is synchronized with the ERP system. Additionally, the exchange rate used for the conversion is stored in the `OrderPaymentPreference` entity, ensuring accurate financial records.
 
-6. **Order Header Currency Maintenance:**
+5. **Order Header Currency Maintenance:**
 
 The order header is updated and uses the customer's currency (e.g., MXN) instead of the product store currency. This maintains the integrity of the original transaction details and provides accurate data for both the customer and the retailer.
 
-7. **Enhanced Financial Reporting:**
-For financial reporting and accounting, the feature provides dual view capability, showing both the original payment currency and the base currency equivalent. The order detail page in HotWax Commerce displays the converted amount, local amount, and conversion rate in the order payment preference section. This dual reporting capability aids in better financial analysis and reporting, crucial for businesses with international transactions.
+6. **Enhanced Financial Reporting:**
+For financial reporting and accounting, the feature provides a dual view capability, showing both the original payment currency and the base currency equivalent. The order detail page in HotWax Commerce displays the converted amount, local amount, and conversion rate in the order payment preference section. This dual reporting capability aids in better financial analysis and reporting, crucial for businesses with international transactions.
 
 The automation of currency conversion and detailed recording of payment preferences simplify accounting processes. Retailers can easily reconcile their accounts and generate accurate financial reports.
