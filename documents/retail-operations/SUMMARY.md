@@ -24,7 +24,7 @@
 * [Data manager](data-manager/README.md)
   * [Configurations](data-manager/configurations.md)
   * [Imports](data-manager/imports.md)
-  * [Troubleshooting]
+  * Troubleshooting
     * [Data not imported](data-manager/dataNotImportedInOMS.md)
     * [Manual Data import](data-manager/manual-data-import.md)
     * [Shopify MDM](data-manager/shopify-mdm.md)
@@ -43,7 +43,7 @@
   * [Allocation](order-management/allocate-sales-order.md)
   * [Soft allocation](order-management/soft-allocations.md)
   * [Order Cancellations](order-management/order-cancellations.md)
-  * [Troubleshooting]
+  * Troubleshooting
     * [Order Status Discrepancy](order-management/orderStatusDiscrepancy.md)
 
 * [Brokering](orders/brokering/README.md)
@@ -56,7 +56,7 @@
   * [Audit](pre-orders/audit-pre-order.md)
   * [Pre-order Allocation](pre-orders/pre-order-allocation.md)
   * [Release Pre-orders](pre-orders/release-pre-orders.md)
-  * [Troubleshooting]
+  * Troubleshooting
     * [Inaccurate Inventory Computation](pre-orders/inaccurateInventoryComputation.md)
     * [Missing Product Linking](pre-orders/missingProductLinking.md)
 * [Returns](returns/readme.md)
