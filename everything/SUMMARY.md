@@ -12,15 +12,11 @@
 * [Data Provenance](napita/data-provenance.md)
 * [Empty Queues](troubleshooting-queue-files.md)
 
-## Troubleshooting
-
-* [Facility Mapping](sop/facility-mapping.md)
-* [Indexing Troubleshooting](sop/indexing-issue.md)
-
 ## SOP Documents
 
 * [SFTP Issue](sop/sftp-issue.md)
 * [Pre order catalog sync](sop/pre-order-sync.md)
+* [Multi Currency Configuration](sop/multicurrency-sales-orders.md)
 
 ## Tathya
 
