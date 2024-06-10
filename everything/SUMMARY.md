@@ -21,6 +21,7 @@
 
 * [SFTP Issue](sop/sftp-issue.md)
 * [Pre order catalog sync](sop/pre-order-sync.md)
+* [Multicurrency Sales Orders](sop/multicurrency-sales-orders.md)
 
 ## Tathya
 
