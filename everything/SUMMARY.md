@@ -12,11 +12,6 @@
 * [Data Provenance](napita/data-provenance.md)
 * [Empty Queues](troubleshooting-queue-files.md)
 
-## Troubleshooting
-
-* [Facility Mapping](sop/facility-mapping.md)
-* [Indexing Troubleshooting](sop/indexing-issue.md)
-
 ## SOP Documents
 
 * [SFTP Issue](sop/sftp-issue.md)
