@@ -68,6 +68,6 @@
 
 ## Additional resources
 
-* [Kit Products](additional-resources/kit-products.md)
-* [POS Completed Orders](additional-resources/pos-completed-orders.md)
+* [Kit Products](additional-resources/kitProducts.md)
+* [POS Completed Orders](additional-resources/posCompletedOrders.md)
 
