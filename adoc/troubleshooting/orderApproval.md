@@ -11,19 +11,29 @@ ADOC uses a custom flow where certain orders are only approved after the address
 
 ## Sync metafields from Shopify
 
-Ensure metafield import is enabled from the Orders page in the Job Manager app. with the`Import Order Metafield`&#x20;
+To synchronize order meta fields from Shopify, we have configured a workflow that utilizes NiFi custom flows and Moqui Services.
+The process can be divided into four main steps:
 
-Ensure that the namespace parameter of the job is set to `HotwaxOrderDetails`
+1. **Preparing File for Shopify API Request**:
+   NiFi fetches all orders from the database that lack the required meta fields: `customerId` and `municipio`. The dataset with missing meta fields is converted into a JSON file suitable for a Shopify API request.
 
-You can ensure that this job is running as expected by auditing the Shopify GraphQL MDM page. `https://{instance-name}.hotwax.io/commerce/control/ShopifyGraphQLJob`
 
-By default all GraphQL syncs will show here.
+2. **Shopify API Call**:
+   NiFi calls the Shopify API to obtain the current meta fields under the namespace "HotwaxOrderDetails". The response from Shopify is received in JSON format.
 
-To identify the exact GraphQL operations for importing order metafields:
 
-1. Select the Shopify Config that you want to check sync from
-2. Select `Import Shopify Order Metafields` from the GraphQL Config dropdown.
-3. Click Find to filter the results based on the selected criteria.
+3. **Transformation of API Response**:
+   The JSON response from Shopify is not directly understandable by the OMS. NiFi processes this JSON file to convert it into a format that OMS can accept.
+
+
+4. **Job Picking and Data Import**:
+   The transformed file is placed in an FTP location for OMS. A job in the Job Manager's Packaged Multi-Stream Import, under the Miscellaneous section, picks up the file and imports the data into OMS.
+
+This workflow ensures efficient synchronization of order meta fields from Shopify to OMS, maintaining data accuracy and consistency.
+
+#### To ensure the job runs properly, we need to verify the following:
+1. The corresponding custom NiFi flow is running properly.
+2. The Moqui service job poll_OMSOrderIdsFeed_ADOC is scheduled.
 
 If the metafield sync is running as expected, on the order detail page these attributes should be present:
 
@@ -41,7 +51,7 @@ You can use the “Missing Order Attribute” report to identify orders where th
 
 ## Metafields created on Shopify but not imported into HotWax
 
-Go to the Shopify order details page > add /metafields.json in the URL> verify the order creation and metafields input time. Prerequisite: Metafields created after 30 minutes of order creation will not sync in OMS.
+Go to the Shopify order details page > add /metafields.json in the URL> verify the order creation and metafields input time.
 
 If you cannot wait for metafields to be imported or the job is not working as expected, order attributes can be created manually from the Order Detail page.
 
