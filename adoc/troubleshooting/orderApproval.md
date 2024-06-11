@@ -27,7 +27,7 @@ The process can be divided into four main steps:
 
 
 4. **Job Picking and Data Import**:
-   The transformed file is placed in an FTP location for OMS. A job in the Job Manager's Packaged Multi-Stream Import, under the Miscellaneous section, picks up the file and imports the data into OMS.
+   The transformed file is placed in an FTP location for OMS. The "Packaged Multi-Stream Import" job, located in the Miscellaneous section of the job manager app, retrieves the file and imports the data into OMS.
 
 This workflow ensures efficient synchronization of order meta fields from Shopify to OMS, maintaining data accuracy and consistency.
 
@@ -51,9 +51,9 @@ You can use the “Missing Order Attribute” report to identify orders where th
 
 ## Metafields created on Shopify but not imported into HotWax
 
-Go to the Shopify order details page > add /metafields.json in the URL> verify the order creation and metafields input time.
-
-If you cannot wait for metafields to be imported or the job is not working as expected, order attributes can be created manually from the Order Detail page.
+1. Go to the Shopify order details page and append /metafields.json to the URL.
+2. Verify the order creation and metafields input time in the Shopify JSON.
+3. If you cannot wait for metafields to be imported or the job is not working as expected, order attributes can be created manually from the Order Detail page.
 
 Mapping Central American region types to the OMS's North American Region types helps when troubleshooting order approval flows in the OMS. If the address entered into the order is not mapped correctly to the type of region, then the order will not be approved even if the region name exists.
 
