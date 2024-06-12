@@ -73,10 +73,6 @@
 * [Initial Order Sync](shopify-integration/sync-shopify/importOrders.md)
 * [Initial Inventory Sync](shopify-integration/sync-shopify/upload-inventory.md)
 
-##  Additional Resources
-* [OMS Versions](additional-resources/omsReleases.md)
-
-
 
 
 
