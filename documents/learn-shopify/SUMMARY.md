@@ -1,14 +1,8 @@
 # Table of contents
 
-* [Shopify Integration Overview](README.md)
+## Shopify Integration
 
-## Setup
-
-* [Install HotWax Commerce App](integration/setup/install-hotwax-commerce-app.md)
-* [Multiple Store Setup](integration/multiple-store-setup.md)
-* [Required Permissions from Shopify](integration/shopify-permissions.md)
-
-## Products
+* [Introuduction](README.md)
 
 * [Products](integration/how-are-products-downloaded-from-shopify-to-hotwax-commerce/README.md)
   * [Product Download](integration/how-are-products-downloaded-from-shopify-to-hotwax-commerce/product-download.md)
@@ -20,16 +14,12 @@
   * [Product Synchronization for Multiple Shopify Stores](integration/multiple-store-setup.md)
   * [Troubleshooting Product sync](troubleshooting/products.md)
 
-## Inventory
-
 * [Inventory](integration/how-does-hotwax-commerce-ensure-accurate-inventory-is-synchronized-to-shopify/how-does-hotwax-commerce-ensure-accurate-inventory-is-synchronized-to-shopify.md)
   * [Inventory Synchronization](integration/how-does-hotwax-commerce-ensure-accurate-inventory-is-synchronized-to-shopify/inventory-synchronization.md)
   * [Location Mapping](integration/how-does-hotwax-commerce-ensure-accurate-inventory-is-synchronized-to-shopify/location-mapping.md)
   * [Inventory Synchronization of Gift Cards](integration/how-does-hotwax-commerce-ensure-accurate-inventory-is-synchronized-to-shopify/inventorysynchronizationgiftcards.md)
   * [Inventory Synchronization of Bundles](integration/how-does-hotwax-commerce-ensure-accurate-inventory-is-synchronized-to-shopify/inventory-synchronization-of-bundles.md)
   * [Troubleshooting Inventory sync](troubleshooting/inventory.md)
-
-## Orders
 
 * [Orders](integration/how-are-orders-downloaded-from-shopify-to-hotwax-commerce/how-are-orders-downloaded-from-shopify-to-hotwax-commerce.md)
   * [Order Download](integration/how-are-orders-downloaded-from-shopify-to-hotwax-commerce/order-download.md)
@@ -57,17 +47,29 @@
   * [Exchanges](integration/how-does-hotwax-commerce-manage-order-returns/exchanges.md)
 * [Troubleshooting order sync](troubleshooting/order.md)
 
-## Shopify Mapping
+## Setup Shopify
 
-* [Integration-Mapping](shopify-setup/integration-mapping.md)
-  * [Locations](shopify-setup/MapLocations.md)
-  * [Shipping Method](shopify-setup/shipping-method.md)
-  * [Sales channel](orders/integration-mapping/sales-channel.md)
-  * [Payment Method](shopify-setup/payment-method-type.md)
-  * [Product Type](shopify-setup/product-type.md)
+* [Install HotWax commerce App](shopify-integration/ShopifyIntegration/README.md)
+* [Multiple Store Setup](integration/multiple-store-setup.md)
+* [Required Permissions from Shopify](integration/shopify-permissions.md)
+* [Enable BOPIS/Preorder on Shopify](shopify-integration/ShopifyIntegration/bopis-preorder-scripts.md)
+* [Data Mappings](shopify-integration/ShopifyIntegration/SetupMappings.md)
+* [Integrations](shopify-integration/ShopifyIntegration/integration-mapping.md)
+  * [Locations](shopify-integration/ShopifyIntegration/MapLocations.md)
+  * [Shipping Method](shopify-integration/ShopifyIntegration/shipping-method.md)
+  * [Sales channel](shopify-integration/flows/integration-mapping/sales-channel-mapping.md)
+  * [Payment Method](shopify-integration/ShopifyIntegration/payment-method-type.md)
+  * [Product Type](shopify-integration/ShopifyIntegration/product-type.md)
+* Troubleshooting
+  * [Facility Mapping Discrepancy](shopify-integration/ShopifyIntegration/facility-mapping-troubleshoot.md)  
+
+## Synchronization Flows
+
+* [Initial Product Sync](shopify-integration/sync-shopify/README.md)
+* [Initial Order Sync](shopify-integration/sync-shopify/importOrders.md)
+* [Initial Inventory Sync](shopify-integration/sync-shopify/upload-inventory.md)
 
 ## Additional resources
 
 * [Kit Products](additional-resources/kitProducts.md)
 * [POS Completed Orders](additional-resources/posCompletedOrders.md)
-
