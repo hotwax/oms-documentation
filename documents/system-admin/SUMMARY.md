@@ -53,25 +53,6 @@
 * [How to map shipping method in HotWax Commerce to Netsuite](fulfillment/add-shipping-method.md)
 * [Configure Rate Shopping](fulfillment/configure-rate-shopping.md)
  
-## Setup Shopify
-
-* [Install HotWax commerce App](shopify-integration/ShopifyIntegration/README.md)
-* [Enable BOPIS/Preorder on Shopify](shopify-integration/ShopifyIntegration/bopis-preorder-scripts.md)
-* [Data Mappings](shopify-integration/ShopifyIntegration/SetupMappings.md)
-* [Integrations](shopify-integration/ShopifyIntegration/integration-mapping.md)
-  * [Locations](shopify-integration/ShopifyIntegration/MapLocations.md)
-  * [Shipping Method](shopify-integration/ShopifyIntegration/shipping-method.md)
-  * [Sales channel](shopify-integration/flows/integration-mapping/sales-channel-mapping.md)
-  * [Payment Method](shopify-integration/ShopifyIntegration/payment-method-type.md)
-  * [Product Type](shopify-integration/ShopifyIntegration/product-type.md)
-* Troubleshooting
-  * [Facility Mapping Discrepancy](shopify-integration/ShopifyIntegration/facility-mapping-troubleshoot.md)  
-
-## Synchronization Flows
-
-* [Initial Product Sync](shopify-integration/sync-shopify/README.md)
-* [Initial Order Sync](shopify-integration/sync-shopify/importOrders.md)
-* [Initial Inventory Sync](shopify-integration/sync-shopify/upload-inventory.md)
 
 
 
