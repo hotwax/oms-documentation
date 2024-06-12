@@ -22,7 +22,7 @@
 
 ## Inventory
 
-* [Inventory](inventory/inventory/README.md)
+* [Inventory](integration/how-does-hotwax-commerce-ensure-accurate-inventory-is-synchronized-to-shopify/how-does-hotwax-commerce-ensure-accurate-inventory-is-synchronized-to-shopify.md)
   * [Inventory Synchronization](integration/how-does-hotwax-commerce-ensure-accurate-inventory-is-synchronized-to-shopify/inventory-synchronization.md)
   * [Location Mapping](integration/how-does-hotwax-commerce-ensure-accurate-inventory-is-synchronized-to-shopify/location-mapping.md)
   * [Inventory Synchronization of Gift Cards](integration/how-does-hotwax-commerce-ensure-accurate-inventory-is-synchronized-to-shopify/inventorysynchronizationgiftcards.md)
