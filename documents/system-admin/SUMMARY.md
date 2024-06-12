@@ -21,7 +21,7 @@
   * [Manage User Permissions](administration/users/user-permission.md)
   * [Create Pickers](fulfillment/add-picker.md)
   * Troubleshooting
-     * [Application Access Issue](/users/application-access-issue.md)
+     * [Application Access Issue](administration/users/application-access-issue.md)
 
 * [Facilities](facilities/README.md)
   * [Add New Facilities](administration/facilities/add-new-facilities.md)
