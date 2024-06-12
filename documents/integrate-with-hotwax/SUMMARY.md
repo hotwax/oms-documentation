@@ -44,3 +44,7 @@
 
 * [Sample Reset Inventory csv](additional-resources/sample-reset-inventory-csv.md)
 * [Sample Return Feed](additional-resources/sample-return-feed.md)
+
+## OMS Release Versions
+
+* [OMS Versions](additional-resources/omsReleases.md)
