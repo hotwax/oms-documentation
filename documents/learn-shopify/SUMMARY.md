@@ -2,7 +2,7 @@
 
 ## Shopify Integration
 
-* [Introuduction](README.md)
+* [Introduction](README.md)
 
 * [Products](integration/how-are-products-downloaded-from-shopify-to-hotwax-commerce/README.md)
   * [Product Download](integration/how-are-products-downloaded-from-shopify-to-hotwax-commerce/product-download.md)
@@ -45,7 +45,8 @@
   * [In-Store Returns](integration/how-does-hotwax-commerce-manage-order-returns/in-store-returns.md)
   * [Appeasements](integration/how-does-hotwax-commerce-manage-order-returns/appeasements.md)
   * [Exchanges](integration/how-does-hotwax-commerce-manage-order-returns/exchanges.md)
-* [Troubleshooting order sync](troubleshooting/order.md)
+* Troubleshooting
+  * [Order sync](troubleshooting/order.md)
 
 ## Setup Shopify
 
@@ -68,6 +69,10 @@
 * [Initial Product Sync](shopify-integration/sync-shopify/README.md)
 * [Initial Order Sync](shopify-integration/sync-shopify/importOrders.md)
 * [Initial Inventory Sync](shopify-integration/sync-shopify/upload-inventory.md)
+* Troubleshooting
+  * [Product sync](troubleshooting/products.md)
+  * [Order sync](troubleshooting/order.md)
+  * [Inventory sync](troubleshooting/inventory.md)
 
 ## Additional resources
 
