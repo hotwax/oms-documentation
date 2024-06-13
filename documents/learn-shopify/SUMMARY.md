@@ -2,7 +2,7 @@
 
 ## Shopify Integration
 
-* [Introuduction](README.md)
+* [Introduction](README.md)
 
 * [Products](integration/how-are-products-downloaded-from-shopify-to-hotwax-commerce/README.md)
   * [Product Download](integration/how-are-products-downloaded-from-shopify-to-hotwax-commerce/product-download.md)
@@ -12,14 +12,12 @@
   * [Gift Cards Download](integration/how-are-products-downloaded-from-shopify-to-hotwax-commerce/giftcardsdownload.md)
   * [Bundles Download](integration/how-are-products-downloaded-from-shopify-to-hotwax-commerce/downloading-bundles.md)
   * [Product Synchronization for Multiple Shopify Stores](integration/multiple-store-setup.md)
-  * [Troubleshooting Product sync](troubleshooting/products.md)
 
 * [Inventory](integration/how-does-hotwax-commerce-ensure-accurate-inventory-is-synchronized-to-shopify/how-does-hotwax-commerce-ensure-accurate-inventory-is-synchronized-to-shopify.md)
   * [Inventory Synchronization](integration/how-does-hotwax-commerce-ensure-accurate-inventory-is-synchronized-to-shopify/inventory-synchronization.md)
   * [Location Mapping](integration/how-does-hotwax-commerce-ensure-accurate-inventory-is-synchronized-to-shopify/location-mapping.md)
   * [Inventory Synchronization of Gift Cards](integration/how-does-hotwax-commerce-ensure-accurate-inventory-is-synchronized-to-shopify/inventorysynchronizationgiftcards.md)
   * [Inventory Synchronization of Bundles](integration/how-does-hotwax-commerce-ensure-accurate-inventory-is-synchronized-to-shopify/inventory-synchronization-of-bundles.md)
-  * [Troubleshooting Inventory sync](troubleshooting/inventory.md)
 
 * [Orders](integration/how-are-orders-downloaded-from-shopify-to-hotwax-commerce/how-are-orders-downloaded-from-shopify-to-hotwax-commerce.md)
   * [Order Download](integration/how-are-orders-downloaded-from-shopify-to-hotwax-commerce/order-download.md)
@@ -45,7 +43,6 @@
   * [In-Store Returns](integration/how-does-hotwax-commerce-manage-order-returns/in-store-returns.md)
   * [Appeasements](integration/how-does-hotwax-commerce-manage-order-returns/appeasements.md)
   * [Exchanges](integration/how-does-hotwax-commerce-manage-order-returns/exchanges.md)
-* [Troubleshooting order sync](troubleshooting/order.md)
 
 ## Setup Shopify
 
@@ -68,6 +65,10 @@
 * [Initial Product Sync](shopify-integration/sync-shopify/README.md)
 * [Initial Order Sync](shopify-integration/sync-shopify/importOrders.md)
 * [Initial Inventory Sync](shopify-integration/sync-shopify/upload-inventory.md)
+* Troubleshooting
+  * [Product sync](troubleshooting/products.md)
+  * [Order sync](troubleshooting/order.md)
+  * [Inventory sync](troubleshooting/inventory.md)
 
 ## Additional resources
 
