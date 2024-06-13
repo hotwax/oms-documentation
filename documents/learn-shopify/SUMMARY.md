@@ -57,7 +57,7 @@
 * [Integrations](shopify-integration/ShopifyIntegration/integration-mapping.md)
   * [Locations](shopify-integration/ShopifyIntegration/MapLocations.md)
   * [Shipping Method](shopify-integration/ShopifyIntegration/shipping-method.md)
-  * [Sales channel](shopify-integration/flows/integration-mapping/sales-channel-mapping.md)
+  * [Sales channel](shopify-integration/ShopifyIntegration/sales-channel-mapping.md)
   * [Payment Method](shopify-integration/ShopifyIntegration/payment-method-type.md)
   * [Product Type](shopify-integration/ShopifyIntegration/product-type.md)
 * Troubleshooting
