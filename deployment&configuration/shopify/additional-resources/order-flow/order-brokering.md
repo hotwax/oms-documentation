@@ -11,17 +11,13 @@ Within the HotWax Commerce platform, the Order Brokering feature plays a crucial
 
 **Step-by-Step Usage Instructions:**
 
-1. **Access the Job Manager App:**
+
    * Log in to your HotWax Commerce launchpad.
    * Navigate to the Apps section and locate the Job Manager app.
-2. **Initiating Order Brokering:**
    * Within the Job Manager app, locate and click on the `Brokering` option from the menu.
-3. **Selecting the Broker 'New Order' Tab:**
    * Click on the tab labeled `Create New Brokering` Tab to access the brokering options for new orders.
-4. **Reviewing Order Brokering Details:**
    * A new window will open displaying details of the Order Brokering process, including runtime and scheduling options.
-   * Review the order details, including SLA (service level agreement), fulfillment criteria.
-5. **Initiating Order Brokering:**
-   * Once we have reviewed the details button to initiate the brokering process for the order approved, the scheduled job will run, we will use the `run now` feature only in specific cases.
+   * Review the order details, including SLA (service level agreement), and fulfillment criteria.
+   * Once we have reviewed the details, click on the `save changes` button to initiate the brokering process for the approved orders, the scheduled job will run, use the `run now` feature if you want to run the brokering engine only once.
 
 By following these steps, users can effectively utilize the Order Brokering feature within the HotWax Commerce interface, optimizing order fulfillment processes and enhancing workflow efficiency.
