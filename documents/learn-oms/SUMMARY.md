@@ -25,6 +25,10 @@
 * [Exchanges lifecycle](business-process-models/exchanges-lifecycle/README.md)
   * [Web exchanges with Loop](business-process-models/exchanges-lifecycle/loopwebexchangeslifecycle.md)
   * [In-store exchanges with Loop](business-process-models/exchanges-lifecycle/loopposexchangeslifecycle.md)
+ 
+## How-To Guides
+
+* [How to configure BOPIS](how-tos/implement-bopis)
 
 ## Journeys
 
