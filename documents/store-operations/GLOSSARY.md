@@ -79,7 +79,7 @@ Excluded ATP refers to the inventory at fulfillment locations that are not parti
 
 Excluded Facilities are facilities that are either not participating in online order fulfillment or temporarily unable to participate due to reasons like insufficient labor, natural disasters, or holidays. Inventory becomes available again when these scenarios change. Retailers can turn off fulfillment if they want to temporarily disable a facility from participation. 
 
-To know more about this [Click Here](https://docs.hotwax.co/documents/v/system-admins/administration/facilities/disabling-facilities).
+To learn more about excluded facilities [Click Here](https://docs.hotwax.co/documents/v/system-admins/administration/facilities/disabling-facilities).
 
 ## Expedited Orders
 
@@ -94,7 +94,15 @@ In HotWax Commerce, a facility is a physical location such as a warehouse, distr
 Facility groups are used to define the scope and functionality of facilities for omnichannel order management. For example, including a facility in the Pickup and Same Day Shipping groups indicates that the facility accommodates both Buy Online, Pickup In-Store (BOPIS), and same-day shipping orders.
 
 ## Facility Type
-In Hotwax Commerce, Facility type is the type of facility that is used for fulfillment such as retail store warehouse, outlet store, and outlet warehouse.
+
+In HotWax Commerce, Facility type refers to different locations used for fulfillment, including:
+
+Retail Store: Physical stores that fulfill online orders and facilitate in-store pickups.
+Warehouse: Centralized storage locations for fulfilling online orders and restocking stores.
+Outlet Store: Discount retail locations that fulfill orders and offer in-store pickups.
+Outlet Warehouse: Storage for outlet inventory, supporting fulfillment for outlet stores, and direct customer shipments.
+
+Retailers can prioritize their brokering rules according to the facility types
 
 ## Inventory Variance
 Inventory variance refers to discrepancies between expected and actual inventory levels. It can be caused by factors such as damaged goods, discrepancies in shipment, or theft.
@@ -104,7 +112,7 @@ Item Fulfillment Status in HotWax Commerce tracks the current stage of an item w
 
 ## Maximum Order Limit
 
-The Maximum Order Limit is a predefined limir set by a store, indicating the maximum number of orders it can fulfill in a day. When this limit is reached, the brokering engine automatically routes additional orders to alternative facilities that have capacity available. 
+The Maximum Order Limit is a predefined limit set by a store, indicating the maximum number of orders it can fulfill in a day. When this limit is reached, the brokering engine automatically routes additional orders to alternative facilities that have capacity available. 
 Setting a maximum order limit helps the store manage its resources effectively. It ensures that orders can be fulfilled within operational constraints and prevents overcommitment of resources. By leveraging the brokering engine to redirect orders to other facilities as needed, retailer maintains their ability to meet customer demand without delay.
 
 
@@ -116,16 +124,16 @@ Online ATP = QOH - (Reserved quantities + Safety stock + Threshold + Orders in b
 To Know more about Online ATP [Click Here](https://docs.hotwax.co/documents/v/learn-hotwax-oms/business-process-models/inventorylifecycle#push-online-atp-to-ecommerce).
 
 ## Order Fulfillment Status
-Order Fulfillment Status in HotWax Commerce tracks the current stage of an overall order within the order fulfillment process. This status helps in monitoring and managing orders, indicating whether an Order is created, approved, picked, packed or shipped.
+Order Fulfillment Status in HotWax Commerce tracks the current stage of an overall order within the order fulfillment process. This status helps in monitoring and managing orders, indicating whether an Order is created, approved, picked, packed, or shipped.
 
 ## Order Merging
 When a customer places multiple orders that can be fulfilled from the same location. Instead of treating them as separate orders, retailers prefer to merge them into a single shipment, ensuring a smoother and more cost-effective delivery process. Hotwax commerce enables order merging so that orders coming from the same location are fulfilled together.
 To Know more about Order Merging [Click Here](https://www.hotwax.co/blog/what-is-order-consolidation-and-order-merging)
 
 ## Packing Slip
-Packing slip is a document included with a shipment that lists the contents of the package. It typically includes details such as item names, quantities, and sometimes prices. This document assists both customers and senders in confirming that the correct items have been packed and shipped.
+A packing slip is a document included with a shipment that lists the contents of the package. It typically includes details such as item names, quantities, and sometimes prices. This document assists both customers and senders in confirming that the correct items have been packed and shipped.
 In HotWax Commerce, store associates can choose whether they want to print the packing slip when packing orders  
-To know more about Packing Slip[Click Here](https://docs.hotwax.co/documents/orders/bopis/packed-order-tab).
+To know more about Packing Slip [Click Here](https://docs.hotwax.co/documents/orders/bopis/packed-order-tab).
 
 ## Picker
 
