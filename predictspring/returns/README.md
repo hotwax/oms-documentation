@@ -1,17 +1,18 @@
 # Returns Management
 
-Efficiently managing returns is a critical component of the retail experience, and **PredictSpring** seamlessly integrates with **HotWax Commerce** to facilitate a streamlined returns process.
+Managing returns is crucial for any retail operation. The integration between PredictSpring and HotWax enables retailers to accept orders in-store, regardless of the order's origin, enhancing the omnichannel experience.
 
-## Here's an overview of how the return process works in **PredictSpring** with the assistance of **HotWax Commerce**:
+## How the return process works in **PredictSpring** with the assistance of **HotWax Commerce**:
 
-### 1. Accessing Orders in PredictSpring:
+### 1. BORIS:
 
-When a customer visits the store to return an item, store associates initiate the process by requesting the order number. If the order was originally placed in-store, store associates can conveniently look up the order in **PredictSpring**. However, for online orders, **PredictSpring** lacks direct access. To address this, **HotWax Commerce** steps in with a dedicated API designed for order lookup. Leveraging its capability to manage both online and in-store orders, **HotWax Commerce's API** ensures that whether the order was placed in-store or online, detailed order information is retrieved.
+When a customer comes in-store with an eCommerce order, the associate initiated the process by requesting an Order ID. The store associate can add the Order ID into Predict Spring, in the background the HotWax Commerce `getOrder` job will fetch and return the order PredictSpring enabling a seamless return experience for the customer. 
 
-### 2. Creating Return:
+{% hint style="info" %}
+In the case that the order id is unavailable: the associate can search for the order using various identifiers (e.g., order ID, customer name, order date), HotWax runs the searchOrder job to return all relevant orders to PredictSpring.
+{% endhint %}
 
-Once the order details are obtained by **PredictSpring**, store associates proceed with the return creation process. In **PredictSpring**, as returns are created and items are received in the store, **PredictSpring** invokes the "CreateReturn" API of **HotWax Commerce**. This API initiates the creation of a return in **HotWax Commerce**, marking it with a "Received" status.
+### 2. PredictSpring returns:
 
-For orders originally taken in the store via **PredictSpring**, the return process is streamlined, and **HotWax Commerce** marks the return as "Completed". However, for online orders, the process involves an additional step. **HotWax Commerce** triggers a refund request for the associated online order to the eCommerce platform. Once the eCommerce platform initiates the refund, a unique refund ID is generated and returned back to **HotWax Commerce**.
-
-Upon receipt of the refund ID, **HotWax Commerce** updates the status of the return to "Completed," signifying the successful conclusion of the return process. This seamless integration ensures that returns, whether initiated from in-store or online purchases, are efficiently managed and recorded, contributing to an enhanced customer experience.
+* If HotWax is the order master: the return will be handled the same way as BORIS. 
+* If Hotwax is not the order master: the associate handles the return in PredictSpring. If an immediate inventory change needs to be logged, it can be sent to the inventory variance log by the store.
