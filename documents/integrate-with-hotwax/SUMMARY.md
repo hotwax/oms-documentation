@@ -1,5 +1,7 @@
 # Table of Content
 
+* [Introduction](README.md)
+
 ## HotWax Commerce API and Data feeds
 
 * [Authentication](api/initial-api-authentication.md)
