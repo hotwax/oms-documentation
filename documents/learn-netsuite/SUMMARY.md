@@ -2,7 +2,7 @@
 
 * [Introduction](README.md)
 
-## Integration Tools
+## Integration Tools and Methodologies
 
 * [SuiteScript](netsuite-integration/IntegrationTools/SuiteScript/README.md)
   * [N/Task Module](netsuite-integration/IntegrationTools/SuiteScript/N.taskModule.md)
@@ -10,14 +10,11 @@
   * [N/Search Module](netsuite-integration/IntegrationTools/SuiteScript/N.searchModule.md)
   * [N/File Module](netsuite-integration/IntegrationTools/SuiteScript/N.fileModule.md)
 * [Saved Search](netsuite-integration/IntegrationTools/SavedSearch/README.md)
-
-## Integration Methodologies
-
-* [Introduction](netsuite-integration/IntegrationMethodologies/README.md)
-* [NetSuite](netsuite-integration/IntegrationMethodologies/NetSuite.md)
-* [HotWax](netsuite-integration/IntegrationMethodologies/HotWax.md)
-
-## Supported Integrations
+* [Integration Methodologies](netsuite-integration/IntegrationMethodologies/README.md)
+ * [NetSuite](netsuite-integration/IntegrationMethodologies/NetSuite.md)
+ * [HotWax](netsuite-integration/IntegrationMethodologies/HotWax.md)
+ 
+## Integration Flows
 
 * [Inventory](netsuite-integration/Flows/inventory.md)
 * [Sales Orders](netsuite-integration/Flows/SalesOrder/README.md)
@@ -41,30 +38,25 @@
 * [Cycle Count](netsuite-integration/Flows/cycle-count.md)
 * [Purchase Orders](netsuite-integration/Flows/purchase-orders.md)
 
-## Netsuite Deployment
+## NetSuite Deployment
 
-* [Introduction](netsuite-deployment/README.md)
-
-## Deploy SDF
-
-* [Setup SDF Bundle](netsuite-deployment/sdfBundle/README.md)
+* [Deployment](netsuite-deployment/README.md)
+* [SDF Bundle Setup](netsuite-deployment/sdfBundle/README.md)
   * [Install SDF](netsuite-deployment/sdfBundle/installSDF.md)
   * [Setup SFTP](netsuite-deployment/sdfBundle/setupSFTP.md)
   * [Date Time Format](netsuite-deployment/sdfBundle/verifyDateTimeFormat.md)
+* Prerequisites
+  * [Install NetSuite Jobs](netsuite-deployment/prerequisiteSyncs/installNetsuiteReader.md)
+  * [Product Store Settings](netsuite-deployment/prerequisiteSyncs/productStoreSettings.md)
+  * [SFTP Locations](netsuite-deployment/prerequisiteSyncs/sftpLocations.md)
+  * [Historical Customers](netsuite-deployment/prerequisiteSyncs/historicalCustomers.md)
+  * [Shipping Methods](netsuite-deployment/prerequisiteSyncs/shippingMethods.md)
+  * [Price Level](netsuite-deployment/prerequisiteSyncs/priceLevel.md)
+  * [Payment Methods](netsuite-deployment/prerequisiteSyncs/paymentMethods.md)
+  * [Promo Codes](netsuite-deployment/prerequisiteSyncs/promoCodes.md)
+  * [NetSuite Facility Group](netsuite-deployment/prerequisiteSyncs/netsuiteFulfillment.md)
 
-## Prerequisites
-
-* [Install NetSuite Jobs](netsuite-deployment/prerequisiteSyncs/installNetsuiteReader.md)
-* [Product Store Settings](netsuite-deployment/prerequisiteSyncs/productStoreSettings.md)
-* [SFTP Locations](netsuite-deployment/prerequisiteSyncs/sftpLocations.md)
-* [Historical Customers](netsuite-deployment/prerequisiteSyncs/historicalCustomers.md)
-* [Shipping Methods](netsuite-deployment/prerequisiteSyncs/shippingMethods.md)
-* [Price Level](netsuite-deployment/prerequisiteSyncs/priceLevel.md)
-* [Payment Methods](netsuite-deployment/prerequisiteSyncs/paymentMethods.md)
-* [Promo Codes](netsuite-deployment/prerequisiteSyncs/promoCodes.md)
-* [NetSuite Facility Group](netsuite-deployment/prerequisiteSyncs/netsuiteFulfillment.md)
-
-## Flows
+## Synchronization Flows
 
 * [Auditing](netsuite-deployment/flows/integration-audit/README.md)
 * [Products and Inventory](netsuite-deployment/flows/products-and-inventory/README.md)
