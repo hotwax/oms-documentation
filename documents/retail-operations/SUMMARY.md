@@ -45,7 +45,7 @@
   * [Soft allocation](order-management/soft-allocations.md)
   * [Order Cancellations](order-management/order-cancellations.md)
   * Troubleshooting
-    * [Order Import](order-management/troubleshooting/order-import.md)
+    * [Error due to Incorrect JSON](order-management/troubleshooting/order-import.md)
     * [Order Status Discrepancy](order-management/troubleshooting/orderStatusDiscrepancy.md)
     * [Order Indexing Discrepancy](order-management/troubleshooting/indexing-issue.md)
 
