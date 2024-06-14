@@ -1,4 +1,4 @@
-# Returns Management
+# Returns management
 
 Managing returns is crucial for any retail operation. The integration between PredictSpring and HotWax enables retailers to accept orders in-store, regardless of the order's origin, enhancing the omnichannel experience.
 
