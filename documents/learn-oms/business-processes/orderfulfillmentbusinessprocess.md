@@ -11,7 +11,7 @@ description: >-
 
 Approved orders are eligible for brokering in HotWax Commerce. The order routing engine brokers orders and looks for the best fulfillment location to allocate them.
 
-<figure><img src="../.gitbook/assets/Order fulfillment BP.png" alt=""><figcaption><p>Order fulfillment business process</p></figcaption></figure>
+<figure><img src="broken-reference" alt=""><figcaption><p>Order fulfillment business process</p></figcaption></figure>
 
 ## Automatically Send Fulfillment Request
 
