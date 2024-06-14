@@ -1,4 +1,4 @@
-# Getting started with HotWax Commerce
+# Getting Started with HotWax Commerce
 
 HotWax Commerce is a cloud-based Omnichannel Order Management System that provides retailers with the best return on their inventory by facilitating omnichannel solutions such as Same-Day Buy Online Pick-Up In Store (BOPIS), Buy Online Return In Store, Ship From Store, and Pre-Orders to increase conversion rates and profitability. Here’s how HotWax Commerce fits into your tech ecosystem:
 
@@ -10,13 +10,13 @@ Order and inventory management are at the heart of omnichannel retailing. Let’
 
 ### Order Management
 
-#### Source of orders and returns
+#### Source of Orders and Returns
 
 <figure><img src=".gitbook/assets/Order Returns.png" alt=""><figcaption><p>Downloading orders and returns</p></figcaption></figure>
 
 HotWax Commerce downloads orders and returns from sales channels like eCommerce and POS.
 
-**eCommerce orders**
+**eCommerce Orders**
 
 HotWax Commerce manages key processes such as downloading online orders, routing them to optimal fulfillment locations, and ensuring timely fulfillment.
 
@@ -37,7 +37,7 @@ HotWax also syncs eCommerce orders data to ERP systems, ensuring accurate accoun
 Once orders are fulfilled, HotWax Commerce synchronizes fulfillment updates with the eCommerce platform.
 {% endhint %}
 
-**POS sales**
+**POS Sales**
 
 HotWax Commerce downloads POS sales to provide a unified view of both online and in-store sales. HotWax also syncs this data to ERP systems, ensuring accurate accounting and posting.
 
@@ -55,7 +55,7 @@ HotWax Commerce becomes the ultimate authority on inventory availability and pre
 
 The inventory count of a product is regularly updated due to various factors such as customer purchases made both in-store and online, as well as the receipt of new inventory. These transactions are recorded across different systems.
 
-#### Sources of inventory
+#### Sources of Inventory
 
 HotWax Commerce integrates with ERP, POS, and WMS, to create a unified pool of inventory. HotWax Commerce receives daily inventory feeds from the ERP system to update and maintain inventory data. Additionally, in cases where an ERP system isn't in use, HotWax Commerce also receives inventory feeds from WMS and POS systems.
 
@@ -63,11 +63,11 @@ After synchronizing inventory totals from all systems, HotWax Commerce calculate
 
 Learn more about [inventory lifecycle in HotWax Commerce](https://docs.hotwax.co/user-guides/business-process-models/inventorylifecycle)
 
-#### Inventory receiving in stores
+#### Inventory Receiving in Stores
 
 HotWax Commerce provides a dedicated `Receiving App` to receive transfer orders and purchase orders at store locations. Any new inventory received in stores is automatically included in the sellable inventory in HotWax Commerce, helping to prevent underselling and ensuring that eCommerce platforms always reflect up-to-date inventory counts.
 
-#### Inventory adjustments in stores
+#### Inventory Adjustments in Stores
 
 HotWax Commerce provides a dedicated `Cycle Counting App` to record inventory adjustments in stores. Store associates periodically perform cycle counting at stores for inventory reconciliation. The app lets store associates record variances due to discrepancies between the system's inventory records and the actual physical counts.
 
