@@ -1,4 +1,4 @@
-# Creating a New Variance Reason in HotWax Commerce
+# Add New Variance Reason
 
 This Standard Operating Procedure (SOP) outlines the steps required to create a new variance reason in HotWax Commerce, for retailers to record variances in the cycle count app.
 
@@ -6,9 +6,9 @@ This Standard Operating Procedure (SOP) outlines the steps required to create a 
 
 ### Login to the Webtools
 1. Open your web browser.
-2. Navigate to the HotWax Commerce Webtools login page.
+2. Navigate to the `HotWax Commerce Webtools` login page.
 3. Enter your credentials (username and password).
-4. Click the "Login" button to access the Webtools dashboard.
+4. Click the `Login` button to access the Webtools dashboard.
 
 ### Navigate to the Import/Export Section
 1. Once logged in, locate the `Webtools` section on the dashboard.
