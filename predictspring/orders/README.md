@@ -24,4 +24,4 @@ At the end of order processing in **PredictSpring**, a `CustomerOrder` object is
 * If HotWax Commerce is not the order master, PredictSpring sends an InventoryVariance file. HotWax Commerce reads this file and updates its inventory accordingly to avoid overpromising.
 
 ### 2. Endless Aisle Orders
-* When an order comes in PredictSpring will send the HotWax Commerce Fulfillment System all the necessary order details. HotWax Commerce sends the orders to its Brokering System, where they are efficiently fulfilled, ensuring a seamless process from start to finish.
+* When an order comes in, PredictSpring will send the HotWax Commerce Fulfillment System all the necessary order details. HotWax Commerce sends the orders to its Brokering System, where they are efficiently fulfilled, ensuring a seamless process from start to finish.
