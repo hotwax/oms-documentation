@@ -5,7 +5,7 @@ description: >-
   platforms
 ---
 
-# Inventory lifecycle
+# Inventory Lifecycle
 
 The inventory count of a product is regularly updated due to various factors such as customer purchases made both in-store and online, as well as the receipt of new inventory. These transactions are recorded across different systems. In the Inventory Lifecycle BPM, we've provided detailed insights into how these operational inventory transactions impact the sellable inventory count, that is, `Online ATP` of a product.
 
@@ -34,11 +34,11 @@ HotWax Commerce integrates with ERP, POS, and WMS, to create a unified pool of i
 
 **Now, let’s understand the breakdown of inventory transactions involved throughout the inventory lifecycle and their recording across various systems:**
 
-## Inventory transactions in ERP/WMS
+## Inventory Transactions in ERP/WMS
 
 ERP systems often serve as the central hub for inventory management within a company. When retailers want to procure new inventory from vendors, they create purchase orders and in the event where they want to transfer inventory between their locations, they create transfer orders. Both purchase orders and transfer orders are created in the ERP systems like NetSuite.
 
-### Inventory receipts in warehouses
+### Inventory Receipts in Warehouses
 
 When new purchase orders are received in warehouses, inventory receipts are directly recorded in the ERP system. A scheduled job in HotWax Commerce performs a daily synchronization of inventory data from the ERP.
 
@@ -48,13 +48,13 @@ When inventory is reset in HotWax Commerce, `Online ATP` is recomputed for all p
 
 Most of our customers opt for a daily inventory sync, meaning HotWax Commerce performs inventory sync from the ERP once every day. Retailers seeking more real-time inventory updates from their ERP system have the flexibility to adjust the sync frequency.
 
-### Inventory receipts in stores
+### Inventory Receipts in Stores
 
 Stores often face challenges when using ERP systems like NetSuite for inventory management, as these systems can be complex for the store environment and lead to resistance from store associates. HotWax Commerce offers a user-friendly Store Inventory Management Suite that includes an `Inventory Receiving App`, which allows store associates to record inventory receipts, and a `Cycle Counting App`, which facilitates periodic cycle counting and logs any variances that may occur.
 
 HotWax Commerce synchronizes purchase orders and transfer orders created in the ERP system so that store associates can receive inventory arriving at their stores.
 
-#### Purchase orders
+#### Purchase Orders
 
 Many retailers receive purchase orders at their warehouse locations and then make distribution plans for sending inventory to other stores through transfer orders. However, for those retailers who exclusively operate through store locations, purchase orders are received directly at the stores.
 
@@ -66,7 +66,7 @@ When a product’s QOH and ATP is updated in HotWax Commerce, its `Online ATP` i
 
 Learn more about [purchase orders](https://docs.hotwax.co/documents/v/learn-netsuite/supported-integrations/purchase-orders)
 
-#### Transfer orders
+#### Transfer Orders
 
 When new transfer orders are created in the ERP, a scheduled job in HotWax Commerce reads them and automatically creates new inbound shipments at the destination store location for inventory receiving.
 
@@ -78,7 +78,7 @@ Transfer orders can be categorized into three types: store to store, warehouse t
 
 Learn more about [transfer orders](https://docs.hotwax.co/documents/v/learn-netsuite/supported-integrations/transfer-order)
 
-## Inventory variances in stores
+## Inventory Variances in Stores
 
 Store managers often come across discrepancies between the recorded inventory in their systems and the actual physical stock on hand. To address these discrepancies, they periodically conduct inventory cycle counts.
 
@@ -100,7 +100,7 @@ When inventory adjustments resulting from cycle counting and unexpected inventor
 
 It's crucial to note that in case of reporting inventory variance for damaged items, HotWax Commerce only reduces the ATP and not the QOH. This is because the product is still physically present at the location despite being damaged, but because its ATP has been reduced, the damaged inventory is also excluded from the `Online ATP`, so no risk of overselling.
 
-## Push inventory variances to ERP
+## Push Inventory Variances to ERP
 
 Inventory variances are also pushed to the ERP system. Let’s see how:
 
@@ -112,7 +112,7 @@ Learn more about [inventory variance synchronization](https://docs.hotwax.co/doc
 
 Similarly, in the event where inventory is managed in another third party system, HotWax Commerce inventory variance feed can be used to update inventory in other ERP or WMS.
 
-## Inventory transactions in POS
+## Inventory Transactions in POS
 
 When new sales happen in physical retail locations, they are directly recorded in the POS system, which also tracks inventory reductions resulting from these transactions.
 
@@ -120,11 +120,11 @@ When new sales happen in physical retail locations, they are directly recorded i
 
 When a product’s QOH and ATP is updated in HotWax Commerce, its `Online ATP` is recomputed to ensure sellable inventory for eCommerce is calculated on the latest stock levels.
 
-## Inventory transactions in eCommerce
+## Inventory Transactions in eCommerce
 
 Online orders are captured on the eCommerce platform, a scheduled job in HotWax Commerce downloads these orders so that inventory can be allocated for them.
 
-### Inventory allocated to online orders
+### Inventory Allocated to Online Orders
 
 **How does HotWax Commerce reduce inventory promised to online sales?**
 
