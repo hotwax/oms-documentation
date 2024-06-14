@@ -10,9 +10,9 @@ This document provides a detailed guide to diagnose and resolve the exceptions c
 2. Data duplication or redundancy due to duplicated jobs.
 3. Interrupted job flow affecting the order life cycle.
 
-#### Scenario: Overlapping Jobs Causing system performance issues
-For example, In the Job Manager app, we have two jobs: Approve Order, which means, approves the orders in created status after checking the requisite criteria and Approve Sales Order, which acts the same as Approve Order but has a different attribute (field) values.
-Let’s suppose we have scheduled the approve orders job every 5 minutes and approve sales orders in every 15 minutes
+#### Scenario: Overlapping Jobs Causing System Performance Issues
+For example, In the Job Manager app, we have two jobs: `Approve Order`, which means, approves the orders that are in in `created` status after checking the requisite criteria, and `Approve Sales Order`, which acts as the same as `Approve Order` but has a different attribute (field) values.
+Let’s suppose we have scheduled the `approve orders` job every 5 minutes and `approve sales orders` every 15 minutes
 This collectively means we have two jobs: one is ready to run 5 minutes after the previous run, whereas the other is ready to run from now every 15 minutes. These two jobs will overlap every 15 minutes and may result in system performance issues. Additionally, the collision of these jobs may interrupt the job flow.
 
 ## Step-by-Step Troubleshooting Process:
@@ -28,16 +28,16 @@ This collectively means we have two jobs: one is ready to run 5 minutes after th
    - Open the Job Manager app in HotWax Commerce.
    - Navigate to the Job Manager > `Order` page (for the example provided). For example, If the duplicacy arises in another area like Brokering, navigate to the corresponding section, such as `Job Manager` > Brokering.
 2. **Identify Duplicated Jobs:**
-   - Traverse all jobs and identify those with overlapping schedules. For example, Approve Order scheduled every 5 minutes and "Approve Sales Order" scheduled every 15 minutes.
+   - Traverse all jobs and identify those with overlapping schedules. For example, `Approve Order` is scheduled every 5 minutes, and `Approve Sales Order" is scheduled every 15 minutes.
 
 #### Resolve the Issue:
 1. **Compare Jobs:**
    - Compare both jobs to understand their functionality and attributes.
 2. **Disable Duplicated Job:**
-   - Terminate or remove the duplicated job causing the exception and the one that is outdated:
+   - Terminate or remove the duplicated job causing the exception and the one that is outdated.
  	- Click on the job to open its details.
- 	- Click the "Disable" button to deactivate the job.
+ 	- Click the `Disable` button to deactivate the job.
 3. **Verify Job Termination:**
-   - Navigate to the pipeline page and search for the disabled job to ensure the problematic job is successfully disabled.
+   - Navigate to the `pipeline` page and search for the disabled job to ensure the problematic job is successfully disabled.
 
 By following these detailed steps, you can effectively troubleshoot and ensure a smooth job execution process, minimize system performance issues, and maintain accurate data management.
