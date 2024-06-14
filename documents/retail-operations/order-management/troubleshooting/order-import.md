@@ -20,9 +20,9 @@ This document provides a comprehensive guide to diagnose and resolve synchroniza
 
 ### Verify If Issue Exists:
 1. **Access OMS:**
-   - Navigate to HotWax Commerce OMS and login with your user credentials.
-   - Go to MDM(Dashboard) / EXIM > Shopify Jobs > Import Shopify Orders.
-   - Check the Import Results in the Import Shopify Orders page for any failed records.
+   - Navigate to HotWax Commerce OMS and log in with your user credentials.
+   - Go to the `MDM ' page from the hamburger menu and click on `EXIM` > `Shopify Jobs` > `Import Shopify Orders`.
+   - Check the Import Results in the `Import Shopify Orders` page for any failed records.
 
 2. **Check Shopify Logs:**
    - Review Shopify Plus logs or feeds for specific error messages related to the failed import.
@@ -44,11 +44,10 @@ This document provides a comprehensive guide to diagnose and resolve synchroniza
    - Correct the email address to adhere to the standard format.
 
 2. **Save Edited JSON:**
-   - Save the changes made to the JSON file.
+   - `Save` the changes made to the JSON file.
 
 3. **Re-import Order:**
-   - Attempt to re-import the corrected order into HotWax Commerce.
-   - If within the job execution time (generally 15 minutes), the import order job should automatically import the order.
+   - If an error is resolved within the job execution time (generally 15 minutes), the import order job should automatically import the order.
    - Otherwise, manually import the order by navigating to MDM / EXIM > Shopify Jobs > Import Shopify Orders, select Shopify Config, write the Shopify Order IDs, and run the job.
 
 4. **Verify Successful Import:**
