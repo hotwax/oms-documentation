@@ -1,20 +1,19 @@
 ---
 description: >-
-  Inventory management business process helps omnichannel retailers accurately track inventory changes and ensure that product availability aligns with customer demand across all sales channels.
+  Inventory management business process helps omnichannel retailers accurately
+  track inventory changes and ensure that product availability aligns with
+  customer demand across all sales channels.
 ---
 
-# Inventory Management Business Process
+# Inventory Management
 
 ## Key Business Processes
 
-The inventory management business process involves transferring inventory between locations, receiving new stock, performing regular cycle counts, and addressing unexpected inventory variances. 
+The inventory management business process involves transferring inventory between locations, receiving new stock, performing regular cycle counts, and addressing unexpected inventory variances.
 
 * **Inventory transfers:** Retailers move inventory between locations using transfer orders. This process helps balance stock levels across different stores and warehouses, optimizing product availability where it is needed most.
-
 * **Receiving new inventory:** Retailers receive new inventory at their locations with respect to purchase orders and transfer orders. This step is vital for maintaining stock levels and ensuring that products are available for both in-store and online sales.
-
 * **Cycle counting:** Periodic cycle counting at stores involves regularly performing inventory counting of products to ensure accuracy in stock records. This practice helps identify and correct discrepancies in inventory levels.
-
 * **Handling inventory variances:** On a day-to-day basis, retailers encounter inventory variances due to factors such as theft, damage, or administrative errors. Identifying and resolving these variances is crucial for maintaining accurate inventory records.
 
 Accurate inventory management is essential for preventing overselling and underselling on eCommerce platforms, when store inventory is also used for online orders. Keeping up-to-date record of inventory changes ensures that the inventory available for online sale matches the actual stock in stores.
@@ -45,8 +44,7 @@ One way to track this in HotWax Commerce is by creating multiple inbound shipmen
 
 If an ERP/WMS other than NetSuite tracks which items are in which package, those details can be used to create an inbound shipment for each package in HotWax Commerce. This way, each package can be tracked and received independently.
 
-In the case of NetSuite ERP, we recommend creating one package for each shipment/item fulfillment. In the event where retailers need to ship three packages, they should create three shipments/item fulfillments, with each shipment having one package. This way, retailers can track and receive each package independently.
-If tracking individual packages is not a priority for retailers, multiple packages can be received as one shipment in HotWax Commerce.
+In the case of NetSuite ERP, we recommend creating one package for each shipment/item fulfillment. In the event where retailers need to ship three packages, they should create three shipments/item fulfillments, with each shipment having one package. This way, retailers can track and receive each package independently. If tracking individual packages is not a priority for retailers, multiple packages can be received as one shipment in HotWax Commerce.
 
 Learn more about [transfer orders](https://docs.hotwax.co/documents/v/learn-hotwax-oms/business-process-models/transferorderlifecycle)
 
@@ -67,6 +65,8 @@ Learn more about additional scenarios supported in the [Receiving App](https://d
 ### Receiving Purchase Orders in Stores
 
 In most scenarios, purchase orders are received at the warehouse location, and stock is transferred to stores using transfer orders. However, in cases where stores independently raise purchase orders without a warehouse intermediary, HotWax Commerce supports direct receiving at the store level.
+
+<figure><img src="../.gitbook/assets/PO.png" alt=""><figcaption><p>Receiving purchase orders using HotWax Receiving App</p></figcaption></figure>
 
 **Receiving in Parts:** Purchase orders can be received in multiple parts or batches, allowing for flexibility in inventory receiving. For example, a purchase order for 200 units might arrive in two batches of 100 units each. Store associates can receive each batch as it arrives.
 
@@ -96,7 +96,7 @@ Cycle counts should be performed after receiving the inventory reset from the ER
 
 **Increase in inventory:** If a store counts 120 units of an item but the systemic inventory shows 100 units, the discrepancy is recorded, and the inventory is adjusted to reflect the 120 units.
 
-**Decrease in inventory:**  Conversely, if a store counts 80 units of an item but the systemic inventory shows 100 units, the inventory is adjusted to reflect the 80 units, ensuring accuracy.
+**Decrease in inventory:** Conversely, if a store counts 80 units of an item but the systemic inventory shows 100 units, the inventory is adjusted to reflect the 80 units, ensuring accuracy.
 
 Learn more about [cycle counts](https://docs.hotwax.co/documents/inventory/inventory-count)
 
