@@ -80,9 +80,13 @@ In most scenarios, purchase orders are received at the warehouse location, and s
 
 All other features, such as receiving extra items or handling discrepancies, are also offered during the purchase order receiving process, just as they are with inbound shipments. The primary difference is that when you are receiving a purchase order instead of a shipment, you can receive it in parts, unlike shipments which must be received in one go.
 
-### About Cycle Counting
+### Cycle Counting
 
 Retailers that aim for 98% to 99% inventory accuracy, regularly perform cycle counts at their locations to maintain up to date inventory records. Cycle counting is a critical inventory management business process for these retailers and should be performed weekly or monthly, depending on the specific needs of the store.
+
+
+
+<figure><img src="../.gitbook/assets/Cycle Counting (1).png" alt=""><figcaption><p>Cycle count sync</p></figcaption></figure>
 
 #### Performing Cycle Counts
 
@@ -93,6 +97,10 @@ Store associates count the physical inventory of a product present in the store 
 Upon approval, inventory adjustments are made in HotWax Commerce, reflecting the updated stock levels. This ensures that inventory records remain accurate and aligned with the actual stock on hand.
 
 The app includes a feature that displays systemic inventory, enabling store associates to compare counted inventory with systemic inventory as a reference. While this feature serves as a useful reference point, it can be easily disabled to ensure unbiased and accurate counting.
+
+
+
+<figure><img src="../.gitbook/assets/Inventory - Cycle Count.png" alt=""><figcaption><p>Performing cycle count using HotWax Commerce Cycle Count App</p></figcaption></figure>
 
 {% hint style="info" %}
 Cycle counts should be performed after receiving the inventory reset from the ERP to ensure alignment with the most current inventory data.
@@ -111,6 +119,10 @@ Learn more about [cycle counts](https://docs.hotwax.co/documents/inventory/inven
 Sometimes, unexpected inventory variance is identified outside of scheduled cycle counts. In such cases, store associates can log variances with the store manager's permission and provide a reason directly from the app.
 
 For example, if during a routine check, a store associate finds that 10 units of a product are missing due to damage or theft, they can log this variance and update the inventory accordingly, ensuring that the records remain accurate.
+
+
+
+<figure><img src="../.gitbook/assets/Unexpected Inventory Variance.png" alt=""><figcaption><p>Logging unexpected inventory variance using HotWax Commerce Cycle Count App</p></figcaption></figure>
 
 By following these practices and using HotWax Commerce's intuitive apps, retailers can maintain high levels of inventory accuracy and streamline their inventory management processes.
 
