@@ -29,10 +29,10 @@ This table provides an overview of the data fields available in HotWax OMS, cate
 |                      | `country_name`            | The country of the shipping address.                                |
 | Order Information    | `order_name`              | The name of the order (e.g., order ID, customer-defined name).      |
 |                      | `order_items`             | A list of items in the shipment, each with nested fields:           |
-|                      |                           | `image_url`                                                         |
-|                      |                           | `product_name`                                                      |
-|                      |                           | `quantity`                                                          |
-|                      |                           | `price`                                                             |
-|                      |                           | `subtotal`                                                          |
-|                      |                           | `grand_total`                                                       |
+|                      | `image_url`               | Shopify image URL of the order item.                                |
+|                      | `product_name`            | The name of the product.                                            |
+|                      | `quantity`                | The quantity of ther order item.                                    |
+|                      | `price`                   | The price of the order item.                                        |
+|                      | `subtotal`                | The subtotal of the order items.                                    |
+|                      | `grand_total`             |  The grand total of the order items.                                 |
 |                      | `customerOrderUpdateLink` | A link where the customer can update their order information.       |
