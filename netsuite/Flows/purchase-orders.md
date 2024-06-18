@@ -97,9 +97,8 @@ To facilitate the subsequent processing of this data, the JSON file is securely 
 
 **SFTP Locations**
 
-```
-/home/{sftp-username}/netsuite/purchaseorder/receipt
-```
+<pre><code><strong>/home/{sftp-username}/netsuite/purchaseorder/receipt
+</strong></code></pre>
 
 ### Import Item Receipts into NetSuite
 
