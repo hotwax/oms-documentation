@@ -10,7 +10,7 @@ Shopify processes an order after it has been placed to check for invalid or frau
 
 The `thruDateBuffer` ensures that orders are only synced from Shopify after a certain amount of time. This delay allows time for Shopify to process and analyze the orders before they are imported into HotWax Commerce, reducing the need for rechecking the order tags. By default this value is 5 minutes.&#x20;
 
-## BufferTime
+## bufferTime
 
 It is possible for orders to be missed if they are placed during the microsecond time gap between two consecutive jobs.
 
