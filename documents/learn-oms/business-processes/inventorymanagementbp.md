@@ -50,7 +50,7 @@ In the case of NetSuite ERP, we recommend creating one package for each shipment
 
 Learn more about [transfer orders](https://docs.hotwax.co/documents/v/learn-hotwax-oms/business-process-models/transferorderlifecycle)
 
-<figure><img src="../.gitbook/assets/receiving transfer order.png" alt=""><figcaption><p>Receiving inbound shipments using HotWax Receiving App</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Receiving Transfer Order.png" alt=""><figcaption><p>Receiving inbound shipments using HotWax Receiving App</p></figcaption></figure>
 
 #### Handle Receiving of Unexpected Items in a Shipment
 
@@ -76,7 +76,7 @@ In most scenarios, purchase orders are received at the warehouse location, and s
 
 **Inbound Shipments:** Once a purchase order has been received, an inbound shipment is created in HotWax Commerce, and inventory counts for the received items are automatically updated.
 
-<figure><img src="../.gitbook/assets/purchase order receiving.png" alt=""><figcaption><p>Receiving purchase orders using HotWax Receiving App</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Receiving Purchase Order.png" alt=""><figcaption><p>Receiving purchase orders using HotWax Receiving App</p></figcaption></figure>
 
 All other features, such as receiving extra items or handling discrepancies, are also offered during the purchase order receiving process, just as they are with inbound shipments. The primary difference is that when you are receiving a purchase order instead of a shipment, you can receive it in parts, unlike shipments which must be received in one go.
 
