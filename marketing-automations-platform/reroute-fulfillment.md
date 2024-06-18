@@ -14,8 +14,6 @@ Add image here
 
 HotWax provides a variety of pre-defined data fields that can be used within your Klaviyo templates. These fields contain dynamic information specific to each order and customer, allowing for targeted communication.
 
-## HotWax OMS Data Fields
-
 This table provides an overview of the data fields available in HotWax OMS, categorized by section:
 
 | Section | Field Name | Description |
