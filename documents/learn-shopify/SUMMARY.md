@@ -19,7 +19,7 @@
 * [Orders](integration/how-are-orders-downloaded-from-shopify-to-hotwax-commerce/how-are-orders-downloaded-from-shopify-to-hotwax-commerce.md)
   * [Order Download](shopify-integration/how-are-orders-downloaded-from-shopify-to-hotwax-commerce/order-download/README.md)
     * [thruDateBuffer and bufferTime](shopify-integration/how-are-orders-downloaded-from-shopify-to-hotwax-commerce/order-download/thrudatebuffer-and-buffertime.md)
-  * [Order Approval for Fulfillment](integration/how-are-orders-downloaded-from-shopify-to-hotwax-commerce/order-approval-for-fulfillment.md)
+  * [Order approval for fulfillment](integration/how-are-orders-downloaded-from-shopify-to-hotwax-commerce/order-approval-for-fulfillment.md)
   * [Order Updates](integration/how-are-orders-downloaded-from-shopify-to-hotwax-commerce/order-updates.md)
   * [POS Sales Download](integration/how-are-orders-downloaded-from-shopify-to-hotwax-commerce/possales.md)
   * [Gift Cards Order Download](integration/how-are-orders-downloaded-from-shopify-to-hotwax-commerce/giftcardordersdownload.md)
