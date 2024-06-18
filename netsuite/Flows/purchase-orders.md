@@ -97,9 +97,8 @@ To facilitate the subsequent processing of this data, the JSON file is securely 
 
 **SFTP Locations**
 
-```
-/home/{sftp-username}/netsuite/purchaseorder/receipt
-```
+<pre><code><strong><a data-footnote-ref href="#user-content-fn-1">/home/{sftp-username}/netsuite/purchaseorder/receipt</a>
+</strong></code></pre>
 
 ### Import Item Receipts into NetSuite
 
@@ -120,3 +119,5 @@ The HC\_SC\_ImportPurchaseOrderReceipts SuiteScript also generates a CSV file hi
 {% endhint %}
 
 {% file src="../.gitbook/assets/Purchase Orders Receipts Sample Feed.txt" %}
+
+[^1]: SFTP location
