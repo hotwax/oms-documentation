@@ -6,9 +6,9 @@ This documentation guide is intended for developers integrating the HotWax Order
 
 HotWax OMS empowers merchants to offer customers more control over their deliveries by enabling reroute fulfillment emails. These emails are triggered under conditions such store pickup order rejections and present customers with alternative fulfillment options, potentially improving the delivery experience and customer satisfaction.
 
-## How it looks?
+## Sample email
 
-<figure><img src=".gitbook/assets/Reroute fulfillment reference.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/Reroute Fulfillment Template.png" alt=""><figcaption></figcaption></figure>
 
 ## Data fields
 
