@@ -28,6 +28,8 @@ When there is a need to replenish inventory at retail stores, merchandising team
 
 When the store associates verify the inbound shipments and receive them, inventory counts for the corresponding items are automatically increased in HotWax Commerce.
 
+<figure><img src="../.gitbook/assets/transfer order sync.png" alt=""><figcaption><p>Transfer order sync</p></figcaption></figure>
+
 #### Creating Shipments in ERP
 
 Many ERP systems, including NetSuite, let you create multiple outbound shipments for a transfer order, and each shipment can have multiple packages. In NetSuite, an outbound shipment is called item fulfillment.
@@ -48,6 +50,8 @@ In the case of NetSuite ERP, we recommend creating one package for each shipment
 
 Learn more about [transfer orders](https://docs.hotwax.co/documents/v/learn-hotwax-oms/business-process-models/transferorderlifecycle)
 
+<figure><img src="../.gitbook/assets/receiving transfer order.png" alt=""><figcaption><p>Receiving inbound shipments using HotWax Receiving App</p></figcaption></figure>
+
 #### Handle Receiving of Unexpected Items in a Shipment
 
 Often, mispicks or unexpected variations occur. When store associates identify items that were not expected to arrive, they can easily add the specific SKU to the shipment directly from the app. This ensures accurate record-keeping and helps maintain correct inventory levels. For example, if a shipment is supposed to contain 50 units of SKU101 but the shipment arrives with an additional 10 units of the SKU77, this extra SKU with items can be recorded in the app to update the inventory accurately.
@@ -66,11 +70,13 @@ Learn more about additional scenarios supported in the [Receiving App](https://d
 
 In most scenarios, purchase orders are received at the warehouse location, and stock is transferred to stores using transfer orders. However, in cases where stores independently raise purchase orders without a warehouse intermediary, HotWax Commerce supports direct receiving at the store level.
 
-<figure><img src="../.gitbook/assets/PO.png" alt=""><figcaption><p>Receiving purchase orders using HotWax Receiving App</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/purchase order sync.png" alt=""><figcaption><p>Purchase order sync</p></figcaption></figure>
 
 **Receiving in Parts:** Purchase orders can be received in multiple parts or batches, allowing for flexibility in inventory receiving. For example, a purchase order for 200 units might arrive in two batches of 100 units each. Store associates can receive each batch as it arrives.
 
 **Inbound Shipments:** Once a purchase order has been received, an inbound shipment is created in HotWax Commerce, and inventory counts for the received items are automatically updated.
+
+<figure><img src="../.gitbook/assets/purchase order receiving.png" alt=""><figcaption><p>Receiving purchase orders using HotWax Receiving App</p></figcaption></figure>
 
 All other features, such as receiving extra items or handling discrepancies, are also offered during the purchase order receiving process, just as they are with inbound shipments. The primary difference is that when you are receiving a purchase order instead of a shipment, you can receive it in parts, unlike shipments which must be received in one go.
 
