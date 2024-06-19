@@ -1,4 +1,4 @@
-# Webtools
+# Web Tools
 
 Web Tools are a resource for backend and development teams, providing functionalities for data management, log viewing, data import/export, job execution, and more within an Order Management System (OMS) instance.
 
@@ -24,7 +24,7 @@ Entity Engine is accessible through the `Entity Engine` button on the second row
 
 ### Entity SQL Processor
 
-The Entity SQL[^1] Processor in Web Tools interprets and executes SQL commands, improving data[^2] viewing and management efficiency by providing users with the capability to execute SQL queries in the system.
+The Entity SQL Processor in Web Tools interprets and executes SQL commands, improving data[^1] viewing and management efficiency by providing users with the capability to execute SQL queries in the system.
 
 {% hint style="info" %}
 Users must always use the \`Select\` query first, and then use subsequent queries to perform relevant actions. Furthermore, it is recommended to refrain from using \`Delete\` queries.
@@ -128,6 +128,4 @@ After obtaining the XML data format, users can import the data directly from the
 Ensure that the XML data adheres to the required format for successful import.
 {% endhint %}
 
-[^1]: This is how your text looks after you add annotation
-
-[^2]: 
+[^1]: 
