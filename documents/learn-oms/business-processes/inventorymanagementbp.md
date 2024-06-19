@@ -100,7 +100,7 @@ The app includes a feature that displays systemic inventory, enabling store asso
 
 
 
-<figure><img src="../.gitbook/assets/Inventory - Cycle Count.png" alt=""><figcaption><p>Performing cycle count using HotWax Commerce Cycle Count App</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Inventory Cycle Count.png" alt=""><figcaption><p>Performing cycle count using HotWax Commerce Cycle Count App</p></figcaption></figure>
 
 {% hint style="info" %}
 Cycle counts should be performed after receiving the inventory reset from the ERP to ensure alignment with the most current inventory data.
