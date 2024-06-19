@@ -1,4 +1,4 @@
-# Exchanges lifecycle
+# Exchanges Lifecycle
 
 Exchanges involve customers purchasing a new item as a replacement for a returned one. Our customers use Loop as their RMS to process the returned item and create a new exchange order on eCommerce platform.
 

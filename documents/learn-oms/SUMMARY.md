@@ -2,12 +2,13 @@
 
 * [Introduction](README.md)
 
-* [Getting started with HotWax Commerce](gettingstarted.md)
+* [Getting Started with HotWax Commerce](gettingstarted.md)
 
 ## Business Processes
 
 * [Introduction](business-processes/README.md)
-* [Order fulfillment](business-processes/orderfulfillmentbusinessprocess.md)
+* [Order Fulfillment](business-processes/orderfulfillmentbp.md)
+* [Inventory Management](business-processes/inventorymanagementbp.md)
 
 ## Business Process Models
 

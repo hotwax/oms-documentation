@@ -3,7 +3,6 @@
 ## Shopify Integration
 
 * [Introduction](README.md)
-
 * [Products](integration/how-are-products-downloaded-from-shopify-to-hotwax-commerce/README.md)
   * [Product Download](integration/how-are-products-downloaded-from-shopify-to-hotwax-commerce/product-download.md)
   * [Updating Product Details](integration/how-are-products-downloaded-from-shopify-to-hotwax-commerce/updating-product-details.md)
@@ -12,15 +11,14 @@
   * [Gift Cards Download](integration/how-are-products-downloaded-from-shopify-to-hotwax-commerce/giftcardsdownload.md)
   * [Bundles Download](integration/how-are-products-downloaded-from-shopify-to-hotwax-commerce/downloading-bundles.md)
   * [Product Synchronization for Multiple Shopify Stores](integration/multiple-store-setup.md)
-
 * [Inventory](integration/how-does-hotwax-commerce-ensure-accurate-inventory-is-synchronized-to-shopify/how-does-hotwax-commerce-ensure-accurate-inventory-is-synchronized-to-shopify.md)
   * [Inventory Synchronization](integration/how-does-hotwax-commerce-ensure-accurate-inventory-is-synchronized-to-shopify/inventory-synchronization.md)
   * [Location Mapping](integration/how-does-hotwax-commerce-ensure-accurate-inventory-is-synchronized-to-shopify/location-mapping.md)
   * [Inventory Synchronization of Gift Cards](integration/how-does-hotwax-commerce-ensure-accurate-inventory-is-synchronized-to-shopify/inventorysynchronizationgiftcards.md)
   * [Inventory Synchronization of Bundles](integration/how-does-hotwax-commerce-ensure-accurate-inventory-is-synchronized-to-shopify/inventory-synchronization-of-bundles.md)
-
 * [Orders](integration/how-are-orders-downloaded-from-shopify-to-hotwax-commerce/how-are-orders-downloaded-from-shopify-to-hotwax-commerce.md)
-  * [Order Download](integration/how-are-orders-downloaded-from-shopify-to-hotwax-commerce/order-download.md)
+  * [Order Download](shopify-integration/how-are-orders-downloaded-from-shopify-to-hotwax-commerce/order-download/README.md)
+    * [thruDateBuffer and bufferTime](shopify-integration/how-are-orders-downloaded-from-shopify-to-hotwax-commerce/order-download/thrudatebuffer-and-buffertime.md)
   * [Order Approval for Fulfillment](integration/how-are-orders-downloaded-from-shopify-to-hotwax-commerce/order-approval-for-fulfillment.md)
   * [Order Updates](integration/how-are-orders-downloaded-from-shopify-to-hotwax-commerce/order-updates.md)
   * [POS Sales Download](integration/how-are-orders-downloaded-from-shopify-to-hotwax-commerce/possales.md)
@@ -57,15 +55,15 @@
   * [Sales channel](shopify-integration/ShopifyIntegration/sales-channel-mapping.md)
   * [Payment Method](shopify-integration/ShopifyIntegration/payment-method-type.md)
   * [Product Type](shopify-integration/ShopifyIntegration/product-type.md)
-* Troubleshooting
-  * [Facility Mapping Discrepancy](shopify-integration/ShopifyIntegration/facility-mapping-troubleshoot.md)  
+* [Troubleshooting](setup-shopify/troubleshooting/README.md)
+  * [Facility Mapping Discrepancy](setup-shopify/troubleshooting/facility-mapping-discrepancy.md)
 
 ## Synchronization Flows
 
 * [Initial Product Sync](shopify-integration/sync-shopify/README.md)
 * [Initial Order Sync](shopify-integration/sync-shopify/importOrders.md)
 * [Initial Inventory Sync](shopify-integration/sync-shopify/upload-inventory.md)
-* Troubleshooting
+* [Troubleshooting](synchronization-flows/troubleshooting/README.md)
   * [Product sync](troubleshooting/products.md)
   * [Order sync](troubleshooting/order.md)
   * [Inventory sync](troubleshooting/inventory.md)

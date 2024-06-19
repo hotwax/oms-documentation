@@ -4,7 +4,7 @@ description: >-
   RMS, eCommerce, ERP, and HotWax Commerce.
 ---
 
-# Web exchanges with Loop
+# Web Exchanges with Loop
 
 <figure><img src="../../.gitbook/assets/exchanges bpm.png" alt=""><figcaption><p>Web exchanges lifecycle business process model</p></figcaption></figure>
 
@@ -12,21 +12,21 @@ In the context of returns, an exchange refers to a transaction in which a custom
 
 To explain the exchange lifecycle, we've taken Loop as the RMS, Shopify as the eCommerce platform, and NetSuite as the ERP system, while HotWax Commerce serves as the OMS.
 
-## 1. Exchanges initiated in Loop
+## 1. Exchanges Initiated in Loop
 
 As discussed in [Web Returns Lifecycle](../returns-lifecycle/loopwebreturnslifecycle.md), Loop lets customers directly initiate returns against their web orders. If customers want to buy another product by returning an item, the Loop customer portal lets them submit an exchange request.
 
 When customers complete their exchange process, a Return Merchandise Authorization (RMA) is created in Loop in the <mark style="color:orange;">**“Open”**</mark> status against the return item.
 
-## 2. Return under order created in Shopify
+## 2. Return Under Order Created in Shopify
 
 Loop updates the order details in Shopify by creating a return under order, reflecting that a return has been requested by the customer.
 
-## 3. RMA created in NetSuite
+## 3. RMA Created in NetSuite
 
 Loop also generates an RMA in the <mark style="color:orange;">**“Pending Receipt”**</mark> status in NetSuite using a third-party integration app like Novamodule. This gives the warehouse teams a heads-up that an order item will be coming back.
 
-## 4. Return item successfully received in the warehouse
+## 4. Return Item Successfully Received in the Warehouse
 
 To receive the requested new order item in exchange, customers must return the original order.
 
@@ -37,11 +37,11 @@ When the return package reaches the warehouse, the warehouse teams initiate rece
 * Item receipt records are created in NetSuite against the RMA, and the returned inventory is restocked.
 * The status of RMA is updated from <mark style="color:orange;">**“Pending Receipt”**</mark> to <mark style="color:orange;">**“Pending Refund”**</mark>.
 
-## 5. Return receipt records created in Loop
+## 5. Return Receipt Records Created in Loop
 
 Item receipt records created in NetSuite are synchronized to Loop using a third-party integration app. Consequently, return receipt records are generated in Loop.
 
-## 6. Refund records created
+## 6. Refund Records Created
 
 When item receipt records are generated in Loop, multiple actions take place in NetSuite and Shopify, let’s understand them in detail:
 
@@ -55,7 +55,7 @@ Creating refund records is essential to mark the completion of the return proces
 * The creation of refund records in Loop also marks the completion of RMA in Loop, with its status updating from <mark style="color:orange;">**“Open”**</mark> to <mark style="color:orange;">**“Closed”**</mark>.
 * Return receipt records in Loop trigger marking the original order as <mark style="color:orange;">**“Returned”**</mark> in Shopify and creating a new order in the <mark style="color:orange;">**“Unfulfilled”**</mark> status. Loop also applies a 100% Loop discount on the new order and links the original order in the extended fields.
 
-## 7. Exchange orders downloaded in HotWax Commerce
+## 7. Exchange Orders Downloaded in HotWax Commerce
 
 Exchange orders are basically new web orders that require fulfillment, so HotWax Commerce processes them similar to how regular web orders are fulfilled.
 
@@ -65,13 +65,13 @@ An important aspect to note is that for an exchange order, Loop saves details of
 
 Learn more about how [HotWax Commerce fulfills web orders](https://docs.hotwax.co/documents/v/learn-shopify/orders/how-are-orders-downloaded-from-shopify-to-hotwax-commerce)
 
-## 8. Exchange orders synchronized to NetSuite
+## 8. Exchange Orders Synchronized to NetSuite
 
 HotWax Commerce synchronizes all web orders to NetSuite in the <mark style="color:orange;">**“Created”**</mark> status and similarly, exchange orders in the <mark style="color:orange;">**“Created”**</mark> status are also synchronized to NetSuite. When NetSuite imports them, they are automatically assigned a <mark style="color:orange;">**“Pending Fulfillment”**</mark> status and the details of the original order are saved in the memo.
 
 Learn more about [order synchronization between HotWax Commerce and NetSuite](https://docs.hotwax.co/documents/v/learn-netsuite/supported-integrations/salesorder)
 
-### What about inventory updates for the returned & new exchange item?
+### What about Inventory Updates for the Returned & New Exchange Item?
 
 Inventory synchronization process remains the same for the returned item that we discussed in the [Web Returns Lifecycle](../returns-lifecycle/loopwebreturnslifecycle.md).
 

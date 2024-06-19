@@ -14,8 +14,10 @@
   * [Troubleshooting](job-manager/troubleshooting/README.md)
     * [Job Stuck](job-manager/troubleshooting/jobStuck.md)
     * [Job Failure](job-manager/troubleshooting/jobFailed.md)
+    * [Duplicate Jobs](job-manager/troubleshooting/duplicate-job-scheduled.md)
     * [Job Scheduling](job-manager/troubleshooting/scheduleJob.md)
     * [Job Runtime Error](job-manager/troubleshooting/runtime-error.md)
+    * [Job Scheduling Errors](job-manager/troubleshooting/job-not-scheduled.md)
 * [Job workflows](job-workflows/README.md)
   * [Orders](job-workflows/orders.md)
   * [Inventory](job-workflows/inventory.md)
@@ -44,8 +46,9 @@
   * [Soft allocation](order-management/soft-allocations.md)
   * [Order Cancellations](order-management/order-cancellations.md)
   * Troubleshooting
-    * [Order Status Discrepancy](order-management/orderStatusDiscrepancy.md)
-    * [Order Indexing Discrepancy](order-management/indexing-issue.md)
+    * [Error due to Incorrect JSON](order-management/troubleshooting/order-import.md)
+    * [Order Status Discrepancy](order-management/troubleshooting/orderStatusDiscrepancy.md)
+    * [Order Indexing Discrepancy](order-management/troubleshooting/indexing-issue.md)
 
 * [Brokering](orders/brokering/README.md)
   * [Order Routing](brokering/configurableRouting.md)

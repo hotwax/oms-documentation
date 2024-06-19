@@ -5,7 +5,7 @@ description: >-
   between stores, or stores to warehouses transfer orders.
 ---
 
-# Transfer orders lifecycle
+# Transfer Orders Lifecycle
 
 Transfer orders are created in the ERP system, they serve various purposes, including:
 
@@ -19,13 +19,13 @@ To explain the Transfer Order Lifecycle BPM, we've opted NetSuite as the ERP sys
 
 <figure><img src="../.gitbook/assets/warehouse to store transfer order bpm.png" alt=""><figcaption><p>Warehouse to store transfer orders lifecycle business process model</p></figcaption></figure>
 
-### 1. Transfer orders created in NetSuite
+### 1. Transfer Orders Created in NetSuite
 
 * Warehouse managers create transfer orders in NetSuite, specifying the source location as warehouse and the destination location as store. These transfer orders are automatically assigned a <mark style="color:orange;">**“Pending Fulfillment”**</mark> status.
 * Fulfillment teams start preparing the transfer order items for dispatch from the warehouse. Once they pick, pack and ship the transfer order items, item fulfillment records are automatically generated in NetSuite with the status <mark style="color:orange;">**“Shipped”**</mark>.
 * As soon as the item fulfillment records are marked as <mark style="color:orange;">**“Shipped”**</mark>, inventory counts for the items shipped are reduced in NetSuite and the transfer order status is updated from <mark style="color:orange;">**“Pending Fulfillment”**</mark> to <mark style="color:orange;">**“Pending Receipt”**</mark>.
 
-### 2. Create inbound shipments in HotWax Commerce and start receiving
+### 2. Create Inbound Shipments in HotWax Commerce and Start Receiving
 
 * A scheduled script in NetSuite exports the feed of item fulfillment records in <mark style="color:orange;">**“Shipped”**</mark> status. A scheduled job in HotWax Commerce reads this feed and creates inbound shipments at the destination facility.
 * HotWax Commerce provides an `Inventory Receiving App` for store associates to easily receive any new inventory arriving at stores.
@@ -38,11 +38,11 @@ To explain the Transfer Order Lifecycle BPM, we've opted NetSuite as the ERP sys
 It’s crucial to note that inventory counts for the items shipped from the warehouse are reduced in HotWax Commerce on performing daily inventory sync with NetSuite.
 {% endhint %}
 
-### 3. Generate and export item receipt feed from HotWax Commerce
+### 3. Generate and Export Item Receipt Feed from HotWax Commerce
 
 * A scheduled job in HotWax Commerce generates an item receipt feed containing the latest transfer order items that have been received in the store so that this update can be synchronized to NetSuite.
 
-### 4. Item receipt records created in NetSuite
+### 4. Item Receipt Records Created in NetSuite
 
 * A scheduled SuiteScript in NetSuite reads the item receipt feed and two actions take place:
   * Item receipt records are created in NetSuite and subsequently, inventory count at the store for the corresponding items are increased.
@@ -52,13 +52,13 @@ It’s crucial to note that inventory counts for the items shipped from the ware
 
 <figure><img src="../.gitbook/assets/store to store transfer order bpm.png" alt=""><figcaption><p>Store to store transfer orders lifecycle business process model</p></figcaption></figure>
 
-### 1. Transfer orders created in NetSuite and imported into HotWax Commerce
+### 1. Transfer Orders Created in NetSuite and Imported into HotWax Commerce
 
 * Similar to warehouse to store transfer orders, store to store transfer orders are also created in NetSuite, specifying the source location as store and the destination location also as a store. These transfer orders are automatically assigned a <mark style="color:orange;">**“Pending Fulfillment”**</mark> status.
 * A scheduled SuiteScript in NetSuite exports transfer orders that have a Pending Fulfillment status and the source location as the store. After that, a scheduled job in HotWax Commerce reads the transfer orders feed and downloads transfer orders in HotWax Commerce with a default <mark style="color:orange;">**“Created”**</mark> status.
 * These transfer orders are synchronized to HotWax Commerce so that they can be fulfilled from stores. HotWax Commerce provides a dedicated `Store Fulfillment App` for store associates to fulfill transfer order items from stores.
 
-### 2. Approve transfer orders in HotWax Commerce
+### 2. Approve Transfer Orders in HotWax Commerce
 
 A scheduled job in HotWax Commerce identifies transfer orders that have a <mark style="color:orange;">**“Created”**</mark> status and automatically marks them <mark style="color:orange;">**“Approved”**</mark>.
 
@@ -72,17 +72,17 @@ A scheduled job in HotWax Commerce identifies transfer orders that have a <mark 
 
 Once transfer order items are fulfilled from the store, the QOH for the corresponding items is automatically reduced in HotWax Commerce.
 
-### 3. Generate and export item fulfilled feed from HotWax Commerce
+### 3. Generate and Export Item Fulfilled Feed from HotWax Commerce
 
 * A scheduled job in HotWax Commerce generates a fulfilled transfer order items feed containing the latest transfer order items that have been fulfilled from the store so that this update can be synchronized to NetSuite.
 
-### 4. Item fulfillment records created in NetSuite
+### 4. Item Fulfillment Records Created in NetSuite
 
 * A scheduled SuiteScript in NetSuite reads the fulfilled transfer order items feed and two actions take place:
   * Item fulfilled records are created in NetSuite and marked <mark style="color:orange;">**“Shipped”**</mark>. Subsequently, inventory count at the store for the corresponding items are reduced.
   * The transfer order status is updated from <mark style="color:orange;">**“Pending Fulfillment”**</mark> to <mark style="color:orange;">**“Pending Receipt”**</mark>. This step concludes the store to warehouse transfer orders flow.
 
-### 5. Create inbound shipments in HotWax Commerce and start receiving
+### 5. Create Inbound Shipments in HotWax Commerce and Start Receiving
 
 * As discussed in `warehouse to store` transfer orders lifecycle, for store to store transfer orders, the receiving process in stores remains consistent. A scheduled SuiteScript in NetSuite exports the feed of item fulfillment records in <mark style="color:orange;">**“Shipped”**</mark> status. After that, a scheduled job in HotWax Commerce reads this feed and creates inbound shipments at the destination facility.
 *   Inbound shipments that have been created are automatically reflected in the `Inventory Receiving App`, allowing store associates to receive them in store.
@@ -90,11 +90,11 @@ Once transfer order items are fulfilled from the store, the QOH for the correspo
     For example, if a transfer order specifies the Times Square Store as the source and the Brooklyn Store as the destination, the items from this transfer order will be automatically reflected in the `Inventory Receiving App` at the Brooklyn Store.
 * Store associates scan the transfer order items and start receiving inventory. Upon receiving shipments, item receipt records are generated in HotWax Commerce and subsequently, the inventory counts for the items received in the store are increased.
 
-### 6. Generate and export item receipt feed from HotWax Commerce
+### 6. Generate and Export Item Receipt Feed from HotWax Commerce
 
 * A scheduled job in HotWax Commerce generates an item receipt feed containing the latest transfer order items that have been received in the store so that this update can be synchronized to NetSuite.
 
-### 7. Item receipt records created in NetSuite
+### 7. Item Receipt Records Created in NetSuite
 
 * A scheduled SuiteScript in NetSuite reads the item receipt feed and two actions take place:
   * Item receipt records are created in NetSuite and subsequently, inventory count at the store for the corresponding items are increased.
@@ -104,7 +104,7 @@ Once transfer order items are fulfilled from the store, the QOH for the correspo
 
 <figure><img src="../.gitbook/assets/store to warehouse transfer order bpm.png" alt=""><figcaption><p>Store to warehouse transfer orders lifecycle business process model</p></figcaption></figure>
 
-### 1. Transfer orders created in NetSuite
+### 1. Transfer Orders Created in NetSuite
 
 * Even when stores want to transfer inventory to warehouses, the transfer order will be created in NetSuite, specifying the source location as a store and the destination location as a warehouse.
 * Once created, these transfer orders are automatically assigned a <mark style="color:orange;">**“Pending Fulfillment”**</mark> status.
@@ -113,7 +113,7 @@ Once transfer order items are fulfilled from the store, the QOH for the correspo
 Similar to the `store to store` transfer order lifecycle we discussed above, <mark style="color:orange;">**(2)**</mark> importing transfer orders into HotWax Commerce, approving them, fulfilling them using the `Store Fulfillment App` and <mark style="color:orange;">**(3)**</mark> ultimately synchronizing item fulfillment records with NetSuite remains the same.
 {% endhint %}
 
-### 4. Receive transfer orders in NetSuite
+### 4. Receive Transfer Orders in NetSuite
 
 * Finally, warehouse managers manually initiate the receiving process in NetSuite for the store transferred inventory upon its arrival at the warehouse.
 * After the receiving process is completed, the transfer order status is automatically updated from <mark style="color:orange;">**“Pending Receipt”**</mark> to <mark style="color:orange;">**“Received”**</mark>, indicating that all transfer order items have been successfully received at the warehouse. Additionally, the inventory count for the newly received inventory is updated in NetSuite.

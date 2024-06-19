@@ -4,7 +4,7 @@ description: >-
   digital as well as physical gift card orders placed by customers on eCommerce.
 ---
 
-# Gift card orders lifecycle
+# Gift Card Orders Lifecycle
 
 Gift cards are stored-value cards that carry a value determined at the time of the card's purchase. They are often given as gifts or rewards and are redeemable for products up to the value stored on the card.
 
@@ -36,11 +36,11 @@ Digital gift cards, also known as e-gift cards, are virtual equivalents of physi
 
 <figure><img src="../.gitbook/assets/Physical gift card lifecycle bpm.png" alt=""><figcaption><p>Physical gift card orders lifecycle business process model</p></figcaption></figure>
 
-### 1. Order creation
+### 1. Order Creation
 
 As discussed in the [Order Lifecycle BPM](orderlifecycle.md), a dedicated Import Orders job in HotWax Commerce downloads new orders from eCommerce platforms like Shopify. HotWax Commerce downloads physical gift card orders from Shopify in the same way like any other order item.
 
-### 2. Order synchronization
+### 2. Order Synchronization
 
 The process of synchronizing physical gift card orders from HotWax Commerce to NetSuite remains straightforward like any other order item. A dedicated job in HotWax Commerce prepares and exports a feed of orders marked as <mark style="color:orange;">**"Created"**</mark> to NetSuite.
 
@@ -85,7 +85,7 @@ A scheduled job in HotWax Commerce Integration Platform reads this feed, runs tr
 
 Finally, once the JSON is prepared, HotWax Commerce Integration Platform initiates the gift card activation process in the eCommerce platform. Because most of our customers are using Shopify as their eCommerce platform, in this scenario HotWax Commerce Integration Platform calls Shopify API to activate the gift card.
 
-### 7. Order item shipped
+### 7. Order Item Shipped
 
 NetSuite's script exports item fulfillment records marked as <mark style="color:orange;">**"Shipped"**</mark>. A scheduled job in HotWax Commerce consumes this feed, and following actions take place:
 
@@ -106,7 +106,7 @@ Fulfillment teams at the store prepare gift card orders for shipment.
 
 Most of our customers leverage Shopify POS at their store location. In this scenario, store associates directly apply a unique serial number and load the corresponding value onto the gift card in Shopify POS. This activation step ensures that the gift card is fully functional and customers can use the unique serial number they received in their email to redeem the value stored in the gift card.
 
-### 7. Order item shipped
+### 7. Order Item Shipped
 
 When all items of an order are marked <mark style="color:orange;">**“Shipped”**</mark> in the `Store Fulfillment App`, the order status is automatically updated from <mark style="color:orange;">**“Approved”**</mark> to <mark style="color:orange;">**“Completed”**</mark> in HotWax Commerce.
 
@@ -118,7 +118,7 @@ In HotWax Commerce, a scheduled job prepares and exports a feed containing gift 
 
 This marks the completion of physical gift card orders in NetSuite.
 
-### 8. Synchronize fulfillment updates to eCommerce
+### 8. Synchronize Fulfillment Updates to eCommerce
 
 Once a gift card order reaches the <mark style="color:orange;">**"Completed"**</mark> status in HotWax Commerce, a scheduled job in HotWax Commerce sends the tracking details to Shopify and marks the gift card orders as <mark style="color:orange;">**“Fulfilled”**</mark>.
 
@@ -132,11 +132,11 @@ This marks the completion of the physical gift card order lifecycle.
 When walk-in customers purchase a physical gift card from the store, it is treated as a regular POS order in HotWax Commerce. HotWax Commerce syncs those orders with NetSuite in the POS sales synchronization to NetSuite.
 {% endhint %}
 
-## Digital gift cards
+## Digital Gift Cards
 
 <figure><img src="../.gitbook/assets/digital gift cards.png" alt=""><figcaption><p>Digital gift card orders lifecycle business process model</p></figcaption></figure>
 
-### 1. Order creation
+### 1. Order Creation
 
 When customers order a digital gift card on Shopify, after the order is created, Shopify immediately auto fulfills the order, assigns a serial number to digital gift card, loads the value to activate the gift card and consequently, when HotWax Commerce downloads that order from Shopify, it is automatically marked as <mark style="color:orange;">**“Completed”**</mark>.
 
@@ -144,7 +144,7 @@ When customers order a digital gift card on Shopify, after the order is created,
 Digital gift cards are auto-activated and customers can directly redeem them by entering a unique serial number provided with the card.
 {% endhint %}
 
-### 2. Order synchronization
+### 2. Order Synchronization
 
 Digital gift cards are already in the <mark style="color:orange;">**“Completed”**</mark> status in HotWax Commerce. HotWax Commerce also synchronizes them with NetSuite so that customer deposits can be created against them and invoices can be generated.
 
