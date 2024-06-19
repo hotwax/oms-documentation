@@ -1,6 +1,11 @@
 
 # Documentation Guidelines
 
+  ```description: >-
+  The HotWax Commerce Documentation Guidelines provide a comprehensive framework for creating clear, consistent, and accessible documentation.
+```
+
+
 ## 1. Document Structure
 
 ### a. Title and Headers
@@ -24,7 +29,7 @@ Learn more about [headings in Gitbook](https://docs.gitbook.com/content-editor/b
 ### c. Sections and Subsections
 - Add meta description with the following format on the top of the page:
 ---
-  ```description: >-
+  ```\description: >- \
   HotWax Commerce's BOPIS fulfillment app enables retailers to efficiently manage Buy Online Pick-up In Store (BOPIS) functionality and handover store pick-up orders to customers.
 ```
 ---
