@@ -7,6 +7,8 @@ description: >-
 
 # Order Fulfillment
 
+<figure><img src="../.gitbook/assets/Order Fulfillment.png" alt=""><figcaption><p>Order allocation and fulfillment </p></figcaption></figure>
+
 ## How Order Fulfillment Works
 
 Approved orders are eligible for brokering in HotWax Commerce. The order routing engine brokers orders and looks for the best fulfillment location to allocate them.
