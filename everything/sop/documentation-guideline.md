@@ -1,3 +1,4 @@
+
 # Documentation Guidelines
 
 ## 1. Document Structure
@@ -15,7 +16,8 @@
 - When documenting on Gitbook, TOC is indexed on the right side. Make sure to use the correct heading levels. Use H1 for title, H2 for main sections and H3 for subsections.
 
 For example:
-{image}
+<img width="1134" alt="headings" src="https://github.com/adayush17/oms-documentation/assets/72956835/133b1841-6c5d-4623-a83b-7726a9b8af6a">
+
 
 Learn more about [headings in Gitbook](https://docs.gitbook.com/content-editor/blocks/heading)
 
@@ -78,7 +80,7 @@ Conclusion: Summary of key points and any additional resources.
 - Maintain consistency in terminology, tone, and style throughout the document. You can refer to [ChatGPT Prompts](https://docs.google.com/document/d/1z2M_wKWS4N3_XkwD5HxwDOzm2xhFKjgHNGObZVKtGH4/edit) for consistency in the documents when using ChatGPT.
 - Use different types of hints to draw your reader’s attention to specific pieces of important information. Here’s markdown for different types of hints:
 
-{image}
+<img width="1301" alt="hints" src="https://github.com/adayush17/oms-documentation/assets/72956835/12002fb7-b3f3-4075-a30f-8f62e7199a24">
 
   ```
   {% hint style="info" %}
@@ -101,7 +103,8 @@ Conclusion: Summary of key points and any additional resources.
 - **Use Annotations**: With annotations, you can add extra context to your words without breaking the reader’s train of thought. You can use them to explain the meaning of a word, insert extra information, and more. Readers can hover over the annotated text to show the annotation above the text.
 - **Create an annotation**: To create an annotation, select the text you would like to annotate and click the Annotate option in the context menu. Once you’ve written your annotation, click outside of it to continue writing in the text block.
 
-{image}
+<img width="1135" alt="Annotations" src="https://github.com/adayush17/oms-documentation/assets/72956835/aae47704-ea9e-4b48-9c96-e59b24e296d3">
+
 
 ### d. Technical Content
 
@@ -110,7 +113,7 @@ Conclusion: Summary of key points and any additional resources.
   - Use syntax highlighting where possible.
   - Example:
 	
-	{image}
+<img width="768" alt="snippet" src="https://github.com/adayush17/oms-documentation/assets/72956835/e406e523-b2ec-40e1-bc59-6f6d083d6c88">
 
 ## 4. Accessibility
 ### a. Alt Text
