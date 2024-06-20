@@ -11,9 +11,9 @@ description: >-
 
 ### A. Title and Headers
 
-- All titles and headers should be written in “Title Case”
-- **Title**: Use a clear, concise title that accurately reflects the content.
-- **Headers**: Use hierarchical headers (H1, H2, H3) to organize content. Ensure headers are descriptive and help users navigate the document.
+* All titles and headers should be written in “Title Case”
+* **Title**: Use a clear, concise title that accurately reflects the content.
+* **Headers**: Use hierarchical headers (H1, H2, H3) to organize content. Ensure headers are descriptive and help users navigate the document.
 
 ### B. Table of Contents
 
@@ -21,12 +21,14 @@ description: >-
 - Use headings to create a clear structure. This helps users with screen readers navigate the document.
 - When documenting on Gitbook, TOC is indexed on the right side. Make sure to use the correct heading levels. Use H1 for title, H2 for main sections, and H3 for subsections.
 
-For example:
-<img width="1134" alt="headings" src="https://github.com/adayush17/oms-documentation/assets/72956835/133b1841-6c5d-4623-a83b-7726a9b8af6a">
-
 Learn more about [Gitbook Headings](https://docs.gitbook.com/content-editor/blocks/heading)
 
+For example:&#x20;
+
+<figure><img src="https://github.com/adayush17/oms-documentation/assets/72956835/133b1841-6c5d-4623-a83b-7726a9b8af6a" alt=""><figcaption></figcaption></figure>
+
 ### C. Sections and Subsections
+
 - **Meta-Description**: Add meta description with the following format on the top of the page:
 
 --\-
@@ -40,6 +42,8 @@ HotWax Commerce's BOPIS fulfillment app enables retailers to efficiently manage 
 - **Main Content**: Detailed information, instructions, and guidelines.
 - **Conclusion**: Summary of key points and any additional resources.
 
+* **Introduction**: Brief overview of the document's purpose.
+* **Main Content**: Detailed information, instructions, and guidelines. Conclusion: Summary of key points and any additional resources.
 
 ## 2. Formatting
 
@@ -87,8 +91,6 @@ HotWax Commerce's BOPIS fulfillment app enables retailers to efficiently manage 
 - Maintain consistency in terminology, tone, and style throughout the document. You can refer to [ChatGPT Prompts](https://docs.google.com/document/d/1z2M_wKWS4N3_XkwD5HxwDOzm2xhFKjgHNGObZVKtGH4/edit) for consistency in the documents when using ChatGPT.
 - Use different types of hints to draw your reader’s attention to specific pieces of important information. Here’s markdown for different types of hints:
 
-<img width="1301" alt="hints" src="https://github.com/adayush17/oms-documentation/assets/72956835/12002fb7-b3f3-4075-a30f-8f62e7199a24">
-
 
   {\% hint style="info" %}
   **Add your content here**
@@ -107,22 +109,23 @@ HotWax Commerce's BOPIS fulfillment app enables retailers to efficiently manage 
   {% endhint\%}
 
 
-- **Use Annotations**: With annotations, you can add extra context to your words without breaking the reader’s train of thought. You can use them to explain the meaning of a word, insert extra information, and more. Readers can hover over the annotated text to show the annotation above the text.
-- **Create an annotation**: To create an annotation, select the text you would like to annotate and click the Annotate option in the context menu. Once you’ve written your annotation, click outside of it to continue writing in the text block.
-
-<img width="1135" alt="Annotations" src="https://github.com/adayush17/oms-documentation/assets/72956835/aae47704-ea9e-4b48-9c96-e59b24e296d3">
-
-
 ### D. Technical Content
 
-- Code Snippets
-  - Provide code snippets in the appropriate language.
-  - Use syntax highlighting where possible.
-  - Example:
-	
-<img width="768" alt="snippet" src="https://github.com/adayush17/oms-documentation/assets/72956835/e406e523-b2ec-40e1-bc59-6f6d083d6c88">
+* **Use Annotations**: With annotations, you can add extra context to your words without breaking the reader’s train of thought. You can use them to explain the meaning of a word, insert extra information, and more. Readers can hover over the annotated text to show the annotation above the text.
+* **Create an annotation**: To create an annotation, select the text you would like to annotate and click the Annotate option in the context menu. Once you’ve written your annotation, click outside of it to continue writing in the text block.
+
+<figure><img src="https://github.com/adayush17/oms-documentation/assets/72956835/aae47704-ea9e-4b48-9c96-e59b24e296d3" alt="" width="375"><figcaption></figcaption></figure>
+
+
+### E.Code Snippets
+  * Provide code snippets in the appropriate language.
+  * Use syntax highlighting where possible.
+  * Example:
+
+<figure><img src="https://github.com/adayush17/oms-documentation/assets/72956835/e406e523-b2ec-40e1-bc59-6f6d083d6c88" alt="" width="375"><figcaption></figcaption></figure>
 
 ## 4. Accessibility
+
 ### A. Alt Text
 - Provide descriptive alt text for images.
 - Ensure all media is accessible to screen readers.
@@ -159,13 +162,3 @@ When writing the full name of an app, such as the Fulfillment App, ensure that t
 - NetSuite
 - RetailPro
 - EasyPost
-
-
-
-
-
-
-
-
-
-
