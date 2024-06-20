@@ -19,7 +19,10 @@
 * [Pre order catalog sync](sop/pre-order-sync.md)
 * [Multi Currency Configuration](sop/multicurrency-sales-orders.md)
 * [Add new variance reason](sop/add-new-variance-reason.md)
-* [Documentation Guideline](sop/documentation-guideline.md)
+* [Documentation guideline](sop/documentation-guideline.md)
+* [How to access Shopify POS APP](sop/access-shopify-pos-app.md)
+* [Templated Replies](sop/template-replies.md)
+* [ChatGPT Prompts](esop/chatgpt-prompts.md)
 
 ## Tathya
 
@@ -42,7 +45,7 @@
 * [Configuring Alerts & Reports](tathya/alerts\&Reports/README.md)
   * [Creating Alerts](tathya/alerts\&Reports/creatingAlerts.md)
   * [Creating Reports](tathya/alerts\&Reports/creatingReports.md)
-    * [Alternate Interfaces to Schedule Reports](tathya/alerts\&Reports/alternateInterfaceReportScheduling.md)
+  * [Alternate Interfaces to Schedule Reports](tathya/alerts\&Reports/alternateInterfaceReportScheduling.md)
 * [Creating Roles](tathya/creatingRoles/README.md)
   * [List & Modify Roles](tathya/creatingRoles/list\&ModifyRoles.md)
 * [Creating User](tathya/userCreation/README.md)
