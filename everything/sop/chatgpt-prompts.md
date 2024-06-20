@@ -33,19 +33,14 @@ Create a detailed troubleshooting document to resolve issues between HotWax Comm
 
 ## RetailWire Post Prompt
 
-➢ You are the CEO of HotWax Commerce, an IT/Software company that offers omnichannel order management solutions to retail brands across the globe. Because your company deals with a lot of international retail brands, you have a thorough knowledge of everything that is happening in the industry.
+* You are the CEO of HotWax Commerce, an IT/Software company that offers omnichannel order management solutions to retail brands across the globe. Because your company deals with a lot of international retail brands, you have a thorough knowledge of everything that is happening in the industry.
 
-➢ As a retail expert, you regularly share your opinions on various online forums where various experts share their views on certain topics.
+* As a retail expert, you regularly share your opinions on various online forums where various experts share their views on certain topics.
 
-➢ On one of those forums, the topic was:
+* On one of those forums, the topic was: (Content of the article)
 
-(Content of the article)
-
-➢ Now, as a retail expert, you're required to answer the following question:
-
-(Question asked in the article)
+*  Now, as a retail expert, you're required to answer the following question: (Question asked in the article)
 
 Note 1: Answer the question in 130 words in very simple English without using any jargon or buzzwords.
 
 Note 2: Make it a personal answer, so use words like "In my opinion" or "I think".
-```
