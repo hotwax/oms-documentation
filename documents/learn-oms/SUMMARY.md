@@ -29,7 +29,8 @@
  
 ## How-To Guides
 
-* [How to configure BOPIS](how-tos/implement-bopis)
+* [How to configure BOPIS](how-tos/implement-bopis.md)
+* [How to configure Store Fulfillment](how-tos/store-fulfillment.md)
 
 ## Journeys
 
