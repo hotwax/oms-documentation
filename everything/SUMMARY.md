@@ -45,7 +45,7 @@
 * [Configuring Alerts & Reports](tathya/alerts\&Reports/README.md)
   * [Creating Alerts](tathya/alerts\&Reports/creatingAlerts.md)
   * [Creating Reports](tathya/alerts\&Reports/creatingReports.md)
-    * [Alternate Interfaces to Schedule Reports](tathya/alerts\&Reports/alternateInterfaceReportScheduling.md)
+  * [Alternate Interfaces to Schedule Reports](tathya/alerts\&Reports/alternateInterfaceReportScheduling.md)
 * [Creating Roles](tathya/creatingRoles/README.md)
   * [List & Modify Roles](tathya/creatingRoles/list\&ModifyRoles.md)
 * [Creating User](tathya/userCreation/README.md)
