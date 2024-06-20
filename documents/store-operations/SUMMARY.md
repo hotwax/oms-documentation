@@ -21,6 +21,8 @@
     *[Notifications](bopis/notifications.md)
 * [Fulfillment](fulfillment/README.md)
   * [Order Fulfillment](fulfillment/shipOrders.md)
+  * [Service Products](fulfillment/service-products.md)
+  * [Kit Products](fulfillment/kit-products.md)
   * [Rejection](fulfillment/rejection.md)
   * [Picking App](fulfillment/pickingApp.md)
   * [CSV Support](fulfillment/csvSupport.md)
