@@ -61,3 +61,10 @@
 ## Reports
 
 * [UCG Order Reports](reports/orders.md)
+
+## Additional Resources
+
+* [Update OMS Version](additional-resources/updateOmsVersion.md)
+* [Rollback OMS Version](additional-resources/rollback-release.md)
+* [OMS Release versions](additional-resources/omsRelease.md)
+* [Optional Plugins](additional-resources/optional-plugins.md)
