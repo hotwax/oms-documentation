@@ -4,7 +4,7 @@ description: >-
   framework for creating clear,  consistent, and accessible documentation.
 ---
 
-# Documentation guideline
+# Documentation Guideline
 
 ## 1. Document Structure
 
@@ -103,7 +103,7 @@ description: >- HotWax Commerce's BOPIS fulfillment app enables retailers to eff
 
 \{%hint style="danger" %\} Add your content here { % endhint %\}
 
-This markdown will look like this for hints
+This markdown will look like this for hints:
 
 {% hint style="info" %}
 **Add your content here**
@@ -124,7 +124,7 @@ This markdown will look like this for hints
 ### 3.4. Technical Content
 
 * **Use Annotations**: With annotations, you can add extra context to your words without breaking the reader’s train of thought. You can use them to explain the meaning of a word, insert extra information, and more. Readers can hover over the annotated text to show the annotation above the text.
-* **Create an annotation**: To create an annotation, select the text you would like to annotate and click the Annotate option in the context menu. Once you’ve written your annotation, click outside of it to continue writing in the text block.
+* **Create an annotation**: To create an annotation[^1], select the text you would like to annotate and click the Annotate option in the context menu. Once you’ve written your annotation, click outside of it to continue writing in the text block.
 
 <figure><img src="https://github.com/adayush17/oms-documentation/assets/72956835/aae47704-ea9e-4b48-9c96-e59b24e296d3" alt="Users can click on the underlined terms to see the annotations" width="375"><figcaption><p>Annotations</p></figcaption></figure>
 
@@ -180,3 +180,5 @@ When writing the full name of an app, such as the Fulfillment App, ensure that t
 * NetSuite
 * RetailPro
 * EasyPost
+
+[^1]: Annotations look cool!
