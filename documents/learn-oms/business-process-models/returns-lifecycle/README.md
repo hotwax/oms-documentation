@@ -1,4 +1,4 @@
-# Returns lifecycle
+# Returns Lifecycle
 
 HotWax Commerce, being an Order Management System, forwards the responsibility of managing returns to specialized Return Management Systems. This means that most of the process in the return lifecycle will be handled by a third-party Return Management System (RMS).
 

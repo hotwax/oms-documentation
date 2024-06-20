@@ -10,7 +10,7 @@ If you are unable to schedule a job in the Job Manager application, and the job 
 
 ## Step 1: Verify Job Data in the OMS Backend
 
-Access the instance web tools using this URL: [https://.hotwax.io/webtools/control/FindGeneric?entityName=JobSandbox](https:/%3CinstanceName%3E.hotwax.io/webtools/control/FindGeneric).
+Access the instance web tools using this URL: [https://{instance.name}.hotwax.io/webtools/control/FindGeneric?entityName=JobSandbox](https:/%3CinstanceName%3E.hotwax.io/webtools/control/FindGeneric).
 
 ## Step 2: Check Job Data
 
