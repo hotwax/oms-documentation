@@ -67,7 +67,7 @@ HotWax Commerce's BOPIS fulfillment app enables retailers to efficiently manage 
 - **Images**: Add images directly from the bottom of the GitHub markdown. Use high-quality images. Provide alternative text for accessibility.
 - **Videos**: Embed videos where necessary. Ensure they are properly captioned. Use the following format to embed YouTube videos:
  
- ``\`{% embed url="(Youtube URL)" %} Caption {% endembed %}\'\'\'
+ ``\`{% embed url="(Youtube URL)" %} Caption {% endembed %}''\'
 
 ### F. Quotations
 - **Double Quotes**: Use “double quotations” when setting apart a word, quoting something, or using any title such as when documenting order status: “Created”, or “Approved”.
@@ -94,19 +94,38 @@ HotWax Commerce's BOPIS fulfillment app enables retailers to efficiently manage 
 
   {\% hint style="info" %}
   **Add your content here**
-  {% endhint\%\}
+  {% endhint\%}
 
   {\% hint style="success" %}
   **Add your content here**
-  {% endhint\%\}
+  {% endhint\%}
 
   {\% hint style="warning" %}
   **Add your content here**
   {% endhint\%}
 
-  {\%hint style="danger" \%}
+  {\%hint style="danger" %}
   **Add your content here**
   {% endhint\%}
+
+This markdown will look like this for hints
+
+  {% hint style="info" %}
+  **Add your content here**
+  {% endhint%}
+
+  {% hint style="success" %}
+  **Add your content here**
+  {% endhint%}
+
+  {% hint style="warning" %}
+  **Add your content here**
+  {% endhint%}
+
+  {%hint style="danger" %}
+  **Add your content here**
+  {% endhint%}
+
 
 
 ### D. Technical Content
