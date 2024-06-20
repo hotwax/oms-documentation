@@ -38,23 +38,23 @@ Facilities can have products from multiple brands which are configured as produc
 
 ## Fulfillment Configuration of Facilities
 
-The Facility groups are used to define the scope and functionality of the facility for omnichannel order management.
+The [Facility groups](./../../system-admin/administration/facilities/manage-groups.md) are used to define the scope and functionality of the facility for omnichannel order management.
 
 Facilities have the option to choose whether or not to participate in selling their inventory online. If a facility is capable of fulfilling orders and wants its inventory to be sold online, it has to be included in the Facility Group with the `CHANNEL_FAC_GRP` subtype. Retailers can create different facility groups for different sales channels under the `CHANNEL_FAC_GRP` subtype and add the respective facilities to that group. 
 
 ## Configure Online Fulfillment Capacity
 
-Fulfillment capacity is defined on the basis of the number of orders a facility will be able to fulfill in a day. It is set up considering various resources such as facility size, staff, and footfall. Users can set up the maximum order limit that can be allocated to that facility through the `Online Order Fulfillment` card. Read our user manual to learn how to configure online fulfillment for a capacity.
+Fulfillment capacity is defined on the basis of the number of orders a facility will be able to fulfill in a day. It is set up considering various resources such as facility size, staff, and footfall. Users can set up the maximum order limit that can be allocated to that facility through the `Online Order Fulfillment` card. Read our [user manual](./../../system-admin/administration/facilities/configure-fulfillment-capacity.md) to learn how to configure online fulfillment for a capacity.
 
 ## Configure Brokering for Facilities
 
-To include a facility in brokering, it must be added to a facility group with the Brokering Group subtype. This ensures that when the facility group is included in the brokering run, all facilities in that group are available for brokering. For guidance on setting up and configuring brokering rules according to your preferences, refer to our order brokering user manual.
+To include a facility in brokering, it must be added to a facility group with the Brokering Group subtype. This ensures that when the facility group is included in the brokering run, all facilities in that group are available for brokering. For guidance on setting up and configuring brokering rules according to your preferences, refer to our [order brokering user manual](./../../retail-operations/brokering/configurableRouting.md).
 
 ## Setup Shipment Method from Facilities
 
-In HotWax Commerce, the ability to add shipping carriers to facilities is essential for order fulfillment. Once a shipment gateway is set, adding carriers to facilities enables rate shopping and shipping label generation specifically for those carriers associated with the selected facility. This feature enhances workflow efficiency by allowing the HotWax Commerce Store Fulfillment App to intelligently select the most cost-effective shipping carrier for each order. Read our user manual to learn how to add shipping carriers to facilities.
+In HotWax Commerce, the ability to add shipping carriers to facilities is essential for order fulfillment. Once a shipment gateway is set, adding carriers to facilities enables rate shopping and shipping label generation specifically for those carriers associated with the selected facility. This feature enhances workflow efficiency by allowing the HotWax Commerce Store Fulfillment App to intelligently select the most cost-effective shipping carrier for each order. Read our [user manual](./../../system-admin/fulfillment/ShippingGateways.md) to learn how to add shipping carriers to facilities.
 
-Retailers need to turn the toggle on for the ‘Generate Shipping Label' in the facility details page to ensure that the shipping label is generated from the store.
+Retailers need to turn the toggle on for the ‘Generate Shipping Label' in the `facility details` page to ensure that the shipping label is generated from the store.
 
 ## Manage Inventory
 
@@ -64,11 +64,11 @@ For a product to be available for store fulfillment, it must have inventory at t
 
 ### Inventory Sync to Shopify
 
-When the inventory is received, a product’s QOH and ATP are updated in HotWax Commerce. HotWax Commerce calculates the Physical Available to Promise (ATP) of a facility by considering various factors, such as safety stock, threshold, reserved quantity, and orders in the queue.
+When the inventory is received, a product’s QOH and Online ATP are updated in HotWax Commerce. HotWax Commerce calculates the Physical Available to Promise (ATP) of a facility by considering various factors, such as safety stock, threshold, reserved quantity, and orders in the queue.
 
-Online ATP = QOH - (Reserved quantities + Safety stock + Threshold + Orders in brokering queue)
+Online ATP = QOH - (Reserved quantities + Safety stock + Threshold + Orders in brokering queue + Exluded facilities' ATP)
 
-For each store that allows online fulfillment, HotWax Commerce calculates the Online ATP that is available to sell and synchronize the inventory with Shopify through `Hard Sync` and `Update recent inventory changes` jobs.
+For each store that allows online fulfillment, HotWax Commerce calculates the Online ATP that is available to sell and synchronize the inventory with Shopify through [`Hard Sync` and `Update recent inventory changes` jobs.](./../../retail-operations/job-workflows/inventory.md)
 
 ### Verify Store Fulfillment
 
