@@ -22,7 +22,7 @@
 * [Documentation guideline](sop/documentation-guideline.md)
 * [How to access Shopify POS APP](sop/access-shopify-pos-app.md)
 * [Templated Replies](sop/template-replies.md)
-* [ChatGPT Prompts](esop/chatgpt-prompts.md)
+* [ChatGPT Prompts](sop/chatgpt-prompts.md)
 
 ## Tathya
 
