@@ -1,7 +1,9 @@
-  ```description: >-
-  The HotWax Commerce Documentation Guidelines provide a comprehensive
-  framework for creating clear, consistent, and accessible documentation.
-  ```
+---
+description: >-
+  The HotWax Commerce Documentation Guidelines provide a
+  a comprehensive framework for creating clear, 
+  consistent, and accessible documentation.
+---
 
 # Documentation Guidelines
 
@@ -26,10 +28,13 @@ Learn more about [Gitbook Headings](https://docs.gitbook.com/content-editor/bloc
 
 ### C. Sections and Subsections
 - **Meta-Description**: Add meta description with the following format on the top of the page:
-``/`
-\description: >- \
+
+--\-
+
+description: >- 
 HotWax Commerce's BOPIS fulfillment app enables retailers to efficiently manage Buy Online Pick-up In Store (BOPIS) functionality and handover store pick-up orders to customers.
-``\`
+
+--\-
 
 - **Introduction**: Brief overview of the document's purpose.
 - **Main Content**: Detailed information, instructions, and guidelines.
@@ -58,7 +63,7 @@ HotWax Commerce's BOPIS fulfillment app enables retailers to efficiently manage 
 - **Images**: Add images directly from the bottom of the GitHub markdown. Use high-quality images. Provide alternative text for accessibility.
 - **Videos**: Embed videos where necessary. Ensure they are properly captioned. Use the following format to embed YouTube videos:
  
- ``\`{% embed url="(Youtube URL)" %} Caption {% \endembed %}\'\'\'\
+ ``\`{% embed url="(Youtube URL)" %} Caption {% endembed %}\'\'\'
 
 ### F. Quotations
 - **Double Quotes**: Use “double quotations” when setting apart a word, quoting something, or using any title such as when documenting order status: “Created”, or “Approved”.
@@ -146,7 +151,7 @@ HotWax Commerce's BOPIS fulfillment app enables retailers to efficiently manage 
 - Facilities App
 - Company App
 
-When writing the full name of an app, such as Fulfillment App, ensure that the "A" in "App" is capitalized.
+When writing the full name of an app, such as the Fulfillment App, ensure that the "A" in "App" is capitalized.
 
 ### B. Systems
 - HotWax Commerce
