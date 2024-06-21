@@ -8,9 +8,24 @@ The BOPIS (Buy Online, Pick-up In Store) Check Inventory API allows you to retri
 
 ### Endpoint
 
-**URL:** `https://<host>/api/checkBopisInventory`  
+**URL:** `https://<host>/rest/s1/ofbiz-oms-usl/checkBopisInventory`  
 
-**Example:** `https://demo-oms.hotwax.io/api/checkBopisInventory`
+This API uses our next generation OMS instance. All traditional instances have access to this next generation OMS by replacing "oms" with "maarg" in the host name.
+
+**Production**
+
+Current Name: `demo-oms`
+
+Maarg Name: `demo-maarg`
+
+**UAT**
+
+Current Name: `demo-uat`
+
+Maarg Name: `demo-maarg-uat`
+
+
+**Example:** `https://demo-maarg.hotwax.io/rest/s1/ofbiz-oms-usl/checkBopisInventory` 
 
 ### Method
 POST
