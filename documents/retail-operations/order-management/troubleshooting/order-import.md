@@ -21,8 +21,8 @@ This document provides a comprehensive guide to diagnose and resolve synchroniza
 ### Verify If Issue Exists:
 1. **Access OMS:**
    - Navigate to HotWax Commerce OMS and log in with your user credentials.
-   - Go to the `MDM ' page from the hamburger menu and click on `EXIM` > `Shopify Jobs` > `Import Shopify Orders`.
-   - Check the Import Results in the `Import Shopify Orders` page for any failed records.
+   - Go to the `MDM` page from the hamburger menu and click on `EXIM` > `MDM` > `Shopify order mdm`.
+   - Check the Import Results in the `Shopify order mdm` page for any failed records.
 
 2. **Check Shopify Logs:**
    - Review Shopify Plus logs or feeds for specific error messages related to the failed import.
@@ -40,7 +40,7 @@ This document provides a comprehensive guide to diagnose and resolve synchroniza
 
 ### Resolve the Issue:
 1. **Remove Special Characters and Correct Email Format:**
-   - Edit the JSON file to remove any special characters from the note"field.
+   - Edit the JSON file to remove any special characters from the note field.
    - Correct the email address to adhere to the standard format.
 
 2. **Save Edited JSON:**
