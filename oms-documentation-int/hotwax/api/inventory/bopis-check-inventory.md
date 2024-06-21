@@ -1,4 +1,4 @@
-# BOPIS Check Inventory API Documentation
+# BOPIS Check Inventory API 
 
 ## Overview
 The BOPIS (Buy Online, Pick-up In Store) Check Inventory API allows you to retrieve stock details for products at specific locations. By calling the `/checkBopisInventory` endpoint with the POST method, you can check the availability of BOPIS inventory.
