@@ -21,8 +21,9 @@
 * [Add new variance reason](sop/add-new-variance-reason.md)
 * [Documentation guideline](sop/documentation-guideline.md)
 * [How to access Shopify POS APP](sop/access-shopify-pos-app.md)
+* [How to create a User in tathya](sop/create-user-tathya.md)
 * [Templated Replies](sop/template-replies.md)
-* [ChatGPT Prompts](esop/chatgpt-prompts.md)
+* [ChatGPT Prompts](sop/chatgpt-prompts.md)
 
 ## Tathya
 
@@ -62,3 +63,10 @@
 ## Reports
 
 * [UCG Order Reports](reports/orders.md)
+
+## Additional Resources
+
+* [Update OMS Version](additional-resources/updateOmsVersion.md)
+* [Rollback OMS Version](additional-resources/rollback-release.md)
+* [OMS Release versions](additional-resources/omsRelease.md)
+* [Optional Plugins](additional-resources/optional-plugins.md)
