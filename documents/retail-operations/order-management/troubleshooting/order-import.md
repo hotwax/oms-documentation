@@ -48,7 +48,7 @@ This document provides a comprehensive guide to diagnose and resolve synchroniza
 
 3. **Re-import Order:**
    - If an error is resolved within the job execution time (generally 15 minutes), the import order job should automatically import the order.
-   - Otherwise, manually import the order by navigating to MDM / EXIM > Shopify Jobs > Import Shopify Orders, select Shopify Config, write the Shopify Order IDs, and run the job.
+   - Otherwise, manually import the order by navigating to `MDM / EXIM` > `MDM` > `Shopify orders mdm`,  select Shopify Config, upload your JSON or CSV file using the Upload File field, and running the job.
 
 4. **Verify Successful Import:**
    - Ensure the order is successfully imported without errors.
