@@ -121,8 +121,6 @@ The report provides detailed information, including order IDs, item descriptions
 | WMI sent time             |                                                                                                      | OFC.CHANGE_DATETIME                                                        |
 | Cut off                   | The cutoff status based on the brokering date and time.                                               | OFC.CHANGE_DATETIME                                                        |
 
-## SQL Query to Generate Unreconciled Report
-
 <details>
 
 <summary>SQL Query to Generate Unreconciled Report</summary>
