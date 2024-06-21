@@ -100,6 +100,146 @@ LIMIT 50000;
 
 **Calculating Date:** Additionally, the query includes a calculation to determine the date of the rejected order items. It may derive the first day of the week for each rejection date, facilitating grouping of rejections by week and enabling a broader perspective on rejection trends over time.
 
+## Unreconciled Report
+
+The Unreconciled Report helps retailers identify orders that have been brokered but not yet reconciled with their ERP or WMS systems. This report is crucial for maintaining operational efficiency and ensuring timely fulfillment of orders. By highlighting these unreconciled orders, retailers can take corrective actions to prevent data discrepancies.
+
+The report provides detailed information, including order IDs, item descriptions, UPCs, brokered dates and times, and cut-off times, enabling retailers to address discrepancies promptly and maintain a smooth workflow. The focus is on orders brokered to facilities like distribution centers that have yet to be confirmed by the ERP or WMS, ensuring that all orders are accurately tracked and processed.
+
+### Glossary
+
+| **Item**          | **Item Details**                                                                                      | **HC Entity**                                                              |
+|---------------------------|------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------|
+| HC Order ID               | HotWax Commerce Order ID for internal tracking                                                       | OrderHeader.ORDER_ID                                                                            |
+| Shopify Order ID     | Identifies the order within the Shopify platform                                  | OrderHeader.ORDER_NAME                                                                           |
+| Location                  | The location where the order was placed                                                              | Facility.EXTERNAL_ID                                                       |
+| UPC                       | The unique product code                                                                              | GoodIdentification.ID_VALUE where GoodIdentification.GOOD_IDENTIFICATION_TYPE_ID is set to 'SHOPIFY_PROD_SKU' |
+| Item description          | The description of the item.                                                                         | GOOD_IDENTIFICATION GI                                                     |
+| Brokered date             | The date when the item was brokered.                                                                 | OFC.CHANGE_DATETIME                                                        |
+| Brokered time             | The time when the item was brokered.                                                                 | OFC.CHANGE_DATETIME                                                        |
+| WMI Sent date             |                                                                                                      | OFC.CHANGE_DATETIME                                                        |
+| WMI sent time             |                                                                                                      | OFC.CHANGE_DATETIME                                                        |
+| Cut off                   | The cutoff status based on the brokering date and time.                                               | OFC.CHANGE_DATETIME                                                        |
+
+<details>
+
+<summary>SQL Query to Generate Unreconciled Report</summary>
+
+```
+sql
+SELECT `HC_ORDER_ID` AS `HC_ORDER_ID`,
+       `SHOPIFY_ORDER_ID` AS `SHOPIFY_ORDER_ID`,
+       `LOCATION` AS `LOCATION`,
+       `UPC` AS `UPC`,
+       `ITEM_DESCRIPTION` AS `ITEM_DESCRIPTION`,
+       cast(BROKERED_DATE as date) AS `BROKERED_DATE`,
+       date_format(BROKERED_DATE, "%H:%i %p") AS `BROKERED_TIME`,
+       `WMI_SENT_DATE` AS `WMI_SENT_DATE`,
+       `WMI_SENT_TIME` AS `WMI_SENT_TIME`,
+       `CUT_OFF` AS `CUT_OFF`,
+       `HC_PRODUCT_STORE_ID` AS `HC_PRODUCT_STORE_ID`
+FROM
+  (SELECT OH.ORDER_ID AS 'HC_ORDER_ID',
+          IFNULL(
+                   (SELECT OID.ID_VALUE
+                    FROM ORDER_IDENTIFICATION OID
+                    WHERE OID.ORDER_ID = OH.ORDER_ID
+                      AND ORDER_IDENTIFICATION_TYPE_ID = 'SHOPIFY_ORD_NAME'
+                      AND (OID.THRU_DATE > NOW()
+                           OR OID.THRU_DATE IS NULL) ), '-') AS 'SHOPIFY_ORDER_ID',
+          OISG.FACILITY_ID AS 'LOCATION',
+          (SELECT DISTINCT(GI.ID_VALUE)
+           FROM GOOD_IDENTIFICATION GI
+           WHERE GI.GOOD_IDENTIFICATION_TYPE_ID = 'UPCA'
+             AND GI.PRODUCT_ID = OI.PRODUCT_ID
+             AND (GI.THRU_DATE IS NULL
+                  OR GI.THRU_DATE > NOW())
+           ORDER BY GI.FROM_DATE DESC
+           LIMIT 1) AS 'UPC',
+          CONCAT(OI.ITEM_DESCRIPTION, ' ',
+                 (SELECT PF.DESCRIPTION
+                  FROM PRODUCT_FEATURE PF, PRODUCT_FEATURE_APPL PFA
+                  WHERE PFA.PRODUCT_ID = OI.PRODUCT_ID
+                    AND PFA.PRODUCT_FEATURE_APPL_TYPE_ID = 'STANDARD_FEATURE'
+                    AND PFA.PRODUCT_FEATURE_ID = PF.PRODUCT_FEATURE_ID
+                    AND PF.PRODUCT_FEATURE_TYPE_ID = 'SIZE'
+                    AND (PFA.THRU_DATE > NOW()
+                         OR PFA.THRU_DATE IS NULL) )) AS 'ITEM_DESCRIPTION',
+          CASE
+              WHEN (OFC.CHANGE_DATETIME IS NULL
+                    AND OISG.SHIPMENT_METHOD_TYPE_ID = 'STOREPICKUP') THEN OISG.CREATED_STAMP
+              ELSE OFC.CHANGE_DATETIME
+          END AS 'BROKERED_DATE',
+          null AS 'WMI_SENT_DATE',
+          null AS 'WMI_SENT_TIME',
+          case
+              WHEN (OFC.CHANGE_DATETIME IS NULL
+                    AND OISG.SHIPMENT_METHOD_TYPE_ID = 'STOREPICKUP')
+                   AND cast(OISG.CREATED_STAMP as date) < cast(NOW() as date) THEN 'BEFORE TODAY'
+              when cast(OFC.CHANGE_DATETIME as date) < cast(NOW() as date) then 'BEFORE TODAY'
+              WHEN (OFC.CHANGE_DATETIME IS NULL
+                    AND OISG.SHIPMENT_METHOD_TYPE_ID = 'STOREPICKUP')
+                   AND cast(OISG.CREATED_STAMP as date) = cast(NOW() as date)
+                   and HOUR(OISG.CREATED_STAMP) <= 14 then 'BEFORE 2PM Local Time'
+              when cast(OFC.CHANGE_DATETIME as date) = cast(NOW() as date)
+                   and HOUR(OFC.CHANGE_DATETIME) <= 14 then 'BEFORE 2PM Local Time'
+              else 'AFTER 2PM LOCAL TIME'
+          end 'CUT_OFF',
+              OH.PRODUCT_STORE_ID AS 'HC_PRODUCT_STORE_ID'
+   FROM ORDER_HEADER OH
+   INNER JOIN ORDER_ITEM OI ON OH.ORDER_ID = OI.ORDER_ID
+   INNER JOIN ORDER_ITEM_SHIP_GROUP OISG ON OISG.ORDER_ID = OI.ORDER_ID
+   and OISG.SHIP_GROUP_SEQ_ID = OI.SHIP_GROUP_SEQ_ID
+   LEFT JOIN ORDER_FACILITY_CHANGE OFC ON OFC.ORDER_ID = OI.ORDER_ID
+   AND OFC.ORDER_ITEM_SEQ_ID = OI.ORDER_ITEM_SEQ_ID
+   AND OFC.SHIP_GROUP_SEQ_ID = OI.SHIP_GROUP_SEQ_ID
+   AND OFC.CHANGE_DATETIME =
+     (SELECT MAX(OFC1.CHANGE_DATETIME)
+      FROM ORDER_FACILITY_CHANGE OFC1
+      WHERE OFC1.ORDER_ID = OI.ORDER_ID
+        AND OFC1.SHIP_GROUP_SEQ_ID = OI.SHIP_GROUP_SEQ_ID
+        AND OFC1.ORDER_ITEM_SEQ_ID = OI.ORDER_ITEM_SEQ_ID )
+   AND OFC.CHANGE_REASON_ENUM_ID = 'BROKERED'
+   AND CAST(OFC.CHANGE_DATETIME AS DATE) > '${brokeredDate}'
+   INNER JOIN FACILITY F ON F.FACILITY_ID = OISG.FACILITY_ID
+   INNER JOIN FACILITY_TYPE FT ON FT.FACILITY_TYPE_ID = F.FACILITY_TYPE_ID
+   AND FT.PARENT_TYPE_ID IN ('DISTRIBUTION_CENTER')
+   WHERE OH.ORDER_TYPE_ID = 'SALES_ORDER'
+     AND OH.PRODUCT_STORE_ID = 'STORE'
+     AND OH.STATUS_ID IN ('ORDER_APPROVED')
+     AND OI.STATUS_ID IN ('ITEM_APPROVED')) AS virtual_table
+GROUP BY `HC_ORDER_ID`,
+         `SHOPIFY_ORDER_ID`,
+         `LOCATION`,
+         `UPC`,
+         `ITEM_DESCRIPTION`,
+         cast(BROKERED_DATE as date),
+         date_format(BROKERED_DATE, "%H:%i %p"),
+         `WMI_SENT_DATE`,
+         `WMI_SENT_TIME`,
+         `CUT_OFF`,
+         `HC_PRODUCT_STORE_ID`
+LIMIT 1000;
+```
+
+</details>
+
+### Query Logic
+
+**Data Selection:** The query begins by selecting specific data from various tables that contain information about orders, order items, facilities, and product details.
+
+**Defining Brokered Criteria:** The primary focus is on brokered order items that have not been reconciled. Criteria are established to filter data and include only those records where the `change_reason_enum_id` indicates brokering and the brokering date is more recent than the specified cutoff date.
+
+**Joining Relevant Tables:**
+To compile a comprehensive dataset, the SQL query joins several tables based on common fields such as `ORDER_ID` and `ORDER_ITEM_SEQ_ID`. This ensures all necessary information is captured.
+
+**Selecting Necessary Information:**
+The query selects specific columns from the joined tables that are relevant to the report’s objective, such as internal order IDs, Shopify order IDs, facility locations, UPCs, item descriptions, brokering dates, and times, as well as cutoff statuses and product store IDs.
+
+**Filtering Data:**
+The query includes filters to select records from a specific product store and only considers sales orders that have been approved. It also ensures that the brokering date is more recent than a specified date and that the facility type is a distribution center.
+
+
 ## Store Rejections with Reasons
 
 Rejection reason reports provide valuable insights into rejection rates and reasons across different facilities. These reports outline the number of rejections at each facility along with the underlying reasons behind them. This allows retailers to pinpoint facilities with higher rejection rates and take targeted actions to enhance their performance. For example, if a store frequently experiences rejections due to items being out of stock, conducting cycle counts can help reconcile discrepancies between the system's available inventory and the physical stock in the store. Moreover, by identifying facilities where damaged items are more prevalent, retailers can streamline operations to mitigate such occurrences. Ultimately, the aim of these reports is to pinpoint the location and frequency of rejections and implement measures to minimize them, thereby optimizing overall store performance.
