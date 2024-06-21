@@ -21,6 +21,7 @@
 * [Add new variance reason](sop/add-new-variance-reason.md)
 * [Documentation guideline](sop/documentation-guideline.md)
 * [How to access Shopify POS APP](sop/access-shopify-pos-app.md)
+* [How to create a User in tathya](sop/create-user-tathya.md)
 * [Templated Replies](sop/template-replies.md)
 * [ChatGPT Prompts](sop/chatgpt-prompts.md)
 
