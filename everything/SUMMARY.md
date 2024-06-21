@@ -49,6 +49,7 @@
   * [Tathya Authentication](tathya/userCreation/tathyaAuthentication.md)
   * [Listing User in Tathya](tathya/userCreation/listUsersTathya.md)
   * [User Permissions](tathya/usercreation/user-permissions.md)
+* [Reporting Discrepancies](tathya/sop/dataDiscrepancies.md)
 
 ## Webtools
 
