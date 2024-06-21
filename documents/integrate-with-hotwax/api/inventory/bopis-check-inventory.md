@@ -22,11 +22,28 @@ Content-Type: application/json
 
 ### Sample Request Body
 
+#### Single product and facility
+
 ```json
 {
   "productStoreId": "STORE",
   "productId": "11855",
+  "internalName": "XS-BLACK",
   "facilityId": "114",
+  "inventoryGroupId": "SHOPIFY_FAC_GRP"
+}
+```
+
+#### Multiple products and facilities
+```json
+{
+  "productStoreId": "STORE",
+  "productId": ["11855","11856","118557"],
+  "productId_op": "in",
+  "internalName": ["XS-BLACK","S-BLACK","M-BLACK"],
+  "internalName_op": "in",
+  "facilityId": ["114","114","115","116"],
+  "facilityId_op": "in",
   "inventoryGroupId": "SHOPIFY_FAC_GRP"
 }
 ```
@@ -37,8 +54,26 @@ Content-Type: application/json
 |------------------|---------------------------------------------------------|---------------------|
 | `productStoreId` | The ID of the product store                             | `"STORE"`           |
 | `productId`      | HotWax Commerce internal product ID                     | `"11855"`           |
+| `internalName`   | The well known ID of a product, usually UPC or SKU based on configuration| `"XS-BLACK"`           |
 | `facilityId`     | The HotWax Commerce facility ID where product inventory is located | `"114"`             |
 | `inventoryGroupId` | HotWax Commerce inventory group ID                     | `"SHOPIFY_FAC_GRP"` |
+
+| operator        | Description                                              | Example            |
+|------------------|---------------------------------------------------------|--------------------|
+| `productId_op`      | operator required to check multiple values           | `"in"`             |
+| `internalName_op`   | operator required to check multiple values           | `"in"`             |
+| `facilityId_op`     | operator required to check multiple values           | `"in"`             |
+
+**Select Products**
+
+Products can be queried in the inventory API by both their HotWax ID or their internalName. The internal name refers to the UPC or SKU, whichever one is selected as a primary identifier during product configuration. While both fields are optional, one is requried to obtain a result.
+
+**productStoreId**
+
+Product Store represents a brand in HotWax Commerce. To obtain possible values, log into HotWax Commerce and view the product store list page for possible values.
+
+**inventoryGroupId**
+Inventory groups are used to segregate inventory for different channels of sales. Obtain the inventory group ID by logging into HotWax Commerce Facilities App and browsing inventory groups.
 
 ## Response
 
@@ -80,6 +115,5 @@ Content-Type: application/json
   "atp": 50.0,
   "safetyStock": 5.0,
   "computedAtp": 45.0,
-  "decisionReason": ""
 }
 ```
