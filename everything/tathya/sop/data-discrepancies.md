@@ -23,7 +23,7 @@ Occasionally, discrepancies in data may arise in Tathya, impacting the visibilit
    - **Issue:** Clients request additional data fields not currently available.
    - **Cause:** Queries need modification to incorporate new data requirements.
 
-## Troubleshooting Steps**
+## Troubleshooting Steps
 
 ### 1. Initial Checks
    - **Verify Issue Existence**
