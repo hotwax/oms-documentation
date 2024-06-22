@@ -28,7 +28,7 @@ Maarg Name: `demo-maarg-uat`
 **Example:** `https://demo-maarg.hotwax.io/rest/s1/ofbiz-oms-usl/checkBopisInventory` 
 
 ### Method
-POST
+GET
 
 ### Headers
 
