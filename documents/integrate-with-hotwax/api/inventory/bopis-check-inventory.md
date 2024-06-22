@@ -110,6 +110,7 @@ Content-Type: application/json
   "atp": 0.0,
   "computedAtp": 0.0,
   "decisionReason": "AllowPickupFacility"
+  "decisionReasonDesc": "Pickup is not allowed for product 11855 at facility 115."
 }
 ```
 
@@ -117,11 +118,19 @@ Content-Type: application/json
 
 | Decision Reason             | Description                                                                 |
 |-----------------------------|-----------------------------------------------------------------------------|
-| `ProductStore`              | The facility holding the product inventory is not associated with the product store.                     |
+| `ProductStore`              | The facility is not associated with the product store.                     |
+| `PickUpFacility`          | The facility does not have PickUp enabled. Add it to the PickUp facility group to enable pickup.        |
 | `InventoryGroup`            | The facility where the product is located does not cater its inventory to that channel. |
 | `AllowPickupInventoryGroup` | Pickup is not allowed globally for the inventory group.                     |
-| `AllowPickupFacility`       | The facility where the product inventory is located is disabled for catering to BOPIS orders. |
-| `maximumOrderLimit`         | The facility has reached its maximum order limit for the day.               |
+| `AllowPickupFacility`       | The facility where the product inventory is located is disabled for catering to BOPIS orders. 
+
+Each Decision Reason also comes with a detailed log of why the given check failed.
+
+1. ProductStore - Facility ${facilityId} is not associated with Product Store ${productStoreId}.
+2. PickUp Facility - Facility ${facilityId} is not a member of a PICKUP Facility Group.
+3. Inventory Group - Facility ${facilityId} is not a member of ${inventoryGroupId} channel.
+4. Product Inventory Group allowPickup - Pickup is not allowed for product ${productId} ${inventoryGroupId} inventory group.
+5. Product Facility allowPickup - Pickup is not allowed for product ${productId} at facility ${facilityId}.
 
 ### ATP
 
