@@ -1,1 +1,0 @@
-# HotWax Commerce Deployment Architecture
