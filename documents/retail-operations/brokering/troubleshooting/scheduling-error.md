@@ -1,3 +1,8 @@
+---
+description: >-
+  Learn how to resolve brokering issues related to incorrect scheduling
+---
+
 ## Scenario: The Brokering Engine Won't Run Due to Incorrect Scheduling
 
 The brokering engine relies on correctly scheduled runs to process and route orders. If the scheduling is incorrect, the engine won't execute, leading to unprocessed orders and potential delays in order fulfillment.
@@ -20,6 +25,8 @@ The brokering engine relies on correctly scheduled runs to process and route ord
 
 4. **Confirm Status**
     1. Finally, verify the status of the inventory rule, order batch, and brokering run. Ensure that each status is set to "Active" and not in "Draft."
+
+Read our [order routing user manual](../rule-builder.md) to learn more
 
 #### Example
 
