@@ -48,7 +48,7 @@ When a user request arrives, a Sync Server processes it and, if necessary, commu
 
 ### Data Retrieval
 
-The Sync Servers first check ElastiCache, an in-memory caching service to retrieve the necessary data. By storing frequently accessed data in memory, ElastiCache significantly reduces the time required to fetch data, enhancing the application's performance.
+The Sync Servers first check the cache memory used in OFBiz to retrieve the necessary data. By storing frequently accessed data in memory, this cache mechanism significantly reduces the time needed to fetch data, enhancing the application's performance.
 
 If the required data is not found in ElastiCache, the servers query the primary Amazon RDS (Relational Database Service) instance. This managed database service stores the main dataset and supports high availability and security.
 
