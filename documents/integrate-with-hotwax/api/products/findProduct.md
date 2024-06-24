@@ -29,6 +29,7 @@ Example: `https://demo-oms.hotwax.io/api/solr-query`
 
 | Parameter Name            |
 | ------------------------- |
+| `docType`                 |
 | `context_field`           |
 | `upc`                     |
 | `sku`                     |
