@@ -37,6 +37,42 @@ Example: `https://demo-oms.hotwax.io/api/solr-query`
 | `wt`                 | Format of data returned by api (json/csv)|
 | `rows`                 | No of documents returned |
 
+### List of fields present in schema - 
+- docType
+- identifier
+- context_field
+- docType-identifier
+- upc
+- sku
+- goodIdentifications
+- productId
+- productAverageRating
+- groupId
+- groupName
+- productName
+- parentProductName
+- mainImageUrl
+- productTypeId
+- productCategories
+- prodCatalogCategoryTypeIds
+- productCategoryNames
+- primaryProductCategoryName
+- internalName
+- brandName
+- isVirtual
+- isVariant
+- manufacturerPartyId
+- position
+- productFeatureCategoryId
+- productFeatureTypeId
+- featureHierarchy
+- productFeatures
+- featureAbbreviation
+- featureCode
+- content
+- prodCatalogIds
+- productStoreIds
+- tags
 
 
 ## Response
