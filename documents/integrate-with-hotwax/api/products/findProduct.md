@@ -18,7 +18,9 @@ Example: `https://demo-oms.hotwax.io/api/solr-query`
 {
     "json": {
         "params": {    
-        "q": "docType:PRODUCT"
+        "q": "docType:PRODUCT",
+        "wt":"json",
+         "rows":"10"
         }
     }
 
@@ -27,41 +29,13 @@ Example: `https://demo-oms.hotwax.io/api/solr-query`
 
 ### Parameter Table
 
-| Parameter Name            |
-| ------------------------- |
-| `docType`                 |
-| `context_field`           |
-| `upc`                     |
-| `sku`                     |
-| `goodIdentifications`     |
-| `productId`               |
-| `productAverageRating`    |
-| `groupId`                 |
-| `groupName`               |
-| `productName`             |
-| `parentProductName`       |
-| `mainImageUrl`            |
-| `productTypeId`           |
-| `productCategories`       |
-| `prodCatalogCategoryTypeIds` |
-| `productCategoryNames`    |
-| `primaryProductCategoryName` |
-| `internalName`            |
-| `brandName`               |
-| `isVirtual`               |
-| `isVariant`               |
-| `manufacturerPartyId`     |
-| `position`                |
-| `productFeatureCategoryId` |
-| `productFeatureTypeId`    |
-| `featureHierarchy`        |
-| `productFeatures`         |
-| `featureAbbreviation`     |
-| `featureCode`             |
-| `content`                 |
-| `prodCatalogIds`          |
-| `productStoreIds`         |
-| `tags`                    |
+
+| Parameter Name            | Description                          |
+| ------------------------- | ------------------------------------ |
+| `docType`                 | The Type of the document             |
+| `q`                 |  Basic solr query|
+| `wt`                 | Format of data returned by api (json/csv)|
+| `rows`                 | No of documents returned |
 
 
 
