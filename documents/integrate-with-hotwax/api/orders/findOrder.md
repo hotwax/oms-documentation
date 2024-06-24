@@ -1,7 +1,6 @@
-
 ---
 description: >-
-  Explore how the Find Order API call offers details about products present in the system.
+  Explore how the Find Order API call offers details about orders present in the system.
 ---
 
 # Find Order
