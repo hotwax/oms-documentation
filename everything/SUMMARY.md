@@ -17,6 +17,7 @@
 * [HotWax Commerce Deployment](sop/deployment.md)
 * [SFTP Issue](sop/sftp-issue.md)
 * [Pre order catalog sync](sop/pre-order-sync.md)
+* [Multicurrency Sales Orders](sop/multicurrency-sales-orders.md)
 * [Multi Currency Configuration](sop/multicurrency-sales-orders.md)
 * [Add new variance reason](sop/add-new-variance-reason.md)
 * [Documentation guideline](sop/documentation-guideline.md)
@@ -24,6 +25,7 @@
 * [How to create a User in tathya](sop/create-user-tathya.md)
 * [Templated Replies](sop/template-replies.md)
 * [ChatGPT Prompts](sop/chatgpt-prompts.md)
+
 
 ## Tathya
 
