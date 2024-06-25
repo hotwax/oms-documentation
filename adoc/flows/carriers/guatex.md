@@ -4,6 +4,10 @@ description: Discover how Guatex, a shipping carrier is involved in ADOC impleme
 
 # Guatex
 
+{% hint style="danger" %}
+This Gutex carrier integration is no longer utilized by ADOC.
+{% endhint %}
+
 ## Request label
 
 | GUATEX Field            | English Translation      | Value                                             | Max Length | Required |

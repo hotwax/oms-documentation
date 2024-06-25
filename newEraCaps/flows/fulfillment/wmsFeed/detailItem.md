@@ -33,8 +33,13 @@ Used to represent the SAP material and size of an item.
 - **Bytes:** 13
 - **Type:** JAN code
 - **Description:** Contains the JAN (Japanese Article Number) code associated with the brokered order items. JAN code will be extracted from the GoodIdentifications list. The goodIdentificationTypeId needs to be confirmed for accurate retrieval.
+- **OMS Value:** Not used, leave empty
 
-Note: It is recommended to use the variant barcode value for this field.
+## S-70: JAN code
+- **Length:** 13
+- **Bytes:** 13
+- **Type:** JAN code
+- **OMS Value:** Extracted from the GoodIdentifications list, where goodIdentificationTypeId = UPCA
 
 ## S-71: SKU code (For Customer)
 
@@ -42,6 +47,7 @@ Note: It is recommended to use the variant barcode value for this field.
 - **Bytes:** 25
 - **Type:** Alphanumeric
 - **Description:** Represents the SKU (Stock Keeping Unit) code designated for the customer associated with the brokered order items.
+- **OMS Value:** Not used, leave empty
 
 
 ## S-72: Product Name
@@ -62,6 +68,7 @@ Note: It is recommended to use the variant barcode value for this field.
 - **Description:** Represents the total sales value, including VAT, for the order item in the brokered file.
 - **Conclusion:** This field will contain the sum of the Item Unit Price, Item Sales Tax, and Item Discount amounts for each order item.
 - **Mapping:** Shopify: Sum of `line_item["price"]`, `line_item["tax_lines"]["price"]`, and `line_item["total_discounts"]["amount"]`.
+- **OMS Value:** Not used, leave Empty
 
 ## S-74: Sales Value (Without VAT)
 
@@ -80,6 +87,7 @@ Note: It is recommended to use the variant barcode value for this field.
 - **Type:** Numeric
 - **Description:** Represents the subtotal of the unit prices of items, including VAT, as per the Ruby code.
 - **Conclusion:** This field containts the actual unit cost of the order item, including VAT and item discount amounts.
+- **OMS Value:** Not used, leave Empty
 
 ## S-76: Subtotal of Sales Value (Without VAT)
 - **Length:** 20
@@ -98,6 +106,7 @@ Note: It is recommended to use the variant barcode value for this field.
 - **Type:** Numeric
 - **Description:** Represents the retail value of the items, including VAT, without considering any discounts.
 - **Conclusion:** This field contains the unit prices, including VAT, without applying any item discounts. It is similar to S-73 but excludes discounts.
+- **OMS Value:** Not used, leave Empty
 
 ## S-78: Retail Value (Without VAT)
 - **Length:** 20
@@ -105,6 +114,7 @@ Note: It is recommended to use the variant barcode value for this field.
 - **Type:** Numeric
 - **Description:** Represents the retail value of the items, excluding VAT, without considering any discounts.
 - **Conclusion:** This field contains unit price, excluding VAT, without applying any item discounts. It is the same as S-74 but without considering discounts.
+- **OMS Value:** Not used, leave Empty
 
 **S-79:** Subtotal of Retail Value (Including VAT)
 
@@ -113,6 +123,7 @@ Note: It is recommended to use the variant barcode value for this field.
 - **Type:** Numeric
 - **Description:** Represents the subtotal of the retail value of items, including VAT, without considering any discounts.
 - **Conclusion:** This field contains the order item subtotal, including VAT, without applying any item discounts. It is the same as S-75 but without considering discounts.
+- **OMS Value:** Not used, leave Empty
 
 **S-80:** Size/Color (Delivery Slip with Amount, Delivery Slip without Amount, Chain Store Slip, etc)
 
@@ -132,6 +143,7 @@ Note: It is recommended to use the variant barcode value for this field.
 - **Type:** Date
 - **Conclusion:** This field is hardcoded with the value "2030/12/30".
 - **Usage:** Serves as a fixed value header for shipment and posting dates.
+- **OMS Value:** Not used, leave Empty
 
 **S-82:** Sales Order and Purchase Credit Memo Quantity
 
@@ -139,6 +151,7 @@ Note: It is recommended to use the variant barcode value for this field.
 - **Bytes:** 9
 - **Type:** Numeric
 - **Description:** Represents the quantity to be shipped for a sales order.
+- **OMS Value:** Not used, leave Empty
 
 ## S-83: Proof of Delivery Date
 
@@ -146,6 +159,7 @@ Note: It is recommended to use the variant barcode value for this field.
 - **Bytes:** 10
 - **Type:** Date
 - **Description:** In the sample data provided this is the same as the requested delivery date but in this format: `2016/07/06`
+- **OMS Value:** Not used, leave Empty
 
 
 {% hint style="warning" %}
@@ -158,6 +172,7 @@ For now we should copy over the value from S-7
 - **Bytes:** 30
 - **Type:** Numeric
 - **Description:** Subtotal of retail value without VAT for an order item.
+- **OMS Value:** Not used, leave Empty
 
 ## S-97 to S-103: Reserved Fields
 
