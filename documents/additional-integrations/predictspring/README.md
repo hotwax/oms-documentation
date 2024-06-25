@@ -1,15 +1,18 @@
-# HotWax Commerce and PredictSpring Integration
+# Returns management
 
-As the retail landscape continues to evolve, the need for seamless omnichannel experiences has become important. **HotWax Commerce** and **PredictSpring**, two leading solutions in the retail technology space, have joined forces to provide retailers with a powerful integration that ensures synchronized inventory management and facilitates omnichannel journeys.
+Managing returns is crucial for any retail operation. The integration between PredictSpring and HotWax enables retailers to accept orders in-store, regardless of the order's origin, enhancing the omnichannel experience.
 
-## HotWax Commerce
+## How the return process works in **PredictSpring** with the assistance of **HotWax Commerce**:
 
-**HotWax Commerce** is a cloud-based Omnichannel Order Management system that empowers retailers to sell more and deliver fast. It helps retailers to implement omnichannel strategies like Same-Day Buy Online Pick Up In Store (BOPIS), Buy Online Return In Store (BORIS), Ship From Store, and Pre-Orders.
+### 1. BORIS:
 
-## PredictSpring
+When a customer comes in-store with an eCommerce order, the associate initiated the process by requesting an Order ID. The store associate can add the Order ID into Predict Spring, in the background the HotWax Commerce `getOrder` job will fetch and return the order PredictSpring enabling a seamless return experience for the customer. 
 
-**PredictSpring** is a Modern POS that provides a seamless in-store experience for brands with support for full POS, mPOS, cash management, clienteling, endless aisle, inventory management, and curbside pickup.
+{% hint style="info" %}
+In the case that the order id is unavailable: the associate can search for the order using various identifiers (e.g., order ID, customer name, order date), HotWax runs the searchOrder job to return all relevant orders to PredictSpring.
+{% endhint %}
 
-## Integration Scope and Objectives
+### 2. PredictSpring returns:
 
-The primary objective of this integration is to establish a connection between **HotWax Commerce** and **PredictSpring**, ensuring a near real-time bi-directional synchronization of inventory data and uni-directional synchronization of orders and returns from **PredictSpring** to **Hotwax Commerce**. By achieving these synchronizations, retailers can unlock a range of omnichannel capabilities, including Same-Day Buy Online Pick Up In Store, Ship from Store, Endless Aisle aka Send Sales, and Buy Online Return In Store. This integration aims to create a cohesive ecosystem that maximizes operational efficiency and delivers a seamless shopping experience for customers.
+* If HotWax is the order master: the return will be handled the same way as BORIS. 
+* If Hotwax is not the order master: the associate handles the return in PredictSpring. If an immediate inventory change needs to be logged, it can be sent to the inventory variance log by the store.
