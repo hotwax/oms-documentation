@@ -18,7 +18,7 @@ Orders will only be allocated for fulfillment after they have been approved.
 
 ## Synchronize Customers from HotWax Commerce to NetSuite
 
-To successfully create a sales order in NetSuite, [it is a prerequisite to have the customer information pre-existing within NetSuite's database](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section\_162886247923.html#Best-Practices-for-Order-Sync). If the order contains a new customer not present in NetSuite, the system won't allow the order to be pushed. Therefore, it's vital to synchronize customer data from HotWax Commerce to NetSuite before order creation.
+To successfully create a sales order in NetSuite, [it is a prerequisite to have the customer information pre-existing within NetSuite's database](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section\_162886247923.html#Best-Practices-for-Order-Sync). If the order contains a new customer not present in NetSuite, the system won't allow the order to be pushed.
 
 <figure><img src="../../../.gitbook/assets/6.png" alt=""><figcaption><p>Customer Sync from HotWax Commerce to NetSuite</p></figcaption></figure>
 
@@ -134,7 +134,7 @@ For retailers that use Avatax, the Tax Code and Shipping Tax Code will always co
 
 ### Handling NetSuite file size limits
 
-We've added a limit to how many orders can be synced in one file to NetSuite to ensure the NetSuite file size limit is not breached. NetSuite has a limit of 25,000 rows in one CSV, so if your order volume in one sync duration exceeds this limit, we automatically paginate the file to ensure NetSuite does not reject the file. Another thing we kept in mind is that during pagination, one order should not be split into separate files because this could lead to errors in the order import process in NetSuite. Assuming that most eCommerce orders contain 10 or fewer items, we've set an upper limit of 1000 orders per file. This should keep the file size well below NetSuite's limit while also leaving a buffer for orders with more line items.
+We've added a limit to how many orders can be synced in one file to NetSuite to ensure the NetSuite file size limit is not breached. NetSuite has a limit of 25,000 rows in one CSV, so if your order volume in one sync duration exceeds this limit, we automatically paginate the file to ensure NetSuite does not reject the file. During pagination, one order should not be split into separate files because this could lead to errors in the order import process in NetSuite. Assuming that most eCommerce orders contain 10 or fewer items, there is an upper limit of 1000 orders per file. This keesp the file size well below NetSuite's limit while also leaving a buffer for orders with more line items.
 
 Though it may seem like this would significantly slow down the order sync, this is not actually the case. All valid orders are still exported from HotWax Commerce at once and then paginated for NetSuite, this means all the order files are available for NetSuite to process and the speed at which they're processed is determined by the configuration of NetSuite used by the retailer. Higher configurations will have faster and more concurrent file process capabilities.
 
@@ -193,7 +193,7 @@ To sync sales orders from HotWax Commerce to NetSuite, a required field is the "
 
 ## Sync Sales Order Item Line IDs from NetSuite to HotWax Commerce
 
-This step syncs NetSuite sales order line item IDs with HotWax Commerce order items. This step is crucial as it helps in mapping and aligning the order line items in HotWax Commerce with their corresponding line item IDs in NetSuite. This synchronization enables a smooth and accurate cross-referencing of items and their relevant details between the two systems. Without syncing order line item IDs, any attempt to update an order item in NetSuite would result in a new order item being created.
+This step syncs NetSuite sales order line item IDs with HotWax Commerce order items. This step helps in mapping and aligning the order line items in HotWax Commerce with their corresponding line item IDs in NetSuite. This synchronization enables a smooth and accurate cross-referencing of items and their relevant details between the two systems. Without syncing order line item IDs, any attempt to update an order item in NetSuite would result in a new order item being created.
 
 <figure><img src="../../../.gitbook/assets/11.png" alt=""><figcaption><p>Order line item IDs synced from NetSuite to HotWax Commerce</p></figcaption></figure>
 
@@ -232,7 +232,7 @@ FTP Config: IMP_ORDER_ITM_ATTR
 
 This step synchronizes NetSuite sales order IDs with orders in HotWax Commerce for tracking and identification. This step enables cross-referencing and linkage between orders in both systems, paving the way for accurate tracking and management.
 
-The synchronization of Sales Order IDs from NetSuite to HotWax Commerce is a critical step as it serves as an indicator that the orders in HotWax Commerce have been successfully integrated into NetSuite. Additionally, it is an essential step for various functions, including the creation of item fulfillment, return authorization, and customer deposit records in NetSuite.
+The synchronization of Sales Order IDs from NetSuite to HotWax Commerce  serves as an indicator that the orders in HotWax Commerce have been successfully integrated into NetSuite. Additionally, it is an essential step for various functions, including the creation of item fulfillment, return authorization, and customer deposit records in NetSuite. *** NOTE
 
 <figure><img src="../../../.gitbook/assets/12.png" alt=""><figcaption><p>Sales order IDs synced from NetSuite to HotWax Commerce</p></figcaption></figure>
 
