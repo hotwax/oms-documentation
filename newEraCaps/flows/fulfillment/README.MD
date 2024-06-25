@@ -14,6 +14,8 @@ New Era Caps store fulfillment carrier is E-Hidden 3. This carrier does not offe
 
 Once tracking codes are generated for orders from the carrier’s portal, the store staff will reupload it into the fulfillment application. The app will then automatically save these tracking codes to the order shipments allowing them to be automatically fulfilled at the end of the day using the `Ship Packed Orders` job in the OMS.
 
+![Order Flow](/newEraCaps/assets/OrderFlowv3.jpg)
+
 ## Store Pickup
 
 BOPIS orders will be directly assigned to the customer’s selected pickup location where they will be visible in the BOPIS Fulfillment. Though New Era Caps was using a ship-to-store workflow before implementing HotWax Commerce OMS, they no longer offer this and instead only offers store pickup when inventory is truly available at retail locations.
