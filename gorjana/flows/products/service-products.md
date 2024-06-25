@@ -11,7 +11,7 @@ Customers can select particular items in their cart to be gift wrapped. This cho
 ## Keepsake box
 A special Keepsake box is included with the purchase of special products of higher value. This is not part of the order in Shopify and will instead need to be added to the order after it is created in HotWax. The products that trigger this automation are not yet shared.
 
-**Here are some special products eligible for Keepsake box**
+**Here are the special products eligible for Keepsake box**
 
 | Product SKU            | Product Name                                           |
 |------------------------|--------------------------------------------------------|
@@ -44,7 +44,7 @@ A special Keepsake box is included with the purchase of special products of high
 | 2310-3008-185-G        | Classic Diamond Eternity Ring (size 8)                 |
 | 2310-3009-185-G        | Classic Diamond Eternity Ring (size 9)                 |
 
-All of these items receive the same keepsake box - keepsake box SKU is `PKG245`
+All of these items receive the same keepsake box - Keepsake box SKU is `PKG245`
 
 **Mapping for the Keepsake box is mandatory**
 
