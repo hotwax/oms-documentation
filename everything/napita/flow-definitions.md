@@ -58,13 +58,13 @@ Once the parameter context is inherited, you can verify through the following st
 
 While most parameters are inherited from the parent processor groups, some parameters are specific to process groups. The following parameters need to be added to the processors:
 
-* **Destination Path:** This specifies the path for the flowfile where SFTP files will be placed.
-* **Feed File Name with Prefix:** Here, a meaningful file name with a prefix such as time needs to be added for easy identification.
+* **Destination Path:** This specifies the path for the flowfile where SFTP files will be placed. The destination path property needs to be further added in the remote path of the flow that puts the file in SFTP. Click on configure and add the remote path name.
+* **Feed File Name with Prefix:** Here, a meaningful file name with a prefix such as time needs to be added for easy identification. 
 * **Source SQL Query:** This parameter contains the SQL query required for the processor to perform its action.
 * **Date Time Format:** Specifies the date time format for the files. It's crucial for accurate representation.
 * **File Name Extension:** Select whether the file is .csv or .json to ensure compatibility with other systems and accurate file reading.
 
-To configure the file name, locate the flow file named `Update file name.` Right-click and select the configure option. Go to properties and enter the query in the filename field.
+To configure the file name, locate the processor named `Update file name.` Right-click and select the configure option. Go to properties and enter the query in the filename field.
 
 #### Select Database Connection Pooling Service (DBCP service) <a href="#select-database-connection-pooling-service-dbcp-service" id="select-database-connection-pooling-service-dbcp-service"></a>
 
