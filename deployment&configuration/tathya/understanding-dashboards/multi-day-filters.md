@@ -25,7 +25,7 @@ By allowing users to set custom date filters, Tathya enhances their ability to d
 
 ## Set Email Frequency
 
-Setting email frequency in Tathya provides retailers with tailored email reports at their desired frequency, enabling them to efficiently monitor their daily or weekly performance and address any issues promptly. While Tsthys offers various date filters for on-screen data viewing, this feature ensures that the time range for email reports remains independent.
+Setting email frequency in Tathya provides retailers with tailored email reports at their desired frequency, enabling them to efficiently monitor their daily or weekly performance and address any issues promptly. While Tathya offers various date filters for on-screen data viewing, this feature ensures that the time range for email reports remains independent.
 
 ### Step-by-Step Usage Instructions:
 

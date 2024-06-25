@@ -3,7 +3,7 @@
 HotWax Commerce offers the Cycle Count app, which empowers store associates to record the reasons behind inventory variances.
 
 ## Export cycle count from HotWax
-Schedule a job in the HotWax integration layer to generate a feed completed cycle counts.
+Schedule a job in the HotWax integration layer to generate a feed of completed cycle counts.
 
 Check these SFTP locations for exported Cycle Count feeds
 ```

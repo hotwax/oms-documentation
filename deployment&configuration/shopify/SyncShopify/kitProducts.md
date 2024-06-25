@@ -10,7 +10,7 @@ To seamlessly import Kit products into OMS, ensure that the Shopify Config Acces
 
 The Bundles app checks inventory levels at 10-minute intervals, reducing inventory for kit products if individual item inventory decreases. Kit products have no physical inventory of their own, like NetSuite, the inventory calculations are based on the lowest common denominator between all individual components.
 
-For multi-location inventory calculations, a kit products avaialbity is determined by the lowest common denominator of the kit comopnent inventory avaiable by facility. The computed inventory of a kit product at each facility is then summed to produce the final sellable inventory number.
+For multi-location inventory calculations, a kit products availability is determined by the lowest common denominator of the kit component inventory available by facility. The computed inventory of a kit product at each facility is then summed to produce the final sellable inventory number.
 
 During allocation, brokering is run on the kit components directly which actually have physical inventory at facilities. By default splitting is disabled for kit products in an order.
 
