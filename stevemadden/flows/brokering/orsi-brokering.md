@@ -1,4 +1,4 @@
-# Ecomm Orders Brokering Logic
+# ORSI Brokering logic
 
 Facility sequence - Retail Warehouse, Outlet Warehouse, Retail Store, Outlet Store
 
