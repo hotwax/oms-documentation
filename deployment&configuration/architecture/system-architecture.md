@@ -4,7 +4,9 @@
 
 This document provides an overview of the high-level architecture for the HotWax Commerce application deployed on Amazon Web Services (AWS), emphasizing scalability, fault tolerance, performance, and security considerations.
 
-<img width="1349" alt="Screenshot 2024-06-22 at 6 47 26 PM" src="https://github.com/AjinkyaM1/Ajinkya-OMS-Documentation/assets/158986859/3cadfe91-9d86-4400-8481-2e63f98eac34">
+<img width="1028" alt="Screenshot 2024-06-24 at 2 33 40 PM" src="https://github.com/AjinkyaM1/Ajinkya-OMS-Documentation/assets/158986859/44c1f480-e3a4-42f7-abe3-c1a5de3374da">
+
+
 
 ## System Components
 
