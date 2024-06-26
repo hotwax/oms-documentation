@@ -1,22 +1,21 @@
 # Iterable
 
-This guide shows you how to integrate HotWax Commerce with Iterable, a popular marketing automation platform for Shopify. This integration automates email notifications to improve your customers' pickup experience.
+This guide shows you how to integrate HotWax Commerce with Iterable, a popular marketing automation platform for Shopify. This integration automates email notifications to improve your customers' experience.
 
 HotWax Commerce handles order processing and fulfillment, while Iterable takes care of sending personalized email notifications. You can configure email flows within HotWax Commerce to trigger based on specific events, like an order being ready for pickup.
 
-Follow the steps below to integrate with Iterable and start sending automated pickup notifications:
+**Follow the steps below to integrate with Iterable and start sending automated pickup notifications:**
 
+## Connect HotWax Commerce and Iterable**
 
-# Generate an API Key for HotWax Commerce and Iterable**
-
-An API key acts like a secure password, allowing authorized communication between HotWax Commerce and Iterable. Follow these steps to create one:
+To share any kind of information between these systems, they need to make a connection with each with the help of private access keys. An API key acts like a secure password, allowing authorized communication between HotWax Commerce and Iterable. Follow these steps to create one:
 
 1. **Log in to Iterable** with your existing credentials.
 2. **Navigate to Your Project:** Remember, API keys are project-specific. Ensure you're in the correct project for your HotWax connection.
-3. **Find API Keys:** Look for the "Integrations" section in the main menu and hover over it. Select "API Keys" from the dropdown.
-4. **Create a New Key:** Click on "New API Key."
-   * **Give it a Name:** Choose a descriptive name to easily identify its purpose (e.g., "HotWax Commerce Integration").
-   * **Select Key Type:** Choose "Server-side" as this key will be used by HotWax Commerce on your server. You can find more details about key types:[link to Iterable API Keys documentation](https://support.iterable.com/hc/en-us/articles/360043464871-API-Keys)).
+3. **Find API Keys:** Look for the `Integrations` section in the main menu and hover over it. Select `API Keys` from the dropdown.
+4. **Create a New Key:** Click on `New API Key` when the page opens.
+   * **Give it a Name:** Choose a descriptive name to easily identify its purpose (e.g. "HotWax Commerce Integration").
+   * **Select Key Type:** Choose "Server-side" as this key will be used by HotWax Commerce to share details. You can find more details about key types:[link to Iterable API Keys documentation](https://support.iterable.com/hc/en-us/articles/360043464871-API-Keys)).
 5. **Generate the Key:** Click on `Create API Key`. A pop-up will appear displaying the generated key. **Important:** This key will only be displayed once. 
 6. **Copy and Secure the Key:** Carefully copy the entire API key and store it securely in a password manager or other encrypted location. **Never share it publicly.**
 
@@ -33,7 +32,7 @@ Once you have your API key from Iterable, follow these steps to integrate it wit
 
 2. **Import Configuration:**
    * In the `Complete XML document` section, paste the following XML snippet.
-   * **Important:** Replace `privateKey` with your actual API key from Iterable in the `publicKey` field.
+   * **Important:** Replace `YOUR_ITERABLE_API_KEY` with your actual API key from Iterable in the `publicKey` field.
 
 **XML Configuration**
 
@@ -56,13 +55,13 @@ Once you have your API key from Iterable, follow these steps to integrate it wit
 
 ## Add Product Store Setting in HotWax Commerce
 
-Setting up Product Store email settings in HotWax Commerce is crucial as it automates tailored communication, like the `Ready for Pickup` email for that product store. Follow these steps to Add Product Store Setting:
+Setting up product store email settings in HotWax Commerce allows you to define which email information triggers automated messages for specific marketing automation platforms. For example, you can configure settings to send "Ready for Pickup" email data in the format of `Iterable` for a particular product store. Follow these steps to Add Product Store Setting:
 
 1. Visit `https://{instanceName}.io/webtools/control/EntityImport` to access the Entity Import interface.
 2. In the `Complete XML document` section, add the following XML information:
 
 ```xml
-<ProductStoreEmailSetting emailType="PRDS_READY_TO_PICKUP"  productStoreId="SM_STORE" subject="Ready To Pick-Up Notification" systemMessageRemoteId="ITERABLE" templateContentId="READY_TO_PICK_NOTI"/>
+<ProductStoreEmailSetting emailType="PRDS_READY_TO_PICKUP"  productStoreId="DD_STORE" subject="Ready To Pick-Up Notification" systemMessageRemoteId="ITERABLE" templateContentId="READY_TO_PICK_NOTI"/>
 
 ```
 
@@ -70,11 +69,12 @@ Setting up Product Store email settings in HotWax Commerce is crucial as it auto
 
 | Attribute             | Description                                                                         |
 | --------------------- | ----------------------------------------------------------------------------------- |
-| productStoreId        | Enter the name of the product store for which emails will be dispatched.            |
+| productStoreId        | Enter the ID of the product store for which emails will be dispatched.            |
 | emailType             | Specify the type of email (e.g., "PRDS\_READY\_TO\_PICKUP" for "Ready for Pickup"). |
 | subject               | Define the subject line for the email ("Ready For Pickup Email").                   |
 | systemMessageRemoteId | Use the Iterable remote ID created in the previous setup step.                       |
 | templateContentId     | Input the ID of the "Ready for Pickup" template content in this instance.           |
+
 
 ## Add Preconfigured Data for the "Ready for Pickup" Email
 
@@ -84,32 +84,34 @@ This configuration data is sent for
 
 | Key           | Description                           |
 | ------------- | ------------------------------------- |
-| first\_name   | Customer's first name                 |
-| last\_name    | Customer's last name                  |
-| to\_name      | Name of the facility for origin       |
+| first_name   | Customer's first name                 |
+| last_name    | Customer's last name                  |
+| to_name      | Name of the facility for origin       |
 | address1      | Address line 1                        |
 | address2      | Address line 2                        |
 | city          | City                                  |
-| state\_name   | State name                            |
-| country\_name | Country name                          |
-| order\_name   | Name of the order                     |
-| order\_item   | List of shipment items                |
-| image\_url    | URL of the product image              |
-| product\_name | Description of the ordered product    |
+| state_name   | State name                            |
+| country_name | Country name                          |
+| order_name   | Name of the order                     |
+| order_item   | List of shipment items                |
+| image_url    | URL of the product image              |
+| product_name | Description of the ordered product    |
 | quantity      | Quantity of the ordered item          |
 | subtotal      | Total amount of items in the shipment |
-| grand\_total  | Grand total amount for the shipment   |
+| grand_total  | Grand total amount for the shipment   |
 
-To create the `Ready for Pickup` email template in HotWax Commerce, the provided XML data file needs to be imported via the following link- `https://{instanceName}.io/webtools/control/EntityImport`
+To create the `Ready for Pickup` email data template in HotWax Commerce, the provided XML data file needs to be imported via the following link- `https://{instanceName}.io/webtools/control/EntityImport`
 
-Here's the XML structure that generates the `Ready for Pickup` email template in HotWax Commerce:
+Here's the XML structure that generates the `Ready for Pickup` email data template in HotWax Commerce:
 
-To use this template with Iterable, insert your workflow ID within the electronic text.
+To use this template with Iterable, insert your workflow ID within the electronic text. To generate WorkFlow Id read this document here.
 
 ```xml
 
 <DataResource dataResourceId="READY_FOR_PICKUP" dataResourceTypeId="ELECTRONIC_TEXT"  dataTemplateTypeId="FTL" statusId="CTNT_PUBLISHED"/>
+
 <Content contentId="READY_FOR_PICKUP" contentTypeId="DOCUMENT" contentName="Template for Iterable ready for pickup email" dataResourceId="READY_FOR_PICKUP" statusId="CTNT_PUBLISHED"/>
+
 <ElectronicText dataResourceId="READY_FOR_PICKUP">
 {
   "email": "${sendEmailTo!}",
@@ -163,15 +165,15 @@ By following these steps, you'll create an automated workflow in Iterable that t
 
 ## Run Service to send email from on Iterable
 
-In HotWax Commerce, when orders are packed and ready for pickup, Iterable triggers an email to customers containing their specific details. Retailers need to run service or can create a new job which should be regularly scheduled on service `createKlaviyoEvent` to trigger the workflow. This step is essential for the effective initiation of the email communication process.
+In HotWax Commerce, when orders are packed and ready for pickup, Iterable triggers an email to customers containing their specific details. Retailers need to run service or can create a new job which should be regularly scheduled on service `sendReadyToPickupItemNotification` to trigger the workflow. This step is essential for the effective initiation of the email communication process.
 
 1. **Access the Service List:** Go to `HotWax Commerce Service List` through this link- `https://<instanceName>.io/webtools/control/ServiceList`
-2. **Locate `createIterableEvent` Service:** Find the service named `createIterableEvent` within the Service List interface. Click on the `createIterableEvent` service to access its details.
+2. **Locate `sendReadyToPickupItemNotification` Service:** Find the service named `sendReadyToPickupItemNotification` within the Service List interface. Click on the `sendReadyToPickupItemNotification` service to access its details.
 3. **Run the Service:** Look for the `Run Service` button available against the service name and click on it. Finally, click on `Submit` to execute the service.
 
 To ensure accurate email dispatch for this service, two essential parameters must be provided:
 
 | Parameters     | Value                                                                               |
 | -------------- | ----------------------------------------------------------------------------------- |
-| productStoreId | Enter the name of the product store for which emails will be dispatched.            |
-| emailType      | Specify the type of email (e.g., "PRDS\_READY\_TO\_PICKUP" for "Ready for Pickup"). |
+| shipmentId | The unique identification of the shipment in HotWax                                     |
+| emailTypeId    | Specify the type of email (e.g., "PRDS\_READY\_TO\_PICKUP" for "Ready for Pickup"). |
