@@ -15,25 +15,34 @@ To synchronize order meta fields from Shopify, we have configured a workflow tha
 The process can be divided into four main steps:
 
 1. **Preparing File for Shopify API Request**:
-   NiFi fetches all orders from the database that lack the required meta fields: `customerId` and `municipio`. The dataset with missing meta fields is converted into a JSON file suitable for a Shopify API request.
+   NiFi fetches all orders from the database that lack the required meta fields: `customerId` and `municipio`. The dataset with missing meta fields is converted into a JSON file suitable for a Shopify API request and kept on this FTP location-
+    ```
+   /home/{sftp-username}/hotwax/shopify/CreatedOrderIdsFeed
+    ```
 
 
 2. **Shopify API Call**:
-   NiFi calls the Shopify API to obtain the current meta fields under the namespace "HotwaxOrderDetails". The response from Shopify is received in JSON format.
+   A job scheduled in on maarg instance poll_OMSOrderIdsFeed_{brandName} picks the above created file and calls the Shopify API to obtain the current meta fields under the namespace "HotwaxOrderDetails". The response from Shopify is received in JSON format and placed at FTP location-
+    ```
+   /home/{sftp_username}/hotwax/shopify/OrdersMetaFieldsFeed
+    ```
 
 
 3. **Transformation of API Response**:
-   The JSON response from Shopify is not directly understandable by the OMS. NiFi processes this JSON file to convert it into a format that OMS can accept.
+   The JSON response from Shopify is not directly understandable by the OMS. NiFi processes this JSON file to convert it into a format that OMS can accept, and places the file on FTP location-
+    ```
+   /home/{sftp_username}/hotwax/oms/ImportJsonListData
+   ```
 
 
 4. **Job Picking and Data Import**:
    The transformed file is placed in an FTP location for OMS. The "Packaged Multi-Stream Import" job, located in the Miscellaneous section of the job manager app, retrieves the file and imports the data into OMS.
 
-This workflow ensures efficient synchronization of order meta fields from Shopify to OMS, maintaining data accuracy and consistency.
-
 #### To ensure the job runs properly, we need to verify the following:
-1. The corresponding custom NiFi flow is running properly.
-2. The Moqui service job poll_OMSOrderIdsFeed_ADOC is scheduled.
+1. The corresponding custom NiFi flow is properly schedule and running on respective NiFi instance.
+2. Go to the respective maarg instance e.g. https://adoc-sv-maarg-uat.hotwax.io
+3. After logging in with valid credentials, click on System, then select Service Job.
+4. Search for job poll_OMSOrderIdsFeed_{brandName}, check if the job is set up properly and having **paused** value as 'N'
 
 If the metafield sync is running as expected, on the order detail page these attributes should be present:
 
