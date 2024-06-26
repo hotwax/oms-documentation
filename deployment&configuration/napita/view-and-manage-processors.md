@@ -6,7 +6,7 @@ description: >-
 
 # View and Manage Processors
 
-The ability to view and manage processors within the Napita platform is crucial for users engaged in managing complex dataflows and ensuring the smooth processing of data between various systems. Processors, as components in Napita, play a vital role in tasks like data ingestion, transformation, and routing. They act as workers, handling incoming data and performing actions on it based on defined configurations.
+The ability to view and manage processors within the Napita platform is crucial for users engaged in managing complex dataflows and ensuring the smooth processing of data between various systems. Processors, as components in Napita, play a vital role in tasks like data ingestion, transformation, and routing. They act as workers, handling incoming data and performing actions based on defined configurations.
 
 Organizing processors within process groups and parent process groups offers users a structured approach to managing their data workflows. This feature enhances efficiency by allowing users to easily locate, monitor, and modify processors as needed within Napita. By providing a clear overview of the processors involved in specific functions, users can quickly identify areas for optimization or troubleshooting.
 

@@ -10,7 +10,7 @@ If the order contains a new customer not present in Netsuite, the system won't a
 
 ## Historical Customers
 
-If HotWax is being deployed in an environment where NetSutie already has a historical record of customers from Shopify and their Shopify internal ID, these need to synced into the OMS before orders can be synced.
+If HotWax is being deployed in an environment where NetSuite already has a historical record of customers from Shopify and their Shopify internal ID, these need to synced into the OMS before orders can be synced.
 
 {% hint style="danger" %}
 Duplicate customers will be created in NetSuite and HotWax if this sync is not completed before order import.
