@@ -2,7 +2,7 @@
 
 This document outlines the guidelines and best practices for using Shopify, OMS Instances, and Launchpad Apps within Hotwax Commerce. These guidelines are designed to ensure data integrity, security, and optimal system performance.
 
-## SHOPIFY 
+## Shopify
 
 1. **Order Creation:** Do not create draft orders in the DEV-OMS or any Production Instance.
 2. **Webstore Usage:** Never use your email address, credit card details, or phone number on the webstore. Use a [fake address](https://www.fakexy.com/fake-address-generator-ca) instead.
@@ -23,7 +23,7 @@ This document outlines the guidelines and best practices for using Shopify, OMS 
 9. **UAT Instances:** Do not edit any client orders, such as approving, brokering, or fulfilling them manually.
 10. **Testing:** Do not use Demo OMS for Testing Purposes. Always use Dev Oms for testing.
 
-## LAUNCHPAD
+## Launchpad Apps
 
  1. **Login Credentials:** Use only your credentials. Avoid using hotwax.user credentials.
  2. **Job Execution:** Do not run any job continuously. Run the job, wait approximately 5 minutes to see updated changes, then proceed. Run the bulk import job only after running any job for create or import jobs.
