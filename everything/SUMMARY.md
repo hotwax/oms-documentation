@@ -66,6 +66,10 @@
 
 * [UCG Order Reports](reports/orders.md)
 
+## Guidlines 
+
+ * [Internal Usage](Guidelines/instanceUsage.md)
+
 ## Additional Resources
 
 * [Update OMS Version](additional-resources/updateOmsVersion.md)
