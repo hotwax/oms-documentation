@@ -14,7 +14,7 @@ New Era Caps store fulfillment carrier is E-Hidden 3. This carrier does not offe
 
 Once tracking codes are generated for orders from the carrier’s portal, the store staff will reupload it into the fulfillment application. The app will then automatically save these tracking codes to the order shipments allowing them to be automatically fulfilled at the end of the day using the `Ship Packed Orders` job in the OMS.
 
-![Order Flow](/newEraCaps/assets/OrderFlowv3.jpg)
+![Order Flow](/newEraCaps/assets/nec2.png)
 
 ## Store Pickup
 
