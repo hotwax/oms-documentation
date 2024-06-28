@@ -48,6 +48,7 @@
   * [Order Cancellations](order-management/order-cancellations.md)
   * Troubleshooting
     * [Error due to Incorrect JSON](order-management/troubleshooting/order-import.md)
+    * [Order Approval Errors](order-management/troubleshooting/order-approval.md)
     * [Order Status Discrepancy](order-management/troubleshooting/orderStatusDiscrepancy.md)
     * [Order Indexing Discrepancy](order-management/troubleshooting/indexing-issue.md)
     * [Order Attribute is Missing](order-management/troubleshooting//orderAttributeMissing.md)
