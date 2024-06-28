@@ -42,11 +42,12 @@ To illustrate how returns and exchanges are managed, let's explore two common sc
 2. When the exchanged item is of lesser value than the returned item.
 
 Let's consider an example where a customer places an online order on Shopify for three items: Item A, Item B, and Item C, each priced at $10. This order, when imported into HotWax Commerce, will have a corresponding payment transaction of $30 (Shop Pay 1).
+
 | **Order Items** |
-| ----------- |
+| ----------- |                                            
 | A: $10      |
 | B: $10      |
-| C: $10      | 
+| C: $10      |
 | **Transactions** |
 |  ShopPay1: $30
 
@@ -58,7 +59,7 @@ This additional payment will be recorded in Shopify under the same order to ensu
 
 | **Order Items** | **Exchange Item** |
 | ----------- |-----------------------|
-| A: $10      | D: $20
+| A: ~~$10~~     | D: $20
 | B: $10      |
 | C: $10      | 
 | **Transactions** |                   |
@@ -69,22 +70,16 @@ The newly exchanged item in Shopify will be imported into HotWax Commerce as a n
 
 Adding all Shopify transactions to the main order inflates the payment captured on the original order. To handle this, HotWax Commerce creates balance transactions that serve as counterparts to the payments associated with exchange orders.
 
-
-| **Order Items** | **Exchange Item** |
-| ----------- |-----------------------|
-| A: ~~$10~~      | D: $20
-| B: $10      |
-| C: $10      | 
-| **Transactions** |                   |
-|  ShopPay1: $30 |                     |
-|  ShopPay2: $10 |                     |
-| ExchangeCredit: $10
-Status: Refund
-parentPaymentRef: ShopPay1          |
-| --------------|----------------------|
-| ExchangeCredit: $10 |                |
-|Status: Refund |                      |
-|parentPaymentRef: ShopPay2 |          |
+| Order Items | Exchange Item |
+|-------------|---------------|
+| A: ~~$10~~  | D: $20        |
+| B: $10      |               |
+| C: $10      |               |
+| **Transactions**                  |                                      |
+| ShopPay1: $30                   | ExchangeCredit: $10<br>parentPaymentRef: ShopPay1 |
+| ShopPay2: $10                   | ExchangeCapture: $10<br>parentPaymentRef: ShopPay2|
+| ExchangeCredit: $10<br>Status: Refund<br>parentPaymentRef: ShopPay1 |  |
+| ExchangeCredit: $10<br>Status: Refund<br>parentPaymentRef: ShopPay2 |  |
 
 The two exchange credit transactions show that $10 from Shop Pay 1 and $10 from Shop Pay 2 were taken from the original order and applied to the exchange order. The purpose of the exchange credit transactions is to ensure the payments for the original order are balanced.
 
@@ -106,6 +101,17 @@ In this scenario, when a customer returns an exchanged item, according to the Sh
 #### Returning the Entire Order Including Exchanged Items:
 In the event that the customer returns item D along with items B and C, Shopify links refund transactions to the transaction being refunded using a “parent ID”. Since HotWax Commerce has two different orders, it uses the Shopify transaction ID to identify which order the payment was captured on. This ensures that the refund is posted on the same order, maintaining traceability.
 
+| Order Items | Exchange Item |
+|-------------|---------------|
+| A: ~~$10~~  | D: ~~$20~~        |
+| B: ~~$10~~      |               |
+| C: ~~$10~~      |               |
+| **Transactions**                  |                                      |
+| ShopPay1: $30                   | ExchangeCredit: $10<br>parentPaymentRef: ShopPay1 |
+| ShopPay2: $10                   | ExchangeCapture: $10<br>parentPaymentRef: ShopPay2 |
+| ShopPayRefund1: $30<br>Status: Refund<br>parentPaymentRef: ShopPay1 | ExchangeRefund: $20  |
+| ShopPayRefund2: $10<br>Status: Refund<br>parentPaymentRef: ShopPay2 |  |
+
 The record of the exchange refund does not include a reference to the Shopify transaction. This happens because Shopify handles refunds by deducting the refunded amount from the total payment received. In Shopify, when processing refunds, they are linked to the transactions (Shop Pay 1 and Shop Pay 2) associated with the order, rather than to specific items within the order. For example, if you issue a refund of $30 and $10, these refunds will be associated with the Shop Pay 1 and Shop Pay 2 transactions respectively, rather than being directly linked to particular items from the order.
 
 ### Refund Processing in Shopify and HotWax Commerce
@@ -124,8 +130,21 @@ There are two valid ways to allocate these amounts
 
 Attribute the two $10 amounts to the exchanged order and attribute the $20 amount to the original order
 
+| Order Type        | Refund amount | Attribution  |
+|-------------------|---------------|--------------|
+| Original Order    | $20           | Shop Pay 1   |
+| Exchange Order    | $10           | Shop Pay 1   |
+| Exchange Order    | $10           | Shop Pay 2   |
+
+
 #### Method 2
 Attribute the $20 amount to the exchanged order and attribute the two $10 amounts to the original order.
+
+| Order Type        | Refund amount | Attribution  |
+|-------------------|---------------|--------------|
+| Original Order    | $10           | Shop Pay 1   |
+| Original Order    | $10           | Shop Pay 2   |
+| Exchange Order    | $20           | Shop Pay 1   |
 
 Both methods are correct and valid but create ambiguity in automatically deciding how to allocate these values in HotWax. This ambiguity makes it challenging for HotWax to match refunds accurately with Shopify’s payment transactions.
 Therefore, HotWax Commerce creates a record of the exchange refund when the exchanged item is returned to balance the payments on both the original order and the exchange order. The amount of the exchange refund will always be equal to the amount of the returned items in the exchange order.
@@ -134,6 +153,17 @@ Therefore, HotWax Commerce creates a record of the exchange refund when the exch
 
 When a customer returns item A, valued at $10, and opts for an exchange with another item D priced at $5, they will receive a refund of $5 to compensate for the price difference between the two items.
 In the event that the customer subsequently decides to return both the exchanged item and all the items from their original order, they will receive a total refund of $25, encompassing the combined value of all the returned items (Item B, Item C and Item D).
+
+| Order Items | Exchange Item |
+|-------------|---------------|
+| A: ~~$10~~  | D: ~~$20~~       |
+| B: ~~$10~~      |               |
+| C: ~~$10~~      |               |
+| **Transactions**                  |                                      |
+| ShopPay1: $30                   | ExchangeCredit: $10<br>parentPaymentRef: ShopPay1 |
+| ShopPay1 Refund1: $5                  ||
+| ShopPay1Refund2: $25<br>Status: Refund<br>parentPaymentRef: ShopPay1 | ExchangeRefund: $5  |
+
 
 In this case, there will be an attribution of $5 to the exchange order with the payment method as `Exchange Credit` and as there is no payment captured from the customer thus there will be no `Exchange Capture` on the exchange order.
 By managing all these scenarios, HotWax Commerce ensures that all financial transactions are accurately recorded, facilitating seamless integration with ERP systems and providing a clear audit trail for returns and exchanges.
