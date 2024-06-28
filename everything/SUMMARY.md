@@ -68,7 +68,7 @@
 
 ## Guidlines 
 
- * [Internal Usage](Guidelines/instance-usage.md)
+ * [Internal Usage](guidelines/instance-usage.md)
 
 ## Additional Resources
 
