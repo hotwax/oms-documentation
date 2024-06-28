@@ -172,13 +172,3 @@ By managing all these scenarios, HotWax Commerce ensures that all financial tran
 
 When a customer returns an item in Shopify POS and exchanges it for another item, the inventory of the exchanged item is decreased in Shopify POS. Once this order syncs to HotWax Commerce in the completed status, HotWax automatically reduces the inventory for the exchanged item.
 For items returned from the original order, Shopify POS sends the return data to HotWax Commerce, including the facility ID where the returned items are received. If the restocking flag is enabled, HotWax Commerce will restock the inventory at the specified facility based on the captured facility ID.
-
-
-
-
-
-
-                  
-
-      
-
