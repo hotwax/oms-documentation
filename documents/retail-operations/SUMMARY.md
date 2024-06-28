@@ -28,6 +28,7 @@
   * [Imports](data-manager/imports.md)
   * Troubleshooting
     * [Data not imported](data-manager/dataNotImportedInOMS.md)
+    * [SFTP errors](data-manager/data-import-errors.md)
     * [Manual Data import](data-manager/manual-data-import.md)
     * [Shopify MDM](data-manager/shopify-mdm.md)
     * [Schedule error mail](data-manager/schedule-error-mail.md)
