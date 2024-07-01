@@ -7,7 +7,7 @@ description: >-
 
 # Order Fulfillment
 
-<figure><img src="../.gitbook/assets/Order Fulfillment.png" alt=""><figcaption><p>Order allocation and fulfillment </p></figcaption></figure>
+<figure><img src="../.gitbook/assets/HotWax Fulfillment (1).png" alt=""><figcaption><p>Order allocation and fulfillment </p></figcaption></figure>
 
 ## How Order Fulfillment Works
 
