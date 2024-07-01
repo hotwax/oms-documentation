@@ -4,6 +4,7 @@
 
 * [Internal Usage](guidelines/instance-usage.md)
 * [GitHub Guideline](guidelines/github-guideline.md)
+* [Issue Report](guidelines/issue-report.md)
 * [Documentation Guideline](sop/documentation-guideline.md)
 * [Templated Replies](sop/template-replies.md)
 * [ChatGPT Prompts](sop/chatgpt-prompts.md)
@@ -61,8 +62,6 @@
   * [Listing User in Tathya](tathya/userCreation/listUsersTathya.md)
   * [User Permissions](tathya/usercreation/user-permissions.md)
 * [Reporting Discrepancies](tathya/sop/data-discrepancies.md)
-
-
 
 ## Additional Resources
 
