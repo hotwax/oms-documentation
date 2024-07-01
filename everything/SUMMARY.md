@@ -18,14 +18,12 @@
 * [SFTP Issue](sop/sftp-issue.md)
 * [Pre order catalog sync](sop/pre-order-sync.md)
 * [Multicurrency Sales Orders](sop/multicurrency-sales-orders.md)
-* [Multi Currency Configuration](sop/multicurrency-sales-orders.md)
 * [Add new variance reason](sop/add-new-variance-reason.md)
 * [Documentation guideline](sop/documentation-guideline.md)
 * [How to access Shopify POS APP](sop/access-shopify-pos-app.md)
 * [How to create a User in tathya](sop/create-user-tathya.md)
 * [Templated Replies](sop/template-replies.md)
 * [ChatGPT Prompts](sop/chatgpt-prompts.md)
-
 
 ## Tathya
 
@@ -66,10 +64,10 @@
 
 * [UCG Order Reports](reports/orders.md)
 
-## Guidlines 
+## Guidlines
 
- * [Internal Usage](guidelines/instance-usage.md)
- * [GitHub Guideline](guidelines/github-guideline.md)
+* [Internal Usage](guidelines/instance-usage.md)
+* [GitHub Guideline](guidelines/github-guideline.md)
 
 ## Additional Resources
 
