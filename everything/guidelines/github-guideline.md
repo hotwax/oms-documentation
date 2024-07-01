@@ -18,21 +18,32 @@ The GitHub UI is a highly accessible and straightforward method for adding docum
    - Click on the `Branch: main` dropdown.
    - Type a new branch name and click `Create branch`.
 
-3. **Add Your Documentation:**
+   ![github8](https://github.com/adayush17/oms-documentation/assets/72956835/647084ec-6202-4645-9c69-ba890bb8de4b)
+
+   ![github6](https://github.com/adayush17/oms-documentation/assets/72956835/0edeaccd-6f01-4c93-af30-ca99604238d7)
+
+4. **Add Your Documentation:**
    - Navigate to the directory where you want to add the file.
    - Click `Add file` > `Create a new file`.
    - Name your file with the `.md` extension and add your content in [markdown format](https://www.markdownguide.org/extended-syntax/).
 
-4. **Commit Changes:**
+5. **Commit Changes:**
    - On the main page of the repository, above the file list, click `Commits`.
+     ![github5](https://github.com/adayush17/oms-documentation/assets/72956835/db5e7d59-2636-4bd4-a08e-6fc18a3b2f67)
+     
    - Choose the option to commit directly to the new branch.
-   - Click `Commit new file`.
+   ![github4](https://github.com/adayush17/oms-documentation/assets/72956835/e4f166af-679b-4d76-85f7-e44e5391f4ec)
 
-5. **Open a Pull Request:**
+   - Click `Commit new file`.
+   ![github10](https://github.com/adayush17/oms-documentation/assets/72956835/1953229c-4522-4013-9ed4-315a2bc3e95f)
+
+7. **Open a Pull Request:**
    - Go to the `Pull Requests` tab.
    - Click `New pull request`.
    - Select your new branch as the source branch and your main branch as the destination branch.
    - Click `Create pull request`, enter a title and description, and submit the pull request.
+
+   ![pull-request-compare-pull-request 1](https://github.com/adayush17/oms-documentation/assets/72956835/890901a3-12ec-4901-bd33-9b6f128155bc)
 
 ### Using GitHub Desktop
 
@@ -47,22 +58,31 @@ GitHub Desktop offers a user-friendly graphical interface that simplifies Git op
 2. **Clone the Repository:**
    - Open GitHub Desktop.
    - Go to `File` > `Clone Repository`.
-   - Select the repository you want to clone and click `Clone`.
+   - Select the repository you want to clone and click `Clone`. Also You can directly open GitHub Desktop from Github.
+     
+     ![github3png](https://github.com/adayush17/oms-documentation/assets/72956835/5107381e-747b-4b8d-96e8-78a9c30f9cc3)
+     
+![clonerepo 1](https://github.com/adayush17/oms-documentation/assets/72956835/a36fb26e-4fd6-4d71-9bac-b700b2acf7f5)
+
 
 3. **Create a Branch:**
    - Go to the `Current Branch` dropdown at the top.
    - Click on `New Branch`.
    - Enter a name for your new branch and click `Create Branch`.
+   ![github2](https://github.com/adayush17/oms-documentation/assets/72956835/3cca50c9-9dad-4bf9-8d99-7a673641120c)
+
 
 4. **Add Your Documentation:**
    - Navigate to the repository directory on your local machine.
    - Create a new Markdown file (.md) and add your content.
+   ![folderofrepo 1](https://github.com/adayush17/oms-documentation/assets/72956835/1a97570b-d359-45c0-940d-d7c010229e43)
 
 5. **Stage and Commit Changes:**
    - Go back to GitHub Desktop.
    - You should see your new file listed under `Changes`.
    - Write a commit message in the `Summary` field.
    - Click `Commit to <branch_name>`.
+   ![gitcommit 1](https://github.com/adayush17/oms-documentation/assets/72956835/fe70fe28-5195-4a61-9639-09819f3995ed)
 
 6. **Push Changes:**
    - Click `Push Origin` to push your committed changes to the remote repository.
