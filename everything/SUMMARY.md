@@ -68,8 +68,8 @@
 
 ## Guidlines 
 
- * [Internal Usage](Guidelines/instanceUsage.md)
-  * [GitHub Guideline](guidelines/github-guideline.md)
+ * [Internal Usage](guidelines/instance-usage.md)
+ * [GitHub Guideline](guidelines/github-guideline.md)
 
 ## Additional Resources
 
