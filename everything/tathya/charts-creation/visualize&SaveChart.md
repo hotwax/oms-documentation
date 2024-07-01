@@ -79,7 +79,7 @@ Navigate to the top-right corner and click on the "SAVE" button. A Save Chart pa
 After saving, find your chart in the Charts tab for quick access.
 
 {% hint style="info" %}
-### Additional Tips:
+#### Additional Tips:
 
 * Experiment with different chart types to find the most effective representation for your data.
 * Utilize filters and additional SQL clauses for more refined queries and visualizations.
