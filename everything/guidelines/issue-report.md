@@ -75,15 +75,6 @@ Add any relevant information like screenshots, videos, jam links, etc.
 ### Development:
 - Link a branch or pull request by selecting a repository.
 
-### Using Jam for Github:
-- Jam can be used for reporting issues directly in various applications like GitHub.
-- **Steps to create issues using Jam:**
-  1. Open plugins/extensions in your browser.
-  2. Select the option (e.g., capture Screenshot, Record tab, Record Desktop, Instant replay).
-  3. Reproduce the issue or bug with a screen recording.
-  4. Add details like Issue Title, description, issue info (repository, assignees, labels, milestone).
-  5. Click on the "Create issue" button to be redirected to the issue tab.
-
 
 
 ## ClickUp
@@ -117,6 +108,20 @@ ClickUp is generally used for issues other than front-end issues like backend, d
 10. **Create the Task:**
     - Click on the “Create Task” button to finalize.
 
+## Jam
+- Jam can be used for reporting issues directly in various applications like GitHub, Clickup, Jira, GitLab,etc. For more details on using Jam, refer to [Jam's documentation](https://jam.dev/docs/get-started).
+
+- Using clear and structured issue templates significantly improves the quality of bug reports and feature requests, making it easier for the team to address and prioritize them effectively.
+
+
+### Using Jam for Github:
+- **Steps to create issues using Jam:**
+  1. Open plugins/extensions in your browser.
+  2. Select the option (e.g., capture Screenshot, Record tab, Record Desktop, Instant replay).
+  3. Reproduce the issue or bug with a screen recording.
+  4. Add details like Issue Title, description, issue info (repository, assignees, labels, milestone).
+  5. Click on the "Create issue" button to be redirected to the issue tab.
+
 ### Using Jam for ClickUp:
 - Jam can be integrated with ClickUp for direct issue creation.
 - **Steps to integrate Jam with ClickUp:**
@@ -124,5 +129,3 @@ ClickUp is generally used for issues other than front-end issues like backend, d
   - Follow the similar steps as described for GitHub issues using Jam.
 
 
-
-Using clear and structured issue templates significantly improves the quality of bug reports and feature requests, making it easier for the team to address and prioritize them effectively. For more details on using Jam, refer to [Jam's documentation](https://jam.dev/docs/get-started).
