@@ -2,7 +2,7 @@
 
 ## Guidlines
 
-* [Internal Usage](guidelines/instance-usage.md)
+* [Internal Usage](README.md)
 * [GitHub Guideline](guidelines/github-guideline.md)
 * [Issue Report](guidelines/issue-report.md)
 * [Documentation Guideline](sop/documentation-guideline.md)
@@ -22,7 +22,7 @@
 
 ## Napita
 
-* [Napita](README.md)
+* [Napita](<README (1).md>)
 * [Glossary](napita/glossary.md)
 * [Schedule Processors](napita/schedule-processors.md)
 * [View and Manage Processors](napita/view-and-manage-processors.md)
