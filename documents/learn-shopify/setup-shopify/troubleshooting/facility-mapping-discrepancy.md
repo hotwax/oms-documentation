@@ -1,7 +1,6 @@
 ---
-description: >- Learn how to troubleshoot facility mapping discrepancies
+description: Learn how to troubleshoot facility mapping discrepancies.
 ---
-
 # Facility Mapping Discrepancy
 
 When a facility in HotWax Commerce isn't properly linked with external systems, like Shopify, it can cause problems with managing inventory. If the mapping isn't accurate, inventory synchronization between systems might not work well, leading to differences in inventory levels.
