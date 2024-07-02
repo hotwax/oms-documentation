@@ -5,23 +5,23 @@ In HotWax Commerce, every change in inventory numbers for a product generates an
 ### Follow these steps to find the inventory log for a specific product:
 
 #### Go to the Inventory Page
-- Click on the hamburger menu located at the top left corner of the page
-- Scroll down to the Warehouse section.
-- Click on the Inventory button.
+- Click on the `hamburger` menu located at the top left corner of the page
+- Scroll down to the `Warehouse` section.
+- Click on the `Inventory` button.
 
 #### Select the Product
-- You will land on the page where multiple Items are listed.
-- Click on the specific Item for which you want to view the inventory log.
+- You will land on the `Find Product Inventory` page where multiple Items are listed.
+- Click on the specific item for which you want to view the inventory details
 
 #### Access the Inventory Log
-- At the bottom of the inventory view page, you will see a section labeled Inventory Logs.
-- Check the checkbox labeled Inventory Log or click on the Inventory Log blue text to display the inventory log of the product.
+- At the bottom of the `inventory view` page, you will see a section labeled Inventory Logs.
+- Check the checkbox labeled `Inventory Log` or click on the `Inventory Log` blue text to display the inventory log of the product.
 - This view will show all inventory changes and their reasons.
 
 #### Filter by Facility
 - To see inventory logs for a specific facility, use the facility dropdown menu at the top of the page.
-- Click on the Facility button and select the desired facility from the dropdown menu.
-- Again check the checkbox of the Inventory log to view the log specific to that facility.
+- Click on the `Facility` button and select the desired facility from the dropdown menu.
+- Again check the checkbox of the `Inventory log` to view the log specific to that facility.
 
 <img width="1130" alt="Screenshot 2024-07-02 at 4 36 48 PM" src="https://github.com/AjinkyaM1/Ajinkya-OMS-Documentation/assets/158986859/1b8dd0de-f835-42c3-afb5-504de6b54743">
 
