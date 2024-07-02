@@ -90,6 +90,8 @@
 * [Transfer orders](inventory/transfer-order/transfer-order-management.md)
   * [Transfer order fulfillment](transfer-order/transfer-order-fulfillment.md)
   * [Transfer order receiving](transfer-order/transfer-order-receiving.md)
+* Troubleshooting
+  * [View Inventory Log](inventory/troubleshooting/view-inventory-log.md)
 
 
 
