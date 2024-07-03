@@ -30,7 +30,7 @@ ATP = QOH - Reserved quantities
 
 Backorders are orders taken for products that are temporarily out of stock. These orders are referred to as “backorders” because they were previously in stock and will be available again soon but are currently unavailable due to high demand, inaccurate sales forecasting, or operational discrepancies.  
 For example, Brand ABC has an amazing season and sells all its inventory. Some regular items were bought frequently, so the merchandisers have already sent POs for these goods and know the approximate date of arrival. The brand utilizes this time for sales and starts taking orders for these products.  
-To know more about Backorders [Click Here](https://www.hotwax.co/blog/key-concepts-omnichannel-order-management).
+To learn more about Backorders [Click Here](https://www.hotwax.co/blog/key-concepts-omnichannel-order-management).
 
 ## Backorder Parking
 
@@ -47,7 +47,7 @@ Brokering History refers to the record of past brokering activities in HotWax Co
 
 The Brokering Queue serves as a waiting area for orders awaiting processing in the order brokering process. It ensures that orders are handled efficiently by analyzing order priority and determining the optimal fulfillment location based on proximity and inventory availability. Orders in Approved status waiting to be brokered are parked in the Brokering Queue until the brokering engine runs at frequent intervals.
 
-For example, if the brokering engine runs every three hours starting at 9:00 A.M., orders placed and approved at 10:00 A.M. will remain in the Brokering Queue until the next brokering engine run at 12:00 P.M. Similarly, orders placed and approved at 11:30 A.M. will also be processed at 12:00 P.M.
+For example, if the brokering engine runs every three hours starting at 9:00 A.M., orders placed and approved at 10:00 A.M. will remain in the Brokering Queue until the next brokering engine runs at 12:00 P.M. Similarly, orders placed and approved at 11:30 A.M. will also be processed at 12:00 P.M.
 
 To Know more about Brokering [Click Here](https://docs.hotwax.co/documents/v/retail-operations/orders/brokering).
 
@@ -70,6 +70,10 @@ Customer Service Representatives (CSRs) can utilize HotWax Commerce to get detai
 Digital gift cards, or e-gift cards, are virtual equivalents of physical gift cards. Customers receive them via email or text message along with a unique serial number that they can use to redeem the value stored in the card. When customers order a digital gift card on Shopify, the order is immediately auto-fulfilled, a serial number is assigned, and the value is loaded to activate the gift card. Consequently, when HotWax Commerce downloads that order from Shopify, it is automatically marked as "Completed". 
 
 To Know more about Gift cards [Click Here](https://docs.hotwax.co/documents/v/learn-hotwax-oms/business-process-models/giftcardorderslifecycle#digital-gift-cards).
+
+## Estimated Delivery Date (EDD)
+
+The Estimated Delivery Date (EDD) is the predicted date on which a customer can expect to receive their order. Displaying the EDD prominently on Product Display Pages (PDP) is crucial for managing customer expectations, as it provides clear and honest delivery information, enhancing the overall customer experience. With HotWax Commerce, retailers can display the EDD on Shopify, empowering customers with essential information about when they can anticipate their order's arrival.
 
 ## Excluded ATP
 
@@ -97,12 +101,20 @@ Facility groups are used to define the scope and functionality of facilities for
 
 In HotWax Commerce, Facility type refers to different locations used for fulfillment, including:
 
-Retail Store: Physical stores that fulfill online orders and facilitate in-store pickups.
-Warehouse: Centralized storage locations for fulfilling online orders and restocking stores.
-Outlet Store: Discount retail locations that fulfill orders and offer in-store pickups.
-Outlet Warehouse: Storage for outlet inventory, supporting fulfillment for outlet stores, and direct customer shipments.
+- Retail Store: Physical stores that fulfill online orders and facilitate in-store pickups.
+- Warehouse: Centralized storage locations for fulfilling online orders and restocking stores.
+- Outlet Store: Discount retail locations that fulfill orders and offer in-store pickups.
+- Outlet Warehouse: Storage for outlet inventory, supporting fulfillment for outlet stores, and direct customer shipments.
 
 Retailers can prioritize their brokering rules according to the facility types
+
+## Future Inventory
+
+Future Inventory refers to stock that is not currently available but is expected to be in stock at a later date. With HotWax Commerce, retailers can maximize sales at full price by offering customers early access to future inventory through pre-orders, thereby reducing the need for end-of-season markdowns. This strategy helps retailers maintain higher profit margins and better manage inventory levels.
+
+## Inventory Allocation
+
+Inventory Allocation in HotWax Commerce involves routing online orders to fulfillment locations using configurable rules. These rules consider factors such as shipping method, customer loyalty, proximity to the shipping address, inventory levels, store fulfillment capacity, and splitting configurations. This comprehensive approach ensures efficient and accurate fulfillment, optimizing inventory distribution and enhancing customer satisfaction.
 
 ## Inventory Variance
 Inventory variance refers to discrepancies between expected and actual inventory levels. It can be caused by factors such as damaged goods, discrepancies in shipment, or theft.
@@ -115,8 +127,20 @@ Item Fulfillment Status in HotWax Commerce tracks the current stage of an item w
 The Maximum Order Limit is a predefined limit set by a store, indicating the maximum number of orders it can fulfill in a day. When this limit is reached, the brokering engine automatically routes additional orders to alternative facilities that have capacity available. 
 Setting a maximum order limit helps the store manage its resources effectively. It ensures that orders can be fulfilled within operational constraints and prevents overcommitment of resources. By leveraging the brokering engine to redirect orders to other facilities as needed, retailer maintains their ability to meet customer demand without delay.
 
+## Mispack
+
+A Mispack refers to an error in the packing process where items are incorrectly packed, resulting in incorrect or incomplete orders being shipped to customers. Mispacks can lead to customer dissatisfaction and increased return rates. In HotWax Commerce, retailers can enforce scanning during the packing process to minimize mispacking incidents. This ensures that each item is accurately scanned and verified before being packed and shipped, thereby reducing errors and improving order accuracy and customer satisfaction.
+
+## Mixed Cart
+
+A Mixed Cart order allows customers to combine items for store pick-up and direct home delivery into a single order, streamlining the shopping experience by eliminating the need for separate transactions and potentially increasing Average Order Value (AOV). Notably, Shopify does not inherently support a Mixed Cart feature. With HotWax Commerce, Shopify merchants can leverage this functionality to offer a more flexible and convenient shopping experience, enhancing customer satisfaction and sales potential.
+
+## Multi-channel Inventory
+
+Multi-channel Inventory refers to inventory available for sale across various sales channels, including online stores, social media platforms, physical retail outlets, and third-party marketplaces. Managing inventory effectively across these channels is critical for retail brands to prevent overselling and ensure efficient order fulfillment. HotWax Commerce addresses this challenge by enabling the management of multiple Available-to-Promise (ATP) inventories for each sales channel. This feature allows brands to allocate distinct inventories to different channels, reducing the risk of delayed fulfillment or overselling penalties. Read our [Multi-channel sales inventory setup](https://docs.hotwax.co/documents/v/retail-operations/inventory/multichannel-inventory-setup) user manual to learn more.
 
 ## Online ATP
+
 Online ATP represents the unified inventory pool of actual sellable inventory count that is published on eCommerce platforms and can be promised to customers.  
 To calculate Online ATP, HotWax Commerce deducts inventory that is not available for sale from the ATP. This includes items such as safety stock, threshold quantities, orders in the brokering queue, and inventory from locations that are not participating in online selling.  
 HotWax Commerce calculates Online Available to Promise (ATP)  
@@ -124,13 +148,16 @@ Online ATP = QOH - (Reserved quantities + Safety stock + Threshold + Orders in b
 To Know more about Online ATP [Click Here](https://docs.hotwax.co/documents/v/learn-hotwax-oms/business-process-models/inventorylifecycle#push-online-atp-to-ecommerce).
 
 ## Order Fulfillment Status
+
 Order Fulfillment Status in HotWax Commerce tracks the current stage of an overall order within the order fulfillment process. This status helps in monitoring and managing orders, indicating whether an Order is created, approved, picked, packed, or shipped.
 
 ## Order Merging
+
 When a customer places multiple orders that can be fulfilled from the same location. Instead of treating them as separate orders, retailers prefer to merge them into a single shipment, ensuring a smoother and more cost-effective delivery process. Hotwax commerce enables order merging so that orders coming from the same location are fulfilled together.
 To Know more about Order Merging [Click Here](https://www.hotwax.co/blog/what-is-order-consolidation-and-order-merging)
 
 ## Packing Slip
+
 A packing slip is a document included with a shipment that lists the contents of the package. It typically includes details such as item names, quantities, and sometimes prices. This document assists both customers and senders in confirming that the correct items have been packed and shipped.
 In HotWax Commerce, store associates can choose whether they want to print the packing slip when packing orders  
 To know more about Packing Slip [Click Here](https://docs.hotwax.co/documents/orders/bopis/packed-order-tab).
@@ -140,43 +167,59 @@ To know more about Packing Slip [Click Here](https://docs.hotwax.co/documents/or
 Pickers are tasked with fulfilling orders by picking items from the store’s location according to a printed or digital picklist. This role can be created and assigned to a user in HotWax Commerce, ensuring efficient management of picking operations. Once a digital or printed picklist is created, it can be assigned to a user in the Picker role, to streamline the order fulfillment process.
 
 ## Picklist
+
 A picklist provides details such as inventory SKUs, quantities, and locations. It serves as a guide for pickers to pick items for orders fulfillment. To improve the picking process, store or fulfillment managers often organize inventory based on criteria such as Product Name, Bin ID, or Location Sequence ID. Structuring picklists to align with these strategies ensures an optimized route for pickers, minimizing time spent on picking and improving both speed and accuracy. 
 
 ## Pre-Orders
+
 Pre-orders are simply advance orders taken for future inventory. These products have not yet been released in the market and are still in planning or production, and thus not in stock. A pre-order is an order placed for a product that is not yet available for purchase or delivery. Customers can reserve the item in advance, and the order will be fulfilled once the product becomes available in stock.
 To Know more about Pre-Orders [Click Here](https://docs.hotwax.co/documents/v/retail-operations/orders/pre-orders)
 
 ## Pre-Order Parking
+
 Pre-order parking in HotWax Commerce is a holding area where pre-ordered items are kept until their inventory becomes available. Orders in this queue are not yet ready for fulfillment and wait until the specified stock arrives before being moved to the brokering queue for processing and shipping. This ensures efficient and timely handling of pre-orders based on inventory availability.
 To Know more about Pre-Order Parking [Click Here](https://docs.hotwax.co/documents/v/system-admins/administration/facilities/manage-parkings#default-parkings)
 
 ## Product Variants
+
 A product variant in HotWax Commerce refers to individual variations of a product, which can include different sizes, colors, or other features. The Find Product page displays these variants along with the product category, product name, product ID, and product features such as size and colors.
 
 ## Promise Date
+
 In HotWax Commerce, the promise date refers to the estimated date by which an order is expected to be fulfilled and shipped to the customer. It represents the commitment made by the seller regarding the delivery timeline for each order in the system. 
 
 ## Proximity
+
 In the context of HotWax Commerce, proximity refers to the distance or closeness of a particular location or fulfillment center to the customer's shipping address. It is a key factor in determining the most efficient and cost-effective way to fulfill orders, as closer proximity may result in shorter shipping times and lower shipping costs.
 
 ## Purchase Order
+
 A purchase order (PO) is a document created by a retailer and sent to their supplier to order items. It is typically generated in the retailer's ERP system. POs are synchronized from the ERP to HotWax Commerce to track ordered items and anticipate future inventory arrivals. This synchronization helps in calculating future inventory and managing pre-orders and back-orders. HotWax Commerce also syncs future inventory data to eCommerce platforms like Shopify, ensuring accurate pre-order management without overpromising or underpromising. 
 To learn more [Click Here](https://docs.hotwax.co/documents/v/retail-operations/orders/pre-orders/purchase-order-uploads)
 
 ## Quantity on Hand (QOH)
+
 QOH represents the total physical quantity of a product available at stores or warehouses. HotWax Commerce receives daily inventory feeds from the ERP system to update and maintain inventory data. Additionally, in the absence of ERP systems, HotWax Commerce also receives inventory feeds from Warehouse Management Systems (WMS) and Point of Sale (POS) systems.
 
 ## Rejected Orders
+
 Rejected orders are orders brokered for fulfillment but rejected by a warehouse or store due to physical inventory unavailability, often caused by damaged, lost, or stolen items. Rejected orders return to the brokering queue for reassignment. Rejected orders are managed by routing them back to the brokering queue for reassignment. The OMS will then route the order to another facility based on product availability, customer shipping preferences, and routing rules.
 
 ## Reserved Inventory
+
 Reserved inventories refer to inventory, whether in a store or warehouse, that has already been allocated to fulfill orders. Reserved quantities are not included in the "available to promise" (ATP) and are not eligible to be sold.
 
+## Return Merchandise Authorization(RMA)
+
+Return Merchandise Authorization (RMA) is a process that allows customers to return products for a refund, replacement, or repair. With HotWax Commerce, store managers can create RMAs for products sold online, facilitating the Buy Online, Return In-Store (BORIS) process. This feature streamlines returns management, improving customer satisfaction and operational efficiency.
+
 ## Safety Stock
+
 Safety stock helps retailers control how much inventory they promise to online channels. Once a store’s inventory count falls below the designated safety stock quantity, the remaining inventory will be reserved for in-store sales. Retailers often face inventory discrepancies, where a system’s inventory does not match the actual inventory in stores. Keeping safety stock also helps retailers mitigate the risk of taking orders that cannot be fulfilled due to inventory discrepancies. A robust omnichannel order management system helps retailers easily manage safety stock for each store. 
 To Know more about Safety Stock [Click Here](https://docs.hotwax.co/documents/v/retail-operations/inventory/safety-stock)
 
 ## SendSale Orders
+
 Send Sale orders in HotWax Commerce refer to orders captured through the Shopify POS App. These orders are taken in the store by store associates on behalf of customers for items that are not in stock in the store. The items are then shipped to customers at their preferred shipping location.
 In HotWax Commerce, these orders are downloaded and processed just like online orders. However, the channel tagged for the order in HotWax Commerce is Point of Sale (POS).
 
@@ -186,13 +229,19 @@ A shipping label is a document used by shipping carriers to deliver a package to
 HotWax Commerce integrates with third-party shipping carriers like FedEx and shipping aggregators like ShipStation to obtain shipping rates and generate labels. The fulfillment team can create packages and generate labels directly within HotWax Commerce, without needing to move to a separate system. 
 
 ## Shopify Order ID
+
 This is a unique identifier assigned by Shopify to each order. It serves as a reference point for tracking and managing orders within the Shopify platform. Additionally, users can conveniently view the order details directly on Shopify by clicking on the provided link associated with the Shopify order ID on the view order detail page.
 
 ## Shopify Order Name
+
 The order name in Shopify typically refers to a customizable name or title assigned to an order on Shopify for further order identification.
 
 ## Shopify Order Number
 Shopify assigns a distinct numerical identifier to each order. It acts as another unique reference for orders, often used in communication and documentation.
+
+## Soft Allocation
+
+Soft Allocation is a feature in HotWax Commerce that performs real-time eligibility checks for items in a customer's shopping cart. By evaluating the cart items alongside the destination zip code, Soft Allocation ensures compliance with predefined criteria set by retailers, such as verifying if all items can be shipped from a single location. This process guarantees efficient validation of shipping eligibility, aligning with the requirements of various specialty shipping carriers. Read [here](https://docs.hotwax.co/documents/v/learn-hotwax-oms/journeys/introduction-brokering-and-allocation/soft-allocation) to learn more about soft allocation.
 
 ## Split Shipment
 
@@ -202,7 +251,11 @@ When configuring brokering rules in HC, administrators can specify conditions fo
 
 To know more about Split Shipment [Click Here](https://docs.hotwax.co/documents/v/retail-operations/orders/order-management/update-sales-order#allow-splitting)
 
-### Threshold
+## Stock Keeping Unit (SKU)
+
+A Stock Keeping Unit (SKU) is a unique identifier assigned to each product and its variants, used for inventory tracking and management. In HotWax Commerce, retailers can choose their preferred product identifier, such as an SKU, to map products between Shopify and HotWax Commerce, ensuring accurate and efficient inventory synchronization and management across platforms.
+
+## Threshold
 To mitigate the risk of overselling caused by inventory inaccuracies, merchandisers allocate buffer stock on a company-wide basis before committing inventory to online sales channels. This buffer inventory is referred to as the Inventory Threshold. Unlike safety stock, which is managed at the store level, the Inventory Threshold ensures that reported inventory levels across all products are adjusted to account for potential inaccuracies before allocating stock to online channels.
 
 For example, let’s say Brand ABC sets the threshold of 10 units for red socks in Stores X and Y. This will impact these stores’ inventory levels, in the following manner:
@@ -212,5 +265,16 @@ Store Y Inventory: 100 Units
 Threshold: 10 Units  
 Inventory Available for Online Orders: 200 Units - 10 Units (threshold) = 190 Units
 
-### Unfillable Parking
+## Transfer Order
+
+A Transfer Order is crucial for maintaining inventory balance, minimizing stockouts, and optimizing allocation across stores or warehouses. Effective management enhances operational efficiency, reduces excess inventory costs, and improves customer satisfaction. Types include:
+
+- Warehouse to Store: Replenishes retail inventory from the central warehouse.
+- Store to Warehouse: Returns excess or unsold inventory for redistribution.
+- Store to Store: Transfers inventory between stores to optimize stock levels.
+
+The HotWax Commerce Store Fulfillment App streamlines transfer order fulfillment, managing inventory movement and ensuring accurate tracking. Additionally, the receiving app facilitates inventory receipt in stores after transfers. Read [transfer order lifecycle](https://docs.hotwax.co/documents/v/learn-hotwax-oms/business-process-models/transferorderlifecycle) to learn more.
+
+## Unfillable Parking
+
 When inventory is unavailable for orders at any location, the order routing engine moves them from the Brokering Queue to the Unfillable Parking. A dedicated brokering run is performed to check the orders in the Unfillable Parking and allocate inventory to them.
