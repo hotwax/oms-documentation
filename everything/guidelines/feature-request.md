@@ -21,7 +21,7 @@
 ### Processing the Request:
 
 1. Pick up the issue from the `Backlog` and move it to `Select for Development`.
-2. Create internal tickets in Hotwax Commerce using `ClickUp` and `GitHub`. For more [read here](https://docs.hotwax.co/everything/guidlines/github-guideline).
+2. Create internal tickets in Hotwax Commerce using `ClickUp` and `GitHub`. For more [read here](github-guideline.md).
 3. Add the link of the internally created ticket to the corresponding **Jira issue**.
 4. Move the issue from `Select for Development` to `In Progress`.
 
