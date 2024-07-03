@@ -1,3 +1,7 @@
+---
+description: Troubleshooting guide for duplicate orders
+---
+
 # Order Duplication Issues in HotWax Commerce
 
 ## Objective
