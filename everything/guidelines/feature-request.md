@@ -1,5 +1,5 @@
 
-# Feature Request by Client
+# Managing client feature requests in Jira
 
 **Significance:** The feature request process in HotWax Commerce is crucial for incorporating client feedback and continuously improving the platform. By allowing clients to suggest new features or enhancements, HotWax Commerce ensures that the platform evolves according to user needs and industry trends.
 
@@ -21,7 +21,7 @@
 ### Processing the Request:
 
 1. Pick up the issue from the `Backlog` and move it to `Select for Development`.
-2. Create internal tickets in Hotwax Commerce using `ClickUp` and `GitHub` (refer to guidelines for details).
+2. Create internal tickets in Hotwax Commerce using `ClickUp` and `GitHub`. For more [read here](https://docs.hotwax.co/everything/guidlines/github-guideline).
 3. Add the link of the internally created ticket to the corresponding **Jira issue**.
 4. Move the issue from `Select for Development` to `In Progress`.
 
