@@ -93,6 +93,7 @@
   * [Transfer order receiving](transfer-order/transfer-order-receiving.md)
 * Troubleshooting
   * [View Inventory Log](inventory/troubleshooting/view-inventory-log.md)
+  * [Inventory Synchronization Errors](inventory/troubleshooting/inventory-synchronization.md)
 
 
 

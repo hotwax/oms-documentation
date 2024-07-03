@@ -1,6 +1,8 @@
-# Inventory Synchronization Issues
+---
+description: Troubleshooting guide to resolve inventory synchronization errors
+---
 
-## Objective
+# Inventory Synchronization Errors
 
 Inventory synchronization issues can occur at multiple stages, leading to discrepancies in stock levels across platforms. Accurate inventory synchronization is crucial to prevent underselling or overselling for retailers.
 This document aims to provide detailed steps to diagnose and resolve issues related to inventory synchronization between ERP systems, HotWax Commerce, and Shopify. 
@@ -13,7 +15,7 @@ During the process of importing an inventory file via SFTP, connection failures 
 ### Steps to Diagnose and Resolve
 
 1. **Navigate to Your SFTP File Path**
-   - Access your SFTP server using your preferred SFTP client such as Filezilla
+   - Access your SFTP server using your preferred SFTP client such as Filezilla.
 
 2. **Check the File with Import Date and Time**
    - Locate the file by its import date and time to identify the specific file that was partially processed.
@@ -32,7 +34,7 @@ The inventory file might be placed in an incorrect SFTP path, preventing HotWax 
    - Verify the SFTP file path where the inventory file should be located.
 
 2. **Consult the User Manual**
-   - Refer to the [HotWax Commerce User Manual](data-manager/data-import-errors.md) for detailed instructions on setting up the correct file path.
+   - Refer to the [HotWax Commerce User Manual](../../data-manager/data-import-errors.md) for detailed instructions on setting up the correct file path.
 
 ## Scenario 3: Shopify Job Not Running
 
@@ -56,19 +58,19 @@ HotWax Commerce relies on two main jobs for inventory synchronization to Shopify
 
 1. **Ensure Jobs are Scheduled**
    - In HotWax Commerce, navigate to the `Inventory` page in the `Job Manager App`
-   - Verify that `Update Recent Inventory Changes` and "Hard Sync Job" are scheduled as per your preferred frequency.
+   - Verify that [`Update Recent Inventory Changes`](../../job-workflows/inventory.md) and `Hard Sync Job`(../../job-workflows/inventory.md) are scheduled as per your preferred frequency.
 
 2. **Check Job Status**
    - Look into the job pipeline to ensure these jobs are not marked as failed.
    - Re-run the jobs if necessary.
 
 3. **Ensure `Process Uploads to eCommerce` Job is Running**
-   - Go to the `Miscellaneous` page in the `Job Manager App`
+   - Go to the `Miscellaneous` page in the `Job Manager App`.
    - Verify that the `Process Uploads to eCommerce` job is running to process all uploaded files to Shopify.
 
 ## Scenario 5: Insufficient Permissions on Shopify
 
-If the Shopify shop does not have the necessary write permissions configured, synchronization attempts from HotWax Commerce will fail. This often happens if the access scope is mistakenly set to "Read Only."
+If the Shopify shop does not have the necessary write permissions configured, synchronization attempts from HotWax Commerce will fail. This often happens if the access scope is mistakenly set to `Read Only.`
 
 ### Steps to Diagnose and Resolve
 
