@@ -51,7 +51,8 @@
     * [Order Approval Errors](order-management/troubleshooting/order-approval.md)
     * [Order Status Discrepancy](order-management/troubleshooting/orderStatusDiscrepancy.md)
     * [Order Indexing Discrepancy](order-management/troubleshooting/indexing-issue.md)
-    * [Order Attribute is Missing](order-management/troubleshooting//orderAttributeMissing.md)
+    * [Order Attribute is Missing](order-management/troubleshooting/orderAttributeMissing.md)
+    * [Order Duplication](order-management/troubleshooting/duplicate-orders.md)
 
 * [Brokering](orders/brokering/README.md)
   * [Order Routing](brokering/configurableRouting.md)
