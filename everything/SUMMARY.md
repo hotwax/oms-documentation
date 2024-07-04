@@ -21,6 +21,7 @@
 * [How to access Shopify POS APP](sop/access-shopify-pos-app.md)
 * [How to create a User in tathya](sop/create-user-tathya.md)
 * [Create a Job using Data Manager Configuration](sop/job-creation-by-data-configuration.md)
+* [Report Request](sop/report-request.md)
 
 ## Napita
 
