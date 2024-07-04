@@ -60,12 +60,8 @@ Video: Add box
 
 Print the shipping labels and packing slips to attach with the packed orders.
 
-{% embed url="https://youtu.be/ZwLfYG0_RkI" %}
-Video: Generate shipping label
-{% endembed %}
-
-{% embed url="https://youtu.be/gDnutKazRJk" %}
-Video: Generate packing slip
+{% embed url="https://youtu.be/lVzHg8QK9Js" %}
+Video: Pack Orders
 {% endembed %}
 
 **Unpack Orders**
