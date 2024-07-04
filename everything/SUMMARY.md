@@ -5,7 +5,7 @@
 * [Internal Usage](README.md)
 * [GitHub Guideline](guidelines/github-guideline.md)
 * [Issue Report](guidelines/issue-report.md)
-* [Feature Request](guidelines/feature-request.md)
+* [Feature Requests on Jira](guidelines/feature-request.md)
 * [Documentation Guideline](sop/documentation-guideline.md)
 * [Templated Replies](sop/template-replies.md)
 * [ChatGPT Prompts](sop/chatgpt-prompts.md)
