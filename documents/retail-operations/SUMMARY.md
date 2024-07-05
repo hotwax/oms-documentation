@@ -88,6 +88,7 @@
 * [Safety stock](inventory/safety-stock/README.md)
   * [Set Bulk Safety Stock](inventory/safety-stock/set-bulk-safety-stock.md)
   * [Set Individual Safety Stock](inventory/safety-stock/set-individual-safety-stock.md)
+  * [Set Facility-wise Safety Stock](inventory/safety-stock/facility-wise-safety-stock.md)
 * [Multichannel inventory setup](inventory/multichannel-inventory-setup.md)
 * [Transfer orders](inventory/transfer-order/transfer-order-management.md)
   * [Transfer order fulfillment](transfer-order/transfer-order-fulfillment.md)
