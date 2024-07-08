@@ -161,7 +161,7 @@ Video: Initial order import
 
 ### Presell page
 
-Displays and allows configurations on the Preorders and Backorders related jobs.
+Displays and allows configurations on the Pre-orders and Backorders related jobs.
 
 
 

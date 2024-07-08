@@ -27,7 +27,7 @@ Displays the jobs for initial OMS setup to import all products and orders.​
 
 <summary>Pre-order</summary>
 
-Holds the Preorders and Backorders jobs.
+Holds the Pre-orders and Backorders jobs.
 
 
 

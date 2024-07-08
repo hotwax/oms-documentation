@@ -4,7 +4,7 @@ description: Select and cancel one or bulk orders.
 
 # Cancel Orders by Product
 
-_**This document outlines a step-by-step process for cancelling preorders from product page in the preorder application:**_
+_**This document outlines a step-by-step process for cancelling pre-orders from product page in the pre-order application:**_
 
 {% hint style="info" %}
 Cancel function gets enabled only when any quantity is entered.&#x20;

@@ -57,11 +57,11 @@ To schedule the job, Merchandisers navigate to the `Job Manager` > `Pre Orders` 
 
 * After confirming the activation of `Process Upload` jobs, Merchandisers can schedule the `presell catalog sync` job. To delve deeper into understanding how pre-orders are listed on Shopify, comprehensive insights are available in our [Shopify Pre-order integration guide.](../../learn-shopify/integration/how-are-pre-orderable-and-backorderable-products-listed-or-delisted-on-shopify/presell-catalog-management.md)
 
-Upon listing all products on Shopify, it's crucial to appropriately tag them with `HC: Preorder` or `HC: Backorder`. This tagging process is easily managed by enabling the checkbox for the `Add pre-order tags` and `Add backorder tags` jobs, running every 15 minutes. These jobs utilize the preorder category in the meta fields to add the suitable tag to the parent product on Shopify.
+Upon listing all products on Shopify, it's crucial to appropriately tag them with `HC: Pre-order` or `HC: Backorder`. This tagging process is easily managed by enabling the checkbox for the `Add pre-order tags` and `Add backorder tags` jobs, running every 15 minutes. These jobs utilize the pre-order category in the meta fields to add the suitable tag to the parent product on Shopify.
 
-The HotWax Commerce Preorder PDP app employs tags and meta fields to modify the `Add to Cart` button and display the expected delivery date on Shopify PDP. Products labeled with `HC: Preorder` tags will alter the `Add to Cart` button to `Pre-Order`, while those with `HC: Backorder` tags will display `Backorder`.
+The HotWax Commerce Pre-order PDP app employs tags and meta fields to modify the `Add to Cart` button and display the expected delivery date on Shopify PDP. Products labeled with `HC: Pre-order` tags will alter the `Add to Cart` button to `Pre-Order`, while those with `HC: Backorder` tags will display `Backorder`.
 
-Likewise, it's essential to schedule the `Remove pre-order tags` and `Remove backorder tags` jobs to eliminate the `HC: Preorder` and `HC: Backorder` tags when a product is removed from the pre-order catalog.
+Likewise, it's essential to schedule the `Remove pre-order tags` and `Remove backorder tags` jobs to eliminate the `HC: Pre-order` and `HC: Backorder` tags when a product is removed from the pre-order catalog.
 
 **Update Pre-Order Category Item Arrival Date**
 

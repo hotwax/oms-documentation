@@ -13,8 +13,8 @@ HotWax Commerce automatically handles the release and brokering of Shopify Pre-O
 
 HotWax Commerce strategically organizes all pre-orders in a dedicated queue until their physical inventory is received. This approach ensures that brokering processes are not initiated for orders lacking available inventory. Once the pre-order inventory arrives, HotWax Commerce transfers all orders from the pre-order queue to the brokering queue. This allows the system's engine to efficiently match the most suitable inventory with specific orders for fulfillment. To accommodate diverse retailer preferences, HotWax Commerce offers two methods for automatically releasing Pre-Orders:
 
-1. **Daily Job**: Merchandisers can schedule this job through the `Job Manager App` > `Pre Order Page` by enabling the `Run Daily` checkbox in the auto-releasing card. This automated process releases pre-orders where the shipping date has arrived and inventory is available for release.
-2. **Immediate Release:** This method doesn't require scheduling. Merchandisers can trigger instant release by clicking the `release` button associated with the `Release Preorders` job name. This action promptly releases all pre-orders in the queue, facilitating their allocation to the respective fulfillment locations.
+1. **Daily Job**: Merchandisers can schedule this job through the `Job Manager App` > `Pre-Order Page` by enabling the `Run Daily` checkbox in the auto-releasing card. This automated process releases pre-orders where the shipping date has arrived and inventory is available for release.
+2. **Immediate Release:** This method doesn't require scheduling. Merchandisers can trigger instant release by clicking the `release` button associated with the `Release Pre-orders` job name. This action promptly releases all pre-orders in the queue, facilitating their allocation to the respective fulfillment locations.
 
 <figure><img src="../.gitbook/assets/job-manager.hotwax.io_pre-order (4).png" alt=""><figcaption><p>Pre-order Automatic release</p></figcaption></figure>
 
