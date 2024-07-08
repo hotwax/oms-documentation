@@ -4,6 +4,10 @@
 
 ## 2024
 
+* [June'24](2024/june24/README.md)
+  * [Process Returns without Order IDs](2024/june24/process-returns-without-order-ids.md)
+  * [Schedule Inventory Restockings](2024/june24/schedule-inventory-restockings.md)
+  * [Introducing Company App](2024/june24/introducing-company-app.md)
 * [May'24](may24/README.md)
   * [Added support for configurable products](may24/added-support-for-configurable-products.md)
   * [Manage multi-currency sales orders and returns](may24/manage-multi-currency-sales-orders-and-returns.md)
@@ -27,7 +31,7 @@
   * [Bundle product fulfillment](january-24/bundle-products.md)
   * [Introducing Facility Groups Page](january-24/facility-groups-page.md)
   * [Introducing Order Routing App](january-24/order-routing-app.md)
- 
+
 ## 2023
 
 * [Nov-Dec'23](nov-dec23/README.md)
@@ -90,7 +94,7 @@
   * [Custom Date Format](january23/custom-date-format.md)
   * [Shopify Webhooks](january23/shopify-webhooks.md)
   * [Pre-Order Listing-Delisting](january23/pre-order-listing-delisting.md)
- 
+
 ## 2022
 
 * [December'22](december22/ProductUpdates-December22.md)
