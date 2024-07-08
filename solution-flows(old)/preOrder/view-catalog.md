@@ -4,7 +4,7 @@ description: Get a consolidated view of all items listed in pre-orders.
 
 # View Catalog
 
-_**This document outlines a step-by-step process for Viewing the catalog of preorders items in the preorder application:**_
+_**This document outlines a step-by-step process for Viewing the catalog of pre-orders items in the pre-order application:**_
 
 1. Go to the Catalog page.
 2. Select Pre-order or Backorder buttons to view all available items listed under respective categories, or deselect Pre-order or Backorder buttons to view all available items listed.

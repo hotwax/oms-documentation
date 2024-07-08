@@ -4,7 +4,7 @@ description: Select and update promise dates on individual or bulk orders.
 
 # Edit Promise Date
 
-_**This document outlines a step-by-step process for editing arrival dates on preorders  in the preorder application:**_
+_**This document outlines a step-by-step process for editing arrival dates on pre-orders  in the pre-order application:**_
 
 **Edit promise date on single order:**
 

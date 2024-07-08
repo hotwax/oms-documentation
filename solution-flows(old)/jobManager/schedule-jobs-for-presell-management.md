@@ -6,7 +6,7 @@ description: >-
 
 # Schedule Jobs for Presell management
 
-_**This document outlines a step-by-step process for viewing and editing preorders handling jobs in the OMS.**_
+_**This document outlines a step-by-step process for viewing and editing pre-orders handling jobs in the OMS.**_
 
 {% hint style="info" %}
 Pre-order Jobs are not customizable for accuracy purpose.&#x20;

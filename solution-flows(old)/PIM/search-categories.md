@@ -7,7 +7,7 @@ description: Search categories by the Category ID, Category name or keyword.
 _**This document outlines a step-by-step process for searching categories in the OMS:**_
 
 {% hint style="info" %}
-Categories in OMS are created to manage products meticulously viz. Purchase Allow, Purchase Not Allow, Preorder, Backorder to ease users discretion. &#x20;
+Categories in OMS are created to manage products meticulously viz. Purchase Allow, Purchase Not Allow, Pre-order, Backorder to ease users discretion. &#x20;
 {% endhint %}
 
 1. Go to the Hamburger Menu > PIM > Categories to open the View Categories page.

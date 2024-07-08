@@ -33,11 +33,11 @@ Order brokering is the process of analyzing the order priority and determining t
 For example, if brokering engines are scheduled to run at 9:00 A.M. and 12:00 P.M.,orders placed between 9:00 A.M. and 12:00 P.M. will remain in the queue until 12:00 P.M. brokering session.
 
 
-**Preorder Parking**
+**Pre-order Parking**
 
-Preorders offer businesses the opportunity to secure orders for products ahead of their official release. Customers can reserve these items in advance, and preorder parking provides a digital space within the system to manage these orders until the products become available for fulfillment.
+Pre-orders offer businesses the opportunity to secure orders for products ahead of their official release. Customers can reserve these items in advance, and pre-order parking provides a digital space within the system to manage these orders until the products become available for fulfillment.
 
-For instance, NotNaked intends to launch a new style of t-shirt in the upcoming season. Even though the inventory from the purchase order won't arrive until 01-03-2024, the brand can start accepting pre-orders from 01-01-2024. These pre-orders will be stored in the preorder parking area until the products are ready for delivery.
+For instance, NotNaked intends to launch a new style of t-shirt in the upcoming season. Even though the inventory from the purchase order won't arrive until 01-03-2024, the brand can start accepting pre-orders from 01-01-2024. These pre-orders will be stored in the pre-order parking area until the products are ready for delivery.
 
 **Backorder Parking**
 

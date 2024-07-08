@@ -6,7 +6,7 @@ description: >-
 
 # Individual Order Release
 
-_**This document outlines a step-by-step process for releasing individual preorders from the preorder application:**_
+_**This document outlines a step-by-step process for releasing individual pre-orders from the pre-order application:**_
 
 {% hint style="info" %}
 Release function gets enabled only when order is selected.

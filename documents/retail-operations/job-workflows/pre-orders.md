@@ -31,7 +31,7 @@ The Pre-sell Catalog job automatically manages the addition or removal of pre-se
 
 ### **Troubleshooting Use Case**  
 
-**Issue 1:** New or existing products do not appear as preorders or backorders.
+**Issue 1:** New or existing products do not appear as pre-orders or backorders.
 
 **Possible Causes:**  
 - Item does not exist in the system  
@@ -46,7 +46,7 @@ The Pre-sell Catalog job automatically manages the addition or removal of pre-se
 
 Products from purchase orders that don't meet these criteria won't be listed in HotWax Commerce's pre-order catalog. It's important to ensure that purchase order items adhere to these criteria for accurate listing.
 
-**Issue 2:** Products are not removed from the preorder or backorder category.
+**Issue 2:** Products are not removed from the pre-order or backorder category.
 
 **Resolution Steps:** 
 1. Ensure all future inventory of pre-orders is received. 
@@ -73,14 +73,14 @@ Products from purchase orders that don't meet these criteria won't be listed in 
    **Job Name:** Bulk Upload to add preorder tags to products
 
 **Description**
-These jobs facilitate updates to the Presell catalog on Shopify, encapsulating all pre-order-related changes, including promised delivery dates, product categories, and statuses. This file is placed on a dedicated SFTP location. These jobs set the preorder or backorder category in the meta fields to add the suitable tag to the parent product on Shopify.
-1. Tagging as **HC:Preorder** or **HC:Backorder** can be easily managed by enabling the checkbox for the Add pre-order tags and Add backorder tags jobs, which helps to employ tags and meta fields to modify the Add to Cart button and display the expected delivery date on Shopify PDP. 
-2. It is essential to click checkboxes to schedule the Remove Pre-order tags and Remove Backorder tags jobs to eliminate the HC: Preorder and HC: Backorder tags when a product is removed from the pre-order catalog.
+These jobs facilitate updates to the Presell catalog on Shopify, encapsulating all pre-order-related changes, including promised delivery dates, product categories, and statuses. This file is placed on a dedicated SFTP location. These jobs set the pre-order or backorder category in the meta fields to add the suitable tag to the parent product on Shopify.
+1. Tagging as **HC:Pre-order** or **HC:Backorder** can be easily managed by enabling the checkbox for the Add pre-order tags and Add backorder tags jobs, which helps to employ tags and meta fields to modify the Add to Cart button and display the expected delivery date on Shopify PDP. 
+2. It is essential to click checkboxes to schedule the Remove Pre-order tags and Remove Backorder tags jobs to eliminate the HC: Pre-order and HC: Backorder tags when a product is removed from the pre-order catalog.
 3. Add Promise Date check box is also to be selected to enable setting the expected delivery dates on the product on Shopify PDP
 
 ### Troubleshooting Use Case
 
-**Issue 1:** The product is not updated as a preorder or a backorder at Shopify and PDP
+**Issue 1:** The product is not updated as a pre-order or a backorder at Shopify and PDP
 
 **Possible Causes:** 
 
@@ -94,7 +94,7 @@ These jobs facilitate updates to the Presell catalog on Shopify, encapsulating a
 2. The promise date of a PO item must be in the future, guaranteeing that the purchase order item will arrive in the future, not from an old PO.
 3. The current inventory of the item must be 0, indicating it's out of stock and qualified for Pre-Order or backorder. 
 4. If the 'isNewProduct' field of a PO is marked as “yes”, it’s identified as a Pre-Order product; if marked “no”, it's categorized as a backorder product.
-5. Item is associated with the preorder or backorder category.
+5. Item is associated with the pre-order or backorder category.
 6. Ensure the file is read and processed from the SFTP location.
 
 Products from purchase orders that don't meet these criteria won't be listed in Shopify’s pre-order catalog. Contact the Shopify team if your product is still not listed on Shopify.
@@ -124,7 +124,7 @@ When there are any changes in the arrival dates of the multiple items in the pur
 
 **Possible Causes:** 
 1. PO status is canceled
-2. Item does not exist anymore in the preorder or backorder category.
+2. Item does not exist anymore in the pre-order or backorder category.
 3. Item has Inventory in the system.
 4. The generated file is  not processed by Shopify and is lying unread at specified SFTP location
 
