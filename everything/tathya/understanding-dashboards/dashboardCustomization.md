@@ -6,8 +6,6 @@ description: >-
 
 # Dashboard Customizations
 
-
-
 ## Tabs
 
 Tabs in Tathya act as a handy way to organize and structure your dashboard. They serve as separate sections, allowing you to group related charts or information together, making navigation a breeze.
@@ -71,7 +69,7 @@ To do so:
 5. Create a new section inside the JSON METADATA named label\_colors, specifying the desired colors for each metric/dimension.
 
 {% hint style="info" %}
-### Additional Tips:
+#### Additional Tips:
 
 * **Drag-and-Drop Functionality:** Use the drag-and-drop feature to rearrange tabs, rows, columns, headers, markdown, and dividers effortlessly. This enables quick adjustments to your dashboard layout.
 * **Responsive Design:** Keep in mind that your dashboard layout is responsive, ensuring an optimal viewing experience across different devices. Test the layout on various screen sizes to ensure consistency.

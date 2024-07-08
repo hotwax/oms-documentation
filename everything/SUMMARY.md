@@ -1,8 +1,32 @@
 # Table of contents
 
+## Guidlines
+
+* [Internal Usage](README.md)
+* [GitHub Guideline](guidelines/github-guideline.md)
+* [Issue Report](guidelines/issue-report.md)
+* [Feature Requests on Jira](guidelines/feature-request.md)
+* [Documentation Guideline](sop/documentation-guideline.md)
+* [Templated Replies](sop/template-replies.md)
+* [ChatGPT Prompts](sop/chatgpt-prompts.md)
+* [Web Tools](webtools/readme.md)
+
+## SOP Documents
+
+* [HotWax Commerce Deployment](sop/deployment.md)
+* [SFTP Issue](sop/sftp-issue.md)
+* [Pre order catalog sync](sop/pre-order-sync.md)
+* [Multicurrency Sales Orders](sop/multicurrency-sales-orders.md)
+* [Add new variance reason](sop/add-new-variance-reason.md)
+* [How to access Shopify POS APP](sop/access-shopify-pos-app.md)
+* [How to create a User in tathya](sop/create-user-tathya.md)
+* [Create a Job using Data Manager Configuration](sop/job-creation-by-data-configuration.md)
+* [Report Request](sop/report-request.md)
+* [Tathya login Issue](sop/tathya-login-issue.md)
+
 ## Napita
 
-* [Napita](README.md)
+* [Napita](<README (1).md>)
 * [Glossary](napita/glossary.md)
 * [Schedule Processors](napita/schedule-processors.md)
 * [View and Manage Processors](napita/view-and-manage-processors.md)
@@ -11,21 +35,6 @@
 * [Bulletins](napita/bulletins.md)
 * [Data Provenance](napita/data-provenance.md)
 * [Empty Queues](napita/empty-queues.md)
-
-## SOP Documents
-
-* [HotWax Commerce Deployment](sop/deployment.md)
-* [SFTP Issue](sop/sftp-issue.md)
-* [Pre order catalog sync](sop/pre-order-sync.md)
-* [Multicurrency Sales Orders](sop/multicurrency-sales-orders.md)
-* [Multi Currency Configuration](sop/multicurrency-sales-orders.md)
-* [Add new variance reason](sop/add-new-variance-reason.md)
-* [Documentation guideline](sop/documentation-guideline.md)
-* [How to access Shopify POS APP](sop/access-shopify-pos-app.md)
-* [How to create a User in tathya](sop/create-user-tathya.md)
-* [Templated Replies](sop/template-replies.md)
-* [ChatGPT Prompts](sop/chatgpt-prompts.md)
-
 
 ## Tathya
 
@@ -57,19 +66,6 @@
   * [Listing User in Tathya](tathya/userCreation/listUsersTathya.md)
   * [User Permissions](tathya/usercreation/user-permissions.md)
 * [Reporting Discrepancies](tathya/sop/data-discrepancies.md)
-
-## Webtools
-
-* [Web Tools](webtools/readme.md)
-
-## Reports
-
-* [UCG Order Reports](reports/orders.md)
-
-## Guidlines 
-
- * [Internal Usage](guidelines/instance-usage.md)
- * [GitHub Guideline](guidelines/github-guideline.md)
 
 ## Additional Resources
 
