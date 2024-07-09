@@ -13,7 +13,7 @@ description: >-
 
 HotWax Commerce now supports creating returns without requiring Order IDs for retailers who accept returns beyond the specified return window.
 
-[Read update](https://www.hotwax.co/product-updates/process-returns-without-order-ids)
+[Read update](process-returns-without-order-ids.md)
 
 <figure><img src="https://www.hotwax.co/hubfs/Return.png" alt=""><figcaption></figcaption></figure>
 
@@ -37,7 +37,7 @@ Retailers can now enable forced order item scanning during packing to ensure tha
 
 Merchandisers can now schedule inventory restockings to ensure product inventory is available at their preferred times.
 
-[Read update](https://www.hotwax.co/product-updates/schedule-inventory-restocking)
+[Read update](schedule-inventory-restockings.md)
 
 <figure><img src="https://www.hotwax.co/hubfs/Import.png" alt=""><figcaption></figcaption></figure>
 
@@ -45,6 +45,6 @@ Merchandisers can now schedule inventory restockings to ensure product inventory
 
 Introducing Company App for retailers to create product stores and manage product store configurations.
 
-[Read update](https://www.hotwax.co/product-updates/introducing-company-app)
+[Read update](introducing-company-app.md)
 
 <figure><img src="https://www.hotwax.co/hubfs/company%20app.png" alt=""><figcaption></figcaption></figure>
