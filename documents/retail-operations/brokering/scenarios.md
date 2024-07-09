@@ -156,3 +156,32 @@ Retailers want to implement a split shipping threshold, allowing orders to be fu
 3. **Inventory Allocation Process**
    - **Primary Check:** The routing engine first checks if any facility has inventory above the safety stock threshold.
    - **Secondary Check:** If no facility meets the threshold for all order items, the order is split and items are allocated from different locations to ensure faster fulfillment.
+
+## Scenario 8: Managing Store Fulfillment Based on Rent Agreements
+
+Retailers with diverse rent agreements, particularly in malls where rent may be tied to sales revenue, need to strategically manage order fulfillment to avoid high rental costs. Prioritizing stores with fixed or lower rent costs for order fulfillment can enhance profitability.
+
+### Steps to Implement
+
+1. **Facility Groups Setup**:
+   - **Group 1: Fixed/Lower Rent Stores**:
+     - Create a facility group that includes only the stores with fixed or lower rent costs. 
+     - This prioritization ensures that orders are first routed to these cost-effective locations.
+   - **Group 2: All Stores**:
+     - Create another facility group that includes all stores, serving as a fallback to fulfill orders if the prioritized stores do not have sufficient inventory.
+
+2. **Inventory Rules Definition**:
+   - **Inventory Rule 1: Fixed/Lower Rent Stores**:
+     - Set up an inventory rule that applies to the first facility group (Fixed/Lower Rent Stores).
+     - This rule ensures that orders are first routed to these stores, minimizing rental costs.
+   - **Inventory Rule 2: All Stores**:
+     - Define a secondary inventory rule using the second facility group (All Stores).
+     - This rule ensures that if the prioritized stores cannot fulfill the order, it will be routed to any store, preventing unfulfilled orders.
+
+3. **Activation and Scheduling**:
+   - **Activate Inventory Rules**:
+     - Ensure both inventory rules are activated to be in effect.
+   - **Schedule Brokering Runs**:
+     - Schedule the brokering runs to execute these inventory rules at regular intervals, maintaining efficient order fulfillment.
+
+
