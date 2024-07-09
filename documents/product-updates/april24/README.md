@@ -1,6 +1,6 @@
 ---
 description: >-
-  HotWax Commerce's April updates introduce Shopify BOPIS/Preorder script
+  HotWax Commerce's April updates introduce Shopify BOPIS/Pre-order script
   configuration, enabling PDP changes and improved log management.
 ---
 
@@ -16,7 +16,7 @@ Retailers can now view order item history when a new item is added to an already
 
 2. **Shopify:** Configure Shopify Scripts
 
-Users can now configure Shopify BOPIS/Preorder scripts directly from the Shopify Shop page in HotWax Commerce, enabling PDP changes on Shopify.
+Users can now configure Shopify BOPIS/Pre-order scripts directly from the Shopify Shop page in HotWax Commerce, enabling PDP changes on Shopify.
 
 [Read update](configure-shopify-bopis-pre-order-scripts.md)
 

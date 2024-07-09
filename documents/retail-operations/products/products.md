@@ -2,7 +2,7 @@
 
 The `Find Product` page within HotWax Commerce serves as a centralized hub for managing products. This page offers a consolidated view of all the products with individual variant information, displaying product category, product name, product ID, and product features viz, size, colors, etc. It enables users to have a quick view of all existing products and carry out product management efficiently.
 
-HotWax Commerce `Find Product` page also empowers users to use multiple filter options to refine their product search. The prominent Preorders and Backorders filters help users to search out specific products, under these categories, enabling retailers to view the products currently on preorder and backorder.
+HotWax Commerce `Find Product` page also empowers users to use multiple filter options to refine their product search. The prominent Pre-orders and Backorders filters help users to search out specific products, under these categories, enabling retailers to view the products currently on pre-order and backorder.
 
 **Step-by-Step Usage Instructions:**
 
@@ -24,7 +24,7 @@ Video: Search Product Page
 
 ### Search Products using Filters
 
-Enables users to search products, simultaneously using `single` or “multiple filters'', and allows users to choose required options from the selected filter dropdowns to refine the search results. This feature is significant for looking up the required set of products to efficiently manage and monitor the specified products and their variants by “Category”, “Features”, “Tags”, and “Price”, or group search by Preorders and Backorders.
+Enables users to search products, simultaneously using `single` or “multiple filters'', and allows users to choose required options from the selected filter dropdowns to refine the search results. This feature is significant for looking up the required set of products to efficiently manage and monitor the specified products and their variants by “Category”, “Features”, “Tags”, and “Price”, or group search by Pre-orders and Backorders.
 
 Generally, for a keyword search, all the related products appear and are displayed on the screen. To search for a specific product, users can either choose the options from available filters or enter a value set of product names and features or any other value together to excel the search. For example, if a product has different sizes and is available in multiple colors, and want to search “Checked Shirt, Size S, and Colour Black” users can put in the value in the search bar as “Check Shirt” and use `Feature` Filter to get the specific product.
 
@@ -39,7 +39,7 @@ Video: Search Product Page
 | Feature Filter         | Filter products by choosing product features like “color” “shades”, “sizes”, “donations”, etc.                                                                                                                                                                                                            |
 | Tags Filter            | Filter products by choosing any tags available on them like ‘sale”, “discount”, “size range”, “men”, “women”, etc. For example, if a retailer wants to view shirts on discount, they can search for shirts using the search bar and Discount from Tags filter to get specific products in search results. |
 | Exclude Tags Filter    | It refines the search by excluding product tags. This will help users to streamline bulk product lookup, where the products having those tags will not be displayed during the search.                                                                                                                    |
-| Preorder Filter        | Filter out all existing products under the preorder category.                                                                                                                                                                                                                                             |
+| Pre-order Filter        | Filter out all existing products under the pre-order category.                                                                                                                                                                                                                                             |
 | Backorder Filter       | Filter out all existing products under the backorder category.                                                                                                                                                                                                                                            |
 | Include Parent Product | Helps users view parent products with respective variants.                                                                                                                                                                                                                                                |
 

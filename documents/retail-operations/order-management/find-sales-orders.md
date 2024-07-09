@@ -48,7 +48,7 @@ HotWax Commerce has different queues that act as a virtual facility to park the 
 
 | Queue Name         | Description                                                                                                                                   |
 |-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
-| Pre-Orders        | Orders that are placed in Preorder parking (To hold pre-ordered items until released from HC) can be shown by clicking on the Pre-orders checkbox. |
+| Pre-Orders        | Orders that are placed in Pre-order parking (To hold pre-ordered items until released from HC) can be shown by clicking on the Pre-orders checkbox. |
 | Back Orders       | Orders that are placed in Backorder parking (To hold back-ordered items until released from the HC) can be shown by clicking on the Back-orders checkbox. |
 | Brokering Queue   | Orders that are placed in the Brokering Queue (To hold orders for in-stock items until the next brokering run) can be shown by clicking on the Brokering Queue checkbox. |
 | Unfillable Hold   | Orders that are placed in the Unfillable Hold (To hold unfillable items from further brokering and auto-cancellation) can be shown by clicking on the Unfillable Hold checkbox. |

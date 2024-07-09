@@ -5,7 +5,7 @@
 ## Setup Shopify Integration
 
 * [Install HotWax commerce App](ShopifyIntegration/README.md)
-* [Enable BOPIS/Preorder on Shopify](ShopifyIntegration/bopis-preorder-scripts.md)
+* [Enable BOPIS/Pre-order on Shopify](ShopifyIntegration/bopis-preorder-scripts.md)
 * [Data Mappings](ShopifyIntegration/SetupMappings.md)
 * [Setup Facilities](ShopifyIntegration/MapLocations.md)
 

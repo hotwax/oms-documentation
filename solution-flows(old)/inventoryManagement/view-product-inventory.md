@@ -15,7 +15,7 @@ Select any facility from the facility dropdown to view product inventory details
 1. Go to the Hamburger Menu > Warehouse > Inventory > Select any Product to open the View Products page.
 2. Check the overview section to refer to the Product information, such as:
    * Threshold value,&#x20;
-   * Reserved Inventory status in the brokering queue or preorder queue,
+   * Reserved Inventory status in the brokering queue or pre-order queue,
    * Excluded inventory
    * &#x20;Total quantity in hand (QOH) and&#x20;
    * Online ATP with Purchase Order details if any.

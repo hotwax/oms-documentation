@@ -4,7 +4,7 @@ description: Select and cancel individual or bulk orders.
 
 # Cancel Orders
 
-_**This document outlines a step-by-step process for cancelling preorders  in the preorder application:**_
+_**This document outlines a step-by-step process for cancelling pre-orders  in the pre-order application:**_
 
 **Cancel Single Order:**
 
