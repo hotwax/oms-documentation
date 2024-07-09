@@ -13,11 +13,9 @@ Tathya users sometimes face login issues due to forgotten credentials, which can
 
 * If the login is successful, share the same old credentials with the user.
 
-{% code overflow="wrap" %}
-```
-Note: We follow a standard template when creating a password, such as "Ht5@nusername".
-```
-{% endcode %}
+{% hint style="info" %}
+We follow a standard template when creating a password, such as "Ht5@nusername".
+{% endhint %}
 
 ## Scenario 2: Updating the Password via LDAP
 
@@ -49,4 +47,6 @@ Note: We follow a standard template when creating a password, such as "Ht5@nuser
 
 * Share the new credentials with the user.
 
-**Note:** For detailed instructions on creating or updating users in LDAP, refer [Tathya user setup](../tathya/userCreation/setupLDAPaccount.md).
+{% hint style="info" %}
+For detailed instructions on creating or updating users in LDAP, refer [Tathya user setup](../tathya/userCreation/setupLDAPaccount.md).
+{% endhint %}
