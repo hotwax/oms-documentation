@@ -3,12 +3,12 @@
 ## Guidlines
 
 * [Internal Usage](README.md)
+* [Documentation Guideline](sop/documentation-guideline.md)
+* [ChatGPT Prompts](sop/chatgpt-prompts.md)
 * [GitHub Guideline](guidelines/github-guideline.md)
 * [Issue Report](guidelines/issue-report.md)
 * [Feature Requests on Jira](guidelines/feature-request.md)
-* [Documentation Guideline](sop/documentation-guideline.md)
 * [Templated Replies](sop/template-replies.md)
-* [ChatGPT Prompts](sop/chatgpt-prompts.md)
 * [Web Tools](webtools/readme.md)
 
 ## SOP Documents
@@ -21,6 +21,7 @@
 * [How to access Shopify POS APP](sop/access-shopify-pos-app.md)
 * [How to create a User in tathya](sop/create-user-tathya.md)
 * [Create a Job using Data Manager Configuration](sop/job-creation-by-data-configuration.md)
+* [Check Job Frequencies](sop/check-job-frequency.md)
 * [Report Request](sop/report-request.md)
 * [Tathya login Issue](sop/tathya-login-issue.md)
 
@@ -38,7 +39,7 @@
 
 ## Tathya
 
-* [Introduction](tathya/README.md)
+* [Tathya](tathya/README.md)
 * [Database Configuration](tathya/databaseConfiguration/README.md)
   * [Additional Settings](tathya/databaseConfiguration/additionalConfigurations.md)
 * [Charts Creation](tathya/charts-creation/README.md)
