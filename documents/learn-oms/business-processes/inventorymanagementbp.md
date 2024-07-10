@@ -50,7 +50,7 @@ In the case of NetSuite ERP, we recommend creating one package for each shipment
 
 Learn more about [transfer orders](https://docs.hotwax.co/documents/v/learn-hotwax-oms/business-process-models/transferorderlifecycle)
 
-<figure><img src="../.gitbook/assets/Cycle Counting.png" alt=""><figcaption><p>Receiving inbound shipments using HotWax Receiving App</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Receiving Transfer Order.png" alt=""><figcaption><p>Receiving inbound shipments using HotWax Receiving App</p></figcaption></figure>
 
 #### Handle Receiving of Unexpected Items in a Shipment
 
@@ -86,7 +86,7 @@ Retailers that aim for 98% to 99% inventory accuracy, regularly perform cycle co
 
 
 
-<figure><img src="../.gitbook/assets/Inventory Cycle Count.png" alt=""><figcaption><p>Cycle count sync</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Cycle Counting.png" alt=""><figcaption><p>Cycle count sync</p></figcaption></figure>
 
 #### Performing Cycle Counts
 

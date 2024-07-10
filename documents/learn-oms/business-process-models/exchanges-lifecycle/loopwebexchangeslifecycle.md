@@ -4,7 +4,7 @@ description: >-
   RMS, eCommerce, ERP, and HotWax Commerce.
 ---
 
-# Web Exchanges with Loop
+# Web exchanges with Loop
 
 <figure><img src="../../.gitbook/assets/exchanges bpm.png" alt=""><figcaption><p>Web exchanges lifecycle business process model</p></figcaption></figure>
 

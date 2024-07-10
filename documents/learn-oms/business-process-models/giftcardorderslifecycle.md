@@ -4,7 +4,7 @@ description: >-
   digital as well as physical gift card orders placed by customers on eCommerce.
 ---
 
-# Gift Card Orders Lifecycle
+# Gift card orders lifecycle
 
 Gift cards are stored-value cards that carry a value determined at the time of the card's purchase. They are often given as gifts or rewards and are redeemable for products up to the value stored on the card.
 

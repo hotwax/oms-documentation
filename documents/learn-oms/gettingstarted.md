@@ -2,7 +2,7 @@
 
 HotWax Commerce is a cloud-based Omnichannel Order Management System that provides retailers with the best return on their inventory by facilitating omnichannel solutions such as Same-Day Buy Online Pick-Up In Store (BOPIS), Buy Online Return In Store, Ship From Store, and Pre-Orders to increase conversion rates and profitability. Here’s how HotWax Commerce fits into your tech ecosystem:
 
-<figure><img src=".gitbook/assets/HotWax Commerce.png" alt=""><figcaption><p>HotWax Commerce in your tech stack </p></figcaption></figure>
+<figure><img src=".gitbook/assets/HotWax Commerce.png" alt=""><figcaption><p>HotWax Commerce in your tech stack</p></figcaption></figure>
 
 HotWax Commerce integrates with multiple systems present in your tech stack, like eCommerce, ERP, WMS, and POS, creates a single sellable inventory count, syncs inventory in real time across sales channels, and efficiently routes online orders to the best fulfillment locations.
 

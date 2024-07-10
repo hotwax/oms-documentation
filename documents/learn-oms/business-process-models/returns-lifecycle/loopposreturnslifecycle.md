@@ -4,7 +4,7 @@ description: >-
   managed between RMS, POS, ERP, and HotWax Commerce.
 ---
 
-# In-Store Returns with Loop
+# In-store returns with Loop
 
 <figure><img src="../../.gitbook/assets/in-store returns loop bpm.png" alt=""><figcaption><p>In-store returns lifecycle business process model</p></figcaption></figure>
 

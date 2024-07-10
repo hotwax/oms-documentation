@@ -4,7 +4,7 @@ description: >-
   managed between RMS, eCommerce, ERP, and HotWax Commerce.
 ---
 
-# In-Store Exchanges with Loop
+# In-store exchanges with Loop
 
 <figure><img src="../../.gitbook/assets/In-store exchanges loop bpm.png" alt=""><figcaption><p>In-store exchanges lifecycle business process model</p></figcaption></figure>
 
