@@ -50,7 +50,7 @@ It’s crucial to note that inventory counts for the items shipped from the ware
 
 ## Store to Store Transfer Orders
 
-<figure><img src="broken-reference" alt=""><figcaption><p>Store to store transfer orders lifecycle business process model</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/store to store transfer order bpm.png" alt=""><figcaption><p>Store to store transfer orders lifecycle business process model</p></figcaption></figure>
 
 ### 1. Transfer Orders Created in NetSuite and Imported into HotWax Commerce
 
