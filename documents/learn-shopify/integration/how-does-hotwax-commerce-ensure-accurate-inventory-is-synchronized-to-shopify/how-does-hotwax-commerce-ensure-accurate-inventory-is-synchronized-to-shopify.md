@@ -16,18 +16,17 @@ HotWax Commerce provides a unified view of inventory by seamlessly connecting wi
 
 **Warehouse receiving:** HotWax Commerce requires timely notification of new inventory when warehouses or fulfillment centers receive purchase orders or returns.
 
-HotWax Commerce determines the "Available to Promise (ATP)" or the amount of inventory that can be sold and then sends it to Shopify. This makes HotWax Commerce the ultimate authority on inventory availability.
+HotWax Commerce determines the "Online Available to Promise (ATP)" or the amount of inventory that can be sold and then sends it to Shopify. This makes HotWax Commerce the ultimate authority on inventory availability.
 
-**How Does Hotwax Commerce Calculate The “Available To Promise” Before Pushing It To Shopify?**
+**How Does Hotwax Commerce Calculate The “Online ATP” Before Pushing It To Shopify?**
 
-HotWax Commerce syncs the inventory levels of products available on both HotWax Commerce and Shopify. The product ID from Shopify is stored in HotWax Commerce and serves as a unique identifier to match the products in both systems. HotWax Commerce considers various factors, such as safety stock, threshold, reserved quantity (inventory allocated to sales orders but not fulfilled), orders in the brokering queue (orders that are captured but inventory is not allocated), and excluded facilities, when calculating ATP.
+HotWax Commerce syncs the inventory levels of products available on both HotWax Commerce and Shopify. The product ID from Shopify is stored in HotWax Commerce and serves as a unique identifier to match the products in both systems. HotWax Commerce considers various factors, such as safety stock, threshold, reserved quantity (inventory allocated to sales orders but not fulfilled), orders in the brokering queue (orders that are captured but inventory is not allocated), and excluded facilities when calculating ATP.
 
 Let’s take a look at an example:
 
 The product "blue shirt" from Brand ABC has been assigned plate number 100 QOH, and it has already received orders for 10 of them, and inventory is allocated for 5 sales orders. The ATP can be calculated using the following formula.
 
-\
-ATP = QOH - (Reserved quantities + Safety stock + Threshold + Orders in brokering queue + Excluded facilities’ ATP)
+Online ATP = QOH - (Reserved quantities + Safety stock + Threshold + Orders in brokering queue + Excluded facilities’ ATP)
 
 Given:
 
@@ -36,7 +35,7 @@ Given:
 Hence,
 
 $$
-ATP = 100 - (5+5+5+5+5) = 100 - (25) = 75
+Online ATP = 100 - (5+5+5+5+5) = 100 - (25) = 75
 $$
 
 HotWax Commerce will now push 75 units to Shopify as sellable inventory for online orders.

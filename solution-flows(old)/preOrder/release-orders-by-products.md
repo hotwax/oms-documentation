@@ -6,7 +6,7 @@ description: >-
 
 # Release Orders by Products
 
-_**This document outlines a step-by-step process for releasing preorders by products in the preorder application:**_
+_**This document outlines a step-by-step process for releasing pre-orders by products in the pre-order application:**_
 
 {% hint style="info" %}
 Release function gets enabled only when any quantity is entered.

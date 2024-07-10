@@ -6,7 +6,7 @@ description: Effectively manage product pricing variations with Price Levels in 
 
 Price levels are used to manage multiple prices for a product. This is useful when a product is priced differently based on conditions like sales channel. In NetSuite, you can set up different prices levels for each item and service. You can also enter an additional sales price for online items.
 
-To sync orders, you need to setup the price level that should be sent to NetSuite. This value can be reconfigured whenver different price levels need to be used.
+To sync orders, you need to setup the price level that should be sent to NetSuite. This value can be reconfigured whenever different price levels need to be used.
 
 ## XML Data
 

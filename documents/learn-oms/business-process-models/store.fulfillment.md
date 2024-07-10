@@ -5,7 +5,7 @@ description: >-
   received at stores.
 ---
 
-# Store Fulfillment Lifecycle
+# Store fulfillment lifecycle
 
 HotWax Commerce, being as an Order Management System, finds the best location to fulfill an online order from. When approved orders are brokered and allocated to a store location, they are automatically reflected in HotWax Commerce Store Fulfillment App.
 

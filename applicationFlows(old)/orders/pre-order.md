@@ -6,7 +6,7 @@
 _Access to application is secure and permission-driven, ensuring only authoritative users can view and release orders_.
 {% endhint %}
 
-HotWax Commerce's Preorder Management App enables users to manage preorders and backorders, with planned future inventory to fulfill the orders.
+HotWax Commerce's Pre-order Management App enables users to manage pre-orders and backorders, with planned future inventory to fulfill the orders.
 
 
 
@@ -120,13 +120,13 @@ Shows the brokering jobs in pending and running state
 
 ### Products List page
 
-Displays all products accepting Preorders and Backorders with applicable variants.
+Displays all products accepting Pre-orders and Backorders with applicable variants.
 
 
 
 **Characteristics:**
 
-**a. Product Specifications:** Enables users to see variants accepting for preorder and backorder categories.
+**a. Product Specifications:** Enables users to see variants accepting for pre-order and backorder categories.
 
 **b. Ordered Item Count:** The current total number of ordered quantities is available for quick reference.
 

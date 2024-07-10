@@ -6,7 +6,7 @@ description: >-
 
 # Bulk Order Release
 
-_**This document outlines a step-by-step process for releasing preorders in bulk from the preorder application:**_
+_**This document outlines a step-by-step process for releasing pre-orders in bulk from the pre-order application:**_
 
 {% hint style="info" %}
 Release function gets enabled only when orders are selected.

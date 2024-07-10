@@ -18,28 +18,25 @@
   * [Catalog Page](bopis/catalog-page.md)
   * [Settings Page](bopis/settings-page.md)
   * [Troubleshooting](bopis/bopis-troubleshooting.md)
-    *[Notifications](bopis/notifications.md)
 * [Fulfillment](fulfillment/README.md)
   * [Order Fulfillment](fulfillment/shipOrders.md)
+  * [Service Products](fulfillment/service-products.md)
+  * [Kit Products](fulfillment/kit-products.md)
   * [Rejection](fulfillment/rejection.md)
   * [Picking App](fulfillment/pickingApp.md)
   * [CSV Support](fulfillment/csvSupport.md)
   * [Settings Page](fulfillment/fulfillment-setting-page.md)
   * [Order Lookup](fulfillment/order-lookup.md)
-  * [Troubleshooting]
-    *[Shipping Label Generations](fulfillment/shipping-label-generation.md)
-
-* [Returns](returns/readme.md)
+  * [Shipping Label Generations](fulfillment/shipping-label-generation.md)
+  * [Change Language](fulfillment/change-language.md)
+* [Returns](orders/returns/README.md)
   * [In-Store Returns](returns/in-store-returns.md)
 
 ## Inventory
 
 * [Receiving](receiving/README.md)
   * [Inventory Receiving](receiving/receiving.md)
-* [Inventory count](inventory-count/inventory-count.md)
-* [Transfer orders](transfer-order/transfer-order-management.md)
-  * [Transfer order fulfillment](transfer-order/transfer-order-fulfillment.md)
-  * [Transfer order receiving](transfer-order/transfer-order-receiving.md)
-
-
- 
+* [Inventory Count](inventory-count/inventory-count.md)
+* [Transfer Orders](transfer-order/transfer-order-management.md)
+  * [Transfer Order Fulfillment](transfer-order/transfer-order-fulfillment.md)
+  * [Transfer Order Receiving](transfer-order/transfer-order-receiving.md)

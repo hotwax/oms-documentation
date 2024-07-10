@@ -10,7 +10,7 @@ description: >-
 
 If an order has a discount code applied to it, during order sync to NetSuite, HotWax checks if the applied code is available in NetSuite. If the code is available then the exact code is used and the value of the discount is shared as the "Rate".
 
-In the event that the code is not available in NetSuite, HotWax will use a default discount code 'SHOPIFY DISCOUNT' along with the value of the discount. For this failover to work the discount item must be created in NetSuite first.
+In the event that the code is not available in NetSuite, HotWax will replace the code with a default discount code 'SHOPIFY DISCOUNT' along with the value of the discount in "Amount". For this failover to work the discount item must be created in NetSuite first.
 
 1. Go to **Lists > Accounting > Items > New**
 2. Select Item Type: **Discount**

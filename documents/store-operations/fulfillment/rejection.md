@@ -85,3 +85,34 @@ If the reason (Enumeration) `enumTypeId` is not `REPORT_NO_VAR`, the rejection w
 | NO\_VARIANCE\_LOG | REPORT\_NO\_VAR  | NO\_VARIANCE\_LOG | 40          | No variance    |           |              |
 | REJ\_RSN\_DAMAGED | REPORT\_VAR      | DAMAGED           | 30          | Damaged        |           |              |
 | WORN\_DISPLAY     | REPORT\_VAR      | WORN\_DISPLAY     | 20          | Worn Display   |           |              |
+
+
+## Rejections 2.0
+
+The fulfillment app allows store users to reject an order line item when it is unavailable to be fulfilled from that facility. Users can click on the trash-bin button present against the order line item to reject the item with a rejection reason.
+
+Note: Partial fulfillment may or may not be selected by the merchant. 
+
+Depending on the choice let's look at each case scenario:
+
+### Partial Rejection Allowed
+
+1. **Reject Unfillable Item:** Click the reject button next to the specific item.
+2. **Choose Reason:** Select a reason like "not in stock" or "damaged".
+3. **Fulfill Remaining Items:** Process the remaining items as usual and create a shipment.
+4. **Rebrokering:** The rejected item will be sent to another facility for fulfillment.
+
+### Partial Rejection Not Allowed
+
+**Case 1: Single Unfillable Item**
+
+1. **Reject Item:** Click the reject button and select a reason such as "not in stock".
+2. **Automatic Rejection:** The entire order will be rejected with the reason "reject entire order" which will not impact inventory variance and not count in the rejections reporting.
+
+**Case 2: Multiple Unfillable Items**
+
+1. **Reject an Item:** Click the reject button on one unfillable item.
+2. **Automatic Rejection:** All items will be rejected with the reason "reject entire order."
+3. **Update Reason (Optional):** If another item has a different rejection reason, manually change it.
+
+**Note:** In cases where partial rejection is not allowed, rejecting any item automatically triggers rejection of the entire order.

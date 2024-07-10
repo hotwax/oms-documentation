@@ -12,7 +12,7 @@ description: Learn about the operational plugins available for HotWax Commerce O
 | **klaviyo**          | v4.12.0 | `https://git.hotwax.co/plugins/klaviyo.git`                                |
 | **shipstation**      | v4.12.0 | `https://git.hotwax.co/plugins/shipping-integrations/shipstation.git`      |
 | **shipt**            | v5.7.0 | `https://git.hotwax.co/plugins/shipping-integrations/shipt.git`            |
-| **c807**             | v5.7.0 | `https://git.hotwax.co/plugins/shipping-integrations/c807.git`             |
+| **c807**             | v5.11.0 | `https://git.hotwax.co/plugins/shipping-integrations/c807.git`             |
 | **guatex**           | v5.7.0 | `https://git.hotwax.co/plugins/shipping-integrations/guatex.git`           |
 | **terminal-express** | v5.7.0 | `https://git.hotwax.co/plugins/shipping-integrations/terminal-express.git` |
 | **cargotrans**       | v5.7.0 | `https://git.hotwax.co/plugins/shipping-integrations/cargotrans.git`       |

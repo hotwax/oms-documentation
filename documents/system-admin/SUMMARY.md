@@ -3,11 +3,6 @@
 * [Launchpad](README.md)
 * [Glossary](GLOSSARY.md)
 
-## Setup HotWax Commerce
-
-* [How to configure HotWax Commerce when deploying new instance](deployment/deployment.md)
-* [How to configure BOPIS with HotWax Commerce and Shopify](bopis/implement-bopis.md)
-* [Multichannel inventory setup](multichannel-inventory-setup.md)
 
 ## Administration
 
@@ -15,6 +10,7 @@
   * [Create Product Store](administration/company/create-product-store.md)
   * [Manage Product Store](administration/company/manage-product-store.md)
   * [Manage Shopify connection](administration/company/manage-shopify-shop.md)
+   
 * [Users](administration/users/README.md)
   * [Create Users](administration/users/createUser.md)
   * [Manage Users](administration/users/manageUser.md)
@@ -42,6 +38,10 @@
 
 * [Configure Product Store](product-store/README.md)
 * [Add More Product Stores](product-store/add-more-product-stores.md)
+
+## Inventory
+
+* [Multichannel inventory setup](multichannel-inventory-setup.md)
 
 ## Fulfillment
 

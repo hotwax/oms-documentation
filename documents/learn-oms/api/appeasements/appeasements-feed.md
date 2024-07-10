@@ -18,7 +18,7 @@ The Appeasements financial feed is useful for retailers who use ERP for their ac
 
 ## Customization
 
-The Appeasements Financial Feeed Order Items feed has certain out-of-the-box customizations that allow users to generate the feed as per the requirements.
+The Appeasements Financial Feed Order Items feed has certain out-of-the-box customizations that allow users to generate the feed as per the requirements.
 
 | **Parameter**    | **Description**                                                          |
 | ---------------- | ------------------------------------------------------------------------ |

@@ -55,17 +55,13 @@ Bulk Packing slips and Shipping labels will be generated in a new tab.
 Video: Add box
 {% endembed %}
 
-3. Click on Pack Orders function to confirm shipment details.
+3. Click on Pack Orders function to confirm shipment details. Retailers can also enable force scanning from the settings page to ensure store associates scan the items when packing.
 4. A pop-up dialog box will appear for printing additional documents like shipping labels and packing slips.
 
 Print the shipping labels and packing slips to attach with the packed orders.
 
-{% embed url="https://youtu.be/ZwLfYG0_RkI" %}
-Video: Generate shipping label
-{% endembed %}
-
-{% embed url="https://youtu.be/gDnutKazRJk" %}
-Video: Generate packing slip
+{% embed url="https://youtu.be/lVzHg8QK9Js" %}
+Video: Pack Orders
 {% endembed %}
 
 **Unpack Orders**
