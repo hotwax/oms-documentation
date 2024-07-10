@@ -6,6 +6,9 @@
 
 * [Authentication](api/initial-api-authentication.md)
 * [Orders](api-and-data-feeds/orders/README.md)
+  * [Find Order](api/orders/findOrder.md)
+  * [Retrieve Orders](api/orders/retrieve-orders.md)
+  * [List Orders](api/orders/list-orders.md)
   * [Created Orders](api/orders/createdOrderFeed.md)
   * [Order Adjustments](api/orders/adjustmentTypes.md)
   * [Order Reconciliations](api/orders/order-reconciliations.md)
