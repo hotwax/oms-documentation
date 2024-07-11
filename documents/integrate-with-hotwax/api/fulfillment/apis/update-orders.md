@@ -23,14 +23,16 @@ Example: https://demo-oms.hotwax.io/api/updateOrder
 **Body**
 
 ```
-facilityId: <facilityId>,
-box_shipmentId_0: item.shipmentId,
-0_box_rowSubmit`: 0,
-box_shipmentBoxTypeId_0: boxType,
-rej_shipmentId_0: item.shipmentId
-rej_shipmentItemSeqId_0: item.shipmentItemSeqId
-0_rej_rowSubmit_: 0
-rej_rejectionReason_0: item.rejectReason
+{
+  "facilityId": "<facilityId>",
+  "box_shipmentId_0": "item.shipmentId",
+  "0_box_rowSubmit": "0",
+  "box_shipmentBoxTypeId_0": "boxType",
+  "rej_shipmentId_0": "item.shipmentId",
+  "rej_shipmentItemSeqId_0": "item.shipmentItemSeqId",
+  "0_rej_rowSubmit_": "0",
+  "rej_rejectionReason_0": "item.rejectReason"
+}
 ```
 
 **Note: Pass this information as a form data.**
@@ -51,14 +53,16 @@ rej_rejectionReason_0: item.rejectReason
 **Body**
 
 ```
-facilityId: <facilityId>,
-box_shipmentId_1: item.shipmentId,
-1_box_rowSubmit`: 1,
-box_shipmentBoxTypeId_1: boxType,
-rtp_shipmentId_1: item.shipmentId
-rtp_shipmentItemSeqId_1: item.shipmentItemSeqId
-1_rtp_rowSubmit_: 1
-rtp_newShipmentId_1: shipmentPackage.shipmentId
+{
+  "facilityId": "<facilityId>",
+  "box_shipmentId_1": "item.shipmentId",
+  "1_box_rowSubmit": "1",
+  "box_shipmentBoxTypeId_1": "boxType",
+  "rtp_shipmentId_1": "item.shipmentId",
+  "rtp_shipmentItemSeqId_1": "item.shipmentItemSeqId",
+  "1_rtp_rowSubmit": "1",
+  "rtp_newShipmentId_1": "shipmentPackage.shipmentId"
+}
 ```
 
 | Parameter                 | Description                                                         | Required (Y/N) |
@@ -81,15 +85,17 @@ rtp_newShipmentId_1: shipmentPackage.shipmentId
 **Body**
 
 ```
-facilityId: <facilityId>,
-box_shipmentId_0: item.shipmentId,
-0_box_rowSubmit`: 0,
-box_shipmentBoxTypeId_0: boxType,
-rej_shipmentId_0: item.shipmentId
-rej_shipmentItemSeqId_0: item.shipmentItemSeqId
-0_rej_rowSubmit_: 0
-rej_rejectionReason_0: item.rejectReason
-_EVENT_MESSAGE_: "Order updated successfully"
+{
+  "facilityId": "<facilityId>",
+  "box_shipmentId_0": "item.shipmentId",
+  "0_box_rowSubmit": 0,
+  "box_shipmentBoxTypeId_0": "boxType",
+  "rej_shipmentId_0": "item.shipmentId",
+  "rej_shipmentItemSeqId_0": "item.shipmentItemSeqId",
+  "0_rej_rowSubmit_": 0,
+  "rej_rejectionReason_0": "item.rejectReason",
+  "_EVENT_MESSAGE_": "Order updated successfully"
+}
 ```
 
 #### For Shipment Package Change:
@@ -97,13 +103,15 @@ _EVENT_MESSAGE_: "Order updated successfully"
 **Body**
 
 ```
-facilityId: <facilityId>,
-box_shipmentId_1: item.shipmentId,
-1_box_rowSubmit`: 1,
-box_shipmentBoxTypeId_1: boxType,
-rtp_shipmentId_1: item.shipmentId
-rtp_shipmentItemSeqId_1: item.shipmentItemSeqId
-1_rtp_rowSubmit_: 1
-rtp_newShipmentId_1: shipmentPackage.shipmentId
-_EVENT_MESSAGE_: "Order updated successfully"
+{
+    "box_shipmentBoxTypeId_1": "boxType",
+    "1_box_rowSubmit": 1,
+    "facilityId": "<facilityId>",
+    "1_rtp_rowSubmit": 1,
+    "rtp_shipmentId_1": "item.shipmentId",
+    "rtp_shipmentItemSeqId_1": "item.shipmentItemSeqId",
+    "rtp_newShipmentId_1": "shipmentPackage.shipmentId",
+    "_EVENT_MESSAGE_": "Order updated successfully",
+    "box_shipmentId_1": "item.shipmentId"
+}
 ```
