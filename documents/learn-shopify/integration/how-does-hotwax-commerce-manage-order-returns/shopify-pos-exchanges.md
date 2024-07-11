@@ -2,7 +2,7 @@
 
 Many times customers visit their preferred store location to return or exchange their online order. Perhaps they received the wrong size, the item is defective, or they simply changed their mind. Shopify provides a streamlined process for returns and exchanges. Store associates can directly process returns using Shopify POS, specify the items customers wish to return and the reason for the return. If they'd like to exchange the item for a different product, Shopify allows them to select the new item directly within the return process.
 
-Shopify has streamlined the returns and exchange process for both customers and retailers. When there is an exchange order in Shopify POS, it marks the returned item as returned and adds a new line item for the exchanged item.
+Shopify has streamlined the returns and exchange process for both customers and retailers. When there is an exchange order in Shopify POS,  it creates a return for the items the customer doesn’t want and adds the new items the customer purchased in exchange to the order
 
 This seems straightforward for the initial exchange process, as the transaction details and order information are consolidated within the original order. However, this approach creates complexities for ERP systems like NetSuite or other accounting systems that hold a repository of all the financial records.
 
@@ -99,7 +99,7 @@ In the event that the customer decides to return item D, an exchange item, they�
 In this scenario, when a customer returns an exchanged item, according to the Shopify algorithm, the refund will be issued using the initial $30 transaction (Shop Pay 1), while the payment for the exchanged item is processed separately through a different transaction (Shop Pay 2).
 
 #### Returning the Entire Order Including Exchanged Items:
-In the event that the customer returns item D along with items B and C, Shopify links refund transactions to the transaction being refunded using a “parent ID”. Since HotWax Commerce has two different orders, it uses the Shopify transaction ID to identify which order the payment was captured on. This ensures that the refund is posted on the same order, maintaining traceability.
+In the event that the customer returns item D along with items B and C, Shopify links refund transactions to the original payment being refunded using a “parent ID”. Since HotWax Commerce has two different orders, it uses the Shopify transaction ID to identify which order the payment was captured on. This ensures that the refund is posted on the same order, maintaining traceability.
 
 | Order Items | Exchange Item |
 |-------------|---------------|
