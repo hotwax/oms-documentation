@@ -35,7 +35,9 @@
 * [Verify Processor Properties](napita/verify-processor-properties.md)
 * [Bulletins](napita/bulletins.md)
 * [Data Provenance](napita/data-provenance.md)
-* [Empty Queues](napita/empty-queues.md)
+* Troubleshooting
+  * [Data Export Errors](napita/troubleshooting/data-export-errors.md)
+  * [Queue Errors](napita/troubleshooting/troubleshooting-queue-files.md)
 
 ## Tathya
 
