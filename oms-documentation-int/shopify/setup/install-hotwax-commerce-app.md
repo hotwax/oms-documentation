@@ -1,2 +1,0 @@
-# Install HotWax Commerce App
-
