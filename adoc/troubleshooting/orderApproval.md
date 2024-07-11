@@ -11,19 +11,38 @@ ADOC uses a custom flow where certain orders are only approved after the address
 
 ## Sync metafields from Shopify
 
-Ensure metafield import is enabled from the Orders page in the Job Manager app. with the`Import Order Metafield`&#x20;
+To synchronize order meta fields from Shopify, we have configured a workflow that utilizes NiFi custom flows and Moqui Services.
+The process can be divided into four main steps:
 
-Ensure that the namespace parameter of the job is set to `HotwaxOrderDetails`
+1. **Preparing File for Shopify API Request**:
+   NiFi fetches all orders from the database that lack the required meta fields: `customerId` and `municipio`. The dataset with missing meta fields is converted into a JSON file suitable for a Shopify API request and kept on this FTP location-
+    ```
+   /home/{sftp-username}/hotwax/shopify/CreatedOrderIdsFeed
+    ```
 
-You can ensure that this job is running as expected by auditing the Shopify GraphQL MDM page. `https://{instance-name}.hotwax.io/commerce/control/ShopifyGraphQLJob`
 
-By default all GraphQL syncs will show here.
+2. **Shopify API Call**:
+   A job scheduled in on maarg instance poll_OMSOrderIdsFeed_{brandName} picks the above created file and calls the Shopify API to obtain the current meta fields under the namespace "HotwaxOrderDetails". The response from Shopify is received in JSON format and placed at FTP location-
+    ```
+   /home/{sftp_username}/hotwax/shopify/OrdersMetaFieldsFeed
+    ```
 
-To identify the exact GraphQL operations for importing order metafields:
 
-1. Select the Shopify Config that you want to check sync from
-2. Select `Import Shopify Order Metafields` from the GraphQL Config dropdown.
-3. Click Find to filter the results based on the selected criteria.
+3. **Transformation of API Response**:
+   The JSON response from Shopify is not directly understandable by the OMS. NiFi processes this JSON file to convert it into a format that OMS can accept, and places the file on FTP location-
+    ```
+   /home/{sftp_username}/hotwax/oms/ImportJsonListData
+   ```
+
+
+4. **Job Picking and Data Import**:
+   The transformed file is placed in an FTP location for OMS. The "Packaged Multi-Stream Import" job, located in the Miscellaneous section of the job manager app, retrieves the file and imports the data into OMS.
+
+#### To ensure the job runs properly, we need to verify the following:
+1. The corresponding custom NiFi flow is properly schedule and running on respective NiFi instance.
+2. Go to the respective maarg instance e.g. https://adoc-sv-maarg-uat.hotwax.io
+3. After logging in with valid credentials, click on System, then select Service Job.
+4. Search for job poll_OMSOrderIdsFeed_{brandName}, check if the job is set up properly and having **paused** value as 'N'
 
 If the metafield sync is running as expected, on the order detail page these attributes should be present:
 
@@ -41,9 +60,9 @@ You can use the “Missing Order Attribute” report to identify orders where th
 
 ## Metafields created on Shopify but not imported into HotWax
 
-Go to the Shopify order details page > add /metafields.json in the URL> verify the order creation and metafields input time. Prerequisite: Metafields created after 30 minutes of order creation will not sync in OMS.
-
-If you cannot wait for metafields to be imported or the job is not working as expected, order attributes can be created manually from the Order Detail page.
+1. Go to the Shopify order details page and append /metafields.json to the URL.
+2. Verify the order creation and metafields input time in the Shopify JSON.
+3. If you cannot wait for metafields to be imported or the job is not working as expected, order attributes can be created manually from the Order Detail page.
 
 Mapping Central American region types to the OMS's North American Region types helps when troubleshooting order approval flows in the OMS. If the address entered into the order is not mapped correctly to the type of region, then the order will not be approved even if the region name exists.
 
