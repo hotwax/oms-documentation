@@ -4,7 +4,7 @@ description: >-
   managed between POS as RMS, ERP, and HotWax Commerce.
 ---
 
-# In-store Returns with Shopify POS
+# In-store returns with Shopify POS
 
 <figure><img src="../../.gitbook/assets/in-store returns Shopify POS bpm.png" alt=""><figcaption><p>In-store returns lifecycle business process model</p></figcaption></figure>
 

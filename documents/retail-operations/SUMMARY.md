@@ -26,7 +26,7 @@
 * [Data manager](data-manager/README.md)
   * [Configurations](data-manager/configurations.md)
   * [Imports](data-manager/imports.md)
-  * Troubleshooting
+  * [Troubleshooting](workflow/data-manager/troubleshooting/README.md)
     * [Data not imported](data-manager/dataNotImportedInOMS.md)
     * [SFTP errors](data-manager/data-import-errors.md)
     * [Manual Data import](data-manager/manual-data-import.md)
@@ -46,16 +46,17 @@
   * [Allocation](order-management/allocate-sales-order.md)
   * [Soft allocation](order-management/soft-allocations.md)
   * [Order Cancellations](order-management/order-cancellations.md)
-  * Troubleshooting
+  * [Troubleshooting](orders/order-management/troubleshooting/README.md)
     * [Error due to Incorrect JSON](order-management/troubleshooting/order-import.md)
     * [Order Approval Errors](order-management/troubleshooting/order-approval.md)
     * [Order Status Discrepancy](order-management/troubleshooting/orderStatusDiscrepancy.md)
     * [Order Indexing Discrepancy](order-management/troubleshooting/indexing-issue.md)
-    * [Order Attribute is Missing](order-management/troubleshooting//orderAttributeMissing.md)
-
+    * [Order Attribute is Missing](order-management/troubleshooting/orderAttributeMissing.md)
+    * [Order Duplication](order-management/troubleshooting/duplicate-orders.md)
 * [Brokering](orders/brokering/README.md)
   * [Order Routing](brokering/configurableRouting.md)
   * [Rule Builder](brokering/rule-builder.md)
+  * [Brokering Scenarios](brokering/scenarios.md)
   * [Troubleshooting](brokering/troubleshooting/README.md)
     * [Scheduling Errors](brokering/troubleshooting/scheduling-error.md)
     * [Incorrect Facility Configurations](brokering/troubleshooting/facility-association.md)
@@ -68,7 +69,7 @@
   * [Audit](pre-orders/audit-pre-order.md)
   * [Pre-order Allocation](pre-orders/pre-order-allocation.md)
   * [Release Pre-orders](pre-orders/release-pre-orders.md)
-  * Troubleshooting
+  * [Troubleshooting](orders/pre-orders/troubleshooting/README.md)
     * [Inaccurate Inventory Computation](pre-orders/inaccurateInventoryComputation.md)
     * [Missing Product Linking](pre-orders/missingProductLinking.md)
 * [Returns](returns/readme.md)
@@ -81,16 +82,16 @@
 * [Inventory Management](inventory-management/README.md)
   * [Find Product Inventory](inventory-management/find-product-inventory.md)
   * [Product Inventory View Page](inventory-management/product-inventory-view.md)
-  * [Inventory Configurations](inventory-management/inventory-configurations.md)
+  * [Inventory Configurations](inventory/inventory-management/inventory-configurations.md)
 * [Inventory upload](inventory-management/inventory-upload.md)
 * [Safety stock](inventory/safety-stock/README.md)
   * [Set Bulk Safety Stock](inventory/safety-stock/set-bulk-safety-stock.md)
   * [Set Individual Safety Stock](inventory/safety-stock/set-individual-safety-stock.md)
+  * [Set Facility-Wise Safety Stock](inventory/safety-stock/facility-wise-safety-stock.md)
 * [Multichannel inventory setup](inventory/multichannel-inventory-setup.md)
-* [Transfer orders](inventory/transfer-order/transfer-order-management.md)
-  * [Transfer order fulfillment](transfer-order/transfer-order-fulfillment.md)
-  * [Transfer order receiving](transfer-order/transfer-order-receiving.md)
-
-
-
- 
+* [Transfer orders](inventory/transfer-orders/README.md)
+  * [Transfer order fulfillment](inventory/transfer-orders/transfer-order-fulfillment.md)
+  * [Transfer order receiving](inventory/transfer-orders/transfer-order-receiving.md)
+* [Troubleshooting](inventory/troubleshooting/README.md)
+  * [View Inventory Log](inventory/troubleshooting/view-inventory-log.md)
+  * [Inventory Synchronization Errors](inventory/troubleshooting/inventory-synchronization.md)

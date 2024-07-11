@@ -4,7 +4,7 @@ description: >-
   eCommerce, ERP, and HotWax Commerce.
 ---
 
-# Web Returns with Loop
+# Web returns with Loop
 
 <figure><img src="../../.gitbook/assets/web returns bpm.png" alt=""><figcaption><p>Web returns lifecycle business process model</p></figcaption></figure>
 

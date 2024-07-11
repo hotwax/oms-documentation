@@ -53,4 +53,6 @@ Alternatively, store associates can also create returns by going to the `sales o
       * Navigate to `Orders` and access `Order Details` by clicking on the corresponding order ID.
       * Return information will be available for the corresponding order items.
 
+{% embed url ="https://youtu.be/1O7nqqlhha4" %} Create Returns {% endembed %}
+
 By following these detailed steps, store associates can efficiently navigate through the HotWax Commerce platform, manage in-store returns, and contribute to a smooth and effective customer experience.

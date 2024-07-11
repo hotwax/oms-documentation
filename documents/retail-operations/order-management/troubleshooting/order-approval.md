@@ -1,5 +1,5 @@
 ---
-description: >- Troubleshooting Guide for orders stuck in created status
+description: Troubleshooting Guide for orders stuck in created status
 ---
 
 # Troubleshooting: Resolving Order Approval Issues in HotWax Commerce
@@ -11,7 +11,6 @@ Clients may have varying approval processes, such as requiring customer IDs or p
 ## Scenario 1: Missing Order Attribute
 
 Orders may not get approved if essential attributes are missing. For instance, some clients may require specific information such as a customer ID or Municipio ID. If these attributes are missing, the approval job cannot verify and approve the order, causing it to remain in the 'Created' status.
-
 For detailed instructions on how to add missing order attributes, refer to our [troubleshooting documentation](troubleshooting/orderAttributeMissing.md)
 
 ## Scenario 2: Incorrect Order Attribute

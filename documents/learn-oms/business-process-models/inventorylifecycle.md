@@ -5,7 +5,7 @@ description: >-
   platforms
 ---
 
-# Inventory Lifecycle
+# Inventory lifecycle
 
 The inventory count of a product is regularly updated due to various factors such as customer purchases made both in-store and online, as well as the receipt of new inventory. These transactions are recorded across different systems. In the Inventory Lifecycle BPM, we've provided detailed insights into how these operational inventory transactions impact the sellable inventory count, that is, `Online ATP` of a product.
 

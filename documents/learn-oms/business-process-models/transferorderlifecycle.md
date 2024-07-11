@@ -5,7 +5,7 @@ description: >-
   between stores, or stores to warehouses transfer orders.
 ---
 
-# Transfer Orders Lifecycle
+# Transfer orders lifecycle
 
 Transfer orders are created in the ERP system, they serve various purposes, including:
 

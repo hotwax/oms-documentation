@@ -40,6 +40,6 @@ Retailers that frequently deleted products in Shopify would encounter an issue w
 
 Failed pre-order catalog updates scheduled throughout the day would eventually add up to a large discrepancy between HotWax and Shopify regarding what was actually available for pre-order.
 
-HotWax has now added a new and unique "HC: Preorder" tag to ensure that the pre-order tags don’t conflict with the retailer’s third-party apps.
+HotWax has now added a new and unique "HC: Pre-order" tag to ensure that the pre-order tags don’t conflict with the retailer’s third-party apps.
 
 The HotWax system now also provides a new on-demand sync every morning, which resets pre-order tags on Shopify. This will resync all the pre-orderable products in Shopify with the pre-order catalog on HotWax Commerce, thereby ensuring all the "out of sync" pre-order products in Shopify are in sync with the HotWax pre-order catalog.

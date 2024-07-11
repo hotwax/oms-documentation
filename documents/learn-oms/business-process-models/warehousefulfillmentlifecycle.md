@@ -5,7 +5,7 @@ description: >-
   updates to HotWax Commerce.
 ---
 
-# Warehouse Fulfillment Lifecycle
+# Warehouse fulfillment lifecycle
 
 <figure><img src="../.gitbook/assets/warehouse fulfillment bpm.png" alt=""><figcaption><p>Warehouse fulfillment lifecycle business process model</p></figcaption></figure>
 
