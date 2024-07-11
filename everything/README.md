@@ -41,6 +41,7 @@ This document outlines the guidelines and best practices for using Shopify, OMS 
 If you encounter any difficulties, please ask your mentor for guidance before proceeding.
 {% endhint %}
 
-{% hint style="warning" %}  Use the production instance with extreme care. Do not edit any existing data. 
+{% hint style="warning" %}  
+Use the production instance with extreme care. Do not edit any existing data. 
 Access production web tools only if necessary; otherwise, avoid using them. Do not run SQL queries on the production instance unless explicitly instructed to do so.
 { % endhint %}
