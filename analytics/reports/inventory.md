@@ -34,18 +34,18 @@ FROM
           s.DESTINATION_FACILITY_ID AS FACILITY_ID,
           f.Facility_Name AS Destination_Facility,
           si.QUANTITY AS Expected,
-          sr.QUANTITY_ACCEPTED AS Recieved,
+          sr.QUANTITY_ACCEPTED AS Received,
           (IFNULL(sr.QUANTITY_ACCEPTED, 0) - si.QUANTITY) AS Difference,
           CASE
               WHEN (si.QUANTITY - sr.QUANTITY_ACCEPTED) = 0
                    AND s.external_id IS NOT NULL THEN 'Completed'
               WHEN sr.QUANTITY_ACCEPTED IS NULL
-                   AND s.external_id IS NOT NULL THEN 'NotRecieved'
+                   AND s.external_id IS NOT NULL THEN 'NotReceived'
               WHEN (si.QUANTITY - sr.QUANTITY_ACCEPTED) < 0
                    AND s.external_id IS NOT NULL
-                   AND si.QUANTITY != 0 THEN 'OverRecieved'
+                   AND si.QUANTITY != 0 THEN 'OverReceived'
               WHEN (si.QUANTITY - sr.QUANTITY_ACCEPTED) > 0
-                   AND s.external_id IS NOT NULL THEN 'UnderRecieved'
+                   AND s.external_id IS NOT NULL THEN 'UnderReceived'
               WHEN si.QUANTITY = 0
                    AND sr.QUANTITY_ACCEPTED IS NOT NULL THEN 'Manually added item to transfer order'
           END AS Status,
