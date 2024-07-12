@@ -193,7 +193,7 @@ Retailers need to balance the cost of shipping, which is influenced by both the 
 ### Steps to Implement
 
 1. **Initial Proximity Check Without Partial Allocation:**
-2. 
+   
 - When creating the first inventory rule, apply a proximity filter with a specified distance (e.g., 100 miles) without allowing partial allocation.
 - This rule ensures that orders are fulfilled from a single location if all items are available within the specified distance, minimizing the shipping distance.
 
@@ -202,12 +202,19 @@ Retailers need to balance the cost of shipping, which is influenced by both the 
 - Create a second inventory rule that allows partial shipment within the same proximity filter (e.g., 100 miles).
 - This rule ensures that if no single location within the specified distance has all items, the order can be split and fulfilled from multiple nearby locations.
 
-**3. Fallback to Distant Locations Without Splitting:**
+3. **Fallback to Distant Locations Without Splitting:**
 
 - In the third inventory rule, remove the proximity filter and disable partial shipment.
 - This rule ensures that if the items are not available within the initial proximity, the entire order is shipped from a distant location that can fulfill the order completely, minimizing the number of shipments.
 - Final Inventory Rule for All Locations with Partial Shipment:
 
-**4. Include All Stores:**
+4. **Include All Stores:**
 - The final inventory rule includes all stores with partial shipment allowed.
 - This rule ensures that if the order cannot be fulfilled completely from distant locations, it is split across all available locations to prevent unfulfilled orders.
+
+5. **Activation and Scheduling**:
+- **Activate Inventory Rules**:
+   - Ensure all the inventory rules are activated to be in effect.
+- **Schedule Brokering Runs**:
+   - Schedule the brokering runs to execute these inventory rules at regular intervals, maintaining efficient order fulfillment.
+
