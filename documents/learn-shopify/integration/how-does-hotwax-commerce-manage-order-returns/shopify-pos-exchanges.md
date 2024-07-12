@@ -112,7 +112,8 @@ In the event that the customer returns item D along with items B and C, Shopify 
 | ShopPayRefund1: $30<br>Status: Refund<br>parentPaymentRef: ShopPay1 | ExchangeRefund: $20  |
 | ShopPayRefund2: $10<br>Status: Refund<br>parentPaymentRef: ShopPay2 |  |
 
-In Shopify, when processing a refund, it is linked to the transactions associated with the order rather than to specific items within the order. This means that if an order has multiple payment transactions (e.g., Shop Pay 1, Shop Pay 2), any refunds issued will be associated with these transactions. For example, if a $30 refund and a $10 refund are issued, they will be linked to the relevant transactions (Shop Pay 1 and Shop Pay 2) instead of specific items. As a result, the exchange refund of $20 does not have the parentPaymentRef.
+In Shopify, all payment captures are against the same order, whether it be for originally purchased items or exchange items. Due to this mixing of transactions in Shopify, refunds are also processed fluidly, where an exchange item may be refunded against a payment captured when making an initial purchase. The end result is that Shopify links the refund transaction to the capture transaction it is refunding, but the payment being refunded is not always the actual payment the customer made for the item being returned.
+
 ### Refund Processing in Shopify and HotWax Commerce
 
 **Original Order** : Has a total payment of $40 in Shopify ($30 + $10).
