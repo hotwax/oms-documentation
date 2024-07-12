@@ -27,7 +27,7 @@ In HotWax Commerce, merchandisers have the option to schedule the `Auto Refresh 
 * Status of PO items must be created or approved, ensuring canceled PO items are not considered for Pre-Order.
 * Promise date of a PO item must be in the future, guaranteeing that purchase order items will arrive in the future, not from an old PO.
 * Current inventory of the item must be 0, indicating it's out of stock and qualified for Pre-Order or backorder.
-* If the 'isNewProoduct' field of a PO is marked as “yes”, it’s identified as a Pre-Order product; if marked “no”, it's categorized as a backorder product.
+* If the 'isNewProduct' field of a PO is marked as “yes”, it’s identified as a Pre-Order product; if marked “no”, it's categorized as a backorder product.
 
 Products from purchase orders that don't meet these criteria won't be listed in HotWax Commerce's pre-order catalog. It's important to ensure that purchase order items adhere to these criteria for accurate listing.
 
