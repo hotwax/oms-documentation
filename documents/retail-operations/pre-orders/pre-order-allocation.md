@@ -47,7 +47,7 @@ Sync SO Date changes
 
 ## Remove Allocations
 
-Merchandisers may sometimes encounter inaccurate allocations of sales orders with purchase orders or they want to remove allocations to utilise that invnetory for in-store sales. Such issues can be rectified by removing allocations through following steps:
+Merchandisers may sometimes encounter inaccurate allocations of sales orders with purchase orders or they want to remove allocations to utilise that inventory for in-store sales. Such issues can be rectified by removing allocations through following steps:
 
 1. Navigate to the `Procurement` > `Purchase Orders View` > `Purchase Order Detail` page
 2. Click `Remove Allocation` in the line item field to open the `Review Allocations` page.
