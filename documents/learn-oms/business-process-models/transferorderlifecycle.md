@@ -46,7 +46,7 @@ It’s crucial to note that inventory counts for the items shipped from the ware
 
 * A scheduled SuiteScript in NetSuite reads the item receipt feed and two actions take place:
   * Item receipt records are created in NetSuite and subsequently, inventory count at the store for the corresponding items are increased.
-  * The transfer order status is updated from <mark style="color:orange;">**“Pending Receipt”**</mark> to <mark style="color:orange;">**“Received”**</mark>. This step concludes the store to warehouse transfer orders flow.
+  * The transfer order status is updated from <mark style="color:orange;">**“Pending Receipt”**</mark> to <mark style="color:orange;">**“Received”**</mark>. 
 
 ## Store to Store Transfer Orders
 
