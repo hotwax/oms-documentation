@@ -14,11 +14,11 @@ Here's where the challenges arise:
 
 ## How HotWax Commerce Helps Address These Challenges and Ensure Accurate Accounting for Your Business
 
-1. HotWax relies on unique payment methods like `Exchange Credit` and `Exchange Capture` to distinguish between the original item value and any additional charges associated with an exchange. This ensures accurate financial records in HotWax and eliminates confusion for integrated ERP systems. These attribution payment methods are internal to HotWax Commerce and are used to handle the attribution logic.
+1. HotWax relies on unique payment methods like `Exchange Credit` and `Exchange Payment` to distinguish between the original item value and any additional charges associated with an exchange. This ensures accurate financial records in HotWax and eliminates confusion for integrated ERP systems. These attribution payment methods are internal to HotWax Commerce and are used to handle the attribution logic.
 
     - **Exchange Credit**: This is the amount the customer has already paid for the original item being returned. It's used towards purchasing another item in the exchange order.
-    - **Exchange Capture**: If the customer exchanges for an item of higher value, they pay the difference. This additional payment is known as exchange capture.
-    - **Exchange Refund**: After deducting any exchange capture, any remaining amount from the original payment is refunded to the customer for returned items.
+    - **Exchange Payment**: If the customer exchanges for an item of higher value, they pay the difference. This additional payment is known as exchange Payment.
+    - **Exchange Refund**: After deducting any exchange Payment, any remaining amount from the original payment is refunded to the customer for returned items.
 
 2. HotWax Commerce connects the attribution payment method with the `Parent Payment Reference`, linking the exchange order to the Shopify transaction on the original order. This helps track Shopify transactions under one main order and manage financial credits or additional payments related to exchange orders, facilitating the movement of credits and capturing extra payments during exchanges.
 
@@ -156,16 +156,16 @@ In the event that the customer subsequently decides to return both the exchanged
 
 | Order Items | Exchange Item |
 |-------------|---------------|
-| A: ~~$10~~  | D: ~~$20~~       |
+| A: ~~$10~~  | D: ~~$5~~       |
 | B: ~~$10~~      |               |
 | C: ~~$10~~      |               |
 | **Transactions**                  |                                      |
-| ShopPay1: $30                   | ExchangeCredit: $10<br>parentPaymentRef: ShopPay1 |
+| ShopPay1: $30                   | ExchangeCredit: $5<br>parentPaymentRef: ShopPay1 |
 | ShopPay1 Refund1: $5                  ||
 | ShopPay1Refund2: $25<br>Status: Refund<br>parentPaymentRef: ShopPay1 | ExchangeRefund: $5  |
 
 
-In this case, there will be an attribution of $5 to the exchange order with the payment method as `Exchange Credit` and as there is no payment captured from the customer thus there will be no `Exchange Capture` on the exchange order.
+In this case, there will be an attribution of $5 to the exchange order with the payment method as `Exchange Credit` and as there is no payment captured from the customer thus there will be no `Exchange Payment` on the exchange order.
 By managing all these scenarios, HotWax Commerce ensures that all financial transactions are accurately recorded, facilitating seamless integration with ERP systems and providing a clear audit trail for returns and exchanges.
 
 **How does HotWax Commerce ensure accurate inventory updates from Returns and Exchanges?**
