@@ -128,21 +128,27 @@ As POS returns are already synced to NetSuite by Loop, they are not synced again
 <figure><img src="../../../.gitbook/assets/29.png" alt=""><figcaption><p>Sync POS returns to NetSuite using Loop</p></figcaption></figure>
 
 ### Synchronizing POS Returns to NetSuite when Shopify POS is used
-
 Leveraging Shopify POS for in-store returns ensures that store associates are not required to navigate through a separate interface to handle them.
 
-**Import POS Returns in HotWax Commerce**
+### Import POS Returns in HotWax Commerce
 
-When POS returns are accepted within the store and completed, a scheduled job in HotWax Commerce downloads these returns from Shopify POS and marks the item as returned, and payment as refunded. During import, HotWax Commerce checks if the restocking flag is enabled and restocks the inventory received against the POS returns.
+When POS returns are accepted within the store and completed, a scheduled job in the HotWax Commerce integration platform fetches all returns and exchanges from Shopify and generates a returns and exchanges feed. Another job reads and transforms this feed, sorting returns and exchange orders into different folders on the SFTP server.
 
-Similar to web returns, retailers have the option to use HotWax Commerce's returns feed or leverage HotWax Commerce Integration Platform to sync POS returns to NetSuite.
+Two independent jobs in HotWax Commerce process these orders:
 
-**Export POS Returns from HotWax Commerce**
+- The `Create Return Order` job downloads the returns from the SFTP path.
+- The `Create Exchange Order` job downloads the exchanges.
 
-A scheduled job within HotWax Commerce Integration Platform generates a CSV file of POS returns and places this file at an SFTP location.
+### Export POS Returns from HotWax Commerce
 
-**Import POS Returns in NetSuite**
+A scheduled job in the HotWax Commerce Integration Platform generates a CSV file of POS returns and places this file at an SFTP location.
 
-A scheduled SuiteScript in NetSuite reads this CSV file from the SFTP location, generates a Cash Sale return in NetSuite, creates item receipt records, marks the order item as returned and the payment is marked as refunded.
+### Import POS Returns in NetSuite
+
+A scheduled SuiteScript in NetSuite reads this CSV file from the SFTP location, and generates a Return Merchandise Authorization (RMA) to track the returned items. Following this, a credit memo is generated to record the financial transaction associated with the refund. The credit memo details the total amount to be refunded to the customer.
+
+### Handling of Multiple Scenarios
+
+When returning an item a customer can also opt to take the exchange item against it. The exchange item may be of higher value than the original item or may be of lesser value. Learn more about how HotWax commerce handles exchanges on an order.
 
 <figure><img src="../../../.gitbook/assets/30.png" alt=""><figcaption><p>Sync POS returns to NetSuite using HotWax Commerce</p></figcaption></figure>
