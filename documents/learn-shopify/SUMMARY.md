@@ -40,7 +40,8 @@
   * [Import Returns from Shopify](integration/how-does-hotwax-commerce-manage-order-returns/import-returns-from-shopify.md)
   * [In-Store Returns](integration/how-does-hotwax-commerce-manage-order-returns/in-store-returns.md)
   * [Appeasements](integration/how-does-hotwax-commerce-manage-order-returns/appeasements.md)
-  * [Exchanges](integration/how-does-hotwax-commerce-manage-order-returns/exchanges.md)
+  * [Loop Exchanges](integration/how-does-hotwax-commerce-manage-order-returns/exchanges.md)
+  * [Shopify POS Exchanges](integration/how-does-hotwax-commerce-manage-order-returns/shopify-pos-exchanges.md)
 
 ## Setup Shopify
 
