@@ -42,7 +42,6 @@
   * [Appeasements](integration/how-does-hotwax-commerce-manage-order-returns/appeasements.md)
   * [Shopify POS Exchanges](integration/how-does-hotwax-commerce-manage-order-returns/shopify-pos-exchanges.md)
   * [Loop Exchanges](integration/how-does-hotwax-commerce-manage-order-returns/exchanges.md)
-  
 
 ## Setup Shopify
 
