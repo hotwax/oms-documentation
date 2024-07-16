@@ -20,23 +20,31 @@ Video: Reject outstanding orders in bulk
 
 
 ## Reject In-progress Orders
-- From the in-progress orders screen, click on the 'Reject All' icon at the top right corner. All in-progress orders will be rejected and removed from the In-Progress Orders page.
+- From the in-progress orders screen, click on the `Reject All` icon at the top right corner. All in-progress orders will be rejected and removed from the In-Progress Orders page.
 
 {% embed url="https://youtu.be/fCEWxw6guGA" %}
 Video: Reject in progress orders in bulk
 {% endembed %}
 
 
-> [!NOTE]  
-> The `Reject All` button does not have any effect on the inventory of the facility. The store manager needs to set the Online Order Fulfillment capacity to No Capacity to ensure that no new orders are brokered into this facility.
+{% hint style="info" %} The `Reject All` button does not have any effect on the inventory of the facility. The store manager needs to set the Online Order Fulfillment capacity to No Capacity to ensure that no new orders are brokered into this facility.
+{ % endhint %}
+
 
 ## Fulfill Rejected Orders from Another Facility
 If the retailer wants to fulfill these rejected orders from a different facility, follow the steps below:
 
-1. **Add Facility:**
+1. **Add Facility to the Fulfillment Group**
    - Go to the Facilities app and search for the facility from which you now want to fulfill these orders.
    - Click on the facility to open its details page.
    - If the facility uses the HotWax fulfillment app, add the facility to the `OMS fulfillment group`. If the order fulfillment is to be done by NetSuite, add it to the `NetSuite fulfillment group`. The steps to add the facility to the group are the same as mentioned above.
-   - To ensure orders are brokered to this facility, set the online order fulfillment capacity to unlimited.
-## Selling Inventory Online
-- Facilities have the option to choose whether or not to participate in selling their inventory online. If a facility is capable of fulfilling orders and wants its inventory to be sold online, it can be added to a facility group with the CHANNEL FAC GROUP subtype. Conversely, if a facility decides not to sell its inventory online, it can be excluded from the group. To enable the facility to sell its inventory online, toggle on the online facility group button on the Sell Inventory Online card.
+   - To ensure orders are brokered to this facility, set the online order fulfillment capacity to unlimited or add the custom capacity.
+     
+2. **Selling Inventory Online**
+
+To enable the facility to sell its inventory online, toggle on the `online facility group` button on the Sell Inventory Online card on the facility details page.
+
+
+3. **Add the facility to the brokering group**
+
+
