@@ -17,8 +17,8 @@ Here's where the challenges arise:
 1. HotWax relies on unique payment methods like `Exchange Credit` and `Exchange Payment` to distinguish between the original item value and any additional charges associated with an exchange. This ensures accurate financial records in HotWax and eliminates confusion for integrated ERP systems. These attribution payment methods are internal to HotWax Commerce and are used to handle the attribution logic.
 
     - **Exchange Credit**: This is the amount the customer has already paid for the original item being returned. It's used towards purchasing another item in the exchange order.
-    - **Exchange Payment**: If the customer exchanges for an item of higher value, they pay the difference. This additional payment is known as exchange Payment.
-    - **Exchange Refund**: After deducting any exchange Payment, any remaining amount from the original payment is refunded to the customer for returned items.
+    - **Exchange Payment**: If the customer exchanges for an item of higher value, they pay the difference. This additional payment is known as exchange payment.
+    - **Exchange Refund**: After deducting any exchange payment, any remaining amount from the original payment is refunded to the customer for returned items.
 
 2. HotWax Commerce connects the attribution payment method with the `Parent Payment Reference`, linking the exchange order to the Shopify transaction on the original order. This helps track Shopify transactions under one main order and manage financial credits or additional payments related to exchange orders, facilitating the movement of credits and capturing extra payments during exchanges.
 
