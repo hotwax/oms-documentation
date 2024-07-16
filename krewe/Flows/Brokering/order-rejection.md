@@ -1,5 +1,5 @@
 ---
-description: Learn how store managers can efficiently reject orders during operational challenges. This guide covers adding facilities to the OMS fulfillment group, using the "Reject All" feature for both open and in-progress orders, and managing order fulfillment from alternate facilities to maintain operational efficiency.
+description: Learn how store managers can efficiently reject orders and manage order fulfillment from alternate facilities to maintain operational efficiency.
 ---
 
 # Bulk Order Rejection and Fulfillment Management in HotWax Commerce
@@ -33,7 +33,7 @@ Video: Reject in progress orders in bulk
 
 {% hint style="info" %}
 The `Reject All` button does not have any effect on the inventory of the facility. The store manager needs to set the Online Order Fulfillment capacity to No Capacity to ensure that no new orders are brokered into this facility
-{ % endhint %}
+{% endhint %}
 
 
 ## Fulfill Rejected Orders from Another Facility
