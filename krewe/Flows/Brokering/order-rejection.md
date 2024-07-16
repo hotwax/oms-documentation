@@ -44,7 +44,3 @@ If the retailer wants to fulfill these rejected orders from a different facility
 
 To enable the facility to sell its inventory online, toggle on the `online facility group` button on the Sell Inventory Online card on the facility details page.
 
-
-3. **Add the facility to the brokering group**
-
-
