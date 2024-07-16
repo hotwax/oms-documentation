@@ -27,7 +27,7 @@ In certain situations, a facility may be unable to fulfill orders due to adverse
      
 ### Steps to Reject Orders in Bulk
 
-1. Add Facility to the OMS Fulfillment Group**
+1. Add Facility to the OMS Fulfillment Group
    - Locate the `Fulfillment Settings` card on the facility details page.
 2. Toggle on the button for `Uses native fulfillment app` to add the facility to the `OMS fulfillment group`. This ensures the facility is visible in the `Fulfillment` app and all orders allocated to this facility can be rejected in bulk. Refer to the [user guide](https://docs.hotwax.co/documents/orders/fulfillment/rejection#bulk-order-rejection) for instructions on how to reject orders in bulk.
 
