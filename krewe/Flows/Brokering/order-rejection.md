@@ -31,7 +31,8 @@ Video: Reject in progress orders in bulk
 {% endembed %}
 
 
-{% hint style="info" %} The `Reject All` button does not have any effect on the inventory of the facility. The store manager needs to set the Online Order Fulfillment capacity to No Capacity to ensure that no new orders are brokered into this facility.
+{% hint style="info" %}
+The `Reject All` button does not have any effect on the inventory of the facility. The store manager needs to set the Online Order Fulfillment capacity to No Capacity to ensure that no new orders are brokered into this facility
 { % endhint %}
 
 
