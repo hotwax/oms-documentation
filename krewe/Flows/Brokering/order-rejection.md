@@ -1,51 +1,56 @@
 ---
 description: Learn how store managers can efficiently reject orders and manage order fulfillment from alternate facilities to maintain operational efficiency.
 ---
+# Bulk order reallocation
 
-# Bulk Order Rejection and Fulfillment Management in HotWax Commerce
+In certain situations, a facility may be unable to fulfill orders due to adverse conditions like storms. In such cases, it's essential to exclude the affected facility from participating in fulfillment and redirect orders to another facility. This document provides a step-by-step guide on how to exclude a facility from new order brokering and designate another facility for fulfillment.
 
-In HotWax Commerce, store managers have a `Reject All` feature in the Fulfillment app that allows them to reject all orders in an open or in-progress state. This feature is particularly valuable during times of high demand or when logistical hurdles arise, such as when a carrier truck cannot pick up items from their store or when the facility is unavailable to fulfill orders due to climatic conditions. By rejecting all online orders, store managers can ensure that orders can be fulfilled from other locations in case their facility is unavailable, thereby avoiding delays and order cancellations. To bulk reject the orders from the facility, it is necessary to add the facility to the `OMS fulfillment group`.
+## Steps to Exclude a Facility from New Order Brokering
 
+1. **Log In to Launchpad**
+   - Navigate to [launchpad.hotwax.io](https://launchpad.hotwax.io) and log in with your credentials.
 
-## Steps to Add the Facility to the OMS Group
-1. Go to the Facilities app and search for the facility from which you want to bulk reject the orders.
-2. Open its facility details page, scroll down to the bottom of the page, and click on the `Groups` button on the right side of the page.
-3. Click on the `Link to Groups` button and select the `OMS fulfillment group` in the Add Group window.
-4. Click on the save icon to add the facility to that group.
+2. **Access the Facilities App**
+   - Scroll to the bottom of the page.
+   - Under the Administration section, click on the `Facilities app`.
 
-**Alternative method:** The user can also toggle on the `Uses native fulfillment app` button on the fulfillment settings card to add the facility to the OMS fulfillment group.
+3. **Search for the Facility**
+   - Use the search bar at the top left of the page to find the facility you want to exclude by typing its name.
 
-## Reject Outstanding Orders in Bulk
-- In the open orders screen, click on the `Reject All` icon at the top right corner. All open orders will be rejected and removed from the Open Orders page.
-
-{% embed url="https://youtu.be/4eSmmv8y6to" %}
-Video: Reject outstanding orders in bulk
-{% endembed %}
-
-
-## Reject In-progress Orders
-- From the in-progress orders screen, click on the `Reject All` icon at the top right corner. All in-progress orders will be rejected and removed from the In-Progress Orders page.
-
-{% embed url="https://youtu.be/fCEWxw6guGA" %}
-Video: Reject in progress orders in bulk
-{% endembed %}
-
-
-{% hint style="info" %}
-The `Reject All` button does not have any effect on the inventory of the facility. The store manager needs to set the Online Order Fulfillment capacity to No Capacity to ensure that no new orders are brokered into this facility
-{% endhint %}
-
-
-## Fulfill Rejected Orders from Another Facility
-If the retailer wants to fulfill these rejected orders from a different facility, follow the steps below:
-
-1. **Add Facility to the Fulfillment Group**
-   - Go to the Facilities app and search for the facility from which you now want to fulfill these orders.
+4. **Open Facility Details**
    - Click on the facility to open its details page.
-   - If the facility uses the HotWax fulfillment app, add the facility to the `OMS fulfillment group`. If the order fulfillment is to be done by NetSuite, add it to the `NetSuite fulfillment group`. The steps to add the facility to the group are the same as mentioned above.
-   - To ensure orders are brokered to this facility, set the online order fulfillment capacity to unlimited or add the custom capacity.
-     
-2. **Selling Inventory Online**
 
-To enable the facility to sell its inventory online, toggle on the `online facility group` button on the Sell Inventory Online card on the facility details page.
+5. **Adjust Order Fulfillment Capacity**
+   - Locate the `Online Order Fulfillment` card.
+   - Click on the `Unlimited` button next to the text indicating the total number of orders allocated to this facility.
+   - Select `No capacity` to ensure no new orders get brokered to this facility. Refer to this [user guide](https://docs.hotwax.co/documents/v/system-admins/administration/facilities/configure-fulfillment-capacity) for more details on Online Order Fulfillment capacity.
+
+6. **Add Facility to the OMS Fulfillment Group**
+   - Locate the `Fulfillment Settings` card on the facility details page.
+   - Toggle on the button for `Uses native fulfillment app` to add the facility to the `OMS fulfillment group`. This ensures all orders allocated to this facility can be rejected in bulk from the fulfillment app. Refer to the [user guide](https://docs.hotwax.co/documents/orders/fulfillment/rejection#bulk-order-rejection) for instructions on how to reject orders in bulk.
+
+## Steps to Fulfill Rejected Orders from Another Facility
+
+1. **Search for the Facility**
+   - Go to the Facilities app and search for the facility you want to use for fulfilling the rejected orders.
+
+2. **Open Facility Details**
+   - Click on the facility to open its details page.
+
+3. **Add Facility to the Appropriate Fulfillment Group**
+   - If the facility will use the HotWax fulfillment app for fulfilling the orders, add it to the `OMS fulfillment group`.
+   - If order fulfillment will be done through NetSuite, add the facility to the `NetSuite fulfillment group`.
+     - To add the facility to the group:
+       - Scroll down to the bottom of the facility details page.
+       - Click on the `Groups` button on the right side of the page.
+       - Click on the `Link to Groups` button.
+       - In the `Add Group` window, select the fulfillment group.
+       - Click on the `save` icon to add the facility to the group.
+
+4. **Set Fulfillment Capacity for the New Facility**
+   - To ensure orders get brokered to this facility, set the online order fulfillment capacity to `Unlimited` or specify a custom capacity.
+
+5. **Enabling Online Inventory Sales for the New Facility**
+   - To enable the facility to sell its inventory online, toggle on the `online facility group` button on the Sell Inventory Online card on the facility details page.
+
 
