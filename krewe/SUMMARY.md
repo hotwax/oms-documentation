@@ -32,6 +32,7 @@
     * [Lens and Frames](Flows/Brokering/OrderSplitting/Lens+Frame.md)
     * [Gift Items](Flows/Brokering/OrderSplitting/GiftItems.md)
   * [Rx Nashville](Flows/Brokering/RxNashville.md)
+  * [Bulk order Rejection](Flows/Brokering/order-rejection.md)
 * [Returns](Flows/returns/README.md)
 * [Inventory](Flows/Inventory/README.md)
   * [Receiving](Flows/Inventory/Receiving.md)
