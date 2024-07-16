@@ -21,4 +21,4 @@ The **Shipping to store** page is segmented into three tabs:
 * _**Ready for Pickup:**_ This tab displays the orders that are ready for pickup. Once the customer arrives at the store for pickup and receives the order, the store associate marks `Handover`, moving the order to the completed orders tab.
 * _**Completed:**_ This tab displays all the completed BOPIS ship to store orders handed over to the customers in the past 24 hours.
 
-<img width="1129" alt="Ship to Store" src="https://github.com/user-attachments/assets/1ce90a47-c320-4d12-8747-cd356667bdcd">
+<figure><img src="https://github.com/user-attachments/assets/1ce90a47-c320-4d12-8747-cd356667bdcd" alt=""><figcaption></figcaption></figure>
