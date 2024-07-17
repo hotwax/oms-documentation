@@ -1,10 +1,11 @@
 # Introduction
 
-This document details the Reorder-Limit feature, allowing clients to automatically generate reports for items requiring inventory replenishment.** The feature utilizes a pre-configured `Reorder Channel` with customizable threshold rules. Clients can adjust these rules to define the minimum inventory level (reorder limit) at which they'd like to be notified for stock replenishment/
+This document details the Reorder-Limit feature, allowing clients to automatically generate reports for items requiring inventory replenishment.The feature utilizes a pre-configured `Reorder Channel` with customizable threshold rules. Clients can adjust these rules to define the minimum inventory level (reorder limit) at which they'd like to be notified for stock replenishment.
 
 ## Setting Reorder Limits
 
-Currently, reorder limits can only be set for products belonging to specific tags. Individual SKUs cannot have reorder limits assigned until they are categorized under a tag.
+{% hint style="info" %} Currently, reorder limits can only be set for products belonging to specific tags. Individual SKUs cannot have reorder limits assigned until they are categorized under a tag. { % endhint %}
+
 
 Here's how to set the reorder limit for products by tag:
 
@@ -15,18 +16,18 @@ Here's how to set the reorder limit for products by tag:
 5. Under **Channels**, select the **Configuration Facility**.
 6. Under **Products by Tag**, use the filter options to include or exclude products based on their tags.
 7. Click **Save** to create the rule.
-8. Schedule the rule to run daily at midnight. You can also click **Run Now** for immediate execution.
+8. Schedule the rule to run daily at midnight. You can also click **Run Now** for immediate execution from the Job scheduler pinned on the top of the page.
 
 ### Additional Steps (Optional)
 
 1. Navigate to **Launchpad** > **Job Manager App** > **Inventory** page.
-2. Locate the **Import Product Threshold** job under "More jobs." 
+2. Locate the **Import Product Facility** job under "More jobs." 
 3. Schedule this job to run every 3 hours, or click **Run Now** for immediate execution. (This ensures data updates)
 4. In the same app, navigate to the **Miscellaneous** page and schedule the **Process Bulk Import Files** job to run every 15 minutes. You can also click **Run Now** for immediate execution.
 
 ### Setting Different Reorder Limits (Optional)
 
-If you require different reorder limits for various product categories, create separate rules using the same process mentioned above. Utilize the "Products by Tag" section for filtering products within each rule.
+If you require different reorder limits for various product categories, create separate rules using the same process mentioned above. Utilize the `Products by Tag` section for filtering products within each rule.
 
 ## Verifying Reorder Limits
 
