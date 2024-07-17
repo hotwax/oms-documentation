@@ -4,7 +4,9 @@ This document details the Reorder-Limit feature, allowing clients to automatical
 
 ## Setting Reorder Limits
 
-{% hint style="info" %} Currently, reorder limits can only be set for products belonging to specific tags. Individual SKUs cannot have reorder limits assigned until they are categorized under a tag. { % endhint %}
+{% hint style="info" %} 
+Currently, reorder limits can only be set for products belonging to specific tags. Individual SKUs cannot have reorder limits assigned until they are categorized under a tag. 
+{ % endhint %}
 
 
 Here's how to set the reorder limit for products by tag:
