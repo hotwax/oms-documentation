@@ -7,3 +7,4 @@
 * [Inventory](reports/inventory.md)
 * [Fulfillment](reports/fulfillment.md)
 * [Netsuite Sync](reports/netsuitesync.md)
+* [Reorder Limit](reports/reorder-limit.md)
