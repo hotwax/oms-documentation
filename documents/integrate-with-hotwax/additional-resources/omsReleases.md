@@ -11,26 +11,37 @@ description: Discover  the versions of HotWax Commerce OMS releases.
 2. To find details about SOLR versions, refer to the [SOLR version document](\[solr\_version\_document\_link]\(https:/docs.google.com/spreadsheets/d/1H-iEVG-hS9FTsYOf5YiUH-5KOJUcu0\_TiPG8aVYjaHU/edit/#gid=0\))
 {% endhint %}
 
+## Hotfix - v5.13.5 (17th July 2024)
+
+| Information     | Value                                                                                                                |
+| --------------- | -------------------------------------------------------------------------------------------------------------------- |
+| Release Version | v5.13.5                                                                                                              |
+| Release Type    | Hotfix                                                                                                               |
+| Image Tag       | v5.13.5                                                                                                              |
+| Image URL       | `289432782788.dkr.ecr.us-east-1.amazonaws.com/omscoreimage:omscoreimage-v5.13.5`                                     |
+| Diff            | [Link to diff](https://git.hotwax.co/commerce/oms/-/compare/v5.13.4...v5.13.5?from_project_id=161&straight=false)    |
+| Changelog       | [Link to changelog](https://git.hotwax.co/commerce/oms/-/blob/v5.13.5/CHANGELOG.md?ref%5C_type=tags&ref_type=tags)   |
+
 ## Hotfix - v5.13.4 (13th July 2024)
 
 | Information     | Value                                                                                                                |
 | --------------- | -------------------------------------------------------------------------------------------------------------------- |
-| Release Version | v5.13.4                                                                                                             |
+| Release Version | v5.13.4                                                                                                              |
 | Release Type    | Hotfix                                                                                                               |
 | Image Tag       | v5.13.4                                                                                                              |
 | Image URL       | `289432782788.dkr.ecr.us-east-1.amazonaws.com/omscoreimage:omscoreimage-v5.13.4`                                     |
-| Diff            | [Link to diff](https://git.hotwax.co/commerce/oms/-/compare/v5.13.3...v5.13.4?from_project_id=161&straight=false)  |
+| Diff            | [Link to diff](https://git.hotwax.co/commerce/oms/-/compare/v5.13.3...v5.13.4?from_project_id=161&straight=false)    |
 | Changelog       | [Link to changelog](https://git.hotwax.co/commerce/oms/-/blob/v5.13.4/CHANGELOG.md?ref%5C_type=tags&ref_type=tags)   |
 
 ## Hotfix - v5.13.3 (9th July 2024)
 
 | Information     | Value                                                                                                                |
 | --------------- | -------------------------------------------------------------------------------------------------------------------- |
-| Release Version | v5.13.3                                                                                                             |
+| Release Version | v5.13.3                                                                                                              |
 | Release Type    | Hotfix                                                                                                               |
 | Image Tag       | v5.13.3                                                                                                              |
 | Image URL       | `289432782788.dkr.ecr.us-east-1.amazonaws.com/omscoreimage:omscoreimage-v5.13.3`                                     |
-| Diff            | [Link to diff](https://git.hotwax.co/commerce/oms/-/compare/v5.13.2...v5.13.3?from_project_id=161&straight=false)  |
+| Diff            | [Link to diff](https://git.hotwax.co/commerce/oms/-/compare/v5.13.2...v5.13.3?from_project_id=161&straight=false)    |
 | Changelog       | [Link to changelog](https://git.hotwax.co/commerce/oms/-/blob/v5.13.3/CHANGELOG.md?ref%5C_type=tags&ref_type=tags)   |
 
 ## Hotfix - v5.13.2 (8th July 2024)
@@ -59,12 +70,12 @@ description: Discover  the versions of HotWax Commerce OMS releases.
 
 | Information     | Value                                                                                                              |
 | --------------- | ------------------------------------------------------------------------------------------------------------------ |
-| Release Version | v5.13.0                                                                                                             |
+| Release Version | v5.13.0                                                                                                            |
 | Release Type    | Minor                                                                                                              |
-| Image Tag       | v5.13.0                                                                                                             |
+| Image Tag       | v5.13.0                                                                                                            |
 | Image URL       | `289432782788.dkr.ecr.us-east-1.amazonaws.com/omscoreimage:omscoreimage-latest`                                    |
-| Diff            | [Link to diff](https://git.hotwax.co/commerce/oms/-/compare/v5.12.0...v5.13.0?from_project_id=161&straight=false)    |
-| Changelog       | [Link to changelog](https://git.hotwax.co/commerce/oms/-/blob/v5.13.0/CHANGELOG.md?ref_type=tags)                   |
+| Diff            | [Link to diff](https://git.hotwax.co/commerce/oms/-/compare/v5.12.0...v5.13.0?from_project_id=161&straight=false)  |
+| Changelog       | [Link to changelog](https://git.hotwax.co/commerce/oms/-/blob/v5.13.0/CHANGELOG.md?ref_type=tags)                  |
                                                                                                                                        | 
 
 {% tabs %}
@@ -81,6 +92,17 @@ description: Discover  the versions of HotWax Commerce OMS releases.
 {% endtab %}
 {% endtabs %}
 
+## Hotfix - v5.12.6 (17th July 2024)
+
+| Information     | Value                                                                                                                |
+| --------------- | -------------------------------------------------------------------------------------------------------------------- |
+| Release Version | v5.12.6                                                                                                              |
+| Release Type    | Hotfix                                                                                                               |
+| Image Tag       | v5.12.6                                                                                                              |
+| Image URL       | `289432782788.dkr.ecr.us-east-1.amazonaws.com/omscoreimage:omscoreimage-v5.12.6`                                     |
+| Diff            | [Link to diff](https://git.hotwax.co/commerce/oms/-/compare/v5.12.5...v5.12.6?from_project_id=161&straight=false)    |
+| Changelog       | [Link to changelog](https://git.hotwax.co/commerce/oms/-/blob/v5.12.6/CHANGELOG.md?ref%5C_type=tags&ref_type=tags)   |
+
 ## Hotfix - v5.12.5 (13th July 2024)
 
 | Information     | Value                                                                                                                |
@@ -89,7 +111,7 @@ description: Discover  the versions of HotWax Commerce OMS releases.
 | Release Type    | Hotfix                                                                                                               |
 | Image Tag       | v5.12.5                                                                                                              |
 | Image URL       | `289432782788.dkr.ecr.us-east-1.amazonaws.com/omscoreimage:omscoreimage-v5.12.5`                                     |
-| Diff            | [Link to diff](https://git.hotwax.co/commerce/oms/-/compare/v5.12.4...v5.12.5?from_project_id=161&straight=false)  |
+| Diff            | [Link to diff](https://git.hotwax.co/commerce/oms/-/compare/v5.12.4...v5.12.5?from_project_id=161&straight=false)    |
 | Changelog       | [Link to changelog](https://git.hotwax.co/commerce/oms/-/blob/v5.12.5/CHANGELOG.md?ref%5C_type=tags&ref_type=tags)   |
 
 ## Hotfix - v5.12.4 (8th July 2024)
@@ -111,7 +133,7 @@ description: Discover  the versions of HotWax Commerce OMS releases.
 | Release Type    | Hotfix                                                                                                               |
 | Image Tag       | v5.12.3                                                                                                              |
 | Image URL       | `289432782788.dkr.ecr.us-east-1.amazonaws.com/omscoreimage:omscoreimage-v5.12.3`                                     |
-| Diff            | [Link to diff](https://git.hotwax.co/commerce/oms/-/compare/v5.12.2...v5.12.3?from_project_id=161&straight=false)  |
+| Diff            | [Link to diff](https://git.hotwax.co/commerce/oms/-/compare/v5.12.2...v5.12.3?from_project_id=161&straight=false)    |
 | Changelog       | [Link to changelog](https://git.hotwax.co/commerce/oms/-/blob/v5.12.3/CHANGELOG.md?ref%5C_type=tags&ref_type=tags)   |
 
 ## Hotfix - v5.12.2 (18th June 2024)
@@ -122,8 +144,8 @@ description: Discover  the versions of HotWax Commerce OMS releases.
 | Release Type    | Hotfix                                                                                                               |
 | Image Tag       | v5.12.2                                                                                                              |
 | Image URL       | `289432782788.dkr.ecr.us-east-1.amazonaws.com/omscoreimage:omscoreimage-v5.12.2`                                     |
-| Diff            | [Link to diff](https://git.hotwax.co/commerce/oms/-/compare/v5.12.1...v5.12.2?from_project_id=161&straight=false)  |
-| Changelog       | [Link to changelog](https://git.hotwax.co/commerce/oms/-/blob/v5.12.2/CHANGELOG.md?ref%5C_type=tags&ref_type=tags)    |
+| Diff            | [Link to diff](https://git.hotwax.co/commerce/oms/-/compare/v5.12.1...v5.12.2?from_project_id=161&straight=false)    |
+| Changelog       | [Link to changelog](https://git.hotwax.co/commerce/oms/-/blob/v5.12.2/CHANGELOG.md?ref%5C_type=tags&ref_type=tags)   |
 
 ## Hotfix - v5.12.1 (18th June 2024)
 
@@ -133,19 +155,19 @@ description: Discover  the versions of HotWax Commerce OMS releases.
 | Release Type    | Hotfix                                                                                                               |
 | Image Tag       | v5.12.1                                                                                                              |
 | Image URL       | `289432782788.dkr.ecr.us-east-1.amazonaws.com/omscoreimage:omscoreimage-v5.12.1`                                     |
-| Diff            | [Link to diff](https://git.hotwax.co/commerce/oms/-/compare/v5.12.0...v5.12.1?from_project_id=161&straight=false)  |
+| Diff            | [Link to diff](https://git.hotwax.co/commerce/oms/-/compare/v5.12.0...v5.12.1?from_project_id=161&straight=false)    |
 | Changelog       | [Link to changelog](https://git.hotwax.co/commerce/oms/-/blob/v5.12.1/CHANGELOG.md?ref%5C_type=tags&ref_type=tags)   |
 
 ## Release - v5.12.0 (13th June 2024)
 
 | Information     | Value                                                                                                              |
 | --------------- | ------------------------------------------------------------------------------------------------------------------ |
-| Release Version | v5.12.0                                                                                                             |
+| Release Version | v5.12.0                                                                                                            |
 | Release Type    | Minor                                                                                                              |
-| Image Tag       | v5.12.0                                                                                                             |
+| Image Tag       | v5.12.0                                                                                                            |
 | Image URL       | `289432782788.dkr.ecr.us-east-1.amazonaws.com/omscoreimage:omscoreimage-latest`                                    |
-| Diff            | [Link to diff](https://git.hotwax.co/commerce/oms/-/compare/v5.11.0...v5.12.0?from_project_id=161&straight=false)    |
-| Changelog       | [Link to changelog](https://git.hotwax.co/commerce/oms/-/blob/v5.12.0/CHANGELOG.md?ref_type=tags)                   |
+| Diff            | [Link to diff](https://git.hotwax.co/commerce/oms/-/compare/v5.11.0...v5.12.0?from_project_id=161&straight=false)  |
+| Changelog       | [Link to changelog](https://git.hotwax.co/commerce/oms/-/blob/v5.12.0/CHANGELOG.md?ref_type=tags)                  |
                                                                                                                                        | 
 
 {% tabs %}
@@ -166,12 +188,12 @@ description: Discover  the versions of HotWax Commerce OMS releases.
 
 | Information     | Value                                                                                                                |
 | --------------- | -------------------------------------------------------------------------------------------------------------------- |
-| Release Version | v5.11.5                                                                                                         |
+| Release Version | v5.11.5                                                                                                              |
 | Release Type    | Hotfix                                                                                                               |
-| Image Tag       | v5.11.5                                                                                                          |
-| Image URL       | `289432782788.dkr.ecr.us-east-1.amazonaws.com/omscoreimage:omscoreimage-v5.11.5`                                      |
-| Diff            | [Link to diff](https://git.hotwax.co/commerce/oms/-/compare/v5.11.4...v5.11.5?from_project_id=161&straight=false) |
-| Changelog       | [Link to changelog](https://git.hotwax.co/commerce/oms/-/blob/v5.11.5/CHANGELOG.md?ref%5C_type=tags&ref_type=tags) |
+| Image Tag       | v5.11.5                                                                                                              |
+| Image URL       | `289432782788.dkr.ecr.us-east-1.amazonaws.com/omscoreimage:omscoreimage-v5.11.5`                                     |
+| Diff            | [Link to diff](https://git.hotwax.co/commerce/oms/-/compare/v5.11.4...v5.11.5?from_project_id=161&straight=false)    |
+| Changelog       | [Link to changelog](https://git.hotwax.co/commerce/oms/-/blob/v5.11.5/CHANGELOG.md?ref%5C_type=tags&ref_type=tags)   |
 
 ## Hotfix - v5.11.4 (13th July 2024)
 
@@ -181,7 +203,7 @@ description: Discover  the versions of HotWax Commerce OMS releases.
 | Release Type    | Hotfix                                                                                                               |
 | Image Tag       | v5.11.4                                                                                                              |
 | Image URL       | `289432782788.dkr.ecr.us-east-1.amazonaws.com/omscoreimage:omscoreimage-v5.11.4`                                     |
-| Diff            | [Link to diff](https://git.hotwax.co/commerce/oms/-/compare/v5.11.3...v5.11.4?from_project_id=161&straight=false)  |
+| Diff            | [Link to diff](https://git.hotwax.co/commerce/oms/-/compare/v5.11.3...v5.11.4?from_project_id=161&straight=false)    |
 | Changelog       | [Link to changelog](https://git.hotwax.co/commerce/oms/-/blob/v5.11.3/CHANGELOG.md?ref%5C_type=tags&ref_type=tags)   |
 
 ## Hotfix - v5.11.3 (14th June 2024)
@@ -191,9 +213,9 @@ description: Discover  the versions of HotWax Commerce OMS releases.
 | Release Version | v5.11.3                                                                                                              |
 | Release Type    | Hotfix                                                                                                               |
 | Image Tag       | v5.11.3                                                                                                              |
-| Image URL       | `289432782788.dkr.ecr.us-east-1.amazonaws.com/omscoreimage:omscoreimage-v5.11.3`                                      |
-| Diff            | [Link to diff](https://git.hotwax.co/commerce/oms/-/compare/v5.11.2...v5.11.3from_project_id=161&straight=false) |
-| Changelog       | [Link to changelog](https://git.hotwax.co/commerce/oms/-/blob/v5.11.3/CHANGELOG.md?ref%5C_type=tags&ref_type=tags) |
+| Image URL       | `289432782788.dkr.ecr.us-east-1.amazonaws.com/omscoreimage:omscoreimage-v5.11.3`                                     |
+| Diff            | [Link to diff](https://git.hotwax.co/commerce/oms/-/compare/v5.11.2...v5.11.3from_project_id=161&straight=false)     |
+| Changelog       | [Link to changelog](https://git.hotwax.co/commerce/oms/-/blob/v5.11.3/CHANGELOG.md?ref%5C_type=tags&ref_type=tags)   |
 
 ## Hotfix - v5.11.2 (13th June 2024)
 
