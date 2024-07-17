@@ -41,8 +41,6 @@ After processing a partial shipment of a transfer order item, it will be listed 
 
 8. Click on the `arrow icon` located at the bottom right corner of the page to complete the shipment.
 
- 
-> [!NOTE]  
-> Store associates are not allowed to insert more than the intended item quantities. The bar turns red if the user tries to overship item quantities.
+{% hint style="info" %} Store associates are not allowed to insert more than the intended item quantities. The bar turns red if the user tries to overship item quantities { % endhint %}
 
 For more details on Transfer order lifecycle refer to this [document](https://docs.hotwax.co/documents/v/learn-hotwax-oms/business-process-models/transferorderlifecycle) 
