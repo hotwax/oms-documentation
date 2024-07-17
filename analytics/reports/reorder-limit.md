@@ -1,6 +1,6 @@
 # Introduction
 
-This document details the Reorder-Limit feature, allowing clients to automatically generate reports for items requiring inventory replenishment.The feature utilizes a pre-configured `Reorder Channel` with customizable threshold rules. Clients can adjust these rules to define the minimum inventory level (reorder limit) at which they'd like to be notified for stock replenishment.
+This document details the Reorder-Limit feature, allowing clients to automatically generate reports for items requiring inventory replenishment.The feature utilizes a pre-configured `Reorder Channel` with customizable threshold rules. Clients can adjust these rules to define the minimum inventory level **(reorder limit)** at which they'd like to be notified for stock replenishment.
 
 ## Setting Reorder Limits
 
