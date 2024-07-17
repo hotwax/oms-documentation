@@ -21,7 +21,7 @@
 * [Brokering](api/brokering/README.md)
   * [Brokered Order Items Feed](api/brokering/feeds/brokered-order-items-feed.md)
 * [Inbound Shipment](api/inbound-shipment/README.md)
-  * [Import](api/inbount-shipment/import.md)
+  * [Import](api/inbound-shipment/import.md)
 * [Returns](api/returns/README.md)
   * [Enumerations](api/returns/field-options.md)
   * [Create Return](api/returns/create-return.md)
