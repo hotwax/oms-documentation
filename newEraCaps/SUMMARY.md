@@ -25,3 +25,6 @@
   * [Payment Methods](flows/salesOrder/paymentMethods.md)
 * [Product Store](flows/product-store/README.md)
 * [Production Data Setup](flows/production-data-setup/Klaviyo.md)
+
+## Troubleshooting
+* [Rollback](troubleshooting/rollback.md)
