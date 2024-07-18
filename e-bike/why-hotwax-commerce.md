@@ -1,5 +1,6 @@
-# Why HotWax Commerce?
-
+---
+description: Discover how E-bike utilized HotWax Commerce to improve their omnichannel capabilities, including pre-order management features.
+---
 ### Challenges Faced by E-Bikeshop
 - **Manual Pre-order Computation:** E-Bikeshop struggled with manually calculating and managing pre-orders, leading to inefficiencies and potential errors in order fulfillment timelines.
 - **All Products on Pre-order Status:** Difficulty distinguishing between products available for immediate purchase and those on pre-order caused customer confusion and impacted sales conversions.
