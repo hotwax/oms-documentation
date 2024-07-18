@@ -14,22 +14,22 @@ Log in to the Hotwax Commerce OMS using your username and password.
 #### Navigate to Shopify Section:
 - Click on the hamburger navbar at the top left corner of the screen (if the left slider is not visible).
 - Navigate to the `Shopify` section in the left slider.
-  ![roll9](https://github.com/user-attachments/assets/adebd2b0-d3bb-4455-9d17-860931651d17)
+  ![roll1](../assets/roll1.png)
 
 
 #### Access Shopify Shop Settings:
 - Go to `Shopify` > `Shopify shop` and click on `SHOP`.
-  ![roll8](https://github.com/user-attachments/assets/0d81482e-bdba-488b-8a16-7ab1117cbbdb)
+  ![roll2](../assets/roll2.png)
 
 - Inside SHOP, go to the `Shopify Config` section.
 - Find the Action field and click on the edit icon, which will open a pop-up window.
-  ![roll7](https://github.com/user-attachments/assets/a717dd9a-4d7c-4e57-aeeb-d50656b0a0bf)
+  ![roll3](../assets/roll3.png)
 
 
 #### Change Access Scope:
 - In the pop-up edit screen, navigate to the `Access Scope` section.
 - Select `Shop no access` from the drop-down menu.
-  ![roll6](https://github.com/user-attachments/assets/5a14ddfe-0b6f-41fb-b53e-602ccb157930)
+  ![roll4](../assets/roll4.png)
 
 
 #### Save Changes:
@@ -40,23 +40,23 @@ Log in to the Hotwax Commerce OMS using your username and password.
 #### Navigate to Launchpad Section:
 - Click on the hamburger navbar at the top left corner of the screen (if the left slider is not visible).
 - Click on the `Go to Launchpad` section inside the left slider.
-  ![roll10](https://github.com/user-attachments/assets/d0edc313-4f71-4abd-83c2-a3558d9486a2)
+  ![roll5](../assets/roll5.png)
 
 
 #### Navigate to the Administration section:
 - Open the `Company` app inside it.
-  ![roll12](https://github.com/user-attachments/assets/ce2e2cb5-00c3-4b7b-96c7-2b89b1aca377)
+  ![roll6](../assets/roll6.png)
 
 
 #### Access Company Store:
 - Inside the `Company` app, click on the `STORE` (i.e., New Era Cap Store).
-  ![roll11](https://github.com/user-attachments/assets/0205af5b-c2d7-4dd1-83be-ce7c930441c6)
+  ![roll7](../assets/roll7.png)
 
 
 #### Disable Brokering:
 - Inside the `New Era Cap Store`, navigate to the section (i.e., STORE) where you will find details about the company name, order brokering, operation country, and inventory reservation.
 - Click on the order brokering toggle button next to it to disable order brokering.
-  ![roll13](https://github.com/user-attachments/assets/e7b0ec66-73ab-4de0-bf67-5de3e84d490e)
+  ![roll8](../assets/roll8.png)
 
 - Changes will be saved automatically.
 
