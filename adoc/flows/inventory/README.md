@@ -26,7 +26,7 @@ Because HotWax sends orders to Retail Pro for invoicing only when all items of a
 To prevent shipped inventory from partially completed orders from being reintroduced into the OMS, the Retail Pro integration layer extracts all completed order items from orders with inventory updates in the recent inventory delta file. It focuses on orders that are not entirely completed and calculates the total inventory deductions not yet reported to Retail Pro. A file is then created with inventory variances for these products in the OMS.
 
 {% hint style="warning" %}
-The variance file is created for all order items from partially completed orders, even for products not included in the reset inventory file from Retail Pro. Due to this condition, it is vital that all products receive an inventory reset from Retail Pro to ensure that their inventory is not excessively deducted by the variance file.
+The reset inventory file from Retail Pro is created for only those products whose inventory levels varied in the past day. Thus, deltas for only those order items from partially completed orders are included in the variance file which are present in the reset inventory file received from RetailPro that day. This ensures that the variance file does not excessively deduct inventory for order items from partially completed orders that are not included in the reset inventory file.
 {% endhint %}
 
 **Sample variance file**
