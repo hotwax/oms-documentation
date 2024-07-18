@@ -5,7 +5,7 @@ description: >-
   rejection options.
 ---
 
-# Update Fulfillment App
+# Migration Guide: Fulfillment App
 
 ## Introduction
 
