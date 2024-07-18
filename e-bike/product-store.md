@@ -11,7 +11,7 @@ Users have the flexibility to adjust these configurations as necessary to align 
 
 Details specific to E-bike Product Store.
 
-| Type                 | Description                                                                                                                                           | Value                                                           |
+| Field                 | Description                                                                                                                                           | Value                                                           |
 |----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------|
 | RATE_SHOPPING        | Configuration for Rate Shopping                                                                                                                       | N                                                               |
 | INV_CNT_VIEW_QOH     | Allows the user to see current QOH from HotWax OMS on the product detail page of the Inventory Count app to help users during the periodic cycle count | false                                                           |
