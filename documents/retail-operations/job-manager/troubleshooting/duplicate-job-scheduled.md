@@ -28,7 +28,8 @@ This collectively means we have two jobs: one is ready to run 5 minutes after th
    - Open the Job Manager app in HotWax Commerce.
    - Navigate to the Job Manager > `Order` page (for the example provided). For example, If the duplicacy arises in another area like Brokering, navigate to the corresponding section, such as `Job Manager` > Brokering.
 2. **Identify Duplicated Jobs:**
-   - Traverse all jobs and identify those with overlapping schedules. For example, `Approve Order` is scheduled every 5 minutes, and `Approve Sales Order" is scheduled every 15 minutes.
+   - Traverse all jobs and identify those with overlapping schedules. For example, `Approve Order` is scheduled every 5 minutes, and `Approve Sales Order` is scheduled every 15 minutes.
+   - Duplicated jobs can also be identified by disabling the job with the exception. If the job is disabled once and it is still visible as scheduled after refreshing the page, then the job was duplicated.
 
 #### Resolve the Issue:
 1. **Compare Jobs:**
