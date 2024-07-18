@@ -1,3 +1,7 @@
+---
+description: Learn about the flows in E-bike.
+---
+
 ## Inventory
 E-Bike operates mainly on pre-orders and they do not use any ERP system. E-Bike manually maintains its inventory through an Excel sheet and manually uploads it to HotWax commerce through the EXIM page. 
 
