@@ -2,7 +2,7 @@
 description: Learn about E-Bikeshop the largest Haibike e-bike dealer in the UK. Based in Germany, Haibike maintains a reputation for offering great value and high-quality e-bikes.
 ---
 
-# Introduction
+## Introduction
 E-Bikeshop is the largest Haibike e-bike dealer in the UK. Based in Germany, Haibike maintains a reputation for offering great value and high-quality e-bikes.
 
 ## Business Model
