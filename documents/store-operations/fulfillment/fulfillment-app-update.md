@@ -31,7 +31,7 @@ The revamped user interface streamlines the handling of orders containing kit pr
 
 Previously, rejecting orders containing multiple items was a time-consuming process.  Retailers often prefer to fulfill entire orders and avoid partial shipments. This meant manually selecting rejection reasons for each item, which could be tedious.
 
-Introducing Automatic Partial Rejection
+**Introducing Automatic Partial Rejection**
 
 The updated Fulfillment App addresses this challenge with a new, company-level setting for automatic partial rejection. When activated, if a single item in an order is out of stock, the entire order won't be rejected. Instead, the app automatically rejects the missing item(s) while allowing the remaining in-stock items to be fulfilled, streamlining partial order completion.  If partial fulfillment isn't desired, the entire order can be rejected. This might then be routed to a different fulfillment location that has all the items in stock, potentially offering more cost-effective shipping options.
 
