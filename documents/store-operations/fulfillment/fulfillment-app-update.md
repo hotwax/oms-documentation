@@ -6,11 +6,11 @@ HotWax Commerce has enhanced its `Fulfillment` app with major UI improvements an
 
 ## Kit Products Visibility
 
-The new user interface improves handling of orders with kit products. The enhanced app provides clear identification and management of kit products within the order view. 
+The new user interface improves the handling of orders with kit products. The enhanced app provides clear identification and management of kit products within the order view. 
 
 ### Identifying Kit Products:
 - **Kit Labels:** Kit items now display a `Kit Label` next to their identifiers in the order view. This visual cue helps store associates quickly recognize items that are part of a kit.
-- **Options Icon:** Click the `Options Icon` next to the kit label to view all items included in the kit. This feature is particularly useful for store associates when a customer orders multiple kit products in one order, enabling them to easily identify which items belong to each kit.
+- **Options Icon:** Click the `Options Icon` next to the kit label to view all items included in the kit. This feature is particularly useful for store associates when a customer orders multiple kit products in one order, enabling them to identify which items belong to each kit easily.
 
 
 ### Managing Kit Products:
@@ -19,7 +19,7 @@ The new user interface improves handling of orders with kit products. The enhanc
 
 ## Order Rejection Options
 
-Previously, store associates had to manually select rejection reasons for each order item, leading to unnecessary order splits. The updated Fulfillment App streamlines this process by allowing retailers to decide between partial rejection and and full shipment rejection.
+Previously, store associates had to manually select rejection reasons for each order item, leading to unnecessary order splits. The updated Fulfillment App streamlines the process by allowing Retailers to choose between partial and full shipment rejection from stores. If an order has two items, they can decide to split the order by partially rejecting items for faster fulfillment. Alternatively, they can reroute the entire order to a different facility for cost-effective shipping.
 
 ### Enable Partial Rejections Toggle:
 - **Settings Page:** Navigate to the `Settings` page and locate the `Partial Rejections Toggle`. Enable or disable partial rejections based on your preferences.
