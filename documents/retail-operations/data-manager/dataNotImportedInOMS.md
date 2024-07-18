@@ -58,5 +58,5 @@ Empty records in an imported file indicate that the expected data from the exter
   * If the file format is correct (CSV), review imported records from the file.
   * Ensure the external system generates data records:
     * Access the SFTP path specified for file uploads.
-    * Refer to user manuals for correct file paths and SFTP settings.
+    * Refer to [user manuals](data-import-errors.md) for correct file paths and SFTP settings.
     * Verify the existence of records in the SFTP directory.
