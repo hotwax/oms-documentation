@@ -4,6 +4,7 @@
 
 ## 2024
 
+* [July'24](2024/july24/fulfillment-app-update.md)
 * [June'24](2024/june24/README.md)
   * [Process Returns without Order IDs](2024/june24/process-returns-without-order-ids.md)
   * [Schedule Inventory Restockings](2024/june24/schedule-inventory-restockings.md)
