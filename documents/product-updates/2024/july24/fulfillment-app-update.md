@@ -25,6 +25,8 @@ The revamped user interface streamlines the handling of orders containing kit pr
 * **Accurate Stock Levels:** Stock availability for an entire kit is now based on the lowest individual component's inventory. This ensures store associates have a clear picture of whether they can fulfill the entire kit or not.
 * **Simplified Rejection:** Use the Bin icon to reject the entire kit. Any chosen rejection reason will automatically apply to all items within the kit, streamlining the process and ensuring consistency.
 
+<figure><img src="../../.gitbook/assets/kit.png" alt=""><figcaption></figcaption></figure>
+
 ## Simplified Order Rejection:
 
 Previously, rejecting orders containing multiple items was a time-consuming process. Retailers often prefer to fulfill entire orders and avoid partial shipments. This meant manually selecting rejection reasons for each item, which could be tedious.
