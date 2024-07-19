@@ -47,6 +47,16 @@
 * [Miscellaneous](api/miscellaneous/README.md)
   * [Perform Find](api/miscellaneous/perform-find.md)
 
+  ## Journeys
+
+* [Buy Online Pickup in Store](journeys/buy-online-pickup-in-store/introduction-buy-online-pickup-in-store.md)
+  * [BOPIS PDP Experience](journeys/buy-online-pickup-in-store/bopis-pdp-experience.md)
+  * [Ready For Pickup Notification](journeys/buy-online-pickup-in-store/ready-for-pickup-email.md)
+* [Brokering and Allocation](journeys/brokering-and-allocation/introduction-brokering-and-allocation.md)
+  * [Order Soft Allocation](journeys/brokering-and-allocation/soft-allocation.md)
+* [Pre-orders](journeys/pre-orders/introduction-pre-orders.md)
+  * [Promise Date Change Notification](journeys/pre-orders/promise-date-change-communication.md)
+
 ## Additional Resources
 
 * [Sample Reset Inventory csv](additional-resources/sample-reset-inventory-csv.md)
