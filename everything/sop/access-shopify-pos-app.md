@@ -49,7 +49,7 @@ We do not have access to Shopify POS initially; we need to obtain this access fr
 
 4. **Select Store:**
    - After successfully entering the authorization code, you will be prompted to select a location.
-   - Choose your Shopify Shop from the list.
+   - Choose your Retail Store from the list.
 
 5. **Select a Location:**
    - Choose a location from the available options.
