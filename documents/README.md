@@ -45,7 +45,7 @@ Explore the sections **"Learn HotWax OMS," "Learn Shopify," and "Learn NetSuite,
 
 ## Learn OMS :orange\_book:
 
-<table data-view="cards"><thead><tr><th align="center"></th><th data-hidden data-card-target data-type="content-ref"></th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td align="center"><strong>Business Process Models</strong></td><td><a href="https://app.gitbook.com/o/l53nGvPQLhOHrKCP9HTG/s/fkS6HE1ADY5pjfJTizhz/">Learn HotWax OMS</a></td><td><a href=".gitbook/assets/BPM.png">BPM.png</a></td></tr><tr><td align="center"><strong>HotWax Commerce Journeys</strong></td><td><a href="https://app.gitbook.com/s/fkS6HE1ADY5pjfJTizhz/journeys">Journeys</a></td><td><a href=".gitbook/assets/journey.png">journey.png</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th align="center"></th><th data-hidden data-card-target data-type="content-ref"></th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td align="center"><strong>Business Process Models</strong></td><td><a href="https://app.gitbook.com/o/l53nGvPQLhOHrKCP9HTG/s/fkS6HE1ADY5pjfJTizhz/">Learn HotWax OMS</a></td><td><a href=".gitbook/assets/BPM.png">BPM.png</a></td></tr></tbody></table>
 
 ## Learn Shopify :green\_book:
 
@@ -57,7 +57,7 @@ Explore the sections **"Learn HotWax OMS," "Learn Shopify," and "Learn NetSuite,
 
 ## Integrate with HotWax :dart:
 
-<table data-view="cards"><thead><tr><th align="center"></th><th data-hidden data-card-target data-type="content-ref"></th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td align="center"><strong>APIs and Data Feeds</strong></td><td><a href="https://app.gitbook.com/o/l53nGvPQLhOHrKCP9HTG/s/DVy340gLlDzLzxQzy3ZF/">Integrate with HotWax</a></td><td><a href=".gitbook/assets/API.png">API.png</a></td></tr><tr><td align="center"><strong>OMS Release Versions</strong></td><td><a href="https://app.gitbook.com/s/DVy340gLlDzLzxQzy3ZF/oms-release-versions">OMS Release Versions</a></td><td><a href=".gitbook/assets/OMS Release.png">OMS Release.png</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th align="center"></th><th data-hidden data-card-target data-type="content-ref"></th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td align="center"><strong>APIs and Data Feeds</strong></td><td><a href="https://app.gitbook.com/o/l53nGvPQLhOHrKCP9HTG/s/DVy340gLlDzLzxQzy3ZF/">Integrate with HotWax</a></td><td><a href=".gitbook/assets/API.png">API.png</a></td></tr><tr><td align="center"><strong>OMS Release Versions</strong></td><td><a href="https://app.gitbook.com/s/DVy340gLlDzLzxQzy3ZF/oms-release-versions">OMS Release Versions</a></td><td><a href=".gitbook/assets/OMS Release.png">OMS Release.png</a></td></tr><tr><td align="center"><strong>HotWax Commerce Journeys</strong></td><td><a href="https://app.gitbook.com/s/DVy340gLlDzLzxQzy3ZF/journeys/introduction-buy-online-pickup-in-store">Buy Online Pickup in Store</a></td><td><a href=".gitbook/assets/journey.png">journey.png</a></td></tr></tbody></table>
 
 ## Additional Integrations :jigsaw:
 
