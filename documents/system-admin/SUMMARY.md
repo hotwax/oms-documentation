@@ -34,6 +34,8 @@
   * [Manage Groups](administration/facilities/manage-groups.md)
 * [Delete customers](delete-customers.md)
 
+* SOLR Indexing(system-admin.md)
+
 ## Product Store
 
 * [Configure Product Store](product-store/README.md)
@@ -52,7 +54,8 @@
   * [Map Career Shipment Methods](fulfillment/carrier-and-shipment-methods.md)
 * [How to map shipping method in HotWax Commerce to Netsuite](fulfillment/add-shipping-method.md)
 * [Configure Rate Shopping](fulfillment/configure-rate-shopping.md)
- 
+
+
 
 
 
