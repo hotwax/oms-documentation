@@ -1,17 +1,19 @@
-# Table of Contents
+# Table of contents
 
 * [Introduction](README.md)
 * [Why HotWax Commerce](whyHotWax.md)
 
 ## Flows
+
 * [Inventory](flows/inventory/README.md)
 * [Products](flows/prodcuts/README.md)
 * [Pre-orders](flows/preorders/README.md)
 * [Product Store](flows/product-store/README.md)
 
 ## Troubleshooting
-* [Login & Access HC](troubleshooting/hotwax_access_and_login.md)
-* [Export CSV](troubleshooting/export_csv.md)
-* [Preorder & Back Order Tags](troubleshooting/imported_preorders_without_tag.md)
-* [Multistore Pre-Orders Sync](troubleshooting/preorders_not_syncing_on_stores.md)
-* [ATP not deducting](troubleshooting/atp_deduction.md)
+
+* [Login & Access HC](troubleshooting/hotwax\_access\_and\_login.md)
+* [Export CSV](troubleshooting/export\_csv.md)
+* [Pre-order & Backorder Tags](troubleshooting/imported\_preorders\_without\_tag.md)
+* [Multistore Pre-Orders Sync](troubleshooting/preorders\_not\_syncing\_on\_stores.md)
+* [ATP not deducting](troubleshooting/atp\_deduction.md)

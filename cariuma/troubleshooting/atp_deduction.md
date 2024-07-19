@@ -1,8 +1,10 @@
 ---
-description: Discover how to resolve issues with Available to Promise (ATP) not being deducted as expected from Purchase Orders in Hotwax Commerce.
+description: >-
+  Discover how to resolve issues with Available to Promise (ATP) not being
+  deducted as expected from Purchase Orders in Hotwax Commerce.
 ---
 
-# ATP Not Deducted as Expected
+# ATP not deducting
 
 Available to Promise (ATP) is not deducted as expected from Purchase Orders. This may be due to a discrepancy in order import, which could be caused by:
 
@@ -28,7 +30,7 @@ The order import job responsible for importing new orders is not scheduled, ther
 If the ATP issue persists, it might be due to job failure, possibly caused by a server error. To resolve:
 
 1. Go to [Job Manager App](https://job-manager.hotwax.io/) > `Pipeline` page > click `History` segment.
-2. In the top right corner, click on the filter icon and check the `Failed`<img src="./Icons/check-box.png" alt="external link icon" width="12" height="12"> checkbox under the status column.
+2. In the top right corner, click on the filter icon and check the `Failed`<img src="Icons/check-box.png" alt="external link icon" data-size="line"> checkbox under the status column.
 3. Check if the `order import` job has failed.
 4. If found, click on the `Failed` Badge for that job to see the error message.
 
