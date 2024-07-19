@@ -47,7 +47,7 @@ To successfully create a sales order in NetSuite, having the customer informatio
 
 ### Resolution
 #### Customer ID Missing:
-1. Check the customer feed for the order.
+1. Check the [customer feed](https://docs.hotwax.co/deployment-and-configurations/v/netsuite/prerequisites/sftplocations) for the order.
 2. Navigate to the SFTP customer feed in NetSuite.
 3. Verify if the order is present in the feed.
 4. If the order is present in the feed, there may be an internal issue with NetSuite.
@@ -90,4 +90,4 @@ If an order doesn't have a payment preference, it cannot be synced with NetSuite
 ### Resolution
 #### Preferences Not Set:
 1. Inform the client about the issue with the payment preferences.
-2. After the client makes the necessary changes, run the "Import Order Update from Shopify" job to sync the data.
+2. After the client makes the necessary changes, run the [`Import Order Update from Shopify`](https://docs.hotwax.co/documents/v/retail-operations/workflow/job-workflows/orders#import-order-updates-from-shopify) job to sync the data.
