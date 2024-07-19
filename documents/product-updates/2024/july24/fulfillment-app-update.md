@@ -5,7 +5,7 @@ description: >-
   rejection options.
 ---
 
-# Migration Guide: Fulfillment App
+# Fulfillment App Upgrade
 
 ## Introduction
 
@@ -25,15 +25,11 @@ The revamped user interface streamlines the handling of orders containing kit pr
 * **Accurate Stock Levels:** Stock availability for an entire kit is now based on the lowest individual component's inventory. This ensures store associates have a clear picture of whether they can fulfill the entire kit or not.
 * **Simplified Rejection:** Use the Bin icon to reject the entire kit. Any chosen rejection reason will automatically apply to all items within the kit, streamlining the process and ensuring consistency.
 
-<figure><img src="../.gitbook/assets/kit.png" alt=""><figcaption></figcaption></figure>
+## Simplified Order Rejection:
 
-## Simplified Order Rejection for Kit Products:
+Previously, rejecting orders containing multiple items was a time-consuming process. Retailers often prefer to fulfill entire orders and avoid partial shipments. This meant manually selecting rejection reasons for each item, which could be tedious.
 
-Previously, rejecting orders containing multiple items was a time-consuming process.  Retailers often prefer to fulfill entire orders and avoid partial shipments. This meant manually selecting rejection reasons for each item, which could be tedious.
-
-**Introducing Automatic Partial Rejection**
-
-The updated `Fulfillment App` addresses this challenge with a new, company-level setting for automatic partial rejection. When activated, if a single item in an order is out of stock, the entire order won't be rejected. Instead, the app automatically rejects the missing item(s) while allowing the remaining in-stock items to be fulfilled, streamlining partial order completion.  If partial fulfillment isn't desired, the entire order can be rejected. This might then be routed to a different fulfillment location that has all the items in stock, potentially offering more cost-effective shipping options.
+The updated `Fulfillment App` addresses this challenge with a new, company-level setting for automatic partial rejection. When activated, if a single item in an order is out of stock, the entire order won't be rejected. Instead, the app automatically rejects the missing item(s) while allowing the remaining in-stock items to be fulfilled, streamlining partial order completion. If partial fulfillment isn't desired, the entire order can be rejected. This might then be routed to a different fulfillment location that has all the items in stock, potentially offering more cost-effective shipping options.
 
 ### Enable Partial Rejections Toggle:
 
@@ -50,12 +46,11 @@ Previously, users had to select an option to report issues in the order details 
 For more details, refer to our detailed [user manual](../../../store-operations/fulfillment/rejection.md)
 
 {% tabs %}
-{% tab title="Updated App" %}
+{% tab title="Updated Flow" %}
 {% embed url="https://youtu.be/yEqpwkNmFxo" %}
 {% endtab %}
 
-{% tab title="Previous App" %}
+{% tab title="Previous Flow" %}
 {% embed url="https://youtu.be/CUqcvBGY1zw" %}
 {% endtab %}
 {% endtabs %}
-
