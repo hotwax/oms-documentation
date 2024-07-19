@@ -34,7 +34,7 @@
   * [Manage Groups](administration/facilities/manage-groups.md)
 * [Delete customers](delete-customers.md)
 
-* SOLR Indexing(system-admin.md)
+* [SOLR Indexing](system-admin.md)
 
 ## Product Store
 
