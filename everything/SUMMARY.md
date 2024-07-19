@@ -24,7 +24,6 @@
 * [Create a Job using Data Manager Configuration](sop/job-creation-by-data-configuration.md)
 * [Check Job Frequencies](sop/check-job-frequency.md)
 * [Report Request](sop/report-request.md)
-* [Tathya login Issue](sop/tathya-login-issue.md)
 
 ## Napita
 
@@ -70,6 +69,7 @@
   * [Listing User in Tathya](tathya/userCreation/listUsersTathya.md)
   * [User Permissions](tathya/usercreation/user-permissions.md)
 * [Reporting Discrepancies](tathya/sop/data-discrepancies.md)
+* [Tathya login Issue](tathya/sop/tathya-login-issue.md)
 
 ## Additional Resources
 
