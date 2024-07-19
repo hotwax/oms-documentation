@@ -47,7 +47,7 @@
 * [Miscellaneous](api/miscellaneous/README.md)
   * [Perform Find](api/miscellaneous/perform-find.md)
 
-  ## Journeys
+## Journeys
 
 * [Buy Online Pickup in Store](journeys/buy-online-pickup-in-store/introduction-buy-online-pickup-in-store.md)
   * [BOPIS PDP Experience](journeys/buy-online-pickup-in-store/bopis-pdp-experience.md)
