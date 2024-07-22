@@ -31,9 +31,9 @@ The revamped user interface streamlines the handling of orders containing kit pr
 
 Previously, rejecting orders containing multiple items was a time-consuming process. Retailers often prefer to fulfill entire orders and avoid partial shipments. This meant manually selecting rejection reasons for each item, which could be tedious.
 
-In the previous version of `Fulfillment` App, users had to select an option to report issues in the `order details` card and then select the reason. **Now, the order rejection button has been relocated to a more accessible position. Store associates can easily reject an order and select the specific reason by clicking the `red bin` icon directly on the order card.**
+In the previous version of the `Fulfillment` app, users had to click on `Report an Issue` before being presented with rejection reasons. **Now, the order rejection button has been relocated to a more accessible position. Store associates can easily reject an order and select the specific reason by clicking the `red bin` icon directly on the order card.**
 
-The updated `Fulfillmen`t app offers a company-level setting for automatic complete order rejection. When activated, if a single item in an order is out of stock, the entire order will be rejected, allowing for potentially more cost-effective shipping options. If partial fulfillment is preferred, retailers can enable partial allocation so that only the out-of-stock items are rejected, while the remaining in-stock items are fulfilled.
+The updated `Fulfillment` app offers a company-level setting for automatic complete order rejection. When activated, if a single item in an order is out of stock, the entire order will be rejected, allowing for potentially more cost-effective shipping options. If partial fulfillment is preferred, retailers can enable partial allocation so that only the out-of-stock items are rejected, while the remaining in-stock items are fulfilled.
 
 ### Enable Partial Rejections Toggle:
 
