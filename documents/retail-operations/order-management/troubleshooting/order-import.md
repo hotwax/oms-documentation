@@ -56,6 +56,6 @@ This document provides a comprehensive guide to diagnose and resolve synchroniza
 
 By following these detailed steps, you can effectively troubleshoot and resolve synchronization issues between HotWax Commerce and Shopify, ensuring a smooth and error-free order import process.
 
-{% hint style="success" %} This issue is handled in [Release 5.9.0](../../../integrate-with-hotwax/additional-resources/omsReleases.md) { % endhint %}
+{% hint style="success" %} This issue is handled in [Release 5.9.0](../../../integrate-with-hotwax/additional-resources/omsReleases.md) {% endhint %}
 
 
