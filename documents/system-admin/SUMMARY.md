@@ -1,7 +1,7 @@
 # Table of contents
 
 * [Launchpad](README.md)
-* [Glossary](GLOSSARY.md)
+* [Glossary](./../store-operations/GLOSSARY.md)
 
 
 ## Administration
