@@ -5,7 +5,7 @@ description: >-
   rejection options.
 ---
 
-# Migration Guide: Fulfillment App
+# Fulfillment App Upgrade
 
 ## Introduction
 
@@ -25,36 +25,34 @@ The revamped user interface streamlines the handling of orders containing kit pr
 * **Accurate Stock Levels:** Stock availability for an entire kit is now based on the lowest individual component's inventory. This ensures store associates have a clear picture of whether they can fulfill the entire kit or not.
 * **Simplified Rejection:** Use the Bin icon to reject the entire kit. Any chosen rejection reason will automatically apply to all items within the kit, streamlining the process and ensuring consistency.
 
-<figure><img src="../.gitbook/assets/kit.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/kit.png" alt=""><figcaption></figcaption></figure>
 
-## Simplified Order Rejection for Kit Products:
+## Simplified Order Rejection:
 
-Previously, rejecting orders containing multiple items was a time-consuming process.  Retailers often prefer to fulfill entire orders and avoid partial shipments. This meant manually selecting rejection reasons for each item, which could be tedious.
+Previously, rejecting orders containing multiple items was a time-consuming process. Retailers often prefer to fulfill entire orders and avoid partial shipments. This meant manually selecting rejection reasons for each item, which could be tedious.
 
-**Introducing Automatic Partial Rejection**
+In the previous version of the `Fulfillment` app, users had to click on `Report an Issue` before being presented with rejection reasons. **Now, the order rejection button has been relocated to a more accessible position. Store associates can easily reject an order and select the specific reason by clicking the `red bin` icon directly on the order card.**
 
-The updated Fulfillment App addresses this challenge with a new, company-level setting for automatic partial rejection. When activated, if a single item in an order is out of stock, the entire order won't be rejected. Instead, the app automatically rejects the missing item(s) while allowing the remaining in-stock items to be fulfilled, streamlining partial order completion.  If partial fulfillment isn't desired, the entire order can be rejected. This might then be routed to a different fulfillment location that has all the items in stock, potentially offering more cost-effective shipping options.
-
+The updated `Fulfillment` app offers a company-level setting for automatic complete order rejection. When activated, if a single item in an order is out of stock, the entire order will be rejected, allowing for potentially more cost-effective shipping options. If partial fulfillment is preferred, retailers can enable partial allocation so that only the out-of-stock items are rejected, while the remaining in-stock items are fulfilled.
 
 ### Enable Partial Rejections Toggle:
 
 * **Settings Page:** Navigate to the `Settings` page and locate the `Partial Rejections Toggle`. Enable or disable partial rejections based on your preferences. **Note:** This setting will affect rejections throughout the company.
 * **Save Changes:** Click the `Save` button to apply the changes and ensure the new settings are active.
 
-### Reject Partial Orders
+### Reject Orders
 
-* **Partial Rejections:** Store associates can reject individual items by clicking the `Bin` icon and selecting the appropriate rejection reason. The reason will apply only to the selected item.
+* **Partial Rejections:** Store associates can reject individual items by clicking the `Bin` icon and selecting the appropriate rejection reason. The reason will apply only to the selected item and other items can be packed.
 * **Complete Rejections:** If partial rejections are disabled, store associates can still reject individual items using the `Bin` icon, but all other order items will also be marked as `Reject Entire Orders`. The items with `Reject Entire Orders` won't have any impact on their inventory.
 
-
+For more details, refer to our detailed [user manual](../../../store-operations/fulfillment/rejection.md)
 
 {% tabs %}
-{% tab title="Updated App" %}
+{% tab title="Updated Flow" %}
 {% embed url="https://youtu.be/yEqpwkNmFxo" %}
 {% endtab %}
 
-{% tab title="Previous App" %}
+{% tab title="Previous Flow" %}
 {% embed url="https://youtu.be/CUqcvBGY1zw" %}
 {% endtab %}
 {% endtabs %}
-
