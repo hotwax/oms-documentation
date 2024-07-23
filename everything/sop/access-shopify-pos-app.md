@@ -2,7 +2,7 @@
 
 The Shopify POS (Point of Sale) app is a mobile application developed by Shopify that allows retailers to sell products in-store. It integrates seamlessly with the Shopify online store, providing a unified platform to manage both online and offline sales.
 
-We generally use the Shopify POS app for testing purposes. When an order is placed in the Shopify POS app, there are multiple scenarios to consider and various ways this will reflect in the Order Management System (OMS).
+We do not have access to Shopify POS initially; we need to obtain this access from the client for testing purposes. When an order is placed in the Shopify POS app, there are multiple scenarios to consider and various ways this will reflect in the (OMS).
 
 ## How to Access the Shopify POS App
 
@@ -49,7 +49,7 @@ We generally use the Shopify POS app for testing purposes. When an order is plac
 
 4. **Select Store:**
    - After successfully entering the authorization code, you will be prompted to select a location.
-   - Choose your Product Store from the list.
+   - Choose your Retail Store from the list.
 
 5. **Select a Location:**
    - Choose a location from the available options.
