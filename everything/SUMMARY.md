@@ -7,10 +7,12 @@
 * [Documentation Guideline](sop/documentation-guideline.md)
 * [ChatGPT Prompts](sop/chatgpt-prompts.md)
 * [GitHub Guideline](guidelines/github-guideline.md)
+* [Gitbook Spaces](guidelines/gitbook-spaces/md)
 * [Issue Report](guidelines/issue-report.md)
 * [Feature Requests on Jira](guidelines/feature-request.md)
 * [Templated Replies](sop/template-replies.md)
 * [Web Tools](webtools/readme.md)
+
 
 ## SOP Documents
 
