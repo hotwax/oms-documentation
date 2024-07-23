@@ -12,6 +12,12 @@
 * [Feature Requests on Jira](guidelines/feature-request.md)
 * [Templated Replies](sop/template-replies.md)
 * [Web Tools](webtools/readme.md)
+* [End to End Order Flow](order-flow/README.md)
+  * [Order Creation](order-flow/order-creation.md)
+  * [Order Import](order-flow/orders-import.md)
+  * [Order Brokering](order-flow/order-brokering.md)
+  * [Order Fulfillment](order-flow/order-fulfillment.md)
+  * [Order Fulfillment Notification](order-flow/order-fulfillment-notification.md)
 
 
 ## SOP Documents
