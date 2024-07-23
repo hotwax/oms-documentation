@@ -17,7 +17,7 @@
   * [Ship to Store](bopis/ship-to-store.md)
   * [Catalog Page](bopis/catalog-page.md)
   * [Settings Page](bopis/settings-page.md)
-  * [Troubleshooting](bopis/bopis-troubleshooting.md)
+    
 * [Fulfillment](fulfillment/README.md)
   * [Order Fulfillment](fulfillment/shipOrders.md)
   * [Service Products](fulfillment/service-products.md)
@@ -29,7 +29,6 @@
   * [Order Lookup](fulfillment/order-lookup.md)
   * [Shipping Label Generations](fulfillment/shipping-label-generation.md)
   * [Change Language](fulfillment/change-language.md)
-  * [Migration Guide: Fulfillment App](fulfillment/fulfillment-app-update.md)
 * [Returns](orders/returns/README.md)
   * [In-Store Returns](returns/in-store-returns.md)
 

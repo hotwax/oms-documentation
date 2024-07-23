@@ -83,4 +83,4 @@
 * [Failed suitescripts](troubleshooting/failedSuiteScripts.md)
 * [Error Logs](troubleshooting/findingLogs.md)
 * [Failure Notifications](troubleshooting/notifications.md)
-* [Orders Do Not Sync](troubleshooting/order-do-not-sync.md)
+* [Order Sync Failure](troubleshooting/order-do-not-sync.md)
