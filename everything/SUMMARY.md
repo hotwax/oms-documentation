@@ -32,6 +32,7 @@
 * [Create a Job using Data Manager Configuration](sop/job-creation-by-data-configuration.md)
 * [Check Job Frequencies](sop/check-job-frequency.md)
 * [Report Request](sop/report-request.md)
+* [Mismatch Time Zone](sop/timezone-mismatch.md)
 
 ## Napita
 
