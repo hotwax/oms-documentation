@@ -49,4 +49,4 @@ If the time zone settings for the instance’s server and scheduled jobs do not 
    ![Save changes](assets/import_order_job.png)
    
 
-By following these steps, you can correct the time zone settings and resolve the time mismatch issue between Shopify and Hotwax Commerce. This will ensure that order data are consistent and accurate across both platforms, enhancing the reliability of your order management system.
+By following these steps, you can correct the time zone settings and resolve the time mismatch issue between Shopify and Hotwax Commerce. This will ensure that data is consistent and accurate across both platforms, enhancing the reliability of order management system.
