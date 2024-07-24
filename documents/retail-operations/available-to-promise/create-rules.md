@@ -1,12 +1,10 @@
-Here is the revised version for clarity and ease of understanding:
-
 # Create Rules
 
-Retailers can set up various rules for product-related configurations based on their specific needs. The following types of rules can be established in the `ATP` app:
+Retailers have the flexibility to configure product-related settings based on their unique requirements. By default, safety stocks and thresholds are set to zero, and shipping and store pickups are permitted for all products across all facilities and channels. Retailers can establish the following rules to modify inventory-specific configurations as needed:
 
-## Thresholds
+## Threshold
 
-To avoid overselling due to inventory inaccuracies, merchandisers prefer not to promise all available inventory to the online sales channel. They maintain a buffer stock, known as an Inventory Threshold, at the company level before promising inventory online.
+To avoid overselling due to inventory inaccuracies, merchandisers prefer not to promise all available inventory to the online sales channel. They maintain a buffer stock, known as an Inventory Threshold, at the network level before promising inventory online.
 
 Here’s how retailers can set up thresholds for their products:
 
@@ -16,6 +14,9 @@ Here’s how retailers can set up thresholds for their products:
 4. Alternatively, turn on the toggle to `select all channels`. Since thresholds are set at the global or network level, selecting specific facilities is not an option in the `ATP` app
 5. Include or exclude products by tags or features.
 6. Click the `Save` icon to save the rule.
+
+{% embed url ="https://youtu.be/37P7AzYqpFQ" %} Threshold Rule {% endembed %}
+
 
 ## Safety Stock
 
@@ -28,6 +29,8 @@ Here’s how retailers can set up safety stocks in the `ATP` app:
 3. Include or exclude the required facility group by clicking the `Add` button on the card. Alternatively, turn on the toggle to `select all facilities`.
 4. Include or exclude products by tags or features.
 5. Click the `Save` icon to save the rule.
+
+{% embed url ="https://youtu.be/bz7r8SWEJsY" %} Safety Stock Rule {% endembed %}
 
 ## Store Pickup Rule
 
@@ -42,6 +45,8 @@ Here’s how retailers can configure product-specific rules for BOPIS:
 
 To quickly enable or disable store pickup for all products from a facility, retailers can navigate to the `Facilities` tab and toggle the facility groups on or off.
 
+{% embed url ="https://youtu.be/VU6rwsfB57Q" %} Store Pickup Rule {% endembed %}
+
 ## Shipping Rule
 
 Retailers may have products that can only be fulfilled from specific facilities, such as bespoke jewelry or engraved products that require specific capabilities. Therefore, the fulfillment of such products needs to be disabled from other facilities.
@@ -49,3 +54,10 @@ Retailers may have products that can only be fulfilled from specific facilities,
 Retailers can set up shipping rules by facility or by channels, similar to store pickup rules.
 
 Additionally, retailers can set the maximum order capacity for their stores by navigating to the `Facility` tab.
+
+
+{% embed url ="https://youtu.be/WHNcLP3_YIU" %} Shipping Rule {% endembed %}
+
+{% hint style="info" %} Create a default facility and channel rule for all ATP rules to ensure that if a created rule is disabled, the rule configurations will get back to default {% endhint %}
+
+
