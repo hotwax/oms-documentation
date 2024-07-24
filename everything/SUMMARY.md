@@ -2,8 +2,8 @@
 
 ## Guidlines
 
-* [Initial Training](guidelines/initial-training.md)
-* [Internal Usage](README.md)
+* [Initial Training](README.md)
+* [Internal Usage](<README (2).md>)
 * [Documentation Guideline](sop/documentation-guideline.md)
 * [ChatGPT Prompts](sop/chatgpt-prompts.md)
 * [GitHub Guideline](guidelines/github-guideline.md)
@@ -18,7 +18,6 @@
   * [Order Brokering](order-flow/order-brokering.md)
   * [Order Fulfillment](order-flow/order-fulfillment.md)
   * [Order Fulfillment Notification](order-flow/order-fulfillment-notification.md)
-
 
 ## SOP Documents
 
@@ -44,7 +43,7 @@
 * [Verify Processor Properties](napita/verify-processor-properties.md)
 * [Bulletins](napita/bulletins.md)
 * [Data Provenance](napita/data-provenance.md)
-* Troubleshooting
+* [Troubleshooting](napita/troubleshooting/README.md)
   * [Data Export Errors](napita/troubleshooting/data-export-errors.md)
   * [Queue Errors](napita/troubleshooting/troubleshooting-queue-files.md)
 

@@ -36,7 +36,7 @@ We follow a standard template when creating a password, such as "Ht5@nusername".
 
 
 
-<figure><img src="../.gitbook/assets/ldap (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/ldap (1).png" alt=""><figcaption></figcaption></figure>
 
 #### Confirm New Password:
 
@@ -48,5 +48,5 @@ We follow a standard template when creating a password, such as "Ht5@nusername".
 * Share the new credentials with the user.
 
 {% hint style="info" %}
-For detailed instructions on creating or updating users in LDAP, refer [Tathya user setup](../tathya/userCreation/setupLDAPaccount.md).
+For detailed instructions on creating or updating users in LDAP, refer [Tathya user setup](../userCreation/setupLDAPaccount.md).
 {% endhint %}
