@@ -25,10 +25,10 @@ If the time zone settings for the instance’s server and scheduled jobs do not 
 ### Adjust the Time Zone for the Job
 
 1. **Open the Job Manager Application:**
-   - From the launchpad, open the Job Manager application in Hotwax Commerce.
+   - From the launchpad, open the `Job Manager` application in Hotwax Commerce.
 
 2. **Navigate to Settings:**
-   - Click on `Settings` within the Job Manager.
+   - Click on `Settings` within the `Job Manager`.
    ![Setting](assets/job_mgr_setting.png)
 
 3. **Change the Selected Time Zone(If required):**
@@ -37,15 +37,15 @@ If the time zone settings for the instance’s server and scheduled jobs do not 
    - Identify the two time zones:
      - Browser Time Zone
      - Selected Time Zone
-   - Adjust the Selected Time Zone to match the instance's Server time zone (if necessary).
+   - Adjust the `Selected Time Zone` to match the instance's Server time zone (if necessary).
    ![Available time zones](assets/available_time_zones.png)
 
 4. **Save Changes to the Job (Using JOB_IMP_ORD as an Example):**
-   - Navigate to Orders in the left menu.
+   - Navigate to `Orders` in the left menu.
    ![Order jobs view](assets/order_jobs.png)
-   - Go to New Order under the import section inside Orders.
+   - Go to `New Order` under the import section inside Orders.
    ![Import order job](assets/new_order.png)
-   - Inside the Import Order box, find and click on `SAVE CHANGES` at the bottom right of the same job.
+   - Inside the I`mport Order` box, find and click on `SAVE CHANGES` at the bottom right of the same job.
    ![Save changes](assets/import_order_job.png)
    
 
