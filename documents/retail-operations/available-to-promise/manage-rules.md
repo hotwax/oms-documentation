@@ -9,3 +9,9 @@ Each rule card provides an overview of configurations and product facility selec
 The rule configuration can be adjusted by toggling the store pickup and shipping options on or off, or by setting values for threshold and safety stock by clicking on the number chips.
 
 A balloon icon in the bottom right corner allows retailers to collapse or expand the inventory rules. Retailers can collapse the inventory rules to rearrange the sequencing of the inventory rules according to the cascade.
+
+{% embed url ="https://youtu.be/EYvFXLzoe88" %} Change Rule Sequence {% endembed %}
+
+
+
+
