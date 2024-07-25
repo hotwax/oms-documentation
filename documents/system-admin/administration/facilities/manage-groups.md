@@ -51,7 +51,7 @@ These are default facility group types, which are available when you deploy HotW
   - Fulfilling orders on the same day requires a faster turnaround time for the pick-pack-ship process. Facilities that can fulfill orders and have enough resources for a short lead time can be added to the same-day shipping groups. However, facilities facing any constraints preventing them from meeting this commitment can be excluded from the group so that same-day shipping orders won’t be brokered to these facilities.
 
 - **OMS Fulfillment**
-  - This group will encompass facilities that support the store fulfillment for online orders. However, if a facility prefers to exclusively reserve its inventory for walk-in customers and does not wish to participate in e-commerce order fulfillment. In that case, it can be removed from this group. 
+  - This group includes facilities that support store fulfillment for online orders from the HotWax Commerce Fulfillment app. If a retailer prefers to handle fulfillment through the ERP, those facilities can be removed from the group. Removed facilities and the orders brokered to them will no longer be visible in the `Fulfillment` app.
 
 {% hint style="info" %}
 Users can see groups linked to specific facilities in the facilities' details page and also add individual facilities to a group by clicking on the `Link to Group` facility button in the `groups` tab.
