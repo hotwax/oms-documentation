@@ -13,7 +13,7 @@ HotWax Commerce relies on JWT (JSON Web Token) for secure API communication, ens
 **Step-by-Step Usage Instructions:**
 
 1. **Create JWT Token:**
-   - Navigate to the provided documentation link: [JWT Token Creation Guide](https://docs.hotwax.co/integration-resources/v/hotwax-commerce/api-and-data-feeds/initial-api-authentication).
+   - Navigate to the provided documentation link: [JWT Token Creation Guide](../../../integrate-with-hotwax/api/initial-api-authentication.md).
    - Follow the instructions to create a JWT token using an integration user on your HotWax Commerce system.
 
 2. **Access Shopify App Store:**

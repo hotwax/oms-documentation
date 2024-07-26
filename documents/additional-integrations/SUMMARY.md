@@ -21,6 +21,10 @@
 
 * [Klaviyo Integration](marketing-automations-platform/klaviyo.md)
 
+## Iterable
+
+* [Iterable Integration](marketing-automations-platform/iterable.md)
+
 ## EasyPost
 
 * [EasyPost Integration](carriers/easy-post.md)
