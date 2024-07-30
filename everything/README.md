@@ -21,7 +21,7 @@ description: This document provides a checklist with hyperlinks for calls, train
 - [Top Challenges of Shopify Buy Online Pick-Up In Store: Part I](https://www.hotwax.co/blog/top-challenges-of-shopify-buy-online-pick-up-in-store-part-i)
 - [Top Challenges of Shopify Buy Online Pick-Up In Store: Part II](https://www.hotwax.co/blog/top-challenges-of-shopify-buy-online-pick-up-in-store-part-ii)
 - [Pre-Orders vs. Backorders: What’s The Difference?](https://blog.hotwax.co/pre-orders-vs-backorders-what-is-the-difference)
-- [How To Achieve Same-Day Delivery With Smart Order Routing](https://blog.hotwax.co/pre-orders-vs-backorders-what-is-the-difference)
+- [How To Achieve Same-Day Delivery With Smart Order Routing](https://www.hotwax.co/blog/how-to-achieve-same-day-delivery-with-smart-order-routing)
 - [Reduce Shopify Overselling with Inventory Thresholds](https://www.hotwax.co/blog/reduce-overselling-on-shopify-by-using-inventory-thresholds)
 - [What is Shopify Order Management System?](https://www.hotwax.co/blog/what-is-shopify-order-management-system)
 - [How To Integrate Omnichannel Order Management System With Shopify?](https://www.hotwax.co/blog/how-to-integrate-omnichannel-order-management-system-with-shopify)
