@@ -8,8 +8,19 @@ description: Discover  the versions of HotWax Commerce OMS releases.
 
 {% hint style="info" %}
 1. For information on previous releases, please consult the [previous document](https://docs.google.com/document/d/1lfvjpqBiE\_\_1fsCjq7VvQSSXjdRLVZg86zJIXDDK-zc/edit).
-2. To find details about SOLR versions, refer to the [SOLR version document](\[solr\_version\_document\_link]\(https:/docs.google.com/spreadsheets/d/1H-iEVG-hS9FTsYOf5YiUH-5KOJUcu0\_TiPG8aVYjaHU/edit/#gid=0\))
+2. To find details about SOLR versions, refer to the [SOLR version document](\[solr\_version\_document\_link]\(https://docs.google.com/spreadsheets/d/1H-iEVG-hS9FTsYOf5YiUH-5KOJUcu0\_TiPG8aVYjaHU/edit/#gid=0\))
 {% endhint %}
+
+## Hotfix - v5.14.1 (31th July 2024)
+
+| Information     | Value                                                                                                                |
+| --------------- | -------------------------------------------------------------------------------------------------------------------- |
+| Release Version | v5.14.1                                                                                                              |
+| Release Type    | Hotfix                                                                                                               |
+| Image Tag       | v5.14.1                                                                                                             |
+| Image URL       | `289432782788.dkr.ecr.us-east-1.amazonaws.com/omscoreimage:omscoreimage-v5.14.1`                                     |
+| Diff            | [Link to diff](https://git.hotwax.co/commerce/oms/-/compare/v5.14.0...v5.14.1?from_project_id=161&straight=false)    |
+| Changelog       | [Link to changelog](https://git.hotwax.co/commerce/oms/-/blob/v5.14.0/CHANGELOG.md?ref%5C_type=tags&ref_type=tags)   |
 
 ## Release - v5.14.0 (26th June 2024)
 
@@ -36,6 +47,17 @@ description: Discover  the versions of HotWax Commerce OMS releases.
 [Link to Upgrade Steps](https://git.hotwax.co/commerce/oms/-/blob/develop/upgrade/v5.14.0/UpgradeSteps.md?ref_type=heads)
 {% endtab %}
 {% endtabs %}
+
+## Hotfix - v5.13.10 (31th July 2024)
+
+| Information     | Value                                                                                                                |
+| --------------- | -------------------------------------------------------------------------------------------------------------------- |
+| Release Version | v5.13.10                                                                                                              |
+| Release Type    | Hotfix                                                                                                               |
+| Image Tag       | v5.13.10                                                                                                              |
+| Image URL       | `289432782788.dkr.ecr.us-east-1.amazonaws.com/omscoreimage:omscoreimage-v5.13.10`                                     |
+| Diff            | [Link to diff](https://git.hotwax.co/commerce/oms/-/compare/v5.13.9...v5.13.10?from_project_id=161&straight=false)    |
+| Changelog       | [Link to changelog](https://git.hotwax.co/commerce/oms/-/blob/v5.13.10/CHANGELOG.md?ref%5C_type=tags&ref_type=tags)   |
 
 ## Hotfix - v5.13.9 (26th July 2024)
 
