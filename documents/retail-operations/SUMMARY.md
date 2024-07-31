@@ -56,7 +56,7 @@
 * [Brokering](orders/brokering/README.md)
   * [Order Routing](brokering/configurableRouting.md)
   * [Rule Builder](brokering/rule-builder.md)
-  * [Brokering Scenarios](brokering/scenarios.md)
+  * [Use Cases](brokering/scenarios.md)
   * [Troubleshooting](brokering/troubleshooting/README.md)
     * [Scheduling Errors](brokering/troubleshooting/scheduling-error.md)
     * [Incorrect Facility Configurations](brokering/troubleshooting/facility-association.md)
