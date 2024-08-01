@@ -77,3 +77,10 @@
   * [Price Levels](netsuite-deployment/flows/integration-mappings/price-levels.md)
   * [Shipping Methods](netsuite-deployment/flows/integration-mappings/shipping-methods.md)
   * [Facility Group](netsuite-deployment/flows/integration-mappings/facilities.md)
+
+## Troubleshooting
+
+* [Failed suitescripts](troubleshooting/failedSuiteScripts.md)
+* [Error Logs](troubleshooting/findingLogs.md)
+* [Failure Notifications](troubleshooting/notifications.md)
+* [Order Sync Failure](troubleshooting/order-do-not-sync.md)

@@ -1,7 +1,7 @@
 # Table of contents
 
 * [Launchpad](README.md)
-* [Glossary](GLOSSARY.md)
+* [Glossary](./../store-operations/GLOSSARY.md)
 
 ## Workflow
 
@@ -56,7 +56,7 @@
 * [Brokering](orders/brokering/README.md)
   * [Order Routing](brokering/configurableRouting.md)
   * [Rule Builder](brokering/rule-builder.md)
-  * [Brokering Scenarios](brokering/scenarios.md)
+  * [Use Cases](brokering/scenarios.md)
   * [Troubleshooting](brokering/troubleshooting/README.md)
     * [Scheduling Errors](brokering/troubleshooting/scheduling-error.md)
     * [Incorrect Facility Configurations](brokering/troubleshooting/facility-association.md)
@@ -84,14 +84,16 @@
   * [Product Inventory View Page](inventory-management/product-inventory-view.md)
   * [Inventory Configurations](inventory/inventory-management/inventory-configurations.md)
 * [Inventory upload](inventory-management/inventory-upload.md)
+* [Available to Promise Management](available-to-promise/README.md)
+  * [Concepts](available-to-promise/concepts.md)
+  * [ATP rules](available-to-promise/atp-rules.md)
+  * [Create Rules](available-to-promise/create-rules.md)
+  * [Manage Rules](available-to-promise/manage-rules.md)
 * [Safety stock](inventory/safety-stock/README.md)
   * [Set Bulk Safety Stock](inventory/safety-stock/set-bulk-safety-stock.md)
   * [Set Individual Safety Stock](inventory/safety-stock/set-individual-safety-stock.md)
   * [Set Facility-Wise Safety Stock](inventory/safety-stock/facility-wise-safety-stock.md)
 * [Multichannel inventory setup](inventory/multichannel-inventory-setup.md)
-* [Transfer orders](inventory/transfer-orders/README.md)
-  * [Transfer order fulfillment](inventory/transfer-orders/transfer-order-fulfillment.md)
-  * [Transfer order receiving](inventory/transfer-orders/transfer-order-receiving.md)
 * [Troubleshooting](inventory/troubleshooting/README.md)
   * [View Inventory Log](inventory/troubleshooting/view-inventory-log.md)
   * [Inventory Synchronization Errors](inventory/troubleshooting/inventory-synchronization.md)

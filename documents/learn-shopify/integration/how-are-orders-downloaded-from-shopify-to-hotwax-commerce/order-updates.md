@@ -13,8 +13,6 @@ Sometimes customers or customer service representatives make changes to Shopify 
 * Adding items to an order
 * Removing items from an order
 * Changing item quantities
-* Changing shipping addresses
-* Changing customer contact details
 
 To ensure all order modifications are synced accurately, HotWax Commerce has an 'Import order updates from Shopify' job. This job checks the 'updated\_at' field of orders in Shopify and compares it to the last run time of the job. If the 'updated\_at' time is after the last run time, the job downloads all order details from Shopify, compares it to HotWax Commerce data, and updates any changed fields. The default frequency for the job is every hour, but merchants can change it through the Job Manager App to meet their requirements.
 
