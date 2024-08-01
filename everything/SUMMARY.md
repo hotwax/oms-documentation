@@ -32,6 +32,7 @@
 * [Check Job Frequencies](sop/check-job-frequency.md)
 * [Report Request](sop/report-request.md)
 * [Mismatch Time Zone](sop/timezone-mismatch.md)
+* [POS Order Refresh Failure](sop/pos-order-refresh-failure.md)
 
 ## Napita
 
