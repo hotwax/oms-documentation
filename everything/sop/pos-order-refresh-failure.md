@@ -35,7 +35,7 @@ Here are the steps to troubleshoot these errors:
      - Hit Enter or click on the search button below the form.
      - Click on the view option at the start of the orderID under the search result.&#x20;
 
-       <figure><img src="../.gitbook/assets/view.png.png" alt=""><figcaption></figcaption></figure>
+       <figure><img src="../.gitbook/assets/view.png" alt=""><figcaption></figcaption></figure>
      - Click on the "Delete this value" button at the top of the view under the view value.&#x20;
 
        <figure><img src="../.gitbook/assets/deleteValue.png" alt=""><figcaption></figcaption></figure>
