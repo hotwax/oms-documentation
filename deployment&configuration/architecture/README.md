@@ -18,7 +18,7 @@ The architecture comprises essential components and they are as follows:
 - **Data Warehouse**: Stores historical data from the replica database for comprehensive analysis.
 - **VPC (Virtual Private Cloud)**: Provides a secure and isolated network environment for all AWS resources.
 
-![AWS](https://github.com/user-attachments/assets/c0c6637e-10e7-4a99-87de-b7bb126510e1)
+![AWS](./.gitbook/assets/AWS1.jpg)
 
 
 ## Data Flow
