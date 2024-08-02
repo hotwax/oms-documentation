@@ -1,3 +1,7 @@
+---
+description: This document explains the Reorder Management feature in HotWax Commerce, which automates inventory replenishment and triggers reports to prevent stockouts and lost sales.
+---
+
 # Reorder Management in HotWax Commerce
 
 In HotWax Commerce, managing inventory effectively is crucial for retailers to strike a balance between ensuring well-stocked shelves and avoiding excess inventory. Manually monitoring stock levels, sell-through rates, and pending deliveries are prone to errors, resulting in issues such as stockouts, lost sales, and compromised customer experiences.
