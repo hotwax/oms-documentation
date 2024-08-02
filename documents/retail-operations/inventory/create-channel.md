@@ -1,3 +1,7 @@
+---
+description: This document provides a step-by-step guide for setting up and managing inventory channels in HotWax Commerce to efficiently allocate ATP inventories across various sales platforms.
+---
+
 # Setting Up Inventory Channels in HotWax Commerce
 
 Retail brands sell products across various channels, including offline stores, marketplaces, social media, and their own websites. However, challenges arise when dealing with diverse platforms, each with its own set of rules and penalties. For instance, marketplaces like Amazon impose charges for delayed fulfillment or rejected orders. To mitigate risks and ensure efficient inventory management, retail brands often choose to allocate separate Available-to-Promise (ATP) inventories for each sales channel. This approach minimizes the likelihood of overselling across different channels.
