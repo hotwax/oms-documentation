@@ -1,6 +1,5 @@
 ---
-description: >-
-This document provides steps to resolve the "POS Order Refresh Failure" issue in Hotwax Commerce OMS.
+description: This document provides steps to resolve the "POS Order Refresh Failure" issue in Hotwax Commerce OMS.
 ---
 
 # POS Order Refresh Failure in Hotwax Commerce OMS
