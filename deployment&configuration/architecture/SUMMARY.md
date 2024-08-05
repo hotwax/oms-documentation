@@ -1,3 +1,3 @@
 # Table of contents
 
-* [HotWax Commerce system architecture](README.md)
+* [HotWax Commerce System Architecture](README.md)
