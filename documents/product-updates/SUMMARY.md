@@ -5,6 +5,8 @@
 ## 2024
 
 * [July'24](2024/july24/README.md)
+  * [Introducing Reorder Management Reports](2024/july24/introducing-reorder-management-reports.md)
+  * [Enhanced Kit Product Handling](2024/july24/enhanced-kit-product-handling.md)
   * [Fulfillment App Upgrade](2024/july24/fulfillment-app-update.md)
 * [June'24](2024/june24/README.md)
   * [Process Returns without Order IDs](2024/june24/process-returns-without-order-ids.md)
