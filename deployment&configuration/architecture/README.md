@@ -8,18 +8,17 @@ This document provides an overview of the high-level architecture for the HotWax
 
 The architecture comprises essential components and they are as follows:
 
-- **Route 53**: Clients interact with the web application through their web browser's URL. AWS's DNS service then translates user-friendly URLs into the IP addresses of the web servers.
-- **Elastic Load Balancer (ELB)**: Distributes incoming traffic across multiple EC2 instances to ensure scalability and reliability.
-- **EC2 Instances**: Virtual servers hosting the application:
-  - **Async Servers**: Manage background tasks scheduled by the application.
-  - **Sync Servers**: Handle user requests forwarded by the ELB.
-- **RDS DB Instance**: Managed relational database service ensuring high availability, scalability, and data security in Availability Zone (AZ) 1.
-- **Replica Database**: Maintains a copy of the main database in AZ 2 for disaster recovery and reporting purposes.
-- **Data Warehouse**: Stores historical data from the replica database for comprehensive analysis.
-- **VPC (Virtual Private Cloud)**: Provides a secure and isolated network environment for all AWS resources.
+* **Route 53**: Clients interact with the web application through their web browser's URL. AWS's DNS service then translates user-friendly URLs into the IP addresses of the web servers.
+* **Elastic Load Balancer (ELB)**: Distributes incoming traffic across multiple EC2 instances to ensure scalability and reliability.
+* **EC2 Instances**: Virtual servers hosting the application:
+  * **Async Servers**: Manage background tasks scheduled by the application.
+  * **Sync Servers**: Handle user requests forwarded by the ELB.
+* **RDS DB Instance**: Managed relational database service ensuring high availability, scalability, and data security in Availability Zone (AZ) 1.
+* **Replica Database**: Maintains a copy of the main database in AZ 2 for disaster recovery and reporting purposes.
+* **Data Warehouse**: Stores historical data from the replica database for comprehensive analysis.
+* **VPC (Virtual Private Cloud)**: Provides a secure and isolated network environment for all AWS resources.
 
-![AWS](./.gitbook/assets/AWS1.jpg)
-
+<figure><img src=".gitbook/assets/AWS1.jpg" alt=""><figcaption></figcaption></figure>
 
 ## Data Flow
 
@@ -41,8 +40,8 @@ Once the IP address is determined, the user's request is directed to the Elastic
 
 The EC2 instances are categorized into two types:
 
-- **Sync Servers**: A synchronous server handles requests and responses sequentially. Each request is processed one at a time, and the server waits for the current request to be completed before starting the next one.
-- **Async Servers**: An asynchronous server can handle multiple requests concurrently without waiting for each one to complete. It helps in managing the scheduled background tasks.
+* **Sync Servers**: A synchronous server handles requests and responses sequentially. Each request is processed one at a time, and the server waits for the current request to be completed before starting the next one.
+* **Async Servers**: An asynchronous server can handle multiple requests concurrently without waiting for each one to complete. It helps in managing the scheduled background tasks.
 
 When a user request arrives, a Sync Server processes it and, if necessary, communicates with the Async Servers for background tasks.
 
