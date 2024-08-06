@@ -28,7 +28,7 @@
   * [Settings Page](fulfillment/fulfillment-setting-page.md)
   * [Order Lookup](fulfillment/order-lookup.md)
   * [Shipping Label Generations](fulfillment/shipping-label-generation.md)
-  * [Change Shipping Method](change-shipping-method.md)
+  * [Change Shipping Method](fulfillment/change-shipping-method.md)
   * [Change Language](fulfillment/change-language.md)
 * [Returns](orders/returns/README.md)
   * [In-Store Returns](returns/in-store-returns.md)
