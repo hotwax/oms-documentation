@@ -32,7 +32,7 @@ In this user manual, we will learn how to set up channels, add facilities cateri
 
 2. To add an existing group, select the existing group from the dropdown menu.
 
-For details on adding thresholds to the channel, refer to this user guide.
+For details on adding thresholds to the channel, refer to this [user guide](https://docs.hotwax.co/analytics/reports/reorder-limit#setting-reorder-limits).
 
 ## Link Facilities
 
