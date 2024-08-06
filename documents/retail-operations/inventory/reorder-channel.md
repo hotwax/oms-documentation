@@ -18,6 +18,19 @@ Reorder Limits involves leveraging a dedicated reorder channel within the Order 
 
 For example, if the primary sales channel, say A, starts with 100 units and has a reorder threshold of 10 units, a reorder Channel, say B, would begin with 100 units but allow only 90 units for online sales. As sales occur on A, inventories in both A and B decrease concurrently. When A sells 90 units, B's online inventory becomes depleted, triggering an automated reorder report while allowing online sales on A.
 
-Thus, by such automation, retailers streamline inventory management, minimize lost sales opportunities, and optimize operational efficiency. It not only frees up resources that would otherwise be tied up in manual monitoring but also ensures that the right products are consistently available to meet customer demand online and in-store. Ultimately, HotWax Commerce's Reorder Management feature empowers retailers to maintain optimal inventory levels, enhancing customer satisfaction and maximizing sales potential.
+Thus, by such automation, retailers streamline inventory management, minimize lost sales opportunities, and optimize operational efficiency. It not only frees up resources that would otherwise be tied up in manual monitoring but also ensures that the right products are consistently available to meet customer demand online and in-store.
+
+The reorder limit is visible on the product inventory page. Retailers can check their remaining inventory to know when to place a new purchase order. When the online selling channel inventory reaches the reorder point threshold, a report is triggered indicating to place a new purchase order for the products. Below is the overview of the report: 
+
+| Column Name            | Description                                                                                                            |
+|------------------------|------------------------------------------------------------------------------------------------------------------------|
+| Product ID             | Unique identifier for the product                                                                                      |
+| SKU                    | Stock Keeping Unit, an internal name for the product                                                                   |
+| Brand                  | Brand name of the product                                                                                              |
+| Maximum Online ATP     | Maximum inventory available for online channels, calculated as the sum of the last inventory count minus the minimum stock and pending orders.                                                                   |
+| Reorder Channel ATP    | Inventory available specifically for the reorder channel, indicating levels set aside for replenishment.                                              |
+| PO Inventory           | Total quantity of the product available in approved or created purchase orders.                                                                         |
+| Reorder limit          | Minimum stock level for products in the reorder channel, aiding in inventory replenishment management.                                           |
+
 
 Please refer to this user guide on how to make a new channel in HotWax Commerce.
