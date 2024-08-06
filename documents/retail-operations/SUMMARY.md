@@ -93,6 +93,8 @@
   * [Set Bulk Safety Stock](inventory/safety-stock/set-bulk-safety-stock.md)
   * [Set Individual Safety Stock](inventory/safety-stock/set-individual-safety-stock.md)
   * [Set Facility-Wise Safety Stock](inventory/safety-stock/facility-wise-safety-stock.md)
+* [Create channel](inventory/create-channel.md)
+* [Re-order feature](inventory/reorder-channel.md)
 * [Multichannel inventory setup](inventory/multichannel-inventory-setup.md)
 * [Troubleshooting](inventory/troubleshooting/README.md)
   * [View Inventory Log](inventory/troubleshooting/view-inventory-log.md)
