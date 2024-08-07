@@ -61,3 +61,8 @@ Select multiple items by clicking on the checkbox at the end of an item and clic
 In the event that an item needs to be added to a count before being reassigned to a facility for a recount, click on the add toolbar at the top of the screen, search for the product using the product identifier, and click on Add to Count to add the product.
 
 All the newly added items and the items sent for recount will need to be reassigned to the facility. Click on the re-assign button in the overview section to reassign the inventory count to the facility.
+
+## Close a count
+
+To close a count, click on the primary action button at the bottom of the screen. This will prompt you to confirm that the current count is ready to close. All open count items from the count will be rejected and the count will no longer be editable. Closed counts are shown in the “Closed counts” page
+
