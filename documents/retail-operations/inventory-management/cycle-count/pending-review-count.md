@@ -48,9 +48,9 @@ Every count item has three options that the reviewer must select from. When a co
 
 ### Suggested Actions
 
-Based on the variance threshold selected, suggested actions will be highlighted with an outline. Admins can use the slider of the inventory threshold to get accept/reject suggestions accordingly.
+Based on the variance threshold selected, suggested actions will be highlighted with an outline. Admins can use the slider of the inventory threshold to accept/reject suggestions accordingly.
 
-Items with variances within acceptable tolerances will be suggested by the system to be accepted, and items below acceptable tolerance will be suggested for recount or reject. Items that were not counted at all will be suggested for recount.
+Items with variances within acceptable tolerances will be suggested by the system to be accepted, and items below acceptable tolerance will be suggested for recount or rejection. Items that were not counted at all will be suggested for recount.
 
 ### Bulk Actions
 
@@ -64,5 +64,9 @@ All the newly added items and the items sent for recount will need to be reassig
 
 ## Close a count
 
-To close a count, click on the primary action button at the bottom of the screen. This will prompt you to confirm that the current count is ready to close. All open count items from the count will be rejected and the count will no longer be editable. Closed counts are shown in the “Closed counts” page
+To close a count, click on the primary action button at the bottom of the screen. This will prompt you to confirm that the current count is ready to close. All open count items from the count will be rejected and the count will no longer be editable. Closed counts are shown in the “Closed counts” page.
+
+{% hint style="info" %} When an inventory is rejected by the fulfillment team in HotWax Commerce, the ATP of that product gets 0, while the QOH remains the Same. Once inventory is updated through the Cycle count app, the variance for both the QOH and ATP is recorded separately. For example, if the QOH of the inventory is 10 and the ATP is 0 due to order rejection, and during the inventory count the inventory available is 9 then the variance will be updated as -1 and +9 for QOH and ATP respectively.  {% endhint %}
+
+
 
