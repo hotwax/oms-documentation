@@ -1,3 +1,9 @@
+---
+description: >-
+  This document outlines the high-level architecture of the HotWax Commerce
+  application on AWS.
+---
+
 # HotWax Commerce System Architecture
 
 ## Introduction
