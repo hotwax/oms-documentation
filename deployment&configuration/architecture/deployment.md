@@ -1,3 +1,7 @@
+---
+description: This document outlines the streamlined workflow for automatically building, testing, and deploying code changes using Jenkins and Kubernetes, ensuring efficient and reliable software delivery.
+---
+
 
 # Detailed Workflow Documentation: From Code Commit to Deployment using Jenkins and Kubernetes
 
