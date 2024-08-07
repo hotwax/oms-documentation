@@ -1,3 +1,7 @@
+---
+description: This document outlines the high-level architecture of the HotWax Commerce application on AWS, focusing on its key components, data flow, and design principles for scalability, fault tolerance, performance, and security.
+---
+
 # HotWax Commerce System Architecture
 
 ## Introduction
