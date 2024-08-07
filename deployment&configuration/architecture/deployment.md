@@ -44,34 +44,34 @@ Post-deployment, Jenkins monitors the application's performance and health using
 1. **Define Application in Deployment YAML File**:
     - Once we define our application in a `deployment.yaml` file, we use `kubectl apply -f deployment.yaml` to send it to the Kubernetes API, which serves as the central hub for our cluster.
 
-
+<figure><img src=".gitbook/assets/K1.jpg" alt=""><figcaption></figcaption></figure>
 
 2. **Storage in ETCD (Kubernetes Cluster API)**:
     - A new Deployment object saved in ETCD triggers an update notification within the API, which conveys this information to all subscribed components.
+  
+<figure><img src=".gitbook/assets/K2.png" alt=""><figcaption></figcaption></figure>
          
-
 3. **Controller Manager and Replicaset Creation**:
     - The Controller Manager monitors changes in Deployments. Upon detecting a new one, it initiates the creation of a corresponding Replicaset by sending a create request to the API.
     - The API receives the Replicaset definition, stores it in ETCD, and broadcasts this update to all subscribed components, including the Controller Manager.
-    
 
+<figure><img src=".gitbook/assets/K3.png" alt=""><figcaption></figcaption></figure>
 
-
+<figure><img src=".gitbook/assets/K4.png" alt=""><figcaption></figcaption></figure>
 
 4. **Pod Creation**:
     - Upon receiving notification of the new Replicaset, the Controller Manager oversees the creation of Pods defined by the Replicaset. It communicates with the API to ensure these Pods are correctly stored in ETCD.
-      
 
+<figure><img src=".gitbook/assets/K5.png" alt=""><figcaption></figcaption></figure>
 
 5. **Scheduler Assigns Pods**:
     - The Scheduler listens for events related to Pod creation. When a new Pod is created, the Scheduler determines the optimal node within the cluster for the Pod to run. It communicates this assignment back to the API, which logs this information.
      
-
+<figure><img src=".gitbook/assets/K6.png" alt=""><figcaption></figcaption></figure>
 
 6. **Kubelet Starts Pods**:
     - Every worker node in the Kubernetes cluster runs the Kubelet, which monitors Pod events. When the API informs the Kubelet that a Pod should run on its node as decided by the Scheduler, the Kubelet proceeds to start the containers specified within the Pod.
       
-
-
+<figure><img src=".gitbook/assets/K7.png" alt=""><figcaption></figcaption></figure>
 
 This intricate orchestration involving multiple components ensures our application configuration evolves into a fully operational application. Each component plays a vital role in managing the complexities of deployment, collectively ensuring the successful execution of our application.
