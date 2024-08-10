@@ -2,7 +2,7 @@
 description: >-
   The Order Lifecycle BPM illustrates how HotWax Commerce orchestrates the
   journey of an order from creation to approval, routing, and fulfillment,
-  ensuring accuracy at every stage. The order lifecycle
+  ensuring accuracy at every stage.
 ---
 
 # Order lifecycle
