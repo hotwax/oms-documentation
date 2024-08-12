@@ -31,17 +31,17 @@ A retailer wants to ensure that all orders placed through various marketplaces a
    - **Activate Order Batch:** Change the status of the order batch from `Draft` to `Active.`
    - **Schedule Routing:** Set the frequency at which the routing runs should occur to ensure timely fulfillment.
 
-## Scenario 2: Fulfilling E-Commerce Orders from Warehouse and Stores
+## Scenario 2: Fulfilling eCommerce Orders from Warehouse and Stores
 
-In this scenario, a retailer wants to prioritize fulfilling e-commerce orders from their warehouse. If the warehouse is unable to fulfill an order due to inventory constraints, the order should then be routed to retail stores for fulfillment.
+In this scenario, a retailer wants to prioritize fulfilling eCommerce orders from their warehouse. If the warehouse is unable to fulfill an order due to inventory constraints, the order should then be routed to retail stores for fulfillment.
 
 ### Steps to Implement
 
-1. **Create Order Batch for E-Commerce Orders**
-   - Start by creating an order batch that includes all e-commerce orders.
+1. **Create Order Batch for eCommerce Orders**
+   - Start by creating an order batch that includes all eCommerce orders.
    - **Order Batch Creation:**
      - In HotWax Commerce, navigate to the order routing app.
-     - Create a new order batch and name it `E-Commerce Orders.`
+     - Create a new order batch and name it `eCommerce Orders.`
 
 2. **Set Up Facility Groups**
    - Create two facility groups: one for warehouses and another for stores.
@@ -57,7 +57,7 @@ In this scenario, a retailer wants to prioritize fulfilling e-commerce orders fr
 3. **Configure Inventory Rules**
    - Define inventory rules to ensure that orders are first checked for availability in warehouses, and if not available, then in stores.
    - **First Inventory Rule (Warehouses):**
-     - Within the `E-Commerce Orders` batch, create an inventory rule.
+     - Within the `eCommerce Orders` batch, create an inventory rule.
      - Select the `Warehouses` facility group in the inventory filter.
      - Ensure that partial allocation is turned off to prioritize fulfillment from a single warehouse location.
    - **Second Inventory Rule (Stores):**
@@ -70,9 +70,9 @@ In this scenario, a retailer wants to prioritize fulfilling e-commerce orders fr
    - **Activate Inventory Rules:**
      - Activate both the warehouse and store inventory rules to ensure they are applied during the routing process.
    - **Activate Order Batch:**
-     - Change the status of the `E-Commerce Orders` batch from `Draft` to `Active.`
+     - Change the status of the `eCommerce Orders` batch from `Draft` to `Active.`
    - **Schedule Routing:**
-     - Set the frequency at which the routing runs should occur to ensure timely fulfillment of e-commerce orders.
+     - Set the frequency at which the routing runs should occur to ensure timely fulfillment of eCommerce orders.
 
 ## Scenario 3: Handling Peak Hours with Store Fulfillment
 
