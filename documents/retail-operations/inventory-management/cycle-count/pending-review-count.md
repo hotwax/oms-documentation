@@ -1,4 +1,11 @@
-# Pending Review Counts
+---
+description: >-
+  Comprehensive guide to reviewing cycle counts in the Cycle Count app,
+  including filtering counts, accepting or rejecting items, and managing
+  inventory variance thresholds.
+---
+
+# Review Counts
 
 Once a count has been submitted for review by the facility it was assigned to, it will be shown on the `Pending Review` page.
 
@@ -26,13 +33,10 @@ Admins can use the slider of the inventory threshold to get accept/reject sugges
 
 Each count item will show the following information:
 
-- **Counted**: Represents the physically available sellable inventory counted at the facility for a given product. If an item is not counted, this information will not be shown on an item.
-  
-- **Systemic**: Represents the quantity on hand at the time when that particular count was submitted.
-
-- **Variance**: Shows the difference between the expected and counted values if a count is submitted for an item.
-
-- **User**: The user name that submitted the count will be displayed below the variance.
+* **Counted**: Represents the physically available sellable inventory counted at the facility for a given product. If an item is not counted, this information will not be shown on an item.
+* **Systemic**: Represents the quantity on hand at the time when that particular count was submitted.
+* **Variance**: Shows the difference between the expected and counted values if a count is submitted for an item.
+* **User**: The user name that submitted the count will be displayed below the variance.
 
 If no count has been submitted for an item, a red badge labeled `Not Counted` will be displayed along with the date that this product was last counted.
 
@@ -40,11 +44,9 @@ If no count has been submitted for an item, a red badge labeled `Not Counted` wi
 
 Every count item has three options that the reviewer must select from. When a count is closed, all items where no action was performed will be rejected by default to ensure that they do not impact inventory.
 
-- **Accept**: Accepting a count commits the variance submitted by that count to the OMS’s actual inventory and also becomes available to be synced to external systems as cycle counts or inventory adjustments. Click the green thumbs-up button to accept a count.
-  
-- **Recount**: When variances reported in a count are outside of acceptable limits and a recount by the store is required, click on the yellow recount button. This will reject the current count and add the same item back into the count so that when the count is reassigned to the facility, the product is available to be counted again.
-  
-- **Reject**: Rejecting an item discards a submitted count, ensuring that it does not impact OMS inventory levels. clicking on the red thumbs-down button rejects the cycle count for the items.
+* **Accept**: Accepting a count commits the variance submitted by that count to the OMS’s actual inventory and also becomes available to be synced to external systems as cycle counts or inventory adjustments. Click the green thumbs-up button to accept a count.
+* **Recount**: When variances reported in a count are outside of acceptable limits and a recount by the store is required, click on the yellow recount button. This will reject the current count and add the same item back into the count so that when the count is reassigned to the facility, the product is available to be counted again.
+* **Reject**: Rejecting an item discards a submitted count, ensuring that it does not impact OMS inventory levels. clicking on the red thumbs-down button rejects the cycle count for the items.
 
 ### Suggested Actions
 
@@ -66,7 +68,8 @@ All the newly added items and the items sent for recount will need to be reassig
 
 To close a count, click on the primary action button at the bottom of the screen. This will prompt you to confirm that the current count is ready to close. All open count items from the count will be rejected and the count will no longer be editable. Closed counts are shown on the `Closed counts` page.
 
-{% hint style="info" %} When an inventory is rejected by the fulfillment team in HotWax Commerce, the ATP of that product gets 0, while the QOH remains the Same. Once inventory is updated through the Cycle count app, the variance for both the QOH and ATP is recorded separately. For example, if the QOH of the inventory is 10 and the ATP is 0 due to order rejection, and during the inventory count the inventory available is 9 then the variance will be updated as -1 and +9 for QOH and ATP respectively.  {% endhint %}
+{% hint style="info" %}
+When an inventory is rejected by the fulfillment team in HotWax Commerce, the ATP of that product gets 0, while the QOH remains the Same. Once inventory is updated through the Cycle count app, the variance for both the QOH and ATP is recorded separately. For example, if the QOH of the inventory is 10 and the ATP is 0 due to order rejection, and during the inventory count the inventory available is 9 then the variance will be updated as -1 and +9 for QOH and ATP respectively.
+{% endhint %}
 
-
-
+{% embed url="https://youtu.be/kDOA6NUjIV4" %}

@@ -1,4 +1,10 @@
-# Monitoring Assigned Counts
+---
+description: >-
+  Guide to managing assigned cycle counts in the Cycle Count app, including
+  tracking progress, rescheduling counts, and moving them to the review stage.
+---
+
+# View Assigned Counts
 
 Assigned cycle counts are awaiting the assigned facilities to submit for review. While assigned, the admin view provides insights into the progress made by stores.
 
@@ -30,15 +36,12 @@ While a count is assigned, reviewers can still track individual item progress bu
 
 Each count item will show the following information while in the assigned status:
 
-- **Quantity on Hand**: The most current quantity on hand in the OMS will be shown for items that have not yet been counted. Once an item is counted, the quantity on hand for that item at the time of being counted will be displayed. This quantity on hand value will not change on a count item once it has been counted, ensuring accurate variance logs even if the count is accepted after inventory has continued to move in the facility.
-  
-- **Counted**: Once an item has been counted, it will show the counted number on the item. This is the exact count of inventory physically counted.
-
-- **User**: The user who performed the count will be displayed on an item once the count is submitted. If a count is performed by multiple staff members, reviewers can track exactly which user performed each count.
-
-- **More Details**: Clicking on the vertical ellipses at the end of a count item reveals additional information and actions on a count.
-  - **Last Counted**: The last time this product was counted at this facility.
-  - **Remove from Count**: If an item has not been counted, it can be removed from a count if the inventory count is no longer required for that product. Once an item has been counted, it can only be rejected during the review stage.
+* **Quantity on Hand**: The most current quantity on hand in the OMS will be shown for items that have not yet been counted. Once an item is counted, the quantity on hand for that item at the time of being counted will be displayed. This quantity on hand value will not change on a count item once it has been counted, ensuring accurate variance logs even if the count is accepted after inventory has continued to move in the facility.
+* **Counted**: Once an item has been counted, it will show the counted number on the item. This is the exact count of inventory physically counted.
+* **User**: The user who performed the count will be displayed on an item once the count is submitted. If a count is performed by multiple staff members, reviewers can track exactly which user performed each count.
+* **More Details**: Clicking on the vertical ellipses at the end of a count item reveals additional information and actions on a count.
+  * **Last Counted**: The last time this product was counted at this facility.
+  * **Remove from Count**: If an item has not been counted, it can be removed from a count if the inventory count is no longer required for that product. Once an item has been counted, it can only be rejected during the review stage.
 
 While in the assigned status, items can still be added to a count, which is helpful in the event that an item needs to be added after a count has already been assigned.
 
@@ -47,3 +50,5 @@ While in the assigned status, items can still be added to a count, which is help
 Reviewers have the option to use the admin view to move a count to the review stage themselves. This option should be used in the event that a count is not moved to the review stage by the assigned facility.
 
 To move a count to `Pending Review` status, click on the `lock` button at the bottom right of the page.
+
+{% embed url="https://youtu.be/sKlW-pL-Xl8" %}
