@@ -4,11 +4,11 @@ A directed cycle count begins as drafts. When logging into the `Cycle Count` app
 
 A new draft count will open up on a new page where you can begin setting up a new count.
 
-## Steps
+## Steps to draft new cycle count
 
-1. Name your cycle count, a cycle count ID will be automatically assigned to it.
+1. **Name your cycle count, a cycle count ID will be automatically assigned to it.**
 
-1. **Add Products to the Count**
+2. **Add Products to the Count**
    - **Enter SKUs to Add to the Count**
      - **Adding Individual Products**  
        Retailers require cycle counts of a product in case they believe there is a discrepancy in the inventory of the product. For example, if the store has rejected the order with the reason `Not in stock` but the store should have available inventory.
@@ -25,10 +25,10 @@ A new draft count will open up on a new page where you can begin setting up a ne
    - **Removing Products**  
      If a product has been added that needs to be removed, click on the `x` button at the end of any product's row.
 
-2. **Add a Due Date**  
+3. **Add a Due Date**  
    Due dates are optional on directed cycle counts and can be added by clicking on the date-time button from the configuration options. For example, retailers may want to ensure that all the inventory is counted before commencing a season-end sale.
 
-3. **Assign a Facility**  
+4. **Assign a Facility**  
   Retailers need to decide the cycle count is created for which facility where the physical counting should happen. Assigning a facility is required to move a count from `Draft` to `Assigned`. To assign a facility, click on the `+ Assign` button and select a facility from the facility selection modal.
 
 Once a count is ready to be assigned to a facility, click on the `send` button at the bottom right of the `draft detail` page. The created draft will now appear in the assigned tab and on the [store management side](./../../../store-operations/inventory-count/directed-cycle-count.md) of the `Cycle Count` app.
