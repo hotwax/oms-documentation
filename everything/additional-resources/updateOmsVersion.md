@@ -115,3 +115,33 @@ Neglecting to update the upgrade steps and SQL may lead to version management co
 **11. Repeat the Update Process:**
 
 * Continue the process iteratively until the OMS is on the latest version.
+
+
+## Updating UAT Instances: A Step-by-Step Guide
+
+{% hint style="info" %} Always verify the Docker instance configuration with the development team before deployment. { % endhint %}
+
+**Overview**
+Process for updating UAT instances on the Jenkins platform, providing clear instructions for different deployment scenarios.
+
+**Prerequisites**
+* Access to Jenkins: [link to Jenkins.hotwax.co]
+* Necessary permissions to deploy to the target UAT instance
+
+### Deployment Scenarios
+
+**New Release Tag**
+* Access Jenkins and locate the desired UAT instance.
+* Navigate to the deployment page and select "Build with parameters".
+* Input the release tag (e.g., v5.14.0) in the "Docker branch" field.
+* Specify required plugins in the "Plugins" field (format: `plugin_name=develop=https://git_url`).
+* Select "UAT" as the "Docker instance" and verify its configuration with the dev team.
+* Trigger the deployment.
+
+**Development Branch**
+* Follow the same steps as for a new release tag, but input "Main" as the Docker branch and select "Dev" as the Docker instance.
+
+**Feature Tag**
+* Follow the same steps as for a new release tag, but input the feature tag (e.g., v5.15.0-86cw63t1f-beta) as the Docker branch and select "UAT" as the Docker instance.
+
+By following these steps and considering the outlined best practices, you can effectively update UAT instances to support various development and testing needs.
