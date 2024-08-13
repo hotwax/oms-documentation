@@ -4,7 +4,7 @@ Assigned cycle counts are awaiting the assigned facilities to submit for review.
 
 ## Assigned Counts List View
 
-The list of assigned counts shows how many of the items in each count have been completed and when the count is due. If the count is sent for the first time, it will have an Assigned badge. If a count has been sent for a “Re-count” after being reviewed, it will have a Re-count Requested badge.
+The list of assigned counts shows how many of the items in each count have been completed and when the count is due. If the count is sent for the first time, it will have an `Assigned` badge. If a count has been sent for a "Re-count" after being reviewed, it will have a `Re-count Requested` badge.
 
 ## Assigned Count Details
 
@@ -22,9 +22,9 @@ The progress metric shows how many assigned cycle count line items have been com
 
 The variance metric shows the accuracy of the count for the counted items. It shows the total expected count along with the total inventory counted to highlight the difference between expected and actual inventory levels.
 
-While the facility of a count cannot be changed once it is assigned, it can be rescheduled. To reschedule a count, click on the due date chip below the name of the count and select a new date from the date-time picker.
+While the facility of a count cannot be changed once it is assigned, it can be rescheduled. To reschedule a count, click on the `due date` chip below the name of the count and select a new date from the date-time picker.
 
-### Count Items
+### Item Counts
 
 While a count is assigned, reviewers can still track individual item progress but cannot accept or reject the count items while it is still assigned.
 
@@ -46,4 +46,4 @@ While in the assigned status, items can still be added to a count, which is help
 
 Reviewers have the option to use the admin view to move a count to the review stage themselves. This option should be used in the event that a count is not moved to the review stage by the assigned facility.
 
-To move a count to “Pending Review” status, click on the lock button at the bottom right of the page.
+To move a count to `Pending Review` status, click on the `lock` button at the bottom right of the page.
