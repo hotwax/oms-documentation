@@ -13,7 +13,7 @@ The Directed Cycle Count app is designed to adapt to the user operating it. When
 
 ## Assigned Cycle Count
 
-The first page a fulfillment team member sees upon logging in is the `Assigned` Cycle Count tab. When an [operations team member assigns a cycle count](../../retail-operations/inventory-management/cycle-count/manage-assigned-counts.md) to a facility, the cycle count becomes visible in the `Assigned Tab`.
+The first page a fulfillment team member sees upon logging in is the `Assigned` Cycle Count tab. When an [operations team member assigns a cycle count](https://docs.hotwax.co/documents/v/retail-operations/inventory/introduction/manage-assigned-counts) to a facility, the cycle count becomes visible in the `Assigned Tab`.
 
 Store associates can view all the cycle counts assigned to their facility, including the number of items assigned, the creation date, and the due date for each cycle count. Users can click on a `cycle count` card to access the `Count Details` page.
 
@@ -23,7 +23,7 @@ When store associates click on a `Cycle Count` card, they can view the complete 
 
 Store associates can search for or scan an item to retrieve its details before submitting the cycle count. Clicking on an item in the list opens its cycle count details. Store associates can manually enter or scan the count into the count field. The count will be saved once the store associate clicks on the `Save New Count` button. If the operations team has enabled the option to show systematic inventory, associates will be able to view the systematic record of the cycle count along with any variance. If a user believes the cycle count is inaccurate, they can click the "Re-count" button to update the count.
 
-Store associates need to click the `Send` button at the bottom right to [submit the cycle count for review](../../retail-operations/inventory-management/cycle-count/pending-review-count.md). Once submitted, the cycle count cannot be altered by the store associates unless the operations team reassigns the count.
+Store associates need to click the `Send` button at the bottom right to [submit the cycle count for review](https://docs.hotwax.co/documents/v/retail-operations/inventory/introduction/pending-review-count). Once submitted, the cycle count cannot be altered by the store associates unless the operations team reassigns the count.
 
 If a cycle count is reassigned, store associates can view all accepted and rejected item counts, marked with appropriate badges. Users are not allowed to update cycle counts that have been accepted or rejected. Items assigned again for recounting by the operations team will be listed with a `Pending` badge.
 
@@ -33,7 +33,7 @@ Cycle counts submitted for review will appear in the `Pending Review` tab. Store
 
 ## View Closed Counts
 
-Once a cycle count is [closed by the operations team](../../retail-operations/inventory-management/cycle-count/closed-counts.md), it will be moved to the `Closed` tab. Store associates can view the due date, submission date, and closed date, along with item count details, such as how many items were counted out of the total assigned, how many were rejected, and the variance.
+Once a cycle count is [closed by the operations team](https://docs.hotwax.co/documents/v/retail-operations/inventory/introduction/closed-counts), it will be moved to the `Closed` tab. Store associates can view the due date, submission date, and closed date, along with item count details, such as how many items were counted out of the total assigned, how many were rejected, and the variance.
 
 
 
