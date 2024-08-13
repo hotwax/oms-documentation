@@ -5,7 +5,7 @@ description: This document provides steps to resolve the "POS Order Refresh Fail
 # POS Order Refresh Failure in Hotwax Commerce OMS
 
 
-In HotWax Commerce, "POS orders" are downloaded as fulfilled from Shopify. Occasionally, an order is downloaded into the OMS before it is marked fulfilled in Shopify. Retailers must refresh these orders to update their status, ensuring fulfilled orders are downloaded and unfulfilled ones are canceled.
+In HotWax Commerce, "POS orders" are downloaded as fulfilled from Shopify. Occasionally, an order is downloaded into the OMS before it is marked fulfilled in Shopify. Retailers must refresh these orders to update their status, ensuring the fulfilled version of the order is downloaded while cancelling the older version.
 
 Orders may fail to refresh due to missing shipping addresses, triggering this error: ```Could not complete the createOrderContactMech process: The following required parameter is missing: [createOrderContactMech.contactMechId]```.
 
