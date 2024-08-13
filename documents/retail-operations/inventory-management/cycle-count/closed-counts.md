@@ -7,14 +7,14 @@ The closed counts page gives a review of all counts that have been closed. This 
 The top of the page has two metrics:
 
 **Counts closed:** Number of counts that have been closed in the selected time range.
+
 **Average variance:** The average variance presents an overall measure of how accurate inventory has been across all recently closed cycle counts.
 
-The Closed count list shows the name and ID of the cycle count along with the facility from which it is completed and the date on which the cycle count is closed. Admins can also see the item count details such as how many items were available in the count and how many of them were counted. the rejected inventory counts and the total inventory variance is also visible for admins to easily identify the count with major inaccuracies
-
+The Closed count list shows the name and ID of the cycle count along with the facility from which it is completed and the date on which the cycle count is closed. Admins can also see the item count details such as how many items were available in the count and how many of them were counted. the rejected inventory counts and the total inventory variance are also visible for admins to easily identify the count with major inaccuracies.
 
 ## Export Cycle Count Details
 
-To get a detailed view of recently closed counts, use the export function available at the right bottom and save counts offline in a CSV format that can be opened in all common spreadsheet tools.
+To get a detailed view of recently closed counts, use the `export` function available at the right bottom and save counts offline in a CSV format that can be opened in all common spreadsheet tools.
 
 Configurable export options:
 Commonly referenced values can be configured during export to help make reporting easier.
@@ -36,7 +36,7 @@ Commonly referenced values can be configured during export to help make reportin
 - Accepted
 - Rejected
   
-When importing the Count ID, facility and Internal ID are mandatory fields, while individual columns can also be selected to be included in the export, but all fields are selected by default. Following columns are available to export:
+When importing the Count ID, facility and Internal ID are mandatory fields, while individual columns can also be selected to be included in the export, but all fields are selected by default. The following columns are available to export:
 
 | **Field**             | **Description**                                                    |
 |-----------------------|--------------------------------------------------------------------|
