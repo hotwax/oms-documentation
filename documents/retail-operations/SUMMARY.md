@@ -84,6 +84,7 @@
   * [Product Inventory View Page](inventory-management/product-inventory-view.md)
   * [Inventory Configurations](inventory/inventory-management/inventory-configurations.md)
 * [Inventory upload](inventory-management/inventory-upload.md)
+  * [Schedule Restocking](inventory-management/schedule-restock.md)
 * [Inventory Count](inventory-management/cycle-count/introduction.md)
   * [Draft Counts](inventory-management/cycle-count/draft-cycle-count.md)
   * [View Assigned Counts](inventory-management/cycle-count/manage-assigned-counts.md)
