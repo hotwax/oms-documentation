@@ -8,11 +8,19 @@ If orders do not have all valid order attributes, the orders remain in “create
 
 ## Scenario 1: Order Missing Metafields in OMS
 
-To ensure consistency between Hotwax Commerce and Shopify, we need to verify if an order has the Order Metafields in Shopify. If an order in Shopify has meta fields that are missing in the OMS, this might happen if the [`Import order Attribute`](https://docs.hotwax.co/documents/v/retail-operations/workflow/job-workflows/orders#order-item-attribute) is not running or if the job runs before the meta field is added by Shopify. In such cases, the meta fields should be manually added as order attributes to the OMS in the order attribute section on the view order page.
+To ensure consistency between HotWax Commerce and Shopify, verify if an order has the Order Metafields in Shopify. Typically, the attributes will sync automatically later.
 
-For example, if the `CustomerID` is missing in OMS but available in Shopify, you need to map the `CustomerID` in OMS in the OrderAttribute section on the OrderView page.
+If an order in Shopify has meta fields that are missing in OMS, it could be due to one of the following:
 
-**Note:** Ensure the correct spelling when manually adding the tag in the OMS.
+`Import Order Metafield` Job Not Running: The job responsible for importing metafields might not be running. Ensure that this job is scheduled and operating correctly in  HotWax Commerce
+
+Check Job Scheduling in NiFi: Verify that the job responsible for importing metafields and placing them on SFTP is scheduled and functioning as expected in NiFi.
+
+Verify SFTP Import in OMS: Ensure OMS is properly configured to import metafields from SFTP.
+
+Manual addition of meta fields in OMS should be considered only if the above checks are confirmed and the issue persists.
+
+Note: If manual addition is necessary, ensure correct spelling and format when adding tags in OMS.
 
 ## Scenario 2: Order Missing Metafields in both OMS and Shopify
 
