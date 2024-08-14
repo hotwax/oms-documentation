@@ -54,7 +54,6 @@ Yes, HotWax Commerce automatically adjusts inventory levels when recording an in
 <summary>Is it possible to configure the reasons for inventory variances and their effect on inventory?</summary>
 Yes, it is possible to configure the reasons for inventory variances and their effect on inventory. Retailers can manage which rejection reasons they want to offer their staff to choose from if they're unable to fulfill items in an order. Additionally, they can configure whether a rejection reason from the fulfillment app should impact inventory at the store. Users have the flexibility to choose whether specific rejection reasons result in an actual change to the store's inventory or merely serve as a rejection without affecting stock levels.
 For example, if the reason (Enumeration) enumTypeId is not REPORT_NO_VAR, the rejection will impact inventory. If inventory should be depleted when a rejection reason is used, REPORT_VAR enumTypeId will lead to changes in store inventory. When a rejection reason should eliminate all remaining inventory for the item being rejected, set the type to REPORT_ALL_VAR.
-
 </details>
 <details>
 <summary>When an inventory variance is recorded for an order item, does HotWax Commerce ensure that new orders containing this specific item are not routed to that particular location again?</summary>
@@ -85,7 +84,6 @@ HotWax Commerce ensures same-day shipping orders are shipped on the same day thr
 4. Prioritize orders for same-day delivery: Orders meeting these criteria are prioritized to ensure timely fulfillment.
 By employing these measures, HotWax Commerce effectively supports same-day shipping orders and enhances the efficiency of the fulfillment process.
 </details>
-<details>
 <details>
 <summary>Is there a configuration in HotWax Commerce to turn off the fulfillment of shipping orders from stores, while still allowing BOPIS (Buy Online Pick Up In Store) orders?</summary>
 Yes, in HotWax Commerce, you can configure a facility to disable the fulfillment of shipping orders while still allowing BOPIS (Buy Online Pick Up In Store) orders. This is done by setting the online fulfillment capacity to 0. Additionally, ensure the "Allow Pickup" setting is toggled on to enable BOPIS for the selected facility.
@@ -154,7 +152,6 @@ Yes! Store associates can reject the item from that facility on the view sales o
 <summary>In the case of Pre-orders, what happens when there are no promise dates, and a merchant wants auto-release orders?</summary>
 Auto-releasing checks inventory count and promise date of an item. An item cannot be released if there’s no promise date on it. If a merchant does not manage promise dates but still wants an automated process, they can choose to broker orders directly from the pre-order parking.
 Brokering pre-order parking will allow sending orders for fulfillment even if there is no promise date using the same brokering rules a merchant has set up for normal orders. Additionally, a merchant can also configure a custom set of brokering rules specifically to broker orders right from pre-order parking.
-
 </details>
 <details>
 <summary>If merchants manage multiple products that are on pre-orders, is it possible to know which product is performing better than others? Does HotWax have any report which contains this data?</summary>
@@ -168,7 +165,6 @@ Yes, even if a customer makes an instant purchase in a retail store, HotWax Comm
 <summary>Does HotWax Commerce completely delete a variant from its database when a merchant removes it from a product on Shopify, or does it retain the variant in some form over time?</summary>
 When a merchant deletes a variant of a product on Shopify, HotWax Commerce de-links that variant from the parent product but does not delete it immediately. The variant is marked as deleted but kept in the database for return management purposes. It is considered a soft deletion.
 </details>
-<details>
 <details>
 <summary>How does HotWax Commerce feed inventory to other systems?</summary>
 The computed inventory by HotWax Commerce can be pushed in two ways to other systems:
@@ -191,7 +187,6 @@ The OMS (Order Management System), represented by HotWax Commerce, synchronizes 
 1. **Batch Jobs for Bulk Sync**: Regular batch jobs ensure that no product updates are missed. The 'Upload recent inventory change' job identifies products with inventory changes and updates Shopify.
 2. **Hard Sync**: A 'Hard Sync' job synchronizes inventory counts of all products from HotWax Commerce to Shopify once a day.
 While the primary direction of synchronization is from HotWax Commerce to Shopify, order synchronization (from Shopify to HotWax Commerce) is supported, including handling open sales orders, new orders, and order updates. Inventory levels, however, are primarily updated from HotWax Commerce to Shopify.
-
 </details>
 <details>
 <summary>How are products loaded into the OMS? Is it automated from Shopify? Are there considerations for potential data corruption when updating products from Shopify?</summary>
@@ -201,7 +196,6 @@ HotWax Commerce uses a configurable job to download products from Shopify. This 
 - Importing newly added products
 - Deleting products no longer available in Shopify
 For more details, refer to the documentation. Considerations for potential data corruption are addressed by robust import processes and error handling mechanisms to ensure data integrity.
-
 </details>
 <details>
 <summary>Can rules be configured to control the visibility and availability of inventory online for specific stores?</summary>
@@ -257,13 +251,12 @@ No, users do not need to be store managers to handle receiving and fulfilling ta
 <details>
 <summary>What needs to be configured when setting up a new instance of HotWax Commerce?</summary>
 When setting up a new instance of HotWax Commerce, the following configurations need to be completed:
-- **Product Store Configuration**: Set up the Product Store Name, Currency, Auto Approve Order, Auto Cancel Days, Sales Order ID Prefix, Allow Split, and Product Identifier.
+- **Product Store Configuration**: Set up the Product Store Name, Currency, Auto Approve Order, Auto Cancel Days, Sales Order ID Prefix, Allow Split and Product Identifier.
 - **Initial Setup Tasks**: Add DBICs, configure Product Stores, add more Product Stores, set up the company name, load facilities, and load System Property data.
 - **User and Gateway Configuration**: Create your first system user and add shipping gateways.
 - **Shopify Integration**: Connect a Shopify Store, map Shopify locations, and set up Shopify Mappings.
 - **Solr Indexing Configuration**: Manage Solr indexing for efficient data retrieval and search operations.
 Refer to the user manual for detailed instructions.
-
 </details>
 <details>
 <summary>How can retailers decide how much inventory is allowed to sell on an inventory channel?</summary>
