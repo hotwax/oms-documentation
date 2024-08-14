@@ -329,3 +329,5 @@ Yes, if a shipment is supposed to contain only shirts but there's a hat, it can 
 <summary>Is there a way to force route an entire order if one of the items in it is rejected?</summary>
 Retailers can disable partial rejection to ensure that if one inventory item is not available, all other items in that order are also rejected. The entire order will be rerouted to a different facility with available inventory.
 </details>
+
+If you have any further questions, please 
