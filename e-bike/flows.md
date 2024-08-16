@@ -19,7 +19,7 @@ Another job, `Sync Variant Details` in HotWax Commerce, located on the pre-order
 
 Globo handles the addition of the pre-order button on Shopify product detail pages. The `Sync Variant Details job` in HotWax Commerce ensures that any changes in purchase order arrival dates are automatically reflected in the product's promise dates on Shopify. However, when arrival dates for multiple items change within purchase orders, the promise dates must first be updated in HotWax Commerce's pre-sell category. This update process is handled by the `Update Pre-Order Category Item Arrival Date` job.
 
-## Order Import and Processing in HotWax Commerce
+## Order Processing
 
 The `import order job` regularly syncs Shopify orders to the OMS. However, for E-Bike's high-value pre-order products, a unique order processing flow is required. Globo facilitates this by collecting an advance payment upon order placement and sending a subsequent payment link when the product is ready to ship. Once the full payment is received, the order status is manually updated by E-bike to 'Approved' from 'Created' status in the OMS, initiating the fulfillment process.Potential orders held in the backorder queue are manually released to the brokering queue. Once in the brokering queue, a brokering run is initiated, which then sends the orders to the appropriate facility for fulfillment.
 
