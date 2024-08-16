@@ -1,3 +1,3 @@
-# Table of Content
+# Table of contents
 
-* [Frequently Asked Questions](readme.md)
+* [Frequently Asked Questions](README.md)
