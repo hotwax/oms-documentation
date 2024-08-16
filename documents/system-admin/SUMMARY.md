@@ -19,6 +19,9 @@
   * Troubleshooting
      * [Application Access Issue](administration/users/application-access-issue.md)
 
+* [User Permissions](administration/permissions/introduction.md)
+  * [Fulfillment App](administration/permissions/fulfillment-app.md)
+
 * [Facilities](facilities/README.md)
   * [Add New Facilities](administration/facilities/add-new-facilities.md)
   * [Manage Existing facilities](administration/facilities/manage-existing-facilities.md)
