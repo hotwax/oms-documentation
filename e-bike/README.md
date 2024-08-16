@@ -2,12 +2,14 @@
 description: >-
   Learn about E-Bikeshop the largest Haibike e-bike dealer in the UK. Based in
   Germany, Haibike maintains a reputation for offering great value and
-  high-quality e-bikes. The documentation will detail a successful E-bike OMS implementation, showcasing how pre-order functionality can optimize inventory management, reduce stockouts, and maximize sales.
+  high-quality e-bikes.
 cover: .gitbook/assets/Electric-Mountain-Bike-Range-E-Bikeshop-Header-1.webp
 coverY: 0
 ---
 
 # Introduction
+
+The documentation will detail a successful E-bike OMS implementation, showcasing how pre-order functionality can optimize inventory management, reduce stockouts, and maximize sales.
 
 ### Business Model
 

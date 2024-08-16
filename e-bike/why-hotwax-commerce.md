@@ -2,10 +2,12 @@
 description: Discover how E-bike utilized HotWax Commerce to improve their omnichannel capabilities, including pre-order management features.
 ---
 ### Challenges Faced by E-Bikeshop
-- **Manual Pre-order Computation:** E-Bikeshop struggled with manually calculating and managing pre-orders, leading to inefficiencies and potential errors in order fulfillment timelines.
-- **All Products on Pre-order Status:** Difficulty distinguishing between products available for immediate purchase and those on pre-order caused customer confusion and impacted sales conversions.
+- **Manual Pre-order Computation:** E-Bikeshop faced significant challenges in pre-order management due to manual processes, relying heavily on documents and spreadsheets. This approach led to inefficiencies, human errors, and delayed order fulfillment. 
+
+- **All Products on Pre-order Status:** The inability to clearly differentiate between pre-order and immediately available products hindered E-Bikeshop's ability to manage customer expectations, leading to order cancellations and negatively impacting sales conversions. 
 
 ### Solutions Provided by HotWax Commerce
-- **Pre-order Management:** HotWax Commerce offers robust tools for managing pre-orders efficiently. It allows E-Bikeshop to handle pre-orders accurately, ensuring timely fulfillment and improved customer satisfaction.
-- **Clear Product Status Differentiation:** HotWax Commerce enables E-Bikeshop to differentiate between products available for immediate purchase and those on pre-order. This clarity enhances the customer experience by setting accurate expectations and reducing confusion.
-- **Unified Order Handling:** With HotWax Commerce, E-Bikeshop can manage orders without splitting shipments unless necessary. This feature streamlines order processing improves operational efficiency, and maintains consistency in customer order fulfillment.
+- **Pre-order Management:** HotWax Commerce's pre-order management solution streamlines the entire pre-order lifecycle, enabling E-Bikeshop to accurately manage product availability, enhance customer decision-making, and deliver a superior eCommerce experience. 
+
+- **Unified Order Handling:** HotWax Commerce empowers E-Bikeshop to optimize order fulfillment by controlling order splitting. This ensures accessories and assembly components ship with the primary product, reducing shipping costs and enhancing operational efficiency. 
+

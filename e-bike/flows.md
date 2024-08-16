@@ -3,34 +3,34 @@ description: Learn about the flows in E-bike.
 ---
 
 ## Inventory
-E-Bike operates mainly on pre-orders and they do not use any ERP system. E-Bike manually maintains its inventory through an Excel sheet and manually uploads it to HotWax commerce through the EXIM page. 
-
-E-Bike usually accepts orders with a delivery timeline of over 1 year. Hence, the E-Bike’s POs are also mostly one year.
+**E-Bikeshop primarily operates on a pre-order model without an ERP system.** Inventory data, encompassing both current stock and future purchase orders, is meticulously maintained in Excel spreadsheets. To integrate this information into the OMS, a manual upload process is executed via the system's import/export function (EXIM page).Post order reservation and purchase order calculations, the updated inventory data is synchronized with the eCommerce platform.
 
 ## Facilities
-E-Bike operates with a single warehouse, which has three locations: Bulk, Pick-primary, and Retail.
+E-Bike operates from a single warehouse with three internal storage areas: Bulk, Primary Picking, and Retail Outlet. These locations are replicated within the OMS and Shopify systems as primary inventory hubs.
 
 ## Purchase Order
-E-Bike uploads purchase orders into HotWax Commerce using the EXIM page. The `Auto Refresh Pre-sell Catalog` job, found in the job manager under the pre-order page, automatically manages the addition or removal of pre-sell products in HotWax's Pre-order/Backorder category. Since E-Bike handles pre-orders through the Backorder category, this job ensures that the purchase order items are added to the Backorder category.
+Purchase orders serve as the foundation for E-Bike's pre-order process. These purchase orders, typically with a one-year delivery timeline, are uploaded to the OMS via the EXIM page to influence pre-order computation.
 
-Another job, `Sync variant details` in HotWax Commerce on the pre-order page, facilitates updates to the Presell catalog on Shopify. It is important to check the `continue selling when out of stock` in Shopify so that these products will be eligible for pre-orders. HotWax Commerce checks this box and adds an `HC: Backorder` tag on this product. The promise date will also be added in the meta field in Shopify. 
+## Pre-order
 
-Globo will then add the pre-order button on the Shopify product detail page. The `Sync Variant Details` job ensures that if there is any change in the purchase order arrival date, the promise dates of the product are also updated on Shopify. However, when there are changes in the arrival dates of multiple items in the purchase orders, the promise dates need to be first updated in the HotWax Commerce pre-sell category. These changes happen through the `Update Pre-Order Category Item Arrival Date` job.
+The `Auto Refresh Pre-sell Catalog` job, located in the Job Manager under the Pre-order page, automatically manages the addition and removal of pre-sell products by monitoring current stock levels and upcoming purchase orders. It updates HotWax's Pre-order/Backorder category accordingly. Since E-Bike handles pre-orders through the Backorder category, this job ensures that backorder-eligible items are correctly added to the Backorder category. 
+
+Another job, `Sync Variant Details` in HotWax Commerce, located on the pre-order page, handles the synchronization of pre-order information to Shopify. This job automatically checks the `Continue Selling When Out of Stock` checkbox and adds the `HC: Backorder` tag to the product on Shopify. Additionally, it updates the promise date in the Shopify product meta field, which is then utilized by third-party systems, in this case Globo, to make Pre-order PDP changes.
+
+Globo handles the addition of the pre-order button on Shopify product detail pages. The `Sync Variant Details job` in HotWax Commerce ensures that any changes in purchase order arrival dates are automatically reflected in the product's promise dates on Shopify. However, when arrival dates for multiple items change within purchase orders, the promise dates must first be updated in HotWax Commerce's pre-sell category. This update process is handled by the `Update Pre-Order Category Item Arrival Date` job.
 
 ## Order Import and Processing in HotWax Commerce
-The `import order job` in the order page imports orders from Shopify. E-Bike manually changes the status of orders from `created` to `approved` once payment is collected. Given the premium nature of their goods, E-Bike also handles customization requests for already created orders.
 
-These special requests are managed through the Shopify admin page, making it common for E-Bike to edit existing orders daily. Orders are reserved against upcoming PO inventory and are accepted until inventory arrives or the complete PO inventory is consumed. These orders are then held in the backorder queue and released to the brokering queue when the PO arrives, either manually or automatically.
+The `import order job` regularly syncs Shopify orders to the OMS. However, for E-Bike's high-value pre-order products, a unique order processing flow is required. Globo facilitates this by collecting an advance payment upon order placement and sending a subsequent payment link when the product is ready to ship. Once the full payment is received, the order status is manually updated by E-bike to 'Approved' from 'Created' status in the OMS, initiating the fulfillment process.Potential orders held in the backorder queue are manually released to the brokering queue. Once in the brokering queue, a brokering run is initiated, which then sends the orders to the appropriate facility for fulfillment.
 
-For pre-order items, E-Bike uses the Globo Pre-order app, which assists in partial payment collection and handles PDP changes like promise dates and pre-order tags on Shopify. E-Bike does not take full upfront payments but collects a deposit of $199. Globo allows only one item per order for partial payment collection, so mixed cart orders are not taken at checkout. 
+**Order Updates**
 
-Additional items, if requested, are added later. When a new item is added to the order, payment reauthorization is needed. Shopify sends a payment request email to the customer, and the payment is made. Finally, Globo collects the full payment through draft orders when the due date arrives.
+In E-bike, it’s common for order items to be updated before fulfillment, such as adding new items or accessories or changing product SKUs. To handle these updates, HotWax Commerce uses the Import Order Updates from Shopify job to sync the information. When these changes occur, payment reauthorization is required for the difference in amount. Shopify sends a payment request email to the customer, and once the payment is made, Globo collects the full payment when the due date arrives.
 
-E-Bike manually makes changes to orders based on customer requests, such as adding new items or accessories or changing product SKUs. To accommodate these changes, HC provided a `Refresh Order` function to bring changes made to the order on Shopify in real-time into HC. 
+**Mixed carts**
 
-However, refreshing an order in HC put the associated sales order in the system on hold. To address this, the `import order updates from Shopify` job is now used instead of Refresh Orders. 
-
-In the case of the mixed cart orders, the normal order items will go into the brokering queue and the pre-order products will go into the back-order parking. The whole order will be allocated to the warehouse once the inventory for the pre-order item is received.
+**E-bikes often include accessories that need to be shipped with the main product.** To ensure this, the system holds orders with both regular and pre-order items until everything is ready to ship. Orders with both in-stock and pre-order items are held until all products are ready to ship. This order holding behavior is configured within the product store setting named `Order Splitting`. 
 
 ## Fulfillment
-E-Bike operates with a single warehouse, so all orders are routed there. They do not fully utilize our Fulfillment app, and shipping labels are not generated in HotWax. Orders are manually completed in HotWax Commerce, after which HotWax syncs the fulfillment information to Shopify.
+**E-Bike operates a single warehouse and handles order fulfillment manually.** While integrated with HotWax Commerce for order management, the platform's fulfillment features, such as order picking, packing, and label generation, are not fully utilized. Orders are marked complete within HotWax Commerce after manual fulfillment, and this information is then synced to Shopify by HotWax.
+
