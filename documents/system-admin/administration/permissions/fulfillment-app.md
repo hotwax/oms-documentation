@@ -13,6 +13,7 @@ The HotWax Commerce Fulfillment App is designed specifically for store fulfillme
 | 4    | Order actions Chip > Pick order                   | -                | Allows users to assign a picker to a specific individual order, initiating the fulfillment process for that order.                                                                                                                       |
 | 5    | Order actions Chip > View Order details           | -                | Routes the user to the detailed view of an individual order, where further actions can be taken or details can be reviewed.                                                                                                              |
 | 6    | View item QOH (Open Orders)                       | -                | Displays the Quantity on Hand (QOH) for items in the order, helping users assess available stock for fulfillment.                                                                                                                         |
+
 ## In Progress tab
 
 | S.No | Action                                            | Permission       | Description                                                                                                                                                                                                                             |
@@ -40,6 +41,7 @@ The HotWax Commerce Fulfillment App is designed specifically for store fulfillme
 | 7    | Print Customer Letter                             | -                | Enables users to print the packing slip or customer letter associated with the order, ensuring documentation is provided with the shipment.                                                                                               |
 | 8    | Unpack orders                                     | COMMON_ADMIN     | Provides users with the ability to unpack orders and send them back to the "In Progress" state if necessary. This action is only enabled when all required shipment and package information has been provided.                             |                                                       |
 
+
 ## Transfer Order tab
 
 | S.No | Action                                            | Permission                               | Description                                                                                                                                                                                                                             |
@@ -51,6 +53,7 @@ The HotWax Commerce Fulfillment App is designed specifically for store fulfillme
 | 5    | Open > Pick all                                   | -                                        | Allows users to pick all items in a transfer order when the "Pick All" button is enabled and no shipment ID has been assigned.                                                                                                          |
 | 6    | Completed > Regenerate shipping label             | -                                        | Provides the ability to regenerate shipping labels for transfer orders that have been completed.                                                                                                                                        |
 | 7    | Create shipment                                   | ORD_TRANSFER_ORDER_CREATE or ORD_TRANSFER_ORDER_ADMIN | Enables users to create a shipment for a transfer order, preparing it for dispatch to the receiving facility.                                                                                     |
+
 ## EXIM tab                                          
 
 | S.No | Action                                            | Permission       | Description                                                                                                                                                                                                                             |
@@ -58,6 +61,7 @@ The HotWax Commerce Fulfillment App is designed specifically for store fulfillme
 | 1    | EXIM view                                         | -                | Permission to view the "EXIM" page, providing visibility into export/import data and actions.                                                                                                                                           |
 | 2    | EXPORT Packed orders                              | -                | Allows users to export data for orders that have been packed but not yet shipped, facilitating external tracking and reporting.                                                                                                          |
 | 3    | IMPORT Shipped orders                             | -                | Enables users to import shipped order data from an external system based on tracking codes, ensuring accurate record-keeping within the platform.                                                                                        |
+
 ## Rejection Reasons tab
 
 | S.No | Action                                            | Permission       | Description                                                                                                                                                                                                                             |
@@ -66,6 +70,7 @@ The HotWax Commerce Fulfillment App is designed specifically for store fulfillme
 | 2    | Variance type selection                            | -                | Allows users to select a specific rejection reason from a predefined list when processing rejected orders.                                                                                                                               |
 | 3    | Ellipsis button > Remove reason                    | -                | Provides the ability to remove a rejection reason from the system, ensuring the list of reasons remains relevant and accurate.                                                                                                           |
 | 4    | Add new Rejection reason                           | -                | Opens a modal for users to create a new rejection reason, allowing customization of rejection types within the system.                                                                                                                   |
+
 ## Carrier & Shipment Methods tab
 
 | S.No | Action                                            | Permission            | Description                                                                                                                                                                                                                             |
@@ -83,6 +88,7 @@ The HotWax Commerce Fulfillment App is designed specifically for store fulfillme
 | 3    | Product Identifier selection                      | -                | Allows users to choose a product identifier to view products using their preferred identification method, facilitating easier product management.                                                                                         |
 | 4    | Generate shipping label toggle                    | -                | Enables users to toggle the option to print supplementary documents, such as a shipping label, with the shipment for better package identification.                                                                                       |
 | 5    | Generate packing slip toggle                      | -                | Provides the ability to toggle the option to print a packing slip alongside the shipment, ensuring proper documentation is included with orders.                                                                                          |
+
 ## Order Details Page       
 
 | S.No | Action                                            | Permission       | Description                                                                                                                                                                                                                             |
