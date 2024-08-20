@@ -2,7 +2,7 @@
 
 The HotWax Commerce Fulfillment App is designed specifically for store fulfillment teams. It allows store users to carry out basic tasks such as picking and packing without special permissions, so access to the Fulfillment app is open for all users. However, sensitive actions like marking an item as shipped or altering fulfillment-related settings require higher-level permissions. Below is a list of all the actions available in the Fulfillment App, along with the specific permissions needed to perform them.
 
-## Open Orders Tab                                                                                                                       
+## Open Orders tab                                                                                                                       
 
 
 | S.No | Action                                            | Permission       | Description                                                                                                                                                                                                                             |
@@ -58,7 +58,7 @@ The HotWax Commerce Fulfillment App is designed specifically for store fulfillme
 | 1    | EXIM view                                         | -                | Permission to view the "EXIM" page, providing visibility into export/import data and actions.                                                                                                                                           |
 | 2    | EXPORT Packed orders                              | -                | Allows users to export data for orders that have been packed but not yet shipped, facilitating external tracking and reporting.                                                                                                          |
 | 3    | IMPORT Shipped orders                             | -                | Enables users to import shipped order data from an external system based on tracking codes, ensuring accurate record-keeping within the platform.                                                                                        |
-## Rejection Reasons tab**   
+## Rejection Reasons tab
 
 | S.No | Action                                            | Permission       | Description                                                                                                                                                                                                                             |
 |------|---------------------------------------------------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
