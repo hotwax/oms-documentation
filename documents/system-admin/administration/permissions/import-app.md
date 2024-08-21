@@ -9,8 +9,8 @@ Here’s a detailed table of the actions available in the Import App, organized 
 
 | Action                    | Permission             | Description                                                                                              |
 |-------------------------------|----------------------------|--------------------------------------------------------------------------------------------------------------|
-| Inventory Page | MDM_IMP_INVENTORY_VIEW    | Enables users to upload CSV files containing inventory data received from external systems.                  |
-| Schedule Restock          | -                         | Allows users to schedule inventory restocking based on the imported data.                                    |
-| Purchase Order Import      | -                         | Provides the ability to upload CSV files to import purchase orders into the system.                      |
-| Saved Mappings             | -                         | Enables users to view previously saved mappings that link CSV file data to system fields.                    |
-| Review Inventory CSV       | -                         | Allows users to review imported inventory CSV files and correct any issues or discrepancies.                 |
+| Inventory tab | MDM_IMP_INVENTORY_VIEW    | Enables users to upload CSV files containing inventory data received from external systems.                  |
+| Schedule Restock tab         | -                         | Allows users to schedule inventory restocking based on the imported data.                                    |
+| Purchase Order tab      | -                         | Provides the ability to upload CSV files to import purchase orders into the system.                      |
+| Saved Mappings tab            | -                         | Enables users to view previously saved mappings that link CSV file data to system fields.                    |
+| Review Inventory CSV page     | -                         | Allows users to review imported inventory CSV files and correct any issues or discrepancies.                 |
