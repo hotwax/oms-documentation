@@ -44,7 +44,7 @@ description: Discover  the versions of HotWax Commerce OMS releases.
 | Diff            | [Link to diff](https://git.hotwax.co/commerce/oms/-/compare/v5.14.0...v5.14.1?from_project_id=161&straight=false)    |
 | Changelog       | [Link to changelog](https://git.hotwax.co/commerce/oms/-/blob/v5.14.1/CHANGELOG.md?ref%5C_type=tags&ref_type=tags)   |
 
-## Release - v5.14.0 (26th June 2024)
+## Release - v5.14.0 (26th July 2024)
 
 | Information     | Value                                                                                                              |
 | --------------- | ------------------------------------------------------------------------------------------------------------------ |
