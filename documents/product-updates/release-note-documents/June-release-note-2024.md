@@ -1,4 +1,4 @@
-# HotWax Commerce Release Notes - June 2024
+# Document Release Notes - June 2024
 
 ## NetSuite Integration
 - Documented the NetSuite feed, providing comprehensive technical details necessary for accurate understanding and application.
