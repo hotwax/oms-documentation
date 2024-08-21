@@ -4,9 +4,6 @@ The HotWax Commerce Import App is designed specifically for merchandisers to man
 
 Below is a list of all the actions available in the Import App, along with the specific permissions needed to perform them.
 
-Here’s a detailed table of the actions available in the Import App, organized by the Inventory Page, along with the specific permissions needed to perform them:
-
-
 | Action                    | Permission             | Description                                                                                              |
 |-------------------------------|----------------------------|--------------------------------------------------------------------------------------------------------------|
 | Inventory tab | MDM_IMP_INVENTORY_VIEW    | Enables users to upload CSV files containing inventory data received from external systems.                  |
