@@ -156,7 +156,7 @@ https://api.easypost.com/v2/shipments
 | shipment.options.label_format | (not specified) | Label format |
 | shipment.options.label_size | (not specified) | Label size |
 | shipment.carrier_accounts | (not specified) | List of carrier accounts (optional) |
-| shipment.carrier_accounts[] | facilityAttribute.attrName.CARRIER_ACCOUNTS | Individual carrier account |
+| shipment.carrier_accounts[] | facilityAttribute.attrName.carrierAccounts | Individual carrier account |
 
 #### Response:
 
