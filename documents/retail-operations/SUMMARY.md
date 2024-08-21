@@ -95,7 +95,7 @@
   * [ATP rules](available-to-promise/atp-rules.md)
   * [Create Rules](available-to-promise/create-rules.md)
   * [Manage Rules](available-to-promise/manage-rules.md)
-  * [Use Cases](available-to-promise/user-cases.md)
+  * [Use Cases](available-to-promise/use-cases.md)
 * [Safety stock](inventory/safety-stock/README.md)
   * [Set Bulk Safety Stock](inventory/safety-stock/set-bulk-safety-stock.md)
   * [Set Individual Safety Stock](inventory/safety-stock/set-individual-safety-stock.md)
