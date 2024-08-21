@@ -21,6 +21,10 @@
 
 * [User Permissions](administration/permissions/introduction.md)
   * [Fulfillment App](administration/permissions/fulfillment-app.md)
+  * [BOPIS App](administration/permissions/bopis-app.md)
+  * [Import App](administration/permissions/import-app.md) 
+  * [Facilities App](administration/permissions/facilities-app.md)
+  * [Users App](administration/permissions/fulfillment-app.md)
 
 * [Facilities](facilities/README.md)
   * [Add New Facilities](administration/facilities/add-new-facilities.md)
