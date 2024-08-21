@@ -12,9 +12,6 @@ description: >-
 Perry Ellis International (PEI), a leading American fashion retailer, has established a robust business model that resonates with contemporary consumers. PEI's strategy centers around strategic licensing, a strong online presence, and a well-developed retail network. PEI has a significant online presence, operating a thriving e-commerce platform. This digital channel allows the retailer to cater to a broader audience, including tech-savvy consumers who prefer online shopping. PEI maintains a substantial network of approximately 60 stores across the United States, providing customers with a physical shopping experience. These retail outlets complement the online platform, offering a holistic shopping journey.
 
 ## HotWax-Powered Brands
-
-## Perry Ellis and HotWax Commerce: A BOPIS Powerhouse
-
 **Perry Ellis International** leverages the **HotWax Commerce** platform to effectively manage its three key brands:
 
 * **Perry Ellis:** The iconic American brand.
@@ -42,4 +39,3 @@ PEI excels in omnichannel strategies, particularly the "Buy Online, Pick Up in S
 
 ### Logistics and Shipping
 * **Local Shipping Aggregator:** **ShipT** facilitates local shipping and delivery services.
-\
