@@ -7,7 +7,7 @@ This document outlines the functionalities and usage of three Perry Ellis APIs f
 Marks orders as "Ready for Pickup" and triggers a notification email to customers.
 
 **Endpoint** 
-https://<host>/api/readyForPickupBOPISOrder
+https://host/api/readyForPickupBOPISOrder
 
 **HTTP Method** 
 `POST`
@@ -29,7 +29,7 @@ https://<host>/api/readyForPickupBOPISOrder
 Marks orders as "Complete" when the order is handed over to the customer/courier at the store.
 
 **Endpoint** 
-https://<host>/api/shipNowBOPISOrder
+https://host/api/shipNowBOPISOrder
 
 **HTTP Method** 
 `POST`
@@ -72,7 +72,7 @@ https://<host>/api/rejectShopifyOrderItem
 
 To use these APIs, you'll need to obtain an authorization token by making a separate POST request to the following endpoint:
 
-* **Endpoint:** https://<host>/api/login
+* **Endpoint:** https://host/api/login
 * **Example:** [invalid URL removed]
 * **Production URL:** Not Available (NA)
 * **Request Body:**
