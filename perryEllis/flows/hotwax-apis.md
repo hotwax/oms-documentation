@@ -2,7 +2,7 @@
 
 This document outlines the functionalities and usage of three Perry Ellis APIs for Buy Online Pickup In-Store (BOPIS) fulfillment:
 
-**1. Ready For Pickup API**
+## Ready For Pickup API
 
 **Function:** Marks orders as "Ready for Pickup" and triggers a notification email to customers.
 
@@ -24,7 +24,7 @@ Example: [https://perryellis-uat.hotwax.io/api/readyForPickupBOPISOrder](https:/
 }
 ```
 
-**2. Complete Pick Up API**
+## Complete Pick Up API
 
 **Function:** Marks orders as "Complete" when the order is handed over to the customer/courier at the store.
 
@@ -46,7 +46,7 @@ Example: [https://perryellis-uat.hotwax.io/api/shipNowBOPISOrder](https://perrye
 }
 ```
 
-**3. Reject Shopify Order Item API**
+## Reject Shopify Order Item API
 
 **Function:** Marks specific order items as "Rejected" with a reason, typically due to out-of-stock inventory.
 
