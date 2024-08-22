@@ -9,24 +9,35 @@ description: >-
 
 ## Key omnichannel initiatives
 
-Seamlessly integrate their online and physical stores, allowing customers to access inventory without channel restrictions.
+**Omnichannel Integration:**
 
-Implement a flexible order fulfillment system that could handle two distinct purchasing patterns, same-day buy-online-pick-up-in-store (BOPIS) and Ship from Store that includes two shipping methods, Same Day Delivery (SDD) and Next Day Delivery (NDD). Enhance the user experience by offering pickup options within the product display page (PDP).
+* **Unified Inventory Visibility:** Ensure real-time visibility of physical store inventory across all channels, enabling customers to seamlessly check product availability and reserve items for pickup.
 
-Utilize the "Mixed Cart" feature to boost the average order value and offer a more diverse range of products to customers.
+**Omnichannel Fulfillment:**
+
+* **Same-Day BOPIS:** Implement a robust BOPIS system to facilitate same-day pickup of online orders from nearby physical stores.
+* **Store Fulfillment:** Enable stores to fulfill orders directly for same-day and next-day delivery, reducing shipping times and costs.
+* **Mixed Cart Functionality:** Allow customers to combine pick and home delivery products in a single cart, encouraging larger purchases and providing more flexible fulfillment options.
+
 
 ## Prior Initiatives
 
-BOPIS Integration: Perry Ellis was using Shopify, but they faced challenges in marking orders as ready for customer pickup. The absence of REST API calls for this purpose created complexities and limitations in their BOPIS workflow. Their desired approach was to facilitate customers' easy and secure order pickups at their convenience.
+**Perry Ellis International** encountered difficulties with their **Shopify** integration when implementing a **Buy Online, Pick Up In Store (BOPIS)** strategy. The lack of specific **Shopify REST API calls** designed for marking orders as ready for customer pickup hindered their ability to provide a seamless BOPIS experience for customers.
 
-## HotWax Commerce Solutions
+## Perry Ellis International's Omnichannel Transformation with HotWax Commerce
 
-To accomplish these objectives, Perry Ellis selected HotWax Commerce as their Order Management System (OMS) of choice:
+**Perry Ellis International** successfully implemented an omnichannel strategy by leveraging **HotWax Commerce** as their **Omnichannel Order Management System (OMS)**. HotWax Commerce provided a set of out-of-the-box APIs to support the following key operations:
 
-**BOPIS:** HotWax Commerce introduced BOPIS that enabled Perry Ellis to enhance their omnichannel capabilities. With a "Buy Online, Pick Up in Store" application, Perry Ellis offered customers the convenience of selecting their preferred store, establishing it as their "My store." The default store setting remained even as customers browsed other products on the website, simplifying the order pickup process.
+### BOPIS (Buy Online, Pick Up In Store)
+* **Customer Convenience:** HotWax Commerce enabled Perry Ellis to offer a seamless BOPIS experience, allowing customers to select their preferred store for pickup.
+* **Store Information:** Customers could easily view store availability hours and flagship store information.
 
-**Same Day Delivery (SDD) and Next Day Delivery (NDD):** The SDD and NDD from Store feature allowed customers to identify products available for same-day shipping, based on specific criteria. The solution ensured that orders were dispatched within the required timeframe, optimizing the Same Day Ship from Store process.
+### Same-Day Delivery (SDD) and Next-Day Delivery (NDD)
+* **Product Availability:** HotWax Commerce facilitated the identification of products available for same-day or next-day delivery.
 
-**Efficient Order Handling:** All orders from Shopify were efficiently managed through the Ecom Hub. HotWax Commerce imported these orders and processed BOPIS and Same Day Ship from Store orders, ensuring a seamless customer experience. Notifications for order readiness and delivery were efficiently coordinated with external systems, such as Listrack for customer notifications and Shipt for order pickups and deliveries.
+### Omnichannel Order Handling
+* **Centralized Fulfillment:** All Shopify orders were fulfilled through the Ecom Hub, providing a centralized approach.
+* **Inventory Accuracy:** HotWax Commerce ensured accurate inventory information for pickup orders, preventing unnecessary stockouts and overselling.
+* **Notification Coordination:** HotWax Commerce integrated with external systems like Listrack, Klaviyo and Shipt to streamline customer notifications and order fulfillment.
 
-HotWax Commerce also integrated with these systems through APIs, facilitating efficient marking of orders, customer communication, and order management. The collaborative efforts of HotWax Commerce and Perry Ellis provided a streamlined omnichannel shopping experience, meeting the retailer's key objectives.
+**Note:** Perry ellis has terminated its partnership from shipping aggregator for SDD and NDD and currently exploring alternative options or adjust their fulfillment strategy to continue offering these services.

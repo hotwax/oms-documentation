@@ -7,7 +7,7 @@ description: >-
 
 # Introduction
 
-## Perry Ellis's Business Model
+## Business Model
 
 Perry Ellis International (PEI), a leading American fashion retailer, has established a robust business model that resonates with contemporary consumers. PEI's strategy centers around strategic licensing, a strong online presence, and a well-developed retail network. PEI has a significant online presence, operating a thriving e-commerce platform. This digital channel allows the retailer to cater to a broader audience, including tech-savvy consumers who prefer online shopping. PEI maintains a substantial network of approximately 60 stores across the United States, providing customers with a physical shopping experience. These retail outlets complement the online platform, offering a holistic shopping journey.
 
@@ -25,7 +25,7 @@ PEI excels in omnichannel strategies, particularly the "Buy Online, Pick Up in S
 * **View available pickup time slots:** Find suitable times for order retrieval.
 * **Access information about primary brand stores:** Learn more about the brand's flagship locations.
 
-## Perry Ellis International's Tech Stack
+## Tech Stack
 
 **Perry Ellis International** leverages a robust tech stack to support its omnichannel operations. Key components include:
 
