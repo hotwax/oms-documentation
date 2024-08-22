@@ -4,13 +4,13 @@ This document outlines the functionalities and usage of three Perry Ellis APIs f
 
 ## Ready For Pickup API
 
-**Function:** Marks orders as "Ready for Pickup" and triggers a notification email to customers.
+Marks orders as "Ready for Pickup" and triggers a notification email to customers.
 
-**Endpoint:** https://<host>/api/readyForPickupBOPISOrder
-  
-Example: [https://perryellis-uat.hotwax.io/api/readyForPickupBOPISOrder](https://perryellis-uat.hotwax.io/api/readyForPickupBOPISOrder)
+**Endpoint** 
+https://<host>/api/readyForPickupBOPISOrder
 
-**HTTP Method:** POST
+**HTTP Method** 
+`POST`
 
 * **Request Body:**
 
@@ -26,13 +26,13 @@ Example: [https://perryellis-uat.hotwax.io/api/readyForPickupBOPISOrder](https:/
 
 ## Complete Pick Up API
 
-**Function:** Marks orders as "Complete" when the order is handed over to the customer/courier at the store.
+Marks orders as "Complete" when the order is handed over to the customer/courier at the store.
 
-**Endpoint:** https://<host>/api/shipNowBOPISOrder
+**Endpoint** 
+https://<host>/api/shipNowBOPISOrder
 
-Example: [https://perryellis-uat.hotwax.io/api/shipNowBOPISOrder](https://perryellis-uat.hotwax.io/api/shipNowBOPISOrder)
-
-**HTTP Method:** POST
+**HTTP Method** 
+`POST`
 
 **Request Body:**
 
@@ -48,13 +48,13 @@ Example: [https://perryellis-uat.hotwax.io/api/shipNowBOPISOrder](https://perrye
 
 ## Reject Shopify Order Item API
 
-**Function:** Marks specific order items as "Rejected" with a reason, typically due to out-of-stock inventory.
+Marks specific order items as "Rejected" with a reason, typically due to out-of-stock inventory.
 
-**Endpoint:** https://<host>/api/rejectShopifyOrderItem
+**Endpoint** 
+https://<host>/api/rejectShopifyOrderItem
 
-**Example:** [https://perryellis-uat.hotwax.io/api/rejectShopifyOrderItem](https://perryellis-uat.hotwax.io/api/rejectShopifyOrderItem)
-
-**HTTP Method:** POST
+**HTTP Method** 
+`POST`
 
 **Request Body:**
 
