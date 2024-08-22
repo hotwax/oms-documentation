@@ -1,6 +1,6 @@
 # HotWax Commerce BOPIS API Documentation
 
-This document outlines the functionalities and usage of three Perry Ellis APIs for Buy Online Pickup In-Store (BOPIS) fulfillment:
+This document details additional HotWax Commerce APIs used by Perry Ellis for Order Management System (OMS) functionalities beyond the Buy Online Pickup In-Store (BOPIS) Product Detail Page (PDP) experience, which is covered here: https://docs.hotwax.co/integrate-with-hotwax/journeys/introduction-buy-online-pickup-in-store/bopis-pdp-experience.
 
 ## Ready For Pickup API
 
