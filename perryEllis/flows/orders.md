@@ -10,102 +10,93 @@ Perry Ellis utilizes HotWax Commerce for its BOPIS, Same Day Delivery, and Next 
 
 **Selecting  Store:**
 
-1. Upon landing on the website, users can choose  preferred pickup location by clicking "**My Store**" in the top left dropdown and selecting "**SET AS MY STORE**." This selected store will be saved for future visits if you're a registered user.
-2. Alternatively, users can skip this step and browse products directly.
-3. For easy store selection, enter zip code or click the location icon in the search bar. Nearby stores will be displayed with their distances and same-day store hours.
+When a user visits the website, they can select their preferred pickup location by clicking "My Store" in the top left dropdown and choosing "SET AS MY STORE." This selection will be saved for future visits if the user is a registered user. Alternatively, users can skip this step and begin browsing products directly.
+
+To easily locate nearby stores, users can enter their zip code or click the location icon in the search bar. A list of nearby stores will be displayed, along with their distances and same-day store hours. If users wish to change their preferred pickup location, they can do so by clicking "SET AS MY STORE" again.
 
 **Browsing and Selecting Products:**
 
-4. Browse the catalog and choose  desired product.
-5. On the Product Detail Page (PDP):
-    * If the product is available at selected `My Store`, a "**PICK UP AT [Facility name]**" message will be displayed.
-    * A "**PICK UP IN STORE**" button and a "**CHECK OTHER STORES**" link will be available below the "ADD TO CART" button.
-    * If you haven't chosen a store, a "**SELECT A STORE**" option will be displayed.
+On the Product Detail Page (PDP):
 
-**Adding BOPIS Items to Cart:**
+* If the product is available at the selected "My Store," a message indicating "**PICK UP AT [Facility name]**" will be displayed.
+* A "**PICK UP IN STORE**" button and a "**CHECK OTHER STORES**" link will be visible below the "ADD TO CART" button.
+* If no store has been selected, a "**SELECT A STORE**" option will appear.
 
-6. To pick up a product in-store, click the "**PICK UP IN STORE**" button.
-7. You can also set any other store as  preferred store by clicking "**SET AS MY STORE**."
-8. Selecting "PICK UP IN STORE" adds the product to  cart.
 
 **Cart Information:**
 
-8. BOPIS items will display "**Pickup Store**" and "**Reserved until**" details on the cart page.
-9. "Pickup Store" indicates the chosen pickup location.
-10. "Reserved until" shows the timeframe for placing an order for the item in  cart. (Currently set to 45 minutes)
+BOPIS items will display "**Pickup Store**" and "**Reserved until**" details on the cart page. "Pickup Store" indicates the selected pickup location, while "Reserved until" shows the timeframe within which an order can be placed for the item in the cart. This reservation time is currently set to 45 minutes.
 
-**Note:** If the reservation time expires, the secure checkout button will be disabled. Clicking "View Cart" and updating the cart will inform you of inventory availability.
+Please note that if the reservation time expires, the secure checkout button will be disabled. To check inventory availability, the user can click "View Cart" and update their cart accordingly.
+
 
 **Checkout Process:**
 
-1. After clicking "Secure Checkout," you'll proceed to the "Information" page.
-    * For BOPIS orders, a "Store Pickup" label and store details will be displayed.
-    * If multiple stores are selected, their addresses and hours will be listed under "Store Pickup." A message will also appear indicating multiple locations.
-    * For mixed orders (BOPIS and shipping), the label will be "Store Pickup and Shipping Address," and you'll need to provide a shipping address.
-2. Click "Continue To Shipping Options" to proceed.
-3. The Shipping page will default to "In-Store Pickup." (For mixed orders, it will show "+ In-Store Pickup")
-4. The "Store Pickup" field will automatically populate with  chosen store's address.
-5. Enter  card details and billing address on the payment page.
-6. Finally, click "Pay Now" to place  order.
+On the checkout page, if multiple stores are selected for BOPIS items, their addresses and hours will be listed under "Store Pickup." A message will also appear indicating that multiple locations have been selected.
+
+For mixed orders that include both BOPIS and shipping, the label will be "Store Pickup and Shipping Address." In such cases, the customer will need to provide a shipping address.
 
 **Order Confirmation and Fulfillment:**
 
-1. Customers will receive an order confirmation email with BOPIS details.
-2. Shopify orders are imported into HotWax every five minutes as "Approved."
-3. When Ecom Hub marks the order as "Ready for Pickup," HotWax triggers a notification email to customers via Klaviyo.
-4. After order pickup, Ecom Hub marks the order as "Completed" in HotWax and Shopify. Conversely, rejected orders are reflected in both systems.
+Customers will receive an order confirmation email containing BOPIS details. Shopify orders are imported into HotWax as "Approved" every five minutes.
+
+When Ecom Hub marks an order as "Ready for Pickup," HotWax triggers a notification email to customers using Klaviyo. Upon order pickup, Ecom Hub updates the order status to "Completed" in both HotWax and Shopify. Rejected orders are also reflected in both systems.
+
 
 
 ## Same-Day and Next-Day Shipping orders flow
 
 **Determining Delivery Eligibility:**
 
-1. Customer zip code determines eligibility for Same-Day Delivery (SDD) or Next-Day Delivery (NDD).
-2. Customers can enter their zip code manually or have it pre-filled based on:
-    * Browser location (with permission)
-    * Saved address
-3. Orders placed before 3 hours of store closing qualify for SDD.
-4. HotWax API locates the closest store within a 15-mile radius based on the provided zip code.
+**Improved Text:**
+
+Customer eligibility for Same-Day Delivery (SDD) or Next-Day Delivery (NDD) is determined by their zip code. Customers can either enter their zip code manually or have it pre-filled based on their browser location (with permission) or saved address.
+
+Orders placed at least three hours before a store's closing time are eligible for SDD. The HotWax API identifies the nearest participating store within a 15-mile radius based on the provided zip code.
+
 
 **Same-Day Shipping UI:**
 
 **Product Listing Page (PLP):**
 
-4. Separate toggles for Same-Day Delivery and BOPIS will be designed (mutually exclusive options).
-5. Store selection depends on the `HC_SD_CURRENT_STORE` variable.
-6. Boost Commerce uses this variable to show product availability based on the chosen method.
-7. Stores display based on browser location if no zip code is entered (permission required).
-8. Previously entered zip code won't be pre-filled upon changes.
-9. No "close icon" needed for delivery location zip code search (simple replacement possible).
-10. "Sorry, there are no stores near this ZIP code" message will appear if no stores are found within 15 miles on PLP search.
-11. "Deliver to zipcode from Facility_name" text will be displayed on PLP and PDP.
-12. A new variable, `HC_SD_CUST_ZIPCODE`, will store the customer's preferred zip code for item display and accurate PDP messaging.
-13. Clicking "Change" will trigger a HotWax API popup for zip code entry. The API finds a valid store within 15 miles and saves it in a session variable (`HC_SD_CURRENT_STORE`).
+Understanding the Variables:
+
+1. HC_SD_CURRENT_STORE: This variable likely holds the ID or identifier of the currently selected store. It is used to determine product availability and display relevant store information.
+2. HC_SD_CUST_ZIPCODE: This variable stores the customer's preferred zip code, which is used for various purposes, including displaying items on the Product Listing Page (PLP) and ensuring accurate messaging on the Product Detail Page (PDP).
+
+The HC_SD_CURRENT_STORE variable is used to determine the store that should be displayed to the customer. If no zip code is entered, the system uses the customer's browser location to identify nearby stores. If no stores are found within the specified 15-mile radius, the "Sorry, there are no stores near this ZIP code" message is displayed. The "Deliver to zipcode from Facility_name" text is displayed on PLP and PDP, using the HC_SD_CUST_ZIPCODE variable for accurate zip code representation. Clicking "Change" triggers a popup where the customer can enter a new zip code. The HotWax API then finds a valid store within 15 miles and updates the HC_SD_CURRENT_STORE session variable.
 
 **Product Detail Page (PDP):**
 
-14. HotWax API determines SDD or NDD eligibility for the product variant.
-15. Clicking "Change" for location updates triggers a zip code popup. HotWax API locates a participating store within 15 miles and determines eligibility for the chosen product variant.
-16. Stores display based on browser location if no zip code is entered (with permission).
-17. "Sorry, there are no stores near this ZIP code" message will appear on PDP search if no stores are found within 15 miles.
-18. When location is off, "Delivery to enter zip code" will be displayed instead of "Deliver to zipcode from Facility_name".
+**HotWax API determines whether a product variant is eligible for Same-Day Delivery (SDD) or Next-Day Delivery (NDD).** Clicking "Change" triggers a zip code popup where the customer can enter their preferred location. The HotWax API then locates a participating store within a 15-mile radius and assesses eligibility for the selected product variant.
+
+If no zip code is entered and the customer grants permission, stores will be displayed based on their browser location. If no stores are found within the specified radius, the message "Sorry, there are no stores near this ZIP code" will appear on the Product Detail Page (PDP).
+
+When the customer's location is off, the message "Delivery to enter zip code" will be displayed instead of "Deliver to zipcode from Facility_name."
+
 
 **Mini Cart:**
 
-19. Customers can verify SDD or NDD eligibility for their cart based on the last selected store (`HC_SD_CURRENT_STORE_ZIPCODE`). Eligibility defaults to the customer's current location without a zip code.
-20. The cart will be validated against the last selected store if changed between products.
-21. Item-level eligibility messages will be displayed in the mini cart.
-22. "Your order is eligible for same-day delivery" or "Your order is eligible for next-day delivery" will be shown if the entire cart qualifies.
-23. Conversely, "Your order is not eligible for same-day delivery" or "Your order is not eligible for next-day delivery" will be displayed for ineligible carts.
-24. HotWax adds line item properties to the cart page after eligibility checks:
-    * Visible: "Shipping Eligibility: Same Day" and "Shipping Eligibility: Next Day"
-    * Hidden (shown on eligibility check): "_hcShippingFacility:id"
-25. Zip code should be pre-filled on the mini cart.
-26. Customers can check cart eligibility for SDD or NDD by entering a new zip code in the mini cart search field.
-27. The facility name will be displayed as "Same or Next Day Delivery from Facility name" using `HC_SD_CURRENT_STORE_NAME`.
-28. If a new zip code validates the cart and a nearby store exists, the store name updates; otherwise, a "No store nearby" message appears.
+**Customers can verify their cart's eligibility for Same-Day Delivery (SDD) or Next-Day Delivery (NDD) based on the last selected store.** The `HC_SD_CURRENT_STORE_ZIPCODE` variable determines eligibility, which defaults to the customer's current location if no zip code is provided.
+
+If a customer changes their chosen store between products, the cart will be revalidated against the newly selected store. **Item-level eligibility messages will be displayed in the mini cart.**
+
+* **Eligible Carts:** "Your order is eligible for same-day delivery" or "Your order is eligible for next-day delivery" will appear if the entire cart qualifies.
+* **Ineligible Carts:** "Your order is not eligible for same-day delivery" or "Your order is not eligible for next-day delivery" will be shown if the cart does not meet the eligibility criteria.
+
+**HotWax adds line item properties to the cart page after checking eligibility:**
+
+* **Visible:** "Shipping Eligibility: Same Day" and "Shipping Eligibility: Next Day"
+* **Hidden:** "_hcShippingFacility:id"
+
+**Additional Notes:**
+
+* The zip code should be pre-filled in the mini cart for convenience.
+* Customers can manually enter a new zip code in the mini cart search field to check cart eligibility for SDD or NDD.
+* The facility name will be displayed as "Same or Next Day Delivery from Facility name," using the `HC_SD_CURRENT_STORE_NAME` variable.
+* If a customer enters a new zip code and a nearby store is found, the store name will be updated on the mini cart. Otherwise, a "No store nearby" message will appear.
 
 
 **Cart Page:**
 
-* Similar SDD logic applies to the cart page as the mini cart.
+* Similar SDD/NDD logic applies to the cart page as the mini cart.
