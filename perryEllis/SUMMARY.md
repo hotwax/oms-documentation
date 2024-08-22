@@ -8,3 +8,6 @@
 * [Inventory](flows/inventory.md)
 * [Orders](flows/orders.md)
 * [Product Store](flows/product-store/README.md)
+
+## APIs
+* [HotWax Commerce APIs](APIs/hotwax-apis.md)
