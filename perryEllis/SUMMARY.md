@@ -10,4 +10,4 @@
 * [Product Store](flows/product-store/README.md)
 
 ## APIs
-* [HotWax Commerce APIs](APIs/hotwax-apis.md)
+* [HotWax Commerce APIs](flows/hotwax-apis.md)

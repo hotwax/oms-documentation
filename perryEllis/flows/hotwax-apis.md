@@ -1,4 +1,4 @@
-## HotWax Commerce BOPIS API Documentation
+# HotWax Commerce BOPIS API Documentation
 
 This document outlines the functionalities and usage of three Perry Ellis APIs for Buy Online Pickup In-Store (BOPIS) fulfillment:
 
