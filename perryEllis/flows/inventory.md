@@ -7,4 +7,11 @@ description: >-
 
 # Inventory
 
-The inventory synchronization process in Perry Ellis's retail tech stack is initiated by EcomHub, functioning as the master for inventory updates. EcomHub transmits real-time inventory information to Shopify for every location, ensuring accurate stock representation on the online platform. HotWax pulls updated inventory data from Shopify through EcomHub's integration point, thereby maintaining a seamless and accurate flow of inventory information.
+**EcomHub** serves as the master system for inventory updates at **Perry Ellis International**. It initiates the synchronization process by transmitting real-time inventory information to **Shopify** for each location. This ensures that the online platform accurately reflects the stock levels.
+
+**HotWax Commerce** then pulls the updated inventory data from Shopify, maintaining a consistent flow of inventory information. The specific job responsible for retrieving inventory levels from Shopify is likely named:
+
+**Job Name:** **Sync Inventory From Shopify**
+
+This job plays a critical role in ensuring that inventory data is accurately synchronized across the retail tech stack, preventing stockouts and overselling. This job is scheduled for all three brands, accepting their respective Config IDs as custom parameters.
+
