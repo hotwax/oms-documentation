@@ -45,7 +45,7 @@
 * [Appeasements](api/appeasements/README.md)
   * [Appeasements feed](api/appeasements/appeasements-feed.md)
 * [Miscellaneous](api/miscellaneous/README.md)
-  * [Perform Find](api/miscellaneous/perform-find.md)
+  * [Perform Find](api/Miscellaneous/perform-find.md)
 
 ## Journeys
 
