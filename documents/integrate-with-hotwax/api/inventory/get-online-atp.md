@@ -4,13 +4,13 @@ description: >-
   the 'getProductOnlineAtp' API
 ---
 
-# Get Online ATP of Products
+# Get Products Online ATP
 
-Store Associates need to access the online Available to Promise (ATP) of products on their POS systems for sendsales orders. The `getProductOnlineAtp` API facilitates retrieving the online ATP of a product from all locations except the one it's being ordered from. The API does not count the Online ATP of a facility in the following scenarios:
+Store Associates need to access the online Available to Promise (ATP) inventory of products on their POS systems for sendsales orders. The `getProductOnlineAtp` API facilitates retrieving the online ATP of a product from all locations except the one it's being ordered from. The API does not count the Online ATP of a facility in the following scenarios:
 
-1. Inventory for the store placing the order
-2. Inventory from stores with sell online turned off
-3. Inventory for an SKU where the inventory is turned off in specific locations&#x20;
+1. Inventory for the store placing the order.
+2. Inventory from stores with sell online turned off.
+3. Inventory for an SKU where the inventory is turned off in specific locations.
 
 To fetch the online ATP details, make a POST request to the `/getProductOnlineAtp` endpoint.
 
