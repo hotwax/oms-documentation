@@ -1,5 +1,3 @@
-HotWax Commerce APIs allow other systems to interact with different aspects of HotWax such as Orders and Inventory. The APIs provide the flexibility to perform operations such as managing inventory and fulfilling orders. The documentation provides 
-
 ---
 description: >-
   Explore HotWax Commerce's technical documentation for insights on integrating
