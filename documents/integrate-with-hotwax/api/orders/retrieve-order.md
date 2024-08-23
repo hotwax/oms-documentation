@@ -5,7 +5,9 @@ description: >-
 
 # Retrieve an Order
 
-The Search Orders API is used to retrieve the details of a specific order from the system. This is particularly useful for verifying the status, contents, and associated details of an order based on its unique identifier.
+**Improved Sentence:**
+
+Retrieves of detailed information about specific order within OMS. This functionality is valuable for verifying order status, contents, and associated details based on their unique identifiers. To retrieve the order, send a GET request to the OMS endpoint with query parameters. 
 
 ## Request
 
@@ -15,16 +17,10 @@ Example: `https://demo-oms.hotwax.io/api/<publish_point>/orders/<order_id>`
 
 ### Headers
 
-```Content-Type: application/json
+```
+Content-Type: application/json
 Authorization: Bearer <your_token>
 Accept: application/json
-```
-
-### Request Format
-
-```json
-{
-}
 ```
 
 ### Parameter Table
@@ -32,9 +28,6 @@ Accept: application/json
 | Parameter        | Description                                                  |
 |------------------|--------------------------------------------------------------|
 | `<order_id>`     | The unique identifier of the order to retrieve.              |
-| `Authorization`  | Bearer token for authorization.                              |
-| `Content-Type`   | Specifies the media type of the resource (application/json). |
-| `Accept`         | Indicates the media type the client expects (application/json).|
 
 ## Response
 

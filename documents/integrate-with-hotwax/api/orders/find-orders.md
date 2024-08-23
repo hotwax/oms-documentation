@@ -5,7 +5,7 @@ description: >-
 
 # Find Order
 
-This API call provides users with order details. To retrieve the order details, make a GET request to the `/solr-query` endpoint.
+Retrieve details a list of orders imported from external systems in your OMS. To find the order, send a GET request to the `/solr-query` endpoint with appropriate query parameters. 
 
 ## Request
 **End Point** `https://<instance.name>.hotwax.io/api/solr-query`
@@ -41,6 +41,91 @@ Example: `https://demo-oms.hotwax.io/api/solr-query`
 | `sort`                 | Field name and sort order (asc/desc) to sort response |
 | `filter`                 | Additional query parameters|
 | `fields`                 | List of fields returned in response document |
+
+**Order Details Table**
+
+## Order Details Table
+
+| Field Name | Description |
+|---|---|
+| `orderId` | Unique identifier for the order |
+| `orderName` | Name or reference given to the order |
+| `orderItemSeqId` | Sequential ID for the order item |
+| `orderItemTypeId` | Type of order item (e.g., product, service) |
+| `productId` | Unique identifier for the product |
+| `parentProductName` | Name of the parent product (if applicable) |
+| `productName` | Name of the product |
+| `productTypeId` | Type of product |
+| `internalName` | Internal name or code for the product |
+| `productTypeDesc` | Description of the product type |
+| `isPromo` | Indicates if the item is part of a promotion |
+| `supplierProductId` | Supplier's unique identifier for the product |
+| `quantity` | Quantity ordered |
+| `unitPrice` | Unit price of the product |
+| `unitListPrice` | List price of the product |
+| `orderItemStatusId` | Status of the order item |
+| `orderItemStatusDesc` | Description of the order item status |
+| `orderItemSubTotal` | Subtotal for the order item |
+| `orderItemAssocTypeId` | Type of association between order items |
+| `supplierPartyIds` | List of supplier party IDs involved in the order |
+| `salesRepName` | Name of the sales representative |
+| `salesChannelEnumId` | ID of the sales channel |
+| `salesChannelDesc` | Description of the sales channel |
+| `orderTypeId` | Type of order (e.g., sales, purchase) |
+| `productStoreId` | ID of the product store |
+| `productStoreName` | Name of the product store |
+| `orderStatusId` | Status of the order |
+| `orderStatusDesc` | Description of the order status |
+| `statusSeqId` | Sequential ID for the order status |
+| `orderRoles` | Roles associated with the order |
+| `customerPartyId` | ID of the customer party |
+| `customerEmailId` | Customer's email address |
+| `customerPartyName` | Name of the customer party |
+| `shipToCountry` | Country where the order will be shipped |
+| `shipToState` | State where the order will be shipped |
+| `shipToCity` | City where the order will be shipped |
+| `shippingMethod` | Shipping method used for the order |
+| `supplierPartyId` | ID of the supplier party |
+| `supplierPartyName` | Name of the supplier party |
+| `orderDate` | Date the order was placed |
+| `orderNotes` | Notes or comments associated with the order |
+| `orderDateString` | Date string representation of the order date |
+| `estimatedDeliveryDate` | Estimated delivery date |
+| `autoCancelDate` | Date when the order will be automatically canceled |
+| `correspondingPoId` | ID of the corresponding purchase order (if applicable) |
+| `title` | Title or reference given to the order |
+| `facilityId` | ID of the facility involved in the order |
+| `facilityName` | Name of the facility |
+| `orderGrandTotal` | Total amount of the order |
+| `orderSize` | Size of the order |
+| `lastInventoryCount` | Last recorded inventory count |
+| `categoryHierarchy` | Hierarchical structure of product categories |
+| `workEffortId` | ID of the related work effort |
+| `workEffortTypeId` | Type of work effort |
+| `currentStatus` | Current status of the work effort |
+| `workEffortPurposeTypeId` | Purpose of the work effort |
+| `workEffortParentId` | ID of the parent work effort (if applicable) |
+| `priority` | Priority of the work effort |
+| `workEffortName` | Name of the work effort |
+| `description` | Description of the work effort |
+| `estimatedStartDate` | Estimated start date of the work effort |
+| `estimatedCompletionDate` | Estimated completion date of the work effort |
+| `actualStartDate` | Actual start date of the work effort |
+| `actualCompletionDate` | Actual completion date of the work effort |
+| `backOrderedQuantity` | Quantity of backordered items |
+| `orderToReleaseTime` | Time taken from order placement to release |
+| `releaseToPickTime` | Time taken from release to picking |
+| `pickToShipTime` | Time taken from picking to shipping |
+| `partyClassificationGroupIds` | IDs of the party classification groups |
+| `currencyUomId` | ID of the currency unit of measurement |
+| `placingPartyName` | Name of the party placing the order |
+| `placingPartyId` | ID of the party placing the order |
+| `primaryProductCategoryNameFacet` | Primary category name facet |
+| `priceType` | Type of pricing (e.g., retail, wholesale) |
+| `promoCodeIds` | IDs of applied promo codes |
+| `orderIdentifications` | List of order identification codes |
+| `promisedDatetime` | Promised date and time for delivery |
+| `shipmentMethodTypeId` | ID of the shipment method type |
 
 
 
@@ -106,3 +191,11 @@ Example: `https://demo-oms.hotwax.io/api/solr-query`
     }
 }
 ```
+
+## Response Parameters Table
+
+| Parameter | Description |
+|---|---|
+| `numFound` | Total number of documents found matching the search criteria |
+| `start` | Starting index of the returned documents |
+| `numFoundExact` | Indicates whether the `numFound` value is exact or an estimate |
