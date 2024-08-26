@@ -11,6 +11,17 @@ description: Discover  the versions of HotWax Commerce OMS releases.
 2. To find details about SOLR versions, refer to the [SOLR version document](https://docs.google.com/spreadsheets/d/1H-iEVG-hS9FTsYOf5YiUH-5KOJUcu0\_TiPG8aVYjaHU/edit?gid=0#gid=0)
 {% endhint %}
 
+## Hotfix - v5.15.1 (26th August 2024)
+
+| Information     | Value                                                                                                                |
+| --------------- | -------------------------------------------------------------------------------------------------------------------- |
+| Release Version | v5.15.1                                                                                                              |
+| Release Type    | Hotfix                                                                                                               |
+| Image Tag       | v5.15.1                                                                                                              |
+| Image URL       | `289432782788.dkr.ecr.us-east-1.amazonaws.com/omscoreimage:omscoreimage-v5.15.1`                                     |
+| Diff            | [Link to diff](https://git.hotwax.co/commerce/oms/-/compare/v5.15.0...v5.15.1?from_project_id=161&straight=false)    |
+| Changelog       | [Link to changelog](https://git.hotwax.co/commerce/oms/-/blob/v5.15.1/CHANGELOG.md?ref%5C_type=tags&ref_type=tags)   |
+
 ## Release - v5.15.0 (23rd August 2024)
 
 | Information     | Value                                                                                                              |
