@@ -47,4 +47,53 @@ Merchandisers often need to set product inventory thresholds to avoid oversellin
    - Drag and drop the rules to arrange them in the desired sequence. Ensure that the wide-reaching rule for "Kids Shoes" is positioned before the rule for "Kids Shoes on Sale."
    - This sequence ensures that the broader rule is applied first, with the more specific rule refining the inventory allocation for items on sale.
 
-## Safety Stock Rules
+## Store Fulfillment Rules
+
+### Scenario 3: Not Fulfilling Newly Released Products from Store
+
+Retailers often prioritize keeping newly released products available for walk-in customers, opting to fulfill online orders for these products solely from their warehouse. For example, suppose a retailer launches a new line of limited-edition sneakers. In that case, they may want to reserve this inventory for in-store shoppers and only fulfill online orders from their central warehouse.
+
+### Steps to Implement
+
+1. **Tagging New Products:**
+   - Assign a unique tag to all newly released products, such as "NewRelease" or "LimitedEdition" on Shopify.
+  
+2. **Create an ATP Rule:**
+   - Navigate to the ATP App from the launchpad and go to the shipping section
+   - Create a new rule specifically for store fulfillment restrictions.
+
+3. **Include the Tag:**
+   - In the rule setup, include the tag assigned to the newly released products to ensure this rule covers them.
+
+4. **Select Facility Group:**
+   - Choose the facility group that includes all stores.
+
+5. **Turn Off Fulfillment:**
+   - Disable fulfillment from the selected facility group, ensuring that the newly released products are not available for online order fulfillment from any store.
+
+6. **Save the Rule:**
+   - Save and activate the rule to apply these settings across all relevant facilities.
+
+### Scenario 4: Restricting Product Availability to Webstores Only
+
+Retailers may choose to keep certain products exclusive to their own webstores, avoiding sales on marketplaces like Amazon or eBay. This decision could be driven by several factors, such as newly released products that the retailer wants to promote through their own channels, or underperforming products on marketplaces that do not meet the desired sales expectations.
+
+**Steps to Implement:**
+
+1. **Tag the Products:**
+   - Assign a unique tag to the products you want to restrict to your webstore. For example, you might use a tag like `Shopify_only` to identify these items.
+
+2. **Create a New Shipping Rule:**
+   - Navigate to the ATP app and create a new shipping rule.
+
+3. **Configure the Rule:**
+   - Go to the **Product and Channel** tab within the rule setup.
+   - Include the relevant product tag (`Shopify_only`).
+   - Select the specific marketplace channels (e.g., Amazon, eBay) where you do not want the products to be available.
+
+4. **Disable Shipping:**
+   - Turn off the shipping toggle for the selected marketplace channels. This will prevent these tagged products from being available for fulfillment on those platforms.
+
+5. **Save and Activate:**
+   - Save the rule and select run now option, so the restriction is applied immediately. 
+
