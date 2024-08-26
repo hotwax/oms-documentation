@@ -2,9 +2,11 @@
 description: This document provides instructions for getting the list of all orders
 ---
 
-# Get Order
+# Get Orders
 
-The GET orders API retrieves existing order documents from the system. It supports filtering using parameters like filters for specific criteria such as partyId or statusId, allowing users to fetch orders based on customer ID or order status. Sorting can be applied using sortBy and sortOrder parameters in the URL, facilitating sorting by fields like grandTotal in ascending or descending order. This API provides comprehensive details for all orders, enabling efficient data retrieval based on user-defined filters.
+**GET orders API allows retrieval of existing order documents from the OMS.** Supports flexible filtering options to fetch orders based on specific criteria such as `partyId` or `statusId`.
+
+Additionally, the API supports sorting functionality. By utilizing the `sortBy` and `sortOrder` parameters in the URL, data can be arranged based on fields like `grandTotal` in either ascending or descending order.
 
 ## Request
 

@@ -6,9 +6,9 @@
 
 * [Authentication](api/initial-api-authentication.md)
 * [Orders](api/orders/README.md)
-  * [Find Order](api/orders/findOrder.md)
-  * [Retrieve Orders](api/orders/retrieve-orders.md)
-  * [List Orders](api/orders/list-orders.md)
+  * [Find Order](api/orders/find-orders.md)
+  * [Retrieve Orders](api/orders/retrieve-order.md)
+  * [List Orders](api/orders/get-orders.md)
   * [Created Orders](api/orders/createdOrderFeed.md)
   * [Order Adjustments](api/orders/adjustmentTypes.md)
   * [Order Reconciliations](api/orders/order-reconciliations.md)
@@ -45,7 +45,7 @@
 * [Appeasements](api/appeasements/README.md)
   * [Appeasements feed](api/appeasements/appeasements-feed.md)
 * [Miscellaneous](api/miscellaneous/README.md)
-  * [Perform Find](api/miscellaneous/perform-find.md)
+  * [Perform Find](api/Miscellaneous/perform-find.md)
 
 ## Journeys
 

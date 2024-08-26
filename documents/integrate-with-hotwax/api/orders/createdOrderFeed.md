@@ -6,7 +6,19 @@ description: >-
 
 # Created Orders
 
-The created order feed JSON helps external systems track new orders that are entering the OMS and consume them for their linked actions.
+## Introduction
+
+The Created Orders feed is an order-wise JSON-formatted feed generated from HotWax Commerce OMS. This feed contains details about created order in OMS, which can be approved in OMS based on certain configurable checks. The feed can be used for integration with other external systems.
+
+## Use case
+
+### Communication with the External System
+
+**The Created Order Items feed is a valuable resource for retailers using NetSuite ERP.** NetSuite's workflow requires order creation as a prerequisite for other order-related operations. By exporting created orders from the OMS and transforming them into the desired NetSuite format, retailers can integrate these orders into NetSuite for subsequent processing.
+
+## Customization
+
+The Created Orders feed has certain out-of-the-box customizations that allow users to generate the feed as per the requirements.The created order feed JSON helps external systems track new orders that are entering the OMS and consume them for their linked actions.
 
 Here is a sample feed of that the created order feed looks like
 

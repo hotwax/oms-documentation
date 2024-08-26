@@ -6,7 +6,7 @@ description: >-
 
 # Order Reconciliations
 
-This API call provides users with log insights for failed orders that may not have been successfully downloaded from Shopify to HotWax Commerce. To retrieve the log details of these failed orders, make a GET request to the `/solr-query` endpoint.
+Provides log insights for failed orders that may not have been successfully downloaded from Shopify to HotWax Commerce. To retrieve the log details of these failed orders, make a GET request to the `/solr-query` endpoint.
 
 ## Request
 
