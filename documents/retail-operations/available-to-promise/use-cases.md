@@ -47,7 +47,7 @@ Merchandisers often need to set product inventory thresholds to avoid oversellin
    - Drag and drop the rules to arrange them in the desired sequence. Ensure that the wide-reaching rule for "Kids Shoes" is positioned before the rule for "Kids Shoes on Sale."
    - This sequence ensures that the broader rule is applied first, with the more specific rule refining the inventory allocation for items on sale.
 
-## Store Fulfillment Rules
+## Shipping Rules
 
 ### Scenario 3: Not Fulfilling Newly Released Products from Store
 
@@ -97,3 +97,79 @@ Retailers may choose to keep certain products exclusive to their own webstores, 
 5. **Save and Activate:**
    - Save the rule and select run now option, so the restriction is applied immediately. 
 
+### Scenario 5: Restricting Shipping/BOPIS for Customized Products to Specific Facilities
+
+Retailers may offer customized products that can only be processed at certain facilities due to the specialized equipment or expertise required. As a result, shipping these products from all facilities is not feasible. To manage this, retailers need to ensure that orders for customized products are only fulfilled from the facilities equipped to handle customization.
+
+**Steps to Implement:**
+
+1. **Create a Facility Group:**
+   - Identify the facilities that do not offer customization services.
+   - Create a facility group for these locations, ensuring they are grouped separately from the facilities that can process customized products.
+
+2. **Tag Customized Products:**
+   - Assign a unique tag to all products that require customization. For example, use a tag like `Customizable` to easily identify these products.
+
+3. **Create a New ATP Shipping Rule:**
+   - In the ATP app, navigate to the shipping page and create a new rule for these customized products.
+
+4. **Configure the Rule:**
+   - Select the facility group where customization is not available.
+   - Include the relevant product tag (`Customizable`) to apply the rule to all products that require customization.
+
+5. **Disable Shipping/Pickup:**
+   - Set the rule to disable shipping or disable pickup for the selected facility group. This ensures that orders for customized products will not be fulfilled from the facilities that cannot process them.
+
+6. **Save and Activate:**
+   - Save the ATP rule and activate it to ensure that it is applied immediately, restricting the shipping of customized products to only the facilities that can handle customization.
+
+### Scenario 6: Managing Seasonal Demand by Region
+
+Retailers often face varying product demands across different regions during seasonal periods. For instance, during winter, coastal regions may have a lower demand for jackets compared to high-altitude areas. To manage this effectively, retailers may want to prioritize shipping jackets from stores in coastal regions while restricting fulfillment from stores in high-demand, high-altitude areas to preserve inventory for in-store customers.
+
+#### Steps to Implement
+
+1. **Tagging Products**
+   - Identify all products that are subject to seasonal demand variations, such as jackets, and assign them a specific tag (e.g., "Winter_Jackets").
+
+2. **Creating Facility Groups**
+   - Identify the facilities in high-demand regions, such as those in high-altitude areas, and create a facility group for these stores.
+
+3. **Creating ATP Rule**
+   - Navigate to the Shipping page in the ATP app.
+   - Create a new ATP rule for the tagged products.
+
+4. **Applying Facility Group and Product Tag**
+   - In the ATP rule, select the facility group that includes the high-demand region stores.
+   - Apply the product tag to include all relevant items (e.g., "Winter_Jackets").
+
+5. **Saving the Rule**
+   - Disable store fulfillment for the selected facility group to prevent shipment from those locations.
+   - Save the ATP rule to enforce this restriction during the seasonal period.
+
+## Pickup Rules
+
+### Scenario 7: Disabling Pickup for Heavy Items
+
+Retailers often carry heavy or bulky items in their catalogs, such as furniture, that are not practical for customers to pick up from stores. In such cases, retailers may want to disable the pickup option for these items, ensuring that customers are only offered delivery options.
+
+#### Steps to Implement
+
+1. **Tagging Heavy Items**
+   - Identify all heavy or bulky items in the catalog, such as furniture, and assign them a specific tag (e.g., "Heavy_Items").
+
+2. **Navigating to Pickup Settings**
+   - Go to the Pickup page in the ATP app where you manage pickup options.
+
+3. **Creating an ATP Rule**
+   - Create a new ATP rule to manage pickup settings for heavy items.
+
+4. **Applying Product Tag and Facility Selection**
+   - Select all facilities where the items are stored.
+   - Include the product tag (e.g., "Heavy_Items") to apply the rule to these items. If the items are limited, you can also include them by specific features.
+
+5. **Disabling Pickup**
+   - Turn off the pickup option for these items within the rule to ensure customers cannot select in-store pickup.
+
+6. **Saving the Rule**
+   - Save the ATP rule to enforce the restriction across all selected facilities.
