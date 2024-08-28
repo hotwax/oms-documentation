@@ -5,7 +5,7 @@ description: >-
   ensuring accuracy at every stage.
 ---
 
-# Order lifecycle
+# Order Lifecycle
 
 Customers place their online orders on eCommerce platforms. The order lifecycle in HotWax Commerce starts when these orders are downloaded from eCommerce to HotWax Commerce.
 
@@ -80,7 +80,7 @@ When an order includes multiple items and inventory for one of them is unavailab
 * **Partial rejection:** Retailers can choose to partially reject the order by rejecting only the unavailable item. In this scenario, the order will be split, and the store will ship the available items while the unavailable item will be rebrokered.
 * **Full rejection:** Alternatively, retailers who prefer not to split the order, can reject all items in the order if any one item is unavailable for fulfillment. This ensures that the entire order is rejected, prompting the entire order to be rebrokered.
 
-Learn more about [Store Fulfillment](https://docs.hotwax.co/documents/orders/fulfillment)
+Learn more about [Store Fulfillment](https://docs.hotwax.co/documents/v/store-operations/orders/fulfillment/shiporders)
 
 ### Warehouse Fulfillment Success and Order Completion:
 
@@ -132,7 +132,7 @@ In the event store associates cannot find the inventory to fulfill a pick-up ord
 
 In this scenario, an email is automatically sent to the customer for <mark style="color:orange;">**alternative fulfillment options such as pickup from another store or home delivery**</mark>. Retailers can configure these options based on their order fulfillment strategy.
 
-Learn more about [BOPIS Fulfillment](https://docs.hotwax.co/documents/orders/bopis)
+Learn more about [BOPIS Fulfillment](https://docs.hotwax.co/documents/v/store-operations/orders/bopis)
 
 ## Fulfillment of Pre-Orders
 

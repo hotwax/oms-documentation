@@ -5,7 +5,7 @@ description: >-
   platforms
 ---
 
-# Inventory lifecycle
+# Inventory Lifecycle
 
 The inventory count of a product is regularly updated due to various factors such as customer purchases made both in-store and online, as well as the receipt of new inventory. These transactions are recorded across different systems. In the Inventory Lifecycle BPM, we've provided detailed insights into how these operational inventory transactions impact the sellable inventory count, that is, `Online ATP` of a product.
 
@@ -160,6 +160,6 @@ A scheduled job in HotWax Commerce checks the inventory records of HotWax Commer
 
 HotWax Commerce then retrieves information from Shopify about products that have undergone changes in HotWax Commerce. The inventory counts for these products in Shopify are then compared with the inventory counts that HotWax Commerce. After comparing inventory changes, a scheduled job in HotWax Commerce records the difference and generates an inventory feed for the affected products. This feed is then pushed to Shopify, which reads it and updates to either add or deduct inventory based on the changes.
 
-Learn more about [inventory synchronization](https://docs.hotwax.co/documents/v/learn-shopify/inventory/inventory)
+Learn more about [Inventory Synchronization](https://docs.hotwax.co/documents/v/learn-shopify/shopify-integration/how-does-hotwax-commerce-ensure-accurate-inventory-is-synchronized-to-shopify/inventory-synchronization)
 
 Similarly, in the event where a retailer has another eCommerce platform, HotWax Commerce can generate a sellable inventory feed with additional development efforts. HotWax Commerce will then calculate sellable inventory, retrieve the products inventory counts from that eCommerce platform, and synchronize the latest inventory difference.
