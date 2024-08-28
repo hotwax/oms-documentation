@@ -1,14 +1,16 @@
 # Understanding Status Item Aging in HotWax OMS
 
 ## Definition
-In HotWax OMS, every process goes through four main stages in its lifecycle:
+In HotWax OMS, every process goes through certain stages in its lifecycle. Generally, there are four checkpoints in the lifecycle:
 
-1. **Creation**: The initial stage where a process is created but still needs approval before it can begin. For example, a payment that has not been received yet is in this stage.
-2. **Authorization**: Once approved, the process moves to this stage where it is ready and waiting to be processed. For instance, a payment that is authorized but not yet settled is here.
-3. **Completion/Terminal**: This stage means the process has finished, and no further action is needed. For example, when a payment is either fully settled (successful) or declined (failed), it is considered complete.
-4. **Post-Completion**: Sometimes even after a process is marked as complete, additional actions might be needed. For example, if a customer requests a refund, the process enters this stage.
+1. **Creation**: The initial stage where a process is created but still needs approval before it can move to the next stage. For example, an order that is created but cannot be brokered as it needs to be approved.
+2. **Authorization**: Once approved, the process moves to this stage where it is ready and waiting to be processed. For instance, an order that is approved but not yet fulfilled.
+3. **Completion/Terminal**: This stage means the process has finished, and no further action is needed. For example, when an order is either fulfilled (successful) or cancelled (failed).
+4. **Post-Completion**: Sometimes even after a process is in the terminal stage, additional actions might be needed. For example, if a customer wants to return an order, the order enters this stage.
 
-To better manage these stages, we assign an "age" value to each one:
+**NOTE:** It is not necessary that a process goes through all of these checkpoints. For example, a service generally does not need any authorisation. Instead it takes the stage 'STATUS_PENDING'
+
+To better manage these stages, we assign a numeric value to each stage according to their chronology. These numbers will be the "age" of the process. Thus, the farther the process is into its lifecycle, the greater is its age. As a convention, the ages of the above four mentioned stages - Creation, Authorization, Completion and Post-Completion - are defined as: 
 
 | Stage            |    Age Value    |
 |------------------|:---------------:|
