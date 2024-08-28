@@ -35,35 +35,20 @@ GET
 Content-Type: application/json
 
 
-### Sample Request Body
-
+### Sample Request Params
+  
 #### Single product and facility
 
-```json
-{
-  "productStoreId": "STORE",
-  "productId": "11855",
-  "internalName": "XS-BLACK",
-  "facilityId": "114",
-  "inventoryGroupId": "SHOPIFY_FAC_GRP"
-}
-```
+```https://demo-maarg.hotwax.io/rest/s1/ofbiz-oms-usl/checkBopisInventory?productStoreId=STORE&inventoryGroupId=SHOPIFY_FAC_GRP&internalNames=XS-BLACK&facilityIds=114&productIds=11855```
+
 
 #### Multiple products and facilities
-```json
-{
-  "productStoreId": "STORE",
-  "productId": ["11855","11856","118557"],
-  "productId_op": "in",
-  "internalName": ["XS-BLACK","S-BLACK","M-BLACK"],
-  "internalName_op": "in",
-  "facilityId": ["114","114","115","116"],
-  "facilityId_op": "in",
-  "inventoryGroupId": "SHOPIFY_FAC_GRP"
-}
-```
 
-### Body Parameters
+To handle multiple values for any key in a URL request, each value must be associated with a separate instance of the key. For example, if you have multiple productIds or internalNames, you need to create a separate key for each value in the URL, like this:
+
+```https://demo-maarg.hotwax.io/rest/s1/ofbiz-oms-usl/checkBopisInventory?productStoreId=STORE&inventoryGroupId=SHOPIFY_FAC_GRP&internalNames=XS-BLACK&internalNames=S-BLACK&internalNames=M-BLACK&facilityIds=114&facilityIds=115&facilityIds=116&productIds=11855&productIds=11856&productIds=11857```
+
+### Query Parameters
 
 | Parameter        | Description                                             | Example             |
 |------------------|---------------------------------------------------------|---------------------|
@@ -73,11 +58,6 @@ Content-Type: application/json
 | `facilityId`     | The HotWax Commerce facility ID where product inventory is located | `"114"`             |
 | `inventoryGroupId` | HotWax Commerce inventory group ID                     | `"SHOPIFY_FAC_GRP"` |
 
-| operator        | Description                                              | Example            |
-|------------------|---------------------------------------------------------|--------------------|
-| `productId_op`      | operator required to check multiple values           | `"in"`             |
-| `internalName_op`   | operator required to check multiple values           | `"in"`             |
-| `facilityId_op`     | operator required to check multiple values           | `"in"`             |
 
 **Select Products**
 
