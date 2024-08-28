@@ -64,7 +64,7 @@ There can be scenarios where the items in a shipment are more or fewer than expe
 
 **Under-receiving:** If a shipment contains fewer items than ordered, the app allows the receiving of only the items that arrived. For example, if a shipment was expected to contain 100 units but arrives with only 90 units, the app will record the received 90 units, and the missing 10 units can be addressed separately.
 
-Learn more about additional scenarios supported in the [Receiving App](https://docs.hotwax.co/documents/inventory/receiving/receiving)
+Learn more about additional scenarios supported in the [Receiving App](https://docs.hotwax.co/documents/v/store-operations/inventory/receiving)
 
 ### Receiving Purchase Orders in Stores
 
@@ -112,7 +112,7 @@ Cycle counts should be performed after receiving the inventory reset from the ER
 
 **Decrease in inventory:** Conversely, if a store counts 80 units of an item but the systemic inventory shows 100 units, the inventory is adjusted to reflect the 80 units, ensuring accuracy.
 
-Learn more about [cycle counts](https://docs.hotwax.co/documents/inventory/inventory-count)
+Learn more about [Cycle Count](https://docs.hotwax.co/documents/v/store-operations/inventory/directed-cycle-count)
 
 #### Unexpected Inventory Variance
 
