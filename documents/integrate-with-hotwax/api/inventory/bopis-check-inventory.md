@@ -29,7 +29,7 @@ Maarg Name: `demo-maarg-uat`
 
 ### Method
 GET (Recommended if your library supports sending a body in a GET request)      
-POST (Otherwise, use POST to send the body with your request)
+POST 
 
 ### Headers
 
