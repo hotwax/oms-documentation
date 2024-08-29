@@ -53,11 +53,12 @@ To handle multiple values for any key in a URL request, each value must be assoc
 | Parameter        | Description                                             | Example             |
 |------------------|---------------------------------------------------------|---------------------|
 | `productStoreId` | The ID of the product store                             | `"STORE"`           |
-| `productId`      | HotWax Commerce internal product ID                     | `"11855"`           |
-| `internalName`   | The well known ID of a product, usually UPC or SKU based on configuration| `"XS-BLACK"`           |
-| `facilityId`     | The HotWax Commerce facility ID where product inventory is located | `"114"`             |
+| `productIds`      | HotWax Commerce internal product ID                     | `"11855"`           |
+| `internalNames`   | The well known ID of a product, usually UPC or SKU based on configuration| `"XS-BLACK"`           |
+| `facilityIds`     | The HotWax Commerce facility ID where product inventory is located | `"114"`             |
 | `inventoryGroupId` | HotWax Commerce inventory group ID                     | `"SHOPIFY_FAC_GRP"` |
 
+If both productIds and internalNames are passed, the value of productIds will be honored.
 
 **Select Products**
 
@@ -69,6 +70,7 @@ Product Store represents a brand in HotWax Commerce. To obtain possible values, 
 
 **inventoryGroupId**
 Inventory groups are used to segregate inventory for different channels of sales. Obtain the inventory group ID by logging into HotWax Commerce Facilities App and browsing inventory groups.
+
 
 ## Response
 
