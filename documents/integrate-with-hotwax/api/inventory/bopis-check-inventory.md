@@ -28,7 +28,8 @@ Maarg Name: `demo-maarg-uat`
 **Example:** `https://demo-maarg.hotwax.io/rest/s1/ofbiz-oms-usl/checkBopisInventory` 
 
 ### Method
-POST
+GET (Recommended if your library supports sending a body in a GET request)      
+POST (Otherwise, use POST to send the body with your request)
 
 ### Headers
 
