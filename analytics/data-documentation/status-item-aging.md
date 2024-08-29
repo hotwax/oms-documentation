@@ -8,7 +8,7 @@ In HotWax OMS, every process goes through certain stages in its lifecycle. Gener
 3. **Completion/Terminal**: This stage means the process has finished, and no further action is needed. For example, when an order is either fulfilled (successful) or cancelled (failed).
 4. **Post-Completion**: Sometimes even after a process is in the terminal stage, additional actions might be needed. For example, if a customer wants to return an order, the order enters this stage.
 
-{% hint style="info" %} It is not necessary that a process goes through all of these checkpoints. For example, a service generally does not need any authorisation. Instead it takes the stage 'STATUS_PENDING'. {% endhint %}
+{% hint style="info" %} It is not necessary that a process goes through all of these checkpoints. For example, a service generally does not need any authorisation. Instead its equivalent stage is 'STATUS_PENDING'. {% endhint %}
 
 To better manage these stages, we assign a numeric value to each stage according to their chronology. These numbers will be the "age" of the process. Thus, the farther the process is into its lifecycle, the greater is its age. As a convention, the ages of the above four mentioned stages - Creation, Authorization, Completion and Post-Completion - are defined as: 
 
@@ -37,8 +37,7 @@ To optimize this process, a numeric column called "age" has been added to the `S
 
 ### 1) Inventory Count
 
-<details>
-  <summary>Click to expand</summary>
+
 
   | Status         | Status ID            |    Age    |
   |----------------|----------------------|:---------:|
@@ -48,12 +47,11 @@ To optimize this process, a numeric column called "age" has been added to the `S
   | Completed      | INV_COUNT_COMPLETED   |    100    |
   | Rejected       | INV_COUNT_REJECTED    |    101    |
 
-</details>
+
 
 ### 2) Order
 
-<details>
-  <summary>Click to expand</summary>
+
 
   | Status   | Status ID       |    Age    |
   |----------|-----------------|:---------:|
@@ -62,12 +60,11 @@ To optimize this process, a numeric column called "age" has been added to the `S
   | Completed| ORDER_COMPLETED  |    100    |
   | Cancelled| ORDER_CANCELLED  |    101    |
 
-</details>
+
 
 ### 3) Order Item
 
-<details>
-  <summary>Click to expand</summary>
+
 
   | Status   | Status ID        |    Age    |
   |----------|------------------|:---------:|
@@ -76,12 +73,11 @@ To optimize this process, a numeric column called "age" has been added to the `S
   | Completed| ITEM_COMPLETED    |    100    |
   | Cancelled| ITEM_CANCELLED    |    101    |
 
-</details>
+
 
 ### 4) Payment Preference
 
-<details>
-  <summary>Click to expand</summary>
+
 
   | Status        | Status ID            |    Age    |
   |---------------|----------------------|:---------:|
@@ -94,12 +90,11 @@ To optimize this process, a numeric column called "age" has been added to the `S
   | Cancelled     | PAYMENT_CANCELLED     |    101    |
   | Refunded      | PAYMENT_REFUNDED      |    110    |
 
-</details>
+
 
 ### 5) Pick Item
 
-<details>
-  <summary>Click to expand</summary>
+
 
   | Status    | Status ID       |    Age    |
   |-----------|-----------------|:---------:|
@@ -108,12 +103,11 @@ To optimize this process, a numeric column called "age" has been added to the `S
   | Completed | PICKITEM_COMPLETED|   100    |
   | Cancelled | PICKITEM_CANCELLED|   101    |
 
-</details>
+
 
 ### 6) Picklist
 
-<details>
-  <summary>Click to expand</summary>
+
 
   | Status   | Status ID       |    Age    |
   |----------|-----------------|:---------:|
@@ -124,12 +118,11 @@ To optimize this process, a numeric column called "age" has been added to the `S
   | Completed| PICKLIST_COMPLETED|   100    |
   | Cancelled| PICKLIST_CANCELLED|   101    |
 
-</details>
+
 
 ### 7) Return
 
-<details>
-  <summary>Click to expand</summary>
+
 
   | Status     | Status ID       |    Age    |
   |------------|-----------------|:---------:|
@@ -140,12 +133,11 @@ To optimize this process, a numeric column called "age" has been added to the `S
   | Rejected   | RETURN_REJECTED  |    101    |
   | Cancelled  | RETURN_CANCELLED |    101    |
 
-</details>
+
 
 ### 8) Service
 
-<details>
-  <summary>Click to expand</summary>
+
 
   | Status    | Status ID      |    Age    |
   |-----------|----------------|:---------:|
@@ -158,12 +150,10 @@ To optimize this process, a numeric column called "age" has been added to the `S
   | Cancelled | SERVICE_CANCELLED|    101    |
   | Failed    | SERVICE_FAILED  |    101    |
 
-</details>
+
 
 ### 9) Shipment
 
-<details>
-  <summary>Click to expand</summary>
 
   | Status       | Status ID        |    Age    |
   |--------------|------------------|:---------:|
@@ -174,5 +164,5 @@ To optimize this process, a numeric column called "age" has been added to the `S
   | Shipped      | SHIPMENT_SHIPPED  |    100    |
   | Canceled     | SHIPMENT_CANCELLED|    101    |
 
-</details>
+
 
