@@ -56,7 +56,7 @@ Content-Type: application/json
   "productStoreId": "STORE",
   "productIds": ["11855","11856","118557"],
   "internalNames": ["XS-BLACK","S-BLACK","M-BLACK"],
-  "facilityIds": ["114","114","115","116"],
+  "facilityIds": ["114","115","116"],
   "inventoryGroupId": "SHOPIFY_FAC_GRP"
 }
 ```
