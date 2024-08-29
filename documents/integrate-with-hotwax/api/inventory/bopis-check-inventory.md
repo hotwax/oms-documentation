@@ -28,27 +28,41 @@ Maarg Name: `demo-maarg-uat`
 **Example:** `https://demo-maarg.hotwax.io/rest/s1/ofbiz-oms-usl/checkBopisInventory` 
 
 ### Method
-GET
+GET (Recommended if your library supports sending a body in a GET request)      
+POST 
 
 ### Headers
 
 Content-Type: application/json
 
 
-### Sample Request Params
+### Sample Request Body
   
 #### Single product and facility
 
-```https://demo-maarg.hotwax.io/rest/s1/ofbiz-oms-usl/checkBopisInventory?productStoreId=STORE&inventoryGroupId=SHOPIFY_FAC_GRP&internalNames=XS-BLACK&facilityIds=114&productIds=11855```
-
+```json
+{
+  "productStoreId": "STORE",
+  "productIds": "11855",
+  "internalNames": "XS-BLACK",
+  "facilityIds": "114",
+  "inventoryGroupId": "SHOPIFY_FAC_GRP"
+}
+```
 
 #### Multiple products and facilities
 
-To handle multiple values for any key in a URL request, each value must be associated with a separate instance of the key. For example, if you have multiple productIds or internalNames, you need to create a separate key for each value in the URL, like this:
+```json
+{
+  "productStoreId": "STORE",
+  "productIds": ["11855","11856","118557"],
+  "internalNames": ["XS-BLACK","S-BLACK","M-BLACK"],
+  "facilityIds": ["114","115","116"],
+  "inventoryGroupId": "SHOPIFY_FAC_GRP"
+}
+```
 
-```https://demo-maarg.hotwax.io/rest/s1/ofbiz-oms-usl/checkBopisInventory?productStoreId=STORE&inventoryGroupId=SHOPIFY_FAC_GRP&internalNames=XS-BLACK&internalNames=S-BLACK&internalNames=M-BLACK&facilityIds=114&facilityIds=115&facilityIds=116&productIds=11855&productIds=11856&productIds=11857```
-
-### Query Parameters
+### Body Parameters
 
 | Parameter        | Description                                             | Example             |
 |------------------|---------------------------------------------------------|---------------------|
