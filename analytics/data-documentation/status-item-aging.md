@@ -8,7 +8,7 @@ In HotWax OMS, every process goes through certain stages in its lifecycle. Gener
 3. **Completion/Terminal**: This stage means the process has finished, and no further action is needed. For example, when an order is either fulfilled (successful) or cancelled (failed).
 4. **Post-Completion**: Sometimes even after a process is in the terminal stage, additional actions might be needed. For example, if a customer wants to return an order, the order enters this stage.
 
-**NOTE:** It is not necessary that a process goes through all of these checkpoints. For example, a service generally does not need any authorisation. Instead it takes the stage 'STATUS_PENDING'
+{% hint style="info" %} It is not necessary that a process goes through all of these checkpoints. For example, a service generally does not need any authorisation. Instead it takes the stage 'STATUS_PENDING'. {% endhint %}
 
 To better manage these stages, we assign a numeric value to each stage according to their chronology. These numbers will be the "age" of the process. Thus, the farther the process is into its lifecycle, the greater is its age. As a convention, the ages of the above four mentioned stages - Creation, Authorization, Completion and Post-Completion - are defined as: 
 
