@@ -59,6 +59,17 @@ description: Discover  the versions of HotWax Commerce OMS releases.
 {% endtab %}
 {% endtabs %}
 
+## Hotfix - v5.14.5 (30th August 2024)
+
+| Information     | Value                                                                                                                |
+| --------------- | -------------------------------------------------------------------------------------------------------------------- |
+| Release Version | v5.14.5                                                                                                              |
+| Release Type    | Hotfix                                                                                                               |
+| Image Tag       | v5.14.5                                                                                                              |
+| Image URL       | `289432782788.dkr.ecr.us-east-1.amazonaws.com/omscoreimage:omscoreimage-v5.14.5`                                     |
+| Diff            | [Link to diff](https://git.hotwax.co/commerce/oms/-/compare/v5.14.4...v5.14.5?from_project_id=161&straight=false)    |
+| Changelog       | [Link to changelog](https://git.hotwax.co/commerce/oms/-/blob/v5.14.5/CHANGELOG.md?ref%5C_type=tags&ref_type=tags)   |
+
 ## Hotfix - v5.14.4 (27th August 2024)
 
 | Information     | Value                                                                                                                |
