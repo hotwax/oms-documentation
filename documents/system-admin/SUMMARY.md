@@ -28,6 +28,7 @@
   * [Import App](administration/permissions/import-app.md)
   * [Users App](administration/permissions/users-app.md)
   * [Facilities App](administration/permissions/facilities-app.md)
+  * [pre-Order App](administration/permissions/pre-order-app.md)
 
 * [Facilities](facilities/README.md)
   * [Add New Facilities](administration/facilities/add-new-facilities.md)
