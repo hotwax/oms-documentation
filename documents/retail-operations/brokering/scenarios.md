@@ -185,7 +185,6 @@ Retailers with diverse rent agreements, particularly in malls where rent may be 
      - Schedule the brokering runs to execute these inventory rules at regular intervals, maintaining efficient order fulfillment.
 
 
-
 ## Scenario 8: Balancing Shipping Costs and Distance with Split Shipments
 
 Retailers need to balance the cost of shipping, which is influenced by both the distance and the number of shipments. The goal is to minimize shipping costs by considering when it's more cost-effective to ship from multiple locations versus a single distant location. This scenario is particularly relevant for retailers with stores and warehouses spread across a wide geographic area.
@@ -217,4 +216,54 @@ Retailers need to balance the cost of shipping, which is influenced by both the 
    - Ensure all the inventory rules are activated to be in effect.
 - **Schedule Brokering Runs**:
    - Schedule the brokering runs to execute these inventory rules at regular intervals, maintaining efficient order fulfillment.
+
+### Scenario 9: Optimizing Order Splitting by Setting Shipment Thresholds
+
+Retailers often split orders across multiple locations to optimize inventory usage and expedite fulfillment. However, this strategy can lead to challenges, particularly concerning shipping costs for low-value items. Retailers may incur losses when splitting orders that include items of low value. While multi-location fulfillment can ensure timely delivery and effective inventory management, it can also result in disproportionately high shipping costs for low-value items.
+
+To address this issue, HotWax Commerce allows merchandisers to set threshold values for order items. This helps in more efficient order splitting while reducing the risk of losses due to shipping low-value items separately. 
+
+**Example:** 
+If an order contains two items, such as a 'Brown Belt' and a 'Brown Wallet,' each valued at $60, and a brokering threshold of $50 is set, the items will be split even if they are not available at a single location. Conversely, if an order includes a 'Black Belt' and a 'Black Wallet,' each valued at $20, the order will not be split as it would cause the shipment to fall below the threshold.
+
+### Steps to Implement
+
+1. **Navigate to Store Settings**
+   - **Access Store Settings**: In the HotWax Commerce Order Management System, navigate to the product store page.
+   - **Add New Setting**: Go to the store settings section and click on "Add Settings."
+
+2. **Set Brokering Shipment Threshold**
+   - **Select Brokering Threshold**: In the settings submenu, select "Brokering Shipment Threshold."
+   - **Define Threshold Value**: Enter the desired shipment threshold value that will prevent splitting orders below this amount. For instance, set the threshold at $50 to ensure that only orders above this value are eligible for splitting across multiple locations.
+
+3. **Save Settings**
+   - **Finalize the Configuration**: Save the store settings to apply the brokering threshold across the product store.
+
+With this threshold in place, orders will only be split if the value of the items meets or exceeds the set threshold, optimizing shipping costs and preventing losses on low-value shipments.
+
+### Scenario: Managing Order Splitting for Grouped Items
+
+Retailers often face scenarios where certain items within an order must be shipped together, while other items can be shipped separately. For example, if a customer orders a frame and lenses along with sunglasses, the frame and lenses must be shipped together, but the sunglasses can be shipped from a different location. In such cases, items like the frame and lenses are grouped to ensure they are always shipped together.
+
+HotWax Commerce allows retailers to manage these scenarios by disabling the splitting of grouped items while keeping the option to split other items in the order. This ensures that grouped items, which are critical to be shipped together, are handled appropriately, while other non-grouped items can still be split for faster fulfillment.
+
+### Steps to Implement
+
+1. **Create Inventory Rule for Order Batch**
+   - **Access Inventory Rules**: Begin by creating an inventory rule within the HotWax Commerce Order Management System. This will be applied to the specific batch of orders where grouped items need to be managed.
+
+2. **Configure Partial Allocation Settings**
+   - **Navigate to Partial Allocation**: Within the inventory rule settings, locate the "Partially Available" card. This section allows you to configure how items are allocated when they are not fully available at a single location.
+   - **Enable Partial Allocation**: Turn on the toggle for "Partial Order Allocation" to allow the order to be split across multiple locations for items that are not grouped.
+
+3. **Disable Splitting for Grouped Items**
+   - **Toggle Off for Grouped Items**: Ensure that the toggle for "Partially Allocate Grouped Items" is turned off. This setting ensures that grouped items, such as a frame and lenses, are not split and are shipped together from a single location.
+
+4. **Optional: Enable Splitting for Specific Scenarios**
+   - **Enable Grouped Item Splitting**: If the retailer sells items that are grouped but can be split under certain circumstances (e.g., gifting items), they can turn on the toggle for "Partially Allocate Grouped Items." 
+   - **Best Practice**: It is recommended first to create an inventory rule with grouped item splitting disabled and then follow it with a rule where grouped item splitting is enabled. This layered approach ensures that grouped items are handled appropriately based on the retailer's preferences.
+
+
+
+
 
