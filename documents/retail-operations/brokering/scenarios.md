@@ -217,7 +217,7 @@ Retailers need to balance the cost of shipping, which is influenced by both the 
 - **Schedule Brokering Runs**:
    - Schedule the brokering runs to execute these inventory rules at regular intervals, maintaining efficient order fulfillment.
 
-### Scenario 9: Optimizing Order Splitting by Setting Shipment Thresholds
+## Scenario 9: Optimizing Order Splitting by Setting Shipment Thresholds
 
 Retailers often split orders across multiple locations to optimize inventory usage and expedite fulfillment. However, this strategy can lead to challenges, particularly concerning shipping costs for low-value items. Retailers may incur losses when splitting orders that include items of low value. While multi-location fulfillment can ensure timely delivery and effective inventory management, it can also result in disproportionately high shipping costs for low-value items.
 
@@ -241,7 +241,7 @@ If an order contains two items, such as a 'Brown Belt' and a 'Brown Wallet,' eac
 
 With this threshold in place, orders will only be split if the value of the items meets or exceeds the set threshold, optimizing shipping costs and preventing losses on low-value shipments.
 
-### Scenario: Managing Order Splitting for Grouped Items
+## Scenario 10: Managing Order Splitting for Grouped Items
 
 Retailers often face scenarios where certain items within an order must be shipped together, while other items can be shipped separately. For example, if a customer orders a frame and lenses along with sunglasses, the frame and lenses must be shipped together, but the sunglasses can be shipped from a different location. In such cases, items like the frame and lenses are grouped to ensure they are always shipped together.
 
