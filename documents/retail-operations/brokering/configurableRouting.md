@@ -29,6 +29,8 @@ Retailers must specify the available facilities for brokering an order batch. To
 
 To ensure this, retailers should create two distinct order brokering facility groups: one comprising warehouse locations exclusively, and the other incorporating both warehouses and stores. These facility groups can be established within the Facilities App. Refer to our [user manual](https://docs.hotwax.co/documents/v/system-admins/administration/facilities/manage-groups) for detailed instructions on creating brokering facility groups.
 
+{% hint style="info" %} HotWax Commerce routes orders based on the proximity of the customer to the facilities. To determine this proximity, HotWax Commerce compares the customer's shipping address with the facility locations. To ensure accurate location matching, it is essential that the facility's zip code, along with its latitude and longitude, is added. {% endhint %}
+
 ### Finding orders
 
 Order lookup is broken down into multiple facets. Each facet is designed to find orders on a metric that is relevant to retailers. Once results for orders are obtained, their sequence (sort order) is also configurable by retailers to ensure that even within a batch of orders, they are not bound to just first-in-first-out sequencing of orders.
@@ -84,7 +86,9 @@ Setting order splitting thresholds based on shipment value directly addresses th
 
 Based on each of these conditions, an action can be tied to the allocation. Retailers can choose which action to perform based on the outcome.
 
-**Available actions:** **Allocate:** commit order items to available inventory
+**Available actions** 
+
+**Allocate:** commit order items to available inventory
 
 **Move to next rule:** If the allocation availability in the given attempt is not satisfactory, the order items can simply be moved to the next inventory lookup in that brokering rule set.
 
