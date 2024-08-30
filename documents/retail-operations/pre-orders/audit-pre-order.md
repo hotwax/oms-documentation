@@ -9,7 +9,7 @@ description: >-
 
 Merchandisers need a clear picture of their presell catalog to understand the status of pre-orders and back orders. This helps them figure out when these pre-orders will show up on Shopify. This overview also lets them check and confirm listed items, even after they're on the e-commerce platform.
 
-To see their complete presell catalog, merchandisers can go to the `catalog` page through the left menu in the pre-order app.
+To see their complete presell catalog, merchandisers can go to the `catalog` page through the left menu in the `Pre-Order` app.
 
 The `Catalog` page shows all items in pre-orders or backorders in one place. On the right side, users can see when the last pre-order computation job commenced and when will the next job run.
 
