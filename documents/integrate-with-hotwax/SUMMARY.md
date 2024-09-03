@@ -15,6 +15,7 @@
 * [Inventory](api/inventory/README.md)
   * [Check Inventory](api/inventory/check-inventory.md)
   * [BOPIS Check Inventory](api/inventory/bopis-check-inventory.md)
+  * [Shipping Check Inventory](api/inventory/shipping-check-inventory.md)
   * [Reset Inventory](api/inventory/reset-inventory.md)
   * [Update Inventory](api/inventory/update-inventory.md)
   * [Get Online ATP of Products](api/inventory/get-online-atp.md)
