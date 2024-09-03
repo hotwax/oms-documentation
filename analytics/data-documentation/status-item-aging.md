@@ -56,7 +56,7 @@ To optimize this process, a numeric column called "age" has been added to the `S
   | Status   | Status ID       |    Age    |
   |----------|-----------------|:---------:|
   | Created  | ORDER_CREATED    |     0     |
-  | Approved | ORDER_APPROVED   |    30     |
+  | Approved | ORDER_APPROVED   |    50     |
   | Completed| ORDER_COMPLETED  |    100    |
   | Cancelled| ORDER_CANCELLED  |    101    |
 
@@ -83,7 +83,7 @@ To optimize this process, a numeric column called "age" has been added to the `S
   |---------------|----------------------|:---------:|
   | Not received  | PAYMENT_NOT_RECEIVED  |     0     |
   | Not authorized| PAYMENT_NOT_AUTHORIZED|    10     |
-  | Authorized    | PAYMENT_AUTHORIZED    |    60     |
+  | Authorized    | PAYMENT_AUTHORIZED    |    50     |
   | Settled       | PAYMENT_SETTLED       |    100    |
   | Received      | PAYMENT_RECEIVED      |    100    |
   | Declined      | PAYMENT_DECLINED      |    101    |
