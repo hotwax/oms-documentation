@@ -4,7 +4,7 @@
 
 The Shipping Ckeck Inventory API allows to retrive the inventory details for the products at specific locations. By calling the `/checkShippingInventory` endpoint of our next generation OMS with the POST/GET method, you can check the availability of the inventory available for shipping.
 
-# Request
+## Request
 
 ### Endpoint
 
@@ -97,7 +97,7 @@ Product Store represents a brand in HotWax Commerce. To obtain possible values, 
 
 **inventoryGroupId**
 
-Inventory groups are used to segregate inventory for different channels of sales. Obtain the inventory group ID by logging into HotWax Commerce Facilities App and browsing inventory groups.
+[Inventory groups](https://docs.hotwax.co/documents/v/system-admins/administration/facilities/manage-groups) are used to segregate inventory for different channels of sales. Obtain the inventory group ID by logging into HotWax Commerce Facilities App and browsing inventory groups.
 
 ## Response
 
