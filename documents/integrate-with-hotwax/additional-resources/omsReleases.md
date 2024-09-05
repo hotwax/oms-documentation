@@ -11,7 +11,7 @@ description: Discover  the versions of HotWax Commerce OMS releases.
 2. To find details about SOLR versions, refer to the [SOLR version document](https://docs.google.com/spreadsheets/d/1H-iEVG-hS9FTsYOf5YiUH-5KOJUcu0\_TiPG8aVYjaHU/edit?gid=0#gid=0)
 {% endhint %}
 
-## Hotfix - v5.15.4 (4th Spetember 2024)
+## Hotfix - v5.15.4 (4th September 2024)
 
 | Information     | Value                                                                                                                |
 | --------------- | -------------------------------------------------------------------------------------------------------------------- |
