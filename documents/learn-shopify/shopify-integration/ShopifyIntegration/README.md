@@ -1,7 +1,6 @@
 ---
 description: >-
-  Discover how to link multiple Shopify stores with a shared product
-  catalog by creating individual Shops for each storefront.
+  Learn how to install HotWax Commerce App to integrate your Shopify store with HotWax Commerce's Order Management System
 ---
 
 # Install HotWax Commerce Order Management App
@@ -32,7 +31,7 @@ The following steps are optional and can be handled by the HotWax Commerce team.
 HotWax Commerce relies on JWT (JSON Web Token) for secure API communication, ensuring a safe environment for data exchange between the Shopify store and the HotWax Commerce platform.
 
 1. **Create JWT Token:**
-   - Navigate to the provided documentation link: [JWT Token Creation Guide](../../../integrate-with-hotwax/api/initial-api-authentication.md).
+   - Navigate to the provided documentation link: [JWT Token Creation Guide](https://docs.hotwax.co/documents/v/integrate-with-hotwax/hotwax-commerce-api-and-data-feeds/initial-api-authentication).
    - Follow the instructions to create a JWT token using an integration user on your HotWax Commerce system.
    - Securely store this token for future use.
 
