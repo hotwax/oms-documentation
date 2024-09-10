@@ -1,8 +1,7 @@
 # Table of contents
 
 * [Launchpad](README.md)
-* [Glossary](./../store-operations/GLOSSARY.md)
-
+* [Glossary](../store-operations/GLOSSARY.md)
 
 ## Administration
 
@@ -10,27 +9,24 @@
   * [Create Product Store](administration/company/create-product-store.md)
   * [Manage Product Store](administration/company/manage-product-store.md)
   * [Manage Shopify connection](administration/company/manage-shopify-shop.md)
-   
 * [Users](administration/users/README.md)
   * [Create Users](administration/users/createUser.md)
   * [Manage Users](administration/users/manageUser.md)
   * [Manage User Permissions](administration/users/user-permission.md)
   * [Create Pickers](fulfillment/add-picker.md)
-  * Troubleshooting
-     * [Application Access Issue](administration/users/application-access-issue.md)
-
+  * [Troubleshooting](administration/users/troubleshooting/README.md)
+    * [Application Access Issue](administration/users/application-access-issue.md)
 * [User Permissions](administration/permissions/introduction.md)
   * [BOPIS App](administration/permissions/bopis-app.md)
   * [Fulfillment App](administration/permissions/fulfillment-app.md)
-  * [Job Manager App](administration/permissions/job-manager-app.md) 
+  * [Job Manager App](administration/permissions/job-manager-app.md)
   * [Receiving App](administration/permissions/receiving-app.md)
   * [Picking App](administration/permissions/picking-app.md)
   * [Import App](administration/permissions/import-app.md)
   * [Users App](administration/permissions/users-app.md)
   * [Facilities App](administration/permissions/facilities-app.md)
   * [Pre-Order App](administration/permissions/pre-order-app.md)
-
-* [Facilities](facilities/README.md)
+* [Facilities](administration/facilities/README.md)
   * [Add New Facilities](administration/facilities/add-new-facilities.md)
   * [Manage Existing facilities](administration/facilities/manage-existing-facilities.md)
   * [Add Facility Address](administration/facilities/add-facility-address.md)
@@ -44,7 +40,6 @@
   * [Manage parkings](administration/facilities/manage-parkings.md)
   * [Manage Groups](administration/facilities/manage-groups.md)
 * [Delete customers](delete-customers.md)
-
 * [SOLR Indexing](search-admin.md)
 
 ## Product Store
@@ -65,12 +60,3 @@
   * [Map Career Shipment Methods](fulfillment/carrier-and-shipment-methods.md)
 * [How to map shipping method in HotWax Commerce to Netsuite](fulfillment/add-shipping-method.md)
 * [Configure Rate Shopping](fulfillment/configure-rate-shopping.md)
-
-
-
-
-
-
-
-
- 
