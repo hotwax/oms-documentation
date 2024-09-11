@@ -47,6 +47,11 @@
 * [Configure Product Store](product-store/README.md)
 * [Add More Product Stores](product-store/add-more-product-stores.md)
 
+## Initial Setup
+
+* [Add DBIC](initial-setup/AddDBICs.md)
+* [Load Facilities](initial-setup/LoadFacilities.md)
+
 ## Inventory
 
 * [Multichannel inventory setup](multichannel-inventory-setup.md)
