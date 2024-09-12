@@ -6,32 +6,33 @@ Below is a list of all the actions available in the Receiving App, along with th
 
 ### Shipment Tabs
 
-| Action                     | Permission | Description                                                                                              |
-|--------------------------------|----------------|--------------------------------------------------------------------------------------------------------------|
-| View Shipments Tab    | -             | Allows users to view a list of shipments arriving at their facility.                                          |
-| View Returns Tab       | -             | Enables users to view and manage shipments returning to the facility.                                         |
-| View Purchase Order Tab | -          | Allows users to view arriving purchase order (PO) shipments.                                                  |
+| Action                  | Permission | Description                                                           |
+| ----------------------- | ---------- | --------------------------------------------------------------------- |
+| View Shipments Tab      | -          | Allows users to view a list of shipments arriving at their facility.  |
+| View Returns Tab        | -          | Enables users to view and manage shipments returning to the facility. |
+| View Purchase Order Tab | -          | Allows users to view arriving purchase order (PO) shipments.          |
 
+<figure><img src="../../.gitbook/assets/receiving.png" alt=""><figcaption></figcaption></figure>
 
 ### Shipment Details Page
 
-| Action                     | Permission     | Description                                                                                              |
-|--------------------------------|--------------------|--------------------------------------------------------------------------------------------------------------|
-| View Shipment Details       | -                 | Allows users to view detailed information about a specific shipment.                                          |
-| Scan Items                  | -                 | Enables users to scan items that are part of the shipment.                                                    |
-| Add Items                   | RECEIVING_ADMIN    | Allows users with higher permissions to add unexpected items to the shipment.                                 |
-| Receiving Items             | -                 | Allows users to receive items listed in the shipment.                                                         |
-| Product Image               | -                 | Enables users to view and enlarge the product image associated with the shipment.                             |
-| View Receiving History      | -                 | Allows users to view the history of receiving activities related to the items in the shipment.                |
-| Receive and Close Shipments | RECEIVING_ADMIN    | Allows users with higher permissions to receive and close the shipment after verifying all items.             |
+| Action                      | Permission       | Description                                                                                       |
+| --------------------------- | ---------------- | ------------------------------------------------------------------------------------------------- |
+| View Shipment Details       | -                | Allows users to view detailed information about a specific shipment.                              |
+| Scan Items                  | -                | Enables users to scan items that are part of the shipment.                                        |
+| Add Items                   | RECEIVING\_ADMIN | Allows users with higher permissions to add unexpected items to the shipment.                     |
+| Receiving Items             | -                | Allows users to receive items listed in the shipment.                                             |
+| Product Image               | -                | Enables users to view and enlarge the product image associated with the shipment.                 |
+| View Receiving History      | -                | Allows users to view the history of receiving activities related to the items in the shipment.    |
+| Receive and Close Shipments | RECEIVING\_ADMIN | Allows users with higher permissions to receive and close the shipment after verifying all items. |
 
+<figure><img src="../../.gitbook/assets/shipment.png" alt=""><figcaption></figcaption></figure>
 
 ### Settings Page
 
-| Action                     | Permission     | Description                                                                                              |
-|--------------------------------|--------------------|--------------------------------------------------------------------------------------------------------------|
-| Select Product Identifier   | COMMON_ADMIN       | Allows users to select the product identifier that will be used to view items within the app.                 |
+| Action                    | Permission    | Description                                                                                   |
+| ------------------------- | ------------- | --------------------------------------------------------------------------------------------- |
+| Select Product Identifier | COMMON\_ADMIN | Allows users to select the product identifier that will be used to view items within the app. |
 
----
+<figure><img src="../../.gitbook/assets/settings r.png" alt=""><figcaption></figcaption></figure>
 
-This table outlines the available actions and the required permissions for each action within the Receiving App.
