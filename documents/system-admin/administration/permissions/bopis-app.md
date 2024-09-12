@@ -42,7 +42,7 @@ Here’s a detailed table of the actions available in the BOPIS App, organized b
 | ---------- | --------------------- | ---------- | ------------------------------------------ |
 | 1          | View Completed Orders | -          | Allows users to view all completed orders. |
 
-<figure><img src="../../.gitbook/assets/completed (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/completed (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 #### Ship to Store
 
@@ -57,7 +57,7 @@ Here’s a detailed table of the actions available in the BOPIS App, organized b
 | 1          | Order Information | -             | Allows store associates to view the details of an order.                                                 |
 | 2          | Order Rejection   | COMMON\_ADMIN | Enables users to reject an order completely or partially, based on available inventory or other factors. |
 
-<figure><img src="../../.gitbook/assets/order details (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/order details (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Settings Page
 
@@ -70,5 +70,5 @@ Here’s a detailed table of the actions available in the BOPIS App, organized b
 | 5          | Enable Tracking         | -             | Tracks who picked orders by entering picker IDs during the packing process.                             |
 | 6          | Notification Preference | -             | Allows users to select the types of notifications they want to receive.                                 |
 
-<figure><img src="../../.gitbook/assets/settings.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/settings (1).png" alt=""><figcaption></figcaption></figure>
 
