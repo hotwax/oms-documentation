@@ -5,7 +5,7 @@ The HotWax Commerce `Facilities` app is designed for specialized users such as a
 
 All actions within the `Facilities` App users with this permission level are unrestricted, as higher-level access is required to enter the app. Below is a summary of the actions available in the Facilities App:
 
-## 1. Find Facilities Page
+## Find Facilities Page
 
 | **Serial No.** | **Action**                | **Description**                                                                                 |
 | -------------- | ------------------------- | ----------------------------------------------------------------------------------------------- |
@@ -16,7 +16,7 @@ All actions within the `Facilities` App users with this permission level are unr
 
 <figure><img src="../../.gitbook/assets/view facilities.png" alt=""><figcaption></figcaption></figure>
 
-## 2. Parking Page
+## Parking Page
 
 | **Serial No.** | **Action**                                 | **Description**                                                                  |
 | -------------- | ------------------------------------------ | -------------------------------------------------------------------------------- |
@@ -26,7 +26,7 @@ All actions within the `Facilities` App users with this permission level are unr
 
 <figure><img src="../../.gitbook/assets/parking.png" alt=""><figcaption></figcaption></figure>
 
-## 3. Facility Groups
+## Facility Groups
 
 | **Serial No.** | **Action**                  | **Description**                                                                                   |
 | -------------- | --------------------------- | ------------------------------------------------------------------------------------------------- |
@@ -37,7 +37,7 @@ All actions within the `Facilities` App users with this permission level are unr
 
 <figure><img src="../../.gitbook/assets/groups.png" alt=""><figcaption></figcaption></figure>
 
-## 4. Facility Detail Page
+## Facility Detail Page
 
 | **Serial No.** | **Action**                               | **Description**                                                                                   |
 | -------------- | ---------------------------------------- | ------------------------------------------------------------------------------------------------- |
