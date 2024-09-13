@@ -13,7 +13,7 @@ Here’s a detailed table of the actions available in the BOPIS App, organized b
 | 1          | Product View   | -          | Allows users to view all existing products in the catalog.                             |
 | 2          | Product Detail | -          | Enables users to check inventory levels across different stores for specific products. |
 
-<figure><img src="../../.gitbook/assets/catalog.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/catalog (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Orders Page
 
