@@ -24,14 +24,14 @@ HotWax Commerce manages key processes such as downloading online orders, routing
 
 HotWax Commerce handles various types of eCommerce orders, including standard orders, BOPIS (Buy Online, Pick Up In Store) orders, Pre-Orders, and Backorders. Here’s a brief explanation of each type:
 
-*   **Standard orders:** Standard shipping orders placed online for home delivery. Orders that satisfy the criteria set for auto-approval are approved. The order routing engine then brokers these orders and allocates them to optimal fulfillment locations based on the predefined routing configurations. For orders allocated to a store, HotWax Commerce provides a dedicated `Fulfillment App` to help stores easily fulfill online orders. Learn more about [store fulfillment lifecycle](https://docs.hotwax.co/documents/v/learn-hotwax-oms/business-process-models/store.fulfillment)
+*   **Standard orders:** Standard shipping orders placed online for home delivery. Orders that satisfy the criteria set for auto-approval are approved. The order routing engine then brokers these orders and allocates them to optimal fulfillment locations based on the predefined routing configurations. For orders allocated to a store, HotWax Commerce provides a dedicated `Fulfillment App` to help stores easily fulfill online orders. Learn more about the [store fulfillment lifecycle](https://docs.hotwax.co/documents/v/learn-hotwax-oms/business-process-models/store.fulfillment).
 
-    For orders allocated to a warehouse, HotWax Commerce syncs the fulfillment details with the WMS or ERP systems like NetSuite when leveraged for warehouse fulfillment. Learn more about [warehouse fulfillment lifecycle](https://docs.hotwax.co/documents/v/learn-hotwax-oms/business-process-models/warehousefulfillmentlifecycle)
+    For orders allocated to a warehouse, HotWax Commerce syncs the fulfillment details with the WMS or ERP systems like NetSuite when leveraged for warehouse fulfillment. Learn more about the [warehouse fulfillment lifecycle](https://docs.hotwax.co/documents/v/learn-hotwax-oms/business-process-models/warehousefulfillmentlifecycle).
 * **BOPIS orders:** Orders placed online with the intention of picking up the items in-store. HotWax Commerce `Integration App` adds a custom tag on order line items to specify that it is a BOPIS order. HotWax Commerce then checks the custom tag on orders. If the tag is present on an order, it is automatically sent to the customer's preferred pickup location without brokering since the fulfillment location is pre-selected for BOPIS orders by customers. For BOPIS orders, HotWax Commerce provides a dedicated `BOPIS Fulfillment App` to help stores quickly prepare the order for customer pick-up.
 * **Pre-Orders:** Orders placed for new launch products that are not yet available for delivery and will be available on a future promised date.
-* **Backorders:** Orders placed for products that are currently out-of-stock, with delivery scheduled for a future promised date. HotWax Commerce `Integration App` adds a custom tag on order line items to specify that it is a Pre-Order or a Backorder. HotWax Commerce then checks the custom tag on orders. If the tag is present on an order, a dedicated parking holds all pre-orders/backorders until their physical inventory is received, and HotWax Commerce automatically releases and brokers them once the inventory arrives just like standard orders. For Pre-Orders and Backorders, HotWax Commerce also provides a dedicated Pre-Order Management App to help merchandisers manually release them for fulfillment based on their order fulfillment strategies. Learn more about [order lifecycle in HotWax Commerce](https://docs.hotwax.co/documents/v/learn-hotwax-oms/business-process-models/orderlifecycle)
+* **Backorders:** Orders placed for products that are currently out-of-stock, with delivery scheduled for a future promised date. HotWax Commerce `Integration App` adds a custom tag on order line items to specify that it is a Pre-Order or a Backorder. HotWax Commerce then checks the custom tag on orders. If the tag is present on an order, a dedicated parking holds all pre-orders/backorders until their physical inventory is received, and HotWax Commerce automatically releases and brokers them once the inventory arrives just like standard orders. For Pre-Orders and Backorders, HotWax Commerce also provides a dedicated Pre-Order Management App to help merchandisers manually release them for fulfillment based on their order fulfillment strategies. Learn more about the [order lifecycle in HotWax Commerce](https://docs.hotwax.co/documents/v/learn-hotwax-oms/business-process-models/orderlifecycle)
 
-HotWax also syncs eCommerce orders data to ERP systems, ensuring accurate accounting and posting.
+HotWax also syncs eCommerce order data to ERP systems, ensuring accurate accounting and posting.
 
 {% hint style="success" %}
 Once orders are fulfilled, HotWax Commerce synchronizes fulfillment updates with the eCommerce platform.
@@ -45,7 +45,7 @@ HotWax Commerce downloads POS sales to provide a unified view of both online and
 
 Both eCommerce and POS returns are downloaded in HotWax Commerce for reconciliation purposes. HotWax also syncs this data to ERP systems, ensuring accurate accounting and posting.
 
-Learn more about [return lifecycle in HotWax Commerce](https://docs.hotwax.co/documents/v/learn-hotwax-oms/business-process-models/returns-lifecycle)
+Learn more about the [return lifecycle in HotWax Commerce](https://docs.hotwax.co/documents/v/learn-hotwax-oms/business-process-models/returns-lifecycle)
 
 ### Inventory Management
 
@@ -61,7 +61,7 @@ HotWax Commerce integrates with ERP, POS, and WMS, to create a unified pool of i
 
 After synchronizing inventory totals from all systems, HotWax Commerce calculates the Online ATP for eCommerce by deducting any inventory set aside as safety stock, thresholds, orders in the brokering queue, and inventory at non-participating facilities from the physical ATP.
 
-Learn more about [inventory lifecycle in HotWax Commerce](https://docs.hotwax.co/user-guides/business-process-models/inventorylifecycle)
+Learn more about the [inventory lifecycle in HotWax Commerce](https://docs.hotwax.co/user-guides/business-process-models/inventorylifecycle)
 
 #### Inventory Receiving in Stores
 
