@@ -61,7 +61,7 @@ HotWax Commerce integrates with ERP, POS, and WMS, to create a unified pool of i
 
 After synchronizing inventory totals from all systems, HotWax Commerce calculates the Online ATP for eCommerce by deducting any inventory set aside as safety stock, thresholds, orders in the brokering queue, and inventory at non-participating facilities from the physical ATP.
 
-Learn more about the [inventory lifecycle in HotWax Commerce](https://docs.hotwax.co/user-guides/business-process-models/inventorylifecycle)
+Learn more about the [inventory lifecycle in HotWax Commerce](https://docs.hotwax.co/documents/v/learn-hotwax-oms/business-process-models/inventorylifecycle)
 
 #### Inventory Receiving in Stores
 
