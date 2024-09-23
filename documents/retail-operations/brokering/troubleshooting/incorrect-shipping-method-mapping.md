@@ -16,4 +16,4 @@ Shipping methods need to be correctly mapped from Shopify to HotWax Commerce and
 
 4. **Verify Facilities Association**: Check that the facilities are correctly associated with the carrier. Each facility should have the appropriate carrier enabled to ensure orders can be routed and shipped from the correct location.
 
-5. **Rectify Issues Using the User Manual**: If you identify any issues with the mapping or facility association, refer to the [HotWax Commerce user manual](../../system-admin/fulfillment/ShippingGateways.md) for detailed instructions on how to correct these settings.
+5. **Rectify Issues Using the User Manual**: If you identify any issues with the mapping or facility association, refer to the [HotWax Commerce user manual](https://docs.hotwax.co/documents/v/system-admins/fulfillment/shipping-methods/shippinggateways) for detailed instructions on how to correct these settings.
