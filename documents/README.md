@@ -3,7 +3,7 @@ description: >-
   This document serves as a hub linking various user manuals for HotWax
   Commerce, an omnichannel Order Management System integrating Shopify and
   NetSuite.
-cover: .gitbook/assets/coverimage.png
+cover: .gitbook/assets/HotwaxCoverImage3Sep.png
 coverY: 0
 layout:
   cover:
