@@ -10,6 +10,10 @@
 
 ## 2024
 
+* [Aug'24](2024/aug24/README.md)
+  * [Set up Inventory Synchronization Jobs Within the ATP App](2024/aug24/set-up-inventory-synchronization-jobs-within-the-atp-app.md)
+  * [Launched New Version of the Cycle Count App](2024/aug24/launched-new-version-of-the-cycle-count-app.md)
+  * [Configure Sequence of Facilities within a Facility Group](2024/aug24/configure-sequence-of-facilities-within-a-facility-group.md)
 * [July'24](2024/july24/README.md)
   * [Introducing Reorder Management Reports](2024/july24/introducing-reorder-management-reports.md)
   * [Enhanced Kit Product Handling](2024/july24/enhanced-kit-product-handling.md)
@@ -41,7 +45,6 @@
   * [Bundle product fulfillment](january-24/bundle-products.md)
   * [Introducing Facility Groups Page](january-24/facility-groups-page.md)
   * [Introducing Order Routing App](january-24/order-routing-app.md)
-* [Aug'24](2024/aug24.md)
 
 ## 2023
 
