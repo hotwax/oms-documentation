@@ -3,6 +3,7 @@
 * [Product Releases- Overview](README.md)
 
 ## Document Release Notes 2024
+
 * [June](release-note-documents/June-release-note-2024.md)
 * [May](release-note-documents/may-release-note-2024.md)
 * [April](release-note-documents/april-release-note-2024.md)
@@ -40,6 +41,7 @@
   * [Bundle product fulfillment](january-24/bundle-products.md)
   * [Introducing Facility Groups Page](january-24/facility-groups-page.md)
   * [Introducing Order Routing App](january-24/order-routing-app.md)
+* [Aug'24](2024/aug24.md)
 
 ## 2023
 
