@@ -13,25 +13,21 @@ In this user manual, we will learn how to set up channels, add facilities cateri
 
 ## Create a New Channel in HotWax Commerce
 
-#### Accessing the Launchpad
+#### Accessing Available to Promise App
 
 1. Go to the launchpad.
 2. Log in with your credentials.
-
-#### Navigating to Available to Promise
-
-1. Scroll down to the Workflow section.
-2. Click on the Available to Promise app.
+3. Click on the Available to Promise app.
 
 #### Opening Inventory Channels
 
-1. In the left-side menu bar, click on `Inventory Channels`.
+1. In the left-side menu bar, click on `Inventory Channels` to view all existing channels
 
 #### Creating a New Channel
 
 1. Click on the blue plus button at the bottom right of the page. A `Create Channel Group` window will appear.
 2. Enter the name of the Inventory Channel. The ID will auto-populate with the same name as the channel.
-3. Write a description for the channel.
+3. Write a description for the channel to describe the intent and function for the channel.
 
 ## Configure the Channel Group
 
