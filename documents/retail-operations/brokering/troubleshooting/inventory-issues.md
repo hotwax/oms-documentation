@@ -1,5 +1,7 @@
 ---
-description: Discover your guide for troubleshooting issues for order brokering due to inventory unavailability
+description: >-
+  Discover your guide for troubleshooting issues for order brokering due to
+  inventory unavailability
 ---
 
 # Inventory Unavailability
@@ -26,6 +28,10 @@ Retailers sometimes prefer not to split orders to minimize shipping costs. If on
 
 1. If you decide to allow order splitting, navigate to the `Order Routing App`.
 2. Navigate to the `brokering run` > `order batch` > `inventory rule`.
-3. Check if `partial allocation` is allowed for that inventory run. 
+3. Check if `partial allocation` is allowed for that inventory run.
 4. Turn the `partial allocation` toggle on if you want to enable order splitting.
 5. Save the `inventory rule` configuration.
+
+
+
+<figure><img src="../../.gitbook/assets/Inventory Unavailability 1.png" alt="" width="461"><figcaption></figcaption></figure>
