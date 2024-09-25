@@ -1,4 +1,4 @@
-# Order Status Discrepancy Troubleshoot
+# Order Status Discrepancy
 
 ## Question
 
@@ -17,3 +17,4 @@ To resolve this issue, follow these steps:
 
 
 
+{% embed url="https://youtu.be/fsgh5kAKYL0" %}
