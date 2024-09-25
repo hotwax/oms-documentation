@@ -80,3 +80,7 @@ If the Shopify shop does not have the necessary write permissions configured, sy
 4. **Update Access Scope**
    * If the access scope is set to `Read Only`, click on the `pencil icon` to edit the configuration.
    * Change the access scope to `Read and Write` permissions.
+
+
+
+{% embed url="https://youtu.be/oL_BYAXZQZw" %}
