@@ -4,7 +4,7 @@ description: >-
   app for seamless job processing.
 ---
 
-# Jobs Stuck
+# Job Stuck
 
 A scheduled job has been running for a longer duration than expected (more than 15 minutes).
 
@@ -29,3 +29,7 @@ After waiting, recheck the running tab on the pipeline page. If the jobs have no
 2. Provide details about the extended duration and the number of jobs in the pending state.
 
 By following these steps, you can identify and address issues related to jobs running for an extended duration. If you need further assistance or have additional questions, reach out to the HotWax support team for prompt support.
+
+
+
+<figure><img src="../../.gitbook/assets/Screenshot 2024-09-23 at 14.32.31 (1) 1 (1).png" alt="" width="375"><figcaption></figcaption></figure>
