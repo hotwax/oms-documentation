@@ -1,4 +1,4 @@
-# Order Attribute is Missing in Oms
+# Order Attribute is Missing
 
 Shopify retailers can capture additional crucial order details through metafields. When HotWax Commerce enters a retailer’s Shopify ecosystem, it becomes the source of truth for all order-related information.
 
@@ -12,7 +12,7 @@ To ensure consistency between HotWax Commerce and Shopify, verify if an order ha
 
 If an order in Shopify has meta fields that are missing in OMS, it could be due to one of the following:
 
-`Import Order Metafield` Job Not Running: The job responsible for importing metafields might not be running. Ensure that this job is scheduled and operating correctly in  HotWax Commerce
+`Import Order Metafield` Job Not Running: The job responsible for importing metafields might not be running. Ensure that this job is scheduled and operating correctly in HotWax Commerce
 
 Check Job Scheduling in NiFi: Verify that the job responsible for importing metafields and placing them on SFTP is scheduled and functioning as expected in NiFi.
 
@@ -29,3 +29,5 @@ If an order metafield is missing from Shopify and the OMS, it's crucial to inves
 For example, if the `Riskified` or `Signified approved` tag is missing in Shopify, the order contains high or medium fraud risk. There is a high chance that you will receive a chargeback on this order.
 
 In such cases, CSRs have to manually verify the orders and add the attribute in the Order Attribute section on the Order View page.
+
+<figure><img src="../../.gitbook/assets/Add order Attribute 1.png" alt=""><figcaption></figcaption></figure>
