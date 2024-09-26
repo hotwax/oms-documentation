@@ -55,6 +55,10 @@ In instances where a common product catalog is employed across multiple Shopify 
    * Select the Shopify store designated as the Shop in OMS.
    * Input the Shopify product ID and Inventory ID (extracted from the product on the Shopify store).
 
+
+
+<figure><img src="../.gitbook/assets/dev-oms.hotwax.io_commerce_control_ViewShopifyShop_shopId=10000 1.png" alt=""><figcaption></figcaption></figure>
+
 **Step 3: Refresh products to reflect changes**
 
 5. **Execute Jobs in the Job Manager App**
