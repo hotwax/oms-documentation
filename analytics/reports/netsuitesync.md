@@ -151,7 +151,7 @@ LIMIT 1000;
 
 </details>
 
-## Query Logic
+### Query Logic
 
 **Data Selection:** The query starts by selecting data from the product table, focusing on products deleted from Shopify. It retrieves information such as Hotwax product ID, product SKU, discontinuation date, and comments.
 
@@ -372,82 +372,6 @@ LIMIT 1000;
 
 **Ordering and Limiting Results:** The results are ordered by order ID in descending order to prioritize the most recent records. The output is limited to the first 1000 records.
 
-## POS Orders vs POS Variance Pie Chart
-
-This report generates a pie chart comparing POS (Point of Sale) orders with inventory variances, categorizing them into "Orders without Error" and "Orders with Error." It helps to visualize the proportion of orders where sales quantities match the inventory quantities on hand versus those where discrepancies exist. The report includes order details such as order ID, order name, entry date, SKU, sales quantity, and quantity on hand (QOH) variance. It focuses on POS orders completed after a particular date, and aggregates the data to count the number of orders with and without variances, providing a clear visual summary of inventory accuracy.
-
-### Glossary
-
-| Field Header | Description                                                                          | HC Entity                                                                                         |
-| ------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------- |
-| **Sum**      | Indicates the categorization of orders as Orders without Error or Orders with Error. | order\_item.quantity                                                                              |
-| **Count**    | The total number of orders associated with the same order name.                      | OrderHeader.EXTERNAL\_ID (Count of all the unique ids of orders as stored in the external system) |
-
-<details>
-
-<summary>SQL query to generate POS Orders vs POS Variance Pie Chart</summary>
-
-```sql
-SELECT IF(`SALES`+`QOH`=0, "Orders without Error", "Orders with Error") AS `Sum`,
-       COUNT(*) AS `COUNT(*)`
-FROM
-  (SELECT oh.ORDER_ID,
-          oh.ORDER_NAME,
-          oh.ENTRY_DATE,
-          sale.PRODUCT_ID,
-          p.INTERNAL_NAME SKU,
-          sale.SALES,
-          variance.QOH,
-          variance.ATP,
-          variance.INVENTORY_ID
-   FROM order_header oh
-   JOIN
-     (SELECT oi.ORDER_ID,
-             SUM(oi.QUANTITY) SALES,
-             oi.PRODUCT_ID
-      FROM order_item oi
-      JOIN order_item_ship_group_assoc oisga ON oisga.ORDER_ID = oi.ORDER_ID
-      AND oisga.ORDER_ITEM_SEQ_ID = oi.ORDER_ITEM_SEQ_ID
-      JOIN order_item_ship_group oisg ON oisg.ORDER_ID = oisga.ORDER_ID
-      AND oisg.SHIP_GROUP_SEQ_ID = oisga.SHIP_GROUP_SEQ_ID
-      AND oisg.SHIPMENT_METHOD_TYPE_ID = 'POS_COMPLETED'
-      GROUP BY oi.ORDER_ID,
-               oi.PRODUCT_ID) sale ON sale.ORDER_ID = oh.ORDER_ID
-   AND oh.ENTRY_DATE > '2024-03-24'
-   AND oh.SALES_CHANNEL_ENUM_ID = 'POS_SALES_CHANNEL'
-   LEFT JOIN
-     (SELECT iiv.COMMENTS,
-             ii.PRODUCT_ID,
-             ii.INVENTORY_ITEM_ID INVENTORY_ID,
-             SUM(iiv.quantity_on_hand_var) QOH,
-             SUM(iiv.available_to_promise_var) ATP
-      FROM inventory_item_variance iiv
-      JOIN inventory_item ii ON ii.INVENTORY_ITEM_ID = iiv.INVENTORY_ITEM_ID
-      AND iiv.VARIANCE_REASON_ID = 'POS_SALE'
-      GROUP BY iiv.COMMENTS,
-               ii.PRODUCT_ID) variance ON variance.COMMENTS LIKE CONCAT('%', sale.ORDER_ID, '%')
-   AND variance.PRODUCT_ID = sale.PRODUCT_ID
-   JOIN product p on sale.PRODUCT_ID = p.PRODUCT_ID) AS virtual_table
-WHERE `SKU` != '9090909-999'
-GROUP BY IF(`SALES`+`QOH`=0, "Orders without Error", "Orders with Error")
-ORDER BY `COUNT(*)` DESC
-LIMIT 100;
-```
-
-</details>
-
-### Query Logic
-
-**Data Selection:** The query selects data from multiple tables related to POS orders, sales quantities, and inventory variances. The key details include order ID, order name, entry date, SKU, sales quantity, and quantity on hand variance.
-
-**Filtering POS Orders:** The report focuses on POS orders completed after a particular date, filtering for relevant transactions in the POS sales channel.
-
-**Calculating Sales and Variance:** The query calculates the total sales quantity for each order and product combination. It also sums the quantity on hand (QOH) variances from the inventory item variance table. The inventory variances are linked to the sales data based on comments containing the order ID.
-
-**Categorizing Orders:** The query categorizes each order as either "Orders without Error" or "Orders with Error" based on whether the sum of sales and QOH variances equals zero. This categorization helps in creating the pie chart.
-
-**Grouping and Counting Orders:** The results are grouped by the error status ("Orders without Error" or "Orders with Error") and counted to determine the number of orders in each category. This count is essential for creating the pie chart.
-
 ## POS Returns vs Restock
 
 This report identifies POS (Point of Sale) return transactions and compares them against restocked quantities. It provides insights into how many items were returned versus how many were restocked back into inventory. The report includes details such as return ID, entry date, order ID, product name, facility ID, returned quantity, and restocked quantity. It focuses on returns directed to specific facilities and excludes those directed to 'BDC'.
@@ -511,47 +435,6 @@ LIMIT 1000;
 
 **Excluding Specific Facilities:** The results are filtered to exclude transactions directed to the 'BDC' facility, ensuring the report focuses on the relevant data.
 
-## POS Returns vs Restock Pie Chart
-
-This report generates a pie chart to visualize the comparison between returned items and their restocked status in the POS (Point of Sale) system. It categorizes items into "Restocked" and "Not Restocked" based on whether the returned quantity matches the received (restocked) quantity. The report helps in quickly identifying the proportion of items that have been successfully restocked after being returned.
-
-### Glossary
-
-| Field Header | Description                                                     | HC Entity                                                                                         |
-| ------------ | --------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| **Count**    | The total number of orders associated with the same order name. | OrderHeader.EXTERNAL\_ID (Count of all the unique ids of orders as stored in the external system) |
-
-<details>
-
-<summary>SQL query to generate POS Returns vs POS Restock Pie Chart</summary>
-
-```sql
-SELECT IF(`RETURN_QUANTITY` = IFNULL(`RECEIVED_QUANTITY`, 0), "Restocked", "Not Restocked") AS `My column`,
-       COUNT(*) AS count
-FROM
-  (SELECT ri.RETURN_ID,
-          ri.RETURN_ITEM_SEQ_ID,
-          p.INTERNAL_NAME,
-          ri.RETURN_QUANTITY,
-          ri.RECEIVED_QUANTITY,
-          ri.STATUS_ID,
-          rh.DESTINATION_FACILITY_ID FACILITY_ID,
-          rh.RETURN_CHANNEL_ENUM_ID,
-          rh.ENTRY_DATE,
-          oh.ORDER_NAME,
-          oh.ORDER_ID
-   FROM return_header rh
-   JOIN return_item ri ON ri.return_id = rh.return_id
-   JOIN product p ON p.product_id = ri.product_id
-   JOIN order_header oh ON oh.order_id = ri.order_id
-   WHERE rh.DESTINATION_FACILITY_ID <> "_NA_") AS virtual_table
-GROUP BY IF(`RETURN_QUANTITY` = IFNULL(`RECEIVED_QUANTITY`, 0), "Restocked", "Not Restocked")
-ORDER BY count DESC
-LIMIT 100;
-```
-
-</details>
-
 ### Query Logic
 
 **Data Selection:** The query starts by selecting relevant data from tables that store information on return transactions, products, and orders. It gathers details such as return ID, product name (SKU), returned quantity, restocked quantity, facility ID, and order name.
@@ -582,62 +465,3 @@ The Missing Order Attribute Report is a vital tool for tracking order synchroniz
 | ATTRIBUTE     | The essential order attribute. For example, `PRODUCT_VERIFIED` indicates whether the product has been verified   |
 | NETSUITE_ORDER_EXPORTED | Status if the order has been exported to NetSuite or not |
 | NETSUITE_CUSTOMER_ID    | The customer identifier in NetSuite               |
-
-## Canceled Order Report
-The Canceled Order Report provides a comprehensive tracking mechanism for all orders that have entered the OMS and subsequently been canceled. This report ensures a systematic record of cancellations, offering visibility into the cancellation process. 
-
-**In the context of NetSuite,** the Canceled Order Report becomes important due to the non-automatic synchronization of cancellations by HotWax. This report ensures that canceled orders align with expectations in NetSuite, whether through Celigo or NetSuite user actions. By using this report, organizations leveraging NetSuite gain a proactive means to verify and reconcile cancellation records, preventing discrepancies. This meticulous approach contributes to the accuracy of cancellation data across systems, enhancing the reliability of financial and operational records within NetSuite.
-
-### Glossary
-
-| Field           | Description                                              |
-|-----------------|----------------------------------------------------------|
-| ORDER_ID        | The ID of the order in Shopify          |
-| HC_ORDER_ID     | The ID of the order in HotWax Commerce    |
-| CANCELLED_DATE  | Date when the order was canceled                          |
-| SKU             | Unique identifier            |
-| ITEM_DESCRIPTION| Narrative detailing the characteristics of the item        |
-| Price           | The monetary value associated with the canceled item      |
-| REASON          | Reason behind the cancellation          |
-| External_Id     | The ID of the order in the external system |
-
-## Product Without NetSuite ID Report
-
-The Product Without NetSuite ID report identifies products that have been synchronized from Shopify to the OMS with an expectation that NetSuite should have corresponding entries for all these products. However, instances may arise where legacy data in Shopify is not present in NetSuite. This discrepancy has the potential to disrupt the synchronization in product-based workflows between Shopify, the OMS, and NetSuite. Addressing the products without NetSuite IDs is crucial to maintain the integrity of data across platforms and ensure a seamless synchronization process, preventing any potential disruptions in the flow of product information between the systems.
-
-### Glossary
-
-| Field              | Description                                           |
-|--------------------|-------------------------------------------------------|
-| sku                | Stock Keeping Unit (SKU) for the product               |
-| shopify_product_id | Unique identifier for the product in Shopify           |
-| hotwax_product_id  | Unique identifier for the product in HotWax OMS       |
-
-
-## Customers Without NetSuite ID Report
-
-The Customers Without NetSuite ID report identifies instances where customer records synchronized from Shopify to the OMS lack corresponding entries in NetSuite. To address this, the OMS creates new customers in NetSuite, ensuring the integrity of customer data across platforms. This report provides an overview of customers without NetSuite IDs, offering valuable insights into the synchronization status and enabling timely corrective actions. By maintaining consistency in customer data, this approach contributes to a seamless and reliable integration between Shopify, the OMS, and NetSuite.
-
-### Glossary
-
-| Field                | Description                                  |
-|----------------------|----------------------------------------------|
-| hotwax_customer_id   | Unique identifier for the customer in HotWax  |
-| FIRST_NAME           | First name of the customer                    |
-| LAST_NAME            | Last name of the customer                     |
-| shopify_customer_id  | Unique identifier for the customer in Shopify|
-| order_count          | Count of orders associated with the customer |
-
-
-## Allocation Pending Report
-
-The Allocation Pending Report displays orders assigned to facilities that currently lack sufficient inventory for immediate fulfillment. Monitoring the orders and items listed in this report is essential for initiating replenishment actions at the store. By doing so, retailers can ensure that inventory levels are maintained adequately, facilitating the successful completion of fulfillment for the identified orders.
-
-### Glossary
-
-| Field            | Description                                        |
-|------------------|----------------------------------------------------|
-| FACILITY_ID      | The identifier of the facility in external systems |
-| FACILITY_NAME    | The name of the facility in external systems       |
-| SKU              | Unique identifier                                  |
-| QUANTITY         | Quantity required of the SKU                       |
