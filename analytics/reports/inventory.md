@@ -366,43 +366,6 @@ LIMIT 100;
 
 **Grouping Data:** The query groups the selected data by various attributes such as received date, origin and destination facility IDs, expected quantity, shipment ID, transfer order, SKU, received quantity, difference, and status. Grouping the data helps organize it logically and facilitates analysis of the receiving process for inbound transfers.
 
-## Receiving Discrepancies by Product
-
-This discrepancy report helps retailers maintain inventory accuracy and uphold customer satisfaction. By highlighting inventory received that does not match the expected quantities, such as the example of **shoes-M-38** with a discrepancy of **4 units**, retailers can identify and rectify issues like shipment errors, theft, or miscounts. 
-
-Timely detection of such discrepancies enables corrective actions like adjusting stock levels, investigating root causes, and improving receiving processes, ultimately ensuring that customers receive the products they desire when they expect them.
-
-### User
-Head of Store, Vice President of Retail
-
-### Glossary
-
-| Field Name   | Description                     |
-|-------------|----------------------------------|
-| SKU         | Unique product code for tracking |
-| Difference  | Discrepancies in receiving       |
-
-## Recorded variances report 
-This Report provides retailers a detailed insights into discrepancies in inventory levels across different products and facilities. By highlighting specific product SKUs that have experienced variances and outlining the reasons behind these discrepancies, the report allows retailers to pinpoint areas of concern swiftly and accurately. Understanding the root causes of inventory discrepancies enables retailers to take proactive measures to rectify issues, whether they stem from inaccuracies in recording, theft, damage, or other factors.
-
-This report helps in optimizing inventory management by ensuring that stock levels align with demand and sales forecasts. By identifying variances promptly, retailers can prevent overstocking or stockouts, thus minimizing potential revenue losses.
-
-### User
-Head of Store, Vice President of Retail
-
-### Glossary
-| Field          | Description                                                                                      |
-|----------------|--------------------------------------------------------------------------------------------------|
-| Facility       | Location of a physical store or warehouse.                                                       |
-| Facility ID    | An identifier used to distinguish one facility from another uniquely.                             |
-| SKU            | Each product's unique code assigned for inventory management and tracking.                       |
-| Adjustment Date| The date on which a change or modification is made.                                              |
-| User           | A person or system that interacts with the system.                                                |
-| Quantity       | The numerical amount or count of a product.                                                       |
-| Description    | A detailed explanation often used to provide information about products.                          |
-| Enum ID        | Short for "Enumeration Identifier," it refers to a unique identifier within an enumeration.      |
-| Comments       | Additional remarks or information provided to explain.                                            |
-
 
 ## Completed cycle report
 
@@ -426,24 +389,7 @@ Head of Store, Vice President of Retail
 | User              | Individual conducting inventory tasks.            |
 | Line Status       | Current state of the inventory item.             |
 | Submitted Date    | Date of data entry.                              |
-| Completed Date    | Date of task completion.                          |
-
-## Open Inbound Shipment report
-
-This report facilitates the management of open inbound shipments for retailers by providing an overview of the transfer process, enhancing accuracy and operational efficiency.
-
-For retailers, this report helps to monitor the status of inbound shipments, tracks their journey to destination facilities, and verifies the receipt of goods. Key details such as destination facility, external ID (Netsuite ID), tracking code, and WMS(Warehouse management system) ID are included, offering a detailed overview of each inbound shipment for streamlined identification and effective management.
-
-### User
-Head of Store, Vice President of Retail
-
-### Glossary
-| Field          | Description                                                                                      |
-|----------------|--------------------------------------------------------------------------------------------------|
-| External Id (WMS) | Identification code used in the WMS to track items externally.                                   |
-| External Id       | An identification code used externally for tracking purposes.                                     |
-| Tracking Code     | Code used to monitor the orders.                                                                 |
-| Facility          | Location of a physical store or warehouse.                                                       
+| Completed Date    | Date of task completion.                          |                                                   
 
 ## Open Transfer order shipment
 
@@ -503,10 +449,6 @@ Head of Store, Vice President of Retail
 | Shipping Location | The shipment's origin or point of dispatch, such as a warehouse or fulfillment center.                  |
 | Units Shipped     | The quantity of items included in the shipment. It helps ensure that the correct number of products is sent to the customer. |
 
-# Inventory Reports
-
-Effective inventory management is integral to ensuring operational efficiency and accuracy in supply chain processes. The following reports play a crucial role in providing insights into inventory status and discrepancies:
-
 ## Pending Cycle Count report
 
 The Pending Cycle Count report presents products awaiting counting at a facility where a recent cycle count has occurred. Inactive products, characterized by a zero inventory that has remained unchanged for the last month, are excluded to ensure that only active products are included in the report. This selective approach aims to provide an accurate representation of products requiring attention for inventory verification and reconciliation.
@@ -520,7 +462,5 @@ The Pending Cycle Count report presents products awaiting counting at a facility
 | PRODUCT\_ID    | The ID of the product in HotWax Commerce                  |
 | PRODUCT\_SKU   | Unique identifier                                         |
 
-## Variance By Facility report
 
-The Variance By Facility report serves to monitor facilities reporting higher manual negative variances. The results are organized by facilities with the highest variances, further detailed by the reasons reported for each variance. This breakdown facilitates a granular understanding of discrepancies, aiding in pinpointing specific areas that require attention and corrective measures. The sorted presentation allows for an efficient prioritization of efforts to address and resolve variances across different facilities.
 
