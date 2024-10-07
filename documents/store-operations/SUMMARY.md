@@ -41,3 +41,4 @@
 * [Transfer Orders](transfer-order/transfer-order-management.md)
   * [Transfer Order Fulfillment](transfer-order/transfer-order-fulfillment.md)
   * [Transfer Order Receiving](transfer-order/transfer-order-receiving.md)
+  * [Transfer Order Picklist](transfer-order/picklist.md)
