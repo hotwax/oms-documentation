@@ -219,8 +219,7 @@
 '217': .
 description: >-
   This document describes the Picklist Functionality for Store Transfer
-  Fulfillment, providing a streamlined approach for store associates to
-  efficiently pack items while accurately tracking them in Hot
+  Fulfillment.
 ---
 
 # Transfer Order Picklist
