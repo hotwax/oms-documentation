@@ -266,7 +266,7 @@ Follow these steps to use the picklist functionality and refer to this document 
 * For each box, select the items that were packed, then click Create Shipment.
 * Generate the shipping label for each box based on the items packed.
 
-### 4. Complete the Process:
+#### 4. Complete the Process:
 
 * Continue using the picklist for any additional boxes or items in the TO.
 * Once all shipments are created and labels generated, the process is complete.
