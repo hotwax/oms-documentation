@@ -20,5 +20,5 @@ The frequency of reminder notifications can be configured through the `Open BOPI
 
 Users can configure the notification settings in two ways.
 
-1. Users can also use the click on the `bell` icon on the top right corner of the `Orders` page, this will open the `Notifications` page. Once they have accessed the Notifications page, they can click on the `settings` icon at the top right corner of the page and configure notification preferences.
-2. Users can use the `Notification Preference` card on the `Settings` page of the BOPIS app.
+1. Users can click on the `bell` icon on the top right corner of the `Orders` page, this will open the `Notifications` page. Once they have accessed the Notifications page, they can click on the `settings` icon at the top right corner of the page and configure notification preferences.
+2. Users can also use the `Notification Preference` card on the `Settings` page of the BOPIS app.
