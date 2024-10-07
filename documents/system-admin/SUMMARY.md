@@ -14,6 +14,7 @@
   * [Manage Users](administration/users/manageUser.md)
   * [Manage User Permissions](administration/users/user-permission.md)
   * [Create Pickers](fulfillment/add-picker.md)
+  * [How to Bulk Import Employee](administration/users/troubleshooting/bulk-import-employee.md)
   * [Troubleshooting](administration/users/troubleshooting/README.md)
     * [Application Access Issue](administration/users/application-access-issue.md)
 * [User Permissions](administration/permissions/introduction.md)
