@@ -59,3 +59,10 @@ Users can select the notifications they want to receive in the BOPIS app.
 * **New order notification:** Enable or disable notifications for any new orders.
 * **Open order notification:** Enable or disable notifications for pending open orders.
 * **Ready for pickup order notification:** Enable or disable notifications for orders that are ready to be picked up by customers.
+
+<div align="center" data-full-width="false">
+
+<figure><img src="../.gitbook/assets/Screenshot from 2024-10-08 19-48-43.png" alt=""><figcaption><p>BOPIS setting page </p></figcaption></figure>
+
+</div>
+
