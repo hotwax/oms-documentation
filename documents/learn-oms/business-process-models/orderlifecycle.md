@@ -188,7 +188,7 @@ When orders are downloaded from eCommerce into HotWax Commerce in a <mark style=
 
 * **Newly canceled orders:** Any orders that are canceled in eCommerce before being downloaded into HotWax Commerce are automatically moved to the `General Ops Parking` in a <mark style="color:orange;">**“Canceled”**</mark> status, ensuring that they are not processed further.
   
-* **Completed digital product orders:** Orders for digital products, such as digital gift cards are downloaded as <mark style="color:orange;">**“Completed”**</mark> and are also placed to the `General Ops Parking` since they require no further processing.
+* **Completed digital product orders:** Orders for digital products, such as digital gift cards, are downloaded as <mark style="color:orange;">**“Completed”**</mark> and are also placed to the `General Ops Parking` since they require no further processing.
 
 This ensures that only open and actionable orders are processed for fulfillment, while orders that no longer require any operational steps are kept for record-keeping.
 
