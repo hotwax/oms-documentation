@@ -39,8 +39,11 @@ If an order fails to pass the approval, it remains in the <mark style="color:ora
 HotWax Commerce supports the processing of various types of orders, including standard orders, BOPIS (Buy Online, Pick Up In Store) orders, Pre-Orders, and Backorders. Here’s a brief explanation of each type:
 
 * **Standard orders:** Standard shipping orders placed online for home delivery.
+  
 * **BOPIS orders:** Orders placed online with the intention of picking up the items in-store.
+  
 * **Pre-Orders:** Orders placed for products that are not yet available for delivery and will be available on a future promised date.
+  
 * **Backorders:** Orders placed for products that are currently out-of-stock, with delivery scheduled for a future promised date.
 
 Each order has its distinct fulfillment process, making it essential to recognize and handle them accordingly for efficient processing. Now, let's explore how HotWax Commerce processes different order types:
@@ -177,3 +180,29 @@ If an approved order has been allocated to the store, HotWax Commerce also autom
 **Orders canceled in HotWax Commerce:**
 
 Similar to order cancellations initiated on the eCommerce platform, in HotWax Commerce, orders can be canceled whether they are in the "Created" or "Approved" status, provided that the order has not yet been shipped. When an order is canceled, its status is updated from <mark style="color:orange;">**"Created" to "Canceled"**</mark> or from <mark style="color:orange;">**"Approved" to "Canceled,"**</mark> depending on the current stage of the order.
+
+## Managing Completed and Canceled Orders from eCommerce
+
+When orders are downloaded from eCommerce into HotWax Commerce in a “Completed” or “Canceled” status, they are automatically placed in the `General Ops Parking`. This occurs when historical data is imported during implementation. Instead of being funneled into the active fulfillment workflow, these orders are stored separately to ensure that only open sales orders proceed for fulfillment.
+
+The `General Ops Parking` also helps manage specific cases where new orders are canceled or completed in eCommerce before being downloaded into HotWax Commerce. For example, new orders canceled in eCommerce before download will move to the General Ops Parking in the “Canceled” status. Similarly, certain types of orders, such as digital products (e.g., digital gift cards) that are marked as “Completed” in eCommerce, are also downloaded into HotWax Commerce in a "Completed" status and moved to the General Ops Parking.
+
+**So, which orders move to the `General Ops Parking`?**
+
+* **Historical orders:** Orders that were already in a "Completed" or "Canceled" status in eCommerce when historical data is imported into HotWax Commerce.
+  
+* **Newly canceled orders:** Orders canceled in eCommerce before being downloaded into HotWax Commerce, automatically moved to the `General Ops Parking` in a “Canceled” status.
+  
+* **Completed digital product orders:** Orders for digital products, such as digital gift cards, which are downloaded in a “Completed” status from eCommerce, are also moved to the `General Ops Parking`.
+
+This ensures that only open and actionable orders enter the fulfillment process, while historical, canceled, and digital orders are stored separately for record-keeping.
+
+## Managing POS Orders
+
+In the previous sections, we discussed various stages of the order lifecycle, primarily focusing on online orders. However, HotWax Commerce also manages sales made through physical retail locations via POS systems. These in-store purchases, which involve real-time fulfillment, are also downloaded into HotWax Commerce and are automatically assigned a "Completed" status. This ensures that the inventory is updated instantly and provides a unified view of both online and in-store sales.
+
+{% hint style="success" %}
+The comprehensive process outlined in the Order Lifecycle Business Process Model demonstrates how HotWax Commerce ensures that every order, regardless of its type, is efficiently managed and accurately fulfilled, providing retailers with the control and flexibility needed in an omnichannel environment.
+{% endhint %}
+
+
