@@ -63,7 +63,7 @@ Now that physical gift card orders have been approved, they are automatically se
 
 In the event where a gift card order is allocated to a warehouse fulfillment location, HotWax Commerce synchronizes allocation details to NetSuite.
 
-When a gift card is allocated to stores for fulfillment, they automatically show up in the HotWax Commerce `Store Fulfillment App`.
+When a gift card is allocated to stores for fulfillment, they automatically show up in the HotWax Commerce `Fulfillment App`.
 
 ### 5. Orders Allocated to Warehouse
 
@@ -94,21 +94,25 @@ NetSuite's script exports item fulfillment records marked as <mark style="color:
 
 ### 5. Orders Allocated to Store
 
-Now, let's see how are physical gift card orders fulfilled from stores.
+Let's take a look at how physical gift card orders are fulfilled from stores.
 
-Fulfillment teams at the store prepare gift card orders for shipment.
+When physical gift cards are allocated to a store, they automatically appear in the HotWax Commerce Fulfillment App. The store’s fulfillment team uses the app to prepare these gift card orders for shipment.
 
-* Upon successful picking of a gift card item, the fulfillment status is changed to <mark style="color:orange;">**"Picked"**</mark>.
-* Once the item has been packed, the fulfillment status is updated to <mark style="color:orange;">**"Packed"**</mark>.
-* Similar to fulfilling physical gift card orders in NetSuite, as part of the fulfillment process, store associates assign a unique serial number to each gift card and load the corresponding value onto it. Finally, when the item is marked as shipped in the `Store Fulfillment App`, the fulfillment status is then updated to <mark style="color:orange;">**"Shipped"**</mark>.
+* Once a gift card item is successful picked, the fulfillment status changes to <mark style="color:orange;">**"Picked"**</mark>.
+* After packing, the status updates to <mark style="color:orange;">**"Packed"**</mark>.
+* When the item is marked as shipped in the Fulfillment App, the fulfillment status is updated to "Shipped."
+* As part of the process, store associates assign a unique serial number to each gift card and load the corresponding value onto it.
+* Finally, when the item is marked as shipped in the `Fulfillment App`, the fulfillment status is then updated to <mark style="color:orange;">**"Shipped"**</mark>.
 
 ### 6. Activation of Gift Cards
 
-Most of our customers leverage Shopify POS at their store location. In this scenario, store associates directly apply a unique serial number and load the corresponding value onto the gift card in Shopify POS. This activation step ensures that the gift card is fully functional and customers can use the unique serial number they received in their email to redeem the value stored in the gift card.
+HotWax Commerce Fulfillment App also enables store associates to activate gift cards directly. During fulfillment, when a unique serial number is applied and the value is loaded onto the card, HotWax Commerce runs a scheduled job to sync these codes with Shopify, where the gift cards are activated.
+
+This activation step ensures that the gift card is fully functional and customers can use the unique serial number they received in their email to redeem the value stored in the gift card.
 
 ### 7. Order Item Shipped
 
-When all items of an order are marked <mark style="color:orange;">**“Shipped”**</mark> in the `Store Fulfillment App`, the order status is automatically updated from <mark style="color:orange;">**“Approved”**</mark> to <mark style="color:orange;">**“Completed”**</mark> in HotWax Commerce.
+When all items of an order are marked <mark style="color:orange;">**“Shipped”**</mark> in the `Fulfillment App`, the order status is automatically updated from <mark style="color:orange;">**“Approved”**</mark> to <mark style="color:orange;">**“Completed”**</mark> in HotWax Commerce.
 
 In HotWax Commerce, a scheduled job prepares and exports a feed containing gift card items marked as "Shipped". NetSuite’s script consumes these records and multiple actions take place:
 
@@ -122,7 +126,7 @@ This marks the completion of physical gift card orders in NetSuite.
 
 Once a gift card order reaches the <mark style="color:orange;">**"Completed"**</mark> status in HotWax Commerce, a scheduled job in HotWax Commerce sends the tracking details to Shopify and marks the gift card orders as <mark style="color:orange;">**“Fulfilled”**</mark>.
 
-This process remains consistent regardless of whether the gift card order fulfillment is performed in NetSuite or the `Store Fulfillment App`.
+This process remains consistent regardless of whether the gift card order fulfillment is performed in NetSuite or the `Fulfillment App`.
 
 {% hint style="success" %}
 This marks the completion of the physical gift card order lifecycle.
