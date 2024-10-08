@@ -52,6 +52,8 @@
 
 * [Add DBIC](initial-setup/AddDBICs.md)
 * [Load Facilities](initial-setup/LoadFacilities.md)
+* [Bulk Import Employees](initial-setup/bulk-import-employee.md)
+* [Bulk Import BOPIS Orders](initial-setup-bulk-import-employee.md)
 
 ## Inventory
 
