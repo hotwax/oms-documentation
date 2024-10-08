@@ -34,6 +34,7 @@
 * [Mismatch Time Zone](sop/timezone-mismatch.md)
 * [POS Order Refresh Failure](sop/pos-order-refresh-failure.md)
 * [Stuck Orders in Fulfillment App](sop/stuck-orders.md)
+* [Product Duplication](sop/duplicate-products.md)
 
 ## Napita
 
