@@ -10,6 +10,13 @@
 
 ## 2024
 
+* [Sep'23](2024/sep23/README.md)
+  * [Update Customers with Post-Purchase Shipment Status](2024/sep23/update-customers-with-post-purchase-shipment-status.md)
+  * [Bulk Import Cycle Counts](2024/sep23/bulk-import-cycle-counts.md)
+  * [View Picklist for BOPIS Orders](2024/sep23/view-picklist-for-bopis-orders.md)
+  * [Activate Gift Cards Directly from Fulfillment App](2024/sep23/activate-gift-cards-directly-from-fulfillment-app.md)
+  * [Choose Rejection Reasons for Kit Components](2024/sep23/choose-rejection-reasons-for-kit-components.md)
+  * [Generate Shipping Labels from Preferred Carrier](2024/sep23/generate-shipping-labels-from-preferred-carrier.md)
 * [Aug'24](2024/aug24/README.md)
   * [Set up Inventory Synchronization Jobs Within the ATP App](2024/aug24/set-up-inventory-synchronization-jobs-within-the-atp-app.md)
   * [Launched New Version of the Cycle Count App](2024/aug24/launched-new-version-of-the-cycle-count-app.md)
