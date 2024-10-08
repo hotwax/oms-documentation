@@ -183,13 +183,15 @@ Similar to order cancellations initiated on the eCommerce platform, in HotWax Co
 
 ## Managing Completed and Canceled Orders from eCommerce
 
-When orders are downloaded from eCommerce into HotWax Commerce in a “Completed” or “Canceled” status, they are automatically placed in the `General Ops Parking`. This occurs when historical data is imported during implementation. Instead of being funneled into the active fulfillment workflow, these orders are stored separately to ensure that only open sales orders proceed for fulfillment.
+When orders are downloaded from eCommerce into HotWax Commerce in a <mark style="color:orange;">**“Completed” or “Canceled”**</mark> status, they are automatically placed in the `General Ops Parking`. This occurs when historical data is imported during implementation. Instead of being funneled into the active fulfillment workflow, these orders are stored separately to ensure that only open sales orders proceed for fulfillment.
 
-The `General Ops Parking` also helps manage specific cases where new orders are canceled or completed in eCommerce before being downloaded into HotWax Commerce. For example, new orders canceled in eCommerce before download will move to the General Ops Parking in the “Canceled” status. Similarly, certain types of orders, such as digital products (e.g., digital gift cards) that are marked as “Completed” in eCommerce, are also downloaded into HotWax Commerce in a "Completed" status and moved to the General Ops Parking.
+The `General Ops Parking` also helps manage specific cases where new orders are <mark style="color:orange;">**“Completed” or “Canceled”**</mark> in eCommerce before being downloaded into HotWax Commerce.
+
+For example, new orders canceled in eCommerce before download will move to the General Ops Parking in the <mark style="color:orange;">**“Canceled”**</mark> status. Similarly, certain types of orders, such as digital products (e.g., digital gift cards) that are marked as “Completed” in eCommerce, are also downloaded into HotWax Commerce in a "Completed" status and moved to the General Ops Parking.
 
 **So, which orders move to the `General Ops Parking`?**
 
-* **Historical orders:** Orders that were already in a "Completed" or "Canceled" status in eCommerce when historical data is imported into HotWax Commerce.
+* **Historical orders:** Orders that were already in a <mark style="color:orange;">**“Completed” or “Canceled”**</mark> status in eCommerce when historical data is imported into HotWax Commerce.
   
 * **Newly canceled orders:** Orders canceled in eCommerce before being downloaded into HotWax Commerce, automatically moved to the `General Ops Parking` in a “Canceled” status.
   
