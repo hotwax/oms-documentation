@@ -196,7 +196,7 @@ This ensures that only open and actionable orders enter the fulfillment process,
 
 ## Managing POS Orders
 
-In the previous sections, we discussed various stages of the order lifecycle, primarily focusing on online orders. However, HotWax Commerce also manages sales made through physical retail locations via POS systems. These in-store purchases, which involve real-time fulfillment, are also downloaded into HotWax Commerce and are automatically assigned a <mark style="color:orange;">**"Completed"**</mark> status. This ensures that the inventory is updated instantly and provides a unified view of both online and in-store sales.
+In the previous sections, we discussed various stages of the order lifecycle, primarily focusing on online orders. HotWax Commerce also manages sales made through physical retail locations via POS systems. These in-store purchases, which involve real-time fulfillment, are also downloaded into HotWax Commerce and are automatically assigned a <mark style="color:orange;">**"Completed"**</mark> status. This ensures that the inventory is updated instantly and provides a unified view of both online and in-store sales.
 
 {% hint style="success" %}
 The comprehensive process outlined in the Order Lifecycle Business Process Model demonstrates how HotWax Commerce ensures that every order, regardless of its type, is efficiently managed and accurately fulfilled, providing retailers with the control and flexibility needed in an omnichannel environment.
