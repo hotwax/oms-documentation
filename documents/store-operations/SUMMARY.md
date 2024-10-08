@@ -17,6 +17,8 @@
   * [Ship to Store](bopis/ship-to-store.md)
   * [Catalog Page](bopis/catalog-page.md)
   * [Settings Page](bopis/settings-page.md)
+  * Troubleshooting
+    * [Notification error](bopis/notifications.md)
     
 * [Fulfillment](fulfillment/README.md)
   * [Order Fulfillment](fulfillment/shipOrders.md)
