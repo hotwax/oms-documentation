@@ -6,7 +6,7 @@ When an item is marked unfillable after a failed brokering attempt, users can se
 ## Step-by-Step Usage Instructions:
 
 #### 1. **Access the Order Routing App**
-   - **Navigate to:** Launchpad > `Order Routing` App. This is where you configure brokering runs and set up auto-cancellation rules for unfillable orders. Inventory managers or fulfillment team members typically use this to manage order fulfillment and brokering logic.
+   - **Navigate to:** Launchpad > `Order Routing` [App](../brokering/configurableRouting.md). This is where you configure brokering runs and set up auto-cancellation rules for unfillable orders. Inventory managers or fulfillment team members typically use this to manage order fulfillment and brokering logic.
 
 #### 2. **Select the Brokering Run**
    - Choose the brokering run for which you want to set an auto-cancellation date. Different brokering runs may handle various fulfillment strategies for example unfillable order brokering runs may be different from regular runs, so selecting the right run ensures the proper application of auto-cancellation rules.
