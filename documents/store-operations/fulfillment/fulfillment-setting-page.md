@@ -11,6 +11,12 @@ Settings for the Fulfillment app can be accessed by clicking on the setting butt
 
 The Fulfillment app's settings page encompasses various configurations such as:
 
+<div data-full-width="false">
+
+<figure><img src="../.gitbook/assets/fulfillment application setting page .png" alt=""><figcaption></figcaption></figure>
+
+</div>
+
 #### Product Store
 
 If your OMS (Order Management System) is integrated with multiple eCommerce stores that offer distinct collections of products, you might have several Product Stores configured within HotWax Commerce. Setting Page of Fulfillment App provides a space where you can choose a product store for which you want to fulfill orders for.
