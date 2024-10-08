@@ -1,4 +1,4 @@
-# How to Guide: Bulk Import Employee
+# How to Guide: Bulk Import Employees
 
 ## Problem:
 When importing employee data into OMS, specific issues may occur that can prevent a successful bulk import. This guide will assist you in troubleshooting and resolving common problems that may arise during the employee import process.
