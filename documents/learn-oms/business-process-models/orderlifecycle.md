@@ -186,7 +186,7 @@ The `General Ops Parking` also helps manage specific cases where new orders are 
 
 For example, new orders canceled in eCommerce before download will move to the `General Ops Parking` in the <mark style="color:orange;">**“Canceled”**</mark> status. Similarly, certain types of orders, such as digital products (e.g., digital gift cards) that are marked as <mark style="color:orange;">**“Completed”**</mark> in eCommerce, are also downloaded into HotWax Commerce in a <mark style="color:orange;">**"Completed"**</mark> status and moved to the `General Ops Parking`.
 
-**So, orders move to the** 'General Ops Parking` **are:**
+**So, orders move to the** `General Ops Parking` **are:**
 
 * **Historical orders:** Orders that were already in a <mark style="color:orange;">**“Completed” or “Canceled”**</mark> status in eCommerce when historical data is imported into HotWax Commerce.
 * **Newly canceled orders:** Orders canceled in eCommerce before being downloaded into HotWax Commerce, automatically moved to the `General Ops Parking` in a <mark style="color:orange;">**“Canceled”**</mark> status.
