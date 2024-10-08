@@ -96,17 +96,16 @@ NetSuite's script exports item fulfillment records marked as <mark style="color:
 
 Let's take a look at how physical gift card orders are fulfilled from stores.
 
-When physical gift cards are allocated to a store, they automatically appear in the HotWax Commerce Fulfillment App. The store’s fulfillment team uses the app to prepare these gift card orders for shipment.
+When physical gift cards are allocated to a store, they automatically appear in the HotWax Commerce `Fulfillment App`. The store’s fulfillment team uses the app to prepare these gift card orders for shipment.
 
 * Once a gift card item is successful picked, the fulfillment status changes to <mark style="color:orange;">**"Picked"**</mark>.
 * After packing, the status updates to <mark style="color:orange;">**"Packed"**</mark>.
-* When the item is marked as shipped in the Fulfillment App, the fulfillment status is updated to "Shipped."
 * As part of the process, store associates assign a unique serial number to each gift card and load the corresponding value onto it.
 * Finally, when the item is marked as shipped in the `Fulfillment App`, the fulfillment status is then updated to <mark style="color:orange;">**"Shipped"**</mark>.
 
 ### 6. Activation of Gift Cards
 
-HotWax Commerce Fulfillment App also enables store associates to activate gift cards directly. During fulfillment, when a unique serial number is applied and the value is loaded onto the card, HotWax Commerce runs a scheduled job to sync these codes with Shopify, where the gift cards are activated.
+HotWax Commerce `Fulfillment App` also enables store associates to activate gift cards directly. During fulfillment, when a unique serial number is applied and the value is loaded onto the card, HotWax Commerce runs a scheduled job to sync these codes with Shopify, where the gift cards are activated.
 
 This activation step ensures that the gift card is fully functional and customers can use the unique serial number they received in their email to redeem the value stored in the gift card.
 
@@ -114,10 +113,10 @@ This activation step ensures that the gift card is fully functional and customer
 
 When all items of an order are marked <mark style="color:orange;">**“Shipped”**</mark> in the `Fulfillment App`, the order status is automatically updated from <mark style="color:orange;">**“Approved”**</mark> to <mark style="color:orange;">**“Completed”**</mark> in HotWax Commerce.
 
-In HotWax Commerce, a scheduled job prepares and exports a feed containing gift card items marked as "Shipped". NetSuite’s script consumes these records and multiple actions take place:
+In HotWax Commerce, a scheduled job prepares and exports a feed containing gift card items marked as <mark style="color:orange;">**“Shipped”.**</mark> NetSuite’s script consumes these records and multiple actions take place:
 
 * The item fulfillment record is created and marked as <mark style="color:orange;">**“Shipped”.**</mark>
-* The initial order status is updated from “Pending Fulfillment” to <mark style="color:orange;">**“Pending Billing”**</mark>.
+* The initial order status is updated from <mark style="color:orange;">**“Pending Fulfillment”**</mark> to <mark style="color:orange;">**“Pending Billing”**</mark>.
 * Finally, once the invoice is auto generated, the order status is updated from <mark style="color:orange;">**“Pending Billing”**</mark> to <mark style="color:orange;">**“Billed”**</mark>.
 
 This marks the completion of physical gift card orders in NetSuite.
@@ -152,7 +151,7 @@ Digital gift cards are auto-activated and customers can directly redeem them by 
 
 Digital gift cards are already in the <mark style="color:orange;">**“Completed”**</mark> status in HotWax Commerce. HotWax Commerce also synchronizes them with NetSuite so that customer deposits can be created against them and invoices can be generated.
 
-* A scheduled job in HotWax Commerce Integration Platform generates a feed gift card orders that are in “Completed” status and do not have a NetSuite order item line IDs. This helps make sure that only relevant orders are synchronized to NetSuite and regular orders that are <mark style="color:orange;">**“Completed”**</mark> in HotWax Commerce are not synchronized again to NetSuite.
+* A scheduled job in HotWax Commerce Integration Platform generates a feed gift card orders that are in <mark style="color:orange;">**“Completed”**</mark> status and do not have a NetSuite order item line IDs. This helps make sure that only relevant orders are synchronized to NetSuite and regular orders that are <mark style="color:orange;">**“Completed”**</mark> in HotWax Commerce are not synchronized again to NetSuite.
 * NetSuite’s script reads this feed and creates gift card orders in the <mark style="color:orange;">**“Pending Fulfillment”**</mark> status.
 
 ### 3. Synchronize Orders ID and Item Line IDs to HotWax Commerce
