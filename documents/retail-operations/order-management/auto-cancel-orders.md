@@ -21,6 +21,9 @@ When an item is marked unfillable after a failed brokering attempt, users can se
    - Go to the "Unavailable Item" card and add the desired auto-cancel date in the `Auto-Cancel Date` chip. This defines the time frame (e.g., 5 days) for holding the unfillable item before it is automatically canceled. 
    - You can move the item to `unfillable parking` for the item with unavailable inventory so that it can be easily differentiated with the regular orders.
 
+<img width="586" alt="auto-cancellation" src="https://github.com/user-attachments/assets/d3d31c91-a612-45b4-99c0-e1c4b4e3f0af">
+
+
 ## Removing Auto-Cancellations
 
 - If the inventory for an unfillable item is expected to arrive soon or if the order needs to be held longer, you can remove the auto-cancel date.
@@ -32,6 +35,9 @@ When an item is marked unfillable after a failed brokering attempt, users can se
   3. **Move the Order to Unfillable Hold Queue:** Instead of canceling, you can send the order to the `unfillable hold queue` if you anticipate the inventory arriving soon. This step ensures that the order is retained in the system until the item is back in stock, improving order fulfillment efficiency. 
   
 Using these options, you can control when and how unfillable orders are managed, ensuring better coordination and reduced chances of unnecessary order cancellations.
+
+<img width="586" alt="clear auto cancellation" src="https://github.com/user-attachments/assets/06f8c649-0fa0-40eb-a1a0-bdc1b3da0735">
+
 
 ## Monitoring Unfillable Orders
 
