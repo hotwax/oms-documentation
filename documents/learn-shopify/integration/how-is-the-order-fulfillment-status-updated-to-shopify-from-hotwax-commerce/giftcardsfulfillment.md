@@ -16,11 +16,11 @@ Orders with physical gift cards are not auto-fulfilled in Shopify. Therefore, Ho
 
 ## Fulfillment of Gift Cards in Store
 
-After physical gift cards are allocated, HotWax Commerce begins syncing them to systems that are responsible for fulfillment of those items. In the event where gift cards are allocated to a store for fulfillment, they show up in the HotWax Store Fulfillment App.
+After physical gift cards are allocated, HotWax Commerce begins syncing them to systems that are responsible for fulfillment of those items. In the event where gift cards are allocated to a store for fulfillment, they show up in the HotWax Fulfillment App.
 
 As part of the fulfillment process, store associates assign a unique serial number to each gift card and load the corresponding value onto it. This ensures that when customers receive their orders, they can easily redeem the value by using the serial number provided on the gift card.
 
-Once the gift card order is fulfilled in the Store Fulfillment App, it is automatically marked as "Completed" in HotWax Commerce.
+Once the gift card order is fulfilled in the Fulfillment App, it is automatically marked as "Completed" in HotWax Commerce.
 
 The fulfillment update for gift card orders, along with tracking details, is synchronized to Shopify using the `Completed Orders` job.
 
@@ -36,7 +36,7 @@ When walk-in customers purchase a gift card from the store, it is treated as a r
 
 ### Activation of Gift Cards
 
-In the activation process, store associates directly apply a unique serial number and load the corresponding value onto the gift card in Shopify POS. This activation step ensures that the gift card is fully functional.
+Store associates initiate the gift card activation directly from the HotWax Fulfillment App. A scheduled job in HotWax Commerce automatically syncs these activation details to Shopify, so that these gift cards can be activated and redeemed right after customers receive their orders.
 
 {% hint style="info" %}
 Digital gift cards are auto-activated and customers can directly redeem them by entering a unique serial number provided with the card.
