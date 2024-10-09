@@ -35,6 +35,8 @@
 * [POS Order Refresh Failure](sop/pos-order-refresh-failure.md)
 * [Stuck Orders in Fulfillment App](sop/stuck-orders.md)
 * [Product Duplication](sop/duplicate-products.md)
+* [Ticket and Release Managemnet](sop/ticket-management.md)
+* [Job Runtime Error](sop/runtime-error.md)
 
 ## Napita
 
