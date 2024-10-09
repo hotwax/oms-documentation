@@ -22,7 +22,7 @@ description: Discover  the versions of HotWax Commerce OMS releases.
 | Diff            | [Link to diff](https://git.hotwax.co/commerce/oms/-/compare/v5.17.3...v5.17.4?from_project_id=161&straight=false)    |
 | Changelog       | [Link to changelog](https://git.hotwax.co/commerce/oms/-/blob/v5.17.4/CHANGELOG.md?ref%5C_type=tags&ref_type=tags)   |
 
-## Hotfix - v5.17.2 (06th October 2024)
+## Hotfix - v5.17.3 (06th October 2024)
 
 | Information     | Value                                                                                                                |
 | --------------- | -------------------------------------------------------------------------------------------------------------------- |
