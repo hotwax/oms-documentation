@@ -5,7 +5,7 @@ The Order Routing App in HotWax Commerce provides retailers with a variety of cu
 ### Order Filters
 
 1. **Origin Facility Groups**\
-   This parameter allows retailers to filter orders based on the facility group from which they originated. For example, if a retailer wants all SendSale orders from specific facilities to be routed to a warehouse only, they can apply this filter. It is especially useful for ensuring that orders from certain facility groups are handled consistently based on their origin.
+   This parameter allows retailers to filter SendSale orders based on the facility group from which they originated. For example, if a retailer wants all SendSale orders from specific facilities to be routed to a warehouse only, they can apply this filter. It is especially useful for ensuring that orders from certain facility groups are handled consistently based on their origin.
 2. **Shipping Methods**\
    Retailers can define brokering logic based on specific shipping methods. For instance, a retailer may decide not to broker next-day orders to any facility that is more than 100 miles away, ensuring that expedited orders are fulfilled from closer locations to meet delivery timeframes.
 3. **Order Priority**\
@@ -16,7 +16,6 @@ The Order Routing App in HotWax Commerce provides retailers with a variety of cu
    This parameter allows retailers to apply specific rules to orders originating from a particular sales channel. For example, retailers can route all marketplace orders to warehouses, ensuring consistent and efficient fulfillment of marketplace sales.
 6. **Queues**\
    HotWax Commerce uses virtual queues to park orders that are not brokered to a facility. Retailers can filter by queue type (e.g., brokering queue, rejected parking, or unfillable parking) to determine which orders should be brokered to available inventory.
-
 
 
 <figure><img src="../.gitbook/assets/order filter.png" alt=""><figcaption></figcaption></figure>
