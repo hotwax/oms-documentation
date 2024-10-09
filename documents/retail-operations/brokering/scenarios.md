@@ -250,7 +250,7 @@ HotWax Commerce allows retailers to manage these scenarios by disabling the spli
 ### Steps to Implement
 
 1. **Create Inventory Rule for Order Batch**
-   - **Access Inventory Rules**: Begin by creating an inventory rule within the HotWax Commerce Order Management System. This will be applied to the specific batch of orders where grouped items need to be managed.
+   - **Access Inventory Rules**: Begin by creating an inventory rule within the HotWax Commerce Order Routing App. This will be applied to the specific batch of orders where grouped items need to be managed.
 
 2. **Configure Partial Allocation Settings**
    - **Navigate to Partial Allocation**: Within the inventory rule settings, locate the "Partially Available" card. This section allows you to configure how items are allocated when they are not fully available at a single location.
