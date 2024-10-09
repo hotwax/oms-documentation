@@ -54,6 +54,8 @@ Set how often the job runs.
 
 Make changes to the job's parameters, settings, or execution details as necessary, allowing users to set up workflows specific to their scenarios. Custom parameters have to be configured before a scheduled job and cannot be changed while a job is pending execution.
 
+<figure><img src="../../.gitbook/assets/Job Actions.png" alt="" width="375"><figcaption></figcaption></figure>
+
 ***
 
 ## How to schedule a job?
@@ -75,12 +77,8 @@ Make changes to the job's parameters, settings, or execution details as necessar
 Video: Schedule a job
 {% endembed %}
 
-
-
 ## Debugging
 
 #### **Copy details**
 
 Quickly share the important job related information such as job's ID, name, description, and runtime for debugging.
-
-

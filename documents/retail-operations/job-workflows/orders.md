@@ -4,9 +4,9 @@ description: Explore job workflows for importing various types of orders into OM
 
 # Orders
 
-### Shopify
+## Shopify
 
-#### Import Orders
+### Import Orders
 
 * **Job Enum ID:** JOB\_IMP\_ORD
 * **Job Name:** Import Orders
@@ -36,9 +36,9 @@ The Import Orders job is primarily used for the regular flow of orders and is no
 | **`thruDateBuffer`** | Optional | Skips Shopify orders created within the specified time interval. For example, if `thruDateBuffer` is set to 1, it implies that orders created in Shopify within the last 1 minute will be skipped during the import process.         | 2 minutes         | 1 minute          |
 | **`scheduleNow`**    | Optional | When importing files into the OMS, forces the system to pick the file out of sequence for immediate processing. Enabled by default when importing files from FTP, but can be disabled during high-volume syncs for system stability. | Enabled           | false             |
 
-***
+<figure><img src="../.gitbook/assets/Import order Job Card (1).png" alt="" width="375"><figcaption></figcaption></figure>
 
-#### Import Order Updates from Shopify
+### Import Order Updates from Shopify
 
 * **Job Enum ID:** JOB\_IMP\_ORD\_UPD
 * **Job Name:** Import Order Updates from Shopify
@@ -66,9 +66,9 @@ The job is configured to run every 60 minutes, ensuring frequent updates and mai
 | **`frequency`**  | Required | Defines the default duration for syncing orders if there is no `Last Sync Time`.                                                  | 60 minutes        | 10                |
 | **`bufferTime`** | Optional | Ensures orders are not imported until they have aged past a desired duration, accommodating post-processing workflows in Shopify. | Not specified     | 15 minutes        |
 
-***
+<figure><img src="../.gitbook/assets/Import order updates from shopify.png" alt="" width="375"><figcaption></figcaption></figure>
 
-#### Import Canceled Items
+### Import Canceled Items
 
 * **Job ID:** JOB\_IMP\_ITM\_CNCL
 * **Job Name:** Import Canceled Items
@@ -96,9 +96,9 @@ The job is configured to run every 15 minutes, ensuring a regular check for canc
 | **`frequency`**  | Required | Defines the default duration for syncing orders if there is no `Last Sync Time`.                                                  | 15 minutes        | 10                |
 | **`bufferTime`** | Optional | Ensures orders are not imported until they have aged past a desired duration, accommodating post-processing workflows in Shopify. | Not specified     | 5 minutes         |
 
-***
+<figure><img src="../.gitbook/assets/Import cancled Items.png" alt="" width="375"><figcaption></figcaption></figure>
 
-#### Import Order Returns
+### Import Order Returns
 
 * **Job ID:** JOB\_IMP\_RTN
 * **Job Name:** Import Order Returns
@@ -137,9 +137,9 @@ The job is configured to run every 15 minutes, ensuring a regular check for retu
 | **`financialStatus`** | Optional | Specifies the financial status of orders.                                                                                         | Not specified     | `paid`            |
 | **`limit`**           | Optional | Sets a limit on the order import job, restricting the number of orders fetched from eCommerce.                                    | Not specified     | 100               |
 
-***
+<figure><img src="../.gitbook/assets/Import Order Returns.png" alt="" width="370"><figcaption></figcaption></figure>
 
-#### Upload Completed Orders
+### Upload Completed Orders
 
 * **Job ID:** JOB\_UL\_CMPLT\_ORD
 * **Job Name:** Upload Completed Orders
@@ -168,7 +168,9 @@ The job is configured to run at a frequency that suits the needs of your busines
 | **`orderID`**             | Required | The ID associated with the order to be updated on the eCommerce platform. | Not specified     | "ORD789012"       |
 | **`shipmentCreatedDate`** | Required | The timestamp associated with the creation of shipments.                  | Not specified     | "1649883480000"   |
 
-#### Order Item Attribute
+<figure><img src="../.gitbook/assets/Upload Complete orders.png" alt="" width="370"><figcaption></figcaption></figure>
+
+### Order Item Attribute
 
 * **Job ID:** JOB\_ORDER\_ITM\_ATTR
 * **Job Name:** Order Item Attribute
@@ -204,9 +206,9 @@ The job is configured to run at a frequency that suits the needs of your busines
 | **`fileNameRegex`**        | Optional | Specifies a regular expression for filtering filenames.                                                                                                                                                                              | Not specified     | ^OrderAttr\_\d+.csv$        |
 | **`scheduleNow`**          | Optional | When importing files into the OMS, forces the system to pick the file out of sequence for immediate processing. Enabled by default when importing files from FTP, but can be disabled during high-volume syncs for system stability. | Enabled           | false                       |
 
-***
+<figure><img src="../.gitbook/assets/IMport Order attribute.png" alt="" width="380"><figcaption></figcaption></figure>
 
-#### Approve Sales Order
+### Approve Sales Order
 
 * **Job ID:** JOB\_APR\_SALES\_ORD
 * **Job Name:** Approve Sales Order
@@ -242,48 +244,9 @@ The job is configured to run at a frequency that aligns with the business needs 
 | **`fileNameRegex`**        | Optional | Specifies a regular expression for filtering filenames.                                                                                                                                                                              | Not specified     | ^OrderAttr\_\d+.csv$        |
 | **`scheduleNow`**          | Optional | When importing files into the OMS, forces the system to pick the file out of sequence for immediate processing. Enabled by default when importing files from FTP, but can be disabled during high-volume syncs for system stability. | Enabled           | false                       |
 
-***
+<figure><img src="../.gitbook/assets/Approved Sales Order.png" alt="" width="370"><figcaption></figcaption></figure>
 
-#### Import Order Attribute
-
-* **Job ID:** JOB\_MOD\_ORD\_ATTR
-* **Job Name:** Import Order Attribute
-
-**Description**
-
-The Import Order Attribute job is designed to import order attributes from an SFTP location into the OMS. This job ensures that order attributes are updated and synchronized with the latest information.
-
-**Recommended frequency**
-
-The job is configured to run at a frequency that suits the business needs for regular updates of order attributes.
-
-**Troubleshooting Use Case**
-
-**Issue 1:** Order attributes are not being imported as expected.
-
-**Possible Causes:** Configuration or Connectivity Issues
-
-**Resolution Steps:**
-
-1. Review the `propertyResource` parameter to ensure it is correctly set to FTP\_CONFIG.
-2. Verify that the `configId` parameter is set to MOD\_ORD\_ATTR for the intended configuration.
-3. Check for any connectivity issues between the system and the specified SFTP location.
-
-**Custom Parameters**
-
-| **Parameter**              | **Type** | **Description**                                                                                                                                                                                                                      | **Default Value** | **Example Value**           |
-| -------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------- | --------------------------- |
-| **`propertyResource`**     | Required | Specifies the property resource for configuration.                                                                                                                                                                                   | Not specified     | FTP\_CONFIG                 |
-| **`configId`**             | Required | Identifies the configuration for importing order attributes.                                                                                                                                                                         | Not specified     | MOD\_ORD\_ATTR              |
-| **`remoteFilename`**       | Optional | Specifies the remote filename for processing.                                                                                                                                                                                        | Not specified     | Order\_Attribute.csv        |
-| **`groupBy`**              | Optional | Specifies a grouping parameter for the job.                                                                                                                                                                                          | Not specified     | AttributeType               |
-| **`additionalParameters`** | Optional | Additional parameters for job customization.                                                                                                                                                                                         | Not specified     | param1=value1,param2=value2 |
-| **`fileNameRegex`**        | Optional | Specifies a regular expression for filtering filenames.                                                                                                                                                                              | Not specified     | ^OrderAttr\_\d+.csv$        |
-| **`scheduleNow`**          | Optional | When importing files into the OMS, forces the system to pick the file out of sequence for immediate processing. Enabled by default when importing files from FTP, but can be disabled during high-volume syncs for system stability. | Enabled           | false                       |
-
-***
-
-#### Order Identification
+### Order Identification
 
 * **Job ID:** JOB\_ORDER\_IDENT
 * **Job Name:** Order Identification
@@ -319,9 +282,9 @@ The job is configured to run at a frequency that aligns with the business needs 
 | **`fileNameRegex`**        | Optional | Specifies a regular expression for filtering filenames.                                                                                                                                                                              | Not specified     | ^OrderAttr\_\d+.csv$        |
 | **`scheduleNow`**          | Optional | When importing files into the OMS, forces the system to pick the file out of sequence for immediate processing. Enabled by default when importing files from FTP, but can be disabled during high-volume syncs for system stability. | Enabled           | false                       |
 
-***
+<figure><img src="../.gitbook/assets/Order Identification.png" alt="" width="375"><figcaption></figcaption></figure>
 
-#### Order Item Fulfillment
+### Order Item Fulfillment
 
 * **Job ID:** JOB\_ODR\_ITM\_FLFLMNT
 * **Job Name:** Order Item Fulfillment
@@ -357,9 +320,9 @@ The job is configured to run at a frequency that aligns with the business needs 
 | **`fileNameRegex`**        | Optional | Specifies a regular expression for filtering filenames.                                                                                                                                                                              | Not specified     | ^OrderAttr\_\d+.csv$        |
 | **`scheduleNow`**          | Optional | When importing files into the OMS, forces the system to pick the file out of sequence for immediate processing. Enabled by default when importing files from FTP, but can be disabled during high-volume syncs for system stability. | Enabled           | false                       |
 
-***
+<figure><img src="../.gitbook/assets/Order Item Fulfillement.png" alt="" width="375"><figcaption></figcaption></figure>
 
-#### Party Identification
+### Party Identification
 
 * **Job ID:** JOB\_PARTY\_IDENT
 * **Job Name:** Party Identification
@@ -395,9 +358,9 @@ The job is configured to run at a frequency that aligns with the business needs 
 | **`fileNameRegex`**        | Optional | Specifies a regular expression for filtering filenames.                                                                                                                                                                              | Not specified     | ^OrderAttr\_\d+.csv$        |
 | **`scheduleNow`**          | Optional | When importing files into the OMS, forces the system to pick the file out of sequence for immediate processing. Enabled by default when importing files from FTP, but can be disabled during high-volume syncs for system stability. | Enabled           | false                       |
 
-***
+<figure><img src="../.gitbook/assets/Party Identification.png" alt="" width="375"><figcaption></figcaption></figure>
 
-#### Import Order Metafield
+### Import Order Metafield
 
 * **Job ID:** IMP\_ORD\_META\_FLD
 * **Job Name:** Import Order Metafield
@@ -432,9 +395,9 @@ The job is configured to run at a frequency that aligns with the business needs 
 | **`filterQuery`**    | Optional | Specifies a filter query for more targeted metafield downloads.                      | Not specified      | "field\_name: value" |
 | **`frequency`**      | Optional | Specifies the frequency (in minutes) for running the job.                            | Not specified      | 15                   |
 
-***
+<figure><img src="../.gitbook/assets/Imort Order Metafeild.png" alt="" width="375"><figcaption></figcaption></figure>
 
-#### Update Order Tags
+### Update Order Tags
 
 * **Job ID:** UPDATE\_ORDER\_TAGS
 * **Job Name:** Update Order Tags
@@ -462,4 +425,4 @@ The job frequency can be configured based on the business needs and the desired 
 
 No specific custom parameters
 
-### Netsuite
+<figure><img src="../.gitbook/assets/Update order Tag.png" alt="" width="375"><figcaption></figcaption></figure>

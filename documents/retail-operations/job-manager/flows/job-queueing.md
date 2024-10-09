@@ -7,7 +7,7 @@ description: >-
 
 # Job queueing
 
-### Pipeline page
+Pipeline page
 
 Provides a holistic view of all jobs, including their status, scheduled time, and execution details.
 
@@ -49,7 +49,7 @@ Displays all the jobs queued for execution.
 {% tab title="Running" %}
 Displays all the jobs running in the system.
 
-<figure><img src="../../jobManager/.gitbook/assets/Screenshot%202023-11-07%20at%204.11.34%20PM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/running jobs.png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 
 {% tab title="History" %}
@@ -58,8 +58,6 @@ Displays all the historical jobs. Historical jobs can be filtered by their statu
 <figure><img src="../../.gitbook/assets/history 1.png" alt="" width="563"><figcaption></figcaption></figure>
 {% endtab %}
 {% endtabs %}
-
-
 
 ####
 
@@ -83,11 +81,8 @@ Keep frequently accessed jobs readily available for quick access. Pinned jobs wi
 
 {% embed url="https://youtu.be/YSSfLXV9qP0" %}
 
-
-
 ### **Recurrence**
 
 Displays the number of counts the job is retried once failed.
 
 <figure><img src="../../.gitbook/assets/recurrence.png" alt="" width="375"><figcaption></figcaption></figure>
-
