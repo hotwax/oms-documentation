@@ -25,37 +25,36 @@ Here's how you can update shipping address for the order:
 
 **Updating Shipping Address:**
 
-- Click on the `Edit` function available for the order.
-- Fill in the required shipping details that needs to be changed in the form provided.
-- Save the changes by clicking on the `save` button
+* Click on the `Edit` function available for the order.
+* Fill in the required shipping details that needs to be changed in the form provided.
+* Save the changes by clicking on the `save` button
 
 **Updating Shipping Method:**
 
-- Within the order, locate the shipping method section.
-- Click on the `Edit` function next to the current shipping method.
-- Choose the desired shipping method from the provided list.
-- Save the changes.
+* Within the order, locate the shipping method section.
+* Click on the `Edit` function next to the current shipping method.
+* Choose the desired shipping method from the provided list.
+* Save the changes.
 
 {% embed url="https://youtu.be/11nFbayax3I" %}
 Video: Update Shipping Details
 {% endembed %}
 
-
 {% hint style="warning" %}
-Users only change the shipping method directly for orders in the brokering queue. If inventory has already been allocated to the order, users need to reject the item from the store, update the shipping method, and then broker the order again.{% endhint %}
+Users only change the shipping method directly for orders in the brokering queue. If inventory has already been allocated to the order, users need to reject the item from the store, update the shipping method, and then broker the order again.
+{% endhint %}
 
 ***
 
 ## Cancel Sales Order
 
-Orders can only be canceled in HotWax Commerce when they are in the `created` state. Additionally, it's important to note that the sales orders canceled on HotWax Commerce are not automatically updated on Shopify. Therefore, it is recommended for users to cancel orders  directly on Shopify for seamless synchronization and accurate order status across platforms. Cancelling a sales order will automatically cancel all other sales order items in the order.
+Orders can only be canceled in HotWax Commerce when they are in the `created` state. Additionally, it's important to note that the sales orders canceled on HotWax Commerce are not automatically updated on Shopify. Therefore, it is recommended for users to cancel orders directly on Shopify for seamless synchronization and accurate order status across platforms. Cancelling a sales order will automatically cancel all other sales order items in the order.
 
 **Cancellation Process:**
 
 1. Select the required order to open the Sales Order Detail page.
 2. Click the Status dropdown located at the top left of the page.
 3. Select the Cancel function to cancel the entire sales order.
-
 
 {% embed url="https://youtu.be/u-CtB-pw-Kc" %}
 Video: Cancel sales order
@@ -110,7 +109,6 @@ HotWax Commerce can update the following details from Shopify:
 The existing orders get canceled with the `Old Version` tag. A new Order with the same order ID gets created with updated items in HotWax Commerce. The updated information will be reflected in the item section on the sales order detail page.
 {% endhint %}
 
-
 {% embed url="https://youtu.be/_e1VDQUgICs" %}
 Video: Refresh Sales Order
 {% endembed %}
@@ -127,8 +125,10 @@ CSR teams can manually input personalized messages on behalf of customers upon r
 
 Any special instructions or handling requirements associated with the items in the group can be added by clicking on the `Add` button against Handling instruct. The handling instructions added here will be visible in the fulfillment app for store associates
 
+{% embed url="https://youtu.be/TE4WrSwqMMY" %}
+
+
+
 ### Add Ship By and Ship After Date
 
 Ship By specifies the date by which the items should be shipped to ensure timely delivery, while Ship After indicates the date after which the items need to be shipped. Both Ship By and Ship After details can only be added upon customers' requests.
-
-

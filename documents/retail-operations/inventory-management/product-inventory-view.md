@@ -53,6 +53,8 @@ The `Inventory Logs` feature within the item inventory section offers users the 
 5. If you want to view inventory details for a specific facility, use the facility dropdown menu to select the desired facility.
 6. You can click on the `Inventory Item ID` available in the records to view the complete breakdown of when and where the inventory is received.
 
+<figure><img src="../.gitbook/assets/product inventory.png" alt=""><figcaption></figcaption></figure>
+
 ## Record Variance
 
 The `Record Variance` feature” allows users to manually document any discrepancies in inventory levels and manage adjustments effectively. This feature is crucial for maintaining accurate inventory records and ensuring transparency.

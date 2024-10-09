@@ -53,3 +53,6 @@ By following these steps, you'll create a specialized workflow that seamlessly t
 * Add one more setting named: `Preselected facility tag` and add value `hcShippingFacility`. This line item property on the item that needs to be read to determine the facility of the order.
 
 By following these steps in both Shopify and OMS, you establish a seamless Soft Allocation flow, ensuring accurate fulfillment based on specified criteria.
+
+{% embed url="https://youtu.be/YmT_utsAnUw" %}
+

@@ -39,7 +39,7 @@ Video: Search Product Page
 | Feature Filter         | Filter products by choosing product features like “color” “shades”, “sizes”, “donations”, etc.                                                                                                                                                                                                            |
 | Tags Filter            | Filter products by choosing any tags available on them like ‘sale”, “discount”, “size range”, “men”, “women”, etc. For example, if a retailer wants to view shirts on discount, they can search for shirts using the search bar and Discount from Tags filter to get specific products in search results. |
 | Exclude Tags Filter    | It refines the search by excluding product tags. This will help users to streamline bulk product lookup, where the products having those tags will not be displayed during the search.                                                                                                                    |
-| Pre-order Filter        | Filter out all existing products under the pre-order category.                                                                                                                                                                                                                                             |
+| Pre-order Filter       | Filter out all existing products under the pre-order category.                                                                                                                                                                                                                                            |
 | Backorder Filter       | Filter out all existing products under the backorder category.                                                                                                                                                                                                                                            |
 | Include Parent Product | Helps users view parent products with respective variants.                                                                                                                                                                                                                                                |
 
@@ -49,11 +49,11 @@ For having a quick view of a certain set of products, users can filter out the p
 
 ### Manage Safety Stock
 
-Enables users to search selected products and export CSV by specifying safety stock value and uploading it back using EXIM for bulk products. Safety Stock will be established at all the associated facilities for the entire set of selected products. Users are allowed to manually create CSV, set safety stocks, and upload using EXIM for bulk products. Read more about safety stock in our complete [document](../inventory/safety-stock/README.md).
+Enables users to search selected products and export CSV by specifying safety stock value and uploading it back using EXIM for bulk products. Safety Stock will be established at all the associated facilities for the entire set of selected products. Users are allowed to manually create CSV, set safety stocks, and upload using EXIM for bulk products. Read more about safety stock in our complete [document](../inventory/safety-stock/).
 
 ### Threshold:
 
-Enables users to search and create CSV of all displayed products. A threshold will be established for the entire set of selected products. Users can manually create CSV and upload using `EXIM` for bulk products.&#x20;
+Enables users to search and create CSV of all displayed products. A threshold will be established for the entire set of selected products. Users can manually create CSV and upload using `EXIM` for bulk products.
 
 ### View Product Details
 
@@ -79,6 +79,8 @@ The overview section contains essential information related to “product specif
 
 This information provides a comprehensive overview facilitating effective management and customization of a product and also empowers users to add and delete any product specifications.
 
+<figure><img src="../.gitbook/assets/product details.png" alt=""><figcaption></figcaption></figure>
+
 ### Sync Products to Multiple Shopify Shop
 
 Retailers who operate in multiple countries use Shopify shops in Hotwax commerce to manage the same product catalogs in different countries. A master catalog holds all products, while associations are formed to sync these products across different country-specific catalogs. These associations are automated through a job in HotWax Commerce that creates associations between products in the master catalog and the product catalog of other countries by matching the SKU codes. Retailers can view the product association with the different shops in the Shopify Shop section and Add new product associations with Shopify Shop by following these steps:
@@ -89,4 +91,3 @@ Retailers who operate in multiple countries use Shopify shops in Hotwax commerce
 4. Click on the `Add` button to save the product association
 
 <figure><img src="https://www.hotwax.co/hubfs/Product%20Updates%20and%20Release%20Notes/2023/Nov-Dec%202023%20PU/Manage%20Shopify%20Shop%20Product%20Associations.png" alt=""><figcaption></figcaption></figure>
-

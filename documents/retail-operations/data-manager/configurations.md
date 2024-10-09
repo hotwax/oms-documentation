@@ -69,6 +69,10 @@ Editing an existing Data Manager Configuration allows users to update configurat
 Config ID cannot be changed after creation. Create a new Config if a new Config ID is needed.
 {% endhint %}
 
+{% embed url="https://youtu.be/OEss4sNcvnQ" %}
+
+
+
 ### Verify the Data flow
 
 In HotWax Commerce, the ability to view data logs is crucial for verifying the accuracy and completeness of imported data. These logs offer insights into the status of imported data, allowing users to verify the success of operations during the verification process.

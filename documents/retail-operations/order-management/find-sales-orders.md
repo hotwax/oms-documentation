@@ -21,41 +21,54 @@ The `Search Sales Order` feature on the `Sales Order` page provides users with q
 5. The platform will display the search results based on the provided SKU or order ID.
 6. You can now view all pertinent details related to the order, including customer information, order items, and status. Click on the order to access the detailed information.
 
+{% embed url="https://youtu.be/g3h3HX6YNNY" %}
+
+
+
 ### Filter Orders
 
 HotWax Commerce allows users to sort through numerous orders based on different filter criteria. Enabling users to focus on specific subsets of orders, making it particularly valuable for those dealing with high order volume.
 
 You can apply these filters to Sales Orders:
 
-| Filter Name       | Description                                                                                                                           |
-|-------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| Product Store     | Choose the desired Product Store from the dropdown menu to filter by a specific store.                                                |
-| Facility          | Select the Facility to narrow down the results to a particular location.                                                               |
-| Order Status      | Filter by Order Status to view orders in a specific stage (created, approved, completed, canceled).                                   |
-| Item Status       | Filter by Item Status to focus on specific stages of item fulfillment (Reserved, Picking, Packing, Shipped, Delivered).              |
-| Sales Channel     | Choose the desired Sales channel from the dropdown menu to filter by a specific channel such as Shopify, Amazon, etc.                |
-| Order Date        | This filter categorizes orders based on their order date, allowing users to filter them by predefined time intervals.                |
-| Promised Date     | This filter categorizes orders based on their promise date, allowing users to filter them by predefined time intervals.               |
-| Auto Cancel Date  | The auto-cancel date is the predetermined deadline by which an order will be automatically canceled if not fulfilled.               |
-| Shipping Method   | Filter by the shipping method such as delivery speed (standard, expedited, express), cost, or specific carriers.                      |
+| Filter Name      | Description                                                                                                             |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| Product Store    | Choose the desired Product Store from the dropdown menu to filter by a specific store.                                  |
+| Facility         | Select the Facility to narrow down the results to a particular location.                                                |
+| Order Status     | Filter by Order Status to view orders in a specific stage (created, approved, completed, canceled).                     |
+| Item Status      | Filter by Item Status to focus on specific stages of item fulfillment (Reserved, Picking, Packing, Shipped, Delivered). |
+| Sales Channel    | Choose the desired Sales channel from the dropdown menu to filter by a specific channel such as Shopify, Amazon, etc.   |
+| Order Date       | This filter categorizes orders based on their order date, allowing users to filter them by predefined time intervals.   |
+| Promised Date    | This filter categorizes orders based on their promise date, allowing users to filter them by predefined time intervals. |
+| Auto Cancel Date | The auto-cancel date is the predetermined deadline by which an order will be automatically canceled if not fulfilled.   |
+| Shipping Method  | Filter by the shipping method such as delivery speed (standard, expedited, express), cost, or specific carriers.        |
 
 {% hint style="success" %}
-You can save the search filters using the disc icon and view the saved search filter by clicking on the three horizontal eclipses on the right.{% endhint %}
+You can save the search filters using the disc icon and view the saved search filter by clicking on the three horizontal eclipses on the right.
+{% endhint %}
+
+{% embed url="https://youtu.be/eMb3WC2JmBI" %}
+
+
 
 ### Filter Orders based on Queue
 
 HotWax Commerce has different queues that act as a virtual facility to park the orders that are awaiting fulfillment. Users can view the orders in the queue to identify orders that currently do not have inventory allocated to them.
 
-| Queue Name         | Description                                                                                                                                   |
-|-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
-| Pre-Orders        | Orders that are placed in Pre-order parking (To hold pre-ordered items until released from HC) can be shown by clicking on the Pre-orders checkbox. |
-| Back Orders       | Orders that are placed in Backorder parking (To hold back-ordered items until released from the HC) can be shown by clicking on the Back-orders checkbox. |
-| Brokering Queue   | Orders that are placed in the Brokering Queue (To hold orders for in-stock items until the next brokering run) can be shown by clicking on the Brokering Queue checkbox. |
-| Unfillable Hold   | Orders that are placed in the Unfillable Hold (To hold unfillable items from further brokering and auto-cancellation) can be shown by clicking on the Unfillable Hold checkbox. |
+| Queue Name      | Description                                                                                                                                                                     |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Pre-Orders      | Orders that are placed in Pre-order parking (To hold pre-ordered items until released from HC) can be shown by clicking on the Pre-orders checkbox.                             |
+| Back Orders     | Orders that are placed in Backorder parking (To hold back-ordered items until released from the HC) can be shown by clicking on the Back-orders checkbox.                       |
+| Brokering Queue | Orders that are placed in the Brokering Queue (To hold orders for in-stock items until the next brokering run) can be shown by clicking on the Brokering Queue checkbox.        |
+| Unfillable Hold | Orders that are placed in the Unfillable Hold (To hold unfillable items from further brokering and auto-cancellation) can be shown by clicking on the Unfillable Hold checkbox. |
 
 By filtering orders based on queues, users can focus on handling orders that require immediate attention or fall into the queue.
 
 Users can also filter the orders that will be auto-canceled today to make sure such orders are prioritized.
+
+{% embed url="https://youtu.be/_UYtNXq4IiA" %}
+
+
 
 ### Export Orders
 

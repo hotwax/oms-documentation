@@ -27,7 +27,7 @@ This is a regular flow which do not have any troubleshooting scenarios.
 | ---------------- | -------- | -------------------------------------------------- | ----------------- | ----------------- |
 | **`includeAll`** | Optional | Specifies whether to include all inventory levels. | true              | false             |
 
-***
+<figure><img src="../.gitbook/assets/Upload Inventory.png" alt="" width="375"><figcaption></figcaption></figure>
 
 ### Import Inventory
 
@@ -67,7 +67,7 @@ The job frequency can be configured based on the business needs and the frequenc
 | **`fileNameRegex`**        | Optional | Specifies the regular expression for matching file names.       | Not specified     | \*.csv                                     |
 | **`scheduleNow`**          | Optional | Specifies whether to schedule the job for immediate processing. | false             | true                                       |
 
-***
+<figure><img src="../.gitbook/assets/Import Recent inventory.png" alt="" width="375"><figcaption></figcaption></figure>
 
 ### Upload Recent Inventory Changes:
 
@@ -76,15 +76,15 @@ The job frequency can be configured based on the business needs and the frequenc
 
 #### Description
 
-The `Upload recent inventory changes` job examines the inventory records of HotWax Commerce's products. It identifies products that have undergone inventory changes since the last synchronization. 
+The `Upload recent inventory changes` job examines the inventory records of HotWax Commerce's products. It identifies products that have undergone inventory changes since the last synchronization.
 
 To update inventory records, HotWax Commerce initiates an API call to retrieve information from Shopify about products that have undergone changes in HotWax Commerce. The inventory counts for these products in Shopify are then compared with the inventory counts that HotWax Commerce has on file.
 
 After comparing inventory changes, the `Upload recent inventory changes` job records the difference and generates a GraphQL file for the affected products. This file is then uploaded to Shopify, which reads it and updates the `available adjustments` field to either add or deduct inventory based on the changes.
 
-#### Recommended Frequency 
+#### Recommended Frequency
 
-The recommended frequency for this job is 15 minutes, but it can be configured based on the business needs and the desired frequency of updating inventory levels. 
+The recommended frequency for this job is 15 minutes, but it can be configured based on the business needs and the desired frequency of updating inventory levels.
 
 #### Common Troubleshooting Cases
 
@@ -94,12 +94,14 @@ Read our [user guide](https://docs.hotwax.co/user-guides/v/troubleshooting/shopi
 
 #### Custom Parameters
 
-| **Parameter**    | **Type**       | **Description**                              | **Default Value** |
-|---------------|------------|------------------------------------------|---------------|
-| **`facilityGroupID`** | Required | Specifies which facilitygroup to be      | FAC\_GRP       |
-| **`includeAll`**    | Optional   | Specifies whether to include all inventory levels. | true          |
+| **Parameter**         | **Type** | **Description**                                    | **Default Value** |
+| --------------------- | -------- | -------------------------------------------------- | ----------------- |
+| **`facilityGroupID`** | Required | Specifies which facilitygroup to be                | FAC\_GRP          |
+| **`includeAll`**      | Optional | Specifies whether to include all inventory levels. | true              |
 
 ***
+
+<figure><img src="../.gitbook/assets/Inventory Sync 1 (1).png" alt="" width="375"><figcaption></figcaption></figure>
 
 ### Import Inbound Shipment
 
@@ -136,7 +138,7 @@ The job frequency can be configured based on the business needs and the frequenc
 | **`fileNameRegex`**        | Optional | Specifies the regular expression for matching file names.       | Not specified     | \*.csv                                     |
 | **`scheduleNow`**          | Optional | Specifies whether to schedule the job for immediate processing. | false             | true                                       |
 
-***
+<figure><img src="../.gitbook/assets/Import Inbound Shipment.png" alt="" width="375"><figcaption></figcaption></figure>
 
 ### Export Product Thresholds
 
@@ -172,6 +174,8 @@ The job frequency can be configured based on the business needs and the frequenc
 | **`searchPreferenceId`** | String   | Specifies the search preference ID for customizing product search. | null              | SEARCH\_PREF\_001 |
 
 ***
+
+<figure><img src="../.gitbook/assets/Export Product Threshold.png" alt="" width="375"><figcaption></figcaption></figure>
 
 ### Import Product Thresholds
 
@@ -209,7 +213,7 @@ The job frequency can be configured based on the business needs and the frequenc
 | **`fileNameRegex`**        | Optional | Specifies the regular expression for matching file names.        | Not specified     | \*.csv                                     |
 | **`scheduleNow`**          | Optional | Specifies whether to schedule the job for immediate processing.  | false             | true                                       |
 
-***
+<figure><img src="../.gitbook/assets/Import Product threshold.png" alt="" width="375"><figcaption></figcaption></figure>
 
 ### Sync Inventory From Shopify in Multi-Threading
 
@@ -246,3 +250,5 @@ The job frequency can be configured based on the business needs and the frequenc
 | **`additionalParameters`** | Optional | Specifies additional parameters for customization.                               | Not specified           | { "param1": "value1", "param2": "value2" } |
 | **`remoteFilename`**       | Optional | Specifies the remote filename for the job.                                       | Not specified           | sample\_file.txt                           |
 | **`scheduleNow`**          | Optional | Specifies whether to schedule the job for immediate processing.                  | false                   | true                                       |
+
+<figure><img src="../.gitbook/assets/Sync Inventory From Shopify in multi threading.png" alt="" width="375"><figcaption></figcaption></figure>

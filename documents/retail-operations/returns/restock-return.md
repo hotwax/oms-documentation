@@ -21,3 +21,5 @@ Store associates can configure whether to accept the return of the product with 
 4. Click on the job title to open the job card.
 5. Specify the job run time and preferred frequency based on your operational needs.
 6. Click on `Save Changes` to schedule the job according to the defined run time and frequency.
+
+<figure><img src="../.gitbook/assets/Inventory Sync 1 (1).png" alt="" width="375"><figcaption></figcaption></figure>

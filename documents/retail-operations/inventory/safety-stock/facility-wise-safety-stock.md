@@ -31,6 +31,10 @@ Click on the `+` icon in the right-bottom corner of the app.
   * **Included**: Filter products based on features that require this safety stock level.
   * **Excluded**: Optionally exclude products based on features from this safety stock rule.
 
+{% embed url="https://youtu.be/Bq3Rp89X-nU" %}
+
+
+
 ## Automated Integration for Seamless Operations
 
 #### Effortless Export

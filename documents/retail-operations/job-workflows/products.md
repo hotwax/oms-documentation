@@ -40,7 +40,7 @@ The job frequency is set to run every 15 minutes by default. You may adjust this
 | **`bufferTime`**      | Integer  | Specifies the buffer time (in minutes) for scheduling job downloads.                           | Not specified     | 5                 |
 | **`scheduleNow`**     | Boolean  | When set to true, forces the system to pick the file out of sequence for immediate processing. | false             | true              |
 
-***
+<figure><img src="../.gitbook/assets/import new products.png" alt="" width="375"><figcaption></figcaption></figure>
 
 ### Import Product Updates
 
@@ -76,7 +76,7 @@ The job frequency is set to run every 15 minutes by default. Adjust the frequenc
 | **`bufferTime`**      | Integer  | Specifies the buffer time (in minutes) for scheduling job downloads.                           | Not specified     | 5                 |
 | **`scheduleNow`**     | Boolean  | When set to true, forces the system to pick the file out of sequence for immediate processing. | false             | true              |
 
-***
+<figure><img src="../.gitbook/assets/Import product Update.png" alt="" width="375"><figcaption></figcaption></figure>
 
 ### Import Promo Code
 
@@ -113,7 +113,7 @@ The frequency for running this job depends on the frequency of updates to your p
 | **`remoteFilename`**       | Optional | Specifies the remote filename for the job.                                       | Not specified     | sample\_file.txt                           |
 | **`scheduleNow`**          | Optional | Specifies whether to schedule the job for immediate processing.                  | false             | true                                       |
 
-***
+<figure><img src="../.gitbook/assets/Import Promo code.png" alt="" width="375"><figcaption></figcaption></figure>
 
 ### Remove Promo Code
 
@@ -151,7 +151,7 @@ The frequency for running this job depends on the removal frequency of your prom
 | **`remoteFilename`**       | Optional | Specifies the remote filename for the job.                                       | Not specified        | sample\_file.txt                           |
 | **`scheduleNow`**          | Optional | Specifies whether to schedule the job for immediate processing.                  | false                | true                                       |
 
-***
+<figure><img src="../.gitbook/assets/Remove promo Code.png" alt="" width="375"><figcaption></figcaption></figure>
 
 ### Product Identification
 
@@ -191,6 +191,8 @@ The frequency for running this job depends on the frequency of updates to produc
 
 ***
 
+<figure><img src="../.gitbook/assets/Product identification.png" alt="" width="375"><figcaption></figcaption></figure>
+
 ### Associate Products with Sub Catalog
 
 * **Job ID:** JOB\_UPD\_PROD\_ASSOC
@@ -227,6 +229,8 @@ The recommended frequency for running this job is every 60 minutes. Adjust the f
 
 ***
 
+<figure><img src="../.gitbook/assets/Associate product sub catalog.png" alt="" width="375"><figcaption></figcaption></figure>
+
 ### Import Kit Product Components
 
 * **Job ID:** IMP\_KIT\_METAFIELD
@@ -259,3 +263,5 @@ The frequency of running this job depends on the frequency of updates or changes
 | **`configId`**             | String   | Specifies the configuration ID for importing kit product components. | BULK\_IMP\_VARIANTS\_MF | KIT\_COMP\_IMPORT\_CONFIG |
 | **`productVariantsQuery`** | String   | Specifies the query to identify kit products.                        | product\_type: Kit      | category: Bundle          |
 | **`namespaces`**           | String   | Specifies the namespaces for kit product components.                 | bundles\_app            | kit\_components           |
+
+<figure><img src="../.gitbook/assets/Import product kit component.png" alt="" width="375"><figcaption></figcaption></figure>
