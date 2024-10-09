@@ -37,19 +37,15 @@ Primarily focused on sprint management, this space includes all essential compon
   Focuses on the core functionalities of the OMS, including:
   - **Reports**: Handling of Business Intelligence reporting requirements and improvement in BI Reports.
   - **Monitoring**: All tickets related to solving grafana errors are placed in this section.
-  - **Nifi**: Covers all tasks related to Apache NiFi, handling data pipelines, and system workflows.
+- **Nifi**: Covers all tasks related to Apache NiFi, handling data pipelines, and system workflows.
+- **Sprint Management**: The central hub for managing all sprints across product management. This space tracks sprint cycles, backlog items, and ensures task allocation and completion within the sprint deadlines.
 
-### Sprint Management:
-The central hub for managing all sprints across product management. This space tracks sprint cycles, backlog items, and ensures task allocation and completion within the sprint deadlines.
-
----
-
-## HC Project
+### HC Project
 
 A dedicated space for tracking the work done for each client. Each client has their own folder with detailed tasks, and clients also have access to this space, allowing them to view the progress of tickets related to their specific projects.
 
 **Backlog**
-All non-urgent tasks are created in the backlog space. These tickets are revisited and prioritized for upcoming sprints.
+All non-urgent tasks are created in the backlog list. These tickets are revisited and prioritized for upcoming sprints.
 
 ---
 
