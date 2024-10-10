@@ -116,3 +116,17 @@ If the issues persist despite following the troubleshooting steps, consider revi
 {% hint style="info" %}
 If you are using test APIs, then there may be a slight delay in shipping label generation, wait for a few minutes and try generating label again, if it's not generated on the first try.
 {% endhint %}
+
+# Generate Shipping Labels from Preferred Carrier
+
+Retailers can generate shipping labels from their preferred carrier using HotWax Commerce’s Fulfillment App, to have more control when working with multiple shipping providers. By toggling the feature in the facility details page App link, store associates can either automatically generate labels from the default carrier or manually select their preferred carrier after packing.
+
+This feature provides enhanced flexibility, especially for stores using multiple carriers, allowing for easier switching between partners and optimizing the shipping process.
+
+## Steps to Generate Shipping Labels from Preferred Carriers:
+1. **Access the Fulfillment App**: Open the HotWax Commerce Fulfillment App on your device.
+2. **Go to the "In Progress" Section**: Navigate to the "In Progress" section where you’ll find details of active orders.
+3. **Select the Order and Pack**: Choose the relevant order and click on the "Pack Order" option.
+4. **Choose the Preferred Carrier**: Select from options like FedEx, UPS, or EasyPost based on the order's requirements and convenience, ensuring flexibility and control over shipping.
+5. **Enter Tracking Code and URL**: Store associates can manually enter the tracking code in the provided field. Ensure that a tracking URL is configured for the selected carrier. If it’s not available, you may need to input the tracking URL manually to allow customers to track their shipments effectively.
+6. **Generate the Label**: Once the carrier is selected, generate the shipping label for the order.
