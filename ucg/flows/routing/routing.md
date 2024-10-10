@@ -1,7 +1,5 @@
 # Order Routing for Frank And Oak
 
-## Business Overview for Frank And Oak
-
 Frank And Oak, a Canada-based online clothing retailer, is renowned for its commitment to sustainability and innovation. The company operates a central warehouse and multiple retail stores across Canada, with shipping capabilities extending to the USA.
 
 Frank And Oak focuses on eco-conscious fashion while continuously enhancing its logistics, aiming to optimize delivery speed, reduce operational costs, and improve inventory management.
