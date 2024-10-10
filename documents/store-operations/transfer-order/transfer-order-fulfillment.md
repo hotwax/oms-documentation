@@ -44,3 +44,14 @@ After processing a partial shipment of a transfer order item, it will be listed 
 {% hint style="info" %} Store associates are not allowed to insert more than the intended item quantities. The bar turns red if the user tries to overship item quantities {% endhint %}
 
 For more details on Transfer order lifecycle refer to this [document](https://docs.hotwax.co/documents/v/learn-hotwax-oms/business-process-models/transferorderlifecycle) 
+
+### Transfer Order Picklists 
+
+Store Associates can print transfer order picklists directly from the Fulfillment App. Store associates can quickly verify products, ensuring that transfer orders are processed efficiently and accurately. By minimizing discrepancies, this feature strengthens inventory management and enhances overall operational efficiency.
+
+### Steps to Print Transfer Order Picklists in the Fulfillment App:
+1. **Access the Fulfillment App**: Open the HotWax Commerce Fulfillment App on your device.
+2. **Navigate to the Transfer Order Section**: Go to the "Transfer Orders" section to view all active transfer orders.
+3. **Select the Relevant Transfer Order**: Locate the specific transfer order that you need to process.
+4. **Click on the Print Picklist Button**: Within the transfer order details, you’ll find a "Print Picklist" button. Click this button to generate a picklist for the order.
+5. **Review and Print the Picklist**: The system will generate a detailed picklist showing all items to be transferred.
