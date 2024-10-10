@@ -16,3 +16,18 @@ All BOPIS orders that have been received and need to be fulfilled are displayed 
 {% hint style="info" %}
 Marking an order \`Ready for Pickup\` triggers an email to the customer that their order is ready for pickup and these orders are moved to the \`Packed\` tab.
 {% endhint %}
+# ATP Computation
+
+Store associates require clear visibility into inventory levels for order items to facilitate better decision-making and accurate order fulfillment. For instance, when a customer places a BOPIS order, the store may show a quantity on hand (QOH) of 10 units. However, if the safety stock is also set to 10, store associates must make a choice: they can either fulfill the BOPIS order or retain the items for in-store customers.
+
+In this scenario, the decision ultimately rests with the retailer. They need to assess whether to prioritize fulfilling online orders or ensuring in-store inventory availability. This flexibility allows associates to make informed choices based on current demand and operational needs, enhancing overall inventory management.
+
+When you navigate to the Open Orders page, you’ll see the order with a cube icon. Clicking this icon reveals an i icon, where you can view the real-time inventory details. These include:
+- Quantity on Hand
+- Safety Stock
+- Order Reservations
+- Online ATP
+
+This real-time ATP data allows users to see available stocks across different sections, helping to manage orders efficiently.
+
+Incorporating ATP availability into store operations enhances decision-making, improves customer satisfaction, and boosts operational efficiency. This visibility empowers staff to manage inventory better and ensures that orders are fulfilled promptly without stock shortages.
