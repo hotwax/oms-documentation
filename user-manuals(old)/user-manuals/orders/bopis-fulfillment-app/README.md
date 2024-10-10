@@ -9,7 +9,7 @@ description: >-
 
 
 
-The app also allows retailers to integrate their online and offline channels seamlessly, offering customers the convenience of buying online and picking up their purchases in-store. This omnichannel solution optimizes the BOPIS process, enhancing customer satisfaction and driving sales.
+The [app](https://bopis.hotwax.io/tabs/orders) also allows retailers to integrate their online and offline channels seamlessly, offering customers the convenience of buying online and picking up their purchases in-store. This omnichannel solution optimizes the BOPIS process, enhancing customer satisfaction and driving sales.
 
 {% hint style="info" %}
 Access to the BOPIS app is secure and permission-driven. Users will only be able to view information related to stores and orders for which they have been granted explicit permissions. For example, if a store associate is assigned to the Salt Lake City facility, they will exclusively see orders and details related to that facility. Information from other facilities will not be accessible to the associate, ensuring a controlled and secure user experience.

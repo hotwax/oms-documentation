@@ -1,6 +1,6 @@
 ---
 description: >-
-  HotWax Commerce’s Picking app allows users to manage the picklists assigned to
+  HotWax Commerce’s Picking [app](https://picking.hotwax.io/tabs/picklists) allows users to manage the picklists assigned to
   them by store managers with features such as barcode scanning, enlarged
   product images, and optimized picking routes.
 ---
