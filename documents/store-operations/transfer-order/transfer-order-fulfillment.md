@@ -51,7 +51,7 @@ Store Associates can print transfer order picklists directly from the Fulfillmen
 
 ### Steps to Print Transfer Order Picklists in the Fulfillment App:
 1. **Access the Fulfillment App**: Open the HotWax Commerce Fulfillment App on your device.
-2. **Navigate to the Transfer Order Section**: Go to the "Transfer Orders" section to view all active transfer orders.
+2. **Navigate to the Transfer Order Section**: Go to the `Transfer Order` section to view all `active` transfer orders.
 3. **Select the Relevant Transfer Order**: Locate the specific transfer order that you need to process.
-4. **Click on the Print Picklist Button**: Within the transfer order details, you’ll find a "Print Picklist" button. Click this button to generate a picklist for the order.
-5. **Review and Print the Picklist**: The system will generate a detailed picklist showing all items to be transferred.
+4. **Click on the Print Picklist Button**: Within the transfer order details, you’ll find a `Print Picklist` button. Click this `button` to generate a picklist for the order.
+5. **Review and Print the Picklist**: The system will generate a detailed picklist showing all `items` to be transferred.
