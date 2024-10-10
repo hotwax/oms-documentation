@@ -11,7 +11,7 @@ This case study explores how retailers with similar business models can leverage
 #### Time-in-Transit:
 - Frank And Oak offers standard shipping with delivery within 7 days for all USA and Canada orders.
 
-### #Order Priority:
+#### Order Priority:
 - All the orders should be prioritized by the FIFO rule, the orders placed first should be brokered first.
 
 #### U.S. Order Fulfillment:
