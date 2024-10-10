@@ -30,12 +30,12 @@ With HotWax Commerce’s Fulfillment App, store associates can specify rejection
 For instance, if a "Sunglasses Travel Kit" includes sunglasses, a cleaning cloth, and a protective case, and the cleaning cloth is out of stock, the associate can reject the kit while marking only the cloth as unavailable. This targeted approach updates the inventory for the unavailable item, while the other components, like the sunglasses and case, remain unaffected.
 
 ### Steps to Reject Kit Order by Specifying the Component Rejection Reason
-1. **Access the Fulfillment App**: Open the HotWax Commerce Fulfillment App on your device.
-2. **Navigate to the In Progress Section**: Locate and select the "In Progress" section to view current orders.
-3. **Select the Relevant Order**: Identify the specific kit order that requires adjustment and click on it.
-4. **Choose the Bin Option**: Within the order details, click on the bin icon to access the rejection options.
-5. **Specify Rejection Reasons**: A list of reasons will appear for rejecting the component. You can select from options such as "Not in Stock," "Mismatch," "Damaged," or "No Variance," depending on the situation. Select the appropriate reason.
+1. **Access the Fulfillment App**: Open the HotWax Commerce `Fulfillment App` on your device.
+2. **Navigate to the In Progress Section**: Locate and `select` the "In Progress" section to view current orders.
+3. **Select the Relevant Order**: Identify the specific kit order that requires adjustment and `click` on it.
+4. **Choose the Bin Option**: Within the order details, click on the `bin icon` to access the rejection options.
+5. **Specify Rejection Reasons**: A `list` of reasons will appear for rejecting the component. You can select from options such as "Not in Stock," "Mismatch," "Damaged," or "No Variance," depending on the situation. `Select` the appropriate reason.
 6. **Check the Item Causing the Issue**: Before submission, check the box next to the item causing the issue to ensure that inventory variance is recorded only for the problematic component.
-7. **Submit the Rejection**: Click on the save button to reject the order.
+7. **Submit the Rejection**: `Click` on the `save` button to reject the order.
 
 This ensures more accurate inventory adjustments at both the component and kit levels, avoiding stock inaccuracies and improving overall fulfillment efficiency. The kit’s availability is adjusted only for the products that have variance without impacting the inventory of the other products.
