@@ -18,6 +18,7 @@
   * [Order Brokering](order-flow/order-brokering.md)
   * [Order Fulfillment](order-flow/order-fulfillment.md)
   * [Order Fulfillment Notification](order-flow/order-fulfillment-notification.md)
+* [System Monitoring Guide](guidelines/system-monitoring-guide.md)
 
 ## SOP Documents
 
