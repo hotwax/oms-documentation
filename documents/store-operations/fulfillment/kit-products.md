@@ -21,7 +21,7 @@ This helps in managing orders efficiently by providing clear indications of kit 
 
 <figure><img src="../.gitbook/assets/fulfillment-dev.hotwax.io_in-progress (3) 2.png" alt=""><figcaption></figcaption></figure>
 
-## Component-Level Management for Kit Products
+## Kit Product Component Rejection 
 
 Managing kits, which bundle multiple items into one offering, has traditionally been challenging when a component is unavailable. Customers expect to receive the entire kit, so if even one item is missing, the whole order must be rejected. However, tracking which component caused the rejection is essential to maintaining accurate inventory levels.  
 With HotWax Commerce’s Fulfillment App, store associates can specify rejection reasons for each component when rejecting a kit order.
