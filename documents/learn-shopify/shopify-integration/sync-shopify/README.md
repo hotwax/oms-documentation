@@ -74,9 +74,10 @@ Follow these steps to schedule the job:
 6. In the `scheduleNow` field, insert `N` to ensure that the job runs instantaneously.
 7. Save the changes to schedule and execute the job.
 
-<figure><img src="../.gitbook/assets/Screenshot 2024-01-08 at 8.23.23 PM.png" alt=""><figcaption><p>Initial Product Association</p></figcaption></figure>
+<img width="493" alt="Associate product sub catalog" src="https://github.com/user-attachments/assets/3e7b22ed-97d4-4577-844f-373dfad1f35f">
 
-[Click here](user-manuals/job-workflows/products.md) to read about regular product association jobs.
+
+[Click here](https://docs.hotwax.co/documents/retail-operations/workflow/job-workflows/products#associate-products-with-sub-catalog) to read about regular product association jobs.
 
 ### Verifying Associations
 
