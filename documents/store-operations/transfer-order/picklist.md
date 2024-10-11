@@ -270,3 +270,5 @@ Follow these steps to use the picklist functionality, and refer to this [documen
 
 * Continue using the picklist for any additional boxes or items in the TO.
 * Once all shipments are created and labels generated, the process is complete.
+
+<figure><img src="../.gitbook/assets/transfer order picklist.png" alt=""><figcaption></figcaption></figure>

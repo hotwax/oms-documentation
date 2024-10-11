@@ -34,4 +34,4 @@ The Product Details Page provides in-depth information on individual products. I
 
 Additionally, the system provides information on inventory availability across various facilities, ensuring that customers can be provided information about the product availability across all the stores.
 
-<figure><img src="../.gitbook/assets/Screenshot from 2024-10-11 15-16-56 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot from 2024-10-11 15-16-56 (1).png" alt="" width="563"><figcaption></figcaption></figure>

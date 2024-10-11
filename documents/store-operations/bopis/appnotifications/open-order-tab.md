@@ -34,3 +34,4 @@ This real-time ATP data allows users to see available stocks across different se
 
 Incorporating ATP availability into store operations enhances decision-making, improves customer satisfaction, and boosts operational efficiency. This visibility empowers staff to manage inventory better and ensures that orders are fulfilled promptly without stock shortages.
 
+<figure><img src="../../.gitbook/assets/view atp.png" alt="" width="375"><figcaption></figcaption></figure>

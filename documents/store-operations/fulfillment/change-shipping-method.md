@@ -28,4 +28,4 @@ Previously, if the order was allocated to a facility, CSRs had to reject the ent
    * Select the appropriate shipping carrier and shipping method from the dropdown menus.
    * Click on the `Generate Label` button to print the shipping label again as per the new shipping method and carrier.&#x20;
 
-<figure><img src="../.gitbook/assets/shipment method (1).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/shipment method (1).png" alt="" width="375"><figcaption></figcaption></figure>
