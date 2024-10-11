@@ -38,4 +38,7 @@ For example, if a customer requests gift wrapping, the printed picklist will pro
 3. **Select the Relevant Order**: `Locate` the specific order you need to fulfill.
 4. **Find the Print Icon**: Within the order box, you will see a `print icon`. Click on this icon to initiate the `printing process`.
 5. **Print the Picklist**: The app will generate a detailed `picklist` that includes all necessary information, including handling instructions and any special requests from the customer.
-6. &#x20;
+6.
+7.
+
+    <figure><img src="../.gitbook/assets/Screenshot from 2024-10-11 12-22-20.png" alt=""><figcaption></figcaption></figure>
