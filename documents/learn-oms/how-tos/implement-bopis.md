@@ -10,7 +10,7 @@ This document gives a sequential walkthrough of how to enable your facilities fo
 
 ## Create a Facility for Store Pickup Options
 
-To facilitate BOPIS operations, retailers need to [set up and configure facilities](../administration/facilities/add-new-facilities.md) for store pickups where customers can collect their purchases by ordering online.
+To facilitate BOPIS operations, retailers need to [set up and configure facilities](https://docs.hotwax.co/documents/system-admins/administration/facilities/add-new-facilities) for store pickups where customers can collect their purchases by ordering online.
 
 ### Set up Facilities
 
@@ -29,7 +29,7 @@ To facilitate BOPIS operations, retailers need to [set up and configure faciliti
 3. Add the contact number and further add `latitude and longitude` details (to ensure the exact geolocation of the facility).
 
 {% hint style="info" %}
-HotWax Commerce App uses ["storeLookup"](../../learn-oms/api/facility/store-lookup.md) API to display the distance of stores from a customer's current location. The API relies on the latitude and longitude coordinates of facilities to determine their proximity to the customer. Make sure that latitude and longitudes are added for both new and existing facilities.
+HotWax Commerce App uses ["storeLookup"](https://docs.hotwax.co/documents/integrate-with-hotwax/hotwax-commerce-api-and-data-feeds/facility/store-lookup) API to display the distance of stores from a customer's current location. The API relies on the latitude and longitude coordinates of facilities to determine their proximity to the customer. Make sure that latitude and longitudes are added for both new and existing facilities.
 {% endhint %}
 
 ### Add Product Store
@@ -50,15 +50,15 @@ Facilities have the option to choose whether or not to participate in selling th
 
 ### Inventory Sync in HotWax Commerce
 
-For a product to be available for pickup at Shopify PDP, it must have inventory at the retail store (facility). HotWax Commerce offers automated and manual bulk [Inventory upload through CSV](../../retail-operations/inventory-management/inventory-upload.md). Additionally HotWax commerce gets [inventory feed from ERP, WMS, or POS systems](../../learn-oms/business-process-models/inventorylifecycle.md), to update the inventory in its system. The external system places the order on the SFTP location HotWax commerce processes these files and updates the inventory in its system.
+For a product to be available for pickup at Shopify PDP, it must have inventory at the retail store (facility). HotWax Commerce offers automated and manual bulk [Inventory upload through CSV](https://docs.hotwax.co/documents/retail-operations/inventory/inventory-upload). Additionally HotWax commerce gets [inventory feed from ERP, WMS, or POS systems](../business-process-models/inventorylifecycle.md), to update the inventory in its system. The external system places the order on the SFTP location HotWax commerce processes these files and updates the inventory in its system.
 
 ### ATP Computation
 
-When the inventory is received, a product’s QOH and ATP is updated in HotWax Commerce. HotWax Commerce calculates Physical Available to Promise (ATP) of a facility by considering various factors, such as [safety stock, threshold, reserved quantity](GLOSSARY.md), and orders in the queue.
+When the inventory is received, a product’s QOH and ATP is updated in HotWax Commerce. HotWax Commerce calculates Physical Available to Promise (ATP) of a facility by considering various factors, such as [safety stock, threshold, reserved quantity](https://docs.hotwax.co/documents/store-operations/glossary), and orders in the queue.
 
 ATP = QOH - (Reserved quantities + Safety stock + Threshold + Orders in brokering queue)
 
-For each store that allows BOPIS, HotWax Commerce uses the [checkInventory](../../learn-oms/api/inventory/check-inventory.md) API to check the available to promise (ATP) inventory for the desired product. Display all the facilities with non-zero inventory numbers on the product detail page (PDP) for customers to select and place a BOPIS order.
+For each store that allows BOPIS, HotWax Commerce uses the [checkInventory](https://docs.hotwax.co/documents/integrate-with-hotwax/hotwax-commerce-api-and-data-feeds/inventory/check-inventory) API to check the available to promise (ATP) inventory for the desired product. Display all the facilities with non-zero inventory numbers on the product detail page (PDP) for customers to select and place a BOPIS order.
 
 ## Configure Shopify BOPIS Scripts
 
