@@ -9,7 +9,7 @@ description: >-
 
 One of the critical aspects of managing an omnichannel retail business involves ensuring the accuracy and availability of inventory in physical stores. For retailers who utilize NetSuite as their ERP system and deploy HotWax Commerce's Order Management System, an efficient integration is required to synchronize purchase orders (POs) raised in NetSuite with the HotWax Commerce Order Management System. This synchronization is pivotal, as it allows in-store associates to effectively receive and manage inventory using the user-friendly HotWax Commerce in-store inventory management tools.
 
-In this scenario, when a Purchase Order is raised in NetSuite's ERP system, it needs to be seamlessly synchronized with HotWax Commerce, where the store associates employ an intuitive [Receiving App](https://docs.hotwax.co/documents/inventory/receiving) by HotWax Commerce for the efficient receipt of inventory.
+In this scenario, when a Purchase Order is raised in NetSuite's ERP system, it needs to be seamlessly synchronized with HotWax Commerce, where the store associates employ an intuitive [Receiving App](https://docs.hotwax.co/documents/store-operations/inventory/receiving) by HotWax Commerce for the efficient receipt of inventory.
 
 ## Key Objectives
 
