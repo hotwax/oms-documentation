@@ -20,4 +20,4 @@ Digital gift cards do not require physical inventory management as they are virt
 
 HotWax Commerce synchronizes the inventory of physical as well as digital gift cards just like regular products using both webhooks and the `Upload recent inventory change` job. This process remains straightforward for gift cards, just as it does for other products.
 
-Learn more about [inventory synchronization](how-does-hotwax-commerce-ensure-accurate-inventory-is-synchronized-to-shopify.md).
+Learn more about [inventory synchronization](how-does-hotwax-commerce-ensure-accurate-inventory-is-synchronized-to-shopify.md)
