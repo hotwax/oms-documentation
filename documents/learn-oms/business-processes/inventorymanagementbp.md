@@ -92,7 +92,7 @@ Retailers that aim for 98% to 99% inventory accuracy, regularly perform cycle co
 
 Cycle counts are ideally conducted either before the store opens or after closing hours when inventory movement is minimal.
 
-Store associates count the physical inventory of a product present in the store and upload the count in HotWax Commerce Cycle Count App. Upon uploading the counts, store managers review them. They may request recounts if any discrepancies are suspected or approve the counts if they're deemed accurate.
+Operation teams schedule cycle counts at stores. Store associates scan and count the physical inventory of a product present in the store and upload the count in HotWax Commerce Cycle Count App. Upon uploading the counts, the operation teams review them. They may request recounts if any discrepancies are suspected or approve the counts if they're deemed accurate.
 
 Upon approval, inventory adjustments are made in HotWax Commerce, reflecting the updated stock levels. This ensures that inventory records remain accurate and aligned with the actual stock on hand.
 
@@ -114,16 +114,4 @@ Cycle counts should be performed after receiving the inventory reset from the ER
 
 Learn more about [Cycle Count](https://docs.hotwax.co/documents/v/store-operations/inventory/directed-cycle-count)
 
-#### Unexpected Inventory Variance
-
-Sometimes, unexpected inventory variance is identified outside of scheduled cycle counts. In such cases, store associates can log variances with the store manager's permission and provide a reason directly from the app.
-
-For example, if during a routine check, a store associate finds that 10 units of a product are missing due to damage or theft, they can log this variance and update the inventory accordingly, ensuring that the records remain accurate.
-
-
-
-<figure><img src="../.gitbook/assets/Unexpected Inventory Variance.png" alt=""><figcaption><p>Logging unexpected inventory variance using HotWax Commerce Cycle Count App</p></figcaption></figure>
-
 By following these practices and using HotWax Commerce's intuitive apps, retailers can maintain high levels of inventory accuracy and streamline their inventory management processes.
-
-Learn more logging [inventory variances](https://docs.hotwax.co/documents/v/learn-netsuite/integration-flows/cycle-count)
