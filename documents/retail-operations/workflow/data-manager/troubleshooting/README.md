@@ -1,6 +1,6 @@
 ---
 description: >-
-  The section details how various jobs contribute to the overall system, from order allocation to inventory management, and offers insights into troubleshooting and performance.
+  The section covers error logs and best practices for fixing recurring issues efficiently to ensure efficient data       management and integration.
 ---
 
 # Troubleshooting
