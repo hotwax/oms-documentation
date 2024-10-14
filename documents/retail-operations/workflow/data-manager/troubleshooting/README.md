@@ -1,7 +1,6 @@
 ---
 description: >-
-  This guide helps you quickly identify and resolve these problems to ensure
-  efficient data management and integration.
+  The section details how various jobs contribute to the overall system, from order allocation to inventory management, and offers insights into troubleshooting and performance.
 ---
 
 # Troubleshooting
