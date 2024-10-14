@@ -108,7 +108,7 @@ Holds all product jobs.
 **This page contains jobs such as:**
 
 1. **Sync:** Sync products and category structures from Shopify into HotWax Commerce and keep them up to date.
-2. **Import**: Import new products job imports newly created products from Shopify
+2. **Import**: `Import new products` job imports newly created products from Shopify.
 
 </details>
 
