@@ -82,7 +82,7 @@ Learn more about [transfer orders](https://docs.hotwax.co/documents/v/learn-nets
 
 Maintaining accurate inventory levels in a retail environment is challenging, especially for omnichannel retailers. Discrepancies between physical stock and system records can arise from factors such as theft, damage, or human error during transactions. To address these inconsistencies, stores conduct periodic cycle counts. This helps reconcile actual inventory with system records, ensuring accuracy across all platforms.
 
-HotWax Commerce offers a `Cycle Count App` designed to make the process simple and efficient for  operations teams as well as store associates.
+HotWax Commerce offers a `Cycle Count App` designed to make the process simple and efficient for operations teams as well as store associates.
 
 Operations teams can schedule cycle counts at specific stores, assigning them to the store associates for execution. Once assigned, store associates are notified and can begin the counting process using the app, scanning products and recording the quantities they find.
 
@@ -92,9 +92,9 @@ After completing the cycle count, store associates submit their results, which a
 
 It’s also crucial to account for these variances in the ERP and keep inventory up-to-date for stores. Before understanding how HotWax Commerce pushes inventory variances to the ERP, let's first see how inventory adjustments resulting from cycle counting are accounted for in HotWax Commerce:
 
-<mark style="color:orange;">**Auto increase QOH & ATP:**</mark>: When results show that the physical count exceeds the systemic inventory, the QOH and ATP are increased.
+<mark style="color:orange;">**Auto increase QOH & ATP:**</mark> When results show that the physical count exceeds the systemic inventory, the QOH and ATP are increased.
 
-<mark style="color:orange;">**Auto decrease QOH & ATP:**</mark>: When results show that the actual physical count is less than what the system shows, the QOH and ATP are reduced accordingly.
+<mark style="color:orange;">**Auto decrease QOH & ATP:**</mark> When results show that the actual physical count is less than what the system shows, the QOH and ATP are reduced accordingly.
 
 When inventory adjustments resulting from cycle counting are recorded in HotWax Commerce, the online ATP for the product is recalculated. This ensures that the sellable inventory available for eCommerce is accurately calculated based on the latest stock levels.
 
@@ -133,6 +133,10 @@ Online orders are sent to the brokering queue for inventory allocation. As order
 Once the online orders are fulfilled, HotWax Commerce also automatically reduces the QOH of products. HotWax Commerce already has fulfillment updates for the orders fulfilled using the `Fulfillment App`. While, for orders fulfilled from warehouses, HotWax Commerce receives fulfillment updates from WMS or ERP and subsequently reduces the QOH for those products.
 
 This step ensures that the count for physical available inventory is accurately reflected at that specific location.
+
+Learn more about [rejection handling and its impact on inventory](https://docs.hotwax.co/documents/store-operations/orders/fulfillment/rejection).&#x20;
+
+When rejections happen in a warehouse, inventory is automatically updated during the daily reset.
 
 ## Push Online ATP to eCommerce
 
