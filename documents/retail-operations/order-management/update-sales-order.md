@@ -7,7 +7,8 @@ description: Discover how sales orders are updated in HotWax Commerce OMS.
 To perform the order allocation tasks, we first navigate to the View Sales Order page:
 
 1. Go to the Hamburger Menu in the OMS > Order Management section > Sales Orders to open the Find Sales Order page.
-2. Select the order ID to open the View Sales Order page.
+2. Search for the order ID for which you want to update the order details.
+3. Select the order ID to open the View Sales Order page.
 
 ## Update Shipping details
 
