@@ -1,8 +1,6 @@
 ---
 description: >-
-  Learn about job workflows in HotWax Commerce's Order Management System. This
-  document covers essential Understandings these workflows will help you grasp
-  each job's Workflow in HotWax Commerce
+  The section details how various jobs contribute to the overall system, from order allocation to inventory management,   and offers resolutions into troubleshooting and performance.
 ---
 
 # Job workflows
