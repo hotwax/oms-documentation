@@ -14,8 +14,6 @@ description: >-
 
 Displays the jobs for initial OMS setup to import all products and orders.​
 
-
-
 **This page contains jobs such as:**
 
 1. **Import Products in Bulk:** Import all products from Shopify. Make sure you run this before importing orders in bulk during initial setup.
@@ -29,9 +27,7 @@ Displays the jobs for initial OMS setup to import all products and orders.​
 
 Holds the Pre-orders and Backorders jobs.
 
-
-
-**This page contains jobs such as:**&#x20;
+**This page contains jobs such as:**
 
 1. **Auto refresh presell catalog:** Automatically add and remove products from the pre-order and backorder catalogs based on inventory, purchase orders, and order queues.
 2. **Sync variant details:** Sync pre-selling related information to Shopify as tags and meta fields.
@@ -49,9 +45,7 @@ Holds the Pre-orders and Backorders jobs.
 
 Holds all order jobs.
 
-
-
-**This page contains jobs such as:**&#x20;
+**This page contains jobs such as:**
 
 1. **New orders:** Import new orders from eCommerce.
 2. **Approve orders:** Check all orders and approve orders that are created.
@@ -68,9 +62,7 @@ Holds all order jobs.
 
 Holds all brokering jobs and occurrence.
 
-
-
-**This page contains jobs such as:**&#x20;
+**This page contains jobs such as:**
 
 1. **Create new brokering:** Schedule a new brokering batch on new or unfulfilled orders.
 2. **Rejected orders brokering:** Schedule a brokering batch for rejected orders.
@@ -81,11 +73,9 @@ Holds all brokering jobs and occurrence.
 
 <summary>Fulfillment</summary>
 
-Holds all fulfillment jobs.&#x20;
+Holds all fulfillment jobs.
 
-
-
-**This page contains jobs such as:**&#x20;
+**This page contains jobs such as:**
 
 1. **Shipping:** Automatically ship orders that are packed and have a tracking number if required.
 2. **History:** Create or update order fulfillment history records from FTP.
@@ -95,13 +85,11 @@ Holds all fulfillment jobs.&#x20;
 
 <details>
 
-<summary>Inventory </summary>
+<summary>Inventory</summary>
 
-Holds all inventory jobs.&#x20;
+Holds all inventory jobs.
 
-
-
-**This page contains jobs such as:**&#x20;
+**This page contains jobs such as:**
 
 1. **Export thresholds:** Export a list of product thresholds based on tags and categories
 2. **Inventory variance:** Import inventory variance and adjust inventory
@@ -115,13 +103,12 @@ Holds all inventory jobs.&#x20;
 
 <summary>Products</summary>
 
-Holds all product jobs.&#x20;
+Holds all product jobs.
 
-
-
-**This page contains jobs such as:**&#x20;
+**This page contains jobs such as:**
 
 1. **Sync:** Sync products and category structures from Shopify into HotWax Commerce and keep them up to date.
+2. **Import**: Import new products job imports newly created products from Shopify
 
 </details>
 
@@ -133,8 +120,6 @@ Holds all uncategorised jobs
 
 </details>
 
-
-
 ***
 
 ## Webhooks
@@ -145,17 +130,13 @@ Webhooks can be subscribed to from the category pages within the Job Manager app
 
 Automated messages sent from eCommerce (Shopify) to OMS whenever an event occurs. They contain data about the event and are received in OMS, allowing real time communication between eCommerce and OMS.
 
-
-
 **Subscribe to Shopify eCommerce Webhooks from OMS for:**
 
 <details>
 
 <summary>Orders</summary>
 
-
-
-**Webhooks available for:**&#x20;
+**Webhooks available for:**
 
 1. New Orders
 2. Cancelled orders
@@ -168,9 +149,7 @@ Automated messages sent from eCommerce (Shopify) to OMS whenever an event occurs
 
 <summary>Inventory</summary>
 
-
-
-**Webhooks available for:**&#x20;
+**Webhooks available for:**
 
 Inventory level update
 
@@ -180,12 +159,9 @@ Inventory level update
 
 <summary>Products</summary>
 
-
-
-**Webhooks available for:**&#x20;
+**Webhooks available for:**
 
 1. New products
 2. Delete products
 
 </details>
-
