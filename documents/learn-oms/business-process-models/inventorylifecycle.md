@@ -134,6 +134,8 @@ Once the online orders are fulfilled, HotWax Commerce also automatically reduces
 
 This step ensures that the count for physical available inventory is accurately reflected at that specific location.
 
+In the event where a store cannot fulfill an online order allocated to them, HotWax Commerce checks the rejection reasons for the rejected orders and automatically updates ATP and Online ATP.
+
 Learn more about [rejection handling and its impact on inventory](https://docs.hotwax.co/documents/store-operations/orders/fulfillment/rejection).&#x20;
 
 When rejections happen in a warehouse, inventory is automatically updated during the daily reset.
