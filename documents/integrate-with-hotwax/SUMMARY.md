@@ -45,6 +45,7 @@
   * [Fulfilled Order Items Feed](api/fulfillment/feed/fulfilled-order-items-feed.md)
 * [Appeasements](api/appeasements/README.md)
   * [Appeasements feed](api/appeasements/appeasements-feed.md)
+* [Carriers](api/carriers/apis/hotwax-carrier-api.md)
 * [Miscellaneous](api/miscellaneous/README.md)
   * [Perform Find](api/Miscellaneous/perform-find.md)
 
