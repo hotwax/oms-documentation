@@ -11,7 +11,7 @@ HotWax Commerce aids in automating pre-order and back-order management by levera
 
 Purchase orders (POs) provide crucial details about item specifics and upcoming inventory arrivals. Retailers can integrate their ERP systems with HotWax Commerce to synchronize purchase orders automatically or utilize the Import App to manually import purchase order CSV files.
 
-To know how you can manage your purchase orders from your ERP system like NetSuite, please refer to the [integration guide](https://app.gitbook.com/s/WAGxTeFJP4I4AIlfs1Gf/supported-integrations/purchase-orders). For users who want to import their purchase orders manually, HotWax Commerce’s Import app simplifies the process of importing purchase orders and their inventory into HotWax Commerce. Here’s how retailers can upload purchase orders using the Import App:
+To know how you can manage your purchase orders from your ERP system like NetSuite, please refer to the [integration guide](https://docs.hotwax.co/documents/learn-netsuite). For users who want to import their purchase orders manually, HotWax Commerce’s Import app simplifies the process of importing purchase orders and their inventory into HotWax Commerce. Here’s how retailers can upload purchase orders using the Import App:
 
 ## Purchase Order Page
 
