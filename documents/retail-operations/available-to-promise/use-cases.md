@@ -104,20 +104,31 @@ Retailers may offer customized products that can only be processed at certain fa
 
 **Steps to Implement:**
 
-1. **Create a Facility Group:**
-   * Identify the facilities that do not offer customization services.
-   * Create a facility group for these locations, ensuring they are grouped separately from the facilities that can process customized products.
-2. **Tag Customized Products:**
-   * Assign a unique tag to all products that require customization. For example, use a tag like `Customizable` to easily identify these products.
-3. **Create a New ATP Shipping Rule:**
-   * In the ATP app, navigate to the shipping page and create a new rule in `Product and Facility` tab for these customized products.
-4. **Configure the Rule:**
-   * Select the facility group where customization is not available.
-   * Include the relevant product tag (`Customizable`) to apply the rule to all products that require customization.
-5. **Disable Shipping/Pickup:**
-   * Set the rule to disable shipping or disable pickup for the selected facility group. This ensures that orders for customized products will not be fulfilled from the facilities that cannot process them.
-6. **Save and Activate:**
-   * Save the ATP rule and activate it to ensure that it is applied immediately, restricting the shipping of customized products to only the facilities that can handle customization.
+1. **Create a Facility Group with Customization Capabilities**
+
+* Identify the facilities that can handle customized products due to the necessary equipment or expertise.
+* Create a facility group for these locations, grouping only the facilities capable of handling customization.
+
+2. **Tag Customized Products**
+
+* Assign the unique product tag (e.g., "Customizable") to all products that require customization services. This tag will help in applying specific rules only to these products.
+
+3. **Create a New ATP Shipping Rule for Customization-Enabled Facilities**
+
+* In the ATP app, navigate to the shipping section and create a rule in the "Product and Facility" tab.
+* Exclude the facility group where customization is allowed (facilities with the required equipment).
+* Include the product tag ("Customizable") to apply the rule to all products requiring customization.
+
+4. **Disable Shipping for Facilities without Customization**
+
+* Configure the rule to disable shipping for all facilities except the ones that are included in the customization-enabled facility group.
+* This ensures that customized products will only be shipped from facilities that can handle customization.
+
+5. **Repeat for BOPIS**
+
+* Similarly, create a rule in the ATP app for BOPIS orders.
+* Exclude the facilities capable of customization and disable BOPIS in the rule.
+This ensures that customers selecting BOPIS will only be able to pick up customized products from facilities equipped to process them.
 
 ### Scenario 6: Managing Seasonal Demand by Region
 
@@ -138,6 +149,8 @@ Retailers often face varying product demands across different regions during sea
 5. **Saving the Rule**
    * Disable store fulfillment for the selected facility group to prevent shipment from those locations.
    * Save the ATP rule to enforce this restriction during the seasonal period.
+
+{% embed url="https://youtu.be/0nIEN15IoHM" %}
 
 ## Pickup Rules
 
@@ -160,3 +173,6 @@ Retailers often carry heavy or bulky items in their catalogs, such as furniture,
    * Turn off the pickup option for these items within the rule to ensure customers cannot select in-store pickup.
 6. **Saving the Rule**
    * Save the ATP rule to enforce the restriction across all selected facilities.
+
+{% embed url="https://youtu.be/7HPG18cIWiI" %}
+
