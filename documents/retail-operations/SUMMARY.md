@@ -58,6 +58,9 @@
   * [Rule Builder](brokering/rule-builder.md)
   * [Order Routing Parameters](brokering/routing-parameters.md)
   * [Use Cases](brokering/scenarios.md)
+  * [Templates]
+    * [Cross-Border Shipping](brokering/template/cross-border-shipping.md)
+    * [invnetory-based Routing](brokering/template/inventory-based-shipping.md)
   * [Troubleshooting](brokering/troubleshooting/README.md)
     * [Scheduling Errors](brokering/troubleshooting/scheduling-error.md)
     * [Incorrect Facility Configurations](brokering/troubleshooting/facility-association.md)
