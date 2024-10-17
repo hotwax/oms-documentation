@@ -76,4 +76,4 @@ Mapping between HotWax Commerce and NetSuite involves establishing connections a
 
 Confirm establishing the new mapping by clicking on `Add`.
 
-For further details, refer to this [resource](../../learn-netsuite/netsuite-deployment/flows/integration-mappings/shipping-methods.md).
+For further details, refer to this [resource](https://docs.hotwax.co/documents/learn-netsuite/synchronization-flows/integration-mappings/shipping-methods).
