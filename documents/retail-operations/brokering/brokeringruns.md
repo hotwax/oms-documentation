@@ -1,6 +1,5 @@
 ---
-description: >-
-Learn about brokering runs.
+description: "Learn about brokering runs."
 ---
 
 Runs in the brokering system act as containers for sequences of routings. These runs are scheduled by retailers to execute at specified intervals, allowing for effective and timely order routing.
