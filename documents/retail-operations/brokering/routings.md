@@ -6,7 +6,7 @@ description: Learn about routings.
 
 A routing in the brokering system defines the criteria for fetching orders and specifies the inventory rules to apply. Understanding how to create, manage, and optimize routings is crucial for configuring your order processing to meet specific fulfillment requirements.
 
-<figure><img src="../.gitbook/assets/Routings.png" alt=""><figcaption><p>Routings in Order Routing App</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Routings.png" alt=""><figcaption><p>Routing in Order Routing App</p></figcaption></figure>
 
 ### Adding a New Routing
 
