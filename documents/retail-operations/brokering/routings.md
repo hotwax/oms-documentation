@@ -57,12 +57,12 @@ Order lookup is broken down into multiple facets. Each facet is designed to find
 
 Learn how you can have granular control over which orders are sent to which locations, depending on specific criteria such as order priority, sales channels, and shipping method:
 
-#### Managing Order Filters
+### Managing Order Filters
 
 * Click on the options icon in the "Filters" section to add or remove filters.
 * Ensure orders are routed based on specific criteria that align with your fulfillment strategy.
 
-#### Available Order Filters
+### Available Order Filters
 
 **Origin Facility Groups**
 
@@ -96,12 +96,12 @@ SLA promised to the customer.
 
 When customers choose specific shipping methods, like expedited or same-day delivery, these orders must be prioritized differently. Retailers can use this filter to fetch a batch of orders based on the chosen shipping method, ensuring that orders requiring fast shipping are processed first.
 
-#### Managing Sorting Options
+### Managing Sorting Options
 
 * Click on the options icon on the "Sort" card to add or remove sorting options.
 * Adjust the priority of sort options by clicking and dragging them to the desired sequence.
 
-#### Available Order Sorting
+### Available Order Sorting
 
 **Order Date**
 
