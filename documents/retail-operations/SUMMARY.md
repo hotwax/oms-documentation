@@ -54,7 +54,7 @@
     * [Order Attribute is Missing](order-management/troubleshooting/orderAttributeMissing.md)
     * [Order Duplication](order-management/troubleshooting/duplicate-orders.md)
 * [Order Routing](brokering/README.md)
-  * [Order Routing](brokering/configurableRouting.md)
+  * [Brokering Runs](brokering/brokeringruns.md)
   * [Rule Builder](brokering/rule-builder.md)
   * [Order Routing Parameters](brokering/routing-parameters.md)
   * [Use Cases](brokering/scenarios.md)
