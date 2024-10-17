@@ -19,8 +19,7 @@ Monitoring the Client's Operational Dashboard is important to ensure the system 
 **Inventory and Fulfillment Dashboards:**
 - Ensure there are no [unexpected errors](https://docs.hotwax.co/everything/tathya/data-discrepancies) in the charts.
 - To know more about reports [click here](https://docs.hotwax.co/analytics).
-- 
-{% hint style="info" %} We need to check these dashboards for all clients. { % endhint %}
+{% hint style="info" %} We need to check these dashboards for all clients. {% endhint %}
 
 ---
 
