@@ -55,7 +55,7 @@
     * [Order Duplication](order-management/troubleshooting/duplicate-orders.md)
 * [Order Routing](brokering/README.md)
   * [Brokering Runs](brokering/brokeringruns.md)
-  * [Rule Builder](brokering/rule-builder.md)
+  * [Routings](brokering/routings.md)
   * [Order Routing Parameters](brokering/routing-parameters.md)
   * [Use Cases](brokering/scenarios.md)
   * [\[Templates\]](orders/brokering/templates/README.md)
