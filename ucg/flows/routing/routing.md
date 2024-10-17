@@ -112,6 +112,10 @@ For Frank and Oak, two facility groups needs to be created:
 2. **Activate Each Order Batch:** Next, activate the order batches for both US and Canada to ensure that orders are processed according to their respective shipping methods.
 3. **Activate the Brokering Run:** Finally, activate the brokering run. Make sure to schedule the run frequency every 15 minutes as Frank and Oak requires continuous and timely brokering of all the orders.
 
+
+
+{% embed url="https://youtu.be/WudPbK_x68I?si=eIustFdwtU8uX2bV" %}
+
 ## Conclusion:
 
 Frank And Oak utilizes HotWax Commerce to optimize order fulfillment. By creating specific batches for U.S. and Canada orders, and setting up precise inventory rules, the system ensures that U.S. orders are fulfilled from the central warehouse and Canada orders are handled effectively based on warehouse and store inventory. The streamlined brokering run and scheduling of inventory rules enhance processing efficiency, reduce costs, and support reliable delivery within the 7-day standard shipping timeframe, aligning with the company's
