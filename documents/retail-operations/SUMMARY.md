@@ -53,7 +53,7 @@
     * [Order Indexing Discrepancy](order-management/troubleshooting/indexing-issue.md)
     * [Order Attribute is Missing](order-management/troubleshooting/orderAttributeMissing.md)
     * [Order Duplication](order-management/troubleshooting/duplicate-orders.md)
-* [Brokering](orders/brokering/README.md)
+* [Order Routing](brokering/README.md)
   * [Order Routing](brokering/configurableRouting.md)
   * [Rule Builder](brokering/rule-builder.md)
   * [Order Routing Parameters](brokering/routing-parameters.md)
