@@ -22,15 +22,6 @@
   * [Inventory](job-workflows/inventory.md)
   * [Products](job-workflows/products.md)
   * [Pre-Orders](job-workflows/pre-orders.md)
-* [Data manager](data-manager/README.md)
-  * [Configurations](data-manager/configurations.md)
-  * [Imports](data-manager/imports.md)
-  * [Troubleshooting](workflow/data-manager/troubleshooting/README.md)
-    * [Data not imported](data-manager/dataNotImportedInOMS.md)
-    * [SFTP errors](data-manager/data-import-errors.md)
-    * [Manual Data import](data-manager/manual-data-import.md)
-    * [Shopify MDM](data-manager/shopify-mdm.md)
-    * [Schedule error mail](data-manager/schedule-error-mail.md)
 
 ## Products
 
