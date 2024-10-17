@@ -22,9 +22,9 @@ Once valid inventory facilities have been identified, those facilities can be so
 
 ### Managing Inventory Rules
 
-- Add a new inventory rule by clicking on the "Add Inventory Rule" button.
-- Click on the options icon on the "Filters" card to manage filters for inventory rules.
-- Rearrange the sequence of inventory rules by clicking and dragging items using the reorder icon on each rule.
+* Add a new inventory rule by clicking on the "Add Inventory Rule" button.
+* Click on the options icon on the "Filters" card to manage filters for inventory rules.
+* Rearrange the sequence of inventory rules by clicking and dragging items using the reorder icon on each rule.
 
 ### Available Inventory Filters
 
@@ -44,10 +44,12 @@ For example, if a retailer sets a brokering safety stock level of 10 units, only
 
 **5. Split Order Item Group**: Retailers can control whether they want to split items that belong to a specific order item group. For example, certain items, like gift sets or kits, may need to be shipped together to maintain the integrity of the order. Retailers can decide whether to allow splitting of such groups or to prioritize keeping them intact, even if other items in the order are split across multiple facilities.
 
+<figure><img src="../.gitbook/assets/Inventory Filters.png" alt="" width="327"><figcaption><p>Allocate Inventory from All Facilties</p></figcaption></figure>
+
 ### Managing Sorting Options
 
-- Click on the options icon on the "Sort" card to add or remove sorting options.
-- Adjust the priority of sort options by clicking and dragging them to the desired sequence.
+* Click on the options icon on the "Sort" card to add or remove sorting options.
+* Adjust the priority of sort options by clicking and dragging them to the desired sequence.
 
 ### Available Inventory Sorting
 
@@ -65,13 +67,13 @@ After all possible inventory has been found, retailers can choose what condition
 
 ### Availability States
 
-- Fully Available Without Splitting
-     - Partially Available
-- Meets Shipment Threshold Value
+* Fully Available Without Splitting
+  * Partially Available
+*   Meets Shipment Threshold Value
 
-   **What is Shipment Threshold Value?**
-   
-   Setting order splitting thresholds based on shipment value directly addresses the problem of maintaining the profitability of shipments while balancing fulfillment speed and customer experience. Retailers can set a minimum shipment value that they want to maintain during allocation which also ensures profitability of the order. When ordered items are allocated, the brokering engine will not only ensure that the allocated items meet the threshold but also that the unallocated items also meet the threshold. Checking outstanding and unallocated items of an order is equally important because if their value doesn’t meet the shipment value threshold, those items will never be automatically allocated. By checking both allocated and unallocated item totals, the brokering engine ensures that inventory is selected in a way that ensures fulfillment margins for the entire order.
+    **What is Shipment Threshold Value?**
+
+    Setting order splitting thresholds based on shipment value directly addresses the problem of maintaining the profitability of shipments while balancing fulfillment speed and customer experience. Retailers can set a minimum shipment value that they want to maintain during allocation which also ensures profitability of the order. When ordered items are allocated, the brokering engine will not only ensure that the allocated items meet the threshold but also that the unallocated items also meet the threshold. Checking outstanding and unallocated items of an order is equally important because if their value doesn’t meet the shipment value threshold, those items will never be automatically allocated. By checking both allocated and unallocated item totals, the brokering engine ensures that inventory is selected in a way that ensures fulfillment margins for the entire order.
 
 Based on each of these conditions, an action can be tied to the allocation. Retailers can choose which action to perform based on the outcome.
 
@@ -81,7 +83,7 @@ Based on each of these conditions, an action can be tied to the allocation. Reta
 
 **2. Move to the Next Rule**: Automatically move unallocated items to the next rule in the sequence.
 
-**3. Move to Queue**: Transfer unallocated items to a selected queue for further processing. If the availability of the inventory lookup is not what is expected, but the item should not be attempted by another rule in this flow, the items can be moved to a specific queue where they can be held for relevant actions. For example, move unfillable orders to the “Unfillable Parking” so that they can be rerouted during a different 
+**3. Move to Queue**: Transfer unallocated items to a selected queue for further processing. If the availability of the inventory lookup is not what is expected, but the item should not be attempted by another rule in this flow, the items can be moved to a specific queue where they can be held for relevant actions. For example, move unfillable orders to the “Unfillable Parking” so that they can be rerouted during a different
 
 **4. Add Auto Cancel Date**: Specify the number of days to automatically cancel orders that could not be allocated. Based on the inventory availability, retailers may want to add an auto cancel date on the order, to ensure that they do not remain in the fulfillment pipeline for too long.
 
@@ -90,5 +92,3 @@ Understanding and appropriately configuring these actions will let you fine-tune
 {% hint style="success" %}
 By leveraging the full range of order fetching, order and inventory filtering, and sorting parameters, provided by HotWax Commerce’s Order Routing App, retailers can create highly customized and efficient order routing strategies that optimize inventory usage, reduce shipping times and costs, and ensure their fulfillment process is specific to their unique business needs.
 {% endhint %}
-
-
