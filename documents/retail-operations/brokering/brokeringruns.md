@@ -23,11 +23,13 @@ Runs in the brokering system act as containers for sequences of routings. These 
 Brokering runs are scheduled using two essential parameters:
 
 1. **Frequency**
-   * Determine how often you want the brokering run to execute. Options include:
+   * Determine how often you want the brokering run to execute.
 2. **Runtime**
    * Specify the time of day (in 24-hour format) when the brokering run should initiate.
 
-For example, setting the frequency of a run to "Daily" and the runtime to "7 am" will execute the brokering run every morning at 7 am.
+For example, setting the frequency of a run to "Daily" and the runtime to "7 am" will execute the brokering run every morning at 7 am or scheduling a brokering run at "Every 5 minutes" will execute a brokering run in every 5 minutes.
+
+<figure><img src="../.gitbook/assets/schedule run.png" alt="" width="375"><figcaption><p>Schedule a Run</p></figcaption></figure>
 
 Understanding how to view, schedule, and manage brokering runs is essential for optimizing your order routing strategies.
 

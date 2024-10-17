@@ -29,7 +29,7 @@ The inventory file might be placed in an incorrect SFTP path, preventing HotWax 
 1. **Check the File Path and Location**
    * Verify the SFTP file path where the inventory file should be located.
 2. **Consult the User Manual**
-   * Refer to the [HotWax Commerce User Manual](../../data-manager/data-import-errors.md) for detailed instructions on setting up the correct file path.
+   * Refer to the [HotWax Commerce User Manual](broken-reference) for detailed instructions on setting up the correct file path.
 
 ## Scenario 3: Shopify Job Not Running
 
