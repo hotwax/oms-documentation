@@ -2,6 +2,8 @@
 description: Learn about rules.
 ---
 
+# Rules
+
 HotWax Commerce allows retailers to apply multiple recursive inventory allocation "rules" based on different batches of orders.
 
 ### Finding Inventory
@@ -84,29 +86,3 @@ Based on each of these conditions, an action can be tied to the allocation. Reta
 **4. Add Auto Cancel Date**: Specify the number of days to automatically cancel orders that could not be allocated. Based on the inventory availability, retailers may want to add an auto cancel date on the order, to ensure that they do not remain in the fulfillment pipeline for too long.
 
 Understanding and appropriately configuring these actions will empower retailers to fine-tune their brokering rules, improving order routing efficiency and meeting specific fulfillment requirements.
-
-
-
-
-
-
-
-### Committing Orders to Inventory
-
-Once all possible inventory has been found, retailers can specify conditions that must be met for the order to be allocated to inventory. These conditions depend on the availability of inventory at a facility for all the items being attempted:
-
-- **Fully Available Without Splitting**
-- **Partially Available**
-- **Meets Shipment Threshold Value**: This ensures that the allocated items meet the shipment value threshold for profitability, while also checking unallocated items to ensure the order can be fulfilled profitably.
-
-### Available Allocation Actions
-
-**1. Allocate Partial**: Allows an order to be split and allocated partially if some items are available at a location.
-  
-**2. Move to the Next Rule**: Automatically moves unallocated items to the next rule in the sequence.
-
-**3. Move to Queue**: Transfers unallocated items to a selected queue for further processing, such as moving unfillable orders to the "Unfillable Parking" queue for rerouting later.
-
-**4. Add Auto Cancel Date**: Specifies a number of days after which unallocated orders are automatically canceled.
-
-Understanding and configuring these actions enables retailers to fine-tune their brokering rules, improving order routing efficiency and meeting specific fulfillment requirements.
