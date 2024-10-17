@@ -1,7 +1,7 @@
 # Table of contents
 
 * [Launchpad](README.md)
-* [Glossary](./../store-operations/GLOSSARY.md)
+* [Glossary](../store-operations/GLOSSARY.md)
 
 ## Workflow
 
@@ -44,12 +44,12 @@
     * [Order Indexing Discrepancy](order-management/troubleshooting/indexing-issue.md)
     * [Order Attribute is Missing](order-management/troubleshooting/orderAttributeMissing.md)
     * [Order Duplication](order-management/troubleshooting/duplicate-orders.md)
-* [Brokering](orders/brokering/README.md)
-  * [Order Routing](brokering/configurableRouting.md)
-  * [Rule Builder](brokering/rule-builder.md)
-  * [Order Routing Parameters](brokering/routing-parameters.md)
+* [Order Routing](brokering/README.md)
+  * [Brokering Runs](brokering/brokeringruns.md)
+  * [Routings](brokering/routings.md)
+  * [Rules](brokering/rules.md)
   * [Use Cases](brokering/scenarios.md)
-  * [Templates]
+  * [Templates](orders/brokering/templates/README.md)
     * [Cross-Border Shipping](brokering/template/cross-border-shipping.md)
     * [invnetory-based Routing](brokering/template/inventory-based-shipping.md)
   * [Troubleshooting](brokering/troubleshooting/README.md)
