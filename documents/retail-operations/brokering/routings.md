@@ -59,8 +59,8 @@ Learn how you can have granular control over which orders are sent to which loca
 
 ### Managing Order Filters
 
-- Click on the options icon in the "Filters" section to add or remove filters.
-- Ensure orders are routed based on specific criteria that align with your fulfillment strategy.
+* Click on the options icon in the "Filters" section to add or remove filters.
+* Ensure orders are routed based on specific criteria that align with your fulfillment strategy.
 
 ### Available Order Filters
 
@@ -78,8 +78,8 @@ Learn how you can have granular control over which orders are sent to which loca
 
 ### Managing Sorting Options
 
-- Click on the options icon on the "Sort" card to add or remove sorting options.
-- Adjust the priority of sort options by clicking and dragging them to the desired sequence.
+* Click on the options icon on the "Sort" card to add or remove sorting options.
+* Adjust the priority of sort options by clicking and dragging them to the desired sequence.
 
 ### Available Order Sorting
 
@@ -93,4 +93,4 @@ Learn how you can have granular control over which orders are sent to which loca
 
 **5. Shipping Method**: Retailers can sort orders by shipping method, ensuring that orders with expedited shipping are allocated inventory before those with standard shipping.
 
-Now, next learn about recursive inventory allocation rules that ensures order is fulfilled from the best location.
+Now, next learn about recursive inventory allocation [rules](rules.md) that ensures order is fulfilled from the best location.
