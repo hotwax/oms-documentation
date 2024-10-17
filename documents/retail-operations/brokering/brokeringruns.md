@@ -10,10 +10,13 @@ Runs in the brokering system act as containers for sequences of routings. These 
 
 1. **Chronological Sequence**
    * Once logged in, you'll find all routing runs presented in a chronological sequence based on their next scheduled run time.
+
+<figure><img src="../.gitbook/assets/Brokering Runs (1).png" alt=""><figcaption><p>Brokering Runs in Order Routing App</p></figcaption></figure>
+
 2. **Run Details**
    * Click on a specific run to open its details. Here, you can explore information about the run and find options to edit details such as its description.
 
-<figure><img src="../.gitbook/assets/Brokering Runs (1).png" alt=""><figcaption><p>Brokering Runs in Order Routing App</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Run details.png" alt=""><figcaption><p>Run Details</p></figcaption></figure>
 
 ### Scheduling Brokering Runs
 
