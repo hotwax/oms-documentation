@@ -85,4 +85,10 @@ Based on each of these conditions, an action can be tied to the allocation. Reta
 
 **4. Add Auto Cancel Date**: Specify the number of days to automatically cancel orders that could not be allocated. Based on the inventory availability, retailers may want to add an auto cancel date on the order, to ensure that they do not remain in the fulfillment pipeline for too long.
 
-Understanding and appropriately configuring these actions will empower retailers to fine-tune their brokering rules, improving order routing efficiency and meeting specific fulfillment requirements.
+Understanding and appropriately configuring these actions will let you fine-tune brokering rules, improving order routing efficiency and meeting specific fulfillment requirements.
+
+{% hint style="success" %}
+By leveraging the full range of order fetching, order and inventory filtering, and sorting parameters, provided by HotWax Commerce’s Order Routing App, retailers can create highly customized and efficient order routing strategies that optimize inventory usage, reduce shipping times and costs, and ensure their fulfillment process is specific to their unique business needs.
+{% endhint %}
+
+
