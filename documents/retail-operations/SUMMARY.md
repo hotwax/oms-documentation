@@ -1,7 +1,7 @@
 # Table of contents
 
 * [Launchpad](README.md)
-* [Glossary](./../store-operations/GLOSSARY.md)
+* [Glossary](../store-operations/GLOSSARY.md)
 
 ## Workflow
 
@@ -58,7 +58,7 @@
   * [Rule Builder](brokering/rule-builder.md)
   * [Order Routing Parameters](brokering/routing-parameters.md)
   * [Use Cases](brokering/scenarios.md)
-  * [Templates]
+  * [\[Templates\]](orders/brokering/templates/README.md)
     * [Cross-Border Shipping](brokering/template/cross-border-shipping.md)
     * [invnetory-based Routing](brokering/template/inventory-based-shipping.md)
   * [Troubleshooting](brokering/troubleshooting/README.md)
