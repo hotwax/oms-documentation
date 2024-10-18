@@ -19,8 +19,14 @@ A routing in the brokering system defines the criteria for fetching orders and s
 
 Adjust the sequence of order routings:
 
+{% embed url="https://youtu.be/_ADemNU3oPo" %}
+Sequence Routings
+{% endembed %}
+
 * Click and drag the chip on the top right of the routing card.
 * The sequence number on the card will automatically update based on the card's position.
+
+
 
 ### Configuring a Routing
 
