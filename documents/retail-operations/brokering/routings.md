@@ -62,6 +62,8 @@ Learn how you can have granular control over which orders are sent to which loca
 * Click on the options icon in the "Filters" section to add or remove filters.
 * Ensure orders are routed based on specific criteria that align with your fulfillment strategy.
 
+<figure><img src="../.gitbook/assets/Order filters.png" alt=""><figcaption><p>Order Filters</p></figcaption></figure>
+
 ### Available Order Filters
 
 **1. Origin Facility Groups**: This parameter allows retailers to filter orders based on the facility group from which they originated. For example, many times when walk-in customers cannot find their preferred items in store, store associates place the order on their behalf. These are known as Send Sale orders. In this scenario, the origin facility becomes the specific physical location. If a retailer wants all Send Sale orders from specific facilities to be routed differently, then they can apply this filter to create a batch of orders and proceed to create their routing.

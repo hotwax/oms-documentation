@@ -26,6 +26,8 @@ Once valid inventory facilities have been identified, those facilities can be so
 * Click on the options icon on the "Filters" card to manage filters for inventory rules.
 * Rearrange the sequence of inventory rules by clicking and dragging items using the reorder icon on each rule.
 
+<figure><img src="../.gitbook/assets/Inventory Filters (1).png" alt=""><figcaption><p>Inventory Filters</p></figcaption></figure>
+
 ### Available Inventory Filters
 
 **1. Facility Group**: Custom grouping of locations.
@@ -44,7 +46,7 @@ For example, if a retailer sets a brokering safety stock level of 10 units, only
 
 **5. Split Order Item Group**: Retailers can control whether they want to split items that belong to a specific order item group. For example, certain items, like gift sets or kits, may need to be shipped together to maintain the integrity of the order. Retailers can decide whether to allow splitting of such groups or to prioritize keeping them intact, even if other items in the order are split across multiple facilities.
 
-<figure><img src="../.gitbook/assets/Inventory Filters.png" alt="" width="327"><figcaption><p>Allocate Inventory from All Facilties</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Inventory Filters.png" alt="" width="327"><figcaption><p>Allocate Inventory from All Facilities</p></figcaption></figure>
 
 ### Managing Sorting Options
 
