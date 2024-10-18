@@ -55,6 +55,8 @@ For example, if a retailer sets a brokering safety stock level of 10 units, only
 
 ### Available Inventory Sorting
 
+<figure><img src="../.gitbook/assets/Inventory sorting.png" alt="" width="563"><figcaption><p>Inventory Sorting Options</p></figcaption></figure>
+
 **1. Proximity**: Retailers can sort inventory allocation based on the distance between the customer's shipping address and the facility. This sorting method prioritizes inventory located closer to the customer, helping reduce shipping times and costs, especially for expedited orders or those requiring same-day or next-day delivery.
 
 **2. Facility Order Limit**: In order to ensure that the workload at facilities is balanced, facilities can also be sorted on how much fulfillment capacity they have left.
