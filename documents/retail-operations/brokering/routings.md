@@ -48,6 +48,10 @@ Sequence Routings
 
 When a routing is no longer needed in a brokering run:
 
+{% embed url="https://youtu.be/DIllLJkyr3o" %}
+Archive Unarchive a Routing
+{% endembed %}
+
 * Click on the **Archive** button at the bottom right of the routing card.
 * This action moves the routing to the archive, removing it from the brokering run flow.
 
