@@ -11,6 +11,32 @@ description: Discover  the versions of HotWax Commerce OMS releases.
 2. To find details about SOLR versions, refer to the [SOLR version document](https://docs.google.com/spreadsheets/d/1H-iEVG-hS9FTsYOf5YiUH-5KOJUcu0\_TiPG8aVYjaHU/edit?gid=0#gid=0)
 {% endhint %}
 
+## Release - v5.18.0 (18th October 2024)
+
+| Information     | Value                                                                                                              |
+| --------------- | ------------------------------------------------------------------------------------------------------------------ |
+| Release Version | v5.18.0                                                                                                            |
+| Release Type    | Minor                                                                                                              |
+| Image Tag       | v5.18.0                                                                                                            |
+| Image URL       | `289432782788.dkr.ecr.us-east-1.amazonaws.com/omscoreimage:omscoreimage-latest`                                    |
+| Diff            | [Link to diff](https://git.hotwax.co/commerce/oms/-/compare/v5.17.0...v5.18.0?from_project_id=161&straight=false)  |
+| Changelog       | [Link to changelog](https://git.hotwax.co/commerce/oms/-/blob/v5.18.0/CHANGELOG.md?ref_type=tags)                  |
+                                                                                                                                       | 
+
+{% tabs %}
+{% tab title="Upgrade Data" %}
+[Link to Upgrade Data](https://git.hotwax.co/commerce/oms/-/blob/develop/upgrade/v5.18.0/UpgradeData.xml?ref_type=heads)
+{% endtab %}
+
+{% tab title="Upgrade SQL" %}
+[Link to Upgrade SQL](https://git.hotwax.co/commerce/oms/-/blob/develop/upgrade/v5.18.0/UpgradeSQL.sql?ref_type=heads)
+{% endtab %}
+
+{% tab title="Upgrade Steps" %}
+[Link to Upgrade Steps](https://git.hotwax.co/commerce/oms/-/blob/develop/upgrade/v5.18.0/UpgradeSteps.md?ref_type=heads)
+{% endtab %}
+{% endtabs %}
+
 ## Hotfix - v5.17.5 (16th October 2024)
 
 | Information     | Value                                                                                                                |
