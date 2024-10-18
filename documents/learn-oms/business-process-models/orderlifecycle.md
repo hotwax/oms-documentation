@@ -57,7 +57,7 @@ Brokering runs are scheduled by retailers to execute at specified intervals, all
 
 In the brokering run, the `order routing engine` looks for the best fulfillment location to fulfill orders from.
 
-Learn more about [order brokering and routing](https://docs.hotwax.co/documents/v/retail-operations/orders/brokering/configurablerouting)
+Learn more about [order brokering and routing](https://docs.hotwax.co/documents/retail-operations/orders/brokering)
 
 ## Successful Inventory Allocation
 
@@ -185,9 +185,7 @@ When orders are downloaded from eCommerce into HotWax Commerce in a <mark style=
 **So, which orders move to the** `General Ops Parking` **?**
 
 * **Historical orders:** These are orders that were already marked as <mark style="color:orange;">**“Completed” or “Canceled”**</mark> in eCommerce before being downloaded into HotWax Commerce during the implementation phase. For example, a retailer might request that all orders from the last two months also be imported during implementation, even though they have already been fulfilled or canceled. Storing these historical orders separately allows for easy access in case of customer inquiries or returns, without them entering the fulfillment workflow.
-
 * **Newly canceled orders:** Any orders that are canceled in eCommerce before being downloaded into HotWax Commerce are automatically moved to the `General Ops Parking` in a <mark style="color:orange;">**“Canceled”**</mark> status, ensuring that they are not processed further.
-  
 * **Completed digital product orders:** Orders for digital products, such as digital gift cards, are downloaded as <mark style="color:orange;">**“Completed”**</mark> and are also placed to the `General Ops Parking` since they require no further processing.
 
 This ensures that only open and actionable orders are processed for fulfillment, while orders that no longer require any operational steps are kept for record-keeping.
