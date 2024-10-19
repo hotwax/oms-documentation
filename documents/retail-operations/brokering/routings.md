@@ -37,26 +37,16 @@ Archive Unarchive a Routing
 
 Archived routings can be reactivated if needed and are accessible from the archive drawer at the bottom of the list.
 
-Next, let's delve into the detailed configuration options for order filters, inventory filters, and allocation actions that are involved during routing.
+Next, let's delve into the detailed configuration options for <mark style="color:orange;">order filters, inventory filters, and allocation actions that are involved during routing.</mark>
 
 ***
 
 ### Configuring a Routing
 
+As discussed initially, within each routing at the lowest level, you have individual <mark style="color:orange;">**"Rules"**</mark>.
+
 <figure><img src="../.gitbook/assets/Routings.png" alt=""><figcaption><p>Routing in Order Routing App</p></figcaption></figure>
 
-#### 1. Order
+<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><h4><mark style="color:orange;">1. Finding Order</mark></h4></td><td><p>Customize the criteria for orders using the options icon in the "Filters" section.</p><p></p><p>Sort order batches by adding sorting criteria and rearranging them.</p></td><td></td><td><a href="rules.md#finding-orders">#finding-orders</a></td></tr><tr><td><h4><mark style="color:orange;">2. Finding Inventory</mark></h4></td><td>Manage filters applied to determine where orders in this routing should be attempted for allocation.</td><td><p></p><p>Sort inventory options to prioritize available inventory effectively</p></td><td><a href="rules.md#finding-inventory">#finding-inventory</a></td></tr><tr><td><h4><mark style="color:orange;">3. Allocation Actions</mark></h4></td><td>Specify actions related to order allocation.</td><td></td><td><a href="rules.md#committing-orders-to-inventory">#committing-orders-to-inventory</a></td></tr></tbody></table>
 
-* Customize the criteria for orders using the options icon in the "Filters" section.
-* Sort order batches by adding sorting criteria and rearranging them.
-
-#### 2. Inventory
-
-* Manage filters applied to determine where orders in this routing should be attempted for allocation.
-* Sort inventory options to prioritize available inventory effectively.
-
-#### 3. Allocation Actions
-
-* Specify actions related to order allocation.
-
-Now, next learn in depth about about order fetching and recursive inventory allocation [rules](rules.md) that ensures order is fulfilled from the best location.
+The final chapter, let's learn in depth about these order fetching and recursive inventory allocation [rules](rules.md) that ensures order is fulfilled from the best location.
