@@ -4,7 +4,7 @@ description: Learn about rules.
 
 # Rules
 
-### Finding Orders
+## 1. Finding Orders
 
 HotWax Commerce allows retailers to apply multiple order fetching "rules" to ensure that the right orders are picked for routing.
 
@@ -52,7 +52,7 @@ Learn how you can have granular control over which orders are sent to which loca
 
 **5. Shipping Method**: Retailers can sort orders by shipping method, ensuring that orders with expedited shipping are allocated inventory before those with standard shipping.
 
-### Finding Inventory
+## 2. Finding Inventory
 
 HotWax Commerce allows retailers to apply multiple recursive inventory allocation "rules" for different batches of orders.
 
@@ -113,7 +113,9 @@ For example, if a retailer sets a brokering safety stock level of 10 units, only
 
 **4. Custom Sequence**: Allows full manual override to the sequence at which facilities are attempted. Retailers can set a custom sequence of facilities, defining a specific order in which locations should be considered for order routing. For example, if a retailer wants to prioritize fulfillment from underperforming stores with lower foot traffic, they can create a custom sequence that favors those stores, helping to balance inventory across all locations. Custom sequences can also be useful for managing seasonal inventory or routing orders to specific regions.
 
-### Committing Orders to Inventory
+## 3. Allocation Actions
+
+<mark style="color:orange;">**Committing Orders to Inventory**</mark>
 
 After all possible inventory has been found, retailers can choose what conditions must be met for the order to be allocated to inventory. The conditions of allocation depend on the availability of inventory at a particular facility for all the items being attempted, which will either be fully available at one location or partially available.
 
@@ -121,11 +123,11 @@ After all possible inventory has been found, retailers can choose what condition
 
 * Fully Available Without Splitting
   * Partially Available
-*   Meets Shipment Threshold Value
+* Meets Shipment Threshold Value
 
-    **What is Shipment Threshold Value?**
+**What is Shipment Threshold Value?**
 
-    Setting order splitting thresholds based on shipment value directly addresses the problem of maintaining the profitability of shipments while balancing fulfillment speed and customer experience. Retailers can set a minimum shipment value that they want to maintain during allocation which also ensures profitability of the order. When ordered items are allocated, the brokering engine will not only ensure that the allocated items meet the threshold but also that the unallocated items also meet the threshold. Checking outstanding and unallocated items of an order is equally important because if their value doesn’t meet the shipment value threshold, those items will never be automatically allocated. By checking both allocated and unallocated item totals, the brokering engine ensures that inventory is selected in a way that ensures fulfillment margins for the entire order.
+Setting order splitting thresholds based on shipment value directly addresses the problem of maintaining the profitability of shipments while balancing fulfillment speed and customer experience. Retailers can set a minimum shipment value that they want to maintain during allocation which also ensures profitability of the order. When ordered items are allocated, the brokering engine will not only ensure that the allocated items meet the threshold but also that the unallocated items also meet the threshold. Checking outstanding and unallocated items of an order is equally important because if their value doesn’t meet the shipment value threshold, those items will never be automatically allocated. By checking both allocated and unallocated item totals, the brokering engine ensures that inventory is selected in a way that ensures fulfillment margins for the entire order.
 
 Based on each of these conditions, an action can be tied to the allocation. Retailers can choose which action to perform based on the outcome.
 

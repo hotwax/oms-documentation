@@ -33,4 +33,4 @@ For example, setting the frequency of a run to "Daily" and the runtime to "7 am"
 
 Understanding how to view, schedule, and manage brokering runs is essential for optimizing your order routing strategies.
 
-Now, let's explore [routings](routings.md) within a run.
+Now, let's understand about [routings](routings.md) within a run.
