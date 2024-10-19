@@ -1,8 +1,8 @@
 ---
 description: >-
-  This section outlines the essential processes involved in Order Management.
-  Gaining an understanding of these processes will give you a   comprehensive
-  overview of how orders are handled from start to
+  Checkout workflows involved in Order Management. Gaining an understanding of
+  these processes will give you an overview of how orders are handled from start
+  to end.
 ---
 
 # Order management
