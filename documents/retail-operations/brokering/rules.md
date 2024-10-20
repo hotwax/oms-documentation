@@ -133,7 +133,11 @@ Based on each of these conditions, an action can be tied to the allocation. Reta
 
 ### Available Actions
 
+<figure><img src="../.gitbook/assets/Actions.png" alt="" width="327"><figcaption><p>Allocate Partial</p></figcaption></figure>
+
 **1. Allocate Partial**: Allow an order to be split and allocated partially if some items are available at a location.
+
+<figure><img src="../.gitbook/assets/Allocation actions.png" alt="" width="327"><figcaption><p>Available Actions</p></figcaption></figure>
 
 **2. Move to the Next Rule**: Automatically move unallocated items to the next rule in the sequence.
 
