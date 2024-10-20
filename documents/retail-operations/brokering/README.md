@@ -21,11 +21,9 @@ For unfillable orders that did not meet routing criteria under any rule set, ret
 
 ## Brokering Rules Builder
 
-Let’s learn how to configure order routing in HotWax Commerce to enhance and optimize fulfillment operations with this user manual.
+This guide will lead you through the process of configuring your brokering run, routings and rules in HotWax Commerce Order Routing App.
 
-This guide will lead you through the process of configuring your brokering run, routings and rules to enhance and optimize your fulfillment operations. Before diving into the configuration steps, it's crucial to have a solid understanding of the various routing parameters.
-
-Brokering rules play a pivotal role in your fulfillment strategy and are structured hierarchically:
+Here's how brokering rules are structured hierarchically:
 
 <figure><img src="../.gitbook/assets/HotWax Commerce Order Routing.png" alt=""><figcaption><p>Brokering Rules in HotWax Commerce</p></figcaption></figure>
 
