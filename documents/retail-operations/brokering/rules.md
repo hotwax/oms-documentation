@@ -148,5 +148,5 @@ Based on each of these conditions, an action can be tied to the allocation. Reta
 Understanding and appropriately configuring these actions will let you fine-tune brokering rules, improving order routing efficiency and meeting specific fulfillment requirements.
 
 {% hint style="success" %}
-By leveraging the full range of order fetching, order and inventory filtering, and sorting parameters, provided by HotWax Commerce’s Order Routing App, retailers can create highly customized and efficient order routing strategies that optimize inventory usage, reduce shipping times and costs, and ensure their fulfillment process is specific to their unique business needs.
+By leveraging the full range of order fetching, inventory filtering, and sorting parameters provided by HotWax Commerce’s Order Routing App, retailers can create highly customized and efficient order routing strategies that optimize inventory usage, reduce shipping times and costs, and align their fulfillment process with their unique business needs.
 {% endhint %}
