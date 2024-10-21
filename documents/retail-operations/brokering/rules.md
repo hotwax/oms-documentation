@@ -21,17 +21,12 @@ Learn how you can have granular control over which orders are sent to which loca
 
 <figure><img src="../.gitbook/assets/Order filters.png" alt="" width="563"><figcaption><p>Order Filters</p></figcaption></figure>
 
-**1. Origin Facility Groups**: This parameter allows retailers to filter orders based on the facility group from which they originated. For example, many times when walk-in customers cannot find their preferred items in store, store associates place the order on their behalf. These are known as Send Sale orders. In this scenario, the origin facility becomes the specific physical location. If a retailer wants all Send Sale orders from specific facilities to be routed differently, then they can apply this filter to create a batch of orders and proceed to create their routing.
-
-**2. Order Priority**: Not all orders carry the same urgency. Retailers can pick orders with higher priorities (such as VIP or time-sensitive orders) before others. By filtering orders based on priority, they can ensure that the most critical ones are routed and processed before any less urgent orders.
-
-**3. Promise Date**: Pre-orders or backorders can be filtered based on their promise date. Retailers may choose to broker orders that have passed their promise date first, ensuring timely fulfillment of overdue orders.
-
-**4. Queue**: The parking location to fetch orders from. HotWax Commerce has virtual queues to park orders that are not brokered to a facility. Retailers can filter by queue type (e.g., brokering queue, rejected parking, or unfillable parking) to determine which orders should be brokered to available inventory.
-
-**5. Sales Channel**: Where the order was captured. Different sales channels (eCommerce or marketplaces) may require different routing strategies. Orders can be filtered by channel to ensure the right group of orders is picked for routing based on channel-specific fulfillment rules, reducing the risk of penalties or delays in fulfilling orders from marketplaces like Amazon.
-
-**6. Shipping Method**: SLA promised to the customer. When customers choose specific shipping methods, like expedited or same-day delivery, these orders must be prioritized differently. Retailers can use this filter to fetch a batch of orders based on the chosen shipping method, ensuring that orders requiring fast shipping are processed first.
+1. **Origin Facility Groups**: This parameter allows retailers to filter orders based on the facility group from which they originated. For example, many times when walk-in customers cannot find their preferred items in store, store associates place the order on their behalf. These are known as Send Sale orders. In this scenario, the origin facility becomes the specific physical location. If a retailer wants all Send Sale orders from specific facilities to be routed differently, then they can apply this filter to create a batch of orders and proceed to create their routing.
+2. **Order Priority**: Not all orders carry the same urgency. Retailers can pick orders with higher priorities (such as VIP or time-sensitive orders) before others. By filtering orders based on priority, they can ensure that the most critical ones are routed and processed before any less urgent orders.
+3. **Promise Date**: Pre-orders or backorders can be filtered based on their promise date. Retailers may choose to broker orders that have passed their promise date first, ensuring timely fulfillment of overdue orders.
+4. **Queue**: The parking location to fetch orders from. HotWax Commerce has virtual queues to park orders that are not brokered to a facility. Retailers can filter by queue type (e.g., brokering queue, rejected parking, or unfillable parking) to determine which orders should be brokered to available inventory.
+5. **Sales Channel**: Where the order was captured. Different sales channels (eCommerce or marketplaces) may require different routing strategies. Orders can be filtered by channel to ensure the right group of orders is picked for routing based on channel-specific fulfillment rules, reducing the risk of penalties or delays in fulfilling orders from marketplaces like Amazon.
+6. **Shipping Method**: SLA promised to the customer. When customers choose specific shipping methods, like expedited or same-day delivery, these orders must be prioritized differently. Retailers can use this filter to fetch a batch of orders based on the chosen shipping method, ensuring that orders requiring fast shipping are processed first.
 
 ### Managing Sorting Options
 
@@ -42,15 +37,11 @@ Learn how you can have granular control over which orders are sent to which loca
 
 <figure><img src="../.gitbook/assets/Order sorting.png" alt="" width="563"><figcaption><p>Order Sorting Options</p></figcaption></figure>
 
-**1. Order Date**: Orders can be sorted on a first-in, first-out (FIFO) basis to ensure that older orders are fulfilled first.
-
-**2. Order Priority**: Orders can be sorted by customer priority levels, such as loyalty plus, loyalty, or regular customers, allowing retailers to prioritize orders for high-value customers.
-
-**3. Ship By**
-
-**4. Ship After**
-
-**5. Shipping Method**: Retailers can sort orders by shipping method, ensuring that orders with expedited shipping are allocated inventory before those with standard shipping.
+1. **Order Date**: Orders can be sorted on a first-in, first-out (FIFO) basis to ensure that older orders are fulfilled first.
+2. **Order Priority**: Orders can be sorted by customer priority levels, such as loyalty plus, loyalty, or regular customers, allowing retailers to prioritize orders for high-value customers.
+3. **Ship By**
+4. **Ship After**
+5. **Shipping Method**: Retailers can sort orders by shipping method, ensuring that orders with expedited shipping are allocated inventory before those with standard shipping.
 
 ## 2. Finding Inventory
 
@@ -76,23 +67,13 @@ Once valid inventory facilities have been identified, those facilities can be so
 
 ### Available Inventory Filters
 
-<figure><img src="../.gitbook/assets/Available Inventory Filters.png" alt="" width="563"><figcaption><p>Inventory Filters</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Inventory filters.png" alt="" width="563"><figcaption><p>Inventory Filters</p></figcaption></figure>
 
-**1. Facility Group**: Custom grouping of locations.
-
-Grouping certain facilities allows retailers to simplify their decision-making. For example, slow-moving or lower-demand facilities can be grouped together and designated for non-urgent orders, while high-demand facilities are reserved for time-sensitive fulfillment.
-
-**2. Proximity**: Distance between fulfillment facility and destination based on either carrier provided zone mapping or destination address zip code and latitude and longitude of the fulfillment facility.
-
-For example, a retailer can set a 200-mile proximity filter for next-day delivery orders, ensuring that only inventory within 200 miles of the delivery location is used to fulfill those orders. This helps in meeting delivery SLAs and reducing shipping times.
-
-**3. Turn Off the Facility Order Limit Check**: Retailers have the option to bypass the maximum order limit for a facility. This filter allows flexibility in managing facility capacity during peak times or high demand periods. For example, if a retailer chooses to turn off this limit, orders can continue to be brokered to that facility even after its order limit has been reached.
-
-**4. Brokering Safety Stock**: Different from online ATP safety stock, brokering safety stock defines the minimum stock required for an order to be brokered to a facility.
-
-For example, if a retailer sets a brokering safety stock level of 10 units, only facilities with at least 10 units of the item in stock will be eligible to fulfill the order. This prevents over-allocation and ensures that safety stock levels are maintained for unforeseen demand.
-
-**5. Split Order Item Group**: Retailers can control whether they want to split items that belong to a specific order item group. For example, certain items, like gift sets or kits, may need to be shipped together to maintain the integrity of the order. Retailers can decide whether to allow splitting of such groups or to prioritize keeping them intact, even if other items in the order are split across multiple facilities.
+1. **Turn Off the Facility Order Limit Check**: Retailers have the option to bypass the maximum order limit for a facility. This filter allows flexibility in managing facility capacity during peak times or high demand periods. For example, if a retailer chooses to turn off this limit, orders can continue to be brokered to that facility even after its order limit has been reached.
+2. **Brokering Safety Stock**: Different from online ATP safety stock, brokering safety stock defines the minimum stock required for an order to be brokered to a facility. For example, if a retailer sets a brokering safety stock level of 10 units, only facilities with at least 10 units of the item in stock will be eligible to fulfill the order. This prevents over-allocation and ensures that safety stock levels are maintained for unforeseen demand.
+3. **Facility Group**: Custom grouping of locations. Grouping certain facilities allows retailers to simplify their decision-making. For example, slow-moving or lower-demand facilities can be grouped together and designated for non-urgent orders, while high-demand facilities are reserved for time-sensitive fulfillment.
+4. **Proximity**: Distance between fulfillment facility and destination based on either carrier provided zone mapping or destination address zip code and latitude and longitude of the fulfillment facility. For example, a retailer can set a 200-mile proximity filter for next-day delivery orders, ensuring that only inventory within 200 miles of the delivery location is used to fulfill those orders. This helps in meeting delivery SLAs and reducing shipping times.
+5. **Split Order Item Group**: Retailers can control whether they want to split items that belong to a specific order item group. For example, certain items, like gift sets or kits, may need to be shipped together to maintain the integrity of the order. Retailers can decide whether to allow splitting of such groups or to prioritize keeping them intact, even if other items in the order are split across multiple facilities.
 
 <figure><img src="../.gitbook/assets/Inventory Filters.png" alt="" width="327"><figcaption><p>Allocate Inventory From All Facilities</p></figcaption></figure>
 
@@ -105,13 +86,10 @@ For example, if a retailer sets a brokering safety stock level of 10 units, only
 
 <figure><img src="../.gitbook/assets/Inventory sorting.png" alt="" width="563"><figcaption><p>Inventory Sorting Options</p></figcaption></figure>
 
-**1. Proximity**: Retailers can sort inventory allocation based on the distance between the customer's shipping address and the facility. This sorting method prioritizes inventory located closer to the customer, helping reduce shipping times and costs, especially for expedited orders or those requiring same-day or next-day delivery.
-
-**2. Facility Order Limit**: In order to ensure that the workload at facilities is balanced, facilities can also be sorted on how much fulfillment capacity they have left.
-
-**3. Inventory Balance**: Inventory can be sorted based on stock levels, ensuring that orders are routed to the facility with the highest available inventory of the ordered item. This method helps to deplete stock from high-inventory locations first, ensuring better stock rotation and preventing stock outs at key locations.
-
-**4. Custom Sequence**: Allows full manual override to the sequence at which facilities are attempted. Retailers can set a custom sequence of facilities, defining a specific order in which locations should be considered for order routing. For example, if a retailer wants to prioritize fulfillment from underperforming stores with lower foot traffic, they can create a custom sequence that favors those stores, helping to balance inventory across all locations. Custom sequences can also be useful for managing seasonal inventory or routing orders to specific regions.
+1. **Proximity**: Retailers can sort inventory allocation based on the distance between the customer's shipping address and the facility. This sorting method prioritizes inventory located closer to the customer, helping reduce shipping times and costs, especially for expedited orders or those requiring same-day or next-day delivery.
+2. **Facility Order Limit**: In order to ensure that the workload at facilities is balanced, facilities can also be sorted on how much fulfillment capacity they have left.
+3. **Inventory Balance**: Inventory can be sorted based on stock levels, ensuring that orders are routed to the facility with the highest available inventory of the ordered item. This method helps to deplete stock from high-inventory locations first, ensuring better stock rotation and preventing stock outs at key locations.
+4. **Custom Sequence**: Allows full manual override to the sequence at which facilities are attempted. Retailers can set a custom sequence of facilities, defining a specific order in which locations should be considered for order routing. For example, if a retailer wants to prioritize fulfillment from underperforming stores with lower foot traffic, they can create a custom sequence that favors those stores, helping to balance inventory across all locations. Custom sequences can also be useful for managing seasonal inventory or routing orders to specific regions.
 
 ## 3. Allocation Actions
 
@@ -135,15 +113,13 @@ Based on each of these conditions, an action can be tied to the allocation. Reta
 
 <figure><img src="../.gitbook/assets/Actions.png" alt="" width="327"><figcaption><p>Allocate Partial</p></figcaption></figure>
 
-**1. Allocate Partial**: Allow an order to be split and allocated partially if some items are available at a location.
+1. **Allocate Partial**: Allow an order to be split and allocated partially if some items are available at a location.
 
 <figure><img src="../.gitbook/assets/Allocation actions.png" alt="" width="327"><figcaption><p>Available Actions</p></figcaption></figure>
 
-**2. Move to the Next Rule**: Automatically move unallocated items to the next rule in the sequence.
-
-**3. Move to Queue**: Transfer unallocated items to a selected queue for further processing. If the availability of the inventory lookup is not what is expected, but the item should not be attempted by another rule in this flow, the items can be moved to a specific queue where they can be held for relevant actions. For example, move unfillable orders to the “Unfillable Parking” so that they can be rerouted during a different
-
-**4. Add Auto Cancel Date**: Specify the number of days to automatically cancel orders that could not be allocated. Based on the inventory availability, retailers may want to add an auto cancel date on the order, to ensure that they do not remain in the fulfillment pipeline for too long.
+2. **Move to the Next Rule**: Automatically move unallocated items to the next rule in the sequence.
+3. **Move to Queue**: Transfer unallocated items to a selected queue for further processing. When an order cannot be allocated but should not undergo further allocation attempts by other rules in the flow, it can be moved to a specific queue. This allows for holding orders until the appropriate action can be taken. For example, unfillable orders can be transferred to the "Unfillable Parking", where they can later be rerouted through a different routing strategy.
+4. **Add Auto Cancel Date**: Specify the number of days to automatically cancel orders that could not be allocated. Based on the inventory availability, retailers may want to add an auto cancel date on the order, to ensure that they do not remain in the fulfillment pipeline for too long.
 
 Understanding and appropriately configuring these actions will let you fine-tune brokering rules, improving order routing efficiency and meeting specific fulfillment requirements.
 
