@@ -2,7 +2,8 @@
 icon: gears
 description: >-
   This guide will help you understand how to manage and route orders efficiently
-  using HotWax Commerce’s Order Routing App, optimizing order fulfillment strategies.
+  using HotWax Commerce’s Order Routing App, optimizing order fulfillment
+  strategies.
 ---
 
 # Order Routing
@@ -25,6 +26,6 @@ In HotWax Commerce's Order Routing App, the Brokering Rules Builder provides a s
 
 <figure><img src="../.gitbook/assets/HotWax Commerce Order Routing.png" alt=""><figcaption><p>Brokering Rules in HotWax Commerce</p></figcaption></figure>
 
-<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td><mark style="color:orange;"><strong>Runs</strong></mark>  </td><td><p></p><p>A "Run" is the highest level of organization for your brokering rules. It represents a set of rules that will be applied to incoming orders during a specific time or under certain conditions.</p></td><td></td><td><a href="brokeringruns.md">brokeringruns.md</a></td><td></td></tr><tr><td><p><mark style="color:orange;"><strong>Routings</strong></mark></p><p></p></td><td>Within each run, you have "Routings." Think of routings as distinct pathways that orders can take based on predefined conditions. Each routing represents a unique set of rules that govern the flow of orders.</td><td></td><td><a href="routings.md">routings.md</a></td><td></td></tr><tr><td><mark style="color:orange;"><strong>Rules</strong></mark></td><td></td><td>At the lowest level, you have individual "Rules" within each routing. These are the specific criteria that determine how inventory is allocated during order routing.</td><td><a href="rules.md">rules.md</a></td><td></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td><mark style="color:orange;"><strong>Runs</strong></mark></td><td>A "Run" is the highest level of organization for your brokering rules. It represents a set of rules that will be applied to incoming orders during a specific time or under certain conditions.</td><td></td><td><a href="brokeringruns.md">brokeringruns.md</a></td><td></td></tr><tr><td><mark style="color:orange;"><strong>Routings</strong></mark></td><td>Within each run, you have "Routings." Think of routings as distinct pathways that different batch of orders can take based on predefined conditions.</td><td></td><td><a href="routings.md">routings.md</a></td><td></td></tr><tr><td><mark style="color:orange;"><strong>Rules</strong></mark></td><td>At the lowest level, you have individual "Rules" within each routing. These are the specific criteria that determine how inventory is allocated during order routing.</td><td></td><td><a href="rules.md">rules.md</a></td><td></td></tr></tbody></table>
 
 Now, let's delve into each level in detail in the next sections.
