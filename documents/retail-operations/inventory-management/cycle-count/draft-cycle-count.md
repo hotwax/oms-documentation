@@ -17,7 +17,7 @@ A new draft count will open up on a new page where you can begin setting up a ne
    * **Enter SKUs to Add to the Count**
      * **Adding Individual Products**\
        Retailers require cycle counts of a product in case they believe there is a discrepancy in the inventory of the product. For example, if the store has rejected the order with the reason `Not in stock` but the store should have available inventory.
-       * As you begin typing, possible matches for products will show up to the right of the input field.
+       * As you enter the product's SKU, it will show up to the right of the input field. Ensure that the product SKU is accurate, otherwise the products won't appear in the results.
        * If the product you want to add to the draft count appears, click on the `+` button next to the product details.
        * To instantly add the result shown as a result of your search, press the enter key while the input field is selected.
      * **Adding Products in Bulk**\

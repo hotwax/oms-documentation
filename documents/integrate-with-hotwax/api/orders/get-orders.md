@@ -26,7 +26,7 @@ Accept: application/json
 ```json
 {
   "viewIndex": "",
-  "viewSize": "1,
+  "viewSize": "1",
   "filters": {
     "partyId": "",
     "partyId_op": "",
@@ -42,6 +42,28 @@ Accept: application/json
 | `viewIndex` | Index of the view in pagination.                    |
 | `viewSize`  | Number of records to fetch per page.                |
 | `filters`   | Filters to apply for querying specific orders.      |
+
+### Filters Usage
+
+Filters allow users to query orders based on various fields. The structure of the filter includes:
+
+`Field`: The field to filter by (e.g., externalId, partyId, statusId).
+`Field_op`: Operator used for the filter condition (e.g., equals, like, etc.).
+`Field_ic`: Ignore case flag (Y for yes, N for no).
+
+
+#### Example
+
+```
+{
+  "filters": {
+    "externalId": "10025",
+    "externalId_op": "equals",
+    "externalId_ic": "Y"
+  }
+}
+```
+This example will fetch all the orders where externalId is 10025, with case-insensitive matching (ignore case set to Y).
 
 
 ## Response
