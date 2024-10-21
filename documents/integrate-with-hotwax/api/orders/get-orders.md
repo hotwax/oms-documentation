@@ -43,6 +43,14 @@ Accept: application/json
 | `viewSize`  | Number of records to fetch per page.                |
 | `filters`   | Filters to apply for querying specific orders.      |
 
+### Filters Usage
+
+Filters allow users to query orders based on various fields. The structure of the filter includes:
+
+`Field`: The field to filter by (e.g., externalId, partyId, statusId).
+`Field_op`: Operator used for the filter condition (e.g., equals, like, etc.).
+`Field_ic`: Ignore case flag (Y for yes, N for no).
+
 
 ## Response
 
