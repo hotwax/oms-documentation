@@ -145,7 +145,7 @@ Retailers want to ensure that orders are only fulfilled from facilities within a
    * **Proximity Sorting:** Within the inventory rule, sort the inventory allocations by proximity. This ensures that orders are fulfilled from the nearest possible facility, reducing delivery times and enhancing customer satisfaction.
    * **Inventory Balances:** Optionally, further sort by inventory balances to prioritize facilities with the highest stock levels, ensuring efficient inventory utilization and reducing the likelihood of stockouts.
 
-<figure><img src="../.gitbook/assets/order-routing.hotwax.io_tabs_brokering_100561_100672_rules (3) 1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Proximity based routing.png" alt=""><figcaption><p>Proximity Based Routing</p></figcaption></figure>
 
 ## Scenario 7: Split Shipping Threshold Logic
 
