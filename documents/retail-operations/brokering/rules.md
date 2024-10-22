@@ -43,6 +43,10 @@ Learn how you can have granular control over which orders are sent to which loca
 4. **Ship After**
 5. **Shipping Method**: Retailers can sort orders by shipping method, ensuring that orders with expedited shipping are allocated inventory before those with standard shipping.
 
+{% embed url="https://youtu.be/y5TdKuHEQOk" %}
+Finding Orders and Managing Sorting
+{% endembed %}
+
 ## 2. Finding Inventory
 
 HotWax Commerce allows retailers to apply multiple recursive inventory allocation "rules" for different batches of orders.
