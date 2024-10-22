@@ -189,7 +189,9 @@ Retailers with diverse rent agreements, particularly in malls where rent may be 
    * **Schedule Brokering Runs**:
      * Schedule the brokering runs to execute these inventory rules at regular intervals, maintaining efficient order fulfillment.
 
-{% embed url="https://youtu.be/A1Y0-rebDaE" %}
+{% embed url="https://youtu.be/sAvLINYU7O4" %}
+Store Fulfillment Based on Store Rent
+{% endembed %}
 
 
 
