@@ -38,6 +38,10 @@ The scope is limited to the product store name, as the company name and product 
 5. Once you've made the necessary changes, ensure to save selections. This might involve clicking on a 'Save' or 'Apply' button within the dialog box.
 6. After saving, confirm that the operating countries for the product store have been updated accordingly.
 
+<figure><img src="../../.gitbook/assets/name edit.png" alt=""><figcaption></figcaption></figure>
+
+
+
 ### Administration
 
 {% hint style="danger" %}
@@ -45,9 +49,16 @@ Administration settings require special permissions and, if mismanaged, can impa
 {% endhint %}
 
 1. Navigate to the product card in the Product Store details page.
-2. On the product card, locate the toggle switches for Order Reservations and Order Brokering.
-   * **Order Reservations:** OMS serves as the definitive source for inventory information, and as such, this setting should consistently remain at its default value of Y without alteration.
-   * **Order Brokering:** Disabling brokering hinders OMS from optimizing inventory allocation for orders, defeating its intended purpose. Therefore, this setting should always be maintained at its default value of Y and should not be modified.
+2.  On the product card, locate the toggle switches for Order Reservations and Order Brokering.
+
+    * **Order Reservations:** OMS serves as the definitive source for inventory information, and as such, this setting should consistently remain at its default value of Y without alteration.
+    * **Order Brokering:** Disabling brokering hinders OMS from optimizing inventory allocation for orders, defeating its intended purpose. Therefore, this setting should always be maintained at its default value of Y and should not be modified.
+
+
+
+
+
+
 
 ### Orders
 
