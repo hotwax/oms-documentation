@@ -27,7 +27,7 @@ The scope is limited to the product store name, as the company name and product 
 
 
 
-<figure><img src="../../.gitbook/assets/Screenshot from 2024-10-21 10-24-54.png" alt=""><figcaption></figcaption></figure>
+{% file src="../../.gitbook/assets/product name edit.webm" %}
 
 ### Manage Operational Countries
 
