@@ -160,6 +160,10 @@ Control what your customers are allowed to edit on their order when they are edi
 4. Pickup location change
 5. Cancel order before fulfillment
 
+
+
+<figure><img src="../../.gitbook/assets/order permisssion.png" alt=""><figcaption></figcaption></figure>
+
 ### Manage Facility
 
 Associating a product store with a facility allows the product store to add the facility for the brand. This configuration defines in OMS to make the facility available for order fulfillment related operations for the brand. A facility can be associated with multiple product store.
