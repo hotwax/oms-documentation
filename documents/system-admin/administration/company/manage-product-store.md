@@ -135,12 +135,20 @@ Administration settings require special permissions and, if mismanaged, can impa
 * **Hold Pre-order Physical Inventory:** Configure the inventory computation in the OMS to withhold physical inventory from being made available online for products with orders in the pre-order queue. To adjust this setting, navigate to the pre-order computation settings in your dashboard, locate the "Hold Pre-order Physical Inventory" option, and toggle it as needed.
 * **Pre-order Group:** Specify the facility group to be used for computing the pre-order catalog computation. To adjust this setting, navigate to the pre-order computation settings, find the "Pre-order Group" option, and select the appropriate facility group from the available options.
 
+
+
+<figure><img src="../../.gitbook/assets/inventory (1).png" alt=""><figcaption></figcaption></figure>
+
 ### Product
 
 **Identifier:**
 
 * **Global Identifier:** This identifier is utilized universally across your business operations. To modify or set the global identifier, navigate to the identifier settings section within your dashboard. Locate the "Global Identifier" option and adjust it according to your requirements.
 * **Preferred Identifier View:** Opting for a preferred product identifier enables you to view products using your preferred identification across HotWax Commerce Apps. To set your preferred identifier view, access the identifier settings in your dashboard. Find the `Preferred Identifier View` option and select the desired product identifier from the available options.
+
+<figure><img src="../../.gitbook/assets/product.png" alt=""><figcaption></figcaption></figure>
+
+
 
 ### Reroute Fulfillment
 
