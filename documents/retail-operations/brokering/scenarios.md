@@ -69,7 +69,9 @@ In this scenario, a retailer wants to prioritize fulfilling eCommerce orders fro
    * **Schedule Routing:**
      * Set the frequency at which the routing runs should occur to ensure timely fulfillment of eCommerce orders.
 
-{% embed url="https://youtu.be/k5WRMYBRrJk" %}
+{% embed url="https://youtu.be/kutfVODG4LQ" %}
+eCommerce Orders Routing
+{% endembed %}
 
 
 
@@ -89,7 +91,7 @@ During peak hours, store managers need the flexibility to turn off fulfillment f
    * Locate Fulfillment Capacity Card: Navigate to the fulfillment capacity card specific to their store.
    * Set Capacity to No Capacity: Directly control and adjust the fulfillment capacity to “No Capacity” to prevent new orders from being routed to their store during peak hours.
 
-<figure><img src="../.gitbook/assets/Turn Off Fulfillment.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Order Fulfillment Capacity.png" alt="" width="375"><figcaption><p>No Capacity</p></figcaption></figure>
 
 ## Scenario 4: Setting Maximum Order Capacity for Stores
 
