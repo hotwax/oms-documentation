@@ -27,7 +27,7 @@ A retailer wants to ensure that all orders placed through various marketplaces a
    * **Activate Order Batch:** Change the status of the order batch from `Draft` to `Active.`
    * **Schedule Routing:** Set the frequency at which the routing runs should occur to ensure timely fulfillment.
 
-<figure><img src="../.gitbook/assets/order-routing.hotwax.io_tabs_brokering_101122_101122_rules 1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Marketplace orders.png" alt=""><figcaption><p>Marketplace Orders Routing</p></figcaption></figure>
 
 ## Scenario 2: Fulfilling eCommerce Orders from Warehouse and Stores
 
