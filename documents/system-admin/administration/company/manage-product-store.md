@@ -25,6 +25,10 @@ The scope is limited to the product store name, as the company name and product 
 5. After making the necessary changes, click on `confirm` to save your edits.
 6. Verify that the changes have been applied by checking the updated product store name.
 
+
+
+<figure><img src="../../.gitbook/assets/Screenshot from 2024-10-21 10-24-54.png" alt=""><figcaption></figcaption></figure>
+
 ### Manage Operational Countries
 
 1. Select the `Operating Countries detail` button on the product card in the Product Store details page to open the dialog box.
