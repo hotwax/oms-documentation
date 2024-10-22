@@ -113,7 +113,7 @@ To prevent stores from being overloaded, retailers need to set a maximum order c
 
 
 
-<figure><img src="../.gitbook/assets/Max Order Capacity.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Custom Order Fulfillment Capacity.png" alt="" width="375"><figcaption><p>Max Order Limit</p></figcaption></figure>
 
 ## Scenario 5: Re-Routing Rejected Orders
 
@@ -130,7 +130,7 @@ If an order item is rejected due to inventory unavailability at a store, the sys
    * **Activate Inventory Rules and Batch:** Activate the rules and the order batch to ensure they are in effect.
    * **Schedule Routing Runs:** Schedule the routing runs to occur at regular intervals, ensuring timely re-routing of rejected orders.
 
-<figure><img src="../.gitbook/assets/order-routing.hotwax.io_tabs_brokering_101122_101122_rules 1 (1).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Rejected orders.png" alt=""><figcaption><p>Rerouting Rejected Orders</p></figcaption></figure>
 
 ## Scenario 6: Proximity-Based Order Routing
 
