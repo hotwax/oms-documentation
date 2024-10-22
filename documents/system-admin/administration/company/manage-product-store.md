@@ -110,6 +110,10 @@ Administration settings require special permissions and, if mismanaged, can impa
 * **Auto Order Cancellations:** Configure the cancellation threshold for unfulfilled orders. To adjust this setting, navigate to the cancellation settings section in the fulfillment card, find the `Auto Order Cancellations` option, and and toggle it as needed.
 * **Auto Cancellations Days:** Specify the number of days after which the order should be automatically marked as cancelled if not fulfilled. This setting can be adjusted in the cancellation settings section alongside the "Auto Order Cancellations" option.
 
+
+
+<figure><img src="../../.gitbook/assets/fulfillment.png" alt=""><figcaption></figcaption></figure>
+
 ### Store Pickup
 
 * **Partial Order Rejection:** Specify whether to reject a BOPIS (Buy Online, Pickup In Store) order partially when any order item inventory is insufficient at the store. This setting can be found in the store pickup settings section. Navigate to this section in your dashboard, locate the `Partial Order Rejection` option, and toggle it as required.
