@@ -95,6 +95,28 @@ Once valid inventory facilities have been identified, those facilities can be so
 3. **Inventory Balance**: Inventory can be sorted based on stock levels, ensuring that orders are routed to the facility with the highest available inventory of the ordered item. This method helps to deplete stock from high-inventory locations first, ensuring better stock rotation and preventing stock outs at key locations.
 4. **Custom Sequence**: Allows full manual override to the sequence at which facilities are attempted. Retailers can set a custom sequence of facilities, defining a specific order in which locations should be considered for order routing. For example, if a retailer wants to prioritize fulfillment from underperforming stores with lower foot traffic, they can create a custom sequence that favors those stores, helping to balance inventory across all locations. Custom sequences can also be useful for managing seasonal inventory or routing orders to specific regions.
 
+
+
+{% embed url="https://youtu.be/6z5vnutliAU" %}
+Finding Inventory and Managing Sorting
+{% endembed %}
+
+### Add New Inventory Rules in a Routing
+
+{% tabs %}
+{% tab title="Adding 2nd Inventory Rule" %}
+{% embed url="https://youtu.be/0MH9GdNVDtc" %}
+Adding New Inventory Rule
+{% endembed %}
+{% endtab %}
+
+{% tab title="Adding 3rd Inventory Rule" %}
+{% embed url="https://youtu.be/F3uQcsN-s8M" %}
+Adding New Inventory Rule
+{% endembed %}
+{% endtab %}
+{% endtabs %}
+
 ## 3. Allocation Actions
 
 <mark style="color:orange;">**Committing Orders to Inventory**</mark>
