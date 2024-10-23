@@ -267,15 +267,16 @@ HotWax Commerce allows retailers to manage these scenarios by disabling the spli
 ### Steps to Implement
 
 1. **Create Inventory Rule for Order Batch**
-   * **Access Inventory Rules**: Begin by creating an inventory rule within the HotWax Commerce Order Routing App. This will be applied to the specific batch of orders where grouped items need to be managed.
+   * **Access Inventory Rules**: Begin by creating an inventory rule within the HotWax Commerce Order Routing App.
 2. **Configure Partial Allocation Settings**
    * **Navigate to Partial Allocation**: Within the inventory rule settings, locate the "Partially Available" card. This section allows you to configure how items are allocated when they are not fully available at a single location.
    * **Enable Partial Allocation**: Turn on the toggle for "Partial Order Allocation" to allow the order to be split across multiple locations for items that are not grouped.
 3. **Disable Splitting for Grouped Items**
-   * **Toggle Off for Grouped Items**: Ensure that the toggle for "Partially Allocate Grouped Items" is turned off. This setting ensures that grouped items, such as a frame and lenses, are not split and are shipped together from a single location.
+   * **Toggle Off for Grouped Items**: Ensure that the toggle for "Partially Allocate Grouped Items" is turned off. This setting ensures that grouped items, such as kit products and gift items are not split and are shipped together from a single location.
 4. **Optional: Enable Splitting for Specific Scenarios**
    * **Enable Grouped Item Splitting**: If the retailer sells items that are grouped but can be split under certain circumstances (e.g., gifting items), they can turn on the toggle for "Partially Allocate Grouped Items."
    * **Best Practice**: It is recommended first to create an inventory rule with grouped item splitting disabled and then follow it with a rule where grouped item splitting is enabled. This layered approach ensures that grouped items are handled appropriately based on the retailer's preferences.
 
-{% embed url="https://youtu.be/QGZdp7bFPqc" %}
-
+{% embed url="https://youtu.be/bPBdwJZ6Tm8" %}
+Managing Order Splitting
+{% endembed %}
