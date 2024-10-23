@@ -229,9 +229,11 @@ Retailers need to balance the cost of shipping, which is influenced by both the 
 * **Schedule Brokering Runs**:
   * Schedule the brokering runs to execute these inventory rules at regular intervals, maintaining efficient order fulfillment.
 
-{% embed url="https://youtu.be/d7rCj7dHeCg" %}
 
 
+{% embed url="https://youtu.be/K59lNhHtKMM" %}
+Balance Shipping Cost and Distance with Split Shipments
+{% endembed %}
 
 ## Scenario 10: Optimizing Order Splitting by Setting Shipment Thresholds
 
