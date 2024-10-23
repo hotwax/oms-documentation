@@ -69,6 +69,10 @@ Administration settings require special permissions and, if mismanaged, can impa
 
 * **Creation Deadline Days:** Specify the number of days permitted for creating returns for in-store. Adjust this value based on your return policy and operational needs.
 
+
+
+<figure><img src="../../.gitbook/assets/Screenshot from 2024-10-23 12-14-03.png" alt=""><figcaption></figcaption></figure>
+
 ### Brokering
 
 1. Navigate to the Brokering card in the Product Store details page.
