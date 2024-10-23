@@ -34,7 +34,7 @@ The scope is limited to the product store name, as the company name and product 
 5. Once you've made the necessary changes, ensure to save selections. This might involve clicking on a 'Save' or 'Apply' button within the dialog box.
 6. After saving, confirm that the operating countries for the product store have been updated accordingly.
 
-<figure><img src="../../.gitbook/assets/Screenshot from 2024-10-21 10-24-54.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot from 2024-10-21 10-24-54.png" alt=""><figcaption><p><code>Operating Countries detail</code></p></figcaption></figure>
 
 
 
@@ -71,7 +71,7 @@ Administration settings require special permissions and, if mismanaged, can impa
 
 
 
-<figure><img src="../../.gitbook/assets/Screenshot from 2024-10-23 12-14-03.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot from 2024-10-23 12-14-03.png" alt=""><figcaption><p>Order box</p></figcaption></figure>
 
 ### Brokering
 
@@ -89,7 +89,7 @@ Administration settings require special permissions and, if mismanaged, can impa
 
 
 
-<figure><img src="../../.gitbook/assets/brokering .png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/brokering .png" alt=""><figcaption><p>Brokering box</p></figcaption></figure>
 
 ### Fulfillment
 
@@ -108,7 +108,7 @@ Administration settings require special permissions and, if mismanaged, can impa
 
 
 
-<figure><img src="../../.gitbook/assets/fulfillment.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/fulfillment.png" alt=""><figcaption><p>Fulfillment box</p></figcaption></figure>
 
 ### Inventory
 
@@ -123,7 +123,7 @@ Administration settings require special permissions and, if mismanaged, can impa
 
 
 
-<figure><img src="../../.gitbook/assets/inventory (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/inventory (1).png" alt=""><figcaption><p>Inventory box</p></figcaption></figure>
 
 ### Product
 
@@ -134,7 +134,7 @@ Administration settings require special permissions and, if mismanaged, can impa
 
 
 
-<figure><img src="../../.gitbook/assets/product.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/product.png" alt=""><figcaption><p>Product box</p></figcaption></figure>
 
 ### Reroute Fulfillment
 
@@ -145,6 +145,10 @@ Control what your customers are allowed to edit on their order when they are edi
 3. Delivery address change
 4. Pickup location change
 5. Cancel order before fulfillment
+
+
+
+<figure><img src="../../.gitbook/assets/order permisssion.png" alt=""><figcaption><p>Order edit permission box</p></figcaption></figure>
 
 ### Manage Facility
 
