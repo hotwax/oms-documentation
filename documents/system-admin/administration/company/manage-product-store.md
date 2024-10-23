@@ -106,6 +106,10 @@ Administration settings require special permissions and, if mismanaged, can impa
 
 * **Partial Order Rejection:** Specify whether to reject a BOPIS (Buy Online, Pickup In Store) order partially when any order item inventory is insufficient at the store. This setting can be found in the store pickup settings section. Navigate to this section in your dashboard, locate the `Partial Order Rejection` option, and toggle it as required.
 
+
+
+<figure><img src="../../.gitbook/assets/fulfillment.png" alt=""><figcaption></figcaption></figure>
+
 ### Inventory
 
 **Inventory View:**
