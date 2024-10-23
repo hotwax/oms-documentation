@@ -25,10 +25,6 @@ The scope is limited to the product store name, as the company name and product 
 5. After making the necessary changes, click on `confirm` to save your edits.
 6. Verify that the changes have been applied by checking the updated product store name.
 
-
-
-{% file src="../../.gitbook/assets/product name edit.webm" %}
-
 ### Manage Operational Countries
 
 1. Select the `Operating Countries detail` button on the product card in the Product Store details page to open the dialog box.
@@ -37,8 +33,6 @@ The scope is limited to the product store name, as the company name and product 
 4. Conversely, if you need to remove a country, uncheck the checkbox next to its name. This will exclude the deselected country from the list of operating countries for the product store.
 5. Once you've made the necessary changes, ensure to save selections. This might involve clicking on a 'Save' or 'Apply' button within the dialog box.
 6. After saving, confirm that the operating countries for the product store have been updated accordingly.
-
-<figure><img src="../../.gitbook/assets/name edit.png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -53,10 +47,6 @@ Administration settings require special permissions and, if mismanaged, can impa
 
     * **Order Reservations:** OMS serves as the definitive source for inventory information, and as such, this setting should consistently remain at its default value of Y without alteration.
     * **Order Brokering:** Disabling brokering hinders OMS from optimizing inventory allocation for orders, defeating its intended purpose. Therefore, this setting should always be maintained at its default value of Y and should not be modified.
-
-
-
-
 
 
 
@@ -77,10 +67,6 @@ Administration settings require special permissions and, if mismanaged, can impa
 
 * **Creation Deadline Days:** Specify the number of days permitted for creating returns for in-store. Adjust this value based on your return policy and operational needs.
 
-
-
-<figure><img src="../../.gitbook/assets/Screenshot from 2024-10-22 15-48-40.png" alt=""><figcaption></figcaption></figure>
-
 ### Brokering
 
 1. Navigate to the Brokering card in the Product Store details page.
@@ -95,10 +81,6 @@ Administration settings require special permissions and, if mismanaged, can impa
 * **Order Splitting:** Configure when no further order information is needed prior to order approval. Access this setting in the routing section of Brokering card, and adjust it according to your workflow requirements.
 * **Minimum Shipment Threshold Value:** Set threshold values for order items to ensure efficient order splitting while mitigating the risk of losses due to low-value shipments. Navigate to the routing or order management settings, and specify the desired threshold value, tthe shipment value will pick the currency set in the product store, ensuring consistency in currency throughout the order management process.
 
-
-
-<figure><img src="../../.gitbook/assets/brokering .png" alt=""><figcaption></figcaption></figure>
-
 ### Fulfillment
 
 **Notification:**
@@ -110,19 +92,9 @@ Administration settings require special permissions and, if mismanaged, can impa
 * **Auto Order Cancellations:** Configure the cancellation threshold for unfulfilled orders. To adjust this setting, navigate to the cancellation settings section in the fulfillment card, find the `Auto Order Cancellations` option, and and toggle it as needed.
 * **Auto Cancellations Days:** Specify the number of days after which the order should be automatically marked as cancelled if not fulfilled. This setting can be adjusted in the cancellation settings section alongside the "Auto Order Cancellations" option.
 
-
-
-<figure><img src="../../.gitbook/assets/fulfillment.png" alt=""><figcaption></figcaption></figure>
-
 ### Store Pickup
 
 * **Partial Order Rejection:** Specify whether to reject a BOPIS (Buy Online, Pickup In Store) order partially when any order item inventory is insufficient at the store. This setting can be found in the store pickup settings section. Navigate to this section in your dashboard, locate the `Partial Order Rejection` option, and toggle it as required.
-
-
-
-<figure><img src="../../.gitbook/assets/store pickup.png" alt=""><figcaption></figcaption></figure>
-
-
 
 ### Inventory
 
@@ -135,20 +107,12 @@ Administration settings require special permissions and, if mismanaged, can impa
 * **Hold Pre-order Physical Inventory:** Configure the inventory computation in the OMS to withhold physical inventory from being made available online for products with orders in the pre-order queue. To adjust this setting, navigate to the pre-order computation settings in your dashboard, locate the "Hold Pre-order Physical Inventory" option, and toggle it as needed.
 * **Pre-order Group:** Specify the facility group to be used for computing the pre-order catalog computation. To adjust this setting, navigate to the pre-order computation settings, find the "Pre-order Group" option, and select the appropriate facility group from the available options.
 
-
-
-<figure><img src="../../.gitbook/assets/inventory (1).png" alt=""><figcaption></figcaption></figure>
-
 ### Product
 
 **Identifier:**
 
 * **Global Identifier:** This identifier is utilized universally across your business operations. To modify or set the global identifier, navigate to the identifier settings section within your dashboard. Locate the "Global Identifier" option and adjust it according to your requirements.
 * **Preferred Identifier View:** Opting for a preferred product identifier enables you to view products using your preferred identification across HotWax Commerce Apps. To set your preferred identifier view, access the identifier settings in your dashboard. Find the `Preferred Identifier View` option and select the desired product identifier from the available options.
-
-<figure><img src="../../.gitbook/assets/product.png" alt=""><figcaption></figcaption></figure>
-
-
 
 ### Reroute Fulfillment
 
@@ -159,10 +123,6 @@ Control what your customers are allowed to edit on their order when they are edi
 3. Delivery address change
 4. Pickup location change
 5. Cancel order before fulfillment
-
-
-
-<figure><img src="../../.gitbook/assets/order permisssion.png" alt=""><figcaption></figcaption></figure>
 
 ### Manage Facility
 
