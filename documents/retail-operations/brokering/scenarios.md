@@ -24,7 +24,7 @@ A retailer wants to ensure that all orders placed through various marketplaces a
 5. **Activate and Schedule**
    * Ensure the routing rules and order batches are activated and scheduled appropriately:
    * **Activate Inventory Rule:** Activate the inventory rule to ensure it is applied to incoming marketplace orders.
-   * **Activate Order Batch:** Change the status of the order batch from `Draft` to `Active.`
+   * **Activate Order Batch:** Change the status of the order batch from `Draft` to `Active`.
    * **Schedule Routing:** Set the frequency at which the routing runs should occur to ensure timely fulfillment.
 
 <figure><img src="../.gitbook/assets/Marketplace orders.png" alt=""><figcaption><p>Marketplace Orders Routing</p></figcaption></figure>
@@ -39,16 +39,16 @@ Many times retailers wants to prioritize fulfilling eCommerce orders from their 
    * Start by creating an order batch that includes all eCommerce orders.
    * **Order Batch Creation:**
      * In HotWax Commerce, navigate to the Order Routing App.
-     * Create a new order batch and name it `eCommerce Orders.`
+     * Create a new order batch and name it `eCommerce Orders`.
 2. **Set Up Facility Groups**
    * Create two facility groups: one for warehouses and another for stores.
    * **Warehouse Facility Group:**
      * Go to Facility Groups.
-     * Create a new facility group named `Warehouses.`
+     * Create a new facility group named `Warehouses`.
      * Add all warehouses to this group.
    * **Store Facility Group:**
      * Go to Facility Groups.
-     * Create a new facility group named `Stores.`
+     * Create a new facility group named `Stores`.
      * Add all retail stores to this group.
 3. **Configure Inventory Rules**
    * Define inventory rules to ensure that orders are first checked for availability in warehouses, and if not available, then in stores.
@@ -65,7 +65,7 @@ Many times retailers wants to prioritize fulfilling eCommerce orders from their 
    * **Activate Inventory Rules:**
      * Activate both the warehouse and store inventory rules to ensure they are applied during the routing process.
    * **Activate Order Batch:**
-     * Change the status of the `eCommerce Orders` batch from `Draft` to `Active.`
+     * Change the status of the `eCommerce Orders` batch from `Draft` to `Active`.
    * **Schedule Routing:**
      * Set the frequency at which the routing runs should occur to ensure timely fulfillment of eCommerce orders.
 
