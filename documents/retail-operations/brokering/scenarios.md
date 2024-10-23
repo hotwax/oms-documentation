@@ -24,7 +24,7 @@ A retailer wants to ensure that all orders placed through various marketplaces a
 5. **Activate and Schedule**
    * Ensure the routing rules and order batches are activated and scheduled appropriately:
    * **Activate Inventory Rule:** Activate the inventory rule to ensure it is applied to incoming marketplace orders.
-   * **Activate Order Batch:** Change the status of the order batch from `Draft` to `Active.`
+   * **Activate Order Batch:** Change the status of the order batch from `Draft` to `Active`.
    * **Schedule Routing:** Set the frequency at which the routing runs should occur to ensure timely fulfillment.
 
 <figure><img src="../.gitbook/assets/Marketplace orders.png" alt=""><figcaption><p>Marketplace Orders Routing</p></figcaption></figure>
@@ -39,16 +39,16 @@ Many times retailers wants to prioritize fulfilling eCommerce orders from their 
    * Start by creating an order batch that includes all eCommerce orders.
    * **Order Batch Creation:**
      * In HotWax Commerce, navigate to the Order Routing App.
-     * Create a new order batch and name it `eCommerce Orders.`
+     * Create a new order batch and name it `eCommerce Orders`.
 2. **Set Up Facility Groups**
    * Create two facility groups: one for warehouses and another for stores.
    * **Warehouse Facility Group:**
      * Go to Facility Groups.
-     * Create a new facility group named `Warehouses.`
+     * Create a new facility group named `Warehouses`.
      * Add all warehouses to this group.
    * **Store Facility Group:**
      * Go to Facility Groups.
-     * Create a new facility group named `Stores.`
+     * Create a new facility group named `Stores`.
      * Add all retail stores to this group.
 3. **Configure Inventory Rules**
    * Define inventory rules to ensure that orders are first checked for availability in warehouses, and if not available, then in stores.
@@ -65,7 +65,7 @@ Many times retailers wants to prioritize fulfilling eCommerce orders from their 
    * **Activate Inventory Rules:**
      * Activate both the warehouse and store inventory rules to ensure they are applied during the routing process.
    * **Activate Order Batch:**
-     * Change the status of the `eCommerce Orders` batch from `Draft` to `Active.`
+     * Change the status of the `eCommerce Orders` batch from `Draft` to `Active`.
    * **Schedule Routing:**
      * Set the frequency at which the routing runs should occur to ensure timely fulfillment of eCommerce orders.
 
@@ -145,21 +145,35 @@ Retailers want to ensure that orders are only fulfilled from locations within a 
 
 <figure><img src="../.gitbook/assets/Proximity based routing.png" alt=""><figcaption><p>Proximity Based Routing</p></figcaption></figure>
 
-## Scenario 7: Split Shipping Threshold Logic
+##  Scenario 7: Minimum Stock Availability
 
-Retailers want to implement a split shipping threshold, allowing orders to be fulfilled from multiple locations if the inventory at a single location falls below a certain threshold. This approach helps maintain adequate inventory levels for walk-in customers while ensuring timely fulfillment.
+Retailers aim to maintain sufficient in-store inventory for walk-in customers while fulfilling online orders. They need a solution that allocates online orders only to locations with the minimum required stock. By using the `Brokering Safety Stock` feature, orders are routed exclusively to locations that meet the minimum stock level, ensuring that essential inventory is preserved for in-store customers.
 
 ### Steps to Implement
 
-1. **Brokering Threshold Setup**
-   * **Brokering Safety Stock Filter:** When creating inventory rules in HotWax Commerce, select the brokering safety stock filter. This filter ensures that inventory is only allocated to an order from a facility if the facility has a specified minimum inventory level for the item.
-   * **Define Minimum Safety Stock:** Determine the minimum safety stock level to keep in reserve for each item. For example, if the safety stock threshold is set to greater than 10, the inventory will only be allocated if the store has more than 10 units of that item available. This ensures that walk-in customers have access to sufficient stock.
-2. **Partial Allocation Setup**
-   * **Enable Partial Allocation:** Turn on the toggle for partial allocation in the inventory rules. This setting allows orders to be split across multiple facilities if no single location has enough inventory to fulfill the entire order.
-3. **Inventory Allocation Process**
-   * **Primary Check:** The routing engine first checks if any facility has inventory above the safety stock threshold.
-   * **Secondary Check:** If no facility meets the threshold for all order items, the order is split and items are allocated from different locations to ensure faster fulfillment.
+1. **Configure Inventory Rules**
+    
+    * **First Inventory Rule**: While setting up inventory rules in the Order Routing App, choose the `Brokering Safety Stock` filter.
+    
+      **Define Brokering Safety Stock**: Define the brokering safety stock level to keep in reserve for each item.
+      
+      This ensures that online orders are only allocated to locations where the inventory for all items in the order meets or exceeds the defined `Brokering Safety Stock`. Orders will only be routed to locations that have sufficient inventory for each item, ensuring that in-store inventory remains available for walk-in customers.
+      
+      For example, if the `Brokering Safety Stock` is set to greater than 10, the inventory will only be allocated if the store has more than 10 units of that item available. This ensures that walk-in customers have access to sufficient stock.
+    
+    * **Second Inventory Rule**: If no location can fulfill all items in an order based on Rule 1, the second rule applies. In this rule, again choose the `Brokering Safety Stock` filter, but also enable the partial allocation.
+    
+**Partial Allocation Setup**
+  
+  * **Enable Partial Allocation**: Turn on the toggle for partial allocation.
+    
+    This means that if a single location does not have enough stock for the entire order, the order will be split. Items will be allocated to different locations that meet the `Brokering Safety Stock for each item, allowing the order to be partially fulfilled while still preserving inventory in stores.
 
+2. **Activation and Scheduling**
+    
+    * **Activate Inventory Rules**:
+          Ensure all the inventory rules are activated to be in effect.
+    
 {% embed url="https://youtu.be/6R2EjkRfbyE" %}
 
 ## Scenario 8: Managing Store Fulfillment Based on Rent Agreements
