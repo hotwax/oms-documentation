@@ -254,9 +254,9 @@ To address this issue, HotWax Commerce allows merchandisers to set threshold val
 
 With this threshold in place, orders will only be split if the value of the items meets or exceeds the set threshold, optimizing shipping costs and preventing losses on low-value shipments.
 
-{% embed url="https://youtu.be/muUAMePESwg" %}
-
-
+{% embed url="https://youtu.be/GQU6wyNI4kw" %}
+Set Brokering Shipment Threshold
+{% endembed %}
 
 ## Scenario 11: Managing Order Splitting for Grouped Items
 
