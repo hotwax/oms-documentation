@@ -11,16 +11,16 @@ A retailer wants to ensure that all orders placed through various marketplaces a
    * **Order Tags:** Ensure that all orders coming from marketplaces are tagged with `marketplace_sales_channel` in Shopify.
 2. **Set Up Facility Groups**
    * HotWax Commerce allows retailers to create specific facility groups for different sales channels.
-   * **Create Facility Group:** Set up a facility group that includes only warehouse facilities.
-   * **Inventory Filter:** In the inventory filter, select the warehouse facilities to ensure only these facilities are considered for fulfillment.
+   * **Create Facility Group:** Set up a facility group that includes only warehouse.
+   * **Inventory Filter:** In the inventory filter, select the warehouses to ensure only these are considered for fulfillment.
 3. **Configure Order Routing Rules**
    * Create specific routing rules to handle marketplace orders:
-   * **Create Order Batch:** In HotWax Commerce, navigate to the order routing app and create a new order batch for marketplace orders.
+   * **Create Order Batch:** In HotWax Commerce, navigate to the Order Routing App and create a new order batch for marketplace orders.
    * **Order Filter:** Apply filters to select orders based on the `marketplace_sales_channel` tag. This ensures that only orders from marketplaces are included in this batch.
 4. **Set Up Inventory Rules**
    * Define inventory rules to route marketplace orders to the warehouse:
-   * **Create Inventory Rule:** Create an inventory rule within the newly created order batch.
-   * **Select Facility Group:** Apply the previously created facility group that includes only warehouse facilities.
+   * **Create Inventory Rule:** Create an inventory rule in the newly created order batch.
+   * **Select Facility Group:** Apply the previously created facility group that includes only warehouses.
 5. **Activate and Schedule**
    * Ensure the routing rules and order batches are activated and scheduled appropriately:
    * **Activate Inventory Rule:** Activate the inventory rule to ensure it is applied to incoming marketplace orders.
@@ -31,33 +31,33 @@ A retailer wants to ensure that all orders placed through various marketplaces a
 
 ## Scenario 2: Fulfilling eCommerce Orders from Warehouse and Stores
 
-In this scenario, a retailer wants to prioritize fulfilling eCommerce orders from their warehouse. If the warehouse is unable to fulfill an order due to inventory constraints, the order should then be routed to retail stores for fulfillment.
+Many times retailers wants to prioritize fulfilling eCommerce orders from their warehouse. If the warehouse is unable to fulfill an order due to inventory constraints, the order should then be routed to retail stores for fulfillment.
 
 ### Steps to Implement
 
 1. **Create Order Batch for eCommerce Orders**
    * Start by creating an order batch that includes all eCommerce orders.
    * **Order Batch Creation:**
-     * In HotWax Commerce, navigate to the order routing app.
+     * In HotWax Commerce, navigate to the Order Routing App.
      * Create a new order batch and name it `eCommerce Orders.`
 2. **Set Up Facility Groups**
    * Create two facility groups: one for warehouses and another for stores.
    * **Warehouse Facility Group:**
      * Go to Facility Groups.
      * Create a new facility group named `Warehouses.`
-     * Add all warehouse facilities to this group.
+     * Add all warehouses to this group.
    * **Store Facility Group:**
      * Go to Facility Groups.
      * Create a new facility group named `Stores.`
-     * Add all retail store facilities to this group.
+     * Add all retail stores to this group.
 3. **Configure Inventory Rules**
    * Define inventory rules to ensure that orders are first checked for availability in warehouses, and if not available, then in stores.
    * **First Inventory Rule (Warehouses):**
-     * Within the `eCommerce Orders` batch, create an inventory rule.
+     * In the `eCommerce Orders` batch, create an inventory rule.
      * Select the `Warehouses` facility group in the inventory filter.
      * Ensure that partial allocation is turned off to prioritize fulfillment from a single warehouse location.
    * **Second Inventory Rule (Stores):**
-     * Create another inventory rule within the same order batch.
+     * Create another inventory rule in the same order batch.
      * Select the `Stores` facility group in the inventory filter.
      * This rule will be applied if the warehouse cannot fulfill the order.
 4. **Activate and Schedule**
@@ -83,9 +83,9 @@ During peak hours, store managers need the flexibility to turn off fulfillment f
 
 1. **Facility App**
    * Navigate to Facility App: Open the Facility App from the main menu.
-   * Locate the Facility: Find the facility for which you need to adjust fulfillment capacity.
-   * Open Facility Details Page: Click on the facility name to open the details page.
-   * Adjust Fulfillment Capacity: Navigate to the fulfillment capacity card. Click on the chip and select “No Capacity” to temporarily turn off fulfillment from this facility.
+   * Locate the Facility: Find the location for which you need to adjust fulfillment capacity.
+   * Open Facility Details Page: Click on the location name to open the Details page.
+   * Adjust Fulfillment Capacity: Navigate to the fulfillment capacity card. Click on the chip and select “No Capacity” to temporarily turn off fulfillment from this location.
 2. **Fulfillment App**
    * Access Fulfillment App: Store managers can log in to the Fulfillment App.
    * Locate Fulfillment Capacity Card: Navigate to the fulfillment capacity card specific to their store.
@@ -95,37 +95,35 @@ During peak hours, store managers need the flexibility to turn off fulfillment f
 
 ## Scenario 4: Setting Maximum Order Capacity for Stores
 
-To prevent stores from being overloaded, retailers need to set a maximum order capacity. This ensures that once a store reaches its capacity, no additional orders are routed to it until the load decreases.
+To prevent stores from being overloaded, retailers can set a maximum order capacity. This ensures that once a store reaches its capacity, no additional orders are routed to it until the load decreases.
 
 ### Steps to Implement
 
 1. **Set Maximum Order Capacity**
    * **Facility App:**
-     * Open the Facility App and navigate to the relevant facility.
-     * On the facility details page, go to the fulfillment capacity card.
-     * Set the maximum number of orders that can be fulfilled from this facility.
+     * Open the Facility App and navigate to the relevant location.
+     * On the Facility Details page, go to the fulfillment capacity card.
+     * Set the maximum number of orders that can be fulfilled from this location.
    * **Fulfillment App:**
      * Store managers can also set the maximum order capacity via the Fulfillment App.
      * Navigate to the fulfillment capacity card and specify the maximum number of orders.
 2.  **Monitor Capacity**
-
-    * Ensure the system is actively monitoring order counts. Once the limit is reached, no new orders are brokered to that facility until the order count drops below the maximum threshold.
-
+    * Once the limit is reached, no new orders are brokered to that location until the order count drops below the maximum threshold.
 
 
 <figure><img src="../.gitbook/assets/Custom Order Fulfillment Capacity.png" alt="" width="375"><figcaption><p>Max Order Limit</p></figcaption></figure>
 
 ## Scenario 5: Re-Routing Rejected Orders
 
-If an order item is rejected due to inventory unavailability at a store, the system needs to re-route the order to another store with available inventory to ensure fulfillment.
+When order fulfillment is rejected from stores, the order routing engine re-routes rejected orders to the next best location with available inventory to ensure fulfillment.
 
 ### Steps to Implement
 
 1. **Create Order Batch for Rejected Orders**
-   * **Queue Filter Setup:** In the order batch settings, apply the queue filter and select the rejected order item queue. This filter ensures that only rejected orders are included in this batch.
+   * **Queue Filter Setup:** In the order batch settings, apply the queue filter and select the `Rejected Order Item` queue. This filter ensures that only rejected orders are included in this batch.
 2. **Create Inventory Rules**
-   * **Define Re-routing Rules:** Set up inventory rules to determine the re-routing process. For example, prioritize stores with the highest inventory balance first, then by proximity.
-   * **Facility Preferences:** Specify facility groups to ensure that orders are re-routed to appropriate stores based on defined criteria.
+   * **Define Re-routing Rules:** Set up inventory rules to determine the re-routing process. For example, prioritize locations with the highest inventory balance first, then by proximity.
+   * **Facility Preferences:** Specify facility groups to ensure that orders are re-routed to the preferred locations or re-route rejected orders to all the available locations (stores and warehouses) that can fulfill them.
 3. **Activate and Schedule**
    * **Activate Inventory Rules and Batch:** Activate the rules and the order batch to ensure they are in effect.
    * **Schedule Routing Runs:** Schedule the routing runs to occur at regular intervals, ensuring timely re-routing of rejected orders.
@@ -134,16 +132,16 @@ If an order item is rejected due to inventory unavailability at a store, the sys
 
 ## Scenario 6: Proximity-Based Order Routing
 
-Retailers want to ensure that orders are only fulfilled from facilities within a specific distance from the customer, reducing delivery times and costs.
+Retailers want to ensure that orders are only fulfilled from locations within a specific distance from the customer, reducing delivery times and costs.
 
 ### Steps to Implement
 
 1. **Proximity Filter**
    * **Create Inventory Rule:** When setting up an inventory rule, select the proximity filter.
-   * **Define Maximum Distance:** Specify the maximum distance (e.g., 50 miles) for order routing. This means orders will only be routed to facilities within this distance from the customer.
+   * **Define Maximum Distance:** Specify the maximum distance (e.g., 50 miles) for order routing. This means orders will only be routed to locations (stores or warehouses) within this distance from the customer.
 2. **Sort Inventory by Proximity**
-   * **Proximity Sorting:** Within the inventory rule, sort the inventory allocations by proximity. This ensures that orders are fulfilled from the nearest possible facility, reducing delivery times and enhancing customer satisfaction.
-   * **Inventory Balances:** Optionally, further sort by inventory balances to prioritize facilities with the highest stock levels, ensuring efficient inventory utilization and reducing the likelihood of stockouts.
+   * **Proximity Sorting:** In the inventory rule, sort the inventory allocations by proximity. This ensures that orders are fulfilled from the nearest possible location, reducing delivery times and enhancing customer satisfaction.
+   * **Inventory Balances:** Optionally, further sort by inventory balances to prioritize locations with the highest stock levels, ensuring efficient inventory utilization and reducing the likelihood of stockouts.
 
 <figure><img src="../.gitbook/assets/Proximity based routing.png" alt=""><figcaption><p>Proximity Based Routing</p></figcaption></figure>
 
@@ -157,7 +155,7 @@ Retailers want to implement a split shipping threshold, allowing orders to be fu
    * **Brokering Safety Stock Filter:** When creating inventory rules in HotWax Commerce, select the brokering safety stock filter. This filter ensures that inventory is only allocated to an order from a facility if the facility has a specified minimum inventory level for the item.
    * **Define Minimum Safety Stock:** Determine the minimum safety stock level to keep in reserve for each item. For example, if the safety stock threshold is set to greater than 10, the inventory will only be allocated if the store has more than 10 units of that item available. This ensures that walk-in customers have access to sufficient stock.
 2. **Partial Allocation Setup**
-   * **Enable Partial Allocation:** Turn on the toggle for partial allocation within the inventory rules. This setting allows orders to be split across multiple facilities if no single location has enough inventory to fulfill the entire order.
+   * **Enable Partial Allocation:** Turn on the toggle for partial allocation in the inventory rules. This setting allows orders to be split across multiple facilities if no single location has enough inventory to fulfill the entire order.
 3. **Inventory Allocation Process**
    * **Primary Check:** The routing engine first checks if any facility has inventory above the safety stock threshold.
    * **Secondary Check:** If no facility meets the threshold for all order items, the order is split and items are allocated from different locations to ensure faster fulfillment.
@@ -215,7 +213,6 @@ Retailers need to balance the cost of shipping, which is influenced by both the 
 
 * In the third inventory rule, remove the proximity filter and disable partial shipment.
 * This rule ensures that if the items are not available within the initial proximity, the entire order is shipped from a distant location that can fulfill the order completely, minimizing the number of shipments.
-* Final Inventory Rule for All Locations with Partial Shipment:
 
 4. **Include All Stores:**
 
@@ -230,7 +227,6 @@ Retailers need to balance the cost of shipping, which is influenced by both the 
   * Schedule the brokering runs to execute these inventory rules at regular intervals, maintaining efficient order fulfillment.
 
 
-
 {% embed url="https://youtu.be/K59lNhHtKMM" %}
 Balance Shipping Cost and Distance with Split Shipments
 {% endembed %}
@@ -241,18 +237,18 @@ Retailers often split orders across multiple locations to optimize inventory usa
 
 To address this issue, HotWax Commerce allows merchandisers to set threshold values for order items. This helps in more efficient order splitting while reducing the risk of losses due to shipping low-value items separately.
 
-**Example:** If an order contains two items, such as a 'Brown Belt' and a 'Brown Wallet,' each valued at $60, and a brokering threshold of $50 is set, the items will be split even if they are not available at a single location. Conversely, if an order includes a 'Black Belt' and a 'Black Wallet,' each valued at $20, the order will not be split as it would cause the shipment to fall below the threshold.
+**Example:** If an order contains two items, such as a 'Brown Belt' and a 'Brown Wallet,' each valued at $160, and a brokering threshold of $100 is set, the items will be split even if they are not available at a single location. Conversely, if an order includes a 'Black Belt' and a 'Black Wallet,' each valued at $80, the order will not be split as it would cause the shipment to fall below the threshold.
 
 ### Steps to Implement
 
 1. **Navigate to Store Settings**
-   * **Access Store Settings**: In the HotWax Commerce Order Management System, navigate to the product store page.
+   * **Access Store Settings**: In the HotWax Commerce Order Management System, navigate to the Product Store page.
    * **Add New Setting**: Go to the store settings section and click on "Add Settings."
 2. **Set Brokering Shipment Threshold**
    * **Select Brokering Threshold**: In the settings submenu, select "Brokering Shipment Threshold."
-   * **Define Threshold Value**: Enter the desired shipment threshold value that will prevent splitting orders below this amount. For instance, set the threshold at $50 to ensure that only orders above this value are eligible for splitting across multiple locations.
+   * **Define Threshold Value**: Enter the desired shipment threshold value that will prevent splitting orders below this amount. For example, set the threshold at $100 to ensure that only orders above this value are eligible for splitting across multiple locations.
 3. **Save Settings**
-   * **Finalize the Configuration**: Save the store settings to apply the brokering threshold across the product store.
+   * **Finalize the Configuration**: Save the store settings to apply the brokering threshold across the Product Store.
 
 With this threshold in place, orders will only be split if the value of the items meets or exceeds the set threshold, optimizing shipping costs and preventing losses on low-value shipments.
 
@@ -262,16 +258,16 @@ Set Brokering Shipment Threshold
 
 ## Scenario 11: Managing Order Splitting for Grouped Items
 
-Retailers often face scenarios where certain items within an order must be shipped together, while other items can be shipped separately. For example, if a customer orders a frame and lenses along with sunglasses, the frame and lenses must be shipped together, but the sunglasses can be shipped from a different location. In such cases, items like the frame and lenses are grouped to ensure they are always shipped together.
+Retailers often face scenarios where certain items in an order must be shipped together, while other items can be shipped separately. For example, if a customer orders a frame and lenses along with sunglasses, the frame and lenses must be shipped together, but the sunglasses can be shipped from a different location. In such cases, items like the frame and lenses are grouped to ensure they are always shipped together.
 
 HotWax Commerce allows retailers to manage these scenarios by disabling the splitting of grouped items while keeping the option to split other items in the order. This ensures that grouped items, which are critical to be shipped together, are handled appropriately, while other non-grouped items can still be split for faster fulfillment.
 
 ### Steps to Implement
 
 1. **Create Inventory Rule for Order Batch**
-   * **Access Inventory Rules**: Begin by creating an inventory rule within the HotWax Commerce Order Routing App.
+   * **Access Inventory Rules**: Begin by creating an inventory rule in the HotWax Commerce Order Routing App.
 2. **Configure Partial Allocation Settings**
-   * **Navigate to Partial Allocation**: Within the inventory rule settings, locate the "Partially Available" card. This section allows you to configure how items are allocated when they are not fully available at a single location.
+   * **Navigate to Partial Allocation**: In the inventory rule settings, locate the "Partially Available" card. This section allows you to configure how items are allocated when they are not fully available at a single location.
    * **Enable Partial Allocation**: Turn on the toggle for "Partial Order Allocation" to allow the order to be split across multiple locations for items that are not grouped.
 3. **Disable Splitting for Grouped Items**
    * **Toggle Off for Grouped Items**: Ensure that the toggle for "Partially Allocate Grouped Items" is turned off. This setting ensures that grouped items, such as kit products and gift items are not split and are shipped together from a single location.
