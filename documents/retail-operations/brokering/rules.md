@@ -43,9 +43,15 @@ Learn how you can have granular control over which orders are sent to which loca
 4. **Ship After**
 5. **Shipping Method**: Retailers can sort orders by shipping method, ensuring that orders with expedited shipping are allocated inventory before those with standard shipping.
 
+### Configuring Order Filter and Sorting Rules for Our Example Routing
+
+In this example, we have created a routing to broker all orders that require two-day delivery, as they are assigned a two-day shipping method.
+
 {% embed url="https://youtu.be/y5TdKuHEQOk" %}
 Finding Orders and Managing Sorting
 {% endembed %}
+
+Next, let's hop onto inventory rules. Before we proceed to apply inventory rules, let's first clarify their purpose. 
 
 ## 2. Finding Inventory
 
@@ -95,13 +101,13 @@ Once valid inventory facilities have been identified, those facilities can be so
 3. **Inventory Balance**: Inventory can be sorted based on stock levels, ensuring that orders are routed to the facility with the highest available inventory of the ordered item. This method helps to deplete stock from high-inventory locations first, ensuring better stock rotation and preventing stock outs at key locations.
 4. **Custom Sequence**: Allows full manual override to the sequence at which facilities are attempted. Retailers can set a custom sequence of facilities, defining a specific order in which locations should be considered for order routing. For example, if a retailer wants to prioritize fulfillment from underperforming stores with lower foot traffic, they can create a custom sequence that favors those stores, helping to balance inventory across all locations. Custom sequences can also be useful for managing seasonal inventory or routing orders to specific regions.
 
+### Configuring Inventory Filter and Sorting Rules for Our Example Routing
 
+Here, we have configured three inventory rules to allocate inventory for orders that require two-day shipping.
 
 {% embed url="https://youtu.be/6z5vnutliAU" %}
 Finding Inventory and Managing Sorting
 {% endembed %}
-
-### Add New Inventory Rules in a Routing
 
 {% tabs %}
 {% tab title="Adding 2nd Inventory Rule" %}
