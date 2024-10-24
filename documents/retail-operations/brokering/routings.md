@@ -24,7 +24,7 @@ Sequence Routings
 * Click and drag the chip on the top right of the routing card.
 * The sequence number on the card will automatically update based on the card's position.
 
-### Archiving a Routing Rule
+### Archiving a Routing
 
 When a routing is no longer needed in a brokering run:
 
