@@ -43,7 +43,7 @@ Learn how you can have granular control over which orders are sent to which loca
 4. **Ship After**
 5. **Shipping Method**: Retailers can sort orders by shipping method, ensuring that orders with expedited shipping are allocated inventory before those with standard shipping.
 
-### Configuring Order Filter and Sorting Rules for Our Example Routing
+### Configuring Order Filter and Sorting Rules for Routing
 
 In this example, we have created a routing to broker all orders that require two-day delivery, as they are assigned a two-day shipping method.
 
@@ -101,9 +101,9 @@ Once valid inventory facilities have been identified, those facilities can be so
 3. **Inventory Balance**: Inventory can be sorted based on stock levels, ensuring that orders are routed to the facility with the highest available inventory of the ordered item. This method helps to deplete stock from high-inventory locations first, ensuring better stock rotation and preventing stock outs at key locations.
 4. **Custom Sequence**: Allows full manual override to the sequence at which facilities are attempted. Retailers can set a custom sequence of facilities, defining a specific order in which locations should be considered for order routing. For example, if a retailer wants to prioritize fulfillment from underperforming stores with lower foot traffic, they can create a custom sequence that favors those stores, helping to balance inventory across all locations. Custom sequences can also be useful for managing seasonal inventory or routing orders to specific regions.
 
-### Configuring Inventory Filter and Sorting Rules for Our Example Routing
+### Configuring Inventory Filter and Sorting Rules (Continuing Our Example)
 
-Here, we have configured three inventory rules to allocate inventory for orders that require two-day shipping.
+Continuing with our example, we have configured three inventory rules to manage inventory allocation for orders that require two-day shipping. Each rule focuses on finding the best inventory to fulfill orders efficiently.
 
 {% tabs %}
 {% tab title="Adding 1st Inventory Rule" %}
@@ -154,6 +154,8 @@ Based on each of these conditions, an action can be tied to the allocation. Reta
 2. **Move to the Next Rule**: Automatically move unallocated items to the next rule in the sequence.
 3. **Move to Queue**: Transfer unallocated items to a selected queue for further processing. When an order cannot be allocated but should not undergo further allocation attempts by other rules in the flow, it can be moved to a specific queue. This allows for holding orders until the appropriate action can be taken. For example, unfillable orders can be transferred to the "Unfillable Parking", where they can later be rerouted through a different routing strategy.
 4. **Add Auto Cancel Date**: Specify the number of days to automatically cancel orders that could not be allocated. Based on the inventory availability, retailers may want to add an auto cancel date on the order, to ensure that they do not remain in the fulfillment pipeline for too long.
+
+### Configuring Allocation Actions (Continuing Our Example)
 
 {% embed url="https://youtu.be/rK3nCz-lMYA" %}
 Final Inventory Rule
