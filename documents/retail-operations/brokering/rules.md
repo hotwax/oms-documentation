@@ -51,7 +51,7 @@ In this example, we have created a routing to broker all orders that require two
 Finding Orders and Managing Sorting
 {% endembed %}
 
-Next, let's hop onto inventory rules. Before we proceed to apply inventory rules, let's first clarify their purpose. 
+Next, let's hop onto inventory rules. Before we proceed to apply inventory rules, let's first clarify their purpose.
 
 ## 2. Finding Inventory
 
@@ -105,11 +105,13 @@ Once valid inventory facilities have been identified, those facilities can be so
 
 Here, we have configured three inventory rules to allocate inventory for orders that require two-day shipping.
 
+{% tabs %}
+{% tab title="Adding 1st Inventory Rule" %}
 {% embed url="https://youtu.be/6z5vnutliAU" %}
 Finding Inventory and Managing Sorting
 {% endembed %}
+{% endtab %}
 
-{% tabs %}
 {% tab title="Adding 2nd Inventory Rule" %}
 {% embed url="https://youtu.be/0MH9GdNVDtc" %}
 Adding New Inventory Rule
@@ -152,8 +154,6 @@ Based on each of these conditions, an action can be tied to the allocation. Reta
 2. **Move to the Next Rule**: Automatically move unallocated items to the next rule in the sequence.
 3. **Move to Queue**: Transfer unallocated items to a selected queue for further processing. When an order cannot be allocated but should not undergo further allocation attempts by other rules in the flow, it can be moved to a specific queue. This allows for holding orders until the appropriate action can be taken. For example, unfillable orders can be transferred to the "Unfillable Parking", where they can later be rerouted through a different routing strategy.
 4. **Add Auto Cancel Date**: Specify the number of days to automatically cancel orders that could not be allocated. Based on the inventory availability, retailers may want to add an auto cancel date on the order, to ensure that they do not remain in the fulfillment pipeline for too long.
-
-
 
 {% embed url="https://youtu.be/rK3nCz-lMYA" %}
 Final Inventory Rule
