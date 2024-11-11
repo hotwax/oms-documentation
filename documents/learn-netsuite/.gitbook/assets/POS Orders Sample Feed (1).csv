@@ -1,0 +1,5 @@
+Order Id,Order Line Id,External Id,Sales Channel,Item,Price,Amount,Quantity,Tax Code,Location,Date,Customer,Discount Item,Rate,Subsidiary,Address 1,Address 2,City,State,Country,Zip,Order Type,Department,Sales Channel,Price Level,Shopify Order Number,Order Note
+#NOTNAKED7769,101,NN10736,POS Channel,WJ08-XS-Gray | Adrienne Trek Jacket,,,1,AVATAX,254,2/29/2024,5313849,,,1,Times Square,,New York city,NY,US,10109,6,212,12,Base Price (MSRP),"7,289",New Exchange order @ 2024-01-14 11:27:56 exchange for order NN10170
+#NOTNAKED7769,102,NN10736,POS Channel,WT08-XS-Black | Antonia Racer Tank ,,,1,AVATAX,254,2/29/2024,5313849,,,1,Times Square,,New York city,NY,US,10109,6,212,12,Base Price (MSRP),"7,289",
+#NOTNAKED7768,101,NN10735,POS Channel,MH09-XS-Blue | Abominable Hoodie,,,1,AVATAX,372,2/29/2024,5313877,SHOPIFY DISCOUNT,-82.5,1,Broadway,,New York city,NY,US,101001,6,317,156,Base Price (MSRP),"7,288",
+#NOTNAKED7767,101,NN10734,POS Channel,WJ03-L-Red | Augusta Pullover Jacket,,,1,AVATAX,376,2/29/2024,5313640,,,5,Amherst Cl,,Amherst ,MA,US,1002,6,335,144,Base Price (MSRP),"7,287",

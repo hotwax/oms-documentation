@@ -1,0 +1,9 @@
+﻿[ {
+  "order_id" : "10522780",
+  "total_amount" : "621.47",
+  "payment_method" : "Shopify Payment"
+}, {
+  "order_id" : "10522781",
+  "total_amount" : "492.58",
+  "payment_method" : "Shopify Payment"
+} ]
