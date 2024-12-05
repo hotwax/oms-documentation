@@ -1,11 +1,11 @@
 ---
 description: >-
-  This document explains the Reorder Point Management feature in HotWax Commerce,
-  which automates inventory replenishment reports to prevent
-  stockouts and lost sales.
+  This document explains the Reorder Point Management feature in HotWax
+  Commerce, which automates inventory replenishment reports to prevent stockouts
+  and lost sales.
 ---
 
-# Re-order feature
+# Re-Order Feature
 
 In HotWax Commerce, managing inventory effectively is crucial for retailers to strike a balance between ensuring well-stocked shelves and avoiding excess inventory. Manually monitoring stock levels, sell-through rates, and pending deliveries are prone to errors, resulting in issues such as stockouts, lost sales, and compromised customer experiences.
 
@@ -17,7 +17,7 @@ The Reorder Point Feature automates the replenishment process by enabling users 
 
 ## The Implementation
 
-Reorder Point involves leveraging a dedicated reorder channel within the Order Management System (OMS). This channel operates independently of the primary sales channel and serves solely to trigger reorder reports and manage inventory thresholds. Please refer to this [user guide](create-channel.md) on how to make a new channel in HotWax Commerce.
+Reorder Point involves leveraging a dedicated reorder channel within the Order Management System (OMS). This channel operates independently of the primary sales channel and serves solely to trigger reorder reports and manage inventory thresholds. Please refer to this [user guide](https://docs.hotwax.co/documents/retail-operations/inventory/available-to-promise/create-channel) on how to make a new channel in HotWax Commerce.
 
 For example, if the primary sales channel, say A, starts with 100 units and has a reorder point of 10 units, a reorder Channel, say B, would have 100 inventory with a 10 threshold. As sales occur on the inventory channel A, inventories in both A and B decrease concurrently. When A sells 90 units, B's online inventory becomes depleted, triggering an automated reorder report while allowing online sales on A.
 

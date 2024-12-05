@@ -70,6 +70,8 @@ The CSV should include the following fields:
 * Identify the issue based on the error message and adjust the CSV file accordingly.
 * Re-upload the corrected CSV file to complete the import.
 
+<figure><img src="../.gitbook/assets/dev-oms.hotwax.io_commerce_control_ImportData_configId=IMP_EMPLOYEE (1).png" alt=""><figcaption></figcaption></figure>
+
 ### Step 6: Upload Facility-Employee Relationship CSV
 
 To establish the relationship between the employee and the facility, follow these steps:
@@ -96,3 +98,4 @@ After the import is complete, verify that the employees have been added to the s
 
 * Navigating to the **Employees** screen under the Relationship category in OMS.
 * Checking that all imported employees appear in the system with the correct details.
+

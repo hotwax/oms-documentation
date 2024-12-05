@@ -9,7 +9,7 @@ description: >-
 
 The inventory count of a product is regularly updated due to various factors such as customer purchases made both in-store and online, as well as the receipt of new inventory. These transactions are recorded across different systems. In the Inventory Lifecycle BPM, we've provided detailed insights into how these operational inventory transactions impact the sellable inventory count, that is, `Online ATP` of a product.
 
-<figure><img src="../.gitbook/assets/inventory bpm.png" alt=""><figcaption><p>Inventory lifecycle business process model</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Inventorybpm.png" alt=""><figcaption><p>Inventory lifecycle business process model</p></figcaption></figure>
 
 Before delving into the specifics of Inventory Lifecycle BPM, it's crucial to understand HotWax Commerce's role in maintaining inventory levels and calculating inventory availability. <mark style="color:orange;">**HotWax Commerce serves as the master of inventory availability**</mark>. Now, what exactly does this mean, and how does HotWax Commerce compute it? Let's see:
 
@@ -136,7 +136,7 @@ This step ensures that the count for physical available inventory is accurately 
 
 In the event where a store cannot fulfill an online order allocated to them, HotWax Commerce checks the rejection reasons for the rejected orders and automatically updates ATP and Online ATP.
 
-Learn more about [rejection handling and its impact on inventory](https://docs.hotwax.co/documents/store-operations/orders/fulfillment/rejection).&#x20;
+Learn more about [rejection handling and its impact on inventory](https://docs.hotwax.co/documents/store-operations/orders/fulfillment/rejection).
 
 When rejections happen in a warehouse, inventory is automatically updated during the daily reset.
 

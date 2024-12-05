@@ -4,9 +4,9 @@ description: >-
   eCommerce, ERP, and HotWax Commerce.
 ---
 
-# Web returns with Loop
+# Web Returns with Loop
 
-<figure><img src="../../.gitbook/assets/web returns bpm.png" alt=""><figcaption><p>Web returns lifecycle business process model</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/WebReturnsbpm.png" alt=""><figcaption><p>Web returns lifecycle business process model</p></figcaption></figure>
 
 HotWax Commerce simply downloads completed returns for auditing purposes, ensuring reconciliation of returns in both Shopify and NetSuite. To explain the return lifecycle, we've taken Loop as the RMS, Shopify as eCommerce platform, and NetSuite as the ERP system, while HotWax Commerce serves as the OMS.
 

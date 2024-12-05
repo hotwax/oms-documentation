@@ -4,9 +4,9 @@ description: >-
   managed between RMS, eCommerce, ERP, and HotWax Commerce.
 ---
 
-# In-store exchanges with Loop
+# In-Store Exchanges with Loop
 
-<figure><img src="../../.gitbook/assets/In-store exchanges loop bpm.png" alt=""><figcaption><p>In-store exchanges lifecycle business process model</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/InstoreExchangesLoopbpm.png" alt=""><figcaption><p>In-store exchanges lifecycle business process model</p></figcaption></figure>
 
 The process of returning an item mirrors the steps previously discussed in the [In-Store Returns Lifecycle Business Process Model](../returns-lifecycle/loopposreturnslifecycle.md). More specifically, customers visiting the store location, store associates looking up the customer’s order in the Loop POS App, and initiating the return process remains the same.
 

@@ -23,7 +23,7 @@ In this scenario, when a Purchase Order is raised in NetSuite's ERP system, it n
 
 The procurement process begins within the NetSuite ERP system, where Purchase Orders are generated to replenish inventory in physical stores. This step is integral to initiating the flow of inventory into the retail locations.
 
-<figure><img src="../../.gitbook/assets/49.png" alt=""><figcaption><p>Purchase Order sync from NetSuite to HotWax Commerce</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/POsync.png" alt=""><figcaption><p>Purchase Order sync from NetSuite to HotWax Commerce</p></figcaption></figure>
 
 ### Export Purchase Orders from NetSuite
 
@@ -60,11 +60,11 @@ IMP_ASN_PO_FEED
 
 {% tabs %}
 {% tab title="Purchase Order Fields in NetSuite" %}
-<figure><img src="../../.gitbook/assets/50.png" alt=""><figcaption><p>Purchase Order Fields Mapping in NetSuite</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/purchaseOrderNS.png" alt=""><figcaption><p>Purchase Order Fields Mapping in NetSuite</p></figcaption></figure>
 {% endtab %}
 
 {% tab title="Purchase Order Fields in HotWax Commerce" %}
-<figure><img src="../../.gitbook/assets/51.png" alt=""><figcaption><p>Purchase Order Fields Mapping in HotWax Commerce "Inventory Receiving App"</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/purchaseOrder.png" alt=""><figcaption><p>Purchase Order Fields Mapping in HotWax Commerce "Inventory Receiving App"</p></figcaption></figure>
 {% endtab %}
 {% endtabs %}
 
@@ -76,7 +76,7 @@ IMP_ASN_PO_FEED
 
 Once the Purchase Orders are synchronized, store associates use the Receiving App provided by HotWax Commerce to receive inventory. The intuitive interface of the Receiving App facilitates a seamless and efficient receiving process, even for users with minimal training.
 
-<figure><img src="../../.gitbook/assets/52.png" alt=""><figcaption><p>Item Receipts Sync from HotWax Commerce to NetSuite</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/syncItemreceipts.png" alt=""><figcaption><p>Item Receipts Sync from HotWax Commerce to NetSuite</p></figcaption></figure>
 
 Once the Purchase Orders (POs) are received by store associates using the HotWax Commerce Receiving App, the process involves the creation of Item Receipt records within HotWax Commerce. These records play a crucial role in increasing inventory numbers for the received products, ensuring that newly received inventory is readily available for eCommerce platforms to sell.
 

@@ -29,4 +29,4 @@ For orders to be routed correctly, the facilities need to be associated with the
 3. Click on the inventory rule you would like to configure.
 4. Click on "Filter", select "Facilities," and choose the correct facility group to which you would like to broker the order.
 
-For more details on Order Routing, refer to our [user manual](configurableRouting.md)
+For more details on Order Routing, refer to our [user manual](../brokeringruns.md).

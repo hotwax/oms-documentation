@@ -4,7 +4,7 @@ description: >-
   digital as well as physical gift card orders placed by customers on eCommerce.
 ---
 
-# Gift card orders lifecycle
+# Gift Card Orders Lifecycle
 
 Gift cards are stored-value cards that carry a value determined at the time of the card's purchase. They are often given as gifts or rewards and are redeemable for products up to the value stored on the card.
 
@@ -34,7 +34,7 @@ Digital gift cards, also known as e-gift cards, are virtual equivalents of physi
 
 ## Physical Gift Cards
 
-<figure><img src="../.gitbook/assets/Physical gift card lifecycle bpm.png" alt=""><figcaption><p>Physical gift card orders lifecycle business process model</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/PhysicalGiftCardLifecyclebpm.png" alt=""><figcaption><p>Physical gift card orders lifecycle business process model</p></figcaption></figure>
 
 ### 1. Order Creation
 
@@ -137,7 +137,7 @@ When walk-in customers purchase a physical gift card from the store, it is treat
 
 ## Digital Gift Cards
 
-<figure><img src="../.gitbook/assets/digital gift cards.png" alt=""><figcaption><p>Digital gift card orders lifecycle business process model</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/DigitalGiftCards.png" alt=""><figcaption><p>Digital gift card orders lifecycle business process model</p></figcaption></figure>
 
 ### 1. Order Creation
 

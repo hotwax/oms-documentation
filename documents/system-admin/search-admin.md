@@ -5,7 +5,7 @@ description: >-
   the platform.
 ---
 
-# Add Solr Indexes
+# SOLR Indexing
 
 Solr is an open-source enterprise-search platform used by HotWax Commerce to index product orders and other data within its system. It provides powerful search capabilities, making it an essential component for efficient data retrieval and search operations within the platform.
 
@@ -47,3 +47,5 @@ Follow these steps to create all the indexes for Solr cores:
 * **Create Product Index:** Click on the `Create Product Index` button to create an index for products downloaded from Shopify. Optionally, specify a time frame to optimize indexing by including only products created within that period. This helps manage and streamline the indexing process for product data.
 * **Create Order Index:** Use the `Create Order Index` button to create an index for orders in HotWax Commerce. Optionally, add a specific order ID if you want to index data for a particular order. Otherwise, click `Submit` to index all orders.
 * **Create Order Item Ship Group Inventory Reservation (OISGIR) Index:** Click on the `Create Order Item Ship Group Inventory Reservation (OISGIR) Index` button to create an index for reservations against order item ship groups. Optionally, specify parameters such as order ID, order item sequence ID, ship group sequence ID, inventory item ID, or shipment ID to index specific reservation data. Otherwise, click `Submit` to index all reservations.
+
+<figure><img src=".gitbook/assets/Solr Indexing.png" alt=""><figcaption></figcaption></figure>

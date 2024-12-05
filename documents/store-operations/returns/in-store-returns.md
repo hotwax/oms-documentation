@@ -54,3 +54,5 @@ Alternatively, store associates can also create returns by going to the `sales o
       * Return information will be available for the corresponding order items.
 
 By following these detailed steps, store associates can efficiently navigate through the HotWax Commerce platform, manage in-store returns, and contribute to a smooth and effective customer experience.
+
+{% embed url ="(https://youtu.be/_le1bYTLJUQ)" %} In-Store Returns {% endembed %}

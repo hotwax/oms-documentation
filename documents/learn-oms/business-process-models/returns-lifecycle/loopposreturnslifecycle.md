@@ -4,9 +4,9 @@ description: >-
   managed between RMS, POS, ERP, and HotWax Commerce.
 ---
 
-# In-store returns with Loop
+# In-Store Returns with Loop
 
-<figure><img src="../../.gitbook/assets/in-store returns loop bpm.png" alt=""><figcaption><p>In-store returns lifecycle business process model</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/InstoreReturnsLoopbpm.png" alt=""><figcaption><p>In-store returns lifecycle business process model</p></figcaption></figure>
 
 Customers who live near a brick-and-mortar store or those who prefer to get instant refunds opt for returning their purchases directly in-store.
 

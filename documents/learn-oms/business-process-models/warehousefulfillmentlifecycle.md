@@ -5,9 +5,9 @@ description: >-
   updates to HotWax Commerce.
 ---
 
-# Warehouse fulfillment lifecycle
+# Warehouse Fulfillment Lifecycle
 
-<figure><img src="../.gitbook/assets/warehouse fulfillment bpm.png" alt=""><figcaption><p>Warehouse fulfillment lifecycle business process model</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/WarehouseFulfillmentbpm.png" alt=""><figcaption><p>Warehouse fulfillment lifecycle business process model</p></figcaption></figure>
 
 HotWax Commerce, being as an Order Management System, finds the best location to fulfill an online order from. In the event where an approved order is brokered and allocated to warehouse fulfillment location, HotWax Commerce synchronizes allocation details with the Warehouse Management System (WMS) or ERP systems like NetSuite. Once the order is fulfilled, HotWax Commerce then also synchronizes the fulfillment updates from the WMS or ERP systems.
 

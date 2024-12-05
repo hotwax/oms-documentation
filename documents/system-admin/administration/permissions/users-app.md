@@ -44,7 +44,3 @@ Below is a list of all the actions available in the Users App, along with the sp
 | 4   | Download Permission List | -                                   | Allows users to download a list of existing permissions within a security group.  |
 
 <figure><img src="../../.gitbook/assets/permissions.png" alt=""><figcaption></figcaption></figure>
-
----
-
-This version now includes serial numbers starting from 1 for each table.

@@ -1,150 +1,181 @@
-# Inventory-Based Order Shipping
+# Retailer Routing Orders While Maintaining Inventory Balance
 
-## Business Overview for Retailers
+## Business Overview for the Retailer
 
-A prominent footwear retailer that operates over 200 stores across multiple countries and offers a diverse range of products in both online and retail locations  produces its own footwear while partnering with global brands, ensuring a wide selection for its customers.
+The retailer, a prominent footwear company with over 200 stores across multiple countries, produces its own footwear and partners with global brands to offer a diverse range of products in both online and physical stores.
 
-Historically, this retailer focused primarily on physical stores and fulfilled orders from a single retail location. With the implementation of HotWax Commerce, they have transitioned to utilizing all their stores as fulfillment centers. This strategic shift optimizes inventory management and significantly enhances order fulfillment efficiency across their entire store network for in-store and online orders.
+Previously, the retailer focused primarily on physical stores and fulfilled online orders from a single retail location, as they did not have any dedicated warehouses. With the implementation of HotWax Commerce, they have transitioned to using all their stores as fulfillment centers. This shift optimizes inventory management and enhances order fulfillment efficiency across their entire store network, benefiting both in-store and online orders.
 
-## Business Requirements for Retailer Order Fulfillment
+## Business Requirements for Order Fulfillment
 
-### Time-in-Transit
-
-The retailer offers multiple shipping options for customers, including:
+#### 1. Time-in-Transit Requirements
+The retailer offers several shipping options, including:
 - Next-Day Delivery
 - Two-Day Delivery
 - Three-Day Delivery
-- Standard Shipping (within 7 days)
+- Standard Shipping (Within 7 days)
 
-### Minimum Stock Availability
+#### 2. Minimum Stock Availability
+The retailer aims to maintain a minimum stock level at each store before allocating orders. This ensures inventory availability at all locations, optimizing fulfillment efficiency and reducing the risk of stock shortages and order cancellations.
 
-The company seeks to maintain a minimum stock level at each store before allocating orders. This ensures that inventory is available at all locations, optimizing fulfillment efficiency and reducing the risk of stock shortages and order rejections.
+#### 3. Order Fulfillment Priority
+Since the retailer operates within a limited geographical area, proximity is not a major concern. Instead, order routing is based solely on stock availability to ensure efficient fulfillment and prevent inventory shortages.
 
-### Order Fulfillment Priority
+#### 4. Inventory Unavailability
+If no store has sufficient inventory to fulfill an order, the order should be flagged and brokered again after a set time to check for inventory replenishment, ensuring the order can eventually be fulfilled.
 
-Due to its operational structure, proximity is not a major concern for the retailer. The company requires order routing based solely on stock availability to maintain efficient fulfillment and avoid inventory unavailability.
-
-### Unfillable Orders
-
-If no store has sufficient inventory, orders should be identified and brokered again after a set period to check if inventory has been replenished, allowing for order fulfillment.
-
-### Frequency of Runs
-
-The retailer requires regular brokering to operate without delays, ensuring efficient processing of regular and rejected orders. For unfillable orders, they prefer the brokering run to occur within a defined time frame, as inventory replenishment may take some time.
-
-To meet its goals, Retailer has implemented HotWax Commerce's Configurable Order Routing System. This system enables the establishment of custom routing rules and criteria, including the Brokering Safety Stock parameter, ensuring orders are fulfilled from locations with optimal inventory levels.
+#### 5. Routing Interval
+The retailer requires regular brokering to ensure timely processing of both regular and rejected orders. For unfillable orders, the brokering process should occur within a predefined interval, allowing time for potential inventory replenishment.
 
 ## Key Routing Considerations
 
-### Minimum Stock Availability Rules
+#### Minimum Stock Availability Rules
+The routing process for the retailer must filter locations based on Minimum Stock availability. Locations with 15 or more units of an item should be prioritized first.
 
-Focusing on overall inventory availability, the routing process must filter locations based on minimum stock availability. Locations with 15 or more units of an item should be prioritized first. If inventory is insufficient at these locations, criteria should adjust to include locations with 10 or more units, and then 5 or more units, expanding the search while still emphasizing locations with higher stock levels.
+If inventory is insufficient, the criteria need to be adjusted to include locations with 10 or more units, then 5 or more units, expanding the search while still focusing on locations with higher stock levels.
 
-#### Decreasing Stock Availability Condition to 0
+If no location has the minimum stock, any location with available inventory should be included to ensure that orders are fulfilled.
 
-This includes any location with available inventory, ensuring that orders are fulfilled even if no location has the minimum stock availability.
+If no single location can fully meet the order requirements, partial fulfillment should be allowed. This approach optimizes inventory usage and improves order completion rates by combining stock from multiple locations.
 
-### Partial Fulfillment
+#### Order Routing Priority
 
-**Allow Partial Fulfillment**: If no single location can fully meet the order requirements, partial fulfillment needs to be allowed. This approach optimizes inventory usage and improves order completion rates by combining stock from multiple locations.
+Expedited Orders should be prioritized before standard orders when routing orders. Furthermore, if there are orders that are rejected once from any fulfillment location due to inventory unavailability, these orders should be prioritized before regular orders that are being routed for the first time.
 
-## How to Set Up Order Routing for Retailer
+## Setting Up Order Routing for the Retailer
 
 ### Create Run
+We begin by creating a Regular Order Run. This run will manage all regular orders, excluding unfillable orders, which the retailer prefers to broker separately since the schedule of these run would be different. The regular run will consist of multiple routing rules, each configured based on different shipping methods and fulfillment priorities. The regular order runs are scheduled every 15 minutes for timely order processing and fulfillment.
 
-Start by creating a **Regular Order Run**. This run will manage all regular orders except unfillable orders, as the company wants all other orders brokered together at regular intervals.
+### Create Routing Rule
 
-### Create Order Routing
+#### 1. Standard Orders
+Within the Regular Order Run, set up an Order Routing Rule to define which orders will be routed in this batch based on queues, shipping methods, and priority. The orders are fetched based on the following configurations:
 
-Inside the Regular Order Run, create an order batch or routing. For example, one order batch could be an **Expedited Batch** to manage all expedited shipping orders, such as "next-day," "two-day," and "three-day." This batch ensures that orders using expedited shipping methods are routed according to their service-level agreements.
+#### Order Filters
+The retailer applies multiple filters to ensure proper order routing:
+- **Queues**: Orders are filtered from the Brokering Queue to broker all orders that will be fulfilled for the first time.
+- **Shipping Method Filter**: Only orders using Standard Shipping are included.
 
-### Order Filters
+#### Order Sort
+Orders are sorted by **Order Date**, ensuring that the oldest orders are fulfilled first.
 
-- **Queues**:
-  - **Brokering Queue**: For the regular standard batch, all orders are fetched from the brokering queue. This queue stores orders that are approved but not yet brokered, allowing for smooth processing in the initial brokering stage.
+### Create Inventory Rule
+For inventory management, the retailer sets up five inventory rules to ensure orders are routed to stores based on stock availability.
 
-- **Shipping Method**:
-  - **Standard Shipping**: Orders using next-day, two-day, and three-day shipping methods are filtered to retrieve only those orders that can be delivered within the expected timeline.
+#### 1st Inventory Rule
+- **Inventory Filter**: Orders will be routed to stores that have 15 or more units of inventory available for the ordered items.
+- **Inventory Sort**: Orders are sorted by **inventory balance**, ensuring stores with the highest available stock are prioritized.
+- **Action**: If this rule is not met, the order is sent to the next inventory rule.
 
-### Sorting Orders
+#### 2nd Inventory Rule
+- **Inventory Filter**: Stores must have at least 10 units of inventory available.
+- **Inventory Sort**: Orders are sorted based on **inventory balance**.
+- **Action**: Orders that do not meet this rule are sent to the next rule.
 
-Since Retailer is focused on timely order fulfillment, orders can be sorted based on **Shipping Methods**. This prioritizes orders with early fulfillment demands, such as next-day delivery orders being brokered first, followed by two-day and three-day delivery orders.
+#### 3rd Inventory Rule
+- **Inventory Filter**: Stores must have at least 5 units of inventory available.
+- **Inventory Sort**: Orders are sorted by **inventory balance**.
+- **Action**: If the stock requirement is still not met, the order moves to the next rule.
 
-### Creating Rules
+#### 4th Inventory Rule
+- **Inventory Filter**: No specific stock limit is required; any store with available inventory is considered.
+- **Inventory Sort**: Orders are sorted by **inventory balance**.
+- **Action**: Partial fulfillment is not allowed. If inventory is still unavailable, the order moves to the next rule.
 
-To prioritize fulfilling orders from well-stocked stores and maintain stability in inventory levels, the following three levels of safety stock rules can be applied:
+#### 5th Inventory Rule
+- **Inventory Filter**: No specific stock limit is required; any store with available inventory is considered.
+- **Inventory Sort**: Orders are sorted by **inventory balance**.
+- **Action**: Partial fulfillment is allowed so that available inventory can be allocated to the orders. If the orders remain unfulfilled, they can be sent to the `unfillable queue`.
 
-- **High Safety Stock**:
-  Apply the Brokering Safety Stock filter to prioritize stores with at least 15 units of inventory. Sort the stores based on their inventory balance, prioritizing those with the highest stock. Partial fulfillment is turned off. If no store meets these conditions, the order moves to the next rule.
+This system aligns with the retailer’s **Minimum Stock Availability** and **Order Fulfillment Priority** requirements by ensuring orders are routed based on stock availability and fulfillment efficiency.
 
-- **Medium Safety Stock**:
-  Apply the Brokering Safety Stock filter for stores with at least 10 units of inventory. Partial fulfillment is disabled, and the order proceeds to the next rule if inventory is still insufficient.
+#### 2. Expedited Orders
+The second routing rule handles all orders with expedited shipping options, including Next-Day, Two-Day, and Three-Day Delivery. The orders are fetched based on the following configurations:
 
-- **Low Safety Stock**:
-  Apply the Brokering Safety Stock filter for stores with at least 5 units of inventory. If sufficient inventory is not available, the order moves to the next rule.
+#### Order Filters
+The retailer applies multiple filters to ensure proper order routing:
+- **Queues**: Orders are filtered from the Brokering Queue to broker all orders for the first time.
+- **Shipping Method Filter**: Only orders using Next-Day, Two-Day, and Three-Day Shipping are included.
 
-- **No Brokering Safety Stock**:
-  Include any store with available inventory. Partial fulfillment is disabled.
+#### Order Sort
+Orders are sorted by **Shipping Method** (prioritizing Next-Day, Two-Day, and then Three-Day) and by **Order Date**.
 
-- **Partial Fulfillment**: 
-  In this final rule, no filter is applied, and partial fulfillment is enabled. Orders are fulfilled from multiple locations if necessary.
+> **Note**: The inventory rules for this order batch are the same as the rules for standard orders, focusing on maintaining inventory balance.
 
-### Activation
+#### 3. Rejected Standard Orders
+This routing rule manages **rejected standard orders** that were previously rejected due to stock unavailability. The orders are fetched based on the following configurations:
 
-Once the rules are defined, they can be activated individually. Activate the Regular Standard Batch within the run to ensure all standard orders are processed as per the defined configurations.
+#### Order Filter & Sort
+- **Order Filter**:
+  - **Queue Filter**: Orders are fetched from the Rejected Queue.
+  - **Shipping Method Filter**: Only orders using Standard Shipping are included.
+- **Order Sort**: Orders are sorted by **Order Date**, ensuring that orders rejected earlier are processed first for potential fulfillment.
 
-## Other Required Batches
+> **Note**: The inventory rules for this order batch are the same as the rules for standard orders, focusing on maintaining inventory balance.
 
-Since Retailer also processes orders requiring standard shipping and handles rejected orders, additional order batches are created inside the same Regular Order Run.
+#### 4. Rejected Expedited Orders
+This routing rule manages **rejected expedited orders**, including Next-Day, Two-Day, and Three-Day Shipping orders that were not fulfilled initially due to stock unavailability. The orders are fetched based on the following configurations:
 
-### Rejected Expedite Batch
+##### Order Filter & Sort
+- **Order Filter**:
+  - **Queue Filter**: Orders are fetched from the Rejected Queue.
+  - **Shipping Method Filter**: Only orders with Next-Day, Two-Day, and Three-Day Shipping are included.
+- **Order Sort**: Orders are sorted by **Shipping Method** (Next-Day first, followed by Two-Day, and then Three-Day) and by **Order Date** to ensure expedited orders are prioritized appropriately.
 
-For expedited orders rejected due to stock unavailability, reroute orders with the same inventory rules and logic as the regular expedited batch.
+> **Note**: The inventory rules for this order batch are the same as the rules for standard orders, focusing on maintaining inventory balance.
 
-### Rejected Standard Batch
+#### Routing Rule Sequence
 
-Standard orders that were rejected are rerouted from the Rejected Parking Queue with Standard Shipping Filter, brokered first for timely fulfillment.
+Since the client wants Rejected order routing first before the regular orders and wants to prioritize expedited orders, the routing Rules should be sequenced in the following manner:
 
-### Standard Batch
+1. Rejected Expedited Orders
+2. Rejected Standard Orders
+3. Expedited Orders
+4. Standard Orders
 
-Standard orders are filtered based on the shipping method, following the same inventory rules.
+### Create Second Runs
 
-### Batch Sequence
+Retailers need to create a separate run to handle orders when inventory is unavailable across all stores. This is created as a separate run since inventory replenishment can take time so checking for inventory in every 15 minutes is not required. Therefore, this run is scheduled to run in evey 6 hours and once stock is available, the orders are re-brokered.
 
-All order batches are arranged as follows:
-1. **Expedited Rejected**
-2. **Standard Rejected**
-3. **Expedited**
-4. **Standard**
+### Create Routing Rule
 
-{% embed url ="https://youtu.be/w1XtXVkNtFY" %} {% endembed %}
+#### 1. Unfillable Expedited Orders
+This routing rule manages **unfillable expedited orders**, including Next-Day, Two-Day, and Three-Day Shipping orders that were not allocated initially due to stock unavailability. The orders are fetched based on the following configurations:
 
-## Create Run for Unfillable Order
+- **Order Filter**:
+  - **Queue Filter**: Orders are fetched from the Unfillable Queue.
+  - **Shipping Method Filter**: Only orders with Next-Day, Two-Day, and Three-Day Shipping are included.
+- **Order Sort**: Orders are sorted by **Shipping Method** (Next-Day first, followed by Two-Day, and then Three-Day) and by **Order Date**.
 
-In addition to the Regular Order Run, a separate run manages orders placed in the Unfillable Queue. Two batches are created to handle standard and expedited unfillable orders.
+> **Note**: The inventory rules for this order batch are the same as the rules for standard orders, focusing on maintaining inventory balance.
 
-### Creating Order Batch for Unfillable Order
+#### 2. Unfillable Standard Orders
+This routing rule manages **unfillable standard orders** that were previously rejected due to stock unavailability. The orders are fetched based on the following configurations:
 
-Create the **Unfillable Expedited Batch** to reprocess orders that couldn’t be brokered due to insufficient inventory.
+- **Order Filter**:
+  - **Queue Filter**: Orders are fetched from the Unfillable Queue.
+  - **Shipping Method Filter**: Only orders using Standard Shipping are included.
+- **Order Sort**: Orders are sorted by **Order Date**, ensuring that orders rejected earlier are processed first for potential fulfillment.
 
-### Creating Rule
+> **Note**: The inventory rules for this order batch are the same as the rules for standard orders, focusing on maintaining inventory balance.
 
-Inventory rules are created similarly to the previous run.
+ #### Routing Rule Sequence
 
-### Activation
+Since the client wants to prioritize expedited orders, the routing Rules should be sequenced in the following manner:
 
-Activate rules within the **Unfillable Standard Batch** as part of the Unfillable Order Run.
+1. Unfillable Expedited Orders
+2. Unfillable Standard Orders
 
-### Other Batches Required
-
-Another batch, **Unfillable Expedite Batch**, is created for unfillable expedited orders.
-
-{% embed url ="https://youtu.be/grgaHczpmDg" %} {% endembed %}
 
 ### Activating Runs
 
-Activate both the Regular Order Run and the Unfillable Order Run.
+#### Step 1: Activate Inventory Rule
+Ensure all inventory rules are active. Move the order routing from "Draft" to "Active" to ensure it's live and processing orders.
+
+#### Step 2: Schedule the Routing Run
+Set a schedule for how frequently each routing run will execute. For regular orders, schedule the run every 15 minutes for timely order processing, while for unfillable orders, schedule the run every 6 hours.
 
 ## Conclusion
+This retailer utilizes HotWax Commerce’s advanced routing system to streamline order fulfillment. By leveraging **Brokering Safety Stock**, the retailer ensures orders are prioritized based on available inventory, optimizing fulfillment for both expedited (Next-Day, Two-Day, Three-Day) and standard shipping. Orders that cannot be fully or partially fulfilled are routed to a separate unfillable queue, with regular brokering runs every 15 minutes and unfillable runs every 6 hours, ensuring efficient handling and timely delivery across their retail network.
 
-Retailer utilizes HotWax Commerce’s advanced routing system to streamline order fulfillment. By employing the Brokering Safety Stock feature, the company ensures that orders are prioritized based on available inventory, optimizing fulfillment for both expedited and standard shipping. Orders that cannot be fulfilled are routed to a separate unfillable queue, with regular brokering runs every 15 minutes and unfillable runs every 6 hours.

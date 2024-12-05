@@ -108,6 +108,21 @@ HotWax Commerce facilitates the receiving of extra inventory to address this con
 
 At times, stores receive items that differ from the recorded shipment. This discrepancy could arise from mispicking at the warehouse or inadvertently shipping more items than intended. When stores unexpectedly receive these extra Items, they require a process to receive and record these additional items effectively.
 
+#### Here’s how to receive unexpected items:
+
+**Step 1:**
+
+Click the (+) icon located at the top right corner of the Shipment page under the Shipment Details section. This will open a box to add a product to the shipment.
+
+**Step 2:**
+
+Search for the product by its SKU or name. Once the product appears in the search menu, click the `Add to Shipment` button to include it in the shipment.
+
+**Step 3:**
+
+The product will then appear on the Shipment Details page. Enter the quantity of the unexpected item and proceed with the usual receiving process.
+
+
 {% embed url="https://youtu.be/UQ4XKINQeTE" %}
 Add Shipment Item
 {% endembed %}

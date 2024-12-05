@@ -9,15 +9,15 @@ description: >-
 
 ## Inventory Synchronization of Bundles from NetSuite to HotWax Commerce
 
-Integration with NetSuite simplifies the inventory synchronization of Bundles in HotWax Commerce. As NetSuite shares a daily morning feed of the inventory of products, it includes the inventory for bundles as well.
+Integration with NetSuite simplifies the inventory synchronization of bundles in HotWax Commerce. As NetSuite shares a daily morning feed of the inventory of products, it includes the inventory for bundles as well.
 
 **Automatic Inventory Management of bundle**
 
-NetSuite independently manages the Inventory of Bundles by considering the lowest common denominator among their components. For example: if a bundle comprises a belt and a wallet, where the belt's inventory is 7 and the wallet’s inventory is 10, the inventory of bundles aligns with the lowest available quantity, which becomes 7.
+NetSuite independently manages the inventory of bundles by considering the lowest common denominator among their components. For example: if a bundle comprises a belt and a wallet, where the belt's inventory is 7 and the wallet’s inventory is 10, the inventory of bundles aligns with the lowest available quantity, which becomes 7.
 
 **Multi-Location Inventory Handling**
 
-NetSuite operates similarly to HotWax Commerce in calculating the Inventory of Bundles across multiple locations, considering the availability of components at each location. If all bundle components are available at a single location, NetSuite considers the Inventory of Bundles for that specific location. For instance, imagine a bundle consisting of a belt and wallet distributed across various locations:
+NetSuite operates similarly to HotWax Commerce in calculating the inventory of bundles across multiple locations, considering the availability of components at each location. If all bundle components are available at a single location, NetSuite considers the inventory of bundles for that specific location. For instance, imagine a bundle consisting of a belt and wallet distributed across various locations:
 
 * Times Square Store: 5 Belts
 * Brooklyn Store: 10 Wallets

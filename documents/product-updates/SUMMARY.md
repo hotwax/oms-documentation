@@ -10,6 +10,13 @@
 
 ## 2024
 
+* [Oct'24](2024/oct24/README.md)
+  * [Manage Login Permissions for OMS and Applications](2024/oct24/manage-login-permissions-for-oms-and-applications.md)
+  * [Improved Inventory Sync for Locations on Shopify](2024/oct24/improved-inventory-sync-for-locations-on-shopify.md)
+  * [Schedule Order Routing Runs with Custom Cron Expressions](2024/oct24/schedule-order-routing-runs-with-custom-cron-expressions.md)
+  * [New Filters to Improve Order Routing Efficiency](2024/oct24/new-filters-to-improve-order-routing-efficiency.md)
+  * [Configure BOPIS Settings at the Product Store Level](2024/oct24/configure-bopis-settings-at-the-product-store-level.md)
+  * [Generate Shipping Labels for Multiple Packages in One Shipment](2024/oct24/generate-shipping-labels-for-multiple-packages-in-one-shipment.md)
 * [Sep'23](2024/sep23/README.md)
   * [Update Customers with Post-Purchase Shipment Status](2024/sep23/update-customers-with-post-purchase-shipment-status.md)
   * [Bulk Import Cycle Counts](2024/sep23/bulk-import-cycle-counts.md)

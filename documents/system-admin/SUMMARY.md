@@ -42,6 +42,15 @@
   * [Manage Groups](administration/facilities/manage-groups.md)
 * [Delete customers](delete-customers.md)
 * [SOLR Indexing](search-admin.md)
+* [Data manager](data-manager/README.md)
+  * [Configurations](data-manager/configurations.md)
+  * [Imports](data-manager/imports.md)
+  * [Troubleshooting](administration/data-manager/troubleshooting/README.md)
+    * [Data not imported](data-manager/dataNotImportedInOMS.md)
+    * [SFTP errors](data-manager/data-import-errors.md)
+    * [Manual Data import](data-manager/manual-data-import.md)
+    * [Shopify MDM](data-manager/shopify-mdm.md)
+    * [Schedule error mail](data-manager/schedule-error-mail.md)
 
 ## Product Store
 
@@ -54,6 +63,7 @@
 * [Load Facilities](initial-setup/LoadFacilities.md)
 * [Bulk Import Employees](initial-setup/bulk-import-employee.md)
 * [Bulk Import BOPIS Orders](initial-setup/bulk-import-bopis-orders.md)
+* [SFTP Configuration](initial-setup/configure-sftp.md)
 
 ## Inventory
 
@@ -65,6 +75,6 @@
   * [Create Carrier](fulfillment/shipping-methods/add-carrier.md)
   * [Create Shipping Boxes](fulfillment/shipping-box.md)
   * [Shipping gateways](fulfillment/ShippingGateways.md)
-  * [Map Career Shipment Methods](fulfillment/carrier-and-shipment-methods.md)
+  * [Map Carrier Shipment Methods](fulfillment/carrier-and-shipment-methods.md)
 * [How to map shipping method in HotWax Commerce to Netsuite](fulfillment/add-shipping-method.md)
 * [Configure Rate Shopping](fulfillment/configure-rate-shopping.md)

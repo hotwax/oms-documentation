@@ -5,7 +5,7 @@ description: >-
   creation using the facilities CSV.
 ---
 
-# Load facility data
+# Load Facilities
 
 To establish facilities, it is necessary to create both the facilities and their internal locations within OMS. Typically, upon creating facilities, the associated locations are generated automatically. In cases where they are not generated, manual addition of location data is required. For an efficient bulk creation of facilities and their corresponding locations during the initial setup, it is advisable to utilize the facilities CSV.
 
@@ -51,3 +51,5 @@ To ensure the accuracy of facility information and locations, follow these steps
    * This process verifies both the facilities and their corresponding locations.
 
 By following these steps, you can ensure that the facility information and associated locations in the OMS align with the expected data format.
+
+<figure><img src="../.gitbook/assets/export facility.png" alt=""><figcaption></figcaption></figure>

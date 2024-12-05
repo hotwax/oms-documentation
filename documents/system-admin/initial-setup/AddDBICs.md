@@ -4,7 +4,7 @@ description: >-
   different countries and ensure a positive user experience.
 ---
 
-# Add DBICs
+# Add DBIC
 
 ## Overview
 
@@ -39,3 +39,6 @@ Find the DBIC section on the View Company page.
 3. Click on `Add function` again.
 
 By following these steps, you can add DBIC countries to your OMS instance, ensuring that the application caters specifically to the countries relevant to your business operations.
+
+{% embed url="https://youtu.be/Oh_zosIaeek" %}
+

@@ -1,30 +1,31 @@
 ---
 description: >-
-  Discover how HotWax Commerce offers seamless inventory management by
-  integrating with various systems.
+  Discover how HotWax Commerce calculates ATP inventory.
 ---
 
 # Inventory
 
-HotWax Commerce provides a unified view of inventory by seamlessly connecting with various technology systems used by retailers, including Enterprise Resource Planning (ERP), Point of Sale (POS), and Warehouse Management Systems (WMS). HotWax Commerce ensures that inventory updates from all these systems are synchronized to support various business scenarios.
+HotWax Commerce provides a unified view of inventory by integrating with various systems present in a retailer's teck stack, including Enterprise Resource Planning (ERP), Point of Sale (POS), and Warehouse Management Systems (WMS). HotWax Commerce ensures that inventory updates from all these systems are synchronized to support various business scenarios.
 
-**In-store sales:** It is necessary to reduce the inventory counts of products in HotWax Commerce during in-store sales.
+**In-store sales:** During in-store sales, inventory counts of products is automatically reduced in HotWax Commerce.
+ 
+**In-store receiving:** When stores receive new inventory through Purchase Orders, Transfer Orders, or Returns, HotWax Commerce increases the inventory counts accordingly, maintaining an accurate stock record.
 
-**In-store receiving:** Inventory counts of products must be increased in HotWax Commerce when stores receive products through purchase orders, transfer orders, or returns.
+**Inventory variances:** Missing or defective items can lead to inventory discrepancies. Any adjustments, such as reporting lost or defective inventory or reclaiming found items, should be updated in HotWax Commerce. Cycle Counts also help identify variances, which are also automatically synchronized to HotWax Commerce, ensuring accurate inventory levels.
 
-**Inventory variances:** If there is missing or defective inventory, it should be reported to HotWax Commerce. Similarly, if lost inventory is found, new inventory should be reported to HotWax Commerce.
+**Warehouse receiving:** As warehouses or fulfillment centers receive new inventory from Purchase Orders, Transfer Orders, or Returns, timely updates are made in HotWax Commerce to reflect these additions in the overall inventory.
 
-**Warehouse receiving:** HotWax Commerce requires timely notification of new inventory when warehouses or fulfillment centers receive purchase orders or returns.
-
-HotWax Commerce determines the "Online Available to Promise (ATP)" or the amount of inventory that can be sold and then sends it to Shopify. This makes HotWax Commerce the ultimate authority on inventory availability.
+After consolidating all relevant inventory data, HotWax Commerce calculates the Online Available to Promise (ATP), which reflects the quantity available for online sales. This ATP value is then synced to Shopify as the definitive inventory level. Let’s examine how this calculation works.
 
 **How Does Hotwax Commerce Calculate The “Online ATP” Before Pushing It To Shopify?**
 
-HotWax Commerce syncs the inventory levels of products available on both HotWax Commerce and Shopify. The product ID from Shopify is stored in HotWax Commerce and serves as a unique identifier to match the products in both systems. HotWax Commerce considers various factors, such as safety stock, threshold, reserved quantity (inventory allocated to sales orders but not fulfilled), orders in the brokering queue (orders that are captured but inventory is not allocated), and excluded facilities when calculating ATP.
+To determine the "Online Available to Promise" (ATP) for Shopify, HotWax Commerce calculates the available inventory by accounting for several key factors beyond just the total stock. These include, Safety Stock, Threshold, Reserved Quantity (inventory allocated to sales orders but not fulfilled), orders in the Brokering Queue (orders that are captured but inventory is not allocated), and Excluded Facilities when calculating `online ATP`.
+
+Once all these factors are considered, HotWax Commerce calculates the accurate `Online ATP` and syncs it to Shopify. The product ID from Shopify is stored in HotWax Commerce and serves as a unique identifier to match the products in both systems.
 
 Let’s take a look at an example:
 
-The product "blue shirt" from Brand ABC has been assigned plate number 100 QOH, and it has already received orders for 10 of them, and inventory is allocated for 5 sales orders. The ATP can be calculated using the following formula.
+The product "blue shirt" from Brand NotNaked has been assigned plate number 100 QOH, and it has already received orders for 10 of them, and inventory is allocated for 5 sales orders. The ATP can be calculated using the following formula.
 
 Online ATP = QOH - (Reserved quantities + Safety stock + Threshold + Orders in brokering queue + Excluded facilities’ ATP)
 
@@ -38,4 +39,6 @@ $$
 Online ATP = 100 - (5+5+5+5+5) = 100 - (25) = 75
 $$
 
-HotWax Commerce will now push 75 units to Shopify as sellable inventory for online orders.
+HotWax Commerce will push 75 units as the sellable `Online ATP` to Shopify, ensuring accurate inventory representation for online sales.
+
+The precise `Online ATP` calculation prevents both overselling and underselling, making HotWax Commerce the single source of truth for inventory availability across all channels.

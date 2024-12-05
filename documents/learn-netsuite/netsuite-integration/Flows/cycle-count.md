@@ -1,14 +1,18 @@
 ---
 description: >-
-  Learn how HotWax Commerce's Cycle Count App enhances inventory accuracy by
-  seamlessly synchronizing with NetSuite for consistent records.
+  Learn how HotWax Commerce's Cycle Count App synchronizes the latest inventory
+  counts to NetSuite for consistent records.
 ---
 
 # Cycle Count
 
-Managing inventory accuracy in a retail business is a perpetual challenge. Store managers often encounter discrepancies between the recorded inventory in their systems and the actual physical stock on hand. To address these discrepancies, retailers periodically conduct inventory cycle counts. An inventory cycle count is a methodical approach that involves periodically counting a specific subset of items. Unlike a full physical inventory count, which requires tallying every item at once, cycle counts distribute the counting process over time, improving efficiency.
+Managing inventory accuracy in a retail business is a perpetual challenge. Retailers often encounter discrepancies between their systemic inventory and the actual physical stock on hand. To address these inventory discrepancies, operations teams periodically conduct inventory cycle counts at stores.
 
-To support this process, HotWax Commerce provides the Cycle Count App. The app enables store associates to perform scheduled periodic cycle counts while also allowing them to record inventory variances identified outside of the cycle counts. Associates can specify reasons such as lost, stolen, damaged, or found for discrepancies identified. Synchronizing this crucial data from HotWax Commerce to NetSuite is essential to ensure that all systems within the retailer’s technology stack have accurate and up-to-date inventory information.
+An inventory cycle count involves periodically counting a specific subset of items. Unlike a full physical inventory count, which requires tallying every item at once, cycle counts distribute the counting process over time, improving efficiency.
+
+HotWax Commerce simplifies the cycle count process with its directed Cycle Count App, which enables operations teams to assign and schedule counts across multiple stores. The app notifies store staff when a count is assigned to them and lets them scan products to complete the cycle count efficiently. Once finished, the store can submit its count for review, allowing operations teams to review discrepancies and, if necessary, request a recount.
+
+By conducting these periodic checks, retailers can resolve discrepancies in real-time, maintaining alignment between the systemic inventory and what is physically present in stores.
 
 ### Key Objectives
 
@@ -20,17 +24,17 @@ To support this process, HotWax Commerce provides the Cycle Count App. The app e
 
 ## Conduct Periodic Inventory Cycle Counts in the Store
 
-The inventory count process initiates within the store, where store associates leverage the Cycle Count App to conduct the cycle count. Upon completion of the cycle count, associates record the new inventory count into the app. Subsequently, the app automatically identifies the difference between the actual physical count and the corresponding systemic inventory levels, facilitating accurate and efficient inventory reconciliation.
+The Cycle Count App's interface adapts for different user roles. Operations teams assign cycle counts to specific stores through the app. Once assigned, store associates leverage the app to conduct the cycle count, recording and submitting their counting results for review by the operations team.
 
-<figure><img src="../../.gitbook/assets/47.png" alt=""><figcaption><p>Cycle Count Inventory Variance Synced from HotWax Commerce to NetSuite</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/cycleCountvariance.png" alt=""><figcaption><p>Cycle Count Inventory Variance Synced from HotWax Commerce to NetSuite</p></figcaption></figure>
 
-### Pushing Cycle Count Inventory Variances to HotWax Commerce
+### Automatically Update Inventory Levels in HotWax Commerce
 
-Cycle count inventory variances recorded by store associates in the Cycle Counting App require approval from the head office before they affect the inventory counts in HotWax Commerce. These recorded inventory variances are automatically reflected in HotWax Commerce OMS for approval.
+The Cycle Count App streamlines inventory reconciliation by automatically displaying submitted cycle count results along with the variances between counted and systemic invetory levels. This allows operations teams to review variances with clarity and accuracy.
 
-Initially, cycle count inventory variances are in the "Created" status. When store managers review and approve them, the inventory variance record is marked as "Completed," and inventory counts in HotWax Commerce are automatically adjusted accordingly. However, it's crucial to note that not all recorded variances may receive approval. Some variances may be rejected.
+Upon approval, HotWax Commerce automatically updates the inventory count of the products. Inventory levels for counts that are either rejected or flagged for recount remain unchanged in HotWax Commerce.
 
-In the event where a store associate has requested a cycle count for multiple products, if only some of the inventory variances are approved while others are rejected, HotWax Commerce will adjust the inventory count only for the products for which the inventory variance has been approved and is now in the "Completed" status. The rejected variances will have their status updated from "Created" to "Rejected."
+Suppose a store associate has submitted the cycle count results for multiple products and only some of the inventory variances are approved while others are rejected. In that event, HotWax Commerce will adjust the inventory count only for the products for which the inventory variance has been approved and is now in the "Completed" status. The rejected variances will have their status updated from "Created" to "Rejected."
 
 ### Export Cycle Count Inventory Variances from HotWax Commerce
 
@@ -93,7 +97,7 @@ To address these unexpected inventory changes, store managers can directly recor
 Unlike cycle counting, where an inventory count is conducted periodically, this process involves store managers directly recording the variance amount without physically counting the entire store inventory.
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/48.png" alt=""><figcaption><p>Inventory Variance Synced from HotWax Commerce to NetSuite</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/inventoryVariance.png" alt=""><figcaption><p>Inventory Variance Synced from HotWax Commerce to NetSuite</p></figcaption></figure>
 
 ### Pushing Inventory Variance to HotWax Commerce
 
@@ -149,6 +153,7 @@ Import Inventory Variance from SFTP:
 ```
 HC_SC_ImportInventoryAdjustment.js
 ```
+
 {% file src="../../.gitbook/assets/Inventory Item Variances Sample Feed.csv" %}
 
 ## Benefits:

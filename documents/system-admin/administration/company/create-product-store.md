@@ -6,6 +6,10 @@ description: >-
 
 # Create Product Store
 
+In HotWax Commerce, managing multiple product stores is valuable for retailers with diverse brands. Each product store can be tailored to represent a specific retail brand, enabling efficient and customized management. This feature streamlines operations to meet the unique needs of each retail brand.
+
+When retailers deploy HotWax Commerce, a default product store is automatically created. However, if a retailer has multiple brands, additional product stores need to be created.
+
 ## Step 1: Setup basic profile
 
 To create a product store in the HotWax Order Management System, follow these steps:
@@ -36,3 +40,6 @@ Now, you'll set up additional configurations for your product store:
 6. After configuring your product store, click on `Setup Product Store` to finalize the setup.
 
 Product store is now created and ready to use. For more details on managing configurations related to the product store, refer to the documentation.
+
+{% embed url="https://youtu.be/IjDndeFdZj8" %}
+

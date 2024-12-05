@@ -4,7 +4,7 @@ description: >-
   streamline workflows seamlessly.
 ---
 
-# Bulk scheduling
+# Bulk Scheduling
 
 ## Bulk edit page
 
@@ -20,7 +20,7 @@ Easily search and select the jobs you want to execute or configure. You can also
 
 Conveniently configure and schedule all selected jobs simultaneously to streamline your workflow.
 
-<figure><img src="../../.gitbook/assets/kkkk.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Schedule Jobs in Bulk.jpg" alt=""><figcaption></figcaption></figure>
 
 ### **Configurations**
 
@@ -39,8 +39,6 @@ Search Jobs and use the Add function to select jobs to be scheduled.
 **Scheduler**
 
 Configure and schedule all selected jobs simultaneously.
-
-
 
 {% hint style="info" %}
 Scheduled run time and frequency, set on bulk scheduler, will be applied to all the selected jobs.

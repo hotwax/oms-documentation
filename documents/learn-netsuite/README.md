@@ -19,4 +19,4 @@ In the grand scheme of retail operations, NetSuite ERP serves as the backbone fo
 
 In this integration document, we will explore how NetSuite ERP and HotWax Commerce OMS integrate to create a seamless omnichannel retailing experience. We will delve into the integration methodologies in detail, demonstrating how these two systems come together to meet the demands of modern consumers and deliver exceptional shopping experiences across all channels.
 
-<figure><img src=".gitbook/assets/image.webp" alt=""><figcaption><p>Workflow between Shopify eCommerce, HotWax Commerce OMS, NetSuite ERP &#x26; Loop Returns</p></figcaption></figure>
+<figure><img src=".gitbook/assets/dataSync.webp" alt=""><figcaption><p>Workflow between Shopify eCommerce, HotWax Commerce OMS, NetSuite ERP &#x26; Loop Returns</p></figcaption></figure>

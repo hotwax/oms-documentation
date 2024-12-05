@@ -24,7 +24,7 @@ To download all open sales orders from a specific period in HotWax Commerce, use
 7. Access the Pipeline, specifically the Pending jobs section, to confirm that the job is scheduled as per the selected time.
 8. Wait until the job is completed.
 
-Once the job finishes, proceed to the Find Order page and verify that all products have been successfully imported into the system.
+Once the job finishes, proceed to the Find Order page and verify that all orders have been successfully imported into the system.
 
 ## Reconcile Order Sync
 

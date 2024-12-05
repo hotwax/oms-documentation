@@ -142,11 +142,11 @@ Following this approach, store associates at the destination store can efficient
 
 {% tabs %}
 {% tab title="Transfer Order Fields in NetSuite" %}
-<figure><img src="../../../.gitbook/assets/42.png" alt=""><figcaption><p>Transfer Order Fields Mapping in NetSuite</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/transferOrderNS.png" alt=""><figcaption><p>Transfer Order Fields Mapping in NetSuite</p></figcaption></figure>
 {% endtab %}
 
 {% tab title="Transfer Order Fields in HotWax Commerce" %}
-<figure><img src="../../../.gitbook/assets/43.png" alt=""><figcaption><p>Transfer Order Fields Mapping in HotWax Commerce</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/salesOrderHC.png" alt=""><figcaption><p>Transfer Order Fields Mapping in HotWax Commerce</p></figcaption></figure>
 {% endtab %}
 {% endtabs %}
 
@@ -158,11 +158,11 @@ Following this approach, store associates at the destination store can efficient
 
 {% tabs %}
 {% tab title="Transfer Order Fields in NetSuite" %}
-<figure><img src="../../../.gitbook/assets/45.png" alt=""><figcaption><p>Fulfilled Transfer Order Fields Mapping in NetSuite</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/itemFulfillment.png" alt=""><figcaption><p>Fulfilled Transfer Order Fields Mapping in NetSuite</p></figcaption></figure>
 {% endtab %}
 
 {% tab title="Transfer Order Fields in HotWax Commerce" %}
-<figure><img src="../../../.gitbook/assets/46.png" alt=""><figcaption><p>Inbound Shipment Fields Mapping in HotWax Commerce "Inventory Receiving App"</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/shipmentReceiving.png" alt=""><figcaption><p>Inbound Shipment Fields Mapping in HotWax Commerce "Inventory Receiving App"</p></figcaption></figure>
 {% endtab %}
 {% endtabs %}
 
@@ -194,6 +194,6 @@ In NetSuite, a scheduled SuiteScript reads this JSON file containing item receip
 
 </details>
 
-{% file src="../../../.gitbook/assets/Transfer Order Fulfilled Items Feed.txt" %}
+{% file src="../../../.gitbook/assets/Transfer Order Fulfilled Items Feed (1).txt" %}
 
-{% file src="../../../.gitbook/assets/Transfer Order Receipt Feed.txt" %}
+{% file src="../../../.gitbook/assets/Transfer Order Receipt Feed (1).txt" %}

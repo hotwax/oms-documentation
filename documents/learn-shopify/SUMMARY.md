@@ -49,15 +49,14 @@
 * [Multiple Store Setup](integration/multiple-store-setup.md)
 * [Required Permissions from Shopify](integration/shopify-permissions.md)
 * [Enable BOPIS/Pre-order on Shopify](shopify-integration/ShopifyIntegration/bopis-preorder-scripts.md)
-* [Data Mappings](shopify-integration/ShopifyIntegration/SetupMappings.md)
 * [Integrations](shopify-integration/ShopifyIntegration/integration-mapping.md)
   * [Locations](shopify-integration/ShopifyIntegration/MapLocations.md)
   * [Shipping Method](shopify-integration/ShopifyIntegration/shipping-method.md)
   * [Sales channel](shopify-integration/ShopifyIntegration/sales-channel-mapping.md)
   * [Payment Method](shopify-integration/ShopifyIntegration/payment-method-type.md)
   * [Product Type](shopify-integration/ShopifyIntegration/product-type.md)
-* [Troubleshooting](setup-shopify/troubleshooting/README.md)
-  * [Facility Mapping Discrepancy](setup-shopify/troubleshooting/facility-mapping-discrepancy.md)
+* Troubleshooting
+  * [Facility Mapping Discrepancy](shopify-setup/troubleshooting/facility-mapping-discrepancy.md)
 
 ## Synchronization Flows
 

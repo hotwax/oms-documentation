@@ -1,6 +1,6 @@
 # Store to Warehouse
 
-Stores wishing to return excess or unsold inventory to the warehouse collaborate with the warehouse manager to generate a transfer order. This facilitates the transfer of inventory from the store location back to the warehouse.
+Store managers can return excess or unsold inventory from stores to the warehouse with store to warehouse transfer orders.
 
 Now, let’s look at how store to warehouse transfer orders are processed:
 

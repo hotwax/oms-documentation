@@ -11,9 +11,9 @@
   * [N/File Module](netsuite-integration/IntegrationTools/SuiteScript/N.fileModule.md)
 * [Saved Search](netsuite-integration/IntegrationTools/SavedSearch/README.md)
 * [Integration Methodologies](netsuite-integration/IntegrationMethodologies/README.md)
- * [NetSuite](netsuite-integration/IntegrationMethodologies/NetSuite.md)
- * [HotWax](netsuite-integration/IntegrationMethodologies/HotWax.md)
- 
+* [NetSuite](netsuite-integration/IntegrationMethodologies/NetSuite.md)
+* [HotWax](netsuite-integration/IntegrationMethodologies/HotWax.md)
+
 ## Integration Flows
 
 * [Inventory](netsuite-integration/Flows/inventory.md)
@@ -45,7 +45,7 @@
   * [Install SDF](netsuite-deployment/sdfBundle/installSDF.md)
   * [Setup SFTP](netsuite-deployment/sdfBundle/setupSFTP.md)
   * [Date Time Format](netsuite-deployment/sdfBundle/verifyDateTimeFormat.md)
-* Prerequisites
+* [Prerequisites](netsuite-deployment/prerequisites/README.md)
   * [Install NetSuite Jobs](netsuite-deployment/prerequisiteSyncs/installNetsuiteReader.md)
   * [Product Store Settings](netsuite-deployment/prerequisiteSyncs/productStoreSettings.md)
   * [SFTP Locations](netsuite-deployment/prerequisiteSyncs/sftpLocations.md)

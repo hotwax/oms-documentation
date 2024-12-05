@@ -1,8 +1,8 @@
 # Schedule Restock
 
-Retailers usually plan new product launches and need these products to be available for sale at precise times. For instance, if a retailer plans to start selling a new product at 10 AM on August 31st, they need the inventory to be synced exactly at that time. Previously, this required manual intervention, which was prone to errors. Manual management of inventory synchronization could lead to delays or mistakes, causing products to not be available for sale as planned, resulting in missed sales opportunities and customer dissatisfaction.
+Retailers usually plan new product launches and need these products to be available for sale in future dates at precise times. For instance, if a retailer plans to start selling a new product at 10 AM after one month, they need the inventory to be synced exactly at that time. Previously, this required manual intervention, which was prone to errors. Manual management of inventory synchronization could lead to delays or mistakes, causing products to not be available for sale as planned, resulting in missed sales opportunities and customer dissatisfaction.
 
-To address this challenge, HotWax Commerce now offers a scheduled inventory restocking feature in the `Import` App. Retailers can upload a CSV file containing the products they want to restock and specify the facility and product store for which the inventory needs to be updated. Crucially, at the time of inventory restocking, the `update inventory` service also runs in HotWax Commerce to ensure that inventory is not only increased in HotWax Commerce but also synced with Shopify.
+To address this challenge, HotWax Commerce offers a scheduled inventory restocking feature in the `Import` App. Retailers can upload a CSV file containing the products they want to restock and specify the facility and product store for which the inventory needs to be updated. Crucially, during inventory restocking, the `update inventory` service also runs in HotWax Commerce to ensure that inventory is increased in HotWax Commerce but also synced with Shopify.
 
 ### Steps to Schedule Restocking
 
@@ -21,7 +21,7 @@ To address this challenge, HotWax Commerce now offers a scheduled inventory rest
 **Map CSV Fields**
 - Map CSV file fields with corresponding HotWax Commerce fields.
 
-The following fields need to be mapped and filled in while scheduling restock:
+The following fields need to be mapped and filled in while scheduling restocks:
 
 | **Field**            | **Description**                                                                 |
 |----------------------|---------------------------------------------------------------------------------|

@@ -2,7 +2,7 @@
 
 HotWax Commerce is a cloud-based Omnichannel Order Management System that provides retailers with the best return on their inventory by facilitating omnichannel solutions such as Same-Day Buy Online Pick-Up In Store (BOPIS), Buy Online Return In Store, Ship From Store, and Pre-Orders to increase conversion rates and profitability. Here’s how HotWax Commerce fits into your tech ecosystem:
 
-<figure><img src=".gitbook/assets/HotWax Commerce.png" alt=""><figcaption><p>HotWax Commerce in your tech stack</p></figcaption></figure>
+<figure><img src=".gitbook/assets/HotWaxCommerce.png" alt=""><figcaption><p>HotWax Commerce in your tech stack</p></figcaption></figure>
 
 HotWax Commerce integrates with multiple systems present in your tech stack, like eCommerce, ERP, WMS, and POS, creates a single sellable inventory count, syncs inventory in real time across sales channels, and efficiently routes online orders to the best fulfillment locations.
 
@@ -12,7 +12,7 @@ Order and inventory management are at the heart of omnichannel retailing. Let’
 
 #### Source of Orders and Returns
 
-<figure><img src=".gitbook/assets/Orders and Returns.png" alt=""><figcaption><p>Downloading orders and returns</p></figcaption></figure>
+<figure><img src=".gitbook/assets/OrdersandReturns.png" alt=""><figcaption><p>Downloading orders and returns</p></figcaption></figure>
 
 HotWax Commerce downloads orders and returns from sales channels like eCommerce and POS.
 
@@ -20,7 +20,7 @@ HotWax Commerce downloads orders and returns from sales channels like eCommerce 
 
 HotWax Commerce manages key processes such as downloading online orders, routing them to optimal fulfillment locations, and ensuring timely fulfillment.
 
-<figure><img src=".gitbook/assets/HotWax Fulfillment.png" alt=""><figcaption><p>Order fulfillment</p></figcaption></figure>
+<figure><img src=".gitbook/assets/HotWaxFulfillment.png" alt=""><figcaption><p>Order fulfillment</p></figcaption></figure>
 
 HotWax Commerce handles various types of eCommerce orders, including standard orders, BOPIS (Buy Online, Pick Up In Store) orders, Pre-Orders, and Backorders. Here’s a brief explanation of each type:
 
@@ -51,7 +51,7 @@ Learn more about the [return lifecycle in HotWax Commerce](https://docs.hotwax.c
 
 HotWax Commerce becomes the ultimate authority on inventory availability and prevents overselling and underselling on eCommerce platforms. Let’s see how:
 
-<figure><img src=".gitbook/assets/HotWax Inventory.png" alt=""><figcaption><p>Inventory management</p></figcaption></figure>
+<figure><img src=".gitbook/assets/HotWaxInventory.png" alt=""><figcaption><p>Inventory management</p></figcaption></figure>
 
 The inventory count of a product is regularly updated due to various factors such as customer purchases made both in-store and online, as well as the receipt of new inventory. These transactions are recorded across different systems.
 

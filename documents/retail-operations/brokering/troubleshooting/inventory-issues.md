@@ -32,6 +32,3 @@ Retailers sometimes prefer not to split orders to minimize shipping costs. If on
 4. Turn the `partial allocation` toggle on if you want to enable order splitting.
 5. Save the `inventory rule` configuration.
 
-
-
-<figure><img src="../../.gitbook/assets/Inventory Unavailability 1.png" alt="" width="461"><figcaption></figcaption></figure>

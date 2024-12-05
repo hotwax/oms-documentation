@@ -1,16 +1,15 @@
 ---
 description: >-
-  This guide outlines how to efficiently manage carriers and shipment methods in 
-  HotWax Commerce, covering tasks such as creating carriers, 
-  linking shipment methods, and enabling methods for brands.
+  This guide outlines how to efficiently manage carriers and shipment methods
+  in  HotWax Commerce, covering tasks such as creating carriers,  linking
+  shipment methods, and enabling methods for brands.
 ---
 
-# Carrier and Shipment Methods
+# Map Carrier Shipment Methods
 
 In HotWax Commerce, carriers and shipment methods are used to define the delivery preference linked to an order.
 
 1. **Carriers**: Carriers represent the shipping companies or services responsible for physically transporting the shipments like FedEx or UPS.
-
 2. **Shipment Methods**: Shipment methods, on the other hand, represent the specific methods used for shipping goods, such as ground shipping, express shipping or standard delivery.
 
 Carriers typically offer multiple shipment methods to customers for delivering packages. For example, a carrier like FedEx may offer ground shipping, overnight delivery, and international shipping as different shipment methods. In HotWax Commerce, these shipment methods are associated with a carrier, allowing businesses to configure and manage various shipping options offered by each carrier.
@@ -26,6 +25,7 @@ To manage carriers and shipment methods in HotWax Commerce, navigate to the "Car
 Hint: This page is permission-driven. Make sure that you have (permissionId) added to your user before trying to open this page.
 
 ### Carriers
+
 To begin managing carriers and shipment methods, you'll first need to select a carrier to manage.
 
 **Carrier integrations**
@@ -50,8 +50,7 @@ You can also focus your view to just see methods set up for a carrier by enablin
 
 When configuring a shipment method with a carrier, there are two optional attributes that can be added.
 
-**Delivery Days:** Tells the OMS routing engine how fast this method is expected to be delivered by this carrier. During routing, if orders are prioritized by shipping method, the routing engine will attempt to allocate orders with lower delivery days first.
-**Carrier Code:** HotWax Commerce will use the carrier code to communicate the method for which to generate a label when integrated using APIs. This code will be provided by the carrier. If integrating with NetSuite for fulfillment, this code is mapped to the internal ID of the method setup in NetSuite and is used when syncing orders.
+**Delivery Days:** Tells the OMS routing engine how fast this method is expected to be delivered by this carrier. During routing, if orders are prioritized by shipping method, the routing engine will attempt to allocate orders with lower delivery days first. **Carrier Code:** HotWax Commerce will use the carrier code to communicate the method for which to generate a label when integrated using APIs. This code will be provided by the carrier. If integrating with NetSuite for fulfillment, this code is mapped to the internal ID of the method setup in NetSuite and is used when syncing orders.
 
 #### Create shipment method
 
@@ -81,7 +80,9 @@ To add a method to a Product Store, select the checkbox on that method. There ar
 
 Hint: This setting is effective on orders that are processed after it's configured.
 
-
 ## Facilities
 
 The facilities section of the carrier settings allows retailers to manage which facilities are allowed to generate labels for this carrier. Select the checkbox on each facility that should be allowed to generate labels for this carrier.
+
+{% embed url="https://youtu.be/rLighBiqP1U" %}
+
