@@ -2,7 +2,7 @@
 
 ## Guidlines
 
-* [Internal Usage](<README (2).md>)
+* [Internal Usage](README.md)
 * [Documentation Guideline](sop/documentation-guideline.md)
 * [ChatGPT Prompts](sop/chatgpt-prompts.md)
 * [GitHub Guideline](guidelines/github-guideline.md)

@@ -4,7 +4,7 @@ description: >-
   instance of HotWax Commerce.
 ---
 
-# How to configure HotWax Commerce when deploying new instance
+# HotWax Commerce Deployment
 
 This document offers a detailed guide for deploying HotWax Commerce tailored to meet the specific requirements of enterprise retailers
 
@@ -32,8 +32,6 @@ When you deploy HotWax Commerce, one default product store is already created, w
 
 Facilities are physical locations such as a warehouse, distribution center, or store where inventory is stored, managed, and processed. To establish facilities, it is necessary to create both the facilities and their internal locations within OMS. Typically, upon creating facilities, the associated locations are generated automatically. In cases where they are not generated, manual addition of location data is required. For an efficient bulk creation of facilities and their corresponding locations during the initial setup, it is advisable to utilize the [facilities CSV](https://docs.hotwax.co/documents/v/learn-shopify/setup-shopify/integration-mapping/maplocations), or you can [create facilities](https://docs.hotwax.co/documents/v/system-admins/administration/facilities/add-new-facilities) with our `Facilities` application.
 
-
-
 {% embed url="https://youtu.be/EIilDUEtTM8" %}
 
 ## Create Facility Groups
@@ -42,11 +40,11 @@ In Hotwax commerce facility groups are used to define the scope and functionalit
 
 ## Configure System Property Data
 
-HotWax Commerce has default settings tailored for US retailers, For non-US retailers adjustments are needed to align with their business location. The System Property data encompasses a range of configurations that influence the fundamental settings governing how your instance operates. Ensuring accuracy in these configurations is essential. Read our document on [System Property Data]() to learn how you can configure system property data such as currency, country, and Shipment Weight Units.
+HotWax Commerce has default settings tailored for US retailers, For non-US retailers adjustments are needed to align with their business location. The System Property data encompasses a range of configurations that influence the fundamental settings governing how your instance operates. Ensuring accuracy in these configurations is essential. Read our document on [System Property Data](deployment.md) to learn how you can configure system property data such as currency, country, and Shipment Weight Units.
 
 ## Configure SFTP
 
-SFTP (Secure File Transfer Protocol) is used to secure file transfers between HotWax Commerce and another system. Configuring SFTP is crucial for smooth and secure data exchange within your system and HotWax Commerce. Read our documentation to learn how you can [configure SFTP](https://docs.hotwax.co/deployment-and-configurations/initial-setup/setupsftpconfigurations) for seamless data transfer.
+SFTP (Secure File Transfer Protocol) is used to secure file transfers between HotWax Commerce and another system. Configuring SFTP is crucial for smooth and secure data exchange within your system and HotWax Commerce. Read our documentation to learn how you can [configure SFTP](https://docs.hotwax.co/documents/system-admins/initial-setup/configure-sftp) for seamless data transfer.
 
 ## Add Solr Indexes
 
@@ -54,7 +52,7 @@ Solr, an open-source enterprise search platform, provides powerful search capabi
 
 ## Add Shipping Gateways
 
-HotWax Commerce's Store Fulfillment App empowers retailers to efficiently manage online order fulfillment from their stores. By integrating with multiple Third-Party Logistics companies, known as Carriers, HotWax Commerce enables the generation of shipping labels based on store and customer addresses, as well as package weight and dimensions. Each Carrier offers a Shipping Gateway software system, facilitating the request for shipment quotations and labels during the fulfillment process. [Read our document](https://docs.hotwax.co/deployment-and-configurations/user-and-gateway-configuration/shippinggateways) to learn how to set up shipping carriers, shipping methods, and integration with the shipment gateway, ensuring a streamlined and cost-effective order fulfillment process. Users are also required to add [shipping boxes](https://docs.hotwax.co/documents/v/system-admins/fulfillment/shipping-methods/shipping-box) to ensure precise shipping cost calculation and accurate label generation.
+HotWax Commerce's Store Fulfillment App empowers retailers to efficiently manage online order fulfillment from their stores. By integrating with multiple Third-Party Logistics companies, known as Carriers, HotWax Commerce enables the generation of shipping labels based on store and customer addresses, as well as package weight and dimensions. Each Carrier offers a Shipping Gateway software system, facilitating the request for shipment quotations and labels during the fulfillment process. Read our [document](https://docs.hotwax.co/documents/system-admins/fulfillment/shipping-methods/shippinggateways) to learn how to set up shipping carriers, shipping methods, and integration with the shipment gateway, ensuring a streamlined and cost-effective order fulfillment process. Users are also required to add [shipping boxes](https://docs.hotwax.co/documents/v/system-admins/fulfillment/shipping-methods/shipping-box) to ensure precise shipping cost calculation and accurate label generation.
 
 {% embed url="https://youtu.be/hYXo7992SWQ" %}
 
@@ -82,8 +80,6 @@ HotWax Commerce ensures that order information is always updated to streamline t
 
 HotWax Commerce provides a unified view of inventory by seamlessly connecting with various technology systems used by retailers, including Enterprise Resource Planning (ERP), Point of Sale (POS), and Warehouse Management Systems (WMS). HotWax Commerce ensures that inventory updates from all these systems are synchronized to support various business scenarios. HotWax Commerce offers out-of-the-box integrations with systems such as [NetSuite](https://docs.hotwax.co/documents/v/learn-netsuite/integration-flows/inventory) and [RetailPro](https://docs.hotwax.co/documents/v/additional-integrations/retailpro/inventorysync) to sync inventory. Retailers can also [import inventory manually](https://docs.hotwax.co/documents/v/retail-operations/inventory/inventory-upload) through a CSV file or contact the HotWax Commerce support team for possible integration with the systems in their tech stack.
 
-
-
 {% embed url="https://www.loom.com/share/6a59fbfd1f0c45d3ac0abb52ee66a036?sid=0e45f285-0076-4548-b806-3d834d8ddbe8" %}
 
 ## Sync Inventory to Shopify
@@ -98,8 +94,6 @@ Order routing allows the OMS to determine the best location to fulfill an order 
 
 HotWax Commerce's Users application allows businesses to create and manage users within the HotWax Commerce Order Management System (OMS). By establishing user profiles, organizations can grant access to critical operations involving managing orders and fulfillment. Here’s how you can [create users](https://docs.hotwax.co/documents/v/system-admins/administration/users) with store associate and [picker](https://docs.hotwax.co/documents/v/system-admins/administration/users/add-picker) roles to manage order fulfillment.
 
-
-
 {% embed url="https://youtu.be/6BW4Hxi08N0" %}
 
 ## Checklist
@@ -107,135 +101,73 @@ HotWax Commerce's Users application allows businesses to create and manage users
 * **Launch Machine**
 * **Initial Login**
 
-<!---->
-
-* [ ] Log in to the instance.
-* [ ] Reset the default password.
-* [ ] Check Sidebar and EXIM screen for correct loading.
-
-<!---->
+- [ ] Log in to the instance.
+- [ ] Reset the default password.
+- [ ] Check Sidebar and EXIM screen for correct loading.
 
 * **Add DBIC**
 
-<!---->
-
-* [ ] Configure DBIC for specific countries relevant to the instance.
-
-<!---->
+- [ ] Configure DBIC for specific countries relevant to the instance.
 
 * **Add Product Store**
 
-<!---->
-
-* [ ] Configure default product store as per requirement.
-* [ ] Create new product stores for multiple brands if needed.
-
-<!---->
+- [ ] Configure default product store as per requirement.
+- [ ] Create new product stores for multiple brands if needed.
 
 * **Load Facility**
 
-<!---->
-
-* [ ] Utilize facilities CSV or Facility management application for efficient bulk creation.
-
-<!---->
+- [ ] Utilize facilities CSV or Facility management application for efficient bulk creation.
 
 * **Create Facility Groups**
 
-<!---->
-
-* [ ] Define facility groups for omnichannel order management.
-* [ ] Assign facilities to appropriate groups based on functionality.
-
-<!---->
+- [ ] Define facility groups for omnichannel order management.
+- [ ] Assign facilities to appropriate groups based on functionality.
 
 * **Configure System Property Data**
 
-<!---->
-
-* [ ] Adjust system property data for non-US retailers.
-* [ ] Configure settings such as currency, country, and shipment weight units.
-
-<!---->
+- [ ] Adjust system property data for non-US retailers.
+- [ ] Configure settings such as currency, country, and shipment weight units.
 
 * **Configure SFTP**
 
-<!---->
-
-* [ ] Set up SFTP for secure data transfer within the system.
-
-<!---->
+- [ ] Set up SFTP for secure data transfer within the system.
 
 * **Add Solr Indexes**
 
-<!---->
-
-* [ ] Configure Solr indexing for efficient data retrieval and search operations.
-
-<!---->
+- [ ] Configure Solr indexing for efficient data retrieval and search operations.
 
 * **Add Shipping Gateways**
 
-<!---->
-
-* [ ] Configure shipping gateways for seamless integration with third-party logistics companies.
-* [ ] Add shipping boxes for accurate shipping cost calculation and label generation.
-* [ ] Install HotWax Commerce integration app on Shopify store
-
-<!---->
+- [ ] Configure shipping gateways for seamless integration with third-party logistics companies.
+- [ ] Add shipping boxes for accurate shipping cost calculation and label generation.
+- [ ] Install HotWax Commerce integration app on Shopify store
 
 * **Configure Mappings between HotWax Commerce and Shopify**
 
-<!---->
-
-* [ ] Manage integration mappings between HotWax Commerce and Shopify Shop.
-* [ ] Ensure correct mappings for locations, payment methods, shipping methods, product types, and price levels.
-
-<!---->
+- [ ] Manage integration mappings between HotWax Commerce and Shopify Shop.
+- [ ] Ensure correct mappings for locations, payment methods, shipping methods, product types, and price levels.
 
 * **Sync Products**
 
-<!---->
-
-* [ ] Import products created in Shopify to HotWax Commerce.
-
-<!---->
+- [ ] Import products created in Shopify to HotWax Commerce.
 
 * **Sync Orders**
 
-<!---->
-
-* [ ] Initiate initial order sync process between HotWax Commerce and Shopify.
-
-<!---->
+- [ ] Initiate initial order sync process between HotWax Commerce and Shopify.
 
 * **Import Inventory**
 
-<!---->
-
-* [ ] Sync inventory from various technology systems or manually import through CSV.
-
-<!---->
+- [ ] Sync inventory from various technology systems or manually import through CSV.
 
 * **Sync Inventory to Shopify**
 
-<!---->
+- [ ] Upload inventory from HotWax Commerce to Shopify.
 
-* [ ] Upload inventory from HotWax Commerce to Shopify.
+* **Schedule Brokering**
 
-<!---->
-
-* **Schedule Brokering**&#x20;
-
-<!---->
-
-* [ ] Schedule brokering runs for order routing.
-
-<!---->
+- [ ] Schedule brokering runs for order routing.
 
 * **Create users for Fulfillment**
 
-<!---->
-
-* [ ] Set up user accounts for fulfillment operations.
-* [ ] Create Pickers for picking order items
+- [ ] Set up user accounts for fulfillment operations.
+- [ ] Create Pickers for picking order items
