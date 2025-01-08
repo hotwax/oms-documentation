@@ -66,6 +66,10 @@
     * [How to create user on tathya](internal-guides/tathya/sop/create-user-tathya.md)
     * [How to request for the report](internal-guides/tathya/sop/report-request.md)
 
+## Client Communication
+* [Templated Replies](client-communication/template-replies.md)
+* [Ticket and Release Mangemnet](client-communication/ticket-management.md)
+
 
 ## SOP Documents
 
