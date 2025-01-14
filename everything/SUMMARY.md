@@ -2,15 +2,15 @@
 
 ## Best Practices and Guidelines
 
-* [Internal Usage](README.md)
-* [Documentation Guideline](sop/documentation-guideline.md)
-* [ChatGPT Prompts](sop/chatgpt-prompts.md)
-* [GitHub Guideline](guidelines/github-guideline.md)
-* [Gitbook Spaces](guidelines/gitbook-spaces.md)
-* [Issue Report](guidelines/issue-report.md)
-* [Feature Requests on Jira](guidelines/feature-request.md)
-* [Templated Replies](sop/template-replies.md)
-* [Web Tools](webtools/readme.md)
+ * [ChatGPT Prompts](sop/chatgpt-prompts.md)
+ * [Documentation Guideline](sop/documentation-guideline.md)
+ * [GitBook Spaces](guidelines/gitbook-spaces.md)
+ * [GitHub Guideline](guidelines/github-guideline.md)
+ * [Internal Usage](README.md)
+ * [Issue Report](guidelines/issue-report.md)
+ * [Templated Replies](sop/template-replies.md)
+ * [Web Tools](webtools/readme.md)
+
 
 ## Internal Guides
 * [End to End Order Flow](internal-guides/order-flow/README.md)
@@ -19,6 +19,9 @@
   * [Order Brokering](internal-guides/order-flow/order-brokering.md)
   * [Order Fulfillment](internal-guides/order-flow/order-fulfillment.md)
   * [Order Fulfillment Notification](internal-guides/order-flow/order-fulfillment-notification.md)
+
+* [Jira](internal-guides/jira)
+  * [Feature Request on jira](internal-guides/jira)
 
 * [Napita](<README (1).md>)
   * [Glossary](internal-guides/napita/glossary.md)
@@ -66,6 +69,10 @@
     * [How to create user on tathya](internal-guides/tathya/sop/create-user-tathya.md)
     * [How to request for the report](internal-guides/tathya/sop/report-request.md)
 
+* [Shopify](internal-guides/shopify//access-shopify-pos-app.md)
+  * [How to access Shopify POS APP](internal-guides/shopify/access-shopify-pos-app.md)
+
+
 ## Client Communication
 * [Templated Replies](client-communication/template-replies.md)
 * [Ticket and Release Mangemnet](client-communication/ticket-management.md)
@@ -73,25 +80,22 @@
 
 ## SOP Documents
 
-* [SFTP Issue](sop/sftp-issue.md)
-* [Pre order catalog sync](sop/pre-order-sync.md)
-* [Multicurrency Sales Orders](sop/multicurrency-sales-orders.md)
 * [Add new variance reason](sop/add-new-variance-reason.md)
-* [How to access Shopify POS APP](sop/access-shopify-pos-app.md)
-* [How to create a User in tathya](sop/create-user-tathya.md)
-* [Create a Job using Data Manager Configuration](sop/job-creation-by-data-configuration.md)
 * [Check Job Frequencies](sop/check-job-frequency.md)
-* [Report Request](sop/report-request.md)
-* [Mismatch Time Zone](sop/timezone-mismatch.md)
-* [POS Order Refresh Failure](sop/pos-order-refresh-failure.md)
-* [Stuck Orders in Fulfillment App](sop/stuck-orders.md)
-* [Product Duplication](sop/duplicate-products.md)
-* [Ticket and Release Managemnet](sop/ticket-management.md)
-* [Job Runtime Error](sop/runtime-error.md)
+* [Create a Job using Data Manager Configuration](sop/job-creation-by-data-configuration.md)
 * [FetchPut SFTP Retry](sop/fetch_put_sftp_retry.md)
-* [System Monitoring Guide](guidelines/system-monitoring-guide.md)
+* [Job Runtime Error](sop/runtime-error.md)
+* [Mismatch Time Zone](sop/timezone-mismatch.md)
+* [Multicurrency Sales Orders](sop/multicurrency-sales-orders.md)
+* [POS Order Refresh Failure](sop/pos-order-refresh-failure.md)
+* [Pre order catalog sync](sop/pre-order-sync.md)
+* [Product Duplication](sop/duplicate-products.md)
+* [Report Request](sop/report-request.md)
 * [Sanity Checklist](guidelines/sanity-checklist.md)
-
+* [Stuck Orders in Fulfillment App](sop/stuck-orders.md)
+* [SFTP Issue](sop/sftp-issue.md)
+* [System Monitoring Guide](guidelines/system-monitoring-guide.md)
+* [Ticket and Release Management](sop/ticket-management.md)
 
 ## Additional Resources
 
