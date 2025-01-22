@@ -16,6 +16,7 @@
   * [Order Approval](flows/SalesOrders/OrderApproval.md)
   * [Brokering and Fulfillment](flows/SalesOrders/Brokering&Fulfillment.md)
   * [Order Routing](flows/SalesOrders/brokering-logics.md)
+  * [Order Lookup](flows/SalesOrders/order-lookup.md)
   * [Order Invoicing](flows/SalesOrders/OrderInvoicing.md)
     * [Invoice API](flows/SalesOrders/InvoiceAPI.md)
     * [Inventory Transfer API](flows/SalesOrders/InvTransfer.md)

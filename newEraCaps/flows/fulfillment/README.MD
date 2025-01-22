@@ -24,6 +24,10 @@ Once an order has been packed and is ready for pickup, an email to the customer 
 
 New Era Caps is also rolling out a new locker based pickup solution where store staff place the packed order items into a locker where customers can pick them up at their own convenience. To support this workflow, staff will mark orders as packed in the BOPIS fulfillment app after placing the order items in the locker. The email sent to the customer will include a unique password and locker number which the customer can use to unlock the locker and collect their order items.
 
+### Pending pickup orders
+- After 10 days pickup window when the order has not been picked up by the customer, the CSR will receive a reminder mail from OMS to call the customer.
+- When the orders are not going to be picked up by the customer, the CSR will mark the order as fulfilled and OMS will update the order status on Shopify.
+
 **Open questions:**
 
 How will the email be customized to let the customer know that their items are stored in a locker? Is there a special flag that New Era Caps expects for this from the OMS?

@@ -22,6 +22,7 @@
   * [Digital Items](flows/salesOrder/digital-items.md)
   * [Soft Allocation](flows/salesOrder/softAllocationFlow.md)
   * [Note Attributes](flows/salesOrder/noteAttributes.md)
+  * [Custom Order Import](flows/salesOrder/custom-order-import.md)
   * [Payment Methods](flows/salesOrder/paymentMethods.md)
 * [Product Store](flows/product-store/README.md)
 * [Production Data Setup](flows/production-data-setup/Klaviyo.md)
