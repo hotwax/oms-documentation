@@ -15,7 +15,7 @@ In the event that the order is a “ReShipped” order, then the order name in t
 **SFTP Path**
 
 ```
-/home/newera-uat-sftp/wms/fulfilled_orders/incoming
+/home/newera-uat-sftp/hotwax/Testing_Hotwax/tracking_info
 ```
 
 | DO#        | 日付       | 個数 | 問い合せNo       | 便名   |
