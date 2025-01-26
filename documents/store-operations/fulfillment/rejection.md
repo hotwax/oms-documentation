@@ -74,6 +74,18 @@ The table below lists the default rejection reasons and their assigned types, wh
 | DAMAGE           | REPORT_VAR     | Decreases ATP inventory by the rejected quantity, while QOH remains unchanged.           | Shows the product is in stock but damaged and unsellable.                               |
 | NO VARIANCE      | REPORT_NO_VAR  | Does not affect either ATP or QOH inventory.                                             | Useful for scenarios where inventory levels remain unchanged, e.g., canceled orders without stock issues. |
 
+### Toggle for Showing Rejection Reasons:
+
+Users can choose whether or not the app displays rejection reasons by using the toggle to show rejection reasons. They can choose whether to enable or disable this toggle, which is found in the Rejection Reasons section.
+
+**How It Works:**
+
+- **When the toggle is ON:**
+The rejection reasons will be visible for each item that needs to be rejected. This helps users quickly identify the specific reasons for rejections, such as out-of-stock items, incorrect shipping addresses, etc.
+
+- **When the toggle is OFF:**
+Rejection reasons will be hidden, and users will only see the items that need to be rejected without any reason.
+
 ## Adjust QOH Along with ATP on Rejection
 
 The **Adjust QOH Along with ATP on Rejection** toggle provides control over inventory adjustments during order rejections.
