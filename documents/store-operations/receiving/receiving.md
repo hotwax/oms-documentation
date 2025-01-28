@@ -32,7 +32,7 @@ Once ASN is located, store associates can tap to view the `ASN details` includin
 
 **3. Locate Items:**
 
-The inbound shipments generally contain multiple product items, store associates can either scan individual product barcodes or search SKUs to locate specific items and start receiving. In case you are not managing barcodes, tap on the `image icon` to see the enlarged to easily identify the product before receiving it. Users can also change their product identifiers from the settings page.
+The inbound shipments generally contain multiple product items, store associates can either scan individual product barcodes or search SKUs to locate specific items and start receiving. In case you are not managing barcodes, tap on the `image icon` to see the enlarged image to easily identify the product before receiving it. Users can also change their product identifiers from the settings page.
 
 
 

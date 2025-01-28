@@ -96,7 +96,7 @@ HC_SC_CreateLoopReturn.js
 
 #### 6. Process and Export Item Receipts Records
 
-When the reAfter a few days, when the customer's returned item is physically received at the warehouse, the following actions take place:
+After a few days, when the customer's returned item is physically received at the warehouse, the following actions take place:
 
 * An Item Receipt record is created and linked to the RMA.
 * Inventory is restocked, and the corresponding inventory count is increased in NetSuite.

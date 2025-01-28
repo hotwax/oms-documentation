@@ -4,18 +4,21 @@ description: >-
   precise shipping cost calculations and accurate label generation.
 ---
 
-# Create Shipping Boxes
+# Shipping Boxes
 
-Retailers employ specific packing boxes tailored to their unique product packaging needs. HotWax Commerce provides users with the ability to define their customized packing boxes. Creating customized box configurations ensures precise shipping cost calculations and accurate label generation, aligning with the retailer's specific packaging standards.
+ HotWax Commerce lets users define these boxes for accurate shipping calculations and label generation, ensuring alignment with retailer packaging standards.
 
-This guide outlines a step-by-step process for retailers to establish and manage boxes within HotWax Commerce which can be readily accessible for store associates to specify during fulfillment.
+This guide outlines a step-by-step process for retailers to establish and manage boxes within HotWax Commerce.
 
-## Creating Boxes in HotWax Commerce
+Note:
+Incorrect box selection may result in extra shipping charges for retailers.
 
-Configuring boxes in the general settings ensures packaging consistency and accuracy throughout the application, aiding store associates in selecting appropriate boxes during order fulfillment. Incorrect box selection may result in extra shipping charges for retailers. Users can create shipping boxes through the following steps:
+## Creating Boxes
 
-* Navigate to `HotWax Commerce` > `Hamburger Menu` > `Settings` > `General Settings` Page.
-* Scroll down to find the `Shipment Box` section.
+Users can create shipping boxes through the following steps:
+
+* Navigate to `HotWax Commerce` > `Hamburger Menu` > `Settings` > `General Settings`
+* Scroll down to find the `Shipment Box` section
 * Click `Add` to open the box creation form and add details such as:
 
 | Field                         | Description                                                                                                                                            |
