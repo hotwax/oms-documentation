@@ -13,10 +13,10 @@
   * [Create Users](administration/users/createUser.md)
   * [Manage Users](administration/users/manageUser.md)
   * [Manage User Permissions](administration/users/user-permission.md)
-  * [Create Pickers](fulfillment/add-picker.md)
-  * [How to Bulk Import Employee](administration/users/troubleshooting/bulk-import-employee.md)
+  * [Create Pickers](administration/users/add-picker.md)
   * [Troubleshooting](administration/users/troubleshooting/README.md)
     * [Application Access Issue](administration/users/application-access-issue.md)
+    * [How to Bulk Import Employee](administration/users/troubleshooting/bulk-import-employee.md)
 * [User Permissions](administration/permissions/introduction.md)
   * [BOPIS App](administration/permissions/bopis-app.md)
   * [Fulfillment App](administration/permissions/fulfillment-app.md)
@@ -40,8 +40,8 @@
   * [Disabling facilities](administration/facilities/disabling-facilities.md)
   * [Manage parkings](administration/facilities/manage-parkings.md)
   * [Manage Groups](administration/facilities/manage-groups.md)
-* [Delete customers](delete-customers.md)
-* [SOLR Indexing](search-admin.md)
+* [Delete customers](administration/delete-customers.md)
+* [SOLR Indexing](solr-indexing.md)
 * [Data manager](data-manager/README.md)
   * [Data import and export](data-manager/import-and-export.md)
   * [Configurations](data-manager/configurations.md)
@@ -59,15 +59,14 @@
 
 ## Initial Setup
 
-* [Add DBIC](initial-setup/AddDBICs.md)
-* [Load Facilities](initial-setup/LoadFacilities.md)
+* [Add DBIC](initial-setup/README.md)
+* [Load Facilities](initial-setup/load-facilities.md)
 * [Bulk Import Employees](initial-setup/bulk-import-employee.md)
-* [Bulk Import BOPIS Orders](initial-setup/bulk-import-bopis-orders.md)
 * [SFTP Configuration](initial-setup/configure-sftp.md)
 
 ## Inventory
 
-* [Multichannel inventory setup](multichannel-inventory-setup.md)
+* [Multichannel inventory setup](README.md)
 
 ## Fulfillment
 
@@ -76,5 +75,5 @@
   * [Create Shipping Boxes](fulfillment/shipping-box.md)
   * [Shipping gateways](fulfillment/ShippingGateways.md)
   * [Map Carrier Shipment Methods](fulfillment/carrier-and-shipment-methods.md)
-* [How to map shipping method in HotWax Commerce to Netsuite](fulfillment/add-shipping-method.md)
+* [How to map shipping method in HotWax Commerce](fulfillment/add-shipping-method.md)
 * [Configure Rate Shopping](fulfillment/configure-rate-shopping.md)

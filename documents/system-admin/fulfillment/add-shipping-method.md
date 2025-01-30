@@ -1,11 +1,11 @@
 ---
 description: >-
- Learn how to map the Shipping method in HotWax to sync with Netsuite? 
+ Learn how to map the Shipping method in HotWax
 ---
 
-### How to Map Shipping Method in HotWax to Sync with Netsuite
+### How to Map Shipping Method in HotWax
 
-To ensure seamless communication of shipping information across all systems, it's crucial to map shipping methods in HotWax with those in Shopify and Netsuite. Follow these four steps to ensure the sync works as expected:
+To ensure seamless communication of shipping information across all systems, it's crucial to map shipping methods in HotWax with those in Shopify and NetSuite. Follow these four steps to ensure the sync works as expected:
 
 - Creating a Shipment Method in HotWax.
 - Associating Shipment Method to Product Store and Carrier.
