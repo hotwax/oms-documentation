@@ -10,7 +10,7 @@ In HotWax Commerce, retailers can create different types of shipping rules:
 * Configure which products will be suppressed to sell from which sales channel.
 * Configure which product will be suppressed for which facility so that the inventory of these facilities for that product is not computed.
 
-In this user manual, we will set up different types of configurations. For the remainder of the setup, we will use the example of a Canadian retailer that has five retail locations, including three retail stores and two warehouses, and sell their inventory across Canada and US. They want to configure shipping rules for a specific product: a Blue Medium-sized shirt from the NotNaked brand. Let’s see how retailers can configure shipping rules for such scenarios.
+In this user manual, we will set up different types of configurations. For the remainder of the setup, we will use the example of a Canadian retailer that has five locations, including three retail stores and two warehouses, and sell their inventory across Canada and US. They want to configure shipping rules for a specific product: a Blue Medium-sized shirt from the NotNaked brand. Let’s see how retailers can configure shipping rules for such scenarios.
 
 ## Setting Maximum Order Capacity of a Facility
 
