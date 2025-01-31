@@ -4,7 +4,7 @@
 
 ## Workflow
 
-* [Job Management](workflowREADME.md)
+* [Job Management](workflow/README.md)
   * [Job Details](workflowjob-management/job-details.md)
   * [Job Categories](workflow/job-management/job-categories.md)
   * [Job Queueing](workflow/job-management/job-queueing.md)
