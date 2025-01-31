@@ -11,7 +11,7 @@
   * [Initial Load](workflow/job-management/initial-load.md)
   * [Bulk Scheduling](workflow/job-management/bulk-scheduling.md)
   * [Troubleshooting](workflow/job-management/troubleshooting/README.md)
-    * [Job Stuck](troubleshooting/jobStuck.md)
+    * [Job Stuck](job-management/troubleshooting/job-stuck.md)
     * [Job Failure](troubleshooting/jobFailed.md)
     * [Duplicate Jobs](troubleshooting/duplicate-job-scheduled.md)
     * [Job Scheduling](troubleshooting/scheduleJob.md)
