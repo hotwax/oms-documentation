@@ -83,7 +83,7 @@
   * [Find Product Inventory](inventory/inventory-management/find-product-inventory.md)
   * [Product Inventory View Page](inventory/inventory-management/product-inventory-view.md)
   * [Inventory Configurations](inventory/inventory-management/inventory-configuration.md)
-* [Inventory upload](inventory/inventory-management/inventory-upload.md)
+* [Inventory upload](inventory/inventory-upload)
   * [Schedule Restocking](inventory/inventory-management/schedule-restock.md)
 * [Cycle Count](inventory/cycle-count/introduction.md)
   * [Draft Counts](inventory/cycle-count/draft-cycle-count.md)
