@@ -49,7 +49,7 @@ Bulk Packing slips and Shipping labels will be generated in a new tab.
 
 **Picker Filters:** Easily search for specific orders in batch processes using Picker Filters.
 
-2. Add [multiple boxes](shipping-box.md#adding-shipment-box-to-order-during-fulfillment) to ship large orders.
+2. Add [multiple boxes](https://docs.hotwax.co/documents/system-admins/fulfillment/shipping-methods/shipping-box#adding-shipment-boxes-for-specific-carriers) to ship large orders.
 
 {% embed url="https://youtu.be/V66o7vAf6HY" %}
 Video: Add box
