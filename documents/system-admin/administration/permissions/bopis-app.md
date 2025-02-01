@@ -54,8 +54,8 @@ Here’s a detailed table of the actions available in the BOPIS App, organized b
 
 | Serial No. | Action            | Permission    | Description                                                                                              |
 | ---------- | ----------------- | ------------- | -------------------------------------------------------------------------------------------------------- |
-| 1          | Order Information | -             | Allows store associates to view the details of an order.                                                 |
-| 2          | Order Rejection   | COMMON\_ADMIN | Enables users to reject an order completely or partially, based on available inventory or other factors. |
+| 1          | Order Details Page| -             | Allows store associates to view the details of an order.                                                 |
+| 2          | Order Rejection   | COMMON_ADMIN | Enables users to reject an order completely or partially, based on available inventory or other factors. |
 
 <figure><img src="../../.gitbook/assets/order details (1) (1).png" alt=""><figcaption></figcaption></figure>
 
@@ -63,12 +63,16 @@ Here’s a detailed table of the actions available in the BOPIS App, organized b
 
 | Serial No. | Action                  | Permission    | Description                                                                                             |
 | ---------- | ----------------------- | ------------- | ------------------------------------------------------------------------------------------------------- |
-| 1          | Order Edit Permissions  | COMMON\_ADMIN | Controls what customers are allowed to edit on their order when re-routing fulfillment.                 |
-| 2          | Partial Order Rejection | COMMON\_ADMIN | Specifies whether a BOPIS order can be partially rejected if inventory is insufficient at the store.    |
-| 3          | Show Shipping Orders    | -             | Allows users to view shipping orders alongside pickup orders.                                           |
-| 4          | Generate Packing Slip   | -             | Enables the creation of packing slips, helping customers reconcile their order against delivered items. |
-| 5          | Enable Tracking         | -             | Tracks who picked orders by entering picker IDs during the packing process.                             |
+| 1          | View Order Details Page  | COMMON_ADMIN | Controls what customers are allowed to edit on their order when re-routing fulfillment.                 |
+| 2          | Reject Order Partially | COMMON_ADMIN | Specifies whether a BOPIS order can be partially rejected if inventory is insufficient at the store.    |
+| 3          | Show Shipping Orders    | COMMON_ADMIN| Allows users to view shipping orders alongside pickup orders.                                           |
+| 4          | Generate Packing Slip   |COMMON_ADMIN| Enables the creation of packing slips, helping customers reconcile their order against delivered items. |
+| 5          | Enable Tracking         | COMMON_ADMIN| Tracks who picked orders by entering picker IDs during the packing process.                             |
 | 6          | Notification Preference | -             | Allows users to select the types of notifications they want to receive.                                 |
+| 7         | Go to OMS | COMMERCEUSER_VIEW | Allows user access HotWax OMS from BOPIS App|
+| 8         | View BOPIS App | BOPIS_APP_VIEW | Allows user to view all overall BOPIS App|
+| 9         | Manager BOPIS Operations | STOREFULFILLMENT_ADMIN | Allows to Manage all overall BOPIS Operation in store|
+
 
 <figure><img src="../../.gitbook/assets/settings (1).png" alt=""><figcaption></figcaption></figure>
 
