@@ -20,11 +20,11 @@ Below is a list of all the actions available in the Receiving App, along with th
 | --- | --------------------------- | ---------------- | ------------------------------------------------------------------------------------------------- |
 | 1   | View Shipment Details       | -                | Allows users to view detailed information about a specific shipment.                              |
 | 2   | Scan Items                  | -                | Enables users to scan items that are part of the shipment.                                        |
-| 3   | Add Items                   | RECEIVING\_ADMIN | Allows users with higher permissions to add unexpected items to the shipment.                     |
+| 3   | Add Items                   | RECEIVING_ADMIN | Allows users with higher permissions to add unexpected items to the shipment.                     |
 | 4   | Receiving Items             | -                | Allows users to receive items listed in the shipment.                                             |
 | 5   | Product Image               | -                | Enables users to view and enlarge the product image associated with the shipment.                 |
 | 6   | View Receiving History      | -                | Allows users to view the history of receiving activities related to the items in the shipment.    |
-| 7   | Receive and Close Shipments | RECEIVING\_ADMIN | Allows users with higher permissions to receive and close the shipment after verifying all items. |
+| 7   | Receive and Close Shipments | RECEIVING_ADMIN | Allows users with higher permissions to receive and close the shipment after verifying all items. |
 
 <figure><img src="../../.gitbook/assets/shipment.png" alt=""><figcaption></figcaption></figure>
 
@@ -32,6 +32,9 @@ Below is a list of all the actions available in the Receiving App, along with th
 
 | No. | Action                    | Permission    | Description                                                                                   |
 | --- | ------------------------- | ------------- | --------------------------------------------------------------------------------------------- |
-| 1   | Select Product Identifier | COMMON\_ADMIN | Allows users to select the product identifier that will be used to view items within the app. |
+| 1   | Select Product Identifier | COMMON_ADMIN | Allows users to select the product identifier that will be used to view items within the app. |
+| 2   | Manage All Receiving Operations | COMMON_ADMIN | Allow user to manage all operations of receving |
+| 3   | View Receiving App | RECEIVING_APP_VIEW | Allows users view Receiving App |
+| 4   | Go To OMS | COMMERCEUSER_VIEW | Allows users to access HotWax OMS |
 
 <figure><img src="../../.gitbook/assets/settings r.png" alt=""><figcaption></figcaption></figure>
