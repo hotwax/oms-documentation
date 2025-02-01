@@ -16,7 +16,7 @@
 * [Store Fulfillment Lifecycle](business-process-models/store-fulfillment-lifecycle.md)
 * [Warehouse Fulfillment Lifecycle](business-process-models/warehouse-fulfillment-lifecycle.md)
 * [Inventory Lifecycle](business-process-models/inventory-lifecycle.md)
-* [Transfer Orders Lifecycle](business-process-models/transfer-order-lifecycle.md)
+* [Transfer Orders Lifecycle](business-process-models/transferorder-lifecycle.md)
 * [Gift Card Orders Lifecycle](business-process-models/giftcard-orders-lifecycle.md)
 * [Returns Lifecycle](business-process-models/returns-lifecycle/README.md)
   * [Web Returns with Loop](business-process-models/returns-lifecycle/loop-web-returns-lifecycle.md)
