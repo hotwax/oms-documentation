@@ -104,6 +104,15 @@ Outlet Warehouse: Storage for outlet inventory, supporting fulfillment for outle
 
 Retailers can prioritize their brokering rules according to the facility types
 
+## Inventory Delta
+Inventory delta means adjusting the stock count of an item in a facility by adding or subtracting a specific amount of inventory, as provided by an external system like an ERP.
+For example, if the Central Warehouse has 10 socks in stock and a delta file specifies a change of +2, the stock count will be adjusted to 12 by adding the delta value (+2) to the existing stock count.
+
+## Inventory Reset
+Inventory reset means updating the stock count of an item in a facility with a new count provided by an external system, like an ERP.
+
+**For example**, if the Central Warehouse has 10 socks in stock, and a reset file from the ERP specifies a count of 15, the stock count in HotWax will be reset to 15, discarding the previous count entirely.
+
 ## Inventory Variance
 Inventory variance refers to discrepancies between expected and actual inventory levels. It can be caused by factors such as damaged goods, discrepancies in shipment, or theft.
 

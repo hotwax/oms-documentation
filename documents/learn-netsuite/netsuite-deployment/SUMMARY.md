@@ -4,22 +4,22 @@
 
 ## Deploy SDF
 
-* [Setup SDF Bundle](sdfBundle/README.md)
-  * [Install SDF](sdfBundle/installSDF.md)
-  * [Setup SFTP](sdfBundle/setupSFTP.md)
-  * [Date Time Format](sdfBundle/verifyDateTimeFormat.md)
+* [Setup SDF Bundle](sdf-bundle/README.md)
+  * [Install SDF](sdf-bundle/install-sdf.md)
+  * [Setup SFTP](sdf-bundle/setup-sftp.md)
+  * [Date Time Format](sdf-bundle/verify-date-time-format.md)
 
 ## Prerequisites
 
-* [Install NetSuite Jobs](prerequisiteSyncs/installNetsuiteReader.md)
-* [Product Store Settings](prerequisiteSyncs/productStoreSettings.md)
-* [SFTP Locations](prerequisiteSyncs/sftpLocations.md)
-* [Historical Customers](prerequisiteSyncs/historicalCustomers.md)
-* [Shipping Methods](prerequisiteSyncs/shippingMethods.md)
-* [Price Level](prerequisiteSyncs/priceLevel.md)
-* [Payment Methods](prerequisiteSyncs/paymentMethods.md)
-* [Promo Codes](prerequisiteSyncs/promoCodes.md)
-* [NetSuite Facility Group](prerequisiteSyncs/netsuiteFulfillment.md)
+* [Install NetSuite Jobs](prerequisite-syncs/install-netsuite-reader.md)
+* [Product Store Settings](prerequisite-syncs/productStore-settings.md)
+* [SFTP Locations](prerequisite-syncs/sftp-locations.md)
+* [Historical Customers](prerequisite-syncs/historical-customers.md)
+* [Shipping Methods](prerequisite-syncs/shipping-methods.md)
+* [Price Level](prerequisite-syncs/price-level.md)
+* [Payment Methods](prerequisite-syncs/payment-methods.md)
+* [Promo Codes](prerequisite-syncs/promocodes.md)
+* [NetSuite Facility Group](prerequisite-syncs/netsuite-fulfillment.md)
 
 ## Flows
 

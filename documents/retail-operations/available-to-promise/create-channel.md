@@ -15,7 +15,7 @@ In HotWax Commerce, Inventory Channels combine Facility Groups and Configuration
    * Enter a name for the new Inventory Channel. The channel ID will automatically populate with the same name.
    * Write a description of the channel to explain its purpose, such as "Inventory channel facility group to publish ATP on Shopify."
 
-### Add Inventory Channel Configuration Facility
+### Add a Configuration Facility
 
 The Configuration Facility is a virtual facility that plays a critical role when managing product-level ATP configurations at a network-wide scale. Therefore when configuring network-level product ATP rules, you need to add a channel-level configuration facility:
 
@@ -59,6 +59,10 @@ Retailers managing multiple online sales channels must decide which facility gro
 3. **Select Run Time and Frequency** Here, you can choose the `Run Time` and the `Frequency` (daily, weekly, etc.) to push inventory updates to Shopify. This setting helps define when the inventory will be published.
 4. **Choose the Inventory Channel** From the dropdown menu, select the inventory channel from which you want to publish. This corresponds to the facility group whose inventory will be pushed to the Shopify store.
 5. **Save and Schedule the Job** After selecting the appropriate options, click `Save Changes` to finalize the settings. This will schedule the inventory publishing job as per the selected time and frequency.
+
+
+
+<figure><img src="../.gitbook/assets/publish-atp-to-sales-channel 1.png" alt=""><figcaption><p>Publish ATP to a Sales Channel</p></figcaption></figure>
 
 
 

@@ -15,7 +15,7 @@ Users can configure the following settings for the facility:
 
 ## Configure Inventory Computation
 
-Retailers have the flexibility to sell their facilities' inventory across [various channels](multichannel-inventory-setup.md). Additionally, they may need to exclude the Available-to-Promise (ATP) of a specific facility from the total online ATP. For instance, if a facility is temporarily unavailable to fulfill online orders, the retailer may want to remove its inventory from the overall online ATP calculation. This configuration can be done through the following settings.
+Retailers have the flexibility to sell their facilities' inventory across [various channels](../../multichannel-inventory-setup.md). Additionally, they may need to exclude the Available-to-Promise (ATP) of a specific facility from the total online ATP. For instance, if a facility is temporarily unavailable to fulfill online orders, the retailer may want to remove its inventory from the overall online ATP calculation. This configuration can be done through the following settings.
 
 Users can enable the toggle for the sales channel of the facility to include its ATP, or they can disable the toggle to exclude its inventory from the calculation for the sales channels.
 

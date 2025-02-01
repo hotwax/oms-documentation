@@ -48,7 +48,7 @@ Before configuring any settings, it's crucial to establish a connection between 
 5. **Fill in Required details:**
    
       * _For Shopify:_ Choose the appropriate Shopify store from the dropdown menu and add the location ID of the facility that can be obtained from the URL of that specific location in the Shopify admin panel.
-      * _For Custom Mapping:_ Users can create custom mapping by selecting the `Custom` option from the menu, adding the `Mapping ID`, `Mapping Name` (external system for which mapping needs to be done), and the Mapping Value (1xternal ID of the facility).
+      * _For Custom Mapping:_ Users can create custom mapping by selecting the `Custom` option from the menu, adding the `Mapping ID`, `Mapping Name` (external system for which mapping needs to be done), and the Mapping Value (External ID of the facility).
 
 <figure><img src="../../.gitbook/assets/Screenshot 2024-02-29 at 10.58.39 AM.png" alt=""><figcaption><p>Image: Location ID on Shopify</p></figcaption></figure>
 

@@ -5,8 +5,6 @@ description: >-
 
 # Retrieve an Order
 
-**Improved Sentence:**
-
 Retrieves of detailed information about specific order within OMS. This functionality is valuable for verifying order status, contents, and associated details based on their unique identifiers. To retrieve the order, send a GET request to the OMS endpoint with query parameters. 
 
 ## Request

@@ -1,7 +1,7 @@
 # Table of contents
 
 * [Launchpad](README.md)
-* [Glossary](../store-operations/GLOSSARY.md)
+* [Glossary](../GLOSSARY.md)
 
 ## Administration
 
@@ -10,13 +10,13 @@
   * [Manage Product Store](administration/company/manage-product-store.md)
   * [Manage Shopify connection](administration/company/manage-shopify-shop.md)
 * [Users](administration/users/README.md)
-  * [Create Users](administration/users/createUser.md)
-  * [Manage Users](administration/users/manageUser.md)
+  * [Create Users](administration/users/create-user.md)
+  * [Manage Users](administration/users/manage-user.md)
   * [Manage User Permissions](administration/users/user-permission.md)
-  * [Create Pickers](fulfillment/add-picker.md)
-  * [How to Bulk Import Employee](administration/users/troubleshooting/bulk-import-employee.md)
+  * [Create Pickers](administration/users/add-picker.md)
   * [Troubleshooting](administration/users/troubleshooting/README.md)
-    * [Application Access Issue](administration/users/application-access-issue.md)
+    * [Application Access Issue](administration/users/troubleshooting/application-access-issue.md)
+    * [How to Bulk Import Employee](administration/users/troubleshooting/bulk-import-employee.md)
 * [User Permissions](administration/permissions/introduction.md)
   * [BOPIS App](administration/permissions/bopis-app.md)
   * [Fulfillment App](administration/permissions/fulfillment-app.md)
@@ -40,17 +40,17 @@
   * [Disabling facilities](administration/facilities/disabling-facilities.md)
   * [Manage parkings](administration/facilities/manage-parkings.md)
   * [Manage Groups](administration/facilities/manage-groups.md)
-* [Delete customers](delete-customers.md)
-* [SOLR Indexing](search-admin.md)
-* [Data manager](data-manager/README.md)
-  * [Configurations](data-manager/configurations.md)
-  * [Imports](data-manager/imports.md)
+* [Delete Customers](administration/delete-customers.md)
+* [SOLR Indexing](solr-indexing.md)
+* [Data Manager](administration/data-manager/README.md)
+  * [Data Import and Export](administration/data-manager/import-and-export.md)
+  * [Configurations](administration/data-manager/configurations.md)
   * [Troubleshooting](administration/data-manager/troubleshooting/README.md)
-    * [Data not imported](data-manager/dataNotImportedInOMS.md)
-    * [SFTP errors](data-manager/data-import-errors.md)
-    * [Manual Data import](data-manager/manual-data-import.md)
-    * [Shopify MDM](data-manager/shopify-mdm.md)
-    * [Schedule error mail](data-manager/schedule-error-mail.md)
+    * [Data Not Imported](administration/data-manager/troubleshooting/data-not-imported.md)
+    * [SFTP Errors](administration/data-manager/troubleshooting/data-import-errors.md)
+    * [Manual Data Import](administration/data-manager/troubleshooting/manual-data-import.md)
+    * [Shopify MDM](administration/data-manager/troubleshooting/shopify-mdm.md)
+    * [Schedule Error Mail](administration/data-manager/troubleshooting/schedule-error-mail.md)
 
 ## Product Store
 
@@ -59,22 +59,21 @@
 
 ## Initial Setup
 
-* [Add DBIC](initial-setup/AddDBICs.md)
-* [Load Facilities](initial-setup/LoadFacilities.md)
-* [Bulk Import Employees](initial-setup/bulk-import-employee.md)
-* [Bulk Import BOPIS Orders](initial-setup/bulk-import-bopis-orders.md)
+* [Add DBIC](initial-setup/README.md)
+* [Load Facilities](initial-setup/load-facilities.md)
 * [SFTP Configuration](initial-setup/configure-sftp.md)
+* [Configure System Property Data](initial-setup/configure-system-property.md)
 
 ## Inventory
 
-* [Multichannel inventory setup](multichannel-inventory-setup.md)
+* [Multichannel Inventory Setup](inventory/README.md)
 
 ## Fulfillment
 
-* [Shipping methods](fulfillment/shipping-methods/README.md)
+* [Shipping Methods](fulfillment/shipping-methods/README.md)
   * [Create Carrier](fulfillment/shipping-methods/add-carrier.md)
   * [Create Shipping Boxes](fulfillment/shipping-box.md)
-  * [Shipping gateways](fulfillment/ShippingGateways.md)
+  * [Shipping Gateways](fulfillment/shipping-gateway.md)
   * [Map Carrier Shipment Methods](fulfillment/carrier-and-shipment-methods.md)
-* [How to map shipping method in HotWax Commerce to Netsuite](fulfillment/add-shipping-method.md)
+* [How to Map Shipping Method in HotWax Commerce](fulfillment/add-shipping-method.md)
 * [Configure Rate Shopping](fulfillment/configure-rate-shopping.md)

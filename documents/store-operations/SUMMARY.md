@@ -1,7 +1,6 @@
 # Table of contents
 
 * [Launchpad](README.md)
-* [Glossary](GLOSSARY.md)
 
 ## Orders
 
@@ -18,7 +17,7 @@
   * [Catalog Page](bopis/catalog-page.md)
   * [Settings Page](bopis/settings-page.md)
   * [Troubleshooting](orders/bopis/troubleshooting/README.md)
-    * [Notification error](bopis/notifications.md)
+    * [Notification Error](bopis/notifications.md)
 * [Fulfillment](fulfillment/README.md)
   * [Order Fulfillment](fulfillment/shipOrders.md)
   * [Service Products](fulfillment/service-products.md)
@@ -39,6 +38,7 @@
 * [Receiving](receiving/README.md)
   * [Inventory Receiving](receiving/receiving.md)
 * [Inventory Count](inventory-count/directed-cycle-count.md)
+  * [Hard Count](inventory-count/hard-count.md)
 * [Transfer Orders](transfer-order/transfer-order-management.md)
   * [Transfer Order Fulfillment](transfer-order/transfer-order-fulfillment.md)
   * [Transfer Order Receiving](transfer-order/transfer-order-receiving.md)

@@ -4,74 +4,90 @@ description: >-
   different locations at once using the new bulk import feature.
 ---
 
-# Bulk Upload Cycle Count
+# Creating Cycle Counts in Bulk
 
-## Bulk Import Cycle Count
+The **Bulk Import** functionality of HotWax Commerce’s `Cycle Count` app is designed to simplify the process of creating and assigning cycle counts for multiple products across multiple facilities. It allows users to create multiple cycle counts using a CSV upload which eliminates the need to create individual requests for each product or location. 
 
-The **Bulk Import** functionality in HotWax Commerce’s `Cycle Count` App is designed to simplify the process of creating and assigning cycle counts across multiple facilities and products. This feature is essential for large retailers who regularly perform cycle counts across various store locations to maintain accurate inventory records.
+This reduces manual effort, minimizes errors, and enhances operational efficiency, especially for retailers with large store networks.
 
-Efficiently managing cycle counts is critical for keeping inventory data consistent between physical and system counts, preventing stock discrepancies, and ensuring smooth operations. The bulk import capability allows users to create multiple cycle count requests simultaneously by uploading a CSV file, eliminating the need to create individual requests for each product or location. This reduces manual effort, minimizes errors, and enhances operational efficiency, especially for retailers with large store networks.
+This guide explains how to create cycle counts in bulk
 
-For example, if a retailer needs to conduct inventory audits for several products across 30 stores, instead of manually creating 30 separate cycle count requests, they can upload a single CSV file. This capability ensures that operations teams can manage inventory counts faster, stay on schedule, and plan audits with greater ease.
+## Preparaing the CSV File 
 
-## Step-by-Step Usage Instructions:
+The template of the CSV file is as follows:
 
-Here’s how users can utilize the Bulk Import feature within the `Cycle Count` App for seamless cycle count management:
+| COUNT_NAME | FACILITY_ID | PRODUCT_SKU     | STATUS            | DUE_DATE    |
+|------------|-------------|-----------------|-------------------|-------------|
+| WEEK-3     | 49          | WP09-28-Black  | INV_COUNT_CREATED | 2024-11-31  |
+| WEEK-3     | 49          | WSH07-28-Blue  | INV_COUNT_CREATED | 2024-11-31  |
+| WEEK-2     | 159         | WP02-28-Purple | INV_COUNT_ASSIGNED| 2024-11-12  |
+| WEEK-1     | 156         | WSH11-28-Orange| INV_COUNT_CREATED | 2024-10-31  |
 
-**1. Access the Cycle Count App**
+HotWax Commerce’s Cycle Count app accepts five key fields:
 
-* Navigate to the `Cycle Count` App from the HotWax Commerce launchpad.
-* Log in using your credentials.
+1. **Count_Name**: The name of the inventory count.
+    - This is a **required field**.
+    - If multiple SKUs are part of the same count, repeat the count name. 
+    - For example, if the user is naming a count "WEEK_3", it should be repeated for each SKU in that count.
 
-**2. View Draft Cycle Counts**
+2. **PRODUCT_SKU**: The SKU of the product requiring a cycle count.
+    - This is a **required field**.
 
-* Upon logging in, the default screen displays all **Draft Cycle Counts** that have not yet been assigned to a facility. Here, you can view existing cycle counts in progress.
+3. **Facility_ID**: The ID of the HotWax facility where the count will be assigned.
+    - This is an **optional field**.
+    - Blanks  the count in the 'Draft' status'.
 
-**3. Create a New Bulk Cycle Count**
+4. **STATUS**: The status of the count.
+    - This is an **optional field**.
+    - The user must use:
+      - `INV_COUNT_CREATED` to save the count as a draft and assign it later.
+      - `INV_COUNT_ASSIGNED` to assign the count immediately.
+    - Blanks create the count in the 'Draft' status'.
 
-* In the bottom right corner, click the `+` button to initiate a new count.
-* Two options will appear: one for a single cycle count and another for bulk cycle counts. Select the `bulk cycle count` option (icon with multiple pages).
+5. **DUE_DATE**: The due date of the count. 
+    - This is an **optional field**.
+    - The user must use the `yyyy/mm/dd` format.
+    - Blanks create the count with no due date.
 
-**4. Upload the CSV File**
+{% hint style="info" %}
+- The above field names are only examples adn the user can customize the names of the fields. The app allows the flexibility to map the custom fields to the system's fields. Find how to do this in the next section.
 
-* This will open the `Bulk Upload` page.
-* Click on the `Upload` button and select the prepared CSV file containing the cycle count data.
+- Count names can be repeated for different facilities. For exmaple, two facilities can have a count named week-1.
 
-**5. Map CSV Fields to HotWax Fields**
+{% endhint %}
 
-When using the Bulk Import feature in HotWax Commerce’s `Cycle Count` App, the system enables users to map fields from their uploaded CSV file to the relevant fields within HotWax Commerce. This flexible mapping process allows retailers to customize their cycle count creation based on their unique inventory and operational needs. Additionally, once mappings are completed, users can **save these mappings for future uploads**, eliminating the need to reconfigure them every time, further streamlining the process.
+## Steps to Create Cycle Counts in Bulk:
 
-**Required Fields:**
+ **1. Accessing the Cycle Count app**
 
-* **Count Name**: Assign a unique name to each cycle count to differentiate between them. For example, cycle counts for different product categories (e.g., Jackets, Shirts) should have distinct names. Each count can also have different due dates if needed, helping store associates prioritize tasks accordingly.
-* **Product SKU**: Enter the SKUs (Stock Keeping Units) for the products that need to be counted. SKUs are critical for identifying specific items in inventory. Ensure no duplication of SKUs within a single count to avoid errors or confusion during the audit process. This field is crucial for inventory accuracy, as the SKU forms the backbone of product identification in the system.
+* Navigate to the `Cycle Count` app from the HotWax Commerce's launchpad.
+* Log in using credentials.
 
-**Optional Fields:**
+**2. Uploading the CSV file**
 
-* **Facility**: Operations managers can map specific facilities where the cycle counts will take place. If this information is not yet available, you can leave this field unmapped during the initial CSV upload. The counts will remain in the draft stage, allowing users to assign facilities later once the data is ready. This flexibility ensures that inventory counts can be initiated without delay, even if facility assignment is still pending.
-* **Status**: Choose the status of the cycle counts during the import. For instance, you may set the counts as **Draft** if facilities have not yet been assigned, or as **Assigned** if facilities have already been determined and the counts are ready for execution. Setting the status upfront helps operations teams track the progress of cycle counts and manage their workflows effectively.
-* **Due Date**: Assign a due date to provide a timeline for store associates to complete their cycle counts. This optional field allows operations managers to enforce deadlines and ensure that all inventory audits are completed within a set time frame, helping to maintain an organized and consistent approach to inventory control.
+* IN the bottom right corner of the draft page, click the `+` button to initiate a new count.
+* Two icons appear; Select the icon with multiple pages for a bulk import.
+* On the `Draft Bulk` modal, click on the `Upload` button on the top-right to import the prepared CSV file.
 
-**Additional Details:**
+**3. Mapping custom CSV fields to the systemic fields**
 
-* **Saving Mappings for Future Use**: Once you have mapped the CSV fields to the corresponding HotWax fields, you can save these mappings for future use. This feature ensures that repeated cycle count uploads—especially for recurring tasks across multiple stores—can be handled efficiently without needing to redo the mapping every time. By saving mappings, retailers can quickly initiate bulk cycle counts, further reducing manual input and enhancing productivity.
+* Click the dropdown next to "Count name" and select your custom field for the count name.
+* Repeat previous step for the other fields (Product SKU, Facility, Status, Due Date).
 
-This comprehensive field mapping process is crucial for customizing cycle counts to match the specific needs of retailers, and the ability to save these configurations increases efficiency for future inventory management tasks.
+{% hint style="info" %}
+The app allows the user to save the mappings by clicking on the `+ New mapping` button.
+{% endhint %}
 
-**6. Confirm and Upload**
+**4. Confirm and Upload**
 
-* After mapping the necessary fields, click the `Upload` button.
+* After mapping the fields, click the `Upload` button on the bottom of the screen.
 * Confirm the `upload` in the popup window.
 
-**7. Review Uploaded Cycle Counts**
+**5. Review uploaded files**
 
-* Once processed, the uploaded cycle counts will appear at the bottom of the import screen.
-* These counts will appear in the `Draft` section until they are assigned to specific facilities.
+* Once uploaded, the file will appear at the bottom of the `Draft bulk` screen which can be downloaded. 
+* The files will be processed within 10 minutes of the upload.
 
-**8. Canceling Uploaded Counts**
+**6. Canceling Uploaded Counts**
 
-* If any uploaded cycle counts have not been processed, users can cancel them by clicking the `trash-bin icon` next to the corresponding count.
-
-This standard bulk import feature streamlines cycle count scheduling and management, allowing retailers to maintain accurate and timely inventory records with minimal manual input.
-
-<figure><img src="https://github.com/user-attachments/assets/a4541e72-b58c-4ede-8c50-e83b4827dc50" alt=""><figcaption></figcaption></figure>
+* If the uploads have not been processed, users can cancel them by clicking the `trash-bin icon` next to the file.

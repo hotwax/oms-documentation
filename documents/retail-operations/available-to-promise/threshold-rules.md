@@ -69,7 +69,7 @@ Threshold Rule Setup
 
 ## Setting Threshold Rules for Multiple Channels
 
-If you want to create a threshold rule for multiple inventory channels, you will need to create separate channels and select channel config facility as per the requirement. To learn how to create new channels and manage threshold configurations, refer to our **Detailed User Manual** for further instructions.
+If you want to create a threshold rule for multiple inventory channels, you will need to create separate channels and select channel configuration facility as per the requirement. To learn how to create new channels and manage threshold configurations, refer to our **Detailed User Manual** for further instructions.
 
 ## Schedule Threshold Rule
 

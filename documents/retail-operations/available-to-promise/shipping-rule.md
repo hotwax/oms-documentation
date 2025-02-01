@@ -22,7 +22,7 @@ Let’s suppose a retailer wants to limit the capacity of their retail stores to
 
 **Navigate to the Shipping Page:** Go to the `Shipping` section in the `ATP App`.
 
-**Access the Facilities Tab:** Click on the `Facilities` tab to view the complete list of all facilities (stores and warehouses).
+**Access the Facilities Tab:** Click on the `Facility` tab to view the complete list of all facilities (stores and warehouses).
 
 **Set Maximum Order Capacity:** For each store, click on the `capacity chip` next to the store’s card. You will see three options: - `Unlimited Capacity` - `No Capacity` - `Custom Capacity`
 

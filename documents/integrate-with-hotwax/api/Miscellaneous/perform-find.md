@@ -14,7 +14,7 @@ Example: `https://demo-oms.hotwax.io/api/performFind`
 
 Content-Type: application/json
 
-### Example Params: 
+### Example Parameters: 
 
 [https://demo-oms.hotwax.io/api/performFind?inputFields=<searchcondition>&entityName=<entityname>&fieldList=<fieldname>&fieldList=<fieldname>&viewSize=1](https://demo-oms.hotwax.io/api/performFind?inputFields=search_condition_value&entityName=entity_name_value&fieldList=field_name1&fieldList=field_name2&viewSize=1
 )

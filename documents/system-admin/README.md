@@ -85,4 +85,4 @@ Video: Application Instance
 **Related flows:**
 
 1. [Launchpad](https://launchpad.hotwax.io/home/)
-2. [User management](https://docs.hotwax.co/user-guides/administration/users)
+2. [User management](https://docs.hotwax.co/documents/system-admins/administration/users/manage-user)

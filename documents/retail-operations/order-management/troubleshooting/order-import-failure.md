@@ -32,7 +32,7 @@ When an order fails to import from Shopify to HotWax, it typically does not appe
 1. If the order still fails to import, troubleshoot the import failure by checking the error logs in the EXIM Import record for detailed errors. Some possible failure reasons are:
     - Connection timeout.
     - Transaction is empty.
-    - [Special character errors](troubleshooting/order-import.md)
+    - [Special character errors](https://docs.hotwax.co/documents/retail-operations/orders/order-management/troubleshooting/order-import)
     - Valid fields are missing in order JSON.
 
 2. Identify the issue's source, determining if it originates from Shopify, the integration process, or HotWax Commerce.

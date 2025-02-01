@@ -32,10 +32,12 @@ Once ASN is located, store associates can tap to view the `ASN details` includin
 
 **3. Locate Items:**
 
-The inbound shipments generally contain multiple product items, store associates can either scan individual product barcodes or search SKUs to locate specific items and start receiving. In case you are not managing barcodes, tap on the `image icon` to see the enlarged to easily identify the product before receiving it. Users can also change their product identifiers from the settings page.
+The inbound shipments generally contain multiple product items, store associates can either scan individual product barcodes or search SKUs to locate specific items and start receiving. In case you are not managing barcodes, tap on the `image icon` to see the enlarged image to easily identify the product before receiving it. Users can also change their product identifiers from the settings page.
 
-{% embed url="https://youtu.be/OwVIBaKY4ds" %}
-Video: Search shipment items
+
+
+{% embed url="https://youtu.be/OwVIBaKY4ds?si=Mk7ckhajTykEiHf9" %}
+Search Shipment Items
 {% endembed %}
 
 {% embed url="https://youtu.be/U8TrEK2xL44" %}
@@ -121,7 +123,6 @@ Search for the product by its SKU or name. Once the product appears in the searc
 **Step 3:**
 
 The product will then appear on the Shipment Details page. Enter the quantity of the unexpected item and proceed with the usual receiving process.
-
 
 {% embed url="https://youtu.be/UQ4XKINQeTE" %}
 Add Shipment Item

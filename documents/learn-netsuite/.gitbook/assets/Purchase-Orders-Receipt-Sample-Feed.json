@@ -1,0 +1,31 @@
+[ {
+  "productStoreId" : "STORE",
+  "orderId" : "MNO12313",
+  "orderExternalId" : "1234567890",
+  "originFacilityId" : "BROADWAY",
+  "orderStatusId" : "ORDER_COMPLETED",
+  "purchaseOrderItems" : [ {
+    "availableToPromise" : 20,
+    "itemStatusId" : "ITEM_COMPLETED",
+    "orderId" : "MNOO12313",
+    "orderItemSeqId" : "00001",
+    "productId" : "68860",
+    "quantity" : 20,
+    "receivedDate" : "2024-08-22T05:31:06-04:00",
+    "shipmentReceipts" : [ {
+      "totalQuantityAccepted" : 20,
+      "_entity" : "org.apache.ofbiz.shipment.shipment.PurchaseOrderShipmentReceipt",
+      "receiptId" : "10571",
+      "receivedDate" : "2024-08-22T05:31:06-04:00",
+      "productId" : "68860",
+      "shipmentItemSeqId" : "00001",
+      "totalQuantityRejected" : 0,
+      "shipmentStatusId" : "PURCH_SHIP_RECEIVED",
+      "shipmentId" : "12071",
+      "shipmentTypeId" : "PURCHASE_SHIPMENT"
+    } ],
+    "sku" : "123-456",
+    "totalReceivedQuantity" : 20,
+    "totalRejectedQuantity" : 0
+  } ]
+} ]

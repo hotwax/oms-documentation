@@ -28,7 +28,7 @@ Here's how you can set up the Store Pickup rule Using the ATP App:
 Go to the `Store Pickup` page within the `ATP App`.
 
 **Access the Facilities Tab:**\
-Click on the `Facilities Tab` to view the complete list of all your facilities (both warehouses and stores).
+Click on the `Facility Tab` to view the complete list of all your facilities (both warehouses and stores).
 
 **Toggle Store Pickup for Stores:**\
 For the three stores where you want to enable store pickup, turn on the toggle next to each store's name.
@@ -49,7 +49,7 @@ In this scenario, let’s assume the retailer wants to suppress store pickup fro
 Here's how you can suppress store pickup from Channel:
 
 **Create Rule:**\
-Navigate to the `Pickup` page within the `ATP App` and go to the `Product by Channel` tab. Click on the `Add` button to create a new rule.
+Navigate to the `Store Pickup` page within the `ATP App` and go to the `Product And Channel` tab. Click on the `Add` button to create a new rule.
 
 **Rule Name:**\
 Enter a descriptive name for the rule, such as "Suppress Store Pickup for US Stores," to easily identify its purpose later.

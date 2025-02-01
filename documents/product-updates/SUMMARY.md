@@ -17,7 +17,7 @@
   * [New Filters to Improve Order Routing Efficiency](2024/oct24/new-filters-to-improve-order-routing-efficiency.md)
   * [Configure BOPIS Settings at the Product Store Level](2024/oct24/configure-bopis-settings-at-the-product-store-level.md)
   * [Generate Shipping Labels for Multiple Packages in One Shipment](2024/oct24/generate-shipping-labels-for-multiple-packages-in-one-shipment.md)
-* [Sep'23](2024/sep23/README.md)
+* [Sep'24](2024/sep23/README.md)
   * [Update Customers with Post-Purchase Shipment Status](2024/sep23/update-customers-with-post-purchase-shipment-status.md)
   * [Bulk Import Cycle Counts](2024/sep23/bulk-import-cycle-counts.md)
   * [View Picklist for BOPIS Orders](2024/sep23/view-picklist-for-bopis-orders.md)

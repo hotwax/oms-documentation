@@ -1,118 +1,121 @@
----
-description: >-
-  If the order item inventory is exhausted or damaged, report the reason and
-  reject the item.
----
-
 # Rejection
 
-## Single Order Rejection
+The Fulfillment App allows store users to reject items from an order or complete an order when it can’t be fulfilled from the current facility. Rejected orders are moved to the ‘Rejected Item Parking’, to automatically reallocate them. Ensure that at least one brokering rule addresses orders at this parking.
+
+## Reject Single Orders
+
+1. Go to the **In-Progress** page.  
+2. Search for the desired order.  
+3. Click the **Trash Bin** icon next to it.  
+4. Select an appropriate reason from the dropdown.  
+5. Save the changes.  
+
+The OMS will route the order to another facility based on product availability, customer shipping preferences, and routing rules.
+
+## Bulk Reject Orders
+
+Stores may face issues with their fulfillment capabilities in some instances. When a store cannot fulfill orders for a given day, store managers with the permission of `COMMON_ADMIN` can reject all orders in bulk from the **Open** and **In Progress** order pages.
+
+1. In the **Open** or **In Progress Orders** screens, click the **Reject All** icon at the top right corner.  
+2. All orders in that status will be rejected and removed from the facility.  
 
 {% hint style="info" %}
-​Rejected items will be removed from the dashboard.
+The Reject All button does not affect the inventory of the facility. To ensure that no new orders are brokered to the facility, set the **Online order fulfillment capacity** to **No Capacity**.
 {% endhint %}
 
-1. Go to the In-Progress page.​
-2. ​Search for the desired order.
-3. Click the \`​Report an Issue\`\` function.
-4. Select an appropriate reason from the dropdown.
-5. Save the changes.
+## Rejection Analytics
 
-The OMS will route the order to another facility, depending on the availability of the product at another facility, the customer's shipping preferences, and routing rules.
+The Rejection Analytics Page provides a detailed view of order rejections, helping store associates and managers analyze trends and address inventory issues.
 
-{% embed url="https://youtu.be/5JpUM8aqFSM" %}
-Video: Single Order Rejection
-{% endembed %}
+### Features:
 
-***
+- **Total Rejections:** Displays the total count of all rejected items.  
+- **Frequently Rejected Items:** Highlights the products most often rejected.  
+- **Common Rejection Reasons:** Lists common causes like out-of-stock items or damaged products.  
+- **All Rejected Items:** Shows a complete list of rejected order items for detailed tracking.  
 
-#### How OMS makes inventory changes based on rejection reasons:
+### Filters and Search Options:
 
-* **NOT IN STOCK:** OMS sets the ATP and QOH inventory to **0** for the rejected product at the store. This ensures that no new orders are placed for the product until it is back in stock
-* **MISMATCH:** OMS decreases the ATP and QOH inventory by the rejected quantity. This means that the product is still available in stock, but it is not available to fulfill orders that require the specific size or color that was rejected.
-* **DAMAGE:** OMS decreases the ATP inventory by the rejected quantity. This means that the product is no longer available to fulfill orders. The QOH inventory remains unchanged, as the product is still in stock, but it is damaged and cannot be sold.
-* **WORN DISPLAY:** OMS decreases the ATP inventory by the rejected quantity. This means that the product is no longer available to fulfill orders, as it is worn and cannot be sold. The QOH inventory remains unchanged, as the product is still in stock.
+- **Time Filters:** Analyze rejection data from the last 24 hours or 7 days.  
+- **Search:** Locate specific rejected items using Product SKUs or order details.  
 
-## Bulk Order Rejection
+## Rejection Reasons
 
-In HotWax Commerce, store managers have a Reject All feature that allows rejecting all orders that are in an open state or in-progress state coming for fulfillment. This feature is particularly valuable during times of high demand or when logistical hurdles arise, such as when a carrier truck cannot pick up the items from their store.
+Retailers can configure which rejection reasons they want to offer for their staff to choose from if they're unable to fulfill items in an order. To access this page, users must have `SFA_ADMIN` permission.
 
-By rejecting all online orders, store managers can ensure that orders can be fulfilled from other locations in case their facility is unavailable for fulfillment to avoid delays and order cancellations.
+### Overview:
 
-Note: The store manager needs to select `Online order fulfillment` capacity to `No Capacity` to ensure that no new orders are  brokered to this facility
+- **Store Associates:** In the Fulfillment App and BOPIS App, store associates see rejection reasons specific to in-store operations, such as out-of-stock items or damaged products.  
+- **Customer Service Representatives (CSRs):** In the Order Management System, CSRs view broader rejection reasons suited for customer interactions, such as manual reallocation.  
+- **Admin Users:** Admin or operations managers can view all rejection reasons across roles for complete oversight.  
 
+### Toggle for Showing Rejection Reasons:
 
-#### Reject outstanding orders in bulk
+Rejection reasons can be shown or hidden from store associates using the fulfillment app by using the toggle on the settings page.
 
-1. In the open screen, click on 'Reject All' icon at the top right corner.
-2. All open orders will be rejected and removed from the Open Orders page.​
+**How It Works:**
+- **When the toggle is ON:** The specific rejection reason will be visible, while all other reasons will remain hidden.
+- **When the toggle is OFF:** The specific rejection reason will be hidden, but all other reasons will still be visible.
 
-{% embed url="https://youtu.be/4eSmmv8y6to" %}
-Video: Reject outstanding orders in bulk
-{% endembed %}
+### Rejection reason types that trigger inventory adjustments and how these types cause stock levels to be updated:
 
-***
+Rejection reasons in the system are divided into specific types to define how they affect inventory. Each type explains what action should be taken on the inventory when a rejection reason is applied. This helps manage inventory updates smoothly and accurately.
 
-#### Reject In-progress Orders
+- **REPORT_NO_VAR:**  
+  Rejection reasons with this type do not affect inventory.  
+  - Stock levels remain unchanged when these reasons are used.
 
-From the in-progess screen, click on the ​'Reject All' icon at the top right corner. All in-progress orders will be rejected and removed from the In-Progress Orders page.
+- **REPORT_VAR:**  
+  Rejection reasons with this type cause inventory to be adjusted.  
+  - The rejected quantity is deducted from the store’s inventory, reducing stock availability for the rejected item.
 
-{% embed url="https://youtu.be/fCEWxw6guGA" %}
-Video: Reject in progress orders in bulk
-{% endembed %}
+- **REPORT_ALL_VAR:**  
+  This type eliminates all remaining inventory for the rejected item.  
+  - It is used in scenarios where the entire stock for the item needs to be depleted.
 
-{% hint style="info" %}
-`Reject all` button does not have any effect on the inventory of the facility. Users need to set the fulfillment capacity of the facility to 0 to ensure that orders are not brokered again to that facility.
-{% endhint %}
+The table below lists the default rejection reasons and their assigned types, which define how they impact inventory levels. Retailers can also create custom rejection reasons with specific types to handle unique inventory adjustments as needed.
 
-## Manage Reasons
+| Rejection Reason | Type           | Action                                                                                   | Purpose                                                                                 |
+|------------------|----------------|------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
+| NOT IN STOCK     | REPORT_ALL_VAR | Sets ATP and QOH inventory to 0 for the rejected product.                                 | Prevents new orders until the product is restocked.                                     |
+| MISMATCH         | REPORT_VAR     | Decreases ATP and QOH inventory by the rejected quantity.                                 | Indicates the product is still in stock but unavailable for orders requiring the rejected size or color. |
+| DAMAGE           | REPORT_VAR     | Decreases ATP inventory by the rejected quantity, while QOH remains unchanged.           | Shows the product is in stock but damaged and unsellable.                               |
+| NO VARIANCE      | REPORT_NO_VAR  | Does not affect either ATP or QOH inventory.                                             | Useful for scenarios where inventory levels remain unchanged, e.g., canceled orders without stock issues. |
 
-Retailers can configure which rejection reasons they want to offer for their staff to choose from if they're unable to fulfill items in an order. This section walks through how those reasons are managed in the OMS today.
+## Adjust QOH Along with ATP on Rejection
 
-They can also configure whether a rejection reason from the fulfillment app should impact inventory at the store. Users have the flexibility to choose whether specific rejection reasons result in an actual change to the store's inventory or merely serve as a rejection without affecting stock levels.
+The **Adjust QOH Along with ATP on Rejection** toggle provides control over inventory adjustments during order rejections.
 
-### Configuration Details
+### Why disable impact on QOH?
 
-If the reason (Enumeration) `enumTypeId` is not `REPORT_NO_VAR`, the rejection will impact inventory. If inventory should be depleted when a rejection reason is used, `REPORT_VAR` `enumTypeId` will lead to changes in store inventory. When a rejection reason should elminate all remaining inventory for the item being rejected, set the type to `REPORT_ALL_VAR`.
+The main reason to disable QOH impact from rejection reasons would be to limit the impact store associates have on your inventory record. Retailers that use HotWax Commerce’s store inventory management capabilities like Cycle Counting rely on the QOH level as a source of truth for physical inventory levels. Allowing rejections to impact QOH opens up the possibility of store staff accidentally creating massive inventory discrepancies by selecting the wrong rejection reason.
 
-**Out Of The Box Rejection Reasons**
+By suppressing ATP and not QOH, over-selling is still prevented and orders for those particular products won’t be routed to that store. When fulfillment administrators then review the rejections and inventory discrepancies, they are able to use the delta between the QOH and ATP to judge the validity of the store staff’s claim of inventory being unavailable.
 
-| Enum Id           | Enum Type Id     | Enum Code         | Sequence Id | Description    | Enum Name | Sequence Num |
-| ----------------- | ---------------- | ----------------- | ----------- | -------------- | --------- | ------------ |
-| INACTIVE\_STORE   | REPORT\_NO\_VAR  | INACTIVE\_STORE   | 40          | Inactive store |           |              |
-| MISMATCH          | REPORT\_VAR      | MISMATCH          | 40          | Mismatch       |           |              |
-| NOT\_IN\_STOCK    | REPORT\_ALL\_VAR | NOT\_IN\_STOCK    | 10          | Not in Stock   |           |              |
-| NO\_VARIANCE\_LOG | REPORT\_NO\_VAR  | NO\_VARIANCE\_LOG | 40          | No variance    |           |              |
-| REJ\_RSN\_DAMAGED | REPORT\_VAR      | DAMAGED           | 30          | Damaged        |           |              |
-| WORN\_DISPLAY     | REPORT\_VAR      | WORN\_DISPLAY     | 20          | Worn Display   |           |              |
+Retailers that don’t utilize HotWax Commerce for store inventory management only need the OMS to maintain an accurate record of sellable inventory. In that case, retailers should allow rejections to impact both ATP and QOH.
 
+## Partial Rejection
 
-## Rejections 2.0
+When partial rejection is enabled, individual items get rejected from a facility without impacting the rest of the order. Here’s how it works:
 
-The fulfillment app allows store users to reject an order line item when it is unavailable to be fulfilled from that facility. Users can click on the trash-bin button present against the order line item to reject the item with a rejection reason.
+1. **Reject the Item:** Click the trash bin icon next to the unfulfillable item.  
+2. **Choose a Reason:** Select a reason for rejection, like "not in stock" or "damaged."  
+3. **Process Remaining Items:** The rest of the items in the order remain at the allocated facility for fulfillment and will be shipped as usual.  
+4. **Rebrokering:** The rejected item is sent to another facility for fulfillment.  
 
-Note: Partial fulfillment may or may not be selected by the merchant. 
+When partial rejection is disabled, rejecting any item in an order triggers the rejection of the entire order. Here’s how this works:
 
-Depending on the choice let's look at each case scenario:
+1. **Reject the Item:** Click the trash bin icon next to the unfulfillable item.  
+2. **Choose a Reason:** Select a reason for rejection, like "not in stock" or "damaged."  
+3. **Automatic Rejection:** The entire order is rejected with the reason "reject entire order." This will not impact inventory variance or appear in rejection reports.  
 
-### Partial Rejection Allowed
+If additional items need to be rejected with a specific reason, click on the default rejection reason applied to the item and make a selection.
 
-1. **Reject Unfillable Item:** Click the reject button next to the specific item.
-2. **Choose Reason:** Select a reason like "not in stock" or "damaged".
-3. **Fulfill Remaining Items:** Process the remaining items as usual and create a shipment.
-4. **Rebrokering:** The rejected item will be sent to another facility for fulfillment.
+## Collateral Rejection
 
-### Partial Rejection Not Allowed
+Collateral rejection helps manage situations where the product in a rejected order item is part of multiple pending orders at a facility. When this is enabled, rejecting an item automatically rejects it in all other orders containing the same product. The behavior depends on whether partial rejection is allowed:
 
-**Case 1: Single Unfillable Item**
+- **If partial rejection is allowed:** Only the selected item will be rejected from all related orders, and the remaining items in those orders will still be fulfilled from the original facility.  
+- **If partial rejection is not allowed:** All orders containing the rejected item will be completely rejected, not just the individual item.  
 
-1. **Reject Item:** Click the reject button and select a reason such as "not in stock".
-2. **Automatic Rejection:** The entire order will be rejected with the reason "reject entire order" which will not impact inventory variance and not count in the rejections reporting.
-
-**Case 2: Multiple Unfillable Items**
-
-1. **Reject an Item:** Click the reject button on one unfillable item.
-2. **Automatic Rejection:** All items will be rejected with the reason "reject entire order."
-3. **Update Reason (Optional):** If another item has a different rejection reason, manually change it.
-
-**Note:** In cases where partial rejection is not allowed, rejecting any item automatically triggers rejection of the entire order.
+This feature ensures faster re-routing of unfulfillable items, minimizing delays across all orders containing the same product.

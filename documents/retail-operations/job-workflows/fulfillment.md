@@ -5,67 +5,71 @@ description: "Learn about the Fulfillment jobs in HotWax Commerce."
 
 # Fulfillment
 
-## Shipping
+### Ship Packed Orders
+Job Name : `Ship Packed Orders`  
+Job Enum ID: `JOB_SHIP_ORD_PKD`  
+Service Name : `shipPackedOrders`  
+Flow : `Order Fulfillment in HotWax`  
 
-### Ship packed Orders:
-**Job name:** Ship packed orders  
-**Job Enum ID:** JOB_SHIP_ORD_PKD  
+**The `Ship Packed Orders` job in HotWax's Fulfillment App updates order status from packed to shipped.** Store associates mark an order as shipped by tapping the "Shipped" button. However, in some cases, failing to tap the button results in incomplete fulfillment.
 
-**Description**
-
-The Ship Packed Orders Job is activated in the Job Manager App, orders will be automatically marked as shipped. Ensure to enable the `isTrackingRequired` setting on shipping methods to prevent automatic shipment for methods without tracking codes. However, note that this setting does not directly apply to the orders being shipped. To streamline order shipping in HotWax Commerce, navigate to the Completed tab and select the Ship Orders function to bulk mark them as shipped. 
+This job is generally scheduled to run at midnight and marks all the orders in the **packed** status as updated to **shipped**. Retailers generally assume that once the carrier has arrived, it is highly likely that all packed orders have been shipped.
 
 **No custom parameters for this job**
 
 ## History
 
 ### Order Fulfillment History
+Job Name: `Order Fulfillment History`  
+Job Enum ID: `JOB_ORD_FLMNT_HST`  
+Service Name: `ftpImportFile`  
+Flow: `Order Fulfillment in HotWax`
 
-**Job Name:** `Order Fulfillment History`  
-**Job Enum ID:** `JOB_ORD_FLMNT_HST`
+HotWax and Shopify both maintain order fulfillment statuses. A Moqui job in HotWax ensures system integrity by synchronizing order fulfillment history between the two platforms. This job ensures that any orders marked as fulfilled in Shopify are also updated as fulfilled in HotWax, maintaining consistency across systems.
 
-**Description**
+**How does this job work?**  
+HotWax sends an API request to Shopify to provide all the orders fulfilled from the last job run until the current timestamp. In response to this request, Shopify provides a JSON file that is imported by the ‘Order Fulfillment History’ job in HotWax and uploaded to `MDM_UPD_ORD_FMNT_HST` in MDM. From there, the `Process Bulk Import Files` job runs, and the fulfilled status is marked.
 
-The order fulfillment history job within HotWax Commerce is a crucial component of the system's functionality. It involves the creation or updating of records related to order fulfillment, which typically includes tasks such as processing orders, tracking inventory, and managing shipping and delivery. This job ensures that accurate and up-to-date information regarding order fulfillment is maintained within the system, enabling efficient handling of customer orders and timely delivery of products. By integrating with FTP (File Transfer Protocol), the job can securely access and exchange data, enhancing the automation and reliability of the order fulfillment process. Overall, this job plays a vital role in optimizing the operational efficiency and customer satisfaction of HotWax Commerce-powered businesses.
 
 **Custom Parameters**
-
-| Parameter         | Type     | Description                                                    | Default Value        |
-|-------------------|----------|----------------------------------------------------------------|----------------------|
-| `configID`        | Required | Identifies the configuration for Order Item Attribute records. | `MDM_UPD_ORD_FMNT_HST`|
-| `propertyResources` | Required | Specifies the property resource for configuration.            | `FTP_CONFIG`         |
-| `remoteFilename`  | Optional | Specifies the remote filename for processing.                 | Not specified        |
-| `groupBy`         | Optional | Specifies a grouping parameter for the job.                   | Not specified        |
-| `additionalParameters` | Optional | Additional parameters for job customization.                | Not specified        |
-| `fileNameRegex`   | Optional | Specifies a regular expression for filtering filenames.       | Not specified        |
-| `importPath`      | Optional | Specifies the SFTP location and path for importing the file into the system. | Not specified |
-| `scheduleNow`     | Optional | When importing files into the OMS, forces the system to pick the file out of sequence for immediate processing. Enabled by default when importing files from FTP, but can be disabled during high-volume syncs for system stability. | Enabled |
+- The recommended frequency for this job is 15 minutes.
+- This job has configId and propertyResource as the required parameters.
+- It has some optional parameters.
 
 
 ## Notification
 
 ### Open BOPIS Order Notification
+Job Name: Open BOPIS Order Notification  
+Job Enum ID: JOB_OPN_BOPIS_ORD_NT  
+Service Name: sendOpenBopisOrderNotification  
+Flow: Order Fulfillment from HotWax  
+ 
+**This job is used for notifying store associates of the open BOPIS orders allocated to their store.** Basically, when a BOPIS order is allocated to a store, it is generally expected that the BOPIS order must be catered to as soon as possible. So it is important to get notified for BOPIS orders when they are allocated to stores.
+ 
+**How are stores notified?**
+Basically, this job checks all the BOPIS orders placed between the timeframe of the last job run and the current timestamp. And sends push notifications on the BOPIS App for the respective stores.
+ 
+**It is important to note that if this job is not scheduled, stores will not be notified about BOPIS orders allocated to them.**
 
-**Job Name:** `Open BOPIS Order Notification`  
-**Job Enum ID:** `JOB_OPN_BOPIS_ORD_NT`
-
-To send an Open BOPIS order notification HotWax Commerce sends a notification for open and ready-to-pickup orders. In the Job Manager app, navigate to the fulfillment page, and click on the Open BOPIS order notification button. An extended menu will appear on the right allowing selection of the run time and scheduling preferences. Save the settings to regulate the frequency of the notifications.
-
-**No custom parameter for this job**
-
-### Ready to Pick BOPIS Order Notification
-
-**Job Name:** `Ready to Pick BOPIS Order Notification`  
-**Job Enum ID:** `JOB_RP_BOPIS_ORD_NT`
-
-### Description  
-The `Ready to Pick BOPIS Order Notification` job sends a notification to the customer once their Buy Online, Pick Up In Store (BOPIS) order is packed and ready for pickup, ensuring timely communication about the order's availability for collection.
 
 **Custom Parameters**
+- There are no custom parameters for this job.
+- The recommended frequency for this job in 15 minutes.
 
-| Parameter     | Type     | Description                                                       | Default Value          |
-|---------------|----------|-------------------------------------------------------------------|------------------------|
-| `topicEnumId` | Required | This is used to represent a unique identifier for an enumerated value related to a topic or subject. | `READYPICK_BOPIS_ODR`  |
+### Ready to Pick BOPIS order Notification.
+Job Name: `Ready to Pick BOPIS Order Notification`  
+Job Enum ID: `JOB_RP_BOPIS_ORD_NT`  
+Service Name: `sendOrderNotification`  
+Flow: `Order Fulfillment From HotWax`  
+ 
+**This job is used for notifying customers when their BOPIS order is ready for pickup.**Basically, when a store associate fulfills a BOPIS order and clicks the 'READY FOR PICKUP` button, this job internally triggers marketing platforms (like Klaviyo) to automate the notification process.
+
+**Custom Parameters**
+- The recommended frequency for this job is 15 minutes.
+- This job has `topicEnum Id` as required Parameter.
+
+___
 
 ### Open Shipping Order Notification
 
@@ -87,12 +91,42 @@ The `Open Shipping Order Notification` job notifies store associates whenever an
 **Job Name: `Auto Cancellations`**
 
 **Description**
-
 Orders that remain unfulfilled beyond their auto-cancellation date will be automatically canceled within HotWax Commerce. Additionally, if the upload for canceled orders is enabled, these orders will also be canceled in Shopify.
 
 **No custom parameters for this job**
 
 ## More Jobs
+
+### Send Packed Order Mail
+Job Name: `Bulk Send Packed Order Mail`  
+Job Enum id: `JOB_PACKED_MAIL_ODR`  
+Service Name: `bulkSendPackedOrderMail`  
+Flow: Order Fulfillment Flow  
+
+**This job is used to send email notifications to customers when their orders are in packed status.** When an order item is marked as packed in the Fulfillment App, HotWax Commerce communicates the shipment status to the retailer’s marketing platform, notifying customers that their order has been shipped from the facility.
+
+**Customer Parameters**
+- This has no required parameters.
+- `frequency` and `emailType` is the required parameters
+
+___
+### Packed BOPIS Order Reminder Notification
+Job Name: `Send Packed BOPIS Order Reminder Notification`  
+Job Enum id: `JOB_PCK_ORD_RMDR`  
+Service Name: `pickReminderAtRegularInterval`  
+Flow: `Packed order Notification from HotWax to Klaviyo`  
+ 
+**This job is for notifying customers to pick up their BOPIS order after a specified duration from when their order is packed.** There can be a scenario when, after a ready-to-pickup email has been sent, the customer has not responded. In such cases, this job is used to trigger marketing platforms (like Klaviyo) to send a reminder email to customers.
+ 
+**How is the reminder notification sent?**
+When the order is marked “Ready for pick up,” it’s moved to packed status and shown in the Packed tab of the BOPIS app. When an order is in packed status for more than 7 days, a reminder pick-up email is sent to the customer. The email trigger request should be sent to Klaviyo every 7th, 14th, and 21st day.
+
+**Custom Parameters**
+- This job has no required parameters.
+- The recommended frequency for this job is 15 minutes.
+- It has `intervalDays`, `maxOccourrences`, `emailType` as  the optional parameters.
+
+___
 
 ### Notification using communication events
 

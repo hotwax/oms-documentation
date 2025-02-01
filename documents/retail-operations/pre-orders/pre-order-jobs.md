@@ -51,7 +51,7 @@ To schedule the job, Merchandisers navigate to the `Job Manager` > `Pre Orders` 
 
 * Navigate to `Job Manager` > `Initial Load` > `Process uploads` card.
 * Activate the `File Upload Status` job, which monitors file processing and potential errors via the Shopify webhook.
-* Schedule the `Upload Pending Proces`s job to prompt Shopify for the next GraphQL file upon receiving `Upload` Status updates.
+* Schedule the `Upload Pending Process` job to prompt Shopify for the next GraphQL file upon receiving `Upload` Status updates.
 
 <figure><img src="../.gitbook/assets/job-manager.hotwax.io_pre-order (5).png" alt=""><figcaption><p>Process Upload</p></figcaption></figure>
 
@@ -63,11 +63,11 @@ The HotWax Commerce Pre-order PDP app employs tags and meta fields to modify the
 
 Likewise, it's essential to schedule the `Remove pre-order tags` and `Remove backorder tags` jobs to eliminate the `HC: Pre-order` and `HC: Backorder` tags when a product is removed from the pre-order catalog.
 
+<figure><img src="../.gitbook/assets/job-manager.hotwax.io_pre-order (1).png" alt=""><figcaption></figcaption></figure>
+
 **Update Pre-Order Category Item Arrival Date**
 
 The `Sync Variant Details` job ensure that if there is any change in the purchase order arrival date the promise dates of the product is also updated on Shopify. However, when there are changes in the arrival dates of the multiple items in the purchase orders, the promise dates need to be first updated in HotWax Commerce pre-sell category. These changes happen through `Update Pre-Order Category Item Arrival Date` job which creates a file and process all the updated date changes in HotWax Commerce category, after this the Sync Variant Details updates the changes on Shopify.
-
-<figure><img src="../.gitbook/assets/job-manager.hotwax.io_pre-order (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Jobs for Sales Orders with Pre-Order Items
 
