@@ -6,10 +6,14 @@ Below is a list of all the actions available in the Import App, along with the s
 
 | **Serial No.** | **Action**                | **Permission**              | **Description**                                                                          |
 | -------------- | ------------------------- | --------------------------- | ---------------------------------------------------------------------------------------- |
-| 1              | Inventory tab             | MDM\_IMP\_INVENTORY\_VIEW    | Enables users to upload CSV files containing inventory data received from external systems. |
+| 1              | Inventory tab             | MDM\_IMP\_INVENTORY\_VIEW   | Enables users to upload CSV files containing inventory data received from external systems. |
 | 2              | Schedule Restock tab      | -                           | Allows users to schedule inventory restocking based on the imported data.                  |
 | 3              | Purchase Order tab        | -                           | Provides the ability to upload CSV files to import purchase orders into the system.        |
 | 4              | Saved Mappings tab        | -                           | Enables users to view previously saved mappings that link CSV file data to system fields.  |
 | 5              | Review Inventory CSV page | -                           | Allows users to review imported inventory CSV files and correct any issues or discrepancies.|
+| 6              | Go to OMS | COMMERCEUSER_VIEW                           | Allows users to access HotWax OMS directly from the Import Tab|
+| 7              | Update Product Identification Setting |  COMMON_ADMIN   | Allows users to chnage product identifiers setting.|
+| 8              | View Import App |  IMPORT_APP_VIEW | Allows users view Import App.|
+
 
 <figure><img src="../../.gitbook/assets/import app.png" alt=""><figcaption></figcaption></figure>
