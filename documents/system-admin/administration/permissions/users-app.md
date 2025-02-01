@@ -50,6 +50,6 @@ Below is a list of all the actions available in the Users App, along with the sp
 | No. | Action                   | Permission                          | Description                                                                       |
 | --- | ------------------------ | ----------------------------------- | --------------------------------------------------------------------------------- |
 | 1   | Go to OMS                | COMMERCEUSER_VIEW   | Allow users to access HotWax OMS directly from the User App        |
-| 2   | View User App                 | USERS_APP_VIEW   | Allows User to view User App        |
-| 3   | Manage Security Permission | SECURITY_CREATE OR SECURITY_ADMIN                         | Allows Users to Manage all User App Operations  |
+| 2   | View User App                 | USERS_APP_VIEW   | Allows user to view User App        |
+| 3   | Manage Security Permission | SECURITY_CREATE OR SECURITY_ADMIN                         | Allows users to manage all User App operations  |
 
