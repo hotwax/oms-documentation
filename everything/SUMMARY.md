@@ -92,6 +92,7 @@
     * [Tathya login Issue](tools/tathya/sop/tathya-login-issue.md)
   * [How to](tools/tathya/how-to/create-user-tathya.md)
     * [How to create user on tathya](tools/tathya/how-to/create-user-tathya.md)
+    * [How to create alpha role on tathya](tools/tathya/how-to/create-alpha-role)
     * [How to request for the report](tools/tathya/how-to/report-request.md)
 
 ## Client Communication
