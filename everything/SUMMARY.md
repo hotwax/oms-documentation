@@ -42,7 +42,7 @@
   * [Troubleshooting](tools/napita/troubleshooting/README.md)
     * [Data Export Errors](tools/napita/troubleshooting/data-export-errors.md)
     * [Queue Errors](tools/napita/troubleshooting/troubleshooting-queue-files.md)
-    * [FetchPut SFTP Retry](tools/napita/troubleshooting/fetch-put-sftp-retry.md)
+    * [Fetch Put SFTP Retry](tools/napita/troubleshooting/fetch-put-sftp-retry.md)
 
 * [Ofbiz](tools/ofbiz/readme.md)
   * [Orders](tools/ofbiz/order/README.md)
@@ -92,6 +92,7 @@
     * [Tathya login Issue](tools/tathya/sop/tathya-login-issue.md)
   * [How to](tools/tathya/how-to/create-user-tathya.md)
     * [How to create user on tathya](tools/tathya/how-to/create-user-tathya.md)
+    * [How to create alpha role on tathya](tools/tathya/how-to/create-alpha-role.md)
     * [How to request for the report](tools/tathya/how-to/report-request.md)
 
 ## Client Communication
