@@ -14,7 +14,7 @@ This usually occurs when customers directly contact a CSR to place a new eCommer
 
    Open your web browser and navigate to the Shopify Page [https://admin.shopify.com](https://admin.shopify.com/store/).
 
-Enter your credentials to log in to the Shopify admin interface.
+   Enter your credentials to log in to the Shopify admin interface.
 
 2. ## Accessing the Order Page
 
@@ -43,12 +43,12 @@ Enter your credentials to log in to the Shopify admin interface.
 
 6. ## Additional Details
 
-   Include notes in the designated section at the top right, often written by CSRs to provide  insights into the reasons behind the creation of the draft order**.**
+   Include notes in the designated section at the top right, often written by CSRs to provide  insights into the reasons behind the creation of the draft order.
 
 7. ## Payment Collection
-
      
-   1. Use the "**Payment due later**" option to choose payment terms (due on receipt, due on fulfillment, within 7, 15, 30, 45, 60, 90 days, or on a fixed date).  
+   1. Use the "**Payment due later**" option to choose payment terms (due on receipt, due on fulfillment, within 7, 15, 30, 45, 60, 90 days, 
+      or on a fixed date).  
    2. Click the bottom-right black "**Collect Payment**" dropdown button to:  
 * Enter credit card details of the customer.		  
 * Mark the order as paid.
@@ -61,6 +61,7 @@ Enter your credentials to log in to the Shopify admin interface.
 
 
 {% hint style="info" %}
-* Always use test instances for testing purposes.  
-* If specific testing needs to be conducted on UAT, draft orders can also be created there.  
-* Make sure draft orders are not created on production instances and dev or test OMS.{% endhint %}
+  * Always use test instances for testing purposes.  
+  * If specific testing needs to be conducted on UAT, draft orders can also be created there.  
+  * Make sure draft orders are not created on production instances and dev or test OMS.
+{% endhint %}
