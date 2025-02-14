@@ -72,6 +72,9 @@ description:>- HotWax Commerce's BOPIS fulfillment app enables retailers to effi
 * **Videos**: Embed videos where necessary and properly caption them. Use the following format to embed YouTube videos:
 
 \{% embed url ="(Youtube URL)" %\} caption \{%endembed%\}
+{% embed url="https://drive.google.com/file/d/1vInnPXJUCgavIJz28xKP-9K2Rd63DSIZ/view?usp=drive_link" %}
+Reject Single
+{% endembed %}
 
 ### 2.6. Quotation
 
