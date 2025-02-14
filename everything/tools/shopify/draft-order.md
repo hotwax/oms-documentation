@@ -46,19 +46,28 @@ This usually occurs when customers directly contact a CSR to place a new eCommer
    Include notes in the designated section at the top right, often written by CSRs to provide  insights into the reasons behind the creation of the draft order.
 
 7. ## Payment Collection
-     
-   1. Use the "**Payment due later**" option to choose payment terms (due on receipt, due on fulfillment, within 7, 15, 30, 45, 60, 90 days, 
-      or on a fixed date).  
-   2. Click the bottom-right black "**Collect Payment**" dropdown button to:  
-* Enter credit card details of the customer.		  
-* Mark the order as paid.
+Shopify offer multiple payment options:  
 
-  If entering credit card details, a pop-up window will prompt you to enter the customer's credit details.
+### **Payment Options**  
+
+#### **Cash on Delivery (COD)**  
+- Click "**Payment due later**" to set payment terms, such as due on receipt, due on fulfillment, or within 7, 15, 30, 45, 60, or 90 days, or on a fixed date.  
+#### **Credit Card Payments**  
+- Accept payments via the test payment gateway.  
+- When entering credit card details, a pop-up will prompt you to enter the customer’s card information.  
+- You can also use the following test card details:  
+  ```
+  Card Number: 1  
+  Expiry: 03/26  
+  CVV: 123  
+  ```  
+#### **Mark as Paid**  
+- Record payments made outside Shopify (e.g., cash or bank transfer).  
+- Click the black "**Collect Payment**" dropdown button (bottom-right) to proceed.  
 
 8. ## Creating the Order
 
-   Finally, click on the "**Create Order**" button at the bottom right to confirm and place the order.
-
+Finally, click on the "**Create Order**" button at the bottom right to confirm and place the order.
 
 {% hint style="info" %}
   * Always use test instances for testing purposes.  
