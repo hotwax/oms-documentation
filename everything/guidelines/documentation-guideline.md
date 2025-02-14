@@ -69,12 +69,10 @@ description:>- HotWax Commerce's BOPIS fulfillment app enables retailers to effi
 
 * **Images**: Add images directly from the bottom of the GitHub markdown. Use high-quality images. Provide alternative text for accessibility.
 * **Images Names**: All images should be named in a specific format which is lowercase and words should be separated by a hyphen ( - ), such as `images-name`
-* **Videos**: Embed videos where necessary and properly caption them. Use the following format to embed YouTube videos:
+* **Videos**: Embed videos where necessary and properly caption them. Use the following format to embed Drive videos:
 
-\{% embed url ="(Youtube URL)" %\} caption \{%endembed%\}
-{% embed url="https://drive.google.com/file/d/1vInnPXJUCgavIJz28xKP-9K2Rd63DSIZ/view?usp=drive_link" %}
-Reject Single
-{% endembed %}
+\{% embed url ="(Google Drive URL)" %\} caption \{%endembed%\}
+
 
 ### 2.6. Quotation
 
