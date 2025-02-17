@@ -5,7 +5,7 @@ description: >-
 
 # In-Store Returns
 
-**Shopify POS:** Shopify POS is already linked with Shopify eCommerce, providing access to online orders within the POS system. When in-store returns are created in Shopify POS for online orders, these return details are stored in Shopify. HotWax Commerce utilizes the 'Import Order Return' job, which both Shopify e-commerce and Shopify POS, to download refund information and transfer transaction details to the ERP.
+**Shopify POS:** Shopify POS is already linked with Shopify eCommerce, providing access to online orders within the POS system. When in-store returns are created in Shopify POS for online orders, these return details are stored in Shopify. HotWax Commerce's 'Import Order Return' job works with both Shopify eCommerce and Shopify POS to download refund information and transfer transaction details to the ERP.
 
 When in-store returns occur in Shopify POS, HotWax Commerce captures the facility ID where the returned inventory is received to ensure inventory is correctly incremented in the OMS.
 
