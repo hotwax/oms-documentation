@@ -18,14 +18,14 @@
   * [Order Fulfillment Notification](tools/order-flow/order-fulfillment-notification.md)
 
 * [Git](tools/git/README.md)
-  * [How to create issue on git](tools/git/README.md)
+  * [How to Create Issue on Git](tools/git/README.md)
 
 * [Jira](tools/jira/README.md)
-  * [Feature request on jira](tools/jira/README.md)
+  * [Feature Request on Jira](tools/jira/README.md)
 
 * [Launchpad](tools/launchpad/README.md)
   * [Fulfillment](tools/launchpad/fulfillment/README.md)
-     * [Stuck orders in fulfillment app](tools/launchpad/fulfillment/README.md)
+     * [Stuck Orders in Fulfillment App](tools/launchpad/fulfillment/README.md)
   * [Job Manager](tools/launchpad/job-manager/README.md)
      * [Check Job Frequencies](tools/launchpad/job-manager/check-job-frequencies.md)
      * [Job Runtime Error](tools/launchpad/job-manager/runtime-error.md)
@@ -52,13 +52,14 @@
   * [Products](tools/ofbiz/product/README.md)
     * [Product Duplication](tools/ofbiz/product/README.md)
   * [Inventory](tools/ofbiz/inventory/README.md)
-     * [Add new variance reason](tools/ofbiz/inventory/README.md)
+     * [Add New Variance Reason](tools/ofbiz/inventory/README.md)
   * [Data Manager Configuration](tools/ofbiz/data-manager/README.md)
-    * [Create a Job using Data Manager Configuration](tools/ofbiz/README.md)
+    * [Create a Job Using Data Manager Configuration](tools/ofbiz/README.md)
     * [SFTP Issue](tools/ofbiz/data-manager/sftp-issue.md)
 
 * [Shopify](tools/shopify/README.md)
-  * [How to access Shopify POS APP](tools/shopify/README.md)
+  * [How to Access Shopify POS APP](tools/shopify/README.md)
+  * [How to Create Draft Order in Shopify](tools/shopify/draft-order.md)
 
 * [Tathya](tools/tathya/README.md)
   * [Database Configuration](tools/tathya/database-configuration/README.md)
@@ -91,9 +92,9 @@
     * [Reporting Discrepancies](tools/tathya/sop/data-discrepancies.md)
     * [Tathya login Issue](tools/tathya/sop/tathya-login-issue.md)
   * [How to](tools/tathya/how-to/create-user-tathya.md)
-    * [How to create user on tathya](tools/tathya/how-to/create-user-tathya.md)
-    * [How to create alpha role on tathya](tools/tathya/how-to/create-alpha-role.md)
-    * [How to request for the report](tools/tathya/how-to/report-request.md)
+    * [How to Create User on Tathya](tools/tathya/how-to/create-user-tathya.md)
+    * [How to Create Alpha Role on Tathya](tools/tathya/how-to/create-alpha-role.md)
+    * [How to Request for the Report](tools/tathya/how-to/report-request.md)
 
 ## Client Communication
 
