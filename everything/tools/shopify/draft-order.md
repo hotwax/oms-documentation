@@ -1,76 +1,99 @@
 # Draft Order
 
-# Introduction
+## Introduction
 
-A draft order in Shopify is an order created manually by CSRs or store admin. This can be useful in various scenarios, such as when a customer wants to place an order over the phone and in person.
+A draft order in Shopify is an order created manually by CSRs or store admins. This is useful in various scenarios, such as when a customer wants to place an order over the phone or in person.
 
-This usually occurs when customers directly contact a CSR to place a new eCommerce order on their behalf, or sometimes they may request to cancel their previous order and get a new order placed as a replacement.
+This usually occurs when customers directly contact a CSR to place a new eCommerce order on their behalf or request to cancel a previous order and get a new one placed as a replacement.
 
-**HotWax Internals:** Draft orders are created to test order flow from Shopify to HotWax OMS.
+### **HotWax Internals**
 
-# Steps to Create Draft Orders
+Draft orders are created to test order flow from Shopify to HotWax OMS.
 
-1. ## Login to Your Shopify Admin
+{% hint style="danger" %}  
+  * Make sure that draft orders are not created on production/test/dev instances, if a draft order is placed on a test or dev OMS, the associated Shopify shop should be shut down.
+  * If specific testing needs to be conducted on UAT, draft orders can also be created there.
+{% endhint %}
 
-   Open your web browser and navigate to the Shopify Page [https://admin.shopify.com](https://admin.shopify.com/store/).
+## Steps to Create Draft Orders
 
-   Enter your credentials to log in to the Shopify admin interface.
+### **1. Login to Your Shopify Admin**
 
-2. ## Accessing the Order Page
+- Open your web browser and navigate to [Shopify Admin](https://admin.shopify.com/store/).
+- Enter your credentials to log in to the Shopify admin interface.
 
-   Once logged in, you'll land on the homepage. Navigate to the "**Orders**" page to view the complete list of orders placed on the e-commerce platform.
+### **2. Accessing the Orders Page**
 
-3. ## Start Creating a Draft Order
+- Once logged in, you'll land on the homepage.
+- Navigate to the **Orders** page to view the complete list of placed orders.
 
-   Click on the "**Create Order**" button located at the top-right corner. This action will open a new window for order creation.
+### **3. Start Creating a Draft Order**
 
-4. ## Product Selection
+- Click on the **Create Order** button located at the top-right corner.
+- This action will open a new window for order creation.
 
-   Use the product selection search bar to find products quickly. Alternatively, browse products by clicking the "**Browse**" button and select based on:  
-* Popular Products  
-* Collections  
-* Product Type  
-* Tags  
-* Vendors
+### **4. Product Selection**
 
-  If selecting a popular product, a pop-up window will display parent products and variants with pricing and inventory availability. Click the black "**Add**" button to include the selected product.
+- Use the product search bar to find products quickly.
+- Alternatively, browse products by clicking the **Browse** button and select based on:
+  - Popular Products
+  - Collections
+  - Product Type
+  - Tags
+  - Vendors
 
-5. ## Customer Information
+{% hint style="info" %}
+   * If any specific product details are not provided to you. You can by default select a popular product, and a pop-up window will display parent products and variants with pricing and inventory availability.
+   * Click the **Add** button to include the selected product.
+{% endhint %}
 
-   In the right section under the **"Notes**" bar, use the customer search bar if the order is for an existing customer. Create a new customer by clicking "**Create a new customer**" for new orders.
+### **5. Customer Information**
 
-   For new customers, a pop-up window will appear to input customer details such as first name, last name, email, shipping address, etc.
+- In the right section under the **Customer** bar, use the search bar to find an existing customer.
 
-6. ## Additional Details
+{% hint style="Info" %}
+   * you can create a new customer by clicking "**Create a new customer**" for new orders.
+   * For new customers, a pop-up window will appear to input customer details such as first name, last name, email, shipping address, etc.
+{% endhint %}
 
-   Include notes in the designated section at the top right, often written by CSRs to provide  insights into the reasons behind the creation of the draft order.
+### **6. Additional Details**
+(This step is optional.)
+- Include notes in the designated section at the top right.
+- CSRs can use this section to provide insights into the reasons behind the draft order creation.
 
-7. ## Payment Collection
-Shopify offer multiple payment options:  
+### **7. Payment Collection**
 
-### **Payment Options**  
+Shopify offers multiple payment options:
 
-#### **Cash on Delivery (COD)**  
-- Click "**Payment due later**" to set payment terms, such as due on receipt, due on fulfillment, or within 7, 15, 30, 45, 60, or 90 days, or on a fixed date.  
-#### **Credit Card Payments**  
-- Accept payments via the test payment gateway.  
-- When entering credit card details, a pop-up will prompt you to enter the customer’s card information.  
-- You can also use the following test card details:  
+#### **Payment Options**
+
+##### **Mark as Paid**
+
+- Click the **Collect Payment** dropdown button (bottom-right) to proceed.
+- Click on **Mark as paid**
+  
+##### **Cash on Delivery (COD)**
+
+- Click **Payment due later** to set payment terms, such as:
+  - Due on receipt
+  - Due on fulfillment
+  - Within 7, 15, 30, 45, 60, or 90 days
+  - On a fixed date
+
+##### **Credit Card Payments**
+
+{% hint style="danger" %} 
+Only accept payments via the **Bogus Test Payment Gateway** for hc-demo(DEMO OMS). Using any other gateway may result in Shopify suspending the store.
+{% endhint %}
+
+- When entering credit card details, a pop-up will prompt you to enter the customer’s card information.
+- Use the following test card details:
   ```
   Card Number: 1  
   Expiry: 03/26  
   CVV: 123  
-  ```  
-#### **Mark as Paid**  
-- Record payments made outside Shopify (e.g., cash or bank transfer).  
-- Click the black "**Collect Payment**" dropdown button (bottom-right) to proceed.  
+  ```
 
-8. ## Creating the Order
+### **8. Creating the Order**
 
-Finally, click on the "**Create Order**" button at the bottom right to confirm and place the order.
-
-{% hint style="info" %}
-  * Always use test instances for testing purposes.  
-  * If specific testing needs to be conducted on UAT, draft orders can also be created there.  
-  * Make sure draft orders are not created on production instances and dev or test OMS.
-{% endhint %}
+- Click the **Create Order** button at the bottom right to confirm and place the order.
