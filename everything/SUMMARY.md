@@ -49,6 +49,7 @@
     * [Multicurrency Sales Orders](tools/ofbiz/order/README.md)
     * [POS Order Refresh Failure](tools/ofbiz/order/pos-order-refresh-failure.md)
     * [Pre-Order Catalog Sync](tools/ofbiz/order/pre-order-sync.md)
+    * [Reindex Order after Solr Down Time](tools/ofbiz/order/reindex-orders-after-solr-down-time.md)
   * [Products](tools/ofbiz/product/README.md)
     * [Product Duplication](tools/ofbiz/product/README.md)
   * [Inventory](tools/ofbiz/inventory/README.md)
