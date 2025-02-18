@@ -1,4 +1,4 @@
-# Troubleshooting Document: Reindexing Orders After Solr Downtime
+# Reindex Orders After Solr Downtime
 
 The order status discrepancy between the find Order page and vieworder page is likely due to an issue with Solr indexing, which can occur if the Solr instance is down when the order status is updated.
 
@@ -6,7 +6,7 @@ The order status discrepancy between the find Order page and vieworder page is l
 
 To ensure that status changes of orders are correctly indexed in Solr without requiring manual intervention.
 
-Time Format: yyyy-MM-dd HH:mm:ss
+Time Format: `yyyy-MM-dd HH:mm:ss`
 
 ## **Steps to Resolve**
 
@@ -18,13 +18,13 @@ Time Format: yyyy-MM-dd HH:mm:ss
 
 ### **2\. Run Service to update order indexing on Find Order page.**
 
-To index the updated status of the order when the solr is down or by any reason the indexing is not done on the find order page we need to run **createOrdersIndexFromStatus** service**.**
+To index the updated status of the order when the solr is down or by any reason the indexing is not done on the find order page we need to run **createOrdersIndexFromStatus** service.
 
 1. Locate the service: **createOrdersIndexFromStatus**.  
 2. In the service input parameters, set the following:  
    * **statusFromDate**: Specify the start date/time for the range.  
    * **statusToDate**: Specify the end date/time for the range.  
-   * **persist**  : ‘false’.  
+   * **persist**  : `false`.  
 3. Execute the service.
 
 ### **3\. Run the Service to create orderItemShipGroup reservation**
@@ -35,7 +35,7 @@ If you want to create a reservation in the order item ship group entity, you nee
 5. In the service input parameters, set the following:  
    * **reservedDateFrom**: Specify the start date/time for the range.  
    * **reservedDateTo**: Specify the end date/time for the range.  
-   * **persist**: ‘false’.  
+   * **persist**: `false`.  
 6. Execute the service.
 
 ### **4\. Verify Indexing in OMS**
