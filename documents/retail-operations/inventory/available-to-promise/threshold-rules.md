@@ -83,7 +83,19 @@ Once the threshold rules are created, they will be visible as rule cards on the 
 Scheduling Threshold Rule
 {% endembed %}
 
+## Configuration Facility
 
+These are the facilities with `facilityTypeId` set to `CONFIGURATION`. OMS provides **Configuration Facility** to help businesses categorize a specific set of facilities, allowing them to apply certain rules efficiently.
+
+For example: ABC Firm wants to impose a **threshold of 10 units** on **5 out of 8** facilities. OMS provides a **Configuration Facility** to categorize these facilities accordingly. It is important to note that **grouping here does not refer to Facility Group**, which is a separate entity.
+
+In **ProductFacility**, Configuration Facilities facilitate the application of three key business rules:
+
+1. **Setting Product Thresholds** – This rule works by setting the `minStockLimit` in **ProductFacility**, which defines the threshold for all facilities associated with the corresponding **Configuration Facility**.
+
+2. **Enabling Shipping** – This is controlled by the `allowBrokering` parameter in **ProductFacility**. When set to `Y`, it permits shipments from the associated facilities.
+
+3. **Allowing BOPIS (Buy Online, Pickup In-Store)** – The ability to offer **BOPIS** at facilities is determined by the `allowPickup` parameter. By default, this is set to `Y`. If changed to `N`, the associated facilities will no longer allow in-store pickups.
 
 
 
