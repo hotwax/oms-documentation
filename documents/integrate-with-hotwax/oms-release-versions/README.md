@@ -11,6 +11,8 @@ description: Discover  the versions of HotWax Commerce OMS releases.
 2. To find details about SOLR versions, refer to the [SOLR version document](https://docs.google.com/spreadsheets/d/1H-iEVG-hS9FTsYOf5YiUH-5KOJUcu0\_TiPG8aVYjaHU/edit?gid=0#gid=0)
 {% endhint %}
 
+{% hint style="info" %} Run refreshSolr service only on first production server deployment.{% endhint %}
+
 ## Release - v6.2.2 (20th February 2025)
 
 | Information     | Value                                                                                                               |
@@ -40,6 +42,8 @@ description: Discover  the versions of HotWax Commerce OMS releases.
 {% tab title="Upgrade Data" %}
 [Link to Upgrade Data](https://git.hotwax.co/commerce/oms/-/blob/develop/upgrade/v6.2.1/UpgradeData.xml?ref_type=heads)
 {% endtab %}
+
+{% hint style="warning" %} Do not deploy any instance on v6.2.0 tag {% endhint %}
 
 ## Release - v6.2.0 (20th February 2025)
 
