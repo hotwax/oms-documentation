@@ -25,9 +25,9 @@ If your OMS (Order Management System) is integrated with multiple eCommerce stor
 
 #### Facility
 
-The Fulfillment app gives us a space where we can indicate the facility from which we wish to operate. Order, inventory, and other configuration data will be tailored to the facility of your choice.
+The Fulfillment app gives us a space where we can indicate the facility from which we wish to operate. Order, inventory, and other configuration data will be tailored based on the chosen facility. Additionally, authorized users can search for, select, and switch facilities as needed.
 
-<figure><img src="../.gitbook/assets/fulfillment.hotwax 3.png" alt="" width="375"><figcaption><p>Select Facility</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Select Facility.png" alt="" width="375"><figcaption><p>Select Facility</p></figcaption></figure>
 
 #### Online Order Fulfillment
 
