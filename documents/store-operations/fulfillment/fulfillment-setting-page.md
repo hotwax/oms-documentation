@@ -1,15 +1,13 @@
 ---
 description: >-
-  Discover the Settings page in the Fulfillment app, accessed from the hamburger
-  menu, offering configuration options to streamline processes and optimize
-  efficiency.
+  Take a look at the Settings page in the Fulfillment App.
 ---
 
 # Settings Page
 
-Settings for the Fulfillment app can be accessed by clicking on the setting button, which is placed at the bottom of the hamburger menu of the fulfillment app. It displays a list of all the settings that can be configured to streamline processes and optimize efficiency.
+Settings for the Fulfillment App can be accessed by clicking on the setting button, which is placed at the bottom of the hamburger menu of the fulfillment app. It displays a list of all the settings that can be configured to streamline processes and optimize efficiency.
 
-The Fulfillment app's settings page encompasses various configurations such as:
+The Fulfillment App's settings page provides various configurations such as:
 
 <div data-full-width="false">
 
@@ -25,7 +23,7 @@ If your OMS (Order Management System) is integrated with multiple eCommerce stor
 
 #### Facility
 
-The Fulfillment app gives us a space where we can indicate the facility from which we wish to operate. Order, inventory, and other configuration data will be tailored based on the chosen facility. Additionally, authorized users can search for, select, and switch facilities as needed.
+The Fulfillment App allows authorized users to select a facility to operate from, determining the visibility of orders, inventory, and other configuration data.
 
 <figure><img src="../.gitbook/assets/facility-selection-modal.png" alt="" width="375"><figcaption><p>Select Facility</p></figcaption></figure>
 
@@ -59,7 +57,7 @@ This option allows users to select a preferred display language for the app.
 
 #### Additional Documents
 
-In the fulfillment app of HotWax Commerce, you can utilize the feature to print supplementary documents along with the shipment for package identification purposes. This functionality enables you to include additional documents, such as packing slips or labels, with each shipment.
+In the Fulfillment App, you can use the feature to print supplementary documents along with the shipment for package identification purposes. This functionality enables you to include additional documents, such as packing slips or labels, with each shipment.
 
 #### Packing Slip
 
@@ -69,6 +67,6 @@ Packing slips help customers reconcile their orders against the delivered items.
 
 A shipping label is provided by the carrier which is used by the shopping carrier to deliver the package to the customer's address. You can toggle whether you want to generate the shipping label for that facility or not.
 
-By utilizing these settings, users can customize their Fulfillment app experience to meet their specific operational needs and streamline processes effectively.
+By using these settings, users can customize their Fulfillment App experience to meet their specific operational needs.
 
 <figure><img src="../.gitbook/assets/fulfillment.hotwax 7.png" alt="" width="375"><figcaption><p>Additional Documents</p></figcaption></figure>
