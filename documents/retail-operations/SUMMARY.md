@@ -16,9 +16,6 @@
     * [Duplicate Jobs](workflow/job-management/troubleshooting/duplicate-job-scheduled.md)
     * [Job Scheduling](workflow/job-management/troubleshooting/schedule-job.md)
     * [Job Scheduling Errors](workflow/job-management/troubleshooting/job-scheduling-errors.md)
-  * **[Assessment Link](https://forms.gle/Eg3tJimgMvfaqo7K7)**
-
-<a href="https://forms.gle/Eg3tJimgMvfaqo7K7" style="text-decoration: none; color: black;" onmouseover="this.style.color='red'" onmouseout="this.style.color='black'"><b>Job Manager Assessment</b></a>
    
 * [Job Workflows](workflow/job-workflows/README.md)
   * [Pre-Orders](workflow/job-workflows/pre-orders.md)
