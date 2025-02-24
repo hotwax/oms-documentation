@@ -8,37 +8,30 @@ description: >-
 
 Many times customers visit their preferred store location to return or exchange their online order. Perhaps they received the wrong size, the item is defective, or they simply changed their mind. Shopify provides a streamlined process for returns and exchanges. Store associates can directly process returns using Shopify POS, specify the items customers wish to return and the reason for the return. If they'd like to exchange the item for a different product, Shopify allows them to select the new item directly within the return process.
 
-Shopify has streamlined the returns and exchange process for both customers and retailers. When there is an exchange order in Shopify POS,  it creates a return for the items the customer doesn’t want and adds the new items the customer purchased in exchange to the order
+With Exchanges V2, Shopify has streamlined the returns and exchange process for both customers and retailers. When there is an exchange order in Shopify POS, it creates a return for the items the customer doesn’t want and adds the new items the customer purchased in exchange to the order
 
 This seems straightforward for the initial exchange process, as the transaction details and order information are consolidated within the original order. However, this approach creates complexities for ERP systems like NetSuite or other accounting systems that hold a repository of all the financial records.
 
 Here's where the challenges arise:
 
 - **Multiple Return Scenarios**: Customers may want to return items from their order, the exchanged item, or even a combination of both. Shopify will continue to update the same order with this new return information.
-- **Missing Transaction Details**: While Shopify reflects the exchange within the order itself, it doesn't inherently link all transaction details (refunds and additional captures) to specific return/exchange items. This makes it difficult for ERP systems to accurately attribute these financial transactions to the correct returned or exchanged items.
-- **Accounting Discrepancies**: ERP systems rely on clear and accurate financial data for GL accounting and posting. The consolidated order structure in Shopify, while user-friendly for returns processing, can lead to discrepancies for downstream systems trying to record the financial trail for each returned or exchanged item.
+- **Accounting Discrepancies**: ERP systems rely on standardized financial data for GL accounting and posting. The consolidated order structure in Shopify, while user-friendly for returns processing, can lead to discrepancies for downstream systems trying to record the financial trail for each returned or exchanged item.
 
 ## How HotWax Commerce Helps Address These Challenges and Ensure Accurate Accounting for Your Business
 
-1. HotWax relies on unique payment methods like `Exchange Credit` and `Exchange Payment` to distinguish between the original item value and any additional charges associated with an exchange. This ensures accurate financial records in HotWax and eliminates confusion for integrated ERP systems. These attribution payment methods are internal to HotWax Commerce and are used to handle the attribution logic.
+Before delving into the details of how returns and exchanges are imported and stored in HotWax, these are the terms and concepts that are prerequisites.
 
+1. Exchange Credit - Shopify exchange V2 no longer explicitly calculates exchange credit when customers purchase replacment items. Because exchange orders are still new orders in HotWax and other systems, an exchange credit is still caluclated by HotWax during import of returns to balance accounting.
+2. Exchange Payment - To make payments easy to reconcile, HotWax links all transactions to the original order in its system even for greater exchanges. These additional payments are then attributed to exchange orders internally using the Exchange Payment method to repesent the additional captured payment.
+   
     - **Exchange Credit**: This is the amount the customer has already paid for the original item being returned. It's used towards purchasing another item in the exchange order.
     - **Exchange Payment**: If the customer exchanges for an item of higher value, they pay the difference. This additional payment is known as exchange payment.
-    - **Exchange Refund**: After deducting any exchange payment, any remaining amount from the original payment is refunded to the customer for returned items.
-
-2. HotWax Commerce connects the attribution payment method with the `Parent Payment Reference`, linking the exchange order to the Shopify transaction on the original order. This helps track Shopify transactions under one main order and manage financial credits or additional payments related to exchange orders, facilitating the movement of credits and capturing extra payments during exchanges.
-
-3. HotWax keeps a unified transaction history to keep track of all Shopify transactions in the original order while managing financial attribution to exchange orders. This approach helps avoid cross-order transactions and ensures that all financial activities are accurately recorded and easily traceable. To balance out the payment transactions on the original order, HotWax negates the amount of the exchange order from the original order.
-
-4. HotWax doesn't simply accept the consolidated order structure from Shopify. Instead, it separates returns and exchange items, creating distinct order records for each action. This provides a clear historical record for each return or exchange, simplifying financial tracking in HotWax and for any downstream ERP integrations.
 
 ## Importing Returns and Exchanges
 
-HotWax Commerce uses a multi-step data fetching strategy to import refunds and exchange data from Shopify. A scheduled job in the HotWax Commerce integration platform fetches all returns and exchanges from Shopify and generates a returns and exchanges feed.
+A scheduled job in the HotWax Commerce integration platform fetches all returns and exchanges from Shopify and biforcates the data into two feeds, one for returns and another exchanges additions.
 
-Another job in the HotWax Commerce integration platform reads and transforms this feed. The platform sorts the return and exchange orders, and then HotWax Commerce imports the returns and exchanges into the system.
-
-The two independent jobs in HotWax Commerce then process these orders: the `Create Return Order` job imports the returns from the SFTP path, and the `Create Exchange Order` job imports the exchanges.
+Exchange additions are imported into HotWax as new sales orders that are linked to the original sale as an exchange while returns are imported independently and linked to their corresponding HotWax order.
 
 ## Scenarios of Returns and Exchanges
 
