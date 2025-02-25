@@ -18,7 +18,7 @@ HotWax Commerce allows retailers to create product stores in HotWax Commerce to 
 
 ### Creating a New Group
 
-Retailers can create custom by clicking the plus icon at the bottom right of the Group tab. A modal window will appear asking for the following details:
+Retailers can create custom groups by clicking the plus icon at the bottom right of the Group tab. A modal window will appear asking for the following details:
 
 - **Name**: Enter the name of the facility group being created.
 
