@@ -29,7 +29,7 @@ Retailers can create custom by clicking the plus icon at the bottom right of the
   
 - **Group Type**: Each group can be assigned a type. Users need to select the relevant group type from the dropdown menu this is optional.
   
-- **Product Store**: Users can select the product store(s) associated with a facility group, and a facility group can be linked to multiple product stores. Linking product stores to a facility group helps allocate inventory based on brand-specific requirements during order brokering.
+- **Product Store**: Link facility groups to product stores if they need to be used for routing rules of that product store.
   
 - **Description**: A short description of the facility group helps users understand its purpose and business need later. This field is optional.
 
