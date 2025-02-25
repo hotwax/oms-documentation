@@ -35,7 +35,7 @@ These details can be modified even after the group is created, except for the In
 
 ### Manage Facilities in a Group
 
-The number displayed in front of the facilities on the group card represents the total count of facilities included in that group. Clicking on this number redirects to the Manage Facilities page, where they can view and manage all associated facilities for that group.
+The number displayed in front of the facilities on the group card represents the total count of facilities included in that group. Clicking on this number redirects to the Manage Facilities page, where users can view and manage all associated facilities for that group.
 
 **List of Actions Users Can Perform on the Manage Facilities Page:**
 
