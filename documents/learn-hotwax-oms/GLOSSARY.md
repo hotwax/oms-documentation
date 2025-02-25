@@ -70,6 +70,13 @@ Digital gift cards, or e-gift cards, are virtual equivalents of physical gift ca
 
 To Know more about Gift cards [Click Here](https://docs.hotwax.co/documents/v/learn-hotwax-oms/business-process-models/giftcardorderslifecycle#digital-gift-cards).
 
+## Exchange
+An exchange occurs when a customer returns a product and instead of receiving a refund, they swap it for a different item, such as a different size, color, or model. Exchanges are common in cases where the customer prefers an alternative product, and the retailer allows for a direct product swap without returning money.
+
+* **Standard Exchange**: The customer exchanges a product for the same or another item of equal value, with no additional charges or refunds.
+* **Higher Value Exchange**: The customer exchanges an item for a higher-priced one, paying the price difference.
+* **Lesser Value Exchange**: The customer exchanges an item for a lower-priced one and receives a refund for the price difference.
+
 ## Excluded ATP
 
 Excluded ATP refers to the inventory at fulfillment locations that are not participating in online selling. This inventory is not considered available for online orders and is excluded from the Online ATP calculation.
@@ -174,11 +181,22 @@ To learn more [Click Here](https://docs.hotwax.co/documents/v/retail-operations/
 ## Quantity on Hand (QOH)
 QOH represents the total physical quantity of a product available at stores or warehouses. HotWax Commerce receives daily inventory feeds from the ERP system to update and maintain inventory data. Additionally, in the absence of ERP systems, HotWax Commerce also receives inventory feeds from Warehouse Management Systems (WMS) and Point of Sale (POS) systems.
 
+## Refund to Original Payment Method
+The refund is returned to the same payment method used for the purchase, for example, a credit card refund restores the amount to the card.
+
+
+## Refund to a Gift Card (Store Credit)
+The refund is issued as store credit or a gift card, encouraging future purchases.
+
 ## Rejected Orders
 Rejected orders are orders brokered for fulfillment but rejected by a warehouse or store due to physical inventory unavailability, often caused by damaged, lost, or stolen items. Rejected orders return to the brokering queue for reassignment. Rejected orders are managed by routing them back to the brokering queue for reassignment. The OMS will then route the order to another facility based on product availability, customer shipping preferences, and routing rules.
 
 ## Reserved Inventory
 Reserved inventories refer to inventory, whether in a store or warehouse, that has already been allocated to fulfill orders. Reserved quantities are not included in the "available to promise" (ATP) and are not eligible to be sold.
+
+## Return as a Refund
+
+A full return or refund refers to the process where a customer returns a product and receives a complete refund of the original purchase price. This is done when the product is returned in its original condition, meeting the retailer’s return policy, and is often credited back to the original payment method used at the time of purchase.
 
 ## Safety Stock
 Safety stock helps retailers control how much inventory they promise to online channels. Once a store’s inventory count falls below the designated safety stock quantity, the remaining inventory will be reserved for in-store sales. Retailers often face inventory discrepancies, where a system’s inventory does not match the actual inventory in stores. Keeping safety stock also helps retailers mitigate the risk of taking orders that cannot be fulfilled due to inventory discrepancies. A robust omnichannel order management system helps retailers easily manage safety stock for each store. 

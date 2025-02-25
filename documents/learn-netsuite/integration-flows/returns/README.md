@@ -10,22 +10,6 @@ In omnichannel retailing, retailers provide customers with the options for onlin
 
 Customers can initiate online returns for both online and in-store purchases.
 
-#### Understanding Different Types of Returns
-
-**Return as a Refund**
-
-A full return or refund refers to the process where a customer returns a product and receives a complete refund of the original purchase price. This is done when the product is returned in its original condition, meeting the retailer’s return policy, and is often credited back to the original payment method used at the time of purchase.
-
-* **Refund on Original Payment Method**: The refund is returned to the same payment method used for the purchase, for example, a credit card refund restores the amount to the card.
-* **Refund with a Gift Card (Store Credit)**: The refund is issued as store credit or a gift card, encouraging future purchases.
-
-**Exchange**
-
-An exchange occurs when a customer returns a product and instead of receiving a refund, they swap it for a different item, such as a different size, color, or model. Exchanges are common in cases where the customer prefers an alternative product, and the retailer allows for a direct product swap without returning money.
-
-* **Standard Exchange**: The customer exchanges a product for the same or another item of equal value, with no additional charges or refunds.
-* **Higher Value Exchange**: The customer exchanges an item for a higher-priced one, paying the price difference.
-* **Lesser Value Exchange**: The customer exchanges an item for a lower-priced one and receives a refund for the price difference.
 
 #### Scenarios Where Online Returns Are Accepted
 
