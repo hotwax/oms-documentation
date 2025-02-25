@@ -3,32 +3,54 @@
 In Hotwax commerce facility groups are used to define the scope and functionality of the facility for omnichannel order management. For instance, including a facility in the Pickup and Same Day Shipping groups indicates that the facility accommodates both Buy Online, Pickup In-Store (BOPIS), and same-day shipping orders.
 
 Users can find the Facility Groups by clicking on the `Group Tab` in the `Facilities App`. On the Facility Group page, users can perform various functions such as:
-
+___
 ### Searching a Group
 
 Users can search for the groups from the search bar on the top left of the `Group details` page. Users can filter the groups by the system groups section below the search menu.
+___
 
 ### Editing Existing Group
 
 Users can perform various actions on a specific group by accessing the overflow menu associated with the group card. This includes renaming the `Group`, `Editing its description`, and `Deleting` the group.
 
+___
+
 ### Linking Product Store with Facility Groups
 
 HotWax Commerce allows retailers to create product stores in HotWax Commerce to configure brand-specific settings across one or multiple Shopify stores. Retailers can link specific product stores with designated facility groups to define the scope and purpose of various facilities within a product store. This is specifically crucial when creating facility groups for brokering the brokering engine ensures that inventory allocation aligns with each brand's specific requirements. The product store can be linked to the facility group by clicking the `number chip` against the product store option.
+___
+
+### Creating a New Group
+Retailers can create custom by clicking the plus icon at the bottom right of the Group tab. A modal window will appear asking for the following details:
+
+- **Name**: Enter the name of the facility group being created.
+  
+- **Internal ID**: The Internal ID is automatically generated based on the group name. It is used in HotWax to uniquely identify a group and can be edited manually as well.
+  
+- **Group Type**: Each group can be assigned a type. Users need to select the relevant group type from the dropdown menu this is optional.
+  
+- **Product Store**: Users can select the product store(s) associated with a facility group, and a facility group can be linked to multiple product stores. Linking product stores to a facility group helps allocate inventory based on brand-specific requirements during order brokering.
+  
+- **Description**: A short description of the facility group helps users understand its purpose and business need later. This field is optional.
+
+These details can be modified even after the group is created, except for the Internal ID, which remains unchanged.
+___
 
 ### Manage Facilities in a Group
 
-The number displayed in front of `Facilities` on the group card indicates the count of facilities linked to that group. Clicking on this number provides users with a list of all associated facilities. Users can efficiently manage facility associations in bulk within a designated group by utilizing the `Quick Edit` button. Clicking on the `Quick Edit` button opens a modal where checkboxes next to facilities can be marked for association. Click on the save icon to finalize the process, allowing hassle-free facility management within the group.
+The number displayed in front of the facilities on the group card represents the total count of facilities included in that group. Clicking on this number redirects to the Manage Facilities page, where they can view and manage all associated facilities for that group.
 
-### Creating a New Group
+**List of Actions Users Can Perform on the Manage Facilities Page:**
 
-There are some default groups already added when you deploy HotWax Commerce. However, retailers can create groups as per their requirements by scrolling to the end of the page and then clicking on the `Create Group` button. On clicking the `Create Group` button a pop-up window appears with the following fields-
+- **Custom Sequence in Facility Group:** Users can drag and drop chips after the facility name to customize the facility sequence considered for order routing.
+  
+- **Removing a Facility from a Group:** Users can remove a facility from the group by clicking the remove icon next to the facility name. For example, in the “Same Day Shipping” group, if certain facilities are no longer eligible to ship orders on the same day, users can remove them using this button.
+  
+- **Adding a Facility to a Group:** On the Manage Facilities page, users can view a list of all available facilities on the left side. They can add any facility as needed by clicking the add icon. Additionally, with the INCLUDE ALL option at the top, users can add all facilities to the group at once instead of manually selecting each facility.
 
-* Name
-* Internal ID
-* System Group Type
-* Description After filling in this information users need to click on the `+` icon button to create a new group.
+Click the save icon below to finalize the changes.
 
+___
 ## System Facility Group Types
 
 These are default facility group types, which are available when you deploy HotWax Commerce. All the group types have specific functions, The facility groups need to be added to the respective group type to define the scope of facilities.
