@@ -22,7 +22,7 @@ Inbound shipments are automatically created in HotWax Commerce so that the store
 
 Upon successful receipt of inventory, HotWax Commerce synchronizes item receipts with NetSuite. This ensures that the inventory count at store is accurately increased in NetSuite and the status of transfer orders status is updated from `Pending Receipt` to `Received`.
 
-As mentioned earlier, in NetSuite, the inventory count for transfer order items shipped from the warehouse is reduced. It’s crucial to note that in HotWax Commerce, this reduction takes place during its daily inventory sync from NetSuite.
+As mentioned earlier, in NetSuite, the inventory count for transfer order items shipped from the warehouse is reduced. In HotWax Commerce, this reduction takes place during its periodic inventory sync from NetSuite.
 
 ## Workflow
 
