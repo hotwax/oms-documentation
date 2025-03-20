@@ -41,21 +41,21 @@ Order fields in Shopify are mapped in HotWax Commerce as follows:
 
 {% tabs %}
 {% tab title="Orders in Shopify" %}
-<figure><img src="../../../.gitbook/assets/15.png" alt=""><figcaption><p><em>Fig.2(i): Orders in Shopify</em></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/15.png" alt=""><figcaption><p><em>Fig.2(i): Orders in Shopify</em></p></figcaption></figure>
 {% endtab %}
 
 {% tab title="Orders in HotWax Commerce" %}
-<figure><img src="../../../.gitbook/assets/16.png" alt=""><figcaption><p>Fig.2(ii): Orders downloaded in HotWax Commerce</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/16.png" alt=""><figcaption><p>Fig.2(ii): Orders downloaded in HotWax Commerce</p></figcaption></figure>
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Order Details in Shopify" %}
-<figure><img src="../../../.gitbook/assets/17.png" alt=""><figcaption><p><em>Fig.3(i): Order Details in Shopify</em></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/17.png" alt=""><figcaption><p><em>Fig.3(i): Order Details in Shopify</em></p></figcaption></figure>
 {% endtab %}
 
 {% tab title="Order Details in HotWax Commerce" %}
-<figure><img src="../../../.gitbook/assets/18.png" alt=""><figcaption><p>Fig.3(ii): Order Details in HotWax Commerce</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/18.png" alt=""><figcaption><p>Fig.3(ii): Order Details in HotWax Commerce</p></figcaption></figure>
 {% endtab %}
 {% endtabs %}
 
