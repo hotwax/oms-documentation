@@ -11,13 +11,24 @@ description: Discover  the versions of HotWax Commerce OMS releases.
 2. To find details about SOLR versions, refer to the [SOLR version document](https://docs.google.com/spreadsheets/d/1H-iEVG-hS9FTsYOf5YiUH-5KOJUcu0\_TiPG8aVYjaHU/edit?gid=0#gid=0)
 {% endhint %}
 
+## Release - v6.2.6 (21st March 2025)
+
+| Information     | Value                                                                                                               |
+| --------------- | ------------------------------------------------------------------------------------------------------------------  |
+| Release Version | v6.2.6                                                                                                             |
+| Release Type    | Hotfix                                                                                                              |
+| Image Tag       | v6.2.6                                                                                                              |
+| Image URL       | `289432782788.dkr.ecr.us-east-1.amazonaws.com/omscoreimage:omscoreimage-latest-v6.2.6`                              |
+| Diff            | [Link to diff](https://git.hotwax.co/commerce/oms/-/compare/v6.2.5...v6.2.6?from_project_id=161&straight=false)     |
+| Changelog       | [Link to changelog](https://git.hotwax.co/commerce/oms/-/blob/v6.2.6/CHANGELOG.md?ref_type=tags)                    |
+
 ## Release - v6.2.5 (6th March 2025)
 
 | Information     | Value                                                                                                               |
 | --------------- | ------------------------------------------------------------------------------------------------------------------  |
-| Release Version | v6.2.5                                                                                                             |
+| Release Version | v6.2.5                                                                                                              |
 | Release Type    | Hotfix                                                                                                              |
-| Image Tag       | v6.2.5                                                                                                             |
+| Image Tag       | v6.2.5                                                                                                              |
 | Image URL       | `289432782788.dkr.ecr.us-east-1.amazonaws.com/omscoreimage:omscoreimage-latest-v6.2.5`                              |
 | Diff            | [Link to diff](https://git.hotwax.co/commerce/oms/-/compare/v6.2.4...v6.2.5?from_project_id=161&straight=false)     |
 | Changelog       | [Link to changelog](https://git.hotwax.co/commerce/oms/-/blob/v6.2.5/CHANGELOG.md?ref_type=tags)                    |
