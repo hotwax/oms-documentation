@@ -11,6 +11,33 @@ description: Discover  the versions of HotWax Commerce OMS releases.
 2. To find details about SOLR versions, refer to the [SOLR version document](https://docs.google.com/spreadsheets/d/1H-iEVG-hS9FTsYOf5YiUH-5KOJUcu0\_TiPG8aVYjaHU/edit?gid=0#gid=0)
 {% endhint %}
 
+{% hint style="warning" %} Before pushing oms v6.3.0 release to production, need to make sure maarg deployed on v3.6.1 {% endhint %}
+
+## Release - v6.3.0 (25th March 2025)
+
+| Information     | Value                                                                                                               |
+| --------------- | ------------------------------------------------------------------------------------------------------------------  |
+| Release Version | v6.3.0                                                                                                            |
+| Release Type    | minor                                                                                                              |
+| Image Tag       | v6.3.0                                                                                                             |
+| Image URL       | `289432782788.dkr.ecr.us-east-1.amazonaws.com/omscoreimage:omscoreimage-latest-v6.3.0`                              |
+| Diff            | [Link to diff](https://git.hotwax.co/commerce/oms/-/compare/v6.2.6...v6.3.0?from_project_id=161&straight=false)     |
+| Changelog       | [Link to changelog](https://git.hotwax.co/commerce/oms/-/blob/v6.3.0/CHANGELOG.md?ref_type=tags)                    |
+
+{% tabs %}
+{% tab title="Upgrade Data" %}
+[Link to Upgrade Data](https://git.hotwax.co/commerce/oms/-/blob/develop/upgrade/v6.3.0/UpgradeData.xml?ref_type=heads)
+{% endtab %}
+
+{% tab title="Upgrade SQL" %}
+[Link to Upgrade SQL](https://git.hotwax.co/commerce/oms/-/blob/develop/upgrade/v6.3.0/UpgradeSQL.sql?ref_type=heads)
+{% endtab %}
+
+{% tab title="Upgrade Steps" %}
+[Link to Upgrade Steps](https://git.hotwax.co/commerce/oms/-/blob/develop/upgrade/v6.3.0/UpgradeSteps.md?ref_type=heads)
+{% endtab %}
+{% endtabs %}
+
 ## Release - v6.2.6 (21st March 2025)
 
 | Information     | Value                                                                                                               |
