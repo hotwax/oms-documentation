@@ -67,7 +67,7 @@ Now, create inventory rules to route orders through the appropriate facilities. 
   The first rule ensures that orders are fulfilled from warehouse locations:
   * **Inventory Filter**: Apply the `Facility Group filter` and select the group for **Warehouses** only, ensuring that orders are initially routed through the warehouse locations for fulfillment.
   * **Inventory Sort**: Sort by `proximity` to the customer’s delivery address to help minimize shipping costs, prioritizing fulfillment from warehouses closest to the destination.
-  * **Actions**: If inventory is unavailable at the warehouses, set the rule to send the order to the next inventory rule, allowing the system to route the order to available retail stores. If you want to allocate partially available inventory from the warehouse to the orders, turn on the toggle for Prtial Fulfillment.
+  * **Actions**: If inventory is unavailable at the warehouses, set the rule to send the order to the next inventory rule, allowing the system to route the order to available retail stores. If you want to allocate partially available inventory from the warehouse to the orders, turn on the toggle for Partial Fulfillment.
 * **Second Inventory Rule for Stores**\
   The second rule is triggered when the warehouse is unable to fulfill the order:
   * **Inventory Filter**: Apply the `Facility Group filter` and select the group for **Stores**, allowing the system to route orders through retail store locations as a secondary option.
@@ -170,7 +170,7 @@ Set up inventory rules that ensure fulfillment is done only from locations that 
 
 * **First Inventory Rule**:
   * **Inventory Filter**: Apply the `Brokering Safety Stock` filter and define the minimum stock level required for inventory allocation. For example, if the `Brokering Safety Stock` is set to greater than 10, the inventory will only be allocated if the store has more than 10 units of that item available. This ensures that walk-in customers have access to sufficient stock._
-  * **InventorySort **: Sort the inventory by `Inventory Balance` to prioritize locations with higher stock levels.
+  * **Inventory Sort**: Sort the inventory by `Inventory Balance` to prioritize locations with higher stock levels.
   * **Action**: If no location can fulfill the entire order based on the first rule, select the option to `Send to Next Rule`.
 * **Second Inventory Rule**:
   * **Inventory Filter**: No specific filter is selected, as inventory can be allocated from any available location.
