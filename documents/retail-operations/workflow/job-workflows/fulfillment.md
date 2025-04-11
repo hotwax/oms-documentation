@@ -39,8 +39,6 @@ HotWax sends an API request to Shopify to provide all the orders fulfilled from 
 * This job has configId and propertyResource as the required parameters.
 * It has some optional parameters.
 
-
-
 ***
 
 ## Notification
@@ -54,7 +52,7 @@ Flow: Order Fulfillment from HotWax
 
 **This job is used for notifying store associates of the open BOPIS orders allocated to their store.** Basically, when a BOPIS order is allocated to a store, it is generally expected that the BOPIS order must be catered to as soon as possible. So it is important to get notified for BOPIS orders when they are allocated to stores.
 
-**How are stores notified?**&#x20;
+**How are stores notified?**
 
 Basically, this job checks all the BOPIS orders placed between the timeframe of the last job run and the current timestamp. And sends push notifications on the BOPIS App for the respective stores.
 
@@ -65,8 +63,6 @@ Basically, this job checks all the BOPIS orders placed between the timeframe of 
 * There are no custom parameters for this job.
 * The recommended frequency for this job in 15 minutes.
 
-
-
 ***
 
 ### Ready to Pick BOPIS order Notification.
@@ -74,7 +70,7 @@ Basically, this job checks all the BOPIS orders placed between the timeframe of 
 Job Name: `Ready to Pick BOPIS Order Notification`\
 Job Enum ID: `JOB_RP_BOPIS_ORD_NT`\
 Service Name: `sendOrderNotification`\
-Flow: Order Fulfillment from  HotWax
+Flow: Order Fulfillment from HotWax
 
 **This job is used for notifying customers when their BOPIS order is ready for pickup.** Basically, when a store associate fulfills a BOPIS order and clicks the 'READY FOR PICKUP\` button, this job internally triggers marketing platforms (like Klaviyo) to automate the notification process.
 
@@ -86,34 +82,32 @@ Flow: Order Fulfillment from  HotWax
 ***
 
 ### Open Shipping Order Notification
-Job Name: `Open Shipping Order Notification`  
-Job Enum ID: `JOB_OPEN_SHIP_ORD_NT`  
-Service Name: `sendOrderNotification`  
-Flow: `Order Fulfillment from HotWax`  
- 
-**This job is used for notifying store associates of the open shipping orders allocated to their store.** Basically, when an order is allocated to a store, it is generally expected that the order must be catered as soon as possible. So it is important to get notified for orders when they are allocated to stores.
- 
-**How Are Stores Notified?**
-The `Open Shipping Order Notification` job fetches all those orders created in HotWax ‘topicEnum Id’  within the timeframe of the last job run to the current timestamp. It then sends a push notification to the relevant stores about these orders.
 
+Job Name: `Open Shipping Order Notification`\
+Job Enum ID: `JOB_OPEN_SHIP_ORD_NT`\
+Service Name: `sendOrderNotification`\
+Flow: `Order Fulfillment from HotWax`
+
+**This job is used for notifying store associates of the open shipping orders allocated to their store.** Basically, when an order is allocated to a store, it is generally expected that the order must be catered as soon as possible. So it is important to get notified for orders when they are allocated to stores.
+
+**How Are Stores Notified?** The `Open Shipping Order Notification` job fetches all those orders created in HotWax ‘topicEnum Id’ within the timeframe of the last job run to the current timestamp. It then sends a push notification to the relevant stores about these orders.
 
 **Custom Parameters**
 
-The recommended frequency for this job is 15 minutes.
-This job has `topicEnum Id` as required Parameter
-
+The recommended frequency for this job is 15 minutes. This job has `topicEnum Id` as required Parameter
 
 ***
+
 ### Auto cancelations:
-Job name: `Auto cancellations`  
-Service: `autoCancelOrderItems`  
-Flow: `Auto Cancellation From HotWax`  
- 
+
+Job name: `Auto cancellations`\
+Service: `autoCancelOrderItems`\
+Flow: `Auto Cancellation From HotWax`
+
 **HotWax Commerce facilitates retailers to set an auto cancellation date on orders that are unfulfilled.** The `Check Daily` toggle on the job card enables the job, and also the operations team can set the days in which the order will get auto-cancelled.
- 
-**How does cancellation flow work?**
-Basically, this job checks for the orders that are in the unfillable parking, and the cancellation date is reached. This job simply changed their status to `cancelled` in HotWax.
- 
+
+**How does cancellation flow work?** Basically, this job checks for the orders that are in the unfillable parking, and the cancellation date is reached. This job simply changed their status to `cancelled` in HotWax.
+
 **Note: The `cancelled` orders will only be synced from HotWax to Shopify only if the `Upload Canceled Order` job is enabled.**
 
 ***
@@ -147,7 +141,7 @@ Flow: Packed Order Notification from HotWax to Klaviyo
 
 **How is the reminder notification sent?**
 
-&#x20;When the order is marked “Ready for pick up,” it’s moved to packed status and shown in the Packed tab of the BOPIS app. When an order is in packed status for more than 7 days, a reminder pick-up email is sent to the customer. The email trigger request should be sent to Klaviyo every 7th, 14th, and 21st day.
+When the order is marked “Ready for pick up,” it’s moved to packed status and shown in the Packed tab of the BOPIS app. When an order is in packed status for more than 7 days, a reminder pick-up email is sent to the customer. The email trigger request should be sent to Klaviyo every 7th, 14th, and 21st day.
 
 **Custom Parameters**
 
@@ -163,11 +157,10 @@ Flow: Packed Order Notification from HotWax to Klaviyo
 
 **Job Enum ID:** `JOB_SND_ML_COMM`
 
-**Description**
-The `Notification Using Communication Events` job enables retailers to communicate to internal users by the help of the communication event feature on the view order page. This job ensures that internal teams are promptly alerted to important events for that particular order, facilitating efficient communication within the organization.
-**No custom parameters for this job**
+**Description** The `Notification Using Communication Events` job enables retailers to communicate to internal users by the help of the communication event feature on the view order page. This job ensures that internal teams are promptly alerted to important events for that particular order, facilitating efficient communication within the organization. **No custom parameters for this job**
 
 ***
+
 ### Packed BOPIS Order Reminder Notification
 
 **Job Name:** `Packed BOPIS Order Reminder Notification`
