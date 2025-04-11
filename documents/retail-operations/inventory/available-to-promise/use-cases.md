@@ -24,8 +24,6 @@ Retail brands often sell products across multiple channels, such as offline stor
 
 {% embed url="https://youtu.be/-akXZbSUrHU" %}
 
-
-
 ### Scenario 2: Setting Thresholds for Overlapping Categories
 
 Merchandisers often need to set product inventory thresholds to avoid overselling, particularly when managing inventory across platforms like Shopify. This task becomes more complex when dealing with overlapping product categories. For instance, a merchandiser might need to set a threshold for "Kids Shoes" and a separate, more specific threshold for "Kids Shoes on Sale." Managing these overlapping categories effectively is crucial to ensure accurate inventory availability across different segments.
@@ -48,8 +46,6 @@ Merchandisers often need to set product inventory thresholds to avoid oversellin
    * This sequence ensures that the broader rule is applied first, with the more specific rule refining the inventory allocation for items on sale.
 
 {% embed url="https://youtu.be/fCMNfYO6ZMs" %}
-
-
 
 ## Shipping Rules
 
@@ -96,8 +92,6 @@ Retailers may choose to keep certain products exclusive to their own websites, a
 
 {% embed url="https://youtu.be/BOseH0pfBJs" %}
 
-
-
 ### Scenario 5: Restricting Shipping/BOPIS for Customized Products to Specific Facilities
 
 Retailers may offer customized products that can only be processed at certain facilities due to the specialized equipment or expertise required. As a result, shipping these products from all facilities is not feasible. To manage this, retailers need to ensure that orders for customized products are only fulfilled from the facilities equipped to handle customization.
@@ -127,8 +121,7 @@ Retailers may offer customized products that can only be processed at certain fa
 5. **Repeat for BOPIS**
 
 * Similarly, create a rule in the ATP app for BOPIS orders.
-* Exclude the facilities capable of customization and disable BOPIS in the rule.
-This ensures that customers selecting BOPIS will only be able to pick up customized products from facilities equipped to process them.
+* Exclude the facilities capable of customization and disable BOPIS in the rule. This ensures that customers selecting BOPIS will only be able to pick up customized products from facilities equipped to process them.
 
 ### Scenario 6: Managing Seasonal Demand by Region
 
@@ -175,4 +168,3 @@ Retailers often carry heavy or bulky items in their catalogs, such as furniture,
    * Save the ATP rule to enforce the restriction across all selected facilities.
 
 {% embed url="https://youtu.be/7HPG18cIWiI" %}
-

@@ -57,7 +57,7 @@ Retailers can set up facility groups in HotWax’s `Facility App`. Creating faci
 
 <mark style="color:orange;">**HotWax Commerce offers several inventory filters to fine-tune which facilities are eligible for allocation, including:**</mark>
 
-<figure><img src="../../.gitbook/assets/Inventoryfilters.png" alt="" width="563"><figcaption><p>Inventory Filters</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Select filters (2).png" alt="" width="375"><figcaption><p>Inventory Filters</p></figcaption></figure>
 
 * **Broker only if all ship group items are available:** Only allocate a shipgroup if all the items are available. All items do not have to be available at the same location, only available at the same time. This is useful if an order should only be shipped if all of it can be shipped without cancelation.
 
@@ -220,7 +220,7 @@ Final inventory rule
 {% hint style="warning" %}
 Once you've configured each rule, change its status from **Draft** to **Active** to make it operational. To do this, click on **Draft** and select **Active,** or revert an active rule back to **Draft** if any adjustments are required.
 
-Once all rules are active, and your routing is fully configured, set the [Brokering Run](broken-reference) to **Active** so that orders can be processed as scheduled.
+Once all rules are active, and your routing is fully configured, set the [Brokering Run](broken-reference/) to **Active** so that orders can be processed as scheduled.
 {% endhint %}
 
 ### Add Special Handling for Standard Orders
