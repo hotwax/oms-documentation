@@ -85,9 +85,7 @@ The first step in setting up routing rules is to create a batch of orders using 
 * **Sales channel:** Channel where the order was captured. Different sales channels (eCommerce or marketplaces) may require different routing strategies. Orders can be filtered by channel so that the right group of orders is picked for routing based on channel-specific fulfillment rules, reducing the risk of penalties or delays in fulfilling orders from marketplaces like Amazon.
 * **Shipment method type:** SLA promised to the customer. When customers choose specific [shipping methods](https://docs.hotwax.co/documents/system-admins/fulfillment/shipping-methods/shippinggateways), like expedited or same-day delivery, these orders must be prioritized differently. Retailers can use this filter to create a batch of orders based on the selected shipping method, so orders requiring fast shipping are processed first.
 
-**Exclude Tab:** Exclude orders based on specific criteria while including all others. This feature is useful when retailers need to filter orders by omitting a specific filter instead of manually selecting all others.
-
-In case a retailer wants to create a batch of all online orders except those from Facebook Marketplace, instead of selecting all other retail channels, they can just exclude it.
+**Exclude Tab:** Exclude orders based on specific criteria while including all others. This feature is useful when retailers need to filter orders by omitting a specific filter instead of manually selecting all others. In case a retailer wants to create a batch of all online orders except those from Facebook Marketplace, instead of selecting all other retail channels, they can just exclude it.
  
 
 Continuing with our example, let’s take a closer look at how to apply the right filters and sorting options for <mark style="color:orange;">**Same-day/Next day**</mark> routing rule.
