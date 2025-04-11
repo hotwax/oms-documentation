@@ -16,7 +16,7 @@ The transfer order items shipped from the store are synchronized to NetSuite so 
 
 When transfer order items are received in the warehouse, inventory counts for the corresponding items are automatically increased in NetSuite and the transfer order status is updated from `Pending Receipt` to `Received`.
 
-It’s crucial to note that the inventory count for transfer order items received in the warehouse is increased in HotWax Commerce on performing its daily inventory sync from NetSuite.
+Inventory count for transfer order items received in the warehouse is increased in HotWax Commerce on performing its periodic inventory sync from NetSuite.
 
 ## Workflow
 
