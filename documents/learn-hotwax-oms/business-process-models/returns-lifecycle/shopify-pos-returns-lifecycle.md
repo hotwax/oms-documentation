@@ -8,41 +8,50 @@ description: >-
 
 <figure><img src="../../.gitbook/assets/InstoreReturnsShopifyPOSbpm.png" alt=""><figcaption><p>In-store returns lifecycle business process model</p></figcaption></figure>
 
-Some of our Shopify customers use the Shopify POS App to accept in-store returns. The app lets them check all of their store's orders in a single view, whether they were placed online or in person, review its details, and perform a refund or exchange.
+Many Shopify retailers allow customers to return items directly in stores using the Shopify POS App. Whether the item was purchased online or in person, store associates can easily look up the order, process the return, and issue a refund all within the app.
 
-## Customers Return in Store
+Once the return is completed, Shopify POS creates a return record and restocks the inventory. HotWax Order Management System syncs the return, updates inventory, then HotWax’s Integration Platform transforms the data, and syncs it to NetSuite for final processing. This ensures all systems stay in sync, and the return is reflected end-to-end, from store to backend systems.
 
-Customers visit their preferred store to return their purchases. Upon arrival, they provide order details to the store associate.
+## 1. In-Store Return by Customer
 
-## Look-Up Specific Order
+Customers visit their preferred store to return an in-store purchase or an online order.  The store associate looks up the order using the customer’s order ID. Once the order is found, the return is processed by:
 
-Store associates search the customer's order ID and once identified, they start processing the in-store return.
+* Selecting the item being returned
+* Choosing the reason for return
+* Issuing a refund to the customer
 
-## Returns Processed
+## 2. Returns Created in Shopify POS
 
-Store associates choose the item being returned, designate the restock location to facilitate inventory replenishment, and also specify the reason for the return. Finally, store associates complete the return process by processing the refunds to customers.
-
-## Returns Created in Shopify POS
-
-Once the refund process is completed in the Shopify POS, multiple actions take place:
+Once the refund process is completed in Shopify POS, multiple actions take place:
 
 * Returned inventory is restocked at the designated store location.
 * A return under the order is created in Shopify POS with the returned item marked as <mark style="color:orange;">**“Returned”**</mark>, and the payment status is updated as <mark style="color:orange;">**“Refunded”**</mark>.
+  
+## 3. Import POS Returns in HotWax Commerce
 
-{% hint style="success" %}
-It's crucial to understand that in-store returns are instantaneous because the return request and receipt happen simultaneously, unlike web returns. Once these in-store returns are completed in Shopify POS, they are synchronized to HotWax Commerce and subsequently to NetSuite.
+HotWax OMS automatically downloads return data from Shopify at regular intervals. Once downloaded, the returned orders are marked as <mark style="color:orange;">**“Completed”**</mark> and with payment as <mark style="color:orange;">**“Refunded”**</mark> status.
+
+HotWax Commerce also updates the inventory, restocking the returned item at the same store where it was received.
+
+## 4. Transform and Export Returns Data
+
+HotWax’s Integration Platform fetches POS returns data from HotWax Commerce OMS, transforms the data into a format compatible with NetSuite and exports it.
+
+## 5. Import POS Returns in NetSuite
+
+A scheduled SuiteScript in NetSuite automatically reads and downloads the returns data and takes the following steps:
+
+* An RMA is created with <mark style="color:orange;">**Pending Receipt**</mark> status and linked to the original order.
+* An Item Receipt record is created to confirm that the returned item has been received. This record is linked to the RMA, and the item is restocked at the same store where it was returned.
+* Once the Item Receipt record is created, the RMA is automatically updated to <mark style="color:orange;">**Pending Refund status**</mark>.
+* A Credit Memo is created in Open status and linked to the RMA.
+* A Customer Refund record is automatically created based on the refund method and linked to the Credit Memo.
+* Once the Customer Refund record is created, the Credit Memo is updated from Open to Fully Applied, and the RMA status is updated from <mark style="color:orange;">**Pending Refund**</mark> to <mark style="color:orange;">**Refunded**</mark>.
+
+This entire process, from receiving the returned item to issuing the refund, begins automatically as soon as a customer completes an in-store return.
+
+HotWax ensures that all return data is synced to NetSuite, allowing everything from creating a return record to issuing a refund to happen smoothly and automatically. This also keeps financial records accurate and makes reconciliation easier.
+
+{% hint style="info" %}
+When retailers record in-store purchases as cash sales in NetSuite, POS returns do not require an RMA. Instead, a Cash Refund record is created, and the inventory is automatically restocked at the store. However, if in-store purchases are recorded as sales orders in NetSuite, the return follows the full RMA process, just like web returns.
 {% endhint %}
-
-## POS Returns Downloaded from Shopify to HotWax Commerce
-
-A scheduled job in HotWax Commerce downloads the return data from Shopify POS. These returns are downloaded in <mark style="color:orange;">**“Completed”**</mark> status and the payment in <mark style="color:orange;">**“Refunded”**</mark> status in HotWax Commerce.
-
-HotWax Commerce also restocks the returned inventory because of the visibility into the specific location where the inventory is received.
-
-## Synchronize POS Returns from HotWax Commerce to NetSuite
-
-A scheduled job in HotWax Commerce synchronizes POS returns to NetSuite. This triggers multiple actions:
-
-* A cash refund record is generated against the original cash sale.
-* The returned inventory is automatically restocked.
-* The link to the cash refund record is added to the original cash sale.
