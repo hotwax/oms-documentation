@@ -6,9 +6,9 @@ description: >-
 
 # In-Store Returns with Shopify POS
 
-<figure><img src="../../.gitbook/assets/InstoreReturnsShopifyPOSbpm.png" alt=""><figcaption><p>In-store returns lifecycle business process model</p></figcaption></figure>
-
 Some of our Shopify customers use the Shopify POS App to accept in-store returns. The app lets them check all of their store's orders in a single view, whether they were placed online or in person, review its details, and perform a refund or exchange.
+
+<figure><img src="../../.gitbook/assets/in-store-returns-shopify-pos-bpm.png" alt=""><figcaption><p>In-store returns lifecycle business process model</p></figcaption></figure>
 
 ## Customers Return in Store
 
