@@ -49,7 +49,7 @@ The Brokering Queue serves as a waiting area for orders awaiting processing in t
 
 For example, if the brokering engine runs every three hours starting at 9:00 A.M., orders placed and approved at 10:00 A.M. will remain in the Brokering Queue until the next brokering engine run at 12:00 P.M. Similarly, orders placed and approved at 11:30 A.M. will also be processed at 12:00 P.M.
 
-To Know more about Brokering [Click Here](https://docs.hotwax.co/documents/v/retail-operations/orders/brokering).
+To Know more about Brokering [Click here](https://docs.hotwax.co/documents/retail-operations/orders/order-routing).
 
 ### Bundle Product
 
@@ -69,7 +69,7 @@ Customer Service Representatives (CSRs) can utilize HotWax Commerce to get detai
 
 Digital gift cards, or e-gift cards, are virtual equivalents of physical gift cards. Customers receive them via email or text message along with a unique serial number that they can use to redeem the value stored in the card. When customers order a digital gift card on Shopify, the order is immediately auto-fulfilled, a serial number is assigned, and the value is loaded to activate the gift card. Consequently, when HotWax Commerce downloads that order from Shopify, it is automatically marked as "Completed".
 
-To Know more about Gift cards [Click Here](https://docs.hotwax.co/documents/v/learn-hotwax-oms/business-process-models/giftcardorderslifecycle#digital-gift-cards).
+To Know more about Digital Gift cards [Click here](https://docs.hotwax.co/documents/learn-hotwax-oms/business-process-models/giftcard-orders-lifecycle#digital-gift-cards).
 
 ### Excluded ATP
 
@@ -129,7 +129,7 @@ Online ATP represents the unified inventory pool of actual sellable inventory co
 To calculate Online ATP, HotWax Commerce deducts inventory that is not available for sale from the ATP. This includes items such as safety stock, threshold quantities, orders in the brokering queue, and inventory from locations that are not participating in online selling.\
 HotWax Commerce calculates Online Available to Promise (ATP)\
 Online ATP = QOH - (Reserved quantities + Safety stock + Threshold + Orders in brokering queue + Excluded facilities’ ATP)\
-To Know more about Online ATP [Click Here](https://docs.hotwax.co/documents/v/learn-hotwax-oms/business-process-models/inventorylifecycle#push-online-atp-to-ecommerce).
+To Know more about Online ATP [Click here](https://docs.hotwax.co/documents/learn-hotwax-oms/business-process-models/inventory-lifecycle#push-online-atp-to-ecommerce).
 
 ### Order Fulfillment Status
 
@@ -142,7 +142,7 @@ When a customer places multiple orders that can be fulfilled from the same locat
 ### Packing Slip
 
 A packing slip is a document included with a shipment that lists the contents of the package. It typically includes details such as item names, quantities, and sometimes prices. This document assists both customers and senders in confirming that the correct items have been packed and shipped. In HotWax Commerce, store associates can choose whether they want to print the packing slip when packing orders\
-To know more about Packing Slip [Click Here](https://docs.hotwax.co/documents/orders/bopis/packed-order-tab).
+To know more about Packing Slip [Click here](https://docs.hotwax.co/documents/store-operations/orders/bopis/packed-order-tab).
 
 ### Picker
 
