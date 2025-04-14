@@ -41,12 +41,12 @@ HotWax’s Integration Platform fetches POS returns data from HotWax Commerce OM
 
 A scheduled SuiteScript in NetSuite automatically reads and downloads the returns data and takes the following steps:
 
-* An RMA is created with <mark style="color:orange;">**Pending Receipt**</mark> status and linked to the original order.
+* An RMA is created with <mark style="color:orange;">**"Pending Receipt"**</mark> status and linked to the original order.
 * An Item Receipt record is created to confirm that the returned item has been received. This record is linked to the RMA, and the item is restocked at the same store where it was returned.
-* Once the Item Receipt record is created, the RMA is automatically updated to <mark style="color:orange;">**Pending Refund status**</mark>.
-* A Credit Memo is created in Open status and linked to the RMA.
+* Once the Item Receipt record is created, the RMA is automatically updated to <mark style="color:orange;">**"Pending Refund status"**</mark>.
+* A Credit Memo is created in <mark style="color:orange;">**"Open"**</mark> status and linked to the RMA.
 * A Customer Refund record is automatically created based on the refund method and linked to the Credit Memo.
-* Once the Customer Refund record is created, the Credit Memo is updated from Open to Fully Applied, and the RMA status is updated from <mark style="color:orange;">**Pending Refund**</mark> to <mark style="color:orange;">**Refunded**</mark>.
+* Once the Customer Refund record is created, the Credit Memo is updated from <mark style="color:orange;">**"Open"**</mark> to <mark style="color:orange;">**"Fully Applied"**</mark>, and the RMA status is updated from <mark style="color:orange;">**"Pending Refund"**</mark> to <mark style="color:orange;">**"Refunded"**</mark>.
 
 This entire process, from receiving the returned item to issuing the refund, begins automatically as soon as a customer completes an in-store return.
 
