@@ -24,7 +24,7 @@ Once a customer submits their return request, Loop creates an RMA in <mark style
 
 ## 2. Create Return in Shopify
 
-Loop automatically syncs this new return to Shopify, adding the "Return in Progress" status to the original sales order. This helps retailers track the entire return process directly in Shopify, their primary sales platform, for better traceability and control.
+Loop automatically syncs this new return to Shopify, adding the <mark style="color:orange;">**"Return in Progress"**</mark> status to the original sales order. This helps retailers track the entire return process directly in Shopify, their primary sales platform, for better traceability and control.
 
 ## 3. Download and Transform Returns Data From Loop
 
@@ -39,7 +39,7 @@ Once all the necessary details are fetched, HotWax Commerce Integration Platform
 
 **Why is this important?**
 
-Most third-party tools like NovaModule only move data from one system to another. But HotWax Commerce does more than that. It brings together return, order, and product details to create a clear link between the return and the original sale order.
+Most third-party tools like NovaModule only move data from one system to another. But HotWax Commerce does more than that. It brings together return, order and product details to create a clear link between the return and the original sale order.
 
 ## 4. HotWax Commerce Exports Return Data for NetSuite
 
@@ -82,7 +82,7 @@ Based on the Loop return IDs, HotWax Commerce triggers Loop to take the next ste
 
 ## 9. Refund Initiated and Return Closed in Shopify
 
-As soon as Shopify processes the refund to the customer’s original payment method, it updates the return status from **“In-Progress”** to **“Returned,”** marking the return as Complete in Shopify. At the same time, Shopify syncs the refund details back to Loop.
+As soon as Shopify processes the refund to the customer’s original payment method, it updates the return status from <mark style="color:orange;">**“In-Progress”**</mark> to <mark style="color:orange;">**“Returned”**</mark>, marking the return as Complete in Shopify. At the same time, Shopify syncs the refund details back to Loop.
 
 ## 10. Refund Data is Fetched and Transformed
 
@@ -92,9 +92,9 @@ HotWax Commerce subscribes to Loop’s webhook to receive refund details, which 
 
 A SuiteScript in NetSuite imports and processes these data, and triggers multiple actions:
 
-* A Credit Memo is created in the Open status and linked to the RMA.
+* A Credit Memo is created in the <mark style="color:orange;">**"Open"**</mark> status and linked to the RMA.
 * A Customer Refund record is automatically created based on the refund method and linked to the Credit Memo.
-* Once the Customer Refund record is created, the Credit Memo is updated from Open to Fully Applied, and the RMA status is updated from Pending Refund to Refunded.
+* Once the Customer Refund record is created, the Credit Memo is updated from <mark style="color:orange;">**"Open"**</mark> to <mark style="color:orange;">**"Fully Applied"**</mark>, and the RMA status is updated from <mark style="color:orange;">**"Pending Refund"**</mark> to <mark style="color:orange;">**"Refunded"**</mark>.
 
 ## 12. Download Completed Returns From Shopify in the OMS 
 
@@ -107,8 +107,8 @@ HotWax Commerce uses a scheduled job to sync all Completed returns from Shopify,
 
 To prevent duplicate inventory updates, HotWax recommends disabling the inventory restock feature in Loop, as NetSuite and HotWax manage inventory adjustments.
 
-### Why is Downloading Returns Crucial in HotWax Commerce?
+### How HotWax Commerce OMS Helps with Return Reconciliation?
 
-To ensure data integrity, HotWax Commerce provides an auditing tool OReSA that automatically compares returns totals of the eCommerce platform with the ERP.
+To maintain data integrity, HotWax Commerce provides an auditing tool OReSA that automatically compares returns totals of the eCommerce platform with the ERP.
 
 In case any inconsistencies are found, the returns audit dashboard provides a gap analysis report that highlights the monetary gaps in both systems.
