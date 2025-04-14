@@ -8,10 +8,7 @@ description: >-
 
 **Syncing Inventory From HotWax Commerce To Shopify**
 
-There are two ways to update the inventory count on Shopify: through webhooks or batch jobs.
-
-1. You can keep your inventory data synced in real-time with Shopify's webhooks. By subscribing to the 'inventory level update' webhook, you can trigger synchronization whenever there's an inventory update in HotWax Commerce. Keep in mind that [Shopify can't guarantee webhook delivery](https://shopify.dev/apps/webhooks#limitation), so it's important to periodically reconcile your data with Shopify to ensure everything stays up-to-date.\\
-2. HotWax Commerce suggests using batch jobs at regular intervals to sync inventory in bulk, ensuring no product updates are missed. To accomplish this, HotWax Commerce provides the option to schedule the 3 different jobs to offer retailers the flexibility to schedule as per their business requirements.
+HotWax Commerce suggests using batch jobs at regular intervals to sync inventory in bulk, ensuring no product updates are missed. To accomplish this, HotWax Commerce provides the option to schedule the 3 different jobs to offer retailers the flexibility to schedule as per their business requirements.
 
 ## Upload Recent Inventory Change
 
