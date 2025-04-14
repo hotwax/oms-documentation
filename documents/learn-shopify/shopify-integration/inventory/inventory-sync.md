@@ -8,7 +8,7 @@ description: >-
 
 **Syncing Inventory From HotWax Commerce To Shopify**
 
-HotWax Commerce suggests using batch jobs at regular intervals to sync inventory in bulk, ensuring no product updates are missed. To accomplish this, HotWax Commerce provides the option to schedule the 3 different jobs to offer retailers the flexibility to schedule as per their business requirements.
+HotWax Commerce provides the option to schedule the 3 different jobs to offer retailers the flexibility to schedule as per their business requirements.
 
 ## Upload Recent Inventory Change
 
