@@ -1,7 +1,5 @@
 ---
-description: >-
-  Learn how to synchronize inventory from HotWax Commerce to
-  Shopify.
+description: Learn how to synchronize inventory from HotWax Commerce to Shopify.
 ---
 
 # Inventory Synchronization
@@ -30,7 +28,7 @@ At 1:15 PM, the job that runs every 15 minutes detects that there are inventory 
 
 <table><thead><tr><th width="152">Product List</th><th width="236">Inventory Count in Shopify</th><th width="219">Available Adjustments</th><th width="309">Updated Inventory Count in Shopify</th></tr></thead><tbody><tr><td>Product A</td><td>100</td><td>-5</td><td>95</td></tr><tr><td>Product C</td><td>25</td><td>5</td><td>30</td></tr></tbody></table>
 
-<figure><img src="../../.gitbook/assets/10.png" alt=""><figcaption><p><em>Fig. 1(i): Sync Inventory for Products with Recent Inventory Changes</em></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/10 (2).png" alt=""><figcaption><p><em>Fig. 1(i): Sync Inventory for Products with Recent Inventory Changes</em></p></figcaption></figure>
 
 \
 When updating inventory on Shopify, HotWax Commerce ensures that the location in Shopify matches the location in HotWax Commerce for merchants. If users utilize a non-Shopify POS, all physical locations in HotWax Commerce will be mapped to one virtual location in Shopify. However, if merchants use Shopify POS and have multiple store locations and an eCom location for online orders, all Shopify locations will be mapped one-to-one with HotWax locations. This means that any inventory updates made to the retail stores and warehouses in HotWax will be reflected in the specific store locations and eCom locations in Shopify for merchants.
@@ -53,6 +51,6 @@ To improve inventory accuracy, this job only syncs the inventory variances recor
 
 For example, Product A has 5 units listed in both Shopify and HotWax Commerce. Shopify then receives 4 orders for this product, which have not yet been downloaded into HotWax Commerce. Meanwhile, one unit of Product A is reported in HotWax Commerce as damaged or missing, reducing the online ATP in HotWax Commerce to 4. In this scenario, HotWax Commerce will now push a -1 inventory variance to Shopify instead of resetting the inventory to 4. The ATP on Shopify will be adjusted to 0, ensuring the product is marked as `Out of Stock` in Shopify, as Shopify has already received orders for 4 units.
 
-In another example, if a store receives a transfer order for Product B with 2 units, which originally had 10 units, then a variance of 2 will be pushed on Shopify to update the Shopify ATP to 12. 
+In another example, if a store receives a transfer order for Product B with 2 units, which originally had 10 units, then a variance of 2 will be pushed on Shopify to update the Shopify ATP to 12.
 
 ![Delta sync job](https://github.com/user-attachments/assets/a960fbc8-d315-4fc2-aaca-e196166e5492)
