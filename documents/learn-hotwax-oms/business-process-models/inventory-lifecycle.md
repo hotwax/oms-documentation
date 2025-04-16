@@ -76,7 +76,7 @@ When a product’s QOH and ATP is updated in HotWax Commerce, its `Online ATP` i
 
 Transfer orders can be categorized into three types: store to store, warehouse to store, and store to warehouse. To explore each type, refer to the Transfer Order Lifecycle BPM. In the Inventory Lifecycle BPM, we have taken warehouse to store to explain the concept.
 
-Learn more about [transfer orders](https://docs.hotwax.co/documents/v/learn-netsuite/supported-integrations/transfer-order)
+Learn more about [transfer orders](https://docs.hotwax.co/documents/learn-netsuite/integration-flows/transfer-order)
 
 ## Inventory Variances in Stores
 

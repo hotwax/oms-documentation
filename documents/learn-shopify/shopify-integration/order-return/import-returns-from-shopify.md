@@ -1,6 +1,5 @@
 ---
-description: >-
-  Learn how HotWax Commerce imports returns from Shopify.
+description: Learn how HotWax Commerce imports returns from Shopify.
 ---
 
 # Import Returns from Shopify
@@ -13,11 +12,11 @@ The process of importing returns from Shopify to HotWax Commerce typically invol
 
 Shopify allows the download of up to 250 returns per API call. To ensure data accuracy and prevent potential issues arising from multiple orders within a single return, HotWax Commerce restricts each API call to download a maximum of 100 returns.
 
-<figure><img src="../../.gitbook/assets/35.png" alt=""><figcaption><p>Fig.1(i): Import Order Returns in HotWax Commerce</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/35 (2).png" alt=""><figcaption><p>Fig.1(i): Import Order Returns in HotWax Commerce</p></figcaption></figure>
 
 Retailers can subscribe to Shopify's real-time return updates webhooks from HotWax Commerce's Job Manager app. However, Shopify warns that these webhooks might not consistently deliver real-time data. For a more reliable method, Shopify advises setting up reconciliation jobs to periodically retrieve return data directly from the platform.
 
-<figure><img src="../../.gitbook/assets/36.png" alt=""><figcaption><p>Fig. 1(ii): Shopify Webhook for return events</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/36 (2).png" alt=""><figcaption><p>Fig. 1(ii): Shopify Webhook for return events</p></figcaption></figure>
 
 * Once the return information is downloaded, HotWax Commerce processes the JSON files by reading them from the file system. Through the 'Process Bulk Imported Files' job, refund records are meticulously created within HotWax Commerce's database. This process ensures that return data is accurately integrated into the system. In cases where data discrepancies or issues may arise, error logs are generated, allowing for subsequent analysis and corrections to be made.
 

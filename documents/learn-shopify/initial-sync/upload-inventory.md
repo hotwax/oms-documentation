@@ -1,11 +1,12 @@
 ---
 description: >-
-  Learn how HotWax Commerce synchronizes inventory from HotWax Commerce to Shopify.
+  Learn how HotWax Commerce synchronizes inventory from HotWax Commerce to
+  Shopify.
 ---
 
-# Invnetory Sync from HotWax Commerce to Shopify
+# Initial Inventory Sync
 
-HotWax Commerce serves as the master of inventory availability. It seamlessly connects with various technology systems used by retailers, including Enterprise Resource Planning (ERP), Point of Sale (POS), and Warehouse Management Systems (WMS). HotWax Commerce ensures that inventory updates from all these systems are well synchronized. 
+HotWax Commerce serves as the master of inventory availability. It seamlessly connects with various technology systems used by retailers, including Enterprise Resource Planning (ERP), Point of Sale (POS), and Warehouse Management Systems (WMS). HotWax Commerce ensures that inventory updates from all these systems are well synchronized.
 
 ## Initial Inventory Sync in HotWax Commerce
 
@@ -13,8 +14,7 @@ HotWax commerce gets inventory feed from [ERP, WMS](https://docs.hotwax.co/docum
 
 ## Create Facility Groups to Sell Online
 
-Retailers can [create facility groups](https://docs.hotwax.co/documents/system-admins/administration/facilities/manage-groups) to choose which facility will participate in selling their inventory online. If a facility is capable of fulfilling online orders and wants its inventory to be sold online, it can be added to a facility group with the `CHANNEL FAC GROUP` subtype. Conversely, if the retailer decides not to sell a facility’s inventory online, it can be excluded from the group.
-The facility group created with the `CHANNEL FAC GROUP` subtype will also be available as options in toggles in the `sell online card` on the `facility details` page which can be turned on to add the facility to the respective facility group.
+Retailers can [create facility groups](https://docs.hotwax.co/documents/system-admins/administration/facilities/manage-groups) to choose which facility will participate in selling their inventory online. If a facility is capable of fulfilling online orders and wants its inventory to be sold online, it can be added to a facility group with the `CHANNEL FAC GROUP` subtype. Conversely, if the retailer decides not to sell a facility’s inventory online, it can be excluded from the group. The facility group created with the `CHANNEL FAC GROUP` subtype will also be available as options in toggles in the `sell online card` on the `facility details` page which can be turned on to add the facility to the respective facility group.
 
 ## Online ATP computation
 
@@ -22,21 +22,20 @@ HotWax Commerce considers various factors, such as `safety stock`, `threshold`, 
 
 Let’s take a look at an example:
 
-The product "blue shirt" from Brand ABC has been assigned plate number 100 QOH, and it has already received orders for 10 of them, and inventory is allocated for 5 sales orders. The Online ATP can be calculated using the following formula.
-Online ATP = QOH - (Reserved quantities + Safety stock + Threshold + Orders in brokering queue + Excluded facilities’ ATP)
+The product "blue shirt" from Brand ABC has been assigned plate number 100 QOH, and it has already received orders for 10 of them, and inventory is allocated for 5 sales orders. The Online ATP can be calculated using the following formula. Online ATP = QOH - (Reserved quantities + Safety stock + Threshold + Orders in brokering queue + Excluded facilities’ ATP)
 
 Given:
-- Quantity on hand: 100 Units
-- Reserved quantities: 5 Units
-- Safety stock: 5 Units
-- Threshold: 5 Units
-- Orders in brokering queue: 5 Units
-- Excluded facilities' ATP: 5 Units
+
+* Quantity on hand: 100 Units
+* Reserved quantities: 5 Units
+* Safety stock: 5 Units
+* Threshold: 5 Units
+* Orders in brokering queue: 5 Units
+* Excluded facilities' ATP: 5 Units
 
 Hence,
 
-Online ATP = 100 - (5 + 5 + 5 + 5 + 5) = 100 - 25 = 75
-HotWax Commerce will now push 75 units to Shopify as sellable inventory for online orders.
+Online ATP = 100 - (5 + 5 + 5 + 5 + 5) = 100 - 25 = 75 HotWax Commerce will now push 75 units to Shopify as sellable inventory for online orders.
 
 ## Sync with Shopify
 
@@ -48,7 +47,7 @@ For initial sync, a `Hard Sync` job needs to be scheduled to update all the prod
 
 #### Upload recent inventory changes
 
-The existing inventory of a product in HotWax Commerce is affected by sales, returns,  transfers, inventory variances, and any changes or updates in safety stock or threshold values. `Upload recent inventory changes` in HotWax Commerce check the inventory records of products in HotWax Commerce and identify products that have undergone inventory changes since the last inventory synchronization to Shopify. `Upload recent inventory changes` job is scheduled to push the delta changes to Shopify.
+The existing inventory of a product in HotWax Commerce is affected by sales, returns, transfers, inventory variances, and any changes or updates in safety stock or threshold values. `Upload recent inventory changes` in HotWax Commerce check the inventory records of products in HotWax Commerce and identify products that have undergone inventory changes since the last inventory synchronization to Shopify. `Upload recent inventory changes` job is scheduled to push the delta changes to Shopify.
 
 #### Process uploads to eCommerce
 
@@ -85,4 +84,3 @@ Schedule this job to upload the inventory changes for the products that have rec
 3. Once the job finishes, log in to the HotWax Commerce Inventory page and look through some products and their variants inventory as a sample.
 4. Afterward, login to the admin portal of Shopify and navigate to the `product` page.
 5. Look for the same products and verify the inventory changes for all selected variants have been successfully imported into the system.
-
