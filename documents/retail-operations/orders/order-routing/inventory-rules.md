@@ -57,7 +57,7 @@ Retailers can set up facility groups in HotWax’s `Facility App`. Creating faci
 
 <mark style="color:orange;">**HotWax Commerce offers several inventory filters to fine-tune which facilities are eligible for allocation, including:**</mark>
 
-<figure><img src="../../.gitbook/assets/Select filters (3).png" alt="" width="375"><figcaption><p>Inventory Filters</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Inventoryfilters.png" alt="" width="563"><figcaption><p>Inventory Filters</p></figcaption></figure>
 
 * **Broker only if all ship group items are available:** Only allocate a shipgroup if all the items are available. All items do not have to be available at the same location, only available at the same time. This is useful if an order should only be shipped if all of it can be shipped without cancelation.
 
