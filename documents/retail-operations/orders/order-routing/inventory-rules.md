@@ -57,7 +57,7 @@ Retailers can set up facility groups in HotWax’s `Facility App`. Creating faci
 
 <mark style="color:orange;">**HotWax Commerce offers several inventory filters to fine-tune which facilities are eligible for allocation, including:**</mark>
 
-<figure><img src="../../.gitbook/assets/Select filters (3).png" alt="" width="375"><figcaption><p>Inventory Filters</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Inventoryfilters.png" alt="" width="563"><figcaption><p>Inventory Filters</p></figcaption></figure>
 
 * **Turn off the facility order limit check:** Retailers can set[ fulfillment capacity](https://docs.hotwax.co/documents/system-admins/administration/facilities/configure-fulfillment-capacity) in HotWax, allowing them to define the maximum number of orders a facility can fulfill in a day. Disabling the facility order limit filter gives retailers the flexibility to bypass the defined order limit for a facility, which is especially useful during peak times or high-demand periods. For example, if a retailer turns off this limit, orders can continue to be assigned to that facility even after its maximum capacity has been reached.
 * **Brokering safety stock:** Different from online ATP safety stock, [brokering safety stock](https://docs.hotwax.co/documents/retail-operations/orders/brokering/scenarios) defines the minimum stock required for an order to be brokered to a facility. For example, if a retailer sets a brokering safety stock level of 10 units, only facilities with at least 10 units of the item in stock will be eligible to fulfill the order. This prevents over-allocation and maintains safety stock levels for unforeseen demand.
