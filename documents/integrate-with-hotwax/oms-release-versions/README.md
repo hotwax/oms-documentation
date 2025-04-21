@@ -28,7 +28,7 @@ description: Discover  the versions of HotWax Commerce OMS releases.
 {% endtab %}
 
 {% tab title="Upgrade SQL" %}
-[Link to Upgrade SQL](https://git.hotwax.co/commerce/oms/-/blob/develop/upgrade/v6.4.0/UpgradeSQL.sql?ref_type=heads)
+[Link to Upgrade SQL](https://git.hotwax.co/commerce/oms/-/blob/develop/upgrade/v6.4.0/UpgradeSQL.sql?ref_type=he)
 {% endtab %}
 
 {% tab title="Upgrade Steps" %}
@@ -65,11 +65,11 @@ description: Discover  the versions of HotWax Commerce OMS releases.
 {% endtab %}
 
 {% tab title="Upgrade SQL" %}
-[Link to Upgrade SQL](https://git.hotwax.co/commerce/oms/-/blob/v6.3.4/upgrade/v6.3.4/UpgradeSQL.sql?ref_type=heads)
+[Link to Upgrade SQL](https://git.hotwax.co/commerce/oms/-/blob/v6.3.4/upgrade/v6.3.4/UpgradeSQL.sql?ref_type=tags)
 {% endtab %}
 
 {% tab title="Upgrade Steps" %}
-[Link to Upgrade Steps](https://git.hotwax.co/commerce/oms/-/blob/v6.3.4/upgrade/v6.3.4/UpgradeSteps.md?ref_type=heads)
+[Link to Upgrade Steps](https://git.hotwax.co/commerce/oms/-/blob/v6.3.4/upgrade/v6.3.4/UpgradeSteps.md?ref_type=tags)
 {% endtab %}
 {% endtabs %}
 
