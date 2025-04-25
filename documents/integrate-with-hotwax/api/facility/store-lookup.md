@@ -157,7 +157,7 @@ When filtering by parameters containing spaces (e.g., storeName, city, primaryFa
 
 Example:
 To filter for the store name "Time Square", use:
-storeName: Mall+Of+America
+storeName: Time+Square
 { % endhint %}
 
 ### Valid values of storeType
