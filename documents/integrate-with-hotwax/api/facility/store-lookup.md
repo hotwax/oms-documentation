@@ -156,7 +156,7 @@ Filter is a parameter that allows you to narrow down the results of a query or s
 When filtering by parameters containing spaces (e.g., storeName, city, primaryFacilityGroupName), replace spaces with + (plus signs) for the storeLookUp API.
 
 Example:
-To filter for the store name "Mall Of America", use:
+To filter for the store name "Time Square", use:
 storeName: Mall+Of+America
 { % endhint %}
 
