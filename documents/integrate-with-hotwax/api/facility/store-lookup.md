@@ -152,13 +152,14 @@ Filter is a parameter that allows you to narrow down the results of a query or s
 | `stateCode`                | State Code                                           |
 | `latlon`                   | The latitude and longitude of the facility           |
 
-{% hint style="info" %}Spaces in Filter Values:
+{% hint style="info" %}
+**Spaces in Filter Values**:
 When filtering by parameters containing spaces (e.g., storeName, city, primaryFacilityGroupName), replace spaces with + (plus signs) for the storeLookUp API.
 
 Example:
 To filter for the store name "Time Square", use:
 storeName: Time+Square
-{ % endhint %}
+{% endhint %}
 
 ### Valid values of storeType
 
