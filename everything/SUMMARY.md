@@ -16,9 +16,6 @@
   * [Order Brokering](tools/order-flow/order-brokering.md)
   * [Order Fulfillment](tools/order-flow/order-fulfillment.md)
   * [Order Fulfillment Notification](tools/order-flow/order-fulfillment-notification.md)
- 
-* [Netsuite](tools/Netsuite/Managing Saved Searches.md)
-  * [Managing Saved Searches](tools/Netsuite/Managing Saved Searches.md)
 
 * [Git](tools/git/README.md)
   * [How to Create Issue on Git](tools/git/README.md)
