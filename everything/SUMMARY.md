@@ -16,9 +16,6 @@
   * [Order Brokering](tools/order-flow/order-brokering.md)
   * [Order Fulfillment](tools/order-flow/order-fulfillment.md)
   * [Order Fulfillment Notification](tools/order-flow/order-fulfillment-notification.md)
-
-* [Netsuite](tools/Netsuite/README.md)
-  * [Managing Saved Searches](tools/Netsuite/README.md)
    
 * [Git](tools/git/README.md)
   * [How to Create Issue on Git](tools/git/README.md)
@@ -46,6 +43,9 @@
     * [Data Export Errors](tools/napita/troubleshooting/data-export-errors.md)
     * [Queue Errors](tools/napita/troubleshooting/troubleshooting-queue-files.md)
     * [Fetch Put SFTP Retry](tools/napita/troubleshooting/fetch-put-sftp-retry.md)
+
+* [Netsuite](tools/Netsuite/README.md)
+  * [Managing Saved Searches](tools/Netsuite/README.md)
 
 * [Ofbiz](tools/ofbiz/readme.md)
   * [Orders](tools/ofbiz/order/README.md)
