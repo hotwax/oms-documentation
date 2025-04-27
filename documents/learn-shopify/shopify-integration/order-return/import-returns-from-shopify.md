@@ -12,11 +12,13 @@ Once the return information is downloaded, HotWax Commerce processes the JSON th
 
 While processing returns from Shopify, if HotWax Commerce doesn't have the order being returned, it will automatically import the order from Shopify, guaranteeing that returns are always linked to a sales order for full tracability.
 
+
 {% hint style="info" %}
 The refund total may differ from the actual sales total of the order. This variance can be attributed to scenarios where customers have paid shipping and handling charges on the order, which are sometimes excluded from the refund amount.
 {% endhint %}
 
 ## In-Store Returns
+
 
 **Shopify POS:** Shopify POS is already linked with Shopify eCommerce, providing access to online orders within the POS system. When in-store returns are created in Shopify POS for online orders, these return details are stored in Shopify. HotWax Commerce's 'Import Order Return' job works with both Shopify eCommerce and Shopify POS to download refund information and transfer transaction details to the ERP.
 

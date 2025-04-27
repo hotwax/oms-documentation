@@ -173,7 +173,7 @@ Method: `POST`
 
 ### Step 3: Check inventory at each store allowing BOPIS
 
-For each store that allows BOPIS, use the checkInventory API to check the available to promise (ATP) inventory for the desired product. Display all the facilities with non-zero inventory numbers on the product detail page (PDP) for customers to select and place a BOPIS order.
+For each store that allows BOPIS, use the checkBOPISInventory API to check the available to promise (ATP) inventory for the desired product. Display all the facilities with non-zero inventory numbers on the product detail page (PDP) for customers to select and place a BOPIS order.
 
 Note: If a facility has 0 inventory for the product, you can still display it for the Ship-to-store PDP experience.
 

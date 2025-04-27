@@ -131,8 +131,6 @@ Content-Type: application/json
 | `<day_of_week>_open`       | The opening time of the store on the day of a week                                                                                                  |
 | `<day_of_week>_close`      | The closing time of the store on the day of a week                                                                                                  |
 
-
-
 ## Note:
 
 ### Filters
@@ -153,6 +151,15 @@ Filter is a parameter that allows you to narrow down the results of a query or s
 | `countryCode`              | Country Code                                         |
 | `stateCode`                | State Code                                           |
 | `latlon`                   | The latitude and longitude of the facility           |
+
+{% hint style="info" %}
+**Spaces in Filter Values**:
+When filtering by parameters containing spaces (e.g., storeName, city, primaryFacilityGroupName), replace spaces with + (plus signs) for the storeLookUp API.
+
+Example:
+To filter for the store name "Time Square", use:
+storeName: Time+Square
+{% endhint %}
 
 ### Valid values of storeType
 

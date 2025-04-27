@@ -1,14 +1,13 @@
 ---
-description: >-
-  Learn how HotWax Commerce manages returns and exchange from Shopify POS.
+description: Learn how HotWax Commerce manages returns and exchange from Shopify POS.
 ---
 
-
-# Shopify and HotWax Commerce Returns & Exchanges
+# Shopify POS Exchanges
 
 Many times customers visit their preferred store location to return or exchange their online order. Perhaps they received the wrong size, the item is defective, or they simply changed their mind. Shopify provides a streamlined process for returns and exchanges. Store associates can directly process returns using Shopify POS, specify the items customers wish to return and the reason for the return. If they'd like to exchange the item for a different product, Shopify allows them to select the new item directly within the return process.
 
 With Exchanges V2, Shopify has streamlined the returns and exchange process for both customers and retailers. When there is an exchange order in Shopify POS, it creates a return for the items the customer doesn’t want and adds the new items the customer purchased in exchange to the order
+
 
 This seems straightforward for the initial exchange process, as the transaction details and order information are consolidated within the original order. However, this approach creates complexities for ERP systems like NetSuite or other accounting systems that hold a repository of all the financial records.
 
@@ -42,13 +41,13 @@ To illustrate how returns and exchanges in the same order in Shopify are importe
 
 Let's consider an example where a customer places an online order on Shopify for three items: Item A, Item B, and Item C, each priced at $10. This order, when imported into HotWax Commerce, will have a corresponding payment transaction of $30 (Shop Pay 1).
 
-| **Order Items** |
-| ----------- |                                            
-| A: $10      |
-| B: $10      |
-| C: $10      |
+| **Order Items**  |
+| ---------------- |
+| A: $10           |
+| B: $10           |
+| C: $10           |
 | **Transactions** |
-|  ShopPay1: $30
+| ShopPay1: $30    |
 
 ### Scenario 1: Exchanged Item of Greater Value
 
@@ -56,14 +55,14 @@ Now, suppose the customer returns Item A and opts for an exchange with Item D, v
 
 This additional payment will be recorded in Shopify under the same order. Now there are two transactions recorded on this order in Shopify: the initial transaction of $30 and a second transaction of $10 for the newly exchanged item.
 
-| **Order Items** | **Exchange Item** |
-| ----------- |-----------------------|
-| A: ~~$10~~  | D: $20                |
-| B: $10      |
-| C: $10      | 
+| **Order Items**  | **Exchange Item** |
+| ---------------- | ----------------- |
+| A: ~~$10~~       | D: $20            |
+| B: $10           |                   |
+| C: $10           |                   |
 | **Transactions** |                   |
-|  ShopPay1: $30 |                     |
-|  ShopPay2: $10 |                     |
+| ShopPay1: $30    |                   |
+| ShopPay2: $10    |                   |
 
 Note: add image of Shopify order view screen at this state
 
@@ -75,6 +74,7 @@ The item purchased in exchange of a return on Shopify will be imported into HotW
 To manage easy reconciliation with Shopify, HotWax first records the addtional payment for the exchange order, $10 (Shop Pay 2), on the original order.
 
 Adding exchange transactions to the main order, however, inflates the payment captured on the original order. To handle this, HotWax Commerce creates balancing attribution transactions that serve as counterparts to the payments associated with exchange orders.
+
 
 | Order Items | Exchange Item |
 |-------------|---------------|
@@ -125,6 +125,7 @@ In the event that the customer returns item D along with items B and C, Shopify 
 | ShopPayRefund1: $30<br>Status: Refund<br>parentPaymentRef: ShopPay1 | ExchangeCredit: $20 <br>Status: Refund |
 | ShopPayRefund2: $10<br>Status: Refund<br>parentPaymentRef: ShopPay2 |  |
 
+
 Note: Is there an exchange credit added to the original order for the amount refunded on another order?
 
 In Shopify, all payment captures are against the same order, whether it be for originally purchased items or exchange items. Due to this mixing of transactions in Shopify, refunds are also processed fluidly, where an exchange item may be refunded against a payment captured when making an initial purchase. The end result is that Shopify links the refund transaction to the capture transaction it is refunding, but the payment being refunded is not always the actual payment the customer made for the item being returned.
@@ -147,21 +148,21 @@ There are two valid ways to allocate these amounts
 
 Attribute the two $10 amounts to the exchanged order and attribute the $20 amount to the original order
 
-| Order Type        | Refund amount | Attribution  |
-|-------------------|---------------|--------------|
-| Original Order    | $20           | Shop Pay 1   |
-| Exchange Order    | $10           | Shop Pay 1   |
-| Exchange Order    | $10           | Shop Pay 2   |
-
+| Order Type     | Refund amount | Attribution |
+| -------------- | ------------- | ----------- |
+| Original Order | $20           | Shop Pay 1  |
+| Exchange Order | $10           | Shop Pay 1  |
+| Exchange Order | $10           | Shop Pay 2  |
 
 #### Method 2
+
 Attribute the $20 amount to the exchanged order and attribute the two $10 amounts to the original order.
 
-| Order Type        | Refund amount | Attribution  |
-|-------------------|---------------|--------------|
-| Original Order    | $10           | Shop Pay 1   |
-| Original Order    | $10           | Shop Pay 2   |
-| Exchange Order    | $20           | Shop Pay 1   |
+| Order Type     | Refund amount | Attribution |
+| -------------- | ------------- | ----------- |
+| Original Order | $10           | Shop Pay 1  |
+| Original Order | $10           | Shop Pay 2  |
+| Exchange Order | $20           | Shop Pay 1  |
 
 Both methods are valid but one or the other attribution model is not actually specified by Shopify.
 Therefore, instead of picking an attribution itself, HotWax Commerce simply marks the exchange order as fully refunded using an 'Exchange Credit: Refunded' payment line and does not try to link specific Shopify refunds to particular return items.
@@ -183,9 +184,18 @@ In the event that the customer subsequently decides to return both the exchanged
 | ShopPay1: $25<br>Status: Refund<br>parentPaymentRef: ShopPay1 | ExchangeCredit: $5 <br> Status: Refund  |
 
 
+| Order Items                                                                 | Exchange Item                                           |
+| --------------------------------------------------------------------------- | ------------------------------------------------------- |
+| A: ~~$10~~                                                                  | D: ~~$5~~                                               |
+| B: ~~$10~~                                                                  |                                                         |
+| C: ~~$10~~                                                                  |                                                         |
+| **Transactions**                                                            |                                                         |
+| ShopPay1: $30                                                               | <p>ExchangeCredit: $5<br>parentPaymentRef: ShopPay1</p> |
+| ShopPay1 Refund1: $5                                                        |                                                         |
+| <p>ShopPay1Refund2: $25<br>Status: Refund<br>parentPaymentRef: ShopPay1</p> | ExchangeRefund: $5                                      |
+
 In this case, there will be an attribution of $5 to the exchange order with the payment method as `Exchange Credit` and as there is no payment captured from the customer, there will be no `Exchange Payment` on the exchange order.
 
 **How does HotWax Commerce ensure accurate inventory updates from Returns and Exchanges?**
 
-When a customer returns an item in Shopify POS and exchanges it for another item, the inventory of the exchanged item is decreased in Shopify POS. Once this order syncs to HotWax Commerce in the completed status, HotWax automatically reduces the inventory for the exchanged item.
-For items returned from the original order, Shopify POS sends the return data to HotWax Commerce, including the facility ID where the returned items are received. If the restocking flag is enabled, HotWax Commerce will restock the inventory at the specified facility based on the captured facility ID.
+When a customer returns an item in Shopify POS and exchanges it for another item, the inventory of the exchanged item is decreased in Shopify POS. Once this order syncs to HotWax Commerce in the completed status, HotWax automatically reduces the inventory for the exchanged item. For items returned from the original order, Shopify POS sends the return data to HotWax Commerce, including the facility ID where the returned items are received. If the restocking flag is enabled, HotWax Commerce will restock the inventory at the specified facility based on the captured facility ID.
