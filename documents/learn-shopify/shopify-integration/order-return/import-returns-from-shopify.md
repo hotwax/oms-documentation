@@ -4,7 +4,7 @@ description: Learn how HotWax Commerce imports returns from Shopify.
 
 # Import Returns from Shopify
 
-The "Import Order Returns" job in the Job Manager app initiates the return sync by sending an API request to Shopify for orders with returns created after the last sync. In response, Shopify returns returns data in JSON format. The frequency at which the "Import Order Returns" job is executed can be configured, but a recommended time interval for this job is every 15 minutes.
+The "Import Order Returns" job in the Job Manager app initiates the return sync by sending an API request to Shopify for orders with returns created after the last sync. The frequency at which the "Import Order Returns" job is executed can be configured, but a recommended time interval for this job is every 15 minutes.
 
 <figure><img src="../../.gitbook/assets/35 (2).png" alt=""><figcaption><p>Fig.1(i): Import Order Returns in HotWax Commerce</p></figcaption></figure>
 

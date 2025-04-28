@@ -1,7 +1,7 @@
 ---
 description: Learn about returns in Shopify, Loop, NetSuite and HotWax Commerce.
 ---
-
+<!-- this is also in the loop section -->
 # Returns
 
 In omnichannel retailing, retailers provide customers with the options for online returns as well as in-store returns.
@@ -34,7 +34,7 @@ A job in HotWax Commerce Integration Platform captures in progress returns from 
 
 Example for Loop returns:
 ```
-/home/{sftp-username}netsuite/loop-return/create
+/home/{sftp-username}/netsuite/loop-return/create
 ```
 
 #### 2. Import Returns Data in NetSuite
@@ -72,7 +72,7 @@ HC_MR_ExportLoopReturnProcess.js
 **SFTP Locations**
 
 ```
-/home/{sftp-username}netsuite/loop-return/process-return
+/home/{sftp-username}/netsuite/loop-return/process-return
 ```
 
 #### 7. Import Item Receipt Records
@@ -154,14 +154,14 @@ When a customer opts for an exchange through Loop, a new exchange order is autom
 
 #### 2. When the exchange is for an item of equal value:
 
-* The process is straightforward, with no need for special handling.
 * The return and exchange data are transformed and synced to NetSuite, as previously discussed.
+* No refund is issued to the customer because the funds from their return are applied to their exchange order.
 
 #### 3. When the exchange is for an item of higher value (Upsell):
 
 * Loop includes attribution in the Shopify order notes, indicating that the new exchange order involves an upsell.
 * HotWax recognizes this attribution and processes the order accordingly.
-* To handle the additional payment, HotWax creates a Customer Deposit in NetSuite.
+* To post the additional payment, HotWax creates a Customer Deposit in NetSuite.
 
 Suppose a customer initiates a return for a $100 item and chooses to exchange it for a $150 product. Loop processes the exchange, and Shopify records the new order with an additional $50 payment. The order notes include the upsell attribution. HotWax reads these notes, identifies the upsell, and generates a Customer Deposit for $50 in NetSuite, helping maintain accurate financial records.
 
@@ -180,7 +180,8 @@ Retailers' return policies can vary, ranging from one to several months. To acco
 #### 2. Fetching older orders from NetSuite:
 
 * In some cases, older orders may not be imported into the OMS, but the corresponding records still exist in NetSuite.
-* When no matching NetSuite order ID is found in the OMS, HotWax’s Integration Platform runs a search query in NetSuite using the Shopify order ID to locate the original sales order details.\
+* When no matching NetSuite order ID is found in the OMS, HotWax’s Integration Platform runs a search query in NetSuite using the Shopify order ID to locate the original sales order details.
+
   Once the original sales order is retrieved from NetSuite, the necessary return details are synced. This step helps ensure that even older orders, which might not have been part of the initial OMS setup, are accurately linked with the RMA and processed.
 
 ***
