@@ -1,7 +1,8 @@
 ---
 description: >-
-  Delve into gorjana's product management strategies and learn how to optimize SKU
-  settings for seamless integration with Shopify.
+  Delve into gorjana's product management strategies and learn how to optimize
+  SKU settings for seamless integration with Shopify.
+noIndex: true
 ---
 
 # Product

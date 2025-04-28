@@ -9,7 +9,7 @@
   * [Bundles](flows/products/bundles.md)
   * [Earring Flexiblity](flows/products/Earring-Flexiblity.md)
   * [SOP for Product Setup](flows/products/product-set-up-sop.md)
-* [Service Products](flows/products/Service-products)
+* [Service Products](flows/products/Service-products/readme.md)
   * [Flyer](flows/products/Service-products/flyer.md)
   * [Bespoke](flows/products/Service-products/Bespoke.md)
   * [Keepsake Box](flows/products/Service-products/Keepsake.md)
