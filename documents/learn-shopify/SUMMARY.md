@@ -38,10 +38,7 @@
   * [Presell Catalog Synchronization](shopify-integration/preorders-and-backorders/presell-catalog-synchronization.md)
 * [Order Returns](shopify-integration/order-return/README.md)
   * [Import Returns from Shopify](shopify-integration/order-return/import-returns-from-shopify.md)
-  * [In-Store Returns](shopify-integration/order-return/in-store-returns.md)
-  * [Appeasements](shopify-integration/order-return/appeasements.md)
   * [Shopify POS Exchanges](shopify-integration/order-return/shopify-pos-exchanges.md)
-  * [Loop Exchanges](shopify-integration/order-return/loop-exchanges.md)
 
 ## Setup Shopify
 
