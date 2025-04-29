@@ -25,9 +25,9 @@ Monitoring the Client's Operational Dashboard is important to ensure the system 
 
 | Instance | Dashboards        | 
 |----------|-------------------|
-| KREWE / UCG   |  Order Sync             |                 
+| KREWE / UCG / Mephisto / Gorjana  |  Order Sync  |                 
 | CARIUMA / PERRYELLIS / E-BIKE| Monitoring Dashboard|                   
-| ADOC     | ADOC-Integrations |                   
+| ADOC     | ADOC-Integrations |    
 | NEWERA   |  NEC-Integration / NEC - Order Overview |      
 
 - Monitor dashboards for issues such as missing order attributes, Shopify order import errors, and Shopify fulfillment errors,Duplicate Orders Report.
@@ -36,7 +36,7 @@ Monitoring the Client's Operational Dashboard is important to ensure the system 
 
 ### 2. Job Monitoring
 
-We need to monitor jobs because it can create issues if a job takes more than 45 minutes. Additionally, if an instance goes down while a job is running, it can get stuck in a running status. It is also important to identify and troubleshoot the reason if a job fails frequently. Jobs can be monitored via the Job Manager App or Jobs Monitoring Dashboard on Tathya.
+We need to monitor jobs because it can create issues if a job takes more than 45 minutes. Additionally, if an instance goes down while a job is running, it can get stuck in a running status. It is also important to identify and troubleshoot the reason if a job fails frequently. Jobs can be monitored via the Job Manager App or Job Monitoring Dashboard on Tathya.
 
 **Frequency:** 3 times a day (9 AM, 3 PM, 8 PM)
 
@@ -66,6 +66,8 @@ We need to monitor jobs because it can create issues if a job takes more than 45
   **Pending and Running Files:**
   - Reports have been set up for each client on Tathya.
   - Check logs for all clients to ensure no files are pending or running for too long.
+  - If a file has been running for 2 hours or more, inform the person responsible for that client. Inventory files are an exception, as they contain large volumes of data and take longer to process.
+  - For any pending files, check if an inventory file or any other ongoing file is in progress that might be preventing the pending files from proceeding.
 
   **Failed Files:**
   - Investigate any file failures.
@@ -99,6 +101,7 @@ Ensure all inventory files are processed by the following times:
 |----------|-----------------|
 | KREWE    | 1 PM            |
 | UCG      | 3 PM            |
+| Gorjana  | 3 PM            |
 | ADOC     | 3 PM            |
 | NEWERA   | 10 PM / 9 AM    |
 
@@ -109,7 +112,7 @@ Ensure all inventory files are processed by the following times:
 
 ---
 
-### 4. Napita (NiFi) 
+### 4. Napita (NiFi) Monitoring 
 
 Napita is a data integration tool designed to automate data flow between systems in real-time. HotWax Commerce uses Napita to transform and export data. Sometimes, files placed at the SFTP location by Shopify may face issues during Napita's transformation process.
 
@@ -126,8 +129,12 @@ Napita is a data integration tool designed to automate data flow between systems
   - You can fetch error logs or statuses using these [processor](https://docs.hotwax.co/everything/tools/napita/troubleshooting/fetch-put-sftp-retry):
     - **InvokeHTTP**
     - **PutSFTP**
-    - **FetchSFTP** 
-
+    - **FetchSFTP**
+  - Check daily if any processor has **stopped** and inform or discuss it with the person responsible for that client.
+  - You can check the processor at: https://napita.hotwax.io/nifi/
+  - Login and look for the relevant Process Group. For example, in the image below, a red square block inside the process group indicates 53 processors are stopped.    
+   ![image](https://github.com/user-attachments/assets/8d095e92-1a10-46d3-9e3a-f9705da5160e)
+  - You can double-click on the **Processor** to open it and view which process groups are stopped.
 ---
 
 ## Handling and Escalating Issues
