@@ -81,4 +81,4 @@ Ideally, activate the brokering run only once you've fully configured your routi
 
 Understanding how to view, schedule, and manage brokering runs is important for optimizing your order routing strategies.
 
-Now, let's understand about [routings](broken-reference) within a brokering run.
+Now, let's understand about [routings](https://docs.hotwax.co/documents/retail-operations/orders/order-routing/routing-rules) within a brokering run.

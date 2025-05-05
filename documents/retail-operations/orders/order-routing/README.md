@@ -1,9 +1,9 @@
 ---
-icon: gears
 description: >-
   This guide will help you understand how to manage and route orders efficiently
   using HotWax Commerce’s Order Routing App, optimizing order fulfillment
   strategies.
+icon: gears
 ---
 
 # Order Routing
@@ -30,14 +30,14 @@ Order routing is organized into three hierarchical levels:
 
 <div data-full-width="false"><figure><img src="../../.gitbook/assets/routingframework.png" alt=""><figcaption><p>Brokering Framework in HotWax Commerce</p></figcaption></figure></div>
 
-* [x] [<mark style="color:orange;">**Brokering Runs**</mark>](broken-reference)
+* [x] [<mark style="color:orange;">**Brokering Runs**</mark>](https://docs.hotwax.co/documents/retail-operations/orders/order-routing/brokering-runs)
 
 A <mark style="color:orange;">**brokering run**</mark> is the highest level of organization in order routing and lets retailers control the routing frequency based on business needs. Each brokering run can have a different frequency, routing different batches of orders to meet varying fulfillment priorities. For example:
 
 * A brokering run scheduled **every 5 minutes** could prioritize high-priority orders, like same-day deliveries for fast routing and fulfillment.
 * For standard delivery orders with medium priority, a separate brokering run can be set to run **every 6 hours,** aligning with less urgent timelines.
 
-- [x] [<mark style="color:orange;">**Routing Rules**</mark>](broken-reference)
+- [x] [<mark style="color:orange;">**Routing Rules**</mark>](https://docs.hotwax.co/documents/retail-operations/orders/order-routing/routing-rules)
 
 Within each brokering run, there are multiple <mark style="color:orange;">**routings**</mark><mark style="color:orange;">,</mark> <mark style="color:orange;">**or**</mark> <mark style="color:orange;">**“routing rules.”**</mark> Each routing defines a batch of orders by using filters and sorting criteria. For example, in a "High-Priority Run," routings might include:
 
@@ -47,7 +47,7 @@ Within each brokering run, there are multiple <mark style="color:orange;">**rout
 
 These routing rules help retailers prioritize routing for specific order batches with different fulfillment timelines and conditions.
 
-* [x] [<mark style="color:orange;">**Inventory Rules**</mark>](broken-reference)
+* [x] [<mark style="color:orange;">**Inventory Rules**</mark>](https://docs.hotwax.co/documents/retail-operations/orders/order-routing/inventory-rules)
 
 Within each routing, multiple <mark style="color:orange;">**inventory rules**</mark> define how inventory is allocated to the order batches. These rules allows for optimal facility look up based on factors such as proximity, stock availability, and other strategic criteria. For example:
 
