@@ -1,5 +1,6 @@
 # Table of contents
 * [HotWax Integrations](README.md)
+  
 ## RetailPro
 
 * [Introduction](retailpro/README.md)
@@ -16,6 +17,13 @@
   * [Technical Workflow](retailpro/flows/sendsale-order/technical-workflow.md)
 
 * [Returns](retailpro/flows/returns/README.md)
+  
+
+## Loop
+
+* [Returns](loop/loop-online.md)
+* [Exchanges](loop/loop-exchanges.md)
+
 
 ##  Klaviyo
 
