@@ -16,7 +16,7 @@ Customers can initiate online returns for both online and in-store purchases.
 
 Retailers we work with use Shopify as their eCommerce platform, NetSuite as their ERP system, Loop as their RMS, and HotWax Commerce as their OMS. This returns management workflow involves downloading returns data, creating Return Merchandise Authorizations (RMAs), processing Item Receipt records, and creating Customer Refunds.
 
-<figure><img src="../../.gitbook/assets/online-returns-loop.png" alt=""><figcaption><p>Sync web returns to NetSuite</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/web-returns-loop.png" alt=""><figcaption><p>Sync web returns to NetSuite</p></figcaption></figure>
 
 ### Data Flow
 
@@ -229,7 +229,7 @@ Retailers we work with, use Shopify POS as their POS system, NetSuite as their E
 
 ## Synchronizing POS Returns to NetSuite when returns are accepted on Shopify POS
 
-<figure><img src="../../.gitbook/assets/In-store-returns-shopify-pos.png" alt=""><figcaption><p>Sync POS returns to NetSuite using HotWax Commerce</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/in-store-return-with-hotwax.png" alt=""><figcaption><p>Sync POS returns to NetSuite using HotWax Commerce</p></figcaption></figure>
 
 By leveraging Shopify POS for in-store returns, store associates are not required to navigate through a separate interface. This returns management workflow involves downloading returns data, processing Item Receipt records, and creating Customer Refunds.
 
@@ -280,7 +280,7 @@ When returning an item a customer can also opt to take the exchange item against
 
 ## Synchronizing POS Returns to NetSuite when returns are accepted on Loop POS
 
-<figure><img src="../../.gitbook/assets/29.png" alt=""><figcaption><p>Sync POS returns to NetSuite using Loop</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/in-store-return-with-loop.png" alt=""><figcaption><p>Sync POS returns to NetSuite using Loop</p></figcaption></figure>
 
 Loop Returns POS App provides an intuitive interface to create POS returns. When it comes to in-store returns, because customers return their order items directly at the store location, the receiving of the order item and the processing of refunds happen simultaneously.
 
