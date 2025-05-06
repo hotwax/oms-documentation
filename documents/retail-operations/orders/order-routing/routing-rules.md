@@ -14,7 +14,7 @@ If these order batches need routing at the same frequency but require different 
 
 ## Creating and Managing Routing Rules
 
-This section explains how to create order batches in a brokering run using filters and sorting options to match business needs. We’ll demonstrate this by creating two routing rules:c<mark style="color:orange;">**Same-day/Next-day orders**</mark> and <mark style="color:orange;">**Standard orders**</mark> within our previously created <mark style="color:orange;">**Everyday order routing**</mark> [brokering run](broken-reference/).
+This section explains how to create order batches in a brokering run using filters and sorting options to match business needs. We’ll demonstrate this by creating two routing rules: <mark style="color:orange;">**Same-day/Next-day orders**</mark> and <mark style="color:orange;">**Standard orders**</mark> within our previously created <mark style="color:orange;">**Everyday order routing**</mark> [brokering run](https://docs.hotwax.co/documents/retail-operations/orders/order-routing/brokering-runs).
 
 {% hint style="info" %}
 In this example, we’re routing Same-day/Next-day orders and Standard orders at the same frequency. If a business scenario requires these batches to be routed at different frequencies then separate brokering runs should be created.
@@ -86,7 +86,6 @@ The first step in setting up routing rules is to create a batch of orders using 
 * **Shipment method type:** SLA promised to the customer. When customers choose specific [shipping methods](https://docs.hotwax.co/documents/system-admins/fulfillment/shipping-methods/shippinggateways), like expedited or same-day delivery, these orders must be prioritized differently. Retailers can use this filter to create a batch of orders based on the selected shipping method, so orders requiring fast shipping are processed first.
 
 **Exclude Tab:** Exclude orders based on specific criteria while including all others. This feature is useful when retailers need to filter orders by omitting a specific filter instead of manually selecting all others. In case a retailer wants to create a batch of all online orders except those from Facebook Marketplace, instead of selecting all other retail channels, they can just exclude it.
- 
 
 Continuing with our example, let’s take a closer look at how to apply the right filters and sorting options for <mark style="color:orange;">**Same-day/Next day**</mark> routing rule.
 
