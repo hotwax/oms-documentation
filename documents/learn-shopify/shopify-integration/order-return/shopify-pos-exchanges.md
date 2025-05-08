@@ -82,10 +82,10 @@ Adding exchange transactions to the main order, however, inflates the payment ca
 | B: $10      |               |
 | C: $10      |               |
 | **Transactions**                  |                                      |
-| ShopPay1: $30                   | ExchangeCredit: $10|
+| ShopPay1: $30                   | ExchangeCredit: $10 <br>Status: Settled|
 | ExchangeCredit: $10<br>Status: Refund|  |
 | ShopPay2: $10                   | ExchangePayment: $10<br>parentPaymentRef: ShopPay2|
-| ExchangeCredit: $10<br>Status: Refund<br>parentPaymentRef: ShopPay2 |  |
+| ExchangePayment: $10<br>Status: Refund<br>parentPaymentRef: ShopPay2 |  |
 
 The two exchange attribution transactions show that $10 the return and $10 from Shop Pay 2 were applied to the exchange order. Creating refunds on the original order and additions on the exchange order manages easy tracability of all events on a single order as well as attributions to exchange orders.
 
@@ -119,11 +119,13 @@ In the event that the customer returns item D along with items B and C, Shopify 
 | B: ~~$10~~      |               |
 | C: ~~$10~~      |               |
 | **Transactions**                  |                                      |
-| ShopPay1: $30                   |  |
-| ExchangeCredit: $10 <br>Status: Refund                  | ExchangeCredit: $10 |
+| ShopPay1: $30                   | ExchangeCredit: $10 <br>Status: Settled|
+| ExchangeCredit: $10 <br>Status: Refund                  |  |
 | ShopPay2: $10                   | ExchangePayment: $10<br>parentPaymentRef: ShopPay2 |
+| ExchangePayment: $10<br>Status: Refund<br>parentPaymentRef: ShopPay2 |  |
 | ShopPayRefund1: $30<br>Status: Refund<br>parentPaymentRef: ShopPay1 | ExchangeCredit: $20 <br>Status: Refund |
 | ShopPayRefund2: $10<br>Status: Refund<br>parentPaymentRef: ShopPay2 |  |
+| ExchangeCredit: -$20 <br>Status: Refund                  |  |
 
 
 Note: Is there an exchange credit added to the original order for the amount refunded on another order?
@@ -169,8 +171,21 @@ Therefore, instead of picking an attribution itself, HotWax Commerce simply mark
 
 ### Scenario 2: Exchanged Item of Lesser Value
 
-When a customer returns item A, valued at $10, and opts for an exchange with another item D priced at $5, they will receive a refund of $5 to compensate for the price difference between the two items.
+When a customer returns item A, valued at $10, and opts for an exchange with another item D priced at $5, they will receive a refund of $5 to compensate for the price difference between the two items. In this case, there will be an attribution of $5 to the exchange order with the payment method as `Exchange Credit` and as there is no payment captured from the customer.
+
+
+| Order Items | Exchange Item |
+|-------------|---------------|
+| A: ~~$10~~  | D: $5        |
+| B: $10      |               |
+| C: $10      |               |
+| **Transactions**                  |                                      |
+| ShopPay1: $30                   | |
+| ShopPay1: $5<br> Status: Refund    | ExchangeCredit: $5 <br> Status: Settled |
+|ExchangeCredit: $5 <br> Status: Refund||
+
 In the event that the customer subsequently decides to return both the exchanged item and all the items from their original order, they will receive a total refund of $25, encompassing the combined value of all the returned items (Item B, Item C and Item D).
+
 
 | Order Items | Exchange Item |
 |-------------|---------------|
@@ -179,22 +194,11 @@ In the event that the customer subsequently decides to return both the exchanged
 | C: ~~$10~~      |               |
 | **Transactions**                  |                                      |
 | ShopPay1: $30                   | |
-| ShopPay1: $5<br> Status: Refund    | |
-|ExchangeCredit: $5 <br> Status: Refund| ExchangeCredit: $5 |
+| ShopPay1: $5<br> Status: Refund    | ExchangeCredit: $5 <br> Status: Settled |
+|ExchangeCredit: $5 <br> Status: Refund||
 | ShopPay1: $25<br>Status: Refund<br>parentPaymentRef: ShopPay1 | ExchangeCredit: $5 <br> Status: Refund  |
+| ExchangeCredit: -$5 <br>Status: Refund                  |  |
 
-
-| Order Items                                                                 | Exchange Item                                           |
-| --------------------------------------------------------------------------- | ------------------------------------------------------- |
-| A: ~~$10~~                                                                  | D: ~~$5~~                                               |
-| B: ~~$10~~                                                                  |                                                         |
-| C: ~~$10~~                                                                  |                                                         |
-| **Transactions**                                                            |                                                         |
-| ShopPay1: $30                                                               | <p>ExchangeCredit: $5<br>parentPaymentRef: ShopPay1</p> |
-| ShopPay1 Refund1: $5                                                        |                                                         |
-| <p>ShopPay1Refund2: $25<br>Status: Refund<br>parentPaymentRef: ShopPay1</p> | ExchangeRefund: $5                                      |
-
-In this case, there will be an attribution of $5 to the exchange order with the payment method as `Exchange Credit` and as there is no payment captured from the customer, there will be no `Exchange Payment` on the exchange order.
 
 **How does HotWax Commerce ensure accurate inventory updates from Returns and Exchanges?**
 
