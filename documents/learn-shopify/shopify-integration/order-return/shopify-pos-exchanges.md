@@ -106,7 +106,20 @@ In the event that the customer decides to return item D, an exchange item, theyâ
 
 In this scenario, when a customer returns an exchanged item, according to the Shopify algorithm, the refund will be issued using the initial $30 transaction (Shop Pay 1), even though the payment for the exchanged item was processed through a different transaction (Shop Pay 2).
 
+| Order Items | Exchange Item |
+|-------------|---------------|
+| A: ~~$10~~  | D: ~~$20~~    |
+| B: $10      |               |
+| C: $10      |               |
+| **Transactions**                  |                                      |
+| ShopPay1: $30                   | ExchangeCredit: $10 <br>Status: Settled|
+| ExchangeCredit: $10 <br>Status: Refund                  |  |
+| ShopPay2: $10                   | ExchangePayment: $10<br>parentPaymentRef: ShopPay2 |
+|  | ExchangeCredit: $20 <br>Status: Refund |
+| ExchangeCredit: -$20 <br>Status: Refund                  |  |
+
 Note: add image of what the OPP panel looks like at this point in HotWax
+
 
 #### Returning the Entire Order Including Exchanged Items:
 In the event that the customer returns item D along with items B and C, Shopify will create two refund transactions, one to refund ShopPay1 and another to refund ShopPay2.
