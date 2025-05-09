@@ -82,10 +82,10 @@ Adding exchange transactions to the main order, however, inflates the payment ca
 | B: $10      |               |
 | C: $10      |               |
 | **Transactions**                  |                                      |
-| ShopPay1: $30                   | ExchangeCredit: $10 <br>Status: Settled|
-| ExchangeCredit: $10<br>Status: Refund|  |
-| ShopPay2: $10                   | ExchangePayment: $10<br>parentPaymentRef: ShopPay2|
-| ExchangePayment: $10<br>Status: Refund<br>parentPaymentRef: ShopPay2 |  |
+| ShopPay1: $30                   | |
+| ExchangeCredit: $10<br>Status: Refund|ExchangeCredit: $10 <br>Status: Settled  |
+| ShopPay2: $10                   | |
+| ExchangePayment: $10<br>Status: Refund<br>parentPaymentRef: ShopPay2 | ExchangePayment: $10<br>parentPaymentRef: ShopPay2 |
 
 The two exchange attribution transactions show that $10 the return and $10 from Shop Pay 2 were applied to the exchange order. Creating refunds on the original order and additions on the exchange order manages easy tracability of all events on a single order as well as attributions to exchange orders.
 
@@ -112,11 +112,12 @@ In this scenario, when a customer returns an exchanged item, according to the Sh
 | B: $10      |               |
 | C: $10      |               |
 | **Transactions**                  |                                      |
-| ShopPay1: $30                   | ExchangeCredit: $10 <br>Status: Settled|
-| ExchangeCredit: $10 <br>Status: Refund                  |  |
-| ShopPay2: $10                   | ExchangePayment: $10<br>parentPaymentRef: ShopPay2 |
-|  | ExchangeCredit: $20 <br>Status: Refund |
-| ExchangeCredit: -$20 <br>Status: Refund                  |  |
+| ShopPay1: $30                   | |
+| ExchangeCredit: $10 <br>Status: Refund                  | ExchangeCredit: $10 <br>Status: Settled |
+| ShopPay2: $10                   |  |
+| ExchangePayment: $10 <br>Status: Refund<br>parentPaymentRef: ShopPay2 | ExchangePayment: $10<br>parentPaymentRef: ShopPay2 |
+| ExchangeCredit: -$20 <br>Status: Refund  | ExchangeCredit: $20 <br>Status: Refund |
+| ShopPay1: $20 <br>Status: Refund                 | |
 
 Note: add image of what the OPP panel looks like at this point in HotWax
 
@@ -132,13 +133,13 @@ In the event that the customer returns item D along with items B and C, Shopify 
 | B: ~~$10~~      |               |
 | C: ~~$10~~      |               |
 | **Transactions**                  |                                      |
-| ShopPay1: $30                   | ExchangeCredit: $10 <br>Status: Settled|
-| ExchangeCredit: $10 <br>Status: Refund                  |  |
-| ShopPay2: $10                   | ExchangePayment: $10<br>parentPaymentRef: ShopPay2 |
-| ExchangePayment: $10<br>Status: Refund<br>parentPaymentRef: ShopPay2 |  |
-| ShopPayRefund1: $30<br>Status: Refund<br>parentPaymentRef: ShopPay1 | ExchangeCredit: $20 <br>Status: Refund |
+| ShopPay1: $30                   | |
+| ExchangeCredit: $10 <br>Status: Refund                  | ExchangeCredit: $10 <br>Status: Settled |
+| ShopPay2: $10                   |  |
+| ExchangePayment: $10<br>Status: Refund<br>parentPaymentRef: ShopPay2 |ExchangePayment: $10<br>parentPaymentRef: ShopPay2  |
+| ShopPayRefund1: $30<br>Status: Refund<br>parentPaymentRef: ShopPay1 |  |
 | ShopPayRefund2: $10<br>Status: Refund<br>parentPaymentRef: ShopPay2 |  |
-| ExchangeCredit: -$20 <br>Status: Refund                  |  |
+| ExchangeCredit: -$20 <br>Status: Refund                  | ExchangeCredit: $20 <br>Status: Refund |
 
 
 Note: Is there an exchange credit added to the original order for the amount refunded on another order?
@@ -194,8 +195,8 @@ When a customer returns item A, valued at $10, and opts for an exchange with ano
 | C: $10      |               |
 | **Transactions**                  |                                      |
 | ShopPay1: $30                   | |
-| ShopPay1: $5<br> Status: Refund    | ExchangeCredit: $5 <br> Status: Settled |
-|ExchangeCredit: $5 <br> Status: Refund||
+| ShopPay1: $5<br> Status: Refund    | |
+| ExchangeCredit: $5 <br> Status: Refund| ExchangeCredit: $5 <br> Status: Settled |
 
 In the event that the customer subsequently decides to return both the exchanged item and all the items from their original order, they will receive a total refund of $25, encompassing the combined value of all the returned items (Item B, Item C and Item D).
 
@@ -207,10 +208,10 @@ In the event that the customer subsequently decides to return both the exchanged
 | C: ~~$10~~      |               |
 | **Transactions**                  |                                      |
 | ShopPay1: $30                   | |
-| ShopPay1: $5<br> Status: Refund    | ExchangeCredit: $5 <br> Status: Settled |
-|ExchangeCredit: $5 <br> Status: Refund||
-| ShopPay1: $25<br>Status: Refund<br>parentPaymentRef: ShopPay1 | ExchangeCredit: $5 <br> Status: Refund  |
-| ExchangeCredit: -$5 <br>Status: Refund                  |  |
+| ShopPay1: $5<br> Status: Refund    |  |
+| ExchangeCredit: $5 <br> Status: Refund| ExchangeCredit: $5 <br> Status: Settled|
+| ShopPay1: $25<br>Status: Refund<br>parentPaymentRef: ShopPay1 |   |
+| ExchangeCredit: -$5 <br>Status: Refund                  | ExchangeCredit: $5 <br> Status: Refund |
 
 
 **How does HotWax Commerce ensure accurate inventory updates from Returns and Exchanges?**
