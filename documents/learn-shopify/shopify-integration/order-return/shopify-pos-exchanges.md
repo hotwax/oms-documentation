@@ -20,21 +20,21 @@ Here's where the challenges arise:
 
 Before delving into the details of how returns and exchanges are imported and stored in HotWax, these are the terms and concepts that are prerequisites.
 
-1. Exchange Credit - Shopify exchange V2 no longer explicitly calculates exchange credit when customers purchase replacment items. Because exchange orders are still new orders in HotWax and other systems, an exchange credit is still caluclated by HotWax during import of returns to balance accounting.
-2. Exchange Payment - To make payments easy to reconcile, HotWax links all transactions to the original order in its system even for greater exchanges. These additional payments are then attributed to exchange orders internally using the Exchange Payment method to repesent the additional captured payment.
+1. Exchange Credit - Shopify exchange V2 no longer explicitly calculates exchange credit when customers purchase replacement items. Because exchange orders are still new orders in HotWax and other systems, an exchange credit is still calculated by HotWax during import of returns to balance accounting.
+2. Exchange Payment - To make payments easy to reconcile, HotWax links all transactions to the original order in its system even for greater exchanges. These additional payments are then attributed to exchange orders internally using the Exchange Payment method to represent the additional captured payment.
    
     - **Exchange Credit**: This is the amount the customer has already paid for the original item being returned. It's used towards purchasing another item in the exchange order.
     - **Exchange Payment**: If the customer exchanges for an item of higher value, they pay the difference. This additional payment is known as exchange payment.
 
 ## Importing Returns and Exchanges
 
-A scheduled job in the HotWax Commerce integration platform fetches all returns and exchanges from Shopify and biforcates the data into two feeds, one for returns and another exchanges additions.
+A scheduled job in the HotWax Commerce integration platform fetches all returns and exchanges from Shopify and bifurcates the data into two feeds, one for returns and another exchanges additions.
 
 Exchange additions are imported into HotWax as new sales orders that are linked to the original sale as an exchange while returns are imported independently and linked to their corresponding HotWax order.
 
 ## Mapping Returns and Exchanges
 
-To illustrate how returns and exchanges in the same order in Shopify are imported as seperate exchange orders in HotWax while ensuring all orders and transactions are balanced, this document will cover the following scenarios
+To illustrate how returns and exchanges in the same order in Shopify are imported as separate exchange orders in HotWax while ensuring all orders and transactions are balanced, this document will cover the following scenarios
 
 1. When the exchanged item is of greater value than the returned item.
 2. When the exchanged item is of lesser value than the returned item.
@@ -51,7 +51,7 @@ Let's consider an example where a customer places an online order on Shopify for
 
 ### Scenario 1: Exchanged Item of Greater Value
 
-Now, suppose the customer returns Item A and opts for an exchange with Item D, valued at $20. In this scenario, the item A was worth $10, while the exchanged item is worth $20. Therefore, the customer will need to pay an additional $10 for the exchange.
+Now, suppose the customer returns Item A and opts for an exchange with Item D, valued at $20. In this scenario, item A was worth $10, while the exchanged item is worth $20. Therefore, the customer will need to pay an additional $10 for the exchange.
 
 This additional payment will be recorded in Shopify under the same order. Now there are two transactions recorded on this order in Shopify: the initial transaction of $30 and a second transaction of $10 for the newly exchanged item.
 
@@ -68,10 +68,10 @@ Note: add image of Shopify order view screen at this state
 
 #### Importing exchange items into HotWax
 
-The item purchased in exchange of a return on Shopify will be imported into HotWax Commerce as a new sales order. The new order will be linked to the original order as an exchange. HotWax will automatically calculate how much credit is being carried over from the return and apply it to the new exchange order to balance order totals and transactions of the new order.
+The item purchased in exchange for a return on Shopify will be imported into HotWax Commerce as a new sales order. The new order will be linked to the original order as an exchange. HotWax will automatically calculate how much credit is being carried over from the return and apply it to the new exchange order to balance order totals and transactions of the new order.
 
 **Importing transactions**
-To manage easy reconciliation with Shopify, HotWax first records the addtional payment for the exchange order, $10 (Shop Pay 2), on the original order.
+To manage easy reconciliation with Shopify, HotWax first records the additional payment for the exchange order, $10 (Shop Pay 2), on the original order.
 
 Adding exchange transactions to the main order, however, inflates the payment captured on the original order. To handle this, HotWax Commerce creates balancing attribution transactions that serve as counterparts to the payments associated with exchange orders.
 
@@ -87,11 +87,11 @@ Adding exchange transactions to the main order, however, inflates the payment ca
 | ShopPay2: $10                   | |
 | ExchangePayment: $10<br>Status: Refund<br>parentPaymentRef: ShopPay2 | ExchangePayment: $10<br>parentPaymentRef: ShopPay2 |
 
-The two exchange attribution transactions show that $10 the return and $10 from Shop Pay 2 were applied to the exchange order. Creating refunds on the original order and additions on the exchange order manages easy tracability of all events on a single order as well as attributions to exchange orders.
+The two exchange attribution transactions show that $10 the return and $10 from Shop Pay 2 were applied to the exchange order. Creating refunds on the original order and additions on the exchange order manages easy traceability of all events on a single order as well as attributions to exchange orders.
 
 Note: add image of HotWax OPP section at this state
 
-Shopify doesn't expicitly specify how much credit is applied to new items from returned items. To determine the value of the payment carried over, HotWax Commerce does the following calculation:
+Shopify doesn't explicitly specify how much credit is applied to new items from returned items. To determine the value of the payment carried over, HotWax Commerce does the following calculation:
 
 **(Exchange Order Total)** - **(Sum of Exchange Payments Captured)** = **Credit from Original Order**
 
