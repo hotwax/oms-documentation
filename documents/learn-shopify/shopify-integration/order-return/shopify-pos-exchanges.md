@@ -137,9 +137,9 @@ In the event that the customer returns item D along with items B and C, Shopify 
 | ExchangeCredit: $10 <br>Status: Refund                  | ExchangeCredit: $10 <br>Status: Settled |
 | ShopPay2: $10                   |  |
 | ExchangePayment: $10<br>Status: Refund<br>parentPaymentRef: ShopPay2 |ExchangePayment: $10<br>parentPaymentRef: ShopPay2  |
+| ExchangeCredit: -$20 <br>Status: Refund                  | ExchangeCredit: $20 <br>Status: Refund |
 | ShopPayRefund1: $30<br>Status: Refund<br>parentPaymentRef: ShopPay1 |  |
 | ShopPayRefund2: $10<br>Status: Refund<br>parentPaymentRef: ShopPay2 |  |
-| ExchangeCredit: -$20 <br>Status: Refund                  | ExchangeCredit: $20 <br>Status: Refund |
 
 
 Note: Is there an exchange credit added to the original order for the amount refunded on another order?
@@ -210,8 +210,8 @@ In the event that the customer subsequently decides to return both the exchanged
 | ShopPay1: $30                   | |
 | ShopPay1: $5<br> Status: Refund    |  |
 | ExchangeCredit: $5 <br> Status: Refund| ExchangeCredit: $5 <br> Status: Settled|
-| ShopPay1: $25<br>Status: Refund<br>parentPaymentRef: ShopPay1 |   |
 | ExchangeCredit: -$5 <br>Status: Refund                  | ExchangeCredit: $5 <br> Status: Refund |
+| ShopPay1: $25<br>Status: Refund<br>parentPaymentRef: ShopPay1 |   |
 
 
 **How does HotWax Commerce ensure accurate inventory updates from Returns and Exchanges?**
