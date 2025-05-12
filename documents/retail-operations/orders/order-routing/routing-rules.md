@@ -10,7 +10,7 @@ As discussed, <mark style="color:orange;">**routing**</mark>, also known as <mar
 
 Multiple routing rules within a single brokering run are useful when different order batches, like same-day, next-day and standard orders, need to be routed at the same interval.
 
-If these order batches need routing at the same frequency but require different inventory allocation strategies, unique inventory rules can be applied to each batch. This way, even with a shared routing frequency (single brokering run), each order batch is managed according to its specific requirements. We’ll understand more about [inventory rules in the coming sections](rules.md).
+If these order batches need routing at the same frequency but require different inventory allocation strategies, unique inventory rules can be applied to each batch. This way, even with a shared routing frequency (single brokering run), each order batch is managed according to its specific requirements. We’ll understand more about [inventory rules in the coming sections](https://docs.hotwax.co/documents/retail-operations/orders/order-routing/inventory-rules).
 
 ## Creating and Managing Routing Rules
 
@@ -174,4 +174,4 @@ Archive/Unarchive Routing Rule
 
 Archived routings can be reactivated if needed and are accessible from the archive drawer at the bottom of the list.
 
-Congrats! You now have a clear understanding of how to <mark style="color:orange;">**create brokering runs and set routing rules.**</mark> The final step is choosing [inventory rules](rules.md) to complete the order routing setup.
+Congrats! You now have a clear understanding of how to <mark style="color:orange;">**create brokering runs and set routing rules.**</mark> The final step is choosing [inventory rules](https://docs.hotwax.co/documents/retail-operations/orders/order-routing/inventory-rules) to complete the order routing setup.
