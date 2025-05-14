@@ -64,9 +64,7 @@ Print the shipping labels and packing slips to attach with the packed orders.
 Video: Pack Orders
 {% endembed %}
 
-**Unpack Orders**
-Unpack orders by clicking the unpack button in the 'Completed Page' when necessary, especially in cases where incorrect boxes or items need to be corrected. The unpacked orders will disappear from the completed page and become visible again on the `In Progress` page for packing.
-{% endhint %}
+**Unpack Orders** Unpack orders by clicking the unpack button in the 'Completed Page' when necessary, especially in cases where incorrect boxes or items need to be corrected. The unpacked orders will disappear from the completed page and become visible again on the `In Progress` page for packing.
 
 {% embed url="https://youtu.be/_4vcKgJuQrE" %}
 Video: Unpack orders

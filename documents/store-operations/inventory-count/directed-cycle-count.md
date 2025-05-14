@@ -13,7 +13,7 @@ The Directed Cycle Count app is designed to adapt to the user operating it. When
 
 ## Assigned Cycle Count
 
-The first page a fulfillment team member sees upon logging in is the `Assigned` Cycle Count tab. When an [operations team member assigns a cycle count](https://docs.hotwax.co/documents/v/retail-operations/inventory/introduction/manage-assigned-counts) to a facility, the cycle count becomes visible in the `Assigned Tab`.
+The first page a fulfillment team member sees upon logging in is the `Assigned` Cycle Count tab. When an [operations team member assigns a cycle count](https://docs.hotwax.co/documents/retail-operations/inventory/cycle-count/view-assigned-counts) to a facility, the cycle count becomes visible in the `Assigned Tab`.
 
 Store associates can view all the cycle counts assigned to their facility, including the number of items assigned, the creation date, and the due date for each cycle count. Users can click on a `cycle count` card to access the `Count Details` page.
 
@@ -34,7 +34,5 @@ Cycle counts submitted for review will appear in the `Pending Review` tab. Store
 ## View Closed Counts
 
 Once a cycle count is [closed by the operations team](https://docs.hotwax.co/documents/v/retail-operations/inventory/introduction/closed-counts), it will be moved to the `Closed` tab. Store associates can view the due date, submission date, and closed date, along with item count details, such as how many items were counted out of the total assigned, how many were rejected, and the variance.
-
-
 
 {% embed url="https://youtu.be/j0JngfGHQps" %}
