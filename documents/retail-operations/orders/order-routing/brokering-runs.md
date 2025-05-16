@@ -21,6 +21,8 @@ Multiple brokering runs allow retailers to set different frequencies for each ba
 
 The frequency and configuration of each run are critical for optimizing brokering strategies, allowing retailers to meet diverse order priorities effectively.
 
+{% embed url="https://drive.google.com/file/d/1dxWRpIQBr3ChEGVK9-zc1NYEe1txHk60/view?usp=drive_link" %}
+
 ## Creating and Managing Brokering Runs
 
 Now, let’s understand how you can achieve your order routing and fulfillment goals with the HotWax Commerce’s `Order Routing App`:
