@@ -13,7 +13,7 @@ The Fulfillment App allows store users to reject items from an order or complete
 The OMS will route the order to another facility based on product availability, customer shipping preferences, and routing rules.
 
 {% embed url="https://drive.google.com/file/d/1vInnPXJUCgavIJz28xKP-9K2Rd63DSIZ/view?usp=drive_link" %}
-Reject Single&#x20;
+Reject Single
 {% endembed %}
 
 ## Bulk Reject Orders
@@ -46,6 +46,7 @@ The Rejection Analytics Page provides a detailed view of order rejections, helpi
 
 * **Time Filters:** Analyze rejection data from the last 24 hours or 7 days.
 * **Search:** Locate specific rejected items using Product SKUs or order details.
+
 <figure><img src="../.gitbook/assets/rejectionsAnalytics.png" alt=""><figcaption><p>Rejections Analytics</p></figcaption></figure>
 
 ## Rejection Reasons
@@ -66,6 +67,7 @@ Rejection reasons can be shown or hidden from store associates using the fulfill
 
 * **When the toggle is ON:** The specific rejection reason will be visible, while all other reasons will remain hidden.
 * **When the toggle is OFF:** The specific rejection reason will be hidden, but all other reasons will still be visible.
+
 <figure><img src="../.gitbook/assets/rejectionReasons.png" alt=""><figcaption><p>Rejection Reasons</p></figcaption></figure>
 
 ### Rejection reason types that trigger inventory adjustments and how these types cause stock levels to be updated:
@@ -91,6 +93,10 @@ The table below lists the default rejection reasons and their assigned types, wh
 | DAMAGE           | REPORT\_VAR      | Decreases ATP inventory by the rejected quantity, while QOH remains unchanged. | Shows the product is in stock but damaged and unsellable.                                                 |
 | NO VARIANCE      | REPORT\_NO\_VAR  | Does not affect either ATP or QOH inventory.                                   | Useful for scenarios where inventory levels remain unchanged, e.g., canceled orders without stock issues. |
 
+{% embed url="https://drive.google.com/file/d/1Bj_t3o-nOzUKK95vdq8XzFWK3AJtm5uk/view?usp=drive_link" %}
+Video: Rejections in Fulfillment App
+{% endembed %}
+
 ## Adjust QOH Along with ATP on Rejection
 
 The **Adjust QOH Along with ATP on Rejection** toggle provides control over inventory adjustments during order rejections.
@@ -102,6 +108,7 @@ The main reason to disable QOH impact from rejection reasons would be to limit t
 By suppressing ATP and not QOH, over-selling is still prevented and orders for those particular products won’t be routed to that store. When fulfillment administrators then review the rejections and inventory discrepancies, they are able to use the delta between the QOH and ATP to judge the validity of the store staff’s claim of inventory being unavailable.
 
 Retailers that don’t utilize HotWax Commerce for store inventory management only need the OMS to maintain an accurate record of sellable inventory. In that case, retailers should allow rejections to impact both ATP and QOH.
+
 <figure><img src="../.gitbook/assets/affectQOH.png" alt=""><figcaption><p>Affect QOH on Rejection</p></figcaption></figure>
 
 ## Partial Rejection
@@ -120,6 +127,7 @@ When partial rejection is disabled, rejecting any item in an order triggers the 
 3. **Automatic Rejection:** The entire order is rejected with the reason "reject entire order." This will not impact inventory variance or appear in rejection reports.
 
 If additional items need to be rejected with a specific reason, click on the default rejection reason applied to the item and make a selection.
+
 <figure><img src="../.gitbook/assets/configurePartialRejection.png" alt=""><figcaption><p>Configure Partial Rejection</p></figcaption></figure>
 
 ## Collateral Rejection
