@@ -31,7 +31,7 @@ Order routing is organized into three hierarchical levels:
 <div data-full-width="false"><figure><img src="../../.gitbook/assets/routingframework.png" alt=""><figcaption><p>Brokering Framework in HotWax Commerce</p></figcaption></figure></div>
 
 {% embed url="https://drive.google.com/file/d/1ZhhkzqXjNwnrIdzG5GYeh_UW9pDiIhbI/view?usp=drive_link" %}
-Video: Configurable Order Routing App
+Video: Configurable Order Routing
 {% endembed %}
 
 * [x] [<mark style="color:orange;">**Brokering Runs**</mark>](https://docs.hotwax.co/documents/retail-operations/orders/order-routing/brokering-runs)
