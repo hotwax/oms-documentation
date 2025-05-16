@@ -127,7 +127,7 @@ Video: Pack order
 Video: Ship order
 {% endembed %}
 
-{% embed url="https://youtu.be/RCzf6Uv_CoY" %}
+{% embed url="https://drive.google.com/file/d/1tqF9lCp0RjlOUZCbkbmrr4wSDFci-n1s/view?usp=drive_link" %}
 Video: Complete process for individual order fulfillment
 {% endembed %}
 
