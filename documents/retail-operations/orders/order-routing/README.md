@@ -6,7 +6,7 @@ description: >-
 icon: gears
 ---
 
-# Order Routing
+# Order Routings
 
 ## What is Order Routing?
 
