@@ -80,21 +80,30 @@ In most scenarios, purchase orders are received at the warehouse location, and s
 
 All other features, such as receiving extra items or handling discrepancies, are also offered during the purchase order receiving process, just as they are with inbound shipments. The primary difference is that when you are receiving a purchase order instead of a shipment, you can receive it in parts, unlike shipments which must be received in one go.
 
-### Cycle Counting
+### Directed Cycle Count
 
-Retailers that aim for 98% to 99% inventory accuracy, regularly perform cycle counts at their locations to maintain up to date inventory records. Cycle counting is a critical inventory management business process for these retailers and should be performed weekly or monthly, depending on the specific needs of the store.
+Retailers aiming for 98% to 99% inventory accuracy, regularly perform cycle counts at their locations to maintain up to date inventory records. Cycle counting is an important inventory management business process for these retailers and should be performed weekly or monthly, depending on the specific needs of the store.
+
+HotWax Commerce provides a dedicated Cycle Count App for retailers that helps them create, assign, schedule and perform cycle counts. What differentiates the app is its role-based interface, operations teams use it to create, assign and review submitted counts, while store associates use it to scan and record item quantities during the count.
 
 <figure><img src="../.gitbook/assets/CycleCounting.png" alt=""><figcaption><p>Cycle count sync</p></figcaption></figure>
 
-#### Performing Cycle Counts
+#### Creating & Assigning Cycle Count
 
-Cycle counts are ideally conducted either before the store opens or after closing hours when inventory movement is minimal.
+Cycle counts are performed for multiple reasons. Many retailers have the SOP for scheduling cycle counts regularly every week or month. Counts are also commonly initiated after high-volume periods, such as Black Friday, to reconcile actual inventory with recorded levels. Stores reporting higher order rejections may be assigned counts to investigate potential inventory discrepancies.
 
-Operation teams schedule cycle counts at stores. Store associates scan and count the physical inventory of a product present in the store and upload the count in HotWax Commerce Cycle Count App. Upon uploading the counts, the operation teams review them. They may request recounts if any discrepancies are suspected or approve the counts if they're deemed accurate.
+Operations team leverages the Cycle Count App to create cycle counts. Once logged in, they access the admin view, where they can enter product details, add SKUs, and assign the count to a specific location.  
+The app also provides a bulk upload feature to create and assign multiple cycle counts for different products across locations.
 
-Upon approval, inventory adjustments are made in HotWax Commerce, reflecting the updated stock levels. This ensures that inventory records remain accurate and aligned with the actual stock on hand.
+Once the cycle count is created and assigned, the store associates can start performing cycle count.
 
-The app includes a feature that displays systemic inventory, enabling store associates to compare counted inventory with systemic inventory as a reference. While this feature serves as a useful reference point, it can be easily disabled to ensure unbiased and accurate counting.
+#### Performing Cycle Count
+
+Store associates are responsible for carrying out the assigned cycle counts. In order to prevent inventory movement during the process, cycle counts are usually conducted either prior to the store opening or following closing hours.
+
+To start the cycle count, associates log into the Cycle Count App. They see a different view than the admins, made specifically for them to perform the count. They scan items present in the count, and the app captures the scanned quantities.  
+The app provides an optional view of the system-recorded inventory levels for reference. This view can also be disabled by admins to make sure that store associates submit counts without influence from existing data.  
+Once the counting is complete, the associate submits the results for review.
 
 <figure><img src="../.gitbook/assets/InventoryCycleCount.png" alt=""><figcaption><p>Performing cycle count using HotWax Commerce Cycle Count App</p></figcaption></figure>
 
@@ -102,11 +111,14 @@ The app includes a feature that displays systemic inventory, enabling store asso
 Cycle counts should be performed after receiving the inventory reset from the ERP to ensure alignment with the most current inventory data.
 {% endhint %}
 
-**Examples of inventory adjustments:**
+#### Reviewing Cycle Count
 
-**Increase in inventory:** If a store counts 120 units of an item but the systemic inventory shows 100 units, the discrepancy is recorded, and the inventory is adjusted to reflect the 120 units.
+The operations team reviews the submitted counts and can either approve, reject, or request a recount.  
+Once approved, inventory adjustments are automatically applied in HotWax Commerce. For example:  
+If a +5 variance is reported, inventory is increased by 5 units  
+If a -5 variance is reported, inventory is decreased by 5 units
 
-**Decrease in inventory:** Conversely, if a store counts 80 units of an item but the systemic inventory shows 100 units, the inventory is adjusted to reflect the 80 units, ensuring accuracy.
+This automated adjustment process helps maintain accurate system inventory and reduces the need for manual reconciliation.
 
 Learn more about [Cycle Count](https://docs.hotwax.co/documents/store-operations/inventory/directed-cycle-count#cycle-count-details)
 
