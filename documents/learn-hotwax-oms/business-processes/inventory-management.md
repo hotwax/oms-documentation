@@ -92,8 +92,8 @@ HotWax Commerce provides a dedicated Cycle Count App for retailers that helps th
 
 Cycle counts are performed for multiple reasons. Many retailers have the SOP for scheduling cycle counts regularly every week or month. Counts are also commonly initiated after high-volume periods, such as Black Friday, to reconcile actual inventory with recorded levels. Stores reporting higher order rejections may be assigned counts to investigate potential inventory discrepancies.
 
-Operations team leverages the Cycle Count App to create cycle counts. Once logged in, they access the admin view, where they can enter product details, add SKUs, and assign the count to a specific location.  
-The app also provides a bulk upload feature to create and assign multiple cycle counts for different products across locations.
+Operations team leverages the Cycle Count App to create cycle counts. Once logged in, they access the admin view, where they can enter product details, add SKUs, and assign the count to a specific location.\
+The app also provides a [bulk upload](https://app.gitbook.com/s/GNcmGkoNRfptyho21A56/inventory/cycle-count/bulk-upload-cycle-counts) feature to create and assign multiple cycle counts for different products across locations.
 
 Once the cycle count is created and assigned, the store associates can start performing cycle count.
 
@@ -101,8 +101,8 @@ Once the cycle count is created and assigned, the store associates can start per
 
 Store associates are responsible for carrying out the assigned cycle counts. In order to prevent inventory movement during the process, cycle counts are usually conducted either prior to the store opening or following closing hours.
 
-To start the cycle count, associates log into the Cycle Count App. They see a different view than the admins, made specifically for them to perform the count. They scan items present in the count, and the app captures the scanned quantities.  
-The app provides an optional view of the system-recorded inventory levels for reference. This view can also be disabled by admins to make sure that store associates submit counts without influence from existing data.  
+To start the cycle count, associates log into the Cycle Count App. They see a different view than the admins, made specifically for them to perform the count. They scan items present in the count, and the app captures the scanned quantities.\
+The app provides an optional view of the system-recorded inventory levels for reference. This view can also be disabled by admins to make sure that store associates submit counts without influence from existing data.\
 Once the counting is complete, the associate submits the results for review.
 
 <figure><img src="../.gitbook/assets/InventoryCycleCount.png" alt=""><figcaption><p>Performing cycle count using HotWax Commerce Cycle Count App</p></figcaption></figure>
@@ -113,13 +113,13 @@ Cycle counts should be performed after receiving the inventory reset from the ER
 
 #### Reviewing Cycle Count
 
-The operations team reviews the submitted counts and can either approve, reject, or request a recount.  
-Once approved, inventory adjustments are automatically applied in HotWax Commerce. For example:  
-If a +5 variance is reported, inventory is increased by 5 units  
+The operations team reviews the submitted counts and can either approve, reject, or request a recount.\
+Once approved, inventory adjustments are automatically applied in HotWax Commerce. For example:\
+If a +5 variance is reported, inventory is increased by 5 units\
 If a -5 variance is reported, inventory is decreased by 5 units
 
 This automated adjustment process helps maintain accurate system inventory and reduces the need for manual reconciliation.
 
-Learn more about [Cycle Count](https://docs.hotwax.co/documents/store-operations/inventory/directed-cycle-count#cycle-count-details)
+Learn more about [creating cycle count](https://app.gitbook.com/s/GNcmGkoNRfptyho21A56/inventory/cycle-count/draft-counts) and [performing cycle count](https://app.gitbook.com/s/y0w9O4LtMBdjROn7iZ1X/inventory/directed-cycle-count).
 
 By following these practices and using HotWax Commerce's intuitive apps, retailers can maintain high levels of inventory accuracy and streamline their inventory management processes.
