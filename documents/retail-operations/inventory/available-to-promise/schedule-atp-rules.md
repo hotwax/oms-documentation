@@ -1,4 +1,4 @@
-# Scheduling ATP Rules
+# Schedule ATP Rules
 
 Retailers can manage the scheduling of the job responsible for ATP (Available to Promise) rules from the top of the page. By default, ATP rule jobs are scheduled to run at midnight to ensure ATP calculations occur when store traffic is minimal, making the inventory ATP ready before the start of the day.
 
@@ -12,7 +12,7 @@ First, schedule the rule categories like Threshold, Safety Stock, Store Pickup, 
 
 **Step 2: Schedule `Import Product Facility Job`**
 
-Next, schedule the “Import Product Facility” job in the [Job Manager App](\[url]\(https:/docs.hotwax.co/documents/retail-operations/workflow/job-manager\)/). This step imports the CSV files into HotWax, where ATP is computed based on the applied rules.
+Next, schedule the “Import Product Facility” job in the [Job Manager App](https://app.gitbook.com/s/vRjh4vkGRczeQJMpDxzL/administration/introduction/job-manager-app). This step imports the CSV files into HotWax, where ATP is computed based on the applied rules.
 
 Each rule card provides an overview of configurations and product facility selections. Retailers can click the "Edit rule" button to modify rule configurations.\
 The rule configuration can be adjusted by toggling the store pickup and shipping options on or off, or by setting values for threshold and safety stock by clicking on the number chips.
