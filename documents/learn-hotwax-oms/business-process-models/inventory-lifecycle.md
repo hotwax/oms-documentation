@@ -11,7 +11,7 @@ The inventory count of a product is regularly updated due to various factors suc
 
 <figure><img src="../.gitbook/assets/Inventorybpm.png" alt=""><figcaption><p>Inventory lifecycle business process model</p></figcaption></figure>
 
-Before delving into the specifics of Inventory Lifecycle BPM, it's crucial to understand HotWax Commerce's role in maintaining inventory levels and calculating inventory availability. <mark style="color:orange;">**HotWax Commerce serves as the master of inventory availability**</mark>. Now, what exactly does this mean, and how does HotWax Commerce compute it? Let's see:
+Before delving into the specifics of Inventory Lifecycle BPM, it's important to understand HotWax Commerce's role in maintaining inventory levels and calculating inventory availability. <mark style="color:orange;">**HotWax Commerce serves as the master of inventory availability**</mark>. Now, what exactly does this mean, and how does HotWax Commerce compute it? Let's see:
 
 In HotWax Commerce, you'll come across three inventory-related terms: **Quantity On Hand (QOH), Available To Promise (ATP), and Online ATP**
 
@@ -21,7 +21,7 @@ In HotWax Commerce, you'll come across three inventory-related terms: **Quantity
 
 ### Calculating Online ATP
 
-To calculate `Online ATP`, HotWax Commerce deducts inventory that is not available for sale from the ATP. This includes items such as safety stock, threshold quantities, orders in the brokering queue, and inventory from locations that are not participating in online selling.
+To calculate `Online ATP`, HotWax Commerce deducts inventory that is not available for sale from the ATP. This includes safety stock, threshold quantities, orders in the brokering queue, and inventory from locations that are not participating in online selling.
 
 * <mark style="color:orange;">**Safety stock**</mark><mark style="color:orange;">:</mark> Inventory set aside at each store specifically for walk-in customers.
 * <mark style="color:orange;">**Threshold**</mark><mark style="color:orange;">:</mark> Inventory buffer established at a company level to prevent inventory discrepancies and overselling on eCommerce platforms.
@@ -90,7 +90,7 @@ These periodic checks help clear inventory discrepancies in real time, so store 
 
 After completing the cycle count, store associates submit their results, which are then reviewed by operations managers. Once the cycle counting results are approved, HotWax Commerce automatically adjusts the QOH and ATP.
 
-It’s also crucial to account for these variances in the ERP and keep inventory up-to-date for stores. Before understanding how HotWax Commerce pushes inventory variances to the ERP, let's first see how inventory adjustments resulting from cycle counting are accounted for in HotWax Commerce:
+It’s also important to account for these variances in the ERP and keep inventory up-to-date for stores. Before understanding how HotWax Commerce pushes inventory variances to the ERP, let's first see how inventory adjustments resulting from cycle counting are accounted for in HotWax Commerce:
 
 <mark style="color:orange;">**Auto increase QOH & ATP:**</mark> When results show that the physical count exceeds the systemic inventory, the QOH and ATP are increased.
 
@@ -126,7 +126,7 @@ Online orders are captured on the eCommerce platform, a scheduled job in HotWax 
 
 **How does HotWax Commerce reduce inventory promised to online sales?**
 
-Online orders are sent to the brokering queue for inventory allocation. As orders are waiting in the brokering queue, HotWax Commerce deducts promised inventory from the `Online ATP`. The reason being, even if the fulfillment location is not yet decided, the captured order has been promised inventory and so it’s crucial to reduce the sellable inventory, that is, `Online ATP` to prevent overselling on eCommerce platforms.
+Online orders are sent to the brokering queue for inventory allocation. As orders are waiting in the brokering queue, HotWax Commerce deducts promised inventory from the `Online ATP`. The reason being, even if the fulfillment location is not yet decided, the captured order has been promised inventory and so it’s important to reduce the sellable inventory, that is, `Online ATP` to prevent overselling on eCommerce platforms.
 
 <mark style="color:orange;">**Auto decrease ATP:**</mark> After the order is allocated to the most suitable store or warehouse, HotWax Commerce automatically reduces ATP at the chosen fulfillment location.
 
