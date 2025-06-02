@@ -50,6 +50,6 @@ Replaying FlowFiles in Napita empowers users to inspect, troubleshoot, and valid
 2. Select the `Replay last event` option from the context menu.
 3. Choose whether to replay the last event from just the Primary Node or from all nodes.
 
-[PreviousVerify Processor Properties](<../.gitbook/assets/verify processor properties>)[NextBulletins](broken-reference)
+[PreviousVerify Processor Properties](<../../.gitbook/assets/verify processor properties>)[NextBulletins](broken-reference)
 
 Last updated 14 days ago

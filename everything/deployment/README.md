@@ -40,7 +40,7 @@ In Hotwax commerce facility groups are used to define the scope and functionalit
 
 ## Configure System Property Data
 
-HotWax Commerce has default settings tailored for US retailers, For non-US retailers adjustments are needed to align with their business location. The System Property data encompasses a range of configurations that influence the fundamental settings governing how your instance operates. Ensuring accuracy in these configurations is essential. Read our document on [System Property Data](deployment.md) to learn how you can configure system property data such as currency, country, and Shipment Weight Units.
+HotWax Commerce has default settings tailored for US retailers, For non-US retailers adjustments are needed to align with their business location. The System Property data encompasses a range of configurations that influence the fundamental settings governing how your instance operates. Ensuring accuracy in these configurations is essential. Read our document on [System Property Data](https://app.gitbook.com/s/vRjh4vkGRczeQJMpDxzL/initial-setup/configure-system-property) to learn how you can configure system property data such as currency, country, and Shipment Weight Units.
 
 ## Configure SFTP
 

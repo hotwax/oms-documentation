@@ -1,4 +1,4 @@
-# Multi-Currency Sales Orders and Returns
+# Orders
 
 Retailers operating globally often receive payments in the customer's local currency, which differs from the retailer's base currency (Shopify shop currency). The Multi-Currency Order and Return Management feature by HotWax Commerce significantly enhances operational efficiency and financial clarity for retailers dealing with international transactions. By automating currency conversion and reconciliation, retailers can manage global sales more effectively, ensuring accurate financial reporting and simplified accounting processes. This feature not only improves the day-to-day operations of retailers but also enhances the overall customer experience, making it a valuable addition to the HotWax Commerce platform.
 
@@ -24,7 +24,6 @@ During ERP synchronization, the system retrieves the converted order amount from
 
 The order header is updated and uses the customer's currency (e.g., MXN) instead of the product store currency. This maintains the integrity of the original transaction details and provides accurate data for both the customer and the retailer.
 
-6. **Enhanced Financial Reporting:**
-For financial reporting and accounting, the feature provides a dual view capability, showing both the original payment currency and the base currency equivalent. The order detail page in HotWax Commerce displays the converted amount, local amount, and conversion rate in the order payment preference section. This dual reporting capability aids in better financial analysis and reporting, crucial for businesses with international transactions.
+6. **Enhanced Financial Reporting:** For financial reporting and accounting, the feature provides a dual view capability, showing both the original payment currency and the base currency equivalent. The order detail page in HotWax Commerce displays the converted amount, local amount, and conversion rate in the order payment preference section. This dual reporting capability aids in better financial analysis and reporting, crucial for businesses with international transactions.
 
 The automation of currency conversion and detailed recording of payment preferences simplify accounting processes. Retailers can easily reconcile their accounts and generate accurate financial reports.

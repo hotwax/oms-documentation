@@ -6,8 +6,6 @@ description: >-
 
 # Listing User in Tathya
 
-
-
 {% hint style="danger" %}
 The user's account is not yet fully configured. The auto-assigned public role does not give the required access to view charts or dashboards. To grant access, you have to assign the necessary roles and permissions to the user's account.
 {% endhint %}
@@ -58,7 +56,7 @@ Here are key details about this role:
 * This role ensures a high level of security by preventing users from accessing areas beyond the designated dashboard and settings sections.
 
 {% hint style="warning" %}
-Finally, add the project-specific roles that you have created, which grants permission to view the project-specific charts from the Dashboard panel. (Check the section [“List Roles” ](../creatingRoles/list\&ModifyRoles.md)for more information)
+Finally, add the project-specific roles that you have created, which grants permission to view the project-specific charts from the Dashboard panel. (Check the section [“List Roles” ](../creating-roles/list-and-modify-roles.md)for more information)
 {% endhint %}
 
 {% hint style="danger" %}

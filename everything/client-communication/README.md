@@ -1,7 +1,8 @@
 # Templated Replies
+
 ## Order Imports from Shopify to HotWax
 
-### Email Format Error: 
+### Email Format Error:
 
 Order imports from Shopify to HotWax fail due to incorrect email format. In this scenario, we have to inform clients to correct the email addresses and re-import them.
 
@@ -28,7 +29,6 @@ If the initial step fails to resolve the issue, please change the customer email
 Thank you.
 
 ```
-
 
 #### For Multiple Orders:
 
@@ -57,8 +57,8 @@ Thank you.
 
 ```
 
-
 ### Duplicate Customer Exists:
+
 Order failed to import into the OMS due to an error in the email address. Despite confirming that both the customer email address and order email are accurate, the problem originates from Shopify. There a duplicate customer entry exists with an incorrect email address, causing the import error.
 
 ```
@@ -82,6 +82,7 @@ Thank you.
 ```
 
 ### Order Having Special Characters:
+
 In this scenario when an order fails to import in OMs because the order has a special character (any emoji). we need to tell the client to manually import the order.
 
 ```
@@ -101,7 +102,9 @@ Thank you.
 ## Orders do not sync with Netsuite:
 
 ### Customer Not Connected to Subsidiary in NetSuite
+
 We noticed that the customer isn't connected to the subsidiary in Netsuite: we need to inform the client to add the customer to the Subsidiary
+
 ```
 Hey <Person responsible for NetSuite>,
 
@@ -113,6 +116,7 @@ Thank you.
 ```
 
 ### All Order Attributes Are Present
+
 We've identified an order with all the required attributes that haven't been created in NetSuite.
 
 ```
@@ -128,8 +132,9 @@ Thank you.
 ```
 
 ### Location Not Connected to Subsidiary in NetSuite
-We have a POS send a sales order in NetSuite where we can't add a location. 
-Upon reviewing the order, we observed that the brokered location associated with it is not linked to Subsidiary 5 in NetSuite.
+
+We have a POS send a sales order in NetSuite where we can't add a location. Upon reviewing the order, we observed that the brokered location associated with it is not linked to Subsidiary 5 in NetSuite.
+
 ```
 
 Hey <Person responsible for NetSuite\>, 
@@ -144,8 +149,7 @@ Thank you.
 
 ### Refreshing Unsynced POS Order for NetSuite
 
-This scenario involves a point-of-sale (POS) order that hasn't been properly synchronized with NetSuite. 
-The order is imported from Shopify in an unfulfilled status and in HotWax it is in a Created State.
+This scenario involves a point-of-sale (POS) order that hasn't been properly synchronized with NetSuite. The order is imported from Shopify in an unfulfilled status and in HotWax it is in a Created State.
 
 #### For Single Order
 

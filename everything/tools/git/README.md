@@ -1,4 +1,4 @@
-# Issue Report
+# Git
 
 Hotwax Commerce uses two platforms for bug reporting: GitHub (primarily for front-end issues) and ClickUp (for all other issues). Here’s a detailed guide on how to use each platform:
 
@@ -94,22 +94,22 @@ ClickUp is generally used for issues other than front-end issues like backend, d
 3. **Go to Your Space, Folder, and List:**
    *   Select the relevant space, folder, and list where the task will be added.
 
-       <figure><img src="../.gitbook/assets/clickup4.png" alt=""><figcaption></figcaption></figure>
+       <figure><img src="../../.gitbook/assets/clickup4.png" alt=""><figcaption></figcaption></figure>
 4. **Create a Task:**
    * Click on the “Add Task” button.
 5. **Fill in Task Details:**
    * **Title:** Clear and concise title.
    *   **Description:** Detailed description of the task.&#x20;
 
-       <figure><img src="../.gitbook/assets/clickup2.png" alt=""><figcaption></figcaption></figure>
+       <figure><img src="../../.gitbook/assets/clickup2.png" alt=""><figcaption></figcaption></figure>
 6. **Choose the Task Location:**
    *   Specify space, folder, and list (e.g., "Product Management" space, "Documentation" folder, and "Backlog" list).&#x20;
 
-       <figure><img src="../.gitbook/assets/clickup3.png" alt=""><figcaption></figcaption></figure>
+       <figure><img src="../../.gitbook/assets/clickup3.png" alt=""><figcaption></figcaption></figure>
 7. **Select Task Type:**
    *   Define the task type (e.g., task, milestone, bug, report).
 
-       <figure><img src="../.gitbook/assets/clickup1 (1).png" alt=""><figcaption></figcaption></figure>
+       <figure><img src="../../.gitbook/assets/clickup1 (1).png" alt=""><figcaption></figcaption></figure>
 8. **Additional Options:**
    * **Status:** Set the task status as open.
    * **Assignee:** Assign the task to the relevant person.
@@ -134,11 +134,11 @@ ClickUp is generally used for issues other than front-end issues like backend, d
   3. Reproduce the issue or bug with a screen recording.
   4.  Authorize the GitHub integration from Jam.&#x20;
 
-      <figure><img src="../.gitbook/assets/git3 (1).png" alt=""><figcaption></figcaption></figure>
+      <figure><img src="../../.gitbook/assets/git3 (1).png" alt=""><figcaption></figcaption></figure>
   5. Add details like Issue Title, description, issue info (repository, assignees, labels, milestone).
   6.  Click on the "Create issue" button to be redirected to the issue tab.
 
-      <figure><img src="../.gitbook/assets/git1.png" alt=""><figcaption></figcaption></figure>
+      <figure><img src="../../.gitbook/assets/git1.png" alt=""><figcaption></figcaption></figure>
 
 ### Using Jam for ClickUp:
 

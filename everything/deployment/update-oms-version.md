@@ -9,7 +9,7 @@ description: >-
 
 Updating OMS is vital for security, performance, and efficiency. The latest versions often include essential security enhancements, safeguarding your business and customer data. Performance improvements lead to smoother operations, faster order processing, and enhanced user experience. Regular updates also address bugs, preventing disruptions in your order management process. In essence, OMS updates are a simple yet crucial step in maintaining the integrity and effectiveness of your business processes.
 
-{% hint style="info" %} You know about OMS versions you can refer to [OMS Release Version](https://docs.hotwax.co/integrate-with-hotwax/oms-release-versions/omsreleases) { % endhint %}
+You know about OMS versions you can refer to [OMS Release Version](https://docs.hotwax.co/integrate-with-hotwax/oms-release-versions/omsreleases) { % endhint %\}
 
 ## How to update OMS to the latest release version?
 
@@ -116,21 +116,21 @@ Neglecting to update the upgrade steps and SQL may lead to version management co
 
 * Continue the process iteratively until the OMS is on the latest version.
 
-
 ## Updating UAT Instances: A Step-by-Step Guide
 
-{% hint style="info" %} Always verify the Docker instance configuration with the development team before deployment. { % endhint %}
+Always verify the Docker instance configuration with the development team before deployment. { % endhint %\}
 
-**Overview**
-Process for updating UAT instances on the Jenkins platform, providing clear instructions for different deployment scenarios.
+**Overview** Process for updating UAT instances on the Jenkins platform, providing clear instructions for different deployment scenarios.
 
 **Prerequisites**
-* Access to Jenkins: [link to Jenkins.hotwax.co]
+
+* Access to Jenkins: \[link to Jenkins.hotwax.co]
 * Necessary permissions to deploy to the target UAT instance
 
 ### Deployment Scenarios
 
 **New Release Tag**
+
 * Access Jenkins and locate the desired UAT instance.
 * Navigate to the deployment page and select "Build with parameters".
 * Input the release tag (e.g., v5.14.0) in the "Docker branch" field.
@@ -139,9 +139,11 @@ Process for updating UAT instances on the Jenkins platform, providing clear inst
 * Trigger the deployment.
 
 **Development Branch**
+
 * Follow the same steps as for a new release tag, but input "Main" as the Docker branch and select "Dev" as the Docker instance.
 
 **Feature Tag**
+
 * Follow the same steps as for a new release tag, but input the feature tag (e.g., v5.15.0-86cw63t1f-beta) as the Docker branch and select "UAT" as the Docker instance.
 
 By following these steps and considering the outlined best practices, you can effectively update UAT instances to support various development and testing needs.
