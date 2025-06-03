@@ -43,18 +43,19 @@ The "Update Contact Details" function enables administrators to modify a user's 
 
 ### Clearance
 
-The Clearance section allows administrators to manage user roles and permissions.  
+The Clearance section allows retailers to manage employee roles and permissions.  
 **The key functions available in this section include**
 
-- **Add Security Group**: Administrators can assign or update a user's permissions by associating them with one or more security groups. Also, they can remove an added security group with the more option on the security group name.
+- **Add Security Group**: Retailers can assign or update an employee's permissions by associating them with one or more security groups. If the retailer wants to remove a security group, they can click on the "More" option next to the group's name and choose Remove.
   
-- **Add Product Store**: Users can be assigned to one or more product stores, based on business needs. Also, they can remove an added product store with the more option on the product store name.
-  
-- **View Product Store**: After assigning a user to a product store, administrators can view the related details by using the View Product Store option. This redirects them to the product store’s details page in the Company App.
-  
-- **View History**: The system maintains a history log that lets administrators review changes made to the user, including when security groups were added or removed, and the duration for which the user has been in a specific security group.
+- **Add Product Store**: Employees can be assigned to one or more product stores, based on business needs. If the retailer wants to remove a product store, they can click on the "More" option next to the product store's name and choose Remove.
 
-With this section, administrators can efficiently control user access and track permission changes from a single location.
+- **View Product Store**: After assigning an employee to a product store, retailers can view the product store-related details by using the View Product Store option. This redirects them to the product store’s details page in the Company App.
+
+- **View History**: The Job Manager App keeps a record of changes made to a employee permissions. Retailers can see when security groups were added or removed and how long the employee stayed in each group.
+
+With this section, retailers can efficiently control employee access and track permission changes from a single location.
+
 
 <figure><img src="../../.gitbook/assets/permission786.png" alt=""><figcaption><p>Image: Update user role and permission</p></figcaption></figure>
 
