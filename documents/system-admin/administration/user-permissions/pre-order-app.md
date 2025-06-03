@@ -52,4 +52,4 @@ The HotWax Commerce `Pre-Order` App is designed for merchandisers to gain a clea
 | Serial No. | Action                     | Permissions        | Description                                         |
 | --- | --------------------------------- | ------------------ | ----------------------------------------------------|
 | 1   | View OMS                          | COMMERCEUSER_VIEW  | Allow user to view OMS directly form the Pre-Order App.|
-| 2   | Update Product Identifier Setting | COMMON_ADMIN       |Allow user to manage product identifier settings      |
+| 2   | Update Product Identifier Setting |   ADMIN       |Allow user to manage product identifier settings      |
