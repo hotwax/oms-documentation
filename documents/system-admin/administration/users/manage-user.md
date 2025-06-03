@@ -46,13 +46,13 @@ The "Update Contact Details" function enables administrators to modify a user's 
 The Clearance section allows retailers to manage employee roles and permissions.  
 **The key functions available in this section include**
 
-- **Add Security Group**: Retailers can assign or update an employee's permissions by associating them with one or more security groups. If the retailer wants to remove a security group, they can click on the "More" option next to the group's name and choose Remove.
+- **Add Security Group**: Retailers can assign or update an employee's permissions by associating them with one or more security groups. If the retailer wants to remove a security group, they can click on the `More` option next to the group's name and choose Remove.
   
-- **Add Product Store**: Employees can be assigned to one or more product stores, based on business needs. If the retailer wants to remove a product store, they can click on the "More" option next to the product store's name and choose Remove.
+- **Add Product Store**: Employees can be assigned to one or more product stores, based on business needs. If the retailer wants to remove a product store, they can click on the `More` option next to the product store's name and choose Remove.
 
-- **View Product Store**: After assigning an employee to a product store, retailers can view the product store-related details by using the View Product Store option. This redirects them to the product store’s details page in the Company App.
+- **View Product Store**: After assigning an employee to a product store, retailers can view the product store-related details by using the View Product Store option. This redirects them to the product store’s details page in the **Company App**.
 
-- **View History**: The Job Manager App keeps a record of changes made to a employee permissions. Retailers can see when security groups were added or removed and how long the employee stayed in each group.
+- **View History**: The **Job Manager App** keeps a record of changes made to a employee permissions. Retailers can see when security groups were added or removed and how long the employee stayed in each group.
 
 With this section, retailers can efficiently control employee access and track permission changes from a single location.
 
