@@ -32,7 +32,7 @@ Below is a list of all the actions available in the Receiving App, along with th
 
 | No. | Action                    | Permission    | Description                                                                                   |
 | --- | ------------------------- | ------------- | --------------------------------------------------------------------------------------------- |
-| 1  | Select Product Identifier       | COMMON_ADMIN         | Allows users to select the product identifier used to view items within the app. |
+| 1  | Select Product Identifier       | ADMIN         | Allows users to select the product identifier used to view items within the app. |
 | 2  | Manage All Receiving Operations | COMMON_ADMIN         | Allows users to manage all receiving operations. |
 | 3  | View Receiving App              | RECEIVING_APP_VIEW   | Grants users permission to view the Receiving App. |
 | 4  | Go To OMS                       | COMMERCEUSER_VIEW    | Allows users to access HotWax OMS. |
