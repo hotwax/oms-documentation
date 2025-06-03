@@ -59,7 +59,7 @@ HotWax Commerce’s Cycle Count App accepts five key fields:
 
 **2. Uploading the CSV file**
 
-* IN the bottom right corner of the draft page, click the `+` button to initiate a new count.
+* In the bottom right corner of the draft page, click the `+` button to initiate a new count.
 * Two icons appear; Select the icon with multiple pages for a bulk import.
 * On the `Draft Bulk` modal, click on the `Upload` button on the top-right to import the prepared CSV file.
 
