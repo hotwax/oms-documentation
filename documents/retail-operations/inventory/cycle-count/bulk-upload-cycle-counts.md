@@ -1,12 +1,12 @@
 ---
 description: >-
-  Operations teams can now easily create and assign multiple cycle counts to
+  Operations teams can easily create and assign multiple cycle counts to
   different locations at once using the new bulk import feature.
 ---
 
 # Bulk Upload Cycle Counts
 
-The **Bulk Import** functionality of HotWax Commerce’s `Cycle Count` app is designed to simplify the process of creating and assigning cycle counts for multiple products across multiple facilities. It allows users to create multiple cycle counts using a CSV upload which eliminates the need to create individual requests for each product or location.
+The **Bulk Import** functionality of HotWax Commerce’s `Cycle Count` App is designed to simplify the process of creating and assigning cycle counts for multiple products across multiple facilities. It allows users to create multiple cycle counts using a CSV upload which eliminates the need to create individual requests for each product or location.
 
 This reduces manual effort, minimizes errors, and enhances operational efficiency, especially for retailers with large store networks.
 
@@ -23,7 +23,7 @@ The template of the CSV file is as follows:
 | WEEK-2      | 159          | WP02-28-Purple  | INV\_COUNT\_ASSIGNED | 2024-11-12 |
 | WEEK-1      | 156          | WSH11-28-Orange | INV\_COUNT\_CREATED  | 2024-10-31 |
 
-HotWax Commerce’s Cycle Count app accepts five key fields:
+HotWax Commerce’s Cycle Count App accepts five key fields:
 
 1. **Count\_Name**: The name of the inventory count.
    * This is a **required field**.
@@ -52,14 +52,14 @@ HotWax Commerce’s Cycle Count app accepts five key fields:
 
 ## Steps to Create Cycle Counts in Bulk:
 
-**1. Accessing the Cycle Count app**
+**1. Accessing the Cycle Count App**
 
-* Navigate to the `Cycle Count` app from the HotWax Commerce's launchpad.
+* Navigate to the `Cycle Count` App from the HotWax Commerce's launchpad.
 * Log in using credentials.
 
 **2. Uploading the CSV file**
 
-* IN the bottom right corner of the draft page, click the `+` button to initiate a new count.
+* In the bottom right corner of the draft page, click the `+` button to initiate a new count.
 * Two icons appear; Select the icon with multiple pages for a bulk import.
 * On the `Draft Bulk` modal, click on the `Upload` button on the top-right to import the prepared CSV file.
 
