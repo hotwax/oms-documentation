@@ -9,7 +9,7 @@ description: >-
 
 ## Close Counts Details
 
-The closed counts page gives a review of all counts that have been closed. This page is helpful for getting an overview of how cycle counts have been performing.
+The Closed counts page gives a review of all counts that have been closed. This page is helpful for getting an overview of how cycle counts have been performing.
 
 The top of the page has two metrics:
 
@@ -21,7 +21,7 @@ The Closed count list shows the name and ID of the cycle count along with the fa
 
 ## Search, Sort and Filter Closed Counts
 
-The Closed Counts page includes all standard search and sort options, but adds a few specific filters to support retrospective analysis.  
+The Closed counts page includes all standard search and sort options, but adds a few specific filters to support retrospective analysis.  
 Admins can filter by:
 - **Facility**, to view closed counts from a certain location  
 - **Created Date**, to check when a count was initiated  

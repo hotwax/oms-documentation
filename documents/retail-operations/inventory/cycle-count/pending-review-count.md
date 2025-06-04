@@ -1,7 +1,7 @@
 ---
 description: >-
   Comprehensive guide to reviewing cycle counts in the Cycle Count App,
-  including filtering counts, accepting or rejecting items, and managing
+  including filtering counts, accepting or rejecting items, and managin
   inventory variance thresholds.
 ---
 
@@ -20,11 +20,11 @@ These filters make it easier to prioritize which counts to review first, based o
 
 ## Pending Review List View
 
-On the review cycle count page, you can filter counts by facilities where the count was submitted from, as well as counts that have specifically been resubmitted after a recount.
+On the `Review cycle count` page, you can filter counts by facilities where the count was submitted from, as well as counts that have specifically been resubmitted after a recount.
 
 If the cycle count is submitted for the first time, a `Submitted` badge will appear. For counts with items that were recounted and re-submitted, a `Re-submitted` badge will indicate that the count was reassigned and resubmitted by the facility after a recount.
 
-The `pending review list view` also shows how many of the assigned items have been counted as well as the due date of the count. Clicking on a count opens the detail page for it.
+The pending review list view also shows how many of the assigned items have been counted as well as the due date of the count. Clicking on a count opens the detail page for it.
 
 ## Pending Review Detail View
 

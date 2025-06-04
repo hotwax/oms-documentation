@@ -8,7 +8,7 @@ description: >-
 
 A directed cycle count begins as drafts. When logging into the `Cycle Count` App, the `Drafts` page is the first page you’ll see. To create a new draft, click on the `+` icon at the bottom right of the screen.
 
-A new draft count will open up on a new page where you can begin setting up a new count.
+A new Draft count will open up on a new page where you can begin setting up a new count.
 
 ## Steps to draft new cycle count
 
@@ -53,7 +53,7 @@ By default, counts across all locations are visible.
 
 Order rejections in a store may or may not lead to change in the inventory. For example, when a store rejects orders just because it has some operational constraints and is temporarily inactive, in that event, order rejections do not lead to change in the inventory levels.  
 While, in the event where an order is rejected with a reason like, damaged item, not in stock, means that physical inventory present in the store doesn’t match what’s online, which reflects the need for a cycle count.  
-For this, whenever an order rejection causes a change in the inventory levels, a draft count is automatically created in HotWax’s Cycle Count App to identify the actual stock and address the discrepancy.
+For this, whenever an order rejection causes a change in the inventory levels, a draft count is automatically created in HotWax’s `Cycle Count`App to identify the actual stock and address the discrepancy.
 
 ### How It Works
 
