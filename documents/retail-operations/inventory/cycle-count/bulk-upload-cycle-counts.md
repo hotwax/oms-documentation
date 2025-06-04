@@ -46,8 +46,8 @@ HotWax Commerce’s Cycle Count App accepts five key fields:
    * Blanks create the count with no due date.
 
 {% hint style="info" %}
-* The above field names are only examples adn the user can customize the names of the fields. The app allows the flexibility to map the custom fields to the system's fields. Find how to do this in the next section.
-* Count names can be repeated for different facilities. For exmaple, two facilities can have a count named week-1.
+* The above field names are only examples and the user can customize the names of the fields. The app allows the flexibility to map the custom fields to the system's fields. Find how to do this in the next section.
+* Count names can be repeated for different facilities. For example, two facilities can have a count named week-1.
 {% endhint %}
 
 ## Steps to Create Cycle Counts in Bulk:

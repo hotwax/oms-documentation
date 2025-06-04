@@ -66,7 +66,7 @@ For a product to be available for store fulfillment, it must have inventory at t
 
 When the inventory is received, a product’s QOH and Online ATP are updated in HotWax Commerce. HotWax Commerce calculates the Physical Available to Promise (ATP) of a facility by considering various factors, such as safety stock, threshold, reserved quantity, and orders in the queue.
 
-Online ATP = QOH - (Reserved quantities + Safety stock + Threshold + Orders in brokering queue + Exluded facilities' ATP)
+Online ATP = QOH - (Reserved quantities + Safety stock + Threshold + Orders in brokering queue + Excluded facilities' ATP)
 
 For each store that allows online fulfillment, HotWax Commerce calculates the Online ATP that is available to sell and synchronize the inventory with Shopify through [Hard Sync and `Update recent inventory changes jobs.](https://docs.hotwax.co/documents/retail-operations/workflow/job-workflows/inventory)
 
