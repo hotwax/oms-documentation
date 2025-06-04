@@ -48,7 +48,7 @@ If an ERP/WMS other than NetSuite tracks which items are in which package, those
 
 In the case of NetSuite ERP, we recommend creating one package for each shipment/item fulfillment. In the event where retailers need to ship three packages, they should create three shipments/item fulfillments, with each shipment having one package. This way, retailers can track and receive each package independently. If tracking individual packages is not a priority for retailers, multiple packages can be received as one shipment in HotWax Commerce.
 
-Learn more about [transfer orders](https://docs.hotwax.co/documents/store-operations/inventory/transfer-order-management)
+Learn more about [transfer orders](https://app.gitbook.com/s/y0w9O4LtMBdjROn7iZ1X/inventory/transfer-order-management)
 
 <figure><img src="../.gitbook/assets/ReceivingTransferOrder.png" alt=""><figcaption><p>Receiving inbound shipments using HotWax Receiving App</p></figcaption></figure>
 
@@ -64,7 +64,7 @@ There can be scenarios where the items in a shipment are more or fewer than expe
 
 **Under-receiving:** If a shipment contains fewer items than ordered, the app allows the receiving of only the items that arrived. For example, if a shipment was expected to contain 100 units but arrives with only 90 units, the app will record the received 90 units, and the missing 10 units can be addressed separately.
 
-Learn more about additional scenarios supported in the[ Receiving App](https://docs.hotwax.co/documents/system-admins/administration/introduction/receiving-app)
+Learn more about additional scenarios supported in the [Receiving App](https://app.gitbook.com/s/vRjh4vkGRczeQJMpDxzL/administration/introduction/receiving-app)
 
 ### Receiving Purchase Orders in Stores
 
