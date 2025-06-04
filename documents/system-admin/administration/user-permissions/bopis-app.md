@@ -61,7 +61,7 @@ Here’s a detailed table of the actions available in the BOPIS App, organized b
 
 ### Settings Page
 
-| Serial No.  | Action              | Premission                     | Description                                                                 |
+| Serial No.  | Action              | Permission                     | Description                                                                 |
 |----|------------------------------|--------------------------|-----------------------------------------------------------------------------|
 | 1  | View Order Details Page      | COMMON_ADMIN            | Controls what customers are allowed to edit on their order when re-routing fulfillment. |
 | 2  | Reject Order Partially       | COMMON_ADMIN            | Specifies whether a BOPIS order can be partially rejected if inventory is insufficient at the store. |

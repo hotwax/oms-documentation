@@ -51,7 +51,7 @@ If you have multiple product stores, you’ll be prompted to choose the store fo
 {% endtab %}
 
 {% tab title="Multiple Brokering Runs" %}
-<figure><img src="../../.gitbook/assets/MultipleBrokeringRuns.png" alt=""><figcaption><p>Mutiple Brokering Runs</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/MultipleBrokeringRuns.png" alt=""><figcaption><p>Multiple Brokering Runs</p></figcaption></figure>
 {% endtab %}
 {% endtabs %}
 

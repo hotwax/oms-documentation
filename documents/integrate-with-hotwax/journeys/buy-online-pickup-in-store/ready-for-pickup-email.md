@@ -133,7 +133,7 @@ Note: If the OMS is responsible for sending the email, it incorporates the data 
 
 ### Step 4: Deliver Email Notification
 
-After recieving the required content, the marketing automation platform personalizes the customer's email using the provided details and delivers the email to the customer.
+After receiving the required content, the marketing automation platform personalizes the customer's email using the provided details and delivers the email to the customer.
 
 **HotWax Commerce has ready integration with Listrak, a marketing automation platform. Added below is a JSON file sample**
 

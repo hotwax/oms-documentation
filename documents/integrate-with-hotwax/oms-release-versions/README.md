@@ -2224,7 +2224,7 @@ No upgrade steps to follow.
 **Upgrade Data**
 
 ```xml
-ReturnAdjustmentType description="Appeasement" hasTable="N" returnAdjustmentTypeId="APPEASEMENT">
+ReturnAdjustmentType description="Appeasement" hashtable="N" returnAdjustmentTypeId="APPEASEMENT">
 ```
 
 ## Hotfix - v5.4.1 (10th Feb 2024)

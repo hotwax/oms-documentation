@@ -36,7 +36,7 @@ HC_SC_UploadHistoricalCustomerCSV
 /home/{sftp-username}/netsuite/historicalshopifycustomer/csv
 ```
 
-Job to import historical customers into HotWax with both a NetSuite and Shopify identifcation to avoid duplicate customers.
+Job to import historical customers into HotWax with both a NetSuite and Shopify identification to avoid duplicate customers.
 
 ```
 Import Historical Shopify Customers

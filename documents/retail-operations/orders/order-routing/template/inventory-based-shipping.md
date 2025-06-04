@@ -136,7 +136,7 @@ Since the client wants Rejected order routing first before the regular orders an
 
 ### Create Second Runs
 
-Retailers need to create a separate run to handle orders when inventory is unavailable across all stores. This is created as a separate run since inventory replenishment can take time so checking for inventory in every 15 minutes is not required. Therefore, this run is scheduled to run in evey 6 hours and once stock is available, the orders are re-brokered.
+Retailers need to create a separate run to handle orders when inventory is unavailable across all stores. This is created as a separate run since inventory replenishment can take time so checking for inventory in every 15 minutes is not required. Therefore, this run is scheduled to run in every 6 hours and once stock is available, the orders are re-brokered.
 
 ### Create Routing Rule
 

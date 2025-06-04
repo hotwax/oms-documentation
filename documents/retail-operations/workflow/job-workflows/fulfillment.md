@@ -98,7 +98,7 @@ The recommended frequency for this job is 15 minutes. This job has `topicEnum Id
 
 ***
 
-### Auto cancelations:
+### Auto cancellations:
 
 Job name: `Auto cancellations`\
 Service: `autoCancelOrderItems`\

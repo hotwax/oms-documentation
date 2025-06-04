@@ -28,7 +28,7 @@ Note: Provide this information in form format
 | Parameter        | Description                                                     | Required (Y/N) |
 |------------------|-----------------------------------------------------------------|----------------|
 | `uploadedFile`   | The uploaded file                                               |     Y          |
-| `configId`       | The datamanager configuration ID which is useed to import files |     Y          |
+| `configId`       | The datamanager configuration ID which is used to import files |     Y          |
 
 
 ## Response

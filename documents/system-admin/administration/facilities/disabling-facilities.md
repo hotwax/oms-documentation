@@ -11,7 +11,7 @@ Only users with Admin permissions can log in to the `Facilities App`. Users in t
 3. On the `Find Facilities` page, locate the facility you want to remove and click on it. This action will open the `Facility Details` page.
 4. Disable all configurations on the `Sell inventory online` card, such as Shopify, Amazon and others, using the toggle buttons in front of the configurations to unlink all channels for online orders.
 5. Set the order capacity of the facility to '0' by clicking on the `Fulfillment Capacity chip` on the `Online Order Fulfillment` card and selecting the `No Capacity` option from the menu.
-6. Disable all the following configuations on the `Fulfillment Settings` card using the toggle buttons provided along with the settings:
+6. Disable all the following configurations on the `Fulfillment Settings` card using the toggle buttons provided along with the settings:
    - _Allow Pickup_
    - _Uses native fulfillment app_
    - _Generate shipping labels_

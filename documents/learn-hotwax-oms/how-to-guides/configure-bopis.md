@@ -34,7 +34,7 @@ HotWax Commerce App uses ["storeLookup](https://app.gitbook.com/s/DVy340gLlDzLzx
 
 ### Add Product Store
 
-Facilities can have products from multiple brands which are configured as product stores in HotWax Commerce. If the retailer has multiple brands, retailers have to specify that the facility is containing the product of which brand. This function enables users to link/delink a facility to one or multiple product stores.
+Facilities can have products from multiple brands which are configured as product stores in HotWax Commerce. If the retailer has multiple brands, retailers have to specify that the facility is containing the product of which brand. This function enables users to link/unlink a facility to one or multiple product stores.
 
 1. Click the `Add` function under Product Store.
 2. Select the store/s from the dropdown menu

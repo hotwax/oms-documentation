@@ -85,7 +85,7 @@ Administration settings require special permissions and, if mismanaged, can impa
 **Routing:**
 
 * **Order Splitting:** Configure when no further order information is needed prior to order approval. Access this setting in the routing section of Brokering card, and adjust it according to your workflow requirements.
-* **Minimum Shipment Threshold Value:** Set threshold values for order items to ensure efficient order splitting while mitigating the risk of losses due to low-value shipments. Navigate to the routing or order management settings, and specify the desired threshold value, tthe shipment value will pick the currency set in the product store, ensuring consistency in currency throughout the order management process.
+* **Minimum Shipment Threshold Value:** Set threshold values for order items to ensure efficient order splitting while mitigating the risk of losses due to low-value shipments. Navigate to the routing or order management settings, and specify the desired threshold value, the shipment value will pick the currency set in the product store, ensuring consistency in currency throughout the order management process.
 
 
 

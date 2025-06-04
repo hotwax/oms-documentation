@@ -121,7 +121,7 @@ After filtering, the next step is choosing the Sorting criteria to prioritize th
 * **Order priority:** Orders can be sorted by priority levels, such as high, medium, low allowing retailers to prioritize orders based on their urgency.
 * **Ship by**
 * **Ship after**
-* **Shipping method:** Sorting by shipping method enables the brokering engine to priortize orders based on the promised SLA. HotWax records the delivery days associated with each shipping method, Same-Day as 0, Next-Day as 1, Two-Day as 2, etc. For example, applying shipping method sorting for a Same-Day/Next-Day batch allows the brokering engine to pick same-day orders before next-day orders, so inventory is allocated first to the most urgent orders. Sorting orders by shipping method becomes unnecessary when all orders in the batch have the same shipping method.
+* **Shipping method:** Sorting by shipping method enables the brokering engine to prioritize orders based on the promised SLA. HotWax records the delivery days associated with each shipping method, Same-Day as 0, Next-Day as 1, Two-Day as 2, etc. For example, applying shipping method sorting for a Same-Day/Next-Day batch allows the brokering engine to pick same-day orders before next-day orders, so inventory is allocated first to the most urgent orders. Sorting orders by shipping method becomes unnecessary when all orders in the batch have the same shipping method.
 
 <mark style="color:orange;">**Choosing sorting options to define order priority:**</mark>
 

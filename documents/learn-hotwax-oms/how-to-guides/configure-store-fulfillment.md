@@ -30,7 +30,7 @@ To facilitate Store Fulfillment operations retailers need to set up and configur
 
 ### Add Product Store
 
-Facilities can have products from multiple brands which are configured as product stores in HotWax Commerce. If the retailer has multiple brands, retailers have to specify that the facility contains the product of which brand. This function enables users to link/delink a facility to one or multiple product stores.
+Facilities can have products from multiple brands which are configured as product stores in HotWax Commerce. If the retailer has multiple brands, retailers have to specify that the facility contains the product of which brand. This function enables users to link/unlink a facility to one or multiple product stores.
 
 1. Click the `Add` function under Product Store.
 2. Select the store/s from the dropdown menu
