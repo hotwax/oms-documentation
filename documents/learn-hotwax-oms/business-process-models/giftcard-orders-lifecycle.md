@@ -38,7 +38,7 @@ Digital gift cards, also known as e-gift cards, are virtual equivalents of physi
 
 ### 1. Order Creation
 
-As discussed in the [Order Lifecycle BPM](https://docs.hotwax.co/documents/learn-hotwax-oms/business-process-models/order-lifecycle), a dedicated Import Orders job in HotWax Commerce downloads new orders from eCommerce platforms like Shopify. HotWax Commerce downloads physical gift card orders from Shopify in the same way like any other order item.
+As discussed in the [Order Lifecycle BPM](order-lifecycle.md), a dedicated Import Orders job in HotWax Commerce downloads new orders from eCommerce platforms like Shopify. HotWax Commerce downloads physical gift card orders from Shopify in the same way like any other order item.
 
 ### 2. Order Synchronization
 
