@@ -54,8 +54,7 @@ The Clearance section allows retailers to manage employee roles and permissions.
 
 - **View History**: The **Job Manager App** keeps a record of changes made to a employee permissions. Retailers can see when security groups were added or removed and how long the employee stayed in each group.
 
-With this section, retailers can efficiently control employee access and track permission changes from a single location.
-
+These settings allows to control employee access and track permission changes from a single location.
 
 <figure><img src="../../.gitbook/assets/permission786.png" alt=""><figcaption><p>Image: Update user role and permission</p></figcaption></figure>
 
