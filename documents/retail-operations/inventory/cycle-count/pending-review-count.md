@@ -1,6 +1,6 @@
 ---
 description: >-
-  Comprehensive guide to reviewing cycle counts in the Cycle Count app,
+  Comprehensive guide to reviewing cycle counts in the Cycle Count App,
   including filtering counts, accepting or rejecting items, and managing
   inventory variance thresholds.
 ---
@@ -8,6 +8,15 @@ description: >-
 # Review Counts
 
 Once a count has been submitted for review by the facility it was assigned to, it will be shown on the `Pending Review` page.
+
+## Search, Sort and Filter Counts on Pending Review
+
+On the Pending Review tab, admins can use the search bar and familiar sorting tools to manage the list.  
+To streamline the review process, two filters are available:
+- **Facility**, to check which locations have pending reviews  
+- **Created Date**, to focus on counts that reached review stage in a particular period  
+
+These filters make it easier to prioritize which counts to review first, based on time and location.
 
 ## Pending Review List View
 
@@ -69,7 +78,7 @@ All the newly added items and the items sent for recount will need to be reassig
 To close a count, click on the primary action button at the bottom of the screen. This will prompt you to confirm that the current count is ready to close. All open count items from the count will be rejected and the count will no longer be editable. Closed counts are shown on the `Closed counts` page.
 
 {% hint style="info" %}
-When an inventory is rejected by the fulfillment team in HotWax Commerce, the ATP of that product gets 0, while the QOH remains the Same. Once inventory is updated through the Cycle count app, the variance for both the QOH and ATP is recorded separately. For example, if the QOH of the inventory is 10 and the ATP is 0 due to order rejection, and during the inventory count the inventory available is 9 then the variance will be updated as -1 and +9 for QOH and ATP respectively.
+When an inventory is rejected by the fulfillment team in HotWax Commerce, the ATP of that product gets 0, while the QOH remains the Same. Once inventory is updated through the Cycle count App, the variance for both the QOH and ATP is recorded separately. For example, if the QOH of the inventory is 10 and the ATP is 0 due to order rejection, and during the inventory count the inventory available is 9 then the variance will be updated as -1 and +9 for QOH and ATP respectively.
 {% endhint %}
 
 {% embed url="https://youtu.be/kDOA6NUjIV4" %}

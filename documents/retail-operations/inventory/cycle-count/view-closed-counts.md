@@ -1,6 +1,6 @@
 ---
 description: >-
-  Guide to overview closed cycle counts in the Cycle Count app, including
+  Guide to overview closed cycle counts in the Cycle Count App, including
   performance metrics, detailed count summaries, and export options for
   comprehensive reporting.
 ---
@@ -18,6 +18,21 @@ The top of the page has two metrics:
 **Average variance:** The average variance presents an overall measure of how accurate inventory has been across all recently closed cycle counts.
 
 The Closed count list shows the name and ID of the cycle count along with the facility from which it is completed and the date on which the cycle count is closed. Admins can also see the item count details such as how many items were available in the count and how many of them were counted. the rejected inventory counts and the total inventory variance are also visible for admins to easily identify the count with major inaccuracies.
+
+## Search, Sort and Filter Closed Counts
+
+The Closed Counts page includes all standard search and sort options, but adds a few specific filters to support retrospective analysis.  
+Admins can filter by:
+- **Facility**, to view closed counts from a certain location  
+- **Created Date**, to check when a count was initiated  
+- **Closed Date**, to focus on when it was completed (with After/Before options)  
+
+This is especially useful during audits or reporting when time-based filtering is key.
+
+## Access the Detailed View of a Closed Count
+
+The Closed counts details page displays item-level information including counted quantity, system quantity, variance, and item status (accepted or rejected) of each item.  
+The page also displays overall progress and total variance in the cycle count.
 
 ## Export Cycle Count Details
 
