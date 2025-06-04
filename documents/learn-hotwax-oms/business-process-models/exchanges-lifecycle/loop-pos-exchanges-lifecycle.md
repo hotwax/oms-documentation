@@ -8,7 +8,7 @@ description: >-
 
 <figure><img src="../../.gitbook/assets/InstoreExchangesLoopbpm.png" alt=""><figcaption><p>In-store exchanges lifecycle business process model</p></figcaption></figure>
 
-The process of returning an item mirrors the steps previously discussed in the[ In-Store Returns Lifecycle Business Process Model](https://docs.hotwax.co/documents/learn-hotwax-oms/business-process-models/returns-lifecycle/shopify-pos-returns-lifecycle). More specifically, customers visiting the store location, store associates looking up the customer’s order in the Loop POS App, and initiating the return process remains the same.
+The process of returning an item mirrors the steps previously discussed in the [In-Store Returns Lifecycle Business Process Model](../returns-lifecycle/loop-pos-returns-lifecycle.md). More specifically, customers visiting the store location, store associates looking up the customer’s order in the Loop POS App, and initiating the return process remains the same.
 
 ## Exchange Processed
 
@@ -25,7 +25,7 @@ Once the return process is completed in the Loop POS Returns App, multiple actio
 
 ## In-Store Returns Downloaded from Shopify POS to HotWax Commerce
 
-This process again mirrors the steps discussed in the [In-Store Return Lifecycle](https://docs.hotwax.co/documents/learn-hotwax-oms/business-process-models/returns-lifecycle/loop-pos-returns-lifecycle). The only additional step performed is creating a new exchange order.
+This process again mirrors the steps discussed in the [In-Store Return Lifecycle](../returns-lifecycle/shopify-pos-returns-lifecycle.md). The only additional step performed is creating a new exchange order.
 
 * As discussed earlier, for exchanges, Loop creates a new exchange order in Shopify POS. Exchange orders that are created in Shopify POS are downloaded in HotWax Commerce just like regular POS sales. A scheduled job downloads exchanges from Shopify POS in the <mark style="color:orange;">**"Completed”**</mark> status and also reduces the inventory for the item sold as part of the exchange process.
 
