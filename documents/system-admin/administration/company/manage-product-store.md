@@ -148,7 +148,7 @@ Control what your customers are allowed to edit on their order when they are edi
 
 
 
-<figure><img src="../../.gitbook/assets/order permission.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/order permisssion.png" alt=""><figcaption></figcaption></figure>
 
 ### Manage Facility
 
