@@ -10,7 +10,7 @@ As with any Shopify-integrated application, HotWax Commerce requires specific pe
 
 ## Read Access Permissions
 
-**1. read\_assigned\_fulfillment\_orders** **Access Scope:** [FulfillmentOrder](https://shopify.dev/docs/api/admin-rest/latest/resources/assignedfulfillmentorder) resources assigned to a location managed by your [fulfillment service](https://shopify.dev/docs/api/admin-rest/latest/resources/fulfillmentservice). **Reason:** These permissions allow HotWax Commerce to update the fulfillment orders assigned to locations under its control, ensuring accurate fulfillment management within the Shopify ecosystem.
+**1. read\_assigned\_fulfillment\_orders** **Access Scope:** [Fulfillment Order](https://shopify.dev/docs/api/admin-rest/latest/resources/assignedfulfillmentorder) resources assigned to a location managed by your [fulfillment service](https://shopify.dev/docs/api/admin-rest/latest/resources/fulfillmentservice). **Reason:** These permissions allow HotWax Commerce to update the fulfillment orders assigned to locations under its control, ensuring accurate fulfillment management within the Shopify ecosystem.
 
 **2. read\_channels** **Access Scope:** **Reason:** This permission allows HotWax Commerce to access channel-related data such as whether an order is from Shopify web channel or social media channel for comprehensive order management and analysis.
 
