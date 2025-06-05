@@ -29,7 +29,7 @@ The scope is limited to the product store name, as the company name and product 
 
 1. Select the `Operating Countries detail` button on the product card in the Product Store details page to open the dialog box.
 2. Within the dialog box, you'll find a list of countries available for selection. If you need to add a new operating country, use the search functionality provided. You can search for countries by their GeoIDs, which may include country names.
-3. To add a country, simply check the checkbox next to its name in the list. This indicates that the selected country will be included as an operating country forthe product store.
+3. To add a country, simply check the checkbox next to its name in the list. This indicates that the selected country will be included as an operating country for the product store.
 4. Conversely, if you need to remove a country, uncheck the checkbox next to its name. This will exclude the deselected country from the list of operating countries for the product store.
 5. Once you've made the necessary changes, ensure to save selections. This might involve clicking on a 'Save' or 'Apply' button within the dialog box.
 6. After saving, confirm that the operating countries for the product store have been updated accordingly.
@@ -148,7 +148,7 @@ Control what your customers are allowed to edit on their order when they are edi
 
 
 
-<figure><img src="../../.gitbook/assets/order permisssion.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/order permission.png" alt=""><figcaption></figcaption></figure>
 
 ### Manage Facility
 

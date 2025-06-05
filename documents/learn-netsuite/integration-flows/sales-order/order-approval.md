@@ -362,7 +362,7 @@ FTP Config: IMP_APR_SALES_ORD
 
 Approved orders are then processed by the brokering engine in HotWax Commerce for order routing. Following the execution of the order brokering engine, the available inventory for each order item is assessed. Consequently, the brokering engine in HotWax Commerce assigns suitable fulfillment locations to the order items that have inventory available for fulfillment.
 
-Store pickup orders already have a pickup locatin selected by the customer during checkout and therefore don't need to be processed by the brokering engine.
+Store pickup orders already have a pickup location selected by the customer during checkout and therefore don't need to be processed by the brokering engine.
 
 After completing these steps, here is how much of the order sync is now complete:
 

@@ -43,7 +43,7 @@ In this section, we’ll demonstrate how to set up multiple inventory rules for 
 
 <table data-view="cards"><thead><tr><th></th><th></th><th></th></tr></thead><tbody><tr><td><ol><li><mark style="color:orange;"><strong>Filters</strong></mark></li></ol><p>Look up eligible facilities with inventory that can fulfill an order.</p></td><td></td><td></td></tr><tr><td><ol start="2"><li><mark style="color:orange;"><strong>Sorting</strong></mark></li></ol><p>Determine which eligible facility should be prioritized to allocate an order.</p></td><td></td><td></td></tr><tr><td><ol start="3"><li><mark style="color:orange;"><strong>Actions</strong></mark></li></ol><p>Define fallback actions for orders that cannot be fully allocated to a single facility. The actions also help configure the final steps if all previous rules don’t allocate inventory to orders.</p></td><td></td><td></td></tr></tbody></table>
 
-<figure><img src="../../.gitbook/assets/chooseOptimallocations.png" alt=""><figcaption><p>Choose Optimal Facilties</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/chooseOptimallocations.png" alt=""><figcaption><p>Choose Optimal Facilities</p></figcaption></figure>
 
 ### Step 1: Finding Facilities with Inventory Using Filters
 
