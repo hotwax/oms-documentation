@@ -6,7 +6,7 @@ description: Learn how HotWax Commerce synchronizes order updates from Shopify.
 
 ### Synchronizing Order Updates
 
-Sometimes customers or customer service representatives make changes to Shopify orders that need to be accurately reflected in Hotwax Commerce to ensure the fulfillment process meets the customer's requirements. HotWax Commerce can update the following details from Shopify:
+Sometimes customers or customer service representatives make changes to Shopify orders that need to be accurately reflected in HotWax Commerce to ensure the fulfillment process meets the customer's requirements. HotWax Commerce can update the following details from Shopify:
 
 * Adding items to an order
 * Removing items from an order
@@ -16,4 +16,4 @@ To ensure all order modifications are synced accurately, HotWax Commerce has an 
 
 <figure><img src="../../.gitbook/assets/22 (2).png" alt=""><figcaption><p><em>Fig.6 : Configuration of the “Import order updates from Shopify” job in the Job Manager App</em></p></figcaption></figure>
 
-To know more about how HotWax Commerce synchronizes Order fulfillment updates with Shopify, [click here](../../). Read further to know how HotWax Commerce Manages [Presell orders ](../how-are-pre-orderable-and-backorderable-products-listed-or-delisted-on-shopify/how-are-pre-orderable-and-backorderable-products-listed-or-delisted-on-shopify.md)and [BOPIS Orders](../how-does-hotwax-commerce-manage-bopis-orders-on-shopify/how-does-hotwax-commerce-manage-bopis-orders-on-shopify.md).
+To know more about how HotWax Commerce synchronizes Order fulfillment updates with Shopify, [click here](../../). Read further to know how HotWax Commerce Manages [Presell orders](../preorders-and-backorders/) and [BOPIS Orders](../bopis-orders/).
