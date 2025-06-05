@@ -1,7 +1,7 @@
 ---
 description: Learn about returns in Shopify, Loop, NetSuite and HotWax Commerce.
 ---
-<!-- this is also in the loop section -->
+
 # Returns
 
 In omnichannel retailing, retailers provide customers with the options for online returns as well as in-store returns.
@@ -33,6 +33,7 @@ A job in HotWax Commerce Integration Platform captures in progress returns from 
 **SFTP Locations**
 
 Example for Loop returns:
+
 ```
 /home/{sftp-username}/netsuite/loop-return/create
 ```
@@ -77,7 +78,7 @@ HC_MR_ExportLoopReturnProcess.js
 
 #### 7. Import Item Receipt Records
 
-A job in HotWax Commerce Integration Platform runs every 5 minutes to check for new CSV files received at the SFTP location. If any new files are identified, the job extracts the Loop return IDs from the file and subsequently triggers the [“Process Return” API](https://api.loopreturns.com/api/v1/warehouse/return/%7Breturn_id%7D/process).
+A job in HotWax Commerce Integration Platform runs every 5 minutes to check for new CSV files received at the SFTP location. If any new files are identified, the job extracts the Loop return IDs from the file and subsequently triggers the [“Process Return” API](https://docs.loopreturns.com/api-reference/latest/return-actions/process-return).
 
 **SFTP Locations**
 
@@ -180,9 +181,9 @@ Retailers' return policies can vary, ranging from one to several months. To acco
 #### 2. Fetching older orders from NetSuite:
 
 * In some cases, older orders may not be imported into the OMS, but the corresponding records still exist in NetSuite.
-* When no matching NetSuite order ID is found in the OMS, HotWax’s Integration Platform runs a search query in NetSuite using the Shopify order ID to locate the original sales order details.
+*   When no matching NetSuite order ID is found in the OMS, HotWax’s Integration Platform runs a search query in NetSuite using the Shopify order ID to locate the original sales order details.
 
-  Once the original sales order is retrieved from NetSuite, the necessary return details are synced. This step helps ensure that even older orders, which might not have been part of the initial OMS setup, are accurately linked with the RMA and processed.
+    Once the original sales order is retrieved from NetSuite, the necessary return details are synced. This step helps ensure that even older orders, which might not have been part of the initial OMS setup, are accurately linked with the RMA and processed.
 
 ***
 
