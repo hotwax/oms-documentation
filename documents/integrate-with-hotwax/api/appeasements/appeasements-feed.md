@@ -14,7 +14,7 @@ The Appeasements Financial Feed is a refund-wise JSON-formatted feed generated f
 
 ### Communication with the External Order fulfillment system
 
-The Appeasements financial feed is useful for retailers who use ERP for their accounting purposes and requires financial reconciliation during specific cycles. This feed provides the out-of-the-box data available from OMS, and retailers can use it as is or after transformation to ingest into external systems through file-based integration.
+The Appeasements financial feed is usseful for retailers who use ERP for their accounting purposes and requires financial reconciliation during specific cycles. This feed provides the out-of-the-box data available from OMS, and retailers can use it as is or after transformation to ingest into external systems through file-based integration.
 
 ## Customization
 
