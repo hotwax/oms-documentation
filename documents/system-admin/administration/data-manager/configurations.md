@@ -71,6 +71,50 @@ Config ID cannot be changed after creation. Create a new Config if a new Config 
 
 {% embed url="https://youtu.be/OEss4sNcvnQ" %}
 
+## Notify On Failure
+
+The **Notify On Failure** feature in **Data Manager Configurations** allows system administrators and teams to choose whether they want to receive email alerts when file processing fails. This ensures that issues with critical data imports are caught and resolved quickly.
+
+### How to Enable or Disable Notifications
+
+#### Navigate to Data Manager Configuration
+
+- Go to **Hamburger menu > Settings > Data Manager Configurations**.
+- This page lists all existing Data Manager configurations.
+
+#### Locate the Desired Configuration
+
+- Identify the Data Manager configuration (e.g., **order import**, **attribute update**) for which you want to control notifications.
+- Use the search to narrow down the list.
+
+{% hint style="info" %} 
+Each configuration type may have different importance; for example, attribute updates may not need failure alerts as urgently as order    import.
+{% endhint %}
+
+#### Edit the Configuration
+
+- Click **Edit** (pencil icon) next to the selected configuration.
+- This opens the settings panel for that configuration.
+
+#### Set "Notify On Failure"
+
+- Locate the **Notify On Failure** field.
+- Set it to:
+  - `Y` – to enable email notifications when the file has error records.
+  - `N` – to disable notifications for when the file has error records.
+
+This setting determines whether your team will be alerted to failures immediately, which directly impacts your response time.
+
+### Save the Configuration
+
+- Click **Save** to apply changes.
+
+{% hint style="info"%} 
+ - Notifications are sent to the email addresses configured in the instances.
+ - This setting applies on a **per-data manager configuration**—users can selectively enable or disable it based on the file's importance.
+{% endhint %}
+
+
 ### Verify the Data flow
 
 In HotWax Commerce, the ability to view data logs is crucial for verifying the accuracy and completeness of imported data. These logs offer insights into the status of imported data, allowing users to verify the success of operations during the verification process.
