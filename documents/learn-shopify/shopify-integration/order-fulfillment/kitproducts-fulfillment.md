@@ -1,6 +1,5 @@
 ---
-ddescription: >-
- Learn how HotWax Commerce updates Kit order fulfillment status to Shopify.
+ddescription: Learn how HotWax Commerce updates Kit order fulfillment status to Shopify.
 ---
 
 # Kit Order Fulfillment
@@ -11,4 +10,5 @@ HotWax Commerce facilitates the fulfillment of kit products and their components
 
 * The picklist includes details of all kit components, enabling pickers to gather and assemble the kit during the packing process.
 * After the kit order is picked, packed, and shipped in HotWax Commerce, the kit is marked as completed within the system.
-* The fulfillment status, including tracking details, is then synchronized to Shopify through the [‘Completed Orders’](how-is-the-order-fulfillment-status-updated-to-shopify-from-hotwax-commerce.md) job.
+* The fulfillment status, including tracking details, is then synchronized to Shopify through the Completed Orders job.
+
