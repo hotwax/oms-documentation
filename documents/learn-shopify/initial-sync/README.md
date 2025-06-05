@@ -1,7 +1,7 @@
 ---
 description: >-
-  Learn how to initiate the initial product sync process between HotWax
-  Commerce and Shopify for efficient data integration.
+  Learn how to initiate the initial product sync process between HotWax Commerce
+  and Shopify for efficient data integration.
 ---
 
 # Initial Product Sync
@@ -74,16 +74,15 @@ Follow these steps to schedule the job:
 6. In the `scheduleNow` field, insert `N` to ensure that the job runs instantaneously.
 7. Save the changes to schedule and execute the job.
 
-<img width="493" alt="Associate product sub catalog" src="https://github.com/user-attachments/assets/3e7b22ed-97d4-4577-844f-373dfad1f35f">
+![Associate product sub catalog](https://github.com/user-attachments/assets/3e7b22ed-97d4-4577-844f-373dfad1f35f)
 
-
-[Click here](https://docs.hotwax.co/documents/retail-operations/workflow/job-workflows/products#associate-products-with-sub-catalog) to read about regular product association jobs.
+[Click here](https://app.gitbook.com/s/GNcmGkoNRfptyho21A56/workflow/job-workflows/products) to read about regular product association jobs.
 
 ### Verifying Associations
 
 Associations may take some time, depending on the number of products being linked. To confirm product associations, follow these steps:
 
 1. Log in to your HotWax Commerce user instance.
-2. Go to `Import Create Shopify shop product data` page by clicking [here](https://demo-oms.hotwax.io/commerce/control/ImportData?configId=IMP\_SHPFY\_SHOP\_PROD). Change `demo-oms` with your user instance and log in to the HotWax Commerce to access the page.
+2. Go to `Import Create Shopify shop product data` page by clicking [here](https://demo-oms.hotwax.io/commerce/control/ImportData?configId=IMP_SHPFY_SHOP_PROD). Change `demo-oms` with your user instance and log in to the HotWax Commerce to access the page.
 3. Check that the import status reads as `finished`.
 4. Further, you can go to the `Products` page and click on the preferred product to navigate to `Product Detail` page and see the associated shopify shop under `Shopify Shop Product` section.
