@@ -96,7 +96,7 @@ potential of HotWax Commerce for your businesses.
     <tr>
       <td align="center"><strong>Business Process Models</strong></td>
       <td><a href=".gitbook/assets/BPM.png">BPM.png</a></td>
-      <td><a href="https://app.gitbook.com/s/fkS6HE1ADY5pjfJTizhz/business-process-models">Business Process Models</a>
+      <td><a href="/documents/learn-hotwax-oms/business-process-models/README.md">Business Process Models</a>
       </td>
     </tr>
   </tbody>
