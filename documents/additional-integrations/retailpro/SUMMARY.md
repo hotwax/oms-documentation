@@ -6,7 +6,7 @@
   * [Challenges](Flows/Inventory/ChallengesInInventorySync.md)
   * [Technical Workflow](./flows/inventory/technical-workflow.md)
 
-* [Order Sync](Flows/Order/OrderSync.md)
+* [Order Sync](./flows/order/README.md)
   * [Technical Workflow of Invoicing from Single Location](Flows/Order/InvoiceFromSingleLocationTechWorkflow.md)
   * [Technical Workflow of Invoicing from Multiple Location](./flows/order/workflow-of-invoice-from-multiple-location.md)
 
