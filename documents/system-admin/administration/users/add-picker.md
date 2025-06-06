@@ -34,7 +34,7 @@ Video: Adding Pickers in Bulk
 **Adding Individual Pickers**
 
 1. Navigate to the `user management app` of HotWax Commerce
-2. Open the user you want to make a `Picker` or [create a new user](users/create-users.md)
+2. Open the user you want to make a `Picker` or [create a new user](create-user.md)
 3. Go to the `Fulfillment card` tap and click on `show as a picker`
 4. Click on add facilities button, this will open a new form. Select the facility for which you want to add the picker.
 {% embed url="https://youtu.be/6BW4Hxi08N0" %}
