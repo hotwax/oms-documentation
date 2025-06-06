@@ -322,9 +322,9 @@ A scheduled job within HotWax Commerce Integration Platform validates order item
 
 ​Once the NetSuite order ID and line item IDs have been saved, HotWax internally adds an order attribute, `NETSUITE\_ORDER\_EXPORTED`, to these orders. This attribute is added in batches through a scheduled job.
 
-A seperate job checks for orders that have this attribute added to them and internally hands them off for approval in the OMS. This is a two step process because it allows us to abstract the order approval checks from the actual order approval job, thus enabling extensiblity in the validations required for order approval for different retailers.
+A separate job checks for orders that have this attribute added to them and internally hands them off for approval in the OMS. This is a two step process because it allows us to abstract the order approval checks from the actual order approval job, thus enabling extensibility in the validations required for order approval for different retailers.
 
-For example, some retailers may have an additional fraud detection check that needs to be completed before an order can be approved. Completetion of the fraud detection would add its own attribute (ex. `FRAUD\_VERIFIED`) to the order and the final order approval job would check both attributes before internally approving the order.
+For example, some retailers may have an additional fraud detection check that needs to be completed before an order can be approved. Completion of the fraud detection would add its own attribute (ex. `FRAUD\_VERIFIED`) to the order and the final order approval job would check both attributes before internally approving the order.
 
 **SFTP Locations**
 
@@ -362,7 +362,7 @@ FTP Config: IMP_APR_SALES_ORD
 
 Approved orders are then processed by the brokering engine in HotWax Commerce for order routing. Following the execution of the order brokering engine, the available inventory for each order item is assessed. Consequently, the brokering engine in HotWax Commerce assigns suitable fulfillment locations to the order items that have inventory available for fulfillment.
 
-Store pickup orders already have a pickup locatin selected by the customer during checkout and therefore don't need to be processed by the brokering engine.
+Store pickup orders already have a pickup location selected by the customer during checkout and therefore don't need to be processed by the brokering engine.
 
 After completing these steps, here is how much of the order sync is now complete:
 

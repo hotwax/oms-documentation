@@ -85,7 +85,7 @@ Table of valid variance reasons and their IDs:
 | `VAR_DAMAGED`      | Reduce damaged inventory from available quantity                                  |
 | `VAR_LOST`         | SKU inventory is lost                                                             |
 | `VAR_FOUND`        | Lost SKU inventory is found                                                       |
-| `WORN_DISPLAY`     | SKU inventory is worn and unsuable from being on display                          |
+| `WORN_DISPLAY`     | SKU inventory is worn and unusable from being on display                          |
 | `VAR_MANUAL`       | SKU inventory adjustment is done manually                                         |
 
 ## Response

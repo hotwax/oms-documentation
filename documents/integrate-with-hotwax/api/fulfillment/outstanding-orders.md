@@ -64,7 +64,7 @@ Example: https://demo-oms.hotwax.io/api/solr-query
 | `orderStatusId`        | The ID of the order status in HotWax.                                                                                                             | Yes            |
 | `isPicked`             | The status of the order if picked or not. Default value: N.                                                                                       | No             |
 | `shipmentMethodTypeId` | The ID of the shipment method type.                                                                                                               | No             |
-| `fulfillmentStatus`    | The status of fulfilment.                                                                                                                         | No             |
+| `fulfillmentStatus`    | The status of fulfillment.                                                                                                                         | No             |
 | `facilityId`           | The ID of the facility.                                                                                                                           | No             |
 
 ## Response

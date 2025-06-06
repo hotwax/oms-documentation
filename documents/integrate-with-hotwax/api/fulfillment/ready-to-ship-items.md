@@ -84,7 +84,7 @@ Example: https://demo-oms.hotwax.io/api/solr-query
 | `type`                      | -                                                                                                                                                 | No             |
 | `facet`                     | The arrangement of search results into categories based on indexed terms.                                                                         | No             |
 | `ordersCount`               | The count of orders.                                                                                                                              | No             |
-| `-fulfillmentStatus`        | The status of fulfilment which needs to be neglected.                                                                                             | No             |
+| `-fulfillmentStatus`        | The status of fulfillment which needs to be neglected.                                                                                             | No             |
 | `facilityId`                | The ID of the facility.                                                                                                                           | No             |
 
 ## Response

@@ -6,7 +6,7 @@ description: >-
 
 # Install NetSuite Jobs
 
-A NetSuite Reader needs to be installed befor configuring any NetSuite import Jobs in OMS. Failure to do so may lead to missing configurations, resulting in improper data communication. Follow the steps below for a seamless installation:
+A NetSuite Reader needs to be installed before configuring any NetSuite import Jobs in OMS. Failure to do so may lead to missing configurations, resulting in improper data communication. Follow the steps below for a seamless installation:
 
 ## 1. Access WebTools
 

@@ -1,0 +1,39 @@
+name: "Spellcheck (Report Only)"
+
+# Run on pushes and PRs against user-guides-pub
+on:
+  push:
+    branches: [ user-guides-pub ]
+  pull_request:
+    branches: [ user-guides-pub ]
+
+jobs:
+  codespell-check:
+    name: Run Codespell (just notify)
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1) Checkout the repository
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # 2) Set up Python 3.x
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.x"
+
+      # 3) Install Codespell
+      - name: Install Codespell
+        run: |
+          python3 -m pip install --upgrade pip
+          pip3 install codespell
+
+      # 4) Run Codespell in “report-only” mode
+      - name: Run Codespell (no auto-fix)
+        run: |
+          codespell \
+            --check-filenames \
+            --skip="*.png,*.jpg,*.exe" \
+            --ignore-words=hotwax-dictionary.txt \
+            .

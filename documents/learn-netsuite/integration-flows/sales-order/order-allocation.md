@@ -76,7 +76,7 @@ IMP_ORDER_ITM_RJCT
 If an order is rejected from the HotWax Store Fulfillment App with a valid inventory issue reason, then inventory delta's are also pushed to NetSuite. These are the valid inventory variance reasons to be pushed to NetSuite:
 
 * VAR\_STOLEN
-* VAR\_DAMANGED
+* VAR\_DAMAGED
 * VAR\_FOUND
 
 **SFTP Locations**

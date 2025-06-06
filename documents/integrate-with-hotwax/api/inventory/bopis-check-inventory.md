@@ -76,7 +76,7 @@ If both productIds and internalNames are passed, the value of productIds will be
 
 **Select Products**
 
-Products can be queried in the inventory API by both their HotWax ID or their internalName. The internal name refers to the UPC or SKU, whichever one is selected as a primary identifier during product configuration. While both fields are optional, one is requried to obtain a result.
+Products can be queried in the inventory API by both their HotWax ID or their internalName. The internal name refers to the UPC or SKU, whichever one is selected as a primary identifier during product configuration. While both fields are optional, one is required to obtain a result.
 
 **productStoreId**
 

@@ -6,7 +6,7 @@ description: >-
 
 # Sync Order IDs
 
-Before an order can be processed further, HotWax ensures sucessful creation in NetSuite by syncing order ID and order item IDs.
+Before an order can be processed further, HotWax ensures successful creation in NetSuite by syncing order ID and order item IDs.
 
 ## Create Orders in NetSuite
 

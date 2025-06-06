@@ -1,9 +1,8 @@
 ---
-description: >-
-  Troubleshoot order synchronization between HotWax Commerce and Shopify.
+description: Troubleshoot order synchronization between HotWax Commerce and Shopify.
 ---
 
-# Order sync
+# Order Sync
 
 ## Scenario: Orders Not Available in HotWax Commerce
 
@@ -38,15 +37,13 @@ If the job fails due to technical errors, use logs to find out the reason for fa
 
 5. If the problem still persists, connect with the HotWax Commerce support team for further assistance.
 
-
-
-<figure><img src="../.gitbook/assets/Order Sync (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Order%20Sync%20(1).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
 ## Scenario: Order Available in HotWax Commerce but stuck in Created state
 
-If you observe an order stuck in the `created` status for an extended period, it's advisable to examine the sales channel associated with the order. If the order originates from the web sales channel, consulting the [`Order Approval`](https://docs.hotwax.co/user-guides/v/troubleshooting/hotwax-commerce/fulfillment/orderapproval) troubleshooting document can provide valuable insights into resolving the issue.
+If you observe an order stuck in the `created` status for an extended period, it's advisable to examine the sales channel associated with the order. If the order originates from the web sales channel, consulting the [`Order Approval`](../../shopify-integration/orders/order-approval-for-fulfillment.md) troubleshooting document can provide valuable insights into resolving the issue.
 
 However, if the order originates from the POS channel, it's crucial to verify its status directly on Shopify. Occasionally, orders are marked fulfilled in Shopify after some time, but if the HotWax Commerce import job runs in the meantime, the order might be marked as fulfilled on Shopify but remain stuck in the `created` status within HotWax Commerce.
 

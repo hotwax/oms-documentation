@@ -30,7 +30,7 @@ The Cycle Count App's interface adapts for different user roles. Operations team
 
 ### Automatically Update Inventory Levels in HotWax Commerce
 
-The Cycle Count App streamlines inventory reconciliation by automatically displaying submitted cycle count results along with the variances between counted and systemic invetory levels. This allows operations teams to review variances with clarity and accuracy.
+The Cycle Count App streamlines inventory reconciliation by automatically displaying submitted cycle count results along with the variances between counted and systemic inventory levels. This allows operations teams to review variances with clarity and accuracy.
 
 Upon approval, HotWax Commerce automatically updates the inventory count of the products. Inventory levels for counts that are either rejected or flagged for recount remain unchanged in HotWax Commerce.
 
@@ -138,7 +138,7 @@ To circumvent this issue, retailers can set up variance locations in NetSuite. T
 
 When variances are tracked using variance locations in NetSuite, variances logged by HotWax Commerce are actually registered as an Inventory Transfer from the affected store location to the variance location. For example, if a store wants to damage out 5 units of a product, they’d log an inventory transfer of that product from their store to the Damaged location. This reduces the inventory from the store and increments that inventory at the Damaged location. Now retailers can use this movement to analyze which facilities are logging damaged inventory at higher rates than others and potentially track down operational and planning issues.
 
-The CSV file containing inventory item variance feed is also stored in the designated SFTP location for NetSuite as invenotry trasfer file:
+The CSV file containing inventory item variance feed is also stored in the designated SFTP location for NetSuite as invenotry transfer file:
 
 ```
 /home/{sftp-username}/netsuite/inventorytransfer/csv
@@ -168,4 +168,4 @@ The automated synchronization of inventory variances from HotWax Commerce to Net
 
 This integration not only simplifies the process of managing in-store inventory but also plays a vital role in maintaining consistency across multiple systems, ultimately improving operational efficiency and inventory accuracy in the omnichannel retail environment.
 
-**HotWax Commerce provides out-of-the-box reports to get an overview of inventory cycle counts, which you can read** [**here**](https://docs.hotwax.co/analytics/reports/inventory#completed-cycle-report)
+**HotWax Commerce provides out-of-the-box reports to get an overview of inventory cycle counts, which you can read** [**here**](https://app.gitbook.com/s/KnD8GkvnsEJKHaOGItyV/reports/inventory#completed-cycle-report)

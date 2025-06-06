@@ -39,7 +39,7 @@ Job Enum ID: `JOB_APR_ORD`\
 Service Name: `approvePendingShopifyOrders`\
 Flow : Order Approval
 
-**The `Approve Orders` job changes the status of orders from 'Created' to 'Approved,' making them eligible for brokering.** Orders must be verified and approved before fulfilment to prevent invalid or fraudulent orders. The Approved Orders job runs every 30 minutes and approves all the orders placed between the last job ran up and the current timestamp.
+**The `Approve Orders` job changes the status of orders from 'Created' to 'Approved,' making them eligible for brokering.** Orders must be verified and approved before fulfillment to prevent invalid or fraudulent orders. The Approved Orders job runs every 30 minutes and approves all the orders placed between the last job ran up and the current timestamp.
 
 **How are orders approved?**&#x20;
 

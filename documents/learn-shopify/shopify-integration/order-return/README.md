@@ -13,7 +13,7 @@ Here, HotWax Commerce does not serve as a Return Management System (RMS). HotWax
 Retailers often provide appeasements in various scenarios, such as:
 
 * Orders lost in shipment.
-* Poor fulfilment experience.
+* Poor fulfillment experience.
 * Customer dissatisfaction with the product
 
 When an appeasement is generated, HotWax Commerce downloads this information along with refund details. In appeasements, the order information contains the user User ID of the CSR member who issued it and a transaction amount, but it does not contain any returned line items.
@@ -22,4 +22,4 @@ Retailers can offer appeasement through two methods:
 
 **A. Offering Refunds Without Creating a Return:** Some retailers opt to provide a full or partial refund as compensation for post-sale satisfaction. In this case, the customer retains the product, and the order remains `Fulfilled` in Shopify and `Completed` in HotWax Commerce. When HotWax Commerce imports refunds, it imports the refunded amount to the customer and includes it in the order details for reporting to ERP systems.
 
-**B. Offering Another Product:** In this scenario, the original product is not returned by the customer. However, a new replacement order is generated with a 0 value order total in Shopify, which is downloaded in HotWax Commerce for fulfilment.
+**B. Offering Another Product:** In this scenario, the original product is not returned by the customer. However, a new replacement order is generated with a 0 value order total in Shopify, which is downloaded in HotWax Commerce for fulfillment.

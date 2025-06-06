@@ -1,0 +1,19 @@
+{
+  "MD009": true,     // Disallow trailing spaces at the end of lines
+  "MD012": true,     // Disallow multiple consecutive blank lines
+  "MD018": true,     // Headings must have a space after the # (e.g., "# Heading")
+  "MD019": true,     // Disallow multiple spaces after the # in headings
+  "MD022": true,     // Headings must be surrounded by blank lines above and below
+  "MD023": true,     // Headings must start at the beginning of the line (no leading spaces)
+  "MD025": true,     // Disallow multiple top-level headings (only one "# Heading" per file)
+  "MD026": true,     // Disallow punctuation at the end of headings (e.g., "Heading?" or "Heading:")
+  "MD028": true,     // Disallow blank lines inside list items
+  "MD030": true,     // Enforce consistent spacing after list markers (e.g., "- item", not "-item")
+  "MD031": true,     // Fenced code blocks must be surrounded by blank lines before and after
+  "MD032": true,     // Lists must be surrounded by blank lines above and below
+  "MD034": true,     // Disallow bare URLs — require using [text](url) format
+  "MD037": true,     // Disallow spaces inside emphasis markers (e.g., "* bold *" is invalid — use "*bold*")
+  "MD042": true,     // Disallow empty links (e.g., "[](url)" or "[text]()")
+  "MD045": true,     // Require alt text for all images (accessibility best practice)
+  "MD051": true      // Ensure internal link fragments (e.g., [Link](#heading)) match actual headings
+}

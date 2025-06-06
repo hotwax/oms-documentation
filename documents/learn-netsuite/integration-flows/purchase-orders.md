@@ -1,13 +1,12 @@
 ---
-description: >-
-  Learn about purchase order sync from NetSuite to HotWax Commerce.
+description: Learn about purchase order sync from NetSuite to HotWax Commerce.
 ---
 
 # Purchase Orders
 
 Accurate inventory availability in physical stores is important for omnichannel retail. For retailers using NetSuite as their ERP and HotWax Commerce as their Order Management System, integration is key to synchronizing Purchase Orders (POs) from NetSuite with HotWax Commerce. This synchronization enables store associates to receive and manage inventory using HotWax Commerce's user-friendly in-store inventory management tools.
 
-When a PO is raised in NetSuite, it syncs with HotWax Commerce, allowing store associates to receive inventory through the [Receiving App](https://docs.hotwax.co/documents/store-operations/inventory/receiving) provided by HotWax Commerce.
+When a PO is raised in NetSuite, it syncs with HotWax Commerce, allowing store associates to receive inventory through the [Receiving App](https://app.gitbook.com/s/y0w9O4LtMBdjROn7iZ1X/inventory/receiving) provided by HotWax Commerce.
 
 ## Key Objectives
 
@@ -78,7 +77,9 @@ Once POs are synchronized, store associates use the HotWax Commerce's Receiving 
 
 After store associates receive POs from app, Item Receipt records are created in HotWax Commerce. These records update inventory counts, making the newly received stock available for sale on eCommerce platforms.
 
-{% hint style="info" %}HotWax's Receiving App helps store associates manage in-store receiving discrepancies. The app allows over receiving, under receiving as well as provides an option to receive unexpected items in a PO. The operations team can also track and manage discrepancies using the reports available on HotWax’s BI Reports & Analytics platform.{% endhint %}
+{% hint style="info" %}
+HotWax's Receiving App helps store associates manage in-store receiving discrepancies. The app allows over receiving, under receiving as well as provides an option to receive unexpected items in a PO. The operations team can also track and manage discrepancies using the reports available on HotWax’s BI Reports & Analytics platform.
+{% endhint %}
 
 ### Export Item Receipts from HotWax Commerce
 
