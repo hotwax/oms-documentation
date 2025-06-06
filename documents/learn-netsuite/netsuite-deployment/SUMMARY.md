@@ -7,7 +7,7 @@
 * [Setup SDF Bundle](sdf-bundle/README.md)
   * [Install SDF](sdf-bundle/install-sdf.md)
   * [Setup SFTP](sdf-bundle/setup-sftp.md)
-  * [Date Time Format](sdf-bundle/verify-date-time-format.md)
+  * [Date Time Format](sdf-bundle/verify-datetime-format.md)
 
 ## Prerequisites
 
@@ -27,7 +27,7 @@
 * [Products and Inventory](flows/products-and-inventory/README.md)
   * [Product IDs](flows/productInventorySync/importProductId.md)
   * [Inventory Reset](flows/productInventorySync/inventoryReset.md)
-* [Orders](flows/orderSync/README.md)
+* [Orders](../synchronization-flows/order-sync/README.md)
   * [POS Cash Sales](flows/orderSync/posCashSales.md)
   * [Sync Customer](flows/orderSync/syncCustomer.md)
   * [Sync Order IDs](flows/orderSync/syncOrderIds.md)
