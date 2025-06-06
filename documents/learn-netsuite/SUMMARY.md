@@ -74,7 +74,7 @@
 * [Integration Mappings](synchronization-flows/integration-mappings/README.md)
   * [Payment Methods](synchronization-flows/integration-mappings/payment-methods.md)
   * [Discount Codes](synchronization-flows/integration-mappings/discount-codes.md)
-  * [Price Levels](synchronization-flows/integration-mappings/price-levels.md)
+  * [Price Levels](./synchronization-flows/integration-mappings/price-levels.md)
   * [Shipping Methods](synchronization-flows/integration-mappings/shipping-methods.md)
   * [Facility Group](synchronization-flows/integration-mappings/facilities.md)
 
