@@ -21,4 +21,4 @@ Once the product ID is identified, HotWax associates it with the right product i
 
 ### Kit Order Brokering
 
-After identifying the product type as `MARKETING_PKG_PICK`, HotWax Commerce directly [brokers](https://app.gitbook.com/s/GNcmGkoNRfptyho21A56/orders/order-routing) the entire kit order to the facility where the inventory is available rather than brokering each component separately.
+After identifying the product type as `MARKETING_PKG_PICK`, HotWax Commerce directly [brokers](/documents/retail-operations/orders/order-routing) the entire kit order to the facility where the inventory is available rather than brokering each component separately.
