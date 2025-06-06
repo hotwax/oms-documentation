@@ -99,7 +99,7 @@ HC_MR_ExportLoopReturnProcess.js
 
 #### 7. Import Item Receipt Records
 
-A job in HotWax Commerce Integration Platform runs every 5 minutes to check for new CSV files received at the SFTP location. If any new files are identified, the job extracts the Loop return IDs from the file and subsequently triggers the [“Process Return” API](https://docs.loopreturns.com/api-reference/latest/return-actions/process-return).
+A job in HotWax Commerce Integration Platform runs every 5 minutes to check for new CSV files received at the SFTP location. If any new files are identified, the job extracts the Loop return IDs from the file and subsequently triggers the [“Process Return” API](https://api.loopreturns.com/api/v1/warehouse/return/%7Breturn_id%7D/process).
 
 **SFTP Locations**
 
