@@ -38,7 +38,7 @@
   * [Manage Facility Staff](administration/facilities/manage-facility-staff.md)
   * [Manage Locations](administration/facilities/manage-locations.md)
   * [Disabling Facilities](administration/facilities/disabling-facilities.md)
-  * [Manage Parkings](administration/facilities/manage-parkings.md)
+  * [Manage Parkings](./administration/facilities/manage-parkings.md)
   * [Manage Groups](administration/facilities/manage-groups.md)
 * [Delete Customers](administration/delete-customers.md)
 * [SOLR Indexing](administration/solr-indexing.md)
