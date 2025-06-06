@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Launchpad](../launchpad/README.md)
+* [Launchpad](../README.md)
 
 ## Administration
 
