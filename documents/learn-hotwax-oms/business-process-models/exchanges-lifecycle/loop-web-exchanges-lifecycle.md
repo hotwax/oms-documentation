@@ -63,7 +63,7 @@ A dedicated `Import Orders` job in HotWax Commerce downloads web orders from Sho
 
 An important aspect to note is that for an exchange order, Loop saves details of the original order in the extended fields in Shopify. Therefore, when downloading exchange orders from Shopify, HotWax Commerce also retrieves these details of the original order and saves them in the communication event.
 
-Learn more about how [HotWax Commerce fulfills web orders](https://app.gitbook.com/s/q42f0puI9OYah51t08oQ/shopify-integration/order-fulfillment)
+Learn more about how [HotWax Commerce fulfills web orders](/documents/learn-shopify/shopify-integration/order-fulfillment/README.md)
 
 ## 8. Exchange Orders Synchronized to NetSuite
 
