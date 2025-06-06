@@ -301,4 +301,4 @@ By leveraging HotWax Commerce, `Order Routing App`retailers can create highly cu
 
 ### Next Steps
 
-In the following sections, we’ll cover a range of business [use cases](scenarios.md) that the HotWax Commerce `Order Routing` App can help achieve, highlighting its adaptability to various inventory and order fulfillment needs.
+In the following sections, we’ll cover a range of business [use cases](./use-cases.md) that the HotWax Commerce `Order Routing` App can help achieve, highlighting its adaptability to various inventory and order fulfillment needs.

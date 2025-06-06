@@ -58,23 +58,23 @@
 
 ## Synchronization Flows
 
-* [Auditing](synchronization-flows/integration-audit/README.md)
+* [Auditing](./synchronization-flows/integration-audit/README.md)
 * [Products and Inventory](synchronization-flows/products-and-inventory/README.md)
   * [Product IDs](synchronization-flows/product-inventory-sync/import-productId.md)
   * [Inventory Reset](synchronization-flows/product-inventory-sync/inventory-reset.md)
 * [Orders](synchronization-flows/order-sync/README.md)
   * [POS Cash Sales](synchronization-flows/order-sync/pos-cash-sales.md)
   * [Sync Customer](synchronization-flows/order-sync/sync-customer.md)
-  * [Sync Order IDs](synchronization-flows/order-sync/sync-orderIds.md)
+  * [Sync Order IDs](./synchronization-flows/order-sync/sync-orderIds.md)
   * [Approve Orders](synchronization-flows/order-sync/approve-orders.md)
   * [Reports](synchronization-flows/order-sync/reports.md)
-* [Allocation & Fulfillment](synchronization-flows/allocation-fulfillment-sync/README.md)
+* [Allocation & Fulfillment](./synchronization-flows/allocation-fulfillment-sync/README.md)
 * [Transfer Orders](synchronization-flows/transfer-order-sync/README.md)
 * [Purchase Orders](synchronization-flows/purchase-order-sync/README.md)
-* [Integration Mappings](synchronization-flows/integration-mappings/README.md)
+* [Integration Mappings](./synchronization-flows/integration-mappings/README.md)
   * [Payment Methods](synchronization-flows/integration-mappings/payment-methods.md)
   * [Discount Codes](synchronization-flows/integration-mappings/discount-codes.md)
-  * [Price Levels](synchronization-flows/integration-mappings/price-levels.md)
+  * [Price Levels](./synchronization-flows/integration-mappings/price-levels.md)
   * [Shipping Methods](synchronization-flows/integration-mappings/shipping-methods.md)
   * [Facility Group](synchronization-flows/integration-mappings/facilities.md)
 

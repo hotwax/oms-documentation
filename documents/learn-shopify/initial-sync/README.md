@@ -74,9 +74,9 @@ Follow these steps to schedule the job:
 6. In the `scheduleNow` field, insert `N` to ensure that the job runs instantaneously.
 7. Save the changes to schedule and execute the job.
 
-![Associate product sub catalog](https://github.com/user-attachments/assets/3e7b22ed-97d4-4577-844f-373dfad1f35f)
+![Associate product sub catalog](/documents/retail-operations/.gitbook/assets/product-association-subcatalog.png)
 
-[Click here](https://app.gitbook.com/s/GNcmGkoNRfptyho21A56/workflow/job-workflows/products) to read about regular product association jobs.
+[Click here](/documents/retail-operations/workflow/job-workflows/products) to read about regular product association jobs.
 
 ### Verifying Associations
 

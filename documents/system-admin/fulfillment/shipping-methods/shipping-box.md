@@ -54,19 +54,3 @@ These configured boxes are now ready for selection by packers during the order f
 {% embed url="https://youtu.be/dFkeW5U1F3I" %}
 Add SHipping Box to Carrier
 {% endembed %}
-
-## Adding Shipment Box to Order During Fulfillment
-
-Store associates can select appropriate boxes through the following steps:
-
-* Navigate to the specific order details within the `In Progress` tab of the `Fulfillment App.`
-* Within the order details section, locate and click on the `Add Boxes` option.
-* Add the required number of boxes corresponding to the order items, ensuring adequate packaging space without excess boxes. Store associates can choose to pack multiple order items into one box, reducing shipping costs and environmental impact.
-* Upon adding boxes, store associates can further specify box types for individual order items. Click on the `select box` option against the order item and navigate through the dropdown menu to select the appropriate option corresponding to each item's size and packaging requirements.
-* After appropriately packing all items and selecting box types click `Pack` to update the shipping carrier for shipping label generation with the least shipping charges for the selected boxes.
-
-By diligently specifying both the total box quantity for the entire order and the appropriate box types for individual order items, store associates ensure accurate shipping labels, cost-effective packaging, and efficient utilization of available space, ultimately reducing shipping expenses for retailers.
-
-{% embed url="https://youtu.be/385HSXa8Pdc" %}
-Add Shipment Box During Fulfillment
-{% endembed %}

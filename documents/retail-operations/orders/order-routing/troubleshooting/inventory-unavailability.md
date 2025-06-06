@@ -12,7 +12,7 @@ Orders won't be brokered if the inventory is not available or if the inventory i
 
 ### Resolution Steps
 
-1. Click on the `SKU` from the `sales order page` to view the product inventory details on the [`Product Inventory View` page.](../../brokering/inventory-management/product-inventory-view.md)
+1. Click on the `SKU` from the `sales order page` to view the product inventory details on the [`Product Inventory View` page.](/documents/retail-operations/inventory/inventory-management/product-inventory-view.md)
 2. Check the inventory availability across the facilities. Use the `facility` filter to check the inventory in individual facilities.
 3. Verify if the inventory is available for that product. If the inventory is not available or is less than the brokering threshold, the order will move to the unfillable parking.
 
