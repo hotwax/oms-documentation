@@ -13,6 +13,6 @@
 * [Send Sale Order](Flows/SendSaleOrder/SendSaleOrder.md)
   * [Technical Workflow](./flows/sendsale-order/technical-workflow.md)
 
-* [Returns](Flows/Returns/return.md)
+* [Returns](./flows/returns/README.md)
 
   
