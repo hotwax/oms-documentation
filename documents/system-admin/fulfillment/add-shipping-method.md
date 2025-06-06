@@ -57,7 +57,7 @@ C. **Mapping Shipment Method between Shopify and HotWax**
 | Shipment method*           | Name of shipping method in HotWax.                               | Ground                         |
 | Shopify Shipping Method*   | Name of the shipping method in Shopify.                          | Ground Shipping                |
 
-For more detailed information [read here](../../learn-shopify/shopify-setup/SetupMappings.md).
+For more detailed information [read here](../../learn-shopify/setup-shopify/integration-mappings/README.md).
 
 D. **Mapping between HotWax and NetSuite**
 
