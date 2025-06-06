@@ -53,7 +53,7 @@ HotWax Commerce relies on two main jobs for inventory synchronization to Shopify
 
 1. **Ensure Jobs are Scheduled**
    * In HotWax Commerce, navigate to the `Inventory` page in the `Job Manager App`
-   * Verify that [`Update Recent Inventory Changes`](../../job-workflows/inventory.md) and [`Hard Sync Job`](https://docs.hotwax.co/documents/v/retail-operations/workflow/job-workflows/inventory) are scheduled as per your preferred frequency.
+   * Verify that [`Update Recent Inventory Changes`](../../workflow/job-workflows/inventory.md) and [`Hard Sync Job`](https://docs.hotwax.co/documents/v/retail-operations/workflow/job-workflows/inventory) are scheduled as per your preferred frequency.
 2. **Check Job Status**
    * Look into the job pipeline to ensure these jobs are not marked as failed.
    * Re-run the jobs if necessary.
