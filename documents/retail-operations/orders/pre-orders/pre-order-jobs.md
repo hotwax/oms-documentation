@@ -38,7 +38,7 @@ Moreover, this job also manages the removal of pre-sell items from the pre-order
 * Upon physical receipt of inventory at the fulfillment center.
 * When the Purchase Order arrival date (promised fulfillment date) has passed.
 
-For more comprehensive details, read our [shopify integration page.](../../../learn-shopify/integration/how-are-pre-orderable-and-backorderable-products-listed-or-delisted-on-shopify/presell-catalog-management.md)
+For more comprehensive details, read our [shopify integration page.](/documents/learn-shopify/shopify-integration/preorders-and-backorders/presell-catalog-management.md)
 
 You can schedule the job by accessing the `Job Manager App` > `Pre-order page` and selecting the `checkbox` next to the `Auto refresh pre-sell catalog` job name.
 
