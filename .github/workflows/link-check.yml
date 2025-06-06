@@ -15,10 +15,9 @@ jobs:
     steps:
       - name: 📥 Checkout code
         uses: actions/checkout@v3
-
-      - name: 🔍 Run Link Checker
-        uses: lycheeverse/lychee-action@v1.10.0
-        with:
-          args: --verbose --no-progress './**/*.md'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: 🛠 Install lychee
+        run: cargo install lychee
+      
+      - name: 🔍 Run lychee CLI
+        run: lychee --verbose --no-progress './**/*.md'
