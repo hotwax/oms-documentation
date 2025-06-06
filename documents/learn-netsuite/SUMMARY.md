@@ -58,7 +58,7 @@
 
 ## Synchronization Flows
 
-* [Auditing](synchronization-flows/integration-audit/README.md)
+* [Auditing](./synchronization-flows/integration-audit/README.md)
 * [Products and Inventory](synchronization-flows/products-and-inventory/README.md)
   * [Product IDs](synchronization-flows/product-inventory-sync/import-productId.md)
   * [Inventory Reset](synchronization-flows/product-inventory-sync/inventory-reset.md)
