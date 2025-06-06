@@ -68,7 +68,7 @@
   * [Sync Order IDs](synchronization-flows/order-sync/sync-orderIds.md)
   * [Approve Orders](synchronization-flows/order-sync/approve-orders.md)
   * [Reports](synchronization-flows/order-sync/reports.md)
-* [Allocation & Fulfillment](synchronization-flows/allocation-fulfillment-sync/README.md)
+* [Allocation & Fulfillment](./synchronization-flows/allocation-fulfillment-sync/README.md)
 * [Transfer Orders](synchronization-flows/transfer-order-sync/README.md)
 * [Purchase Orders](synchronization-flows/purchase-order-sync/README.md)
 * [Integration Mappings](synchronization-flows/integration-mappings/README.md)
