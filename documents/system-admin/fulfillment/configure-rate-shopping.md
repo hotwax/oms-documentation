@@ -33,7 +33,7 @@ Once shipping methods are created, retailers have to also map Shopify Shop carri
 
 ### Add Carrier Facility
 
-In HotWax Commerce, the ability to add shipping carriers to facilities is essential for order fulfillment. Once a shipment gateway is set, adding carriers to facilities enables shipping label generation specifically for those carriers associated with the selected facility. To learn more about how to add a carrier party to the facility, read our [user manual](ShippingGateways.md#add-carrier-facility) 
+In HotWax Commerce, the ability to add shipping carriers to facilities is essential for order fulfillment. Once a shipment gateway is set, adding carriers to facilities enables shipping label generation specifically for those carriers associated with the selected facility. To learn more about how to add a carrier party to the facility, read our [user manual](./shipping-methods/shipping-gateway.md) 
 
 Once the shipment method is saved and mapped, HotWax Commerce runs a carrier-specific API call to generate a shipping label based on the shipment method selected by the customer during checkout. Since all shipment methods are mapped, HotWax Commerce directly generates the shipping label based on the shipment method, shipping distance, and the box size from the carrier.
 
