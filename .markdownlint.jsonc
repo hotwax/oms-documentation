@@ -1,6 +1,7 @@
 {
   "MD009": true,     // Disallow trailing spaces at the end of lines
   "MD012": true,     // Disallow multiple consecutive blank lines
+  "MD013": false,    // Disable max line length check entirely
   "MD018": true,     // Headings must have a space after the # (e.g., "# Heading")
   "MD019": true,     // Disallow multiple spaces after the # in headings
   "MD022": true,     // Headings must be surrounded by blank lines above and below

@@ -18,8 +18,8 @@ Subsequently, the primary catalog is linked to the child stores using the follow
 
 **Create Product in Shopify Store:**
 
-* Go to your store on \`Shopify\`\`
-* Create new products on Shopify.
+* Go to your store on Shopify
+* Create new products on Shopify
 
 **Automatic Sync with HotWax Commerce:**
 
