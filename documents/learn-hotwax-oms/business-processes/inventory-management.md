@@ -48,7 +48,7 @@ If an ERP/WMS other than NetSuite tracks which items are in which package, those
 
 In the case of NetSuite ERP, we recommend creating one package for each shipment/item fulfillment. In the event where retailers need to ship three packages, they should create three shipments/item fulfillments, with each shipment having one package. This way, retailers can track and receive each package independently. If tracking individual packages is not a priority for retailers, multiple packages can be received as one shipment in HotWax Commerce.
 
-Learn more about [transfer orders](https://app.gitbook.com/s/y0w9O4LtMBdjROn7iZ1X/inventory/transfer-order-management)
+Learn more about [transfer orders](/documents/store-operations/transfer-order/transfer-order-management.md)
 
 <figure><img src="../.gitbook/assets/ReceivingTransferOrder.png" alt=""><figcaption><p>Receiving inbound shipments using HotWax Receiving App</p></figcaption></figure>
 
@@ -64,7 +64,7 @@ There can be scenarios where the items in a shipment are more or fewer than expe
 
 **Under-receiving:** If a shipment contains fewer items than ordered, the app allows the receiving of only the items that arrived. For example, if a shipment was expected to contain 100 units but arrives with only 90 units, the app will record the received 90 units, and the missing 10 units can be addressed separately.
 
-Learn more about additional scenarios supported in the [Receiving App](https://app.gitbook.com/s/vRjh4vkGRczeQJMpDxzL/administration/introduction/receiving-app)
+Learn more about additional scenarios supported in the [Receiving App](/documents/store-operations/receiving/README.md)
 
 ### Receiving Purchase Orders in Stores
 
@@ -93,7 +93,7 @@ HotWax Commerce provides a dedicated Cycle Count App for retailers that helps th
 Cycle counts are performed for multiple reasons. Many retailers have the SOP for scheduling cycle counts regularly every week or month. Counts are also commonly initiated after high-volume periods, such as Black Friday, to reconcile actual inventory with recorded levels. Stores reporting higher order rejections may be assigned counts to investigate potential inventory discrepancies.
 
 Operations team leverages the Cycle Count App to create cycle counts. Once logged in, they access the admin view, where they can enter product details, add SKUs, and assign the count to a specific location.\
-The app also provides a [bulk upload](https://app.gitbook.com/s/GNcmGkoNRfptyho21A56/inventory/cycle-count/bulk-upload-cycle-counts) feature to create and assign multiple cycle counts for different products across locations.
+The app also provides a [bulk upload](/documents/retail-operations/inventory/cycle-count/bulk-upload-cycle-counts.md) feature to create and assign multiple cycle counts for different products across locations.
 
 Once the cycle count is created and assigned, the store associates can start performing cycle count.
 
@@ -120,6 +120,6 @@ If a -5 variance is reported, inventory is decreased by 5 units
 
 This automated adjustment process helps maintain accurate system inventory and reduces the need for manual reconciliation.
 
-Learn more about [creating cycle count](https://app.gitbook.com/s/GNcmGkoNRfptyho21A56/inventory/cycle-count/draft-counts) and [performing cycle count](https://app.gitbook.com/s/y0w9O4LtMBdjROn7iZ1X/inventory/directed-cycle-count).
+Learn more about [creating cycle count](/documents/retail-operations/inventory/cycle-count/draft-counts.md) and [performing cycle count](/documents/store-operations/inventory-count/directed-cycle-count.md).
 
 By following these practices and using HotWax Commerce's intuitive apps, retailers can maintain high levels of inventory accuracy and streamline their inventory management processes.
