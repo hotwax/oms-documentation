@@ -14,7 +14,7 @@ With the `Facilities App` in HotWax Commerce, retail brands can create distinct 
 
 1. **Access Facility Group Page:**
    * Log in to the `Facilities App` from the Launchpad.
-   * Navigate to the `Facility Group` [page](facilities/manage-facility-groups.md) within the `Facilities App`.
+   * Navigate to the `Facility Group` [page](../administration/facilities/manage-groups.md) within the `Facilities App`.
 2. **Create New Group:**
    * Scroll to the bottom of the page and click on the `Create group` button to create a new group for the sales channel you want to set up inventory.
 3. **Enter Group Details:**
