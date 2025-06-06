@@ -19,7 +19,7 @@ Approved orders are eligible for brokering in HotWax Commerce. The order routing
 
 Once an order item is allocated, a fulfillment request is sent to the assigned fulfillment location. If this location happens to be a warehouse, the allocation details are synced to the WMS or ERP systems, such as NetSuite, used for warehouse fulfillment.
 
-If an order item is allocated to a store, they are automatically reflected in the HotWax Commerce [Store Fulfillment App](https://app.gitbook.com/s/y0w9O4LtMBdjROn7iZ1X/orders/fulfillment/ship-orders).
+If an order item is allocated to a store, they are automatically reflected in the HotWax Commerce [Store Fulfillment App](/documents/store-operations/orders/fulfillment/ship-orders).
 
 {% hint style="info" %}
 HotWax Commerce provides a Store Fulfillment Suite comprising user-friendly apps such as the Store Fulfillment App and Picking App to quickly and accurately fulfill orders. These apps are specifically designed to facilitate easy adoption and minimize the learning curve for store personnel.
@@ -61,7 +61,7 @@ HotWax Commerce provides two options using which pickers can start the picking p
 
 These features maximize picker efficiency and minimize errors during the picking process.
 
-Learn more about [Picking App](https://app.gitbook.com/s/y0w9O4LtMBdjROn7iZ1X/orders/fulfillment/picking-app)
+Learn more about [Picking App](/documents/store-operations/fulfillment/picking-app)
 
 ### Replace Pickers
 
@@ -71,7 +71,7 @@ Store managers can replace an assigned picker with a new one for various reasons
 As pickers pick order items, HotWax Commerce rate shops to determine the most cost-effective shipping method offered by the carrier that also meets the SLA. Once the shipping method has been selected, HotWax Commerce fetches shipping labels in bulk with tracking codes from the carrier in advance to reduce the packing time.
 {% endhint %}
 
-Learn more about [Picking](https://app.gitbook.com/s/y0w9O4LtMBdjROn7iZ1X/orders/fulfillment/ship-orders#pick-orders)
+Learn more about [Picking](/documents/store-operations/fulfillment/ship-orders#pick-orders)
 
 ## Reject Fulfillment Request
 
@@ -100,7 +100,7 @@ Let’s see how the out of the box rejection reasons offered by HotWax Commerce 
 | DAMAGE           | Decrease by rejected quantity | Unchanged                     | Product remains in stock but cannot be sold due to damage     |
 | WORN DISPLAY     | Decrease by rejected quantity | Unchanged                     | Product remains in stock but cannot be sold due to being worn |
 
-Learn more about [Rejections](https://app.gitbook.com/s/y0w9O4LtMBdjROn7iZ1X/orders/fulfillment/rejection)
+Learn more about [Rejections](/documents/store-operations/fulfillment/rejection)
 
 ## Rerouted Requests
 
@@ -142,4 +142,4 @@ In specific circumstances, store managers may opt to stop order fulfillment enti
 
 In specific circumstances, store managers may need to temporarily remove their store's inventory from online selling. This could be due to various reasons such as low stock levels, prioritizing in-store customer sales, or other internal considerations. In such cases, store managers have the option to directly disable online selling for their store. This flexibility allows managers to focus on fulfilling in-store demand while conserving inventory. Additionally, they can easily re-enable online selling in the future when the situation aligns with their business needs.
 
-Learn more about [additional scenarios supported in Store Fulfillment App](https://app.gitbook.com/s/y0w9O4LtMBdjROn7iZ1X/orders/fulfillment/fulfillment-setting-page)
+Learn more about [additional scenarios supported in Store Fulfillment App](/documents/store-operations/fulfillment/fulfillment-setting-page)
