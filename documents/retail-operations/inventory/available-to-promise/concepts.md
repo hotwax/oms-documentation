@@ -61,7 +61,7 @@ Suppose a retailer sells inventory across different channels, such as different 
 
 ### Components of an Inventory Channel
 
-In HotWax Commerce, when you create an inventory channel, internally it creates two componenets:
+In HotWax Commerce, when you create an inventory channel, internally it creates two components:
 
 1. **Facility Group**: This is the Channel facility Group that we previously discussed. This channel defines the inventory of which facilities will be pushed to which inventory channel.
 2. **Configuration Facility**: This virtual facility enables network-level Product ATP (Available-to-Promise) configurations, including setting thresholds and suppressing products from store pickup and shipping.

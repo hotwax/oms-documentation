@@ -20,7 +20,7 @@ In the context of NetSuite, this monitoring system becomes particularly benefici
 
 **User:** Operations team
 
-| Field                     | Detials                                                           |
+| Field                     | Details                                                           |
 | ------------------------- | ----------------------------------------------------------------- |
 | Shipment\_Id              | The ID of the shipment in external system                         |
 | HotWax\_Shipment\_Id      | The ID of the shipment in HotWax                                  |
@@ -31,6 +31,6 @@ In the context of NetSuite, this monitoring system becomes particularly benefici
 | Destination\_Facility\_Id | The ID of the destination facility where the shipment is destined |
 | Destination\_Facility     | The name of the facility where the shipment is destined           |
 | Expected                  | Quantity expected to be shipped                                   |
-| Recieved                  | Quantity actually received                                        |
+| Received                  | Quantity actually received                                        |
 | Difference                | Variance between expected and actual quantities                   |
 | Status                    | Current status of the shipment                                    |

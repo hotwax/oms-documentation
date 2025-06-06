@@ -1,0 +1,21 @@
+name: 📘 Docs Quality Checks
+
+on:
+  push:
+    branches: [user-guides-pub]
+  pull_request:
+    branches: [user-guides-pub]
+  workflow_dispatch:
+
+jobs:
+  lint-docs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📥 Checkout repo
+        uses: actions/checkout@v3
+
+      ### 🧹 Markdownlint
+      - name: 🧹 Run markdownlint
+        uses: DavidAnson/markdownlint-cli2-action@v13
+        with:
+          globs: '**/*.md'

@@ -68,7 +68,7 @@ Follow the same upload steps as before, but this time select the HotWax file fro
 
 ## Audit Order Data
 
-Now that data from both sources has been uploaded, the audit sheet will automatically generate a list of discrepencies.
+Now that data from both sources has been uploaded, the audit sheet will automatically generate a list of discrepancies.
 
 Here are the most important sections to validate:
 
@@ -78,4 +78,4 @@ This section specifically shows orders that should have synced to NetSuite by no
 
 ### Cancelled in HotWax not in NetSuite
 
-Item cancelation in NetSuite happens through various flows from the OMS. Check this view to verify if cancelations in HotWax have synced over to NetSuite as "Closed" items.
+Item cancellation in NetSuite happens through various flows from the OMS. Check this view to verify if cancellations in HotWax have synced over to NetSuite as "Closed" items.

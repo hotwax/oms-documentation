@@ -35,7 +35,7 @@ Following automatic brokering or manual release to a store, CSRs also have an op
 
 ## Pick Order Items
 
-The Store Fulfillment App displays orders in a "First In, First Out" (FIFO) sequence, prioritizing orders based on their placement. The app also offers the flexibility to filter orders according to various criterias, including shipping method (such as same-day, next-day, or standard) and customer loyalty status. This feature enables store managers to efficiently manage and fulfill orders based on preferred criteria, ensuring alignment with brand's fulfillment strategies.
+The Store Fulfillment App displays orders in a "First In, First Out" (FIFO) sequence, prioritizing orders based on their placement. The app also offers the flexibility to filter orders according to various criteria, including shipping method (such as same-day, next-day, or standard) and customer loyalty status. This feature enables store managers to efficiently manage and fulfill orders based on preferred criteria, ensuring alignment with brand's fulfillment strategies.
 
 For example, some customers may have a loyalty status of "Gold Member," indicating that they are part of a premium loyalty program with exclusive benefits such as priority order processing, or dedicated customer support. By filtering orders based on loyalty status, Store Fulfillment App can help prioritize orders from Gold Members, ensuring exceptional service and fostering customer loyalty.
 

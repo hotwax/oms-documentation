@@ -1,0 +1,23 @@
+name: 🔗 Check for Broken Links
+
+on:
+  push:
+    branches: [user-guides-pub]
+  pull_request:
+    branches: [user-guides-pub]
+  schedule:
+    - cron: '30 3 * * 1-5'  # 9 AM IST, Monday to Friday
+  workflow_dispatch:
+
+jobs:
+  linkChecker:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📥 Checkout code
+        uses: actions/checkout@v3
+      
+      - name: 🛠 Install lychee
+        run: cargo install lychee
+      
+      - name: 🔍 Run lychee CLI
+        run: lychee --verbose --no-progress './**/*.md'

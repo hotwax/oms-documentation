@@ -1,8 +1,6 @@
 ---
-description: >-
-  Learn how gift card is synchronized between NetSuite and HotWax Commerce.
+description: Learn how gift card is synchronized between NetSuite and HotWax Commerce.
 ---
-
 
 # Gift Card Orders
 
@@ -10,7 +8,7 @@ Gift cards are stored-value cards that carry a value determined at the time of t
 
 Retailers set up both physical and digital gift cards in their eCommerce platform. Both physical and digital gift cards have a unique serial number or GC number that customers need to enter to redeem the card's value.
 
-Learn more about [gift cards set up in eCommerce](https://docs.hotwax.co/documents/v/learn-shopify/products/how-are-products-downloaded-from-shopify-to-hotwax-commerce/giftcardsdownload)
+Learn more about [gift cards set up in eCommerce](https://app.gitbook.com/s/q42f0puI9OYah51t08oQ/shopify-integration/products/download-gift-cards)
 
 **Physical Gift Cards:**
 
@@ -22,7 +20,7 @@ Digital gift cards, also known as e-gift cards, are virtual equivalents of physi
 
 A scheduled job in HotWax Commerce downloads both physical and digital gift card orders from the eCommerce platform like Shopify.
 
-Learn more about [gift card orders synchronization to HotWax Commerce](https://docs.hotwax.co/documents/v/learn-shopify/orders/how-are-orders-downloaded-from-shopify-to-hotwax-commerce/giftcardordersdownload)
+Learn more about[ gift card orders synchronization to HotWax Commerce](https://app.gitbook.com/s/q42f0puI9OYah51t08oQ/shopify-integration/orders/giftcards-download)
 
 ## Workflow
 
@@ -40,7 +38,7 @@ Approved physical gift card order items are brokered in HotWax Commerce, upon al
 In our integration, physical gift card orders are handled similarly to regular orders. Therefore, the SFTP location, SuiteScripts, as well as the jobs within the HotWax Commerce Integration Platform and OMS, remains the same.
 {% endhint %}
 
-Learn more about [sales order synchronization between NetSuite and HotWax Commerce](OrderApproval.md)
+Learn more about [sales order synchronization between NetSuite and HotWax Commerce](order-approval.md)
 
 ### Fulfillment of Gift Cards in NetSuite
 
@@ -62,7 +60,7 @@ A scheduled job in HotWax Commerce marks physical gift card orders that are fulf
 It’s crucial to note that the gift cards are not functional until they are activated in the eCommerce platform. The activation process in eCommerce is a necessary step to ensure that the gift cards are redeemable and fully functional upon receipt by customers.
 {% endhint %}
 
-Learn more about [synchronization of fulfillment data](Fulfillment.md)
+Learn more about [synchronization of fulfillment data](fulfillment.md)
 
 ### Activation of Gift Cards
 
@@ -100,7 +98,7 @@ poll_SystemMessageFileSftp_GiftCardActivationFeed
 
 **Shopify API**
 
-[Bulk data import GraphlQL API](https://shopify.dev/docs/api/usage/bulk-operations/imports) used along with [gift card create mutation](https://shopify.dev/docs/api/admin-graphql/2024-04/mutations/giftcardcreate)
+[Bulk data import GraphQL API](https://shopify.dev/docs/api/usage/bulk-operations/imports) used along with [gift card create mutation](https://shopify.dev/docs/api/admin-graphql/2024-04/mutations/giftcardcreate)
 
 <figure><img src="../../.gitbook/assets/21.png" alt=""><figcaption><p>Physical Gift Card Activation</p></figcaption></figure>
 

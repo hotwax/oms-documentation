@@ -79,7 +79,7 @@ Holds all fulfillment jobs.
 
 1. **Shipping:** Automatically ship orders that are packed and have a tracking number if required.
 2. **History:** Create or update order fulfillment history records from FTP.
-3. **Auto cancellations:** Unfulfilled orders that pass their auto cancelation date will be canceled automatically in HotWax Commerce. They will also be canceled in Shopify if upload for canceled orders is enabled.
+3. **Auto cancellations:** Unfulfilled orders that pass their auto cancellation date will be canceled automatically in HotWax Commerce. They will also be canceled in Shopify if upload for canceled orders is enabled.
 
 </details>
 

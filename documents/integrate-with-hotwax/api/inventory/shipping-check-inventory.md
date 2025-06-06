@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Shipping Ckeck Inventory API allows to retrive the inventory details for the products at specific locations. By calling the `/checkShippingInventory` endpoint of our next generation OMS with the POST/GET method, you can check the availability of the inventory available for shipping.
+The Shipping Check Inventory API allows to retrieve the inventory details for the products at specific locations. By calling the `/checkShippingInventory` endpoint of our next generation OMS with the POST/GET method, you can check the availability of the inventory available for shipping.
 
 ## Request
 

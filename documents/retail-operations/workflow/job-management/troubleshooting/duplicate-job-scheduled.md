@@ -47,4 +47,4 @@ By following these detailed steps, you can effectively troubleshoot and ensure a
 
 
 
-<figure><img src="../../../.gitbook/assets/dupicate job (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/duplicate job (1).png" alt=""><figcaption></figcaption></figure>

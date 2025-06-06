@@ -1,6 +1,6 @@
 # Order Indexing Discrepancy
 
-This troubleshooting guide aims to address issues where orders remain stuck in the fulfilment app even after completion or incorrectly appear as created on the find sales orders page when they are completed or approved.
+This troubleshooting guide aims to address issues where orders remain stuck in the fulfillment app even after completion or incorrectly appear as created on the find sales orders page when they are completed or approved.
 
 ### Issue Scenario
 

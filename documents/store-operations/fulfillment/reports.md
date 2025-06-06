@@ -294,7 +294,7 @@ Head of eCommerce, Head of Stores, Vice President of Retail
 | Item              | Item details                                                     |
 |-------------------|------------------------------------------------------------------|
 | Shopify Order ID  | Identifies the order within the Shopify platform                 |
-| Location          | Indicates the location of the order fulfilment                    |
+| Location          | Indicates the location of the order fulfillment                    |
 | HC Order ID       | HotWax Commerce Order ID for internal tracking                    |
 | Style             | Specifies the style or type of the product                       |
 | demand            | Reflects the demand or quantity ordered                           |

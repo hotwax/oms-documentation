@@ -64,4 +64,4 @@ The remaining items are insufficient to complete any additional kits.
 
 HotWax Commerce syncs the inventory of kit products and their components just like regular products, using webhooks and the `Upload Recent Inventory Change` [job](https://docs.hotwax.co/documents/learn-shopify/shopify-integration/how-does-hotwax-commerce-ensure-accurate-inventory-is-synchronized-to-shopify/inventory-synchronization#upload-recent-inventory-change). This process is the same for kit products and their components as other products.
 
-[Learn more about inventory synchronization.](https://docs.hotwax.co/documents/learn-shopify/shopify-integration/how-does-hotwax-commerce-ensure-accurate-inventory-is-synchronized-to-shopify/inventory-synchronization)
+[Learn more about inventory synchronization.](inventory-sync.md)

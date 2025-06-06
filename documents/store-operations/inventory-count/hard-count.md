@@ -18,7 +18,7 @@ The Hard Count process in HotWax allows the fulfillment team to count every item
 
 ## No Pre-Listed Items
 
-Unlike normal cycle counts, `Hard Count` are not assgined with pre-assigned items.Upon opening a Hard Count card, the list will be blank. The team members will scan and add all items during the count process.
+Unlike normal cycle counts, `Hard Count` are not assigned with pre-assigned items.Upon opening a Hard Count card, the list will be blank. The team members will scan and add all items during the count process.
 
 - When an item is scanned, its details are automatically fetched from the system and added to the count.
 - If an item’s scanned barcode does not match the expected identifier (according to the system’s settings), it will be flagged and moved to the `Unmatched` tab for further action.
