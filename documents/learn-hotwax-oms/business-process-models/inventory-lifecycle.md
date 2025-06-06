@@ -64,7 +64,7 @@ When new purchase orders are created in the ERP, a scheduled job in HotWax Comme
 
 When a product’s QOH and ATP is updated in HotWax Commerce, its `Online ATP` is recomputed to ensure sellable inventory for eCommerce is calculated on the latest stock levels.
 
-Learn more about [purchase orders](https://app.gitbook.com/s/XPO8jTog8zeT6LrxNy36/integration-flows/purchase-orders)
+Learn more about [purchase orders](/documents/learn-netsuite/integration-flows/purchase-orders.md)
 
 #### Transfer Orders
 
@@ -76,7 +76,7 @@ When a product’s QOH and ATP is updated in HotWax Commerce, its `Online ATP` i
 
 Transfer orders can be categorized into three types: store to store, warehouse to store, and store to warehouse. To explore each type, refer to the Transfer Order Lifecycle BPM. In the Inventory Lifecycle BPM, we have taken warehouse to store to explain the concept.
 
-Learn more about [transfer orders](https://app.gitbook.com/s/XPO8jTog8zeT6LrxNy36/integration-flows/transfer-order)
+Learn more about [transfer orders](/documents/learn-netsuite/integration-flows/transfer-order)
 
 ## Inventory Variances in Stores
 
