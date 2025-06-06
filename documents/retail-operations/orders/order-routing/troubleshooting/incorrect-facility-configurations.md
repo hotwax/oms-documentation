@@ -13,7 +13,7 @@ For orders to be routed correctly, the facilities need to be associated with the
 ### Resolution Steps
 
 1. Navigate to the Facilities App.
-2. Navigate to the [Facility Groups page](../../system-admin/administration/facilities/manage-groups.md).
+2. Navigate to the [Facility Groups page](/documents/system-admin/administration/facilities/manage-groups.md).
 3. Identify the facility group with the "Brokering\_Group" subtype.
 4. Click on the chip available against the facilities.
 5. From the submenu, click on "View Facilities" to verify the facilities or "Quick Edit" to add or remove any facility from the group.
