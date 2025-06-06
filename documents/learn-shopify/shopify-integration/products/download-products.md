@@ -48,7 +48,7 @@ The parent product comes in various sizes and colors, resulting in multiple vari
 {% endtab %}
 {% endtabs %}
 
-Shopify has multiple product identifiers, such as Shopify Product ID, Product SKU, Product Name, and UPCA. Therefore before importing products, it is important to set up the primary product identifier that will be mapped with the product ID in HotWax Commerce. The primary product identifier can be set up in HotWax Commerce when [setting up a new product store](https://app.gitbook.com/s/vRjh4vkGRczeQJMpDxzL/product-store/product-store) as per retailers' requirements.
+Shopify has multiple product identifiers, such as Shopify Product ID, Product SKU, Product Name, and UPCA. Therefore before importing products, it is important to set up the primary product identifier that will be mapped with the product ID in HotWax Commerce. The primary product identifier can be set up in HotWax Commerce when [setting up a new product store](/documents/system-admin/product-store/add-more-product-stores.md) as per retailers' requirements.
 
 #### Importing Newly Added Products Regularly
 

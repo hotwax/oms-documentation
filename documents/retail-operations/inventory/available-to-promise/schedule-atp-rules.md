@@ -12,7 +12,7 @@ First, schedule the rule categories like Threshold, Safety Stock, Store Pickup, 
 
 **Step 2: Schedule `Import Product Facility Job`**
 
-Next, schedule the “Import Product Facility” job in the [Job Manager App](https://app.gitbook.com/s/vRjh4vkGRczeQJMpDxzL/administration/introduction/job-manager-app). This step imports the CSV files into HotWax, where ATP is computed based on the applied rules.
+Next, schedule the “Import Product Facility” job in the [Job Manager App](/documents/system-admin/administration/user-permissions/job-manager-app.md). This step imports the CSV files into HotWax, where ATP is computed based on the applied rules.
 
 Each rule card provides an overview of configurations and product facility selections. Retailers can click the "Edit rule" button to modify rule configurations.\
 The rule configuration can be adjusted by toggling the store pickup and shipping options on or off, or by setting values for threshold and safety stock by clicking on the number chips.
