@@ -16,7 +16,7 @@ Before developers can leverage the SuiteCloud Development Framework (SDF) for de
 
 ### Developer Role Setup for SDF:
 
-In addition to administrator-level configurations, developers intending to utilize SDF with a NetSuite role must undergo additional setup. This ensures developers have the necessary permissions and access for effective use of SDF capabilities. For detailed instructions on setting up a developer role for SDF, refer to [Oracle's documentation](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/subsect\_1539287603.html#Setting-Up-a-Role-for-SuiteCloud-Development-Framework-Development).
+In addition to administrator-level configurations, developers intending to utilize SDF with a NetSuite role must undergo additional setup. This ensures developers have the necessary permissions and access for effective use of SDF capabilities. For detailed instructions on setting up a developer role for SDF, refer to [Oracle's documentation](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_4724921075.html).
 
 It's essential to note that these configurations require active involvement from developers. Therefore, thoroughly review and follow the provided documentation to ensure the successful establishment of SuiteCloud Development Framework capabilities within the NetSuite environment.
 
