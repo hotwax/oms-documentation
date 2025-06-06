@@ -10,7 +10,7 @@
   * [Technical Workflow of Invoicing from Single Location](Flows/Order/workflow-of-invoice-from-single-location.md)
   * [Technical Workflow of Invoicing from Multiple Location](Flows/Order/workflow-of-invoice-from-multiple-location.md)
 
-* [Send Sale Order](Flows/SendSaleOrder/SendSaleOrder.md)
+* [Send Sale Order](./flows/sendsale-order/README.md)
   * [Technical Workflow](./flows/sendsale-order/technical-workflow.md)
 
 * [Returns](./flows/returns/README.md)
