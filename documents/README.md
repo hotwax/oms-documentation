@@ -401,8 +401,7 @@ potential of HotWax Commerce for your businesses.
     <tr>
       <td align="center"><strong>RetailPro</strong></td>
       <td><a href=".gitbook/assets/retailpro.png">retailpro.png</a></td>
-      <td><a href="./additional-integrations/retailpro/README.md">Additional Integrations</a>
-      </td>
+      <td><a href="./additional-integrations/retailpro/README.md">Additional Integrations</a></td>
     </tr>
     <tr>
       <td align="center"><strong>Loop</strong></td>
