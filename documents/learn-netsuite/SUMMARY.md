@@ -71,7 +71,7 @@
 * [Allocation & Fulfillment](synchronization-flows/allocation-fulfillment-sync/README.md)
 * [Transfer Orders](synchronization-flows/transfer-order-sync/README.md)
 * [Purchase Orders](synchronization-flows/purchase-order-sync/README.md)
-* [Integration Mappings](synchronization-flows/integration-mappings/README.md)
+* [Integration Mappings](./synchronization-flows/integration-mappings/README.md)
   * [Payment Methods](synchronization-flows/integration-mappings/payment-methods.md)
   * [Discount Codes](synchronization-flows/integration-mappings/discount-codes.md)
   * [Price Levels](synchronization-flows/integration-mappings/price-levels.md)
