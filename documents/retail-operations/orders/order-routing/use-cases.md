@@ -315,9 +315,3 @@ Activate all inventory rules and ensure the brokering run is scheduled to proces
 {% embed url="https://youtu.be/bPBdwJZ6Tm8" %}
 Managing Order Splitting
 {% endembed %}
-
-
-
-
-
-
