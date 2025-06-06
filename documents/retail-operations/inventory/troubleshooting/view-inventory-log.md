@@ -29,7 +29,6 @@ In HotWax Commerce, every change in inventory numbers for a product generates an
 * Click on the `Facility` button and select the desired facility from the dropdown menu.
 * Again check the checkbox of the `Inventory log` to view the log specific to that facility.
 
-<figure><img src="/documents/retail-operations/.gitbook/assets/ready-for-pickup.png" alt=""><figcaption></figcaption></figure>
 
 ### Reasons for Inventory Change
 
