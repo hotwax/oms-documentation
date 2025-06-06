@@ -28,8 +28,6 @@ The Configuration Facility is a virtual facility that plays a critical role when
 Inventory Channel Creation
 {% endembed %}
 
-
-
 ### Link Facilities to the Inventory Channel
 
 To link facilities to an inventory channel:
@@ -46,8 +44,6 @@ If a Canadian retailer has two Shopify stores—one in the US and another in Can
 Linking Facility
 {% endembed %}
 
-
-
 ## Publishing ATP to a Sales Channel
 
 Retailers managing multiple online sales channels must decide which facility group will publish its inventory to which channel. This setup ensures that only selected facilities' inventory will be made available on the defined sales channels. Follow the steps below to publish inventory to your Shopify store using the Available-to-Promise (`ATP`) app.
@@ -60,9 +56,5 @@ Retailers managing multiple online sales channels must decide which facility gro
 4. **Choose the Inventory Channel** From the dropdown menu, select the inventory channel from which you want to publish. This corresponds to the facility group whose inventory will be pushed to the Shopify store.
 5. **Save and Schedule the Job** After selecting the appropriate options, click `Save Changes` to finalize the settings. This will schedule the inventory publishing job as per the selected time and frequency.
 
-
-
 <figure><img src="../.gitbook/assets/publish-atp-to-sales-channel 1.png" alt=""><figcaption><p>Publish ATP to a Sales Channel</p></figcaption></figure>
-
-
 

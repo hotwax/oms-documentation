@@ -1,6 +1,6 @@
 # Manage Facility Staff
 
-To effectively oversee a facility's staff, which includes roles such as warehouse picker, warehouse packer, warehouse clerk, warehouse receiver, and warehouse manager, the store manager can assign these roles to staff members in the Facilities app for any facility. Subsequently, staff members can access the HotWax Commerce apps and perform functions specific to their assigned roles. Users can use the following steps to efficiently allocate role-specific permissions to staff members for accessing HotWax Commerce and its associated applications.    
+To effectively oversee a facility's staff, which includes roles such as warehouse picker, warehouse packer, warehouse clerk, warehouse receiver, and warehouse manager, the store manager can assign these roles to staff members in the Facilities app for any facility. Subsequently, staff members can access the HotWax Commerce apps and perform functions specific to their assigned roles. Users can use the following steps to efficiently allocate role-specific permissions to staff members for accessing HotWax Commerce and its associated applications.
 
 #### Add Staff
 
@@ -13,7 +13,7 @@ The added staff members will be listed, under the `Staff` section along with the
 
   * Name and ID
   * Assigned role
-  * Date on which the staff member was added to the facility    
+  * Date on which the staff member was added to the facility
 
 #### Remove Staff
 

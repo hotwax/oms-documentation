@@ -241,8 +241,6 @@ The picklist includes the following fields:
 | Qty Picked          | The quantity of the item picked for packing. |
 | Box Number          | The box in which the item has been packed.   |
 
-
-
 {% file src="../.gitbook/assets/Sample.pdf" %}
 
 ## How to Use the Picklist Document

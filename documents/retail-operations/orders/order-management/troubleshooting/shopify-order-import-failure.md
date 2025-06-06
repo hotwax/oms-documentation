@@ -10,12 +10,14 @@ When an order fails to import from Shopify to HotWax, it typically does not appe
 ## Scenarios and Steps to Resolve
 
 ### Verification: Check if the order is available in HotWax Commerce
+
 - **Navigate to OMS**: Log in to OMS.
 - **Check Order**: Search the order on the OMS find order page to verify if the order is already available in OMS.
 
 ### Scenario 1: Order Not Available in OMS
 
 #### Step 1: Re-import the Order by ID in OMS
+
 1. **Log in to OMS**: Use your username and password to log in to Hotwax Commerce `OMS`.
 2. **Navigate to the Import Section**:
    - Go to `MDM > EXIM` in from the hamburger menu.

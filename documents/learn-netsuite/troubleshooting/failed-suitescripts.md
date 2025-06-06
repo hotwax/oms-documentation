@@ -29,7 +29,7 @@ Here are the flows which use time-based cursor when exporting data from NetSuite
 * Sales orders
 * Inventory
 
-**Exported flag** 
+**Exported flag**
 
 Certain SuiteScripts maintain an "exported" flag to ensure all records are synced to HotWax. These scripts apply a checkmark on the exported flag of each record exported from NetSuite and deposited at an SFTP location. If a SuiteScript fails to deposit the file due to reasons like connection timeout with the SFTP, the generated file is automatically relocated to the NetSuite File Cabinet. Subsequently, another SuiteScript is triggered to read these records and uncheck the exported flag in NetSuite for those records that couldn't be exported. This process ensures that any flagged export from NetSuite can be replayed by unchecking the exported flag on the record.
 

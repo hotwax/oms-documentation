@@ -33,8 +33,6 @@ Click on the `+` icon in the right-bottom corner of the app.
 
 {% embed url="https://youtu.be/Bq3Rp89X-nU" %}
 
-
-
 ## Automated Integration for Seamless Operations
 
 #### Effortless Export

@@ -19,11 +19,8 @@ Sometimes retailers may encounter inventory disparities between HotWax Commerce 
    * Ensure that the job is running. If not scheduled, schedule the job according to your preferred frequency.
    * You can also execute the `Hard Sync` job in HotWax Commerce. This job updates inventory for all the products irrespective of the inventory changes, eliminating any discrepancy between HotWax Commerce and Shopify. If inventory changes occurred before the completion of the last `Upload recent inventory change` job, execute the `Hard Sync` job.
 
-
-
 {% tabs %}
 {% tab title="Hard Sync" %}
-
 
 <figure><img src="../.gitbook/assets/Hard Sync 1.png" alt="" width="375"><figcaption></figcaption></figure>
 {% endtab %}

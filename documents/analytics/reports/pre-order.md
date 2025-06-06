@@ -18,6 +18,7 @@ Technical or operational challenges may prevent products from being available fo
 The Hourly ON and OFF Pre-Order Report helps merchandisers quickly identify products that are listed for accepting pre-orders and products that are recently delisted for taking Pre-Orders from eCommerce. With the help of these Shopify reports, merchandisers can quickly identify gaps and take action to fill the gaps.
 
 ### User
+
 Head of eCommerce, Merchandising Team
 
 ### Glossary
@@ -55,7 +56,7 @@ Using the Daily Pre-Order Summary Report, merchants can get the contribution of 
 
 Merchandisers want to measure the best and least-performing Pre-Order products to guide their future strategies. For example, if a product does not perform well after its launch, merchandisers may want to discontinue the product. The Daily Pre-Order Product Performance report helps merchandisers analyze the performance of products on Pre-Order. The report also helps merchandisers make better decisions at the time of product assortment.
 
-### User 
+### User
 
 Head of eCommerce, Merchandising Team
 
@@ -75,7 +76,8 @@ Head of eCommerce, Merchandising Team
 
 When inventory is received at a warehouse, an effective Pre-Order Management System enables merchandisers to allocate inventory for accepted customer Pre-Orders both manually and automatically. When merchandisers manually allocate inventory for Pre-Orders, they already know how much inventory is consumed by existing pre-orders. However, when the system automatically allocates the inventory, merchandisers have no idea how much inventory is available to promise, which orders have been allocated the inventory, and which ones haven’t. Therefore, merchandisers prefer a daily summary of all pre-orders for which inventory is allocated automatically. The Daily Released Pre-Order report gives a daily summary of all the pre-orders for which the Pre-Order Management System has automatically allocated the inventory.
 
-### User 
+### User
+
 Head of eCommerce, Merchandising Team
 
 ### Glossary
@@ -99,7 +101,8 @@ Merchants accept pre-orders on multiple items every day. So, inventory delays ca
 
 The Daily Promise Date Changed Report shows all date changes made for previously accepted Pre-Orders.
 
-### User 
+### User
+
 Head of eCommerce, Merchandising Team
 
 ### Glossary

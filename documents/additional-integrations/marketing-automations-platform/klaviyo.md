@@ -75,8 +75,6 @@ Set up API Key in HotWax Commerce:
 <SystemProperty systemResourceId="KLAVIYO-STORE" systemPropertyId="revision" systemPropertyValue="2023-12-15" description="API version identified by this revision date (v2023-12-15) used for Klaviyo integration as of the specified release."/>
 ```
 
-
-
 </details>
 
 **The XML information contains the following details:**
@@ -193,8 +191,6 @@ Here's the XML structure that generates the `Ready for Pickup` email template in
     </ElectronicText>
 </ElectronicText>
 ```
-
-
 
 </details>
 

@@ -457,7 +457,7 @@ The Missing Order Attribute Report is a vital tool for tracking order synchroniz
 | ATTRIBUTE     | The essential order attributes. For example, `PRODUCT_VERIFIED` indicates whether the product has been verified   |
 | STATUS              | The status if the order has essential attributes or not                      |
 
-**In the NetSuite context**, the report ensures accurate order synchronization by verifying essential attributes. By highlighting orders lacking these attributes, it prevents synchronization issues, providing assurance that orders seamlessly integrate with NetSuite. 
+**In the NetSuite context**, the report ensures accurate order synchronization by verifying essential attributes. By highlighting orders lacking these attributes, it prevents synchronization issues, providing assurance that orders seamlessly integrate with NetSuite.
 
 | Field                   | Description                                       |
 |-------------------------|---------------------------------------------------|

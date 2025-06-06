@@ -47,7 +47,7 @@ When item receipt records are generated in Loop, multiple actions take place in 
 
 Creating refund records is essential to mark the completion of the return process and closing RMA in NetSuite.
 
-*   Return receipt records trigger the creation of refund records in Loop.
+* Return receipt records trigger the creation of refund records in Loop.
 
     Customers receive their refund amount when they return an item. In the event where they are returning an item in exchange for another, refunds will not be issued to them because that amount is used as payment for the exchanged product.
 

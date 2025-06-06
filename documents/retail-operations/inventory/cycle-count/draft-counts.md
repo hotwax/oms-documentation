@@ -34,6 +34,4 @@ A new draft count will open up on a new page where you can begin setting up a ne
 
 Once a count is ready to be assigned to a facility, click on the `send` button at the bottom right of the `draft detail` page. The created draft will now appear in the assigned tab and on the [store management side](https://docs.hotwax.co/documents/inventory/directed-cycle-count) of the `Cycle Count` app.
 
-
-
 {% embed url="https://youtu.be/C1Emwnm3P2I" %}

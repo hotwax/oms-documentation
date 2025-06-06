@@ -59,7 +59,7 @@ Content-Type: application/json
 ### Body
 
 ```
-"response": 
+"response":
 {
   "numFound": 1,
   "start": 0,

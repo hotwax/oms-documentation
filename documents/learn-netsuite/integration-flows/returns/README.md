@@ -181,7 +181,7 @@ Retailers' return policies can vary, ranging from one to several months. To acco
 #### 2. Fetching older orders from NetSuite:
 
 * In some cases, older orders may not be imported into the OMS, but the corresponding records still exist in NetSuite.
-*   When no matching NetSuite order ID is found in the OMS, HotWax’s Integration Platform runs a search query in NetSuite using the Shopify order ID to locate the original sales order details.
+* When no matching NetSuite order ID is found in the OMS, HotWax’s Integration Platform runs a search query in NetSuite using the Shopify order ID to locate the original sales order details.
 
     Once the original sales order is retrieved from NetSuite, the necessary return details are synced. This step helps ensure that even older orders, which might not have been part of the initial OMS setup, are accurately linked with the RMA and processed.
 

@@ -16,7 +16,7 @@
     * [Duplicate Jobs](workflow/job-management/troubleshooting/duplicate-job-scheduled.md)
     * [Job Scheduling](workflow/job-management/troubleshooting/schedule-job.md)
     * [Job Scheduling Errors](workflow/job-management/troubleshooting/job-scheduling-errors.md)
-   
+
 * [Job Workflows](workflow/job-workflows/README.md)
   * [Parameters](workflow/job-workflows/parameters.md)
   * [Pre-Orders](workflow/job-workflows/pre-orders.md)
@@ -75,7 +75,7 @@
     * [Inaccurate Inventory Computation](orders/pre-orders/troubleshooting/inaccurate-inventory-computation.md)
     * [Missing Product Linking](orders/pre-orders/troubleshooting/missing-product-linking.md)
     * [Product Syns Issues](orders/pre-orders/troubleshooting/preorder-backorder-product-sync-issues.md)
-    
+
 * [Returns](orders/returns/README.md)
   * [Import Returns](orders/returns/import-returns.md)
   * [In-Store Returns](orders/returns/in-store-returns.md)

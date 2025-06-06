@@ -60,7 +60,6 @@ By diligently specifying both the total box quantity for the entire order and th
 Add Shipment Box During Fulfillment
 {% endembed %}
 
-
 1. Click on Pack Orders function to confirm shipment details. Retailers can also enable force scanning from the settings page to ensure store associates scan the items when packing.
 2. A pop-up dialog box will appear for printing additional documents like shipping labels and packing slips.
 

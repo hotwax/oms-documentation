@@ -8,7 +8,6 @@ Many times customers visit their preferred store location to return or exchange 
 
 With Exchanges V2, Shopify has streamlined the returns and exchange process for both customers and retailers. When there is an exchange order in Shopify POS, it creates a return for the items the customer doesn’t want and adds the new items the customer purchased in exchange to the order
 
-
 This seems straightforward for the initial exchange process, as the transaction details and order information are consolidated within the original order. However, this approach creates complexities for ERP systems like NetSuite or other accounting systems that hold a repository of all the financial records.
 
 Here's where the challenges arise:
@@ -22,7 +21,7 @@ Before delving into the details of how returns and exchanges are imported and st
 
 1. Exchange Credit - Shopify exchange V2 no longer explicitly calculates exchange credit when customers purchase replacement items. Because exchange orders are still new orders in HotWax and other systems, an exchange credit is still calculated by HotWax during import of returns to balance accounting.
 2. Exchange Payment - To make payments easy to reconcile, HotWax links all transactions to the original order in its system even for greater exchanges. These additional payments are then attributed to exchange orders internally using the Exchange Payment method to represent the additional captured payment.
-   
+
     - **Exchange Credit**: This is the amount the customer has already paid for the original item being returned. It's used towards purchasing another item in the exchange order.
     - **Exchange Payment**: If the customer exchanges for an item of higher value, they pay the difference. This additional payment is known as exchange payment.
 
@@ -75,7 +74,6 @@ To manage easy reconciliation with Shopify, HotWax first records the additional 
 
 Adding exchange transactions to the main order, however, inflates the payment captured on the original order. To handle this, HotWax Commerce creates balancing attribution transactions that serve as counterparts to the payments associated with exchange orders.
 
-
 | Order Items | Exchange Item |
 |-------------|---------------|
 | A: ~~$10~~  | D: $20        |
@@ -102,7 +100,8 @@ With this handling, HotWax ensures accurate financial records in HotWax and elim
 ### Additional Scenarios Handled by HotWax Commerce
 
 #### Returning the Exchanged Item
-In the event that the customer decides to return item D, an exchange item, they’d be receiving a refund of $20. When this return happens, Shopify will use a refund attribution algorithm that will find the largest payment transaction and attempt to refund the entire amount against it. This approach splits the refund transactions as little as possible for the best customer experience. 
+
+In the event that the customer decides to return item D, an exchange item, they’d be receiving a refund of $20. When this return happens, Shopify will use a refund attribution algorithm that will find the largest payment transaction and attempt to refund the entire amount against it. This approach splits the refund transactions as little as possible for the best customer experience.
 
 In this scenario, when a customer returns an exchanged item, according to the Shopify algorithm, the refund will be issued using the initial $30 transaction (Shop Pay 1), even though the payment for the exchanged item was processed through a different transaction (Shop Pay 2).
 
@@ -121,8 +120,8 @@ In this scenario, when a customer returns an exchanged item, according to the Sh
 
 Note: add image of what the OPP panel looks like at this point in HotWax
 
-
 #### Returning the Entire Order Including Exchanged Items:
+
 In the event that the customer returns item D along with items B and C, Shopify will create two refund transactions, one to refund ShopPay1 and another to refund ShopPay2.
 
  links refund transactions to the original payment being refunded using a “parent ID”. Since HotWax Commerce has two different orders, it uses the Shopify transaction ID to identify which order the payment was captured on. This ensures that the refund is posted on the same order, maintaining traceability.
@@ -140,7 +139,6 @@ In the event that the customer returns item D along with items B and C, Shopify 
 | ExchangeCredit: -$20 <br>Status: Refund                  | ExchangeCredit: $20 <br>Status: Refund |
 | ShopPayRefund1: $30<br>Status: Refund<br>parentPaymentRef: ShopPay1 |  |
 | ShopPayRefund2: $10<br>Status: Refund<br>parentPaymentRef: ShopPay2 |  |
-
 
 Note: Is there an exchange credit added to the original order for the amount refunded on another order?
 
@@ -187,7 +185,6 @@ Therefore, instead of picking an attribution itself, HotWax Commerce simply mark
 
 When a customer returns item A, valued at $10, and opts for an exchange with another item D priced at $5, they will receive a refund of $5 to compensate for the price difference between the two items. In this case, there will be an attribution of $5 to the exchange order with the payment method as `Exchange Credit` and as there is no payment captured from the customer.
 
-
 | Order Items | Exchange Item |
 |-------------|---------------|
 | A: ~~$10~~  | D: $5        |
@@ -200,7 +197,6 @@ When a customer returns item A, valued at $10, and opts for an exchange with ano
 
 In the event that the customer subsequently decides to return both the exchanged item and all the items from their original order, they will receive a total refund of $25, encompassing the combined value of all the returned items (Item B, Item C and Item D).
 
-
 | Order Items | Exchange Item |
 |-------------|---------------|
 | A: ~~$10~~  | D: ~~$5~~       |
@@ -212,7 +208,6 @@ In the event that the customer subsequently decides to return both the exchanged
 | ExchangeCredit: $5 <br> Status: Refund| ExchangeCredit: $5 <br> Status: Settled|
 | ExchangeCredit: -$5 <br>Status: Refund                  | ExchangeCredit: $5 <br> Status: Refund |
 | ShopPay1: $25<br>Status: Refund<br>parentPaymentRef: ShopPay1 |   |
-
 
 **How does HotWax Commerce ensure accurate inventory updates from Returns and Exchanges?**
 

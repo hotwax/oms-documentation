@@ -1,4 +1,4 @@
-# Pre-Order & Back-Order Product Sync Issues 
+# Pre-Order & Back-Order Product Sync Issues
 
 ## **Troubleshooting Use Case**
 

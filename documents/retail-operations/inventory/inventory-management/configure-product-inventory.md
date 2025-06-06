@@ -25,7 +25,7 @@ Retailers may sometimes want to ensure that some products are routed to only spe
 
 ### Enable/Disable Store Pickup for Products:
 
-Retailers sometimes have bulky items in their catalogs that are not optimized for store pickup. Enabling or disabling store pickup options ensures accurate order fulfillment options, for the customer. 
+Retailers sometimes have bulky items in their catalogs that are not optimized for store pickup. Enabling or disabling store pickup options ensures accurate order fulfillment options, for the customer.
 
 - Navigate to the `Global Settings` section on the `Product Inventory Configurations` page.
 - Access the dialog box for `Store Pickup`.
@@ -38,7 +38,6 @@ Setting minimal days to ship the product is crucial for meeting customer expecta
 - Navigate to the `Global Settings` section on the `Product Inventory Configurations` page.
 - Open the dialog box by selecting `Days to Ship`.
 - Edit the number of days required for order shipment.
-
 
 ## Configure Inventory within Facility:
 
@@ -53,7 +52,7 @@ Adding facilities is crucial for retailers operating in multiple regions or coun
 - Click `Add` to confirm the addition of the facility.
 
 {% embed url="https://youtu.be/EIilDUEtTM8" %} Video: Add Facility {% endembed %}
-  
+
 ### Add Location of Product Inventory in Facility:
 
 Adding locations within each facility helps in optimizing product storage and organization. It enables businesses to effectively manage their warehouse space, improve inventory visibility, and streamline order picking and packing processes, resulting in enhanced operational efficiency and customer satisfaction.

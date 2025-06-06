@@ -1,14 +1,14 @@
-# BOPIS Check Inventory API 
+# BOPIS Check Inventory API
 
 ## Overview
-The BOPIS (Buy Online, Pick-up In Store) Check Inventory API allows you to retrieve stock details for products at specific locations. By calling the `/checkBopisInventory` endpoint with the POST method, you can check the availability of BOPIS inventory.
 
+The BOPIS (Buy Online, Pick-up In Store) Check Inventory API allows you to retrieve stock details for products at specific locations. By calling the `/checkBopisInventory` endpoint with the POST method, you can check the availability of BOPIS inventory.
 
 # Request
 
 ### Endpoint
 
-**URL:** `https://<host>/rest/s1/ofbiz-oms-usl/checkBopisInventory`  
+**URL:** `https://<host>/rest/s1/ofbiz-oms-usl/checkBopisInventory`
 
 This API uses our next generation OMS instance. All traditional instances have access to this next generation OMS by replacing "oms" with "maarg" in the host name.
 
@@ -24,20 +24,19 @@ Current Name: `demo-uat`
 
 Maarg Name: `demo-maarg-uat`
 
-
-**Example:** `https://demo-maarg.hotwax.io/rest/s1/ofbiz-oms-usl/checkBopisInventory` 
+**Example:** `https://demo-maarg.hotwax.io/rest/s1/ofbiz-oms-usl/checkBopisInventory`
 
 ### Method
-GET (Recommended if your library supports sending a body in a GET request)      
-POST 
+
+GET (Recommended if your library supports sending a body in a GET request)
+POST
 
 ### Headers
 
 Content-Type: application/json
 
-
 ### Sample Request Body
-  
+
 #### Single product and facility
 
 ```json
@@ -85,7 +84,6 @@ Product Store represents a brand in HotWax Commerce. To obtain possible values, 
 **inventoryGroupId**
 Inventory groups are used to segregate inventory for different channels of sales. Obtain the inventory group ID by logging into HotWax Commerce Facilities App and browsing inventory groups.
 
-
 ## Response
 
 ### Status Code
@@ -95,7 +93,6 @@ HTTP/1.1 200 OK
 ### Headers
 
 Content-Type: application/json
-
 
 ### Body
 
@@ -118,7 +115,7 @@ Content-Type: application/json
 | `PickUpFacility`          | The facility does not have PickUp enabled. Add it to the PickUp facility group to enable pickup.        |
 | `InventoryGroup`            | The facility where the product is located does not cater its inventory to that channel. |
 | `AllowPickupInventoryGroup` | Pickup is not allowed globally for the inventory group.                     |
-| `AllowPickupFacility`       | The facility where the product inventory is located is disabled for catering to BOPIS orders. 
+| `AllowPickupFacility`       | The facility where the product inventory is located is disabled for catering to BOPIS orders.
 
 Each Decision Reason also comes with a detailed log of why the given check failed.
 

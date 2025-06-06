@@ -30,11 +30,10 @@ The `Reject Items` feature within the HotWax Commerce platform serves as a cruci
 
 1. Identify the item(s) you wish to reject and click on the corresponding line item.
 2. Look for the `Reject` function and click on it to initiate the rejection process.
-3. Choose the appropriate reason for rejection from the available options using radio buttons (e.g., Not in Stock, Damaged, Mismatch).    
+3. Choose the appropriate reason for rejection from the available options using radio buttons (e.g., Not in Stock, Damaged, Mismatch).
 4. After selecting the rejection reason, save your changes to confirm the rejection.
 
 Check the order item history by clicking on the radio button
-
 
 {% embed url="https://youtu.be/3bT6-DgK5tY" %}
 Video: Reject sales order items
@@ -92,7 +91,6 @@ This feature allows users to easily modify or remove auto-cancel dates from orde
 2. In the Item section, locate the auto-cancel date and click on the edit function next to it.
 3. Click on the delete icon next to the auto-cancel date to remove it from the order.
 4. Confirm the changes by clicking on the `Save` function.
-
 
 ## Move Items to Order Parking
 

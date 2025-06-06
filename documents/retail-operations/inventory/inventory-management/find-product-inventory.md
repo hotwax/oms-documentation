@@ -14,7 +14,6 @@ Retailers need real-time insights into their product inventory, to ensure inform
 | Online ATP              | Inventory available for promise on online channels.    |
 | Available to Promise (ATP) | Inventory available for promise to customers, representing actual availability. |
 
-
 ### Step-by-Step Usage Instructions:
 
 1. Log in to HotWax Commerce by entering your credentials on the login page.

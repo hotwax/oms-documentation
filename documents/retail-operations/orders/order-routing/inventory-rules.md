@@ -85,7 +85,7 @@ First Inventory Rule Filters
 3. Configure filters, select the right filters to narrow down eligible facilities. For the <mark style="color:orange;">**“Same-day/Next-day orders” routing rule**</mark><mark style="color:orange;">,</mark> we will choose <mark style="color:orange;">**“Facility Group**</mark><mark style="color:orange;">”</mark> and <mark style="color:orange;">**“Proximity”**</mark><mark style="color:orange;">.</mark>
 
 * **Facility Group:** Select <mark style="color:orange;">**“Warehouses”**</mark> from the dropdown. This limits eligibility to only warehouses with available inventory. **Why did we choose warehouse locations?** Warehouses handle larger inventory volumes and can better support online order fulfillment compared to stores, which often focus on walk-in customers.
-*   **Proximity:** Set the distance to **100 miles**, so the rule includes only those warehouses within a 100-mile radius of the customer’s location.
+* **Proximity:** Set the distance to **100 miles**, so the rule includes only those warehouses within a 100-mile radius of the customer’s location.
 
     This means that only nearby warehouses are considered, optimizing delivery speed and meeting SLA requirements.
 

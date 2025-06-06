@@ -35,5 +35,5 @@ Shopify is seamlessly integrated with various social media sales channels such a
 | pos                   | POS_SALES_CHANNEL    |
 | shopify_draft_order   | CSR_SALES_CHANNEL    |
 
-{% hint style='info' %} After incorporating these mandatory mappings, please add any custom mappings as needed. 
+{% hint style='info' %} After incorporating these mandatory mappings, please add any custom mappings as needed.
 {% endhint %}

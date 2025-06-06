@@ -33,7 +33,6 @@ description: Explore API and data feeds within the 'inbound shipment documentato
 | OUT\_TRANSFER      | OUTGOING\_SHIPMENT | Outbound Transfer Shipment |
 | PURCHASE\_RETURN   | OUTGOING\_SHIPMENT | Purchase Return Shipment   |
 
-
-### TBD 
+### TBD
 
 Sample Shipment file

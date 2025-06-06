@@ -8,7 +8,7 @@ description: >-
 HotWax Commerce provides a unified view of inventory by integrating with various systems present in a retailer's teck stack, including Enterprise Resource Planning (ERP), Point of Sale (POS), and Warehouse Management Systems (WMS). HotWax Commerce ensures that inventory updates from all these systems are synchronized to support various business scenarios.
 
 **In-store sales:** During in-store sales, inventory counts of products is automatically reduced in HotWax Commerce.
- 
+
 **In-store receiving:** When stores receive new inventory through Purchase Orders, Transfer Orders, or Returns, HotWax Commerce increases the inventory counts accordingly, maintaining an accurate stock record.
 
 **Inventory variances:** Missing or defective items can lead to inventory discrepancies. Any adjustments, such as reporting lost or defective inventory or reclaiming found items, should be updated in HotWax Commerce. Cycle Counts also help identify variances, which are also automatically synchronized to HotWax Commerce, ensuring accurate inventory levels.

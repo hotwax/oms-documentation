@@ -16,7 +16,7 @@ The initial phase of the in-store sales inventory synchronization process involv
 
 To initiate the export process, configure the Real-Time Order Export Endpoint within **PredictSpring**. **HotWax Commerce Integration Platform** provides an SFTP location, set up in **PredictSpring** as an endpoint.
 
-Navigate to `CMS > Store Management > Advanced > Store Settings`. 
+Navigate to `CMS > Store Management > Advanced > Store Settings`.
 
 In this configuration, endpoints of SFTP locations are set to ensure a seamless real-time export process. Establish the endpoint (`OrderPostProcessingConfigJSON`) to enable **PredictSpring** to transmit order data to the designated external location via HTTP POST.
 
@@ -26,7 +26,7 @@ In this configuration, endpoints of SFTP locations are set to ensure a seamless 
 
 ## 2. Creating Inventory Variance File
 
-Once the order data is exported and stored in the designated SFTP location, **HotWax Commerce's Integration Platform** takes charge. A job within this platform carefully reads the TLog files, analyzing each order and its line items. Based on the analysis, an inventory variance file is prepared for “Completed” orders, encapsulating changes in stock levels due to in-store sales in **PredictSpring**. The inventory variance file is then smoothly transitioned to another folder, signaling the conclusion of the second step. 
+Once the order data is exported and stored in the designated SFTP location, **HotWax Commerce's Integration Platform** takes charge. A job within this platform carefully reads the TLog files, analyzing each order and its line items. Based on the analysis, an inventory variance file is prepared for “Completed” orders, encapsulating changes in stock levels due to in-store sales in **PredictSpring**. The inventory variance file is then smoothly transitioned to another folder, signaling the conclusion of the second step.
 
 TLog files can also have Endless Aisle Orders aka Send Sale orders. These orders are not “Completed” and so their status is “Created”. These orders are taken by store associates for products that are out of stock in the store. The idea is to get this order shipped to the customer from another store or warehouse. We will see how these orders are synced in **HotWax Commerce** in another section.
 

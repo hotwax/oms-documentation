@@ -23,8 +23,6 @@ The `Search Sales Order` feature on the `Sales Order` page provides users with q
 
 {% embed url="https://youtu.be/g3h3HX6YNNY" %}
 
-
-
 ### Filter Orders
 
 HotWax Commerce allows users to sort through numerous orders based on different filter criteria. Enabling users to focus on specific subsets of orders, making it particularly valuable for those dealing with high order volume.
@@ -49,8 +47,6 @@ You can save the search filters using the disc icon and view the saved search fi
 
 {% embed url="https://youtu.be/eMb3WC2JmBI" %}
 
-
-
 ### Filter Orders based on Queue
 
 HotWax Commerce has different queues that act as a virtual facility to park the orders that are awaiting fulfillment. Users can view the orders in the queue to identify orders that currently do not have inventory allocated to them.
@@ -67,8 +63,6 @@ By filtering orders based on queues, users can focus on handling orders that req
 Users can also filter the orders that will be auto-canceled today to make sure such orders are prioritized.
 
 {% embed url="https://youtu.be/_UYtNXq4IiA" %}
-
-
 
 ### Export Orders
 

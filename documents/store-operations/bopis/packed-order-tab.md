@@ -39,6 +39,4 @@ For example, if a customer requests gift wrapping, the printed picklist will pro
 4. **Find the Print Icon**: Within the order box, you will see a `print icon`. Click on this icon to initiate the `printing process`.
 5. **Print the Picklist**: The app will generate a detailed `picklist` that includes all necessary information, including handling instructions and any special requests from the customer.
 
-
-
 <figure><img src="../.gitbook/assets/BOPIS - View Picklist for BOPIS Orders.png" alt=""><figcaption></figcaption></figure>

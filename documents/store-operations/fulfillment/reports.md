@@ -43,11 +43,13 @@ Vice President of Retail, Warehouse Fulfillment team
 | Brokering Time      | The time when the order was brokered                          |
 
 ***
+
 ### Shopify Fulfillment Status Report
 
 The Shopify Fulfillment Status Report offers retailers valuable insights into their order processing. It highlights the number of orders fulfilled and those still pending, aiding in the assessment of operational efficiency. Retailers can leverage reports from Hotwax to access historical data and current statistics, enabling them to track performance over time and promptly address any issues. It serves as a progress report for order fulfillment, ensuring smooth operations.
 
 #### User
+
 Head of eCommerce, Head of Stores, Vice President of Retail
 
 **Report Glossary**
@@ -70,10 +72,11 @@ Head of eCommerce, Head of Stores, Vice President of Retail
 
 ### Store Daily Orders Fulfillment Report
 
-The Store Daily Orders Fulfillment Report empowers retailers to monitor the efficiency and effectiveness of their store operations. By tracking the daily number of orders fulfilled per store, retailers can identify trends and patterns, facilitating individual store performance assessments. This insight aids in recognizing top-performing stores and pinpointing areas for improvement in underperforming ones. 
+The Store Daily Orders Fulfillment Report empowers retailers to monitor the efficiency and effectiveness of their store operations. By tracking the daily number of orders fulfilled per store, retailers can identify trends and patterns, facilitating individual store performance assessments. This insight aids in recognizing top-performing stores and pinpointing areas for improvement in underperforming ones.
 With Store Daily Orders Fulfillment Reports, retailers can optimize store operations, enhance customer satisfaction, and ultimately drive revenue growth.
 
 #### User
+
 Head of eCommerce, Head of Stores, Vice President of Retail
 
 **Report Glossary**
@@ -182,6 +185,7 @@ Head of eCommerce, Head of Stores, Vice President of Retail
 | Canceled Date    | The date when the order was canceled    |
 | Shipping Method  | The Shipping method by which order is   |
 ***
+
 ## Customer support
 
 These reports help customer service representatives answer customer questions about their order
@@ -287,6 +291,7 @@ This report serves as a crucial tool for retailers in their efforts to reduce re
 Leveraging HotWax Commerce's rejection report enables users to make decisions aimed at improving overall operational efficiency. By understanding which items are rejected more frequently and in which locations, retailers can implement strategies to minimize rejections and ensure accurate, timely order fulfillment. Ultimately, this proactive approach not only enhances customer satisfaction but also strengthens the retailer's competitive edge in the market.
 
 #### User
+
 Head of eCommerce, Head of Stores, Vice President of Retail
 
 **Report Glossary**
@@ -315,6 +320,7 @@ For example, if a store frequently experiences rejections due to items being out
 Ultimately, the aim of these reports is to pinpoint the location and frequency of rejections and implement measures to minimize them, thereby optimizing overall store performance.
 
 #### User
+
 Head of eCommerce, Head of Stores, Vice President of Retail
 
 **Report Glossary**
@@ -334,8 +340,4 @@ Head of eCommerce, Head of Stores, Vice President of Retail
 | CN_FL_EO     | Entire order cannot be fulfilled from the facility                                                  |
 | REJ_RSN_DAMAGED       | Order is rejected due to unavailable inventory                                |
 | NO_VARIANCE_LOG | Order rejected without any variance so inventory won't get affected.                                            |
-
-
-
-
 

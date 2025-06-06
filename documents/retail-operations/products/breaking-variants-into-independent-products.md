@@ -17,14 +17,14 @@ In Shopify, a parent product may have multiple variants defined by the combinati
 #### Desired Product Setup:
 
 * **Parent Product:** HC Shoe
-  *   **Variants:**
+  * **Variants:**
 
       | Colour | Size | SKU |
       | :----: | :--: | :-: |
       |  Black |   7  |  7B |
       |  Black |   8  |  8B |
 * **Parent Product:** HC Shoe (Tan)
-  *   **Variants:**
+  * **Variants:**
 
       | Colour | Size | SKU |
       | :----: | :--: | :-: |
@@ -52,8 +52,6 @@ Here, the user has decided to divide the initial parent product into two, each f
 * Open the product page of the variant in HotWax Admin.
 * Scroll to the Shopify Shop Product section on the page.
 * Unlink the existing **Shopify Link**.
-
-
 
 {% embed url="https://youtu.be/hpijDK4x_Sc" %}
 Unlinking variants from Shopify in OMS

@@ -30,6 +30,4 @@ Read our [order routing](https://docs.hotwax.co/documents/retail-operations/orde
 
 **Incorrect Scheduling**: If the brokering run is set to execute at 3:00 PM daily but needs to run every hour, adjust the frequency to "Hourly" in the Brokering Run settings.
 
-
-
 {% embed url="https://youtu.be/fRni_V6Yc3U" %}

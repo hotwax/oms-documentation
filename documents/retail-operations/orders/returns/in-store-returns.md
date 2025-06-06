@@ -47,7 +47,7 @@ Alternatively, store associates can also create returns by going to the `sales o
      * Click the `Update` button to receive a return for the selected items.
 9. **Ensure Returns Job is Scheduled:**
    * In the `HotWax Commerce Job Manager` app, ensure the `refunds` job to update returns on e-commerce for refund creation is scheduled from the `Orders` page.
-     
+
 10. **Verify Returns on Shopify:**
     * To verify order returns on Shopify:
       * Go to the `Shopify admin panel`.

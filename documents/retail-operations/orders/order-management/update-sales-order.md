@@ -128,8 +128,6 @@ Any special instructions or handling requirements associated with the items in t
 
 {% embed url="https://youtu.be/TE4WrSwqMMY" %}
 
-
-
 ### Add Ship By and Ship After Date
 
 Ship By specifies the date by which the items should be shipped to ensure timely delivery, while Ship After indicates the date after which the items need to be shipped. Both Ship By and Ship After details can only be added upon customers' requests.

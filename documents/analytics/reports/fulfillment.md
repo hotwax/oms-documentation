@@ -239,7 +239,6 @@ The query selects specific columns from the joined tables that are relevant to t
 **Filtering Data:**
 The query includes filters to select records from a specific product store and only considers sales orders that have been approved. It also ensures that the brokering date is more recent than a specified date and that the facility type is a distribution center.
 
-
 ## Store Rejections with Reasons
 
 Rejection reason reports provide valuable insights into rejection rates and reasons across different facilities. These reports outline the number of rejections at each facility along with the underlying reasons behind them. This allows retailers to pinpoint facilities with higher rejection rates and take targeted actions to enhance their performance. For example, if a store frequently experiences rejections due to items being out of stock, conducting cycle counts can help reconcile discrepancies between the system's available inventory and the physical stock in the store. Moreover, by identifying facilities where damaged items are more prevalent, retailers can streamline operations to mitigate such occurrences. Ultimately, the aim of these reports is to pinpoint the location and frequency of rejections and implement measures to minimize them, thereby optimizing overall store performance.
@@ -721,7 +720,6 @@ Head of eCommerce, Head of Stores, Vice President of Retail
 | Canceled Date    | The date when the order was canceled    |
 | Shipping Method  | The Shipping method by which order is   |
 
-
 ## Daily BOPIS Orders
 
 Insider reports that 39% of consumers prefer using BOPIS when placing online orders because they get their orders faster. During their BOPIS journey, customers also expect prompt notifications from the brand on the status of their orders.
@@ -755,7 +753,6 @@ Head of eCommerce, Head of Stores, Vice President of Retail
 | Pickup Date      | The date when the order is picked up    |
 | Canceled Date    | The date when the order was canceled    |
 | Shipping Method  | The Shipping method by which order is   |
-
 
 ## Daily Unfulfilled Expedited Orders
 

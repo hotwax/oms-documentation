@@ -2,7 +2,7 @@
 description: >-
  Discover the process of creating pickers in HotWax Commerce through CSV import or the user management app.
 ---
-HotWax Commerce allows retailers to select pickers to streamline the process of picking orders from the shelves. As orders continuously flow in, efficient delegation of the picking items to pickers is crucial for timely processing. This delegation ensures that orders are processed promptly and accurately, contributing to customer satisfaction and retention. Furthermore, the feature facilitates incentive-based performance evaluation for pickers, motivating them to handle orders efficiently. 
+HotWax Commerce allows retailers to select pickers to streamline the process of picking orders from the shelves. As orders continuously flow in, efficient delegation of the picking items to pickers is crucial for timely processing. This delegation ensures that orders are processed promptly and accurately, contributing to customer satisfaction and retention. Furthermore, the feature facilitates incentive-based performance evaluation for pickers, motivating them to handle orders efficiently.
 Store managers can assign the picklist to picker to pick orders from the fulfillment app. The generated picklists can be printed or displayed in the picking app. Only the users with the picker role will be visible to store managers when assigning orders. Pickers can be created in two ways:
 
 **Adding Pickers in Bulk**
@@ -30,7 +30,6 @@ Store managers can assign the picklist to picker to pick orders from the fulfill
 Video: Adding Pickers in Bulk
 {% endembed %}
 
-
 **Adding Individual Pickers**
 
 1. Navigate to the `user management app` of HotWax Commerce.
@@ -41,7 +40,7 @@ Video: Adding Pickers in Bulk
 Video: Adding Individual Pickers
 {% endembed %}
 
-**Verify Picker** 
+**Verify Picker**
 
 1.Go to the `Store Fulfillment` app within HotWax Commerce.
 

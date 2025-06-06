@@ -44,6 +44,4 @@ Read here to [learn more](https://docs.hotwax.co/documents/v/retail-operations/w
 
 By following these detailed steps, you can effectively troubleshoot and resolve synchronization issues between HotWax Commerce and Shopify caused by jobs not being scheduled or incorrectly scheduled. This ensures smooth job execution, minimizes system performance issues, and maintains accurate data management.
 
-
-
 {% embed url="https://youtu.be/-ThjkFCQSWY" %}

@@ -70,11 +70,11 @@ Note: Additionally, this ECA service also offers the option to manually trigger 
 #### Configuration details:
 
 ```
-<ProductStoreEmailSetting 
+<ProductStoreEmailSetting
   emailType="PRDS_READY_TO_PICKUP"
-  productStoreId="STORE" 
-  subject="Ready For Pickup" 
-  templateContentId="READY_FOR_PICKUP", 
+  productStoreId="STORE"
+  subject="Ready For Pickup"
+  templateContentId="READY_FOR_PICKUP",
   systemMessageRemoteId= NN_LISTRAK_CONFIG>
 ```
 
