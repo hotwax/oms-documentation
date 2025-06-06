@@ -75,7 +75,7 @@ Setting Service Level Agreements (SLAs) within HotWax Commerce allows retailers 
 
 ### Generating Shipping Labels with Rate Shopping
 
-HotWax Commerce streamlines shipping label generation by automating the process based on order specifics like shipping method, box size, and delivery distance. Retailers need to associate carrier ID with the Facility to generate shipping labels with rate shopping. [Read here](ShippingGateways.md#add-carrier-facility) for more information.
+HotWax Commerce streamlines shipping label generation by automating the process based on order specifics like shipping method, box size, and delivery distance. Retailers need to associate carrier ID with the Facility to generate shipping labels with rate shopping. [Read here](./shipping-methods/carrier-and-shipment-methods.md) for more information.
 
 The system initiates an API call in the background when a picklist is created, leveraging SLA data to fetch shipping methods and charges. This ensures efficient selection of the most cost-effective shipping method within the specified delivery timeframe, saving time and resources for retailers.
 
