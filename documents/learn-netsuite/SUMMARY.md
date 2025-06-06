@@ -65,7 +65,7 @@
 * [Orders](synchronization-flows/order-sync/README.md)
   * [POS Cash Sales](synchronization-flows/order-sync/pos-cash-sales.md)
   * [Sync Customer](synchronization-flows/order-sync/sync-customer.md)
-  * [Sync Order IDs](synchronization-flows/order-sync/sync-orderIds.md)
+  * [Sync Order IDs](./synchronization-flows/order-sync/sync-orderIds.md)
   * [Approve Orders](synchronization-flows/order-sync/approve-orders.md)
   * [Reports](synchronization-flows/order-sync/reports.md)
 * [Allocation & Fulfillment](./synchronization-flows/allocation-fulfillment-sync/README.md)
