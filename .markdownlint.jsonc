@@ -12,6 +12,7 @@
   "MD030": true,     // Enforce consistent spacing after list markers (e.g., "- item", not "-item")
   "MD031": true,     // Fenced code blocks must be surrounded by blank lines before and after
   "MD032": true,     // Lists must be surrounded by blank lines above and below
+  "MD033": false,     // Allow inline HTML (e.g., for GitBook or custom formatting)
   "MD034": true,     // Disallow bare URLs — require using [text](url) format
   "MD037": true,     // Disallow spaces inside emphasis markers (e.g., "* bold *" is invalid — use "*bold*")
   "MD042": true,     // Disallow empty links (e.g., "[](url)" or "[text]()")
