@@ -7,7 +7,7 @@
 * [Setup SDF Bundle](sdf-bundle/README.md)
   * [Install SDF](sdf-bundle/install-sdf.md)
   * [Setup SFTP](sdf-bundle/setup-sftp.md)
-  * [Date Time Format](sdf-bundle/verify-date-time-format.md)
+  * [Date Time Format](sdf-bundle/verify-datetime-format.md)
 
 ## Prerequisites
 
