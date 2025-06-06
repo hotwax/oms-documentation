@@ -45,9 +45,9 @@ Video: Adding Individual Pickers
 
 1.Go to the `Store Fulfillment` app within HotWax Commerce.
 
-2.Access the Orders tab within the store `Fulfillment` application.
+2.Access the Orders tab within the store [`Fulfillment`](/documents/store-operations/fulfillment/fulfillment.md)
 
-3.Locate the order that need to be processed, or select [orders in bulk](../../store-operations/fulfillment/fulfillment.md)
+3.Locate the order that need to be processed, or select orders in bulk
 
 4.After selecting the desired orders we can select to pick order option to assign the picker or click on `Print Picklist` to generate the picking list.
 
