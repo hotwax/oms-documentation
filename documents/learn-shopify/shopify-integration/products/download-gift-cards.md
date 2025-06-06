@@ -32,7 +32,7 @@ Digital gift cards, also known as e-gift cards, are virtual equivalents of physi
 
 HotWax Commerce downloads physical and digital gift cards from Shopify in the same manner as other products with the `Import Products` job.
 
-Learn more about [product synchronization from Shopify to HotWax Commerc](https://app.gitbook.com/s/GNcmGkoNRfptyho21A56/orders)e
+Learn more about [product synchronization from Shopify to HotWax Commerce](/documents/learn-shopify/shopify-integration/products/download-products.md)
 
 The Product SKU serves as the primary identifier, which is mapped with the Product ID in HotWax Commerce. Consequently, if multiple gift cards in Shopify share the same SKU, they are associated with a common product ID in HotWax Commerce.
 

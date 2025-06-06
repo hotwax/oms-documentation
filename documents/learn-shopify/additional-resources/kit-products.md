@@ -83,4 +83,4 @@ For example, suppose a kit product consists of a belt and a wallet, with the inv
 
 In this case, the Bundles app calculates the total kit inventory as 4 by adding the total number of belts and wallets across both locations (belts: 3 + 1 = 4, wallets: 2 + 5 = 7). However, this calculation is incorrect because the actual number of kits that can be fulfilled is only 3. Brooklyn can fulfill 2 kits (with 3 belts and 2 wallets), and Broadway can fulfill 1 kit (with 1 belt and 1 wallet). The remaining items are insufficient to complete any additional kits.
 
-Learn more about how HotWax Commerce helps retailers [manage kit products](https://app.gitbook.com/s/XPO8jTog8zeT6LrxNy36/integration-flows/kit-products) and their components in Shopify and NetSuite if the retailer is not using the Bundles App.
+Learn more about how HotWax Commerce helps retailers [manage kit products](/documents/learn-netsuite/integration-flows/kit-products.md) and their components in Shopify and NetSuite if the retailer is not using the Bundles App.
