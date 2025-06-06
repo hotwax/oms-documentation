@@ -20,7 +20,7 @@ Navigate to the `Overview` section on the `Product Inventory View` page to acces
 
 **Sections within Overview**
 
-**A. Order Queue:** This section displays orders that currently lack allocated inventory. Orders in different queues, such as brokering queue, unfillable hold queue, pre-order queue, and backorder queue, are listed here. Explore further details about these queues [here](../../../facilities/manage-parkings.md).
+**A. Order Queue:** This section displays orders that currently lack allocated inventory. Orders in different queues, such as brokering queue, unfillable hold queue, pre-order queue, and backorder queue, are listed here. Explore further details about these queues [here](/documents/system-admin/administration/facilities/manage-parkings.md).
 
 **B. Threshold:** Retailers can establish a global threshold for products through the `Threshold Management` app. This quantity is subtracted from the overall Quantity on Hand (QOH) to prevent overselling on e-commerce platforms. Users can see the inventory that is subtracted from the overall QOH as the threshold.
 
