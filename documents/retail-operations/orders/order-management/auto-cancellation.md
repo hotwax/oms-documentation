@@ -25,7 +25,7 @@ Managing inventory and order fulfillment is a critical aspect of retail operatio
 * Go to the "Unavailable Item" card and add the desired auto-cancel date in the `Auto-Cancel Date` chip. This defines the time frame (e.g., 5 days) for holding the unfillable item before it is automatically canceled.
 * You can move the item to `unfillable parking` for the item with unavailable inventory so that it can be easily differentiated with the regular orders.
 
-![auto-cancellation](https://github.com/user-attachments/assets/d3d31c91-a612-45b4-99c0-e1c4b4e3f0af)
+![auto-cancellation](/documents/retail-operations/.gitbook/assets/unavailable-items.png)
 
 ## Removing Auto-Cancellations
 
