@@ -3,7 +3,7 @@
 * [Introduction](README.md)
 
 * [Inventory Sync](Flows/Inventory/InventorySync.md)
-  * [Challenges](Flows/Inventory/ChallengesInInventorySync.md)
+  * [Challenges](Flows/Inventory/challenges-in-inventory-sync.md)
   * [Technical Workflow](Flows/Inventory/TechnicalWorkflow.md)
 
 * [Order Sync](Flows/Order/OrderSync.md)
