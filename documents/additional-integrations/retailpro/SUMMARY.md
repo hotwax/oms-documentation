@@ -8,7 +8,7 @@
 
 * [Order Sync](Flows/Order/OrderSync.md)
   * [Technical Workflow of Invoicing from Single Location](Flows/Order/InvoiceFromSingleLocationTechWorkflow.md)
-  * [Technical Workflow of Invoicing from Multiple Location](Flows/Order/InvoiceFromMultipleLocationTechWorkflow.md)
+  * [Technical Workflow of Invoicing from Multiple Location](./flows/order/workflow-of-invoice-from-multiple-location.md)
 
 * [Send Sale Order](Flows/SendSaleOrder/SendSaleOrder.md)
   * [Technical Workflow](Flows/SendSaleOrder/TechnicalWorkflow.md)
