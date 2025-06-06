@@ -219,7 +219,7 @@ Final inventory rule
 {% hint style="warning" %}
 Once you've configured each rule, change its status from **Draft** to **Active** to make it operational. To do this, click on **Draft** and select **Active,** or revert an active rule back to **Draft** if any adjustments are required.
 
-Once all rules are active, and your routing is fully configured, set the [Brokering Run](broken-reference/) to **Active** so that orders can be processed as scheduled.
+Once all rules are active, and your routing is fully configured, set the [Brokering Run](/documents/retail-operations/orders/order-routing/brokering-runs.md) to **Active** so that orders can be processed as scheduled.
 {% endhint %}
 
 ### Add Special Handling for Standard Orders

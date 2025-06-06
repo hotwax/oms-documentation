@@ -86,12 +86,12 @@ In HotWax Commerce, the ability to view data logs is crucial for verifying the a
 
 * Identify the relevant configurations in the search results.
 * Click on the `open link` icon located in front of the service name.
-* The system will open the [Import Data page](broken-reference) for the selected service.
+* The system will open the [Import Data page](/documents/system-admin/administration/data-manager/troubleshooting/manual-data-import.md) for the selected service.
 
 3. Check the Status of the Service:
 
 * Review the displayed information to check the status of the service.
-* Ensure that the status of the service is finished. You can view different data status types [here.](broken-reference)
+* Ensure that the status of the service is finished. You can view different data status types [here.](/documents/integrate-with-hotwax/api/facility/postcode-lookup.md)
 * If any of the services fails, users can read the failed records through the data logs. Failed records are simply JSON/CSV file which has the failed reason appended at the end of the record, which can be used for troubleshooting.
 
 **View Logs for Detailed Information:**
