@@ -11,7 +11,7 @@
   * [Technical Workflow of Invoicing from Multiple Location](Flows/Order/InvoiceFromMultipleLocationTechWorkflow.md)
 
 * [Send Sale Order](Flows/SendSaleOrder/SendSaleOrder.md)
-  * [Technical Workflow](Flows/SendSaleOrder/TechnicalWorkflow.md)
+  * [Technical Workflow](./flows/sendsale-order/technical-workflow.md)
 
 * [Returns](Flows/Returns/return.md)
 
