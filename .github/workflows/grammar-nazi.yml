@@ -19,3 +19,4 @@ jobs:
         uses: DavidAnson/markdownlint-cli2-action@v13
         with:
           globs: '**/*.md'
+          configFile: .markdownlint-cli2.yaml
