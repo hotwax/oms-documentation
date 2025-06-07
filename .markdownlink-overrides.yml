@@ -1,5 +1,0 @@
-# .markdownlint-cli2.yaml
-MD034:
-  enable: true
-  ignorePatterns:
-    - '\{% embed url="https?://.*?" %\}'
