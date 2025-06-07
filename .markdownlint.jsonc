@@ -33,13 +33,13 @@
   "MD032": true,      // Lists must be surrounded by blank lines above and below
   "MD033": false,     // Allow inline HTML (useful for GitBook styling and custom formatting)
     "MD034": [
-+    true,
-+    {
-+      "ignorePatterns": [
-+        "\\{% embed url=\"https?://.*?\" %\\}"
-+      ]
-+    }
-+  ],                  // Disallow bare URLs, but skip your {% embed %} lines
+    true,
+    {
+      "ignorePatterns": [
+        "\\{% embed url=\"https?://.*?\" %\\}"
+      ]
+    }
+  ],                  // Disallow bare URLs, but skip your {% embed %} lines
   "MD035": false,     // Horizontal rule style should be consistent (e.g., "---" vs "***")
   "MD036": false,     // Emphasis style should be consistent (e.g., "*" vs "_")
   "MD037": true,      // Disallow spaces inside emphasis markers (e.g., "* bold *" is invalid — use "*bold*")
