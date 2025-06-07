@@ -19,4 +19,4 @@ jobs:
         uses: DavidAnson/markdownlint-cli2-action@v13
         with:
           globs: '**/*.md'
-          configFile: .markdownlink-overrides.yml
+          config: .markdownlink-overrides.yml
