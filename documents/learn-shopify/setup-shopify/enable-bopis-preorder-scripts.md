@@ -10,7 +10,7 @@ Retailers seeking to offer Buy Online, Pick Up In Store (BOPIS), or pre-order so
 
 Here's how you can enable BOPIS/Pre-order on Your Shopify PDP
 
-### Step-by-Step Usage Instructions:
+### Step-by-Step Usage Instructions
 
 1. **Login to HotWax Commerce:** Access your HotWax Commerce instance using your credentials.
 

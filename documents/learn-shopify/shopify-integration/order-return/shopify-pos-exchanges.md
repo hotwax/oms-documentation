@@ -120,7 +120,7 @@ In this scenario, when a customer returns an exchanged item, according to the Sh
 
 Note: add image of what the OPP panel looks like at this point in HotWax
 
-#### Returning the Entire Order Including Exchanged Items:
+#### Returning the Entire Order Including Exchanged Items
 
 In the event that the customer returns item D along with items B and C, Shopify will create two refund transactions, one to refund ShopPay1 and another to refund ShopPay2.
 

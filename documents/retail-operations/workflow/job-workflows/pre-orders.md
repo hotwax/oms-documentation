@@ -110,13 +110,13 @@ Internally, when this job is toggled onn HotWax makes a post API call to Shopify
 
 ---
 
-### Add Promise Date:
+### Add Promise Date
 
 When an order is placed containing a pre-order or back order items, HotWax identifies it and add the promise date in Shopify as a note on Order Level. This job is used to apply promise date to orders in Shopify.
 
 ---
 
-### Update Promise Date:
+### Update Promise Date
 
 When the estimated promise date on a purchase order changes, it's important to inform customers about updates to their orders linked to that inventory. The "Update Promise Date" job updates the promise date of order note in Shopify.
 

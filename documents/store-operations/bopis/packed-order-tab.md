@@ -31,7 +31,7 @@ Store associates can print picklists for `BOPIS` (Buy Online, Pick Up In Store) 
 
 For example, if a customer requests gift wrapping, the printed picklist will prominently display this instruction, enabling the associate to prepare the item accordingly before notifying the customer that their order is ready for `pickup`. This not only boosts accuracy in `order` `fulfillment` but also enhances the overall customer experience by ensuring all special instructions are seamlessly followed.
 
-## Steps to Print Picklists in the BOPIS App:
+## Steps to Print Picklists in the BOPIS App
 
 1. **Access the BOPIS App**: Open the HotWax Commerce BOPIS App on your device.
 2. **Navigate to the Order Details Page**: Go to the `Order Details` section to `view` all current `BOPIS` orders.

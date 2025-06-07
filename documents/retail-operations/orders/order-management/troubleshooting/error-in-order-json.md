@@ -1,10 +1,10 @@
 # Troubleshooting Synchronization Issues between HotWax Commerce and Shopify
 
-## Objective:
+## Objective
 
 This document provides a comprehensive guide to diagnose and resolve synchronization issues related to order import errors caused by special characters in notes and incorrectly formatted email fields.
 
-## Common Scenarios:
+## Common Scenarios
 
 1. Order import fails in HotWax Commerce OMS due to special characters in the "Note" field. Such as 🌟 👍 😊 or miscellaneous characters.
 2. Order import fails in HotWax Commerce OMS due to incorrectly formatted email addresses. Such as name#example.com or name@#example.com, etc.
@@ -14,9 +14,9 @@ This document provides a comprehensive guide to diagnose and resolve synchroniza
    - "Rollback called in Entity Engine SQLProcessor java.lang.Exception"
    - "E-mail address not formatted correctly, must be like: name@domain"
 
-## Step-by-Step Troubleshooting Process:
+## Step-by-Step Troubleshooting Process
 
-### Verify If Issue Exists:
+### Verify If Issue Exists
 
 1. **Access OMS:**
    - Navigate to HotWax Commerce OMS and log in with your user credentials.
@@ -26,7 +26,7 @@ This document provides a comprehensive guide to diagnose and resolve synchroniza
 2. **Check Shopify Logs:**
    - Review Shopify Plus logs or feeds for specific error messages related to the failed import.
 
-### Diagnose the Issue:
+### Diagnose the Issue
 
 1. **Identify Failed Order:**
    - Find the order that failed to import by looking at the error messages in OMS.
@@ -38,7 +38,7 @@ This document provides a comprehensive guide to diagnose and resolve synchroniza
    - Open the JSON file and locate the note key. Check for any special characters, emojis, or miscellaneous symbols.
    - Locate the email key and verify that the email address follows the standard format (e.g., name@domain).
 
-### Resolve the Issue:
+### Resolve the Issue
 
 1. **Remove Special Characters and Correct Email Format:**
    - Edit the JSON file to remove any special characters from the note field.

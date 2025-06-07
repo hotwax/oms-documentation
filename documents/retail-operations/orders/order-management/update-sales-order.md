@@ -89,7 +89,7 @@ HotWax Commerce can update the following details from Shopify:
 5. Changing customer contact detail
 6. Change in Order Fulfillment Status
 
-### Step-by-Step Usage Instructions:
+### Step-by-Step Usage Instructions
 
 **Verification at Shopify:**
 

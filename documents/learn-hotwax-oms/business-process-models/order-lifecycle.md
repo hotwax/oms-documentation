@@ -63,13 +63,13 @@ Learn more about [order brokering and routing](/documents/retail-operations/orde
 
 A fulfillment location can primarily be a store or a warehouse location. Let’s understand what happens when the order routing engine allocates an order to a store and warehouse:
 
-### Store Fulfillment Success and Order Completion:
+### Store Fulfillment Success and Order Completion
 
 If an order has been routed to a store location, it can be fulfilled using the HotWax Commerce <mark style="color:orange;">**Store Fulfillment App.**</mark>
 
 After all the order items in the order are shipped, the order status is updated from <mark style="color:orange;">**“Approved” to "Completed"**</mark> in HotWax Commerce. A `Completed Orders` job in HotWax Commerce also updates tracking details and marks orders as <mark style="color:orange;">**“Fulfilled” in eCommerce.**</mark>
 
-### Store Fulfillment Failure:
+### Store Fulfillment Failure
 
 In the event store associates do not find the inventory to fulfill an order, for reasons such as items being out of stock or damaged, a store manager has the authority to reject that order.
 
@@ -82,13 +82,13 @@ When an order includes multiple items and inventory for one of them is unavailab
 
 Learn more about [Store Fulfillment](/documents/store-operations/fulfillment/fulfillment.md)
 
-### Warehouse Fulfillment Success and Order Completion:
+### Warehouse Fulfillment Success and Order Completion
 
 If an order has been routed to a warehouse location, it can be fulfilled using external systems like NetSuite or a Warehouse Management System (WMS).
 
 For orders fulfilled by an external system, HotWax Commerce receives the fulfillment status from the external system and marks the order as <mark style="color:orange;">**“Completed”**</mark>. Once the order status is updated from <mark style="color:orange;">**“Approved” to “Completed”**</mark>, HotWax Commerce sends the tracking details (if they are provided by the external system) to eCommerce and marks the orders <mark style="color:orange;">**“Fulfilled” in eCommerce**</mark>.
 
-### Warehouse Fulfillment Failure:
+### Warehouse Fulfillment Failure
 
 In the event, that a fulfillment location cannot fulfill an order that has been allocated to them and the fulfillment is rejected in the external system, a scheduled job in HotWax Commerce imports rejected orders and automatically moves them to the `Rejected Queue`. A dedicated brokering run is performed to check the orders in the `Rejected Queue` and reallocate inventory to them.
 
@@ -120,13 +120,13 @@ HotWax Commerce provides an Integration App that can be installed on Shopify. Wh
 
 HotWax Commerce then checks the custom tag on orders. If the tag is present on an order, it is automatically sent to the customer's preferred pickup location without brokering. This is because the fulfillment location is pre-selected for BOPIS orders by customers.
 
-### BOPIS Fulfillment Success and Order Completion:
+### BOPIS Fulfillment Success and Order Completion
 
 Store associates can view BOPIS orders in their <mark style="color:orange;">**BOPIS Fulfillment App**</mark> and begin preparing the order for customer pick-up.
 
 Once the order is prepared, customer receives an email informing them that their order is ready for pickup. After an order has been picked up by the customer, the order status is updated from <mark style="color:orange;">**“Approved” to “Completed”**</mark> in HotWax Commerce. A `Completed Orders` job in HotWax Commerce also marks orders as <mark style="color:orange;">**"Fulfilled" in eCommerce.**</mark>
 
-### BOPIS Fulfillment Failure:
+### BOPIS Fulfillment Failure
 
 In the event store associates cannot find the inventory to fulfill a pick-up order, for reasons such as items being out of stock or damaged, a store manager has the authority to reject that order. All the rejected BOPIS orders are then automatically sent to the [`BOPIS Rejected Queue`](/documents/system-admin/administration/facilities/manage-parkings).
 

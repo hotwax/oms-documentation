@@ -14,26 +14,26 @@ By implementing this feature, HotWax Commerce users can manage customer data in 
 
 ## Steps to Delete Customer Data from UI
 
-### Search for Customer Email ID:
+### Search for Customer Email ID
 
 1. Navigate to the `Sales Order` page.
 2. Enter the customer's email ID in the search bar.
 
-### Select and Delete the Customer:
+### Select and Delete the Customer
 
 1. From the search results, select an order associated with the customer.
 2. Click on the customer’s name in the `Bill To` section.
 3. On the customer page, click the `Delete Customer` button at the top.
 4. The customer will be deleted from the OMS.
 
-### Verify Customer Deletion:
+### Verify Customer Deletion
 
 1. Return to the `Sales Order` page.
 2. Search for the customer's email ID.
     - If no orders are displayed, the customer has been successfully deleted.
     - If the customer name is still displayed, proceed to the next step.
 
-### Reindex Orders:
+### Reindex Orders
 
 1. For each order visible:
     - Open the order associated with the email ID.
@@ -42,7 +42,7 @@ By implementing this feature, HotWax Commerce users can manage customer data in 
     - If no orders are displayed, the reindexing is successful.
     - If orders are still present, proceed to the next step.
 
-### Run `createOrderIndex` Service:
+### Run `createOrderIndex` Service
 
 1. Open `Webtools` and click the `Service Engine` button.
 2. Search for and open the `createOrderIndex` service.
@@ -65,7 +65,7 @@ By implementing this feature, HotWax Commerce users can manage customer data in 
 ### Schedule the Service by Adding the PartyID of the Customer
    * After selecting the `deleteCustomerDetails` service, you will be prompted to schedule it. Provide the `PartyID` of the customer whose data you wish to delete. This ensures that the deletion process targets the correct customer information.
 
-### Execute the Service:
+### Execute the Service
    * Once you've added the `PartyID`, proceed to execute the service. This action triggers the deletion process, securely removing the specified customer's details from the system.
 
 ### Verify Deletion

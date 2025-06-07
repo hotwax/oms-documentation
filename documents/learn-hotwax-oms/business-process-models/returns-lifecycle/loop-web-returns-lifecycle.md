@@ -107,7 +107,7 @@ HotWax Commerce uses a scheduled job to sync all Completed returns from Shopify,
 
 To prevent duplicate inventory updates, HotWax recommends disabling the inventory restock feature in Loop, as NetSuite and HotWax manage inventory adjustments.
 
-### How HotWax Commerce OMS Helps with Return Reconciliation?
+### How HotWax Commerce OMS Helps with Return Reconciliation
 
 To maintain data integrity, HotWax Commerce provides an auditing tool OReSA that automatically compares returns totals of the eCommerce platform with the ERP.
 

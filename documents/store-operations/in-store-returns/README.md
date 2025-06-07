@@ -8,7 +8,7 @@ description: >-
 
 The **Creating In-Store Returns** feature in HotWax Commerce addresses challenges for retailers selling products across multiple channels. In the absence of online order information in POS systems, in-store returns can become complex. HotWax Commerce, an Omnichannel Order Management system, resolves this by maintaining records of online orders from e-commerce platforms, ensuring efficient in-store return processes on the HotWax Commerce platform, and improving workflow for store associates.
 
-## How to Create In-Store Returns:
+## How to Create In-Store Returns
 
 1. Enter your user credentials (username and password) to log in to the HotWax Commerce Platform.
 2. **Navigate to Create Order Return:**

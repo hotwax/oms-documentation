@@ -12,7 +12,7 @@ Oftentimes a single method in NetSuite may be servicing multiple shipping method
 
 Depending on the NetSuite order import configuration, the ‘service code’ field should include either the method name or ID.
 
-## Sample data:
+## Sample data
 
 **Shipping method:**
 

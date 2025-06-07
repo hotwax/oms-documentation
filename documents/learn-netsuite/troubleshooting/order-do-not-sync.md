@@ -8,13 +8,13 @@ If orders do not have all valid order attributes, they remain in “created” s
 
 ### Verification
 
-#### Check Metafield in Shopify:
+#### Check Metafield in Shopify
 
 1. Log in to HotWax Commerce.
 2. Navigate to the order view page and click `ExternalID`. This will redirect you to the Shopify admin page.
 3. On the Shopify order page, check the right side in the Tag section. Verify if the order has the necessary Metafield.
 
-#### Check Metafield in HotWax Commerce OMS:
+#### Check Metafield in HotWax Commerce OMS
 
 1. Log in to HotWax Commerce.
 2. Go to the `order view page`
@@ -22,14 +22,14 @@ If orders do not have all valid order attributes, they remain in “created” s
 
 ### Resolution
 
-#### Order Metafield present in Shopify but Not in OMS:
+#### Order Metafield present in Shopify but Not in OMS
 
 1. Manually add the Metafield to the OMS.
 2. Go to the order view page in OMS.
 3. Locate the order attribute section.
 4. Add the missing Metafield.
 
-#### Order Metafield absent in Both Shopify and OMS:
+#### Order Metafield absent in Both Shopify and OMS
 
 1. Identify the cause of the missing Metafield.
 2. Check Shopify settings to ensure Metafields are correctly applied to orders.
@@ -45,12 +45,12 @@ To successfully create a sales order in NetSuite, having the customer informatio
 
 ### Verification
 
-#### Go to the Order View Page:
+#### Go to the Order View Page
 
 1. Log in to HotWax Commerce.
 2. Navigate to the order view page.
 
-#### Check Customer ID:
+#### Check Customer ID
 
 1. Click on the customer name in the "Bill to" section.
 2. You will be redirected to the customer page.
@@ -58,7 +58,7 @@ To successfully create a sales order in NetSuite, having the customer informatio
 
 ### Resolution
 
-#### Customer ID Missing:
+#### Customer ID Missing
 
 1. Check the [customer feed](https://docs.hotwax.co/documents/v/learn-netsuite/netsuite-deployment/prerequisites/sftplocations) for the order.
 2. Navigate to the SFTP customer feed in NetSuite.
@@ -72,19 +72,19 @@ If the customer's name or email ID contains special characters, it does not sync
 
 ### Verification
 
-#### Go to the Order View Page:
+#### Go to the Order View Page
 
 1. Log in to HotWax Commerce.
 2. Navigate to the order view page.
 
-#### Check Customer Name and Email:
+#### Check Customer Name and Email
 
 1. In the "Bill to" section, verify the customer's name contains any special characters.
 2. Click on the customer name. Verify if the customer's email includes any special characters.
 
 ### Resolution
 
-#### Special Characters Found:
+#### Special Characters Found
 
 1. Notify the client to adjust the customer name.
 2. Provide instructions to the client on how to update the name.
@@ -103,14 +103,14 @@ If an order doesn't have a payment preference, it cannot be synced with NetSuite
 3. In the “Payment Terms and Preferences” section, verify if preferences are set.
    Confirm if the payment information is available in Shopify by checking the [`Order JSON data imported`](https://docs.hotwax.co/documents/v/retail-operations/workflow/data-manager/troubleshooting/shopify-mdm) in OMS.  you can verify this on the Shopify order MDM
 
-#### If the payment details are missing in both Shopify and HotWax.
+#### If the payment details are missing in both Shopify and HotWax
 
 1. Log in to HotWax Commerce.
 2. Navigate to the order view page and click "ExternalID." This will redirect you to the Shopify admin page.
 3. Append /transactions.json to the order URL.
 4. Check if the Transaction is null.
 
-#### Verify Transaction in Shopify:
+#### Verify Transaction in Shopify
 
 1. Check the order in Shopify.
 2. Append `/transactions.json` to the order URL.
@@ -122,9 +122,10 @@ If an order doesn't have a payment preference, it cannot be synced with NetSuite
 
 1. Check if the payment method is not set in Hotwax.
 2. After the client makes the necessary changes, run the [`Import Order Update from Shopify`](https://docs.hotwax.co/documents/v/retail-operations/workflow/job-workflows/orders#import-order-updates-from-shopify) job to sync the data.
+
 3. Alternatively, you can manually add the payment preferences by clicking on the + “Payment Terms and Preferences” section.
 
-##### If the Payment Details are Not Set in both Hotwax and Shopify.
+##### If the Payment Details are Not Set in both Hotwax and Shopify
 
 1. Inform the client about the issue with the payment preferences.
 2. After the client makes the necessary changes, run the [`Import Order Update from Shopify`](https://docs.hotwax.co/documents/v/retail-operations/workflow/job-workflows/orders#import-order-updates-from-shopify) job to sync the data.

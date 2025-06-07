@@ -6,7 +6,7 @@ description: Learn about Brokering Runs.
 
 As discussed, <mark style="color:orange;">**brokering runs**</mark> serve as the highest level of organization in order routing, defining when and how frequently order routing takes place. Each brokering run has a specific _frequency_, such as every 5 minutes, hourly, daily, or at custom intervals based on business needs.
 
-### Why Use Multiple Brokering Runs?
+### Why Use Multiple Brokering Runs
 
 Multiple brokering runs allow retailers to set different frequencies for each batch of orders. For example, high-priority orders can be routed more frequently (every 5 minutes), so urgent orders receive immediate attention, while standard or less time-sensitive orders are routed at more moderate intervals (hourly).
 

@@ -4,7 +4,7 @@ description: Learn how HotWax Commerce manages pre-order and backorder catalogs.
 
 # Presell Catalog Management
 
-#### How are Pre-order and Backorder Catalogs Managed in HotWax Commerce?
+#### How are Pre-order and Backorder Catalogs Managed in HotWax Commerce
 
 In HotWax Commerce, merchandisers have the option to schedule the 'Auto Refresh Pre-sell Catalog' job, which will automatically add or remove pre-sell products from the HotWax Pre-order/Backorder category. Any items that are part of the Pre-order/Backorder category will be listed on Shopify as pre-order or backorder items.
 

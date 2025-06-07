@@ -37,7 +37,7 @@ Users can create individual order's picklist by clicking on the order ID which w
 Video: Regenerate picklist
 {% endembed %}
 
-## Pack Orders:
+## Pack Orders
 
 Mark orders packed when order items are ready to be shipped.
 

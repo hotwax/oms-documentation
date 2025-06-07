@@ -8,7 +8,7 @@ HotWax Commerce utilizes Solr, an open-source enterprise-search platform, to ind
 
 ### Troubleshooting Steps
 
-#### 1. Resolving Order Status Discrepancies:
+#### 1. Resolving Order Status Discrepancies
 
 * If an order remains in the created or approved status on the find sales orders page, while it's marked as `completed` in the OMS:
   * Navigate to the order details page and click on the reindex button located near the top of the page, next to the refresh button. This action will index the order correctly.
@@ -22,7 +22,7 @@ HotWax Commerce utilizes Solr, an open-source enterprise-search platform, to ind
 
 For more details, kindly refer to this [documentation](../../../system-admin/search-admin.md).
 
-#### 2. Correctly Indexing Orders on the "Find Order Details" Page:
+#### 2. Correctly Indexing Orders on the "Find Order Details" Page
 
 * Navigate to the `Find Order Details` page where you can manage order indexing.
 * Click the `Create Order Index` button to initiate the indexing process.
@@ -30,7 +30,7 @@ For more details, kindly refer to this [documentation](../../../system-admin/sea
 * After entering the order ID, click the `Create Order Index` button within the modal window to accurately index the order.
 * If no values are entered in the field, all available data will still be indexed automatically.
 
-#### 3. Addressing Fulfillment Issues:
+#### 3. Addressing Fulfillment Issues
 
 * Click the `Create OISGIR Index` button if an order is encountering fulfillment difficulties.
 * In the modal window that appears, enter the order ID associated with the order facing fulfillment issues.

@@ -6,7 +6,7 @@ To address this, retailers can create threshold rules to maintain a buffer stock
 
 For instance, if the brand **NotNaked** sets an Inventory Threshold of 10 units for Blue Shirts across their stores, the Available-to-Promise (ATP) inventory will be adjusted to ensure enough buffer stock is reserved.
 
-#### Example:
+#### Example
 
 * Times Square Inventory: 100 Units
   * Safety Stock: 10 Units

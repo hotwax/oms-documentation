@@ -4,7 +4,7 @@ description: Learn the process of downloading kit orders from Shopify to HotWax 
 
 # Kit Order Download
 
-### How are Orders for Kit Products Downloaded from Shopify to HotWax Commerce?
+### How are Orders for Kit Products Downloaded from Shopify to HotWax Commerce
 
 HotWax Commerce imports orders for kit products from Shopify through the `Import Orders` job.
 

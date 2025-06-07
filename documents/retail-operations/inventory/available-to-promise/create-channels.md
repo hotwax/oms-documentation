@@ -48,7 +48,7 @@ Linking Facility
 
 Retailers managing multiple online sales channels must decide which facility group will publish its inventory to which channel. This setup ensures that only selected facilities' inventory will be made available on the defined sales channels. Follow the steps below to publish inventory to your Shopify store using the Available-to-Promise (`ATP`) app.
 
-### Steps to Publish Inventory:
+### Steps to Publish Inventory
 
 1. **Access the `ATP` App** Navigate to the `ATP` app within HotWax Commerce and locate the `Inventory Channel` page.
 2. **Go to the `Publish` Tab** Once on the `Inventory Channel` page, click on the `Publish` tab to proceed. The `publish` tab has a list of all the Shopify shops connected with the product store. When you download the HotWax Commerce integration App for a Shopify Store, it automatically creates a Shopify shop in HotWax OMS. This Shopify shop is the representative of all the Shopify Stores for that specific brand. For example, since the retailer is selling the NotNaked Brand in both the US and Canada, both the US Shopify Store and Canada Shopify Store will be listed here.

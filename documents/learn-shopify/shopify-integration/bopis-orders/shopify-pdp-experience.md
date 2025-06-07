@@ -6,7 +6,7 @@ description: >-
 
 # Shopify PDP Experience
 
-### How Does HotWax Commerce show immediate product availability for store pickup on the Shopify PDP?
+### How Does HotWax Commerce show immediate product availability for store pickup on the Shopify PDP
 
 Shopify's built-in feature does not include the option to show in-store inventory availability on the Product Detail Page (PDP). This means that customers must check the availability of products in stores during the checkout process. HotWax Commerce provides a solution to this problem by allowing retailers to display inventory availability at nearby pickup locations. By installing the HotWax Commerce BOPIS PDP app on Shopify, retailers can show in-store inventory availability on their PDP and increase their conversion rates.\
 This is achieved through the following steps:

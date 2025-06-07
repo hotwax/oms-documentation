@@ -46,7 +46,7 @@ This webhook is used to receive inventory level updates from Shopify to HotWax, 
 
 </details>
 
-## More Jobs:
+## More Jobs
 
 ### Import Inventory
 

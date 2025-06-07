@@ -6,13 +6,13 @@ Inventory synchronization between **PredictSpring** and **HotWax Commerce** is a
 
 ## 1. Exporting Order Data to SFTP Location
 
-### Introduction:
+### Introduction
 
 The initial phase of the in-store sales inventory synchronization process involves exporting order data from **PredictSpring** and putting it into a designated SFTP location. **PredictSpring** facilitates this through a Transaction Log, or TLog, which comprehensively captures various store transactions, including in-store orders, endless aisle orders, returns, and exchanges.
 
 **PredictSpring** provides three methods for exporting data: Real-Time export, Batch export, and Webhook integration. For this integration, we have opted for the Webhook approach.
 
-### Configuring Real-Time Order Export Endpoint:
+### Configuring Real-Time Order Export Endpoint
 
 To initiate the export process, configure the Real-Time Order Export Endpoint within **PredictSpring**. **HotWax Commerce Integration Platform** provides an SFTP location, set up in **PredictSpring** as an endpoint.
 
@@ -20,7 +20,7 @@ Navigate to `CMS > Store Management > Advanced > Store Settings`.
 
 In this configuration, endpoints of SFTP locations are set to ensure a seamless real-time export process. Establish the endpoint (`OrderPostProcessingConfigJSON`) to enable **PredictSpring** to transmit order data to the designated external location via HTTP POST.
 
-### Exporting Order Data:
+### Exporting Order Data
 
 **PredictSpring** sends a `CustomerOrder` object as JSON to an SFTP endpoint of **HotWax Commerce Integration Platform** via HTTP POST. This event occurs at the end of order processing synchronously in **PredictSpring**. This orchestrated export process ensures that for each in-store sale, a TLog file is generated and placed in the specified SFTP location. This file, containing details of multiple order line items, sets the stage for the subsequent steps in the synchronization journey.
 

@@ -61,7 +61,6 @@ Displays all the historical jobs. Historical jobs can be filtered by their statu
 
 ####
 
-
 ### **Search**
 
 Easily locate specific jobs by name or category.
@@ -69,7 +68,6 @@ Easily locate specific jobs by name or category.
 {% embed url="https://youtu.be/HbBndcYS36Q" %}
 
 ###
-
 
 ### Filters
 

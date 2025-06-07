@@ -65,7 +65,7 @@ Basically, this job checks all the BOPIS orders placed between the timeframe of 
 
 ***
 
-### Ready to Pick BOPIS order Notification.
+### Ready to Pick BOPIS order Notification
 
 Job Name: `Ready to Pick BOPIS Order Notification`\
 Job Enum ID: `JOB_RP_BOPIS_ORD_NT`\
@@ -98,7 +98,7 @@ The recommended frequency for this job is 15 minutes. This job has `topicEnum Id
 
 ***
 
-### Auto cancellations:
+### Auto cancellations
 
 Job name: `Auto cancellations`\
 Service: `autoCancelOrderItems`\

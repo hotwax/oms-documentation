@@ -2131,7 +2131,7 @@ The Appeasements Financial Feeed Order Items feed has certain out-of-the-box cus
 
 </details>
 
-## Sample snippet from full JSON file to make inventory corrections:
+## Sample snippet from full JSON file to make inventory corrections
 
 ```
 "shipmentItems" : [ {

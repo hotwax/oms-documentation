@@ -20,13 +20,13 @@ The Data Manager Configurations page in the OMS empowers users to effectively ma
 
 Adding a new data configuration in OMS enables users to specify how data is imported and exported.
 
-#### Steps:
+#### Steps
 
 1. Click the `Add` button on the configurations page.
 2. In the modal that appears, provide information for fields such as Config ID, Description, Import Service, Import Path, Export Content ID, Export Service, Export Path, File Name Pattern, and Multi-threading.
 3. Click `Add` again to save the new configuration.
 
-#### Configuration Information Table:
+#### Configuration Information Table
 
 | Field                 | Description                                             |
 | --------------------- | ------------------------------------------------------- |
@@ -40,7 +40,7 @@ Adding a new data configuration in OMS enables users to specify how data is impo
 | **File Name Pattern** | A pattern for naming files.                             |
 | **Multi-threading**   | Y/N configuration for processing multiple files.        |
 
-#### Use Cases of some configurations:
+#### Use Cases of some configurations
 
 1. **File Name Pattern:**
    * _Scenario:_ Multiple file types share the same path on an SFTP server.
@@ -60,7 +60,7 @@ Adding a new data configuration in OMS enables users to specify how data is impo
 
 Editing an existing Data Manager Configuration allows users to update configurations based on evolving business needs or changing data sources.
 
-#### Steps:
+#### Steps
 
 * Search for the desired configuration by name or ID.
 * Click the `Edit` button at the end of the search result.
@@ -104,7 +104,7 @@ In HotWax Commerce, the ability to view data logs is crucial for verifying the a
 
 In the OMS data import/export process, setting up SFTP users is essential for smooth operations. Server paths, beginning with the SFTP username (e.g., `dummySftpUser/HotWax/SalesOrders/`), follow a consistent convention. HotWax simplifies user integration, minimizing manual errors. This streamlined setup is crucial for bulk user integration, allowing easy association with diverse import paths. By incorporating specific SFTP users into configurations, users can efficiently manage data flow, ensuring secure and error-free transactions within the OMS.
 
-#### Steps:
+#### Steps
 
 1. Select `Add SFTP User to Config`.
 2. Choose the SFTP user configuration path.

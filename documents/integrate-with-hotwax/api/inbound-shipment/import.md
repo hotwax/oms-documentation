@@ -4,7 +4,7 @@ description: Explore API and data feeds within the 'inbound shipment documentato
 
 # Import
 
-#### File Structure:
+#### File Structure
 
 | Field Name | Description | Example |
 |---|---|---|

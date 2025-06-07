@@ -14,7 +14,7 @@ Retailers need real-time insights into their product inventory, to ensure inform
 | Online ATP              | Inventory available for promise on online channels.    |
 | Available to Promise (ATP) | Inventory available for promise to customers, representing actual availability. |
 
-### Step-by-Step Usage Instructions:
+### Step-by-Step Usage Instructions
 
 1. Log in to HotWax Commerce by entering your credentials on the login page.
 2. Within the hamburger menu, find and select the `Warehouse` option. This will open a submenu with various warehouse-related functionalities.
@@ -30,7 +30,7 @@ Retailers need real-time insights into their product inventory, to ensure inform
 
 Retailers operating multiple warehouses or stores need facility-specific inventory visibility to efficiently manage and monitor product availability at each fulfillment location. The `Facility` filter provides users with visibility of products available at a particular facility, enabling users to make decisions regarding restocking, fulfillment, and redistribution. The `Facility` filter enhances workflow by enabling users to swiftly identify stock levels, assess inventory distribution, and optimize their supply chain operations.
 
-### Step-by-Step Usage Instructions:
+### Step-by-Step Usage Instructions
 
 1. Navigate to the `Find Product Inventory` page within HotWax Commerce. Look for the `Facility` filter option located at the top of the page.
 2. Click on the dropdown menu associated with the Facility filter. A list of available facilities or locations will appear.
@@ -47,7 +47,7 @@ In a multi-channel retail environment, efficient inventory management across var
 
 For example, if a retailer chooses the Amazon sales channel and searches for SKU "WJ08-XS-Gray" in the search bar they will get the breakdown of the product ATP that is available to sell online on Amazon.
 
-#### Step-by-Step Usage Instructions:
+#### Step-by-Step Usage Instructions
 
 1. Navigate to the `Find Product Inventory` page within HotWax Commerce where inventory details are displayed. Look for the Inventory Channel Filter, which is typically located at the top of the page.
 2. If you want to view inventory details for a specific inventory channel, click on the dropdown menu to select the desired channel from the available options.

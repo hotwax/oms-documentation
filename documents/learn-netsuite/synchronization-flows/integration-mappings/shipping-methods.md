@@ -10,7 +10,7 @@ Shipping methods in eCommerce are mapped in HotWax Commerce, responsible for ord
 
 To address this, the HotWax integration layer maps the original carrier and shipment method to the corresponding method in NetSuite. During order syncing to NetSuite, the integration layer checks saved mappings, ensuring accurate correspondence. This shipping method mapping guarantees alignment between selected eCommerce methods and their counterparts in both HotWax Commerce and NetSuite, facilitating order processing.
 
-## Creating a Shipping Method in HotWax Commerce:
+## Creating a Shipping Method in HotWax Commerce
 
 Shipping methods that are supported by the retailer need to be created in HotWax Commerce to ensure that the shipping information is sent to the shipping carrier. Shipping methods can be created by following these steps:
 

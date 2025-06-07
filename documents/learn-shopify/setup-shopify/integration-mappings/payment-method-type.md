@@ -27,7 +27,7 @@ Retailers can follow these steps:
 6. Click on the `Add` button to save the Payment Method Type mapping.
 7. To remove existing payment methods, click on the `delete` icon in the respective payment method row.
 
-## Mandatory Shopify Shop Payment Method Types:
+## Mandatory Shopify Shop Payment Method Types
 
 | Mapped Key               | Mapped Value             |
 | ------------------------ | ------------------------ |

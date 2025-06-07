@@ -247,24 +247,24 @@ The picklist includes the following fields:
 
 Follow these steps to use the picklist functionality, and refer to this [document](https://docs.hotwax.co/documents/store-operations/inventory/transfer-order-management/transfer-order-fulfillment) for a detailed process on transfer order fulfillment..
 
-#### 1. Generate the Picklist Document:
+#### 1. Generate the Picklist Document
 
 * After opening the TO in the transfer order section of the fulfillment app, click on the `Picklist` button on the bottom right corner of the page next to the `Create Shipment` Button.
 * A PDF document will be generated, listing all open items in the TO.
 * Print the picklist or keep it available for reference.
 
-#### 2. Pack Items Using the Picklist:
+#### 2. Pack Items Using the Picklist
 
 * As you pack the items into boxes, use the picklist to mark which items are going into which boxes.
 * Fill in the `Qty Picked` and `Box Number` fields on the picklist as you pack.
 
-#### 3. Enter Data into HotWax:
+#### 3. Enter Data into HotWax
 
 * Once packing is complete, refer to the picklist and enter the packed items into HotWax.
 * For each box, select the items that were packed, then click Create Shipment.
 * Generate the shipping label for each box based on the items packed.
 
-#### 4. Complete the Process:
+#### 4. Complete the Process
 
 * Continue using the picklist for any additional boxes or items in the TO.
 * Once all shipments are created and labels generated, the process is complete.

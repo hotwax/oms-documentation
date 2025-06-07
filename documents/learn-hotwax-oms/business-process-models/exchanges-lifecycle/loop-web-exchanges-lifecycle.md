@@ -71,7 +71,7 @@ HotWax Commerce synchronizes all web orders to NetSuite in the <mark style="colo
 
 Learn more about [order synchronization between HotWax Commerce and NetSuite](/documents/learn-netsuite/integration-flows/sales-order/README.md)
 
-### What about Inventory Updates for the Returned & New Exchange Item?
+### What about Inventory Updates for the Returned & New Exchange Item
 
 Inventory synchronization process remains the same for the returned item that we discussed in the [Web Returns Lifecycle](../returns-lifecycle/loop-web-returns-lifecycle.md).
 

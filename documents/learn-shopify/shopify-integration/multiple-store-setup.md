@@ -14,7 +14,7 @@ Subsequently, the primary catalog is linked to the child stores using the follow
 
 ## How to Maintain Accurate Catalog for Multiple Shopify Stores
 
-### Initial Product Creation in Shopify Store:
+### Initial Product Creation in Shopify Store
 
 **Create Product in Shopify Store:**
 

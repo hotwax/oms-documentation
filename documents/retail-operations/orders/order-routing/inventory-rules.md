@@ -6,7 +6,7 @@ description: Learn about Inventory Rules.
 
 As discussed, <mark style="color:orange;">**inventory rules**</mark> help orchestrate the process of choosing the most suitable fulfillment locations for each order in a batch of orders based on defined criteria like proximity, stock levels, and strategic priorities. These rules act as sequential steps in the order routing, guiding the brokering engine through multiple checks to find the best fulfillment location.
 
-## Why Use Multiple Inventory Rules?
+## Why Use Multiple Inventory Rules
 
 Multiple inventory rules are required because a single rule may not allocate inventory to all orders in a batch. If the first rule does not allocate inventory to some orders, the brokering engine will proceed to the next rule in sequence. This multi-step process continues through each rule until all possible options are exhausted.
 

@@ -5,29 +5,29 @@
 This document presents a case study of a Canada-based online retailer operating a central warehouse and multiple retail stores, with shipping capabilities extending to the USA. The retailer focuses on optimizing logistics to improve delivery speed, reduce operational costs, and enhance inventory management.
 This guide explores how businesses with similar models can leverage an advanced order routing system to achieve these goals.
 
-## Business Requirements for Order Fulfillment:
+## Business Requirements for Order Fulfillment
 
-#### Time-in-Transit:
+#### Time-in-Transit
 
 The retailer offers standard shipping with delivery within 7 days for all USA and Canada orders.
 
-#### Order Priority:
+#### Order Priority
 
 All orders should be prioritized by the FIFO rule, ensuring that orders placed first are brokered first.
 
-#### U.S. Order Fulfillment:
+#### U.S. Order Fulfillment
 
 To minimize international shipping costs, it is essential to fulfill all orders through the central warehouse rather than retail stores. Shipping directly from the warehouse ensures cost efficiency and avoids the higher expenses associated with international shipping from individual retail locations.
 
-#### Canada Order Fulfillment:
+#### Canada Order Fulfillment
 
 For orders within Canada, the warehouse is the primary fulfillment center. Retail stores act as backup fulfillment points only when the warehouse lacks sufficient inventory. This strategy enables effective inventory management while still providing backup options to meet demand.
 
-#### Orders with Unavailable Inventory:
+#### Orders with Unavailable Inventory
 
 If no inventory is available at any locations, the order should be available for re-routing. These unfillable orders should be rerouted along with regular orders.
 
-#### Routing Interval:
+#### Routing Interval
 
 The brokering should be scheduled frequently to ensure continuous and timely order processing.
 
@@ -35,11 +35,11 @@ The brokering should be scheduled frequently to ensure continuous and timely ord
 
 US Orders should be prioritized before Canada Orders since Canada orders can also be fulfilled from the store while US orders can only get inventory from the warehouse.
 
-#### U.S. Order Fulfillment:
+#### U.S. Order Fulfillment
 
 All US orders must be fulfilled exclusively from the central warehouse in Canada.
 
-#### Canada Order Fulfillment Priorities:
+#### Canada Order Fulfillment Priorities
 
 Warehouse First: Canada orders should be prioritized to be fully fulfilled from the warehouse.
 
@@ -140,17 +140,17 @@ For U.S. orders, the following inventory rule is applied to prioritize the centr
 {% embed url ="(https://youtu.be/aIYfEmxTTi4)" %} caption {% endembed %}
 ---
 
-### Create U.S. Order Batch:
+### Create U.S. Order Batch
 
 U.S. orders should be mapped to "US_Standard_Shipping," and a new routing batch should be created to ensure that these orders are fulfilled on a FIFO basis.
 
-### Create Inventory Rule for U.S. Orders:
+### Create Inventory Rule for U.S. Orders
 
 All U.S. orders should be fulfilled from the central warehouse. Select the facility group filter for the warehouse, allowing partial fulfillment to allocate available inventory. If items are unavailable, move them to the unfillable queue.
 
 ---
 
-### Activate Components:
+### Activate Components
 
 - **Activate Inventory Rules**: Define fulfillment strategies for U.S. and Canadian orders.
 - **Activate Each Order Batch**: Ensure orders are processed according to their respective shipping methods.

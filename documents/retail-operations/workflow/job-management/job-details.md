@@ -58,7 +58,7 @@ Make changes to the job's parameters, settings, or execution details as necessar
 
 ***
 
-## How to schedule a job?
+## How to schedule a job
 
 {% hint style="info" %}
 **Things to remember:**
