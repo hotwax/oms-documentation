@@ -32,11 +32,11 @@
   "MD031": true,      // Fenced code blocks must be surrounded by blank lines before and after
   "MD032": true,      // Lists must be surrounded by blank lines above and below
   "MD033": false,     // Allow inline HTML (useful for GitBook styling and custom formatting)
-    "MD034": [
+  "MD034": [
     true,
     {
       "ignorePatterns": [
-        "\\{% embed url=\"https?://.*?\" %\\}"
+        "{% embed url=\"https://.*?\" %}"  // Ignore GitBook embed syntax for YouTube and others
       ]
     }
   ],                  // Disallow bare URLs, but skip your {% embed %} lines
