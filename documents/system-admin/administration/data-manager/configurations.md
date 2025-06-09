@@ -8,106 +8,86 @@ description: >-
 
 ## Data Manager Configurations Guide
 
-The Data Manager Configurations page in the OMS empowers users to effectively manage data flow into and out of the OMS. This guide provides step-by-step instructions on adding and editing configurations, as well as integrating SFTP details into the configurations.
+The Data Manager Configurations page in the OMS is used to manage how data flows into and out of the platform. This guide explains how the System Administration team can create and update configurations, including steps to add SFTP details.
 
-### Accessing the Data Manager Configurations Page
 
-1. Go to the Hamburger menu.
+### How to Access the Data Manager Configurations Page
+
+1. Go to the Hamburger Menu.
 2. Select `Settings`.
-3. Click on `Data manager configurations`.
+3. Click on `Data Manager Configurations`.
 
 ### Add a New Configuration
 
-Adding a new data configuration in OMS enables users to specify how data is imported and exported.
+New configurations define how specific data is imported or exported.
 
 #### Steps
 
 1. Click the `Add` button on the configurations page.
 2. In the modal that appears, provide information for fields such as Config ID, Description, Import Service, Import Path, Export Content ID, Export Service, Export Path, File Name Pattern, and Multi-threading.
-3. Click `Add` again to save the new configuration.
+3. Click `Add` to save the new configuration.
 
 #### Configuration Information Table
 
 | Field                 | Description                                             |
 | --------------------- | ------------------------------------------------------- |
-| **Config ID**         | A unique identifier for the configuration.              |
-| **Description**       | A brief description of the configuration.               |
-| **Import Service**    | The OMS service for importing data into OMS.            |
-| **Import Path**       | The path from which the data is kept for OMS to import. |
-| **Export Content ID** | Content ID for exporting data.                          |
-| **Export Service**    | The OMS service or workflow for exporting data.         |
-| **Export Path**       | The path to which the data will be exported.            |
-| **File Name Pattern** | A pattern for naming files.                             |
-| **Multi-threading**   | Y/N configuration for processing multiple files.        |
+| **Config ID**         | Unique identifier for the configuration.                |
+| **Description**       | Short explanation of what the configuration handles.    |
+| **Import Service**    | Service name that handles incoming data.                |
+| **Import Path**       | Folder path for imported files.                         |
+| **Export Content ID** | Template identifier used while exporting data.          |
+| **Export Service**    | Service or workflow that handles outgoing data.         |
+| **Export Path**       | Destination folder for exported files.                  |
+| **File Name Pattern** | File matching pattern for imports/exports.              |
+| **Multi-threading**   | Y/N flag to decide whether to process multiple files in parallel.|
 
 #### Use Cases of some configurations
 
 1. **File Name Pattern:**
-   * _Scenario:_ Multiple file types share the same path on an SFTP server.
-   * _Purpose:_ Uniquely identify and categorize files for accurate processing by the import service.
+   * _Scenario:_ Multiple file types exist in the same SFTP folder.
+   * _Purpose:_ Allows to identify and match only relevant files during processing.
 2. **Multi-threading:**
    * _Scenario:_ Large data imports, e.g., product inventory resets with files exceeding 20 MB.
-   * _Purpose:_ Speed up processing by grouping data and allocating multiple threads simultaneously.
-   * _Note:_ Default value is 'N' (No)
+   * _Purpose:_ Data is divided and processed in parallel to reduce processing time.
+   * _Note:_ Default value is 'N'
 3. **Export Content ID:**
-   * _Scenario:_ HotWax uses content templates for exporting data with specific field values.
-   * _Purpose:_ Specify a unique identifier (Content ID) to ensure the export service selects the correct template for accurate data rendering and export.
+   * _Scenario:_ Export templates are used to format outgoing data.
+   * _Purpose:_ Identify the correct template for export based on this ID.
 4. **Export/Import Path:**
-   * _Scenario:_ Data communication between OMS and external systems through SFTP.
+   * _Scenario:_ Communication with external platforms over SFTP.
    * _Purpose:_ Specify accurate paths for file import/export; incorrect paths can result in failed data communication.
 
 ### Edit Configurations
 
-Editing an existing Data Manager Configuration allows users to update configurations based on evolving business needs or changing data sources.
+Configurations can be updated to match changes in data formats or business workflows.
 
 #### Steps
 
-* Search for the desired configuration by name or ID.
+* Use the search bar to find the configuration by name or ID.
 * Click the `Edit` button at the end of the search result.
 
 {% hint style="info" %}
-Config ID cannot be changed after creation. Create a new Config if a new Config ID is needed.
+The Config ID cannot be modified. To use a different ID, create a new configuration.
 {% endhint %}
 
 {% embed url="https://youtu.be/OEss4sNcvnQ" %}
 
 ## Notify On Failure
 
-The **Notify On Failure** feature in **Data Manager Configurations** allows system administrators and teams to choose whether they want to receive email alerts when file processing fails. This ensures that issues with critical data imports are caught and resolved quickly.
+The **Notify On Failure** allows controls whether the System Administrators team receives email alerts when file fails during processing.
 
 ### How to Enable or Disable Notifications
 
 #### Navigate to Data Manager Configuration
 
-- Go to **Hamburger menu > Settings > Data Manager Configurations**.
-- This page lists all existing Data Manager configurations.
-
-#### Locate the Desired Configuration
-
-- Identify the Data Manager configuration (e.g., **order import**, **attribute update**) for which you want to control notifications.
-- Use the search to narrow down the list.
-
-{% hint style="info" %} 
-Each configuration type may have different importance; for example, attribute updates may not need failure alerts as urgently as order    import.
-{% endhint %}
-
-#### Edit the Configuration
-
-- Click **Edit** (pencil icon) next to the selected configuration.
-- This opens the settings panel for that configuration.
-
-#### Set "Notify On Failure"
-
-- Locate the **Notify On Failure** field.
-- Set it to:
-  - `Y` – to enable email notifications when the file has error records.
-  - `N` – to disable notifications for when the file has error records.
-
-This setting determines whether your team will be alerted to failures immediately, which directly impacts your response time.
-
-### Save the Configuration
-
-- Click **Save** to apply changes.
+1. Go to **Hamburger Menu > Settings > Data Manager Configurations**.
+2. Search for the configuration (e.g., order import, attribute update).
+3. Click **Edit** (pencil icon) next to the selected configuration.
+4. In the configuration settings, find the Notify On Failure field:
+      it to:
+  - Set to `Y` to receive emails when error records are found.
+  - Set to `N` to skip notifications.
+5. Click **Save**.
 
 {% hint style="info"%} 
  - Notifications are sent to the email addresses configured in the instances.
@@ -115,11 +95,11 @@ This setting determines whether your team will be alerted to failures immediatel
 {% endhint %}
 
 
-### Verify the Data flow
+### How to Verify Data Flow
 
-In HotWax Commerce, the ability to view data logs is crucial for verifying the accuracy and completeness of imported data. These logs offer insights into the status of imported data, allowing users to verify the success of operations during the verification process.
+The System Administration team can use data logs to track file processing, confirm success, or review errors.
 
-#### Steps
+#### Steps to Check Logs
 
 1. Locate Desired Configuration:
 
