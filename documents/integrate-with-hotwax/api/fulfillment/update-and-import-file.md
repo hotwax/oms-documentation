@@ -4,7 +4,7 @@ description: Explore API and data feeds within the 'Update and Import File' docu
 
 # Upload and Import file API
 
-Imports shipped order details with the tracking code. To import file, you will need to call the /uploadAndImportfile endpoint with the POST method. 
+Imports shipped order details with the tracking code. To import file, you will need to call the /uploadAndImportfile endpoint with the POST method.
 
 ## Request
 
@@ -29,7 +29,6 @@ Note: Provide this information in form format
 |------------------|-----------------------------------------------------------------|----------------|
 | `uploadedFile`   | The uploaded file                                               |     Y          |
 | `configId`       | The datamanager configuration ID which is used to import files |     Y          |
-
 
 ## Response
 

@@ -69,6 +69,4 @@ To prevent simultaneous execution and duplicate orders, ensure the `Schedule Now
 
 Ensure orders are not manually approved by the CSR and fulfillment is not started. If fulfillment of the order is started, manually reject the order before cancellation. { % endhint %\}
 
-
-
 {% embed url="https://youtu.be/ovWVfOOvfmE" %}

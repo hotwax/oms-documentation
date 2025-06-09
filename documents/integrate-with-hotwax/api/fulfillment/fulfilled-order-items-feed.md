@@ -14,7 +14,7 @@ The Fulfilled Order Items Feed is a JSON-formatted feed generated from HotWax Co
 
 ### Synchronizing Inventory Changes with ERP Systems
 
-The Fulfilled Order Items Feed helps retailers who use fulfill orders through external systems but require updates to inventory deltas for maintaining accurate inventory levels, particularly within their inventory management systems like ERPs. This feed provides essential raw data directly from OMS, enabling retailers to utilize it as is or after transformation for seamless integration into external systems via file-based methods. This ensures that inventory records remain precise and up-to-date across various platforms. 
+The Fulfilled Order Items Feed helps retailers who use fulfill orders through external systems but require updates to inventory deltas for maintaining accurate inventory levels, particularly within their inventory management systems like ERPs. This feed provides essential raw data directly from OMS, enabling retailers to utilize it as is or after transformation for seamless integration into external systems via file-based methods. This ensures that inventory records remain precise and up-to-date across various platforms.
 
 ## Customization
 
@@ -2131,8 +2131,7 @@ The Appeasements Financial Feeed Order Items feed has certain out-of-the-box cus
 
 </details>
 
-
-## Sample snippet from full JSON file to make inventory corrections:
+## Sample snippet from full JSON file to make inventory corrections
 
 ```
 "shipmentItems" : [ {

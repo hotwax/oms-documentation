@@ -62,7 +62,6 @@
 * [Fulfilled Orders Items](sample-files/fulfilled-orders-items-json.md)
 * [Reset Inventory](sample-files/reset-inventory-csv.md)
 * [Return](sample-files/return-feed-json.md)
-  
 
 ## OMS Release Versions
 

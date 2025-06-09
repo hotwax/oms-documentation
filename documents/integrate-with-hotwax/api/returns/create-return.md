@@ -6,9 +6,11 @@ To create a return for a customer's order that has already been fulfilled and co
 ## Request
 
 ### Endpoint
+
 - POST: `https://{host}/api/createReturn`
 
 ### Header
+
 - Content-Type: application/json
 
 ### Body
@@ -67,7 +69,7 @@ To create a return for a customer's order that has already been fulfilled and co
                 "itemAdjustments": [
                     {
                         "returnAdjustmentTypeId": "",
-                        "amount": 
+                        "amount":
                     },
                     {
                         "type": "",
@@ -94,7 +96,6 @@ To create a return for a customer's order that has already been fulfilled and co
     }
 }
 ```
-
 
 **In the request body, include the information necessary for creating a return, including all the parameters listed below:**
 
@@ -219,13 +220,14 @@ The two return channels are as follows:
 
 </details>
 
-
 ## Response
 
 ### Header
+
 - Content-Type: application/json
 
 ### Body
+
 The response will include all the parameters provided in the request body, along with any error messages and login information.
 
 <details>

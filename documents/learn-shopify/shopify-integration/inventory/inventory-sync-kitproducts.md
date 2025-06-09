@@ -10,7 +10,7 @@ description: >-
 
 The `Bulk Recent Kit Product Inventory Setup` job calculates the inventory of the kit products by considering the lowest common denominator among its components at a given location.
 
-#### Example 1:
+#### Example 1
 
 A kit product consisting of a belt and wallet distributed across multiple locations:
 
@@ -22,7 +22,7 @@ A kit product consisting of a belt and wallet distributed across multiple locati
 
 It will record an inventory of **3** in HotWax Commerce for this kit product because only the Broadway store has both belts and wallets. So, a kit product can only be fulfilled from the Broadway store. The inventory reflects the available quantity of the most limited component at a location where both components are available.
 
-#### Example 2:
+#### Example 2
 
 Another example of a belt and wallet distributed across multiple locations:
 
@@ -42,7 +42,7 @@ If any retailer is using the Bundles App to sell kit products and their componen
 
 The Bundles App aggregates the lowest inventory of each component accessible across every location to determine kit inventory. Because it ignores the need for every element of a kit to be accessible at the same place to fulfill the order, this method may lead to inaccurate inventory counts.
 
-#### Example:
+#### Example
 
 Suppose a kit product consists of a belt and a wallet, with the inventory distributed between two stores:
 
@@ -60,7 +60,7 @@ However, this calculation is incorrect because the actual number of kits that ca
 
 The remaining items are insufficient to complete any additional kits.
 
-### How does HotWax Commerce Synchronize the Inventory of Kit Products with Shopify?
+### How does HotWax Commerce Synchronize the Inventory of Kit Products with Shopify
 
 HotWax Commerce syncs the inventory of kit products and their components just like regular products, using webhooks and the `Upload Recent Inventory Change` [job](https://docs.hotwax.co/documents/learn-shopify/shopify-integration/how-does-hotwax-commerce-ensure-accurate-inventory-is-synchronized-to-shopify/inventory-synchronization#upload-recent-inventory-change). This process is the same for kit products and their components as other products.
 

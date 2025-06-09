@@ -13,13 +13,14 @@ Additionally, the Inventory Receiving App streamlines the receiving process by a
 
 For a step-by-step guide on receiving the shipment, refer to this [user guide](../receiving/receiving.md).
 
-## Receiving Discrepancy 
+## Receiving Discrepancy
+
 While receiving transfer orders, store associates may encounter discrepancies, such as:
 
-**Over Receiving** – Receiving more items than expected.  
+**Over Receiving** – Receiving more items than expected.
 For example, the Times Square store was supposed to receive 100 units of Product A but got 110.
 
-**Under Receiving** – Receiving fewer items than expected.  
+**Under Receiving** – Receiving fewer items than expected.
 For example, the Times Square store was supposed to receive 100 units of Product A but got 80.
 
 HotWax's [Receiving App](https://docs.hotwax.co/documents/store-operations/inventory/receiving/receiving#handle-discrepancies) helps store associates manage in-store receiving discrepancies. The app allows over-receiving, under-receiving as well as provides an option to receive unexpected items in a TO. HotWax’s BI Reports & Analytics platform also provides [Receiving Discrepancy](https://docs.hotwax.co/documents/analytics/reports/inventory#receiving-discrepancies-by-product) report for the operations team to track and manage these discrepancies.

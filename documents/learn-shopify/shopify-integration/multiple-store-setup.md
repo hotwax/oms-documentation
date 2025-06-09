@@ -14,12 +14,12 @@ Subsequently, the primary catalog is linked to the child stores using the follow
 
 ## How to Maintain Accurate Catalog for Multiple Shopify Stores
 
-### Initial Product Creation in Shopify Store:
+### Initial Product Creation in Shopify Store
 
 **Create Product in Shopify Store:**
 
-* Go to your store on \`Shopify\`\`
-* Create new products on Shopify.
+* Go to your store on Shopify
+* Create new products on Shopify
 
 **Automatic Sync with HotWax Commerce:**
 

@@ -23,7 +23,7 @@ Access the instance web tools using this URL: [https://{instance.name}.hotwax.io
 
 If the job data is not found, it means it's missing, and you need to add it. Refer to the [forum post](https://forum.hotwax.io/t/setting-up-custom-job-data-in-hotwax-commerce-job-manager/126) for guidance on how to create and input job data.
 
-## Additional Steps for Checking Service and Job Runtime Data:
+## Additional Steps for Checking Service and Job Runtime Data
 
 In cases where the job draft data is available but scheduling issues persist, follow these steps:
 
@@ -39,11 +39,11 @@ In cases where the job draft data is available but scheduling issues persist, fo
 2. Search for the `Runtime Data` entity and input the runtime ID in the "Runtime ID" field.
 3. Click the search button.
 
-### If Runtime Data is Missing:
+### If Runtime Data is Missing
 
 If no runtime data is found, it is missing. Add runtime data from Webtools: Import/Export page using XML data. Refer to the [forum post](https://forum.hotwax.io/t/setting-up-custom-job-data-in-hotwax-commerce-job-manager/126) for guidance on how to input runtime data.
 
-### If Runtime Data is Incorrect:
+### If Runtime Data is Incorrect
 
 If runtime data is available, and the job is still not executing, the data is incorrect.
 

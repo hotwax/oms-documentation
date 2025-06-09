@@ -25,8 +25,6 @@ Allows accessing all HotWax Commerce applications.
 
 **Single Sign-On (SSO):** Enables users to log in applications using their credentials. After the initial login in the Launchpad, they gain automatic access to all associated applications without the need to enter their login details again.
 
-
-
 ## **Application Categories**
 
 Shows how apps are categorized on basis of their characteristics.

@@ -6,7 +6,7 @@ description: >-
 
 # Configure Product Store
 
-## Configuration Steps:
+## Configuration Steps
 
 1. **Log in to OMS:**
    * Access the OMS platform via [https://{instanceName}.hotwax.io/](https://{instancename}.hotwax.io/).
@@ -20,7 +20,7 @@ description: >-
 
 ***
 
-### Configurations are as follows:
+### Configurations are as follows
 
 #### Edits as needed
 

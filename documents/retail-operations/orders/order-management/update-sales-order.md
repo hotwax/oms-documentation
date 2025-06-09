@@ -89,7 +89,7 @@ HotWax Commerce can update the following details from Shopify:
 5. Changing customer contact detail
 6. Change in Order Fulfillment Status
 
-### Step-by-Step Usage Instructions:
+### Step-by-Step Usage Instructions
 
 **Verification at Shopify:**
 
@@ -127,8 +127,6 @@ CSR teams can manually input personalized messages on behalf of customers upon r
 Any special instructions or handling requirements associated with the items in the group can be added by clicking on the `Add` button against Handling instruct. The handling instructions added here will be visible in the fulfillment app for store associates
 
 {% embed url="https://youtu.be/TE4WrSwqMMY" %}
-
-
 
 ### Add Ship By and Ship After Date
 

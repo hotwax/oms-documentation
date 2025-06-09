@@ -14,7 +14,7 @@ Merchants can schedule an `Import Products in Bulk` job in HotWax Commerce to do
 
 2. **Product Creation in HotWax Commerce**- After downloading, the JSON files are read from the file system, and product records are created in HotWax Commerce's database through the `Process bulk imported files` job. If any data issues arise, error logs are recorded for later correction.
 
-### Product data from Shopify is mapped in HotWax Commerce fields as outlined in the following table:
+### Product data from Shopify is mapped in HotWax Commerce fields as outlined in the following table
 
 1. **Parent Product**
 

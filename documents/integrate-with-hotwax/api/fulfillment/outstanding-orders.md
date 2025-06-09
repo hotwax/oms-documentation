@@ -41,7 +41,7 @@ Example: https://demo-oms.hotwax.io/api/solr-query
       "orderStatusId: ORDER_APPROVED",
       "isPicked: N",
       "-shipmentMethodTypeId: STOREPICKUP",
-      "-fulfillmentStatus: Cancelled", 
+      "-fulfillmentStatus: Cancelled",
       "facilityId: NN_WH"
     ],
   }

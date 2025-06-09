@@ -1,7 +1,8 @@
 ---
 description: >-
   Learn how how store to warehouse transfer orders are processed in HotWax Commerce.
---- 
+---
+
 # Store to Warehouse
 
 Store managers can return excess or unsold inventory from stores to the warehouse with store to warehouse transfer orders.
@@ -136,5 +137,4 @@ Inventory for transfer order items received in the warehouse is synchronized whe
 <figure><img src="../../.gitbook/assets/39.png" alt=""><figcaption><p>Transfer Order Items Fulfilled in HotWax Commerce "Store Fulfillment App"</p></figcaption></figure>
 
 {% file src="../../.gitbook/assets/Transfer Order Fulfilled Items Feed (1).txt" %}
-
 

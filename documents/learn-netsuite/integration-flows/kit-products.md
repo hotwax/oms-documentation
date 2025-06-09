@@ -2,6 +2,7 @@
 description: >-
   Learn how NetSuite integration helps manage kits and its components in HotWax Commerce for accurate inventory.
 ---
+
 # Kit Products
 
 ## Synchronization of Kit Products from NetSuite to HotWax Commerce
@@ -14,17 +15,19 @@ The synchronization of kit products from NetSuite to HotWax Commerce follows a t
 
 1.1 The catalog of kit products and their components is fetched by a SuiteScript (runs once in a day to fetch all time records) in NetSuite, which creates a CSV file and places it in an SFTP location.
 
-#### SuiteScript:
+#### SuiteScript
+
 `HC_MR_ExportedKITProductCSV`
 
-#### CSV:
+#### CSV
 
 | productId | productIdTo | quantity | productAssocTypeId |
 |-----------|-------------|----------|---------------------|
 | 10003     | 10571       | 1        | PRODUCT_COMPONENT   |
 | 10003     | 10594       | 1        | PRODUCT_COMPONENT   |
 
-#### SFTP Location:
+#### SFTP Location
+
 `/home/user-sftp/netsuite/product/kit-nifi`
 
 ### Step 2: Transformation
@@ -36,7 +39,8 @@ This file contains product SKUs, but HotWax Commerce requires its internal IDs a
 
 2.2 NiFi reads and transforms this CSV file into JSON format and converts the SKU to the HotWax Commerce internal ID so that HotWax Commerce can read this file. The JSON path is placed at an SFTP location.
 
-#### JSON Path:
+#### JSON Path
+
 `/home/user-sftp/netsuite/product/kit`
 
 ### Step 3: Import Kit and its Components in HotWax Commerce
@@ -51,7 +55,7 @@ The "Bulk Recent Kit Product Inventory Setup" job calculates the inventory of th
 
 **For Example:**
 
-#### For Single Location:
+#### For Single Location
 
 A kit product consisting of a belt and wallet at a single location:
 
@@ -61,7 +65,7 @@ A kit product consisting of a belt and wallet at a single location:
 
 It will record an inventory of 5 in HotWax Commerce for this kit product, reflecting the availability of the most limited component at this location in the kit product.
 
-#### For Multi-Location:
+#### For Multi-Location
 
 A kit product consisting of a belt and wallet distributed across multiple locations:
 
@@ -71,7 +75,7 @@ A kit product consisting of a belt and wallet distributed across multiple locati
 
 It will record an inventory of 3 in HotWax Commerce for this kit product, because only the Broadway store has both belts and wallets, so a kit product can only be fulfilled from the Broadway store. Thus, the inventory reflects the available quantity of the most limited component at a location where both components are available.
 
-#### Example for Correct Calculation:
+#### Example for Correct Calculation
 
 A kit product consisting of a belt and wallet distributed across multiple locations:
 

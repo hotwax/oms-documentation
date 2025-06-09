@@ -1,7 +1,7 @@
 ---
 description: >-
   Welcome to the Business Processes guide, designed to provide a detailed
-  understanding of our key operational workflows, including order fulfillment, 
+  understanding of our key operational workflows, including order fulfillment,
   inventory management, and order routing.
 ---
 

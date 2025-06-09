@@ -21,7 +21,7 @@ Only users with Super or Admin user permissions can access the `inventory` page 
    * Click on the `upload` button and select the preferred CSV file.
 4. **Mapping Fields and Identifying Errors:**
    * Map CSV file fields with corresponding HotWax Commerce fields.
-   *   The following fields need to be mapped in HotWax Commerce:
+   * The following fields need to be mapped in HotWax Commerce:
 
        | Field               | Description                                                   |
        | ------------------- | ------------------------------------------------------------- |

@@ -8,11 +8,11 @@ icon: gears
 
 # Order Routing
 
-## What is Order Routing?
+## What is Order Routing
 
 Retailers handling multiple sales channels and fulfillment locations need sophisticated order routing. It allows each order to be fulfilled from the most optimal location, considering factors such as shipping method, proximity to the customer, inventory levels, fulfillment capabilities, and the option to split orders across locations. Effective order routing helps retailers achieve faster delivery times, reduce shipping costs, and maintain balanced inventory across all locations.
 
-## What is Configurable Order Routing?
+## What is Configurable Order Routing
 
 Configurable order routing takes traditional routing a step further by allowing retailers to customize and fine-tune order routing across their fulfillment network. Instead of depending on a fixed set of rules, configurable routing uses a brokering algorithm that evaluates orders and fulfillment options against a series of sequential rule sets, each with specific conditions.
 

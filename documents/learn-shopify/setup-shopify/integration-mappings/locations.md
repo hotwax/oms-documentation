@@ -20,7 +20,7 @@ If you are using Shopify POS, you need to map the Shopify location ID with all t
 4. Click on `Add` to include new facilities, search for the facility from the dropdown, and add the Shopify location ID of the location from Shopify.
 5. Follow this process for all facilities.
 
-### How to extract Shopify POS Location ID from Shopify?
+### How to extract Shopify POS Location ID from Shopify
 
 Follow these steps to seamlessly integrate Shopify POS locations with their corresponding store facilities in HotWax Commerce:
 

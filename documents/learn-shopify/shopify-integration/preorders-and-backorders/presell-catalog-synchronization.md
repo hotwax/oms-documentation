@@ -4,7 +4,7 @@ description: Learn how HotWax Commerce syncs pre-order and backorder catalogs to
 
 # Presell Catalog Synchronization
 
-### How is the Pre-Order and Backorder Catalog Synced from HotWax Commerce to Shopify?
+### How is the Pre-Order and Backorder Catalog Synced from HotWax Commerce to Shopify
 
 The items that are available for pre-order or backorder are transferred from HotWax Commerce to Shopify through the "presell catalog sync" job. This job is set to run every 15 minutes by default and updates the product listings on Shopify based on any changes made to the pre-order/backorder category in HotWax Commerce within the last 15 minutes.
 

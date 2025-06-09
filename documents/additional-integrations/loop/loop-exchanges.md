@@ -4,6 +4,7 @@ description: >-
 ---
 
 # Exchanges
+
 An exchange refers to a transaction in which a customer returns a purchased item and, instead of receiving a refund or store credit, opts to swap the returned item for a different product.
 
 ## Data Flow
@@ -21,7 +22,6 @@ When a customer exchanges an item for another, references to the original order 
 The downloaded exchange orders are then brokered to the optimal fulfillment locations by HotWax Commerce.
 
 These exchange orders are also synchronized to NetSuite for further processing. Learn more about [synchronization of exchange orders from HotWax Commerce to NetSuite ERP.](https://docs.hotwax.co/documents/v/learn-netsuite/integration-flows/exchanges#README)
-
 
 ### Synchronize POS Exchanges to HotWax Commerce
 

@@ -75,8 +75,6 @@ Set up API Key in HotWax Commerce:
 <SystemProperty systemResourceId="KLAVIYO-STORE" systemPropertyId="revision" systemPropertyValue="2023-12-15" description="API version identified by this revision date (v2023-12-15) used for Klaviyo integration as of the specified release."/>
 ```
 
-
-
 </details>
 
 **The XML information contains the following details:**
@@ -194,8 +192,6 @@ Here's the XML structure that generates the `Ready for Pickup` email template in
 </ElectronicText>
 ```
 
-
-
 </details>
 
 ## Run Service to Create an Event on Klaviyo
@@ -261,9 +257,13 @@ Follow these steps to create the email flow in Klaviyo:
 </style>
 <![endif]-->
 <style>a:link {color:#197bbd;font-weight:normal;text-decoration:underline;font-style:normal}
+
 a:visited {color:#197bbd;font-weight:normal;text-decoration:underline;font-style:normal}
+
 a:active {color:#197bbd;font-weight:normal;text-decoration:underline;font-style:normal}
+
 a:hover {color:#197bbd;font-weight:normal;text-decoration:underline;font-style:normal}</style><style>#outlook a {
+
 padding: 0
 }
 body {
@@ -451,6 +451,7 @@ line-height: 1.3 !important
 }
 h1 {
 color: #222427;
+
 font-family: "Helvetica Neue", Arial;
 font-size: 40px;
 font-style: normal;
@@ -469,6 +470,7 @@ line-height: 1.1 !important
 }
 h2 {
 color: #222427;
+
 font-family: "Helvetica Neue", Arial;
 font-size: 32px;
 font-style: normal;
@@ -487,6 +489,7 @@ line-height: 1.1 !important
 }
 h3 {
 color: #222427;
+
 font-family: "Helvetica Neue", Arial;
 font-size: 24px;
 font-style: normal;
@@ -505,6 +508,7 @@ line-height: 1.1 !important
 }
 h4 {
 color: #222427;
+
 font-family: "Helvetica Neue", Arial;
 font-size: 18px;
 font-style: normal;
@@ -544,7 +548,9 @@ padding-right: 0 !important
 }
 }</style></head>
 <body style="word-spacing:normal;background-color:#f7f7f7;">
+
 <div class="root-container" id="bodyTable" style="background-color:#f7f7f7;">
+
 <div class="root-container-spacing">
 <table align="center" border="0" cellpadding="0" cellspacing="0" class="kl-section" role="presentation" style="width:100%;">
 <tbody>
@@ -557,8 +563,11 @@ padding-right: 0 !important
 <tr>
 <td style="direction:ltr;font-size:0px;padding:0px;text-align:center;">
 <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" bgcolor="#ffffff" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+
 <div style="background:#ffffff;background-color:#ffffff;margin:0px auto;border-radius:0px 0px 0px 0px;max-width:600px;">
+
 <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#ffffff;background-color:#ffffff;width:100%;border-radius:0px 0px 0px 0px;">
+
 <tbody>
 <tr>
 <td style="direction:ltr;font-size:0px;padding:20px 0;padding-bottom:0px;padding-left:0px;padding-right:0px;padding-top:0px;text-align:center;">
@@ -578,6 +587,7 @@ padding-right: 0 !important
 <tr>
 <td align="top" class="kl-header-link-bar" style="font-size:0px;padding:0px 0px 0px 0px;word-break:break-word;">
 <table border="0" cellpadding="0" cellspacing="0" style="color:#000000;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;border:0;" width="100%">
+
 <tbody>
 <tr>
 <td align="center" class="hlb-logo" style="display:table-cell;width:100%;padding-bottom:10px;">
@@ -637,8 +647,11 @@ padding-right: 0 !important
 <tr>
 <td style="direction:ltr;font-size:0px;padding:0px;text-align:center;">
 <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" bgcolor="#FFFFFF" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+
 <div style="background:#FFFFFF;background-color:#FFFFFF;margin:0px auto;border-radius:0px 0px 0px 0px;max-width:600px;">
+
 <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#FFFFFF;background-color:#FFFFFF;width:100%;border-radius:0px 0px 0px 0px;">
+
 <tbody>
 <tr>
 <td style="direction:ltr;font-size:0px;padding:20px 0;padding-bottom:0px;padding-left:0px;padding-right:0px;padding-top:0px;text-align:center;">
@@ -658,6 +671,7 @@ padding-right: 0 !important
 <tr>
 <td align="left" class="kl-text" style="font-size:0px;padding:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;word-break:break-word;">
 <div style="font-family:'Helvetica Neue',Arial;font-size:14px;font-style:normal;font-weight:400;letter-spacing:0px;line-height:1.3;text-align:left;color:#222427;"><div>
+
 <div><span>
 <p class="p1" style="padding-bottom:0"><span class="s1">Hello </span>{{ event.first_name }} {{ event.last_name }},</p>
 </span></div>
@@ -729,8 +743,11 @@ padding-right: 0 !important
 <tr>
 <td style="direction:ltr;font-size:0px;padding:0px;text-align:center;">
 <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" bgcolor="#ffffff" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+
 <div style="background:#ffffff;background-color:#ffffff;margin:0px auto;border-radius:0px 0px 0px 0px;max-width:600px;">
+
 <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#ffffff;background-color:#ffffff;width:100%;border-radius:0px 0px 0px 0px;">
+
 <tbody>
 <tr>
 <td style="direction:ltr;font-size:0px;padding:20px 0;padding-bottom:0px;padding-left:0px;padding-right:0px;padding-top:0px;text-align:center;">
@@ -757,15 +774,19 @@ padding-right: 0 !important
 <tr>
 <th class="kl-table-subblock" style="width:auto;overflow:hidden;padding-top:4px;padding-right:0px;padding-bottom:4px;padding-left:0px;">
 <div style="font-family:Arial;font-size:14px;font-weight:700;letter-spacing:0px;line-height:1.3;text-align:left;color:#222222;"></div>
+
 </th>
 <th class="kl-table-subblock" style="width:auto;overflow:hidden;padding-top:4px;padding-right:0px;padding-bottom:4px;padding-left:0px;">
 <div style="font-family:Arial;font-size:14px;font-weight:700;letter-spacing:0px;line-height:1.3;text-align:left;color:#222222;">Product Name</div>
+
 </th>
 <th class="kl-table-subblock" style="width:auto;overflow:hidden;padding-top:4px;padding-right:0px;padding-bottom:4px;padding-left:0px;">
 <div style="font-family:Arial;font-size:14px;font-weight:700;letter-spacing:0px;line-height:1.3;text-align:left;color:#222222;">Quantity</div>
+
 </th>
 <th class="kl-table-subblock" style="width:auto;overflow:hidden;padding-top:4px;padding-right:0px;padding-bottom:4px;padding-left:0px;">
 <div style="font-family:Arial;font-size:14px;font-weight:700;letter-spacing:0px;line-height:1.3;text-align:left;color:#222222;">Price</div>
+
 </th>
 </tr>
 </thead>
@@ -793,12 +814,15 @@ padding-right: 0 !important
 </td>
 <td class="kl-table-subblock" style="width:auto;overflow:hidden;vertical-align:top;padding-top:4px;padding-right:0px;padding-bottom:4px;padding-left:0px;">
 <div style="font-family:'Helvetica Neue',Arial;font-size:14px;font-style:normal;font-weight:400;letter-spacing:0px;line-height:1.3;text-align:left;color:#222427;"><div>{{ items.product }}</div></div>
+
 </td>
 <td class="kl-table-subblock" style="width:auto;overflow:hidden;vertical-align:top;padding-top:4px;padding-right:0px;padding-bottom:4px;padding-left:0px;">
 <div style="font-family:'Helvetica Neue',Arial;font-size:14px;font-style:normal;font-weight:400;letter-spacing:0px;line-height:1.3;text-align:left;color:#222427;"><div>{{ items.quantity }}</div></div>
+
 </td>
 <td class="kl-table-subblock" style="width:auto;overflow:hidden;vertical-align:top;padding-top:4px;padding-right:0px;padding-bottom:4px;padding-left:0px;">
 <div style="font-family:'Helvetica Neue',Arial;font-size:14px;font-style:normal;font-weight:400;letter-spacing:0px;line-height:1.3;text-align:left;color:#222427;"><div>{{ items.price }}</div></div>
+
 </td>
 </tr>
 
@@ -862,6 +886,7 @@ padding-right: 0 !important
 <tr>
 <td style="width:122px;">
 <a href="https://www.klaviyo.com/?utm_medium=freebie&amp;utm_source=brand&amp;utm_term=YidwsB" style="color:#197bbd; font-style:normal; font-weight:normal; text-decoration:underline" target="_blank">
+
 <img alt="Powered by Klaviyo" height="50" src="https://d3k81ch9hvuctc.cloudfront.net/assets/email/branding/klaviyo-branding-option-0.png" style="border:0;display:block;outline:none;text-decoration:none;height:50px;width:100%;font-size:13px;" width="122"/>
 </a>
 </td>

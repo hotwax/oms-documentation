@@ -7,8 +7,6 @@ description: >-
 
 # BOPIS Fulfillment App
 
-
-
 The app also allows retailers to integrate their online and offline channels seamlessly, offering customers the convenience of buying online and picking up their purchases in-store. This omnichannel solution optimizes the BOPIS process, enhancing customer satisfaction and driving sales.
 
 {% hint style="info" %}

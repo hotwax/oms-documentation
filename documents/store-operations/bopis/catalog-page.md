@@ -21,11 +21,11 @@ The parent product name is visible on the BOPIS App Catalog page to help with pr
 
 <figure><img src="../.gitbook/assets/bopis-catalog.png" alt=""><figcaption><p>Image: Catalog Page</p></figcaption></figure>
 
-## Product Details Page Overview:
+## Product Details Page Overview
 
 The Product Details Page provides in-depth information on individual products. It not only showcases core product attributes like available sizes, colors, and Product ID but also highlights real-time availability insights.
 
-### Key metrics include:
+### Key metrics include
 
 * **Quantity on Hand**: The total stock available in store at any given time.
 * **Safety Stock**: Buffer inventory to prevent stockouts.

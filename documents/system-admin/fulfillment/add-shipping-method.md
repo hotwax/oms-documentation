@@ -12,14 +12,13 @@ To ensure seamless communication of shipping information across all systems, it'
 - Mapping Shipment Method between Shopify and HotWax.
 - Mapping between HotWax and NetSuite.
 
-
 A. **Creating a Shipment Method in HotWax**
 
 Establishing the corresponding shipping methods in HotWax is essential to provide HotWax with the necessary options for handling shipping. These methods can then be effectively mapped with the shipping methods associated with incoming orders, ensuring seamless processing and fulfillment.
 
 1. Log in to your user instance and navigate to `Settings` > `General Settings`.
 2. Locate the shipment method section and click on `Add`, which will open up a form. Fill in the required fields:
-     
+
      | Field Name             | Field Description                                    | Example Value   |
      |------------------------|------------------------------------------------------|-----------------|
      | Shipment Method Type ID| Identifier for the shipping method within HotWax.       | EXPEDITED       |
@@ -32,7 +31,7 @@ B. **Associating Shipment Method to Product Store and Carrier**
 By associating each shipping method with the corresponding product store and carrier, HotWax gains precise information about which brands and carriers are related to specific shipping methods. For example, this linkage allows HotWax to recognize that "Standard Shipping" is associated with the "product store X" and "Carrier Y." Consequently, when an order with "Standard Shipping" is received for "product store X," HotWax knows to apply the appropriate shipping rules and rates specific to that brand and carrier combination. This level of detail ensures accurate shipping calculations and streamlined order processing tailored to each brand's requirements.
 
 1. To configure the shipping options for your store, navigate to `Settings` > `Stores` and locate the Product Store Shipping Method section, you can add specific shipping methods by clicking the `Configure Shipping Method` button.
-   
+
 | Field Name                 | Field Description                                                | Example Value                  |
 |----------------------------|------------------------------------------------------------------|--------------------------------|
 | Product Store*             | Store selection for adding the shipping method.                  | Not Naked                      |
@@ -69,7 +68,7 @@ Mapping between HotWax Commerce and NetSuite involves establishing connections a
    | Field                      | Description                                    | Example Value                       |
    |----------------------------|------------------------------------------------|-------------------------------------|
    | Integration Mapping Key*   | The mapping ID present in HotWax.              | STANDARD                            |
-   | Integration Mapping Value* | Corresponding value present in NetSuite.       | STANDARD_UPS                        |  
+   | Integration Mapping Value* | Corresponding value present in NetSuite.       | STANDARD_UPS                        |
    | Description*               | Briefly describe the method.                   | NetSuite shipping method standard   |
 
 **Note:** Fields marked with asterisks are required field.

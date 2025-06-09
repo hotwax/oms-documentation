@@ -14,14 +14,14 @@ Example: `https://demo-oms.hotwax.io/api/performFind`
 
 Content-Type: application/json
 
-### Example Parameters: 
+### Example Parameters
 
 [https://demo-oms.hotwax.io/api/performFind?inputFields=<searchcondition>&entityName=<entityname>&fieldList=<fieldname>&fieldList=<fieldname>&viewSize=1](https://demo-oms.hotwax.io/api/performFind?inputFields=search_condition_value&entityName=entity_name_value&fieldList=field_name1&fieldList=field_name2&viewSize=1
 )
 
 ### Parameters
 
-The following parameters can be sent in the request: 
+The following parameters can be sent in the request:
 
 | Parameter Name | Description | Required (Y/N) |
 | -------------- | ----------- | -------------- |
@@ -42,9 +42,11 @@ Note: If `noConditionFind` is 'Y' then 'inputFields' parameter is optional.
 ## Response
 
 ### Status Code
+
 HTTP/1.1 200 OK
 
 ### Headers
+
 Content-Type: application/json
 
 ### Body
@@ -56,8 +58,8 @@ The response body will include the following data:
 | `count` | Results count |
 | `docs` | The array of results found |
 
+#### Example
 
-#### Example 
 ```
 {
   count: "1",

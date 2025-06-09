@@ -28,8 +28,6 @@ The Configuration Facility is a virtual facility that plays a critical role when
 Inventory Channel Creation
 {% endembed %}
 
-
-
 ### Link Facilities to the Inventory Channel
 
 To link facilities to an inventory channel:
@@ -46,13 +44,11 @@ If a Canadian retailer has two Shopify stores—one in the US and another in Can
 Linking Facility
 {% endembed %}
 
-
-
 ## Publishing ATP to a Sales Channel
 
 Retailers managing multiple online sales channels must decide which facility group will publish its inventory to which channel. This setup ensures that only selected facilities' inventory will be made available on the defined sales channels. Follow the steps below to publish inventory to your Shopify store using the Available-to-Promise (`ATP`) app.
 
-### Steps to Publish Inventory:
+### Steps to Publish Inventory
 
 1. **Access the `ATP` App** Navigate to the `ATP` app within HotWax Commerce and locate the `Inventory Channel` page.
 2. **Go to the `Publish` Tab** Once on the `Inventory Channel` page, click on the `Publish` tab to proceed. The `publish` tab has a list of all the Shopify shops connected with the product store. When you download the HotWax Commerce integration App for a Shopify Store, it automatically creates a Shopify shop in HotWax OMS. This Shopify shop is the representative of all the Shopify Stores for that specific brand. For example, since the retailer is selling the NotNaked Brand in both the US and Canada, both the US Shopify Store and Canada Shopify Store will be listed here.
@@ -60,9 +56,5 @@ Retailers managing multiple online sales channels must decide which facility gro
 4. **Choose the Inventory Channel** From the dropdown menu, select the inventory channel from which you want to publish. This corresponds to the facility group whose inventory will be pushed to the Shopify store.
 5. **Save and Schedule the Job** After selecting the appropriate options, click `Save Changes` to finalize the settings. This will schedule the inventory publishing job as per the selected time and frequency.
 
-
-
 <figure><img src="../.gitbook/assets/publish-atp-to-sales-channel 1.png" alt=""><figcaption><p>Publish ATP to a Sales Channel</p></figcaption></figure>
-
-
 

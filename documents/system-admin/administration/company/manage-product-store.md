@@ -36,8 +36,6 @@ The scope is limited to the product store name, as the company name and product 
 
 <figure><img src="../../.gitbook/assets/Screenshot from 2024-10-21 10-24-54.png" alt=""><figcaption></figcaption></figure>
 
-
-
 ### Administration
 
 {% hint style="danger" %}
@@ -49,8 +47,6 @@ Administration settings require special permissions and, if mismanaged, can impa
 
     * **Order Reservations:** OMS serves as the definitive source for inventory information, and as such, this setting should consistently remain at its default value of Y without alteration.
     * **Order Brokering:** Disabling brokering hinders OMS from optimizing inventory allocation for orders, defeating its intended purpose. Therefore, this setting should always be maintained at its default value of Y and should not be modified.
-
-
 
 ### Orders
 
@@ -69,8 +65,6 @@ Administration settings require special permissions and, if mismanaged, can impa
 
 * **Creation Deadline Days:** Specify the number of days permitted for creating returns for in-store. Adjust this value based on your return policy and operational needs.
 
-
-
 <figure><img src="../../.gitbook/assets/Screenshot from 2024-10-23 12-14-03.png" alt=""><figcaption></figcaption></figure>
 
 ### Brokering
@@ -86,8 +80,6 @@ Administration settings require special permissions and, if mismanaged, can impa
 
 * **Order Splitting:** Configure when no further order information is needed prior to order approval. Access this setting in the routing section of Brokering card, and adjust it according to your workflow requirements.
 * **Minimum Shipment Threshold Value:** Set threshold values for order items to ensure efficient order splitting while mitigating the risk of losses due to low-value shipments. Navigate to the routing or order management settings, and specify the desired threshold value, the shipment value will pick the currency set in the product store, ensuring consistency in currency throughout the order management process.
-
-
 
 <figure><img src="../../.gitbook/assets/brokering .png" alt=""><figcaption></figcaption></figure>
 
@@ -106,8 +98,6 @@ Administration settings require special permissions and, if mismanaged, can impa
 
 * **Partial Order Rejection:** Specify whether to reject a BOPIS (Buy Online, Pickup In Store) order partially when any order item inventory is insufficient at the store. This setting can be found in the store pickup settings section. Navigate to this section in your dashboard, locate the `Partial Order Rejection` option, and toggle it as required.
 
-
-
 <figure><img src="../../.gitbook/assets/fulfillment.png" alt=""><figcaption></figcaption></figure>
 
 ### Inventory
@@ -121,8 +111,6 @@ Administration settings require special permissions and, if mismanaged, can impa
 * **Hold Pre-order Physical Inventory:** Configure the inventory computation in the OMS to withhold physical inventory from being made available online for products with orders in the pre-order queue. To adjust this setting, navigate to the pre-order computation settings in your dashboard, locate the "Hold Pre-order Physical Inventory" option, and toggle it as needed.
 * **Pre-order Group:** Specify the facility group to be used for computing the pre-order catalog computation. To adjust this setting, navigate to the pre-order computation settings, find the "Pre-order Group" option, and select the appropriate facility group from the available options.
 
-
-
 <figure><img src="../../.gitbook/assets/inventory (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Product
@@ -131,8 +119,6 @@ Administration settings require special permissions and, if mismanaged, can impa
 
 * **Global Identifier:** This identifier is utilized universally across your business operations. To modify or set the global identifier, navigate to the identifier settings section within your dashboard. Locate the "Global Identifier" option and adjust it according to your requirements.
 * **Preferred Identifier View:** Opting for a preferred product identifier enables you to view products using your preferred identification across HotWax Commerce Apps. To set your preferred identifier view, access the identifier settings in your dashboard. Find the `Preferred Identifier View` option and select the desired product identifier from the available options.
-
-
 
 <figure><img src="../../.gitbook/assets/product.png" alt=""><figcaption></figcaption></figure>
 
@@ -145,8 +131,6 @@ Control what your customers are allowed to edit on their order when they are edi
 3. Delivery address change
 4. Pickup location change
 5. Cancel order before fulfillment
-
-
 
 <figure><img src="../../.gitbook/assets/order permission.png" alt=""><figcaption></figcaption></figure>
 

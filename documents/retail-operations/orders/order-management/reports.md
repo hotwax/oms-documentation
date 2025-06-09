@@ -37,7 +37,7 @@ The synchronization process between HotWax and Netsuite may encounter delays. Th
 - Head of e-commerce, Vice President of Retail
 
 **Report Glossary**
-  
+
 | Field Name         | Description                                                                               |
 |--------------------|-------------------------------------------------------------------------------------------|
 | ORDER_NAME         | This refers to the name or identifier of the order.                                         |
@@ -79,7 +79,7 @@ The "Duplicate Order" report provides crucial insights into the frequency of dup
 
 By understanding the extent of duplicate orders, retailers can take necessary actions to ensure that duplicate orders are removed from the system.
 
-**User** 
+**User**
 - Head of eCommerce, Vice President of Retail
 
 **Report Glossary**
@@ -119,7 +119,6 @@ The Cancelled Order Report provides weekly insights into cancellation rates, ena
 
 A weekly report is generated for retailers, and the frequency of the report can be updated as per the requirements.
 
-
 **User**
 - Head of eCommerce, Vice President of Retail.
 
@@ -143,7 +142,7 @@ This Graph helps in tracking the average approval duration over time. This helps
 **User**
 - Head of eCommerce, Vice President of Retail.
 
-**Report Glossary** 
+**Report Glossary**
 
 | Field Name                            | Description                                                                                   |
 |---------------------------------------|-----------------------------------------------------------------------------------------------|

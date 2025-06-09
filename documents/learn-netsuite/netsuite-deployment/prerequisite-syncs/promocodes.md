@@ -6,7 +6,7 @@ description: >-
 
 # Promo Codes
 
-## Order level discounts:
+## Order level discounts
 
 If an order has a discount code applied to it, during order sync to NetSuite, HotWax checks if the applied code is available in NetSuite. If the code is available then the exact code is used and the value of the discount is shared as the "Rate".
 

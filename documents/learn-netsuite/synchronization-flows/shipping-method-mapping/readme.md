@@ -2,7 +2,7 @@
 
 Shipping methods in Shopify are mapped in HotWax Commerce, responsible for order and fulfillment. When orders are synced from HotWax Commerce to NetSuite, it's essential to communicate the shipping method information to NetSuite. However, NetSuite may have a single method servicing multiple Shopify shipping methods. To address this, the HotWax integration table maps the original carrier and shipment method to the corresponding method in NetSuite. During order syncing to NetSuite, the integration layer checks saved mappings, ensuring accurate correspondence. This shipping method mapping guarantees alignment between selected Shopify methods and their counterparts in both HotWax Commerce and NetSuite, facilitating order processing.
 
-## Creating a Shipping Method in HotWax Commerce:
+## Creating a Shipping Method in HotWax Commerce
 
 Shipping methods that are supported by the retailer needs to be created in HotWax Commerce to ensure that the shipping information is sent to the Shipping carrier. Shipping methods can be created by following these steps:
 
@@ -16,7 +16,7 @@ Shipping methods that are supported by the retailer needs to be created in HotWa
 
 4. After entering the necessary details, click on the `Add` button to save the shipping method in HotWax Commerce.
 
-## Mapping Shipping Methods between HotWax Commerce and NetSuite:
+## Mapping Shipping Methods between HotWax Commerce and NetSuite
 
 Once shipping methods are created, they need to be mapped with NetSuite to provide accurate information for order processing and fulfillment. Follow these steps to map the shipping methods:
 

@@ -13,7 +13,7 @@ In HotWax Commerce, the shipping method mapping can be different based on the re
 
 ## Mapping for Specified Shipping Methods
 
-For retailers with agreements with carrier service providers, shipping method options are directly offered to customers. Customers can then choose their preferred shipping method, and charges are applied accordingly. In such scenarios, carrier providers automatically offer retailers the best shipping prices. In these instances, HotWax simplifies the process by only requiring the mapping of shipping methods from Shopify to HotWax for generating shipping labels. For instance, if a customer selects FedEx Two-Day Shipping on Shopify, this method would have been pre-mapped by the retailer, including rates, zones, and other pertinent information. When an order transitions from Shopify to HotWax, this shipping method seamlessly transfers over. 
+For retailers with agreements with carrier service providers, shipping method options are directly offered to customers. Customers can then choose their preferred shipping method, and charges are applied accordingly. In such scenarios, carrier providers automatically offer retailers the best shipping prices. In these instances, HotWax simplifies the process by only requiring the mapping of shipping methods from Shopify to HotWax for generating shipping labels. For instance, if a customer selects FedEx Two-Day Shipping on Shopify, this method would have been pre-mapped by the retailer, including rates, zones, and other pertinent information. When an order transitions from Shopify to HotWax, this shipping method seamlessly transfers over.
 
 ### Carrier Shipment Method Mapping
 
@@ -88,9 +88,7 @@ The system initiates an API call in the background when a picklist is created, l
 5. **Automatic Label Generation**: Upon selection, another API Call a shipping label is generated in the background, ready for store associates to print during the packing process.
 6. **Regeneration on Packaging Change**: If store associates modify the default packaging, the shipping label needs to be regenerated, prompting rate shopping to occur again to ensure accurate and cost-effective shipping.
 
-
 {% hint style="info" %}
 HotWax Commerce only supports rate shopping for a single carrier. If the retailer wants cross-carrier rate shopping, they have to integrate with a shipping aggregator like EasyPost. In such cases, the API call hits the endpoint of the aggregator and fetches shipment method from all the integrated carriers before selecting the most cost-effective shipment method.
 {% endhint %}
-
 

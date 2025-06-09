@@ -4,7 +4,7 @@
 
 In HotWax Commerce, every change in inventory numbers for a product generates an inventory log. This log details the reasons for the change and its impact on Available to Promise (ATP) and Quantity on Hand (QOH).
 
-#### Follow these steps to find the inventory log for a specific product:
+#### Follow these steps to find the inventory log for a specific product
 
 **Go to the Inventory Page**
 
@@ -28,7 +28,6 @@ In HotWax Commerce, every change in inventory numbers for a product generates an
 * To see inventory logs for a specific facility, use the facility dropdown menu at the top of the page.
 * Click on the `Facility` button and select the desired facility from the dropdown menu.
 * Again check the checkbox of the `Inventory log` to view the log specific to that facility.
-
 
 ### Reasons for Inventory Change
 

@@ -1,8 +1,8 @@
-# Cycle Count App  
+# Cycle Count App
 
-The HotWax Commerce `Cycle Count App` is designed for store associates and the operations team, enabling them to efficiently perform inventory cycle counts. Store associates can conduct cycle counting within their stores, while the operations team can manage cycle counts across multiple locations.  
+The HotWax Commerce `Cycle Count App` is designed for store associates and the operations team, enabling them to efficiently perform inventory cycle counts. Store associates can conduct cycle counting within their stores, while the operations team can manage cycle counts across multiple locations.
 
-All actions within the app require specific permissions, as outlined below.  
+All actions within the app require specific permissions, as outlined below.
 
 | No | Action                              | Permission                          | Description |
 |----|-------------------------------------|-------------------------------------|-------------|

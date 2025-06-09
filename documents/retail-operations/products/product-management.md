@@ -51,7 +51,7 @@ For having a quick view of a certain set of products, users can filter out the p
 
 Enables users to search selected products and export CSV by specifying safety stock value and uploading it back using EXIM for bulk products. Safety Stock will be established at all the associated facilities for the entire set of selected products. Users are allowed to manually create CSV, set safety stocks, and upload using EXIM for bulk products. Read more about safety stock in our complete [document](../inventory/safety-stock/).
 
-### Threshold:
+### Threshold
 
 Enables users to search and create CSV of all displayed products. A threshold will be established for the entire set of selected products. Users can manually create CSV and upload using `EXIM` for bulk products.
 

@@ -40,4 +40,3 @@ If you cannot find the NetSuite Integration page, navigate to the General Settin
 The integration layer maps the original entities in HotWax Commerce to their corresponding representations in NetSuite. This mapping is established through a key-value pair, where the key denotes the original entity, and the value signifies its counterpart in NetSuite.
 {% endhint %}
 
-
