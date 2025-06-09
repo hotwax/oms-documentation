@@ -25,7 +25,6 @@
   * [Rejection](fulfillment/rejection.md)
   * [Gift Card Activation](fulfillment/gift-card-activation.md)
   * [Picking App](fulfillment/picking-app.md)
-  * [CSV Support](fulfillment/csv-support.md)
   * [Settings Page](fulfillment/fulfillment-setting-page.md)
   * [Order Lookup](fulfillment/order-lookup.md)
   * [Transfer order creation](fulfillment/transfer-order.md)
