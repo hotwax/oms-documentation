@@ -72,7 +72,7 @@ The HotWax Commerce Fulfillment App is designed specifically for store fulfillme
 
 | S.No | Action                          | Permission | Description                                                                                                                    |
 | ---- | ------------------------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| 1    | Rejection reasons view          | SFA\_ADMIN | Grants access to the "Rejection Reasons" tab, where users can view and manage reasons for order rejections within the system.  |
+| 1    | Rejection reasons view          | STOREFULFILLMENT_ADMIN| Grants access to the "Rejection Reasons" tab, where users can view and manage reasons for order rejections within the system.  |
 | 2    | Variance type selection         | -          | Allows users to select a specific rejection reason from a predefined list when processing rejected orders.                     |
 | 3    | Ellipsis button > Remove reason | -          | Provides the ability to remove a rejection reason from the system, ensuring the list of reasons remains relevant and accurate. |
 | 4    | Add new Rejection reason        | -          | Opens a modal for users to create a new rejection reason, allowing customization of rejection types within the system.         |
