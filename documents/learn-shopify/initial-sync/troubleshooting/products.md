@@ -8,7 +8,7 @@ description: >-
 
 ## Scenario 1: Products Not Available in HotWax Commerce
 
-### Steps:
+### Steps
 
 1. **Verification on Shopify:**
    * Go to Shopify and verify if the products are available. If not, create the missing products.
@@ -17,7 +17,7 @@ description: >-
 
 ## Scenario 2: Product Available in Shopify and Not Available in OMS
 
-### Steps:
+### Steps
 
 1. **Check Shopify Jobs Section:**
    * Navigate to the HotWax Commerce platform.
@@ -38,7 +38,7 @@ For technical errors, contact HotWax support for assistance. These steps ensure 
 
 ## Scenario 3: Creating a Product and its Variants in Multiple Steps
 
-### When Does This Issue Occur?
+### When Does This Issue Occur
 
 This issue typically happens when a product and its variants are not created simultaneously in Shopify. Here’s a detailed explanation:
 

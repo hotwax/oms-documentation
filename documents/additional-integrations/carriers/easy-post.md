@@ -34,7 +34,7 @@ HotWax integrates with EasyPost using three key APIs, each serving a distinct pu
 
 ### Create a Shipment API
 
-#### Purpose:
+#### Purpose
 
 **Create Shipment API** shares all detailed shipment information with EasyPost, including package dimensions, weight, origin, and destination. In return, the API offers competitive rates from multiple carriers. For added flexibility, users can specify preferred carriers and their corresponding credentials. The API also generates custom shipping labels with adjustable size and format options.
 
@@ -42,9 +42,9 @@ HotWax integrates with EasyPost using three key APIs, each serving a distinct pu
 
 Fulfilling international orders requires accurate customs information for generating shipping labels and obtaining customs documents. While HotWax stores product details, it lacks the essential HS Tariff number and Custom Signer information for customs purposes.
 
-HotWax integrates with your ERP system, automatically fetching HS Tariff numbers for products during order fulfillment. This daily synchronization ensures readily available HS codes whenever new products are added. HotWax stores these retrieved HS Tariff numbers alongside existing Good identifications for each product. 
+HotWax integrates with your ERP system, automatically fetching HS Tariff numbers for products during order fulfillment. This daily synchronization ensures readily available HS codes whenever new products are added. HotWax stores these retrieved HS Tariff numbers alongside existing Good identifications for each product.
 
-Alongside, HS tariff number of the product, EasyPost also requires a custom_signer value during shipment creation to validate the request. HotWax retrieves the designated custom signer value assigned by retailer stored in system properties in OMS. 
+Alongside, HS tariff number of the product, EasyPost also requires a custom_signer value during shipment creation to validate the request. HotWax retrieves the designated custom signer value assigned by retailer stored in system properties in OMS.
 
 Once both HS Tariff numbers and custom signer information are available, HotWax constructs a streamlined create shipment API request to EasyPost and generate shipping label.
 
@@ -56,7 +56,7 @@ Once both HS Tariff numbers and custom signer information are available, HotWax 
 https://api.easypost.com/v2/shipments
 ```
 
-#### Request:
+#### Request
 
 <details>
 
@@ -158,7 +158,7 @@ https://api.easypost.com/v2/shipments
 | shipment.carrier_accounts | (not specified) | List of carrier accounts (optional) |
 | shipment.carrier_accounts[] | facilityAttribute.attrName.carrierAccounts | Individual carrier account |
 
-#### Response:
+#### Response
 
 {% hint style="info" %}
 `EasyPost` consistently structures its responses, maintaining a common format. Unique details specified in each request are appended to this structure, ensuring dynamic adaptability while preserving a standardized response format.
@@ -458,7 +458,7 @@ In response, `Easy Post` shares three types of rates, and in our integration, we
 
 ### Buy a Shipment API
 
-#### Purpose:
+#### Purpose
 
 The Buy a Shipment API is employed to share the rate ID of a specific shipment with EasyPost. This API facilitates the retrieval of a shipping label corresponding to the provided rate ID.
 
@@ -466,13 +466,13 @@ The Buy a Shipment API is employed to share the rate ID of a specific shipment w
 
 `POST`
 
-#### Endpoint:
+#### Endpoint
 
 ```
 https://api.easypost.com/v2/shipments/shp_7383fa71161645259664060fb5c41c32/buy
 ```
 
-#### Request:
+#### Request
 
 <details>
 
@@ -492,7 +492,7 @@ https://api.easypost.com/v2/shipments/shp_7383fa71161645259664060fb5c41c32/buy
 | ----------------- | --------------- |
 | `id`              | `rateId`        |
 
-#### Response:
+#### Response
 
 {% hint style="info" %}
 `EasyPost` consistently structures its responses, maintaining a common format. Unique details specified in each request are appended to this structure, ensuring dynamic adaptability while preserving a standardized response format.
@@ -591,7 +591,7 @@ In this response, HotWax relies on two vital fields: `tracking_code` provides th
 
 ### Refund a Shipment API
 
-#### Purpose:
+#### Purpose
 
 The Refund a Shipment API is employed to void the shipping label generated for a specific shipment. This is useful in cases where a shipment needs to be canceled or rerouted.
 
@@ -599,13 +599,13 @@ The Refund a Shipment API is employed to void the shipping label generated for a
 
 `POST`
 
-#### Endpoint:
+#### Endpoint
 
 ```
 https://api.easypost.com/v2/shipments/shp_a88f34ee108f4e82ab04b3570863f7fb/refund
 ```
 
-#### Request:
+#### Request
 
 <details>
 
@@ -619,7 +619,7 @@ https://api.easypost.com/v2/shipments/shp_a88f34ee108f4e82ab04b3570863f7fb/refun
 
 </details>
 
-#### Response:
+#### Response
 
 {% hint style="info" %}
 `EasyPost` consistently structures its responses, maintaining a common format. Unique details specified in each request are appended to this structure, ensuring dynamic adaptability while preserving a standardized response format.
@@ -824,6 +824,9 @@ These three APIs form the core of the integration, allowing HotWax to seamlessly
 
 ```
 - https://www.easypost.com/docs/api#create-a-shipment
+
 - https://www.easypost.com/docs/api#buy-a-shipment
+
 - https://www.easypost.com/docs/api#refund-a-shipment
+
 ```

@@ -1,6 +1,6 @@
 # Receiving Discrepancies by Product
 
-This discrepancy report helps retailers maintain inventory accuracy and uphold customer satisfaction. By highlighting inventory received that does not match the expected quantities, such as the example of **shoes-M-38** with a discrepancy of **4 units**, retailers can identify and rectify issues like shipment errors, theft, or miscounts. 
+This discrepancy report helps retailers maintain inventory accuracy and uphold customer satisfaction. By highlighting inventory received that does not match the expected quantities, such as the example of **shoes-M-38** with a discrepancy of **4 units**, retailers can identify and rectify issues like shipment errors, theft, or miscounts.
 
 Timely detection of such discrepancies enables corrective actions like adjusting stock levels, investigating root causes, and improving receiving processes, ultimately ensuring that customers receive the products they desire when they expect them.
 
@@ -13,7 +13,8 @@ Head of Store, Vice President of Retail
 | SKU         | Unique product code for tracking |
 | Difference  | Discrepancies in receiving       |
 
-# Recorded variances report 
+# Recorded variances report
+
 This Report provides retailers a detailed insights into discrepancies in inventory levels across different products and facilities. By highlighting specific product SKUs that have experienced variances and outlining the reasons behind these discrepancies, the report allows retailers to pinpoint areas of concern swiftly and accurately. Understanding the root causes of inventory discrepancies enables retailers to take proactive measures to rectify issues, whether they stem from inaccuracies in recording, theft, damage, or other factors.
 
 This report helps in optimizing inventory management by ensuring that stock levels align with demand and sales forecasts. By identifying variances promptly, retailers can prevent overstocking or stockouts, thus minimizing potential revenue losses.
@@ -33,7 +34,6 @@ Head of Store, Vice President of Retail
 | Description    | A detailed explanation often used to provide information about products.                          |
 | Enum ID        | Short for "Enumeration Identifier," it refers to a unique identifier within an enumeration.      |
 | Comments       | Additional remarks or information provided to explain.                                            |
-
 
 # Completed cycle report
 
@@ -74,11 +74,11 @@ Head of Store, Vice President of Retail
 | External Id (WMS) | Identification code used in the WMS to track items externally.                                   |
 | External Id       | An identification code used externally for tracking purposes.                                     |
 | Tracking Code     | Code used to monitor the orders.                                                                 |
-| Facility          | Location of a physical store or warehouse.                                                       
+| Facility          | Location of a physical store or warehouse.
 
 # Open Transfer order shipment
 
-This report provides insights into the movement of inventory within the supply chain. It offers an overview of the transfer process by presenting shipment IDs, origin and destination facilities, tracking numbers, and pending quantities for reception. 
+This report provides insights into the movement of inventory within the supply chain. It offers an overview of the transfer process by presenting shipment IDs, origin and destination facilities, tracking numbers, and pending quantities for reception.
 
 it enables efficient inventory management by identifying precisely which products are in transit and yet to be received, allowing retailers to anticipate stock availability accurately.
 
@@ -95,11 +95,11 @@ Head of Store, Vice President of Retail
 | shipment_status   | The shipment's current status (e.g., delivered, pending).                                           |
 | imported_date     | The date when the shipment information was imported or recorded.                                    |
 
-# POS orders vs POS variances 
+# POS orders vs POS variances
 
-Retailers require this report to effectively manage their inventory and streamline operations. By tracking POS-completed orders and ensuring that the same inventory variance is logged into the ERP system the retailer gains insights into any possible inventory discrepancy. 
+Retailers require this report to effectively manage their inventory and streamline operations. By tracking POS-completed orders and ensuring that the same inventory variance is logged into the ERP system the retailer gains insights into any possible inventory discrepancy.
 
-This report provides information about the quantity variance between pos orders and pos variance. Retailers can identify the problematic orders with incorrect inventory variance and resolve the errors, if any. 
+This report provides information about the quantity variance between pos orders and pos variance. Retailers can identify the problematic orders with incorrect inventory variance and resolve the errors, if any.
 
 **User**
 Head of Store, Vice President of Retail
@@ -116,7 +116,7 @@ Head of Store, Vice President of Retail
 
 # Shipment by Tracking Number Report
 
-The Shipment by Tracking Number Report is valuable for retailers as it shows information such as Shopify ID, Tracking Number, Shipping Method, Shipping Location, Destination Address, and Units Shipped. 
+The Shipment by Tracking Number Report is valuable for retailers as it shows information such as Shopify ID, Tracking Number, Shipping Method, Shipping Location, Destination Address, and Units Shipped.
 
 Retailers require a report that can help them track and manage their shipments, ensuring transparency and accountability throughout the Shipment process. By having a clear overview of which orders have been shipped, where they are in transit, and their expected delivery destinations, retailers can optimize their supply chain.
 
@@ -131,9 +131,4 @@ Head of Store, Vice President of Retail
 | Shipping Method   | The specific method or service used to deliver the package, such as standard shipping, expedited shipping, or a specific courier service. |
 | Shipping Location | The shipment's origin or point of dispatch, such as a warehouse or fulfillment center.                  |
 | Units Shipped     | The quantity of items included in the shipment. It helps ensure that the correct number of products is sent to the customer. |
-
-
-
-
-
 

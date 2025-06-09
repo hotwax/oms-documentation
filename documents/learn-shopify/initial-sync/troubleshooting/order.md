@@ -6,7 +6,7 @@ description: Troubleshoot order synchronization between HotWax Commerce and Shop
 
 ## Scenario: Orders Not Available in HotWax Commerce
 
-### Steps:
+### Steps
 
 1. **Verification on Shopify:**
    * Check Shopify to verify if the order is successfully placed by searching for the order ID. If not found, create the missing orders.
@@ -15,7 +15,7 @@ description: Troubleshoot order synchronization between HotWax Commerce and Shop
 
 ## Scenario: Order Available in Shopify and Not Available in HotWax Commerce
 
-### Steps:
+### Steps
 
 1. **Check Shopify Jobs Section:**
    * Go to the HotWax Commerce platform.

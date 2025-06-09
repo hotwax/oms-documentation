@@ -1,6 +1,5 @@
 # Language Switching Feature
 
-
 The language switching feature in the HotWax Commerce platform is designed to enhance user accessibility and comfort by allowing users to operate the interface in their native or preferred language. This feature is particularly significant for a global user base, ensuring that language barriers do not hinder the efficient use of the platform.
 
 ### Steps to Follow

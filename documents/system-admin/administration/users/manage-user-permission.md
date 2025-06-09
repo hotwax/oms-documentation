@@ -42,7 +42,7 @@ By allowing users to edit security group details such as name, internal ID, desc
 
 Store associates often have permission and access to manage orders both for the store pickup order and regular shipping orders. However, if a retailer aims to separate these permissions and keep different users to manage store fulfillment orders and BOPIS orders, they need to create a new user group specifically for BOPIS fulfillment and remove BOPIS fulfillment permissions from the existing store associate role. By reallocating permissions and ensuring proper group assignments, the retailer ensures that store associates have access only to the functionalities relevant to store fulfillment.
 
-#### Step-by-Step Usage Instructions:
+#### Step-by-Step Usage Instructions
 
 1. **Access Security Group Settings:** Navigate to the `permissions` tab within the `User Management App`.
 2. **Select Security Group:** Identify the security group you wish to edit from the list displayed. Click on the group to view the granted permissions.

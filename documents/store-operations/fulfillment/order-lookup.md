@@ -22,8 +22,6 @@ The `Find Orders` page within the `Order Lookup` page helps store managers acces
 4. **Sort Orders**
    * This feature helps in prioritizing orders based on the newest and oldest orders. Click on the sort icon next to the show order items to sort orders from newest to oldest or vice versa.
 
-![order lookup view page](https://github.com/swati1717/oms-documentation/assets/160713110/c8ef90ec-504e-46c3-b755-753076c780ad)
-
 ### Filter Orders
 
 HotWax Commerce enables store managers to filter orders based on specific criteria, simplifying the analysis of particular order-specific subsets.
@@ -113,5 +111,3 @@ Store managers need to oversee order processing, address customer inquiries, and
 
 * Look at the inventory allocation section to see when and from which store the inventory was allocated for the order.
 * Visibility into inventory helps in understanding stock levels and fulfillment locations, ensuring accurate information is provided to customers.
-
-![order lookup detail page](https://github.com/swati1717/oms-documentation/assets/160713110/1d1645aa-e29b-41fb-9342-caa444b965a2)

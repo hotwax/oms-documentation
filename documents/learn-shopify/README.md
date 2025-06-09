@@ -10,7 +10,7 @@ The integration between HotWax Commerce and Shopify simplifies the process for r
 
 Once the product and order data are synchronized from Shopify to HotWax Commerce, and the "available to promise" inventory data is synchronized from HotWax Commerce to Shopify, you can begin using HotWax Commerce.
 
-## What Will Be Synced Between Shopify and HotWax Commerce?
+## What Will Be Synced Between Shopify and HotWax Commerce
 
 <figure><img src=".gitbook/assets/1 (1) (1).png" alt=""><figcaption><p>Flow of Data Between Shopify and HotWax Commerce</p></figcaption></figure>
 

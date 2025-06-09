@@ -1,10 +1,10 @@
 # Duplicate Jobs
 
-## Objective:
+## Objective
 
 This document provides a detailed guide to diagnose and resolve the exceptions caused by duplicated jobs in HotWax Commerce, which can lead to data duplication, data redundancy, and system performance issues. The goal is to ensure smooth job execution and accurate data management.
 
-## Common Scenarios:
+## Common Scenarios
 
 1. Overlapping jobs causing system performance issues.
 2. Data duplication or redundancy due to duplicated jobs.
@@ -14,16 +14,16 @@ This document provides a detailed guide to diagnose and resolve the exceptions c
 
 For example, In the Job Manager app, we have two jobs: `Approve Order`, which means, approves the orders that are in in `created` status after checking the requisite criteria, and `Approve Sales Order`, which acts as the same as `Approve Order` but has a different attribute (field) values. Let’s suppose we have scheduled the `approve orders` job every 5 minutes and `approve sales orders` every 15 minutes This collectively means we have two jobs: one is ready to run 5 minutes after the previous run, whereas the other is ready to run from now every 15 minutes. These two jobs will overlap every 15 minutes and may result in system performance issues. Additionally, the collision of these jobs may interrupt the job flow.
 
-## Step-by-Step Troubleshooting Process:
+## Step-by-Step Troubleshooting Process
 
-#### Verify If Issue Exists:
+#### Verify If Issue Exists
 
 1. **Track the Exception:**
    * Identify where the exception occurs or which step of the order life cycle is affected.
 2. **Analyze Job Pattern:**
    * Determine if a process is running more than once within its scheduled frequency, indicating a duplicated job.
 
-#### Diagnose the Issue:
+#### Diagnose the Issue
 
 1. **Access Job Manager:**
    * Open the Job Manager app in HotWax Commerce.
@@ -32,7 +32,7 @@ For example, In the Job Manager app, we have two jobs: `Approve Order`, which me
    * Traverse all jobs and identify those with overlapping schedules. For example, `Approve Order` is scheduled every 5 minutes, and `Approve Sales Order` is scheduled every 15 minutes.
    * Duplicated jobs can also be identified by disabling the job with the exception. If the job is disabled once and it is still visible as scheduled after refreshing the page, then the job was duplicated.
 
-#### Resolve the Issue:
+#### Resolve the Issue
 
 1. **Compare Jobs:**
    * Compare both jobs to understand their functionality and attributes.
@@ -44,7 +44,5 @@ For example, In the Job Manager app, we have two jobs: `Approve Order`, which me
    * Navigate to the `pipeline` page and search for the disabled job to ensure the problematic job is successfully disabled.
 
 By following these detailed steps, you can effectively troubleshoot and ensure a smooth job execution process, minimize system performance issues, and maintain accurate data management.
-
-
 
 <figure><img src="../../../.gitbook/assets/duplicate job (1).png" alt=""><figcaption></figcaption></figure>

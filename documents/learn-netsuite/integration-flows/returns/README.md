@@ -1,7 +1,7 @@
 ---
 description: Learn about returns in Shopify, Loop, NetSuite and HotWax Commerce.
 ---
-<!-- this is also in the loop section -->
+
 # Returns
 
 In omnichannel retailing, retailers provide customers with the options for online returns as well as in-store returns.
@@ -33,6 +33,7 @@ A job in HotWax Commerce Integration Platform captures in progress returns from 
 **SFTP Locations**
 
 Example for Loop returns:
+
 ```
 /home/{sftp-username}/netsuite/loop-return/create
 ```
@@ -77,7 +78,7 @@ HC_MR_ExportLoopReturnProcess.js
 
 #### 7. Import Item Receipt Records
 
-A job in HotWax Commerce Integration Platform runs every 5 minutes to check for new CSV files received at the SFTP location. If any new files are identified, the job extracts the Loop return IDs from the file and subsequently triggers the [“Process Return” API](https://api.loopreturns.com/api/v1/warehouse/return/%7Breturn_id%7D/process).
+A job in HotWax Commerce Integration Platform runs every 5 minutes to check for new CSV files received at the SFTP location. If any new files are identified, the job extracts the Loop return IDs from the file and subsequently triggers the [“Process Return” API](https://docs.loopreturns.com/api-reference/latest/return-actions/process-return).
 
 **SFTP Locations**
 
@@ -147,17 +148,17 @@ With this setup, after HotWax restocks the returned inventory from NetSuite duri
 
 When a customer opts for an exchange through Loop, a new exchange order is automatically created in Shopify once the return is closed in Loop. HotWax Commerce downloads these exchange orders from Shopify as regular orders and syncs them to NetSuite. Here's how different exchange scenarios are handled:
 
-#### 1. When the exchange order total is less than the original order:
+#### 1. When the exchange order total is less than the original order
 
 * Loop automatically refunds the customer for the price difference and creates a new exchange order in Shopify.
 * HotWax’s Integration Platform captures this refund data and processes it as discussed earlier, transforming it for NetSuite without additional steps.
 
-#### 2. When the exchange is for an item of equal value:
+#### 2. When the exchange is for an item of equal value
 
 * The return and exchange data are transformed and synced to NetSuite, as previously discussed.
 * No refund is issued to the customer because the funds from their return are applied to their exchange order.
 
-#### 3. When the exchange is for an item of higher value (Upsell):
+#### 3. When the exchange is for an item of higher value (Upsell)
 
 * Loop includes attribution in the Shopify order notes, indicating that the new exchange order involves an upsell.
 * HotWax recognizes this attribution and processes the order accordingly.
@@ -171,18 +172,18 @@ Suppose a customer initiates a return for a $100 item and chooses to exchange it
 
 Retailers' return policies can vary, ranging from one to several months. To accommodate future returns, HotWax imports historical orders from Shopify. However, some retailers accept returns for orders placed over a year ago. If a retailer starts using HotWax Commerce within that year and lacks historical orders in the OMS, here’s how HotWax handles such cases:
 
-#### 1. Matching Shopify and NetSuite order IDs:
+#### 1. Matching Shopify and NetSuite order IDs
 
 * When return data is received from Loop, HotWax’s Integration Platform first checks the Shopify order ID in the OMS.
 * If a corresponding NetSuite order ID is found, the return process proceeds without interruptions.
 * The RMA is created in NetSuite and linked to the original sales order, maintaining consistency in data and workflows.
 
-#### 2. Fetching older orders from NetSuite:
+#### 2. Fetching older orders from NetSuite
 
 * In some cases, older orders may not be imported into the OMS, but the corresponding records still exist in NetSuite.
 * When no matching NetSuite order ID is found in the OMS, HotWax’s Integration Platform runs a search query in NetSuite using the Shopify order ID to locate the original sales order details.
 
-  Once the original sales order is retrieved from NetSuite, the necessary return details are synced. This step helps ensure that even older orders, which might not have been part of the initial OMS setup, are accurately linked with the RMA and processed.
+    Once the original sales order is retrieved from NetSuite, the necessary return details are synced. This step helps ensure that even older orders, which might not have been part of the initial OMS setup, are accurately linked with the RMA and processed.
 
 ***
 
@@ -198,7 +199,7 @@ Since NetSuite already has the return order data from the Integration Platform, 
 
 Customers who live near a brick-and-mortar store or those who prefer to get instant refunds opt for returning their purchases directly in-store.
 
-#### Scenarios where POS returns are accepted:
+#### Scenarios where POS returns are accepted
 
 * **Buy In-Store Return In-Store (BISRIS):** Customers return their in-store purchases to a nearby store location.
 * **Buy Online Return In-Store (BORIS):** Customers directly return their online purchases to a nearby store location.

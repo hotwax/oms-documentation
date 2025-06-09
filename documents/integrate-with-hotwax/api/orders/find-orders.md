@@ -5,9 +5,10 @@ description: >-
 
 # Find Order
 
-Retrieve details a list of orders imported from external systems in your OMS. To find the order, send a GET request to the `/solr-query` endpoint with appropriate query parameters. 
+Retrieve details a list of orders imported from external systems in your OMS. To find the order, send a GET request to the `/solr-query` endpoint with appropriate query parameters.
 
 ## Request
+
 **End Point** `https://<instance.name>.hotwax.io/api/solr-query`
 
 Example: `https://demo-oms.hotwax.io/api/solr-query`
@@ -126,8 +127,6 @@ Example: `https://demo-oms.hotwax.io/api/solr-query`
 | `orderIdentifications` | List of order identification codes |
 | `promisedDatetime` | Promised date and time for delivery |
 | `shipmentMethodTypeId` | ID of the shipment method type |
-
-
 
 ## Response
 

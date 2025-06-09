@@ -239,6 +239,7 @@ Next, a SuiteScript in NetSuite runs at scheduled intervals, retrieves the CSV f
 To know more about this, refer to this [document](https://docs.hotwax.co/documents/learn-netsuite/synchronization-flows/ordersync/syncorderids).
 
 ***
+
 ### Complete Order Item from Shopify
 
 Job Name: `Complete Order Item from Shopify`\
@@ -524,6 +525,7 @@ NetSuite runs a SuiteScript to provide details of items that are fulfilled in th
 * It has some optional parameters.
 
 ***
+
 ### Import Customer
 
 **Job Name**: Import Customers from Shopify\

@@ -45,7 +45,7 @@ Release orders by products
 Cancel orders by products
 {% endembed %}
 
-### Releasing by Orders:
+### Releasing by Orders
 
 When merchants specifically aim to release a particular customer's Pre-Order, they have the option to release it `By Order`.
 

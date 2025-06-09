@@ -53,4 +53,4 @@ For example, Product A has 5 units listed in both Shopify and HotWax Commerce. S
 
 In another example, if a store receives a transfer order for Product B with 2 units, which originally had 10 units, then a variance of 2 will be pushed on Shopify to update the Shopify ATP to 12.
 
-![Delta sync job](https://github.com/user-attachments/assets/a960fbc8-d315-4fc2-aaca-e196166e5492)
+![Delta sync job](/documents/learn-shopify/.gitbook/assets/push-inventory-deltas.png)

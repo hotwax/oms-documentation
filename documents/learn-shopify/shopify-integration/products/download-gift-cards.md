@@ -10,7 +10,7 @@ Gift cards are stored-value cards that carry a value determined at the time of t
 
 Retailers set up both physical and digital gift cards in Shopify. Both physical and digital gift cards have a unique serial number or GC number that needs to be entered to redeem the card's value.
 
-### Physical Gift Cards:
+### Physical Gift Cards
 
 Physical gift cards are tangible cards that customers can buy online or in-store. These cards come with a unique serial number that customers can use to redeem the value stored in the card.
 
@@ -20,7 +20,7 @@ Let’s see what happens when customers place online orders for physical gift ca
 * **Activation:** After processing, gift cards are activated in Shopify so that when customers receive their physical gift card, they can use the gift card serial number to redeem their purchase.
 * **Inventory Management:** Physical gift cards have actual stock-keeping units and necessitate delivery to customers just like any other physical product. Oftentimes, retailers generate various variants of a gift card with different denominations, providing customers with a range of options to choose from.
 
-### Digital Gift Cards:
+### Digital Gift Cards
 
 Digital gift cards, also known as e-gift cards, are virtual equivalents of physical gift cards. Customers receive them via email or text message along with a unique serial number that they can use to redeem the value stored in the card.
 
@@ -32,7 +32,7 @@ Digital gift cards, also known as e-gift cards, are virtual equivalents of physi
 
 HotWax Commerce downloads physical and digital gift cards from Shopify in the same manner as other products with the `Import Products` job.
 
-Learn more about [product synchronization from Shopify to HotWax Commerc](https://app.gitbook.com/s/GNcmGkoNRfptyho21A56/orders)e
+Learn more about [product synchronization from Shopify to HotWax Commerce](/documents/learn-shopify/shopify-integration/products/download-products.md)
 
 The Product SKU serves as the primary identifier, which is mapped with the Product ID in HotWax Commerce. Consequently, if multiple gift cards in Shopify share the same SKU, they are associated with a common product ID in HotWax Commerce.
 

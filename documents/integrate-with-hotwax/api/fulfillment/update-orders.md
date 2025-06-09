@@ -18,7 +18,7 @@ Example: https://demo-oms.hotwax.io/api/updateOrder
 
 ### Header
 
-#### For Order Item rejection:
+#### For Order Item rejection
 
 **Body**
 
@@ -48,7 +48,7 @@ Example: https://demo-oms.hotwax.io/api/updateOrder
 | `0_rej_rowSubmit_`        | The row in the order where the rejected shipment item belongs. | No             |
 | `rej_rejectionReason_0`   | The reason for rejecting the order item.                       | Yes            |
 
-#### For Shipment Package Change:
+#### For Shipment Package Change
 
 **Body**
 
@@ -80,7 +80,7 @@ Example: https://demo-oms.hotwax.io/api/updateOrder
 
 ### Header
 
-#### For Order Item rejection:
+#### For Order Item rejection
 
 **Body**
 
@@ -98,7 +98,7 @@ Example: https://demo-oms.hotwax.io/api/updateOrder
 }
 ```
 
-#### For Shipment Package Change:
+#### For Shipment Package Change
 
 **Body**
 

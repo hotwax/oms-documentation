@@ -24,4 +24,4 @@ When in-store returns occur in Shopify POS, HotWax Commerce captures the facilit
 
 **Non-Shopify POS:** For retailers using a POS system other than Shopify POS, there is no inherent information about online orders, including online order IDs in the POS system. Consequently, creating returns against these online orders becomes a challenge. HotWax Commerce, as an omnichannel Order Management System, retains records of online orders from Shopify. Retailers can use HotWax Commerce to create returns in store for online order, or use HotWax's order and return APIs to allow their POS system to accept online returns in store without having to switch systems.
 
-To learn more about how to use HotWax Commerce for in store returns with POS systems other than Shopify POS, [read this document here](https://app.gitbook.com/s/GNcmGkoNRfptyho21A56/orders/returns/in-store-returns).
+To learn more about how to use HotWax Commerce for in store returns with POS systems other than Shopify POS, [read this document here](/documents/retail-operations/orders/returns/in-store-returns.md).

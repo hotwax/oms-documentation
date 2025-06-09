@@ -25,7 +25,6 @@ The Returns Financial Feed has certain out-of-the-box parameters that allow user
 | `customParametersMap`   | Filter returns using custom conditions, allowing flexibility in specifying new conditions. For example, `{"returnReasonId_op": "empty", "returnReasonId_not": "Y"}`.        |
 | `optimize`              | Optimize the query or process for better performance.                                                                                                           |
 
-
 <details>
 
 <summary> Sample Returns feed</summary>

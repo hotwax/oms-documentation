@@ -8,6 +8,7 @@ description: >-
 This API call provides users with product details. To retrieve the product details, make a GET request to the `/solr-query` endpoint.
 
 ## Request
+
 **End Point** `https://<instance.name>.hotwax.io/api/solr-query`
 
 Example: `https://demo-oms.hotwax.io/api/solr-query`
@@ -17,7 +18,7 @@ Example: `https://demo-oms.hotwax.io/api/solr-query`
 ```json
 {
     "json": {
-        "params": {    
+        "params": {
         "q": "docType:PRODUCT",
         "wt":"json",
          "rows":"10"
@@ -29,7 +30,6 @@ Example: `https://demo-oms.hotwax.io/api/solr-query`
 
 ### Parameter Table
 
-
 | Parameter Name            | Description                          |
 | ------------------------- | ------------------------------------ |
 | `docType`                 | The Type of the document             |
@@ -37,7 +37,8 @@ Example: `https://demo-oms.hotwax.io/api/solr-query`
 | `wt`                 | Format of data returned by api (json/csv)|
 | `rows`                 | No of documents returned |
 
-### List of fields present in schema - 
+### List of fields present in schema -
+
 - docType
 - identifier
 - context_field
@@ -73,7 +74,6 @@ Example: `https://demo-oms.hotwax.io/api/solr-query`
 - prodCatalogIds
 - productStoreIds
 - tags
-
 
 ## Response
 

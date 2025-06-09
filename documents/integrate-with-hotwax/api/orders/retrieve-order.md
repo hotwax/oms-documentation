@@ -5,7 +5,7 @@ description: >-
 
 # Retrieve an Order
 
-Retrieves of detailed information about specific order within OMS. This functionality is valuable for verifying order status, contents, and associated details based on their unique identifiers. To retrieve the order, send a GET request to the OMS endpoint with query parameters. 
+Retrieves of detailed information about specific order within OMS. This functionality is valuable for verifying order status, contents, and associated details based on their unique identifiers. To retrieve the order, send a GET request to the OMS endpoint with query parameters.
 
 ## Request
 
@@ -37,9 +37,7 @@ Accept: application/json
 
 `Content-Type: application/json`
 
-
 ### Body
-
 
 ```json
 {

@@ -1,0 +1,60 @@
+{
+  "MD001": false,     // Heading levels should only increment by one level at a time
+  "MD002": false,     // First heading should be a top-level heading (e.g., "# Heading")
+  "MD003": false,     // Heading style should be consistent (e.g., ATX vs Setext)
+  "MD004": false,     // Unordered list style should be consistent
+  "MD005": false,     // Inconsistent indentation for list items
+  "MD006": false,     // Indentation for list items should be multiple of 2 spaces
+  "MD007": false,     // List item indentation should be consistent within the list
+  "MD008": false,     // Lists should be surrounded by blank lines (alternate form)
+  "MD009": true,      // Disallow trailing spaces at the end of lines
+  "MD010": false,     // Hard tabs are discouraged
+  "MD011": false,     // Reversed link syntax is not allowed
+  "MD012": true,      // Disallow multiple consecutive blank lines
+  "MD013": false,     // Do not enforce line length limits (disabled by choice)
+  "MD014": false,     // Dollar signs used before commands without showing output
+  "MD015": false,     // No spaces after list item marker (alternate form)
+  "MD016": false,     // Line beginning with whitespace
+  "MD017": false,     // Numbers in ordered lists should be sequential
+  "MD018": true,      // Headings must have a space after the # (e.g., "# Heading")
+  "MD019": true,      // Disallow multiple spaces after the # in headings
+  "MD020": false,     // No space inside hashes in headings (e.g., "#Heading#")
+  "MD021": false,     // No multiple spaces inside headings (alternative to MD019)
+  "MD022": true,      // Headings must be surrounded by blank lines above and below
+  "MD023": true,      // Headings must start at the beginning of the line (no leading spaces)
+  "MD024": false,     // Multiple headings with the same content are not allowed
+  "MD025": true,      // Disallow multiple top-level headings (only one "# Heading" per file)
+  "MD026": true,      // Disallow punctuation at the end of headings (e.g., "Heading?" or "Heading:")
+  "MD027": false,     // Multiple spaces between blockquote marker and content
+  "MD028": true,      // Disallow blank lines inside list items
+  "MD029": false,     // Ordered list item prefix should be one style (e.g., always "1.")
+  "MD030": true,      // Enforce consistent spacing after list markers (e.g., "- item", not "-item")
+  "MD031": true,      // Fenced code blocks must be surrounded by blank lines before and after
+  "MD032": true,      // Lists must be surrounded by blank lines above and below
+  "MD033": false,     // Allow inline HTML (useful for GitBook styling and custom formatting)
+  "MD034": [
+    true,
+    {
+      "ignorePatterns": [
+        "{% embed url=\"https://.*?\" %}"  // Ignore GitBook embed syntax for YouTube and others
+      ]
+    }
+  ],                  // Disallow bare URLs, but skip your {% embed %} lines
+  "MD035": false,     // Horizontal rule style should be consistent (e.g., "---" vs "***")
+  "MD036": false,     // Emphasis style should be consistent (e.g., "*" vs "_")
+  "MD037": true,      // Disallow spaces inside emphasis markers (e.g., "* bold *" is invalid — use "*bold*")
+  "MD038": false,     // Spaces inside code span markers (e.g., "` code `")
+  "MD039": false,     // Spaces inside link text
+  "MD040": false,     // Fenced code block language should be specified
+  "MD041": false,     // First line in file should be a top-level heading
+  "MD042": true,      // Disallow empty links (e.g., "[](url)" or "[text]()")
+  "MD043": false,     // List items should be in a bulleted or numbered form consistently
+  "MD044": false,     // Proper names should have correct capitalization
+  "MD045": true,      // Require alt text for all images (accessibility best practice)
+  "MD046": false,     // Code block style should be consistent
+  "MD047": false,     // Files should end with a single newline character
+  "MD048": false,     // Code fences should use consistent style ("```" vs "~~~")
+  "MD049": false,     // Emphasis should not be used for headers
+  "MD050": false,     // Strong emphasis should not be used in headers
+  "MD051": true       // Link fragments must match actual headings in the document
+}

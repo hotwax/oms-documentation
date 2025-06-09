@@ -2,6 +2,7 @@
 description: >-
   Learn how warehouse to store transfer orders are processed in HotWax Commerce.
 ---
+
 # Warehouse to Store
 
 Transfer orders originate in NetSuite, but there is a distinction in how they are fulfilled. When a transfer order is initiated from a warehouse, NetSuite's fulfillment solution is employed to fulfill the transfer order, ensuring the correct allocation of inventory.

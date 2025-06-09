@@ -6,7 +6,7 @@ description: Learn about Routings.
 
 As discussed, <mark style="color:orange;">**routing**</mark>, also known as <mark style="color:orange;">**routing rules**</mark>, enable retailers to create specific order batches based on their business requirements, such as a same-day delivery batch, a next-day delivery batch, and a standard order batch. These routing rules help in efficiently looking up orders based on urgency and shipping promises.
 
-### When to Create Multiple Routing Rules in a Single Run?
+### When to Create Multiple Routing Rules in a Single Run
 
 Multiple routing rules within a single brokering run are useful when different order batches, like same-day, next-day and standard orders, need to be routed at the same interval.
 

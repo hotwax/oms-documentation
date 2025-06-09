@@ -36,7 +36,7 @@ description: >-
 
 **5. Import XML File for System Properties:**
 
-*   Import the following XML file to configure system properties:
+* Import the following XML file to configure system properties:
 
     ```xml
     <SystemProperty description="Configuration to send the error file to FTP/Email" systemPropertyId="error.file.sendTo.config" systemPropertyValue="EMAIL" systemResourceId="datamanager"/>

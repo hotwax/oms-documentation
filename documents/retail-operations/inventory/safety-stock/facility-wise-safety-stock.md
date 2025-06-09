@@ -6,7 +6,7 @@ Managing inventory effectively across various facilities is crucial to meeting c
 
 ### Identify Facility Groups
 
-Determine which facility groups require specific safety stock levels based on their demand. Retailers can create custom facility groups as needed by following our [user manual](https://app.gitbook.com/s/vRjh4vkGRczeQJMpDxzL/administration/facilities/manage-groups#creating-a-new-group).
+Determine which facility groups require specific safety stock levels based on their demand. Retailers can create custom facility groups as needed by following our [user manual](/documents/system-admin/administration/facilities/manage-groups.md).
 
 ### Access the ATP Application
 
@@ -32,8 +32,6 @@ Click on the `+` icon in the right-bottom corner of the app.
   * **Excluded**: Optionally exclude products based on features from this safety stock rule.
 
 {% embed url="https://youtu.be/Bq3Rp89X-nU" %}
-
-
 
 ## Automated Integration for Seamless Operations
 

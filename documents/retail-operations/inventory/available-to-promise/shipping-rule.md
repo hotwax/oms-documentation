@@ -37,8 +37,6 @@ Once this setup is complete, the system will automatically redirect any addition
 Setting Maximum Order Capacity of a Facility
 {% endembed %}
 
-
-
 ## Suppressing Shipping for Channel/ Configuration Facility
 
 In this scenario, the retailer wants to suppress shipping for the Blue Shirt (Size M) across the `Shopify` channel, making it available exclusively for walk-in customers. This could be due to high demand in-store or a strategic decision to drive in-store traffic.
@@ -65,8 +63,6 @@ Here’s how to set up the rule to suppress shipping for this specific product o
 Suppressing Shipping for Channel/ Configuration Facility
 {% endembed %}
 
-
-
 ## Suppressing Shipping from Facility
 
 In this scenario, the retailer wants to suppress shipping for the Blue Shirt (Size M) from their retail stores due to higher demand from walk-in customers. Shipping for this product will remain available at other locations, ensuring that online orders can still be fulfilled from other facilities.
@@ -90,8 +86,6 @@ Here’s how to set up this rule:
 \
 Suppressing Shipping from Facility
 {% endembed %}
-
-
 
 ## Schedule Shipping Rule
 

@@ -13,11 +13,11 @@ In HotWax Commerce, the shipping method mapping can be different based on the re
 
 ## Mapping for Specified Shipping Methods
 
-For retailers with agreements with carrier service providers, shipping method options are directly offered to customers. Customers can then choose their preferred shipping method, and charges are applied accordingly. In such scenarios, carrier providers automatically offer retailers the best shipping prices. In these instances, HotWax simplifies the process by only requiring the mapping of shipping methods from Shopify to HotWax for generating shipping labels. For instance, if a customer selects FedEx Two-Day Shipping on Shopify, this method would have been pre-mapped by the retailer, including rates, zones, and other pertinent information. When an order transitions from Shopify to HotWax, this shipping method seamlessly transfers over. 
+For retailers with agreements with carrier service providers, shipping method options are directly offered to customers. Customers can then choose their preferred shipping method, and charges are applied accordingly. In such scenarios, carrier providers automatically offer retailers the best shipping prices. In these instances, HotWax simplifies the process by only requiring the mapping of shipping methods from Shopify to HotWax for generating shipping labels. For instance, if a customer selects FedEx Two-Day Shipping on Shopify, this method would have been pre-mapped by the retailer, including rates, zones, and other pertinent information. When an order transitions from Shopify to HotWax, this shipping method seamlessly transfers over.
 
 ### Carrier Shipment Method Mapping
 
-Retailers need to create carrier and shipment methods in HotWax Commerce and ensure that product store shipment mapping is also completed for the existing shipment methods. Learn how to map carrier shipment methods [here](carrier-and-shipment-methods.md).
+Retailers need to create carrier and shipment methods in HotWax Commerce and ensure that product store shipment mapping is also completed for the existing shipment methods. Learn how to map carrier shipment methods [here](/documents/system-admin/fulfillment/shipping-methods/carrier-and-shipment-methods.md).
 
 ### Shopify Shop Carrier Shipment Mapping
 
@@ -33,7 +33,7 @@ Once shipping methods are created, retailers have to also map Shopify Shop carri
 
 ### Add Carrier Facility
 
-In HotWax Commerce, the ability to add shipping carriers to facilities is essential for order fulfillment. Once a shipment gateway is set, adding carriers to facilities enables shipping label generation specifically for those carriers associated with the selected facility. To learn more about how to add a carrier party to the facility, read our [user manual](ShippingGateways.md#add-carrier-facility) 
+In HotWax Commerce, the ability to add shipping carriers to facilities is essential for order fulfillment. Once a shipment gateway is set, adding carriers to facilities enables shipping label generation specifically for those carriers associated with the selected facility. To learn more about how to add a carrier party to the facility, read our [user manual](./shipping-methods/shipping-gateway.md) 
 
 Once the shipment method is saved and mapped, HotWax Commerce runs a carrier-specific API call to generate a shipping label based on the shipment method selected by the customer during checkout. Since all shipment methods are mapped, HotWax Commerce directly generates the shipping label based on the shipment method, shipping distance, and the box size from the carrier.
 
@@ -58,7 +58,7 @@ Retailers who want to rate shop need to set up configurations for rate shopping 
 
 ### Creating Shipping Methods in HotWax Commerce
 
-Shipping methods are created and mapped with the carrier, product store, and facility in [regular manner](carrier-and-shipment-methods.md). For shipping based on SLA, retailers don’t have to map the Shopify shop carrier shipment methods.
+Shipping methods are created and mapped with the carrier, product store, and facility in [regular manner](/documents/system-admin/fulfillment/shipping-methods/carrier-and-shipment-methods.md). For shipping based on SLA, retailers don’t have to map the Shopify shop carrier shipment methods.
 
 ### Setting Service Level Agreement
 
@@ -75,7 +75,7 @@ Setting Service Level Agreements (SLAs) within HotWax Commerce allows retailers 
 
 ### Generating Shipping Labels with Rate Shopping
 
-HotWax Commerce streamlines shipping label generation by automating the process based on order specifics like shipping method, box size, and delivery distance. Retailers need to associate carrier ID with the Facility to generate shipping labels with rate shopping. [Read here](ShippingGateways.md#add-carrier-facility) for more information.
+HotWax Commerce streamlines shipping label generation by automating the process based on order specifics like shipping method, box size, and delivery distance. Retailers need to associate carrier ID with the Facility to generate shipping labels with rate shopping. [Read here](./shipping-methods/carrier-and-shipment-methods.md) for more information.
 
 The system initiates an API call in the background when a picklist is created, leveraging SLA data to fetch shipping methods and charges. This ensures efficient selection of the most cost-effective shipping method within the specified delivery timeframe, saving time and resources for retailers.
 
@@ -88,9 +88,7 @@ The system initiates an API call in the background when a picklist is created, l
 5. **Automatic Label Generation**: Upon selection, another API Call a shipping label is generated in the background, ready for store associates to print during the packing process.
 6. **Regeneration on Packaging Change**: If store associates modify the default packaging, the shipping label needs to be regenerated, prompting rate shopping to occur again to ensure accurate and cost-effective shipping.
 
-
 {% hint style="info" %}
 HotWax Commerce only supports rate shopping for a single carrier. If the retailer wants cross-carrier rate shopping, they have to integrate with a shipping aggregator like EasyPost. In such cases, the API call hits the endpoint of the aggregator and fetches shipment method from all the integrated carriers before selecting the most cost-effective shipment method.
 {% endhint %}
-
 

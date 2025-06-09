@@ -26,7 +26,7 @@ Once the refund process is completed in Shopify POS, multiple actions take place
 
 * Returned inventory is restocked at the designated store location.
 * A return under the order is created in Shopify POS with the returned item marked as <mark style="color:orange;">**“Returned”**</mark>, and the payment status is updated as <mark style="color:orange;">**“Refunded”**</mark>.
-  
+
 ## 3. Import POS Returns in HotWax Commerce
 
 HotWax OMS automatically downloads return data from Shopify at regular intervals. Once downloaded, the returned orders are marked as <mark style="color:orange;">**“Completed”**</mark> and with payment as <mark style="color:orange;">**“Refunded”**</mark> status.

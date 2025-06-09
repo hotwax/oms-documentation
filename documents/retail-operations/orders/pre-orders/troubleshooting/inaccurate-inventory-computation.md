@@ -16,12 +16,12 @@ HotWax is encountering issues accurately reflecting product availability, notabl
 
 ## Explanation
 
-### Inventory within Shopify:
+### Inventory within Shopify
 
 * Shopify's available inventory is computed by deducting open orders from the physical inventory published by the ERP.
 * During pre-selling, inventory levels can go below zero due to overcommitment of inventory, causing negative inventory.
 
-### HotWax's Inventory Computation when reading inventory from Shopify:
+### HotWax's Inventory Computation when reading inventory from Shopify
 
 * HotWax deliberately disables specific functionalities to reserve inventory for committed orders, ensuring that committed inventory is not deducted twice. This precaution is taken because Shopify already incorporates committed inventory within its shared inventory levels.
 

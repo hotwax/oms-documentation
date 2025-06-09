@@ -8,13 +8,13 @@ Retailers we work with offer both physical and digital gift cards which have pro
 
 In HotWax Commerce gift cards have their product type set up as “GIFT\_CARD”. In this set up, digital gift cards are configured for auto fulfillment directly in Shopify, while physical gift cards require the traditional fulfillment process. Here's how it works:
 
-### Digital gift cards:
+### Digital gift cards
 
 When customers order a digital gift card on Shopify, after the order is created, Shopify immediately auto fulfills the order, assigns a serial number to digital gift card, loads the value to activate the gift card and consequently, when HotWax Commerce downloads that order from Shopify, it is automatically marked as “Completed”.
 
 Customers receive the gift card in their registered email along with the serial number that can be used to redeem the gift card.
 
-### Physical gift cards:
+### Physical gift cards
 
 Orders with physical gift cards are not auto-fulfilled in Shopify. Therefore, HotWax Commerce routes them through the traditional fulfillment process.
 
@@ -50,7 +50,7 @@ Digital gift cards are auto-activated and customers can directly redeem them by 
 
 When the fulfillment location where a gift card item is allocated leverages NetSuite for fulfillment, usually a warehouse, then the HotWax Commerce syncs those items' allocation with NetSuite.
 
-Learn more about [fulfillment in NetSuite](https://app.gitbook.com/s/XPO8jTog8zeT6LrxNy36/integration-flows/sales-order/fulfillment)
+Learn more about [fulfillment in NetSuite](/documents/learn-netsuite/integration-flows/sales-order/fulfillment.md)
 
 ### Activation of Gift Cards
 

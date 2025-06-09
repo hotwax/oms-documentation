@@ -366,7 +366,6 @@ LIMIT 100;
 
 **Grouping Data:** The query groups the selected data by various attributes such as received date, origin and destination facility IDs, expected quantity, shipment ID, transfer order, SKU, received quantity, difference, and status. Grouping the data helps organize it logically and facilitates analysis of the receiving process for inbound transfers.
 
-
 ## Completed cycle report
 
 This report helps retailers maintain accurate inventory records and ensure operational efficiency. By detailing the expected quantity of items, the quantity counted, and any variances discovered during the counting process, this report provides insights into the accuracy of inventory levels. Moreover, it records essential information such as who conducted the cycle count, the facility where it was performed, as well as the submission and completion dates.
@@ -376,9 +375,11 @@ This Report  allows retailers to identify discrepancies between expected and act
 The submission and completion dates listed in the report provide insights into the efficiency of the inventory management process. Retailers can track how quickly cycle counts are conducted and completed, allowing them to assess the effectiveness of their inventory management practices and identify areas for improvement.
 
 ### User
+
 Head of Store, Vice President of Retail
 
 ### Report Glossary
+
 | Field             | Description                                       |
 |-------------------|---------------------------------------------------|
 | Facility          | Location of a physical store or warehouse.       |
@@ -389,15 +390,16 @@ Head of Store, Vice President of Retail
 | User              | Individual conducting inventory tasks.            |
 | Line Status       | Current state of the inventory item.             |
 | Submitted Date    | Date of data entry.                              |
-| Completed Date    | Date of task completion.                          |                                                   
+| Completed Date    | Date of task completion.                          |
 
 ## Open Transfer order shipment
 
-This report provides insights into the movement of inventory within the supply chain. It offers an overview of the transfer process by presenting shipment IDs, origin and destination facilities, tracking numbers, and pending quantities for reception. 
+This report provides insights into the movement of inventory within the supply chain. It offers an overview of the transfer process by presenting shipment IDs, origin and destination facilities, tracking numbers, and pending quantities for reception.
 
 it enables efficient inventory management by identifying precisely which products are in transit and yet to be received, allowing retailers to anticipate stock availability accurately.
 
 ### User
+
 Head of Store, Vice President of Retail
 
 ### Glossary
@@ -411,13 +413,14 @@ Head of Store, Vice President of Retail
 | shipment_status   | The shipment's current status (e.g., delivered, pending).                                           |
 | imported_date     | The date when the shipment information was imported or recorded.                                    |
 
-## POS orders vs POS variances 
+## POS orders vs POS variances
 
-Retailers require this report to effectively manage their inventory and streamline operations. By tracking POS-completed orders and ensuring that the same inventory variance is logged into the ERP system the retailer gains insights into any possible inventory discrepancy. 
+Retailers require this report to effectively manage their inventory and streamline operations. By tracking POS-completed orders and ensuring that the same inventory variance is logged into the ERP system the retailer gains insights into any possible inventory discrepancy.
 
-This report provides information about the quantity variance between pos orders and pos variance. Retailers can identify the problematic orders with incorrect inventory variance and resolve the errors, if any. 
+This report provides information about the quantity variance between pos orders and pos variance. Retailers can identify the problematic orders with incorrect inventory variance and resolve the errors, if any.
 
 ### User
+
 Head of Store, Vice President of Retail
 
 ### Glossary
@@ -433,14 +436,16 @@ Head of Store, Vice President of Retail
 
 ## Shipment by Tracking Number Report
 
-The Shipment by Tracking Number Report is valuable for retailers as it shows information such as Shopify ID, Tracking Number, Shipping Method, Shipping Location, Destination Address, and Units Shipped. 
+The Shipment by Tracking Number Report is valuable for retailers as it shows information such as Shopify ID, Tracking Number, Shipping Method, Shipping Location, Destination Address, and Units Shipped.
 
 Retailers require a report that can help them track and manage their shipments, ensuring transparency and accountability throughout the Shipment process. By having a clear overview of which orders have been shipped, where they are in transit, and their expected delivery destinations, retailers can optimize their supply chain.
 
 ### User
+
 Head of Store, Vice President of Retail
 
 ### Glossary
+
 | Field             | Description                                                                                        |
 |-------------------|---------------------------------------------------------------------------------------------------------|
 | Shopify ID        | A unique identifier assigned to each order within the Shopify platform. It helps track and manage orders efficiently. |
@@ -461,6 +466,4 @@ The Pending Cycle Count report presents products awaiting counting at a facility
 | FACILITY\_NAME | The name of the facility in external system               |
 | PRODUCT\_ID    | The ID of the product in HotWax Commerce                  |
 | PRODUCT\_SKU   | Unique identifier                                         |
-
-
 

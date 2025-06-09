@@ -61,7 +61,7 @@ Sample:
   "locationSeqId": "TLTLTLLL01",
   "varianceReasonId": "POS_SALE"
 }
-  
+
 ```
 
 | Parameters         | Description                                                                                  | Required (Y/N) |

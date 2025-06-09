@@ -8,7 +8,7 @@ description: >-
 
 ### HotWax's BOPIS PDP experience allows customers to browse all available pickup stores (facilities) for their desired products on the Shopify product detail page (PDP)
 
-## To integrate this feature, follow these steps:
+## To integrate this feature, follow these steps
 
 ### Step 1: Obtain the customer's latitude and longitude
 
@@ -19,7 +19,7 @@ To show available pickup facilities near the customer, the latitude and longitud
 2. If the customer allows access to their system location,
    * Obtain the latitude and longitude coordinates directly from their device
 
-#### Sample:
+#### Sample
 
 Method: `POST`
 
@@ -67,7 +67,7 @@ Method: `POST`
 
 Using the latitude and longitude coordinates, call the storeLookup API to fetch all the facilities within a given distance that allow BOPIS. Note: The distance parameter is configurable to narrow down the search results. You can allow customers to input their preferred distance or set a default value.
 
-#### Sample:
+#### Sample
 
 Method: `POST`
 
@@ -177,7 +177,7 @@ For each store that allows BOPIS, use the checkBOPISInventory API to check the a
 
 Note: If a facility has 0 inventory for the product, you can still display it for the Ship-to-store PDP experience.
 
-#### Sample:
+#### Sample
 
 Method: `POST`
 
@@ -214,7 +214,7 @@ Method: `POST`
 }
 ```
 
-### Handle cases when customer location is not available:
+### Handle cases when customer location is not available
 
 In case the customer's location is not available, you can display all the available store pickup locations for the product using the storeLookup API and checkInventory API. Here's how to handle this scenario:
 
@@ -222,7 +222,7 @@ In case the customer's location is not available, you can display all the availa
 * Step 2: Use the facility IDs returned in the response of the storeLookup API with the checkInventory API to get the facilities having inventory for the product
 * Step 3: Display all the locations with non-zero inventory on the PDP
 
-#### Sample:
+#### Sample
 
 **Request**
 

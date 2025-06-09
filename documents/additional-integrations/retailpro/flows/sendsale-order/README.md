@@ -6,7 +6,7 @@ description: >-
 
 # Send Sale Order
 
-### What is Send Sale order?
+### What is Send Sale order
 
 Send sale orders are instances where store associates capture orders in Retail Pro, despite the unavailability of the item at the store. These orders are taken to prevent the loss of a sale, with the commitment to deliver the item to the customer at their shipping address. Associates typically check inventory availability at other stores or warehouses before capturing the order.
 

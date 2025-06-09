@@ -15,12 +15,11 @@ To share any kind of information between these systems, they need to make a conn
 3. **Find API Keys:** Look for the `Integrations` section in the main menu and hover over it. Select `API Keys` from the dropdown.
 4. **Create a New Key:** Click on `New API Key` when the page opens.
    * **Give it a Name:** Choose a descriptive name to easily identify its purpose (e.g. "HotWax Commerce Integration").
-   * **Select Key Type:** Choose "Server-side" as this key will be used by HotWax Commerce to share details. You can find more details about key types:[link to Iterable API Keys documentation](https://support.iterable.com/hc/en-us/articles/360043464871-API-Keys).
+   * **Select Key Type:** Choose "Server-side" as this key will be used by HotWax Commerce to share details. You can find more details about key types:[Iterable API Keys documentation](https://support.iterable.com/hc/en-us/articles/360043464871-API-Keys).
 5. **Generate the Key:** Click on `Create API Key`. A pop-up will appear displaying the generated key. **Important:** This key will only be displayed once. 
 6. **Copy and Secure the Key:** Carefully copy the entire API key and store it securely in a password manager or other encrypted location. **Never share it publicly.**
 
 **Remember:** Treat the API key like a password. Avoid sharing it and keep it confidential for secure communication between HotWax Commerce and Iterable.
-
 
 ## Adding API Key in HotWax Commerce
 
@@ -52,7 +51,6 @@ Once you have your API key from Iterable, follow these steps to integrate it wit
 | Shared Secret                   | Private API key for HotWax Commerce to interact with Iterable. |
 | System Message Remote ID        | Identification of the third-party system in HotWax Commerce.  |
 
-
 ## Add Product Store Setting in HotWax Commerce
 
 Setting up product store email settings in HotWax Commerce allows you to define which email information triggers automated messages for specific marketing automation platforms. For example, you can configure settings to send "Ready for Pickup" email data in the format of `Iterable` for a particular product store. Follow these steps to Add Product Store Setting:
@@ -74,7 +72,6 @@ Setting up product store email settings in HotWax Commerce allows you to define 
 | subject               | Define the subject line for the email (`Ready For Pickup Email`).                   |
 | systemMessageRemoteId | Use the Iterable remote ID created in the previous setup step.                       |
 | templateContentId     | Input the ID of the "Ready for Pickup" template content in this instance.           |
-
 
 ## Add Preconfigured Data for the `Ready for Pickup` Email
 
@@ -160,8 +157,7 @@ Here's how to set up a workflow in Iterable to automatically send personalized "
    5. Add an action step to your workflow that involves sending an email.
    6. Select the appropriate email template you created in step 2.
 
-By following these steps, you'll create an automated workflow in Iterable that triggers "Ready to Pickup" emails based on HotWax Commerce events. Save the workflow Id to use it in HotWax data, which help you send the ready for pickup email. 
-
+By following these steps, you'll create an automated workflow in Iterable that triggers "Ready to Pickup" emails based on HotWax Commerce events. Save the workflow Id to use it in HotWax data, which help you send the ready for pickup email.
 
 ## Run Service to send email from on Iterable
 

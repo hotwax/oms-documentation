@@ -4,11 +4,11 @@
 
 Kit products are products that are sold as a set or bundle, comprising multiple individual items. Here is an overview of how kit products will be displayed on the fulfillment application:
 
-### Kit Badge:
+### Kit Badge
 
 When an order includes a kit product, each line item representing that kit in the order will have a "kit" badge indicator. This badge signifies that the line item is a kit that contains physical components.
 
-## View Kit Components:
+## View Kit Components
 
 By default, kit line items are not shown directly on the main orders card. Instead, there is a list icon next to the order line item that indicates it's a kit product.
 
@@ -24,7 +24,7 @@ This helps in managing orders efficiently by providing clear indications of kit 
 Managing kits, which bundle multiple items into one offering, has traditionally been challenging when a component is unavailable. Customers expect to receive the entire kit, so if even one item is missing, the whole order must be rejected. However, tracking which component caused the rejection is essential to maintaining accurate inventory levels.\
 With HotWax Commerce’s Fulfillment App, store associates can specify rejection reasons for each component when rejecting a kit order.
 
-### Example Scenario:
+### Example Scenario
 
 For instance, if a "Sunglasses Travel Kit" includes sunglasses, a cleaning cloth, and a protective case, and the cleaning cloth is out of stock, the associate can reject the kit while marking only the cloth as unavailable. This targeted approach updates the inventory for the unavailable item, while the other components, like the sunglasses and case, remain unaffected.
 

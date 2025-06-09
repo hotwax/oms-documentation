@@ -1,8 +1,8 @@
-# Pre-Order & Back-Order Product Sync Issues 
+# Pre-Order & Back-Order Product Sync Issues
 
 ## **Troubleshooting Use Case**
 
-### **Issue 1:** New or existing products do not appear as pre-orders or backorders.
+### **Issue 1:** New or existing products do not appear as pre-orders or backorders
 
 **Possible Causes:**
 
@@ -20,7 +20,7 @@
 Products from purchase orders that don't meet these criteria won't be listed in HotWax Commerce's pre-order catalog. It's important to ensure that purchase order items adhere to these criteria for accurate listing.
 ___
 
-### **Issue 2:** Products are not removed from the pre-order or backorder category.
+### **Issue 2:** Products are not removed from the pre-order or backorder category
 
 **Resolution Steps:**
 
@@ -51,7 +51,7 @@ ___
 
 ## **Troubleshooting Use Case**
 
-### **Issue 1:** The promise date of the Product is not updated on Shopify PDP.
+### **Issue 1:** The promise date of the Product is not updated on Shopify PDP
 
 **Possible Causes:**
 

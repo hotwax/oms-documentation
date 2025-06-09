@@ -117,6 +117,7 @@ Below is a list of all the actions available in the Job Manager App, along with 
 <figure><img src="../../.gitbook/assets/schedule in bulk.png" alt=""><figcaption></figcaption></figure>
 
 ## Setting Page
+
 | Serial No. | Action        | Permission    | Description                                                                                 |
 | ---------- | ------------- | ------------- | ------------------------------------------------------------------------------------------- |
 | 1          | Go To OMS     | COMMERCEUSER_VIEW | Allows users to access OMS directly from the Job Manager App |

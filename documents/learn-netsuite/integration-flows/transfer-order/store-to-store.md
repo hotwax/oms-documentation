@@ -1,7 +1,6 @@
 ---
-description: >-
-  Learn how store to store transfer orders are processed in HotWax Commerce.
---- 
+description: Learn how store to store transfer orders are processed in HotWax Commerce.
+---
 
 # Store to Store
 
@@ -51,7 +50,7 @@ HC_MR_ExportedStoreTransferOrderCSV.js
 
     Once the store to store transfer orders are created and exported from NetSuite, they are imported into HotWax Commerce.
 
-    The process of approving transfer orders in HotWax Commerce, fulfilling them from the designated store location, reducing inventory counts in HotWax Commerce for fulfilled transfer order items, exporting store fulfilled transfer order items from HotWax Commerce and finally importing them into NetSuite mirrors the [store to warehouse transfer order flow ](storetowarehouse.md)discussed earlier.
+    The process of approving transfer orders in HotWax Commerce, fulfilling them from the designated store location, reducing inventory counts in HotWax Commerce for fulfilled transfer order items, exporting store fulfilled transfer order items from HotWax Commerce and finally importing them into NetSuite mirrors the [store to warehouse transfer order flow](store-to-warehouse.md) discussed earlier.
 
 **Job in HotWax Commerce**
 
@@ -109,7 +108,7 @@ HC_MR_ExportedStoreTOFulfillmentCSV.jsd
 
 4.  **Receive Transfer Orders in HotWax Commerce:**
 
-    The process of importing item fulfillment records in HotWax Commerce, receiving inbound shipments in the store, increasing inventory counts in HotWax Commerce against inbound shipments, exporting item receipts from HotWax Commerce, importing item receipts into NetSuite and finally increasing inventory count at store in NetSuite mirrors the [warehouse to store transfer order flow](warehousetostore.md) discussed earlier.
+    The process of importing item fulfillment records in HotWax Commerce, receiving inbound shipments in the store, increasing inventory counts in HotWax Commerce against inbound shipments, exporting item receipts from HotWax Commerce, importing item receipts into NetSuite and finally increasing inventory count at store in NetSuite mirrors the [warehouse to store transfer order flow](warehouse-to-store.md) discussed earlier.
 
 **Job in HotWax Commerce**
 

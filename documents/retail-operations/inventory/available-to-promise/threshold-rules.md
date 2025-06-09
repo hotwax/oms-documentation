@@ -6,7 +6,7 @@ To address this, retailers can create threshold rules to maintain a buffer stock
 
 For instance, if the brand **NotNaked** sets an Inventory Threshold of 10 units for Blue Shirts across their stores, the Available-to-Promise (ATP) inventory will be adjusted to ensure enough buffer stock is reserved.
 
-#### Example:
+#### Example
 
 * Times Square Inventory: 100 Units
   * Safety Stock: 10 Units
@@ -61,8 +61,6 @@ You can also filter products based on specific attributes such as color, size, o
 
 Once you’ve configured the threshold value, selected the channels, and chosen the products, click the `Save` button at the bottom right corner to finalize and save the rule. The system will now apply the threshold, ensuring that the selected product has a 10-unit buffer stock reserved across your chosen channel.
 
-
-
 {% embed url="https://youtu.be/KhiHlfEJb9A" %}
 Threshold Rule Setup
 {% endembed %}
@@ -82,8 +80,4 @@ Once the threshold rules are created, they will be visible as rule cards on the 
 {% embed url="https://youtu.be/UekJap0j5dQ" %}
 Scheduling Threshold Rule
 {% endembed %}
-
-
-
-
 

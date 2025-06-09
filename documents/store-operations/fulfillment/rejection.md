@@ -35,14 +35,14 @@ The Reject All button does not affect the inventory of the facility. To ensure t
 
 The Rejection Analytics Page provides a detailed view of order rejections, helping store associates and managers analyze trends and address inventory issues.
 
-### Features:
+### Features
 
 * **Total Rejections:** Displays the total count of all rejected items.
 * **Frequently Rejected Items:** Highlights the products most often rejected.
 * **Common Rejection Reasons:** Lists common causes like out-of-stock items or damaged products.
 * **All Rejected Items:** Shows a complete list of rejected order items for detailed tracking.
 
-### Filters and Search Options:
+### Filters and Search Options
 
 * **Time Filters:** Analyze rejection data from the last 24 hours or 7 days.
 * **Search:** Locate specific rejected items using Product SKUs or order details.
@@ -53,13 +53,13 @@ The Rejection Analytics Page provides a detailed view of order rejections, helpi
 
 Retailers can configure which rejection reasons they want to offer for their staff to choose from if they're unable to fulfill items in an order. To access this page, users must have `SFA_ADMIN` permission.
 
-### Overview:
+### Overview
 
 * **Store Associates:** In the Fulfillment App and BOPIS App, store associates see rejection reasons specific to in-store operations, such as out-of-stock items or damaged products.
 * **Customer Service Representatives (CSRs):** In the Order Management System, CSRs view broader rejection reasons suited for customer interactions, such as manual reallocation.
 * **Admin Users:** Admin or operations managers can view all rejection reasons across roles for complete oversight.
 
-### Toggle for Showing Rejection Reasons:
+### Toggle for Showing Rejection Reasons
 
 Rejection reasons can be shown or hidden from store associates using the fulfillment app by using the toggle on the settings page.
 
@@ -70,7 +70,7 @@ Rejection reasons can be shown or hidden from store associates using the fulfill
 
 <figure><img src="../.gitbook/assets/rejectionReasons.png" alt=""><figcaption><p>Rejection Reasons</p></figcaption></figure>
 
-### Rejection reason types that trigger inventory adjustments and how these types cause stock levels to be updated:
+### Rejection reason types that trigger inventory adjustments and how these types cause stock levels to be updated
 
 Rejection reasons in the system are divided into specific types to define how they affect inventory. Each type explains what action should be taken on the inventory when a rejection reason is applied. This helps manage inventory updates smoothly and accurately.
 
@@ -101,7 +101,7 @@ Video: Rejections in Fulfillment App
 
 The **Adjust QOH Along with ATP on Rejection** toggle provides control over inventory adjustments during order rejections.
 
-### Why disable impact on QOH?
+### Why disable impact on QOH
 
 The main reason to disable QOH impact from rejection reasons would be to limit the impact store associates have on your inventory record. Retailers that use HotWax Commerce’s store inventory management capabilities like Cycle Counting rely on the QOH level as a source of truth for physical inventory levels. Allowing rejections to impact QOH opens up the possibility of store staff accidentally creating massive inventory discrepancies by selecting the wrong rejection reason.
 

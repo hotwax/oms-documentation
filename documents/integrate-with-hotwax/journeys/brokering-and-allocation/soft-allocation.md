@@ -18,13 +18,13 @@ To check eligible shipping facilities near the customer, the latitude and longit
 
 a. If the customer inputs their postal code:
 
-* Use the [postcodeLookup](broken-reference) API to convert the postal code into latitude and longitude coordinates. Learn more about how to use the postCodeLookup API and convert postal codes into latitudes and longitudes.
+* Use the [postcodeLookup](/documents/integrate-with-hotwax/api/facility/postcode-lookup.md) API to convert the postal code into latitude and longitude coordinates. Learn more about how to use the postCodeLookup API and convert postal codes into latitudes and longitudes.
 
 b. If the customer allows access to their system location:
 
 * Obtain the latitude and longitude coordinates directly from their device.
 
-### Sample of `postCodeLookup` :
+### Sample of `postCodeLookup`
 
 #### Method : `/POST`
 
@@ -72,11 +72,11 @@ b. If the customer allows access to their system location:
 }
 ```
 
-## Step 2: Verify inventory availability of cart items.
+## Step 2: Verify inventory availability of cart items
 
 Utilize the `checkCartInventory` API to determine same-day delivery eligibility for cart items across facilities. This API evaluates eligibility based on key factors, including facility latitude and longitude and a predefined distance (typically within 50 miles for same-day delivery by carriers). The results indicate the closest facility eligible for fulfillment.
 
-### Sample of `checkCartInventory`:
+### Sample of `checkCartInventory`
 
 ### Method : `/POST`
 
@@ -199,7 +199,7 @@ Upon receiving the response indicating facility's eligiblity for fulfillment, th
 
 This structured approach ensures precise determination of delivery eligibility, providing customers with accurate information about their order's expected delivery date.
 
-## Additional Notes:
+## Additional Notes
 
 In addition to the eligibility assessment process:
 

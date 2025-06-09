@@ -43,7 +43,7 @@ Displays all the jobs queued for execution.
 
 <figure><img src="../../.gitbook/assets/Pending 1.png" alt="" width="563"><figcaption></figcaption></figure>
 
-<figure><img src="../../jobManager/.gitbook/assets/Screenshot%202023-11-07%20at%204.09.42%20PM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="/documents/retail-operations/.gitbook/assets/Screenshot 2023-11-07 at 4.09.42 PM.png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 
 {% tab title="Running" %}

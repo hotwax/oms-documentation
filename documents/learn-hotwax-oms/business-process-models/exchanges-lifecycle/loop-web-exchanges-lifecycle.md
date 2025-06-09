@@ -47,7 +47,7 @@ When item receipt records are generated in Loop, multiple actions take place in 
 
 Creating refund records is essential to mark the completion of the return process and closing RMA in NetSuite.
 
-*   Return receipt records trigger the creation of refund records in Loop.
+* Return receipt records trigger the creation of refund records in Loop.
 
     Customers receive their refund amount when they return an item. In the event where they are returning an item in exchange for another, refunds will not be issued to them because that amount is used as payment for the exchanged product.
 
@@ -63,15 +63,15 @@ A dedicated `Import Orders` job in HotWax Commerce downloads web orders from Sho
 
 An important aspect to note is that for an exchange order, Loop saves details of the original order in the extended fields in Shopify. Therefore, when downloading exchange orders from Shopify, HotWax Commerce also retrieves these details of the original order and saves them in the communication event.
 
-Learn more about how [HotWax Commerce fulfills web orders](https://app.gitbook.com/s/q42f0puI9OYah51t08oQ/shopify-integration/order-fulfillment)
+Learn more about how [HotWax Commerce fulfills web orders](/documents/learn-shopify/shopify-integration/order-fulfillment/README.md)
 
 ## 8. Exchange Orders Synchronized to NetSuite
 
 HotWax Commerce synchronizes all web orders to NetSuite in the <mark style="color:orange;">**“Created”**</mark> status and similarly, exchange orders in the <mark style="color:orange;">**“Created”**</mark> status are also synchronized to NetSuite. When NetSuite imports them, they are automatically assigned a <mark style="color:orange;">**“Pending Fulfillment”**</mark> status and the details of the original order are saved in the memo.
 
-Learn more about [order synchronization between HotWax Commerce and NetSuite](https://app.gitbook.com/s/XPO8jTog8zeT6LrxNy36/integration-flows/sales-order)
+Learn more about [order synchronization between HotWax Commerce and NetSuite](/documents/learn-netsuite/integration-flows/sales-order/README.md)
 
-### What about Inventory Updates for the Returned & New Exchange Item?
+### What about Inventory Updates for the Returned & New Exchange Item
 
 Inventory synchronization process remains the same for the returned item that we discussed in the [Web Returns Lifecycle](../returns-lifecycle/loop-web-returns-lifecycle.md).
 
