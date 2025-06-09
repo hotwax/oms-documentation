@@ -58,8 +58,14 @@ description:>- HotWax Commerce's BOPIS fulfillment app enables retailers to effi
 
 ### 2.3. Links
 
-* **[Internal Links](#id-1.-document-structure)**: Use relative URLs for links within the same documentation.
-* **[External Links](https://docs.hotwax.co/everything/guidelines/documentation-guideline)**: Open external links in a new tab.
+* **[Internal Links](#id-1.-document-structure)**: Use relative URLs for links within the same documentation.  
+* **[External Links](https://docs.hotwax.co/everything/guidelines/documentation-guideline)**: Open external links in a new tab.  
+* **Relative Links**: Always use relative links for links within the same document.  
+* **Absolute Links**: Use absolute links only for external pages.  
+
+### Why is this important?
+* We don’t recommend using absolute links for internal documents, as moving a file to another folder will change the path and break the link.  
+* Additionally, GitBook does not track broken links for absolute URLs.  
 
 ### 2.4. Tables
 
