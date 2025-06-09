@@ -23,7 +23,7 @@ If you're only using the default Shopify Shop ID, this data can be imported dire
 5. Click the `Import` button to initiate the import process.
 6. Upon successful completion, a confirmation message will be displayed below, indicating that the data has been imported successfully.
 
-## The default mappings to be imported are as follows:
+## The default mappings to be imported are as follows
 
 {% hint style="warning" %}
 Replace the "SHOP-ID" for each Shopify Shop with your shop ID when importing data.

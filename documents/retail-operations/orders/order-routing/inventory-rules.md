@@ -6,7 +6,7 @@ description: Learn about Inventory Rules.
 
 As discussed, <mark style="color:orange;">**inventory rules**</mark> help orchestrate the process of choosing the most suitable fulfillment locations for each order in a batch of orders based on defined criteria like proximity, stock levels, and strategic priorities. These rules act as sequential steps in the order routing, guiding the brokering engine through multiple checks to find the best fulfillment location.
 
-## Why Use Multiple Inventory Rules?
+## Why Use Multiple Inventory Rules
 
 Multiple inventory rules are required because a single rule may not allocate inventory to all orders in a batch. If the first rule does not allocate inventory to some orders, the brokering engine will proceed to the next rule in sequence. This multi-step process continues through each rule until all possible options are exhausted.
 
@@ -85,7 +85,7 @@ First Inventory Rule Filters
 3. Configure filters, select the right filters to narrow down eligible facilities. For the <mark style="color:orange;">**“Same-day/Next-day orders” routing rule**</mark><mark style="color:orange;">,</mark> we will choose <mark style="color:orange;">**“Facility Group**</mark><mark style="color:orange;">”</mark> and <mark style="color:orange;">**“Proximity”**</mark><mark style="color:orange;">.</mark>
 
 * **Facility Group:** Select <mark style="color:orange;">**“Warehouses”**</mark> from the dropdown. This limits eligibility to only warehouses with available inventory. **Why did we choose warehouse locations?** Warehouses handle larger inventory volumes and can better support online order fulfillment compared to stores, which often focus on walk-in customers.
-*   **Proximity:** Set the distance to **100 miles**, so the rule includes only those warehouses within a 100-mile radius of the customer’s location.
+* **Proximity:** Set the distance to **100 miles**, so the rule includes only those warehouses within a 100-mile radius of the customer’s location.
 
     This means that only nearby warehouses are considered, optimizing delivery speed and meeting SLA requirements.
 
@@ -219,7 +219,7 @@ Final inventory rule
 {% hint style="warning" %}
 Once you've configured each rule, change its status from **Draft** to **Active** to make it operational. To do this, click on **Draft** and select **Active,** or revert an active rule back to **Draft** if any adjustments are required.
 
-Once all rules are active, and your routing is fully configured, set the [Brokering Run](broken-reference/) to **Active** so that orders can be processed as scheduled.
+Once all rules are active, and your routing is fully configured, set the [Brokering Run](/documents/retail-operations/orders/order-routing/brokering-runs.md) to **Active** so that orders can be processed as scheduled.
 {% endhint %}
 
 ### Add Special Handling for Standard Orders
@@ -301,4 +301,4 @@ By leveraging HotWax Commerce, `Order Routing App`retailers can create highly cu
 
 ### Next Steps
 
-In the following sections, we’ll cover a range of business [use cases](scenarios.md) that the HotWax Commerce `Order Routing` App can help achieve, highlighting its adaptability to various inventory and order fulfillment needs.
+In the following sections, we’ll cover a range of business [use cases](./use-cases.md) that the HotWax Commerce `Order Routing` App can help achieve, highlighting its adaptability to various inventory and order fulfillment needs.

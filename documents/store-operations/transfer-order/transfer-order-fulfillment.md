@@ -40,7 +40,7 @@ For more details on Transfer order lifecycle refer to this [document](https://do
 
 Store Associates can print transfer order picklists directly from the Fulfillment App. Store associates can quickly verify products, ensuring that transfer orders are processed efficiently and accurately. By minimizing discrepancies, this feature strengthens inventory management and enhances overall operational efficiency.
 
-### Steps to Print Transfer Order Picklists in the Fulfillment App:
+### Steps to Print Transfer Order Picklists in the Fulfillment App
 
 1. **Access the Fulfillment App**: Open the HotWax Commerce Fulfillment App on your device.
 2. **Navigate to the Transfer Order Section**: Go to the `Transfer Order` section to view all `active` transfer orders.

@@ -23,11 +23,7 @@ The Bulk Safety Stock feature in the HotWax Commerce platform is a powerful tool
 8. Upload the previously exported CSV file to update safety stock values for the products on the existing facilities.
 9. Check that the status is updated as `Finished` in the Result Section, ensuring the successful completion of the safety stock update process.
 
-
-
 {% embed url="https://youtu.be/d9WGeAgczRc" %}
 
 By following these steps, users can seamlessly leverage the `Bulk Safety Stock` feature within the HotWax Commerce platform, contributing to a more efficient and comprehensive safety stock management system.
-
-
 

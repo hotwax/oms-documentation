@@ -27,7 +27,7 @@ Empower users to schedule the import process, enabling them to select the desire
 
 ***
 
-## How to schedule jobs for initial load?
+## How to schedule jobs for initial load
 
 {% hint style="info" %}
 **Things to remember:**

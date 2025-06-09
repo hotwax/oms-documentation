@@ -1,14 +1,14 @@
 # How to Bulk Import Employee
 
-## Problem:
+## Problem
 
 When importing employee data into OMS, specific issues may occur that can prevent a successful bulk import. This guide will assist you in troubleshooting and resolving common problems that may arise during the employee import process.
 
-## Error Identification:
+## Error Identification
 
 When importing employee data into OMS, various errors can occur due to issues in the CSV file or system conflicts. It is essential to recognize and address specific errors to ensure a smooth import process.
 
-### Common Errors:
+### Common Errors
 
 * Missing mandatory fields in the CSV file
 * Duplicate employee entries
@@ -16,7 +16,7 @@ When importing employee data into OMS, various errors can occur due to issues in
 * Security group not recognized
 * Invalid username or password format
 
-## Cause Analysis:
+## Cause Analysis
 
 The issues with importing employees are generally related to specific data formatting errors or missing fields in the CSV file. Below is an analysis of common causes:
 
@@ -26,7 +26,7 @@ The issues with importing employees are generally related to specific data forma
 * **Security group not recognized** – Verify that the security group matches the ones available in the system.
 * **Incorrect username or password format** – The username should follow the specified pattern, and the password should meet the security requirements (e.g., minimum length, special characters).
 
-## Solution:
+## Solution
 
 ### Step 1: Login to OMS
 
@@ -70,7 +70,7 @@ The CSV should include the following fields:
 * Identify the issue based on the error message and adjust the CSV file accordingly.
 * Re-upload the corrected CSV file to complete the import.
 
-## Post-Import Validation:
+## Post-Import Validation
 
 After the import is complete, verify that the employees have been added to the system correctly by:
 

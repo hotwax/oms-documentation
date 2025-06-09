@@ -9,7 +9,7 @@ Retailers receive orders through diverse channels, including eCommerce websites,
 
 Shopify is seamlessly integrated with various social media sales channels such as Facebook and Instagram, as well as online marketplaces like Amazon. All orders, regardless of the channel, are consolidated within Shopify. For orders originating from alternative channels, Shopify assigns a key to uniquely identify the source of each order. It is crucial for retailers to map these keys with corresponding values in HotWax Commerce to effectively identify the order sources.
 
-## Mapping Process:
+## Mapping Process
 
 1. Navigate to the `Shopify Shop` Page and locate the `Shopify Order Sales Channel` section. If the section is not present, proceed to the `Shopify Shop Type` section and click the `Add` button to create a new Shopify Shop Type, which includes the Shopify Order Sales Channel.
 
@@ -35,5 +35,5 @@ Shopify is seamlessly integrated with various social media sales channels such a
 | pos                   | POS_SALES_CHANNEL    |
 | shopify_draft_order   | CSR_SALES_CHANNEL    |
 
-{% hint style='info' %} After incorporating these mandatory mappings, please add any custom mappings as needed. 
+{% hint style='info' %} After incorporating these mandatory mappings, please add any custom mappings as needed.
 {% endhint %}

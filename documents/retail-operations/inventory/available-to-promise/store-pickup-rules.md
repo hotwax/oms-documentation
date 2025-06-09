@@ -40,8 +40,6 @@ Once toggled on, these stores will automatically be added to the **PICKUP facili
 Adding Facility to Pickup Group
 {% endembed %}
 
-
-
 ## Suppress Store Pickup from Channel/ Configuration Facility
 
 In this scenario, let’s assume the retailer wants to suppress store pickup from their US stores channel, allowing only customers in canada to pickup their orders from stores. Here’s how the retailer can set up this rule through the ATP app:
@@ -77,8 +75,6 @@ Once you’ve completed the product selection, click the `Save` button at the bo
 \
 Suppress Store Pickup from Channel/ Configuration Facility
 {% endembed %}
-
-
 
 ## Suppress Store Pickup from Facility Rule
 
@@ -116,8 +112,6 @@ Once you have configured the rule, selected the facilities, and chosen the produ
 \
 Suppress Store Pickup from Facility Rule
 {% endembed %}
-
-
 
 ## Schedule Store Pickup Rule
 

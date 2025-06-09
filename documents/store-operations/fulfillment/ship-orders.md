@@ -37,7 +37,7 @@ Users can create individual order's picklist by clicking on the order ID which w
 Video: Regenerate picklist
 {% endembed %}
 
-## Pack Orders:
+## Pack Orders
 
 Mark orders packed when order items are ready to be shipped.
 
@@ -45,18 +45,23 @@ Mark orders packed when order items are ready to be shipped.
 Bulk Packing slips and Shipping labels will be generated in a new tab.
 {% endhint %}
 
-1. Go to the In-Progress Orders and filter out your orders
+1. Go to the In-Progress Orders and filter out your orders using picklist filters.
 
-**Picker Filters:** Easily search for specific orders in batch processes using Picker Filters.
+2. Adding Shipment Box to Order During Fulfillment
 
-2. Add [multiple boxes](shipping-box.md#adding-shipment-box-to-order-during-fulfillment) to ship large orders.
+* Within the order details section, locate and click on the `Add Boxes` option.
+* Add the required number of boxes corresponding to the order items, ensuring adequate packaging space without excess boxes. Store associates can choose to pack multiple order items into one box, reducing shipping costs and environmental impact.
+* Upon adding boxes, store associates can further specify box types for individual order items. Click on the `select box` option against the order item and navigate through the dropdown menu to select the appropriate option corresponding to each item's size and packaging requirements.
+* After appropriately packing all items and selecting box types click `Pack` to update the shipping carrier for shipping label generation with the least shipping charges for the selected boxes.
 
-{% embed url="https://youtu.be/V66o7vAf6HY" %}
-Video: Add box
+By diligently specifying both the total box quantity for the entire order and the appropriate box types for individual order items, store associates ensure accurate shipping labels, cost-effective packaging, and efficient utilization of available space, ultimately reducing shipping expenses for retailers.
+
+{% embed url="https://youtu.be/385HSXa8Pdc" %}
+Add Shipment Box During Fulfillment
 {% endembed %}
 
-3. Click on Pack Orders function to confirm shipment details. Retailers can also enable force scanning from the settings page to ensure store associates scan the items when packing.
-4. A pop-up dialog box will appear for printing additional documents like shipping labels and packing slips.
+1. Click on Pack Orders function to confirm shipment details. Retailers can also enable force scanning from the settings page to ensure store associates scan the items when packing.
+2. A pop-up dialog box will appear for printing additional documents like shipping labels and packing slips.
 
 Print the shipping labels and packing slips to attach with the packed orders.
 

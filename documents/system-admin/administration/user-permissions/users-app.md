@@ -45,8 +45,8 @@ Below is a list of all the actions available in the Users App, along with the sp
 
 <figure><img src="../../.gitbook/assets/permissions.png" alt=""><figcaption></figcaption></figure>
 
-
 ### Setting Page
+
 | No. | Action                   | Permission                          | Description |
 |----|--------------------------|-----------------------------------|-------------|
 | 1  | Go to OMS                | COMMERCEUSER_VIEW                 | Allows users to access HotWax OMS directly from the User App. |

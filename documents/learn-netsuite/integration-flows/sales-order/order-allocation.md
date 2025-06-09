@@ -34,7 +34,6 @@ HC_SC_UpdateSalesOrders
 ```
 {% file src="../../.gitbook/assets/Brokered Order Items Sample Feed.csv" %}
 
-
 * [x] Sync new orders from HotWax to NetSuite
   * [x] Sync customers
   * [x] Sync order line items

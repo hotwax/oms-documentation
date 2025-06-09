@@ -6,7 +6,6 @@ description: Learn about how order reports are managed in HotWax Commerce.
 
 These reports play a crucial role in ensuring order synchronization across Shopify, HotWax, and NetSuite.
 
-
 ## Missing Order Attribute Report
 
 The Missing Order Attribute Report is a vital tool for tracking order synchronization. By monitoring the presence of essential attributes, it identifies orders lacking crucial information, ensuring a seamless synchronization process. This report enables proactive resolution of discrepancies, preventing any orders from failing to synchronize effectively.
@@ -17,7 +16,7 @@ The Missing Order Attribute Report is a vital tool for tracking order synchroniz
 | ATTRIBUTE     | The essential order attributes. For example, `PRODUCT_VERIFIED` indicates whether the product has been verified   |
 | STATUS              | The status if the order has essential attributes or not                      |
 
-**In the NetSuite context**, the report ensures accurate order synchronization by verifying essential attributes. By highlighting orders lacking these attributes, it prevents synchronization issues, providing assurance that orders seamlessly integrate with NetSuite. 
+**In the NetSuite context**, the report ensures accurate order synchronization by verifying essential attributes. By highlighting orders lacking these attributes, it prevents synchronization issues, providing assurance that orders seamlessly integrate with NetSuite.
 
 | Field                   | Description                                       |
 |-------------------------|---------------------------------------------------|
@@ -29,7 +28,8 @@ The Missing Order Attribute Report is a vital tool for tracking order synchroniz
 ---
 
 ## Canceled Order Report
-The Canceled Order Report provides a comprehensive tracking mechanism for all orders that have entered the OMS and subsequently been canceled. This report ensures a systematic record of cancellations, offering visibility into the cancellation process. 
+
+The Canceled Order Report provides a comprehensive tracking mechanism for all orders that have entered the OMS and subsequently been canceled. This report ensures a systematic record of cancellations, offering visibility into the cancellation process.
 
 **In the context of NetSuite,** the Canceled Order Report becomes important due to the non-automatic synchronization of cancellations by HotWax. This report ensures that canceled orders align with expectations in NetSuite, whether through Celigo or NetSuite user actions. By using this report, organizations leveraging NetSuite gain a proactive means to verify and reconcile cancellation records, preventing discrepancies. This meticulous approach contributes to the accuracy of cancellation data across systems, enhancing the reliability of financial and operational records within NetSuite.
 
@@ -56,8 +56,7 @@ The Product Without NetSuite ID report identifies products that have been synchr
 | shopify_product_id | Unique identifier for the product in Shopify           |
 | hotwax_product_id  | Unique identifier for the product in HotWax OMS       |
 
-
---- 
+---
 
 ## Customers Without NetSuite ID Report
 

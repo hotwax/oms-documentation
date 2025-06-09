@@ -24,7 +24,6 @@ Downloads a shipping label in PDF format for the shipment. To download the shipp
 |------------------|-----------------------------------------------------------|----------------|
 | `shipment ID`    | The ID of the shipment of groups                          | Yes            |
 
-
 ## Response
 
-Downloads a shipping label in pdf format which is pasted on the shipment. 
+Downloads a shipping label in pdf format which is pasted on the shipment.

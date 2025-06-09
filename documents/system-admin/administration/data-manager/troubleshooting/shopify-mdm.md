@@ -22,6 +22,4 @@ After a job completes, users can access logs documenting every step of the data 
 
 If a job fails, users can identify problematic records in the log interface, facilitating troubleshooting and error resolution.
 
-
-
 <figure><img src="../.gitbook/assets/Shopify MDM (2).png" alt=""><figcaption><p>Shopify MDM</p></figcaption></figure>

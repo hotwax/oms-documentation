@@ -32,8 +32,6 @@ You scheduled a job to import data into OMS, but the imported data is not loaded
 * Navigate to the import menu to find the files you have imported in OMS.
 * Check the status of the files; they should transition from Pending to Finished.
 
-<figure><img src="../.gitbook/assets/Frame%20698.png" alt="" width="375"><figcaption></figcaption></figure>
-
 ## Scenario 2: Incorrect File Format
 
 When importing data from external systems into HotWax Commerce, files must adhere to specific formats supported by the system. Failure to do so can result in import failures and data discrepancies.
@@ -73,7 +71,5 @@ Empty records in an imported file indicate that the expected data from the exter
   * Access the SFTP path specified for file uploads.
   * Refer to [user manuals](data-import-errors.md) for correct file paths and SFTP settings.
   * Verify the existence of records in the SFTP directory.
-
-
 
 <figure><img src="../.gitbook/assets/Data Not Imported (1).png" alt=""><figcaption></figcaption></figure>

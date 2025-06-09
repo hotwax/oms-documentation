@@ -59,11 +59,7 @@ Quick setup provides defined templates that autofill information and speed up th
 * **CSR (Customer Service Representative):** Configured for Customer Service Representatives handling customer-facing roles.
 * **Merchandising Manager:** Ideal for catalog management roles.
 
-
-
 {% embed url="https://youtu.be/tUMKSefViRg" %}
-
-
 
 #### Manual Setup
 
@@ -74,7 +70,5 @@ Manual setup allows manual control over creating a user. Follow these steps:
 3. **Manage User Permissions:** Give clearances in OMS specific to the user role.
 4. **Add Them to Brands for Merchandise Management:** Add user to specific product store.
 5. **Associate Facilities for a User in a Fulfillment Role:** Add user to facilities and assign them fulfillment role.
-
-
 
 {% embed url="https://youtu.be/kutp2Ba0As8" %}

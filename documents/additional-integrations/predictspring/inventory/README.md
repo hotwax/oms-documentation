@@ -6,27 +6,27 @@ Inventory synchronization between **PredictSpring** and **HotWax Commerce** is a
 
 ## 1. Exporting Order Data to SFTP Location
 
-### Introduction:
+### Introduction
 
 The initial phase of the in-store sales inventory synchronization process involves exporting order data from **PredictSpring** and putting it into a designated SFTP location. **PredictSpring** facilitates this through a Transaction Log, or TLog, which comprehensively captures various store transactions, including in-store orders, endless aisle orders, returns, and exchanges.
 
 **PredictSpring** provides three methods for exporting data: Real-Time export, Batch export, and Webhook integration. For this integration, we have opted for the Webhook approach.
 
-### Configuring Real-Time Order Export Endpoint:
+### Configuring Real-Time Order Export Endpoint
 
 To initiate the export process, configure the Real-Time Order Export Endpoint within **PredictSpring**. **HotWax Commerce Integration Platform** provides an SFTP location, set up in **PredictSpring** as an endpoint.
 
-Navigate to `CMS > Store Management > Advanced > Store Settings`. 
+Navigate to `CMS > Store Management > Advanced > Store Settings`.
 
 In this configuration, endpoints of SFTP locations are set to ensure a seamless real-time export process. Establish the endpoint (`OrderPostProcessingConfigJSON`) to enable **PredictSpring** to transmit order data to the designated external location via HTTP POST.
 
-### Exporting Order Data:
+### Exporting Order Data
 
 **PredictSpring** sends a `CustomerOrder` object as JSON to an SFTP endpoint of **HotWax Commerce Integration Platform** via HTTP POST. This event occurs at the end of order processing synchronously in **PredictSpring**. This orchestrated export process ensures that for each in-store sale, a TLog file is generated and placed in the specified SFTP location. This file, containing details of multiple order line items, sets the stage for the subsequent steps in the synchronization journey.
 
 ## 2. Creating Inventory Variance File
 
-Once the order data is exported and stored in the designated SFTP location, **HotWax Commerce's Integration Platform** takes charge. A job within this platform carefully reads the TLog files, analyzing each order and its line items. Based on the analysis, an inventory variance file is prepared for “Completed” orders, encapsulating changes in stock levels due to in-store sales in **PredictSpring**. The inventory variance file is then smoothly transitioned to another folder, signaling the conclusion of the second step. 
+Once the order data is exported and stored in the designated SFTP location, **HotWax Commerce's Integration Platform** takes charge. A job within this platform carefully reads the TLog files, analyzing each order and its line items. Based on the analysis, an inventory variance file is prepared for “Completed” orders, encapsulating changes in stock levels due to in-store sales in **PredictSpring**. The inventory variance file is then smoothly transitioned to another folder, signaling the conclusion of the second step.
 
 TLog files can also have Endless Aisle Orders aka Send Sale orders. These orders are not “Completed” and so their status is “Created”. These orders are taken by store associates for products that are out of stock in the store. The idea is to get this order shipped to the customer from another store or warehouse. We will see how these orders are synced in **HotWax Commerce** in another section.
 

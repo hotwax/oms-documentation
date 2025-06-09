@@ -125,7 +125,7 @@ Retailers can generate `shipping labels` from their preferred `carrier` using Ho
 
 This feature provides enhanced flexibility, especially for stores using multiple carriers, allowing for easier switching between partners and optimizing the shipping process.
 
-### Steps to Generate Shipping Labels from Preferred Carriers:
+### Steps to Generate Shipping Labels from Preferred Carriers
 
 1. **Access the Fulfillment App**: `Open` the HotWax Commerce `Fulfillment App` on your device.
 2. **Go to the "In Progress" Section**: `Navigate` to the `In Progress` section where you’ll find details of `active orders`.

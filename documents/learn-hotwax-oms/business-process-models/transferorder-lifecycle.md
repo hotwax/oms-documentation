@@ -29,7 +29,7 @@ To explain the Transfer Order Lifecycle BPM, we've opted NetSuite as the ERP sys
 
 * A scheduled script in NetSuite exports the feed of item fulfillment records in <mark style="color:orange;">**“Shipped”**</mark> status. A scheduled job in HotWax Commerce reads this feed and creates inbound shipments at the destination facility.
 * HotWax Commerce provides an `Inventory Receiving App` for store associates to easily receive any new inventory arriving at stores.
-*   Inbound shipments that have been created are automatically reflected in the `Inventory Receiving App`, allowing store associates to receive them in store.
+* Inbound shipments that have been created are automatically reflected in the `Inventory Receiving App`, allowing store associates to receive them in store.
 
     For example, if a transfer order specifies the Central Warehouse as the source and the Brooklyn Store as the destination, the items from this transfer order will be automatically reflected in the `Inventory Receiving App` at the Brooklyn Store.
 * Store associates scan the transfer order items and start receiving inventory. Upon receiving shipments, item receipt records are generated in HotWax Commerce and subsequently, the inventory counts for the items received in the store are increased.
@@ -85,7 +85,7 @@ Once transfer order items are fulfilled from the store, the QOH for the correspo
 ### 5. Create Inbound Shipments in HotWax Commerce and Start Receiving
 
 * As discussed in `warehouse to store` transfer orders lifecycle, for store to store transfer orders, the receiving process in stores remains consistent. A scheduled SuiteScript in NetSuite exports the feed of item fulfillment records in <mark style="color:orange;">**“Shipped”**</mark> status. After that, a scheduled job in HotWax Commerce reads this feed and creates inbound shipments at the destination facility.
-*   Inbound shipments that have been created are automatically reflected in the `Inventory Receiving App`, allowing store associates to receive them in store.
+* Inbound shipments that have been created are automatically reflected in the `Inventory Receiving App`, allowing store associates to receive them in store.
 
     For example, if a transfer order specifies the Times Square Store as the source and the Brooklyn Store as the destination, the items from this transfer order will be automatically reflected in the `Inventory Receiving App` at the Brooklyn Store.
 * Store associates scan the transfer order items and start receiving inventory. Upon receiving shipments, item receipt records are generated in HotWax Commerce and subsequently, the inventory counts for the items received in the store are increased.

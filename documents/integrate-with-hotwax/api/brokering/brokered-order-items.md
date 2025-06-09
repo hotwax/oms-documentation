@@ -1195,7 +1195,7 @@ The Brokered Order Items feed has certain out-of-the-box customizations that all
 | customerLastName                                            | The last name of the customer                                     | deo                       |
 | facilityId                                                  | The facility ID                                                   | WH0615                    |
 | facilityExternalId                                          | The external ID of the facility                                   | 22                        |
-| facilityTypeId                                              | This attribute contains the facility Type Id.                     | WAREHOUSE                 | 
+| facilityTypeId                                              | This attribute contains the facility Type Id.                     | WAREHOUSE                 |
 | parentFacilityTypeId                                        | This attribute contains ID of the parent facility for facilityId. |  DISTRIBUTION_CENTER
 | statusDatetime                                              | The date and time of the status                                   | 2024-02-23T04:05:15+09:00 |
 | productId                                                   | The product's unique identifier in HotWax Commerce                | 60757                     |

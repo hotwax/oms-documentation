@@ -28,7 +28,7 @@ The `Core Operations` feature within HotWax Commerce enables users to manage Sol
 * **enterpriseSearch:** The enterpriseSearch core houses comprehensive data concerning products, orders, and other enterprise-related information. It serves as the primary repository for critical business data, facilitating efficient search and retrieval operations within the HotWax Commerce platform.
 * **logInsights:** The logInsights core contains insights derived from system logs, offering valuable information for generating superset reports within HotWax Commerce. It serves as a repository for log data analysis, aiding in performance monitoring, troubleshooting, and reporting activities.
 
-#### Core Management Operations:
+#### Core Management Operations
 
 * **Refresh Core:** Click on the `Refresh Core` button to update the Solr index with the latest data, ensuring synchronization with system changes or updates.
 * **Delete Core:** Use caution when deleting a core, as it permanently removes all associated data. Only delete cores that are no longer in use and ensure the action is intentional.

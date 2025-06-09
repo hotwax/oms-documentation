@@ -16,7 +16,7 @@ Sometimes store associates place a custom gift card order that is not mapped to 
 | **PRODUCT_NAME** | The name of the product. | Product.PRODUCT_NAME |
 
 <details>
-  
+
   <summary>SQL Query to generate Custom Gift Card Report</summary>
 
 ```sql

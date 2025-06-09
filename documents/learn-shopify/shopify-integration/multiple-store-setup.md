@@ -8,18 +8,18 @@ HotWax Commerce streamlines product synchronization from Shopify by selecting on
 
 Initially, products are synced into the primary catalog through the following job workflows:
 
-[Import Products in Bulk](https://app.gitbook.com/s/GNcmGkoNRfptyho21A56/workflow/workflow/initial-load) (For initial Import) [Import New Products](https://app.gitbook.com/s/GNcmGkoNRfptyho21A56/workflow/job-workflows/products#import-new-product) (For regular import)
+[Import Products in Bulk](/documents/retail-operations/workflow/job-management/initial-load.md) (For initial Import) [Import New Products](/documents/retail-operations/workflow/job-workflows/products#import-new-product) (For regular import)
 
-Subsequently, the primary catalog is linked to the child stores using the following job workflow: [Associate Products with Sub-catalogs](https://app.gitbook.com/s/GNcmGkoNRfptyho21A56/workflow/job-workflows/products#associate-product-with-sub-catalog)
+Subsequently, the primary catalog is linked to the child stores using the following job workflow: [Associate Products with Sub-catalogs](/documents/retail-operations/workflow/job-workflows/products#associate-product-with-sub-catalog)
 
 ## How to Maintain Accurate Catalog for Multiple Shopify Stores
 
-### Initial Product Creation in Shopify Store:
+### Initial Product Creation in Shopify Store
 
 **Create Product in Shopify Store:**
 
-* Go to your store on \`Shopify\`\`
-* Create new products on Shopify.
+* Go to your store on Shopify
+* Create new products on Shopify
 
 **Automatic Sync with HotWax Commerce:**
 

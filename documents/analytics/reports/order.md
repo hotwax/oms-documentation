@@ -576,7 +576,6 @@ LIMIT 1000;
 
 **Counting Missing Attributes:** Within each group, the query counts the number of orders with missing attributes. This provides insights into the frequency and distribution of missing attributes across orders.
 
-
 ## Allocation Pending Report
 
 The Allocation Pending Report displays orders assigned to facilities that currently lack sufficient inventory for immediate fulfillment. Monitoring the orders and items listed in this report is essential for initiating replenishment actions at the store. By doing so, retailers can ensure that inventory levels are maintained adequately, facilitating the successful completion of fulfillment for the identified orders.
@@ -589,5 +588,4 @@ The Allocation Pending Report displays orders assigned to facilities that curren
 | FACILITY\_NAME | The name of the facility in external systems       |
 | SKU            | Unique identifier                                  |
 | QUANTITY       | Quantity required of the SKU                       |
-
 

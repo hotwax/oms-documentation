@@ -49,7 +49,7 @@ This option allows users to select an appropriate timezone to ensure consistency
 
 <figure><img src="../.gitbook/assets/fulfillment.hotwax 6.png" alt="" width="375"><figcaption><p>Select timezone</p></figcaption></figure>
 
-#### Select Language:
+#### Select Language
 
 This option allows users to select a preferred display language for the app.
 

@@ -40,8 +40,6 @@ Once you’ve set the safety stock level, selected the facilities, and applied t
 Safety Stock Rule
 {% endembed %}
 
-
-
 ## Schedule Safety Stock Rule
 
 Retailers can manage the scheduling of the ATP computation job responsible for the safety stock rule from the safety stock page. By default, ATP computation jobs are scheduled to run at midnight to ensure ATP calculations occur when store traffic is minimal, making the inventory ATP ready before the start of the day.
@@ -49,8 +47,6 @@ Retailers can manage the scheduling of the ATP computation job responsible for t
 However, if you have created a new rule and want to compute ATP immediately, you can run a job once by selecting the relevant option from the job's overflow menu.
 
 Once the safety stock rules are created, they will be visible as rule cards on the safety stock page as per the created rule. Each rule card provides an overview of configurations and product facility selections. Retailers can click the "Edit rule" button to modify rule configurations. The rule configuration can be adjusted by clicking on the chip of the safety stock rule and updating the number.
-
-
 
 {% embed url="https://youtu.be/lBCfzeTJqbo" %}
 Scheduling Safety Stock Rule

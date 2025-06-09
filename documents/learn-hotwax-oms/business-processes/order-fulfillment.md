@@ -19,7 +19,7 @@ Approved orders are eligible for brokering in HotWax Commerce. The order routing
 
 Once an order item is allocated, a fulfillment request is sent to the assigned fulfillment location. If this location happens to be a warehouse, the allocation details are synced to the WMS or ERP systems, such as NetSuite, used for warehouse fulfillment.
 
-If an order item is allocated to a store, they are automatically reflected in the HotWax Commerce [Store Fulfillment App](https://app.gitbook.com/s/y0w9O4LtMBdjROn7iZ1X/orders/fulfillment/ship-orders).
+If an order item is allocated to a store, they are automatically reflected in the HotWax Commerce [Store Fulfillment App](/documents/store-operations/orders/fulfillment/ship-orders).
 
 {% hint style="info" %}
 HotWax Commerce provides a Store Fulfillment Suite comprising user-friendly apps such as the Store Fulfillment App and Picking App to quickly and accurately fulfill orders. These apps are specifically designed to facilitate easy adoption and minimize the learning curve for store personnel.
@@ -29,7 +29,7 @@ HotWax Commerce provides a Store Fulfillment Suite comprising user-friendly apps
 
 This scenario usually happens when a customer requests expedited delivery. Because the order routing engine selects a batch of orders based on the configurable routing rules set up by retailers, there's a possibility that this specific order item may be processed later. In such cases, CSRs have the option to bypass the scheduled brokering cycle and manually release items to a fulfillment location, usually the nearest store to the customer's location. HotWax Commerce then sends the fulfillment request to the chosen store location, and the order item is reflected in the Store Fulfillment App, accelerating the order fulfillment process.
 
-#### Additional Actions CSRs can Perform:
+#### Additional Actions CSRs can Perform
 
 Following automatic brokering or manual release to a store, CSRs also have an option to include specific handling instructions for order items. In scenarios where expedited shipping is requested by the customer, CSRs can write a message in the handling instructions. These details are then visible in the Store Fulfillment App, enabling store associates to prioritize the fulfillment of these orders in-store accordingly.
 
@@ -61,7 +61,7 @@ HotWax Commerce provides two options using which pickers can start the picking p
 
 These features maximize picker efficiency and minimize errors during the picking process.
 
-Learn more about [Picking App](https://app.gitbook.com/s/y0w9O4LtMBdjROn7iZ1X/orders/fulfillment/picking-app)
+Learn more about [Picking App](/documents/store-operations/fulfillment/picking-app)
 
 ### Replace Pickers
 
@@ -71,7 +71,7 @@ Store managers can replace an assigned picker with a new one for various reasons
 As pickers pick order items, HotWax Commerce rate shops to determine the most cost-effective shipping method offered by the carrier that also meets the SLA. Once the shipping method has been selected, HotWax Commerce fetches shipping labels in bulk with tracking codes from the carrier in advance to reduce the packing time.
 {% endhint %}
 
-Learn more about [Picking](https://app.gitbook.com/s/y0w9O4LtMBdjROn7iZ1X/orders/fulfillment/ship-orders#pick-orders)
+Learn more about [Picking](/documents/store-operations/fulfillment/ship-orders#pick-orders)
 
 ## Reject Fulfillment Request
 
@@ -100,7 +100,7 @@ Let’s see how the out of the box rejection reasons offered by HotWax Commerce 
 | DAMAGE           | Decrease by rejected quantity | Unchanged                     | Product remains in stock but cannot be sold due to damage     |
 | WORN DISPLAY     | Decrease by rejected quantity | Unchanged                     | Product remains in stock but cannot be sold due to being worn |
 
-Learn more about [Rejections](https://app.gitbook.com/s/y0w9O4LtMBdjROn7iZ1X/orders/fulfillment/rejection)
+Learn more about [Rejections](/documents/store-operations/fulfillment/rejection)
 
 ## Rerouted Requests
 
@@ -110,7 +110,7 @@ The order routing engine reroutes order items rejected at a store to the next be
 
 Once the order items have been picked, they can be quickly packed as HotWax Commerce books the shipment in advance with the shipping carrier and pre-generates shipping labels.
 
-### How HotWax Commerce Further Streamlines Packing Process:
+### How HotWax Commerce Further Streamlines Packing Process
 
 * Store associates can add additional boxes or select the most suitable size for order items, directly from the app.
 * In the event the packaging team discovers a mispacked order, the app offers an option to unpack it and then begin repacking.
@@ -142,4 +142,4 @@ In specific circumstances, store managers may opt to stop order fulfillment enti
 
 In specific circumstances, store managers may need to temporarily remove their store's inventory from online selling. This could be due to various reasons such as low stock levels, prioritizing in-store customer sales, or other internal considerations. In such cases, store managers have the option to directly disable online selling for their store. This flexibility allows managers to focus on fulfilling in-store demand while conserving inventory. Additionally, they can easily re-enable online selling in the future when the situation aligns with their business needs.
 
-Learn more about [additional scenarios supported in Store Fulfillment App](https://app.gitbook.com/s/y0w9O4LtMBdjROn7iZ1X/orders/fulfillment/fulfillment-setting-page)
+Learn more about [additional scenarios supported in Store Fulfillment App](/documents/store-operations/fulfillment/fulfillment-setting-page)

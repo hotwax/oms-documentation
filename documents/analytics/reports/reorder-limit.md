@@ -4,9 +4,6 @@ This document details the Reorder-Limit feature, allowing clients to automatical
 
 ## Setting Reorder Limits
 
-
-
-
 Here's how to set the reorder limit for products by tag:
 
 1. Navigate to **Launchpad** > **ATP App** > **Threshold** page.
@@ -21,7 +18,7 @@ Here's how to set the reorder limit for products by tag:
 ### Additional Steps (Optional)
 
 1. Navigate to **Launchpad** > **Job Manager App** > **Inventory** page.
-2. Locate the **Import Product Facility** job under "More jobs." 
+2. Locate the **Import Product Facility** job under "More jobs."
 3. Schedule this job to run every 3 hours, or click **Run Now** for immediate execution. (This ensures data updates)
 4. In the same app, navigate to the **Miscellaneous** page and schedule the **Process Bulk Import Files** job to run every 15 minutes. You can also click **Run Now** for immediate execution.
 
