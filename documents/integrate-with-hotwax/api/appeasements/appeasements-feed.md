@@ -193,7 +193,7 @@ The Appeasements Financial Feeed Order Items feed has certain out-of-the-box cus
 
 **The following attributes have been prepared in the feed:**
 
-#### Return 
+#### Return
 
 | Field Name                   | Description                                  | Value                       |
 | ---------------------------- | -------------------------------------------- | --------------------------- |

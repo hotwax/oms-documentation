@@ -50,7 +50,7 @@ HotWax Commerce’s Cycle Count App accepts five key fields:
 * Count names can be repeated for different facilities. For example, two facilities can have a count named week-1.
 {% endhint %}
 
-## Steps to Create Cycle Counts in Bulk:
+## Steps to Create Cycle Counts in Bulk
 
 **1. Accessing the Cycle Count App**
 

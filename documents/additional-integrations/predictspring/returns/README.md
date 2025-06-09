@@ -2,13 +2,13 @@
 
 Efficiently managing returns is a critical component of the retail experience, and **PredictSpring** seamlessly integrates with **HotWax Commerce** to facilitate a streamlined returns process.
 
-## Here's an overview of how the return process works in **PredictSpring** with the assistance of **HotWax Commerce**:
+## Here's an overview of how the return process works in **PredictSpring** with the assistance of **HotWax Commerce**
 
-### 1. Accessing Orders in PredictSpring:
+### 1. Accessing Orders in PredictSpring
 
 When a customer visits the store to return an item, store associates initiate the process by requesting the order number. If the order was originally placed in-store, store associates can conveniently look up the order in **PredictSpring**. However, for online orders, **PredictSpring** lacks direct access. To address this, **HotWax Commerce** steps in with a dedicated API designed for order lookup. Leveraging its capability to manage both online and in-store orders, **HotWax Commerce's API** ensures that whether the order was placed in-store or online, detailed order information is retrieved.
 
-### 2. Creating Return:
+### 2. Creating Return
 
 Once the order details are obtained by **PredictSpring**, store associates proceed with the return creation process. In **PredictSpring**, as returns are created and items are received in the store, **PredictSpring** invokes the "CreateReturn" API of **HotWax Commerce**. This API initiates the creation of a return in **HotWax Commerce**, marking it with a "Received" status.
 

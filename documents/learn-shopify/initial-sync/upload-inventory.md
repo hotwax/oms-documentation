@@ -10,7 +10,7 @@ HotWax Commerce serves as the master of inventory availability. It seamlessly co
 
 ## Initial Inventory Sync in HotWax Commerce
 
-HotWax commerce gets inventory feed from [ERP, WMS](/documents/learn-hotwax-oms/business-process-models/order-lifecycle#inventory-transactions-in-erp-wms), or [POS systems](/documents/learn-hotwax-oms/business-process-models/inventory-lifecycle#inventory-transactions-in-pos) to update the inventory in its system. The external system places the order on the SFTP location, HotWax commerce processes these files and updates the inventory in its system. For retailers who lack API-based integrations, HotWax Commerce also allows manual inventory upload through the [HotWax Commerce import inventory app](/documents/retail-operations/inventory/inventory-upload).
+HotWax Commerce gets [inventory feed](/documents/learn-hotwax-oms/business-process-models/inventory-lifecycle.md) from ERP, WMS, or POS systems to update the inventory in its system. The external system places the order on the SFTP location, HotWax Commerce processes these files and updates the inventory in its system. For retailers who lack API-based integrations, HotWax Commerce also allows manual inventory upload through the [HotWax Commerce import Inventory App](/documents/retail-operations/inventory/inventory-upload/README.md).
 
 ## Create Facility Groups to Sell Online
 

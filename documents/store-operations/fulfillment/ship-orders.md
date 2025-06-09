@@ -37,7 +37,7 @@ Users can create individual order's picklist by clicking on the order ID which w
 Video: Regenerate picklist
 {% endembed %}
 
-## Pack Orders:
+## Pack Orders
 
 Mark orders packed when order items are ready to be shipped.
 
@@ -59,7 +59,6 @@ By diligently specifying both the total box quantity for the entire order and th
 {% embed url="https://youtu.be/385HSXa8Pdc" %}
 Add Shipment Box During Fulfillment
 {% endembed %}
-
 
 1. Click on Pack Orders function to confirm shipment details. Retailers can also enable force scanning from the settings page to ensure store associates scan the items when packing.
 2. A pop-up dialog box will appear for printing additional documents like shipping labels and packing slips.

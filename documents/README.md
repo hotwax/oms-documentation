@@ -28,7 +28,7 @@ Find direct access to resources tailored for **Store Operations, Retail Operatio
 Explore the sections **"Learn HotWax OMS," "Learn Shopify," and "Learn NetSuite,"** empowering users to maximize the
 potential of HotWax Commerce for your businesses.
 
-## Resources :desktop:
+## Resources :desktop
 
 <table data-view="cards">
   <thead>
@@ -71,7 +71,7 @@ potential of HotWax Commerce for your businesses.
   </tbody>
 </table>
 
-## Learn HotWax OMS :orange\_book:
+## Learn HotWax OMS :orange\_book
 
 <table data-view="cards">
   <thead>
@@ -102,7 +102,7 @@ potential of HotWax Commerce for your businesses.
   </tbody>
 </table>
 
-## Store Operations User Manual :convenience\_store:
+## Store Operations User Manual :convenience\_store
 
 <table data-view="cards">
   <thead>
@@ -162,7 +162,7 @@ potential of HotWax Commerce for your businesses.
   </tbody>
 </table>
 
-## Retail Operations User Manual :department\_store:
+## Retail Operations User Manual :department\_store
 
 <table data-view="cards">
   <thead>
@@ -229,7 +229,7 @@ potential of HotWax Commerce for your businesses.
   </tbody>
 </table>
 
-## System Admin User Manual :video\_game:
+## System Admin User Manual :video\_game
 
 <table data-view="cards">
   <thead>
@@ -274,7 +274,7 @@ potential of HotWax Commerce for your businesses.
   </tbody>
 </table>
 
-## Learn Shopify :green\_book:
+## Learn Shopify :green\_book
 
 <table data-view="cards">
   <thead>
@@ -319,7 +319,7 @@ potential of HotWax Commerce for your businesses.
   </tbody>
 </table>
 
-## Learn NetSuite :blue\_book:
+## Learn NetSuite :blue\_book
 
 <table data-view="cards">
   <thead>
@@ -356,7 +356,7 @@ potential of HotWax Commerce for your businesses.
   </tbody>
 </table>
 
-## Integrate with HotWax :dart:
+## Integrate with HotWax :dart
 
 <table data-view="cards">
   <thead>
@@ -387,7 +387,7 @@ potential of HotWax Commerce for your businesses.
   </tbody>
 </table>
 
-## Additional Integrations :jigsaw:
+## Additional Integrations :jigsaw
 
 <table data-view="cards">
   <thead>
@@ -428,7 +428,7 @@ potential of HotWax Commerce for your businesses.
   </tbody>
 </table>
 
-## Analytics :bar\_chart:
+## Analytics :bar\_chart
 
 <table data-view="cards">
   <thead>

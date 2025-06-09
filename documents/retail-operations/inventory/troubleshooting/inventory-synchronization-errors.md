@@ -45,23 +45,19 @@ Sometimes inventory synchronization to Shopify fails because of an issue on Shop
 
 ## Scenario 4: HotWax Commerce Job Not Running
 
-
-
 HotWax Commerce relies on two main jobs for inventory synchronization to Shopify: `Update Recent Inventory Changes` and `Hard Sync Job.` These jobs might fail or may not be scheduled correctly, leading to synchronization issues.
 
 ### Steps to Diagnose and Resolve
 
 1. **Ensure Jobs are Scheduled**
    * In HotWax Commerce, navigate to the `Inventory` page in the `Job Manager App`
-   * Verify that [`Update Recent Inventory Changes`](../../job-workflows/inventory.md) and [`Hard Sync Job`](https://docs.hotwax.co/documents/v/retail-operations/workflow/job-workflows/inventory) are scheduled as per your preferred frequency.
+   * Verify that [`Update Recent Inventory Changes`](../../workflow/job-workflows/inventory.md) and [`Hard Sync Job`](https://docs.hotwax.co/documents/v/retail-operations/workflow/job-workflows/inventory) are scheduled as per your preferred frequency.
 2. **Check Job Status**
    * Look into the job pipeline to ensure these jobs are not marked as failed.
    * Re-run the jobs if necessary.
 3. **Ensure `Process Uploads to eCommerce` Job is Running**
    * Go to the `Miscellaneous` page in the `Job Manager App`.
    * Verify that the `Process Uploads to eCommerce` job is running to process all uploaded files to Shopify.
-
-
 
 <figure><img src="../../.gitbook/assets/Inventory Scnchronization 1.png" alt="" width="375"><figcaption></figcaption></figure>
 
@@ -80,7 +76,5 @@ If the Shopify shop does not have the necessary write permissions configured, sy
 4. **Update Access Scope**
    * If the access scope is set to `Read Only`, click on the `pencil icon` to edit the configuration.
    * Change the access scope to `Read and Write` permissions.
-
-
 
 {% embed url="https://youtu.be/oL_BYAXZQZw" %}

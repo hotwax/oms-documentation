@@ -42,7 +42,7 @@ For more comprehensive details, read our [shopify integration page.](/documents/
 
 You can schedule the job by accessing the `Job Manager App` > `Pre-order page` and selecting the `checkbox` next to the `Auto refresh pre-sell catalog` job name.
 
-## Jobs for Synchronizing the Pre-Order Catalog with eCommerce:
+## Jobs for Synchronizing the Pre-Order Catalog with eCommerce
 
 To schedule the job, Merchandisers navigate to the `Job Manager` > `Pre Orders` page, where they can schedule the `presell catalog sync` by checking the box next to `Sync variant details`. This job facilitates updates to the Presell catalog on Shopify, working through these steps:
 

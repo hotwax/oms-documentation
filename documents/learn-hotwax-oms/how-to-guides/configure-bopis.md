@@ -64,7 +64,7 @@ For each store that allows BOPIS, HotWax Commerce uses the [checkInventory](/doc
 
 Retailers can configure Shopify BOPIS scripts from the Shopify Shop page in HotWax Commerce, enabling PDP changes on Shopify. Retailers who install the HotWax Commerce Integration App gain access to PDP customization functionality as a default feature. By installing the default JavaScript (JS) and Cascading Style Sheets (CSS) scripts from the Shopify Shop page into HotWax Commerce, retailers can effortlessly start offering BOPIS to their customers.
 
-### Steps to add scripts:
+### Steps to add scripts
 
 1. Login to HotWax Commerce.
 2. Open the Hamburger menu and navigate to Shopify Shop Menu.

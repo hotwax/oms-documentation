@@ -14,7 +14,7 @@ This document outlines the steps to ensure accurate promise date change communic
 
 The bulkSendPromiseDateChange service in OMS identifies all the sales order items whose promise dates have changed throughout the day. The frequency of this service can be configured according to specific requirements, but it is recommended to set it to once a day.
 
-#### Service Details:
+#### Service Details
 
 ```
 <service name="bulkSendPromiseDateChangedNotification" engine="java"
@@ -38,7 +38,7 @@ The bulkSendPromiseDateChange service identifies all the updated sales order ite
 
 After bringing all the updated items in response, the bulkSendPromiseDateChange service calls the `sendDeliveryDateChangedNotification` service for each item.
 
-#### Service Details:
+#### Service Details
 
 ```
 <service name="sendDeliveryDateChangedNotification" engine="java" require-new-transaction="true" max-retry="3"
@@ -94,4 +94,4 @@ HotWax Commerce has ready integration with Klaviyo, a marketing automation platf
 
 The service calls the email platform's API and sends the details to the email integration platform which will then further deliver it to the customer.
 
-### By following these steps, you can ensure accurate promise date change communication from the OMS to marketing automation platform.
+### By following these steps, you can ensure accurate promise date change communication from the OMS to marketing automation platform

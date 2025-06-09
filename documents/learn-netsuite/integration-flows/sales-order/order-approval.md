@@ -189,7 +189,6 @@ To sync sales orders from HotWax Commerce to NetSuite, a required field is the "
 
 {% file src="../../.gitbook/assets/Created Order Items Sample Feed.csv" %}
 
-
 ## Sync Sales Order Item Line IDs from NetSuite to HotWax Commerce
 
 This step syncs NetSuite sales order line item IDs with HotWax Commerce order items. This step helps in mapping and aligning the order line items in HotWax Commerce with their corresponding line item IDs in NetSuite. This synchronization enables a smooth and accurate cross-referencing of items and their relevant details between the two systems. Without syncing order line item IDs, any attempt to update an order item in NetSuite would result in a new order item being created.

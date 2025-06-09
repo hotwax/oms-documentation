@@ -14,7 +14,7 @@ Once all the facilities have been set up, those facilities that will be using Ne
 
 When HotWax routes orders, if an item is brokered to a facility within this group, it indicates that OMS syncs allocation details for these items with NetSuite.
 
-## Adding/Removing Facilities from NetSuite Fulfillment Group:
+## Adding/Removing Facilities from NetSuite Fulfillment Group
 
 1. Access NetSuite Integration Page by Navigating to Settings > NetSuite Integration.
 2. Locate and access the `Facility Groups` section.
@@ -28,7 +28,7 @@ By making these associations, the integration layer ensures that when an order i
 You can simply click on the`bin` icon to remove a facility from the NetSuite Fulfillment Group.
 {% endhint %}
 
-## Example:
+## Example
 
 | Facility Group ID    | Facility             |
 | -------------------- | -------------------- |

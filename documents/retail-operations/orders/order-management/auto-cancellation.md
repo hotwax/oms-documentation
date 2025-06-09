@@ -2,11 +2,11 @@
 
 Managing inventory and order fulfillment is a critical aspect of retail operations. However, sometimes items may be unavailable across all facilities. In such cases, retailers can use the Auto-Cancel Date Management feature, which provides them with the ability to automate the cancellation of orders that cannot be fulfilled due to inventory shortages within the desired frame. This feature helps retailers avoid operational delays and improve customer satisfaction by ensuring orders do not remain in limbo indefinitely. When an item is marked unfillable after a failed brokering attempt, users can set or modify an auto-cancel date, streamlining the process of handling these unfillable orders. For example, an e-commerce order can have a 5-day auto-cancel period, while SendSale orders may not have any auto-cancellations, allowing flexibility based on business rules.
 
-## Step-by-Step Usage Instructions:
+## Step-by-Step Usage Instructions
 
 #### 1. **Access the Order Routing App**
 
-* **Navigate to:** Launchpad > [`Order Routing`](broken-reference) App. This is where you configure brokering runs and set up auto-cancellation rules for unfillable orders. Inventory managers or fulfillment team members typically use this to manage order fulfillment and brokering logic.
+* **Navigate to:** Launchpad > [`Order Routing`](/documents/retail-operations/orders/order-routing/README.md) App. This is where you configure brokering runs and set up auto-cancellation rules for unfillable orders. Inventory managers or fulfillment team members typically use this to manage order fulfillment and brokering logic.
 
 #### 2. **Select the Brokering Run**
 

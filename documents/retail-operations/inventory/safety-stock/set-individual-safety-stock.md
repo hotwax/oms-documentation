@@ -20,8 +20,6 @@ The ability to `Set Individual Safety Stocks`in the HotWax Commerce platform pro
 
 By following these steps, users can efficiently utilize the Set Individual Safety Stocks feature within the HotWax Commerce platform, allowing for targeted and responsive safety stock management tailored to specific products and facilities.
 
-
-
 {% embed url="https://youtu.be/SXcmu28qJyk" %}
 Set Individual Facility Safety Stock
 {% endembed %}

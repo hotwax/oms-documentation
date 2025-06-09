@@ -18,7 +18,7 @@ You can simply create a new payment method mapping or edit an existing one by na
 
 In the event a payment method in eCommerce and HotWax is not mapped to a payment method in NetSuite, the integration layer will fall back to a `DEFAULT` payment method. Currently, this fallback payment method is mapped to `Shopify Payment` in NetSuite.
 
-## Example Mapping:
+## Example Mapping
 
 Here's how you can [create mappings for payment methods](README.md#configuring-mappings-between-hotwax-commerce-and-netsuite)
 

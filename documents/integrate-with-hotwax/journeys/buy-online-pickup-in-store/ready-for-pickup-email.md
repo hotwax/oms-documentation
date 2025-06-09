@@ -51,6 +51,7 @@ When store staff pack the order items and indicate their readiness for pickup, t
   "dimensionUomId": "WT_kg",
   "weightUomId": "WT_kg",
   "_EVENT_MESSAGE_": "Congratulations! Shipment #10140 is ready for pickup"
+
 }
 ```
 
@@ -67,14 +68,14 @@ The chained service works for both `Store pickup` and `Ship to store` shipments.
 
 Note: Additionally, this ECA service also offers the option to manually trigger the "ready to pickup" email notification. When this ECA service is triggered, it internally initiates the email for shipment process. This feature allows users to manually initiate the sending of email notifications to inform recipients that their item is ready for pickup.
 
-#### Configuration details:
+#### Configuration details
 
 ```
-<ProductStoreEmailSetting 
+<ProductStoreEmailSetting
   emailType="PRDS_READY_TO_PICKUP"
-  productStoreId="STORE" 
-  subject="Ready For Pickup" 
-  templateContentId="READY_FOR_PICKUP", 
+  productStoreId="STORE"
+  subject="Ready For Pickup"
+  templateContentId="READY_FOR_PICKUP",
   systemMessageRemoteId= NN_LISTRAK_CONFIG>
 ```
 
@@ -89,7 +90,7 @@ Note: Additionally, this ECA service also offers the option to manually trigger 
 
 The email transmission system is identified by the parameter `systemMessageRemoteId`, while the information to configure the email's content is specified by the `templateContentId`. This `templateContentId` enables the OMS (Order Management System) to locate and fetch the content required for composing the email.
 
-#### ECA Details:
+#### ECA Details
 
 ```
 <service name="sendReadyToPickupItemNotification" engine="java" require-new-transaction="true" max-retry="3"
@@ -109,7 +110,7 @@ The email transmission system is identified by the parameter `systemMessageRemot
 
 When the marketing automation platform handles email transmission, the OMS shares the required information in JSON format, specified by the `templateContentId`, to the platform.
 
-#### A list of fields which are available out of box in HotWax which can be shared with a marketing automation platform:
+#### A list of fields which are available out of box in HotWax which can be shared with a marketing automation platform
 
 | Dynamic Variable | Description                                                           |
 | ---------------- | --------------------------------------------------------------------- |

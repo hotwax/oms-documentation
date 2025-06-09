@@ -34,8 +34,6 @@ Once ASN is located, store associates can tap to view the `ASN details` includin
 
 The inbound shipments generally contain multiple product items, store associates can either scan individual product barcodes or search SKUs to locate specific items and start receiving. In case you are not managing barcodes, tap on the `image icon` to see the enlarged image to easily identify the product before receiving it. Users can also change their product identifiers from the settings page.
 
-
-
 {% embed url="https://youtu.be/OwVIBaKY4ds?si=Mk7ckhajTykEiHf9" %}
 Search Shipment Items
 {% endembed %}
@@ -96,7 +94,7 @@ Retailers who accept returns at their stores need to accurately receive and reco
 
 Store associates can lookup the incoming returns by navigating to the `Returns` page and identifying the returns with the `Return ID`. Store associates can receive the returned items similarly to the [inbound shipments](receiving.md#receive-asn).
 
-## Handle Discrepancies:
+## Handle Discrepancies
 
 **Receiving Extra Inventory**
 
@@ -110,7 +108,7 @@ HotWax Commerce facilitates the receiving of extra inventory to address this con
 
 At times, stores receive items that differ from the recorded shipment. This discrepancy could arise from mispicking at the warehouse or inadvertently shipping more items than intended. When stores unexpectedly receive these extra Items, they require a process to receive and record these additional items effectively.
 
-#### Here’s how to receive unexpected items:
+#### Here’s how to receive unexpected items
 
 **Step 1:**
 

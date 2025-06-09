@@ -29,7 +29,7 @@ HotWax Commerce provides a Store Fulfillment Suite comprising user-friendly apps
 
 This scenario usually happens when a customer requests expedited delivery. Because the order routing engine selects a batch of orders based on the configurable routing rules set up by retailers, there's a possibility that this specific order item may be processed later. In such cases, CSRs have the option to bypass the scheduled brokering cycle and manually release items to a fulfillment location, usually the nearest store to the customer's location. HotWax Commerce then sends the fulfillment request to the chosen store location, and the order item is reflected in the Store Fulfillment App, accelerating the order fulfillment process.
 
-#### Additional Actions CSRs can Perform:
+#### Additional Actions CSRs can Perform
 
 Following automatic brokering or manual release to a store, CSRs also have an option to include specific handling instructions for order items. In scenarios where expedited shipping is requested by the customer, CSRs can write a message in the handling instructions. These details are then visible in the Store Fulfillment App, enabling store associates to prioritize the fulfillment of these orders in-store accordingly.
 
@@ -110,7 +110,7 @@ The order routing engine reroutes order items rejected at a store to the next be
 
 Once the order items have been picked, they can be quickly packed as HotWax Commerce books the shipment in advance with the shipping carrier and pre-generates shipping labels.
 
-### How HotWax Commerce Further Streamlines Packing Process:
+### How HotWax Commerce Further Streamlines Packing Process
 
 * Store associates can add additional boxes or select the most suitable size for order items, directly from the app.
 * In the event the packaging team discovers a mispacked order, the app offers an option to unpack it and then begin repacking.

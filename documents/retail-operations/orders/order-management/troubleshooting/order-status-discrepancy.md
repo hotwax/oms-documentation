@@ -15,6 +15,4 @@ To resolve this issue, follow these steps:
 1. Reindex the order by going to the order detail page and clicking the reindex button just below the order ID.
 2. Verify that the order status has been correctly updated on the find order page in the OMS.
 
-
-
 {% embed url="https://youtu.be/fsgh5kAKYL0" %}

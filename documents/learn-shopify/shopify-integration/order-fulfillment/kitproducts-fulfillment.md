@@ -4,7 +4,7 @@ ddescription: Learn how HotWax Commerce updates Kit order fulfillment status to 
 
 # Kit Order Fulfillment
 
-### How is the Order Fulfillment Status of Kit Products and their Components Updated to Shopify from HotWax Commerce?
+### How is the Order Fulfillment Status of Kit Products and their Components Updated to Shopify from HotWax Commerce
 
 HotWax Commerce facilitates the fulfillment of kit products and their components, and provides real-time updates on Shopify with the following steps:
 

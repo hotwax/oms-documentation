@@ -105,8 +105,6 @@ The HotWax Commerce Fulfillment App is designed specifically for store fulfillme
 
 Manage All Fulfillment Operations
 
-
-
 <figure><img src="../../.gitbook/assets/settings (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Order Details Page
