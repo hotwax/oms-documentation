@@ -43,7 +43,7 @@ If you have blocked notifications in your browser, follow these steps to unblock
 Ensure that operating system notifications are enabled:
 
 * **MacOS:** [Change Notification Settings on MacOS](https://support.apple.com/guide/mac-help/change-notification-settings-mchlpx1065/mac)
-* **Windows:** [Change Notification Settings on Windows](https://support.microsoft.com/en-us/windows/change-notification-settings-in-windows-10-ddcbbcd4-0a02-6584-7a4e-294e1c0e7a46)
+* **Windows:** [Change Notification Settings on Windows](https://support.microsoft.com/en-us/windows/notifications-and-do-not-disturb-in-windows-feeca47f-0baf-5680-16f0-8801db1a8466)
 
 ## Not Receiving Reminder Notifications
 
