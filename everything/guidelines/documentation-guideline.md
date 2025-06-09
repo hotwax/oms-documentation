@@ -66,7 +66,6 @@ description:>- HotWax Commerce's BOPIS fulfillment app enables retailers to effi
 ### Why is this important?
 * We don’t recommend using absolute links for internal documents, as moving a file to another folder will change the path and break the link.  
 * Additionally, GitBook does not track broken links for absolute URLs.  
-* Absolute links are considered external and are not trackable by GitBook.
 
 ### 2.4. Tables
 
