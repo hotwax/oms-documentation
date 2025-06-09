@@ -1,6 +1,6 @@
 ---
 description: >-
-  Discover how to manage data flow with HotWax Commerce's Data Manager
+  Learn how to manage data flow with HotWax's Data Manager
   Configurations.
 ---
 
@@ -23,7 +23,7 @@ New configurations define how specific data is imported or exported.
 
 #### Steps
 
-1. Click the `Add` button on the configurations page.
+1. Click the `Add` button.
 2. In the modal that appears, provide information for fields such as Config ID, Description, Import Service, Import Path, Export Content ID, Export Service, Export Path, File Name Pattern, and Multi-threading.
 3. Click `Add` to save the new configuration.
 
@@ -74,24 +74,21 @@ The Config ID cannot be modified. To use a different ID, create a new configurat
 
 ## Notify On Failure
 
-The **Notify On Failure** allows controls whether the System Administrators team receives email alerts when file fails during processing.
+**Notify On Failure** allows the System Administrators team to choose which configurations should trigger email alerts when a file fails during processing, so they can enable it only for the important ones.
 
-### How to Enable or Disable Notifications
+### How to Turn Notifications On or Off
 
 #### Navigate to Data Manager Configuration
 
-1. Go to **Hamburger Menu > Settings > Data Manager Configurations**.
-2. Search for the configuration (e.g., order import, attribute update).
-3. Click **Edit** (pencil icon) next to the selected configuration.
-4. In the configuration settings, find the Notify On Failure field:
-      it to:
+1. Search for the configuration (order import, attribute update).
+2. Click **Edit** (pencil icon) next to the selected configuration.
+3. In the configuration settings, find the Notify On Failure field:
   - Set to `Y` to receive emails when error records are found.
   - Set to `N` to skip notifications.
-5. Click **Save**.
+4. Click **Save**.
 
 {% hint style="info"%} 
- - Notifications are sent to the email addresses configured in the instances.
- - This setting applies on a **per-data manager configuration**—users can selectively enable or disable it based on the file's importance.
+Notifications are sent to the email addresses configured in the instances.
 {% endhint %}
 
 
@@ -101,38 +98,32 @@ The System Administration team can use data logs to track file processing, confi
 
 #### Steps to Check Logs
 
-1. Locate Desired Configuration:
+1. Use the search bar to find the configuration by name or ID.
 
-* Navigate to the `search` bar within the `HotWax Commerce Data Manager Configurations` page.
-* Search the configuration with the service/keyword or locate the desired service from the list.
+2. Find the matching configuration in the list and click the `open link` icon beside the service name.
 
-2. Open the Data manager logs for the Configurations:
+* This opens the [Import Data page](/documents/system-admin/administration/data-manager/troubleshooting/manual-data-import.md) for the selected service.
+3. Look for a status marked as **Finished**. You can view different data status types [here.](/documents/integrate-with-hotwax/api/facility/postcode-lookup.md)
 
-* Identify the relevant configurations in the search results.
-* Click on the `open link` icon located in front of the service name.
-* The system will open the [Import Data page](/documents/system-admin/administration/data-manager/troubleshooting/manual-data-import.md) for the selected service.
+If processing failed, download the failed records for review. These are usually in JSON or CSV format, with error reasons attached to each record.
 
-3. Check the Status of the Service:
+4. Click the `Log` button to view detailed logs related to the service.
+5. Use the log to identify any specific failure or irregularity.
 
-* Review the displayed information to check the status of the service.
-* Ensure that the status of the service is finished. You can view different data status types [here.](/documents/integrate-with-hotwax/api/facility/postcode-lookup.md)
-* If any of the services fails, users can read the failed records through the data logs. Failed records are simply JSON/CSV file which has the failed reason appended at the end of the record, which can be used for troubleshooting.
+## SFTP User Setup in Data Configuration
 
-**View Logs for Detailed Information:**
+The System Administration team can connect SFTP users with configurations to manage data exchange paths.
 
-* Click on the `Log` button in the `Import data page` to access detailed logs related to the service.
-* Use the logs to gather information about the service flow and identify the cause of any potential failures.
-* Non-technical users can utilize AI tools like ChatGPT to interpret log information and understand the service status.
 
-## SFTP User Integration in Data Configuration
+## SFTP Path Format
 
-In the OMS data import/export process, setting up SFTP users is essential for smooth operations. Server paths, beginning with the SFTP username (e.g., `dummySftpUser/HotWax/SalesOrders/`), follow a consistent convention. HotWax simplifies user integration, minimizing manual errors. This streamlined setup is crucial for bulk user integration, allowing easy association with diverse import paths. By incorporating specific SFTP users into configurations, users can efficiently manage data flow, ensuring secure and error-free transactions within the OMS.
+SFTP paths begin with the username (e.g., dummySftpUser/HotWax/SalesOrders/). This format should be followed across all configurations to avoid mistakes and make it easier to manage configurations in bulk.
 
-#### Steps
 
-1. Select `Add SFTP User to Config`.
-2. Choose the SFTP user configuration path.
-3. Select the `FTP Config` and `Config ID`.
-4. Save the configuration.
+#### How to Add an SFTP User to a Configuration
 
-By following these steps, users can manage data configurations within the OMS, ensuring efficient data flow and integration.
+1. Click on `Add SFTP User to Config`.
+2. Select the correct SFTP user configuration path.
+3. Choose the `FTP Config` and `Config ID`.
+4. Click **Save**.
+
