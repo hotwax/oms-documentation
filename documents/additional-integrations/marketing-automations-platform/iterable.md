@@ -15,8 +15,8 @@ To share any kind of information between these systems, they need to make a conn
 3. **Find API Keys:** Look for the `Integrations` section in the main menu and hover over it. Select `API Keys` from the dropdown.
 4. **Create a New Key:** Click on `New API Key` when the page opens.
    * **Give it a Name:** Choose a descriptive name to easily identify its purpose (e.g. "HotWax Commerce Integration").
-   * **Select Key Type:** Choose "Server-side" as this key will be used by HotWax Commerce to share details. You can find more details about key types:[link to Iterable API Keys documentation](https://support.iterable.com/hc/en-us/articles/360043464871-API-Keys).
-5. **Generate the Key:** Click on `Create API Key`. A pop-up will appear displaying the generated key. **Important:** This key will only be displayed once.
+   * **Select Key Type:** Choose "Server-side" as this key will be used by HotWax Commerce to share details. You can find more details about key types:[Iterable API Keys documentation](https://support.iterable.com/hc/en-us/articles/360043464871-API-Keys).
+5. **Generate the Key:** Click on `Create API Key`. A pop-up will appear displaying the generated key. **Important:** This key will only be displayed once. 
 6. **Copy and Secure the Key:** Carefully copy the entire API key and store it securely in a password manager or other encrypted location. **Never share it publicly.**
 
 **Remember:** Treat the API key like a password. Avoid sharing it and keep it confidential for secure communication between HotWax Commerce and Iterable.

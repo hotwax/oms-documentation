@@ -20,7 +20,7 @@ HotWax Commerce utilizes Solr, an open-source enterprise-search platform, to ind
       * Create user login indexes
       * Create OISGIR indexes
 
-For more details, kindly refer to this [documentation](../../../system-admin/search-admin.md).
+For more details, kindly refer to this [documentation](/documents/system-admin/administration/company/README.md).
 
 #### 2. Correctly Indexing Orders on the "Find Order Details" Page
 

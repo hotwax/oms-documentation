@@ -99,7 +99,3 @@ By following these structured steps, you can diagnose and resolve issues with da
 * Bulk Purchase Order Closure
 
 These frequently used imports cater to various needs, allowing users to perform tasks such as canceling orders, managing employees, updating inventory, importing sales and purchase orders, and more, enhancing the efficiency of OMS operations.
-
-<figure><img src="../.gitbook/assets/Data Imports.png" alt=""><figcaption></figcaption></figure>
-
-<figure><img src="../.gitbook/assets/Import%20Data%20in%20MDM.png" alt=""><figcaption></figcaption></figure>

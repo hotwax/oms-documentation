@@ -6,7 +6,7 @@ Managing inventory and order fulfillment is a critical aspect of retail operatio
 
 #### 1. **Access the Order Routing App**
 
-* **Navigate to:** Launchpad > [`Order Routing`](broken-reference) App. This is where you configure brokering runs and set up auto-cancellation rules for unfillable orders. Inventory managers or fulfillment team members typically use this to manage order fulfillment and brokering logic.
+* **Navigate to:** Launchpad > [`Order Routing`](/documents/retail-operations/orders/order-routing/README.md) App. This is where you configure brokering runs and set up auto-cancellation rules for unfillable orders. Inventory managers or fulfillment team members typically use this to manage order fulfillment and brokering logic.
 
 #### 2. **Select the Brokering Run**
 

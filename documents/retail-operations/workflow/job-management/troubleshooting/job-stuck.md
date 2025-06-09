@@ -10,7 +10,7 @@ A scheduled job has been running for a longer duration than expected (more than 
 
 ## Step 1: Check the Job Queue Status
 
-1. Go to [https://.hotwax.io/webtools/control/FindJob](../../../job-manager/troubleshooting/https:/%3CinstanceName%3E.hotwax.io/webtools/control/FindJob/).
+1. Go to [https://.hotwax.io/webtools/control/FindJob](/documents/retail-operations/workflow/job-management/job-queueing.md).
 2. Navigate to the status field and click on "Pending."
 
 ## Step 2: Verify Pending Jobs
