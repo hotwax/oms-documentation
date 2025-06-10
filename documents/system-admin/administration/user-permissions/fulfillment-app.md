@@ -1,6 +1,8 @@
 # Fulfillment App
 
-The HotWax Commerce Fulfillment App is designed specifically for store fulfillment teams. It allows store users to carry out basic tasks such as picking and packing without special permissions, so access to the Fulfillment app is open for all users. However, sensitive actions like marking an item as shipped or altering fulfillment-related settings require higher-level permissions. Below is a list of all the actions available in the Fulfillment App, along with the specific permissions needed to perform them.
+HotWax's `Fulfillment App` lets store teams pick and pack orders without special permissions. All users can the app and perform basic tasks. Actions like rejecting orders or marking items as shipped need specific permissions.
+
+Below is a list of all the actions available in the Fulfillment App, along with the specific permissions needed to perform them.
 
 ## Open Orders tab
 
