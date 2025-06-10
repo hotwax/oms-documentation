@@ -1,6 +1,6 @@
 ---
 description: >-
-  Discover how to manage data flow with HotWax Commerce's Data Manager
+  Learn how to manage data flow with HotWax's Data Manager
   Configurations.
 ---
 
@@ -8,107 +8,94 @@ description: >-
 
 ## Data Manager Configurations Guide
 
-The Data Manager Configurations page in the OMS empowers users to effectively manage data flow into and out of the OMS. This guide provides step-by-step instructions on adding and editing configurations, as well as integrating SFTP details into the configurations.
+The Data Manager Configurations page in the OMS is used to manage how data flows into and out of the platform. This guide explains how a System Administration team can create and update configurations, including steps to add SFTP details.
 
-### Accessing the Data Manager Configurations Page
 
-1. Go to the Hamburger menu.
-2. Select `Settings`.
-3. Click on `Data manager configurations`.
+### How to Access the Data Manager Configurations Page
+
+1. Go to the Hamburger Menu
+2. Select `Settings`
+3. Click on `Data Manager Configurations`
 
 ### Add a New Configuration
 
-Adding a new data configuration in OMS enables users to specify how data is imported and exported.
+Create a new import configuration to ingest data from other systems or to let users upload data themselves using CSVs.
 
 #### Steps
 
-1. Click the `Add` button on the configurations page.
-2. In the modal that appears, provide information for fields such as Config ID, Description, Import Service, Import Path, Export Content ID, Export Service, Export Path, File Name Pattern, and Multi-threading.
-3. Click `Add` again to save the new configuration.
-
-#### Configuration Information Table
+1. Click the `Add` button
+2. Enter configuration details
 
 | Field                 | Description                                             |
 | --------------------- | ------------------------------------------------------- |
-| **Config ID**         | A unique identifier for the configuration.              |
-| **Description**       | A brief description of the configuration.               |
-| **Import Service**    | The OMS service for importing data into OMS.            |
-| **Import Path**       | The path from which the data is kept for OMS to import. |
-| **Export Content ID** | Content ID for exporting data.                          |
-| **Export Service**    | The OMS service or workflow for exporting data.         |
-| **Export Path**       | The path to which the data will be exported.            |
-| **File Name Pattern** | A pattern for naming files.                             |
-| **Multi-threading**   | Y/N configuration for processing multiple files.        |
+| **Config ID**         | Unique identifier for the configuration.                |
+| **Description**       | Short explanation of what the configuration handles.    |
+| **Import Service**    | Service name that handles incoming data.                |
+| **Import Path**       | Folder path for imported files.                         |
+| **Export Content ID** | Template identifier used while exporting data.          |
+| **Export Service**    | Service or workflow that handles outgoing data.         |
+| **Export Path**       | Destination folder for exported files.                  |
+| **File Name Pattern** | File matching pattern for imports/exports.              |
+| **Multi-threading**   | Y/N flag to decide whether to process multiple files in parallel.|
 
-#### Use Cases of some configurations
+1. Click `Add` to save the new configuration.
+
+#### Important configurations
 
 1. **File Name Pattern:**
-   * _Scenario:_ Multiple file types share the same path on an SFTP server.
-   * _Purpose:_ Uniquely identify and categorize files for accurate processing by the import service.
+   * _Scenario:_ Multiple file types exist in the same SFTP folder.
+   * _Purpose:_ Allows to identify and match only relevant files during processing.
 2. **Multi-threading:**
-   * _Scenario:_ Large data imports, e.g., product inventory resets with files exceeding 20 MB.
-   * _Purpose:_ Speed up processing by grouping data and allocating multiple threads simultaneously.
-   * _Note:_ Default value is 'N' (No)
+   * _Scenario:_ Large data imports, such as, product inventory resets with files exceeding 20 MB.
+   * _Purpose:_ Data is divided and processed in parallel to reduce processing time.
+   * _Note:_ Default value is 'N'
 3. **Export Content ID:**
-   * _Scenario:_ HotWax uses content templates for exporting data with specific field values.
-   * _Purpose:_ Specify a unique identifier (Content ID) to ensure the export service selects the correct template for accurate data rendering and export.
+   * _Scenario:_ Export templates are used to format outgoing data.
+   * _Purpose:_ Identify the correct template for export based on this ID.
 4. **Export/Import Path:**
-   * _Scenario:_ Data communication between OMS and external systems through SFTP.
-   * _Purpose:_ Specify accurate paths for file import/export; incorrect paths can result in failed data communication.
+   * _Scenario:_ Communication with external platforms over SFTP.
+   * _Purpose:_ Specify accurate paths for file import/export.
 
 ### Edit Configurations
 
-Editing an existing Data Manager Configuration allows users to update configurations based on evolving business needs or changing data sources.
-
-#### Steps
-
-* Search for the desired configuration by name or ID.
-* Click the `Edit` button at the end of the search result.
+* Use the search bar to find the configuration by name or ID.
+* Click the `Edit` icon at the end of the search result.
 
 {% hint style="info" %}
-Config ID cannot be changed after creation. Create a new Config if a new Config ID is needed.
+The Config ID cannot be modified. To use a different ID, create a new configuration.
 {% endhint %}
 
 {% embed url="https://youtu.be/OEss4sNcvnQ" %}
 
-### Verify the Data flow
+## Notify On Failure
 
-In HotWax Commerce, the ability to view data logs is crucial for verifying the accuracy and completeness of imported data. These logs offer insights into the status of imported data, allowing users to verify the success of operations during the verification process.
+**Notify On Failure** allows System Administrators to choose which configurations should trigger email alerts when a file fails during processing.
 
-#### Steps
+### How to Turn Notifications On or Off
 
-1. Locate Desired Configuration:
+1. In the configuration settings modal, use the Notify On Failure field:
+  - Set to `Y` to receive emails when error records are found.
+  - Set to `N` to skip notifications.
+2. Click **Save**.
 
-* Navigate to the `search` bar within the `HotWax Commerce Data Manager Configurations` page.
-* Search the configuration with the service/keyword or locate the desired service from the list.
+{% hint style="info"%} 
+Notifications are sent to the email addresses configured in the instances.
+{% endhint %}
 
-2. Open the Data manager logs for the Configurations:
 
-* Identify the relevant configurations in the search results.
-* Click on the `open link` icon located in front of the service name.
-* The system will open the [Import Data page](/documents/system-admin/administration/data-manager/troubleshooting/manual-data-import.md) for the selected service.
+### How to Verify Data Flow
 
-3. Check the Status of the Service:
+Use data logs to track file processing, confirm success, or review errors.
 
-* Review the displayed information to check the status of the service.
-* Ensure that the status of the service is finished. You can view different data status types [here.](/documents/integrate-with-hotwax/api/facility/postcode-lookup.md)
-* If any of the services fails, users can read the failed records through the data logs. Failed records are simply JSON/CSV file which has the failed reason appended at the end of the record, which can be used for troubleshooting.
+#### Steps to Check Logs
 
-**View Logs for Detailed Information:**
+1. Click the `open link` icon beside the service name on the Data Manager Configuration search page.
 
-* Click on the `Log` button in the `Import data page` to access detailed logs related to the service.
-* Use the logs to gather information about the service flow and identify the cause of any potential failures.
-* Non-technical users can utilize AI tools like ChatGPT to interpret log information and understand the service status.
+* This opens the [Import Data page](/documents/system-admin/administration/data-manager/troubleshooting/manual-data-import.md) for the selected service.
+  
+2. Once a file is done processing, its status will change to **Finished**.
 
-## SFTP User Integration in Data Configuration
+If processing failed, download the failed records for review. These are usually in JSON or CSV format, with error reasons attached to each record.
 
-In the OMS data import/export process, setting up SFTP users is essential for smooth operations. Server paths, beginning with the SFTP username (e.g., `dummySftpUser/HotWax/SalesOrders/`), follow a consistent convention. HotWax simplifies user integration, minimizing manual errors. This streamlined setup is crucial for bulk user integration, allowing easy association with diverse import paths. By incorporating specific SFTP users into configurations, users can efficiently manage data flow, ensuring secure and error-free transactions within the OMS.
-
-#### Steps
-
-1. Select `Add SFTP User to Config`.
-2. Choose the SFTP user configuration path.
-3. Select the `FTP Config` and `Config ID`.
-4. Save the configuration.
-
-By following these steps, users can manage data configurations within the OMS, ensuring efficient data flow and integration.
+3. Click the `Log` button to view detailed logs related to the service.
+4. Use the log to identify any specific failure or irregularity.
