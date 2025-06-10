@@ -37,7 +37,7 @@ Video: Adding Pickers in Bulk
 3. Go to the `Fulfillment card` tab and toggle on `show as a picker`.
 4. Click the 'Add Facilities' button; this will open a new form. Select the facility for which you want to add the picker.
 
-{% hint style="warning" %} If a picker is not linked to a facility, the picker will not appear on the Assign Picker modal on the Fulfillment or BOPIS App. {% endhint %}
+{% hint style="warning" %} If a picker is not linked to the facility, the picker will not appear on the Assign Picker dialog box on the Fulfillment or BOPIS App. {% endhint %}
 
 {% embed url="https://youtu.be/6BW4Hxi08N0" %}
 Video: Adding Individual Pickers
