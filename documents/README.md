@@ -1,5 +1,10 @@
 ---
 description: >-
+  Discover the Catalog page in the BOPIS app, offering a comprehensive list of
+  products available for store pickup, along with inventory availability and
+  product details.
+---
+
 This document serves as a hub linking various user manuals for HotWax
 Commerce, an omnichannel Order Management System integrating Shopify and
 NetSuite.
