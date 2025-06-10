@@ -10,7 +10,7 @@ description: Discover the process to Fulfill orders from the Fulfillment App.
 
 This page displays all outstanding orders brokered to this facility by the OMS and are ready to be fulfilled.
 
-At the top of the page, the total number of queued orders are clearly displayed, providing an instant overview of the workload.
+At the top of the page, the total number of queued orders is displayed, providing an instant overview of the workload.
 
 Orders are arranged in a "First In, First Out" sequence by default. However, users have the option to filter them based on the shipping method to prioritize fulfillment. For instance, Same-day shipping orders can be prioritized by selecting the corresponding filter checkbox at the top of the page.
 
@@ -19,14 +19,16 @@ Video: Filter Orders
 {% endembed %}
 
 1. Click the Print Picksheet function to generate the picksheet. This will create picklist of multiple orders to support wave-picking, ensuring pickers can pick items for all orders in one go.
-2. In the Add Picker dialog box, enter the Picker Name or Employee ID to assign a picker. Adding Pickers can be used for performance-based commission distribution.
+2. In the Assign Picker dialog box, enter the Picker Name or Employee ID to assign a picker.
+
+{% hint style="info" %} Only the [pickers](https://docs.hotwax.co/documents/system-admins/administration/users/add-picker) linked to the facility will show on the Assign Picker dialog box. {% endhint %}
 
 {% embed url="https://youtu.be/Yu384kR-7mU" %}
 Video: Print picklist
 {% endembed %}
 
 {% hint style="success" %}
-Users can create individual order's picklist by clicking on the order ID which will open a dropbox where the user can select the `Pick Orders` option to create the picklist for the individual order.
+Users can create individual order's picklist by clicking on the order ID, which will open a dropbox where the user can select the `Pick Orders` option to create the picklist for the individual order.
 {% endhint %}
 
 3. The user can reprint the picklist by clicking on the `Print Picklist` button in the bottom right corner on the In Progress tab.
