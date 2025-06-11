@@ -11,20 +11,16 @@ Once a count has been submitted for review by the facility it was assigned to, i
 
 ## Search, Sort and Filter Counts on Pending Review
 
-On the Pending Review tab, admins can use the search bar and familiar sorting tools to manage the list.  
-To streamline the review process, two filters are available:
+These filters make it easier to prioritize which counts to review first, based on time and location.
+
 - **Facility**, to check which locations have pending reviews  
 - **Created Date**, to focus on counts that reached review stage in a particular period  
 
-These filters make it easier to prioritize which counts to review first, based on time and location.
-
 ## Pending Review List View
 
-On the `Review cycle count` page, you can filter counts by facilities where the count was submitted from, as well as counts that have specifically been resubmitted after a recount.
+The pending review list view also shows how many of the assigned items have been counted as well as the due date of the count. Clicking on a count opens the detail page for it.
 
 If the cycle count is submitted for the first time, a `Submitted` badge will appear. For counts with items that were recounted and re-submitted, a `Re-submitted` badge will indicate that the count was reassigned and resubmitted by the facility after a recount.
-
-The pending review list view also shows how many of the assigned items have been counted as well as the due date of the count. Clicking on a count opens the detail page for it.
 
 ## Pending Review Detail View
 
