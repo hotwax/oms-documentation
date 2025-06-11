@@ -29,34 +29,33 @@ A new Draft count will open up on a new page where you can begin setting up a ne
 4. **Assign a Facility**\
    Retailers must assign a cycle count facility to move a count from Draft to Assigned. Click `+ Assign` and select a facility from the modal.
 
-Once a count is ready to be assigned to a facility, click on the `send` button at the bottom right of the `draft detail` page. The created draft will now appear in the assigned tab and on the [store management side](https://docs.hotwax.co/documents/inventory/directed-cycle-count) of the `Cycle Count` App.
+Once a count is ready to be assigned to a facility, click on the `send` button at the bottom right of the draft cycle count. The created draft will now appear in the assigned tab and on the [for the store team](https://docs.hotwax.co/documents/inventory/directed-cycle-count) of the `Cycle Count` App.
 
 {% embed url="https://youtu.be/C1Emwnm3P2I" %}
 
 ## Search, Sort and Filter Draft Counts
 
-The Draft Counts page allows quick access to specific counts through name-based search.  
-To view drafts in a specific order, admins can sort them by Created Date (default), Due Date, or Alphabetical order.  
+The Draft Counts page allows sorting by Created Date (default), Due Date, or Alphabetical order.  
 
-Facility-based filtering is useful here, admins can narrow results to:
-- Drafts assigned to a specific facility  
-- Or those that haven’t been assigned yet  
+Admins can narrow results with the facility filter as well:
+- A specific facility  
+- Unassigned counts  
 
 By default, counts across all locations are visible.
 
 ## Automatically Created Draft Cycle Counts for Rejected Items
 
-Order rejections in a store may or may not lead to change in the inventory. For example, when a store rejects orders just because it has some operational constraints and is temporarily inactive, in that event, order rejections do not lead to change in the inventory levels.  
-While, in the event where an order is rejected with a reason like, damaged item, not in stock, means that physical inventory present in the store doesn’t match what’s online, which reflects the need for a cycle count.  
-For this, whenever an order rejection causes a change in the inventory levels, a draft count is automatically created in HotWax’s `Cycle Count`App to identify the actual stock and address the discrepancy.
+Order rejections in a store may lead to change in the inventory. In the event where an order is rejected with a reason like Damanged or Not in Stock, means that physical inventory present in the store doesn’t match systemic inventory, indicating the need for a cycle count.
+
+For this, whenever an order rejection causes a change in the inventory levels, a draft count is automatically created in HotWax’s `Cycle Count` App to identify the actual stock and address the discrepancy.
 
 ### How It Works
 
-- When an order item is rejected and causes a variance in Available to Promise (ATP), the `findOrCreateRejectedItemCycleCount` service is triggered. This service creates a draft cycle count named **Rejected Item Count**.
+- When an order item is rejected and causes a variance in Available to Promise (ATP), a draft cycle count named **Rejected Item Count** is created.
 
 - A link to the draft count is automatically sent to the operations team or admins, so that they can assign it to the facility that rejected the order item.
 
-- The draft count stays in **Not Assigned** status until it is assigned to a facility. If additional rejections from the same facility occur before the count is assigned, the newly rejected items are added to the same draft.
+- The draft count stays in a **Draft** status until it is assigned. If additional rejections from the same facility occur before the count is assigned, they are also added to the same count.
 
 - If the count has already been assigned and further rejections from the same facility occur, a new draft cycle count is created for those items.
 
