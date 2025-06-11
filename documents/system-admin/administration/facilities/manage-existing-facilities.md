@@ -1,21 +1,29 @@
-# Manage Existing facilities
+# Manage Existing Facilities
 
-After the creation of facilities, retailers need to utilize the `Facilities` app to manage facility information. This includes tasks such as renaming facilities, updating addresses, modifying fulfillment settings, or adding and managing external mappings.
+After the creation of facilities, retailers need to utilize the `Facilities` app to manage facility information. This includes tasks such as renaming facilities, updating facilities' addresses, updating fulfillment settings, or updating external mappings.
 
 ### Search Facilities
 
-Retailers may often seek a particular facility or specific type of facility. The search facilities functionality will enable users to effortlessly find their desired facility by navigating to the `Find Facilities` page by clicking on the `Facilities` button on the homepage to manage the existing facilities. There are two ways to locate the facilities for which users need to manage the configurations:
-
-1. While looking for a specific facility, the user can search the facility by name from the `Search facilities` functionality on the top left of the page.
-2. To narrow down the list of facilities and locate facilities manually, the user can utilize the `Product Store` and facility `Type` filters. For instance, if a retailer has multiple product stores, the dropdown menu in the product store filter will present all the product stores from where the user can select any specific product store to access the facilities associated with the particular product store. Similarly, if a user is seeking a specific type of facility, they can use the type filter to view all the facilities of any particular type.
+Retailers can locate and manage specific facilities by clicking the `Facilities` button on the homepage.
+There are two ways to locate the facilities:
+1. While looking for a specific facility, the user can search for the facility by facility name from the `Search facilities` search bar on the top left corner of the page.
+2. To manually narrow down the list of facilities, users can apply the `Product Store` and `Type` filters. These filters allow users to view facilities linked to a specific product store or facility type.
+For example, if a retailer has multiple product stores, the dropdown menu in the `product store` filter will present all the product stores from which the user can select any specific product store to access the facilities associated with the particular product store. Similarly, if a user is seeking a specific type of facility, they can use the type filter to view all the facilities of any particular type.
 
 {% embed url="https://youtu.be/v3AOhHhjZO4" %}
 Video: Locate Facilities
 {% endembed %}
 
+### Manage Configurations from the Facilities home page : 
+
+- **Configure Fulfillment Capacity** : 
+
+- **Configure Online Fulfillment** : 
+
+
 ### Rename Facilities
 
-For any facility name updates made, the user can seamlessly rename facilities by clicking on the `Edit` button near the facility's name. This will open a pop-up where users can edit the name and click on `Apply` to save the name.
+For any facility name updates made, the user can rename facilities by clicking on the `Edit` button near the facility's name. This will open a pop-up where users can edit the name and click on `Apply` to save the name.
 
 {% embed url="https://youtu.be/twdlWgNTsTc" %}
 Video: Rename Facilities
@@ -31,10 +39,10 @@ Video: Change Facility Type
 
 ### Create Facility Log-ins
 
-Users can create facility logins which can be used by the staff of the respective facility by clicking on the retail/warehouse login card through following steps:
+Users can create facility logins that can be used by the staff of the respective facility by clicking on the retail/warehouse login card through the following steps:
 
 1. Click on the `Add` Button in the login card
-2. This will open up a new form, Add the Facility user name, password, and a reset password link
+2. This will open up a new form. Add the Facility user name, password, and a reset password link
 3. Click on the save icon to save the facility login.
 
 ### Linking Facility with External Systems
