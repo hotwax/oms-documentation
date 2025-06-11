@@ -1,7 +1,7 @@
 ---
 description: >-
   Comprehensive guide to reviewing cycle counts in the Cycle Count App,
-  including filtering counts, accepting or rejecting items, and managin
+  including filtering counts, accepting or rejecting items, and managing
   inventory variance thresholds.
 ---
 
