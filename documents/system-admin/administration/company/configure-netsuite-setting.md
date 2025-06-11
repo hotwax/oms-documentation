@@ -10,23 +10,21 @@ The NetSuite page is divided into four sections:
 - **Product and Inventory**  
 - **Order and Fulfillment**  
 
-All these sections help configure settings related to NetSuite.
-
 ## Statistics
 
-This section provides an overview of data awaiting synchronization with NetSuite. Here, administrators can monitor:
-
+This section provides an overview of data awaiting synchronization with NetSuite.  
+Here, administrators can monitor:
 - **Orders**: Number of orders awaiting sync with NetSuite.  
-- **Customers**: Number of customers pending synchronization with NetSuite.  
-- **Products**: Number of Products not having a NetSuite Product ID.  
+- **Customers**: Number of customers awaiting sync with NetSuite.  
+- **Products**: Number of Products awaiting sync with NetSuite.  
 
 ## Configuration
 
-This section is used to set up SFTP and Product Store settings.
+This section helps administrators set up **SFTP** and **Product Store settings**.
 
 ### Setup SFTP
 
-Communication between OMS and NetSuite happens through files exchanged via an SFTP location. Both systems place and retrieve files from this shared location. Administrators need to configure the SFTP location in OMS to enable this exchange.
+Communication between OMS and NetSuite happens through files exchanged via SFTP location. Both systems place and retrieve files from this shared location. Administrators need to configure the SFTP location in OMS to enable this exchange.
 
 For detailed information related to SFTP configuration, refer to this [document](/documents/learn-netsuite/netsuite-deployment/sdf-bundle/setup-sftp.md)
 .
@@ -40,17 +38,17 @@ For detailed information related to SFTP configuration, refer to this [document]
 
 ### Product Store
 
-In HotWax, NetSuite settings are configured per Product Store. A Product Store maps to a NetSuite Subsidiary ID. It is important to note that for a single product store in HotWax, there can be multiple subsidiary IDs.
+In HotWax, NetSuite settings are configured per Product Store. A Product Store maps to a NetSuite Subsidiary ID. For a single product store in HotWax, there can be multiple NetSuite subsidiary IDs.
 
 **Steps to configure Product Store:**
 - Select the product store name.  
-- Enter its corresponding NetSuite Subsidiary ID.  
+- Enter it's corresponding NetSuite Subsidiary ID.  
 
 For more information, refer to this [document](/documents/learn-netsuite/netsuite-deployment/prerequisite-syncs/productstore-settings.md).
 .
-## 3. Product and Inventory
+## Product and Inventory
 
-In this section, users can select which variance reasons should be synced to NetSuite. Each variance reason can also have a transfer location linked to it, treating it as a transfer instead of a regular adjustment.
+In this section, users can select which variance reasons should be synced with NetSuite. Each variance reason can also have a transfer location linked to it, treating it as a transfer instead of a regular adjustment.
 
 ### Inventory Variance
 
@@ -58,14 +56,16 @@ Inventory Variance refers to inventory adjustments (e.g., damage, loss). In case
 
 Administrators can select which inventory variance reasons sync to NetSuite.
 
+To know more about inventory variance refer to this [document](documents/learn-hotwax-oms/business-process-models/inventory-lifecycle.md).
+
 **Steps to configure Inventory Variance:**
 - Select the inventory variance reason.  
 - Enter the NetSuite Inventory Adjustment Reason ID.  
 - Enter a specific NetSuite Facility ID.  
 
-## 4. Orders and Fulfillment
+## Orders and Fulfillment
 
-NetSuite also manages fulfillment statuses and other order-related details. This section ensures that key order information such as shipping methods, payment types, pricing, and discounts are properly mapped with NetSuite.
+NetSuite also manages fulfillment statuses and other order-related details. This section provides key order information such as shipping methods, payment types, pricing, and discounts are properly mapped with NetSuite.
 
 ### Shipping Method
 
@@ -80,7 +80,7 @@ This page outlines the mapping between shipping methods, including their associa
 
 ### Payment Method
 
-Payment methods must be mapped to NetSuite Payment Method IDs. Unmapped methods will cause sync failures between HotWax and NetSuite.
+Payment methods should be mapped to NetSuite Payment Method IDs. Unmapped methods will cause sync failures between HotWax and NetSuite.
 
 **Steps to Add `NetSuite Payment Method`:**
 - Select the payment method.  
@@ -91,12 +91,12 @@ For more information, refer to this [document](/documents/learn-netsuite/synchro
 
 ### Price Levels
 
-To sync orders from HotWax Commerce to NetSuite, you need to set the price level in HotWax that should be sent to NetSuite.  
+To sync orders from HotWax to NetSuite, administrators need to set the price level in HotWax that will be sent to NetSuite.
 
-Price level defines a list of values that are used by the opportunity and item records to set the price level for a specific item. Items can be assigned different price levels, such as Employee Price or Corporate Discount Price.
+In NetSuite, price levels define the specific pricing for items, enabling you to offer different rates based on factors like customer type, product category, or location. Administrators need to set price levels in HotWax to be sent to NetSuite.
 
-- **Custom**: This is the price received from eCommerce and sent as it is to NetSuite.  
-- **Base Price**: Administrators can also set the base price to send NetSuite as per their preference.
+- **Custom**: If administrators want to sync the price received from the eCommerce platform directly to NetSuite without any changes, they can use this option.  
+- **Base Price**: In NetSuite, the "base price" refers to the standard or default selling price of an item. Administrators can set the price level setting in HotWax Commerce to "Base Price." If they want HotWax to sync the base price with NetSuite as price levels, this option should be selected.
 
 **Steps to Add Price Levels:**
 - Locate the Price Levels setting.  
@@ -107,7 +107,7 @@ For more information, refer to this [document](/documents/learn-netsuite/synchro
 
 ### Discount
 
-Administrators have to map order and item-level discounts in HotWax to be mapped with NetSuite. Unmapped discounts may cause sync discrepancies.
+Administrators have to map order and item-level discounts in HotWax to be mapped with NetSuite. Unmapped discounts can cause sync discrepancies.
 
 **Steps to Add Discount:**
 - Identify the HotWax discount type (Order Level or Item Level).  
@@ -116,19 +116,19 @@ Administrators have to map order and item-level discounts in HotWax to be mapped
 
 ### Departments
 
-Departments are categories that administrators can create to identify, categorize, and track records such as financials, transactions, and employees.
+Departments are categories that administrators can create in NetSuite to identify, categorize, and track records such as financials and transactions.
+Each facility is accociated with a specific department in NetSuite. TO sync department on an order administrators need to map HotWax facilities to NetSuite Department IDs.
 
-Each facility comes in a specific department in NetSuite. Administrators need to map HotWax facilities to NetSuite Department IDs.
+To know more about depratment refer to this [document](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_N261602.html).
 
-
-**Steps to Add Departments:**
+**Steps to Add Department:**
 - Click the `+ NetSuite ID` button.  
 - Enter the NetSuite Department ID.  
 - Apply the mapping.  
 
 ### Sales Channel
 
-Map HotWax Sales Channels to NetSuite Sales Channel IDs for correct order attribution in NetSuite. Map HotWax Sales Channels to NetSuite Sales Channel IDs for correct order attribution in NetSuite.
+Map Sales Channels to NetSuite Sales Channel IDs for correct order attribution in NetSuite.
 
 **Steps to Add Sales Channel:**
 - Click the `+NetSuite ID` button.  
