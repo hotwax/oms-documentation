@@ -9,7 +9,7 @@ description: >-
 
 Once a count has been submitted for review by the facility it was assigned to, it will be shown on the `Pending Review` page.
 
-## Search, Sort and Filter Counts on Pending Review
+## Search, Sort, and Filter Counts on Pending Review
 
 These filters make it easier to prioritize which counts to review first, based on time and location.
 
@@ -18,7 +18,7 @@ These filters make it easier to prioritize which counts to review first, based o
  
 ## Pending Review List View
 
-The pending review list view also shows how many of the assigned items have been counted as well as the due date of the count. Clicking on a count opens the detail page for it.
+The pending review list view shows how many of the assigned items have been counted as well as the due date of the count. Clicking on a count opens the detail page for it.
 
 If the cycle count is submitted for the first time, a `Submitted` badge will appear. For counts with items that were recounted and re-submitted, a `Re-submitted` badge will indicate that the count was reassigned and resubmitted by the facility after a recount.
 
