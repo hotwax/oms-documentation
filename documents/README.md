@@ -1,25 +1,26 @@
 ---
 description: >-
-This document serves as a hub linking various user manuals for HotWax
-Commerce, an omnichannel Order Management System integrating Shopify and
-NetSuite.
+  This document serves as a hub linking various user manuals for HotWax
+  Commerce, an omnichannel Order Management System integrating Shopify and
+  NetSuite.
 cover: .gitbook/assets/HotwaxCoverImage3Sep.png
 coverY: 0
 layout:
-cover:
-visible: true
-size: full
-title:
-visible: true
-description:
-visible: false
-tableOfContents:
-visible: false
-outline:
-visible: false
-pagination:
-visible: true
+  cover:
+    visible: true
+    size: full
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: false
+  outline:
+    visible: false
+  pagination:
+    visible: true
 ---
+
 
 # 📖 Documents
 
