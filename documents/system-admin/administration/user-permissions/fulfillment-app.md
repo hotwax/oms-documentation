@@ -1,6 +1,8 @@
 # Fulfillment App
 
-The HotWax Commerce Fulfillment App is designed specifically for store fulfillment teams. It allows store users to carry out basic tasks such as picking and packing without special permissions, so access to the Fulfillment app is open for all users. However, sensitive actions like marking an item as shipped or altering fulfillment-related settings require higher-level permissions. Below is a list of all the actions available in the Fulfillment App, along with the specific permissions needed to perform them.
+HotWax's `Fulfillment App` lets store teams pick and pack orders without special permissions. All users can the app and perform basic tasks. Actions like rejecting orders or marking items as shipped need specific permissions.
+
+Below is a list of all the actions available in the Fulfillment App, along with the specific permissions needed to perform them.
 
 ## Open Orders tab
 
@@ -72,7 +74,7 @@ The HotWax Commerce Fulfillment App is designed specifically for store fulfillme
 
 | S.No | Action                          | Permission | Description                                                                                                                    |
 | ---- | ------------------------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| 1    | Rejection reasons view          | SFA\_ADMIN | Grants access to the "Rejection Reasons" tab, where users can view and manage reasons for order rejections within the system.  |
+| 1    | Rejection reasons view          | STOREFULFILLMENT_ADMIN| Grants access to the "Rejection Reasons" tab, where users can view and manage reasons for order rejections within the system.  |
 | 2    | Variance type selection         | -          | Allows users to select a specific rejection reason from a predefined list when processing rejected orders.                     |
 | 3    | Ellipsis button > Remove reason | -          | Provides the ability to remove a rejection reason from the system, ensuring the list of reasons remains relevant and accurate. |
 | 4    | Add new Rejection reason        | -          | Opens a modal for users to create a new rejection reason, allowing customization of rejection types within the system.         |
