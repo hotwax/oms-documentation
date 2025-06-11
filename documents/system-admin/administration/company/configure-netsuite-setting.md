@@ -28,16 +28,14 @@ This section is used to set up SFTP and Product Store settings.
 
 Communication between OMS and NetSuite happens through files exchanged via an SFTP location. Both systems place and retrieve files from this shared location. Administrators need to configure the SFTP location in OMS to enable this exchange.
 
-For detailed information related to SFTP configuration, refer to this document.
+For detailed information related to SFTP configuration, refer to this [document](/documents/learn-netsuite/netsuite-deployment/sdf-bundle/setup-sftp.md)
+.
 
 - **GUI ID of the SFTP location**: Unique identifier for the SFTP configuration.  
 - **Server**: Address of the SFTP server/hostname (e.g., `sftp.example.com`).  
 - **User ID**: Username for SFTP access.  
 - **Port**: Port number for SFTP (default is 22).  
 - **Host Key**: Authentication key from the SFTP server.  
-
-Refer to **SFTP Host Key Generation Guide**.
-
 - **Default Directory**: Default path on the SFTP server (e.g., `/home/{instance name}/-sftp/netsuite/`).
 
 ### Product Store
@@ -48,8 +46,8 @@ In HotWax, NetSuite settings are configured per Product Store. A Product Store m
 - Select the product store name.  
 - Enter its corresponding NetSuite Subsidiary ID.  
 
-For more information, refer to this document.
-
+For more information, refer to this [document](/documents/learn-netsuite/netsuite-deployment/prerequisite-syncs/productstore-settings.md).
+.
 ## 3. Product and Inventory
 
 In this section, users can select which variance reasons should be synced to NetSuite. Each variance reason can also have a transfer location linked to it, treating it as a transfer instead of a regular adjustment.
@@ -89,7 +87,7 @@ Payment methods must be mapped to NetSuite Payment Method IDs. Unmapped methods 
 - Add the corresponding NetSuite Payment Method ID.  
 - Apply Mapping.  
 
-For more information, refer to this document.
+For more information, refer to this [document](/documents/learn-netsuite/synchronization-flows/integration-mappings/payment-methods.md).
 
 ### Price Levels
 
@@ -105,7 +103,7 @@ Price level defines a list of values that are used by the opportunity and item r
 - Select the desired NetSuite Price Level ID, or choose "Custom."  
 - Click `Save`.  
 
-For more information, refer to this document.
+For more information, refer to this [document](/documents/learn-netsuite/synchronization-flows/integration-mappings/price-levels.md).
 
 ### Discount
 
@@ -120,9 +118,8 @@ Administrators have to map order and item-level discounts in HotWax to be mapped
 
 Departments are categories that administrators can create to identify, categorize, and track records such as financials, transactions, and employees.
 
-Each facility comes in a specific department in NetSuite. Administrators need to map HotWax facilities to NetSuite Department IDs.  
+Each facility comes in a specific department in NetSuite. Administrators need to map HotWax facilities to NetSuite Department IDs.
 
-To know more about departments, refer to this document.
 
 **Steps to Add Departments:**
 - Click the `+ NetSuite ID` button.  
