@@ -14,8 +14,8 @@ Once a count has been submitted for review by the facility it was assigned to, i
 These filters make it easier to prioritize which counts to review first, based on time and location.
 
 - **Facility**, to check which locations have pending reviews  
-- **Created Date**, to focus on counts that reached review stage in a particular period  
-
+- **Created Date**, to review cycle counts created during a specific period.
+ 
 ## Pending Review List View
 
 The pending review list view also shows how many of the assigned items have been counted as well as the due date of the count. Clicking on a count opens the detail page for it.
