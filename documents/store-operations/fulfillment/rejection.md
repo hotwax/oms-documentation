@@ -51,7 +51,7 @@ The Rejection Analytics Page provides a detailed view of order rejections, helpi
 
 ## Rejection Reasons
 
-Retailers can configure which rejection reasons they want to offer for their staff to choose from if they're unable to fulfill items in an order. To access this page, users must have `SFA_ADMIN` permission.
+Retailers can configure which rejection reasons they want to offer for their staff to choose from if they're unable to fulfill items in an order. To access this page, users must have `STOREFULFILLMENT_ADMIN` permission.
 
 ### Overview
 
