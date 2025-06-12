@@ -17,10 +17,10 @@ Video: Locate Facilities
 ### Manage Configurations from the Facilities home page : 
 
 - **Configure Fulfillment Capacity** : 
-Users have option to set up the maximum order limit that can be allocated to the facility through the [Fulfillment Capacity]() chip. 
+Users have option to set up the maximum order limit that can be allocated to the facility through the [Fulfillment Capacity](/documents/system-admin/administration/facilities/configure-fulfillment-capacity.md) chip. 
 
 - **Configure Online Fulfillment** : 
-Users have option to manage whether a facility will participate in inventory computation for a channel from the [Sell Online]() chip.
+Users have option to manage whether a facility will participate in inventory computation for a channel from the [Sell Online](/documents/system-admin/administration/facilities/configure-fulfillment.md) chip.
 
 ### Rename Facilities
 
