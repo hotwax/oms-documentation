@@ -117,7 +117,7 @@ Administrators have to map order and item-level discounts in HotWax to be mapped
 ### Departments
 
 Departments are categories that administrators can create in NetSuite to identify, categorize, and track records such as financials and transactions.
-Each facility is accociated with a specific department in NetSuite. TO sync department on an order administrators need to map HotWax facilities to NetSuite Department IDs.
+Each facility is associated with a specific department in NetSuite. TO sync department on an order administrators need to map HotWax facilities to NetSuite Department IDs.
 
 To know more about depratment refer to this [document](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_N261602.html).
 
