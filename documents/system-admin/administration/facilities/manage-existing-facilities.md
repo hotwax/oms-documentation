@@ -8,7 +8,7 @@ Retailers can locate and manage specific facilities by clicking the `Facilities`
 There are two ways to locate the facilities:
 1. While looking for a specific facility, the user can search for the facility by facility name from the `Search facilities` search bar on the top left corner of the page.
 2. To manually narrow down the list of facilities, users can apply the `Product Store` and `Type` filters. These filters allow users to view facilities linked to a specific product store or facility type.
-For example, if a retailer has multiple product stores, the dropdown menu in the `product store` filter will present all the product stores from which the user can select any specific product store to access the facilities associated with the particular product store. Similarly, if a user is seeking a specific type of facility, they can use the type filter to view all the facilities of any particular type.
+For example, suppose a retailer has multiple product stores. In that case, the dropdown menu in the `product store` filter will display all the product stores from which the user can select a specific product store to access the facilities associated with that particular store. Similarly, if a user is seeking a specific type of facility, they can use the type filter to view all the facilities of any particular type.
 
 {% embed url="https://youtu.be/v3AOhHhjZO4" %}
 Video: Locate Facilities
@@ -17,9 +17,10 @@ Video: Locate Facilities
 ### Manage Configurations from the Facilities home page : 
 
 - **Configure Fulfillment Capacity** : 
+Users have option to set up the maximum order limit that can be allocated to the facility through the [Fulfillment Capacity]() chip. 
 
 - **Configure Online Fulfillment** : 
-
+Users have option to manage whether a facility will participate in inventory computation for a channel from the [Sell Online]() chip.
 
 ### Rename Facilities
 
