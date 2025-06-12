@@ -1,6 +1,6 @@
 # Fulfillment App
 
-HotWax's `Fulfillment App` lets store teams pick and pack orders without special permissions. All users can the app and perform basic tasks. Actions like rejecting orders or marking items as shipped need specific permissions.
+HotWax's `Fulfillment App` lets store teams pick and pack orders without special permissions. All users can access the app and perform basic tasks. Actions like rejecting orders or marking items as shipped need specific permissions.
 
 Below is a list of all the actions available in the Fulfillment App, along with the specific permissions needed to perform them.
 
@@ -10,7 +10,7 @@ Below is a list of all the actions available in the Fulfillment App, along with 
 | ---- | --------------------------------------- | ------------- | --------------------------------------------------------------------------------------------------------------------------- |
 | 1    | Open orders view                        | -             | Permission to view the "Open Orders" page, displaying orders that are in an unprocessed state.                              |
 | 2    | Reject all (Open Orders)                | COMMON\_ADMIN | Allows users to reject all orders that are in the open state, removing them from processing workflows.                      |
-| 3    | Print picksheet                         | -             | Enables the printing of a picksheet that can be used to assign pickers to orders in bulk, streamlining the picking process. |
+| 3    | Print Picklist                         | -             | Enables the printing of a Picklist that can be used to assign pickers to orders in bulk, streamlining the picking process. |
 | 4    | Order actions Chip > Pick order         | -             | Allows users to assign a picker to a specific individual order, initiating the fulfillment process for that order.          |
 | 5    | Order actions Chip > View Order details | -             | Routes the user to the detailed view of an individual order, where further actions can be taken or details can be reviewed. |
 | 6    | View item QOH (Open Orders)             | -             | Displays the Quantity on Hand (QOH) for items in the order, helping users assess available stock for fulfillment.           |
@@ -101,7 +101,7 @@ Below is a list of all the actions available in the Fulfillment App, along with 
 | 3 | Update Product Identifier setting| COMMON\_ADMIN | Allows users to choose a product identifier to view products using their preferred identification method, facilitating easier product management.   |
 | 4    | Generate shipping label toggle |              | Enables users to toggle the option to print supplementary documents, such as a shipping label, with the shipment for better package identification. |
 | 5    | Generate packing slip toggle   | -             | Provides the ability to toggle the option to print a packing slip alongside the shipment, ensuring proper documentation is included with orders.    |
-| 6    | Go To OMS   | VIEW_OMS             | Allows user to access OMS directly from the Fulfillment App|
+| 6    | Go To OMS   | COMMERCEUSER_VIEW             | Allows user to access OMS directly from the Fulfillment App|
 | 7    | View Fulfillment App   | FULFILLMENT_APP_VIEW  | Allows user to view Fulfillment App|
 | 8    | Manage All Fulfillment Operations  | STOREFULFILLMENT_ADMIN | Allows user to manage all the operations in Store Fulfillment for Online Orders|
 
