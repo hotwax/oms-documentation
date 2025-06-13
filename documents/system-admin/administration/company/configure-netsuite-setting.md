@@ -14,9 +14,6 @@ The NetSuite page includes four sections:
 
 ## **Statistics**
 
-Data awaiting synchronization with NetSuite can be viewed from here.
-
-**Administrators can monitor**:
 
 *  **Orders**: Number of orders awaiting sync with NetSuite.    
 *  **Customers**: Number of customers awaiting sync with NetSuite.    
