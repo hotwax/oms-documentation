@@ -6,9 +6,9 @@ After the creation of facilities, retailers need to utilize the `Facilities App`
 
 Retailers can locate and manage specific facilities by clicking the `Facilities` button on the homepage.
 There are two ways to locate the facilities:
-1. While looking for a specific facility, the You can search for the facility by facility name from the `Search facilities` search bar on the top left corner of the page.
-2. To manually narrow down the list of facilities, You can apply the `Product Store` and `Type` filters. These filters allow You to view facilities linked to a specific product store or facility type.
-For example, suppose a retailer has multiple product stores. In that case, the dropdown menu in the `product store` filter will display all the product stores from which the You can select a specific product store to access the facilities associated with that particular store. Similarly, if a You is seeking a specific type of facility, they can use the type filter to view all the facilities of any particular type.
+1. While looking for a specific facility, you can search for the facility by facility name from the `Search facilities` search bar on the top left corner of the page.
+2. To manually narrow down the list of facilities, you can apply the `Product Store` and `Type` filters. These filters allow you to view facilities linked to a specific product store or facility type.
+For example, suppose a retailer has multiple product stores. In that case, the dropdown menu in the `product store` filter will display all the product stores from which you can select a specific product store to access the facilities associated with that particular store. Similarly, if you are seeking a specific type of facility, you can use the type filter to view all the facilities of any particular type.
 
 {% embed url="https://youtu.be/v3AOhHhjZO4" %}
 Video: Locate Facilities
@@ -28,7 +28,7 @@ Video: Configure Fulfillment
 
 ### Rename Facilities
 
-For any facility name updates made, the You can rename facilities by clicking on the `Edit` button near the facility's name. This will open a pop-up where you can edit the name and click on `Apply` to save the name.
+For any facility name updates made, you can rename facilities by clicking on the `Edit` button near the facility's name. This will open a pop-up where you can edit the name and click on `Apply` to save the name.
 
 {% embed url="https://youtu.be/twdlWgNTsTc" %}
 Video: Rename Facilities
@@ -55,7 +55,7 @@ You can create facility logins that can be used by the staff of the respective f
 Before configuring any settings, it's important to establish a connection between the facilities in HotWax Commerce and external systems such as e-commerce platforms, ERP systems, and third-party logistics providers. Each facility in HotWax Commerce is responsible for managing its inventory, while the Available To Promise (ATP) is also controlled by retailers via ERP integration. This setup ensures precise inventory visibility and reliable fulfillment across the entire system.
 You can map the HotWax Commerce facilities with external systems using the following steps:
 
-1. **Access Facility Details:** You can click on the desired facility's name, which will redirect them to the facility details page, providing a comprehensive overview of the chosen facility.
+1. **Access Facility Details:** You can click on the desired facility's name, which will redirect you to the facility details page, providing a comprehensive overview of the chosen facility.
 2. **External Mapping:** Scroll down to the `External Mappings` tab located at the bottom of the facility details page.
 3. **Map Facility to an External System:** Click on the `Map Facility to an External System` button to initiate the mapping process.
 4. **Choose External System:** In the menu that appears, choose the external system for which a mapping has to be created.
