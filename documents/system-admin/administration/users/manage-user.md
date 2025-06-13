@@ -39,9 +39,13 @@ The "Update Contact Details" function enables administrators to modify a user's 
 
 Manage employee roles and permissions.  
 
-- **Add Security Group**: Retailers can assign or update an employee's permissions by associating them with one or more security groups. If the retailer wants to remove a security group, they can click on the `More` option next to the group's name and choose Remove.
-  
-- **Add Product Store**: Employees can be assigned to one or more product stores, based on business needs. If the retailer wants to remove a product store, they can click on the `More` option next to the product store's name and choose Remove.
+- **Add Security Group**: Retailers can assign or update an employee's permissions by associating them with one or more security groups. 
+
+- **Remove Security Group**: To remove a security group, they can click on the `More` option next to the group's name and choose Remove.
+
+- **Add Product Store**: Employees can be assigned to one or more product stores, based on business needs
+
+-**Remove Product Store**: To remove a product store, they can click on the `More` option next to the product store’s name and choose Remove.
 
 - **View Product Store**: View all product store-related details by opening the product store’s details page in the **Company App**.
 
