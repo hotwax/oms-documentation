@@ -1,30 +1,26 @@
 ---
 description: >-
-  Discover the Catalog page in the BOPIS app, offering a comprehensive list of
-  products available for store pickup, along with inventory availability and
-  product details.
----
-
-This document serves as a hub linking various user manuals for HotWax
-Commerce, an omnichannel Order Management System integrating Shopify and
-NetSuite.
+  This document serves as a hub linking various user manuals for HotWax
+  Commerce, an omnichannel Order Management System integrating Shopify and
+  NetSuite.
 cover: .gitbook/assets/HotwaxCoverImage3Sep.png
 coverY: 0
 layout:
-cover:
-visible: true
-size: full
-title:
-visible: true
-description:
-visible: false
-tableOfContents:
-visible: false
-outline:
-visible: false
-pagination:
-visible: true
+  cover:
+    visible: true
+    size: full
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: false
+  outline:
+    visible: false
+  pagination:
+    visible: true
 ---
+
 
 # 📖 Documents
 
@@ -33,7 +29,7 @@ Find direct access to resources tailored for **Store Operations, Retail Operatio
 Explore the sections **"Learn HotWax OMS," "Learn Shopify," and "Learn NetSuite,"** empowering users to maximize the
 potential of HotWax Commerce for your businesses.
 
-## Resources :desktop
+## Resources :desktop:
 
 <table data-view="cards">
   <thead>
@@ -76,7 +72,7 @@ potential of HotWax Commerce for your businesses.
   </tbody>
 </table>
 
-## Learn HotWax OMS :orange\_book
+## Learn HotWax OMS :orange\_book:
 
 <table data-view="cards">
   <thead>
@@ -107,7 +103,7 @@ potential of HotWax Commerce for your businesses.
   </tbody>
 </table>
 
-## Store Operations User Manual :convenience\_store
+## Store Operations User Manual :convenience\_store:
 
 <table data-view="cards">
   <thead>
@@ -167,7 +163,7 @@ potential of HotWax Commerce for your businesses.
   </tbody>
 </table>
 
-## Retail Operations User Manual :department\_store
+## Retail Operations User Manual :department\_store:
 
 <table data-view="cards">
   <thead>
@@ -234,7 +230,7 @@ potential of HotWax Commerce for your businesses.
   </tbody>
 </table>
 
-## System Admin User Manual :video\_game
+## System Admin User Manual :video\_game:
 
 <table data-view="cards">
   <thead>
@@ -279,7 +275,7 @@ potential of HotWax Commerce for your businesses.
   </tbody>
 </table>
 
-## Learn Shopify :green\_book
+## Learn Shopify :green\_book:
 
 <table data-view="cards">
   <thead>
@@ -324,7 +320,7 @@ potential of HotWax Commerce for your businesses.
   </tbody>
 </table>
 
-## Learn NetSuite :blue\_book
+## Learn NetSuite :blue\_book:
 
 <table data-view="cards">
   <thead>
@@ -361,7 +357,7 @@ potential of HotWax Commerce for your businesses.
   </tbody>
 </table>
 
-## Integrate with HotWax :dart
+## Integrate with HotWax :dart:
 
 <table data-view="cards">
   <thead>
@@ -392,7 +388,7 @@ potential of HotWax Commerce for your businesses.
   </tbody>
 </table>
 
-## Additional Integrations :jigsaw
+## Additional Integrations :jigsaw:
 
 <table data-view="cards">
   <thead>
@@ -433,7 +429,7 @@ potential of HotWax Commerce for your businesses.
   </tbody>
 </table>
 
-## Analytics :bar\_chart
+## Analytics :bar\_chart:
 
 <table data-view="cards">
   <thead>
