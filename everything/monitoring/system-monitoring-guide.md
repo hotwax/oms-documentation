@@ -21,11 +21,22 @@ Monitoring the Client's Operational Dashboard is important to ensure the system 
 - To know more about reports [click here](https://docs.hotwax.co/analytics).
 {% hint style="info" %} We need to check these dashboards for all clients. {% endhint %}
 
+**Instance-Specific Dashboards:**
+
+| Instance | Dashboards        | 
+|----------|-------------------|
+| KREWE / UCG / Mephisto / Gorjana  |  Order Sync  |                 
+| CARIUMA / PERRYELLIS / E-BIKE| Monitoring Dashboard|                   
+| ADOC     | ADOC-Integrations |    
+| NEWERA   |  NEC-Integration / NEC - Order Overview |      
+
+- Monitor dashboards for issues such as missing order attributes, Shopify order import errors, and Shopify fulfillment errors,Duplicate Orders Report.
+- Each instance has specific order attributes to monitor (e.g., Municipio for all [ADOC](https://docs.hotwax.co/adoc/flow/salesorders/orderapproval) instances ,Canton for ADOC-CR, Signified_Approved for [UCG](https://docs.hotwax.co/ucg)).
 ---
 
 ### 2. Job Monitoring
 
-We need to monitor jobs because it can create issues if a job takes more than 45 minutes. Additionally, if an instance goes down while a job is running, it can get stuck in a running status. It is also important to identify and troubleshoot the reason if a job fails frequently.
+We need to monitor jobs because it can create issues if a job takes more than 45 minutes. Additionally, if an instance goes down while a job is running, it can get stuck in a running status. It is also important to identify and troubleshoot the reason if a job fails frequently. Jobs can be monitored via the Job Manager App or Job Monitoring Dashboard on Tathya.
 
 **Frequency:** 3 times a day (9 AM, 3 PM, 8 PM)
 
@@ -38,8 +49,30 @@ We need to monitor jobs because it can create issues if a job takes more than 45
 #### Scenario: If the Job Continuously Fails
 - Check if any job has failed multiple times.
 - Determine the reason for failure, especially if it is uncommon, and [troubleshoot](https://docs.hotwax.co/documents/v/retail-operations/workflow/job-manager/troubleshooting) accordingly.
+- The retry count of the job on the dashboad indicates how many times the job has failed.
+- The `processPendingDataManager` job which runs in every 5 minutes can be ignored if it fails once or twice a day. However, if it keeps failing multiple times, it should be monitored for potential issues.
 
----
+**Failed Files:**
+- Investigate any file failures.
+- [Troubleshoot](https://docs.hotwax.co/documents/v/retail-operations/workflow/data-manager/troubleshooting) and report any uncommon failures.
+
+#### Scenario: Data Manager Logs Monitoring
+- The Data Manager Logs record details of file processing from external systems, including log ID, user, import time, imported file, error records, and the file's processing start and end times.
+
+  **Frequency:** Daily
+  
+  #### Steps:
+
+  **Pending and Running Files:**
+  - Reports have been set up for each client on Tathya.
+  - Check logs for all clients to ensure no files are pending or running for too long.
+  - If a file has been running for 2 hours or more, inform the person responsible for that client. Inventory files are an exception, as they contain large volumes of data and take longer to process.
+  - For any pending files, check if an inventory file or any other ongoing file is in progress that might be preventing the pending files from proceeding.
+
+  **Failed Files:**
+  - Investigate any file failures.
+  - [Troubleshoot](https://docs.hotwax.co/documents/v/retail-operations/workflow/data-manager/troubleshooting) and report any uncommon failures.
+
 
 ### 3. Reset Inventory File Processing
 
@@ -68,6 +101,7 @@ Ensure all inventory files are processed by the following times:
 |----------|-----------------|
 | KREWE    | 1 PM            |
 | UCG      | 3 PM            |
+| Gorjana  | 3 PM            |
 | ADOC     | 3 PM            |
 | NEWERA   | 10 PM / 9 AM    |
 
@@ -78,22 +112,29 @@ Ensure all inventory files are processed by the following times:
 
 ---
 
-### 4. Data Manager Logs Monitoring
+### 4. Napita (NiFi) Monitoring 
 
-The Data Manager Logs record details of file processing from external systems, including log ID, user, import time, imported file, error records, and the file's processing start and end times.
+Napita is a data integration tool designed to automate data flow between systems in real-time. HotWax Commerce uses Napita to transform and export data. Sometimes, files placed at the SFTP location by Shopify may face issues during Napita's transformation process.
 
-**Frequency:** Daily
+- For troubleshooting such issues, refer to the [Napita Troubleshoot Document](https://docs.hotwax.co/everything/tools/napita/troubleshooting).
 
-#### Steps:
+**In Apache NiFi, the ways to monitor and debug errors are:**
 
-**Pending and Running Files:**
-- Reports have been set up for each client on Tathya.
-- Check logs for all clients to ensure no files are pending or running for too long.
+- **Grafana:** If an error is detected, Grafana can send a mail alert to notify administrators. When Grafana sends an email alert, the content of the email typically includes information that helps to understand the context of the alert and troubleshoot the issue further.
+  
+{% hint style="info" %} Administrators added in Grafana mailing list can only view the mail for monitorring. {% endhint %}
 
-**Failed Files:**
-- Investigate any file failures.
-- [Troubleshoot](https://docs.hotwax.co/documents/v/retail-operations/workflow/data-manager/troubleshooting) and report any uncommon failures.
-
+- **Viewing Errors via NiFi Summary and Processor Logs:**  
+  NiFi Summary (located in the NiFi UI) provides a high-level view of all processors and their status. You can use this view to quickly identify which processors are experiencing issues.
+  - You can fetch error logs or statuses using these [processor](https://docs.hotwax.co/everything/tools/napita/troubleshooting/fetch-put-sftp-retry):
+    - **InvokeHTTP**
+    - **PutSFTP**
+    - **FetchSFTP**
+  - Check daily if any processor has **stopped** and inform or discuss it with the person responsible for that client.
+  - You can check the processor at: https://napita.hotwax.io/nifi/
+  - Login and look for the relevant Process Group. For example, in the image below, a red square block inside the process group indicates 53 processors are stopped.    
+   ![image](https://github.com/user-attachments/assets/8d095e92-1a10-46d3-9e3a-f9705da5160e)
+  - You can double-click on the **Processor** to open it and view which process groups are stopped.
 ---
 
 ## Handling and Escalating Issues
