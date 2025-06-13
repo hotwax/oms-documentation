@@ -41,6 +41,9 @@ However, if a sale occurs in-store at 12:59:59 PM and HotWax Commerce receives a
 
 To prevent this issue, merchants can use `Hard Sync` job once a day to synchronize the inventory counts of all products from HotWax Commerce to Shopify. The synchronization is achieved through the GraphQL file, similar to how inventory synchronization is performed for products with recent updates.
 
+With the `shopifyFacilityGroupId` parameter of this job, merchants can configure for which stores they want to push inventory to Shopify. To use this, add the relevant facilities to a facility group in HotWax Commerce and provide that group’s ID in the job configuration.
+
+
 <figure><img src="../../.gitbook/assets/11.png" alt=""><figcaption><p><em>Fig. 2: Hard Sync inventory to remove any discrepancy</em></p></figcaption></figure>
 
 ## Push Updated Inventory Deltas to Shopify
