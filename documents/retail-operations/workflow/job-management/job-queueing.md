@@ -37,6 +37,40 @@ Comprehensive historical job data is readily accessible for analysis and trouble
 
 ### Segmentation
 
+The Job Manager App provides visibility into scheduled, running, and finished jobs through its Pipeline page, which contains three tabs: Pending, Running, and History. Each tab shows jobs in a different execution state and provides key job-related information.
+
+#### 1. Pending Tab
+
+This tab displays all jobs that are queued for execution, i.e., jobs with the status "Pending".
+
+**Details visible in the Pending tab:**
+
+- **Time**: Shows the time at which the job is set to run  based on the timezone selected in the app.  
+- **Frequency**: Indicates how often the job runs (e.g., every 15 minutes).  
+- **Recurrence**: Displays the number of counts the job is retried once failed.
+- **Job Enum ID**: An internal identifier used by HotWax to define the type or purpose of the job.  
+
+
+#### 2. Running Tab
+
+This tab shows jobs that are currently in execution. It allows retailers to monitor the active job.
+
+**Details visible in the Running tab:**  
+- **Start Time**: Indicates when the job started running.
+- **Service Name**: Shows which OMS service is executing the job.
+
+#### 3. History Tab
+
+This tab lists all jobs that have been completed, whether finished or failed.
+
+**Details visible in the History tab:**
+
+- **Created By**: Shows the user who initially created the job.
+- **Updated By**: Shows the user who last updated job parameters like schedule or frequency.
+- **Time Zone**: Displays the time zone in which the job was executed.
+- **Copy Job Info**: Retailers can copy fields like Job ID, Job Name, and runtime data for further use.
+
+
 {% tabs %}
 {% tab title="Pending" %}
 Displays all the jobs queued for execution.
