@@ -12,7 +12,7 @@ This page displays all outstanding orders brokered to this facility by the OMS a
 
 At the top of the page, the total number of queued orders is displayed, providing an instant overview of the workload.
 
-Orders are arranged in a "First In, First Out" sequence by default. However, users have the option to filter them based on the shipping method to prioritize fulfillment. For instance, Same-day shipping orders can be prioritized by selecting the corresponding filter checkbox at the top of the page.
+Orders are arranged in a "First In, First Out" sequence by default. However, you have the option to filter them based on the shipping method to prioritize fulfillment. For instance, Same-day shipping orders can be prioritized by selecting the corresponding filter checkbox at the top of the page.
 
 {% embed url="https://youtu.be/M3jXan3MOZc" %}
 Video: Filter Orders
@@ -28,10 +28,10 @@ Video: Filter Orders
 Video: Print picklist
 {% endembed %}
 
-3. Users can create an individual order's picklist by clicking on the order ID, which will open a dropdown where the user can select the `Pick Orders` option to create the picklist for the individual order.
-4. The user can reprint the picklist by clicking on the `Print Picklist` button in the bottom right corner on the In Progress tab.
-5. Users can modify the assigned picker on the `In Progress` page by selecting the `Edit Picker` button located next to the `Print Picklist` button in the bottom right corner.
-6. Store managers have the option to generate a QR code by clicking the `GENERATE QR CODE` button in the bottom-left corner, pickers can scan this QR code to access their picklist directly on their mobile devices.
+3. You can create an individual order's picklist by clicking on the order ID, which will open a dropdown where you can select the `Pick Orders` option to create the picklist for the individual order.
+4. You can reprint the picklist by clicking on the `Print Picklist` button in the bottom right corner on the In Progress tab.
+5. You can modify the assigned picker on the `In Progress` page by selecting the `Edit Picker` button located next to the `Print Picklist` button in the bottom right corner.
+6. Store managers have the option to generate a QR code by clicking the `GENERATE QR CODE` button in the bottom-left corner. Pickers can scan this QR code to access their picklist directly on their mobile devices.
 
 {% embed url="https://youtu.be/AaSwHxMoGPM" %}
 Video: Regenerate picklist
@@ -60,7 +60,7 @@ By diligently specifying both the total box quantity for the entire order and th
 Add Shipment Box During Fulfillment
 {% endembed %}
 
-1. Click on Pack Orders function to confirm shipment details. Retailers can also enable forced scanning from the settings page to ensure store associates scan the items when packing.
+1. Click on `Pack Orders` to confirm shipment details. Retailers can also enable forced scanning from the settings page to ensure store associates scan the items when packing.
 2. A pop-up dialog box will appear for printing additional documents like shipping labels and packing slips.
 
 Print the shipping labels and packing slips to attach to the packed orders.
