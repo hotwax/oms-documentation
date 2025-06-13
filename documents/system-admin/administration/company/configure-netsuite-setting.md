@@ -22,7 +22,7 @@ The NetSuite page includes four sections:
 
 ## **Configuration**
 
-This section helps administrators set up **SFTP** and **Product Store settings**.
+Set up **SFTP** and **Product Store settings**.
 
 ### **Setup SFTP**
 
