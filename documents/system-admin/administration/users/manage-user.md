@@ -46,7 +46,7 @@ The Clearance section allows retailers to manage employee roles and permissions.
 
 - **View Product Store**: After assigning an employee to a product store, retailers can view the product store-related details by using the View Product Store option. This redirects them to the product store’s details page in the **Company App**.
 
-- **View History**: The **Job Manager App** keeps a record of changes made to a employee permissions. Retailers can see when security groups were added or removed and how long the employee stayed in each group.
+- **View History**: View a record of changes made to an employee permissions. Retailers can see when security groups were added or removed and how long the employee stayed in each group.
 
 
 <figure><img src="../../.gitbook/assets/permission786.png" alt=""><figcaption><p>Image: Update user role and permission</p></figcaption></figure>
