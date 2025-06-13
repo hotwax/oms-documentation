@@ -1,6 +1,6 @@
 ---
 description: >-
-  Guide to managing assigned cycle counts in the Cycle Count app, including
+  Guide to managing assigned cycle counts in the Cycle Count App, including
   tracking progress, rescheduling counts, and moving them to the review stage.
 ---
 
@@ -8,9 +8,20 @@ description: >-
 
 Assigned cycle counts are awaiting the assigned facilities to submit for review. While assigned, the admin view provides insights into the progress made by stores.
 
+## Search, Sort and Filter Assigned Counts
+
+In the `Assigned Counts` view, search and sorting options work similarly to the Drafts page, helping admins quickly find and reorder counts.  
+What’s different here is the focus on tracking progress.  
+
+Admins can filter counts:
+- By Facility, to monitor activity at a specific location  
+- By Created Date, to isolate counts initiated during a chosen time window  
+
+This helps in reviewing workload distribution and progress across teams.
+
 ## Assigned Counts List View
 
-The list of assigned counts shows how many of the items in each count have been completed and when the count is due. If the count is sent for the first time, it will have an `Assigned` badge. If a count has been sent for a "Re-count" after being reviewed, it will have a `Re-count Requested` badge.
+The list of assigned counts shows how many of the items in each count have been completed and when the count is due. If the count is sent for the first time, it will have an `Assigned` badge. If a count has been sent for a `Re-count` after being reviewed, it will have a `Re-count Requested` badge.
 
 ## Assigned Count Details
 
