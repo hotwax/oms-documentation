@@ -1,6 +1,6 @@
 # Manage Existing Facilities
 
-After the creation of facilities, retailers need to utilize the `Facilities` app to manage facility information. This includes tasks such as renaming facilities, updating facilities' addresses, updating fulfillment settings, or updating external mappings.
+After the creation of facilities, retailers need to utilize the `Facilities App` to manage facility information. This includes tasks such as renaming facilities, updating facilities' addresses, updating fulfillment settings, or updating external mappings.
 
 ### Search Facilities
 
