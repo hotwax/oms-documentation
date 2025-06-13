@@ -44,7 +44,7 @@ The Clearance section allows retailers to manage employee roles and permissions.
   
 - **Add Product Store**: Employees can be assigned to one or more product stores, based on business needs. If the retailer wants to remove a product store, they can click on the `More` option next to the product store's name and choose Remove.
 
-- **View Product Store**: After assigning an employee to a product store, retailers can view the product store-related details by using the View Product Store option. This redirects them to the product store’s details page in the **Company App**.
+- **View Product Store**: View all product store-related details by opening the product store’s details page in the **Company App**.
 
 - **View History**: View a record of changes made to an employee permissions. Retailers can see when security groups were added or removed and how long the employee stayed in each group.
 
