@@ -211,7 +211,7 @@ A scheduled job in the HotWax Commerce Integration Platform captures and transfo
 
 **SFTP Locations**
 
-Example for Shopify POS returns:
+POS returns:
 
 ```
  /home/{sftp-username}/netsuite/pos-return
