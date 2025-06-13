@@ -13,7 +13,7 @@ On clicking on any order card in the `Open`, `Packed` or `Completed` tab, users 
 
 ### Item Details
 
-At the top of the Order Details page, this section displays the order name and order ID. It lists all items in order, along with their product image, primary, and secondary identifiers. If an item is part of a kit, a "KIT" tag is shown next to the item name. Each item has two icons: a box icon that shows the quantity on hand and a bin icon to reject the item. 
+At the top of the Order Details page, this section displays the order name and order ID. It lists all items in order, along with their product image, primary, and secondary identifiers. If an item is part of a kit, a "KIT" tag is shown next to the item name. Each item has two buttons: a cube that shows the quantity on hand and a reject button. 
 
 The action buttons shown depend on the order status. When the order is in Open status, buttons like Ready for Pickup and Reject Items are available. After the order is marked Ready for Pickup, these buttons change to Cancel Item and Handover. If the order is marked as Ready for Pickup, the only action available is to cancel it. If an item is damaged or out of stock, it should be rejected before packing. After packing, the order is marked Ready for Pickup, and an email is sent to the customer. So, unpacking or rejecting is not allowed at this stage.
 
