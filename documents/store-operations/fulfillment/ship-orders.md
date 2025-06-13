@@ -28,7 +28,7 @@ Video: Print picklist
 {% endembed %}
 
 {% hint style="success" %}
-Users can create individual order's picklist by clicking on the order ID, which will open a dropbox where the user can select the `Pick Orders` option to create the picklist for the individual order.
+Users can create individual order's picklist by clicking on the order ID, which will open a dropdown where the user can select the `Pick Orders` option to create the picklist for the individual order.
 {% endhint %}
 
 3. The user can reprint the picklist by clicking on the `Print Picklist` button in the bottom right corner on the In Progress tab.
