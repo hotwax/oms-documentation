@@ -59,15 +59,11 @@ Displays all the historical jobs. Historical jobs can be filtered by their statu
 {% endtab %}
 {% endtabs %}
 
-####
-
 ### **Search**
 
 Easily locate specific jobs by name or category.
 
 {% embed url="https://youtu.be/HbBndcYS36Q" %}
-
-###
 
 ### Filters
 
@@ -75,7 +71,30 @@ Quickly find jobs by applying filters based on category and status.
 
 <figure><img src="../../.gitbook/assets/Frame 2.png" alt=""><figcaption></figcaption></figure>
 
-### **Pin job**
+### History
+#### View Import Logs
+
+A data manager log provides audit of files imported into the OMS. It includes information such as the status of file import, the username who initiated the process,file processing start and finished timestamp, and it also shows if file having any error record. These logs are helpful for tracking, reviewing, and troubleshooting file import activities.
+
+When accessing the Data Manager Log from the **Job Manager App**, users can directly view the following details:
+
+- Number of successfully processed files.
+- Number of failed files.
+- Files with error records.
+
+#### Detailed Log View
+Clicking `View Details` redirects retailers to a detailed logs page where they can:
+
+- Access individual logs with specifics like start and finished date and time, user information, and unique log IDs.
+- Review the current status of each file (Finished, Running, Failed, Pending).
+- Download failed records as separate assets for further analysis.
+- Filter logs to display only those that failed execution or contain error records.
+- Download the original file or the error log for troubleshooting.
+
+With these details, retailers can quickly identify and resolve data import issues.
+
+
+### Pin job
 
 Keep frequently accessed jobs readily available for quick access. Pinned jobs will be visible in the footer.
 
