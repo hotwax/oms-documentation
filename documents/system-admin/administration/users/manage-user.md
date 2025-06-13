@@ -37,7 +37,7 @@ The "Update Contact Details" function enables administrators to modify a user's 
 
 ### Clearance
 
-The Clearance section allows retailers to manage employee roles and permissions.  
+Manage employee roles and permissions.  
 **The key functions available in this section include**
 
 - **Add Security Group**: Retailers can assign or update an employee's permissions by associating them with one or more security groups. If the retailer wants to remove a security group, they can click on the `More` option next to the group's name and choose Remove.
