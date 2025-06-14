@@ -9,7 +9,8 @@ The Import App Inventory page provides a simple interface to manually upload inv
 3. Fill in the required data in the downloaded CSV file.  
 4. Use the **Upload** button to select and upload your completed CSV file.  
 5. Map all necessary columns from the uploaded file to their corresponding fields.  
-6. Once mapping is complete, click **Upload** to complete the import process.
+6. Once mapping is complete, click **Review** and map and save if there is any missing record.
+7. Finally Import file through import button in bottom right corner.
 
 ## **Inventory Import Methods**
 
@@ -47,7 +48,7 @@ After resetting:
 
 ### **Adjust by Certain Amount**  
 
-**Purpose**: In many warehouses, retailers maintain separate zones for eCommerce and wholesale inventory for B2B and B2C. When inventory is moved from one zone to another within the same warehouse, it's treated as an inventory transfer.  
+**Purpose**: In many warehouses, retailers maintain separate zones for eCommerce and wholesale inventory. When inventory is moved from one zone to another within the same warehouse, it's treated as an inventory transfer.  
      
 **How It Works**: This method adjusts inventory by a specified quantity to reflect the transfer, locking in the internal variance.  
 
@@ -101,16 +102,16 @@ For Product F tied to an upcoming purchase order:
 * **Current QOH**: 0 units  
 * **Preorder Inventory in Import File**: 200 units  
 * **PO Expected Delivery Date**: July 10th  
-After preorder import:  
+After PO import:  
 * **QOH**: 0 units (no physical inventory yet)  
 * **ATP**: 200 units (reflecting preorder availability)
 
 ## **Additional Features**
 
-* The Import App enables administrators to view and schedule jobs for various inventory import methods.
-* If a required field is missing in the uploaded file, the system notifies the user before processing. It also highlights what’s missing—for example:  
+* The Import App enables retailers to view and schedule jobs for various inventory import methods.
+* If a required field is missing in the uploaded file, the system notifies the user before processing. It also highlights what’s missing for example:  
   * “Seems like uploaded file has missing products, checked with initial 10 records.”
-* Administrators can also `View History` of file processing. In the view history administrator can view and do:
+* Administrators can also `View History` of file processing. In the view history administrator can:
   * View logs with key details: start/stop time, user, and log ID.  
   * Check file status: Finished, Running, Failed, or Pending.  
   * Download failed records for analysis.  
