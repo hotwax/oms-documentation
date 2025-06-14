@@ -109,7 +109,7 @@ After PO import:
 ## **Additional Features**
 
 * The Import App enables retailers to view and schedule jobs for various inventory import methods.
-* If a required field is missing in the uploaded file, the system notifies the user before processing. It also highlights what’s missing for example:  
+* If any required field is missing in the uploaded file, the app displays it before processing begins. It also highlights what’s missing for example:  
   * “Seems like uploaded file has missing products, checked with initial 10 records.”
 * Administrators can also `View History` of file processing. In the view history administrator can:
   * View logs with key details: start/stop time, user, and log ID.  
