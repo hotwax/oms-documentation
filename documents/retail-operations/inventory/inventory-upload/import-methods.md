@@ -112,10 +112,12 @@ After PO import:
 * If any required field is missing in the uploaded file, the app displays it before processing begins. It also highlights what’s missing for example:  
   * “Seems like uploaded file has missing products, checked with initial 10 records.”
 * Administrators can also `View History` of file processing. In the view history administrator can:
-  * View logs with key details: start/stop time, user, and log ID.  
+  * View logs with key details: start/stop time, and log ID.  
   * Check file status: Finished, Running, Failed, or Pending.  
   * Download failed records for analysis.  
-  * Filter logs by failure or error presence.  
-  * Download original files or error logs for troubleshooting.
+  * Filter logs by failed records and failed files.
+  * View and modify the file execution mode between `Async` and `Queued` options.
+  * View and add the products included in the uploaded file.
+  * Download log file, uploaded files and failed records for troubleshooting.
 
 ---
