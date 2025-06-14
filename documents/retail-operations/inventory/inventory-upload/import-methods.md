@@ -14,7 +14,7 @@ The Import App Inventory page provides a simple interface to manually upload inv
 
 ## **Inventory Import Methods**
 
-By using these methods, administrators can import inventory files as needed and maintain inventory accuracy.
+By using these methods, retailers can import inventory files as needed and maintain inventory accuracy.
 
 ### **Exact ATP**
 
@@ -111,7 +111,8 @@ After PO import:
 * The Import App enables retailers to view and schedule jobs for various inventory import methods.
 * If any required field is missing in the uploaded file, the app displays it before processing begins. It also highlights what’s missing for example:  
   * “Seems like uploaded file has missing products, checked with initial 10 records.”
-* Administrators can also `View History` of file processing. In the view history administrator can:
+* Retailers can also `View History` of file processing.
+* From **View history** retailers can:
   * View logs with key details: start/stop time, and log ID.  
   * Check file status: Finished, Running, Failed, or Pending.  
   * Download failed records for analysis.  
