@@ -37,15 +37,28 @@ Comprehensive historical job data is readily accessible for analysis and trouble
 
 ### Segmentation
 
-The Job Manager App provides visibility into scheduled, running, and finished jobs through its Pipeline page, which contains three tabs: Pending, Running, and History. Each tab shows jobs in a different execution state and provides key job-related information.
+The Job Manager App shows all jobs (scheduled, running, or completed)on the Pipeline page, organized into three tabs: Pending, Running, and History.
+
+#### Actions retailers can perform on a job card:
+
+- **Change run time and frequency**: Use the dropdowns to update when and how often the job runs.
+- **Edit custom parameters**: View, copy, and modify job-specific parameters with the `more` option on the job card.
+- **Skip the job**: Temporarily skip the current run. The job will resume based on its schedule.
+- **Disable the job**: Cancel the current and future runs. The job can only be manually re-enabled to run again.
+- **View history**: Check the execution history and status (e.g., finished or failed).
+- **Run Now**: Run the job immediately by creating a duplicate instance. This action is irreversible.
+- **Copy job details**: Copy key job info like job ID, name, description, and runtime data.
+- **Pin job**: Pin frequently used jobs for quick access at the bottom of the page.
+
+
 
 #### 1. Pending Tab
 
-This tab displays all jobs that are queued for execution, i.e., jobs with the status "Pending".
+This tab lists jobs in the **Pending status**, meaning they are queued and waiting to begin execution. Retailers can take multiple actions as listed above form the job card in the pending tab.
 
 **Details visible in the Pending tab:**
 
-- **Time**: Shows the time at which the job is set to run  based on the timezone selected in the app.  
+- **Time**: Indicates when the job is scheduled to run, based on the timezone selected in the app.  
 - **Frequency**: Indicates how often the job runs (e.g., every 15 minutes).  
 - **Recurrence**: Displays the number of counts the job is retried once failed.
 - **Job Enum ID**: An internal identifier used by HotWax to define the type or purpose of the job.  
