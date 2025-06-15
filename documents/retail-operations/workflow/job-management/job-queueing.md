@@ -54,7 +54,7 @@ The Job Manager App shows all jobs (scheduled, running, or completed)on the Pipe
 
 #### 1. Pending Tab
 
-This tab lists jobs in the **Pending status**, meaning they are queued and waiting to begin execution. Retailers can take multiple actions as listed above form the job card in the pending tab.
+This tab lists jobs in the **pending status**, meaning they are queued and waiting to begin execution. Retailers can take multiple actions from the job card, as listed above.
 
 **Details visible in the Pending tab:**
 
@@ -66,7 +66,7 @@ This tab lists jobs in the **Pending status**, meaning they are queued and waiti
 
 #### 2. Running Tab
 
-This tab shows jobs that are currently in execution. It allows retailers to monitor the active job.
+This tab lists jobs in the **running status** i.e jobs those are currently in execution. It allows retailers to monitor the active job.
 
 **Details visible in the Running tab:**  
 - **Start Time**: Indicates when the job started running.
@@ -74,7 +74,7 @@ This tab shows jobs that are currently in execution. It allows retailers to moni
 
 #### 3. History Tab
 
-This tab lists all jobs that have been completed, whether finished or failed.
+This tab lists all jobs that have been **completed**, whether finished or failed. Retailers can add custom parameters, view job history, copy details, or pin the job card.
 
 **Details visible in the History tab:**
 
@@ -121,7 +121,7 @@ Quickly find jobs by applying filters based on category and status.
 ### History
 #### View Import Logs
 
-A data manager log provides audit of files imported into the OMS. It includes information such as the status of file import, the username who initiated the process,file processing start and finished timestamp, and it also shows if file having any error record. These logs are helpful for tracking, reviewing, and troubleshooting file import activities.
+A data manager log provides audit of files imported into the OMS. It includes information such as the status of file import, file processing start and finished timestamp, and it also shows if file having any error record. These logs are helpful for tracking, reviewing, and troubleshooting file import activities.
 
 When accessing the Data Manager Log from the **Job Manager App**, users can directly view the following details:
 
@@ -137,9 +137,9 @@ Clicking `View Details` redirects retailers to a detailed logs page where they c
 - Download failed records as separate assets for further analysis.
 - Filter logs to display only those that failed execution or contain error records.
 - Download the original file or the error log for troubleshooting.
+- View file execution mode such as `Async` or `Queued` 
 
 With these details, retailers can quickly identify and resolve data import issues.
-
 
 ### Pin job
 
