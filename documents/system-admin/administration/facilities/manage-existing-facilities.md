@@ -28,7 +28,7 @@ Video: Configure Fulfillment
 
 ### Rename Facilities
 
-For any facility name updates made, you can rename facilities by clicking on the `Edit` button near the facility's name. This will open a pop-up where you can edit the name and click on `Apply` to save the name.
+You can rename facilities by clicking on the `Edit` button near the facility's name. This will open a pop-up where you can edit the name and click on `Apply` to save the name.
 
 {% embed url="https://youtu.be/twdlWgNTsTc" %}
 Video: Rename Facilities
