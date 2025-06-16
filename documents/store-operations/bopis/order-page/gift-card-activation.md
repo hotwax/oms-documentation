@@ -9,7 +9,7 @@ The activation pop-up opens when a staff member taps on a gift card item from th
 ## Steps to Activate a Gift Card
 
 **Step 1: Enter the Activation Code**  
-The staff member can scan or manually type the serial number printed on the physical gift card. It must be to make sure the code is correct before moving forward, because it cannot be edited later.
+The staff member can scan or manually type the serial number printed on the physical gift card. It must correct before moving forward, because it cannot be edited later.
 
 **Step 2: Tap the Activate Button**  
 After entering the code, tap the Activate button (shown with a gift card icon). A confirmation message will appear - **This gift card code will be activated. The customer may also receive a notification about this activation. Please verify all information is entered correctly.** 
