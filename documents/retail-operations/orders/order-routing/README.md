@@ -59,3 +59,8 @@ Within each routing, multiple <mark style="color:orange;">**inventory rules**</m
 * **Next-day delivery batch**: For next-day orders, inventory rules can prioritize fulfillment from warehouses within a 250-mile range, accommodating the one-day delivery SLA. Next inventory rules in sequence can apply if the first inventory rule doesn’t allocate inventory for all orders in the batch.
 
 In the following sections, we’ll dive deeper into each level, to understand how brokering runs, routing rules, and inventory rules work together to optimize order routing.
+
+### Test Drive 
+
+Test drive allows real orders to be run through routing rules without affecting inventory or fulfillment
+It shows how orders would be routed, which rules apply, and how inventory or ATP affects the decision without touching live systems.
