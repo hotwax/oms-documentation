@@ -14,7 +14,7 @@ For example, suppose a retailer has multiple product stores. In that case, the d
 Video: Locate Facilities
 {% endembed %}
 
-### Manage Configurations from the Facilities home page : 
+### Manage Configurations from the Facilities home page:
 
 - **Configure Fulfillment Capacity** : 
 You have the option to set up the maximum order limit that can be allocated to the facility through the [Fulfillment Capacity](/documents/system-admin/administration/facilities/configure-fulfillment-capacity.md) chip. 
