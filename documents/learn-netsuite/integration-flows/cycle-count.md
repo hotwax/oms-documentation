@@ -87,18 +87,6 @@ HC_SC_ImportInventoryAdjustment.js
 
 {% file src="../.gitbook/assets/Inventory Cycle Count Variances Sample Feed.csv" %}
 
-## Record Unexpected Store Inventory Variances Outside of Cycle Counts
-
-While cycle counting in stores follows a periodic schedule, stores frequently encounter sudden inventory discrepancies in various scenarios. For example, if store associates identify 5 damaged units at their location, they’d want to record a variance of -5 for the damaged inventory. Similarly, if they discover 2 units of previously missing inventory, they’d want to record +2 for the newly found items.
-
-To address these unexpected inventory changes, store managers can directly record these identified inventory variances, and these variances are pushed into HotWax Commerce.
-
-{% hint style="info" %}
-Unlike cycle counting, where an inventory count is conducted periodically, this process involves store managers directly recording the variance amount without physically counting the entire store inventory.
-{% endhint %}
-
-<figure><img src="../.gitbook/assets/inventoryVariance.png" alt=""><figcaption><p>Inventory Variance Synced from HotWax Commerce to NetSuite</p></figcaption></figure>
-
 ### Pushing Inventory Variance to HotWax Commerce
 
 Store managers log the inventory variances through the app, along with providing the relevant reasons, these recorded inventory variances automatically update the inventory in HotWax Commerce.
