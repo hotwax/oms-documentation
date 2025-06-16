@@ -97,7 +97,7 @@ Store associates can lookup the incoming returns by navigating to the `Returns` 
 ## **Receiving Transfer Orders**
 
 Transferring inventory between store locations is a common retail operation. With the Receiving App, store associates can easily receive transfer orders.
-Transfer orders can be searched by name or ID. Associates can view transfer order status, creation date and time, and switch between **Open** and **Completed** tabs to filter orders accordingly.
+Transfer orders can be searched by their name. Associates can view transfer order status, creation date and time, and switch between **Open** and **Completed** tabs to filter orders accordingly.
 
 ### **Transfer Order Details**
 
