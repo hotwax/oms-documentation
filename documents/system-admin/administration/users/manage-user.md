@@ -35,7 +35,22 @@ The "Update Contact Details" function enables administrators to modify a user's 
 
 ## Update User’s Role and Permissions
 
-The "Update User’s Role and Permissions" function empowers administrators to modify a user's role or security group within the OMS. This function allows for the adjustment of access levels and permissions, ensuring that users have the appropriate privileges based on their evolving responsibilities within the organization.
+### Clearance
+
+Manage employee roles and permissions.  
+
+- **Add Security Group**: Retailers can assign or update an employee's permissions by associating them with one or more security groups. 
+
+- **Remove Security Group**: To remove a security group, they can click on the `More` option next to the group's name and choose `Remove`.
+
+- **Add Product Store**: Employees can be assigned to one or more product stores, based on business needs
+
+- **Remove Product Store**: To remove a product store, they can click on the `More` option next to the product store’s name and choose `Remove`.
+
+- **View Product Store**: View all product store-related details by opening the product store’s details page in the **Company App**.
+
+- **View History**: View a record of changes made to an employee permissions. Retailers can see when security groups were added or removed and how long the employee stayed in each group.
+
 
 <figure><img src="../../.gitbook/assets/permission786.png" alt=""><figcaption><p>Image: Update user role and permission</p></figcaption></figure>
 
