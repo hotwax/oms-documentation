@@ -21,7 +21,7 @@ Selecting Cancel Item opens a pop-up displaying a list of cancellation reasons. 
 
 Below this section, the cancellation sync job status is shown. The behavior of cancellation and refund depends on the following settings:
 
-- If both the cancelation sync job and the shop setting to process refunds on Shopify are enabled, the cancelation and refund will be sent to Shopify.
+- If both the cancellation sync job and the Shopify setting to process refunds are enabled, the cancellation and refund will be sent to Shopify.
 - If the cancellation sync job is enabled but the Shopify refund setting is disabled, only the cancellation will be sent to Shopify.
 - If the cancellation sync job is disabled, nothing is sent to Shopify, not the cancellation and not the refund, even if the Shopify refund setting is enabled.
 - If both settings are disabled, no data is sent to Shopify.
