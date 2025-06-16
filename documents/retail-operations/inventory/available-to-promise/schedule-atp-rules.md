@@ -37,3 +37,14 @@ A balloon icon in the bottom right corner allows retailers to collapse or expand
 {% embed url="https://youtu.be/EYvFXLzoe88" %}
 Change Rule Sequence
 {% endembed %}
+
+## Base Rule
+
+Some rules work only when a product has a certain tag or matches specific conditions. If a product does not match, then those rules do not apply.
+
+A base rule sets a default action for products that no longer match any specific condition and have returned to their normal state.
+Suppose a product has a preorder tag, and it needs a different inventory threshold. A rule is created to set the threshold to 10 units for that product. This rule only works for products with the preorder tag.
+
+Now, if the tag is removed from a product, that rule no longer applies. The product does not get any threshold, because it doesn’t match any rule. Also, the product won’t qualify for the rule anymore because it no longer has the required tag. However, if 10 units were already allocated earlier, they will remain, even if the tag has been removed.
+
+To avoid this, a base rule can be added to set a default threshold of 5 units for all products. So even if a product loses the preorder tag, it still follows the base rule. 
