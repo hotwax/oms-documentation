@@ -15,3 +15,4 @@ This section focuses on managing incoming shipments, returns, and purchase order
 1. Receiving Shipments
 2. Receiving Returns
 3. Receiving Purchase Orders
+4. Receiving Transfer Orders
