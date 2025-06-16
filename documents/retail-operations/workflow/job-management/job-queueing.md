@@ -121,7 +121,7 @@ Quickly find jobs by applying filters based on category and status.
 ### History
 #### View Import Logs
 
-A data manager log provides audit of files imported into the OMS. It includes information such as the status of file import, file processing start and finished timestamp, and it also shows if file having any error record. These logs are helpful for tracking, reviewing, and troubleshooting file import activities.
+The Data Manager log records a detailed history of all files imported into the OMS. It includes information such as the status of file import, file processing start and finished timestamp, and it also shows if file having any error record. These logs are helpful for tracking, reviewing, and troubleshooting file import activities.
 
 When accessing the Data Manager Log from the **Job Manager App**, users can directly view the following details:
 
