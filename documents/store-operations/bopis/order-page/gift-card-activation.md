@@ -12,10 +12,10 @@ The activation pop-up opens when a staff member taps on a gift card item from th
 The staff member can scan or manually type the serial number printed on the physical gift card. It must be to make sure the code is correct before moving forward, because it cannot be edited later.
 
 **Step 2: Tap the Activate Button**  
-After entering the code, tapping the Activate button (represented by a gift card icon in the corner) will bring up a confirmation message. This is the final opportunity to review the entered details.
+After entering the code, tap the Activate button (shown with a gift card icon). A confirmation message will appear - **This gift card code will be activated. The customer may also receive a notification about this activation. Please verify all information is entered correctly.** 
 
 **Step 3: Confirm Activation**  
-Tapping Activate again on the confirmation pop-up completes the process. If activation is successful, a confirmation message appears, and the gift card number is displayed along with the activation timestamp.
+Tapping Activate completes the process. After activation, the code cannot be changed but can be viewed by tapping the gift card icon.
 
 ## Product Information Display
 
