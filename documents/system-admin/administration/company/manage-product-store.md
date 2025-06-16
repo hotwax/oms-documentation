@@ -76,11 +76,6 @@ Administration settings require special permissions and, if mismanaged, can impa
 * **Preselected Facility Tag:** Orders tagged with this tag will undergo line item check for fulfillment facility selection. To set a preselected facility tag, navigate to the Soft allocation section in the Brokering card, and select the default tag or create a new tag if any.
 * **Shipping Facility Tag:** This tag will hold the preselected fulfillment facility value. To assign a shipping facility tag, locate the relevant field in the Brokering card and select the default tag or create a new tag if any.
 
-**Routing:**
-
-* **Order Splitting:** Configure when no further order information is needed prior to order approval. Access this setting in the routing section of Brokering card, and adjust it according to your workflow requirements.
-* **Minimum Shipment Threshold Value:** Set threshold values for order items to ensure efficient order splitting while mitigating the risk of losses due to low-value shipments. Navigate to the routing or order management settings, and specify the desired threshold value, the shipment value will pick the currency set in the product store, ensuring consistency in currency throughout the order management process.
-
 <figure><img src="../../.gitbook/assets/brokering .png" alt=""><figcaption></figcaption></figure>
 
 ### Fulfillment
