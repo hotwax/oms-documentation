@@ -15,15 +15,16 @@ On clicking on any order card in the `Open`, `Packed` or `Completed` tab, users 
 
 At the top of the Order Details page, this section displays the order name and order ID. It lists all items in order, along with their product image, primary, and secondary identifiers. If an item is part of a kit, a "KIT" tag is shown next to the item name. Each item has two buttons: a cube that shows the quantity on hand and a reject button. 
 
-The action buttons shown depend on the order status. When the order is in Open status, buttons like Ready for Pickup and Reject Items are available. After the order is marked Ready for Pickup, these buttons change to Cancel Item and Handover. If the order is marked as Ready for Pickup, the only action available is to cancel it. If an item is damaged or out of stock, it should be rejected before packing. After packing, the order is marked Ready for Pickup, and an email is sent to the customer. So, unpacking or rejecting is not allowed at this stage.
+The buttons shown on an order depend on its status. When the order is in Open status, the available buttons are Ready for Pickup and Reject Items. If any item is damaged or unavailable for any reason, it should be rejected at this stage, before it is packed. Once the order is packed and marked as Ready for Pickup, the buttons change to Handover and Cancel Item. At this point, rejecting or unpacking items is not allowed. An email is also sent to the customer when the order is marked as Ready for Pickup.
 
-Selecting Cancel Item opens a pop-up displaying a list of cancellation reasons. When an item is cancelled, an email is sent to the customer. If items are rejected, a notification email is also sent, and the order may be re-routed. For more information, refer to the Order Re-Routing App User Manual. 
+Selecting Cancel Item opens a pop-up displaying a list of cancellation reasons. When an item is cancelled, an email is sent to the customer.
 
-Below this section, the cancelation sync job status is shown. The behavior of cancelation and refund depends on the following settings:
+Below this section, the cancellation sync job status is shown. The behavior of cancellation and refund depends on the following settings:
 
 - If both the cancelation sync job and the shop setting to process refunds on Shopify are enabled, the cancelation and refund will be sent to Shopify.
 - If the cancellation sync job is enabled but the Shopify refund setting is disabled, only the cancellation will be sent to Shopify.
-- If the cancellation sync job is disabled, the cancellation will not be sent to Shopify, even if the Shopify refund setting is enabled.
+- If the cancellation sync job is disabled, nothing is sent to Shopify, not the cancellation and not the refund, even if the Shopify refund setting is enabled.
+- If both settings are disabled, no data is sent to Shopify.
 
 ### Reject Orders
 
@@ -31,7 +32,7 @@ Click on bin icon to reject the order, select an appropriate reason for rejectin
 
 To reject an order partially, click on the bin icon for the particular item in the order that needs to be rejected, select an appropriate reason for rejecting the item in the pop-up window that appears, and click on the `reject item` button.
 
-
+If items are rejected, a notification email is also sent, and the order may be re-routed. For more information, refer to the Order Re-Routing App User Manual. 
 
 ### Customer and Payment Details
 
