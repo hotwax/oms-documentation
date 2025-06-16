@@ -8,6 +8,7 @@
   * [Create Product Store](administration/company/create-product-store.md)
   * [Manage Product Store](administration/company/manage-product-store.md)
   * [Manage Shopify Shop](administration/company/manage-shopify-shop.md)
+  * [Configure NetSuite Setting](administration/company/configure-netsuite-setting.md)
 * [Users](administration/users/README.md)
   * [Create Users](administration/users/create-user.md)
   * [Manage Users](administration/users/manage-user.md)
