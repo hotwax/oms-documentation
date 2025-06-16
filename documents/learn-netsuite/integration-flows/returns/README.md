@@ -243,10 +243,8 @@ When returning an item, a customer can also opt to take the exchange item agains
 
 <figure><img src="../../.gitbook/assets/29.png" alt=""><figcaption><p>Sync POS returns to NetSuite using Loop</p></figcaption></figure>
 
-Loop POS is a standalone app that retailers can use alongside Shopify POS to process returns and exchanges in-store. Customers can bring items to the store, where a retailer processes the return using the Loop POS App.
+Retailers use the Loop POS app alongside Shopify POS to handle in-store returns and exchanges. Once a return is processed in Loop POS, the data is synced to Shopify.
 
-The return integration flow is the same as with Shopify POS. Once a return is completed in Loop POS App, the HotWax Commerce Integration Platform downloads and transforms the return data in JSON format and places it at a designated SFTP location.
-
-NetSuite reads this file to create the Credit Memo and Customer Refund. As soon as these records are created, the inventory is simultaneously restocked.
+HotWax Commerce fetches this return data from Shopify, transforms it, and places it at a specific SFTP location. NetSuite then reads the file to create the Credit Memo and Customer Refund, while also restocking the returned inventory.
 
 ***
