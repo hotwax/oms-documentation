@@ -94,6 +94,38 @@ Retailers who accept returns at their stores need to accurately receive and reco
 
 Store associates can lookup the incoming returns by navigating to the `Returns` page and identifying the returns with the `Return ID`. Store associates can receive the returned items similarly to the [inbound shipments](receiving.md#receive-asn).
 
+## **Receiving Transfer Orders**
+
+Transferring inventory between store locations is a common retail operation. With the Receiving App, store associates can easily receive transfer orders.
+Transfer orders can be searched by name or ID. Associates can view transfer order status, creation date and time, and switch between **Open** and **Completed** tabs to filter orders accordingly.
+
+### **Transfer Order Details**
+
+Clicking on a transfer order opens its details page.
+
+**Actions store associates can perform on the Transfer Order details page:**
+
+* **Total Items to Receive**: Displayed under the transfer order name, showing the count of all items.
+* **Scan or Enter SKU**: Items can be received by scanning or manually entering the SKU.    
+* **Item List View**: Shows all items in the order with ordered and received quantities, along with a progress bar reflecting receiving progress.  
+* **Receive All**: Receives all ordered items at once. Works like the 'Pick All' function in order fulfillment.  
+* **Receive Items**: Items can be received partially. Clicking 'Receive' will log the received quantity, and the remaining quantity will still be available for future receiving.
+* **Receive and Close:** Receives all items and marks the transfer order as closed. Once closed, no more items can be received in that order.
+Store associates can also enter custom quantities on the item card for under or over receiving.
+  ### **Steps to Receive a Transfer Order**
+
+1. From the Receiving App, go to the **Transfer Order** tab and select the relevant order.
+2. The app will open the order's detail page.
+3. Scan items or manually enter their SKUs using the input field next to the **Scan Items** section.
+4. Use the **Receive All** button on each item card to receive all items at once, or enter custom quantities from the item card for under/over receiving.
+5. **Receiving**
+
+   * **Receive:** Tap to log the received quantity and keep the order open for receiving remaining items later.
+
+   * **Receive and Close:** Tap to receive all selected items and close the order. A modal will appear to confirm which items to close. Once closed, those items can no longer be received in this TO.
+
+6. To confirm the transfer was received, switch to the **Completed tab** where the order will now be listed.
+
 ## Handle Discrepancies
 
 **Receiving Extra Inventory**
