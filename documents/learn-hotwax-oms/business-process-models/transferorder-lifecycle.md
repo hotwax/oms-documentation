@@ -115,7 +115,7 @@ Similar to the `store to store` transfer order lifecycle we discussed above, <ma
 
 ### 4. Receive Transfer Orders in NetSuite
 
-* Finally, inventory planning manually initiates the receiving process in NetSuite for the store transferred inventory upon its arrival at the warehouse.
+* Finally, the inventory planning team manually initiates the receiving process in NetSuite for the store transferred inventory upon its arrival at the warehouse.
 * After the receiving process is completed, the transfer order status is automatically updated from <mark style="color:orange;">**“Pending Receipt”**</mark> to <mark style="color:orange;">**“Received”**</mark>, indicating that all transfer order items have been successfully received at the warehouse. Additionally, the inventory count for the newly received inventory is updated in NetSuite.
 
 {% hint style="success" %}
