@@ -9,6 +9,7 @@
     * [Notifications](bopis/order-page/notifications.md)
     * [Search Order](bopis/order-page/search-order.md)
     * [Open Order Tab](bopis/order-page/open-order-tab.md)
+    * [Gift Card Activation](bopis/order-page/gift-card-activation.md)
   * [Order Details Page](bopis/order-details-page/README.md)
     * [View Order Item Rejection History](bopis/order-details-page/view-order-item-rejection-history.md)
   * [Packed Order Tab](bopis/packed-order-tab.md)
