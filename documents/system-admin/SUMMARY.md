@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Launchpad](../README.md)
+* [Launchpad](README.md)
 
 ## Administration
 
@@ -8,6 +8,7 @@
   * [Create Product Store](administration/company/create-product-store.md)
   * [Manage Product Store](administration/company/manage-product-store.md)
   * [Manage Shopify Shop](administration/company/manage-shopify-shop.md)
+  * [Configure NetSuite Setting](administration/company/configure-netsuite-setting.md)
 * [Users](administration/users/README.md)
   * [Create Users](administration/users/create-user.md)
   * [Manage Users](administration/users/manage-user.md)
@@ -38,7 +39,7 @@
   * [Manage Facility Staff](administration/facilities/manage-facility-staff.md)
   * [Manage Locations](administration/facilities/manage-locations.md)
   * [Disabling Facilities](administration/facilities/disabling-facilities.md)
-  * [Manage Parkings](./administration/facilities/manage-parkings.md)
+  * [Manage Parkings](administration/facilities/manage-parkings.md)
   * [Manage Groups](administration/facilities/manage-groups.md)
 * [Delete Customers](administration/delete-customers.md)
 * [SOLR Indexing](administration/solr-indexing.md)

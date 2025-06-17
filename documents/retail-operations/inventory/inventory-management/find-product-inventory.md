@@ -53,5 +53,5 @@ For example, if a retailer chooses the Amazon sales channel and searches for SKU
 2. If you want to view inventory details for a specific inventory channel, click on the dropdown menu to select the desired channel from the available options.
 3. If you need to find a specific product's inventory breakdown for the selected channel, use the search functionality provided within the interface. Enter the identifier of the product you're interested in, and the system will display its inventory details for the chosen channel.
 
-{% embed url="https://youtu.be/goJzCkiAixo" %} Video: Filter Inventory Channel {% endembed %}
+{% embed url="https://youtu.be/eU_VU7LKzwk" %} Video: Filter Inventory Channel {% endembed %}
 
