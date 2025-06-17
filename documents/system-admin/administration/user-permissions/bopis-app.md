@@ -4,8 +4,6 @@ The HotWax Commerce BOPIS App is designed for store staff to efficiently manage 
 
 Below is a list of all the actions available in the BOPIS App, along with the specific permissions needed to perform them.
 
-Here’s a detailed table of the actions available in the BOPIS App, organized by page, along with the specific permissions needed to perform them:
-
 ### Catalog Page
 
 | Serial No. | Action         | Permission | Description                                                                            |
@@ -69,9 +67,9 @@ Here’s a detailed table of the actions available in the BOPIS App, organized b
 | 4  | Generate Packing Slip        | COMMON_ADMIN            | Enables the creation of packing slips, helping customers reconcile their order against delivered items. |
 | 5  | Enable Tracking              | COMMON_ADMIN            | Tracks who picked orders by entering picker IDs during the packing process. |
 | 6  | Notification Preference      | -                        | Allows users to select the types of notifications they want to receive.    |
-| 7  | Go to OMS                    | COMMERCEUSER_VIEW       | Allows user access HotWax OMS from BOPIS App.                              |
-| 8  | View BOPIS App               | BOPIS_APP_VIEW          | Allows user to view all overall BOPIS App.                                 |
-| 9  | Manage BOPIS Operations      | STOREFULFILLMENT_ADMIN  | Allows to manage all overall BOPIS operations in store.                    |
+| 7  | Go to OMS                    | COMMERCEUSER_VIEW       | Allows users to access the HotWax OMS from the BOPIS App.                   |
+| 8  | View BOPIS App               | BOPIS_APP_VIEW          | Allows users to view the entire BOPIS App.                                 |
+| 9  | Manage BOPIS Operations      | STOREFULFILLMENT_ADMIN  | Allows users to manage all BOPIS operations in the store.                   |
 
 <figure><img src="../../.gitbook/assets/settings (1).png" alt=""><figcaption></figcaption></figure>
 
