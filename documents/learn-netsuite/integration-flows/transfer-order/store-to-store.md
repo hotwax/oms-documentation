@@ -4,11 +4,11 @@ description: Learn how store to store transfer orders are processed in HotWax Co
 
 # Store to Store
 
-Stores looking to transfer surplus inventory to another store in need of it work alongside the warehouse manager to create a store-to-store transfer order in NetSuite. This facilitates the transfer of inventory from one store location to another.
+Stores looking to transfer surplus inventory to another store in need of it work alongside the inventory planning team to create a store-to-store transfer order in NetSuite. This facilitates the transfer of inventory from one store location to another.
 
 Now, let’s look at how store to store transfer orders are processed:
 
-Warehouse managers create transfer orders in NetSuite, specifying the source location as the designated store and the destination location as also a store. These transfer orders are automatically assigned a `Pending Fulfillment` status.
+Inventory planners create transfer orders in NetSuite, specifying the source location as the designated store and the destination location as also a store. These transfer orders are automatically assigned a `Pending Fulfillment` status.
 
 These transfer orders are synchronized to HotWax Commerce so that they can be fulfilled from stores. Once transfer order items are shipped from stores, their status is updated from `Approved` to `Completed` and subsequently inventory count for the shipped items is reduced in HotWax Commerce.
 
@@ -28,7 +28,7 @@ Upon successful receipt of inventory, HotWax Commerce synchronizes item receipts
 
 1.  **Export Created Transfer Orders from NetSuite:**
 
-    Warehouse managers create transfer orders in NetSuite, specifying the source location as the designated store and the destination location as also a store. These transfer orders are automatically assigned a `Pending Fulfillment` status.
+    Inventory planners create transfer orders in NetSuite, specifying the source location as the designated store and the destination location as also a store. These transfer orders are automatically assigned a `Pending Fulfillment` status.
 
     At regular intervals, a Map Reduce script runs a specific Saved Search in NetSuite and identifies transfer orders with a `Pending Fulfillment` status that have a source location set as the `Store`. This script compiles the relevant data into a CSV file, which is then securely placed at an SFTP location.
 
@@ -46,7 +46,7 @@ HC_MR_ExportedStoreTransferOrderCSV.js
 /home/{sftp-username}/netsuite/transferorder/csv
 ```
 
-2.  **Import Transfer Orders into HotWax Commerce:**
+1.  **Import Transfer Orders into HotWax Commerce:**
 
     Once the store to store transfer orders are created and exported from NetSuite, they are imported into HotWax Commerce.
 

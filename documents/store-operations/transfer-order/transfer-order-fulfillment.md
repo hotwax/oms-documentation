@@ -8,7 +8,7 @@ When transferring inventory from a store to a warehouse or between stores, the H
 
 ## Transfer Order Fulfillment
 
-Warehouse managers create transfer orders in NetSuite, specifying the source location as the designated store and the destination location as the warehouse. These transfer orders are automatically assigned a Pending Fulfillment status
+When inventiry planners plan transfer orders in NetSuite, they specify the source location as the designated store and the destination location as the warehouse. These transfer orders are automatically assigned a Pending Fulfillment status
 
 A scheduled job Import Transfer Order in HotWax Commerce OMS reads the transfer orders CSV file from the SFTP location and downloads transfer orders in HotWax Commerce with a default Created status.
 
