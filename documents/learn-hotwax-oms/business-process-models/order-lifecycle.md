@@ -166,11 +166,11 @@ A dedicated job `Canceled Items` in HotWax Commerce downloads order cancellation
 
 **For orders in the "Created" status:**
 
-These are orders for which fulfillment has not yet commenced in HotWax Commerce. Once all canceled orders are downloaded from eCommerce, HotWax Commerce processes the file to verify the order IDs of the canceled orders and updates their status from <mark style="color:orange;">**"Created" to "Canceled".**</mark>
+These are orders for which fulfillment has not yet commenced in HotWax Commerce. Once all canceled orders are downloaded from eCommerce, HotWax Commerce processes the file to verify the order IDs of the canceled orders and updates their status from <mark style="color:orange;">**"Created" to "Canceled".**</mark>These orders are then moved to the `General Ops Parking` queue.
 
 **For orders in the "Approved" status:**
 
-These are orders for which fulfillment has commenced in HotWax Commerce but they are not yet shipped. Once all canceled orders are downloaded, HotWax Commerce processes the file to verify the order IDs of the canceled orders and updates their status from <mark style="color:orange;">**“Approved” to “Canceled”.**</mark>
+These are orders for which fulfillment has commenced in HotWax Commerce but they are not yet shipped. Once all canceled orders are downloaded, HotWax Commerce processes the file to verify the order IDs of the canceled orders and updates their status from <mark style="color:orange;">**“Approved” to “Canceled”.**</mark>These orders are then moved to the `Reject order parking` queue.
 
 If an approved order has been allocated to the store, HotWax Commerce also automatically rejects it in the Store Fulfillment App.
 
