@@ -8,18 +8,18 @@ When transferring inventory from a store to a warehouse or between stores, the H
 
 ## Transfer Order Fulfillment
 
-When inventiry planners plan transfer orders in NetSuite, they specify the source location as the designated store and the destination location as the warehouse. These transfer orders are automatically assigned a Pending Fulfillment status
+When inventory planners create transfer orders in NetSuite, they specify the source store and the destination warehouse. These transfer orders are automatically assigned a Pending Fulfillment status.
 
-A scheduled job Import Transfer Order in HotWax Commerce OMS reads the transfer orders CSV file from the SFTP location and downloads transfer orders in HotWax Commerce with a default Created status.
+A scheduled job `Import Transfer Order` in HotWax Commerce OMS reads the transfer orders CSV file from the SFTP location and downloads transfer orders in HotWax Commerce with a default Created status.
 
-A scheduled job Approves transfer orders in HotWax Commerce OMS identifies all transfer orders in the Created status and automatically marks them as Approved.
+A scheduled job approves transfer orders in HotWax Commerce OMS identifies all transfer orders in the Created status and automatically marks them as Approved.
 
-Once approved, transfer orders are automatically reflected at the source location in the Store Fulfillment App so that store associates can create shipments and ship transfer order items. Here’s how store associates can fulfill transfer orders from the Fulfillment App:
+Once approved, transfer orders are automatically reflected at the source location in the Fulfillment App so that store associates can create shipments and ship transfer order items. Here’s how store associates can fulfill transfer orders from the Fulfillment App:
 
-1. Navigate to the `Transfer order page` in the `Fulfillment app`.
+1. Navigate to the `Transfer Order` page in the `Fulfillment App`
 2. Use the search bar in the transfer order section to find the transfer order you want to create a shipment for.
-3. Once you've located the desired transfer order, click on it to access its details page.
-4. On the transfer order details page, you'll typically find two tabs: `Open` and `Completed`.
+3. Once you've located the transfer order, click on it to access its details page.
+4. On the Transfer Order Details page, you'll find two tabs: `Open` and `Completed`.
    * The `Open` tab displays items that have not yet been shipped.
    * The `Completed` tab displays items that have been shipped.
 
