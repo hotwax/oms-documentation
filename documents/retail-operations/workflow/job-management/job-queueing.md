@@ -37,7 +37,7 @@ Comprehensive historical job data is readily accessible for analysis and trouble
 
 ### Segmentation
 
-The Job Manager App shows all jobs (scheduled, running, or completed)on the Pipeline page, organized into three tabs: Pending, Running, and History.
+The Job Manager App shows all jobs (scheduled, running, or completed) on the Pipeline page, organized into three tabs: Pending, Running, and History.
 
 #### Actions retailers can perform on a job card:
 
