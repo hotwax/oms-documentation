@@ -9,7 +9,7 @@ Transfer orders originate in NetSuite, but there is a distinction in how they ar
 
 Now, let’s look at how warehouse to store transfer orders are processed:
 
-Warehouse managers create transfer orders in NetSuite. On fulfilling transfer order items in NetSuite, corresponding item fulfillment records are generated and transfer orders are automatically assigned a `Pending Receipt` status in NetSuite.
+Inventory planners create transfer orders in NetSuite. On fulfilling transfer order items in NetSuite, corresponding item fulfillment records are generated and transfer orders are automatically assigned a `Pending Receipt` status in NetSuite.
 
 Each transfer order can result in either a single item fulfillment record or multiple records, depending on the scenario:
 
@@ -112,7 +112,7 @@ Once all the transfer order item fulfillment records have been successfully rece
 
 Consider a scenario where a retailer operates a store named Brooklyn, alongside a central warehouse. The Brooklyn store is experiencing low stock levels for a particular product, so the store manager requests a transfer of 100 quantities from the central warehouse. In this event, a warehouse-to-store transfer order is created for 100 quantities in NetSuite.
 
-It's possible that the warehouse manager ships these quantities in multiple shipments. For example, 60 quantities might be picked, packed, and shipped initially, with the remaining 40 scheduled for shipment at a later time. In this setup, a transfer order for 100 quantities will have two item fulfillment records created in NetSuite. The first record reflects the fulfillment of 60 quantities, marked with a `Shipped` status, indicating their dispatch from the warehouse. The second record represents the remaining 40 quantities.
+It's possible that the warehouse team ships these quantities in multiple shipments. For example, 60 quantities might be picked, packed, and shipped initially, with the remaining 40 scheduled for shipment at a later time. In this setup, a transfer order for 100 quantities will have two item fulfillment records created in NetSuite. The first record reflects the fulfillment of 60 quantities, marked with a `Shipped` status, indicating their dispatch from the warehouse. The second record represents the remaining 40 quantities.
 
 Following this, a Map Reduce script generates a CSV file containing details of the item fulfillment record for the initial 60 quantities and places it at an SFTP location.
 

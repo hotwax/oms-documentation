@@ -24,7 +24,7 @@ Both transfer orders and purchase orders are created in ERP systems, like NetSui
 
 ### Receiving Transfer Orders in Stores
 
-When there is a need to replenish inventory at retail stores, merchandising teams request transfers and warehouse managers create a warehouse-to-store transfer order in their ERP system. As items in the transfer orders are fulfilled from the warehouse, HotWax Commerce imports them and automatically creates inbound shipments for the corresponding items.
+When there is a need to replenish inventory at retail stores, inventory planners create a warehouse-to-store transfer order in their ERP system. As items in the transfer orders are fulfilled from the warehouse, HotWax Commerce imports them and automatically creates inbound shipments for the corresponding items.
 
 When the store associates verify the inbound shipments and receive them, inventory counts for the corresponding items are automatically increased in HotWax Commerce.
 
