@@ -8,10 +8,10 @@ description: Discover how Inventory job works in HotWax Commerce.
 
 ### Hard Sync
 
-Job Name: `Upload Inventory`  
-Job Enum ID: `JOB_UL_INV`  
-Service Name: `bulkResetShopifyInventoryLevel`  
-Flow: Inventory Sync from HotWax to Shopify.  
+Job Name: `Upload Inventory`\
+Job Enum ID: `JOB_UL_INV`\
+Service Name: `bulkResetShopifyInventoryLevel`\
+Flow: Inventory Sync from HotWax to Shopify.
 
 **The `Hard Sync` job is used to synchronize the inventory of all the products from HotWax to Shopify once a day.** This job fetches the inventory counts of all products in Shopify and compares them with the inventory counts of all products  in HotWax Commerce. Then it prepares the delta file in GraphQL format for all the products where there is a difference in inventory counts in HotWax compared to Shopify. This delta file is then sent to Shopify, and Shopify updates the inventory counts by recording deltas.
 
@@ -186,9 +186,9 @@ The HotWax Commerce Import App simplifies this process by allowing retailers to 
 
 ### Sync Invnetory from Shopify
 
-Job Name: `Sync Inventory from Shopify`
-Job Enum Id : `JOB_SYNC_INV_FRM_SHPY`
-Service Name: `bulkInventorySyncFromShopify`
+Job Name: `Sync Inventory from Shopify`\
+Job Enum Id : `JOB_SYNC_INV_FRM_SHPY`\
+Service Name: `bulkInventorySyncFromShopify`\
 Flow: Inventory Synchronization from Shopify
 
 In cases where HotWax is not used as the source of truth for inventory availability—meaning retailers do not use HotWax for fulfillment and do not have an ERP system for inventory management—HotWax relies on Shopify for inventory updates. To ensure accurate inventory data, this job runs once a day to reset inventory updates for all products.
