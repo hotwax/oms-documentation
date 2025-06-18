@@ -139,7 +139,6 @@ Clicking `View Details` redirects retailers to a detailed logs page where they c
 - Download the original file or the error log for troubleshooting.
 - View file execution mode such as `Async` or `Queued` 
 
-With these details, retailers can quickly identify and resolve data import issues.
 
 ### Pin job
 
