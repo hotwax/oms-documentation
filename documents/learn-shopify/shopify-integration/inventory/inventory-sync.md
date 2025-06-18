@@ -43,6 +43,8 @@ To prevent this issue, merchants can use `Hard Sync` job once a day to synchroni
 
 With the `shopifyFacilityGroupId` parameter of this job, merchants can configure for which stores they want to push inventory to Shopify. To use this, add the relevant facilities to a facility group in HotWax Commerce and provide that group’s ID in the job configuration.
 
+**For example**: 
+A retailer with 100 stores wants to sync inventory to Shopify from just 10 of them. They can create a facility group in HotWax Commerce with those 10 stores and provide its group ID in the `shopifyFacilityGroupIdparameter` of the job. This makes sure inventory is pushed to Shopify only from the selected stores.
 
 <figure><img src="../../.gitbook/assets/11.png" alt=""><figcaption><p><em>Fig. 2: Hard Sync inventory to remove any discrepancy</em></p></figcaption></figure>
 
