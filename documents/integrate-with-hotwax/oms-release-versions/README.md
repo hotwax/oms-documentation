@@ -23,7 +23,7 @@ description: Discover  the versions of HotWax Commerce OMS releases.
 | Changelog       | [Link to changelog](https://git.hotwax.co/commerce/oms/-/blob/v6.6.7/CHANGELOG.md?ref_type=tags)                    |
 
 
-## Release - v6.6.5 (17th June 2025)
+## Release - v6.6.6 (17th June 2025)
 
 | Information     | Value                                                                                                               |
 | --------------- | ------------------------------------------------------------------------------------------------------------------  |
