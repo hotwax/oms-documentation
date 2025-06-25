@@ -11,6 +11,33 @@ description: Discover  the versions of HotWax Commerce OMS releases.
 2. To find details about SOLR versions, refer to the [SOLR version document](https://docs.google.com/spreadsheets/d/1H-iEVG-hS9FTsYOf5YiUH-5KOJUcu0\_TiPG8aVYjaHU/edit?gid=0#gid=0)
 {% endhint %}
 
+{% hint style="warning" %} Before pushing the OMS v6.7.0 release to production, we need to make sure the maarg is deployed on v4.0.0 {% endhint %}
+
+## Release - v6.7.0 (24th June 2025)
+
+| Information     | Value                                                                                                               |
+| --------------- | ------------------------------------------------------------------------------------------------------------------  |
+| Release Version | v6.7.0                                                                                                              |
+| Release Type    | minor                                                                                                               |
+| Image Tag       | v6.7.0                                                                                                              |
+| Image URL       | `289432782788.dkr.ecr.us-east-1.amazonaws.com/omscoreimage:omscoreimage-latest-v6.7.0`                              |
+| Diff            | [Link to diff](https://git.hotwax.co/commerce/oms/-/compare/v6.6.0...v6.7.0?from_project_id=161&straight=false)     |
+| Changelog       | [Link to changelog](https://git.hotwax.co/commerce/oms/-/blob/v6.7.0/CHANGELOG.md?ref_type=tags)                    |
+
+{% tabs %}
+{% tab title="Upgrade Data" %}
+[Link to Upgrade Data](https://git.hotwax.co/commerce/oms/-/blob/develop/upgrade/v6.7.0/UpgradeData.xml?ref_type=heads)
+{% endtab %}
+
+{% tab title="Upgrade SQL" %}
+[Link to Upgrade SQL](https://git.hotwax.co/commerce/oms/-/blob/develop/upgrade/v6.7.0/UpgradeSQL.sql?ref_type=he)
+{% endtab %}
+
+{% tab title="Upgrade Steps" %}
+[Link to Upgrade Steps](https://git.hotwax.co/commerce/oms/-/blob/develop/upgrade/v6.7.0/UpgradeSteps.md?ref_type=heads)
+{% endtab %}
+{% endtabs %}
+
 ## Release - v6.6.8 (19th June 2025)
 
 | Information     | Value                                                                                                               |
@@ -98,6 +125,8 @@ description: Discover  the versions of HotWax Commerce OMS releases.
 | Diff            | [Link to diff](https://git.hotwax.co/commerce/oms/-/compare/v6.6.0...v6.6.2?from_project_id=161&straight=false)     |
 | Changelog       | [Link to changelog](https://git.hotwax.co/commerce/oms/-/blob/v6.6.2/CHANGELOG.md?ref_type=tags)                    |
 
+{% hint style="warning" %} Before pushing the OMS v6.6.0 release to production, we need to make sure the maarg is deployed on v3.8.12 {% endhint %}
+
 ## Release - v6.6.0 (29th May 2025)
 
 | Information     | Value                                                                                                               |
@@ -166,6 +195,8 @@ description: Discover  the versions of HotWax Commerce OMS releases.
 | Image URL       | `289432782788.dkr.ecr.us-east-1.amazonaws.com/omscoreimage:omscoreimage-latest-v6.5.1`                              |
 | Diff            | [Link to diff](https://git.hotwax.co/commerce/oms/-/compare/v6.5.0...v6.5.1?from_project_id=161&straight=false)     |
 | Changelog       | [Link to changelog](https://git.hotwax.co/commerce/oms/-/blob/v6.5.1/CHANGELOG.md?ref_type=tags)                    |
+
+{% hint style="warning" %} Before pushing the OMS v6.5.0 release to production, we need to make sure the maarg is deployed on v3.7.9 {% endhint %}
 
 ## Release - v6.5.0 (5th May 2025)
 
@@ -257,6 +288,8 @@ description: Discover  the versions of HotWax Commerce OMS releases.
 | Image URL       | `289432782788.dkr.ecr.us-east-1.amazonaws.com/omscoreimage:omscoreimage-latest-v6.4.1`                              |
 | Diff            | [Link to diff](https://git.hotwax.co/commerce/oms/-/compare/v6.4.0...v6.4.1?from_project_id=161&straight=false)     |
 | Changelog       | [Link to changelog](https://git.hotwax.co/commerce/oms/-/blob/v6.4.1/CHANGELOG.md?ref_type=tags)                    |
+
+{% hint style="warning" %} Before pushing the OMS v6.4.0 release to production, we need to make sure the maarg is deployed on v3.7.7 {% endhint %}
 
 ## Release - v6.4.0 (21st April 2025)
 
@@ -396,7 +429,7 @@ description: Discover  the versions of HotWax Commerce OMS releases.
 | Diff            | [Link to diff](https://git.hotwax.co/commerce/oms/-/compare/v6.3.0...v6.3.1?from_project_id=161&straight=false)     |
 | Changelog       | [Link to changelog](https://git.hotwax.co/commerce/oms/-/blob/v6.3.1/CHANGELOG.md?ref_type=tags)                    |
 
-{% hint style="warning" %} Before pushing oms v6.3.0 release to production, need to make sure maarg deployed on v3.6.1 {% endhint %}
+{% hint style="warning" %} Before pushing the OMS v6.3.0 release to production, we need to make sure maarg is deployed on v3.6.1 {% endhint %}
 
 ## Release - v6.3.0 (25th March 2025)
 
@@ -594,6 +627,8 @@ description: Discover  the versions of HotWax Commerce OMS releases.
 [Link to Upgrade SQL](https://git.hotwax.co/commerce/oms/-/blob/v6.2.2/upgrade/v6.2.2/UpgradeSQL.sql?ref_type=tags)
 {% endtab %}
 
+{% hint style="warning" %} Before pushing the OMS v6.2.0 release to production, we need to make sure the maarg is deployed on v3.7.7 {% endhint %}
+
 ## Release - v6.2.1 (20th February 2025)
 
 | Information     | Value                                                                                                               |
@@ -756,6 +791,8 @@ description: Discover  the versions of HotWax Commerce OMS releases.
 | Image URL       | `289432782788.dkr.ecr.us-east-1.amazonaws.com/omscoreimage:omscoreimage-latest-v6.0.1`                              |
 | Diff            | [Link to diff](https://git.hotwax.co/commerce/oms/-/compare/v6.0.0...v6.0.1?from_project_id=161&straight=false)     |
 | Changelog       | [Link to changelog](https://git.hotwax.co/commerce/oms/-/blob/v6.0.1/CHANGELOG.md?ref_type=tags)                    |
+
+{% hint style="success" %} Add your content here {% endhint %}
 
 ## Release - v6.0.0 (2nd January 2025)
 
