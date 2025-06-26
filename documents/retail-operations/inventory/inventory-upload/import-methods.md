@@ -4,13 +4,13 @@ The Import App Inventory page provides a simple interface to manually upload inv
 
 ## **Steps to Upload a CSV File:**
 
-1. Navigate to the *Import App Inventory* page and choose the desired import method.  
-2. Click the **info** icon in the top-right corner to download the sample CSV template.  
+1. Go to the *Import App Inventory* page and select your import method.  
+2. Click the **info** icon in the top-right to download the sample CSV template.  
 3. Fill in the required data in the downloaded CSV file.  
-4. Use the **Upload** button to select and upload your completed CSV file.  
-5. Map all necessary columns from the uploaded file to their corresponding fields.  
-6. Once mapping is complete, click **Review** and map and save if there is any missing record.
-7. Finally Import file through import button in bottom right corner.
+4. Click the **Upload** button to select and upload your CSV file.  
+5. Map all necessary columns to their matching fields.  
+6. After mapping, click **Review**. If any records are missing, map and save them.  
+7. Click the **Import** button in the bottom-right corner to finish.
 
 ## **Inventory Import Methods**
 
