@@ -2,7 +2,7 @@
 
 The `Find Product` page within HotWax Commerce serves as a centralized hub for managing products. This page offers a consolidated view of all the products with individual variant information, displaying product category, product name, product ID, and product features viz, size, colors, etc. It enables users to have a quick view of all existing products and carry out product management efficiently.
 
-HotWax Commerce `Find Product` page also empowers users to use multiple filter options to refine their product search. The prominent Pre-orders and Backorders filters help users to search out specific products, under these categories, enabling retailers to view the products currently on pre-order and backorder.
+HotWax Commerce's `Find Product` page also empowers users to use multiple filter options to refine their product search. The prominent Pre-orders and Backorders filters help users to search out specific products, under these categories, enabling retailers to view the products currently on pre-order and backorder.
 
 **Step-by-Step Usage Instructions:**
 
@@ -57,9 +57,9 @@ Enables users to search and create CSV of all displayed products. A threshold wi
 
 ### View Product Details
 
-The comprehensive `Product View` page within HotWax Commerce enhances user efficiency and facilitates streamlined product management. This page consolidates all essential information related to a specific product, providing users with a holistic view that encompasses key details of product identifications and product information such as `product specifications` and `associated sales channels`. To access the `Product View` Page, search for the required product on the `Find Product` Page and simply click on the Product ID to view extensive details about the product.
+The `Product View` page in HotWax Commerce helps users manage products more efficiently by showing all key details in one place, including product specifications and sales channels. To open it, search for the product on the Find Product page and click the Product ID.
 
-HotWax Commerce offers the following features on the Product View Page:
+Here is the list of details displayed on the Product View page:
 
 **Overview Section**
 
@@ -81,13 +81,19 @@ This information provides a comprehensive overview facilitating effective manage
 
 <figure><img src="../.gitbook/assets/product details.png" alt=""><figcaption></figcaption></figure>
 
-### Sync Products to Multiple Shopify Shop
+### Sync Products to Multiple Shopify Shops
 
-Retailers who operate in multiple countries use Shopify shops in Hotwax commerce to manage the same product catalogs in different countries. A master catalog holds all products, while associations are formed to sync these products across different country-specific catalogs. These associations are automated through a job in HotWax Commerce that creates associations between products in the master catalog and the product catalog of other countries by matching the SKU codes. Retailers can view the product association with the different shops in the Shopify Shop section and Add new product associations with Shopify Shop by following these steps:
+Retailers who operate in multiple countries use Shopify shops in Hotwax commerce to manage the same product catalogs in different countries. A master catalog holds all products, while associations are formed to sync these products across different country-specific catalogs. These associations are automated through a job in HotWax Commerce that creates associations between products in the master catalog and the product catalog of other countries by matching the SKU codes. Retailers can view the product association with the different shops in the Shopify Shop section, and add new product associations with Shopify Shop by following these steps:
 
-1. Click on the `Add` button in the `Shopify Shop` section, this will open a new module
-2. Select the `Shop` from the dropdown menu, for which you want to create the association.
+1. Click on the `Add` button in the `Shopify Shop` section, which will open a new module
+2. Select the `Shop` from the dropdown menu for which you want to create the association.
 3. Add `Shopify Product ID` and `Shopify Inventory ID`
 4. Click on the `Add` button to save the product association
 
 <figure><img src="https://www.hotwax.co/hubfs/Product%20Updates%20and%20Release%20Notes/2023/Nov-Dec%202023%20PU/Manage%20Shopify%20Shop%20Product%20Associations.png" alt=""><figcaption></figcaption></figure>
+
+### Troubleshooting 
+#### Reindex Product Button
+The `Reindex` button on the `View Product` page in OMS is used to refresh product data in the `Find Product` page. If you click on a parent product, it reindexes the parent along with all its variants. When used on a variant product, only that specific variant is reindexed. This is particularly useful when product information is missing or outdated (like product name or SKU updates) on the `Find Product` page.
+
+<figure><img src="../.gitbook/assets/product-reindex.png" alt=""><figcaption></figcaption></figure>

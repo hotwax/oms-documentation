@@ -9,7 +9,7 @@ Store managers can return excess or unsold inventory from stores to the warehous
 
 Now, let’s look at how store to warehouse transfer orders are processed:
 
-Warehouse managers create transfer orders in NetSuite, specifying the source location as the designated store and the destination location as the warehouse. These transfer orders are automatically assigned a `Pending Fulfillment` status.
+Inventory planners create transfer orders in NetSuite, specifying the source location as the designated store and the destination location as the warehouse. These transfer orders are automatically assigned a `Pending Fulfillment` status.
 
 These transfer orders are synchronized to HotWax Commerce in the default `Created` status. HotWax Commerce provides a dedicated Store Fulfillment App for store associates to fulfill transfer order items from stores. Once transfer order items are shipped from stores, their status is updated from `Approved` to `Completed` and subsequently inventory count for the shipped items is reduced in HotWax Commerce.
 
@@ -25,7 +25,7 @@ Inventory count for transfer order items received in the warehouse is increased 
 
 ### Create Transfer Orders in NetSuite
 
-1.  **Export Created Transfer Orders from NetSuite:** Warehouse managers create transfer orders in NetSuite, specifying the source location as the designated store and the destination location as the warehouse. These transfer orders are automatically assigned a `Pending Fulfillment` status.
+1.  **Export Created Transfer Orders from NetSuite:** Inventory planners create transfer orders in NetSuite, specifying the source location as the designated store and the destination location as the warehouse. These transfer orders are automatically assigned a `Pending Fulfillment` status.
 
     At regular intervals, a Map Reduce script runs a specific Saved Search in NetSuite and identifies transfer orders with a `Pending Fulfillment` status that have a source location set as the `Store`. This script compiles the relevant data into a CSV file, which is then securely placed at an SFTP location.
 
@@ -110,7 +110,7 @@ Import Fuflilled Transfer Order Items from SFTP
 HC_SC_ImportTOItemFulfillment.js
 ```
 
-6. **Receive Transfer Orders in NetSuite:** Warehouse managers manually initiate the receiving process in NetSuite for the store transferred inventory upon its arrival at the warehouse.
+1. **Receive Transfer Orders in NetSuite:** Inventory planners manually initiate the receiving process in NetSuite for the store transferred inventory upon its arrival at the warehouse.
 
 ### Automated Transfer Order Status Update
 
