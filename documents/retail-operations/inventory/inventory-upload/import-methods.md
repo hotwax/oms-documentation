@@ -14,8 +14,6 @@ The Import App Inventory page provides a simple interface to manually upload inv
 
 ## **Inventory Import Methods**
 
-By using these methods, retailers can import inventory files as needed and maintain inventory accuracy.
-
 ### **Exact ATP**
 
 **Purpose**: Used when the sellable inventory in OMS must exactly match the available inventory (ATP) from an external system like NetSuite. In cases When NetSuite (or any third-party system) is used as a Warehouse Management System (WMS), it reserves inventory for orders that need to be fulfilled.  
