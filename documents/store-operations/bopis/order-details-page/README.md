@@ -19,7 +19,7 @@ The buttons shown on an order depend on its status. When the order is in Open st
 
 Selecting Cancel Item opens a pop-up displaying a list of cancellation reasons. When an item is cancelled, an email is sent to the customer.
 
-Below this section, the cancellation sync job status is shown. The behavior of cancellation and refund depends on the following settings:
+Below this section, the [cancellation sync job](documents/retail-operations/workflow/job-workflows/orders.md) status is shown. The behavior of cancellation and refund depends on the following settings:
 
 - If both the cancellation sync job and the Shopify setting to process refunds are enabled, the cancellation and refund will be sent to Shopify.
 - If the cancellation sync job is enabled but the Shopify refund setting is disabled, only the cancellation will be sent to Shopify.
