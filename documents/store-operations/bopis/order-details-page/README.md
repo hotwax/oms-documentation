@@ -57,5 +57,3 @@ This section helps store staff understand the full progress of the order and mak
 ### Assign Picker
 
 During the process of fulfilling a BOPIS order, store associates can assign and track pickers to ensure the pickers' commission eligibility. For open orders, users can assign pickers from a pop-up that will open on clicking the `Ready for Pickup` button on the order details page. In case they want to edit the picker for an order, they can do that using the `Edit` button on the order details page of a packed order.
-
-<figure><img src="../../.gitbook/assets/Screenshot 2024-01-01 at 11.50.51 PM (1).png" alt=""><figcaption><p>Image: Order Details Page</p></figcaption></figure>
