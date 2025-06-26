@@ -1,7 +1,5 @@
 # Inventory Page
 
-The Import App Inventory page provides a simple interface to manually upload inventory files into the OMS using different import methods. 
-
 ## **Steps to Upload a CSV File:**
 
 1. Go to the *Import App Inventory* page and select your import method.  
