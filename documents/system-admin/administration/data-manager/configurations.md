@@ -1,6 +1,6 @@
 # Configurations
 
-### Add or edit a configuration
+## Add or edit a configuration
 
 If you're creating a new Import configuration to import data from an SFTP location
 1. Click the `Add` button
@@ -25,10 +25,15 @@ The Config ID cannot be modified. To use a different ID, create a new configurat
 | **Export Path**       | SFTP Destination folder for exported files.             |
 | **File Name Pattern** | Identify and match only relevant files during processing using REGEX expressions |
 | **Multi-threading**   | Y/N flag to enable multi-threading on all files imported in this config (default N)|
+| **Execution Mode**    | Select from Sync, Async or Queued to set how the OMS prioritizes the processing of this configuration. (default Queued) |
 | **Notify on Failure** | Y/N flag to disable notifications on file import error (default Y)|
 
 {% hint style="danger" %}
-Multi-threading should be disabled on all configs unless explicitly instructed by HotWax Support. Incorrect use of multi-threading can cause to system overload and downtime.
+Execution mode should always be set to Queued
+{% endhint %}
+
+{% hint style="danger" %}
+Multi-threading should be disabled on all configs unless explicitly instructed by HotWax Support. Incorrect use of multi-threading can cause to system overload and downtime. If you've decided multi-threading is your poison, make sure that the configuration is set to execute in queued mode or else your almost certain to cause a system overload.
 {% endhint %}
 
 {% hint style="info"%} 

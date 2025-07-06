@@ -1,25 +1,9 @@
----
-description: >-
-  Learn about the data import/export feature in HotWax Commerce's Master Data
-  Manager. Efficiently manage bulk data updates and streamline data handling in
-  OMS.
----
-
 # Data Import and Export
 
 HotWax Commerce OMS provides two methods for adding or updating data in bulk:
 
-1. **Direct Manual Uploads**: Users can leverage the import/export capabilities to manually upload data.
-2. **Automated Jobs**: The system can process data shared by third-party systems through automated jobs, which then import the data into HotWax Commerce.
-
-## Steps to Manually Import or Export Data in HotWax Commerce OMS
-
-1. Login into OMS and navigate to the hamburger menu.
-2. In the hamburger menu, click on the **MDM** section, then on **EXIM**.
-3. On the **EXIM** page, retailers can click the link they want.
-4. Inside the **MDM**, on the top-left corner, retailers can upload a CSV file and download a sample CSV file.
-
-## Import/Export Used in Initial Setup
+1. Manual import
+2. Scheduled jobs
 
 ## Import/Export Facilities
 

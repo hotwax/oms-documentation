@@ -47,6 +47,7 @@
 * [Data Manager](administration/data-manager/README.md)
   * [Configurations](administration/data-manager/configurations.md)
   * [Data Import and Export](administration/data-manager/import-and-export.md)
+  * [Import Data](administration/data-manager/imports.md)
   * [Troubleshooting](administration/data-manager/troubleshooting/README.md)
     * [Data Not Imported](administration/data-manager/troubleshooting/data-not-imported.md)
     * [SFTP Errors](administration/data-manager/troubleshooting/data-import-errors.md)
