@@ -1,6 +1,6 @@
 # Data manager
 
-The Data Manager offering users the ability to audit data ingress and egress from the OMS while also being able to manually import and export data.
+The Data Manager lets users audit data ingress and egress from the OMS while also being able to manually import and export data.
 
 Getting to the Data Manager Configurations page:
 1. Go to the Hamburger Menu
