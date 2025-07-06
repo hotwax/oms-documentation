@@ -1,10 +1,5 @@
 # Data Import and Export
 
-HotWax Commerce OMS provides two methods for adding or updating data in bulk:
-
-1. Manual import
-2. Scheduled jobs
-
 ## Import/Export Facilities
 
 Instead of creating facilities individually through the Facilities App, retailers can upload a CSV file for all facilities.
@@ -13,7 +8,22 @@ To import a Facilities CSV, go to the **EXIM** page under the **Imports** tab in
 
 When importing facilities, some fields need to be filled mandatorily, while others can be filled for further reference. Here is the list of mandatory fields:
 
-<table><thead><tr><th width="82">S.No.</th><th width="139">Field Name</th><th>Description</th></tr></thead><tbody><tr><td>1</td><td>facility-id</td><td>Unique identifier for the facility.</td></tr><tr><td>2</td><td>external-id</td><td>External identifier for the facility.</td></tr><tr><td>3</td><td>facility-name</td><td>The name of the facility.</td></tr><tr><td>4</td><td>address-line-1</td><td>Primary address line of the facility.</td></tr><tr><td>5</td><td>address-line-2</td><td>Secondary address line of the facility, if applicable.</td></tr><tr><td>6</td><td>City</td><td>The city where the facility is located.</td></tr><tr><td>7</td><td>zip-code</td><td>Zip or postal code of the facility's location.</td></tr><tr><td>8</td><td>state</td><td>State or province of the facility's location.</td></tr><tr><td>9</td><td>country</td><td>Country where the facility is located.</td></tr><tr><td>10</td><td>latitude</td><td>Latitude coordinate of the facility's location.</td></tr><tr><td>11</td><td>longitude</td><td>Longitude coordinate of the facility's location.</td></tr><tr><td>12</td><td>phone-number</td><td>Phone number for contacting the facility.</td></tr><tr><td>13</td><td>email</td><td>Contact email address for the facility.</td></tr></tbody></table>
+| S.No. | Field Name      | Description                                         |
+|-------|-----------------|-----------------------------------------------------|
+| 1     | facility-id     | Unique identifier for the facility.                 |
+| 2     | external-id     | External identifier for the facility.               |
+| 3     | facility-name   | The name of the facility.                           |
+| 4     | address-line-1  | Primary address line of the facility.               |
+| 5     | address-line-2  | Secondary address line of the facility, if applicable. |
+| 6     | city            | The city where the facility is located.             |
+| 7     | zip-code        | Zip or postal code of the facility's location.      |
+| 8     | state           | State or province of the facility's location.       |
+| 9     | country         | Country where the facility is located.              |
+| 10    | latitude        | Latitude coordinate of the facility's location.     |
+| 11    | longitude       | Longitude coordinate of the facility's location.    |
+| 12    | phone-number    | Phone number for contacting the facility.           |
+| 13    | email           | Contact email address for the facility.             |
+
 
 ***
 
@@ -25,7 +35,20 @@ To import an Employee CSV, go to the **EXIM** page under the **Imports** tab and
 
 When importing Employee data, some fields need to be filled mandatorily, while others can be filled for further reference. Here is the list of mandatory fields:
 
-<table><thead><tr><th width="109">S.No.</th><th width="148">Field Name</th><th>Description</th></tr></thead><tbody><tr><td>1</td><td>party-id</td><td>Unique identifier for the party (individual or organization).</td></tr><tr><td>2</td><td>external-id</td><td>External system reference ID for integration purposes.</td></tr><tr><td>3</td><td>first-name</td><td>First name of the party.</td></tr><tr><td>4</td><td>last-name</td><td>Last name of the party.</td></tr><tr><td>5</td><td>enabled</td><td>Indicates if the account is active (true/false).</td></tr><tr><td>6</td><td>relationship-status</td><td>Current status of the party’s relationship (e.g., active, inactive).</td></tr><tr><td>7</td><td>user-login-id</td><td>Login ID for the user.</td></tr><tr><td>8</td><td>password</td><td>Password for user authentication.</td></tr><tr><td>9</td><td>party-classifications</td><td>Classifications assigned to the party (e.g., customer, supplier).</td></tr><tr><td>10</td><td>party-identifications</td><td>Identifications or IDs associated with the party.</td></tr><tr><td>11</td><td>relationships</td><td>Relationships linked to the party (e.g., parent-child relationships).</td></tr></tbody></table>
+| S.No. | Field Name            | Description                                                        |
+|-------|-----------------------|--------------------------------------------------------------------|
+| 1     | party-id              | Unique identifier for the party (individual or organization).      |
+| 2     | external-id           | External system reference ID for integration purposes.             |
+| 3     | first-name            | First name of the party.                                           |
+| 4     | last-name             | Last name of the party.                                            |
+| 5     | enabled               | Indicates if the account is active (true/false).                   |
+| 6     | relationship-status   | Current status of the party’s relationship (e.g., active, inactive).|
+| 7     | user-login-id         | Login ID for the user.                                             |
+| 8     | password              | Password for user authentication.                                  |
+| 9     | party-classifications | Classifications assigned to the party (e.g., customer, supplier).  |
+| 10    | party-identifications | Identifications or IDs associated with the party.                  |
+| 11    | relationships         | Relationships linked to the party (e.g., parent-child relationships).|
+
 
 ***
 
@@ -35,7 +58,24 @@ HotWax Commerce provides two convenient options for managing the facility calend
 
 To import a Calendar CSV, go to the **EXIM** page under the **Imports** tab in the **MDM** section and click on **Calendar MDM**. When importing a calendar, some fields need to be filled mandatorily. Here is the list:
 
-<table><thead><tr><th width="113">S.No.</th><th width="171">Field Name</th><th>Description</th></tr></thead><tbody><tr><td>1</td><td>calendar-id</td><td>A unique identifier for the calendar used to manage facility schedules.</td></tr><tr><td>2</td><td>description</td><td>A brief description of the calendar or its purpose.</td></tr><tr><td>3</td><td>monday-start</td><td>The start time for operations on Monday.</td></tr><tr><td>4</td><td>monday-capacity</td><td>The maximum capacity or limit for operations on Monday.</td></tr><tr><td>5</td><td>tuesday-start</td><td>The start time for operations on Tuesday.</td></tr><tr><td>6</td><td>tuesday-capacity</td><td>The maximum capacity or limit for operations on Tuesday.</td></tr><tr><td>7</td><td>wednesday-start</td><td>The start time for operations on Wednesday.</td></tr><tr><td>8</td><td>wednesday-capacity</td><td>The maximum capacity or limit for operations on Wednesday.</td></tr><tr><td>9</td><td>thursday-start</td><td>The start time for operations on Thursday.</td></tr><tr><td>10</td><td>thursday-capacity</td><td>The maximum capacity or limit for operations on Thursday.</td></tr><tr><td>11</td><td>friday-start</td><td>The start time for operations on Friday.</td></tr><tr><td>12</td><td>friday-capacity</td><td>The maximum capacity or limit for operations on Friday.</td></tr><tr><td>13</td><td>saturday-start</td><td>The start time for operations on Saturday.</td></tr><tr><td>14</td><td>saturday-capacity</td><td>The maximum capacity or limit for operations on Saturday.</td></tr><tr><td>15</td><td>sunday-start</td><td>The start time for operations on Sunday.</td></tr><tr><td>16</td><td>sunday-capacity</td><td>The maximum capacity or limit for operations on Sunday.</td></tr></tbody></table>
+| S.No. | Field Name          | Description                                                         |
+|-------|---------------------|---------------------------------------------------------------------|
+| 1     | calendar-id         | A unique identifier for the calendar used to manage facility schedules. |
+| 2     | description         | A brief description of the calendar or its purpose.                 |
+| 3     | monday-start        | The start time for operations on Monday.                            |
+| 4     | monday-capacity     | The maximum capacity or limit for operations on Monday.             |
+| 5     | tuesday-start       | The start time for operations on Tuesday.                           |
+| 6     | tuesday-capacity    | The maximum capacity or limit for operations on Tuesday.            |
+| 7     | wednesday-start     | The start time for operations on Wednesday.                         |
+| 8     | wednesday-capacity  | The maximum capacity or limit for operations on Wednesday.          |
+| 9     | thursday-start      | The start time for operations on Thursday.                          |
+| 10    | thursday-capacity   | The maximum capacity or limit for operations on Thursday.           |
+| 11    | friday-start        | The start time for operations on Friday.                            |
+| 12    | friday-capacity     | The maximum capacity or limit for operations on Friday.             |
+| 13    | saturday-start      | The start time for operations on Saturday.                          |
+| 14    | saturday-capacity   | The maximum capacity or limit for operations on Saturday.           |
+| 15    | sunday-start        | The start time for operations on Sunday.                            |
+| 16    | sunday-capacity     | The maximum capacity or limit for operations on Sunday.             |
 
 ***
 
@@ -50,7 +90,12 @@ The **Import Calendar Assoc** is used to set the operating hours of a particular
 
 When importing the CSV, some fields need to be filled mandatorily. Here is the list:
 
-<table><thead><tr><th width="81">S.No.</th><th>Field Name</th><th width="544">Description</th></tr></thead><tbody><tr><td>1</td><td>store-id</td><td>Unique identifier for the store.</td></tr><tr><td>2</td><td>calendar-id</td><td>Unique identifier for the calendar associated with the store.</td></tr><tr><td>3</td><td>from-date</td><td>Start date for the calendar's validity period. Users can use either MM-DD-YYYY or DD-MM-YYYY for the arrival-date based on their region.</td></tr><tr><td>4</td><td>thru-date</td><td>End date for the calendar's validity period. Users can use either MM-DD-YYYY or DD-MM-YYYY for the arrival-date based on their region.</td></tr></tbody></table>
+| S.No. | Field Name   | Description                                                                                                            |
+|-------|--------------|------------------------------------------------------------------------------------------------------------------------|
+| 1     | store-id     | Unique identifier for the store.                                                                                       |
+| 2     | calendar-id  | Unique identifier for the calendar associated with the store.                                                          |
+| 3     | from-date    | Start date for the calendar's validity period. Users can use either MM-DD-YYYY or DD-MM-YYYY for the arrival-date based on their region. |
+| 4     | thru-date    | End date for the calendar's validity period. Users can use either MM-DD-YYYY or DD-MM-YYYY for the arrival-date based on their region.   |
 
 ***
 
@@ -62,7 +107,16 @@ This import records [variances](/documents/integrate-with-hotwax/README.md) base
 
 **Example:** When an Inventory Reset file is provided by an external system (e.g., NetSuite), and Product A's inventory is updated to 5 while HotWax currently shows 10, a variance of (+5) will be logged, increasing the total inventory to 15. Similarly, if the file specifies a variance of -5, the system's inventory will adjust to 5. When importing Inventory Adjustments, some fields need to be filled mandatorily, while others can be filled for further reference. Here is the list of mandatory fields:
 
-<table><thead><tr><th width="93">S.No.</th><th width="167">Field Name</th><th>Description</th></tr></thead><tbody><tr><td>1</td><td>facilityId</td><td>Unique identifier for the facility.</td></tr><tr><td>2</td><td>externalFacilityId</td><td>Identifier used for the facility in external systems.</td></tr><tr><td>3</td><td>idType</td><td>Type of identifier being referenced (e.g., product).</td></tr><tr><td>4</td><td>idValue</td><td>Specific value of the referenced identifier.</td></tr><tr><td>5</td><td>availableDelta</td><td>Change in the available quantity for the facility.</td></tr><tr><td>6</td><td>locationSeqId</td><td>Sequence ID of the location within the facility.</td></tr><tr><td>7</td><td>varianceReasonId</td><td>Identifier for the reason behind a variance in inventory or data.</td></tr><tr><td>8</td><td>comments</td><td>Additional remarks or notes related to the record.</td></tr></tbody></table>
+| S.No. | Field Name           | Description                                                           |
+|-------|----------------------|-----------------------------------------------------------------------|
+| 1     | facilityId           | Unique identifier for the facility.                                   |
+| 2     | externalFacilityId   | Identifier used for the facility in external systems.                 |
+| 3     | idType               | Type of identifier being referenced (e.g., product).                  |
+| 4     | idValue              | Specific value of the referenced identifier.                          |
+| 5     | availableDelta       | Change in the available quantity for the facility.                    |
+| 6     | locationSeqId        | Sequence ID of the location within the facility.                      |
+| 7     | varianceReasonId     | Identifier for the reason behind a variance in inventory or data.     |
+| 8     | comments             | Additional remarks or notes related to the record.                    |
 
 ***
 
@@ -72,7 +126,16 @@ This import is used by retailers to schedule restocking for a product at future 
 
 When scheduling a restock, certain mandatory fields should be filled. These fields are listed below:
 
-<table><thead><tr><th width="89">S.No.</th><th width="187">Field Name</th><th>Description</th></tr></thead><tbody><tr><td>1</td><td>Shopify Product SKU</td><td>Unique ID for a Product in Shopify.</td></tr><tr><td>2</td><td>Restock Quantity</td><td>The quantity of items restocked.</td></tr><tr><td>3</td><td>Schedule</td><td>Allows selecting the time.</td></tr><tr><td>4</td><td>Facility ID</td><td>Unique ID for a facility where restock is scheduled.</td></tr><tr><td>5</td><td>Product Store</td><td>The name of the Product Store.</td></tr><tr><td>6</td><td>Shopify Store</td><td>Name of the Shopify Store on which the inventory will change.</td></tr><tr><td>7</td><td>Restock Name</td><td>Name for the restock.</td></tr></tbody></table>
+| S.No. | Field Name            | Description                                         |
+|-------|-----------------------|-----------------------------------------------------|
+| 1     | Shopify Product SKU   | Unique ID for a Product in Shopify.                 |
+| 2     | Restock Quantity      | The quantity of items restocked.                    |
+| 3     | Schedule              | Allows selecting the time.                          |
+| 4     | Facility ID           | Unique ID for a facility where restock is scheduled.|
+| 5     | Product Store         | The name of the Product Store.                      |
+| 6     | Shopify Store         | Name of the Shopify Store on which the inventory will change. |
+| 7     | Restock Name          | Name for the restock.                               |
+
 
 ***
 
@@ -98,7 +161,16 @@ This method ensures accurate syncing of sellable inventory while accounting for 
 
 The Reset file contains the following fields:
 
-<table><thead><tr><th width="97">S. No.</th><th width="127">Field Name</th><th>Description</th></tr></thead><tbody><tr><td>1</td><td>productId</td><td>Unique identifier for the product.</td></tr><tr><td>2</td><td>idValue</td><td>Value corresponding to the identification type.</td></tr><tr><td>3</td><td>facilityId</td><td>Identifier for the facility location.</td></tr><tr><td>4</td><td>locationSeqId</td><td>Sequence ID for the specific storage location.</td></tr><tr><td>5</td><td>quantity</td><td>Number of items involved in the action.</td></tr><tr><td>6</td><td>reason</td><td>Explanation for the inventory adjustment.</td></tr><tr><td>7</td><td>comments</td><td>Additional notes or remarks.</td></tr></tbody></table>
+| S. No. | Field Name      | Description                                    |
+|--------|-----------------|------------------------------------------------|
+| 1      | productId       | Unique identifier for the product.             |
+| 2      | idValue         | Value corresponding to the identification type.|
+| 3      | facilityId      | Identifier for the facility location.          |
+| 4      | locationSeqId   | Sequence ID for the specific storage location. |
+| 5      | quantity        | Number of items involved in the action.        |
+| 6      | reason          | Explanation for the inventory adjustment.      |
+| 7      | comments        | Additional notes or remarks.                   |
+
 
 ***
 
@@ -124,7 +196,15 @@ This method ensures a direct update of physical inventory levels in HotWax OMS.
 
 When the “RESET INVENTORY BY QOH” file is uploaded it has some fields which are listed below:
 
-<table><thead><tr><th width="114">S. No.</th><th width="137">Field Name</th><th>Description</th></tr></thead><tbody><tr><td>1</td><td>productId</td><td>Unique identifier for the product.</td></tr><tr><td>2</td><td>idValue</td><td>Value corresponding to the identification type.</td></tr><tr><td>3</td><td>facilityId</td><td>Identifier for the facility location.</td></tr><tr><td>4</td><td>locationSeqId</td><td>Sequence ID for the specific storage location.</td></tr><tr><td>5</td><td>quantity</td><td>Number of items involved in the action.</td></tr><tr><td>6</td><td>reason</td><td>Explanation for the inventory adjustment.</td></tr><tr><td>7</td><td>comments</td><td>Additional notes or remarks.</td></tr></tbody></table>
+| S. No. | Field Name     | Description                                    |
+|--------|---------------|------------------------------------------------|
+| 1      | productId      | Unique identifier for the product.             |
+| 2      | idValue        | Value corresponding to the identification type.|
+| 3      | facilityId     | Identifier for the facility location.          |
+| 4      | locationSeqId  | Sequence ID for the specific storage location. |
+| 5      | quantity       | Number of items involved in the action.        |
+| 6      | reason         | Explanation for the inventory adjustment.      |
+| 7      | comments       | Additional notes or remarks.                   |
 
 ***
 
@@ -150,7 +230,16 @@ This approach ensures accurate updates to inventory levels while respecting the 
 
 When the “RESET INVENTORY BY ATP & QOH” file is uploaded it has some fields which are listed below:
 
-<table><thead><tr><th width="85">S. No.</th><th width="145">Field Name</th><th>Description</th></tr></thead><tbody><tr><td>1</td><td>productId</td><td>Unique identifier for the product.</td></tr><tr><td>2</td><td>idValue</td><td>Value corresponding to the identification type.</td></tr><tr><td>3</td><td>facilityId</td><td>Identifier for the facility location.</td></tr><tr><td>4</td><td>locationSeqId</td><td>Sequence ID for the specific storage location.</td></tr><tr><td>5</td><td>quantity</td><td>Number of items involved in the action.</td></tr><tr><td>6</td><td>reason</td><td>Explanation for the inventory adjustment.</td></tr><tr><td>7</td><td>comments</td><td>Additional notes or remarks.</td></tr></tbody></table>
+| S. No. | Field Name     | Description                                    |
+|--------|---------------|------------------------------------------------|
+| 1      | productId      | Unique identifier for the product.             |
+| 2      | idValue        | Value corresponding to the identification type.|
+| 3      | facilityId     | Identifier for the facility location.          |
+| 4      | locationSeqId  | Sequence ID for the specific storage location. |
+| 5      | quantity       | Number of items involved in the action.        |
+| 6      | reason         | Explanation for the inventory adjustment.      |
+| 7      | comments       | Additional notes or remarks.                   |
+
 
 ***
 
@@ -160,7 +249,18 @@ If the admin team wants to export orders based on multiple filters or criteria, 
 
 When exporting the CSV it gives some major fields which are listed here :
 
-<table><thead><tr><th width="87">S. No.</th><th width="193">Field Name</th><th>Description</th></tr></thead><tbody><tr><td>1</td><td>orderId</td><td>Unique identifier for the order.</td></tr><tr><td>2</td><td>orderName</td><td>Name or description of the order.</td></tr><tr><td>3</td><td>orderItemSeqId</td><td>Sequential identifier for the order item.</td></tr><tr><td>4</td><td>productId</td><td>Unique identifier for the product.</td></tr><tr><td>5</td><td>parentProductName</td><td>Name of the parent product associated with the order item.</td></tr><tr><td>6</td><td>productName</td><td>Name of the product in the order.</td></tr><tr><td>7</td><td>internalName</td><td>Internal name of the product within the system.</td></tr><tr><td>8</td><td>quantity</td><td>Quantity of the order item.</td></tr><tr><td>9</td><td>orderItemStatusId</td><td>Status identifier for the order item.</td></tr><tr><td>10</td><td>orderItemStatusDesc</td><td>Description of the order item status.</td></tr></tbody></table>
+| S. No. | Field Name           | Description                                                   |
+|--------|----------------------|---------------------------------------------------------------|
+| 1      | orderId              | Unique identifier for the order.                              |
+| 2      | orderName            | Name or description of the order.                             |
+| 3      | orderItemSeqId       | Sequential identifier for the order item.                     |
+| 4      | productId            | Unique identifier for the product.                            |
+| 5      | parentProductName    | Name of the parent product associated with the order item.    |
+| 6      | productName          | Name of the product in the order.                             |
+| 7      | internalName         | Internal name of the product within the system.               |
+| 8      | quantity             | Quantity of the order item.                                   |
+| 9      | orderItemStatusId    | Status identifier for the order item.                         |
+| 10     | orderItemStatusDesc  | Description of the order item status.                         |
 
 ***
 
@@ -172,7 +272,17 @@ This is used to export inventory details such as Product Id, Facility Id, ATP, M
 
 When exporting CSV fields are in this way:
 
-<table><thead><tr><th width="96">S.No.</th><th width="178">Field</th><th>Description</th></tr></thead><tbody><tr><td>1</td><td>product-id</td><td>Unique identifier for each product.</td></tr><tr><td>2</td><td>internal-name</td><td>Internal reference name for the product.</td></tr><tr><td>3</td><td>product-id-value</td><td>Specific value assigned to the product ID for mapping or identification.</td></tr><tr><td>4</td><td>facility-id</td><td>Unique identifier for the facility (e.g., warehouse or store) where the product is managed.</td></tr><tr><td>5</td><td>external-id</td><td>Identifier for the product used in external systems or integrations.</td></tr><tr><td>6</td><td>ATP</td><td>Available to Promise - quantity of product available to fulfill orders.</td></tr><tr><td>7</td><td>minimum-stock</td><td>The minimum required stock level to prevent stockouts.</td></tr><tr><td>8</td><td>inv-group-member</td><td>Specifies the inventory group or category the product belongs to.</td></tr></tbody></table>
+| S.No. | Field             | Description                                                                          |
+|-------|-------------------|--------------------------------------------------------------------------------------|
+| 1     | product-id        | Unique identifier for each product.                                                  |
+| 2     | internal-name     | Internal reference name for the product.                                             |
+| 3     | product-id-value  | Specific value assigned to the product ID for mapping or identification.             |
+| 4     | facility-id       | Unique identifier for the facility (e.g., warehouse or store) where the product is managed. |
+| 5     | external-id       | Identifier for the product used in external systems or integrations.                 |
+| 6     | ATP               | Available to Promise - quantity of product available to fulfill orders.              |
+| 7     | minimum-stock     | The minimum required stock level to prevent stockouts.                               |
+| 8     | inv-group-member  | Specifies the inventory group or category the product belongs to.                    |
+
 
 ***
 
@@ -182,7 +292,22 @@ Inbound shipments are used to receive inventory at a facility or warehouse. Majo
 
 In situations where retailers want to verify or edit their upcoming shipments, they can do so by exporting the Shipment CSV from the **Warehouse** section under the **Exports** tab. When importing shipment some fields need to be filled mandatorily, while others can be filled for further references. Here is the list of mandatory fields:
 
-<table><thead><tr><th width="94">S.No.</th><th width="208">Field Name</th><th>Description</th></tr></thead><tbody><tr><td>1</td><td>shipment-id</td><td>Unique identifier for the shipment.</td></tr><tr><td>2</td><td>external-shipment-id</td><td>External identifier for the shipment, often used in third-party systems.</td></tr><tr><td>3</td><td>shipment-type</td><td>Type of shipment (e.g., inbound, outbound, transfer).</td></tr><tr><td>4</td><td>shipment-status</td><td>Current status of the shipment (e.g., pending, in-transit, delivered).</td></tr><tr><td>5</td><td>origin-facility-id</td><td>ID of the facility from which the shipment is originating.</td></tr><tr><td>6</td><td>destination-facility-id</td><td>ID of the facility where the shipment is being delivered.</td></tr><tr><td>7</td><td>product-id</td><td>Unique identifier for the product being shipped.</td></tr><tr><td>8</td><td>id-type</td><td>Type of ID used for identifying the product (e.g., SKU, barcode).</td></tr><tr><td>9</td><td>product-sku</td><td>SKU (Stock Keeping Unit) for the product being shipped.</td></tr><tr><td>10</td><td>quantity</td><td>Quantity of the product being shipped.</td></tr><tr><td>11</td><td>serial-number</td><td>Serial number of the product being shipped, if applicable.</td></tr><tr><td>12</td><td>order-id</td><td>Unique identifier for the order related to the shipment.</td></tr><tr><td>13</td><td>tracking-number</td><td>Unique tracking number assigned to the shipment for tracking its status.</td></tr></tbody></table>
+| S.No. | Field Name             | Description                                                                      |
+|-------|------------------------|----------------------------------------------------------------------------------|
+| 1     | shipment-id            | Unique identifier for the shipment.                                               |
+| 2     | external-shipment-id   | External identifier for the shipment, often used in third-party systems.          |
+| 3     | shipment-type          | Type of shipment (e.g., inbound, outbound, transfer).                             |
+| 4     | shipment-status        | Current status of the shipment (e.g., pending, in-transit, delivered).            |
+| 5     | origin-facility-id     | ID of the facility from which the shipment is originating.                        |
+| 6     | destination-facility-id| ID of the facility where the shipment is being delivered.                         |
+| 7     | product-id             | Unique identifier for the product being shipped.                                  |
+| 8     | id-type                | Type of ID used for identifying the product (e.g., SKU, barcode).                 |
+| 9     | product-sku            | SKU (Stock Keeping Unit) for the product being shipped.                           |
+| 10    | quantity               | Quantity of the product being shipped.                                            |
+| 11    | serial-number          | Serial number of the product being shipped, if applicable.                        |
+| 12    | order-id               | Unique identifier for the order related to the shipment.                          |
+| 13    | tracking-number        | Unique tracking number assigned to the shipment for tracking its status.          |
+
 
 ***
 
@@ -192,7 +317,14 @@ Retailers can manually apply safety stock at products per location by importing 
 
 When importing safety stock some fields need to be filled mandatorily, while others can be filled for further references. Here is the list of mandatory fields:
 
-<table><thead><tr><th width="97">S.No.</th><th>Field Name</th><th width="434">Description</th></tr></thead><tbody><tr><td>1</td><td>facility-id</td><td>Unique identifier for the facility within the system.</td></tr><tr><td>2</td><td>facility-external-id</td><td>External identifier used to represent the facility in external systems.</td></tr><tr><td>3</td><td>product-id</td><td>Unique identifier for the product in the system.</td></tr><tr><td>4</td><td>product-sku</td><td>Stock Keeping Unit (SKU) of the product for tracking and inventory management.</td></tr><tr><td>5</td><td>facility-safety-stock</td><td>Quantity of safety stock reserved for walk-in customers at the facility.</td></tr></tbody></table>
+| S.No. | Field Name           | Description                                                                      |
+|-------|----------------------|----------------------------------------------------------------------------------|
+| 1     | facility-id          | Unique identifier for the facility within the system.                            |
+| 2     | facility-external-id | External identifier used to represent the facility in external systems.           |
+| 3     | product-id           | Unique identifier for the product in the system.                                 |
+| 4     | product-sku          | Stock Keeping Unit (SKU) of the product for tracking and inventory management.   |
+| 5     | facility-safety-stock| Quantity of safety stock reserved for walk-in customers at the facility.         |
+
 
 ***
 
@@ -204,7 +336,17 @@ Similarly, users can export the CSV of Purchase Order in the **Procurement** sec
 
 When importing Purchase Order some fields need to be mandatorily filled, while others can be filled for further references. Here is the list of mandatory fields:
 
-<table><thead><tr><th width="93">S.No.</th><th>Field Name</th><th width="527">Description</th></tr></thead><tbody><tr><td>1</td><td>external-id</td><td>A unique identifier for the record in an external system or database.</td></tr><tr><td>2</td><td>product-store-id</td><td>The unique identifier for the product store where the item is located.</td></tr><tr><td>3</td><td>facility-id</td><td>The identifier for the facility handling the product.</td></tr><tr><td>4</td><td>external-facility-id</td><td>The unique external identifier for the facility in another system.</td></tr><tr><td>5</td><td>product-SKU</td><td>The unique Stock Keeping Unit (SKU) identifier for the product.</td></tr><tr><td>6</td><td>quantity</td><td>The available quantity of the product in stock or expected.</td></tr><tr><td>7</td><td>atp</td><td>The quantity of the product that can be promised for delivery.</td></tr><tr><td>8</td><td>arrival-date</td><td>The expected date when the product will arrive at the facility or store. Users can use either MM-DD-YYYY or DD-MM-YYYY for the arrival-date based on their region.</td></tr></tbody></table>
+| S.No. | Field Name           | Description                                                                                                       |
+|-------|----------------------|-------------------------------------------------------------------------------------------------------------------|
+| 1     | external-id          | A unique identifier for the record in an external system or database.                                             |
+| 2     | product-store-id     | The unique identifier for the product store where the item is located.                                            |
+| 3     | facility-id          | The identifier for the facility handling the product.                                                             |
+| 4     | external-facility-id | The unique external identifier for the facility in another system.                                                |
+| 5     | product-SKU          | The unique Stock Keeping Unit (SKU) identifier for the product.                                                   |
+| 6     | quantity             | The available quantity of the product in stock or expected.                                                       |
+| 7     | atp                  | The quantity of the product that can be promised for delivery.                                                    |
+| 8     | arrival-date         | The expected date when the product will arrive at the facility or store. Users can use either MM-DD-YYYY or DD-MM-YYYY for the arrival-date based on their region. |
+
 
 ***
 
@@ -216,4 +358,12 @@ Retailers may need to update PO ATP when they want to adjust the pre-sellable in
 
 Similarly, users can export the CSV of PO ATP from the **EXIM** page in the **Procurement** section under the **Exports** tab. When importing PO ATP, some fields need to be filled mandatorily, while others can be filled for further reference. Here is the list of mandatory fields:
 
-<table><thead><tr><th>S.No.</th><th>Field Name</th><th width="523">Description</th></tr></thead><tbody><tr><td>1</td><td>po-id</td><td>The unique identifier for the Purchase Order (PO) within the system.</td></tr><tr><td>2</td><td>po-external-id</td><td>The unique identifier for the Purchase Order in an external system.</td></tr><tr><td>3</td><td>po-item-seq-id</td><td>The sequence identifier for items within the Purchase Order.</td></tr><tr><td>4</td><td>product-id</td><td>The unique identifier for the product in the system.</td></tr><tr><td>5</td><td>product-sku</td><td>The Stock Keeping Unit (SKU) represents the product.</td></tr><tr><td>6</td><td>ATP</td><td>Available-to-Promise quantity for the product based on current inventory data.</td></tr></tbody></table>
+| S.No. | Field Name       | Description                                                                                     |
+|-------|------------------|------------------------------------------------------------------------------------------------|
+| 1     | po-id            | The unique identifier for the Purchase Order (PO) within the system.                           |
+| 2     | po-external-id   | The unique identifier for the Purchase Order in an external system.                            |
+| 3     | po-item-seq-id   | The sequence identifier for items within the Purchase Order.                                   |
+| 4     | product-id       | The unique identifier for the product in the system.                                           |
+| 5     | product-sku      | The Stock Keeping Unit (SKU) represents the product.                                           |
+| 6     | ATP              | Available-to-Promise quantity for the product based on current inventory data.                 |
+

@@ -45,7 +45,7 @@
 * [Delete Customers](administration/delete-customers.md)
 * [SOLR Indexing](administration/solr-indexing.md)
 * [Data Manager](administration/data-manager/README.md)
-  * [Configurations](administration/data-manager/configuration-options.md)
+  * [Configuration options](administration/data-manager/configuration-options.md)
   * [Import from an SFTP](administration/data-manager/ftp-import-job.md)
   * [Frequently Used Imports](administration/data-manager/freq-used-configurations.md)
   * [Manual Import](administration/data-manager/manual-import.md)
