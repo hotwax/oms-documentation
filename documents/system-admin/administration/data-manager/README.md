@@ -39,7 +39,7 @@ To better accommodate this kind of setup, all we'll need to do is rename the POS
 | ---------------------------------------- | ------------------------------ |
 | Import orders from Shopify               | importShopifyOrders            |
 | Import order fulfillment from 3PL        | fulfillOrderItem               |
-| Reset inventory (stirkethrough) from POS | resetInventoryByIdentification |
+| Reset inventory ~~from POS~~ | resetInventoryByIdentification |
 
 ### Available functions
 The MDM becomes really powerful once you understand that any service in the OMS can be turned into a data manager configuration.
