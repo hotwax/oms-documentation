@@ -48,11 +48,11 @@
   * [Configurations](administration/data-manager/configurations.md)
   * [Data Import and Export](administration/data-manager/import-and-export.md)
   * [Import Data](administration/data-manager/imports.md)
+  * [Shopify MDM](administration/data-manager/shopify-mdm.md)
+  * [Schedule Error Mail](administration/data-manager/schedule-error-mail.md)
   * [Troubleshooting](administration/data-manager/troubleshooting/README.md)
     * [Data Not Imported](administration/data-manager/troubleshooting/data-not-imported.md)
     * [SFTP Errors](administration/data-manager/troubleshooting/data-import-errors.md)
-    * [Shopify MDM](administration/data-manager/troubleshooting/shopify-mdm.md)
-    * [Schedule Error Mail](administration/data-manager/troubleshooting/schedule-error-mail.md)
 
 ## Product Store
 
