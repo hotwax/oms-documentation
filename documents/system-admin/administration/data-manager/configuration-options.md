@@ -1,4 +1,4 @@
-# Configurations
+# Configuration options
 
 ## Add or edit a configuration
 

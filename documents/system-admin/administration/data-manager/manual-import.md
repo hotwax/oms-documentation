@@ -32,7 +32,7 @@ In the result section, you will see the following columns
 | Status         | The status of the upload or download (Pending, Queued, Running, Finished, or Failed).                  |
 | Action         | Action to delete the record.                                                                           |
 
-<figure><img src="../.gitbook/assets/Import Page.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="<\<../.gitbook/assets/Import Page.png\>>" alt=""><figcaption></figcaption></figure>
 
 Status Types:
 
