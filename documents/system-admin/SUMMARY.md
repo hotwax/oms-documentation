@@ -51,7 +51,6 @@
   * [Troubleshooting](administration/data-manager/troubleshooting/README.md)
     * [Data Not Imported](administration/data-manager/troubleshooting/data-not-imported.md)
     * [SFTP Errors](administration/data-manager/troubleshooting/data-import-errors.md)
-    * [Manual Data Import](administration/data-manager/troubleshooting/manual-data-import.md)
     * [Shopify MDM](administration/data-manager/troubleshooting/shopify-mdm.md)
     * [Schedule Error Mail](administration/data-manager/troubleshooting/schedule-error-mail.md)
 

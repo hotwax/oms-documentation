@@ -49,7 +49,7 @@ File Upload Failed:
 
 This typically occurs when the file format does not align with the required CSV format. To resolve this, consider converting the file to CSV format before attempting to upload it again.
 
-File upload is partially failed
+File upload is partially failed:
 
 Failed records are generated when a file is successfully processed, but discrepancies in the uploaded data lead to some records failing. In these scenarios, the record with correct data gets processed and a file containing all failed records with invalid data becomes available in the Failed Records section. You'll find a failed records file associated with such cases in the logs. By examining this file, you can easily identify and comprehend data errors in the uploaded file. Details about the errors in the records are available in the failed records file, providing clarity on what went wrong. After addressing the identified errors, you can confidently reupload the failed record file after removing the error reason column without encountering further issues. Some of the possible error types are as follows:
 
@@ -61,23 +61,3 @@ Failed records are generated when a file is successfully processed, but discrepa
 | Required Field | A field marked as required is left blank.               |
 
 By following these structured steps, you can diagnose and resolve issues with data imports in OMS and fix them before re-uploading.
-
-## Frequently Used CSV Imports
-
-* Bulk Sales Order Cancellation
-* Store Employee Management
-* Inventory Reset
-* Sales Order Import
-* Purchase Order Upload
-* Safety Stock
-* Order Item Parking Facilities
-* Product Category Association
-* Carrier Postal Code Association
-* Facility Information Management
-* Facility Location Management
-* Inventory Import
-* Shipment Update
-* Replace Product in Orders
-* Bulk Purchase Order Closure
-
-These frequently used imports cater to various needs, allowing users to perform tasks such as canceling orders, managing employees, updating inventory, importing sales and purchase orders, and more, enhancing the efficiency of OMS operations.
