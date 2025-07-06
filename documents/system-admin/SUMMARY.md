@@ -49,6 +49,8 @@
   * [Import from an SFTP](administration/data-manager/ftp-import-job.md)
   * [Frequently Used Imports](administration/data-manager/freq-used-configurations.md)
   * [Manual Import](administration/data-manager/manual-import.md)
+  * [Audit Logs](administration/data-manager/view-mdm-log.md)
+  
   * [Shopify MDM](administration/data-manager/shopify-mdm.md)
   * [Schedule Error Mail](administration/data-manager/schedule-error-mail.md)
   * [Troubleshooting](administration/data-manager/troubleshooting/README.md)
