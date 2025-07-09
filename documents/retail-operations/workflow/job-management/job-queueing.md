@@ -138,7 +138,7 @@ Clicking `View Details` redirects retailers to a detailed logs page where they c
 
 - Access individual logs with specifics like start and finished date and time, user information, and unique log IDs.
 - Review the current status of each file (Finished, Running, Failed, Pending).
-- Download original file and failed records for further analysis.
+- Download the original file and failed records for further analysis.
 - Filter logs to display only those that failed execution or contain error records.
 - View file execution mode such as `Async` or `Queued` 
 
