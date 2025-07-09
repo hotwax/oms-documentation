@@ -45,14 +45,17 @@
 * [Delete Customers](administration/delete-customers.md)
 * [SOLR Indexing](administration/solr-indexing.md)
 * [Data Manager](administration/data-manager/README.md)
-  * [Data Import and Export](administration/data-manager/import-and-export.md)
-  * [Configurations](administration/data-manager/configurations.md)
+  * [Configuration options](administration/data-manager/configuration-options.md)
+  * [Import from an SFTP](administration/data-manager/ftp-import-job.md)
+  * [Frequently Used Imports](administration/data-manager/freq-used-configurations.md)
+  * [Manual Import](administration/data-manager/manual-import.md)
+  * [Audit Logs](administration/data-manager/view-mdm-log.md)
+  
+  * [Shopify MDM](administration/data-manager/shopify-mdm.md)
+  * [Schedule Error Mail](administration/data-manager/schedule-error-mail.md)
   * [Troubleshooting](administration/data-manager/troubleshooting/README.md)
     * [Data Not Imported](administration/data-manager/troubleshooting/data-not-imported.md)
     * [SFTP Errors](administration/data-manager/troubleshooting/data-import-errors.md)
-    * [Manual Data Import](administration/data-manager/troubleshooting/manual-data-import.md)
-    * [Shopify MDM](administration/data-manager/troubleshooting/shopify-mdm.md)
-    * [Schedule Error Mail](administration/data-manager/troubleshooting/schedule-error-mail.md)
 
 ## Product Store
 
