@@ -1,30 +1,50 @@
 # Test Drive
 
-The Test Drive feature in the Order Routing App allows to test real orders against routing rules to understand how allocation decisions are made, without affecting fulfillment or inventory.
+The Test Drive feature is used to test different types of orders to verify that all routing flows are working as expected.
 
-## What Can be Tested
+**What Can Be Tested**
+- **Brokering Run** (test a full group of routings)  
+- **Routing Rule** (test one routing and its rules)  
+- **Inventory Rule** (see how stock levels and ATP impact decisions)
 
-- **Brokering Run**  
-- **Routing Rule** 
-- **Inventory Rule** 
+## Pause Scheduled Brokering
+While using the Test Drive feature, scheduled brokering stops temporarily. This can be done using the "Pause scheduled brokering" toggle present on the Test Drive card. This toggle turns off scheduled brokering for that product store, preventing the system from automatically routing orders.  
 
-## How It Works
+The toggle also shows how many other users are currently running a Test Drive session. This helps avoid conflicts, especially when multiple team members are testing at the same time. Showing active sessions helps prevent anyone from accidentally turning scheduled brokering back on while others are still working in the test environment.
 
-Pick a routing run in the Order Routing App. Click test drive button on the test drive card. This opens a read-only view with all routings and rules in that group. You can’t make changes here. To leave, click exit test mode.
+## Test Routing Group
+On a Routing Run page, a `Test Drive` button will appear just below the description.
 
-Use the search bar to find an order by ID, product name, customer name, or reference. Select an order to see basic details. You’ll see which routings match based on filters and rules.
+### Accessing the Test Drive Interface
+Selecting the button opens the Test Drive interface, where all routing and inventory rules linked to the selected run are displayed. A search bar is available to find orders.
 
-Click **broker order** to simulate routing. You’ll see:
-- Which routing and rules were used
-- Fulfillment location
-- Allocation reason
-- Available To Promise (ATP)
-- Quantity on Hand (QoH)
+### Viewing Order Details
+Selecting Test Order opens the order details. This includes the order name, internal ID, the facility or parking where the order currently exists, whether it is in the brokering queue or at a specific facility, the carrier partner, and the delivery type, such as standard or next-day.  
 
-The allocation reason comes from the first item in the ship group and applies to the rest.
+If the order is not yet brokered, the routings eligible to broker the order will be highlighted. If the order is already brokered, the routing and rule that were used will be highlighted.
 
-Want more info on a routing or rule? Click **details** button on that card. A panel opens with all the setup info. Changes you make are saved when you close the panel or click back.
+### Brokering and Resetting an Order
+A `Broker Order` button is available. Selecting this brokers the order using the rules from the selected brokering run.  
 
-## Testing a Single Routing
+To test the order again, the `Reset Order` button can be used. This moves the order from the allocated facilities back to the parking facility it originally came from.  
 
-To test a single routing, open it and click **test**. The rules panel turns into a search bar. Pick an order. If it doesn’t match the routing filters, you’ll see a message. If it qualifies, click **broker order** to simulate routing. Each ship group shows the rule used. Click the **locate icon** to see which rule triggered the allocation.
+The rejection reason will state that it was part of a brokering test drive. No variance will be recorded when an order is reset.
+
+### Understanding Brokering Decisions
+The items in the order appear in separate cards based on ship groups. Each card shows the reason why those items were brokered to a specific facility.  
+
+Each item also displays the Available To Promise (ATP) and Quantity On Hand (QoH) at the facility.
+
+### View configuration details
+To view the details of a routing and or a routing rule, click the `details` button to show the configuration of the selected routing or routing rule. If a filter does not match the test order, an error icon will appear on that filter.
+
+## Test Single Routing
+To test a single routing instead of a group, a specific routing can be selected from the order batch.  
+Inside the routing, clicking the `Test` button will show an order search bar.  
+
+Once an order is selected, the app checks if the selected routing can broker the order based on its filters. If a filter is blocking the selected order from qualifying in the routing, Test Drive will flag those filters.  
+If the order is brokered, the ship group card will display the routing rule that allocated the items.
+
+## Testing Inventory Rule
+To test an individual inventory rule, select any rule to test. After selecting, a `Test` button will appear on the configuration page. Clicking the `Test` button opens the Test Drive interface. In the interface, search for an order and check if the inventory rule is working as expected.
+
