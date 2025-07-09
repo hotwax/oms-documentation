@@ -71,7 +71,7 @@ This tab lists jobs in the **running status** i.e jobs those are currently in ex
 **Details visible in the Running tab:**  
 - **Start Time**: Indicates when the job started running.
 - **Service Name**: Indicates which OMS service is executing the job.
-- **Running Duration**: Indicates how long the job has been running since it started.
+- **Running Duration**: Indicates how long the job has been running.
 
 
 
