@@ -2,6 +2,20 @@
 
 * [Introduction](README.md)
 
+## Components
+
+* [Available to Promise](components/available-to-promise/README.md)
+  * ```yaml
+    type: builtin:openapi
+    props:
+      models: true
+    dependencies:
+      spec:
+        ref:
+          kind: openapi
+          spec: hotwax-commerce-api
+    ```
+
 ## HotWax Commerce API and Data feeds
 
 * [Authentication](api/initial-api-authentication.md)
@@ -66,17 +80,3 @@
 ## OMS Release Versions
 
 * [OMS Versions](oms-release-versions/README.md)
-
-## Components
-
-* [Available to Promise](components/available-to-promise/README.md)
-  * ```yaml
-    type: builtin:openapi
-    props:
-      models: true
-    dependencies:
-      spec:
-        ref:
-          kind: openapi
-          spec: hotwax-commerce-api
-    ```
