@@ -1,4 +1,4 @@
-# Table of Content
+# Table of contents
 
 * [Introduction](README.md)
 
@@ -46,6 +46,16 @@
   * [Appeasements Feed](api/appeasements/appeasements-feed.md)
 * [Miscellaneous](api/miscellaneous/README.md)
   * [Perform Find](api/miscellaneous/perform-find.md)
+* ```yaml
+  type: builtin:openapi
+  props:
+    models: true
+  dependencies:
+    spec:
+      ref:
+        kind: openapi
+        spec: hotwax-commerce-api
+  ```
 
 ## Journeys
 
