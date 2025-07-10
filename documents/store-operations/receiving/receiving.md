@@ -97,7 +97,9 @@ Store associates can lookup the incoming returns by navigating to the `Returns` 
 ## **Receiving Transfer Orders**
 
 Transferring inventory between store locations is a common retail operation. With the Receiving App, store associates can easily receive transfer orders.
-Transfer orders can be searched by their name. Associates can view transfer order status, creation date and time, and switch between **Open** and **Completed** tabs to filter orders accordingly.
+
+Store associates need to navigate to the `Transfer Orders` tab and can search for transfer orders. Associates can view transfer order status, creation date and time, and switch between **Open** and **Completed** tabs to filter orders accordingly.
+
 
 ### **Transfer Order Details**
 
@@ -112,7 +114,7 @@ Clicking on a transfer order opens its details page.
 * **Receive Items**: Items can be received partially. Clicking 'Receive' will log the received quantity, and the remaining quantity will still be available for future receiving.
 * **Receive and Close:** Receives all items and marks the transfer order as closed. Once closed, no more items can be received in that order.
 Store associates can also enter custom quantities on the item card for under or over receiving.
-  ### **Steps to Receive a Transfer Order**
+  #### **Steps to Receive a Transfer Order**:
 
 1. From the Receiving App, go to the **Transfer Order** tab and select the relevant order.
 2. The app will open the order's detail page.
