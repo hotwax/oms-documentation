@@ -62,5 +62,4 @@ In the following sections, we’ll dive deeper into each level, to understand ho
 
 ### Test Drive 
 
-Test drive allows real orders to be run through routing rules without affecting inventory or fulfillment
-It shows how orders would be routed, which rules apply, and how inventory or ATP affects the decision without touching live systems.
+The Test Drive feature is used to test different types of orders to verify that all routing flows are working as expected.
