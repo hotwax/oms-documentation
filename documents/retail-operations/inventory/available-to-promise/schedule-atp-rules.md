@@ -40,11 +40,14 @@ Change Rule Sequence
 
 ## Base Rule
 
-Some rules work only when a product has a certain tag or matches specific conditions. If a product does not match, then those rules do not apply.
+Some inventory rules only apply when a product matches a specific tag or condition. When the product no longer matches that condition, the rule stops applying.
 
-A base rule sets a default action for products that no longer match any specific condition and have returned to their normal state.
-Suppose a product has a preorder tag, and it needs a different inventory threshold. A rule is created to set the threshold to 10 units for that product. This rule only works for products with the preorder tag.
+If there’s no other rule available for that product, the system doesn’t know how to handle it. This can lead to inconsistent inventory behavior.
+To manage this, a base rule is used. A base rule is a default rule that applies when a product does not match the criteria of any specific rule. It provides a basic guideline for inventory so that the system always has a rule to follow.
 
-Now, if the tag is removed from a product, that rule no longer applies. The product does not get any threshold, because it doesn’t match any rule. Also, the product won’t qualify for the rule anymore because it no longer has the required tag. However, if 10 units were already allocated earlier, they will remain, even if the tag has been removed.
+Suppose a product has a preorder tag and requires a different inventory threshold. A rule is created to set the threshold to 10 units for that product. This rule only works for products with the preorder tag.
+
+Now, if the tag is removed from a product, the product won’t qualify for the rule anymore because it no longer has the required tag. However, the threshold of 10 that has been set will not go back to the default level just because the tag is removed.
 
 To avoid this, a base rule can be added to set a default threshold of 5 units for all products. So even if a product loses the preorder tag, it still follows the base rule. 
+
