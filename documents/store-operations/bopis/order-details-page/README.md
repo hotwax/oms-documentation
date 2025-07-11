@@ -19,7 +19,7 @@ The buttons shown on an order depend on its status. When the order is in Open st
 
 Selecting Cancel Item opens a pop-up displaying a list of cancellation reasons. When an item is cancelled, an email is sent to the customer.
 
-Below this section, the cancellation sync job status is shown. The behavior of cancellation and refund depends on the following settings:
+Below this section, the [cancellation sync job](/documents/retail-operations/workflow/job-workflows/orders.md/) status is shown. The behavior of cancellation and refund depends on the following settings:
 
 - If both the cancellation sync job and the Shopify setting to process refunds are enabled, the cancellation and refund will be sent to Shopify.
 - If the cancellation sync job is enabled but the Shopify refund setting is disabled, only the cancellation will be sent to Shopify.
@@ -57,5 +57,3 @@ This section helps store staff understand the full progress of the order and mak
 ### Assign Picker
 
 During the process of fulfilling a BOPIS order, store associates can assign and track pickers to ensure the pickers' commission eligibility. For open orders, users can assign pickers from a pop-up that will open on clicking the `Ready for Pickup` button on the order details page. In case they want to edit the picker for an order, they can do that using the `Edit` button on the order details page of a packed order.
-
-<figure><img src="../../.gitbook/assets/Screenshot 2024-01-01 at 11.50.51 PM (1).png" alt=""><figcaption><p>Image: Order Details Page</p></figcaption></figure>
