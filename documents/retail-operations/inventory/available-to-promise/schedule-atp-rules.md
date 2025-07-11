@@ -47,6 +47,6 @@ To manage this, a base rule is used. A base rule is a default rule that applies 
 
 Suppose a product has a preorder tag and requires a different inventory threshold. A rule is created to set the threshold to 10 units for that product. This rule only works for products with the preorder tag.
 
-Now, if the tag is removed from a product, the product won’t qualify for the rule anymore because it no longer has the required tag. However, the threshold of 10 that has been set will not go back to the default level just because the tag is removed.
+Now, if the tag is removed from a product, the product won’t qualify for the rule anymore because it no longer has the required tag. However, the threshold of 10 that has been set won't go back to the default level just because the tag is removed.
 
 To avoid this, a base rule can be added to set a default threshold of 5 units for all products. So even if a product loses the preorder tag, it still follows the base rule. 
