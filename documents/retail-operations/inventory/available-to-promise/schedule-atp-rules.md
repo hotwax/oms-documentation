@@ -50,4 +50,3 @@ Suppose a product has a preorder tag and requires a different inventory threshol
 Now, if the tag is removed from a product, the product won’t qualify for the rule anymore because it no longer has the required tag. However, the threshold of 10 that has been set will not go back to the default level just because the tag is removed.
 
 To avoid this, a base rule can be added to set a default threshold of 5 units for all products. So even if a product loses the preorder tag, it still follows the base rule. 
-
