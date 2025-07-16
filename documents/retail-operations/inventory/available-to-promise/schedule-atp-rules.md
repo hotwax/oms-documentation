@@ -43,7 +43,7 @@ Change Rule Sequence
 Some inventory rules only apply when a product matches a specific tag or condition. When the product no longer matches that condition, the rule stops applying.
 
 If there’s no other rule available for that product, the system doesn’t know how to handle it. This can lead to inconsistent inventory behavior.
-To manage this, a base rule is used. A base rule is a default rule that applies when a product does not match the criteria of any specific rule. It provides a basic guideline for inventory so that the system always has a rule to follow.
+To manage this, a base rule is used. A base rule is a default rule that applies when a product does not match the criteria of any specific rule.
 
 Suppose a product has a preorder tag and requires a different inventory threshold. A rule is created to set the threshold to 10 units for that product. This rule only works for products with the preorder tag.
 
