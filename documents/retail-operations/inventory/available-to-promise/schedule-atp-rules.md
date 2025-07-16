@@ -45,7 +45,7 @@ Some inventory rules only apply when a product matches a specific tag or conditi
 If there’s no other rule available for that product, the system doesn’t know how to handle it. This can lead to inconsistent inventory behavior.
 To manage this, a base rule is used. A base rule is a default rule that applies when a product does not match the criteria of any specific rule.
 
-Suppose a product has a preorder tag and requires a different inventory threshold. A rule is created to set the threshold to 10 units for that product. This rule only works for products with the preorder tag.
+Suppose a product has a pre-order tag and requires a different inventory threshold. A rule is created to set the threshold to 10 units for that product. This rule only works for products with the preorder tag.
 
 Now, if the tag is removed from a product, the product won’t qualify for the rule anymore because it no longer has the required tag. However, the threshold of 10 that has been set won't go back to the default level just because the tag is removed.
 
