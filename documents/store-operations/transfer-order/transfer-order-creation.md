@@ -30,8 +30,6 @@ Here’s how to create a transfer order:
 Once you tap **Create**, the OMS jobs will pull the order into HotWax Commerce (Created) and then auto-approve it to Pending Fulfillment.
 {% endhint %}
 
-<figure><img src="../.gitbook/assets/Screenshot 2025-07-17 at 2.04.33 PM.png" alt="Create Transfer Order screen"><figcaption></figcaption></figure>
-
 ## Step-by-Step Guide
 
 1. **Name the transfer**  
@@ -46,7 +44,7 @@ Once you tap **Create**, the OMS jobs will pull the order into HotWax Commerce (
    - Choose the **Method** that fits your timing and cost needs.
 
 4. **Configure plan details**  
-   - (Optional) Select a **Lifecycle** tag for categorization.  
+   - Select a **Lifecycle** tag for categorization.  
    - Tap **Select Date** for both **Ship Date** and **Delivery Date**.
 
 5. **Add products**  
