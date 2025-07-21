@@ -38,7 +38,7 @@ Store associates can generate transfer orders directly within the `Fulfillment A
 
 ### Plan Section (Bottom-Left Card)
 
-- **Lifecycle**: Choose the appropriate lifecycle based on transfer type.
+- **Lifecycle**: Choose the appropriate lifecycle based on the transfer type.
    1. **Store to Store:** Select Fulfill and Receive (managed entirely in the OMS)
    2. **Store to Warehouse:** Select Fulfill only (post-fulfillment handled by the WMS)
       
