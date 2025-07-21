@@ -34,6 +34,9 @@ Store associates can generate transfer orders directly within the fulfillment ap
 
 ### Plan Section (Bottom-Left Card)
 
+Based on transfer type, select the appropriate lifecycle.
+Store to Store: Select Fulfill and Receive (managed entirely in OMS).
+Store to Warehouse: Select Fulfill only (post-fulfillment handled by WMS)
 - **Ship Date**:
   1. Click the **SELECT DATE** field
   2. Choose the shipment date from the calendar
