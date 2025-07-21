@@ -1,6 +1,10 @@
+---
+description: How to create transfer orders in HotWax Commerce
+---
+
 # Creating Transfer Orders in the Fulfillment App
 
-Store associates can generate transfer orders directly within the fulfillment app. This document provides step-by-step instructions for creating transfer orders.
+Store associates can generate transfer orders directly within the `Fulfillment App`. This document provides step-by-step instructions for creating transfer orders.
 
 ### Accessing the Transfer Order Page
 
@@ -34,9 +38,10 @@ Store associates can generate transfer orders directly within the fulfillment ap
 
 ### Plan Section (Bottom-Left Card)
 
-Based on transfer type, select the appropriate lifecycle.
-Store to Store: Select Fulfill and Receive (managed entirely in OMS).
-Store to Warehouse: Select Fulfill only (post-fulfillment handled by WMS)
+- **Lifecycle**: Choose the approprite lifecycle based on transfer type.
+   1. **Store to Store:** Select Fulfill and Receive (managed entirely in the OMS)
+   2. **Store to Warehouse:** Select Fulfill only (post-fulfillment handled by the WMS)
+      
 - **Ship Date**:
   1. Click the **SELECT DATE** field
   2. Choose the shipment date from the calendar
@@ -57,8 +62,9 @@ Store to Warehouse: Select Fulfill only (post-fulfillment handled by WMS)
 
 ### Manually Add Items
 
-1. In the **Add Product** field (below the CSV section), enter a **SKU**
-2. Click the **+ Add** button to include the item in the order
+1. In the **Add Product** field, search by **SKU**
+2. Tap **Scan** to use your barcode scanner
+3. Click the **+ Add** button to include the item in the order
 
 ## Managing Item Quantities
 
