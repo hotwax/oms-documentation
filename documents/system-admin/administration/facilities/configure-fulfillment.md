@@ -2,7 +2,7 @@
 
 Configuring the scope of participation of a facility in online fulfillment is made convenient through the `Sell inventory online` card on the facility details page and from the [facility home page](manage-existing-facilities.md). Retailers can manage whether a facility will participate in inventory computation for a channel from the `Sell inventory online` card.
 
-<figure><img src="../../.gitbook/assets/sell-inventory-online.png" alt="" width="375"><figcaption><p>Image: Sell Inventory Online</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/sell-inventory-online.png" alt="" width="375"><figcaption></figcaption></figure>
 
 ## Configure Fulfillment Settings
 
