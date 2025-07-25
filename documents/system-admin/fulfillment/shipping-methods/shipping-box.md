@@ -4,13 +4,13 @@ description: >-
   precise shipping cost calculations and accurate label generation.
 ---
 
-# Shipping Boxes
+# Create Shipping Boxes
 
- HotWax Commerce lets users define these boxes for accurate shipping calculations and label generation, ensuring alignment with retailer packaging standards.
+HotWax Commerce lets users define these boxes for accurate shipping calculations and label generation, ensuring alignment with retailer packaging standards.
 
 This guide outlines a step-by-step process for retailers to establish and manage boxes within HotWax Commerce.
 
-Note:
+Note:\
 Incorrect box selection may result in extra shipping charges for retailers.
 
 ## Creating Boxes
