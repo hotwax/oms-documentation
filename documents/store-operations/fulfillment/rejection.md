@@ -124,7 +124,7 @@ When partial rejection is disabled, rejecting any item in an order triggers the 
 
 1. **Reject the Item:** Click the trash bin icon next to the unfulfillable item.
 2. **Choose a Reason:** Select a reason for rejection, like "not in stock" or "damaged."
-3. **Automatic Rejection:** The entire order is rejected with the reason "reject entire order." This will not impact inventory variance or appear in rejection reports.
+3. **Automatic Rejection:** The rest of the order is rejected with the reason "reject entire order". This will not impact inventory variance for remaining items (those were not rejected) and also not appear in rejection reports.
 
 If additional items need to be rejected with a specific reason, click on the default rejection reason applied to the item and make a selection.
 
