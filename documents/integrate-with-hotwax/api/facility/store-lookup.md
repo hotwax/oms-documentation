@@ -14,6 +14,8 @@ The API allows to look up the stores accepting BOPIS orders near the customer’
 
 `https://< host >/rest/s1/api/stores`
 
+Method: `POST`
+
 Example: Host: https://demo-maarg.hotwax.io/rest/s1/api/store
 
 ### Header
