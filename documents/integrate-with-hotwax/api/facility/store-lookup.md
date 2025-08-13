@@ -12,9 +12,11 @@ The API allows to look up the stores accepting BOPIS orders near the customer’
 
 ### Endpoint
 
-`https://< host >/api/storeLookup`
+`https://< host >/rest/s1/api/stores`
 
-Example: Host: https://demo-oms.hotwax.io/api/storeLookup
+Method: `POST`
+
+Example: Host: https://demo-maarg.hotwax.io/rest/s1/api/store
 
 ### Header
 

@@ -27,7 +27,7 @@
   * [Picking App](fulfillment/picking-app.md)
   * [Settings Page](fulfillment/fulfillment-setting-page.md)
   * [Order Lookup](fulfillment/order-lookup.md)
-  * [Transfer order creation](fulfillment/transfer-order.md)
+  * [Transfer Order Creation](fulfillment/transfer-order.md)
   * [Shipping Label Generations](fulfillment/shipping-label-generation.md)
   * [Change Shipping Method](fulfillment/change-shipping-method.md)
   * [Troubleshooting](fulfillment/troubleshooting/README.md)

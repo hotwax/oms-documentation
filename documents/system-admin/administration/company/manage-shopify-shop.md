@@ -1,10 +1,10 @@
 ---
 description: >-
-  Efficiently manage your Shopify Connection with HotWax Order
-  Management System.
+  Efficiently manage your Shopify Connection with HotWax Order Management
+  System.
 ---
 
-# Manage Shopify integration
+# Manage Shopify Shop
 
 When you download the HotWax Commerce integration App from the Shopify App Store, it automatically creates a Shopify shop in HotWax OMS. This app acts as the link between OMS and Shopify, and you can adjust its settings on the `Find and View Shopify Connection` page in OMS. To manage your Shopify connections:
 
@@ -12,8 +12,8 @@ When you download the HotWax Commerce integration App from the Shopify App Store
 
 On the `Find Shopify Connection` page, you can filter connections by their status and perform quick actions like:
 
-a. Copy credentials: Quickly copy the shared secret and access token to Shopify, only accessible to super users.
-b. Favorite: Mark a Shopify connection as a favorite for easy access when using other apps like Job Manager.
+a. Copy credentials: Quickly copy the shared secret and access token to Shopify, only accessible to super users.\
+b. Favorite: Mark a Shopify connection as a favorite for easy access when using other apps like Job Manager.\
 c. Deactivate Shop: Stop all communication with Shopify by deactivating the connection.
 
 ### Shopify connection summary

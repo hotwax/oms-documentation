@@ -1,6 +1,64 @@
-# Table of Content
+# Table of contents
 
 * [Introduction](README.md)
+
+## Components
+
+* [Available to Promise](components/available-to-promise/README.md)
+  * ```yaml
+    type: builtin:openapi
+    props:
+      models: true
+    dependencies:
+      spec:
+        ref:
+          kind: openapi
+          spec: available-to-promise
+    ```
+* [Fulfillment](components/fulfillment/README.md)
+  * ```yaml
+    type: builtin:openapi
+    props:
+      models: true
+    dependencies:
+      spec:
+        ref:
+          kind: openapi
+          spec: fulfillment
+    ```
+* [Inventory Count](components/inventory-count/README.md)
+  * ```yaml
+    type: builtin:openapi
+    props:
+      models: true
+    dependencies:
+      spec:
+        ref:
+          kind: openapi
+          spec: inventory-count
+    ```
+* [Order Routing](components/order-routing/README.md)
+  * ```yaml
+    type: builtin:openapi
+    props:
+      models: true
+    dependencies:
+      spec:
+        ref:
+          kind: openapi
+          spec: order-routing
+    ```
+* [Legacy OMS](components/legacy-oms/README.md)
+  * ```yaml
+    type: builtin:openapi
+    props:
+      models: true
+    dependencies:
+      spec:
+        ref:
+          kind: openapi
+          spec: legacy-oms
+    ```
 
 ## HotWax Commerce API and Data feeds
 
@@ -66,3 +124,4 @@
 ## OMS Release Versions
 
 * [OMS Versions](oms-release-versions/README.md)
+  * [V7.0.0 Release](oms-release-versions/v7.0.0.md)
