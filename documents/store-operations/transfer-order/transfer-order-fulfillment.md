@@ -4,36 +4,111 @@ description: How to fulfill transfer orders in HotWax Commerce
 
 # Transfer Order Fulfillment
 
-Transfer orders from a store to a warehouse or between stores are fulfilled using HotWax's Fulfillment App. Warehouse-to-store transfers are fulfilled in WMS.
+The Fulfillment App by HotWax Commerce allows you to fulfill Transfer Orders (TOs).  
+Store-to-store and store-to-warehouse transfers are fulfilled through the Fulfillment App, while warehouse-to-store transfers are fulfilled through a Warehouse Management System (WMS).  
+This guide covers how to locate a TO, pick and pack inventory, handle rejections, create shipments, and complete the fulfillment process.
 
-## Transfer Order Fulfillment
 
-When inventory planners create transfer orders in NetSuite, they specify the source store and the destination warehouse. These transfer orders are automatically assigned a Pending Fulfillment status.
+## Fulfilling a TO
 
-A scheduled `Import Transfer Order` job in HotWax Commerce OMS reads the transfer orders CSV file from the SFTP location and downloads transfer orders in HotWax Commerce with a Created status.
+### Locate the TO
+To locate a specific TO:
+- Navigate to **Transfer Orders** page.  
+- Use the search bar to look up the TO by ID or name.  
+- You can only see TOs where the origin facility matches your selected facility. TOs for other facilities won’t appear.  
 
-Another job automatically approves all `Created` transfer orders, moving them to Approved status.
 
-`Approved` transfer orders appear in the Fulfillment App at the source store, ready for store associates to fulfill.
+### Review TO details
+Tapping on a TO opens the **Transfer Order Details** page, which displays:
+- A list of items with product name, product images, SKU codes, and ordered quantities.  
+- Total number of items to be fulfilled.  
+- A progress bar that visually indicates how much of each item has been fulfilled.  
 
-Here’s how store associates can fulfill transfer orders:
+This view helps you verify the TO items before starting the fulfillment process.  
 
-1. Go to the `Transfer Order` page in the `Fulfillment App`.
-2. On the Transfer Order Details page, you'll see two tabs:
-   * Open: shows items that haven't been shipped yet
-   * Completed: shows items that have already been shipped
-3. To print a picklist, click the `Print Picklist` button in the order details view. Review and print the list of items to be transferred.
-4. Scan item barcodes or manually enter the quantity to fulfill transfer order items.
-5. Click the Create Shipment button at the bottom right.
-6. On the Shipment Review page:
-   * Click Generate Shipping Label to auto-fetch tracking and carrier info, or
-   * Manually enter shipping label details
-7. Click on the `Arrow` icon at the bottom right corner to Complete the shipment.
 
+### Print picklist
+- To print a picklist for picking items, tap **`Print Picklist`**.  
+- To learn more about the picklist functionality for store transfer fulfillment, refer to **Transfer Order Picklist**.
+
+
+### Pick items
+There are three ways to pick items:
+1. **Scan with a barcode scanner**  
+   Scanning a barcode finds the matching item in the list, selects it, and increases its picked quantity.  
+
+2. **Scan with the iPad camera**  
+   Tap **`Scan`** to open the camera and scan the item’s barcode.  
+
+3. **Enter SKU**  
+   Enter the SKU of an item in the **Scan Item** input field.  
+
+Each time you scan a barcode or enter a SKU, the system automatically adds one unit to the quantity and updates the progress bar.  
+
+Alternatively, once scanning has selected the item, you can also manually enter the picked quantity of each item.  
+
+> **Tip:** Use **`Pick All`**  
+> If all ordered quantities for an item are picked, tap **`Pick All`** to record them without scanning or entering manually.
+
+
+### Create shipment
+TOs may be fulfilled in multiple shipments or in a single shipment.
+
+#### Fulfill in multiple shipments
+If you are fulfilling multiple shipments, record only the items for the current shipment. The rest remain open in the app until fulfilled later.
+- Enter the quantity of items picked for the current shipment.  
+- Tap **`Create Shipment`**.  
+- A confirmation pop-up will appear, click **`Create`**.  
+
+#### Fulfill in single shipment
+When the entire TO is fulfilled at once, all items are picked and shipped together.
+- Tap **`Pick All`** for all items in the TO.  
+- Tap **`Create Shipment`**.  
+- A confirmation pop-up will appear, tap **`Create`**.  
+
+Once the shipment is created, the TO is marked as fulfilled and no further changes can be made.  
+
+
+### Review shipment
+After a shipment is created, the app opens the **Review shipment** page.  
+You can either:
+- Tap **`Generate shipping label`** to fetch the carrier and tracking information automatically, or  
+- Manually enter the carrier and tracking code.  
+
+
+### Complete shipment
+Once the tracking code is entered, the **`Complete Shipment`** button becomes available.
+- Tap **`Complete Shipment`**.  
+- A confirmation pop-up will appear, tap **`Ship`**.  
+
+
+## Exception Handling
+
+### Rejecting an item in TO
+If an item cannot be fulfilled because of missing inventory, damage, or incorrect listings, you can reject it. Rejecting an item rejects the entire TO, and no further fulfillment is possible.  
+When you reject an item, the system records an inventory variance. This helps ensure future orders are planned based on accurate stock availability.  
+
+Steps to reject an item:
+- Tap **`Report an Issue`** dropdown next to the item that can’t be fulfilled.  
 {% hint style="info" %}
-The progress bar turns red if item quantities are overshipped
+The **Report an Issue** dropdown is only available if no shipments have been created for the TO.
 {% endhint %}
+- Select a rejection reason from the dropdown (for example, Not in stock, Mismatch, or Damaged).  
+- Once you select a reason, all other items will default to **No Variance** and the **`Reject Items`** button will appear.  
+- Tap **`Reject Items`**.  
+- A confirmation pop-up will appear, tap **`Reject`**.  
 
-<figure><img src="../.gitbook/assets/Fulfillment 5 -  Print Transfer Order Picklist (1).png" alt=""><figcaption></figcaption></figure>
+After rejection, the TO moves to **Rejected Order Parking**, and inventory variance is logged based on the selected rejection reason.  
+To know more about rejection reasons, refer to **Rejections**.
 
-For more details on transfer order lifecycle refer to this [document](https://docs.hotwax.co/documents/v/learn-hotwax-oms/business-process-models/transferorderlifecycle)
+
+### Cancelling an item in TO
+You can cancel a specific item in a TO, even if it has been partially fulfilled. This may be required due to low stock, damaged inventory, or fulfillment cutoffs.  
+When you close an item, it is marked as cancelled in HotWax OMS and is no longer available for fulfillment.
+
+Steps to close an item:
+- Tap **`Close Items`**.  
+- A review dialog box will appear. Select the checkbox for each item to close, then tap the **Save** icon.  
+- When the confirmation pop-up appears, tap **Proceed**.  
+
+Once closed, the item no longer appears in the TO in either the Fulfillment App or the Receiving App.  
