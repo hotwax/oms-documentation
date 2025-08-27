@@ -58,19 +58,6 @@ Holds all order jobs.
 
 <details>
 
-<summary>Brokering</summary>
-
-Holds all brokering jobs and occurrence.
-
-**This page contains jobs such as:**
-
-1. **Create new brokering:** Schedule a new brokering batch on new or unfulfilled orders.
-2. **Rejected orders brokering:** Schedule a brokering batch for rejected orders.
-
-</details>
-
-<details>
-
 <summary>Fulfillment</summary>
 
 Holds all fulfillment jobs.
@@ -121,47 +108,3 @@ Holds all uncategorised jobs
 </details>
 
 ***
-
-## Webhooks
-
-{% hint style="info" %}
-Webhooks can be subscribed to from the category pages within the Job Manager app for specific categories.
-{% endhint %}
-
-Automated messages sent from eCommerce (Shopify) to OMS whenever an event occurs. They contain data about the event and are received in OMS, allowing real time communication between eCommerce and OMS.
-
-**Subscribe to Shopify eCommerce Webhooks from OMS for:**
-
-<details>
-
-<summary>Orders</summary>
-
-**Webhooks available for:**
-
-1. New Orders
-2. Cancelled orders
-3. Payment status
-4. Returns
-
-</details>
-
-<details>
-
-<summary>Inventory</summary>
-
-**Webhooks available for:**
-
-Inventory level update
-
-</details>
-
-<details>
-
-<summary>Products</summary>
-
-**Webhooks available for:**
-
-1. New products
-2. Delete products
-
-</details>
