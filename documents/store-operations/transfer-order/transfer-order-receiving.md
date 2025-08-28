@@ -11,7 +11,7 @@ This guide explains how to locate a TO, receive items, track progress and comple
 
 ## Receiving a TO
 
-Follow the following steps to receive a TO:
+Follow these steps to receive a TO:
 
 ### Locate the TO
 After you log into the Receiving App, you land on the Transfer Orders page. The Open tab lists all TOs scheduled to be received at your facility.  
