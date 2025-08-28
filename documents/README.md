@@ -19,7 +19,7 @@ Explore the sections **"Learn HotWax OMS," "Learn Shopify," and "Learn NetSuite,
 
 ## Learn HotWax OMS :orange\_book:
 
-<table data-view="cards"><thead><tr><th align="center"></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td align="center"><strong>Getting Started</strong></td><td><a href=".gitbook/assets/launch-hc.png">launch-hc.png</a></td><td><a href="learn-hotwax-oms/README%20(1).md">README%20(1).md</a></td></tr><tr><td align="center"><strong>Business Processes</strong></td><td><a href=".gitbook/assets/Designer (9).png">Designer (9).png</a></td><td><a href="https://app.gitbook.com/s/fkS6HE1ADY5pjfJTizhz/business-processes">Business Processes</a></td></tr><tr><td align="center"><strong>Business Process Models</strong></td><td><a href=".gitbook/assets/BPM.png">BPM.png</a></td><td><a href="learn-hotwax-oms/business-process-models/">business-process-models</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th align="center"></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-type="content-ref"></th></tr></thead><tbody><tr><td align="center"><strong>Getting Started</strong></td><td><a href=".gitbook/assets/launch-hc.png">launch-hc.png</a></td><td><a href="./#learn-hotwax-oms">#learn-hotwax-oms</a></td></tr><tr><td align="center"><strong>Business Processes</strong></td><td><a href=".gitbook/assets/Designer (9).png">Designer (9).png</a></td><td></td></tr><tr><td align="center"><strong>Business Process Models</strong></td><td><a href=".gitbook/assets/BPM.png">BPM.png</a></td><td></td></tr></tbody></table>
 
 ## Store Operations User Manual :convenience\_store:
 
