@@ -12,14 +12,6 @@ With the picklist, you first pack items and then enter the details into the App.
 
 ## Picklist Fields
 
-Item Details section of a Picklist includes the following fields:  
-- **Item No.** - Serial number of the item.  
-- **Product** - Product identifier (e.g., SKU).  
-- **Product Description** - Brief description of the product.  
-- **Quantity Ordered** - Total quantity of the item ordered.  
-- **Quantity Picked** - An empty field for you to fill in the quantity of items as you pack.  
-- **Box Number** - An empty field for you to fill in the box number where the item is packed.  
-
 | Field               | Description                                  |
 | ------------------- | -------------------------------------------- |
 | Item No.            | Serial number of the item                 |
