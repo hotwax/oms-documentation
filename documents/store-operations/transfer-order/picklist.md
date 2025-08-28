@@ -1,6 +1,7 @@
-description: >-
-  This document describes the Picklist Functionality for Store Transfer
-  Fulfillment.
+---
+description: This document describes the Picklist Functionality for Store Transfer Fulfillment.
+---
+
 ---
 
 # Transfer Order Picklist
