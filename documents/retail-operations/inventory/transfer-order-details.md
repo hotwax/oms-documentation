@@ -4,7 +4,7 @@ The Transfer Order Details page displays all key information for a specific TO. 
 
 
 ## TO overview
-The top-left section of the page displays the name of the TO. A status selector is also available, allowing updates to the order’s current state, such as created, approved or cancelled.  
+The top-left section of the page displays the name of the TO. A status selector is also available, allowing updates to the order’s current state, such as created, approved or canceled.  
 
 {% hint style="info" %}
 Only TOs in Approved status are visible to the origin facility for fulfillment in the Fulfillment App, and to the destination facility for receiving in the Receiving App.
