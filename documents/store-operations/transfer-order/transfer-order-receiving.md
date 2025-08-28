@@ -56,7 +56,7 @@ TOs may be received partially or all at once.
 - If only some items in the TO arrive, you can record those items as received and leave the order open for the pending ones.  
 - Enter the quantity of items that has arrived.  
 - Tap `Receive` to log the quantity.  
-- A confirmation pop-up tap `Proceed`.  
+- A confirmation pop-up will appear, tap `Proceed`.  
 
 The remaining items stay open in the app so you can receive them later.  
 
