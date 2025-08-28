@@ -1,4 +1,4 @@
-# Creating a transfer order
+# Transfer Order Creation
 
 You can create a new TO in the Transfers App to move inventory between facilities.
 
