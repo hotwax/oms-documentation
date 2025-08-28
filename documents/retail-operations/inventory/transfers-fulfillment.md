@@ -10,4 +10,4 @@ The Shipment details card opens, displaying:
 - Carrier  
 - Tracking code  
 
-To learn how to fulfill a TO, refer to [Transfer Order Fulfillment](https://docs.hotwax.co/documents/store-operations/inventory/transfer-order-management/transfer-order-fulfillment) guide.
+To learn how to fulfill a TO, refer to [Transfer Order Fulfillment](../../store-operations/transfer-order/transfer-order-fulfillment.md) guide.
