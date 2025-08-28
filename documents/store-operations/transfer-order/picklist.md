@@ -44,4 +44,4 @@ After packing, use the picklist to record the packed items in the app.
 
 After recording, complete the shipment following the standard fulfillment process.  
 
-For detailed instructions on fulfilling a TO, refer to [Transfer Order Fulfillment](https://docs.hotwax.co/documents/store-operations/inventory/transfer-order-management/transfer-order-fulfillment).
+For detailed instructions on fulfilling a TO, refer to [Transfer Order Fulfillment](transfer-order-fulfillment.md).
