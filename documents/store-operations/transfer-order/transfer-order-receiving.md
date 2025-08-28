@@ -9,7 +9,7 @@ The Receiving App by HotWax Commerce allows you to efficiently receive inventory
 This guide explains how to locate a TO, receive items, track progress and complete the receiving process.
 
 
-## Receiving transfer order
+## Receiving a TO
 
 Follow the following steps to receive a TO:
 
@@ -92,7 +92,7 @@ In any scenario where you close items or an entire TO, the steps are the same:
 3. In the confirmation pop-up, tap Proceed.  
 
 {% hint style="info" %}
-Once you close items in a transfer order, you can’t receive them again. Make sure no more items are expected before closing.
+Once you close items in a TO, you can’t receive them again. Make sure no more items are expected before closing.
 {% endhint %}
 
 ---
