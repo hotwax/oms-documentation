@@ -2,8 +2,6 @@
 description: This document describes the Picklist Functionality for Store Transfer Fulfillment.
 ---
 
----
-
 # Transfer Order Picklist
 
 The Picklist provides a detailed list of items in a Transfer Order (TO) to support accurate packing and tracking. You can generate a PDF and use it as a checklist while preparing a shipment to transfer.  
