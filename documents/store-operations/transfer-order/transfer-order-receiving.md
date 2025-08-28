@@ -67,7 +67,7 @@ Sometimes, certain items in a TO are canceled at the source and won’t be shipp
 - For items that are partially arrived, manually enter the quantities.  
 - Tap `Receive and Close`.  
 - In the review modal, select the checkboxes for the items you want to close, and then tap the Save icon.  
-- In the confirmation pop-up, tap Proceed.  
+- In the confirmation pop-up, tap `Proceed`.  
 
 The TO stays under the Open tab for the items still pending, but the closed items also appear under the Completed tab for reference.  
 
