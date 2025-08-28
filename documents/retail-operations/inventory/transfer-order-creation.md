@@ -20,8 +20,8 @@ You can create a new TO in the Transfers App to move inventory between facilitie
   Select a product store, if there is only one store available, it will be selected by default.  
 
 - **Origin:**  
-  Click `Assign` button next to “Destination”,  or click the facility name if one is already selected by default.  
-  In the dialog, select the receiving facility.  
+  Click `Assign` button next to “Origin”,  or click the facility name if one is already selected by default.  
+  In the dialog, select the origin facility.  
   Click Save.  
 
 - **Destination:**  
