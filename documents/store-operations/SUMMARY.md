@@ -24,15 +24,15 @@
   * [Completed Orders](fulfillment/completed-orders.md)
   * [Rejection](fulfillment/rejection.md)
   * [Gift Card Activation](fulfillment/gift-card-activation.md)
-  * [Picking App](fulfillment/picking-app.md)
+  * [Transfer Order Creation](fulfillment/transfer-order.md)
   * [Settings Page](fulfillment/fulfillment-setting-page.md)
   * [Order Lookup](fulfillment/order-lookup.md)
-  * [Transfer Order Creation](fulfillment/transfer-order.md)
   * [Shipping Label Generations](fulfillment/shipping-label-generation.md)
   * [Change Shipping Method](fulfillment/change-shipping-method.md)
   * [Troubleshooting](fulfillment/troubleshooting/README.md)
     * [Change Language](fulfillment/troubleshooting/change-language.md)
     * [Unable to Login](fulfillment/troubleshooting/unable-to-login.md)
+* [Picking App](fulfillment/picking-app.md)
 * [In-Store Returns](in-store-returns/README.md)
 
 ## Inventory
