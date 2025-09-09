@@ -19,7 +19,7 @@
   * [Troubleshooting](bopis/troubleshooting/README.md)
     * [Notification Error](bopis/troubleshooting/notifications-error.md)
 * [Fulfillment](fulfillment/README.md)
-  * [Order Fulfillment](fulfillment/ship-orders.md)
+  * [Open Orders](fulfillment/open-orders.md)
   * [Service Products](fulfillment/service-products.md)
   * [Kit Products](fulfillment/kit-products.md)
   * [Rejection](fulfillment/rejection.md)
