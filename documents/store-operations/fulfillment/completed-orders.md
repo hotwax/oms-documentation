@@ -85,7 +85,7 @@ The Order Details Page shows all the important information related to an order i
 - Each product in the order is shown with its name, SKU, size, and quantity.  
 - Store staff can tap the `Ship Order` button to start shipping.  
 - They can use `Print Customer Letter` to download the packing slip.  
-- If the item has been canceled, they can tap `Unpack`.  
+- If any changes have to be made, they can tap `Unpack`.  
 - Below the product details, the delivery address and shipping method are shown.  
 
 Associates can select the carrier and method, then tap `Generate Label` or enter the tracking code manually.  
