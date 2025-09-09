@@ -68,7 +68,7 @@ The TO can only be edited until it is in the Created state.
 
 ### Upload CSV for Transfer Order
 
-When creating a TO for multiple products, the Fulfillment App allows support to upload a CSV for multiple products.
+When creating a TO for multiple products, the Fulfillment App supports uploading a CSV for multiple products.
 
 To efficiently create a TO with multiple products, follow these steps:  
 
