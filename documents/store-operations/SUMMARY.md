@@ -18,7 +18,7 @@
   * [Settings Page](bopis/settings-page.md)
   * [Troubleshooting](bopis/troubleshooting/README.md)
     * [Notification Error](bopis/troubleshooting/notifications-error.md)
-* [Fulfillment](fulfillment/README.md)
+* [Fulfillment App](fulfillment/README.md)
   * [Open Orders](fulfillment/open-orders.md)
   * [In Progress Orders](fulfillment/in-progress.md)
   * [Completed Orders](fulfillment/completed-orders.md)
