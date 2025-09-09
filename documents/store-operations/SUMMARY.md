@@ -23,7 +23,7 @@
   * [In Progress Orders](fulfillment/in-progress.md)
   * [Completed Orders](fulfillment/completed-orders.md)
   * [Rejection](fulfillment/rejection.md)
-  * [Gift Card Activation](fulfillment/gift-card-activation.md)
+  * [Gift Card and Kit Products](fulfillment/gift-card-and-kit-product.md)
   * [Transfer Order Creation](fulfillment/transfer-order.md)
   * [Settings Page](fulfillment/fulfillment-setting-page.md)
   * [Order Lookup](fulfillment/order-lookup.md)
