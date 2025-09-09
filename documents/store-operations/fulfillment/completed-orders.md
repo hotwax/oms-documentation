@@ -46,7 +46,7 @@ Store associates can also ship orders individually. Store associates can see ord
 Each order card shows action buttons such as:  
 - `Ship Now`  
 - `Print Shipping Label` 
-- `Print Customer Letter`(packing slip)  
+- `Print Customer Letter` (packing slip)  
 - `Regenerate Shipping Label`  
 
 When there is an issue with the shipping label, a `Shipping Label Error` button appears. Store associates can use the `Regenerate Shipping Label` button in cases like:  
