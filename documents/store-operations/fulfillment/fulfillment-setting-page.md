@@ -79,7 +79,7 @@ This setting makes sure that products are scanned before being marked as shipped
 When [Partial Rejection is enabled](rejection.md), individual items get rejected from a facility without impacting the rest of the order.
 
 ### Allow Collateral Rejection
-[Collateral Rejection](documents/store-operations/fulfillment/rejection.md) helps manage situations where the product in a rejected order item is part of multiple pending orders at a facility. When enabled, rejecting an item in one order automatically rejects the same product in all other pending orders.
+[Collateral Rejection](rejection.md) helps manage situations where the product in a rejected order item is part of multiple pending orders at a facility. When enabled, rejecting an item in one order automatically rejects the same product in all other pending orders.
 
 ### Affect QOH on Rejection
 [The Affect QOH on Rejection](rejection.md) toggle provides control over inventory adjustments during order rejections.
