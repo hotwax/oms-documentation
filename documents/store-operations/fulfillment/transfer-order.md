@@ -1,6 +1,6 @@
 ---
 description:
-   The Transfer Orders Page helps store staff create and fulfill TOs easily. They can view all existing TOs, the current status of TOs, and    create new ones.  
+   The Transfer Orders Page helps store staff create and fulfill TOs easily. They can view all existing TOs, the current status of TOs, and create new ones.  
 ---
 
 # Transfer Order
