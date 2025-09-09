@@ -21,7 +21,7 @@
 * [Fulfillment](fulfillment/README.md)
   * [Open Orders](fulfillment/open-orders.md)
   * [In Progress Orders](fulfillment/in-progress.md)
-  * [Kit Products](fulfillment/kit-products.md)
+  * [Completed Orders](fulfillment/completed-orders.md)
   * [Rejection](fulfillment/rejection.md)
   * [Gift Card Activation](fulfillment/gift-card-activation.md)
   * [Picking App](fulfillment/picking-app.md)
