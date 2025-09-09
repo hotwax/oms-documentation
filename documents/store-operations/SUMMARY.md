@@ -20,7 +20,7 @@
     * [Notification Error](bopis/troubleshooting/notifications-error.md)
 * [Fulfillment](fulfillment/README.md)
   * [Open Orders](fulfillment/open-orders.md)
-  * [Service Products](fulfillment/service-products.md)
+  * [In Progress Orders](fulfillment/in-progress.md)
   * [Kit Products](fulfillment/kit-products.md)
   * [Rejection](fulfillment/rejection.md)
   * [Gift Card Activation](fulfillment/gift-card-activation.md)
