@@ -24,7 +24,7 @@
   * [Completed Orders](fulfillment/completed-orders.md)
   * [Rejection](fulfillment/rejection.md)
   * [Gift Card and Kit Products](fulfillment/gift-card-and-kit-product.md)
-  * [Transfer Order Creation](fulfillment/transfer-order.md)
+  * [Transfer Order](fulfillment/transfer-order.md)
   * [Settings Page](fulfillment/fulfillment-setting-page.md)
   * [Order Lookup](fulfillment/order-lookup.md)
   * [Shipping Label Generations](fulfillment/shipping-label-generation.md)
