@@ -140,4 +140,4 @@ Once the items are fulfilled, associates can tap the `Create Shipment` button in
 |------------------------------|-----------------------------------------------------------------------------|
 | `ORD_TRANSFER_ORDER_ADMIN`   | Grants full access to Transfer Orders, including viewing, creating, and updating. |
 | `ORD_TRANSFER_ORDER_VIEW`    | Allows the user to only view the Transfer Orders page in the left-hand menu.    |
-| `ORD_TRANSFER_ORDER_CREATE`  | Allows the user to create and update transfer orders.                           |
+| `ORD_TRANSFER_ORDER_CREATE`  | Allows the user to create and update transfer orders. |
