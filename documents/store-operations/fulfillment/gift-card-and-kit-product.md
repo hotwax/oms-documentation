@@ -1,6 +1,6 @@
 ---
 description: >-
- This page explains how gift cards and kit products can be fulfilled in the HotWax Fulfillment App.
+ This page outlines the process of gift card activation and kit product fulfillment within the HotWax Fulfillment App.
 ---
 
 # Gift Card and Kit Product
