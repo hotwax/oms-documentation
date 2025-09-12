@@ -14,7 +14,6 @@ Defines a remote system endpoint to which messages (emails) will be sent.
     description="Send email to [instance name]" 
     sendUrl="https://a.klaviyo.com/api/" 
     systemMessageRemoteId="KLAVIYO"/>
-````
 
 ## 2. Communication Gateway Config
 
