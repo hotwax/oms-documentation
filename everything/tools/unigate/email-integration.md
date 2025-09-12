@@ -109,7 +109,7 @@ Defines the Unigate integration endpoint for sending/receiving messages.
     systemMessageRemoteId="UNIGATE_CONFIG" 
     description="Unigate configuration for shipping and communication integrations"
     sendUrl="https://[instance name]-uat.hotwax.io/rest/s1/unigate" 
-    publicKey="" 
+    publicKey="[YOUR_PUBLIC_KEY]"
     remoteId="KLAVIYO" 
     internalId="[instance name]"/>
 ```
