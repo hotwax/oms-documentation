@@ -149,7 +149,7 @@ Configures store-level email settings to use Unigate.
 ```xml
 <org.apache.ofbiz.product.store.ProductStoreEmailSetting 
     emailType="READY_FOR_PICKUP" 
-    productStoreId="STORE" 
+    productStoreId="[your_product_store_id]"
     subject="Ready To Pick-Up Notification" 
     systemMessageRemoteId="UNIGATE_CONFIG"/>
 ```
