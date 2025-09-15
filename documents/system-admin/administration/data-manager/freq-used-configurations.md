@@ -377,9 +377,12 @@ When importing product ERP codes, certain fields must be filled in mandatorily. 
 
 | S.No. | Field Name                | Description                                                                     |
 | ----- | ------------------------- | ------------------------------------------------------------------------------- |
-| 1     | productId                 | HC Unique identifier for the product.                                              |
-| 2     | good-identification-type  | The type of identification. For ERP codes, the value should always be `ERP_ID`. |
-| 3     | good-identification-value | The ERP code assigned to the product.                                           |
+| 1     | productId                 | HC Unique identifier for the product.                                           |
+| 2     | id-type                   | Secondary identifier type such as `UPCA` or `SKU`.                              |
+| 3     | id-value                  | The value corresponding to the identifier type.                                 |
+| 4     | good-identification-type  | The type of identification. For ERP codes, the value should always be `ERP_ID`. |
+| 5     | good-identification-value | The ERP code assigned to the product.                                           |
+
 
 ---
 
