@@ -367,3 +367,35 @@ Similarly, users can export the CSV of PO ATP from the **EXIM** page in the **Pr
 | 5     | product-sku      | The Stock Keeping Unit (SKU) represents the product.                                           |
 | 6     | ATP              | Available-to-Promise quantity for the product based on current inventory data.                 |
 
+## Import Product ERP Code
+
+Instead of updating ERP codes individually through the `ViewProduct` page, retailers can upload a CSV file for multiple products at once.
+
+To **import a Product ERP Code CSV**, go to the **EXIM** page under the **Imports** tab in the **PIM** section and click on **Create and Update Product ERP Code**.
+
+When importing product ERP codes, certain fields must be filled in mandatorily. Below is the list of required fields:
+
+| S.No. | Field Name                | Description                                                                     |
+| ----- | ------------------------- | ------------------------------------------------------------------------------- |
+| 1     | productId                 | HC Unique identifier for the product.                                              |
+| 2     | good-identification-type  | The type of identification. For ERP codes, the value should always be `ERP_ID`. |
+| 3     | good-identification-value | The ERP code assigned to the product.                                           |
+
+---
+
+### Example: Create a Product ERP Code
+
+```
+productId,good-identification-type,good-identification-value
+100182,ERP_ID,31-1350
+```
+
+---
+
+### Example: Update a Product ERP Code
+
+```
+productId,good-identification-type,good-identification-value
+100182,ERP_ID,31-1351
+```
+
