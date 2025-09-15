@@ -386,8 +386,8 @@ When importing product ERP codes, certain fields must be filled in mandatorily. 
 ### Example: Create a Product ERP Code
 
 ```
-productId,good-identification-type,good-identification-value
-100182,ERP_ID,31-1350
+productId,id-type id-value,good-identification-type,good-identification-value
+100182,UPCA, 69684750301, ERP_ID,31-1350
 ```
 
 ---
@@ -395,7 +395,7 @@ productId,good-identification-type,good-identification-value
 ### Example: Update a Product ERP Code
 
 ```
-productId,good-identification-type,good-identification-value
-100182,ERP_ID,31-1351
+productId,id-type id-value,good-identification-type,good-identification-value
+100182,UPCA, 69684750301, ERP_ID,31-1351
 ```
 
