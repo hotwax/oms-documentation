@@ -61,14 +61,14 @@ All stores that participate in online sales will post their inventory to the con
 {% endcontent-ref %}
 
 
-### Jobs responsible to push inventory to shopify
+### Jobs Responsible to Push Inventory to Shopify
 
   1. **Hard Sync**
   The `Hard Sync` job is used to synchronize the inventory of all the products from HotWax to Shopify once a day. It compares inventory counts between Shopify and HotWax Commerce, generates a delta file in GraphQL format for any differences, and sends it to Shopify, which updates the counts by recording those deltas.  
   
   **Note:** The `ShopifyFacilityGroupId` parameter in this job can be used to exclude inventory from specific facilities in that group.
     
-    Click [here](https://docs.hotwax.co/documents/retail-operations/workflow/job-workflows/inventory#hard-sync) to know more about Hard Sync job.
+  Click [here](https://docs.hotwax.co/documents/retail-operations/workflow/job-workflows/inventory#hard-sync) to know more about Hard Sync job.
 
   2.  **Upload Inventory Variances**
   
