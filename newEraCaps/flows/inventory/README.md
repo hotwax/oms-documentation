@@ -52,7 +52,7 @@ New Era Caps uses a manual inventory upload procedure because their warehouse se
 
 ## Posting inventory online
 
-HotWax pushes available inventory levels to Shopify. Because New Era Caps does not use Shopify POS in Japan, HotWax will map store inventory to store facilities in Shopify since now they have had POS locations established on Shopify.
+HotWax will map store inventory to store's in in Shopify since NEC have POS locations established on Shopify.
 
 All stores that participate in online sales will post their inventory to the consolidated inventory location on Shopify. During the add to cart experience New Era Caps will add a soft allocation to the order items that the customer has selected to have shipped from store to their house at a higher shipping fee.
 
@@ -76,6 +76,6 @@ All stores that participate in online sales will post their inventory to the con
 
 ## Scheduled Restock
 
-HotWax will offer an option to allow retailers to schedule an inventory restock for products. Scheduled restocks are used by retailers when they have hyped products which are released at exact points of day and time, and for unique and limited inventory products, customers or even bots will have the merchants website and loaded up ready to purchase the new release product before it goes out of stock. Even though inventory has arrived physically at the fulfillment locations,
+HotWax will offer an option to allow retailers to schedule an inventory restock for products. Scheduled restocks are used by retailers when they have hyped products which are released at exact points of day and time, and for unique and limited inventory products, customers or even bots will have the merchants website and loaded up ready to purchase the new release product before it goes out of stock. Even though inventory has arrived physically at the fulfillment locations.
 
 Click [here](https://docs.hotwax.co/documents/retail-operations/inventory/inventory-upload/schedule-restock) to know more about scheduled restock.
