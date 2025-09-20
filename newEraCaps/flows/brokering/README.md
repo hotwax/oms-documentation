@@ -21,9 +21,10 @@ PROD
 ```
 
 
-Online shipping orders are always routed to the warehouse unless the customer has selected a store that they want the product to be shipped from when adding the item to their cart. In the event that an order item contains a soft allocated ship-from facility, the OMS will read the pre-selected facility and allocate those order items to the respective locations for fulfillment.
+Online shipping orders are routed to the warehouse by default, unless the customer selects a store for shipping when adding the item to their cart. In the event that an order item contains a soft allocated ship-from facility, the OMS will read the pre-selected facility and allocate those items to the respective store for fulfillment.  
 
-When this kind of soft allocated order is imported, the soft allocated items of the order will be directly allocated to that store upon import and skip the normal brokering algorithm. Because customers must explicitly choose which items they want to be shipped from store, the OMS will split the items not soft allocated and leave them in the brokering queue to be brokered to the warehouse at scheduled times.
+When such a soft allocated order is imported, the allocated items bypass the normal brokering algorithm and are immediately assigned to the chosen store. Items not soft allocated remain in the brokering queue and are later routed to the warehouse during scheduled brokering runs. This ensures that only the items explicitly chosen by customers for store shipping are fulfilled from stores, while all others follow the standard warehouse fulfillment process.
+
 
 In the event that a store cannot fulfill an order and must reject it for reallocation, those orders will not be allocated to the warehouse because soft allocation only happens when the inventory is not available in the warehouse but in stores.
 
@@ -55,9 +56,7 @@ The JsonListData calls the following services:
 1. deleteExternalFulfillmentOrderItem
 2. updateOrderAttr
 
-Job name to consume these files: {to be added}
-
-Now that the External Fulfillment Order Item record is deleted for the items that need to be reshipped, the brokered items feed will automatically include these items the next time it runs. 
+Now that the External Fulfillment Order Item record is deleted for the items that need to be reshipped, when these items are brokered again a new External Fulfillment Order Item record will be created. At the same time, the cancelled item’s fulfillment status will be updated to `Reject`.
 
 When processing the brokered items feed, NiFi checks for orders that have an order attribute of Reshipped: Pending and logs each of these order Ids into a CSV. These orders are submitted to the OMS to have their order attribute value updated to "Sent"
 
