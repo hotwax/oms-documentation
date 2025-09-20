@@ -11,13 +11,13 @@ All stores that participate in online sales will post their inventory to their r
 
 ## BOPIS
 
-Flagship will provide a custom store pickup experience on the product detail page, allowing customers to select their preferred pickup location. Since New Era Caps already has a store inventory checking feature in place, Flagship will reuse that interface as much as possible and remap the inventory lookup to the OMS’s [checkInventory API](https://docs.hotwax.co/documents/integrate-with-hotwax/hotwax-commerce-api-and-data-feeds/inventory/check-inventory).  
+Flagship will provide a custom store pickup experience on the product detail page, allowing customers to select their preferred pickup location. Since New Era Caps already has a store inventory checking feature in place, Flagship will reuse that interface as much as possible and remap the inventory lookup to the OMS’s [checkInventory API](https://docs.hotwax.co/documents/integrate-with-hotwax/hotwax-commerce-api-and-data-feeds/inventory/check-inventory).
 
 When customers choose a store for pickup, Flagship’s custom interface will add the necessary line item properties to the product. These properties are then parsed by the OMS when importing the order from Shopify to ensure accurate fulfillment.
 
 ## Ship from Store
 
-Shipping products from stores is significantly more expensive for New Era Caps than shipping from their warehouse. However, if an item is not available at the warehouse, New Era Caps still wants to give customers the option to pay a higher fee and have the item shipped from a nearby store. This product detail page experience is developed by Flagship and leverages HotWax Commerce’s `Soft Allocation API`. Refer to this [manual]((https://docs.hotwax.co/documents/retail-operations/orders/order-management/soft-allocation)) for detailed instructions on how soft allocated orders are configured in HotWax.  
+Shipping products from stores is significantly more expensive for New Era Caps than shipping from their warehouse. However, if an item is not available at the warehouse, New Era Caps still wants to give customers the option to pay a higher fee and have the item shipped from a nearby store. This product detail page experience is developed by Flagship and leverages HotWax Commerce’s `Soft Allocation API`. Refer to this [manual](https://docs.hotwax.co/documents/retail-operations/orders/order-management/soft-allocation) for detailed instructions on how soft allocated orders are configured in HotWax.
 
 Along with covering the extra cost of shipping from stores, New Era Caps also expects that displaying nearby store inventory with the option of free pickup but paid shipping will encourage more customers to choose in-store pickup rather than home delivery. 
 
