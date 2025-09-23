@@ -38,7 +38,7 @@ Make sure your product store ID ends with `_store` for accurate product store re
 Adjust the additional Product Store settings according to your specific requirements for the following details:
 
 | **Attribute**                | **Value**                                     | **Description**                                                                 | **Example**                                                                 |
-|-------------------------|-----------------------------------------------|---------------------------------------------------------------------------------|-----------------------------------------------------------------------------|
+|-----------------------------|-----------------------------------------------|---------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
 | BARCODE_IDEN_PREF       | UPCA                                          | Specifies the primary barcode type for scanning.                                | Associates use UPC-A instead of QR/EAN.                                     |
 | BOPIS_PART_ODR_REJ      | N                                             | Controls if associates can reject specific items in a BOPIS order.              | Y → Reject a single item from a 3-item order if unavailable.                 |
 | BRK_SHPMNT_THRESHOLD    | 50                                            | Splits order ship group if item total > threshold.                              | Threshold = 5 → 7 items → splits into multiple shipments.                    |
