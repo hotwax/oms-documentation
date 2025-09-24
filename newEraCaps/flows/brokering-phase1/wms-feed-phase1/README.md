@@ -1,10 +1,21 @@
 # WMS Feed
 
-## WMS Feed
+## WMS Feed/ Brokering Feed 
+
+When the OMS allocates an order to the warehouse, it generates a brokering feed containing details required by the WMS system to fulfill the order such as order items, quantities, and the shipping method etc. This feed acts as the medium through which orders are transmitted to the warehouse for fulfillment.  
+
+In essence, the WMS Feed (also called the Brokering Feed) is a structured text format SHP file which OMS shares to WMS to fulfill orders. Each SHP file, generated in a fixed-byte format, can include up to 300 orders per file, as supported by WMS.
+
+#### How OMS Prepares the WMS Feed  
+
+HotWax runs scheduled batch jobs for generating this file. During each run, the batch job collects all orders allocated to the warehouse since its last execution, compiles them into a .txt file, and uploads it to a shared SFTP location. The New Era Caps WMS system then consumes this file to initiate fulfillment.  
+
+To maintain smooth and timely operations, this job is configured to run every 20 minutes, ensuring continuous synchronization between OMS and the warehouse.  
+
 
 The WMS feed is a fixed byte length format rather than a CSV or a JSON.
 
-### What is a fixed byte file format?
+## What is a fixed byte file format?
 
 A fixed byte file format, also known as a fixed-width file format, is a type of flat file where each field or column has a fixed width or length. In contrast to delimited file formats (such as CSV or tab-delimited), where fields are separated by a specific delimiter character (like a comma or tab), fixed-width files allocate a predetermined number of characters for each field, and the data is organized accordingly.
 
