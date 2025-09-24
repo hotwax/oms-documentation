@@ -26,7 +26,7 @@ If the payment processing is done on a redirected link, then the payment process
 
 <ShopifyShopTypeMapping mappedKey="Amazon Pay" mappedTypeId="SHOPIFY_PAYMENT_TYPE" mappedValue="EXT_SHP_AMZN_PAY" shopId="SHOP"/>
 
-<ShopifyShopTypeMapping mappedKey="あと払い（ペイディ)" mappedTypeId="SHOPIFY_PAYMENT_TYPE" mappedValue="EXT_SHP_PAIDY" shopId="SHOP"/>
+<ShopifyShopTypeMapping mappedKey="あと払い（ペイディ）" mappedTypeId="SHOPIFY_PAYMENT_TYPE" mappedValue="EXT_SHP_PAIDY" shopId="SHOP"/>
 
 ```
 
