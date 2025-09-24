@@ -10,7 +10,7 @@ Currently, all orders are fulfilled only from the warehouse. The brokering engin
 ## Reshipping Flow 
 The WMS software used by New Era Caps is not able to differentiate between two separate shipments of the same order when creating its CSV feed of fulfilled orders. Due to this rigidity, if the WMS cannot fulfill an order item, then CSR will ask the customer whether to cancel the item or replace it with a different item.
 
-If the item is canceled then the OMS will reship the order to WMS. When CSRs cancel an order item on Shopify, they add a “Reshipped” tag on the order to indicate that HotWax needs to resend it to the WMS.
+If the item is canceled, then the OMS will reship the order to WMS. When CSR cancels an order item on Shopify, Hotwax adds a “Reshipped” tag on the order to indicate that it needs to be resent to the WMS.
 
 If the item is replaced with another item then the whole order is canceled manually by CSR and the new order is created on Shopify.
 
