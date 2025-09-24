@@ -3,30 +3,13 @@ description: >-
  Dive into New Era Caps's innovative fulfillment strategies, leveraging warehouse location to fulfill online shipping orders
 
 ---
-
-
-
 # Fulfillment
 
 ## Completed Feed
 
-At the end of each day, orders shipped from the WMS are sent to HotWax with tracking details. HotWax uses the facility ID and order ID to identify which shipgroup of the order has been fulfilled by the WMS.
+At the end of each day, orders shipped from the WMS are sent to HotWax with tracking details through shared SFTP locations. HotWax uses the facility ID and order ID to identify which shipgroup of the order has been fulfilled by the WMS.
 
 ## CSV Schema
-
-**SFTP Path**
-
-UAT
-
-```
-/home/newera-uat-sftp/hotwax/Testing_Hotwax/tracking_info
-```
-
-PROD
-
-```
-newera_prod_hw/tracking_info
-```
 
 | DO#        | 日付       | 個数 | 問い合せNo       | 便名   |
 | ---------- | -------- | -- | ------------ | ---- |
@@ -55,13 +38,7 @@ Due to the language of the headers in the CSV, it may be a good idea to consider
 
 ## Import Job
 
-To sync the fulfillment back into the OMS from the warehouse, a job will be used to import the tranformed fulfilled order feed.
-
-**SFTP Path**
-
-```
-/home/newera-uat-sftp/hotwax/oms/fulfilled_orders
-```
+To sync the fulfillment back into the OMS from the warehouse, a batch job is used to import the transformed fulfilled order feed provided by the WMS system through a shared SFTP location.
 
 **Job Name**
 
