@@ -13,7 +13,7 @@ If the payment processing is done on a redirected link, then the payment process
 
 <PaymentMethodType description="Amazon Pay" paymentMethodTypeId="EXT_SHP_AMZN_PAY"/>
 
-<PaymentMethodType description="Paidy" paymentMethodTypeId="EXT_SHP_ PAIDY"/>
+<PaymentMethodType description="Paidy" paymentMethodTypeId="EXT_SHP_PAIDY"/>
 ```
 
 **Payment mapping data**
