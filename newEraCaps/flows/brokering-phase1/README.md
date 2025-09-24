@@ -18,6 +18,6 @@ The WMS used by New Era Caps cannot differentiate between multiple shipments of 
 ## How “Reshipped” works in HotWax Commerce
 When the CSR partially cancels an order on Shopify, the cancellation details flow into the OMS. HotWax identifies recently canceled warehouse order items and marks those orders with an order-level attribute indicating they have been reshipped through a transformation flow. The flow also clears records of items fulfilled through an external system, except for those that were canceled.
 
-HotWax tracks the Reshipping tag as ‘Pending’ until the order is sent to WMS again, and updates it to ‘Sent’ once included in the WMS feed. 
+HotWax tracks the Reshipping tag as `Pending` until the order is sent to WMS again, and updates the status to `Sent`.
 
 Now, since canceled items are no longer located at the facility they were brokered to, Flow uses the Order Facility Change history to identify canceled items that were at the warehouse facility before being canceled. This entity will also contain details of which shipgroup the item was removed from, helping identify which order items to delete the fulfillment history for. This flow then puts the file of these orders on SFTP.
