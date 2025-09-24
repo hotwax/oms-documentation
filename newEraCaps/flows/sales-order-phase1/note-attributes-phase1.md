@@ -26,7 +26,7 @@ The integration involves mapping delivery date and time information from Shopify
     "name": "配送時間帯",
     "value": "18:00-20:00"
   }
-],
+]
 ```
 
 ### Intermediate Step: Order Attribute Mapping in Shopify
