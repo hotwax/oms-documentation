@@ -26,7 +26,7 @@ The integration involves mapping delivery date and time information from Shopify
     "name": "配送時間帯",
     "value": "18:00-20:00"
   }
-]
+],
 ```
 
 ### Intermediate Step: Order Attribute Mapping in Shopify
@@ -37,7 +37,7 @@ The integration involves mapping delivery date and time information from Shopify
 ### Sync data to WMS
 
 * **Data Transformation:**
-  * During the integration to WMS from OMS process, NiFi maps the relevant order attributes to fields in the WMS feed file.
+  * During the integration to WMS from the OMS process, Transformation flows map the relevant order attributes to fields in the WMS feed file.
 * **Fields Receiving Delivery Date and Time:**
   1. **Field in WMS Feed:** S-7 (Promised Delivery Date)
   2. **Field in WMS Feed:** S-9 (Promised Delivery Time Zone)
