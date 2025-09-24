@@ -13,7 +13,7 @@ If the payment processing is done on a redirected link, then the payment process
 
 <PaymentMethodType description="Amazon Pay" paymentMethodTypeId="EXT_SHP_AMZN_PAY"/>
 
-<PaymentMethodType description="Paidy" paymentMethodTypeId="EXT_SHP_PAIDY"/>
+<PaymentMethodType description="Paidy" paymentMethodTypeId="EXT_SHP_ PAIDY"/>
 ```
 
 **Payment mapping data**
@@ -26,11 +26,11 @@ If the payment processing is done on a redirected link, then the payment process
 
 <ShopifyShopTypeMapping mappedKey="Amazon Pay" mappedTypeId="SHOPIFY_PAYMENT_TYPE" mappedValue="EXT_SHP_AMZN_PAY" shopId="SHOP"/>
 
-<ShopifyShopTypeMapping mappedKey="あと払い（ペイディ）" mappedTypeId="SHOPIFY_PAYMENT_TYPE" mappedValue="EXT_SHP_PAIDY" shopId="SHOP"/>
+<ShopifyShopTypeMapping mappedKey="あと払い（ペイディ)" mappedTypeId="SHOPIFY_PAYMENT_TYPE" mappedValue="EXT_SHP_PAIDY" shopId="SHOP"/>
 
 ```
 
-**Payments types from Shopify**
+\*\* Payments types from shopify\*\*
 
 | Payment Keys                   | Description           |
 | ------------------------------ | --------------------- |
@@ -38,5 +38,3 @@ If the payment processing is done on a redirected link, then the payment process
 | 代金引換 or cash on delivery (cod) | Cash on Delivery      |
 | amazon                         | Amazon Pay            |
 | paidy or ペイディ                  | Paidy                 |
-
-
