@@ -2,14 +2,16 @@
 
 ## Custom Order Import
 
-The custom order import in HotWax Commerce is designed to integrate Shopify orders into the system based on each client’s specific requirements. This flow involves transforming the order JSON using Apache NiFi and making client-specific adjustments for seamless import into HotWax Commerce.
+The custom order import in HotWax Commerce is designed to import Shopify orders into the system based on the custom requirements. 
 
 The Custom Order Import Flow in HotWax Commerce:
 
 * Handles COD Fee calculations, splitting them into tax and actual fee components.
 * Maps requested delivery dates and times to the appropriate fields in the `order_item` entity.
-* Uses Apache NiFi for transformation and a custom order import job for processing.
+* Uses transformation flows and a custom order import job for processing.
 * Ensures accurate and client-specific order details are imported into the system.
+
+
 
 ***
 ## **Step 1: Import Orders Job**
@@ -21,13 +23,11 @@ The Custom Order Import Flow in HotWax Commerce:
 
 When the job runs, it downloads new order JSON files from Shopify.
 
-* **SFTP Path**: `./home/newera-uat-sftp/sync_contents/datamanager/imported/DNLD_ORDR`
-
 ***
 
-## **Step 2: NiFi Transformation**
+## **Step 2: Transformation**
 
-NiFi picks up the downloaded JSON files from the SFTP path and processes the following attributes from the payload:
+Transformation flow picks up the downloaded JSON files from the SFTP path and processes the following attributes from the payload:
 
 ### **Attributes in the JSON Payload**
 
@@ -38,6 +38,7 @@ NiFi picks up the downloaded JSON files from the SFTP path and processes the fol
   {"name": "配送時間帯", "value": "18:00-20:00"}
 ]
 ```
+
 
 ### **1. COD Fee**
 
@@ -70,8 +71,7 @@ NiFi picks up the downloaded JSON files from the SFTP path and processes the fol
 
 ## **Step 3: Place Transformed JSON Back to SFTP**
 
-* NiFi places the transformed JSON file on the SFTP path:\
-  **`/home/newera-uat-sftp/hotwax/oms/CustomOrderImport`**
+* Transformation flows places the transformed JSON file on the dedicated SFTP path
 
 ***
 
