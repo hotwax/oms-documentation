@@ -5,10 +5,7 @@ description: >-
 ---
 
 # Products
-
-New Era Caps manages a wide variety of products and often introduces new launches. In such cases, it becomes necessary to keep product data updated in both Shopify and HotWax Commerce for smooth processing. Accurate product information in OMS is important for order management and inventory tracking.  
-
-For a retailer like New Era Caps, keeping product information accurate across systems is essential. If product details in Shopify and HotWax Commerce are not aligned, it can lead to issues such as incorrect availability or delayed orders.  
+New Era Caps manages a wide range of products and frequently launches new products. To maintain accurate product data across Shopify and HotWax Commerce, ensuring all products are correctly represented in both systems, the HotWax product import workflow enables this synchronization.
 
 ## Product Sync from Shopify
 
