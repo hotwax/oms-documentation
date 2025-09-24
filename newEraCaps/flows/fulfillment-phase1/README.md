@@ -35,7 +35,7 @@ newera_prod_hw/tracking_info
 | 1000880002 | 20230420 | 1  | 361054813895 | 佐川急便 |
 | 1000880008 | 20230420 | 1  | 361054809721 | 佐川急便 |
 
-Due to the lanuage of the headers in the CSV, it may be a good idea to consider mapping header indexes for easier auditing.
+Due to the language of the headers in the CSV, it may be a good idea to consider mapping header indexes for easier auditing.
 
 1. **DO# (Delivery Order Number):**
    * **Data Type:** Numeric
