@@ -1,6 +1,6 @@
 # Header Item
 
-The header item is the first row of a new order in the brokered order feed. Instead of repeating header level details on every time, this file format has a seperate line for header details.
+The header item is the first row of a new order in the brokered order feed. Instead of repeating header level details on every time, this file format has a separate line for header details.
 
 ## Record Kind (S-1)
 
