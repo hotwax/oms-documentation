@@ -12,7 +12,7 @@ For a retailer like New Era Caps, keeping product information accurate across sy
 
 ## Product Sync from Shopify
 
-Products are first created in Shopify, and then OMS picks up these products through scheduled batch jobs. Also in case product details are updated in Shopify such as identification, features, tags or pricing those changes are also captured and updated in HotWax Commerce through the scheduled batch jobs. This ensures that OMS always has the latest catalog
+Products are first created in Shopify, and then OMS picks up these products through scheduled batch jobs. Also in case product details are updated in Shopify such as identification, features, tags or pricing those changes are also captured and updated in HotWax Commerce through the scheduled batch jobs. This ensures that OMS always has the latest catalog.
 
 ## Batch Jobs for Product Sync
 
