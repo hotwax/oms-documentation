@@ -27,13 +27,13 @@ The flow also deletes the External Fulfillment Order Item for all items in the s
 
 Because canceled items are no longer located at the facility they were brokered to, NiFi uses the Order Facility Change history to identify canceled items that were at the warehouse facility before being canceled. This entity will also contain details of which shipgroup the item was removed from, helping identify which order items to delete the fulfillment history for. NiFi puts the file of these orders on SFTP.
 
-**SFTP path of UAT**
+### SFTP path of UAT
 
 ```
 /home/newera-uat-sftp/hotwax/oms/ImportJsonListData
 ```
 
-**SFTP path of PROD**
+### SFTP path of PROD
 ```
 /home/newera-oms-sftp/hotwax/CreateOrderAttributes  
 ```
@@ -50,11 +50,11 @@ A scheduled batch job in HotWax, `generate_WHBrokeredOrderItemsFeed_NEC`, is res
 
 To maintain smooth and timely operations, this job is configured to run every 20 minutes, ensuring continuous synchronization between OMS and the warehouse.  
 
-**SFTP LocationUAT :**  
+### SFTP LocationUAT : 
 ```
 /home/newera-oms-sftp/Testing-Hotwax/from-shopify
 ```
-**SFTP Location PROD:** :
+### SFTP Location PROD:
 ```
 /home/newera-oms-sftp/from-shopify
 ```
