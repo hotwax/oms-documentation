@@ -394,7 +394,7 @@ The Status field (S-86) is not used in the context of the brokered order items f
 
 * **Field Names:** S-87, S-88, S-89, S-90, S-91, S-92, S-93
 * **Length:** 30 for each
-* **Bytes:** 1000, 30, 30, 30, 30, 30, 30 (respectively)
+* **Bytes:** 30, 30, 30, 30, 30, 30, 30 (respectively)
 * **Not Used**
 
 ### Description
