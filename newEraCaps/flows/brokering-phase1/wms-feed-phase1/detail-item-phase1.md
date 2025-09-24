@@ -29,9 +29,9 @@ Used to represent the SAP material and size of an item.
 
 1. Confirmation is required regarding the goodIdentificationTypeId.
 
-**S-65:** Quantity
+## S-65: Quantity
 
-**S-66:** HARDCODE = WH
+## S-66: HARDCODE = WH
 
 ## S-67: Nueve A JAN code
 
