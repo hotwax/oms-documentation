@@ -63,7 +63,7 @@ NiFi picks up the downloaded JSON files from the SFTP path and processes the fol
 ## **Step 3: Place Transformed JSON Back to SFTP**
 
 * NiFi places the transformed JSON file on the SFTP path:\
-  \&#xNAN;**`/home/newera-uat-sftp/hotwax/oms/CustomOrderImport`**
+  **`/home/newera-uat-sftp/hotwax/oms/CustomOrderImport`**
 
 ***
 
