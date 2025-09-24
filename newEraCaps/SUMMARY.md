@@ -30,7 +30,7 @@
     * [Header Item](flows/fulfillment/wms-feed/header-item.md)
     * [Detail Item](flows/fulfillment/wms-feed/detail-item.md)
     * [Completed Feed](flows/fulfillment/wms-feed/complete-order.md)
-* [Sales Order](flows/sales-order)
+* [Sales Order](flows/sales-order/README.md)
   * [Omnichannel Orders](flows/sales-order/omnichannel-orders.md)
   * [Digital Items](flows/sales-order/digital-items.md)
   * [Soft Allocation](flows/sales-order/soft-allocation-flow.md)
