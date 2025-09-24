@@ -93,7 +93,7 @@ Used to represent the SAP material and size of an item.
 * **Bytes:** 20
 * **Type:** Numeric
 * **Description:** Represents the subtotal of the unit prices of items, including VAT, as per the Ruby code.
-* **Conclusion:** This field containts the actual unit cost of the order item, including VAT and item discount amounts.
+* **Conclusion:** This field contains the actual unit cost of the order item, including VAT and item discount amounts.
 * **OMS Value:** Not used, leave Empty
 
 ## S-76: Subtotal of Sales Value (Without VAT)
