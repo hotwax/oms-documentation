@@ -46,7 +46,7 @@ The header item is the first row of a new order in the brokered order feed. Inst
 ## ETA (S-7)
 
 * **Description:** Requested Delivery Date
-* **Position:** 10-10 This field is stored in the orders **Note Attributes** in Shopify and is synced an a seperate *order enrichment* process. It is then store on every order item of the order in the `TBD` field.
+* **Position:** 10-10 This field is stored in the orders **Note Attributes** in Shopify and is synced in a separate *order enrichment* process. It is then stored on every order item of the order in the `TBD` field.
 
 Leave empty when not available on order item.
 
