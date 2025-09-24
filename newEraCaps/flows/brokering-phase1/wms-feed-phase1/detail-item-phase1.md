@@ -10,7 +10,7 @@
 
 * **Length:** 7
 * **Bytes:** 7
-* The line item sequence ID of the order item from the OMS. Padding may need to be added to maintain fixed lenght.
+* The line item sequence ID of the order item from the OMS. Padding may need to be added to maintain fixed length.
 
 ## S-63 Item No.
 
