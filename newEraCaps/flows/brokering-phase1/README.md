@@ -46,7 +46,7 @@ In essence, the WMS Feed (also called the Brokering Feed) is a structured text f
 
 #### How OMS Prepares the WMS Feed  
 
-A scheduled batch job in HotWax, `generate_WHBrokeredOrderItemsFeed_NEC`, is responsible for generating this feed. During each run, the job collects all orders allocated to the warehouse since its last execution, compiles them into a .txt file, and uploads it to a shared SFTP location. The New Era Caps WMS system then consumes this file to initiate fulfillment.  
+A scheduled batch job in HotWax, `generate_WHBrokeredOrderItemsFeed_NEC`, is responsible for generating this feed. During each run, the job collects all orders allocated to the warehouse since its last execution, compiles them into a `.txt` file, and uploads it to a shared SFTP location. The New Era Caps WMS system then consumes this file to initiate fulfillment.  
 
 To maintain smooth and timely operations, this job is configured to run every 20 minutes, ensuring continuous synchronization between OMS and the warehouse.  
 
