@@ -18,11 +18,8 @@ Products are first created in Shopify, and then OMS picks up these products thro
 To support functions like, product creation and product updates, HotWax provides two separate automated functionalities that can also be executed manually when required.  
 
 * **Create New Product**
-This is a scheduled batch job that imports new products from Shopify into HotWax. It runs twice a day, once at midnight (00:00) and once at 3:00 PM (15:00).  
-During each run, the job makes an API call to Shopify and retrieves all products created since the last execution by checking the created_at field in the product JSON. It then creates these new products in OMS.  
+This is a scheduled batch job that imports new products from Shopify into HotWax. The job runs twice daily and fetches new products from Shopify using the `created_at` field. It then creates these new products in OMS.  
 
 * **Update Existing New Products**
 The Import Product Updates job keeps product changes in HotWax aligned with Shopify.  
-It runs four times a day at 12:00 AM, 6:00 AM, 12:00 PM, and 6:00 PM.  
-During each run, the job makes an API call to Shopify and retrieves all products that have been updated since the last execution, using the updated_at field in the product JSON to track changes.  
-Shopify returns this data as a JSON response, which the job then imports into HotWax.  
+It runs every six hours. During each run, the job makes an API call to Shopify and retrieves all products that have been updated since the last execution, using the updated_at field in the product JSON to track changes. Shopify returns this data as a JSON response, which the job then imports into HotWax. 
