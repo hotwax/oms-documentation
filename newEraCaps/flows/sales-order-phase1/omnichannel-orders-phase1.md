@@ -2,14 +2,12 @@
 
 ## Custom Order Import
 
-The custom order import in HotWax Commerce is designed to import Shopify orders into the system based on the custom requirements. 
-
-The Custom Order Import Flow in HotWax Commerce:
-
-* Handles COD Fee calculations, splitting them into tax and actual fee components.
-* Maps requested delivery dates and times to the appropriate fields in the `order_item` entity.
-* Uses transformation flows and a custom order import job for processing.
-* Ensures accurate and client-specific order details are imported into the system.
+The Custom Order Import in HotWax Commerce is designed to bring Shopify orders into the system while accommodating client-specific requirements.
+This flow:
+- Handles Cash on Delivery (COD) fee calculations, splitting them into tax and fee components.
+- Maps requested delivery dates and times to the correct fields in the `order_item` entity.
+- Leverages transformation flows along with a custom import job for processing.
+- Ensures all order details are imported accurately in line with client-specific needs
 
 
 
