@@ -7,9 +7,11 @@ description: >-
 # Products
 New Era Caps manages a wide range of products and frequently launches new products. To maintain accurate product data across Shopify and HotWax Commerce, ensuring all products are correctly represented in both systems, the HotWax product import workflow enables this synchronization.
 
+
 ## Product Sync from Shopify
 
-Products are first created in Shopify, and then OMS picks up these products through scheduled batch jobs. Also in case product details are updated in Shopify such as identification, features, tags or pricing those changes are also captured and updated in HotWax Commerce through the scheduled batch jobs. This ensures that OMS always has the latest catalog.
+Products are first created in Shopify, and then OMS picks up these products through scheduled batch jobs. Also in case product details are updated in Shopify such as identification, features, tags or pricing those changes are also captured and updated in HotWax Commerce through the scheduled batch jobs.
+
 
 ## Batch Jobs for Product Sync
 
