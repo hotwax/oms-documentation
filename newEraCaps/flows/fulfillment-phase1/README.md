@@ -7,7 +7,8 @@ description: >-
 
 ## Completed Feed
 
-At the end of each day, orders shipped from the WMS are sent to HotWax with tracking details through shared SFTP locations. HotWax uses the facility ID and order ID to identify which shipgroup of the order has been fulfilled by the WMS.
+At the end of each day, the WMS sends shipment files with tracking details to HotWax via shared SFTP locations. Using the facility ID and order ID, HotWax identifies the specific ship group within the order that has been fulfilled by the WMS.
+
 
 ## CSV Schema
 
