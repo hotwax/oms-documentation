@@ -4,53 +4,43 @@ description: >-
   real-time POS sales updates to seamless integration with HotWax Commerce.
 ---
 
-# Inventory
+# Inventory Management at New Era Caps
 
-## In Store Inventory
+## In-Store Inventory
+Store inventory counts from Smaregi (POS) are sent once daily to HotWax Commerce through the Flagship middleware. Flagship converts Smaregi’s output into a CSV compatible with HotWax’s Reset Inventory format. The `Reset Inventory File from SFTP` job then processes the file and updates store-level inventory in OMS.
+ Note: This process applies only to retail store inventory, not warehouses.
 
-The Flagship middleware sends store inventory counts for products at retail locations to HotWax Commerce in a file-based integration once a day. The Flagship middleware is responsible for converting the inventory file produced by Smaregi into a CSV format that is compatible with the native OMS Reset Inventory format.  
+## Inventory Lifecycle
+SAP acts as the system of record for inventory at New Era Caps. New receipts flow into the **wholesale bucket** in SAP and are transferred to stores as needed.
 
-(It is important to note that the reset file provided by this system is only for retail stores, and it does not update inventory for warehouse location.)  
+* Store on-hand is tracked in Smaregi and shared daily with HotWax OMS as a complete CSV feed (Smaregi is the source of truth for store inventory).
 
-The `Read Reset File from SFTP` job in the Job Manager App is used to process the reset file in OMS, and thereby update store inventory in OMS.
+* Throughout the day, Smaregi sends API-based variance updates (e.g., sales, damage) with reasons.
+
+* Warehouse adjustments and launch quantities are uploaded directly into HotWax through CSV imports.
 
 
-## Inventory Life cycle
-For New Era Caps, SAP is the main system of record for inventory. When new inventory receipts are created in SAP they are placed in the **wholesale bucket** and are transferred to stores as needed. Store on-hand is managed in Smaregi (POS). Every morning it sends a complete store-by-store CSV to HotWax OMS (**since smaregi is the source of truth on inventory for HotWax**). Throughout the day it posts API updates (sales, damage, etc.) with explicit variance reasons. Warehouse adjustments and scheduled new-launch quantities are captured directly in HotWax via simple CSV uploads, providing OMS with a unified, near-real-time view across warehouses and stores.
-HotWax OMS then publishes location-level availability to Shopify every five minutes. Shopify displays that availability and commits stock when orders are placed, while ongoing variances from HotWax keep Shopify continuously aligned with actual inventory.
-
+This ensures OMS maintains a unified, near real-time view across both warehouse and stores. OMS then publishes location-level availability to Shopify every five minutes, ensuring customers always see accurate stock levels.
 
 ## POS Sales
-
-The Flagship middleware is also responsible for posting inventory adjustments into the OMS to account for POS sales orders recorded in Smaregi. For this for Flagship uses the OMS’s [Update Inventory](https://docs.hotwax.co/documents/integrate-with-hotwax/hotwax-commerce-api-and-data-feeds/inventory/update-inventory) REST API endpoint to update inventory sold by POS sales. This approach allows them to post updates in near real time, helping maintain store inventory accuracy in the OMS, and by extension in Shopify, to avoid overselling online.  
-
-Further, OMS updates the inventory variances in Shopify through the `Upload Inventory Variances` job, which is scheduled every 5 minutes to keep both systems in sync. This job sends inventory deltas (for example, +1 or -1) rather than the full updated inventory.  
+Flagship middleware also updates OMS for inventory sold in stores by posting adjustments via HotWax’s Update Inventory API. These updates keep OMS and Shopify aligned in near real-time, preventing overselling.
+Additionally, OMS pushes inventory deltas to Shopify every five minutes using the Upload `Inventory Variances` job. Instead of sending the full count, this job transmits changes (+1, -1, etc.) filtered by defined reasons such as POS Sale, Cycle Count, or Damage.
 
 ## Warehouse Inventory
+Since New Era Caps’ warehouse also serves B2B operations (not managed in OMS), the merchandising team manually splits B2C inventory. The B2C portion is uploaded into OMS using the Import Create Inventory Variance and Update on Shopify workflow.
 
-New Era Caps uses a manual inventory upload procedure because their warehouse services also services their B2B business which does not flow through the OMS. The merchandising team manually splits inventory between the two channels and then uploads the inventory allotted to B2C sales manually into the OMS, through `Import Create Inventory Variance and Update on shopify` MDM.
+## Publishing Inventory Online
+HotWax ensures Shopify always reflects accurate, location-specific product availability. Each physical store has its own POS location in Shopify. Updates include:
 
-## Posting Inventory Online
-HotWax ensures that the product availability shown on Shopify always matches the actual inventory in the OMS. For NEC, inventory is managed store by store—each physical store has its own POS location in Shopify. HotWax keeps these store-level inventories in sync so that the availability customers see online reflects what’s actually in each store.
-To achieve this, two types of updates are carried out:
-Daily Full Update: Once a day, HotWax refreshes the entire inventory across all store locations. This provides Shopify with a complete and consistent view of products available in stores (excluding the warehouse).
-Real-Time Adjustments: Throughout the day, HotWax also pushes deltas whenever inventory changes are recorded in the OMS. These updates cover both store and warehouse stock, ensuring Shopify reflects the most current availability.
-Together, these updates ensure customers always see accurate stock levels, reduce the risk of overselling, and give store teams reliable visibility into product availability.
+* Daily Full Update (Hard Sync): Once a day, OMS refreshes the full inventory across all store locations.
 
-## Batch Jobs used to Push Inventory to Shopify
+* Real-Time Adjustments: Throughout the day, OMS pushes deltas for changes in both store and warehouse stock.
 
-### Hard Sync
-The `Hard Sync` job is used to synchronize the inventory of all the products from HotWax to Shopify once a day. It compares inventory counts between Shopify and HotWax Commerce, generates a delta file, and sends it to Shopify, which updates the counts by recording those deltas.  
-**Note**:The `ShopifyFacilityGroupId` is a parameter in this job used to push inventory only for the facilities in that group;
-Click[here](https://docs.hotwax.co/documents/retail-operations/workflow/job-workflows/inventory#hard-sync) to know more about Hard Sync job.
+Together, these updates ensure visibility, reduce overselling, and align store and online availability.
+## Batch Jobs for Inventory Sync
+* **Hard Sync**: Runs daily to reconcile HotWax and Shopify inventory across facilities. Uses the `ShopifyFacilityGroupId` parameter to specify which facilities to sync. [Learn more](https://docs.hotwax.co/documents/retail-operations/workflow/job-workflows/inventory#hard-sync).
 
-###  Upload Inventory Variances
-The Upload Inventory Variances job sends inventory adjustments to Shopify every 5 minutes using Shopify GraphQL. During each run, it captures changes that have occurred since the last execution and pushes only selected variance reasons such as POS Sale, Cycle Count, and Damage. These reasons are defined in the `SHPFY_INV_DLT_REASON` group, which is passed as a job parameter to determine which variances need to be pushed.  
+* **Upload Inventory Variances**: Runs every five minutes via Shopify GraphQL to push incremental changes since the last run, filtered by the `SHPFY_INV_DLT_REASON` parameter.
 
 ## Scheduled Restock
-
-HotWax offers an option that allows New Era Caps to schedule inventory restocks for products.  
-Scheduled restocks are especially useful during flash sales or when hyped products are launched at a specific time. This is also applied for unique or limited inventory releases, where customers are ready to purchase the product the moment it becomes available.  
-This ensures that inventory is made available on the website only at the planned release time, even if the stock has already arrived physically at the fulfillment locations.  
-
-Click[here](https://docs.hotwax.co/documents/retail-operations/inventory/inventory-upload/schedule-restock) to know more about scheduled restock.
+HotWax supports scheduled restocks for timed product launches (e.g., flash sales or limited releases). Inventory becomes available on Shopify only at the planned release time, even if stock is already present at the fulfillment location. This ensures smooth, coordinated product drops.
