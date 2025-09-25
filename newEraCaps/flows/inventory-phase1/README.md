@@ -7,8 +7,9 @@ description: >-
 # Inventory Management at New Era Caps
 
 ## In-Store Inventory
-Store inventory counts from Smaregi (POS) are sent once daily to HotWax Commerce through the Flagship middleware. Flagship converts Smaregi’s output into a CSV compatible with HotWax’s Reset Inventory format. The `Reset Inventory File from SFTP` job then processes the file and updates store-level inventory in OMS.
- Note: This process applies only to retail store inventory, not warehouses.
+Store inventory counts from Smaregi (POS) are sent once daily to HotWax Commerce through the Flagship middleware. Flagship converts Smaregi’s output into a CSV compatible with HotWax’s Reset Inventory format. The `Reset Inventory File from SFTP` job then processes the file and updates store-level inventory in OMS.  
+
+**Note**: This process applies only to retail store inventory, not warehouses.
 
 ## Inventory Lifecycle
 SAP acts as the system of record for inventory at New Era Caps. New receipts flow into the **wholesale bucket** in SAP and are transferred to stores as needed.
