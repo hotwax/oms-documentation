@@ -7,8 +7,9 @@ description: >-
 # Inventory Management at New Era Caps
 
 ## In-Store Inventory
-Store inventory counts from Smaregi (POS) are sent once daily to HotWax Commerce through the Flagship middleware. Flagship converts Smaregi’s output into a CSV compatible with HotWax’s Reset Inventory format. The `Reset Inventory File from SFTP` job then processes the file and updates store-level inventory in OMS.
- Note: This process applies only to retail store inventory, not warehouses.
+Store inventory counts from Smaregi (POS) are sent once daily to HotWax Commerce through the Flagship middleware. Flagship converts Smaregi’s output into a CSV compatible with HotWax’s Reset Inventory format. The `Reset Inventory File from SFTP` job then processes the file and updates store-level inventory in OMS.  
+
+**Note**: This process applies only to retail store inventory, not warehouses.
 
 ## Inventory Lifecycle
 SAP acts as the system of record for inventory at New Era Caps. New receipts flow into the **wholesale bucket** in SAP and are transferred to stores as needed.
@@ -43,4 +44,4 @@ Together, these updates ensure visibility, reduce overselling, and align store a
 * **Upload Inventory Variances**: Runs every five minutes via Shopify GraphQL to push incremental changes since the last run, filtered by the `SHPFY_INV_DLT_REASON` parameter.
 
 ## Scheduled Restock
-HotWax supports scheduled restocks for timed product launches (e.g., flash sales or limited releases). Inventory becomes available on Shopify only at the planned release time, even if stock is already present at the fulfillment location. This ensures smooth, coordinated product drops.
+HotWax supports scheduled restocks for timed product launches (e.g., flash sales or limited releases). Inventory becomes available on Shopify only at the planned release time, even if stock is already present at the fulfillment location. This ensures smooth, coordinated product drops. [Learn More](https://docs.hotwax.co/documents/retail-operations/inventory/inventory-upload/schedule-restock#steps-to-schedule-restocking)
