@@ -30,7 +30,7 @@ If the payment processing is done on a redirected link, then the payment process
 
 ```
 
-\*\* Payments types from shopify\*\*
+**Payments types from shopify**
 
 | Payment Keys                   | Description           |
 | ------------------------------ | --------------------- |
