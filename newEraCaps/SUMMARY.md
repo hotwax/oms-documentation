@@ -6,7 +6,7 @@
 ## Flows - Phase 1
 * [Product Store](flows/product-store/README.md)
 * [Products](flows/products-phase1/README.md)
-* [Sales Order](flows/sales-order-phase1/omnichannel-orders-phase1.md)
+* [Sales Order](flows/sales-order-phase1/README.md)
   * [Omnichannel Orders](flows/sales-order-phase1/omnichannel-orders-phase1.md)
   * [Digital Items](flows/sales-order-phase1/digital-items-phase1.md)
   * [Note Attributes](flows/sales-order-phase1/note-attributes-phase1.md)
