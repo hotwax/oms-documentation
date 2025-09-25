@@ -18,8 +18,6 @@
 * [Inventory](flows/inventory-phase1/README.md)
 * [Fulfillment](flows/fulfillment-phase1/README.md)
 
-
-
 <!-- ## Flows - Phase 2
 * [Sales Order](flows/sales-order/omnichannel-orders.md)
   * [Omnichannel Orders](flows/sales-order/omnichannel-orders.md)
