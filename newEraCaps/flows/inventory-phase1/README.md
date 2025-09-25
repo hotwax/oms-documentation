@@ -40,14 +40,12 @@ Together, these updates ensure customers always see accurate stock levels, reduc
 ## Batch Jobs used to Push Inventory to Shopify
 
 ### Hard Sync
-The `Hard Sync` job is used to synchronize the inventory of all the products from HotWax to Shopify once a day. It compares inventory counts between Shopify and HotWax Commerce, generates a delta file in GraphQL format for any differences, and sends it to Shopify, which updates the counts by recording those deltas.  
+The `Hard Sync` job is used to synchronize the inventory of all the products from HotWax to Shopify once a day. It compares inventory counts between Shopify and HotWax Commerce, generates a delta file, and sends it to Shopify, which updates the counts by recording those deltas.  
+**Note**:The `ShopifyFacilityGroupId` is a parameter in this job used to push inventory only for the facilities in that group;
+Click[here](https://docs.hotwax.co/documents/retail-operations/workflow/job-workflows/inventory#hard-sync) to know more about Hard Sync job.
 
-**Note:** The `ShopifyFacilityGroupId` parameter in this job can be used to suppress inventory updates for facilities in this group, ensuring their inventory is not pushed to Shopify.  
-
-Click [here](https://docs.hotwax.co/documents/retail-operations/workflow/job-workflows/inventory#hard-sync) to know more about Hard Sync job.
-
-### Upload Inventory Variances
-The Upload Inventory Variances job sends inventory adjustments to Shopify every 5 minutes using Shopify GraphQL. During each run, it captures changes that occurred since the last execution and pushes only selected event types such as POS Sale, Cycle Count, and Damage. These reasons are defined in the `SHPFY_INV_DLT_REASON` group, which is passed as a job parameter to determine which variances are pushed.  
+###  Upload Inventory Variances
+The Upload Inventory Variances job sends inventory adjustments to Shopify every 5 minutes using Shopify GraphQL. During each run, it captures changes that have occurred since the last execution and pushes only selected variance reasons such as POS Sale, Cycle Count, and Damage. These reasons are defined in the `SHPFY_INV_DLT_REASON` group, which is passed as a job parameter to determine which variances need to be pushed.  
 
 ## Scheduled Restock
 
@@ -55,4 +53,4 @@ HotWax offers an option that allows New Era Caps to schedule inventory restocks 
 Scheduled restocks are especially useful during flash sales or when hyped products are launched at a specific time. This is also applied for unique or limited inventory releases, where customers are ready to purchase the product the moment it becomes available.  
 This ensures that inventory is made available on the website only at the planned release time, even if the stock has already arrived physically at the fulfillment locations.  
 
-Click [here](https://docs.hotwax.co/documents/retail-operations/inventory/inventory-upload/schedule-restock) to know more about scheduled restock.
+Click[here](https://docs.hotwax.co/documents/retail-operations/inventory/inventory-upload/schedule-restock) to know more about scheduled restock.
