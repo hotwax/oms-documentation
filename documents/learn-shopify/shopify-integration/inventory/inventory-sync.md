@@ -41,11 +41,14 @@ However, if a sale occurs in-store at 12:59:59 PM and HotWax Commerce receives a
 
 To prevent this issue, merchants can use `Hard Sync` job once a day to synchronize the inventory counts of all products from HotWax Commerce to Shopify. The synchronization is achieved through the GraphQL file, similar to how inventory synchronization is performed for products with recent updates.
 
-With the `shopifyFacilityGroupId` parameter of this job, merchants can configure for which stores they want to push inventory to Shopify. To use this, add the relevant facilities to a facility group in HotWax Commerce and provide that group’s ID in the job configuration.
+This job supports two parameters to control how inventory is synchronized:
+
+- The facilityGroupId parameter defines which facilities’ inventory is accumulated to calculate the total available quantity.
+
+- The shopifyFacilityGroupId parameter specifies which store facilities’ inventories should be pushed to Shopify. If not specified, inventory will be pushed for all locations mapped in ShopifyShopLocation.
 
 **For example**: 
-A retailer with 100 stores wants to sync inventory to Shopify from just 10 of them. They can create a facility group in HotWax Commerce with those 10 stores and provide its group ID in the `shopifyFacilityGroupIdparameter` of the job. This makes sure inventory is pushed to Shopify only from the selected stores.
-
+A retailer with 100 stores wants to calculate total available inventory across specific warehouses and push inventory to Shopify from only 10 stores. They can create one facility group for the warehouses and provide its group ID in the inventoryGroup parameter, and another facility group for those 10 stores and provide its group ID in the shopifyFacilityGroupId parameter. This ensures inventory is accumulated from the selected facilities but only pushed to Shopify for the intended stores.
 <figure><img src="../../.gitbook/assets/11.png" alt=""><figcaption><p><em>Fig. 2: Hard Sync inventory to remove any discrepancy</em></p></figcaption></figure>
 
 ## Push Updated Inventory Deltas to Shopify
