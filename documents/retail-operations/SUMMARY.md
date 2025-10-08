@@ -90,6 +90,7 @@
   * [Configure Product Inventory](inventory/inventory-management/configure-product-inventory.md)
 * [Inventory Upload](inventory/inventory-upload/README.md)
   * [Schedule Restocking](inventory/inventory-upload/schedule-restock.md)
+  * [Inventroy Import Method](inventory/inventory-upload/import-methods.md)
 * [Cycle Count](inventory/cycle-count/README.md)
   * [Draft Counts](inventory/cycle-count/draft-counts.md)
   * [Hard Counts](inventory/cycle-count/hard-count.md)

@@ -40,7 +40,8 @@ Content-Type: application/json
 
 | Parameter        | Description                                                                                  | Required (Y/N) |
 | ---------------- | -------------------------------------------------------------------------------------------- | -------------- |
-| `viewSize`       | The total number of results in the API response                                              | N              |
+| `viewSize`       | The total number of results to be fetched in the API response                                | N              |
+| `viewIndex`      | Index of the view in pagination.                                                             | N              |
 | `filter`         | Filter records based on the passed parameters                                                | N              |
 | `point`          | The latitude-longitude of a specific location to find nearby stores                          | N              |
 | `distance`       | The distance from the passed latitude-longitude                                              | N              |
