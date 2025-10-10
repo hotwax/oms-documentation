@@ -75,7 +75,7 @@ To understand the full process, go to the [Rejection Workflow](rejection.md).
 
 ## Shipping Label Generation
 
-A shipping label is provided by the carrier and pasted onto the package. The label includes details such as the shipping address, delivery address, carrier name, shipping method, tracking number, and barcode. As the package progresses through various steps, such as pickup, sorting, and delivery, the label is scanned. These scans update the tracking information, which is shared with the customer.  
+A shipping label is provided by the carrier and pasted onto the package. The label includes details such as the shipping address, carrier name, shipping method, tracking number and barcode. As the package progresses through various steps, such as pickup, sorting, and delivery, the label is scanned. These scans update the tracking information, which is shared with the customer.  
 
 To generate the shipping label, tap the `Pack Order` button on the order card. A pop-up window will open, offering the option to print the shipping label and packing slip. After selecting the options, tap `Pack` to finish packing and get the label.
 
