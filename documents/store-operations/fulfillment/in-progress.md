@@ -25,7 +25,7 @@ For example:
 - If the view is filtered to show five orders for a specific picker, only those five orders will be packed.  
 - If no filters are active, the action will apply to all orders visible on the page.  
 
-Upon tapping the button, a confirmation pop-up will appear, indicating the total number of orders to be packed. This window also provides an option to select which documents, such as packing slips or shipping labels, should be printed as part of the process.  
+Upon tapping the button, a confirmation pop-up will appear, indicating the total number of orders that will be affected. This window also provides an option to select which documents, such as packing slips or shipping labels, should be printed as part of the process.  
 
 Store associates can check or uncheck the boxes for:  
 - Shipping labels  
