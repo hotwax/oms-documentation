@@ -5,11 +5,11 @@ description: >-
 
 # In Progress Orders Page
 
-## Filter Orders by Picker
+## Filter Orders by Picklist
 
-Store associates can filter orders by picker to view orders assigned to a specific individual for fulfillment. Only one picker can be selected at a time, and the page then displays only the orders assigned to that picker.  
+Store associates can filter orders by picklist to view the orders associated with a specific picklist. A picklist may have multiple pickers assigned to it, and all their names will be displayed. Only one picklist can be selected at a time, and the page will display only the orders linked to that picklist.  
 
-In the top-right corner, a result size filter also allows associates to limit the number of orders they see at one time (e.g., 5, 10, or 20). This feature can be combined with the picker filter. For instance, if an associate selects a picker and "5" from the result size filter, the page will show only five orders assigned to that picker.
+In the top-right corner, a result size filter also allows associates to limit the number of orders they see at one time (e.g., 5, 10, or 20). This feature can be combined with the picklist filter. For instance, if an associate selects a picker and "5" from the result size filter, the page will show only five orders assigned to that picker.
 
 ## Print Picklist
 
