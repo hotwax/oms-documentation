@@ -100,7 +100,7 @@ While fulfilling the TO, associates can generate a picklist to view all the item
 
 ### Item Card
 
-- **View product details**: Product image, SKU, name, and HotWax Commerce product ID for easy identification.  
+- **View product details**: Store associates can view product image, SKU, name, and HotWax Commerce product ID for quick identification.
 - **Reject an item**: Select a rejection reason from the Report an Issue dropdown.
   
 {% hint style="info" %}
