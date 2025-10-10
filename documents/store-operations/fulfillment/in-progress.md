@@ -67,7 +67,7 @@ When an order has more than one shipment, this screen displays all of them. Staf
 
 ## Handling Order Rejections
 
-Store associates can reject items from an order if they cannot be fulfilled from the current store. When this happens, the rejected items are moved to a virtual facility called **Rejected Item Parking**. As these items are not cancelled, they are kept aside so the system can try to assign them to another location.  
+Store associates can reject items from an order if they cannot be fulfilled from the current store. When this happens, the rejected items are moved to a virtual facility called **Rejected Item Parking**. These items are re-brokered to another location based on rules setup in the routing app.  
 
 For this to work, at least one brokering rule must be set to pick up orders from **Rejected Item Parking**. This helps make sure the order can still be fulfilled from a different store or warehouse.  
 
