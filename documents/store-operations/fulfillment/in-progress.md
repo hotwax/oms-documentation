@@ -13,7 +13,7 @@ In the top-right corner, a result size filter also allows associates to limit th
 
 ## Print Picklist
 
-At the bottom of the page, associates have several options for managing the picklist.  
+Select a picklist to view options to reprint it or edit the assigned pickers.
 
 In the bottom-right corner, they can reprint the list using the `Print Picklist` button or change the assigned picker by selecting the adjacent `Edit Picker` button.  
 
