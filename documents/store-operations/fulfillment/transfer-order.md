@@ -98,7 +98,7 @@ At the top of the page, associates can view important details such as the total 
 
 While fulfilling the TO, associates can generate a picklist to view all the items that need to be picked. To do this, tap the `Picklist` button at the bottom of the page.  
 
-### On the Item Card, Associates Can:
+### Item Card
 
 - **View product details**: Product image, SKU, name, and HotWax Commerce product ID for easy identification.  
 - **Reject an item**: Select a rejection reason from the Report an Issue dropdown.
