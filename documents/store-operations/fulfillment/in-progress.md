@@ -19,7 +19,7 @@ In the bottom-right corner, they can reprint the list using the `Print Picklist`
 
 ## Bulk Packing
 
-Store associates can pack multiple orders simultaneously by tapping the `Pack Orders` button. This bulk action applies only to the orders currently displayed, which can be controlled by filters.  
+Store associates can pack all orders currently in view by tapping the `Pack Orders` button at the top of the list. 
 
 For example:  
 - If the view is filtered to show five orders for a specific picker, only those five orders will be packed.  
