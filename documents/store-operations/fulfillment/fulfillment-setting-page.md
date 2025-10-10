@@ -33,7 +33,7 @@ Adjust the order fulfillment capacity for your facility. If you set the fulfillm
 
 ### Sell Inventory Online
 
-This allows selection of whether the inventory at a facility should be made available for online orders or restricted to in-store fulfillment only.
+Determine whether the inventory of the store should be accessible for online sales or not. This setting allows you to specify whether the products available in your physical store should also be available for purchase through online channels or not. If enabled, customers browsing your online store will be able to see and purchase items from your inventory. If disabled, the products will not be listed for online sale, restricting purchases to in-store transactions only.
 
 ## App
 
