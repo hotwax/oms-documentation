@@ -69,7 +69,9 @@ The `Generate Manifest` and `View Historical Manifest` buttons appear on the bot
 
 The `View Historical Manifest` option allows store associates to check manifests generated in the last seven days.  
 
-Once the `Generate Manifest` button is tapped, the app uses the packed orders to create the manifest. Store associates do not need to fill in any shipment details. The app prints three copies:  
+Once the `Generate Manifest` button is tapped, the app uses the packed orders to create the manifest. Store associates do not need to fill in any shipment details. 
+
+The app prints three copies:
 1. One for the store  
 2. One for the carrier  
 3. One for the receiving location  
