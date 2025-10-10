@@ -89,7 +89,7 @@ This method eliminates the need to add each product manually and speeds up the T
 
 ## Transfer Order Fulfillment
 
-The Transfer Order Details page is used to fulfill TOs. To access this page, store associates simply tap on a transfer order from the Find page, which redirects them to this page.  
+The Transfer Order Details page is used to fulfill TOs. To access this page, store associates simply tap on a transfer order from the Find page, which navigates them to this page.  
 
 At the top of the page, associates can view important details such as the total quantity of items they need to fulfill, the transfer order name, the order ID, and the current status of the TO, which will be marked as either Approved or Completed.  
 
