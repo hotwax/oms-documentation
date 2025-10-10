@@ -33,7 +33,7 @@ Store associates can ship orders in bulk using the `Ship` button.
 
 When the `Ship` button is tapped, a confirmation message appears. The message tells how many orders will be shipped and reminds that shipped orders can’t be changed. The associate can either cancel or confirm the action.
 
-Packed orders are also shipped automatically by a background job called `Ship Packed Orders`. This job checks for orders that are packed and have a tracking number, if applicable. It then updates the status to **Shipped**.
+Packed orders are also shipped automatically by a background job called `Ship Packed Orders`. When enabled, job checks for orders that are packed and have a tracking number, if applicable..
 
 ## Order Details Card
 
