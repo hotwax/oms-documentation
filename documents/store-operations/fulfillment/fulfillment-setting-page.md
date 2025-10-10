@@ -27,7 +27,7 @@ The Fulfillment App allows authorized users to select a facility to operate from
 
 ### Online Order Fulfillment
 
-This setting helps to configure the online order fulfillment capacity of the facility. If the facility can handle unlimited orders, "Unlimited Capacity" can be selected. If new orders should not be assigned to the facility, "No Capacity" can be chosen. A custom number can also be entered if there is a specific limit.
+Adjust the order fulfillment capacity for your facility. If you set the fulfillment capacity to 0, new orders will not be allocated to this facility. Leave this field empty if the fulfillment capacity of this facility is unlimited. Setting fulfillment capacity to No capacity disables new orders from being allocated to this facility. Select Unlimited Capacity if this facility's fulfillment capacity is unrestricted. You can also select a custom option to set the capacity limit.
 
 <figure><img src="../.gitbook/assets/fulfillment.hotwax 4.png" alt="" width="375"><figcaption><p>Online Order Fulfillment</p></figcaption></figure>
 
