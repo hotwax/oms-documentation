@@ -79,7 +79,7 @@ A shipping label is provided by the carrier and pasted onto the package. The lab
 
 To generate the shipping label, tap the `Pack Order` button on the order card. A pop-up window will open, offering the option to print the shipping label and packing slip. After selecting the options, tap `Pack` to finish packing and get the label.
 
-### Specific Details which is included in the Shipping Label:
+### Specific Details Included in the Shipping Label:
 
 #### Multi-packaging Label Behavior
 For carriers that support multi-package shipments, HotWax OMS generates individual shipping labels for each package under a single shipment ID. When a shipment includes multiple packages, the OMS sends a request to the carrier specifying the total number of packages, and the carrier returns labels for each package linked to the same shipment ID.
