@@ -62,7 +62,7 @@ To create a new TO, tap the `+` button located in the bottom-right corner of the
 
 6. **Finalize the TO**  
    - Tap the `✓` button in the bottom right corner to finalize and create the TO.  
-   {% hint style="info" %}
+{% hint style="warning" %}
 The TO can only be edited until it is in the Created state.  
 {% endhint %}  
 
