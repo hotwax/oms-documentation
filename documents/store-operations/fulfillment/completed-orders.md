@@ -31,7 +31,7 @@ Store associates can ship orders in bulk using the `Ship` button.
 - This action applies only to the orders visible on the page, based on the selected carrier, shipping method, or the number of orders chosen through the result size.  
 - For example, if 10 UPS orders are displayed, tapping the Ship button ships those 10 orders.  
 
-When the `Ship` button is tapped, a confirmation message appears. The message tells how many orders will be shipped and reminds that shipped orders can’t be changed. The associate can either cancel or confirm the shipment.  
+When the `Ship` button is tapped, a confirmation message appears. The message tells how many orders will be shipped and reminds that shipped orders can’t be changed. The associate can either cancel or confirm the action.
 
 Packed orders are also shipped automatically by a background job called `Ship Packed Orders`. This job checks for orders that are packed and have a tracking number, if applicable. It then updates the status to **Shipped**.
 
