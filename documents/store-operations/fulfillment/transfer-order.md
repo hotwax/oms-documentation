@@ -58,7 +58,7 @@ To create a new TO, tap the `+` button located in the bottom-right corner of the
      - *Use Case*: Ideal to avoid affecting future commitments or orders.  
    - Book Custom Quantity: Use this option to specify a custom quantity to transfer.  
 
-   Use the toggle switch in the top row to enable bulk edit for all added items.  
+   Use the checkbox top row to enable bulk edit for all added items.  
 
 6. **Finalize the TO**  
    - Tap the `✓` button in the bottom right corner to finalize and create the TO.  
