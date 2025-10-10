@@ -51,7 +51,7 @@ The selected timezone ensures that all scheduled actions, like automatic jobs or
 
 ### Language
 
-This setting allows choosing the preferred display language. This setting controls the language used throughout the interface.
+Choose the preferred display language. This setting controls the language used throughout the interface.
 
 <figure><img src="../.gitbook/assets/fulfillment.hotwax 8.png" alt="" width="375"><figcaption><p>Select Language</p></figcaption></figure>
 
