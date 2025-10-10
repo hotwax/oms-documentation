@@ -62,10 +62,10 @@ Choose the preferred display language. This setting controls the language used t
 These settings control whether shipping labels and packing slips are printed along with each shipment by default.
 
 ##### Generate Shipping Label  
-A shipping label is used by the delivery carrier to send the package to the customer’s address. The setting allows deciding whether to print packing slips for shipments or not.  
-
+A shipping label is used by the delivery carrier to send the package to the customer’s address. This setting controls whether shipping labels should be printed for the selected location.  
+	
 ##### Generate Packing Slip  
-A packing slip shows the list of items in an order and helps match delivered products with what was ordered. This setting controls whether shipping labels should be printed for the selected location.  
+A packing slip shows the list of items in an order and helps match delivered products with what was ordered. This setting allows deciding whether to print packing slips for shipments or not.
 
 <figure><img src="../.gitbook/assets/fulfillment.hotwax 7.png" alt="" width="375"><figcaption><p>Additional Documents</p></figcaption></figure>
 
