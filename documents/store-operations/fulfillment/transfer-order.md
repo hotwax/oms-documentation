@@ -5,7 +5,7 @@ description:
 
 # Transfer Order
 
-## Find the TO Page
+## Find Transfer Orders
 
 This is the default view when the Transfer Orders tab is opened. It allows associates to search and filter TOs. This tab includes open and completed TOs.
 
