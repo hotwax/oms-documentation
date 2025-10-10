@@ -47,8 +47,12 @@ This job supports two parameters to control how inventory is synchronized:
 
 - The shopifyFacilityGroupId parameter specifies which store facilities’ inventories should be pushed to Shopify. If not specified, inventory will be pushed for all locations mapped in ShopifyShopLocation.
 
-**For example**: 
-A retailer with 100 stores wants to calculate total available inventory across specific warehouses and push inventory to Shopify from only 10 stores. They can create one facility group for the warehouses and provide its group ID in the inventoryGroup parameter, and another facility group for those 10 stores and provide its group ID in the shopifyFacilityGroupId parameter. This ensures inventory is accumulated from the selected facilities but only pushed to Shopify for the intended stores.
+**Example:** A retailer has 50 stores, with 25 in Zone 1 and 25 in Zone 2. He wants to push the total inventory of all 50 stores while mapping inventory to the stores in Zone 2.
+
+- Calculate Inventory: They create a facility group for Zone 1 and Zone 2 and provide its ID in the `facilityGroupId` parameter. This ensures that stock from these stores is included in the total inventory calculation.
+
+- Zone 2 Inventory Sync to Shopify: They create another facility group for the Zone 2 stores and provide its ID in the `shopifyFacilityGroupId` parameter. This directs inventory updates only to the stores included in that facility group.
+
 <figure><img src="../../.gitbook/assets/11.png" alt=""><figcaption><p><em>Fig. 2: Hard Sync inventory to remove any discrepancy</em></p></figcaption></figure>
 
 ## Push Updated Inventory Deltas to Shopify
