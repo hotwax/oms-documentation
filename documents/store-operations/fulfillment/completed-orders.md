@@ -1,6 +1,6 @@
 ---
 description: >-
- The Completed Orders page shows all orders that have been picked, packed, and are ready to ship. On this page, store associates can ship orders in bulk, unpack them if needed, download the manifest or historical manifest, and regenerate shipping labels if required.
+ The Completed Orders page shows all orders that have been picked, packed, and are ready to ship. On this page, store associates can ship orders in bulk, unpack them if needed, download the manifest, and regenerate shipping labels if required.
 ---
 
 # Completed Orders Page
