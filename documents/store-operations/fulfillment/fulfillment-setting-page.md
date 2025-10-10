@@ -59,7 +59,7 @@ Choose the preferred display language. This setting controls the language used t
 
 #### Shipping Label and Packing Slip Settings
 
-These settings control whether shipping labels and packing slips are printed along with each shipment.
+These settings control whether shipping labels and packing slips are printed along with each shipment by default.
 
 ##### Generate Shipping Label  
 A shipping label is used by the delivery carrier to send the package to the customer’s address. The setting allows deciding whether to print packing slips for shipments or not.  
