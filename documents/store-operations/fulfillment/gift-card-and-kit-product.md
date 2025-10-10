@@ -7,7 +7,7 @@ description: >-
 
 ## Gift Card Fulfillment
 
-A gift card activation can be done from the **In Progress** tab. Gift card items are marked with a gift box icon on the order details card.  
+Gift card activation can be done from the **In Progress** tab. Gift card items are marked with a gift box icon on the order details card.  
 
 To activate:  
 1. Tap the gift icon.  
