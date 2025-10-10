@@ -55,7 +55,7 @@ When there is an issue with the shipping label, a `Shipping Label Error` button 
 - Switching the carrier  
 - When the file does not open  
 
-The `Unpack` button lets associates move the order back to the **In Progress** stage if changes are required. Shipped orders remain visible on the page for one day.  
+The `Unpack` button lets associates move the order back to the **In Progress** stage if changes are required. Shipped orders remain visible on the page for the rest of the day.
 
 Once unpacked, the shipping label that was previously generated must be voided manually.  
 - If the label is not voided and there are changes to the order, a new shipping label will be generated automatically.  
