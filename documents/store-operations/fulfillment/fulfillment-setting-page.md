@@ -76,11 +76,11 @@ This setting controls whether notifications should be sent when a shipping order
 This setting makes sure that products are scanned before being marked as shipped. If a barcode doesn't match, the product name is used to identify the item. It also lets the staff choose which product detail, like SKU, should be used for scanning.
 
 ### Allow Partial Rejections
-When [Partial Rejection is enabled](rejection.md), individual items get rejected from a facility without impacting the rest of the order.
+When [Partial Rejection is enabled](/documents/store-operations/fulfillment/rejection.md), individual items get rejected from a facility without impacting the rest of the order.
 
 ### Allow Collateral Rejection
 [Collateral Rejection](rejection.md) helps manage situations where the product in a rejected order item is part of multiple pending orders at a facility. When enabled, rejecting an item in one order automatically rejects the same product in all other pending orders.
 
 ### Affect QOH on Rejection
-[The Affect QOH on Rejection](rejection.md) toggle provides control over inventory adjustments during order rejections.
+[The Affect QOH on Rejection](/documents/store-operations/fulfillment/rejection.md) toggle provides control over inventory adjustments during order rejections.
 
