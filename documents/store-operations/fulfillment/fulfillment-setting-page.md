@@ -45,7 +45,7 @@ This setting allows selection of a primary and secondary product identifier, suc
 
 ### Timezone
 
-The selected timezone ensures that all scheduled actions, like automatic jobs or tasks, run at the correct local time. 
+This setting allows selecting an appropriate timezone to ensure consistency and optimize operations according to local time. 
 
 <figure><img src="../.gitbook/assets/fulfillment.hotwax 6.png" alt="" width="375"><figcaption><p>Select timezone</p></figcaption></figure>
 
@@ -73,7 +73,7 @@ A packing slip shows the list of items in an order and helps match delivered pro
 This setting controls whether store associates receive notifications for orders awaiting fulfillment.
 
 ### Force Scan
-This setting makes sure that products are scanned before being marked as shipped. If a barcode doesn't match, the product name is used to identify the item. It also lets the staff choose which product detail, like SKU, should be used for scanning.
+This setting enables store associates to select the barcode identifier used for scanning and specify whether scanning is required
 
 ### Allow Partial Rejections
 When [Partial Rejection is enabled](/documents/store-operations/fulfillment/rejection.md), individual items get rejected from a facility without impacting the rest of the order.
