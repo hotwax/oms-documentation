@@ -49,11 +49,14 @@ Each order card shows action buttons such as:
 - `Print Customer Letter` (packing slip)  
 - `Regenerate Shipping Label`  
 
-When there is an issue with the shipping label, a `Shipping Label Error` button appears. Store associates can use the `Regenerate Shipping Label` button in cases like:  
+When there is an issue with the shipping label, a `Shipping Label Error` button appears. Store associates can use the `Regenerate Shipping Label` button after fixing issues such as:
+
 - No response from the carrier  
 - Incorrect address  
 - Switching the carrier  
 - When the file does not open  
+
+Once the issue is resolved, the shipping label can be regenerated.  
 
 The `Unpack` button lets associates move the order back to the **In Progress** stage if changes are required. Shipped orders remain visible on the page for the rest of the day.
 
