@@ -26,7 +26,7 @@ You can use shipping methods filters and picklist size together. For example, to
 
 ## Bulk Rejection
 
-Store associates can use the `Reject All` button to reject multiple orders at once. This bulk action applies only to the orders currently visible on the screen. Associates can use filters to control which orders are rejected.  
+Store associates can use the `Reject All` button to reject all visible orders at once. This bulk action applies only to the orders currently visible on the screen. Associates can use filters to control which orders are rejected.  
 
 For example:  
 - If the view is filtered to show five orders with **“Same Day”** shipping method, tapping **“Reject All”** will apply only to those five orders.  
