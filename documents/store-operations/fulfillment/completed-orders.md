@@ -60,15 +60,15 @@ Once the issue is resolved, the shipping label can be regenerated.
 
 The `Unpack` button lets associates move the order back to the **In Progress** stage if changes are required. Shipped orders remain visible on the page for the rest of the day.
 
-Once unpacked, the shipping label that was previously generated must be voided manually.  
-- If the label is not voided and there are changes to the order, a new shipping label will be generated automatically.  
-- If there are no changes and the label is not voided, the same label is used again.  
+Once unpacked, the shipping label that was previously generated must be voided manually. If there is a change in the shipment, the label will get voided automatically
+- If the label is not voided and there are changes to the order, a new shipping label will be generated automatically.
+- If there are no changes and the label is not voided, the same label can be printed again.  
 
 To view more information about an order, store associates need to tap on the order name. A pop-up will appear with the options to **Copy ID** and **View Order Details**. Tapping on **View Order Details** will redirect them to the Order Details page.  
 
 ## Manifest and Historical Manifest
 
-The `Generate Manifest` and `View Historical Manifest` buttons appear on the bottom right of the page once a carrier partner and at least one shipment method are selected. Without selecting both, the buttons will not be visible.  
+The `Generate Manifest` and `View Historical Manifest` buttons appear at the bottom right of the page once a carrier partner is selected. Store associates can also select one or more shipment methods for that carrier partner to generate manifests for specific types of shipments.  
 
 The `View Historical Manifest` option allows store associates to check manifests generated in the last seven days.  
 
