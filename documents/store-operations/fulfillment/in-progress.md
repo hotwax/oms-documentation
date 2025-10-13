@@ -85,7 +85,7 @@ To generate the shipping label, tap the `Pack Order` button on the order card. A
 For carriers that support multi-package shipments, HotWax OMS generates individual shipping labels for each package under a single shipment ID. When a shipment includes multiple packages, the OMS sends a request to the carrier specifying the total number of packages, and the carrier returns labels for each package linked to the same shipment ID.
 
 #### Label Display Format
-Every carrier generates shipping labels in a different format. Some carriers provide labels as PDF files, while others send them as images or image bytes. HotWax OMS caters to these formats and can render them as images for display.
+Every carrier generates shipping labels in a different format. Some carriers provide labels as PDF files, while others send them as images. HotWax OMS supports most formats and can render them as images for printing.
 
 #### Display Behavior
 The Fulfillment App handles label display based on the format received from the carrier:  
