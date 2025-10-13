@@ -70,7 +70,7 @@ A packing slip shows the list of items in an order and helps match delivered pro
 <figure><img src="../.gitbook/assets/fulfillment.hotwax 7.png" alt="" width="375"><figcaption><p>Additional Documents</p></figcaption></figure>
 
 ### Notification Preference
-This setting controls whether notifications should be sent when a shipping order is created. 
+This setting controls whether store associates receive notifications for orders awaiting fulfillment.
 
 ### Force Scan
 This setting makes sure that products are scanned before being marked as shipped. If a barcode doesn't match, the product name is used to identify the item. It also lets the staff choose which product detail, like SKU, should be used for scanning.
