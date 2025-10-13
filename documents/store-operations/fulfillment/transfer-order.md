@@ -48,7 +48,7 @@ To create a new TO, tap the `+` button located in the bottom-right corner of the
    - Based on transfer type, select the appropriate lifecycle:  
      - **Store to Store**: Select Fulfill and Receive (managed entirely in OMS).  
      - **Store to Warehouse**: Select Fulfill only (post-fulfillment handled by WMS).  
-   - To know more about TO types, refer to this document.  
+   - To know more about TO types, refer to this [document](/documents/learn-netsuite/integration-flows/transfer-order/README.md).  
    - Set the Ship Date and tap `Done`.  
    - Set the Delivery Date and tap `Done`.  
 
@@ -104,9 +104,15 @@ While fulfilling the TO, associates can generate a picklist to view all the item
 
 ### Item Card
 
-- **View product details**: Store associates can view product image, SKU, name, and HotWax Commerce product ID for quick identification.
-- **Reject an item**: Select a rejection reason from the Report an Issue dropdown.
-  
+Item card displays key product information:
+
+- Product image
+- SKU
+- Product name 
+- HotWax Commerce product ID
+- Full image view
+- Report an issue dropdown to reject an item 
+
 {% hint style="info" %}
 The Report an Issue dropdown is only available if no prior shipments have been created against the TO.  
 {% endhint %}
