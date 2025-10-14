@@ -51,7 +51,7 @@ This job supports two parameters to control how inventory is synchronized:
 
 - Calculate Inventory: They create a facility group for Zone 1 and Zone 2 and provide its ID in the `facilityGroupId` parameter. This ensures that stock from these stores is included in the total inventory calculation.
 
-- Zone 2 Inventory Sync to Shopify: They create another facility group for the Zone 2 stores and provide its ID in the `shopifyFacilityGroupId` parameter. This directs inventory updates only to the stores included in that facility group.
+- Zone 2 Inventory Sync to Shopify: They create another facility group for the Zone 2 stores and provide its ID in the `shopifyFacilityGroupId` parameter. This directs inventory updates only to the stores included in that facility group.  
 
 <figure><img src="../../.gitbook/assets/11.png" alt=""><figcaption><p><em>Fig. 2: Hard Sync inventory to remove any discrepancy</em></p></figcaption></figure>
 
