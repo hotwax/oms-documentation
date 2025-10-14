@@ -53,7 +53,7 @@ If a **Sunglasses Travel Kit** includes sunglasses, a cleaning cloth, and a case
    - Damaged  
    - No Variance  
 5. Choose the reason that applies.  
-6. Select the checkbox next to the item causing the issue. This step records inventory variance only for that specific component.  
+6. Select the checkbox next to the item causing the issue. Multiple items can be selected if needed. This step records inventory variance only for the selected components.  
 7. Tap the `Reject` button.  
 8. A confirmation pop-up will appear. Select `Report` to confirm the rejection or `Cancel` to go back.  
    - Choosing `Report` will reject the order.
