@@ -1,6 +1,6 @@
 # Shopify MDM
 
-To access the logs for import and export jobs, navigate to the MDM (Master Data Management) > EXIM (Export-Import) page from the Hamburger menu. Here, under the Shopify section, various MDM pages display the processes between Shopify and Hotwax Commerce. These pages include:
+To access the logs for import and export jobs, navigate to the MDM (Master Data Management) > EXIM (Export-Import) page from the Hamburger menu. Here, under the Shopify section, various MDM pages display the processes between Shopify and HotWax Commerce. These pages include:
 
 * **Shopify GraphQL job:** Records all GraphQL files uploaded from Hotwax Commerce to Shopify for API calls like adding pre-order catalogs or tags.
 * **Shopify Order MDM:** Contains files generated from Shopify for importing orders into Hotwax Commerce.
