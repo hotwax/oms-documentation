@@ -35,7 +35,7 @@
   * [Add Facility Address](administration/facilities/add-facility-address.md)
   * [Manage Operating Hours](administration/facilities/manage-operating-hours.md)
   * [Manage Product Stores](administration/facilities/manage-product-stores.md)
-  * [Configure Online Fulfillment](administration/facilities/configure-fulfillment.md)
+  * [Configure Online Fulfillmentchan](administration/facilities/configure-fulfillment.md)
   * [Configure Fulfillment Capacity](administration/facilities/configure-fulfillment-capacity.md)
   * [Manage Facility Staff](administration/facilities/manage-facility-staff.md)
   * [Manage Locations](administration/facilities/manage-locations.md)
@@ -50,7 +50,6 @@
   * [Frequently Used Imports](administration/data-manager/freq-used-configurations.md)
   * [Manual Import](administration/data-manager/manual-import.md)
   * [Audit Logs](administration/data-manager/view-mdm-log.md)
-  
   * [Shopify MDM](administration/data-manager/shopify-mdm.md)
   * [Schedule Error Mail](administration/data-manager/schedule-error-mail.md)
   * [Troubleshooting](administration/data-manager/troubleshooting/README.md)

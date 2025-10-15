@@ -124,3 +124,4 @@
 ## OMS Release Versions
 
 * [OMS Versions](oms-release-versions/README.md)
+  * [V7.0.0 Release](oms-release-versions/v7.0.0.md)
