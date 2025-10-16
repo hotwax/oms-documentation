@@ -86,9 +86,9 @@ If you’ve received part of a TO and you know no more items will arrive, you ca
 
 ### Standard closing steps
 In any scenario where you close items or an entire TO, the steps are the same:
-1. Tap `Receive and Close`.  
-2. In the review modal, select the checkboxes for the items you want to close, then tap the Save icon.  
-3. In the confirmation pop-up, tap `Proceed`.  
+1. Tap `Receive and Close`.
+2. In the review modal, select the checkboxes for the items you want to close, then tap the Save icon.
+3. In the confirmation pop-up, tap `Proceed`.
 
 {% hint style="info" %}
 Once you close items in a TO, you can’t receive them again. Make sure no more items are expected before closing.
