@@ -73,7 +73,7 @@ Quantities can be added either to individual items or in bulk to all items at on
 - **Enter Quantity:**
   Enter the quantity directly in the input field, or use the stepper arrows.  
 
-- **Book Quantities:**  
+- **Book Quantities:**
   Open the ellipsis (⋮) menu and choose `Book QoH` (to transfer the entire available stock in hand) or `Book ATP` (to transfer only the unallocated/unreserved quantity).  
 
 - **Remove Item:**  
