@@ -35,7 +35,7 @@ There are three ways to receive inventory:
 - **Scan with a barcode scanner**
    Scanning a barcode finds the matching item in the list, selects it, and increases its received quantity.  
 
-2. **Scan with the iPad camera**  
+- **Scan with the iPad camera**
    Tap `Scan` to open the camera and scan the item’s barcode.  
 
 3. **Enter SKU:**  
