@@ -11,7 +11,7 @@ You can create a new TO in the Transfers App to move inventory between facilitie
 
 
 ### Enter TO name
-- Enter a clear, relevant and searchable name.  
+- Enter a clear, relevant and searchable name.
 - This makes the TO easier to find later.  
 
 
