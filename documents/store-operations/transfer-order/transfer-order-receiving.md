@@ -18,7 +18,7 @@ After you log into the Receiving App, you land on the Transfer Orders page. The 
 To locate a specific order:
 - Use the search bar to look up the TO by name or by tracking code.
 - Each entry shows the order status, creation date and time.
-- You can only see TOs  where the destination facility matches your selected facility. TOs for other facilities won’t appear.
+- You can only see TOs where the destination facility matches your logged in facility. TOs for other facilities won’t appear.
 
 
 ### Review TO details
@@ -69,7 +69,7 @@ Sometimes, certain items in a TO are canceled at the source and won’t be shipp
 - In the review modal, select the checkboxes for the items you want to close, and then tap the Save icon.
 - In the confirmation pop-up, tap `Proceed`.
 
-The TO stays under the Open tab for the items still pending, but the closed items also appear under the Completed tab for reference.  
+The TO stays under the Open tab for the items still pending to be received, while the closed items also appear under the Completed tab for reference.  
 
 
 ### Receive items partially and close the order
