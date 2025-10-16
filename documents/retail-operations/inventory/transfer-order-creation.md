@@ -24,7 +24,7 @@ You can create a new TO in the Transfers App to move inventory between facilitie
   In the dialog, select the origin facility.  
   Click Save.  
 
-- **Destination:**  
+- **Destination:**
   Click `Assign` button next to “Destination”.  
   In the dialog, select the receiving facility.  
   Click Save.  
