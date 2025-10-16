@@ -74,9 +74,9 @@ The TO stays under the Open tab for the items still pending, but the closed item
 
 ### Receive items partially and close the order
 If you’ve received part of a TO and you know no more items will arrive, you can close the order with the received quantities.  
-- For items where the entire ordered quantity has arrived, tap `Receive All` to record them without scanning or entering quantities manually.  
-- For items that are partially arrived, manually enter the quantities.  
-- Tap `Receive and Close` and follow the standard closing steps.  
+- For items where the entire ordered quantity has arrived, tap `Receive All` to record them without scanning or entering quantities manually.
+- For items that are partially arrived, manually enter the quantities.
+- Tap `Receive and Close` and follow the standard closing steps.
 
 
 ### Receive all items and close the order
