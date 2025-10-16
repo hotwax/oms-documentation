@@ -41,7 +41,7 @@ You can create a new TO in the Transfers App to move inventory between facilitie
   Pick the shipment date from the calendar.  
   Click Done.  
 
-- **Delivery Date:**  
+- **Delivery Date:**
   Follow the same steps and select the delivery date.  
 
 
