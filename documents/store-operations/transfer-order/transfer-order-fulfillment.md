@@ -72,8 +72,8 @@ Once the shipment is created, the TO is marked as fulfilled and no further chang
 ### Review shipment
 After a shipment is created, the app opens the **Review shipment** page.  
 You can either:
-- Tap **`Generate shipping label`** to fetch the carrier and tracking information automatically, or  
-- Manually enter the carrier and tracking code.  
+- Tap **`Generate shipping label`** to fetch the carrier and tracking information automatically, or
+- Manually enter the carrier and tracking code.
 
 
 ### Complete shipment
