@@ -16,9 +16,9 @@ Follow these steps to receive a TO:
 ### Locate the TO
 After you log into the Receiving App, you land on the Transfer Orders page. The Open tab lists all TOs scheduled to be received at your facility.  
 To locate a specific order:
-- Use the search bar to look up the TO by name or by tracking code.  
-- Each entry shows the order status, creation date and time.  
-- You can only see TOs  where the destination facility matches your selected facility. TOs for other facilities won’t appear.  
+- Use the search bar to look up the TO by name or by tracking code.
+- Each entry shows the order status, creation date and time.
+- You can only see TOs  where the destination facility matches your selected facility. TOs for other facilities won’t appear.
 
 
 ### Review TO details
