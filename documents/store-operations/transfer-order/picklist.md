@@ -4,8 +4,7 @@ description: This document describes the Picklist Functionality for Store Transf
 
 # Transfer Order Picklist
 
-The Picklist provides a detailed list of items in a Transfer Order (TO) to support accurate packing and tracking. You can generate a PDF and use it as a checklist while preparing a shipment to transfer.  
-With the picklist, you first pack items and then enter the details into the App. This reduces confusion, prevents errors, and makes it easier to generate shipments and shipping labels.
+The Picklist provides a detailed list of items in a Transfer Order (TO) to support accurate packing and tracking. Generate a PDF and use it as a checklist while preparing a shipment to transfer. Pack items first, then enter the details into the App to reduce confusion, prevent errors, and make it easier to generate shipments and shipping labels.
 
 
 ## Picklist Fields
