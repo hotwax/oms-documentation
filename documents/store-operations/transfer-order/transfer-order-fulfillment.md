@@ -62,9 +62,9 @@ If you are fulfilling multiple shipments, record only the items for the current 
 
 #### Fulfill in single shipment
 When the entire TO is fulfilled at once, all items are picked and shipped together.
-- Tap **`Pick All`** for all items in the TO.  
-- Tap **`Create Shipment`**.  
-- A confirmation pop-up will appear, tap **`Create`**.  
+- Tap **`Pick All`** for all items in the TO.
+- Tap **`Create Shipment`**.
+- A confirmation pop-up will appear, tap **`Create`**.
 
 Once the shipment is created, the TO is marked as fulfilled and no further changes can be made.  
 
