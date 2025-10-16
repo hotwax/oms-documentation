@@ -63,11 +63,11 @@ The remaining items stay open in the app so you can receive them later.
 
 ### Receive items partially, close specific items and keep the order open
 Sometimes, certain items in a TO are canceled at the source and won’t be shipped. You can close those items so they no longer appear in the TO while you continue receiving the rest.  
-- For items where the entire ordered quantity has arrived, tap `Receive All`.  
-- For items that are partially arrived, manually enter the quantities.  
-- Tap `Receive and Close`.  
-- In the review modal, select the checkboxes for the items you want to close, and then tap the Save icon.  
-- In the confirmation pop-up, tap `Proceed`.  
+- For items where the entire ordered quantity has arrived, tap `Receive All`.
+- For items that are partially arrived, manually enter the quantities.
+- Tap `Receive and Close`.
+- In the review modal, select the checkboxes for the items you want to close, and then tap the Save icon.
+- In the confirmation pop-up, tap `Proceed`.
 
 The TO stays under the Open tab for the items still pending, but the closed items also appear under the Completed tab for reference.  
 
