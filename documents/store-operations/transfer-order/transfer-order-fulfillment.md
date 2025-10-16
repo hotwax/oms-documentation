@@ -13,9 +13,9 @@ This guide covers how to locate a TO, pick and pack inventory, handle rejections
 
 ### Locate the TO
 To locate a specific TO:
-- Navigate to **Transfer Orders** page.  
-- Use the search bar to look up the TO by ID or name.  
-- You can only see TOs where the origin facility matches your selected facility. TOs for other facilities won’t appear.  
+- Navigate to **Transfer Orders** page.
+- Use the search bar to look up the TO by ID or name.
+- You can only see TOs where the origin facility matches your selected facility. TOs for other facilities won’t appear.
 
 
 ### Review TO details
