@@ -56,9 +56,9 @@ TOs may be fulfilled in multiple shipments or in a single shipment.
 
 #### Fulfill in multiple shipments
 If you are fulfilling multiple shipments, record only the items for the current shipment. The rest remain open in the app until fulfilled later.
-- Enter the quantity of items picked for the current shipment.  
-- Tap **`Create Shipment`**.  
-- A confirmation pop-up will appear, click **`Create`**.  
+- Enter the quantity of items picked for the current shipment.
+- Tap **`Create Shipment`**.
+- A confirmation pop-up will appear, click **`Create`**.
 
 #### Fulfill in single shipment
 When the entire TO is fulfilled at once, all items are picked and shipped together.
