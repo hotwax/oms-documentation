@@ -26,7 +26,7 @@ With the picklist, you first pack items and then enter the details into the App.
 
 ### Generate picklist
 - Open a TO in the Fulfillment App.  
-- Tap the `Picklist` button in the lower-right corner of the page, next to `Create Shipment`.  
+- Tap the `Picklist` button in the lower-right corner of the page, next to `Create Shipment`.
 - A PDF document is generated, listing all items in the TO along with details for packing.  
 - Print the picklist to use as a checklist or keep it open on iPad while packing.  
 
