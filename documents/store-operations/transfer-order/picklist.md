@@ -26,8 +26,8 @@ The Picklist provides a detailed list of items in a Transfer Order (TO) to suppo
 ### Generate picklist
 - Open a TO in the Fulfillment App.
 - Tap the `Picklist` button in the lower-right corner of the page, next to `Create Shipment`.
-- A PDF document is generated, listing all items in the TO along with details for packing.  
-- Print the picklist to use as a checklist or keep it open on iPad while packing.  
+- A PDF document is generated, listing all items in the TO along with details for packing.
+- Print the picklist to use as a checklist or keep it open on iPad while packing.
 
 ### Pack items using the picklist
 - Use the picklist as a guide while packing items into boxes.  
