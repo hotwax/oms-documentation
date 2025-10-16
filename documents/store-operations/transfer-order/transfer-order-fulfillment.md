@@ -93,10 +93,10 @@ Steps to reject an item:
 {% hint style="info" %}
 The **Report an Issue** dropdown is only available if no shipments have been created for the TO.
 {% endhint %}
-- Select a rejection reason from the dropdown (for example, Not in stock, Mismatch, or Damaged).  
-- Once you select a reason, all other items will default to **No Variance** and the **`Reject Items`** button will appear.  
-- Tap **`Reject Items`**.  
-- A confirmation pop-up will appear, tap **`Reject`**.  
+- Select a rejection reason from the dropdown (for example, Not in stock, Mismatch, or Damaged).
+- Once you select a reason, all other items will default to **No Variance** and the **`Reject Items`** button will appear.
+- Tap **`Reject Items`**.
+- A confirmation pop-up will appear, tap **`Reject`**.
 
 After rejection, the TO moves to **Rejected Order Parking**, and inventory variance is logged based on the selected rejection reason.  
 To know more about rejection reasons, refer to **Rejections**.
