@@ -107,8 +107,8 @@ You can cancel a specific item in a TO, even if it has been partially fulfilled.
 When you close an item, it is marked as cancelled in HotWax OMS and is no longer available for fulfillment.
 
 Steps to close an item:
-- Tap **`Close Items`**.  
-- A review dialog box will appear. Select the checkbox for each item to close, then tap the **Save** icon.  
-- When the confirmation pop-up appears, tap **Proceed**.  
+- Tap **`Close Items`**.
+- A review dialog box will appear. Select the checkbox for each item to close, then tap the **Save** icon.
+- When the confirmation pop-up appears, tap **Proceed**.
 
 Once closed, the item no longer appears in the TO in either the Fulfillment App or the Receiving App.  
