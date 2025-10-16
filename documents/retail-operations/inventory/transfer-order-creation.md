@@ -55,7 +55,7 @@ Recommended for TOs with many items.
 - Click `Upload` and upload the CSV file containing the SKUs and quantities.
 
 After uploading:  
-- **Select Product Identifier:** Choose the identifier type (e.g., SKU).  
+- **Select Product Identifier:** Choose the identifier type (e.g., SKU).
 - **Map Columns:** Assign the correct CSV columns for Product Identifier and Quantity (e.g., Product Identifier → SKU, Quantity → Quantity).  
 
 #### Manually add items
