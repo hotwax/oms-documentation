@@ -89,7 +89,7 @@ If an item cannot be fulfilled because of missing inventory, damage, or incorrec
 When you reject an item, the system records an inventory variance. This helps ensure future orders are planned based on accurate stock availability.  
 
 Steps to reject an item:
-- Tap **`Report an Issue`** dropdown next to the item that can’t be fulfilled.  
+- Tap **`Report an Issue`** dropdown next to the item that can’t be fulfilled.
 {% hint style="info" %}
 The **Report an Issue** dropdown is only available if no shipments have been created for the TO.
 {% endhint %}
