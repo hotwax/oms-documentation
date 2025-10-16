@@ -56,7 +56,7 @@ Recommended for TOs with many items.
 
 After uploading:  
 - **Select Product Identifier:** Choose the identifier type (e.g., SKU).
-- **Map Columns:** Assign the correct CSV columns for Product Identifier and Quantity (e.g., Product Identifier → SKU, Quantity → Quantity).  
+- **Map Columns:** Assign the correct CSV columns for Product Identifier and Quantity (e.g., Product Identifier → SKU, Quantity → Quantity).
 
 #### Manually add items
 Recommended for TOs with only one or a few items.  
