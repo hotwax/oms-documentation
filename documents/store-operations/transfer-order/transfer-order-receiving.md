@@ -80,9 +80,8 @@ If you’ve received part of a TO and you know no more items will arrive, you ca
 
 
 ### Receive all items and close the order
-If all ordered quantities for every item in the TO have arrived, you can record them at once and close the TO.  
-- Tap `Receive All` for each item of the TO.  
-- Tap `Receive and Close` and follow the standard closing steps.  
+- Tap `Receive All` for each item of the TO.
+- Tap `Receive and Close` and follow the standard closing steps.
 
 
 ### Standard closing steps
