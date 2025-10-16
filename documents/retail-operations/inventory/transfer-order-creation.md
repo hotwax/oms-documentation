@@ -70,7 +70,7 @@ Recommended for TOs with only one or a few items.
 Quantities can be added either to individual items or in bulk to all items at once.  
 
 #### Adding quantities to an individual item:
-- **Enter Quantity:**  
+- **Enter Quantity:**
   Enter the quantity directly in the input field, or use the stepper arrows.  
 
 - **Book Quantities:**  
