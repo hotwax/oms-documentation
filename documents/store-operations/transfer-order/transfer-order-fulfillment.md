@@ -28,7 +28,7 @@ This view helps you verify the TO items before starting the fulfillment process.
 
 
 ### Print picklist
-- To print a picklist for picking items, tap **`Print Picklist`**.  
+- To print a picklist for picking items, tap **`Print Picklist`**.
 - To learn more about the picklist functionality for store transfer fulfillment, refer to **Transfer Order Picklist**.
 
 
