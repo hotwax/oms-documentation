@@ -20,9 +20,9 @@ To locate a specific TO:
 
 ### Review TO details
 Tapping on a TO opens the **Transfer Order Details** page, which displays:
-- A list of items with product name, product images, SKU codes, and ordered quantities.  
-- Total number of items to be fulfilled.  
-- A progress bar that visually indicates how much of each item has been fulfilled.  
+- A list of items with product name, product images, SKU codes, and ordered quantities.
+- Total number of items to be fulfilled.
+- A progress bar that visually indicates how much of each item has been fulfilled.
 
 This view helps you verify the TO items before starting the fulfillment process.  
 
