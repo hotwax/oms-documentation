@@ -50,7 +50,7 @@ You can add items manually or by uploading a CSV.
 
 #### Bulk Upload via CSV
 Recommended for TOs with many items.  
-- Go to the Import items CSV section.  
+- Go to the Import items CSV section.
 - Click `Download Example` to get a sample CSV template, if needed.  
 - Click `Upload` and upload the CSV file containing the SKUs and quantities.  
 
