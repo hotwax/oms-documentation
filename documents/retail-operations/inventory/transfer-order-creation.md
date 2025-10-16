@@ -31,7 +31,7 @@ You can create a new TO in the Transfers App to move inventory between facilitie
 
 
 ### Select shipping method
-- **Carrier:** Click on dropdown to select a shipping carrier (for example, FedEx).  
+- **Carrier:** Click on dropdown to select a shipping carrier (for example, FedEx).
 - **Method:** Click on dropdown and select a shipping method supported by the selected carrier (for example, Standard, Same day, or Next day).  
 
 
