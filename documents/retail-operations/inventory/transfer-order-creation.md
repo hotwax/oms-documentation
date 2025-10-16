@@ -61,7 +61,7 @@ After uploading:
 #### Manually add items
 Recommended for TOs with only one or a few items.  
 
-- **Search by product identifier**  
+- **Search by product identifier**
   Search for a product by entering its identifier (for example, SKU).  
   When the product appears on the screen, click on Add (+) icon.  
 
