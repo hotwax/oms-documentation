@@ -38,7 +38,7 @@ There are three ways to receive inventory:
 - **Scan with the iPad camera**
    Tap `Scan` to open the camera and scan the item’s barcode.  
 
-3. **Enter SKU:**  
+- **Enter SKU:**
    Enter the SKU of an item in the Scan Item input field.  
 
 Each time you scan a barcode or enter a SKU, the system automatically adds one unit to the quantity and updates the progress bar.  
