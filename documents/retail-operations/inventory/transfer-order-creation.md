@@ -86,7 +86,7 @@ Quantities can be added either to individual items or in bulk to all items at on
 
 ### Finalize the TO
 - Before finalizing, review the destination facility, shipping method, transfer dates and the items with their respective quantities.
-- Once everything is confirmed, select the checkmark icon in the lower-right corner to finalize and create the TO.  
+- Once everything is confirmed, select the checkmark icon in the lower-right corner to finalize and create the TO.
 
 
 After a TO is created, you land on the Transfer Order Details page with the order in Created status.
