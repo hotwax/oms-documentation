@@ -6,7 +6,7 @@ You can create a new TO in the Transfers App to move inventory between facilitie
 ## Steps to create a TO:
 
 ### Create a new TO
-- To create a new TO, click the Add (+) icon.  
+- To create a new TO, click the Add (+) icon.
 - The Create transfer order page opens, where you can enter order details.  
 
 
