@@ -30,8 +30,8 @@ The Picklist provides a detailed list of items in a Transfer Order (TO) to suppo
 - Print the picklist to use as a checklist or keep it open on iPad while packing.
 
 ### Pack items using the picklist
-- Use the picklist as a guide while packing items into boxes.  
-- Note down the quantities picked and the box number for each item on the picklist as you pack.  
+- Use the picklist as a guide while packing items into boxes.
+- Note down the quantities picked and the box number for each item on the picklist as you pack.
 
 ### Record in the App
 After packing, use the picklist to record the packed items in the app.
