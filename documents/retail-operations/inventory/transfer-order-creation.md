@@ -85,7 +85,7 @@ Quantities can be added either to individual items or in bulk to all items at on
 
 
 ### Finalize the TO
-- Before finalizing, review the destination facility, shipping method, transfer dates and the items with their respective quantities.  
+- Before finalizing, review the destination facility, shipping method, transfer dates and the items with their respective quantities.
 - Once everything is confirmed, select the checkmark icon in the lower-right corner to finalize and create the TO.  
 
 
