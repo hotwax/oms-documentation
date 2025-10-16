@@ -123,10 +123,9 @@ This ensures all items that arrive, expected or not, are recorded and available 
 ## Reporting discrepancies
 
 All receiving discrepancies are captured in the HotWax OMS system. The HotWax BI Reports & Analytics platform provides a **[Receiving Report](../../../analytics/reports/inventory.md#receiving-report)**
- that shows:
-- Over-received items  
-- Under-received items  
-- Newly added items  
+- Over-received items
+- Under-received items
+- Newly added items
 
 For each item, the report lists the expected quantity, the received quantity, and the difference.  
 
