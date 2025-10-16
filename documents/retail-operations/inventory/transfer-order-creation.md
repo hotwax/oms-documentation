@@ -81,7 +81,7 @@ Quantities can be added either to individual items or in bulk to all items at on
 
 #### Adding quantities in bulk:
 - To add quantities in bulk, check the box above the item list.
-- You can then apply Book QoH or Book ATP across every item, or use `Custom Quantity` to enter a single value that is applied to all items in the TO.  
+- You can then apply Book QoH or Book ATP across every item, or use `Custom Quantity` to enter a single value that is applied to all items in the TO.
 
 
 ### Finalize the TO
