@@ -32,7 +32,7 @@ This view helps you verify the TO items before starting the receiving process.
 
 ### Receive items
 There are three ways to receive inventory:
-1. **Scan with a barcode scanner**  
+- **Scan with a barcode scanner**
    Scanning a barcode finds the matching item in the list, selects it, and increases its received quantity.  
 
 2. **Scan with the iPad camera**  
