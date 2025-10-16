@@ -78,8 +78,8 @@ You can either:
 
 ### Complete shipment
 Once the tracking code is entered, the **`Complete Shipment`** button becomes available.
-- Tap **`Complete Shipment`**.  
-- A confirmation pop-up will appear, tap **`Ship`**.  
+- Tap **`Complete Shipment`**.
+- A confirmation pop-up will appear, tap **`Ship`**.
 
 
 ## Exception Handling
