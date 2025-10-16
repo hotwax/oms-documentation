@@ -23,9 +23,9 @@ To locate a specific order:
 
 ### Review TO details
 Tapping on a TO opens the Transfer Order Details screen, which displays:
-- Total number of items to be received.  
-- A list of items with product name, product images, SKU codes and ordered quantities.  
-- A progress bar that visually indicates how much of each item has been received.  
+- Total number of items to be received.
+- A list of items with product name, product images, SKU codes and ordered quantities.
+- A progress bar that visually indicates how much of each item has been received.
 
 This view helps you verify the TO items before starting the receiving process.  
 
