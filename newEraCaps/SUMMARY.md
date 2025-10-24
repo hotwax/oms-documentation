@@ -3,7 +3,7 @@
 * [Introduction](README.md)
 * [Why HotWax Commerce](whyHotWax.md)
 
-## Flows - Phase 1
+## Flows
 * [Product Store](flows/product-store/README.md)
 * [Products](flows/phase1/products/README.md)
 * [Sales Order](flows/phase1/sales-order/README.md)
