@@ -196,7 +196,7 @@ Transformation flow picks up the downloaded JSON files from the SFTP path and pr
 **Order Adjustment Mapping**:
 
 | Order Adjustment Id | Order Adjustment Type Id | Order Id | Amount |
-| - |  | -- |  |
+| ------------------- | ------------------------ | -------- | ------ |
 | 100094              | COD\_FEE\_TAX            | NEC45433 | 70     |
 | 100095              | COD\_FEE                 | NEC45433 | 700    |
 
