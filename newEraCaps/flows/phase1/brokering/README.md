@@ -13,7 +13,7 @@ description: >-
 
 Online shipping orders are always routed to the warehouse unless the customer has selected a store that they want the product to be shipped from when adding the item to their cart. If an order item contains a soft allocated ship-from facility, the OMS will read the pre-selected facility and allocate those order items to the respective locations for fulfillment.
 
-When this kind of soft allocated order is imported, the soft allocated items of the order will be directly allocated to that store upon import and skip the normal brokering algorithm. Since customers must explicitly choose which items they want to be shipped from the store, the OMS will split the items and will soft allocated them .In the event that a store cannot fulfill an order and must reject it for reallocation, those orders will not be allocated to the warehouse .
+When this kind of soft allocated order is imported, the soft allocated items of the order will be directly allocated to that store upon import and skip the normal brokering algorithm. Since customers must explicitly choose which items they want to be shipped from the store, the OMS will split the items and will soft-allocate them. In the event that a store cannot fulfill an order and must reject it for reallocation, those orders will not be allocated to the warehouse.
 
 ## Re-brokering for Ship From Store
 
