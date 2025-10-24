@@ -80,7 +80,7 @@ When a customer places an order in Shopify, the system instantly evaluates it ag
 
 * **APPROVED** orders move directly to fulfillment.
 
-* **HOLD** orders are paused for manual review by the CS team.
+* `HOLD` orders are paused for manual review by the Customer Service (CS) team.
 
 These tags sync between Shopify and HotWax Commerce in near real time, ensuring that orders requiring attention are identified instantly while all other orders continue smoothly through the fulfillment process.
 
