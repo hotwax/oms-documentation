@@ -9,7 +9,7 @@ Together, these processes provide a reliable, automated foundation for omnichann
 
 >Phase 2
 
-To achieve **real-time order visibility**, Hotwax Commerce has implemented  Shopify’s webhook integration with **Amazon SQS**, which provides the capability to receive and process orders the moment they are placed in Shopify. This ensures that orders appear instantly in the OMS with complete and accurate details, allowing fulfillment operations to begin without delay.
+To achieve **real-time order visibility**, HotWax Commerce has implemented  Shopify’s webhook integration with **Amazon SQS**, which provides the capability to receive and process orders the moment they are placed in Shopify. This ensures that orders appear instantly in the OMS with complete and accurate details, allowing fulfillment operations to begin without delay.
 
 ### How the Process Works
 
