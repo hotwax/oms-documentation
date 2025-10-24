@@ -25,7 +25,7 @@ From there, a scheduled process automatically reviews all such orders and reallo
 
 If the newly assigned store also rejects the order, the same process continues, with HotWax attempting to find another location that can fulfill it. When no store has available inventory, the order is moved to **Unfillable Parking**. At this stage, HotWax sets an automatic cancellation date and notifies the business team, ensuring transparency and giving them time to review or take alternate action before the order is canceled.
 
-This automated reallocation process helps NEC maintain high fulfillment rates, reduce manual effort, and ensure customers receive timely and accurate service—even when stock issues arise.
+This automated reallocation process helps NEC maintain high fulfillment rates, reduce manual effort, and ensure customers receive timely and accurate service, even when stock issues arise.
 
 **Example Scenario**
 
