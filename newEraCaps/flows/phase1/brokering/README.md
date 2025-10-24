@@ -35,7 +35,7 @@ The automated rebrokering process then reallocates the order to **Store-2**, whi
 
 If **Store-2** also rejects the order, the system continues the same process with **Store-3** or the next available location. In the event that no store can fulfill the order, it is moved to **Unfillable Parking**, where HotWax assigns an **auto-cancel date** and notifies the business team in advance.
 
-This ensures a seamless and transparent order lifecycle — minimizing fulfillment delays, maintaining inventory accuracy across all stores, and keeping the business informed at every step.
+This ensures a transparent order lifecycle, minimizing fulfillment delays, maintaining inventory accuracy across all stores, and keeping the business informed at every step.
 
 ## Reshipping Flow
 
