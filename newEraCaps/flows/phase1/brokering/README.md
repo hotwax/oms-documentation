@@ -8,7 +8,7 @@ description: >-
 
 **Discover how New Era Caps Japan efficiently utilizes its stores and warehouse for order fulfillment through strategic brokering configurations.**
 
-## Soft Allocation.
+## Soft Allocation
 > Phase 2
 
 Online shipping orders are always routed to the warehouse unless the customer has selected a store that they want the product to be shipped from when adding the item to their cart. If an order item contains a soft allocated ship-from facility, the OMS will read the pre-selected facility and allocate those order items to the respective locations for fulfillment.
