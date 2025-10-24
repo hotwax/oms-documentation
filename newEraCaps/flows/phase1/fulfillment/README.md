@@ -3,7 +3,38 @@ description: >-
  Dive into New Era Caps's innovative fulfillment strategies, leveraging warehouse location to fulfill online shipping orders
 
 ---
+
 # Fulfillment
+
+While the current WMS that New Era Caps uses will be utilized for fulfillment from the warehouse, the OMS’s native fulfillment and store pickup apps will be used for fulfillment from stores.
+
+## Store Fulfillment Carrier
+
+New Era Caps uses Sagawa as its store fulfillment carrier. The OMS integrates with Sagawa through API-based integration, where the OMS sends shipment details via an API call and receives shipping labels in return. This direct integration streamlines the process and makes fulfillment faster and more efficient.
+
+## **Partial and Collateral Rejection Management**
+
+### **Partial Rejection**
+
+Partial rejection in HotWax Commerce allows store teams to reject only specific items from an order — for example, those that are **out of stock** or **damaged** — while continuing to fulfill the remaining items.  
+ This ensures smooth operations by preventing unnecessary cancellations and allowing customers to still receive part of their order on time.
+
+### **Collateral Rejection**
+
+Collateral rejection helps maintain consistency across multiple pending orders.  
+If a particular product is rejected in one order because it’s unavailable, HotWax automatically rejects that same product from all other open orders.
+
+This proactive approach speeds up reallocation to other stores or warehouses, minimizes fulfillment delays, and ensures accurate inventory visibility across all channels.
+[Learn more](https://docs.hotwax.co/documents/store-operations/orders/fulfillment/rejection#partial-rejection)
+
+
+### **Partial Cancellations**
+
+A **partial cancellation** occurs when either a customer or the Customer Service Representative (CSR) cancels certain items from an order instead of the entire order.  
+Canceled items are immediately removed from the fulfillment process, while the remaining items continue toward shipment — ensuring flexibility for both customers and operations teams without disrupting the entire order.
+
+
+<!-- # Fulfillment
 
 ## Completed Feed
 
@@ -46,3 +77,4 @@ To sync the fulfillment back into the OMS from the warehouse, a batch job is use
 ```
 Order Item Fulfillment
 ```
+-->
