@@ -111,12 +111,11 @@ With this enhancement, payments are now captured as soon as store staff mark an 
 
 This feature safeguards revenue, enhances financial accuracy, and ensures that every prepared order is fully accounted for — providing New Era Caps with greater financial control and operational reliability.
 
-
-
 ## **Ship From Store (SFS)**
 
-New Era Caps offers **Ship From Store (SFS)** as an additional fulfillment option, giving customers greater flexibility and access to products not available in the warehouse.
+>Phase 2
 
+New Era Caps offers **Ship From Store (SFS)** as an additional fulfillment option, giving customers greater flexibility and access to products not available in the warehouse.  
 When browsing online, customers can see store-level availability and choose between:
 
 * **Ship from Store:** Receive the item directly from a retail store for an additional shipping fee.
@@ -128,9 +127,9 @@ This functionality is powered by HotWax Commerce’s intelligent inventory syste
 Although shipping from stores incurs higher logistics costs, offering this option enhances product accessibility and strengthens the brand’s omnichannel promise.
 
 
-## 
-
 ## **Mixed Cart Support**
+
+>Phase 2
 
 HotWax Commerce enables **mixed-cart checkout**, allowing customers to purchase products fulfilled from both the warehouse and stores in a single order.
 
