@@ -68,8 +68,6 @@ A customer in **Tokyo** places an order for home delivery with a **Cash on Deliv
 
 This real-time order import process ensures accurate, dependable, and immediate synchronization between Shopify and the OMS — forming the backbone of New Era Caps’ omnichannel fulfillment experience.
 
-## 
-
 ## Real-Time Order Review and Tag Synchronization
 
 >Phase 2
