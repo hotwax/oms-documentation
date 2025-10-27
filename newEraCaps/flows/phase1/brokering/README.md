@@ -6,8 +6,6 @@ description: >-
 
 # Brokering
 
-**Discover how New Era Caps Japan efficiently utilizes its stores and warehouse for order fulfillment through strategic brokering configurations.**
-
 ## Soft Allocation
 > Phase 2
 
@@ -58,7 +56,7 @@ The flow performs the following functions:
 * **Facility Tracking**: Since the canceled item is no longer available at the facility it was originally brokered to, the flow checks the Order Facility Change history to identify which warehouse facility previously held the item. It also records the shipgroup (the group of items within the order assigned to that facility) from which the item was removed. This ensures accurate deletion of fulfillment records, preventing canceled items from being included in the WMS feed.  
 * **File Generation for WMS**: The flow generates an updated order file and places it on the SFTP location for the WMS to process.
 
-As part of this process, HotWax tags the order with a \*\*Reshipping status\*\*:
+As part of this process, HotWax tags the order with a **Reshipping status**:
 
 * Pending – when the updated order is awaiting transmission to WMS.  
 * Sent – once the updated order has been successfully transmitted to WMS.  
@@ -86,8 +84,7 @@ The flow performs the following functions:
   
 - **File Generation for WMS**: The flow generates an updated order file and places it on the SFTP location for the WMS to process.
 
+As part of this process, HotWax tags the order with **Reshipping Status**
 
-As part of this process, HotWax tags the order with a **Reshipping status**:
 - Pending – when the updated order is awaiting transmission to WMS.
 - Sent – once the updated order has been successfully transmitted to WMS.
--->
