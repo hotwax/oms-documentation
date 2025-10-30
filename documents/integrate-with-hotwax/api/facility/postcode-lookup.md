@@ -112,7 +112,7 @@ Fetches the latitude longitude for a specific postal code. To look up the latitu
 
 #### Endpoint
 
-`https://<host>/api/postcodeLookup`
+`https://<host>/rest/s1/api/geocode`
 
 #### Header
 
@@ -123,7 +123,7 @@ Content-Type:​ application/json
 ```
 {
   "json": {
-    "query": "postcode:2635"
+    "query": "postcode:10001"
   }
 }
 ```
@@ -146,29 +146,24 @@ Content-Type: application/json
 
 ```
 {
- "responseHeader": {
-   "status": 0,
-   "QTime": 1,
-   "params": {
-     "json": "{\"query\":\"postcode:2635\"}"
-   }
- },
- "response": {
-   "numFound": 1,
-   "start": 0,
-   "numFoundExact": true,
-   "docs": [
-     {
-       "postcode": "2635",
-       "latitude": "41.624054",
-       "longitude": "-70.439397",
-       "country": "USA",
-       "country-code-id": "2635-USA",
-       "location": "41.624054,-70.439397",
-       "_version_": 1752733516719718400
-     }
-   ]
- }
+  "response": {
+    "numFound": 1,
+    "start": 0,
+    "numFoundExact": true,
+    "docs": [
+      {
+        "postcode": "10001",
+        "latitude": "40.750636",
+        "longitude": "-73.997177",
+        "country": "USA",
+        "countryCodeAlpha3": "USA",
+        "countryCodeAlpha2": "US",
+        "country-code-id": "10001-US",
+        "location": "40.750636,-73.997177",
+        "_version_": 1790686106947158016
+      }
+    ]
+  }
 }
 ```
 
@@ -178,7 +173,7 @@ Content-Type: application/json
 | `latitude`        | The latitude of the postal code                         |
 | `longitude`       | The longitude of the postal code                        |
 | `country`         | The country of the provided postal code                 |
-| `country-code-ID` | The country code ID of the provided country             |
+| `country-code-id` | The country code ID of the provided country             |
 | `location`        | The latitude and longitude points of the postal code    |
 
 ## Fetch latitude longitude for a partial postal code
@@ -189,7 +184,7 @@ Fetches the latitude longitude for a partial postal code. This API fetches all t
 
 #### Endpoint
 
-`https://<host>/api/postcodeLookup`
+`https://<host>/rest/s1/api/geocode`
 
 #### Header
 
