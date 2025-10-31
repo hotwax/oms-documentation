@@ -47,7 +47,7 @@ You can group TOs by product, facility, or a combination of both to organize the
   This is the default option. Each TO appears as a separate card showing the order name, ID, creation date, origin, destination, and current status.  
 
 - **Destination**  
-  Group TOs by facility that will receive the items. Each card shows total quantities ordered, shipped, and received for that destination.  
+  Group TOs by the facility that will receive the items. Each card shows total quantities ordered, shipped, and received for that destination.  
 
 - **Destination and Product**  
   Group TOs by both destination facility and item. Each card shows a specific item to be received at the corresponding destination facility.  
