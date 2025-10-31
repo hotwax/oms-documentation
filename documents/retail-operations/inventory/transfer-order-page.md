@@ -17,7 +17,7 @@ You can search TOs by:
 
 
 ### Filter TOs
-You can filter TOs to narrow the list.
+Use filters to narrow the results.
 
 **Steps to filter TOs**
 1. Go to the Location or Fulfillment section in the left menu.  
