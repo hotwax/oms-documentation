@@ -7,14 +7,7 @@ You can use search, filters, grouping, and sorting to quickly locate relevant TO
 ## Actions available to perform in the app.
 
 ### Search for a TO
-To find a specific TO, use the search bar at the top of the page.  
-
-You can search TOs by:
-- TO name  
-- TO ID  
-- Product ID  
-- Parent product name  
-
+To find a specific TO, use the search bar at the top of the page and search by TO name.
 
 ### Filter TOs
 Use filters to narrow the results.
