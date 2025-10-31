@@ -44,14 +44,14 @@ You can group TOs by product, facility, or a combination of both to organize the
 
 - **Destination and Product**  
   Group TOs by both destination facility and item. Each card shows a specific item to be received at the corresponding destination facility.  
-  Example: If Product A is about to be received at the Boston store, the card displays Product A and Boston as the destination. Expanding the card shows all TOs that include Product A to be received at that destination.  
+  Example: If Men’s Denim Jacket is about to be received at the Boston Store, the card displays Men’s Denim Jacket and Boston as the destination. Expanding the card shows all TOs that include that item to be received at that destination.
 
 - **Origin**  
   Group TOs by origin facility. Each card shows total quantities ordered, shipped, and received for that facility.  
 
 - **Origin and Product**  
   Group TOs by both origin facility and item. Each card shows a specific item to be shipped from the corresponding origin facility.  
-  Example: If Product A is shipped from the New York store, the card displays Product A and New York store as the origin. Expanding the card shows all TOs that include Product A to be shipped from that origin.  
+  Example: If Women's Denim Skirt is shipped from the New York store, the card displays Women's Denim Skirt and New York store as the origin. Expanding the card shows all TOs that include that item to be shipped from that origin.  
 
 
 ### Sort by created date
