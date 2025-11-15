@@ -48,7 +48,7 @@ To create a new TO, tap the `+` button located in the bottom-right corner of the
    - Based on transfer type, select the appropriate lifecycle:  
      - **Store to Store**: Select Fulfill and Receive (managed entirely in OMS).  
      - **Store to Warehouse**: Select Fulfill only (post-fulfillment handled by WMS).  
-   - To know more about TO types, refer to this [document](/documents/store-operations/transfer-order/transfer-order-management.md).  
+   - To know more about TO types, refer to this [document](/documents/learn-netsuite/integration-flows/transfer-order/README.md).  
    - Set the Ship Date and tap `Done`.  
    - Set the Delivery Date and tap `Done`.  
 
