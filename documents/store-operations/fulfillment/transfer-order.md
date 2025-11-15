@@ -24,118 +24,93 @@ Through the **Find** page, users can view:
 
 > **Note:** The order status remains **Approved** until all items are fulfilled and only changes to **Completed** once every item has been fulfilled.
 
-## Transfer Order Creation
+## **Transfer Order Creation**
 
-To create a new TO, tap the `+` button located in the bottom-right corner of the Transfer Orders tab. This opens the Create Transfer Order screen.
+### **Steps to Create a Transfer Order**
 
-### Steps to Create a Transfer Order
+Associates can create a new TO by tapping the **\+** icon located in the bottom-right Transfer Orders tab. 
 
-1. **Name the TO**  
-   - At the top left of the page, enter a unique name for the TO. This name helps to easily identify the TO later.  
+**1\. Name the Transfer Order**
 
-2. **Assign Destination**  
-   - Locate the Assign section in the left-hand menu.  
-   - Tap Assign to select the destination facility.  
-   - Select a destination facility.  
+Enter a unique name to help identify the Transfer Order later.
 
-3. **Select Shipping Method**  
-   - Locate the Shipping Method section below the Assign card.  
-   - Tap the dropdown to choose a Carrier.  
-   - Now, choose the Shipping Method supported by the carrier, such as Standard, Same Day, or Next Day.  
+#### **2\. Select Destination Facility**
 
-4. **Plan Shipping and Delivery Dates**  
-   - Locate the Plan section in the left-hand menu.  
-   - Based on transfer type, select the appropriate lifecycle:  
-     - **Store to Store**: Select Fulfill and Receive (managed entirely in OMS).  
-     - **Store to Warehouse**: Select Fulfill only (post-fulfillment handled by WMS).  
-   - To know more about TO types, refer to this [document](/documents/learn-netsuite/integration-flows/transfer-order/README.md).  
-   - Set the Ship Date and tap `Done`.  
-   - Set the Delivery Date and tap `Done`.  
+Choose the destination facility from the facility list displayed in the modal during TO creation. Click the Save button at the bottom. This opens the Create Transfer Order page.
 
-5. **Add Products to the TO**  
-   - Use the set product identifier (like SKU or Shopify ID) to search, or scan the product.  
-   - Once it appears on the right side, tap the `+` button to add it to the TO.  
+#### **3\. Choose Transfer Type**
 
-   Upon adding a product, store associates can see three options for quantity selection:  
-   - Book QOH (Quantity on Hand): Use this when transferring the entire available stock from the origin facility.  
-   - Book ATP (Available to Promise): Select this to transfer only the available (unallocated) quantity.  
-     - *Use Case*: Ideal to avoid affecting future commitments or orders.  
-   - Book Custom Quantity: Use this option to specify a custom quantity to transfer.  
+A toggle, **Return to Warehouse**, determines the type of transfer:
 
-   Use the checkbox top row to enable bulk edit for all added items.  
+* **ON** → Creates a **Fulfill Only** transfer order (used for Store → Warehouse transfers).
 
-6. **Finalize the TO**  
-   - Tap the `✓` button in the bottom right corner to finalize and create the TO.  
-{% hint style="warning" %}
-A TO cannot be edited from the Fulfillment app after this step
-{% endhint %}  
+* **OFF** → Creates a **Fulfill and Receive** transfer order (used for Store → Store transfers).
 
-### Upload CSV for Transfer Order
+#### **4\. Add Products**
 
-When creating a TO for multiple products, the Fulfillment App supports uploading a CSV for multiple products.
+Products can be added using two methods:
 
-To efficiently create a TO with multiple products, follow these steps:  
+* **Scan Products** – Enables scanning based on the configured identifier (e.g., SKU). The page displays the active scanning mode as “Scanning is set to SKU” or similar.
 
-1. **Prepare a CSV File**  
-   - Create a CSV file containing the SKUs and quantities of the products to be transferred.  
+* **Search Products** – Associates can search using product identifiers like SKU, UPCA, and more. After selecting a product, click **Add to Transfer Order** to include it.
 
-2. **Navigate and Upload**  
-   - On the Create Transfer Order page, navigate to the `Upload` button at the bottom left of the product selection section.  
+When a product is manually entered, a suggestion list appears with a "**View more results**" option. Clicking this opens a popup where associates can select products to add to the TO.
 
-3. **Select and Upload the CSV File**  
-   - Tap the `Upload` button and choose the prepared CSV file.  
+### **Managing Added Products**
 
-4. **Map the Fields**  
-   - Select the correct product identifier (e.g., SKU).  
-   - Map the CSV fields to the system fields (e.g., SKU → Product ID, Quantity → Quantity).  
+Once products are added, they appear in a list along with their available Quantity on Hand (QOH).
 
-This method eliminates the need to add each product manually and speeds up the TO creation process.  
+Associates can:
 
-## Transfer Order Fulfillment
+* **Book QOH** – Transfer the entire available quantity.
 
-The Transfer Order Details page is used to fulfill TOs. To access this page, store associates simply tap on a transfer order from the Find page, which navigates them to this page.  
+* **Enter custom quantity** – Specify how many units to send.
 
-At the top of the page, associates can view important details such as the total quantity of items they need to fulfill, the transfer order name, the order ID, and the current status of the TO, which will be marked as either Approved or Completed.  
+* **Remove products** – Delete any item from the TO if needed.
 
-- Approved: The transfer order is active and pending fulfillment.  
-- Completed: All items in the transfer order have been fulfilled, and the TO is shipped.  
+### **Discard Transfer Order**
 
-While fulfilling the TO, associates can generate a picklist to view all the items that need to be picked. To do this, tap the `Picklist` button at the bottom of the page.  
+If the entire order needs to be cancelled, click **Discard Order**. The status will update to *Order Cancelled*, and it will no longer be visible in the app.
 
-### Item Card
+### **Ship Later**
 
-Item card displays key product information:
+Associates can also choose **Ship Later** if they want to create the order now but fulfill it at a later time. The TO will remain in the Open tab until shipped.
 
-- Product image
-- SKU
-- Product name 
-- HotWax Commerce product ID
-- Full image view
-- Report an issue dropdown to reject an item 
+### **Pack and Ship the Transfer Order**
 
-{% hint style="info" %}
-The Report an Issue dropdown is only available if no prior shipments have been created against the TO.  
-{% endhint %}
+Clicking **Pack and Ship Order** navigates associates to the Ship Transfer Order page.
 
-- **View item quantity ordered**: Displayed next to the Report an Issue dropdown.  
-- **Partial Fulfillment**: If the full quantity of an item is not available, associates can create a shipment for the available quantity.  
- {% hint style="warning" %}
-Over-fulfillment is not allowed.  
-{% endhint %}
+This page displays:
 
-### Complete Shipment
+* All items to be shipped
 
-Once the items are fulfilled, associates can tap the `Create Shipment` button in the bottom-right corner. After this, they will be redirected to the Review Shipment page, where they can:  
-- Generate the shipping label  
-- Add the tracking code  
-- View the carrier name  
+* Their corresponding quantities
 
-{% hint style="info" %}
-- Any errors encountered while generating the shipping label can be viewed by tapping the `file` button in the top-right corner.  
-- Once the tracking code is entered, the `Complete Shipment` button will be enabled in the bottom-right corner.  
-{% endhint %}
- 
-- **Important**: Once a shipment is completed, it cannot be edited.  
+* The selected destination facility
+
+### **Shipping Options**
+
+Two tabs are available:
+
+#### **1\. Purchase Shipping Label**
+
+Associates can choose from available carriers and their respective methods. After selecting a method, click **Purchase Label** to generate a shipping label and tracking code.
+
+Users may:
+
+* Void a label
+
+* Reprint an existing label
+
+#### **2\. Manual Tracking**
+
+Associates can manually select a carrier, choose a shipping method, and enter a tracking number. A shipping label is then generated accordingly.
+
+After generating a label using either method, clicking **Ship Order** completes the shipment.
+
+### **Completion**
+
+Once shipped, the transfer order progresses toward completion based on the transfer type. Completed TOs move to the Completed tab and remain available for review.
 
 ## Permission required for the Transfer Orders Page
 
