@@ -5,7 +5,7 @@ description: >-
 # Open Orders Page
  
 ## Order Details Card
-The order card shows details that store staff need at a glance. To check the number of units currently in stock, store associates need to click the small `box` icon next to the product details. To view the inventory computation, including quantity on hand, safety stock, reserved quantities, and online ATP, they can click the info icon.  
+The order card shows details that store staff need at a glance. To check the number of units currently in stock, store associates need to click the small `box` icon next to the product details. To view the inventory computation, including quantity on hand, safety stock, reserved quantities, and online ATP, they can click the `info` icon.  
 The order card displays the order name, product image, SKU, and the time since the order was created.
 
 At the bottom of the card, three action buttons are available:
