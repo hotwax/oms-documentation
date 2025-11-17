@@ -17,7 +17,7 @@ At the bottom of the card, three action buttons are available:
 To print the picklist, store associates can click the `printer` icon. The picklist opens in a new tab as a PDF and displays details such as the order number, product information, and picking quantity.
 
 ### Kit Product Identification
-Orders that include a kit product show a “Kit” tag on the order card across the `Open`, `Packed`, and `Completed` tabs.
+Orders that include a kit product show a `Kit` tag on the order card across the `Open`, `Packed`, and `Completed` pages.
 
 To view the list of individual items included in the kit, store associates can tap on the `three-dot` menu on the order card. The process for handling kit orders, including `picking`, `packing`, and `handover`, is the same as for regular orders.
 
