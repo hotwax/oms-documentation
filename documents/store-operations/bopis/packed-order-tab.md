@@ -19,7 +19,7 @@ When the `Handover` button is clicked, a Proof of Delivery (POD) pop-up appears 
 The recorded details are saved and linked to the respective order. Once confirmation is saved, an automated email is sent to the customer with the order details and pickup confirmation.
 
 ## Order Details Page
-The order details page in the `Packed` Orders tab shows all the usual order information. At the top, there is a `mail` icon that lets store staff resend an email to notify the customer that their order is ready for pickup, a `watch` icon to view the order item rejection history, and a `print` icon to generate the packing slip.
+The `Order Details` page in the `Packed` Orders page shows all the usual order information. At the top, there is a `mail` icon that lets store staff resend an email to notify the customer that their order is ready for pickup, a `watch` icon to view the order item rejection history, and a `print` icon to generate the packing slip.
 
 The page also allows store associates to edit the assigned picker for an order. To update the picker, associates can click the `picker name`. This opens a pop-up displaying all available pickers, and a new picker can be selected from the list.
 
