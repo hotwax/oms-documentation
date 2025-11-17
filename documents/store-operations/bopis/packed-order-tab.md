@@ -27,7 +27,7 @@ Once an order is packed and marked as Ready for Pickup, store staff will see the
 
 Selecting `Cancel Item` opens a pop-up displaying a list of cancellation reasons. When an item is cancelled, an email is sent to the customer.
 
-Below this section, the[ cancellation sync](documents/retail-operations/workflow/job-workflows/orders.md) job status is shown. The behavior of cancellation and refund depends on the following settings:
+Below this section, the [cancellation sync job](../../retail-operations/workflow/job-workflows/orders.md)) status is shown. The behavior of cancellation and refund depends on the following settings:
 
 - If both the `cancellation sync` job and the Shopify setting to process refunds are enabled, the cancellation and refund will be sent to Shopify.
 - If the `cancellation sync` job is enabled but the Shopify refund setting is disabled, only the cancellation will be sent to Shopify.
