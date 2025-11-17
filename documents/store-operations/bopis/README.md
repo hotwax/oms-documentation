@@ -28,5 +28,5 @@ Whenever a new BOPIS order is placed for store pickup, store associates receive 
 To access the BOPIS Fulfillment App, users must have the `BOPIS_APP_VIEW` permission.
 
 {% hint style="info" %}
-This permission only allows viewing. To perform actions like Pick, Pack, view Order Details page, and manage other store operations, store staff must also have the `COMMON_ADMIN` and `STOREFULFILLMENT_ADMIN` permission.
+This permission only allows viewing. To perform actions like Pick, Pack, view the `Order Details` page, and manage other store operations, store staff must also have the `COMMON_ADMIN` and `STOREFULFILLMENT_ADMIN` permission.
 {% endhint %}
