@@ -6,7 +6,7 @@ description: >-
 # Gift Card Activation
 
 ## When Does the Gift Card Activation Pop-up Appear?
-Orders that include a gift card show a `gift box` icon on the order card and order details page across the `Open`, `Packed`, and `Completed` tabs.
+Orders that include a gift card show a `gift box` icon on the order card and `Order Details` page across the `Open`, `Packed`, and `Completed` pages.
 
 The activation pop-up appears when a staff member taps a gift card icon.
 
