@@ -47,11 +47,11 @@ The Customer Details section displays the following information:
 
 **Payment Details**
 
-The Payment section appears next to Customer Details and includes:  
-- **Payment method:** used by the customer  
-- **The payment gateway:** through which the payment was processed  
-- **Amount paid:** shows the total amount the customer has paid for the order  
-- **Payment status:** possible payment statuses include Authorized, Cancelled, Not Authorized, Not Received, Received, Refunded, Settled, and Declined.
+The Payment section appears next to Customer Details and includes:
+- **Payment method:** Used by the customer
+- **The payment gateway:** Through which the payment was processed
+- **Amount paid:** Shows the total amount the customer has paid for the order
+- **Payment status:** Possible payment statuses include Authorized, Cancelled, Not Authorized, Not Received, Received, Refunded, Settled, and Declined.
 
 ### Other Shipments
 This section shows other shipments linked to the order. Each shipment is shown as a card with the fulfillment location, such as a warehouse or store, and the shipment number.
