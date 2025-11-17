@@ -25,7 +25,7 @@ When a customer buys a gift card online, store staff can activate it before hand
 Whenever a new BOPIS order is placed for store pickup, store associates receive a notification to take action. To access the notifications, tap the bell icon in the top right corner of the page.
 
 ## Pre-requisites
-To access the Fulfillment App, users must have the `BOPIS_APP_VIEW` permission.
+To access the BOPIS Fulfillment App, users must have the `BOPIS_APP_VIEW` permission.
 
 {% hint style="info" %}
 This permission only allows viewing. To perform actions like Pick, Pack, view Order Details page, and manage other store operations, store staff must also have the `COMMON_ADMIN` and `STOREFULFILLMENT_ADMIN` permission.
