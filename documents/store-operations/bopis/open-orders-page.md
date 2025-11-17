@@ -21,7 +21,7 @@ Orders that include a kit product show a “Kit” tag on the order card across 
 
 To view the list of individual items included in the kit, store associates can tap on the `three-dot` menu on the order card. The process for handling kit orders, including `picking`, `packing`, and `handover`, is the same as for regular orders.
 
-To view complete information about an order, store associates can click the order details card, which opens the Order Details page.
+To view complete information about an order, store associates can click the order details card, which opens the `Order Details` page.
 
 ## Order Details Page
 The order details page displays all order-related information for that order, such as the customer’s name, order ID, customer's contact details, item details, reason for rejection, and order item rejection history. On the top right, there are two icons. The `watch` icon opens the order item rejection history, and the `print` icon allows store staff to print the picklist.
