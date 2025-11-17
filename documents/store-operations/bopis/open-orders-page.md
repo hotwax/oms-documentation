@@ -61,7 +61,7 @@ When an order is split across locations, the shipments appear side by side so st
 The card includes product details and the shipment status. For example, `Pending Allocation` means inventory hasn’t been assigned yet, while `Packed` indicates the item is ready for the next step.
 
 ### Order Timeline
-The Order Timeline shows the fulfillment journey of the order so far, starting from when it is created in Shopify. The timeline records every key update, such as when the order is imported into HotWax, assigned to a location, rejected, reassigned, prepared for pickup or shipping, and when it is finally picked up or marked complete.
+The Order Timeline shows the fulfillment journey of the order so far, starting from when it is created in Shopify. The timeline records every key update, such as when the order is imported into HotWax Commerce, assigned to a location, rejected, reassigned, prepared for pickup or shipping, and when it is finally picked up or marked complete.
 
 On the top right of the timeline, the current order status is always visible. This provides a quick summary of the current status of the order.
 
