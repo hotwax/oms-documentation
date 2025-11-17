@@ -8,7 +8,7 @@ description: >-
 ## Order Details Card
 The order card in the `Completed` page shows the same set of details found in the `Open` and `Packed` pages, such as the order ID, customer name, and product information.
 
-To download the packing slip, store associates can click the `Print Customer Letter` button. The full Order Details page can be accessed by clicking the order card.
+To download the packing slip, store associates can click the `Print Customer Letter` button. The full `Order Details` page can be accessed by clicking the order card.
 
 ## Order Details Page
 The Order Details page in the `Completed` Orders tab shows all the main information related to the order. This includes the order ID, product details, customer name, contact details, shipping address, payment method, and payment status. There is a watch icon on the top right, which shows the order item rejection history.
