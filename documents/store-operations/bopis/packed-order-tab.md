@@ -12,8 +12,8 @@ There’s also a `mail` icon to resend the pickup email to the customer, and a `
 
 When the `Handover` button is clicked, a Proof of Delivery (POD) pop-up appears where the store associate records that the order has been collected either by the customer or by someone collecting it on their behalf. The associate verifies the order details and asks the person picking up the order to provide proof of identity, which can include:
 
-- Uploading an ID image  
-- Providing a digital signature  
+- Uploading an ID image
+- Providing a digital signature
 - Entering a unique pickup code
 
 The recorded details are saved and linked to the respective order. Once confirmation is saved, an automated email is sent to the customer with the order details and pickup confirmation.
