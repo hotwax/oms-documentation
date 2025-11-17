@@ -6,7 +6,7 @@ description: >-
 # Completed Orders Page
 
 ## Order Details Card
-The order card in the `Completed` tab shows the same set of details found in the `Open` and `Packed` tabs, such as the order ID, customer name, and product information.
+The order card in the `Completed` page shows the same set of details found in the `Open` and `Packed` pages, such as the order ID, customer name, and product information.
 
 To download the packing slip, store associates can click the `Print Customer Letter` button. The full Order Details page can be accessed by clicking the order card.
 
