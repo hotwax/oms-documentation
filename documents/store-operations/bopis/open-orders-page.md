@@ -24,7 +24,7 @@ To view the list of individual items included in the kit, store associates can t
 To view complete information about an order, store associates can click the order details card, which opens the `Order Details` page.
 
 ## Order Details Page
-The order details page displays all order-related information for that order, such as the customer’s name, order ID, customer's contact details, item details, reason for rejection, and order item rejection history. On the top right, there are two icons. The `watch` icon opens the order item rejection history, and the `print` icon allows store staff to print the picklist.
+The `Order Details` page displays all order-related information for that order, such as the customer’s name, order ID, customer's contact details, item details, reason for rejection, and order item rejection history. On the top right, there are two icons. The `watch` icon opens the order item rejection history, and the `print` icon allows store staff to print the picklist.
 
 ### Item Details
 The top of the page includes the order name and the order ID. Below that, the items in the order are listed along with a box icon for inventory computation and a bin icon to reject the order.
