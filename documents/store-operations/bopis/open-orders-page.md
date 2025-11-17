@@ -9,7 +9,7 @@ The order card shows details that store staff need at a glance. To check the num
 The order card displays the order name, product image, SKU, and the time since the order was created.
 
 At the bottom of the card, three action buttons are available:
-- **Ready for Pickup:** Marks the order as packed and moves it to the Packed Orders tab.  
+- **Ready for Pickup:** Marks the order as packed and moves it to the Packed Orders page.  
 - **Reject:** To reject the order.  
 - **Printer Icon:** To print the picklist.
 
