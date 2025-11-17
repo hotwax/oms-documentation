@@ -5,14 +5,10 @@
 ## Orders
 
 * [BOPIS Fulfillment App](bopis/README.md)
-  * [Orders Page](bopis/order-page/README.md)
-    * [Notifications](bopis/order-page/notifications.md)
-    * [Search Order](bopis/order-page/search-order.md)
-    * [Open Order Tab](bopis/order-page/open-order-tab.md)
-    * [Gift Card Activation](bopis/order-page/gift-card-activation.md)
-  * [Order Details Page](bopis/order-details-page/README.md)
+  * [Open Order Tab](bopis/open-orders-page.md)
   * [Packed Order Tab](bopis/packed-order-tab.md)
   * [Completed Orders Tab](bopis/completed-orders-tab.md)
+  * [Gift Card Activation](bopis/gift-card-activation.md)
   * [Ship to Store](bopis/ship-to-store.md)
   * [Catalog Page](bopis/catalog-page.md)
   * [Settings Page](bopis/settings-page.md)
