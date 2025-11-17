@@ -5,9 +5,9 @@
 ## Orders
 
 * [BOPIS Fulfillment App](bopis/README.md)
-  * [Open Order Tab](bopis/open-orders-page.md)
-  * [Packed Order Tab](bopis/packed-order-tab.md)
-  * [Completed Orders Tab](bopis/completed-orders-tab.md)
+  * [Open Orders](bopis/open-orders-page.md)
+  * [Packed Orders](bopis/packed-order-tab.md)
+  * [Completed Orders](bopis/completed-orders-tab.md)
   * [Gift Card Activation](bopis/gift-card-activation.md)
   * [Ship to Store](bopis/ship-to-store.md)
   * [Catalog Page](bopis/catalog-page.md)
