@@ -9,16 +9,16 @@ description: >-
 
 Once a count has been submitted for review by the facility it was assigned to, it will be shown on the `Pending Review` page.
 
-## Search, Sort and Filter Counts on Pending Review
+## Search, Sort, and Filter Counts on Pending Review
 
 These filters make it easier to prioritize which counts to review first, based on time and location.
 
 - **Facility**, to check which locations have pending reviews  
-- **Created Date**, to focus on counts that reached review stage in a particular period  
-
+- **Created Date**, to review cycle counts created during a specific period.
+ 
 ## Pending Review List View
 
-The pending review list view also shows how many of the assigned items have been counted as well as the due date of the count. Clicking on a count opens the detail page for it.
+The pending review list view shows how many of the assigned items have been counted as well as the due date of the count. Clicking on a count opens the detail page for it.
 
 If the cycle count is submitted for the first time, a `Submitted` badge will appear. For counts with items that were recounted and re-submitted, a `Re-submitted` badge will indicate that the count was reassigned and resubmitted by the facility after a recount.
 
@@ -71,10 +71,10 @@ All the newly added items and the items sent for recount will need to be reassig
 
 ## Close a count
 
-To close a count, click on the primary action button at the bottom of the screen. This will prompt you to confirm that the current count is ready to close. All open count items from the count will be rejected and the count will no longer be editable. Closed counts are shown on the `Closed counts` page.
+To close a count, click on the primary action button at the bottom of the screen. This will prompt you to confirm that the current count is ready to close. All open count items from the count will be rejected and the count will no longer be editable. Closed counts are shown on the `Closed` page.
 
 {% hint style="info" %}
-When an inventory is rejected by the fulfillment team in HotWax Commerce, the ATP of that product gets 0, while the QOH remains the Same. Once inventory is updated through the Cycle count App, the variance for both the QOH and ATP is recorded separately. For example, if the QOH of the inventory is 10 and the ATP is 0 due to order rejection, and during the inventory count the inventory available is 9 then the variance will be updated as -1 and +9 for QOH and ATP respectively.
+When an inventory is rejected by the fulfillment team in HotWax Commerce, the ATP of that product gets 0, while the QOH remains the Same. Once inventory is updated through the `Cycle Count` App, the variance for both the QOH and ATP is recorded separately. For example, if the QOH of the inventory is 10 and the ATP is 0 due to order rejection, and during the inventory count the inventory available is 9 then the variance will be updated as -1 and +9 for QOH and ATP respectively.
 {% endhint %}
 
 {% embed url="https://youtu.be/kDOA6NUjIV4" %}

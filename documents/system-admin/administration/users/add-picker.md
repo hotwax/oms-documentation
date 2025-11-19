@@ -1,8 +1,12 @@
 ---
 description: >-
- Discover the process of creating pickers in HotWax Commerce through CSV import or the user management app.
+  Discover the process of creating pickers in HotWax Commerce through CSV import
+  or the user management app.
 ---
-HotWax Commerce allows retailers to select pickers to streamline the process of picking orders from the shelves. As orders continuously flow in, efficient delegation of the picking items to pickers is crucial for timely processing. This delegation ensures that orders are processed promptly and accurately, contributing to customer satisfaction and retention. Furthermore, the feature facilitates incentive-based performance evaluation for pickers, motivating them to handle orders efficiently.
+
+# Create Pickers
+
+HotWax Commerce allows retailers to select pickers to streamline the process of picking orders from the shelves. As orders continuously flow in, efficient delegation of the picking items to pickers is crucial for timely processing. This delegation ensures that orders are processed promptly and accurately, contributing to customer satisfaction and retention. Furthermore, the feature facilitates incentive-based performance evaluation for pickers, motivating them to handle orders efficiently.\
 Store managers can assign the picklist to picker to pick orders from the fulfillment app. The generated picklists can be printed or displayed in the picking app. Only the users with the picker role will be visible to store managers when assigning orders. Pickers can be created in two ways:
 
 **Adding Pickers in Bulk**
@@ -14,17 +18,17 @@ Store managers can assign the picklist to picker to pick orders from the fulfill
 
 **Following field need to be added in the CSV file:**
 
-| Field             | Description                          |
-|-------------------|--------------------------------------|
-| external_party_id | ID of the external party             |
-| employee_id       | ID of the employee                   |
-| first_name        | First name of the employee           |
-| last_name         | Last name of the employee            |
-| facility_id       | ID of the associated facility       |
-| facility_associated | Name of the associated facility    |
-| hiring_date       | Date of hiring the employee          |
-| status            | 'A' for Active or 'T' for terminated|
-| termination_date  | Date of termination, if applicable  |
+| Field                | Description                          |
+| -------------------- | ------------------------------------ |
+| external\_party\_id  | ID of the external party             |
+| employee\_id         | ID of the employee                   |
+| first\_name          | First name of the employee           |
+| last\_name           | Last name of the employee            |
+| facility\_id         | ID of the associated facility        |
+| facility\_associated | Name of the associated facility      |
+| hiring\_date         | Date of hiring the employee          |
+| status               | 'A' for Active or 'T' for terminated |
+| termination\_date    | Date of termination, if applicable   |
 
 {% embed url="https://youtu.be/3ZBxeYHPyeg" %}
 Video: Adding Pickers in Bulk
@@ -34,8 +38,13 @@ Video: Adding Pickers in Bulk
 
 1. Navigate to the `user management app` of HotWax Commerce.
 2. Open the user you want to make a `Picker` or [create a new user](create-user.md)
-3. Go to the `Fulfillment card` tap and click on `show as a picker`.
-4. Click on add facilities button, this will open a new form. Select the facility for which you want to add the picker.
+3. Go to the `Fulfillment` card and toggle on `Show as a picker`.
+4. Click the 'Add Facilities' button and select the facilities the picker is linked to.
+
+{% hint style="warning" %}
+If a picker is not linked to the facility, the picker will not appear on the Assign Picker dialog box on the Fulfillment or BOPIS App.
+{% endhint %}
+
 {% embed url="https://youtu.be/6BW4Hxi08N0" %}
 Video: Adding Individual Pickers
 {% endembed %}
@@ -44,7 +53,7 @@ Video: Adding Individual Pickers
 
 1.Go to the `Store Fulfillment` app within HotWax Commerce.
 
-2.Access the Orders tab within the store [`Fulfillment`](/documents/store-operations/fulfillment/README.md)
+2.Access the Orders tab within the store [`Fulfillment`](../../../store-operations/fulfillment/)
 
 3.Locate the order that need to be processed, or select orders in bulk.
 

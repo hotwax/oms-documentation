@@ -20,7 +20,7 @@ In scenarios where an order is fulfilled entirely from a single location, the co
 
 #### Invoicing from Multiple Locations
 
-The challenge arises for orders that involve fulfillment from multiple locations. In this unique approach, when the last item in an order is fulfilled in HotWax Commerce, all the order items are sent for invoicing to Retail Pro. The unique aspect of this approach lies in invoicing all items from the location where the last item is fulfilled, working around Retail Pro's limitation.
+The challenge arises for orders that involve fulfillment from multiple locations. In this unique approach, when the last item in an order is fulfilled in HotWax Commerce, all the order items are sent for invoicing to Retail Pro. The unique aspect of this approach lies in invoicing all items from the location where the first item is fulfilled, working around Retail Pro's limitation.
 
 However, this method introduces a challenge: it results in an inventory discrepancy in Retail Pro because not all items are actually fulfilled from the location where the last item is picked. To address this, a specialized solution is implemented. After invoicing from the last fulfillment location, inventory adjustments are made to transfer inventory from all the locations where the remaining items were actually fulfilled to the location of the last fulfillment. This corrective measure ensures accurate inventory records in Retail Pro.
 

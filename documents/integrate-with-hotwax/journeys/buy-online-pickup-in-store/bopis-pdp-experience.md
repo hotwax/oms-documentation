@@ -233,7 +233,7 @@ In case the customer's location is not available, you can display all the availa
 }
 ```
 
-## Additioinal information
+## Additional information
 
 **Identifying In-Store Pickup Orders:**
 

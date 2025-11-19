@@ -11,29 +11,49 @@ Users can access the Order Details page by clicking on any order card from any o
 
 On clicking on any order card in the `Open`, `Packed` or `Completed` tab, users will be directed to the order details page. The order details page displays key details of an order and also enables store associates to perform the certain functions.
 
+### Item Details
+
+At the top of the Order Details page, this section displays the order name and order ID. It lists all items in order, along with their product image, primary, and secondary identifiers. If an item is part of a kit, a "KIT" tag is shown next to the item name. Each item has two buttons: a cube that shows the quantity on hand and a reject button. 
+
+The buttons shown on an order depend on its status. When the order is in Open status, the available buttons are Ready for Pickup and Reject Items. If any item is damaged or unavailable for any reason, it should be rejected at this stage, before it is packed. Once the order is packed and marked as Ready for Pickup, the buttons change to Handover and Cancel Item. At this point, rejecting or unpacking items is not allowed. An email is also sent to the customer when the order is marked as Ready for Pickup.
+
+Selecting Cancel Item opens a pop-up displaying a list of cancellation reasons. When an item is cancelled, an email is sent to the customer.
+
+Below this section, the [cancellation sync job](/documents/retail-operations/workflow/job-workflows/orders.md/) status is shown. The behavior of cancellation and refund depends on the following settings:
+
+- If both the cancellation sync job and the Shopify setting to process refunds are enabled, the cancellation and refund will be sent to Shopify.
+- If the cancellation sync job is enabled but the Shopify refund setting is disabled, only the cancellation will be sent to Shopify.
+- If the cancellation sync job is disabled, nothing is sent to Shopify, not the cancellation and not the refund, even if the Shopify refund setting is enabled.
+- If both settings are disabled, no data is sent to Shopify.
+
 ### Reject Orders
 
-During peak hours or promotional events, brick-and-mortar retail locations often face increased in-store traffic, heightening the risk that the requested item for pick-up may become unavailable due to in-store purchases. In such instances, store associates may need to reject an order or reject an order partially in case the order item inventory is insufficient at the store. Partial order rejection feature can be enabled using the toggle on the settings page.
+Click on bin icon to reject the order, select an appropriate reason for rejecting the order in the pop-up window that appears, and click on the `reject item` button.
 
-To reject an entire order, click on the order card in the `Open` tab to open the order details page. Click on `Reject Order` to reject the order, select an appropriate reason for rejecting the order in the pop-up window that appears and click on the `save` icon. Another pop-up will appear to confirm order rejection, select `Reject` to reject the order.
+To reject an order partially, click on the bin icon for the particular item in the order that needs to be rejected, select an appropriate reason for rejecting the item in the pop-up window that appears, and click on the `reject item` button.
 
-To reject an order partially, click on `Report an Issue` available under the particular item in the order that needs to be rejected, select an appropriate reason for rejecting the item in the pop-up window that appears and click on the `save` icon. Another pop-up will appear to confirm item rejection, select `Reject` to reject the item from the order.
-
-The available reasons for rejection are:
-
-* **Not in Stock:** If items are out of stock or exhausted at the store, the store associate can select `Not In Stock` as a reason for rejection. In that case, the inventory ATP (Available to Promise) and QOH (Quantity on Hand) are set to 0 for that product for the selected store and all open orders with respective items are auto-rejected from the store.
-* **No Reason:** "If store associates cannot fulfill an order due to high in-store demand and want to maintain the current inventory count, they can choose 'No Reason.' Selecting this option releases reserved inventory, reverting ATP to the original count before the order was received."
-
-{% hint style="info" %}
-Upon rejecting an item or order, customers will receive an email with \[alternate fulfillment options]\(../settings-page.md#order-edit-permissions) of the retailer's choice, and the rejected order or order item will be removed from your dashboard.
-{% endhint %}
+If items are rejected, a notification email is also sent, and the order may be re-routed. For more information, refer to the Order Re-Routing App User Manual. 
 
 ### Customer and Payment Details
 
-Customer details on the order such as the customer’s name and contact details can be viewed and copied from this page. Along with that payment method details are also displayed on the page for store associates to know if it is a paid order or payment needs to be collected at the time of order handover. The payment method is displayed on the right side of the order details page.
+The customer details section shows three things: the customer’s name, phone number, and COD amount (only if the order is Cash on Delivery).
+
+Next is the Payment section. This shows how the customer paid, which payment gateway was used, how much was paid, and the payment status. Here are the different payment statuses: Authorized, Cancelled, Not Authorized, Not Received, Received, Refunded, Settled, or Declined.  
+
+### Other Shipments: 
+This section shows all shipments linked to the same order. Each shipment appears as a card displaying the fulfillment location, such as a warehouse or retail store, along with the shipment number.
+
+The card includes a product image and its SKU to identify the item. The current shipment status appears on the top right of the card. For example, "Pending Allocation" means inventory hasn’t been assigned yet, while "Packed" indicates the item is ready for the next step.
+
+This section shows how different parts of the order are being sent from different places. If the order is split between a warehouse and a store, both shipments are shown side by side. This helps store staff quickly check the status and answer customer questions about the rest of the order.
+
+### Order Timeline: 
+The Order Timeline shows all the important steps an order goes through, starting from when it is created in Shopify. It records every key update such as when the order is imported, assigned to a location, rejected, reassigned, prepared for pickup or shipping, and when it is finally picked up or marked complete.
+
+On the top right of the timeline, the current order status is always visible. This gives a quick summary of where the order stands.
+
+This section helps store staff understand the full progress of the order and makes it easier to respond to customer questions or check for any delays.
 
 ### Assign Picker
 
 During the process of fulfilling a BOPIS order, store associates can assign and track pickers to ensure the pickers' commission eligibility. For open orders, users can assign pickers from a pop-up that will open on clicking the `Ready for Pickup` button on the order details page. In case they want to edit the picker for an order, they can do that using the `Edit` button on the order details page of a packed order.
-
-<figure><img src="../../.gitbook/assets/Screenshot 2024-01-01 at 11.50.51 PM (1).png" alt=""><figcaption><p>Image: Order Details Page</p></figcaption></figure>

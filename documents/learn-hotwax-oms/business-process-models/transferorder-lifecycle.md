@@ -21,7 +21,7 @@ To explain the Transfer Order Lifecycle BPM, we've opted NetSuite as the ERP sys
 
 ### 1. Transfer Orders Created in NetSuite
 
-* Warehouse managers create transfer orders in NetSuite, specifying the source location as warehouse and the destination location as store. These transfer orders are automatically assigned a <mark style="color:orange;">**“Pending Fulfillment”**</mark> status.
+* Inventory planners create transfer orders in NetSuite, specifying the source location as warehouse and the destination location as store. These transfer orders are automatically assigned a <mark style="color:orange;">**“Pending Fulfillment”**</mark> status.
 * Fulfillment teams start preparing the transfer order items for dispatch from the warehouse. Once they pick, pack and ship the transfer order items, item fulfillment records are automatically generated in NetSuite with the status <mark style="color:orange;">**“Shipped”**</mark>.
 * As soon as the item fulfillment records are marked as <mark style="color:orange;">**“Shipped”**</mark>, inventory counts for the items shipped are reduced in NetSuite and the transfer order status is updated from <mark style="color:orange;">**“Pending Fulfillment”**</mark> to <mark style="color:orange;">**“Pending Receipt”**</mark>.
 
@@ -115,7 +115,7 @@ Similar to the `store to store` transfer order lifecycle we discussed above, <ma
 
 ### 4. Receive Transfer Orders in NetSuite
 
-* Finally, warehouse managers manually initiate the receiving process in NetSuite for the store transferred inventory upon its arrival at the warehouse.
+* Finally, the inventory planning team manually initiates the receiving process in NetSuite for the store transferred inventory upon its arrival at the warehouse.
 * After the receiving process is completed, the transfer order status is automatically updated from <mark style="color:orange;">**“Pending Receipt”**</mark> to <mark style="color:orange;">**“Received”**</mark>, indicating that all transfer order items have been successfully received at the warehouse. Additionally, the inventory count for the newly received inventory is updated in NetSuite.
 
 {% hint style="success" %}

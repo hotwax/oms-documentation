@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Launchpad](../README.md)
+* [Launchpad](README.md)
 
 ## Administration
 
@@ -8,6 +8,7 @@
   * [Create Product Store](administration/company/create-product-store.md)
   * [Manage Product Store](administration/company/manage-product-store.md)
   * [Manage Shopify Shop](administration/company/manage-shopify-shop.md)
+  * [Configure NetSuite Setting](administration/company/configure-netsuite-setting.md)
 * [Users](administration/users/README.md)
   * [Create Users](administration/users/create-user.md)
   * [Manage Users](administration/users/manage-user.md)
@@ -27,30 +28,33 @@
   * [Facilities App](administration/user-permissions/facilities-app.md)
   * [Pre-Order App](administration/user-permissions/pre-order-app.md)
   * [Cycle Count App](administration/user-permissions/cycle-count-app.md)
+  * [Transfers App](administration/user-permissions/transfers-app.md)
 * [Facilities](administration/facilities/README.md)
   * [Add New Facilities](administration/facilities/add-new-facilities.md)
   * [Manage Existing facilities](administration/facilities/manage-existing-facilities.md)
   * [Add Facility Address](administration/facilities/add-facility-address.md)
   * [Manage Operating Hours](administration/facilities/manage-operating-hours.md)
   * [Manage Product Stores](administration/facilities/manage-product-stores.md)
-  * [Configure Online Fulfillment](administration/facilities/configure-fulfillment.md)
+  * [Configure Online Fulfillmentchan](administration/facilities/configure-fulfillment.md)
   * [Configure Fulfillment Capacity](administration/facilities/configure-fulfillment-capacity.md)
   * [Manage Facility Staff](administration/facilities/manage-facility-staff.md)
   * [Manage Locations](administration/facilities/manage-locations.md)
   * [Disabling Facilities](administration/facilities/disabling-facilities.md)
-  * [Manage Parkings](./administration/facilities/manage-parkings.md)
+  * [Manage Parkings](administration/facilities/manage-parkings.md)
   * [Manage Groups](administration/facilities/manage-groups.md)
 * [Delete Customers](administration/delete-customers.md)
 * [SOLR Indexing](administration/solr-indexing.md)
 * [Data Manager](administration/data-manager/README.md)
-  * [Data Import and Export](administration/data-manager/import-and-export.md)
-  * [Configurations](administration/data-manager/configurations.md)
+  * [Configuration options](administration/data-manager/configuration-options.md)
+  * [Import from an SFTP](administration/data-manager/ftp-import-job.md)
+  * [Frequently Used Imports](administration/data-manager/freq-used-configurations.md)
+  * [Manual Import](administration/data-manager/manual-import.md)
+  * [Audit Logs](administration/data-manager/view-mdm-log.md)
+  * [Shopify MDM](administration/data-manager/shopify-mdm.md)
+  * [Schedule Error Mail](administration/data-manager/schedule-error-mail.md)
   * [Troubleshooting](administration/data-manager/troubleshooting/README.md)
     * [Data Not Imported](administration/data-manager/troubleshooting/data-not-imported.md)
     * [SFTP Errors](administration/data-manager/troubleshooting/data-import-errors.md)
-    * [Manual Data Import](administration/data-manager/troubleshooting/manual-data-import.md)
-    * [Shopify MDM](administration/data-manager/troubleshooting/shopify-mdm.md)
-    * [Schedule Error Mail](administration/data-manager/troubleshooting/schedule-error-mail.md)
 
 ## Product Store
 

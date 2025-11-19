@@ -6,8 +6,6 @@ description: >-
 
 # Schedule Error Mails
 
-**Introduction:** In HotWax Commerce, error handling is crucial for maintaining smooth operations. One aspect of this is scheduling error emails for Master Data Management (MDM) processes. When errors occur during MDM file imports, a failure report is generated, and these reports can be scheduled to be sent to relevant personnel for analysis and resolution. This document outlines the steps required to schedule MDM error emails in HotWax Commerce.
-
 **Steps:**
 
 **1. Enable Postfix Service:**

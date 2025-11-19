@@ -47,7 +47,7 @@ By default, counts across all locations are visible.
 
 Order rejections in a store may lead to change in the inventory. In the event where an order is rejected with a reason like Damaged or Not in Stock, it means that physical inventory present in the store doesn’t match systemic inventory, indicating the need for a cycle count.
 
-For this, whenever an order rejection causes a change in the inventory levels, a draft count is automatically created in HotWax’s `Cycle Count` App to identify the actual stock and address the discrepancy.
+For this, there is a configurable product store setting named `Create cycle count for rejected items`, which automatically creates a draft count in HotWax’s `Cycle Count` App whenever an order rejection causes a change in the inventory levels, to identify the actual stock and address the discrepancy.
 
 ### How It Works
 

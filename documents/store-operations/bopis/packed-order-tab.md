@@ -1,42 +1,35 @@
 ---
 description: >-
-  Learn about the Packed Order tab in the BOPIS app, where orders ready for
-  customer handover are displayed, with convenient search functionality.
+  The Packed Orders tab displays all orders that have been packed and are ready to be handed over to the customer. From this tab, store associates can view order details, print the packing slip, and send pickup reminder emails.
 ---
 
-# Packed Order Tab
+# Packed Orders Page
 
-All orders that are packed and ready to be handed over to customers are displayed on the `Packed` tab on Orders page. Users can also use the `Search` bar on this page to find packed orders using customer name, product name, or order ID. Some key attributes on the order cards available on this page are listed below.
+## Order Details Card
+The order card in the `Packed` Orders page shows the same basic details as in the `Open` Orders page, like order ID, product info, and customer name. However, a few things are different here. Instead of a picklist, store staff can generate a packing slip using the print icon.
 
-* **Generate Packing Slip:** A packing slip is a document listing the contents of a package. It serves as a quick reference for both the sender and the recipient to verify products in the package. With the generate packing slip feature, store associates can generate packing slips manually using the `print` icon, available on each order card.
+There is also a `mail` icon to resend the pickup email to the customer, and a `Handover` button that is used to mark the order as `completed` once the customer picks up the order.
 
-{% hint style="info" %}
-For packing slip (document) generation, the app opens a new tab. Ensure that the pop-up blocker is disabled to allow seamless access.
-{% endhint %}
+When the `Handover` button is clicked, a Proof of Delivery (POD) pop-up appears where the store associate records that the order has been collected either by the customer or by someone collecting it on their behalf. The associate verifies the order details and asks the person picking up the order to provide proof of identity, which can include:
 
-* **Email:** In case a customer doesn’t come to pick up their order, users can re-send ready for pickup email notification to the customer using the `mail` icon available on the order card, a pop-up card will appear confirming re-sending the email. This feature addresses the challenge of delayed pick-ups, misunderstandings, and even order cancellations. This action can also be performed from the `Order details` page.
-* **Handover:** When customers arrive to receive their orders and the store associates handover the order to the customer, they need to click on the `Handover` button to mark the order as delivered. Alternatively, this can also be done on the `Order details` page of the packed order.
+- Uploading an ID image
+- Providing a digital signature
+- Entering a unique pickup code
 
-Stock information, order timeline, and handling instructions are also visible on the order card on this page.
+The recorded details are saved and linked to the respective order. Once confirmation is saved, an automated email is sent to the customer with the order details and pickup confirmation.
 
-{% hint style="info" %}
-After clicking the \`Handover\` button, the orders are marked completed and moved to \`Completed\` tab.
-{% endhint %}
+## Order Details Page
+The `Order Details` page in the `Packed` Orders page shows all the usual order information. At the top, there is a `mail` icon that lets store staff resend an email to notify the customer that their order is ready for pickup, a `watch` icon to view the order item rejection history, and a `print` icon to generate the packing slip.
 
-<figure><img src="../.gitbook/assets/Screenshot 2024-01-01 at 11.54.09 PM.png" alt=""><figcaption><p>Image; Packed Order Tab</p></figcaption></figure>
+The page also allows store associates to edit the assigned picker for an order. To update the picker, associates can click the `picker name`. This opens a pop-up displaying all available pickers, and a new picker can be selected from the list.
 
-## BOPIS Picklist
+Once an order is packed and marked as Ready for Pickup, store staff will see the `Handover` and `Cancel Item` buttons on the Order Details page. At this stage, rejecting or unpacking items is no longer possible.
 
-Store associates can print picklists for `BOPIS` (Buy Online, Pick Up In Store) orders through HotWax Commerce’s `BOPIS App`, streamlining the review of handling instructions and ensuring accurate `picking` and `packing` of items. This feature allows associates to fulfill pickup orders while clearly noting any special requests, such as gift wrapping or specific packaging requirements.
+Selecting `Cancel Item` opens a pop-up displaying a list of cancellation reasons. When an item is cancelled, an email is sent to the customer.
 
-For example, if a customer requests gift wrapping, the printed picklist will prominently display this instruction, enabling the associate to prepare the item accordingly before notifying the customer that their order is ready for `pickup`. This not only boosts accuracy in `order` `fulfillment` but also enhances the overall customer experience by ensuring all special instructions are seamlessly followed.
+Below this section, the [cancellation sync job](../../retail-operations/workflow/job-workflows/orders.md) status is shown. The behavior of cancellation and refund depends on the following settings:
 
-## Steps to Print Picklists in the BOPIS App
-
-1. **Access the BOPIS App**: Open the HotWax Commerce BOPIS App on your device.
-2. **Navigate to the Order Details Page**: Go to the `Order Details` section to `view` all current `BOPIS` orders.
-3. **Select the Relevant Order**: `Locate` the specific order you need to fulfill.
-4. **Find the Print Icon**: Within the order box, you will see a `print icon`. Click on this icon to initiate the `printing process`.
-5. **Print the Picklist**: The app will generate a detailed `picklist` that includes all necessary information, including handling instructions and any special requests from the customer.
-
-<figure><img src="../.gitbook/assets/BOPIS - View Picklist for BOPIS Orders.png" alt=""><figcaption></figcaption></figure>
+- If both the `cancellation sync` job and the Shopify setting to process refunds are enabled, the cancellation and refund will be sent to Shopify.
+- If the `cancellation sync` job is enabled but the Shopify refund setting is disabled, only the cancellation will be sent to Shopify.
+- If the `cancellation sync` job is disabled, nothing is sent to Shopify, not the cancellation and not the refund, even if the Shopify refund setting is enabled.
+- If both settings are disabled, no data is sent to Shopify.
