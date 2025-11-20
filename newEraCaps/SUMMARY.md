@@ -17,6 +17,9 @@
     * [Detail Item](flows/phase1/brokering/wms-feed/detail-items.md)
 * [Inventory](flows/phase1/inventory/README.md)
 * [Fulfillment](flows/phase1/fulfillment/README.md)
+    * [BI/BW feed](flows/phase1/fulfillment/bibw-feed.md)
+    * [Financial posting](flows/phase1/fulfillment/financial-posting.md)
+    * [Store fulfilled delta feed](flows/phase1/fulfillment/store-fulfilled-delta-feed.md)
 
 <!-- ## Flows - Phase 2
 * [Sales Order](flows/sales-order/omnichannel-orders.md)
