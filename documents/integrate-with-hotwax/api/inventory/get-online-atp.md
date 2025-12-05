@@ -33,6 +33,7 @@ Content-Type: application/json
   "idType": "<SKU>",
   "idValue": "<SKU>",
   "productStoreId": "<STORE_ID>",
+  "facilityGroupId": "<FacilityGroupID>
   "conditionMap": {
     "externalFacilityId_value": "<External Facility ID>",
     "externalFacilityId_op": "<operator>"
@@ -47,6 +48,7 @@ Content-Type: application/json
   "idType": "SKU",
   "idValue": "MSH02-32-Black",
   "productStoreId": "DEMO_STORE",
+  "facilityGroupId": "FAC_GRP",
   "conditionMap": {
     "externalFacilityId_value": "101",
     "externalFacilityId_op": "notEqual"
