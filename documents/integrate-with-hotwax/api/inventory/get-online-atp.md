@@ -33,7 +33,7 @@ Content-Type: application/json
   "idType": "<SKU>",
   "idValue": "<SKU>",
   "productStoreId": "<STORE_ID>",
-  "facilityGroupId": "<FacilityGroupID>
+  "facilityGroupId": "<FacilityGroupID>"
   "conditionMap": {
     "externalFacilityId_value": "<External Facility ID>",
     "externalFacilityId_op": "<operator>"
