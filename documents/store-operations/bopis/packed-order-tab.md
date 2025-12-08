@@ -6,7 +6,7 @@ description: >-
 # Packed Orders Page
 
 ## Order Details Card
-The order card in the `Packed` Orders page shows the same basic details as in the `Open` Orders page, like order ID, product info, and customer name. However, a few things are different here. Instead of a picklist, store staff can generate a packing slip using the print icon.
+The order card in the `Packed` Orders page shows the same basic details as in the `Open` Orders page, like order ID, product info, and customer name. However, a few things are different here. Instead of a picklist, store staff can generate a packing slip using the `print` icon.
 
 There is also a `mail` icon to resend the pickup email to the customer, and a `Handover` button that is used to mark the order as `completed` once the customer picks up the order.
 
