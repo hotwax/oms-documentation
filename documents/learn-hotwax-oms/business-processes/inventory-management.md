@@ -93,7 +93,7 @@ HotWax Commerce provides a dedicated Cycle Count App for retailers that helps th
 Cycle counts are performed for multiple reasons. Many retailers have the SOP for scheduling cycle counts regularly every week or month. Counts are also commonly initiated after high-volume periods, such as Black Friday, to reconcile actual inventory with recorded levels. Stores reporting higher order rejections may be assigned counts to investigate potential inventory discrepancies.
 
 Operations team leverages the Cycle Count App to create cycle counts. Once logged in, they access the admin view, where they can enter product details, add SKUs, and assign the count to a specific location.\
-The app also provides a [bulk upload](/documents/retail-operations/inventory/cycle-count/bulk-upload-cycle-counts.md) feature to create and assign multiple cycle counts for different products across locations.
+The app also provides a [bulk upload](/documents/retail-operations/inventory/cycle-count-legacy/bulk-upload-cycle-counts.md) feature to create and assign multiple cycle counts for different products across locations.
 
 Once the cycle count is created and assigned, the store associates can start performing cycle count.
 
@@ -120,6 +120,6 @@ If a -5 variance is reported, inventory is decreased by 5 units
 
 This automated adjustment process helps maintain accurate system inventory and reduces the need for manual reconciliation.
 
-Learn more about [creating cycle count](/documents/retail-operations/inventory/cycle-count/draft-counts.md) and [performing cycle count](/documents/store-operations/inventory-count/directed-cycle-count.md).
+Learn more about [creating cycle count](/documents/retail-operations/inventory/cycle-count-legacy/draft-counts.md) and [performing cycle count](/documents/store-operations/inventory-count/directed-cycle-count.md).
 
 By following these practices and using HotWax Commerce's intuitive apps, retailers can maintain high levels of inventory accuracy and streamline their inventory management processes.
