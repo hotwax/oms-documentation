@@ -91,7 +91,7 @@
 * [Inventory Upload](inventory/inventory-upload/README.md)
   * [Schedule Restocking](inventory/inventory-upload/schedule-restock.md)
   * [Inventroy Import Method](inventory/inventory-upload/import-methods.md)
-* [Cycle Count](inventory/cycle-count-legacy/README.md)
+* [Cycle Count Legacy](inventory/cycle-count-legacy/README.md)
   * [Draft Counts](inventory/cycle-count-legacy/draft-counts.md)
   * [Hard Counts](inventory/cycle-count-legacy/hard-count.md)
   * [View Assigned Counts](inventory/cycle-count-legacy/view-assigned-counts.md)
