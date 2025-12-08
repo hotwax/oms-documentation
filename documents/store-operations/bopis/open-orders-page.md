@@ -38,7 +38,7 @@ After an item is rejected, a notification email is sent, and the order may be re
 
 ### Customer and Payment Details
 
-**Customer Details**
+#### Customer Details
 
 The Customer Details section displays the following information:
 - **Customer name:** So they know who placed the order
