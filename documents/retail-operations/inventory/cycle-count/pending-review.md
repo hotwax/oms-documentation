@@ -6,6 +6,14 @@ This manual provides a step-by-step guide to understanding and using the Pending
 
 This manual provides a step-by-step guide to understanding and using the Pending Review sections in the Cycle Count App, helping admins review all submitted counts before they are finalized. It lists all inventory counts completed by store associates that are waiting for admin review. From here, admins can check variances, validate accuracy, and take necessary review actions.
 
+## Required Permissions
+
+To access and use the Pending Review page, users must have the following permission:
+
+* `COMMON_ADMIN` - This permission grants access to view pending cycle counts, review submitted counts, accept or reject items, and close counts.
+
+Without this permission, users will not be able to access the Pending Review section or perform any review actions.
+
 ### Search and Filter Counts
 
 1. Search  
