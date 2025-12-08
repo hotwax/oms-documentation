@@ -1,6 +1,6 @@
-# Preview and Review Progress/Complete
+# Preview and review progress/complete
 
-The Preview page and Review Progress and Complete page in the HotWax Commerce Cycle Count app help store teams plan and monitor in‑store cycle counts. These pages are primarily designed for store managers, associates focus on the counting screens and may never need to open these management views.
+The Preview page and Review Progress and Complete page in the HotWax Commerce Cycle Count app help store teams plan and monitor in‑store cycle counts. These pages are primarily designed for store managers. Associates focus on the counting screens and may never need to open these management views.
 
 ## Purpose and user roles
 
@@ -20,14 +20,14 @@ Store counts are accessed via the Counts tab. Each card represents a cycle count
 * Start date – scheduled start time for counting.  
 * Sessions list – names of existing sessions (usually one session per associate).  
 * Action buttons – vary according to status:  
-  Created counts show START COUNTING (to begin the first session) and PREVIEW COUNT (to view details without starting).  
-  In Progress counts show REVIEW PROGRESS AND COMPLETE (to open the progress page) and NEW SESSION (to add more counters).
+  * Created counts show `Start counting` (to begin the first session) and `Preview count` (to view details without starting).  
+  * In progress counts show `Review progress and complete` (to open the progress page) and `New session` (to add more counters).
 
-  ## Review progress and complete (during counting)
+## Review progress and complete (during counting)
 
-When a count is moved to the In Progress state (by tapping “Start counting”), the Review Progress and Complete button opens a more detailed progress page. This page provides a real‑time overview of the count:
+When a count is moved to the `In progress` state (by tapping `Start counting`), the `Review progress and complete` button opens a more detailed progress page. This page provides a real‑time overview of the count:
 
-* Count header card – similar to the preview card but now shows a status badge In Progress. The Sessions list indicates each counting session and its state (Created, In Progress or Submitted).  
+* Count header card – similar to the preview card but now shows a status badge `In progress`. The Sessions list indicates each counting session and its state (`Created`, `In progress` or `Submitted`).  
     
 * Products counted widget – updates dynamically to show how many products have been counted and how many remain. This helps managers gauge progress at a glance.  
     
@@ -37,18 +37,18 @@ When a count is moved to the In Progress state (by tapping “Start counting”)
   * **Count is in progress:** Confirms the count is not still in Created state.  
   * **All sessions submitted:** Each counter must finish their session and mark it as submitted (done from the session counting screen). This prevents partial data from being sent to head office.  
   * **All requested items counted:** Verifies there are no uncounted directed items. If there are still uncounted SKUs, the manager should follow up with the team.  
-  * **`Submit for review` button:** Becomes enabled only when all checklist items are satisfied. Clicking this sends the completed count to head office for audit and final approval. Once submitted, the count will appear in Pending review for regional managers.
+  * **`Submit for review` button:** Becomes enabled only when all checklist items are satisfied. Clicking this sends the completed count to head office for audit and final approval. Once submitted, the count appears in `Pending review` for regional managers.
 
-**Purpose of These Controls**
+### Purpose of these controls
 
 * The Skip options help remove irrelevant items so that the upper management receives a neat, precise, and intentional count submission.  
     
-* The Mark Out of Stock option ensures inventory accuracy when expected items are not present in the store.
+* The `Mark out of stock` option ensures inventory accuracy when expected items are not present in the store.
 
 
 By clicking on any item in the Undirected or Counted tab, the system will show which user counted it, the quantity they recorded, the time they started counting, and the time it was last updated.
 
-### Uncounted Tab
+### Uncounted tab
 
 This tab lists all products that were assigned for the directed count but were not counted by the team.
 
@@ -57,9 +57,9 @@ This tab lists all products that were assigned for the directed count but were n
 * If items remain uncounted even after the associate has submitted the session, it usually means these products were not physically found in the store.
 
 
-**Available:** `Mark Out of Stock`
+**Available:** `Mark out of stock`
 
-* The manager can click “Mark Out of Stock” to update all uncounted items in bulk.  
+* The manager can click `Mark out of stock` to update all uncounted items in bulk.  
 * This feature is provided so that if the counting is actually complete and these items were genuinely not found, the manager can cleanly mark them as out of stock.  
     
 * This ensures accurate inventory and prevents incorrect stock from carrying forward.
@@ -67,7 +67,7 @@ This tab lists all products that were assigned for the directed count but were n
 
 * Uncounted/Undirected/Counted tabs – allow the manager to inspect items that haven’t been counted, items counted outside of their directed location (undirected), and items already counted. Each tab displays product images, names, SKUs and variance fields so managers can quickly spot issues.
 
-### Undirected Tab
+### Undirected tab
 
 This tab shows items that were not part of the directed count list, but were scanned by the team during the count.
 
@@ -76,14 +76,14 @@ This tab shows items that were not part of the directed count list, but were sca
 * Variance is displayed to help the manager understand the difference.
 
 
-**Actions Available:**
+**Actions available:**
 
-* `Discard All Undirected Items`: If these items should not be included in the count submission, the manager can skip all of them at once.  
+* `Discard all undirected items`: If these items should not be included in the count submission, the manager can skip all of them at once.  
     
-* `Discard`: The manager can selectively skip specific undirected items by clicking the Skip button next to each one.
+* `Discard`: The manager can selectively skip specific undirected items by clicking the `Skip` button next to each one.
 
 
-### Counted Tab
+### Counted tab
 
 This tab displays all the items that were part of the directed count and were successfully counted.
 
@@ -93,32 +93,32 @@ This tab displays all the items that were part of the directed count and were su
 
 ### Managing sessions and submission
 
-1. Monitor session status. Ensure each associate submits their session when finished. If a session is stuck in In Progress, follow up with the associate to complete their counts.  
+1. Monitor session status. Ensure each associate submits their session when finished. If a session is stuck in `In progress`, follow up with the associate to complete their counts.  
      
 2. Review uncounted items. In the Uncounted tab, verify that there aren’t any remaining SKUs. If there are, re‑assign them by creating a new session or asking an associate to reopen their session.  
      
-3. Handle items not in stock. Sometimes uncounted items remain because they simply are not in stock. Once all active sessions show a Submitted state, the Uncounted tab displays an option such as Mark remaining items out of stock. Clicking this button generates a new session and automatically assigns a quantity of 0 to every remaining item. For directed counts, this zero‑quantity session includes only the items that were assigned to be counted; for hard counts, it includes all SKUs with positive system inventory that were not counted. After this action, the previously uncounted list should be empty.  
+3. Handle items not in stock. Sometimes uncounted items remain because they simply are not in stock. Once all active sessions show a Submitted state, the Uncounted tab displays an option such as `Mark remaining items out of stock`. Clicking this button generates a new session and automatically assigns a quantity of 0 to every remaining item. For directed counts, this zero‑quantity session includes only the items that were assigned to be counted; for hard counts, it includes all SKUs with positive system inventory that were not counted. After this action, the previously uncounted list should be empty.  
      
-4. Submit when complete. After all sessions (including the zero‑quantity out‑of‑stock session) are marked as submitted and the Uncounted tab is clear, click SUBMIT FOR REVIEW. Once submitted, the count cannot be modified by the store and moves to the head office for approval.
+4. Submit when complete. After all sessions (including the zero‑quantity out‑of‑stock session) are marked as submitted and the Uncounted tab is clear, click `Submit for review`. Once submitted, the count cannot be modified by the store and moves to the head office for approval.
 
 ## Store associate workflow (simplified)
 
 Store associates generally skip the preview and progress pages. Their workflow is:
 
-1. Navigate to the assigned counts list and tap START COUNTING next to the assigned count.  
+1. Navigate to the assigned counts list and tap `Start counting` next to the assigned count.  
      
 2. The system automatically opens the counting session where they scan barcodes and enter quantities.  
      
-3. When finished, they mark the session as Submit within the counting screen. This updates the session status so the store manager can see it in Review Progress and Complete.  
+3. When finished, they mark the session as `Submit` within the counting screen. This updates the session status so the store manager can see it in Review Progress and Complete.  
    
-
+   
 Associates should focus on accurate counting and timely submission. All other management functions – creating sessions, monitoring progress, ensuring compliance and submitting counts to head office – are handled by the store manager.
 
 Read more details about performing a count on [this page](start-complete-session.md).
 
-## Inventory‑control tips
+## Inventory control tips
 
-* Plan resources based on product volume. Before starting a count, use the preview to estimate how much labor is needed. Build your counting schedule to minimise disruption to customers (e.g. after hours or during slow periods).  
+* Plan resources based on product volume. Before starting a count, use the preview to estimate how much labor is needed. Build your counting schedule to minimize disruption to customers (e.g. after hours or during slow periods).  
     
 * Track progress daily. During counting, check the progress page regularly. If the products remaining number isn’t decreasing as expected, investigate whether associates need help or additional training.  
     
