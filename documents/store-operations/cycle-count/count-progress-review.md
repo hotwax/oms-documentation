@@ -23,7 +23,7 @@ Store counts are accessed via the Counts tab. Each card represents a cycle count
   Created counts show START COUNTING (to begin the first session) and PREVIEW COUNT (to view details without starting).  
   In Progress counts show REVIEW PROGRESS AND COMPLETE (to open the progress page) and NEW SESSION (to add more counters).
 
-  ## Review Progress and Complete (during counting)
+  ## Review progress and complete (during counting)
 
 When a count is moved to the In Progress state (by tapping “Start counting”), the Review Progress and Complete button opens a more detailed progress page. This page provides a real‑time overview of the count:
 

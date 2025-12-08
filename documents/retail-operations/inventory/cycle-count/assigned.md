@@ -38,10 +38,10 @@ This helps quickly identify pending counts that require follow-up.
 
    
 
-* Searching facilities by name.  
+* Searching facilities by name  
 * Selecting multiple locations
 
-## Assigned Counts List View
+## Assigned counts list view
 
 Each count in the list provides the following information:
 
@@ -55,24 +55,24 @@ Each count in the list provides the following information:
 
 This view provides a snapshot, allowing administrators to monitor the progress and deadlines across stores.
 
-# Assigned Count Detail Page
+## Assigned count detail page
 
 The Assigned Count Detail Page provides a view of a specific cycle count assigned to a store or facility.
 
 1. ### Overview Section
 
      
-   At the top of the page, you’ll find a summary of the assigned count. This section is divided into two areas: Count Details (left) and Counting Activity (right).
+   At the top of the page, you will find a summary of the assigned count. This section is divided into two areas: Count Details (left) and Counting Activity (right).
 
    ### Count Details
 
    Clicking on a count displays the information provided during count creation:  
      
-* Count Name – Name of the assigned count.  
-* Assigned Facility – The store or location to which the count is assigned.  
-* Start Date – The date and time when the count is scheduled to begin.  
+* **Count Name:** Name of the assigned count.  
+* **Assigned Facility:** The store or location to which the count is assigned.  
+* **Start Date:** The date and time when the count is scheduled to begin.  
   * You may update this by selecting the date field and choosing a new value from the date picker.  
-* Due Date – The target completion date for the count.  
+* **Due Date:** The target completion date for the count.  
   * This can also be updated using the provided date picker.
 
     
@@ -81,7 +81,7 @@ The Assigned Count Detail Page provides a view of a specific cycle count assigne
 
   1. Counting Activity
 
-     This section shows system-generated timestamps reflecting real time user activity at the assigned facility:
+     This section shows system-generated timestamps reflecting real-time user activity at the assigned facility:
 
 * First Item Counted  
   Shows the date and time when the first product in the assigned count was submitted by the user.
@@ -168,7 +168,7 @@ This view allows reviewers to quickly identify how complete an item's count is.
 
 ## Viewing Additional Product Information
 
-Inside the Count Session Detail panel, select the More Options icon. This will display:
+Inside the Count Session Detail panel, select the `More Options` icon. This will display:
 
 * Product information  
 * The last time when the product was counted

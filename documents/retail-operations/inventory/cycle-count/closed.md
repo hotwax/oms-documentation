@@ -8,7 +8,7 @@ The Closed Cycle Counts page in HotWax Commerce’s Cycle Count app lets you rev
 
 1. Open the Cycle Count app. Use the navigation drawer on the left side of the screen.  
      
-2. Select “Closed” from the menu. The Closed Counts view displays all cycle counts that have been completed (previously known as “cycle counts history”).  
+2. Select `Closed` from the menu. The Closed Counts view displays all cycle counts that have been completed (previously known as “cycle counts history”).  
      
 3. The main pane shows a list of closed counts along with filters at the top. Each row corresponds to a completed cycle count and shows the count name, ID, facility, created date and closed date.
 
@@ -87,7 +87,7 @@ Below the header, you’ll find filters to help locate specific products within 
     
 * Compliance filter: Options include All, Acceptable, Rejectable and Configure threshold. Acceptable shows items whose variances are within the compliance threshold; Rejectable shows items outside the threshold.  
     
-* Sort by: Use this drop‑down to sort products Alphabetic‑ally or by Variance.
+* **Sort by:** Use this drop-down to sort products `Alphabetically` or by `Variance`.
 
 ### Reviewing item‑level details
 

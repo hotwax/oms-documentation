@@ -18,7 +18,7 @@ Selecting PREVIEW COUNT for a count in the Created state opens a Track progress
 
 * Count header card – displays due date, start date and a status badge (Created). A Sessions section shows the default session.  
     
-* Products counted widget – shows how many products have been counted (usually 0\) and how many are remaining. This number gives managers an idea of the workload.  
+* **Products counted widget:** shows how many products have been counted (usually 0) and how many are remaining. This number gives managers an idea of the workload.  
     
 * Tabs for uncounted, undirected and counted – these categories will display item lists once counting begins. Before the count starts, the Uncounted tab shows the total number of items to be counted. If your user has access, you can also preview the exact products that will be counted.
 
