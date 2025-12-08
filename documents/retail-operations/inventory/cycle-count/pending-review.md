@@ -1,6 +1,6 @@
 # Pending Review
 
-# Pending Review Page
+## Pending review page
 
 This manual provides a step-by-step guide to understanding and using the Pending Review sections in the Cycle Count App, helping admins review all submitted counts before they are finalized and guiding them on how to navigate the page, interpret the information displayed, and perform review actions smoothly.
 
