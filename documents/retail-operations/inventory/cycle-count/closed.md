@@ -1,6 +1,6 @@
 # Closed / Completed Cycle Counts
 
-# Closed Cycle Counts Page
+## Closed cycle counts page
 
 The Closed Cycle Counts page in HotWax Commerce’s Cycle Count app lets you review every cycle count that has been completed. On this page you can search for counts, apply filters to narrow results, export filtered data, and drill into the details of each closed count. This guide explains how to use the page effectively.
 
