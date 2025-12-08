@@ -4,7 +4,7 @@ The Cycle Count App is designed to help organizations maintain accurate inventor
 
 The app provides distinct views for Admins and Store Associates:
 
-* Admin View: Allows reviewing, approving, or rejecting counts, managing variance thresholds, and ensuring inventory accuracy across the system.
+* Admin View: Allows reviewing, approving, or rejecting counts, managing variance thresholds, and helping maintain inventory accuracy across the system.
 
 * Store View: Enables associates to perform counts, record quantities, and submit them for review.
 
@@ -16,5 +16,5 @@ With built-in features like bulk actions, variance alerts, and timestamped track
 1. Plan your count with a preview  
 2. Create sessions and complete your count  
 3. Review counts at the store before submitting for review  
-4. Head office reviews and approves variances  
+4. Review and approve variances at head office  
 5. Go back and review old counts and export

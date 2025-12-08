@@ -3,7 +3,7 @@ title: Start and Complete Session
 description: a comprehensive guide to performing cycle counts, scanning items, and handling discrepancies.
 ---
 
-# Starting the Count
+## Starting the count
 
 Once the start time arrives, the Start Counting button becomes active in the count card. After starting, the count moves into the In Progress state.
 
@@ -28,7 +28,7 @@ Inside a session, the associate will see:
 
 ### Scanning Items
 
-To start scanning, the associate taps **Focus Scanner**. The scanned items will appear in the left panel. If a wrong item is scanned, the associate can remove it, and the system will adjust the count automatically.
+To start scanning, the associate taps `Focus Scanner`. The scanned items will appear in the left panel. If a wrong item is scanned, the associate can remove it, and the system will adjust the count automatically.
 
 ### Item Categories During Scanning (For Directed Counts)
 

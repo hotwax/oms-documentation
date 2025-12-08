@@ -23,7 +23,7 @@ Store counts are accessed via the Counts tab. Each card represents a cycle count
   Created counts show START COUNTING (to begin the first session) and PREVIEW COUNT (to view details without starting).  
   In Progress counts show REVIEW PROGRESS AND COMPLETE (to open the progress page) and NEW SESSION (to add more counters).
 
-  ## Review Progress and Complete (during counting)
+  ## Review progress and complete (during counting)
 
 When a count is moved to the In Progress state (by tapping “Start counting”), the Review Progress and Complete button opens a more detailed progress page. This page provides a real‑time overview of the count:
 
@@ -33,11 +33,11 @@ When a count is moved to the In Progress state (by tapping “Start counting”)
     
 * Submit requirements panel – a checklist indicating what must be done before the count can be submitted:  
     
-  * Permission granted – ensures the logged‑in user has rights to submit counts.  
-  * Count is in progress – confirms the count is not still in Created state.  
-  * All sessions submitted – each counter must finish their session and mark it as submitted (done from the session counting screen). This prevents partial data from being sent to head office.  
-  * All requested items counted – ensures there are no uncounted directed items. If there are still uncounted SKUs, the manager should follow up with the team.  
-  * Submit for review button – becomes enabled only when all checklist items are satisfied. Clicking this sends the completed count to head office for audit and final approval. Once submitted, the count will appear in Pending review for regional managers.
+  * **Permission granted:** Verifies the logged‑in user has rights to submit counts.  
+  * **Count is in progress:** Confirms the count is not still in Created state.  
+  * **All sessions submitted:** Each counter must finish their session and mark it as submitted (done from the session counting screen). This prevents partial data from being sent to head office.  
+  * **All requested items counted:** Verifies there are no uncounted directed items. If there are still uncounted SKUs, the manager should follow up with the team.  
+  * **`Submit for review` button:** Becomes enabled only when all checklist items are satisfied. Clicking this sends the completed count to head office for audit and final approval. Once submitted, the count will appear in Pending review for regional managers.
 
 **Purpose of These Controls**
 

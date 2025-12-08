@@ -1,12 +1,10 @@
 # Pending Review
 
-# Pending Review Page
+## Pending review page
 
 This manual provides a step-by-step guide to understanding and using the Pending Review sections in the Cycle Count App, helping admins review all submitted counts before they are finalized and guiding them on how to navigate the page, interpret the information displayed, and perform review actions smoothly.
 
-## Pending Review Page
-
-The page lists all inventory counts completed by store associates that are waiting for admin review. From here, admins can check variances, validate accuracy, and take necessary review actions.
+This manual provides a step-by-step guide to understanding and using the Pending Review sections in the Cycle Count App, helping admins review all submitted counts before they are finalized. It lists all inventory counts completed by store associates that are waiting for admin review. From here, admins can check variances, validate accuracy, and take necessary review actions.
 
 ### Search and Filter Counts
 
@@ -45,7 +43,7 @@ Admins can click on any count card to open the detailed review screen.
 
 ## Review Count Page Overview
 
-This page is used by Admin to review the inventory counts submitted by store associates. It highlights mismatches between the counted quantity and system inventory, giving the admin full control to approve or reject each item.
+This page is used by admins to review the inventory counts submitted by store associates. It highlights mismatches between the counted quantity and system inventory, giving the admin full control to approve or reject each item.
 
 ### Page Header Information
 

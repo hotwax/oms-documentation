@@ -1,6 +1,6 @@
 # Closed / Completed Cycle Counts
 
-# Closed Cycle Counts Page
+## Closed cycle counts page
 
 The Closed Cycle Counts page in HotWax Commerce’s Cycle Count app lets you review every cycle count that has been completed. On this page you can search for counts, apply filters to narrow results, export filtered data, and drill into the details of each closed count. This guide explains how to use the page effectively.
 
@@ -8,7 +8,7 @@ The Closed Cycle Counts page in HotWax Commerce’s Cycle Count app lets you rev
 
 1. Open the Cycle Count app. Use the navigation drawer on the left side of the screen.  
      
-2. Select “Closed” from the menu. The Closed Counts view displays all cycle counts that have been completed (previously known as “cycle counts history”).  
+2. Select `Closed` from the menu. The Closed Counts view displays all cycle counts that have been completed (previously known as “cycle counts history”).  
      
 3. The main pane shows a list of closed counts along with filters at the top. Each row corresponds to a completed cycle count and shows the count name, ID, facility, created date and closed date.
 
@@ -26,15 +26,15 @@ The list view is designed to help you quickly find and filter completed counts:
     
 * List columns: Each closed count row displays:  
     
-* Count name and ID – e.g., CycleCountSample‑Nov4 (ID M1000204).  
+* **Count name and ID:** e.g., CycleCountSample‑Nov4 (ID M1000204).  
     
-* Facility – shown as a pill with the facility name.  
+* **Facility:** shown as a pill with the facility name.  
     
-* Created Date – date the count was created.  
+* **Created Date:** date the count was created.  
     
-* Closed Date – date the count was completed.  
+* **Closed Date:** date the count was completed.  
     
-* Type label – for hard counts or directed counts, a small label (e.g., HARD COUNT) appears above the name.
+* **Type label:** for hard counts or directed counts, a small label (e.g., `HARD COUNT`) appears above the name.
 
 ## Filtering and searching closed counts
 
@@ -87,7 +87,7 @@ Below the header, you’ll find filters to help locate specific products within 
     
 * Compliance filter: Options include All, Acceptable, Rejectable and Configure threshold. Acceptable shows items whose variances are within the compliance threshold; Rejectable shows items outside the threshold.  
     
-* Sort by: Use this drop‑down to sort products Alphabetic‑ally or by Variance.
+* **Sort by:** Use this drop-down to sort products `Alphabetically` or by `Variance`.
 
 ### Reviewing item‑level details
 
