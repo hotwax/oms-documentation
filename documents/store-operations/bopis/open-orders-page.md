@@ -48,8 +48,8 @@ The Customer Details section displays the following information:
 #### Payment Details
 
 The Payment section appears next to Customer Details and includes:
-- **Payment method:** Used by the customer
-- **The payment gateway:** Through which the payment was processed
+- **Payment method:** The payment method used by the customer
+- **The payment gateway:** The payment gateway through which the payment was processed
 - **Amount paid:** Shows the total amount the customer has paid for the order
 - **Payment status:** Possible payment statuses include Authorized, Cancelled, Not Authorized, Not Received, Received, Refunded, Settled, and Declined.
 
