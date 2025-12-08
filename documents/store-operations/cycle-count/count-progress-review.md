@@ -57,7 +57,7 @@ This tab lists all products that were assigned for the directed count but were n
 * If items remain uncounted even after the associate has submitted the session, it usually means these products were not physically found in the store.
 
 
-**Available: Mark Out of Stock**
+**Available:** `Mark Out of Stock`
 
 * The manager can click “Mark Out of Stock” to update all uncounted items in bulk.  
 * This feature is provided so that if the counting is actually complete and these items were genuinely not found, the manager can cleanly mark them as out of stock.  
@@ -67,7 +67,7 @@ This tab lists all products that were assigned for the directed count but were n
 
 * Uncounted/Undirected/Counted tabs – allow the manager to inspect items that haven’t been counted, items counted outside of their directed location (undirected), and items already counted. Each tab displays product images, names, SKUs and variance fields so managers can quickly spot issues.
 
-**Undirected Tab**
+### Undirected Tab
 
 This tab shows items that were not part of the directed count list, but were scanned by the team during the count.
 
@@ -78,12 +78,12 @@ This tab shows items that were not part of the directed count list, but were sca
 
 **Actions Available:**
 
-* **Discard All Undirected Items:** If these items should not be included in the count submission, the manager can skip all of them at once.  
+* `Discard All Undirected Items`: If these items should not be included in the count submission, the manager can skip all of them at once.  
     
-* **Discard:** The manager can selectively skip specific undirected items by clicking the Skip button next to each one.
+* `Discard`: The manager can selectively skip specific undirected items by clicking the Skip button next to each one.
 
 
-**Counted Tab**
+### Counted Tab
 
 This tab displays all the items that were part of the directed count and were successfully counted.
 
@@ -114,7 +114,7 @@ Store associates generally skip the preview and progress pages. Their workflow i
 
 Associates should focus on accurate counting and timely submission. All other management functions – creating sessions, monitoring progress, ensuring compliance and submitting counts to head office – are handled by the store manager.
 
-Read more details about performing a count on this page.
+Read more details about performing a count on [this page](start-complete-session.md).
 
 ## Inventory‑control tips
 
