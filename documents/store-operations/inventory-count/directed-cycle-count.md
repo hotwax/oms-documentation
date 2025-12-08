@@ -13,7 +13,7 @@ The Directed Cycle Count app is designed to adapt to the user operating it. When
 
 ## Assigned Cycle Count
 
-The first page a fulfillment team member sees upon logging in is the `Assigned` Cycle Count tab. When an [operations team member assigns a cycle count](https://docs.hotwax.co/documents/retail-operations/inventory/cycle-count-legacy/view-assigned-counts) to a facility, the cycle count becomes visible in the `Assigned Tab`.
+The first page a fulfillment team member sees upon logging in is the `Assigned` Cycle Count tab. When an [operations team member assigns a cycle count](../../../retail-operations/inventory/cycle-count-legacy/view-assigned-counts.md) to a facility, the cycle count becomes visible in the `Assigned Tab`.
 
 Store associates can view all the cycle counts assigned to their facility, including the number of items assigned, the creation date, and the due date for each cycle count. Users can click on a `cycle count` card to access the `Count Details` page.
 
