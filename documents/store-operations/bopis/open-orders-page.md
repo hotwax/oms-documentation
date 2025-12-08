@@ -45,7 +45,7 @@ The Customer Details section displays the following information:
 - **Phone number:** Provides a contact number for the customer, which can be used if the store needs to reach out regarding pickup or order updates.
 - **COD amount:** Shown only for Cash on Delivery orders
 
-**Payment Details**
+#### Payment Details
 
 The Payment section appears next to Customer Details and includes:
 - **Payment method:** Used by the customer
