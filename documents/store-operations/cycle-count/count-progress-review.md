@@ -11,6 +11,12 @@ The Preview page and Review Progress and Complete page in the HotWax Commerce Cy
 
 **Inventory‑control mindset:** These management views are critical to maintaining accountability. They allow a manager to plan adequate staffing, monitor progress and ensure that all directed items have been counted before submission.
 
+## Required permissions
+
+* Open counts and reach the Preview/Review Progress page: any of `FULFILL_INVCUNT_ADMIN` or `INV_COUNT_ADMIN`.  
+* View product details in the tabs when the count is still in `Created`/not yet started: any of `PREVIEW_COUNT_ITEM`, `INV_COUNT_ADMIN` or `COMMON_ADMIN`.  
+* Discard undirected items, mark uncounted items out of stock, and submit the count for review: any of `COMMON_ADMIN`, `INV_COUNT_ADMIN` or `INV_COUNT_SUBMIT`.
+
 ## Accessing your assigned counts
 
 Store counts are accessed via the Counts tab. Each card represents a cycle count at your facility and shows:

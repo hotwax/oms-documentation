@@ -1,10 +1,10 @@
-# Closed / Completed Cycle Counts
+# Closed and completed cycle counts
 
 ## Closed cycle counts page
 
-The Closed Cycle Counts page in HotWax Commerce’s Cycle Count app lets you review every cycle count that has been completed. On this page you can search for counts, apply filters to narrow results, export filtered data, and drill into the details of each closed count. This guide explains how to use the page effectively.
+The `Closed` page in the Cycle Count app lets you review every cycle count that has been completed. On this page you can search for counts, apply filters to narrow results, export filtered data, and drill into the details of each closed count.
 
-## Navigating to the Closed Counts page
+## Navigating to the closed counts page
 
 1. Open the Cycle Count app. Use the navigation drawer on the left side of the screen.  
      
@@ -12,17 +12,17 @@ The Closed Cycle Counts page in HotWax Commerce’s Cycle Count app lets you rev
      
 3. The main pane shows a list of closed counts along with filters at the top. Each row corresponds to a completed cycle count and shows the count name, ID, facility, created date and closed date.
 
-## Understanding the Closed Counts list
+## Understanding the closed counts list
 
 The list view is designed to help you quickly find and filter completed counts:
 
-* Search bar: Use the search box to find a cycle count by name or ID. When you enter text and press Enter, the list updates to show matching counts. You can clear the search using the “×” button in the field.  
+* Search bar: Use the search box to find a cycle count by name or ID. When you enter text and press `Enter`, the list updates to show matching counts. You can clear the search using the `×` button in the field.  
     
-* Facility filter: The Facility drop‑down shows All by default. Clicking the bubble opens a modal with a searchable list of facilities. You can select one or more facilities and confirm with the blue check button; the selected facility appears as a pill next to “Facility” and the list refreshes to show counts from that facility.  
+* Facility filter: The Facility drop‑down shows `All` by default. Clicking the bubble opens a modal with a searchable list of facilities. You can select one or more facilities and confirm with the blue check button; the selected facility appears as a pill next to `Facility` and the list refreshes to show counts from that facility.  
     
-* Type filter: The Type drop‑down lets you filter counts by type. Options include All Types, Hard Count and Directed Count. Selecting a type updates the list; for example, choosing Hard Count shows only hard counts.  
+* Type filter: The Type drop‑down lets you filter counts by type. Options include `All types`, `Hard count` and `Directed count`. Selecting a type updates the list; for example, choosing `Hard count` shows only hard counts.  
     
-* More Filters: Click More Filters to open a modal with date‑range filters. You can specify Created before/after and Closed before/after dates using the calendar pickers, then click Apply to filter the list.  
+* More filters: Click `More filters` to open a modal with date‑range filters. You can specify `Created before/after` and `Closed before/after` dates using the calendar pickers, then click `Apply` to filter the list.  
     
 * List columns: Each closed count row displays:  
     
@@ -30,9 +30,9 @@ The list view is designed to help you quickly find and filter completed counts:
     
 * **Facility:** shown as a pill with the facility name.  
     
-* **Created Date:** date the count was created.  
+* **Created date:** date the count was created.  
     
-* **Closed Date:** date the count was completed.  
+* **Closed date:** date the count was completed.  
     
 * **Type label:** for hard counts or directed counts, a small label (e.g., `HARD COUNT`) appears above the name.
 
@@ -40,13 +40,13 @@ The list view is designed to help you quickly find and filter completed counts:
 
 1. Search by name or ID: Click in the search bar, type the count name or part of the ID and press Enter. The list will narrow to items containing the search term.  
      
-2. Filter by facility: Click the All bubble in the Facility filter. Use the search field in the facility modal to find a store, select its checkbox and click the blue check icon to apply the filter. The facility name appears as a pill.  
+2. Filter by facility: Click the `All` bubble in the Facility filter. Use the search field in the facility modal to find a store, select its checkbox and click the blue check icon to apply the filter. The facility name appears as a pill.  
      
-3. Filter by type: Click the current type (e.g., All Types). Choose Hard Count or Directed Count. The list refreshes to show only counts of that type.  
+3. Filter by type: Click the current type (e.g., `All types`). Choose `Hard count` or `Directed count`. The list refreshes to show only counts of that type.  
      
-4. Apply date filters: Choose More Filters. In the modal, specify any combination of creation or closing dates and click Apply.  
+4. Apply date filters: Choose `More filters`. In the modal, specify any combination of creation or closing dates and click `Apply`.  
      
-5. Clear filters: To remove a facility or type filter, click the small “×” on the pill. Date filters can be cleared by reopening More Filters and clearing the date fields.
+5. Clear filters: To remove a facility or type filter, click the small `×` on the pill. Clear date filters by reopening `More filters` and clearing the date fields.
 
 ## Exporting filtered cycle counts
 
@@ -66,13 +66,13 @@ Click any row in the closed counts list to open the Closed count details view. T
 
 At the top of the details page you’ll see several cards summarizing the count:
 
-* Count card: shows the cycle count name, ID and facility. It also displays the due date if one was set.  
+* Count card: Shows the cycle count name, ID and facility. It also displays the due date if one was set.  
     
-* Time card: shows the timestamp when the first item was counted and when the last item was counted.  
+* Time card: Shows the timestamp when the first item was counted and when the last item was counted.  
     
-* Progress & completion card: displays a progress bar with “x out of y items complete.” This indicates how many items have been reviewed and accepted.  
+* Progress and completion card: Displays a progress bar with “x out of y items complete.” This indicates how many items have been reviewed and accepted.  
     
-* Overall variance (filtered): shows the total variance units based on the items currently displayed.
+* Overall variance (filtered): Shows the total variance units based on the items currently displayed.
 
 
 Use the back arrow in the page header to return to the closed counts list.
@@ -83,15 +83,15 @@ Below the header, you’ll find filters to help locate specific products within 
 
 * Search product name: Enter all or part of a product’s name or SKU to filter the list.  
     
-* Status filter: Choose from All, Accepted or Rejected to show products based on whether their counts were accepted or rejected during review.  
+* Status filter: Choose from `All`, `Accepted` or `Rejected` to show products based on whether their counts were accepted or rejected during review.  
     
-* Compliance filter: Options include All, Acceptable, Rejectable and Configure threshold. Acceptable shows items whose variances are within the compliance threshold; Rejectable shows items outside the threshold.  
+* Compliance filter: Options include `All`, `Acceptable`, `Rejectable` and `Configure threshold`. `Acceptable` shows items whose variances are within the compliance threshold; `Rejectable` shows items outside the threshold.  
     
 * **Sort by:** Use this drop-down to sort products `Alphabetically` or by `Variance`.
 
 ### Reviewing item‑level details
 
-* The item list shows each product counted during the cycle count along with an image, SKU, counted quantity vs systemic quantity, and calculated variance.  
+* The item list shows each product counted during the cycle count along with an image, SKU, counted quantity vs system quantity, and calculated variance.  
     
 * Clicking a product row expands it to reveal count sessions. Each session row displays the counter’s name (user), counted quantity, the time the counting started and when it was last updated. These details help you trace who counted the item and when.  
     
@@ -103,7 +103,7 @@ Below the header, you’ll find filters to help locate specific products within 
     
 * Use the More Filters date ranges to retrieve counts completed within a specific window.  
     
-* Within the details view, sorting by Variance quickly surfaces products with the highest discrepancies, allowing you to prioritise review.  
+* Within the details view, sorting by Variance quickly surfaces products with the highest discrepancies, allowing you to prioritize review.  
     
 * The Overall variance card updates dynamically based on applied item‑level filters, providing an at‑a‑glance summary of variance for the items you’re examining.
 

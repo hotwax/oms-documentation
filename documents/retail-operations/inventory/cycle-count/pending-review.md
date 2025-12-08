@@ -51,12 +51,12 @@ At the top of the page, you will find key details about the count:
 
 **Count information**
 
-* Count name – The name of the count (for example, 26 December Count).  
-* Facility name – The facility where the inventory count was performed.  
-* Start date – When the store was supposed to start the count.  
-* Due date – The scheduled completion date.  
-* First item counted – Timestamp of when counting began.  
-* Last item counted – Timestamp of when the last item was counted.
+* Count name: The name of the count (for example, 26 December Count).  
+* Facility name: The facility where the inventory count was performed.  
+* Start date: When the store was supposed to start the count.  
+* Due date: The scheduled completion date.  
+* First item counted: Timestamp of when counting began.  
+* Last item counted: Timestamp of when the last item was counted.
 
 **Review progress**
 
@@ -87,9 +87,9 @@ The section provides search and filtering options to refine the list of items.
 Filter items by review status:
 
 * `All`  
-* `Open` – Items that need review.  
-* `Accepted` – Items approved.  
-* `Rejected` – Items rejected.
+* `Open`: Items that need review.  
+* `Accepted`: Items approved.  
+* `Rejected`: Items rejected.
 
 ### Compliance filter
 
@@ -97,9 +97,9 @@ The compliance filter helps reviewers identify items that fall within or outside
 
 **Filter options**
 
-* `Acceptable` – Shows items whose variance is within the defined threshold.  
-* `Rejectable` – Shows items whose variance exceeds the threshold.  
-* `Configure threshold` – Allows admins to define the acceptable variance limit.
+* `Acceptable`: Shows items whose variance is within the defined threshold.  
+* `Rejectable`: Shows items whose variance exceeds the threshold.  
+* `Configure threshold`: Allows admins to define the acceptable variance limit.
 
 
 **Configure threshold**  
@@ -107,12 +107,12 @@ Admins can configure how much variance is allowed before an item is flagged as o
 
 **Admin options**
 
-* Select unit of measurement – Choose the basis for calculating variance:  
+* Select unit of measurement: Choose the basis for calculating variance.  
   * Units: Compares the difference between counted and system quantities in absolute units.  
   * Percent: Calculates variance as a percentage difference between counted and system quantities.  
   * Cost: Flags variance based on the cost impact of the quantity difference.  
-* Enter threshold value – Example: 10 units, 5%, or a cost value depending on the selected unit.  
-* Save threshold – Click the blue check button to apply the threshold settings.
+* Enter threshold value: Example: 10 units, 5%, or a cost value depending on the selected unit.  
+* Save threshold: Click the blue check button to apply the threshold settings.
 
 
 **How it works (example)**
@@ -139,18 +139,18 @@ Each item row contains the following information:
 
 1. **Product details**  
      
-* Product image – Visual representation of the product.  
-* SKU and name – SKU and the product name.  
+* Product image: Visual representation of the product.  
+* SKU and name: SKU and the product name.  
     
 2. **Count information**  
      
-* `Counted quantity` / `System quantity` – Shows the quantity counted versus the system-recorded quantity.  
-* `Variance` – The difference between the counted and system quantity.  
+* `Counted quantity` / `System quantity`: Shows the quantity counted versus the system-recorded quantity.  
+* `Variance`: The difference between the counted and system quantity.  
     
 3. **Actions**  
      
-* `Accept` – Approve the counted quantity.  
-* `Reject` – Reject the count and send the item for recount.
+* `Accept`: Approve the counted quantity.  
+* `Reject`: Reject the count and send the item for recount.
 
 Note: Bulk actions can be applied when multiple items are selected using the checkboxes.
 
@@ -158,8 +158,8 @@ Note: Bulk actions can be applied when multiple items are selected using the che
 
 At the top of the item list, you can perform bulk actions for all selected items:
 
-* `Accept` – Accepts the counted quantities of selected items.  
-* `Reject` – Rejects selected items and sends them for recount.  
+* `Accept`: Accepts the counted quantities of selected items.  
+* `Reject`: Rejects selected items and sends them for recount.  
     
   Clicking these buttons will apply the chosen action to all selected rows simultaneously.
 
@@ -169,16 +169,16 @@ When you click on an item row, it expands to display additional details:
 
 1. **Count details**  
      
-   * Count name – The name of the count.  
-   * Count performed by – The user who performed the count.  
-   * Total quantity counted – The total counted quantity for the item.  
-   * Timestamps – Time when counting started and when it was last updated.  
+   * Count name: The name of the count.  
+   * Count performed by: The user who performed the count.  
+   * Total quantity counted: The total counted quantity for the item.  
+   * Timestamps: Time when counting started and when it was last updated.  
        
 2. **More options**  
      
-   * Last counted – Displays the last counted quantity for the item.  
-   * Edit count – Allows editing the counted quantity if adjustments are needed.  
-   * Remove count – Removes the current count for the item.  
+   * Last counted: Displays the last counted quantity for the item.  
+   * Edit count: Allows editing the counted quantity if adjustments are needed.  
+   * Remove count: Removes the current count for the item.  
      
 
 Items that have already been reviewed and accepted display an `Applied` status, indicating that the final counted quantity has been submitted to the system.

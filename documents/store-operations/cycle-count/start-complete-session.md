@@ -5,32 +5,32 @@ description: a comprehensive guide to performing cycle counts, scanning items, a
 
 ## Starting the count
 
-Once the start time arrives, the Start Counting button becomes active in the count card. After starting, the count moves into the In Progress state.
+Once the start time arrives, the `Start counting` button becomes active in the count card. After starting, the count moves into the `In progress` state.
 
-## Creating Sessions
+## Creating sessions
 
-Managers or associates can create multiple sessions to divide the work. When they click New Session, a form appears to:
+Managers or associates can create multiple sessions to divide the work. When they click `New session`, a form appears to:
 
 * Enter the session name  
 * Select the area (Backstock, Display, etc.)
 
 
-The system automatically creates one default session. Multiple sessions can be created and worked on in parallel. If a session is active, no other user can work on that same session. Managers will have the permission to forcibly release another user's active session.
+The system automatically creates one default session. Multiple sessions can run in parallel. If a session is active, no other user can work on that same session. Managers have permission to forcibly release another user's active session when a session is abandoned or blocked.
 
-## Performing the Count
+## Performing the count
 
 Inside a session, the associate will see:
 
 * Count name and type  
 * Options to edit the session name/area  
 * Option to discard the session  
-* Submit button for when the session is complete
+* `Submit` button for when the session is complete
 
-### Scanning Items
+### Scanning items
 
 To start scanning, the associate taps `Focus Scanner`. The scanned items will appear in the left panel. If a wrong item is scanned, the associate can remove it, and the system will adjust the count automatically.
 
-### Item Categories During Scanning (For Directed Counts)
+### Item categories during scanning (for directed counts)
 
 Scanned items automatically fall into four sections:
 
@@ -39,7 +39,7 @@ Scanned items automatically fall into four sections:
 * `Undirected`: Items that exist in system but were not assigned to the associate  
 * `Uncounted`: Items given for counting but not yet scanned
 
-### Item Categories During Scanning (For Hard Counts)
+### Item categories during scanning (for hard counts)
 
 Scanned items automatically fall into two sections:
 
@@ -52,7 +52,7 @@ For example, before counting a shelf, the team may identify that it contains 40 
 
 During scanning, some items may appear in the `Unmatched` tab. These are items whose UPC/UPCA does not match any product in the system. Store associates must review and manually match these items before submitting the session.
 
-### How to Match an Unmatched Item
+### How to match an unmatched item
 
 1. Open the `Unmatched` tab inside the session.  
 2. Locate the item that needs to be matched.  
@@ -63,7 +63,7 @@ During scanning, some items may appear in the `Unmatched` tab. These are items w
 7. Select the correct product from the results.  
 8. Click `Save` to confirm the match.
 
-### What Happens After Saving the Match
+### What happens after saving the match
 
 * If the matched product belongs to the count, it moves to the `Counted` tab.  
 * If the item is not assigned in the count, it moves to the `Undirected` tab.  
@@ -73,7 +73,7 @@ The unmatched item card also shows the time when this item was scanned and how m
 
 This ensures the store team can complete the count with all items correctly mapped to system products.
 
-### Add Hand-Counted Items
+### Add hand-counted items
 
 At the bottom left of the page, there is an option to add items that have already been hand-counted. Click on `Hand-Counted Items`, and a new screen will open to add these items.
 
