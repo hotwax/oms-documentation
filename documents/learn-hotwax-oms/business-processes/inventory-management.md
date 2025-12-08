@@ -120,6 +120,6 @@ If a -5 variance is reported, inventory is decreased by 5 units
 
 This automated adjustment process helps maintain accurate system inventory and reduces the need for manual reconciliation.
 
-Learn more about [creating cycle count](/documents/retail-operations/inventory/cycle-count-legacy/draft-counts.md) and [performing cycle count](/documents/store-operations/inventory-count/directed-cycle-count.md).
+Learn more about [creating cycle count](/documents/retail-operations/inventory/cycle-count-legacy/draft-counts.md) and [performing cycle count](/documents/store-operations/cycle-count-legacy/directed-cycle-count.md).
 
 By following these practices and using HotWax Commerce's intuitive apps, retailers can maintain high levels of inventory accuracy and streamline their inventory management processes.
