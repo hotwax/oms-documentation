@@ -97,8 +97,8 @@ The compliance filter helps reviewers identify items that fall within or outside
 
 **Filter options**
 
-* `Acceptable`: Shows items whose variance is within the defined threshold.  
-* `Rejectable`: Shows items whose variance exceeds the threshold.  
+* `Compliant`: Shows items whose variance is within the defined threshold.  
+* `Uncompliant`: Shows items whose variance exceeds the threshold.  
 * `Configure threshold`: Allows admins to define the acceptable variance limit.
 
 
@@ -119,8 +119,8 @@ Admins can configure how much variance is allowed before an item is flagged as o
 
 If the threshold is set to **10 units**:
 
-* A product with a variance of 8 is acceptable.  
-* A product with a variance of 25 is rejectable.
+* A product with a variance of 8 is compliant.  
+* A product with a variance of 25 is uncompliant.
 
 
 This allows admins to quickly focus on items with major mismatches instead of reviewing every minor deviation.
