@@ -41,7 +41,7 @@ After an item is rejected, a notification email is sent, and the order may be re
 #### Customer Details
 
 The Customer Details section displays the following information:
-- **Customer name:** So they know who placed the order
+- **Customer name:** Displays the name of the customer who placed the order
 - **Phone number:** Provides a contact number for the customer, which can be used if the store needs to reach out regarding pickup or order updates.
 - **COD amount:** Shown only for Cash on Delivery orders
 
