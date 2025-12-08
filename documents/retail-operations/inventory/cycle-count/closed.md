@@ -26,15 +26,15 @@ The list view is designed to help you quickly find and filter completed counts:
     
 * List columns: Each closed count row displays:  
     
-* Count name and ID – e.g., CycleCountSample‑Nov4 (ID M1000204).  
+* **Count name and ID:** e.g., CycleCountSample‑Nov4 (ID M1000204).  
     
-* Facility – shown as a pill with the facility name.  
+* **Facility:** shown as a pill with the facility name.  
     
-* Created Date – date the count was created.  
+* **Created Date:** date the count was created.  
     
-* Closed Date – date the count was completed.  
+* **Closed Date:** date the count was completed.  
     
-* Type label – for hard counts or directed counts, a small label (e.g., HARD COUNT) appears above the name.
+* **Type label:** for hard counts or directed counts, a small label (e.g., `HARD COUNT`) appears above the name.
 
 ## Filtering and searching closed counts
 
