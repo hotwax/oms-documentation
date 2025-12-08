@@ -45,14 +45,15 @@ When a count is moved to the `In progress` state (by tapping `Start counting`), 
   * **All requested items counted:** Verifies there are no uncounted directed items. If there are still uncounted SKUs, the manager should follow up with the team.  
   * **`Submit for review` button:** Becomes enabled only when all checklist items are satisfied. Clicking this sends the completed count to head office for audit and final approval. Once submitted, the count appears in `Pending review` for regional managers.
 
-### Purpose of these controls
+### Managing sessions and submission
 
-* The Skip options help remove irrelevant items so that the upper management receives a neat, precise, and intentional count submission.  
-    
-* The `Mark out of stock` option ensures inventory accuracy when expected items are not present in the store.
-
-
-By clicking on any item in the Undirected or Counted tab, the system will show which user counted it, the quantity they recorded, the time they started counting, and the time it was last updated.
+1. Monitor session status. Ensure each associate submits their session when finished. If a session is stuck in `In progress`, follow up with the associate to complete their counts.  
+     
+2. Review uncounted items. In the Uncounted tab, verify that there aren’t any remaining SKUs. If there are, re‑assign them by creating a new session or asking an associate to reopen their session.  
+     
+3. Handle items not in stock. Sometimes uncounted items remain because they simply are not in stock. Once all active sessions show a Submitted state, the Uncounted tab displays an option such as `Mark remaining items out of stock`. Clicking this button generates a new session and automatically assigns a quantity of 0 to every remaining item. For directed counts, this zero‑quantity session includes only the items that were assigned to be counted; for hard counts, it includes all SKUs with positive system inventory that were not counted. After this action, the previously uncounted list should be empty.  
+     
+4. Submit when complete. After all sessions (including the zero‑quantity out‑of‑stock session) are marked as submitted and the Uncounted tab is clear, click `Submit for review`. Once submitted, the count cannot be modified by the store and moves to the head office for approval.
 
 ### Uncounted tab
 
@@ -63,7 +64,7 @@ This tab lists all products that were assigned for the directed count but were n
 * If items remain uncounted even after the associate has submitted the session, it usually means these products were not physically found in the store.
 
 
-**Available:** `Mark out of stock`
+**Available action:** `Mark out of stock`
 
 * The manager can click `Mark out of stock` to update all uncounted items in bulk.  
 * This feature is provided so that if the counting is actually complete and these items were genuinely not found, the manager can cleanly mark them as out of stock.  
@@ -72,6 +73,7 @@ This tab lists all products that were assigned for the directed count but were n
 
 
 * Uncounted/Undirected/Counted tabs – allow the manager to inspect items that haven’t been counted, items counted outside of their directed location (undirected), and items already counted. Each tab displays product images, names, SKUs and variance fields so managers can quickly spot issues.
+
 
 ### Undirected tab
 
@@ -82,7 +84,7 @@ This tab shows items that were not part of the directed count list, but were sca
 * Variance is displayed to help the manager understand the difference.
 
 
-**Actions available:**
+**Available action:**
 
 * `Discard all undirected items`: If these items should not be included in the count submission, the manager can skip all of them at once.  
     
@@ -97,15 +99,6 @@ This tab displays all the items that were part of the directed count and were su
     
 * This helps the manager quickly review discrepancies before final submission.
 
-### Managing sessions and submission
-
-1. Monitor session status. Ensure each associate submits their session when finished. If a session is stuck in `In progress`, follow up with the associate to complete their counts.  
-     
-2. Review uncounted items. In the Uncounted tab, verify that there aren’t any remaining SKUs. If there are, re‑assign them by creating a new session or asking an associate to reopen their session.  
-     
-3. Handle items not in stock. Sometimes uncounted items remain because they simply are not in stock. Once all active sessions show a Submitted state, the Uncounted tab displays an option such as `Mark remaining items out of stock`. Clicking this button generates a new session and automatically assigns a quantity of 0 to every remaining item. For directed counts, this zero‑quantity session includes only the items that were assigned to be counted; for hard counts, it includes all SKUs with positive system inventory that were not counted. After this action, the previously uncounted list should be empty.  
-     
-4. Submit when complete. After all sessions (including the zero‑quantity out‑of‑stock session) are marked as submitted and the Uncounted tab is clear, click `Submit for review`. Once submitted, the count cannot be modified by the store and moves to the head office for approval.
 
 ## Store associate workflow (simplified)
 
