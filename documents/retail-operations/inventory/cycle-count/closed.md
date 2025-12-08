@@ -4,6 +4,10 @@
 
 The `Closed` page in the Cycle Count app lets you review every cycle count that has been completed. On this page you can search for counts, apply filters to narrow results, export filtered data, and drill into the details of each closed count.
 
+## Required permissions
+
+* View closed counts, open details, and export: `COMMON_ADMIN`.
+
 ## Navigating to the closed counts page
 
 1. Open the Cycle Count app. Use the navigation drawer on the left side of the screen.  

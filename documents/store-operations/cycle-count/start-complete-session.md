@@ -7,6 +7,12 @@ description: a comprehensive guide to performing cycle counts, scanning items, a
 
 Once the start time arrives, the `Start counting` button becomes active in the count card. After starting, the count moves into the `In progress` state.
 
+## Required permissions
+
+* Open the Counts list and start sessions: any of `FULFILL_INVCUNT_ADMIN` or `INV_COUNT_ADMIN`.  
+* Start a count before its planned start time: any of `COMMON_ADMIN`, `INV_COUNT_ADMIN` or `INV_COUNT_PRE_START` (otherwise `Start counting` stays disabled until the start time).  
+* Force‑release another user’s active session: `COMMON_ADMIN`.
+
 ## Creating sessions
 
 Managers or associates can create multiple sessions to divide the work. When they click `New session`, a form appears to:
