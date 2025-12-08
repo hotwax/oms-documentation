@@ -35,6 +35,10 @@
 
 * [Receiving](receiving/README.md)
   * [Inventory Receiving](receiving/receiving.md)
+* [Cycle Count](cycle-count/README.md)
+  * [Plan Cycle Count](cycle-count/plan-cycle-count.md)
+  * [Start & Complete Session](cycle-count/start-complete-session.md)
+  * [Count Progress & Review](cycle-count/count-progress-review.md)
 * [Cycle Count Legacy](cycle-count-legacy/README.md)
   * [Directed Count](cycle-count-legacy/directed-cycle-count.md)
   * [Hard Count](cycle-count-legacy/hard-count.md)
