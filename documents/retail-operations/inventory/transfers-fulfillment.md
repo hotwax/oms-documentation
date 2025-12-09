@@ -1,13 +1,15 @@
-# Transfer order fulfillment
+---
+description: View shipments for a fulfilled transfer order.
+---
 
-When a TO is fulfilled (shipment created and dispatched), the Fulfillment section appears on the Transfer order details page.  
-This section lists all shipments associated with the TO, including shipment ID, tracking code, and status.  
+# Transfer Order Fulfillment
 
-To view shipment details, select a shipment from the Fulfillment section.  
-The Shipment details card opens, displaying:
-- Shipped date  
-- Shipping method  
-- Carrier  
-- Tracking code  
+When a Transfer Order (TO) is fulfilled, the Fulfillment section appears on the Transfer Order Details page. It lists every shipment for the TO, including shipment ID, tracking code, and status.
 
-To learn how to fulfill a TO, refer to [Transfer Order Fulfillment](../../store-operations/transfer-order/transfer-order-fulfillment.md) guide.
+To view shipment details, select a shipment in the Fulfillment section. The Shipment Details card shows:
+- Shipped date
+- Shipping method
+- Carrier
+- Tracking code
+
+To learn how to fulfill a TO, see the [Transfer Order Fulfillment](../../store-operations/transfer-order/transfer-order-fulfillment.md) guide.

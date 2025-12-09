@@ -4,111 +4,93 @@ description: How to fulfill transfer orders in HotWax Commerce
 
 # Transfer Order Fulfillment
 
-The Fulfillment App by HotWax Commerce allows you to fulfill Transfer Orders (TOs). 
-Fulfill store-to-store and store-to-warehouse transfers through the Fulfillment App, while fulfill warehouse-to-store transfers through a Warehouse Management System (WMS). 
-This guide covers how to locate a TO, pick and pack inventory, handle rejections, create shipments, and complete the fulfillment process.
+Use the Fulfillment App to fulfill Transfer Orders (TOs). Use the app for store-to-store and store-to-warehouse transfers; complete warehouse-to-store transfers in your Warehouse Management System (WMS). This guide covers locating a TO, picking and packing inventory, creating shipments, handling exceptions, and completing fulfillment.
 
 
 ## Fulfilling a TO
 
 ### Locate the TO
-To locate a specific TO:
-- Navigate to **Transfer Orders** page.
+- Open the **Transfer Orders** page.
 - Use the search bar to look up the TO by ID or name.
-- You can only see TOs where the origin facility matches your selected facility. TOs for other facilities won’t appear.
+- You only see TOs where the origin facility matches your selected facility.
 
 
 ### Review TO details
-Tapping on a TO opens the **Transfer Order Details** page, which displays:
-- A list of items with product name, product images, SKU codes, and ordered quantities.
-- Total number of items to be fulfilled.
-- A progress bar that visually indicates how much of each item has been fulfilled.
+Opening a TO displays:
+- Item list with product name, image, SKU, and ordered quantity.
+- Total number of items to fulfill.
+- A progress bar that shows fulfillment progress per item.
 
-This view helps you verify the TO items before starting the fulfillment process.  
+This view helps you verify items before starting fulfillment.
 
 
 ### Print picklist
-- To print a picklist for picking items, tap **`Print Picklist`**.
-- To learn more about the picklist functionality for store transfer fulfillment, refer to **Transfer Order Picklist**.
+- Select **Print Picklist** to generate a packing checklist.
+- For details, see [Transfer Order Picklist](picklist.md).
 
 
 ### Pick items
-There are three ways to pick items:
-1. **Scan with a barcode scanner**  
-   Scanning a barcode finds the matching item in the list, selects it, and increases its picked quantity.  
+Pick items using one of three methods:
+1. **Barcode scanner:** Scanning selects the item and increments the picked quantity.
+2. **iPad camera:** Tap **Scan** to open the camera and scan the barcode.
+3. **Enter SKU:** Enter the SKU in the **Scan Item** field.
 
-2. **Scan with the iPad camera**  
-   Tap **`Scan`** to open the camera and scan the item’s barcode.  
+Each scan or SKU entry adds one unit and updates the progress bar. You can also manually enter picked quantities once an item is selected.
 
-3. **Enter SKU**  
-   Enter the SKU of an item in the **Scan Item** input field.  
-
-Each time you scan a barcode or enter a SKU, the system automatically adds one unit to the quantity and updates the progress bar.  
-
-Alternatively, once scanning has selected the item, you can also manually enter the picked quantity of each item.  
-
-> **Tip:** Use **`Pick All`**  
-> If all ordered quantities for an item are picked, tap **`Pick All`** to record them without scanning or entering manually.
+> **Tip:** Use `Pick All` when you are picking the entire ordered quantity for an item.
 
 
 ### Create shipment
 TOs may be fulfilled in multiple shipments or in a single shipment.
 
 #### Fulfill in multiple shipments
-If you are fulfilling multiple shipments, record only the items for the current shipment. The rest remain open in the app until fulfilled later.
-- Enter the quantity of items picked for the current shipment.
-- Tap **`Create Shipment`**.
-- A confirmation pop-up will appear, click **`Create`**.
+If you are fulfilling multiple shipments, record only the items for the current shipment. The rest remain open until fulfilled later.
+- Enter quantities for the items included in the current shipment.
+- Tap **Create Shipment** and confirm by selecting **Create**.
 
 #### Fulfill in single shipment
 When the entire TO is fulfilled at once, all items are picked and shipped together.
-- Tap **`Pick All`** for all items in the TO.
-- Tap **`Create Shipment`**.
-- A confirmation pop-up will appear, tap **`Create`**.
+- Tap **Pick All** for every item in the TO.
+- Tap **Create Shipment** and confirm by selecting **Create**.
 
-Once the shipment is created, the TO is marked as fulfilled and no further changes can be made.  
+Once a shipment is created, the TO is marked as fulfilled and cannot be edited.
 
 
 ### Review shipment
-After a shipment is created, the app opens the **Review shipment** page.  
-You can either:
-- Tap **`Generate shipping label`** to fetch the carrier and tracking information automatically, or
-- Manually enter the carrier and tracking code.
+After a shipment is created, the **Review shipment** page opens. Choose either to:
+- Tap **Generate shipping label** to fetch carrier and tracking information automatically, or
+- Enter the carrier and tracking code manually.
 
 
 ### Complete shipment
-Once the tracking code is entered, the **`Complete Shipment`** button becomes available.
-- Tap **`Complete Shipment`**.
-- A confirmation pop-up will appear, tap **`Ship`**.
+After entering the tracking code:
+- Select **Complete Shipment**.
+- Confirm by tapping **Ship**.
 
 
-## Exception Handling
+## Exception handling
 
-### Rejecting an item in TO
-If an item cannot be fulfilled because of missing inventory, damage, or incorrect listings, you can reject it. Rejecting an item rejects the entire TO, and no further fulfillment is possible.  
-When you reject an item, the system records an inventory variance. This helps ensure future orders are planned based on accurate stock availability.  
+### Rejecting an item in a TO
+If an item cannot be fulfilled (missing inventory, damage, or incorrect listing), reject it. Rejecting any item rejects the entire TO and records an inventory variance so future orders plan against accurate stock.
 
 Steps to reject an item:
-- Tap **`Report an Issue`** dropdown next to the item that can’t be fulfilled.
+- Open the **Report an Issue** dropdown next to the item.
 {% hint style="info" %}
 The **Report an Issue** dropdown is only available if no shipments have been created for the TO.
 {% endhint %}
-- Select a rejection reason from the dropdown (for example, Not in stock, Mismatch, or Damaged).
-- Once you select a reason, all other items will default to **No Variance** and the **`Reject Items`** button will appear.
-- Tap **`Reject Items`**.
-- A confirmation pop-up will appear, tap **`Reject`**.
+- Select a rejection reason (for example, Not in stock, Mismatch, or Damaged).
+- Remaining items default to **No Variance** and the **Reject Items** button appears.
+- Select **Reject Items** and confirm by tapping **Reject**.
 
-After rejection, the TO moves to **Rejected Order Parking**, and inventory variance is logged based on the selected rejection reason.  
-To know more about rejection reasons, refer to **Rejections**.
+After rejection, the TO moves to **Rejected Order Parking**, and inventory variance is logged based on the selected reason. For details on rejection reasons, see **Rejections**.
 
 
-### Cancelling an item in TO
-You can cancel a specific item in a TO, even if it has been partially fulfilled. This may be required due to low stock, damaged inventory, or fulfillment cutoffs.  
-When you close an item, it is marked as cancelled in HotWax OMS and is no longer available for fulfillment.
+### Cancelling an item in a TO
+You can cancel a specific item even if it has been partially fulfilled (for example, low stock, damaged inventory, or a cutoff). Cancelled items are no longer available for fulfillment in either app.
 
 Steps to close an item:
-- Tap **`Close Items`**.
-- A review dialog box will appear. Select the checkbox for each item to close, then tap the **Save** icon.
-- When the confirmation pop-up appears, tap **Proceed**.
+- Tap **Close Items**.
+- In the review dialog, select the checkboxes for the items to close, then tap the **Save** icon.
+- When prompted, tap **Proceed** to confirm.
 
-Once closed, the item no longer appears in the TO in either the Fulfillment App or the Receiving App.  
+Closed items are removed from the TO in both the Fulfillment App and the Receiving App.

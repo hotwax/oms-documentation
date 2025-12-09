@@ -1,92 +1,59 @@
+---
+description: Create a new transfer order in the Transfers App.
+---
+
 # Transfer Order Creation
 
-You can create a new TO in the Transfers App to move inventory between facilities.
+Use the Transfers App to create a Transfer Order (TO) and move inventory between facilities.
 
+## Create a new TO
+1. Select the **Add (+)** icon.
+2. The Create Transfer Order page opens to capture order details.
 
-## Steps to create a TO:
+## Name the TO
+- Enter a clear, searchable name so the TO is easy to find later.
 
-### Create a new TO
-- To create a new TO, click the Add (+) icon.
-- The Create transfer order page opens, where you can enter order details.  
+## Assign store and facilities
+- **Product Store:** The available product store is selected by default; change it if needed.
+- **Origin:** Select **Assign** next to Origin (or the preselected facility) and choose the shipping facility.
+- **Destination:** Select **Assign** next to Destination and choose the receiving facility.
 
+## Select shipping method
+- **Carrier:** Choose a shipping carrier (for example, FedEx).
+- **Method:** Choose a supported method for that carrier (for example, Standard, Same Day, or Next Day).
 
-### Enter TO name
-- Enter a clear, relevant and searchable name.
-- This makes the TO easier to find later.  
+## Plan shipping and delivery dates
+- **Ship Date:** Select the shipment date from the calendar.
+- **Delivery Date:** Select the expected delivery date.
 
+## Add items to the TO
+Add items manually or by uploading a CSV.
 
-### Complete the assign section
-- **Product Store:**
-  Select a product store, if there is only one store available, it will be selected by default.  
+### Bulk upload via CSV
+Recommended for TOs with many items.
+- In the **Import items CSV** section, download the sample file if needed.
+- Upload the CSV containing SKUs and quantities.
+- After upload, select the product identifier type and map the identifier and quantity columns.
 
-- **Origin:**
-  Click `Assign` button next to “Origin”,  or click the facility name if one is already selected by default.  
-  In the dialog, select the origin facility.  
-  Click Save.  
+### Manually add items
+Recommended for TOs with only one or a few items.
+- Search by SKU or another identifier.
+- When the product appears, select the **Add (+)** icon.
 
-- **Destination:**
-  Click `Assign` button next to “Destination”.  
-  In the dialog, select the receiving facility.  
-  Click Save.  
+## Set item quantities
+Quantities can be set per item or in bulk.
 
+### Per-item quantities
+- Enter the quantity directly or use the stepper arrows.
+- Use the ellipsis (⋮) menu to **Book QoH** (all on-hand stock) or **Book ATP** (available-to-promise stock).
+- Select **Remove from order** in the same menu to delete an item.
 
-### Select shipping method
-- **Carrier:** Click on dropdown to select a shipping carrier (for example, FedEx).
-- **Method:** Click on dropdown and select a shipping method supported by the selected carrier (for example, Standard, Same day, or Next day).
+### Bulk quantities
+- Select the checkbox above the item list to select all items.
+- Apply **Book QoH**, **Book ATP**, or **Custom Quantity** to update every item at once.
 
+## Finalize the TO
+1. Review the destination facility, shipping method, transfer dates, and item quantities.
+2. Select the checkmark icon in the lower-right corner to create the TO.
 
-### Plan shipping and delivery dates
-- **Ship Date:**
-  Click `Select Date` field.  
-  Pick the shipment date from the calendar.  
-  Click Done.  
-
-- **Delivery Date:**
-  Follow the same steps and select the delivery date.  
-
-
-### Add Items to the TO
-You can add items manually or by uploading a CSV.  
-
-#### Bulk Upload via CSV
-Recommended for TOs with many items.  
-- Go to the Import items CSV section.
-- Click `Download Example` to get a sample CSV template, if needed.
-- Click `Upload` and upload the CSV file containing the SKUs and quantities.
-
-After uploading:  
-- **Select Product Identifier:** Choose the identifier type (e.g., SKU).
-- **Map Columns:** Assign the correct CSV columns for Product Identifier and Quantity (e.g., Product Identifier → SKU, Quantity → Quantity).
-
-#### Manually add items
-Recommended for TOs with only one or a few items.  
-
-- **Search by product identifier**
-  Search for a product by entering its identifier (for example, SKU).  
-  When the product appears on the screen, click on Add (+) icon.  
-
-
-### Add item quantities
-Quantities can be added either to individual items or in bulk to all items at once.  
-
-#### Adding quantities to an individual item:
-- **Enter Quantity:**
-  Enter the quantity directly in the input field, or use the stepper arrows.  
-
-- **Book Quantities:**
-  Open the ellipsis (⋮) menu and choose `Book QoH` (to transfer the entire available stock in hand) or `Book ATP` (to transfer only the unallocated/unreserved quantity).  
-
-- **Remove Item:**
-  From the same menu, select `Remove from order` to remove an item from the TO.  
-
-#### Adding quantities in bulk:
-- To add quantities in bulk, check the box above the item list.
-- You can then apply Book QoH or Book ATP across every item, or use `Custom Quantity` to enter a single value that is applied to all items in the TO.
-
-
-### Finalize the TO
-- Before finalizing, review the destination facility, shipping method, transfer dates and the items with their respective quantities.
-- Once everything is confirmed, select the checkmark icon in the lower-right corner to finalize and create the TO.
-
-
-After a TO is created, you land on the Transfer Order Details page with the order in Created status.
+After creation, you land on the Transfer Order Details page with the order in Created status.

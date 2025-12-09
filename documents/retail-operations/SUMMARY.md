@@ -92,7 +92,7 @@
   * [Schedule Restocking](inventory/inventory-upload/schedule-restock.md)
   * [Inventroy Import Method](inventory/inventory-upload/import-methods.md)
 * [Transfers App](inventory/transfers-app.md)
-  * [Transfer Orders Page](inventory/transfer-order-page.md)
+  * [Find Transfer Orders](inventory/find-transfer-order.md)
   * [Transfer Order Creation](inventory/transfer-order-creation.md)
   * [Transfer Order Details](inventory/transfer-order-details.md)
   * [Transfer Order Fulfillment](inventory/transfers-fulfillment.md)
