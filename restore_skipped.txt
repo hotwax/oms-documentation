@@ -1,0 +1,3 @@
+documents/store-operations/.gitbook/assets/carriage-return.png
+documents/store-operations/.gitbook/assets/ios-hid-mode.png
+documents/store-operations/.gitbook/assets/pairing-reset.png

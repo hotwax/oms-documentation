@@ -1,0 +1,139 @@
+documents/learn-hotwax-oms/.gitbook/assets/1 12.png
+documents/learn-hotwax-oms/.gitbook/assets/Excess Inventory Received.png
+documents/learn-hotwax-oms/.gitbook/assets/Frame 1.png
+documents/learn-hotwax-oms/.gitbook/assets/Frame 2 (1).png
+documents/learn-hotwax-oms/.gitbook/assets/Frame 2.png
+documents/learn-hotwax-oms/.gitbook/assets/Online Order Fulfillment.png
+documents/learn-hotwax-oms/.gitbook/assets/Pending 1.png
+documents/learn-hotwax-oms/.gitbook/assets/Picker Fill.png
+documents/learn-hotwax-oms/.gitbook/assets/Purchase Order Page.png
+documents/learn-hotwax-oms/.gitbook/assets/Screenshot 2023-11-07 at 4.09.42 PM.png
+documents/learn-hotwax-oms/.gitbook/assets/Screenshot 2024-01-01 at 11.49.24 PM.png
+documents/learn-hotwax-oms/.gitbook/assets/Screenshot 2024-02-29 at 10.58.39 AM.png
+documents/learn-hotwax-oms/.gitbook/assets/block1 .png
+documents/learn-hotwax-oms/.gitbook/assets/contact details 2 .png
+documents/learn-hotwax-oms/.gitbook/assets/contact.png
+documents/learn-hotwax-oms/.gitbook/assets/facilities.hotwax 8.png
+documents/learn-hotwax-oms/.gitbook/assets/favourites (1).png
+documents/learn-hotwax-oms/.gitbook/assets/fulfillment.hotwax 2.png
+documents/learn-hotwax-oms/.gitbook/assets/fulfillment.hotwax 4.png
+documents/learn-hotwax-oms/.gitbook/assets/fulfillment.hotwax 5.png
+documents/learn-hotwax-oms/.gitbook/assets/fulfillment.hotwax 6.png
+documents/learn-hotwax-oms/.gitbook/assets/fulfillment.hotwax 7.png
+documents/learn-hotwax-oms/.gitbook/assets/fulfillment.hotwax 8.png
+documents/learn-hotwax-oms/.gitbook/assets/history 1.png
+documents/learn-hotwax-oms/.gitbook/assets/job-manager.hotwax.io_pre-order (1).png
+documents/learn-hotwax-oms/.gitbook/assets/job-manager.hotwax.io_pre-order (2).png
+documents/learn-hotwax-oms/.gitbook/assets/job-manager.hotwax.io_pre-order (3).png
+documents/learn-hotwax-oms/.gitbook/assets/job-manager.hotwax.io_pre-order (4).png
+documents/learn-hotwax-oms/.gitbook/assets/job-manager.hotwax.io_pre-order (5).png
+documents/learn-hotwax-oms/.gitbook/assets/job-manager.hotwax.io_pre-order (6).png
+documents/learn-hotwax-oms/.gitbook/assets/permission786.png
+documents/learn-hotwax-oms/.gitbook/assets/picking.hotwax figma.png
+documents/learn-hotwax-oms/.gitbook/assets/recurrence.png
+documents/learn-hotwax-oms/.gitbook/assets/resetpass.png
+documents/learn-hotwax-oms/.gitbook/assets/spaces_WoOehPvuUvxQygGoR81q_uploads_HCxGoQnkj1w0rx95fDvg_3.webp
+documents/learn-hotwax-oms/.gitbook/assets/spaces_WoOehPvuUvxQygGoR81q_uploads_OMytarwPHI8uhPtZTk01_2.webp
+documents/learn-hotwax-oms/.gitbook/assets/yyyyy.png
+documents/learn-shopify/.gitbook/assets/10.png
+documents/learn-shopify/.gitbook/assets/12.png
+documents/learn-shopify/.gitbook/assets/13.png
+documents/learn-shopify/.gitbook/assets/14.png
+documents/learn-shopify/.gitbook/assets/15.png
+documents/learn-shopify/.gitbook/assets/16.png
+documents/learn-shopify/.gitbook/assets/19.png
+documents/learn-shopify/.gitbook/assets/2.png
+documents/learn-shopify/.gitbook/assets/20.png
+documents/learn-shopify/.gitbook/assets/21.png
+documents/learn-shopify/.gitbook/assets/22.png
+documents/learn-shopify/.gitbook/assets/25.png
+documents/learn-shopify/.gitbook/assets/26.png
+documents/learn-shopify/.gitbook/assets/29.png
+documents/learn-shopify/.gitbook/assets/3.png
+documents/learn-shopify/.gitbook/assets/31.png
+documents/learn-shopify/.gitbook/assets/32.png
+documents/learn-shopify/.gitbook/assets/33.png
+documents/learn-shopify/.gitbook/assets/34.png
+documents/learn-shopify/.gitbook/assets/35.png
+documents/learn-shopify/.gitbook/assets/36.png
+documents/learn-shopify/.gitbook/assets/6.png
+documents/learn-shopify/.gitbook/assets/7.png
+documents/learn-shopify/.gitbook/assets/8.png
+documents/learn-shopify/.gitbook/assets/9.png
+documents/retail-operations/.gitbook/assets/1 12.png
+documents/retail-operations/.gitbook/assets/Excess Inventory Received.png
+documents/retail-operations/.gitbook/assets/Frame 2 (1).png
+documents/retail-operations/.gitbook/assets/Online Order Fulfillment.png
+documents/retail-operations/.gitbook/assets/Picker Fill.png
+documents/retail-operations/.gitbook/assets/Screenshot 2024-01-01 at 11.49.24 PM.png
+documents/retail-operations/.gitbook/assets/Screenshot 2024-02-29 at 10.58.39 AM.png
+documents/retail-operations/.gitbook/assets/block1 .png
+documents/retail-operations/.gitbook/assets/contact details 2 .png
+documents/retail-operations/.gitbook/assets/facilities.hotwax 8.png
+documents/retail-operations/.gitbook/assets/favourites (1).png
+documents/retail-operations/.gitbook/assets/fulfillment.hotwax 2.png
+documents/retail-operations/.gitbook/assets/fulfillment.hotwax 4.png
+documents/retail-operations/.gitbook/assets/fulfillment.hotwax 5.png
+documents/retail-operations/.gitbook/assets/fulfillment.hotwax 6.png
+documents/retail-operations/.gitbook/assets/fulfillment.hotwax 7.png
+documents/retail-operations/.gitbook/assets/fulfillment.hotwax 8.png
+documents/retail-operations/.gitbook/assets/notations.png
+documents/retail-operations/.gitbook/assets/permission786.png
+documents/retail-operations/.gitbook/assets/picking.hotwax figma.png
+documents/retail-operations/.gitbook/assets/resetpass.png
+documents/store-operations/.gitbook/assets/Frame 1.png
+documents/store-operations/.gitbook/assets/Frame 2 (1).png
+documents/store-operations/.gitbook/assets/Frame 2.png
+documents/store-operations/.gitbook/assets/Online Order Fulfillment.png
+documents/store-operations/.gitbook/assets/Pending 1.png
+documents/store-operations/.gitbook/assets/Picker Fill.png
+documents/store-operations/.gitbook/assets/Purchase Order Page.png
+documents/store-operations/.gitbook/assets/Screenshot 2023-11-07 at 4.09.42 PM.png
+documents/store-operations/.gitbook/assets/Screenshot 2024-02-29 at 10.58.39 AM.png
+documents/store-operations/.gitbook/assets/block1 .png
+documents/store-operations/.gitbook/assets/contact details 2 .png
+documents/store-operations/.gitbook/assets/contact.png
+documents/store-operations/.gitbook/assets/facilities.hotwax 8.png
+documents/store-operations/.gitbook/assets/favourites (1).png
+documents/store-operations/.gitbook/assets/history 1.png
+documents/store-operations/.gitbook/assets/job-manager.hotwax.io_pre-order (1).png
+documents/store-operations/.gitbook/assets/job-manager.hotwax.io_pre-order (2).png
+documents/store-operations/.gitbook/assets/job-manager.hotwax.io_pre-order (3).png
+documents/store-operations/.gitbook/assets/job-manager.hotwax.io_pre-order (4).png
+documents/store-operations/.gitbook/assets/job-manager.hotwax.io_pre-order (5).png
+documents/store-operations/.gitbook/assets/job-manager.hotwax.io_pre-order (6).png
+documents/store-operations/.gitbook/assets/notations.png
+documents/store-operations/.gitbook/assets/permission786.png
+documents/store-operations/.gitbook/assets/recurrence.png
+documents/store-operations/.gitbook/assets/resetpass.png
+documents/store-operations/.gitbook/assets/spaces_WoOehPvuUvxQygGoR81q_uploads_HCxGoQnkj1w0rx95fDvg_3.webp
+documents/store-operations/.gitbook/assets/spaces_WoOehPvuUvxQygGoR81q_uploads_OMytarwPHI8uhPtZTk01_2.webp
+documents/store-operations/.gitbook/assets/yyyyy.png
+documents/system-admin/.gitbook/assets/1 12.png
+documents/system-admin/.gitbook/assets/Excess Inventory Received.png
+documents/system-admin/.gitbook/assets/Frame 1.png
+documents/system-admin/.gitbook/assets/Frame 2.png
+documents/system-admin/.gitbook/assets/Pending 1.png
+documents/system-admin/.gitbook/assets/Purchase Order Page.png
+documents/system-admin/.gitbook/assets/Screenshot 2023-11-07 at 4.09.42 PM.png
+documents/system-admin/.gitbook/assets/Screenshot 2024-01-01 at 11.49.24 PM.png
+documents/system-admin/.gitbook/assets/contact.png
+documents/system-admin/.gitbook/assets/fulfillment.hotwax 2.png
+documents/system-admin/.gitbook/assets/fulfillment.hotwax 4.png
+documents/system-admin/.gitbook/assets/fulfillment.hotwax 5.png
+documents/system-admin/.gitbook/assets/fulfillment.hotwax 6.png
+documents/system-admin/.gitbook/assets/fulfillment.hotwax 7.png
+documents/system-admin/.gitbook/assets/fulfillment.hotwax 8.png
+documents/system-admin/.gitbook/assets/history 1.png
+documents/system-admin/.gitbook/assets/job-manager.hotwax.io_pre-order (1).png
+documents/system-admin/.gitbook/assets/job-manager.hotwax.io_pre-order (2).png
+documents/system-admin/.gitbook/assets/job-manager.hotwax.io_pre-order (3).png
+documents/system-admin/.gitbook/assets/job-manager.hotwax.io_pre-order (4).png
+documents/system-admin/.gitbook/assets/job-manager.hotwax.io_pre-order (5).png
+documents/system-admin/.gitbook/assets/job-manager.hotwax.io_pre-order (6).png
+documents/system-admin/.gitbook/assets/notations.png
+documents/system-admin/.gitbook/assets/picking.hotwax figma.png
+documents/system-admin/.gitbook/assets/recurrence.png
+documents/system-admin/.gitbook/assets/spaces_WoOehPvuUvxQygGoR81q_uploads_HCxGoQnkj1w0rx95fDvg_3.webp
+documents/system-admin/.gitbook/assets/spaces_WoOehPvuUvxQygGoR81q_uploads_OMytarwPHI8uhPtZTk01_2.webp
+documents/system-admin/.gitbook/assets/yyyyy.png
