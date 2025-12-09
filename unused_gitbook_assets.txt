@@ -1,0 +1,790 @@
+documents/.gitbook/assets/Designer (3) (1).png
+documents/.gitbook/assets/Designer (3).png
+documents/.gitbook/assets/Designer (6).png
+documents/.gitbook/assets/Forum.png
+documents/.gitbook/assets/Iterable (1).png
+documents/.gitbook/assets/Iterable.png
+documents/.gitbook/assets/Ship To store.webp
+documents/.gitbook/assets/coverimage.png
+documents/.gitbook/assets/getting started.png
+documents/.gitbook/assets/shopify Inventory.png
+documents/.gitbook/assets/shopify additonal resources.png
+documents/learn-hotwax-oms/.gitbook/assets/1 1.png
+documents/learn-hotwax-oms/.gitbook/assets/Brokering Route Queries (1).png
+documents/learn-hotwax-oms/.gitbook/assets/Brokering Route Queries.png
+documents/learn-hotwax-oms/.gitbook/assets/Brokering Run Routes (1).png
+documents/learn-hotwax-oms/.gitbook/assets/Brokering Run Routes (2).png
+documents/learn-hotwax-oms/.gitbook/assets/Brokering Run Routes.png
+documents/learn-hotwax-oms/.gitbook/assets/Brokering Runs (1) (1).png
+documents/learn-hotwax-oms/.gitbook/assets/Brokering Runs (1).png
+documents/learn-hotwax-oms/.gitbook/assets/Brokering Runs.png
+documents/learn-hotwax-oms/.gitbook/assets/Card.png
+documents/learn-hotwax-oms/.gitbook/assets/Cycle Counting (1).png
+documents/learn-hotwax-oms/.gitbook/assets/Export packed order.png
+documents/learn-hotwax-oms/.gitbook/assets/Filters (2).png
+documents/learn-hotwax-oms/.gitbook/assets/Filters 3.png
+documents/learn-hotwax-oms/.gitbook/assets/Filters l1.png
+documents/learn-hotwax-oms/.gitbook/assets/Frame 674 (1).png
+documents/learn-hotwax-oms/.gitbook/assets/Frame 674.png
+documents/learn-hotwax-oms/.gitbook/assets/Fulfillment Settings.png
+documents/learn-hotwax-oms/.gitbook/assets/History (1) (1).png
+documents/learn-hotwax-oms/.gitbook/assets/History (1).png
+documents/learn-hotwax-oms/.gitbook/assets/HotWax Fulfillment (1).png
+documents/learn-hotwax-oms/.gitbook/assets/HotWaxCommerce (1).png
+documents/learn-hotwax-oms/.gitbook/assets/In-store exchanges loop bpm (1).png
+documents/learn-hotwax-oms/.gitbook/assets/Initial Load.png
+documents/learn-hotwax-oms/.gitbook/assets/InstoreReturnsShopifyPOSbpm.png
+documents/learn-hotwax-oms/.gitbook/assets/Inventory - Cycle Count.png
+documents/learn-hotwax-oms/.gitbook/assets/Inventory Rule.png
+documents/learn-hotwax-oms/.gitbook/assets/Job details page.png
+documents/learn-hotwax-oms/.gitbook/assets/List.png
+documents/learn-hotwax-oms/.gitbook/assets/Online Order Fulfillment (1).png
+documents/learn-hotwax-oms/.gitbook/assets/Order Returns.png
+documents/learn-hotwax-oms/.gitbook/assets/Order batches.png
+documents/learn-hotwax-oms/.gitbook/assets/PO.png
+documents/learn-hotwax-oms/.gitbook/assets/POS exchanges bpm.png
+documents/learn-hotwax-oms/.gitbook/assets/POS returns bpm (1).png
+documents/learn-hotwax-oms/.gitbook/assets/POS returns bpm.png
+documents/learn-hotwax-oms/.gitbook/assets/Pending.png
+documents/learn-hotwax-oms/.gitbook/assets/Pending1234_.png
+documents/learn-hotwax-oms/.gitbook/assets/Physical gift card lifecycle bpm (1).png
+documents/learn-hotwax-oms/.gitbook/assets/Physical lifecycle bpm.png
+documents/learn-hotwax-oms/.gitbook/assets/ResetPSS.png
+documents/learn-hotwax-oms/.gitbook/assets/Returns.png
+documents/learn-hotwax-oms/.gitbook/assets/Screenshot 2023-10-19 at 6.13.37 PM.png
+documents/learn-hotwax-oms/.gitbook/assets/Screenshot 2023-10-19 at 6.17.15 PM.png
+documents/learn-hotwax-oms/.gitbook/assets/Screenshot 2023-10-30 at 11.39.59 AM.png
+documents/learn-hotwax-oms/.gitbook/assets/Screenshot 2023-11-06 at 7.16.27 PM.png
+documents/learn-hotwax-oms/.gitbook/assets/Screenshot 2023-11-07 at 3.23.12 PM.png
+documents/learn-hotwax-oms/.gitbook/assets/Screenshot 2023-11-07 at 3.24.01 PM.png
+documents/learn-hotwax-oms/.gitbook/assets/Screenshot 2023-11-07 at 3.25.02 PM.png
+documents/learn-hotwax-oms/.gitbook/assets/Screenshot 2023-11-07 at 3.27.05 PM.png
+documents/learn-hotwax-oms/.gitbook/assets/Screenshot 2023-11-07 at 3.28.11 PM.png
+documents/learn-hotwax-oms/.gitbook/assets/Screenshot 2023-11-07 at 3.28.59 PM.png
+documents/learn-hotwax-oms/.gitbook/assets/Screenshot 2023-11-07 at 3.30.01 PM.png
+documents/learn-hotwax-oms/.gitbook/assets/Screenshot 2023-11-07 at 3.32.05 PM.png
+documents/learn-hotwax-oms/.gitbook/assets/Screenshot 2023-11-07 at 3.38.51 PM.png
+documents/learn-hotwax-oms/.gitbook/assets/Screenshot 2023-11-07 at 3.40.20 PM.png
+documents/learn-hotwax-oms/.gitbook/assets/Screenshot 2023-11-07 at 3.42.37 PM.png
+documents/learn-hotwax-oms/.gitbook/assets/Screenshot 2023-11-07 at 3.49.27 PM (1).png
+documents/learn-hotwax-oms/.gitbook/assets/Screenshot 2023-11-07 at 3.49.27 PM.png
+documents/learn-hotwax-oms/.gitbook/assets/Screenshot 2023-11-07 at 4.11.34 PM (1).png
+documents/learn-hotwax-oms/.gitbook/assets/Screenshot 2023-11-07 at 4.11.34 PM.png
+documents/learn-hotwax-oms/.gitbook/assets/Screenshot 2023-11-07 at 4.12.18 PM.png
+documents/learn-hotwax-oms/.gitbook/assets/Screenshot 2023-11-07 at 4.13.48 PM.png
+documents/learn-hotwax-oms/.gitbook/assets/Screenshot 2023-11-07 at 4.14.50 PM.png
+documents/learn-hotwax-oms/.gitbook/assets/Screenshot 2023-11-07 at 4.29.31 PM.png
+documents/learn-hotwax-oms/.gitbook/assets/Screenshot 2023-11-07 at 4.30.14 PM.png
+documents/learn-hotwax-oms/.gitbook/assets/Screenshot 2023-11-07 at 7.23.11 PM.png
+documents/learn-hotwax-oms/.gitbook/assets/Screenshot 2024-01-01 at 11.50.51 PM (1).png
+documents/learn-hotwax-oms/.gitbook/assets/Screenshot 2024-01-01 at 11.50.51 PM.png
+documents/learn-hotwax-oms/.gitbook/assets/Screenshot 2024-01-01 at 11.54.09 PM.png
+documents/learn-hotwax-oms/.gitbook/assets/Screenshot 2024-01-01 at 11.55.10 PM.png
+documents/learn-hotwax-oms/.gitbook/assets/Screenshot 2024-01-01 at 11.56.13 PM.png
+documents/learn-hotwax-oms/.gitbook/assets/Screenshot 2024-02-29 at 10.34.12 AM.png
+documents/learn-hotwax-oms/.gitbook/assets/Shopify POS returns bpm.png
+documents/learn-hotwax-oms/.gitbook/assets/WebReturnsbpm.png
+documents/learn-hotwax-oms/.gitbook/assets/approve orders.png
+documents/learn-hotwax-oms/.gitbook/assets/block.png
+documents/learn-hotwax-oms/.gitbook/assets/bulk.png
+documents/learn-hotwax-oms/.gitbook/assets/contact details .png
+documents/learn-hotwax-oms/.gitbook/assets/digital gift cards (1).png
+documents/learn-hotwax-oms/.gitbook/assets/digital gift cards (2).png
+documents/learn-hotwax-oms/.gitbook/assets/exchanges bpm (1).png
+documents/learn-hotwax-oms/.gitbook/assets/facilities.hotwax.io_add-facility-config_WEST_STREET.png
+documents/learn-hotwax-oms/.gitbook/assets/facilities.hotwax.io_create-facility_type=PHYSICAL_STORE.png
+documents/learn-hotwax-oms/.gitbook/assets/facilities.hotwax.io_facility-management.png
+documents/learn-hotwax-oms/.gitbook/assets/facilities.hotwax.io_find-facilities (1).png
+documents/learn-hotwax-oms/.gitbook/assets/favourites.png
+documents/learn-hotwax-oms/.gitbook/assets/filters (1).png
+documents/learn-hotwax-oms/.gitbook/assets/filters.png
+documents/learn-hotwax-oms/.gitbook/assets/fulfillment-uat.hotwax.io_download-packed-orders (1).png
+documents/learn-hotwax-oms/.gitbook/assets/fulfillment-uat.hotwax.io_download-packed-orders.png
+documents/learn-hotwax-oms/.gitbook/assets/fulfillment-uat.hotwax.io_exim (1).png
+documents/learn-hotwax-oms/.gitbook/assets/fulfillment-uat.hotwax.io_exim (2).png
+documents/learn-hotwax-oms/.gitbook/assets/fulfillment-uat.hotwax.io_exim.png
+documents/learn-hotwax-oms/.gitbook/assets/fulfillment-uat.hotwax.io_saved-mappings.png
+documents/learn-hotwax-oms/.gitbook/assets/fulfillment.hotwax 3.png
+documents/learn-hotwax-oms/.gitbook/assets/fulfillment.hotwax.io_settings (9).png
+documents/learn-hotwax-oms/.gitbook/assets/fulfilment 1.png
+documents/learn-hotwax-oms/.gitbook/assets/fulfilment 2 (1).png
+documents/learn-hotwax-oms/.gitbook/assets/fulfilment 2.png
+documents/learn-hotwax-oms/.gitbook/assets/histrory.png
+documents/learn-hotwax-oms/.gitbook/assets/inventory bpm (1).png
+documents/learn-hotwax-oms/.gitbook/assets/inventory rules.png
+documents/learn-hotwax-oms/.gitbook/assets/job-manager.hotwax 2 (1).png
+documents/learn-hotwax-oms/.gitbook/assets/job-manager.hotwax 2.png
+documents/learn-hotwax-oms/.gitbook/assets/job-manager.hotwax.io_inventory.png
+documents/learn-hotwax-oms/.gitbook/assets/job-manager.hotwax.io_pipeline.png
+documents/learn-hotwax-oms/.gitbook/assets/kkkk.png
+documents/learn-hotwax-oms/.gitbook/assets/notations (1).png
+documents/learn-hotwax-oms/.gitbook/assets/order life cycle bpm (1).png
+documents/learn-hotwax-oms/.gitbook/assets/order life cycle bpm - new.png
+documents/learn-hotwax-oms/.gitbook/assets/order life cycle.png
+documents/learn-hotwax-oms/.gitbook/assets/order lifecycle bpm.png
+documents/learn-hotwax-oms/.gitbook/assets/pending 123png.png
+documents/learn-hotwax-oms/.gitbook/assets/permission.png
+documents/learn-hotwax-oms/.gitbook/assets/picking.hotwax 1 figma.png
+documents/learn-hotwax-oms/.gitbook/assets/picking.hotwax.io_picklist-details_10136 (1).png
+documents/learn-hotwax-oms/.gitbook/assets/purchase order receiving.png
+documents/learn-hotwax-oms/.gitbook/assets/purchase order sync.png
+documents/learn-hotwax-oms/.gitbook/assets/returns bpm (1).png
+documents/learn-hotwax-oms/.gitbook/assets/returns bpm.png
+documents/learn-hotwax-oms/.gitbook/assets/sorting.png
+documents/learn-hotwax-oms/.gitbook/assets/spaces_WoOehPvuUvxQygGoR81q_uploads_puxtWV89NpDWogIvpKn7_Screenshot 2023-10-19 at 6.webp
+documents/learn-hotwax-oms/.gitbook/assets/store fulfillment bpm (1) (1).png
+documents/learn-hotwax-oms/.gitbook/assets/store fulfillment bpm (1).png
+documents/learn-hotwax-oms/.gitbook/assets/store fulfillment bpm (2) (1).png
+documents/learn-hotwax-oms/.gitbook/assets/store fulfillment bpm (2).png
+documents/learn-hotwax-oms/.gitbook/assets/store fulfillment bpm (3).png
+documents/learn-hotwax-oms/.gitbook/assets/store fulfillment lifecycle bpm.png
+documents/learn-hotwax-oms/.gitbook/assets/transfer order bpm.png
+documents/learn-hotwax-oms/.gitbook/assets/transfer order sync.png
+documents/learn-netsuite/.gitbook/assets/27.png
+documents/learn-netsuite/.gitbook/assets/28.png
+documents/learn-netsuite/.gitbook/assets/30.png
+documents/learn-netsuite/.gitbook/assets/5.png
+documents/learn-netsuite/.gitbook/assets/Fulfillment update HotWax (1).png
+documents/learn-netsuite/.gitbook/assets/Fulfillment update NetSuite.png
+documents/learn-netsuite/.gitbook/assets/HC TO mappings.png
+documents/learn-netsuite/.gitbook/assets/HC fulfillment.png
+documents/learn-netsuite/.gitbook/assets/HC po field mapping (1).png
+documents/learn-netsuite/.gitbook/assets/HC po field mapping (2).png
+documents/learn-netsuite/.gitbook/assets/HC po field mapping.png
+documents/learn-netsuite/.gitbook/assets/HC pos order mapping (1).png
+documents/learn-netsuite/.gitbook/assets/HC pos order mapping (2).png
+documents/learn-netsuite/.gitbook/assets/HC pos order mapping.png
+documents/learn-netsuite/.gitbook/assets/NetSuite order lifecycle bpm (2).png
+documents/learn-netsuite/.gitbook/assets/PO netsuite field mapping (1).png
+documents/learn-netsuite/.gitbook/assets/PO netsuite field mapping.png
+documents/learn-netsuite/.gitbook/assets/POS Orders Sample Feed (1).csv
+documents/learn-netsuite/.gitbook/assets/POS order mapping netsuite (1).png
+documents/learn-netsuite/.gitbook/assets/POS order mapping netsuite.png
+documents/learn-netsuite/.gitbook/assets/POS orders ID.png
+documents/learn-netsuite/.gitbook/assets/POsync.png
+documents/learn-netsuite/.gitbook/assets/Purchase Orders Receipts Sample Feed.txt
+documents/learn-netsuite/.gitbook/assets/Purchase order sync.png
+documents/learn-netsuite/.gitbook/assets/Shopify HotWax NetSuite Loop sync.png
+documents/learn-netsuite/.gitbook/assets/TO NetSuite.png
+documents/learn-netsuite/.gitbook/assets/TO mapping netsuite (1) (1).png
+documents/learn-netsuite/.gitbook/assets/TO mapping netsuite (1).png
+documents/learn-netsuite/.gitbook/assets/TO mapping netsuite.png
+documents/learn-netsuite/.gitbook/assets/Transfer Order Fulfilled Items Feed.txt
+documents/learn-netsuite/.gitbook/assets/Transfer Order Receipt Feed.txt
+documents/learn-netsuite/.gitbook/assets/approve orders.png
+documents/learn-netsuite/.gitbook/assets/cancel update HotWax.png
+documents/learn-netsuite/.gitbook/assets/created orders.png
+documents/learn-netsuite/.gitbook/assets/customer deposit sync.png
+documents/learn-netsuite/.gitbook/assets/customer deposits.png
+documents/learn-netsuite/.gitbook/assets/customer fields in hotwax (1).png
+documents/learn-netsuite/.gitbook/assets/customer fields in hotwax.png
+documents/learn-netsuite/.gitbook/assets/customer fields in netsuite (1).png
+documents/learn-netsuite/.gitbook/assets/customer fields in netsuite.png
+documents/learn-netsuite/.gitbook/assets/customer refund HotWax.png
+documents/learn-netsuite/.gitbook/assets/customer sync.png
+documents/learn-netsuite/.gitbook/assets/cycle count.png
+documents/learn-netsuite/.gitbook/assets/digital gift card HotWax.png
+documents/learn-netsuite/.gitbook/assets/exchange orders flow.png
+documents/learn-netsuite/.gitbook/assets/fulfillment app to.png
+documents/learn-netsuite/.gitbook/assets/fulfillment in NetSuite.png
+documents/learn-netsuite/.gitbook/assets/fulfillment update HotWax.png
+documents/learn-netsuite/.gitbook/assets/fulfillment update in netsuite.png
+documents/learn-netsuite/.gitbook/assets/gift card activation.png
+documents/learn-netsuite/.gitbook/assets/in-store exchange orders flow.png
+documents/learn-netsuite/.gitbook/assets/in-store return with hotwax (1).png
+documents/learn-netsuite/.gitbook/assets/in-store return with hotwax.png
+documents/learn-netsuite/.gitbook/assets/in-store return with loop (1).png
+documents/learn-netsuite/.gitbook/assets/in-store return with loop.png
+documents/learn-netsuite/.gitbook/assets/inventory data.png
+documents/learn-netsuite/.gitbook/assets/inventory sync.png
+documents/learn-netsuite/.gitbook/assets/inventory transfer.png
+documents/learn-netsuite/.gitbook/assets/inventoryVariance.png
+documents/learn-netsuite/.gitbook/assets/mapping hc transfer order store to warehouse.png
+documents/learn-netsuite/.gitbook/assets/mapping hc warehouse to store receiving app to.png
+documents/learn-netsuite/.gitbook/assets/mapping store to warehouse to NS.png
+documents/learn-netsuite/.gitbook/assets/mapping warehouse to store transfer order netsuite.png
+documents/learn-netsuite/.gitbook/assets/netsuite sales orders mappings (1).png
+documents/learn-netsuite/.gitbook/assets/netsuite sales orders mappings (2).png
+documents/learn-netsuite/.gitbook/assets/netsuite sales orders mappings (3).png
+documents/learn-netsuite/.gitbook/assets/netsuite sales orders mappings (4).png
+documents/learn-netsuite/.gitbook/assets/netsuite sales orders mappings.png
+documents/learn-netsuite/.gitbook/assets/online return with hotwax.png
+documents/learn-netsuite/.gitbook/assets/online return with loop (1).png
+documents/learn-netsuite/.gitbook/assets/online return with loop.png
+documents/learn-netsuite/.gitbook/assets/online returns with hotwax (1).png
+documents/learn-netsuite/.gitbook/assets/online returns with hotwax.png
+documents/learn-netsuite/.gitbook/assets/order approval.png
+documents/learn-netsuite/.gitbook/assets/order line item id.png
+documents/learn-netsuite/.gitbook/assets/order sync from hotwax to netsuite.png
+documents/learn-netsuite/.gitbook/assets/po received.png
+documents/learn-netsuite/.gitbook/assets/pos orders (1).png
+documents/learn-netsuite/.gitbook/assets/pos orders.png
+documents/learn-netsuite/.gitbook/assets/sales order mapping hotwax (1).png
+documents/learn-netsuite/.gitbook/assets/sales order mapping hotwax (2).png
+documents/learn-netsuite/.gitbook/assets/sales order mapping hotwax.png
+documents/learn-netsuite/.gitbook/assets/store to store fulfillment app to.png
+documents/learn-netsuite/.gitbook/assets/store to store receiving app to.png
+documents/learn-netsuite/.gitbook/assets/store to store to NS.png
+documents/learn-netsuite/.gitbook/assets/store to store transfer order netsuite.png
+documents/learn-netsuite/.gitbook/assets/storetostore.png
+documents/learn-netsuite/.gitbook/assets/storetostorereceiving.png
+documents/learn-netsuite/.gitbook/assets/storetowarehouse.png
+documents/learn-netsuite/.gitbook/assets/sync POS order IDs.png
+documents/learn-netsuite/.gitbook/assets/sync purchase orders.png
+documents/learn-netsuite/.gitbook/assets/sync sales order IDs.png
+documents/learn-netsuite/.gitbook/assets/transfer order store to store.png
+documents/learn-netsuite/.gitbook/assets/unexpected inventory variance.png
+documents/learn-netsuite/.gitbook/assets/warehouse to store transfer order mapping.png
+documents/learn-netsuite/.gitbook/assets/warehousetostore.png
+documents/learn-shopify/.gitbook/assets/01 (1).png
+documents/learn-shopify/.gitbook/assets/01.png
+documents/learn-shopify/.gitbook/assets/02 (1).png
+documents/learn-shopify/.gitbook/assets/02.png
+documents/learn-shopify/.gitbook/assets/03 (1).png
+documents/learn-shopify/.gitbook/assets/03 (2).png
+documents/learn-shopify/.gitbook/assets/03.png
+documents/learn-shopify/.gitbook/assets/0a (1) (1).png
+documents/learn-shopify/.gitbook/assets/0a (1) (2).png
+documents/learn-shopify/.gitbook/assets/0a (1) (3).png
+documents/learn-shopify/.gitbook/assets/0a (1) (4).png
+documents/learn-shopify/.gitbook/assets/0a (1).png
+documents/learn-shopify/.gitbook/assets/0a (2).png
+documents/learn-shopify/.gitbook/assets/0a.png
+documents/learn-shopify/.gitbook/assets/0a.png_alt=media (1).png
+documents/learn-shopify/.gitbook/assets/0a.png_alt=media.png
+documents/learn-shopify/.gitbook/assets/0b (1).png
+documents/learn-shopify/.gitbook/assets/0b.png
+documents/learn-shopify/.gitbook/assets/0b.png_alt=media.png
+documents/learn-shopify/.gitbook/assets/0c.png_alt=media.png
+documents/learn-shopify/.gitbook/assets/1 (1).png
+documents/learn-shopify/.gitbook/assets/1.png
+documents/learn-shopify/.gitbook/assets/10 (1).png
+documents/learn-shopify/.gitbook/assets/11 (1).png
+documents/learn-shopify/.gitbook/assets/12 (1).png
+documents/learn-shopify/.gitbook/assets/13 (1).png
+documents/learn-shopify/.gitbook/assets/14 (1).png
+documents/learn-shopify/.gitbook/assets/15 (1).png
+documents/learn-shopify/.gitbook/assets/16 (1).png
+documents/learn-shopify/.gitbook/assets/17 (1).png
+documents/learn-shopify/.gitbook/assets/18 (1).png
+documents/learn-shopify/.gitbook/assets/19 (1).png
+documents/learn-shopify/.gitbook/assets/2 (1).png
+documents/learn-shopify/.gitbook/assets/20 (1).png
+documents/learn-shopify/.gitbook/assets/21 (1).png
+documents/learn-shopify/.gitbook/assets/22 (1).png
+documents/learn-shopify/.gitbook/assets/23 (1).png
+documents/learn-shopify/.gitbook/assets/24 (1).png
+documents/learn-shopify/.gitbook/assets/25 (1).png
+documents/learn-shopify/.gitbook/assets/26 (1).png
+documents/learn-shopify/.gitbook/assets/27 (1).png
+documents/learn-shopify/.gitbook/assets/27.png
+documents/learn-shopify/.gitbook/assets/28 (1).png
+documents/learn-shopify/.gitbook/assets/28.png
+documents/learn-shopify/.gitbook/assets/29 (1).png
+documents/learn-shopify/.gitbook/assets/3 (1).png
+documents/learn-shopify/.gitbook/assets/30_c (1).png
+documents/learn-shopify/.gitbook/assets/30_c.png
+documents/learn-shopify/.gitbook/assets/31 (1).png
+documents/learn-shopify/.gitbook/assets/32 (1).png
+documents/learn-shopify/.gitbook/assets/33 (1).png
+documents/learn-shopify/.gitbook/assets/34 (1).png
+documents/learn-shopify/.gitbook/assets/35 (1).png
+documents/learn-shopify/.gitbook/assets/36 (1).png
+documents/learn-shopify/.gitbook/assets/36 (2).png
+documents/learn-shopify/.gitbook/assets/4 (1).png
+documents/learn-shopify/.gitbook/assets/4.png
+documents/learn-shopify/.gitbook/assets/5.png
+documents/learn-shopify/.gitbook/assets/7 (1).png
+documents/learn-shopify/.gitbook/assets/8 (1).png
+documents/learn-shopify/.gitbook/assets/9 (1).png
+documents/learn-shopify/.gitbook/assets/Inventory Sync 1.png
+documents/retail-operations/.gitbook/assets/1 1.png
+documents/retail-operations/.gitbook/assets/Approved Sales Order.png
+documents/retail-operations/.gitbook/assets/Associate product sub catalog.png
+documents/retail-operations/.gitbook/assets/Brokering Route Queries (1).png
+documents/retail-operations/.gitbook/assets/Brokering Run Routes (2).png
+documents/retail-operations/.gitbook/assets/Brokering Run Routes.png
+documents/retail-operations/.gitbook/assets/Brokering Runs (1) (1).png
+documents/retail-operations/.gitbook/assets/Card.png
+documents/retail-operations/.gitbook/assets/Custom Parameter.png
+documents/retail-operations/.gitbook/assets/Duplicate job.png
+documents/retail-operations/.gitbook/assets/Export Product Threshold.png
+documents/retail-operations/.gitbook/assets/Export packed order.png
+documents/retail-operations/.gitbook/assets/Filters (2).png
+documents/retail-operations/.gitbook/assets/Filters 3.png
+documents/retail-operations/.gitbook/assets/Filters l1.png
+documents/retail-operations/.gitbook/assets/Frame 674 (1).png
+documents/retail-operations/.gitbook/assets/Frame 674.png
+documents/retail-operations/.gitbook/assets/Frame 698.png
+documents/retail-operations/.gitbook/assets/Fulfillment Settings.png
+documents/retail-operations/.gitbook/assets/History (1) (1).png
+documents/retail-operations/.gitbook/assets/History (1).png
+documents/retail-operations/.gitbook/assets/IMport Order attribute.png
+documents/retail-operations/.gitbook/assets/Imort Order Metafeild.png
+documents/retail-operations/.gitbook/assets/Import Data in MDM.png
+documents/retail-operations/.gitbook/assets/Import Inbound Shipment.png
+documents/retail-operations/.gitbook/assets/Import Product threshold.png
+documents/retail-operations/.gitbook/assets/Import Promo code.png
+documents/retail-operations/.gitbook/assets/Import Recent inventory.png
+documents/retail-operations/.gitbook/assets/Import cancled Items.png
+documents/retail-operations/.gitbook/assets/Import order Job Card (1).png
+documents/retail-operations/.gitbook/assets/Import order Job Card.png
+documents/retail-operations/.gitbook/assets/Import order updates from shopify.png
+documents/retail-operations/.gitbook/assets/Import product Update.png
+documents/retail-operations/.gitbook/assets/Import product kit component.png
+documents/retail-operations/.gitbook/assets/In-store exchanges loop bpm (1).png
+documents/retail-operations/.gitbook/assets/In-store exchanges loop bpm.png
+documents/retail-operations/.gitbook/assets/Initial Load.png
+documents/retail-operations/.gitbook/assets/Inventory Rule.png
+documents/retail-operations/.gitbook/assets/Inventory Sync 1.png
+documents/retail-operations/.gitbook/assets/Inventoryfilters (1) (1).png
+documents/retail-operations/.gitbook/assets/Inventoryfilters.png
+documents/retail-operations/.gitbook/assets/Job details page.png
+documents/retail-operations/.gitbook/assets/List.png
+documents/retail-operations/.gitbook/assets/MaxOrderCapacity.png
+documents/retail-operations/.gitbook/assets/Online Order Fulfillment (1).png
+documents/retail-operations/.gitbook/assets/Order Identification.png
+documents/retail-operations/.gitbook/assets/Order Item Fulfillement.png
+documents/retail-operations/.gitbook/assets/OrderFulfillmentCapacity.png
+documents/retail-operations/.gitbook/assets/Orderfilters.png
+documents/retail-operations/.gitbook/assets/POS exchanges bpm.png
+documents/retail-operations/.gitbook/assets/POS returns bpm (1).png
+documents/retail-operations/.gitbook/assets/POS returns bpm.png
+documents/retail-operations/.gitbook/assets/Party Identification.png
+documents/retail-operations/.gitbook/assets/Pending.png
+documents/retail-operations/.gitbook/assets/Pending1234_.png
+documents/retail-operations/.gitbook/assets/Physical gift card lifecycle bpm (1).png
+documents/retail-operations/.gitbook/assets/Physical gift card lifecycle bpm.png
+documents/retail-operations/.gitbook/assets/Physical lifecycle bpm.png
+documents/retail-operations/.gitbook/assets/Product identification.png
+documents/retail-operations/.gitbook/assets/Refresh pre sell catalog.png
+documents/retail-operations/.gitbook/assets/Remove promo Code.png
+documents/retail-operations/.gitbook/assets/ResetPSS.png
+documents/retail-operations/.gitbook/assets/Running Job.png
+documents/retail-operations/.gitbook/assets/Screenshot 2023-10-19 at 6.13.37 PM.png
+documents/retail-operations/.gitbook/assets/Screenshot 2023-10-19 at 6.17.15 PM.png
+documents/retail-operations/.gitbook/assets/Screenshot 2023-10-30 at 11.39.59 AM.png
+documents/retail-operations/.gitbook/assets/Screenshot 2023-11-06 at 7.16.27 PM.png
+documents/retail-operations/.gitbook/assets/Screenshot 2023-11-07 at 3.23.12 PM.png
+documents/retail-operations/.gitbook/assets/Screenshot 2023-11-07 at 3.24.01 PM.png
+documents/retail-operations/.gitbook/assets/Screenshot 2023-11-07 at 3.25.02 PM.png
+documents/retail-operations/.gitbook/assets/Screenshot 2023-11-07 at 3.27.05 PM.png
+documents/retail-operations/.gitbook/assets/Screenshot 2023-11-07 at 3.28.11 PM.png
+documents/retail-operations/.gitbook/assets/Screenshot 2023-11-07 at 3.28.59 PM.png
+documents/retail-operations/.gitbook/assets/Screenshot 2023-11-07 at 3.30.01 PM.png
+documents/retail-operations/.gitbook/assets/Screenshot 2023-11-07 at 3.32.05 PM.png
+documents/retail-operations/.gitbook/assets/Screenshot 2023-11-07 at 3.38.51 PM.png
+documents/retail-operations/.gitbook/assets/Screenshot 2023-11-07 at 3.40.20 PM.png
+documents/retail-operations/.gitbook/assets/Screenshot 2023-11-07 at 3.42.37 PM.png
+documents/retail-operations/.gitbook/assets/Screenshot 2023-11-07 at 3.49.27 PM (1).png
+documents/retail-operations/.gitbook/assets/Screenshot 2023-11-07 at 3.49.27 PM.png
+documents/retail-operations/.gitbook/assets/Screenshot 2023-11-07 at 4.11.34 PM (1).png
+documents/retail-operations/.gitbook/assets/Screenshot 2023-11-07 at 4.11.34 PM.png
+documents/retail-operations/.gitbook/assets/Screenshot 2023-11-07 at 4.12.18 PM.png
+documents/retail-operations/.gitbook/assets/Screenshot 2023-11-07 at 4.13.48 PM.png
+documents/retail-operations/.gitbook/assets/Screenshot 2023-11-07 at 4.14.50 PM.png
+documents/retail-operations/.gitbook/assets/Screenshot 2023-11-07 at 4.29.31 PM.png
+documents/retail-operations/.gitbook/assets/Screenshot 2023-11-07 at 4.30.14 PM.png
+documents/retail-operations/.gitbook/assets/Screenshot 2023-11-07 at 7.23.11 PM.png
+documents/retail-operations/.gitbook/assets/Screenshot 2024-01-01 at 11.50.51 PM (1).png
+documents/retail-operations/.gitbook/assets/Screenshot 2024-01-01 at 11.50.51 PM.png
+documents/retail-operations/.gitbook/assets/Screenshot 2024-01-01 at 11.54.09 PM.png
+documents/retail-operations/.gitbook/assets/Screenshot 2024-01-01 at 11.55.10 PM.png
+documents/retail-operations/.gitbook/assets/Screenshot 2024-01-01 at 11.56.13 PM.png
+documents/retail-operations/.gitbook/assets/Screenshot 2024-02-29 at 10.34.12 AM.png
+documents/retail-operations/.gitbook/assets/Select filters (1) (1).png
+documents/retail-operations/.gitbook/assets/Select filters (1).png
+documents/retail-operations/.gitbook/assets/Select filters (2) (1).png
+documents/retail-operations/.gitbook/assets/Select filters (2).png
+documents/retail-operations/.gitbook/assets/Select filters (3).png
+documents/retail-operations/.gitbook/assets/Select filters (4).png
+documents/retail-operations/.gitbook/assets/Select filters (5).png
+documents/retail-operations/.gitbook/assets/Select filters (6).png
+documents/retail-operations/.gitbook/assets/Select filters.png
+documents/retail-operations/.gitbook/assets/Shopify POS returns bpm.png
+documents/retail-operations/.gitbook/assets/Sync Inventory From Shopify in multi threading.png
+documents/retail-operations/.gitbook/assets/Sync upload preorder sync.png
+documents/retail-operations/.gitbook/assets/TurnOffFulfillment.png
+documents/retail-operations/.gitbook/assets/Update order Tag.png
+documents/retail-operations/.gitbook/assets/Upload Complete orders.png
+documents/retail-operations/.gitbook/assets/approve orders.png
+documents/retail-operations/.gitbook/assets/block.png
+documents/retail-operations/.gitbook/assets/bulk.png
+documents/retail-operations/.gitbook/assets/contact details .png
+documents/retail-operations/.gitbook/assets/digital gift cards (1).png
+documents/retail-operations/.gitbook/assets/digital gift cards (2).png
+documents/retail-operations/.gitbook/assets/digital gift cards.png
+documents/retail-operations/.gitbook/assets/dupicate job (1).png
+documents/retail-operations/.gitbook/assets/exchanges bpm (1).png
+documents/retail-operations/.gitbook/assets/exchanges bpm.png
+documents/retail-operations/.gitbook/assets/facilities.hotwax.io_add-facility-config_WEST_STREET.png
+documents/retail-operations/.gitbook/assets/facilities.hotwax.io_create-facility_type=PHYSICAL_STORE.png
+documents/retail-operations/.gitbook/assets/facilities.hotwax.io_facility-management.png
+documents/retail-operations/.gitbook/assets/facilities.hotwax.io_find-facilities (1).png
+documents/retail-operations/.gitbook/assets/favourites.png
+documents/retail-operations/.gitbook/assets/filter-by-facility.png
+documents/retail-operations/.gitbook/assets/filters (1).png
+documents/retail-operations/.gitbook/assets/filters.png
+documents/retail-operations/.gitbook/assets/fulfillment-uat.hotwax.io_download-packed-orders (1).png
+documents/retail-operations/.gitbook/assets/fulfillment-uat.hotwax.io_download-packed-orders.png
+documents/retail-operations/.gitbook/assets/fulfillment-uat.hotwax.io_exim (1).png
+documents/retail-operations/.gitbook/assets/fulfillment-uat.hotwax.io_exim (2).png
+documents/retail-operations/.gitbook/assets/fulfillment-uat.hotwax.io_exim.png
+documents/retail-operations/.gitbook/assets/fulfillment-uat.hotwax.io_saved-mappings.png
+documents/retail-operations/.gitbook/assets/fulfillment.hotwax 3.png
+documents/retail-operations/.gitbook/assets/fulfillment.hotwax.io_settings (9).png
+documents/retail-operations/.gitbook/assets/fulfilment 1.png
+documents/retail-operations/.gitbook/assets/fulfilment 2 (1).png
+documents/retail-operations/.gitbook/assets/fulfilment 2.png
+documents/retail-operations/.gitbook/assets/histrory.png
+documents/retail-operations/.gitbook/assets/import new products.png
+documents/retail-operations/.gitbook/assets/in-store returns Shopify POS bpm.png
+documents/retail-operations/.gitbook/assets/in-store returns loop bpm.png
+documents/retail-operations/.gitbook/assets/inventory bpm (1).png
+documents/retail-operations/.gitbook/assets/inventory bpm.png
+documents/retail-operations/.gitbook/assets/job-manager.hotwax 2 (1).png
+documents/retail-operations/.gitbook/assets/job-manager.hotwax 2.png
+documents/retail-operations/.gitbook/assets/job-manager.hotwax.io_inventory.png
+documents/retail-operations/.gitbook/assets/job-manager.hotwax.io_pipeline.png
+documents/retail-operations/.gitbook/assets/kkkk.png
+documents/retail-operations/.gitbook/assets/notations (1).png
+documents/retail-operations/.gitbook/assets/order life cycle bpm (1).png
+documents/retail-operations/.gitbook/assets/order life cycle bpm - new.png
+documents/retail-operations/.gitbook/assets/order life cycle bpm.png
+documents/retail-operations/.gitbook/assets/order life cycle.png
+documents/retail-operations/.gitbook/assets/order lifecycle bpm.png
+documents/retail-operations/.gitbook/assets/pending 123png.png
+documents/retail-operations/.gitbook/assets/permission.png
+documents/retail-operations/.gitbook/assets/picking.hotwax 1 figma.png
+documents/retail-operations/.gitbook/assets/picking.hotwax.io_picklist-details_10136 (1).png
+documents/retail-operations/.gitbook/assets/ready-for-pickup.png
+documents/retail-operations/.gitbook/assets/returns bpm (1).png
+documents/retail-operations/.gitbook/assets/returns bpm.png
+documents/retail-operations/.gitbook/assets/spaces_WoOehPvuUvxQygGoR81q_uploads_puxtWV89NpDWogIvpKn7_Screenshot 2023-10-19 at 6.webp
+documents/retail-operations/.gitbook/assets/store fulfillment bpm (1) (1).png
+documents/retail-operations/.gitbook/assets/store fulfillment bpm (1).png
+documents/retail-operations/.gitbook/assets/store fulfillment bpm (2) (1).png
+documents/retail-operations/.gitbook/assets/store fulfillment bpm (2).png
+documents/retail-operations/.gitbook/assets/store fulfillment bpm (3).png
+documents/retail-operations/.gitbook/assets/store fulfillment bpm.png
+documents/retail-operations/.gitbook/assets/store fulfillment lifecycle bpm.png
+documents/retail-operations/.gitbook/assets/store to store transfer order bpm.png
+documents/retail-operations/.gitbook/assets/store to warehouse transfer order bpm.png
+documents/retail-operations/.gitbook/assets/transfer order bpm.png
+documents/retail-operations/.gitbook/assets/unavailable-items copy.png
+documents/retail-operations/.gitbook/assets/unavailable-items.png
+documents/retail-operations/.gitbook/assets/warehouse fulfillment bpm.png
+documents/retail-operations/.gitbook/assets/warehouse to store transfer order bpm.png
+documents/retail-operations/.gitbook/assets/web returns bpm.png
+documents/store-operations/.gitbook/assets/1 1.png
+documents/store-operations/.gitbook/assets/BOPIS - View Picklist for BOPIS Orders.png
+documents/store-operations/.gitbook/assets/Bopis setting page .png
+documents/store-operations/.gitbook/assets/Brokering Route Queries (1).png
+documents/store-operations/.gitbook/assets/Brokering Route Queries.png
+documents/store-operations/.gitbook/assets/Brokering Run Routes (1).png
+documents/store-operations/.gitbook/assets/Brokering Run Routes (2).png
+documents/store-operations/.gitbook/assets/Brokering Run Routes.png
+documents/store-operations/.gitbook/assets/Brokering Runs (1) (1).png
+documents/store-operations/.gitbook/assets/Brokering Runs (1).png
+documents/store-operations/.gitbook/assets/Brokering Runs.png
+documents/store-operations/.gitbook/assets/Card.png
+documents/store-operations/.gitbook/assets/Export packed order.png
+documents/store-operations/.gitbook/assets/Filters (2).png
+documents/store-operations/.gitbook/assets/Filters 3.png
+documents/store-operations/.gitbook/assets/Filters l1.png
+documents/store-operations/.gitbook/assets/Frame 674 (1).png
+documents/store-operations/.gitbook/assets/Frame 674.png
+documents/store-operations/.gitbook/assets/Fulfillment 5 -  Print Transfer Order Picklist (1).png
+documents/store-operations/.gitbook/assets/Fulfillment Settings.png
+documents/store-operations/.gitbook/assets/History (1) (1).png
+documents/store-operations/.gitbook/assets/History (1).png
+documents/store-operations/.gitbook/assets/In-store exchanges loop bpm (1).png
+documents/store-operations/.gitbook/assets/In-store exchanges loop bpm.png
+documents/store-operations/.gitbook/assets/Initial Load.png
+documents/store-operations/.gitbook/assets/Inventory Rule.png
+documents/store-operations/.gitbook/assets/Job details page.png
+documents/store-operations/.gitbook/assets/List.png
+documents/store-operations/.gitbook/assets/Online Order Fulfillment (1).png
+documents/store-operations/.gitbook/assets/Order batches.png
+documents/store-operations/.gitbook/assets/POS exchanges bpm.png
+documents/store-operations/.gitbook/assets/POS returns bpm (1).png
+documents/store-operations/.gitbook/assets/POS returns bpm.png
+documents/store-operations/.gitbook/assets/Pending.png
+documents/store-operations/.gitbook/assets/Pending1234_.png
+documents/store-operations/.gitbook/assets/Physical gift card lifecycle bpm (1).png
+documents/store-operations/.gitbook/assets/Physical gift card lifecycle bpm.png
+documents/store-operations/.gitbook/assets/Physical lifecycle bpm.png
+documents/store-operations/.gitbook/assets/ResetPSS.png
+documents/store-operations/.gitbook/assets/Screenshot 2023-10-19 at 6.13.37 PM.png
+documents/store-operations/.gitbook/assets/Screenshot 2023-10-19 at 6.17.15 PM.png
+documents/store-operations/.gitbook/assets/Screenshot 2023-10-30 at 11.39.59 AM.png
+documents/store-operations/.gitbook/assets/Screenshot 2023-11-06 at 7.16.27 PM.png
+documents/store-operations/.gitbook/assets/Screenshot 2023-11-07 at 3.23.12 PM.png
+documents/store-operations/.gitbook/assets/Screenshot 2023-11-07 at 3.24.01 PM.png
+documents/store-operations/.gitbook/assets/Screenshot 2023-11-07 at 3.25.02 PM.png
+documents/store-operations/.gitbook/assets/Screenshot 2023-11-07 at 3.27.05 PM.png
+documents/store-operations/.gitbook/assets/Screenshot 2023-11-07 at 3.28.11 PM.png
+documents/store-operations/.gitbook/assets/Screenshot 2023-11-07 at 3.28.59 PM.png
+documents/store-operations/.gitbook/assets/Screenshot 2023-11-07 at 3.30.01 PM.png
+documents/store-operations/.gitbook/assets/Screenshot 2023-11-07 at 3.32.05 PM.png
+documents/store-operations/.gitbook/assets/Screenshot 2023-11-07 at 3.38.51 PM.png
+documents/store-operations/.gitbook/assets/Screenshot 2023-11-07 at 3.40.20 PM.png
+documents/store-operations/.gitbook/assets/Screenshot 2023-11-07 at 3.42.37 PM.png
+documents/store-operations/.gitbook/assets/Screenshot 2023-11-07 at 3.49.27 PM (1).png
+documents/store-operations/.gitbook/assets/Screenshot 2023-11-07 at 3.49.27 PM.png
+documents/store-operations/.gitbook/assets/Screenshot 2023-11-07 at 4.11.34 PM (1).png
+documents/store-operations/.gitbook/assets/Screenshot 2023-11-07 at 4.11.34 PM.png
+documents/store-operations/.gitbook/assets/Screenshot 2023-11-07 at 4.12.18 PM.png
+documents/store-operations/.gitbook/assets/Screenshot 2023-11-07 at 4.13.48 PM.png
+documents/store-operations/.gitbook/assets/Screenshot 2023-11-07 at 4.14.50 PM.png
+documents/store-operations/.gitbook/assets/Screenshot 2023-11-07 at 4.29.31 PM.png
+documents/store-operations/.gitbook/assets/Screenshot 2023-11-07 at 4.30.14 PM.png
+documents/store-operations/.gitbook/assets/Screenshot 2023-11-07 at 7.23.11 PM.png
+documents/store-operations/.gitbook/assets/Screenshot 2024-01-01 at 11.50.51 PM (1).png
+documents/store-operations/.gitbook/assets/Screenshot 2024-01-01 at 11.50.51 PM.png
+documents/store-operations/.gitbook/assets/Screenshot 2024-01-01 at 11.54.09 PM.png
+documents/store-operations/.gitbook/assets/Screenshot 2024-01-01 at 11.55.10 PM.png
+documents/store-operations/.gitbook/assets/Screenshot 2024-01-01 at 11.56.13 PM.png
+documents/store-operations/.gitbook/assets/Screenshot 2024-02-29 at 10.34.12 AM.png
+documents/store-operations/.gitbook/assets/Screenshot from 2024-10-08 19-48-43.png
+documents/store-operations/.gitbook/assets/Screenshot from 2024-10-11 12-22-20.png
+documents/store-operations/.gitbook/assets/Screenshot from 2024-10-11 15-16-56.png
+documents/store-operations/.gitbook/assets/Screenshot from 2024-10-11 18-25-15.png
+documents/store-operations/.gitbook/assets/Shopify POS returns bpm.png
+documents/store-operations/.gitbook/assets/Transfer order picture.png
+documents/store-operations/.gitbook/assets/approve orders.png
+documents/store-operations/.gitbook/assets/block.png
+documents/store-operations/.gitbook/assets/bopis.hotwax.io_tabs_settings (4) 3.png
+documents/store-operations/.gitbook/assets/bulk.png
+documents/store-operations/.gitbook/assets/contact details .png
+documents/store-operations/.gitbook/assets/digital gift cards (1).png
+documents/store-operations/.gitbook/assets/digital gift cards (2).png
+documents/store-operations/.gitbook/assets/digital gift cards.png
+documents/store-operations/.gitbook/assets/exchanges bpm (1).png
+documents/store-operations/.gitbook/assets/exchanges bpm.png
+documents/store-operations/.gitbook/assets/facilities.hotwax.io_add-facility-config_WEST_STREET.png
+documents/store-operations/.gitbook/assets/facilities.hotwax.io_create-facility_type=PHYSICAL_STORE.png
+documents/store-operations/.gitbook/assets/facilities.hotwax.io_facility-management.png
+documents/store-operations/.gitbook/assets/facilities.hotwax.io_find-facilities (1).png
+documents/store-operations/.gitbook/assets/favourites.png
+documents/store-operations/.gitbook/assets/filters (1).png
+documents/store-operations/.gitbook/assets/filters.png
+documents/store-operations/.gitbook/assets/fulfillment-dev.hotwax.io_in-progress (3) 2.png
+documents/store-operations/.gitbook/assets/fulfillment-uat.hotwax.io_download-packed-orders (1).png
+documents/store-operations/.gitbook/assets/fulfillment-uat.hotwax.io_download-packed-orders.png
+documents/store-operations/.gitbook/assets/fulfillment-uat.hotwax.io_exim (1).png
+documents/store-operations/.gitbook/assets/fulfillment-uat.hotwax.io_exim (2).png
+documents/store-operations/.gitbook/assets/fulfillment-uat.hotwax.io_exim.png
+documents/store-operations/.gitbook/assets/fulfillment-uat.hotwax.io_saved-mappings.png
+documents/store-operations/.gitbook/assets/fulfillment.hotwax.io_settings (9).png
+documents/store-operations/.gitbook/assets/fulfilment 1.png
+documents/store-operations/.gitbook/assets/fulfilment 2 (1).png
+documents/store-operations/.gitbook/assets/fulfilment 2.png
+documents/store-operations/.gitbook/assets/histrory.png
+documents/store-operations/.gitbook/assets/in-store returns Shopify POS bpm.png
+documents/store-operations/.gitbook/assets/in-store returns loop bpm.png
+documents/store-operations/.gitbook/assets/inventory bpm (1).png
+documents/store-operations/.gitbook/assets/inventory bpm.png
+documents/store-operations/.gitbook/assets/inventory rules.png
+documents/store-operations/.gitbook/assets/job-manager.hotwax 2 (1).png
+documents/store-operations/.gitbook/assets/job-manager.hotwax 2.png
+documents/store-operations/.gitbook/assets/job-manager.hotwax.io_inventory.png
+documents/store-operations/.gitbook/assets/job-manager.hotwax.io_pipeline.png
+documents/store-operations/.gitbook/assets/kit.png
+documents/store-operations/.gitbook/assets/kkkk.png
+documents/store-operations/.gitbook/assets/notations (1).png
+documents/store-operations/.gitbook/assets/order life cycle bpm (1).png
+documents/store-operations/.gitbook/assets/order life cycle bpm - new.png
+documents/store-operations/.gitbook/assets/order life cycle bpm.png
+documents/store-operations/.gitbook/assets/order life cycle.png
+documents/store-operations/.gitbook/assets/order lifecycle bpm.png
+documents/store-operations/.gitbook/assets/pending 123png.png
+documents/store-operations/.gitbook/assets/permission.png
+documents/store-operations/.gitbook/assets/picking.hotwax 1 figma.png
+documents/store-operations/.gitbook/assets/picking.hotwax.io_picklist-details_10136 (1).png
+documents/store-operations/.gitbook/assets/returns bpm (1).png
+documents/store-operations/.gitbook/assets/returns bpm.png
+documents/store-operations/.gitbook/assets/sorting.png
+documents/store-operations/.gitbook/assets/spaces_WoOehPvuUvxQygGoR81q_uploads_puxtWV89NpDWogIvpKn7_Screenshot 2023-10-19 at 6.webp
+documents/store-operations/.gitbook/assets/store fulfillment bpm (1) (1).png
+documents/store-operations/.gitbook/assets/store fulfillment bpm (1).png
+documents/store-operations/.gitbook/assets/store fulfillment bpm (2) (1).png
+documents/store-operations/.gitbook/assets/store fulfillment bpm (2).png
+documents/store-operations/.gitbook/assets/store fulfillment bpm (3).png
+documents/store-operations/.gitbook/assets/store fulfillment bpm.png
+documents/store-operations/.gitbook/assets/store fulfillment lifecycle bpm.png
+documents/store-operations/.gitbook/assets/store to store transfer order bpm.png
+documents/store-operations/.gitbook/assets/store to warehouse transfer order bpm.png
+documents/store-operations/.gitbook/assets/transfer order bpm.png
+documents/store-operations/.gitbook/assets/transfer order picklist.png
+documents/store-operations/.gitbook/assets/warehouse fulfillment bpm.png
+documents/store-operations/.gitbook/assets/warehouse to store transfer order bpm.png
+documents/store-operations/.gitbook/assets/web returns bpm.png
+documents/system-admin/.gitbook/assets/1 1.png
+documents/system-admin/.gitbook/assets/Brokering Route Queries (1).png
+documents/system-admin/.gitbook/assets/Brokering Route Queries.png
+documents/system-admin/.gitbook/assets/Brokering Run Routes (1).png
+documents/system-admin/.gitbook/assets/Brokering Run Routes (2).png
+documents/system-admin/.gitbook/assets/Brokering Run Routes.png
+documents/system-admin/.gitbook/assets/Brokering Runs (1) (1).png
+documents/system-admin/.gitbook/assets/Brokering Runs (1).png
+documents/system-admin/.gitbook/assets/Brokering Runs.png
+documents/system-admin/.gitbook/assets/Card.png
+documents/system-admin/.gitbook/assets/Data Imports.png
+documents/system-admin/.gitbook/assets/Export packed order.png
+documents/system-admin/.gitbook/assets/Filters (2).png
+documents/system-admin/.gitbook/assets/Filters 3.png
+documents/system-admin/.gitbook/assets/Filters l1.png
+documents/system-admin/.gitbook/assets/Frame 674 (1).png
+documents/system-admin/.gitbook/assets/Frame 674.png
+documents/system-admin/.gitbook/assets/Fulfillment Settings.png
+documents/system-admin/.gitbook/assets/History (1) (1).png
+documents/system-admin/.gitbook/assets/History (1).png
+documents/system-admin/.gitbook/assets/Import Page.png
+documents/system-admin/.gitbook/assets/In-store exchanges loop bpm (1).png
+documents/system-admin/.gitbook/assets/In-store exchanges loop bpm.png
+documents/system-admin/.gitbook/assets/Inventory Rule.png
+documents/system-admin/.gitbook/assets/Job details page.png
+documents/system-admin/.gitbook/assets/List.png
+documents/system-admin/.gitbook/assets/Online Order Fulfillment (1).png
+documents/system-admin/.gitbook/assets/Order batches.png
+documents/system-admin/.gitbook/assets/POS exchanges bpm.png
+documents/system-admin/.gitbook/assets/POS returns bpm (1).png
+documents/system-admin/.gitbook/assets/POS returns bpm.png
+documents/system-admin/.gitbook/assets/Pending.png
+documents/system-admin/.gitbook/assets/Pending1234_.png
+documents/system-admin/.gitbook/assets/Physical gift card lifecycle bpm (1).png
+documents/system-admin/.gitbook/assets/Physical gift card lifecycle bpm.png
+documents/system-admin/.gitbook/assets/Physical lifecycle bpm.png
+documents/system-admin/.gitbook/assets/ResetPSS.png
+documents/system-admin/.gitbook/assets/Screenshot 2023-10-19 at 6.13.37 PM.png
+documents/system-admin/.gitbook/assets/Screenshot 2023-10-19 at 6.17.15 PM.png
+documents/system-admin/.gitbook/assets/Screenshot 2023-10-30 at 11.39.59 AM.png
+documents/system-admin/.gitbook/assets/Screenshot 2023-11-06 at 7.16.27 PM.png
+documents/system-admin/.gitbook/assets/Screenshot 2023-11-07 at 3.23.12 PM.png
+documents/system-admin/.gitbook/assets/Screenshot 2023-11-07 at 3.24.01 PM.png
+documents/system-admin/.gitbook/assets/Screenshot 2023-11-07 at 3.25.02 PM.png
+documents/system-admin/.gitbook/assets/Screenshot 2023-11-07 at 3.27.05 PM.png
+documents/system-admin/.gitbook/assets/Screenshot 2023-11-07 at 3.28.11 PM.png
+documents/system-admin/.gitbook/assets/Screenshot 2023-11-07 at 3.28.59 PM.png
+documents/system-admin/.gitbook/assets/Screenshot 2023-11-07 at 3.30.01 PM.png
+documents/system-admin/.gitbook/assets/Screenshot 2023-11-07 at 3.32.05 PM.png
+documents/system-admin/.gitbook/assets/Screenshot 2023-11-07 at 3.38.51 PM.png
+documents/system-admin/.gitbook/assets/Screenshot 2023-11-07 at 3.40.20 PM.png
+documents/system-admin/.gitbook/assets/Screenshot 2023-11-07 at 3.42.37 PM.png
+documents/system-admin/.gitbook/assets/Screenshot 2023-11-07 at 3.49.27 PM (1).png
+documents/system-admin/.gitbook/assets/Screenshot 2023-11-07 at 3.49.27 PM.png
+documents/system-admin/.gitbook/assets/Screenshot 2023-11-07 at 4.11.34 PM (1).png
+documents/system-admin/.gitbook/assets/Screenshot 2023-11-07 at 4.11.34 PM.png
+documents/system-admin/.gitbook/assets/Screenshot 2023-11-07 at 4.12.18 PM.png
+documents/system-admin/.gitbook/assets/Screenshot 2023-11-07 at 4.13.48 PM.png
+documents/system-admin/.gitbook/assets/Screenshot 2023-11-07 at 4.14.50 PM.png
+documents/system-admin/.gitbook/assets/Screenshot 2023-11-07 at 4.29.31 PM.png
+documents/system-admin/.gitbook/assets/Screenshot 2023-11-07 at 4.30.14 PM.png
+documents/system-admin/.gitbook/assets/Screenshot 2023-11-07 at 7.23.11 PM.png
+documents/system-admin/.gitbook/assets/Screenshot 2024-01-01 at 11.50.51 PM (1).png
+documents/system-admin/.gitbook/assets/Screenshot 2024-01-01 at 11.50.51 PM.png
+documents/system-admin/.gitbook/assets/Screenshot 2024-01-01 at 11.54.09 PM.png
+documents/system-admin/.gitbook/assets/Screenshot 2024-01-01 at 11.55.10 PM.png
+documents/system-admin/.gitbook/assets/Screenshot 2024-01-01 at 11.56.13 PM.png
+documents/system-admin/.gitbook/assets/Screenshot 2024-02-29 at 10.34.12 AM.png
+documents/system-admin/.gitbook/assets/Screenshot from 2024-10-18 18-12-33 (1).png
+documents/system-admin/.gitbook/assets/Screenshot from 2024-10-18 18-12-33.png
+documents/system-admin/.gitbook/assets/Screenshot from 2024-10-22 15-48-40 (1).png
+documents/system-admin/.gitbook/assets/Screenshot from 2024-10-22 15-48-40.png
+documents/system-admin/.gitbook/assets/Shopify MDM (2).png
+documents/system-admin/.gitbook/assets/Shopify POS returns bpm.png
+documents/system-admin/.gitbook/assets/approve orders.png
+documents/system-admin/.gitbook/assets/block.png
+documents/system-admin/.gitbook/assets/bulk.png
+documents/system-admin/.gitbook/assets/completed (1).png
+documents/system-admin/.gitbook/assets/contact details .png
+documents/system-admin/.gitbook/assets/dev-oms.hotwax.io_commerce_control_ImportData_configId=IMP_EMPLOYEE (1).png
+documents/system-admin/.gitbook/assets/dev-oms.hotwax.io_commerce_control_ShopifyImportData_configId=CRT_SHOPIFY_ORDER.png
+documents/system-admin/.gitbook/assets/digital gift cards (1).png
+documents/system-admin/.gitbook/assets/digital gift cards (2).png
+documents/system-admin/.gitbook/assets/digital gift cards.png
+documents/system-admin/.gitbook/assets/exchanges bpm (1).png
+documents/system-admin/.gitbook/assets/exchanges bpm.png
+documents/system-admin/.gitbook/assets/export_inventory_config.csv
+documents/system-admin/.gitbook/assets/export_order.csv
+documents/system-admin/.gitbook/assets/facilities.hotwax.io_add-facility-config_WEST_STREET.png
+documents/system-admin/.gitbook/assets/facilities.hotwax.io_create-facility_type=PHYSICAL_STORE.png
+documents/system-admin/.gitbook/assets/facilities.hotwax.io_facility-management.png
+documents/system-admin/.gitbook/assets/facilities.hotwax.io_find-facilities (1).png
+documents/system-admin/.gitbook/assets/favourites.png
+documents/system-admin/.gitbook/assets/filters (1).png
+documents/system-admin/.gitbook/assets/filters.png
+documents/system-admin/.gitbook/assets/fulfillment-option.png
+documents/system-admin/.gitbook/assets/fulfillment-uat.hotwax.io_download-packed-orders (1).png
+documents/system-admin/.gitbook/assets/fulfillment-uat.hotwax.io_download-packed-orders.png
+documents/system-admin/.gitbook/assets/fulfillment-uat.hotwax.io_exim (1).png
+documents/system-admin/.gitbook/assets/fulfillment-uat.hotwax.io_exim (2).png
+documents/system-admin/.gitbook/assets/fulfillment-uat.hotwax.io_exim.png
+documents/system-admin/.gitbook/assets/fulfillment-uat.hotwax.io_saved-mappings.png
+documents/system-admin/.gitbook/assets/fulfillment.hotwax 3.png
+documents/system-admin/.gitbook/assets/fulfillment.hotwax.io_open (6) 1.png
+documents/system-admin/.gitbook/assets/fulfillment.hotwax.io_settings (9).png
+documents/system-admin/.gitbook/assets/fulfilment 1.png
+documents/system-admin/.gitbook/assets/fulfilment 2 (1).png
+documents/system-admin/.gitbook/assets/fulfilment 2.png
+documents/system-admin/.gitbook/assets/histrory.png
+documents/system-admin/.gitbook/assets/import_calendar.csv
+documents/system-admin/.gitbook/assets/import_employee.csv
+documents/system-admin/.gitbook/assets/import_export_facilities.csv
+documents/system-admin/.gitbook/assets/import_export_inbound_shipment.csv
+documents/system-admin/.gitbook/assets/import_export_purchase_order.csv
+documents/system-admin/.gitbook/assets/import_export_purchase_order_atp (1).csv
+documents/system-admin/.gitbook/assets/import_export_purchase_order_atp.csv
+documents/system-admin/.gitbook/assets/import_inventory_variance (1).csv
+documents/system-admin/.gitbook/assets/import_inventory_variance.csv
+documents/system-admin/.gitbook/assets/import_safety_stock (1).csv
+documents/system-admin/.gitbook/assets/import_safety_stock.csv
+documents/system-admin/.gitbook/assets/import_store_calendar_assoc.csv
+documents/system-admin/.gitbook/assets/in-store returns Shopify POS bpm.png
+documents/system-admin/.gitbook/assets/in-store returns loop bpm.png
+documents/system-admin/.gitbook/assets/inventory bpm (1).png
+documents/system-admin/.gitbook/assets/inventory bpm.png
+documents/system-admin/.gitbook/assets/inventory rules.png
+documents/system-admin/.gitbook/assets/job-manager.hotwax 2 (1).png
+documents/system-admin/.gitbook/assets/job-manager.hotwax 2.png
+documents/system-admin/.gitbook/assets/job-manager.hotwax.io_inventory.png
+documents/system-admin/.gitbook/assets/job-manager.hotwax.io_pipeline.png
+documents/system-admin/.gitbook/assets/kkkk.png
+documents/system-admin/.gitbook/assets/name edit.png
+documents/system-admin/.gitbook/assets/notations (1).png
+documents/system-admin/.gitbook/assets/order details (1).png
+documents/system-admin/.gitbook/assets/order life cycle bpm (1).png
+documents/system-admin/.gitbook/assets/order life cycle bpm - new.png
+documents/system-admin/.gitbook/assets/order life cycle bpm.png
+documents/system-admin/.gitbook/assets/order life cycle.png
+documents/system-admin/.gitbook/assets/order lifecycle bpm.png
+documents/system-admin/.gitbook/assets/pending 123png.png
+documents/system-admin/.gitbook/assets/permission.png
+documents/system-admin/.gitbook/assets/picking.hotwax 1 figma.png
+documents/system-admin/.gitbook/assets/picking.hotwax.io_picklist-details_10136 (1).png
+documents/system-admin/.gitbook/assets/product name edit.webm
+documents/system-admin/.gitbook/assets/reset_inventory.csv
+documents/system-admin/.gitbook/assets/reset_inventory_by_QOH.csv
+documents/system-admin/.gitbook/assets/returns bpm (1).png
+documents/system-admin/.gitbook/assets/returns bpm.png
+documents/system-admin/.gitbook/assets/schedule_restock.csv
+documents/system-admin/.gitbook/assets/sell-inventory-online.png
+documents/system-admin/.gitbook/assets/sell-inventroy-online.png
+documents/system-admin/.gitbook/assets/settings.png
+documents/system-admin/.gitbook/assets/sorting.png
+documents/system-admin/.gitbook/assets/spaces_WoOehPvuUvxQygGoR81q_uploads_puxtWV89NpDWogIvpKn7_Screenshot 2023-10-19 at 6.webp
+documents/system-admin/.gitbook/assets/store fulfillment bpm (1) (1).png
+documents/system-admin/.gitbook/assets/store fulfillment bpm (1).png
+documents/system-admin/.gitbook/assets/store fulfillment bpm (2) (1).png
+documents/system-admin/.gitbook/assets/store fulfillment bpm (2).png
+documents/system-admin/.gitbook/assets/store fulfillment bpm (3).png
+documents/system-admin/.gitbook/assets/store fulfillment bpm.png
+documents/system-admin/.gitbook/assets/store fulfillment lifecycle bpm.png
+documents/system-admin/.gitbook/assets/store pickup.png
+documents/system-admin/.gitbook/assets/store to store transfer order bpm.png
+documents/system-admin/.gitbook/assets/store to warehouse transfer order bpm.png
+documents/system-admin/.gitbook/assets/transfer order bpm.png
+documents/system-admin/.gitbook/assets/warehouse fulfillment bpm.png
+documents/system-admin/.gitbook/assets/warehouse to store transfer order bpm.png
+documents/system-admin/.gitbook/assets/web returns bpm.png
