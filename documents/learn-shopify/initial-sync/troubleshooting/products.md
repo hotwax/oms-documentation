@@ -83,7 +83,7 @@ If certain products have not been synced from Shopify to HotWax Commerce, you ca
 3. **Run the Sync**:\
    After selecting the config and entering the product IDs, click the `Run` button. This will immediately start the synchronization process, pulling the selected products from Shopify into HotWax Commerce.
 
-<figure><img src="../.gitbook/assets/product sync.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/product sync.png" alt=""><figcaption></figcaption></figure>
 
 ## Scenario 4: Cloning Product in Shopify
 

@@ -18,7 +18,7 @@ For orders to be routed correctly, the facilities need to be associated with the
 4. Click on the chip available against the facilities.
 5. From the submenu, click on "View Facilities" to verify the facilities or "Quick Edit" to add or remove any facility from the group.
 
-<figure><img src="../../.gitbook/assets/facilities.hotwax.io_tabs_find-groups 1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/facilities.hotwax.io_tabs_find-groups 1.png" alt=""><figcaption></figcaption></figure>
 
 ### Resolution Steps
 

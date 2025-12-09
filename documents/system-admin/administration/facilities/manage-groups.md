@@ -68,4 +68,4 @@ These are default facility group types, which are available when you deploy HotW
 Users can see groups linked to specific facilities in the facilities' details page and also add individual facilities to a group by clicking on the `Link to Group` facility button in the `groups` tab.
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/Groups.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/groups.png" alt=""><figcaption></figcaption></figure>
