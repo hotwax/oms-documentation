@@ -1,6 +1,5 @@
 ---
-description: >-
- How to manage transfer orders in HotWax commerce
+description: How to manage transfer orders in HotWax Commerce.
 ---
 
 # Managing Transfer Orders in HotWax Commerce
@@ -12,3 +11,6 @@ Transfer orders are integral to maintaining inventory balance, minimizing stocko
 - **Store to Warehouse:** Sometimes, stores might need to return excess or unsold inventory back to the warehouse for consolidation or redistribution. Transfer orders facilitate this movement from the stores back to the warehouse.
 
 - **Store to Store:** In cases where one store has excess inventory that another store requires, transfer orders can be used to transfer inventory directly between stores, optimizing stock levels across the retail network.
+
+This guide focuses on store-level operations for TOs.
+For retail operations and admin workflows—such as creating, configuring, and managing TOs—refer to the [Transfers App user manual](../../retail-operations/inventory/transfers-app.md).
