@@ -150,7 +150,7 @@ Each item row contains the following information:
 3. **Actions**  
      
 * `Accept`: Approve the counted quantity.  
-* `Reject`: Reject the count and send the item for recount.
+* `Reject`: Mark the item as rejected; the counted variance is skipped and the system quantity stays unchanged.
 
 Note: Bulk actions can be applied when multiple items are selected using the checkboxes.
 
@@ -159,7 +159,7 @@ Note: Bulk actions can be applied when multiple items are selected using the che
 At the top of the item list, you can perform bulk actions for all selected items:
 
 * `Accept`: Accepts the counted quantities of selected items.  
-* `Reject`: Rejects selected items and sends them for recount.  
+* `Reject`: Marks selected items as rejected so their variances are skipped and system quantities are left as-is.  
     
   Clicking these buttons will apply the chosen action to all selected rows simultaneously.
 
@@ -197,9 +197,9 @@ When the admin clicks `Close count`, the system opens a confirmation modal with 
    * Example: If three items are still open and the admin wants to approve them at once, selecting this option completes the review quickly.
 
 2. Reject all outstanding variances and close  
-   * Automatically rejects all remaining open variances.  
-   * Useful when the admin wants those items to be recounted or corrected later.  
-   * Example: If several items show unusual variances, the admin can reject all of them in one action.
+   * Automatically rejects all remaining open variances and keeps system quantities unchanged for them.  
+   * Useful when the admin does not want to apply the proposed variances.  
+   * Example: If several items show unusual variances, the admin can reject all of them in one action to leave inventory as-is.
 
 Closing the cycle count ensures that the cycle count lifecycle is completed and that the inventory updates are accurately reflected in the system.
 

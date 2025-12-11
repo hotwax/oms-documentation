@@ -32,6 +32,15 @@ Inside a session, the associate will see:
 * Option to discard the session  
 * `Submit` button for when the session is complete
 
+### Session actions (edit, discard, submit)
+
+* **Edit**: Opens a modal to update the session name and area. Available while the session is `In progress` and not locked by another user.  
+* **Discard**: Shows a confirmation before marking the session as discarded. Available while the session is `In progress` and not locked. Once discarded, the session is removed from review and you are returned to the counts list.  
+* **Submit**: Completes the session. Appears only while the session is `In progress`; disabled when the session is locked. Submission is blocked until all unmatched items are resolved.  
+* **Locked sessions**: If another user/device holds the lock, all action buttons are disabled until the lock is released.  
+* **After submission**: The action bar only shows `Re-open session` (outline, yellow) so you can resume counting if needed.  
+* **Discarded sessions**: The action bar shows a `Session discarded` badge; no other actions are available.
+
 ### Scanning items
 
 The scan action button changes based on session state:

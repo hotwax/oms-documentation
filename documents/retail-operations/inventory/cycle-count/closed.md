@@ -12,7 +12,7 @@ The `Closed` page in the Cycle Count app lets you review every cycle count that 
 
 1. Open the Cycle Count app. Use the navigation drawer on the left side of the screen.  
      
-2. Select `Closed` from the menu. The Closed Counts view displays all cycle counts that have been completed (previously known as “cycle counts history”).  
+2. Select `Closed` from the menu. The Closed Counts view displays all cycle counts that have been completed.  
      
 3. The main pane shows a list of closed counts along with filters at the top. Each row corresponds to a completed cycle count and shows the count name, ID, facility, created date and closed date.
 

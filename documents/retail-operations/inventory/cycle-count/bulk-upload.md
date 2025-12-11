@@ -44,6 +44,16 @@ After uploading your CSV, map each column to the correct system field so values 
      
 * After mapping successfully, click `Submit` to begin processing.
 
+## Creating Hard Counts with bulk upload
+
+Hard counts are created from the same CSV flow. To avoid missing-product errors when you don’t want to preload item lines:
+
+1. In your CSV, set `purposeType` to `HARD_COUNT` for the rows you want to create as hard counts.  
+2. During field mapping, choose `Skip` for the product identifier field (`productSku`). This tells the uploader not to look for item rows when building the count.  
+3. Map the remaining required fields (for example, `countImportName`, `facility`, `estimatedStartDate`, `estimatedCompletionDate`) and submit.  
+
+The uploader will create a hard count with no product list preloaded, so the count opens as a blank, full physical count in the app without throwing a missing-product error.
+
 ## Recently uploaded counts
 
 Below the `Submit` button, you’ll find the recently uploaded counts section. This displays all bulk uploads along with their processing status.
