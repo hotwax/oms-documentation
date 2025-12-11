@@ -65,6 +65,8 @@ Each record includes:
 * Status  
 * Action menu (three dots), where users can view details or cancel uploads still in `Pending` status
 
+At the top of this section, the page also shows `Processing <time>` (for example, “Processing in 2 minutes”) based on the next scheduled job run. This countdown lets you know when the uploader will pick up your file, so you can estimate when counts will appear under `Assigned`.
+
 ### File status indicators
 
 | Status | Description |
