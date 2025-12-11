@@ -14,7 +14,7 @@ With built-in features like bulk actions, variance alerts, and timestamped track
 ## Cycle count workflow
 
 1. [Plan your count with a preview](../../store-operations/cycle-count/plan-cycle-count.md)
-2. [Create sessions and complete your count](../../store-operations/cycle-count/start-complete-session.md)/store-operations/cycle-count/start-complete-session.md
+2. [Create sessions and complete your count](../../store-operations/cycle-count/start-complete-session.md)
 3. [Review counts at the store before submitting for review](../../store-operations/cycle-count/count-progress-review.md)
 4. [Review and approve variances at head office](./pending-review.md)
 5. [Go back and review old counts and export](./closed.md)
