@@ -34,7 +34,13 @@ Inside a session, the associate will see:
 
 ### Scanning items
 
-To start scanning, the associate taps `Focus Scanner`. The scanned items will appear in the left panel. If a wrong item is scanned, the associate can remove it, and the system will adjust the count automatically.
+The scan action button changes based on session state:
+
+* Before the session starts, it shows `Start counting` (green). Tapping it moves the session to `In progress` and focuses the scanner input.  
+* During the session, if the input is not focused, it shows `Resume counting` (red) as a reminder to return focus to the scanner field.  
+* When the scanner input is already focused, it shows `Scanner ready` and is disabled until focus is lost.  
+
+The scanned items will appear in the left panel. If a wrong item is scanned, the associate can remove it, and the system will adjust the count automatically.
 
 ### Item categories during scanning (for directed counts)
 
