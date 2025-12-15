@@ -8,7 +8,7 @@ Stores often juggle walk-in demand and online shipments. When a store hits its l
 
 Use these steps to cap daily orders at 10 per store while leaving warehouses unlimited:
 
-1. Go to `Shipping` in the `ATP App`.
+1. Go to `Shipping` in the **ATP App**.
 2. Open the `Facility` tab to review all stores and warehouses.
 3. Select the capacity chip for a store and choose `Custom capacity`. The other options are `Unlimited capacity` and `No capacity`.
 4. Enter `10` for the daily limit and save.
