@@ -18,7 +18,7 @@ After the store reaches 10 shipments in a day, the brokering engine sends additi
 
 {% embed url="https://youtu.be/MHBO-2kVauQ" %}
 \
-Setting Maximum Order Capacity of a Facility
+Setting maximum order capacity of a facility
 {% endembed %}
 
 ## Suppress shipping for a channel configuration facility
