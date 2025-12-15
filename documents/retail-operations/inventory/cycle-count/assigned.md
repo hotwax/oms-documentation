@@ -1,6 +1,6 @@
 # Assigned counts
 
-The Assigned Counts section allows you to monitor cycle counts assigned to facilities that are pending completion. This view supports tracking progress, identifying delays, and managing workload across locations.
+The `Assigned counts` section allows you to monitor cycle counts assigned to facilities that are pending completion. This view supports tracking progress, identifying delays, and managing workload across locations.
 
 Assigned counts remain in this stage until the responsible facility submits the count for review.
 
