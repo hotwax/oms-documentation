@@ -1,10 +1,10 @@
 # Assigned counts
 
-The assigned counts section allows you to monitor cycle counts that have been assigned to facilities and are currently pending completion. This view supports tracking progress, identifying delays, and managing workload across locations.
+The Assigned Counts section allows you to monitor cycle counts assigned to facilities that are pending completion. This view supports tracking progress, identifying delays, and managing workload across locations.
 
 Assigned counts remain in this stage until the responsible facility submits the count for review.
 
-## Required Permissions
+## Required permissions
 
 To access the `Assigned` view and manage assigned counts, users must have the following permission:
 
@@ -59,7 +59,7 @@ Each count in the list provides the following information:
 
 This view provides a snapshot, allowing administrators to monitor the progress and deadlines across stores.
 
-## Assigned count detail page
+## Review assigned count details
 
 The assigned count detail page provides a view of a specific cycle count assigned to a store or facility.
 
@@ -69,7 +69,7 @@ At the top of the page, you will find a summary of the assigned count. This sect
 
 #### Count details
 
-Clicking on a count displays the information provided during count creation:  
+Clicking a count displays the information provided during count creation:  
 * **Count name:** Name of the assigned count.  
 * **Assigned facility:** The store or location to which the count is assigned.  
 * **Start date:** The date and time when the count is scheduled to begin; update using the date picker.  
@@ -84,7 +84,7 @@ This section shows system-generated timestamps reflecting real-time user activit
 * **First item counted:** Date and time when the first product in the assigned count was submitted.  
 * **Last item counted:** Most recent date and time a user entered or updated a count.
 
-These timestamps reflect actual system activity during product counting and help administrators assess whether the store has begun counting, whether work is ongoing or paused, and if follow-up is needed.
+These timestamps reflect actual system activity during product counting and help administrators assess whether the store has begun counting, whether work is ongoing or paused, and whether follow-up is needed.
 
 ### Product search
 
@@ -111,11 +111,11 @@ The product list section displays all products included in the assigned count. F
 * System quantity (the quantity recorded in the system at the time of assignment)  
 * Variance (calculated difference between the counted quantity and the system quantity)
 
-This view allows reviewers to quickly identify how complete an item’s count is.
+This view allows reviewers to quickly identify discrepancies between counted and system quantities.
 
-### Viewing count session details
+### View count session details
 
-To view the session details for an item, click the item in the list; the system opens the `Count session detail` panel for that specific item. The panel includes:
+To view the session details for an item, click the item in the list to open the `Count session detail` panel for that specific item. The panel includes:
 
 * Session name  
 * User name (who performed the count)  
@@ -125,7 +125,7 @@ To view the session details for an item, click the item in the list; the system 
   
 This detail helps track who counted the item and when it was recorded, providing traceability during cycle count audits.
 
-## Viewing additional product information
+## View additional product information
 
 Inside the `Count session detail` panel, select the `More options` icon. This displays:
 
