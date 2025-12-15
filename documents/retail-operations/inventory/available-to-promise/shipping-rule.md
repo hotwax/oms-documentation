@@ -29,11 +29,10 @@ Use this rule when a product should not ship through selected channels, for exam
 2. Click `Add` to create a rule and provide a descriptive name such as `Suppress shipping on Shopify`.
 3. Turn off the `Shipping` toggle. This suppresses fulfillment for the product on the channels selected later in the form.
 4. Choose the channel configuration facility. Turn on `All channels` to suppress every channel or pick a specific option such as the `US Shopify` config facility.
-5. Define the scope of products:
-   - Use the `Include` card to add a tag such as `Blue Shirt`.
-   - Or use `Features` to set `Color: Blue` and `Size: M`.
-   - Optionally add entries to the `Exclude` card to omit variants from the rule.
-6. Click `Save` to activate the rule.
+5. Define the scope of products. Use the `Include` card to add a tag such as `Blue Shirt`.
+6. Alternatively, use the `Features` filter to set values such as `Color: Blue` and `Size: M`.
+7. Add entries to the `Exclude` card whenever you need to omit specific variants from the rule.
+8. Click `Save` to activate the rule.
 
 Once saved, the Blue Shirt (Size M) no longer contributes inventory to the selected sales channels, but the product remains purchasable in stores.
 
