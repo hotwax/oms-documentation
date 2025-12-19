@@ -82,6 +82,8 @@ Content-Type: application/json
     "10862657599_pref": "true",
     "fac_grp_pref": "true",
     "address1": "8200 Vineland Ave.,",
+    "address2": "#136",
+    "directions": "Near Mall",
     "city": "Orlando",
     "postalCode": "32821",
     "country": "United States",
@@ -96,8 +98,8 @@ Content-Type: application/json
     "wednesday_open": "10:00:00",
     "thursday_open": "10:00:00",
     "thursday_close": "21:00:00",
-    "frIday_open": "10:00:00",
-    "frIday_close": "21:00:00",
+    "friday_open": "10:00:00",
+    "friday_close": "21:00:00",
     "saturday_open": "10:00:00",
     "saturday_close": "21:00:00",
     "sunday_open": "11:00:00",
@@ -124,7 +126,9 @@ Content-Type: application/json
 | `primaryFacilityGroupId`   | The Id of the primary facility group                                                                                                                |
 | `primaryFacilityGroupName` | [The name of the primary facility group](https://github.com/hotwax/press-release-faq/blob/main/bopis/customer-experience/primary-facility-group.md) |
 | `primaryShopifyShopId`     | The Id of the primary Shopify Shop                                                                                                                  |
-| `address1`                 | The address of the store                                                                                                                            |
+| `address1`                 | The primary address of the store                                                                                                                    |
+| `address2`                 | The secondary address of the store                                                                                                                  |
+| `directions`               | Specific instructions for locating the store                                                                                                        |
 | `city`                     | City                                                                                                                                                |
 | `postalCode`               | Postal Code                                                                                                                                         |
 | `country`                  | Country                                                                                                                                             |
