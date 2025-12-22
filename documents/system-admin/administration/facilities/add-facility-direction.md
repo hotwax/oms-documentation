@@ -19,7 +19,7 @@ Video: Add Facility Address
 
 The shipping name feature in HotWax Commerce offers retailers flexibility and branding opportunities. Unlike the facility name, which may be more generic, the shipping name can reflect the retailer's brand name for that facility. This customization enhances brand identity and ensures a consistent customer experience during order fulfillment. The Shipping Name can be set by following these steps:
 
-1. Navigate to the `Find Facilities` page in the Facility application.
+1. Navigate to the `Find Facilities` page in the Facility App.
 2. Utilize the search function within the `Find Facilities` page to locate the specific facility for which you want to set the shipping name.
 3. Once you've identified the desired facility, click on the Facility Name to access its details and configurtaions.
 4. Look for the section labeled `Address and Contact Details` within the `facility details` page. This section contains information related to the facility's address and contact details.
