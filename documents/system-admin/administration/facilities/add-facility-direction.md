@@ -31,7 +31,7 @@ The shipping name feature in HotWax Commerce offers retailers flexibility and br
 
 ## Add Latitude & Longitude
 
-HotWax Commerce BOPIS PDP App enhances the Shopify Product Detail Page (PDP) experience for the customers by displaying the distance of stores from a customer's current location. This functionality is achieved through the utilization of the "storeLookup" API, which retrieves all available pickup locations within a specified radius from the customer's location. The API relies on the latitude and longitude coordinates of facilities to determine their proximity to the customer.
+HotWax Commerce BOPIS PDP App enhances the Shopify Product Detail Page (PDP) experience for customers by displaying the distance of stores from a customer's current location. This functionality is achieved through the utilization of the "storeLookup" API, which retrieves all available pickup locations within a specified radius from the customer's location. The API relies on the latitude and longitude coordinates of facilities to determine their proximity to the customer.
 
 To add the latitude and longitude coordinates for a facility, follow these steps:
 
