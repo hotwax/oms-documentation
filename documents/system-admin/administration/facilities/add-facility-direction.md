@@ -44,7 +44,7 @@ Video: Add Latitude & Longitude
 
 ## Add Direction
 
-To add facility details, HotWax Commerce allows users to add directions as part of facility address details. This field can be used to provide additional location information, such as nearby landmarks, intersections, or commonly known reference points. Adding directions improves efficiency and reduces delivery or pickup delays.
+To help users easily locate a facility, HotWax Commerce allows users to add directions as part of facility address details. This field can be used to provide additional location information, such as nearby landmarks, intersections, or commonly known reference points. Adding directions improves efficiency and reduces delivery or pickup delays.
 
 After creating a facility, the details can be added or updated by following these steps:
 
