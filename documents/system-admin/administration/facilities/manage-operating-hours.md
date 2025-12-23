@@ -27,3 +27,7 @@ The time zone for a facility can be configured directly from the Operating Hours
 2. On the `Facility details` page, locate the Operating Hours card.
 3. At the top of the card, the currently selected time zone is displayed along with a `Change` button. If no time zone has been configured yet, a `Add` button is shown.
 4. Click on the `Change` button to open the select Time Zone pop-up. Users can choose the browser’s default time zone or select a different time zone from the available list.
+
+{% embed url="https://youtu.be/6ZxYxzkYxNw" %}
+Video: Set Time Zone for Facility
+{% endembed %}
