@@ -53,3 +53,7 @@ After creating a facility, the details can be added or updated by following thes
 3. Click on the `Add` button (or `Edit` if an address already exists). This will open the address form.
 4. Along with Address Line 1 and Address Line 2, you will find a field labeled `Directions`.
 5. Enter directions to help identify the facility location, such as nearby landmarks.
+
+{% embed url="https://youtu.be/qApOPqM8i5Q" %}
+Video: Add Direction
+{% endembed %}
