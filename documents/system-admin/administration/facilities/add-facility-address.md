@@ -41,3 +41,15 @@ To add the latitude and longitude coordinates for a facility, follow these steps
 {% embed url="https://youtu.be/SA6cVCSwagI" %}
 Video: Add Latitude & Longitude
 {% endembed %}
+
+## Add Direction
+
+To help users easily locate a facility, HotWax Commerce allows users to add directions as part of facility address details. This field can be used to provide additional location information, such as nearby landmarks, intersections, or commonly known reference points. Adding directions improves efficiency and reduces delivery or pickup delays.
+
+After creating a facility, the details can be added or updated by following these steps:
+
+1. Navigate to the `Find Facilities` page and select the facility for which you want to add directions.
+2. On the Facility details page, locate the `Address and Contact Details` card.
+3. Click on the `Add` button (or `Edit` if an address already exists). This will open the address form.
+4. Along with Address Line 1 and Address Line 2, you will find a field labeled `Directions`.
+5. Enter directions to help identify the facility location, such as nearby landmarks.
