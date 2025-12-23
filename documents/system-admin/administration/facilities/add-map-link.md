@@ -16,3 +16,9 @@ To verify the added map link:
 1. Locate the Map Link card on the `Facility details` page.
 2. Click on the `Preview` button.
 3. Users will be redirected to the configured map URL in a new tab, allowing them to confirm that the location is accurate.
+{% endhint %}
+
+{% embed url="https://youtu.be/HvfZGCW8ePY" %}
+Video: Add Map Link
+{% endembed %}
+
