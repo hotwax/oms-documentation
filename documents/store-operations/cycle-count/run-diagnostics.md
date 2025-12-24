@@ -4,7 +4,7 @@ To ensure that the Cycle Count App is properly configured and ready for use, Hot
 
 The diagnostics can be run from within the Cycle Count App by following these steps:
 
-1. Navigate to the `Setting` page in the Cycle Count App.
+1. Navigate to the `Settings` page in the Cycle Count App.
 2. Locate the `Diagnostics` card and click on the `Run Diagnostics` button to start the validation process.
 
 {% hint style="info" %}As the diagnostics run, each check will initially appear in a testing state. The checks are executed sequentially, and each one turns green upon successful completion, indicating that the validation has passed. Once all diagnostics turn green, the system is ready for cycle count operations.
