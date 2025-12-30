@@ -19,6 +19,7 @@ Approved orders are eligible for brokering in HotWax Commerce. The order routing
 
 Once an order item is allocated, a fulfillment request is sent to the assigned fulfillment location. If this location happens to be a warehouse, the allocation details are synced to the WMS or ERP systems, such as NetSuite, used for warehouse fulfillment.
 
+
 If an order item is allocated to a store, they are automatically reflected in the HotWax Commerce [Store Fulfillment App](/documents/store-operations/orders/fulfillment/ship-orders).
 
 {% hint style="info" %}
