@@ -1,6 +1,6 @@
-# Receiving App Update Guide
+# Receiving app update guide
 
-The table below compares the legacy HotWax receiving application (receiving.hotwax.io) with the new interface (receiving‑uat.hotwax.io). It is intended for associates and administrators familiar with the old app and highlights the most significant user‑facing changes.
+The table below compares the legacy HotWax Commerce receiving application (receiving.hotwax.io) with the new interface (receiving‑uat.hotwax.io). It is intended for associates and administrators familiar with the old app and highlights the most significant user‑facing changes.
 
 | Area | Legacy App (current) | New App (updated) | Impact |
 | :---- | :---- | :---- | :---- |

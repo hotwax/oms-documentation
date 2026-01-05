@@ -34,7 +34,11 @@
 ## Inventory
 
 * [Receiving](receiving/README.md)
-  * [Inventory Receiving](receiving/receiving.md)
+  * [Transfer Orders](receiving/transfer-orders.md)
+  * [Returns and Purchase Orders](receiving/returns-and-purchase-orders.md)
+  * [Reports](receiving/reports.md)
+  * [Settings](receiving/settings.md)
+  * [What's New](receiving/whats-new-guide.md)
 * [Cycle Count](cycle-count/README.md)
   * [Plan Cycle Count](cycle-count/plan-cycle-count.md)
   * [Start & Complete Session](cycle-count/start-complete-session.md)

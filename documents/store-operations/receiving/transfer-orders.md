@@ -1,34 +1,9 @@
-# Receiving App User Manual
-
-## Overview
-
-The HotWax receiving application lets store associates record the receipt of transfer orders (TOs), returns and purchase orders directly from a web browser. This manual walks through the new screens and explains how to receive and close orders accurately.
-
-## Getting Started
-
-### Logging in
-
-1. Navigate to the receiving application URL provided by your organisation (for example, https://receiving‑uat.hotwax.io/).  
-2. If you are not already signed in, you will be redirected to the HotWax Launchpad sign‑in page. Enter your credentials and approve any two‑factor prompts.  
-3. After signing in, you will return to the receiving application dashboard.
-
-### Navigation and dashboard
-
-The left‑hand sidebar contains four sections:
-
-* Transfer Orders – lists incoming transfer orders that need to be received.  
-* Returns – displays vendor or customer returns awaiting processing.  
-* Purchase Orders – lists purchase orders awaiting receipt.  
-* Settings – houses configuration options, including logout.
-
-Selecting a section updates the main panel. The Transfer Orders section is the default landing page. Note that only Transfer Orders have been redesigned with the new interface; the Returns and Purchase Orders sections still use the previous UI with a simple list and refresh button.
-
-### Transfer Orders list
+# Transfer orders list
 
 Within the Transfer Orders section you will see an Open tab and a Completed tab. The Open tab displays transfer orders waiting to be received; the Completed tab contains orders that have already been closed. A search bar at the top lets you filter by transfer order number. When there are no open orders, an illustration appears with a message “There are no transfer orders to receive”.  
-Each transfer‑order item shows the transfer order name (e.g., to-test-11), the corresponding internal Id. Clicking an item opens the detail page for that order. If the list is long, use the Load more transfer order button at the bottom to fetch additional entries.
+Each transfer‑order item shows the transfer order name (e.g., to-test-11), the corresponding internal ID. Clicking an item opens the detail page for that order. If the list is long, use the Load more transfer order button at the bottom to fetch additional entries.
 
-## Receiving a Transfer Order
+## Receiving a transfer order
 
 ### Understanding the detail page
 
@@ -60,31 +35,22 @@ Enter the quantity you physically received for each line item. If you did not re
 At the bottom of the detail page you will see a bar showing your progress and two actions: Save progress and Receive and complete.
 
 * Save progress – Use this when you need to leave the order open. Clicking Save progress brings up a modal that explains that inventory will be updated for the quantities entered but the transfer order will remain open. Confirming the modal saves your entries and returns you to the order. Fully received items (where the quantity equals the ordered amount) automatically move to the Received and Completed tab after saving, reducing clutter and letting you focus on the remaining open items.  
-* Receive and complete – Use this when you are ready to close the transfer order. The button is always enabled but its behaviour depends on whether all quantities have been entered. If some items are still blank, clicking Receive and complete filters the view to show only those items, displays a red message instructing you to enter the actual quantity (or 0 if not received) and provides a Back to open items link. Once every item has a quantity, clicking Receive and complete opens a confirmation modal listing each item with any discrepancies, allowing you to finalise the order. The order then moves to the Completed tab on the Transfer Orders dashboard.  
+* Receive and complete – Use this when you are ready to close the transfer order. The button is always enabled but its behavior depends on whether all quantities have been entered. If some items are still blank, clicking Receive and complete filters the view to show only those items, displays a red message instructing you to enter the actual quantity (or 0 if not received) and provides a Back to open items link. Once every item has a quantity, clicking Receive and complete opens a confirmation modal listing each item with any discrepancies, allowing you to finalize the order. The order then moves to the Completed tab on the Transfer Orders dashboard.  
 * Empty quantities – If you click Save progress or Receive and complete when no quantities have been entered on any item, the app shows a pop‑up alert requesting that you “Specify quantity for at least one of the items to receive”. The buttons are intentionally left enabled to prompt you to correct the issue rather than silently blocking progress.
 
 If an error occurs while completing the order (for example, due to a backend issue), you may see an error banner such as “Error in receiving transfer order”. If this happens, try saving progress and attempt completion later or contact support.
 
-## Settings
 
-In the Settings section you can:
-
-* Log out or return to Launchpad.  
-* View the OMS instance and Facility you are connected to.  
-* Configure Product identifiers. For example, select a primary identifier such as UPCA or SKU and a secondary identifier if needed.  
-* Change your Timezone. The selected timezone determines how timestamps appear throughout the app.  
-* Enable Force scan. Toggling this option requires associates to increment quantities via barcode scanning rather than manual entry. This can prevent manual mistakes but requires camera access.
-
-### Using the Scan feature
+### Using the scan feature
 
 Scanning barcodes can speed up receiving, especially for large orders with many units. There are two scanning modes:
 
 * HID scanner mode – At the top of every transfer‑order detail page is a Scan items input field. When you use a handheld 2D scanner configured in HID (keyboard) mode, each barcode you scan is typed into this field. Pressing Enter (or the scanner’s trigger) adds one unit to the matching item, scrolls that item card into view and displays a toast notification confirming the scan. Re‑scanning the same item increments the quantity again.  
-* Camera mode – Clicking the Scan button opens a camera‑based scanner. The app requests camera permission the first time; if granted, a scanning window appears. Align the barcode within the frame. When a barcode is detected, the app automatically increments the quantity for the matching item by one. If the barcode is not recognised or the product is not part of the transfer order, you will see a message.
+* Camera mode – Clicking the Scan button opens a camera‑based scanner. The app requests camera permission the first time; if granted, a scanning window appears. Align the barcode within the frame. When a barcode is detected, the app automatically increments the quantity for the matching item by one. If the barcode is not recognized or the product is not part of the transfer order, you will see a message.
 
 Scanning can be repeated until the expected quantity is reached. If you later determine that the scanned count was incorrect, click inside the Qty field and edit the number before saving progress or completing the order.
 
-## Tips for Efficient Receiving
+## Tips for efficient receiving
 
 * Use the search bar on the dashboard to quickly locate a specific transfer order.  
 * Work through the Open filter on the detail page to focus on outstanding items.  
@@ -94,7 +60,17 @@ Scanning can be repeated until the expected quantity is reached. If you later de
 * If you encounter a scanning error (for example, camera permission denied), check your browser settings and grant camera access.  
 * Review the confirmation modal carefully before completing an order; once completed, the order moves to the Completed tab and cannot be reopened.
 
-## Handling Discrepancies and Reconciliation
+## Receiving unexpected items
+
+At times, stores receive items that differ from the recorded shipment. This discrepancy could arise from mispicking at the warehouse or inadvertently shipping more items than intended. When stores unexpectedly receive these extra items, they require a process to receive and record these additional items effectively.
+
+### How to receive unexpected items
+
+1.  **Add Product**: Click the `(+)` icon located at the top right corner of the Transfer Order Detail page. This will open a box to search for and add a product to the order.
+2.  **Search and Select**: Search for the product by its SKU or name. Once the product appears in the search menu, click the `Add to Transfer Order` button to include it.
+3.  **Enter Quantity**: The product will then appear on the Detail page. Enter the quantity of the unexpected item and proceed with the usual receiving process.
+
+## Handling discrepancies and reconciliation
 
 Before closing an order, the app checks whether any items have been received in quantities different from what was fulfilled. If you attempt to Save progress or Receive and complete with an over‑receipt or under‑receipt, a Save receiving progress modal appears summarising the affected items and highlighting how much was over or under. You must select the items or mark them as a discrepancy to proceed. This in‑app review step reduces accidental over‑receipts and ensures you acknowledge exceptions.  
 The receiving app then integrates with NetSuite to automatically reconcile under‑receipts, over‑receipts and mis‑ships. When you close an item using Receive and complete, the app sets a custom field that triggers NetSuite automation:
@@ -104,4 +80,3 @@ The receiving app then integrates with NetSuite to automatically reconcile under
 * Mis‑shipped items – NetSuite will create an Item Adjustment referencing the transfer order to account for the mis‑shipped goods.
 
 ---
-
