@@ -38,8 +38,8 @@ The Store Fulfillment App helps store associates pick items for fulfillment
 by organizing orders and providing flexible prioritization options.
 
 ### Order Sequencing (FIFO)
-Orders are displayed using a **First In, First Out (FIFO)** sequence by default,
-ensuring fairness based on order placement time.
+Orders are displayed using a **First In, First Out (FIFO)** sequence by default.
+This provides fairness based on order placement time.
 
 ### Priority-Based Filtering
 Store managers can filter and prioritize orders using criteria such as:
