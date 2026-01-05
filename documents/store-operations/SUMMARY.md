@@ -38,6 +38,7 @@
   * [Returns and Purchase Orders](receiving/returns-and-purchase-orders.md)
   * [Reports](receiving/reports.md)
   * [Settings](receiving/settings.md)
+  * [Permissions](receiving/permissions.md)
   * [What's New](receiving/whats-new-guide.md)
 * [Cycle Count](cycle-count/README.md)
   * [Plan Cycle Count](cycle-count/plan-cycle-count.md)
