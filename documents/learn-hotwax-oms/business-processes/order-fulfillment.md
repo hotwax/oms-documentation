@@ -34,7 +34,7 @@ This scenario usually happens when a customer requests expedited delivery. Becau
 Following automatic brokering or manual release to a store, CSRs also have an option to include specific handling instructions for order items. In scenarios where expedited shipping is requested by the customer, CSRs can write a message in the handling instructions. These details are then visible in the Store Fulfillment App, enabling store associates to prioritize the fulfillment of these orders in-store accordingly.
 
 ## Pick Order Items
-The Store Fulfillment App helps store associates efficiently pick items for fulfillment
+The Store Fulfillment App helps store associates pick items for fulfillment
 by organizing orders and providing flexible prioritization options.
 
 ### Order Sequencing (FIFO)
