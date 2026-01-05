@@ -9,7 +9,7 @@ description: >-
 
 <figure><img src="../.gitbook/assets/OrderFulfillment.png" alt=""><figcaption><p>Order allocation and fulfillment</p></figcaption></figure>
 
-## How Order Fulfillment Works
+## How Order Fulfillment Works in HotWax Commerce
 
 Approved orders are eligible for brokering in HotWax Commerce. The order routing engine brokers orders and looks for the best fulfillment location to allocate them.
 
@@ -34,10 +34,26 @@ This scenario usually happens when a customer requests expedited delivery. Becau
 Following automatic brokering or manual release to a store, CSRs also have an option to include specific handling instructions for order items. In scenarios where expedited shipping is requested by the customer, CSRs can write a message in the handling instructions. These details are then visible in the Store Fulfillment App, enabling store associates to prioritize the fulfillment of these orders in-store accordingly.
 
 ## Pick Order Items
+The Store Fulfillment App helps store associates efficiently pick items for fulfillment
+by organizing orders and providing flexible prioritization options.
 
-The Store Fulfillment App displays orders in a "First In, First Out" (FIFO) sequence, prioritizing orders based on their placement. The app also offers the flexibility to filter orders according to various criteria, including shipping method (such as same-day, next-day, or standard) and customer loyalty status. This feature enables store managers to efficiently manage and fulfill orders based on preferred criteria, ensuring alignment with brand's fulfillment strategies.
+### Order Sequencing (FIFO)
+Orders are displayed using a **First In, First Out (FIFO)** sequence by default,
+ensuring fairness based on order placement time.
 
-For example, some customers may have a loyalty status of "Gold Member," indicating that they are part of a premium loyalty program with exclusive benefits such as priority order processing, or dedicated customer support. By filtering orders based on loyalty status, Store Fulfillment App can help prioritize orders from Gold Members, ensuring exceptional service and fostering customer loyalty.
+### Priority-Based Filtering
+Store managers can filter and prioritize orders using criteria such as:
+- Shipping method (same-day, next-day, standard)
+- Customer loyalty status
+- Order urgency
+
+This allows teams to focus on high-priority orders without disrupting the overall flow.
+
+### Loyalty-Based Prioritization
+For example, customers with **Gold Member** status may receive priority handling.
+Filtering by loyalty status ensures premium customers receive faster processing
+and better service outcomes.
+.
 
 ### Generate Picklist and Assign Pickers
 
