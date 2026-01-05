@@ -17,7 +17,7 @@ Once a transfer order is created and synced, any updates or modifications must b
 {% endhint %}
 
 {% hint style="info" %}
-HotWax's [Receiving App](/documents/store-operations/receiving/receiving) helps store associates manage receiving discrepancies. The app allows over-receiving, under-receiving as well as provides an option to receive unexpected items in a TO. HotWax’s BI Reports & Analytics platform also provides [Receiving Discrepancy ](/documents/analytics/reports/inventory#receiving-discrepancies-by-product)report for the operations team to track and manage these discrepancies.
+HotWax's [Receiving App](/documents/store-operations/receiving/returns-and-purchase-orders) helps store associates manage receiving discrepancies. The app allows over-receiving, under-receiving as well as provides an option to receive unexpected items in a TO. HotWax’s BI Reports & Analytics platform also provides [Receiving Discrepancy ](/documents/analytics/reports/inventory#receiving-discrepancies-by-product)report for the operations team to track and manage these discrepancies.
 {% endhint %}
 
 <table data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td>Warehouse to Store</td><td><a href="warehouse-to-store.md">warehouse-to-store.md</a></td></tr><tr><td>Store to Warehouse</td><td><a href="store-to-warehouse.md">store-to-warehouse.md</a></td></tr><tr><td>Store to Store</td><td><a href="store-to-store.md">store-to-store.md</a></td></tr></tbody></table>
