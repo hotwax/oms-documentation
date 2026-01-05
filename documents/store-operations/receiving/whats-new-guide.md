@@ -18,15 +18,3 @@ The table below compares the legacy HotWax Commerce receiving application (recei
 ## Summary
 
 The redesigned receiving application focuses on preventing accidental zero‑receipts, guiding associates through the workflow and providing clearer feedback. By requiring explicit quantity input, offering a dedicated Open filter, showing a real‑time progress summary and renaming actions to Save progress and Receive and complete, the new app reduces errors and makes it easier to manage large transfer orders.  
----
-
-   Receiving \- HotWax Commerce  
-[https://receiving.hotwax.io/transfer-order-detail/M105208](https://receiving.hotwax.io/transfer-order-detail/M105208)  
-     Receiving \- HotWax Commerce  
-[https://receiving-uat.hotwax.io/transfer-order-detail/M107092](https://receiving-uat.hotwax.io/transfer-order-detail/M107092)  
-  Receiving \- HotWax Commerce  
-[https://receiving-uat.hotwax.io/transfer-order-detail/M106507](https://receiving-uat.hotwax.io/transfer-order-detail/M106507)  
-  Receiving \- HotWax Commerce  
-[https://receiving-uat.hotwax.io/transfer-orders](https://receiving-uat.hotwax.io/transfer-orders)  
- Receiving \- HotWax Commerce  
-[https://receiving-uat.hotwax.io/returns](https://receiving-uat.hotwax.io/returns)
