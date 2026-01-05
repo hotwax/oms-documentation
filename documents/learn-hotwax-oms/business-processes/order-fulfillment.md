@@ -51,7 +51,7 @@ This allows teams to focus on high-priority orders without disrupting the overal
 
 ### Loyalty-Based Prioritization
 For example, customers with **Gold Member** status may receive priority handling.
-Filtering by loyalty status ensures premium customers receive faster processing
+Filtering by loyalty status provides premium customers with faster processing
 and better service outcomes.
 .
 
