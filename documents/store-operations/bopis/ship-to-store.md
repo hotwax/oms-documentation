@@ -66,7 +66,7 @@ This tab displays inventory that has been shipped and is currently in transit to
 
 When the physical shipment arrives, locate the order in this tab and label it **Arrived**. A notification is sent to the customer informing them that their order is now available for pickup, and the order moves to the **Ready for Pickup** tab.
 
-### Ready for Pickup
+### Ready for pickup
 This tab displays orders that have physically arrived and are waiting for the customer.
 
 When the customer comes to collect their order, verify their identity and mark it as **Handover**. The system marks the order as fulfilled and moves it to the **Completed** tab.
