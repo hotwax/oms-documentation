@@ -12,15 +12,15 @@ description: >-
 
 ## 1. Setup and Configuration
 
-**Note:** Only users with the **Admin** role and **Common Admin Permission** can view and modify these settings.
+**Note:** Only users with the `Admin` role and `Common Admin Permission` can view and modify these settings.
 
 To enable the Ship to Store feature:
 
-1.  Open the **Settings** menu in the BOPIS App.
-2.  Locate the **Show Request Transfer** toggle.
-3.  Turn the toggle **ON**.
+1.  Open the `Settings` menu in the BOPIS App.
+2.  Locate the `Show Request Transfer` toggle.
+3.  Turn the toggle `On`.
 
-Once enabled, the **Request Transfer** button will replace the standard "Reject" action on your order screens.
+Once enabled, the `Request Transfer` button will replace the standard "Reject" action on your order screens.
 
 ---
 
@@ -30,16 +30,16 @@ If you cannot fulfill a BOPIS order from your own inventory, you can initiate a 
 
 **Steps:**
 
-1.  **Locate the Order:** Navigate to the order you need to transfer. The **Request Transfer** button is available on both the **Order Card** (list view) and the **Order Detail** view.
+1.  **Locate the Order:** Navigate to the order you need to transfer. The `Request Transfer` button is available on both the `Order Card` (list view) and the `Order Detail` view.
 2.  **Click Request Transfer:** Select the button to begin the process.
     *   *Important:* This button replaces the standard "Reject" button when the feature is enabled.
 3.  **Confirm the Action:** A confirmation dialog will appear. Confirm that you want to move this order to Ship to Store.
 
 **Post-Request Workflow:**
 
-*   The order moves to the **Store Pickup Rejected** queue.
-*   The system includes an automated brokering logic to route the order to a fulfillment store or warehouse.
-*   You can track the status of these requested orders by clicking the **History/Trail icon** in the top right corner of the page.
+*   The order moves to the `Store Pickup Rejected` queue
+*   The system includes an automated brokering logic to route the order to a fulfillment store or warehouse
+*   You can track the status of these requested orders by clicking the `History/Trail icon` in the top right corner of the page
 
 ---
 
@@ -51,8 +51,8 @@ When you receive a Ship to Store order in your fulfillment queue:
 
 1.  **Pick and Pack:** Process the order items as per standard operating procedures.
 2.  **Select Carrier:** When generating the shipping label, the carrier list is automatically filtered.
-    *   You will only see carriers that support the `SHIP_TO_STORE` shipment method.
-    *   This prevents shipping errors and ensures the package is routed correctly.
+    *   You will only see carriers that support the `SHIP_TO_STORE` shipment method
+    *   This prevents shipping errors and ensures the package is routed correctly
 3.  **Ship:** Complete the shipment steps. The package is now en route to the requesting store.
 
 ---
