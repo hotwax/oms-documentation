@@ -55,21 +55,17 @@ When you receive a Ship to Store order in your fulfillment queue:
     *   This prevents shipping errors and ensures the package is routed correctly
 3.  **Ship:** Complete the shipment steps. The package is now en route to the requesting store.
 
----
-
-## 4. Receiving and Customer Handover
-
-The **Ship to Store** page in the BOPIS App is organized into three tabs to help you track orders through their lifecycle:
+The `Ship to Store` page in the BOPIS App is organized into three tabs to help you track orders through their lifecycle:
 
 ### Incoming
 This tab displays inventory that has been shipped and is currently in transit to your store.
 
-When the physical shipment arrives, locate the order in this tab and label it **Arrived**. A notification is sent to the customer informing them that their order is now available for pickup, and the order moves to the **Ready for Pickup** tab.
+When the physical shipment arrives, locate the order in this tab and label it `Arrived`. A notification is sent to the customer informing them that their order is now available for pickup, and the order moves to the `Ready for Pickup` tab.
 
-### Ready for pickup
+### Ready for Pickup
 This tab displays orders that have physically arrived and are waiting for the customer.
 
-When the customer comes to collect their order, verify their identity and mark it as **Handover**. The system marks the order as fulfilled and moves it to the **Completed** tab.
+When the customer comes to collect their order, verify their identity and mark it as `Handover`. The system marks the order as fulfilled and moves it to the `Completed` tab.
 
 ### Completed
 This tab displays a history of all completed Ship to Store orders that have been successfully handed over to customers within the past 24 hoursir identity and mark it as **Handover**. The system marks the order as fulfilled and moves it to the **Completed** tab.
