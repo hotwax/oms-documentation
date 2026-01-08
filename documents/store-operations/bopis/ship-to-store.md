@@ -6,7 +6,7 @@ description: >-
 
 ## Overview
 
-**Ship to Store** enables you to request inventory from another location when an item is out of stock at your store. Instead of canceling a customer's Buy Online, Pick Up In Store (BOPIS) order, you can transfer the item from a warehouse or another store, modifying the fulfillment path to save the sale.
+Ship to Store enables you to request inventory from another location when an item is out of stock at your store. Instead of canceling a customer's Buy Online, Pick-Up In Store (BOPIS) order, you can transfer the item from a warehouse or another store, modifying the fulfillment path to save the sale.
 
 ---
 
