@@ -6,7 +6,7 @@ description: >-
 
 ## Overview
 
-Ship to Store enables you to request inventory from another location when an item is out of stock at your store. Instead of canceling a customer's Buy Online, Pick-Up In Store (BOPIS) order, you can transfer the item from a warehouse or another store, modifying the fulfillment path to save the sale.
+Ship to Store enables you to request inventory from another location when an item is out of stock at your store. Instead of canceling a customer's Buy Online, Pick-Up In Store (BOPIS) order, you can request the item from a warehouse or another store, modifying the fulfillment path to save the sale.
 
 ---
 
@@ -66,9 +66,6 @@ When the physical shipment arrives, locate the order in this tab and label it `A
 This tab displays orders that have physically arrived and are waiting for the customer.
 
 When the customer comes to collect their order, verify their identity and mark it as `Handover`. The system marks the order as fulfilled and moves it to the `Completed` tab.
-
-### Completed
-This tab displays a history of all completed Ship to Store orders that have been successfully handed over to customers within the past 24 hoursir identity and mark it as **Handover**. The system marks the order as fulfilled and moves it to the **Completed** tab.
 
 ### Completed
 This tab displays a history of all completed Ship to Store orders that have been successfully handed over to customers within the past 24 hours.
