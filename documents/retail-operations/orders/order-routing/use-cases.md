@@ -337,7 +337,7 @@ Before starting holiday season order routing, daily order routing should be turn
 Create a new brokering run in the `Order Routing App` for holiday season orders. Click on `New Run`, name it “Holiday Season Routing,” and add a short description such as “Prioritize warehouses for all online orders during the holiday season.” Then, use the Scheduler card to set the run frequency so orders are routed on time.
 
 #### Create Order Batches
-Click on the ‘New’ button to create a new Batch, for example, Standard orders.
+Click on the `New` button to create a new batch, for example, Standard orders.
 
 #### Create Routing Rules
 After creating an order batch, click on it to open it and configure the routing rules for holiday season online orders.  
