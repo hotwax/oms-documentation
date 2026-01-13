@@ -361,7 +361,7 @@ Click on ‘Add Inventory Rules’ to create inventory rules for routing orders 
   - **Actions**: If inventory is unavailable at fallback locations, route the order to the Unfillable Queue for further processing. Enable the Partial Fulfillment toggle to allow order splitting so available items can still be fulfilled.
 
 #### Activation and Scheduling
-After setting up routing and inventory rules, activate the Holiday Season Routing run by changing its status from Draft to Active. Then, activate the inventory rules for both warehouses and fallback locations. Finally, schedule the run by setting its frequency to ensure holiday season orders are routed without delays.
+After setting up routing and inventory rules, activate the Holiday Season Routing run by changing its status from `Draft` to `Active`. Then, activate the inventory rules for both warehouses and fallback locations. Finally, schedule the run by setting its frequency to ensure holiday season orders are routed without delays.
 
 {% embed url="https://drive.google.com/file/d/18E0F6nN1icsn-L3aI-4umUj_Qea8DoVe/view?usp=sharing" %}
 Holiday Season Order Routing
