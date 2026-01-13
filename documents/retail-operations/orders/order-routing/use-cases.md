@@ -328,7 +328,7 @@ Managing Order Splitting
 
 During the holiday season, stores experience high foot traffic and increased operational load. Retailers often want to reduce store-level fulfillment while keeping online orders protected from stockouts. This order routing configuration helps in routing all online orders to warehouses first and uses selected store locations only when warehouse inventory is unavailable.
 
-### Pre-requisites:
+### Prerequisites
 Before starting holiday season order routing, daily order routing should be turned off. Optionally, order limits can be enabled for stores so that only a maximum number of orders are routed to stores being used as fallback locations.
 
 ### Steps to implement
