@@ -341,8 +341,8 @@ Click on the ‘New’ button to create a new Batch, for example, Standard order
 
 #### Create Routing Rules
 After creating an Order Batch, click on it to open it and configure the routing rules for holiday season online orders.  
-- **Order Filter**: Apply the Queue Filter and select the Brokering Queue.  
-- **Order Sort**: Set sorting to Order Date, so orders route in FIFO sequence.
+- **Order Filter**: Apply the `Queue Filter` and select the `Brokering Queue`.
+- **Order Sort**: Set sorting to `Order Date`, so orders route in FIFO sequence.
 
 #### Create Inventory Rules
 Click on ‘Add Inventory Rules’ to create inventory rules for routing orders through the appropriate facilities.
