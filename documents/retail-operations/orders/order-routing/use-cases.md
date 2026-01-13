@@ -351,7 +351,7 @@ Click on ‘Add Inventory Rules’ to create inventory rules for routing orders 
   The first rule ensures that orders are fulfilled from warehouse locations:
   - **Inventory Filter**: Apply the Facility Group filter and select the Warehouse group so orders are routed to warehouses first.
   - **Inventory Sort**: Sort by proximity to the customer’s delivery address to minimize shipping costs while meeting the promised SLAs faster by routing orders to the nearest        warehouse.
-  - **Actions**: If inventory is unavailable at warehouses, configure the rule to move the order to the next inventory rule, allowing routing to retail stores as fallback locations. To allocate partially available warehouse inventory, enable the Partial Fulfillment toggle.
+  - **Actions**: If inventory is unavailable at warehouses, configure the rule to move the order to the next inventory rule, allowing routing to retail stores as fallback locations. To allocate partially available warehouse inventory, enable the `Partial Fulfillment` toggle.
 
 - **Second Inventory Rule**
   The second rule is triggered when the warehouse is unable to fulfill the order:
