@@ -357,7 +357,7 @@ Click on ‘Add Inventory Rules’ to create inventory rules for routing orders 
   The second rule is triggered when the warehouse is unable to fulfill the order:
 
   - **Inventory Filter**: Apply the Facility Group filter and select the Fallback Locations group to route orders to retail stores as a secondary option.
-  - **Sort Inventory**: Sort by proximity to the customer’s delivery address, helping to minimize shipping costs by routing orders to the nearest store.
+  - **Inventory Sort**: Sort by proximity to the customer’s delivery address, helping to minimize shipping costs by routing orders to the nearest store.
   - **Actions**: If inventory is unavailable at fallback locations, route the order to the `Unfillable Queue` for further processing. Enable the `Partial Fulfillment` toggle to allow order splitting so available items can still be fulfilled.
 
 #### Activation and Scheduling
