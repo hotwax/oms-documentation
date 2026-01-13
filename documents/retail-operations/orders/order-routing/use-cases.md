@@ -340,7 +340,7 @@ Create a new brokering run in the `Order Routing App` for holiday season orders.
 Click on the ‘New’ button to create a new Batch, for example, Standard orders.
 
 #### Create Routing Rules
-After creating an Order Batch, click on it to open it and configure the routing rules for holiday season online orders.  
+After creating an order batch, click on it to open it and configure the routing rules for holiday season online orders.  
 - **Order Filter**: Apply the `Queue Filter` and select the `Brokering Queue`.
 - **Order Sort**: Set sorting to `Order Date`, so orders route in FIFO sequence.
 
