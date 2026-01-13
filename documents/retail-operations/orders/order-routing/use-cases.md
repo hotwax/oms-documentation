@@ -345,7 +345,7 @@ After creating an order batch, click on it to open it and configure the routing 
 - **Order Sort**: Set sorting to `Order Date`, so orders route in FIFO sequence.
 
 #### Create Inventory Rules
-Click on ‘Add Inventory Rules’ to create inventory rules for routing orders through the appropriate facilities.
+Click on `Add Inventory Rules` to create inventory rules for routing orders through the appropriate facilities.
 
 - **First Inventory Rule**
   The first rule ensures that orders are fulfilled from warehouse locations:
