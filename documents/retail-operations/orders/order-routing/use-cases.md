@@ -358,7 +358,7 @@ Click on ‘Add Inventory Rules’ to create inventory rules for routing orders 
 
   - **Inventory Filter**: Apply the Facility Group filter and select the Fallback Locations group to route orders to retail stores as a secondary option.
   - **Sort Inventory**: Sort by proximity to the customer’s delivery address, helping to minimize shipping costs by routing orders to the nearest store.
-  - **Actions**: If inventory is unavailable at fallback locations, route the order to the Unfillable Queue for further processing. Enable the Partial Fulfillment toggle to allow order splitting so available items can still be fulfilled.
+  - **Actions**: If inventory is unavailable at fallback locations, route the order to the `Unfillable Queue` for further processing. Enable the `Partial Fulfillment` toggle to allow order splitting so available items can still be fulfilled.
 
 #### Activation and Scheduling
 After setting up routing and inventory rules, activate the Holiday Season Routing run by changing its status from `Draft` to `Active`. Then, activate the inventory rules for both warehouses and fallback locations. Finally, schedule the run by setting its frequency to ensure holiday season orders are routed without delays.
