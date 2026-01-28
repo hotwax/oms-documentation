@@ -162,7 +162,7 @@ Open the `Order Routing App` to begin creating a new brokering run. Name the run
 Define the routing rules to ensure online orders are routed only to locations that meet the minimum stock levels for each item.
 
 * **Order Filter**: Apply the `Brokering Queue` filter to route orders from the appropriate queue.
-* **Orde Sort**: Sort orders by `Order Date` to prioritize older orders in the routing process, ensuring a first-in, first-out (FIFO) approach.
+* **Order Sort**: Sort orders by `Order Date` to prioritize older orders in the routing process, ensuring a first-in, first-out (FIFO) approach.
 
 #### Create Inventory Rules
 
@@ -322,4 +322,47 @@ Activate all inventory rules and ensure the brokering run is scheduled to proces
 
 {% embed url="https://youtu.be/bPBdwJZ6Tm8" %}
 Managing Order Splitting
+{% endembed %}
+
+## Scenario 9: Routing Online Orders During the Holiday Season
+
+During the holiday season, stores experience high foot traffic and increased operational load. Retailers often want to reduce store-level fulfillment while keeping online orders protected from stockouts. This order routing configuration helps in routing all online orders to warehouses first and uses selected store locations only when warehouse inventory is unavailable.
+
+### Prerequisites for This Scenario
+Before starting holiday season order routing, daily order routing should be turned off. Optionally, order limits can be enabled for stores so that only a maximum number of orders are routed to stores being used as fallback locations.
+
+### Steps to Implement
+
+#### Create Run
+Create a new brokering run in the `Order Routing App` for holiday season orders. Click on `New Run`, name it “Holiday Season Routing,” and add a short description such as “Prioritize warehouses for all online orders during the holiday season.” Then, use the Scheduler card to set the run frequency so orders are routed on time.
+
+#### Create Order Batches
+Click on the `New` button to create a new batch, for example, Standard orders.
+
+#### Create Routing Rules
+After creating an order batch, click on it to open it and configure the routing rules for holiday season online orders.  
+- **Order Filter**: Apply the `Queue Filter` and select the `Brokering Queue`.
+- **Order Sort**: Set sorting to `Order Date`, so orders route in FIFO sequence.
+
+#### Create Inventory Rules
+Click on `Add Inventory Rules` to create inventory rules for routing orders through the appropriate facilities.
+
+- **First Inventory Rule**
+  The first rule ensures that orders are fulfilled from warehouse locations:
+  - **Inventory Filter**: Apply the Facility Group filter and select the Warehouse group so orders are routed to warehouses first.
+  - **Inventory Sort**: Sort by proximity to the customer’s delivery address to minimize shipping costs while meeting the promised SLAs faster by routing orders to the nearest warehouse.
+  - **Actions**: If inventory is unavailable at warehouses, configure the rule to move the order to the next inventory rule, allowing routing to retail stores as fallback locations. To allocate partially available warehouse inventory, enable the `Partial Fulfillment` toggle.
+
+- **Second Inventory Rule**
+  The second rule is triggered when the warehouse is unable to fulfill the order:
+
+  - **Inventory Filter**: Apply the Facility Group filter and select the Fallback Locations group to route orders to retail stores as a secondary option.
+  - **Inventory Sort**: Sort by proximity to the customer’s delivery address, helping to minimize shipping costs by routing orders to the nearest store.
+  - **Actions**: If inventory is unavailable at fallback locations, route the order to the `Unfillable Queue` for further processing. Enable the `Partial Fulfillment` toggle to allow order splitting so available items can still be fulfilled.
+
+#### Activation and Scheduling
+After setting up routing and inventory rules, activate the Holiday Season Routing run by changing its status from `Draft` to `Active`. Then, activate the inventory rules for both warehouses and fallback locations. Finally, schedule the run by setting its frequency to ensure holiday season orders are routed without delays.
+
+{% embed url="https://drive.google.com/file/d/18E0F6nN1icsn-L3aI-4umUj_Qea8DoVe/view?usp=sharing" %}
+Holiday Season Order Routing
 {% endembed %}
