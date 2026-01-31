@@ -16,7 +16,7 @@ jobs:
       - env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          REPOSITORIES: "hotwax"
+          REPOSITORIES: "hotwax/facilities, hotwax/bopis, hotwax/receiving, hotwax/inventory-count, hotwax/fulfillment, hotwax/order-routing, hotwax/users, hotwax/job-manager, hotwax/transfers"
         run: node scripts/generate_updates.js
       - uses: peter-evans/create-pull-request@v5
         with:
