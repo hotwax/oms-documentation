@@ -1,7 +1,6 @@
 const { Octokit } = require("@octokit/rest");
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 const fs = require('fs');
-const path = require('path');
 
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
@@ -43,7 +42,10 @@ async function getMergedPRs(owner, repo) {
             results.push({ repository: `${owner}/${repo}`, title: pr.title, context: issueContext });
         }
         return results;
-    } catch (e) { return []; }
+    } catch (e) { 
+        console.error(`- Error fetching PRs for ${owner}/${repo}: ${e.message}`);
+        return []; 
+    }
 }
 
 async function generateWithRetry(modelName, prompt, attempt = 1) {
@@ -64,24 +66,44 @@ async function generateWithRetry(modelName, prompt, attempt = 1) {
 async function main() {
     try {
         const repoList = REPOSITORIES.split(',').map(r => r.trim());
-        let allUpdates = [];
-        for (const repoStr of repoList) {
-            const [o, r] = repoStr.split('/');
-            const prs = await getMergedPRs(o, r);
-            allUpdates = allUpdates.concat(prs);
-        }
+        let finalRepoList = [];
 
-        if (allUpdates.length === 0) return console.log("Nothing to report.");
+        // Support both specific repos and whole orgs
+        for (const entry of repoList) {
+            if (entry.includes('/')) {
+                finalRepoList.push(entry);
+            } else {
+                // Fetch all repos for an org
+                try {
+                    const orgRepos = await octokit.paginate("GET /orgs/{org}/repos", { org: entry, per_page: 100 });
+                    finalRepoList = finalRepoList.concat(orgRepos.map(r => r.full_name));
+                } catch (e) {
+                    console.error(`Error fetching repos for org ${entry}: ${e.message}`);
+                }
+            }
+        }
+        finalRepoList = [...new Set(finalRepoList)];
+
+        if (finalRepoList.length === 0) return console.log("No repositories found.");
+
+        // Parallelize fetching to save time
+        console.log(`Scanning ${finalRepoList.length} repositories...`);
+        const prResults = await Promise.all(finalRepoList.map(repo => {
+            const [o, r] = repo.split('/');
+            return getMergedPRs(o, r);
+        }));
+        const allPRs = prResults.flat();
+
+        if (allPRs.length === 0) return console.log("Nothing to report.");
 
         let style = "Professional.";
-        // Prioritize .gemini/styleguide.md, fallback to root
         if (fs.existsSync('.gemini/styleguide.md')) {
             style = fs.readFileSync('.gemini/styleguide.md', 'utf8');
         } else if (fs.existsSync('STYLE_GUIDE.md')) {
             style = fs.readFileSync('STYLE_GUIDE.md', 'utf8');
         }
         
-        const prSummaries = allUpdates.map(p => {
+        const prSummaries = allPRs.map(p => {
             let item = `- [${p.repository}] ${p.title}`;
             if (p.context) item += `\n  Context (Linked Issue): ${p.context.replace(/\n/g, ' ')}`;
             return item;
@@ -104,7 +126,7 @@ Instructions:
 Output: Scannable, customer-ready Product Update suitable for release notes or announcements.
 `;
 
-        const prompt = `${instruction}\n\nStyle Guide:\n${style}\n\nChanges:\n${prSummaries}`;
+        const prompt = `${instruction}\n\n<STYLE_GUIDE>\n${style}\n</STYLE_GUIDE>\n\n<RAW_CHANGES>\n${prSummaries}\n</RAW_CHANGES>`;
 
         const models = ["gemini-3-flash-preview", "gemini-2.5-flash", "gemini-1.5-flash"];
         let content = null;
@@ -116,8 +138,10 @@ Output: Scannable, customer-ready Product Update suitable for release notes or a
         if (!content) throw new Error("AI servers are unavailable. Try again in 5 minutes.");
         
         if (!fs.existsSync('product-updates')) fs.mkdirSync('product-updates');
-        fs.writeFileSync(`product-updates/${new Date().getFullYear()}.md`, content);
-        console.log("SUCCESS!");
+        const now = new Date();
+        const fileName = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}.md`;
+        fs.writeFileSync(`product-updates/${fileName}`, content);
+        console.log(`SUCCESS: Report generated as ${fileName}`);
     } catch (e) { console.error("FATAL:", e.message); process.exit(1); }
 }
 main();
