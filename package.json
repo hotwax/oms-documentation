@@ -1,6 +1,7 @@
 {
     "name": "product-update-automation",
     "version": "1.0.0",
+    "type": "module",
     "dependencies": {
         "@google/generative-ai": "^0.21.0",
         "@octokit/rest": "^20.0.0"
