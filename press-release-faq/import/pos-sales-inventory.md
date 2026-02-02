@@ -1,0 +1,5 @@
+# POS Sale Inventory Issuance
+
+When the OMS imports POS sales from Shopify that have already been fulfilled to the customer at the point of sale in store, it is not marked as a fulfillment natively in the OMS and it does not issue inventory against that sale. The current workflow to account for this inventory is a job in a separate system which queries all POS sales since the last sync time and logs a variance against them. This process is both inaccurate and difficult to audit since there is not true relation between the sale and the inventory issuance beyond a comment.
+
+As we move towards a single inventory item system, the logic required to issue inventory against a POS sale becomes decidedly less complicated, and the OMS should create an inventory item detail for every POS sale that is created in the system. The inventory issuance should be synchronous, by creating an inventory delta should be a synchronous operation to ensure that the inventory issuance is never skipped during order import.
