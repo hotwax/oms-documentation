@@ -21,8 +21,7 @@ const repos = SOURCE_REPOS.split(",").map(r => r.trim());
 // ✅ ONLY use models that WORK
 const GEMINI_MODELS = [
     "gemini-3-flash-preview",
-    "gemini-2.5-flash",
-    "gemini-1.5-flash"
+    "gemini-2.5-flash"
 ];
 
 // Get target month (defaults to previous month if not specified)
@@ -123,7 +122,7 @@ async function analyzeWithGemini(prompt) {
         return;
     }
 
-    console.log(`\nTotal releases found: ${allReleases.length}`);
+    console.log(`Total releases found: ${allReleases.length}`);
 
     // Map repository names to user-facing app/product names
     const repoToAppMap = {
