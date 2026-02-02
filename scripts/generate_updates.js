@@ -1,202 +1,314 @@
-const { Octokit } = require("@octokit/rest");
-const { GoogleGenerativeAI } = require("@google/generative-ai");
-const fs = require('fs');
+import { Octokit } from "@octokit/rest";
+import { GoogleGenerativeAI } from "@google/generative-ai";
+import fs from "fs";
+import path from "path";
 
-// 1. Setup
+const SOURCE_REPOS = process.env.SOURCE_REPOS;
+const MONTH = process.env.MONTH; // Format: YYYY-MM (e.g., 2026-01)
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
-const REPOSITORIES = process.env.REPOSITORIES || process.env.GITHUB_REPOSITORY;
 
-if (!GITHUB_TOKEN || !GEMINI_API_KEY || !REPOSITORIES) {
-    console.error("Missing GITHUB_TOKEN, GEMINI_API_KEY, or REPOSITORIES");
+if (!SOURCE_REPOS || !GITHUB_TOKEN || !GEMINI_API_KEY) {
+    console.error("Missing required environment variables");
     process.exit(1);
 }
 
 const octokit = new Octokit({ auth: GITHUB_TOKEN });
 const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
 
-function sanitize(text) {
-    if (!text) return "";
-    // Remove characters that could be used for prompt injection or break formatting
-    return text.replace(/<|>/g, "").replace(/`/g, "'").trim();
+const repos = SOURCE_REPOS.split(",").map(r => r.trim());
+
+// ✅ ONLY use models that WORK
+const GEMINI_MODELS = [
+    "gemini-3-flash-preview",
+    "gemini-2.5-flash",
+    "gemini-1.5-flash"
+];
+
+// Get target month (defaults to previous month if not specified)
+function getTargetMonth() {
+    if (MONTH) return MONTH;
+
+    const now = new Date();
+    const prevMonth = new Date(now.getFullYear(), now.getMonth() - 1, 1);
+    const year = prevMonth.getFullYear();
+    const month = String(prevMonth.getMonth() + 1).padStart(2, '0');
+    return `${year}-${month}`;
 }
 
-async function getReposFromOrg(org) {
-    console.log(`Auto-discovering repositories for organization: ${org}...`);
-    try {
-        const repos = await octokit.paginate("GET /orgs/{org}/repos", {
-            org,
-            type: 'all',
-            per_page: 100
-        });
-        console.log(`- Found ${repos.length} repositories in ${org}.`);
-        return repos.map(r => r.full_name);
-    } catch (e) {
-        console.error(`ERROR fetching repos for org ${org}: ${e.message}`);
-        return [];
+// Check if a release was published in the target month
+function isInTargetMonth(publishedAt, targetMonth) {
+    const releaseDate = new Date(publishedAt);
+    const year = releaseDate.getFullYear();
+    const month = String(releaseDate.getMonth() + 1).padStart(2, '0');
+    return `${year}-${month}` === targetMonth;
+}
+
+// Fetch all releases from a repository published in the target month
+async function fetchMonthlyReleases(owner, repo, targetMonth) {
+    const { data } = await octokit.repos.listReleases({ owner, repo, per_page: 100 });
+    return data.filter(release => isInTargetMonth(release.published_at, targetMonth));
+}
+
+// Extract PR references and create interlinks
+function extractPRRefsWithLinks(text, owner, repo) {
+    const regex = /#(\d+)/g;
+    const matches = text.matchAll(regex);
+    const prRefs = [];
+
+    for (const match of matches) {
+        const prNumber = match[1];
+        const prUrl = `https://github.com/${owner}/${repo}/pull/${prNumber}`;
+        prRefs.push({ number: prNumber, url: prUrl, text: `#${prNumber}` });
     }
+
+    return prRefs;
 }
 
-
-async function getIssueDetails(owner, repo, issueNumber) {
-    try {
-        const { data: issue } = await octokit.request("GET /repos/{owner}/{repo}/issues/{issue_number}", {
-            owner,
-            repo,
-            issue_number: issueNumber
-        });
-        return {
-            text: `Issue Title: ${sanitize(issue.title)}\nIssue Description: ${issue.body ? sanitize(issue.body.slice(0, 500)) + "..." : "No description provided."}`,
-            url: issue.html_url
-        };
-    } catch (e) {
-        console.warn(`Could not fetch issue #${issueNumber} for ${owner}/${repo}: ${e.message}`);
-        return null;
+async function analyzeWithGemini(prompt) {
+    for (const modelName of GEMINI_MODELS) {
+        try {
+            console.log(`Trying Gemini model: ${modelName}`);
+            const model = genAI.getGenerativeModel({ model: modelName });
+            const result = await model.generateContent(prompt);
+            return result.response.text();
+        } catch (e) {
+            console.warn(`${modelName} failed: ${e.message}`);
+        }
     }
+    throw new Error("All Gemini models failed");
 }
 
-async function getPRsForRepo(owner, repo) {
-    const thirtyDaysAgo = new Date();
-    thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
-    console.log(`Checking ${owner}/${repo}...`);
+(async () => {
+    const targetMonth = getTargetMonth();
+    console.log(`Generating release notes for ${targetMonth}...`);
+
+    let styleGuide = "";
     try {
-        const prs = await octokit.paginate("GET /repos/{owner}/{repo}/pulls", { owner, repo, state: 'closed', per_page: 50 });
-        const merged = prs.filter(pr => pr.merged_at && new Date(pr.merged_at) > thirtyDaysAgo);
+        styleGuide = fs.readFileSync("style guide.md", "utf8");
+    } catch (e) {
+        console.warn("style guide.md not found, using default.");
+    }
 
-        const results = [];
-        for (const pr of merged) {
-            let issueContext = "";
-            let issueUrl = "";
-            // Regex to find \"fix #123\", \"closes #123\", \"resolves #123\" etc.
-            const issueMatch = pr.body && pr.body.match(/(?:fix|fixes|fixed|close|closes|closed|resolve|resolves|resolved)\s+#(\d+)/i);
+    // Aggregate all releases from all repos for the target month
+    const allReleases = [];
 
-            if (issueMatch) {
-                const issueNumber = issueMatch[1];
-                console.log(`  -> Found linked issue #${issueNumber} for PR \"${pr.title}\"`);
-                const details = await getIssueDetails(owner, repo, issueNumber);
-                if (details) {
-                    issueContext = details.text;
-                    issueUrl = details.url;
-                }
+    for (const repoFull of repos) {
+        const [owner, repo] = repoFull.split("/");
+        console.log(`Fetching releases from ${repoFull}...`);
+
+        try {
+            const releases = await fetchMonthlyReleases(owner, repo, targetMonth);
+
+            for (const release of releases) {
+                const prRefs = extractPRRefsWithLinks(release.body, owner, repo);
+                allReleases.push({
+                    repo: repoFull,
+                    repoName: repo,
+                    tag: release.tag_name,
+                    publishedAt: release.published_at,
+                    body: release.body,
+                    prRefs: prRefs
+                });
             }
 
-            results.push({
-                repository: `${owner}/${repo}`,
-                title: sanitize(pr.title),
-                url: pr.html_url,
-                context: issueContext,
-                issueUrl: issueUrl
-            });
+            console.log(`  Found ${releases.length} release(s)`);
+        } catch (error) {
+            console.error(`  Error fetching releases: ${error.message}`);
         }
-
-        if (results.length > 0) console.log(`- ${owner}/${repo}: Found ${results.length} merged updates.`);
-        return results;
-    } catch (e) {
-        console.error(`- Error fetching PRs for ${owner}/${repo}: ${e.message}`);
-        return [];
     }
-}
 
-async function generateWithRetry(modelName, prompt, attempt = 1) {
-    const maxAttempts = 3;
+    if (allReleases.length === 0) {
+        console.log(`No releases found for ${targetMonth}`);
+        return;
+    }
+
+    console.log(`\nTotal releases found: ${allReleases.length}`);
+
+    // Map repository names to user-facing app/product names
+    const repoToAppMap = {
+        'hotwax/receiving': 'Receiving App',
+        'hotwax/bopis': 'BOPIS App',
+        'hotwax/fulfillment': 'Fulfillment App',
+        'hotwax/inventory-count': 'Inventory Count App',
+        'hotwax/transfers': 'Transfers App',
+        'hotwax/facilities': 'Facilities App',
+        'hotwax/preorder': 'Pre-Order App',
+        'hotwax/oms': 'OMS',
+    };
+
+    // Group releases by app/product
+    const releasesByApp = {};
+    for (const release of allReleases) {
+        const appName = repoToAppMap[release.repo] || 'OMS';
+        if (!releasesByApp[appName]) {
+            releasesByApp[appName] = [];
+        }
+        releasesByApp[appName].push(release);
+    }
+
+    // Prepare consolidated data organized by app
+    const consolidatedData = Object.entries(releasesByApp).map(([appName, releases]) => {
+        const releaseInfo = releases.map(r => {
+            const prLinks = r.prRefs.map(pr => `[${pr.text}](${pr.url})`).join(", ");
+            return `
+Version: ${r.tag}
+Published: ${r.publishedAt}
+PR References: ${prLinks || "None"}
+
+Release Notes:
+${r.body}
+`;
+        }).join("\n---\n");
+
+        return `
+## ${appName}
+
+${releaseInfo}
+`;
+    }).join("\n");
+
+    // Format month for title (e.g., "January 2026")
+    const [year, month] = targetMonth.split('-');
+    const monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
+        'July', 'August', 'September', 'October', 'November', 'December'];
+    const monthName = monthNames[parseInt(month) - 1];
+    const formattedMonth = `${monthName} ${year}`;
+
+    const prompt = `
+You are a Product Manager writing consolidated monthly release notes for HotWax Commerce.
+
+${styleGuide ? `Please follow this Style Guide strictly:\n${styleGuide}\n` : ""}
+
+Context:
+Month: ${formattedMonth}
+Number of releases: ${allReleases.length}
+Apps/Products updated: ${Object.keys(releasesByApp).join(", ")}
+
+All Release Data (organized by app):
+${consolidatedData}
+
+Task:
+Generate consolidated monthly release notes following this EXACT structure and methodology:
+
+# ${formattedMonth} Release Notes
+
+[Write ONE introductory paragraph that:
+- Summarizes the month's key themes and focus areas
+- Lists the apps/products that received updates
+- Highlights the overall business impact
+- Keeps it concise (2-3 sentences max)
+Example: "The ${formattedMonth} release introduces updates across [list apps] to [key themes]. These changes help [overall impact]."]
+
+[For each app/product that has updates, create a section:]
+
+## [App/Product Name]:
+
+[For each feature/update in this app, use this problem-solution structure:]
+
+### [Feature Name]
+[Problem statement - 1-2 sentences describing the user challenge or business need that existed before this feature]
+[Solution - 1-2 sentences explaining what the feature does and how it works]
+[Impact - 1 sentence describing the practical benefit and how it helps] PU
+
+CRITICAL FORMATTING RULES:
+1. Title format: "${formattedMonth} Release Notes" (not "HotWax Commerce Product Update")
+2. Organize by app/product (Receiving App, BOPIS App, OMS, etc.) - NOT by feature type
+3. Each feature follows: Problem → Solution → Impact
+4. End each feature with "PU" (Product Update reference)
+5. NO emoji sections (🚀 or ⚡)
+6. NO "User Benefit:" labels - integrate benefits into the narrative
+7. Use sentence-style capitalization
+8. Keep each feature description to 3-4 sentences total
+9. Problem statement should describe what users struggled with BEFORE
+10. Solution should explain what the feature does NOW
+11. Impact should explain how this HELPS users
+
+STYLE REQUIREMENTS:
+- Be concise and narrative-driven
+- Avoid marketing fluff ("seamlessly", "effortlessly", etc.)
+- Focus on practical business/operational impact
+- Use clear, direct language
+- Each section should flow naturally as a story: challenge → solution → benefit
+- Write in present tense for solutions ("The app now sends..." not "The app will send...")
+- Keep tone professional but warm (following HotWax voice)
+
+ORGANIZATION:
+- Group all changes by their app/product
+- Within each app section, list features in order of importance
+- If a repository doesn't map to a specific app, categorize it under "OMS"
+
+DO NOT:
+- Invent features not mentioned in the release data
+- List contributors
+- Include raw GitHub sections
+- Use "User Benefit:" or similar labels
+- Categorize by "New Features" vs "Improvements"
+- Add extra formatting or sections beyond what's specified
+
+EXAMPLE FORMAT:
+# January 2026 Release Notes
+
+The January 2026 release introduces updates across Receiving, BOPIS, Fulfillment and Inventory Count to improve transfer handling, support Ship-to-Store for BOPIS orders and enhance inventory accuracy. These changes help reduce manual intervention and keep store workflows running smoothly.
+
+## Receiving App:
+
+### Push notifications for Transfer Orders
+1. Store teams need timely visibility into new and pending transfer orders to take receiving action without delay. The Receiving App now sends push notifications when transfer orders are created or remain pending. This helps with faster response to incoming transfers and reduced reliance on manual order checks.
+2. Manually Added Items Shown in Completed Transfers
+   Store teams may receive additional or incorrect items while completing transfer receiving and need visibility into those items after they are recorded. The Receiving App now displays manually added items as received within the corresponding Transfer Order. This helps with accurate transfer reconciliation and reduces follow-up between sending and receiving locations. 
+
+## BOPIS App:
+
+### Ship-to-store
+1. Limited inventory at the pickup store often results in BOPIS order cancellations and lost sales. These orders can now be converted to Ship-to-Store from the BOPIS App, allowing fulfillment to continue while preserving the original pickup experience.
+
+### OMS
+1. Shipping Price Rules Configurable from OMS
+   Shipping charges may be adjusted as part of promotional strategies and cost management. Checkout shipping prices are now configurable directly from the OMS, allowing teams to manage pricing centrally without storefront changes.
+`;
+
+    let content;
     try {
-        console.log(`AI Attempt ${attempt} using ${modelName}...`);
-        const model = genAI.getGenerativeModel({ model: modelName });
-        const result = await model.generateContent(prompt);
-        return result.response.text();
-    } catch (e) {
-        if ((e.status === 503 || e.status === 429) && attempt < maxAttempts) {
-            console.log(`AI Overloaded. Waiting 3s and retrying...`);
-            await new Promise(r => setTimeout(r, 3000));
-            return generateWithRetry(modelName, prompt, attempt + 1);
-        }
-        throw e;
+        content = await analyzeWithGemini(prompt);
+    } catch (error) {
+        console.warn("Gemini failed — using fallback");
+        content = `# ${formattedMonth} Release Notes\n\n${consolidatedData}`;
     }
-}
 
-async function main() {
-    try {
-        let repoList = REPOSITORIES.split(',').map(r => r.trim());
-
-        // Parallelize organization discovery to improve performance (Addressing Gemini Feedback)
-        const repoDiscoveryPromises = repoList.map(async (entry) => {
-            if (entry.includes('/')) {
-                return [entry];
-            } else {
-                return await getReposFromOrg(entry.toLowerCase());
-            }
-        });
-        const discoveryResults = await Promise.all(repoDiscoveryPromises);
-        let finalRepoList = [...new Set(discoveryResults.flat())];
-
-        // Parallelize fetching to save time
-        const prResults = await Promise.all(finalRepoList.map(repo => {
-            const [o, r] = repo.split('/');
-            return getPRsForRepo(o, r);
-        }));
-
-        const allPRs = prResults.flat();
-
-        if (allPRs.length === 0) {
-            console.log(\"No work to report across any repositories!\");
-            return;
+    // Post-process: Re-inject PR links
+    // Build a map of all PR numbers to their URLs across all releases
+    const prLinkMap = new Map();
+    for (const release of allReleases) {
+        for (const pr of release.prRefs) {
+            prLinkMap.set(pr.number, pr.url);
         }
-
-        console.log(\"Generating summary with AI...\");
-        let style = \"Professional.\";
-        if (fs.existsSync('.gemini/styleguide.md')) {
-            style = fs.readFileSync('.gemini/styleguide.md', 'utf8');
-        } else if (fs.existsSync('STYLE_GUIDE.md')) {
-            style = fs.readFileSync('STYLE_GUIDE.md', 'utf8');
-        }
-
-        const prSummaries = allPRs.map(p => {
-            let item = `- [${p.repository}] ${p.title} (PR: ${p.url})`;
-            if (p.context) {
-                item += `\n  Context (Linked Issue): ${p.context.replace(/\n/g, ' ')}`;
-                if (p.issueUrl) item += ` (Issue: ${p.issueUrl})`;
-            }
-            return item;
-        }).join(\"\n\");
-
-        const instruction = \`
-Role: You are a Product Marketing expert writing a customer-facing Product Update.
-Task: Transform raw technical pull request titles into a polished, user-friendly Product Update with citations.
-
-Core Instructions:
-1. Categorize updates clearly (e.g., 🚀 New Features, ⚡ Improvements, 🐛 Bug Fixes).
-2. Explain each item in customer-friendly, non-technical language.
-3. Clearly state the User Benefit for every major update.
-4. Traceability: For every update, include a clickable citation to the source PR or Issue using the provided URLs. (e.g., \"Learn more in [PR #123](url)\").
-5. Cross-Repo Grouping: Identify related items across different repositories. If multiple PRs contribute to the same feature (e.g., 'Ship to Store' logic in backend and UI), combine them into one unified, high-value update with multiple citations to show the complete effort.
-6. STRICTLY follow the provided Style Guide (tone, formatting, structure).
-7. Do not invent features or details; keep vague PRs high-level.
-8. Write with a product marketing tone (value-led, confident, announcement-style — not technical).
-9. Exclude internal maintenance tasks (e.g., dependency updates, CI/CD changes) that have no visible impact on the user.
-
-Output: Scannable, customer-ready Product Update with clickable source links, suitable for release notes or announcements.
-\`;
-
-        const prompt = \`\${instruction}\\n\\n<STYLE_GUIDE>\\n\${style}\\n</STYLE_GUIDE>\\n\\n<RAW_CHANGES>\\n\${prSummaries}\\n</RAW_CHANGES>\`;
-
-        const models = [\"gemini-3-flash-preview\", \"gemini-2.5-flash\", \"gemini-1.5-flash\"];
-        let content = null;
-        for (const m of models) {
-            try { content = await generateWithRetry(m, prompt); break; }
-            catch (e) { console.log(\`\${m} busy or failed, trying fallback...\`); }
-        }
-
-        if (!content) throw new Error(\"All AI models are currently unavailable.\");
-
-        if (!fs.existsSync('product-updates')) fs.mkdirSync('product-updates');
-        const now = new Date();
-        const fileName = \`\${now.getFullYear()}-\${String(now.getMonth() + 1).padStart(2, '0')}.md\`;
-        fs.writeFileSync(\`product-updates/\${fileName}\`, content);
-        console.log(\`SUCCESS: Report generated as \${fileName}\`);
-    } catch (e) {
-        console.error(\"FATAL ERROR:\", e.message);
-        process.exit(1);
     }
-}
 
-main();
+    // Replace all #123 patterns with [#123](url) if not already linked
+    content = content.replace(/#(\d+)/g, (match, prNumber, offset, fullString) => {
+        // Check if this PR number is already in a markdown link format
+        // Peek at the character before the match
+        const charBefore = offset > 0 ? fullString[offset - 1] : '';
+        if (charBefore === '[') {
+            // Already part of a markdown link, don't modify
+            return match;
+        }
+
+        // If we have a URL for this PR, create a link
+        if (prLinkMap.has(prNumber)) {
+            return `[#${prNumber}](${prLinkMap.get(prNumber)})`;
+        }
+
+        // Otherwise, leave as-is
+        return match;
+    });
+
+    // Output to drafts/YYYY-MM.md
+    const outFile = path.join("drafts", `${targetMonth}.md`);
+    fs.mkdirSync("drafts", { recursive: true });
+    fs.writeFileSync(outFile, content);
+
+    console.log(`\n✓ Generated consolidated release notes: ${outFile}`);
+})();
+
