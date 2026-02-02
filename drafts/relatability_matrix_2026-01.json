@@ -1,0 +1,165 @@
+{
+  "clusters": [
+    {
+      "name": "Transfer Order Receipt & Receiving Workflow",
+      "reason": "Enhancements and fixes for transfer order receiving, including notification support, mis-shipped items visibility, and reconciliation across the Receiving app, Poorti, and OMS.",
+      "itemIds": [
+        "hotwax/receiving#643",
+        "hotwax/receiving#644",
+        "hotwax/receiving#621",
+        "hotwax/receiving#636",
+        "hotwax/receiving#638",
+        "hotwax/oms#336",
+        "hotwax/oms#338",
+        "hotwax/oms#343",
+        "hotwax/oms#350",
+        "hotwax/oms#368",
+        "hotwax/oms#359",
+        "hotwax/oms#379",
+        "hotwax/hotwax-poorti#164",
+        "hotwax/hotwax-poorti#169",
+        "hotwax/hotwax-poorti#210",
+        "hotwax/hotwax-poorti#127",
+        "hotwax/hotwax-poorti#173",
+        "hotwax/mantle-netsuite-connector#62",
+        "hotwax/mantle-netsuite-connector#171",
+        "hotwax/mantle-netsuite-connector#189"
+      ]
+    },
+    {
+      "name": "BOPIS & Proof of Delivery",
+      "reason": "Implementation of Proof of Delivery (PoD) features, including UI modals, permissions, and backend service support across BOPIS and Store Fulfillment apps.",
+      "itemIds": [
+        "hotwax/bopis#699",
+        "hotwax/bopis#734",
+        "hotwax/bopis#703",
+        "hotwax/bopis#731",
+        "hotwax/oms#331",
+        "hotwax/hotwax-poorti#84"
+      ]
+    },
+    {
+      "name": "Inventory Cycle Counting & Variance Management",
+      "reason": "Major updates to the Inventory Count App and Poorti to support cycle counting workflows, session locking, status validation, and variance application.",
+      "itemIds": [
+        "hotwax/inventory-count#1372",
+        "hotwax/inventory-count#1362",
+        "hotwax/inventory-count#1365",
+        "hotwax/inventory-count#1342",
+        "hotwax/inventory-count#1348",
+        "hotwax/inventory-count#1354",
+        "hotwax/hotwax-poorti#194",
+        "hotwax/hotwax-poorti#155",
+        "hotwax/hotwax-poorti#151",
+        "hotwax/hotwax-poorti#154",
+        "hotwax/hotwax-poorti#168",
+        "hotwax/hotwax-poorti#179",
+        "hotwax/hotwax-poorti#181",
+        "hotwax/hotwax-poorti#185",
+        "hotwax/oms#363"
+      ]
+    },
+    {
+      "name": "Shopify Integration & Connector Enhancements",
+      "reason": "Updates to the Shopify connector for customer management, gift card logic, reconciliation feeds, and App Bridge login support.",
+      "itemIds": [
+        "hotwax/mantle-shopify-connector#198",
+        "hotwax/mantle-shopify-connector#200",
+        "hotwax/mantle-shopify-connector#203",
+        "hotwax/mantle-shopify-connector#206",
+        "hotwax/mantle-shopify-connector#212",
+        "hotwax/mantle-shopify-connector#214",
+        "hotwax/hotwax-shopify-oms-bridge#36",
+        "hotwax/hotwax-shopify-oms-bridge#42",
+        "hotwax/dxp-components#429",
+        "hotwax/dxp-components#445",
+        "hotwax/hotwax-oms#254",
+        "hotwax/hotwax-oms#230",
+        "hotwax/hotwax-oms#314"
+      ]
+    },
+    {
+      "name": "Kit Product & Marketing Package Fulfillment",
+      "reason": "Fixes and improvements for handling multi-component products (kits/marketing packages) in POS orders, returns, and shipments.",
+      "itemIds": [
+        "hotwax/hotwax-oms#204",
+        "hotwax/hotwax-oms#211",
+        "hotwax/hotwax-oms#225",
+        "hotwax/hotwax-oms#237",
+        "hotwax/hotwax-oms#235",
+        "hotwax/hotwax-oms#246",
+        "hotwax/hotwax-oms#257"
+      ]
+    },
+    {
+      "name": "Security & Access Control",
+      "reason": "Implementation of SecurityGroup/Permission data models and facility-based access control for inventory and administrative screens.",
+      "itemIds": [
+        "hotwax/hotwax-maarg-util#11",
+        "hotwax/hotwax-maarg-util#12",
+        "hotwax/oms#364",
+        "hotwax/oms#365",
+        "hotwax/oms#369",
+        "hotwax/hotwax-oms#194",
+        "hotwax/hotwax-oms#280"
+      ]
+    },
+    {
+      "name": "NetSuite Integration & Reconciliation",
+      "reason": "Synchronization improvements between HotWax and NetSuite for shipment feeds, POS order partial batches, and inventory variance exports.",
+      "itemIds": [
+        "hotwax/mantle-netsuite-connector#194",
+        "hotwax/mantle-netsuite-connector#193",
+        "hotwax/mantle-netsuite-connector#192",
+        "hotwax/mantle-netsuite-connector#187",
+        "hotwax/mantle-netsuite-connector#175",
+        "hotwax/mantle-netsuite-connector#173",
+        "hotwax/mantle-netsuite-connector#182"
+      ]
+    },
+    {
+      "name": "Cost Accounting & Valuation (WAC/Unit Cost)",
+      "reason": "Refining Product Average Cost and Unit Cost logic, particularly handling negative inventory and return imports.",
+      "itemIds": [
+        "hotwax/oms#377",
+        "hotwax/hotwax-oms#197",
+        "hotwax/hotwax-oms#212",
+        "hotwax/hotwax-oms#239",
+        "hotwax/hotwax-oms#247"
+      ]
+    },
+    {
+      "name": "Agent Execution & Instruction Model",
+      "reason": "Development of the agent instruction data model to execute automated device/system instructions.",
+      "itemIds": [
+        "hotwax/inventory-count#1369",
+        "hotwax/inventory-count#1370",
+        "hotwax/hotwax-maarg-util#22"
+      ]
+    }
+  ],
+  "noiseItemIds": [
+    "hotwax/receiving#641",
+    "hotwax/receiving#639",
+    "hotwax/bopis#725",
+    "hotwax/bopis#721",
+    "hotwax/bopis#708",
+    "hotwax/bopis#722",
+    "hotwax/bopis#730",
+    "hotwax/hotwax-oms#298",
+    "hotwax/hotwax-oms#263",
+    "hotwax/hotwax-oms#261",
+    "hotwax/hotwax-oms#265",
+    "hotwax/hotwax-oms#279",
+    "hotwax/hotwax-oms#271",
+    "hotwax/hotwax-oms#341",
+    "hotwax/hotwax-oms#201",
+    "hotwax/hotwax-poorti#171",
+    "hotwax/hotwax-poorti#182",
+    "hotwax/hotwax-poorti#176",
+    "hotwax/job-manager#866",
+    "hotwax/job-manager#867",
+    "hotwax/mantle-netsuite-connector#184",
+    "hotwax/OrderRouting#108"
+  ]
+}
