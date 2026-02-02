@@ -254,9 +254,10 @@ The January 2026 release introduces updates across Receiving, BOPIS, Fulfillment
 ## Receiving App:
 
 ### Push notifications for Transfer Orders
-1. Store teams need timely visibility into new and pending transfer orders to take receiving action without delay. The Receiving App now sends push notifications when transfer orders are created or remain pending. This helps with faster response to incoming transfers and reduced reliance on manual order checks.
-2. Manually Added Items Shown in Completed Transfers
-   Store teams may receive additional or incorrect items while completing transfer receiving and need visibility into those items after they are recorded. The Receiving App now displays manually added items as received within the corresponding Transfer Order. This helps with accurate transfer reconciliation and reduces follow-up between sending and receiving locations. 
+Store teams need timely visibility into new and pending transfer orders to take receiving action without delay. The Receiving App now sends push notifications when transfer orders are created or remain pending. This helps with faster response to incoming transfers and reduced reliance on manual order checks. PU
+
+### Manually Added Items Shown in Completed Transfers
+Store teams may receive additional or incorrect items while completing transfer receiving and need visibility into those items after they are recorded. The Receiving App now displays manually added items as received within the corresponding Transfer Order. This helps with accurate transfer reconciliation and reduces follow-up between sending and receiving locations. PU
 
 ## BOPIS App:
 
