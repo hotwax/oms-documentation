@@ -21,9 +21,9 @@ Ship to Store allows BOPIS orders to continue through fulfillment even when the 
 
 ## Solution
 
-- Ship to Store enables store associates to convert unfulfillable BOPIS orders into warehouse-fulfilled shipments that are delivered to the original pickup store.  
-- The order remains within the BOPIS flow and continues through fulfillment without manual intervention or order recreation.  
-- Once the shipment arrives, the order follows the standard BOPIS receiving and handover process, keeping the customer experience unchanged.
+- Ship to Store introduces a structured conversion flow that allows store associates to convert an unfulfillable BOPIS order into a Ship-to-Store order.  
+- Once converted, the order is routed to a fulfillment location that has inventory and is shipped to the original pickup store selected by the customer.  
+- The entire order transitions into a Ship-to-Store flow, ensuring fulfillment continues without recreating the order or changing the customer’s pickup location.
 
 
 ## Getting Started
