@@ -61,8 +61,12 @@ ${JSON.stringify(repoMetadata, null, 2)}
 Step 2: Organize PRs into Clusters
 - Group items related across repos into cohesive features.
 - Filter out "Noise" (version bumps, chores).
-- **Specificity Rule**: Categorize items based on their most specific impact. For example, if an update improves a general utility (e.g., "PDF Generation") but is a critical component for a major feature launch (e.g., "Digital Invoicing"), it MUST be clustered with the specific feature.
+- **CRITICAL MERGING RULE**: Group items by high-level business process. If multiple items or clusters refer to the same business entity (e.g., "Transfer Orders"), they MUST be merged into a single comprehensive cluster. For example: "Transfer Order Feed", "Shipment Sync for Transfer Orders", and "Transfer Order Reconciliation" MUST all be merged into one "Transfer Orders" cluster. Do NOT create separate sections for technical sub-steps.
 
+- **Specificity Rule**: While grouping by theme, ensure that general utility updates are pulled into the specific feature they support. For example, a "PDF Generation" fix that was made specifically for "Digital Invoicing" should be clustered with "Digital Invoicing".
+- **Naming Rule**: Give clusters descriptive, utility-focused names. Use ONLY simple nouns (e.g., "Inventory Synchronization"). 
+- **STRICT PROHIBITION**: DO NOT use words like "Enhanced", "Streamlined", "Improvements", "Enhancements", "Updates", "Fixes", "Handling", or "Logic" in cluster names.
+ 
 Item Metadata (Full Context):
 ${JSON.stringify(itemMetadata, null, 2)}
 

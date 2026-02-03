@@ -26,7 +26,9 @@ Include a 2-sentence intro summarizing the month.
 Structure Guidelines:
 - **User-Facing First**: Prioritize new features, UI improvements, and business logic changes at the top.
 - **System Updates at the Bottom**: Any "Technical Debt", "Code Cleanup", or backend-only changes (e.g., library migrations or internal logging updates) must be grouped under a final "System & Core Updates" section at the end of the document.
-- **Tone Check**: Ensure new feature sections sound positive.
+- **Tone Check**: Ensure the tone is professional and utility-focused.
+- **No AI Slop**: Do not use words like "enhanced", "streamlined", or "robust".
+- **No Exclamation Points**: Use periods only. No exclamation points allowed.
 - **Citations**: At the end of each feature/section summary, include the citations provided in the cluster data. Format them as a single line with GitHub pull request links, like: *Sources: [repo#123](url), [repo#456](url)*
 
 Structure:

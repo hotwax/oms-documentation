@@ -13,7 +13,9 @@ Style Guide Snippet:
 - Simpler is better.
 - Active voice.
 - Be granular but concise (3-4 sentences total).
-- **Tone for New Features**: If this cluster represents a new feature launch, maintain a positive tone. 
+- **Tone**: Maintain a professional, utility-focused tone. 
+- **No AI Slop**: Avoid words like "enhanced", "streamlined", "seamless", or "robust".
+- **No Exclamation Points**: Strictly use periods for all sentences.
 - **No dev-time bugs**: Any "fixes" or "issues" found during development of a new feature should be synthesized as part of the feature's polished experience. Avoid words like "fixed", "issue", or "bug" for new features.
 
 Cluster Description: ${cluster.reason}

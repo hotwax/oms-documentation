@@ -54,6 +54,8 @@ export async function analyzeWithGemini(prompt, models = CONFIG.DEFAULT_MODELS, 
                     contents: [{ role: 'user', parts: [{ text: prompt }] }],
                 });
 
+                const response = result.response;
+                const usage = response.usageMetadata;
                 if (usage) {
                     const inputTokens = usage.promptTokenCount || 0;
                     const outputTokens = usage.candidatesTokenCount || (usage.totalTokenCount ? usage.totalTokenCount - inputTokens : 0);

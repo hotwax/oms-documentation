@@ -1,52 +1,57 @@
 {
   "clusters": [
     {
-      "name": "Proof of Delivery",
-      "reason": "These PRs and issues directly relate to the implementation of the Proof of Delivery feature, including UI, settings, and backend logic.",
+      "name": "Transfer Orders",
+      "reason": "Multiple PRs relate to the creation, completion, reconciliation, and item feeds for transfer orders between HotWax and NetSuite. These all represent steps in the same business process.",
       "itemIds": [
-        "hotwax/bopis#699",
-        "hotwax/bopis#734",
-        "hotwax/bopis#703",
-        "hotwax/bopis#731"
+        "hotwax/mantle-netsuite-connector#62",
+        "hotwax/mantle-netsuite-connector#177",
+        "hotwax/mantle-netsuite-connector#175",
+        "hotwax/mantle-netsuite-connector#171",
+        "hotwax/mantle-netsuite-connector#189"
       ]
     },
     {
-      "name": "Ship to Store Order Enhancements",
-      "reason": "These PRs focus on improving the Ship to Store functionality, including email notifications, order handover, and status updates.",
+      "name": "Shipment Synchronization",
+      "reason": "PRs focus on synchronizing shipment data between NetSuite and HotWax, including skipping completed items and excluding specific feeds.",
       "itemIds": [
-        "hotwax/bopis#729",
-        "hotwax/bopis#702"
+        "hotwax/mantle-netsuite-connector#192",
+        "hotwax/mantle-netsuite-connector#182",
+        "hotwax/mantle-netsuite-connector#190"
       ]
     },
     {
-      "name": "BOPIS Application Bug Fixes",
-      "reason": "These PRs and issues address specific bugs within the BOPIS application, improving usability and functionality.",
+      "name": "Reconciliation Feed",
+      "reason": "PRs address issues and enhancements related to the reconciliation feed, specifically order date support and empty file generation.",
       "itemIds": [
-        "hotwax/bopis#721",
-        "hotwax/bopis#723",
-        "hotwax/bopis#727",
-        "hotwax/bopis#720",
-        "hotwax/bopis#719"
+        "hotwax/mantle-netsuite-connector#194",
+        "hotwax/mantle-netsuite-connector#193"
       ]
     },
     {
-      "name": "BOPIS Application Code Cleanup",
-      "reason": "These PRs focus on removing unused code and improving the overall codebase health.",
+      "name": "Inventory Synchronization",
+      "reason": "PRs relate to the synchronization of inventory data, including resets and variance exports.",
       "itemIds": [
-        "hotwax/bopis#722",
-        "hotwax/bopis#708"
+        "hotwax/mantle-netsuite-connector#173"
       ]
     },
     {
-      "name": "UI/UX Improvements",
-      "reason": "These PRs focus on improving the user interface and user experience.",
+      "name": "Order Processing",
+      "reason": "PRs address issues with POS order history creation and mix-cart order detection.",
       "itemIds": [
-        "hotwax/bopis#725"
+        "hotwax/mantle-netsuite-connector#187",
+        "hotwax/mantle-netsuite-connector#170"
+      ]
+    },
+    {
+      "name": "Data Model",
+      "reason": "PR moves view-entity to a different repository.",
+      "itemIds": [
+        "hotwax/mantle-netsuite-connector#191"
       ]
     }
   ],
   "noiseItemIds": [
-    "hotwax/bopis#728",
-    "hotwax/bopis#730"
+    "hotwax/mantle-netsuite-connector#184"
   ]
 }

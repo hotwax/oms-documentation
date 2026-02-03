@@ -45,7 +45,7 @@ HotWax content should be straightforward and useful. Avoid marketing-fluff and p
 Choose plain words that describe the action directly and avoid using:
 
 “Ensure”
-“Seamlessly”, “effortlessly”, “swiftly”, “effortless”, “flawless”, “smooth”
+“Seamlessly”, “effortlessly”, “swiftly”, “effortless”, “flawless”, “smooth”, “enhanced”, “streamlined”
 “Best‑in‑class”, “cutting‑edge”
 “Efficient”
 “game-changer”
@@ -53,13 +53,18 @@ Choose plain words that describe the action directly and avoid using:
 “Streamline”
 Excessive adjectives like “vital”, “crucial”, “essential”
 
+### Professional Tone and "AI Slop"
+Avoid common AI filler words and phrases that sound like marketing fluff.
+- Do not use: "unlock", "delve", "comprehensive", "robust", "transformative", "revolutionary".
+- **Strictly no exclamation points**. The tone should be professional, utility-focused, and grounded.
+
 ### Tone for New Features
 
 When documenting a new feature, focus on the value and the "newness". 
 
 * Avoid words like "fixed", "issues", "bugs", or "refactored" in the context of a new launch. 
 * Any bugs found and fixed during development should be synthesized into the feature description as improvements or simply omitted if they don't contribute to the story.
-* Maintain a positive, forward-looking tone.
+* Maintain a professional tone focused on utility and value.
 
 ### Categorization & Specificity
 
@@ -158,6 +163,7 @@ Readers expect HotWax content to be direct and actionable.
 * Periods: End full sentences with a period. Do not use periods at the end of bullet points if they are fragments.
 * Hyphens: Use for compound terms (e.g., real-time data, store-level inventory).
 * Oxford Comma: Always use the final Oxford comma in a series.
+* Exclamation Points: **Do not use exclamation points.** Use periods for all sentences to maintain a professional tone.
 
 ---
 
