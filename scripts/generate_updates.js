@@ -67,12 +67,12 @@ async function getPRsForRepo(owner, repo) {
         for (const pr of merged) {
             let issueContext = "";
             let issueUrl = "";
-            // Regex to find \"fix #123\", \"closes #123\", \"resolves #123\" etc.
+            // Regex to find "fix #123", "closes #123", "resolves #123" etc.
             const issueMatch = pr.body && pr.body.match(/(?:fix|fixes|fixed|close|closes|closed|resolve|resolves|resolved)\s+#(\d+)/i);
 
             if (issueMatch) {
                 const issueNumber = issueMatch[1];
-                console.log(`  -> Found linked issue #${issueNumber} for PR \"${pr.title}\"`);
+                console.log(`  -> Found linked issue #${issueNumber} for PR "${pr.title}"`);
                 const details = await getIssueDetails(owner, repo, issueNumber);
                 if (details) {
                     issueContext = details.text;
@@ -138,12 +138,12 @@ async function main() {
         const allPRs = prResults.flat();
 
         if (allPRs.length === 0) {
-            console.log(\"No work to report across any repositories!\");
+            console.log("No work to report across any repositories!");
             return;
         }
-
-        console.log(\"Generating summary with AI...\");
-        let style = \"Professional.\";
+        
+        console.log("Generating summary with AI...");
+        let style = "Professional.";
         if (fs.existsSync('.gemini/styleguide.md')) {
             style = fs.readFileSync('.gemini/styleguide.md', 'utf8');
         } else if (fs.existsSync('STYLE_GUIDE.md')) {
@@ -157,9 +157,9 @@ async function main() {
                 if (p.issueUrl) item += ` (Issue: ${p.issueUrl})`;
             }
             return item;
-        }).join(\"\n\");
+        }).join("\n");
 
-        const instruction = \`
+        const instruction = `
 Role: You are a Product Marketing expert writing a customer-facing Product Update.
 Task: Transform raw technical pull request titles into a polished, user-friendly Product Update with citations.
 
@@ -167,7 +167,7 @@ Core Instructions:
 1. Categorize updates clearly (e.g., 🚀 New Features, ⚡ Improvements, 🐛 Bug Fixes).
 2. Explain each item in customer-friendly, non-technical language.
 3. Clearly state the User Benefit for every major update.
-4. Traceability: For every update, include a clickable citation to the source PR or Issue using the provided URLs. (e.g., \"Learn more in [PR #123](url)\").
+4. Traceability: For every update, include a clickable citation to the source PR or Issue using the provided URLs. (e.g., "Learn more in [PR #123](url)").
 5. Cross-Repo Grouping: Identify related items across different repositories. If multiple PRs contribute to the same feature (e.g., 'Ship to Store' logic in backend and UI), combine them into one unified, high-value update with multiple citations to show the complete effort.
 6. STRICTLY follow the provided Style Guide (tone, formatting, structure).
 7. Do not invent features or details; keep vague PRs high-level.
@@ -175,26 +175,26 @@ Core Instructions:
 9. Exclude internal maintenance tasks (e.g., dependency updates, CI/CD changes) that have no visible impact on the user.
 
 Output: Scannable, customer-ready Product Update with clickable source links, suitable for release notes or announcements.
-\`;
+`;
 
-        const prompt = \`\${instruction}\\n\\n<STYLE_GUIDE>\\n\${style}\\n</STYLE_GUIDE>\\n\\n<RAW_CHANGES>\\n\${prSummaries}\\n</RAW_CHANGES>\`;
+        const prompt = `${instruction}\n\n<STYLE_GUIDE>\n${style}\n</STYLE_GUIDE>\n\n<RAW_CHANGES>\n${prSummaries}\n</RAW_CHANGES>`;
 
-        const models = [\"gemini-3-flash-preview\", \"gemini-2.5-flash\", \"gemini-1.5-flash\"];
+        const models = ["gemini-3-flash-preview", "gemini-2.5-flash", "gemini-1.5-flash"];
         let content = null;
         for (const m of models) {
             try { content = await generateWithRetry(m, prompt); break; }
-            catch (e) { console.log(\`\${m} busy or failed, trying fallback...\`); }
+            catch (e) { console.log(`${m} busy or failed, trying fallback...`); }
         }
 
-        if (!content) throw new Error(\"All AI models are currently unavailable.\");
+        if (!content) throw new Error("All AI models are currently unavailable.");
 
         if (!fs.existsSync('product-updates')) fs.mkdirSync('product-updates');
         const now = new Date();
-        const fileName = \`\${now.getFullYear()}-\${String(now.getMonth() + 1).padStart(2, '0')}.md\`;
-        fs.writeFileSync(\`product-updates/\${fileName}\`, content);
-        console.log(\`SUCCESS: Report generated as \${fileName}\`);
+        const fileName = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}.md`;
+        fs.writeFileSync(`product-updates/${fileName}`, content);
+        console.log(`SUCCESS: Report generated as ${fileName}`);
     } catch (e) {
-        console.error(\"FATAL ERROR:\", e.message);
+        console.error("FATAL ERROR:", e.message);
         process.exit(1);
     }
 }
