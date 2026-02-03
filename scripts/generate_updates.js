@@ -174,7 +174,12 @@ import path from "path";
         const summaryText = await runSummarizer(cluster, clusterItems);
         clusterSummaries.push({
             name: cluster.name,
-            summary: summaryText
+            summary: summaryText,
+            prReferences: clusterItems.map(item => ({
+                repo: item.repo,
+                number: item.number,
+                url: `https://github.com/${item.repo}/pull/${item.number}`
+            }))
         });
     }
 

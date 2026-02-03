@@ -14,6 +14,14 @@ export const CONFIG = {
         ORGANIZER: ["gemma-3-27b-it"],
         SUMMARIZER: ["gemma-3-27b-it"],
         SYNTHESIZER: ["gemma-3-27b-it"]
+    },
+    PRICING: {
+        // Cost per 1M tokens (USD) - Approximate for Gemma 3
+        "gemma-3-27b-it": { input: 0.27, output: 0.27 },
+        "gemma-3-4b-it": { input: 0.10, output: 0.10 },
+        "gemma-3-1b-it": { input: 0.05, output: 0.05 },
+        "gemini-1.5-flash": { input: 0.075, output: 0.30 },
+        "gemini-1.5-pro": { input: 1.25, output: 5.00 }
     }
 };
 

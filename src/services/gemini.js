@@ -6,6 +6,19 @@ import path from "path";
 
 const genAI = new GoogleGenerativeAI(CONFIG.GEMINI_API_KEY);
 
+function calculateCost(modelName, usage) {
+    if (!usage) return 0;
+    const modelKey = modelName.replace("models/", "");
+    const pricing = CONFIG.PRICING[modelKey] || CONFIG.PRICING["gemini-1.5-flash"];
+    
+    const inputTokens = usage.promptTokenCount || 0;
+    const outputTokens = usage.candidatesTokenCount || (usage.totalTokenCount ? usage.totalTokenCount - inputTokens : 0);
+    
+    const inputCost = (inputTokens / 1_000_000) * pricing.input;
+    const outputCost = (outputTokens / 1_000_000) * pricing.output;
+    return inputCost + outputCost;
+}
+
 export async function analyzeWithGemini(prompt, models = CONFIG.DEFAULT_MODELS, retries = 5) {
     if (CONFIG.DRY_RUN) {
         const selectedModel = models[0];
@@ -40,7 +53,15 @@ export async function analyzeWithGemini(prompt, models = CONFIG.DEFAULT_MODELS, 
                 const result = await model.generateContent({
                     contents: [{ role: 'user', parts: [{ text: prompt }] }],
                 });
-                return result.response.text();
+
+                if (usage) {
+                    const inputTokens = usage.promptTokenCount || 0;
+                    const outputTokens = usage.candidatesTokenCount || (usage.totalTokenCount ? usage.totalTokenCount - inputTokens : 0);
+                    const cost = calculateCost(fullModelName, usage);
+                    console.log(`[COST] ${fullModelName} | Tokens: ${inputTokens} in, ${outputTokens} out | Est. Cost: $${cost.toFixed(6)}`);
+                }
+
+                return response.text();
             } catch (e) {
                 const isRateLimit = e.message.includes("429") || e.message.includes("Too Many Requests") || e.message.includes("overloaded");
                 if (!isRateLimit) {

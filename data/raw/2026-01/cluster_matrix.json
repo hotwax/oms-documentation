@@ -1,8 +1,8 @@
 {
   "clusters": [
     {
-      "name": "Proof of Delivery Enhancements",
-      "reason": "Multiple PRs and Issues focus on implementing and improving the Proof of Delivery feature, including UI, settings, and permissions.",
+      "name": "Proof of Delivery",
+      "reason": "These PRs and issues directly relate to the implementation of the Proof of Delivery feature, including UI, settings, and backend logic.",
       "itemIds": [
         "hotwax/bopis#699",
         "hotwax/bopis#734",
@@ -11,48 +11,42 @@
       ]
     },
     {
-      "name": "Order Handover & Notifications",
-      "reason": "PR introduces order handover email support and enhanced status notifications.",
+      "name": "Ship to Store Order Enhancements",
+      "reason": "These PRs focus on improving the Ship to Store functionality, including email notifications, order handover, and status updates.",
       "itemIds": [
-        "hotwax/bopis#729"
-      ]
-    },
-    {
-      "name": "BOPIS to ShipToStore Implementation",
-      "reason": "PR implements the BOPIS to ShipToStore feature.",
-      "itemIds": [
+        "hotwax/bopis#729",
         "hotwax/bopis#702"
       ]
     },
     {
-      "name": "Order Picker Flow Improvements",
-      "reason": "Several issues and PRs address bugs and improvements related to the order picker flow, including disabling edit options after handover and preventing editing when orders are rejected.",
+      "name": "BOPIS Application Bug Fixes",
+      "reason": "These PRs and issues address specific bugs within the BOPIS application, improving usability and functionality.",
       "itemIds": [
-        "hotwax/bopis#719",
+        "hotwax/bopis#721",
         "hotwax/bopis#723",
-        "hotwax/bopis#727"
+        "hotwax/bopis#727",
+        "hotwax/bopis#720",
+        "hotwax/bopis#719"
+      ]
+    },
+    {
+      "name": "BOPIS Application Code Cleanup",
+      "reason": "These PRs focus on removing unused code and improving the overall codebase health.",
+      "itemIds": [
+        "hotwax/bopis#722",
+        "hotwax/bopis#708"
       ]
     },
     {
       "name": "UI/UX Improvements",
-      "reason": "PRs focused on improving the user interface and user experience, specifically addressing loading message clarity.",
+      "reason": "These PRs focus on improving the user interface and user experience.",
       "itemIds": [
-        "hotwax/bopis#721",
-        "hotwax/bopis#720"
-      ]
-    },
-    {
-      "name": "Code Cleanup & Technical Debt Reduction",
-      "reason": "PRs focused on removing unused code and updating configurations.",
-      "itemIds": [
-        "hotwax/bopis#728",
-        "hotwax/bopis#722",
-        "hotwax/bopis#708"
+        "hotwax/bopis#725"
       ]
     }
   ],
   "noiseItemIds": [
-    "hotwax/bopis#730",
-    "hotwax/bopis#725"
+    "hotwax/bopis#728",
+    "hotwax/bopis#730"
   ]
 }
