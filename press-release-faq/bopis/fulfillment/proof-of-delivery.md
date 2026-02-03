@@ -28,5 +28,4 @@ By making delivery confirmation a part of pickup, Proof of Delivery standardizes
 
 ## Call to Action
 
-Use Proof of Delivery during BOPIS handover to ensure every completed pickup has a clear confirmation record.  
-Rely on this visibility to reduce customer disputes, simplify investigations, and improve confidence in BOPIS completion across stores.
+Use Proof of Delivery during BOPIS handover to ensure every completed pickup has a clear confirmation record. Rely on this visibility to reduce customer disputes, simplify investigations, and improve confidence in BOPIS completion across stores.
