@@ -1,0 +1,58 @@
+{
+  "clusters": [
+    {
+      "name": "Proof of Delivery Enhancements",
+      "reason": "Multiple PRs and Issues focus on implementing and improving the Proof of Delivery feature, including UI, settings, and permissions.",
+      "itemIds": [
+        "hotwax/bopis#699",
+        "hotwax/bopis#734",
+        "hotwax/bopis#703",
+        "hotwax/bopis#731"
+      ]
+    },
+    {
+      "name": "Order Handover & Notifications",
+      "reason": "PR introduces order handover email support and enhanced status notifications.",
+      "itemIds": [
+        "hotwax/bopis#729"
+      ]
+    },
+    {
+      "name": "BOPIS to ShipToStore Implementation",
+      "reason": "PR implements the BOPIS to ShipToStore feature.",
+      "itemIds": [
+        "hotwax/bopis#702"
+      ]
+    },
+    {
+      "name": "Order Picker Flow Improvements",
+      "reason": "Several issues and PRs address bugs and improvements related to the order picker flow, including disabling edit options after handover and preventing editing when orders are rejected.",
+      "itemIds": [
+        "hotwax/bopis#719",
+        "hotwax/bopis#723",
+        "hotwax/bopis#727"
+      ]
+    },
+    {
+      "name": "UI/UX Improvements",
+      "reason": "PRs focused on improving the user interface and user experience, specifically addressing loading message clarity.",
+      "itemIds": [
+        "hotwax/bopis#721",
+        "hotwax/bopis#720"
+      ]
+    },
+    {
+      "name": "Code Cleanup & Technical Debt Reduction",
+      "reason": "PRs focused on removing unused code and updating configurations.",
+      "itemIds": [
+        "hotwax/bopis#728",
+        "hotwax/bopis#722",
+        "hotwax/bopis#708"
+      ]
+    }
+  ],
+  "noiseItemIds": [
+    "hotwax/bopis#730",
+    "hotwax/bopis#725"
+  ]
+}
