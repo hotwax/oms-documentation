@@ -1,4 +1,5 @@
 import path from "path";
+import "dotenv/config";
 
 export const CONFIG = {
     SOURCE_REPOS: process.env.SOURCE_REPOS,
@@ -6,14 +7,14 @@ export const CONFIG = {
     GITHUB_TOKEN: process.env.GITHUB_TOKEN,
     GEMINI_API_KEY: process.env.GEMINI_API_KEY,
     PRODUCTION: process.env.PRODUCTION === 'true',
-    DRY_RUN: process.env.PRODUCTION !== 'true',
+    DRY_RUN: process.env.DRY_RUN === 'true' || process.env.PRODUCTION !== 'true',
     REPO_CONTEXT_PATH: path.join("data", process.env.PRODUCTION === 'true' ? "repo-context.md" : "test/repo-context.md"),
     STORAGE_DIR: path.join("data", "raw"),
     DEFAULT_MODELS: ["gemma-3-27b-it", "gemma-3-4b-it", "gemma-3-1b-it"],
     MODEL_CONFIG: {
-        ORGANIZER: ["gemma-3-27b-it"],
+        ORGANIZER: ["gemini-3-flash-preview"],
         SUMMARIZER: ["gemma-3-27b-it"],
-        SYNTHESIZER: ["gemma-3-27b-it"]
+        SYNTHESIZER: ["gemini-3-flash-preview"]
     },
     PRICING: {
         // Cost per 1M tokens (USD) - Approximate for Gemma 3
@@ -25,9 +26,12 @@ export const CONFIG = {
     }
 };
 
-if (!CONFIG.SOURCE_REPOS || !CONFIG.GITHUB_TOKEN || !CONFIG.GEMINI_API_KEY) {
-    if (!CONFIG.DRY_RUN) {
-        console.error("Missing required environment variables for production");
-        process.exit(1);
-    }
+if (!CONFIG.SOURCE_REPOS || !CONFIG.GITHUB_TOKEN) {
+    console.error("Missing required environment variables: SOURCE_REPOS and GITHUB_TOKEN must be set.");
+    process.exit(1);
+}
+
+if (!CONFIG.GEMINI_API_KEY && !CONFIG.DRY_RUN) {
+    console.error("Missing required environment variable: GEMINI_API_KEY is required for production.");
+    process.exit(1);
 }

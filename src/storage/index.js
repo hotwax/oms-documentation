@@ -74,3 +74,10 @@ export function getRawContextFilePath(targetMonth) {
 export function getRepoContextFilePath(targetMonth) {
     return CONFIG.REPO_CONTEXT_PATH;
 }
+
+export function saveAgentPrompt(agentName, targetMonth, prompt) {
+    const storageDir = getMonthStorageDir(targetMonth);
+    const filePath = path.join(storageDir, `${agentName}_prompt.md`);
+    fs.writeFileSync(filePath, prompt);
+    console.log(`  [DRY RUN] ${agentName} prompt saved to ${filePath}`);
+}

@@ -1,7 +1,8 @@
 import { analyzeWithGemini } from "../services/gemini.js";
 import { CONFIG } from "../config/index.js";
+import { saveAgentPrompt } from "../storage/index.js";
 
-export async function runSummarizer(cluster, clusterItems) {
+export async function runSummarizer(targetMonth, cluster, clusterItems) {
     const clusterPrompt = `
 You are a Product Manager at HotWax Commerce drafting a release note for a Retailer.
 The reader is enthusiastic about their system and cares about system improvements and new features.
@@ -24,6 +25,11 @@ ${JSON.stringify(clusterItems, null, 2)}
 
 Output JUST the summary text.
 `;
+
+    if (CONFIG.DRY_RUN) {
+        saveAgentPrompt(`summarizer_${cluster.name.replace(/\s+/g, "_")}`, targetMonth, clusterPrompt);
+        return `Mock summary for cluster: ${cluster.name}. This is a cohesive release note entry summarizing the updates in this cluster.`;
+    }
 
     return await analyzeWithGemini(clusterPrompt, CONFIG.MODEL_CONFIG.SUMMARIZER);
 }

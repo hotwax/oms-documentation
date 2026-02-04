@@ -1,5 +1,6 @@
 import { analyzeWithGemini } from "../services/gemini.js";
 import { CONFIG } from "../config/index.js";
+import { saveAgentPrompt } from "../storage/index.js";
 import fs from "fs";
 
 export async function runSynthesizer(targetMonth, clusterSummaries) {
@@ -46,6 +47,11 @@ Structure:
 [Summary]
 *Sources: [repo#123](url), ...*
 `;
+
+    if (CONFIG.DRY_RUN) {
+        saveAgentPrompt("synthesizer", targetMonth, finalPrompt);
+        return finalPrompt;
+    }
 
     return await analyzeWithGemini(finalPrompt, CONFIG.MODEL_CONFIG.SYNTHESIZER);
 }

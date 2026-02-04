@@ -20,25 +20,6 @@ function calculateCost(modelName, usage) {
 }
 
 export async function analyzeWithGemini(prompt, models = CONFIG.DEFAULT_MODELS, retries = 5) {
-    if (CONFIG.DRY_RUN) {
-        const selectedModel = models[0];
-        console.log(`[DRY RUN] Simulating AI call with model: ${selectedModel}`);
-        
-        if (prompt.includes("JSON")) {
-            // For organizer and other JSON-expecting agents
-            return JSON.stringify({
-                repoLogicalNames: { "owner/repo": "DRY RUN LOGICAL NAME" },
-                clusters: [ { 
-                    name: "DRY RUN CLUSTER", 
-                    reason: `[DRY RUN PROMPT]\n${prompt}`, 
-                    itemIds: ["dry-run-item-id"] 
-                } ],
-                noiseItemIds: []
-            });
-        }
-        return `[DRY RUN PROMPT]\n${prompt}`;
-    }
-
     // Proactive delay before call to manage RPM
     await delay(5000);
 

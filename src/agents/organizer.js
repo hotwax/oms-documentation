@@ -2,6 +2,7 @@ import { analyzeWithGemini } from "../services/gemini.js";
 import { CONFIG } from "../config/index.js";
 import fs from "fs";
 import path from "path";
+import { saveAgentPrompt } from "../storage/index.js";
 
 export async function summarizeReadmesBatched(repoData) {
     if (repoData.length === 0) return {};
@@ -21,36 +22,39 @@ Format your output EXACTLY as a JSON object with this structure:
 }
 
 Repositories:
-${repoData.map(r => `--- ${r.repoFull} ---\n${r.readme}`).join('\n\n')}
+${repoData.map(r => `--- ${r.repoFull} ---\n${r.readme}`).join("\n\n")}
 `;
 
-    if (CONFIG.DRY_RUN) {
-        console.log(`[DRY RUN] Logging batched README request`);
-        const mockSummaries = {};
-        for (const { repoFull } of repoData) {
-            mockSummaries[repoFull] = {
-                description: `[DRY RUN PROMPT]\n${prompt}`,
-                relations: "Dry run relations"
-            };
-        }
-        return mockSummaries;
-    }
-
-    const response = await analyzeWithGemini(prompt, CONFIG.MODEL_CONFIG.ORGANIZER);
+    const result = await analyzeWithGemini(prompt);
+    
     try {
-        const parsed = JSON.parse(response.replace(/```json|```/g, "").trim());
-        return parsed.summaries || {};
-    } catch (e) {
-        console.error("Failed to parse batched README response:", e);
-        const fallback = {};
-        for (const { repoFull } of repoData) {
-            fallback[repoFull] = { description: "Parsing failed.", relations: "Parsing failed." };
+        const jsonMatch = result.match(/\{[\s\S]*\}/);
+        if (jsonMatch) {
+            const parsed = JSON.parse(jsonMatch[0]);
+            return parsed.summaries || {};
         }
-        return fallback;
+    } catch (error) {
+        console.error("Error parsing batched README summaries:", error);
     }
+    return {};
 }
 
-export async function runOrganizer(repoMetadata, itemMetadata) {
+export async function fetchRepoReadme(owner, repo) {
+    const readmeUrl = `https://raw.githubusercontent.com/${owner}/${repo}/master/README.md`;
+    try {
+        const response = await fetch(readmeUrl);
+        if (response.ok) return await response.text();
+        
+        const mainUrl = `https://raw.githubusercontent.com/${owner}/${repo}/main/README.md`;
+        const mainResponse = await fetch(mainUrl);
+        if (mainResponse.ok) return await mainResponse.text();
+    } catch (e) {
+        console.warn(`Could not fetch README for ${owner}/${repo}`);
+    }
+    return "";
+}
+
+export async function runOrganizer(targetMonth, repoMetadata, itemMetadata) {
     const organizerPrompt = `
 You are a Lead Architect for HotWax Commerce. Analyze these repos and PRs to create logical clusters for a release note.
 
@@ -68,6 +72,7 @@ Step 2: Organize PRs into Clusters
 - **STRICT PROHIBITION**: DO NOT use words like "Enhanced", "Streamlined", "Improvements", "Enhancements", "Updates", "Fixes", "Handling", or "Logic" in cluster names.
  
 Item Metadata (Full Context):
+Analyze the title, body, and linked issues of each item to understand its business impact and relationship to other items.
 ${JSON.stringify(itemMetadata, null, 2)}
 
 Output ONLY a JSON object in this format:
@@ -78,6 +83,38 @@ Output ONLY a JSON object in this format:
 }
 `;
 
-    const response = await analyzeWithGemini(organizerPrompt, CONFIG.MODEL_CONFIG.ORGANIZER);
-    return JSON.parse(response.replace(/```json|```/g, "").trim());
+    if (CONFIG.DRY_RUN) {
+        saveAgentPrompt("organizer", targetMonth, organizerPrompt);
+        
+        return {
+            repoLogicalNames: {},
+            clusters: [
+                {
+                    name: "Inventory Synchronization",
+                    reason: "Mock reason for Inventory Synchronization cluster.",
+                    itemIds: itemMetadata.slice(0, 3).map(i => i.id)
+                },
+                {
+                    name: "Order Management",
+                    reason: "Mock reason for Order Management cluster.",
+                    itemIds: itemMetadata.slice(3, 6).map(i => i.id)
+                }
+            ],
+            noiseItemIds: []
+        };
+    }
+
+    const result = await analyzeWithGemini(organizerPrompt, CONFIG.MODEL_CONFIG.ORGANIZER);
+    
+    const fallback = { repoLogicalNames: {}, clusters: [], noiseItemIds: [] };
+    try {
+        const jsonMatch = result.match(/\{[\s\S]*\}/);
+        if (jsonMatch) {
+            return JSON.parse(jsonMatch[0]);
+        }
+        return fallback;
+    } catch (e) {
+        console.error("Error parsing organizer result:", e);
+        return fallback;
+    }
 }

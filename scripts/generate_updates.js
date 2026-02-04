@@ -9,7 +9,8 @@ import {
     appendToRepoContextCache, 
     saveRawContext, 
     saveClusterMatrix,
-    getRawContextFilePath
+    getRawContextFilePath,
+    saveAgentPrompt
 } from "../src/storage/index.js";
 import fs from "fs";
 import path from "path";
@@ -39,6 +40,8 @@ import path from "path";
                 title: item.title,
                 labels: item.labels,
                 type: item.type,
+                body: item.body || "",
+                linkedIssues: item.linkedIssues || [],
                 linkedIssueIds: item.linkedIssues?.map(i => i.number) || []
             });
         }
@@ -126,6 +129,8 @@ import path from "path";
                                 title: itemData.title,
                                 labels: itemData.labels,
                                 type: itemData.type,
+                                body: itemData.body,
+                                linkedIssues: itemData.linkedIssues,
                                 linkedIssueIds: linkedIssues.map(i => i.number)
                             });
 
@@ -144,7 +149,7 @@ import path from "path";
 
     // --- PHASE 1: ORGANIZER AGENT ---
     console.log(`\n🧠 Starting Phase 1: Organizer Agent...`);
-    const matrixResult = await runOrganizer(repoMetadata, itemMetadata);
+    const matrixResult = await runOrganizer(targetMonth, repoMetadata, itemMetadata);
     
     const repoLogicalNames = matrixResult.repoLogicalNames || {};
     for (const [repoId, logicalName] of Object.entries(repoLogicalNames)) {
@@ -171,7 +176,7 @@ import path from "path";
         const clusterItems = cluster.itemIds.map(id => rawDataMap.get(id)).filter(Boolean);
         if (clusterItems.length === 0) continue;
 
-        const summaryText = await runSummarizer(cluster, clusterItems);
+        const summaryText = await runSummarizer(targetMonth, cluster, clusterItems);
         clusterSummaries.push({
             name: cluster.name,
             summary: summaryText,
