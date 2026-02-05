@@ -1,0 +1,262 @@
+
+Generate the final Monthly Release Notes for HotWax Commerce.
+Month: 2026-01
+
+Author persona: Product Manager
+Reader persona: Enthusiastic Retailer
+
+Style Guide:
+# HotWax Product Updates Style Guide
+
+Welcome to HotWax Commerce’s style guide for product updates. This guide helps ensure that our release notes are on-brand, easy to read, and consistent with HotWax’s positioning as an omnichannel OMS for retail.
+
+---
+
+## HotWax’s brand voice: Above all, simple and human
+
+The HotWax voice is how we talk to people. It’s our personality, substance, tone, and style working together.
+
+### Three voice principles
+
+Our voice hinges on crisp simplicity. Bigger ideas and fewer words. Our voice is:
+
+* Warm and relaxed: We’re natural. Less formal, more grounded in real, everyday conversations.
+* Crisp and clear: We’re to the point. We write for scanning first, reading second. We make it simple above all.
+* Ready to lend a hand: We show customers we’re on their side. We anticipate their real needs and offer great information at just the right time.
+
+### Audience Persona
+
+Our content is written **by Product Managers for Retailers**. 
+
+The reader is a retailer who is enthusiastic about their Order Management System (OMS) and Inventory Management System (IMS). They care about how the system helps them grow, but they aren't interested in the weeds of technical debt or code cleanup (unless it directly impacts their day-to-day experience).
+
+### Style tips
+
+A few key elements of writing HotWax’s voice:
+
+* Get to the point fast. Start with the key takeaway. Put the most important thing in the most noticeable spot. Make choices and next steps obvious. Give people just enough information to make decisions confidently.
+* Talk like a person. Choose optimistic, conversational language. Use short everyday words, contractions, and sentence-style capitalization. Shun jargon and acronyms.
+* Simpler is better. Everyone likes clarity and getting to the point. Break it up. Short sentences and fragments are easier to scan and read. Prune excess words.
+
+## Brand identity
+
+#### Company name
+
+* Always use HotWax Commerce in full on first mention.
+* Subsequent mentions can use HotWax if the context is clear.
+* Do not use Hotwax Commerce, lowercase (hotwax commerce), all caps (HOTWAX COMMERCE), or abbreviations (HW Commerce, HW).
+
+### Word choice
+
+HotWax content should be straightforward and useful. Avoid marketing-fluff and prefer concrete claims and examples.
+
+Choose plain words that describe the action directly and avoid using:
+
+“Ensure”
+“Seamlessly”, “effortlessly”, “swiftly”, “effortless”, “flawless”, “smooth”, “enhanced”, “streamlined”
+“Best‑in‑class”, “cutting‑edge”
+“Efficient”
+“game-changer”
+“Leverage”
+“Streamline”
+Excessive adjectives like “vital”, “crucial”, “essential”
+
+### Professional Tone and "AI Slop"
+Avoid common AI filler words and phrases that sound like marketing fluff.
+- Do not use: "unlock", "delve", "comprehensive", "robust", "transformative", "revolutionary".
+- **Strictly no exclamation points**. The tone should be professional, utility-focused, and grounded.
+
+### Tone for New Features
+
+When documenting a new feature, focus on the value and the "newness". 
+
+* Avoid words like "fixed", "issues", "bugs", or "refactored" in the context of a new launch. 
+* Any bugs found and fixed during development should be synthesized into the feature description as improvements or simply omitted if they don't contribute to the story.
+* Maintain a professional tone focused on utility and value.
+
+### Categorization & Specificity
+
+Group updates based on their most specific impact.
+
+* If an update relates to both a general subject (e.g., performance) and a specific feature launch (e.g., "Gift Cards"), it should be grouped with the specific feature.
+* Specificity over generality: "Database indexing for Gift Card lookups" belongs in "Gift Cards", not "System Performance".
+
+#### Core principles
+
+* Use one term for one concept everywhere.
+  Preferred: “order routing engine”, “routing logic”.
+  Avoid: Switching between “allocation engine,” “routing tool”.
+
+* Favor plain, recognizable language over jargon.
+  Preferred: “start order sync”
+  Avoid: “initiate the order synchronization process”
+
+* Introduce technical terms with context.
+
+  Define acronyms or uncommon industry terms the first time you use them.
+
+  Example: HotWax supports BOPIS (Buy Online Pick Up In Store) workflows.
+
+* Don’t invent new words or overly branded terms.  
+    
+* Write in US English.
+  Preferred: fulfillment
+  Avoid: fulfilment (UK spelling)
+
+---
+
+## Acronyms
+
+Acronyms can make content harder to read. Use them carefully.
+
+* Only use acronyms your audience will know. Stick to retail, commerce, or technology standards.
+* Always spell out first mention (unless universally known like API, SKU, URL). Write the full term followed by the acronym in parentheses.
+* Don’t introduce acronyms used only once.
+* Articles (a vs. an): Use depending on pronunciation, not spelling.
+* Making acronyms plural: Add a lowercase s with no apostrophe (e.g., three APIs, multiple SKUs).
+
+---
+
+## Capitalization
+
+HotWax style uses sentence-style capitalization. This means you capitalize only the first word and any proper nouns.
+
+### General guidelines
+
+* Capitalize the first word of a sentence, heading, or title.
+* Capitalize proper nouns:
+  - Company names (Shopify, NetSuite)
+  - Products or solutions (HotWax Commerce Order Management System, BOPIS App)
+  - UI labels and menu options (Submit, Order Details).
+* Use lowercase for everything else.
+* Don’t use ALL CAPS for emphasis. Use italics sparingly if needed.
+
+### Sentence-style capitalization in titles and headings
+
+Use sentence-style capitalization for headings: capitalize the first word, lowercase the rest (except proper nouns).
+
+---
+
+## Grammar and tenses
+
+Readers expect HotWax content to be direct and actionable.
+
+* Active vs. Passive: Prefer active voice.
+  Active: HotWax routes the order to the right store.
+* Verbs & Tenses: Use present tense when describing features.
+  Right: “HotWax routes orders to the right store.”
+* Person: Use the third person ("retailers," "they," "brands") when discussing industry challenges, and second person ("you," "your") when offering direct guidance.
+
+---
+
+## Numbers
+
+* Spell out zero through nine in running text.
+* Use numerals for 10 and above, or for time, measurements, and percentages.
+* Always use numerals with units (e.g., 3 hours, 5% growth).
+
+---
+
+## Lists
+
+* Use lists for clarity and scannability.
+* Capitalize the first word of each bullet.
+* Add a period only if the bullet is a full sentence.
+* Numbered lists: Use when steps must be followed in sequence.
+
+---
+
+## Punctuation
+
+* Periods: End full sentences with a period. Do not use periods at the end of bullet points if they are fragments.
+* Hyphens: Use for compound terms (e.g., real-time data, store-level inventory).
+* Oxford Comma: Always use the final Oxford comma in a series.
+* Exclamation Points: **Do not use exclamation points.** Use periods for all sentences to maintain a professional tone.
+
+---
+
+## Emphasis
+
+* Use bold only for key-value pairs (e.g., **Store priority:** Based on layout).
+* Use backticks for UI elements in documentation and release notes (e.g., Click `Save`).
+
+---
+
+## Formatting Fundamentals
+
+* Single spaces only: Never leave two spaces between words or after punctuation.
+* No leading spaces: Ensure paragraphs and bullets align properly without extra tabs or spaces.
+* Recheck after edits: When changing content, ensure no accidental double spaces or missing punctuation were introduced.
+
+
+Summarized Clusters:
+[
+  {
+    "name": "Inventory Synchronization",
+    "summary": "Mock summary for cluster: Inventory Synchronization. This is a cohesive release note entry summarizing the updates in this cluster.",
+    "prReferences": [
+      {
+        "repo": "hotwax/receiving",
+        "number": "643",
+        "url": "https://github.com/hotwax/receiving/pull/643"
+      },
+      {
+        "repo": "hotwax/receiving",
+        "number": "644",
+        "url": "https://github.com/hotwax/receiving/pull/644"
+      },
+      {
+        "repo": "hotwax/receiving",
+        "number": "641",
+        "url": "https://github.com/hotwax/receiving/pull/641"
+      }
+    ]
+  },
+  {
+    "name": "Order Management",
+    "summary": "Mock summary for cluster: Order Management. This is a cohesive release note entry summarizing the updates in this cluster.",
+    "prReferences": [
+      {
+        "repo": "hotwax/receiving",
+        "number": "621",
+        "url": "https://github.com/hotwax/receiving/pull/621"
+      },
+      {
+        "repo": "hotwax/receiving",
+        "number": "636",
+        "url": "https://github.com/hotwax/receiving/pull/636"
+      },
+      {
+        "repo": "hotwax/receiving",
+        "number": "638",
+        "url": "https://github.com/hotwax/receiving/pull/638"
+      }
+    ]
+  }
+]
+
+Assemble the final document. Group the clusters under logical "App/Module" headers.
+Include a 2-sentence intro summarizing the month.
+
+Structure Guidelines:
+- **User-Facing First**: Prioritize new features, UI improvements, and business logic changes at the top.
+- **System Updates at the Bottom**: Any "Technical Debt", "Code Cleanup", or backend-only changes (e.g., library migrations or internal logging updates) must be grouped under a final "System & Core Updates" section at the end of the document.
+- **Tone Check**: Ensure the tone is professional and utility-focused.
+- **No AI Slop**: Do not use words like "enhanced", "streamlined", or "robust".
+- **No Exclamation Points**: Use periods only. No exclamation points allowed.
+- **Citations**: At the end of each feature/section summary, include the citations provided in the cluster data. Format them as a single line with GitHub pull request links, like: *Sources: [repo#123](url), [repo#456](url)*
+
+Structure:
+# [Month Year] Release Notes
+[Intro]
+
+## [App Name]
+### [Feature Name]
+[Summary]
+*Sources: [repo#123](url), ...*
+...
+
+## System & Core Updates
+### [Technical Update Name]
+[Summary]
+*Sources: [repo#123](url), ...*

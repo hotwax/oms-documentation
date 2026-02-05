@@ -1,166 +1,152 @@
-# Repository Context Cache
-
-This file stores summaries and relations for repositories used in release notes generation to optimize API usage.
-
-<!-- REPO_SUMMARIES_START -->
 
 ## hotwax/receiving
 
 ### Description
-Dry run description for hotwax/receiving
+HotWax Commerce receiving app.  It's a front-end application built with Ionic for managing the receiving process.
 
 ### Relations
-Dry run relations for hotwax/receiving
+Likely interacts with backend services for order and inventory management.  Uses Ionic framework.
 
 ## hotwax/bopis
 
 ### Description
-Dry run description for hotwax/bopis
+HotWax BOPIS (Buy Online, Pick Up In Store) application. A store-ops UI for managing buy-online-pickup-in-store and ship-to-store fulfillment.
 
 ### Relations
-Dry run relations for hotwax/bopis
+Connects to an OMS (Order Management System) backend.  Part of a larger fulfillment ecosystem.
 
 ## hotwax/fulfillment
 
 ### Description
-Dry run description for hotwax/fulfillment
+HotWax Fulfillment PWA for store and warehouse teams to execute order fulfillment workflows (picking, packing, shipping, transfer orders).
 
 ### Relations
-Dry run relations for hotwax/fulfillment
+Connects to HotWax Commerce services.  Part of a larger fulfillment ecosystem, likely related to BOPIS and potentially other apps.
 
 ## hotwax/inventory-count
 
 ### Description
-Dry run description for hotwax/inventory-count
+HotWax Inventory/Cycle Count mobile + web application for physical counts, offline scan event capture, and synchronization with the OMS.
 
 ### Relations
-Dry run relations for hotwax/inventory-count
+Integrates with HotWax OMS for inventory accuracy.  Part of the overall inventory management system.
 
 ## hotwax/transfers
 
 ### Description
-Dry run description for hotwax/transfers
+Transfers App.  Used for managing inventory transfers, likely between stores or warehouses.
 
 ### Relations
-Dry run relations for hotwax/transfers
+Uses Ionic framework. Likely interacts with backend services for inventory and order management.
 
 ## hotwax/facilities
 
 ### Description
-Dry run description for hotwax/facilities
+Facilities application.  The README is empty, so the purpose is unclear.
 
 ### Relations
-Dry run relations for hotwax/facilities
+Unknown.  May relate to store or warehouse locations.
 
 ## hotwax/preorder
 
 ### Description
-Dry run description for hotwax/preorder
+Preorder application. Uses Ionic framework.
 
 ### Relations
-Dry run relations for hotwax/preorder
+Uses Ionic framework.
 
 ## hotwax/hotwax-maarg-util
 
 ### Description
-Dry run description for hotwax/hotwax-maarg-util
+Utility library for linking OFBiz and Moqui instances.
 
 ### Relations
-Dry run relations for hotwax/hotwax-maarg-util
+Used for integrating with OFBiz and Moqui, suggesting these are core components of the HotWax architecture.
 
 ## hotwax/mantle-shopify-connector
 
 ### Description
-Dry run description for hotwax/mantle-shopify-connector
+Moqui runtime component for integrating with Shopify admin APIs.
 
 ### Relations
-Dry run relations for hotwax/mantle-shopify-connector
+Integrates with Shopify.  Uses Moqui framework.
 
 ## hotwax/oms
 
 ### Description
-Dry run description for hotwax/oms
+Order Management System.
 
 ### Relations
-Dry run relations for hotwax/oms
+Central component, likely used by BOPIS, Fulfillment, Inventory Count, and other apps.
 
 ## hotwax/dxp-components
 
 ### Description
-Dry run description for hotwax/dxp-components
+DXP Components for Vue applications. A component library for Vue-based frontends.
 
 ### Relations
-Dry run relations for hotwax/dxp-components
+Provides reusable UI components for other HotWax applications.
 
 ## hotwax/hotwax-shopify-oms-bridge
 
 ### Description
-Dry run description for hotwax/hotwax-shopify-oms-bridge
+Bridge between Shopify and the HotWax OMS.
 
 ### Relations
-Dry run relations for hotwax/hotwax-shopify-oms-bridge
+Connects Shopify to the core OMS system.
 
 ## hotwax/hotwax-oms
 
 ### Description
-Dry run description for hotwax/hotwax-oms
+Order Management System (Apache OFBiz based).
 
 ### Relations
-Dry run relations for hotwax/hotwax-oms
+Core OMS component, likely the backend for many other applications. Based on Apache OFBiz.
 
 ## hotwax/hotwax-poorti
 
 ### Description
-Dry run description for hotwax/hotwax-poorti
+Poorti application. The README is very minimal.
 
 ### Relations
-Dry run relations for hotwax/hotwax-poorti
+Unknown.  May be a related service or application within the HotWax ecosystem.
 
 ## hotwax/job-manager
 
 ### Description
-Dry run description for hotwax/job-manager
+HotWax Commerce Job Manager App. Uses Ionic framework.
 
 ### Relations
-Dry run relations for hotwax/job-manager
+Uses Ionic framework. Likely manages asynchronous tasks or background processes.
 
 ## hotwax/hotwax-ofbiz-oms-usl
 
 ### Description
-Dry run description for hotwax/hotwax-ofbiz-oms-usl
+Apache OFBiz data model as per Moqui entity definition for HotWax generated Feeds.
 
 ### Relations
-Dry run relations for hotwax/hotwax-ofbiz-oms-usl
+Related to OFBiz and Moqui, providing data models for integration.
 
 ## hotwax/mantle-netsuite-connector
 
 ### Description
-Dry run description for hotwax/mantle-netsuite-connector
+NetSuite Connector in Moqui.
 
 ### Relations
-Dry run relations for hotwax/mantle-netsuite-connector
+Integrates with NetSuite. Uses Moqui framework.
 
 ## hotwax/hotwax-unigate
 
 ### Description
-Dry run description for hotwax/hotwax-unigate
+Unigate application. The README is empty, so the purpose is unclear.
 
 ### Relations
-Dry run relations for hotwax/hotwax-unigate
+Unknown.
 
 ## hotwax/OrderRouting
 
 ### Description
-Dry run description for hotwax/OrderRouting
+Order Routing application. Manages the flow of customer orders from point of sale to fulfillment.
 
 ### Relations
-Dry run relations for hotwax/OrderRouting
-
-## hotwax/hc-login
-
-### Description
-This repository contains the frontend code for the Hotwax Customer Login page. It's built using React and provides a user interface for customers to log in to their Hotwax accounts. It appears to be part of a larger Hotwax platform.
-
-### Relations
-Likely related to other Hotwax repositories dealing with user authentication, account management, and the main Hotwax platform frontend.  Specifically, it probably interacts with a backend service for authentication (potentially in a separate repository).
-<!-- REPO_SUMMARIES_END -->
+Likely interacts with OMS, Fulfillment, and potentially other logistics-related applications.

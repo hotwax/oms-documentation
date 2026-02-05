@@ -10,11 +10,13 @@ export const CONFIG = {
     DRY_RUN: process.env.DRY_RUN === 'true' || process.env.PRODUCTION !== 'true',
     REPO_CONTEXT_PATH: path.join("data", process.env.PRODUCTION === 'true' ? "repo-context.md" : "test/repo-context.md"),
     STORAGE_DIR: path.join("data", "raw"),
+    PR_FAQS_DIR: path.join("data", "pr-faqs"),
     DEFAULT_MODELS: ["gemma-3-27b-it", "gemma-3-4b-it", "gemma-3-1b-it"],
     MODEL_CONFIG: {
         ORGANIZER: ["gemini-3-flash-preview"],
         SUMMARIZER: ["gemma-3-27b-it"],
-        SYNTHESIZER: ["gemini-3-flash-preview"]
+        SYNTHESIZER: ["gemini-3-flash-preview"],
+        PRODUCT_UPDATER: ["gemini-3-flash-preview"]
     },
     PRICING: {
         // Cost per 1M tokens (USD) - Approximate for Gemma 3

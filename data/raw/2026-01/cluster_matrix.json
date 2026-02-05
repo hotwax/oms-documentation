@@ -1,0 +1,190 @@
+{
+  "clusters": [
+    {
+      "name": "Transfer Order Notifications",
+      "reason": "Enables push notification support in the Receiving App to alert users in real-time when new transfer orders are available for processing.",
+      "itemIds": [
+        "hotwax/receiving#643",
+        "hotwax/receiving#644"
+      ]
+    },
+    {
+      "name": "Transfer Order Discrepancy Tracking",
+      "reason": "Enables the visibility and tracking of mis-shipped items added during transfer order receiving across the application history and reporting layers.",
+      "itemIds": [
+        "hotwax/receiving#621",
+        "hotwax/receiving#636",
+        "hotwax/receiving#638",
+        "hotwax/hotwax-poorti#210"
+      ]
+    },
+    {
+      "name": "Proof of Delivery",
+      "reason": "Introduces a new workflow to capture customer identity and confirmation at the time of order pickup, including a UI modal for signatures or ID uploads.",
+      "itemIds": [
+        "hotwax/bopis#699",
+        "hotwax/bopis#734",
+        "hotwax/bopis#703",
+        "hotwax/bopis#731",
+        "hotwax/oms#331",
+        "hotwax/hotwax-poorti#84"
+      ]
+    },
+    {
+      "name": "Ship to Store Fulfillment",
+      "reason": "Implements an end-to-end journey for Ship-to-Store orders, including carrier restrictions, arrival tracking at the store, and automated handover communications.",
+      "itemIds": [
+        "hotwax/bopis#729",
+        "hotwax/hotwax-oms#359",
+        "hotwax/hotwax-oms#226",
+        "hotwax/hotwax-oms#227",
+        "hotwax/bopis#702",
+        "hotwax/fulfillment#1555",
+        "hotwax/oms#332",
+        "hotwax/oms#357",
+        "hotwax/hotwax-oms#200",
+        "hotwax/hotwax-oms#312",
+        "hotwax/hotwax-oms#229"
+      ]
+    },
+    {
+      "name": "Inventory Count Management",
+      "reason": "A suite of updates for the Inventory Count App including discontinued product filtering, safety modals for scan removals, and batch hydration for product identifiers.",
+      "itemIds": [
+        "hotwax/inventory-count#1372",
+        "hotwax/inventory-count#1363",
+        "hotwax/inventory-count#1368",
+        "hotwax/inventory-count#1362",
+        "hotwax/inventory-count#1365",
+        "hotwax/inventory-count#1361",
+        "hotwax/inventory-count#1364",
+        "hotwax/inventory-count#1356",
+        "hotwax/inventory-count#1355",
+        "hotwax/inventory-count#1359",
+        "hotwax/inventory-count#1358",
+        "hotwax/inventory-count#1342",
+        "hotwax/inventory-count#1343",
+        "hotwax/inventory-count#1348",
+        "hotwax/inventory-count#1347",
+        "hotwax/inventory-count#1354",
+        "hotwax/inventory-count#1353"
+      ]
+    },
+    {
+      "name": "Shopify Data Reconciliation",
+      "reason": "Automates the identification of discrepancies between Shopify orders and OMS records, generating clear reports to ensure data accuracy across platforms.",
+      "itemIds": [
+        "hotwax/mantle-shopify-connector#212",
+        "hotwax/mantle-shopify-connector#215",
+        "hotwax/mantle-shopify-connector#254",
+        "hotwax/mantle-shopify-connector#204",
+        "hotwax/hotwax-oms#230",
+        "hotwax/hotwax-oms#243",
+        "hotwax/hotwax-oms#244"
+      ]
+    },
+    {
+      "name": "NetSuite Connector Data Feed",
+      "reason": "Synchronizes transfer order items, receipts, and inventory variances with NetSuite while enforcing strict exclusion rules for non-synced orders.",
+      "itemIds": [
+        "hotwax/mantle-netsuite-connector#62",
+        "hotwax/mantle-netsuite-connector#189",
+        "hotwax/mantle-netsuite-connector#177",
+        "hotwax/mantle-netsuite-connector#175",
+        "hotwax/mantle-netsuite-connector#171",
+        "hotwax/mantle-netsuite-connector#194",
+        "hotwax/mantle-netsuite-connector#190",
+        "hotwax/mantle-netsuite-connector#192",
+        "hotwax/mantle-netsuite-connector#173",
+        "hotwax/mantle-netsuite-connector#187",
+        "hotwax/mantle-netsuite-connector#182"
+      ]
+    },
+    {
+      "name": "Inventory Cost Calculation",
+      "reason": "Refines the Weighted Average Cost (WAC) formula to handle negative QOH scenarios and returns, ensuring unit costs remain accurate during receiving transactions.",
+      "itemIds": [
+        "hotwax/hotwax-oms#197",
+        "hotwax/hotwax-oms#212",
+        "hotwax/hotwax-oms#239",
+        "hotwax/hotwax-oms#247",
+        "hotwax/oms#377"
+      ]
+    },
+    {
+      "name": "Facility Access Control",
+      "reason": "Restricts store users to viewing and managing inventory data exclusively for the facilities they are associated with, enhancing system security and data privacy.",
+      "itemIds": [
+        "hotwax/hotwax-oms#194",
+        "hotwax/hotwax-oms#207"
+      ]
+    },
+    {
+      "name": "Kit Order Management",
+      "reason": "Ensures accurate inventory deduction and shipment creation for multi-component kit products during POS sales and return restocks.",
+      "itemIds": [
+        "hotwax/hotwax-oms#204",
+        "hotwax/hotwax-oms#211",
+        "hotwax/hotwax-oms#225",
+        "hotwax/hotwax-oms#235",
+        "hotwax/hotwax-oms#246",
+        "hotwax/hotwax-oms#257",
+        "hotwax/hotwax-oms#183",
+        "hotwax/hotwax-oms#192",
+        "hotwax/hotwax-oms#195",
+        "hotwax/hotwax-oms#293"
+      ]
+    },
+    {
+      "name": "Embedded App Authentication",
+      "reason": "Implements the login flow for Shopify Embedded Apps, allowing users to authenticate directly within the Shopify Admin and POS environments.",
+      "itemIds": [
+        "hotwax/dxp-components#429",
+        "hotwax/dxp-components#445",
+        "hotwax/dxp-components#430"
+      ]
+    },
+    {
+      "name": "Digital Product Payment Capture",
+      "reason": "Automates the creation of payment capture tags when the first physical or digital item in an order is completed.",
+      "itemIds": [
+        "hotwax/oms#388",
+        "hotwax/hotwax-oms#349",
+        "hotwax/hotwax-poorti#212"
+      ]
+    },
+    {
+      "name": "Transfer Order Receipt Reconciliation",
+      "reason": "Handles complex receiving scenarios like over-receiving and multi-shipment fulfillment by correctly splitting quantities across shipment receipt records.",
+      "itemIds": [
+        "hotwax/hotwax-poorti#127",
+        "hotwax/hotwax-poorti#182",
+        "hotwax/oms#359",
+        "hotwax/hotwax-poorti#173"
+      ]
+    }
+  ],
+  "noiseItemIds": [
+    "hotwax/receiving#641",
+    "hotwax/receiving#639",
+    "hotwax/bopis#728",
+    "hotwax/bopis#730",
+    "hotwax/bopis#708",
+    "hotwax/bopis#722",
+    "hotwax/bopis#720",
+    "hotwax/bopis#721",
+    "hotwax/bopis#725",
+    "hotwax/hotwax-oms#298",
+    "hotwax/hotwax-oms#263",
+    "hotwax/hotwax-oms#261",
+    "hotwax/hotwax-oms#265",
+    "hotwax/hotwax-oms#279",
+    "hotwax/hotwax-oms#271",
+    "hotwax/mantle-netsuite-connector#184",
+    "hotwax/OrderRouting#108",
+    "hotwax/job-manager#866",
+    "hotwax/job-manager#867",
+    "hotwax/oms#370",
+    "hotwax/hotwax-oms#201"
+  ]
+}

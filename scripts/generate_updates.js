@@ -1,16 +1,24 @@
 import { CONFIG } from "../src/config/index.js";
 import { getTargetMonth, extractPRRefsWithLinks, extractLinkedIssueNumbers } from "../src/utils/index.js";
-import { fetchMonthlyReleases, fetchContext, fetchRepoReadme } from "../src/services/github.js";
-import { summarizeReadmesBatched, runOrganizer } from "../src/agents/organizer.js";
+import { fetchMonthlyReleases, fetchContext } from "../src/services/github.js";
+import { refreshRepoContextCache, runOrganizer } from "../src/agents/organizer.js";
 import { runSummarizer } from "../src/agents/summarizer.js";
 import { runSynthesizer } from "../src/agents/synthesizer.js";
+import { 
+    loadPendingPRFAQs, 
+    identifyProductUpdateMatches, 
+    runProductUpdater, 
+    markFAQAsCompleted 
+} from "../src/agents/product_updater.js";
 import { 
     loadRepoContextCache, 
     appendToRepoContextCache, 
     saveRawContext, 
     saveClusterMatrix,
     getRawContextFilePath,
-    saveAgentPrompt
+    saveAgentPrompt,
+    saveReleaseNotes,
+    saveProductUpdate
 } from "../src/storage/index.js";
 import fs from "fs";
 import path from "path";
@@ -58,25 +66,7 @@ import path from "path";
         }
     } else {
         // 0.1 Pre-fetch missing repository context in batch
-        const uncachedRepos = [];
-        for (const repoFull of repos) {
-            if (!repoCache[repoFull]) {
-                const [owner, repo] = repoFull.split("/");
-                console.log(`  Cache miss for ${repoFull}. Fetching README...`);
-                const readme = await fetchRepoReadme(owner, repo);
-                uncachedRepos.push({ repoFull, readme });
-            }
-        }
-
-        if (uncachedRepos.length > 0) {
-            console.log(`  Summarizing ${uncachedRepos.length} repositories in batch...`);
-            const batchedSummaries = await summarizeReadmesBatched(uncachedRepos);
-            for (const { repoFull } of uncachedRepos) {
-                const summary = batchedSummaries[repoFull] || { description: "No description provided.", relations: "No relations identified." };
-                repoCache[repoFull] = summary;
-                appendToRepoContextCache(repoFull, summary.description, summary.relations);
-            }
-        }
+        await refreshRepoContextCache(repos, repoCache);
 
         for (const repoFull of repos) {
             const [owner, repo] = repoFull.split("/");
@@ -192,10 +182,43 @@ import path from "path";
     console.log(`\n🖋️  Starting Phase 3: Conformity Agent (Synthesis)...`);
     const finalNotes = await runSynthesizer(targetMonth, clusterSummaries);
 
-    const baseDraftDir = CONFIG.DRY_RUN ? path.join("drafts", "test") : "drafts";
-    fs.mkdirSync(baseDraftDir, { recursive: true });
-    const outFile = path.join(baseDraftDir, `${targetMonth}.md`);
-    
-    fs.writeFileSync(outFile, finalNotes);
-    console.log(`\n✓ Final release notes generated: ${outFile}`);
+    saveReleaseNotes(targetMonth, finalNotes);
+
+    // --- PHASE 4: PRODUCT UPDATE GENERATION ---
+    console.log(`\n📽️  Starting Phase 4: Product Update Generation...`);
+    const pendingFAQs = loadPendingPRFAQs();
+    if (pendingFAQs.length > 0) {
+        console.log(`  Found ${pendingFAQs.length} pending PR FAQs. Matching with clusters...`);
+        const matches = await identifyProductUpdateMatches(targetMonth, matrix.clusters, pendingFAQs);
+        
+        if (matches.length > 0) {
+            console.log(`  Found ${matches.length} matches. Generating product updates...`);
+
+            for (const match of matches) {
+                const faq = pendingFAQs[match.faqIndex];
+                const clusterIndices = Array.isArray(match.clusterIndices) ? match.clusterIndices : [match.clusterIndex];
+                
+                for (const clusterIdx of clusterIndices) {
+                    const cluster = matrix.clusters[clusterIdx];
+                    if (!cluster) continue;
+
+                    console.log(`  Drafting product update for: ${faq.title} (Matched with cluster: ${cluster.name})...`);
+                    const clusterItems = cluster.itemIds.map(id => rawDataMap.get(id)).filter(Boolean);
+                    
+                    const productUpdate = await runProductUpdater(targetMonth, cluster, clusterItems, faq);
+                    const safeTitle = faq.title.replace(/[^a-z0-9]/gi, '_').toLowerCase();
+                    
+                    saveProductUpdate(targetMonth, safeTitle, productUpdate);
+                }
+
+                if (!CONFIG.DRY_RUN) {
+                    markFAQAsCompleted(faq, targetMonth);
+                }
+            }
+        } else {
+            console.log("  No matches found between PR FAQs and this month's clusters.");
+        }
+    } else {
+        console.log("  No pending PR FAQs found.");
+    }
 })();

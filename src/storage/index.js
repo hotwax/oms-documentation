@@ -54,6 +54,13 @@ export function getMonthStorageDir(targetMonth) {
     return dir;
 }
 
+export function getDraftDir(targetMonth) {
+    let dir = path.join("drafts", targetMonth);
+    if (CONFIG.DRY_RUN) dir = path.join(dir, "test");
+    if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+    return dir;
+}
+
 export function saveRawContext(targetMonth, itemData) {
     const storageDir = getMonthStorageDir(targetMonth);
     const filePath = path.join(storageDir, `raw_context.jsonl`);
@@ -80,4 +87,23 @@ export function saveAgentPrompt(agentName, targetMonth, prompt) {
     const filePath = path.join(storageDir, `${agentName}_prompt.md`);
     fs.writeFileSync(filePath, prompt);
     console.log(`  [DRY RUN] ${agentName} prompt saved to ${filePath}`);
+}
+
+export function saveReleaseNotes(targetMonth, content) {
+    const draftDir = getDraftDir(targetMonth);
+    const filePath = path.join(draftDir, "release-notes.md");
+    fs.writeFileSync(filePath, content);
+    console.log(`  ✓ Release notes saved to ${filePath}`);
+    return filePath;
+}
+
+export function saveProductUpdate(targetMonth, safeTitle, content) {
+    const draftDir = getDraftDir(targetMonth);
+    const productUpdateDir = path.join(draftDir, "product-updates");
+    if (!fs.existsSync(productUpdateDir)) fs.mkdirSync(productUpdateDir, { recursive: true });
+    
+    const filePath = path.join(productUpdateDir, `${safeTitle}.md`);
+    fs.writeFileSync(filePath, content);
+    console.log(`  ✓ Product update draft saved: ${filePath}`);
+    return filePath;
 }
