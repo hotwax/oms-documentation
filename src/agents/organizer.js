@@ -3,7 +3,7 @@ import { fetchRepoReadme } from "../services/github.js";
 import { CONFIG } from "../config/index.js";
 import fs from "fs";
 import path from "path";
-import { saveAgentPrompt, appendToRepoContextCache } from "../storage/index.js";
+import { saveAgentPrompt, appendToRepoContextCache, saveAgentResponse } from "../storage/index.js";
 
 export async function summarizeReadmesBatched(repoData) {
     if (repoData.length === 0) return {};
@@ -83,7 +83,8 @@ Step 2: Organize PRs into Clusters
 - **CRITICAL MERGING RULE**: Do NOT create separate sections for technical sub-steps.
 - **Specificity Rule**: While grouping by theme, ensure that general utility updates are pulled into the specific feature they support. For example, a "PDF Generation" fix that was made specifically for "Digital Invoicing" should be clustered with "Digital Invoicing".
 - **Naming Rule**: Give clusters descriptive, utility-focused names. Use ONLY simple nouns (e.g., "Inventory Synchronization").
-- If you feel like an github pr or issue is not descriptive enough to logically cluster it but isn't noise, then throw them into a seperate list of "Need clarification" so that a user can manually review them.
+- **CRITICAL ACCOUNTABILITY RULE**: You MUST account for EVERY SINGLE item ID provided in the "Item Metadata" section below. EVERY ID must appear in exactly one of these three fields: "clusters", "noiseItemIds", or "needClarificationItemIds". DO NOT omit any IDs.
+- If you feel like an github pr or issue is not descriptive enough to logically cluster it but isn't noise, then throw them into "needClarificationItemIds".
 - **STRICT PROHIBITION**: DO NOT use words like "Enhanced", "Streamlined", "Improvements", "Enhancements", "Updates", "Fixes", "Handling", or "Logic" in cluster names.
 
 
@@ -95,7 +96,7 @@ Output ONLY a JSON object in this format:
 {
   "repoLogicalNames": { "owner/repo": "Logical Name" },
   "clusters": [ { "name": "Cluster Name", "reason": "...", "itemIds": ["id", ...] } ],
-  "noiseItemIds": ["id", ...]
+  "noiseItemIds": ["id", ...],
   "needClarificationItemIds": ["id", ...]
 }
 `;
@@ -103,7 +104,7 @@ Output ONLY a JSON object in this format:
     if (CONFIG.DRY_RUN) {
         saveAgentPrompt("organizer", targetMonth, organizerPrompt);
         
-        return {
+        const mockResult = {
             repoLogicalNames: {},
             clusters: [
                 {
@@ -117,17 +118,49 @@ Output ONLY a JSON object in this format:
                     itemIds: itemMetadata.slice(3, 6).map(i => i.id)
                 }
             ],
-            noiseItemIds: []
+            noiseItemIds: [],
+            needClarificationItemIds: []
         };
+
+        // Post-processing validation for dry run
+        const categorizedIds = new Set();
+        (mockResult.clusters || []).forEach(c => (c.itemIds || []).forEach(id => categorizedIds.add(id)));
+        (mockResult.noiseItemIds || []).forEach(id => categorizedIds.add(id));
+        (mockResult.needClarificationItemIds || []).forEach(id => categorizedIds.add(id));
+
+        const missingIds = itemMetadata.filter(item => !categorizedIds.has(item.id)).map(item => item.id);
+        if (missingIds.length > 0) {
+            console.warn(`  ⚠️  [DRY RUN] Organizer mock data missed ${missingIds.length} items. Automatically adding them to needClarificationItemIds.`);
+            mockResult.needClarificationItemIds.push(...missingIds);
+        }
+
+        return mockResult;
     }
 
     const result = await analyzeWithGemini(organizerPrompt, CONFIG.MODEL_CONFIG.ORGANIZER);
+    saveAgentResponse("organizer", targetMonth, result);
     
-    const fallback = { repoLogicalNames: {}, clusters: [], noiseItemIds: [] };
+    const fallback = { repoLogicalNames: {}, clusters: [], noiseItemIds: [], needClarificationItemIds: [] };
     try {
         const jsonMatch = result.match(/\{[\s\S]*\}/);
         if (jsonMatch) {
-            return JSON.parse(jsonMatch[0]);
+            const parsed = JSON.parse(jsonMatch[0]);
+            
+            // Post-processing validation: Ensure all IDs are accounted for
+            const categorizedIds = new Set();
+            (parsed.clusters || []).forEach(c => (c.itemIds || []).forEach(id => categorizedIds.add(id)));
+            (parsed.noiseItemIds || []).forEach(id => categorizedIds.add(id));
+            (parsed.needClarificationItemIds || []).forEach(id => categorizedIds.add(id));
+
+            const missingIds = itemMetadata.filter(item => !categorizedIds.has(item.id)).map(item => item.id);
+            
+            if (missingIds.length > 0) {
+                console.warn(`  ⚠️  Organizer missed ${missingIds.length} items. Automatically adding them to needClarificationItemIds.`);
+                if (!parsed.needClarificationItemIds) parsed.needClarificationItemIds = [];
+                parsed.needClarificationItemIds.push(...missingIds);
+            }
+
+            return parsed;
         }
         return fallback;
     } catch (e) {

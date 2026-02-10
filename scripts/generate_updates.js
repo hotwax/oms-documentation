@@ -148,7 +148,8 @@ import path from "path";
 
     const matrix = { 
         clusters: matrixResult.clusters || [], 
-        noiseItemIds: matrixResult.noiseItemIds || [] 
+        noiseItemIds: matrixResult.noiseItemIds || [],
+        needClarificationItemIds: matrixResult.needClarificationItemIds || []
     };
 
     saveClusterMatrix(targetMonth, matrix);

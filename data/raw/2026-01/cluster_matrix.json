@@ -1,26 +1,27 @@
 {
   "clusters": [
     {
-      "name": "Transfer Order Notifications",
-      "reason": "Enables push notification support in the Receiving App to alert users in real-time when new transfer orders are available for processing.",
+      "name": "Transfer Order Receipt Notifications",
+      "reason": "Push notification support in the receiving application to alert store users of incoming inventory transfers.",
       "itemIds": [
         "hotwax/receiving#643",
         "hotwax/receiving#644"
       ]
     },
     {
-      "name": "Transfer Order Discrepancy Tracking",
-      "reason": "Enables the visibility and tracking of mis-shipped items added during transfer order receiving across the application history and reporting layers.",
+      "name": "Mis-shipped Item Management",
+      "reason": "Tracking and processing items received that were not part of the original transfer shipment, including synchronization to external ERP systems.",
       "itemIds": [
         "hotwax/receiving#621",
         "hotwax/receiving#636",
         "hotwax/receiving#638",
-        "hotwax/hotwax-poorti#210"
+        "hotwax/hotwax-poorti#210",
+        "hotwax/mantle-netsuite-connector#171"
       ]
     },
     {
       "name": "Proof of Delivery",
-      "reason": "Introduces a new workflow to capture customer identity and confirmation at the time of order pickup, including a UI modal for signatures or ID uploads.",
+      "reason": "Security features for customer pickups including identity verification and pickup confirmation workflows.",
       "itemIds": [
         "hotwax/bopis#699",
         "hotwax/bopis#734",
@@ -32,77 +33,112 @@
     },
     {
       "name": "Ship to Store Fulfillment",
-      "reason": "Implements an end-to-end journey for Ship-to-Store orders, including carrier restrictions, arrival tracking at the store, and automated handover communications.",
+      "reason": "End-to-end enhancements for orders shipped from warehouses to retail stores for customer pickup, including carrier filtering and status tracking.",
       "itemIds": [
         "hotwax/bopis#729",
-        "hotwax/hotwax-oms#359",
-        "hotwax/hotwax-oms#226",
-        "hotwax/hotwax-oms#227",
         "hotwax/bopis#702",
         "hotwax/fulfillment#1555",
         "hotwax/oms#332",
         "hotwax/oms#357",
+        "hotwax/hotwax-oms#359",
         "hotwax/hotwax-oms#200",
-        "hotwax/hotwax-oms#312",
-        "hotwax/hotwax-oms#229"
+        "hotwax/hotwax-oms#312"
       ]
     },
     {
-      "name": "Inventory Count Management",
-      "reason": "A suite of updates for the Inventory Count App including discontinued product filtering, safety modals for scan removals, and batch hydration for product identifiers.",
+      "name": "Inventory Cycle Count",
+      "reason": "Comprehensive updates to inventory counting workflows, including local data management, product hydration, and variance review processes.",
       "itemIds": [
         "hotwax/inventory-count#1372",
         "hotwax/inventory-count#1363",
-        "hotwax/inventory-count#1368",
         "hotwax/inventory-count#1362",
-        "hotwax/inventory-count#1365",
         "hotwax/inventory-count#1361",
+        "hotwax/inventory-count#1368",
+        "hotwax/inventory-count#1365",
         "hotwax/inventory-count#1364",
         "hotwax/inventory-count#1356",
-        "hotwax/inventory-count#1355",
         "hotwax/inventory-count#1359",
-        "hotwax/inventory-count#1358",
         "hotwax/inventory-count#1342",
-        "hotwax/inventory-count#1343",
         "hotwax/inventory-count#1348",
-        "hotwax/inventory-count#1347",
         "hotwax/inventory-count#1354",
-        "hotwax/inventory-count#1353"
+        "hotwax/hotwax-poorti#194",
+        "hotwax/hotwax-poorti#155",
+        "hotwax/hotwax-poorti#141",
+        "hotwax/hotwax-poorti#150",
+        "hotwax/hotwax-poorti#145",
+        "hotwax/hotwax-poorti#151",
+        "hotwax/hotwax-poorti#154",
+        "hotwax/hotwax-poorti#156",
+        "hotwax/hotwax-poorti#167",
+        "hotwax/hotwax-poorti#168",
+        "hotwax/hotwax-poorti#181",
+        "hotwax/hotwax-poorti#178",
+        "hotwax/hotwax-poorti#185",
+        "hotwax/oms#363",
+        "hotwax/hotwax-oms#207"
       ]
     },
     {
-      "name": "Shopify Data Reconciliation",
-      "reason": "Automates the identification of discrepancies between Shopify orders and OMS records, generating clear reports to ensure data accuracy across platforms.",
+      "name": "Agent Instruction Execution",
+      "reason": "Implementation of an agent-based model for devices to receive and execute instructions from the server.",
       "itemIds": [
-        "hotwax/mantle-shopify-connector#212",
-        "hotwax/mantle-shopify-connector#215",
-        "hotwax/mantle-shopify-connector#254",
-        "hotwax/mantle-shopify-connector#204",
+        "hotwax/inventory-count#1369",
+        "hotwax/inventory-count#1370",
+        "hotwax/hotwax-maarg-util#22"
+      ]
+    },
+    {
+      "name": "Shopify Data Integration",
+      "reason": "Synchronization of customer profiles, gift card data, order tags, and transaction history between Shopify and the OMS.",
+      "itemIds": [
+        "hotwax/mantle-shopify-connector#198",
+        "hotwax/mantle-shopify-connector#200",
+        "hotwax/mantle-shopify-connector#203",
+        "hotwax/mantle-shopify-connector#206",
+        "hotwax/mantle-shopify-connector#210",
+        "hotwax/mantle-shopify-connector#214",
+        "hotwax/mantle-shopify-connector#216",
+        "hotwax/mantle-shopify-connector#217",
+        "hotwax/hotwax-shopify-oms-bridge#36",
+        "hotwax/hotwax-oms#183",
+        "hotwax/hotwax-oms#192",
         "hotwax/hotwax-oms#230",
         "hotwax/hotwax-oms#243",
-        "hotwax/hotwax-oms#244"
+        "hotwax/hotwax-oms#244",
+        "hotwax/hotwax-oms#254",
+        "hotwax/hotwax-oms#314",
+        "hotwax/hotwax-oms#296"
       ]
     },
     {
-      "name": "NetSuite Connector Data Feed",
-      "reason": "Synchronizes transfer order items, receipts, and inventory variances with NetSuite while enforcing strict exclusion rules for non-synced orders.",
+      "name": "Shopify Order Reconciliation",
+      "reason": "Service to identify and report discrepancies in order statuses and quantities between Shopify and the internal system.",
       "itemIds": [
-        "hotwax/mantle-netsuite-connector#62",
-        "hotwax/mantle-netsuite-connector#189",
-        "hotwax/mantle-netsuite-connector#177",
-        "hotwax/mantle-netsuite-connector#175",
-        "hotwax/mantle-netsuite-connector#171",
+        "hotwax/mantle-shopify-connector#212",
+        "hotwax/mantle-shopify-connector#215"
+      ]
+    },
+    {
+      "name": "NetSuite Data Synchronization",
+      "reason": "Automated feeds for inventory resets, transfer order movements, and shipment reconciliations with NetSuite.",
+      "itemIds": [
         "hotwax/mantle-netsuite-connector#194",
         "hotwax/mantle-netsuite-connector#190",
+        "hotwax/mantle-netsuite-connector#193",
         "hotwax/mantle-netsuite-connector#192",
-        "hotwax/mantle-netsuite-connector#173",
+        "hotwax/mantle-netsuite-connector#62",
         "hotwax/mantle-netsuite-connector#187",
-        "hotwax/mantle-netsuite-connector#182"
+        "hotwax/mantle-netsuite-connector#177",
+        "hotwax/mantle-netsuite-connector#182",
+        "hotwax/mantle-netsuite-connector#175",
+        "hotwax/mantle-netsuite-connector#173",
+        "hotwax/mantle-netsuite-connector#189",
+        "hotwax/hotwax-poorti#170"
       ]
     },
     {
-      "name": "Inventory Cost Calculation",
-      "reason": "Refines the Weighted Average Cost (WAC) formula to handle negative QOH scenarios and returns, ensuring unit costs remain accurate during receiving transactions.",
+      "name": "Product Cost Calculation",
+      "reason": "Accuracy improvements for Weighted Average Cost (WAC) calculations across receiving and return scenarios.",
       "itemIds": [
         "hotwax/hotwax-oms#197",
         "hotwax/hotwax-oms#212",
@@ -112,41 +148,36 @@
       ]
     },
     {
-      "name": "Facility Access Control",
-      "reason": "Restricts store users to viewing and managing inventory data exclusively for the facilities they are associated with, enhancing system security and data privacy.",
+      "name": "Transfer Order Lifecycle",
+      "reason": "Enhancements to transfer order approval logic, item-level receiving, and fulfillment reconciliation.",
       "itemIds": [
+        "hotwax/oms#350",
+        "hotwax/oms#359",
+        "hotwax/oms#368",
+        "hotwax/oms#379",
+        "hotwax/hotwax-poorti#164",
+        "hotwax/hotwax-poorti#169",
+        "hotwax/hotwax-poorti#127",
+        "hotwax/hotwax-poorti#182",
+        "hotwax/hotwax-poorti#173"
+      ]
+    },
+    {
+      "name": "User Permission Management",
+      "reason": "Implementation of fine-grained access control based on user roles, facilities, and security groups.",
+      "itemIds": [
+        "hotwax/hotwax-maarg-util#11",
+        "hotwax/hotwax-maarg-util#12",
+        "hotwax/oms#364",
+        "hotwax/oms#365",
+        "hotwax/oms#369",
         "hotwax/hotwax-oms#194",
-        "hotwax/hotwax-oms#207"
+        "hotwax/hotwax-poorti#157"
       ]
     },
     {
-      "name": "Kit Order Management",
-      "reason": "Ensures accurate inventory deduction and shipment creation for multi-component kit products during POS sales and return restocks.",
-      "itemIds": [
-        "hotwax/hotwax-oms#204",
-        "hotwax/hotwax-oms#211",
-        "hotwax/hotwax-oms#225",
-        "hotwax/hotwax-oms#235",
-        "hotwax/hotwax-oms#246",
-        "hotwax/hotwax-oms#257",
-        "hotwax/hotwax-oms#183",
-        "hotwax/hotwax-oms#192",
-        "hotwax/hotwax-oms#195",
-        "hotwax/hotwax-oms#293"
-      ]
-    },
-    {
-      "name": "Embedded App Authentication",
-      "reason": "Implements the login flow for Shopify Embedded Apps, allowing users to authenticate directly within the Shopify Admin and POS environments.",
-      "itemIds": [
-        "hotwax/dxp-components#429",
-        "hotwax/dxp-components#445",
-        "hotwax/dxp-components#430"
-      ]
-    },
-    {
-      "name": "Digital Product Payment Capture",
-      "reason": "Automates the creation of payment capture tags when the first physical or digital item in an order is completed.",
+      "name": "Order Payment Capture",
+      "reason": "Automated services to manage payment capture tags based on order item fulfillment status.",
       "itemIds": [
         "hotwax/oms#388",
         "hotwax/hotwax-oms#349",
@@ -154,13 +185,79 @@
       ]
     },
     {
-      "name": "Transfer Order Receipt Reconciliation",
-      "reason": "Handles complex receiving scenarios like over-receiving and multi-shipment fulfillment by correctly splitting quantities across shipment receipt records.",
+      "name": "Kit Product Fulfillment",
+      "reason": "Logic updates to ensure inventory deductions and shipment creation occur correctly for kit component items.",
       "itemIds": [
-        "hotwax/hotwax-poorti#127",
-        "hotwax/hotwax-poorti#182",
-        "hotwax/oms#359",
-        "hotwax/hotwax-poorti#173"
+        "hotwax/hotwax-oms#204",
+        "hotwax/hotwax-oms#211",
+        "hotwax/hotwax-oms#237",
+        "hotwax/hotwax-oms#235",
+        "hotwax/hotwax-oms#257",
+        "hotwax/hotwax-oms#246",
+        "hotwax/hotwax-oms#225"
+      ]
+    },
+    {
+      "name": "Application Authentication Flow",
+      "reason": "Authentication logic for users logging into Shopify embedded applications via the App Bridge.",
+      "itemIds": [
+        "hotwax/dxp-components#429",
+        "hotwax/dxp-components#445",
+        "hotwax/dxp-components#430",
+        "hotwax/dxp-components#451"
+      ]
+    },
+    {
+      "name": "Order Return Management",
+      "reason": "Management of external return identifications and exchange credit logic within the return processing workflow.",
+      "itemIds": [
+        "hotwax/hotwax-oms#216",
+        "hotwax/hotwax-oms#206",
+        "hotwax/hotwax-oms#285",
+        "hotwax/hotwax-oms#367"
+      ]
+    },
+    {
+      "name": "User Account Security",
+      "reason": "Security features including blocked account messaging for failed logins and required password changes.",
+      "itemIds": [
+        "hotwax/hotwax-oms#268",
+        "hotwax/hotwax-oms#280"
+      ]
+    },
+    {
+      "name": "Order Picker Management",
+      "reason": "Tools for assigning, indexing, and restricting the modification of pickers on completed orders.",
+      "itemIds": [
+        "hotwax/bopis#719",
+        "hotwax/bopis#723",
+        "hotwax/bopis#727",
+        "hotwax/oms#340",
+        "hotwax/oms#341",
+        "hotwax/oms#342",
+        "hotwax/oms#352",
+        "hotwax/hotwax-oms#232"
+      ]
+    },
+    {
+      "name": "Picklist Customer Identification",
+      "reason": "Inclusion of customer names on pickup picklists to facilitate faster order verification.",
+      "itemIds": [
+        "hotwax/hotwax-poorti#158"
+      ]
+    },
+    {
+      "name": "Inventory Availability API",
+      "reason": "New API endpoint for bulk retrieval of product online Available-to-Promise (ATP) quantities.",
+      "itemIds": [
+        "hotwax/oms#360"
+      ]
+    },
+    {
+      "name": "Customer Communication",
+      "reason": "Support for automated order cancellation and shipping update emails for the routing application.",
+      "itemIds": [
+        "hotwax/hotwax-oms#229"
       ]
     }
   ],
@@ -174,17 +271,61 @@
     "hotwax/bopis#720",
     "hotwax/bopis#721",
     "hotwax/bopis#725",
+    "hotwax/hotwax-maarg-util#20",
+    "hotwax/hotwax-maarg-util#10",
+    "hotwax/hotwax-maarg-util#9",
+    "hotwax/mantle-shopify-connector#254",
+    "hotwax/mantle-shopify-connector#204",
+    "hotwax/oms#336",
+    "hotwax/oms#338",
+    "hotwax/oms#337",
+    "hotwax/oms#346",
+    "hotwax/oms#343",
+    "hotwax/oms#344",
+    "hotwax/oms#351",
+    "hotwax/oms#355",
+    "hotwax/oms#370",
+    "hotwax/oms#348",
+    "hotwax/oms#354",
+    "hotwax/dxp-components#447",
+    "hotwax/hotwax-shopify-oms-bridge#42",
+    "hotwax/hotwax-oms#303",
+    "hotwax/hotwax-oms#355",
+    "hotwax/hotwax-oms#190",
+    "hotwax/hotwax-oms#195",
+    "hotwax/hotwax-oms#199",
+    "hotwax/hotwax-oms#201",
+    "hotwax/hotwax-oms#219",
+    "hotwax/hotwax-oms#223",
+    "hotwax/hotwax-oms#341",
+    "hotwax/hotwax-oms#226",
+    "hotwax/hotwax-oms#227",
+    "hotwax/hotwax-oms#283",
     "hotwax/hotwax-oms#298",
     "hotwax/hotwax-oms#263",
     "hotwax/hotwax-oms#261",
     "hotwax/hotwax-oms#265",
     "hotwax/hotwax-oms#279",
     "hotwax/hotwax-oms#271",
-    "hotwax/mantle-netsuite-connector#184",
-    "hotwax/OrderRouting#108",
+    "hotwax/hotwax-oms#334",
+    "hotwax/hotwax-poorti#66",
+    "hotwax/hotwax-poorti#114",
+    "hotwax/hotwax-poorti#143",
+    "hotwax/hotwax-poorti#146",
+    "hotwax/hotwax-poorti#171",
+    "hotwax/hotwax-poorti#176",
     "hotwax/job-manager#866",
     "hotwax/job-manager#867",
-    "hotwax/oms#370",
-    "hotwax/hotwax-oms#201"
+    "hotwax/hotwax-ofbiz-oms-usl#14",
+    "hotwax/mantle-netsuite-connector#191",
+    "hotwax/mantle-netsuite-connector#170",
+    "hotwax/mantle-netsuite-connector#184",
+    "hotwax/OrderRouting#108"
+  ],
+  "needClarificationItemIds": [
+    "hotwax/hotwax-oms#287",
+    "hotwax/hotwax-oms#293",
+    "hotwax/hotwax-poorti#148",
+    "hotwax/hotwax-poorti#179"
   ]
 }

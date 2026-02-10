@@ -89,6 +89,13 @@ export function saveAgentPrompt(agentName, targetMonth, prompt) {
     console.log(`  [DRY RUN] ${agentName} prompt saved to ${filePath}`);
 }
 
+export function saveAgentResponse(agentName, targetMonth, response) {
+    const storageDir = getMonthStorageDir(targetMonth);
+    const filePath = path.join(storageDir, `${agentName}_response.md`);
+    fs.writeFileSync(filePath, response);
+    console.log(`  [DEBUG] ${agentName} response saved to ${filePath}`);
+}
+
 export function saveReleaseNotes(targetMonth, content) {
     const draftDir = getDraftDir(targetMonth);
     const filePath = path.join(draftDir, "release-notes.md");
