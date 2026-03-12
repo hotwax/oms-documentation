@@ -240,4 +240,4 @@ A Product Store represents a brand or a set of products. If your OMS is connecte
 Users can choose primary and secondary product identifiers (such as product ID, product title, SKU, etc.) to view products with preferred identifiers in the app.
 
 ### Timezone
-This option allows users to select an appropriate timezone to ensure consistency and optimize operations according to local time.
+This option allows you to select an appropriate timezone for consistency and to optimize operations according to local time.
