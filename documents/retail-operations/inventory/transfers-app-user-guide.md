@@ -186,7 +186,7 @@ Once the transfer order is created, the user is taken to the Transfer order deta
 - **View Facility Details:** Select the redirect icon on the facility card to open the facility in the Facilities app. This redirects to the Facility Details page, where additional facility information can be viewed and updated.
 
 > [!NOTE]
-> Transfer orders can also be configured to be automatically approved by the “Approve Transfer Orders” job at scheduled intervals.
+> Transfer orders can also be configured to be automatically approved by the `Approve Transfer Orders` job at scheduled intervals.
 
 ## Execute Fulfillment and Receipt
 
