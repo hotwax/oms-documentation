@@ -41,7 +41,7 @@ Users can search for a transfer order from the top of the page. They can search 
 
 #### Apply Filters to Transfer Orders
 
-**Steps to Filter Transfer Orders**
+#### Steps to filter transfer orders
 
 1. From the left menu, navigate to the `Location` or `Fulfillment` section.
 2. Click the dropdown arrow next to the relevant filter name.
