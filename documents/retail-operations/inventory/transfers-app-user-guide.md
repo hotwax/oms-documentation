@@ -192,9 +192,9 @@ Once the transfer order is created, the user is taken to the Transfer order deta
 
 Each item in the transfer order includes additional actions that can be accessed through the more options menu (⋮) next to the item. These actions help manage the fulfillment and receiving of individual items within the transfer order.
 
-- **Fulfill:** Select Fulfill to begin the fulfillment process for the item at the origin facility. The user is redirected to the transfer order details page in the fulfillment app where the user can fulfill the items of the transfer order.
-- **Receive:** Select Receive to record the receipt of items at the destination facility once they arrive. The user is redirected to the transfer order details page in the receiving app where the user can receive the items of the transfer order.
-- **Close Fulfillment:** Select Close Fulfillment to stop fulfillment for the item if no quantity has been shipped. This action prevents fulfillment attempts for that item.
+- **Fulfill:** Select `Fulfill` to begin the fulfillment process for the item at the origin facility. The user is redirected to the transfer order details page in the `Fulfillment` app where the user can fulfill the items of the transfer order.
+- **Receive:** Select `Receive` to record the receipt of items at the destination facility once they arrive. The user is redirected to the transfer order details page in the `Receiving` app where the user can receive the items of the transfer order.
+- **Close Fulfillment:** Select `Close Fulfillment` to stop fulfillment for the item if no quantity has been shipped. This action prevents fulfillment attempts for that item.
 
 > [!NOTE]
 > **Partially Shipped Items**
