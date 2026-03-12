@@ -66,7 +66,7 @@ These filters make it easier to track shipping priorities, review carrier volume
 
 ### Organize Orders by Attributes
 
-At the top of the Find Transfer Order page, locate the `Group By` option.
+At the top of the `Find Transfer Order` page, locate the `Group By` option.
 Click the dropdown menu and select the relevant value from the list.
 
 Transfer orders can be grouped using the following options:
