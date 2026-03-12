@@ -198,7 +198,7 @@ Each item in the transfer order includes additional actions that can be accessed
 
 > [!NOTE]
 > **Partially Shipped Items**
-> When only a portion of the ordered quantity is fulfilled from the origin facility, the item is marked as Under Shipped and remains in Pending Receipt status.
+> When only a portion of the ordered quantity is fulfilled from the origin facility, the item is marked as `Under Shipped` and remains in `Pending Receipt` status.
 
 ### Item Status
 
