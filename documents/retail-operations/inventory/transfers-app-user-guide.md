@@ -95,24 +95,24 @@ To create a new transfer order, click the `+` icon located at the bottom-right c
 At the top left of the page, enter a unique name for the transfer order. This name helps to easily identify the TO later.
 
 #### Assign Origin and Destination
-1. Locate the Assign section in the left-hand menu.
+1. Locate the `Assign` section in the left-hand menu.
 2. Select the Product Store. If only one store exists, it will be selected by default.
-3. Click the chip next to Origin and select the origin facility from the Facility modal.
-4. Then, click Assign to select the destination facility.
+3. Click the chip next to `Origin` and select the origin facility from the `Facility` modal.
+4. Then, click `Assign` to select the destination facility.
 
 #### Choose a Shipping Method
-1. Locate the Shipping Method section below the Assign card.
-2. Choose the Carrier by clicking the dropdown.
+1. Locate the `Shipping Method` section below the `Assign` card.
+2. Choose the `Carrier` by clicking the dropdown.
 3. Choose the shipping method by clicking the dropdown.
 
 #### Schedule Ship and Delivery Dates
-1. Locate the Plan section in the left-hand menu.
+1. Locate the `Plan` section in the left-hand menu.
 2. Based on transfer type, select the appropriate lifecycle.
-   - **Store to Store:** Select Fulfill and Receive (managed entirely in OMS).
-   - **Store to Warehouse:** Select Fulfill only (post-fulfillment handled by WMS).
-   - **Warehouse to Store:** Select Receive only (fulfillment initiated from WMS, receipt completed in OMS).
-3. Set the Ship Date and click Done.
-4. Set the Delivery Date and click Done.
+   - **Store to Store:** Select `Fulfill and Receive` (managed entirely in OMS).
+   - **Store to Warehouse:** Select `Fulfill only` (post-fulfillment handled by WMS).
+   - **Warehouse to Store:** Select `Receive only` (fulfillment initiated from WMS, receipt completed in OMS).
+3. Set the `Ship Date` and click `Done`.
+4. Set the `Delivery Date` and click `Done`.
 
 #### Add Products to the TO
 1. Search for the product using its SKU.
