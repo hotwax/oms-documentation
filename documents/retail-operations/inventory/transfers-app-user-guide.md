@@ -167,7 +167,7 @@ This method eliminates the need to create transfer orders individually and signi
 
 ## Manage Order Details and Configurations
 
-Once the transfer order is created, the user is taken to the Transfer order details page. This page provides information about the selected transfer order and allows users to review, modify and manage items before the transfer order is approved.
+Once the transfer order is created, you are taken to the `Transfer Order Details` page. This page provides information about the selected transfer order and allows you to review, modify, and manage items before the transfer order is approved.
 
 ### Transfer Order Configurations
 
