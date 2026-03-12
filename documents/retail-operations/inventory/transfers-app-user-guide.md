@@ -212,7 +212,7 @@ Each item in a transfer order displays a status that indicates its progress in t
 
 ## Receive Orders in Bulk
 
-The Bulk Receive action allows users to receive multiple items in a transfer order at once, instead of receiving each item individually. This helps speed up the receiving process when multiple items arrive at the destination facility together.
+The `Bulk Receive` action allows you to receive multiple items in a transfer order at once, instead of receiving each item individually. This helps speed up the receiving process when multiple items arrive at the destination facility together.
 
 To perform a bulk receive, select Bulk Receive on the Transfer Order Details page. A dialog box will appear showing the number of items and units that will be received. Users can choose how the items should be received using the following options:
 
