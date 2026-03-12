@@ -118,7 +118,7 @@ At the top left of the page, enter a unique name for the transfer order. This na
 1. Search for the product using its SKU.
 2. Once it appears on the right side, click the ‘+’ icon to add it to the TO.
 
-Upon adding a product, user can see three options for quantity selection:
+Upon adding a product, you can see three options for quantity selection:
 
 - **Book QOH (Quantity on Hand):** Use this when transferring the entire available stock from the origin facility.
 - **Book ATP (Available to Promise):** Select this to transfer only the available (unallocated) quantity.
