@@ -87,7 +87,7 @@ There are two ways to create a transfer order: manually or through bulk upload. 
 
 ### Steps to Create a Transfer Order
 
-To create a new transfer order, click the ‘+’ icon located at the bottom-right corner of the Transfer Orders page. This opens the Create Transfer Order screen.
+To create a new transfer order, click the `+` icon located at the bottom-right corner of the `Transfer Orders` page. This opens the `Create Transfer Order` screen.
 
 ### Initiate a Transfer Manually
 
