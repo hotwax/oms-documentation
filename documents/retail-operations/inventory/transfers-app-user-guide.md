@@ -171,8 +171,8 @@ Once the transfer order is created, you are taken to the `Transfer Order Details
 
 ### Transfer Order Configurations
 
-- **Carrier:** Users can review and change the selected carrier. Once a carrier is selected, the available shipment methods configured for that carrier will appear below this section. Users can also select or change the shipment method based on the available options.
-- **Summary:** The Summary section provides a quick overview of the status of items included in the transfer order. This helps track the progress of fulfillment and receiving activities.
+- **Carrier:** You can review and change the selected carrier. Once a carrier is selected, the available shipment methods configured for that carrier will appear below this section. You can also select or change the shipment method based on the available options.
+- **Summary:** The `Summary` section provides a quick overview of the status of items included in the transfer order. This helps track the progress of fulfillment and receiving activities.
   - **All:** Displays the total number of items included in the transfer order.
   - **Pending Fulfillment:** Displays the number of items that still need to be fulfilled from the origin facility.
   - **Pending Receipt:** Displays the number of items that have been fulfilled but are yet to be received at the destination facility.
@@ -180,10 +180,10 @@ Once the transfer order is created, you are taken to the `Transfer Order Details
 - **Item Actions:** Each item in the transfer order includes additional actions accessible through the more options menu (⋮).
   - **Edit Ordered Quantity:** Allows the quantity of the item in the transfer order to be modified before the order is approved.
   - **Remove Item:** Removes the selected item from the transfer order.
-- **Add Items:** The Add Items button allows users to add additional products to the transfer order before it is approved.
-- **Approve:** The Approve button finalizes the transfer order and moves it from `Created` status to the next stage in the transfer process, allowing fulfillment and receiving activities to begin.
-- **Close Order:** Select Close Order to cancel the transfer order if it is no longer required. Once closed, the transfer order will not proceed to fulfillment or receiving, and no further actions can be performed on it.
-- **View Facility Details:** Select the redirect icon on the facility card to open the facility in the Facilities app. This redirects to the Facility Details page, where additional facility information can be viewed and updated.
+- **Add Items:** The `Add Items` button allows you to add additional products to the transfer order before it is approved.
+- **Approve:** The `Approve` button finalizes the transfer order and moves it from `Created` status to the next stage in the transfer process, allowing fulfillment and receiving activities to begin.
+- **Close Order:** Select `Close Order` to cancel the transfer order if it is no longer required. Once closed, the transfer order will not proceed to fulfillment or receiving, and no further actions can be performed on it.
+- **View Facility Details:** Select the redirect icon on the facility card to open the facility in the `Facilities` app. This redirects to the `Facility Details` page, where additional facility information can be viewed and updated.
 
 > [!NOTE]
 > Transfer orders can also be configured to be automatically approved by the `Approve Transfer Orders` job at scheduled intervals.
