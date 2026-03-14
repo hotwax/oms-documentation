@@ -178,7 +178,7 @@ Because Shopify's Bulk API operates asynchronously, sending a GraphQL bulk query
 
 1. Go to Maarg: Application > System > Service > Jobs > Service Job List.
 2. Search for `poll_BulkOperationResult_ShopifyBulkQuery`.
-3. Make sure that parameters are set (e.g., “consumeSrmId, parentSystemMessageTypeId”).
+3. Verify that parameters are set (e.g., `consumeSrmId`, `parentSystemMessageTypeId`).
 
 **Sample XML data to create this job:**
 
