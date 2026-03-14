@@ -44,7 +44,7 @@ Each Shopify store must be linked to a dedicated `SystemMessageRemote`. Below is
 
 In case you are setting up a Shopify shop from scratch, a remote is automatically created in the Maarg instance. Please verify that the remote has Read-Write access for that Shopify shop.
 
-Here is the XML data to configure, Remote in Maarg.
+Here is the XML data to configure the Remote in Maarg.
 
 **Sample Configuration**
 
