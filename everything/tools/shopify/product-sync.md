@@ -58,7 +58,7 @@ Here is the XML data to configure the Remote in Maarg.
     accessScopeEnumId="SHOP_RW_ACCESS"/>
 ```
 
-**Key Field Breakdown**
+### Key Field Breakdown
 
 | Field | Description |
 | ---- | ---- |
