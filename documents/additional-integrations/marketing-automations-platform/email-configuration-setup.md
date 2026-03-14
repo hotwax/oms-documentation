@@ -27,7 +27,7 @@ Before configuring the emails, it is helpful to understand how data moves from H
 
 ## 1. Klaviyo API Configuration
 
-Before configuring individual emails, ensure the Klaviyo API connection is established in HotWax Commerce.
+Before configuring individual emails, establish the Klaviyo API connection in HotWax Commerce.
 
 > **Note:** Replace `{systemMessageRemoteId}` with your desired Klaviyo connection ID.
 
