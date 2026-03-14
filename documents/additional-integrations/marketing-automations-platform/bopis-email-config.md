@@ -239,7 +239,7 @@ After the customer selects a new pickup location in the Reroute App, import this
 
 <DataResource dataResourceId="PICKUP_LOC_CNF" dataResourceTypeId="ELECTRONIC_TEXT" dataTemplateTypeId="FTL" statusId="CTNT_PUBLISHED"/>
 
-<Content contentId="PICKUP_LOC_CNF" contentName="Template for klaviyo to send new pickup location confirmation email" contentTypeId="DOCUMENT" dataResourceId="PICKUP_LOC_CNF" statusId="CTNT_PUBLISHED" templateDataResourceId="PICKUP_LOC_CNF"/>
+<Content contentId="PICKUP_LOC_CNF" contentName="Template for klaviyo to send new pickup location confirmation email" contentTypeId="DOCUMENT" dataResourceId="PICKUP_LOC_CNF" statusId="CTNT_PUBLISHED"/>
 ```
 
 Import the FreeMarker template that generates the JSON payload with the new store details:
