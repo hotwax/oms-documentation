@@ -167,7 +167,7 @@ This service checks the database for any system messages that have been created 
 </moqui.service.job.ServiceJob>
 ```
 
-## poll_BulkOperationResult_ShopifyBulkQuery
+## Poll bulk operation results
 
 **Purpose**:
 This job is responsible for tracking the status of asynchronous bulk query operations that have been sent to Shopify (such as those of type `ShopifyBulkQuery` / `BulkProductAndVariantsByIdQuery`) and retrieving their results once they are completed.
