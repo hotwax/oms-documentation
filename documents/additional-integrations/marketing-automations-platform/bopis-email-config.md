@@ -16,7 +16,7 @@ This guide provides the steps to configure the following BOPIS emails:
 
 Before configuring the emails, it is helpful to understand how data moves from HotWax Commerce to Klaviyo.
 
-1.  **Order Event:** An action occurs in HotWax Commerce (e.g., store associate clicks "Ready for Pickup" or "Reject").
+1.  **Order Event:** An action occurs in HotWax Commerce (e.g., store associate clicks `Ready for Pickup` or `Reject`).
 2.  **Service Event Condition Action (SECA):** HotWax Commerce triggers the email service logic based on the event.
 3.  **SystemMessage Creation:** A message is queued in the system to handle the outbound communication.
 4.  **Template Generation:** HotWax Commerce uses a FreeMarker (`.ftl`) template to extract relevant order data (customer name, items, store address) and formats it into a JSON payload.
