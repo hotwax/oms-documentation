@@ -1,6 +1,6 @@
 # How to set up BOPIS email notifications using Klaviyo
 
-Integrating HotWax Commerce with Klaviyo ensures that your customers receive timely, personalized updates for their Buy Online, Pick Up In-Store (BOPIS) orders. Klaviyo is a powerful marketing automation platform. When connected to HotWax Commerce, it automates critical notifications based on the order lifecycle.
+Integrating HotWax Commerce with Klaviyo enables your customers to receive timely, personalized updates for their Buy Online, Pick Up In-Store (BOPIS) orders. Klaviyo is a powerful marketing automation platform. When connected to HotWax Commerce, it automates critical notifications based on the order lifecycle.
 
 This guide provides the steps to configure the following BOPIS emails:
 1.  **Ready for Pickup:** Notifies the customer that their items are available at the store.
