@@ -71,7 +71,7 @@ Here is the XML data to configure the Remote in Maarg.
 
 This data will be entered in Maarg > Tools > Data Import > XML text.
 
-## Enter Common Data
+## Enter common data
 
 When setting up product sync initially, you also need to add this common XML data. This common data configures system message types and jobs for the product update feed in HotWax Commerce. It defines how product updates are generated, transformed, and consumed between SOB and OMS. The enumerations link the producer and consumer message types, while the service job schedules the sending of produced messages. This data is added to enable automated product update synchronization.
 
