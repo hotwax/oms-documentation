@@ -34,7 +34,7 @@ Products and Variants Stored in OMS
 
 </div>
 
-## Configurations Required to Set Up Product Sync
+## Configurations required to set up product sync
 
 Before syncing anything, you must tell HotWax where to connect and how. This is done by configuring some data in the `SystemMessageRemote` Entity. It acts like a bridge between your Shopify store and HotWax OMS.
 
