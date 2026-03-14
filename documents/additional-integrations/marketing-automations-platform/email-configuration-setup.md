@@ -62,7 +62,7 @@ Import the following XML to register the Moqui event triggers for the Ready for 
 
 <moqui.basic.Enumeration enumId="READY_FOR_PICKUP" enumCode="READY_FOR_PICKUP" enumName="BOPIS Order Ready for Pickup" description="Ready to Pickup Item" enumTypeId="PRDS_EMAIL" relatedEnumId="SendReadyForPickupEmail"/>
 
-<org.apache.ofbiz.product.store.ProductStoreEmailSetting emailType="1" productStoreId="{productStoreId}" subject="Ready For Pickup Email" systemMessageRemoteId="{systemMessageRemoteId}"/>
+<org.apache.ofbiz.product.store.ProductStoreEmailSetting emailType="1" productStoreId="{productStoreId}" subject="Ready for pickup email" systemMessageRemoteId="{systemMessageRemoteId}"/>
 ```
 
 ### Step 2B: OFBiz Template Configuration
