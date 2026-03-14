@@ -46,7 +46,7 @@ In case you are setting up a Shopify shop from scratch, a remote is automaticall
 
 Here is the XML data to configure the Remote in Maarg.
 
-**Sample Configuration**
+### Sample Configuration
 
 ```xml
 <moqui.service.message.SystemMessageRemote
