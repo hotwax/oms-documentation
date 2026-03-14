@@ -149,7 +149,7 @@ This service checks the database for any system messages that have been created 
 
 **Steps to run manually:**
 
-1. Go to Maarg: Application > System > Service > Jobs > Service Job List.
+1. Go to Maarg > Application > System > Service > Jobs > Service Job List.
 2. Search for `send_BulkProductAndVariantsByIdQueryProducedSystemMessages`.
 3. Verify that parameters are set (e.g., `systemMessageTypeId`).
 
