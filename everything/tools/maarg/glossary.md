@@ -66,7 +66,7 @@ Services are logic components within the Moqui framework. They handle business r
 
 ### SQL Runner
 
-An advanced developer tool that allows authorized users to execute raw Structured Query Language (SQL) querues directly against a datasource and view the result sets in the user interface.
+An advanced developer tool that allows authorized users to execute raw Structured Query Language (SQL) queries directly against a datasource and view the result sets in the user interface.
 
 ### System Messages
 
