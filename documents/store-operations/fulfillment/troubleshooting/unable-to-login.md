@@ -16,4 +16,4 @@ If you’re setting up an Admin user, set their Security Group to “Administrat
 
 ### Fulfillment managers
 
-For other users simply add the user to the facility from the Users App. To learn more about how users are added to facilities checkout the [user management guide](https://docs.hotwax.co/documents/v/system-admins/administration/users/manageuser).
+For other users simply add the user to the facility from the Users App. To learn more about how users are added to facilities, check out the [user management guide](../../../system-admin/administration/users/manage-user.md).
