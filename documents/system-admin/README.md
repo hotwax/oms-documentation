@@ -84,5 +84,5 @@ Some apps, such as Available to Promise, Order Routing, and Company, require a m
 
 ## Logging Out
 
-1. Select your **user profile** at the top of the home page.
-2. Select **Logout** from the menu.
+1. Select your `user profile` at the top of the home page.
+2. Select `Logout` from the menu.
