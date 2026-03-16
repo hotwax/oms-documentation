@@ -13,15 +13,15 @@ The Launchpad is the central hub for accessing all HotWax Commerce applications.
 
 ## Signing In
 
-When you open the Launchpad without an active session, a **Login** button appears in the top-right corner of the home page. Select this button to begin the sign-in process.
+When you open the Launchpad without an active session, a `Login` button appears in the top-right corner of the home page. Select this button to begin the sign-in process.
 
-1. Enter your **OMS instance URL** and select **Next**.
-2. Enter your **Username** and **Password**, then select **Login**.
+1. Enter your `Order Management System (OMS) instance URL` and select `Next`.
+2. Enter your `Username` and `Password`, then select `Login`.
 
 Once signed in, selecting any app card on the home page automatically authenticates you into that application through Single Sign-On (SSO).
 
 {% hint style="info" %}
-In the OMS instance URL field, enter just the part before `.hotwax.io`. For example, if your instance is `company-name.hotwax.io`, enter `company-name`. The system automatically constructs the full instance URL. If you don't know your instance name, contact your system administrator.
+In the `OMS instance URL` field, enter just the part before `.hotwax.io`. For example, if your instance is `company-name.hotwax.io`, enter `company-name`. The system automatically constructs the full instance URL. If you don't know your instance name, contact your system administrator.
 {% endhint %}
 
 If you select an app card without signing in first, the app redirects you back to the Launchpad login page to complete authentication before you can access it.
@@ -36,7 +36,7 @@ Applications on the Launchpad are organized into the following categories:
 
 | App | Description |
 |---|---|
-| **BOPIS** | Enables store associates to manage and hand over Buy Online Pick-Up In Store orders to customers. |
+| **BOPIS** | Enables store associates to manage and handover Buy Online, Pickup In-Store orders to customers. |
 | **Fulfillment** | Enables store associates to pick, pack, and ship orders brokered to stores from the OMS. |
 | **Pre-Orders** | Enables merchandisers to manage pre-orders and backorders with planned future inventory. |
 
@@ -78,12 +78,12 @@ Each app on the Launchpad can be launched in three different environments:
 | **UAT (User Acceptance Testing)** | Select the bottom-right icon on the app card. |
 
 {% hint style="info" %}
-Some apps, such as Available to Promise, Order Routing, and Company, require a maarg instance to be configured. If maarg is not configured, these apps will display a `Not configured` badge and will be inaccessible.
+Some apps, such as Available to Promise, Order Routing, and Company, require a Maarg instance to be configured. Maarg is HotWax Commerce's API and routing management platform. If Maarg is not configured, these apps will display a `Not configured` badge and will be inaccessible.
 {% endhint %}
 
 ---
 
 ## Logging Out
 
-1. Select your **user profile** at the top of the home page.
-2. Select **Logout** from the menu.
+1. Select your `user profile` at the top of the home page.
+2. Select `Logout` from the menu.

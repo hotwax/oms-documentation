@@ -12,20 +12,12 @@ The Fulfillment App allows store users to reject items from an order or complete
 
 The OMS will route the order to another facility based on product availability, customer shipping preferences, and routing rules.
 
-{% embed url="https://drive.google.com/file/d/1vInnPXJUCgavIJz28xKP-9K2Rd63DSIZ/view?usp=drive_link" %}
-Reject Single
-{% endembed %}
-
 ## Bulk Reject Orders
 
 Stores may face issues with their fulfillment capabilities in some instances. When a store cannot fulfill orders for a given day, store managers with the permission of `COMMON_ADMIN` can reject all orders in bulk from the **Open** and **In Progress** order pages.
 
 1. In the **Open** or **In Progress Orders** screens, click the **Reject All** icon at the top right corner.
 2. All orders in that status will be rejected and removed from the facility.
-
-{% embed url="https://drive.google.com/file/d/1zGqM5HjeZBltktMe5vJIObOrznV74lvU/view?usp=drive_link" %}
-Bulk Reject Orders
-{% endembed %}
 
 {% hint style="info" %}
 The Reject All button does not affect the inventory of the facility. To ensure that no new orders are brokered to the facility, set the **Online order fulfillment capacity** to **No Capacity**.
@@ -92,10 +84,6 @@ The table below lists the default rejection reasons and their assigned types, wh
 | MISMATCH         | REPORT\_VAR      | Decreases ATP and QOH inventory by the rejected quantity.                      | Indicates the product is still in stock but unavailable for orders requiring the rejected size or color.  |
 | DAMAGE           | REPORT\_VAR      | Decreases ATP inventory by the rejected quantity, while QOH remains unchanged. | Shows the product is in stock but damaged and unsellable.                                                 |
 | NO VARIANCE      | REPORT\_NO\_VAR  | Does not affect either ATP or QOH inventory.                                   | Useful for scenarios where inventory levels remain unchanged, e.g., canceled orders without stock issues. |
-
-{% embed url="https://drive.google.com/file/d/1Bj_t3o-nOzUKK95vdq8XzFWK3AJtm5uk/view?usp=drive_link" %}
-Video: Rejections in Fulfillment App
-{% endembed %}
 
 ## Adjust QOH Along with ATP on Rejection
 

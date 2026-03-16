@@ -42,10 +42,6 @@ Use the filter options on the top right of the "Find Orders" page to apply filte
 
 **F. Date Range** Select a date range of the last 7 days, the last 30 days, or any custom range to view orders based on that selection. This helps store managers review and manage orders within a specific timeframe.
 
-{% embed url="https://youtu.be/VttzsAe5OxE" %}
-Video: Filter Orders
-{% endembed %}
-
 ### View Order Detail
 
 Store managers need to oversee order processing, address customer inquiries, and ensure timely fulfillment. The Order Details page in the order lookup page provides all the necessary information at a glance, reducing the time spent searching for order-related data and allowing managers to focus on critical tasks. The order details help store managers identify the exact status of the order and the timeline of its fulfillment. Detailed information helps store managers to better assist customers.
