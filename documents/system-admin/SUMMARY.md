@@ -76,9 +76,7 @@
 ## Fulfillment
 
 * [Shipping Methods](fulfillment/shipping-methods/README.md)
-  * [Create Carrier](fulfillment/shipping-methods/add-carrier.md)
-  * [Create Shipping Boxes](fulfillment/shipping-methods/shipping-box.md)
+  * [Carrier & Shipment Methods](fulfillment/shipping-methods/carrier-and-shipment-methods.md)
   * [Shipping Gateways](fulfillment/shipping-methods/shipping-gateway.md)
-  * [Map Carrier Shipment Methods](fulfillment/shipping-methods/carrier-and-shipment-methods.md)
-* [How to Map Shipping Method in HotWax Commerce](fulfillment/add-shipping-method.md)
+  * [Shipping Boxes](fulfillment/shipping-methods/shipping-box.md)
 * [Configure Rate Shopping](fulfillment/configure-rate-shopping.md)
