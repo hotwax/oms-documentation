@@ -21,3 +21,12 @@ To verify the added map link:
 Video: Add Map Link
 {% endembed %}
 
+## Remove Map Link
+
+If a facility no longer needs a map link, it can be removed from the Facility details page:
+
+1. Locate the Map Link card on the `Facility details` page.
+2. Click on the `Remove` button.
+3. Confirm the removal in the pop-up if prompted. The map link will be deleted.
+
+
