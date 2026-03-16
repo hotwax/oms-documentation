@@ -16,3 +16,18 @@ It is crucial to display the operating hours of each store on the e-commerce Pro
 {% embed url="https://youtu.be/bdmhIByMq4Q" %}
 Video: Manage Operating Hours
 {% endembed %}
+
+## Set Time Zone for Facility
+
+For retailers operating in different time zones the operating hours of stores vary, which directly impacts how operating hours are displayed on the e-commerce Product Display Page (PDP). Setting the correct time zone ensures that store hours are accurately reflected for customers and operational teams, regardless of their local location.
+
+The time zone for a facility can be configured directly from the Operating Hours card on the Facility details page by following these steps:
+
+1. Navigate to the `Find Facilities` page and select the facility for which you want to manage operating hours.
+2. On the `Facility details` page, locate the Operating Hours card.
+3. At the top of the card, the currently selected time zone is displayed along with a `Change` button. If no time zone has been configured yet, a `Add` button is shown.
+4. Click on the `Change` button to open the select Time Zone pop-up. Users can choose the browser’s default time zone or select a different time zone from the available list.
+
+{% embed url="https://youtu.be/6ZxYxzkYxNw" %}
+Video: Set Time Zone for Facility
+{% endembed %}

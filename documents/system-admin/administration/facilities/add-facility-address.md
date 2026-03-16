@@ -21,11 +21,11 @@ The shipping name feature in HotWax Commerce offers retailers flexibility and br
 
 1. Navigate to the `Find Facilities` page in the Facility application.
 2. Utilize the search function within the `Find Facilities` page to locate the specific facility for which you want to set the shipping name.
-3. Once you've identified the desired facility, click on the Facility Name to access its details and configurtaions.
+3. Once you've identified the desired facility, click on the Facility Name to access its details and configurations.
 4. Look for the section labeled `Address and Contact Details` within the `facility details` page. This section contains information related to the facility's address and contact details.
 5. Click on `edit` to open up a new form and add the desired shipping name.
 6. Alongside entering the shipping name, ensure that you input the correct `Zipcode` for the facility. This is crucial, as the Zipcode is required for setting the shipping name.
-7.  After entering the shipping name and verifying the Zipcode, save the changes by clicking on the `save icon` to update the facility's details effectively.
+7. After entering the shipping name and verifying the Zipcode, save the changes by clicking on the `Save` icon to update the facility's details effectively.
 
 {% embed url="https://youtu.be/gRkDyZT9jqs" %} Video: Set Shipping name {% endembed %}
 
@@ -40,4 +40,20 @@ To add the latitude and longitude coordinates for a facility, follow these steps
 
 {% embed url="https://youtu.be/SA6cVCSwagI" %}
 Video: Add Latitude & Longitude
+{% endembed %}
+
+## Add Directions
+
+To help users easily locate a facility, HotWax Commerce allows users to add directions as part of facility address details. This field can be used to provide additional location information, such as nearby landmarks, intersections, or commonly known reference points. Adding directions improves efficiency and reduces delivery or pickup delays.
+
+After creating a facility, the details can be added or updated by following these steps:
+
+1. Navigate to the `Find Facilities` page and select the facility for which you want to add directions.
+2. On the Facility details page, locate the `Address and Contact Details` card.
+3. Click on the `Add` button (or `Edit` if an address already exists). This will open the address form.
+4. Along with Address Line 1 and Address Line 2, you will find a field labeled `Directions`.
+5. Enter directions to help identify the facility location, such as nearby landmarks.
+
+{% embed url="https://youtu.be/qApOPqM8i5Q" %}
+Video: Add Directions
 {% endembed %}
