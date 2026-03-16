@@ -4,9 +4,9 @@ description: >-
   updating fulfillment preferences after a rejected fulfillment.
 ---
 
-# Reroute Fulfillment APIs
+# Reroute fulfillment APIs
 
-The reroute fulfillment flow uses a small set of token-gated APIs in HotWax OMS to let a customer or support workflow update fulfillment details after an order can no longer be fulfilled as originally planned. These endpoints are exposed from the OMS `api` application and are backed by reroute-specific services in `hotwax-oms`.
+The reroute fulfillment flow uses a small set of token-gated APIs in HotWax Commerce to let a customer or support workflow update fulfillment details after an order can no longer be fulfilled as originally planned. These endpoints are exposed from the OMS `api` application and are backed by reroute-specific services in `hotwax-oms`.
 
 ## How the flow works
 
@@ -45,7 +45,7 @@ These endpoints are configured with `auth="false"` in OMS, but they are not publ
 
 **Purpose:** Validates the incoming reroute token, confirms the order exists, and creates a validation token for the `system` user.
 
-**Input**
+#### Input
 
 | Parameter | Type | Required | Description |
 | --- | --- | --- | --- |
