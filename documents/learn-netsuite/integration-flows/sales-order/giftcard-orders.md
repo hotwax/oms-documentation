@@ -22,6 +22,32 @@ A scheduled job in HotWax Commerce downloads both physical and digital gift card
 
 Learn more about[ gift card orders synchronization to HotWax Commerce](/documents/learn-shopify/shopify-integration/orders/giftcards-download)
 
+## How gift card lines are prepared for NetSuite
+
+When HotWax Commerce imports Shopify orders, it first tries to resolve each gift card line to a regular HotWax product. If the line is a custom gift card and no direct Shopify variant mapping is available, HotWax falls back to a default gift card product configured for that Shopify shop.
+
+This default product is stored in OMS as a shop-level mapping:
+
+- `mappedTypeId`: `SHOPIFY_PRODUCT_TYPE`
+- `mappedKey`: `CUSTOM_GIFT_CARD`
+- `mappedValue`: HotWax `productId` used as the placeholder gift card product
+
+Once the order is later posted to NetSuite, the NetSuite connector only exports order items whose resolved HotWax product has a `NETSUITE_PRODUCT_ID`. This means the default gift card product must also be mapped to a valid NetSuite product ID.
+
+{% hint style="info" %}
+This is the latest behavior for gift card sync to NetSuite. Instead of relying only on line-level product mappings from Shopify, HotWax can now use a default gift card product stored per shop and apply it when preparing the NetSuite order feed.
+{% endhint %}
+
+### Why this matters
+
+Custom gift card lines can be missed in the NetSuite feed if HotWax cannot resolve them to a product with a `NETSUITE_PRODUCT_ID`.
+
+To prevent that:
+
+1. Configure a default custom gift card product for the Shopify shop in OMS.
+2. Make sure that placeholder product carries a `NETSUITE_PRODUCT_ID`.
+3. Use that product when custom gift card lines do not have a direct Shopify-to-HotWax product mapping.
+
 ## Workflow
 
 ## Physical Gift Cards
@@ -30,7 +56,7 @@ Learn more about[ gift card orders synchronization to HotWax Commerce](/document
 
 The process of synchronizing physical gift card orders from HotWax Commerce to NetSuite remains straightforward like any other order item.
 
-Upon downloading physical gift card orders, HotWax Commerce synchronizes them with NetSuite in the “Created” status. Once these orders are synchronized, they have their status as “Pending Fulfillment” in NetSuite. HotWax Commerce retrieves NetSuite sales order item line IDs and NetSuite sales order IDs. After that HotWax Commerce creates customer deposits in NetSuite in the “Undeposited” status, and approves physical gift card orders in HotWax Commerce.
+Upon downloading physical gift card orders, HotWax Commerce synchronizes them with NetSuite in the “Created” status. During this step, if a custom gift card line does not have a direct product mapping, HotWax uses the configured default custom gift card product before posting the order to NetSuite. Once these orders are synchronized, they have their status as “Pending Fulfillment” in NetSuite. HotWax Commerce retrieves NetSuite sales order item line IDs and NetSuite sales order IDs. After that HotWax Commerce creates customer deposits in NetSuite in the “Undeposited” status, and approves physical gift card orders in HotWax Commerce.
 
 Approved physical gift card order items are brokered in HotWax Commerce, upon allocation, HotWax Commerce begins syncing them to systems that are responsible for fulfillment of those gift card items.
 
@@ -136,13 +162,17 @@ Digital gift cards are auto-activated and customers can directly redeem them by 
 
 A scheduled job in HotWax Commerce Integration Platform generates a CSV file of gift card orders that are in “Completed” status and do not have a NetSuite order item line IDs. This helps make sure that only relevant orders are synchronized to NetSuite and regular orders that are “Completed” in HotWax Commerce are not synchronized again to NetSuite.
 
-A scheduled SuiteScript in NetSuite reads the CSV file from the SFTP location and creates gift card orders in the “Pending Fulfillment” status.
+A scheduled SuiteScript in NetSuite reads the CSV file from the SFTP location and creates gift card orders in the “Pending Fulfillment” status. If a digital gift card order contains a custom gift card line that was resolved through the default product mapping in HotWax, that mapped product is what gets posted to NetSuite.
 
 HotWax Commerce retrieves NetSuite sales order item line IDs, NetSuite sales order IDs, and creates customer deposits in NetSuite in the “Undeposited” status.
 
 By default non inventory items like digital gift cards are configured to be not eligible for fulfillment in NetSuite. Therefore digital gift cards are automatically fulfilled in NetSuite and their status updated from “Pending Fulfillment” to “Pending Billing”.
 
 Subsequently, invoice is auto generated in NetSuite in the status “Paid”, and the customer deposit status is automatically updated from “Not Deposited” to “Fully Applied”.
+
+{% hint style="warning" %}
+For custom gift cards, the placeholder product configured in HotWax must have a valid `NETSUITE_PRODUCT_ID`. Without that NetSuite product mapping, the order line will not be eligible for export in the NetSuite connector.
+{% endhint %}
 
 {% hint style="success" %}
 When walk-in customers purchase a gift card from the store, it is treated as a regular POS order in HotWax Commerce. HotWax Commerce syncs those orders with NetSuite in the POS sales synchronization to NetSuite.
