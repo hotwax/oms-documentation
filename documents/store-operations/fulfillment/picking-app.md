@@ -15,8 +15,6 @@ description: >-
 
 <figure><img src="../.gitbook/assets/1 12.png" alt=""><figcaption><p>Image: Picklist Page</p></figcaption></figure>
 
-
-
 ## Picklist Details
 
 Shows the details of all the picklist items in a picklist for quick scanning and tracking to complete the picklist.
@@ -26,8 +24,6 @@ Shows the details of all the picklist items in a picklist for quick scanning and
 ### Search
 
 Search for a picklist item by typing in the product SKU.
-
-
 
 ### Scan
 
@@ -41,10 +37,7 @@ Select the picklist items by clicking on the checkbox for the picked item.
 
 Select all the picklist items with a single click to quickly acknowledge the completion of all picklist items.
 
-
-
 ### Complete a Picklist
 
 Complete a picklist to initiate the packing process.
-
 
