@@ -52,7 +52,7 @@ To include a facility in brokering, it must be added to a facility group with th
 
 ## Setup Shipment Method from Facilities
 
-In HotWax Commerce, the ability to add shipping carriers to facilities is essential for order fulfillment. Once a shipment gateway is set, adding carriers to facilities enables rate shopping and shipping label generation specifically for those carriers associated with the selected facility. This feature enhances workflow efficiency by allowing the HotWax Commerce Store Fulfillment App to intelligently select the most cost-effective shipping carrier for each order. Read our [user manual](../../system-admin/fulfillment/shipping-methods/shipping-gateway.md) to learn how to add shipping carriers to facilities.
+In HotWax Commerce, the ability to add shipping carriers to facilities is essential for order fulfillment. Once a shipment gateway is set, adding carriers to facilities enables rate shopping and shipping label generation specifically for those carriers associated with the selected facility. This feature enhances workflow efficiency by allowing the HotWax Commerce Store Fulfillment App to intelligently select the most cost-effective shipping carrier for each order. Read our [shipping gateway user manual](../../system-admin/fulfillment/shipping-methods/shipping-gateway.md) to learn how to add shipping carriers to facilities.
 
 Retailers need to turn the toggle on for the ‘Generate Shipping Label' in the `facility details` page to ensure that the shipping label is generated from the store.
 
