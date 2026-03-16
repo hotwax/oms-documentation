@@ -13,11 +13,18 @@ The Launchpad is the central hub for accessing all HotWax Commerce applications.
 
 ## Signing In
 
-1. Open the [Launchpad](https://launchpad.hotwax.io/).
-2. Enter your OMS instance URL and click **Next**.
-3. Enter your **Username** and **Password**, then click **Login**.
+When you open the Launchpad without an active session, a **Login** button appears in the top-right corner of the home page. Select this button to begin the sign-in process.
 
-Once logged in, clicking any app card on the home page will automatically authenticate you into that application.
+1. Enter your **OMS instance URL** and select **Next**.
+2. Enter your **Username** and **Password**, then select **Login**.
+
+Once signed in, selecting any app card on the home page automatically authenticates you into that application through Single Sign-On (SSO).
+
+{% hint style="info" %}
+Your OMS instance URL is the web address of your company's HotWax Commerce server, for example, `company-name.hotwax.io`. If you don't know your instance URL, contact your system administrator.
+{% endhint %}
+
+If you select an app card without signing in first, the app redirects you back to the Launchpad login page to complete authentication before you can access it.
 
 ---
 
@@ -66,9 +73,9 @@ Each app on the Launchpad can be launched in three different environments:
 
 | Instance | How to Access |
 |---|---|
-| **Production** | Click on the app card. |
-| **Development (Dev)** | Click the bottom-left icon on the app card. |
-| **UAT (User Acceptance Testing)** | Click the bottom-right icon on the app card. |
+| **Production** | Select the app card. |
+| **Development (Dev)** | Select the bottom-left icon on the app card. |
+| **UAT (User Acceptance Testing)** | Select the bottom-right icon on the app card. |
 
 {% hint style="info" %}
 Some apps, such as Available to Promise, Order Routing, and Company, require a maarg instance to be configured. If maarg is not configured, these apps will display a **"Not configured"** badge and will be inaccessible.
@@ -78,5 +85,5 @@ Some apps, such as Available to Promise, Order Routing, and Company, require a m
 
 ## Logging Out
 
-1. Click on your **user profile** at the top of the home page.
-2. Select **Logout** from the popover menu.
+1. Select your **user profile** at the top of the home page.
+2. Select **Logout** from the menu.
