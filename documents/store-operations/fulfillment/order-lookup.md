@@ -42,9 +42,6 @@ Use the filter options on the top right of the "Find Orders" page to apply filte
 
 **F. Date Range** Select a date range of the last 7 days, the last 30 days, or any custom range to view orders based on that selection. This helps store managers review and manage orders within a specific timeframe.
 
-{% embed url="https://youtu.be/VttzsAe5OxE" %}
-Video: Filter Orders
-{% endembed %}
 
 ### View Order Detail
 

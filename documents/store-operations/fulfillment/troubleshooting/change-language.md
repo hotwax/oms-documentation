@@ -18,4 +18,4 @@ The language switching feature in the HotWax Commerce platform is designed to en
 
 By following these steps, users can ensure that their interaction with the HotWax Commerce platform is seamless and tailored to their linguistic preferences.
 
-{% embed url ="https://youtu.be/TGNPjyJGaJA" %} Change Language {% endembed %}
+
