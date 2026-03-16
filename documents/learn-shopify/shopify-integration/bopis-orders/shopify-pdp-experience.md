@@ -22,8 +22,8 @@ This is achieved through the following steps:
 5. Customers can choose a specific location to be saved as their preferred pickup spot, known as "My Store." This saves them the hassle of having to search for their preferred pickup location every time they make an order.
 6. HotWax Commerce BOPIS PDP App on Shopify uses the 'checkInventory' API to confirm product availability and displays suitable pickup locations for that product.
 
-<figure><img src="../../.gitbook/assets/28 (2).png" alt=""><figcaption><p><em>Fig.1 : Pickup locations on PDP</em></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/28-2.png" alt=""><figcaption><p><em>Fig.1 : Pickup locations on PDP</em></p></figcaption></figure>
 
 6. When a customer adds a qualifying item for in-store pickup to their cart, the HotWax Commerce BOPIS PDP App on Shopify displays the reservation expiration date and time to encourage prompt purchase and reduce abandoned carts. Retailers can customize the reservation duration. If a customer's reservation expires, they can refresh their cart to view real-time in-store availability for pickup items.
 
-<figure><img src="../../.gitbook/assets/29 (2).png" alt=""><figcaption><p><em>Fig.2 : Reservation until date and time</em></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/29-2.png" alt=""><figcaption><p><em>Fig.2 : Reservation until date and time</em></p></figcaption></figure>

@@ -67,7 +67,7 @@ Sequence Routing Rules
 
 <table data-card-size="large" data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><ol><li><mark style="color:orange;"><strong>Filters</strong></mark></li></ol><p>Look up orders and group them in a batch.</p></td><td></td><td></td><td></td></tr><tr><td><ol start="2"><li><mark style="color:orange;"><strong>Sorting</strong></mark></li></ol><p>Determine the sequence in which orders are picked up during routing.</p></td><td></td><td></td><td></td></tr></tbody></table>
 
-<figure><img src="../../.gitbook/assets/Orderfilteringandsorting.png" alt="" width="563"><figcaption><p>Order Filters and Sorting</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/orderfilteringandsorting.png" alt="" width="563"><figcaption><p>Order Filters and Sorting</p></figcaption></figure>
 
 ### Step 1: Creating a Batch of Orders Using Filters
 
@@ -75,7 +75,7 @@ The first step in setting up routing rules is to create a batch of orders using 
 
 <mark style="color:orange;">**Here are the available filters to create order batches:**</mark>
 
-<figure><img src="../../.gitbook/assets/Select filters (7).png" alt="" width="563"><figcaption><p>Order Batch Filters</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/select-filters-7.png" alt="" width="563"><figcaption><p>Order Batch Filters</p></figcaption></figure>
 
 * **Origin facility group:** This parameter allows retailers to filter orders based on the [facility group ](https://docs.hotwax.co/documents/system-admins/administration/introduction/facilities-app#facility-groups)from which they originated. For example, many times when walk-in customers cannot find their preferred items in store, store associates place the order on their behalf. These are known as Send Sale orders. In this scenario, the origin facility becomes the specific physical location. If a retailer wants all Send Sale orders from specific facilities to be routed differently, then they can apply this filter to create a batch of orders and proceed to create their routing.
 * **Order priority:** Not all orders carry the same level of urgency. In HotWax Commerce, orders can be assigned a priority level of high, medium, or low. By default, orders are set to "medium priority," but retailers can adjust the order priority in HotWax Commerce as needed. By filtering orders based on priority, the most critical ones (high-priority orders) are routed before less urgent ones.
@@ -115,7 +115,7 @@ After filtering, the next step is choosing the Sorting criteria to prioritize th
 
 <mark style="color:orange;">**Available sorting options:**</mark>
 
-<figure><img src="../../.gitbook/assets/Ordersorting.png" alt="" width="563"><figcaption><p>Order Batch Sorting</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/ordersorting.png" alt="" width="563"><figcaption><p>Order Batch Sorting</p></figcaption></figure>
 
 * **Order date:** Sort by order date to prioritize older orders first, following a first-in, first-out (FIFO) approach.
 * **Order priority:** Orders can be sorted by priority levels, such as high, medium, low allowing retailers to prioritize orders based on their urgency.

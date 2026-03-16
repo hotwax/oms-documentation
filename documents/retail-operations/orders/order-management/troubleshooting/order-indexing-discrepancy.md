@@ -36,4 +36,4 @@ For more details, kindly refer to this [documentation](/documents/system-admin/a
 * In the modal window that appears, enter the order ID associated with the order facing fulfillment issues.
 * Once the order ID is entered, click the `Create OISGIR Index` button. Providing only the order ID is sufficient to generate its index; filling out all fields is not necessary.
 
-<figure><img src="../../../.gitbook/assets/Order Indexing  Discrepancy 1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/order-indexing-discrepancy-1.png" alt=""><figcaption></figcaption></figure>

@@ -33,7 +33,7 @@ Scheduled job parameters can be modified directly from the Job Pipeline page, en
 
 Comprehensive historical job data is readily accessible for analysis and troubleshooting purposes. Users can identify patterns, optimize job performance, and resolve recurring issues by examining historical job execution details.
 
-<figure><img src="../../.gitbook/assets/Frame 1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/frame-1.png" alt=""><figcaption></figcaption></figure>
 
 ### Segmentation
 
@@ -91,21 +91,21 @@ This tab lists all jobs that have been **completed**, whether finished or failed
 {% tab title="Pending" %}
 Displays all the jobs queued for execution.
 
-<figure><img src="../../.gitbook/assets/Pending 1.png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/pending-1.png" alt="" width="563"><figcaption></figcaption></figure>
 
-<figure><img src="/documents/retail-operations/.gitbook/assets/Screenshot 2023-11-07 at 4.09.42 PM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/screenshot-2023-11-07-at-4-09-42-pm.png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 
 {% tab title="Running" %}
 Displays all the jobs running in the system.
 
-<figure><img src="../../.gitbook/assets/running jobs.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/running-jobs.png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 
 {% tab title="History" %}
 Displays all the historical jobs. Historical jobs can be filtered by their status.
 
-<figure><img src="../../.gitbook/assets/history 1.png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/history-1.png" alt="" width="563"><figcaption></figcaption></figure>
 {% endtab %}
 {% endtabs %}
 
@@ -119,7 +119,7 @@ Easily locate specific jobs by name or category.
 
 Quickly find jobs by applying filters based on category and status.
 
-<figure><img src="../../.gitbook/assets/Frame 2.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/frame-2.png" alt=""><figcaption></figcaption></figure>
 
 ### History
 #### View Import Logs

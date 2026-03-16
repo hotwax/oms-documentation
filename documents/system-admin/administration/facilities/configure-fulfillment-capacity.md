@@ -14,4 +14,4 @@ Users can also see the facility order count history by clicking on the `View ord
 
 Furthermore, the `Find Facilities` page also offers the ability to view consumed capacity and configure fulfillment capacity seamlessly.
 
-<figure><img src="../../.gitbook/assets/Online Order Fulfillment.png" alt=""><figcaption><p>Image: Configure Fulfillment Capacity</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/online-order-fulfillment.png" alt=""><figcaption><p>Image: Configure Fulfillment Capacity</p></figcaption></figure>

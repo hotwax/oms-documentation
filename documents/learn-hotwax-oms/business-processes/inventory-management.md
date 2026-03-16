@@ -28,7 +28,7 @@ When there is a need to replenish inventory at retail stores, inventory planners
 
 When the store associates verify the inbound shipments and receive them, inventory counts for the corresponding items are automatically increased in HotWax Commerce.
 
-<figure><img src="../.gitbook/assets/TransferOrder.png" alt=""><figcaption><p>Transfer order sync</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/transferorder.png" alt=""><figcaption><p>Transfer order sync</p></figcaption></figure>
 
 #### Creating Shipments in ERP
 
@@ -50,7 +50,7 @@ In the case of NetSuite ERP, we recommend creating one package for each shipment
 
 Learn more about [transfer orders](/documents/store-operations/transfer-order/transfer-order-management.md)
 
-<figure><img src="../.gitbook/assets/ReceivingTransferOrder.png" alt=""><figcaption><p>Receiving inbound shipments using HotWax Receiving App</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/receivingtransferorder.png" alt=""><figcaption><p>Receiving inbound shipments using HotWax Receiving App</p></figcaption></figure>
 
 #### Handle Receiving of Unexpected Items in a Shipment
 
@@ -70,13 +70,13 @@ Learn more about additional scenarios supported in the [Receiving App](/document
 
 In most scenarios, purchase orders are received at the warehouse location, and stock is transferred to stores using transfer orders. However, in cases where stores independently raise purchase orders without a warehouse intermediary, HotWax Commerce supports direct receiving at the store level.
 
-<figure><img src="../.gitbook/assets/PurchaseOrder.png" alt=""><figcaption><p>Purchase order sync</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/purchaseorder.png" alt=""><figcaption><p>Purchase order sync</p></figcaption></figure>
 
 **Receiving in Parts:** Purchase orders can be received in multiple parts or batches, allowing for flexibility in inventory receiving. For example, a purchase order for 200 units might arrive in two batches of 100 units each. Store associates can receive each batch as it arrives.
 
 **Inbound Shipments:** Once a purchase order has been received, an inbound shipment is created in HotWax Commerce, and inventory counts for the received items are automatically updated.
 
-<figure><img src="../.gitbook/assets/ReceivingPurchaseOrder.png" alt=""><figcaption><p>Receiving purchase orders using HotWax Receiving App</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/receivingpurchaseorder.png" alt=""><figcaption><p>Receiving purchase orders using HotWax Receiving App</p></figcaption></figure>
 
 All other features, such as receiving extra items or handling discrepancies, are also offered during the purchase order receiving process, just as they are with inbound shipments. The primary difference is that when you are receiving a purchase order instead of a shipment, you can receive it in parts, unlike shipments which must be received in one go.
 
@@ -86,7 +86,7 @@ Retailers aiming for 98% to 99% inventory accuracy, regularly perform cycle coun
 
 HotWax Commerce provides a dedicated Cycle Count App for retailers that helps them create, assign, schedule and perform cycle counts. What differentiates the app is its role-based interface, operations teams use it to create, assign and review submitted counts, while store associates use it to scan and record item quantities during the count.
 
-<figure><img src="../.gitbook/assets/CycleCounting.png" alt=""><figcaption><p>Cycle count sync</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/cyclecounting.png" alt=""><figcaption><p>Cycle count sync</p></figcaption></figure>
 
 #### Creating & Assigning Cycle Count
 
@@ -105,7 +105,7 @@ To start the cycle count, associates log into the Cycle Count App. They see a di
 The app provides an optional view of the system-recorded inventory levels for reference. This view can also be disabled by admins to make sure that store associates submit counts without influence from existing data.\
 Once the counting is complete, the associate submits the results for review.
 
-<figure><img src="../.gitbook/assets/InventoryCycleCount.png" alt=""><figcaption><p>Performing cycle count using HotWax Commerce Cycle Count App</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/inventorycyclecount.png" alt=""><figcaption><p>Performing cycle count using HotWax Commerce Cycle Count App</p></figcaption></figure>
 
 {% hint style="info" %}
 Cycle counts should be performed after receiving the inventory reset from the ERP to ensure alignment with the most current inventory data.

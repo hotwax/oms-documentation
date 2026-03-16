@@ -16,7 +16,7 @@ Below is a list of all the actions available in the Users App, along with the sp
 | 2   | Search Users | -                                   | Enables users to search for specific users by name, email, or other identifiers. |
 | 3   | Create Users | SECURITY\_CREATE OR SECURITY\_ADMIN | Provides the ability to create new user profiles within the system.              |
 
-<figure><img src="../../.gitbook/assets/view page.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/view-page.png" alt=""><figcaption></figcaption></figure>
 
 ### User Details Page
 
@@ -32,7 +32,7 @@ Below is a list of all the actions available in the Users App, along with the sp
 | 8   | Add as Picker               | STOREFULFILLMENT\_ADMIN             | Allows the user to be added as a picker for fulfillment purposes.                                           |
 | 9   | Select Favourite            | -                                   | Enables users to select a favorite product store and Shopify shop for preselection across all applications. |
 
-<figure><img src="../../.gitbook/assets/user details.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/user-details.png" alt=""><figcaption></figcaption></figure>
 
 ### Permissions Tab
 

@@ -12,7 +12,7 @@ Clients may have varying approval processes, such as requiring customer IDs or p
 
 Orders may not get approved if essential attributes are missing. For instance, some clients may require specific information such as a customer ID or Municipio ID. If these attributes are missing, the approval job cannot verify and approve the order, causing it to remain in the 'Created' status. For detailed instructions on how to add missing order attributes, refer to our [troubleshooting documentation](order-attribute-missing.md)
 
-<figure><img src="../../../.gitbook/assets/Add order Attribute 1.png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/add-order-attribute-1.png" alt="" width="563"><figcaption></figcaption></figure>
 
 ## Scenario 2: Incorrect Order Attribute
 

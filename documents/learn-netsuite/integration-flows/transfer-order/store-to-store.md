@@ -146,11 +146,11 @@ Following this approach, store associates at the destination store can efficient
 
 {% tabs %}
 {% tab title="Transfer Order Fields in NetSuite" %}
-<figure><img src="../../.gitbook/assets/transferOrderNS.png" alt=""><figcaption><p>Transfer Order Fields Mapping in NetSuite</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/transferorderns.png" alt=""><figcaption><p>Transfer Order Fields Mapping in NetSuite</p></figcaption></figure>
 {% endtab %}
 
 {% tab title="Transfer Order Fields in HotWax Commerce" %}
-<figure><img src="../../.gitbook/assets/salesOrderHC.png" alt=""><figcaption><p>Transfer Order Fields Mapping in HotWax Commerce</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/salesorderhc.png" alt=""><figcaption><p>Transfer Order Fields Mapping in HotWax Commerce</p></figcaption></figure>
 {% endtab %}
 {% endtabs %}
 
@@ -162,11 +162,11 @@ Following this approach, store associates at the destination store can efficient
 
 {% tabs %}
 {% tab title="Transfer Order Fields in NetSuite" %}
-<figure><img src="../../.gitbook/assets/itemFulfillment.png" alt=""><figcaption><p>Fulfilled Transfer Order Fields Mapping in NetSuite</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/itemfulfillment.png" alt=""><figcaption><p>Fulfilled Transfer Order Fields Mapping in NetSuite</p></figcaption></figure>
 {% endtab %}
 
 {% tab title="Transfer Order Fields in HotWax Commerce" %}
-<figure><img src="../../.gitbook/assets/shipmentReceiving.png" alt=""><figcaption><p>Inbound Shipment Fields Mapping in HotWax Commerce "Inventory Receiving App"</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/shipmentreceiving.png" alt=""><figcaption><p>Inbound Shipment Fields Mapping in HotWax Commerce "Inventory Receiving App"</p></figcaption></figure>
 {% endtab %}
 {% endtabs %}
 

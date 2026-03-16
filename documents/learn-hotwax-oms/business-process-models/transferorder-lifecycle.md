@@ -17,7 +17,7 @@ To explain the Transfer Order Lifecycle BPM, we've opted NetSuite as the ERP sys
 
 ## Warehouse to Store Transfer Orders
 
-<figure><img src="../.gitbook/assets/WarehousetoStoreTObpm.png" alt=""><figcaption><p>Warehouse to store transfer orders lifecycle business process model</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/warehousetostoretobpm.png" alt=""><figcaption><p>Warehouse to store transfer orders lifecycle business process model</p></figcaption></figure>
 
 ### 1. Transfer Orders Created in NetSuite
 
@@ -50,7 +50,7 @@ It’s crucial to note that inventory counts for the items shipped from the ware
 
 ## Store to Store Transfer Orders
 
-<figure><img src="../.gitbook/assets/StoretoStoreTObpm.png" alt=""><figcaption><p>Store to store transfer orders lifecycle business process model</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/storetostoretobpm.png" alt=""><figcaption><p>Store to store transfer orders lifecycle business process model</p></figcaption></figure>
 
 ### 1. Transfer Orders Created in NetSuite and Imported into HotWax Commerce
 
@@ -102,7 +102,7 @@ Once transfer order items are fulfilled from the store, the QOH for the correspo
 
 ## Store to Warehouse Transfer Orders
 
-<figure><img src="../.gitbook/assets/StoretoWarehouseTObpm.png" alt=""><figcaption><p>Store to warehouse transfer orders lifecycle business process model</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/storetowarehousetobpm.png" alt=""><figcaption><p>Store to warehouse transfer orders lifecycle business process model</p></figcaption></figure>
 
 ### 1. Transfer Orders Created in NetSuite
 

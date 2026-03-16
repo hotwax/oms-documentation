@@ -25,7 +25,7 @@ Additional functionalities that are available on the `Find Purchase Orders` page
 
 Once the merchandiser has located their desired purchase order, they can execute various flows to ensure precise synchronization of pre-order information with the eCommerce platform.
 
-<figure><img src="../../.gitbook/assets/Purchase Order Page.png" alt=""><figcaption><p>Find Purchase Order</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/purchase-order-page.png" alt=""><figcaption><p>Find Purchase Order</p></figcaption></figure>
 
 ## Cancel Purchase Order
 

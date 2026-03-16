@@ -79,7 +79,7 @@ The overview section contains essential information related to “product specif
 
 This information provides a comprehensive overview facilitating effective management and customization of a product and also empowers users to add and delete any product specifications.
 
-<figure><img src="../.gitbook/assets/product details.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/product-details.png" alt=""><figcaption></figcaption></figure>
 
 ### Sync Products to Multiple Shopify Shops
 
