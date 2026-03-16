@@ -20,7 +20,7 @@ In HotWax Commerce there’s a dedicated `Import Orders` job that downloads new 
 {% hint style="info" %}
 **Why is order approval necessary?**
 
-Only orders with approved status are eligible for fulfillment in HotWax Commerce and orders without approval remain in the <mark style="color:orange;">**"Created"**</mark> status.
+Only orders with an approved status are eligible for fulfillment in HotWax Commerce and orders without approval remain in the <mark style="color:orange;">**"Created"**</mark> status.
 {% endhint %}
 
 **Order approval process:**
@@ -124,7 +124,7 @@ HotWax Commerce then checks the custom tag on orders. If the tag is present on a
 
 Store associates can view BOPIS orders in their <mark style="color:orange;">**BOPIS Fulfillment App**</mark> and begin preparing the order for customer pick-up.
 
-Once the order is prepared, customer receives an email informing them that their order is ready for pickup. After an order has been picked up by the customer, the order status is updated from <mark style="color:orange;">**“Approved” to “Completed”**</mark> in HotWax Commerce. A `Completed Orders` job in HotWax Commerce also marks orders as <mark style="color:orange;">**"Fulfilled" in eCommerce.**</mark>
+Once the order is prepared, the customer receives an email informing them that their order is ready for pickup. After an order has been picked up by the customer, the order status is updated from <mark style="color:orange;">**“Approved” to “Completed”**</mark> in HotWax Commerce. A `Completed Orders` job in HotWax Commerce also marks the orders as <mark style="color:orange;">**"Fulfilled" in eCommerce.**</mark>
 
 ### BOPIS Fulfillment Failure
 
@@ -144,7 +144,7 @@ HotWax Commerce checks if an order has a pre-order tag applied and automatically
 
 Once the pre-order inventory arrives and the promise date is reached, a dedicated `Auto Releasing` Pre-Order job in HotWax Commerce automatically releases all orders from the `Pre-Order Parking` to the `Brokering Queue`.This enables inventory to be allocated to them for fulfillment.
 
-In the event, retailers want control over releasing and fulfilling their Pre-Orders, they can leverage the HotWax Commerce <mark style="color:orange;">**Pre-Order Management App**</mark> to manually release Pre-Orders from the `Pre-Order Parking` to the `Brokering Queue`.
+In the event retailers want control over releasing and fulfilling their Pre-Orders, they can use the HotWax Commerce <mark style="color:orange;">**Pre-Order Management App**</mark> to manually release Pre-Orders from the `Pre-Order Parking` to the `Brokering Queue`.
 
 Learn more about [Pre-Orders Management](/documents/retail-operations/orders/pre-orders/)
 
@@ -166,11 +166,11 @@ A dedicated job `Canceled Items` in HotWax Commerce downloads order cancellation
 
 **For orders in the "Created" status:**
 
-These are orders for which fulfillment has not yet commenced in HotWax Commerce. Once all canceled orders are downloaded from eCommerce, HotWax Commerce processes the file to verify the order IDs of the canceled orders and updates their status from <mark style="color:orange;">**"Created" to "Canceled".**</mark>These orders are then moved to the `General Ops Parking` queue.
+These are orders for which fulfillment has not yet started in HotWax Commerce. Once all canceled orders are downloaded from eCommerce, HotWax Commerce processes the file to verify the order IDs of the canceled orders and updates their status from <mark style="color:orange;">**"Created" to "Canceled".**</mark>These orders are then moved to the `General Ops Parking` queue.
 
 **For orders in the "Approved" status:**
 
-These are orders for which fulfillment has commenced in HotWax Commerce but they are not yet shipped. Once all canceled orders are downloaded, HotWax Commerce processes the file to verify the order IDs of the canceled orders and updates their status from <mark style="color:orange;">**“Approved” to “Canceled”.**</mark>These orders are then moved to the `Reject order parking` queue.
+These are orders for which fulfillment has commenced in HotWax Commerce but they are not yet shipped. Once all canceled orders are downloaded, HotWax Commerce processes the file to verify the order IDs of the canceled orders and updates their status from <mark style="color:orange;">**“Approved” to “Canceled”.**</mark>These orders are then moved to the `Rejected order parking` queue.
 
 If an approved order has been allocated to the store, HotWax Commerce also automatically rejects it in the Store Fulfillment App.
 
@@ -186,7 +186,7 @@ When orders are downloaded from eCommerce into HotWax Commerce in a <mark style=
 
 * **Historical orders:** These are orders that were already marked as <mark style="color:orange;">**“Completed” or “Canceled”**</mark> in eCommerce before being downloaded into HotWax Commerce during the implementation phase. For example, a retailer might request that all orders from the last two months also be imported during implementation, even though they have already been fulfilled or canceled. Storing these historical orders separately allows for easy access in case of customer inquiries or returns, without them entering the fulfillment workflow.
 * **Newly canceled orders:** Any orders that are canceled in eCommerce before being downloaded into HotWax Commerce are automatically moved to the `General Ops Parking` in a <mark style="color:orange;">**“Canceled”**</mark> status, ensuring that they are not processed further.
-* **Completed digital product orders:** Orders for digital products, such as digital gift cards, are downloaded as <mark style="color:orange;">**“Completed”**</mark> and are also placed to the `General Ops Parking` since they require no further processing.
+* **Completed digital product orders:** Orders for digital products, such as digital gift cards, are downloaded as <mark style="color:orange;">**“Completed”**</mark> and are also placed in the `General Ops Parking` since they require no further processing.
 
 This ensures that only open and actionable orders are processed for fulfillment, while orders that no longer require any operational steps are kept for record-keeping.
 
@@ -195,5 +195,5 @@ This ensures that only open and actionable orders are processed for fulfillment,
 In the previous sections, we discussed various stages of the order lifecycle, primarily focusing on online orders. HotWax Commerce also manages sales made through physical retail locations via POS systems. These in-store purchases, which involve real-time fulfillment, are also downloaded into HotWax Commerce and are automatically assigned a <mark style="color:orange;">**"Completed"**</mark> status. This ensures that the inventory is updated instantly and provides a unified view of both online and in-store sales.
 
 {% hint style="success" %}
-The comprehensive process outlined in the Order Lifecycle Business Process Model demonstrates how HotWax Commerce ensures that every order, regardless of its type, is efficiently managed and accurately fulfilled, providing retailers with the control and flexibility needed in an omnichannel environment.
+The comprehensive process outlined in the Order Lifecycle Business Process Model demonstrates how HotWax Commerce ensures that every order, regardless of its type, is managed efficiently and fulfilled accurately, providing retailers with the control and flexibility needed in an omnichannel environment.
 {% endhint %}
