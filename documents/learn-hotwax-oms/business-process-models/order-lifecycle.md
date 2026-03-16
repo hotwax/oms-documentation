@@ -124,7 +124,7 @@ HotWax Commerce then checks the custom tag on orders. If the tag is present on a
 
 Store associates can view BOPIS orders in their <mark style="color:orange;">**BOPIS Fulfillment App**</mark> and begin preparing the order for customer pick-up.
 
-Once the order is prepared,the customer receives an email informing them that their order is ready for pickup. After an order has been picked up by the customer, the order status is updated from <mark style="color:orange;">**“Approved” to “Completed”**</mark> in HotWax Commerce. A `Completed Orders` job in HotWax Commerce also marks the orders as <mark style="color:orange;">**"Fulfilled" in eCommerce.**</mark>
+Once the order is prepared, the customer receives an email informing them that their order is ready for pickup. After an order has been picked up by the customer, the order status is updated from <mark style="color:orange;">**“Approved” to “Completed”**</mark> in HotWax Commerce. A `Completed Orders` job in HotWax Commerce also marks the orders as <mark style="color:orange;">**"Fulfilled" in eCommerce.**</mark>
 
 ### BOPIS Fulfillment Failure
 
@@ -144,7 +144,7 @@ HotWax Commerce checks if an order has a pre-order tag applied and automatically
 
 Once the pre-order inventory arrives and the promise date is reached, a dedicated `Auto Releasing` Pre-Order job in HotWax Commerce automatically releases all orders from the `Pre-Order Parking` to the `Brokering Queue`.This enables inventory to be allocated to them for fulfillment.
 
-In the event retailers want control over releasing and fulfilling their Pre-Orders, they can leverage the HotWax Commerce <mark style="color:orange;">**Pre-Order Management App**</mark> to manually release Pre-Orders from the `Pre-Order Parking` to the `Brokering Queue`.
+In the event retailers want control over releasing and fulfilling their Pre-Orders, they can use the HotWax Commerce <mark style="color:orange;">**Pre-Order Management App**</mark> to manually release Pre-Orders from the `Pre-Order Parking` to the `Brokering Queue`.
 
 Learn more about [Pre-Orders Management](/documents/retail-operations/orders/pre-orders/)
 
@@ -195,5 +195,5 @@ This ensures that only open and actionable orders are processed for fulfillment,
 In the previous sections, we discussed various stages of the order lifecycle, primarily focusing on online orders. HotWax Commerce also manages sales made through physical retail locations via POS systems. These in-store purchases, which involve real-time fulfillment, are also downloaded into HotWax Commerce and are automatically assigned a <mark style="color:orange;">**"Completed"**</mark> status. This ensures that the inventory is updated instantly and provides a unified view of both online and in-store sales.
 
 {% hint style="success" %}
-The comprehensive process outlined in the Order Lifecycle Business Process Model demonstrates how HotWax Commerce ensures that every order, regardless of its type, is efficiently managed efficiently and fulfilled accurately, providing retailers with the control and flexibility needed in an omnichannel environment.
+The comprehensive process outlined in the Order Lifecycle Business Process Model demonstrates how HotWax Commerce ensures that every order, regardless of its type, is managed efficiently and fulfilled accurately, providing retailers with the control and flexibility needed in an omnichannel environment.
 {% endhint %}
