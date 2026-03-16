@@ -1,52 +1,61 @@
 # Product Sync
 
-This guide explains how to configure and run Shopify product sync jobs in HotWax Maarg.
+This guide explains how to configure and run Shopify product sync jobs in HotWax Commerce.
 
 ---
 
-The Shopify-to-OMS Product Synchronization Bulk Flow is an asynchronous, three-step process. First, the `queue_BulkQuerySystemMessage` job acts as the initiator, creating a system message that defines the criteria (such as specific IDs or date filters) for the products needed from Shopify.
+The Shopify-to-HotWax product sync is an asynchronous, five-step process driven by a chain of system messages and service jobs.
 
-Next, the `send_BulkProductAndVariantsByIdQuery` job acts as the dispatcher; it picks up these queued messages and transmits the required GraphQL bulk query to Shopify.
+1. `queue_BulkQuerySystemMessage_BulkProductAndVariantsById` creates a `BulkProductAndVariantsByIdQuery` system message that holds the product query criteria, such as specific IDs or date filters.
+2. `send_BulkProductAndVariantsByIdQueryProducedSystemMessages` picks up that message and transmits a GraphQL bulk query to Shopify to start the export.
+3. `poll_BulkOperationResult_ShopifyBulkQuery` polls Shopify until the bulk operation completes. It then downloads the resulting JSONL file and creates a `GenerateOMSUpdateProductsFeedNew` system message.
+4. `send_GenerateOMSUpdateProductsFeedNewProducedSystemMessages` processes that message, transforms the raw JSONL data into a structured product diff, updates product history, and creates a `ProductUpdatesFeedNew` system message.
+5. `consume_ProductUpdatesFeedNewReceivedSystemMessages` consumes that final message and creates or updates products and variants in HotWax Commerce.
 
-Finally, because Shopify processes this data asynchronously, the `poll_BulkOperationResult` job acts as the monitor and retriever. It repeatedly checks Shopify's status until the export is ready, at which point it downloads the resulting JSONL file and triggers the internal consumption service to parse and save the updated product and variant data into the HotWax OMS database.
-
-## Product sync flow
-
+## Product Sync Flow
 <div align="center">
 
-`queue_BulkQuerySystemMessage`  
-↓  
-System Message Created (`BulkProductAndVariantsByIdQuery`)  
-↓  
-`send_AllProducedSystemMessages`  
-↓  
-GraphQL Bulk Query Sent to Shopify  
-↓  
-Shopify Bulk Operation Started  
-↓  
-`poll_BulkOperationResult`  
-↓  
-JSONL File Downloaded  
-↓  
-Consume Service Processes Data  
-↓  
-Products and Variants Stored in OMS  
+`queue_BulkQuerySystemMessage_BulkProductAndVariantsById` <br>
+↓ <br>
+`BulkProductAndVariantsByIdQuery` system message created <br>
+↓ <br>
+`send_BulkProductAndVariantsByIdQueryProducedSystemMessages` <br>
+↓ <br>
+GraphQL bulk query sent to Shopify <br>
+↓ <br>
+Shopify bulk operation running <br>
+↓ <br>
+`poll_BulkOperationResult_ShopifyBulkQuery` <br>
+↓ <br>
+JSONL file downloaded → `GenerateOMSUpdateProductsFeedNew` system message created <br>
+↓ <br>
+`send_GenerateOMSUpdateProductsFeedNewProducedSystemMessages` <br>
+↓ <br>
+JSONL transformed, product history updated → `ProductUpdatesFeedNew` system message created <br>
+↓ <br>
+`consume_ProductUpdatesFeedNewReceivedSystemMessages` <br>
+↓ <br>
+Products and variants created or updated in HotWax Commerce
 
 </div>
 
+## System messages overview
+
+| System message type | Created by | Processed by | Role |
+| --- | --- | --- | --- |
+| `BulkProductAndVariantsByIdQuery` | `queue_BulkQuerySystemMessage_BulkProductAndVariantsById` | `send_BulkProductAndVariantsByIdQueryProducedSystemMessages` | Holds the GraphQL bulk query request sent to Shopify. |
+| `GenerateOMSUpdateProductsFeedNew` | `poll_BulkOperationResult_ShopifyBulkQuery` | `send_GenerateOMSUpdateProductsFeedNewProducedSystemMessages` | Triggers transformation of the downloaded JSONL file and updates product history. |
+| `ProductUpdatesFeedNew` | `send_GenerateOMSUpdateProductsFeedNewProducedSystemMessages` | `consume_ProductUpdatesFeedNewReceivedSystemMessages` | Carries the final product diff to be applied in HotWax Commerce. |
+
 ## Configurations required to set up product sync
 
-Before syncing anything, you must tell HotWax where to connect and how. This is done by configuring some data in the `SystemMessageRemote` Entity. It acts like a bridge between your Shopify store and HotWax OMS.
+Before syncing products, you must configure the connection between Shopify and HotWax Commerce. This is done in the `SystemMessageRemote` entity.
 
 ## Configure SystemMessageRemote
 
-Each Shopify store must be linked to a dedicated `SystemMessageRemote`. Below is the sample data to create the system message remote for the Shopify Shop.
+Each Shopify store must be linked to a dedicated `SystemMessageRemote`. If you are setting up a Shopify shop from scratch, a remote is automatically created in HotWax. Verify that the remote has read-write access for that Shopify shop.
 
-In case you are setting up a Shopify shop from scratch, a remote is automatically created in the Maarg instance. Please verify that the remote has Read-Write access for that Shopify shop.
-
-Here is the XML data to configure the Remote in Maarg.
-
-### Sample Configuration
+**Sample configuration**
 
 ```xml
 <moqui.service.message.SystemMessageRemote
@@ -58,25 +67,25 @@ Here is the XML data to configure the Remote in Maarg.
     accessScopeEnumId="SHOP_RW_ACCESS"/>
 ```
 
-### Key Field Breakdown
+**Key field breakdown**
 
 | Field | Description |
 | ---- | ---- |
-| `systemMessageRemoteId` | Unique SHOP ID for Shopify Store (must be different per store). |
-| `description` | A readable identifier for your shop. |
-| `sendUrl` | Shopify Admin API URL. Replace placeholders with your store's domain and API version. |
-| `password` | Shopify access token (`shpat_...`) – system-generated, fetched from Shopify Config Entity in Webtools. |
-| `internalId` | HotWax Shop ID – manually created, found under the Shopify Shop page (hamburger menu in OMS). |
-| `accessScopeEnumId` | Access level – typically set to `SHOP_RW_ACCESS` to allow both read/write operations. The exact value is in the Shopify Config Entity. |
+| **systemMessageRemoteId:** | Unique shop ID for Shopify store. |
+| **description:** | Readable identifier for your shop. |
+| **sendUrl:** | Shopify Admin API URL. |
+| **password:** | Shopify access token (`shpat_...`). |
+| **internalId:** | HotWax shop ID. |
+| **accessScopeEnumId:** | Access level, typically set to `SHOP_RW_ACCESS`. |
 
-This data will be entered in Maarg > Tools > Data Import > XML text.
+Enter this data in HotWax by navigating to `Tools` > `Data Import` > `XML Text`.
 
 ## Enter common data
 
-When setting up product sync initially, you also need to add this common XML data. This common data configures system message types and jobs for the product update feed in HotWax Commerce. It defines how product updates are generated, transformed, and consumed in OMS. The enumerations link the producer and consumer message types, while the service job schedules the sending of produced messages. This data is added to enable automated product update synchronization.
+When setting up product sync initially, you must add this common XML data. This data configures system message types and jobs for the product update feed in HotWax Commerce. It defines how product updates are generated, transformed, and consumed. The enumerations link the producer and consumer message types, while the service jobs schedule the synchronization.
 
 > [!NOTE]
-> This common data should be added only during the initial setup of product synchronization.
+> Add this common data only during the initial setup of product synchronization.
 
 ```xml
 <moqui.service.message.SystemMessageType systemMessageTypeId="ProductUpdatesFeedNew"
@@ -90,24 +99,44 @@ When setting up product sync initially, you also need to add this common XML dat
     description="Generate OMS Products Feed"
     sendServiceName="co.hotwax.sob.system.FeedServices.generate#OMSFeedNew"
     consumeServiceName="co.hotwax.orderledger.system.FeedServices.transform#JsonLToJsonForUpdatedProducts">
-    <!-- Add the SystemMessageTypeParameters to skip product import, applicable on the virtual product fields
-    <parameters parameterName="vendor" parameterValue="recurate"/>
-    -->
 </moqui.service.message.SystemMessageType>
 
 <moqui.basic.Enumeration description="Generate OMS Update Products Feed" enumId="GenerateOMSUpdateProductsFeedNew" enumTypeId="SOBMessageTypeEnum" relatedEnumId="ProductUpdatesFeedNew" relatedEnumTypeId="OMSMessageTypeEnum"/>
+
+<moqui.basic.Enumeration description="Bulk Product And Variants By Id Query" enumId="BulkProductAndVariantsByIdQuery" enumTypeId="ShopifyMessageTypeEnum" relatedEnumId="GenerateOMSUpdateProductsFeedNew" relatedEnumTypeId="ShopifyMessageTypeEnum"/>
+
 
 <moqui.service.job.ServiceJob jobName="send_BulkProductAndVariantsByIdQueryProducedSystemMessages" description="Send All Bulk Product Variants By Id Query Produced SystemMessages"
     serviceName="org.moqui.impl.SystemMessageServices.send#AllProducedSystemMessages" cronExpression="0 1/15 * * * ?" paused="Y">
     <parameters parameterName="systemMessageTypeIds" parameterValue="BulkProductAndVariantsByIdQuery"/>
 </moqui.service.job.ServiceJob>
+
+<moqui.service.job.ServiceJob 
+    jobName="send_GenerateOMSUpdateProductsFeedNewProducedSystemMessages"
+    description="Send Generate OMS Product Feed Produced SystemMessages"
+    serviceName="org.moqui.impl.SystemMessageServices.send#AllProducedSystemMessages"
+    cronExpression="0 11/15 * * * ?" paused="Y">
+
+    <parameters parameterName="systemMessageTypeIds" 
+                parameterValue="GenerateOMSUpdateProductsFeedNew"/>
+</moqui.service.job.ServiceJob>
+
+<moqui.service.job.ServiceJob 
+    jobName="consume_ProductUpdatesFeedNewReceivedSystemMessages"
+    description="Consume Product Updates Feed Received SystemMessages"
+    serviceName="org.moqui.impl.SystemMessageServices.consume#AllReceivedSystemMessages"
+    cronExpression="0 16/15 * * * ?" paused="Y">
+
+    <parameters parameterName="systemMessageTypeIds" 
+                parameterValue="ProductUpdatesFeedNew"/>
+</moqui.service.job.ServiceJob>
 ```
 
 ## Product sync jobs
 
-## Queue Bulk Query System Message Bulk Product and Variant by ID Query
+## Queue Bulk Query System Message Bulk Product and Variant by Id Query 
 
-**Purpose**:
+**Purpose:**
 This job starts the product synchronization process.
 
 When the job runs, it creates a request asking Shopify for product and variant data. Instead of downloading the data immediately, the job simply creates a system message that contains the request.
@@ -115,17 +144,16 @@ When the job runs, it creates a request asking Shopify for product and variant d
 This request uses Shopify’s Bulk GraphQL API, which allows many products to be fetched at once.
 
 The created message is stored in the system and will later be picked up by another job that sends the request to Shopify.
-When executed, it calls the Moqui service `co.hotwax.shopify.system.ShopifySystemMessageServices.queue#BulkQuerySystemMessage` with the system message type `BulkProductAndVariantsByIdQuery`. It prepares a system message that later gets `sent` to Shopify to initiate a bulk operation for exporting product and variant data.
 
-**Steps to run manually:**
+**Manual steps:**
 
-1. Go to Maarg > Application > System > Service > Jobs > Service Job List
-2. Search for `queue_BulkQuerySystemMessage_BulkProductAndVariantsByIdQuery`.
-3. Ensure that parameters are set (e.g., 'systemMessageRemote', 'systemMessageTypeId', etc.).
+1. Navigate to Maarg: `Application` > `System` > `Service` > `Jobs` > `Service Job List`.
+2. Search for `queue_BulkQuerySystemMessage_BulkProductAndVariantsById`.
+3. Verify that parameters like `systemMessageRemote` and `systemMessageTypeId` are set.
 4. Run the job.
 
-**Sample XML data to create this job:**
- 
+**Sample XML data:**
+
 ```xml
 <moqui.service.job.ServiceJob 
     jobName="queue_BulkQuerySystemMessage_BulkProductAndVariantsById"
@@ -137,28 +165,22 @@ When executed, it calls the Moqui service `co.hotwax.shopify.system.ShopifySyste
 
     <parameters parameterName="systemMessageTypeId" parameterValue="BulkProductAndVariantsByIdQuery"/>
     <parameters parameterName="systemMessageRemoteId" parameterValue="RMT_ID"/>
-    <parameters parameterName="filterQuery" parameterValue=""/>
-    <parameters parameterName="fromDate" parameterValue=""/>
-    <parameters parameterName="thruDate" parameterValue=""/>
-    <parameters parameterName="fromDateLabel" parameterValue=""/>
-    <parameters parameterName="thruDateLabel" parameterValue=""/>
 </moqui.service.job.ServiceJob>
 ```
 
-## Send Bulk Product and Variants by ID Query Produced System Message
+## Send Bulk Product And Variants By ID Query
 
-**Purpose**:
-This job is responsible for picking up queued (or "produced") system messages of the type `BulkProductAndVariantsByIdQuery` and sending them to Shopify to execute the bulk query operation. When this job runs, it invokes the core Moqui framework service `org.moqui.impl.SystemMessageServices.send#AllProducedSystemMessages`. 
+**Purpose:**
+Sends the queued GraphQL query to Shopify. This job picks up "produced" system messages of the type `BulkProductAndVariantsByIdQuery` and transmits them to Shopify to start the bulk operation.
 
-This service checks the database for any system messages that have been created (produced) with the `systemMessageTypeIds` matching `BulkProductAndVariantsByIdQuery` but have not yet been successfully transmitted. It then processes these messages and sends their payload to the remote System.
+**Manual steps:**
 
-**Steps to run manually:**
-
-1. Go to Maarg > Application > System > Service > Jobs > Service Job List.
+1. Navigate to Maarg: `Application` > `System` > `Service` > `Jobs` > `Service Job List`.
 2. Search for `send_BulkProductAndVariantsByIdQueryProducedSystemMessages`.
-3. Verify that parameters are set (e.g., `systemMessageTypeId`).
+3. Verify the `systemMessageTypeId` parameter.
+4. Run the job.
 
-**Sample XML data to create this job:**
+**Sample XML data:**
 
 ```xml
 <moqui.service.job.ServiceJob 
@@ -172,20 +194,19 @@ This service checks the database for any system messages that have been created 
 </moqui.service.job.ServiceJob>
 ```
 
-## Poll bulk operation results
+## Poll Bulk Operation Result Shopify Bulk Query
 
-**Purpose**:
-This job is responsible for tracking the status of asynchronous bulk query operations that have been sent to Shopify (such as those of type `ShopifyBulkQuery` / `BulkProductAndVariantsByIdQuery`) and retrieving their results once they are completed.
+**Purpose:**
+Monitors the status of the bulk query operation in Shopify. Since Shopify processes these requests asynchronously, this job repeatedly checks for completion. Once the operation is complete, the job downloads the JSONL file containing the product data.
 
-Because Shopify's Bulk API operates asynchronously, sending a GraphQL bulk query does not return the data immediately; it returns an operation ID. The `poll_BulkOperationResult_ShopifyBulkQuery` job runs on a schedule to "poll" (repeatedly check) Shopify for the completion status of these active operations. Once Shopify indicates that the bulk operation is COMPLETED, this job downloads the resulting file containing the requested data and triggers the consumption service(`consume#BulkOperationResult`) to process it.
+**Manual steps:**
 
-**Steps to run manually:**
-
-1. Go to Maarg > Application > System > Service > Jobs > Service Job List.
+1. Navigate to Maarg: `Application` > `System` > `Service` > `Jobs` > `Service Job List`.
 2. Search for `poll_BulkOperationResult_ShopifyBulkQuery`.
-3. Verify that parameters are set (e.g., `consumeSrmId`, `parentSystemMessageTypeId`).
+3. Verify that parameters like `consumeSrmId` and `parentSystemMessageTypeId` are set.
+4. Run the job.
 
-**Sample XML data to create this job:**
+**Sample XML data:**
 
 ```xml
 <moqui.service.job.ServiceJob 
@@ -196,5 +217,57 @@ Because Shopify's Bulk API operates asynchronously, sending a GraphQL bulk query
 
     <parameters parameterName="parentSystemMessageTypeId" 
                 parameterValue="ShopifyBulkQuery"/>
+</moqui.service.job.ServiceJob>
+```
+
+## Send Generate OMS Update Product Feed New Produced System Message
+
+**Purpose:**
+Processes `GenerateOMSUpdateProductsFeedNew` system messages created by `poll_BulkOperationResult_ShopifyBulkQuery`. This job reads the downloaded JSONL file, compares incoming product data against stored product history, and builds a structured diff of what has changed. Once processing is complete, it creates a `ProductUpdatesFeedNew` system message to trigger the final update in HotWax Commerce.
+
+**Manual steps:**
+
+1. Navigate to Maarg: `Application` > `System` > `Service` > `Jobs` > `Service Job List`.
+2. Search for `send_GenerateOMSUpdateProductsFeedNewProducedSystemMessages`.
+3. Verify the `systemMessageTypeId` parameter.
+4. Run the job.
+
+**Sample XML data:**
+
+```xml
+<moqui.service.job.ServiceJob 
+    jobName="send_GenerateOMSUpdateProductsFeedNewProducedSystemMessages"
+    description="Send Generate OMS Product Feed Produced SystemMessages"
+    serviceName="org.moqui.impl.SystemMessageServices.send#AllProducedSystemMessages"
+    cronExpression="0 11/15 * * * ?" paused="Y">
+
+    <parameters parameterName="systemMessageTypeIds" 
+                parameterValue="GenerateOMSUpdateProductsFeedNew"/>
+</moqui.service.job.ServiceJob>
+```
+
+## Consume Product Updates Feed New Received System Messages
+
+**Purpose:**
+Processes `ProductUpdatesFeedNew` system messages created by `send_GenerateOMSUpdateProductsFeedNewProducedSystemMessages`. This job reads the product diff built in the previous step and applies it in HotWax Commerce, creating new products or updating existing ones along with their variants.
+
+**Manual steps:**
+
+1. Navigate to Maarg: `Application` > `System` > `Service` > `Jobs` > `Service Job List`.
+2. Search for `consume_ProductUpdatesFeedNewReceivedSystemMessages`.
+3. Verify the `systemMessageTypeId` parameter.
+4. Run the job.
+
+**Sample XML data:**
+
+```xml
+<moqui.service.job.ServiceJob 
+    jobName="consume_ProductUpdatesFeedNewReceivedSystemMessages"
+    description="Consume Product Updates Feed Received SystemMessages"
+    serviceName="org.moqui.impl.SystemMessageServices.consume#AllReceivedSystemMessages"
+    cronExpression="0 16/15 * * * ?" paused="Y">
+
+    <parameters parameterName="systemMessageTypeIds" 
+                parameterValue="ProductUpdatesFeedNew"/>
 </moqui.service.job.ServiceJob>
 ```
