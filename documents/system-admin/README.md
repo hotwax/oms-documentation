@@ -7,80 +7,76 @@ description: >-
 
 # Launchpad
 
-**This document outlines key pages and functions within the Launchpad.**
+The Launchpad is the central hub for accessing all HotWax Commerce applications. It provides Single Sign-On (SSO), so users only need to log in once to access all associated apps without re-entering credentials.
 
-**Key items:**
+---
 
-1. Home page
-2. Application categories
-3. Application instances
+## Signing In
 
-***
+1. Open the [Launchpad](https://launchpad.hotwax.io/).
+2. Enter your OMS instance URL and click **Next**.
+3. Enter your **Username** and **Password**, then click **Login**.
 
-## Home page
+Once logged in, clicking any app card on the home page will automatically authenticate you into that application.
 
-Allows accessing all HotWax Commerce applications.
+---
 
-**Characteristics:**
+## Application Categories
 
-**Single Sign-On (SSO):** Enables users to log in applications using their credentials. After the initial login in the Launchpad, they gain automatic access to all associated applications without the need to enter their login details again.
+Applications on the Launchpad are organized into the following categories:
 
-## **Application Categories**
+### Orders
 
-Shows how apps are categorized on basis of their characteristics.
+| App | Description |
+|---|---|
+| **BOPIS** | Enables store associates to manage and handover Buy Online, Pickup In-Store orders to customers. |
+| **Fulfillment** | Enables store associates to pick, pack, and ship orders brokered to stores from the OMS. |
+| **Pre-Orders** | Enables merchandisers to manage pre-orders and backorders with planned future inventory. |
 
-#### Orders
+### Workflow
 
-This category revolves around managing the orders using the three apps: BOPIS, Pre-Order Management and Fulfillment.
+| App | Description |
+|---|---|
+| **Available to Promise** | Enables merchandisers to configure rules for computing and publishing available inventory to sales channels. |
+| **Job Manager** | Helps operations teams schedule, skip, cancel, and monitor automated jobs. |
+| **Order Routing** | Enables merchandisers to configure order routing rules that determine how and where orders are fulfilled. |
 
-* **BOPIS (Buy Online, Pickup In-Store)** HotWax Commerce’s BOPIS app enables users to handover store pick-up orders to customers.
-* **Pre-Order Management** HotWax Commerce’s Pre-Order Management app enables users to manage pre-orders and backorders, with planned future inventory to fulfill the orders.
-* **Fulfillment** HotWax Commerce's Fulfillment app enables users to pick, pack, and ship orders brokered to the stores from the OMS.
+### Inventory
 
-#### Workflow
+| App | Description |
+|---|---|
+| **Receiving** | Enables store associates to manage incoming shipments, purchase orders, and return orders. |
+| **Cycle Count** | Enables stock associates to count store inventory and reconcile systematic and physical inventory. |
+| **Transfers** | Enables store associates to manage inventory transfers between facilities. |
 
-This category revolves around managing the workflow using the three apps: Threshold Management, Job Manager and Import.
+### Administration
 
-* **Threshold Management** HotWax Commerce’s Threshold Management app enables merchandisers to set inventory thresholds for a group of products.
-* **Job Manager** HotWax Commerce’s Job Manager app helps the operations teams to manage jobs by scheduling new jobs, skipping or canceling scheduled jobs and finding failed jobs that need attention.
-* **Import** HotWax Commerce’s Import app enables users to import inventory and purchase orders.
+| App | Description |
+|---|---|
+| **Import** | Enables users to import inventory and purchase orders. |
+| **Users** | Allows businesses to create and manage users within HotWax Commerce OMS. |
+| **Facilities** | Assists businesses in managing multiple facilities like stores and warehouses, including facility details and fulfillment options. |
+| **Company** | Enables administrators to manage company-level configurations, product stores, and Shopify shop connections. |
 
-#### Inventory
-
-This category revolves around managing the inventory using the three apps: Receiving, Cycle Count and Picking.
-
-* **Receiving** HotWax Commerce’s Receiving app enables users to manage incoming shipments, purchase orders, and return orders.
-* **Cycle Count** HotWax Commerce’s Cycle Count app enables stock associates to count the store’s inventory, and reconcile systematic and physical inventory.
-* **Picking** HotWax Commerce’s Picking app enables the fulfillment team to efficiently pick order items during order fulfillment.
-
-#### Administration
-
-This category revolves around managing users and facilities using the two apps: User Management, and Facilities.
-
-* **User Management** HotWax Commerce’s User Management app allows businesses to create and manage users within the HotWax Commerce OMS.
-* **Facilities** HotWax Commerce’s Facilities app assists businesses in overseeing multiple facilities like stores and warehouses, and managing attributes like facility details and fulfillment options for each facility.
-
-***
+---
 
 ## Application Instances
 
-Users can access specific instances of the HotWax apps.
+Each app on the Launchpad can be launched in three different environments:
 
-**Instances:**
+| Instance | How to Access |
+|---|---|
+| **Production** | Click on the app card. |
+| **Development (Dev)** | Click the bottom-left icon on the app card. |
+| **UAT (User Acceptance Testing)** | Click the bottom-right icon on the app card. |
 
-**1. Production Instance:** To access the production instance of an app, users can click on the respective app card.
+{% hint style="info" %}
+Some apps, such as Available to Promise, Order Routing, and Company, require a maarg instance to be configured. If maarg is not configured, these apps will display a **"Not configured"** badge and will be inaccessible.
+{% endhint %}
 
-**2. UAT (User Acceptance Testing) Instance**: Users can access the UAT instance of an app by clicking on the bottom right icon of the respective app card.
+---
 
-**3. Dev (Development) Instance:** Users can access the dev instance of an app by clicking on the bottom left icon of the respective app card.
+## Logging Out
 
-{% embed url="https://youtu.be/J2imie7z0eU" %}
-Video: Application Instance
-{% endembed %}
-
-***
-
-**Related flows:**
-
-1. [Launchpad](https://launchpad.hotwax.io/home/)
-2. [User management](https://docs.hotwax.co/documents/system-admins/administration/users/manage-user)
+1. Click on your **user profile** at the top of the home page.
+2. Select **Logout** from the popover menu.
