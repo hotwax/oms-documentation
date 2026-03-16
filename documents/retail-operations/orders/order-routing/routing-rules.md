@@ -67,7 +67,7 @@ Sequence Routing Rules
 
 <table data-card-size="large" data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><ol><li><mark style="color:orange;"><strong>Filters</strong></mark></li></ol><p>Look up orders and group them in a batch.</p></td><td></td><td></td><td></td></tr><tr><td><ol start="2"><li><mark style="color:orange;"><strong>Sorting</strong></mark></li></ol><p>Determine the sequence in which orders are picked up during routing.</p></td><td></td><td></td><td></td></tr></tbody></table>
 
-<figure><img src="../../.gitbook/assets/orderfilteringandsorting.png" alt="" width="563"><figcaption><p>Order Filters and Sorting</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/order-filtering-and-sorting.png" alt="" width="563"><figcaption><p>Order Filters and Sorting</p></figcaption></figure>
 
 ### Step 1: Creating a Batch of Orders Using Filters
 
@@ -115,7 +115,7 @@ After filtering, the next step is choosing the Sorting criteria to prioritize th
 
 <mark style="color:orange;">**Available sorting options:**</mark>
 
-<figure><img src="../../.gitbook/assets/ordersorting.png" alt="" width="563"><figcaption><p>Order Batch Sorting</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/order-batch-sorting.png" alt="" width="563"><figcaption><p>Order Batch Sorting</p></figcaption></figure>
 
 * **Order date:** Sort by order date to prioritize older orders first, following a first-in, first-out (FIFO) approach.
 * **Order priority:** Orders can be sorted by priority levels, such as high, medium, low allowing retailers to prioritize orders based on their urgency.

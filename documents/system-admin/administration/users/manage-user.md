@@ -19,13 +19,13 @@ In the Order Management System (OMS), user management is a straightforward proce
 
 The "Block User Login" function allows administrators to control user access to OMS applications. Blocking a user disables their login capabilities, providing an additional layer of security or managing access during specific circumstances. If a user login is attempted too many times with an incorrect password, their login will be blocked automatically. Conversely, unblocking a user restores their login privileges, allowing them to access the system again. This function is useful for enforcing temporary restrictions or addressing security concerns.
 
-<figure><img src="../../.gitbook/assets/block1.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/block-user-login.png" alt="" width="375"><figcaption></figcaption></figure>
 
 ## Reset Password
 
 The "Reset Password" function enables administrators to initiate a password reset for a user in the OMS. This is particularly useful in situations where a user forgets their password or for security reasons. Administrators can set a new password directly or trigger an email notification to the user using their saved contact info, prompting them to reset their password independently.
 
-<figure><img src="../../.gitbook/assets/resetpass.png" alt="" width="375"><figcaption><p>Image: Reset Password</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/reset-password.png" alt="" width="375"><figcaption><p>Image: Reset Password</p></figcaption></figure>
 
 ## Update Contact Details
 
@@ -52,7 +52,7 @@ Manage employee roles and permissions.
 - **View History**: View a record of changes made to an employee permissions. Retailers can see when security groups were added or removed and how long the employee stayed in each group.
 
 
-<figure><img src="../../.gitbook/assets/permission786.png" alt=""><figcaption><p>Image: Update user role and permission</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/update-user-role-and-permission.png" alt=""><figcaption><p>Image: Update user role and permission</p></figcaption></figure>
 
 ## Create a Picker Role
 

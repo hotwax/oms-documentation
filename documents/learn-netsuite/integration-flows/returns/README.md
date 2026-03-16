@@ -241,7 +241,7 @@ When returning an item, a customer can also opt to take the exchange item agains
 
 ## Synchronizing Loop POS Returns to NetSuite 
 
-<figure><img src="../../.gitbook/assets/29.png" alt=""><figcaption><p>Sync POS returns to NetSuite using Loop</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/pos-returns-sync-to-netsuite-using-loop.png" alt=""><figcaption><p>Sync POS returns to NetSuite using Loop</p></figcaption></figure>
 
 Retailers use the Loop POS app alongside Shopify POS to handle in-store returns and exchanges. Once a return is processed in Loop POS, the data is synced to Shopify.
 

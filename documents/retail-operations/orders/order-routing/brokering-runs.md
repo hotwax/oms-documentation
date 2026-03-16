@@ -39,7 +39,7 @@ If you have multiple product stores, you’ll be prompted to choose the store fo
 2. **Initiate a new run**
    * Click on the `New Run` button to begin creating a new brokering run. You’ll be prompted to provide a name for this run, which will help identify it in the list of all existing brokering runs.
 
-<figure><img src="../../.gitbook/assets/newbrokeringrun.png" alt=""><figcaption><p>Initiate a New Run</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/new-brokering-run.png" alt=""><figcaption><p>Initiate a New Run</p></figcaption></figure>
 
 3. **Name the run**
 
@@ -47,11 +47,11 @@ If you have multiple product stores, you’ll be prompted to choose the store fo
 
 {% tabs %}
 {% tab title="Single Brokering Run" %}
-<figure><img src="../../.gitbook/assets/singlebrokeringrun.png" alt=""><figcaption><p>Single Brokering Run</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/single-brokering-run.png" alt=""><figcaption><p>Single Brokering Run</p></figcaption></figure>
 {% endtab %}
 
 {% tab title="Multiple Brokering Runs" %}
-<figure><img src="../../.gitbook/assets/multiplebrokeringruns.png" alt=""><figcaption><p>Multiple Brokering Runs</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/multiple-brokering-runs.png" alt=""><figcaption><p>Multiple Brokering Runs</p></figcaption></figure>
 {% endtab %}
 {% endtabs %}
 
@@ -60,11 +60,11 @@ If you have multiple product stores, you’ll be prompted to choose the store fo
    * Click on a specific `Run` to open its details and now navigate to the Description card and add details that best describes your run.
    * For example, if there is a single brokering run "Everyday order routing", you can write: “Hourly routing for all online orders” or if the run focuses on urgent orders, you can write: “Prioritized routing for same-day, next-day, and two-day delivery orders.”
 
-<figure><img src="../../.gitbook/assets/rundetails.png" alt=""><figcaption><p>Brokering Run Description</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/brokering-run-description.png" alt=""><figcaption><p>Brokering Run Description</p></figcaption></figure>
 
 5. **Schedule the brokering run with a predefined frequency or using cron expressions**
 
-<figure><img src="../../.gitbook/assets/schedulerun.png" alt="" width="375"><figcaption><p>Schedule Brokering Run</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/schedule-brokering-run.png" alt="" width="375"><figcaption><p>Schedule Brokering Run</p></figcaption></figure>
 
 * Navigate to the Scheduler card, here you can set the frequency and runtime for your brokering run.
 * You can choose predefined intervals or use cron expressions to customize the schedule based on your business needs. Here are a few examples of valid cron expressions that you can use:

@@ -126,7 +126,7 @@ poll_SystemMessageFileSftp_GiftCardActivationFeed
 
 [Bulk data import GraphQL API](https://shopify.dev/docs/api/usage/bulk-operations/imports) used along with [gift card create mutation](https://shopify.dev/docs/api/admin-graphql/2024-04/mutations/giftcardcreate)
 
-<figure><img src="../../.gitbook/assets/21.png" alt=""><figcaption><p>Physical Gift Card Activation</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/physical-gift-card-activation.png" alt=""><figcaption><p>Physical Gift Card Activation</p></figcaption></figure>
 
 Once the gift card is activated in eCommerce, customers can conveniently redeem it.
 
@@ -156,7 +156,7 @@ Digital gift cards are already in the “Completed” status in HotWax Commerce.
 Digital gift cards are auto-activated and customers can directly redeem them by entering a unique serial number provided with the card.
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/22.png" alt=""><figcaption><p>Digital Gift Card Order Sync from HotWax Commerce to NetSuite</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/digital-gift-card-order-sync-to-netsuite.png" alt=""><figcaption><p>Digital Gift Card Order Sync from HotWax Commerce to NetSuite</p></figcaption></figure>
 
 ### Synchronize Digital Gift Card Orders from HotWax Commerce to NetSuite
 

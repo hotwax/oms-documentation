@@ -57,11 +57,11 @@ IMP_ASN_PO_FEED
 
 {% tabs %}
 {% tab title="Purchase Order Fields in NetSuite" %}
-<figure><img src="../.gitbook/assets/purchaseorderns.png" alt=""><figcaption><p>Purchase Order Fields Mapping in NetSuite</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/purchase-order-fields-netsuite.png" alt=""><figcaption><p>Purchase Order Fields Mapping in NetSuite</p></figcaption></figure>
 {% endtab %}
 
 {% tab title="Purchase Order Fields in HotWax Commerce" %}
-<figure><img src="../.gitbook/assets/purchaseorder.png" alt=""><figcaption><p>Purchase Order Fields Mapping in HotWax Commerce "Inventory Receiving App"</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/purchase-order-fields-hotwax.png" alt=""><figcaption><p>Purchase Order Fields Mapping in HotWax Commerce "Inventory Receiving App"</p></figcaption></figure>
 {% endtab %}
 {% endtabs %}
 
@@ -73,7 +73,7 @@ IMP_ASN_PO_FEED
 
 Once POs are synchronized, store associates use the HotWax Commerce's Receiving App to receive new inventory. The app's interface simplifies the receiving process, allowing associates to manage inventory with ease, even with minimal training.
 
-<figure><img src="../.gitbook/assets/syncitemreceipts.png" alt=""><figcaption><p>Item Receipts Sync from HotWax Commerce to NetSuite</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/item-receipts-sync-to-netsuite.png" alt=""><figcaption><p>Item Receipts Sync from HotWax Commerce to NetSuite</p></figcaption></figure>
 
 After store associates receive POs from app, Item Receipt records are created in HotWax Commerce. These records update inventory counts, making the newly received stock available for sale on eCommerce platforms.
 
