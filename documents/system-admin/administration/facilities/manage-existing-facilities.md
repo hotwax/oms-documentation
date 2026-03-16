@@ -63,7 +63,7 @@ You can map the HotWax Commerce facilities with external systems using the follo
    * _For Shopify:_ Choose the appropriate Shopify store from the dropdown menu and add the location ID of the facility that can be obtained from the URL of that specific location in the Shopify admin panel.
    * _For Custom Mapping:_ You can create custom mapping by selecting the `Custom` option from the menu, adding the `Mapping ID`, `Mapping Name` (external system for which mapping needs to be done), and the Mapping Value (External ID of the facility).
 
-<figure><img src="../../.gitbook/assets/Screenshot 2024-02-29 at 10.58.39 AM.png" alt=""><figcaption><p>Image: Location ID on Shopify</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/screenshot-2024-02-29-at-10-58-39-am.png" alt=""><figcaption><p>Image: Location ID on Shopify</p></figcaption></figure>
 
 6. **Save Mapping:** Once the required information is filled in, click on the `save` icon to save the configuration. This integration lays the groundwork for a cohesive connection between the facility in HotWax Commerce and the facility in the external system, facilitating streamlined configuration and operational processes.
 7. **Edit and Remove:** You can further edit the external ID in case of any modification of the facility on the external system using the `Edit` button or remove any mapping by clicking on the `Remove` button.

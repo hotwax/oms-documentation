@@ -15,7 +15,7 @@ Below is a list of all the actions available in the Fulfillment App, along with 
 | 5    | Order actions Chip > View Order details | -             | Routes the user to the detailed view of an individual order, where further actions can be taken or details can be reviewed. |
 | 6    | View item QOH (Open Orders)             | -             | Displays the Quantity on Hand (QOH) for items in the order, helping users assess available stock for fulfillment.           |
 
-<figure><img src="../../.gitbook/assets/open orders.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/open-orders.png" alt=""><figcaption></figcaption></figure>
 
 ## In Progress tab
 
@@ -31,7 +31,7 @@ Below is a list of all the actions available in the Fulfillment App, along with 
 | 8    | Pack Order                                      | -             | Opens a popover for users to pack individual orders. Additional confirmation may be required to ensure all information is accurate before completing the packing. |
 | 9    | Shipping label error                            | -             | Alerts users to errors related to shipping labels, allowing them to address issues before proceeding with order fulfillment.                                      |
 
-<figure><img src="../../.gitbook/assets/in progress.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/in-progress.png" alt=""><figcaption></figcaption></figure>
 
 ## Completed tab
 
@@ -107,7 +107,7 @@ Below is a list of all the actions available in the Fulfillment App, along with 
 
 Manage All Fulfillment Operations
 
-<figure><img src="../../.gitbook/assets/settings (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/settings-1.png" alt=""><figcaption></figcaption></figure>
 
 ## Order Details Page
 
@@ -117,4 +117,4 @@ Manage All Fulfillment Operations
 | 2    | Orders detail page > View Details                | -             | Enables users to view the order details along with customer detailed information and the selected shipping carrier details                                                                                   |
 | 3    | Orders detail page > Unpack (Completed orders)   | COMMON\_ADMIN | Provides the ability to unpack a completed order and send it back to the "In Progress" state. This action is only enabled when all required shipment and package information is present.                     |
 
-<figure><img src="../../.gitbook/assets/order details.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/order-details.png" alt=""><figcaption></figcaption></figure>

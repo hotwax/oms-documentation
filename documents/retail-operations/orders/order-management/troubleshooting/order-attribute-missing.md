@@ -30,4 +30,4 @@ For example, if the `Riskified` or `Signified approved` tag is missing in Shopif
 
 In such cases, CSRs have to manually verify the orders and add the attribute in the Order Attribute section on the Order View page.
 
-<figure><img src="../../../.gitbook/assets/Add order Attribute 1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/add-order-attribute-1.png" alt=""><figcaption></figcaption></figure>

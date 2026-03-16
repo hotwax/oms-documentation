@@ -26,7 +26,7 @@ By conducting these periodic checks, retailers can resolve discrepancies in real
 
 The Cycle Count App's interface adapts for different user roles. Operations teams assign cycle counts to specific stores through the app. Once assigned, store associates leverage the app to conduct the cycle count, recording and submitting their counting results for review by the operations team.
 
-<figure><img src="../.gitbook/assets/cycleCountvariance.png" alt=""><figcaption><p>Cycle Count Inventory Variance Synced from HotWax Commerce to NetSuite</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/cycle-count-inventory-variance-sync.png" alt=""><figcaption><p>Cycle Count Inventory Variance Synced from HotWax Commerce to NetSuite</p></figcaption></figure>
 
 ### Automatically Update Inventory Levels in HotWax Commerce
 

@@ -21,4 +21,4 @@ Here's how returns can be imported from Shopify to HotWax Commerce:
 
 Refer to our [Shopify Integration guide](/documents/learn-shopify/shopify-integration/order-return/import-returns-from-shopify.md) for detailed insights into how the `import return` job facilitates the import of order returns from Shopify.
 
-<figure><img src="../../.gitbook/assets/Import Order Returns.png" alt="" width="370"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/import-order-returns.png" alt="" width="370"><figcaption></figcaption></figure>

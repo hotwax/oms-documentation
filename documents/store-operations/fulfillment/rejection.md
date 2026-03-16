@@ -39,7 +39,7 @@ The Rejection Analytics Page provides a detailed view of order rejections, helpi
 * **Time Filters:** Analyze rejection data from the last 24 hours or 7 days.
 * **Search:** Locate specific rejected items using Product SKUs or order details.
 
-<figure><img src="../.gitbook/assets/rejectionsAnalytics.png" alt=""><figcaption><p>Rejections Analytics</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/rejections-analytics.png" alt=""><figcaption><p>Rejections Analytics</p></figcaption></figure>
 
 ## Rejection Reasons
 
@@ -60,7 +60,7 @@ Rejection reasons can be shown or hidden from store associates using the fulfill
 * **When the toggle is ON:** The specific rejection reason will be visible, while all other reasons will remain hidden.
 * **When the toggle is OFF:** The specific rejection reason will be hidden, but all other reasons will still be visible.
 
-<figure><img src="../.gitbook/assets/rejectionReasons.png" alt=""><figcaption><p>Rejection Reasons</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/rejection-reasons.png" alt=""><figcaption><p>Rejection Reasons</p></figcaption></figure>
 
 ### Rejection reason types that trigger inventory adjustments and how these types cause stock levels to be updated
 
@@ -97,7 +97,7 @@ By suppressing ATP and not QOH, over-selling is still prevented and orders for t
 
 Retailers that don’t utilize HotWax Commerce for store inventory management only need the OMS to maintain an accurate record of sellable inventory. In that case, retailers should allow rejections to impact both ATP and QOH.
 
-<figure><img src="../.gitbook/assets/affectQOH.png" alt=""><figcaption><p>Affect QOH on Rejection</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/affect-qoh-on-rejection.png" alt=""><figcaption><p>Affect QOH on Rejection</p></figcaption></figure>
 
 ## Partial Rejection
 
@@ -116,7 +116,7 @@ When partial rejection is disabled, rejecting any item in an order triggers the 
 
 If additional items need to be rejected with a specific reason, click on the default rejection reason applied to the item and make a selection.
 
-<figure><img src="../.gitbook/assets/configurePartialRejection.png" alt=""><figcaption><p>Configure Partial Rejection</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/configure-partial-rejection.png" alt=""><figcaption><p>Configure Partial Rejection</p></figcaption></figure>
 
 ## Collateral Rejection
 
@@ -127,4 +127,4 @@ Collateral rejection helps manage situations where the product in a rejected ord
 
 This feature ensures faster re-routing of unfulfillable items, minimizing delays across all orders containing the same product.
 
-<figure><img src="../.gitbook/assets/configureCollateralRejection.png" alt=""><figcaption><p>Configure Collateral Rejection</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/configure-collateral-rejection.png" alt=""><figcaption><p>Configure Collateral Rejection</p></figcaption></figure>

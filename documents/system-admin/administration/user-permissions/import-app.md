@@ -14,4 +14,4 @@ Below is a list of all the actions available in the Import App, along with the s
 | 6              | Go to OMS                 | COMMERCEUSER_VIEW     | Allows users to access HotWax OMS directly from the Import Tab. |
 | 7              | Update Product Identification Setting | COMMON_ADMIN      | Allows users to change product identifiers settings. |
 
-<figure><img src="../../.gitbook/assets/import app.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/import-app.png" alt=""><figcaption></figcaption></figure>

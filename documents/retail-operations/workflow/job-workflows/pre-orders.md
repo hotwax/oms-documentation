@@ -38,7 +38,7 @@ A product is eligible for pre-order only if:
 Retailers organize products into different catalogs for better segregation, including a dedicated catalog for pre-order items. The `Auto Refresh Pre-Sell Catalog` job adds or removes products from the pre-order catalog based on their eligibility criteria for pre-orders.
 
 **Note**: This job is specifically for OMS and is used to maintain the pre-order catalog. However, there are separate jobs that sync the same products as pre-orders on Shopify
-<figure><img src="../../.gitbook/assets/Pre-sell Catalog.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/pre-sell-catalog.png" alt="" width="375"><figcaption></figcaption></figure>
 
 ___
 
@@ -133,7 +133,7 @@ Service Name: `checkPreOrderItemForRelease`
 
 After the promise date is passed, this job is used to push orders for brokering. HotWax maintains dedicated parking for pre-orders and backorders, ensuring they are managed separately. All such orders remain in this parking until they are ready for fulfillment. The "Run Daily" job runs once a day, checking the pre-order and backorder parking for orders with passed promise date and releasing them for brokering.
 
-<figure><img src="../../.gitbook/assets/Update promise Date for pre-order product.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/update-promise-date-for-pre-order-product.png" alt="" width="375"><figcaption></figcaption></figure>
 
 ___
 

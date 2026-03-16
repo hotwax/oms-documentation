@@ -23,7 +23,7 @@ Note:  The `ShopifyFacilityGroupId` parameter allows retailers to push inventory
 
 To know more about inventory synchronization between HotWax and Shopify, refer to this [document](https://docs.hotwax.co/documents/learn-shopify/shopify-integration/how-does-hotwax-commerce-ensure-accurate-inventory-is-synchronized-to-shopify/inventory-synchronization#hard-sync).
 
-<figure><img src="../../.gitbook/assets/Upload Inventory.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/upload-inventory.png" alt="" width="375"><figcaption></figcaption></figure>
 
 ## Webhooks
 

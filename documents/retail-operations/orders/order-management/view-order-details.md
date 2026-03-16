@@ -73,4 +73,4 @@ The `Communications` feature in the HotWax Commerce platform acts as a central h
 
 Click on the communication and select either email or notes to start the communication.
 
-<figure><img src="../../.gitbook/assets/dev-oms.hotwax.io_commerce_control_ViewOrder_orderId=11066 1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/dev-oms-hotwax-io-commerce-control-vieworder-orderid-11066-1.png" alt=""><figcaption></figcaption></figure>
