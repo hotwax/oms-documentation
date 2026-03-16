@@ -22,7 +22,7 @@ HotWax Commerce considers various factors, such as `safety stock`, `threshold`, 
 
 Let’s take a look at an example:
 
-The product "blue shirt" from Brand ABC has been assigned plate number 100 QOH, and it has already received orders for 10 of them, and inventory is allocated for five sales orders. The Online ATP can be calculated using the following formula. Online ATP = QOH - (Reserved quantities + Safety stock + Threshold + Orders in brokering queue + Excluded facilities’ ATP)
+The product "blue shirt" from Brand ABC has a quantity on hand (QOH) of 100 units, and it has already received orders for 10 units, and inventory is allocated for five sales orders. The Online ATP can be calculated using the following formula. Online ATP = QOH - (Reserved quantities + Safety stock + Threshold + Orders in brokering queue + Excluded facilities’ ATP)
 
 Given:
 
