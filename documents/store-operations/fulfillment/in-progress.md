@@ -43,7 +43,7 @@ Store associates can pack orders individually. Each order is displayed on a card
 
 Below this header, the card lists each product's details and image. For each item, associates can tap the `Check stock` button (box icon) to view its available inventory or the `Reject` button (bin icon) to reject the item from the order. When rejecting an item, a reason must be selected (e.g., "Mismatch," "Damaged," or "Worn Display").  
 
-To pack the items, associates use the `Add Box` button to assign products to boxes. The maximum number of boxes allowed is equal to the total number of items in the order. For instance, an order with two items can be packed into a maximum of two boxes. The `Add Box` button will become inactive once this limit is reached.  
+To pack the items, associates use the [`Add Box`](../../system-admin/fulfillment/shipping-methods/shipping-box.md#adding-shipment-boxes-for-specific-carriers) button to assign products to boxes. The maximum number of boxes allowed is equal to the total number of items in the order. For instance, an order with two items can be packed into a maximum of two boxes. The `Add Box` button will become inactive once this limit is reached.  
 
 To pack an order, associates need to tap the `Pack Order` button on the order card. This opens a pop-up where they can choose whether to print the shipping labels and the packing slip. After confirming, they can tap `Pack` in the pop-up to complete the packing process.  
 
@@ -54,6 +54,7 @@ To proceed, store associates:
 - Generate a label using a different carrier.  
 - Manually enter tracking details.  
 - Reject the order with a reason if tracking information isn’t available.  
+- Follow the [shipping label troubleshooting document](shipping-label-generation.md) to identify and resolve common configuration issues.  
 
 The `Shipping Label Error` button is also available; it opens up a pop-up with the specific error details provided by the carrier partner.  
 
