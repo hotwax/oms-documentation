@@ -12,11 +12,10 @@ The Launchpad is the central hub for accessing all HotWax Commerce applications.
 ---
 
 ## Signing In
+When you open the Launchpad without an active session, a `Login` button appears in the top-right corner of the home page. Select this button to begin the sign-in process.
 
-When you open the Launchpad without an active session, a **Login** button appears in the top-right corner of the home page. Select this button to begin the sign-in process.
-
-1. Enter your **OMS instance URL** and select **Next**.
-2. Enter your **Username** and **Password**, then select **Login**.
+1. Enter your `Order Management System (OMS) instance URL` and select `Next`.
+2. Enter your `Username` and `Password`, then select `Login`.
 
 Once signed in, selecting any app card on the home page automatically authenticates you into that application through Single Sign-On (SSO).
 
