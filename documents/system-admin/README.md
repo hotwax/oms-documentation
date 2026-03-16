@@ -21,7 +21,7 @@ When you open the Launchpad without an active session, a **Login** button appear
 Once signed in, selecting any app card on the home page automatically authenticates you into that application through Single Sign-On (SSO).
 
 {% hint style="info" %}
-Your OMS instance URL is the web address of your company's HotWax Commerce server, for example, `company-name.hotwax.io`. If you don't know your instance URL, contact your system administrator.
+In the OMS instance URL field, enter just the part before `.hotwax.io`. For example, if your instance is `company-name.hotwax.io`, enter `company-name`. If you don't know your instance name, contact your system administrator.
 {% endhint %}
 
 If you select an app card without signing in first, the app redirects you back to the Launchpad login page to complete authentication before you can access it.
