@@ -10,7 +10,7 @@ Next, the `send_BulkProductAndVariantsByIdQuery` job acts as the dispatcher; it 
 
 Finally, because Shopify processes this data asynchronously, the `poll_BulkOperationResult` job acts as the monitor and retriever. It repeatedly checks Shopify's status until the export is ready, at which point it downloads the resulting JSONL file and triggers the internal consumption service to parse and save the updated product and variant data into the HotWax OMS database.
 
-## Product Sync Flow
+## Product sync flow
 
 <div align="center">
 
@@ -73,7 +73,7 @@ This data will be entered in Maarg > Tools > Data Import > XML text.
 
 ## Enter common data
 
-When setting up product sync initially, you also need to add this common XML data. This common data configures system message types and jobs for the product update feed in HotWax Commerce. It defines how product updates are generated, transformed, and consumed between SOB and OMS. The enumerations link the producer and consumer message types, while the service job schedules the sending of produced messages. This data is added to enable automated product update synchronization.
+When setting up product sync initially, you also need to add this common XML data. This common data configures system message types and jobs for the product update feed in HotWax Commerce. It defines how product updates are generated, transformed, and consumed in OMS. The enumerations link the producer and consumer message types, while the service job schedules the sending of produced messages. This data is added to enable automated product update synchronization.
 
 > [!NOTE]
 > This common data should be added only during the initial setup of product synchronization.
@@ -103,24 +103,29 @@ When setting up product sync initially, you also need to add this common XML dat
 </moqui.service.job.ServiceJob>
 ```
 
-## Product Sync Jobs
+## Product sync jobs
 
-## queue_BulkQuerySystemMessage_BulkProductAndVariantsByIdQuery
+## Queue Bulk Query System Message Bulk Product and Variant by ID Query
 
 **Purpose**:
-Initial sync of all products from Shopify in bulk. This job is responsible for queuing a bulk GraphQL query to Shopify to fetch product and variant information by their IDs or specific filters.
+This job starts the product synchronization process.
 
-When executed, it calls the Moqui service `co.hotwax.shopify.system.ShopifySystemMessageServices.queue#BulkQuerySystemMessage` with the system message type `BulkProductAndVariantsByIdQuery`. It prepares a system message that later gets sent to Shopify to initiate a bulk operation for exporting product and variant data.
+When the job runs, it creates a request asking Shopify for product and variant data. Instead of downloading the data immediately, the job simply creates a system message that contains the request.
+
+This request uses Shopify’s Bulk GraphQL API, which allows many products to be fetched at once.
+
+The created message is stored in the system and will later be picked up by another job that sends the request to Shopify.
+When executed, it calls the Moqui service `co.hotwax.shopify.system.ShopifySystemMessageServices.queue#BulkQuerySystemMessage` with the system message type `BulkProductAndVariantsByIdQuery`. It prepares a system message that later gets `sent` to Shopify to initiate a bulk operation for exporting product and variant data.
 
 **Steps to run manually:**
 
-1. Go to Maarg: Application > System > Service > Jobs > Service Job List
+1. Go to Maarg > Application > System > Service > Jobs > Service Job List
 2. Search for `queue_BulkQuerySystemMessage_BulkProductAndVariantsByIdQuery`.
-3. Make sure that parameters are set (e.g., “systemMessageRemote”, “systemMessageTypeId”, etc.).
+3. Ensure that parameters are set (e.g., 'systemMessageRemote', 'systemMessageTypeId', etc.).
 4. Run the job.
 
 **Sample XML data to create this job:**
-
+ 
 ```xml
 <moqui.service.job.ServiceJob 
     jobName="queue_BulkQuerySystemMessage_BulkProductAndVariantsById"
@@ -140,7 +145,7 @@ When executed, it calls the Moqui service `co.hotwax.shopify.system.ShopifySyste
 </moqui.service.job.ServiceJob>
 ```
 
-## send_BulkProductAndVariantsByIdQueryProducedSystemMessages
+## Send Bulk Product and Variants by ID Query Produced System Message
 
 **Purpose**:
 This job is responsible for picking up queued (or "produced") system messages of the type `BulkProductAndVariantsByIdQuery` and sending them to Shopify to execute the bulk query operation. When this job runs, it invokes the core Moqui framework service `org.moqui.impl.SystemMessageServices.send#AllProducedSystemMessages`. 
