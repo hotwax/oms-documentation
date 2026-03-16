@@ -36,7 +36,7 @@ Applications on the Launchpad are organized into the following categories:
 
 | App | Description |
 |---|---|
-| **BOPIS** | Enables store associates to manage and handover Buy Online, Pickup In-Store orders to customers. |
+| **BOPIS** | Enables store associates to manage and hand over Buy Online Pick-Up In Store orders to customers. |
 | **Fulfillment** | Enables store associates to pick, pack, and ship orders brokered to stores from the OMS. |
 | **Pre-Orders** | Enables merchandisers to manage pre-orders and backorders with planned future inventory. |
 
@@ -78,7 +78,7 @@ Each app on the Launchpad can be launched in three different environments:
 | **UAT (User Acceptance Testing)** | Select the bottom-right icon on the app card. |
 
 {% hint style="info" %}
-Some apps, such as Available to Promise, Order Routing, and Company, require a maarg instance to be configured. If maarg is not configured, these apps will display a **"Not configured"** badge and will be inaccessible.
+Some apps, such as Available to Promise, Order Routing, and Company, require a maarg instance to be configured. If maarg is not configured, these apps will display a `Not configured` badge and will be inaccessible.
 {% endhint %}
 
 ---
