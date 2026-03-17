@@ -34,13 +34,11 @@ Use the filter options on the top right of the "Find Orders" page to apply filte
 
 **B. Order Type** Categorize orders based on their types, such as ship-from-store orders, store pickup orders, or unfillable orders, aiding in the prioritization and management of different order categories.
 
-**C. Facility** Select a Facility to narrow down the results to a specific location, allowing store managers to manage orders originating from a particular facility more efficiently.
+**C. Fulfillment** Select a Facility to narrow down the results to a specific location, allowing store managers to manage orders originating from a particular facility more efficiently. Select order status to filter orders based on their current stage, including Created, Approved, Completed, or Canceled, providing them with the ability to view orders at different stages of processing.
 
-**D. Order Status** Filter orders based on their current stage, including Created, Approved, Completed, or Canceled, providing them with the ability to view orders at different stages of processing.
+**D. Sales Channel** Select a Sales channel from the dropdown menu to filter orders by a specific channel, such as web channel, POS channel, etc., enabling store managers to analyze orders originating from different sales channels separately.
 
-**E. Sales Channel** Select a Sales channel from the dropdown menu to filter orders by a specific channel, such as web channel, POS channel, etc., enabling store managers to analyze orders originating from different sales channels separately.
-
-**F. Date Range** Select a date range of the last 7 days, the last 30 days, or any custom range to view orders based on that selection. This helps store managers review and manage orders within a specific timeframe.
+**E. Date** Select a date range of the last 7 days, the last 30 days, or any custom range to view orders based on that selection. This helps store managers review and manage orders within a specific timeframe.
 
 ### View Order Detail
 
