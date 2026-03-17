@@ -14,7 +14,7 @@ At the bottom of the card, three action buttons are available:
 - **Printer Icon:** To print the picklist.
 
 ### Print Picklist
-To print the picklist, store associates can click the `printer` icon. The picklist opens in a new tab as a PDF and displays details such as the order number, product information, and picking quantity.
+To print the picklist, store associates can click the `printer` icon. If settings are not turned off, first picker needs to be selected. The picklist opens in a new tab as a PDF and displays details such as the order number, product information, and picking quantity.
 
 ### Kit Product Identification
 Orders that include a kit product show a `Kit` tag on the order card across the `Open`, `Packed`, and `Completed` pages.
@@ -52,6 +52,7 @@ The Payment section appears next to Customer Details and includes:
 - **The payment gateway:** The payment gateway through which the payment was processed
 - **Amount paid:** Shows the total amount the customer has paid for the order
 - **Payment status:** Possible payment statuses include Authorized, Cancelled, Not Authorized, Not Received, Received, Refunded, Settled, and Declined.
+-  **Payment time:** Time of the payment status update.
 
 ### Other Shipments
 This section shows other shipments linked to the order. Each shipment is shown as a card with the fulfillment location, such as a warehouse or store, and the shipment number.

@@ -1,4 +1,4 @@
----
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/631a9650-6f3c-468d-bbdd-2d6430ae84a3" />---
 description: >-
   The Packed Orders tab displays all orders that have been packed and are ready to be handed over to the customer. From this tab, store associates can view order details, print the packing slip, and send pickup reminder emails.
 ---
@@ -10,18 +10,14 @@ The order card in the `Packed` Orders page shows the same basic details as in th
 
 There is also a `mail` icon to resend the pickup email to the customer, and a `Handover` button that is used to mark the order as `completed` once the customer picks up the order.
 
-When the `Handover` button is clicked, a Proof of Delivery (POD) pop-up appears where the store associate records that the order has been collected either by the customer or by someone collecting it on their behalf. The associate verifies the order details and asks the person picking up the order to provide proof of identity, which can include:
-
-- Uploading an ID image
-- Providing a digital signature
-- Entering a unique pickup code
+When the `Handover` button is clicked, and a pop appears on screen and displays order is delivered to customer_name.
 
 The recorded details are saved and linked to the respective order. Once confirmation is saved, an automated email is sent to the customer with the order details and pickup confirmation.
 
 ## Order Details Page
 The `Order Details` page in the `Packed` Orders page shows all the usual order information. At the top, there is a `mail` icon that lets store staff resend an email to notify the customer that their order is ready for pickup, a `watch` icon to view the order item rejection history, and a `print` icon to generate the packing slip.
 
-The page also allows store associates to edit the assigned picker for an order. To update the picker, associates can click the `picker name`. This opens a pop-up displaying all available pickers, and a new picker can be selected from the list.
+The page also allows store associates to edit the assigned picker for an order. To update the picker, associates can click the `person icon`. This opens a pop-up displaying names of all available pickers, and a new picker can be selected from the list.
 
 Once an order is packed and marked as Ready for Pickup, store staff will see the `Handover` and `Cancel Item` buttons on the Order Details page. At this stage, rejecting or unpacking items is no longer possible.
 
