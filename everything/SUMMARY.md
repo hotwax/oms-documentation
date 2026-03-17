@@ -93,7 +93,7 @@
     * [How to Request for the Report](tools/tathya/how-to/report-request.md)
 * [Unigate](tools/unigate/email-integration.md)
 
-## Knowledge Base
+## Knowledge base
 
 * [Custom Webhook Mechanism](knowledge-base/custom-webhook-mechanism.md)
 
