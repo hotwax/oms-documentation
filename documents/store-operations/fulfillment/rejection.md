@@ -53,17 +53,17 @@ Retailers can configure which rejection reasons they want to offer for their sta
 
 ### Filter rejection reasons in the Fulfillment App
 
-Rejection reasons can be shown or hidden for store users directly from the **Rejection reasons** page in the Fulfillment App.
+Rejection reasons can be shown or hidden for store users directly from the `Rejection reasons` page in the Fulfillment App.
 
-**How to filter rejection reasons**
+#### How to filter rejection reasons
 
 1. Open the Fulfillment App.
 2. Click the hamburger menu.
-3. In the **Organization** section, select **Rejection reasons**.
+3. In the `Organization` section, select `Rejection reasons`.
 4. Find the rejection reason you want to control.
 5. Use the toggle on that row to decide whether the reason should be available in the Fulfillment App.
 
-**How the toggle works**
+#### How the toggle works
 
 * **When the toggle is ON:** That rejection reason is available to store users while rejecting items.
 * **When the toggle is OFF:** That rejection reason is hidden from store users in the Fulfillment App.
