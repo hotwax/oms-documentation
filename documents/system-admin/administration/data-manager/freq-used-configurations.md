@@ -94,8 +94,8 @@ When importing the CSV, some fields need to be filled mandatorily. Here is the l
 |-------|--------------|------------------------------------------------------------------------------------------------------------------------|
 | 1     | store-id     | Unique identifier for the store.                                                                                       |
 | 2     | calendar-id  | Unique identifier for the calendar associated with the store.                                                          |
-| 3     | from-date    | Start date for the calendar's validity period. Users can use either MM-DD-YYYY or DD-MM-YYYY for the arrival-date based on their region. |
-| 4     | thru-date    | End date for the calendar's validity period. Users can use either MM-DD-YYYY or DD-MM-YYYY for the arrival-date based on their region.   |
+| 3     | from-date    | Start date for the calendar's validity period. Users can use `MM-DD-YYYY`, `DD-MM-YYYY`, or the standardized `yyyy-MM-dd HH:mm:ss` format based on their requirements. |
+| 4     | thru-date    | End date for the calendar's validity period. Users can use `MM-DD-YYYY`, `DD-MM-YYYY`, or the standardized `yyyy-MM-dd HH:mm:ss` format based on their requirements.   |
 
 ***
 
@@ -345,7 +345,7 @@ When importing Purchase Order some fields need to be mandatorily filled, while o
 | 5     | product-SKU          | The unique Stock Keeping Unit (SKU) identifier for the product.                                                   |
 | 6     | quantity             | The available quantity of the product in stock or expected.                                                       |
 | 7     | atp                  | The quantity of the product that can be promised for delivery.                                                    |
-| 8     | arrival-date         | The expected date when the product will arrive at the facility or store. Users can use either MM-DD-YYYY or DD-MM-YYYY for the arrival-date based on their region. |
+| 8     | arrival-date         | The expected date when the product will arrive at the facility or store. Users can use `MM-DD-YYYY`, `DD-MM-YYYY`, or the standardized `yyyy-MM-dd HH:mm:ss` format based on their requirements. |
 
 
 ***
