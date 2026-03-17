@@ -1,10 +1,10 @@
-# HotWax OMS Custom Webhook Mechanism: Technical Architecture & Implementation
+# HotWax OMS Custom Webhook Mechanism: Technical Architecture and Implementation
 
 ## 1. Introduction
-The custom webhook mechanism in HotWax OMS provides a robust, real-time data synchronization layer between the OMS and external platforms (e.g., ADOC). Unlike traditional polling-based integrations, this event-driven architecture ensures that status updates for orders, items, and shipments are pushed immediately as they occur in the database.
+The custom webhook mechanism in HotWax OMS provides a robust, real-time data synchronization layer between the OMS and external platforms (e.g., HotWax Automation Data Operations Center (ADOC)). Unlike traditional polling-based integrations, this event-driven architecture pushes status updates for orders, items, and shipments immediately as they occur in the database.
 
 ## 2. Architectural Overview
-The system is built on top of Moqui’s **DataFeed** and **SystemMessage** frameworks, ensuring scalability, asynchronous execution, and reliable delivery.
+The system is built on top of Moqui’s `DataFeed` and `SystemMessage` frameworks, providing scalability, asynchronous execution, and reliable delivery.
 
 ### Key Components:
 - **DataFeed (`WebhookEvents`)**: The "listener" that monitors specific entities for changes.
@@ -18,13 +18,13 @@ The system is built on top of Moqui’s **DataFeed** and **SystemMessage** frame
 
 The system uses the `DTFDTP_RT_PUSH` feed type, which triggers a service call immediately after a database transaction is committed.
 
-### DataDocuments & Scopes:
-- **`WebhookOrderStatus`**: Monitors the `OrderStatus` entity. Used for order-level lifecycle events like `ORDER_CREATED`, `ORDER_APPROVED`, and `ORDER_COMPLETED`.
-- **`WebhookOrderItem`**: Monitors the `OrderItem` entity. Specifically handles item-level events such as `ITEM_BROKERED` (allocation) and `ITEM_REJECTED` (fulfillment rejection).
-- **`WebhookShipmentStatus`**: Monitors the `ShipmentStatus` entity. Tracks fulfillment progress including `SHIPMENT_APPROVED`, `SHIPMENT_PACKED`, and `SHIPMENT_SHIPPED`.
+### DataDocuments and Scopes:
+- `WebhookOrderStatus`: Monitors the `OrderStatus` entity. Used for order-level lifecycle events like `ORDER_CREATED`, `ORDER_APPROVED`, and `ORDER_COMPLETED`.
+- `WebhookOrderItem`: Monitors the `OrderItem` entity. Specifically handles item-level events such as `ITEM_BROKERED` (allocation) and `ITEM_REJECTED` (fulfillment rejection).
+- `WebhookShipmentStatus`: Monitors the `ShipmentStatus` entity. Tracks fulfillment progress including `SHIPMENT_APPROVED`, `SHIPMENT_PACKED`, and `SHIPMENT_SHIPPED`.
 
 ### Event Mapping:
-The `receive#WebhookEvents` service receives a DataDocument and determines the business **Topic** by mapping technical status IDs (e.g., `OrderApproved` -> `ORDER_APPROVED`).
+The `receive#WebhookEvents` service receives a `DataDocument` and determines the business *Topic* by mapping technical status IDs (e.g., `OrderApproved` -> `ORDER_APPROVED`).
 
 ---
 
@@ -39,9 +39,9 @@ A centralized service, `process#WebhookDataDocument`, is responsible for transfo
 
 ---
 
-## 5. Security & Data Integrity
+## 5. Security and Data Integrity
 
-To ensure that the receiving system can trust the payload, every webhook request is cryptographically signed.
+This allows the receiving system to trust the payload, every webhook request is cryptographically signed.
 
 ### HMAC SHA-256 Signing:
 1.  A `sharedSecret` is configured for each webhook endpoint in the `WebhookConfig` entity.
@@ -76,5 +76,5 @@ Webhooks are configured via the `WebhookConfig` entity, allowing for multiple su
 
 ## Appendix: Summary of Recent Enhancements
 - **Granular Addressing**: Added logic to include full postal address details for both customers and fulfillment facilities.
-- **Unified Builder**: Refactored the payload construction into a single shared service to ensure consistency across all event types.
+- **Unified Builder**: Refactored the payload construction into a single shared service to maintain consistency across all event types.
 - **Entity Extensions**: Expanded `WebhookConfig` to securely store signing secrets and improved `Facility` entity relationships for faster address lookups.
