@@ -51,14 +51,22 @@ Retailers can configure which rejection reasons they want to offer for their sta
 * **Customer Service Representatives (CSRs):** In the Order Management System, CSRs view broader rejection reasons suited for customer interactions, such as manual reallocation.
 * **Admin Users:** Admin or operations managers can view all rejection reasons across roles for complete oversight.
 
-### Toggle for Showing Rejection Reasons
+### Filter rejection reasons in the Fulfillment App
 
-Rejection reasons can be shown or hidden from store associates using the fulfillment app by using the toggle on the settings page.
+Rejection reasons can be shown or hidden for store users directly from the **Rejection reasons** page in the Fulfillment App.
 
-**How It Works:**
+**How to filter rejection reasons**
 
-* **When the toggle is ON:** The specific rejection reason will be visible, while all other reasons will remain hidden.
-* **When the toggle is OFF:** The specific rejection reason will be hidden, but all other reasons will still be visible.
+1. Open the Fulfillment App.
+2. Click the hamburger menu.
+3. In the **Organization** section, select **Rejection reasons**.
+4. Find the rejection reason you want to control.
+5. Use the toggle on that row to decide whether the reason should be available in the Fulfillment App.
+
+**How the toggle works**
+
+* **When the toggle is ON:** That rejection reason is available to store users while rejecting items.
+* **When the toggle is OFF:** That rejection reason is hidden from store users in the Fulfillment App.
 
 <figure><img src="../.gitbook/assets/rejection-reasons.png" alt=""><figcaption><p>Rejection Reasons</p></figcaption></figure>
 
