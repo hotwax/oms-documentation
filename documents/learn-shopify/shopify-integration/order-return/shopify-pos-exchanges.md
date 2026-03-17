@@ -163,7 +163,7 @@ Example: Customer returns Item A ($10) for Item D ($5). They receive a $5 refund
 | ShopPay 1: $5 (Refund) | |
 | ExchangeCredit: $5 (Refund on original) | ExchangeCredit: $5 (Settled on new) |
 
-If the customer later returns Item D along with B and C, they’ll receive a final refund of $25 (B: $10 + C: $10 + D: $5).
+If the customer later returns Item D along with B and C, they will receive a final refund of $25 (B: $10 + C: $10 + D: $5).
 
 ## Inventory Updates
 
