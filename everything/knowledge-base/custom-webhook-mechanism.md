@@ -1,7 +1,7 @@
 # HotWax OMS Custom Webhook Mechanism: Technical Architecture and Implementation
 
 ## 1. Introduction
-The custom webhook mechanism in HotWax OMS provides a robust, real-time data synchronization layer between the OMS and external platforms (e.g., Automation Data Operations Center (ADOC)). Unlike traditional polling-based integrations, this event-driven architecture pushes status updates for orders, items, and shipments immediately as they occur in the database.
+The custom webhook mechanism in HotWax OMS provides a robust, real-time data synchronization layer between the OMS and external platforms. Unlike traditional polling-based integrations, this event-driven architecture pushes status updates for orders, items, and shipments immediately as they occur in the database.
 
 ## 2. Architectural overview
 The system is built on top of Moqui’s `DataFeed` and `SystemMessage` frameworks, providing scalability, asynchronous execution, and reliable delivery.
