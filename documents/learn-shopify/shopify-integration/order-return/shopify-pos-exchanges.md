@@ -24,8 +24,8 @@ Before delving into how returns and exchanges are imported, it’s important to 
 
 A scheduled job in HotWax Commerce fetches returns and exchanges from Shopify:
 
-- **Exchange additions** are imported as new sales orders linked to the original sale.
-- **Returns** are imported independently and linked to their corresponding HotWax order to balance totals.
+- Exchange additions are imported as new sales orders linked to the original sale.
+- Returns are imported independently and linked to their corresponding HotWax order to balance totals.
 
 ## Mapping Returns and Exchanges
 
