@@ -16,7 +16,7 @@ Orders need to be verified and approved before they can be fulfilled. Without a 
 
 #### Example Scenario: Fraud Detection with Third-party Apps
 
-For example, a third-party fraud detection app adds an ‘approved’ tag once all security checks are completed. After this processing is over, HotWax Commerce syncs these orders, initially labeling them as 'Created'. A background job then checks for the ‘approved’ tag and changes the status of these orders to 'Approved'. Only these orders are eligible for fulfillment.
+For example, a third-party fraud detection app adds an ‘approved’ tag once all security checks are completed. After this processing is over, HotWax Commerce syncs these orders, initially labeling them as 'Created'. The 'Approved Orders' job then checks for the ‘approved’ tag and changes the status of these orders to 'Approved'. Only these orders are eligible for fulfillment.
 
 <figure><img src="../../.gitbook/assets/approved-orders-job-config.png" alt=""><figcaption><p><em>Fig.6 : Configuration of the “Approved Orders” job in the Job Manager App</em></p></figcaption></figure>
 
