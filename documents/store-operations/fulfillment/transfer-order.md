@@ -36,60 +36,36 @@ To create a new TO, tap the `+` button located in the bottom-right corner of the
 2. **Assign Destination**  
    - Locate the Assign section in the left-hand menu.  
    - Tap Assign to select the destination facility.  
-   - Select a destination facility.  
+   - Select a destination facility.
 
-3. **Select Shipping Method**  
-   - Locate the Shipping Method section below the Assign card.  
-   - Tap the dropdown to choose a Carrier.  
-   - Now, choose the Shipping Method supported by the carrier, such as Standard, Same Day, or Next Day.  
-
-4. **Plan Shipping and Delivery Dates**  
-   - Locate the Plan section in the left-hand menu.  
-   - Based on transfer type, select the appropriate lifecycle:  
-     - **Store to Store**: Select Fulfill and Receive (managed entirely in OMS).  
-     - **Store to Warehouse**: Select Fulfill only (post-fulfillment handled by WMS).  
-   - To know more about TO types, refer to this [document](/documents/learn-netsuite/integration-flows/transfer-order/README.md).  
-   - Set the Ship Date and tap `Done`.  
-   - Set the Delivery Date and tap `Done`.  
-
-5. **Add Products to the TO**  
-   - Use the set product identifier (like SKU or Shopify ID) to search, or scan the product.  
-   - Once it appears on the right side, tap the `+` button to add it to the TO.  
-
-   Upon adding a product, store associates can see three options for quantity selection:  
+3. **Add Products to the TO**  
+   - There are two options in the Add Items section - A `Scanner icon`and `Search icon`. By clicking on the scanner icon products can be searched either by scanning barcode or my entering the SKU of the TO product. If search icon is selected , product can be searched by entering their Parent name, SKU or UPC. After searching the product  is added by selecting `Add to tranfer` button.
+    
+     Upon adding a product, store associates can see three options for quantity selection:  
    - Book QOH (Quantity on Hand): Use this when transferring the entire available stock from the origin facility.  
    - Book ATP (Available to Promise): Select this to transfer only the available (unallocated) quantity.  
-     - *Use Case*: Ideal to avoid affecting future commitments or orders.  
-   - Book Custom Quantity: Use this option to specify a custom quantity to transfer.  
+     - *Use Case*: Ideal to avoid affecting future commitments or orders.
+     
+    Book Custom Quantity: Use this option to specify a custom quantity to transfer.  
 
    Use the checkbox top row to enable bulk edit for all added items.  
-
-6. **Finalize the TO**  
-   - Tap the `✓` button in the bottom right corner to finalize and create the TO.  
+   -  After deciding on the quantity the `Pack and Ship order` button is clicked, ship transfer order page is opened.
+   - On ship tranfer order page, TO order details are displayed like the Transfer Order ID,  Transfer Order name, sending to facility name and item deatils such as name and quantity.
+   - There are two other option just in side of TO order details section, Generate Shipping label and Manual Tracking.
+  Use the checkbox top row to enable bulk edit for all added items.  
+  
+4. **Select Shipping Method**  
+   - Locate the Carrier section after choosing Manual Tracking.  
+   - Tap the dropdown to choose a Carrier.  
+   - Now, choose the Shipping Method supported by the carrier, such as Standard, Same Day, or Next Day.
+   - Then add a tracking code and Tracking URL is generated as per given Tracking Code.
+  
+ 6. **Finalize the TO**  
+   - Tap the `Ship Order` button in the bottom right corner to finalize and create the TO.  
 {% hint style="warning" %}
 A TO cannot be edited from the Fulfillment app after this step
 {% endhint %}  
 
-### Upload CSV for Transfer Order
-
-When creating a TO for multiple products, the Fulfillment App supports uploading a CSV for multiple products.
-
-To efficiently create a TO with multiple products, follow these steps:  
-
-1. **Prepare a CSV File**  
-   - Create a CSV file containing the SKUs and quantities of the products to be transferred.  
-
-2. **Navigate and Upload**  
-   - On the Create Transfer Order page, navigate to the `Upload` button at the bottom left of the product selection section.  
-
-3. **Select and Upload the CSV File**  
-   - Tap the `Upload` button and choose the prepared CSV file.  
-
-4. **Map the Fields**  
-   - Select the correct product identifier (e.g., SKU).  
-   - Map the CSV fields to the system fields (e.g., SKU → Product ID, Quantity → Quantity).  
-
-This method eliminates the need to add each product manually and speeds up the TO creation process.  
 
 ## Transfer Order Fulfillment
 
