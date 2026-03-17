@@ -10,6 +10,8 @@ Whenever a new order is assigned to a store for fulfillment, store associates re
 
 ## Filters
 
+Filters help store associates narrow down the list of assigned orders to focus on those that need immediate attention or specific handling.
+
 ### Shipping Methods
 Store associates can filter orders by shipping method.  
 

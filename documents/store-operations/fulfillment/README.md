@@ -5,6 +5,8 @@ description: >-
 
 # Fulfillment App
 
+The Fulfillment App is a specialized tool for store associates to manage the end-to-end order fulfillment process. It provides a user-friendly interface to handle assigned orders, manage store-to-store transfers, and ensure accurate shipping and delivery.
+
 ## Key Features
 
 Along with core functions like Pick, Pack, and Ship, the app includes helpful tools for both associates and managers:

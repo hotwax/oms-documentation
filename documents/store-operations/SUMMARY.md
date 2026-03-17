@@ -27,8 +27,7 @@
   * [Change Shipping Method](fulfillment/change-shipping-method.md)
   * [Troubleshooting](fulfillment/troubleshooting/README.md)
     * [Change Language](fulfillment/troubleshooting/change-language.md)
-    * [Unable to Login](fulfillment/troubleshooting/unable-to-login.md)
-* [Picking App](fulfillment/picking-app.md)
+  * [Picking App](fulfillment/picking-app.md)
 * [In-Store Returns](in-store-returns/README.md)
 
 ## Inventory

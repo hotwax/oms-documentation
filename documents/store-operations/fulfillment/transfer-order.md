@@ -66,6 +66,8 @@ To create a new TO, tap the `+` button located in the bottom-right corner of the
 
 6. **Finalize the TO**  
    - Tap the `✓` button in the bottom right corner to finalize and create the TO.  
+
+    **Note:** Alternatively, you can use the [Upload CSV](#upload-csv-for-transfer-order) option to add products in bulk.
 {% hint style="warning" %}
 A TO cannot be edited from the Fulfillment app after this step
 {% endhint %}  

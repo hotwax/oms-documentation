@@ -33,6 +33,10 @@ description: Explore API and data feeds within the 'inbound shipment documentato
 | OUT\_TRANSFER      | OUTGOING\_SHIPMENT | Outbound Transfer Shipment |
 | PURCHASE\_RETURN   | OUTGOING\_SHIPMENT | Purchase Return Shipment   |
 
-### TBD
+### Sample Shipment File
 
-Sample Shipment file
+```csv
+external-shipment-id,product-sku,quantity,origin-facility-id,destination-facility-id,item-external-id,tracking-number,shipment-attribute,shipment-type
+12009298,26897,11,116,281,1,788944217767,EXTERNAL_ORDER_ID:TO0005374,IN_TRANSFER
+12009298,26898,5,116,281,2,788944217767,EXTERNAL_ORDER_ID:TO0005374,IN_TRANSFER
+```
