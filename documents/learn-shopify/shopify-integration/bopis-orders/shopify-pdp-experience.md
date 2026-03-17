@@ -20,7 +20,9 @@ This is achieved through the following steps:
 3. The HotWax Commerce BOPIS PDP app shows all the locations that offer BOPIS, sorted based on how close they are to the customer. The app also displays the store's operating hours to make the BOPIS experience smoother for the customer.
 4. To show store addresses as clickable links on the BOPIS PDP, HotWax Commerce adds the Google Maps link for each store, connects it with the store details, and displays it on the page so customers can easily open the store location in Google Maps.
 5. Customers can choose a specific location to be saved as their preferred pickup spot, known as "My Store." This saves them the hassle of having to search for their preferred pickup location every time they make an order.
-6. HotWax Commerce BOPIS PDP App on Shopify uses the 'checkInventory' API to confirm product availability and displays suitable pickup locations for that product.
+6. HotWax Commerce BOPIS PDP App on Shopify uses the [BOPIS Check Inventory](/documents/integrate-with-hotwax/api/inventory/bopis-check-inventory.md) API to confirm product availability and displays suitable pickup locations for that product.
+
+
 
 <figure><img src="../../.gitbook/assets/pickup-locations-on-pdp.png" alt=""><figcaption><p><em>Fig.1 : Pickup locations on PDP</em></p></figcaption></figure>
 

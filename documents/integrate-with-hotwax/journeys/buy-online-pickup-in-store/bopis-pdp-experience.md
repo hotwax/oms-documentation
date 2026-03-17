@@ -173,7 +173,7 @@ Method: `POST`
 
 ### Step 3: Check inventory at each store allowing BOPIS
 
-For each store that allows BOPIS, use the checkBOPISInventory API to check the available to promise (ATP) inventory for the desired product. Display all the facilities with non-zero inventory numbers on the product detail page (PDP) for customers to select and place a BOPIS order.
+For each store that allows BOPIS, use the [BOPIS Check Inventory](/documents/integrate-with-hotwax/api/inventory/bopis-check-inventory.md) API to check the available to promise (ATP) inventory for the desired product. Display all the facilities with non-zero inventory numbers on the product detail page (PDP) for customers to select and place a BOPIS order.
 
 Note: If a facility has 0 inventory for the product, you can still display it for the Ship-to-store PDP experience.
 
@@ -216,10 +216,10 @@ Method: `POST`
 
 ### Handle cases when customer location is not available
 
-In case the customer's location is not available, you can display all the available store pickup locations for the product using the storeLookup API and checkInventory API. Here's how to handle this scenario:
+In case the customer's location is not available, you can display all the available store pickup locations for the product using the storeLookup API and checkBopisInventory API. Here's how to handle this scenario:
 
 * Step 1: Call the storeLookup API without passing latitude and longitude coordinates to retrieve all facilities allowing BOPIS
-* Step 2: Use the facility IDs returned in the response of the storeLookup API with the checkInventory API to get the facilities having inventory for the product
+* Step 2: Use the facility IDs returned in the response of the storeLookup API with the [BOPIS Check Inventory](/documents/integrate-with-hotwax/api/inventory/bopis-check-inventory.md) API to get the facilities having inventory for the product.
 * Step 3: Display all the locations with non-zero inventory on the PDP
 
 #### Sample
