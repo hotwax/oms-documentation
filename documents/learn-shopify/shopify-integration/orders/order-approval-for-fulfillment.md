@@ -14,9 +14,9 @@ In HotWax Commerce, all orders are initially marked as ‘Created’ after being
 
 Orders need to be verified and approved before they can be fulfilled. Without a systematic approval process, invalid or fraudulent orders could proceed to fulfillment, leading to potential issues. The 'Approved Orders' job runs at a default frequency of 30 minutes and checks the ‘approved’ tag of the orders.
 
-#### Example Scenario: Fraud Detection with Riskified
+#### Example Scenario: Fraud Detection with Third-party Apps
 
-For example, the Riskified app, used by clients like Steve Madden, adds an ‘approved’ tag once all security checks are done. After this processing is over, HotWax will sync these orders initially labeling them as 'Created'. The `checkRiskifiedTagAndApproveOrders` job then changes the status of orders with the ‘approved’ tag to 'Approved'. Only these orders are eligible for fulfillment.
+For example, a third-party fraud detection app adds an ‘approved’ tag once all security checks are completed. After this processing is over, HotWax Commerce syncs these orders, initially labeling them as 'Created'. The 'Approved Orders' job then checks for the ‘approved’ tag and changes the status of these orders to 'Approved'. Only these orders are eligible for fulfillment.
 
 <figure><img src="../../.gitbook/assets/approved-orders-job-config.png" alt=""><figcaption><p><em>Fig.6 : Configuration of the “Approved Orders” job in the Job Manager App</em></p></figcaption></figure>
 

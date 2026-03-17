@@ -36,7 +36,7 @@
   * [Manage Operating Hours](administration/facilities/manage-operating-hours.md)
   * [Add Map Link](administration/facilities/add-map-link.md)
   * [Manage Product Stores](administration/facilities/manage-product-stores.md)
-  * [Configure Online Fulfillmentchan](administration/facilities/configure-fulfillment.md)
+  * [Configure Online Fulfillment](administration/facilities/configure-fulfillment.md)
   * [Configure Fulfillment Capacity](administration/facilities/configure-fulfillment-capacity.md)
   * [Manage Facility Staff](administration/facilities/manage-facility-staff.md)
   * [Manage Locations](administration/facilities/manage-locations.md)
