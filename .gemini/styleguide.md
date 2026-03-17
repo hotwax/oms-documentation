@@ -136,7 +136,9 @@ Examples:
 * Do: `schedule-brokering-run.png`
 * Don't: `Screenshot 2024-08-13 at 12.14.54.png`
 * Don't: `10.png`
+* Don't: `10-2.png`
 * Don't: `final-final-v2.png`
+* Don't: `image (1).png`
 
 ### When a hyphen is not required
 
@@ -159,6 +161,7 @@ Examples:
 * Keep one asset directory per main documentation topic.
 * Reuse an existing asset when it represents the same UI or workflow.
 * If you replace an image, keep the same descriptive name only when the screenshot still shows the same concept.
+* Never keep duplicate-download suffixes such as `(1)`, `(2)`, `-1`, or `-2` unless the number is part of the actual business concept shown in the image.
 * Update all references when renaming an asset. This includes image tags, markdown links, HTML links, and GitBook file embeds.
 
 ## Acronyms

@@ -17,7 +17,7 @@ description: >-
 
 A Product Store represents a brand or a set of products. If your OMS is connected to multiple eCommerce brands selling different product collections, you can have separate Product Stores in HotWax Commerce.
 
-<figure><img src="../.gitbook/assets/fulfillment-hotwax-2.png" alt="" width="375"><figcaption><p>Select Product store</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/product-store-setting.png" alt="" width="375"><figcaption><p>Select Product store</p></figcaption></figure>
 
 ### Facility
 
@@ -29,7 +29,7 @@ The Fulfillment App allows authorized users to select a facility to operate from
 
 Adjust the order fulfillment capacity for your facility. If you set the fulfillment capacity to 0, new orders will not be allocated to this facility. Leave this field empty if the fulfillment capacity of this facility is unlimited. Setting fulfillment capacity to No capacity disables new orders from being allocated to this facility. Select Unlimited Capacity if this facility's fulfillment capacity is unrestricted. You can also select a custom option to set the capacity limit.
 
-<figure><img src="../.gitbook/assets/fulfillment-hotwax-4.png" alt="" width="375"><figcaption><p>Online Order Fulfillment</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/online-order-fulfillment-setting.png" alt="" width="375"><figcaption><p>Online Order Fulfillment</p></figcaption></figure>
 
 ### Sell Inventory Online
 
@@ -41,19 +41,19 @@ Determine whether the inventory of the store should be accessible for online sal
 
 This setting allows selection of a primary and secondary product identifier, such as product ID or SKU, to control how products are displayed in the app.
 
-<figure><img src="../.gitbook/assets/fulfillment-hotwax-5.png" alt="" width="375"><figcaption><p>Choose Product identifier</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/fulfillment-product-identifier-setting.png" alt="" width="375"><figcaption><p>Choose Product identifier</p></figcaption></figure>
 
 ### Timezone
 
 This setting allows selecting an appropriate timezone to ensure consistency and optimize operations according to local time. 
 
-<figure><img src="../.gitbook/assets/fulfillment-hotwax-6.png" alt="" width="375"><figcaption><p>Select timezone</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/fulfillment-timezone-setting.png" alt="" width="375"><figcaption><p>Select timezone</p></figcaption></figure>
 
 ### Language
 
 Choose the preferred display language. This setting controls the language used throughout the interface.
 
-<figure><img src="../.gitbook/assets/fulfillment-hotwax-8.png" alt="" width="375"><figcaption><p>Select Language</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/fulfillment-language-setting.png" alt="" width="375"><figcaption><p>Select Language</p></figcaption></figure>
 
 ### Additional Documents
 
@@ -67,7 +67,7 @@ A shipping label is used by the delivery carrier to send the package to the cust
 ##### Generate Packing Slip  
 A packing slip shows the list of items in an order and helps match delivered products with what was ordered. This setting allows deciding whether to print packing slips for shipments or not.
 
-<figure><img src="../.gitbook/assets/fulfillment-hotwax-7.png" alt="" width="375"><figcaption><p>Additional Documents</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/additional-documents-setting.png" alt="" width="375"><figcaption><p>Additional Documents</p></figcaption></figure>
 
 ### Notification Preference
 This setting controls whether store associates receive notifications for orders awaiting fulfillment.

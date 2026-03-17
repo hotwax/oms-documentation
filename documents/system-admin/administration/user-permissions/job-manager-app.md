@@ -65,7 +65,7 @@ Below is a list of all the actions available in the Job Manager App, along with 
 | 3          | Update Job Configurations        | COMMON\_ADMIN | Skip once, Disable, Save Changes, and Run Serial No.w options for job configurations.          |
 | 4          | Auto Cancellation Configurations | COMMON\_ADMIN | Manage auto-cancellation settings including days input, save button, and daily toggle options. |
 
-<figure><img src="../../.gitbook/assets/fulfillment-1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/job-manager-app-permissions.png" alt=""><figcaption></figcaption></figure>
 
 ## Inventory Page
 

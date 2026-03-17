@@ -25,7 +25,7 @@ With the `Facilities App` in HotWax Commerce, retail brands can create distinct 
 5. **Quick Edit Facilities:**
    * Once the facility is created, click on the number displayed on the facility card corresponding to the created group.
 
-<figure><img src="../.gitbook/assets/facilities-hotwax-8.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/facility-group-quick-edit.png" alt=""><figcaption></figcaption></figure>
 
 * Select `Quick Edit` to efficiently manage facilities associated with this group.
 

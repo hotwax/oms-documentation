@@ -134,4 +134,4 @@ This feature provides enhanced flexibility, especially for stores using multiple
 5. **Enter Tracking Code and URL**: Store associates can manually enter the `tracking code` in the provided field. Ensure that a `tracking URL` is configured for the selected carrier. If it’s not available, you may need to input the tracking URL `manually` to allow customers to track their `shipments` effectively.
 6. **Generate the Label**: Once the carrier is selected, `generate` the `shipping label` for the order.
 
-<figure><img src="../.gitbook/assets/screenshot-2024-09-30-at-4-48-51-pm-2-2.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/preferred-carrier-label-generation.png" alt=""><figcaption></figcaption></figure>

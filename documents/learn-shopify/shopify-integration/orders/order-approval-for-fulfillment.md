@@ -18,7 +18,7 @@ Orders need to be verified and approved before they can be fulfilled. Without a 
 
 For example, the Riskified app, used by clients like Steve Madden, adds an ‘approved’ tag once all security checks are done. After this processing is over, HotWax will sync these orders initially labeling them as 'Created'. The `checkRiskifiedTagAndApproveOrders` job then changes the status of orders with the ‘approved’ tag to 'Approved'. Only these orders are eligible for fulfillment.
 
-<figure><img src="../../.gitbook/assets/21-2.png" alt=""><figcaption><p><em>Fig.6 : Configuration of the “Approved Orders” job in the Job Manager App</em></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/approved-orders-job-config.png" alt=""><figcaption><p><em>Fig.6 : Configuration of the “Approved Orders” job in the Job Manager App</em></p></figcaption></figure>
 
 {% hint style="info" %}
 Any digital items are marked as 'Fulfilled' in Shopify. On import into HotWax Commerce, these items are automatically marked as completed.

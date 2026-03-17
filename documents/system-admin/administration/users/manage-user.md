@@ -31,7 +31,7 @@ The "Reset Password" function enables administrators to initiate a password rese
 
 The "Update Contact Details" function enables administrators to modify a user's contact information, including email, phone number, or external ID. The on file email of a customer is important for ensuring that reset password emails are sent to the correct address. The external ID of a user is helpful for tracking their commissions during order fulfillment.
 
-<figure><img src="../../.gitbook/assets/contact-details-2.png" alt="" width="375"><figcaption><p>Image: Update Contact Details </p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/update-contact-details.png" alt="" width="375"><figcaption><p>Image: Update Contact Details </p></figcaption></figure>
 
 ## Update User’s Role and Permissions
 
@@ -64,7 +64,7 @@ The "Show as Picker" function allows picklists to be assigned to a user. This ro
 
 The "Add Facilities" function allows administrators to associate a user with multiple facilities in the OMS. This flexibility enables users to access and manage fulfillment operations across different locations. Additionally, administrators can assign facility-specific login credentials, ensuring that users have the necessary access privileges for activities related to specific facilities.
 
-<figure><img src="../../.gitbook/assets/frame-2-1.png" alt="" width="563"><figcaption><p>Image: Add Facilities</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/add-facilities.png" alt="" width="563"><figcaption><p>Image: Add Facilities</p></figcaption></figure>
 
 ## Add Favorites
 
@@ -72,4 +72,4 @@ The Favorites function allows users to pin their most frequently used Product st
 
 This feature is particularly valuable when users need to schedule specific jobs from the Job Manager app, such as `Import new products`, on a parent Shopify shop. If the shop is not set correctly or the default Shop is not the parent, users might mistakenly run a job on the child shop, which could lead to unexpected changes in OMS behavior.
 
-<figure><img src="../../.gitbook/assets/favourites-1.png" alt="" width="375"><figcaption><p>Image: Favourites</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/add-favorites.png" alt="" width="375"><figcaption><p>Image: Favourites</p></figcaption></figure>
