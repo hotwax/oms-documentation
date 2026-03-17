@@ -28,9 +28,9 @@ To optimize inventory usage and fulfillment speed, retailers often split orders 
 
 **Example:**
 
-1- If an order contains a \`Black Belt' of $80 and a 'Brown Wallet' worth $160, the order will not be split as both items should be above the threshold.
+1- If an order contains a 'Black Belt' worth $80 and a 'Brown Wallet' worth $160, and the brokering threshold is set to $100, the order will not be split as both items must be above the threshold.
 
-2- If an order contains a 'Black Belt' and 'Black Wallet' valued at $80 each, the order will not be split as both item falls below the threshold.
+2- If an order contains a 'Black Belt' and 'Black Wallet' each valued at $80, and the threshold is set to $100, the order will not be split as both items fall below the threshold.
 
 3- If an order contains two items—'Brown Belt' and 'Brown Wallet'—each worth $160, and the brokering threshold is set to $100, the items will be split since both items are above the threshold.
 
