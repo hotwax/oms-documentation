@@ -107,7 +107,7 @@ Below is a list of all the actions available in the Fulfillment App, along with 
 
 Manage All Fulfillment Operations
 
-<figure><img src="../../.gitbook/assets/settings-1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/app-settings-permissions.png" alt=""><figcaption></figcaption></figure>
 
 ## Order Details Page
 

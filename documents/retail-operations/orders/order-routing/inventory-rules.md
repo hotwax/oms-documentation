@@ -57,7 +57,7 @@ Retailers can set up facility groups in HotWax’s `Facility App`. Creating faci
 
 <mark style="color:orange;">**HotWax Commerce offers several inventory filters to fine-tune which facilities are eligible for allocation, including:**</mark>
 
-<figure><img src="../../.gitbook/assets/inventoryfilters-1.png" alt=""><figcaption><p>Inventory Filters</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/inventory-filters.png" alt=""><figcaption><p>Inventory Filters</p></figcaption></figure>
 
 * **All items available anywhere:** Only allocate a shipgroup if all the items are available. All items do not have to be available at the same location, only available at the same time. This is useful if an order should only be shipped if all of it can be shipped without cancellation.
 * **Turn off the facility order limit check:** Retailers can set[ fulfillment capacity](https://docs.hotwax.co/documents/system-admins/administration/facilities/configure-fulfillment-capacity) in HotWax, allowing them to define the maximum number of orders a facility can fulfill in a day. Disabling the facility order limit filter gives retailers the flexibility to bypass the defined order limit for a facility, which is especially useful during peak times or high-demand periods. For example, if a retailer turns off this limit, orders can continue to be assigned to that facility even after its maximum capacity has been reached.

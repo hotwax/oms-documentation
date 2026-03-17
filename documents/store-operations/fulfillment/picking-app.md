@@ -13,7 +13,7 @@ description: >-
 * Only show my picklists: Only show picklists associated with the logged-in user. Users can also see a picklist of other users by turning the toggle off to view other team members' picklists within a facility to make collaboration during fulfillment simpler.
 * Hide completed picklists: Don't show recently completed picklists.
 
-<figure><img src="../.gitbook/assets/1-12.png" alt=""><figcaption><p>Image: Picklist Page</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/picklist-page.png" alt=""><figcaption><p>Image: Picklist Page</p></figcaption></figure>
 
 ## Picklist Details
 

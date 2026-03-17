@@ -20,7 +20,7 @@ When a PO is raised in NetSuite, it syncs with HotWax Commerce, allowing store a
 
 The procurement process begins in the NetSuite ERP, where POs are generated to replenish inventory in physical stores.
 
-<figure><img src="../.gitbook/assets/posync-1.png" alt=""><figcaption><p>Purchase Order sync from NetSuite to HotWax Commerce</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/purchase-order-sync-netsuite-to-hotwax.png" alt=""><figcaption><p>Purchase Order sync from NetSuite to HotWax Commerce</p></figcaption></figure>
 
 ### Export Purchase Orders from NetSuite
 

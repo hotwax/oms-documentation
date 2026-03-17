@@ -74,4 +74,4 @@ When importing the Count ID, facility and Internal ID are mandatory fields, whil
 | Counted Quantity    | The actual counted quantity of the product.                 |
 | Variance            | The difference between the expected and counted quantities. |
 
-<figure><img src="../../.gitbook/assets/screenshot-2024-08-13-at-12-14-54.png" alt=""><figcaption><p>View Closed Counts</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/closed-counts-page.png" alt=""><figcaption><p>View Closed Counts</p></figcaption></figure>

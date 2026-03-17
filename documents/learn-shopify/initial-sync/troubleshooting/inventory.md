@@ -22,11 +22,11 @@ Sometimes retailers may encounter inventory disparities between HotWax Commerce 
 {% tabs %}
 {% tab title="Hard Sync" %}
 
-<figure><img src="../../.gitbook/assets/hard-sync-1.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/hard-sync-job.png" alt="" width="375"><figcaption></figcaption></figure>
 {% endtab %}
 
 {% tab title="Upload recent inventory change" %}
-<figure><img src="../../.gitbook/assets/inventory-sync-1-1.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/upload-recent-inventory-changes-job.png" alt="" width="375"><figcaption></figcaption></figure>
 {% endtab %}
 {% endtabs %}
 

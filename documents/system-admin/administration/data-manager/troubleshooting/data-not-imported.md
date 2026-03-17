@@ -72,4 +72,4 @@ Empty records in an imported file indicate that the expected data from the exter
   * Refer to [user manuals](data-import-errors.md) for correct file paths and SFTP settings.
   * Verify the existence of records in the SFTP directory.
 
-<figure><img src="../../../.gitbook/assets/data-not-imported-1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/process-bulk-imported-files-job.png" alt=""><figcaption></figcaption></figure>

@@ -11,7 +11,7 @@ Below is a list of all the actions available in the BOPIS App, along with the sp
 | 1          | Product View   | -          | Allows users to view all existing products in the catalog.                             |
 | 2          | Product Detail | -          | Enables users to check inventory levels across different stores for specific products. |
 
-<figure><img src="../../.gitbook/assets/catalog-1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/bopis-catalog-permissions.png" alt=""><figcaption></figcaption></figure>
 
 ### Orders Page
 
@@ -40,7 +40,7 @@ Below is a list of all the actions available in the BOPIS App, along with the sp
 | ---------- | --------------------- | ---------- | ------------------------------------------ |
 | 1          | View Completed Orders | -          | Allows users to view all completed orders. |
 
-<figure><img src="../../.gitbook/assets/completed-1-1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/bopis-completed-orders-permissions.png" alt=""><figcaption></figcaption></figure>
 
 #### Ship to Store
 
@@ -55,7 +55,7 @@ Below is a list of all the actions available in the BOPIS App, along with the sp
 | 1          | Order Detail Page | -             | Allows store associates to view the details of an order.                                                 |
 | 2          | Order Rejection   | COMMON\_ADMIN | Enables users to reject an order completely or partially, based on available inventory or other factors. |
 
-<figure><img src="../../.gitbook/assets/order-details-1-1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/bopis-order-details-permissions.png" alt=""><figcaption></figcaption></figure>
 
 ### Settings Page
 
@@ -71,5 +71,5 @@ Below is a list of all the actions available in the BOPIS App, along with the sp
 | 8  | View BOPIS App               | BOPIS_APP_VIEW          | Allows users to view the entire BOPIS App.                                 |
 | 9  | Manage BOPIS Operations      | STOREFULFILLMENT_ADMIN  | Allows users to manage all BOPIS operations in the store.                   |
 
-<figure><img src="../../.gitbook/assets/settings-1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/app-settings-permissions.png" alt=""><figcaption></figcaption></figure>
 
