@@ -8,8 +8,8 @@ Only users with Admin permissions can log in to the `Facilities app`. Users in t
 
 1. Select the `Facilities` option on the homepage to view all the existing facilities.
 2. To create a new facility users need to click on the `+` button at the bottom right corner and then select the type of facility, whether the facility is a Warehouse or Store.
-3. This will open a `create facility page` where users can add the name of the facility and add internal IDs and external IDs of the facility. Finally, click on the `Create Facility` button.
-4. On the next page, the user will get the option to add the facility address along with the exact geolocation of the facility. This geolocation helps in two ways:
+3. This will open a `create facility page` where users can add the name of the facility and set the **Time Zone**. They can also add internal IDs and external IDs of the facility. Finally, click on the `Create Facility` button.
+4. On the next page, the user will get the option to add the facility address, including the **Map Link** and **Directions**, along with the exact geolocation of the facility. This documentation helps in two ways:
 
 * **Efficient Brokering:** At the time of order brokering, the brokering engine finds the nearest store from the customer’s location for fast delivery and lower shipping costs.
 * **BOPIS Convenience:** Retailers can empower their customers to choose a pickup location or store by identifying the nearest store with the required product for their order. On Shopify PDP, customers choosing the "pickup today" option enter their current zip code to view a list of stores ranked from nearest to farthest.

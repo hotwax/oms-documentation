@@ -3,7 +3,7 @@
 To ensure accurate facility management and fulfillment, it is crucial for the admin user to add address and latitude & longitude information. This foundational data not only facilitates seamless integration with external systems but also plays a vital role in optimizing logistical processes within HotWax Commerce. If the user has skipped adding this information initially, it can be added by following these steps:
 
 1. On the `Find Facilities` page, find the facility you want to add an address to and tap on it. This will open the `Facility details` page.
-2. Click on the `Add` button in the Address card which will open a pop-up menu. Users can add Address Line, City, Country, State and Zip codes for the facility here.
+2. Click on the `Add` button in the Address card which will open a pop-up menu. Users can add Address Line, City, Country, State, Zip code, **Map Link**, and **Directions** for the facility here. The **Map Link** field can be used to link the facility directly to a mapping service like Google Maps, while the **Directions** field allows for adding landmark-based location information.
 3. After filling in the required details, click on the `Save` icon to save the facility address.
 4. Users have the option to edit the address by clicking the `Edit` button below the address. Remember to save the edits using the `save` icon to update the address.
 

@@ -34,6 +34,10 @@ You can rename facilities by clicking on the `Edit` button near the facility's n
 Video: Rename Facilities
 {% endembed %}
 
+### Update Facility Time Zone
+
+You can update the time zone for a specific facility from the facility details page. This ensures that all time-sensitive operations, such as order fulfillment and reporting, are accurate for that location.
+
 ### Change Facility Type
 
 You can change the facility type of a facility from the facility details page.
