@@ -14,7 +14,7 @@ At the bottom of the card, three action buttons are available:
 - **Printer Icon:** To print the picklist.
 
 ### Print Picklist
-To print the picklist, store associates can click the `printer` icon. The picklist opens in a new tab as a PDF and displays details such as the order number, product information, and picking quantity.
+To print the picklist, store associates can click the `printer` icon, if settings are not turned off, first picker needs to be selected then picklist is generated The picklist opens in a new tab as a PDF and displays details such as the order number, product information, and picking quantity.
 
 ### Kit Product Identification
 Orders that include a kit product show a `Kit` tag on the order card across the `Open`, `Packed`, and `Completed` pages.
