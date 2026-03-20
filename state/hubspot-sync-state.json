@@ -8,12 +8,12 @@
           "slug": "release-notes/2026-01",
           "contentHash": "manual-test-hash-rn-jan",
           "status": "published",
-          "hubspotPostId": "326230966998",
-          "hubspotUrl": "https://www.hotwax.co/blog/release-notes/2026-01",
-          "lastAttemptAt": "2026-03-20T04:22:22.427Z",
-          "publishedAt": "2026-03-20T04:22:22.428Z",
+          "hubspotPostId": "326217160424",
+          "hubspotUrl": "https://www.hotwax.co/product-updates/release-notes/2026-01",
+          "lastAttemptAt": "2026-03-20T04:34:21.630Z",
+          "publishedAt": "2026-03-20T04:34:21.630Z",
           "error": null,
-          "sourceCommit": "77178429c90c6d7fd687adfde180577e70293c43"
+          "sourceCommit": "5f9a9a9b1629fe4e9e5aa33b3aafcb163c5ae72d"
         },
         "product-update:2026-01:recovering-bopis-sales-with-ship-to-store-fulfillment": {
           "filePath": "drafts/2026-01/product-updates/ship_to_store_md.md",
@@ -21,12 +21,29 @@
           "slug": "product-updates/2026-01/recovering-bopis-sales-with-ship-to-store-fulfillment",
           "contentHash": "manual-test-hash-pu-jan",
           "status": "published",
-          "hubspotPostId": "326217164484",
-          "hubspotUrl": "https://www.hotwax.co/blog/product-updates/2026-01/recovering-bopis-sales-with-ship-to-store-fulfillment",
-          "lastAttemptAt": "2026-03-20T04:22:32.391Z",
-          "publishedAt": "2026-03-20T04:22:32.391Z",
+          "hubspotPostId": "326217160421",
+          "hubspotUrl": "https://www.hotwax.co/product-updates/2026-01/recovering-bopis-sales-with-ship-to-store-fulfillment",
+          "lastAttemptAt": "2026-03-20T04:34:24.950Z",
+          "publishedAt": "2026-03-20T04:34:24.950Z",
           "error": null,
-          "sourceCommit": "77178429c90c6d7fd687adfde180577e70293c43"
+          "sourceCommit": "5f9a9a9b1629fe4e9e5aa33b3aafcb163c5ae72d"
+        }
+      }
+    },
+    "2026-02": {
+      "items": {
+        "release-notes:2026-02": {
+          "filePath": "drafts/2026-02/release-notes.md",
+          "contentType": "release-note",
+          "slug": "product-updates/release-notes/2026-02",
+          "contentHash": "280175db37c0ba92f56bbc570e80005d75833b6ddb0e651d2c7362b51e0b02e7",
+          "status": "published",
+          "hubspotPostId": "326217160428",
+          "hubspotUrl": "https://www.hotwax.co/product-updates/release-notes/2026-02",
+          "lastAttemptAt": "2026-03-20T04:54:18.254Z",
+          "publishedAt": "2026-03-20T04:54:18.254Z",
+          "error": null,
+          "sourceCommit": "5f9a9a9b1629fe4e9e5aa33b3aafcb163c5ae72d"
         }
       }
     }

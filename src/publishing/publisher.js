@@ -46,12 +46,15 @@ export async function publishManifestItem(manifestItem, stateItem, state, month)
         existingPost = await findPostBySlug(CONFIG.PUBLISHING.hubspot.blogId, manifestItem.slug).catch(() => null);
     }
 
+    const [year, monthNum] = month.split("-").map(Number);
+    const publishDate = new Date(Date.UTC(year, monthNum - 1, 1)).getTime();
+
     let post;
     if (!existingPost) {
-        post = await createDraftPost(manifestItem, html, tagIds);
-        post = await publishDraftPost(post.id, manifestItem, html, tagIds);
+        post = await createDraftPost(manifestItem, html, tagIds, publishDate);
+        post = await publishDraftPost(post.id, manifestItem, html, tagIds, publishDate);
     } else {
-        post = await updateDraftPost(existingPost.id, manifestItem, html, tagIds);
+        post = await updateDraftPost(existingPost.id, manifestItem, html, tagIds, publishDate);
         if (
             existingPost.currentState === "PUBLISHED" ||
             existingPost.publishStatus === "PUBLISHED" ||
@@ -60,7 +63,7 @@ export async function publishManifestItem(manifestItem, stateItem, state, month)
             await pushDraftLive(existingPost.id);
             post = await getPostById(existingPost.id);
         } else {
-            post = await publishDraftPost(existingPost.id, manifestItem, html, tagIds);
+            post = await publishDraftPost(existingPost.id, manifestItem, html, tagIds, publishDate);
         }
     }
 
