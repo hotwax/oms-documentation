@@ -2,14 +2,22 @@ import { Octokit } from "@octokit/rest";
 import { CONFIG } from "../config/index.js";
 import { isInTargetMonth } from "../utils/index.js";
 
-const octokit = new Octokit({ auth: CONFIG.GITHUB_TOKEN });
+function getOctokit() {
+    if (!CONFIG.GITHUB_TOKEN) {
+        throw new Error("Missing required environment variable: GITHUB_TOKEN");
+    }
+
+    return new Octokit({ auth: CONFIG.GITHUB_TOKEN });
+}
 
 export async function fetchMonthlyReleases(owner, repo, targetMonth) {
+    const octokit = getOctokit();
     const { data } = await octokit.repos.listReleases({ owner, repo, per_page: 100 });
     return data.filter(release => isInTargetMonth(release.published_at, targetMonth));
 }
 
 export async function fetchContext(owner, repo, refNumber) {
+    const octokit = getOctokit();
     try {
         const { data: pr } = await octokit.pulls.get({ owner, repo, pull_number: refNumber });
         const { data: files } = await octokit.pulls.listFiles({ owner, repo, pull_number: refNumber, per_page: 30 });
@@ -48,6 +56,7 @@ export async function fetchContext(owner, repo, refNumber) {
 }
 
 export async function fetchRepoReadme(owner, repo) {
+    const octokit = getOctokit();
     try {
         const { data: readme } = await octokit.repos.getReadme({ owner, repo });
         return Buffer.from(readme.content, 'base64').toString('utf8').substring(0, 500);
@@ -57,6 +66,7 @@ export async function fetchRepoReadme(owner, repo) {
 }
 
 export async function fetchBotSummary(owner, repo, issueNumber) {
+    const octokit = getOctokit();
     try {
         const { data: comments } = await octokit.issues.listComments({
             owner,

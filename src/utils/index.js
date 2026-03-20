@@ -1,12 +1,29 @@
 export const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
-export function getTargetMonth(configuredMonth) {
+function getDatePartsInTimeZone(date, timeZone = "UTC") {
+    const formatter = new Intl.DateTimeFormat("en-CA", {
+        timeZone,
+        year: "numeric",
+        month: "2-digit"
+    });
+
+    const parts = formatter.formatToParts(date);
+    return {
+        year: Number(parts.find((part) => part.type === "year")?.value),
+        month: Number(parts.find((part) => part.type === "month")?.value)
+    };
+}
+
+export function getTargetMonth(configuredMonth, timeZone = "UTC") {
     if (configuredMonth) return configuredMonth;
 
     const now = new Date();
-    const prevMonth = new Date(now.getFullYear(), now.getMonth() - 1, 1);
-    const year = prevMonth.getFullYear();
-    const month = String(prevMonth.getMonth() + 1).padStart(2, '0');
+    const current = getDatePartsInTimeZone(now, timeZone);
+    const prevMonth = current.month === 1
+        ? { year: current.year - 1, month: 12 }
+        : { year: current.year, month: current.month - 1 };
+    const year = prevMonth.year;
+    const month = String(prevMonth.month).padStart(2, '0');
     return `${year}-${month}`;
 }
 

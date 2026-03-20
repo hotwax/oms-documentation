@@ -1,0 +1,34 @@
+{
+  "months": {
+    "2026-01": {
+      "items": {
+        "release-notes:2026-01": {
+          "filePath": "drafts/2026-01/release-notes.md",
+          "contentType": "release-note",
+          "slug": "release-notes/2026-01",
+          "contentHash": "manual-test-hash-rn-jan",
+          "status": "published",
+          "hubspotPostId": "326230966998",
+          "hubspotUrl": "https://www.hotwax.co/blog/release-notes/2026-01",
+          "lastAttemptAt": "2026-03-20T04:22:22.427Z",
+          "publishedAt": "2026-03-20T04:22:22.428Z",
+          "error": null,
+          "sourceCommit": "77178429c90c6d7fd687adfde180577e70293c43"
+        },
+        "product-update:2026-01:recovering-bopis-sales-with-ship-to-store-fulfillment": {
+          "filePath": "drafts/2026-01/product-updates/ship_to_store_md.md",
+          "contentType": "product-update",
+          "slug": "product-updates/2026-01/recovering-bopis-sales-with-ship-to-store-fulfillment",
+          "contentHash": "manual-test-hash-pu-jan",
+          "status": "published",
+          "hubspotPostId": "326217164484",
+          "hubspotUrl": "https://www.hotwax.co/blog/product-updates/2026-01/recovering-bopis-sales-with-ship-to-store-fulfillment",
+          "lastAttemptAt": "2026-03-20T04:22:32.391Z",
+          "publishedAt": "2026-03-20T04:22:32.391Z",
+          "error": null,
+          "sourceCommit": "77178429c90c6d7fd687adfde180577e70293c43"
+        }
+      }
+    }
+  }
+}

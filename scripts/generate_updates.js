@@ -7,24 +7,36 @@ import { runSynthesizer } from "../src/agents/synthesizer.js";
 import { 
     loadPendingPRFAQs, 
     identifyProductUpdateMatches, 
-    runProductUpdater, 
-    markFAQAsCompleted 
+    runProductUpdater
 } from "../src/agents/product_updater.js";
+import {
+    buildProductUpdateArtifact,
+    buildReleaseNotesArtifact,
+    createPublishManifest,
+    savePublishManifest
+} from "../src/publishing/manifest.js";
+import { loadSyncState, saveSyncState, seedSyncStateForManifest } from "../src/publishing/state.js";
+import { normalizeSlugSegment } from "../src/publishing/metadata.js";
 import { 
     loadRepoContextCache, 
-    appendToRepoContextCache, 
     saveRawContext, 
     saveClusterMatrix,
     getRawContextFilePath,
-    saveAgentPrompt,
     saveReleaseNotes,
     saveProductUpdate
 } from "../src/storage/index.js";
+import { execSync } from "child_process";
 import fs from "fs";
-import path from "path";
 
 (async () => {
-    const targetMonth = getTargetMonth(CONFIG.MONTH);
+    if (!CONFIG.SOURCE_REPOS || !CONFIG.GITHUB_TOKEN) {
+        throw new Error("Missing required environment variables: SOURCE_REPOS and GITHUB_TOKEN");
+    }
+    if (!CONFIG.GEMINI_API_KEY && !CONFIG.DRY_RUN) {
+        throw new Error("Missing required environment variable: GEMINI_API_KEY");
+    }
+
+    const targetMonth = getTargetMonth(CONFIG.MONTH, CONFIG.PUBLISHING.automation.timezone);
     console.log(`📅 Target Month: ${targetMonth}`);
     console.log(`🚀 Starting Stage 0: Discovery & Fetching...`);
 
@@ -182,8 +194,10 @@ import path from "path";
     // --- PHASE 3: CONFORMITY AGENT ---
     console.log(`\n🖋️  Starting Phase 3: Conformity Agent (Synthesis)...`);
     const finalNotes = await runSynthesizer(targetMonth, clusterSummaries);
-
-    saveReleaseNotes(targetMonth, finalNotes);
+    const manifestItems = [];
+    const releaseNotesArtifact = buildReleaseNotesArtifact(targetMonth, finalNotes);
+    saveReleaseNotes(targetMonth, releaseNotesArtifact.document);
+    manifestItems.push(releaseNotesArtifact.manifestItem);
 
     // --- PHASE 4: PRODUCT UPDATE GENERATION ---
     console.log(`\n📽️  Starting Phase 4: Product Update Generation...`);
@@ -207,13 +221,11 @@ import path from "path";
                     const clusterItems = cluster.itemIds.map(id => rawDataMap.get(id)).filter(Boolean);
                     
                     const productUpdate = await runProductUpdater(targetMonth, cluster, clusterItems, faq);
-                    const safeTitle = faq.title.replace(/[^a-z0-9]/gi, '_').toLowerCase();
-                    
-                    saveProductUpdate(targetMonth, safeTitle, productUpdate);
-                }
+                    const artifact = buildProductUpdateArtifact(targetMonth, faq.title, productUpdate, faq.filename);
+                    const safeTitle = normalizeSlugSegment(faq.title).replace(/-/g, "_");
 
-                if (!CONFIG.DRY_RUN) {
-                    markFAQAsCompleted(faq, targetMonth);
+                    saveProductUpdate(targetMonth, safeTitle, artifact.document);
+                    manifestItems.push(artifact.manifestItem);
                 }
             }
         } else {
@@ -222,4 +234,11 @@ import path from "path";
     } else {
         console.log("  No pending PR FAQs found.");
     }
+
+    const manifest = createPublishManifest(targetMonth, manifestItems);
+    savePublishManifest(targetMonth, manifest);
+
+    const sourceCommit = process.env.GITHUB_SHA || execSync("git rev-parse HEAD").toString().trim();
+    const syncState = seedSyncStateForManifest(loadSyncState(), manifest, sourceCommit);
+    saveSyncState(syncState);
 })();
