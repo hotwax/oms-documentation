@@ -1,23 +1,23 @@
 {
   "hubspot": {
-    "blogId": "19778221043",
+    "blogId": "115288658813",
     "authorId": "35553357172",
     "language": "en",
     "releaseNotes": {
       "tagNames": [
-        "Release Notes"
+        "Release Note"
       ],
       "slugPattern": "release-notes/{month}"
     },
     "productUpdates": {
       "tagNames": [
-        "Product Updates"
+        "Product Update"
       ],
       "slugPattern": "product-updates/{month}/{slug}"
     }
   },
   "automation": {
-    "prBranchPrefix": "automation/monthly-content",
+    "prBranchPrefix": "product-updates/monthly",
     "timezone": "UTC"
   }
 }
