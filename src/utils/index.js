@@ -67,3 +67,43 @@ export function extractLinkedIssueNumbers(text) {
     const matches = text.matchAll(regex);
     return [...new Set([...matches].map(m => m[1]))];
 }
+
+export function isDefaultBody(body) {
+    if (!body) return true;
+
+    // 1. Strip HTML comments
+    let normalized = body.replace(/<!--[\s\S]*?-->/g, '');
+
+    // 2. Strip common PR/Issue template headers and boilerplate
+    const boilerplate = [
+        /### Related Issues/gi,
+        /### Short Description and Why It's Useful/gi,
+        /### Screenshots of Visual Changes before\/after \(If There Are Any\)/gi,
+        /### Contribution and Currently Important Rules Acceptance/gi,
+        /### Motivation/gi,
+        /### Description/gi,
+        /### Testing/gi,
+        /### Changes:/gi,
+        /Please get familiar with following info/gi,
+        /Describe in a few words what is this Pull Request changing and why it's useful/gi,
+        /If you made any changes in the UI layer, please provide before\/after screenshots/gi,
+        /Put related issue number which this PR is closing\. For example #123/gi,
+        /- \[ \] I read and followed \[contribution rules\]\(https:\/\/github\.com\/hotwax\/\w+#contribution-guideline\)/gi,
+        /- \[x\] I read and followed \[contribution rules\]\(https:\/\/github\.com\/hotwax\/\w+#contribution-guideline\)/gi,
+        /- \[ \] I read and followed contribution rules/gi,
+        /- \[x\] I read and followed contribution rules/gi,
+        /\| Before \| After \|/gi,
+        /\| :--- \| :--- \|/gi,
+        /------/g,
+        /\[Codex Task\]\(https:\/\/chatgpt\.com\/codex\/tasks\/task_\w+\)/gi
+    ];
+
+    boilerplate.forEach(re => {
+        normalized = normalized.replace(re, '');
+    });
+
+    // 3. Final cleanup: remove residual characters like #, \r, \n, and whitespace
+    normalized = normalized.replace(/[#\r\n\s|:-]+/g, '').trim();
+
+    return normalized.length === 0;
+}

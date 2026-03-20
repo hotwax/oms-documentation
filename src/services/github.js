@@ -1,6 +1,6 @@
 import { Octokit } from "@octokit/rest";
 import { CONFIG } from "../config/index.js";
-import { isInTargetMonth } from "../utils/index.js";
+import { isInTargetMonth, isDefaultBody } from "../utils/index.js";
 
 function getOctokit() {
     if (!CONFIG.GITHUB_TOKEN) {
@@ -24,7 +24,7 @@ export async function fetchContext(owner, repo, refNumber) {
         
         let body = pr.body || "";
         
-        if (!body.trim()) {
+        if (!body.trim() || isDefaultBody(body)) {
             const botSummary = await fetchBotSummary(owner, repo, refNumber);
             if (botSummary) body = `(Bot-generated summary)\n${botSummary}`;
         }

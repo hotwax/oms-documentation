@@ -29,6 +29,23 @@
           "sourceCommit": "77178429c90c6d7fd687adfde180577e70293c43"
         }
       }
+    },
+    "2026-02": {
+      "items": {
+        "release-notes:2026-02": {
+          "filePath": "drafts/2026-02/release-notes.md",
+          "contentType": "release-note",
+          "slug": "release-notes/2026-02",
+          "contentHash": "3eaba67f65899a40323a533e494a042da299d7f02828ae03dc0fe017e67f7ec3",
+          "status": "pending",
+          "hubspotPostId": null,
+          "hubspotUrl": null,
+          "lastAttemptAt": null,
+          "publishedAt": null,
+          "error": null,
+          "sourceCommit": "8d3556ab8c10868b3faca7c98bc1b212d1f33c7f"
+        }
+      }
     }
   }
 }

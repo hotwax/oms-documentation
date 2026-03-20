@@ -1,85 +1,95 @@
 ---
 title: February 2026 Release Notes
-slug: product-updates/release-notes/2026-02
+slug: release-notes/2026-02
 contentType: release-note
 month: 2026-02
-metaDescription: In February, we updated our Shopify integration to improve the way we handle order data and inventory updates. We also refined store-level workflows to make or…
+metaDescription: February 2026 brings deeper integration between HotWax Commerce and Shopify, allowing your team to work within the Shopify environment. We also updated store f…
 tagNames: [Release Notes]
 key: release-notes:2026-02
 ---
 
 # February 2026 Release Notes
 
-In February, we updated our Shopify integration to improve the way we handle order data and inventory updates. We also refined store-level workflows to make order lookups and fulfillment tasks faster for your team.
+February 2026 brings deeper integration between HotWax Commerce and Shopify, allowing your team to work within the Shopify environment. We also updated store fulfillment workflows and inventory visibility to help you manage orders and stock levels more accurately.
 
 ## Shopify Integration
-### Shopify authentication
-HotWax Commerce now supports unified integration with Shopify App Bridge. This allows you to use your point of sale camera for barcode scanning across mobile platforms. If a session expires, the system automatically prompts a re-login to maintain access within the embedded environment.
-*Sources: [receiving#652](https://github.com/hotwax/receiving/pull/652), [receiving#548](https://github.com/hotwax/receiving/pull/548), [receiving#578](https://github.com/hotwax/receiving/pull/578), [receiving#549](https://github.com/hotwax/receiving/pull/549), [bopis#758](https://github.com/hotwax/bopis/pull/758), [bopis#747](https://github.com/hotwax/bopis/pull/747), [fulfillment#1582](https://github.com/hotwax/fulfillment/pull/1582), [fulfillment#1351](https://github.com/hotwax/fulfillment/pull/1351), [fulfillment#1556](https://github.com/hotwax/fulfillment/pull/1556), [fulfillment#1352](https://github.com/hotwax/fulfillment/pull/1352), [inventory-count#1341](https://github.com/hotwax/inventory-count/pull/1341), [inventory-count#1308](https://github.com/hotwax/inventory-count/pull/1308)*
+
+### Embedded applications
+HotWax Commerce applications, including Receiving, BOPIS, Fulfillment, and Inventory Count, now run directly within Shopify Admin and Shopify POS. This integration uses the Shopify App Bridge for authentication, so you can access HotWax functionality without leaving the Shopify environment. This provides a more consistent experience for store associates and managers who primarily use Shopify.
+*Sources: [receiving#652](https://github.com/hotwax/receiving/pull/652), [receiving#548](https://github.com/hotwax/receiving/pull/548), [receiving#578](https://github.com/hotwax/receiving/pull/578), [receiving#549](https://github.com/hotwax/receiving/pull/549), [bopis#747](https://github.com/hotwax/bopis/pull/747), [bopis#758](https://github.com/hotwax/bopis/pull/758), [fulfillment#1582](https://github.com/hotwax/fulfillment/pull/1582), [fulfillment#1351](https://github.com/hotwax/fulfillment/pull/1351), [fulfillment#1556](https://github.com/hotwax/fulfillment/pull/1556), [fulfillment#1352](https://github.com/hotwax/fulfillment/pull/1352), [inventory-count#1341](https://github.com/hotwax/inventory-count/pull/1341), [inventory-count#1308](https://github.com/hotwax/inventory-count/pull/1308)*
 
 ### Order synchronization
-We updated the Shopify order ingestion process to make data updates more reliable. The system now uses a change-detection system to update existing orders without creating duplicates. This helps capture complex data points like refunds, returns, and exchanges more accurately.
-*Sources: [mantle-shopify-connector#256](https://github.com/hotwax/mantle-shopify-connector/pull/256), [mantle-shopify-connector#260](https://github.com/hotwax/mantle-shopify-connector/pull/260), [mantle-shopify-connector#257](https://github.com/hotwax/mantle-shopify-connector/pull/257), [mantle-shopify-connector#268](https://github.com/hotwax/mantle-shopify-connector/pull/268), [hotwax-shopify-oms-bridge#65](https://github.com/hotwax/hotwax-shopify-oms-bridge/pull/65), [hotwax-shopify-oms-bridge#62](https://github.com/hotwax/hotwax-shopify-oms-bridge/pull/62), [hotwax-shopify-oms-bridge#55](https://github.com/hotwax/hotwax-shopify-oms-bridge/pull/55), [oms#400](https://github.com/hotwax/oms/pull/400)*
+We migrated the Shopify order import process to improve reliability and speed. The system now uses a new architecture that captures complete order details, including refunds, returns, and exchanges, in a single query. These updates ensure that billing information and facility assignments are accurate from the moment an order arrives in the Order Management System (OMS).
+*Sources: [mantle-shopify-connector#260](https://github.com/hotwax/mantle-shopify-connector/pull/260), [hotwax-shopify-oms-bridge#62](https://github.com/hotwax/hotwax-shopify-oms-bridge/pull/62), [hotwax-shopify-oms-bridge#55](https://github.com/hotwax/hotwax-shopify-oms-bridge/pull/55), [oms#400](https://github.com/hotwax/oms/pull/400), [hotwax-shopify-oms-bridge#65](https://github.com/hotwax/hotwax-shopify-oms-bridge/pull/65), [hotwax-shopify-oms-bridge#66](https://github.com/hotwax/hotwax-shopify-oms-bridge/pull/66), [hotwax-shopify-oms-bridge#68](https://github.com/hotwax/hotwax-shopify-oms-bridge/pull/68), [hotwax-shopify-oms-bridge#67](https://github.com/hotwax/hotwax-shopify-oms-bridge/pull/67), [hotwax-oms#370](https://github.com/hotwax/hotwax-oms/pull/370)*
 
-### Refunds
-The Order Management System (OMS) now processes all Shopify refund types directly, including returns and cancellations. The system maps these items and adjustments to record transactions and can automatically initiate related actions like creating exchange orders.
-*Sources: [hotwax-shopify-oms-bridge#54](https://github.com/hotwax/hotwax-shopify-oms-bridge/pull/54), [hotwax-shopify-oms-bridge#63](https://github.com/hotwax/hotwax-shopify-oms-bridge/pull/63)*
+### Refund management
+HotWax now processes Shopify refunds, including returns, cancellations, and exchanges, directly. A new service identifies the specific refund type and maps the data to the correct transaction in the OMS. We also updated how the system receives inventory from returns to help you track stock and costs more effectively.
+*Sources: [hotwax-shopify-oms-bridge#54](https://github.com/hotwax/hotwax-shopify-oms-bridge/pull/54), [hotwax-shopify-oms-bridge#63](https://github.com/hotwax/hotwax-shopify-oms-bridge/pull/63), [hotwax-shopify-oms-bridge#64](https://github.com/hotwax/hotwax-shopify-oms-bridge/pull/64), [mantle-shopify-connector#268](https://github.com/hotwax/mantle-shopify-connector/pull/268), [hotwax-poorti#223](https://github.com/hotwax/hotwax-poorti/pull/223)*
 
-### Inventory synchronization
-When you delete products in Shopify, HotWax Commerce now automatically removes them from the system and search index. This process expires both parent products and their variants to keep your catalog clean and search results accurate for customers.
-*Sources: [mantle-shopify-connector#267](https://github.com/hotwax/mantle-shopify-connector/pull/267), [oms#416](https://github.com/hotwax/oms/pull/416), [hotwax-oms#420](https://github.com/hotwax/hotwax-oms/pull/420)*
-
-## Store Operations
-### Shipment routing
-We updated Ship-to-Store logistics to provide more accurate address details for destination stores. Order completion emails now send only after every item in an order is ready for pickup. We also fixed an issue where converting a BOPIS (Buy Online Pick Up In Store) order to Ship-to-Store did not always update the shipping information correctly.
-*Sources: [bopis#745](https://github.com/hotwax/bopis/pull/745), [bopis#739](https://github.com/hotwax/bopis/pull/739), [bopis#740](https://github.com/hotwax/bopis/pull/740), [fulfillment#1573](https://github.com/hotwax/fulfillment/pull/1573), [oms#395](https://github.com/hotwax/oms/pull/395), [oms#406](https://github.com/hotwax/oms/pull/406), [hotwax-oms#389](https://github.com/hotwax/hotwax-oms/pull/389)*
-
-### Delivery confirmation
-The system now automatically fills in recipient phone and email details during delivery confirmation. By pulling this data from existing contact records, the system reduces the need for manual entry and helps keep communication details accurate.
-*Sources: [bopis#738](https://github.com/hotwax/bopis/pull/738), [bopis#736](https://github.com/hotwax/bopis/pull/736), [hotwax-poorti#218](https://github.com/hotwax/hotwax-poorti/pull/218)*
-
-### Order filtering
-Order Lookup results now focus on the facility you are currently assigned to. This makes store-level work easier by showing only the orders relevant to your location.
-*Sources: [fulfillment#1578](https://github.com/hotwax/fulfillment/pull/1578)*
-
-### Order rejection
-The `Reject Order` button now stays visible if an attempt to reject an order fails. This allows you to try again immediately without needing to refresh the page.
-*Sources: [fulfillment#1567](https://github.com/hotwax/fulfillment/pull/1567), [fulfillment#1536](https://github.com/hotwax/fulfillment/pull/1536)*
-
-### Return reports
-When receiving returned inventory, the system now links return IDs directly to the products. This update also adds exportable CSV reports for sales returns to help you track returned stock more effectively.
-*Sources: [hotwax-poorti#223](https://github.com/hotwax/hotwax-poorti/pull/223), [hotwax-oms#402](https://github.com/hotwax/hotwax-oms/pull/402)*
-
-## Inventory & Settings
-### Inventory availability
-You can now see Available-to-Promise (ATP) details for products even if some of your locations show negative inventory. Previously, negative stock at one location could hide availability data across others. This change gives you full visibility into your stock regardless of recent store activity.
-*Sources: [hotwax-oms#411](https://github.com/hotwax/hotwax-oms/pull/411)*
-
-### Store settings
-We added an autocomplete search feature for configuring product store settings to make selections faster. You can also associate specific contact methods with individual stores and view relevant facility groups within the Fulfillment app.
-*Sources: [hotwax-oms#406](https://github.com/hotwax/hotwax-oms/pull/406), [hotwax-oms#419](https://github.com/hotwax/hotwax-oms/pull/419), [hotwax-oms#357](https://github.com/hotwax/hotwax-oms/pull/357)*
-
-## System & Core Updates
-### Security permissions
-We introduced a new `REFRESH_ORDER` permission. This allows administrators to choose which users can manually refresh order data on the Sales Order screen.
-*Sources: [hotwax-oms#395](https://github.com/hotwax/hotwax-oms/pull/395)*
+### Product integration
+When you delete a product in Shopify, the system now automatically removes that product and its variants from HotWax and the search index. We also updated product sorting on the `Find Product` and `Find Inventory` pages to prioritize position, making it easier to organize your catalog.
+*Sources: [mantle-shopify-connector#267](https://github.com/hotwax/mantle-shopify-connector/pull/267), [oms#416](https://github.com/hotwax/oms/pull/416), [hotwax-oms#420](https://github.com/hotwax/hotwax-oms/pull/420), [hotwax-oms#378](https://github.com/hotwax/hotwax-oms/pull/378), [hotwax-oms#415](https://github.com/hotwax/hotwax-oms/pull/415), [mantle-shopify-connector#262](https://github.com/hotwax/mantle-shopify-connector/pull/262), [hotwax-oms#399](https://github.com/hotwax/hotwax-oms/pull/399), [hotwax-oms#398](https://github.com/hotwax/hotwax-oms/pull/398)*
 
 ### Fulfillment tracking
-The system now records when fulfillment happens in Shopify. This allows HotWax OMS to identify shipments created in external systems and helps prevent duplicate processing.
+HotWax now creates a history record as soon as a fulfillment completes in Shopify. This prevents the system from trying to process the same fulfillment twice and keeps your order data synchronized.
 *Sources: [mantle-shopify-connector#265](https://github.com/hotwax/mantle-shopify-connector/pull/265)*
 
-### Log management
-We added APIs that allow for the automated inspection of integration logs. This helps technical teams identify the cause of data issues and resolve them more quickly.
-*Sources: [hotwax-oms#383](https://github.com/hotwax/hotwax-oms/pull/383)*
+## Fulfillment & Store Operations
 
-### Message queuing
-HotWax Commerce now integrates with AWS SQS for message handling. This allows for more reliable background processing of data between your applications.
-*Sources: [hotwax-maarg-util#23](https://github.com/hotwax/hotwax-maarg-util/pull/23)*
+### Ship to store fulfillment
+We updated the Ship to Store experience to display the correct destination store address and contact information for every order. Order completion emails are now sent only when every item in the order is ready for pickup, ensuring customers don't arrive at the store early.
+*Sources: [bopis#745](https://github.com/hotwax/bopis/pull/745), [bopis#739](https://github.com/hotwax/bopis/pull/739), [bopis#740](https://github.com/hotwax/bopis/pull/740), [oms#395](https://github.com/hotwax/oms/pull/395), [fulfillment#1573](https://github.com/hotwax/fulfillment/pull/1573), [hotwax-oms#389](https://github.com/hotwax/hotwax-oms/pull/389)*
+
+### Proof of delivery
+The proof of delivery process now requires validated contact information, such as phone numbers and email addresses, for billing and receipts. This change makes it easier to reconcile orders and maintain accurate fulfillment records.
+*Sources: [bopis#738](https://github.com/hotwax/bopis/pull/738), [bopis#736](https://github.com/hotwax/bopis/pull/736), [hotwax-poorti#218](https://github.com/hotwax/hotwax-poorti/pull/218)*
+
+### Facility order lookup
+The `Order Lookup` screen now defaults to showing only the orders assigned to your current facility. We also updated the Store Admin page in the Fulfillment app to show only the facility groups linked to your specific product store, reducing clutter for store managers.
+*Sources: [fulfillment#1578](https://github.com/hotwax/fulfillment/pull/1578), [hotwax-oms#419](https://github.com/hotwax/hotwax-oms/pull/419)*
+
+### Store pickup management
+BOPIS (Buy Online Pick Up In Store) order visibility now includes all items, regardless of the order size. We also added automatic email notifications for stores when a BOPIS order is cancelled, so staff are immediately aware of changes.
+*Sources: [oms#406](https://github.com/hotwax/oms/pull/406), [oms#385](https://github.com/hotwax/oms/pull/385)*
+
+### Order rejection workflow
+The `Reject Order` button no longer disappears if an attempt fails. This allows you to immediately try again or correct the rejection reason without having to refresh the page.
+*Sources: [fulfillment#1536](https://github.com/hotwax/fulfillment/pull/1536), [fulfillment#1567](https://github.com/hotwax/fulfillment/pull/1567)*
+
+### User interface layout
+Search bars within modal windows are now static toolbars. This change makes the mobile experience more consistent across the Receiving, Fulfillment, and Inventory Count applications.
+*Sources: [receiving#647](https://github.com/hotwax/receiving/pull/647), [fulfillment#1564](https://github.com/hotwax/fulfillment/pull/1564), [inventory-count#1374](https://github.com/hotwax/inventory-count/pull/1374)*
+
+## Inventory Management
+
+### Inventory variance
+The Inventory Count app now displays item availability alongside variance quantities. You can control who sees this data using specific permissions for admin and log roles, providing better insight into inventory discrepancies while keeping data secure.
+*Sources: [inventory-count#1378](https://github.com/hotwax/inventory-count/pull/1378), [inventory-count#1379](https://github.com/hotwax/inventory-count/pull/1379), [inventory-count#1380](https://github.com/hotwax/inventory-count/pull/1380), [inventory-count#1383](https://github.com/hotwax/inventory-count/pull/1383)*
+
+### Inventory availability
+You can now view Available-to-Promise (ATP) details for products even if some locations have negative inventory. Previously, negative inventory at one store could block the visibility of availability at other locations. This update ensures you have a full view of your stock across the entire network.
+*Sources: [hotwax-oms#411](https://github.com/hotwax/hotwax-oms/pull/411)*
+
+## OMS Administration
+
+### Order management administration
+You can now limit who can use the order refresh function through new permission settings. We also added support for store-specific contact information and autocomplete functionality in the Product Store Settings to make searches faster.
+*Sources: [hotwax-oms#395](https://github.com/hotwax/hotwax-oms/pull/395), [hotwax-oms#406](https://github.com/hotwax/hotwax-oms/pull/406), [hotwax-oms#357](https://github.com/hotwax/hotwax-oms/pull/357)*
+
+### Data integration tools
+Data Manager now includes APIs that allow AI tools to review integration logs and identify data issues. You can also export sales return reports as a CSV file, organized by your master data management settings, to better track return shipments.
+*Sources: [hotwax-oms#383](https://github.com/hotwax/hotwax-oms/pull/383), [hotwax-oms#402](https://github.com/hotwax/hotwax-oms/pull/402)*
+
+## System & Core Updates
 
 ### NetSuite integration
-We updated the NetSuite integration to cache access tokens. This reduces the number of requests sent to NetSuite and improves performance when syncing transactions.
+We updated how the system handles NetSuite REST API requests by caching access tokens. This change reduces latency and helps the system respond faster when connecting to NetSuite during busy periods.
 *Sources: [mantle-netsuite-connector#199](https://github.com/hotwax/mantle-netsuite-connector/pull/199)*
 
-### Product indexing
-We resolved a caching issue that prevented some new product variants from appearing in search results. All new product options are now searchable immediately after they are created.
-*Sources: [hotwax-oms#378](https://github.com/hotwax/hotwax-oms/pull/378)*
+### Amazon SQS integration
+HotWax now includes a standard toolset for managing messages through Amazon SQS. These tools help the system receive and manage background tasks using standard AWS configuration.
+*Sources: [hotwax-maarg-util#23](https://github.com/hotwax/hotwax-maarg-util/pull/23)*
+
+### GraphQL domain specific language
+We introduced a new way for developers to build GraphQL queries and mutations. This helps manage complex queries for integrations like Shopify by automating patterns such as pagination and variable management.
+*Sources: [mantle-shopify-connector#256](https://github.com/hotwax/mantle-shopify-connector/pull/256), [mantle-shopify-connector#257](https://github.com/hotwax/mantle-shopify-connector/pull/257)*
