@@ -112,7 +112,7 @@ export async function ensureTag(name, language = "en") {
     });
 }
 
-function buildPostPayload(item, html, tagIds) {
+function buildPostPayload(item, html, tagIds, publishDate) {
     return {
         name: item.title,
         contentGroupId: CONFIG.PUBLISHING.hubspot.blogId,
@@ -124,29 +124,30 @@ function buildPostPayload(item, html, tagIds) {
         postSummary: item.metaDescription,
         htmlTitle: item.title,
         tagIds,
+        publishDate: publishDate || undefined,
         language: CONFIG.PUBLISHING.hubspot.language
     };
 }
 
-export async function createDraftPost(item, html, tagIds) {
+export async function createDraftPost(item, html, tagIds, publishDate) {
     return hubspotRequest("/cms/v3/blogs/posts", {
         method: "POST",
-        body: buildPostPayload(item, html, tagIds)
+        body: buildPostPayload(item, html, tagIds, publishDate)
     });
 }
 
-export async function updateDraftPost(postId, item, html, tagIds) {
+export async function updateDraftPost(postId, item, html, tagIds, publishDate) {
     return hubspotRequest(`/cms/v3/blogs/posts/${postId}/draft`, {
         method: "PATCH",
-        body: buildPostPayload(item, html, tagIds)
+        body: buildPostPayload(item, html, tagIds, publishDate)
     });
 }
 
-export async function publishDraftPost(postId, item, html, tagIds) {
+export async function publishDraftPost(postId, item, html, tagIds, publishDate) {
     return hubspotRequest(`/cms/v3/blogs/posts/${postId}`, {
         method: "PATCH",
         body: {
-            ...buildPostPayload(item, html, tagIds),
+            ...buildPostPayload(item, html, tagIds, publishDate),
             state: "PUBLISHED"
         }
     });
