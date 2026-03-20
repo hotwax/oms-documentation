@@ -85,3 +85,5 @@ jobs:
           labels: |
             automation
             monthly-content
+          draft: true
+          assignees: dt2patel

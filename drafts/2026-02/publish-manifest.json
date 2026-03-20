@@ -1,0 +1,18 @@
+{
+  "month": "2026-02",
+  "generatedAt": "2026-03-20T05:35:31.687Z",
+  "items": [
+    {
+      "key": "release-notes:2026-02",
+      "contentType": "release-note",
+      "title": "February 2026 Release Notes",
+      "slug": "release-notes/2026-02",
+      "filePath": "drafts/2026-02/release-notes.md",
+      "metaDescription": "February 2026 brings deeper integration between HotWax Commerce and Shopify, allowing your team to work within the Shopify environment. We also updated store f…",
+      "tagNames": [
+        "Release Notes"
+      ],
+      "contentHash": "3eaba67f65899a40323a533e494a042da299d7f02828ae03dc0fe017e67f7ec3"
+    }
+  ]
+}
