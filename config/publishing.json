@@ -5,7 +5,7 @@
     "language": "en",
     "releaseNotes": {
       "tagNames": [
-        "Release Notes"
+        "Release Note"
       ],
       "slugPattern": "product-updates/release-notes/{month}"
     },
@@ -17,7 +17,7 @@
     }
   },
   "automation": {
-    "prBranchPrefix": "automation/monthly-content",
+    "prBranchPrefix": "product-updates/monthly",
     "timezone": "UTC"
   }
 }

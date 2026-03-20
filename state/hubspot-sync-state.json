@@ -54,13 +54,13 @@
           "contentType": "release-note",
           "slug": "release-notes/2026-02",
           "contentHash": "3eaba67f65899a40323a533e494a042da299d7f02828ae03dc0fe017e67f7ec3",
-          "status": "pending",
-          "hubspotPostId": null,
-          "hubspotUrl": null,
-          "lastAttemptAt": null,
-          "publishedAt": null,
+          "status": "published",
+          "hubspotPostId": "326217160435",
+          "hubspotUrl": "https://www.hotwax.co/product-updates/release-notes/2026-02",
+          "lastAttemptAt": "2026-03-20T06:07:11.559Z",
+          "publishedAt": "2026-03-20T06:07:11.563Z",
           "error": null,
-          "sourceCommit": "8d3556ab8c10868b3faca7c98bc1b212d1f33c7f"
+          "sourceCommit": "65d6a1a07f845f406c005315c2ea116bf2e2939e"
         }
       }
     }
