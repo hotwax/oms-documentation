@@ -1,0 +1,18 @@
+{
+  "month": "2026-03",
+  "generatedAt": "2026-03-20T11:38:29.326Z",
+  "items": [
+    {
+      "key": "release-notes:2026-03",
+      "contentType": "release-note",
+      "title": "March 2026 Release Notes",
+      "slug": "product-updates/release-notes/2026-03",
+      "filePath": "drafts/2026-03/release-notes.md",
+      "metaDescription": "March updates focus on providing better visibility for Shopify product listings and giving you more control over order parking queues. We also added the abilit…",
+      "tagNames": [
+        "Release Note"
+      ],
+      "contentHash": "4e2cf8dfa860f7264b0bc52bd1bf04ac37ec03bc070b23fd934cc57c79550c4e"
+    }
+  ]
+}
