@@ -1,0 +1,30 @@
+{
+  "month": "2026-01",
+  "generatedAt": "2026-03-20T04:20:00.000Z",
+  "items": [
+    {
+      "key": "release-notes:2026-01",
+      "contentType": "release-note",
+      "title": "January 2026 Release Notes",
+      "slug": "release-notes/2026-01",
+      "filePath": "drafts/2026-01/release-notes.md",
+      "metaDescription": "January brings updates focused on improving security for store pickups and increasing the accuracy of inventory transfers.",
+      "tagNames": [
+        "Release Notes"
+      ],
+      "contentHash": "manual-test-hash-rn-jan"
+    },
+    {
+      "key": "product-update:2026-01:recovering-bopis-sales-with-ship-to-store-fulfillment",
+      "contentType": "product-update",
+      "title": "Product Update: Recovering BOPIS Sales with Ship to Store Fulfillment",
+      "slug": "product-updates/2026-01/recovering-bopis-sales-with-ship-to-store-fulfillment",
+      "filePath": "drafts/2026-01/product-updates/ship_to_store_md.md",
+      "metaDescription": "Transforming cancellations into transfers with Ship to Store capabilities in the BOPIS App.",
+      "tagNames": [
+        "Product Updates"
+      ],
+      "contentHash": "manual-test-hash-pu-jan"
+    }
+  ]
+}
