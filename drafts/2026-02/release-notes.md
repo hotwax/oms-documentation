@@ -8,8 +8,6 @@ tagNames: [Release Notes]
 key: release-notes:2026-02
 ---
 
-# February 2026 Release Notes
-
 February 2026 brings deeper integration between HotWax Commerce and Shopify, allowing your team to work within the Shopify environment. We also updated store fulfillment workflows and inventory visibility to help you manage orders and stock levels more accurately.
 
 ## Shopify Integration

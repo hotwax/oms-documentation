@@ -1,4 +1,6 @@
-# Product Update: Ship to Store for BOPIS Orders
+---
+title: Product Update: Ship to Store for BOPIS Orders
+---
 
 Retailers often face a difficult choice when a Buy Online, Pick Up In Store (BOPIS) order cannot be fulfilled due to local inventory discrepancies: cancel the order and lose the sale, or manually attempt to recreate the order through a different channel. HotWax Commerce has introduced a Ship to Store fulfillment flow directly within the BOPIS application to address this challenge, allowing store teams to recover potentially lost sales by sourcing inventory from warehouses.
 

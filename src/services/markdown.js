@@ -1,6 +1,6 @@
 import { marked } from "marked";
 import sanitizeHtml from "sanitize-html";
-import { stripFrontmatter } from "../publishing/metadata.js";
+import { stripFrontmatter, stripTitle } from "../publishing/metadata.js";
 
 marked.setOptions({
     gfm: true,
@@ -8,7 +8,7 @@ marked.setOptions({
 });
 
 export function markdownToHtml(markdownContent) {
-    const rawHtml = marked.parse(stripFrontmatter(markdownContent));
+    const rawHtml = marked.parse(stripTitle(stripFrontmatter(markdownContent)));
     return sanitizeHtml(rawHtml, {
         allowedTags: sanitizeHtml.defaults.allowedTags.concat([
             "img",

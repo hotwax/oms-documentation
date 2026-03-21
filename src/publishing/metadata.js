@@ -76,6 +76,10 @@ export function stripFrontmatter(documentContent) {
     return documentContent.replace(FRONTMATTER_REGEX, "").trim();
 }
 
+export function stripTitle(markdownContent) {
+    return markdownContent.replace(/^#\s+.+$/m, "").trim();
+}
+
 export function normalizeMarkdownBody(markdownContent) {
     return stripFrontmatter(markdownContent)
         .replace(/\r\n/g, "\n")

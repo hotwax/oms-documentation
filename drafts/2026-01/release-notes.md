@@ -1,4 +1,6 @@
-# January 2026 Release Notes
+---
+title: January 2026 Release Notes
+---
 
 January brings updates focused on improving security for store pickups and increasing the accuracy of inventory transfers. These changes help store teams work faster while maintaining tighter data synchronization between HotWax Commerce, Shopify, and NetSuite.
 

@@ -1,4 +1,6 @@
-# Product Update: Recovering BOPIS Sales with Ship to Store Fulfillment
+---
+title: Product Update: Recovering BOPIS Sales with Ship to Store Fulfillment
+---
 
 ### The Challenge of Inventory Exceptions
 In standard Buy Online, Pickup In Store (BOPIS) workflows, the success of an order depends entirely on the local inventory of the selected pickup location. When a store associate discovers that an item is missing, damaged, or incorrectly recorded in the system, they are often forced to cancel the order. For the retailer, this results in lost revenue and wasted operational effort. For the customer, it leads to a fragmented experience where they must either find the product elsewhere or wait for a refund and re-order.

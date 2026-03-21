@@ -1,3 +1,6 @@
+---
+title: HotWax Product Updates Style Guide
+---
 
 Generate the final Monthly Release Notes for HotWax Commerce.
 Month: 2026-01
@@ -6,7 +9,7 @@ Author persona: Product Manager
 Reader persona: Enthusiastic Retailer
 
 Style Guide:
-# HotWax Product Updates Style Guide
+
 
 Welcome to HotWax Commerce’s style guide for product updates. This guide helps ensure that our release notes are on-brand, easy to read, and consistent with HotWax’s positioning as an omnichannel OMS for retail.
 
