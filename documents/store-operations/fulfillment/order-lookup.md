@@ -28,17 +28,17 @@ HotWax Commerce enables store managers to filter orders based on specific criter
 
 ### Select Filter Criteria
 
-Use the filter options on the top right of the "Find Orders" page to apply filters. Filtering can be done based on **Brand**, **Type**, **Fulfillment Status**, **Channel**, and **Date**. Store Managers can apply these filters by checking the respective boxes or selecting from the dropdown options.
+Use the filter options on the top right of the "Find Orders" page to apply filters. Filtering can be done based on `Brand`, `Type`, `Fulfillment Status`, `Channel`, and `Date`. Store Managers can apply these filters by checking the respective boxes or selecting from the dropdown options.
  
- **A. Brand** Choose a specific Product Store from the checklist to filter orders by brand. Staff will only be able to view orders for product stores that they are linked to.
+ **A. `Brand`** Choose a specific Product Store from the checklist to filter orders by brand. Staff will only be able to view orders for product stores that they are linked to.
  
- **B. Type** Categorize orders based on their fulfillment types, such as **Store pickup** or **Ship from store**, aiding in the prioritization and management of different order categories.
+ **B. `Type`** Categorize orders based on their fulfillment types, such as `Store pickup` or `Ship from store`, aiding in the prioritization and management of different order categories.
  
- **C. Fulfillment Status** Filter orders based on their current stage (e.g., Created, Approved, Completed, or Cancelled) by selecting one or more statuses under the **Fulfillment** section.
+ **C. `Fulfillment Status`** Filter orders based on their current stage (e.g., Created, Approved, Completed, or Cancelled) by selecting one or more statuses under the `Fulfillment` section.
  
- **D. Channel** Select a sales channel from the checklist to filter orders by their origin, such as Web, POS, etc.
+ **D. `Channel`** Select a sales channel from the checklist to filter orders by their origin, such as Web, POS, etc.
  
- **E. Date** Select a date range (e.g., Last 7 days, Last 30 days) or specify a custom date range to review and manage orders within a specific timeframe.
+ **E. `Date`** Select a date range (e.g., Last 7 days, Last 30 days) or specify a custom date range to review and manage orders within a specific timeframe.
 
 ### View Order Detail
 
