@@ -77,10 +77,10 @@ Rejected orders are then automatically sent to the `Rejected Queue`. A dedicated
 
 When an order includes multiple items and inventory for one of them is unavailable for fulfillment, retailers have two options for handling the situation:
 
-* **Partial rejection:** Retailers can choose to partially reject the order by rejecting only the unavailable item. In this scenario, the order will be split, and the store will ship the available items while the unavailable item will be rebrokered.
-* **Full rejection:** Alternatively, retailers who prefer not to split the order, can reject all items in the order if any one item is unavailable for fulfillment. This ensures that the entire order is rejected, prompting the entire order to be rebrokered.
+*   **Partial rejection:** Retailers can choose to partially reject the order by rejecting only the unavailable item. In this scenario, the order will be split, and the store will ship the available items while the unavailable item will be rebrokered.
+*   **Full rejection:** Alternatively, retailers who prefer not to split the order, can reject all items in the order if any one item is unavailable for fulfillment. This ensures that the entire order is rejected, prompting the entire order to be rebrokered.
 
-Learn more about [Store Fulfillment](/documents/store-operations/fulfillment/fulfillment.md)
+Learn more about [Store Fulfillment](/documents/store-operations/fulfillment/README.md)
 
 ### Warehouse Fulfillment Success and Order Completion
 
