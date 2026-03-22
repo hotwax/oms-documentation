@@ -95,12 +95,12 @@ Video: Add Directions
 
 ## Latitude and Longitude
 
-Latitude and longitude support store lookup and distance-based pickup experiences on Shopify PDP.
+Latitude and longitude support store lookup and distance-based pickup experiences on Shopify Product Detail Page (PDP).
 
 1. Open the facility from the `Find Facilities` page.
 2. On the `Facility details` page, click `Add` on the `Latitude & Longitude` card.
 3. Enter the coordinates manually, or use the `Generate` icon to derive them from the saved address.
-4. Save the changes.
+4. Click the `Save` icon.
 
 {% embed url="https://youtu.be/SA6cVCSwagI" %}
 Video: Add Latitude & Longitude
@@ -177,7 +177,7 @@ Use the `Sell inventory online` card and the `Online Order Fulfillment` card to 
 
 Users can configure the following settings for the facility:
 
-* **Allow Pickup:** Controls whether the facility can support BOPIS and appear as a store pickup option.
+* **Allow Pickup:** Controls whether the facility can support Buy Online, Pick-up In Store (BOPIS) and appear as a store pickup option.
 * **Use Native Fulfillment App:** Indicates whether the facility uses HotWax Commerce's `Fulfillment App` or a third-party fulfillment system.
 * **Generate Shipping Labels:** Controls whether shipping labels are generated through HotWax Commerce for the facility.
 * **Days to Ship:** Sets the minimum number of days the facility requires to ship an order after brokering.
@@ -188,7 +188,7 @@ Video: Configure Fulfillment
 
 ### Configure Inventory Computation
 
-Retailers can enable or disable sales-channel toggles for the facility to control whether its ATP is included in online inventory computation for each configured channel.
+Retailers can enable or disable sales-channel toggles for the facility to control whether its Available-to-Promise (ATP) is included in online inventory computation for each configured channel.
 
 ## Fulfillment Capacity
 
