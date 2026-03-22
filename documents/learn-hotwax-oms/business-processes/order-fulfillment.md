@@ -47,19 +47,7 @@ Once store managers determine the batch of orders they wish to fulfill first, th
 Store managers can also prioritize picking of an individual order item by directly initiating picking and assigning a picker for it.
 {% endhint %}
 
-HotWax Commerce provides two options using which pickers can start the picking process:
-
-**Direct Printing:** Picklists can be directly printed from the Store Fulfillment App.
-
-**QR Code Generation:** Store managers can generate QR codes for picklists from the Store Fulfillment App. The assigned picker can then scan this QR code using their mobile device and view their picklist digitally.
-
-**HotWax Commerce recommends using a digital picking process for efficient order fulfillment because it allows pickers to:**
-
-* Sort order items in the picklist based on preferred criteria, including Product Name, Bin ID, or Location Sequence ID.
-* Scan barcodes for accurate item verification.
-* View enlarged product images for easier identification.
-
-These features maximize picker efficiency and minimize errors during the picking process.
+Pickers can start the picking process by printing picklists directly from the Store Fulfillment App.
 
 ### Replace Pickers
 
