@@ -1,8 +1,8 @@
-# Display Non-Existent Pages in the Hamburger Menu
+# Display non-existent pages in the Hamburger Menu
 
-When a new screen or page is created in the OFBiz-based HotWax OMS application, it does not automatically appear in the Hamburger Menu. The HotWax Commerce hamburger menu is fully data-driven and built upon the core OFBiz Content Management System (CMS). 
+When a new screen or page is created in the OFBiz-based HotWax OMS application, it does not automatically appear in the Hamburger Menu. The HotWax Commerce Hamburger Menu is fully data-driven and built upon the core OFBiz Content Management System (CMS). 
 
-To display a new page in the menu, a system administrator must create specific data records—`DataResource`, `Content`, and `ContentAssoc`—and link them to the master `HAMBURGER_MENU` hierarchy.
+To display a new page in the menu, a system administrator must create specific data records (`DataResource`, `Content`, and `ContentAssoc`) and link them to the master `HAMBURGER_MENU` hierarchy.
 
 Below is a standard operating procedure (SOP) that outlines the exact steps and XML snippets needed to append a new page to the Hamburger Menu.
 
@@ -11,8 +11,8 @@ Below is a standard operating procedure (SOP) that outlines the exact steps and 
 ## Prerequisites
 
 Before proceeding, ensure you have:
-1. The **URL mapping** or **View path** (e.g., `FindOrder` or `ImportData?configId=IMP_ORDER`) for the new page.
-2. A **Security Permission String** (e.g., `ORD_SALES_ORDER_VIEW`) that dictates which users can view this page.
+1. The URL mapping or View path (e.g., `FindOrder` or `ImportData?configId=IMP_ORDER`) for the new page.
+2. A Security Permission String (e.g., `ORD_SALES_ORDER_VIEW`) that dictates which users can view this page.
 3. Access to load XML data into the system, either via the Webtools application's XML Data Import screen (`/webtools/control/EntityImport`) or the Entity Data Maintenance UI.
 
 ---
@@ -21,7 +21,7 @@ Before proceeding, ensure you have:
 
 The `DataResource` record acts as the routing pointer. It stores the specific URL path of your newly created screen.
 
-**Example XML configuration:**
+Example XML configuration:
 ```xml
 <DataResource dataResourceId="NEW_SCREEN_RESOURCE" 
               dataResourceTypeId="LINK" 
@@ -101,6 +101,6 @@ Once the three XML elements are properly defined, you must load them into the OM
        </create-replace>
    </entity-engine-xml>
    ```
-2. Navigate to the **Entity Data Maintenance / XML Data Import** page in Webtools.
-3. Paste the XML block into the text box and click **Import Text**.
+2. Navigate to the `Entity Data Maintenance / XML Data Import` page in Webtools.
+3. Paste the XML block into the text box and click `Import Text`.
 4. Perform a page refresh (and sometimes a re-login) to immediately see the new page linked correctly within the Hamburger Menu in visually matching categories.
