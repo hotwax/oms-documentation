@@ -11,13 +11,13 @@ description: >-
 
 </div>
 
-Settings are categorized as either **store-specific** (apply to all users at a facility), **facility-specific** (apply to the selected facility), or **user-specific** (apply only to the individual user).
+Settings are categorized as either **product store wide** (apply across the entire company for all users), **facility-specific** (apply to the selected facility), or **user-specific** (apply only to the individual user).
 
 ## OMS
 
 ### Product Store
 
-`Store-specific`
+`User-specific`
 
 A Product Store represents a brand or a set of products. If your OMS is connected to multiple eCommerce brands selling different product collections, you can have separate Product Stores in HotWax Commerce.
 
@@ -25,7 +25,7 @@ A Product Store represents a brand or a set of products. If your OMS is connecte
 
 ### Facility
 
-`Facility-specific`
+`User-specific`
 
 The Fulfillment App allows authorized users to select a facility to operate from, determining the visibility of orders, inventory, and other configuration data.
 

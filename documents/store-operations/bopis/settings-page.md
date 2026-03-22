@@ -8,7 +8,7 @@ description: >-
 
 Settings for the BOPIS app can be accessed by clicking on the `Settings` button on the bottom tab of the app. It displays a list of all the settings that can be configured to streamline processes and optimize BOPIS efficiency.
 
-Settings are categorized as either **store-specific** (apply to all users at a facility), **facility-specific** (apply to the selected facility), or **user-specific** (apply only to the individual user).
+Settings are categorized as either **product store wide** (apply across the entire company for all users), **facility-specific** (apply to the selected facility), or **user-specific** (apply only to the individual user).
 
 ## OMS
 
@@ -22,7 +22,7 @@ Users can use this setting to select the facility they want to operate from. Ord
 
 ### Order Edit Permissions
 
-`Store-specific`
+`Product store wide`
 
 If an order is rejected by the store, the customer receives an email notifying them of the rejection and outlining the alternate fulfillment options that are available. Users can use toggle buttons to conveniently enable or disable permissions for various aspects of the orders that customers are allowed to edit when updating their orders on Re-route Fulfillment.
 
@@ -37,7 +37,7 @@ If an order is rejected by the store, the customer receives an email notifying t
 
 ### Partial Order Rejection
 
-`Store-specific`
+`Product store wide`
 
 Store managers can use this setting to control whether a BOPIS order can be partially rejected in case there is insufficient inventory of specific items at the store.
 
@@ -65,7 +65,7 @@ This option allows users to select a preferred display language for the app.
 
 ### Shipping Orders
 
-`Store-specific`
+`Product store wide`
 
 For stores managing both `BOPIS` and `Ship from Store` orders, switching between apps can be challenging. To optimize this process, the `Show Shipping Orders` feature can be enabled. This will allow users to view and fulfill regular orders brokered to their store by the OMS directly within the BOPIS app. Users can easily control this setting using the toggle button to enable or disable it as needed.
 
@@ -73,7 +73,7 @@ For stores managing both `BOPIS` and `Ship from Store` orders, switching between
 
 ### Packing Slip
 
-`Store-specific`
+`Product store wide`
 
 Packing slips help customers reconcile their orders against the delivered items. Store managers can use the `Generate Packing Slips` toggle to control whether or not packing slips are generated for orders.
 
@@ -81,7 +81,7 @@ Packing slips help customers reconcile their orders against the delivered items.
 
 ### Track Pickers
 
-`Store-specific`
+`Product store wide`
 
 Store managers can assign store pickup orders to store associates and track associates who picked orders, by entering their picker IDs when packing an order. They can use the `Track Pickers` card to manage picker tracking and picklist printing. This is important for managing picker commission.
 
@@ -92,13 +92,13 @@ Store managers can assign store pickup orders to store associates and track asso
 
 ### Request Transfer
 
-`Store-specific`
+`Product store wide`
 
 This setting allows store associates to request an item from another store when it is not available in their current stock. When enabled, a `Request Transfer` option becomes available on order detail pages so associates can initiate inter-store transfer requests directly from the app.
 
 ### Proof of Delivery
 
-`Store-specific`
+`Product store wide`
 
 This setting allows store associates to capture and verify proof of delivery when handing over a pickup order to a customer. When enabled, associates are prompted to confirm handover of the order, providing a verifiable record of the delivery.
 
