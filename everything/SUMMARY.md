@@ -42,6 +42,7 @@
 * [Netsuite](tools/Netsuite/README.md)
   * [Managing Saved Searches](tools/Netsuite/README.md)
 * [Ofbiz](<tools/ofbiz/README (1).md>)
+  * [Display Pages in Hamburger Menu](tools/ofbiz/display-pages-in-hamburger-menu.md)
   * [Orders](tools/ofbiz/order/README.md)
     * [Multicurrency Sales Orders](tools/ofbiz/order/README.md)
     * [POS Order Refresh Failure](tools/ofbiz/order/pos-order-refresh-failure.md)
