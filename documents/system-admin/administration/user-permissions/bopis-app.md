@@ -67,9 +67,9 @@ Below is a list of all the actions available in the BOPIS App, along with the sp
 | 4  | Generate Packing Slip        | COMMON_ADMIN            | Enables the creation of packing slips, helping customers reconcile their order against delivered items. |
 | 5  | Enable Tracking              | COMMON_ADMIN            | Tracks who picked orders by entering picker IDs during the packing process. |
 | 6  | Notification Preference      | -                        | Allows users to select the types of notifications they want to receive.    |
-| 7  | Go to OMS                    | COMMERCEUSER_VIEW       | Allows users to access the HotWax OMS from the BOPIS App.                   |
-| 8  | View BOPIS App               | BOPIS_APP_VIEW          | Allows users to view the entire BOPIS App.                                 |
-| 9  | Manage BOPIS Operations      | STOREFULFILLMENT_ADMIN  | Allows users to manage all BOPIS operations in the store.                   |
+| 7  | Go to Launchpad              | COMMON_ADMIN            | Allows users to open Launchpad from the BOPIS app when the app is not running in standalone mode. |
+| 8  | Go to OMS                    | COMMERCEUSER_VIEW       | Allows users to access the HotWax OMS from the BOPIS App.                   |
+| 9  | View BOPIS App               | BOPIS_APP_VIEW          | Allows users to view the entire BOPIS App.                                 |
+| 10 | Manage BOPIS Operations      | STOREFULFILLMENT_ADMIN  | Allows users to manage all BOPIS operations in the store.                   |
 
 <figure><img src="../../.gitbook/assets/app-settings-permissions.png" alt=""><figcaption></figcaption></figure>
-

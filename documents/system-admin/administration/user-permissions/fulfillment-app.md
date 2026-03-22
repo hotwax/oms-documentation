@@ -123,6 +123,7 @@ Manage All Fulfillment Operations
 | 1    | Orders detail page > Ship now (Completed orders) | COMMON\_ADMIN | Allows users to ship a packed order, provided all shipment and package information is complete. The button will be enabled when tracking information is either provided or force ship permission is granted. |
 | 2    | Orders detail page > View Details                | -             | Enables users to view the order details along with customer detailed information and the selected shipping carrier details                                                                                   |
 | 3    | Orders detail page > Unpack (Completed orders)   | COMMON\_ADMIN or SF\_UNLOCK\_ORDER | Provides the ability to unpack a completed order and send it back to the "In Progress" state. This action is only enabled when all required shipment and package information is present.                     |
-| 4    | Edit shipment method                             | ORDER\_SHIPMENT\_METHOD\_UPDATE | Allows users to update the shipping method for an order on the order details page. |
+| 4    | Edit shipment method                             | ORDER\_SHIPMENT\_METHOD\_UPDATE | Allows users to update the carrier or shipping method for an order from the order details page. |
+| 5    | Generate Tracking Code modal > Edit carrier or method | ORDER\_SHIPMENT\_METHOD\_UPDATE | Allows users to change the carrier or shipment method while generating a tracking code for orders that require manual label handling. |
 
 <figure><img src="../../.gitbook/assets/order-details.png" alt=""><figcaption></figcaption></figure>
