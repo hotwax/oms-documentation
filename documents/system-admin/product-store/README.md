@@ -44,31 +44,12 @@ description: >-
 | **Explode Order Items** | This setting changes if multi-quantity order items are exploded into single-quantity items. The default value for this setting is "Y" indicating that it is enabled, it should not be changed to "N", as many flows of the OMS are not tested for this setting. |
 | **External ID**         | Most retailers will never need this. Adding it will not break any flows but since it is not part of the required data setup, it's recommended to leave it blank.                                                                                                |
 
-***
+***### Add additional configurations
 
-### Add additional configurations
+Apart from these default configurations, retailers can add new configurations specific to their product store by clicking `Add` in the store settings section. 
 
-Apart from these default configurations, retailers can add new configurations specific to their product store by clicking `Add` in the store settings section. Here are the available store settings that retailers can add:
-
-| Setting Code            | Setting Name                        | Value                                               | Description                                                                                                                                                           |
-| ----------------------- | ----------------------------------- | --------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| BOPIS\_PART\_ODR\_REJ   | BOPIS Partial Order Rejection       | Y                                                   | Indicates whether store associates can partially reject "buy online, pick up in-store" (BOPIS) orders.                                                                |
-| CUST\_ALLOW\_CNCL       | Customer Order Cancellation         | Y                                                   | Determines if customers can cancel orders on Shopify.                                                                                                                 |
-| FULFILL\_NOTIF          | Fulfillment Notification            | Y                                                   | Enables the updating of tracking information on Shopify.                                                                                                              |
-| PRDT\_IDEN\_PREF        | Product Identifier Preference       | {"primaryId": "SKU", "secondaryId": "internalName"} | Defines the preferred primary identifier used across the system.                                                                                                      |
-| CUST\_DLVRADR\_UPDATE   | Customer Delivery Address Update    | Y                                                   | Allows updating the delivery address of customers.                                                                                                                    |
-| CUST\_DLVRMTHD\_UPDATE  | Customer Delivery Method Update     | Y                                                   | Allows updating the delivery method chosen by customers.                                                                                                              |
-| CUST\_PCKUP\_UPDATE     | Customer Pickup Address Update      | Y                                                   | Allows changing the pickup address for customers.                                                                                                                     |
-| HOLD\_PRORD\_PHYCL\_INV | Hold Pre-ordered Physical Inventory | Y                                                   | If a pre-order queue exists, physical inventory will be considered as 0. The default value is true.                                                                   |
-| INV\_CNT\_VIEW\_QOH     | Inventory Count View QOH            | Y                                                   | Enables users to see current Quantity On Hand (QOH) from HotWax OMS on the product detail page of the Inventory Count app, aiding users during periodic cycle counts. |
-| ORD\_ITM\_PICKUP\_FAC   | Order Item Pickup Facility          | \_pickupstore                                       | Orders imported with this tag will have their line items checked for pre-selected facilities to pick up orders from.                                                  |
-| PRE\_SLCTD\_FAC\_TAG    | Preselected Facility Tag            | HC\_PRE\_SELECTED\_FAC                              | Orders imported with this tag will have their line items checked for pre-selected facilities to fulfill them from.                                                    |
-| RATE\_SHOPPING          | Rate Shopping Configuration         | Y                                                   | Configures rate shopping.                                                                                                                                             |
-| RETURN\_DEADLINE\_DAYS  | Return Deadline Days                | 30                                                  | Sets the deadline allowed for customer returns.                                                                                                                       |
-| SAVE\_BILL\_TO\_INF     | Save Billing Information            | Y                                                   | Saves customers' bill to information on orders from Shopify in HotWax.                                                                                                |
-| RTN\_RSTCK\_FAC         | Return Restock Facility             | WH                                                  | Specifies the default location to restock return items.                                                                                                               |
-| RF\_SHIPPING\_METHOD    | Rerouted Shipping Method            | SECOND\_DAY                                         | Sets the default shipping method for rerouted orders.                                                                                                                 |
-| BRK\_SHPMNT\_THRESHOLD  | Brokering Shipment Threshold        | 50                                                  | Orders will split into separate shipgroups only if the total order item value exceeds this threshold.                                                                 |
+For a comprehensive list of all available configurations, their descriptions, and their impact on the system, please refer to the [Product Store Settings Master List](product-store-settings.md).
+|
 
 {% embed url="https://youtu.be/X06G-GYjt-I" %}
 
