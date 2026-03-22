@@ -10,9 +10,9 @@ The order card in the `Packed` Orders page shows the same basic details as in th
 
 There is also a `mail` icon to resend the pickup email to the customer, and a `Handover` button that is used to mark the order as `completed` once the customer picks up the order.
 
-When the **Handover** button is clicked, an alert appears to verify that the items are valid and the customer has received their order. Once the order is handed over, it moves to the **Completed** tab.
+When the `Handover` button is clicked, an alert appears to verify that the items are valid and the customer has received their order. Once the order is handed over, it moves to the `Completed` tab.
 
-Store associates can record **Proof of Delivery (POD)** details for completed orders from the **Completed Orders** page.
+Store associates can record Proof of Delivery (POD) details for completed orders from the `Completed Orders` page.
 
 ## Order Details Page
 The `Order Details` page in the `Packed` Orders page shows all the usual order information. At the top, there is a `mail` icon that lets store staff resend an email to notify the customer that their order is ready for pickup, a `watch` icon to view the order item rejection history, and a `print` icon to generate the packing slip.

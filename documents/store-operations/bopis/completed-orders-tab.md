@@ -17,11 +17,11 @@ A timeline on the right shows key events like when the order was `created`, `app
 
 ## Proof of Delivery (POD)
 
-Store associates can record or view Proof of Delivery (POD) details for any completed order. This feature is enabled via the **HANDOVER_PROOF** product store setting.
+Store associates can record or view Proof of Delivery (POD) details for any completed order. This feature is enabled via the `HANDOVER_PROOF` product store setting.
 
 To record POD details:
-1. Locate the order on the **Completed** tab.
-2. Click the **Proof of Delivery** button on the order card.
+1. Locate the order on the `Completed` tab.
+2. Click the `Proof of Delivery` button on the order card.
 3. In the pop-up, enter the following details:
    - **Name**: Name of the person picking up the order.
    - **ID Number**: Identity proof number.
@@ -29,6 +29,6 @@ To record POD details:
    - **Phone**: Contact number.
    - **Email**: Contact email.
 
-If the person picking up the order is the same as the billing customer, you can use the **Same as customer** checkbox to pre-fill the details from the order's billing information.
+If the person picking up the order is the same as the billing customer, you can use the `Same as customer` checkbox to pre-fill the details from the order's billing information.
 
-Once saved, the details are recorded as a **Handover Proof** communication event, and a pickup notification email is sent to the customer. For orders with existing POD details, the button label changes to **View Proof of Delivery**.
+Once saved, the details are recorded as a Handover Proof communication event, and a pickup notification email is sent to the customer. For orders with existing POD details, the button label changes to `View Proof of Delivery`.
