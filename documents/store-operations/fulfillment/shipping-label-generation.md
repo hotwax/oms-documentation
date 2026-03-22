@@ -4,7 +4,7 @@ description: >-
   Commerce Fulfillment App for seamless label creation.
 ---
 
-# Shipping Label Generations
+# Shipping Label Generation
 
 ## Shipping Label Generation
 
@@ -133,5 +133,15 @@ This feature provides enhanced flexibility, especially for stores using multiple
 4. **Choose the Preferred Carrier**: Select from options like FedEx, UPS, or EasyPost based on the order's requirements and convenience, ensuring flexibility and control over shipping.
 5. **Enter Tracking Code and URL**: Store associates can manually enter the `tracking code` in the provided field. Ensure that a `tracking URL` is configured for the selected carrier. If it’s not available, you may need to input the tracking URL `manually` to allow customers to track their `shipments` effectively.
 6. **Generate the Label**: Once the carrier is selected, `generate` the `shipping label` for the order.
+
+## Manual Fallback: Generate Tracking Code
+
+If automatic shipping label generation fails, store associates can manually provide tracking details to proceed with the shipment.
+
+1. If a label generation error occurs, a **Shipping label error** button appears on the shipment card.
+2. Click the button to open the **Generate Tracking Code** modal.
+3. Manually enter the **Tracking Code** provided by the carrier.
+4. If a tracking URL is available, enter it in the **Tracking URL** field.
+5. Select **Save** to update the shipment with manual tracking details.
 
 <figure><img src="../.gitbook/assets/preferred-carrier-label-generation.png" alt=""><figcaption></figcaption></figure>

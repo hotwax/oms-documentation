@@ -22,7 +22,7 @@ Here’s how to create a transfer order:
 | **Order Name**         | A descriptive name for the transfer order. Tap **Edit** to update the default name.           |
 | **Destination**        | The location receiving the stock. Tap **Edit** to choose a different receiving location.      |
 | **Return to warehouse**| Toggle on to enable the **Fulfill Only** flow, or leave off for **Fulfill & Receive**.        |
-| **Add Items**          | Use the **Scan** segment for barcodes or **Search** for SKU/name to add products to the transfer. |
+| **Add Items**          | Use the **Scan** segment for barcodes or **Search** for SKU/name to add products to the transfer. Use **Upload** to add items in bulk via CSV. |
 
 {% hint style="info" %}
 Once you tap **Pack and ship order**, a shipment is created and the order moves to the **Shipped** status. If you tap **Ship later**, the order is approved and saved for later processing.
@@ -40,6 +40,19 @@ Once you tap **Pack and ship order**, a shipment is created and the order moves 
    - **Scan**: Use the barcode scanner for quick entry. Ensure the scanner is focused by tapping **Focus scanning**.
    - **Search**: Switch to the search segment to find products by SKU, name, or parent name.
    - **Upload**: If enabled, use the bulk upload feature to add items via CSV.
+
+### Bulk upload via CSV
+
+Use the **Upload** option from the **Add products** section when you need to add many items to a transfer order.
+
+1. Select the **Upload** segment.
+2. Upload your CSV file containing the shipment details.
+3. Map each app field to a column in your file.
+4. Select **Submit**.
+
+**Required CSV fields:**
+- `Product SKU`
+- `Quantity`
           
 4. **Finalize the Transfer**  
    - **Ship later**: Save the order and approve it without generating a shipment immediately.
