@@ -64,7 +64,7 @@ When you receive a Ship to Store order in your fulfillment queue:
 
 ---
 
-## 4. Lifecyle of a Ship to Store Order
+## 4. Lifecycle of a Ship to Store Order
 
 The `Ship to Store` page in the BOPIS App is organized into three tabs to help you track orders through their lifecycle:
 
