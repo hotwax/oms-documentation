@@ -13,7 +13,7 @@ Below is a list of all the actions available in the Fulfillment App, along with 
 | 3    | Print Picklist                         | -             | Enables the printing of a Picklist that can be used to assign pickers to orders in bulk, streamlining the picking process. |
 | 4    | Order actions Chip > Pick order         | -             | Allows users to assign a picker to a specific individual order, initiating the fulfillment process for that order.          |
 | 5    | Picker visibility                       | FULFILLMENT\_VIEW\_ALL\_PICKERS | Controls whether users can see all pickers across all facilities or only those from their current facility when assigning pickers to orders. |
-| 6    | Recycle order                           | COMMON\_ADMIN OR STOREFULFILLMENT\_ADMIN | Enables the recycling of an order, which allows it to be re-entered into the fulfillment queue and assigned to a different picker or facility. |
+| 6    | Recycle order                           | COMMON\_ADMIN or STOREFULFILLMENT\_ADMIN | Enables the recycling of an order, which allows it to be re-entered into the fulfillment queue and assigned to a different picker or facility. |
 | 7    | Order actions Chip > View Order details | -             | Routes the user to the detailed view of an individual order, where further actions can be taken or details can be reviewed. |
 | 8    | View item QOH (Open Orders)             | -             | Displays the Quantity on Hand (QOH) for items in the order, helping users assess available stock for fulfillment.           |
 
@@ -46,7 +46,7 @@ Below is a list of all the actions available in the Fulfillment App, along with 
 | 5    | Ship now                                      | COMMON\_ADMIN | Enables the user to ship packed orders once all shipment information is complete, including tracking information if applicable. If tracking is missing, users with the "force ship" permission can still proceed.                                                     |
 | 6    | Regenerate Shipping Label                     | -             | Allows users to regenerate the shipping label for a completed order if necessary, ensuring proper labeling for shipment.                                                                                                                                              |
 | 7    | Print Customer Letter                         | -             | Enables users to print the packing slip or customer letter associated with the order, ensuring documentation is provided with the shipment.                                                                                                                           |
-| 8    | Unpack orders                                 | COMMON\_ADMIN OR SF\_UNLOCK\_ORDER | Provides users with the ability to unpack orders and send them back to the "In Progress" state if necessary. This action is only enabled when all required shipment and package information has been provided.                                                        |
+| 8    | Unpack orders                                 | COMMON\_ADMIN or SF\_UNLOCK\_ORDER | Provides users with the ability to unpack orders and send them back to the "In Progress" state if necessary. This action is only enabled when all required shipment and package information has been provided.                                                        |
 
 <figure><img src="../../.gitbook/assets/completed.png" alt=""><figcaption></figcaption></figure>
 
@@ -109,7 +109,7 @@ Below is a list of all the actions available in the Fulfillment App, along with 
 | 9    | Force scan                     | COMMON\_ADMIN | Controls the requirement for users to scan item barcodes during the packing process to ensure accuracy. |
 | 10   | Partial rejections             | COMMON\_ADMIN | Allows individual items within an order to be rejected without affecting other items in the same order. |
 | 11   | Collateral rejections          | COMMON\_ADMIN | Automatically rejects all other orders for an item when that item is rejected, helping to manage stock inconsistencies. |
-| 12   | Affect QOH on rejection        | COMMON\_ADMIN | Determines whether the Quantity on Hand (QOH) is adjusted along with Available to Promise (ATP) when an item is rejected. |
+| 12   | Affect QOH on rejection        | COMMON\_ADMIN | Determines whether the Quantity on Hand (QOH) is adjusted along with Available to Promise when an item is rejected. |
 | 13   | Barcode Identifier             | COMMON\_ADMIN | Allows users to select the preferred barcode identifier (e.g., SKU, UPC) used for scanning items within the app. |
 
 Manage All Fulfillment Operations
@@ -122,7 +122,7 @@ Manage All Fulfillment Operations
 | ---- | ------------------------------------------------ | ------------- | ------------------------------------------------------------------------------------------------------ |
 | 1    | Orders detail page > Ship now (Completed orders) | COMMON\_ADMIN | Allows users to ship a packed order, provided all shipment and package information is complete. The button will be enabled when tracking information is either provided or force ship permission is granted. |
 | 2    | Orders detail page > View Details                | -             | Enables users to view the order details along with customer detailed information and the selected shipping carrier details                                                                                   |
-| 3    | Orders detail page > Unpack (Completed orders)   | COMMON\_ADMIN OR SF\_UNLOCK\_ORDER | Provides the ability to unpack a completed order and send it back to the "In Progress" state. This action is only enabled when all required shipment and package information is present.                     |
-| 4    | Edit Shipment Method                             | ORDER\_SHIPMENT\_METHOD\_UPDATE | Allows users to update the shipping method for an order on the order details page. |
+| 3    | Orders detail page > Unpack (Completed orders)   | COMMON\_ADMIN or SF\_UNLOCK\_ORDER | Provides the ability to unpack a completed order and send it back to the "In Progress" state. This action is only enabled when all required shipment and package information is present.                     |
+| 4    | Edit shipment method                             | ORDER\_SHIPMENT\_METHOD\_UPDATE | Allows users to update the shipping method for an order on the order details page. |
 
 <figure><img src="../../.gitbook/assets/order-details.png" alt=""><figcaption></figcaption></figure>
