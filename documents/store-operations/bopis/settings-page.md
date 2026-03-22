@@ -21,6 +21,7 @@ If an order is rejected by the store, the customer receives an email notifying t
 * **Delivery Method:** Enable or disable the permission for customers to edit the delivery method for their orders.
 * **Delivery Address:** Enable or disable the permission for customers to edit the delivery address for their orders.
 * **Pickup Location:** Enable or disable the permission for customers to edit the pickup location for their orders.
+* **Order Item Split:** Enable or disable the permission for customers to split order items for their orders.
 * **Cancel Order Before Fulfillment:** Enable or disable the permission for customers to cancel their order before it’s fulfilled.
 * **Shipment Method:** Allow the customers to edit the shipment method for their orders using a dropdown menu with available options.
 
