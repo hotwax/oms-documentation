@@ -59,7 +59,7 @@ This setting allows selection of a primary and secondary product identifier, suc
 
 `User-specific`
 
-This setting allows selecting an appropriate timezone to ensure consistency and optimize operations according to local time.
+This setting allows selecting an appropriate timezone to maintain consistency and optimize operations according to local time.
 
 <figure><img src="../.gitbook/assets/fulfillment-timezone-setting.png" alt="" width="375"><figcaption><p>Select timezone</p></figcaption></figure>
 

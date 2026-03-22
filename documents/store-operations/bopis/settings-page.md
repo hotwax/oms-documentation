@@ -55,7 +55,7 @@ Users can choose primary and secondary product identifiers (such as product ID, 
 
 `User-specific`
 
-This option allows users to select an appropriate timezone to ensure consistency and optimize operations according to local time.
+This option allows users to select an appropriate timezone to maintain consistency and optimize operations according to local time.
 
 ### Language
 
@@ -83,7 +83,7 @@ Packing slips help customers reconcile their orders against the delivered items.
 
 `Store-specific`
 
-Store managers can assign store pickup orders to store associates and track associates who picked orders, by entering their picker IDs when packing an order. They can use the `Track Pickers` card to manage picker tracking and picklist printing. This is essential to manage picker commission.
+Store managers can assign store pickup orders to store associates and track associates who picked orders, by entering their picker IDs when packing an order. They can use the `Track Pickers` card to manage picker tracking and picklist printing. This is important for managing picker commission.
 
 * **Enable Tracking:** Turn on picker tracking to require store associates to enter their picker ID when packing an order.
 * **Print Picklists:** Enable automatic printing of picklists when packing orders to help store associates identify and gather the items to be fulfilled.
