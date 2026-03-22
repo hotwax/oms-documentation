@@ -93,7 +93,7 @@ This setting controls whether store associates receive notifications for orders 
 
 ### Force Scan
 
-`Store-specific`
+`Product store wide`
 
 This card contains two related settings for controlling barcode scanning behavior during order fulfillment:
 
@@ -102,18 +102,18 @@ This card contains two related settings for controlling barcode scanning behavio
 
 ### Allow Partial Rejections
 
-`Store-specific`
+`Product store wide`
 
 When [Partial Rejection is enabled](/documents/store-operations/fulfillment/rejection.md), individual items get rejected from a facility without impacting the rest of the order.
 
 ### Collateral Rejections
 
-`Store-specific`
+`Product store wide`
 
 [Collateral Rejection](rejection.md) helps manage situations where the product in a rejected order item is part of multiple pending orders at a facility. When enabled, rejecting an item in one order automatically rejects the same product in all other pending orders.
 
 ### Affect QOH on Rejection
 
-`Store-specific`
+`Product store wide`
 
 [The Affect QOH on Rejection](/documents/store-operations/fulfillment/rejection.md) toggle provides control over inventory adjustments during order rejections.
