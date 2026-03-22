@@ -22,7 +22,7 @@ Once an order item is allocated, a fulfillment request is sent to the assigned f
 If an order item is allocated to a store, they are automatically reflected in the HotWax Commerce [Store Fulfillment App](/documents/store-operations/orders/fulfillment/ship-orders).
 
 {% hint style="info" %}
-HotWax Commerce provides a Store Fulfillment Suite comprising user-friendly apps such as the Store Fulfillment App and Picking App to quickly and accurately fulfill orders. These apps are specifically designed to facilitate easy adoption and minimize the learning curve for store personnel.
+HotWax Commerce provides the Store Fulfillment App to quickly and accurately fulfill orders. This app is specifically designed to facilitate easy adoption and minimize the learning curve for store personnel.
 {% endhint %}
 
 ## Manually Send Fulfillment Request
@@ -51,17 +51,15 @@ HotWax Commerce provides two options using which pickers can start the picking p
 
 **Direct Printing:** Picklists can be directly printed from the Store Fulfillment App.
 
-**QR Code Generation:** Store managers can generate QR codes for picklists from the Store Fulfillment App. The assigned picker can then scan this QR code using their mobile device and view their picklist directly in the Picking App.
+**QR Code Generation:** Store managers can generate QR codes for picklists from the Store Fulfillment App. The assigned picker can then scan this QR code using their mobile device and view their picklist digitally.
 
-**HotWax Commerce recommends using the Picking mobile app for efficient order fulfillment because it allows pickers to:**
+**HotWax Commerce recommends using a digital picking process for efficient order fulfillment because it allows pickers to:**
 
 * Sort order items in the picklist based on preferred criteria, including Product Name, Bin ID, or Location Sequence ID.
 * Scan barcodes for accurate item verification.
 * View enlarged product images for easier identification.
 
 These features maximize picker efficiency and minimize errors during the picking process.
-
-Learn more about [Picking App](/documents/store-operations/fulfillment/picking-app)
 
 ### Replace Pickers
 

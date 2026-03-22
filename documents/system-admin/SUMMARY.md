@@ -22,7 +22,6 @@
   * [Fulfillment App](administration/user-permissions/fulfillment-app.md)
   * [Job Manager App](administration/user-permissions/job-manager-app.md)
   * [Receiving App](administration/user-permissions/receiving-app.md)
-  * [Picking App](administration/user-permissions/picking-app.md)
   * [Import App](administration/user-permissions/import-app.md)
   * [Users App](administration/user-permissions/users-app.md)
   * [Facilities App](administration/user-permissions/facilities-app.md)
