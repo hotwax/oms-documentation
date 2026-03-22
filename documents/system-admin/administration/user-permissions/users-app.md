@@ -19,7 +19,7 @@ Below is a list of all the actions available in the Users App, along with the sp
 | No. | Action                      | Permission                          | Description                                                                                                 |
 | --- | --------------------------- | ----------------------------------- | ----------------------------------------------------------------------------------------------------------- |
 | 1   | Edit Profile Information    | -                                   | Allows users to add a photo and edit personal information such as their name.                               |
-| 2   | Block Login / Disable User  | SECURITY\_CREATE OR SECURITY\_ADMIN | Enables administrators to block or restore a user's access to HotWax Commerce applications.                 |
+| 2   | Block Login / Disable User  | SECURITY_CREATE OR SECURITY_ADMIN | Enables administrators to block or restore a user's access to HotWax Commerce applications.                 |
 | 3   | Add Credentials             | SECURITY\_CREATE OR SECURITY\_ADMIN | Allows administrators to create login credentials for a user who does not yet have a login.                 |
 | 4   | Reset Password              | SECURITY\_CREATE OR SECURITY\_ADMIN | Allows administrators to reset another user's password. Users can reset their own password from their own profile. |
 | 5   | Force Logout                | SECURITY\_CREATE OR SECURITY\_ADMIN | Allows administrators to sign a user out of all active sessions immediately.                                |
@@ -28,7 +28,7 @@ Below is a list of all the actions available in the Users App, along with the sp
 | 8   | Add Product Store           | SECURITY\_CREATE OR SECURITY\_ADMIN | Provides the ability to assign users to a specific product store.                                           |
 | 9   | Add to Facilities           | STOREFULFILLMENT\_ADMIN             | Enables the assignment of users to specific facilities for fulfillment tasks.                               |
 | 10  | Add as Picker               | STOREFULFILLMENT\_ADMIN             | Allows the user to be added as a picker for fulfillment purposes.                                           |
-| 11  | Select Favourite            | -                                   | Enables users to select a favorite product store and Shopify shop for preselection across all applications. |
+| 11  | Select Favorite            | -                                   | Enables users to select a favorite product store and Shopify shop for preselection across all applications. |
 
 <figure><img src="../../.gitbook/assets/user-details.png" alt=""><figcaption></figcaption></figure>
 
