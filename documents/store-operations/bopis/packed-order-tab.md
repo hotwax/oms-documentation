@@ -21,8 +21,7 @@ The recorded details are saved and linked to the respective order. Once confirma
 ## Order Details Page
 The `Order Details` page in the `Packed` Orders page shows all the usual order information. At the top, there is a `mail` icon that lets store staff resend an email to notify the customer that their order is ready for pickup, a `watch` icon to view the order item rejection history, and a `print` icon to generate the packing slip.
 
-The page also allows store associates to edit the assigned picker for an order. To update the picker, associates can click the `picker name`. This opens a pop-up displaying all available pickers, and a new picker can be selected from the list.
-
+The page also allows store associates to edit the assigned picker for an order. If tracking is enabled, you can update the picker for an order from the **Order Details** page. To do this, click on the **picker name chip** (identified by a person icon ![person icon](https://ionicframework.com/docs/ionicons/person-outline.svg)) to open the edit picker modal and update the assignment.
 Once an order is packed and marked as Ready for Pickup, store staff will see the `Handover` and `Cancel Item` buttons on the Order Details page. At this stage, rejecting or unpacking items is no longer possible.
 
 Selecting `Cancel Item` opens a pop-up displaying a list of cancellation reasons. When an item is cancelled, an email is sent to the customer.

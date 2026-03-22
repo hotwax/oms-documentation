@@ -28,19 +28,17 @@ HotWax Commerce enables store managers to filter orders based on specific criter
 
 ### Select Filter Criteria
 
-Use the filter options on the top right of the "Find Orders" page to apply filters by clicking on the hamburger menu. Filtering can be done based on Brand/Product Store, Facility, Order Status, Order Type, and Sales Channel. Store Managers will be able to apply these filters by checking the boxes for the desired filters.
-
-**A. Brand/Product Store** Choose a specific Product Store from the checklist to filter orders by brand, enabling them to focus on orders related to a particular brand. Staff will only be able to view orders for product stores that they are linked to.
-
-**B. Order Type** Categorize orders based on their types, such as ship-from-store orders, store pickup orders, or unfillable orders, aiding in the prioritization and management of different order categories.
-
-**C. Facility** Select a Facility to narrow down the results to a specific location, allowing store managers to manage orders originating from a particular facility more efficiently.
-
-**D. Order Status** Filter orders based on their current stage, including Created, Approved, Completed, or Canceled, providing them with the ability to view orders at different stages of processing.
-
-**E. Sales Channel** Select a Sales channel from the dropdown menu to filter orders by a specific channel, such as web channel, POS channel, etc., enabling store managers to analyze orders originating from different sales channels separately.
-
-**F. Date Range** Select a date range of the last 7 days, the last 30 days, or any custom range to view orders based on that selection. This helps store managers review and manage orders within a specific timeframe.
+Use the filter options on the top right of the "Find Orders" page to apply filters. Filtering can be done based on **Brand**, **Type**, **Fulfillment Status**, **Channel**, and **Date**. Store Managers can apply these filters by checking the respective boxes or selecting from the dropdown options.
+ 
+ **A. Brand** Choose a specific Product Store from the checklist to filter orders by brand. Staff will only be able to view orders for product stores that they are linked to.
+ 
+ **B. Type** Categorize orders based on their fulfillment types, such as **Store pickup** or **Ship from store**, aiding in the prioritization and management of different order categories.
+ 
+ **C. Fulfillment Status** Filter orders based on their current stage (e.g., Created, Approved, Completed, or Cancelled) by selecting one or more statuses under the **Fulfillment** section.
+ 
+ **D. Channel** Select a sales channel from the checklist to filter orders by their origin, such as Web, POS, etc.
+ 
+ **E. Date** Select a date range (e.g., Last 7 days, Last 30 days) or specify a custom date range to review and manage orders within a specific timeframe.
 
 ### View Order Detail
 
