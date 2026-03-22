@@ -66,6 +66,28 @@ The order details page here shows all the same basic details as in the Open Orde
 
 When an order has more than one shipment, this screen displays all of them. Staff can check which shipments are already fulfilled, which ones are in progress, and if any are pending or cannot be fulfilled.
 
+### Payment Details for Cash on Delivery Orders
+
+The order details page also includes a **Payment** card that lists each payment preference on the order. For every payment entry, store associates can view:
+
+- The payment method
+- The current payment status
+- The payment amount
+
+For Cash on Delivery (COD) orders with pending payment, the **Shipment Method** card displays an additional COD message while packing:
+
+- Cash on delivery order: Indicates that the order is a COD order and payment is still pending.
+- This shipping label will include order level charges because it is the first label: Shown when order-level charges, such as shipping fees or taxes, have not yet been billed to any shipment. Selecting this message opens the **COD Calculation** modal.
+- This shipping label will not include order level charges: Shown for later shipments after those charges have already been applied to the first label. Selecting this message opens an informational prompt showing that the charges were already applied earlier. If available, associates can also copy the earlier tracking code for reference.
+
+The **COD Calculation** modal gives associates a breakdown of the amount being collected on the current shipment. It can include:
+
+- Shipment subtotal
+- Order adjustments
+- Shipment total
+- Other shipment totals
+- Order total
+
 ## Handling Order Rejections
 
 Store associates can reject items from an order if they cannot be fulfilled from the current store. When this happens, the rejected items are moved to a virtual facility called **Rejected Item Parking**. These items are re-brokered to another location based on rules setup in the routing app.  
