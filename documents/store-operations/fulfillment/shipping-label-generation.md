@@ -19,7 +19,7 @@ HotWax Commerce relies on the accurate setup of shipping carriers to facilitate 
 Resolution:
 
 1. Verify if the shipping carrier corresponding to the desired shipping method is set up in HotWax Commerce.
-2. Follow the [documentation on creating a carrier in HotWax Commerce](../../system-admin/fulfillment/shipping-methods/add-carrier.md).
+2. For more details, refer to the [documentation on creating a carrier in HotWax Commerce](../../system-admin/fulfillment/shipping-methods/carrier-and-shipment-methods.md).
 3. Ensure the carrier setup includes accurate details relevant to the shipping method.
 
 **Case: Shipping Gateway Configurations Missing**

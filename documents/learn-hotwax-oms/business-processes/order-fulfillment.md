@@ -19,7 +19,7 @@ Approved orders are eligible for brokering in HotWax Commerce. The order routing
 
 Once an order item is allocated, a fulfillment request is sent to the assigned fulfillment location. If this location happens to be a warehouse, the allocation details are synced to the WMS or ERP systems, such as NetSuite, used for warehouse fulfillment.
 
-If an order item is allocated to a store, they are automatically reflected in the HotWax Commerce [Store Fulfillment App](/documents/store-operations/orders/fulfillment/ship-orders).
+If an order item is allocated to a store, they are automatically reflected in the HotWax Commerce [Store Fulfillment App](/documents/store-operations/fulfillment/open-orders.md).
 
 {% hint style="info" %}
 HotWax Commerce provides the Store Fulfillment App to quickly and accurately fulfill orders. This app is specifically designed to facilitate easy adoption and minimize the learning curve for store personnel.
@@ -57,7 +57,7 @@ Store managers can replace an assigned picker with a new one for various reasons
 As pickers pick order items, HotWax Commerce rate shops to determine the most cost-effective shipping method offered by the carrier that also meets the SLA. Once the shipping method has been selected, HotWax Commerce fetches shipping labels in bulk with tracking codes from the carrier in advance to reduce the packing time.
 {% endhint %}
 
-Learn more about [Picking](/documents/store-operations/fulfillment/ship-orders#pick-orders)
+Learn more about [Picking](/documents/store-operations/fulfillment/open-orders.md#pick-orders)
 
 ## Reject Fulfillment Request
 

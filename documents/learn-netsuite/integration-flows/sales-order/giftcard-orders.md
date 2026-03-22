@@ -8,7 +8,7 @@ Gift cards are stored-value cards that carry a value determined at the time of t
 
 Retailers set up both physical and digital gift cards in their eCommerce platform. Both physical and digital gift cards have a unique serial number or GC number that customers need to enter to redeem the card's value.
 
-Learn more about [gift cards set up in eCommerce](/documents/learn-shopify/products/download-gift-cards)
+Learn more about [gift cards set up in eCommerce](/documents/learn-shopify/shopify-integration/products/download-gift-cards.md)
 
 **Physical Gift Cards:**
 
