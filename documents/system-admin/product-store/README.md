@@ -44,12 +44,13 @@ description: >-
 | **Explode Order Items** | This setting changes if multi-quantity order items are exploded into single-quantity items. The default value for this setting is "Y" indicating that it is enabled, it should not be changed to "N", as many flows of the OMS are not tested for this setting. |
 | **External ID**         | Most retailers will never need this. Adding it will not break any flows but since it is not part of the required data setup, it's recommended to leave it blank.                                                                                                |
 
-***### Add additional configurations
+***
+
+### Add additional configurations
 
 Apart from these default configurations, retailers can add new configurations specific to their product store by clicking `Add` in the store settings section. 
 
 For a comprehensive list of all available configurations, their descriptions, and their impact on the system, please refer to the [Product Store Settings Master List](product-store-settings.md).
-|
 
 {% embed url="https://youtu.be/X06G-GYjt-I" %}
 

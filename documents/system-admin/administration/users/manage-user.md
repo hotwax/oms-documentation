@@ -27,6 +27,14 @@ The "Reset Password" function enables administrators to initiate a password rese
 
 <figure><img src="../../.gitbook/assets/reset-password.png" alt="" width="375"><figcaption><p>Image: Reset Password</p></figcaption></figure>
 
+## Force Logout
+
+The "Force Logout" function allows administrators to sign a user out of all active sessions from the `Login details` card on the User Details page. This is useful when a user should immediately lose access, such as after a security concern, device loss, or role change.
+
+When administrators click `Force logout`, a confirmation prompt appears before the action is applied. After confirmation, the user is logged out everywhere and must sign in again to continue using HotWax Commerce apps.
+
+If the user is already logged out, the `Force logout` button remains disabled.
+
 ## Update Contact Details
 
 The "Update Contact Details" function enables administrators to modify a user's contact information, including email, phone number, or external ID. The on file email of a customer is important for ensuring that reset password emails are sent to the correct address. The external ID of a user is helpful for tracking their commissions during order fulfillment.
