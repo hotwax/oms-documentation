@@ -60,6 +60,7 @@
 
 * [Configure Product Store](product-store/README.md)
 * [Add More Product Stores](product-store/add-more-product-stores.md)
+* [Product Store Settings](product-store/product-store-settings.md)
 
 ## Initial Setup
 
