@@ -11,7 +11,7 @@ The HotWax Commerce `Pre-Order` App is designed for merchandisers to gain a clea
 | 3          | Release Items     | -                  | Release items from the parking queue to begin fulfillment.          |
 | 4          | Edit Promise Date | -                  | Edit the promise date of the order as needed.                       |
 
-<figure><img src="../../.gitbook/assets/orders.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/pre-order.png" alt=""><figcaption></figcaption></figure>
 
 ## Products Page
 
