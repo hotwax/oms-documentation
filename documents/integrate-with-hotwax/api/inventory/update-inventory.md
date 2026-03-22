@@ -22,7 +22,7 @@ Updated inventory in HotWax: 8
 
 `https://<host>/api/service/updateInventoryByIdentification`
 
-Example: [https://demo-oms.hotwax.io/api/service/updateInventoryByIdentification](https://<host>/api/service/updateInventoryByIdentification/)
+Example: https://demo-oms.hotwax.io/api/service/updateInventoryByIdentification
 
 ### Header
 
