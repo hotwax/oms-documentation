@@ -4,18 +4,18 @@ description: Configure product-store level NetSuite settings required for order,
 
 # Product Store Settings
 
-When deploying the HotWax and NetSuite integration, some settings must be configured at the product-store level so data exported from HotWax can be created correctly in NetSuite. These settings are available from the **NetSuite** page in the Company App and are used to control how orders, inventory adjustments, and fulfillment data are mapped between the two systems.
+When deploying the HotWax and NetSuite integration, some settings must be configured at the product-store level so data exported from HotWax can be created correctly in NetSuite. These settings are available from the `` `NetSuite` `` page in the **Company App** and are used to control how orders, inventory adjustments, and fulfillment data are mapped between the two systems.
 
 Use this page during implementation to verify the product store is connected to the correct NetSuite context before you start syncing live data.
 
 ## Where to configure these settings
 
 1. Open the **Company App**.
-2. Go to the **NetSuite** page.
+2. Go to the `` `NetSuite` `` page.
 3. Select the product store you want to configure.
 4. Update the settings in the relevant sections described below.
 
-For a UI walkthrough of the NetSuite page, see [Configure NetSuite Setting](/documents/system-admin/administration/company/configure-netsuite-setting.md).
+For a UI walkthrough of the `` `NetSuite` `` page, see [Configure NetSuite Setting](/documents/system-admin/administration/company/configure-netsuite-setting.md).
 
 ## Product Store
 
@@ -29,7 +29,7 @@ This mapping tells HotWax which NetSuite subsidiary context to use for the selec
 - Enter the corresponding NetSuite subsidiary ID.
 - Save the mapping.
 
-If one HotWax product store needs to work with multiple subsidiaries, configure all required subsidiary IDs for that store from the NetSuite page.
+If one HotWax product store needs to work with multiple subsidiaries, configure all required subsidiary IDs for that store from the `` `NetSuite` `` page.
 
 ## Product and Inventory
 
@@ -61,7 +61,7 @@ Shipping methods used in HotWax must be mapped to NetSuite shipment method IDs.
 - Enter the corresponding NetSuite shipment method ID.
 - Save the mapping.
 
-For more detail, see [Shipping Methods](/documents/learn-netsuite/synchronization-flows/integration-mappings/shipping-methods.md).
+For more detail, see [Shipping Methods](../../synchronization-flows/integration-mappings/shipping-methods.md).
 
 ### Payment Method
 
@@ -73,7 +73,7 @@ Payment methods must be mapped before order sync so NetSuite receives a valid pa
 
 Unmapped payment methods can cause order sync failures.
 
-For more detail, see [Payment Methods](/documents/learn-netsuite/synchronization-flows/integration-mappings/payment-methods.md).
+For more detail, see [Payment Methods](../../synchronization-flows/integration-mappings/payment-methods.md).
 
 ### Price Levels
 
@@ -90,7 +90,7 @@ To configure:
 - Select the NetSuite price level ID, or choose `Custom`.
 - Save the setting.
 
-For more detail, see [Price Levels](/documents/learn-netsuite/synchronization-flows/integration-mappings/price-levels.md).
+For more detail, see [Price Levels](../../synchronization-flows/integration-mappings/price-levels.md).
 
 ### Discount Mapping
 
@@ -137,8 +137,8 @@ To reduce sync failures during setup, configure these settings in this order:
 
 These settings work together with other NetSuite deployment prerequisites:
 
-- [SFTP Locations](/documents/learn-netsuite/netsuite-deployment/prerequisite-syncs/sftp-locations.md)
-- [Shipping Methods](/documents/learn-netsuite/netsuite-deployment/prerequisite-syncs/shipping-methods.md)
-- [Payment Methods](/documents/learn-netsuite/netsuite-deployment/prerequisite-syncs/payment-methods.md)
-- [Price Level](/documents/learn-netsuite/netsuite-deployment/prerequisite-syncs/price-level.md)
-- [Configure NetSuite Setting](/documents/system-admin/administration/company/configure-netsuite-setting.md)
+- [SFTP Locations](./sftp-locations.md)
+- [Shipping Methods](./shipping-methods.md)
+- [Payment Methods](./payment-methods.md)
+- [Price Level](./price-level.md)
+- [Configure NetSuite Setting](../../../system-admin/administration/company/configure-netsuite-setting.md)
