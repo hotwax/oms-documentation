@@ -81,7 +81,7 @@ Adjust the additional Product Store settings according to your specific requirem
 | APPR_WO_PMNT_CHK        | Y                                             | Allows approval without payment check.                                          | Y → Order approved without payment received.                                 |
 | AFFECT_QOH_ON_REJ       | TRUE                                          | Adjusts QOH when an order is rejected.                                          | TRUE → QOH updated on rejection.                                             |
 | INV_CNT_VIEW_QOH        | FALSE                                         | Shows QOH in Inventory Count app if TRUE.                                       | FALSE → Hide QOH, TRUE → Show QOH.                                           |
-| FF_DOWNLOAD_PICKLIST    | FALSE                                         | Controls picklist download format (CSV vs PDF).                                 | Set to TRUE to download picklists as CSV for easier filtering.               |
+| `FF_DOWNLOAD_PICKLIST` | FALSE | Determines the download format for picklists (CSV or PDF). | FALSE → Open as PDF, TRUE → Download as CSV. |
 
 
 3. **Create Product Catalog-** A product catalog for the newly created product store needs to be created which defines which product will be sold through the created product store.
