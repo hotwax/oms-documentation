@@ -14,7 +14,7 @@ When retailers deploy HotWax Commerce, a default product store is automatically 
 However, if a retailer has multiple brands, additional product stores need to be created. Follow these steps to create a new product store in HotWax Commerce,
 
 1. **Create Product Store Groups-** In HotWax Commerce, retailers can define product store groups linked to the company. When creating a product store, it is automatically added to the group of the default product store.
-2. **Create Product Store-** You can create a product store through the `Create Product Store` page. Navigate to `Settings` > `Product Stores` from the hamburger menu and click on the `Create` button. This action will open a form for creating a new product store. 
+2. **Create Product Store:** You can create a product store through the `Create Product Store` page. Navigate to `Settings` > `Product Stores` from the hamburger menu and click on the `Create` button. This action will open a form for creating a new product store. 
 
 When a product store is created, HotWax Commerce automatically sets up the following:
 * **Product Catalog:** A catalog named `${productStoreId} Catalog` is created and associated with the store.
@@ -30,7 +30,7 @@ Retailers should fill out the following attributes in the creation form:
 | Company Name        | The name of the company owning the store.                                   | `NotNaked`              |
 | Pay To Party        | The internal organization party responsible for payments.                   | `NotNaked_COMPANY`      |
 | Product Store Group | The group to which this store belongs (e.g., a specific brand group).       | `NotNaked_STORE_GROUP`  |
-| Inventory Facility  | The primary facility where inventory for this store is managed.              | `Main_Warehouse`        |
+| Inventory Facility  | The primary facility where inventory for this store is managed. | `Main_Warehouse`        |
 | Currency            | The default currency used for transactions in this store.                   | `USD`                   |
 
 {% hint style="info" %}
@@ -89,7 +89,7 @@ Adjust the additional Product Store settings according to your specific requirem
 | INV_CNT_VIEW_QOH        | FALSE                                         | Shows QOH in Inventory Count app if TRUE.                                       | FALSE → Hide QOH, TRUE → Show QOH.                                           |
 | FF_DOWNLOAD_PICKLIST    | FALSE                                         | Controls picklist download format (CSV vs PDF).                                 | Set to TRUE to download picklists as CSV for easier filtering.               |
 
-3. **Verify Automated Setup-** After creating the product store, you can verify that the catalog and categories were created correctly:
+3. **Verify Automated Setup:** After creating the product store, you can verify that the catalog and categories were created correctly:
    * Navigate to `Settings` > `Product Stores`.
    * Find your newly created store and click on it to open the `View Product Store` page.
    * Verify that the `Product Catalog` section shows the correctly linked catalog.
