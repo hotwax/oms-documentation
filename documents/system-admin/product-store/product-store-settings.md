@@ -29,6 +29,7 @@ These settings govern inventory allocation, fulfillment behavior, and app-level 
 | `DISABLE_UNPACK` | Disable unpack button | Controls visibility of the "Unpack" button in fulfillment workflows. | Restricts users from reversing packing operations. |
 | `PCKGING_BOX_ALGO` | Packaging box algo | Algorithm used to suggest the best box size for an order. | Optimizes packaging efficiency and shipping costs. |
 | `RATE_SHOPPING` | Rate shopping | Enables or disables the rate shopping feature in the OMS. | Allows comparing shipping rates across multiple carriers. |
+| `FF_DOWNLOAD_PICKLIST` | Download picklist as CSV | Determines whether the picklist is downloaded as a CSV file or opened as a PDF. | Provides flexibility for store associates to filter and sort picklist data in external tools. |
 
 ## Store pickup (BOPIS) settings
 
