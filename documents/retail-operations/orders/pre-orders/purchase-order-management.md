@@ -27,6 +27,23 @@ Once the merchandiser has located their desired purchase order, they can execute
 
 <figure><img src="../../.gitbook/assets/purchase-order-page.png" alt=""><figcaption><p>Find Purchase Order</p></figcaption></figure>
 
+## Export Associated Sales Orders
+
+Merchandisers can export a CSV of all sales orders associated with a specific purchase order. This feature is particularly useful when a purchase order is delayed, as it helps identify the exactly which sales orders are impacted. By exporting this list after reviewing allocations, merchandisers can quickly take necessary actions for the affected orders.
+
+The `Export CSV` button is located in the `Purchase Order Summary` section of the `Purchase Order Detail` page, and is available when the purchase order is in `Created` or `Approved` status.
+
+The exported CSV includes the following details for each associated sales order:
+* Order ID
+* External ID 
+* Status
+* Order Date
+* Customer Name
+* Email
+* Phone
+
+This granular information allows CSR and merchandiser teams to proactively reach out to customers if a purchase order is delayed, providing a better customer experience by keeping them informed about their order status.
+
 ## Cancel Purchase Order
 
 Merchandisers may opt to cancel purchase orders due to various reasons such as supplier issues or lack of demand. HotWax Commerce allows the cancellation of uploaded purchase orders by following these steps:
