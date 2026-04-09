@@ -126,8 +126,9 @@ We expect it to be hardcoded "2".
   * The field is associated with the `paymentMethodTypeId` in the `OrderPaymentPreferenceAndType`.
     * 1 - EXT_SHP_SFTBNK_PYMT
     * 2 - EXT\_SHOP\_CASH\_ON\_DEL
-    * 3 - EXT_SHP_SHPFY_PYMT
+    * 3 - EXT\_SHP\_SHPFY\_PYMT
     * 4 - EXT\_SHP\_ PAIDY
+  * NOTE: Other payment methods which are not mapped will be sent as default value `1`
   * Gift card payments are still processed through Shopify Payments which is will be mapped to `1`
 
 {% hint style="warning" %}
