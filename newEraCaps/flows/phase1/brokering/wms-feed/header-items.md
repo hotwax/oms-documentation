@@ -118,17 +118,18 @@ We expect it to be hardcoded "2".
 * **Additional Information:**
   * This field represents the type of payment for the order.
   * Numeric values are assigned as follows:
-    * 1 = Prepaid (Credit Card)
+    * 1 = Softbank Payment 
     * 2 = Cash on Delivery
-    * 3 = Amazon Pay
+    * 3 = Shopify Payment
     * 4 = Paidy
   * The payment method of the order is checked, and the value is populated accordingly (1, 2, 3, or 4).
   * The field is associated with the `paymentMethodTypeId` in the `OrderPaymentPreferenceAndType`.
-    * 1 - EXT\_SHP\_SHPFY\_PYMT
+    * 1 - EXT_SHP_SFTBNK_PYMT
     * 2 - EXT\_SHOP\_CASH\_ON\_DEL
-    * 3 - EXT\_SHP\_AMZN\_PAY
-    * 4 - EXT\_SHP\_ PAIDY
-  * Gift card payments are still processed through Shopify Payments which is will be mapped to `1`
+    * 3 - EXT\_SHP\_SHPFY\_PYMT
+    * 4 - EXT\_SHP\_PAIDY
+  * NOTE: Other payment methods which are not mapped will be sent as default value `1`
+  * Gift card payments are still processed through Shopify Payments which is will be mapped to `3`
 
 {% hint style="warning" %}
 **DLV PAYMENT S-15 and S-16** fields are for Cash on Delivery orders ONLY. Leave empty for other payment types.
