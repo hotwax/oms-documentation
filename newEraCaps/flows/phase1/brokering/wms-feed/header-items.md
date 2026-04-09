@@ -129,7 +129,7 @@ We expect it to be hardcoded "2".
     * 3 - EXT\_SHP\_SHPFY\_PYMT
     * 4 - EXT\_SHP\_ PAIDY
   * NOTE: Other payment methods which are not mapped will be sent as default value `1`
-  * Gift card payments are still processed through Shopify Payments which is will be mapped to `1`
+  * Gift card payments are still processed through Shopify Payments which is will be mapped to `3`
 
 {% hint style="warning" %}
 **DLV PAYMENT S-15 and S-16** fields are for Cash on Delivery orders ONLY. Leave empty for other payment types.
