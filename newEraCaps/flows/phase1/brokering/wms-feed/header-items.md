@@ -127,7 +127,7 @@ We expect it to be hardcoded "2".
     * 1 - EXT_SHP_SFTBNK_PYMT
     * 2 - EXT\_SHOP\_CASH\_ON\_DEL
     * 3 - EXT\_SHP\_SHPFY\_PYMT
-    * 4 - EXT\_SHP\_ PAIDY
+    * 4 - EXT\_SHP\_PAIDY
   * NOTE: Other payment methods which are not mapped will be sent as default value `1`
   * Gift card payments are still processed through Shopify Payments which is will be mapped to `3`
 
