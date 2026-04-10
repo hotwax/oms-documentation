@@ -12,7 +12,7 @@ export function loadSyncState() {
         return { months: {} };
     }
 
-    return JSON.parse(fs.readFileSync(filePath, "utf8"));
+    return migrateSyncState(JSON.parse(fs.readFileSync(filePath, "utf8")));
 }
 
 export function saveSyncState(state) {
@@ -21,10 +21,47 @@ export function saveSyncState(state) {
     if (!fs.existsSync(directory)) {
         fs.mkdirSync(directory, { recursive: true });
     }
-    fs.writeFileSync(filePath, JSON.stringify(state, null, 2) + "\n");
+    fs.writeFileSync(filePath, JSON.stringify(migrateSyncState(state), null, 2) + "\n");
 }
 
-export function seedSyncStateForManifest(state, manifest, sourceCommit = null) {
+function normalizeStateItem(item, fallback = {}) {
+    const publishedAt = item.lastPublishedAt || item.firstPublishedAt || item.publishedAt || null;
+    return {
+        filePath: item.filePath || fallback.filePath || "",
+        contentType: item.contentType || fallback.contentType || "",
+        slug: item.slug || fallback.slug || "",
+        contentHash: item.contentHash || fallback.contentHash || "",
+        status: item.status || "pending",
+        hubspotPostId: item.hubspotPostId || null,
+        hubspotUrl: item.hubspotUrl || null,
+        lastAttemptAt: item.lastAttemptAt || null,
+        firstPublishedAt: item.firstPublishedAt || publishedAt,
+        lastPublishedAt: item.lastPublishedAt || publishedAt,
+        lastAction: item.lastAction || (publishedAt ? "publish" : null),
+        replayCount: Number.isInteger(item.replayCount) ? item.replayCount : 0,
+        lastReplayReason: item.lastReplayReason || null,
+        error: item.error || null,
+        sourceCommit: item.sourceCommit || fallback.sourceCommit || null
+    };
+}
+
+export function migrateSyncState(state) {
+    const nextState = { months: {} };
+    const months = state?.months || {};
+
+    for (const [month, monthState] of Object.entries(months)) {
+        const items = {};
+        for (const [key, item] of Object.entries(monthState?.items || {})) {
+            items[key] = normalizeStateItem(item);
+        }
+        nextState.months[month] = { items };
+    }
+
+    return nextState;
+}
+
+export function seedSyncStateForManifest(state, manifest, sourceCommit = null, options = {}) {
+    const mode = options.mode || manifest.mode || "monthly";
     if (!state.months) state.months = {};
     if (!state.months[manifest.month]) {
         state.months[manifest.month] = { items: {} };
@@ -34,8 +71,16 @@ export function seedSyncStateForManifest(state, manifest, sourceCommit = null) {
     if (!monthState.items) monthState.items = {};
 
     for (const item of manifest.items) {
-        const existing = monthState.items[item.key];
-        const nextStatus = existing && existing.status === "published" && existing.contentHash === item.contentHash
+        const existing = normalizeStateItem(monthState.items[item.key] || {}, {
+            filePath: item.filePath,
+            contentType: item.contentType,
+            slug: item.slug,
+            contentHash: item.contentHash,
+            sourceCommit
+        });
+        const nextStatus = mode === "replay"
+            ? "pending"
+            : existing && existing.status === "published" && existing.contentHash === item.contentHash
             ? "published"
             : "pending";
 
@@ -45,12 +90,16 @@ export function seedSyncStateForManifest(state, manifest, sourceCommit = null) {
             slug: item.slug,
             contentHash: item.contentHash,
             status: nextStatus,
-            hubspotPostId: existing?.hubspotPostId || null,
-            hubspotUrl: existing?.hubspotUrl || null,
-            lastAttemptAt: existing?.lastAttemptAt || null,
-            publishedAt: nextStatus === "published" ? existing?.publishedAt || null : null,
+            hubspotPostId: existing.hubspotPostId,
+            hubspotUrl: existing.hubspotUrl,
+            lastAttemptAt: existing.lastAttemptAt,
+            firstPublishedAt: existing.firstPublishedAt,
+            lastPublishedAt: nextStatus === "published" ? existing.lastPublishedAt : null,
+            lastAction: nextStatus === "published" ? existing.lastAction || "publish" : null,
+            replayCount: existing.replayCount,
+            lastReplayReason: mode === "replay" ? (options.replayReason || manifest.replayReason || null) : existing.lastReplayReason,
             error: null,
-            sourceCommit: sourceCommit || existing?.sourceCommit || null
+            sourceCommit: sourceCommit || existing.sourceCommit || null
         };
     }
 

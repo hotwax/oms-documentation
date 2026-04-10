@@ -173,13 +173,3 @@ Return only the product update content, formatted in clean, standard Markdown su
 
     return await analyzeWithGemini(prompt, CONFIG.MODEL_CONFIG.PRODUCT_UPDATER);
 }
-
-/**
- * Updates the PR FAQ file status to 'completed'.
- */
-export function markFAQAsCompleted(faq, targetMonth) {
-    const content = fs.readFileSync(faq.filePath, 'utf8');
-    const updatedContent = content.replace(/status:\s*pending/, `status: completed\npublished_at: ${targetMonth}`);
-    fs.writeFileSync(faq.filePath, updatedContent);
-    console.log(`  ✓ Updated status of ${faq.filename} to completed.`);
-}

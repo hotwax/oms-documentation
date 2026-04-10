@@ -12,6 +12,7 @@
     "scripts": {
         "generate:monthly": "node scripts/generate_updates.js",
         "publish:monthly": "node scripts/publish_monthly_content.js",
-        "validate:manifest": "node scripts/validate_manifest.js"
+        "validate:manifest": "node scripts/validate_manifest.js",
+        "validate:state": "node scripts/validate_state.js"
     }
 }

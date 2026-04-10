@@ -28,7 +28,7 @@ export async function validatePublishingTargets() {
     await Promise.all([getBlogById(blogId), getAuthorById(authorId)]);
 }
 
-export async function publishManifestItem(manifestItem, stateItem, state, month) {
+export async function publishManifestItem(manifestItem, stateItem, state, month, mode = "monthly") {
     const markdownContent = fs.readFileSync(manifestItem.filePath, "utf8");
     const html = markdownToHtml(markdownContent);
     const tagIds = await ensureTagIds(manifestItem.tagNames, CONFIG.PUBLISHING.hubspot.language);
@@ -49,8 +49,13 @@ export async function publishManifestItem(manifestItem, stateItem, state, month)
     const [year, monthNum] = month.split("-").map(Number);
     const publishDate = new Date(Date.UTC(year, monthNum - 1, 1)).getTime();
 
+    const isReplay = mode === "replay";
+
     let post;
     if (!existingPost) {
+        if (isReplay) {
+            throw new Error(`Replay target for ${manifestItem.key} not found in HubSpot`);
+        }
         post = await createDraftPost(manifestItem, html, tagIds, publishDate);
         post = await publishDraftPost(post.id, manifestItem, html, tagIds, publishDate);
     } else {
@@ -72,7 +77,11 @@ export async function publishManifestItem(manifestItem, stateItem, state, month)
         hubspotPostId: post.id,
         hubspotUrl: post.url,
         lastAttemptAt: new Date().toISOString(),
-        publishedAt: new Date().toISOString(),
+        firstPublishedAt: stateItem?.firstPublishedAt || new Date().toISOString(),
+        lastPublishedAt: new Date().toISOString(),
+        lastAction: isReplay ? "replay" : "publish",
+        replayCount: isReplay ? (stateItem?.replayCount || 0) + 1 : (stateItem?.replayCount || 0),
+        lastReplayReason: isReplay ? stateItem?.lastReplayReason || null : stateItem?.lastReplayReason || null,
         error: null
     });
 }

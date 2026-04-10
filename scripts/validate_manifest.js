@@ -24,6 +24,14 @@ assert(fs.existsSync(manifestPath), `Publish manifest not found at ${manifestPat
 
 const manifest = JSON.parse(fs.readFileSync(manifestPath, "utf8"));
 assert(typeof manifest.month === "string" && /^\d{4}-\d{2}$/.test(manifest.month), "Manifest month must be YYYY-MM");
+assert(manifest.mode === "monthly" || manifest.mode === "replay", "Manifest mode must be monthly or replay");
+assert(typeof manifest.requestedAt === "string" && manifest.requestedAt.length > 0, "Manifest requestedAt is required");
+assert(typeof manifest.requestedBy === "string" && manifest.requestedBy.length > 0, "Manifest requestedBy is required");
+if (manifest.mode === "replay") {
+    assert(typeof manifest.replayReason === "string" && manifest.replayReason.trim().length > 0, "Replay manifest must include replayReason");
+} else {
+    assert(manifest.replayReason === null, "Monthly manifest replayReason must be null");
+}
 assert(Array.isArray(manifest.items), "Manifest items must be an array");
 
 const seenKeys = new Set();

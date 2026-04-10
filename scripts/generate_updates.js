@@ -36,8 +36,10 @@ import fs from "fs";
         throw new Error("Missing required environment variable: GEMINI_API_KEY");
     }
 
+    const generationMode = process.env.GENERATION_MODE === "replay" ? "replay" : "monthly";
     const targetMonth = getTargetMonth(CONFIG.MONTH, CONFIG.PUBLISHING.automation.timezone);
     console.log(`📅 Target Month: ${targetMonth}`);
+    console.log(`🧭 Generation Mode: ${generationMode}`);
     console.log(`🚀 Starting Stage 0: Discovery & Fetching...`);
 
     const repoMetadata = {};
@@ -239,6 +241,9 @@ import fs from "fs";
     savePublishManifest(targetMonth, manifest);
 
     const sourceCommit = process.env.GITHUB_SHA || execSync("git rev-parse HEAD").toString().trim();
-    const syncState = seedSyncStateForManifest(loadSyncState(), manifest, sourceCommit);
+    const syncState = seedSyncStateForManifest(loadSyncState(), manifest, sourceCommit, {
+        mode: generationMode,
+        replayReason: process.env.REPLAY_REASON || null
+    });
     saveSyncState(syncState);
 })();

@@ -119,7 +119,11 @@ export function buildProductUpdateArtifact(targetMonth, title, body, sourceFaq) 
 export function createPublishManifest(targetMonth, items) {
     return {
         month: targetMonth,
+        mode: process.env.GENERATION_MODE === "replay" ? "replay" : "monthly",
         generatedAt: new Date().toISOString(),
+        requestedAt: new Date().toISOString(),
+        requestedBy: process.env.GITHUB_ACTOR || "local",
+        replayReason: process.env.GENERATION_MODE === "replay" ? (process.env.REPLAY_REASON || null) : null,
         items
     };
 }

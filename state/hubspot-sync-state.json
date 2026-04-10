@@ -11,7 +11,11 @@
           "hubspotPostId": "326217160424",
           "hubspotUrl": "https://www.hotwax.co/product-updates/release-notes/2026-01",
           "lastAttemptAt": "2026-03-20T04:34:21.630Z",
-          "publishedAt": "2026-03-20T04:34:21.630Z",
+          "firstPublishedAt": "2026-03-20T04:34:21.630Z",
+          "lastPublishedAt": "2026-03-20T04:34:21.630Z",
+          "lastAction": "publish",
+          "replayCount": 0,
+          "lastReplayReason": null,
           "error": null,
           "sourceCommit": "5f9a9a9b1629fe4e9e5aa33b3aafcb163c5ae72d"
         },
@@ -24,24 +28,11 @@
           "hubspotPostId": "326217160421",
           "hubspotUrl": "https://www.hotwax.co/product-updates/2026-01/recovering-bopis-sales-with-ship-to-store-fulfillment",
           "lastAttemptAt": "2026-03-20T04:34:24.950Z",
-          "publishedAt": "2026-03-20T04:34:24.950Z",
-          "error": null,
-          "sourceCommit": "5f9a9a9b1629fe4e9e5aa33b3aafcb163c5ae72d"
-        }
-      }
-    },
-    "2026-02": {
-      "items": {
-        "release-notes:2026-02": {
-          "filePath": "drafts/2026-02/release-notes.md",
-          "contentType": "release-note",
-          "slug": "product-updates/release-notes/2026-02",
-          "contentHash": "280175db37c0ba92f56bbc570e80005d75833b6ddb0e651d2c7362b51e0b02e7",
-          "status": "published",
-          "hubspotPostId": "326217160428",
-          "hubspotUrl": "https://www.hotwax.co/product-updates/release-notes/2026-02",
-          "lastAttemptAt": "2026-03-20T04:54:18.254Z",
-          "publishedAt": "2026-03-20T04:54:18.254Z",
+          "firstPublishedAt": "2026-03-20T04:34:24.950Z",
+          "lastPublishedAt": "2026-03-20T04:34:24.950Z",
+          "lastAction": "publish",
+          "replayCount": 0,
+          "lastReplayReason": null,
           "error": null,
           "sourceCommit": "5f9a9a9b1629fe4e9e5aa33b3aafcb163c5ae72d"
         }
@@ -58,7 +49,11 @@
           "hubspotPostId": "326217160435",
           "hubspotUrl": "https://www.hotwax.co/product-updates/release-notes/2026-02",
           "lastAttemptAt": "2026-03-20T06:07:11.559Z",
-          "publishedAt": "2026-03-20T06:07:11.563Z",
+          "firstPublishedAt": "2026-03-20T06:07:11.563Z",
+          "lastPublishedAt": "2026-03-20T06:07:11.563Z",
+          "lastAction": "publish",
+          "replayCount": 0,
+          "lastReplayReason": null,
           "error": null,
           "sourceCommit": "65d6a1a07f845f406c005315c2ea116bf2e2939e"
         }

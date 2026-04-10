@@ -1,6 +1,10 @@
 {
   "month": "2026-02",
+  "mode": "monthly",
   "generatedAt": "2026-03-20T05:35:31.687Z",
+  "requestedAt": "2026-03-20T05:35:31.687Z",
+  "requestedBy": "manual",
+  "replayReason": null,
   "items": [
     {
       "key": "release-notes:2026-02",

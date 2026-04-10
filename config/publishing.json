@@ -7,7 +7,7 @@
       "tagNames": [
         "Release Note"
       ],
-      "slugPattern": "product-updates/release-notes/{month}"
+      "slugPattern": "release-notes/{month}"
     },
     "productUpdates": {
       "tagNames": [
@@ -17,7 +17,8 @@
     }
   },
   "automation": {
-    "prBranchPrefix": "product-updates/monthly",
+    "monthlyBranchPrefix": "product-updates/monthly",
+    "replayBranchPrefix": "product-updates/replay",
     "timezone": "UTC"
   }
 }

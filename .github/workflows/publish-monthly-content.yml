@@ -49,12 +49,14 @@ jobs:
         run: |
           SHOULD_PUBLISH="true"
           if [ "${{ github.event_name }}" = "pull_request" ]; then
-            EXPECTED_PREFIX="$(node -e "console.log(JSON.parse(require('fs').readFileSync('config/publishing.json', 'utf8')).automation.prBranchPrefix)")"
+            MONTHLY_PREFIX="$(node -e "console.log(JSON.parse(require('fs').readFileSync('config/publishing.json', 'utf8')).automation.monthlyBranchPrefix)")"
+            REPLAY_PREFIX="$(node -e "console.log(JSON.parse(require('fs').readFileSync('config/publishing.json', 'utf8')).automation.replayBranchPrefix)")"
             if [ "${{ github.event.pull_request.base.ref }}" != "${{ steps.base.outputs.base_branch }}" ]; then
               SHOULD_PUBLISH="false"
             fi
             case "${{ github.event.pull_request.head.ref }}" in
-              "$EXPECTED_PREFIX"*) ;;
+              "$MONTHLY_PREFIX"*) ;;
+              "$REPLAY_PREFIX"*) ;;
               *) SHOULD_PUBLISH="false" ;;
             esac
           fi
@@ -82,7 +84,9 @@ jobs:
         if: steps.guard.outputs.should_publish == 'true'
         env:
           MANIFEST_PATH: ${{ steps.manifest.outputs.manifest_path }}
-        run: npm run validate:manifest
+        run: |
+          npm run validate:manifest
+          npm run validate:state
 
       - name: Publish to HubSpot
         id: publish
