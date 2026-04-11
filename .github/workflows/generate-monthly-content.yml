@@ -41,6 +41,15 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Resolve source repos
+        id: source-repos
+        run: |
+          SOURCE_REPOS="${{ vars.SOURCE_REPOS }}"
+          if [ -z "$SOURCE_REPOS" ]; then
+            SOURCE_REPOS="hotwax/receiving,hotwax/bopis,hotwax/fulfillment,hotwax/inventory-count,hotwax/transfers,hotwax/facilities,hotwax/preorder,hotwax/oms"
+          fi
+          echo "source_repos=$SOURCE_REPOS" >> "$GITHUB_OUTPUT"
+
       - name: Resolve target month and branch
         id: meta
         run: |
@@ -56,7 +65,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          SOURCE_REPOS: ${{ vars.SOURCE_REPOS }}
+          SOURCE_REPOS: ${{ steps.source-repos.outputs.source_repos }}
           PRODUCTION: "true"
           MONTH: ${{ steps.meta.outputs.target_month }}
           GENERATION_MODE: "monthly"
