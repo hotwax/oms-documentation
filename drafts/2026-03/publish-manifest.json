@@ -1,0 +1,22 @@
+{
+  "month": "2026-03",
+  "mode": "monthly",
+  "generatedAt": "2026-04-11T06:01:19.950Z",
+  "requestedAt": "2026-04-11T06:01:19.950Z",
+  "requestedBy": "dt2patel",
+  "replayReason": null,
+  "items": [
+    {
+      "key": "release-notes:2026-03",
+      "contentType": "release-note",
+      "title": "March 2026 Release Notes",
+      "slug": "release-notes/2026-03",
+      "filePath": "drafts/2026-03/release-notes.md",
+      "metaDescription": "This month we focused on providing more visibility into inventory counts and giving you better control over how product information connects to Shopify. These…",
+      "tagNames": [
+        "Release Note"
+      ],
+      "contentHash": "1cf2623ce54889888329da27b0502afe4cc3c9df3a98255e25bd3f41112ab7d8"
+    }
+  ]
+}

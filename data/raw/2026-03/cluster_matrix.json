@@ -1,94 +1,77 @@
 {
   "clusters": [
     {
-      "name": "Shopify Listing Synchronization",
-      "reason": "Resolves data parsing mismatches between Shopify and Solr, manages the visibility of disconnected shop configurations, and provides messaging for products missing store links.",
+      "name": "Shopify Catalog Synchronization",
+      "reason": "Groups all items related to Shopify listing visibility, Solr data parsing for Shopify variants, and status messaging for disconnected shops within the Pre-Order application.",
       "itemIds": [
         "hotwax/preorder#365",
-        "hotwax/preorder#155",
-        "hotwax/preorder#254",
-        "hotwax/preorder#232",
         "hotwax/preorder#345",
         "hotwax/preorder#346",
-        "hotwax/preorder#342"
+        "hotwax/preorder#342",
+        "hotwax/preorder#254",
+        "hotwax/preorder#232",
+        "hotwax/preorder#155"
       ]
     },
     {
-      "name": "Product Identifiers",
-      "reason": "Standardizes the selection and display of product identification types (SKU, UPC, etc.) within application settings and manages the necessary administrative permissions for these configurations.",
+      "name": "Order Parking Management",
+      "reason": "Consolidates features allowing users to select specific virtual queues (parking) for fetching and releasing orders based on user preferences.",
       "itemIds": [
-        "hotwax/transfers#189",
+        "hotwax/preorder#206",
+        "hotwax/preorder#204"
+      ]
+    },
+    {
+      "name": "Product Identifier Configuration",
+      "reason": "Includes changes to how product identifiers (SKUs, IDs) are displayed, permissioned, and managed within the application settings.",
+      "itemIds": [
         "hotwax/preorder#366",
-        "hotwax/preorder#351",
         "hotwax/preorder#344",
         "hotwax/preorder#354",
+        "hotwax/preorder#351",
         "hotwax/preorder#364"
       ]
     },
     {
-      "name": "Order Queue Management",
-      "reason": "Enables user selection of specific virtual facilities and order parking queues when fetching or releasing orders.",
+      "name": "Inventory Variance Logs",
+      "reason": "Focuses on the capture and aggregation of physical count scan events and variance reporting in the local database.",
       "itemIds": [
-        "hotwax/preorder#204",
-        "hotwax/preorder#206"
+        "hotwax/inventory-count#1382"
       ]
     },
     {
-      "name": "Shopify Integration Management",
-      "reason": "Consolidates integration health monitoring, setup automation for AWS and webhooks, and technical upgrades for GraphQL API compatibility.",
+      "name": "Transfer Order Recordkeeping",
+      "reason": "Covers updates to the metadata and timing accuracy for received transfer order records.",
       "itemIds": [
-        "hotwax/hotwax-maarg-util#28",
-        "hotwax/mantle-shopify-connector#271",
-        "hotwax/hotwax-shopify-oms-bridge#74"
+        "hotwax/receiving#656"
       ]
     },
     {
-      "name": "Returns Management",
-      "reason": "Syncs customer return reason notes from Shopify to the OMS and ensures data integrity during refund adjustment processing.",
+      "name": "Settings Screen Layout",
+      "reason": "Addresses user interface visibility issues where dropdown selections were previously obstructed by screen boundaries.",
       "itemIds": [
-        "hotwax/mantle-shopify-connector#276",
-        "hotwax/hotwax-shopify-oms-bridge#70",
-        "hotwax/hotwax-shopify-oms-bridge#75"
+        "hotwax/transfers#189"
       ]
     },
     {
-      "name": "Order History Synchronization",
-      "reason": "Refines historical data migration by filtering for unfulfilled orders and improving the resilience of transaction processing logs.",
+      "name": "Application Component Permissions",
+      "reason": "Manages the visibility of cross-application navigation components based on specific user security roles.",
       "itemIds": [
-        "hotwax/mantle-shopify-connector#274",
-        "hotwax/hotwax-shopify-oms-bridge#72"
-      ]
-    },
-    {
-      "name": "Transfer Order Synchronization",
-      "reason": "Expands the Transfer Order Acknowledgment feed to include item-level detail required for external system synchronization.",
-      "itemIds": [
-        "hotwax/mantle-netsuite-connector#208"
-      ]
-    },
-    {
-      "name": "Inventory Cycle Count",
-      "reason": "Enables the import of external identification data for inventory cycle counts from NetSuite via SFTP.",
-      "itemIds": [
-        "hotwax/mantle-netsuite-connector#200"
-      ]
-    },
-    {
-      "name": "Application Navigation",
-      "reason": "Adjusts the behavior of the Launchpad access and standardizes layout styling across navigation components.",
-      "itemIds": [
-        "hotwax/preorder#356",
-        "hotwax/preorder#355"
+        "hotwax/preorder#356"
       ]
     }
   ],
   "noiseItemIds": [
+    "hotwax/receiving#657",
+    "hotwax/inventory-count#1386",
     "hotwax/preorder#104",
     "hotwax/preorder#343",
     "hotwax/preorder#353",
     "hotwax/preorder#357",
-    "hotwax/preorder#358",
-    "hotwax/OrderRouting#111"
+    "hotwax/preorder#355",
+    "hotwax/preorder#358"
   ],
-  "needClarificationItemIds": []
+  "needClarificationItemIds": [
+    "hotwax/fulfillment#1586"
+  ]
 }
