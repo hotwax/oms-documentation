@@ -23,7 +23,7 @@ jobs:
         run: |
           BASE_BRANCH="${{ vars.AUTOMATION_BASE_BRANCH }}"
           if [ -z "$BASE_BRANCH" ]; then
-            BASE_BRANCH="${{ github.event.repository.default_branch }}"
+            BASE_BRANCH="multi-agent-product-update-pub"
           fi
           echo "base_branch=$BASE_BRANCH" >> "$GITHUB_OUTPUT"
 
