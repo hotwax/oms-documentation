@@ -46,7 +46,7 @@ jobs:
         run: |
           SOURCE_REPOS="${{ vars.SOURCE_REPOS }}"
           if [ -z "$SOURCE_REPOS" ]; then
-            SOURCE_REPOS="hotwax/receiving,hotwax/bopis,hotwax/fulfillment,hotwax/inventory-count,hotwax/transfers,hotwax/facilities,hotwax/preorder,hotwax/oms"
+            SOURCE_REPOS="hotwax/receiving,hotwax/bopis,hotwax/fulfillment,hotwax/inventory-count,hotwax/transfers,hotwax/facilities,hotwax/preorder,hotwax/job-manager,hotwax/hotwax-maarg-util,hotwax/mantle-shopify-connector,hotwax/oms,hotwax/dxp-components,hotwax/hotwax-shopify-oms-bridge,hotwax/hotwax-oms,hotwax/hotwax-poorti,hotwax/hotwax-ofbiz-oms-usl,hotwax/mantle-netsuite-connector,hotwax/hotwax-unigate,hotwax/OrderRouting"
           fi
           echo "source_repos=$SOURCE_REPOS" >> "$GITHUB_OUTPUT"
 
