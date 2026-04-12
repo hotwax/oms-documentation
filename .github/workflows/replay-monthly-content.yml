@@ -51,7 +51,7 @@ jobs:
 
       - name: Regenerate month in replay mode
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ORG_GIT_API: ${{ secrets.ORG_GIT_API }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           SOURCE_REPOS: ${{ vars.SOURCE_REPOS }}
           PRODUCTION: "true"

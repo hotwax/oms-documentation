@@ -12,7 +12,7 @@ const publishingConfig = loadJsonConfig(path.join("config", "publishing.json"));
 export const CONFIG = {
     SOURCE_REPOS: process.env.SOURCE_REPOS,
     MONTH: process.env.MONTH, // Format: YYYY-MM (e.g., 2026-01)
-    GITHUB_TOKEN: process.env.GITHUB_TOKEN,
+    ORG_GIT_API: process.env.ORG_GIT_API,
     GEMINI_API_KEY: process.env.GEMINI_API_KEY,
     HUBSPOT_PRIVATE_APP_TOKEN: process.env.HUBSPOT_PRIVATE_APP_TOKEN,
     PRODUCTION: process.env.PRODUCTION === 'true',

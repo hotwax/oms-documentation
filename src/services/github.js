@@ -3,11 +3,11 @@ import { CONFIG } from "../config/index.js";
 import { isInTargetMonth, isDefaultBody } from "../utils/index.js";
 
 function getOctokit() {
-    if (!CONFIG.GITHUB_TOKEN) {
-        throw new Error("Missing required environment variable: GITHUB_TOKEN");
+    if (!CONFIG.ORG_GIT_API) {
+        throw new Error("Missing required environment variable: ORG_GIT_API");
     }
 
-    return new Octokit({ auth: CONFIG.GITHUB_TOKEN });
+    return new Octokit({ auth: CONFIG.ORG_GIT_API });
 }
 
 export async function fetchMonthlyReleases(owner, repo, targetMonth) {

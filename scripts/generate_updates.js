@@ -29,8 +29,8 @@ import { execSync } from "child_process";
 import fs from "fs";
 
 (async () => {
-    if (!CONFIG.SOURCE_REPOS || !CONFIG.GITHUB_TOKEN) {
-        throw new Error("Missing required environment variables: SOURCE_REPOS and GITHUB_TOKEN");
+    if (!CONFIG.SOURCE_REPOS || !CONFIG.ORG_GIT_API) {
+        throw new Error("Missing required environment variables: SOURCE_REPOS and ORG_GIT_API");
     }
     if (!CONFIG.GEMINI_API_KEY && !CONFIG.DRY_RUN) {
         throw new Error("Missing required environment variable: GEMINI_API_KEY");
