@@ -12,6 +12,7 @@ on:
 
 permissions:
   contents: write
+  pull-requests: write
 
 jobs:
   publish:
@@ -99,18 +100,35 @@ jobs:
           SOURCE_REPOS: ${{ vars.SOURCE_REPOS }}
         run: npm run publish:monthly
 
-      - name: Commit sync state updates
-        if: steps.guard.outputs.should_publish == 'true'
+      - name: Resolve published release notes URL
+        id: published
+        if: steps.guard.outputs.should_publish == 'true' && steps.publish.outcome == 'success'
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add state/hubspot-sync-state.json
-          if git diff --cached --quiet; then
-            echo "No sync state changes to commit."
-            exit 0
-          fi
-          git commit -m "chore(sync): update HubSpot state for ${{ steps.manifest.outputs.month }}"
-          git push origin HEAD:${{ steps.base.outputs.base_branch }}
+          PUBLISHED_URL="$(node -e "const fs = require('fs'); const manifest = JSON.parse(fs.readFileSync(process.env.MANIFEST_PATH, 'utf8')); const state = JSON.parse(fs.readFileSync('state/hubspot-sync-state.json', 'utf8')); const monthState = state.months?.[manifest.month]?.items || {}; const releaseNote = manifest.items.find((item) => item.contentType === 'release-note'); if (!releaseNote) process.exit(1); const publishedUrl = monthState[releaseNote.key]?.hubspotUrl; if (!publishedUrl) process.exit(1); console.log(publishedUrl);" )"
+          echo "release_notes_url=$PUBLISHED_URL" >> "$GITHUB_OUTPUT"
+
+      - name: Create or update sync state PR
+        if: steps.guard.outputs.should_publish == 'true' && steps.publish.outcome == 'success'
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          base: ${{ steps.base.outputs.base_branch }}
+          branch: automation/publish-sync-${{ steps.manifest.outputs.month }}
+          commit-message: "chore(sync): update HubSpot state for ${{ steps.manifest.outputs.month }}"
+          title: "chore(sync): update HubSpot publish state for ${{ steps.manifest.outputs.month }}"
+          body: |
+            Records the HubSpot publish status update for `${{ steps.manifest.outputs.month }}`.
+
+            Published release notes:
+            - [${{ steps.manifest.outputs.month }} release notes](${{ steps.published.outputs.release_notes_url }})
+
+            Merge instructions:
+            - Merge this PR after confirming the published page looks correct.
+            - Turn on "Delete branch" when merging so the automation branch does not need to be pruned later.
+          labels: |
+            automation
+            publish-sync
+          assignees: dt2patel
 
       - name: Fail if publish failed
         if: steps.guard.outputs.should_publish == 'true' && steps.publish.outcome == 'failure'
