@@ -69,7 +69,7 @@ async function main() {
 
     const releaseNote = manifest.items.find((item) => item.contentType === "release-note");
     const publishedReleaseNotesUrl = releaseNote
-        ? getMonthState(state, manifest.month)[releaseNote.key]?.hubspotUrl || ""
+        ? monthState[releaseNote.key]?.hubspotUrl || ""
         : "";
     writeGithubOutput("release_notes_url", publishedReleaseNotesUrl);
 
