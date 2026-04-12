@@ -1,0 +1,22 @@
+{
+  "month": "2026-03",
+  "mode": "monthly",
+  "generatedAt": "2026-04-12T03:31:59.455Z",
+  "requestedAt": "2026-04-12T03:31:59.455Z",
+  "requestedBy": "dt2patel",
+  "replayReason": null,
+  "items": [
+    {
+      "key": "release-notes:2026-03",
+      "contentType": "release-note",
+      "title": "March 2026 Release Notes",
+      "slug": "release-notes/2026-03",
+      "filePath": "drafts/2026-03/release-notes.md",
+      "metaDescription": "In March 2026, we introduced a central dashboard to monitor the health of your Shopify integration and added new tools for managing brands directly in the prod…",
+      "tagNames": [
+        "Release Note"
+      ],
+      "contentHash": "62b582c2036d0ae3964d4aa9313c0c7910858c62db45dd31b265ec4a5f9eee0c"
+    }
+  ]
+}

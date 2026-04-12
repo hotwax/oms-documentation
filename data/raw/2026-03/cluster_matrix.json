@@ -1,0 +1,210 @@
+{
+  "clusters": [
+    {
+      "name": "Shopify Order Synchronization",
+      "reason": "Includes core synchronization updates for Shopify orders, such as POS brokering, bulk transaction processing, and status auto-completion.",
+      "itemIds": [
+        "hotwax/hotwax-shopify-oms-bridge#119",
+        "hotwax/hotwax-shopify-oms-bridge#90",
+        "hotwax/hotwax-shopify-oms-bridge#111",
+        "hotwax/hotwax-shopify-oms-bridge#99",
+        "hotwax/hotwax-shopify-oms-bridge#76",
+        "hotwax/mantle-shopify-connector#274",
+        "hotwax/hotwax-shopify-oms-bridge#95",
+        "hotwax/hotwax-shopify-oms-bridge#103",
+        "hotwax/hotwax-maarg-util#33",
+        "hotwax/oms#434"
+      ]
+    },
+    {
+      "name": "Shopify Integration Dashboard",
+      "reason": "Provides central administration and health monitoring for Shopify integration components, including webhooks and SQS configuration.",
+      "itemIds": [
+        "hotwax/hotwax-shopify-oms-bridge#74",
+        "hotwax/hotwax-shopify-oms-bridge#89",
+        "hotwax/hotwax-shopify-oms-bridge#92",
+        "hotwax/mantle-shopify-connector#271"
+      ]
+    },
+    {
+      "name": "Historical Order Migration",
+      "reason": "Supports importing historical orders and transactions without impacting existing physical inventory levels.",
+      "itemIds": [
+        "hotwax/hotwax-shopify-oms-bridge#109",
+        "hotwax/hotwax-shopify-oms-bridge#72"
+      ]
+    },
+    {
+      "name": "Refunds",
+      "reason": "Groups refund and return processes, including tax rate formatting, exchange order linking, and negative inventory adjustments for returns.",
+      "itemIds": [
+        "hotwax/hotwax-shopify-oms-bridge#124",
+        "hotwax/hotwax-shopify-oms-bridge#86",
+        "hotwax/hotwax-shopify-oms-bridge#79",
+        "hotwax/mantle-shopify-connector#276",
+        "hotwax/hotwax-shopify-oms-bridge#75",
+        "hotwax/hotwax-shopify-oms-bridge#70",
+        "hotwax/hotwax-ofbiz-oms-usl#16",
+        "hotwax/hotwax-oms#436"
+      ]
+    },
+    {
+      "name": "Inventory Adjustments",
+      "reason": "Enables recording and tracking inventory variances across mobile applications and backend services.",
+      "itemIds": [
+        "hotwax/inventory-count#1382",
+        "hotwax/hotwax-poorti#228",
+        "hotwax/hotwax-poorti#225",
+        "hotwax/oms#409"
+      ]
+    },
+    {
+      "name": "Product Catalog",
+      "reason": "Manages product metadata such as brand names, automated clearance categories, and indexing for multi-store visibility.",
+      "itemIds": [
+        "hotwax/hotwax-oms#343",
+        "hotwax/oms#398",
+        "hotwax/oms#433",
+        "hotwax/oms#441",
+        "hotwax/oms#435",
+        "hotwax/hotwax-oms#457",
+        "hotwax/hotwax-oms#438",
+        "hotwax/hotwax-oms#447"
+      ]
+    },
+    {
+      "name": "Preorder Management",
+      "reason": "Updates to the preorder user interface for facility selection, shop connection visibility, and administrative permissions.",
+      "itemIds": [
+        "hotwax/preorder#206",
+        "hotwax/preorder#232",
+        "hotwax/preorder#343",
+        "hotwax/preorder#344",
+        "hotwax/preorder#354",
+        "hotwax/preorder#356",
+        "hotwax/preorder#364"
+      ]
+    },
+    {
+      "name": "Preorder Product Audit",
+      "reason": "Resolves data display issues in the product audit view related to Shopify listings and Solr query exceptions.",
+      "itemIds": [
+        "hotwax/preorder#365",
+        "hotwax/preorder#345",
+        "hotwax/preorder#346",
+        "hotwax/preorder#342"
+      ]
+    },
+    {
+      "name": "Transfer Order Management",
+      "reason": "Focuses on internal inventory movements, including API updates for received dates and item status population.",
+      "itemIds": [
+        "hotwax/receiving#656",
+        "hotwax/oms#426",
+        "hotwax/oms#432"
+      ]
+    },
+    {
+      "name": "NetSuite Integration",
+      "reason": "Facilitates data exchange with NetSuite for cycle counts, transfer order acknowledgments, and exchange orders.",
+      "itemIds": [
+        "hotwax/mantle-netsuite-connector#220",
+        "hotwax/mantle-netsuite-connector#200",
+        "hotwax/mantle-netsuite-connector#208",
+        "hotwax/mantle-netsuite-connector#214"
+      ]
+    },
+    {
+      "name": "System Utility Library",
+      "reason": "Common helper methods and backend services for CSV generation, AWS client management, and job log tracing.",
+      "itemIds": [
+        "hotwax/hotwax-maarg-util#35",
+        "hotwax/hotwax-maarg-util#37",
+        "hotwax/hotwax-maarg-util#32",
+        "hotwax/hotwax-maarg-util#28",
+        "hotwax/mantle-shopify-connector#279",
+        "hotwax/mantle-netsuite-connector#210"
+      ]
+    },
+    {
+      "name": "System Logging",
+      "reason": "Standardization of logging across integration components and order routing services for consistent observability.",
+      "itemIds": [
+        "hotwax/hotwax-shopify-oms-bridge#61",
+        "hotwax/mantle-netsuite-connector#203",
+        "hotwax/OrderRouting#111"
+      ]
+    },
+    {
+      "name": "Facility Configuration",
+      "reason": "Updates for managing facility groups, product store associations, and contact mechanism deletions.",
+      "itemIds": [
+        "hotwax/oms#425",
+        "hotwax/hotwax-oms#356",
+        "hotwax/hotwax-oms#431",
+        "hotwax/hotwax-oms#440",
+        "hotwax/hotwax-oms#465"
+      ]
+    },
+    {
+      "name": "Customer Data",
+      "reason": "Updates to customer-related attributes including geolocation mapping and contact information updates.",
+      "itemIds": [
+        "hotwax/oms#428",
+        "hotwax/hotwax-oms#408",
+        "hotwax/hotwax-shopify-oms-bridge#84"
+      ]
+    },
+    {
+      "name": "Financial Data Feeds",
+      "reason": "Refactors financial feed filtering to use system properties for consistent date-based report generation.",
+      "itemIds": [
+        "hotwax/hotwax-ofbiz-oms-usl#19",
+        "hotwax/mantle-netsuite-connector#216"
+      ]
+    },
+    {
+      "name": "User Interface Components",
+      "reason": "General UI adjustments for better visibility, layout padding, and transaction sorting on management screens.",
+      "itemIds": [
+        "hotwax/transfers#189",
+        "hotwax/hotwax-oms#390",
+        "hotwax/hotwax-oms#344"
+      ]
+    }
+  ],
+  "noiseItemIds": [
+    "hotwax/receiving#657",
+    "hotwax/fulfillment#1586",
+    "hotwax/inventory-count#1386",
+    "hotwax/preorder#366",
+    "hotwax/preorder#204",
+    "hotwax/preorder#155",
+    "hotwax/preorder#104",
+    "hotwax/preorder#254",
+    "hotwax/preorder#351",
+    "hotwax/preorder#353",
+    "hotwax/preorder#357",
+    "hotwax/preorder#355",
+    "hotwax/preorder#358",
+    "hotwax/hotwax-maarg-util#31",
+    "hotwax/mantle-shopify-connector#282",
+    "hotwax/oms#419",
+    "hotwax/oms#413",
+    "hotwax/hotwax-shopify-oms-bridge#97",
+    "hotwax/hotwax-oms#338",
+    "hotwax/hotwax-oms#435",
+    "hotwax/hotwax-oms#429",
+    "hotwax/mantle-netsuite-connector#211"
+  ],
+  "needClarificationItemIds": [
+    "hotwax/mantle-shopify-connector#258",
+    "hotwax/mantle-shopify-connector#291",
+    "hotwax/mantle-shopify-connector#293",
+    "hotwax/oms#421",
+    "hotwax/oms#393",
+    "hotwax/oms#437",
+    "hotwax/hotwax-oms#427",
+    "hotwax/hotwax-oms#422"
+  ]
+}
