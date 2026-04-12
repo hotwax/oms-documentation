@@ -16,6 +16,14 @@ function resolveManifestPath() {
     throw new Error("MANIFEST_PATH or MONTH must be provided");
 }
 
+function writeGithubOutput(name, value) {
+    if (!process.env.GITHUB_OUTPUT || value == null || value === "") {
+        return;
+    }
+
+    fs.appendFileSync(process.env.GITHUB_OUTPUT, `${name}=${value}\n`);
+}
+
 async function main() {
     const manifestPath = resolveManifestPath();
     const manifest = JSON.parse(fs.readFileSync(manifestPath, "utf8"));
@@ -58,6 +66,12 @@ async function main() {
     }
 
     saveSyncState(state);
+
+    const releaseNote = manifest.items.find((item) => item.contentType === "release-note");
+    const publishedReleaseNotesUrl = releaseNote
+        ? getMonthState(state, manifest.month)[releaseNote.key]?.hubspotUrl || ""
+        : "";
+    writeGithubOutput("release_notes_url", publishedReleaseNotesUrl);
 
     if (failures.length > 0) {
         process.exitCode = 1;

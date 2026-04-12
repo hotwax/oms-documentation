@@ -100,15 +100,8 @@ jobs:
           SOURCE_REPOS: ${{ vars.SOURCE_REPOS }}
         run: npm run publish:monthly
 
-      - name: Resolve published release notes URL
-        id: published
-        if: steps.guard.outputs.should_publish == 'true' && steps.publish.outcome == 'success'
-        run: |
-          PUBLISHED_URL="$(node -e "const fs = require('fs'); const manifest = JSON.parse(fs.readFileSync(process.env.MANIFEST_PATH, 'utf8')); const state = JSON.parse(fs.readFileSync('state/hubspot-sync-state.json', 'utf8')); const monthState = state.months?.[manifest.month]?.items || {}; const releaseNote = manifest.items.find((item) => item.contentType === 'release-note'); if (!releaseNote) process.exit(1); const publishedUrl = monthState[releaseNote.key]?.hubspotUrl; if (!publishedUrl) process.exit(1); console.log(publishedUrl);" )"
-          echo "release_notes_url=$PUBLISHED_URL" >> "$GITHUB_OUTPUT"
-
       - name: Create or update sync state PR
-        if: steps.guard.outputs.should_publish == 'true' && steps.publish.outcome == 'success'
+        if: steps.guard.outputs.should_publish == 'true' && steps.publish.outcome == 'success' && steps.publish.outputs.release_notes_url != ''
         uses: peter-evans/create-pull-request@v7
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -120,7 +113,7 @@ jobs:
             Records the HubSpot publish status update for `${{ steps.manifest.outputs.month }}`.
 
             Published release notes:
-            - [${{ steps.manifest.outputs.month }} release notes](${{ steps.published.outputs.release_notes_url }})
+            - [${{ steps.manifest.outputs.month }} release notes](${{ steps.publish.outputs.release_notes_url }})
 
             Merge instructions:
             - Merge this PR after confirming the published page looks correct.
