@@ -70,7 +70,7 @@ jobs:
             MONTH="${{ inputs.month }}"
             MANIFEST_PATH="drafts/${MONTH}/publish-manifest.json"
           else
-            MANIFEST_PATH="$(git diff-tree --no-commit-id --name-only -r "${{ github.event.pull_request.merge_commit_sha }}" | grep 'drafts/.*/publish-manifest.json' | head -n 1)"
+            MANIFEST_PATH="$(git diff-tree --no-commit-id --name-only -r -m "${{ github.event.pull_request.merge_commit_sha }}" | grep 'drafts/.*/publish-manifest.json' | head -n 1)"
             if [ -z "$MANIFEST_PATH" ]; then
               echo "No publish manifest found in merged PR."
               exit 1
