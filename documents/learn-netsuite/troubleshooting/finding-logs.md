@@ -53,7 +53,7 @@ Click on the CSV Response link corresponding to the selected file.
 
 <img width="268" height="152" alt="image" src="https://github.com/user-attachments/assets/6ceb8add-34dd-4e81-b9f5-9bd525163d01" />
 
-This will open a detailed response showing errors encountered during the import process.
+This opens a detailed response showing errors encountered during the import process.
 
 ### Step 5: Analyze the Error Message
 
