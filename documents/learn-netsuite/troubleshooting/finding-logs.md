@@ -66,7 +66,7 @@ Review the error message carefully. The response typically includes a clear desc
 
 ### Step 6: Correct the Issue in OMS 
 Based on the error identified:
-- Update the required data in OMS (such as Netsuite Internal Customer Id or information related to product)
+- Update the required data in OMS (such as NetSuite Internal Customer ID or information related to product)
 - Ensure all fields are correctly updated
 
 ### Step 7: Reprocess the Order
