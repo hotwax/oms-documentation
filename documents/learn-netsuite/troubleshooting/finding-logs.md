@@ -57,7 +57,7 @@ This opens a detailed response showing errors encountered during the import proc
 
 ### Step 5: Analyze the Error Message
 
-Review the error message carefully. The response typically includes a clear description of the issue or the specific field causing the error  
+Review the error message carefully. The response typically includes a clear description of the issue or the specific field causing the error.
 
 #### Common types of errors include:
 - Invalid customer reference  
