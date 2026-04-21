@@ -76,7 +76,7 @@ After making the necessary corrections:
   
   <img width="484" height="114" alt="image" src="https://github.com/user-attachments/assets/963ddeff-da49-4281-a14e-efae4184ba24" />
 
-- This will ensure that the order is picked up again and the corrected data is sent to NetSuite.
+- This allows the order to be picked up again and sends the corrected data to NetSuite.
 
 
 
