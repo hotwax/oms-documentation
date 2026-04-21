@@ -1,5 +1,5 @@
 ---
-description: Discover this troubleshooting guide for viewing NetSuite Order Import Error logs
+description: Discover this troubleshooting guide for viewing NetSuite order import error logs
 ---
 
 # NetSuite Order Import Error Logs
