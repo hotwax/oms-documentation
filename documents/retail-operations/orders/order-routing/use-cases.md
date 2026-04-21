@@ -36,7 +36,7 @@ To create inventory rules for marketplace orders, first ensure that the appropri
 * **Inventory Sort:** Sort the inventory by proximity to the customer’s delivery address. This helps minimize shipping costs by prioritizing inventory that is closer to the destination.
 * **Actions:** If inventory is unavailable, toggle on Partial Fulfillment to allow order splitting. For completely unavailable inventory, select Send Orders to Queue and assign them to the `Unfillable Queue` for further processing.
 
-<figure><img src="../../.gitbook/assets/Marketplaceorders.png" alt=""><figcaption><p>Marketplace Orders Routing</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/marketplace-orders-routing.png" alt=""><figcaption><p>Marketplace Orders Routing</p></figcaption></figure>
 
 ## Scenario 2: Fulfilling eCommerce Orders from Warehouse and Stores
 
@@ -114,7 +114,7 @@ Now, create an inventory rule that routes orders to the best available location.
 
 Once the routing and inventory rules are configured, activate the **Rejected Orders Re-Routing** run by changing its status from `Draft` to `Active`. Then, schedule the routing runs to ensure timely re-routing of rejected orders at regular intervals.
 
-<figure><img src="../../.gitbook/assets/Rejectedorders.png" alt=""><figcaption><p>Rerouting Rejected Orders</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/rerouting-rejected-orders.png" alt=""><figcaption><p>Rerouting Rejected Orders</p></figcaption></figure>
 
 ## Scenario 4: Proximity-Based Order Routing
 
@@ -145,7 +145,7 @@ Now, configure the inventory rule to allocate stock based on proximity.
 
 Once the rules are set up, activate the proximity-based rules and routing run by changing the status from `Draft` to `Active`. Then, schedule the routing run at regular intervals to ensure efficient processing of orders based on proximity.
 
-<figure><img src="../../.gitbook/assets/Proximitybasedrouting.png" alt=""><figcaption><p>Proximity Based Routing</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/proximity-based-routing.png" alt=""><figcaption><p>Proximity Based Routing</p></figcaption></figure>
 
 ## Scenario 5: Minimum Stock Availability
 

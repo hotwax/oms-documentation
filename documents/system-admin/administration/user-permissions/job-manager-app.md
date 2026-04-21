@@ -2,6 +2,8 @@
 
 HotWax Commerce’s Job Manager App enables users to view, schedule, and update job workflows running within the Order Management System for operations related to orders, products, inventory, and more. Users can easily view all jobs to see which jobs are scheduled and when they will run. While no specific permissions are required for viewing jobs, advanced permissions are necessary to schedule or manage job workflows.
 
+Some jobs also carry a job-specific permission group. When a job has a `Permission Group` value on the `Job Details` page, users need that job-specific permission in addition to the page-level access documented below in order to run or manage that job.
+
 Below is a list of all the actions available in the Job Manager App, along with the specific permissions needed to perform them.
 
 ## Pipeline Page
@@ -25,7 +27,7 @@ Below is a list of all the actions available in the Job Manager App, along with 
 | 3          | Import Orders in Bulk   | COMMON\_ADMIN | Import orders in bulk from Shopify into HotWax Commerce.                                                                                   |
 | 4          | Process Bulk Imports    | COMMON\_ADMIN | Process bulk imported files from Shopify into HotWax Commerce.                                                                             |
 
-<figure><img src="../../.gitbook/assets/initial load.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/initial-load.png" alt=""><figcaption></figcaption></figure>
 
 ## Pre-orders Page
 
@@ -65,7 +67,7 @@ Below is a list of all the actions available in the Job Manager App, along with 
 | 3          | Update Job Configurations        | COMMON\_ADMIN | Skip once, Disable, Save Changes, and Run Serial No.w options for job configurations.          |
 | 4          | Auto Cancellation Configurations | COMMON\_ADMIN | Manage auto-cancellation settings including days input, save button, and daily toggle options. |
 
-<figure><img src="../../.gitbook/assets/fulfillment (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/job-manager-app-permissions.png" alt=""><figcaption></figcaption></figure>
 
 ## Inventory Page
 
@@ -114,7 +116,7 @@ Below is a list of all the actions available in the Job Manager App, along with 
 | 1          | View Page     | COMMON\_ADMIN | Allows users to view the Schedule in Bulk page, where they can see the scheduled bulk jobs. |
 | 2          | Schedule Jobs | COMMON\_ADMIN | Enables users to schedule multiple jobs in bulk, streamlining the job management process.   |
 
-<figure><img src="../../.gitbook/assets/schedule in bulk.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/schedule-in-bulk.png" alt=""><figcaption></figcaption></figure>
 
 ## Setting Page
 

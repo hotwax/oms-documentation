@@ -23,7 +23,7 @@ This scenario emphasizes the synchronization of Transfer Orders from NetSuite to
 
 Transfer Orders are initiated within the NetSuite ERP system, facilitating the internal transfer of inventory from warehouses to stores or between stores.
 
-<figure><img src="../../.gitbook/assets/sync to.png" alt=""><figcaption><p>Transfer Order Sync from NetSuite to HotWax Commerce</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/sync-to.png" alt=""><figcaption><p>Transfer Order Sync from NetSuite to HotWax Commerce</p></figcaption></figure>
 
 ### Export Transfer Orders from NetSuite
 
@@ -85,11 +85,11 @@ Add job name here
 
 {% tabs %}
 {% tab title="Transfer Order Fields in NetSuite" %}
-<figure><img src="../../.gitbook/assets/TO mapping netsuite (2).png" alt=""><figcaption><p>Transfer Order Fields Mapping in NetSuite</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/transfer-order-fields-netsuite.png" alt=""><figcaption><p>Transfer Order Fields Mapping in NetSuite</p></figcaption></figure>
 {% endtab %}
 
 {% tab title="Transfer Order Fields in HotWax Commerce" %}
-<figure><img src="../../.gitbook/assets/HC TO mappings (1).png" alt=""><figcaption><p>Inbound Shipment Fields Mapping in HotWax Commerce "Inventory Receiving App"</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/inbound-shipment-fields-hotwax.png" alt=""><figcaption><p>Inbound Shipment Fields Mapping in HotWax Commerce "Inventory Receiving App"</p></figcaption></figure>
 {% endtab %}
 {% endtabs %}
 
@@ -101,7 +101,7 @@ Add job name here
 
 Store associates use the HotWax Commerce Receiving App to receive transferred inventory. The user-friendly interface of this app ensures a smooth and efficient receiving process, even for users with minimal training.
 
-<figure><img src="../../.gitbook/assets/to received.png" alt=""><figcaption><p>Item Receipts Sync from HotWax Commerce to NetSuite</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/to-received.png" alt=""><figcaption><p>Item Receipts Sync from HotWax Commerce to NetSuite</p></figcaption></figure>
 
 ### Export Item Receipts from HotWax Commerce
 

@@ -10,7 +10,7 @@ Merchants can schedule an `Import Products in Bulk` job in HotWax Commerce to do
 
 1. **Downloading from Shopify**- HotWax Commerce sends an [API request](https://shopify.dev/docs/api/admin-rest/2022-10/resources/product#get-products?ids=632910392,921728736) to Shopify to download products. In response, Shopify returns product data in JSON format. Shopify permits downloading 250 products per API call. To prevent large data file errors, HotWax Commerce downloads only 100 products per call.
 
-<figure><img src="../../.gitbook/assets/2 (2).png" alt=""><figcaption><p><em>Fig.1: Configuration to run `Import Products in Bulk` in the `Job Manager` App</em></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/import-products-in-bulk-job-config.png" alt=""><figcaption><p><em>Fig.1: Configuration to run `Import Products in Bulk` in the `Job Manager` App</em></p></figcaption></figure>
 
 2. **Product Creation in HotWax Commerce**- After downloading, the JSON files are read from the file system, and product records are created in HotWax Commerce's database through the `Process bulk imported files` job. If any data issues arise, error logs are recorded for later correction.
 
@@ -24,11 +24,11 @@ A virtual product, also known as a parent product, does not have a set size or c
 
 {% tabs %}
 {% tab title="Products in Shopify" %}
-<div data-full-width="false"><figure><img src="../../.gitbook/assets/3 (2).png" alt=""><figcaption><p><em>Fig.2(i): Products in Shopify</em></p></figcaption></figure></div>
+<div data-full-width="false"><figure><img src="../../.gitbook/assets/products-in-shopify.png" alt=""><figcaption><p><em>Fig.2(i): Products in Shopify</em></p></figcaption></figure></div>
 {% endtab %}
 
 {% tab title="Products in HotWax Commerce" %}
-<div data-full-width="false"><figure><img src="../../.gitbook/assets/4 (2).png" alt=""><figcaption><p>Products downloaded in HotWax Commerce</p></figcaption></figure></div>
+<div data-full-width="false"><figure><img src="../../.gitbook/assets/products-downloaded-in-hotwax.png" alt=""><figcaption><p>Products downloaded in HotWax Commerce</p></figcaption></figure></div>
 {% endtab %}
 {% endtabs %}
 
@@ -40,11 +40,11 @@ The parent product comes in various sizes and colors, resulting in multiple vari
 
 {% tabs %}
 {% tab title="Variant product details in Shopify" %}
-<figure><img src="../../.gitbook/assets/5 (1).png" alt=""><figcaption><p><em>Fig.3(i): Variant product in Shopify with details</em></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/variant-product-details-shopify.png" alt=""><figcaption><p><em>Fig.3(i): Variant product in Shopify with details</em></p></figcaption></figure>
 {% endtab %}
 
 {% tab title="Variant product details in HotWax Commerce" %}
-<figure><img src="../../.gitbook/assets/6 (1).png" alt=""><figcaption><p>Fig.3(ii) : Variant product in HotWax Commerce with details</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/variant-product-details-hotwax.png" alt=""><figcaption><p>Fig.3(ii) : Variant product in HotWax Commerce with details</p></figcaption></figure>
 {% endtab %}
 {% endtabs %}
 
@@ -59,7 +59,7 @@ Shopify merchants create new products for two reasons::
 
 To make it easier to keep both Shopify and HotWax Commerce's product catalogs up to date, Shopify merchants can schedule an `Import Products` job that runs every 15 minutes. This job checks the `created_at` field of products in Shopify and identifies any products that were created after the last run of the job. Any newly created products are then imported into HotWax Commerce's product catalog through the `Process bulk imported files` job. By doing this, HotWax Commerce's catalog stays synchronized with Shopify's catalog, ensuring that merchants have access to the most up-to-date product information.
 
-<figure><img src="../../.gitbook/assets/7 (2).png" alt=""><figcaption><p><em>Fig.4: Configuration to run `Import Products` in the Job Manager App</em></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/import-products-job-config.png" alt=""><figcaption><p><em>Fig.4: Configuration to run `Import Products` in the Job Manager App</em></p></figcaption></figure>
 
 {% hint style="info" %}
 It is recommended to run this job every 15 minutes. However, the frequency of the job can be set as per a merchant’s business needs.

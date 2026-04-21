@@ -6,6 +6,14 @@ description: >-
 
 # Check Inventory
 
+> [!WARNING]
+> This API is no longer recommended and will not be maintained for newer functionality.
+> It is recommended to use the following APIs instead:
+> - [BOPIS Check Inventory](/documents/integrate-with-hotwax/api/inventory/bopis-check-inventory.md)
+> - [Shipping Check Inventory](/documents/integrate-with-hotwax/api/inventory/shipping-check-inventory.md)
+> - [Get Online ATP](/documents/integrate-with-hotwax/api/inventory/get-online-atp.md)
+
+
 Get the stock details of the product on the specific locations. To get the stock details, you will need to call the `/checkInventory` endpoint with the POST method.
 
 ## Request

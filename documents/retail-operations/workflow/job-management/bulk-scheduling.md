@@ -20,7 +20,7 @@ Easily search and select the jobs you want to execute or configure. You can also
 
 Conveniently configure and schedule all selected jobs simultaneously to streamline your workflow.
 
-<figure><img src="../../.gitbook/assets/Schedule Jobs in Bulk.jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/schedule-jobs-in-bulk.jpg" alt=""><figcaption></figcaption></figure>
 
 ### **Configurations**
 

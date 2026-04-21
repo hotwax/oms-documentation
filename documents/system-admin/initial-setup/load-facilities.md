@@ -52,4 +52,4 @@ To ensure the accuracy of facility information and locations, follow these steps
 
 By following these steps, you can ensure that the facility information and associated locations in the OMS align with the expected data format.
 
-<figure><img src="../.gitbook/assets/export facility.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/export-facility.png" alt=""><figcaption></figcaption></figure>

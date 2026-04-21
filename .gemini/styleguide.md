@@ -117,6 +117,53 @@ Excessive adjectives like “vital”, “crucial”, “essential”
 Consistent word choice reinforces clarity, prevents confusion, and keeps HotWax content aligned across blogs, documentation, product UI, and sales material.  
 ---
 
+## Asset naming
+
+Use descriptive file names for images and downloadable assets in documentation.
+
+### Image file names
+
+* Use lowercase letters only.
+* Use hyphens to separate words.
+* Name the file after what the image shows, not when it was captured.
+* Prefer descriptive names taken from the page context, feature name, or figure caption.
+* Keep names concise, but specific enough that another writer can understand the file without opening it.
+
+Examples:
+
+* Do: `order-details-hotwax.png`
+* Do: `purchase-order-fields-netsuite.png`
+* Do: `schedule-brokering-run.png`
+* Don't: `Screenshot 2024-08-13 at 12.14.54.png`
+* Don't: `10.png`
+* Don't: `10-2.png`
+* Don't: `final-final-v2.png`
+* Don't: `image (1).png`
+
+### When a hyphen is not required
+
+* A single lowercase word is acceptable when the concept is already one word and still clear.
+
+Examples:
+
+* Acceptable: `klaviyo.png`
+* Acceptable: `inventory.png`
+
+Avoid vague single-word names when a more specific name is available.
+
+Examples:
+
+* Prefer `reset-password.png` over `resetpass.png`
+* Prefer `block-user-login.png` over `block1.png`
+
+### Reusing and organizing assets
+
+* Keep one asset directory per main documentation topic.
+* Reuse an existing asset when it represents the same UI or workflow.
+* If you replace an image, keep the same descriptive name only when the screenshot still shows the same concept.
+* Never keep duplicate-download suffixes such as `(1)`, `(2)`, `-1`, or `-2` unless the number is part of the actual business concept shown in the image.
+* Update all references when renaming an asset. This includes image tags, markdown links, HTML links, and GitBook file embeds.
+
 ## Acronyms
 
 Acronyms and abbreviations can make content harder to read and search. While some are well known and preferred over the full term, others are confusing or specific to small groups. Use them carefully.

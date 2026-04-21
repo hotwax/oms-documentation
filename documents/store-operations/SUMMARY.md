@@ -28,7 +28,6 @@
   * [Troubleshooting](fulfillment/troubleshooting/README.md)
     * [Change Language](fulfillment/troubleshooting/change-language.md)
     * [Unable to Login](fulfillment/troubleshooting/unable-to-login.md)
-* [Picking App](fulfillment/picking-app.md)
 * [In-Store Returns](in-store-returns/README.md)
 
 ## Inventory
@@ -39,14 +38,11 @@
   * [Reports](receiving/reports.md)
   * [Settings](receiving/settings.md)
   * [Permissions](receiving/permissions.md)
-  * [What's New](receiving/whats-new-guide.md)
 * [Cycle Count](cycle-count/README.md)
   * [Plan Cycle Count](cycle-count/plan-cycle-count.md)
   * [Start & Complete Session](cycle-count/start-complete-session.md)
   * [Count Progress & Review](cycle-count/count-progress-review.md)
-* [Cycle Count Legacy](cycle-count-legacy/README.md)
-  * [Directed Count](cycle-count-legacy/directed-cycle-count.md)
-  * [Hard Count](cycle-count-legacy/hard-count.md)
+  * [Run Diagnostics](cycle-count/run-diagnostics.md)
 * [Transfer Orders](transfer-order/transfer-order-management.md)
   * [Transfer Order Fulfillment](transfer-order/transfer-order-fulfillment.md)
   * [Transfer Order Receiving](transfer-order/transfer-order-receiving.md)

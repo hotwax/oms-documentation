@@ -103,7 +103,7 @@ The product appears on the TO Details page. Enter the quantity and continue with
 
 ## Reporting discrepancies
 
-All receiving discrepancies are captured in the HotWax OMS system. The HotWax BI Reports & Analytics platform provides a **[Receiving Report](../../../analytics/reports/inventory.md#receiving-report)**
+All receiving discrepancies are captured in the HotWax OMS system. Store managers can monitor the status of all transfer order receipts through the [Receiving Report](../../analytics/reports/inventory.md#receiving-report).
 - Over-received items
 - Under-received items
 - Newly added items

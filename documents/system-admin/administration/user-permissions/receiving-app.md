@@ -38,4 +38,4 @@ Below is a list of all the actions available in the Receiving App, along with th
 | 4  | Go To OMS                       | COMMERCEUSER_VIEW    | Allows users to access HotWax OMS. |
 | 5  | Force Scan                       | COMMON_ADMIN    | Allow received quantity to be incremented by scanning the barcode of products.|
 
-<figure><img src="../../.gitbook/assets/settings r.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/settings-r.png" alt=""><figcaption></figcaption></figure>

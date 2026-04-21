@@ -12,20 +12,12 @@ The Fulfillment App allows store users to reject items from an order or complete
 
 The OMS will route the order to another facility based on product availability, customer shipping preferences, and routing rules.
 
-{% embed url="https://drive.google.com/file/d/1vInnPXJUCgavIJz28xKP-9K2Rd63DSIZ/view?usp=drive_link" %}
-Reject Single
-{% endembed %}
-
 ## Bulk Reject Orders
 
 Stores may face issues with their fulfillment capabilities in some instances. When a store cannot fulfill orders for a given day, store managers with the permission of `COMMON_ADMIN` can reject all orders in bulk from the **Open** and **In Progress** order pages.
 
 1. In the **Open** or **In Progress Orders** screens, click the **Reject All** icon at the top right corner.
 2. All orders in that status will be rejected and removed from the facility.
-
-{% embed url="https://drive.google.com/file/d/1zGqM5HjeZBltktMe5vJIObOrznV74lvU/view?usp=drive_link" %}
-Bulk Reject Orders
-{% endembed %}
 
 {% hint style="info" %}
 The Reject All button does not affect the inventory of the facility. To ensure that no new orders are brokered to the facility, set the **Online order fulfillment capacity** to **No Capacity**.
@@ -47,7 +39,7 @@ The Rejection Analytics Page provides a detailed view of order rejections, helpi
 * **Time Filters:** Analyze rejection data from the last 24 hours or 7 days.
 * **Search:** Locate specific rejected items using Product SKUs or order details.
 
-<figure><img src="../.gitbook/assets/rejectionsAnalytics.png" alt=""><figcaption><p>Rejections Analytics</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/rejections-analytics.png" alt=""><figcaption><p>Rejections Analytics</p></figcaption></figure>
 
 ## Rejection Reasons
 
@@ -59,16 +51,24 @@ Retailers can configure which rejection reasons they want to offer for their sta
 * **Customer Service Representatives (CSRs):** In the Order Management System, CSRs view broader rejection reasons suited for customer interactions, such as manual reallocation.
 * **Admin Users:** Admin or operations managers can view all rejection reasons across roles for complete oversight.
 
-### Toggle for Showing Rejection Reasons
+### Filter rejection reasons in the Fulfillment App
 
-Rejection reasons can be shown or hidden from store associates using the fulfillment app by using the toggle on the settings page.
+Rejection reasons can be shown or hidden for store users directly from the `Rejection reasons` page in the Fulfillment App.
 
-**How It Works:**
+#### How to filter rejection reasons
 
-* **When the toggle is ON:** The specific rejection reason will be visible, while all other reasons will remain hidden.
-* **When the toggle is OFF:** The specific rejection reason will be hidden, but all other reasons will still be visible.
+1. Open the Fulfillment App.
+2. Click the hamburger menu.
+3. In the `Organization` section, select `Rejection reasons`.
+4. Find the rejection reason you want to control.
+5. Use the toggle on that row to decide whether the reason should be available in the Fulfillment App.
 
-<figure><img src="../.gitbook/assets/rejectionReasons.png" alt=""><figcaption><p>Rejection Reasons</p></figcaption></figure>
+#### How the toggle works
+
+* **When the toggle is ON:** That rejection reason is available to store users while rejecting items.
+* **When the toggle is OFF:** That rejection reason is hidden from store users in the Fulfillment App.
+
+<figure><img src="../.gitbook/assets/rejection-reasons.png" alt=""><figcaption><p>Rejection Reasons</p></figcaption></figure>
 
 ### Rejection reason types that trigger inventory adjustments and how these types cause stock levels to be updated
 
@@ -93,10 +93,6 @@ The table below lists the default rejection reasons and their assigned types, wh
 | DAMAGE           | REPORT\_VAR      | Decreases ATP inventory by the rejected quantity, while QOH remains unchanged. | Shows the product is in stock but damaged and unsellable.                                                 |
 | NO VARIANCE      | REPORT\_NO\_VAR  | Does not affect either ATP or QOH inventory.                                   | Useful for scenarios where inventory levels remain unchanged, e.g., canceled orders without stock issues. |
 
-{% embed url="https://drive.google.com/file/d/1Bj_t3o-nOzUKK95vdq8XzFWK3AJtm5uk/view?usp=drive_link" %}
-Video: Rejections in Fulfillment App
-{% endembed %}
-
 ## Adjust QOH Along with ATP on Rejection
 
 The **Adjust QOH Along with ATP on Rejection** toggle provides control over inventory adjustments during order rejections.
@@ -109,7 +105,7 @@ By suppressing ATP and not QOH, over-selling is still prevented and orders for t
 
 Retailers that don’t utilize HotWax Commerce for store inventory management only need the OMS to maintain an accurate record of sellable inventory. In that case, retailers should allow rejections to impact both ATP and QOH.
 
-<figure><img src="../.gitbook/assets/affectQOH.png" alt=""><figcaption><p>Affect QOH on Rejection</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/affect-qoh-on-rejection.png" alt=""><figcaption><p>Affect QOH on Rejection</p></figcaption></figure>
 
 ## Partial Rejection
 
@@ -128,7 +124,7 @@ When partial rejection is disabled, rejecting any item in an order triggers the 
 
 If additional items need to be rejected with a specific reason, click on the default rejection reason applied to the item and make a selection.
 
-<figure><img src="../.gitbook/assets/configurePartialRejection.png" alt=""><figcaption><p>Configure Partial Rejection</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/configure-partial-rejection.png" alt=""><figcaption><p>Configure Partial Rejection</p></figcaption></figure>
 
 ## Collateral Rejection
 
@@ -139,4 +135,4 @@ Collateral rejection helps manage situations where the product in a rejected ord
 
 This feature ensures faster re-routing of unfulfillable items, minimizing delays across all orders containing the same product.
 
-<figure><img src="../.gitbook/assets/configureCollateralRejection.png" alt=""><figcaption><p>Configure Collateral Rejection</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/configure-collateral-rejection.png" alt=""><figcaption><p>Configure Collateral Rejection</p></figcaption></figure>

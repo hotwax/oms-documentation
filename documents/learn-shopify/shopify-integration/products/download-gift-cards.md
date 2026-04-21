@@ -1,5 +1,5 @@
 ---
-description: Learn how to gift cards are downloaded from Shopify to HotWax Commerce.
+description: Learn how gift cards are downloaded from Shopify to HotWax Commerce.
 ---
 
 # Gift Cards Download

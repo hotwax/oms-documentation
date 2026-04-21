@@ -28,7 +28,7 @@ At 1:15 PM, the job that runs every 15 minutes detects that there are inventory 
 
 <table><thead><tr><th width="152">Product List</th><th width="236">Inventory Count in Shopify</th><th width="219">Available Adjustments</th><th width="309">Updated Inventory Count in Shopify</th></tr></thead><tbody><tr><td>Product A</td><td>100</td><td>-5</td><td>95</td></tr><tr><td>Product C</td><td>25</td><td>5</td><td>30</td></tr></tbody></table>
 
-<figure><img src="../../.gitbook/assets/10 (2).png" alt=""><figcaption><p><em>Fig. 1(i): Sync Inventory for Products with Recent Inventory Changes</em></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/sync-recent-inventory-changes.png" alt=""><figcaption><p><em>Fig. 1(i): Sync Inventory for Products with Recent Inventory Changes</em></p></figcaption></figure>
 
 \
 When updating inventory on Shopify, HotWax Commerce ensures that the location in Shopify matches the location in HotWax Commerce for merchants. If users utilize a non-Shopify POS, all physical locations in HotWax Commerce will be mapped to one virtual location in Shopify. However, if merchants use Shopify POS and have multiple store locations and an eCom location for online orders, all Shopify locations will be mapped one-to-one with HotWax locations. This means that any inventory updates made to the retail stores and warehouses in HotWax will be reflected in the specific store locations and eCom locations in Shopify for merchants.
@@ -53,7 +53,7 @@ This job supports two parameters to control how inventory is synchronized:
 
 - Zone 2 Inventory Sync to Shopify: They create another facility group for the Zone 2 stores and provide its ID in the `shopifyFacilityGroupId` parameter. This directs inventory updates only to the stores included in that facility group.  
 
-<figure><img src="../../.gitbook/assets/11.png" alt=""><figcaption><p><em>Fig. 2: Hard Sync inventory to remove any discrepancy</em></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/hard-sync-inventory-discrepancy.png" alt=""><figcaption><p><em>Fig. 2: Hard Sync inventory to remove any discrepancy</em></p></figcaption></figure>
 
 ## Push Updated Inventory Deltas to Shopify
 
@@ -65,4 +65,4 @@ For example, Product A has 5 units listed in both Shopify and HotWax Commerce. S
 
 In another example, if a store receives a transfer order for Product B with 2 units, which originally had 10 units, then a variance of 2 will be pushed on Shopify to update the Shopify ATP to 12.
 
-![Delta sync job](/documents/learn-shopify/.gitbook/assets/push-inventory-deltas.png)
+![Delta sync job](../../.gitbook/assets/push-inventory-deltas.png)

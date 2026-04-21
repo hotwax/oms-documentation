@@ -59,7 +59,7 @@ HotWax Commerce relies on two main jobs for inventory synchronization to Shopify
    * Go to the `Miscellaneous` page in the `Job Manager App`.
    * Verify that the `Process Uploads to eCommerce` job is running to process all uploaded files to Shopify.
 
-<figure><img src="../../.gitbook/assets/Inventory Scnchronization 1.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/inventory-synchronization-errors.png" alt="" width="375"><figcaption></figcaption></figure>
 
 ## Scenario 5: Insufficient Permissions on Shopify
 

@@ -12,14 +12,7 @@ To address this, the HotWax integration layer maps the original carrier and ship
 
 ## Creating a Shipping Method in HotWax Commerce
 
-Shipping methods that are supported by the retailer need to be created in HotWax Commerce to ensure that the shipping information is sent to the shipping carrier. Shipping methods can be created by following these steps:
-
-1. Log in to your user instance and navigate to Settings > General Settings.
-2. Locate the shipment method section and click on the `Add`, which will open up a form.
-3. Fill in the required fields:
-   * Shipment Method Type ID: The name used to identify the shipping method within HotWax Commerce.
-   * Description: A brief explanation of the shipping method's intended purpose.
-4. After entering the necessary details, click on the `Add` to save the shipping method in HotWax Commerce.
+Shipping methods that are supported by the retailer need to be created in HotWax Commerce to ensure that the shipping information is sent to the shipping carrier. Detailed instructions for creating carriers and shipment methods can be found in the [System Administration guide](../../../system-admin/fulfillment/shipping-methods/carrier-and-shipment-methods.md).
 
 Once shipping methods are created, they need to be mapped with NetSuite to provide accurate information for order processing and fulfillment.
 

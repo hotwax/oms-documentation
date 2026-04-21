@@ -11,17 +11,15 @@ description: >-
 
 The HotWax Commerce Store Fulfillment App empowers retailers to efficiently fulfill online orders from their stores. HotWax Commerce seamlessly integrates with multiple Third-Party Logistics companies, commonly known as Carriers, to generate shipping labels based on store and customer addresses, as well as the weight and dimensions of shipment packages. Each Carrier provides a Shipping Gateway software system, enabling HotWax Commerce to request shipment quotations and labels during the fulfillment process.
 
-To enable the integration with Carriers, retailers must set up their preferred carriers, define shipping methods, and configure the necessary settings for the shipment gateway. This document outlines a four-step process that guides you through the setup of carriers, shipping methods, and the integration with the shipment gateway, ensuring a streamlined and cost-effective fulfillment process for online orders.
+### Initial Setup
 
-### Load Carrier Data
+To enable integration with Carriers, retailers must set up their preferred carriers, define shipping methods, and configure the necessary settings for the shipment gateway within the **Fulfillment App**.
 
-1. Navigate to the `Settings` > `General`page in the hamburger menu of HotWax Commerce.
-2. Locate and click on the option related to your carrier in the header. For instance, click on `Load Fedex Data` button to designate Fedex as your carrier.
-3. After loading the data, a new menu option specific to the chosen carrier will be added to the hamburger menu. For example, if you load Fedex data, you will find a new page in `Settings` > `Fedex Carrier Setup.`
+1. Navigate to the **Fulfillment App**.
+2. Go to the **Carrier & Shipment Methods** tab from the main menu.
+3. Follow the sequence to create your carrier and methods as outlined in the [Carrier and Shipment Methods guide](./carrier-and-shipment-methods.md).
 
-{% embed url="https://youtu.be/CY07Y2ggZOU" %}
-Video: Load carrier data
-{% endembed %}
+Once the carrier is created, you can proceed to add specific Gateway Configurations.
 
 ### Add Shipment Gateway Configurations
 

@@ -312,7 +312,11 @@ Yes, a user can be associated with different facilities within different apps. T
 
 <summary>Is there a mobile app for store associates and managers?</summary>
 
-Yes, there are several mobile apps available for store associates and managers, including: 1. \*\*HotWax Commerce's Picking App\*\*: Manages picklists. 2. \*\*HotWax Commerce's Inventory Count App\*\*: Designed for inventory management. 3. \*\*HotWax Commerce's Inventory Receiving App\*\*: Manages ASN, Purchase Orders, and Returns. 4. \*\*HotWax Commerce's BOPIS Fulfillment App\*\*: Manages Buy Online Pick-up In Store (BOPIS) functionality. 5. \*\*HotWax Commerce's Store Fulfillment App\*\*: Handles picking, packing, and shipping orders.
+Yes, there are several mobile apps available for store associates and managers, including:
+1. **HotWax Commerce's Inventory Count App**: Designed for inventory management.
+2. **HotWax Commerce's Inventory Receiving App**: Manages ASN, Purchase Orders, and Returns.
+3. **HotWax Commerce's BOPIS Fulfillment App**: Manages Buy Online Pick-up In Store (BOPIS) functionality.
+4. **HotWax Commerce's Store Fulfillment App**: Handles picking, packing, and shipping orders.
 
 </details>
 
