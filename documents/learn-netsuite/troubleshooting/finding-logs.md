@@ -21,7 +21,7 @@ This document addresses scenarios where:
 
 Log in to NetSuite and navigate to:
 
-**Setup → Import/Export → View CSV Import Status**
+`Setup` → `Import/Export` → `View CSV Import Status`
 <img width="308" height="301" alt="image" src="https://github.com/user-attachments/assets/ed739315-bba5-44f0-adcb-04de60d971fb" />
 
 This page displays all CSV imports processed in NetSuite, including orders received from OMS.
