@@ -13,7 +13,7 @@ The objective of this document is to help users identify and resolve cases where
 
 #### Two possible scenarios:
 - Order Sync Feed History NOT created
-- Order Sync Feed History created (covered later)krewe
+- Order Sync Feed History created (covered later)
   
 ### Scenario 1: Order Sync Feed History NOT Created
 This means the order has not yet been picked up by the feed job yet.
