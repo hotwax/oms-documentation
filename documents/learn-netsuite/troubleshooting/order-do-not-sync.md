@@ -42,7 +42,7 @@ _**1. Validate Customer Information**_
 - If missing, the order will NOT sync to NetSuite.
 
 _**Action:**_
-- Go to Netsuite, search for the customer using email Id or valid phone number.
+- Go to NetSuite, search for the customer using email ID or valid phone number.
 - Check the generated link and you will find the Netsuite Customer Internal Id for the customer.
 - To add this in OMS, navigate back to customer Identifications click on the “pencil” icon to add the required Id.
 
