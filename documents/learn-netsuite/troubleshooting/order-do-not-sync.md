@@ -202,7 +202,7 @@ This means that NetSuite is unable to identify the location being sent with the 
 **How to resolve:**
 - Check the location assigned to the order (typically at the order item level) in OMS.
 - Then verify in NetSuite whether a location with that internal ID exists and is active.
-- To view whether or not locations is inactive, navigate to `Netsuite → Setup → Company → locations → search`
+- To view whether or not locations is inactive, navigate to NetSuite → Setup → Company → Locations → Search
 - Click to view the desired location.
 - Check whether the “Location is Inactive” checkbox is checked or not and correct it accordingly.
 <img width="384" height="181" alt="image" src="https://github.com/user-attachments/assets/19b5615c-9784-4895-8a8c-96d82b865343" />
