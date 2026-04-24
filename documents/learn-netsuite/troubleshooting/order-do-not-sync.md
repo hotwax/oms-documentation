@@ -84,7 +84,7 @@ Check job execution.
 If all data in OMS looks correct and the job is running correctly but the order is still not synced, the next step is to verify the order file in SFTP.
 
 **SFTP Paths (Based on Order Type)**
-- Connect to your SFTP instance, you can find the details in Setting page in your OMS:
+- Connect to your SFTP instance, you can find the details in the Settings page in your OMS:
   
 **Web Orders**
 /home/<instance-name>/netsuite/salesorder/export
