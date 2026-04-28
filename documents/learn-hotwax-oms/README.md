@@ -128,6 +128,8 @@ HotWax Commerce calculates Online Available to Promise (ATP)
 Online ATP = QOH - (Reserved quantities + Safety stock + Threshold + Orders in brokering queue + Excluded facilities’ ATP)
 [Read more about Online ATP](./business-process-models/inventory-lifecycle.md#push-online-atp-to-ecommerce).
 
+### Order fulfillment status
+
 Order fulfillment status in HotWax Commerce tracks the current stage of an overall order within the order fulfillment process. This status helps in monitoring and managing orders, indicating whether an Order is created, approved, picked, packed, or shipped.
 
 ### Order merging
