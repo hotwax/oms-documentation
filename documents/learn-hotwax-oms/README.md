@@ -65,6 +65,8 @@ Digital gift cards, or e-gift cards, are virtual equivalents of physical gift ca
 
 To know more about digital gift cards [Click here](./business-process-models/giftcard-orders-lifecycle.md#digital-gift-cards).
 
+### Excluded ATP
+
 Excluded ATP refers to the inventory at fulfillment locations that are not participating in online selling. This inventory is not considered available for online orders and is excluded from the online ATP calculation.
 
 ### Excluded facilities
