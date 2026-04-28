@@ -43,7 +43,7 @@ The brokering queue serves as a waiting area for orders awaiting processing in t
 
 For example, if the brokering engine runs every three hours starting at 9:00 A.M., orders placed and approved at 10:00 A.M. will remain in the brokering queue until the next brokering engine run at 12:00 P.M. Similarly, orders placed and approved at 11:30 A.M. will also be processed at 12:00 P.M.
 
-To know more about brokering [Click here](../retail-operations/orders/order-routing).
+[Read more about brokering](../retail-operations/orders/order-routing).
 
 ### Bundle product
 
