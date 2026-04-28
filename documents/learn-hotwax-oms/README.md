@@ -112,6 +112,8 @@ Inventory reset means updating the stock count of an item in a facility with a n
 
 Inventory variance refers to discrepancies between expected and actual inventory levels. It can be caused by factors such as damaged goods, discrepancies in shipment, or theft.
 
+### Item fulfillment status
+
 Item fulfillment status in HotWax Commerce tracks the current stage of an item within the order fulfillment process. This status helps in monitoring and managing orders, indicating whether an item is Reserved, Picked, Packed, Shipped, or Delivered.
 
 ### Maximum order limit
