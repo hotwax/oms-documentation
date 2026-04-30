@@ -132,7 +132,7 @@ Online ATP represents the unified inventory pool of actual sellable inventory co
 To calculate online ATP, HotWax Commerce deducts inventory that is not available for sale from the ATP. This includes items such as safety stock, threshold quantities, orders in the brokering queue, and inventory from locations that are not participating in online selling.
 
 HotWax Commerce calculates online available to promise (ATP):
-Online ATP = QOH - (Reserved quantities + Safety stock + Threshold + Orders in brokering queue + Excluded facilities’ ATP)
+Online ATP = QOH - (reserved quantities + safety stock + threshold + orders in brokering queue + excluded facilities’ ATP)
 
 Learn more about [online ATP](./business-process-models/inventory-lifecycle.md#push-online-atp-to-ecommerce).
 
