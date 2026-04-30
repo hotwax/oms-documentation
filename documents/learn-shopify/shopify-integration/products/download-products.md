@@ -9,7 +9,7 @@ HotWax Commerce treats Shopify as the primary source of truth for all product in
 
 1. **Queue the request**
 HotWax Commerce first plans the sync by creating a record of type `BulkProductAndVariantsByIdQuery`. This is triggered by the scheduled job `queue_BulkQuerySystemMessage_BulkProductAndVariantsByIdQuery`. The system identifies exactly what data is needed from Shopify based on the last successful sync time and adds a small "time buffer" to make sure no updates are missed.
-*   **Initial Status**: `SmsgProduced` (Message is ready to be sent).
+*   **Initial Status**: `SmsgProduced` (Message is ready to be sent)
 
 2. **Send to Shopify**
 The scheduled job `send_ProducedBulkOperationSystemMessage_ShopifyBulkQuery` picks up the queued request. Because Shopify only allows one bulk operation to run at a time per shop, the system checks for a "busy lock" (any message in `SmsgSent` status for the `ShopifyBulkQuery` group). If clear, it sends the GraphQL mutation to Shopify and updates the record.
