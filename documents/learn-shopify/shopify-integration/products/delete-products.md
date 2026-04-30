@@ -2,6 +2,8 @@
 description: >-
   Learn how to delete products from both Shopify and HotWax Commerce.
 ---
+# Deleting Products
+
 
 ### Deleting Products from Shopify and HotWax Commerce
 
