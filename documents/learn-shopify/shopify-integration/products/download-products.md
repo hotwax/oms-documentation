@@ -33,7 +33,7 @@ If the new hash matches the one stored in the `ProductUpdateHistory` table, the 
 Only the identified changes (deltas) are applied to the database. This selective update approach handles core product details, features, tags, pricing, and identifiers like SKU and UPC. It also automatically detects the correct product type (e.g., `FINISHED_GOOD` vs. `DIGITAL_GOOD`) based on Shopify flags.
 
 7. **Save history**
-Finally, the system updates the `ProductUpdateHistory` record with the new hashes and a snapshot of the current data. This "closes the loop" and ensures that the system is **idempotent** meaning that running the sync again with the same data will result in zero database changes. This stage also links the update back to the original `systemMessageId` for a complete audit trail.
+Finally, the system updates the `ProductUpdateHistory` record with the new hashes and a snapshot of the current data. This "closes the loop" and makes the system **idempotent**, meaning that running the sync again with the same data will result in zero database changes. This stage also links the update back to the original `systemMessageId` for a complete record.
 
 
 
