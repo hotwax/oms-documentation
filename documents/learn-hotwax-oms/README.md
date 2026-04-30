@@ -123,7 +123,7 @@ Item fulfillment status in HotWax Commerce tracks the current stage of an item w
 
 ### Maximum order limit
 
-The Maximum Order Limit is a predefined limit set by a store, indicating the maximum number of orders it can fulfill in a day. When this limit is reached, the brokering engine automatically routes additional orders to alternative facilities that have capacity available. Setting a maximum order limit helps the store manage its resources effectively. It ensures that orders can be fulfilled within operational constraints and prevents overcommitment of resources. By leveraging the brokering engine to redirect orders to other facilities as needed, retailer maintains their ability to meet customer demand without delay.
+The maximum order limit is a predefined limit set by a store, indicating the maximum number of orders it can fulfill in a day. When this limit is reached, the brokering engine automatically routes additional orders to alternative facilities that have capacity available. Setting a maximum order limit helps the store manage its resources effectively. It ensures that orders can be fulfilled within operational constraints and prevents overcommitment of resources. By leveraging the brokering engine to redirect orders to other facilities as needed, retailer maintains their ability to meet customer demand without delay.
 
 ### Online ATP
 
