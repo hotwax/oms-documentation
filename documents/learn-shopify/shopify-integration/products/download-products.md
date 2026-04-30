@@ -4,8 +4,10 @@ description: >-
  bulk operations and change detection.
 ---
 
-# Product download
-HotWax Commerce treats Shopify as the primary source of truth for all product information. To keep large product catalogs synchronized without hitting API limits, HotWax Commerce uses the **Shopify GraphQL Admin API** and **Bulk Operations**. The synchronization process happens in seven stages:
+# Product Download
+HotWax Commerce treats Shopify as the primary source of truth for all product information. To keep large product catalogs synchronized without hitting API limits, HotWax Commerce uses the **[Shopify GraphQL Admin API](https://shopify.dev/docs/api/admin-graphql/latest/objects/Product)** and **Bulk Operations**. 
+
+The synchronization process happens in seven stages:
 
 1. **Queue the request**
 HotWax Commerce first plans the sync by creating a record of type `BulkProductAndVariantsByIdQuery`. This is triggered by the scheduled job `queue_BulkQuerySystemMessage_BulkProductAndVariantsByIdQuery`. The system identifies exactly what data is needed from Shopify based on the last successful sync time and adds a small "time buffer" to make sure no updates are missed.
