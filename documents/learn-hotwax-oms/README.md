@@ -138,7 +138,7 @@ Learn more about [online ATP](./business-process-models/inventory-lifecycle.md#p
 
 ### Order fulfillment status
 
-Order Fulfillment Status in HotWax Commerce tracks the current stage of an overall order within the order fulfillment process. This status helps in monitoring and managing orders, indicating whether an Order is created, approved, picked, packed, or shipped.
+Order fulfillment status in HotWax Commerce tracks the current stage of an overall order within the order fulfillment process. This status helps in monitoring and managing orders, indicating whether an order is created, approved, picked, packed, or shipped.
 
 ### Order merging
 
