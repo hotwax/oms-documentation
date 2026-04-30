@@ -26,7 +26,7 @@ Once Shopify confirms completion, the system updates the outgoing message status
 The raw results are downloaded as a JSONL (JSON Lines) file. The system message framework triggers the `consume#ProductVariantUpdates` service, which transforms the "flat" file into a nested JSON format. This stage re-establishes the relationships between parent products and their specific variants, features, and metadata.
 
 5. **Identify changes**
-The data is passed to the core synchronization service, `sync#ShopifyProduct`. Instead of blindly overwriting the database, HotWax Commerce identifies exactly what has changed using a **Baseline Comparison** strategy. The system groups product data into "buckets" such as core details, tags, features, and pricing and computes a unique **SHA-256 Hash** for each.
+The data is passed to the core synchronization service, `sync#ShopifyProduct`. Instead of overwriting the database, HotWax Commerce identifies exactly what has changed using a **Baseline Comparison** strategy. The system groups product data into "buckets" such as core details, tags, features, and pricing and computes a unique **SHA-256 Hash** for each.
 If the new hash matches the one stored in the `ProductUpdateHistory` table, the system knows that specific group of data hasn't changed and skips it.
 
 6. **Update the database**
