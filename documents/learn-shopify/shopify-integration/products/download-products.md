@@ -13,7 +13,7 @@ HotWax Commerce first plans the sync by creating a record of type `BulkProductAn
 
 2. **Send to Shopify**
 The scheduled job `send_ProducedBulkOperationSystemMessage_ShopifyBulkQuery` picks up the queued request. Because Shopify only allows one bulk operation to run at a time per shop, the system checks for a "busy lock" (any message in `SmsgSent` status for the `ShopifyBulkQuery` group). If clear, it sends the GraphQL mutation to Shopify and updates the record.
-*   **Updated Status**: `SmsgSent` (Shopify has accepted the request).
+*   **Updated Status**: `SmsgSent` (Shopify has accepted the request)
 
 3. **Confirm completion**
 HotWax Commerce monitors the status of the bulk operation using two methods:
