@@ -1,7 +1,7 @@
 ---
 description: >-
  Learn how HotWax Commerce synchronizes product data from Shopify using
- efficient bulk operations and intelligent change detection.
+ bulk operations and change detection.
 ---
 
 # Product download
