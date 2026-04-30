@@ -119,7 +119,7 @@ Inventory variance refers to discrepancies between expected and actual inventory
 
 ### Item fulfillment status
 
-Item Fulfillment Status in HotWax Commerce tracks the current stage of an item within the order fulfillment process. This status helps in monitoring and managing orders, indicating whether an item is Reserved, Picked, Packed, Shipped, or Delivered.
+Item fulfillment status in HotWax Commerce tracks the current stage of an item within the order fulfillment process. This status helps in monitoring and managing orders, indicating whether an item is reserved, picked, packed, shipped, or delivered.
 
 ### Maximum order limit
 
