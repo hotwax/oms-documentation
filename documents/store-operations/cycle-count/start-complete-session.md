@@ -98,6 +98,8 @@ This ensures the store team can complete the count with all items correctly mapp
 
 At the bottom left of the page, there is an option to add items that have already been hand-counted. Click on `Hand-Counted Items`, and a new screen will open to add these items.
 
+The search on this screen supports both item-level identifiers and the parent product name. This helps associates find the correct variant even when they only know the shared style or parent product title.
+
 * Search for the item using its SKU or parent product name and press Enter. This will add the item directly.  
 * Enter the quantity manually, or use the `+` and `−` buttons to adjust the inventory.  
 * To remove an item, click the cross (`×`) button.

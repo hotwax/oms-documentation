@@ -45,4 +45,4 @@ For example, In the Job Manager app, we have two jobs: `Approve Order`, which me
 
 By following these detailed steps, you can effectively troubleshoot and ensure a smooth job execution process, minimize system performance issues, and maintain accurate data management.
 
-<figure><img src="../../../.gitbook/assets/Job Actions.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/job-actions.png" alt=""><figcaption></figcaption></figure>

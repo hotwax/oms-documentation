@@ -1,0 +1,68 @@
+{
+  "months": {
+    "2026-01": {
+      "items": {
+        "release-notes:2026-01": {
+          "filePath": "drafts/2026-01/release-notes.md",
+          "contentType": "release-note",
+          "slug": "release-notes/2026-01",
+          "contentHash": "manual-test-hash-rn-jan",
+          "status": "published",
+          "hubspotPostId": "326217160424",
+          "hubspotUrl": "https://www.hotwax.co/product-updates/release-notes/2026-01",
+          "lastAttemptAt": "2026-03-20T04:34:21.630Z",
+          "publishedAt": "2026-03-20T04:34:21.630Z",
+          "error": null,
+          "sourceCommit": "5f9a9a9b1629fe4e9e5aa33b3aafcb163c5ae72d"
+        },
+        "product-update:2026-01:recovering-bopis-sales-with-ship-to-store-fulfillment": {
+          "filePath": "drafts/2026-01/product-updates/ship_to_store_md.md",
+          "contentType": "product-update",
+          "slug": "product-updates/2026-01/recovering-bopis-sales-with-ship-to-store-fulfillment",
+          "contentHash": "manual-test-hash-pu-jan",
+          "status": "published",
+          "hubspotPostId": "326217160421",
+          "hubspotUrl": "https://www.hotwax.co/product-updates/2026-01/recovering-bopis-sales-with-ship-to-store-fulfillment",
+          "lastAttemptAt": "2026-03-20T04:34:24.950Z",
+          "publishedAt": "2026-03-20T04:34:24.950Z",
+          "error": null,
+          "sourceCommit": "5f9a9a9b1629fe4e9e5aa33b3aafcb163c5ae72d"
+        }
+      }
+    },
+    "2026-02": {
+      "items": {
+        "release-notes:2026-02": {
+          "filePath": "drafts/2026-02/release-notes.md",
+          "contentType": "release-note",
+          "slug": "release-notes/2026-02",
+          "contentHash": "3eaba67f65899a40323a533e494a042da299d7f02828ae03dc0fe017e67f7ec3",
+          "status": "published",
+          "hubspotPostId": "326217164497",
+          "hubspotUrl": "https://www.hotwax.co/product-updates/release-notes/2026-02",
+          "lastAttemptAt": "2026-03-20T06:20:34.139Z",
+          "publishedAt": "2026-03-20T06:20:34.139Z",
+          "error": null,
+          "sourceCommit": "70757528c04f471d3c0a4892b066647aa74ee861"
+        }
+      }
+    },
+    "2026-03": {
+      "items": {
+        "release-notes:2026-03": {
+          "filePath": "drafts/2026-03/release-notes.md",
+          "contentType": "release-note",
+          "slug": "product-updates/release-notes/2026-03",
+          "contentHash": "4e2cf8dfa860f7264b0bc52bd1bf04ac37ec03bc070b23fd934cc57c79550c4e",
+          "status": "pending",
+          "hubspotPostId": null,
+          "hubspotUrl": null,
+          "lastAttemptAt": null,
+          "publishedAt": null,
+          "error": null,
+          "sourceCommit": "70757528c04f471d3c0a4892b066647aa74ee861"
+        }
+      }
+    }
+  }
+}

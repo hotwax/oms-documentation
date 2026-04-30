@@ -54,7 +54,7 @@ Set how often the job runs.
 
 Make changes to the job's parameters, settings, or execution details as necessary, allowing users to set up workflows specific to their scenarios. Custom parameters have to be configured before a scheduled job and cannot be changed while a job is pending execution.
 
-<figure><img src="../../.gitbook/assets/Job Actions.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/job-actions.png" alt="" width="375"><figcaption></figcaption></figure>
 
 ***
 

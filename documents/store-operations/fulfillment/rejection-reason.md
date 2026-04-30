@@ -25,8 +25,6 @@ Here's a step-by-step guide on how to use this feature:
    - **Variance Type:** Select the appropriate type that categorizes this rejection reason (e.g., Report All variance).
 5. Click `Save` to save the reason.
 
-{% embed url="https://youtu.be/sU6W-4l6luY" %} Video: Create Rejection Reason {% endembed %}
-
 Furthermore, you can make the following edits to the existing rejection reasons:
 
 - Update the impact on ATP for the reason
@@ -35,5 +33,3 @@ Furthermore, you can make the following edits to the existing rejection reasons:
 - Remove Rejection Reason
 
 By customizing rejection reasons, users can efficiently manage orders and communicate effectively with customers.
-
-{% embed url="https://youtu.be/jH-MvETA_GY" %} Video: Edit Rejection Reason {% endembed %}

@@ -27,10 +27,10 @@ POS sale fields in Shopify are mapped in HotWax Commerce just like any regular o
 
 {% tabs %}
 {% tab title="POS sale in Shopify" %}
-<figure><img src="../../.gitbook/assets/23.png" alt=""><figcaption><p>POS sale field mapping</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/pos-sale-fields-shopify.png" alt=""><figcaption><p>POS sale field mapping</p></figcaption></figure>
 {% endtab %}
 
 {% tab title="POS sale in HotWax Commerce" %}
-<figure><img src="../../.gitbook/assets/24.png" alt=""><figcaption><p>POS sale field mapping</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/pos-sale-fields-hotwax.png" alt=""><figcaption><p>POS sale field mapping</p></figcaption></figure>
 {% endtab %}
 {% endtabs %}

@@ -10,19 +10,14 @@ The order card in the `Packed` Orders page shows the same basic details as in th
 
 There is also a `mail` icon to resend the pickup email to the customer, and a `Handover` button that is used to mark the order as `completed` once the customer picks up the order.
 
-When the `Handover` button is clicked, a Proof of Delivery (POD) pop-up appears where the store associate records that the order has been collected either by the customer or by someone collecting it on their behalf. The associate verifies the order details and asks the person picking up the order to provide proof of identity, which can include:
+When the `Handover` button is clicked, an alert appears to verify that the items are valid and the customer has received their order. Once the order is handed over, it moves to the `Completed` tab.
 
-- Uploading an ID image
-- Providing a digital signature
-- Entering a unique pickup code
-
-The recorded details are saved and linked to the respective order. Once confirmation is saved, an automated email is sent to the customer with the order details and pickup confirmation.
+Store associates can record Proof of Delivery (POD) details for completed orders from the `Completed Orders` page.
 
 ## Order Details Page
 The `Order Details` page in the `Packed` Orders page shows all the usual order information. At the top, there is a `mail` icon that lets store staff resend an email to notify the customer that their order is ready for pickup, a `watch` icon to view the order item rejection history, and a `print` icon to generate the packing slip.
 
-The page also allows store associates to edit the assigned picker for an order. To update the picker, associates can click the `picker name`. This opens a pop-up displaying all available pickers, and a new picker can be selected from the list.
-
+The page also allows store associates to edit the assigned picker for an order. If tracking is enabled, you can update the picker for an order from the **Order Details** page. To do this, click on the **picker name chip** (identified by a person icon ![person icon](https://ionicframework.com/docs/ionicons/person-outline.svg)) to open the edit picker modal and update the assignment.
 Once an order is packed and marked as Ready for Pickup, store staff will see the `Handover` and `Cancel Item` buttons on the Order Details page. At this stage, rejecting or unpacking items is no longer possible.
 
 Selecting `Cancel Item` opens a pop-up displaying a list of cancellation reasons. When an item is cancelled, an email is sent to the customer.

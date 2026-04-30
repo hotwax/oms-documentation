@@ -19,13 +19,13 @@ With the `Facilities App` in HotWax Commerce, retail brands can create distinct 
    * Scroll to the bottom of the page and click on the `Create group` button to create a new group for the sales channel you want to set up inventory.
 3. **Enter Group Details:**
    * Fill in the required details such as `Name`, `Internal ID of the Facility Group`, and `Description`.
-   * Select the system group type as `Online Facility Group` to indicate that this facility group would be used to sell inventory on online channels. The facility groups with the `Online facility Groups` type are also visible in the `sell online` card on the `facility details` [page.](./../administration/facilities/configure-fulfillment.md)
+   * Select the system group type as `Online Facility Group` to indicate that this facility group would be used to sell inventory on online channels. The facility groups with the `Online facility Groups` type are also visible in the `sell online` card on the `facility details` [page](./../administration/facilities/manage-facility-details.md#online-fulfillment-settings).
 4. **Save Group:**
    * Click on the `+` icon to save the newly created inventory group.
 5. **Quick Edit Facilities:**
    * Once the facility is created, click on the number displayed on the facility card corresponding to the created group.
 
-<figure><img src="../.gitbook/assets/facilities.hotwax 8.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/facility-group-quick-edit.png" alt=""><figcaption></figcaption></figure>
 
 * Select `Quick Edit` to efficiently manage facilities associated with this group.
 

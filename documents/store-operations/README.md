@@ -47,11 +47,10 @@ This category revolves around managing the workflow using the three apps: Thresh
 
 #### Inventory
 
-This category revolves around managing the inventory using the three apps: Receiving, Cycle Count and Picking.
+This category revolves around managing the inventory using the two apps: Receiving and Cycle Count.
 
 * **Receiving** HotWax Commerce’s Receiving app enables users to manage incoming shipments, purchase orders, and return orders.
 * **Cycle Count** HotWax Commerce’s Cycle Count app enables stock associates to count the store’s inventory, and reconcile systematic and physical inventory.
-* **Picking** HotWax Commerce’s Picking app enables the fulfillment team to efficiently pick order items during order fulfillment.
 
 #### Administration
 

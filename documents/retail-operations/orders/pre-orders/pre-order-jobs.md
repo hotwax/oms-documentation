@@ -53,7 +53,7 @@ To schedule the job, Merchandisers navigate to the `Job Manager` > `Pre Orders` 
 * Activate the `File Upload Status` job, which monitors file processing and potential errors via the Shopify webhook.
 * Schedule the `Upload Pending Process` job to prompt Shopify for the next GraphQL file upon receiving `Upload` Status updates.
 
-<figure><img src="../../.gitbook/assets/job-manager.hotwax.io_pre-order (5).png" alt=""><figcaption><p>Process Upload</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/process-uploads-jobs.png" alt=""><figcaption><p>Process Upload</p></figcaption></figure>
 
 * After confirming the activation of `Process Upload` jobs, Merchandisers can schedule the `presell catalog sync` job. To delve deeper into understanding how pre-orders are listed on Shopify, comprehensive insights are available in our [Shopify Pre-order integration guide.](../../../learn-shopify/shopify-integration/preorders-and-backorders/presell-catalog-management.md)
 
@@ -63,7 +63,7 @@ The HotWax Commerce Pre-order PDP app employs tags and meta fields to modify the
 
 Likewise, it's essential to schedule the `Remove pre-order tags` and `Remove backorder tags` jobs to eliminate the `HC: Pre-order` and `HC: Backorder` tags when a product is removed from the pre-order catalog.
 
-<figure><img src="../../.gitbook/assets/job-manager.hotwax.io_pre-order (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/pre-order-tags-jobs.png" alt=""><figcaption></figcaption></figure>
 
 **Update Pre-Order Category Item Arrival Date**
 
@@ -79,14 +79,14 @@ Ensuring accurate representation of pre-order information and changes in custome
 
 **Update Promise Date**- In cases where promise dates change due to shifts in the arrival date of purchase orders, updates to the promise dates in sales orders are necessary. The `update promise date` job update the promise date notes of the sales orders.
 
-<figure><img src="../../.gitbook/assets/job-manager.hotwax.io_pre-order (2).png" alt=""><figcaption><p>Sales order jobs</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/sales-order-jobs.png" alt=""><figcaption><p>Sales order jobs</p></figcaption></figure>
 
 **Adjust ATP on Early PO in Bulk**– Merchandisers frequently handle multiple Purchase Orders for identical SKUs. Sometimes, they might upload a new Purchase Order with an earlier promised date, even if there's an existing Purchase Order for the same SKU in the system. In such cases, reallocating sales orders from the initial Purchase Order to the latest one with an earlier date becomes vital. This ensures that customers who placed pre-orders first are given priority, guaranteeing timely delivery. The task automatically adjusts Purchase Order ATP allocations and reallocates pre-orders accordingly. To schedule this, enable and set up the `Adjust ATP on Early PO in Bulk` job found in the More Jobs section.
 
-<figure><img src="../../.gitbook/assets/job-manager.hotwax.io_pre-order (6).png" alt=""><figcaption><p>Adjust ATP on Early PO in Bulk</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/adjust-atp-on-early-po-job.png" alt=""><figcaption><p>Adjust ATP on Early PO in Bulk</p></figcaption></figure>
 
 **Auto Sync Date to order-** Merchants can change the promise dates in sales orders if there are any changes in the promise date due to arrival date changes in Purchase order through this job. This job can be scheduled by checking the box against the file name.
 
 **Email Customers**- To efficiently manage customer expectations regarding changes in promised dates, activating the `Email customers` checkbox initiates a job that triggers automatic emails to customers. This action ensures customers are informed whenever there's a modification in the promised date.
 
-<figure><img src="../../.gitbook/assets/job-manager.hotwax.io_pre-order (3).png" alt=""><figcaption><p>Update Promise date changes to customers</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/update-promise-date-email-customers.png" alt=""><figcaption><p>Update Promise date changes to customers</p></figcaption></figure>
