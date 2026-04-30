@@ -30,7 +30,7 @@ The data is passed to the core synchronization service, `sync#ShopifyProduct`. I
 If the new hash matches the one stored in the `ProductUpdateHistory` table, the system knows that specific group of data hasn't changed and skips it.
 
 6. **Update the database**
-Only the identified changes (deltas) are applied to the database. This selective update approach handles core product details, features, tags, pricing, and identifiers like SKU and UPC. It also automatically detects the correct product type (e.g., `FINISHED_GOOD` vs. `DIGITAL_GOOD`) based on Shopify flags.
+Only the identified changes (deltas) are applied to the database. This selective update approach handles core product details, features, tags, pricing, and identifiers like SKU and UPC. It also detects the correct product type (e.g., `FINISHED_GOOD` vs. `DIGITAL_GOOD`) based on Shopify flags.
 
 7. **Save history**
 Finally, the system updates the `ProductUpdateHistory` record with the new hashes and a snapshot of the current data. This "closes the loop" and makes the system **idempotent**, meaning that running the sync again with the same data will result in zero database changes. This stage also links the update back to the original `systemMessageId` for a complete record.
