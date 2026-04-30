@@ -200,7 +200,7 @@ Safety stock helps retailers control how much inventory they promise to online c
 
 ### SendSale orders
 
-SendSale orders in HotWax Commerce refer to orders captured through the `Shopify POS` app. These orders are taken in the store by store associates on behalf of customers for items that are not in stock in the store. The items are then shipped to customers at their preferred shipping location. In HotWax Commerce, these orders are downloaded and processed just like online orders. However, the channel tagged for the order in HotWax Commerce is Point of Sale (POS).
+SendSale orders in HotWax Commerce refer to orders captured through the **Shopify POS** app. These orders are taken in the store by store associates on behalf of customers for items that are not in stock in the store. The items are then shipped to customers at their preferred shipping location. In HotWax Commerce, these orders are downloaded and processed just like online orders. However, the channel tagged for the order in HotWax Commerce is point of sale (POS).
 
 ### Shipping label
 
