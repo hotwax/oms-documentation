@@ -57,7 +57,7 @@ Learn more about [order routing](../retail-operations/orders/order-routing.md).
 
 A bundle product refers to a product that consists of multiple components. These components are integrated to form a cohesive product offering. For example, a computer bundle might include a CPU, motherboard, RAM, and a hard drive.
 
-The `Import Bundle Product Components` job helps reflect these components accurately in the Order Management System (OMS). The availability of a bundle product is determined by the lowest common denominator of component inventory available at each facility. This means that the bundle product's availability is constrained by the facility with the least available inventory of its components. The computed inventory of each bundle product at every facility is then aggregated to determine the final sellable inventory number across the entire network.
+The `Import Bundle Product Components` job helps reflect these components accurately in the order management system (OMS). The availability of a bundle product is determined by the lowest common denominator of component inventory available at each facility. This means that the bundle product's availability is constrained by the facility with the least available inventory of its components. The computed inventory of each bundle product at every facility is then aggregated to determine the final sellable inventory number across the entire network.
 
 Learn more about [bundle products](../learn-shopify/additional-resources/kit-products.md).
 
