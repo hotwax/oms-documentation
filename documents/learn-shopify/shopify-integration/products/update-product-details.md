@@ -1,25 +1,30 @@
 ---
 description: >-
-  Easily update product details from Shopify to HotWax Commerce for smooth
-  synchronization.
+  Learn how HotWax Commerce identifies product updates using between Shopify and the OMS.
 ---
 
-# Updating Product Details
+# Updating product details
 
-### Updating Product Details from Shopify to HotWax Commerce
+Merchants use Shopify to update product information such as names, images, tags, and weight. HotWax Commerce identifies these changes as part of the product download.
 
-Merchants use Shopify to update their product information, such as the name, image, tags, and weight. HotWax Commerce regularly downloads these updates through the 'Sync Products' job, which can be set up in the Job Manager App. If a merchant needs to make changes to a product's details in Shopify, they can achieve this in the following two ways:
+### Identifying updates with diff computation
+Instead of comparing every individual field during every sync, HotWax Commerce uses **Diff Computation** to find exactly what changed. The system groups product data and computes a unique digital signature (**SHA-256 Hash**) for each.
 
-* **Deleting the existing product and creating a new one with updated details.**
+The core service `sync#ShopifyProduct` compares the incoming hashes against the details stored in the `ProductUpdateHistory` table. If no hashes match, the system knows no changes occurred and skips that data. If the hashes differ, the system identifies the exact "delta" (what was added, removed, or changed) and applies only those specific updates to the database.
 
-In the event that merchants opt to remove their current products and generate new ones with revised information, HotWax Commerce will proceed to erase the old items and introduce fresh products through an "Import Products" task.
+### Product field mapping
+HotWax Commerce maps the fields from the Shopify JSON to the internal product entities. The following table outlines how these fields are synchronized:
 
-* **Editing products’ fields in Shopify.**
+| Shopify JSON field | HotWax Commerce field | Description |
+| :--- | :--- | :--- |
+| `id` (GID) | **Shopify Product ID** | A unique ID used to identify the product. |
+| `title` | **Product Name** | The name shown for the product. |
+| `handle` | **Internal Name** | Used in the product’s URL and for internal use. |
+| `vendor` | **Brand** | The brand or company that makes the product. |
+| `productType` | **Category** | The type or category the product belongs to. |
+| `tags` | **Keywords** | Tags used to search and organize products. |
+| `variants.sku` | **SKU** | A unique code to track the product. |
+| `variants.barcode` | **UPCA/GTIN** | Barcode used for scanning the product. |
+| `variants.price` | **Price** | The selling price of the product. |
+| `variants.weight` | **Weight** | The product’s weight, used for shipping. |
 
-To keep their product details up-to-date, merchants can easily schedule the "Sync Products" job from the Product page in the Job Manager App. This job checks the "updated\_at" field of the product in Shopify and compares it to the job's last run time. If the time in the "updated\_at" field is later than the job's last run time, it will download all the product details from Shopify, compare them with the data in HotWax Commerce, and update any changed fields. By default, the "Sync Products" job runs every 6 hours, but merchants can adjust this frequency as needed from the Job Manager app.
-
-<figure><img src="../../.gitbook/assets/sync-product-updates-from-shopify.png" alt=""><figcaption><p><em>Fig.5: Sync product updates from Shopify</em></p></figcaption></figure>
-
-**Managing Sales Orders For Products That Are Not In HotWax Commerce**
-
-When orders are placed on Shopify, they are also transferred to HotWax Commerce. However, sometimes an order might include a newly launched product in Shopify that has not yet been synced with HotWax Commerce. This can cause the order download to fail if the product import job has not yet run. To prevent this, HotWax Commerce creates a temporary placeholder product for the new item. Once the product import job is run, all the necessary information such as the product name, brand, price, weight, and so on are added to the placeholder product. This ensures that the order download is successful and the customer receives their product.
