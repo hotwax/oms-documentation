@@ -8,7 +8,7 @@ description: Learn about common terms in omnichannel order and inventory managem
 
 An advanced shipping notice (ASN) is a notification sent by a supplier to a recipient detailing the contents and expected arrival of a shipment, often sent in advance of the physical delivery. For example, if a store anticipates receiving 100 shirts in an incoming shipment, the ASN will detail this expected inventory count.
 
-In the context of HotWax Commerce, store associates receive ASNs in relation to Transfer Orders (TOs). Generally, a Transfer Order is created in an ERP system, and when the TO is fulfilled in the ERP or WMS (Warehouse Management System), an ASN is generated in HC. Store associates then perform the receiving based on this ASN using the `Receiving App`. In the context of Purchase orders, the ASN receiving is done in ERP/WMS.
+In the context of HotWax Commerce, store associates receive ASNs in relation to transfer orders (TOs). Generally, a transfer order is created in an ERP system, and when the TO is fulfilled in the ERP or WMS (warehouse management system), an ASN is generated in HotWax Commerce. Store associates then perform the receiving based on this ASN using the **Receiving App**. In the context of purchase orders, the ASN receiving is done in ERP/WMS.
 
 Upon the shipment's arrival, store associates can use the `Inventory Receiving App` to locate the ASN by scanning the ASN barcode or manually inputting the ASN ID. They can then view the ASN details, including SKUs, names, SKU codes, images, and expected inventory counts.
 
