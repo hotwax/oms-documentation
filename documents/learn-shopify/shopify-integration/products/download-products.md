@@ -20,7 +20,7 @@ HotWax Commerce monitors the status of the bulk operation using two methods:
 *   **Polling**: The scheduled job `poll_BulkOperationResult_ShopifyBulkQuery` periodically checks Shopify.
 *   **Webhooks**: Shopify sends a real-time `Bulk Operations Finish` notification.
 Once Shopify confirms completion, the system updates the outgoing message status and creates a new **Incoming System Message** containing the result file link.
-*   **Final Outgoing Status**: `SmsgConfirmed` (The operation is successfully finished).
+*   **Final Outgoing Status**: `SmsgConfirmed` (The operation is successfully finished)
 
 4. **Prepare data**
 The raw results are downloaded as a JSONL (JSON Lines) file. The system message framework triggers the `consume#ProductVariantUpdates` service, which transforms the "flat" file into a nested JSON format. This stage re-establishes the relationships between parent products and their specific variants, features, and metadata.
