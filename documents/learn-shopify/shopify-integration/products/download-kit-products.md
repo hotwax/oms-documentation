@@ -10,7 +10,7 @@ description: >-
 
 HotWax Commerce suggests that retailers set up kit products in Shopify as individual products with their SKUs, just like any other item. Even though these kits are made up of several components, Shopify treats them as a single product.
 
-HotWax Commerce downloads kit products and their components like regular products through the `Import Products` [job](/documents/retail-operations/workflow/job-workflows/products.md) and uses its [integration with NetSuite](/documents/learn-netsuite/integration-flows/kit-products.md) to identify the components that make up each kit.
+HotWax Commerce downloads kit products and their components through the Product download. The system uses its integration with ERP to identify the components that make up each kit, ensuring that inventory and fulfillment are handled correctly at the component level.
 
 #### Managing Kit Products with the Bundles App and HotWax Commerce
 
