@@ -64,7 +64,7 @@ Below is a list of all the actions available in the Fulfillment App, along with 
 
 ## EXIM tab
 
-<img width="1920" height="1008" alt="Screenshot 2026-05-01 155347" src="https://github.com/user-attachments/assets/e22f7c8d-f4e2-4f04-87ac-c4dcc699d81b" />
+<img width="1920" height="1008" alt="Screenshot 2026-05-01 155333" src="https://github.com/user-attachments/assets/3d975de9-722c-4434-8369-6b8479c79731" />
 
 | S.No | Action                | Permission | Description                                                                                                                                       |
 | ---- | --------------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -129,4 +129,5 @@ Manage All Fulfillment Operations
 <figure><img src="../../.gitbook/assets/order-details.png" alt=""><figcaption></figcaption></figure>
 
 <img width="1920" height="1008" alt="Screenshot 2026-05-01 155347" src="https://github.com/user-attachments/assets/e22f7c8d-f4e2-4f04-87ac-c4dcc699d81b" />
+
 
