@@ -86,7 +86,7 @@ Retailers aiming for 98% to 99% inventory accuracy regularly perform cycle count
 
 HotWax Commerce provides a dedicated Cycle Count App for retailers that helps them create, assign, schedule and perform cycle counts. What differentiates the app is its role-based interface, operations teams use it to create, assign and review submitted counts, while store associates use it to scan and record item quantities during the count.
 
-<figure><img src="../.gitbook/assets/cycle-count-sync.png" alt=""><figcaption><p></p></figcaption></figure>
+<figure><img src="../.gitbook/assets/cycle-count-sync.png" alt=""><figcaption><p>Cycle count sync</p></figcaption></figure>
 
 There are two types of cycle count:
 
