@@ -90,7 +90,7 @@ HotWax Commerce provides a dedicated Cycle Count App for retailers that helps th
 
 There are two types of cycle count:
 
-**1. HARD COUNT:** A Hard Count is a comprehensive inventory verification process in which every product present in a facility is physically counted. No product is excluded. The goal is to produce a complete and accurate record of all stock available at a given location.
+* **Hard count:** A comprehensive inventory verification process in which store associates physically count every product in a facility. No product is excluded. The goal is to produce a complete and accurate record of all stock available at a given location.
 
 **How It Works:**
 During a Hard Count, store associates are assigned to count every item in the facility. The system does not preload a product list. Instead, it opens a blank count and associates record quantities for all products they encounter. Once submitted, the system compares counted quantities against recorded system quantities and calculates variance for each product.
