@@ -64,7 +64,7 @@ Below is a list of all the actions available in the Fulfillment App, along with 
 
 ## EXIM tab
 
-<figure><img src="../../.gitbook/assets/exim.png" alt=""><figcaption></figcaption></figure>
+<img width="1920" height="1008" alt="Screenshot 2026-05-01 155347" src="https://github.com/user-attachments/assets/e22f7c8d-f4e2-4f04-87ac-c4dcc699d81b" />
 
 | S.No | Action                | Permission | Description                                                                                                                                       |
 | ---- | --------------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -127,3 +127,6 @@ Manage All Fulfillment Operations
 | 5    | Generate Tracking Code modal > Edit carrier or method | ORDER\_SHIPMENT\_METHOD\_UPDATE | Allows users to change the carrier or shipment method while generating a tracking code for orders that require manual label handling. |
 
 <figure><img src="../../.gitbook/assets/order-details.png" alt=""><figcaption></figcaption></figure>
+
+<img width="1920" height="1008" alt="Screenshot 2026-05-01 155347" src="https://github.com/user-attachments/assets/e22f7c8d-f4e2-4f04-87ac-c4dcc699d81b" />
+
