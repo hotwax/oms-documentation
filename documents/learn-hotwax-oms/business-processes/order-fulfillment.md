@@ -83,7 +83,7 @@ Let’s see how the out of the box rejection reasons offered by HotWax Commerce 
 | ---------------- | ----------------------------- | ----------------------------- | ------------------------------------------------------------- |
 | NOT IN STOCK     | Set to 0                      | Set to 0                      | Prevents new orders until product is back in stock            |
 | MISMATCH         | Decrease by rejected quantity | Decrease by rejected quantity | Product still available but not in specific size or color     |
-| DAMAGE           | Decrease by rejected quantity | Unchanged                     | Product remains in stock but cannot be sold due to damage     |
+| DAMAGED PRODUCT  | Decrease by rejected quantity | Decrease by rejected quantity                                     | Indicates the product is physically damaged and no longer available in stock. Both the sellable quantity and the physical count are reduced.    |
 | WORN DISPLAY     | Decrease by rejected quantity | Unchanged                     | Product remains in stock but cannot be sold due to being worn |
 
 Learn more about [Rejections](/documents/store-operations/fulfillment/rejection)
