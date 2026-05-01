@@ -17,7 +17,7 @@ For retailers with agreements with carrier service providers, shipping method op
 
 ### Carrier Shipment Method Mapping
 
-Retailers need to create carrier and shipment methods in HotWax Commerce and ensure that product store shipment mapping is also completed for the existing shipment methods. Learn how to map carrier shipment methods [here](/documents/system-admin/fulfillment/shipping-methods/carrier-and-shipment-methods.md).
+Retailers need to create carrier and shipment methods in HotWax Commerce and ensure that product store shipment mapping is also completed for the existing shipment methods. Learn how to map carrier shipment methods [here](./shipping-methods/carrier-and-shipment-methods.md).
 
 ### Shopify Shop Carrier Shipment Mapping
 
@@ -58,7 +58,7 @@ Retailers who want to rate shop need to enable the rate shopping configuration f
 
 ### Creating Shipping Methods in HotWax Commerce
 
-Shipping methods are created and mapped with the carrier, product store, and facility in [regular manner](/documents/system-admin/fulfillment/shipping-methods/carrier-and-shipment-methods.md). For shipping based on SLA, retailers don’t have to map the Shopify shop carrier shipment methods.
+Shipping methods are created and mapped with the carrier, product store, and facility in [regular manner](./shipping-methods/carrier-and-shipment-methods.md). For shipping based on SLA, retailers don’t have to map the Shopify shop carrier shipment methods.
 
 ### Setting Service Level Agreement
 

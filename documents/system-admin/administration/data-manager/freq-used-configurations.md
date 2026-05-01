@@ -103,7 +103,7 @@ When importing the CSV, some fields need to be filled mandatorily. Here is the l
 
 This import in HotWax allows retailers to update inventory based on the identification type used in external systems. By importing a CSV file into HotWax, inventory adjustments are marked.
 
-This import records [variances](/documents/integrate-with-hotwax/README.md) based on the given delta and updates both [ATP](https://docs.hotwax.co/documents/learn-hotwax-oms#available-to-promise-atp) (Available to Promise) and **QOH** (Quantity on Hand). The MDM feature can set inventory to 0 but cannot make it negative.
+This import records [variances](../../../integrate-with-hotwax/README.md) based on the given delta and updates both [ATP](https://docs.hotwax.co/documents/learn-hotwax-oms#available-to-promise-atp) (Available to Promise) and **QOH** (Quantity on Hand). The MDM feature can set inventory to 0 but cannot make it negative.
 
 **Example:** When an Inventory Reset file is provided by an external system (e.g., NetSuite), and Product A's inventory is updated to 5 while HotWax currently shows 10, a variance of (+5) will be logged, increasing the total inventory to 15. Similarly, if the file specifies a variance of -5, the system's inventory will adjust to 5. When importing Inventory Adjustments, some fields need to be filled mandatorily, while others can be filled for further reference. Here is the list of mandatory fields:
 

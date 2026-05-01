@@ -19,7 +19,7 @@ Approved orders are eligible for brokering in HotWax Commerce. The order routing
 
 Once an order item is allocated, a fulfillment request is sent to the assigned fulfillment location. If this location happens to be a warehouse, the allocation details are synced to the WMS or ERP systems, such as NetSuite, used for warehouse fulfillment.
 
-If an order item is allocated to a store, they are automatically reflected in the HotWax Commerce [Store Fulfillment App](/documents/store-operations/fulfillment/open-orders.md).
+If an order item is allocated to a store, they are automatically reflected in the HotWax Commerce [Store Fulfillment App](../../store-operations/fulfillment/open-orders.md).
 
 {% hint style="info" %}
 HotWax Commerce provides the Store Fulfillment App to quickly and accurately fulfill orders. This app is specifically designed to facilitate easy adoption and minimize the learning curve for store personnel.
@@ -57,7 +57,7 @@ Store managers can replace an assigned picker with a new one for various reasons
 As pickers pick order items, HotWax Commerce rate shops to determine the most cost-effective shipping method offered by the carrier that also meets the SLA. Once the shipping method has been selected, HotWax Commerce fetches shipping labels in bulk with tracking codes from the carrier in advance to reduce the packing time.
 {% endhint %}
 
-Learn more about [Picking](/documents/store-operations/fulfillment/open-orders.md#pick-orders)
+Learn more about [Picking](../../store-operations/fulfillment/open-orders.md#pick-orders)
 
 ## Reject Fulfillment Request
 
@@ -86,7 +86,7 @@ Let’s see how the out of the box rejection reasons offered by HotWax Commerce 
 | DAMAGE           | Decrease by rejected quantity | Unchanged                     | Product remains in stock but cannot be sold due to damage     |
 | WORN DISPLAY     | Decrease by rejected quantity | Unchanged                     | Product remains in stock but cannot be sold due to being worn |
 
-Learn more about [Rejections](/documents/store-operations/fulfillment/rejection)
+Learn more about [Rejections](../../store-operations/fulfillment/rejection.md)
 
 ## Rerouted Requests
 
@@ -128,4 +128,4 @@ In specific circumstances, store managers may opt to stop order fulfillment enti
 
 In specific circumstances, store managers may need to temporarily remove their store's inventory from online selling. This could be due to various reasons such as low stock levels, prioritizing in-store customer sales, or other internal considerations. In such cases, store managers have the option to directly disable online selling for their store. This flexibility allows managers to focus on fulfilling in-store demand while conserving inventory. Additionally, they can easily re-enable online selling in the future when the situation aligns with their business needs.
 
-Learn more about [additional scenarios supported in Store Fulfillment App](/documents/store-operations/fulfillment/fulfillment-setting-page)
+Learn more about [additional scenarios supported in Store Fulfillment App](../../store-operations/fulfillment/fulfillment-setting-page.md)

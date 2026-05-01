@@ -47,7 +47,7 @@ You may need to view a data manager configuration to either manually import data
 
 1. Click the `open link` icon beside the service name on the Data Manager Configuration search page.
 
-* This opens the [Import Data page](/documents/system-admin/administration/data-manager/manual-import.md) for the selected service.
+* This opens the [Import Data page](./manual-import.md) for the selected service.
   
 2. Once a file is done processing, its status will change to **Finished**.
 

@@ -28,7 +28,7 @@ Set up **SFTP** and **Product Store settings**.
 
 OMS and NetSuite communicate by exchanging files in an SFTP location. Both systems access this shared location to send and retrieve files. To enable this process, administrators must configure the SFTP settings in OMS.
 
-For detailed information related to SFTP configuration, refer to this [document](/documents/learn-netsuite/netsuite-deployment/sdf-bundle/setup-sftp.md)
+For detailed information related to SFTP configuration, refer to this [document](../../../learn-netsuite/netsuite-deployment/sdf-bundle/setup-sftp.md)
 
 *  **GUI ID of the SFTP location**: Unique identifier for the SFTP configuration.    
 *  **Server**: Address of the SFTP server/hostname (e.g., \`sftp.example.com\`).    
@@ -46,7 +46,7 @@ In HotWax, you configure NetSuite settings for each Product Store. A Product Sto
 *  Select the product store name.    
 *  Enter it's corresponding NetSuite Subsidiary ID.  
 
-For more information, refer to this [document](/documents/learn-netsuite/netsuite-deployment/prerequisite-syncs/productstore-settings.md).
+For more information, refer to this [document](../../../learn-netsuite/netsuite-deployment/prerequisite-syncs/productstore-settings.md).
 
 ## **Product and Inventory**
 
@@ -56,7 +56,7 @@ Specify which variance reasons to synchronize with NetSuite. For any reason, you
 
 Inventory variance is the gap between what system shows in stock and what’s physically available. Administrators can select reasons for inventory variance to be synced with NetSuite.
 
-To know more about inventory variance refer to this [document](/documents/learn-hotwax-oms/business-process-models/inventory-lifecycle.md).
+To know more about inventory variance refer to this [document](../../../learn-hotwax-oms/business-process-models/inventory-lifecycle.md).
 
 **Steps to configure Inventory Variance:**
 
@@ -90,7 +90,7 @@ Payment methods in HotWax must be mapped to NetSuite Payment Method IDs. Since i
 *  Add the corresponding NetSuite Payment Method ID.    
 *  Apply Mapping.  
 
-For more information, refer to this [document](/documents/learn-netsuite/synchronization-flows/integration-mappings/payment-methods.md).
+For more information, refer to this [document](../../../learn-netsuite/synchronization-flows/integration-mappings/payment-methods.md).
 
 ### **Price Levels**
 
@@ -108,7 +108,7 @@ In NetSuite, price levels let you set different prices for items based on things
 *  Select the desired NetSuite Price Level ID, or choose "Custom."    
 *  Click `Save`.  
 
-For more information, refer to this [document](/documents/learn-netsuite/synchronization-flows/integration-mappings/price-levels.md).
+For more information, refer to this [document](../../../learn-netsuite/synchronization-flows/integration-mappings/price-levels.md).
 
 ### **Discount**
 

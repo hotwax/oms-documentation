@@ -44,7 +44,7 @@ With the `Facilities App` in HotWax Commerce, retail brands can create distinct 
 
 9. **Schedule Inventory Synchronization Jobs:**
 
-* HotWax Commerce has [two inventory synchronization jobs](/documents/retail-operations/workflow/job-workflows/inventory.md) : `Hard Sync` and `Upload Recent Inventory Changes`.
+* HotWax Commerce has [two inventory synchronization jobs](../../retail-operations/workflow/job-workflows/inventory.md) : `Hard Sync` and `Upload Recent Inventory Changes`.
 * Schedule both jobs by specifying the Facility's internal ID in the `facilityGroupId` parameter.
 * This ensures that the inventory for the chosen channel is updated according to the `facilities` added to the corresponding `facility group`.
 
