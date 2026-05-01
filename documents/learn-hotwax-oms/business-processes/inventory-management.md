@@ -96,7 +96,7 @@ How it works:
 During a hard count, store associates are assigned to count every item in the facility. The system does not preload a product list. Instead, it opens a blank count and associates record quantities for all products they encounter. Once submitted, the system compares counted quantities against recorded system quantities and calculates variance for each product.
 
 Example:
-A retail apparel store closes at the end of December for an annual inventory audit. Store associates are divided into teams, each assigned to a section of the store. Over the course of one day, every product — across all categories, sizes, and locations — is physically counted and recorded. The totals are then submitted to the system, which identifies discrepancies between the counted quantities and the system quantities. This entire process constitutes a Hard Count.
+A retail apparel store closes at the end of December for an annual inventory audit. Store associates are divided into teams, each assigned to a section of the store. Over the course of one day, every product, across all categories, sizes, and locations, is physically counted and recorded. The totals are then submitted to the system, which identifies discrepancies between the counted quantities and the system quantities. This entire process constitutes a hard count.
 
 * **Directed count:** A targeted inventory verification process in which only specific, pre-selected products are counted. Rather than auditing the entire facility, the count is directed toward particular items that have been identified as requiring verification.
 
