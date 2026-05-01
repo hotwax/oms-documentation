@@ -82,7 +82,7 @@ All other features, such as receiving extra items or handling discrepancies, are
 
 #### Types of cycle count
 
-Retailers aiming for 98% to 99% inventory accuracy, regularly perform cycle counts at their locations to maintain up to date inventory records. Cycle counting is an important inventory management business process for these retailers and shoud be performed weekly or monthly, depending on the specific needs of the store.
+Retailers aiming for 98% to 99% inventory accuracy regularly perform cycle counts at their locations to maintain up-to-date inventory records. Cycle counting is an important inventory management business process for these retailers and should be performed weekly or monthly, depending on the specific needs of the store.
 
 HotWax Commerce provides a dedicated Cycle Count App for retailers that helps them create, assign, schedule and perform cycle counts. What differentiates the app is its role-based interface, operations teams use it to create, assign and review submitted counts, while store associates use it to scan and record item quantities during the count.
 
