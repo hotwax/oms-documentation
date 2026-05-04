@@ -1,0 +1,22 @@
+{
+  "month": "2026-04",
+  "mode": "monthly",
+  "generatedAt": "2026-05-02T00:34:25.113Z",
+  "requestedAt": "2026-05-02T00:34:25.113Z",
+  "requestedBy": "local",
+  "replayReason": null,
+  "items": [
+    {
+      "key": "release-notes:2026-04",
+      "contentType": "release-note",
+      "title": "April 2026 Release Notes",
+      "slug": "release-notes/2026-04",
+      "filePath": "drafts/2026-04/release-notes.md",
+      "metaDescription": "This month we focused on making customer contact and inventory tracking more accurate across your stores. We also added more precise security controls for tran…",
+      "tagNames": [
+        "Release Note"
+      ],
+      "contentHash": "31fc728a79907856166706ce467572498bdba83abb8af71e3204a80ed7a0d958"
+    }
+  ]
+}

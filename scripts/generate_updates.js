@@ -149,7 +149,12 @@ import fs from "fs";
     }
 
     // saveRepoMetadata(targetMonth, repoMetadata);
-    console.log(`✅ Stage 0 Complete.`);
+    console.log(`✅ Stage 0 Complete. Fetched ${itemMetadata.length} items from ${repos.length} repositories.`);
+
+    if (itemMetadata.length === 0) {
+        console.log(`⚠️  No updates found for ${targetMonth}. Skipping agent phases.`);
+        return;
+    }
 
     // --- PHASE 1: ORGANIZER AGENT ---
     console.log(`\n🧠 Starting Phase 1: Organizer Agent...`);
@@ -173,8 +178,15 @@ import fs from "fs";
     const clusterSummaries = [];
     
     
+    if (!fs.existsSync(rawContextPath)) {
+        console.error(`❌ Phase 2 Error: Raw context file not found at ${rawContextPath}`);
+        return;
+    }
+
     const rawData = fs.readFileSync(rawContextPath, 'utf8').split('\n').filter(Boolean).map(JSON.parse);
     const rawDataMap = new Map(rawData.map(d => [d.id, d]));
+
+    console.log(`✨ Summarizing ${matrix.clusters.length} clusters...`);
 
     for (const cluster of matrix.clusters) {
         console.log(`  Summarizing Cluster: ${cluster.name}...`);

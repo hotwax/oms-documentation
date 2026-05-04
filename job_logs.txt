@@ -1,0 +1,216 @@
+generate	UNKNOWN STEP	﻿2026-05-01T01:53:46.5297163Z Current runner version: '2.334.0'
+generate	UNKNOWN STEP	2026-05-01T01:53:46.5317453Z ##[group]Runner Image Provisioner
+generate	UNKNOWN STEP	2026-05-01T01:53:46.5318200Z Hosted Compute Agent
+generate	UNKNOWN STEP	2026-05-01T01:53:46.5318640Z Version: 20260213.493
+generate	UNKNOWN STEP	2026-05-01T01:53:46.5319142Z Commit: 5c115507f6dd24b8de37d8bbe0bb4509d0cc0fa3
+generate	UNKNOWN STEP	2026-05-01T01:53:46.5319729Z Build Date: 2026-02-13T00:28:41Z
+generate	UNKNOWN STEP	2026-05-01T01:53:46.5320479Z Worker ID: {7bdd6885-4aac-4c06-bcbf-97cc8914c3e1}
+generate	UNKNOWN STEP	2026-05-01T01:53:46.5321062Z Azure Region: westcentralus
+generate	UNKNOWN STEP	2026-05-01T01:53:46.5321564Z ##[endgroup]
+generate	UNKNOWN STEP	2026-05-01T01:53:46.5322682Z ##[group]Operating System
+generate	UNKNOWN STEP	2026-05-01T01:53:46.5323200Z Ubuntu
+generate	UNKNOWN STEP	2026-05-01T01:53:46.5323650Z 24.04.4
+generate	UNKNOWN STEP	2026-05-01T01:53:46.5324034Z LTS
+generate	UNKNOWN STEP	2026-05-01T01:53:46.5324378Z ##[endgroup]
+generate	UNKNOWN STEP	2026-05-01T01:53:46.5324815Z ##[group]Runner Image
+generate	UNKNOWN STEP	2026-05-01T01:53:46.5325266Z Image: ubuntu-24.04
+generate	UNKNOWN STEP	2026-05-01T01:53:46.5325674Z Version: 20260413.86.1
+generate	UNKNOWN STEP	2026-05-01T01:53:46.5326707Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260413.86/images/ubuntu/Ubuntu2404-Readme.md
+generate	UNKNOWN STEP	2026-05-01T01:53:46.5327781Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260413.86
+generate	UNKNOWN STEP	2026-05-01T01:53:46.5328551Z ##[endgroup]
+generate	UNKNOWN STEP	2026-05-01T01:53:46.5329480Z ##[group]GITHUB_TOKEN Permissions
+generate	UNKNOWN STEP	2026-05-01T01:53:46.5331192Z Contents: write
+generate	UNKNOWN STEP	2026-05-01T01:53:46.5331603Z Metadata: read
+generate	UNKNOWN STEP	2026-05-01T01:53:46.5332027Z PullRequests: write
+generate	UNKNOWN STEP	2026-05-01T01:53:46.5332451Z ##[endgroup]
+generate	UNKNOWN STEP	2026-05-01T01:53:46.5334184Z Secret source: Actions
+generate	UNKNOWN STEP	2026-05-01T01:53:46.5334811Z Prepare workflow directory
+generate	UNKNOWN STEP	2026-05-01T01:53:46.5634336Z Prepare all required actions
+generate	UNKNOWN STEP	2026-05-01T01:53:46.5664559Z Getting action download info
+generate	UNKNOWN STEP	2026-05-01T01:53:46.9643679Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+generate	UNKNOWN STEP	2026-05-01T01:53:47.1193080Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+generate	UNKNOWN STEP	2026-05-01T01:53:47.4347545Z Download action repository 'peter-evans/create-pull-request@v7' (SHA:22a9089034f40e5a961c8808d113e2c98fb63676)
+generate	UNKNOWN STEP	2026-05-01T01:53:48.1020796Z Complete job name: generate
+generate	UNKNOWN STEP	2026-05-01T01:53:48.1632491Z ##[group]Run BASE_BRANCH=""
+generate	UNKNOWN STEP	2026-05-01T01:53:48.1633382Z [36;1mBASE_BRANCH=""[0m
+generate	UNKNOWN STEP	2026-05-01T01:53:48.1634151Z [36;1mif [ -z "$BASE_BRANCH" ]; then[0m
+generate	UNKNOWN STEP	2026-05-01T01:53:48.1635160Z [36;1m  BASE_BRANCH="multi-agent-product-update-pub"[0m
+generate	UNKNOWN STEP	2026-05-01T01:53:48.1636098Z [36;1mfi[0m
+generate	UNKNOWN STEP	2026-05-01T01:53:48.1636875Z [36;1mecho "base_branch=$BASE_BRANCH" >> "$GITHUB_OUTPUT"[0m
+generate	UNKNOWN STEP	2026-05-01T01:53:48.1660663Z shell: /usr/bin/bash -e {0}
+generate	UNKNOWN STEP	2026-05-01T01:53:48.1661703Z ##[endgroup]
+generate	UNKNOWN STEP	2026-05-01T01:53:48.1985267Z ##[group]Run actions/checkout@v4
+generate	UNKNOWN STEP	2026-05-01T01:53:48.1986099Z with:
+generate	UNKNOWN STEP	2026-05-01T01:53:48.1986748Z   ref: multi-agent-product-update-pub
+generate	UNKNOWN STEP	2026-05-01T01:53:48.1987646Z   repository: hotwax/oms-documentation
+generate	UNKNOWN STEP	2026-05-01T01:53:48.1988741Z   token: ***
+generate	UNKNOWN STEP	2026-05-01T01:53:48.1989355Z   ssh-strict: true
+generate	UNKNOWN STEP	2026-05-01T01:53:48.1989989Z   ssh-user: git
+generate	UNKNOWN STEP	2026-05-01T01:53:48.1990785Z   persist-credentials: true
+generate	UNKNOWN STEP	2026-05-01T01:53:48.1991493Z   clean: true
+generate	UNKNOWN STEP	2026-05-01T01:53:48.1992176Z   sparse-checkout-cone-mode: true
+generate	UNKNOWN STEP	2026-05-01T01:53:48.1992935Z   fetch-depth: 1
+generate	UNKNOWN STEP	2026-05-01T01:53:48.1993565Z   fetch-tags: false
+generate	UNKNOWN STEP	2026-05-01T01:53:48.1994209Z   show-progress: true
+generate	UNKNOWN STEP	2026-05-01T01:53:48.1994868Z   lfs: false
+generate	UNKNOWN STEP	2026-05-01T01:53:48.1995459Z   submodules: false
+generate	UNKNOWN STEP	2026-05-01T01:53:48.1996102Z   set-safe-directory: true
+generate	UNKNOWN STEP	2026-05-01T01:53:48.1996818Z ##[endgroup]
+generate	UNKNOWN STEP	2026-05-01T01:53:48.2909904Z Syncing repository: hotwax/oms-documentation
+generate	UNKNOWN STEP	2026-05-01T01:53:48.2912371Z ##[group]Getting Git version info
+generate	UNKNOWN STEP	2026-05-01T01:53:48.2913650Z Working directory is '/home/runner/work/oms-documentation/oms-documentation'
+generate	UNKNOWN STEP	2026-05-01T01:53:48.2915278Z [command]/usr/bin/git version
+generate	UNKNOWN STEP	2026-05-01T01:53:48.2940291Z git version 2.53.0
+generate	UNKNOWN STEP	2026-05-01T01:53:48.2961146Z ##[endgroup]
+generate	UNKNOWN STEP	2026-05-01T01:53:48.2981890Z Temporarily overriding HOME='/home/runner/work/_temp/7ff754be-72fa-42c3-a717-ee0ebeff4911' before making global git config changes
+generate	UNKNOWN STEP	2026-05-01T01:53:48.2984464Z Adding repository directory to the temporary git global config as a safe directory
+generate	UNKNOWN STEP	2026-05-01T01:53:48.2987496Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/oms-documentation/oms-documentation
+generate	UNKNOWN STEP	2026-05-01T01:53:48.3016371Z Deleting the contents of '/home/runner/work/oms-documentation/oms-documentation'
+generate	UNKNOWN STEP	2026-05-01T01:53:48.3018927Z ##[group]Initializing the repository
+generate	UNKNOWN STEP	2026-05-01T01:53:48.3022675Z [command]/usr/bin/git init /home/runner/work/oms-documentation/oms-documentation
+generate	UNKNOWN STEP	2026-05-01T01:53:48.3113577Z hint: Using 'master' as the name for the initial branch. This default branch name
+generate	UNKNOWN STEP	2026-05-01T01:53:48.3115578Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+generate	UNKNOWN STEP	2026-05-01T01:53:48.3117056Z hint: to use in all of your new repositories, which will suppress this warning,
+generate	UNKNOWN STEP	2026-05-01T01:53:48.3118428Z hint: call:
+generate	UNKNOWN STEP	2026-05-01T01:53:48.3119238Z hint:
+generate	UNKNOWN STEP	2026-05-01T01:53:48.3120381Z hint: 	git config --global init.defaultBranch <name>
+generate	UNKNOWN STEP	2026-05-01T01:53:48.3121579Z hint:
+generate	UNKNOWN STEP	2026-05-01T01:53:48.3122422Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+generate	UNKNOWN STEP	2026-05-01T01:53:48.3124132Z hint: 'development'. The just-created branch can be renamed via this command:
+generate	UNKNOWN STEP	2026-05-01T01:53:48.3125226Z hint:
+generate	UNKNOWN STEP	2026-05-01T01:53:48.3125818Z hint: 	git branch -m <name>
+generate	UNKNOWN STEP	2026-05-01T01:53:48.3126507Z hint:
+generate	UNKNOWN STEP	2026-05-01T01:53:48.3127418Z hint: Disable this message with "git config set advice.defaultBranchName false"
+generate	UNKNOWN STEP	2026-05-01T01:53:48.3129240Z Initialized empty Git repository in /home/runner/work/oms-documentation/oms-documentation/.git/
+generate	UNKNOWN STEP	2026-05-01T01:53:48.3132473Z [command]/usr/bin/git remote add origin https://github.com/hotwax/oms-documentation
+generate	UNKNOWN STEP	2026-05-01T01:53:48.3152137Z ##[endgroup]
+generate	UNKNOWN STEP	2026-05-01T01:53:48.3153247Z ##[group]Disabling automatic garbage collection
+generate	UNKNOWN STEP	2026-05-01T01:53:48.3155272Z [command]/usr/bin/git config --local gc.auto 0
+generate	UNKNOWN STEP	2026-05-01T01:53:48.3181334Z ##[endgroup]
+generate	UNKNOWN STEP	2026-05-01T01:53:48.3182654Z ##[group]Setting up auth
+generate	UNKNOWN STEP	2026-05-01T01:53:48.3186198Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+generate	UNKNOWN STEP	2026-05-01T01:53:48.3212609Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+generate	UNKNOWN STEP	2026-05-01T01:53:48.4544023Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+generate	UNKNOWN STEP	2026-05-01T01:53:48.4569367Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+generate	UNKNOWN STEP	2026-05-01T01:53:48.4763044Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+generate	UNKNOWN STEP	2026-05-01T01:53:48.4801414Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+generate	UNKNOWN STEP	2026-05-01T01:53:48.5005994Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+generate	UNKNOWN STEP	2026-05-01T01:53:48.5041521Z ##[endgroup]
+generate	UNKNOWN STEP	2026-05-01T01:53:48.5043311Z ##[group]Fetching the repository
+generate	UNKNOWN STEP	2026-05-01T01:53:48.5050943Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +refs/heads/multi-agent-product-update-pub*:refs/remotes/origin/multi-agent-product-update-pub* +refs/tags/multi-agent-product-update-pub*:refs/tags/multi-agent-product-update-pub*
+generate	UNKNOWN STEP	2026-05-01T01:53:49.1930426Z From https://github.com/hotwax/oms-documentation
+generate	UNKNOWN STEP	2026-05-01T01:53:49.1932110Z  * [new branch]      multi-agent-product-update-pub -> origin/multi-agent-product-update-pub
+generate	UNKNOWN STEP	2026-05-01T01:53:49.1955390Z ##[endgroup]
+generate	UNKNOWN STEP	2026-05-01T01:53:49.1956443Z ##[group]Determining the checkout info
+generate	UNKNOWN STEP	2026-05-01T01:53:49.1961585Z [command]/usr/bin/git branch --list --remote origin/multi-agent-product-update-pub
+generate	UNKNOWN STEP	2026-05-01T01:53:49.1980938Z   origin/multi-agent-product-update-pub
+generate	UNKNOWN STEP	2026-05-01T01:53:49.1984944Z ##[endgroup]
+generate	UNKNOWN STEP	2026-05-01T01:53:49.1987598Z [command]/usr/bin/git sparse-checkout disable
+generate	UNKNOWN STEP	2026-05-01T01:53:49.2016183Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+generate	UNKNOWN STEP	2026-05-01T01:53:49.2037692Z ##[group]Checking out the ref
+generate	UNKNOWN STEP	2026-05-01T01:53:49.2040873Z [command]/usr/bin/git checkout --progress --force -B multi-agent-product-update-pub refs/remotes/origin/multi-agent-product-update-pub
+generate	UNKNOWN STEP	2026-05-01T01:53:49.2141038Z Switched to a new branch 'multi-agent-product-update-pub'
+generate	UNKNOWN STEP	2026-05-01T01:53:49.2143299Z branch 'multi-agent-product-update-pub' set up to track 'origin/multi-agent-product-update-pub'.
+generate	UNKNOWN STEP	2026-05-01T01:53:49.2147996Z ##[endgroup]
+generate	UNKNOWN STEP	2026-05-01T01:53:49.2177774Z [command]/usr/bin/git log -1 --format=%H
+generate	UNKNOWN STEP	2026-05-01T01:53:49.2197100Z a79be9b35007b75c8d57ae91b7e9e6002c68e947
+generate	UNKNOWN STEP	2026-05-01T01:53:49.2389574Z ##[group]Run actions/setup-node@v4
+generate	UNKNOWN STEP	2026-05-01T01:53:49.2390555Z with:
+generate	UNKNOWN STEP	2026-05-01T01:53:49.2391101Z   node-version: 18
+generate	UNKNOWN STEP	2026-05-01T01:53:49.2391694Z   cache: npm
+generate	UNKNOWN STEP	2026-05-01T01:53:49.2392264Z   always-auth: false
+generate	UNKNOWN STEP	2026-05-01T01:53:49.2392887Z   check-latest: false
+generate	UNKNOWN STEP	2026-05-01T01:53:49.2393729Z   token: ***
+generate	UNKNOWN STEP	2026-05-01T01:53:49.2394298Z ##[endgroup]
+generate	UNKNOWN STEP	2026-05-01T01:53:49.4119813Z Attempting to download 18...
+generate	UNKNOWN STEP	2026-05-01T01:53:50.2669145Z Acquiring 18.20.8 - x64 from https://github.com/actions/node-versions/releases/download/18.20.8-14110393767/node-18.20.8-linux-x64.tar.gz
+generate	UNKNOWN STEP	2026-05-01T01:53:50.8955954Z Extracting ...
+generate	UNKNOWN STEP	2026-05-01T01:53:50.9041265Z [command]/usr/bin/tar xz --strip 1 --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/e2a2c6a2-3ffe-49c3-934a-bff672b3e1bd -f /home/runner/work/_temp/e61440b6-928e-47bc-b9f9-c6670fb82b76
+generate	UNKNOWN STEP	2026-05-01T01:53:51.7116994Z Adding to the cache ...
+generate	UNKNOWN STEP	2026-05-01T01:53:57.5606106Z ##[group]Environment details
+generate	UNKNOWN STEP	2026-05-01T01:53:57.7675172Z node: v18.20.8
+generate	UNKNOWN STEP	2026-05-01T01:53:57.7675631Z npm: 10.8.2
+generate	UNKNOWN STEP	2026-05-01T01:53:57.7675824Z yarn: 1.22.22
+generate	UNKNOWN STEP	2026-05-01T01:53:57.7676330Z ##[endgroup]
+generate	UNKNOWN STEP	2026-05-01T01:53:57.7693886Z [command]/opt/hostedtoolcache/node/18.20.8/x64/bin/npm config get cache
+generate	UNKNOWN STEP	2026-05-01T01:53:57.8606283Z /home/runner/.npm
+generate	UNKNOWN STEP	2026-05-01T01:53:58.0421452Z npm cache is not found
+generate	UNKNOWN STEP	2026-05-01T01:53:58.0544881Z ##[group]Run npm ci
+generate	UNKNOWN STEP	2026-05-01T01:53:58.0545099Z [36;1mnpm ci[0m
+generate	UNKNOWN STEP	2026-05-01T01:53:58.0566314Z shell: /usr/bin/bash -e {0}
+generate	UNKNOWN STEP	2026-05-01T01:53:58.0566550Z ##[endgroup]
+generate	UNKNOWN STEP	2026-05-01T01:53:58.9180299Z 
+generate	UNKNOWN STEP	2026-05-01T01:53:58.9185028Z added 36 packages, and audited 37 packages in 803ms
+generate	UNKNOWN STEP	2026-05-01T01:53:58.9185307Z 
+generate	UNKNOWN STEP	2026-05-01T01:53:58.9185478Z 11 packages are looking for funding
+generate	UNKNOWN STEP	2026-05-01T01:53:58.9185752Z   run `npm fund` for details
+generate	UNKNOWN STEP	2026-05-01T01:53:58.9218558Z 
+generate	UNKNOWN STEP	2026-05-01T01:53:58.9219005Z 2 moderate severity vulnerabilities
+generate	UNKNOWN STEP	2026-05-01T01:53:58.9219389Z 
+generate	UNKNOWN STEP	2026-05-01T01:53:58.9219668Z To address all issues, run:
+generate	UNKNOWN STEP	2026-05-01T01:53:58.9220131Z   npm audit fix
+generate	UNKNOWN STEP	2026-05-01T01:53:58.9220573Z 
+generate	UNKNOWN STEP	2026-05-01T01:53:58.9220826Z Run `npm audit` for details.
+generate	UNKNOWN STEP	2026-05-01T01:53:58.9784290Z ##[group]Run SOURCE_REPOS="hotwax/receiving,hotwax/bopis,hotwax/fulfillment,hotwax/inventory-count,hotwax/transfers,hotwax/facilities,hotwax/preorder,hotwax/job-manager,hotwax/hotwax-maarg-util,hotwax/mantle-shopify-connector,hotwax/oms,hotwax/dxp-components,hotwax/hotwax-shopify-oms-bridge,hotwax/hotwax-oms,hotwax/hotwax-poorti,hotwax/hotwax-ofbiz-oms-usl,hotwax/mantle-netsuite-connector,hotwax/hotwax-unigate,hotwax/OrderRouting"
+generate	UNKNOWN STEP	2026-05-01T01:53:58.9786999Z [36;1mSOURCE_REPOS="hotwax/receiving,hotwax/bopis,hotwax/fulfillment,hotwax/inventory-count,hotwax/transfers,hotwax/facilities,hotwax/preorder,hotwax/job-manager,hotwax/hotwax-maarg-util,hotwax/mantle-shopify-connector,hotwax/oms,hotwax/dxp-components,hotwax/hotwax-shopify-oms-bridge,hotwax/hotwax-oms,hotwax/hotwax-poorti,hotwax/hotwax-ofbiz-oms-usl,hotwax/mantle-netsuite-connector,hotwax/hotwax-unigate,hotwax/OrderRouting"[0m
+generate	UNKNOWN STEP	2026-05-01T01:53:58.9788477Z [36;1mif [ -z "$SOURCE_REPOS" ]; then[0m
+generate	UNKNOWN STEP	2026-05-01T01:53:58.9789741Z [36;1m  SOURCE_REPOS="hotwax/receiving,hotwax/bopis,hotwax/fulfillment,hotwax/inventory-count,hotwax/transfers,hotwax/facilities,hotwax/preorder,hotwax/job-manager,hotwax/hotwax-maarg-util,hotwax/mantle-shopify-connector,hotwax/oms,hotwax/dxp-components,hotwax/hotwax-shopify-oms-bridge,hotwax/hotwax-oms,hotwax/hotwax-poorti,hotwax/hotwax-ofbiz-oms-usl,hotwax/mantle-netsuite-connector,hotwax/hotwax-unigate,hotwax/OrderRouting"[0m
+generate	UNKNOWN STEP	2026-05-01T01:53:58.9791230Z [36;1mfi[0m
+generate	UNKNOWN STEP	2026-05-01T01:53:58.9791440Z [36;1mecho "source_repos=$SOURCE_REPOS" >> "$GITHUB_OUTPUT"[0m
+generate	UNKNOWN STEP	2026-05-01T01:53:58.9809483Z shell: /usr/bin/bash -e {0}
+generate	UNKNOWN STEP	2026-05-01T01:53:58.9809726Z ##[endgroup]
+generate	UNKNOWN STEP	2026-05-01T01:53:59.2261356Z ##[group]Run TARGET_MONTH=""
+generate	UNKNOWN STEP	2026-05-01T01:53:59.2261672Z [36;1mTARGET_MONTH=""[0m
+generate	UNKNOWN STEP	2026-05-01T01:53:59.2261871Z [36;1mif [ -z "$TARGET_MONTH" ]; then[0m
+generate	UNKNOWN STEP	2026-05-01T01:53:59.2262138Z [36;1m  TARGET_MONTH="$(node scripts/get_target_month.js)"[0m
+generate	UNKNOWN STEP	2026-05-01T01:53:59.2262388Z [36;1mfi[0m
+generate	UNKNOWN STEP	2026-05-01T01:53:59.2262830Z [36;1mBRANCH_PREFIX="$(node -e "console.log(JSON.parse(require('fs').readFileSync('config/publishing.json', 'utf8')).automation.monthlyBranchPrefix)")"[0m
+generate	UNKNOWN STEP	2026-05-01T01:53:59.2263353Z [36;1mecho "target_month=$TARGET_MONTH" >> "$GITHUB_OUTPUT"[0m
+generate	UNKNOWN STEP	2026-05-01T01:53:59.2263713Z [36;1mecho "branch_name=${BRANCH_PREFIX}-${TARGET_MONTH}" >> "$GITHUB_OUTPUT"[0m
+generate	UNKNOWN STEP	2026-05-01T01:53:59.2281767Z shell: /usr/bin/bash -e {0}
+generate	UNKNOWN STEP	2026-05-01T01:53:59.2281964Z ##[endgroup]
+generate	UNKNOWN STEP	2026-05-01T01:53:59.3255379Z ##[group]Run npm run generate:monthly
+generate	UNKNOWN STEP	2026-05-01T01:53:59.3255758Z [36;1mnpm run generate:monthly[0m
+generate	UNKNOWN STEP	2026-05-01T01:53:59.3275124Z shell: /usr/bin/bash -e {0}
+generate	UNKNOWN STEP	2026-05-01T01:53:59.3275330Z env:
+generate	UNKNOWN STEP	2026-05-01T01:53:59.3275922Z   GITHUB_TOKEN: ***
+generate	UNKNOWN STEP	2026-05-01T01:53:59.3276162Z   GEMINI_API_KEY: ***
+generate	UNKNOWN STEP	2026-05-01T01:53:59.3277373Z   SOURCE_REPOS: hotwax/receiving,hotwax/bopis,hotwax/fulfillment,hotwax/inventory-count,hotwax/transfers,hotwax/facilities,hotwax/preorder,hotwax/job-manager,hotwax/hotwax-maarg-util,hotwax/mantle-shopify-connector,hotwax/oms,hotwax/dxp-components,hotwax/hotwax-shopify-oms-bridge,hotwax/hotwax-oms,hotwax/hotwax-poorti,hotwax/hotwax-ofbiz-oms-usl,hotwax/mantle-netsuite-connector,hotwax/hotwax-unigate,hotwax/OrderRouting
+generate	UNKNOWN STEP	2026-05-01T01:53:59.3278588Z   PRODUCTION: true
+generate	UNKNOWN STEP	2026-05-01T01:53:59.3278752Z   MONTH: 2026-04
+generate	UNKNOWN STEP	2026-05-01T01:53:59.3278914Z   GENERATION_MODE: monthly
+generate	UNKNOWN STEP	2026-05-01T01:53:59.3279090Z ##[endgroup]
+generate	UNKNOWN STEP	2026-05-01T01:53:59.4331543Z 
+generate	UNKNOWN STEP	2026-05-01T01:53:59.4332380Z > product-update-automation@1.0.0 generate:monthly
+generate	UNKNOWN STEP	2026-05-01T01:53:59.4332912Z > node scripts/generate_updates.js
+generate	UNKNOWN STEP	2026-05-01T01:53:59.4333127Z 
+generate	UNKNOWN STEP	2026-05-01T01:53:59.4964816Z file:///home/runner/work/oms-documentation/oms-documentation/scripts/generate_updates.js:33
+generate	UNKNOWN STEP	2026-05-01T01:53:59.4965857Z         throw new Error("Missing required environment variables: SOURCE_REPOS and ORG_GIT_API");
+generate	UNKNOWN STEP	2026-05-01T01:53:59.4966502Z               ^
+generate	UNKNOWN STEP	2026-05-01T01:53:59.4966643Z 
+generate	UNKNOWN STEP	2026-05-01T01:53:59.4967000Z Error: Missing required environment variables: SOURCE_REPOS and ORG_GIT_API
+generate	UNKNOWN STEP	2026-05-01T01:53:59.4967743Z     at file:///home/runner/work/oms-documentation/oms-documentation/scripts/generate_updates.js:33:15
+generate	UNKNOWN STEP	2026-05-01T01:53:59.4968584Z     at file:///home/runner/work/oms-documentation/oms-documentation/scripts/generate_updates.js:249:3
+generate	UNKNOWN STEP	2026-05-01T01:53:59.4969286Z     at ModuleJob.run (node:internal/modules/esm/module_job:195:25)
+generate	UNKNOWN STEP	2026-05-01T01:53:59.4969832Z     at async ModuleLoader.import (node:internal/modules/esm/loader:337:24)
+generate	UNKNOWN STEP	2026-05-01T01:53:59.4970523Z     at async loadESM (node:internal/process/esm_loader:34:7)
+generate	UNKNOWN STEP	2026-05-01T01:53:59.4971094Z     at async handleMainPromise (node:internal/modules/run_main:106:12)
+generate	UNKNOWN STEP	2026-05-01T01:53:59.4971387Z 
+generate	UNKNOWN STEP	2026-05-01T01:53:59.4971488Z Node.js v18.20.8
+generate	UNKNOWN STEP	2026-05-01T01:53:59.5058869Z ##[error]Process completed with exit code 1.
+generate	UNKNOWN STEP	2026-05-01T01:53:59.6234968Z Post job cleanup.
+generate	UNKNOWN STEP	2026-05-01T01:53:59.7021848Z [command]/usr/bin/git version
+generate	UNKNOWN STEP	2026-05-01T01:53:59.7054925Z git version 2.53.0
+generate	UNKNOWN STEP	2026-05-01T01:53:59.7088234Z Temporarily overriding HOME='/home/runner/work/_temp/0e715263-1cb0-4be5-aa69-c6068a70f1bc' before making global git config changes
+generate	UNKNOWN STEP	2026-05-01T01:53:59.7089484Z Adding repository directory to the temporary git global config as a safe directory
+generate	UNKNOWN STEP	2026-05-01T01:53:59.7100663Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/oms-documentation/oms-documentation
+generate	UNKNOWN STEP	2026-05-01T01:53:59.7131377Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+generate	UNKNOWN STEP	2026-05-01T01:53:59.7162394Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+generate	UNKNOWN STEP	2026-05-01T01:53:59.7370687Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+generate	UNKNOWN STEP	2026-05-01T01:53:59.7392556Z http.https://github.com/.extraheader
+generate	UNKNOWN STEP	2026-05-01T01:53:59.7403301Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+generate	UNKNOWN STEP	2026-05-01T01:53:59.7435131Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+generate	UNKNOWN STEP	2026-05-01T01:53:59.7641967Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+generate	UNKNOWN STEP	2026-05-01T01:53:59.7672051Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+generate	UNKNOWN STEP	2026-05-01T01:53:59.7985427Z Cleaning up orphan processes
+generate	UNKNOWN STEP	2026-05-01T01:53:59.8246062Z ##[warning]Node.js 20 actions are deprecated. The following actions are running on Node.js 20 and may not work as expected: actions/checkout@v4, actions/setup-node@v4. Actions will be forced to run with Node.js 24 by default starting June 2nd, 2026. Node.js 20 will be removed from the runner on September 16th, 2026. Please check if updated versions of these actions are available that support Node.js 24. To opt into Node.js 24 now, set the FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true environment variable on the runner or in your workflow file. Once Node.js 24 becomes the default, you can temporarily opt out by setting ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

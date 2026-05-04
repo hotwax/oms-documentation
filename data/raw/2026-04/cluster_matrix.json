@@ -1,0 +1,97 @@
+{
+  "clusters": [
+    {
+      "name": "Store Pickup Customer Contact",
+      "reason": "Unified backend and frontend changes to implement fallback logic for customer contact details. This ensures that if billing information is missing, the Store Pickup app can retrieve contact details from shipping or order-level records.",
+      "itemIds": [
+        "hotwax/bopis#767",
+        "hotwax/bopis#768",
+        "hotwax/oms#466"
+      ]
+    },
+    {
+      "name": "Transfer Order Permissions",
+      "reason": "Introduction of granular access control for canceling and rejecting transfer order items, moving away from general update permissions to a dedicated cancellation permission.",
+      "itemIds": [
+        "hotwax/fulfillment#1589",
+        "hotwax/fulfillment#1590"
+      ]
+    },
+    {
+      "name": "Webhook Notifications",
+      "reason": "Implementation of a secure, HMAC-signed webhook system using Moqui DataFeeds to notify external systems of sales order status changes and item updates.",
+      "itemIds": [
+        "hotwax/oms#420"
+      ]
+    },
+    {
+      "name": "POS Inventory Management",
+      "reason": "Corrections to ship group creation and reservation logic for Point of Sale orders to prevent double inventory deduction and physical stock corruption.",
+      "itemIds": [
+        "hotwax/oms#461"
+      ]
+    },
+    {
+      "name": "Customer Information Management",
+      "reason": "Automatic synchronization of customer first and last names from Shopify during order creation to ensure accurate data for invoices and returns.",
+      "itemIds": [
+        "hotwax/oms#472"
+      ]
+    },
+    {
+      "name": "Store Pickup Rejection History",
+      "reason": "New data views to support the display of order item rejection and facility change history within the Store Pickup application.",
+      "itemIds": [
+        "hotwax/oms#447"
+      ]
+    },
+    {
+      "name": "Product Synchronization",
+      "reason": "Resolution of null reference errors and attribute creation failures during the product synchronization process from Shopify.",
+      "itemIds": [
+        "hotwax/oms#451"
+      ]
+    },
+    {
+      "name": "Facility Management",
+      "reason": "Support for facility operational hours validation and the creation of Solr indexes for facility-based searches.",
+      "itemIds": [
+        "hotwax/oms#468",
+        "hotwax/oms#478"
+      ]
+    },
+    {
+      "name": "Inventory Availability",
+      "reason": "Support for tracking and updating product availability at specific facilities using the facility identifier.",
+      "itemIds": [
+        "hotwax/oms#464"
+      ]
+    },
+    {
+      "name": "Order Detail Visualization",
+      "reason": "Ensures payment preference data is correctly displayed on order lookup pages within the fulfillment workflow.",
+      "itemIds": [
+        "hotwax/fulfillment#1588"
+      ]
+    },
+    {
+      "name": "Proof of Delivery",
+      "reason": "Adjustment of validation constraints for phone numbers within the Proof of Delivery data model.",
+      "itemIds": [
+        "hotwax/bopis#771"
+      ]
+    },
+    {
+      "name": "Data Integrity",
+      "reason": "Support for special characters and HTML formatting in notes and attributes to prevent data truncation or display issues.",
+      "itemIds": [
+        "hotwax/oms#448"
+      ]
+    }
+  ],
+  "noiseItemIds": [
+    "hotwax/bopis#763",
+    "hotwax/oms#394"
+  ],
+  "needClarificationItemIds": []
+}

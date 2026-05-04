@@ -23,6 +23,8 @@ export async function analyzeWithGemini(prompt, models = CONFIG.DEFAULT_MODELS, 
     // Proactive delay before call to manage RPM
     await delay(5000);
 
+    const startTime = Date.now();
+
     for (let attempt = 1; attempt <= retries; attempt++) {
         let allRateLimited = true;
         for (const modelName of models) {
@@ -36,12 +38,15 @@ export async function analyzeWithGemini(prompt, models = CONFIG.DEFAULT_MODELS, 
                 });
 
                 const response = result.response;
+                const duration = ((Date.now() - startTime) / 1000).toFixed(2);
                 const usage = response.usageMetadata;
                 if (usage) {
                     const inputTokens = usage.promptTokenCount || 0;
                     const outputTokens = usage.candidatesTokenCount || (usage.totalTokenCount ? usage.totalTokenCount - inputTokens : 0);
                     const cost = calculateCost(fullModelName, usage);
-                    console.log(`[COST] ${fullModelName} | Tokens: ${inputTokens} in, ${outputTokens} out | Est. Cost: $${cost.toFixed(6)}`);
+                    console.log(`[COST] ${fullModelName} | Tokens: ${inputTokens} in, ${outputTokens} out | Est. Cost: $${cost.toFixed(6)} | Duration: ${duration}s`);
+                } else {
+                    console.log(`[DEBUG] ${fullModelName} call completed in ${duration}s`);
                 }
 
                 return response.text();
@@ -49,20 +54,21 @@ export async function analyzeWithGemini(prompt, models = CONFIG.DEFAULT_MODELS, 
                 const isRateLimit = e.message.includes("429") || e.message.includes("Too Many Requests") || e.message.includes("overloaded");
                 if (!isRateLimit) {
                     allRateLimited = false;
-                    console.warn(`    ${modelName} failed: ${e.message}`);
+                    console.warn(`    ⚠️  ${modelName} failed with non-rate-limit error: ${e.message}`);
                 } else {
-                    console.warn(`    ${modelName} hit rate limit.`);
+                    console.warn(`    ⏳ ${modelName} hit rate limit.`);
                 }
             }
         }
         
         if (allRateLimited && attempt < retries) {
             const waitTime = Math.pow(2, attempt) * 20000;
-            console.warn(`    All models rate limited. Waiting ${waitTime/1000}s before attempt ${attempt + 1}...`);
+            console.warn(`    🚨 All models rate limited. Waiting ${waitTime/1000}s before attempt ${attempt + 1}...`);
             await delay(waitTime);
         } else if (!allRateLimited) {
             await delay(2000);
         }
     }
-    throw new Error("All Gemini models failed after retries");
+    const totalDuration = ((Date.now() - startTime) / 1000).toFixed(2);
+    throw new Error(`All Gemini models failed after ${retries} retries (${totalDuration}s total)`);
 }

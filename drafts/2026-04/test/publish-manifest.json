@@ -1,0 +1,22 @@
+{
+  "month": "2026-04",
+  "mode": "monthly",
+  "generatedAt": "2026-05-02T00:28:23.815Z",
+  "requestedAt": "2026-05-02T00:28:23.815Z",
+  "requestedBy": "local",
+  "replayReason": null,
+  "items": [
+    {
+      "key": "release-notes:2026-04",
+      "contentType": "release-note",
+      "title": "HotWax Product Updates Style Guide",
+      "slug": "release-notes/2026-04",
+      "filePath": "drafts/2026-04/test/release-notes.md",
+      "metaDescription": "Generate the final Monthly Release Notes for HotWax Commerce. Month: 2026-04",
+      "tagNames": [
+        "Release Note"
+      ],
+      "contentHash": "9cde3071d26c2943689361256d977f1c8fd2e1167c5e08ada5f57666cc455563"
+    }
+  ]
+}

@@ -101,6 +101,8 @@ Output ONLY a JSON object in this format:
 }
 `;
 
+    console.log(`  Organizer: Processing ${itemMetadata.length} items...`);
+
     if (CONFIG.DRY_RUN) {
         saveAgentPrompt("organizer", targetMonth, organizerPrompt);
         
@@ -134,6 +136,7 @@ Output ONLY a JSON object in this format:
             mockResult.needClarificationItemIds.push(...missingIds);
         }
 
+        console.log(`  [DRY RUN] Organizer: Identified ${mockResult.clusters.length} clusters.`);
         return mockResult;
     }
 
@@ -160,6 +163,7 @@ Output ONLY a JSON object in this format:
                 parsed.needClarificationItemIds.push(...missingIds);
             }
 
+            console.log(`  Organizer: Identified ${parsed.clusters?.length || 0} clusters, ${parsed.noiseItemIds?.length || 0} noise items, and ${parsed.needClarificationItemIds?.length || 0} items needing clarification.`);
             return parsed;
         }
         return fallback;
