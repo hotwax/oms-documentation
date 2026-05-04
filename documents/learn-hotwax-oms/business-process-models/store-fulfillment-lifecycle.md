@@ -13,6 +13,13 @@ HotWax Commerce, being as an Order Management System, finds the best location to
 
 An order will have multiple fulfillments in case it has been split. Each fulfillment will have its independent lifecycle. For example, consider an order containing two items: one item is backordered while the other is in stock. Once the in-stock item is fulfilled, it will follow its lifecycle, and when the backordered item is fulfilled later, it will have its own separate lifecycle.
 
+## Store Fulfillment Flow
+
+1. Analyze Items and Generate Picklist  
+2. Pick Items  
+3. Pack Items  
+4. Ship Items  
+
 ## Analyze Items and Generate Picklist
 
 Items that have been successfully allocated to stores have fulfillment status <mark style="color:orange;">**"Reserved"**</mark> in HotWax Commerce.
@@ -20,6 +27,8 @@ Items that have been successfully allocated to stores have fulfillment status <m
 By default items are arranged in a "First In, First Out" sequence, ensuring that the ones ordered earlier are prioritized. Store managers can filter them based on the shipping method (such as same-day, next-day, or standard) or customer loyalty status.
 
 For example, if store managers wish to prioritize items with tight SLAs, they can filter out those that have a same-day shipping method to initiate batch processing for them.
+
+### Pick Items 
 
 When store managers determine items they wish to fulfill first, they generate a picklist for them and subsequently, assign a picker so that they can start picking items.
 
@@ -41,9 +50,18 @@ It's crucial to note that shipping labels are valid only when an item requires a
 
 ### Picking Failure
 
-When a picker is unable to find the item that is listed in their picklist, store managers have the authority to reject that specific item. In this scenario, its fulfillment status <mark style="color:orange;">**"Picking"**</mark> is automatically removed in HotWax Commerce.
+#### When does picking failure occur?
+- When a picker is unable to find an item listed in the picklist
 
-Learn more about [Rejections and their reasons](/documents/store-operations/fulfillment/rejection#rejection-reasons)
+#### What happens in this scenario?
+- Store managers have the authority to reject the specific item
+- The fulfillment status **"Picking"** is automatically removed in HotWax Commerce
+
+#### Next Steps
+- The rejected item is processed based on rejection handling rules
+- It may be reallocated or handled through further workflows
+
+Learn more about rejection handling in the relevant documentation section.
 
 ## Pack Items
 
