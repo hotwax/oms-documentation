@@ -6,7 +6,7 @@ description: >-
 
 # Install HotWax Commerce App
 
-The HotWax Commerce Order Management app on Shopify creates the connection between Shopify stores and HotWax Commerce's Omnichannel Order Management System (OMS). This integration ensures reliable transfer of critical data between the eCommerce platform and OMS, adhering to Shopify's guidelines.
+The HotWax Commerce Order Management app on Shopify creates the connection between Shopify stores and HotWax Commerce's Omnichannel Order Management System (OMS). This integration ensures reliable transfer of critical data between the ecommerce platform and OMS, adhering to Shopify's guidelines.
 
 **Step-by-Step Installation Guide:**
 
@@ -14,7 +14,7 @@ The HotWax Commerce Order Management app on Shopify creates the connection betwe
 
 {% hint style="info" %}
 HotWax Commerce app must be installed on all Shopify stores to establish their connection with the OMS.
-{% endhint %}
+{% End hint %}
 
 * Access your Shopify store by logging in to your Shopify account where you want to install the HotWax Order Management App.
 * Go to Settings > Apps and sales channel > Shopify App store.
@@ -29,7 +29,7 @@ HotWax Commerce app must be installed on all Shopify stores to establish their c
 
 {% hint style="info" %}
 The following steps are optional and can be handled by the HotWax Commerce team. Please contact us if you need assistance.
-{% endhint %}
+{% End hint %}
 
 HotWax Commerce relies on JWT (JSON Web Token) for secure API communication, ensuring a safe environment for data exchange between the Shopify store and the HotWax Commerce platform.
 
@@ -51,9 +51,9 @@ HotWax Commerce relies on JWT (JSON Web Token) for secure API communication, ens
 
 | Field                   | Description                                                                                                                                                                                      |
 | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Shop ID**             | The internal name of your Shopify Store. A default ID is created for your Shopify shop when you install the App. but change it to a unique value for multiple stores (e.g., US\_SHOP, CA\_SHOP). |
+| **Shop ID**             | The internal name of your Shopify Store. A default ID is created for your Shopify shop when you install the App. But change it to a unique value for multiple stores (e.g., US\_SHOP, CA\_SHOP). |
 | **Shopify Config Name** | Project-specific; use the instance name along with Shopify Config (e.g. NotNaked Shopify Config).                                                                                                |
-| **Connect URL**         | The default URL is fetched from the Shopify URL (e.g., hc-demo for hc-demo.myshopify.com).                                                                                                       |
+| **Connect URL**         | The default URL is fetched from the Shopify URL (e.g., academy for hc-demo.myshopify.com).                                                                                                       |
 | **Access Token**        | The JWT token to access Shopify                                                                                                                                                                  |
 | **Access Scope**        | The default scope is read-only, make sure you have given read and write access to make changes for the Shopify shop                                                                              |
 | **Shared Secret**       | Provided by the retailer or obtained during custom app setup.                                                                                                                                    |
@@ -79,19 +79,19 @@ After the Shopify Shop is verified, further editing can be performed on the [Sho
 
 {% hint style="info" %}
 The subsequent steps involve internal configurations to be executed by the HotWax Commerce team.
-{% endhint %}
+{% End hint %}
 
-**Step 4: Update Maarg Instance Credentials (if applicable)**
+**Step 4: Update MAAG Instance Credentials (if applicable)**
 
-* If the Maarg instance is configured for data sharing with Shopify, update the credentials:
-  * Login to the dedicated Maarg instance.
-  * Navigate to System > Sys-sys messages > Remotes > Message remote list.
+* If the MAAG instance is configured for data sharing with Shopify, update the credentials:
+  * Login to the dedicated MAAG instance.
+  * Navigate to System > Systems messages > Remotes > Message remote list.
   * Click on the dedicated Shopify Config to edit the configuration.
   * Input the Shopify shop's access token to the Shared Secret field and input the Shopify shop's shared secret into the Send Shared Secret field.
   * Click on the update button to save the changes.
 
 **Step 5: Final Verification**
 
-* Perform a final sanity check to confirm that all information is being shared correctly between the Shopify shop, OMS, and Maarg instance.
+* Perform a final sanity check to confirm that all information is being shared correctly between the Shopify shop, OMS, and MAAG instance.
 
-**Note:** These steps assume basic familiarity with the HotWax Commerce platform, Shopify, and Maarg.
+**Note:** These steps assume basic familiarity with the HotWax Commerce platform, Shopify, and MAAG.

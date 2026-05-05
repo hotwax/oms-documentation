@@ -18,11 +18,11 @@ When these orders are posted to NetSuite they are posted as Cash Sales. They fol
 
 ```xml
 <ShipmentMethodType shipmentMethodTypeId="POS_COMPLETED" description="POS Completed"/>
-<CarrierShipmentMethod partyId="_NA_" roleTypeId="CARRIER" shipmentMethodTypeId="POS_COMPLETED" sequenceNumber="60" />
+<CarrierShipmentMethod party Id="_NA_" roleTypeId="CARRIER" shipmentMethodTypeId="POS_COMPLETED" sequenceNumber="60" />
 ```
 
 </details>
 
 ## Multi Shopify Instance
 
-When setting up HotWax OMS with multiple Shopify stores, make sure to complete product sync configurations before enabling order sync. Without correct product sycning configuration, the orders from the additional product stores will not import correctly.
+When setting up HotWax OMS with multiple Shopify stores, make sure to complete product sync configurations before enabling order sync. Without correct product syncing configuration, the orders from the additional product stores will not import correctly.

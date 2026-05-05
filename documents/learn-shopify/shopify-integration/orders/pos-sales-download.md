@@ -21,16 +21,16 @@ If these conditions are satisfied, HotWax Commerce automatically marks the POS s
 
 {% hint style="info" %}
 HotWax Commerce automatically deducts inventory against the POS sale upon import. This ensures that the actual physical inventory available at the retail store is accurately reflected in HotWax Commerce.
-{% endhint %}
+{% End hint %}
 
 POS sale fields in Shopify are mapped in HotWax Commerce just like any regular order. Certain fields such as Sales Channel, Status, and Shipping Method have different values for POS sales, reflecting how POS sales differ from regular orders.
 
 {% tabs %}
 {% tab title="POS sale in Shopify" %}
-<figure><img src="../../.gitbook/assets/pos-sale-fields-shopify.png" alt=""><figcaption><p>POS sale field mapping</p></figcaption></figure>
-{% endtab %}
+<figure><IMG src="../../.gitbook/assets/pos-sale-fields-shopify.png" alt=""><figcaption><p>POS sale field mapping</p></figcaption></figure>
+{% end tab %}
 
 {% tab title="POS sale in HotWax Commerce" %}
-<figure><img src="../../.gitbook/assets/pos-sale-fields-hotwax.png" alt=""><figcaption><p>POS sale field mapping</p></figcaption></figure>
-{% endtab %}
-{% endtabs %}
+<figure><IMG src="../../.gitbook/assets/pos-sale-fields-hotwax.png" alt=""><figcaption><p>POS sale field mapping</p></figcaption></figure>
+{% end tab %}
+{% end tabs %}

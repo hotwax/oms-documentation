@@ -31,8 +31,8 @@ Retailers can follow these steps:
 
 | Mapped Key               | Mapped Value             |
 | ------------------------ | ------------------------ |
-| afterpay                 | EXT\_SHOP\_AFTRPAY       |
-| afterpay\_north\_america | EXT\_SHOP\_AFTRPAY\_NA   |
+| Afterpay                 | EXT\_SHOP\_AFTRPAY       |
+| Afterpay\_north\_America | EXT\_SHOP\_AFTRPAY\_NA   |
 | American Express         | EXT\_SHOP\_AMEX          |
 | Cash on Delivery (COD)   | EXT\_SHOP\_CASH\_ON\_DEL |
 | Discover                 | EXT\_SHOP\_DISCOVER      |
@@ -40,13 +40,13 @@ Retailers can follow these steps:
 | Mastercard               | EXT\_SHOP\_MASTERCARD    |
 | OFFLINE                  | EXT\_OFFLINE             |
 | paypal                   | EXT\_SHOP\_PAYPAL        |
-| shopify\_installments    | EXT\_SHOP\_PAY\_INSTALL  |
+| Shopify\_installments    | EXT\_SHOP\_PAY\_INSTALL  |
 | VISA                     | EXT\_SHOP\_VISA          |
 
 {% hint style="info" %}
 After incorporating these mandatory mappings, please add any custom mappings as needed.
-{% endhint %}
+{% End hint %}
 
 {% hint style="info" %}
 In HotWax Commerce, retailers can map both payment gateways and payment methods. However, due to the hierarchical structure of mapping, if payment gateways are mapped, payment methods won't be stored within HotWax Commerce. Instead, users will only see the gateway name alongside order details, regardless of the payment method used. If the intention is to retain payment method data, it's necessary to remove the mapping of the payment gateway from HotWax Commerce.
-{% endhint %}
+{% End hint %}

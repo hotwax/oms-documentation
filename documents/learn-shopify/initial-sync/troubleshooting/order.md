@@ -33,11 +33,11 @@ description: Troubleshoot order synchronization between HotWax Commerce and Shop
 
 {% hint style="info" %}
 If the job fails due to technical errors, use logs to find out the reason for failure, non-technical users can use AI tools to decipher error messages.
-{% endhint %}
+{% End hint %}
 
 5. If the problem still persists, connect with the HotWax Commerce support team for further assistance.
 
-<figure><img src="../../.gitbook/assets/import-shopify-orders-job.png" alt=""><figcaption></figcaption></figure>
+<figure><IMG src="../../.gitbook/assets/import-shopify-orders-job.png" alt=""><figcaption></figcaption></figure>
 
 ***
 

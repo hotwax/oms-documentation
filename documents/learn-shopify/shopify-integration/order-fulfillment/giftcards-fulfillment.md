@@ -32,11 +32,11 @@ Learn more about [order fulfillment updates from HotWax Commerce to Shopify](kit
 
 {% hint style="info" %}
 It’s crucial to note that the gift cards are not functional until they are activated on Shopify. The activation process in Shopify is a necessary step to ensure that the gift cards are redeemable and fully functional upon receipt by customers.
-{% endhint %}
+{% End hint %}
 
 {% hint style="success" %}
 When walk-in customers purchase a gift card from the store, it is treated as a regular POS order in HotWax Commerce. Stores maintain blank gift cards and assign the value to them at the time of purchase. As a result, the SKU for in-store gift cards is consistent with those sold online.
-{% endhint %}
+{% End hint %}
 
 ### Activation of Gift Cards
 
@@ -44,7 +44,7 @@ Store associates initiate the gift card activation directly from the HotWax Fulf
 
 {% hint style="info" %}
 Digital gift cards are auto-activated and customers can directly redeem them by entering a unique serial number provided with the card.
-{% endhint %}
+{% End hint %}
 
 ## Fulfillment of Gift Cards in Warehouse
 
@@ -60,7 +60,7 @@ HotWax Commerce Integration Platform retrieves gift card items, their assigned s
 
 {% hint style="info" %}
 HotWax Commerce Integration Platform communicates directly with Shopify for gift card activation, without any intermediary involvement from the HotWax Commerce OMS.
-{% endhint %}
+{% End hint %}
 
 **Job in HotWax Commerce**
 

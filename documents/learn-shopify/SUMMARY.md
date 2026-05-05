@@ -18,7 +18,7 @@
   * [Inventory Synchronization of Kit Products](shopify-integration/inventory/inventory-sync-kitproducts.md)
 * [Orders](shopify-integration/orders/README.md)
   * [Order Download](shopify-integration/orders/order-download.md)
-    * [thruDateBuffer and bufferTime](shopify-integration/orders/buffertimes.md)
+    * [thruDateBuffer and buffer Time](shopify-integration/orders/buffertimes.md)
   * [Order Approval for Fulfillment](shopify-integration/orders/order-approval-for-fulfillment.md)
   * [Order Updates](shopify-integration/orders/order-updates.md)
   * [POS Sales Download](shopify-integration/orders/pos-sales-download.md)

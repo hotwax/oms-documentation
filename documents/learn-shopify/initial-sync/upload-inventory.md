@@ -35,7 +35,7 @@ Given:
 
 Hence,
 
-Online ATP = 100 - (5 + 5 + 5 + 5 + 5) = 100 - 25 = 75 HotWax Commerce will now push 75 units to Shopify as sellable inventory for online orders.
+Online ATP = 100 - (5 + 5 + 5 + 5 + 5) = 100–25 = 75 HotWax Commerce will now push 75 units to Shopify as sellable inventory for online orders.
 
 ## Sync with Shopify
 
@@ -49,7 +49,7 @@ For initial sync, a `Hard Sync` job needs to be scheduled to update all the prod
 
 The existing inventory of a product in HotWax Commerce is affected by sales, returns, transfers, inventory variances, and any changes or updates in safety stock or threshold values. `Upload recent inventory changes` in HotWax Commerce check the inventory records of products in HotWax Commerce and identify products that have undergone inventory changes since the last inventory synchronization to Shopify. `Upload recent inventory changes` job is scheduled to push the delta changes to Shopify.
 
-#### Process uploads to eCommerce
+#### Process uploads to ecommerce
 
 All files transferred from HotWax Commerce to Shopify undergo processing via a job named `Process uploads to eCommerce`. Files transmitted from HotWax Commerce through the `Hard Sync` and `Upload recent inventory changes` jobs are directed to SFTP locations. Shopify sequentially retrieves these files from the SFTP location and executes the alterations via an API call. The `Process uploads to eCommerce` job is tasked with initiating API calls whenever a new file is prepared for processing by Shopify. Consequently, it is crucial to coordinate the scheduling of the `Process uploads to the eCommerce` job with that of the `Hard Sync` and `Upload recent inventory changes` jobs to ensure inventory changes on Shopify.
 

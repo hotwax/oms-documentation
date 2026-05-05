@@ -1,6 +1,6 @@
 ---
 description: >-
-  Learn about integration between HotWax Commerce and Shopify for efficient eCommerce operations.
+  Learn about integration between HotWax Commerce and Shopify for efficient ecommerce operations.
 ---
 
 # Shopify Integration Overview
@@ -11,7 +11,7 @@ Once the product and order data are synchronized from Shopify to HotWax Commerce
 
 ## What Will Be Synced Between Shopify and HotWax Commerce
 
-<figure><img src="../../.gitbook/assets/shopify-integration.png" alt=""><figcaption><p>Flow of Data Between Shopify and HotWax Commerce</p></figcaption></figure>
+<figure><IMG src="../../.gitbook/assets/shopify-integration.png" alt=""><figcaption><p>Flow of Data Between Shopify and HotWax Commerce</p></figcaption></figure>
 
 **Products:** To ensure that orders for all products in Shopify can be fulfilled, HotWax Commerce initially synchronizes all the products. Afterward, any newly added products by a merchandiser in Shopify are synced with HotWax Commerce at regular intervals. During this synchronization process, important product information including Shopify ID, SKU, UPC, product images, and additional details such as product names and features are also synced. Any updates made to product details are also synchronized in HotWax Commerce to provide merchants with the latest product information. Read [here](./products/download-products.md) to learn how products are synced from Shopify to HotWax Commerce.
 

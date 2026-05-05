@@ -16,22 +16,22 @@ The `Upload Recent Inventory Changes` job updates the inventory on Shopify throu
   \
   In the following example, there are five products with inventory records in HotWax Commerce:
 
-<table><thead><tr><th width="163.33333333333331">Product List</th><th>Inventory Count at 1:00 PM</th><th>Inventory Count at 1:15 PM</th></tr></thead><tbody><tr><td>Product A</td><td>100</td><td>95</td></tr><tr><td>Product B</td><td>50</td><td>50</td></tr><tr><td>Product C</td><td>25</td><td>30</td></tr><tr><td>Product D</td><td>100</td><td>100</td></tr><tr><td>Product E</td><td>80</td><td>80</td></tr></tbody></table>
+<table><thead><try><the width="163.33333333333331">Product List</th><th>Inventory Count at 1:00 PM</th><th>Inventory Count at 1:15 PM</th></tr></thead><tbody><try><td>Product A</td><td>100</td><td>95</td></tr><try><td>Product B</td><td>50</td><td>50</td></tr><try><td>Product C</td><td>25</td><td>30</td></tr><try><td>Product D</td><td>100</td><td>100</td></tr><try><td>Product E</td><td>80</td><td>80</td></tr></tbody></table>
 
 At 1:15 PM, the job that runs every 15 minutes detects that there are inventory changes for Product A and Product C that require syncing with Shopify after the 'Upload recent inventory change' task is executed.
 
 * **Comparing Inventory counts between HotWax Commerce and Shopify:** To update its inventory records, HotWax Commerce initiates an [API call](https://shopify.dev/docs/api/admin-rest/2023-04/resources/inventorylevel#get-inventory-levels?location-ids=655441491) to retrieve information from Shopify about products that have undergone changes in HotWax Commerce. The inventory counts for these products in Shopify are then compared with the inventory counts that HotWax Commerce has on file.
 
-<table><thead><tr><th width="147">Product List</th><th width="238">Inventory Count in Shopify</th><th width="331">Inventory Count in HotWax Commerce</th><th width="198">Inventory Difference</th></tr></thead><tbody><tr><td>Product A</td><td>100</td><td>95</td><td>-5</td></tr><tr><td>Product C</td><td>25</td><td>30</td><td>5</td></tr></tbody></table>
+<table><thead><try><the width="147">Product List</th><the width="238">Inventory Count in Shopify</th><the width="331">Inventory Count in HotWax Commerce</th><the width="198">Inventory Difference</th></tr></thead><tbody><try><td>Product A</td><td>100</td><td>95</td><td>-5</td></tr><try><td>Product C</td><td>25</td><td>30</td><td>5</td></tr></tbody></table>
 
 * **Uploading accurate inventory on Shopify:** After comparing inventory changes, the 'Upload recent inventory change' job records the difference and generates a GraphQL file for the affected products. This file is then uploaded to Shopify, which reads it and updates the '[available adjustments](https://shopify.dev/docs/api/admin-rest/2022-10/resources/inventorylevel#post-inventory-levels-adjust)' field to either add or deduct inventory based on the changes.
 
-<table><thead><tr><th width="152">Product List</th><th width="236">Inventory Count in Shopify</th><th width="219">Available Adjustments</th><th width="309">Updated Inventory Count in Shopify</th></tr></thead><tbody><tr><td>Product A</td><td>100</td><td>-5</td><td>95</td></tr><tr><td>Product C</td><td>25</td><td>5</td><td>30</td></tr></tbody></table>
+<table><thead><try><the width="152">Product List</th><the width="236">Inventory Count in Shopify</th><the width="219">Available Adjustments</th><the width="309">Updated Inventory Count in Shopify</th></tr></thead><tbody><try><td>Product A</td><td>100</td><td>-5</td><td>95</td></tr><try><td>Product C</td><td>25</td><td>5</td><td>30</td></tr></tbody></table>
 
-<figure><img src="../../.gitbook/assets/sync-recent-inventory-changes.png" alt=""><figcaption><p><em>Fig. 1(i): Sync Inventory for Products with Recent Inventory Changes</em></p></figcaption></figure>
+<figure><IMG src="../../.gitbook/assets/sync-recent-inventory-changes.png" alt=""><figcaption><p><em>Fig. 1(i): Sync Inventory for Products with Recent Inventory Changes</em></p></figcaption></figure>
 
 \
-When updating inventory on Shopify, HotWax Commerce ensures that the location in Shopify matches the location in HotWax Commerce for merchants. If users utilize a non-Shopify POS, all physical locations in HotWax Commerce will be mapped to one virtual location in Shopify. However, if merchants use Shopify POS and have multiple store locations and an eCom location for online orders, all Shopify locations will be mapped one-to-one with HotWax locations. This means that any inventory updates made to the retail stores and warehouses in HotWax will be reflected in the specific store locations and eCom locations in Shopify for merchants.
+When updating inventory on Shopify, HotWax Commerce ensures that the location in Shopify matches the location in HotWax Commerce for merchants. If users utilize a non-Shopify POS, all physical locations in HotWax Commerce will be mapped to one virtual location in Shopify. However, if merchants use Shopify POS and have multiple store locations and an com location for online orders, all Shopify locations will be mapped one-to-one with HotWax locations. This means that any inventory updates made to the retail stores and warehouses in HotWax will be reflected in the specific store locations and com locations in Shopify for merchants.
 
 ## Hard Sync
 
@@ -53,7 +53,7 @@ This job supports two parameters to control how inventory is synchronized:
 
 - Zone 2 Inventory Sync to Shopify: They create another facility group for the Zone 2 stores and provide its ID in the `shopifyFacilityGroupId` parameter. This directs inventory updates only to the stores included in that facility group.  
 
-<figure><img src="../../.gitbook/assets/hard-sync-inventory-discrepancy.png" alt=""><figcaption><p><em>Fig. 2: Hard Sync inventory to remove any discrepancy</em></p></figcaption></figure>
+<figure><IMG src="../../.gitbook/assets/hard-sync-inventory-discrepancy.png" alt=""><figcaption><p><em>Fig. 2: Hard Sync inventory to remove any discrepancy</em></p></figcaption></figure>
 
 ## Push Updated Inventory Deltas to Shopify
 

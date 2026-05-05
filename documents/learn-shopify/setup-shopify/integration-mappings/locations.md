@@ -5,7 +5,7 @@ description: >-
 
 # Setup Facilities
 
-When mapping locations, map the default Shopify location with the Brokering queue (_NA_ in Hotwax). This ensures that unified inventory across facilities is updated to a single location in Shopify. When an order is placed on Shopify, inventory is reduced from the default location, and the order is sent to the HotWax Commerce `Brokering queue` for brokering to the optimized location for fulfillment.
+When mapping locations, map the default Shopify location with the Brokering queue (_NA_ in HotWax). This ensures that unified inventory across facilities is updated to a single location in Shopify. When an order is placed on Shopify, inventory is reduced from the default location, and the order is sent to the HotWax Commerce `Brokering queue` for brokering to the optimized location for fulfillment.
 
 On the Shopify Config Detail page for your store, follow these steps:
 
@@ -31,5 +31,5 @@ Follow these steps to seamlessly integrate Shopify POS locations with their corr
 5. Repeat these steps for each Shopify POS location, ensuring accurate mapping between Shopify and HotWax Commerce facilities.
 
 {% hint style="warning" %}
-Ensure you have mapped default location in Shopify with Brokering queue i.e _NA_ in Hotwax
-{% endhint %}
+Ensure you have mapped default location in Shopify with Brokering queue i.e _NA_ in HotWax
+{% end hint %}

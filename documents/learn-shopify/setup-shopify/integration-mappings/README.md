@@ -50,4 +50,4 @@ If you're only using the default SHOP Shopify Shop ID, this data needs to be cre
 
 {% hint style="info" %}
 After incorporating the default mapping, please add any custom mappings as needed. You can find steps to map the integration for each Shopify Shop type on their respective page
-{% endhint %}
+{% end hint %}
