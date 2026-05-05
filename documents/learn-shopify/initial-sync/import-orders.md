@@ -11,7 +11,7 @@ To download all open sales orders from a specific period in HotWax Commerce, use
 
 **To import orders in HotWax Commerce, follow these steps:**
 
-1. Visit [job-manager.hotwax.io](http://job-manager.hotwax.io).
+1. Visit [job-manager.hotwax.io](https://job-manager.hotwax.io).
 2. Navigate to the Initial Load section.
 3. Click on "Import Orders in bulk."
 4. Choose the desired run time.
