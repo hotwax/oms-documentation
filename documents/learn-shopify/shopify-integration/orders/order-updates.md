@@ -17,4 +17,4 @@ To ensure all order modifications are synced accurately, HotWax Commerce has an 
 
 <figure><img src="../../.gitbook/assets/import-order-updates-job-config.png" alt=""><figcaption><p><em>Fig.6 : Configuration of the “Import order updates from Shopify” job in the Job Manager App</em></p></figcaption></figure>
 
-To know more about how HotWax Commerce synchronizes Order fulfillment updates with Shopify, [click here](../../). Read further to know how HotWax Commerce Manages [Presell orders](../preorders-and-backorders/) and [BOPIS Orders](../bopis-orders/).
+To know more about how HotWax Commerce synchronizes Order fulfillment updates with Shopify, [click here](../../). Read further to know how HotWax Commerce manages [Presell orders](../preorders-and-backorders/) and [BOPIS Orders](../bopis-orders/).
