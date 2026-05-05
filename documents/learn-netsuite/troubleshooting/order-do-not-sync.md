@@ -1,4 +1,4 @@
-# Orders Not Syncing with Netsuits
+# Orders Not Syncing with NetSuite
 
 HotWax Commerce integrates with platforms like Shopify and NetSuite to manage orders, inventory, and customer data. Occasionally, synchronization issues may arise, causing data discrepancies and operational inefficiencies. This document outlines common scenarios for these issues, with detailed steps to identify, diagnose, and resolve them.
 
@@ -92,18 +92,18 @@ If the customer's name or email ID contains special characters, it does not sync
 
 ## Scenario 4: The Payment Preferences Have Not Been Set
 
-If an order doesn't have a payment preference, it cannot be synced with NetSuite. We need to check if the payment preference for that order is missing in HotWax but present in Shopify, or if the payment preference is missing in both Shopify and HotWax.
+If an order doesn't have a payment preference, it cannot be synced with NetSuite. We need to check if the payment preference for that order is missing in HotWax Commerce but present in Shopify, or if the payment preference is missing in both Shopify and HotWax Commerce.
 
 ### Verification
 
-#### If the Payment Details is Not Set in HotWax
+#### If the Payment Details are Not Set in HotWax Commerce
 
 1. Log in to HotWax Commerce.
 2. Navigate to the order view page
 3. In the “Payment Terms and Preferences” section, verify if preferences are set.
-   Confirm if the payment information is available in Shopify by checking the [`Order JSON data imported`](https://docs.hotwax.co/documents/v/retail-operations/workflow/data-manager/troubleshooting/shopify-mdm) in OMS.  you can verify this on the Shopify order MDM
+   Confirm if the payment information is available in Shopify by checking the [`Order JSON data imported`](https://docs.hotwax.co/documents/v/retail-operations/workflow/data-manager/troubleshooting/shopify-mdm) in OMS. You can verify this on the Shopify order MDM.
 
-#### If the payment details are missing in both Shopify and HotWax
+#### If the payment details are missing in both Shopify and HotWax Commerce
 
 1. Log in to HotWax Commerce.
 2. Navigate to the order view page and click "ExternalID." This will redirect you to the Shopify admin page.
@@ -118,14 +118,14 @@ If an order doesn't have a payment preference, it cannot be synced with NetSuite
 
 ### Resolution
 
-#### If the Payment Details is Not Set in HotWax
+#### If the Payment Details are Not Set in HotWax Commerce
 
-1. Check if the payment method is not set in Hotwax.
+1. Check if the payment method is not set in HotWax Commerce.
 2. After the client makes the necessary changes, run the [`Import Order Update from Shopify`](https://docs.hotwax.co/documents/v/retail-operations/workflow/job-workflows/orders#import-order-updates-from-shopify) job to sync the data.
 
 3. Alternatively, you can manually add the payment preferences by clicking on the + “Payment Terms and Preferences” section.
 
-##### If the Payment Details are Not Set in both Hotwax and Shopify
+##### If the Payment Details are Not Set in both HotWax Commerce and Shopify
 
 1. Inform the client about the issue with the payment preferences.
 2. After the client makes the necessary changes, run the [`Import Order Update from Shopify`](https://docs.hotwax.co/documents/v/retail-operations/workflow/job-workflows/orders#import-order-updates-from-shopify) job to sync the data.
