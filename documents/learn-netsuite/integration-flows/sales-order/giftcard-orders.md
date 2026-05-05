@@ -90,7 +90,7 @@ Learn more about [synchronization of fulfillment data](fulfillment.md)
 
 ### Activation of Gift Cards
 
-A scheduled SuiteScript in NetSuite generates a CSV file containing gift card items, their assigned serial numbers, and values corresponding to the gift card orders. The generated CSV is then placed at an desginated SFTP location.
+A scheduled SuiteScript in NetSuite generates a CSV file containing gift card items, their assigned serial numbers, and values corresponding to the gift card orders. The generated CSV is then placed at an designated SFTP location.
 
 **SuiteScripts**
 

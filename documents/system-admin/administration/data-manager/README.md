@@ -11,7 +11,7 @@ Key features and functionalities include:
 1. **Manual Data Import and Export:** Manually import or extract data as needed.
 2. **Multithreaded:** Import large amounts of data at high speeds to keep the OMS in sync with external systems.
 3. **Error notifications:** Automatically get notified when an error occurs during import.
-4. **Audit imported data:** Audit imported files as they were provided, ensuring tracability.
+4. **Audit imported data:** Audit imported files as they were provided, ensuring traceability.
 
 ## MDM Under the Hood
 Understanding the inner workings of the OMS MDM is essential to building scalable integrations, troubleshooting integrations, and amending corrupted data.

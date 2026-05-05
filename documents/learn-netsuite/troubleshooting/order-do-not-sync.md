@@ -1,4 +1,4 @@
-# Orders Not Syncing with Netsuits
+# Orders Not Syncing with NetSuite
 
 HotWax Commerce integrates with platforms like Shopify and NetSuite to manage orders, inventory, and customer data. Occasionally, synchronization issues may arise, causing data discrepancies and operational inefficiencies. This document outlines common scenarios for these issues, with detailed steps to identify, diagnose, and resolve them.
 
