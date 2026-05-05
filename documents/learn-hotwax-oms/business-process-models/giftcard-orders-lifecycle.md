@@ -18,7 +18,7 @@ HotWax Commerce being an Order Management System downloads all orders, including
 
 **Physical Gift Cards:**
 
-Physical gift cards are tangible cards that customers can buy online or in-store. These cards come with a unique serial number that customers can use to redeem the value stored in the card. Let’s see what happens when customers place online orders for physical gift cards:
+Physical gift cards are tangible cards that customers can buy online or in-store. These cards come with a unique serial number that customers can use to redeem the value stored in the card.Gift cards are activated after a unique serial number is assigned and a value is loaded onto the card. Depending on the fulfillment method, activation may occur during fulfillment (store) or after shipment (warehouse). Let’s see what happens when customers place online orders for physical gift cards:
 
 **Preparation and processing:** These cards are assigned a unique serial number and predefined value loaded onto them when they are processed and prepared for shipping.
 
@@ -26,7 +26,7 @@ Physical gift cards are tangible cards that customers can buy online or in-store
 
 **Digital Gift Cards:**
 
-Digital gift cards, also known as e-gift cards, are virtual equivalents of physical gift cards. Customers receive them via email or text message along with a unique serial number that they can use to redeem the value stored in the card.
+Digital gift cards, also known as e-gift cards, are virtual equivalents of physical gift cards. Customers receive them via email or text message along with a unique serial number that they can use to redeem the value stored in the card.Since digital gift cards are non-inventory items, no physical fulfillment is required in NetSuite. Therefore, NetSuite automatically marks them as fulfilled and updates their status from “Pending Fulfillment” to “Pending Billing”.
 
 **Preparation and processing:** Customers instantly receive digital cards upon purchase via email and therefore they are immediately fulfilled.
 
@@ -83,7 +83,7 @@ NetSuite’s script generates a feed containing gift card items, their assigned 
 
 A scheduled job in HotWax Commerce Integration Platform reads this feed, runs transformation and generates a JSON file with the relevant data required for the gift card activation, including, gift card items, their assigned serial numbers, corresponding values in NetSuite.
 
-Finally, once the JSON is prepared, HotWax Commerce Integration Platform initiates the gift card activation process in the eCommerce platform. Because most of our customers are using Shopify as their eCommerce platform, in this scenario HotWax Commerce Integration Platform calls Shopify API to activate the gift card.
+After shipment, once serial numbers and values are confirmed from NetSuite, HotWax Commerce Integration Platform initiates the gift card activation process in Shopify in the eCommerce platform. Because most of our customers are using Shopify as their eCommerce platform, in this scenario HotWax Commerce Integration Platform calls Shopify API to activate the gift card.
 
 ### 7. Order Item Shipped
 
@@ -96,7 +96,7 @@ NetSuite's script exports item fulfillment records marked as <mark style="color:
 
 Let's take a look at how physical gift card orders are fulfilled from stores.
 
-When physical gift cards are allocated to a store, they automatically appear in the HotWax Commerce `Fulfillment App`. The store’s fulfillment team uses the app to prepare these gift card orders for shipment.
+When physical gift cards are allocated to a store, they automatically appear in the HotWax Commerce "Fulfillment App". The store’s fulfillment team uses the app to prepare these gift card orders for shipment.
 
 * Once a gift card item is successful picked, the fulfillment status changes to <mark style="color:orange;">**"Picked"**</mark>.
 * After packing, the status updates to <mark style="color:orange;">**"Packed"**</mark>.
@@ -105,7 +105,7 @@ When physical gift cards are allocated to a store, they automatically appear in 
 
 ### 9. Activation of Gift Cards
 
-HotWax Commerce `Fulfillment App` also enables store associates to activate gift cards directly. During fulfillment, when a unique serial number is applied and the value is loaded onto the card, HotWax Commerce runs a scheduled job to sync these codes to Shopify, where the gift cards are activated.
+HotWax Commerce "Fulfillment App"also enables store associates to activate gift cards directly. During fulfillment, once a unique serial number is assigned and value is loaded, HotWax Commerce activates the gift card in Shopify and the value is loaded onto the card, HotWax Commerce runs a scheduled job to sync these codes to Shopify, where the gift cards are activated.
 
 This activation step ensures that the gift card is fully functional and customers can use the unique serial number they received in their email to redeem the value stored in the gift card.
 
