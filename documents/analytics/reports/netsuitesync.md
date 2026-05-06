@@ -427,7 +427,7 @@ LIMIT 1000;
 
 **Data Selection:** The query begins by selecting data from various tables that hold information on return transactions, products, and orders. Key details include return ID, entry date, order name, internal product name (SKU), facility ID, returned quantity, and restocked quantity.
 
-**Filtering Return Transactions: ** The report specifically looks at returns that are not directed to the generic facility '_NA_'. This helps in focusing on relevant return transactions.
+**Filtering Return Transactions:** The report specifically looks at returns that are not directed to the generic facility '_NA_'. This helps in focusing on relevant return transactions.
 
 **Joining Relevant Tables:** To gather comprehensive data, the SQL query joins multiple tables. The return header table (rh) contains general return information such as destination facility ID and entry date. The return item table (ri) provides details on individual returned items and their quantities. The product table (p) includes product details such as internal name (SKU), and the order header table (oh) links returns to their corresponding orders.
 
