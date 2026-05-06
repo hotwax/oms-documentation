@@ -34,7 +34,7 @@ The following steps are optional and can be handled by the HotWax Commerce team.
 HotWax Commerce relies on JWT (JSON Web Token) for secure API communication, ensuring a safe environment for data exchange between the Shopify store and the HotWax Commerce platform.
 
 1. **Create JWT Token:**
-   * Create a JWT token using an integration user on your HotWax Commerce system.
+   * Create a JWT token using an integration user on your HotWax Commerce system. Refer to the [JWT Token Creation Guide](../../integrate-with-hotwax/api/initial-api-authentication.md) for step-by-step instructions.
    * Securely store this token for future use.
 2. **Provide Instance Name and JWT Token:**
    * Enter the instance name `(e.g., https://{instance-name}.hotwax.io/)` in the designated field. This is basically your OMS instance URL. In case you do not have it, ask HotWax team to provide you with one.
