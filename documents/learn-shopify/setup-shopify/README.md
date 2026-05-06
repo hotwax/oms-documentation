@@ -23,8 +23,8 @@ HotWax Commerce app must be installed on all Shopify stores to establish their c
    * Search for `HotWax Order Management System` in the Shopify App Store or directly access it via this link: [HotWax Order Management System App](https://apps.shopify.com/hotwax-order-management).
    * Click on the `Install` button to initiate the installation process.
    * **Grant the necessary permissions** to ensure optimal app functionality.
-   * Now you will be navigated to a screen which will ask the following details:
-     * HotWax Commerce Instance Name
+   * You will be redirected to a screen where you need to provide the following details:
+     * HotWax Commerce instance name
      * JWT token
 
 {% hint style="info" %}
@@ -34,8 +34,7 @@ The following steps are optional and can be handled by the HotWax Commerce team.
 HotWax Commerce relies on JWT (JSON Web Token) for secure API communication, ensuring a safe environment for data exchange between the Shopify store and the HotWax Commerce platform.
 
 1. **Create JWT Token:**
-   * Navigate to the provided documentation link: [JWT Token Creation Guide](/documents/integrate-with-hotwax/api/initial-api-authentication).
-   * Follow the instructions to create a JWT token using an integration user on your HotWax Commerce system.
+   * Create a JWT token using an integration user on your HotWax Commerce system.
    * Securely store this token for future use.
 2. **Provide Instance Name and JWT Token:**
    * Enter the instance name `(e.g., https://{instance-name}.hotwax.io/)` in the designated field. This is basically your OMS instance URL. In case you do not have it, ask HotWax team to provide you with one.
