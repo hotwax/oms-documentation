@@ -10,7 +10,7 @@ description: >-
 
 {% hint style="danger" %}
 Before importing data from Shopify, it is crucial to have all default and custom mapping data in place for a smooth transition. Failure to do so may result in data discrepancies or errors during the import process.
-{% End hint %}
+{% endhint %}
 
 ### Schedule Bulk file processor
 
@@ -41,11 +41,11 @@ Once the job finishes, proceed to the Find Product page and verify that all prod
 
 **Example:**
 
-> https://admin.shopify.com/admin/{shop-name}/products/count.json https://admin.shopify.com/admin/{shop-name}/variants/count.Jason
+> https://admin.shopify.com/admin/{shop-name}/products/count.json https://admin.shopify.com/admin/{shop-name}/variants/count.json
 
 **HotWax**
 
-**To retrieve counts in HotWax, follow these structured steps in the webtoons:**
+**To retrieve counts in HotWax, follow these structured steps in the webtools:**
 
 1. Navigate to the web tools and access the Entity list.
 2. Search for the `Product` entity.
@@ -56,7 +56,7 @@ Once the job finishes, proceed to the Find Product page and verify that all prod
 
 {% hint style="info" %}
 Only necessary for Multi-Shopify store configurations where a common product catalog is shared. Skip if not applicable.
-{% End hint %}
+{% endhint %}
 
 ### Multi-Shopify Store Configuration for Product Management
 

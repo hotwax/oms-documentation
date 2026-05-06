@@ -5,7 +5,7 @@ description: >-
 
 # Inventory
 
-HotWax Commerce provides a unified view of inventory by integrating with various systems present in a retailer's deck stack, including Enterprise Resource Planning (ERP), Point of Sale (POS), and Warehouse Management Systems (WMS). HotWax Commerce ensures that inventory updates from all these systems are synchronized to support various business scenarios.
+HotWax Commerce provides a unified view of inventory by integrating with various systems present in a retailer's tech stack, including Enterprise Resource Planning (ERP), Point of Sale (POS), and Warehouse Management Systems (WMS). HotWax Commerce ensures that inventory updates from all these systems are synchronized to support various business scenarios.
 
 **In-store sales:** During in-store sales, inventory counts of products is automatically reduced in HotWax Commerce.
 
@@ -31,7 +31,7 @@ Online ATP = QOH - (Reserved quantities + Safety stock + Threshold + Orders in b
 
 Given:
 
-<table data-header-hidden data-full-width="false"><thead><try><th></th><th></th></tr></thead><tbody><try><td>Quantity on hand</td><td>100 Units</td></tr><try><td>Reserved quantities</td><td>5 Units</td></tr><try><td>Safety stock</td><td>5 Units</td></tr><try><td>Threshold</td><td>5 Units</td></tr><try><td>Orders in brokering queue</td><td>5 Units</td></tr><try><td>Excluded facilities' ATP</td><td>5 Units</td></tr></tbody></table>
+<table data-header-hidden data-full-width="false"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>Quantity on hand</td><td>100 Units</td></tr><tr><td>Reserved quantities</td><td>5 Units</td></tr><tr><td>Safety stock</td><td>5 Units</td></tr><tr><td>Threshold</td><td>5 Units</td></tr><tr><td>Orders in brokering queue</td><td>5 Units</td></tr><tr><td>Excluded facilities' ATP</td><td>5 Units</td></tr></tbody></table>
 
 Hence,
 

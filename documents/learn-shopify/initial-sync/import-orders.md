@@ -35,7 +35,7 @@ Once the job finishes, proceed to the Find Order page and verify that all orders
 
 ### HotWax
 
-To retrieve counts in HotWax, follow these structured steps in the webtoons:
+To retrieve counts in HotWax, follow these structured steps in the webtools:
 
 1. Go to the web tools and select the Entity list.
 2. Locate the `orderHeader` entity.

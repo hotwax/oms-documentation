@@ -29,4 +29,4 @@ The significance of Shopify Product Type Mapping lies in its ability to integrat
 
 {% hint style="info" %}
 After incorporating these mandatory mappings, please add any custom mappings as needed.
-{% End hint %}
+{% endhint %}

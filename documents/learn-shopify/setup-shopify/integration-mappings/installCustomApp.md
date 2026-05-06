@@ -12,7 +12,7 @@ Begin the integration process by installing a custom application on your Shopify
 
 {% hint style="info" %}
 To establish connections between multiple Shopify stores that share the same product catalog, it's essential to obtain unique Admin API access tokens and API secrets for each Shopify store you intend to connect to the Order Management System (OMS). This ensures secure and individualized communication between each Shopify store and the OMS, enabling seamless coordination and data exchange across the interconnected platforms.
-{% End hint %}
+{% endhint %}
 
 1. **Admin API Access Token:** Acquire the Admin API access token from the installed app. This token serves as a key component for accessing and managing administrative functionalities through the API.
 2. **API Secret:** Retrieve the API secret associated with the installed app. This secret is crucial for secure communication and authentication between the systems, ensuring a robust and protected connection.

@@ -83,18 +83,18 @@ If certain products have not been synced from Shopify to HotWax Commerce, you ca
 3. **Run the Sync**:\
    After selecting the config and entering the product IDs, click the `Run` button. This will immediately start the synchronization process, pulling the selected products from Shopify into HotWax Commerce.
 
-<figure><IMG src="../../.gitbook/assets/product-sync.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/product-sync.png" alt=""><figcaption></figcaption></figure>
 
 ## Scenario 4: Cloning Product in Shopify
 
 This issue arises when a new product is created in Shopify by cloning an existing product. Here’s a detailed explanation of how this can lead to synchronization problems:
 
 1. **Cloning Details**:\
-   When a product is cloned in Shopify, it copies all details of the original product, including metafields. This process results in a new met afield ID for the cloned product.
+   When a product is cloned in Shopify, it copies all details of the original product, including metafields. This process results in a new metafield ID for the cloned product.
 2. **Product Sync**:\
-   When HotWax Commerce syncs the new product, it does not recognize or sync the metafields or the new met afield IDs created for the cloned product.
+   When HotWax Commerce syncs the new product, it does not recognize or sync the metafields or the new metafield IDs created for the cloned product.
 3. **Product Update Issue**:\
-   A problem occurs when HotWax Commerce attempts to create a met afield for the cloned product in Shopify, but the met afield already exists. HotWax Commerce sends a request to `CREATE` a metafield in Shopify, as it does not detect any existing metafields for that product. This leads to an error, as the met afield already exists.
+   A problem occurs when HotWax Commerce attempts to create a metafield for the cloned product in Shopify, but the metafield already exists. HotWax Commerce sends a request to `CREATE` a metafield in Shopify, as it does not detect any existing metafields for that product. This leads to an error, as the metafield already exists.
 
 ### How to Synchronize Metafields of a Cloned Product from Shopify to HotWax Commerce
 

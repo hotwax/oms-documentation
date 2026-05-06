@@ -64,4 +64,4 @@ In case, there is any failed association or incorrect association created you ca
 
 {% hint style="warning" %}
 Do not schedule or run `Import products` and `Import Product updates` jobs for child catalogs. Scheduling these jobs for child catalogs can lead to catalog management issues.
-{% End hint %}
+{% endhint %}

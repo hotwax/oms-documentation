@@ -32,4 +32,4 @@ Follow these steps to seamlessly integrate Shopify POS locations with their corr
 
 {% hint style="warning" %}
 Ensure you have mapped default location in Shopify with Brokering queue i.e _NA_ in HotWax
-{% end hint %}
+{% endhint %}
