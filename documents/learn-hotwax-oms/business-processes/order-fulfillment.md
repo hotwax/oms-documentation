@@ -129,4 +129,4 @@ In specific circumstances, store managers may opt to stop order fulfillment enti
 
 In specific circumstances, store managers may need to temporarily remove their store's inventory from online selling. This could be due to various reasons such as low stock levels, prioritizing in-store customer sales, or other internal considerations. In such cases, store managers have the option to directly disable online selling for their store. This flexibility allows managers to focus on fulfilling in-store demand while conserving inventory. Additionally, they can easily re-enable online selling in the future when the situation aligns with their business needs.
 
-Learn more about [additional scenarios supported in Store Fulfillment App](/documents/store-operations/fulfillment/fulfillment-setting-page.md)
+Learn more about [additional scenarios supported in Store Fulfillment App](../../store-operations/fulfillment/fulfillment-setting-page.md)
