@@ -81,7 +81,7 @@ After the Shopify Shop is verified, further editing can be performed on the [Sho
 The subsequent steps involve internal configurations to be executed by the HotWax Commerce team.
 {% endhint %}
 
-**Step 4: Update MAAG Instance Credentials (if applicable)**
+**Step 4: Update Maarg Instance Credentials (if applicable)**
 
 * If the Maarg instance is configured for data sharing with Shopify, update the credentials:
   * Login to the dedicated Maarg instance.

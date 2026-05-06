@@ -43,17 +43,18 @@ Replace the "SHOP-ID" for each Shopify Shop with your shop ID when importing dat
 
 ```
 <ShopifyShopTypeMapping shopId="SHOP-ID" mappedTypeId="SHOPIFY_ORDER_SOURCE" mappedKey="exchange" mappedValue="EXCHG_SALES_CHANNEL"/>
-<ShopifyShopTypeMapping shopId="SHOP-ID" mappedTypeId="SHOPIFY_ORDER_SOURCE" mappedKey="Shopify_draft_order" mappedValue="CSR_SALES_CHANNEL"/>
-<ShopifyShopTypeMapping shopId="SHOP-ID" mappedTypeId="SHOPIFY_ORDER_SOURCE" mappedKey="POS" mappedValue="POS_SALES_CHANNEL"/>
-<ShopifyShopTypeMapping shopId="SHOP-ID" mappedTypeId="SHOPIFY_ORDER_SOURCE" mappedKey="iPhone" mappedValue="PHONE_SALES_CHANNEL"/>
+<ShopifyShopTypeMapping shopId="SHOP-ID" mappedTypeId="SHOPIFY_ORDER_SOURCE" mappedKey="shopify_draft_order" mappedValue="CSR_SALES_CHANNEL"/>
+<ShopifyShopTypeMapping shopId="SHOP-ID" mappedTypeId="SHOPIFY_ORDER_SOURCE" mappedKey="pos" mappedValue="POS_SALES_CHANNEL"/>
+<ShopifyShopTypeMapping shopId="SHOP-ID" mappedTypeId="SHOPIFY_ORDER_SOURCE" mappedKey="iphone" mappedValue="PHONE_SALES_CHANNEL"/>
 <ShopifyShopTypeMapping shopId="SHOP-ID" mappedTypeId="SHOPIFY_ORDER_SOURCE" mappedKey="android" mappedValue="PHONE_SALES_CHANNEL"/>
 ```
 
 **Payment Methods**
 
 ```
-<ShopifyShopTypeMapping shopId='SHOP-ID' mappedTypeId='SHOPIFY_PAYMENT_TYPE' mappedValue='EXT_SHOP_AFTRPAY' mappedKey='Afterpay'/>
-<ShopifyShopTypeMapping shopId='SHOP-ID' mappedTypeId='SHOPIFY_PAYMENT_TYPE' mappedValue='EXT_SHOP_AFTRPAY_NA' mappedKey='Afterpay_north_America'/>
+
+<ShopifyShopTypeMapping shopId='SHOP-ID' mappedTypeId='SHOPIFY_PAYMENT_TYPE' mappedValue='EXT_SHOP_AFTRPAY' mappedKey='afterpay'/>
+<ShopifyShopTypeMapping shopId='SHOP-ID' mappedTypeId='SHOPIFY_PAYMENT_TYPE' mappedValue='EXT_SHOP_AFTRPAY_NA' mappedKey='afterpay_north_america'/>
 <ShopifyShopTypeMapping shopId='SHOP-ID' mappedTypeId='SHOPIFY_PAYMENT_TYPE' mappedValue='EXT_SHOP_AMEX' mappedKey='American Express'/>
 <ShopifyShopTypeMapping shopId='SHOP-ID' mappedTypeId='SHOPIFY_PAYMENT_TYPE' mappedValue='EXT_SHOP_DISCOVER' mappedKey='Discover'/>
 <ShopifyShopTypeMapping shopId='SHOP-ID' mappedTypeId='SHOPIFY_PAYMENT_TYPE' mappedValue='EXT_SHOP_KLARNA' mappedKey='Klarna'/>
