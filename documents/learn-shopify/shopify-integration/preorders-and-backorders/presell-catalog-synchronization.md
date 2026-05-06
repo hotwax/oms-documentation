@@ -38,7 +38,7 @@ When the merchant receives red shirts inventory at their fulfillment center:
 
 When the arrival date of a purchase order is passed:
 
-<table><thead><try><the width="111">Purchase Orders</th><the width="129">Product Name</th><the width="107">Arrival Date</th><the width="120">Product category</th><the width="99">Presell Status</th><th>Continue Selling Out of Stock</th></tr></thead><tbody><try><td>PO 1AB2</td><td>Yellow Shirt</td><td>07-31-23</td><td>Pre-order</td><td>Inactive</td><td>False</td></tr></tbody></table>
+<table><thead><tr><th width="111">Purchase Orders</th><th width="129">Product Name</th><th width="107">Arrival Date</th><th width="120">Product category</th><th width="99">Presell Status</th><th>Continue Selling Out of Stock</th></tr></thead><tbody><tr><td>PO 1AB2</td><td>Yellow Shirt</td><td>07-31-23</td><td>Pre-order</td><td>Inactive</td><td>False</td></tr></tbody></table>
 
 After delisting pre-orderable products from Shopify, merchants can use the 'Remove pre-order tags' and 'Remove backorder tags' jobs to get rid of the HC:Pre-order and HC:Backorder tags. This will happen automatically every 15 minutes.
 
