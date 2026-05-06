@@ -480,7 +480,6 @@ Use numbers consistently, and apply these rules across all HotWax content types:
 
 ---
 
-## 
 
 ## Lists
 
@@ -583,7 +582,6 @@ Use sparingly, only when they add value (e.g., titles, blog intros).
 
 ---
 
-## 
 
 ## Headings
 
