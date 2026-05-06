@@ -87,7 +87,7 @@ Let’s see how the out of the box rejection reasons offered by HotWax Commerce 
 | WORN DISPLAY     | Decrease by rejected quantity | Unchanged                     | Product remains in stock but cannot be sold due to being worn         |
 | NO VARIANCE      | Unchanged                     | Unchanged                     | Rejection does not affect inventory; used for non-stock-related issues|
 
-Learn more about [Rejections](/documents/store-operations/fulfillment/rejection.md)
+Learn more about [Rejections](../../store-operations/fulfillment/rejection.md)
 
 ## Rerouted Requests
 
