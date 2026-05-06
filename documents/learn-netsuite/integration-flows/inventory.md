@@ -5,7 +5,7 @@ description: >-
 
 # Inventory
 
-NetSuite serves as the central system of record for tracking product inventories across various retail locations. Inventory transactions in NetSuite, encompassing the creation and reception of purchase orders (POs) in warehouses, as well as the fulfillment of online orders from these warehouses, are vital components for maintaining real-time and precise inventory records.
+NetSuite serves as the central system of record for tracking product inventories across various retail locations. Inventory transactions in NetSuite, including creating and receiving purchase orders (POs) and fulfilling online orders, help maintain real-time and accurate inventory records.
 
 However, while HotWax Commerce receives frequent updates regarding online orders fulfilled from the warehouse using NetSuite, it does not receive regular updates on new inventory arrivals in the warehouses in response to purchase orders. This discrepancy causes HotWax Commerce to fall out of synchronization with inventory data of NetSuite.
 
