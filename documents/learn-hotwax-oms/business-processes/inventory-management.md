@@ -80,7 +80,7 @@ In most scenarios, purchase orders are received at the warehouse location, and s
 
 All other features, such as receiving extra items or handling discrepancies, are also offered during the purchase order receiving process, just as they are with inbound shipments. The primary difference is that when you are receiving a purchase order instead of a shipment, you can receive it in parts, unlike shipments which must be received in one go.
 
-### Types of Cycle Count
+### Types of cycle count
 
 Retailers aiming for 98% to 99% inventory accuracy regularly perform cycle counts at their locations to maintain up to date inventory records. Cycle counting is an important inventory management business process for these retailers and should be performed weekly or monthly, depending on the specific needs of the store.
 
