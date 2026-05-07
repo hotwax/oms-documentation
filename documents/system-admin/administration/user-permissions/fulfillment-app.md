@@ -17,7 +17,7 @@ Below is a list of all the actions available in the Fulfillment App, along with 
 | 7    | Order actions Chip > View Order details | -             | Routes the user to the detailed view of an individual order, where further actions can be taken or details can be reviewed. |
 | 8    | View item QOH (Open Orders)             | -             | Displays the Quantity on Hand (QOH) for items in the order, helping users assess available stock for fulfillment.           |
 
-<figure><img src="../../.gitbook/assets/edited-photo.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/open-orders.png" alt=""><figcaption></figcaption></figure>
 
 ## In Progress tab
 
