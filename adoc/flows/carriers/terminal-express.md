@@ -12,4 +12,4 @@ Terminal Express requires several specific geographic and facility fields:
 * **LOGISTICA_INVERSA:** A flag configured in HotWax to enable or disable reverse logistics (returns).
 
 ## Configuration requirements
-Ensure that the `ClientId` and `ReverseLogistics` flags are set in the `Party Relationship Setting`. Without a valid `BODEGA_ID`, the integration will return an error.
+Set the `ClientId` and `ReverseLogistics` flags in the `Party Relationship Setting`. Without a valid `BODEGA_ID`, the integration will return an error.
