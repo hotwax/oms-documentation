@@ -8,9 +8,9 @@ Forza integration uses a two-layered security approach:
 2. **Base64 Encoding:** The actual request payload is encoded in Base64 (Binary-to-Text encoding) and wrapped in a `PayLoad` field.
 
 ## Location matching
-Forza requires a `headerCodeTownship`. HotWax retrieves this code by:
-1. **Querying Municipalities:** Sending the state’s `headerCode` and country ID to Forza's geographic master endpoint.
-2. **Filtering:** Searching the returned list for a name match against the OMS city.
+Forza requires a `headerCodeTownship`. HotWax Commerce retrieves this code by:
+1. **Querying Municipalities:** Sending the state’s `headerCode` and country ID to Forza's geographic master endpoint
+2. **Filtering:** Searching the returned list for a name match against the OMS city
 
 ## Technical configuration
 You must configure the `CodApp` and `ClientSecretKey` in the `Party Relationship Setting`. The `facilityIdentification` from the OMS is mapped to Forza’s `CodeOfReference`.

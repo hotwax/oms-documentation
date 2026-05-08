@@ -12,6 +12,6 @@ Drivin requires a `schema_code` for every request. HotWax uses the `DrivInGetOrC
 
 ## Order posting
 Instead of a simple label request, HotWax posts full order details to Drivin, including:
-* **Client details:** Name, phone, and coordinates (latitude/longitude).
-* **Item details:** Description, quantity, and weight per parcel.
+* **Client details:** Name, phone, and coordinates (latitude/longitude)
+* **Item details:** Description, quantity, and weight per parcel
 * **Custom attributes:** Payment method and total shipment value are passed in custom fields (`custom_1`, `custom_4`).
