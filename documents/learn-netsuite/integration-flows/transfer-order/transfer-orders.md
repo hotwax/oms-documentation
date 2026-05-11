@@ -27,35 +27,29 @@ Transfer Orders are initiated within the NetSuite ERP system, facilitating the i
 
 ### Export Transfer Orders from NetSuite
 
-1. A Map Reduce Script runs a specific Saved Search to identify Transfer Orders in "Pending" status within NetSuite. It compiles the relevant data into a CSV file, which is then securely placed in an SFTP location. The script runs periodically, typically every 15 minutes, to ensure it fetches only the latest and pending Transfer Orders from NetSuite, optimizing efficiency.
+1. A Map Reduce Script runs a specific Saved Search to identify Transfer Orders in "Pending" status within NetSuite. It compiles the relevant data into a JSON file, which is then securely placed in an SFTP location. The script runs periodically, typically every 15 minutes, to ensure it fetches only the latest and pending Transfer Orders from NetSuite, optimizing efficiency.
 
 **SuiteScripts**
 
 Generate Fulfilled Transfer Order file:
 
 ```
-HC_MR_ExportedTransferOrderCSV
+HC_MR_ExportedWHTOFulfillmentJson_v2.js
+HC_MR_ExportedStoreTOFulfillmentJson_v2.js
 ```
 
 ### Import Transfer Orders into HotWax Commerce
 
-2. A scheduled job within HotWax Commerce Integration Platform monitors the SFTP location, regularly checking for new Transfer Order CSV files. Upon identifying a new Transfer Order CSV file, the job generates two additional CSV files: one for inventory variance and the other for pending receipt transfer orders.
-3. A scheduled job within HotWax Commerce OMS reads the inventory variance CSV file and reduces inventory for transferred products from the origin facility.
-4. Another scheduled job within HotWax Commerce OMS is employed that reads the pending receipt transfer orders CSV file and creates inbound shipments in the OMS at the destination facility.
+2. A scheduled job within HotWax Commerce Integration Platform monitors the SFTP location, regularly checking for new Transfer Order JSON files. Upon identifying a new Transfer Order JSON file, the job processes the pending receipt transfer orders.
+3. A scheduled job within HotWax Commerce OMS reads the pending receipt transfer orders JSON file and creates inbound shipments in the OMS at the destination facility.
 
 **SFTP Locations**
 
-NetSuite pending receipt Transfer Order file:
+NetSuite pending receipt Transfer Order files:
 
 ```
-/home/{sftp-username}/netsuite/transferorder/fulfillment-nifi
-```
-
-Pre-processed Transfer Order file:
-
-```
-/home/{sftp-username}/netsuite/transferorder/fulfillment
-/home/{sftp-username}/netsuite/transferorder/fulfillment/archive
+/home/{sftp-username}/netsuite/transferorderv2/import/fulfillment-wh
+/home/{sftp-username}/netsuite/transferorderv2/import/fulfillment-store
 ```
 
 Derived Origin Facility Inv Deduction:
@@ -93,9 +87,9 @@ Add job name here
 {% endtab %}
 {% endtabs %}
 
-#### Here's how transfer order fields are mapped in NetSuite and HotWax Commerce that remain hidden in the user interface but are included in the transfer order CSV file
+#### Here's how transfer order fields are mapped in NetSuite and HotWax Commerce that remain hidden in the user interface but are included in the transfer order JSON file
 
-<table><thead><tr><th width="112">S.No.</th><th width="217.44856661045532">Fields in NetSuite</th><th>Fields in HotWax Commerce</th></tr></thead><tbody><tr><td>1</td><td>Line ID</td><td>Shipment Item External ID</td></tr><tr><td>2</td><td>From Location</td><td>Shipment Destination Facility ID</td></tr></tbody></table>
+<table><thead><tr><th width="112">S.No.</th><th width="217.44856661045532">Fields in NetSuite</th><th>Fields in HotWax Commerce</th></tr></thead><tbody><tr><td>1</td><td>Line ID</td><td>Shipment Item External ID</td></tr><tr><td>2</td><td>From Location</td><td>Shipment Destination Facility ID</td></tr><tr><td>3</td><td>Item Tag</td><td>Tags (hotwax-fulfilled)</td></tr></tbody></table>
 
 ### Receiving Inventory in the Store
 
@@ -109,7 +103,7 @@ Store associates use the HotWax Commerce Receiving App to receive transferred in
 
 **SFTP Locations**
 
-Received Transfer Orders CSV
+Received Transfer Orders JSON
 
 **SFTP Locations**
 
@@ -121,7 +115,7 @@ Received Transfer Orders CSV
 Received Transfer Orders NetSuite JSON:
 
 ```
-/home/{sftp-username}/netsuite/transferorder/receipt
+/home/{sftp-username}/netsuite/transferorderv2/export/receipt
 ```
 
 ### Import Item Receipts into NetSuite
@@ -137,11 +131,11 @@ The synchronization process extends to the automated status update of the associ
 Import received Transfer Order file:
 
 ```
-HC_SC_ImportTransferOrderReceipts
+HC_SC_ImportTOFulfillmentReceipts_v2.js
 ```
 
 {% hint style="info" %}
-The HC\_SC\_ImportTransferOrderReceipts SuiteScript also generates a CSV file highlighting erroneous records found during processing and uploads the file to the SFTP server. Simultaneously, an email alert is automatically triggered to designated personnel, helping them quickly pinpoint the source of the issue and accelerating troubleshooting.
+The HC\_SC\_ImportTOFulfillmentReceipts\_v2 SuiteScript also generates a CSV file highlighting erroneous records found during processing and uploads the file to the SFTP server. Simultaneously, an email alert is automatically triggered to designated personnel, helping them quickly pinpoint the source of the issue and accelerating troubleshooting.
 {% endhint %}
 
 {% file src="../../.gitbook/assets/Transfer Order Receipts Sample Feed.txt" %}
