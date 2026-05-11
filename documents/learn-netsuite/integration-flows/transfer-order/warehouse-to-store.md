@@ -31,7 +31,7 @@ As mentioned earlier, in NetSuite, the inventory count for transfer order items 
 
 ### Fulfilling Transfer Order Items
 
-1. **Export Transfer Order Item Fulfillment Records from NetSuite:** A Map Reduce script runs a specific Saved Search to identify transfer order item fulfillment records in `Shipped` status, that have the source location as the warehouse and destination location set as the store. It compiles the relevant data into a JSON file, which is then securely placed in an SFTP location. The script runs periodically, typically every 15 minutes, to ensure it fetches only the latest shipped transfer order item fulfillment records from NetSuite, optimizing efficiency.
+1. **Export Transfer Order Item Fulfillment Records from NetSuite:** A Map Reduce script runs a specific Saved Search to identify transfer order item fulfillment records in `Shipped` status, that have the source location as the warehouse and destination location set as the store. It compiles the relevant data into a JSON file, which is then securely placed in an SFTP location. The script runs periodically, typically every 15 minutes, so it fetches only the latest shipped transfer order item fulfillment records from NetSuite.
 
 **SuiteScript**
 
