@@ -138,7 +138,7 @@ Import Item Receipts from SFTP
 HC_SC_ImportTOFulfillmentReceipts_v2.js
 ```
 
-Following this approach, store associates at the destination store can efficiently receive inbound shipments at their store, synchronize the item receipts with NetSuite, and ultimately mark the completion of store to store transfer orders, with the transfer order status updating in NetSuite from `Pending Receipt` to `Received`.
+Following this approach, store associates at the destination store can receive inbound shipments at their store, synchronize the item receipts with NetSuite, and ultimately mark the completion of store to store transfer orders, with the transfer order status updating in NetSuite from `Pending Receipt` to `Received`.
 
 **Here's how transfer order fields are mapped in NetSuite and HotWax Commerce for store fulfillment:**
 
