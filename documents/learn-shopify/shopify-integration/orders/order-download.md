@@ -59,7 +59,7 @@ Order fields in Shopify are mapped in HotWax Commerce as follows:
 
 ### Importing Newly Created Orders from Shopify to HotWax Commerce
 
-When an order is created in Shopify, Shopify sends an [order/update]([url](https://shopify.dev/docs/api/webhooks?reference=toml#list-of-topics-orders/create)) webhook with the order details. AWS EventBridge receives the event and pushes the order data to Amazon SQS.
+When an order is created in Shopify, Shopify sends an [order/update](https://shopify.dev/docs/api/webhooks?reference=toml#list-of-topics-orders/create) webhook with the order details. Amazon Web Services (AWS) EventBridge receives the event and pushes the order data to Amazon Simple Queue Service (SQS).
 
 HotWax Commerce reads unread order IDs from Amazon SQS and calls the Shopify [GraphQL API]([url](https://shopify.dev/docs/api/admin-graphql/latest/queries/order)) to fetch complete order details for each order ID. Shopify returns the order data in JSON format, and HotWax Commerce processes the response to create the order in the OMS.
 
