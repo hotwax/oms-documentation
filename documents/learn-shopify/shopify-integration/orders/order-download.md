@@ -8,13 +8,11 @@ description: >-
 
 ### Initial Order Download From Shopify To Hotwax Commerce
 
-To download all open sales orders from a specific time period in HotWax Commerce, users can schedule the 'Import Orders in Bulk' job by adding the last Shopify Order ID. This job imports all orders since the last Shopify Order ID, along with details such as order number, customer information, shipping address, billing details, and payment information.
+To download all open sales orders from a specific time period in HotWax Commerce, users can schedule the 'sync_ShopifyOrderHistory' job. This job imports all historical orders, along with details such as order number, customer information, shipping address, billing details, and payment information.
 
 The process of importing orders from Shopify to HotWax Commerce consists of two steps.
 
-* **Downloading from Shopify**- HotWax Commerce uses an [API request](https://shopify.dev/docs/api/admin-rest/2022-10/resources/order#get-orders?status=any) to Shopify to retrieve sales orders. The orders are returned in JSON format by Shopify, based on the API request. To avoid errors with large data files, HotWax Commerce downloads only 100 orders in one API call, even though Shopify allows downloading up to 250 orders. This helps optimize platform utilization and enables higher throughput, as each order can have multiple items, potentially leading to larger file sizes. The downloaded JSON file is then stored in the file system.
-
-<figure><img src="../../.gitbook/assets/import-orders-in-bulk-job-config.png" alt=""><figcaption><p><em>Fig.1 : Configuration of the “import orders in bulk” job in the Job Manager App</em></p></figcaption></figure>
+* **Downloading from Shopify**- HotWax Commerce uses an [API request](https://shopify.dev/docs/api/admin-graphql/latest/queries/order) to Shopify to retrieve sales orders. The orders are returned in JSON format by Shopify, based on the API request.
 
 * **Order Creation in HotWax Commerce-** HotWax Commerce proceeds to the second step by accessing the JSON files that have been downloaded from the file system and then generating orders. Once all the orders have been downloaded, HotWax Commerce will automatically begin processing them. Once the orders are imported into HotWax Commerce, they will be assigned a 'created' status.
 
