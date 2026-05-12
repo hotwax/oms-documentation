@@ -43,7 +43,7 @@ HC_uploadCSV_InventoryItems
 **SFTP Locations**
 
 ```
-/home/{sftp.user}/netsuite/inventoryitem/csv
+/home/{sftp-username}/netsuite/inventoryitem/csv
 ```
 
 3. The final step in the workflow involves a scheduled job within HotWax Commerce OMS. This job is responsible for reading the Inventory Sync CSV files from the SFTP location. It utilizes this data to reset the inventory numbers for products within the HotWax Commerce system.
@@ -98,7 +98,7 @@ HC_MR_ExportedInventoryTransferCSV.js
 **SFTP Locations**
 
 ```
-/home/{sftp-username}/netsuite/inventorytransfer/import
+/home/{sftp-username}/netsuite/inventoryitem/csv
 ```
 
 2. A scheduled job in HotWax Commerce reads the CSV file from the SFTP location and adjusts the inventory records in HotWax Commerce. When inventory is transferred to the B2C warehouse, the scheduled job increases the inventory count for the product. Conversely, when inventory is transferred from the B2C warehouse, the job reduces the product's inventory count.

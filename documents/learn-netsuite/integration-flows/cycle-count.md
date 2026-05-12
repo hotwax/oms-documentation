@@ -129,7 +129,7 @@ When variances are tracked using variance locations in NetSuite, variances logge
 The CSV file containing inventory item variance feed is also stored in the designated SFTP location for NetSuite as invenotry transfer file:
 
 ```
-/home/{sftp-username}/netsuite/inventorytransfer/csv
+/home/{sftp-username}/netsuite/inventoryadjustment/csv
 ```
 
 2. In NetSuite, another Scheduled Suite Script is employed to import the CSV files from the SFTP location and update the inventory records. This script leverages the native CSV Import tool provided by NetSuite to create Inventory Adjustment records.
