@@ -8,7 +8,7 @@ description: >-
 
 ### Initial Order Download From Shopify To Hotwax Commerce
 
-To download all open sales orders from a specific time period in HotWax Commerce, users can schedule the 'sync_ShopifyOrderHistory' job. This job imports all historical orders, along with details such as order number, customer information, shipping address, billing details, and payment information.
+To download all open sales orders from a specific time period in HotWax Commerce, users can schedule the `sync_ShopifyOrderHistory` job. This job imports all historical orders, along with details such as order number, customer information, shipping address, billing details, and payment information.
 
 The process of importing orders from Shopify to HotWax Commerce consists of two steps.
 
