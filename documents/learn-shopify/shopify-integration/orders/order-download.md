@@ -12,9 +12,9 @@ To download all open sales orders from a specific time period in HotWax Commerce
 
 The process of importing orders from Shopify to HotWax Commerce consists of two steps.
 
-* **Downloading from Shopify**- HotWax Commerce uses an [API request](https://shopify.dev/docs/api/admin-graphql/latest/queries/order) to Shopify to retrieve sales orders. The orders are returned in JSON format by Shopify, based on the API request.
+* **Downloading from Shopify**- HotWax Commerce sends an [API request](https://shopify.dev/docs/api/admin-graphql/latest/queries/order) to Shopify to retrieve sales orders. This request internally triggers a bulk operation in Shopify that returns orders and their associated details for a specified date range. Shopify then provides the order data in JSON format based on the requested query.
 
-* **Order Creation in HotWax Commerce-** HotWax Commerce proceeds to the second step by accessing the JSON files that have been downloaded from the file system and then generating orders. Once all the orders have been downloaded, HotWax Commerce will automatically begin processing them. Once the orders are imported into HotWax Commerce, they will be assigned a 'created' status.
+* **Order Creation in HotWax Commerce-** HotWax Commerce proceeds to the second step by accessing the JSON files and then generating orders. Once all the orders have been downloaded, HotWax Commerce will automatically begin processing them. Once the orders are imported into HotWax Commerce, they will be assigned a 'created' status.
 
 Order fields in Shopify are mapped in HotWax Commerce as follows:
 
@@ -59,13 +59,9 @@ Order fields in Shopify are mapped in HotWax Commerce as follows:
 
 ### Importing Newly Created Orders from Shopify to HotWax Commerce
 
-In HotWax Commerce, there's a job called 'New Orders' that downloads new orders in bulk from Shopify. The job checks the 'created\_at' field in Shopify to see if any orders were created after the last time the job ran. All orders with a 'created\_at' time between the last download and the current time are downloaded, regardless of their fulfillment status. Once all orders are downloaded to the file system in the order JSON file, the order creation process begins in HotWax Commerce.
+When an order is created in Shopify, Shopify sends an [order/update]([url](https://shopify.dev/docs/api/webhooks?reference=toml#list-of-topics-orders/create)) webhook with the order details. AWS EventBridge receives the event and pushes the order data to Amazon SQS.
 
-<figure><img src="../../.gitbook/assets/new-orders-job-config.png" alt=""><figcaption><p><em>Fig.4 : Configuration of the job New Orders in the Job Manager App</em></p></figcaption></figure>
-
-{% hint style="info" %}
-Recommended frequency of the job is 15 minutes i.e. it will run every 15 minutes. Frequency is configurable as per the merchant's requirements.
-{% endhint %}
+HotWax Commerce reads unread order IDs from Amazon SQS and calls the Shopify [GraphQL API]([url](https://shopify.dev/docs/api/admin-graphql/latest/queries/order)) to fetch complete order details for each order ID. Shopify returns the order data in JSON format, and HotWax Commerce processes the response to create the order in the OMS.
 
 #### thruDateBuffer and bufferTime
 
