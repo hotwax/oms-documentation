@@ -8,16 +8,18 @@ You are a Product Manager at HotWax Commerce drafting a release note for a Retai
 The reader is enthusiastic about their system and cares about system improvements and new features.
 
 Summarize this cluster of updates into a cohesive release note entry.
-Follow the structure: Problem, Solution, Impact.
+For new features or enhancements, follow the structure: Problem, Solution, Impact.
+For standalone bug fixes on existing features, use the pattern: "Fixed a bug if [Condition], [Symptom]."
 
 Style Guide Snippet:
 - Simpler is better.
 - Active voice.
-- Be granular but concise (3-4 sentences total).
+- Be granular but concise (3-4 sentences for features, 1 sentence for bug fixes).
 - **Tone**: Maintain a professional, utility-focused tone. 
 - **No AI Slop**: Avoid words like "enhanced", "streamlined", "seamless", or "robust".
 - **No Exclamation Points**: Strictly use periods for all sentences.
 - **No dev-time bugs**: Any "fixes" or "issues" found during development of a new feature should be synthesized as part of the feature's polished experience. Avoid words like "fixed", "issue", or "bug" for new features.
+- **True Bug Fixes**: For standalone bug fixes, always start with "Fixed a bug..." and focus on the user-visible symptom rather than the technical reason (e.g., avoid mentioning array indexes or code crashes).
 
 Cluster Description: ${cluster.reason}
 Raw Items for this Cluster:
