@@ -31,3 +31,5 @@ The `BufferTime` value is calculated using the previous job’s `runTime` and in
 
 This ensures that orders are accurately processed and reduces the risk of discrepancies.
 
+<figure><img src="../../.gitbook/assets/order-downloading-without-buffer-time.png" alt=""><figcaption><p><em>Fig.5 : Order downloading without buffer time</em></p></figcaption></figure>
+
