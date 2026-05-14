@@ -16,7 +16,7 @@ It is possible for orders to be missed if they are placed during the microsecond
 
 To prevent this, HotWax Commerce adds a time padding to the start time of each job. This creates overlap between consecutive jobs, helping capture orders that might otherwise be skipped during these brief timing gaps.
 
-The `BufferTime` value is calculated using the previous job’s `runTime` and includes both the `thruDateBuffer` and the overlap duration. By default, BufferTime is set to 6 minutes:
+The bufferTime value is calculated using the previous job’s runTime and includes both the thruDateBuffer and the overlap duration. By default, bufferTime is set to 6 minutes:
 
 - 5 minutes for `thruDateBuffer`  
 - 1 minute overlap time
