@@ -8,7 +8,7 @@ description: For a smooth order download process, HotWax has two buffer times.
 
 The `thruDateBuffer` setting delays order sync before importing orders from Shopify into HotWax Commerce. This gives Shopify enough time to process newly placed orders and update tags related to invalid or fraudulent activity, reducing the need to fetch orders again after sync.
 
-Shopify typically takes around five minutes to process a new order. If HotWax Commerce syncs the order before this processing is complete, the order may need to be fetched again later to retrieve updated tags.
+Shopify typically takes around 5 minutes to process a new order. If HotWax Commerce syncs the order before this processing is complete, the order may need to be fetched again later to retrieve updated tags.
 
 ## bufferTime
 
