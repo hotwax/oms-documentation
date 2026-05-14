@@ -2,7 +2,7 @@
 description: HotWax Commerce uses two buffer times to process order downloads accurately.
 ---
 
-# Order download buffer times
+# Order Download Buffer Times
 
 ## thruDateBuffer
 
