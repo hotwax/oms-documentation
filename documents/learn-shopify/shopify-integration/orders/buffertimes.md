@@ -14,7 +14,7 @@ The `thruDateBuffer` delays order syncing from Shopify for a specific amount of 
 
 Orders can be missed if they are placed during the microsecond time gap between two consecutive jobs.
 
-To address this, HotWax Commerce adds a buffer time padding to the start time of each job. This creates an overlap between jobs and prevents orders from being lost during these microsecond gaps. The `bufferTime` is calculated based on the previous job's run time and includes both the `thruDateBuffer` and the overlap time. By default, the `bufferTime` is 6 minutes (5 minutes for `thruDateBuffer` and 1 minute for overlap).
+To address this, HotWax Commerce adds a buffer time padding to the start time of each job. This creates an overlap between jobs and prevents orders from being lost during these microsecond gaps. The bufferTime is calculated based on the previous job's run time and includes both the thruDateBuffer and the overlap time. By default, the bufferTime is six minutes (five minutes for thruDateBuffer and one minute for overlap).
 
 ## Example scenario
 
