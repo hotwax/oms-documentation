@@ -6,7 +6,7 @@ The app provides distinct views for Admins and Store Associates:
 
 * Admin View: Allows reviewing, approving, or rejecting counts, managing variance thresholds, and helping maintain inventory accuracy across the system.
 
-* [Store View](../../store-operations/inventory/cycle-count/README.md): Enables associates to perform counts, record quantities, and submit them for review.
+* [Store View](../../../store-operations/cycle-count/README.md): Step-by-step instructions for store associates to perform cycle counts in-store.
 
 
 With built-in features like bulk actions, variance alerts, and timestamped tracking, the Cycle Count App keeps inventory accurate across your network.

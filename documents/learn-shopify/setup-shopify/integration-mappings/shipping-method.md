@@ -19,14 +19,7 @@ Retailers create shipping methods on Shopify to choose where they ship and how m
 
 ## Creating a Shipping Method in HotWax Commerce
 
-Shipping methods supported by the retailer need to be created in HotWax Commerce to ensure the accurate transmission of shipping information to the carrier. Follow these steps:
-
-1. Log in to your user instance and navigate to Settings > General Settings.
-2. Locate the shipment method section and click on `Add`, which will open up a form.
-3. Fill in the required fields:
-   * **Shipment Method Type ID:** The name used to identify the shipping method within HotWax Commerce. You can give any name which is easy to identify when mapping with Shopify.
-   * **Description:** A brief explanation of the shipping method's intended purpose.
-4. After entering the necessary details, click on `Add` to save the shipping method in HotWax Commerce.
+Shipping methods supported by the retailer need to be created in HotWax Commerce to ensure the accurate transmission of shipping information to the carrier. Detailed instructions for creating carriers and shipment methods can be found in the [System Administration guide](../../../system-admin/fulfillment/shipping-methods/carrier-and-shipment-methods.md).
 
 Once shipping methods are created, they need to be mapped with the Shopify Shop to receive accurate information for order processing and fulfillment.
 

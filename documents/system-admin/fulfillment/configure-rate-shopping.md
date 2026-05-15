@@ -45,14 +45,14 @@ For retailers without specific carrier integrations, offering customers the choi
 
 ### Enabling Rate Shopping
 
-Retailers who want to rate shop need to set up configurations for rate shopping for their product store. Follow these steps to enable rate shopping:
+Retailers who want to rate shop need to enable the rate shopping configuration for their Product Store.
 
-1. **Log in**: Access your HotWax Commerce Instance with your credentials.
-2. **Navigate**: Go to Settings > Product Store Page from the dashboard.
-3. **Select Store**: Choose the relevant product store where you want to enable rate shopping to proceed to the configurations page.
-4. **Add Configuration**: Under the store settings section, click on the "Add" button to create a new configuration.
-5. **Configure Rate Shopping**: From the dropdown menu, choose "Configuration for Rate Shopping" and set the value as "Y" to enable rate shopping.
-6. **Save Configuration**: Click on the "Add" button to save the configuration changes. You will be able to see the `RATE_SHOPPING ` configuration in the setting type.
+1. **Log in**: Access your HotWax Commerce instance.
+2. **Navigate**: Go to the **Settings** section from the main menu.
+3. **Select Store**: Choose the relevant Product Store.
+4. **Add Configuration**: Under the store settings section, click on the **Add** button.
+5. **Configure Rate Shopping**: Choose **Configuration for Rate Shopping** and set the value to **Y**.
+6. **Save**: Click **Add** to save. You will see the `RATE_SHOPPING` setting active for the store.
 
 {% embed url="https://youtu.be/F8sxNrDd6N8" %} Enable Rate Shopping {% endembed %}
 
@@ -62,14 +62,13 @@ Shipping methods are created and mapped with the carrier, product store, and fac
 
 ### Setting Service Level Agreement
 
-Setting Service Level Agreements (SLAs) within HotWax Commerce allows retailers to define precise delivery expectations for standard and expedited shipping, crucial for meeting customer needs and maintaining satisfaction. For example, it is possible that some retailers have a standard shipping policy to deliver in 7 days while for other retailers, the policy for standard shipping is 10 days. By mapping SLAs, users establish clear timelines, ensuring efficient order fulfillment and transparent communication with customers.
+Setting Service Level Agreements (SLAs) defines delivery expectations for shipment methods.
 
-**Step-by-Step Usage Instructions:**
-
-1. Visit the following page: https://{instance-name}.hotwax.io/commerce/control/CarrierSetup?partyId=\_NA\_ or modify the party ID to \_NA\_ from any carrier integrations page.
-2. Go to the `Product Store Shipment Methods` section and click on `Configure shipment method.`
-3. In the newly opened module, select the desired `product store`, `shipment gateway config ID`, and `shipment method type` from the dropdown menu.
-4. Add the `delivery date` to specify the service level agreement for the selected shipment method.
+1. Navigate to the **Fulfillment App** > **Carrier & Shipment Methods**.
+2. Select the **_NA_** carrier (or the relevant carrier).
+3. Go to the **Methods** tab.
+4. Locate the shipment method and click on the **Edit** icon (or relevant configuration button).
+5. Specify the **Delivery Days** to set the SLA for that method.
 
 {% embed url="https://youtu.be/AQiKK_bRmJE" %} Setting Service Level Agreement {% endembed %}
 

@@ -58,7 +58,8 @@ When the inventory is received, a product’s QOH and ATP is updated in HotWax C
 
 ATP = QOH - (Reserved quantities + Safety stock + Threshold + Orders in brokering queue)
 
-For each store that allows BOPIS, HotWax Commerce uses the [checkInventory](/documents/integrate-with-hotwax/api/inventory/check-inventory) API to check the available to promise (ATP) inventory for the desired product. Display all the facilities with non-zero inventory numbers on the product detail page (PDP) for customers to select and place a BOPIS order.
+For each store that allows BOPIS, HotWax Commerce uses the [BOPIS Check Inventory](/documents/integrate-with-hotwax/api/inventory/bopis-check-inventory.md) or [Shipping Check Inventory](/documents/integrate-with-hotwax/api/inventory/shipping-check-inventory.md) API to check the available to promise (ATP) inventory for the desired product. Display all the facilities with non-zero inventory numbers on the product detail page (PDP) for customers to select and place a BOPIS order.
+
 
 ## Configure Shopify BOPIS Scripts
 

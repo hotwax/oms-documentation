@@ -7,22 +7,22 @@ description: >-
 
 # Order Fulfillment
 
-<figure><img src="../.gitbook/assets/OrderFulfillment.png" alt=""><figcaption><p>Order allocation and fulfillment</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/order-allocation-and-fulfillment.png" alt=""><figcaption><p>Order allocation and fulfillment</p></figcaption></figure>
 
 ## How Order Fulfillment Works
 
 Approved orders are eligible for brokering in HotWax Commerce. The order routing engine brokers orders and looks for the best fulfillment location to allocate them.
 
-<figure><img src="../.gitbook/assets/OrderFulfillmentBP.png" alt=""><figcaption><p>Order fulfillment business process</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/order-fulfillment-business-process.png" alt=""><figcaption><p>Order fulfillment business process</p></figcaption></figure>
 
 ## Automatically Send Fulfillment Request
 
 Once an order item is allocated, a fulfillment request is sent to the assigned fulfillment location. If this location happens to be a warehouse, the allocation details are synced to the WMS or ERP systems, such as NetSuite, used for warehouse fulfillment.
 
-If an order item is allocated to a store, they are automatically reflected in the HotWax Commerce [Store Fulfillment App](/documents/store-operations/orders/fulfillment/ship-orders).
+If an order item is allocated to a store, they are automatically reflected in the HotWax Commerce [Store Fulfillment App](/documents/store-operations/fulfillment/open-orders.md).
 
 {% hint style="info" %}
-HotWax Commerce provides a Store Fulfillment Suite comprising user-friendly apps such as the Store Fulfillment App and Picking App to quickly and accurately fulfill orders. These apps are specifically designed to facilitate easy adoption and minimize the learning curve for store personnel.
+HotWax Commerce provides the Store Fulfillment App to quickly and accurately fulfill orders. This app is specifically designed to facilitate easy adoption and minimize the learning curve for store personnel.
 {% endhint %}
 
 ## Manually Send Fulfillment Request
@@ -47,21 +47,7 @@ Once store managers determine the batch of orders they wish to fulfill first, th
 Store managers can also prioritize picking of an individual order item by directly initiating picking and assigning a picker for it.
 {% endhint %}
 
-HotWax Commerce provides two options using which pickers can start the picking process:
-
-**Direct Printing:** Picklists can be directly printed from the Store Fulfillment App.
-
-**QR Code Generation:** Store managers can generate QR codes for picklists from the Store Fulfillment App. The assigned picker can then scan this QR code using their mobile device and view their picklist directly in the Picking App.
-
-**HotWax Commerce recommends using the Picking mobile app for efficient order fulfillment because it allows pickers to:**
-
-* Sort order items in the picklist based on preferred criteria, including Product Name, Bin ID, or Location Sequence ID.
-* Scan barcodes for accurate item verification.
-* View enlarged product images for easier identification.
-
-These features maximize picker efficiency and minimize errors during the picking process.
-
-Learn more about [Picking App](/documents/store-operations/fulfillment/picking-app)
+Pickers can start the picking process by printing picklists directly from the Store Fulfillment App.
 
 ### Replace Pickers
 
@@ -71,7 +57,7 @@ Store managers can replace an assigned picker with a new one for various reasons
 As pickers pick order items, HotWax Commerce rate shops to determine the most cost-effective shipping method offered by the carrier that also meets the SLA. Once the shipping method has been selected, HotWax Commerce fetches shipping labels in bulk with tracking codes from the carrier in advance to reduce the packing time.
 {% endhint %}
 
-Learn more about [Picking](/documents/store-operations/fulfillment/ship-orders#pick-orders)
+Learn more about [Picking](/documents/store-operations/fulfillment/open-orders.md#pick-orders)
 
 ## Reject Fulfillment Request
 
@@ -93,12 +79,13 @@ They can also configure whether any rejection, predefined or new, should impact 
 
 Let’s see how the out of the box rejection reasons offered by HotWax Commerce impact inventory:
 
-| Rejection Reason | ATP Inventory Change          | QOH Inventory Change          | Selling Impact                                                |
-| ---------------- | ----------------------------- | ----------------------------- | ------------------------------------------------------------- |
-| NOT IN STOCK     | Set to 0                      | Set to 0                      | Prevents new orders until product is back in stock            |
-| MISMATCH         | Decrease by rejected quantity | Decrease by rejected quantity | Product still available but not in specific size or color     |
-| DAMAGE           | Decrease by rejected quantity | Unchanged                     | Product remains in stock but cannot be sold due to damage     |
-| WORN DISPLAY     | Decrease by rejected quantity | Unchanged                     | Product remains in stock but cannot be sold due to being worn |
+| Rejection Reason | ATP Inventory Change          | QOH Inventory Change          | Selling Impact                                                        |
+| ---------------- | ----------------------------- | ----------------------------- | --------------------------------------------------------------------- |
+| NOT IN STOCK     | Set to 0                      | Set to 0                      | Prevents new orders until product is back in stock                    |
+| MISMATCH         | Decrease by rejected quantity | Decrease by rejected quantity | Product still available but not in specific size or color             |
+| DAMAGE           | Decrease by rejected quantity | Unchanged                     | Product remains in stock but cannot be sold due to damage             |
+| WORN DISPLAY     | Decrease by rejected quantity | Unchanged                     | Product remains in stock but cannot be sold due to being worn         |
+| NO VARIANCE      | Unchanged                     | Unchanged                     | Rejection does not affect inventory; used for non-stock-related issues|
 
 Learn more about [Rejections](/documents/store-operations/fulfillment/rejection)
 

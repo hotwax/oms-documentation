@@ -34,7 +34,7 @@ The scope is limited to the product store name, as the company name and product 
 5. Once you've made the necessary changes, ensure to save selections. This might involve clicking on a 'Save' or 'Apply' button within the dialog box.
 6. After saving, confirm that the operating countries for the product store have been updated accordingly.
 
-<figure><img src="../../.gitbook/assets/Screenshot from 2024-10-21 10-24-54.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/operating-countries-dialog.png" alt=""><figcaption></figcaption></figure>
 
 ### Administration
 
@@ -65,7 +65,7 @@ Administration settings require special permissions and, if mismanaged, can impa
 
 * **Creation Deadline Days:** Specify the number of days permitted for creating returns for in-store. Adjust this value based on your return policy and operational needs.
 
-<figure><img src="../../.gitbook/assets/Screenshot from 2024-10-23 12-14-03.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/product-store-order-settings.png" alt=""><figcaption></figcaption></figure>
 
 ### Brokering
 
@@ -76,7 +76,7 @@ Administration settings require special permissions and, if mismanaged, can impa
 * **Preselected Facility Tag:** Orders tagged with this tag will undergo line item check for fulfillment facility selection. To set a preselected facility tag, navigate to the Soft allocation section in the Brokering card, and select the default tag or create a new tag if any.
 * **Shipping Facility Tag:** This tag will hold the preselected fulfillment facility value. To assign a shipping facility tag, locate the relevant field in the Brokering card and select the default tag or create a new tag if any.
 
-<figure><img src="../../.gitbook/assets/brokering .png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/brokering.png" alt=""><figcaption></figcaption></figure>
 
 ### Fulfillment
 
@@ -106,7 +106,7 @@ Administration settings require special permissions and, if mismanaged, can impa
 * **Hold Pre-order Physical Inventory:** Configure the inventory computation in the OMS to withhold physical inventory from being made available online for products with orders in the pre-order queue. To adjust this setting, navigate to the pre-order computation settings in your dashboard, locate the "Hold Pre-order Physical Inventory" option, and toggle it as needed.
 * **Pre-order Group:** Specify the facility group to be used for computing the pre-order catalog computation. To adjust this setting, navigate to the pre-order computation settings, find the "Pre-order Group" option, and select the appropriate facility group from the available options.
 
-<figure><img src="../../.gitbook/assets/inventory (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/inventory-product-store-settings.png" alt=""><figcaption></figcaption></figure>
 
 ### Product
 
@@ -127,7 +127,7 @@ Control what your customers are allowed to edit on their order when they are edi
 4. Pickup location change
 5. Cancel order before fulfillment
 
-<figure><img src="../../.gitbook/assets/order permission.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/order-permission.png" alt=""><figcaption></figcaption></figure>
 
 ### Manage Facility
 

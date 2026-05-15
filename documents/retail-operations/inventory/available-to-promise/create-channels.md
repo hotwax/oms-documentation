@@ -56,4 +56,4 @@ Retailers managing multiple online sales channels must decide which facility gro
 4. **Choose the Inventory Channel** From the dropdown menu, select the inventory channel from which you want to publish. This corresponds to the facility group whose inventory will be pushed to the Shopify store.
 5. **Save and Schedule the Job** After selecting the appropriate options, click `Save Changes` to finalize the settings. This will schedule the inventory publishing job as per the selected time and frequency.
 
-<figure><img src="../../.gitbook/assets/publish-atp-to-sales-channel 1.png" alt=""><figcaption><p>Publish ATP to a Sales Channel</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/publish-atp-to-sales-channel.png" alt=""><figcaption><p>Publish ATP to a Sales Channel</p></figcaption></figure>

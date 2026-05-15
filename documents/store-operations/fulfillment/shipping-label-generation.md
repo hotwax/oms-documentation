@@ -4,7 +4,7 @@ description: >-
   Commerce Fulfillment App for seamless label creation.
 ---
 
-# Shipping Label Generations
+# Shipping Label Generation
 
 ## Shipping Label Generation
 
@@ -19,7 +19,7 @@ HotWax Commerce relies on the accurate setup of shipping carriers to facilitate 
 Resolution:
 
 1. Verify if the shipping carrier corresponding to the desired shipping method is set up in HotWax Commerce.
-2. Follow the documentation on creating a carrier in HotWax Commerce [here](https://docs.hotwax.co/documents/v/system-admins/fulfillment/shipping-methods/add-carrier).
+2. For more details, refer to the [documentation on creating a carrier in HotWax Commerce](../../system-admin/fulfillment/shipping-methods/carrier-and-shipment-methods.md).
 3. Ensure the carrier setup includes accurate details relevant to the shipping method.
 
 **Case: Shipping Gateway Configurations Missing**
@@ -29,7 +29,7 @@ Shipping gateway configurations are essential for HotWax Commerce to communicate
 Resolution:
 
 1. Check if the carrier data has been successfully loaded into HotWax Commerce.
-2. Follow the steps outlined in the documentation to add shipping gateway configurations [here](https://docs.hotwax.co/documents/v/system-admins/fulfillment/shipping-methods/shippinggateways).
+2. Follow the steps outlined in the documentation to [add shipping gateway configurations](../../system-admin/fulfillment/shipping-methods/shipping-gateway.md).
 3. Ensure that the shipping gateway configurations are accurately entered and correspond to the carrier data.
 
 **Case: Shipping Method Not Configured**
@@ -39,7 +39,7 @@ Shipping methods need to be configured within HotWax Commerce to map the shippin
 Resolution:
 
 1. Verify if the shipment method corresponding to the carrier is set up in HotWax Commerce.
-2. Follow the documentation to set up shipping methods [here](https://docs.hotwax.co/documents/v/system-admins/fulfillment/shipping-methods/shippinggateways#add-shipment-methods).
+2. Follow the documentation to [set up shipping methods](../../system-admin/fulfillment/shipping-methods/shipping-gateway.md#add-shipment-methods).
 
 **Case: Shipment Boxes Not Configured for Carrier**
 
@@ -47,7 +47,7 @@ Proper configuration of shipment boxes within HotWax Commerce ensures accurate l
 
 Resolution:
 
-1. Follow the steps outlined in the documentation to configure shipment boxes for the carrier [here](https://docs.hotwax.co/documents/v/system-admins/fulfillment/shipping-methods/shipping-box).
+1. Follow the steps outlined in the documentation to [configure shipment boxes for the carrier](../../system-admin/fulfillment/shipping-methods/shipping-box.md#adding-shipment-boxes-for-specific-carriers).
 2. Ensure that the dimensions and specifications of the shipping boxes are accurately entered to facilitate accurate label generation.
 
 ### Check Facility Association
@@ -58,7 +58,7 @@ In HotWax Commerce, shipping labels are generated based on the association betwe
 
 Resolution:
 
-Verify Facility Association: Confirm that the facility for which the shipping label is being generated is properly associated with the corresponding shipping carrier. Refer to the documentation [here](https://docs.hotwax.co/documents/v/system-admins/fulfillment/shipping-methods/shippinggateways) for guidance on associating facilities with carriers.
+Verify Facility Association: Confirm that the facility for which the shipping label is being generated is properly associated with the corresponding shipping carrier. Refer to the [shipping gateway documentation](../../system-admin/fulfillment/shipping-methods/shipping-gateway.md) for guidance on associating facilities with carriers.
 
 **Case: Shipping Label Generation Disabled for Facility**
 
@@ -76,9 +76,8 @@ A valid phone number associated with the facility is often required by shipping 
 
 Resolution
 
-1. Edit Address Section in Facility detail page: Click on the edit button of the address section to access the facility's details.
-2. Add Phone Number: Enter the correct phone number for the facility and save the changes.
-3. Retry Label Generation: After adding the phone number, attempt to generate the shipping label again for the affected order.
+1. Edit Address Section in Facility detail page: Open the facility from the `Facilities App` and update the phone number from the [`Address and Contact Details`](../../system-admin/administration/facilities/manage-facility-details.md#address-and-contact-details) section.
+2. Retry Label Generation: After adding the phone number, attempt to generate the shipping label again for the affected order.
 
 ### Check Customer Information
 
@@ -134,4 +133,14 @@ This feature provides enhanced flexibility, especially for stores using multiple
 5. **Enter Tracking Code and URL**: Store associates can manually enter the `tracking code` in the provided field. Ensure that a `tracking URL` is configured for the selected carrier. If it’s not available, you may need to input the tracking URL `manually` to allow customers to track their `shipments` effectively.
 6. **Generate the Label**: Once the carrier is selected, `generate` the `shipping label` for the order.
 
-<figure><img src="../.gitbook/assets/Screenshot 2024-09-30 at 4.48.51 PM 2 (2).png" alt=""><figcaption></figcaption></figure>
+## Manual fallback: Generate tracking code
+
+If automatic shipping label generation fails, store associates can manually provide tracking details to proceed with the shipment.
+
+1. If a label generation error occurs, a `Shipping label error` button appears on the shipment card.
+2. Click the button to open the `Generate tracking code` modal.
+3. Manually enter the `Tracking code` provided by the carrier.
+4. If a tracking URL is available, enter it in the `Tracking URL` field.
+5. Select `Save` to update the shipment with manual tracking details.
+
+<figure><img src="../.gitbook/assets/preferred-carrier-label-generation.png" alt=""><figcaption></figcaption></figure>

@@ -11,7 +11,7 @@ If the facility where an item is allocated uses NetSuite for fulfillment, usuall
 
 It's important to remember that if items are not allocated to a `NetSuite Facility` their allocation is not synced to NetSuite until after fulfillment is complete.
 
-<figure><img src="../../.gitbook/assets/16.png" alt=""><figcaption><p>Items' allocations synced from HotWax Commerce to NetSuite</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/item-allocations-synced-to-netsuite.png" alt=""><figcaption><p>Items' allocations synced from HotWax Commerce to NetSuite</p></figcaption></figure>
 
 **Actions**
 

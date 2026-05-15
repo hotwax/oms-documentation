@@ -17,7 +17,7 @@ To know how you can manage your purchase orders from your ERP system like NetSui
 
 1. Head to the `Import App`> `Purchase order page` by clicking on the Purchase order in the left menu.
 
-<figure><img src="../../.gitbook/assets/spaces_WoOehPvuUvxQygGoR81q_uploads_OMytarwPHI8uhPtZTk01_2.webp" alt=""><figcaption><p>Image: Purchase Order Page</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/purchase-order-page.webp" alt=""><figcaption><p>Image: Purchase Order Page</p></figcaption></figure>
 
 2. Upload the CSV File by simply clicking on the `Upload` text within the first field.
 
@@ -51,7 +51,7 @@ Review Purchase Order
 
 The `PO Review page` provides a detailed overview of PO CSV data and assists users in identifying and correcting errors within the CSV file.
 
-<figure><img src="../../.gitbook/assets/spaces_WoOehPvuUvxQygGoR81q_uploads_HCxGoQnkj1w0rx95fDvg_3.webp" alt=""><figcaption><p>Purchase Order review page</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/purchase-order-review-page.webp" alt=""><figcaption><p>Purchase Order review page</p></figcaption></figure>
 
 The purchase order page offers the following functions to ensure accurate importation into HotWax Commerce:
 

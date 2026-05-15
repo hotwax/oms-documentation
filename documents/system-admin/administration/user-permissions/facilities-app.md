@@ -14,7 +14,7 @@ All actions within the `Facilities` App users with this permission level are unr
 | 3              | Sell Online Chip          | -            | Option to enable or manage online sales capabilities for a facility.                            |
 | 4              | Daily Order Capacity Chip | -            | Allows users to set or view the daily order capacity for a facility.                            |
 
-<figure><img src="../../.gitbook/assets/view facilities.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/view-facilities.png" alt=""><figcaption></figcaption></figure>
 
 ## Parking Page
 

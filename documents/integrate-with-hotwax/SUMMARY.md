@@ -94,6 +94,7 @@
   * [Outstanding Orders](api/fulfillment/outstanding-orders.md)
   * [Packing Slip PDF](api/fulfillment/packing-slip-pdf.md)
   * [Ready To Ship Items](api/fulfillment/ready-to-ship-items.md)
+  * [Reroute fulfillment APIs](api/fulfillment/reroute-fulfillment-apis.md)
   * [Retry Shipping Label](api/fulfillment/retry-shipping-label.md)
   * [Shipping Label and Packing Slip](api/fulfillment/shipping-label-and-packing-slip.md)
   * [Shipping Label PDF](api/fulfillment/shipping-label-pdf.md)

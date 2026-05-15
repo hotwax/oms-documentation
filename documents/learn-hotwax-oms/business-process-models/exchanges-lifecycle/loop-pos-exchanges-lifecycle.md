@@ -6,7 +6,7 @@ description: >-
 
 # In-Store Exchanges with Loop
 
-<figure><img src="../../.gitbook/assets/InstoreExchangesLoopbpm.png" alt=""><figcaption><p>In-store exchanges lifecycle business process model</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/in-store-exchanges-lifecycle-bpm.png" alt=""><figcaption><p>In-store exchanges lifecycle business process model</p></figcaption></figure>
 
 The process of returning an item mirrors the steps previously discussed in the [In-Store Returns Lifecycle Business Process Model](../returns-lifecycle/loop-pos-returns-lifecycle.md). More specifically, customers visiting the store location, store associates looking up the customer’s order in the Loop POS App, and initiating the return process remains the same.
 

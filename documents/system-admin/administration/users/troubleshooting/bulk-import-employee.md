@@ -77,4 +77,4 @@ After the import is complete, verify that the employees have been added to the s
 * Navigating to the **Employees** screen under the Relationship category in OMS.
 * Checking that all imported employees appear in the system with the correct details.
 
-<figure><img src="../../../.gitbook/assets/Import Employee.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/import-employee.png" alt=""><figcaption></figcaption></figure>

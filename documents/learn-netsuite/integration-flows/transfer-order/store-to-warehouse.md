@@ -21,7 +21,7 @@ Inventory count for transfer order items received in the warehouse is increased 
 
 ## Workflow
 
-<figure><img src="../../.gitbook/assets/36.png" alt=""><figcaption><p>Store to warehouse transfer order</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/store-to-warehouse-transfer-order.png" alt=""><figcaption><p>Store to warehouse transfer order</p></figcaption></figure>
 
 ### Create Transfer Orders in NetSuite
 
@@ -126,15 +126,15 @@ Inventory for transfer order items received in the warehouse is synchronized whe
 
 {% tabs %}
 {% tab title="Transfer Order Fields in NetSuite" %}
-<figure><img src="../../.gitbook/assets/37.png" alt=""><figcaption><p>Transfer Order Fields Mapping in NetSuite</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/store-to-warehouse-transfer-order-fields-netsuite.png" alt=""><figcaption><p>Transfer Order Fields Mapping in NetSuite</p></figcaption></figure>
 {% endtab %}
 
 {% tab title="Transfer Order Fields in HotWax Commerce" %}
-<figure><img src="../../.gitbook/assets/38.png" alt=""><figcaption><p>Transfer Order Fields Mapping in HotWax Commerce</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/store-to-warehouse-transfer-order-fields-hotwax.png" alt=""><figcaption><p>Transfer Order Fields Mapping in HotWax Commerce</p></figcaption></figure>
 {% endtab %}
 {% endtabs %}
 
-<figure><img src="../../.gitbook/assets/39.png" alt=""><figcaption><p>Transfer Order Items Fulfilled in HotWax Commerce "Store Fulfillment App"</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/store-to-warehouse-transfer-order-items-fulfilled.png" alt=""><figcaption><p>Transfer Order Items Fulfilled in HotWax Commerce "Store Fulfillment App"</p></figcaption></figure>
 
 {% file src="../../.gitbook/assets/Transfer Order Fulfilled Items Feed (1).txt" %}
 

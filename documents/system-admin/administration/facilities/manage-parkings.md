@@ -72,4 +72,4 @@ If an order cannot be processed during the current brokering sessions due to inv
 
 For example, suppose there are two brokering engines scheduled to run at 10:00 A.M. and 10:00 P.M. Orders that remain unfulfilled after the 10:00 A.M. the cycle will be parked in the Unfillable Parking space and will be processed for fulfillment at 10:00 P.M. Orders in the Unfillable Parking are prioritized for fulfillment in the next brokering run.
 
-<figure><img src="../../.gitbook/assets/facilities.hotwax.io_tabs_parking (1) 1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/manage-parkings-page.png" alt=""><figcaption></figcaption></figure>

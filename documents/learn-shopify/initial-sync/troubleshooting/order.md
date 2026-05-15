@@ -37,7 +37,7 @@ If the job fails due to technical errors, use logs to find out the reason for fa
 
 5. If the problem still persists, connect with the HotWax Commerce support team for further assistance.
 
-<figure><img src="../../.gitbook/assets/Order Sync (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/import-shopify-orders-job.png" alt=""><figcaption></figcaption></figure>
 
 ***
 

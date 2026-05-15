@@ -27,7 +27,7 @@ As mentioned earlier, in NetSuite, the inventory count for transfer order items 
 
 ## Workflow
 
-<figure><img src="../../.gitbook/assets/33.png" alt=""><figcaption><p>Warehouse to store transfer order</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/warehouse-to-store-transfer-order.png" alt=""><figcaption><p>Warehouse to store transfer order</p></figcaption></figure>
 
 ### Fulfilling Transfer Order Items
 
@@ -98,11 +98,11 @@ Once all the transfer order item fulfillment records have been successfully rece
 
 {% tabs %}
 {% tab title="Transfer Order Fields in NetSuite" %}
-<figure><img src="../../.gitbook/assets/34.png" alt=""><figcaption><p>Transfer Order Fields Mapping in NetSuite</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/warehouse-to-store-transfer-order-fields-netsuite.png" alt=""><figcaption><p>Transfer Order Fields Mapping in NetSuite</p></figcaption></figure>
 {% endtab %}
 
 {% tab title="Transfer Order Fields in HotWax Commerce" %}
-<figure><img src="../../.gitbook/assets/35.png" alt=""><figcaption><p>Inbound Shipment Fields Mapping in HotWax Commerce "Inventory Receiving App"</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/warehouse-to-store-inbound-shipment-fields-hotwax.png" alt=""><figcaption><p>Inbound Shipment Fields Mapping in HotWax Commerce "Inventory Receiving App"</p></figcaption></figure>
 {% endtab %}
 {% endtabs %}
 
