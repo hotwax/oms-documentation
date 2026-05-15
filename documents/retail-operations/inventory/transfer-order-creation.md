@@ -6,6 +6,8 @@ description: Create a new transfer order in the Transfers App.
 
 Use the Transfers App to create a Transfer Order (TO) and move inventory between facilities.
 
+For NetSuite-connected warehouse-to-store transfers, transfer orders may originate in NetSuite and sync into HotWax Commerce after fulfillment. See [Warehouse to Store](../../learn-netsuite/integration-flows/transfer-order/warehouse-to-store.md) for that flow.
+
 ## Create a new TO
 1. Select the `Add (+)` icon on the `Transfer orders` page.
 2. The `Create transfer order` page opens.
@@ -76,3 +78,16 @@ The uploaded file can contain one row per item. Reuse the same `External Order I
 2. Select the checkmark icon in the lower-right corner to create the TO.
 
 After creation, you land on the Transfer Order Details page with the order in Created status.
+
+## Validate the TO
+
+After creating the transfer order, confirm that:
+
+* The TO name is searchable on the Transfer Orders page.
+* Product Store, origin facility, and destination facility are correct.
+* SKUs and quantities match the request.
+* Ship date and delivery date match the intended transfer window.
+* The lifecycle matches the intended workflow.
+* The TO is approved when it should be available for fulfillment or receiving.
+
+Store teams can receive approved transfer orders using [Transfer Order Receiving](../../store-operations/transfer-order/transfer-order-receiving.md). Administrators can review field status and item-level progress in [Transfer Order Details](transfer-order-details.md).

@@ -4,6 +4,15 @@ The bulk upload feature makes it easy to create multiple cycle counts at once us
 
 To begin, go to the `Cycle Count` app and select `Bulk upload`.
 
+## Common use cases
+
+Use bulk upload when you need to enter cycle count records for:
+
+* Directed counts for selected SKUs at one or more facilities
+* Hard counts for broader physical inventory counts
+* Operational audits or exception follow-up
+* Store training or testing scenarios that require assigned count records
+
 On this page, you can:
 
 * Download a sample CSV template 
@@ -77,3 +86,15 @@ At the top of this section, the page also shows `Processing <time>` (for example
 | `Error` | The file encountered an error during import. Resolve it by reviewing the error description in the modal. |
 
 Once processing is complete, the cycle counts from the bulk upload appear under the `Assigned` tab in the Cycle Count app. Store teams can then begin execution.
+
+## Validate created counts
+
+After the upload is processed, confirm that:
+
+* Each count appears in the [Assigned](assigned.md) view.
+* Count names are clear and searchable.
+* Assigned facilities are correct.
+* Count types are correct.
+* Directed count products match the intended SKUs.
+* Start and due dates match the intended counting window.
+* Store users can see the counts in the [Store View](../../../store-operations/cycle-count/README.md).
