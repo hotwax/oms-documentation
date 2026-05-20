@@ -57,14 +57,16 @@ Order fields from Shopify map to HotWax Commerce as follows:
 
 ## New order creation
 
+<figure><img src="../../.gitbook/assets/new-order-creation-flow.png" alt=""><figcaption><p><em>Fig.4: New Order Creation Flow</em></p></figcaption></figure>
+
 When new orders are placed in Shopify, HotWax Commerce imports them using an event-driven flow. 
 Here is how the new order import flow works:
 
 ### 1. Order creation in Shopify
-When a customer completes a purchase, Shopify registers the new order. This marks the beginning of the fulfillment process.
+When a customer completes a purchase, Shopify registers the new order.
 
 ### 2. Webhook triggers
-Shopify immediately triggers the [`orders/create` webhook](https://shopify.dev/docs/api/webhooks?reference=toml#list-of-topics-orders/create). This webhook acts as a real-time notification, instantly broadcasting that a new order exists instead of waiting for a scheduled sync.
+Shopify immediately triggers the [`orders/update` webhook](https://shopify.dev/docs/api/webhooks/2026-01?accordionItem=webhooks-orders-updated&reference=toml). This webhook acts as a real-time notification, instantly broadcasting that a new order exists instead of waiting for a scheduled sync.
 
 ### 3. Event routing through AWS EventBridge
 HotWax Commerce has configured AWS EventBridge to catch the webhook event and securely routes the message to an Amazon Simple Queue Service (SQS) queue. This step prevents data loss during high traffic periods and keeps the system stable even if thousands of orders are placed at once.
