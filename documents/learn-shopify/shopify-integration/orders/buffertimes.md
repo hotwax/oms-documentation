@@ -19,7 +19,7 @@ To address this, HotWax Commerce adds a buffer time padding to the start time of
 ## Example scenario
 
 * Sync job interval: Every 15 minutes
-* Default values: `thruDateBuffer` = 5 minutes, `bufferTime` = 6 minutes
+* Default values: `thruDateBuffer` = five minutes, `bufferTime` = six minutes
 
 1. The job running at 1:15 syncs orders from 12:54 to 1:10.
 2. The job running at 1:30 syncs orders from 1:09 to 1:25.
