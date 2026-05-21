@@ -28,7 +28,7 @@ HotWax Commerce orchestrates order approval through several pathways, depending 
 * **Direct UI or API:** You can manually approve orders using the HotWax Commerce user interface or direct API calls.
 * **Data imports:** The Maarg Data Manager processes and approves bulk order imports.
 
-## Approve Orders job
+## `Approve Orders` job
 
 The Approve Orders job runs at a default frequency of 30 minutes. It systematically verifies and approves orders that require additional checks, such as third-party fraud detection. 
 
