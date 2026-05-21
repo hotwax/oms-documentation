@@ -66,7 +66,7 @@ Here is how the new order import flow works:
 When a customer completes a purchase, Shopify registers the new order.
 
 ### 2. Webhook triggers
-Shopify immediately triggers the [`orders/update` webhook](https://shopify.dev/docs/api/webhooks/2026-01?accordionItem=webhooks-orders-updated&reference=toml). This webhook acts as a real-time notification, instantly broadcasting that a new order exists instead of waiting for a scheduled sync.
+Shopify immediately triggers the [`orders/updated` webhook](https://shopify.dev/docs/api/webhooks/2026-01?accordionItem=webhooks-orders-updated&reference=toml). This webhook acts as a real-time notification, instantly broadcasting that a new order exists instead of waiting for a scheduled sync.
 
 ### 3. Event routing through AWS EventBridge
 HotWax Commerce has configured AWS EventBridge to catch the webhook event and securely routes the message to an Amazon Simple Queue Service (SQS) queue. This step prevents data loss during high traffic periods and keeps the system stable even if thousands of orders are placed at once.
