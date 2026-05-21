@@ -2,7 +2,7 @@
 description: Learn how HotWax Commerce downloads initial and new orders from Shopify.
 ---
 
-# Order Download
+# Order download
 
 ## Initial order download
 
