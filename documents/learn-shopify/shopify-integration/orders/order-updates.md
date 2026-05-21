@@ -28,7 +28,7 @@ For example, merchants can configure Shopify Flow to apply a `HOLD` tag when an 
 1. A customer places an order in Shopify.
 2. Shopify Flow evaluates the order against the merchant's review conditions, such as order value, risk level, or product-specific rules.
 3. If the order requires review, Shopify Flow adds the `HOLD` tag. The order remains in the brokering queue and is not allocated to a facility.
-4. After a CSR reviews the order in Shopify, they remove the `HOLD` tag and add the `APPROVED` tag.
+4. After a CSR reviews the order in Shopify, they remove the `Hold` tag and add the `Approved` tag.
 5. The `orders/updated` webhook syncs the updated tags to HotWax Commerce.
 6. On the next allocation run, orders with the `APPROVED` tag become eligible for facility allocation and fulfillment.
 
