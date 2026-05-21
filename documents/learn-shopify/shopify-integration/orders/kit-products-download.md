@@ -6,16 +6,16 @@ description: Learn how HotWax Commerce downloads kit orders from Shopify.
 
 ## How kit orders download from Shopify
 
-HotWax Commerce imports orders for kit products from Shopify through the [order download process](../overview/order-download-flow).
+HotWax Commerce imports orders for kit products from Shopify through the [order download process](order-download.md).
 
-When HotWax Commerce imports an order, it first identifies the kit in the database. For each item, the system retrieves its associated product ID.
+When HotWax Commerce imports an order, it identifies the kit in the database. For each item, the system retrieves its associated product ID.
 
 These product IDs are predefined in HotWax Commerce and mapped to specific product types. For example:
 
 | Product ID | Product Type         |
 | ---------- | -------------------- |
-| 1001       | FINISHED GOOD        |
-| 2010       | MARKETING\_PKG\_PICK |
+| 1001       | `FINISHED GOOD`        |
+| 2010       | `MARKETING_PKG_PICK` |
 
 Once the product type is identified as `MARKETING_PKG_PICK`, HotWax Commerce associates it with the right kit. The system then recognizes it as a kit order.
 

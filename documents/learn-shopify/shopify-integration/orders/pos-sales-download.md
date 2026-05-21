@@ -1,13 +1,12 @@
 ---
-description: >-
-  Point of sale (POS) sales are purchases made by customers directly at physical
-  retail locations. These involve immediate payment and fulfillment, occurring
-  in real time.
+description: Learn how HotWax Commerce downloads POS sales from Shopify.
 ---
 
 # POS sales download
 
-HotWax Commerce imports POS sales from Shopify through the standard [order download process](../overview/order-download-flow). Because POS sales in Shopify have already been fulfilled to customers in-store, they are automatically marked as `Completed` in HotWax Commerce upon import.
+Point of Sale (POS) sales are purchases made by customers directly at physical retail locations. These involve immediate payment and fulfillment, occurring in real-time.
+
+HotWax Commerce imports POS sales from Shopify through the standard [order download process](order-download.md). Because POS sales in Shopify have already been fulfilled to customers in-store, they are automatically marked as `Completed` in HotWax Commerce upon import.
 
 ## Differentiating POS sales from regular orders
 
