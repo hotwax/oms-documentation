@@ -35,7 +35,7 @@ For example, merchants can configure Shopify Flow to apply a `HOLD` tag when an 
 If the order does not meet any manual-review condition, Shopify Flow can add the `APPROVED` tag automatically. In that case, once the order is downloaded and the tag is synced, the order can proceed through the standard allocation process.
 
 {% hint style="info" %}
-When merchants use an approval-based tag flow, the `APPROVED` tag is required before an order can proceed to allocation and fulfillment. Orders without the required approval tag remain in the brokering queue until Shopify is updated and the tag change is synced.
+When merchants use an approval-based tag flow, the `Approved` tag is required before an order can proceed to allocation and fulfillment. Orders without the required approval tag remain in the brokering queue until Shopify is updated and the tag change is synced.
 {% endhint %}
 
 To learn more about how HotWax Commerce syncs order fulfillment updates with Shopify, read the [Shopify integration overview](../../). Read further to learn how HotWax Commerce manages [presell orders](../preorders-and-backorders/) and [BOPIS orders](../bopis-orders/).
