@@ -4,7 +4,7 @@ description: Learn how HotWax Commerce synchronizes order updates from Shopify.
 
 # Order Updates
 
-### Synchronizing Order Updates
+### Synchronizing order updates
 
 Sometimes customers or customer service representatives (CSRs) make changes to Shopify orders that need to be accurately reflected in HotWax Commerce to ensure the fulfillment process meets the customer's requirements. HotWax Commerce can update the following details from Shopify:
 
