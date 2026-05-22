@@ -46,5 +46,3 @@
     *   The associate selects the returned item(s) and specifies the return type (refund or store credit).
     *   **Refund:** HotWax creates the return and notifies Shopify to process the refund. Shipping charges are not refunded.
     *   **Store Credit:**  HotWax stores the store credit details, and no information is sent to Shopify. A receipt is printed for the customer.
-
-Let me know if you have any other questions or would like further refinements to the document!
