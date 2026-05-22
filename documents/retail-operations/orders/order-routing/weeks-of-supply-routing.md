@@ -28,6 +28,23 @@ If `Week of Supply` is selected as a sort option without a positive Weeks of Sup
 Weeks of Supply does not replace filters like Facility Group, Proximity, or Brokering Safety Stock. Those filters still define which facilities are eligible. Weeks of Supply then helps decide the order in which eligible facilities should be attempted.
 {% endhint %}
 
+## Weeks of Supply vs. Sales Velocity
+
+HotWax Commerce supports both `Sales Velocity` and `Week of Supply` as inventory sort options. They are related, but they answer different business questions.
+
+`Sales Velocity` sorts facilities by how quickly the product is selling at each location. In order routing, this is useful when the retailer wants to attempt lower-velocity locations first. A lower-velocity store is less likely to need the same inventory for immediate walk-in demand, so it can be a better fulfillment source for online orders.
+
+`Week of Supply` goes one step further. It compares current inventory with sales velocity to estimate how much inventory cover each location has. This helps the routing engine prefer locations that can spare inventory, not just locations where the item sells slowly.
+
+| Sort option | What it considers | What it answers | Best use |
+| --- | --- | --- | --- |
+| Sales Velocity | How quickly the item sells at a location | Where is this item moving slowly? | Use when the main goal is to route from slower-moving locations. |
+| Week of Supply | Current inventory and sales velocity | Which location has the deepest inventory cover? | Use when the goal is to clear excess inventory without depleting stores with strong local demand. |
+
+For example, two stores may both have low sales velocity. One has 3 units and the other has 30 units. `Sales Velocity` may treat both stores as slow-moving, but `Week of Supply` gives more context because it can identify that the store with 30 units has more cover and is a better fulfillment candidate.
+
+Use `Sales Velocity` when you want a simple merchandising rule that favors slower-moving stores. Use `Week of Supply` when the decision needs to account for both movement and available depth. In most store-fulfillment strategies, Weeks of Supply is the stronger option because it protects demand and helps reduce overstock at the same time.
+
 ## Why Retailers Use Weeks of Supply Routing
 
 Retailers typically use Weeks of Supply routing when the fulfillment decision should support both online order fulfillment and store inventory health.
