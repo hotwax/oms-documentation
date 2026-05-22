@@ -7,18 +7,12 @@
 *   A product meets the **threshold criteria** if its available inventory at a store is **greater than or equal to 4 units**.
 *   The system aims to fulfill as many items as possible from a single location.
 
-**Scenario Table**
-
-Absolutely! Here's a revised version of the table with real-world retail examples to illustrate each scenario:
-
 ## Steve Madden Order Brokering Scenarios & Logic
 
 **Understanding the Threshold Criteria:**
 
 *   A product meets the **threshold criteria** if its available inventory at a store is **greater than or equal to 4 units**. This is to ensure a store has enough stock to handle potential demand and avoid frequent stockouts.
 *   The system aims to fulfill as many items as possible from a single location to minimize shipping costs and consolidate packaging.
-
-**Scenario Table**
 
 | Scenario | Order Items                       | Warehouse Availability                    | Store Availability (Zone)                            | Threshold Met? (Zone)                   | Brokering Decision                                                                                                                                                                | Real-World Example                                                                                                                                                               |
 | ------- | --------------------------------- | ------------------------------------------ | ----------------------------------------------------- | ---------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -34,9 +28,6 @@ Absolutely! Here's a revised version of the table with real-world retail example
 | 9       | 2 wallets                         | 1 wallet                                   | 1 wallet (Zone 5, 8)                         | None                                        | 1 wallet shipped from warehouse, 1 wallet from the nearest outlet store                                                                                                             | A customer orders two wallets. The warehouse has one in stock, and the other is available in two outlet stores.                                                                        |
 | 10      | 2 hats                             | Both (Outlet WH, Retail WH)                | Both (Outlet Store, Retail Store)                 | N/A (multiple warehouses)                | Both hats shipped from Outlet Warehouse                                                                                                                                            | A customer orders hats that are available in multiple locations, including warehouses and stores. The system prioritizes the outlet warehouse over the retail warehouse and stores.  |
 | 11      | 2 scarves                         | Retail WH (<3)                            | Both (Outlet Store, Retail Store)                 | Stores meet the threshold                 | Both scarves shipped from Retail Warehouse                                                                                                                                          | A customer orders scarves available in the retail warehouse (with low stock) and multiple stores that meet the threshold. The system chooses the warehouse to avoid splitting the order. |
-
-I hope these real-world examples make the scenarios clearer and easier to understand!
-
 
 **Key Brokering Rules**
 
