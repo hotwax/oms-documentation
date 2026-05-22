@@ -1,9 +1,5 @@
 # Scenarios
 
-Order fulfillment scenarios and how SM expects routing to work for them:
-
-Absolutely! Here's a revised version of the routing scenarios, formatted with Markdown tables and organized for better readability:
-
 ## Steve Madden Order Brokering Scenarios & Logic
 
 **Understanding the Threshold Criteria:**
