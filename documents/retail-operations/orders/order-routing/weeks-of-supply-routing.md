@@ -4,11 +4,11 @@ description: Route orders using Weeks of Supply to protect high-demand stores an
 
 # Weeks of Supply Routing
 
-Weeks of Supply routing helps retailers decide which fulfillment locations should be used for eCommerce orders based on how much inventory cover each location has for the ordered item. Instead of looking only at the number of units available, this strategy considers inventory together with sales velocity so that stores with heavy walk-in demand are protected while locations with deeper coverage can be used for fulfillment.
+Weeks of Supply routing helps retailers decide which fulfillment locations to use for eCommerce orders based on how much inventory cover each location has for the ordered item. Instead of looking only at the number of units available, this strategy considers inventory together with sales velocity so that stores with heavy walk-in demand are protected while locations with deeper coverage can be used for fulfillment.
 
-For merchandisers, this turns order routing into an inventory productivity tool. A store with 20 units available may look like a good fulfillment location, but if it sells 10 units a week in store, routing online orders from that location can quickly create a stockout. Another store with the same 20 units but only 2 units of weekly demand has more cover and is a better candidate for ship-from-store fulfillment.
+For merchandisers, this turns order routing into an inventory productivity tool. A store with 20 units available may look like a good fulfillment location, but if it sells 10 units a week in store, routing online orders from that location can quickly create a stockout. Another store with the same 20 units but only two units of weekly demand has more cover and is a better candidate for ship-from-store fulfillment.
 
-## How HotWax Commerce Calculates Weeks of Supply
+## How HotWax Commerce calculates Weeks of Supply
 
 Weeks of Supply is configured on an inventory rule and is used with the `Week of Supply` inventory sort option.
 

@@ -367,7 +367,7 @@ After setting up routing and inventory rules, activate the Holiday Season Routin
 Holiday Season Order Routing
 {% endembed %}
 
-## Scenario 10: Clearing Slow-Moving Store Inventory Without Depleting High-Demand Stores
+## Scenario 10: Clearing slow-moving store inventory without depleting high-demand stores
 
 Retailers often need to clear aging or slow-moving inventory from some stores while protecting locations where the same item is selling quickly to walk-in customers. If order routing only looks at available units, a high-demand store can be selected simply because it has inventory on hand. That may fulfill the online order, but it can also create a store stockout and cause missed in-store sales.
 
@@ -379,9 +379,9 @@ Before configuring this scenario, make sure sales velocity is available for stor
 
 You should also create a facility group for the locations you want to evaluate, such as:
 
-* **Stores**: All ship-from-store locations.
-* **Outlet Stores**: Locations that should be prioritized for clearing older inventory.
-* **Eligible Store Fulfillment Locations**: Stores that have the staffing and operational capacity to fulfill online orders.
+* **Stores**: All ship-from-store locations
+* **Outlet Stores**: Locations that should be prioritized for clearing older inventory
+* **Eligible Store Fulfillment Locations**: Stores that have the staffing and operational capacity to fulfill online orders
 
 ### Steps to Implement
 
@@ -400,11 +400,11 @@ Create an order batch for the online orders that should use this routing strateg
 
 Use multiple inventory rules so the routing engine first tries the best store inventory balancing option, then falls back to broader fulfillment options if needed.
 
-* **First Inventory Rule: Use stores with deeper coverage**
+* **First Inventory Rule**: Use stores with deeper coverage
   * **Inventory Filter**: Apply the Facility Group filter and select the store group you want to evaluate. Add the `Week of Supply` filter value to define the coverage period used for the calculation.
   * **Inventory Sort**: Select `Week of Supply` so the routing engine attempts stores with the highest inventory cover first.
   * **Actions**: If no store can fulfill the order, send unavailable items to the `Next Rule`.
-* **Second Inventory Rule: Keep the customer promise**
+* **Second Inventory Rule**: Keep the customer promise
   * **Inventory Filter**: Add a Proximity filter or warehouse Facility Group filter, depending on the retailer’s fulfillment strategy.
   * **Inventory Sort**: Sort by Proximity if delivery speed and shipping cost are more important at this stage.
   * **Actions**: If inventory is still unavailable, send the order to the `Unfillable Queue` or allow partial fulfillment if the business accepts split shipments.
