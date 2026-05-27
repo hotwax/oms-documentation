@@ -68,7 +68,7 @@ When the inventory is received, a product’s QOH and Online ATP are updated in 
 
 Online ATP = QOH - (Reserved quantities + Safety stock + Threshold + Orders in brokering queue + Excluded facilities' ATP)
 
-For each store that allows online fulfillment, HotWax Commerce calculates the Online ATP that is available to sell and synchronize the inventory with Shopify through [Hard Sync and \`Update recent inventory changes jobs](/documents/retail-operations/workflow/job-workflows/inventory).
+For each store that allows online fulfillment, HotWax Commerce calculates the Online ATP available to sell and synchronizes the inventory with Shopify through the [`Hard Sync` and `Update Recent Inventory Changes` jobs](/documents/retail-operations/workflow/job-workflows/inventory).
 
 ### Verify Store Fulfillment
 
