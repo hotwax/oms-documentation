@@ -97,7 +97,7 @@ How it works:
 
 During a Hard Count, store associates are assigned to count every item in the facility. The system generates a blank count, requiring associates to record every item they encounter. Once submitted, the system compares counted quantities against recorded system quantities and calculates variance for each product.
 
-**Example:**
+Example:
 
 A retail apparel store closes at the end of December for an annual inventory audit. Store associates are divided into teams, each assigned to a section of the store. Over the course of one day, every product — across all categories, sizes, and locations — is physically counted and recorded. The totals are then submitted to the system, which identifies discrepancies between the counted quantities and the system quantities. This entire process constitutes a Hard Count.
 
