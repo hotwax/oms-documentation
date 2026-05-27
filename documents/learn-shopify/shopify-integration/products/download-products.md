@@ -1,5 +1,5 @@
 ---
-description: Learn how launch the initial product download from Shopify.
+description: Learn how to download products from Shopify to HotWax Commerce.
 ---
 
 # Product Download

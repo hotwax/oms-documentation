@@ -53,6 +53,7 @@
   * [Brokering Runs](orders/order-routing/brokering-runs.md)
   * [Routing Rules](orders/order-routing/routing-rules.md)
   * [Inventory Rules](orders/order-routing/inventory-rules.md)
+  * [Weeks of Supply Routing](orders/order-routing/weeks-of-supply-routing.md)
   * [Test Drive](orders/order-routing/test-drive.md)
   * [Use Cases](orders/order-routing/use-cases.md)
   * [Additional Settings](orders/order-routing/additional-settings.md)
