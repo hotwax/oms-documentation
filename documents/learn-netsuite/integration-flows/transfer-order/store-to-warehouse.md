@@ -34,7 +34,7 @@ Inventory count for transfer order items received in the warehouse is increased 
 Export Transfer Orders to SFTP
 
 ```
-HC_MR_ExportedStoretoStoreTOJson_v2.js
+HC_MR_ExportedStoretoWhTOJson_v2.js
 ```
 
 **SFTP Location**
