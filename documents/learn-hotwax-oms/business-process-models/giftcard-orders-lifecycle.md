@@ -26,7 +26,7 @@ Physical gift cards are tangible cards that customers can buy online or in-store
 
 **Digital Gift Cards:**
 
-Digital gift cards, also known as e-gift cards, are virtual equivalents of physical gift cards. Customers receive them via email or text message along with a unique serial number that they can use to redeem the value stored in the card.Since digital gift cards are non-inventory items, no physical fulfillment is required in NetSuite. Therefore, NetSuite automatically marks them as fulfilled and updates their status from “Pending Fulfillment” to “Pending Billing”.
+Digital gift cards, also known as e-gift cards, are virtual equivalents of physical gift cards. Customers receive them via email or text message along with a unique serial number that they can use to redeem the value stored in the card. Since digital gift cards are non-inventory items, no physical fulfillment is required in NetSuite. Therefore, NetSuite automatically marks them as fulfilled and updates their status from “Pending Fulfillment” to “Pending Billing”.
 
 **Preparation and processing:** Customers instantly receive digital cards upon purchase via email and therefore they are immediately fulfilled.
 
