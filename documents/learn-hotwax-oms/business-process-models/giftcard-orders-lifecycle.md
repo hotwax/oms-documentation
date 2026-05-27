@@ -159,7 +159,7 @@ Digital gift cards are already in the <mark style="color:orange;">**“Completed
 A dedicated job in HotWax Commerce downloads NetSuite's internal IDs, while another job downloads NetSuite's item line IDs.
 
 * Once NetSuite order ID and item line IDs are synced to HotWax Commerce, a scheduled job in HotWax Commerce creates customer deposits for corresponding gift card orders in the <mark style="color:orange;">**“Undeposited”**</mark> status in NetSuite.
-* By default non inventory items like digital gift cards are configured to be not eligible for fulfillment in NetSuite.  Since digital gift cards are non-inventory items, NetSuite automatically marks them as fulfilled without physical processing and their status updated from <mark style="color:orange;">**“Pending Fulfillment”**</mark> to <mark style="color:orange;">**“Pending Billing”.**</mark>
+* By default non inventory items like digital gift cards are configured to be not eligible for fulfillment in NetSuite.  Since digital gift cards are non-inventory items, NetSuite automatically marks them as fulfilled without physical processing and their status is updated from <mark style="color:orange;">**“Pending Fulfillment”**</mark> to <mark style="color:orange;">**“Pending Billing”.**</mark>
 * Subsequently, invoice is auto generated in NetSuite in the status <mark style="color:orange;">**“Paid”**</mark>, and the customer deposit status is automatically updated from <mark style="color:orange;">**“Not Deposited”**</mark> to <mark style="color:orange;">**“Fully Applied”.**</mark>
 
 {% hint style="success" %}
