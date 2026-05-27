@@ -123,7 +123,7 @@ This marks the completion of physical gift card orders in NetSuite.
 
 ### 11. Synchronize Fulfillment Updates to eCommerce Platform
 
-Once a gift cards order reaches the <mark style="color:orange;">**"Completed"**</mark> status in HotWax Commerce, a scheduled job in HotWax Commerce sends the tracking details to Shopify and marks the gift card orders as <mark style="color:orange;">**“Fulfilled”**</mark>.
+Once a gift card order reaches the <mark style="color:orange;">**"Completed"**</mark> status in HotWax Commerce, a scheduled job in HotWax Commerce sends the tracking details to Shopify and marks the gift card orders as <mark style="color:orange;">**“Fulfilled”**</mark>.
 
 This process remains consistent regardless of whether the gift card order fulfillment is performed in NetSuite or the "Fulfillment App".
 
