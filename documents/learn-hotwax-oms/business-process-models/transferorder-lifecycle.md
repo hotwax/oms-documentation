@@ -116,7 +116,7 @@ Similar to the `store to store` transfer order lifecycle we discussed above, <ma
 ### 4. Receive Transfer Orders in NetSuite
 
 * Finally, the inventory planning team manually initiates the receiving process in NetSuite for the store transferred inventory upon its arrival at the warehouse.
-* After the receiving process is completed, the transfer order status is automatically updated from <mark style="color:orange;">**“Pending Receipt”**</mark> to <mark style="color:orange;">**“Received”**</mark>, indicating that all transfer order items have been successfully received at the warehouse. Additionally, the inventory counts for the newly received inventory are updated in NetSuite.
+* After the receiving process is complete, NetSuite automatically updates the transfer order status from <mark style="color:orange;">**“Pending Receipt”**</mark> to <mark style="color:orange;">**“Received”**</mark> and updates the inventory counts for the newly received inventory.
 
 {% hint style="success" %}
 It’s crucial to note that inventory counts for the items received in the warehouse are increased in HotWax Commerce on performing daily inventory sync with NetSuite.
