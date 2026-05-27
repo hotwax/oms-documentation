@@ -81,7 +81,7 @@ It displays:
 - Customer details (name, phone number, and full address)  
 - Details of other shipments in the order  
 
-The same details are also shown when viewing the Order Details Page in the `In Progress` and `Completed` tabs.
+The same details are also shown when viewing the `Order Details` page in the `In Progress` and `Completed` tabs.
 
 From this page, store associates can:  
 - Pick the order if items are available  
