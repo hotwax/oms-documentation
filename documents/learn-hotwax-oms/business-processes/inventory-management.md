@@ -108,7 +108,7 @@ How it works:
 
 Before a Directed Count is created, the administrator identifies the specific products to be counted and lists their SKUs. These SKUs are entered into the system through the bulk upload file and the system generates a count that includes only those products. When the store associate opens the count, they see only the listed items. No other products are included.
 
-**Example:**
+Example:
 
 A store manager at the Broadway location notices that a particular sneaker model has been showing a system quantity of 15 units for the past two weeks, but store associates report the shelf appears nearly empty. The manager creates a Directed Count for that specific SKU, along with two other products that had discrepancies in the previous count. Associates are directed to count only those three products. The count is submitted, the variance is reviewed, and the system quantity is corrected accordingly.
 
