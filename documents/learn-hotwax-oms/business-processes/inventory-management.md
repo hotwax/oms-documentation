@@ -93,7 +93,7 @@ There are two types of cycle count:
 #### Hard count
 A hard count is a comprehensive inventory verification process in which every product present in a facility is physically counted. No product is excluded. The goal is to establish a comprehensive and accurate record of all on-hand inventory.
 
-**How It Works:**
+How it works:
 
 During a Hard Count, store associates are assigned to count every item in the facility. The system generates a blank count, requiring associates to record every item they encounter. Once submitted, the system compares counted quantities against recorded system quantities and calculates variance for each product.
 
