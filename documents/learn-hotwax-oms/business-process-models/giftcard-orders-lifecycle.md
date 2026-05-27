@@ -105,7 +105,7 @@ When physical gift cards are allocated to a store, they automatically appear in 
 
 ### 9. Activation of Gift Cards
 
-HotWax Commerce "Fulfillment App" also enables store associates to activate gift cards directly. During fulfillment, when a unique serial number is assigned and value is loaded, HotWax Commerce activates the gift card in Shopify and the value is loaded onto the card, HotWax Commerce runs a scheduled job to sync these codes to Shopify, where the gift cards are activated.
+HotWax Commerce `Fulfillment App` also enables store associates to activate gift cards directly. During fulfillment, once a unique serial number is assigned and the value is loaded, HotWax Commerce runs a scheduled job to sync these codes and activate the gift cards in Shopify.
 
 This activation step ensures that the gift card is fully functional and customers can use the unique serial number they received in their email to redeem the value stored in the gift card.
 
