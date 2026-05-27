@@ -154,7 +154,7 @@ Digital gift cards are already in the <mark style="color:orange;">**“Completed
 * A scheduled job in HotWax Commerce Integration Platform generates a feed of gift card orders that are in <mark style="color:orange;">**“Completed”**</mark> status and do not have NetSuite order item line IDs. This helps make sure that only relevant orders are synchronized to NetSuite and regular orders that are <mark style="color:orange;">**“Completed”**</mark> in HotWax Commerce are not synchronized again to NetSuite.
 * NetSuite’s script reads this feed and creates gift card orders in the <mark style="color:orange;">**“Pending Fulfillment”**</mark> status.
 
-### 3. Synchronize Order IDs and Item Line IDs to HotWax Commerce
+### 3. Synchronize order IDs and item line IDs to HotWax Commerce
 
 A dedicated job in HotWax Commerce downloads NetSuite's internal IDs, while another job downloads NetSuite's item line IDs.
 
