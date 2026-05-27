@@ -57,7 +57,7 @@ _to be added_
 
 2. A Scheduled Script in NetSuite reads this JSON file from the SFTP location, allocating locations to the orders in NetSuite by updating order records and tagging the sales order line items with `hotwax-fulfilled`.
 
-3. Once tagged, a secondary Scheduled Script in NetSuite leverages a Saved Search to identify these explicitly tagged lines and creates fulfillment records in Shipped status in NetSuite using the N/Record module.
+3. Once tagged, a secondary Scheduled Script in NetSuite uses a Saved Search to identify these explicitly tagged lines and creates fulfillment records in `Shipped` status in NetSuite using the N/Record module.
 
 **SuiteScript**
 

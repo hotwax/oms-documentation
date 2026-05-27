@@ -19,9 +19,9 @@ Each transfer order can result in either a single item fulfillment record or mul
 
 Whenever an item is fulfilled and the item fulfillment record is marked as `Shipped` in NetSuite, the inventory count for corresponding items is reduced in NetSuite. This also signifies that the items have been dispatched from the warehouse and are in transit to the store.
 
-Inbound shipments are automatically created in HotWax Commerce so that the store can receive the transferred inventory. HotWax Commerce provides a dedicated Inventory Receiving App for store associates to receive in inventory stores. When the store associates verifies the inbound shipments and receives them, inventory counts for the corresponding items are automatically increased in HotWax Commerce.
+Inbound shipments are automatically created in HotWax Commerce so that the store can receive the transferred inventory. HotWax Commerce provides a dedicated Inventory Receiving App for store associates to receive inventory in stores. When store associates verify and receive the inbound shipments, inventory counts for the corresponding items are automatically increased in HotWax Commerce.
 
-Upon successful receipt of inventory, HotWax Commerce synchronizes item receipts with NetSuite. This ensures that the inventory count at store is accurately increased in NetSuite and the status of transfer orders status is updated from `Pending Receipt` to `Received`.
+Upon successful receipt of inventory, HotWax Commerce synchronizes item receipts with NetSuite. This updates the inventory count in NetSuite and changes the transfer order status from `Pending Receipt` to `Received`.
 
 As mentioned earlier, in NetSuite, the inventory count for transfer order items shipped from the warehouse is reduced. In HotWax Commerce, this reduction takes place during its periodic inventory sync from NetSuite.
 
@@ -59,12 +59,12 @@ Import Inbound Shipment
 
 ### Receiving Inventory in the Store
 
-Store associates leverage HotWax Commerce Inventory Receiving App to receive transferred inventory. The user-friendly interface of this app ensures a smooth and efficient receiving process, even for users with minimal training.
+Store associates use the HotWax Commerce Inventory Receiving App to receive transferred inventory. The user-friendly interface of this app simplifies receiving, even with minimal training.
 
 Inbound shipments that have been created are automatically reflected in the Inventory Receiving App, allowing store associates to receive them in store. Upon receiving them, item receipt records are generated in HotWax Commerce. Subsequently, the inventory counts for the items received in the store are promptly increased in HotWax Commerce.
 
 3. **Export Item Receipts from HotWax Commerce:** To maintain a comprehensive record and accurately update inventory count for items received at the store in NetSuite, a scheduled job in HotWax Commerce Integration Platform generates a JSON file with the item receipt records and securely places the file in an SFTP location, making it accessible for NetSuite.
-4. **Import Item Receipts into NetSuite:** In NetSuite, a scheduled SuiteScript reads this JSON file containing item receipt records from the SFTP location. The script iterates through each record, creates new item receipt records, and updates inventory count in NetSuite. The script uses the versatile N/record module to ensure a smooth transition.
+4. **Import Item Receipts into NetSuite:** In NetSuite, a scheduled SuiteScript reads this JSON file containing item receipt records from the SFTP location. The script iterates through each record, creates new item receipt records, and updates inventory count in NetSuite. The script uses the N/Record module to update these records.
 
 **Job in HotWax Commerce**
 
