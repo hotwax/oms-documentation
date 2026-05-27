@@ -63,7 +63,7 @@ Now that physical gift card orders have been approved, they are automatically se
 
 In the event where a gift card order is allocated to a warehouse fulfillment location, HotWax Commerce synchronizes allocation details to NetSuite.
 
-When a gift card is allocated to stores for fulfillment, they automatically show up in the HotWax Commerce "Fulfillment App".
+When a gift card is allocated to stores for fulfillment, they automatically show up in the HotWax Commerce `Fulfillment App`.
 
 ### 5. Orders Allocated to Warehouse
 
