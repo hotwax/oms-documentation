@@ -59,12 +59,12 @@ Import Inbound Shipment
 
 ### Receiving Inventory in the Store
 
-Store associates use the HotWax Commerce Inventory Receiving App to receive transferred inventory. The user-friendly interface of this app enables smooth receiving, even with minimal training.
+Store associates use the HotWax Commerce Inventory Receiving App to receive transferred inventory. The user-friendly interface of this app simplifies receiving, even with minimal training.
 
 Inbound shipments that have been created are automatically reflected in the Inventory Receiving App, allowing store associates to receive them in store. Upon receiving them, item receipt records are generated in HotWax Commerce. Subsequently, the inventory counts for the items received in the store are promptly increased in HotWax Commerce.
 
 3. **Export Item Receipts from HotWax Commerce:** To maintain a comprehensive record and accurately update inventory count for items received at the store in NetSuite, a scheduled job in HotWax Commerce Integration Platform generates a JSON file with the item receipt records and securely places the file in an SFTP location, making it accessible for NetSuite.
-4. **Import Item Receipts into NetSuite:** In NetSuite, a scheduled SuiteScript reads this JSON file containing item receipt records from the SFTP location. The script iterates through each record, creates new item receipt records, and updates inventory count in NetSuite. The script uses the versatile N/record module for a smooth transition.
+4. **Import Item Receipts into NetSuite:** In NetSuite, a scheduled SuiteScript reads this JSON file containing item receipt records from the SFTP location. The script iterates through each record, creates new item receipt records, and updates inventory count in NetSuite. The script uses the N/Record module to update these records.
 
 **Job in HotWax Commerce**
 

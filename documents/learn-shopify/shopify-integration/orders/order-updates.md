@@ -21,7 +21,7 @@ Once HotWax Commerce receives the event, it compares the new order JSON against 
 
 Shopify order tags are also included in order updates. This allows merchants to use Shopify Flow, fraud tools, or customer service workflows to update an order's handling instructions after the order is created.
 
-For example, merchants can configure Shopify Flow to apply a `Hold` tag when an order needs manual review and an `Approved` tag when the order is ready for fulfillment. HotWax Commerce syncs these tag changes from Shopify so the order management system (OMS) can use the latest tag values when deciding whether an order should remain in brokering or proceed to facility allocation.
+For example, merchants can configure Shopify Flow to apply a `Hold` tag when an order needs manual review and an `Approved` tag when the order is ready for fulfillment. HotWax Commerce syncs these tag changes from Shopify so the Order Management System (OMS) can use the latest tag values when deciding whether an order should remain in brokering or proceed to facility allocation.
 
 #### Hold and Approved tag flow
 

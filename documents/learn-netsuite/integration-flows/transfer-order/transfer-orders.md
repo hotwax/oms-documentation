@@ -9,7 +9,7 @@ Transfer orders are instrumental in the internal movement of inventory within an
 
 Transfer Orders originate within NetSuite, but there is a distinction in how they are fulfilled. When a Transfer Order is initiated from a warehouse, NetSuite's fulfillment solution is employed to fulfill the Transfer Order, ensuring the correct allocation of inventory.
 
-This scenario emphasizes the synchronization of Transfer Orders from NetSuite to HotWax Commerce for inventory receiving processes in physical stores. Once items are received, Item Receipt records are imported back into NetSuite to mark Transfer Orders as "Received."
+This scenario emphasizes the synchronization of transfer orders from NetSuite to HotWax Commerce for inventory receiving processes in physical stores. Once items are received, Item Receipt records are imported back into NetSuite to mark transfer orders as `Received`.
 
 ### Key Objectives
 
@@ -93,13 +93,13 @@ Add job name here
 
 ### Receiving Inventory in the Store
 
-Store associates use the HotWax Commerce Receiving App to receive transferred inventory. The user-friendly interface of this app enables smooth receiving, even with minimal training.
+Store associates use the HotWax Commerce Receiving App to receive transferred inventory. The user-friendly interface of this app simplifies receiving, even with minimal training.
 
 <figure><img src="../../.gitbook/assets/to-received.png" alt=""><figcaption><p>Item Receipts Sync from HotWax Commerce to NetSuite</p></figcaption></figure>
 
 ### Export Item Receipts from HotWax Commerce
 
-1. Item Receipt records are created within HotWax Commerce when Transfer Orders are received. These records are essential for updating inventory numbers and making sure that the available stock is accurately represented. To maintain a comprehensive record, a designated job within HotWax Commerce Integration Platform exports the Item Receipts created within the system. Each Item Receipt is mapped to the corresponding Transfer Order, supporting reconciliation and further processing. To facilitate the subsequent processing of this data, the JSON file is securely placed in an SFTP location, making it accessible for NetSuite.
+1. Item Receipt records are created within HotWax Commerce when Transfer Orders are received. These records update inventory numbers and make sure that the available stock is accurately represented. To maintain a comprehensive record, a designated job within HotWax Commerce Integration Platform exports the Item Receipts created within the system. Each Item Receipt is mapped to the corresponding Transfer Order, supporting reconciliation and further processing. To facilitate the subsequent processing of this data, the JSON file is securely placed in an SFTP location, making it accessible for NetSuite.
 
 **SFTP Locations**
 
@@ -120,7 +120,7 @@ Received Transfer Orders NetSuite JSON:
 
 ### Import Item Receipts into NetSuite
 
-2. In NetSuite, a scheduled SuiteScript reads this JSON file containing Item Receipt data from the SFTP location. It iterates through each record, creates new Item Receipt records, and updates inventory numbers within NetSuite. The script uses the versatile N/record module for a smooth transition.
+2. In NetSuite, a scheduled SuiteScript reads this JSON file containing Item Receipt data from the SFTP location. It iterates through each record, creates new Item Receipt records, and updates inventory numbers within NetSuite. The script uses the N/Record module to update these records.
 
 ### Automated Transfer Order Status Update
 
