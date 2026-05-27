@@ -22,7 +22,7 @@ Execute the job of processing bulk imported files by accessing the "Process Bulk
 
 To initiate the import of products from Shopify, a crucial step before importing other data, follow these steps using the Initial Load page in the Job Manager app:
 
-1. Visit [job-manager.hotwax.io](https://job-manager.hotwax.io).
+1. Visit [Job Manager](https://job-manager.hotwax.io).
 2. Navigate to the Initial Load section.
 3. Click on "Import products in bulk."
 4. Choose the desired run time and initiate the import by clicking the "Run Import" button.
