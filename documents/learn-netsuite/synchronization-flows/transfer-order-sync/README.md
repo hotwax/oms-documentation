@@ -13,13 +13,15 @@ Follow these steps to enable the Transfer Order sync between NetSuite and HotWax
 Schedule the Export Transfer Fulfilled Transfer Order SuiteScript in NetSuite
 
 ```
-HC_generateCSV_FulfilledTransferOrders
+HC_MR_ExportedWHTOFulfillmentJson_v2
+HC_MR_ExportedStoreTOFulfillmentJson_v2
 ```
 
 Verify files are being placed onto this SFTP
 
 ```
-/home/{sftp-username}/netsuite/transferorder/fulfillment-nifi
+/home/{sftp-username}/netsuite/transferorderv2/import/fulfillment-wh
+/home/{sftp-username}/netsuite/transferorderv2/import/fulfillment-store
 ```
 
 ## Import the transfer order into HotWax
@@ -38,8 +40,8 @@ Inventory deduction from origin file SFTP location
 Inbound shipment at destination for receiving file SFTP location
 
 ```
-/home/{sftp-username}/netsuite/transferorder/fulfillment
-/home/{sftp-username}/netsuite/transferorder/fulfillment/archive
+/home/{sftp-username}/netsuite/transferorderv2/fulfillment
+/home/{sftp-username}/netsuite/transferorderv2/fulfillment/archive
 ```
 
 Schedule the import job for this file from the Inventory page in the Job Manager application
@@ -58,7 +60,7 @@ Transfer orders are now available to receive in the HotWax Receiving application
 Schedule a job in the HotWax integration layer to export a feed of received Transfer Orders to an SFTP location to be consumed by a SuiteScript in NetSuite
 
 ```
-/home/{sftp-username}/netsuite/transferorder/receipt
+/home/{sftp-username}/netsuite/transferorderv2/export/receipt
 ```
 
 ## Report for over and under received

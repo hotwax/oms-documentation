@@ -4,13 +4,13 @@ description: Learn how the gift cards are fulfilled in HotWax Commerce.
 
 # Gift Cards Order Fulfillment
 
-Retailers we work with offer both physical and digital gift cards which have product type as “GIFT CARD” in Shopify.
+Retailers generally offer both physical and digital gift cards with the product type `GIFT_CARD` in Shopify.
 
-In HotWax Commerce gift cards have their product type set up as “GIFT\_CARD”. In this set up, digital gift cards are configured for auto fulfillment directly in Shopify, while physical gift cards require the traditional fulfillment process. Here's how it works:
+In HotWax Commerce, gift cards have their product type set up as `GIFT_CARD`. In this setup, digital gift cards are configured for auto-fulfillment directly in Shopify, while physical gift cards require the traditional fulfillment process. Here's how it works:
 
 ### Digital gift cards
 
-When customers order a digital gift card on Shopify, after the order is created, Shopify immediately auto fulfills the order, assigns a serial number to digital gift card, loads the value to activate the gift card and consequently, when HotWax Commerce downloads that order from Shopify, it is automatically marked as “Completed”.
+When customers order a digital gift card on Shopify, after the order is created, Shopify immediately auto fulfills the order, assigns a serial number to the digital gift card, loads the value to activate the gift card and consequently, when HotWax Commerce downloads that order from Shopify, it is automatically marked as `Completed`.
 
 Customers receive the gift card in their registered email along with the serial number that can be used to redeem the gift card.
 
@@ -24,9 +24,9 @@ After physical gift cards are allocated, HotWax Commerce begins syncing them to 
 
 As part of the fulfillment process, store associates assign a unique serial number to each gift card and load the corresponding value onto it. This ensures that when customers receive their orders, they can easily redeem the value by using the serial number provided on the gift card.
 
-Once the gift card order is fulfilled in the Fulfillment App, it is automatically marked as "Completed" in HotWax Commerce.
+Once the gift card order is fulfilled in the Fulfillment App, it is automatically marked as `Completed` in HotWax Commerce.
 
-The fulfillment update for gift card orders, along with tracking details, is synchronized to Shopify using the `Completed Orders` job.
+The fulfillment update for gift card orders, along with tracking details, is synchronized to Shopify using the `poll_SystemMessageSftp_OMSFulfillmentFeed` job, which uses the [Shopify GraphQL API](https://shopify.dev/docs/api/admin-graphql/2023-04/mutations/fulfillmentcreate).
 
 Learn more about [order fulfillment updates from HotWax Commerce to Shopify](kitproducts-fulfillment.md)
 
@@ -76,4 +76,4 @@ poll_SystemMessageFileSftp_GiftCardActivationFeed
 
 Once the gift card is activated in Shopify, customers can conveniently redeem it.
 
-The fulfillment update for gift card orders, along with tracking details, is synchronized to Shopify using the `Completed Orders` job.
+The fulfillment update for gift card orders, along with tracking details, is synchronized to Shopify using the `poll_SystemMessageSftp_OMSFulfillmentFeed` job.

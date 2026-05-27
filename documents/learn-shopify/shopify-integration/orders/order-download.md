@@ -1,24 +1,20 @@
 ---
-description: >-
-  Learn the process of downloading initial orders from Shopify to HotWax
-  Commerce for order management.
+description: Learn how HotWax Commerce downloads initial and new orders from Shopify.
 ---
 
-# Order Download
+# Order download
 
-### Initial Order Download From Shopify To Hotwax Commerce
+## Initial order download
 
-To download all open sales orders from a specific time period in HotWax Commerce, users can schedule the 'Import Orders in Bulk' job by adding the last Shopify Order ID. This job imports all orders since the last Shopify Order ID, along with details such as order number, customer information, shipping address, billing details, and payment information.
+To start managing fulfillment, merchants need to import their existing open sales orders from Shopify into HotWax Commerce. This initial import brings in all pending orders so they can be processed and fulfilled without interruption.
 
-The process of importing orders from Shopify to HotWax Commerce consists of two steps.
+HotWax Commerce handles this using the `Sync Shopify Order History` job. This job downloads open sales orders from a specific time period, including details like the order number, customer information, shipping address, billing details, and payment information.
 
-* **Downloading from Shopify**- HotWax Commerce uses an [API request](https://shopify.dev/docs/api/admin-rest/2022-10/resources/order#get-orders?status=any) to Shopify to retrieve sales orders. The orders are returned in JSON format by Shopify, based on the API request. To avoid errors with large data files, HotWax Commerce downloads only 100 orders in one API call, even though Shopify allows downloading up to 250 orders. This helps optimize platform utilization and enables higher throughput, as each order can have multiple items, potentially leading to larger file sizes. The downloaded JSON file is then stored in the file system.
+### Order history
 
-<figure><img src="../../.gitbook/assets/import-orders-in-bulk-job-config.png" alt=""><figcaption><p><em>Fig.1 : Configuration of the “import orders in bulk” job in the Job Manager App</em></p></figcaption></figure>
+When HotWax Commerce performs the initial order download, it also creates an order history. This history is created to maintain a complete record of past orders. A complete order history allows merchants to manage customer service inquiries, process returns for past orders, and analyze historical sales data. HotWax Commerce creates this order history automatically as soon as past orders are successfully imported.
 
-* **Order Creation in HotWax Commerce-** HotWax Commerce proceeds to the second step by accessing the JSON files that have been downloaded from the file system and then generating orders. Once all the orders have been downloaded, HotWax Commerce will automatically begin processing them. Once the orders are imported into HotWax Commerce, they will be assigned a 'created' status.
-
-Order fields in Shopify are mapped in HotWax Commerce as follows:
+Order fields from Shopify map to HotWax Commerce as follows:
 
 | Order in Shopify | Order in HotWax Commerce |
 | ---------------- | ------------------------ |
@@ -59,30 +55,30 @@ Order fields in Shopify are mapped in HotWax Commerce as follows:
 {% endtab %}
 {% endtabs %}
 
-### Importing Newly Created Orders from Shopify to HotWax Commerce
+## New order creation
 
-In HotWax Commerce, there's a job called 'New Orders' that downloads new orders in bulk from Shopify. The job checks the 'created\_at' field in Shopify to see if any orders were created after the last time the job ran. All orders with a 'created\_at' time between the last download and the current time are downloaded, regardless of their fulfillment status. Once all orders are downloaded to the file system in the order JSON file, the order creation process begins in HotWax Commerce.
+<figure><img src="../../.gitbook/assets/new-order-creation-flow.png" alt=""><figcaption><p><em>Fig.4: New Order Creation Flow</em></p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/new-orders-job-config.png" alt=""><figcaption><p><em>Fig.4 : Configuration of the job New Orders in the Job Manager App</em></p></figcaption></figure>
+When new orders are placed in Shopify, HotWax Commerce imports them using an event-driven flow. 
+Here is how the new order import flow works:
 
-{% hint style="info" %}
-Recommended frequency of the job is 15 minutes i.e. it will run every 15 minutes. Frequency is configurable as per the merchant's requirements.
-{% endhint %}
+### 1. Order creation in Shopify
+When a customer completes a purchase, Shopify registers the new order.
 
-#### thruDateBuffer and bufferTime
+### 2. Webhook triggers
+Shopify immediately triggers the [`orders/updated` webhook](https://shopify.dev/docs/api/webhooks/2026-01?accordionItem=webhooks-orders-updated&reference=toml). This webhook acts as a real-time notification, instantly broadcasting that a new order exists instead of waiting for a scheduled sync.
 
-**thruDateBuffer:** The thruDateBuffer ensures that only orders are synced into HotWax after a certain amount of time.
+### 3. Event routing through AWS EventBridge
+HotWax Commerce has configured AWS EventBridge to catch the webhook event and securely routes the message to an Amazon Simple Queue Service (SQS) queue. This step prevents data loss during high traffic periods and keeps the system stable even if thousands of orders are placed at once.
 
-at least 5 minutes old in Shopify are synced. This delay allows time for Shopify to process and potentially cancel invalid orders before they are imported into HotWax Commerce.
+### 4. Message polling from Amazon SQS
+HotWax Commerce continuously polls the Amazon SQS queue for unread messages. SQS holds these messages safely until HotWax Commerce is ready to read them, so no order events are dropped.
 
-**bufferTime**: It is possible for orders to be missed if they are placed during the microsecond time gap between two consecutive jobs.
+### 5. Data enrichment via GraphQL API
+While the webhook payload contains order details, HotWax Commerce only extracts the order ID from the message. It then uses this ID to call the [Shopify GraphQL API](https://shopify.dev/docs/api/admin-graphql/latest/queries/order). Fetching data directly from the API guarantees that HotWax Commerce processes the most reliable and up-to-date order information.
 
-Let’s take a look at an example:
+### 6. Receiving detailed order data
+Shopify responds to the API request with the complete details of the order. This response includes everything needed for fulfillment, such as shipping addresses, item quantities, and payment statuses.
 
-A job downloads orders between 01:00:00 PM to 01:15:00 PM and a second job downloads orders between 01:15:00 PM to 01:30:00 PM.
-
-If an order is created on Shopify at 01:14:14 PM, but it's not added to Shopify's database until 01:15:01 PM, the order won't be downloaded by either job.
-
-To avoid missing any orders, we add a buffer time. For example, if the last job downloaded orders from 01:00:00 PM to 01:15:00, the next job will download orders from 01:14:00 to 01:30:00 PM.
-
-<figure><img src="../../.gitbook/assets/order-downloading-without-buffer-time.png" alt=""><figcaption><p><em>Fig.5 : Order downloading without buffer time</em></p></figcaption></figure>
+### 7. Order creation in HotWax Commerce
+Finally, HotWax Commerce processes the detailed API response and creates the order in the order management system. The order is now fully integrated and ready to be routed to the best location for fulfillment.
