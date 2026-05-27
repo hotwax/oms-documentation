@@ -151,7 +151,7 @@ Digital gift cards are auto-activated and customers can directly redeem them by 
 
 Digital gift cards are already in the <mark style="color:orange;">**“Completed”**</mark> status in HotWax Commerce. HotWax Commerce also synchronizes them with NetSuite so that customer deposits can be created against them and invoices can be generated.
 
-* A scheduled job in HotWax Commerce Integration Platform generates a feed of gift card orders that are in <mark style="color:orange;">**“Completed”**</mark> status and do not have a NetSuite order item line IDs. This helps make sure that only relevant orders are synchronized to NetSuite and regular orders that are <mark style="color:orange;">**“Completed”**</mark> in HotWax Commerce are not synchronized again to NetSuite.
+* A scheduled job in HotWax Commerce Integration Platform generates a feed of gift card orders that are in <mark style="color:orange;">**“Completed”**</mark> status and do not have NetSuite order item line IDs. This helps make sure that only relevant orders are synchronized to NetSuite and regular orders that are <mark style="color:orange;">**“Completed”**</mark> in HotWax Commerce are not synchronized again to NetSuite.
 * NetSuite’s script reads this feed and creates gift card orders in the <mark style="color:orange;">**“Pending Fulfillment”**</mark> status.
 
 ### 3. Synchronize Order IDs and Item Line IDs to HotWax Commerce
