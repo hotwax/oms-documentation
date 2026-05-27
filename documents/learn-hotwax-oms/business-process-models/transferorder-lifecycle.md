@@ -79,7 +79,7 @@ Once transfer order items are fulfilled from the store, the QOH for the correspo
 ### 4. Item Fulfillment Records Created in NetSuite
 
 * A scheduled SuiteScript in NetSuite reads the fulfilled transfer order items feed and two actions take place:
-  * Item fulfilled records are created in NetSuite and marked <mark style="color:orange;">**“Shipped”**</mark>. Subsequently, inventory counts at the store for the corresponding items are reduced.
+  * NetSuite creates item fulfillment records, marks them <mark style="color:orange;">**“Shipped”**</mark>, and reduces inventory counts at the store for the corresponding items.
   * The transfer order status is updated from <mark style="color:orange;">**“Pending Fulfillment”**</mark> to <mark style="color:orange;">**“Pending Receipt”**</mark>. This step concludes the store to warehouse transfer orders flow.
 
 ### 5. Create Inbound Shipments in HotWax Commerce and Start Receiving
