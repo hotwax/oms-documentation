@@ -98,7 +98,7 @@ HC_MR_ExportedInventoryTransferCSV.js
 **SFTP Locations**
 
 ```
-/home/{sftp-username}/netsuite/inventoryitem/csv
+/home/{sftp-username}/netsuite/inventorytransfer/import
 ```
 
 2. A scheduled job in HotWax Commerce reads the CSV file from the SFTP location and adjusts the inventory records in HotWax Commerce. When inventory is transferred to the B2C warehouse, the scheduled job increases the inventory count for the product. Conversely, when inventory is transferred from the B2C warehouse, the job reduces the product's inventory count.
