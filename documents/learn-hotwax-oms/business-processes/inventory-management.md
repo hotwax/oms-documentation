@@ -112,7 +112,7 @@ Example:
 
 A store manager at the Broadway location notices that a particular sneaker model has been showing a system quantity of 15 units for the past two weeks, but store associates report the shelf appears nearly empty. The manager creates a Directed Count for that specific SKU, along with two other products that had discrepancies in the previous count. Associates are directed to count only those three products. The count is submitted, the variance is reviewed, and the system quantity is corrected accordingly.
 
-#### Creating & Assigning Cycle Count
+#### Creating & assigning cycle count
 
 Cycle counts are performed for multiple reasons. Many retailers have the SOP for scheduling cycle counts regularly every week or month. Counts are also commonly initiated after high-volume periods, such as Black Friday, to reconcile actual inventory with recorded levels. Stores reporting higher order rejections may be assigned counts to investigate potential inventory discrepancies.
 
