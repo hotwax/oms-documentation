@@ -13,9 +13,9 @@ Whenever a new order is assigned to a store for fulfillment, store associates re
 ### Shipping Methods
 Store associates can filter orders by shipping method.  
 
-- To see same-day delivery orders, filter them by `Same Day`  
-- To see next-day delivery orders, filter them by `Next Day`  
-- To see standard delivery orders, filter them by `Standard`
+- Filter by `Same Day` to see same-day delivery orders
+- Filter by `Next Day` to see next-day delivery orders
+- Filter by `Standard` to see standard delivery orders
 
 ### Picklist Size
 By default, you see 10 orders in a page. To increase the number of orders to be displayed, tap the `Picklist Size` in the top right corner and choose the number of orders you want to see at once.
