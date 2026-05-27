@@ -97,7 +97,7 @@ Once transfer order items are fulfilled from the store, the QOH for the correspo
 ### 7. Item Receipt Records Created in NetSuite
 
 * A scheduled SuiteScript in NetSuite reads the item receipt feed and two actions take place:
-  * Item receipt records are created in NetSuite and subsequently, inventory counts at the store for the corresponding items are increased.
+  * NetSuite creates item receipt records and increases inventory counts at the store for the corresponding items.
   * The transfer order status is updated from <mark style="color:orange;">**“Pending Receipt”**</mark> to <mark style="color:orange;">**“Received”**</mark>. This step concludes the store to store transfer orders flow.
 
 ## Store to Warehouse Transfer Orders
