@@ -10,7 +10,7 @@ Once an order is routed to a fulfillment center in HotWax Commerce, it can be fu
 
 ## Fulfillment by HotWax Commerce Fulfillment App
 
-HotWax Commerce provides **[Fulfillment App](store-operations/fulfillment-app/introduction.md)** that enables picking, packing, and shipping of orders from stores. After shipping, orders are marked as `Completed` within HotWax Commerce.
+HotWax Commerce provides **[Fulfillment App](../../../store-operations/fulfillment/README.md)** that enables picking, packing, and shipping of orders from stores. After shipping, orders are marked as `Completed` within HotWax Commerce.
 
 ## Fulfillment by an external system
 
