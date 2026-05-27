@@ -22,7 +22,7 @@ Confirm that the BOPIS app has the necessary settings to send notifications. Go 
 
 Verify that OMS instance meets compatibility requirements:
 
-* For BOPIS notifications to work, the instance should be on v.5.2.0 or above.
+* For BOPIS notifications to work, the instance should be on v5.2.0 or above.
 
 ### Review Browser Notification Settings
 
