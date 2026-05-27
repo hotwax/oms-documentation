@@ -6,7 +6,7 @@ description: Learn how HotWax Commerce downloads initial and new orders from Sho
 
 ## Initial order download
 
-To start managing fulfillment, merchants need to import their existing open sales orders from Shopify into HotWax Commerce. This initial import brings in all pending orders so they can be processed and fulfilled without interruption. 
+To start managing fulfillment, merchants need to import their existing open sales orders from Shopify into HotWax Commerce. This initial import brings in all pending orders so they can be processed and fulfilled without interruption.
 
 HotWax Commerce handles this using the `Sync Shopify Order History` job. This job downloads open sales orders from a specific time period, including details like the order number, customer information, shipping address, billing details, and payment information.
 

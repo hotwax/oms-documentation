@@ -22,7 +22,7 @@ Once approved, HotWax Commerce officially allocates reserved inventory to the or
 HotWax Commerce orchestrates order approval through several pathways, depending on where the order originated and its specific requirements:
 
 * **Shopify webhooks:** The `orders/updated` webhook detects payment confirmations and instantly triggers the approval process.
-* **Scheduled batch jobs:** The Approve Orders job regularly checks for fraud validation tags, like Riskified's `approved` tag, and approves orders that pass the assessment.
+* **Scheduled batch jobs:** The `Approve Orders` job regularly checks for fraud validation tags, like Riskified's `approved` tag, and approves orders that pass the assessment.
 * **Marketplace services:** Specific services handle approval for Amazon and eBay orders based on their unique rules.
 * **Point of sale (POS):** Orders placed in physical stores or via WebPOS auto-approve during checkout.
 * **Direct UI or API:** You can manually approve orders using the HotWax Commerce user interface or direct API calls.
@@ -30,11 +30,11 @@ HotWax Commerce orchestrates order approval through several pathways, depending 
 
 ## `Approve Orders` job
 
-The Approve Orders job runs at a default frequency of 30 minutes. It systematically verifies and approves orders that require additional checks, such as third-party fraud detection. 
+The `Approve Orders` job runs at a default frequency of 30 minutes. It systematically verifies and approves orders that require additional checks, such as third-party fraud detection. 
 
-For example, if you use Riskified for fraud detection, it adds an `approved` tag once an order passes security checks. The Approve Orders job scans for this tag and updates the order status to `Approved`, making it eligible for fulfillment.
+For example, if you use Riskified for fraud detection, it adds an `approved` tag once an order passes security checks. The `Approve Orders` job scans for this tag and updates the order status to `Approved`, making it eligible for fulfillment.
 
-<figure><img src="../../.gitbook/assets/approved-orders-job-config.png" alt=""><figcaption><p><em>Fig.6: Configuration of the Approve Orders job in the Job Manager App</em></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/approved-orders-job-config.png" alt=""><figcaption><p><em>Fig.6: Configuration of the `Approve Orders` job in the Job Manager App</em></p></figcaption></figure>
 
 {% hint style="info" %}
 Shopify marks digital items as `Fulfilled` automatically. When these items import into HotWax Commerce, they are automatically marked as completed.
