@@ -83,7 +83,7 @@ NetSuite’s script generates a feed containing gift card items, their assigned 
 
 A scheduled job in HotWax Commerce Integration Platform reads this feed, runs transformation and generates a JSON file with the relevant data required for the gift card activation, including gift card items, their assigned serial numbers, corresponding values in NetSuite.
 
-After shipment, once serial numbers and values are confirmed from NetSuite, HotWax Commerce Integration Platform initiates the gift card activation process in Shopify in the eCommerce platform. Because most of our customers are using Shopify as their eCommerce platform, in this scenario HotWax Commerce Integration Platform calls Shopify API to activate the gift card.
+After shipment, once serial numbers and values are confirmed from NetSuite, HotWax Commerce Integration Platform initiates the gift card activation process in Shopify. Because most of our customers are using Shopify as their eCommerce platform, in this scenario HotWax Commerce Integration Platform calls Shopify API to activate the gift card.
 
 ### 7. Order Item Shipped
 
