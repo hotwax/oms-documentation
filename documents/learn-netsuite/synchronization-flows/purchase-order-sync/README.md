@@ -13,7 +13,7 @@ When a Purchase Order is raised in Netsuite's ERP system, it needs to be seamles
 Schedule SuiteScripts to export purchase orders
 
 ```
-HC_generateCSV_OpenPurchaseOrders
+HC_MR_ExportedPurchaseOrderCSV
 ```
 
 SFTP location
@@ -42,5 +42,5 @@ Check SFTP locations for received purchase orders
 Schedule the SuiteScript in NetSuite to consume this PO receipt feed and save it in NetSuite.
 
 ```
-HC_imortPurchaseOrderReceipts
+HC_SC_ImportPurchaseOrderReceipts
 ```

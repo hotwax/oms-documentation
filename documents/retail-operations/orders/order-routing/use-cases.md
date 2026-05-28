@@ -366,3 +366,53 @@ After setting up routing and inventory rules, activate the Holiday Season Routin
 {% embed url="https://drive.google.com/file/d/18E0F6nN1icsn-L3aI-4umUj_Qea8DoVe/view?usp=sharing" %}
 Holiday Season Order Routing
 {% endembed %}
+
+## Scenario 10: Clearing slow-moving store inventory without depleting high-demand stores
+
+Retailers often need to clear aging or slow-moving inventory from some stores while protecting locations where the same item is selling quickly to walk-in customers. If order routing only looks at available units, a high-demand store can be selected simply because it has inventory on hand. That may fulfill the online order, but it can also create a store stockout and cause missed in-store sales.
+
+[Weeks of Supply routing](weeks-of-supply-routing.md) helps retailers use online demand to improve inventory productivity. Stores with deeper cover are prioritized for fulfillment, while stores with lower cover are deprioritized because their inventory is already needed for local demand.
+
+### Pre-Requisites for This Scenario
+
+Before configuring this scenario, make sure sales velocity is available for store inventory. The Weeks of Supply score depends on the relationship between current inventory and sales velocity, so stale or missing sales velocity can reduce the usefulness of this strategy.
+
+You should also create a facility group for the locations you want to evaluate, such as:
+
+* **Stores**: All ship-from-store locations
+* **Outlet Stores**: Locations that should be prioritized for clearing older inventory
+* **Eligible Store Fulfillment Locations**: Stores that have the staffing and operational capacity to fulfill online orders
+
+### Steps to Implement
+
+#### Create Run
+
+Create a brokering run in the `Order Routing App` for store inventory balancing. Name the run something clear, such as “Store Inventory Balancing,” and add a description like “Route online orders from stores with higher Weeks of Supply before stores with high walk-in demand.”
+
+#### Create Routing Rules
+
+Create an order batch for the online orders that should use this routing strategy.
+
+* **Order Filter**: Apply the `Queue Filter` and select the `Brokering Queue`, or apply the relevant sales channel filter if only eCommerce orders should use this logic.
+* **Order Sort**: Sort orders by `Order Date` so older orders are evaluated first.
+
+#### Create Inventory Rules
+
+Use multiple inventory rules so the routing engine first tries the best store inventory balancing option, then falls back to broader fulfillment options if needed.
+
+* **First Inventory Rule**: Use stores with deeper coverage
+  * **Inventory Filter**: Apply the Facility Group filter and select the store group you want to evaluate. Add the `Week of Supply` filter value to define the coverage period used for the calculation.
+  * **Inventory Sort**: Select `Week of Supply` so the routing engine attempts stores with the highest inventory cover first.
+  * **Actions**: If no store can fulfill the order, send unavailable items to the `Next Rule`.
+* **Second Inventory Rule**: Keep the customer promise
+  * **Inventory Filter**: Add a Proximity filter or warehouse Facility Group filter, depending on the retailer’s fulfillment strategy.
+  * **Inventory Sort**: Sort by Proximity if delivery speed and shipping cost are more important at this stage.
+  * **Actions**: If inventory is still unavailable, send the order to the `Unfillable Queue` or allow partial fulfillment if the business accepts split shipments.
+
+#### Activation and Scheduling
+
+Activate the brokering run and both inventory rules after confirming the sequence. Schedule the run based on how aggressively you want to clear slow-moving inventory. For example, a retailer may run this strategy more frequently during end-of-season clearance and less frequently during new product launches when protecting store presentation is more important.
+
+{% hint style="info" %}
+Use Weeks of Supply with other inventory rules instead of treating it as the only routing signal. Facility Group defines which stores are eligible, Proximity protects delivery promises, Brokering Safety Stock protects minimum units, and Weeks of Supply decides which eligible store has the healthiest inventory cover for fulfillment.
+{% endhint %}
