@@ -1,6 +1,6 @@
 # BOPIS Fulfillment Lifecycle
 
-The BOPIS Fulfillment Lifecycle BPM illustrates how HotWax Commerce's BOPIS Fulfillment App enables store associates to manage Buy Online, Pick Up In Store (BOPIS) orders from the moment an order arrives at the store to the moment a customer walks out with their purchase.
+The Buy Online, Pick Up In Store (BOPIS) Fulfillment Lifecycle Business Process Model (BPM) illustrates how HotWax Commerce's BOPIS Fulfillment App enables store associates to manage BOPIS orders from the moment an order arrives at the store to the moment a customer walks out with their purchase.
 
 HotWax Commerce, acting as an Order Management System, routes approved BOPIS orders directly to the customer's chosen pickup store with no brokering needed. The fulfillment location is pre-selected by the customer at checkout. Once the order is allocated, it surfaces automatically in the BOPIS Fulfillment App for store associates to act on.
 
