@@ -29,8 +29,6 @@ The synchronization process runs in seven stages:
 
 7. **Save history:** Finally, the system updates the `ProductUpdateHistory` record with the new hashes and a snapshot of the current data. This makes the sync process idempotent, meaning that running the sync again with the same data will result in zero database changes. This stage also links the update back to the original `systemMessageId` for a complete record.
 
-<figure><img src="../../.gitbook/assets/shopify-product-bulk-sync-flow.png" alt=""><figcaption><p>Shopify product synchronization flow using bulk operations</p></figcaption></figure>
-
 ---
 
 
