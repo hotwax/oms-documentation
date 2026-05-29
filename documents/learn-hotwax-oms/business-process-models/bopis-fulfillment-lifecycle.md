@@ -37,7 +37,7 @@ For orders containing kit products, a Kit tag appears on the order card. Associa
 
 ### Picking failure
 
-If a store associate cannot locate an item because it is out of stock, damaged, or mislabeled a store manager can reject the order or individual items.
+If a store associate cannot locate an item because it is out of stock, damaged, or mislabeled, a store manager can reject the order or individual items.
 
 ### When does picking failure occur?
 
