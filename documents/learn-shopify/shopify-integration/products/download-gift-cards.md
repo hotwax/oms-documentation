@@ -18,7 +18,7 @@ Physical gift cards are tangible cards that customers can buy online or in-store
 * **Activation:** After processing, gift cards are activated in Shopify so that when customers receive their physical gift card, they can use the gift card serial number to redeem their purchase.
 * **Inventory Management:** Physical gift cards have actual stock-keeping units and require delivery to customers just like any other physical product. Often, retailers create different variants of a gift card with different denominations to provide customers with multiple options.
 
-### Digital Gift Cards
+### Digital gift cards
 
 Digital gift cards, also known as e-gift cards, are virtual equivalents of physical gift cards. Customers receive them via email or text message along with a unique serial number that they can use to redeem the value stored in the card.
 
