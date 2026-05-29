@@ -69,7 +69,7 @@ If a packing mistake is discovered, associates can open the `Order Details` page
 
 ## Hand over to customer and order completion
 
-When the customer arrives, the store associate locates the order on the Packed Orders page and taps Handover. A confirmation prompt appears to verify the items are correct and the customer has received them. Once confirmed:
+When the customer arrives, the store associate locates the order on the `Packed Orders` page and taps `Handover`. A confirmation prompt appears to verify the items are correct and the customer has received them. Once confirmed:
 
 * The order status updates from "Approved" to "Completed" in HotWax Commerce.  
 * The Completed Orders job in HotWax Commerce marks the order as "Fulfilled" in  eCommerce.  
