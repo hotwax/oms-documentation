@@ -95,4 +95,4 @@ The Ship to Store page is organized into three tabs:
 * **Ready for pickup:** Orders physically at the store, waiting for the customer. When the customer collects the order, the associate marks it as `Handover`. The order moves to `Completed`.  
 * **Completed:** All Ship to Store orders handed over in the past 24 hours.
 
-The BOPIS Fulfillment Lifecycle demonstrates how HotWax Commerce gives store associates everything they need to fulfill pickup orders quickly and accurately. From the moment an order lands in the app to the moment a customer picks it up, every step notification, picking, packing, handover, and proof of delivery is tracked and reflected in both HotWax Commerce and eCommerce in real time.
+The BOPIS Fulfillment Lifecycle demonstrates how HotWax Commerce gives store associates everything they need to fulfill pickup orders quickly and accurately. From the moment an order lands in the app to the moment a customer picks it up, every step, including notification, picking, packing, handover, and proof of delivery, is tracked and reflected in both HotWax Commerce and eCommerce in real time.
