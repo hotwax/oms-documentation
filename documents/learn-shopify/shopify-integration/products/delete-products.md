@@ -1,12 +1,22 @@
 ---
-description: >-
-  Learn how to delete products from both Shopify and HotWax Commerce.
+description: Learn how to delete products from both Shopify and HotWax Commerce.
 ---
 
 # Deleting Products
 
-### Deleting Products from Shopify and HotWax Commerce
+### Delete products from Shopify and HotWax Commerce
 
-Shopify merchants may need to delete products for various reasons, including creating a product with incorrect information. However, if a merchant deletes a product in Shopify and then recreates it with the same UPC, it can result in data discrepancies and affect inventory synchronization in HotWax Commerce. Therefore, it is important to also delete the corresponding products in HotWax Commerce when they are deleted in Shopify.
+Shopify merchants sometimes delete products to correct entry errors. To prevent data mismatches and keep inventory accurate, HotWax Commerce also soft deletes these products.
 
-In HotWax Commerce, products are soft deleted, meaning they are marked as deleted but not permanently removed to manage returns. HotWax Commerce detects deleted products using [APIs](https://shopify.dev/docs/api/admin-rest/2023-04/resources/product#delete-products-product-id) to obtain a list of deleted products from Shopify. When a product variant is deleted in Shopify, the 'updated\_at' field of the parent product is updated, and the 'Sync Products' job takes care of product deletion in HotWax Commerce by identifying updated or deleted product variants. The 'Sync Products' job compares downloaded product variants with existing variants of the same product in the system. If any variants from Shopify are missing from those in HotWax Commerce, the job delinks the additional product variants from their parent product.
+In HotWax Commerce, products are soft deleted. This means they are marked as inactive (thru-dated) rather than permanently removed, which allows the system to still handle historical data and potential returns.
+
+#### How deletions are detected
+
+Deletions are identified during the diff computation stage of the product synchronization flow:
+
+* **Missing variants:** When the `Sync Shopify Product Updates` job runs, the system compares the incoming list of variants against the baseline history stored in the `ProductUpdateHistory` table.
+* **Identification:** If a variant exists in the baseline history but is missing from the Shopify bulk response, the system identifies it as removed.
+* **Soft deletion:** HotWax Commerce then applies this change by thru-dating the product identification (SKU/UPC) and delinking the variant from its parent product.
+
+This process helps HotWax Commerce handle changes correctly without creating duplicate or orphaned records.
+

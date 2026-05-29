@@ -1,70 +1,86 @@
 ---
-description: Learn how launch the initial product download from Shopify.
+description: Learn how HotWax Commerce downloads product data from Shopify using bulk operations and change detection.
 ---
 
-# Product Download
+# Product download
 
-### Initial Product Download from Shopify to HotWax Commerce
+HotWax Commerce treats Shopify as the primary source of truth for all product information. To keep large product catalogs synchronized without hitting API limits, HotWax Commerce uses the Shopify GraphQL Admin API and bulk operations. 
 
-Merchants can schedule an `Import Products in Bulk` job in HotWax Commerce to download existing product details from Shopify, including Stock Keeping Unit (SKU) code, Universal Product Code (UPC), Shopify ID, Price, Tags, and Weight. This should be done before [importing orders](/documents/retail-operations/orders/order-management/) to ensure that products are available for incoming sales orders. The import process consists of two steps:
+The synchronization process runs in seven stages:
 
-1. **Downloading from Shopify**- HotWax Commerce sends an [API request](https://shopify.dev/docs/api/admin-rest/2022-10/resources/product#get-products?ids=632910392,921728736) to Shopify to download products. In response, Shopify returns product data in JSON format. Shopify permits downloading 250 products per API call. To prevent large data file errors, HotWax Commerce downloads only 100 products per call.
+1. **Queue the request:** HotWax Commerce plans the sync by creating a system message of type `BulkQueryShopifyProductUpdates`. This is triggered by the scheduled job `sync_ShopifyProductUpdates` (service `sync#ShopifyProductUpdates`). The system identifies exactly what data is needed from Shopify based on the last successful sync time and adds a small time buffer to make sure no updates are missed.
+   * **Initial status:** `SmsgProduced` (Message is ready to be sent)
 
-<figure><img src="../../.gitbook/assets/import-products-in-bulk-job-config.png" alt=""><figcaption><p><em>Fig.1: Configuration to run `Import Products in Bulk` in the `Job Manager` App</em></p></figcaption></figure>
+2. **Send to Shopify:** The service `send#ShopifyBulkQueryMessage` picks up the queued request, sends the GraphQL mutation to Shopify, and saves Shopify's bulk operation ID to the `remoteMessageId` field.
+   * **Updated status:** Transitions to `SmsgSent` (Shopify has accepted the request)
 
-2. **Product Creation in HotWax Commerce**- After downloading, the JSON files are read from the file system, and product records are created in HotWax Commerce's database through the `Process bulk imported files` job. If any data issues arise, error logs are recorded for later correction.
+3. **Confirm completion:** Shopify processes the bulk query. HotWax Commerce monitors the status of the bulk operation using two methods:
+   * **Polling:** The scheduled job `poll_ShopifyBulkOperationResult` periodically checks Shopify.
+   * **Webhooks:** Shopify sends a real-time `Bulk Operations Finish` notification.
+   Once completion is confirmed, the system updates the message status and downloads the raw JSONL result file directly to `${receiveMovePath}/${systemMessageId}.jsonl`.
+   * **Updated status:** Transitions to `SmsgReceived` (The result file is downloaded)
 
-### Product data from Shopify is mapped in HotWax Commerce fields as outlined in the following table
+4. **Prepare data:** The system message framework triggers the `consume#ShopifyProductDataFile` service, which reads the downloaded JSONL file, transforms it into a nested JSON format, and uploads it to the MDM queue (`SYNC_SHOPIFY_PRODUCT`).
+   * **Final status:** Transitions to `SmsgConsumed` (The file has been processed and queued for database sync)
 
-1. **Parent Product**
+5. **Identify changes:** The MDM queue processes the data using the `sync#ShopifyProduct` service. Instead of overwriting the database, HotWax Commerce identifies exactly what has changed using a baseline comparison strategy. The system groups product data (core details, tags, features, and pricing) and computes a unique SHA-256 hash for each group. If the new hash matches the one stored in the `ProductUpdateHistory` table, the system knows that specific group of data has not changed and skips it.
 
-A virtual product, also known as a parent product, does not have a set size or color. When using HotWax Commerce, all fields in the product JSON are imported, but only relevant fields are processed to improve system efficiency. Here's how parent product fields are mapped in Shopify and HotWax Commerce:
+6. **Update the database:** Only the identified changes (deltas) are applied to the database. This selective update handles core product details, features, tags, pricing, and identifiers like SKU and UPC. It also detects the correct product type (such as `FINISHED_GOOD` vs. `DIGITAL_GOOD`) based on Shopify flags.
 
-<table><thead><tr><th width="103.33333333333331">S.No.</th><th width="251">Fields in Shopify</th><th>Fields in HotWax Commerce</th></tr></thead><tbody><tr><td>1</td><td>ID</td><td>Shopify Product ID</td></tr><tr><td>2</td><td>Title</td><td>Product Name</td></tr><tr><td>3</td><td>Body HTML</td><td>Product Content</td></tr><tr><td>4</td><td>Vendor</td><td>Brand</td></tr><tr><td>5</td><td>Product_type</td><td>Categories</td></tr><tr><td>6</td><td>Tags</td><td>Tags</td></tr><tr><td>7</td><td>Variant</td><td>Variant</td></tr><tr><td>8</td><td>Media</td><td>Overview</td></tr></tbody></table>
+7. **Save history:** Finally, the system updates the `ProductUpdateHistory` record with the new hashes and a snapshot of the current data. This makes the sync process idempotent, meaning that running the sync again with the same data will result in zero database changes. This stage also links the update back to the original `systemMessageId` for a complete record.
 
-{% tabs %}
-{% tab title="Products in Shopify" %}
-<div data-full-width="false"><figure><img src="../../.gitbook/assets/products-in-shopify.png" alt=""><figcaption><p><em>Fig.2(i): Products in Shopify</em></p></figcaption></figure></div>
-{% endtab %}
+<figure><img src="../../.gitbook/assets/shopify-product-bulk-sync-flow.png" alt=""><figcaption><p>Shopify product synchronization flow using bulk operations</p></figcaption></figure>
 
-{% tab title="Products in HotWax Commerce" %}
+---
+
+
+### Product data mapping
+
+#### Parent product
+
+A virtual product, also known as a parent product, does not have a set size or color. All fields in the product JSON are imported, but only relevant fields are processed to improve system performance. Here is how parent product fields are mapped between Shopify and HotWax Commerce:
+
+| No. | Shopify fields | HotWax Commerce fields |
+| :--- | :--- | :--- |
+| 1 | ID | Shopify Product ID |
+| 2 | Title | Product Name |
+| 3 | Body HTML | Product Content |
+| 4 | Vendor | Brand |
+| 5 | Product_type | Categories |
+| 6 | Tags | Tags |
+| 7 | Variant | Variant |
+| 8 | Media | Overview |
+
+<div data-full-width="false"><figure><img src="../../.gitbook/assets/products-in-shopify.png" alt=""><figcaption><p>Products in Shopify</p></figcaption></figure></div>
+
 <div data-full-width="false"><figure><img src="../../.gitbook/assets/products-downloaded-in-hotwax.png" alt=""><figcaption><p>Products downloaded in HotWax Commerce</p></figcaption></figure></div>
-{% endtab %}
-{% endtabs %}
 
-2. **Variant Product**
+#### Variant product
 
-The parent product comes in various sizes and colors, resulting in multiple variants. With HotWax Commerce, all of these variants can be downloaded. Here's how product variant fields are mapped in Shopify and HotWax Commerce:
+The parent product comes in various sizes and colors, resulting in multiple variants. Here is how product variant fields are mapped:
 
-<table><thead><tr><th width="136.33333333333331">S.No.</th><th>Fields in Shopify</th><th>Fields in HotWax Commerce</th></tr></thead><tbody><tr><td>1</td><td>Product Variant ID</td><td>Shopify Product ID</td></tr><tr><td>2</td><td>Title</td><td>Product Name</td></tr><tr><td>3</td><td>Options</td><td>Feature</td></tr><tr><td>4</td><td>Image</td><td>Image</td></tr><tr><td>5</td><td>Parent Product</td><td>Parent Product</td></tr><tr><td>6</td><td>Price</td><td>Price</td></tr><tr><td>7</td><td>SKU</td><td>SKU</td></tr><tr><td>8</td><td>Quantity</td><td>View inventory</td></tr><tr><td>9</td><td>Shipping</td><td>Shippable</td></tr><tr><td>10</td><td>Product Type</td><td>Product Type</td></tr><tr><td>11</td><td>Weight</td><td>Weight</td></tr><tr><td>12</td><td>Metafields</td><td>Product Tag</td></tr></tbody></table>
+| No. | Shopify fields | HotWax Commerce fields |
+| :--- | :--- | :--- |
+| 1 | Product Variant ID | Shopify Product ID |
+| 2 | Title | Product Name |
+| 3 | Options | Feature |
+| 4 | Image | Image |
+| 5 | Parent Product | Parent Product |
+| 6 | Price | Price |
+| 7 | SKU | SKU |
+| 8 | Quantity | View inventory |
+| 9 | Shipping | Shippable |
+| 10 | Product Type | Product Type |
+| 11 | Weight | Weight |
+| 12 | Metafields | Product Tag |
 
-{% tabs %}
-{% tab title="Variant product details in Shopify" %}
-<figure><img src="../../.gitbook/assets/variant-product-details-shopify.png" alt=""><figcaption><p><em>Fig.3(i): Variant product in Shopify with details</em></p></figcaption></figure>
-{% endtab %}
+<figure><img src="../../.gitbook/assets/variant-product-details-shopify.png" alt=""><figcaption><p>Variant product in Shopify with details</p></figcaption></figure>
 
-{% tab title="Variant product details in HotWax Commerce" %}
-<figure><img src="../../.gitbook/assets/variant-product-details-hotwax.png" alt=""><figcaption><p>Fig.3(ii) : Variant product in HotWax Commerce with details</p></figcaption></figure>
-{% endtab %}
-{% endtabs %}
+<figure><img src="../../.gitbook/assets/variant-product-details-hotwax.png" alt=""><figcaption><p>Variant product in HotWax Commerce with details</p></figcaption></figure>
 
-Shopify has multiple product identifiers, such as Shopify Product ID, Product SKU, Product Name, and UPCA. Therefore before importing products, it is important to set up the primary product identifier that will be mapped with the product ID in HotWax Commerce. The primary product identifier can be set up in HotWax Commerce when [setting up a new product store](/documents/system-admin/product-store/add-more-product-stores.md) as per retailers' requirements.
+Shopify has multiple product identifiers, such as Shopify Product ID, Product SKU, Product Name, and UPC. Before importing products, set up the primary product identifier that will map to the product ID in HotWax Commerce. The primary product identifier can be configured in HotWax Commerce when setting up a new product store.
 
-#### Importing Newly Added Products Regularly
+#### Manage sales orders for products not in HotWax Commerce
 
-Shopify merchants create new products for two reasons::
+When orders are placed on Shopify, they transfer to HotWax Commerce. However, sometimes an order might include a newly launched product in Shopify that has not yet synced with HotWax Commerce. This can cause the order download to fail if the product import job has not yet run. To prevent this, HotWax Commerce creates a temporary placeholder product for the new item. Once the product import job runs, the system adds the necessary information, such as the product name, brand, price, and weight, to the placeholder product. This makes sure that the order download succeeds.
 
-1. When a new product is added to the catalog.
-2. When users prefer to delete the existing product and create a new one with updated fields
-
-To make it easier to keep both Shopify and HotWax Commerce's product catalogs up to date, Shopify merchants can schedule an `Import Products` job that runs every 15 minutes. This job checks the `created_at` field of products in Shopify and identifies any products that were created after the last run of the job. Any newly created products are then imported into HotWax Commerce's product catalog through the `Process bulk imported files` job. By doing this, HotWax Commerce's catalog stays synchronized with Shopify's catalog, ensuring that merchants have access to the most up-to-date product information.
-
-<figure><img src="../../.gitbook/assets/import-products-job-config.png" alt=""><figcaption><p><em>Fig.4: Configuration to run `Import Products` in the Job Manager App</em></p></figcaption></figure>
-
-{% hint style="info" %}
-It is recommended to run this job every 15 minutes. However, the frequency of the job can be set as per a merchant’s business needs.
-{% endhint %}
-
-**Managing Sales Orders For Products That Are Not In HotWax Commerce**
-
-When orders are placed on Shopify, they are also transferred to HotWax Commerce. However, sometimes an order might include a newly launched product in Shopify that has not yet been synced with HotWax Commerce. This can cause the order download to fail if the product import job has not yet run. To prevent this, HotWax Commerce creates a temporary placeholder product for the new item. Once the product import job is run, all the necessary information such as the product name, brand, price, weight, and so on are added to the placeholder product. This ensures that the order download is successful and the customer receives their product.
