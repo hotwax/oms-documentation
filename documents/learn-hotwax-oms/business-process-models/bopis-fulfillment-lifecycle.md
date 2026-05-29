@@ -48,8 +48,8 @@ A picking failure happens when the physical inventory does not match what HotWax
 
 Store managers have two rejection options when inventory is missing for an order with multiple items:
 
-* Partial rejection: Reject only the unavailable item. The remaining items stay in the order, and the rejected item is sent to the BOPIS Rejected Queue for rerouting or customer notification.  
-*  Full rejection: Reject the entire order. The full order is sent to the BOPIS Rejected Queue.
+* **Partial rejection:** Reject only the unavailable item. The remaining items stay in the order, and the rejected item is sent to the BOPIS Rejected Queue for rerouting or customer notification.  
+* **Full rejection:** Reject the entire order. The full order is sent to the BOPIS Rejected Queue.
 
 When an order is rejected, an email is automatically sent to the customer outlining alternative fulfillment options such as pickup from another store or home delivery. Retailers configure which options are available based on their fulfillment strategy.
 
