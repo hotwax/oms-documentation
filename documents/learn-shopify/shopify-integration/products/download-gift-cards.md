@@ -22,9 +22,9 @@ Physical gift cards are tangible cards that customers can buy online or in-store
 
 Digital gift cards, also known as e-gift cards, are virtual equivalents of physical gift cards. Customers receive them via email or text message along with a unique serial number that they can use to redeem the value stored in the card.
 
-* **Preparation and Processing:** Customers receive digital cards instantly upon purchase via email, and therefore, they are immediately fulfilled.
+* **Preparation and processing:** Customers receive digital cards instantly upon purchase via email, and therefore, they are immediately fulfilled.
 * **Activation:** Digital gift cards automatically activate in Shopify.
-* **Inventory Management:** Digital gift cards do not require physical inventory management because they are virtual products. Therefore, inventory tracking for digital gift cards is usually disabled on Shopify. This means they can be sold without quantity limits.
+* **Inventory management:** Digital gift cards do not require physical inventory management because they are virtual products. Therefore, inventory tracking for digital gift cards is usually disabled on Shopify. This means they can be sold without quantity limits.
 
 ## Download gift cards from Shopify to HotWax Commerce
 
