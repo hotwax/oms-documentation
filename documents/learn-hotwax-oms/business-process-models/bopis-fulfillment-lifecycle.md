@@ -65,7 +65,7 @@ If an order includes a physical gift card, a gift box icon appears on the order 
 
 ### Unpacking an order
 
-If a packing mistake is discovered, associates can open the “Order Details” page to unpack the order. This returns the items back to the Open Orders tab so they can be re-verified and corrected before handover.
+If a packing mistake is discovered, associates can open the `Order Details` page to unpack the order. This returns the items back to the `Open Orders` tab so they can be re-verified and corrected before handover.
 
 ## Hand over to customer and order completion
 
