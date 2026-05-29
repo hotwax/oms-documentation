@@ -14,6 +14,7 @@
 * [Introduction](business-process-models/README.md)
 * [Order Lifecycle](business-process-models/order-lifecycle.md)
 * [Store Fulfillment Lifecycle](business-process-models/store-fulfillment-lifecycle.md)
+* [BOPIS Fulfillment Lifecycle](business-process-models/bopis-fulfillment-lifecycle.md)
 * [Warehouse Fulfillment Lifecycle](business-process-models/warehouse-fulfillment-lifecycle.md)
 * [Inventory Lifecycle](business-process-models/inventory-lifecycle.md)
 * [Transfer Orders Lifecycle](business-process-models/transferorder-lifecycle.md)
