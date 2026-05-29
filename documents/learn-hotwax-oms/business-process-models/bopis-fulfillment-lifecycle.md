@@ -79,7 +79,7 @@ If the Proof of Delivery (POD) setting is enabled, associates record the name, I
 
 ### Completed orders
 
-The Completed Orders tab shows all orders that have been successfully handed over. Each card displays the order ID, customer name, and product details. Associates can download a packing slip using the Print Customer Letter button. No further fulfillment actions such as rejection or cancellation can be taken from this page. The Order Timeline on the details page logs every event from order creation to pickup.
+The `Completed Orders` tab shows all orders that have been successfully handed over. Each card displays the order ID, customer name, and product details. Associates can download a packing slip using the `Print Customer Letter` button. No further fulfillment actions such as rejection or cancellation can be taken from this page. The `Order Timeline` on the details page logs every event from order creation to pickup.
 
 ## Ship to Store
 
