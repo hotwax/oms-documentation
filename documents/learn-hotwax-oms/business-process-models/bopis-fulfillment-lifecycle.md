@@ -72,7 +72,7 @@ If a packing mistake is discovered, associates can open the `Order Details` page
 When the customer arrives, the store associate locates the order on the `Packed Orders` page and taps `Handover`. A confirmation prompt appears to verify the items are correct and the customer has received them. Once confirmed:
 
 * The order status updates from "Approved" to "Completed" in HotWax Commerce.  
-* The Completed Orders job in HotWax Commerce marks the order as "Fulfilled" in  eCommerce.  
+* The Completed Orders job in HotWax Commerce marks the order as "Fulfilled" in eCommerce.
 * The order moves to the Completed Orders page.
 
 If the Proof of Delivery (POD) setting is enabled, associates record the name, ID number, relationship to customer, phone, and email of the person picking up the order. This creates a verifiable handover record. If the pickup person is the billing customer, the same as the customer checkbox pre-fills their details.
