@@ -11,7 +11,7 @@ HotWax Commerce, acting as an Order Management System, routes approved BOPIS ord
 3. Pack and mark ready for pickup  
 4. Hand over to customer
 
-## Assign pickup orders orders
+## Assign pickup orders
 
 When a customer places a BOPIS order on eCommerce, HotWax Commerce downloads it alongside all other orders using the Import Orders job.
 
