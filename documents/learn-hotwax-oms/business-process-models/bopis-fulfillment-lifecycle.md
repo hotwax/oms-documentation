@@ -61,7 +61,7 @@ On the `Packed Orders` page, associates can resend the pickup notification using
 
 ### Gift card activation
 
-If an order includes a physical gift card, a gift box icon appears on the order card. Associates activate the gift card before handing it over by scanning or typing the serial number printed on the card, then tapping Activate. Once activated, the code cannot be changed.
+If an order includes a physical gift card, a gift box icon appears on the order card. Associates activate the gift card before handing it over by scanning or typing the serial number printed on the card, then tapping `Activate`. Once activated, the code cannot be changed.
 
 ### Unpacking an order
 
