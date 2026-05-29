@@ -25,7 +25,7 @@ Unlike standard orders, BOPIS orders don't compete for the optimal fulfillment l
 
 Once a BOPIS order lands in the store's queue, the BOPIS Fulfillment App sends a notification to store associates. A bell icon in the top right of the app shows new incoming orders so associates can take action without delay.
 
-The Open Orders page lists all orders awaiting action. Each order card shows the order name, product image, SKU, time since order creation, and current inventory count. Associates can tap the card to open the full Order Details page, which includes the customer's name, contact information, payment details, other shipments, and a complete order timeline.
+The `Open Orders` page lists all orders awaiting action. Each order card shows the order name, product image, SKU, time since order creation, and current inventory count. Associates can tap the card to open the full `Order Details` page, which includes the customer's name, contact information, payment details, other shipments, and a complete order timeline.
 
 Items are sorted in a First In, First Out sequence by default, so older orders are prioritized.
 
