@@ -87,7 +87,7 @@ Ship to Store handles BOPIS orders where the requested item is not available for
 
 When the `Show Request Transfer` toggle is enabled in `Settings`, the `Request Transfer` button replaces the standard `Reject` action on order cards and detail pages.
 
-### Ship to Store Page
+### Ship to Store page
 
 The Ship to Store page is organized into three tabs:
 
