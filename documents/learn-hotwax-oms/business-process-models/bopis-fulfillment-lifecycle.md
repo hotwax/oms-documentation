@@ -55,7 +55,7 @@ When an order is rejected, an email is automatically sent to the customer outlin
 
 ## Pack and mark ready for pickup
 
-Once items are picked, the associate packs the order and taps Ready for Pickup on the order card. This moves the order to the Packed Orders page and triggers a pickup-ready email to the customer.
+Once items are picked, the associate packs the order and taps `Ready for Pickup` on the order card. This moves the order to the `Packed Orders` page and triggers a pickup-ready email to the customer.
 
 On the Packed Orders page, associates can resend the pickup notification using the mail icon on the order card, or generate a packing slip using the print icon. If picker tracking is enabled in settings, a prompt will appear when associates tap “Ready for Pickup” on the Open Orders page, allowing them to select their name from the list before the order moves to the Packed Orders view.
 
