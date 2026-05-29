@@ -85,7 +85,7 @@ The `Completed Orders` tab shows all orders that have been successfully handed o
 
 Ship to Store handles BOPIS orders where the requested item is not available for same-day pickup at the customer's chosen store. Instead of rejecting the order, store associates can initiate a Transfer Request to have the item shipped from another store or warehouse to the pickup location.
 
-When the Show Request Transfer toggle is enabled in Settings, the Request Transfer button replaces the standard Reject action on order cards and detail pages.
+When the `Show Request Transfer` toggle is enabled in `Settings`, the `Request Transfer` button replaces the standard `Reject` action on order cards and detail pages.
 
 ### Ship to Store Page
 
