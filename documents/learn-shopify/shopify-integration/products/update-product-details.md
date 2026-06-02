@@ -16,7 +16,7 @@ The core service `sync#ShopifyProduct` compares the incoming hashes against the 
 
 HotWax Commerce maps the fields from the Shopify JSON to the internal product entities. The following table outlines how these fields are synchronized:
 
-| Shopify JSON field | HotWax Commerce field | Description |
+| Shopify JSON field | HotWax field | Description |
 | :--- | :--- | :--- |
 | `id` (GID) | Shopify Product ID | A unique ID used to identify the product. |
 | `title` | Product Name | The name shown for the product. |
