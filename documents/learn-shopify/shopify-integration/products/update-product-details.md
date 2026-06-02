@@ -1,5 +1,5 @@
 ---
-description: Learn how HotWax Commerce identifies product updates between Shopify and the OMS.
+description: Learn how HotWax Commerce identifies product updates between Shopify and the order management system (OMS).
 ---
 
 # Updating product details
