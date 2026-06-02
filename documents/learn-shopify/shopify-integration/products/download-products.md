@@ -4,7 +4,7 @@ description: Learn how HotWax Commerce downloads product data from Shopify using
 
 # Product download
 
-HotWax Commerce treats Shopify as the primary source of truth for all product information. To keep large product catalogs synchronized without hitting API limits, HotWax Commerce uses the Shopify GraphQL Admin API and bulk operations. 
+HotWax Commerce treats Shopify as the primary source of truth for all product information. To keep large product catalogs synchronized without hitting API limits, HotWax uses the Shopify GraphQL Admin API and bulk operations.
 
 The synchronization process runs in seven stages:
 
