@@ -6,9 +6,9 @@
 
 * [Available to Promise](components/available-to-promise/README.md)
   * ```yaml
-    type: builtin:openapi
     props:
       models: true
+    type: builtin:openapi
     dependencies:
       spec:
         ref:
@@ -17,9 +17,9 @@
     ```
 * [Fulfillment](components/fulfillment/README.md)
   * ```yaml
-    type: builtin:openapi
     props:
       models: true
+    type: builtin:openapi
     dependencies:
       spec:
         ref:
@@ -28,9 +28,9 @@
     ```
 * [Inventory Count](components/inventory-count/README.md)
   * ```yaml
-    type: builtin:openapi
     props:
       models: true
+    type: builtin:openapi
     dependencies:
       spec:
         ref:
@@ -39,9 +39,9 @@
     ```
 * [Order Routing](components/order-routing/README.md)
   * ```yaml
-    type: builtin:openapi
     props:
       models: true
+    type: builtin:openapi
     dependencies:
       spec:
         ref:
@@ -50,9 +50,9 @@
     ```
 * [Legacy OMS](components/legacy-oms/README.md)
   * ```yaml
-    type: builtin:openapi
     props:
       models: true
+    type: builtin:openapi
     dependencies:
       spec:
         ref:
@@ -62,49 +62,49 @@
 
 ## HotWax Commerce API and Data feeds
 
-* [Authentication](api/initial-api-authentication.md)
-* [Orders](api/orders/README.md)
-  * [Find Order](api/orders/find-orders.md)
-  * [Retrieve Orders](api/orders/retrieve-order.md)
-  * [Get Orders](api/orders/get-orders.md)
-  * [Created Orders](api/orders/created-orders-feed.md)
-  * [Order Adjustments](api/orders/order-adjustments.md)
-  * [Order Reconciliations](api/orders/order-reconciliations.md)
-* [Inventory](api/inventory/README.md)
-  * [Check Inventory](api/inventory/check-inventory.md)
-  * [BOPIS Check Inventory](api/inventory/bopis-check-inventory.md)
-  * [Shipping Check Inventory](api/inventory/shipping-check-inventory.md)
-  * [Reset Inventory](api/inventory/reset-inventory.md)
-  * [Update Inventory](api/inventory/update-inventory.md)
-  * [Get Online ATP of Products](api/inventory/get-online-atp.md)
-* [Brokering](api/brokering/README.md)
-  * [Brokered Order Items Feed](api/brokering/brokered-order-items.md)
-* [Inbound Shipment](api/inbound-shipment/README.md)
-  * [Import](api/inbound-shipment/import.md)
-* [Returns](api/returns/README.md)
-  * [Create Return](api/returns/create-return.md)
-  * [Returns Financial Feed](api/returns/returns-financial-feed.md)
-* [Facility](api/facility/README.md)
-  * [Post Code Lookup](api/facility/postcode-lookup.md)
-  * [Store Lookup](api/facility/store-lookup.md)
-* [Fulfillment](api/fulfillment/README.md)
-  * [Add Shipment Box](api/fulfillment/add-shipment-box.md)
-  * [Create Picklist](api/fulfillment/create-picklist.md)
-  * [In Progress Orders](api/fulfillment/in-progress-orders.md)
-  * [Outstanding Orders](api/fulfillment/outstanding-orders.md)
-  * [Packing Slip PDF](api/fulfillment/packing-slip-pdf.md)
-  * [Ready To Ship Items](api/fulfillment/ready-to-ship-items.md)
-  * [Reroute fulfillment APIs](api/fulfillment/reroute-fulfillment-apis.md)
-  * [Retry Shipping Label](api/fulfillment/retry-shipping-label.md)
-  * [Shipping Label and Packing Slip](api/fulfillment/shipping-label-and-packing-slip.md)
-  * [Shipping Label PDF](api/fulfillment/shipping-label-pdf.md)
-  * [Update Orders](api/fulfillment/update-orders.md)
-  * [Update and Import File](api/fulfillment/update-and-import-file.md)
-  * [Fulfilled Order Items Feed](api/fulfillment/fulfilled-order-items-feed.md)
-* [Appeasements](api/appeasements/README.md)
-  * [Appeasements Feed](api/appeasements/appeasements-feed.md)
-* [Miscellaneous](api/miscellaneous/README.md)
-  * [Perform Find](api/miscellaneous/perform-find.md)
+* [Authentication](hotwax-commerce-api-and-data-feeds/initial-api-authentication.md)
+* [Orders](hotwax-commerce-api-and-data-feeds/orders/README.md)
+  * [Find Order](hotwax-commerce-api-and-data-feeds/orders/find-orders.md)
+  * [Retrieve Orders](hotwax-commerce-api-and-data-feeds/orders/retrieve-order.md)
+  * [Get Orders](hotwax-commerce-api-and-data-feeds/orders/get-orders.md)
+  * [Created Orders](hotwax-commerce-api-and-data-feeds/orders/created-orders-feed.md)
+  * [Order Adjustments](hotwax-commerce-api-and-data-feeds/orders/order-adjustments.md)
+  * [Order Reconciliations](hotwax-commerce-api-and-data-feeds/orders/order-reconciliations.md)
+* [Inventory](hotwax-commerce-api-and-data-feeds/inventory/README.md)
+  * [Check Inventory](hotwax-commerce-api-and-data-feeds/inventory/check-inventory.md)
+  * [BOPIS Check Inventory](hotwax-commerce-api-and-data-feeds/inventory/bopis-check-inventory.md)
+  * [Shipping Check Inventory](hotwax-commerce-api-and-data-feeds/inventory/shipping-check-inventory.md)
+  * [Reset Inventory](hotwax-commerce-api-and-data-feeds/inventory/reset-inventory.md)
+  * [Update Inventory](hotwax-commerce-api-and-data-feeds/inventory/update-inventory.md)
+  * [Get Online ATP of Products](hotwax-commerce-api-and-data-feeds/inventory/get-online-atp.md)
+* [Brokering](hotwax-commerce-api-and-data-feeds/brokering/README.md)
+  * [Brokered Order Items Feed](hotwax-commerce-api-and-data-feeds/brokering/brokered-order-items.md)
+* [Inbound Shipment](hotwax-commerce-api-and-data-feeds/inbound-shipment/README.md)
+  * [Import](hotwax-commerce-api-and-data-feeds/inbound-shipment/import.md)
+* [Returns](hotwax-commerce-api-and-data-feeds/returns/README.md)
+  * [Create Return](hotwax-commerce-api-and-data-feeds/returns/create-return.md)
+  * [Returns Financial Feed](hotwax-commerce-api-and-data-feeds/returns/returns-financial-feed.md)
+* [Facility](hotwax-commerce-api-and-data-feeds/facility/README.md)
+  * [Post Code Lookup](hotwax-commerce-api-and-data-feeds/facility/postcode-lookup.md)
+  * [Store Lookup](hotwax-commerce-api-and-data-feeds/facility/store-lookup.md)
+* [Fulfillment](hotwax-commerce-api-and-data-feeds/fulfillment/README.md)
+  * [Add Shipment Box](hotwax-commerce-api-and-data-feeds/fulfillment/add-shipment-box.md)
+  * [Create Picklist](hotwax-commerce-api-and-data-feeds/fulfillment/create-picklist.md)
+  * [In Progress Orders](hotwax-commerce-api-and-data-feeds/fulfillment/in-progress-orders.md)
+  * [Outstanding Orders](hotwax-commerce-api-and-data-feeds/fulfillment/outstanding-orders.md)
+  * [Packing Slip PDF](hotwax-commerce-api-and-data-feeds/fulfillment/packing-slip-pdf.md)
+  * [Ready To Ship Items](hotwax-commerce-api-and-data-feeds/fulfillment/ready-to-ship-items.md)
+  * [Reroute fulfillment APIs](hotwax-commerce-api-and-data-feeds/fulfillment/reroute-fulfillment-apis.md)
+  * [Retry Shipping Label](hotwax-commerce-api-and-data-feeds/fulfillment/retry-shipping-label.md)
+  * [Shipping Label and Packing Slip](hotwax-commerce-api-and-data-feeds/fulfillment/shipping-label-and-packing-slip.md)
+  * [Shipping Label PDF](hotwax-commerce-api-and-data-feeds/fulfillment/shipping-label-pdf.md)
+  * [Update Orders](hotwax-commerce-api-and-data-feeds/fulfillment/update-orders.md)
+  * [Update and Import File](hotwax-commerce-api-and-data-feeds/fulfillment/update-and-import-file.md)
+  * [Fulfilled Order Items Feed](hotwax-commerce-api-and-data-feeds/fulfillment/fulfilled-order-items-feed.md)
+* [Appeasements](hotwax-commerce-api-and-data-feeds/appeasements/README.md)
+  * [Appeasements Feed](hotwax-commerce-api-and-data-feeds/appeasements/appeasements-feed.md)
+* [Miscellaneous](hotwax-commerce-api-and-data-feeds/miscellaneous/README.md)
+  * [Perform Find](hotwax-commerce-api-and-data-feeds/miscellaneous/perform-find.md)
 
 ## Journeys
 
@@ -124,5 +124,5 @@
 
 ## OMS Release Versions
 
-* [OMS Versions](oms-release-versions/README.md)
-  * [V7.0.0 Release](oms-release-versions/v7.0.0.md)
+* [OMS Versions](oms-release-versions/oms-release-versions/README.md)
+  * [V7.0.0 Release](oms-release-versions/oms-release-versions/v7.0.0.md)
