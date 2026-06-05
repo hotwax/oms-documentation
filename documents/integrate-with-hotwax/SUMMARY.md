@@ -15,7 +15,20 @@
           kind: openapi
           spec: available-to-promise
     ```
+<!--
 * [Fulfillment](components/fulfillment/README.md)
+  * ```yaml
+    type: builtin:openapi
+    props:
+      models: true
+    dependencies:
+      spec:
+        ref:
+          kind: openapi
+          spec: fulfillment
+    ```
+-->
+* [Poorti](components/poorti/README.md)
   * ```yaml
     type: builtin:openapi
     props:
@@ -87,6 +100,7 @@
 * [Facility](api/facility/README.md)
   * [Post Code Lookup](api/facility/postcode-lookup.md)
   * [Store Lookup](api/facility/store-lookup.md)
+<!--
 * [Fulfillment](api/fulfillment/README.md)
   * [Add Shipment Box](api/fulfillment/add-shipment-box.md)
   * [Create Picklist](api/fulfillment/create-picklist.md)
@@ -101,6 +115,21 @@
   * [Update Orders](api/fulfillment/update-orders.md)
   * [Update and Import File](api/fulfillment/update-and-import-file.md)
   * [Fulfilled Order Items Feed](api/fulfillment/fulfilled-order-items-feed.md)
+-->
+* [Poorti](api/poorti/README.md)
+  * [Add Shipment Box](api/poorti/add-shipment-box.md)
+  * [Create Picklist](api/poorti/create-picklist.md)
+  * [In Progress Orders](api/poorti/in-progress-orders.md)
+  * [Outstanding Orders](api/poorti/outstanding-orders.md)
+  * [Packing Slip PDF](api/poorti/packing-slip-pdf.md)
+  * [Ready To Ship Items](api/poorti/ready-to-ship-items.md)
+  * [Reroute fulfillment APIs](api/poorti/reroute-fulfillment-apis.md)
+  * [Retry Shipping Label](api/poorti/retry-shipping-label.md)
+  * [Shipping Label and Packing Slip](api/poorti/shipping-label-and-packing-slip.md)
+  * [Shipping Label PDF](api/poorti/shipping-label-pdf.md)
+  * [Update Orders](api/poorti/update-orders.md)
+  * [Update and Import File](api/poorti/update-and-import-file.md)
+  * [Fulfilled Order Items Feed](api/poorti/fulfilled-order-items-feed.md)
 * [Appeasements](api/appeasements/README.md)
   * [Appeasements Feed](api/appeasements/appeasements-feed.md)
 * [Miscellaneous](api/miscellaneous/README.md)
