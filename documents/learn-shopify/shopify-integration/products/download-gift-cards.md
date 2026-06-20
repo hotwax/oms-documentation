@@ -28,7 +28,7 @@ Digital gift cards, also known as e-gift cards, are virtual equivalents of physi
 
 ## Download gift cards from Shopify to HotWax Commerce
 
-HotWax downloads physical and digital gift cards from Shopify as part of the standard product download. This process uses the `BulkQueryShopifyProductUpdates` system message to make sure all gift card variants are accurately captured.
+HotWax downloads physical and digital gift cards from Shopify as part of the [standard product download](download-products.md), which captures all gift card variants.
 
 The product SKU serves as the primary identifier, which maps to the product ID in HotWax. Consequently, if multiple gift cards in Shopify share the same SKU, they associate with a common product ID in HotWax.
 

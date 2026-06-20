@@ -4,7 +4,7 @@ description: Learn how HotWax Commerce uses Shopify webhooks to create and delet
 
 # Create and delete products with Shopify webhooks
 
-Shopify offers webhooks for real-time communication between apps. HotWax uses Shopify's product creation and deletion webhooks to create or delete products.
+Shopify offers webhooks for real-time communication between apps. HotWax Commerce uses Shopify's product creation and deletion webhooks to create or delete products.
 
 However, these webhooks have two limitations:
 

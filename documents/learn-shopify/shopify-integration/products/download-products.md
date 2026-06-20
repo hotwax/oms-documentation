@@ -8,26 +8,35 @@ HotWax Commerce treats Shopify as the primary source of truth for all product in
 
 The synchronization process runs in seven stages:
 
-1. **Queue the request:** HotWax plans the sync by creating a system message of type `BulkQueryShopifyProductUpdates`. This is triggered by the scheduled job `sync_ShopifyProductUpdates` (service `sync#ShopifyProductUpdates`). The system identifies exactly what data is needed from Shopify based on the last successful sync time and adds a small time buffer to make sure no updates are missed.
-   * **Initial status:** `SmsgProduced` (Message is ready to be sent)
+1. **Queue the request:** The scheduled `Sync Shopify Product Updates` job plans the sync. It identifies exactly what data is needed from Shopify based on the last successful sync time and adds a small time buffer to make sure no updates are missed.
 
-2. **Send to Shopify:** The service `send#ShopifyBulkQueryMessage` picks up the queued request, sends the GraphQL mutation to Shopify, and saves Shopify's bulk operation ID to the `remoteMessageId` field.
-   * **Updated status:** Transitions to `SmsgSent` (Shopify has accepted the request)
+2. **Send to Shopify:** HotWax sends the bulk query to Shopify's GraphQL Admin API and records the bulk operation that Shopify creates in response.
 
-3. **Confirm completion:** Shopify processes the bulk query. HotWax monitors the status of the bulk operation using two methods:
-   * **Polling:** The scheduled job `poll_ShopifyBulkOperationResult` periodically checks Shopify.
-   * **Webhooks:** Shopify sends a real-time `Bulk Operations Finish` notification.
-   Once completion is confirmed, the system updates the message status and downloads the raw JSONL result file directly to `${receiveMovePath}/${systemMessageId}.jsonl`.
-   * **Updated status:** Transitions to `SmsgReceived` (The result file is downloaded)
+3. **Confirm completion:** Shopify processes the bulk query in the background. HotWax confirms when the operation finishes in two ways: it polls Shopify on a schedule, and it listens for a real-time `Bulk Operations Finish` webhook from Shopify. Once completion is confirmed, HotWax downloads the result file, a JSONL file containing every product and variant.
 
-4. **Prepare data:** The system message framework triggers the `consume#ShopifyProductDataFile` service, which reads the downloaded JSONL file, transforms it into a nested JSON format, and uploads it to the MDM queue (`SYNC_SHOPIFY_PRODUCT`).
-   * **Final status:** Transitions to `SmsgConsumed` (The file has been processed and queued for database sync)
+4. **Prepare data:** HotWax reads the downloaded file, transforms it into a nested JSON format, and queues it for the database sync.
 
-5. **Identify changes:** The MDM queue processes the data using the `sync#ShopifyProduct` service. Instead of overwriting the database, HotWax identifies exactly what has changed using a baseline comparison strategy. The system groups product data (core details, tags, features, and pricing) and computes a unique SHA-256 hash for each group. If the new hash matches the one stored in the `ProductUpdateHistory` table, the system knows that specific group of data has not changed and skips it.
+5. **Identify changes:** Instead of overwriting the database, HotWax identifies exactly what has changed using a baseline comparison strategy. It groups related product data (such as core details, tags, features, identifiers, and variant associations) and computes a unique SHA-256 hash for each group. If a new hash matches the one stored in the `ProductUpdateHistory` table, that group has not changed and is skipped.
 
-6. **Update the database:** Only the identified changes (deltas) are applied to the database. This selective update handles core product details, features, tags, pricing, and identifiers like SKU and UPC. It also detects the correct product type (such as `FINISHED_GOOD` vs. `DIGITAL_GOOD`) based on Shopify flags.
+6. **Update the database:** Only the identified changes (deltas) are applied. This selective update handles core product details, features, tags, pricing, and identifiers like SKU and UPC. It also detects the correct product type (such as `FINISHED_GOOD` vs. `DIGITAL_GOOD`) based on Shopify flags.
 
-7. **Save history:** Finally, the system updates the `ProductUpdateHistory` record with the new hashes and a snapshot of the current data. This makes the sync process idempotent, meaning that running the sync again with the same data will result in zero database changes. This stage also links the update back to the original `systemMessageId` for a complete record.
+7. **Save history:** Finally, HotWax updates the `ProductUpdateHistory` record with the new hashes and a snapshot of the current data. This makes the sync process idempotent, meaning that running the sync again with the same data results in zero database changes.
+
+<details>
+
+<summary>Developer details: services, system messages, and statuses</summary>
+
+The flow runs on a single system message of type `BulkQueryShopifyProductUpdates`, which moves through the following services and statuses:
+
+| Stage | Service | System message status |
+| :--- | :--- | :--- |
+| Queue the request | `sync#ShopifyProductUpdates` (job `sync_ShopifyProductUpdates`) | `SmsgProduced` |
+| Send to Shopify | `send#ShopifyBulkQueryMessage` (saves the bulk operation ID to `remoteMessageId`) | `SmsgSent` |
+| Confirm completion | `poll_ShopifyBulkOperationResult` job, or the `Bulk Operations Finish` webhook; the result downloads to `${receiveMovePath}/${systemMessageId}.jsonl` | `SmsgReceived` |
+| Prepare data | `consume#ShopifyProductDataFile` uploads to the master data management (MDM) queue `SYNC_SHOPIFY_PRODUCT` | `SmsgConsumed` |
+| Identify changes, update, and save history | `sync#ShopifyProduct` computes the SHA-256 hashes, writes the deltas, and updates `ProductUpdateHistory` | — |
+
+</details>
 
 ---
 
@@ -76,7 +85,7 @@ The parent product comes in various sizes and colors, resulting in multiple vari
 
 <figure><img src="../../.gitbook/assets/variant-product-details-hotwax.png" alt=""><figcaption><p>Variant product in HotWax with details</p></figcaption></figure>
 
-Shopify has multiple product identifiers, such as Shopify Product ID, Product SKU, Product Name, and UPC. Before importing products, set up the primary product identifier that will map to the product ID in HotWax. The primary product identifier can be configured in HotWax when setting up a new product store.
+Shopify has multiple product identifiers, such as Shopify Product ID, Product SKU, Product Name, and UPC. Before importing products, set up the primary product identifier that maps to the product ID in HotWax. The primary product identifier can be configured in HotWax when setting up a new product store.
 
 #### Manage sales orders for products not in HotWax
 
