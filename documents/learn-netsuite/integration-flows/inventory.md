@@ -5,7 +5,7 @@ description: >-
 
 # Inventory
 
-NetSuite serves as the central system of record for tracking product inventories across various retail locations. Inventory transactions in Netsuite, encompassing the creation and reception of purchase orders (POs) in warehouses, as well as the fulfillment of online orders from these warehouses, are vital components for maintaining real-time and precise inventory records.
+NetSuite serves as the central system of record for tracking product inventories across various retail locations. Inventory transactions in NetSuite, encompassing the creation and reception of purchase orders (POs) in warehouses, as well as the fulfillment of online orders from these warehouses, are vital components for maintaining real-time and precise inventory records.
 
 However, while HotWax Commerce receives frequent updates regarding online orders fulfilled from the warehouse using NetSuite, it does not receive regular updates on new inventory arrivals in the warehouses in response to purchase orders. This discrepancy causes HotWax Commerce to fall out of synchronization with inventory data of NetSuite.
 
@@ -13,7 +13,7 @@ To ensure that HotWax Commerce remains continually synchronized with the latest 
 
 ### Key Objectives
 
-* Automate the daily synchronization of inventory data from Netsuite to HotWax Commerce.
+* Automate the daily synchronization of inventory data from NetSuite to HotWax Commerce.
 * Ensure that HotWax Commerce reflects the most recent inventory numbers, as recorded in NetSuite.
 
 <figure><img src="../.gitbook/assets/inventory-sync-from-netsuite-to-hotwax.png" alt=""><figcaption><p>Inventory Sync from NetSuite to HotWax Commerce</p></figcaption></figure>

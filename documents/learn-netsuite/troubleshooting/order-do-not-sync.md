@@ -120,12 +120,12 @@ If an order doesn't have a payment preference, it cannot be synced with NetSuite
 
 #### If the Payment Details is Not Set in HotWax
 
-1. Check if the payment method is not set in Hotwax.
+1. Check if the payment method is not set in HotWax.
 2. After the client makes the necessary changes, run the [`Import Order Update from Shopify`](https://docs.hotwax.co/documents/v/retail-operations/workflow/job-workflows/orders#import-order-updates-from-shopify) job to sync the data.
 
 3. Alternatively, you can manually add the payment preferences by clicking on the + “Payment Terms and Preferences” section.
 
-##### If the Payment Details are Not Set in both Hotwax and Shopify
+##### If the Payment Details are Not Set in both HotWax and Shopify
 
 1. Inform the client about the issue with the payment preferences.
 2. After the client makes the necessary changes, run the [`Import Order Update from Shopify`](https://docs.hotwax.co/documents/v/retail-operations/workflow/job-workflows/orders#import-order-updates-from-shopify) job to sync the data.

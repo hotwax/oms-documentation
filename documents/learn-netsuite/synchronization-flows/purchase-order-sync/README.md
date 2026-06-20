@@ -6,7 +6,7 @@ description: >-
 
 # Purchase Orders
 
-When a Purchase Order is raised in Netsuite's ERP system, it needs to be seamlessly synchronized with HotWax Commerce, where the store associates employ an intuitive Receiving App by HotWax Commerce for the efficient receipt of inventory.
+When a Purchase Order is raised in NetSuite's ERP system, it needs to be seamlessly synchronized with HotWax Commerce, where the store associates employ an intuitive Receiving App by HotWax Commerce for the efficient receipt of inventory.
 
 ## Export purchase orders from NetSuite
 

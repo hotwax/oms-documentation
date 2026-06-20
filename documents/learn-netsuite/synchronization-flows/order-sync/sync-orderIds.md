@@ -12,7 +12,7 @@ Before an order can be processed further, HotWax ensures successful creation in 
 
 ### Export orders from HotWax
 
-Schedule a job in the HotWax Commerce integration layer to create a file of orders in HotWax that have not yet been sent to Netsuite.
+Schedule a job in the HotWax Commerce integration layer to create a file of orders in HotWax that have not yet been sent to NetSuite.
 
 {% hint style="warning" %}
 ```
