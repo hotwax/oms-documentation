@@ -6,7 +6,7 @@ description: Learn how to delete products from both Shopify and HotWax Commerce.
 
 ### Delete products from Shopify and HotWax Commerce
 
-Shopify merchants sometimes delete products to correct entry errors. To prevent data mismatches and keep inventory accurate, HotWax Commerce also soft deletes these products.
+Shopify merchants sometimes delete products to correct entry errors. To prevent data mismatches and keep inventory accurate, HotWax also soft deletes these products.
 
 In HotWax, products are soft deleted. This means they are marked as inactive (thru-dated) rather than permanently removed, which allows the system to still handle historical data and potential returns.
 

@@ -8,13 +8,13 @@ Merchants use Shopify to update product information such as names, images, tags,
 
 ### Identify updates with diff computation
 
-Instead of comparing every individual field during every sync, HotWax Commerce uses diff computation to find exactly what changed. The system groups product data and computes a unique digital signature (SHA-256 hash) for each group.
+Instead of comparing every individual field during every sync, HotWax uses diff computation to find exactly what changed. The system groups product data and computes a unique digital signature (SHA-256 hash) for each group.
 
 The core service `sync#ShopifyProduct` compares the incoming hashes against the details stored in the `ProductUpdateHistory` table. If the hashes match, the system knows no changes occurred and skips that data. If the hashes differ, the system identifies the exact delta (what was added, removed, or changed) and applies only those specific updates to the database.
 
 ### Product field mapping
 
-HotWax Commerce maps the fields from the Shopify JSON to the internal product entities. The following table outlines how these fields are synchronized:
+HotWax maps the fields from the Shopify JSON to the internal product entities. The following table outlines how these fields are synchronized:
 
 | Shopify JSON field | HotWax field | Description |
 | :--- | :--- | :--- |

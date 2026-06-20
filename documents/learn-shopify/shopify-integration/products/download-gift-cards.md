@@ -14,9 +14,9 @@ Retailers set up both physical and digital gift cards in Shopify. Both physical 
 
 Physical gift cards are tangible cards that customers can buy online or in-store. These cards come with a unique serial number that customers can use to redeem the value stored in the card.
 
-* **Preparation and Processing:** These cards are assigned a unique serial number and a predefined value loaded onto them when they are processed and prepared for shipping.
+* **Preparation and processing:** These cards are assigned a unique serial number and a predefined value loaded onto them when they are processed and prepared for shipping.
 * **Activation:** After processing, gift cards are activated in Shopify so that when customers receive their physical gift card, they can use the gift card serial number to redeem their purchase.
-* **Inventory Management:** Physical gift cards have actual stock-keeping units and require delivery to customers just like any other physical product. Often, retailers create different variants of a gift card with different denominations to provide customers with multiple options.
+* **Inventory management:** Physical gift cards have actual stock-keeping units and require delivery to customers just like any other physical product. Often, retailers create different variants of a gift card with different denominations to provide customers with multiple options.
 
 ### Digital gift cards
 
@@ -28,9 +28,9 @@ Digital gift cards, also known as e-gift cards, are virtual equivalents of physi
 
 ## Download gift cards from Shopify to HotWax Commerce
 
-HotWax Commerce downloads physical and digital gift cards from Shopify as part of the standard product download. This process uses the `BulkQueryShopifyProductUpdates` system message to make sure all gift card variants are accurately captured.
+HotWax downloads physical and digital gift cards from Shopify as part of the standard product download. This process uses the `BulkQueryShopifyProductUpdates` system message to make sure all gift card variants are accurately captured.
 
-The product SKU serves as the primary identifier, which maps to the product ID in HotWax Commerce. Consequently, if multiple gift cards in Shopify share the same SKU, they associate with a common product ID in HotWax Commerce.
+The product SKU serves as the primary identifier, which maps to the product ID in HotWax. Consequently, if multiple gift cards in Shopify share the same SKU, they associate with a common product ID in HotWax.
 
 For example, consider a product named "Gift Card" in Shopify with three variants:
 
@@ -40,7 +40,7 @@ For example, consider a product named "Gift Card" in Shopify with three variants
 | 55000-000 | 1002       | $250  |
 | 55000-000 | 1003       | $500  |
 
-Upon downloading this product "Gift Card" from Shopify, it maps in HotWax Commerce as follows:
+Upon downloading this product "Gift Card" from Shopify, it maps in HotWax as follows:
 
 | SKU       | Shopify Product ID | Shop ID  | HC Product ID |
 | --------- | ------------------ | -------- | ------------- |
