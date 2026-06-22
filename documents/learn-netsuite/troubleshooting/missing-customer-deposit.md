@@ -9,15 +9,14 @@ A Customer Deposit in NetSuite is created only when:
 - A valid payment transaction exists in OMS
 - That payment is successfully exported and processed in NetSuite
 
-This is how a customer deposit is created in NetSuite
+## Customer Deposit Creation Flow
 
-- Order is created
-- Payment is captured (Shopify)
-- Payment is recorded in OMS as Payment Transaction
-- OMS sends this payment to NetSuite
-- NetSuite creates a Customer Deposit
+1. An order is created.
+2. A payment transaction is created for the order and recorded in OMS as an Order Payment Preference (OPP).
+3. OMS syncs the payment transaction to NetSuite.
+4. NetSuite processes the payment transaction and creates a **Customer Deposit** against the order.
 
-If any step in this fails, the deposit will not be created.
+> If the Customer Deposit is not present in NetSuite, one of the above steps may have failed. Verify each step in the flow to identify where the process was interrupted.
 
 ## Step 1: Verify Whether the Order Has Synced with NetSuite
 Before investigating Customer Deposit generation, first confirm that the order has successfully synced with NetSuite. Only orders that have been synced are eligible for Customer Deposit creation.
