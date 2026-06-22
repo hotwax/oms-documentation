@@ -75,52 +75,18 @@ Check job execution.
 
 **Check the following:**
 
-- Ensure the relevant jobs are enabled and scheduled.
+- Ensure the relevant jobs are enabled and scheduled, to verify this :
+    - Navigate to the Job Manager App.
+    - Under the tab Order, scroll down to "NetSuite". You will find jobs (HC_MR_ExportedSalesOrderCSV, HC_MR_ExportedCashSaleCSV) to export sales order on NetSuite.
 - Verify that the jobs are executing successfully and not failing.
 - If any of these conditions are not met, the job may not process the order, even if all order data is correct.
-
-### Step 5: Check Order in SFTP
-
-If all data in OMS looks correct and the job is running correctly but the order is still not synced, the next step is to verify the order file in SFTP.
-
-**SFTP Paths (Based on Order Type)**
-- Connect to your SFTP instance, you can find the details in the Settings page in your OMS:
-  
-**Web Orders**
-/home/<instance-name>/netsuite/salesorder/export
-
-**POS Completed Orders (Cash Sale)**
-/home/<instance-name>/netsuite/cashsale/export
-
-**POS Approved Orders (Send Sale)**
-/home/<instance-name>/netsuite/salesorder/export
-
-### Step 6: Locate Your Order File
-- Use Order Date to view the file which contains your order details
-- Inside the export folder, check these directories:
-   - Error/
-   - Required Field Missing/
-   - archive/
-
-If file is in `Required Field Missing/` or `Error/`
-
-- The order failed before reaching NetSuite
-- Open the file to view the error message
-
-If file is in `archive/`
-
-- The order was successfully sent to NetSuite
-- Next step, check error on NetSuite side
-
-If file is outside all folders
-
-- The order is not yet processed
-- It will be picked up by job shortly
 
 ### Scenario 2: Order Sync Feed History is Present
 This means OMS attempted to sync the order, but it may have failed or is still processing.
 
 ### Step 7: Check Order Import logs in NetSuite
+If all data in OMS looks correct and the job is running correctly but the order is still not synced, the next step is to verify the order processing in NetSuite.
+
 - Go to NetSuite
 - Global Search your order using Shopify Order Number
 - If Order is Found in NetSuite:
@@ -146,11 +112,7 @@ Navigate in NetSuite:
 - “4 of 5 records processed successfully”
 - “0 of 1 records processed successfully”
 
-You need to look for files with partial or failed records
-
-### Step 11: Match the File with SFTP
-- Use the file name (same as in SFTP)
-- Or filter using Order Date
+- You need to look for files with partial or failed records or you can filter using Order Date.
 - Once you find the file with your order details, click on CSV Response
 <img width="221" height="131" alt="image" src="https://github.com/user-attachments/assets/614bb0c5-c116-41ed-91af-28b8263f8583" />
 
