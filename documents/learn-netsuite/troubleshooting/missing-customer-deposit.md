@@ -44,6 +44,16 @@ _**Case 2: No Payment Transactions Present in Shopify**_
 
 Check the payment information on Shopify. If no payment transaction is present in Shopify, no payment information will be synced to HotWax. As a result, the Customer Deposit will not be created.
 
+To view payment transaction on shopify, follow the steps below:
+
+_**Steps:**_
+
+1. Log in to the Shopify Admin panel.
+2. Navigate to **Orders**.
+3. Open the order you want to investigate.
+4. Scroll to the **Timeline** section at the bottom of the order details page.
+5. Review the timeline entries for payment-related events.
+
 **If:**
 The payment information is present on Shopify but it not present in OMS.
 
