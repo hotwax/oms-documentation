@@ -38,6 +38,10 @@ _**Case 1: No Payment Transactions Present**_
 
 This means there is no payment recorded in OMS. Since Customer Deposit creation depends on payment, NetSuite will not create any deposit.
 
+<div data-full-width="false">
+<figure><img src="../.gitbook/assets/NoPaymentPreference.png" alt=""><figcaption></figcaption></figure>
+</div>
+
 This might happen if the payment is not captured from Shopify or not present on Shopify or any payment integration issue.
 
 _**Case 2: No Payment Transactions Present in Shopify**_
@@ -66,6 +70,14 @@ _**Case 3: Payment Exists but Order is Partially Paid**_
 
 For orders where a partial payment is recorded in OMS, In such a case as well, deposit may not be created.
 
+<div data-full-width="false">
+<figure><img src="../.gitbook/assets/OrderTotal.png" alt=""><figcaption></figcaption></figure>
+</div>
+
+<div data-full-width="false">
+<figure><img src="../.gitbook/assets/PartialPayment.png" alt=""><figcaption></figcaption></figure>
+</div>
+
 **Resolution:**
 
 - Compare Order Total vs Payment Total from the Order Detail Page.
@@ -77,5 +89,9 @@ For orders where a partial payment is recorded in OMS, In such a case as well, d
 - Navigate to the Related Records tab.
 - Confirm whether:
     - A Customer Deposit exists
+
+<div data-full-width="false">
+<figure><img src="../.gitbook/assets/NetSuiteCustomerDeposit.png" alt=""><figcaption></figcaption></figure>
+</div>
 
 
