@@ -9,7 +9,9 @@ The objective of this document is to help users identify and resolve cases where
 
 - Go to the OMS and search for your order.
 - Navigate to the View Order Details Page and click the icon next to the External ID to view the Order Sync Feed History.
-<img width="798" height="157" alt="image" src="https://github.com/user-attachments/assets/d9ee87ae-b1c2-4906-af08-bbe1ca84fe4e" />
+<div data-full-width="false">
+<figure><img src="../.gitbook/assets/OrderSyncHistory.png" alt=""><figcaption></figcaption></figure>
+</div>
 
 #### Two possible scenarios:
 - Order Sync Feed History NOT created
@@ -21,7 +23,9 @@ This means the order has not yet been picked up by the feed job yet.
 ### Step 2: Check Order Creation Time
 - Go to View Order Details Page
 - Check the Order Entry Date
-<img width="536" height="142" alt="image" src="https://github.com/user-attachments/assets/8dc64188-2195-40f0-9f6d-1202f6e5b0fd" />
+<div data-full-width="false">
+<figure><img src="../.gitbook/assets/OrderTimeline.png" alt=""><figcaption></figcaption></figure>
+</div>
 
 As Orders can take up to ~2 hours to sync to NetSuite you can wait if the order is recent. i.e.
 - Wait for the scheduled job to process the order.
@@ -32,12 +36,18 @@ As Orders can take up to ~2 hours to sync to NetSuite you can wait if the order 
 
 _**1. Validate Customer Information**_
 - Open your order, in the View Order Details page, Go to Bill To Customer
-<img width="303" height="114" alt="image" src="https://github.com/user-attachments/assets/fa68e8ea-dc6a-457f-b885-64f1f35426d6" />
+  
+<div data-full-width="false">
+<figure><img src="../.gitbook/assets/CustomerName.png" alt=""><figcaption></figcaption></figure>
+</div>
 
 - Open View Party Page.
+
 - Check customer Identifications and verify if NetSuite Customer Internal ID is present
 
-<img width="248" height="130" alt="image" src="https://github.com/user-attachments/assets/0fea3655-385e-4c61-806a-cdf14031961f" />
+<div data-full-width="false">
+<figure><img src="../.gitbook/assets/CustomerIdentification.png" alt=""><figcaption></figcaption></figure>
+</div>
 
 - If missing, the order will NOT sync to NetSuite.
 
@@ -49,7 +59,10 @@ _**Action:**_
 _**2. Validate Product Information**_
 - Go to Order Items
 - Open each product via View Product Page and check NetSuite Product Internal ID exists in Identifications
-<img width="170" height="135" alt="image" src="https://github.com/user-attachments/assets/fd273c09-57d8-4a09-9f02-644b16886ef5" />
+
+<div data-full-width="false">
+<figure><img src="../.gitbook/assets/ProductIdentification.png" alt=""><figcaption></figcaption></figure>
+</div>
 
 - If missing, the order will NOT sync to NetSuite.
 
@@ -60,7 +73,9 @@ _**3. Validate Payment Information**_
 - Check on View Order Details Page  if Payment records are present and Payment is complete and not partial.
 - Missing or incorrect payment data can prevent syncing.
 - You can add the required payment from the Order Detail Page.
-<img width="651" height="162" alt="image" src="https://github.com/user-attachments/assets/c628bd8d-e503-45fd-95de-c58b07e53394" />
+<div data-full-width="false">
+<figure><img src="../.gitbook/assets/OrderPaymentPreference.png" alt=""><figcaption></figcaption></figure>
+</div>
 
 _**If:**_
 - Customer ID is present
@@ -101,12 +116,16 @@ If Order is NOT Found in NetSuite:
 Navigate in NetSuite:
 `Setup → Import/Export → View CSV Import Status`
 
-<img width="357" height="318" alt="image" src="https://github.com/user-attachments/assets/4ef5c496-1805-4d49-adea-e3fa3a7e949d" />
+<div data-full-width="false">
+<figure><img src="../.gitbook/assets/NetSuiteImportStatus.png" alt=""><figcaption></figcaption></figure>
+</div>
 
 ### Step 10: Identify Failed Records
 - Under the message column, you will see statuses like:
 
-<img width="539" height="212" alt="image" src="https://github.com/user-attachments/assets/6971986e-25dc-4a15-8697-e9cd3c06c038" />
+<div data-full-width="false">
+<figure><img src="../.gitbook/assets/NetSuiteCSVImportFiles.png" alt=""><figcaption></figcaption></figure>
+</div>
 
 - “5 of 5 records processed successfully”
 - “4 of 5 records processed successfully”
@@ -114,8 +133,6 @@ Navigate in NetSuite:
 
 - You need to look for files with partial or failed records or you can filter using Order Date.
 - Once you find the file with your order details, click on CSV Response
-<img width="221" height="131" alt="image" src="https://github.com/user-attachments/assets/614bb0c5-c116-41ed-91af-28b8263f8583" />
-
 - This will open a detailed response showing errors encountered during the import process.
 
 _**Common NetSuite CSV Errors**_
@@ -137,11 +154,15 @@ This error indicates that NetSuite is unable to find the customer associated wit
 **How to resolve:**
 - Search for the customer directly in NetSuite using either the email ID or phone number
 
-<img width="434" height="159" alt="image" src="https://github.com/user-attachments/assets/49bb5179-89ba-4a4f-91a5-300496a48299" />
+<div data-full-width="false">
+<figure><img src="../.gitbook/assets/NetSuiteCustomerSearch.png" alt=""><figcaption></figcaption></figure>
+</div>
 
 - Once you open the customer record in NetSuite, check the URL. At the end of the URL, you will find the internal ID of the customer
  
-<img width="576" height="47" alt="image" src="https://github.com/user-attachments/assets/f4796d3a-ba33-471b-8d5e-f45d367ec9da" />
+<div data-full-width="false">
+<figure><img src="../.gitbook/assets/NetSuiteCustomerID.png" alt=""><figcaption></figcaption></figure>
+</div>
 
 - Also, you can check NetSuite logs for entries like "merged with duplicates"
 - From these logs, you can identify the correct (active) customer internal ID
@@ -167,7 +188,9 @@ This means that NetSuite is unable to identify the location being sent with the 
 - To view whether or not locations is inactive, navigate to NetSuite → Setup → Company → Locations → Search
 - Click to view the desired location.
 - Check whether the “Location is Inactive” checkbox is checked or not and correct it accordingly.
-<img width="384" height="181" alt="image" src="https://github.com/user-attachments/assets/19b5615c-9784-4895-8a8c-96d82b865343" />
+<div data-full-width="false">
+<figure><img src="../.gitbook/assets/NSLocation.png" alt=""><figcaption></figcaption></figure>
+</div>
 
 - If the location does not exist, create it in NetSuite
 - If the mapping is incorrect, update the correct internal ID in OMS
