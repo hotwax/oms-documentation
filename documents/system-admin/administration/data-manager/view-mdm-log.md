@@ -1,6 +1,6 @@
 # View Logs
 
-Data Manager logs help verify the status of imported data, ensuring the accuracy and completeness of data imported into the OMS.
+Data Manager logs help verify the status, accuracy, and completeness of data imported into the OMS.
 
 Logs are available in two places:
 - **Find Import page:** Shows all import logs across every configuration. Navigate here to get a system-wide view of all imports.
@@ -20,7 +20,7 @@ Each log entry displays the following columns:
 | **Created Date**    | The date and time the import was submitted, along with the user who submitted it.                                   |
 | **Start Date**      | The date and time the import began processing.                                                                      |
 | **Status**          | The current status of the import. See [Statuses](#statuses) below.                                                  |
-| **Completion Date** | The date and time the import finished, was cancelled, or crashed — shown alongside the Status column.               |
+| **Completion Date** | The date and time the import finished, was cancelled, or crashed. Shown alongside the Status column.                |
 | **Product Store**   | The product store associated with this import, if applicable.                                                       |
 | **Total Records**   | The total number of records in the submitted file.                                                                  |
 | **Failed Records**  | The number of records that failed to process. Shown in red.                                                         |
@@ -53,7 +53,7 @@ Click the **trash** icon on a log entry to permanently delete the import record.
 ## Troubleshooting
 **File Upload Failed:**
 
-This typically occurs when the file format does not align with the required CSV or JSON format. Download the sample template from the configuration detail page and ensure your file matches the expected structure before re-uploading.
+This typically occurs when the file format does not align with the required CSV or JSON format. Download the sample template from the configuration detail page and verify that your file matches the expected structure before re-uploading.
 
 **File upload is partially failed:**
 

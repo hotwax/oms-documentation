@@ -10,7 +10,7 @@ Key features and functionalities include:
 1. **Manual Data Import and Export:** Manually import or extract data as needed.
 2. **Multithreaded:** Import large amounts of data at high speeds to keep the OMS in sync with external systems.
 3. **Error notifications:** Automatically get notified when an error occurs during import.
-4. **Audit imported data:** Audit imported files as they were provided, ensuring traceability.
+4. **Audit imported data:** Audit imported files as they were provided for traceability.
 
 ## MDM Under the Hood
 Understanding the inner workings of the OMS MDM is essential to building scalable integrations, troubleshooting integrations, and amending corrupted data.
@@ -50,7 +50,7 @@ To make the MDM more approachable for starters, we've identified the most common
 We aim to soon publish a more comprehensive list of available services in the MDM.
 
 ### Execution
-The MDM processes imports across two dedicated thread pools — **Priority** and **Normal** — based on the priority configured for each configuration. When a file is submitted, the MDM runner places it into the appropriate pool's queue. You have three execution modes to choose from when setting up a configuration:
+The MDM processes imports across two dedicated thread pools, **Priority** and **Normal**, based on the priority configured for each configuration. When a file is submitted, the MDM runner places it into the appropriate pool's queue. You have three execution modes to choose from when setting up a configuration:
 
 1. **Queued:** The default and recommended mode. Configurations in this mode respect the order (FIFO) within their assigned thread pool queue.
 2. **Sync:** Files uploaded to a configuration set to execute in sync will be processed immediately by the OMS. Uploading large files to a configuration set to execute in sync will almost certainly be fatal because it will demand that the OMS route all required resources to process the file immediately. As a general rule, just don't use this setting unless very specifically instructed.
@@ -109,7 +109,7 @@ A `Pending` import can be cancelled by clicking the **X** button on the log entr
 
 Understanding how the MDM stores files is important for managing server disk space and data privacy:
 
-* **File Upload:** When a file is submitted (either manually via the UI or pulled via SFTP), it is immediately saved to the server's local storage (`runtime/datamanager/imported/{configId}/`) before any processing begins. The log entry is created in `Pending` status and linked to this file.
-* **Error Files:** If an import finishes with failed records, the MDM generates a separate error file containing the failed rows and their error reasons. This error file is stored in the same directory as the original file.
-* **Temporary Processing Files:** When multi-threading is enabled, the MDM splits the large file into smaller chunks. These chunks are stored in a temporary directory (`runtime/tmp/DM_{logId}/`) and are automatically deleted by the system once the import finishes.
-* **Data Retention:** Files remain on the server disk as long as their corresponding Data Manager log entry exists. **Deleting a log entry from the UI permanently deletes the original file and any associated error files from the server's physical disk**, freeing up space.
+* **File Upload:** When a file is submitted (either manually via the UI or pulled via SFTP), it is immediately saved to the server's local storage (`runtime/datamanager/imported/{configId}/`) before any processing begins. The log entry is created in `Pending` status and linked to this file
+* **Error Files:** If an import finishes with failed records, the MDM generates a separate error file containing the failed rows and their error reasons. This error file is stored in the same directory as the original file
+* **Temporary Processing Files:** When multi-threading is enabled, the MDM splits the large file into smaller chunks. These chunks are stored in a temporary directory (`runtime/tmp/DM_{logId}/`) and are automatically deleted by the system once the import finishes
+* **Data Retention:** Files remain on the server disk as long as their corresponding Data Manager log entry exists. **Deleting a log entry from the UI permanently deletes the original file and any associated error files from the server's physical disk**

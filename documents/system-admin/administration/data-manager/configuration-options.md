@@ -32,7 +32,7 @@ Execution mode should always be set to Queued.
 {% endhint %}
 
 {% hint style="danger" %}
-Multi-threading should be disabled on all configs unless explicitly instructed by HotWax Support. Incorrect use of multi-threading can cause system overload and downtime. If multi-threading is enabled, ensure the configuration is set to execute in Queued mode, or you risk causing a system overload.
+Multi-threading should be disabled on all configs unless explicitly instructed by HotWax Support. Incorrect use of multi-threading can cause system overload and downtime. If multi-threading is enabled, the configuration must be set to execute in Queued mode, or you risk causing a system overload.
 {% endhint %}
 
 ## View a configuration
@@ -46,4 +46,4 @@ From the configuration detail page, you can also:
 - **Download a sample JSON template** — Click the JSON icon in the toolbar to download a JSON template pre-populated with the parameter names expected by the import service.
 - **Upload a file** — Click `Upload File` to manually submit a CSV or JSON file for import.
 
-Once a file is done processing, its status will change to **Finished**. If processing finishes with error records, download the error file for review. Error files are in CSV or JSON format with error reasons attached to each record.
+Once a file is done processing, its status will change to **Finished**. If processing finishes with error records, download the error file for review. Error files are in CSV or JSON format with error reasons attached to each record
