@@ -1,17 +1,16 @@
 # Data Manager
 
-The Data Manager allows users audit data ingress and egress from the OMS while also being able to manually import and export data.
+The Data Manager allows users to audit data ingress and egress from the OMS while also being able to manually import and export data.
 
-Getting to the Data Manager Configurations page:
+Getting to the Data Manager page:
 1. Go to the Hamburger Menu
-2. Select `Settings`
-3. Click on `Data Manager Configurations`
+2. Select `MDM`
 
 Key features and functionalities include:
 1. **Manual Data Import and Export:** Manually import or extract data as needed.
 2. **Multithreaded:** Import large amounts of data at high speeds to keep the OMS in sync with external systems.
 3. **Error notifications:** Automatically get notified when an error occurs during import.
-4. **Audit imported data:** Audit imported files as they were provided, ensuring tracability.
+4. **Audit imported data:** Audit imported files as they were provided, ensuring traceability.
 
 ## MDM Under the Hood
 Understanding the inner workings of the OMS MDM is essential to building scalable integrations, troubleshooting integrations, and amending corrupted data.
@@ -19,7 +18,7 @@ Understanding the inner workings of the OMS MDM is essential to building scalabl
 ### Configurations
 A data manager configuration represents the import settings for a type of data. For example, importing sales orders from Shopify, fulfillment from a 3PL, or inventory from a POS are all separate configurations because they are all importing different types of data.
 
-The primary function of a configuration is defined by the import and export services configured in it. Looking at the examples above, here is how that would work:
+The primary function of a configuration is defined by the import service configured in it. Looking at the examples above, here is how that would work:
 
 | Config Name                       | Import service                 |
 | --------------------------------- | ------------------------------ |
@@ -39,7 +38,7 @@ To better accommodate this kind of setup, all we'll need to do is rename the POS
 | ---------------------------------------- | ------------------------------ |
 | Import orders from Shopify               | importShopifyOrders            |
 | Import order fulfillment from 3PL        | fulfillOrderItem               |
-| Reset inventory ~~from POS~~ | resetInventoryByIdentification |
+| Reset inventory ~~from POS~~             | resetInventoryByIdentification |
 
 ### Available Functions
 The MDM becomes truly powerful once you understand that any service in the OMS can be turned into a data manager configuration.
@@ -49,16 +48,17 @@ Essentially, what happens when you assign an import service to an MDM, is that t
 To make the MDM more approachable for starters, we've identified the most commonly used configurations and organized them on the EXIM (Export Import) page. You can, however, see all configurations in the Data Manager Configurations page.
 
 We aim to soon publish a more comprehensive list of available services in the MDM.
+
 ### Execution
-The MDM is one unified import queue across all configurations. When a file is added to the MDM to be processed, the OMS looks at its execution mode to determine how to prioritize it. You have three options to choose from when setting up a configuration:
+The MDM processes imports across two dedicated thread pools — **Priority** and **Normal** — based on the priority configured for each configuration. When a file is submitted, the MDM runner places it into the appropriate pool's queue. You have three execution modes to choose from when setting up a configuration:
 
-1. **Queued:** Queued configurations will respect the FIFO order of the entire MDM.
-2. **Sync:** Files uploaded to a configuration set to execute in sync will be processed immediately by the OMS. Uploading large files to a configuration set to execute in-sync will almost certainly be fatal because it will demand that the OMS route all required resources to process the file immediately. As a general rule, just don't use this setting unless very specifically instructed.
-3. **Async:** Similar to sync, these configurations will not follow the FIFO order that queued imports follow. Instead, an async import will process in the background when threads are available.
+1. **Queued:** The default and recommended mode. Configurations in this mode respect the order (FIFO) within their assigned thread pool queue.
+2. **Sync:** Files uploaded to a configuration set to execute in sync will be processed immediately by the OMS. Uploading large files to a configuration set to execute in sync will almost certainly be fatal because it will demand that the OMS route all required resources to process the file immediately. As a general rule, just don't use this setting unless very specifically instructed.
+3. **Async:** Similar to sync, these configurations will not follow the queued order of their pool. Instead, an async import will process in the background when threads are available.
 
-To understand how these work in practice lets look at an example.
+To understand how these work in practice, let's look at an example.
 
-Here are the three configurations we have setup for import
+Here are the three configurations we have set up for import:
 
 | Config                   | Import service                 | Execution mode |
 | ------------------------ | ------------------------------ | -------------- |
@@ -75,9 +75,41 @@ Here is an example MDM state at this point:
 | Reset inventory       | resetInventoryByIdentification | Queued         | 4:00 am        |
 | Import Shopify orders | importShopifyOrders            | Queued         | 4:15 am        |
 
-All orders placed after the morning inventory file is submitted will not be processed in the OMS until the reset inventory file is finished processing. While this may seem problematic at first because orders are not being processed as they're being placed, the time of day when this operation happens is important to consider. Inventory update processing is happening somewhere between 12 a.m. - 4 a.m. during which no fulfillment operations are running; therefore, orders processing after the inventory file finishes does not actually hurt a retailer’s fulfillment SLA.
+All orders placed after the morning inventory file is submitted will not be processed in the OMS until the reset inventory file is finished processing. While this may seem problematic at first because orders are not being processed as they're being placed, the time of day when this operation happens is important to consider. Inventory update processing is happening somewhere between 12 a.m. - 4 a.m. during which no fulfillment operations are running; therefore, orders processing after the inventory file finishes does not actually hurt a retailer's fulfillment SLA.
 
-#### Queue poller
-All file import tasks enter the MDM queue in a `Pending` status. As the poller works its way through the queue, it transitions the current active file to a `Running` status. The frequency that the poller checks for pending files can be configured using the Process Bulk Imported Files job in the job manager app. Every time the poller runs, it registers all `Pending` items in the queue and will continue to run until all the pending files at the time of polling are finished processing.
+#### MDM Runner and Thread Pools
+The MDM uses a runner-based architecture with two dedicated worker pools:
 
-During this time, other scheduled occurrences of the queue poller job, Process Bulk Imported Files, may take place, but since there is already an instance of the file processor active, it will cancel itself. In the job manager app, this may look like an error that needs to be resolved but is normal behavior.
+- **Priority Pool:** Handles imports from configurations with a higher priority value. Each pool has a fixed number of threads and a bounded queue. When the active thread count equals the maximum pool size, the pool is shown in a warning state. If the queue is full, it is shown in a danger state.
+- **Normal Pool:** Handles all other imports. Operates identically to the Priority Pool but is used for standard-priority configurations.
+
+Each pool exposes live metrics on the Find Import page:
+- **Threads:** Active threads, current pool size, and maximum pool size.
+- **Queue:** Current queue depth and remaining capacity.
+- **Last runner executed at:** The timestamp of the last MDM runner execution.
+
+The thread pool a configuration is routed to is determined automatically based on its configured `Priority` value and is visible as the **Thread Pool** field on the configuration detail page.
+
+#### Import Statuses
+Each import log entry progresses through the following statuses:
+
+| Status      | Description                                                                                             |
+| ----------- | ------------------------------------------------------------------------------------------------------- |
+| **Pending** | The file has been submitted and is waiting to be picked up by the MDM runner.                           |
+| **Queued**  | The runner has picked up the file and placed it in the worker pool queue.                               |
+| **Running** | The file is actively being processed by a worker thread.                                                |
+| **Finished**| Processing completed successfully.                                                                      |
+| **Failed**  | Processing completed but encountered a failure.                                                         |
+| **Crashed** | The runner or worker thread terminated unexpectedly during processing.                                  |
+| **Cancelled**| The import was manually cancelled by a user before or during processing.                               |
+
+A `Pending` import can be cancelled by clicking the **X** button on the log entry before the runner picks it up.
+
+#### File Storage and Retention
+
+Understanding how the MDM stores files is important for managing server disk space and data privacy:
+
+* **File Upload:** When a file is submitted (either manually via the UI or pulled via SFTP), it is immediately saved to the server's local storage (`runtime/datamanager/imported/{configId}/`) before any processing begins. The log entry is created in `Pending` status and linked to this file.
+* **Error Files:** If an import finishes with failed records, the MDM generates a separate error file containing the failed rows and their error reasons. This error file is stored in the same directory as the original file.
+* **Temporary Processing Files:** When multi-threading is enabled, the MDM splits the large file into smaller chunks. These chunks are stored in a temporary directory (`runtime/tmp/DM_{logId}/`) and are automatically deleted by the system once the import finishes.
+* **Data Retention:** Files remain on the server disk as long as their corresponding Data Manager log entry exists. **Deleting a log entry from the UI permanently deletes the original file and any associated error files from the server's physical disk**, freeing up space.

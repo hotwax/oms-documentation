@@ -1,57 +1,49 @@
 # Configuration options
 
-## Add or edit a configuration
+## Add a configuration
 
-If you're creating a new Import configuration to import data from an SFTP location
-1. Click the `Add` button
-2. Enter configuration details
-
-If you're editing an existing import or export configuration
-* Use the search bar to find the configuration by name or ID.
-* Click the `Edit` icon at the end of the search result.
+To create a new import configuration:
+1. Click the `Add` button on the Data Manager Configurations list page.
+2. Enter the configuration details in the dialog.
 
 {% hint style="info" %}
-The Config ID cannot be modified. To use a different ID, create a new configuration.
+The Config ID cannot be modified after creation. To use a different ID, create a new configuration.
 {% endhint %}
 
-| Field                 | Description                                             |
-| --------------------- | ------------------------------------------------------- |
-| **Config ID**         | Unique identifier for the configuration.                |
-| **Description**       | Short explanation of what the configuration handles.    |
-| **Import Service**    | Service name that handles incoming data.                |
-| **Import Path**       | SFTP Folder path for imported files.                    |
-| **Export Content ID** | Template identifier used while exporting data.          |
-| **Export Service**    | Service that handles outgoing data.                     |
-| **Export Path**       | SFTP Destination folder for exported files.             |
-| **File Name Pattern** | Identify and match only relevant files during processing using REGEX expressions |
-| **Multi-threading**   | Y/N flag to enable multi-threading on all files imported in this config (default N)|
-| **Execution Mode**    | Select from Sync, Async or Queued to set how the OMS prioritizes the processing of this configuration. (default Queued) |
-| **Notify on Failure** | Y/N flag to disable notifications on file import error (default Y)|
+## Edit a configuration
+To edit an existing configuration:
+* Use the search bar on the Data Manager Configurations list page to find the configuration by name or ID.
+* Click the configuration ID link to open its detail page.
+* Click the `Edit` button in the toolbar to open the edit dialog.
+
+### Configuration fields
+| Field                | Description                                                                                                         |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Config ID**        | Unique identifier for the configuration. Cannot be changed after creation.                                          |
+| **Description**      | Short explanation of what the configuration handles.                                                                |
+| **Import Service**   | Service name that handles incoming data.                                                                            |
+| **Execution Mode**   | How the OMS prioritizes processing. Select from `Queued`, `Sync`, or `Async`. Defaults to `Queued`.                |
+| **Multi-threading**  | Y/N flag to enable multi-threading for all files imported under this config. Defaults to `N`.                       |
+| **Priority**         | Numeric value that determines which thread pool handles this configuration. Higher values route to the Priority Pool.|
+| **Thread Pool**      | Read-only. Displays the worker pool (`PRIORITY` or `NORMAL`) assigned based on the Priority value.                 |
 
 {% hint style="danger" %}
-Execution mode should always be set to Queued
+Execution mode should always be set to Queued.
 {% endhint %}
 
 {% hint style="danger" %}
-Multi-threading should be disabled on all configs unless explicitly instructed by HotWax Support. Incorrect use of multi-threading can cause to system overload and downtime. If you've decided multi-threading is your poison, make sure that the configuration is set to execute in queued mode or else your almost certain to cause a system overload.
+Multi-threading should be disabled on all configs unless explicitly instructed by HotWax Support. Incorrect use of multi-threading can cause system overload and downtime. If multi-threading is enabled, ensure the configuration is set to execute in Queued mode, or you risk causing a system overload.
 {% endhint %}
 
-{% hint style="info"%} 
-Notifications are sent to the email addresses configured in the instances.
-{% endhint %}
+## View a configuration
+You may need to view a data manager configuration to manually import data or to audit data that has been imported by another user or a scheduled SFTP import job.
 
+1. On the Data Manager Configurations list page, click the **Config ID** link for the configuration you want to view.
+2. The configuration detail page opens, showing all configuration fields and a log of all imports for that configuration.
 
-### View a configuration
+From the configuration detail page, you can also:
+- **Download a sample CSV template** — Click the CSV icon in the toolbar to download a template file pre-populated with the column headers expected by the import service.
+- **Download a sample JSON template** — Click the JSON icon in the toolbar to download a JSON template pre-populated with the parameter names expected by the import service.
+- **Upload a file** — Click `Upload File` to manually submit a CSV or JSON file for import.
 
-You may need to view a data manager configuration to either manually import data or to audit data that has been imported either by another user or scheduled SFTP file import job.
-
-1. Click the `open link` icon beside the service name on the Data Manager Configuration search page.
-
-* This opens the [Import Data page](/documents/system-admin/administration/data-manager/manual-import.md) for the selected service.
-  
-2. Once a file is done processing, its status will change to **Finished**.
-
-   If processing finished with error records, download the error records for review. These are usually in JSON or CSV format, with error reasons attached to each record.
-
-3. Click the `Log` button to view detailed logs related to the service.
-4. Use the log to identify any specific failure or irregularity.
+Once a file is done processing, its status will change to **Finished**. If processing finishes with error records, download the error file for review. Error files are in CSV or JSON format with error reasons attached to each record.
