@@ -1,69 +1,46 @@
-# Find Sales Orders
+# Find orders
 
-The `Find Sales Order` page in HotWax Commerce offers users a comprehensive listing of all orders, accompanied by essential order details including order items, order ID, order date, and customer information. Additionally, users can easily ascertain the current status of each order and identify the facility to which it is allocated. For enhanced order management, the page also displays promise dates and auto-cancel dates, ensuring timely fulfillment.
+Use **Find order** to search the order index and open order detail records. The page supports direct lookup and filtered search for support, operations, and merchandising users who need to find a specific order or work a list of orders.
 
-To streamline the search process, users have the option to search for orders using product identifiers on the search page. Moreover, filters such as product store, facility, and sales channel are available to further refine and manage the order list.
+## Search orders
 
-For seamless integration with external systems, users can export order data in CSV format, facilitating efficient order fulfillment processes across platforms.
+The search field accepts order identifiers, external IDs, customer names, and customer email addresses.
 
-**HotWax Commerce offers the following features on the Sales Order Page:**
+To search for an order:
 
-### Search Sales Orders
+1. Open **Order Manager** > **Find order**.
+2. Enter an order, external ID, customer name, or email address.
+3. Use filters when the search returns too many results.
+4. Select an order row to open the order details page.
 
-The `Search Sales Order` feature on the `Sales Order` page provides users with quick access to information regarding a specific Order Information. Users can search for Orders based on various identifiers such as Order ID, Customer name, SKU, etc. to get an instant overview of the order.
+## Filter orders
 
-**Step-by-Step Usage Instructions:**
+Use filters to narrow the order list before opening an order or selecting multiple orders.
 
-1. Navigate to the HotWax Commerce platform and log in with your credentials. The first page that opens up upon logging in is the Sales Order page.
-2. Within the `Sales Order Page`, you'll find a search bar.
-3. In the search bar, you can enter the identifier of the desired order you wish to locate.
-4. Press the `Enter` key to initiate the search process after entering the search criteria.
-5. The platform will display the search results based on the provided SKU or order ID.
-6. You can now view all pertinent details related to the order, including customer information, order items, and status. Click on the order to access the detailed information.
+| Filter | Use it to |
+| --- | --- |
+| Status | Show all statuses or one or more order statuses. |
+| Order date from | Start the search at a specific order date. |
+| Order date thru | End the search at a specific order date. |
+| Channel | Limit results to one sales channel. |
+| Sort by order date | Show newest orders first or oldest orders first. |
 
-{% embed url="https://youtu.be/g3h3HX6YNNY" %}
+The results list shows the order name or external ID, HotWax order ID, customer name or customer ID, order date, ship time, and order status.
 
-### Filter Orders
+## Select orders
 
-HotWax Commerce allows users to sort through numerous orders based on different filter criteria. Enabling users to focus on specific subsets of orders, making it particularly valuable for those dealing with high order volume.
+Use **Select** when you need to prepare bulk action work from the current result set. After selecting orders, the footer shows the selected count and available bulk actions.
 
-You can apply these filters to Sales Orders:
+Available actions include:
 
-| Filter Name      | Description                                                                                                             |
-| ---------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| Product Store    | Choose the desired Product Store from the dropdown menu to filter by a specific store.                                  |
-| Facility         | Select the Facility to narrow down the results to a particular location.                                                |
-| Order Status     | Filter by Order Status to view orders in a specific stage (created, approved, completed, canceled).                     |
-| Item Status      | Filter by Item Status to focus on specific stages of item fulfillment (Reserved, Picking, Packing, Shipped, Delivered). |
-| Sales Channel    | Choose the desired Sales channel from the dropdown menu to filter by a specific channel such as Shopify, Amazon, etc.   |
-| Order Date       | This filter categorizes orders based on their order date, allowing users to filter them by predefined time intervals.   |
-| Promised Date    | This filter categorizes orders based on their promise date, allowing users to filter them by predefined time intervals. |
-| Auto Cancel Date | The auto-cancel date is the predetermined deadline by which an order will be automatically canceled if not fulfilled.   |
-| Shipping Method  | Filter by the shipping method such as delivery speed (standard, expedited, express), cost, or specific carriers.        |
+* Cancel open items
+* Edit shipping method
+* Add task
 
-{% hint style="success" %}
-You can save the search filters using the disc icon and view the saved search filter by clicking on the three horizontal eclipses on the right.
+{% hint style="info" %}
+Bulk action buttons may be disabled until at least one order is selected.
 {% endhint %}
 
-{% embed url="https://youtu.be/eMb3WC2JmBI" %}
+## Screenshot gaps
 
-### Filter Orders based on Queue
-
-HotWax Commerce has different queues that act as a virtual facility to park the orders that are awaiting fulfillment. Users can view the orders in the queue to identify orders that currently do not have inventory allocated to them.
-
-| Queue Name      | Description                                                                                                                                                                     |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Pre-Orders      | Orders that are placed in Pre-order parking (To hold pre-ordered items until released from HC) can be shown by clicking on the Pre-orders checkbox.                             |
-| Back Orders     | Orders that are placed in Backorder parking (To hold back-ordered items until released from the HC) can be shown by clicking on the Back-orders checkbox.                       |
-| Brokering Queue | Orders that are placed in the Brokering Queue (To hold orders for in-stock items until the next brokering run) can be shown by clicking on the Brokering Queue checkbox.        |
-| Unfillable Hold | Orders that are placed in the Unfillable Hold (To hold unfillable items from further brokering and auto-cancellation) can be shown by clicking on the Unfillable Hold checkbox. |
-
-By filtering orders based on queues, users can focus on handling orders that require immediate attention or fall into the queue.
-
-Users can also filter the orders that will be auto-canceled today to make sure such orders are prioritized.
-
-{% embed url="https://youtu.be/_UYtNXq4IiA" %}
-
-### Export Orders
-
-Enables users to export all displayed sales orders into CSV using the Export CSV function. Once the filtered orders are displayed, Click on the `Export CSV` option to initiate the export process.
+This page needs updated screenshots from test OMS showing realistic order IDs, customer names, order dates, and statuses. Use a filtered list with enough results to show the page structure, but avoid real customer contact details.
