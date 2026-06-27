@@ -88,16 +88,6 @@ Order Manager is accessed through the **HotWax Commerce Launchpad**. After loggi
 
 To log out, go to **☰ Menu → Settings** and click **Logout**.
 
-If the Settings page shows an **"Offline"** badge next to the OMS instance name, the application cannot connect to the backend. Contact your IT team or OMS administrator.
 
----
 
-## Access and Permissions
 
-Not all users will see every button or action. Certain features — such as bulk cancellation, editing shipping methods, and creating order tasks — are only available to users who have been granted the required permissions in the OMS.
-
-If a button appears grayed out or is not visible, it typically means your account does not have permission for that action.
-
----
-
-*Next: [Page Reference →](./README.md)*
