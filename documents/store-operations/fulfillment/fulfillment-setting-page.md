@@ -1,119 +1,149 @@
 ---
 description: >-
-  The Settings page displays all configuration options that store teams can use to manage order fulfillment as per their store operations.
+  The Fulfillment App Settings page controls the user's OMS context, facility
+  context, fulfillment capacity, product display, notifications, documents,
+  scanning, and rejection behavior.
 ---
 
-# Settings Page
+# Settings page
 
 <div data-full-width="false">
 
-<figure><img src="../.gitbook/assets/fulfillment-application-setting-page.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/fulfillment-application-setting-page.png" alt="Fulfillment App Settings page with OMS and app configuration cards"><figcaption><p>Fulfillment App Settings page</p></figcaption></figure>
 
 </div>
 
-Settings are categorized as either **product store wide** (apply across the entire company for all users), **facility-specific** (apply to the selected facility), or **user-specific** (apply only to the individual user).
+Use the Fulfillment App Settings page to confirm which OMS, product store, and facility you are working in before fulfilling orders. The page also controls user preferences, notification preferences, fulfillment capacity, scan requirements, and rejection behavior.
+
+Settings are grouped by scope:
+
+| Scope | Applies to |
+| --- | --- |
+| User-specific | Only the current user. |
+| Facility-specific | The selected facility. |
+| Product store-wide | The selected product store and all users who work in that product store. |
 
 ## OMS
 
-### Product Store
+### OMS instance
 
 `User-specific`
 
-A Product Store represents a brand or a set of products. If your OMS is connected to multiple eCommerce brands selling different product collections, you can have separate Product Stores in HotWax Commerce.
+The OMS instance card shows the OMS environment connected to the app. Use it to confirm that you are working in the right environment before changing settings or fulfilling orders.
 
-<figure><img src="../.gitbook/assets/product-store-setting.png" alt="" width="375"><figcaption><p>Select Product store</p></figcaption></figure>
+### Product store
+
+`User-specific`
+
+A product store represents a company, brand, or catalog. If the OMS is connected to multiple eCommerce stores with different product collections, select the product store you want to work in.
+
+<figure><img src="../.gitbook/assets/product-store-setting.png" alt="Product store selector in the Fulfillment App Settings page" width="375"><figcaption><p>Select product store</p></figcaption></figure>
 
 ### Facility
 
 `User-specific`
 
-The Fulfillment App allows authorized users to select a facility to operate from, determining the visibility of orders, inventory, and other configuration data.
+The facility setting controls the store or warehouse context for the app. Orders, inventory, notification topics, and facility settings depend on the selected facility.
 
-<figure><img src="../.gitbook/assets/facility-selection-modal.png" alt="" width="375"><figcaption><p>Select Facility</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/facility-selection-modal.png" alt="Facility selection modal with searchable facility list" width="375"><figcaption><p>Select facility</p></figcaption></figure>
 
-### Online Order Fulfillment
-
-`Facility-specific`
-
-Adjust the order fulfillment capacity for your facility. Setting fulfillment capacity to No Capacity disables new orders from being allocated to this facility. Select Unlimited Capacity if this facility's fulfillment capacity is unrestricted. You can also select a custom option to set a specific capacity limit.
-
-<figure><img src="../.gitbook/assets/online-order-fulfillment-setting.png" alt="" width="375"><figcaption><p>Online Order Fulfillment</p></figcaption></figure>
-
-### Sell Inventory Online
+### Online order fulfillment
 
 `Facility-specific`
 
-Determine whether the inventory of the store should be accessible for online sales or not. This setting allows you to specify whether the products available in your physical store should also be available for purchase through online channels or not. If enabled, customers browsing your online store will be able to see and purchase items from your inventory. If disabled, the products will not be listed for online sale, restricting purchases to in-store transactions only.
+Set the number of orders the selected facility can receive for fulfillment.
+
+* `0` means no new orders are allocated to the facility.
+* Empty means the facility has unlimited capacity.
+* A custom number limits how many orders can be allocated.
+
+The card also shows how many orders are allocated to the facility today.
+
+<figure><img src="../.gitbook/assets/online-order-fulfillment-setting.png" alt="Online order fulfillment capacity card with allocated order count and capacity setting" width="375"><figcaption><p>Online order fulfillment</p></figcaption></figure>
+
+### Sell inventory online
+
+`Facility-specific`
+
+Use **Sell online** to control whether inventory from the selected facility is available for online sales. If the toggle is off, inventory from that facility is not included for online selling.
 
 ## App
 
-### Product Identifier
+### App version
 
 `User-specific`
 
-This setting allows selection of a primary and secondary product identifier, such as product ID or SKU, to control how products are displayed in the app.
+The app version card shows the installed Fulfillment App version and build information. Use it when checking whether a reported issue is happening on the current app version.
 
-<figure><img src="../.gitbook/assets/fulfillment-product-identifier-setting.png" alt="" width="375"><figcaption><p>Choose Product identifier</p></figcaption></figure>
+### Product identifier
+
+`User-specific`
+
+Select the primary and secondary product identifiers shown in the app. For example, you can show SKU as the main identifier and product ID as the secondary identifier. The card includes a product preview so you can confirm how items will appear during fulfillment.
+
+<figure><img src="../.gitbook/assets/fulfillment-product-identifier-setting.png" alt="Product identifier settings with primary and secondary identifier selectors and product preview" width="375"><figcaption><p>Choose product identifier</p></figcaption></figure>
 
 ### Timezone
 
 `User-specific`
 
-This setting allows selecting an appropriate timezone to maintain consistency and optimize operations according to local time.
+Select the timezone used for app dates and scheduled automation times.
 
-<figure><img src="../.gitbook/assets/fulfillment-timezone-setting.png" alt="" width="375"><figcaption><p>Select timezone</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/fulfillment-timezone-setting.png" alt="Timezone setting showing browser timezone and selected timezone" width="375"><figcaption><p>Select timezone</p></figcaption></figure>
 
 ### Language
 
 `User-specific`
 
-Choose the preferred display language. This setting controls the language used throughout the interface.
+Choose the display language for the app.
 
-<figure><img src="../.gitbook/assets/fulfillment-language-setting.png" alt="" width="375"><figcaption><p>Select Language</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/fulfillment-language-setting.png" alt="Language selector in the Fulfillment App Settings page" width="375"><figcaption><p>Select language</p></figcaption></figure>
 
-### Additional Documents
+### Additional documents
 
 `User-specific`
 
 These settings control whether shipping labels and packing slips are printed along with each shipment by default.
 
-##### Generate Shipping Label
+#### Generate shipping label
+
 A shipping label is used by the delivery carrier to send the package to the customer's address. This setting controls whether shipping labels should be printed for the selected location.
 
-##### Generate Packing Slip
-A packing slip shows the list of items in an order and helps match delivered products with what was ordered. This setting allows deciding whether to print packing slips for shipments or not.
+#### Generate packing slip
 
-<figure><img src="../.gitbook/assets/additional-documents-setting.png" alt="" width="375"><figcaption><p>Additional Documents</p></figcaption></figure>
+A packing slip shows the list of items in an order and helps match delivered products with what was ordered.
 
-### Notification Preference
+<figure><img src="../.gitbook/assets/additional-documents-setting.png" alt="Additional documents settings with shipping label and packing slip toggles" width="375"><figcaption><p>Additional documents</p></figcaption></figure>
+
+### Notification preference
 
 `User-specific`
 
-This setting controls whether store associates receive notifications for orders awaiting fulfillment.
+Select which fulfillment notifications you want to receive for the selected facility.
 
-### Force Scan
+### Force scan
 
-`Product store wide`
+`Product store-wide`
 
 This card contains two related settings for controlling barcode scanning behavior during order fulfillment:
 
-* **Require Scan:** When enabled, store associates must scan the barcode of each product to increment the shipped quantity. This prevents manual entry and helps reduce packing errors.
-* **Barcode Identifier:** Select the product identifier (such as SKU, UPC, or internal name) that will be used when scanning barcodes. If the selected identifier is not found on a product, the scan will fall back to using the product's internal name.
+* **Require scan:** Store associates must scan each product barcode to increase the shipped quantity.
+* **Barcode identifier:** Select the product identifier used for barcode scans. If the selected identifier is not found, the scan falls back to the product internal name.
 
-### Allow Partial Rejections
+### Allow partial rejections
 
-`Product store wide`
+`Product store-wide`
 
-When [Partial Rejection is enabled](/documents/store-operations/fulfillment/rejection.md), individual items get rejected from a facility without impacting the rest of the order.
+When [partial rejection is enabled](/documents/store-operations/fulfillment/rejection.md), store associates can reject individual items without rejecting the rest of the order.
 
-### Collateral Rejections
+### Collateral rejections
 
-`Product store wide`
+`Product store-wide`
 
-[Collateral Rejection](rejection.md) helps manage situations where the product in a rejected order item is part of multiple pending orders at a facility. When enabled, rejecting an item in one order automatically rejects the same product in all other pending orders.
+[Collateral rejection](rejection.md) automatically rejects the same product from other pending orders at the facility when one order item is rejected.
 
 ### Affect QOH on Rejection
 
-`Product store wide`
+`Product store-wide`
 
-[The Affect QOH on Rejection](/documents/store-operations/fulfillment/rejection.md) toggle provides control over inventory adjustments during order rejections.
+Use [Affect QOH on Rejection](/documents/store-operations/fulfillment/rejection.md) to control whether rejected quantities adjust quantity on hand (QOH) along with available to promise (ATP).
