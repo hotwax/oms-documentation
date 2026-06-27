@@ -65,7 +65,7 @@ The card also shows how many orders are allocated to the facility today.
 
 `Facility-specific`
 
-Use **Sell online** to control whether inventory from the selected facility is available for online sales. If the toggle is off, inventory from that facility is not included for online selling.
+Use `Sell online` to control whether inventory from the selected facility is available for online sales. If the toggle is off, inventory from that facility is not included for online selling.
 
 ## App
 
@@ -134,7 +134,7 @@ This card contains two related settings for controlling barcode scanning behavio
 
 `Product store-wide`
 
-When [partial rejection is enabled](/documents/store-operations/fulfillment/rejection.md), store associates can reject individual items without rejecting the rest of the order.
+When [partial rejection is enabled](rejection.md), store associates can reject individual items without rejecting the rest of the order.
 
 ### Collateral rejections
 
@@ -142,8 +142,8 @@ When [partial rejection is enabled](/documents/store-operations/fulfillment/reje
 
 [Collateral rejection](rejection.md) automatically rejects the same product from other pending orders at the facility when one order item is rejected.
 
-### Affect QOH on Rejection
+### Affect QOH on rejection
 
 `Product store-wide`
 
-Use [Affect QOH on Rejection](/documents/store-operations/fulfillment/rejection.md) to control whether rejected quantities adjust quantity on hand (QOH) along with available to promise (ATP).
+Use [Affect QOH on rejection](rejection.md) to control whether rejected quantities adjust quantity on hand (QOH) along with available to promise (ATP).
