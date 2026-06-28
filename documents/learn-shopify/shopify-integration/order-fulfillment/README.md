@@ -50,6 +50,6 @@ Before retrying:
 * Confirm that the fulfillment order is still open and eligible for fulfillment.
 * Match the Shopify order line item to the current fulfillment order line item.
 * Verify that the remaining fulfillable quantity is greater than or equal to the quantity HotWax Commerce is sending.
-* Check whether the item was already fulfilled, cancelled, moved to a different fulfillment order, or partially fulfilled outside the current HotWax Commerce retry.
+* Check whether the item was already fulfilled, canceled, moved to a different fulfillment order, or partially fulfilled outside the current HotWax Commerce retry.
 
 Retrying without this check can keep sending a quantity that Shopify no longer considers fulfillable. If the Shopify fulfillment order has changed, update the HotWax Commerce fulfillment data or stop the retry until the order state is corrected.
