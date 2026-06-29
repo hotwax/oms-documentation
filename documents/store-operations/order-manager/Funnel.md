@@ -123,7 +123,7 @@ A large number at the top of this panel shows how many orders are currently pend
 
 This section shows the **order in which orders will be processed** by the fulfillment sync. Sort rules are derived from the facility's active pick profile. Users with appropriate access may:
 
-- **Add a sort rule** — Click "ADD" and select from a list of available sort parameters (such as delivery days, shipment method, order date, or priority). Only parameters not already in use appear as options.
+- **Add a sort rule:** Click `ADD` and select from a list of available sort parameters (such as delivery days, shipment method, order date, or priority). Only parameters not already in use appear as options.
 - **Reorder sort rules** — Drag and drop rules using the reorder handle to change the priority in which they are applied.
 - **Remove a sort rule** — Click the red X button next to a rule to remove it from the profile.
 
