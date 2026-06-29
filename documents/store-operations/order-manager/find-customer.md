@@ -31,7 +31,7 @@ A search and filter panel is available at the top of the page. The main search b
 - Phone number
 
 Results refresh automatically as you type without requiring a manual submit action.
-Clicking any row navigates to the **Customer Detail** page for that customer at the route `/customers/:partyId`.
+Clicking any row navigates to the **Customer Detail** page.
 
 ---
 
