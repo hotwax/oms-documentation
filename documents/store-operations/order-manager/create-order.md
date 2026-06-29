@@ -4,7 +4,7 @@
 
 The Create Order page enables authorized users to **manually create a new sales order** directly within Order Manager and submit it to Shopify. This feature is intended for scenarios that fall outside normal e-commerce workflows — such as placing an order on behalf of a customer during a phone or in-store interaction, correcting a missed order, or creating a replacement shipment.
 
-Orders created through this page are submitted to Shopify via the OMS API (`POST oms/orders/shopify`) and, upon successful creation, enter the standard fulfillment pipeline alongside all other orders.
+Orders created through this page are submitted to Shopify via the Order Management System (OMS) API (`POST oms/orders/shopify`) and, upon successful creation, enter the standard fulfillment pipeline alongside all other orders.
 
 The page is laid out in a two-column format on larger screens: a left panel for order configuration (shop assignment, customer, address, notes, and tags) and a right panel for adding and managing line items.
 
