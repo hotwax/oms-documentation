@@ -3,7 +3,7 @@
 
 ## Overview
 
-The Find Orders page is the **universal order search interface** within Order Manager. Unlike the workflow-specific pages (Open Orders, Inflight Orders, Packed Orders), which show orders in a particular stage of the fulfillment pipeline, Find Orders allows you to search across **all orders regardless of status** — including completed, cancelled, and in-progress orders.
+The Find Orders page is the **universal order search interface** within Order Manager. Unlike the workflow-specific pages (Open Orders, Inflight Orders, Packed Orders), which show orders in a particular stage of the fulfillment pipeline, Find Orders allows you to search across **all orders regardless of status**, including completed, canceled, and in-progress orders.
 
 This page is the primary tool for customer service representatives, operations managers, and any user who needs to locate a specific order by any combination of identifier, status, date range, or channel.
 
