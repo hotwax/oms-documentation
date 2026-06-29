@@ -20,7 +20,6 @@ Each row in the Packed Orders list represents a single order. The following info
 | **Order ID** | The internal HotWax Commerce order identifier, shown in small overline text |
 | **Order name / External ID** | The Shopify or external order name, along with the order's current status description |
 | **Customer name** | The full name of the customer |
-| **Rule name / Parking unit count** | The name of the routing rule that placed this order here, or, if the order has units in a parking facility, a label such as "3 units in parking" |
 | **Order date** | The exact date and time the order was placed, in `MM-DD-YYYY HH:MM AM/PM` format |
 
 ---
