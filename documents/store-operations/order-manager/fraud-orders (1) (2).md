@@ -15,8 +15,8 @@ The page reloads its task list each time it becomes the active view. After any t
 Each task is displayed as a **Fraud Task Card**. Each card shows:
 
 - The order identifier and customer name
-- The fraud risk level (severity) — sourced from the `ORDER_RISK_LEVEL` enumeration type
-- The risk recommendation — sourced from the `ORDER_RISK_RECOMMENDATION` enumeration type
+- The fraud risk level (severity) — shown on the task card (e.g., High, Medium, Low)
+- The risk recommendation — shown on the task card (e.g., Accept, Reject, Review)
 - A list of the order's line items with product details
 - A **"View Order"** link to navigate directly to the full Order Detail page for that order
 - Individual per-card actions to resolve or cancel the specific order
