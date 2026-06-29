@@ -36,7 +36,7 @@ The following additional filters are available:
 
 | Filter | Options | Behaviour |
 |---|---|---|
-| **Status** | All statuses / multi-select individual statuses | A popover with checkboxes allows selecting one or more order statuses simultaneously. When "All statuses" is checked, any individual status selections are cleared. Statuses are sourced from the `ORDER_STATUS` type in the seed store. |
+| **Status** | All statuses / multi-select individual statuses | A popover with checkboxes allows selecting one or more order statuses simultaneously. When "All statuses" is checked, any individual status selections are cleared.|
 | **Order date from** | Date input (type="date") | Shows only orders placed on or after this date |
 | **Order date thru** | Date input (type="date") | Shows only orders placed on or before this date |
 | **Channel** | All channels / individual sales channels | Filters by the sales channel through which the order was placed |
