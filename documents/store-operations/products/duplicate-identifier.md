@@ -14,7 +14,7 @@ When duplicates are found, the page displays the total number of duplicate group
 
 ## Resolving a Duplicate Group
 
-**Step-by-Step Usage Instructions:**
+Step-by-step usage instructions:
 
 1. On the `Duplicate Identifiers` page, select the `SKU` or `UPC` tab depending on which identifier needs resolving.
 2. Find the duplicate group to resolve and click `RESOLVE [N] PRODUCTS`. This opens the `Resolve SKU`/`Resolve UPC` modal.
