@@ -31,13 +31,6 @@ A search and filter panel is available at the top of the page. The main search b
 - Phone number
 
 Results refresh automatically as you type without requiring a manual submit action.
-
-The following additional filter is available:
-
-| Filter | Options | Behaviour |
-|---|---|---|
-| **Type** | All types / individual party types | Filters results to only customers of the selected party type (e.g. Person only, or Company only). Changing this filter triggers an immediate search. |
-
 Clicking any row navigates to the **Customer Detail** page for that customer at the route `/customers/:partyId`.
 
 ---
