@@ -15,7 +15,7 @@ Below the search bar, the Product Workbench page offers a row of filters to narr
 | Product Type      | Filters products by type, such as `Finished Good` or `Digital Good`.                               |
 | Product Store     | Filters products belonging to a specific store, since each brand's product store maintains its own catalog. |
 | Virtual/Variant   | Filters results to show only parent (`Virtual`) products or only their `Variants`.                 |
-| Tags   | Filters products by tags .                 |
+| Tags   | Filters products by tags.                 |
 
 Applied filters are highlighted, and the result count at the top of the list updates immediately to reflect the active filter combination. Click the red `x` icon next to the filters row to clear all applied filters and search terms at once.
 
