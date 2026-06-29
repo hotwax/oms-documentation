@@ -19,7 +19,7 @@ Each task is displayed as a **Hold Task Card**. Each card shows:
 - A **"View Order"** link that navigates to the full Order Detail page for that order
 - A checkbox for individual selection
 
-Each task card exposes a `submitResolve()` method that is used when the Resolve action is triggered from the footer.
+- Selecting "Resolve" opens a confirmation flow to resolve the selected hold tasks.
 
 ---
 
@@ -27,7 +27,7 @@ Each task card exposes a `submitResolve()` method that is used when the Resolve 
 
 This page supports **selecting multiple tasks simultaneously** for bulk resolution.
 
-A **"Select All"** toggle (`SelectAllResultsItem`) appears at the top of the list when tasks are present. Toggling it selects or deselects all currently loaded tasks. Individual tasks can also be selected or deselected via their checkbox.
+A **"Select All"** toggle appears at the top of the list when tasks are present. Toggling it selects or deselects all currently loaded tasks. Individual tasks can also be selected or deselected via their checkbox.
 
 When at least one task is selected, a **footer toolbar** appears at the bottom of the screen with one action:
 
