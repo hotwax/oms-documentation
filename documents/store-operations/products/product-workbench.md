@@ -25,7 +25,7 @@ Each product row has a checkbox, and the `Select all` checkbox above the list se
 
 ### Sort Results
 
-The `Sort` dropdown, on the top right of the result list, controls the order in which products are displayed. By default, results are sorted `Alphabetically`. User can also sort the results by `Recently Updated`, or `Recently Created`. 
+The `Sort` dropdown, on the top right of the result list, controls the order in which products are displayed. By default, results are sorted `Alphabetically`. You can also sort the results by `Recently Updated`, or `Recently Created`.
 
 ### Product List
 
