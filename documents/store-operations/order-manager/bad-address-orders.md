@@ -30,7 +30,7 @@ When a task loads, the page automatically determines whether a suggested address
 
 This page supports **selecting multiple tasks simultaneously** for bulk operations.
 
-A **"Select All"** toggle (`SelectAllResultsItem`) appears at the top of the list when tasks are present. Toggling it selects or deselects all currently loaded tasks at once. Individual tasks can also be selected or deselected by clicking their checkbox.
+A **"Select All"** toggle appears at the top of the list when tasks are present. Toggling it selects or deselects all currently loaded tasks at once. Individual tasks can also be selected or deselected by clicking their checkbox.
 
 When at least one task is selected, a **footer toolbar** appears at the bottom of the screen with three actions:
 
