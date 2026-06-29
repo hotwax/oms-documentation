@@ -1,6 +1,6 @@
 # Products App
 
-The **Products App** is HotWax Commerce's Product Information Management (PIM) system. It helps businesses manage and maintain product information in one place. The app ensures that product data is accurate, complete, and ready to be used across different sales channels.
+The **Products App** is HotWax Commerce's Product Information Management (PIM) system. It helps businesses manage and maintain product information in one place. The app helps keep product data accurate, complete, and ready to be used across different sales channels.
 
 ## Key Features
 
