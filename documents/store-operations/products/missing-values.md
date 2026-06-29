@@ -4,9 +4,9 @@ The `Missing Values` page provides a centralized dashboard representing informat
 
 ### Catalog Coverage
 
-The `Catalog coverage` cards displays key product identifiers and attributes, such as `Brand`, `Tags`, `SKU`, and others, along with a real-time count of how many items are missing that specific marker, in a worst-first fashion.
+The `Catalog coverage` cards display key product identifiers and attributes, such as `Brand`, `Tags`, `SKU`, and others, along with a real-time count of how many items are missing that specific marker, in a worst-first fashion.
 
-The `Catalog coverage` cards consists of the following attributes and identifiers:
+The `Catalog coverage` cards consist of the following attributes and identifiers:
 
 | **Attribute**         | **Description**                                                                  |
 | ------------------- | ------------------------------------------------------------------------------------ |
