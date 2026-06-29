@@ -48,7 +48,7 @@ Clicking **Clear** resets all filters — including the search query, status sel
 
 ## Select Mode and Bulk Actions
 
-The **"Select" button** appears in the list header 
+The `Select` button appears in the list header to enter Select Mode.
 ### Entering Select Mode
 
 Click **"Select"** to enter Select Mode. The button changes to **"Done"** while in this mode.
