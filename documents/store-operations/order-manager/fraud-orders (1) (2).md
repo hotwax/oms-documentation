@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Fraud Orders page manages sales orders that have been **flagged as potentially fraudulent** by the Order Management System or an integrated risk-assessment service. These orders are placed on hold for review the risk information and decide whether to release the order for fulfillment or cancel it.
+The Fraud Orders page manages sales orders that have been **flagged as potentially fraudulent** by the Order Management System or an integrated risk-assessment service. These orders are placed on hold to review the risk information and decide whether to release the order for fulfillment or cancel it.
 
 Each entry on this page is a **work effort task** (referred to as a "fraud task") associated with a specific order. The task carries metadata from the fraud risk evaluation, including a risk level (severity) and a recommendation from the risk system, which the reviewer uses to make an informed decision.
 
