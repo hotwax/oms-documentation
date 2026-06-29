@@ -21,7 +21,7 @@ Applied filters are highlighted, and the result count at the top of the list upd
 
 ### Select Products and Add Tags
 
-Each product row has a checkbox, and the `Select all` checkbox above the list selects every product currently in the result set. Once one or more products are selected, click `ADD TAGS`. The `ADD TAGS` button will display list of tags, select desired tags and click `Add`. 
+Each product row has a checkbox, and the `Select all` checkbox above the list selects every product currently in the result set. Once one or more products are selected, click `ADD TAGS` to display a list of tags, select the desired tags, and click `Add`.
 
 ### Sort Results
 
