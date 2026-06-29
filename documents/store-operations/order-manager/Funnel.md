@@ -19,7 +19,7 @@ A large number displayed prominently at the top of the card shows the **total nu
 
 ### Brokering Status
 
-A progress bar and percentage indicate what proportion of today's total ship groups have been **brokered** — that is, assigned to a fulfillment facility. A higher percentage means a greater share of today's orders have been routed to a store or warehouse.
+A progress bar and percentage indicate what proportion of today's total ship groups have been **brokered**, meaning they are assigned to a fulfillment facility. A higher percentage means a greater share of today's orders have been routed to a store or warehouse.
 
 Clicking this metric navigates to the **Open Orders** page.
 
