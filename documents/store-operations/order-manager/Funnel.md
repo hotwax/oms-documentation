@@ -10,36 +10,44 @@ The page displays data scoped to the currently active product store, shown at th
 ---
 
 ## Section 1: Global Statistics Card
-
 At the top of the page, a summary card displays **today's overall fulfillment performance** for the active product store. This card is refreshed each time the page is loaded or navigated to.
-
+ 
 ### Today's Order Count
-
 A large number displayed prominently at the top of the card shows the **total number of orders received today**, along with a sub-label indicating how many hours have elapsed since the start of the business day.
-
-### Brokering Status
-
-A progress bar and percentage indicate what proportion of today's total ship groups have been **brokered**, meaning they are assigned to a fulfillment facility. A higher percentage means a greater share of today's orders have been routed to a store or warehouse.
-
-Clicking this metric navigates to the **Open Orders** page.
-
-### Picked and Packed
-
-A second progress bar shows the combined percentage of brokered ship groups that have been **picked and packed** (or already shipped). This bar is segmented to separately represent ship groups that have been packed versus those that have been shipped, providing a granular view of how far along fulfillment has progressed.
-
-Clicking this metric navigates to the **Packed Orders** page.
-
+ 
+### Fulfillment Progress Bars
+Three progress bars show the status of today's ship groups as they move through fulfillment:
+ 
+- **Assigned to fulfillment** — shows the percentage of today's ship groups that have been assigned to a fulfillment facility (store or warehouse).
+- **In flight** — shows the percentage of ship groups currently being processed after assignment.
+- **Packed and shipped** — shows the percentage of ship groups that have been packed and shipped.
+ 
 ---
 
-## Section 2: Exception and Problem Order Summary
-
-Below the global statistics card, three clickable summary cards present the status of orders that require attention. These cards are sometimes referred to as the "drilldown section."
-
-### Open Orders Card
-
-Displays the **total count of approved orders** that are waiting for a fulfillment facility assignment — in other words, orders that have not yet been brokered. Below the count, a subtitle shows the **date and time of the oldest open order** currently in the system, which helps operations teams identify how long orders have been waiting.
-
-Clicking this card navigates to the **Open Orders** page.
+## Section 2: Unbrokered and Brokered Orders
+Below the global statistics card, two cards show order counts split by brokering status.
+ 
+### Unbrokered Card
+Displays the **total count of orders not yet brokered** (not yet assigned to a fulfillment facility). The count is broken down into clickable queues:
+ 
+| Queue | Description |
+|---|---|
+| **Brokering queue** | Orders currently being evaluated for facility assignment |
+| **Rejected queue** | Orders rejected during the brokering process |
+| **Unfillable queue** | Orders for which no facility could be found with sufficient inventory |
+| **Unfillable Hold Parking** | Unfillable orders parked on hold |
+| **Store Pickup Rejected Queue** | Store pickup orders rejected during brokering |
+| **Backorder Parking** | Orders parked awaiting backordered inventory |
+| **Preorder Parking** | Orders parked awaiting preorder release |
+ 
+### Brokered Card
+Displays the **total count of orders that have been brokered**. The count is broken down into clickable stages:
+ 
+| Stage | Description |
+|---|---|
+| **Open** | Brokered ship groups not yet picked |
+| **Picked** | Ship groups that have been picked |
+| **Packed and shipped** | Ship groups that have been packed and shipped |
 
 ### Unfillable Today Card
 
