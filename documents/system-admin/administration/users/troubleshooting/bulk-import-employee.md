@@ -1,4 +1,4 @@
-# How to Bulk Import Employee
+# Troubleshoot employee imports
 
 ## Problem
 
@@ -22,11 +22,11 @@ The issues with importing employees are generally related to specific data forma
 
 * **Missing mandatory fields** – Ensure that the CSV contains all the required fields: first name, last name, security group, username, password, email ID (for password reset), and external ID (if provided).
 * **Duplicate employee entries** – If an employee already exists in the system with the same external ID or username, the import may fail.
-* **Invalid format for email or external ID** – Ensure that the email follows the standard format (e.g., example@domain.com), and external ID (if used) is unique.
+* **Invalid format for email or external ID** – Ensure that the email follows the standard format (for example, `example@domain.com`), and external ID (if used) is unique.
 * **Security group not recognized** – Verify that the security group matches the ones available in the system.
 * **Incorrect username or password format** – The username should follow the specified pattern, and the password should meet the security requirements (e.g., minimum length, special characters).
 
-## Solution
+## Resolve errors
 
 ### Step 1: Login to OMS
 
