@@ -1,19 +1,33 @@
 ---
-description: Troubleshooting Guide for orders stuck in created status
+description: Troubleshoot orders that remain in Created or Hold status instead of being approved
 ---
 
-# Order Approval Errors
+# Order approval errors
 
-In HotWax Commerce, all orders are initially marked as "Created" after being downloaded. Orders can be auto-approved using a scheduled job called `Approve Orders`, which checks the approval status of Shopify orders based on parameters set by Shopify merchants. The job runs at a default frequency of 30 minutes and approves orders once all necessary details and required references are established.
+Orders must be approved before they can move into fulfillment. If an order remains in `Created` or `Hold`, check its payment, approval settings, and risk review details before trying to approve it again.
 
-Clients may have varying approval processes, such as requiring customer IDs or payment verification tags. If the job is stuck in the "Created' status", it could be due to missing or incorrect order attributes.
+## Before you start
 
-## Scenario 1: Missing Order Attribute
+You need access to the order, its payment information, and the product store that owns the order. Some approval rules are configured for each product store, so the same check can produce different results for different stores.
 
-Orders may not get approved if essential attributes are missing. For instance, some clients may require specific information such as a customer ID or Municipio ID. If these attributes are missing, the approval job cannot verify and approve the order, causing it to remain in the 'Created' status. For detailed instructions on how to add missing order attributes, refer to our [troubleshooting documentation](order-attribute-missing.md)
+## Check why the order is not approved
 
-<figure><img src="../../../.gitbook/assets/add-order-attribute.png" alt="" width="563"><figcaption></figcaption></figure>
+1. Open the order in **Order Manager** and confirm that its status is `Created` or `Hold`.
+2. Review the payment status. Orders that are waiting for a non-cash-on-delivery payment do not auto-approve unless the product store is configured to approve without a payment check.
+3. Confirm that automatic approval is enabled for the product store and has not been turned off for the order.
+4. Review any required order attributes. Missing or incorrect values, such as a customer or municipality identifier used by your approval rules, can prevent the order from being approved. For help correcting an attribute, see [Missing order attributes](order-attribute-missing.md).
+5. Check the order's risk assessment, if your Shopify integration sends risk data.
 
-## Scenario 2: Incorrect Order Attribute
+## Handle risk review outcomes
 
-Another common issue is the presence of incorrect order attributes. This could mean that the required information is either incomplete or inaccurately entered, which can prevent the order from being approved. For example, incorrect municipio ID can lead to approval failures.
+An order with a pending risk assessment remains unapproved until the assessment is available. Do not manually approve the order while the assessment is pending.
+
+After an assessment is available, the configured recommendation determines what happens next:
+
+* An accepted or no-risk recommendation allows the order to continue through approval.
+* An investigate recommendation creates a customer service review task. Review the task before taking any customer-facing action.
+* A cancel recommendation can cancel the order automatically when the product store is configured to accept that recommendation. Otherwise, the system creates a customer service review task.
+
+## Check the result
+
+After correcting the blocking condition, refresh the order and confirm that it moves to `Approved`. If a customer service review task was created, complete the review according to your team's process and monitor the order before fulfillment begins.
