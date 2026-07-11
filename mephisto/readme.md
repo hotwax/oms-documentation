@@ -1,4 +1,17 @@
-Mephisto Placeholder
+**Application components**
+*  OMS
+*  Maarg
+*  Nifi
+*  Superset
+*  SFTP
+
+**High value scenarios**
+*  Store to Store inventory transfer planning
+*  Store to Store inventory transfer execution
+*  
+
+
+
 
 https://git.hotwax.co/commerce/oms/blob/dc99f7ac08a12656a75bddef148902b6d0e64bbe/applications/hwmapps/data/commerce/optionalJobData/NetSuiteJobData.xml#L36
 

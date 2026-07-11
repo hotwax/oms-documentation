@@ -3,12 +3,22 @@
 * [Introduction](README.md)
 * [Why HotWax Commerce](whyHotWax.md)
 
-## FLows
+## Flows
 
 * [Product](flows/products/README.md)
   * [Bundles](flows/products/bundles.md)
-  * [Service Products](flows/products/service-products.md)
+  * [Earring Flexiblity](flows/products/Earring-Flexiblity.md)
+  * [SOP for Product Setup](flows/products/product-set-up-sop.md)
+* [Service Products](flows/products/Service-products/readme.md)
+  * [Flyer](flows/products/Service-products/flyer.md)
+  * [Bespoke](flows/products/Service-products/Bespoke.md)
+  * [Keepsake Box](flows/products/Service-products/Keepsake.md)
+  * [Gift Wrap](flows/products/Service-products/GiftWrap.md)
+* [Facility](flows/facility/README.md)
+  * [External Mappings](flows/facility/external-mappings.md)
+  * [Pre-open Setup](flows/facility/pre-open-setup.md)
 * [Inventory](flows/inventory/README.md)
+  * [Kit Inventory Computation](flows/inventory/Kit-Inventory-Computation.md)
 * [Sales Orders](flows/sales-orders/README.md)
   * [Billing Address](flows/sales-orders/billing-address.md)
   * [Gift Cards](flows/sales-orders/gift-cards.md)

@@ -20,6 +20,7 @@
   * [Departments](Flows/SalesOrders/DepartmentMapping.md)
   * [Sales Channels](Flows/SalesOrders/SalesChannelMapping.md)
   * [Exchange Orders](Flows/SalesOrders/ExchangeOrders.md)
+  * [Customer Owned Frame Oders](Flows/SalesOrders/customer-owned-frame.md)
   * [Order Types](Flows/SalesOrders/OrderTypeMapping.md)
   * [Order cancellations](Flows/SalesOrders/OrderCancellations.md)
   * [Reference IDs](Flows/SalesOrders/ShopifyOrderName.md)

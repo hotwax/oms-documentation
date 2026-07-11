@@ -1,9 +1,23 @@
 # Service Products
 
 This document contains all the special conditions when and how service products will be added to orders.
+##﻿# <a name="_ka6ztba2rcbt"></a>**First Time Customers**
+The Gorjana Introduction Flyer is a welcome gift for first-time customers, included with their first order.
+## <a name="_chturox2usve"></a>**Process Flow**
+### <a name="_rx4oek5ge7zq"></a>**1. Determining Order Type**
+- **Store Orders**: Store managers identify first-time buyers and include the flyer with their order.
+- **Web Orders**: Shopify identifies first-time customers by checking if their order count is 1. If true, the **shipBooklet** tag is added to the order.
 
-## First time customers
-First time customers are provided with a special introduction flyer. This product is only fulfilled from the warehouse and included with an order the first time a customer shops with Gorjana.
+**2. NiFi Processing**
+Orders imported from Shopify in JSON format are processed through NiFi. A Groovy script in “Custom Order Import Flow” scans the orders for the **shipBooklet** tag. If the tag is found, the script:
+
+- Creates an **orderAttribute** in the OMS, marking the order with **isShipBooklet = true**.
+
+**3. Integration with NetSuite**
+When the order is sent to NetSuite:
+
+- The **shipBooklet** = true, indicates that a flyer should be included.
+- The packing slip includes a note: “**Booklet = Yes**”.
 
 ## Gift wrapping
 Customers can select particular items in their cart to be gift wrapped. This choice is saved in Shopify using line item properties of that order item. Line item properites are saved in HotWax as order item attributes which can then be used to process this automation.

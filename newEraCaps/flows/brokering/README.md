@@ -8,7 +8,18 @@ description: >-
 
 New Era Caps will use its stores for fulfillment along with their warehouse, but the conditions for when to use stores fulfillment are very particular and require that brokering be configured correctly to accommodate for these preferences.
 
-**SFTP Path to export orders brokered at Warehouse:** `/home/newera-uat-sftp/wms/brokered_orders/outgoing`
+**SFTP Path to export orders brokered at Warehouse:** 
+
+UAT
+```
+/home/newera-uat-sftp/hotwax/Testing_Hotwax/from-shopify
+```
+
+PROD 
+```
+/home/newera-oms-sftp/Testing-Hotwax/from-shopify
+```
+
 
 Online shipping orders are always routed to the warehouse unless the customer has selected a store that they want the product to be shipped from when adding the item to their cart. In the event that an order item contains a soft allocated ship-from facility, the OMS will read the pre-selected facility and allocate those order items to the respective locations for fulfillment.
 
@@ -28,21 +39,31 @@ The WMS software used by New Era Caps is not able to differentiate between two s
 
 ## How “Reshipped” works in HotWax Commerce
 
-A flow in NiFi checks order items that have been recently (time based cursor) canceled from the warehouse and does the following: Add an order level attribute that helps users track Reshipped progress and identify that the order name needs to be appended with “\_R”
+When an order is partially canceled on Shopify by the CSR team, the cancellation details are sent to the OMS through the "Import Order Updates" job. A NiFi flow in HotWax identifies recently canceled order items from the warehouse using a time-based cursor and adds an order-level attribute to reshipped orders. The Reshipped flow does not apply to Store Fulfilled Orders because those orders are fulfilled using the HotWax Store Fulfillment App.
 
 Key: "ReShipped" Value: "Pending"
 
-Delete the External Fulfillment Order Item for all items in the ship group where the item was canceled from.
+The flow also deletes the External Fulfillment Order Item for all items in the ship group that were not canceled.
 
-Because canceled items are no longer located at the facility they were brokered too, NiFi will use the Order Facility Change history to identify canceled items that were at the warehouse facility before being canceled. This entity will also contain details of which shipgroup the item was removed from, helping identify which order items to delete the fulfillment history for.
+Because canceled items are no longer located at the facility they were brokered too, NiFi uses the Order Facility Change history to identify canceled items that were at the warehouse facility before being canceled. This entity will also contain details of which shipgroup the item was removed from, helping identify which order items to delete the fulfillment history for. NiFi puts the file of these orders on SFTP.
 
-Now that the External Fulfillment Order Item record is deleted for the items that need to be reshipped, the brokered items feed will automatically include these items the next time it runs. When this feed is then consumed by NiFi to be transformed into the custom New Era Caps WMS fixed byte file format, the “ReShipped: Pending” order attributes will be used as an identifier that the order name needs to have “\_R” appended to it.
+**SFTP path of UAT**
+```
+/home/newera-uat-sftp/hotwax/oms/ImportJsonListData
+```
+The JsonListData calls the following services:
+1. deleteExternalFulfillmentOrderItem
+2. updateOrderAttr
 
-The field in the WMS feed where this change is made: CUST ORDER NO. (S-3)
+Job name to consume these files: {to be added}
 
-Parallel to the WMS feed transformation of the brokered feed, another processor will consume the same file to update all orders with the value of the ReShipped order attribute from Pending to the new constructed order name with the appended “\_R” value.
+Now that the External Fulfillment Order Item record is deleted for the items that need to be reshipped, the brokered items feed will automatically include these items the next time it runs. 
 
-New attribute value `{orderName}_R`
+When processing the brokered items feed, NiFi checks for orders that have an order attribute of Reshipped: Pending and logs each of these order Ids into a CSV. These orders are submitted to the OMS to have their order attribute value updated to "Sent"
 
-## Open Question:
-How to handle the rejection of soft allocated orders to the specific store?
+Key: "ReShipped" Value: "Sent"
+ 
+**SFTP path of UAT**
+```
+/home/newera-uat-sftp/hotwax/ReshippedOrderAttr
+```

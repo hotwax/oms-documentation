@@ -8,14 +8,17 @@ description: >-
 
 At the end of each day, orders shipped from the WMS are sent to HotWax with tracking details. HotWax uses the facility ID and order ID to identify which shipgroup of the order has been fulfilled by the WMS.
 
-In the event that the order is a “ReShipped” order, then the order name in the CSV will have the expected “\_R” signifier appended to it. When this feed is consumed by the integration layer, it will automatically trim this appended tag from the order to return the order name back to its original state before processing it in the OMS.
-
 ## CSV Schema
 
 **SFTP Path**
 
+UAT
 ```
-/home/newera-uat-sftp/wms/fulfilled_orders/incoming
+/home/newera-uat-sftp/hotwax/Testing_Hotwax/tracking_info
+```
+PROD
+```
+newera_prod_hw/tracking_info
 ```
 
 | DO#        | 日付       | 個数 | 問い合せNo       | 便名   |

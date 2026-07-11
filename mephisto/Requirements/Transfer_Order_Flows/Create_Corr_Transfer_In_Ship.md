@@ -7,20 +7,20 @@ This document highlights how Transfer Orders (TOs) will be managed after a recom
 
 1. **Creating and Accepting Transfer Orders**
    - After Transfer Order recommendations are generated, the merchandising team reviews and accepts the needed TOs.
-     - 
-   - The merchandising team will create CSV file and upload them into HotWax using [Import Transfer Order]([url](https://mephisto-uat.hotwax.io/commerce/control/ImportData?configId=IMP_TRANSFER_ORD)) MDM.
-   - Once the file is uploaded an existing Import Transfer Order job within HotWax OMS creates the corresponding TOs.
-   - An existing job invokes `bulkApproveTransferOrders` service that approves the TOs in created status and reserves the inventory for the products.
+   - The merchandising team will create CSV file and upload them into HotWax using EXIM.
+   - Once the file is uplaoded an existing job within HotWax OMS creates the corresponding TOs.
+   - **Note**: More detail is required on this process.
 
 2. **Fulfilling Transfer Orders**
    - The store fulfills these accepted Transfer Orders and creates shipments for them with `"shipmentTypeId": "OUT_TRANSFER"`.
    - This process already exists in HotWax OMS.
+   - **Note**: More detail is required on this process.
 
 3. **Scheduled Job for Outgoing Transfers**
    - A scheduled job will be created to pull all new `"OUT_TRANSFER"` shipments in the `"PURCH_SHIP_SHIPPED"` status.
    - These shipments will be placed at an SFTP location for further processing.
    - **Note**: The format of this file needs to be identified. Ideally, it should match the format used by the existing jobs. This is JSON
-   - **Note**: The`generate_TransferOrderFulfilledItemsFeed"` service generates the feed in JSON format.
+   - **Note**: This job may be helpful here `generate_TransferOrderFulfilledItemsFeed"`
 
 4. **Using NiFi to Create Incoming Transfers**
    - A NiFi flow will be created to process the files placed at the SFTP location.
@@ -30,7 +30,7 @@ This document highlights how Transfer Orders (TOs) will be managed after a recom
    - The file created by NiFi will be uploaded into OMS using configID: `IMP_SHIPMENT` and job: `createIncomingShipment` 
 
 ### JOLT Transformation for Incoming Transfers
-The following JOLT transformation is used to create the new `"IN_TRANSFER"` shipment:
+The following JOLT transformation is used create the new `"IN_TRANSFER"` shipment:
 
 ```json
 [
@@ -46,8 +46,8 @@ The following JOLT transformation is used to create the new `"IN_TRANSFER"` ship
   {
     "operation": "modify-overwrite-beta",
     "spec": {
-      "type": "IN_TRANSFER", // Create new IN_TRANSFER
-      "status": "PURCH_SHIP_SHIPPED" // Set status to PURCH_SHIP_SHIPPED
+      "shipmentTypeId": "IN_TRANSFER", // Create new IN_TRANSFER
+      "statusId": "PURCH_SHIP_SHIPPED" // Set status to PURCH_SHIP_SHIPPED
     }
   }
 ]

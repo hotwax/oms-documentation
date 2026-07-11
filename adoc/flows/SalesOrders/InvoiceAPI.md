@@ -29,6 +29,10 @@ https://<host>:<port>/api/v1/Document/Ordertoinvoice
   "TotalAmt": 0,
   "TotalDiscAmt": 0,
   "ShippingAmt": 0,
+  "FiscalCredit": "",
+  "CompanyId": "",
+  "CompanyName": "",
+  "CompanyAddress": "",
 
   // Shipping details for the customer
   "CustomerShipping": {
@@ -40,6 +44,7 @@ https://<host>:<port>/api/v1/Document/Ordertoinvoice
     "City": "",
     "Country": "",
     "NoDocument": "",
+    "TypeDocument": "",
     "Phone": ""
   },
 
@@ -53,6 +58,7 @@ https://<host>:<port>/api/v1/Document/Ordertoinvoice
     "City": "",
     "Country": "",
     "NoDocument": "",
+    "TypeDocument": "",
     "Phone": ""
   },
 
@@ -101,6 +107,11 @@ https://<host>:<port>/api/v1/Document/Ordertoinvoice
   "TotalAmt": 40,
   "TotalDiscAmt": 10,
   "ShippingAmt": 0,
+  "FiscalCredit": "true",
+  "CompanyId": "prueba 3:06",
+  "CompanyName": "ADOC",
+  "CompanyAddress": "calle 8",
+
 
   "CustomerShipping": {
     "FirstName": "Alan",
@@ -111,6 +122,7 @@ https://<host>:<port>/api/v1/Document/Ordertoinvoice
     "City": "San Salvador",
     "Country": "El Salvador",
     "NoDocument": "039583310",
+    "TypeDocument": "dui",
     "Phone": "23251988"
   },
 
@@ -123,6 +135,7 @@ https://<host>:<port>/api/v1/Document/Ordertoinvoice
     "City": "San Salvador",
     "Country": "El Salvador",
     "NoDocument": "039583310",
+    "TypeDocument": "dui",
     "Phone": "23251988"
   },
 
@@ -165,6 +178,10 @@ https://<host>:<port>/api/v1/Document/Ordertoinvoice
 | TotalAmt       | Float(10,4) |            | Y              | Root             | Total Amount of the Order                                                                       |
 | TotalDiscAmt   | Float(10,4) |            | N              | Root             | Total Discount Amount applied to the entire order                                               |
 | ShippingAmt    | Float(10,4) |            | N              | Root             | Total Amount for Shipping (if applicable)                                                       |
+| FiscalCredit   | Boolean     | Y          | Y              | Root             | If value is true, the fields CompanyId, CompanyName, and CompanyAddress are required.           |
+| CompanyId      | String      | 20         | N              | Root             | Company Identity Document                                                                       |
+| CompanyName    | String      | 30         | N              | Root             | Company Name according to Identity Document                                                     |
+| CompanyAddress | String      | 80         | N              | Root             | Company Address according to Identity Document                                                  |    
 | FirstName      | String      | 30         | Y              | CustomerBilling  | First Name of the Customer for Billing                                                          |
 | LastName       | String      | 30         | Y              | CustomerBilling  | Last Name of the Customer for Billing                                                           |
 | Email          | String      | 60         | Y              | CustomerBilling  | Email address of the Customer for Billing                                                       |
@@ -173,6 +190,7 @@ https://<host>:<port>/api/v1/Document/Ordertoinvoice
 | City           | String      | 40         | N              | CustomerBilling  | City of the Customer's address for Billing                                                      |
 | Country        | String      | 40         | N              | CustomerBilling  | Country of the Customer's address for Billing                                                   |
 | NoDocument     | String      | 20         | Y              | CustomerBilling  | Identity Document Number for Customer Billing                                                   |
+| TypeDocument   | String      | 40         | Y              | CustomerBilling  | Type Document the Customer for Billing                                                          |
 | FirstName      | String      | 30         | Y              | CustomerShipping | First Name of the Customer for Shipping                                                         |
 | LastName       | String      | 30         | Y              | CustomerShipping | Last Name of the Customer for Shipping                                                          |
 | Email          | String      | 60         | Y              | CustomerShipping | Email address of the Customer for Shipping                                                      |
@@ -181,6 +199,7 @@ https://<host>:<port>/api/v1/Document/Ordertoinvoice
 | City           | String      | 40         | N              | CustomerShipping | City of the Customer's address for Shipping                                                     |
 | Country        | String      | 40         | N              | CustomerShipping | Country of the Customer's address for Shipping                                                  |
 | NoDocument     | String      | 20         | Y              | CustomerShipping | Identity Document Number for Customer Shipping                                                  |
+| TypeDocument   | String      | 40         | Y              | CustomerShipping | Type Document the Customer for Shipping                                                         |
 | UPC            | String      | 19         | Y              | Item             | Product Stock Keeping Unit (SKU) Code                                                           |
 | OrigPrice      | Float(10,4) |            | Y              | Item             | Original Price of the Product                                                                   |
 | OrigTax        | Float(10,4) |            | Y              | Item             | Original Tax amount associated with the Product                                                 |

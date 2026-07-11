@@ -55,4 +55,8 @@ Additionally, users have the flexibility to configure additional settings based 
 | PRDT\_IDEN\_PREF      | {"primaryId":"internalName", "secondaryId":"parentProductName"} | {"primaryId":"parentProductName", "secondaryId":"title"} | {"primaryId":"parentProductName", "secondaryId":"SHOPIFY\_PROD\_SKU"} | {"primaryId":"internalName", "secondaryId":"parentProductName"} | {"primaryId":"internalName", "secondaryId":"title"} |
 | DEFAULT\_CARRIER      | C807                                                            | CARGOTRANS                                               | HN\_DEFAULT\_CARRIER                                                  | -                                                               | TERMINAL\_EXPRESS                                   |
 
-> Table 3: Details specific to various ADOC OMS instances.
+### Primary product store of the facility
+
+It is important to ensure that each facility has a designated primary product store. This can be configured in the Facilities app by selecting the primary product store from the `Product Stores` card. Assigning a product store as primary ensures that the facility is displayed in the Admin Helper app only for the selected primary product store.
+
+If a facility does not have a product store marked as primary, it will not appear in Shopify for that product store. This ensures only facilities linked to the primary product store are visible.

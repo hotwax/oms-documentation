@@ -1,10 +1,10 @@
-# Proposal for Implementing a BI Report to Recommend Transfers
+# Calculating and Updating the Sales Velocity of Products
 
 ## Objective
-Mephisto has requested a BI report to help them make intelligent product transfer decisions. This report aims to assist store managers in making data-driven choices by providing actionable insights into product sales velocity and inventory management, thereby enhancing customer satisfaction and maximizing sales opportunities.
+Mephisto has requested a BI report to help them make intelligent product transfer decisions. This report aims to assist store managers in making data-driven choices by providing actionable insights into product sales velocity.
 
 ## Proposed Solution
-Develop a new screen/report inspired by the existing ProductSalesVelocity screen and scripts, adopting a more holistic approach that encompasses all products and all facilities. The end result will be a BI report that recommends inventory transfers based on sales velocity data analysis.
+Develop a new screen/report inspired by the existing ProductSalesVelocity screen and scripts, adopting a more holistic approach that encompasses all products and all facilities. 
 
 ## Implementation Details
 
@@ -58,10 +58,3 @@ GROUP BY
 
 ### 3. Display Data
 The new template will format and present the calculated data in an accessible manner for store managers. This will allow store managers to easily identify products with high or low sales velocity across different facilities.
-
-### 4. Recommend Inventory Transfers
-Based on the sales velocity calculations, the system will identify:
-- **High-Demand Stores**: Locations where certain products are selling rapidly.
-- **Low-Demand Stores**: Locations where the same products have lower sales velocity.
-
-The BI report will recommend transferring inventory from low-demand stores to high-demand stores to balance stock levels and meet customer demand effectively.

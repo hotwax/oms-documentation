@@ -41,9 +41,10 @@ The `updateProductAverageCostOnReceiveInventory` service is automatically invoke
 ### Step 3: Calculate New Average Cost
 The service calculates the new average cost of the item using the Weighted Average Cost method. The Weighted Average Cost is calculated by considering both the cost of the existing inventory and the cost of the newly received inventory. The formula used is:
 
-\[
-\text{New Average Cost} = \frac{(\text{Existing Quantity} \times \text{Existing Cost}) + (\text{New Quantity} \times \text{New Cost})}{\text{Existing Quantity} + \text{New Quantity}}
-\]
+New Average Cost = 
+((Existing Quantity × Existing Cost) + (New Quantity × New Cost)) 
+divided by 
+(Existing Quantity + New Quantity)
 
 This method provides a balanced approach to costing, taking into account both historical and current inventory costs. The cost of existing inventory is calculated using the most recent valid record in `productAverageCost` for that item, ensuring accuracy.
 
