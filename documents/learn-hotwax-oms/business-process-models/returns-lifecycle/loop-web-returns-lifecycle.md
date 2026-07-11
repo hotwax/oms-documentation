@@ -8,7 +8,7 @@ description: >-
 
 <figure><img src="../../.gitbook/assets/web-returns-bpm.png" alt=""><figcaption><p>Web returns lifecycle business process model</p></figcaption></figure>
 
-Customers start their return process in Shopify, and Loop manages the return process. From there, HotWax Commerce Integration Platform plays a key role, it connects the dots between all systems by transforming and syncing return data to NetSuite. This ensures every step, from return creation to refund and inventory updates, stays in sync.
+Customers start their return process in Shopify, and Loop manages the return process. From there, HotWax Commerce Integration Platform connects the systems by transforming and syncing return data to NetSuite. This ensures that every step, from return creation to refund and inventory updates, stays in sync.
 
 To explain the return lifecycle, we've taken Shopify as the eCommerce platform, Loop as the Return Management System (RMS), NetSuite as the ERP, and HotWax Commerce as both the Order Management System (OMS) and the Integration Platform.
 
@@ -39,7 +39,7 @@ Once all the necessary details are fetched, HotWax Commerce Integration Platform
 
 **Why is this important?**
 
-Most third-party tools like NovaModule only move data from one system to another. But HotWax Commerce does more than that. It brings together return, order and product details to create a clear link between the return and the original sale order.
+Most third-party tools like NovaModule only move data from one system to another. HotWax Commerce brings together return, order, and product details to create a clear link between the return and the original sales order.
 
 ## 4. HotWax Commerce Exports Return Data for NetSuite
 
@@ -53,7 +53,7 @@ If a new return file is found, NetSuite reads and processes it. Then, it creates
 
 The RMA is also linked to the original sales order. This helps keep track of the return and lets the warehouse team know in advance that the item will be coming back.
 
-## 6. Process and Export Item Receipts Records
+## 6. Process and export Item Receipt records
 
 After a few days, when the customer's returned item is physically received at the warehouse, the following actions take place:
 
@@ -67,7 +67,7 @@ This step is important for completing the return process in Loop; let’s see ho
 
 ## 7. Import Item Receipt Records From NetSuite
 
-A job in the HotWax Integration Platform regularly checks for new CSV files. When it finds one, it extracts the Loop Return IDs so that Loop can initiate the refund process for items that have been returned.
+A job in the HotWax Commerce Integration Platform regularly checks for new CSV files. When it finds one, it extracts the Loop Return IDs so that Loop can initiate the refund process for items that have been returned.
 
 ## 8. Close Returns in Loop
 
@@ -76,9 +76,9 @@ Based on the Loop return IDs, HotWax Commerce triggers Loop to take the next ste
 * The return status is changed from <mark style="color:orange;">**“Open”**</mark> to <mark style="color:orange;">**“Closed”**</mark>.
 * Once the return is marked as Closed in Loop, different actions happen depending on what the customer chose in their return request:
 
-  * If the customer opted to receive a refund on their original payment method, Loop triggers Shopify to process the refund
-  * If the customer selects "Return for Store Credit," Loop automatically issues a gift card to the customer for the corresponding amount
-  * If the customer selects "Exchange," Loop creates a new exchange order in Shopify
+  * If the customer opted to receive a refund on their original payment method, Loop triggers Shopify to process the refund.
+  * If the customer selects "Return for Store Credit," Loop automatically issues a gift card to the customer for the corresponding amount.
+  * If the customer selects "Exchange," Loop creates a new exchange order in Shopify.
 
 ## 9. Refund Initiated and Return Closed in Shopify
 
@@ -90,7 +90,7 @@ HotWax Commerce subscribes to Loop’s webhook to receive refund details, which 
 
 ## 11. Import Refund Details in NetSuite
 
-A SuiteScript in NetSuite imports and processes these data, and triggers multiple actions:
+A SuiteScript in NetSuite imports and processes this data, then triggers multiple actions:
 
 * A Credit Memo is created in the <mark style="color:orange;">**"Open"**</mark> status and linked to the RMA.
 * A Customer Refund record is automatically created based on the refund method and linked to the Credit Memo.
@@ -100,7 +100,7 @@ A SuiteScript in NetSuite imports and processes these data, and triggers multipl
 
 HotWax Commerce uses a scheduled job to sync all Completed returns from Shopify, ensuring consistency across systems.
 
-**Inventory is Restocked in HotWax Commerce**
+## 13. Restock inventory in HotWax Commerce
 
 * A scheduled inventory sync job regularly updates stock levels from NetSuite to HotWax Commerce.
 * HotWax then synchronizes the updated inventory levels to Shopify, ensuring accurate stock levels across all channels.
@@ -109,6 +109,6 @@ To prevent duplicate inventory updates, HotWax recommends disabling the inventor
 
 ### How HotWax Commerce OMS Helps with Return Reconciliation
 
-To maintain data integrity, HotWax Commerce provides an auditing tool OReSA that automatically compares returns totals of the eCommerce platform with the ERP.
+To maintain data integrity, HotWax Commerce provides an auditing tool, OReSA, that automatically compares return totals from the eCommerce platform with the ERP.
 
 In case any inconsistencies are found, the returns audit dashboard provides a gap analysis report that highlights the monetary gaps in both systems.
