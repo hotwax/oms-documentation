@@ -13,15 +13,15 @@ Whenever a new order is assigned to a store for fulfillment, store associates re
 ### Shipping Methods
 Store associates can filter orders by shipping method.  
 
-- To see same-day delivery orders, filter it by `Same Day`  
-- To see next-day delivery orders, filter it by `Next Day`  
-- To see standard delivery orders, filter it by `Standard`
+- To see same-day delivery orders, filter them by `Same Day`.
+- To see next-day delivery orders, filter them by `Next Day`.
+- To see standard delivery orders, filter them by `Standard`.
 
 ### Picklist Size
 By default, you see 10 orders in a page. To increase the number of orders to be displayed, tap the `Picklist Size` in the top right corner and choose the number of orders you want to see at once.
 
 {% hint style="info" %}
-You can use shipping methods filters and picklist size together. For example, to see 15 next-day delivery orders, filter it by `Next Day` and in Picklist Size, select “15 orders”.
+You can use shipping-method filters and picklist size together. For example, to see 15 next-day delivery orders, filter them by `Next Day` and select `15 orders` in Picklist Size.
 {% endhint %}
 
 ## Bulk Rejection
@@ -81,7 +81,7 @@ It displays:
 - Customer details (name, phone number, and full address)  
 - Details of other shipments in the order  
 
-The same details are also shown when viewing the Orders Details Page in the `In Progress` and `Completed` tabs.
+The same details are also shown when viewing the Order Details Page in the `In Progress` and `Completed` tabs.
 
 From this page, store associates can:  
 - Pick the order if items are available  
@@ -90,4 +90,3 @@ From this page, store associates can:
 
 Once they tap `Pick Order`, the status changes and the order moves to the `In Progress` tab.  
 After packing, the order moves to the `Completed` tab.
-
