@@ -6,6 +6,7 @@
 * [Products](shopify-integration/products/README.md)
   * [Product Download](shopify-integration/products/download-products.md)
   * [Updating Product Details](shopify-integration/products/update-product-details.md)
+  * [Product Update SystemMessages](shopify-integration/products/product-update-system-messages.md)
   * [Deleting Products](shopify-integration/products/delete-products.md)
   * [Creating/Deleting Products with Shopify Webhooks](shopify-integration/products/products-shopify-webhooks.md)
   * [Gift Cards Download](shopify-integration/products/download-gift-cards.md)
