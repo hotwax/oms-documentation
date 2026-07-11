@@ -24,8 +24,8 @@ To edit an existing configuration:
 | **Import Service**   | Service name that handles incoming data.                                                                            |
 | **Execution Mode**   | How the OMS prioritizes processing. Select from `Queued`, `Sync`, or `Async`. Defaults to `Queued`.                |
 | **Multi-threading**  | Y/N flag to enable multi-threading for all files imported under this config. Defaults to `N`.                       |
-| **Priority**         | Numeric value that determines which thread pool handles this configuration. Higher values route to the Priority Pool.|
-| **Thread Pool**      | Read-only. Displays the worker pool (`PRIORITY` or `NORMAL`) assigned based on the Priority value.                 |
+| **Priority**         | Numeric value that determines which thread pool handles this configuration. Values greater than `6` route to `PRIORITY`; values `6` and below route to `NORMAL`. An empty value defaults to `5`. |
+| **Thread Pool**      | Read-only. Displays the worker pool (`PRIORITY` or `NORMAL`) assigned from the Priority value.                     |
 
 {% hint style="danger" %}
 Execution mode should always be set to Queued.
