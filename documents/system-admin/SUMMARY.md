@@ -49,6 +49,7 @@
   * [Troubleshooting](administration/data-manager/troubleshooting/README.md)
     * [Data Not Imported](administration/data-manager/troubleshooting/data-not-imported.md)
     * [SFTP Errors](administration/data-manager/troubleshooting/data-import-errors.md)
+* [Configure Unigate](administration/unigate.md)
 
 ## Product Store
 
