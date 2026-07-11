@@ -219,7 +219,7 @@ Fulfillment team
 
 ## Problematic Orders
 
-These reports help retailers find where orders are falling through the cracks and ensure that all orders are beign shipped out on time.
+These reports help retailers find where orders are falling through the cracks and ensure that all orders are being shipped out on time.
 
 ### Daily Unfulfilled Expedited Orders
 

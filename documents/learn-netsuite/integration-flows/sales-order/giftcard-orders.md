@@ -20,7 +20,7 @@ Digital gift cards, also known as e-gift cards, are virtual equivalents of physi
 
 A scheduled job in HotWax Commerce downloads both physical and digital gift card orders from the eCommerce platform like Shopify.
 
-Learn more about[ gift card orders synchronization to HotWax Commerce](/documents/learn-shopify/shopify-integration/orders/giftcards-download)
+Learn more about [gift card orders synchronization to HotWax Commerce](/documents/learn-shopify/shopify-integration/orders/giftcards-download)
 
 ## How gift card lines are prepared for NetSuite
 
@@ -90,7 +90,7 @@ Learn more about [synchronization of fulfillment data](fulfillment.md)
 
 ### Activation of Gift Cards
 
-A scheduled SuiteScript in NetSuite generates a CSV file containing gift card items, their assigned serial numbers, and values corresponding to the gift card orders. The generated CSV is then placed at an desginated SFTP location.
+A scheduled SuiteScript in NetSuite generates a CSV file containing gift card items, their assigned serial numbers, and values corresponding to the gift card orders. The generated CSV is then placed at an designated SFTP location.
 
 **SuiteScripts**
 

@@ -1,21 +1,42 @@
 ---
 description: >-
-  Read HotWax Commerce's technical documentation for insights on integrating
-  with ERP, WMS, and POS systems.
+  Read HotWax Commerce technical documentation to understand how to integrate
+  with enterprise systems and external platforms.
 ---
 
 # Introduction
 
-HotWax Commerce Technical Documentation is designed to provide a comprehensive understanding of the platform's integration capabilities with systems such as ERP, WMS, and POS, and how to leverage them effectively. This documentation will help navigate through the various aspects of HotWax Commerce OMS, including Journeys, APIs Data Feeds and detailed information on each API, including how to authenticate, make requests, and handle responses.
+HotWax Commerce technical documentation provides a comprehensive guide to integrating the platform with external systems such as enterprise resource planning (ERP), warehouse management systems (WMS), and point of sale (POS). It explains how to use HotWax Commerce Omnichannel Order Management System (OMS) capabilities to manage orders, inventory, and fulfillment workflows.
+
+It helps you navigate key areas of the platform, including journeys, APIs, and data feeds. It also provides detailed guidance on authentication, request handling, and response structures for integrations.
 
 ## APIs
 
-APIs allow other systems to interact with different aspects of OMS such as Orders and Inventory. The APIs provide the flexibility to perform operations such as managing inventory and fulfilling orders. The documentation provides detailed information on each API, including how to authenticate, make requests, and handle responses.
+APIs enable external systems to interact with HotWax Commerce OMS for operations such as order management, inventory updates, and fulfillment processing.
 
-## Data Feeds
+This section provides:
+* Authentication methods
+* Request and response structures
+* Available endpoints and their use cases
 
-Out-of-the-box data feeds enable integration between systems such as ERP, WMS, POS, and OMS. Whether looking to synchronize inventory, update product, or import/export data, data feeds make it easy to connect HotWax Commerce with other systems. The documentation provides step-by-step instructions on how to use data feeds such as CSVs and Jsons to meet integration requirements.
+## Data feeds
+
+Out-of-the-box data feeds facilitate integration between HotWax Commerce OMS and external systems such as ERP, WMS, and POS.
+
+They support use cases such as:
+* Inventory synchronization
+* Product data updates
+* Operational data import and export
+
+The documentation includes step-by-step guidance on using data feeds in formats such as CSV and JSON files.
 
 ## Journeys
 
-Journeys represent the interactions of multiple APIs and feeds to deliver specific user experiences. The documentation will guide through the various out-of-the-box Journeys available, helping understand how to configure and customize them to meet specific business and integration needs.
+Journeys represent end-to-end business workflows powered by a combination of APIs and data feeds.
+
+They help you:
+* Understand real-world integration flows
+* Configure out-of-the-box journeys
+* Customize workflows based on business requirements
+
+This section guides you through the available journeys and how to adapt them for specific operational needs.

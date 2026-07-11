@@ -23,7 +23,7 @@ Use `PRICE_LEVEL_NETSUITE` to control the price level value sent from HotWax to 
 Example XML:
 
 ```xml
-<Enumeration description="Price Level to be sent into Netsuite" enumId="PRICE_LEVEL_NETSUITE" enumName="Price Level Netsuite" enumTypeId="PROD_STR_STNG" />
+<Enumeration description="Price Level to be sent into NetSuite" enumId="PRICE_LEVEL_NETSUITE" enumName="Price Level NetSuite" enumTypeId="PROD_STR_STNG" />
 <ProductStoreSetting fromDate="2023-06-22 05:24:22.82" productStoreId="STORE" settingTypeEnumId="PRICE_LEVEL_NETSUITE" settingValue="Base Price (MSRP)" />
 ```
 
