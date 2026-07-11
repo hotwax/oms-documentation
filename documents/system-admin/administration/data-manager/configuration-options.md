@@ -2,13 +2,7 @@
 
 ## Add or edit a configuration
 
-If you're creating a new Import configuration to import data from an SFTP location
-1. Click the `Add` button
-2. Enter configuration details
-
-If you're editing an existing import or export configuration
-* Use the search bar to find the configuration by name or ID.
-* Click the `Edit` icon at the end of the search result.
+To create a configuration, select **Add** and enter the confirmed import or export details. To edit an existing configuration, search by name or ID and select the **Edit** icon.
 
 {% hint style="info" %}
 The Config ID cannot be modified. To use a different ID, create a new configuration.
@@ -23,21 +17,21 @@ The Config ID cannot be modified. To use a different ID, create a new configurat
 | **Export Content ID** | Template identifier used while exporting data.          |
 | **Export Service**    | Service that handles outgoing data.                     |
 | **Export Path**       | SFTP Destination folder for exported files.             |
-| **File Name Pattern** | Identify and match only relevant files during processing using REGEX expressions |
-| **Multi-threading**   | Y/N flag to enable multi-threading on all files imported in this config (default N)|
-| **Execution Mode**    | Select from Sync, Async or Queued to set how the OMS prioritizes the processing of this configuration. (default Queued) |
-| **Notify on Failure** | Y/N flag to disable notifications on file import error (default Y)|
+| **File Name Pattern** | A regular expression that limits an SFTP import to matching files. |
+| **Multi-threading**   | Controls whether files for this configuration can be processed with multiple threads. |
+| **Execution Mode**    | Determines how the OMS schedules processing for this configuration. |
+| **Notify on Failure** | Controls whether failure notifications are sent for this configuration. |
 
 {% hint style="danger" %}
-Execution mode should always be set to Queued
+Keep the configured execution mode unless your HotWax Commerce implementation team instructs you to change it.
 {% endhint %}
 
 {% hint style="danger" %}
-Multi-threading should be disabled on all configs unless explicitly instructed by HotWax Support. Incorrect use of multi-threading can cause to system overload and downtime. If you've decided multi-threading is your poison, make sure that the configuration is set to execute in queued mode or else your almost certain to cause a system overload.
+Do not enable multi-threading unless your HotWax Commerce implementation team has approved the configuration. It can change how bulk files use OMS processing capacity.
 {% endhint %}
 
 {% hint style="info"%} 
-Notifications are sent to the email addresses configured in the instances.
+Notifications are sent to the email addresses configured for the instance.
 {% endhint %}
 
 

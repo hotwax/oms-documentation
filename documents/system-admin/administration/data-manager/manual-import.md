@@ -1,11 +1,19 @@
-# Manual Imports
+# Manual import
 
-## Importing Data in OMS
-1. Open a relevant import topic from the category based on your requirements. For instance, Procurement > Purchase Order.
-2. Download the provided sample CSV template.
-3. Once you've prepared a CSV or JSON file to import, click on `Choose File` to upload the file containing your data.
-4. The system will initiate the import, processing the provided data according to the chosen import topic.
+Use a manual import to upload a supported CSV or JSON file directly to a Data Manager configuration.
 
-If the file you uploaded does not begin processing immediately, the MDM you're using may be set to run in queued mode, which means it will be run by the queue polling job that runs at set intervals. In this case, to process the file immediately, go to the job manager app and run the Process Pending Bulk Imported Files job manually using the `Run Now` function.
+## Upload a file
 
-After finishing its run, if the file terminates in a `Failed` status or produces `Error Records`, your data has not been processed and needs to be retried. To learn more about troubleshooting this, please refer to this document. (add link)
+1. Go to `Settings` > `Data Manager Configurations`.
+2. Search for and open the configuration that matches the data you are importing.
+3. Download the available sample file and prepare your file with the required columns.
+4. Select **Choose File**, select the CSV or JSON file, and start the import.
+5. Open the file's log entry to monitor its status.
+
+## After the import
+
+* `Finished` means the file completed. Review **Failed Records** if the log indicates that any rows were rejected.
+* `Pending` means the file is waiting for the bulk-file processing job. See [Data not imported](troubleshooting/data-not-imported.md) if it remains pending.
+* `Failed` means the file could not be processed. Review the log and correct the source file before retrying.
+
+When retrying failed rows, remove the error-reason column from the downloaded failed-records file before uploading it again.
