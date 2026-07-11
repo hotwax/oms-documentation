@@ -58,7 +58,7 @@ NetSuite will not attempt to import a CSV if it is missing a required field or e
 
 The promo code internal ID provided by HotWax during order creation was no longer active in NetSuite.
 
-Netsuite will still consider this file valid, but it’ll create an error log CSV for the record in the corresponding FTP location. An alert will also be sent for this failed record.
+NetSuite will still consider this file valid, but it’ll create an error log CSV for the record in the corresponding FTP location. An alert will also be sent for this failed record.
 
 Here are the imports which use NetSuite’s CSV import module:
 
