@@ -1,8 +1,8 @@
 ---
-description: Explore API and data feeds within the 'inbound shipment documentatoin' documentation.
+description: Explore the inbound shipment import file and its fields.
 ---
 
-# Import
+# Import inbound shipments
 
 #### File Structure
 
@@ -33,6 +33,6 @@ description: Explore API and data feeds within the 'inbound shipment documentato
 | OUT\_TRANSFER      | OUTGOING\_SHIPMENT | Outbound Transfer Shipment |
 | PURCHASE\_RETURN   | OUTGOING\_SHIPMENT | Purchase Return Shipment   |
 
-### TBD
+## Sample CSV file
 
-Sample Shipment file
+Download the [sample inbound shipment CSV](sample-inbound-shipment.csv) and replace the example values with the shipment data from your external system.
