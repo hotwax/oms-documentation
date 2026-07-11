@@ -64,6 +64,7 @@
   * [Product Sync](initial-sync/troubleshooting/products.md)
   * [Order Sync](initial-sync/troubleshooting/order.md)
   * [Inventory Sync](initial-sync/troubleshooting/inventory.md)
+  * [Shopify Solr Search](initial-sync/troubleshooting/shopify-solr-search.md)
 
 ## Additional resources
 
