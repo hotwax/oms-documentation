@@ -24,9 +24,12 @@ To create a product store in the HotWax Order Management System, follow these st
 | Company name        | The parent company owning all the brands.                                        |
 | Product store name  | The name of the brand for which you are creating a product store.                |
 | Product store ID    | The unique identifier of the product store (e.g., NN\_STORE for NotNaked Brand). |
+| Currency            | The default currency for orders created in this product store. This field is required. |
 | Operating countries | List the countries where the brand operates.                                     |
 
 5. Once done, click on "Manage Configurations".
+
+The current creation form does not require a product store group. If you need to associate a store with a primary store group, open the product store after creation and update `Primary store group ID` in its configuration.
 
 Now, you'll set up additional configurations for your product store:
 
@@ -42,4 +45,3 @@ Now, you'll set up additional configurations for your product store:
 Product store is now created and ready to use. For more details on managing configurations related to the product store, refer to the documentation.
 
 {% embed url="https://youtu.be/IjDndeFdZj8" %}
-
