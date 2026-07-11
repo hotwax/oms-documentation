@@ -33,34 +33,34 @@ Launchpad groups applications by the work they support.
 
 Use these applications to manage order fulfillment workflows:
 
-* **BOPIS (Buy Online, Pick Up In Store):** Hand over store pickup orders to customers.
-* **Fulfillment:** Pick, pack, and ship orders assigned to a store.
-* **Pre-Orders:** Manage pre-orders and backorders that use planned future inventory.
+* **BOPIS (Buy Online, Pick Up In Store):** Hand over store pickup orders to customers
+* **Fulfillment:** Pick, pack, and ship orders assigned to a store
+* **Pre-Orders:** Manage pre-orders and backorders that use planned future inventory
 
 #### Workflow
 
 Use these applications to manage inventory availability, scheduled jobs, and order routing:
 
-* **Available to Promise:** Manage the inventory available to sell.
-* **Job Manager:** Schedule and monitor jobs.
-* **Order Routing:** Configure how orders are routed to fulfillment locations.
+* **Available to Promise:** Manage the inventory available to sell
+* **Job Manager:** Schedule and monitor jobs
+* **Order Routing:** Configure how orders are routed to fulfillment locations
 
 #### Inventory
 
 Use these applications to receive, count, and move inventory:
 
-* **Receiving:** Manage incoming shipments, purchase orders, and return orders.
-* **Cycle Count:** Count store inventory and reconcile system and physical inventory.
-* **Transfers:** Move inventory between facilities.
+* **Receiving:** Manage incoming shipments, purchase orders, and return orders
+* **Cycle Count:** Count store inventory and reconcile system and physical inventory
+* **Transfers:** Move inventory between facilities
 
 #### Administration
 
 Use these applications to manage data, users, facilities, and company configuration:
 
-* **Import:** Import inventory and purchase orders.
-* **Users:** Create and manage users.
-* **Facilities:** Manage stores, warehouses, and their fulfillment settings.
-* **Company:** Manage company configuration.
+* **Import:** Import inventory and purchase orders
+* **Users:** Create and manage users
+* **Facilities:** Manage stores, warehouses, and their fulfillment settings
+* **Company:** Manage company configuration
 
 ***
 
