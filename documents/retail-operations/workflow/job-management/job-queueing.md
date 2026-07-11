@@ -73,6 +73,19 @@ This tab lists jobs in the **running status** i.e jobs those are currently in ex
 - **Service Name**: Indicates which OMS service is executing the job.
 - **Running Duration**: Indicates how long the job has been running.
 
+#### Recover a job lock after an OMS restart
+
+An OMS restart can interrupt a job and leave its run lock on the Running tab. When this happens, the job card shows the message `This job has crashed due to a restart, release it`.
+
+Release the lock only when the job card shows this restart message. Do not release a job only because it has been running for a long time. Investigate long-running jobs before taking action.
+
+1. Open the `Running` tab in Job Manager.
+2. Find the job card with the restart message.
+3. Select the release control on the job card and confirm the action.
+4. Check the `History` tab and your job monitoring after the next scheduled run.
+
+Releasing the restart-identified lock clears the stale lock so the job can run again according to its configuration. If the job fails again or does not run as expected, investigate the failure before releasing another lock.
+
 
 
 #### 3. History Tab
