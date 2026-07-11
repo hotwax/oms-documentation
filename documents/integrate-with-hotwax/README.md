@@ -6,18 +6,19 @@ description: >-
 
 # Introduction
 
-HotWax Commerce technical documentation provides a comprehensive guide to integrating the platform with external systems such as enterprise resource planning (ERP), warehouse management systems (WMS), and point of sale (POS). It explains how to use HotWax Commerce Omnichannel Order Management System (OMS) capabilities to manage orders, inventory, and fulfillment workflows.
+HotWax Commerce technical documentation helps you integrate the platform with external systems such as enterprise resource planning (ERP), warehouse management systems (WMS), and point of sale (POS) systems. Use HotWax Commerce Omnichannel Order Management System (OMS) capabilities to manage orders, inventory, and fulfillment workflows.
 
-It helps you navigate key areas of the platform, including journeys, APIs, and data feeds. It also provides detailed guidance on authentication, request handling, and response structures for integrations.
+Use the following resources to plan and build an integration:
+
+* [APIs](api/orders/README.md) for authentication, requests, responses, and endpoint-specific examples
+* [Data-feed sample files](sample-files/fulfilled-orders-items-json.md) for CSV and JSON payload formats
+* [Journeys](journeys/buy-online-pickup-in-store/README.md) for end-to-end business workflows
 
 ## APIs
 
 APIs enable external systems to interact with HotWax Commerce OMS for operations such as order management, inventory updates, and fulfillment processing.
 
-This section provides:
-* Authentication methods
-* Request and response structures
-* Available endpoints and their use cases
+Start with [authentication](api/initial-api-authentication.md), then use the API documentation for request and response structures, available endpoints, and their use cases.
 
 ## Data feeds
 
@@ -28,7 +29,7 @@ They support use cases such as:
 * Product data updates
 * Operational data import and export
 
-The documentation includes step-by-step guidance on using data feeds in formats such as CSV and JSON files.
+The data-feed documentation includes step-by-step guidance and sample files in CSV and JSON formats.
 
 ## Journeys
 
@@ -39,4 +40,4 @@ They help you:
 * Configure out-of-the-box journeys
 * Customize workflows based on business requirements
 
-This section guides you through the available journeys and how to adapt them for specific operational needs.
+The journey documentation explains the available journeys and how to adapt them for specific operational needs.
