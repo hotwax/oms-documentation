@@ -35,7 +35,7 @@ Given:
 
 Hence,
 
-Online ATP = 100 - (5 + 5 + 5 + 5 + 5) = 100 - 25 = 75 HotWax Commerce will now push 75 units to Shopify as sellable inventory for online orders.
+Online ATP = 100 - (5 + 5 + 5 + 5 + 5) = 100-25 = 75 HotWax Commerce will now push 75 units to Shopify as sellable inventory for online orders.
 
 ## Sync with Shopify
 

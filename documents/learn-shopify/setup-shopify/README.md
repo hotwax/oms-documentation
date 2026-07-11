@@ -51,7 +51,7 @@ HotWax Commerce relies on JWT (JSON Web Token) for secure API communication, ens
 
 | Field                   | Description                                                                                                                                                                                      |
 | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Shop ID**             | The internal name of your Shopify Store. A default ID is created for your Shopify shop when you install the App. but change it to a unique value for multiple stores (e.g., US\_SHOP, CA\_SHOP). |
+| **Shop ID**             | The internal name of your Shopify Store. A default ID is created for your Shopify shop when you install the App. But change it to a unique value for multiple stores (e.g., US\_SHOP, CA\_SHOP). |
 | **Shopify Config Name** | Project-specific; use the instance name along with Shopify Config (e.g. NotNaked Shopify Config).                                                                                                |
 | **Connect URL**         | The default URL is fetched from the Shopify URL (e.g., hc-demo for hc-demo.myshopify.com).                                                                                                       |
 | **Access Token**        | The JWT token to access Shopify                                                                                                                                                                  |
