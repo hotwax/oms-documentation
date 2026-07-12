@@ -21,7 +21,7 @@ The workbench also supports sorting by alphabetical order, recently updated, and
 
 To open a product:
 
-1. Open **Products** > **Product workbench**.
+1. Open `Products` > `Product workbench`.
 2. Search for a product or apply filters.
 3. Select the product row to open the product details page.
 
@@ -51,11 +51,11 @@ Inventory balances, safety stock, thresholds, and available-to-promise rules are
 
 ## Duplicate identifiers
 
-Use **Duplicate identifiers** when a SKU, UPC, or other identifier is active on more than one product. Duplicate identifiers can cause product sync, scan, and fulfillment issues because downstream systems may not know which product owns the value.
+Use `Duplicate identifiers` when a SKU, UPC, or other identifier is active on more than one product. Duplicate identifiers can cause product sync, scan, and fulfillment issues because downstream systems may not know which product owns the value.
 
 To resolve duplicate identifiers:
 
-1. Open **Products** > **Duplicate identifiers**.
+1. Open `Products` > `Duplicate identifiers`.
 2. Select the identifier rule you want to review.
 3. Open a duplicate group.
 4. Give each product a unique value.
@@ -63,13 +63,13 @@ To resolve duplicate identifiers:
 
 ## Missing values
 
-Use **Missing values** to find product data gaps. The page groups coverage issues by rule, with the worst gaps first. Select a rule to list the affected products, then open each product to add the missing data.
+Use `Missing values` to find product data gaps. The page groups coverage issues by rule, with the worst gaps first. Select a rule to list the affected products, then open each product to add the missing data.
 
 You can also look up another field by entering a field name, such as `brandName`, `upc`, or `mainImageUrl`.
 
 ## Imports
 
-Use **Imports** to review recently synced product updates. The page lists the last 100 product update records and supports search by product, SKU, barcode, shop, or update message.
+Use `Imports` to review recently synced product updates. The page lists the last 100 product update records and supports search by product, SKU, barcode, shop, or update message.
 
 Review import history when:
 
@@ -79,9 +79,9 @@ Review import history when:
 
 ## Settings
 
-Use **Settings** to confirm the connected OMS instance, select the current product store, and check product search index status.
+Use `Settings` to confirm the connected OMS instance, select the current product store, and check product search index status.
 
-If product search results look stale or empty, use **Rebuild search index** from the Product data diagnostics card. Rebuilding the index refreshes the product search data used by the Product workbench.
+If product search results look stale or empty, use `Rebuild search index` from the Product data diagnostics card. Rebuilding the index refreshes the product search data used by the Product workbench.
 
 <figure><img src="../.gitbook/assets/product-reindex.png" alt="Product search index rebuild option in the Products app settings page"><figcaption><p>Product search index rebuild</p></figcaption></figure>
 
