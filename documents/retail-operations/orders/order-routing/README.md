@@ -11,16 +11,16 @@ The **Order Routing App** brings inventory availability controls and order routi
 
 ## Manage inventory availability
 
-The sourcing tools were previously available in the Available to Promise App. They now live in the **Order Routing App**:
+Use the sourcing tools in the **Order Routing App** to configure inventory availability and fulfillment options:
 
-* [Sourcing and inventory availability](../../inventory/available-to-promise/README.md)
-* [Inventory channels](../../inventory/available-to-promise/create-channels.md)
-* [Threshold rules](../../inventory/available-to-promise/threshold-rules.md)
-* [Safety stock rules](../../inventory/available-to-promise/safety-stock-rules.md)
-* [Store pickup rules](../../inventory/available-to-promise/store-pickup-rules.md)
-* [Shipping rules](../../inventory/available-to-promise/shipping-rule.md)
-* [Product inventory](../../inventory/available-to-promise/inventory.md)
-* [Schedule sourcing rules](../../inventory/available-to-promise/schedule-atp-rules.md)
+* [Sourcing and inventory availability](sourcing/README.md)
+* [Inventory channels](sourcing/inventory-channels.md)
+* [Threshold rules](sourcing/threshold.md)
+* [Safety stock rules](sourcing/safety-stock.md)
+* [Store pickup rules](sourcing/store-pickup.md)
+* [Shipping rules](sourcing/shipping.md)
+* [Product inventory](sourcing/inventory.md)
+* [Schedule sourcing rules](sourcing/schedule-rules.md)
 
 <figure><img src="../../.gitbook/assets/order-routing-inventory.jpg" alt="Inventory page in the Order Routing App showing a product's ATP, QOH, safety stock, pickup, and brokering settings"><figcaption><p>Review product inventory and sourcing settings in the Order Routing App.</p></figcaption></figure>
 

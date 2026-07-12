@@ -9,4 +9,4 @@ Use a safety stock rule in the **Order Routing App** when the same inventory res
 5. Optional: Narrow the rule with product tags and features.
 6. Save the rule, then run or schedule the safety stock computation.
 
-See [Configure safety stock rules](../available-to-promise/safety-stock-rules.md) for complete field, sequence, and schedule guidance.
+See [Configure safety stock rules](../../orders/order-routing/sourcing/safety-stock.md) for complete field, sequence, and schedule guidance.

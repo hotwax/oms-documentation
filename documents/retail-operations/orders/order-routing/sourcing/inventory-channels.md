@@ -12,7 +12,7 @@ An inventory channel groups the facilities that contribute sellable inventory to
 
 The `ID` can contain no more than 20 characters. Use a durable ID because integrations and rules can reference it.
 
-<figure><img src="../../.gitbook/assets/order-routing-inventory-channels.jpg" alt="Inventory Channels page showing channel configuration facilities and linked facility counts"><figcaption><p>Each channel card shows its configuration facility and linked retail and warehouse facilities.</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/order-routing-inventory-channels.jpg" alt="Inventory Channels page showing channel configuration facilities and linked facility counts"><figcaption><p>Each channel card shows its configuration facility and linked retail and warehouse facilities.</p></figcaption></figure>
 
 ## Link a configuration facility
 

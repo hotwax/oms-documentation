@@ -16,7 +16,7 @@ For example, if a channel has 220 units available after facility-level controls 
 
 At least one channel is required. Leave the product filters empty when the threshold should apply to every product in the selected channels.
 
-<figure><img src="../../.gitbook/assets/order-routing-create-threshold-rule.jpg" alt="New threshold rule form with channel and product selectors"><figcaption><p>Set the threshold, select channels, and optionally narrow the rule by product tags or features.</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/order-routing-create-threshold-rule.jpg" alt="New threshold rule form with channel and product selectors"><figcaption><p>Set the threshold, select channels, and optionally narrow the rule by product tags or features.</p></figcaption></figure>
 
 ## Review and update threshold rules
 
@@ -30,4 +30,4 @@ Each rule card shows its threshold value, channels, and product selection. From 
 
 ## Run threshold rules
 
-Use the `Schedule` card to activate the recurring rule computation. Open its overflow menu to view `History`, select `Run now`, or `Disable` the schedule. See [Schedule sourcing rules](schedule-atp-rules.md) for details.
+Use the `Schedule` card to activate the recurring rule computation. Open its overflow menu to view `History`, select `Run now`, or `Disable` the schedule. See [Schedule sourcing rules](schedule-rules.md) for details.

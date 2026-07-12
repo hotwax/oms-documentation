@@ -6,11 +6,11 @@ The Order Routing app in HotWax Commerce offers retailers flexibility in configu
 
 To prevent operational strain when fulfilling online orders alongside walk-in customers, retailers can set a maximum order capacity for each store. This helps avoid exceeding a store's fulfillment capabilities. Once the set limit is reached, the brokering engine will automatically route further orders to other facilities with available capacity.
 
-The process for setting the Maximum Order Capacity is consistent across the [Facility](https://docs.hotwax.co/documents/system-admins/administration/facilities/configure-fulfillment-capacity), [Fulfillment](https://docs.hotwax.co/documents/store-operations/orders/fulfillment/fulfillment-setting-page#online-order-fulfillment), and [ATP](../../inventory/available-to-promise/shipping-rule.md#setting-maximum-order-capacity-of-a-facility) apps. Follow these steps to configure the maximum capacity for a facility:
+The process for setting the Maximum Order Capacity is consistent across the [Facility](https://docs.hotwax.co/documents/system-admins/administration/facilities/configure-fulfillment-capacity), [Fulfillment](https://docs.hotwax.co/documents/store-operations/orders/fulfillment/fulfillment-setting-page#online-order-fulfillment), and Order Routing apps. Follow these steps to configure the maximum capacity for a facility:
 
 ### Steps to Implement
 
-1. In each app (Facility, Fulfillment, ATP), locate the capacity settings for the store.
+1. In each app (Facility, Fulfillment, Order Routing), locate the capacity settings for the store.
 2. Click the capacity chip on the store’s order capacity card.
 3. Choose from the following options:
    * **Unlimited Capacity**

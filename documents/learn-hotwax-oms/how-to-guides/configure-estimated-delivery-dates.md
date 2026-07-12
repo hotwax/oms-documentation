@@ -51,7 +51,7 @@ The [Store Lookup API](../../integrate-with-hotwax/api/facility/store-lookup.md)
 
 ### 2. Prepare inventory
 
-Make sure product identifiers used by the storefront match the identifiers available in HotWax Commerce. Configure [ATP rules](../../retail-operations/inventory/available-to-promise/README.md) so the inventory response reflects safety stock, thresholds, reservations, and other availability policies.
+Make sure product identifiers used by the storefront match the identifiers available in HotWax Commerce. Configure [sourcing rules](../../retail-operations/orders/order-routing/sourcing/README.md) so the inventory response reflects safety stock, thresholds, reservations, and other availability policies.
 
 The storefront integration uses the [Shipping Check Inventory API](../../integrate-with-hotwax/api/inventory/shipping-check-inventory.md) to check ATP for the selected product and candidate facilities. Decide whether zero-ATP locations should be removed from the estimate or handled with a separate unavailable message.
 

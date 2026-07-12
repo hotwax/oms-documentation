@@ -8,7 +8,7 @@ The `Store pickup` page has three tabs:
 * `Product and channel` applies a rule to inventory channels.
 * `Facility` manages the facilities that belong to pickup groups.
 
-<figure><img src="../../.gitbook/assets/order-routing-store-pickup-rules.jpg" alt="Store Pickup page showing tabs, schedule, pickup analytics, and an active rule"><figcaption><p>Review pickup rules, their schedule, and recent pickup activity from one page.</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/order-routing-store-pickup-rules.jpg" alt="Store Pickup page showing tabs, schedule, pickup analytics, and an active rule"><figcaption><p>Review pickup rules, their schedule, and recent pickup activity from one page.</p></figcaption></figure>
 
 ## Create a product and facility rule
 

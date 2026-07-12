@@ -44,4 +44,4 @@ An inventory channel connects three pieces of sourcing configuration:
 
 Create separate inventory channels when sales channels use different fulfillment networks. For example, a US storefront can publish warehouse inventory while a Canadian storefront publishes inventory from Canadian stores and warehouses.
 
-See [Manage inventory channels](create-channels.md) for setup steps.
+See [Manage inventory channels](inventory-channels.md) for setup steps.
