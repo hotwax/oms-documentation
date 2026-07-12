@@ -1,6 +1,6 @@
 # Find orders
 
-Use **Find order** to search the order index and open order detail records. The page supports direct lookup and filtered search for support, operations, and merchandising users who need to find a specific order or work a list of orders.
+Use `Find order` to search the order index and open order detail records. The page supports direct lookup and filtered search for support, operations, and merchandising users who need to find a specific order or work a list of orders.
 
 ## Search orders
 
@@ -8,7 +8,7 @@ The search field accepts order identifiers, external IDs, customer names, and cu
 
 To search for an order:
 
-1. Open **Order Manager** > **Find order**.
+1. Open **Order Manager** > `Find order`.
 2. Enter an order, external ID, customer name, or email address.
 3. Use filters when the search returns too many results.
 4. Select an order row to open the order details page.
@@ -29,7 +29,7 @@ The results list shows the order name or external ID, HotWax order ID, customer 
 
 ## Select orders
 
-Use **Select** when you need to prepare bulk action work from the current result set. After selecting orders, the footer shows the selected count and available bulk actions.
+Use `Select` when you need to prepare bulk action work from the current result set. After selecting orders, the footer shows the selected count and available bulk actions.
 
 Available actions include:
 

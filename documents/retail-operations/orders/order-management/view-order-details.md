@@ -2,7 +2,7 @@
 
 Use the order details page to inspect one order, review its timeline, confirm customer and payment information, and act on items, ship groups, holds, and communications.
 
-Open an order from **Find order** or one of the Order Manager queues.
+Open an order from `Find order` or one of the Order Manager queues.
 
 ## Header
 
@@ -21,21 +21,21 @@ The order detail cards summarize the order context.
 
 ## Items
 
-Use the **Items** segment to review order items. Items are grouped by product so users can see quantity, status, price, product image, SKU, and external ID together.
+Use the `Items` segment to review order items. Items are grouped by product so users can see quantity, status, price, product image, SKU, and external ID together.
 
-You can select all items or select individual item groups when preparing item-level actions. Use **Add items** when the workflow requires an order item to be added manually.
+You can select all items or select individual item groups when preparing item-level actions. Use `Add items` when the workflow requires an order item to be added manually.
 
 ## Ship groups
 
-Use the **Ship groups** segment to review fulfillment group information. Ship groups are the operational split between items, facilities, shipment details, and fulfillment progress.
+Use the `Ship groups` segment to review fulfillment group information. Ship groups are the operational split between items, facilities, shipment details, and fulfillment progress.
 
 ## Holds
 
-Use the **Holds** segment to review hold work associated with the order. Holds are useful when an order is blocked by address review, fraud review, substitute review, inventory unavailability, or another manual task.
+Use the `Holds` segment to review hold work associated with the order. Holds are useful when an order is blocked by address review, fraud review, substitute review, inventory unavailability, or another manual task.
 
 ## Communications
 
-Use the **Comms** segment to review or add communication records for the order. Communications help support and operations teams keep customer-facing updates and internal notes attached to the order.
+Use the `Comms` segment to review or add communication records for the order. Communications help support and operations teams keep customer-facing updates and internal notes attached to the order.
 
 <figure><img src="../../.gitbook/assets/sales-order-view-details.png" alt="Order details page showing order header, customer information, order identifiers, payment details, and source information"><figcaption><p>Order details</p></figcaption></figure>
 
