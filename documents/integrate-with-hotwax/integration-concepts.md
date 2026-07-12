@@ -4,7 +4,7 @@ description: Learn how infrastructure services support HotWax Commerce integrati
 
 # Integration concepts
 
-Use this page for technical infrastructure terms that help explain an integration flow. Keep business and operational terms in the [OMS glossary](../learn-hotwax-oms/README.md).
+Use this page for technical infrastructure terms that help explain an integration flow. Keep business and operational terms in the [order management system (OMS) glossary](../learn-hotwax-oms/README.md).
 
 ## Amazon EventBridge
 
@@ -12,7 +12,7 @@ Amazon EventBridge is an AWS service that routes events between systems. In the 
 
 ## Amazon Simple Queue Service
 
-Amazon Simple Queue Service (SQS) is an AWS message queue. In the Shopify order-update flow, it retains routed webhook messages until HotWax Commerce polls the queue for updates. See [order download](../learn-shopify/shopify-integration/orders/order-download.md) for the related routing and polling steps.
+Amazon SQS is an AWS message queue. In the Shopify order-update flow, it retains routed webhook messages until HotWax Commerce polls the queue for updates. See [order download](../learn-shopify/shopify-integration/orders/order-download.md) for the related routing and polling steps.
 
 ## Add technical terms consistently
 
