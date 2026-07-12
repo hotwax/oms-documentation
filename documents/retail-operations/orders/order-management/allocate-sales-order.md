@@ -41,15 +41,15 @@ Video: Reject sales order items
 
 ## Mark items shipped in OMS
 
-Use this action when you need to record shipment details from the order page. Confirm that the items are assigned to the facility that shipped them before you mark them as shipped.
+Use this action when you need to record shipment details from the `View Sales Order` page. Confirm that the items are assigned to the facility that shipped them before you mark them as shipped.
 
 1. Open the order from the `Find Sales Order` page.
 2. Select the items to ship. If an item is not assigned to the shipping facility, select `Release` and choose that facility first.
-3. Select `Ship Items` in the item section.
+3. Select `Ship Items` in the `Items` section.
 4. Choose the line items to include, select the carrier, and enter the tracking number.
 5. Confirm the shipment.
 
-To verify the update, open the item history from the status column. The history shows when the item was completed and the user who completed it.
+To verify the update, open the item history from the `Status` column. The history shows when the item was completed and the user who completed it.
 
 {% embed url="https://youtu.be/RwpJ86nFnAo" %}
 Video: Ship items in OMS

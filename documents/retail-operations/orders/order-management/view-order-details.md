@@ -20,13 +20,13 @@ This information provides a comprehensive overview of an order, facilitating eff
 
 ### Order actions
 
-The current Order Manager supports actions such as releasing, cancelling, parking, and shipping order items. Select the relevant item before choosing an action so that the action applies only to the intended item.
+The current Order Manager supports actions such as releasing, canceling, parking, and shipping order items. Select the relevant item before choosing an action so that the action applies only to the intended item.
 
-Some actions described in older OMS workflows are not available in the current Order Manager:
+Some actions described in older Order Management System (OMS) workflows are not available in the current Order Manager:
 
-* `Create RMA` and `Reindex` are not available from the order details page.
+* `Create RMA` and `Reindex` are not available from the `Order View` page.
 * `Appeasement` and `Reship` are not available until their backend services are supported.
-* The `Return` action is shown only for orders with a completed item, but the current Order Manager does not create returns from this page.
+* The `Return` action is shown only for orders with a completed item, but the current Order Manager does not create returns from the `Order View` page.
 
 Use the [returns workflow](../returns/README.md) for supported return-management processes.
 
