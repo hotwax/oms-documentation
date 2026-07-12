@@ -2,7 +2,7 @@
 
 Retailers need real-time insights into their product inventory, to ensure informed decision-making and efficient inventory management. The `Find Product Inventory` page within HotWax Commerce serves as a centralized hub for managing specific inventory details of products. It offers a comprehensive view of various reservations and availability statuses, including reserved, committed, and available ATP (Available to Promise). Retailers can get visibility into reservations, queues, and excluded facilities, and the `Find Product Inventory` page empowers users to optimize their inventory allocation and fulfillment processes.  Users can see all the columns in which inventory is reserved and the available-to-promise at the end. The following details are available for the inventory on the page:
 
-| Queue Type                 | Description                                                                     |
+| Queue type                 | Description                                                                     |
 |----------------------------|---------------------------------------------------------------------------------|
 | Brokering queue            | Queue that holds orders awaiting brokering.                                     |
 | Unfillable hold queue      | Queue that holds orders that cannot be fulfilled at the moment.                 |
@@ -26,9 +26,9 @@ Retailers need real-time insights into their product inventory, to ensure inform
 
 {% embed url="https://youtu.be/E4YeyzjHxYk" %} Video: Search Product {% endembed %}
 
-## Inventory by Facility
+## Inventory by facility
 
-Retailers operating multiple warehouses or stores need facility-specific inventory visibility to efficiently manage and monitor product availability at each fulfillment location. The `Facility` filter provides users with visibility of products available at a particular facility, including the facility's ATP, QOH, and inventory-item details. This helps users assess inventory distribution and make decisions about restocking, fulfillment, and redistribution.
+Retailers operating multiple warehouses or stores need facility-specific inventory visibility to efficiently manage and monitor product availability at each fulfillment location. The `Facility` filter provides users with visibility of products available at a particular facility, including the facility's ATP, quantity on hand (QOH), and inventory-item details. This helps users assess inventory distribution and make decisions about restocking, fulfillment, and redistribution.
 
 ### Step-by-Step Usage Instructions
 
