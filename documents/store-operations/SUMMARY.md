@@ -12,6 +12,7 @@
   * [Ship to Store](bopis/ship-to-store.md)
   * [Catalog Page](bopis/catalog-page.md)
   * [Settings Page](bopis/settings-page.md)
+  * [Re-route Fulfillment](bopis/re-route-fulfillment.md)
   * [Troubleshooting](bopis/troubleshooting/README.md)
     * [Notification Error](bopis/troubleshooting/notifications-error.md)
 * [Fulfillment App](fulfillment/README.md)

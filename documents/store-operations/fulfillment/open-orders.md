@@ -1,8 +1,10 @@
 ---
-description: The Open Orders page allows store associates to view and manage newly assigned orders that are pending fulfillment. On this page, store associates can filter orders, review order details, pick individual orders or pick orders in batches, print picklists, and begin the fulfillment process.
+description: View and manage newly assigned orders that are pending fulfillment.
 ---
 
 # Open Orders Page
+
+The `Open Orders` page allows store associates to view and manage newly assigned orders that are pending fulfillment. On this page, store associates can filter orders, review order details, pick individual orders or pick orders in batches, print picklists, and begin the fulfillment process.
 
 ## Notifications
 
@@ -90,4 +92,3 @@ From this page, store associates can:
 
 Once they tap `Pick Order`, the status changes and the order moves to the `In Progress` tab.  
 After packing, the order moves to the `Completed` tab.
-
