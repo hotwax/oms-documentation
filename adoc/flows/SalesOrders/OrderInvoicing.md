@@ -11,7 +11,7 @@ For ADOC eCommerce orders, HotWax Commerce sends an order to Retail Pro for invo
 An order becomes eligible for the Retail Pro invoicing flow when all of its items are in the packed state. The shipment can still be awaiting its handoff or shipment update; that later update is not the invoicing trigger.
 
 {% hint style="info" %}
-This flow applies to ADOC eCommerce orders. POS send-sale orders are not part of this flow because they are invoiced when they are created in Retail Pro.
+This flow applies to ADOC eCommerce orders. Point of sale send-sale orders are not part of this flow because they are invoiced when they are created in Retail Pro.
 {% endhint %}
 
 ## Retail Pro processing
