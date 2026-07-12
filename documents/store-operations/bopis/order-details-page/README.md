@@ -32,7 +32,7 @@ Click on bin icon to reject the order, select an appropriate reason for rejectin
 
 To reject an order partially, click on the bin icon for the particular item in the order that needs to be rejected, select an appropriate reason for rejecting the item in the pop-up window that appears, and click on the `reject item` button.
 
-If items are rejected, a notification email is also sent, and the order may be re-routed. For more information, refer to the Order Re-Routing App User Manual. 
+If items are rejected, a notification email is also sent, and the order may be re-routed. For more information, see [Re-route Fulfillment](../re-route-fulfillment.md).
 
 ### Customer and Payment Details
 
