@@ -10,8 +10,8 @@ HotWax Commerce technical documentation helps you integrate the platform with ex
 
 Use the following resources to plan and build an integration:
 
-* [APIs](api/orders/README.md) for authentication, requests, responses, and endpoint-specific examples
-* [Data-feed sample files](sample-files/fulfilled-orders-items-json.md) for CSV and JSON payload formats
+* [APIs](api/orders/README.md) for order-related requests, responses, and endpoint-specific examples
+* [Data-feed sample files](sample-files/fulfilled-orders-items-json.md) for JSON payload formats
 * [Journeys](journeys/buy-online-pickup-in-store/README.md) for end-to-end business workflows
 
 ## APIs
