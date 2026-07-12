@@ -1,9 +1,11 @@
 ---
 description: >-
- The BOPIS Fulfillment App is designed for store managers and associates, providing a focused interface to Pick, Pack, and Handover store pickup orders. The app also includes features to manage Ship-to-Store items, activate gift cards, and view notifications for new and open orders.
+ Pick, pack, and hand over store pickup orders in the BOPIS Fulfillment App.
 ---
 
 # BOPIS Fulfillment App
+
+The BOPIS Fulfillment App is designed for store managers and associates, providing a focused interface to pick, pack, and hand over store pickup orders. The app also includes features to manage Ship-to-Store items, activate gift cards, and view notifications for new and open orders.
 
 ## Key Features
 
