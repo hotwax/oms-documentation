@@ -21,7 +21,7 @@ Store associates can filter orders by shipping method.
 By default, you see 10 orders in a page. To increase the number of orders to be displayed, tap the `Picklist Size` in the top right corner and choose the number of orders you want to see at once.
 
 {% hint style="info" %}
-You can use shipping-method filters and picklist size together. For example, to see 15 next-day delivery orders, filter them by `Next Day` and select `15 orders` in Picklist Size.
+You can use shipping-method filters and `Picklist Size` together. For example, to see 15 next-day delivery orders, filter them by `Next Day` and select `15 orders` in `Picklist Size`.
 {% endhint %}
 
 ## Bulk Rejection
@@ -81,7 +81,7 @@ It displays:
 - Customer details (name, phone number, and full address)  
 - Details of other shipments in the order  
 
-The same details are also shown when viewing the Order Details Page in the `In Progress` and `Completed` tabs.
+The same details are also shown when viewing the `Order Details` page in the `In Progress` and `Completed` tabs.
 
 From this page, store associates can:  
 - Pick the order if items are available  
