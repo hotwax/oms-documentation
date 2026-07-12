@@ -17,7 +17,7 @@ Configure the desired price level in the settingValue field and import this data
 <summary>Price Level Setting</summary>
 
 ```xml
-<Enumeration description="Price Level to be sent into Netsuite" enumId="PRICE_LEVEL_NETSUITE" enumName="Price Level Netsuite" enumTypeId="PROD_STR_STNG" />
+<Enumeration description="Price Level to be sent into NetSuite" enumId="PRICE_LEVEL_NETSUITE" enumName="Price Level NetSuite" enumTypeId="PROD_STR_STNG" />
 <ProductStoreSetting fromDate="2023-06-22 05:24:22.82" productStoreId="STORE" settingTypeEnumId="PRICE_LEVEL_NETSUITE" settingValue="Base Price (MSRP)" />
 ```
 

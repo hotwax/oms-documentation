@@ -10,13 +10,13 @@ icon: gears
 
 ## What is Order Routing
 
-Retailers handling multiple sales channels and fulfillment locations need sophisticated order routing. It allows each order to be fulfilled from the most optimal location, considering factors such as shipping method, proximity to the customer, inventory levels, fulfillment capabilities, and the option to split orders across locations. Effective order routing helps retailers achieve faster delivery times, reduce shipping costs, and maintain balanced inventory across all locations.
+Retailers handling multiple sales channels and fulfillment locations need sophisticated order routing. It allows each order to be fulfilled from the most optimal location, considering factors such as shipping method, proximity to the customer, inventory levels, fulfillment capabilities, sales velocity, and the option to split orders across locations. Effective order routing helps retailers achieve faster delivery times, reduce shipping costs, and maintain balanced inventory across all locations.
 
 ## What is Configurable Order Routing
 
 Configurable order routing takes traditional routing a step further by allowing retailers to customize and fine-tune order routing across their fulfillment network. Instead of depending on a fixed set of rules, configurable routing uses a brokering algorithm that evaluates orders and fulfillment options against a series of sequential rule sets, each with specific conditions.
 
-This high level of customization enables retailers to create order routing that aligns with their unique business needs, and adjust routing parameters in real time without requiring external support. Retailers can optimize factors such as fulfillment costs, inventory distribution, and workload across locations, offering a strategic approach to order management. For scenarios where an order doesn’t meet the criteria of any rule set, configurable routing allows retailers to define specific actions to manage all unfillable orders, making sure no order is left unresolved.
+This high level of customization enables retailers to create order routing that aligns with their unique business needs, and adjust routing parameters in real time without requiring external support. Retailers can optimize factors such as fulfillment costs, inventory distribution, sales velocity, and workload across locations, offering a strategic approach to order management. For scenarios where an order doesn’t meet the criteria of any rule set, configurable routing allows retailers to define specific actions to manage all unfillable orders, making sure no order is left unresolved.
 
 This dynamic approach to order routing also lets retailers quickly adapt to evolving market conditions and customer expectations.
 
@@ -57,9 +57,10 @@ Within each routing, multiple <mark style="color:orange;">**inventory rules**</m
 
 * **Same-day delivery batch**_**:**_ Inventory rules can prioritize fulfillment from warehouses within a 100-mile radius of the customer to meet same-day delivery targets. If inventory is unavailable, a secondary rule could expand the range to 250 miles and include stores.
 * **Next-day delivery batch**: For next-day orders, inventory rules can prioritize fulfillment from warehouses within a 250-mile range, accommodating the one-day delivery SLA. Next inventory rules in sequence can apply if the first inventory rule doesn’t allocate inventory for all orders in the batch.
+* **Store fulfillment batch**: Inventory rules can use [Weeks of Supply](weeks-of-supply-routing.md) to prefer stores with deeper inventory cover, helping retailers clear slow-moving inventory while protecting stores that are already experiencing high walk-in demand.
 
 In the following sections, we’ll dive deeper into each level, to understand how brokering runs, routing rules, and inventory rules work together to optimize order routing.
 
-### Test Drive 
+### Test Drive
 
 The Test Drive feature is used to test different types of orders to verify that all routing flows are working as expected.
