@@ -4,7 +4,7 @@ description: Explain how Sangam's storefront calculates and displays an estimate
 
 # Estimated delivery date
 
-Sangam's storefront calculates an estimated delivery date on product pages in its BOPIS script. The calculation is a storefront rule. It does not read an estimated delivery date from OMS.
+Sangam's storefront calculates an estimated delivery date (EDD) on product pages in its Buy Online Pick Up In Store (BOPIS) script. The calculation is a storefront rule. It does not read an estimated delivery date from the Order Management System (OMS).
 
 ## Inputs
 
@@ -13,7 +13,7 @@ The calculation uses:
 * The shopper's ZIP code, obtained from the stored home-store coordinates, browser location, or the ZIP code entered in the estimated-delivery-date form
 * Nearby retail stores returned for that location
 * The selected product SKU and the shipping-inventory response for the nearby stores
-* The first nearby facility with ATP greater than zero
+* The first nearby facility with available to promise (ATP) greater than zero
 * That facility's distance (`dist`)
 * The shipping methods configured in `bopisCustomConfig.shippingMethods`
 * The browser's current day and local time
@@ -48,7 +48,7 @@ After all offsets are applied, the script moves a Sunday estimate to Monday and 
 
 ## Important implementation limits
 
-* The code comments refer to PST, but the calculation uses the browser's default locale and does not set a time zone.
+* The code comments refer to Pacific Standard Time (PST), but the calculation uses the browser's default locale and does not set a time zone.
 * The current day is captured when the script loads. Keeping a product page open across midnight can therefore retain the earlier day-of-week value until the script reloads.
 * The calculation does not use OMS purchase-order dates, promised dates, carrier transit commitments, cutoffs, holiday calendars, or a configured customer ZIP-to-carrier service.
 
