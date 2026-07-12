@@ -28,5 +28,5 @@ Below this section, the [cancellation sync job](../../retail-operations/workflow
 
 - If both the `cancellation sync` job and the Shopify setting to process refunds are enabled, the cancellation and refund will be sent to Shopify.
 - If the `cancellation sync` job is enabled but the Shopify refund setting is disabled, only the cancellation will be sent to Shopify.
-- If the `cancellation sync` job is disabled, nothing is sent to Shopify, not the cancellation and not the refund, even if the Shopify refund setting is enabled.
+- If the `cancellation sync` job is disabled, neither the cancellation nor the refund is sent to Shopify, even if the Shopify refund setting is enabled.
 - If both settings are disabled, no data is sent to Shopify.
