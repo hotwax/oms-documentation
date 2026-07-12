@@ -29,7 +29,7 @@ To create a product store in the HotWax Order Management System, follow these st
 
 5. Once done, click on "Manage Configurations".
 
-The current creation form does not require a product store group. If you need to associate a store with a primary store group, open the product store after creation and update `Primary store group ID` in its configuration.
+The current creation form does not require a product store group. If you need to associate a store with a primary store group, open the product store after creation and update `Primary Store Group ID` in its configuration.
 
 Now, you'll set up additional configurations for your product store:
 
