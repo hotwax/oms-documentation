@@ -5,7 +5,7 @@ description: >-
 
 # Packed Orders Page
 
-The Packed Orders tab displays all orders that have been packed and are ready to be handed over to the customer. From this tab, store associates can view order details, print the packing slip, and send pickup reminder emails.
+The `Packed Orders` tab displays all orders that have been packed and are ready to be handed over to the customer. From this tab, store associates can view order details, print the packing slip, and send pickup reminder emails.
 
 ## Order Details Card
 The order card in the `Packed` Orders page shows the same basic details as in the `Open` Orders page, like order ID, product info, and customer name. However, a few things are different here. Instead of a picklist, store staff can generate a packing slip using the `print` icon.
