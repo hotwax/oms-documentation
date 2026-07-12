@@ -105,7 +105,7 @@ When physical gift cards are allocated to a store, they automatically appear in 
 
 ### 9. Activate gift cards
 
-HotWax Commerce `Fulfillment App` also enables store associates to activate gift cards directly. During fulfillment, when a unique serial number is applied and the value is loaded onto the card, HotWax Commerce runs a scheduled job to sync these codes to Shopify, where the gift cards are activated.
+HotWax Commerce **Fulfillment App** also enables store associates to activate gift cards directly. During fulfillment, when a unique serial number is applied and the value is loaded onto the card, HotWax Commerce runs a scheduled job to sync these codes to Shopify, where the gift cards are activated.
 
 This activation step ensures that the gift card is fully functional and customers can use the unique serial number they received in their email to redeem the value stored in the gift card.
 
@@ -113,9 +113,9 @@ This activation step ensures that the gift card is fully functional and customer
 
 When all items of an order are marked <mark style="color:orange;">**“Shipped”**</mark> in the `Fulfillment App`, the order status is automatically updated from <mark style="color:orange;">**“Approved”**</mark> to <mark style="color:orange;">**“Completed”**</mark> in HotWax Commerce.
 
-In HotWax Commerce, a scheduled job prepares and exports a feed containing gift card items marked as <mark style="color:orange;">**“Shipped”**</mark>. NetSuite’s script consumes these records and multiple actions take place:
+In HotWax Commerce, a scheduled job prepares and exports a feed containing gift card items marked as <mark style="color:orange;">**“Shipped.”**</mark> NetSuite’s script consumes these records and multiple actions take place:
 
-* The item fulfillment record is created and marked as <mark style="color:orange;">**“Shipped”**</mark>.
+* The item fulfillment record is created and marked as <mark style="color:orange;">**“Shipped.”**</mark>
 * The initial order status is updated from <mark style="color:orange;">**“Pending Fulfillment”**</mark> to <mark style="color:orange;">**“Pending Billing”**</mark>.
 * Finally, once the invoice is auto generated, the order status is updated from <mark style="color:orange;">**“Pending Billing”**</mark> to <mark style="color:orange;">**“Billed”**</mark>.
 
@@ -159,8 +159,8 @@ Digital gift cards are already in the <mark style="color:orange;">**“Completed
 A dedicated job in HotWax Commerce downloads NetSuite's internal IDs, while another job downloads NetSuite's item line IDs.
 
 * Once NetSuite order ID and item line IDs are synced to HotWax Commerce, a scheduled job in HotWax Commerce creates customer deposits for corresponding gift card orders in the <mark style="color:orange;">**“Undeposited”**</mark> status in NetSuite.
-* By default, non-inventory items such as digital gift cards are not eligible for physical fulfillment in NetSuite. NetSuite automatically marks them as fulfilled and updates their status from <mark style="color:orange;">**“Pending Fulfillment”**</mark> to <mark style="color:orange;">**“Pending Billing”**</mark>.
-* Subsequently, an invoice is automatically generated in NetSuite with the status <mark style="color:orange;">**“Paid”**</mark>, and the customer deposit status updates from <mark style="color:orange;">**“Not Deposited”**</mark> to <mark style="color:orange;">**“Fully Applied”**</mark>.
+* By default, non-inventory items such as digital gift cards are not eligible for physical fulfillment in NetSuite. NetSuite automatically marks them as fulfilled and updates their status from <mark style="color:orange;">**“Pending Fulfillment”**</mark> to <mark style="color:orange;">**“Pending Billing.”**</mark>
+* Subsequently, NetSuite automatically generates an invoice with the status <mark style="color:orange;">**“Paid,”**</mark> and updates the customer deposit status from <mark style="color:orange;">**“Not Deposited”**</mark> to <mark style="color:orange;">**“Fully Applied.”**</mark>
 
 {% hint style="success" %}
 This marks the completion of the digital gift card order lifecycle.
