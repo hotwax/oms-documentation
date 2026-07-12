@@ -24,7 +24,7 @@ b. If the customer allows access to their system location:
 
 * Obtain the latitude and longitude coordinates directly from their device.
 
-### postCodeLookup API request
+### postcodeLookup API request
 
 #### Endpoint
 
