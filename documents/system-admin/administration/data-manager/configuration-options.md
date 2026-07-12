@@ -2,7 +2,7 @@
 
 ## Add or edit a configuration
 
-To create a configuration, select **Add** and enter the confirmed import or export details. To edit an existing configuration, search by name or ID and select the **Edit** icon.
+To create a configuration, select `Add` and enter the confirmed import or export details. To edit an existing configuration, search by name or ID and select the `Edit` icon.
 
 {% hint style="info" %}
 The Config ID cannot be modified. To use a different ID, create a new configuration.
@@ -19,7 +19,7 @@ The Config ID cannot be modified. To use a different ID, create a new configurat
 | **Export Path**       | SFTP Destination folder for exported files.             |
 | **File Name Pattern** | A regular expression that limits an SFTP import to matching files. |
 | **Multi-threading**   | Controls whether files for this configuration can be processed with multiple threads. |
-| **Execution Mode**    | Determines how the OMS schedules processing for this configuration. |
+| **Execution Mode**    | Determines how the Order Management System (OMS) schedules processing for this configuration. |
 | **Notify on Failure** | Controls whether failure notifications are sent for this configuration. |
 
 {% hint style="danger" %}

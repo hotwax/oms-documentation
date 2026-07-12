@@ -4,7 +4,7 @@ description: Configure, run, and audit imports and exports in Data Manager.
 
 # Data Manager
 
-Data Manager is the OMS workspace for importing and exporting data, monitoring file processing, and reviewing failed records. Use it when you need to run a supported bulk import, configure an automated SFTP import, or investigate an import or export result.
+Data Manager is the Order Management System (OMS) workspace for importing and exporting data, monitoring file processing, and reviewing failed records. Use it when you need to run a supported bulk import, configure an automated SFTP import, or investigate an import or export result.
 
 ## Open Data Manager
 
