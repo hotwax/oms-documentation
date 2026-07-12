@@ -4,7 +4,7 @@ description: Learn about common terms in omnichannel order and inventory managem
 
 # Glossary
 
-Use the definitions in this glossary as the canonical reference for Quantity on Hand (QOH), Available to Promise (ATP), and Online ATP. Workflow pages can describe how these values are used in a specific process.
+Use the definitions in this glossary as the canonical reference for quantity on hand (QOH), available to promise (ATP), and online ATP. Workflow pages can describe how these values are used in a specific process.
 
 ### Advanced shipping notice (ASN)
 
@@ -24,7 +24,7 @@ The arrival date is the date when the inventory of the purchase order items is e
 
 ### Available to promise (ATP)
 
-ATP (Available to Promise) is the inventory that can be promised at a facility after inventory reserved for orders is deducted from Quantity on Hand (QOH).\
+ATP (available to promise) is the inventory that can be promised at a facility after inventory reserved for orders is deducted from quantity on hand (QOH).\
 ATP = QOH - Reserved quantities
 
 ### Backorders
@@ -185,7 +185,7 @@ A purchase order (PO) is a document created by a retailer and sent to their supp
 
 ### Quantity on hand (QOH)
 
-QOH is the total physical quantity of a product recorded at a store or warehouse before order reservations and online-selling rules are applied. HotWax Commerce can update QOH from ERP, warehouse management system (WMS), and point of sale (POS) inventory feeds.
+QOH is the total physical quantity of a product recorded at a store or warehouse before order reservations and online-selling rules are applied. HotWax Commerce can update QOH from ERP, WMS, and POS inventory feeds.
 
 ### Rejected orders
 
