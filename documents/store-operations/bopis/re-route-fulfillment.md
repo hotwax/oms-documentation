@@ -4,7 +4,7 @@ description: Help customers choose a new fulfillment option after a BOPIS item i
 
 # Re-route Fulfillment
 
-When a store rejects one or more items from a BOPIS order, the customer can receive a Re-route Fulfillment link. The options shown in that experience are controlled by the product-store **Order Edit Permissions** in the BOPIS app.
+When a store rejects one or more items from a Buy Online Pick-Up In Store (BOPIS) order, the customer can receive a Re-route Fulfillment link. The options shown in that experience are controlled by the product-store `Order Edit Permissions` in the BOPIS app.
 
 ## Before you begin
 
@@ -25,7 +25,7 @@ When pickup-location editing is enabled, the experience suggests a location that
 
 ### Allow item splitting
 
-When **Order Item Split** is enabled, customers can select a different pickup location for each affected item. Updated items are grouped by their selected fulfillment location.
+When `Order Item Split` is enabled, customers can select a different pickup location for each affected item. Updated items are grouped by their selected fulfillment location.
 
 ### Keep items together
 
@@ -33,7 +33,7 @@ When item splitting is not enabled, customers are shown pickup locations that ca
 
 ## Handle items unavailable everywhere
 
-Items that are unavailable at every eligible pickup location appear in an **Out of Stock** group. Customers can request cancellation for those items from the Re-route Fulfillment experience, including when the product store does not normally allow direct item cancellation.
+Items that are unavailable at every eligible pickup location appear in an `Out of Stock` group. Customers can request cancellation for those items from the Re-route Fulfillment experience, including when the product store does not normally allow direct item cancellation.
 
 ## Change another fulfillment detail
 
