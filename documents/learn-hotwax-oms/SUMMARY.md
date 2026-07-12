@@ -29,4 +29,5 @@
 ## How-To Guides
 
 * [How to Configure BOPIS](how-to-guides/configure-bopis.md)
+* [Configure Estimated Delivery Dates](how-to-guides/configure-estimated-delivery-dates.md)
 * [How to Configure Store Fulfillment](how-to-guides/configure-store-fulfillment.md)
