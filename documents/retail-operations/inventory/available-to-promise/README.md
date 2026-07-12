@@ -1,30 +1,37 @@
 ---
 description: >-
-  This page explains how HotWax Commerce calculates Available-to-Promise (ATP)
-  by syncing inventory across channels and factoring in safety stock,
-  thresholds, and facility exclusions.
+  Configure inventory channels, thresholds, safety stock, store pickup, and
+  shipping availability in the Order Routing App.
 ---
 
-# Available to Promise Management
+# Sourcing and inventory availability
 
-HotWax Commerce integrates with ERP, POS, and WMS systems to provide a unified inventory view, ensuring stock levels are synchronized with platforms like Shopify. When calculating `Online Available to Promise` (ATP) for Shopify, HotWax Commerce considers more than just the quantity on hand (QOH). It also factors in safety stock, thresholds, reserved quantities, brokering queue orders, and excluded facilities\` to avoid overselling scenarios.
+Use the sourcing tools in the **Order Routing App** to control the inventory that can be promised to online customers. These tools were previously available in the Available to Promise App.
 
-For example, the product "blue shirt" from the brand NotNaked has a current quantity on hand (QOH) of 100 units. There are 10 orders placed for this product, with inventory allocated to 5 of those sales orders. Additionally, the product has 5 units set aside as safety stock and 5 units as a threshold. One facility, which is unavailable for fulfillment, has 5 units of Available-to-Promise (ATP) inventory. The ATP for this product can be calculated using the following formula:
+The app calculates available to promise (ATP) from quantity on hand (QOH), reservations, and the inventory controls that apply to the product and facility. Threshold and safety stock rules reduce sellable inventory. Store pickup and shipping rules control where a product can be fulfilled. Inventory channels determine which facilities contribute inventory to each sales channel.
 
-Online ATP = QOH - (Reserved quantities + Safety stock + Threshold + Orders in brokering queue + Excluded facilities’ ATP)
+## Choose the right tool
 
-Here is the given information:
+| Page | Use it to |
+| --- | --- |
+| `Inventory channels` | Group facilities for a sales channel, link a configuration facility, and schedule inventory publication |
+| `Threshold` | Hold back a network-level quantity for selected products and channels |
+| `Safety stock` | Reserve a quantity at selected facility groups |
+| `Store pickup` | Allow or suppress pickup for product and facility or product and channel combinations |
+| `Shipping` | Allow or suppress shipping for product and facility or product and channel combinations |
+| `Inventory` | Search a product at a facility and review ATP, QOH, safety stock, pickup, and brokering settings |
 
-Given:
+<figure><img src="../../.gitbook/assets/order-routing-threshold-rules.jpg" alt="Threshold rules and schedule in the Order Routing App"><figcaption><p>Each sourcing page shows its schedule, archived rules, and active rule sequence.</p></figcaption></figure>
 
-<table data-header-hidden data-full-width="false"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>Quantity on hand</td><td>100 Units</td></tr><tr><td>Reserved quantities</td><td>5 Units</td></tr><tr><td>Safety stock</td><td>5 Units</td></tr><tr><td>Threshold</td><td>5 Units</td></tr><tr><td>Orders in brokering queue</td><td>5 Units</td></tr><tr><td>Excluded facilities' ATP</td><td>5 Units</td></tr></tbody></table>
+## Before you create rules
 
-Hence,
+Confirm the following setup:
 
-$$
-Online ATP = 100 - (5+5+5+5+5) = 100 - (25) = 75
-$$
+* Select the correct product store from the app menu.
+* Create the required [inventory channels](create-channels.md) before adding channel-level rules.
+* Create facility groups for locations that share the same sourcing policy.
+* Sync product tags and features if rules need to target part of the catalog.
 
-HotWax Commerce will push 75 units as the sellable Online ATP to Shopify, ensuring accurate inventory representation for online sales. However, retailers managing large product assortments and multiple facilities may face challenges in handling individual product settings at scale. Each product can have different configurations for safety stock, thresholds, store pickup, and shipping rules. Modifying product categories or introducing new ones requires uploading large CSV files, which takes time and limits flexibility in adjusting fulfillment rules.
+Rules are evaluated in their displayed sequence. Put broader rules before more specific rules when the specific rule should refine the result. Use the reorder action on a rule page to change the sequence, then save the new order.
 
-The ATP app simplifies this by allowing retailers to configure multiple rules to manage safety stock, threshold, store pickup, and shipping for bulk products with ease. The ATP app allows retailers to apply rules based on product tags and facility types or groups, reducing manual work. It supports real-time available to promise computation based on all these rules and automates inventory synchronization across multiple channels.
+Continue with [sourcing concepts](concepts.md) or open a rule guide from the table above.

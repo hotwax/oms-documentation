@@ -18,6 +18,7 @@ Flow: Inventory Sync from HotWax to Shopify.
 Note:  The `ShopifyFacilityGroupId` parameter allows retailers to push inventory of specific facilities included in that group.
 
 **Custom Parameters**
+
 - This job has no required parameters.
 - It has `facilityGroupId`,`shopifyFacilityGroupId`,`includeAll`, `useVaildATP` as optional parameters.
 
@@ -98,13 +99,14 @@ Job Enum ID: `JOB_IMP_PROD_FAC`\
 Service Name: `ftpImportCSVFile`\
 Flow: Applying ATP rules in HotWax.
 
-HotWax Commerce [ATP App](https://docs.hotwax.co/documents/retail-operations/inventory/available-to-promise) allows retailers to configure rules for inventory computation based on product tags and facility types or groups, reducing manual work. Based on these rules, the available-to-promise (ATP) of a product is calculated, which is then synchronized to Shopify or other sales channels.
+The sourcing tools in the [Order Routing App](../../orders/order-routing/README.md) let retailers configure inventory rules by product tags, features, channels, and facility groups. HotWax Commerce uses these rules when computing available to promise (ATP) for Shopify and other sales channels.
 
-A job in the ATP app generates a CSV file based on rules configured for calculating ATP and puts it in the SFTP location. \*\*The `Import Product Facility` job is used to download this CSV from the SFTP location and upload it on the file system of HotWax Commerce. \*\* Further, the `Process Bulk Import Files` job runs and processes all the files in HotWax. And finally, all the rules configured from the ATP app by the retailer are created.
+A sourcing job generates a CSV file from the configured rules and places it in the SFTP location. The `Import Product Facility` job downloads this CSV to the HotWax Commerce file system. The `Process Bulk Import Files` job then applies the resulting product-facility configuration.
 
 **It is important to note that this job is responsible for applying ATP rules configured by retailers on ATP computation.**
 
 **Custom Parameters**
+
 * The recommended frequency for this job is 15 minutes.
 * This job has configId and propertyResource as the required parameters.
 * It also has some optional parameters.
@@ -199,6 +201,7 @@ HotWax sends an API request to Shopify to fetch the latest inventory data for al
 This job is an alternative to Shopify Webhooks, but since Shopify Webhooks are reliable, it is recommended to schedule this job in HotWax.
 
 **Custom Parameters**
+
 - This job does not have any required parameters
 - It has some optional parameters.
 
