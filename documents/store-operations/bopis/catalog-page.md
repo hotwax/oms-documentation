@@ -9,7 +9,7 @@ description: >-
 
 ## Catalog Page
 
-The Catalog can be accessed by selecting the `Catalog` button in the BOPIS app's bottom tab. It displays products available for store pickup on the e-commerce platform and can be used to search for products, view product details, and check inventory availability.
+The Catalog can be accessed by selecting the `Catalog` button in the BOPIS App's bottom tab. It displays products available for store pickup on the e-commerce platform and can be used to search for products, view product details, and check inventory availability.
 
 #### Search Product
 
