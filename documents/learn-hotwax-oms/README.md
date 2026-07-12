@@ -69,7 +69,7 @@ Customer Service Representatives (CSRs) can utilize HotWax Commerce to get detai
 
 ### Cycle count
 
-A cycle count is a scheduled physical inventory check for a facility. Store teams count items, submit the completed count for review, and administrators review variances before the count is finalized. Learn more in the [cycle count workflow](../retail-operations/inventory/cycle-count/README.md#cycle-count-workflow).
+A cycle count is a scheduled physical inventory check for a facility. Store teams count items, submit the completed count for review, and administrators review variances before finalizing the count. Learn more in the [cycle count workflow](../retail-operations/inventory/cycle-count/README.md#cycle-count-workflow).
 
 ### Cycle count approval
 
@@ -77,7 +77,7 @@ Cycle count approval is the administrative review of a submitted cycle count. Ad
 
 ### Count variance
 
-A count variance is the difference between the physical quantity entered during a cycle count and the quantity recorded by the system. Reviewers use variances to identify discrepancies and decide whether to accept or reject counted items. Learn more in [Pending review](../retail-operations/inventory/cycle-count/pending-review.md#review-count-page-overview).
+A count variance is the difference between the physical quantity entered during a cycle count and the system-recorded quantity. Reviewers use variances to identify discrepancies and decide whether to accept or reject counted items. Learn more in [Pending review](../retail-operations/inventory/cycle-count/pending-review.md#review-count-page-overview).
 
 ### Digital gift cards
 
@@ -216,7 +216,7 @@ Reserved inventories refer to inventory, whether in a store or warehouse, that h
 
 ### Recount
 
-A recount is a follow-up count used to verify an item quantity before the cycle count is submitted for review. Store teams can create an additional counting session to complete items that remain uncounted. Learn more in [Review progress and complete](../store-operations/cycle-count/count-progress-review.md#managing-sessions-and-submission).
+A recount is a follow-up count used to verify an item quantity before submitting the cycle count for review. Store teams can create an additional counting session to count remaining items. Learn more in [Review progress and complete](../store-operations/cycle-count/count-progress-review.md#managing-sessions-and-submission).
 
 ### Safety stock
 
