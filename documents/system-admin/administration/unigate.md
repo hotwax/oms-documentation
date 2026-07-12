@@ -4,7 +4,7 @@ description: Configure an OMS Unigate tenant and email gateway settings for emai
 
 # Configure Unigate for email automation
 
-Use Unigate to connect the OMS to a supported email gateway. Complete this setup before adding a Klaviyo connection in the Company app.
+Use Unigate to connect HotWax Commerce Order Management System (OMS) to a supported email gateway. Complete this setup before adding a Klaviyo connection in the Company App.
 
 ## Before you begin
 
@@ -23,7 +23,7 @@ API keys and gateway credentials are secrets. Enter them directly in OMS. Do not
 ## 1. Set up the Unigate tenant
 
 1. In OMS Admin, open `Unigate` > `Communication Gateway`.
-2. In the **Active Tenant** section, select `Setup Tenant`.
+2. In the `Active Tenant` section, select `Setup Tenant`.
 3. Enter the tenant ID, description, instance URL, and API key supplied for the Unigate deployment.
 4. Select `Create`.
 
@@ -31,7 +31,7 @@ OMS stores this connection as `UNIGATE_CONFIG`. The tenant is ready only when th
 
 ## 2. Add the email gateway authentication
 
-1. In **Communication Gateway Auths**, select `Add Comm Auth`.
+1. In `Communication Gateway Auths`, select `Add Comm Auth`.
 2. Select the supported gateway configuration.
 3. Enter a gateway auth ID, description, base URL, and the credentials required by that gateway.
 4. Set the authentication header name when the gateway requires one, then select `Add`.
@@ -40,20 +40,20 @@ Record the gateway auth ID. You select it when you create an email setting.
 
 ## 3. Add a product-store email setting
 
-1. In **Product Store Email Settings**, select `Add Email Setting`.
+1. In `Product Store Email Settings`, select `Add Email Setting`.
 2. Select the product store and email type.
 3. Enter the sender address and subject.
-4. Select the approved message template in **Body Screen Location**.
+4. Select the approved message template in `Body Screen Location`.
 5. Select the gateway auth ID created in the previous step.
-6. Leave **System Message Remote ID** set to `UNIGATE_CONFIG` unless the implementation owner has supplied a different configured remote.
+6. Leave `System Message Remote ID` set to `UNIGATE_CONFIG` unless the implementation owner has supplied a different configured remote.
 7. Select `Add`.
 
 ## 4. Verify the connection
 
-1. Confirm that **Active Tenant** shows the tenant ID and base URL.
-2. Confirm that the gateway authentication record appears in **Communication Gateway Auths**.
+1. Confirm that `Active Tenant` shows the tenant ID and base URL.
+2. Confirm that the gateway authentication record appears in `Communication Gateway Auths`.
 3. Confirm that the product-store email setting lists the expected email type and gateway auth ID.
-4. Refresh the Company app. The email connection is available only after `UNIGATE_CONFIG` exists on the OMS instance.
+4. Refresh the Company App. The email connection is available only after `UNIGATE_CONFIG` exists on the OMS instance.
 
 If any tenant field is missing, OMS marks `UNIGATE_CONFIG` as incomplete and does not expose the gateway settings. Correct the tenant configuration before adding or updating email settings.
 
