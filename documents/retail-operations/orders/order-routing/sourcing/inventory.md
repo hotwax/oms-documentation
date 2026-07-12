@@ -19,7 +19,7 @@ The product row shows:
 | `Allow Pickup` | Whether the product can be picked up from the facility |
 | `Allow Brokering` | Whether the product can be considered for order routing at the facility |
 
-<figure><img src="../../../.gitbook/assets/order-routing-inventory.jpg" alt="Inventory page filtered to one product at a selected facility"><figcaption><p>Compare ATP, QOH, and sourcing settings for a product at one facility.</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/order-routing-inventory.jpg" alt="Inventory page filtered to Teton products at the Austin PA facility, with ATP, QOH, safety stock, pickup, and brokering values"><figcaption><p>Search a product family and compare its inventory and sourcing settings at one facility.</p></figcaption></figure>
 
 ## Add missing product configuration
 

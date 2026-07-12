@@ -22,7 +22,7 @@ Use the sourcing tools in the **Order Routing App** to configure inventory avail
 * [Product inventory](sourcing/inventory.md)
 * [Schedule sourcing rules](sourcing/schedule-rules.md)
 
-<figure><img src="../../.gitbook/assets/order-routing-inventory.jpg" alt="Inventory page in the Order Routing App showing a product's ATP, QOH, safety stock, pickup, and brokering settings"><figcaption><p>Review product inventory and sourcing settings in the Order Routing App.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/order-routing-inventory.jpg" alt="Inventory page in the Order Routing App showing filtered products with ATP, QOH, safety stock, pickup, and brokering settings"><figcaption><p>Review product inventory and sourcing settings in the Order Routing App.</p></figcaption></figure>
 
 ## Route orders
 
