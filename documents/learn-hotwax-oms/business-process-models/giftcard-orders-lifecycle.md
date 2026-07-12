@@ -8,13 +8,13 @@ description: >-
 
 Gift cards are stored-value cards that carry a value determined at the time of the card's purchase. They are often given as gifts or rewards and are redeemable for products up to the value stored on the card.
 
-To explain the Gift Card Orders Lifecycle BPM, we've opted NetSuite as the ERP system, Shopify for eCommerce, and HotWax Commerce for the OMS because most of our customers use this tech stack.
+To explain the Gift Card Orders Lifecycle BPM, we have chosen NetSuite as the ERP system, Shopify for eCommerce, and HotWax Commerce for the OMS because most of our customers use this tech stack.
 
 **What is the role of NetSuite?**
 
 NetSuite serves as an ERP system and oftentimes also as a fulfillment solution in warehouse locations.
 
-HotWax Commerce being an Order Management System downloads all orders, including gift cards orders from Shopify. Let’s first understand how are physical and digital gift cards different from each other:
+HotWax Commerce being an Order Management System downloads all orders, including gift cards orders from Shopify. Let’s first understand how physical and digital gift cards differ:
 
 **Physical Gift Cards:**
 
@@ -26,7 +26,7 @@ Physical gift cards are tangible cards that customers can buy online or in-store
 
 **Digital Gift Cards:**
 
-Digital gift cards, also known as e-gift cards, are virtual equivalents of physical gift cards. Customers receive them via email or text message along with a unique serial number that they can use to redeem the value stored in the card.
+Digital gift cards, also known as e-gift cards, are virtual equivalents of physical gift cards. Customers receive them via email or text message along with a unique serial number that they can use to redeem the value stored in the card. Since digital gift cards are non-inventory items, no physical fulfillment is required in NetSuite. Therefore, NetSuite automatically marks them as fulfilled and updates their status from “Pending Fulfillment” to “Pending Billing”.
 
 **Preparation and processing:** Customers instantly receive digital cards upon purchase via email and therefore they are immediately fulfilled.
 
@@ -81,9 +81,9 @@ When the warehouse fulfillment team begins the fulfillment of a gift card, an it
 
 NetSuite’s script generates a feed containing gift card items, their assigned serial numbers, and values corresponding to the gift card orders.
 
-A scheduled job in HotWax Commerce Integration Platform reads this feed, runs a transformation, and generates a JSON file with the relevant data required for the gift card activation, including gift card items, their assigned serial numbers, and corresponding values in NetSuite.
+A scheduled job in HotWax Commerce Integration Platform reads this feed, runs a transformation, and generates a JSON file with the relevant data required for gift card activation, including gift card items, their assigned serial numbers, and corresponding values in NetSuite.
 
-Finally, once the JSON is prepared, HotWax Commerce Integration Platform initiates the gift card activation process in the eCommerce platform. Because most of our customers are using Shopify as their eCommerce platform, in this scenario HotWax Commerce Integration Platform calls Shopify API to activate the gift card.
+After shipment, once serial numbers and values are confirmed from NetSuite, HotWax Commerce Integration Platform initiates the gift card activation process in Shopify. Because most of our customers are using Shopify as their eCommerce platform, in this scenario HotWax Commerce Integration Platform calls Shopify API to activate the gift card.
 
 ### 7. Order Item Shipped
 
@@ -96,7 +96,7 @@ NetSuite's script exports item fulfillment records marked as <mark style="color:
 
 Let's take a look at how physical gift card orders are fulfilled from stores.
 
-When physical gift cards are allocated to a store, they automatically appear in the HotWax Commerce `Fulfillment App`. The store’s fulfillment team uses the app to prepare these gift card orders for shipment.
+When physical gift cards are allocated to a store, they automatically appear in the HotWax Commerce "Fulfillment App". The store’s fulfillment team uses the app to prepare these gift card orders for shipment.
 
 * Once a gift card item is successfully picked, the fulfillment status changes to <mark style="color:orange;">**"Picked"**</mark>.
 * After packing, the status updates to <mark style="color:orange;">**"Packed"**</mark>.
@@ -105,7 +105,7 @@ When physical gift cards are allocated to a store, they automatically appear in 
 
 ### 9. Activate gift cards
 
-HotWax Commerce `Fulfillment App` also enables store associates to activate gift cards directly. During fulfillment, when a unique serial number is applied and the value is loaded onto the card, HotWax Commerce runs a scheduled job to sync these codes with Shopify, where the gift cards are activated.
+HotWax Commerce `Fulfillment App` also enables store associates to activate gift cards directly. During fulfillment, once a unique serial number is assigned and the value is loaded, HotWax Commerce runs a scheduled job to sync these codes and activate the gift cards in Shopify.
 
 This activation step ensures that the gift card is fully functional and customers can use the unique serial number they received in their email to redeem the value stored in the gift card.
 
@@ -125,7 +125,7 @@ This marks the completion of physical gift card orders in NetSuite.
 
 Once a gift card order reaches the <mark style="color:orange;">**"Completed"**</mark> status in HotWax Commerce, a scheduled job in HotWax Commerce sends the tracking details to Shopify and marks the gift card orders as <mark style="color:orange;">**“Fulfilled”**</mark>.
 
-This process remains consistent regardless of whether the gift card order fulfillment is performed in NetSuite or the `Fulfillment App`.
+This process remains consistent regardless of whether the gift card order fulfillment is performed in NetSuite or the "Fulfillment App".
 
 {% hint style="success" %}
 This marks the completion of the physical gift card order lifecycle.
@@ -159,7 +159,7 @@ Digital gift cards are already in the <mark style="color:orange;">**“Completed
 A dedicated job in HotWax Commerce downloads NetSuite's internal IDs, while another job downloads NetSuite's item line IDs.
 
 * Once NetSuite order ID and item line IDs are synced to HotWax Commerce, a scheduled job in HotWax Commerce creates customer deposits for corresponding gift card orders in the <mark style="color:orange;">**“Undeposited”**</mark> status in NetSuite.
-* By default non inventory items like digital gift cards are configured to be not eligible for fulfillment in NetSuite. Therefore digital gift cards are automatically fulfilled in NetSuite and their status updated from <mark style="color:orange;">**“Pending Fulfillment”**</mark> to <mark style="color:orange;">**“Pending Billing”.**</mark>
+* By default non inventory items like digital gift cards are configured to be not eligible for fulfillment in NetSuite.  Since digital gift cards are non-inventory items, NetSuite automatically marks them as fulfilled without physical processing and their status is updated from <mark style="color:orange;">**“Pending Fulfillment”**</mark> to <mark style="color:orange;">**“Pending Billing”.**</mark>
 * Subsequently, invoice is auto generated in NetSuite in the status <mark style="color:orange;">**“Paid”**</mark>, and the customer deposit status is automatically updated from <mark style="color:orange;">**“Not Deposited”**</mark> to <mark style="color:orange;">**“Fully Applied”.**</mark>
 
 {% hint style="success" %}
