@@ -12,7 +12,7 @@ To explain the Gift Card Orders Lifecycle BPM, we use NetSuite as the ERP system
 
 **What is the role of NetSuite?**
 
-NetSuite serves as an ERP system and oftentimes also as a fulfillment solution in warehouse locations.
+NetSuite serves as an ERP system and often as a fulfillment solution in warehouse locations.
 
 HotWax Commerce downloads all orders from Shopify, including gift card orders. Physical and digital gift cards differ in the following ways:
 
