@@ -1,8 +1,10 @@
 ---
 description: >-
-  The Open Orders page allows store associates to view and manage newly assigned orders that are pending fulfillment. On this page, store associates can filter orders, review order details, pick individual orders or pick orders in batches, print picklists, and begin the fulfillment process.
+  View and manage newly assigned orders that are pending fulfillment.
 ---
 # Open Orders Page
+
+The `Open Orders` page allows store associates to view and manage newly assigned orders that are pending fulfillment. On this page, store associates can filter orders, review order details, pick individual orders or pick orders in batches, print picklists, and begin the fulfillment process.
 
 ## Order Details Card
 The order card shows details that store staff need at a glance. To check the number of units currently in stock, store associates need to click the small `box` icon next to the product details. To view the inventory computation, including quantity on hand, safety stock, reserved quantities, and online ATP, they can click the `info` icon.  
