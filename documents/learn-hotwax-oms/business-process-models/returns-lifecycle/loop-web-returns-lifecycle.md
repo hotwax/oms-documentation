@@ -8,7 +8,7 @@ description: >-
 
 <figure><img src="../../.gitbook/assets/web-returns-bpm.png" alt=""><figcaption><p>Web returns lifecycle business process model</p></figcaption></figure>
 
-Customers start their return process in Shopify, and Loop manages the return process. From there, HotWax Commerce Integration Platform connects the systems by transforming and syncing return data to NetSuite. This ensures that every step, from return creation to refund and inventory updates, stays in sync.
+Customers start their return process in Shopify, and Loop manages the return process. From there, HotWax Commerce Integration Platform connects the systems by transforming and syncing return data to NetSuite. This keeps every step, from return creation to refund and inventory updates, in sync.
 
 To explain the return lifecycle, we've taken Shopify as the eCommerce platform, Loop as the Return Management System (RMS), NetSuite as the ERP, and HotWax Commerce as both the Order Management System (OMS) and the Integration Platform.
 
