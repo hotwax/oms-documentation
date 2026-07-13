@@ -39,7 +39,9 @@ _**Case 1: No Payment Transactions Present**_
 This means there is no payment recorded in OMS. Since Customer Deposit creation depends on payment, NetSuite will not create any deposit.
 
 <div data-full-width="false">
-<figure><img src="../.gitbook/assets/NoPaymentPreference.png" alt=""><figcaption></figcaption></figure>
+  <figure>
+    <img src="../.gitbook/assets/NoPaymentPreference.png" alt="HotWax Commerce Order Payment Preference section with no payment transactions recorded">
+  </figure>
 </div>
 
 This might happen if the payment is not captured from Shopify or not present on Shopify or any payment integration issue.
@@ -71,11 +73,15 @@ _**Case 3: Payment Exists but Order is Partially Paid**_
 For orders where a partial payment is recorded in OMS, In such a case as well, deposit may not be created.
 
 <div data-full-width="false">
-<figure><img src="../.gitbook/assets/OrderTotal.png" alt=""><figcaption></figcaption></figure>
+  <figure>
+    <img src="../.gitbook/assets/OrderTotal.png" alt="HotWax Commerce Order Total section displaying the total amount due for the order">
+  </figure>
 </div>
 
 <div data-full-width="false">
-<figure><img src="../.gitbook/assets/PartialPayment.png" alt=""><figcaption></figcaption></figure>
+  <figure>
+    <img src="../.gitbook/assets/PartialPayment.png" alt="HotWax Commerce Order Payment Preference section showing a partial payment amount captured rather than the full total">
+  </figure>
 </div>
 
 **Resolution:**
@@ -91,7 +97,9 @@ For orders where a partial payment is recorded in OMS, In such a case as well, d
     - A Customer Deposit exists
 
 <div data-full-width="false">
-<figure><img src="../.gitbook/assets/NetSuiteCustomerDeposit.png" alt=""><figcaption></figcaption></figure>
+  <figure>
+    <img src="../.gitbook/assets/NetSuiteCustomerDeposit.png" alt="NetSuite Sales Order Related Records tab displaying the associated Customer Deposit entry">
+  </figure>
 </div>
 
 
