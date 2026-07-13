@@ -10,7 +10,8 @@ The objective of this document is to help users identify and resolve cases where
 - Go to the OMS and search for your order.
 - Navigate to the View Order Details Page and click the icon next to the External ID to view the Order Sync Feed History.
 <div data-full-width="false">
-<figure><img src="../.gitbook/assets/OrderSyncHistory.png" alt=""><figcaption></figcaption></figure>
+  <figure>
+    <img src="../.gitbook/assets/OrderSyncHistory.png" alt="HotWax Commerce Order Detail page showing the Order Sync Feed History pop-up Modal">
 </div>
 
 #### Two possible scenarios:
@@ -24,7 +25,9 @@ This means the order has not yet been picked up by the feed job yet.
 - Go to View Order Details Page
 - Check the Order Entry Date
 <div data-full-width="false">
-<figure><img src="../.gitbook/assets/OrderTimeline.png" alt=""><figcaption></figcaption></figure>
+  <figure>
+    <img src="../.gitbook/assets/OrderTimeline.png" alt="HotWax Commerce Order Detail page timeline displaying the Order Entry Date and time">
+  </figure>
 </div>
 
 As Orders can take up to ~2 hours to sync to NetSuite you can wait if the order is recent. i.e.
@@ -38,7 +41,9 @@ _**1. Validate Customer Information**_
 - Open your order, in the View Order Details page, Go to Bill To Customer
   
 <div data-full-width="false">
-<figure><img src="../.gitbook/assets/CustomerName.png" alt=""><figcaption></figcaption></figure>
+  <figure>
+    <img src="../.gitbook/assets/CustomerName.png" alt="HotWax Commerce View Order Details page highlighted to show the Bill To Customer section">
+  </figure>
 </div>
 
 - Open View Party Page.
@@ -46,7 +51,9 @@ _**1. Validate Customer Information**_
 - Check customer Identifications and verify if NetSuite Customer Internal ID is present
 
 <div data-full-width="false">
-<figure><img src="../.gitbook/assets/CustomerIdentification.png" alt=""><figcaption></figcaption></figure>
+  <figure>
+    <img src="../.gitbook/assets/CustomerIdentification.png" alt="HotWax Commerce View Party Page showing customer Identifications with the NetSuite Customer Internal ID missing or present">
+  </figure>
 </div>
 
 - If missing, the order will NOT sync to NetSuite.
@@ -61,7 +68,9 @@ _**2. Validate Product Information**_
 - Open each product via View Product Page and check NetSuite Product Internal ID exists in Identifications
 
 <div data-full-width="false">
-<figure><img src="../.gitbook/assets/ProductIdentification.png" alt=""><figcaption></figcaption></figure>
+  <figure>
+    <img src="../.gitbook/assets/ProductIdentification.png" alt="HotWax Commerce View Product Page showing the available product Identifications for a product">
+  </figure>
 </div>
 
 - If missing, the order will NOT sync to NetSuite.
@@ -74,7 +83,7 @@ _**3. Validate Payment Information**_
 - Missing or incorrect payment data can prevent syncing.
 - You can add the required payment from the Order Detail Page.
 <div data-full-width="false">
-<figure><img src="../.gitbook/assets/OrderPaymentPreference.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/OrderPaymentPreference.png" alt="HotWax Commerce Order Detail page showing an payment transaction"><figcaption></figcaption></figure>
 </div>
 
 _**If:**_
@@ -117,14 +126,16 @@ Navigate in NetSuite:
 `Setup → Import/Export → View CSV Import Status`
 
 <div data-full-width="false">
-<figure><img src="../.gitbook/assets/NetSuiteImportStatus.png" alt=""><figcaption></figcaption></figure>
+  <figure>
+    <img src="../.gitbook/assets/NetSuiteImportStatus.png" alt="NetSuite CSV Import Status dashboard showing a failed records">
+  </figure>
 </div>
 
 ### Step 10: Identify Failed Records
 - Under the message column, you will see statuses like:
 
 <div data-full-width="false">
-<figure><img src="../.gitbook/assets/NetSuiteCSVImportFiles.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/NetSuiteCSVImportFiles.png" alt="NetSuite import files Status page showing a list of uploaded CSV import files and their respective processing states"></figure>
 </div>
 
 - “5 of 5 records processed successfully”
@@ -155,13 +166,17 @@ This error indicates that NetSuite is unable to find the customer associated wit
 - Search for the customer directly in NetSuite using either the email ID or phone number
 
 <div data-full-width="false">
-<figure><img src="../.gitbook/assets/NetSuiteCustomerSearch.png" alt=""><figcaption></figcaption></figure>
+  <figure>
+    <img src="../.gitbook/assets/NetSuiteCustomerSearch.png" alt="NetSuite Global Search bar and results interface being used to lookup a customer by email address">
+  </figure>
 </div>
 
 - Once you open the customer record in NetSuite, check the URL. At the end of the URL, you will find the internal ID of the customer
  
 <div data-full-width="false">
-<figure><img src="../.gitbook/assets/NetSuiteCustomerID.png" alt=""><figcaption></figcaption></figure>
+  <figure>
+    <img src="../.gitbook/assets/NetSuiteCustomerID.png" alt="HotWax Commerce customer profile link highlighting the NetSuite Customer ID">
+  </figure>
 </div>
 
 - Also, you can check NetSuite logs for entries like "merged with duplicates"
@@ -189,7 +204,9 @@ This means that NetSuite is unable to identify the location being sent with the 
 - Click to view the desired location.
 - Check whether the “Location is Inactive” checkbox is checked or not and correct it accordingly.
 <div data-full-width="false">
-<figure><img src="../.gitbook/assets/NSLocation.png" alt=""><figcaption></figcaption></figure>
+  <figure>
+    <img src="../.gitbook/assets/NSLocation.png" alt="NetSuite Location record page with the Location Is Inactive checkbox highlighted">
+  </figure>
 </div>
 
 - If the location does not exist, create it in NetSuite
