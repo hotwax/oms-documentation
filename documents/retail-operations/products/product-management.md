@@ -1,90 +1,146 @@
-# Product management
+# Manage products in the Products app
 
-Use the Products app to find products, review product setup, fix data quality gaps, and check recent product imports. The app is designed for operations teams that need product data to be accurate for order routing, fulfillment, inventory availability, channel sync, and financial posting.
+Use the Products app to find catalog records, edit product setup, repair common data gaps, and review recent product updates. Open the app from Launchpad, then use the side menu to move between each workflow.
 
-Open the Products app from Launchpad. The side menu includes these pages:
+## Before you begin
 
-<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Product workbench</strong></td><td>Search products and filter the catalog by product type, product store, product kind, tag, and sort order.</td><td><a href="#product-workbench">Product workbench</a></td></tr><tr><td><strong>Duplicate identifiers</strong></td><td>Find duplicate SKU, UPC, or identifier values and resolve each duplicate group.</td><td><a href="#duplicate-identifiers">Duplicate identifiers</a></td></tr><tr><td><strong>Missing values</strong></td><td>Review catalog coverage and open products that are missing required fields.</td><td><a href="#missing-values">Missing values</a></td></tr><tr><td><strong>Imports</strong></td><td>Review the last 100 recently synced product updates and search by product, SKU, barcode, or shop.</td><td><a href="#imports">Imports</a></td></tr><tr><td><strong>Settings</strong></td><td>Select the product store, confirm the OMS instance, rebuild the product search index, and manage app preferences.</td><td><a href="#settings">Settings</a></td></tr></tbody></table>
+The pages and edit actions available to you depend on your permissions. If a page or action described here isn't visible, ask your administrator for access.
 
-## Product workbench
+Before editing categories or prices, open `Settings` and confirm the current `Product Store`. This selection provides the store context for those changes. It's separate from the `Product store` filter on the Product workbench.
 
-The Product workbench is the main product search page. Use it when you need to find a product record, compare variants, or select products for bulk review.
+## 1. Find and triage products
 
-You can search by product name, product ID, SKU, barcode, Shopify ID, or other indexed product identifiers. Use the filters to narrow the list by:
+**Goal:** Narrow the catalog to the products that need review and open the correct product or variant.
 
-* Product type
-* Product store
-* Product kind
-* Tags
+**Use this flow when:** You know a product ID, SKU, UPC, or name. You can also use this flow to review products that share a type, store, virtual or variant status, or tag.
 
-The workbench also supports sorting by alphabetical order, recently updated, and recently created. Select one or more visible products when you need to work through a group of records.
-
-To open a product:
+**Key labels:** `Product workbench`, `Product ID, SKU, UPC, name`, `Product type`, `Product store`, `Virtual/variant`, `Apply tags`, `Alphabetical`, `Recently updated`, `Recently created`, `Add tag`.
 
 1. Open `Products` > `Product workbench`.
-2. Search for a product or apply filters.
-3. Select the product row to open the product details page.
+2. Search by product ID, SKU, UPC, or product name.
+3. Narrow the results with `Product type`, `Product store`, `Virtual/variant`, or `Apply tags`.
+4. If an expected product is missing, clear the search and tags, then select `All types`, `All stores`, and `All products`.
+5. Sort the list by `Alphabetical`, `Recently updated`, or `Recently created`.
+6. Review the row details, including the product ID or SKU, parent or brand, product type, variant count, tags, preorder or backorder flags, and 30-day sales.
+7. Select a row to open the product. Use the checkboxes only when you want to apply `Add tag` to multiple visible products.
 
-## Product details
+**Outcome:** You have isolated the relevant records and opened the correct product for detailed review.
 
-The product details page shows one operational product record. For product families, use the variant selector to switch between variants, or use the segment control to edit the parent product or the selected variant.
+<figure><img src="../.gitbook/assets/product-workbench.png" alt="Product workbench filtered to a fictitious product family and its variants"><figcaption><p>Find and triage products in the Product workbench</p></figcaption></figure>
 
-The details page includes these sections:
+## 2. Inspect and edit product details
 
-| Section | Use it to |
-| --- | --- |
-| Product header | Confirm the product identity, image, product type, parent or variant relationship, and family context. |
-| Identifications | Add, update, or expire identifiers such as SKU, UPC, barcode, and channel identifiers. |
-| Features | Review selectable product features such as color, size, scent, shade, or pack size. |
-| Display | Edit product display fields that identify the product to operations users. |
-| Dates | Update product lifecycle dates. |
-| Components | Manage component products for kit products. This section appears for kit product types. |
-| Inventory policy | Manage inventory-related product settings and substitute product relationships. |
-| Shipping and handling | Maintain shipping dimensions, weight, unit of measure, and handling fields. |
-| History | Review recent product update activity. |
+**Goal:** Confirm the product family and update the correct parent or variant without overwriting unrelated product data.
 
-{% hint style="info" %}
-Inventory balances, safety stock, thresholds, and available-to-promise rules are managed in the inventory and Available to Promise apps. The Products app shows product setup needed by those workflows, but it does not replace inventory policy management.
-{% endhint %}
+**Use this flow when:** A product has the wrong display data, identifiers, dates, tags, categories, prices, shop mapping, inventory policy, shipping data, or kit components.
 
-<figure><img src="../.gitbook/assets/product-details.png" alt="Product details page showing product identity, identifiers, product fields, and product setup sections"><figcaption><p>Product details</p></figcaption></figure>
+**Key labels:** `Product details`, `Features`, `Edit parent`, `Edit variant`, `Display`, `Product identifications`, `Dates`, `Tags`, `Categories`, `Prices`, `Shopify Shop Products`, `Inventory policy`, `Shipping and handling`, `Components`, `Change history`, `Save`, `Reset`.
 
-## Duplicate identifiers
+1. Open the product from the Product workbench.
+2. For a product family, use the feature options or variant strip to select the variant you want to inspect.
+3. Select `Edit parent` for shared parent data or `Edit variant` for data that belongs to the selected variant.
+4. Open the card that matches the task. For example, use `Display` for the name, description, brand, or product type; `Product identifications` for SKU or UPC; and `Categories` or `Prices` for store-specific setup.
+5. Make the change, review the draft, then select `Save` on that card. Cards save independently, so save each card that you changed.
+6. Select `Reset` to discard an unsaved draft. If the app reports `Underlying data changed`, review the latest data before saving again.
+7. Use `Change history` to review recorded identifier changes. Use `Imports` for recent product update records.
 
-Use `Duplicate identifiers` when a SKU, UPC, or other identifier is active on more than one product. Duplicate identifiers can cause product sync, scan, and fulfillment issues because downstream systems may not know which product owns the value.
+**Outcome:** The intended parent or variant data is saved, while changes in other cards remain separate.
 
-To resolve duplicate identifiers:
+<figure><img src="../.gitbook/assets/product-details.png" alt="Product details for a fictitious product variant showing feature selection and editable product cards"><figcaption><p>Inspect and edit a parent product or variant</p></figcaption></figure>
+
+## 3. Resolve duplicate identifiers
+
+**Goal:** Give each product a unique SKU or UPC so operators and integrations can identify the correct record.
+
+**Use this flow when:** `Duplicate identifiers` shows a duplicate group, or a known SKU or UPC points to more than one product.
+
+**Key labels:** `Duplicate identifiers`, `SKU`, `UPC`, `Resolve N products`, `Resolve SKU`, `Resolve UPC`, `Save N changes`.
 
 1. Open `Products` > `Duplicate identifiers`.
-2. Select the identifier rule you want to review.
-3. Open a duplicate group.
-4. Give each product a unique value.
-5. Save the resolution.
+2. Select `SKU` to review duplicate SKUs across products, or `UPC` to review duplicate UPCs on variants.
+3. Open a duplicate group with `Resolve N products`.
+4. Confirm each listed product, then replace the duplicate value with the correct unique SKU or UPC.
+5. Select `Save N changes`.
+6. Refresh the page and confirm that the corrected group no longer appears.
 
-## Missing values
+{% hint style="warning" %}
+This workflow changes product identifiers. It doesn't merge or delete product records. Confirm the correct value for every listed product before saving.
+{% endhint %}
 
-Use `Missing values` to find product data gaps. The page groups coverage issues by rule, with the worst gaps first. Select a rule to list the affected products, then open each product to add the missing data.
+**Outcome:** Each product in the group has a distinct identifier, and the duplicate group is cleared after the updated data becomes available.
 
-You can also look up another field by entering a field name, such as `brandName`, `upc`, or `mainImageUrl`.
+<figure><img src="../.gitbook/assets/resolve-duplicate-identifiers.png" alt="Resolve SKU dialog with fictitious products and one corrected duplicate value"><figcaption><p>Assign a unique value to each product in a duplicate group</p></figcaption></figure>
 
-## Imports
+## 4. Find and fix missing values
 
-Use `Imports` to review recently synced product updates. The page lists the last 100 product update records and supports search by product, SKU, barcode, shop, or update message.
+**Goal:** Prioritize common catalog gaps and update the affected products from the appropriate product details card.
 
-Review import history when:
+**Use this flow when:** A product is missing an image, tags, brand, UPC, SKU, or primary category, or when you are performing a catalog quality review.
 
-* Product details look stale after a Shopify sync.
-* A product is missing an expected SKU, barcode, image, or shop mapping.
-* A product update was imported but the product search result does not show the new data.
+**Key labels:** `Missing values`, `Catalog coverage`, `Image`, `Tags`, `Brand`, `UPC`, `SKU`, `Primary category`.
 
-## Settings
+1. Open `Products` > `Missing values`.
+2. Review `Catalog coverage`. The cards are ordered with the largest gaps first.
+3. Select `Image`, `Tags`, `Brand`, `UPC`, `SKU`, or `Primary category` to list the affected products.
+4. Open a product from the list.
+5. Update the matching area in `Product details`:
+   * Select the product image and update `Image URL` for a missing image.
+   * Use `Display` for a missing brand.
+   * Use `Product identifications` for a missing SKU or UPC.
+   * Use `Tags` or `Categories` for a missing tag or primary category.
+6. Save the change, then return to `Missing values` and confirm the product leaves the affected list after the updated search data becomes available.
 
-Use `Settings` to confirm the connected OMS instance, select the current product store, and check product search index status.
+**Outcome:** The selected catalog gap is corrected on the product, and catalog coverage reflects the repair after the search data refreshes.
 
-If product search results look stale or empty, use `Rebuild search index` from the Product data diagnostics card. Rebuilding the index refreshes the product search data used by the Product workbench.
+<figure><img src="../.gitbook/assets/missing-product-values.png" alt="Catalog coverage and fictitious products missing an image"><figcaption><p>Prioritize and open products with missing values</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/product-reindex.png" alt="Product search index rebuild option in the Products app settings page"><figcaption><p>Product search index rebuild</p></figcaption></figure>
+## 5. Review product import history and diagnose stale updates
 
-## Screenshot gaps
+**Goal:** Determine whether a recent product update was recorded and collect useful evidence when the product still looks stale.
 
-This page still needs updated screenshots from a clean test OMS catalog. Use product records with realistic names, SKUs, variants, identifiers, and product images. Avoid customer-specific data, placeholder products, empty states, browser chrome, and screenshots that show only one field without surrounding context.
+**Use this flow when:** A source-system change isn't visible in Product details or the Product workbench, or you need to compare recent updates for a product or shop.
+
+**Key labels:** `Imports`, `Refresh`, `Last 100 recently synced product updates`, `Synced`, `Recorded`, `Shop`, `System message`.
+
+1. Open `Products` > `Imports` and select `Refresh` to load the latest records.
+2. Search by product ID, parent product ID, displayed SKU, shop, or system message.
+3. Compare the update time and `Shop` with the change you expected.
+4. Read the badge as an update-record detail:
+   * `Synced` means the record includes a `System message` value.
+   * `Recorded` means the record doesn't include a system message value.
+5. Don't treat either badge as proof that every field updated successfully. Open the product from the Product workbench and compare Product details with the expected change.
+6. If the update is missing or the product remains stale, record the product ID, shop, update time, and system message, when present, for your OMS administrator or HotWax Support.
+
+**Outcome:** You can distinguish a missing recent record from a product that remains stale after an update was recorded, and you have the evidence needed for escalation.
+
+<figure><img src="../.gitbook/assets/product-import-history.png" alt="Recent fictitious product update records with Synced and Recorded badges"><figcaption><p>Compare recent product update records</p></figcaption></figure>
+
+## 6. Verify product store and recover product search
+
+**Goal:** Confirm that you are working in the intended OMS and product store, then rule out search filters before escalating stale or unavailable search data.
+
+**Use this flow when:** Category or price edits may have used the wrong store context, Product workbench results are empty, or recently saved data doesn't appear in search.
+
+**Key labels:** `Settings`, `OMS instance`, `Go to OMS`, `Product Store`, `Select store`, `Product workbench`, `All types`, `All stores`, `All products`, `Could not load products`, `Retry`.
+
+1. Open `Products` > `Settings`.
+2. Confirm `OMS instance`. Use `Go to OMS` if you need to verify the connected OMS directly.
+3. Under `Product Store`, use `Select store` to choose the store context required for category and price edits.
+4. Return to `Product workbench`. Clear the search and tags, then select `All types`, `All stores`, and `All products` to rule out hidden filters.
+5. If the page shows `Could not load products`, select `Retry`.
+6. If a recently saved change is still stale, compare the latest matching record in `Imports` with Product details and the Product workbench.
+7. If the inconsistency remains, send the collected product and update details to your OMS administrator or HotWax Support for search-index recovery.
+
+{% hint style="info" %}
+The Products app doesn't provide search-index status or a manual index rebuild action. The `Product Store` in Settings also doesn't change the `Product store` filter on the Product workbench.
+{% endhint %}
+
+**Outcome:** You have confirmed the OMS and store context, ruled out search filters and a retryable load error, or prepared a focused escalation for index recovery.
+
+<figure><img src="../.gitbook/assets/products-settings.png" alt="Products app settings with a fictitious OMS instance and product store"><figcaption><p>Confirm the OMS instance and current product store</p></figcaption></figure>
+
+## Related guides
+
+* [Products job workflows](../workflow/job-workflows/products.md)
+* [Find product inventory](../inventory/inventory-management/find-product-inventory.md)
+* [Configure product inventory](../inventory/inventory-management/configure-product-inventory.md)
