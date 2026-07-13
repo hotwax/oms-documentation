@@ -9,7 +9,7 @@ An estimated delivery date tells a shopper when an item can arrive before they p
 The exact rules vary by retailer. For example, one retailer may promise standard delivery by adding transit days based on the distance from the fulfillment location, while another may use a carrier service level. Define these rules with the team responsible for the storefront before enabling the experience.
 
 {% hint style="info" %}
-This page covers the pre-purchase estimate shown on the storefront. Once an order is placed, HotWax Commerce records an estimated ship date and estimated delivery date on the order itself — see [Order Estimated Ship & Delivery Dates](order-estimated-ship-delivery-dates.md).
+This page covers the pre-purchase estimate shown on the storefront. Once an order is placed, HotWax Commerce records an estimated ship date and estimated delivery date on the order itself. See [Order estimated ship and delivery dates](order-estimated-ship-delivery-dates.md).
 {% endhint %}
 
 ## How the date is calculated
