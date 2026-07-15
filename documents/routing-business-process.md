@@ -1,6 +1,6 @@
 # Order Routing
 
-Order routing is the business process of assigning approved orders to the right fulfillment location. HotWax Commerce OMS uses routing rules, inventory rules, and facility settings to decide where each order should be fulfilled from.
+Order routing is the business process of assigning approved orders to the right fulfillment location. HotWax Commerce Order Management System (OMS) uses routing rules, inventory rules, and facility settings to decide where each order should be fulfilled from.
 
 Routing is not only a proximity decision. The best fulfillment location can depend on the promised shipping method, order priority, available inventory, facility eligibility, store capacity, safety stock, sales velocity, weeks of supply, order splitting rules, and the retailer's fulfillment strategy. The OMS helps retailers make those trade-offs consistently so orders move to the best available store, warehouse, or external fulfillment partner.
 
