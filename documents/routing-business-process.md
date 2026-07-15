@@ -42,7 +42,7 @@ This avoids treating every order as simple first-in, first-out demand. A batch o
 
 Inventory rules decide which facilities can fulfill each order and which facility should be attempted first. The routing engine first narrows the fulfillment options using rules such as facility group, proximity, brokering safety stock, facility order capacity, product and location fulfillment controls, and all-items-available checks.
 
-Eligible facilities are then sorted using the business priority. Common strategies are prioritizing by proximity, inventory balance, facility order limit, or custom sequence. The routing can also use Sales Velocity and Weeks of Supply to avoid pulling inventory from stores where the item is selling quickly and to favor locations with deeper inventory coverage.
+Eligible facilities are then sorted using the business priority. Common strategies are prioritizing by proximity, inventory balance, facility order limit, or custom sequence. The routing can also use sales velocity and weeks of supply to avoid pulling inventory from stores where the item is selling quickly and to favor locations with deeper inventory coverage.
 
 ### Apply waterfall actions
 
