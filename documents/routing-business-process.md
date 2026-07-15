@@ -108,7 +108,7 @@ Test Drive lets teams validate routing behavior before activating changes. Opera
 * Weeks of supply and sales velocity help routing account for inventory health, not only available units.
 * Test Drive should be used before activating new or changed routing configurations.
 
-##  Related documentation
+## Related documentation
 
 * [Order Routing App](https://docs.hotwax.co/documents/retail-operations/orders/order-routing)  
 * [Brokering Runs](https://docs.hotwax.co/documents/retail-operations/orders/order-routing/brokering-runs)  
