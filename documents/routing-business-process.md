@@ -87,7 +87,7 @@ Brokering Shipment Threshold helps decide when a split shipment is worth the ful
 
 This is useful for low-value items, accessories, or free gifts with purchase. The retailer can avoid shipping a low-value item by itself when the shipment would hurt margin or create a poor customer experience.
 
-### Weeks of Supply and Sales Velocity
+### Weeks of supply and sales velocity
 
 Weeks of Supply routing helps the routing engine choose fulfillment locations based on both inventory depth and local sales velocity. A store with many units but strong walk-in demand may be a worse fulfillment source than a store with similar inventory and slower local sales.
 
