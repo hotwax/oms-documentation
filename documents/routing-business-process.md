@@ -8,7 +8,7 @@ Routing is not only a proximity decision. The best fulfillment location can depe
 
 ### Prepare eligible inventory and facilities
 
-Before an order is brokered, The OMS defines which inventory and locations can be considered. Shipping rules, store pickup rules, facility groups, inventory channels, product and facility fulfillment settings, safety stock, and store capacity all shape the available fulfillment network.
+Before an order is brokered, the OMS defines which inventory and locations can be considered. Shipping rules, store pickup rules, facility groups, inventory channels, product and facility fulfillment settings, safety stock, and store capacity all shape the available fulfillment network.
 
 This step matters because routing rules can only allocate from eligible inventory. If a store is not enabled for online fulfillment, does not have sellable inventory, has reached its order capacity, or is protected by a safety stock rule, OMS does not treat that store as a valid fulfillment option for that routing attempt.
 
