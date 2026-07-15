@@ -99,13 +99,13 @@ Test Drive lets teams validate routing behavior before activating changes. Opera
 
 ## Key takeaways
 
-* Order routing begins after an order is approved and ready for allocation.  
-* Brokering runs control when routing logic runs and how often different order groups are evaluated.  
-* Routing rules create and sequence order batches.  
-* Inventory rules filter eligible facilities, rank the best fulfillment location, and define fallback actions.  
-* Waterfall routing lets the routing engine expand allocation options step by step without immediately relaxing the retailer's preferred strategy.  
-* Controls such as safety stock, facility capacity, product and location eligibility, grouped items, and Brokering Shipment Threshold keep routing aligned with margin, SLA, and store operations.  
-* Weeks of Supply and Sales Velocity help routing account for inventory health, not only available units.  
+* Order routing begins after an order is approved and ready for allocation.
+* Brokering runs control when routing logic runs and how often different order groups are evaluated.
+* Routing rules create and sequence order batches.
+* Inventory rules filter eligible facilities, rank the best fulfillment location, and define fallback actions.
+* Waterfall routing lets the routing engine expand allocation options step by step without immediately relaxing the retailer's preferred strategy.
+* Controls such as safety stock, facility capacity, product and location eligibility, grouped items, and Brokering Shipment Threshold keep routing aligned with margin, service-level agreement (SLA), and store operations.
+* Weeks of supply and sales velocity help routing account for inventory health, not only available units.
 * Test Drive should be used before activating new or changed routing configurations.
 
 ##  Related documentation
