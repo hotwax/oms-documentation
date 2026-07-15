@@ -54,7 +54,7 @@ If an inventory rule cannot allocate one or more items, the configured after-act
 
 When the routing engine selects a fulfillment location, it allocates the order item to that location and reserves the inventory for the customer order.
 
-Store allocations appear in the Store Fulfillment App for store associates. Warehouse or third-party fulfillment allocations can be sent to a WMS, ERP, or 3PL depending on the retailer's integration design.
+Store allocations appear in the Store Fulfillment App for store associates. Warehouse or third-party fulfillment allocations can be sent to a warehouse management system (WMS), enterprise resource planning (ERP), or third-party logistics (3PL) depending on the retailer's integration design.
 
 After fulfillment, shipment and tracking updates flow back through OMS so the order, eCommerce and downstream systems stay aligned.
 
