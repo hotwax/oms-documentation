@@ -16,7 +16,7 @@ This step matters because routing rules can only allocate from eligible inventor
 
 Approved orders enter routing when they need a fulfillment location. This commonly includes ship-to-home orders, marketplace orders, and orders that need another allocation attempt after a fulfillment rejection.
 
-BOPIS orders do not go through ship-to-home routing because the customer has already selected the pickup store. Pre-orders and backorders enter routing when inventory becomes available and the orders are eligible for allocation.
+Buy Online Pick-Up In Store (BOPIS) orders do not go through ship-to-home routing because the customer has already selected the pickup store. Pre-orders and backorders enter routing when inventory becomes available and the orders are eligible for allocation.
 
 Orders waiting for routing are held in parking queues such as Brokering Queue, Rejected Parking, Unfillable Parking, or Pre-order/Backorder Parking. These queues give operations teams a controlled way to separate orders that are ready to route, waiting for another attempt, or blocked by a business condition.
 
