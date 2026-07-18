@@ -1,30 +1,23 @@
 ---
-description: Learn how kit products sync from Shopify to HotWax Commerce.
+description: >-
+  Learn how kit products and their components are downloaded from Shopify to HotWax Commerce.
 ---
 
-# Kit product sync
+# Kit products download
 
-Retailers often sell kits or bundles in Shopify as one sellable product made from multiple component SKUs. HotWax Commerce must understand those products correctly so fulfillment teams can reserve and fulfill inventory for the full kit.
+#### Kit products setup in HotWax Commerce
 
-## How HotWax identifies kit products
+HotWax suggests that retailers set up kit products in Shopify as individual products with their SKUs, just like any other item. Even though these kits are made up of several components, Shopify treats them as a single product.
 
-HotWax Commerce imports kit products through the same Shopify product sync process used for other products. During sync, HotWax reads product data, variants, product type, component flags, and configured metafields.
+HotWax downloads kit products and their components like regular products through the `Sync Shopify Product Updates` job and uses integration with [ERP systems](/documents/learn-netsuite/integration-flows/kit-products.md) to identify the components that make up each kit.
 
-When Shopify product data indicates that a product requires components, HotWax can classify the product as `MARKETING_PKG_PICK`. This lets HotWax treat the kit as a sellable package and keep its component products together.
+#### Manage kit products with the Bundles app and HotWax
 
-## Bundles app products
+Shopify retailers often use apps like Bundles to sell kit products by linking their components (products included in a kit) from Shopify’s product catalog. The Bundles app creates kits by adding the component SKUs to a metafield on the bundle product.
 
-Some Shopify retailers use the Bundles app or similar apps to model kit components in Shopify metafields. Product sync can read configured metafields and store them on the HotWax product so downstream integrations, such as NetSuite kit logic, can identify the component relationship.
+HotWax imports these kit products and their components through the `Sync Shopify Product Updates` job and reads the metafields to understand the relationship between kits and their components. A job runs to check if a product includes components. If the product is identified as a kit, it is categorized as `MARKETING_PKG_PICK` in HotWax. This links the components (as separate SKUs) to make sure they are reserved and fulfilled together when the kit is ordered.
 
-Read [Kit Products](../../additional-resources/kit-products.md) for more details about bundle modeling and inventory limitations.
+{% hint style="warning" %}
+Bundles app has its [drawbacks](https://docs.hotwax.co/documents/learn-shopify/additional-resources/kit-products) when it comes to determining inventory for multi-location fulfillment.
+{% endhint %}
 
-## What to confirm
-
-Before the first product sync, confirm:
-
-* Shopify models kit products consistently.
-* Component SKUs already exist or will sync with the same product store.
-* Required metafields are available to the Shopify integration.
-* Product type mappings and component rules match the retailer's fulfillment process.
-
-Don't use the old Job Manager `Import Products` instructions for kit product sync. Kit products now follow the same product sync console and product update flow as the rest of the Shopify catalog.

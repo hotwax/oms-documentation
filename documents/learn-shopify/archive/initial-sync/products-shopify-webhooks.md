@@ -1,14 +1,15 @@
 ---
-description: Learn processes for product creation and deletion using Shopify Webhooks.
+description: Learn how HotWax Commerce uses Shopify webhooks to create and delete products.
 ---
 
-# Creating/Deleting Products with Shopify Webhooks
+# Create and delete products with Shopify webhooks
 
-**Creating/Deleting Products With The Help Of Shopify Webhooks**
+Shopify offers webhooks for real-time communication between apps. HotWax Commerce uses Shopify's product creation and deletion webhooks to create or delete products.
 
-Shopify offers webhooks for real-time communication between apps. HotWax Commerce utilizes Shopify's [new product and product delete webhooks](https://shopify.dev/docs/api/admin-rest/2023-07/resources/product#delete-products-product-id) to promptly create or delete products in HotWax Commerce. The Job Manager app enables this webhook. However, there are two limitations when using Shopify's webhook:
+However, these webhooks have two limitations:
 
-* It only tracks the creation or deletion of parent products and not product variants.
-* Shopify states that [webhook delivery isn't always guaranteed](https://shopify.dev/apps/webhooks#limitation), and suggests implementing reconciliation jobs to periodically fetch data from Shopify.
+* They only track the creation or deletion of parent products, not product variants.
+* Shopify states that webhook delivery is not always guaranteed, and recommends running reconciliation jobs to fetch data periodically.
 
-<figure><img src="../../.gitbook/assets/product-webhooks-shopify.png" alt=""><figcaption><p><em>Fig.6: Product webhooks for Shopify</em></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/product-webhooks-shopify.png" alt=""><figcaption><p>Product webhooks for Shopify</p></figcaption></figure>
+

@@ -1,42 +1,30 @@
 ---
-description: Learn how Shopify product changes update HotWax Commerce products.
+description: Learn how HotWax Commerce identifies product updates between Shopify and the order management system (OMS).
 ---
 
 # Updating product details
 
-Merchants usually maintain product details in Shopify. HotWax Commerce imports those changes through the product update sync process, then applies them to the HotWax catalog.
+Merchants use Shopify to update product information such as names, images, tags, and weight. HotWax Commerce identifies these changes as part of the product download.
 
-Use the [Product Sync Console](product-sync-console.md) to monitor recent product update runs and review sync history. Don't use the old Job Manager `Sync Products` or `Import Products` flow for current Shopify product updates.
+### Identify updates with diff computation
 
-## What changes HotWax can apply
+Instead of comparing every individual field during every sync, HotWax uses diff computation to find exactly what changed. The system groups product data and computes a unique digital signature (SHA-256 hash) for each group.
 
-HotWax compares Shopify product data with the product data already stored for the selected shop.
+HotWax compares the incoming hashes against the baseline stored in the `ProductUpdateHistory` table. If the hashes match, no changes occurred and the system skips that data. If the hashes differ, the system identifies the exact delta (what was added, removed, or changed) and applies only those specific updates to the database.
 
-| Shopify change | HotWax impact |
-| --- | --- |
-| Product title, handle, vendor, or image changes | Updates the HotWax parent product. |
-| Variant title, price, image, weight, shipping flag, or inventory item ID changes | Updates the HotWax variant product. |
-| Stock keeping unit, barcode, or Shopify ID changes | Updates product identifiers and Shopify product links when the configured identifier matches the incoming Shopify value. |
-| Product option changes | Updates product features and variant associations. |
-| Product type or tag changes | Updates product tags or product type handling when the product store accepts those updates. |
-| Metafield changes | Updates HotWax product attributes for configured metafields. |
-| New variants | Creates or links new HotWax variant products. |
-| Removed variants | Expires the variant association from the parent product. |
+### Product field mapping
 
-## How the update process runs
+HotWax maps the fields from the Shopify JSON to the internal product entities. The following table outlines how these fields are synchronized:
 
-HotWax Commerce queues a Shopify product update request for the selected shop. Shopify prepares a product data file through a bulk operation. HotWax Commerce then reads the file, records product differences, and applies those differences to HotWax product records.
-
-This is different from the older Job Manager model. The current process doesn't require a manual product update job from the Product page. Use product sync history to confirm whether a product update run completed and whether HotWax Commerce reported failed records.
-
-## When product changes don't appear
-
-If a Shopify change doesn't appear in HotWax Commerce, check these points in order:
-
-1. Confirm the selected Shopify shop has a recent product sync run.
-2. Open product sync history and check whether the run finished.
-3. Review failed record counts and error details.
-4. Confirm the product store identifier still matches the Shopify product or variant.
-5. Confirm the product belongs to the correct product store and Shopify shop.
-
-Avoid starting another import until you understand the current or failed run. Duplicate attempts can make it harder to identify the first failure.
+| Shopify JSON field | HotWax field | Description |
+| :--- | :--- | :--- |
+| `id` (GID) | Shopify Product ID | A unique ID used to identify the product. |
+| `title` | Product Name | The name shown for the product. |
+| `handle` | Internal Name | Used in the product’s URL and for internal use. |
+| `vendor` | Brand | The brand or company that makes the product. |
+| `category` | Category | The category the product belongs to. |
+| `tags` | Keywords | Tags used to search and organize products. |
+| `variants.sku` | SKU | A unique code to track the product. |
+| `variants.barcode` | UPCA/GTIN | Barcode used for scanning the product. |
+| `variants.price` | Price | The selling price of the product. |
+| `variants.weight` | Weight | The product’s weight, used for shipping. |
