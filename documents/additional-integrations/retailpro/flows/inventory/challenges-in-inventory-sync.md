@@ -18,7 +18,7 @@ To address this, we implemented additional logic to filter the file against prod
 
 HotWax Commerce sends orders to Retail Pro for invoicing, but only fully fulfilled orders are pushed. The reason partially fulfilled orders are excluded is discussed in the Order section. Because partially fulfilled orders are excluded, the morning inventory reset file sent by Retail Pro does not account for these scenarios. This discrepancy inflates the inventory count in HotWax Commerce, requiring a meticulous solution.
 
-To address this, the HotWax Commerce integration platform identifies partially fulfilled orders, calculates the inventory deductions not communicated to Retail Pro, and generates an inventory variance file. This file is loaded in HotWax Commerce after the main inventory reset file, correcting inventory numbers without compromising accuracy. Timing is critical, ensuring that the variance file is processed after the main inventory reset file to avoid inaccuracies.
+To address this, the HotWax Commerce integration platform identifies partially fulfilled orders, calculates the inventory deductions not communicated to Retail Pro, and generates an inventory variance file. This file is loaded in HotWax Commerce after the main inventory reset file to correct inventory numbers. Timing is critical: the variance file must be processed after the main inventory reset file to avoid discrepancies.
 
 #### Example showing intricacies of the "Partially Shipped Orders"
 
@@ -67,7 +67,7 @@ To address this, the HotWax Commerce integration platform identifies partially f
     | A            | 8        | 10        |
     | B            | 8        | 10        |
     | C            | 0        | 0         |
-4.  Retail Pro, being unaware of the partial fulfillment in HC, sends an inventory reset file the next morning at 7:00 AM. The file includes counts of 10 for SKUs A and B across both New York and Nashville, not accounting for the partial fulfillment. This table represents the inventory reset file including new inventory for SKU C at each location.
+4.  Retail Pro, being unaware of the partial fulfillment in HotWax Commerce, sends an inventory reset file the next morning at 7:00 AM. The file includes counts of 10 for SKUs A and B across both New York and Nashville, not accounting for the partial fulfillment. This table represents the inventory reset file including new inventory for SKU C at each location.
 
     **Inventory Reset file from Retail Pro:**
 
