@@ -19,9 +19,9 @@ Each transfer order can result in either a single item fulfillment record or mul
 
 Whenever an item is fulfilled and the item fulfillment record is marked as `Shipped` in NetSuite, the inventory count for corresponding items is reduced in NetSuite. This also signifies that the items have been dispatched from the warehouse and are in transit to the store.
 
-Inbound shipments are automatically created in HotWax Commerce so that the store can receive the transferred inventory. HotWax Commerce provides a dedicated Inventory Receiving App for store associates to receive in inventory stores. When the store associates verifies the inbound shipments and receives them, inventory counts for the corresponding items are automatically increased in HotWax Commerce.
+Inbound shipments are automatically created in HotWax Commerce so that the store can receive the transferred inventory. HotWax Commerce provides a dedicated Inventory Receiving App for store associates to receive inventory in stores. When store associates verify and receive the inbound shipments, inventory counts for the corresponding items are automatically increased in HotWax Commerce.
 
-Upon successful receipt of inventory, HotWax Commerce synchronizes item receipts with NetSuite. This ensures that the inventory count at store is accurately increased in NetSuite and the status of transfer orders status is updated from `Pending Receipt` to `Received`.
+Upon successful receipt of inventory, HotWax Commerce synchronizes item receipts with NetSuite. This updates the inventory count in NetSuite and changes the transfer order status from `Pending Receipt` to `Received`.
 
 As mentioned earlier, in NetSuite, the inventory count for transfer order items shipped from the warehouse is reduced. In HotWax Commerce, this reduction takes place during its periodic inventory sync from NetSuite.
 
@@ -31,23 +31,23 @@ As mentioned earlier, in NetSuite, the inventory count for transfer order items 
 
 ### Fulfilling Transfer Order Items
 
-1. **Export Transfer Order Item Fulfillment Records from NetSuite:** A Map Reduce script runs a specific Saved Search to identify transfer order item fulfillment records in `Shipped` status, that have the source location as the warehouse and destination location set as the store. It compiles the relevant data into a CSV file, which is then securely placed in an SFTP location. The script runs periodically, typically every 15 minutes, to ensure it fetches only the latest shipped transfer order item fulfillment records from NetSuite, optimizing efficiency.
+1. **Export Transfer Order Item Fulfillment Records from NetSuite:** A Map Reduce script runs a specific Saved Search to identify transfer order item fulfillment records in `Shipped` status, that have the source location as the warehouse and destination location set as the store. It compiles the relevant data into a JSON file, which is then securely placed in an SFTP location. The script runs periodically, typically every 15 minutes, so it fetches only the latest shipped transfer order item fulfillment records from NetSuite.
 
 **SuiteScript**
 
 Export Item Fulfillment Records to SFTP
 
 ```
-HC_MR_ExportedWHTOFulfillmentCSV.js
+HC_MR_ExportedWHTOFulfillmentJson_v2.js
 ```
 
 **SFTP Location**
 
 ```
-/home/{sftp-username}/netsuite/transferorder/fulfillment
+/home/{sftp-username}/netsuite/transferorderv2/import/fulfillment-wh
 ```
 
-2. **Import Transfer Order Item Fulfillment Records in HotWax Commerce:** A scheduled job in HotWax Commerce OMS reads the transfer order item fulfillment CSV file from the SFTP location and creates inbound shipments in the OMS at the destination facility.
+2. **Import Transfer Order Item Fulfillment Records in HotWax Commerce:** A scheduled job in HotWax Commerce OMS reads the transfer order item fulfillment JSON file from the SFTP location and creates inbound shipments in the OMS at the destination facility.
 
 **Job in HotWax Commerce**
 
@@ -59,25 +59,25 @@ Import Inbound Shipment
 
 ### Receiving Inventory in the Store
 
-Store associates leverage HotWax Commerce Inventory Receiving App to receive transferred inventory. The user-friendly interface of this app ensures a smooth and efficient receiving process, even for users with minimal training.
+Store associates use the HotWax Commerce Inventory Receiving App to receive transferred inventory. The user-friendly interface of this app simplifies receiving, even with minimal training.
 
 Inbound shipments that have been created are automatically reflected in the Inventory Receiving App, allowing store associates to receive them in store. Upon receiving them, item receipt records are generated in HotWax Commerce. Subsequently, the inventory counts for the items received in the store are promptly increased in HotWax Commerce.
 
 3. **Export Item Receipts from HotWax Commerce:** To maintain a comprehensive record and accurately update inventory count for items received at the store in NetSuite, a scheduled job in HotWax Commerce Integration Platform generates a JSON file with the item receipt records and securely places the file in an SFTP location, making it accessible for NetSuite.
-4. **Import Item Receipts into NetSuite:** In NetSuite, a scheduled SuiteScript reads this JSON file containing item receipt records from the SFTP location. The script iterates through each record, creates new item receipt records, and updates inventory count in NetSuite. The script uses the versatile N/record module to ensure a smooth transition.
+4. **Import Item Receipts into NetSuite:** In NetSuite, a scheduled SuiteScript reads this JSON file containing item receipt records from the SFTP location. The script iterates through each record, creates new item receipt records, and updates inventory count in NetSuite. The script uses the N/Record module to update these records.
 
 **Job in HotWax Commerce**
 
 Export Item Receipts to SFTP
 
 ```
-generate_TransferOrderShipmentsReceiptFeed
+generate_TransferOrderShipmentReceiptFeed
 ```
 
 **SFTP Location**
 
 ```
-/home/{sftp-username}/netsuite/transferorder/receipt
+/home/{sftp-username}/netsuite/transferorderv2/export/receipt
 ```
 
 **SuiteScript**
@@ -85,7 +85,7 @@ generate_TransferOrderShipmentsReceiptFeed
 Import Item Receipts from SFTP
 
 ```
-HC_SC_ImportTOFulfillmentReceipts.js
+HC_SC_ImportTOFulfillmentReceipts_v2.js
 ```
 
 ### Automated Transfer Order Status Update
@@ -114,13 +114,13 @@ Consider a scenario where a retailer operates a store named Brooklyn, alongside 
 
 It's possible that the warehouse team ships these quantities in multiple shipments. For example, 60 quantities might be picked, packed, and shipped initially, with the remaining 40 scheduled for shipment at a later time. In this setup, a transfer order for 100 quantities will have two item fulfillment records created in NetSuite. The first record reflects the fulfillment of 60 quantities, marked with a `Shipped` status, indicating their dispatch from the warehouse. The second record represents the remaining 40 quantities.
 
-Following this, a Map Reduce script generates a CSV file containing details of the item fulfillment record for the initial 60 quantities and places it at an SFTP location.
+Following this, a Map Reduce script generates a JSON file containing details of the item fulfillment record for the initial 60 quantities and places it at an SFTP location.
 
-A scheduled job in HotWax Commerce OMS reads this CSV file and creates an inbound shipment at the Brooklyn store location. Store associates use Inventory Receiving App to initiate in-store receiving against this shipment. Upon receiving, item receipt records are generated in HotWax Commerce, increasing the product inventory by 60 quantities at the Brooklyn store location. Subsequently, HotWax Commerce then synchronizes these item receipt records to NetSuite to accurately update the inventory count in NetSuite as well.
+A scheduled job in HotWax Commerce OMS reads this JSON file and creates an inbound shipment at the Brooklyn store location. Store associates use Inventory Receiving App to initiate in-store receiving against this shipment. Upon receiving, item receipt records are generated in HotWax Commerce, increasing the product inventory by 60 quantities at the Brooklyn store location. Subsequently, HotWax Commerce then synchronizes these item receipt records to NetSuite to accurately update the inventory count in NetSuite as well.
 
-Once the second item fulfillment record is fulfilled in NetSuite and shipped from the central warehouse, the Map Reduce script again creates a CSV file containing details of the item final fulfillment record for the remaining 40 quantities and places it at an SFTP location.
+Once the second item fulfillment record is fulfilled in NetSuite and shipped from the central warehouse, the Map Reduce script again creates a JSON file containing details of the item final fulfillment record for the remaining 40 quantities and places it at an SFTP location.
 
-A scheduled job in HotWax Commerce OMS reads this CSV file and creates another inbound shipment at the Brooklyn store location. Upon receiving, item receipt records are generated in HotWax Commerce, increasing the product inventory by 40 quantities at the Brooklyn store location. Subsequently, these item receipt records are synchronized to NetSuite, marking the completion of the transfer order in NetSuite, updating inventory counts and updating transfer order status from `Pending Receipt` to `Received`.
+A scheduled job in HotWax Commerce OMS reads this JSON file and creates another inbound shipment at the Brooklyn store location. Upon receiving, item receipt records are generated in HotWax Commerce, increasing the product inventory by 40 quantities at the Brooklyn store location. Subsequently, these item receipt records are synchronized to NetSuite, marking the completion of the transfer order in NetSuite, updating inventory counts and updating transfer order status from `Pending Receipt` to `Received`.
 
 </details>
 
