@@ -1,9 +1,11 @@
 ---
 description: >-
- The "In Progress" tab contains orders that have been picked and moved from the "Open" tab. This page is dedicated to the packing stage of fulfillment. Here, associates can activate gift cards, generate documents such as shipping labels and packing slips, and complete the remaining fulfillment steps.
+ Pack orders that have moved from the `Open` tab.
 ---
 
 # In Progress Orders Page
+
+The `In Progress` tab contains orders that have been picked and moved from the `Open` tab. This page is dedicated to the packing stage of fulfillment. Here, associates can activate gift cards, generate documents such as shipping labels and packing slips, and complete the remaining fulfillment steps.
 
 ## Filter Orders by Picklist
 

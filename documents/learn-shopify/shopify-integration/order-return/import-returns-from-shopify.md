@@ -10,7 +10,7 @@ The "Import Order Returns" job in the Job Manager app initiates the return sync 
 
 Once the return information is downloaded, HotWax Commerce processes the JSON through the 'Process Bulk Imported Files' job. In cases where data discrepancies or issues may arise, error logs are generated, allowing for subsequent analysis and corrections to be made.
 
-While processing returns from Shopify, if HotWax Commerce doesn't have the order being returned, it will automatically import the order from Shopify, guaranteeing that returns are always linked to a sales order for full tracability.
+While processing returns from Shopify, if HotWax Commerce doesn't have the order being returned, it will automatically import the order from Shopify, guaranteeing that returns are always linked to a sales order for full traceability.
 
 {% hint style="info" %}
 The refund total may differ from the actual sales total of the order. This variance can be attributed to scenarios where customers have paid shipping and handling charges on the order, which are sometimes excluded from the refund amount.

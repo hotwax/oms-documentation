@@ -52,6 +52,7 @@ Replace the "SHOP-ID" for each Shopify Shop with your shop ID when importing dat
 **Payment Methods**
 
 ```
+
 <ShopifyShopTypeMapping shopId='SHOP-ID' mappedTypeId='SHOPIFY_PAYMENT_TYPE' mappedValue='EXT_SHOP_AFTRPAY' mappedKey='afterpay'/>
 <ShopifyShopTypeMapping shopId='SHOP-ID' mappedTypeId='SHOPIFY_PAYMENT_TYPE' mappedValue='EXT_SHOP_AFTRPAY_NA' mappedKey='afterpay_north_america'/>
 <ShopifyShopTypeMapping shopId='SHOP-ID' mappedTypeId='SHOPIFY_PAYMENT_TYPE' mappedValue='EXT_SHOP_AMEX' mappedKey='American Express'/>
