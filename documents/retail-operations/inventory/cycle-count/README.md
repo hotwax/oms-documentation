@@ -11,6 +11,8 @@ The app provides distinct views for Admins and Store Associates:
 
 With built-in features like bulk actions, variance alerts, and timestamped tracking, the Cycle Count App keeps inventory accurate across your network.
 
+For a business-process overview of inventory management and cycle counting, see [Inventory management](../../../learn-hotwax-oms/business-processes/inventory-management.md).
+
 ## Cycle count workflow
 
 1. [Plan your count with a preview](../../../store-operations/cycle-count/plan-cycle-count.md)

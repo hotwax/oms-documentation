@@ -23,7 +23,7 @@ Once shipping methods are created, they need to be mapped with NetSuite to provi
 1. Access NetSuite Integration Page: Go to `Settings` > `NetSuite Integration`.
 
  {% hint style="info" %}
-   If the page is not visible, navigate to the `General Settings` page and click on the `Load NetSuite Data` button at the top. This ensures that the Netsuite Data is uploaded to HotWax Commerce and the Netsuite configurations page will be now available to the users
+   If the page is not visible, navigate to the `General Settings` page and click on the `Load NetSuite Data` button at the top. This ensures that the NetSuite Data is uploaded to HotWax Commerce and the NetSuite configurations page will be now available to the users
    {% endhint %}
 
 2. Locate Shipping Methods Mapping: Look for the `Shipping Methods Mapping between HotWax and NetSuite` section.
