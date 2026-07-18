@@ -10,7 +10,7 @@ Before order sync can happen, payment methods need to be set up in HotWax Commer
 
 **Example mapping:**
 
-| HotWax ID                | Netsuite Value     |
+| HotWax ID                | NetSuite Value     |
 | ------------------------ | ------------------ |
 | EXT\_SHOP\_ECOM\_GFTCRD  | Gift Card          |
 | EXT\_SHOP\_GFT\_CARD     | Gift Card          |

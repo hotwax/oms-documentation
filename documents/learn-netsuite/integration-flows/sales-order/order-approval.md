@@ -54,7 +54,7 @@ HC_SC_ImportCustomer
 #### Export customers IDs from NetSuite and import into HotWax
 
 3. Once customers are created in NetSuite, a scheduled script exports recently created customers in a CSV file at an SFTP location to be imported by HotWax Commerce.
-4. A scheduled job in Hotwax Commerce OMS reads this file from the SFTP location and syncs the NetSuite customer IDs, confirming the customer synchronization in the OMS.
+4. A scheduled job in HotWax Commerce OMS reads this file from the SFTP location and syncs the NetSuite customer IDs, confirming the customer synchronization in the OMS.
 
 **SuiteScripts**
 

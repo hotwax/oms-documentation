@@ -27,23 +27,23 @@ Inventory count for transfer order items received in the warehouse is increased 
 
 1.  **Export Created Transfer Orders from NetSuite:** Inventory planners create transfer orders in NetSuite, specifying the source location as the designated store and the destination location as the warehouse. These transfer orders are automatically assigned a `Pending Fulfillment` status.
 
-    At regular intervals, a Map Reduce script runs a specific Saved Search in NetSuite and identifies transfer orders with a `Pending Fulfillment` status that have a source location set as the `Store`. This script compiles the relevant data into a CSV file, which is then securely placed at an SFTP location.
+    At regular intervals, a Map Reduce script runs a specific Saved Search in NetSuite and identifies transfer orders with a `Pending Fulfillment` status that have a source location set as the `Store`. This script compiles the relevant data into a JSON file, which is then securely placed at an SFTP location.
 
 **SuiteScript**
 
 Export Transfer Orders to SFTP
 
 ```
-HC_MR_ExportedStoreTransferOrderCSV.js
+HC_MR_ExportedStoretoWhTOJson_v2.js
 ```
 
 **SFTP Location**
 
 ```
-/home/{sftp-username}/netsuite/transferorder/csv
+/home/{sftp-username}/netsuite/transferorderv2/import/transfer-order
 ```
 
-2. **Import Transfer Orders into HotWax Commerce:** A scheduled job in HotWax Commerce OMS reads the transfer orders CSV file from the SFTP location and downloads transfer orders in HotWax Commerce with a default `Created` status.
+2. **Import Transfer Orders into HotWax Commerce:** A scheduled job in HotWax Commerce OMS reads the transfer orders JSON file from the SFTP location and downloads transfer orders in HotWax Commerce with a default `Created` status.
 3. **Approve Transfer Orders:** A scheduled job in HotWax Commerce OMS identifies all transfer orders in the `Created` status and automatically marks them as `Approved`.
 
 {% hint style="success" %}
@@ -95,7 +95,7 @@ generate_TransferOrderFulfilledItemsFeed
 **SFTP Location**
 
 ```
-/home/{sftp-username}/netsuite/transferorder/oms-fulfillment
+/home/{sftp-username}/netsuite/transferorderv2/export/oms-fulfillment
 ```
 
 5.  **Import Fulfilled Transfer Orders Items in NetSuite:** In NetSuite, a scheduled SuiteScript reads this JSON file containing fulfilled transfer order items from the SFTP location. The script iterates through each record, creates item fulfillment records, and reduces inventory count in NetSuite for items shipped from the store.
@@ -107,7 +107,7 @@ generate_TransferOrderFulfilledItemsFeed
 Import Fuflilled Transfer Order Items from SFTP
 
 ```
-HC_SC_ImportTOItemFulfillment.js
+HC_SC_ImportTOItemFulfillment_v2.js
 ```
 
 1. **Receive Transfer Orders in NetSuite:** Inventory planners manually initiate the receiving process in NetSuite for the store transferred inventory upon its arrival at the warehouse.

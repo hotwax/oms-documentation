@@ -17,7 +17,7 @@ HotWax Commerce provides a unified view of inventory by integrating with various
 
 After consolidating all relevant inventory data, HotWax Commerce calculates the Online Available to Promise (ATP), which reflects the quantity available for online sales. This ATP value is then synced to Shopify as the definitive inventory level. Let’s examine how this calculation works.
 
-**How Does Hotwax Commerce Calculate The “Online ATP” Before Pushing It To Shopify?**
+**How Does HotWax Commerce Calculate The “Online ATP” Before Pushing It To Shopify?**
 
 To determine the "Online Available to Promise" (ATP) for Shopify, HotWax Commerce calculates the available inventory by accounting for several key factors beyond just the total stock. These include, Safety Stock, Threshold, Reserved Quantity (inventory allocated to sales orders but not fulfilled), orders in the Brokering Queue (orders that are captured but inventory is not allocated), and Excluded Facilities when calculating `online ATP`.
 
