@@ -8,6 +8,12 @@ description: >-
 
 A scheduled job might fail in HotWax Commerce due to various reasons, such as incorrect parameter settings, outdated information, or conflicts within the system.
 
+## Job remains locked after an Order Management System restart
+
+A job that was interrupted by an Order Management System restart can remain on the `Running` tab with a stale lock. If the job card says `This job has crashed due to a restart, release it`, follow the [restart lock recovery steps](../job-queueing.md#recover-a-job-lock-after-an-order-management-system-restart).
+
+Do not use this recovery process for a job that is only marked as long-running. Investigate the job before releasing that type of lock.
+
 ## Identify Failed Jobs Reason
 
 Users can swiftly identify the reasons for a failed job from the `pipeline` page of the `Job Manager` app. This feature allows user to pinpoint the reasons behind failed jobs, facilitating easy troubleshooting of errors. Here's how you can find out the reason behind the failed jobs:

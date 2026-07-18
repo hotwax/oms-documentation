@@ -20,7 +20,7 @@ HotWax does not push kit product inventory to Shopify. Kit product inventory on 
 
 ### Install Bundles app reader in OMS
 
-Out of the box HotWax Commerce does not come with a pre-loaded kit product integration with the Bundles app on Shopify. Before configuring Kit product data in OMS, it's crucial to install the Bundles app reader in OMS. Failure to do so may lead to missing jobs for the Bundles app. Follow the steps below for a seamless installation:
+Out of the box HotWax Commerce does not come with a preloaded kit product integration with the Bundles app on Shopify. Before configuring Kit product data in OMS, it's crucial to install the Bundles app reader in OMS. Failure to do so may lead to missing jobs for the Bundles app. Follow the steps below for a seamless installation:
 
 {% hint style="danger" %}
 The Kit Component Metafields feature in the Bundles app on Shopify must be enabled for this functionality to work.
@@ -46,10 +46,10 @@ By following these steps, you ensure that the Bundles Reader is properly integra
 
 ### Map Shopify 'Kit' product types
 
-For HotWax to recognize your products as true kit products, their product type in Shopify must be mapped to 'Marketing Package' in HotWax. usually this is some variation of the word "Kit": `KIT`,`kit`,`Kit`.
+For HotWax to recognize your products as true kit products, their product type in Shopify must be mapped to 'Marketing Package' in HotWax. Usually this is some variation of the word "Kit": `KIT`,`kit`,`Kit`.
 
 {% hint style="danger" %}
-The Shopify product type value is **case sensitive**
+The Shopify product type value is **case-sensitive**
 {% endhint %}
 
 ```
