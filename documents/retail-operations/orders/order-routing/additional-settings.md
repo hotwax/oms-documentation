@@ -47,6 +47,6 @@ To optimize inventory usage and fulfillment speed, retailers often split orders 
 
 Once the threshold is set, orders will only be split if the value of the items meets or exceeds the threshold, ensuring more efficient shipping and reducing losses on low-value shipments.
 
-{% embed url="https://youtu.be/GQU6wyNI4kw" %}
-Set Brokering Shipment Threshold
+{% embed url="https://drive.google.com/file/d/1u6Y_aeR1NKF0iY-xrN5IJyMXzDbj-QKy/view?usp=drive_link" %}
+Order Splitting Controls
 {% endembed %}
