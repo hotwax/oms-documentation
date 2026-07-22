@@ -2,6 +2,10 @@
 
 Safety stock allows retailers to reserve inventory for walk-in customers while controlling how much product inventory is committed to online channels. It also helps mitigate the risk of order rejection caused by discrepancies between the system’s inventory and the actual stock available in stores. By maintaining safety stock, retailers can reduce the chances of receiving orders they cannot fulfill. A robust omnichannel order management system makes it easy to track and manage safety stock across all locations. For example, if a retailer has 100 units of a medium-sized Blue shirt from the NotNaked brand at their Times Square store and wants to reserve 10 units for in-store customers, the Available-to-Promise (ATP) inventory for that store would be reduced to 90 units.
 
+{% embed url="https://drive.google.com/file/d/1ZVyzgP4IEKDQpXGusVvHfpAsj9ecdA09/view?usp=drive_link" %}
+Attribute-Based Safety Stock
+{% endembed %}
+
 ## Step-by-Step Instructions to Set Up Safety Stock Rule
 
 ### Create Rule
