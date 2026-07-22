@@ -12,6 +12,10 @@ In HotWax Commerce, retailers can create different types of shipping rules:
 
 In this user manual, we will set up different types of configurations. For the remainder of the setup, we will use the example of a Canadian retailer that has five locations, including three retail stores and two warehouses, and sell their inventory across Canada and US. They want to configure shipping rules for a specific product: a Blue Medium-sized shirt from the NotNaked brand. Let’s see how retailers can configure shipping rules for such scenarios.
 
+{% embed url="https://drive.google.com/file/d/1yKSHLP3DQczVdbvtWcjdWoynNCEKvpbU/view?usp=drive_link" %}
+Store and Product Fulfillment Rules
+{% endembed %}
+
 ## Setting Maximum Order Capacity of a Facility
 
 Retailers often face operational constraints in their stores, as they must balance serving walk-in customers while fulfilling online orders. To prevent overwhelming the store's capacity, HotWax Commerce allows retailers to set a maximum order capacity for each store. Once this limit is reached, the brokering engine automatically routes additional orders to alternative facilities with available capacity.
