@@ -47,3 +47,12 @@
   * [Transfer Order Fulfillment](transfer-order/transfer-order-fulfillment.md)
   * [Transfer Order Receiving](transfer-order/transfer-order-receiving.md)
   * [Transfer Order Picklist](transfer-order/picklist.md)
+
+## Products
+
+* [Products app](products/products-app.md)
+  * [Product workbench](products/product-workbench.md)
+  * [Product details](products/product-details.md)
+  * [Duplicate identifiers](products/duplicate-identifier.md)
+  * [Missing values](products/missing-values.md)
+  * [Imports](products/imports.md)
