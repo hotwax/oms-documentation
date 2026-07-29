@@ -9,21 +9,23 @@ description: >-
 
 To download all open sales orders from a specific period in HotWax Commerce, users can schedule the 'Import Orders in Bulk' job by adding the last Shopify Order ID. This job imports all orders since the last Shopify Order ID, along with details such as order number, customer information, shipping address, billing details, and payment information.
 
-**To import orders in HotWax Commerce, follow these steps:**
+Import the orders:
 
-1. Visit [job-manager.hotwax.io](http://job-manager.hotwax.io).
-2. Navigate to the Initial Load section.
-3. Click on "Import Orders in bulk."
-4. Choose the desired run time.
-5. Specify the following criteria:
+1. Open Job Manager from the HotWax Commerce Launchpad.
+2. Open `Catalog`.
+3. Search for `Import Orders in Bulk`.
+4. Open the job and review its parameters.
+5. Enter the required criteria:
    * Order status: Open
    * Fulfillment status: Unfulfilled
    * Add the Last Shopify Order ID from where you want to import Shopify orders.
-6. Initiate the import by clicking the "Run Import" button.
-7. Access the Pipeline, specifically the Pending jobs section, to confirm that the job is scheduled as per the selected time.
-8. Wait until the job is completed.
+6. Select `Run Now`.
+7. Open `Run history` and find the new run.
+8. Wait for the run to finish.
 
 Once the job finishes, proceed to the Find Order page and verify that all orders have been successfully imported into the system.
+
+See [Manage a job](../../retail-operations/workflow/job-management/jobs/job-details.md) and [Investigate job runs](../../retail-operations/workflow/job-management/jobs/run-history.md).
 
 ## Reconcile Order Sync
 

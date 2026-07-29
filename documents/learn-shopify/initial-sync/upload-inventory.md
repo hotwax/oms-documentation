@@ -57,30 +57,31 @@ All files transferred from HotWax Commerce to Shopify undergo processing via a j
 
 For Initial inventory transfer and updating inventory for all the products from HotWax Commerce to Shopify
 
-1. Visit job-manager.hotwax.io and log in with your user credentials.
-2. Navigate to the `Inventory page` from the left menu.
-3. Click on the `Hard Sync` job to open the job card.
-4. Choose the desired run time from the dropdown or customize when the job will start running. You can also click on `Run Now` to instantly run the job one time.
-5. For scheduling, select the desired frequency from the dropdown or customize. The recommended frequency for the `Hard sync` job is once a day.
-6. Add custom parameters specifying the Facility's internal ID in the `facilityGroupId` parameter for example `FAC_GRP`is the internal ID for all facility groups with `CHANNEL_FAC_GRP` subtype.
-7. Click on `save changes` to schedule the job.
+1. Open Job Manager from the HotWax Commerce Launchpad.
+2. Open `Catalog`.
+3. Search for `Hard Sync`.
+4. Open the job.
+5. Review its schedule and parameters.
+6. Enter the facility group identifier in `facilityGroupId`, for example `FAC_GRP` when that is the configured group.
+7. Save the required schedule, or select `Run Now` for one immediate execution.
 
 ### Schedule Upload Recent Inventory Changes Job
 
 Schedule this job to upload the inventory changes for the products that have recently gone inventory changes to ensure that inventory changes happen in near real-time on Shopify.
 
-1. Visit the `Job Manage`r App from the launchpad and log in with your user credentials.
-2. Navigate to the `Inventory section` > `More Jobs`.
-3. Click on the `Upload recent inventory changes` job to open the job card.
-4. Choose the desired run time from the dropdown or customize when the job will start running. You can also click on `Run Now` to instantly run the job one time.
-5. Schedule the job as per your desired frequency by selecting the time from the dropdown menu. The recommended frequency for the job is every 15 minutes.
-6. Make sure to add the group ID `FAC_GRP` in the custom parameters.
-7. Click on `Save Changes` to schedule the job.
+1. Open `Catalog`.
+2. Search for `Upload recent inventory changes`.
+3. Open the job.
+4. Review its schedule and parameters.
+5. Enter the configured group identifier in the required parameter.
+6. Save the required schedule, or select `Run Now` for one immediate execution.
 
 ### Verify Inventory Changes
 
-1. Navigate to the Pipeline page in the `Job Manager` app, specifically the `Pending Jobs` section, to confirm that the job is scheduled as per the selected time.
-2. Wait until the job is completed and reflects on the `completed` page.
+1. Open `Run history` in Job Manager.
+2. Find the job run and wait for it to finish.
 3. Once the job finishes, log in to the HotWax Commerce Inventory page and look through some products and their variants inventory as a sample.
 4. Afterward, login to the admin portal of Shopify and navigate to the `product` page.
 5. Look for the same products and verify the inventory changes for all selected variants have been successfully imported into the system.
+
+See [Manage a job](../../retail-operations/workflow/job-management/jobs/job-details.md) and [Investigate job runs](../../retail-operations/workflow/job-management/jobs/run-history.md).

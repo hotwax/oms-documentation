@@ -49,15 +49,14 @@ HotWax Commerce relies on two main jobs for inventory synchronization to Shopify
 
 ### Steps to Diagnose and Resolve
 
-1. **Ensure Jobs are Scheduled**
-   * In HotWax Commerce, navigate to the `Inventory` page in the `Job Manager App`
-   * Verify that [`Update Recent Inventory Changes`](../../workflow/job-workflows/inventory.md) and [`Hard Sync Job`](https://docs.hotwax.co/documents/v/retail-operations/workflow/job-workflows/inventory) are scheduled as per your preferred frequency.
-2. **Check Job Status**
-   * Look into the job pipeline to ensure these jobs are not marked as failed.
-   * Re-run the jobs if necessary.
-3. **Ensure `Process Uploads to eCommerce` Job is Running**
-   * Go to the `Miscellaneous` page in the `Job Manager App`.
-   * Verify that the `Process Uploads to eCommerce` job is running to process all uploaded files to Shopify.
+1. Open `Catalog` in Job Manager.
+2. Search for [`Update Recent Inventory Changes`](../../workflow/job-workflows/inventory.md) and `Hard Sync Job`.
+3. Open each job and confirm its pause state and schedule.
+4. Open `Run history` and review the latest runs.
+5. Return to `Catalog` and search for `Process Uploads to eCommerce`.
+6. Confirm its schedule and latest run.
+
+See [Troubleshoot job runs and schedules](../../workflow/job-management/troubleshooting/job-runs-and-schedules.md).
 
 <figure><img src="../../.gitbook/assets/inventory-synchronization-errors.png" alt="" width="375"><figcaption></figcaption></figure>
 

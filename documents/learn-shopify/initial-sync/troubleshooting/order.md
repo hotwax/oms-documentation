@@ -11,7 +11,12 @@ description: Troubleshoot order synchronization between HotWax Commerce and Shop
 1. **Verification on Shopify:**
    * Check Shopify to verify if the order is successfully placed by searching for the order ID. If not found, create the missing orders.
 2. **Run Order Import Job:**
-   * In the `HotWax Commerce Job Manager` app, navigate to the `orders` page and execute the `New Orders` job. This action ensures all recently created orders are imported into HotWax Commerce.
+   * Open `Catalog` in Job Manager.
+   * Search for `New Orders`.
+   * Open the job, review its parameters, then select `Run Now`.
+   * Open `Run history` and review the resulting run.
+
+See [Investigate job runs](../../../retail-operations/workflow/job-management/jobs/run-history.md).
 
 ## Scenario: Order Available in Shopify and Not Available in HotWax Commerce
 

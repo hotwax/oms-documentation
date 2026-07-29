@@ -39,10 +39,10 @@ This category revolves around managing the orders using the three apps: BOPIS, P
 
 #### Workflow
 
-This category revolves around managing the workflow using the three apps: Threshold Management, Job Manager and Import.
+This category covers the apps used to manage automated retail workflows.
 
 * **Threshold Management** HotWax Commerce’s Threshold Management app enables merchandisers to set inventory thresholds for a group of products.
-* **Job Manager** HotWax Commerce’s Job Manager app helps the operations teams to manage jobs by scheduling new jobs, skipping or canceling scheduled jobs and finding failed jobs that need attention.
+* **Job Manager:** Review operational health, manage service-job schedules and parameters, monitor files and messages, and build data exports.
 * **Import** HotWax Commerce’s Import app enables users to import inventory and purchase orders.
 
 #### Inventory

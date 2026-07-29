@@ -148,7 +148,7 @@ Flow: Shopify to HotWax
 
 **The Import Order Returns job imports returns from Shopify to HotWax after they are completed and marked as "Refund" or "Returned" in Shopify, maintaining the order history.**
 
-Another method for importing returns is subscribing to Shopify webhooks via the Job Manager App, but this approach is not recommended due to the unreliability of Shopify webhooks.
+Webhook-based return handling is part of the connected integration configuration, not the current Job Manager.
 
 Although Shopify allows fetching 250 returns per API call, to avoid issues with large files, HotWax will download up to 100 returns per API call.
 
@@ -171,7 +171,7 @@ To know more about return import refer to this [document](https://docs.hotwax.co
 ### Webhooks
 
 {% hint style="info" %}
-Webhooks can be subscribed to from the category pages within the Job Manager app for specific categories.
+The current Job Manager does not manage webhook subscriptions. Confirm webhook configuration in the connected integration.
 {% endhint %}
 
 Automated messages sent from eCommerce (Shopify) to OMS whenever an event occurs. They contain data about the event and are received in OMS, allowing real time communication between eCommerce and OMS.
