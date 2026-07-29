@@ -36,4 +36,4 @@ Order Manager cancels eligible open items and refreshes the queue. Review the su
 
 ## List states
 
-Additional results load as you scroll. `No open orders` means the request completed but no order matched the current product store and filters.
+Additional results load as you scroll. `No open orders` appears when the page has no orders to display for the current product store and filters. Refresh an unexpected empty result before treating it as a confirmed zero.

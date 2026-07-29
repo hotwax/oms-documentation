@@ -1,5 +1,5 @@
 ---
-description: Replace unavailable items and release, park, or cancel held orders.
+description: Replace unavailable items and resolve held fulfillment groups.
 ---
 
 # Swap
@@ -26,26 +26,26 @@ Each card shows order and customer context, task progress, routing context when 
 
 For an unavailable item, open its options to choose a substitute or cancel that item. You can:
 
-* remove a selected substitute
-* undo an item cancellation
-* review substitute availability
-* change the suggested refund
-* compare the original and new totals
+* Remove a selected substitute and mark the original item for cancellation
+* Undo an item cancellation
+* Review substitute availability
+* Change the suggested refund when the release includes a substitute
+* Compare the original and new totals
 
 Use `View order` when you need the complete order record.
 
-## Complete one task
+## Work one task
 
-* `Release updated order` applies the proposed item and refund changes, then releases the order.
-* `Park` moves the order to the facility you select.
-* `Cancel order` asks for confirmation before canceling.
+* `Release updated order` applies the proposed substitutions and item cancellations, then completes the task. The app submits the edited refund only when the release includes at least one substitute.
+* `Park` moves the affected fulfillment group to the facility you select and releases inventory committed to its other items. Parking does not resolve the task.
+* `Cancel order` asks for confirmation, cancels the items in the task's fulfillment group, and cancels the task. It does not necessarily cancel the entire order.
 
 ## Complete multiple tasks
 
 Select `Select`, choose the task cards, and use:
 
-* `Cancel orders`
-* `Park`
+* `Cancel orders` cancels the affected fulfillment-group items and cancels their tasks.
+* `Park` moves the affected fulfillment groups and completes their tasks.
 
 The app groups duplicate ship-group targets before processing. Review the completion message for partial failures.
 

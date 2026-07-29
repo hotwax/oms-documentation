@@ -33,7 +33,7 @@
 
 ## Orders
 
-* [Order Management](orders/order-management/README.md)
+* [Order Manager](orders/order-management/README.md)
   * [Funnel](orders/order-management/funnel.md)
   * [Find orders](orders/order-management/find-sales-orders.md)
   * [Find customers](orders/order-management/find-customers.md)

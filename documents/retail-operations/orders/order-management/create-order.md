@@ -16,7 +16,7 @@ Complete the `Assign` card:
 | --- | --- |
 | `Shopify Shop` | Required. The list is scoped to the selected product store. |
 | `Facility` | Optional. After you choose a shop, the list is limited to facilities linked to that shop. |
-| `Currency` | Defaults to USD and lists configured currencies. |
+| `Currency` | Defaults to United States dollars (USD) and lists configured currencies. |
 
 If you change the Shopify shop, confirm the facility selection again.
 
@@ -70,7 +70,7 @@ A matching product is added automatically. Scanning a product already in the ord
 ### Search for a product
 
 1. Choose search mode.
-2. Search by parent name, SKU, or UPC.
+2. Search by parent name, stock keeping unit (SKU), or Universal Product Code (UPC).
 3. Select `Add` on the matching product.
 4. Select `View more results` when the first result is not the product you need.
 
@@ -80,9 +80,9 @@ The page displays a loading indicator while it searches and `No product found` w
 
 Select `Custom Line`, then enter:
 
-* product name
-* quantity greater than zero
-* price of zero or more
+* Product name
+* Quantity greater than zero
+* Price of zero or more
 
 Custom lines are useful when the item is not available in the product search.
 
@@ -92,10 +92,10 @@ Each catalog row shows the configured primary and secondary product identifiers.
 
 Before submitting:
 
-* change the quantity when needed
-* remove any unwanted row
-* confirm every quantity is greater than zero
-* review `Subtotal`, `Shipping`, `Tax`, and `Total`
+* Change the quantity when needed
+* Remove any unwanted row
+* Confirm every quantity is greater than zero
+* Review `Subtotal`, `Shipping`, `Tax`, and `Total`
 
 {% hint style="info" %}
 The current payment summary formats displayed totals in USD, even when another currency is selected.
@@ -108,12 +108,12 @@ Select the checkmark action after completing the order.
 Order Manager validates:
 
 * Shopify shop
-* customer
-* complete shipping address
-* at least one line item
-* positive item quantities
-* title and SKU for catalog products
-* title for custom lines
+* Customer
+* Complete shipping address
+* At least one line item
+* Positive item quantities
+* Title and SKU for catalog products
+* Title for custom lines
 
 The page shows a loader while the order is submitted and then displays a success or error message.
 

@@ -10,10 +10,10 @@ Use `Find customers` to locate a customer record and open its details.
 
 Enter any of the following values:
 
-* customer name
-* party ID
-* email address
-* phone number
+* Customer name
+* Party ID
+* Email address
+* Phone number
 
 The list refreshes automatically after you type. This page does not provide additional filter controls.
 
@@ -21,10 +21,10 @@ The list refreshes automatically after you type. This page does not provide addi
 
 Each customer row shows:
 
-* party ID
-* full name, or the party ID when no name is available
-* email, or `No email`
-* phone, or `No phone`
+* Party ID
+* Full name, or the party ID when no name is available
+* Email, or `No email`
+* Phone, or `No phone`
 
 Select a row to open the customer detail page.
 

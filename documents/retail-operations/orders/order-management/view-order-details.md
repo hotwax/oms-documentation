@@ -35,13 +35,13 @@ The page has four segments:
 
 Use the item toolbar to:
 
-* select all items or individual rows
-* add items when the order status permits it
-* change the facility for an eligible item
-* review item attributes
-* cancel eligible items
+* Select all items or individual rows
+* Add items when the order status permits it
+* Change the facility for an eligible item
+* Review item attributes
+* Cancel eligible items
 
-Changing an item's facility rejects its current allocation and releases it to the destination you select. The action appears only when the item is eligible.
+Changing an item's facility rejects its current allocation and releases it to the destination you select. The action is enabled only when the item is eligible.
 
 The payment and totals cards show payment methods, payment statuses, subtotal, adjustments, grand total, and the amount received or authorized.
 
@@ -49,12 +49,12 @@ The payment and totals cards show payment methods, payment statuses, subtotal, a
 
 `Shipgroups` shows each fulfillment group and its:
 
-* facility and fulfillment status
-* item summary
-* shipping method and destination
-* shipment and tracking information, when available
-* timeline and hold context
-* actions that are valid for the current ship-group state
+* Facility and fulfillment status
+* Item summary
+* Shipping method and destination
+* Shipment and tracking information, when available
+* Timeline and hold context
+* Actions that are valid for the current ship-group state
 
 The page displays `No ship groups` when the order has none.
 
@@ -70,13 +70,13 @@ When no hold exists, the page displays `No holds`. If you have permission, use `
 
 ## Use order actions
 
-Actions shown under `Items` depend on the order status and selected items. The page displays only actions that are valid for the current order.
+Actions shown under `Items` depend on the order status and selected items. The page displays only valid actions for the current order.
 
 Common actions include:
 
-* approve or cancel the order when the current status allows it
-* cancel selected items
-* clone the order
+* Approve or cancel the order when the current status allows it
+* Cancel selected items
+* Clone the order
 
 Confirm destructive actions before continuing.
 
@@ -90,4 +90,4 @@ The `Return` action is not available from Order Manager yet. If it appears for a
 * `Order failed to load` means the request failed.
 * `Order not found` means the requested order is unavailable or a stale search result points to a record that no longer exists.
 
-Return to `Find order` and refresh the search if an order cannot be opened.
+Return to `Find order` and refresh the search if you cannot open an order.

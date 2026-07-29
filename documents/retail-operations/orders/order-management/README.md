@@ -33,9 +33,9 @@ Blocked queues contain orders or tasks that need review before normal processing
 
 | Queue | Use it to |
 | --- | --- |
-| [Unfillable](unfillable-orders.md) | Review orders that could not be brokered to a facility. |
-| [Swap](swap-orders.md) | Replace unavailable items, adjust the suggested order, or park or cancel the order. |
-| [Bad address](bad-address-orders.md) | Compare the original and suggested address, then release, park, or cancel the order. |
+| [Unfillable](unfillable-orders.md) | Review orders that the order management system could not broker to a facility. |
+| [Swap](swap-orders.md) | Replace unavailable items, adjust the proposed changes, or choose the task's next action. |
+| [Bad address](bad-address-orders.md) | Compare the original and suggested address, then release or park the fulfillment group or cancel its affected items. |
 | [Fraud](fraud-orders.md) | Review payment and risk information, then resolve the task or cancel the order. |
 | [Hold](hold-orders.md) | Review general order tasks and record a resolution. |
 
@@ -50,10 +50,10 @@ Blocked queues contain orders or tasks that need review before normal processing
 
 ## Understand page states
 
-Order Manager distinguishes loading, empty, and error states:
+Order Manager uses loading, empty, and error messages, but individual pages handle failures differently:
 
 * A progress indicator means the page is still loading or refreshing.
-* An empty-state message means the request completed but no records matched the current filters.
+* An empty-state message means the page has no records to display for the current filters.
 * An error message means the request failed. Use `Retry` when the page offers it.
 
-Do not treat a loading or error state as a zero count.
+Refresh an unexpected empty result before treating it as a confirmed zero. Do not treat a loading or error state as a zero count.

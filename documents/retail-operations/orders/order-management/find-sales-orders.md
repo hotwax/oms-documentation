@@ -28,12 +28,12 @@ Use `Clear` to reset the search, filters, and sort order.
 
 Each result shows:
 
-* customer name
-* order name, order ID, and status
-* allocation summary
-* carrier or shipping method and sales channel
-* order date and relative age
-* estimated-delivery date and relative deadline
+* Customer name
+* Order name, order ID, and status
+* Allocation summary
+* Carrier or shipping method and sales channel
+* Order date and relative age
+* Estimated-delivery date and relative deadline
 
 If no delivery estimate is available, the row displays `No estimated delivery date`.
 
@@ -51,9 +51,9 @@ Available actions depend on your permissions:
 
 * `Cancel open items` asks for confirmation before canceling eligible items.
 * `Edit shipping method` applies a selected method to eligible ship groups.
-* `Add task` creates an order task from the selected orders.
+* `Add task` creates one task for each fulfillment group in the selected orders.
 
-A successful cancel or shipping-method update refreshes the results. The app displays a success or error message after each action.
+Cancel and shipping-method actions refresh the results after the app processes the request. Verify the refreshed rows before assuming every selected order changed.
 
 ## Result states
 

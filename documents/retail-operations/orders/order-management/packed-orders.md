@@ -33,4 +33,4 @@ Order Manager identifies the eligible shipments for the selected orders, submits
 
 ## List states
 
-Additional results load as you scroll. `No packed orders` means the request completed but no order matched the current filters.
+Additional results load as you scroll. `No packed orders` appears when the page has no orders to display for the current filters. Refresh an unexpected empty result before treating it as a confirmed zero.

@@ -31,23 +31,23 @@ Compare:
 
 Choose `keep original` or `use suggested` before releasing the hold.
 
-## Complete one task
+## Work one task
 
 Choose one of these card actions:
 
 * `Save and release hold` validates the selected address, saves it, and releases the address hold.
-* `Park` moves the order to the facility you select.
-* `Cancel order` asks for confirmation before canceling.
+* `Park` moves the affected fulfillment group to the facility you select and releases inventory committed to its other items. Parking does not resolve the task.
+* `Cancel order` asks for confirmation, cancels the items in the task's fulfillment group, and cancels the task. It does not necessarily cancel the entire order.
 
 ## Complete multiple tasks
 
 Select `Select`, choose the task cards, and use:
 
-* `Save and release hold`
-* `Cancel orders`
-* `Park`
+* `Save and release hold` updates the selected fulfillment groups and completes their tasks.
+* `Cancel orders` cancels the affected fulfillment-group items and cancels their tasks.
+* `Park` moves the affected fulfillment groups and completes their tasks.
 
-The app groups duplicate ship-group targets so the same fulfillment group is not processed twice. Review the completion message for partial failures.
+The app groups duplicate ship-group targets so it does not process the same fulfillment group twice. Review the completion message for partial failures.
 
 ## Page states
 

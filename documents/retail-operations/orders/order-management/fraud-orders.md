@@ -25,12 +25,12 @@ Sort by task date, order date, order total, risk severity, or recommendation. Th
 
 Each card shows:
 
-* order and customer context
-* order total and task-created date
-* ordered items
-* payment methods and payment statuses
-* suggested risk action
-* risk-increasing facts and sentiment counts
+* Order and customer context
+* Order total and task-created date
+* Ordered items
+* Payment methods and payment statuses
+* Suggested risk action
+* Risk-increasing facts and sentiment counts
 
 Select `View details` to open the complete risk assessment, or use `View order` to open the order record.
 

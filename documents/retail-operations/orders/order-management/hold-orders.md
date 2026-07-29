@@ -4,7 +4,7 @@ description: Review general order tasks, add a resolution comment, and complete 
 
 # Hold
 
-Use `Hold` for open order tasks that do not belong to a dedicated substitute, bad-address, or fraud workflow.
+Use `Hold` for open order tasks outside the dedicated substitute, bad-address, and fraud workflows.
 
 ## Search, filter, and sort
 
@@ -26,12 +26,12 @@ The Funnel can also open this page filtered to a task purpose.
 
 Each card shows:
 
-* order and customer context
-* order total and task-created date
-* task name and purpose
-* estimated completion date, when available
-* notes
-* assignee and reporter
+* Order and customer context
+* Order total and task-created date
+* Task name and purpose
+* Estimated completion date, when available
+* Notes
+* Assignee and reporter
 * `Resolution comment`
 
 Use `View order` when you need the complete order record.

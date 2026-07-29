@@ -20,7 +20,7 @@ Each row includes a count and percentage so you can compare stages without openi
 
 ## Review unbrokered and brokered work
 
-The next cards separate work that has not been brokered from work already assigned to fulfillment.
+The next cards separate work awaiting brokering from work already assigned to fulfillment.
 
 ### Unbrokered
 
@@ -66,13 +66,13 @@ The list shows up to ten facilities for the selected view. Select a facility to 
 
 The `Fill rate at` section shows:
 
-* today's fill rate
-* orders allocated and the configured capacity, when available
-* orders packed
-* orders rejected
-* orders pending fulfillment
-* the oldest assigned order
-* open and in-progress counts
+* Today's fill rate
+* Orders allocated and the configured capacity, when available
+* Orders packed
+* Orders rejected
+* Orders pending fulfillment
+* The oldest assigned order
+* Open and in-progress counts
 
 Select `open` or `in progress` to open the corresponding queue with the facility filter applied.
 
