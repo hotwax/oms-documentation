@@ -28,7 +28,7 @@
 
 ## Products
 
-* [Product Management](products/product-management.md)
+* [Manage products in the Products app](products/product-management.md)
 * [Breaking Variants Into Independent Products](products/breaking-variants-into-independent-products.md)
 
 ## Orders
