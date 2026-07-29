@@ -1,24 +1,23 @@
-# Duplicate Identifiers
+# Duplicate identifiers
 
-The `Duplicate Identifiers` page helps users find and resolve products that share the same `SKU` or `UPC`, both of which should be unique per product or variant. The page is organized into two tabs:
+The Duplicate identifiers page groups products that share an indexed SKU or UPC value:
 
-* **SKU**: Each product should have a unique SKU. Resolve a group by giving each product a unique value, then save.
-* **UPC**: Each variant should have a unique UPC. Resolve a group by giving each product a unique value, then save.
+* `SKU` checks all products.
+* `UPC` checks variants because UPC values are managed per variant.
 
-If no duplicates exist for the selected identifier, the page displays `No duplicates` along with the message `Every product has a unique SKU` (or `UPC`, depending on the active tab).
+This page and its resolution actions require `PIM_PRODUCT_ADMIN`.
 
-When duplicates are found, the page displays the total number of duplicate groups (for example: `8 duplicate groups`), followed by a list of groups. Each group shows:
+## Review duplicate groups
 
-* The shared identifier value causing the duplication (for example: `pollo-s`).
-* A `RESOLVE [N] PRODUCTS` button, where `[N]` is the number of products sharing that value.
+Select `SKU` or `UPC` in the page header. The page shows the number of duplicate groups and lists the shared value for each group. Groups with more products appear first.
 
-## Resolving a Duplicate Group
+If no duplicates exist for the selected identifier, the page shows `No duplicates` and confirms that every eligible product has a unique value.
 
-Step-by-step usage instructions:
+## Resolve a duplicate group
 
-1. On the `Duplicate Identifiers` page, select the `SKU` or `UPC` tab depending on which identifier needs resolving.
-2. Find the duplicate group to resolve and click `RESOLVE [N] PRODUCTS`. This opens the `Resolve SKU`/`Resolve UPC` modal.
-3. The modal lists every product in the group, each showing its variant name, `Product ID`, and an editable field pre-filled with the current duplicate value. Each product also shows a status, either `Unchanged` or, once edited, `Was [original value]`, reflecting the value it had before editing.
-4. Update the value in the field for each product that needs a unique identifier.
-5. As changes are made, the `SAVE [N] CHANGES` button at the bottom of the modal updates to reflect the number of edited products, and becomes active.
-6. Click `SAVE [N] CHANGES` to apply the updates, or `CLOSE` to exit the modal without saving.
+1. Click `Resolve [N] products` for the group you want to edit.
+2. Review the product image, display name, product ID, and creation date when available.
+3. Replace the duplicated value for each product that needs a different identifier. The field shows `Unchanged` until you edit it and `Was [original value]` after a change.
+4. Click `Save [N] changes`.
+
+The save button is disabled until at least one identifier contains a changed, non-empty value. Only changed rows are submitted. Click `Close` to dismiss the modal without saving.
