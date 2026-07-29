@@ -1,25 +1,25 @@
 # Imports
 
-The `Imports` page shows a running log of product data synced into HotWax Commerce from connected sales channels, such as Shopify, so users can confirm that updates are coming through correctly. The page displays the `Last 100 recently synced product updates`.
+The Imports page shows the 100 most recently updated product synchronization records from `ProductUpdateHistory`, ordered by the latest update timestamp.
 
-### Search Imports
+## Search imports
 
-The search bar lets users search the synced records by product, `SKU`, barcode, or shop.
+The search runs against the 100 records already loaded in the page. You can search by HotWax Commerce product ID, parent product ID, SKU, shop ID, or system message ID.
 
-### Refresh
+## Refresh imports
 
-Click `REFRESH`, on the top right of the page, to reload the list with the latest synced records.
+Click `Refresh` to request the latest 100 records from the OMS.
 
-### Synced Records List
+## Review synced records
 
-Each entry in the list represents a single product or variant update received from a sales channel, and shows:
+Each row can show:
 
-| **Field**        | **Description**                                                                                   |
-| ------------------ | -------------------------------------------------------------------------------------------------- |
-| Identifier          | The product or variant ID from the source sales channel.                                          |
-| Parent              | The source channel's ID for the parent product. Shown only when the entry is for a variant.        |
-| System Message      | The corresponding HotWax Commerce `Product ID` the synced record was mapped to.                    |
-| Status               | Whether the update was applied successfully, shown as `Synced`.                                    |
-| Shop                 | The ID of the shop the update was synced from.                                                      |
-| Timestamp            | The date and time the update was synced.                                                            |
-
+| Field | Description |
+| --- | --- |
+| Product ID | The HotWax Commerce product or variant ID recorded in the update history. |
+| Parent | The HotWax Commerce parent product ID, when present. |
+| SKU | The recorded product SKU, when present. |
+| System message | The system message ID associated with the update, when present. |
+| Status | `Synced` when a system message ID is present; otherwise `Recorded`. |
+| Shop | The shop ID associated with the update history. |
+| Timestamp | The creation timestamp, or the last-updated timestamp when no creation timestamp is present. |
