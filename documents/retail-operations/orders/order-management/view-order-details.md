@@ -1,76 +1,93 @@
-# View Order Details
+---
+description: Review an order's timeline, customer context, items, ship groups, holds, and communications.
+---
 
-The comprehensive `Order View Page` within HotWax Commerce enhances user efficiency and facilitates streamlined order management. This page consolidates all essential information related to an order, providing users with a holistic view that encompasses key details such as billing and shipping information, order identification, payment terms, preferences, timelines, references, communications, and a detailed list of items. To access the `order view page`, simply click on the order ID on the `find sales order` page to view comprehensive details about the order.
+# Order details
 
-HotWax Commerce offers the following features on the `Order View Page`:
+Open an order from `Find order` or any Order Manager queue. The page shows the order name, HotWax order ID, current status, and timeline.
 
-### Overview Section
+## Review order context
 
-The overview section contains essential information related to billing and order processing. Here's a summary of each element:
+The header contains these cards:
 
-1. **Bill To (To-Customer):** Indicates the customer who will be billed for the order.
-2. **Bill From (Company, Channel, Product Store):** Specifies the origin details, including the company, sales channel, and product store associated with the transaction.
-3. **Status:** Reflects the current status of the order, providing insights into its progress or completion.
-4. **Order Date:** Records the date when the order was placed or initiated.
-5. **External ID:** Identifier for external system.
-6. **Subtotal:** Displays the total cost of items or services before additional adjustments.
-7. **Total:** The overall cost of the order, which can be manually adjusted for discounts, promotions, replacements, and taxes.
+| Card | What it shows |
+| --- | --- |
+| Customer | Name, email, phone, locale, billing address, and a link to customer details when available. |
+| Source | Brand, sales channel, point-of-sale facility when applicable, and related exchange or return records. |
+| Order identifications | External order number, HotWax order ID, order name, additional identifiers, and a Shopify link when available. |
+| Attributes | Order attributes and their values. |
+| Fraud risk | Recommendation, risk level, and risk-fact counts when the order has a risk signal. |
 
-This information provides a comprehensive overview of an order, facilitating effective management and customization of billing details.
+Select the risk facts to open the detailed risk assessment. Risk is part of the header and is not a separate page segment.
 
-### Order Identifications
+## Use the page segments
 
-The `Order Identifications` section displays key information related to Shopify orders. The four main components of this section are:
+The page has four segments:
 
-1. **Shopify Order ID:**
-   * This is a unique identifier assigned by Shopify to each order. It serves as a reference point for tracking and managing orders within the Shopify platform. Additionally, users can conveniently view the order details directly on Shopify by clicking on the provided link associated with the Shopify order ID.
-2. **Shopify Order Name:**
-   * The order name in Shopify typically refers to a customizable name or title assigned to an order on Shopify for further order identification.
-3. **Shopify Order Number:**
-   * Shopify assigns a distinct numerical identifier to each order. It acts as another unique reference for orders, often used in communication and documentation.
-4. **Order Attributes:**
-   * Shopify retailers can capture additional crucial order details through metafields. Once customer IDs are verified, they are stored as order metafields in Shopify. When HotWax Commerce enters a retailer’s Shopify ecosystem, it becomes the source of truth for all order-related information. HotWax Commerce downloads order details along with customers’ IDs as order attributes and shares this information with the retailer's accounting system. All downloaded order attributes are visible under this section.
-   * Users can also add Order Attributes by clicking the `Add Order Attribute +` button which will open up a new form. Add the attribute name, value and description and click on the Add button to save the order attribute. This function is vital if there are some issue in importing order attributes such as metafield being added after the order has been imported in HotWax Commerce.
+* `Items`
+* `Shipgroups`
+* `Holds`
+* `Comms`
 
-### Payment Section
+### Items
 
-In the Payments Section, users can easily view the payment method and total payment value made by customers on the e-commerce platform. This data is then transmitted to the ERP system. Particularly for cash on delivery orders, this information is vital as store associates need to collect payment during fulfillment.
+`Items` groups order items into expandable product rows. The group row shows product identifiers, quantity, fulfillment location, status, amount, and adjustments when available. Expand it to review individual order-item and ship-group context.
 
-### Order Timeline
+Use the item toolbar to:
 
-The timeline illustrates the progression of events from the initial order decision to the completion of the transaction, including the involvement of a broker as an intermediary. Here's a brief description of each term:
+* select all items or individual rows
+* add items when the order status permits it
+* change the facility for an eligible item
+* review item attributes
+* cancel eligible items
 
-1. **Order Date:**
-   * The date and time when the customer made a purchase.
-2. **Entry Date:**
-   * The date and time when the order information was officially recorded into HotWax Commerce.
-3. **First Brokered:**
-   * The first brokered refers to the initial timestamp when an item is allocated to a specific facility. This timestamp remains unchanged even if the item is subsequently rejected by the facility and redirected elsewhere. It serves as a fixed reference point for tracking the item's movement history within the system.
-4. **Completed Date:**
-   * The date and time when the order was fulfilled, and the goods or services were delivered or made available to the buyer.
+Changing an item's facility rejects its current allocation and releases it to the destination you select. The action appears only when the item is eligible.
 
-**For Example:**
+The payment and totals cards show payment methods, payment statuses, subtotal, adjustments, grand total, and the amount received or authorized.
 
-| Event          | Date and Time       |
-| -------------- | ------------------- |
-| Order Date     | 03-08-2024 06:07 PM |
-| Entry Date     | 03-08-2024 06:13 PM |
-| First Brokered | 03-09-2024 01:00 AM |
-| Completed Date | 03-11-2024 03:16 PM |
+### Shipgroups
 
-### References
+`Shipgroups` shows each fulfillment group and its:
 
-In the HotWax Commerce platform, the `Reference Section` offers a centralized hub for users to access critical information related to picklist status, packing details, shipment information, and returns details. This feature provides quick and easy access to essential data. Users can click on the relevant item such as return ID, picklist ID, etc. to access the order details. Users can see the following details in this section:
+* facility and fulfillment status
+* item summary
+* shipping method and destination
+* shipment and tracking information, when available
+* timeline and hold context
+* actions that are valid for the current ship-group state
 
-* Click on the `Picklist Status` link to view the current status of picklists associated with orders.
-* Click on the `Packing Details` link to view information regarding the packing process for orders. This includes details such as items packed, and any special instructions.
-* Click on the `Shipment Information` link to access data related to order shipments. This may include tracking numbers, carrier information, and expected delivery dates.
-* Click on the `Returns Details` section to review information about product returns initiated by customers for this order and the status of the return.
+The page displays `No ship groups` when the order has none.
 
-### Communications
+### Holds
 
-The `Communications` feature in the HotWax Commerce platform acts as a central hub for users to interact with both the internal team and customers, providing updates on orders. With the capability to add notes and send personalized emails directly from this interface, users can efficiently communicate important updates or notifications to internal teams or customers. Whether it's informing customers about order changes, cancellations, or backorder notifications, or adding notes for the fulfillment team, this feature simplifies communication processes, minimizing misunderstandings and improving overall order management efficiency.
+`Holds` displays bad-address, substitute, fraud, and general hold-task cards associated with the order.
 
-Click on the communication and select either email or notes to start the communication.
+When no hold exists, the page displays `No holds`. If you have permission, use `Create hold task` to choose ship groups, enter a task name and description, and select an allowed purpose.
 
-<figure><img src="../../.gitbook/assets/sales-order-view-details.png" alt=""><figcaption></figcaption></figure>
+### Comms
+
+`Comms` lists communication events with their identifier, sender, recipient, content, and entry date. The page displays `No communication events` when none exist.
+
+## Use order actions
+
+Actions shown under `Items` depend on the order status and selected items. The page displays only actions that are valid for the current order.
+
+Common actions include:
+
+* approve or cancel the order when the current status allows it
+* cancel selected items
+* clone the order
+
+Confirm destructive actions before continuing.
+
+{% hint style="warning" %}
+The `Return` action is not available from Order Manager yet. If it appears for a returnable order, the page reports that returns are unavailable here.
+{% endhint %}
+
+## Page states
+
+* `Loading order...` means the order is still loading.
+* `Order failed to load` means the request failed.
+* `Order not found` means the requested order is unavailable or a stale search result points to a record that no longer exists.
+
+Return to `Find order` and refresh the search if an order cannot be opened.
