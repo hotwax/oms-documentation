@@ -1,202 +1,97 @@
-# Product Details
+# Product details
 
-When you select a product from the **Product List**, you are redirected to the **Product Details** page.
+Open Product details from a Product workbench or Missing values row. The page loads the selected product family and provides separate controls for viewing and editing its catalog data.
 
-The **Product Details** page provides a complete view of a product and allows users to manage and update different product attributes. It is the central place to configure product information such as display details, identifiers, pricing, inventory settings, shipping details, and external channel mappings.
+Viewing the page requires `PIM_PRODUCT_VIEW` or `PIM_PRODUCT_ADMIN`. Product editing requires `PIM_PRODUCT_CREATE` or `PIM_PRODUCT_ADMIN`. Feature actions use the separate feature permissions described in [Products app](products-app.md#prerequisites-to-use-the-app).
 
-Users can view, edit, and manage different sections of a product from this page.
+## Navigate a product family
 
+The top of the page shows the product image, name, internal name, brand, and product type. For a product family, use the feature selector or variant strip to select a variant.
 
-## Product Types
+Use `Edit parent` and `Edit variant` to choose which family member the editor changes. The selected variant can copy dates, prices, and shipping values from its parent.
 
-Product types define the nature of a product and how it is managed within the system. Different product types help determine inventory handling, fulfillment process, pricing, and product configuration.
+When a feature combination does not have a variant, use `Add variant` to create it.
 
+## Manage features
 
-| Product Type | Description | Example |
-|--------------|-------------|---------|
-| **Configurable Good** | A physical product with multiple variations. | T-shirt with different sizes and colors |
-| **Configurable Good Configuration** | A specific variation of a configurable product. | Red T-shirt - Medium |
-| **Configurable Service (Using Inventory)** | A service that requires inventory or resources. | Installation with required parts |
-| **Configurable Service Configuration** | Different options available for a service. | Basic or Premium installation |
-| **Digital Good** | A product delivered electronically without shipping. | Software license, E-book |
-| **Donation Product** | A product used to collect contributions. | Charity donation |
-| **Finished Good** | A completed product ready for sale. | Laptop, Mobile phone |
-| **Finished/Digital Good** | A product available in physical and digital formats. | Physical book and E-book |
-| **Gift Card** | A prepaid product with monetary value. | Store gift card |
-| **Good** | A general physical product managed through inventory. | Furniture, Electronics |
-| **Marketing Package** | Multiple products sold together as one package. | Laptop bundle with accessories |
-| **Marketing Package: Auto (Pick)** | A package where items are automatically selected from inventory. | Automatically created gift basket |
-| **Marketing Package: Pick Assembly** | A package assembled from individual products before shipping. | Custom computer package |
-| **Raw Material** | Material used to manufacture other products. | Fabric, Steel |
-| **Service** | A non-physical product offered to customers. | Consultation, Maintenance |
-| **Subassembly** | A partially completed product used in manufacturing. | Engine assembly |
-| **Work In Process (WIP)** | A product currently being manufactured. | Partially assembled machine |
+The Features section groups feature values by axis, such as color or size. Depending on your permissions, you can:
 
----
+* Apply an existing feature value to the selected family member.
+* Remove an applied feature value.
+* Add a feature axis or create a new value.
 
-## Display
+Applying or creating features requires `PIM_FEATURE_CREATE` or `PIM_FEATURE_ADMIN`. Removing features requires `PIM_FEATURE_ADMIN`.
 
-The **Display** section contains the basic information used to identify and describe a product.
+## Edit display information
 
-Users can view and update:
+The Display card contains:
 
-* **Name**: The name of the product displayed to users.
-* **Internal Name**: The internal name used for managing the product within the system.
-* **Brand Name**: The brand associated with the product.
-* **Type**: Defines the product type, such as Finished Good.
-* **Description**: A short description of the product.
-* **Long Description**: A detailed description of the product.
+* `Name`
+* `Internal name`
+* `Brand name`
+* `Type`
+* `Desc`
+* `Long desc`
 
-Click **Save** to apply changes made in this section.
+The product-type list comes from the OMS rather than a fixed list in the app. For a `MARKETING_PKG_PICK` product, the Display card also manages its components and quantities.
 
----
+Click `Save` in the card footer to apply changes or `Reset` to discard the card's draft.
 
-## Product Identifications
+## Manage kit components
 
-The **Product Identifications** section contains unique identifiers used to identify a product.
+Marketing-package kit types show a Components card. Add linked products with quantities, or expire and reactivate existing component associations.
 
-It includes:
+## Manage product identifications
 
-* **Product ID**: A unique identifier assigned to the product.
-* **SKU**: Stock Keeping Unit used for inventory and order management.
-* **UPCA**: Universal Product Code used for product identification.
+The Product identifications card always shows the product ID and lists active identification values returned by the OMS. Click `Edit` to add an identification, update its value, or expire it. Available identification types also come from the OMS.
 
-These identifiers help maintain accurate product data across different systems.
+## Manage dates
 
----
+Set the introduction, release, support discontinuation, and sales discontinuation dates. The `Discontinue when out of stock` option records that the item should not return to stock and that backorders should not be accepted.
 
-## Dates
+When editing a variant, click `Copy from parent` to copy the parent's date values into the draft, then save the card.
 
-The **Dates** section manages important product lifecycle dates.
+## Manage tags
 
-Users can configure:
+Add or remove tags from the parent product or selected variant. The card separates parent tags from variant tags when the product belongs to a family.
 
-* **Introduction Date**: The date when the product becomes available.
-* **Release Date**: The official product release date.
-* **Support Discontinuation Date**: The date after which product support is stopped.
-* **Sales Discontinuation Date**: The date after which the product is no longer available for sale.
+## Manage categories
 
-### Discontinue When Out of Stock
+View active product-category memberships, add a category, or remove an existing membership. Removing a category expires the membership rather than deleting its history.
 
-This option allows users to mark a product as discontinued when inventory reaches zero.
+## Manage prices
 
-When enabled:
-* The product will not be restocked.
-* Backorders will not be accepted.
+Set the currency and positive values for `Default price`, `List price`, and `Wholesale price`. Saving writes listing prices for the current product store and primary store group. Clearing an existing price expires it.
 
----
+When editing a variant, click `Copy from parent` to place the parent's active price values in the draft before saving.
 
-## Tags
+## Manage Shopify shop products
 
-The **Tags** section allows users to add labels to products for better organization and filtering.
+The Shopify Shop Products card maintains one mapping per shop. A mapping contains:
 
-Users can:
-* Add new tags.
-* Remove existing tags.
+* `Shop ID`
+* `Shopify Product ID`
+* `Shopify Inventory ID`
 
+Add a mapping, edit the Shopify IDs for an existing shop, or remove a shop mapping.
 
----
+## Manage inventory policy
 
-## Categories
+Use the Inventory policy card to:
 
-The **Categories** section allows users to assign products to specific categories.
+* Set whether the product is returnable.
+* Set whether the product is taxable.
+* Add substitute-product associations.
+* Expire or reactivate substitute associations.
 
-Users can:
-* View existing categories linked to the product.
-* Add additional categories.
+## Manage shipping and handling
 
-Categories help organize products and improve product discoverability.
+Set the default box type, width, height, depth, weight, and the unit for each measurement. You can also set `In shipping box` and `Charge shipping`.
 
----
+The dimension preview redraws the box using the entered measurements and converts mixed length units for proportional display. When editing a variant, click `Copy from parent` to copy the parent's shipping values into the draft.
 
-## Prices
+## Review change history
 
-The **Prices** section manages different pricing details for a product.
+The Change history card shows up to 10 audit entries returned for the selected product. Each entry shows the entity and field, old and new values, timestamp, and user when available.
 
-Users can configure:
-
-* **Currency**: The currency used for product pricing.
-* **Default Price**: The standard selling price of the product.
-* **List Price**: The original or displayed price of the product.
-* **Wholesale Price**: The price used for wholesale transactions.
-
-The **Copy From Parent** option allows users to copy pricing information from the parent product.
-
----
-
-## Shopify Shop Products
-
-The **Shopify Shop Products** section displays the connection between the product and Shopify.
-
-It includes:
-
-* **Shop ID**: Identifies the connected Shopify store.
-* **Shopify Product ID**: Unique identifier of the product in Shopify.
-* **Shopify Inventory ID**: Identifier used for inventory synchronization.
-
-Users can:
-* Add a Shopify product mapping.
-* Edit existing Shopify mappings.
-* Remove Shopify mappings.
-
----
-
-## Inventory Policy
-
-The **Inventory Policy** section controls how inventory-related rules are applied to the product.
-
-Users can configure:
-
-### Returnable
-
-Defines whether the product can be returned.
-
-* Enabled: Product can be returned.
-* Disabled: Product cannot be returned.
-
-### Taxable
-
-Defines whether tax should be applied to the product.
-
-* Enabled: Product is taxable.
-* Disabled: Product is not taxable.
-
-### Substitutes
-
-Users can link substitute products that can be used when the original product is unavailable.
-
----
-
-## Shipping and Handling
-
-The **Shipping and Handling** section contains product shipping-related information.
-
-Users can configure:
-
-* **Default Box Type**: Defines the standard packaging type used for shipping.
-* **Width**: Product package width.
-* **Height**: Product package height.
-* **Depth**: Product package depth.
-* **Weight**: Product package weight.
-
-##### Additional options:
-
-* **In Shipping Box**: Indicates whether the product is already packed inside a shipping box.
-
-* **Charge Shipping**: Defines whether shipping charges should be applied for the product.
-
-The product dimensions are used to preview the package size and support accurate shipping calculations.
-
---- 
-## Change History
-
-The **Change History** section keeps track of updates made to the product.
-
-It helps users review:
-* Previous changes.
-* Product update history.
-* Changes made by users.
----
-
-
-
+The current Products app history endpoint is configured for recorded identifier-value changes. Do not treat this card as a complete history of every product edit.
