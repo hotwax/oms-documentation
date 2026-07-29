@@ -41,6 +41,14 @@ The `Shipment threshold check` filter prevents low-value split or partial alloca
 
 The check applies when routing would split items across facilities or leave some items unavailable. Each proposed facility allocation and any unavailable remainder must meet the threshold. A complete allocation from one facility does not use this check.
 
+HotWax calculates each checked portion as:
+
+```text
+item quantity * unit price + item-level adjustments
+```
+
+The calculation does not add header-level shipping, tax, or order adjustments. It includes any adjustment tied to an item. The threshold uses the order currency.
+
 For example, with a threshold of 100:
 
 * A complete allocation worth 80 from one facility can proceed.

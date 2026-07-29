@@ -37,16 +37,20 @@ These actions update the working copy. Click the page-level `Save` after you fin
 
 Select a routing rule, then use `Filters` to control which facilities can supply inventory.
 
-| Filter | Use |
-| --- | --- |
-| `Group` | Include or exclude facilities in a selected facility group. |
-| `Proximity` | Limit facilities to a distance from the customer's shipping address. Select miles or kilometers, then enter the distance. |
-| `Safety stock` | Select `greater` or `greater than or equal to`, then enter the stock quantity that a facility must retain. |
-| `Week of Supply` | Set the coverage period used to calculate the Week of Supply ranking. |
-| `Turn off the facility order limit check` | Ignore a facility's fulfillment-capacity limit for this rule. |
-| `Shipment threshold check` | Require each split allocation and unavailable remainder to meet the configured value. |
+| Filter | How HotWax evaluates it | Impact |
+| --- | --- | --- |
+| `Group` | Matches facilities against active members of one brokering facility group. When saved with a negative comparison, the excluded option removes members of that group. | Limits the eligible fulfillment network before HotWax checks inventory. |
+| `Proximity` | Calculates straight-line distance between the coordinates on the facility's primary address and the order's shipping address. HotWax converts the result to miles or kilometers before applying the entered limit. | Removes facilities outside the radius. If either address lacks coordinates, HotWax currently treats the distance as zero, which can make the facility appear eligible and nearest. |
+| `Safety stock` | Compares the facility's available balance before this allocation with the entered value by using `greater` or `greater than or equal to`. The available balance already subtracts the product-facility minimum stock. If routing substitutes are configured, HotWax can add their available inventory to this balance. | Acts as a pre-allocation threshold. It does not reserve the entered quantity after routing, so an allocation can leave the balance below this value. |
+| `Week of Supply` | Supplies the number of weeks used in the Week of Supply score. The value does not remove a facility by itself. | Affects ranking only when you also add the `Week of Supply` sort. |
+| `Turn off the facility order limit check` | Bypasses the facility's current daily order count and maximum-order-limit comparison. | Allows the rule to allocate to a facility even when the normal capacity limit would block it. |
+| `Shipment threshold check` | Compares every proposed split allocation and unavailable remainder with the entered merchandise subtotal. A complete allocation from one facility bypasses the check. | Rejects the complete allocation proposal when any checked portion is below the threshold. |
 
 Filters shown in your environment depend on the routing services and enumeration configuration deployed with HotWax Commerce.
+
+{% hint style="warning" %}
+Some deployments show `All items available anywhere` in the filter chooser. The current detail editor does not provide a value control for this option, so a newly selected row defaults to no effect. Do not use it until your deployment includes the matching editor support.
+{% endhint %}
 
 {% hint style="info" %}
 A routing rule without a facility filter can consider every facility that is enabled for online fulfillment.
@@ -56,13 +60,14 @@ A routing rule without a facility filter can consider every facility that is ena
 
 Use `Sort` to rank facilities that pass the filters.
 
-| Sort option | Typical use |
-| --- | --- |
-| `Proximity` | Try the nearest facility first. |
-| `Inventory balance` | Try the facility with the most inventory available for allocation first. |
-| `Sales velocity` | Try slower-moving facilities before faster-moving facilities. |
-| `Week of Supply` | Try facilities with deeper inventory coverage first. |
-| `Custom sequence` | Follow a configured facility sequence. |
+| Sort option | How HotWax calculates the order | Impact |
+| --- | --- | --- |
+| `Proximity` | Sorts the calculated straight-line distance from lowest to highest. | Tries the nearest facility first. A facility with missing address coordinates can sort as distance zero. |
+| `Inventory balance` | For products in the order, totals the facility's last inventory count when that count is above the product-facility minimum stock. The saved sort is descending. | Tries the facility with the highest qualifying total first. |
+| `Sales velocity` | Sorts the product-facility sales velocity from lowest to highest and places missing values last. | Tries slower-moving facilities before faster-moving facilities. |
+| `Week of Supply` | Calculates `current inventory / (sales velocity / configured weeks) * 100`, sorts the score from highest to lowest, and places missing scores last. | Tries facilities with deeper inventory coverage first. |
+| `Custom sequence` | Sorts by the active facility-group member sequence from lowest to highest. This option requires an included `Group` filter. | Follows the facility order maintained in that brokering group. |
+| `Broken style` | When this deployment option is present, keeps facilities with an incomplete style assortment and ranks those with fewer available variants first. | Limits this rule to facilities with an incomplete assortment and tries the lowest available-variant count first. |
 
 Available sort options depend on your deployment. See [Route by weeks of supply](weeks-of-supply-routing.md) before you use the Week of Supply sort.
 
@@ -74,8 +79,9 @@ If you do not add a sort option, the routing engine ranks facilities by the numb
 
 Use the `Partially available` settings to control order splitting:
 
-* Turn on `Allow partial allocation` when this rule can allocate only the available items or quantities.
-* Turn on `Partially allocate grouped items` when grouped items can also split. This control is available only when partial allocation is allowed and the routing configuration supports grouped-item splitting.
+* Turn off `Allow partial allocation` when every approved item and quantity in the ship group must be available at one facility. If no single facility can fill the complete ship group, HotWax applies the unavailable-item action.
+* Turn on `Allow partial allocation` when the rule can allocate available items or quantities across more than one facility.
+* Turn on `Partially allocate grouped items` when items in a brokering item group can also split. When this option is off, all items in the group must remain together.
 
 When the selected routing uses a `Promise date` filter, the app requires partial allocation because the routing processes matching items rather than the complete order.
 
@@ -87,10 +93,10 @@ Use the `Unavailable items` settings to decide what happens after a rule cannot 
 
 | Setting | Result |
 | --- | --- |
-| `Move items to` → `Next rule` | Passes unavailable items to the next active routing rule. |
-| `Move items to` → `Queue` | Moves unavailable items to the selected virtual queue for another process. |
-| `Clear auto cancel days` | Removes a previously applied auto-cancel date. |
-| `Auto cancel days` | Applies an auto-cancel date after the selected number of days. |
+| `Move items to` → `Next rule` | Passes only the unavailable items to the next active routing rule. Items allocated by the current rule do not run through the later rule. |
+| `Move items to` → `Queue` | Moves unavailable items to the selected virtual queue and stops later routing rules for those items. |
+| `Clear auto cancel days` | Removes a previously applied auto-cancel date when HotWax processes the unavailable items. |
+| `Auto cancel days` | Sets the auto-cancel date to the routing server's current date and time plus the selected number of days. |
 
 Use `Next rule` on intermediate rules. On the final rule, move remaining items to the queue used by your exception or retry process.
 

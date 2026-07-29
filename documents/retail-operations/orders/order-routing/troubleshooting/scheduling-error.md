@@ -19,7 +19,7 @@ Use the routing list, schedule details, and run history to determine whether the
 9. Click `Edit schedule` when the cadence or Quartz cron expression is incorrect.
 10. Select a schedule option or update `Expression`, click the save icon, then confirm `Save`.
 
-The schedule is interpreted in the user's displayed time zone. Review the time zone before changing a schedule that appears offset.
+The schedule editor previews the expression in the user's displayed time zone, but the saved job runs in the default time zone of the HotWax Commerce server. Compare the saved `Next run` and `History` values, then confirm the server time zone with your system administrator before you change a schedule that appears offset.
 
 ## Check active configuration
 

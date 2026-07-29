@@ -61,7 +61,7 @@ The default schedule options are:
 | Every six hours | `0 0 */6 ? * *` |
 | Every day at midnight | `0 0 0 * * ?` |
 
-The app calculates the next execution time in your HotWax Commerce user profile time zone.
+The schedule editor previews the Quartz expression in your HotWax Commerce user profile time zone. The saved routing job currently runs in the default time zone of the HotWax Commerce server. These time zones can differ. After you save, review `Next run` and `History`, and confirm the server time zone with your system administrator before you rely on an hour-specific schedule.
 
 ## Run a routing group now
 
