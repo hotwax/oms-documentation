@@ -339,9 +339,15 @@ The clone includes all original item rows and ordered quantities, including comp
 
 The page remains on the original order. The clone appears in Order Manager only after it synchronizes back from Shopify. Do not submit a second clone while waiting for that synchronization. Open the new order after it appears and confirm every item and quantity.
 
-{% hint style="warning" %}
-`Return` can appear when an order has a completed item, but returns are not implemented from this page. Selecting it only reports that returns are unavailable here.
-{% endhint %}
+### Recognize actions unavailable on this page
+
+Some older order management system (OMS) guides describe actions that the current `Order details` page does not support:
+
+* `Create RMA` and `Reindex` are not available.
+* `Appeasement` and `Reship` are not available.
+* `Return` can appear when an order has a completed item, but selecting it only reports that returns are unavailable here.
+
+Use the [returns workflow](../returns/README.md) for supported return-management processes.
 
 ## Recover from page or action failures
 

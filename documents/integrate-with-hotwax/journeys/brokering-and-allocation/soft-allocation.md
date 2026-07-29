@@ -24,9 +24,11 @@ b. If the customer allows access to their system location:
 
 * Obtain the latitude and longitude coordinates directly from their device.
 
-### Sample of `postCodeLookup`
+### postcodeLookup API request
 
-#### Method : `/POST`
+#### Endpoint
+
+`POST https://<host>/rest/s1/api/geocode`
 
 ## Request
 
