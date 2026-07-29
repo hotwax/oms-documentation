@@ -28,6 +28,10 @@ Use `Run now` after creating or changing a rule when you do not want to wait for
 
 Running the schedule now creates an immediate copy. It does not replace the recurring schedule.
 
+{% hint style="warning" %}
+A recurring or immediate sourcing-rule run generates and uploads the product-facility CSV. It does not apply the generated values in HotWax Commerce by itself. Schedule `Import Product Facility`, followed by `Process Bulk Import Files`, to import and process the output. See [Import Product Facility](../../workflow/job-workflows/inventory.md#import-product-facility).
+{% endhint %}
+
 ## Review execution history
 
 1. Open the overflow menu on the `Schedule` card.
