@@ -41,32 +41,15 @@ Video: Reject sales order items
 
 ## Mark items shipped in OMS
 
-Sometimes there are instances when customers may connect with CSR to receive the order urgently, in such cases CSR has the option to ship the order from the order details page without waiting for the fulfillment center to mark the order item shipped. Here's how users can mark the order items as shipped in the OMS:
+Use this action when you need to record shipment details from the `View Sales Order` page. Confirm that the items are assigned to the facility that shipped them before you mark them as shipped.
 
-**Scenario 1: Marking Items as Shipped that is still Unassigned to a Facility**
+1. Open the order from the `Find Sales Order` page.
+2. Select the items to ship. If an item is not assigned to the shipping facility, select `Release` and choose that facility first.
+3. Select `Ship Items` in the `Items` section.
+4. Choose the line items to include, select the carrier, and enter the tracking number.
+5. Confirm the shipment.
 
-1. **Locate the Order:** Navigate to the desired order and open it to view details from the `View Sales Order` page.
-2. **Release Item to Facility:** Select the line item, click `Release`, and choose the target facility for shipment.
-3. **Mark Items as Shipped:** Scroll to the item section on the `View Sales Order` page and click `Ship Items`.
-4. **Select Line Items:** Choose the items to be marked as shipped in the popup window.
-5. **Enter Tracking Details:** Select the carrier party from the dropdown and input the tracking number.
-6. **Confirm Shipment:** Verify the details and confirm the shipment to mark the selected item(s) as shipped.
-
-**Scenario 2: Marking Items as Shipped that are assigned to a different facility**
-
-1. **Reject Line Item:** Identify the line item on the `View Order` page, click `Reject`, choose `No Variance` as the reason, and confirm the rejection.
-2. **Release Item to Facility:** Select the rejected item, click `Release`, and choose the necessary facility.
-3. **Mark Items as Shipped:** Proceed to click `Ship Items`, select line item(s), input tracking details, and confirm the shipment.
-
-**Scenario 3: Marking BOPIS Sales Order Items as Shipped**
-
-1. **Modify Shipping Method:** Scroll to the item section on the `View Order` page, click `Edit`, and modify the shipping method to `Standard`.
-2. **Reject Line Item:** Reject the line item, choosing `No Variance` as the reason.
-3. **Release Item to Facility:** Select the rejected item, click `Release`, and choose the necessary facility.
-4. **Mark Items as Shipped:** Click `Ship Items`, select line item(s), input tracking details, and confirm the shipment.
-
-{% hint style="info" %}
-Click the history function in the status column to view when the item is marked completed and the user who marked the item completed.{% endhint %}
+To verify the update, open the item history from the `Status` column. The history shows when the item was completed and the user who completed it.
 
 {% embed url="https://youtu.be/RwpJ86nFnAo" %}
 Video: Ship items in OMS
