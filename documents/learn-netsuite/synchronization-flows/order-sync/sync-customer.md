@@ -6,7 +6,7 @@ description: >-
 
 # Sync Customer
 
-If the order contains a new customer not present in Netsuite, the system won't allow the order to be pushed. Therefore, it's vital to synchronize customer data from HotWax Commerce to Netsuite before order creation.
+If the order contains a new customer not present in NetSuite, the system won't allow the order to be pushed. Therefore, it's vital to synchronize customer data from HotWax Commerce to NetSuite before order creation.
 
 ## Historical Customers
 
@@ -44,7 +44,7 @@ Import Historical Shopify Customers
 
 ## Export customers from HotWax
 
-Scheduled job in HotWax Commerce generates a CSV file comprising customers who have not been synchronized to Netsuite.
+Scheduled job in HotWax Commerce generates a CSV file comprising customers who have not been synchronized to NetSuite.
 
 This job is scheduled in the integration layer and not executed natively in the OMS.
 

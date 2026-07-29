@@ -71,7 +71,7 @@ The `Ship to Store` page in the BOPIS App is organized into three tabs to help y
 ### Incoming
 This tab displays inventory that has been shipped from the fulfillment center and is currently in transit to your store.
 
-When the physical shipment arrives, locate the order in this tab and label it `Arrived`. A notification is automatically sent to the customer informing them that their order is now available for pickup, and the order moves to the `Ready for Pickup` tab.
+When the physical shipment arrives, locate the order in this tab and label it as `Arrived`. HotWax Commerce automatically sends a notification to the customer informing them that their order is now available for pickup, and the order moves to the `Ready for Pickup` tab.
 
 ### Ready for pickup
 This tab displays orders that have physically arrived at your store and are waiting for the customer.

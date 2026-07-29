@@ -147,7 +147,7 @@ Head of eCommerce, Head of Stores, Vice President of Retail
 | Brokered Date    | The date when the order is brokered     |
 | Pickup Date      | The date when the order is picked up    |
 | Canceled Date    | The date when the order was canceled    |
-| Shipping Method  | The Shipping method by which order is   |
+| Shipping Method  | The shipping method by which the order is shipped       |
 
 ***
 
@@ -183,7 +183,7 @@ Head of eCommerce, Head of Stores, Vice President of Retail
 | Brokered Date    | The date when the order is brokered     |
 | Pickup Date      | The date when the order is picked up    |
 | Canceled Date    | The date when the order was canceled    |
-| Shipping Method  | The Shipping method by which order is   |
+| Shipping Method  | The shipping method by which the order is shipped       |
 ***
 
 ## Customer support
@@ -219,7 +219,7 @@ Fulfillment team
 
 ## Problematic Orders
 
-These reports help retailers find where orders are falling through the cracks and ensure that all orders are beign shipped out on time.
+These reports help retailers find where orders are falling through the cracks and ship all orders on time.
 
 ### Daily Unfulfilled Expedited Orders
 
@@ -302,7 +302,7 @@ Head of eCommerce, Head of Stores, Vice President of Retail
 | Location          | Indicates the location of the order fulfillment                    |
 | HC Order ID       | HotWax Commerce Order ID for internal tracking                    |
 | Style             | Specifies the style or type of the product                       |
-| demand            | Reflects the demand or quantity ordered                           |
+| Demand            | Reflects the demand or quantity ordered                           |
 | SKU               | Stock Keeping Unit for inventory tracking                         |
 | Product Name      | Name of the product ordered                                      |
 | ATP               | Indicates the quantity of the product available for shipment      |

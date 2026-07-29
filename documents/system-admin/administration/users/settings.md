@@ -1,9 +1,5 @@
-# Settings
+# Settings moved to Company
 
-## Timezone
+User and application settings are now managed from the **Company App**.
 
-This option allows users to select an appropriate timezone to ensure consistency and optimize operations according to local time.
-
-## Language
-
-This option allows users to select a preferred display language for the app.
+See [Review Company settings](../company/settings.md) for account, instance, version, timezone, and data-fetch information.
