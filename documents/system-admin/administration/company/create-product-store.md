@@ -1,47 +1,41 @@
 ---
-description: >-
-  Effortlessly create a product store in HotWax Commerce Order Management
-  System.
+description: Create the Product Store that holds brand-level configuration in HotWax Commerce.
 ---
 
-# Create Product Store
+# Create a Product Store
 
-In HotWax Commerce, managing multiple product stores is valuable for retailers with diverse brands. Each product store can be tailored to represent a specific retail brand, enabling efficient and customized management. This feature streamlines operations to meet the unique needs of each retail brand.
+A Product Store represents a brand or storefront in HotWax Commerce. Create the Product Store before you configure its Shopify connection, facilities, inventory, and order workflows.
 
-When retailers deploy HotWax Commerce, a default product store is automatically created. However, if a retailer has multiple brands, additional product stores need to be created.
+## Before you start
 
-## Step 1: Setup basic profile
+Collect the following information:
 
-To create a product store in the HotWax Order Management System, follow these steps:
+* Brand or storefront name
+* Product Store ID
+* Default currency
+* Operating countries
+* Parent company name when this is the first Product Store
 
-1. Log in to the [company.hotwax.io](https://company.hotwax.io) app using your credentials.
-2. Navigate to the Find Product Store page and click on the "Create new product store" button.
-3. This action will guide you through a product store creation flow.
-4. Fill out the initial form with the following details:
+The Product Store ID can contain up to 20 characters. Use a stable ID because later configuration and integration records refer to it.
 
-| Field               | Description                                                                      |
-| ------------------- | -------------------------------------------------------------------------------- |
-| Company name        | The parent company owning all the brands.                                        |
-| Product store name  | The name of the brand for which you are creating a product store.                |
-| Product store ID    | The unique identifier of the product store (e.g., NN\_STORE for NotNaked Brand). |
-| Currency            | The default currency for orders created in this product store. This field is required. |
-| Operating countries | List the countries where the brand operates.                                     |
+## Create the Product Store
 
-5. Once done, click on "Manage Configurations".
+1. Open the **Company App**.
+2. Go to `Product Store`.
+3. Click `Create new product store`.
+4. If this is the first Product Store, enter the parent `Company name`.
+5. Enter the Product Store `Name`.
+6. Review the generated `ID` and update it when needed.
+7. Select the default `Currency`.
+8. When the operating-country list is empty, click `Add` next to `Operating countries` and select each country.
+9. Choose one of these paths:
+   * Click `Manage configurations` to create the Product Store and continue into guided setup.
+   * Click `Preview guided setup` to review the setup stages before creating the Product Store.
 
-The current creation form does not require a product store group. If you need to associate a store with a primary store group, open the product store after creation and update `Primary Store Group ID` in its configuration.
+After creation, Company opens the guided setup for the new Product Store.
 
-Now, you'll set up additional configurations for your product store:
+## Continue setup
 
-| Configuration       | Description                                                                   |
-| ------------------- | ----------------------------------------------------------------------------- |
-| Product identifier  | The identifier used consistently throughout business operations.              |
-| Auto-approve orders | Enable auto-approval for orders upon import into OMS.                         |
-| Allow split         | Configure whether orders should be split or fulfilled from a single location. |
-| Sales order prefix  | Customize the prefix for HotWax Order IDs.                                    |
+Use [Complete Product Store guided setup](product-store-onboarding.md) to connect Shopify, prepare products and facilities, configure inventory and orders, and review readiness.
 
-6. After configuring your product store, click on `Setup Product Store` to finalize the setup.
-
-Product store is now created and ready to use. For more details on managing configurations related to the product store, refer to the documentation.
-
-{% embed url="https://youtu.be/IjDndeFdZj8" %}
+To stop and return later, open the Product Store details page and click `Resume setup`.
