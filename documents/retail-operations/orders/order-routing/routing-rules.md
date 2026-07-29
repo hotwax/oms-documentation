@@ -60,6 +60,8 @@ If you add more than one sort option, drag them into the required priority order
 
 If you do not add a sort option, the routing engine sequences matching orders by order date.
 
+<figure><img src="../../.gitbook/assets/order-routing-filters-sort.jpg" alt="Selected routing with order filters and sort options in the routing group workspace"><figcaption><p>Select a routing to review which orders it includes and the sequence in which they are attempted.</p></figcaption></figure>
+
 ## Manage a routing
 
 Select a routing to use its management actions:

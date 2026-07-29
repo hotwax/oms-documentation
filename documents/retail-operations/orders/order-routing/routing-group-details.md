@@ -48,6 +48,8 @@ Keep a group in `Draft` while you build and review its routings and routing rule
 3. Review the readable schedule and next execution time.
 4. Save the schedule.
 
+<figure><img src="../../.gitbook/assets/order-routing-schedule-editor.jpg" alt="Schedule editor with preset intervals, a Quartz cron expression, a readable schedule, and the next execution time"><figcaption><p>Choose a preset interval or enter a Quartz cron expression, then review the next execution time.</p></figcaption></figure>
+
 The default schedule options are:
 
 | Schedule option | Quartz cron expression |

@@ -94,6 +94,8 @@ Use the `Unavailable items` settings to decide what happens after a rule cannot 
 
 Use `Next rule` on intermediate rules. On the final rule, move remaining items to the queue used by your exception or retry process.
 
+<figure><img src="../../.gitbook/assets/order-routing-rule-configuration.jpg" alt="Selected routing rule with facility filters, sort options, partial-allocation controls, and unavailable-item actions"><figcaption><p>Review facility eligibility, ranking, split behavior, and the fallback action in one routing rule.</p></figcaption></figure>
+
 {% hint style="warning" %}
 Click the page-level `Save` after you add, reorder, rename, archive, change status, or edit a routing rule. These changes remain in the working copy until you save the routing group.
 {% endhint %}
