@@ -1,41 +1,58 @@
-# Product Workbench
+# Product workbench
 
-The `Product Workbench` page is the central place to find and manage products. It displays both parent products and their individual variants, along with key identifiers and tags, so users can quickly locate the exact item they're looking for and jump into its details.
+The Product workbench is the main product search page. It shows parent products and variants from the product index and provides links to the relevant product family on the Product details page.
 
-### Search Products
+## Search products
 
-The `Search Bar` at the top of the Product Workbench lets users search products by `Product ID`, `SKU`, `UPC`, or product `Name`. As soon as a search term is entered, the result list updates to show every parent product and variant matching the keyword, along with a running result count (for example, "314 results").
+Enter a search term to search the indexed product ID, parent or group ID, product name, parent product name, internal name, SKU, and UPC fields. The result count updates with the search and filter criteria.
 
-### Filter Products
+## Filter products
 
-Below the search bar, the Product Workbench page offers a row of filters to narrow down search results further:
+Use the filters below the search bar to narrow the result set:
 
-| **Filter**       | **Description**                                                                                  |
-| ----------------- | --------------------------------------------------------------------------------------------------- |
-| Product Type      | Filters products by type, such as `Finished Good` or `Digital Good`.                               |
-| Product Store     | Filters products belonging to a specific store, since each brand's product store maintains its own catalog. |
-| Virtual/Variant   | Filters results to show only parent (`Virtual`) products or only their `Variants`.                 |
-| Tags   | Filters products by tags.                 |
+| Filter | Behavior |
+| --- | --- |
+| Product type | Select a product type returned by the OMS product-type list. |
+| Product store | Select a product store associated with the indexed product. |
+| Virtual/variant | Show all products, virtual parent products, or variants. |
+| Tags | Select one or more indexed product tags. |
 
-Applied filters are highlighted, and the result count at the top of the list updates immediately to reflect the active filter combination. Click the red `x` icon next to the filters row to clear all applied filters and search terms at once.
+Selected tags appear as removable chips. Click the red clear button to reset the search, filters, sort order, and current selection to the workbench defaults.
 
-### Select Products and Add Tags
+## Select products and add tags
 
-Each product row has a checkbox, and the `Select all` checkbox above the list selects every product currently in the result set. Once one or more products are selected, click `ADD TAGS` to display a list of tags, select the desired tags, and click `Add`.
+Select individual rows or use `Select all` to select the products currently loaded in the list. `Select all` does not select result pages that have not been loaded.
 
-### Sort Results
+After selecting products:
 
-The `Sort` dropdown, on the top right of the result list, controls the order in which products are displayed. By default, results are sorted `Alphabetically`. You can also sort the results by `Recently Updated`, or `Recently Created`.
+1. Click `Add tag`.
+2. Select one or more existing tags. If the search does not return a tag, you can enter and add a new value.
+3. Click `Add`.
 
-### Product List
+The app adds each selected tag to each selected product, requests product reindexing, and refreshes the results.
 
-Each row in the result list represents either a parent product or a single variant, and displays:
+## Sort results
 
-* A thumbnail image, or a placeholder icon when no image is available.
-* The product/variant name (for example, `100 / Black`).
-* The `Product ID` or `SKU`, followed by the parent product name.
-* Any tags or type labels associated with the product, such as `giftcard`, `Pre-order`, or category tags like `Bottom` and `Women`.
+Use `Sort` to order results by:
 
-Click anywhere on a row to open that product's `Product Details` page.
+* `Alphabetical` — Product name in ascending order.
+* `Recently updated` — Most recently modified products first.
+* `Recently created` — Most recently created products first.
 
+## Review the product list
 
+Each row can show:
+
+* The product image.
+* The product or variant display name.
+* The SKU, or the product ID when no SKU is present.
+* The parent product name for a variant, or the brand or product type for another product.
+* A variant count for a virtual product.
+* Preorder or backorder status and product tags.
+* Units sold during the last 30 days with a sales sparkline when sales exist.
+
+Click a row to open Product details. Selecting a variant opens its parent product family with that variant selected.
+
+## Create a product
+
+Click the add icon in the page header to open product creation. This action requires `PIM_PRODUCT_CREATE` or `PIM_PRODUCT_ADMIN`.
