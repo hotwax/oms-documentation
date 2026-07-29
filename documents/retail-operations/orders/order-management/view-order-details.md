@@ -4,7 +4,7 @@ description: Review an order, correct fulfillment details, and perform the actio
 
 # Order details
 
-Open an order from `Find order`, a workflow queue, or a task queue. Use this page to understand the order's history, investigate a problem, and change only the item or ship group that needs attention.
+Open an order from `Find orders`, a workflow queue, or a task queue. Use this page to understand the order's history, investigate a problem, and change only the item or ship group that needs attention.
 
 Many actions depend on the order status, item status, facility type, selected rows, and your permissions. The `Items` footer shows only valid actions, while other controls can remain visible until a request is validated.
 
@@ -67,7 +67,7 @@ When fact chips appear in `Fraud risk`, select them to open the assessment. Revi
 
 The `Items` segment groups matching item rows into an expandable product row. The collapsed row shows the configured product identifiers, total ordered quantity, facility summary, status, base amount, and adjustments. A `+N` facility label means units are split across additional facilities.
 
-Expand the row to review each underlying item, including its sequence ID, external ID, facility, attributes, status, ship-group number, amount, and adjustments.
+Expand the row to review each underlying item, including its sequence ID, external ID, facility, attributes, status, ship group number, amount, and adjustments.
 
 Selecting a grouped row selects every underlying item. `Select all` can also select completed or canceled rows, so review the selected items before using a footer action.
 
@@ -100,7 +100,7 @@ Each selection adds a quantity of one. The dialog remains open so you can add di
 Facilities with available inventory appear first, but the list can still show and allow selection of a facility with zero displayed availability. Selecting a facility does not guarantee allocation; confirm the reloaded item's facility and status.
 
 {% hint style="warning" %}
-The facility change is not one atomic operation. Order Manager first rejects one unit from the current allocation and then releases it to the selected facility. If the release fails after the rejection succeeds, the item can remain rejected. Inspect the reloaded item before retrying.
+Order Manager first rejects one unit from the current allocation and then releases it to the selected facility. If the release fails after the rejection succeeds, the item can remain rejected. Inspect the reloaded item before retrying.
 {% endhint %}
 
 ### Add, review, or remove item attributes
@@ -125,11 +125,11 @@ The dialog does not collect a cancellation reason or note.
 ### Cancel several selected items
 
 1. Select only the active items that must be canceled.
-2. Confirm that the footer reads `Cancel N items`, where N is the intended count.
+2. Confirm that the footer shows `Cancel`, the intended item count, and `items`.
 3. Select the action and confirm the irreversible cancellation.
 4. Verify each selected row after the order reloads.
 
-When cancellable items are selected, `Cancel N items` replaces the whole-order `Cancel order` action. Clear the selection if you intend to cancel the whole order.
+When cancellable items are selected, a label such as `Cancel 3 items` replaces the whole-order `Cancel order` action. Clear the selection if you intend to cancel the whole order.
 
 ### Reconcile payments and totals
 
@@ -144,17 +144,19 @@ The totals card shows the item subtotal, grouped adjustments, grand total, and p
 
 ## Work with a ship group
 
-**Goal:** Correct the routing or fulfillment information for one fulfillment group without changing unrelated groups.
+**Goal:** Correct the routing or fulfillment information for one ship group without changing unrelated groups.
 
 **Use this flow when:** An order needs brokering, release, parking, pullback, a task, another item, or updated delivery information.
 
 Each card identifies the ship group, facility, items, status, progress, and the `Brokered`, `Pick`, `Pack`, and `Ship` milestones. `Pending` means the page has no recorded time for that milestone.
 
-An open-hold warning shows how many tasks apply to the group. The warning is advisory and does not by itself disable brokering, parking, release, or pullback. Select `View details` to understand the exception before changing the group.
+An open-hold warning shows how many tasks apply to the group. Order Tasks do not replace the order or ship group status, and more than one task can apply. The internal `Broker ship group` and `Release` actions can remain available, while applicable open tasks can still keep that scope outside downstream picking. Select `View details` before changing the group.
+
+The `Release` action on this page allocates selected items from a virtual ship group to a physical facility. It is an internal planning action, not the downstream picking release controlled by the active pick profile.
 
 Expand the card to select items, review inventory, change carrier and shipping method, edit the shipping address, and work with the group actions.
 
-### Review inventory for a ship-group item
+### Review inventory for a ship group item
 
 1. Expand the ship group.
 2. Select the cube action beside the item.
@@ -196,7 +198,7 @@ Changing the carrier clears the prior shipping-method selection. The change is s
 
 Changing the country clears the previous state selection. The order must have an associated customer party for the address update to succeed. Reopen the group and verify the saved address before releasing the order.
 
-### Choose the correct ship-group action
+### Choose the correct ship group action
 
 | Action | When to use it | What it changes |
 | --- | --- | --- |
@@ -248,13 +250,13 @@ Release is available for a virtual group on an approved, active order when at le
 4. Choose the rejection reason.
 5. Confirm the action and inspect the reloaded item status.
 
-Pullback applies to active items in a physical ship group and can be disabled after the order passes a fulfillment phase configured by the retailer. It does not select a new facility. Continue with the retailer's routing or exception process after verifying the rejection.
+`Pull back` applies to active items in a physical ship group. It does not select a new facility. Continue with the retailer's routing or exception process after verifying the rejection.
 
 #### Add a task to one ship group
 
 1. Select `Add Task` on the intended ship group.
 2. Enter a task name.
-3. Choose `Manual hold` or `Customer request`.
+3. Choose the manual-hold or customer-request option under `Task Purpose`.
 4. Enter the task description.
 5. Save the task.
 6. Open `Holds` and confirm that the task appears.
@@ -279,7 +281,9 @@ The `Holds` segment contains the same bad-address, substitute, fraud, and genera
 * [Fraud](fraud-orders.md)
 * [Hold](hold-orders.md)
 
-Complete the corrective work before resolving a task. Resolving a task changes the task record; it does not perform an address correction, item swap, order approval, or other corrective action for you.
+Complete the corrective work before resolving a task. A standalone `Resolve task` action changes only the task record. `Save and release hold` for Bad address and `Release updated order` for Swap apply their documented correction and then complete the task.
+
+Resolve only the task whose corrective work is complete. Other tasks on the same order or ship group remain open and can continue to prevent downstream release.
 
 ### Create a hold task
 
@@ -287,7 +291,7 @@ When no holds exist, select `Create hold task` in the empty state. When tasks al
 
 1. Select one or more ship groups. All groups are initially selected when the order has more than one.
 2. Confirm the generated task name or edit it.
-3. Choose `Manual hold` or `Customer request`.
+3. Choose the manual-hold or customer-request option under `Task Purpose`.
 4. Enter the required description.
 5. Save the task.
 
@@ -307,6 +311,8 @@ The footer in `Items` shows only the actions valid for the current order.
 
 Available status actions come from the current status and configured transition rules. Common actions include `Approve order`, `Hold order`, `Cancel order`, and `Complete order`.
 
+`Hold order` changes the order status. It does not create an Order Task or record a task purpose, owner, description, or resolution path.
+
 1. Confirm that no item rows are selected when you intend to act on the whole order.
 2. Select the available status action.
 3. Confirm the action when prompted.
@@ -320,10 +326,10 @@ Canceling the whole order cancels every item that is not already canceled or com
 
 1. Select `Clone order`.
 2. Review the item count, currency, and shipping destination.
-3. Choose whether to carry the original unit prices, use current Shopify catalog prices, or make the items free.
+3. Choose `Carry over original prices`, `Use current product prices`, or `Free`.
 4. Edit the order note when needed.
 5. Confirm or select the Shopify shop.
-6. Confirm that the customer has an email address. Add it in `Customer` when it is missing.
+6. Confirm that the customer has an email address. Add it in the customer summary card when it is missing.
 7. Wait for the Shopify shop and customer to resolve in the dialog.
 8. Submit the clone and wait for the new Shopify order name in the success message.
 
@@ -343,4 +349,4 @@ The page remains on the original order. The clone appears in Order Manager only 
 * `Order failed to load` means the request failed.
 * `Order not found` means the record is unavailable or the link is stale.
 
-After a failed state-changing action, reload the order and inspect the affected item, ship group, and task before retrying. Several actions perform more than one request, so part of the change can succeed even when the final message reports a failure.
+After a failed state-changing action, reload the order and inspect the affected item, ship group, and task before retrying. A correction or status update can succeed even when the final message reports a failure.
