@@ -1,30 +1,33 @@
 ---
-description: >-
-  Discover your guide to troubleshooting brokering issues due to incorrect
-  Facility Associations
+description: Resolve routing results caused by missing or incorrect facility-group membership.
 ---
 
-# Incorrect Facility Configurations
+# Troubleshoot facility configuration
 
-For orders to be routed correctly, the facilities need to be associated with the appropriate facility group. If the facilities are not correctly configured in the facility groups, orders might be routed to the wrong locations, causing delays and inefficiencies.
+Check facility groups when a routing rule skips an expected location or allocates an order to the wrong location.
 
-## Scenario: Facility not associated with Facility Group
+## Check the facility group
 
-### Resolution Steps
+1. Open the **Order Routing Rules** app.
+2. Confirm the Product Store shown in the app footer.
+3. Go to `Routing` > `Facility groups`.
+4. Search for the group used by the routing rule.
+5. Confirm that its type is `Brokering`.
+6. Click `Manage facilities`.
+7. Select eligible facilities and clear facilities that should not participate.
+8. Click the save icon.
 
-1. Navigate to the Facilities App.
-2. Navigate to the [Facility Groups page](/documents/system-admin/administration/facilities/manage-groups.md).
-3. Identify the facility group with the "Brokering\_Group" subtype.
-4. Click on the chip available against the facilities.
-5. From the submenu, click on "View Facilities" to verify the facilities or "Quick Edit" to add or remove any facility from the group.
+The facility count on the group card updates after the membership change is saved.
 
-<figure><img src="../../../.gitbook/assets/facility-group-search.png" alt=""><figcaption></figcaption></figure>
+## Check the routing rule
 
-### Resolution Steps
+1. Go to `Routing` > `Order Routing`.
+2. Open the routing group, then select the routing and routing rule.
+3. In `Filters`, review `Group` and any excluded group.
+4. Add or change the group filter when it points to the wrong facility group.
+5. Review other filters that can remove a facility, including `Proximity`, `Safety stock`, `Week of Supply`, and fulfillment capacity.
+6. Save the routing group's working copy.
 
-1. Navigate to the Order Routing App.
-2. Navigate to inventory rules by clicking on the brokering run and order batch for the orders you would like to broker.
-3. Click on the inventory rule you would like to configure.
-4. Click on "Filter", select "Facilities," and choose the correct facility group to which you would like to broker the order.
+If no facility-group filter is applied, the routing rule can consider every facility enabled for online fulfillment. Use a group filter when the rule should use a controlled set of locations.
 
-For more details on Order Routing, refer to our [user manual](/documents/retail-operations/orders/order-routing/README.md).
+See [Manage facility groups](../../../../system-admin/administration/facilities/manage-groups.md) and [Configure routing rules](../inventory-rules.md) for the full setup.
