@@ -52,6 +52,29 @@ The workspace highlights routings that match the order information available to 
 
 If the order does not qualify, review the routing status and order filters. If no inventory is found, review the routing rule's facility filters, sort options, and unavailable-item actions.
 
+## Test a warehouse-to-store fallback
+
+Use a controlled representative order with one item at quantity 1. Before the test, confirm that the warehouse group has no usable ATP for the item and an approved store has 12 ATP. Use a saved routing group where the first routing rule tries warehouses and sends unavailable items to `Next rule`, and the second rule tries stores with `Safety stock` set to 10.
+
+After you click `Broker Order`, check the observed result:
+
+* The expected routing is highlighted.
+* The warehouse rule does not allocate the item.
+* The store fallback rule is highlighted.
+* The allocated facility is the approved store.
+* The result shows the routing decision message, ATP, QOH, and item status.
+
+The observed routing result remains the source of truth. Other active filters or backend behavior can change the result. Test Drive shows inventory for the allocated facility after routing. It does not compare the pre-routing balances of both candidates, so confirm those values separately before the test.
+
+When the test is complete:
+
+1. Select `Reset order`.
+2. Confirm `Reset order` in the dialog.
+3. Wait for the control to disappear before you try another order or exit.
+4. Stop and record the existing diagnostic identifiers if reset fails.
+
+For the broader test-and-refine workflow, see [Test and refine a strategy](use-cases.md#test-and-refine-a-strategy).
+
 ## Reset the tested order
 
 1. Confirm that the displayed order and ship group are the ones you tested.

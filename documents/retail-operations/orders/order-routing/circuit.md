@@ -47,6 +47,23 @@ An edit proposal appears in the routing canvas as a live preview. The preview ch
 `Accept selected` does not save the routing group. It closes the proposal review and leaves the accepted changes in the working copy.
 {% endhint %}
 
+## Review a selective proposal
+
+Use a focused request when you want to keep only part of Circuit's proposal. For example, ask: `Use the West Coast Stores group and move unavailable items to the Review queue.` Replace the group and queue with labels available in your deployment.
+
+Circuit can ask for clarification or structure the proposal differently. If `Filters` and `Unavailable items` appear as separate reviewable sections:
+
+1. Keep `Filters` set to `Accept`.
+2. Change `Unavailable items` to `Discard`.
+3. Select `Accept selected`.
+4. Confirm that the visible working copy contains only the accepted store-group filter.
+
+`Accept selected` changes only the current working copy. It does not save it. For the live baseline, review the complete routing group, then click `Save` only when you are ready to write the accepted change. For a saved Simulation variation, select the variation before you send the prompt, then click `Update` instead of live `Save` after you accept the change.
+
+If Circuit does not return both sections, revise the prompt instead of assuming that an omitted change was applied. Do not change the selected source while a proposal is pending.
+
+For the broader test-and-refine workflow, see [Test and refine a strategy](use-cases.md#test-and-refine-a-strategy).
+
 ## Save or discard accepted changes
 
 After you accept a proposal for the live routing group:

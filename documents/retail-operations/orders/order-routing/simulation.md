@@ -55,6 +55,18 @@ Use the available result views to compare routing behavior:
 
 A failed variation can leave partial results for the sources that completed. Read the failure message before using a partial result to compare configurations.
 
+## Compare a safety-stock change
+
+Use this example to assess whether a higher store safety-stock threshold changes the routing outcome. Start with a saved baseline where a store routing rule has `Safety stock` set to 10. In the `Simulation` sheet, select `Baseline (live config)`, create a variation, and change the same rule's `Safety stock` value to 15.
+
+Use a representative snapshot that includes items with facility ATP close enough to the two thresholds to reveal a difference. Click `Update` to save the variation, run it, then compare the baseline and variation `Eligible`, `Brokered`, and `Queued` values in `Per-routing results`. Select the affected routing row to review facility assignments, queued orders, and per-order outcomes when that detail is available.
+
+Raising safety stock can make fewer facilities eligible for those items. That can reduce brokered items or leave more items queued. Check the result rather than expecting a fixed count: the snapshot, other filters, fallback rules, inventory, and service behavior can all affect it. No difference is also a valid result when the snapshot does not exercise the changed threshold.
+
+`Eligible` is a routing-entry count, not the number of facilities that passed the safety-stock filter. `Safety stock` is a pre-allocation facility threshold, not inventory guaranteed to remain after allocation.
+
+For the broader test-and-refine workflow, see [Test and refine a strategy](use-cases.md#test-and-refine-a-strategy).
+
 ## Reset or discard a variation
 
 Click `Reset` to leave the selected variation and return the editor to the baseline. This does not delete the saved variation.
