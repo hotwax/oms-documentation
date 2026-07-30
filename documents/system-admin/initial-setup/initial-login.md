@@ -1,18 +1,11 @@
 ---
-description: >-
-  After the instance is online, you'll be prompted to login. All instances are
-  deployed with a default user. For security reasons the default user is not
-  documented here.
+description: Find the current initial Maarg administrator setup guide.
 ---
 
-# Initial login
+# This setup guide has moved
 
-{% hint style="danger" %}
-```
-After subsequent users are created, this default user should be disabled.
-```
-{% endhint %}
+New instances do not use an undocumented default user as the onboarding account. Use the one-time initial administrator flow in the canonical guide:
 
-Because it's your first time login, you'll be prompted to reset your password.
+[Set up HotWax Commerce with Shopify](../administration/company/product-store-onboarding.md)
 
-After setting up an instance, its a good idea to check that all menus in the Sidebar and EXIM screen have loaded in correctly.
+The guide covers claiming the initial named Maarg administrator, creating a recovery administrator, testing both logins, and then verifying application readiness.

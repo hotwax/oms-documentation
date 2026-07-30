@@ -18,7 +18,9 @@ Below is a list of all the actions available in the Job Manager App, along with 
 
 <figure><img src="../../.gitbook/assets/pipeline.png" alt=""><figcaption></figcaption></figure>
 
-## Initial Load Page
+## Legacy Initial Load Page
+
+This page may remain visible on an existing tenant. Its bulk product and order actions are not the current Shopify onboarding path; use [Set up HotWax Commerce with Shopify](../company/product-store-onboarding.md) for a new standard launch. The entries below document permissions only for a confirmed legacy or advanced workflow.
 
 | Serial No. | Action                  | Permission    | Description                                                                                                                                |
 | ---------- | ----------------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -120,7 +122,7 @@ Below is a list of all the actions available in the Job Manager App, along with 
 
 ## Setting Page
 
-| Serial No. | Action        | Permission    | Description                                                                                 |
-| ---------- | ------------- | ------------- | ------------------------------------------------------------------------------------------- |
-| 1          | Go To OMS     | COMMERCEUSER_VIEW | Allows users to access OMS directly from the Job Manager App |
-| 2          | View Job Manager App     | JOB_MANAGER_APP_VIEW | Allows users to view Job Manager App |
+| Serial No. | Action               | Permission           | Description                                                    |
+| ---------- | -------------------- | -------------------- | -------------------------------------------------------------- |
+| 1          | Go To OMS            | COMMERCEUSER_VIEW    | Allows users to access OMS directly from the Job Manager App.  |
+| 2          | View Job Manager App | JOB_MANAGER_APP_VIEW | Allows users to view the Job Manager App.                      |

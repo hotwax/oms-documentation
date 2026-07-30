@@ -6,7 +6,7 @@ description: Monitor and operate Shopify product sync in the Company App.
 
 Use the `Product sync` dashboard in the Company App to monitor scheduled imports, review the current pipeline, run targeted sync requests, and troubleshoot failed products.
 
-This guide covers day-to-day product sync operations after setup. To connect a new shop, use [Set up Shopify product sync](set-up-shopify-product-sync.md). To move a shop from the legacy pipeline, use [Upgrade Shopify product sync](upgrade-shopify-product-sync.md).
+This guide covers day-to-day product sync operations after setup. To connect a new shop, use [Chapter 6 of Set up HotWax Commerce with Shopify](product-store-onboarding.md#6-import-and-validate-products). To move a shop from the legacy pipeline, use [Upgrade Shopify product sync](upgrade-shopify-product-sync.md).
 
 ## Open the product sync dashboard
 
@@ -15,7 +15,7 @@ This guide covers day-to-day product sync operations after setup. To connect a n
 3. Select the Shopify connection that you want to monitor.
 4. Select the active `Product sync` card.
 
-The card summarizes records processed in the last completed import, unsynced Shopify events, and the latest pipeline status. If the connection shows `Setup new product sync`, complete the [first-time setup](set-up-shopify-product-sync.md). If it shows `Upgrade to new product sync` or `Disable old product sync`, follow the [legacy upgrade guide](upgrade-shopify-product-sync.md).
+The card summarizes records processed in the last completed import, unsynced Shopify events, and the latest pipeline status. If the connection shows `Setup new product sync`, complete the [first product import in Chapter 6](product-store-onboarding.md#6-import-and-validate-products). If it shows `Upgrade to new product sync` or `Disable old product sync`, follow the [legacy upgrade guide](upgrade-shopify-product-sync.md).
 
 <figure><img src="../../.gitbook/assets/shopify-product-sync-entry.jpg" alt="Product sync card on the Shopify connection details page"><figcaption><p>Product sync status on the Shopify connection details page</p></figcaption></figure>
 

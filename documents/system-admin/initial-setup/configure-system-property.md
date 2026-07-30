@@ -1,26 +1,11 @@
-# Configure System Properties
+---
+description: Find the current Shopify onboarding and instance-default setup guide.
+---
 
-{% hint style="info" %}
-For non-US retailers, it is crucial to customize system property data. The default settings are tailored for US retailers, so adjustments are needed to align with your business location.
-{% endhint %}
+# This setup guide has moved
 
-The System Property data encompasses a range of configurations that influence the fundamental settings governing how your instance operates. Ensuring accuracy in these configurations is essential.
+The legacy **Settings → General** workflow is no longer a separate onboarding path. The canonical guide places the required global defaults in Maarg Admin beside the Company App values they must match:
 
-To modify System Properties, navigate to the General page within the Settings section of the OMS. Follow these steps:
+[Set up HotWax Commerce with Shopify](../administration/company/product-store-onboarding.md)
 
-1. **Access General Settings:**
-   - Go to the Hamburger Menu.
-   - Select the Settings Section.
-   - Click on General to open the General settings page.
-
-2. **Update Currency Configuration:**
-   - Locate `systemPropertyId="currency.uom.id.default"`.
-   - Set the `systemPropertyValue` to your preferred currency.
-
-3. **Update Country Configuration:**
-   - Find `systemPropertyId="country.geo.id.default"`.
-   - Set the `systemPropertyValue` to the country where your business operates.
-
-4. **Set Shipment Weight Unit:**
-   - Find `systemPropertyId="shipment.default.weight.uom"`.
-   - Set the `systemPropertyValue` to either "WT_kg" or "WT_lb," depending on your preference.
+Use Chapter 3 to set and verify the default currency, primary country, shipment weight unit, Product Store settings, and operating countries as one completion gate.

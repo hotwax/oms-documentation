@@ -8,7 +8,6 @@
   * [Job Details](workflow/job-management/job-details.md)
   * [Job Categories](workflow/job-management/job-categories.md)
   * [Job Queueing](workflow/job-management/job-queueing.md)
-  * [Initial Load](workflow/job-management/initial-load.md)
   * [Bulk Scheduling](workflow/job-management/bulk-scheduling.md)
   * [Troubleshooting](workflow/job-management/troubleshooting/README.md)
     * [Job Stuck](workflow/job-management/troubleshooting/job-stuck.md)

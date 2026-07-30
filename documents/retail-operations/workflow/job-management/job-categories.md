@@ -10,14 +10,11 @@ description: >-
 
 <details>
 
-<summary>Initial load</summary>
+<summary>Initial load (legacy)</summary>
 
-Displays the jobs for initial OMS setup to import all products and orders.​
+This category may remain visible on an existing tenant, but its bulk product and order jobs are not the current Shopify onboarding procedure. Do not use it to configure a new standard launch.
 
-**This page contains jobs such as:**
-
-1. **Import Products in Bulk:** Import all products from Shopify. Make sure you run this before importing orders in bulk during initial setup.
-2. **Import Orders in Bulk:** Before importing historical orders in bulk, make sure all products are set up or else order import will not run correctly.
+[Set up HotWax Commerce with Shopify](../../../system-admin/administration/company/product-store-onboarding.md)
 
 </details>
 
@@ -90,12 +87,11 @@ Holds all inventory jobs.
 
 <summary>Products</summary>
 
-Holds all product jobs.
+Holds product-related operational jobs.
 
-**This page contains jobs such as:**
+Current Shopify product onboarding and recurring synchronization use Product Sync in the Company App. Job names visible on older or specialized tenants are release-specific and are not a substitute for the Product Sync procedure.
 
-1. **Sync:** Sync products and category structures from Shopify into HotWax Commerce and keep them up to date.
-2. **Import**: `Import new products` job imports newly created products from Shopify.
+[Monitor Shopify product sync](../../../system-admin/administration/company/manage-shopify-product-sync.md)
 
 </details>
 

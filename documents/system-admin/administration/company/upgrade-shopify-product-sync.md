@@ -31,4 +31,4 @@ When 50 or more unfinished messages appear, avoid canceling them in bulk from th
 1. Configure the per-shop sync job when the assistant shows `Configure`.
 2. Enable any paused shared jobs.
 3. Select `Go to new product sync setup`.
-4. Complete [the first-time product sync setup](set-up-shopify-product-sync.md).
+4. Complete the setup action opened by the upgrade assistant, then verify the active flow in [Monitor Shopify product sync](manage-shopify-product-sync.md). This migration is an advanced path; do not use the single-shop onboarding guide as the migration procedure.

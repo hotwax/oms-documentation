@@ -62,13 +62,6 @@
     * [Data Not Imported](administration/data-manager/troubleshooting/data-not-imported.md)
     * [SFTP Errors](administration/data-manager/troubleshooting/data-import-errors.md)
 
-## Initial Setup
-
-* [Add DBIC](initial-setup/README.md)
-* [Load Facilities](initial-setup/load-facilities.md)
-* [SFTP Configuration](initial-setup/configure-sftp.md)
-* [Configure System Property Data](initial-setup/configure-system-property.md)
-
 ## Inventory
 
 * [Multichannel Inventory Setup](inventory/README.md)

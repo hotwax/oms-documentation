@@ -28,7 +28,7 @@ The launch owner collects and approves these inputs before anyone configures the
 - Instance host name; named initial administrator; administrator email; and approved password-vault location.
 - Shopify shop domain and named Shopify administrator.
 - Confirmation of level-2 protected-customer-data access for the Shopify app.
-- Product-store name, stable identifier, currency, locale, time zone, order prefix, and order approval and billing defaults.
+- Product-store name, stable identifier, currency, locale, time zone, primary operating country, all approved operating countries, shipment weight unit, order prefix, and order approval and billing defaults.
 - Product identity policy, including governed SKU and barcode rules.
 - Each Shopify location and its intended physical HotWax facility.
 - Agreed order-history start date, launch cutoff timestamp, merchant time zone, and deployed instance or JVM time zone.
@@ -45,7 +45,7 @@ The launch owner keeps this table current. An individual may hold more than one 
 | --- | --- | --- | --- | --- |
 | 1. Initial Maarg administrator | Maarg platform administrator | Not started | — | — |
 | 2. Instance readiness | HotWax integration operator | Not started | — | — |
-| 3. Company and product store | Company application administrator | Not started | — | — |
+| 3. Company and product store | Maarg platform administrator and Company application administrator | Not started | — | — |
 | 4. Shopify connection | Shopify administrator | Not started | — | — |
 | 5. Shopify mappings | Company application administrator | Not started | — | — |
 | 6. Product import | Company application administrator | Not started | — | — |
@@ -131,32 +131,33 @@ Continue when the launch administrator can use the required applications and all
 
 ## 3. Create the company and Product Store
 
-**Owner:** Company application administrator
+**Owner:** Maarg platform administrator and Company application administrator
 
-**Application:** Company App
+**Application:** Maarg Admin and Company App
 
 ### Before you begin
 
-Have the approved product-store name, stable identifier, currency, locale, time zone, order prefix, and order approval and billing defaults.
+Have the approved product-store name, stable identifier, currency, locale, time zone, primary operating country, all approved operating countries, shipment weight unit, order prefix, and order approval and billing defaults.
 
 ### Steps
 
-1. In Company App, open `/product-store` and select **Create product store** to open `/create-product-store`.
-2. Enter **Company name** when this is the first Product Store, then enter **Name**, **ID**, and **Currency**. Select **Manage configurations**. The page must display `Product store created successfully.` before it opens `/product-store-onboarding/<product-store-id>`.
-3. In the **Configurations** screen, select **Configure manually** and set **Product Identifier**, **Auto approve orders**, and **Sales order ID prefix**. Select **Setup product store**.
-4. Open `/product-store-details/<product-store-id>` and set the approved locale, time zone, order approval and billing defaults. Re-open the details page and verify every saved value before using the Product Store in a connection.
+1. In **Maarg Admin → Applications → System → Tools → Entity → Entities**, open `org.apache.ofbiz.common.property.SystemProperty`. The direct find path is `/qapps/system/Tools/Entity/DataEdit/EntityDataFind?selectedEntity=org.apache.ofbiz.common.property.SystemProperty`. Verify `general` / `currency.uom.id.default` matches the approved single-store currency, `general` / `country.geo.id.default` matches the primary operating-country Geo ID, and `shipment` / `shipment.default.weight.uom` is the approved `WT_kg` or `WT_lb`. Update only an approved value, then reopen each record and verify it.
+2. In Company App, open `/product-store` and select **Create product store** to open `/create-product-store`.
+3. Enter **Company name** when this is the first Product Store, then enter **Name**, **ID**, and **Currency**. When **Operating countries** appears, select **Add**, choose every approved country, save the selection, and verify the selected country chips before continuing. Select **Manage configurations**. The page must display `Product store created successfully.` before it opens `/product-store-onboarding/<product-store-id>`. Then open `moqui.basic.GeoAssoc` in **Maarg Admin → Applications → System → Tools → Entity → Entities**, filter for `toGeoId=DBIC` and `geoAssocTypeEnumId=GROUP_MEMBER`, and verify one saved `geoId` association for every approved operating country.
+4. In the **Configurations** screen, select **Configure manually** and set **Product Identifier**, **Auto approve orders**, and **Sales order ID prefix**. Select **Setup product store**.
+5. Open `/product-store-details/<product-store-id>` and set the approved locale, time zone, order approval and billing defaults. Re-open the details page and verify every saved value before using the Product Store in a connection.
 
 ### Expected result
 
-An active Product Store can be selected by the Shopify connection and later associated with facilities and users.
+The approved global defaults and operating countries are saved, and an active Product Store can be selected by the Shopify connection and later associated with facilities and users.
 
 ### Evidence to save
 
-Save the company and Product Store identifiers, configured defaults, selected time zone, and an active-state screen.
+Save the three verified System Property keys and values, selected operating-country Geo IDs, company and Product Store identifiers, configured defaults, selected time zone, and an active-state screen.
 
 ### Stop and resolve if
 
-Stop if the identifier, currency, locale, time zone, or order defaults are undecided. Do not change the Product Store identifier after integrations or transactions exist; treat it as a governed launch decision.
+Stop if the identifier, currency, primary or approved operating countries, shipment weight unit, locale, time zone, or order defaults are undecided. Also stop if a global default disagrees with the one-store launch profile or an approved operating country is absent after creation. Do not change the Product Store identifier after integrations or transactions exist; treat it as a governed launch decision.
 
 ### Next chapter
 
@@ -396,7 +397,7 @@ Have the selected shop identifier and domain, environment, AWS account and regio
    - **❌ No historic sync jobs found matching `sync_ShopifyOrderHistory`:** select **Clone Standard Job**, enter the approved **New Job Name**, select **Clone Job**, then re-open the cloned row and follow the applicable incomplete or configured branch.
 
 7. Complete the HotWax-owned infrastructure handoff. Its evidence must show that the EventBridge rule matches both `orders/create` / `ORDERS_CREATE` and `orders/updated` / `ORDERS_UPDATED`, and must include the SQS queue URL and ARN, dead-letter queue ARN, redrive policy, queue policy, resource policy, a successful AWS test-event identifier for each topic, target-queue delivery, consumer-read evidence, failed-test dead-letter evidence, and policy comparison to the approved environment.
-8. Do not infer a Maarg service-job run, system message, or Data Manager load from the infrastructure test event: this screen does not provide a source-proven action that causally creates those records. Runtime proof for the included profile is deferred to the controlled real Shopify order in Chapter 13, where the order, job run, system message, and Data Manager record are tied together.
+8. Do not infer a Maarg service-job run or Data Manager load from the infrastructure test event: this screen does not provide a source-proven action that causally creates those records. Runtime proof for the included realtime profile is deferred to the controlled real Shopify order in Chapter 13, where the SQS consumer job run, Data Manager `logId`, `createdByJobRunId`, `configId`, terminal result, and OMS order are tied together. Realtime SQS import does not create a System Message.
 
 ### Expected result
 
@@ -404,7 +405,7 @@ Included-profile MDM, remote, queue, consumer, property, webhook, fallback, and 
 
 ### Evidence to save
 
-Save the included-profile section states and identifiers, queue URL and ARN, dead-letter ARN, policy references, both EventBridge topic patterns and test-event identifiers, target-queue deliveries, consumer-read results, failed-test dead-letter result, separate `ORDERS_CREATE` and `ORDERS_UPDATED` webhook-list rows, and property values. For every incomplete fallback or history job, save the Service Job detail's pre-save hidden values or governed approval, then the re-opened **Edit** values and `✅ Active` status after **Update Job**. Save runtime job, system-message, and Data Manager evidence only with the controlled Shopify order in Chapter 13.
+Save the included-profile section states and identifiers, queue URL and ARN, dead-letter ARN, policy references, both EventBridge topic patterns and test-event identifiers, target-queue deliveries, consumer-read results, failed-test dead-letter result, separate `ORDERS_CREATE` and `ORDERS_UPDATED` webhook-list rows, and property values. For every incomplete fallback or history job, save the Service Job detail's pre-save hidden values or governed approval, then the re-opened **Edit** values and `✅ Active` status after **Update Job**. Save realtime runtime job-run and Data Manager evidence only with the controlled Shopify order in Chapter 13; save System Message evidence only for a flow that actually creates one.
 
 ### Stop and resolve if
 
@@ -545,12 +546,12 @@ Confirm that Chapters 1 through 12 are complete, a standard shippable test produ
 
 1. Place one controlled real Shopify order using a standard shippable product and record the Shopify order identifier.
 2. Verify the expected payment and shipping values in Shopify.
-3. Prove that the webhook or fallback flow imports the order exactly once.
+3. Prove that the realtime path imports the order exactly once: Shopify event, SQS delivery, `consume_ShopifyOrders_SQS` consumer job run, Data Manager `logId` tied by `createdByJobRunId`, `SYNC_SHOPIFY_ORDER` configuration and terminal result, then the matching OMS order. Realtime SQS import does not create a System Message. Do not use the fallback batch to pass the realtime gate.
 4. Verify product, channel, payment, shipping, and location mappings resolve; the order reaches the intended HotWax state; and routing assigns an eligible facility.
 5. Have the facility process fulfillment and confirm fulfillment and tracking publish back to Shopify.
 6. Verify inventory changes follow the approved post-cutover HotWax-to-Shopify direction.
 7. Verify no duplicate order, fulfillment, or inventory message was produced.
-8. Review and save the job-run, system-message, Data Manager, and application-screen evidence for every preceding result.
+8. Review and save the path-appropriate job-run, Data Manager, and application-screen evidence for every preceding result. Include System Message evidence for the earlier history and fallback checks, not for realtime SQS import.
 9. Record sign-off, release versions, test order identifier, evidence links, known exceptions, and rollback ownership.
 
 ### Expected result
@@ -559,7 +560,7 @@ One controlled order proves import, mapping, routing, facility assignment, fulfi
 
 ### Evidence to save
 
-Save the Shopify order identifier and states, HotWax order identifier and state, mapping and facility evidence, fulfillment and tracking confirmation, inventory evidence, job runs, system messages, Data Manager loads, release versions, sign-off, exceptions, and rollback owner.
+Save the Shopify order identifier and states, HotWax order identifier and state, mapping and facility evidence, fulfillment and tracking confirmation, inventory evidence, the realtime consumer job run and tied Data Manager log, earlier history and fallback System Messages, release versions, sign-off, exceptions, and rollback owner.
 
 ### Stop and resolve if
 

@@ -15,10 +15,10 @@ First identify which order-import flow should have processed the order. See [Sho
    - **Fallback:** an eligible update expected in a scheduled `queue_ShopifyOrderSync` batch.
 3. Trace the selected flow from its first stage:
    - For history, check the exact window bounds, history job run, `BulkOrderHistoryQuery` `systemMessageId`, and terminal `BULK_ORDER_HISTORY` result.
-   - For realtime, check the event, queue delivery, consumer read, system message, import, and Data Manager result.
+   - For realtime, check the event, SQS delivery, `consume_ShopifyOrders_SQS` consumer job run, Data Manager `logId`, `createdByJobRunId`, `configId`, terminal result, and the matching OMS order. Realtime SQS import does not create a System Message.
    - For fallback, check the shop-specific job's **Active** state, schedule, queued system message, job run, import, and Data Manager result.
 4. Retry only the failed flow. If a history window failed after its cursor advanced, reset the cursor to that failed window before retrying. Use **Run now** for fallback only with a controlled batch.
-5. If the earliest missing stage cannot be recovered, send support the Shopify order ID, shop ID, timestamps, flow, job-run and system-message identifiers, and terminal error. Do not send customer or payment data.
+5. If the earliest missing stage cannot be recovered, send support the Shopify order ID, shop ID, timestamps, selected flow, job-run identifier, Data Manager `logId` and terminal error, plus a System Message identifier only for a history or fallback flow that creates one. Do not send customer or payment data.
 
 For initial history setup or launch recovery, return to [Set up HotWax Commerce with Shopify](../../../system-admin/administration/company/product-store-onboarding.md). For fallback scheduling and recovery, use [Manage Shopify Order Sync](../../../system-admin/administration/company/manage-shopify-order-sync.md).
 

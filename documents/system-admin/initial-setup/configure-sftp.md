@@ -1,41 +1,11 @@
 ---
-description: >-
-  Learn about configuring the SFTP (Secure File Transfer Protocol) settings for
-  smooth and secure data exchange within your system.
+description: Find the current Shopify onboarding or NetSuite SFTP guide.
 ---
 
-# Configure SFTP data
+# This setup guide has moved
 
-Configuring SFTP (Secure File Transfer Protocol) settings is a critical step in ensuring the smooth and secure exchange of data within your system. The importance of each configuration is outlined below:
+SFTP is not part of the standard Shopify-only launch. Do not add the legacy global FTP properties to a Shopify launch.
 
-{% hint style="warning" %}
-Before uploading data, ensure all relevant variables are included.
-{% endhint %}
+[Set up HotWax Commerce with Shopify](../administration/company/product-store-onboarding.md)
 
-**Access FTP Connection Settings:**
-
-Locate the following configuration key and input the value:
-
-| Configuration Line                       | Value                        |
-| ---------------------------------------- | ---------------------------- |
-| `systemPropertyId="ftp.server.hostname"` | {hostname\_without\_sftp://} |
-| `systemPropertyId="ftp.server.username"` | {username}                   |
-| `systemPropertyId="ftp.server.password"` | {password}                   |
-| `systemPropertyId="ftp.server.port"`     | {port}                       |
-
-***
-
-**Netsuite-specific Configuration:**
-
-{% hint style="info" %}
-This is essential only when utilizing Netsuite as an ERP; otherwise, it can be omitted.
-{% endhint %}
-
-Locate the following configuration key and input the value:
-
-| Configuration Line                          | Value                |
-| ------------------------------------------- | -------------------- |
-| `systemPropertyId="ftp.server.archive.dir"` | archive/             |
-| `systemPropertyId="instance.downloadDir"`   | runtime/datamanager/ |
-
-By following these steps, you can ensure that your system properties are configured appropriately for your business location, and the SFTP settings are accurately defined for seamless data transfer.
+For an existing NetSuite integration, use [Manage NetSuite settings](../administration/company/configure-netsuite-setting.md). NetSuite implementation belongs in its separate partner guide.
