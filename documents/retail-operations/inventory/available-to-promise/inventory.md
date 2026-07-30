@@ -77,9 +77,9 @@ Use `Inventory push history` to inspect each push run, including its status, tim
 
 In `Location` scope, `Inventory Detail` includes location inventory history. Use `Search by order name or ID` and movement-type filters to narrow the list. Select `All time`, 7-day, 30-day, 90-day, or custom date ranges. The page shows 20 rows at a time.
 
-Each history row shows ATP and QOH changes. Expand a row to review before and after balances and the available source details. Where available, use the link in the expanded row to open the record in its owning application.
+Each history row shows ATP and QOH changes. Expand a row to review the available business-impact and source details. Where available, use the link in the expanded row to open the record in its owning application.
 
-Some history, facility inventory, reconciliation, Shopify reads, or job history may be unavailable from an older OMS instance. In these cases, the page displays the unavailable state instead of an inferred value.
+On older OMS instances, facility inventory, reconciliation, Shopify reads, or job history can be unavailable, and the page displays an unavailable state for those areas. Location history has no separate unavailable state. If the history read fails, the page can show `No inventory logs found`, which is indistinguishable from a location with no returned history.
 
 ## Investigate an unexpected value
 
