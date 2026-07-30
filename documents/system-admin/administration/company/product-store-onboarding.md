@@ -21,19 +21,6 @@ Continue only when all of the following are true:
 
 Stop and contact HotWax Commerce for an advanced launch plan if you need an ERP integration, multiple Shopify shops, a migration, pickup, preorders, backorders with advanced inventory rules, returns integrations, Loop, kits, gift cards, SFTP or file-based integrations, custom product or order flows, or `read_all_orders` access for older orders. Do not mix those variants into this launch.
 
-The source baselines below are factual source-current references, not proof that the same behavior is deployed for a customer. **Publication is blocked** until a clean-instance walkthrough records the deployed versions and date on the minimum supported stack. That walkthrough is a HotWax documentation-release responsibility, not a customer launch step.
-
-| Component | Source baseline | Source release |
-| --- | --- | --- |
-| Maarg Admin | `e82d58df108a8b4ad539bf0c4a1d87b95fbd58e9` | First-admin behavior verified at this baseline |
-| Company App | `978c95c9b8457e20806ae70b7c1d34e3e80efce3` | `2.1.0` |
-| Shopify embedded app | `f7f61054d62ccc5af8638af857514c9ebf70a126` | `2.2.0` |
-| HotWax Keychain | `8cacf55c9f74be146626675e5b07ca75bebb4077` | `4.0.2` |
-| Shopify OMS bridge | `695e4f6e42ea25d5ef94154ec15fd837b73d2851` | `2.5.0` |
-| Mantle Shopify connector | `1b514e6394499c0d648e2724f999e86f7cdd2d5d` | `3.5.0` |
-| HotWax Poorti | `v3.0.0-RC1` | `v3.0.0-RC1` |
-| Clean-instance walkthrough | No deployed walkthrough evidence supplied | Publication blocker |
-
 ## Before you begin
 
 The launch owner collects and approves these inputs before anyone configures the instance:
@@ -48,7 +35,7 @@ The launch owner collects and approves these inputs before anyone configures the
 - Written confirmation that Shopify quantity on hand is the approved initial inventory source.
 - Launch owner, HotWax integration operator, Keychain approver, platform administrator, Company application administrator, and operations validator.
 
-Never put access tokens, passwords, private keys, customer data, or private endpoints in a ticket, screenshot, or this guide.
+Store access tokens, passwords, and private keys in the approved password vault. Redact credentials, customer data, and private endpoints from tickets and screenshots.
 
 ## Track launch progress
 
@@ -116,11 +103,11 @@ Continue to the instance readiness gate only after both administrator logins and
 
 ### Before you begin
 
-Have the deployed release versions, the claimed administrator, the approved application-access package, and confirmation of Shopify's level-2 protected-customer-data approval.
+Have confirmation that the deployed HotWax applications are supported for this launch, the claimed administrator, the approved application-access package, and confirmation of Shopify's level-2 protected-customer-data approval.
 
 ### Steps
 
-1. Record the deployed Maarg, Company App, Shopify embedded app, HotWax Keychain, Shopify OMS bridge, Mantle Shopify connector, and Poorti versions against the tested release stack table.
+1. Confirm with HotWax Commerce that the deployed Maarg, Company App, Shopify embedded app, HotWax Keychain, Shopify OMS bridge, Mantle Shopify connector, and Poorti versions are supported for this launch.
 2. Verify required seed and base data, healthy search services, present Shopify integration components, and that no demonstration or temporary administrator remains active.
 3. Apply the supported HotWax application-access package and verify that the named launch administrator can open every application used by the remaining chapters.
 4. Confirm level-2 protected-customer-data approval for the Shopify app and that the agreed history does not require orders created more than sixty days ago.
@@ -128,11 +115,11 @@ Have the deployed release versions, the claimed administrator, the approved appl
 
 ### Expected result
 
-The minimum supported stack and application access are proven, and the launch profile passes the access and history-scope gates.
+The deployed applications and required access are ready, and the launch profile passes the access and order-history gates.
 
 ### Evidence to save
 
-Save deployed versions, health-check results, application access test results, package reference, protected-data approval confirmation, and the history-window decision.
+Save the supported-release confirmation, health-check results, application access test results, package reference, protected-data approval confirmation, and the history-window decision.
 
 ### Stop and resolve if
 
@@ -204,9 +191,9 @@ Have the approved Shopify app URL, shop domain, named Shopify administrator, val
      * [ ] Merchant-managed fulfillment-order read: `read_merchant_managed_fulfillment_orders`
      * [ ] Merchant-managed fulfillment and tracking publication: `write_merchant_managed_fulfillment_orders`
    * Shopify write scopes include the corresponding read capability. Record whether `read_inventory` and `read_merchant_managed_fulfillment_orders` are explicit handles or are covered by their paired write handles; do not add duplicate read handles only to make the displayed list match.
-   * **Deployed-release and runtime comparison:** the HotWax release owner records the deployed embedded-app and Keychain versions, exports the active app-level required-scope rows plus any shop-level custom-scope rows, and attaches results from a clean-instance product, location, inventory, order, fulfillment, and tracking walkthrough. Compare that exact requested set with the live handles returned by **Refresh scopes** and record every difference and its disposition. The current launch exercises these capabilities in the later setup chapters and the final validation chapter.
+   * **Verify the granted scopes:** compare the refreshed handles with the required capabilities above and record how each capability is granted. Resolve every missing or unexpected scope with HotWax Commerce before continuing. The later setup chapters and final validation confirm that the approved capabilities work.
    * **Not required by this simple profile:** `read_all_orders`; `write_orders` and `write_products` for pickup or preorder extensions; `read_fulfillments` and `write_fulfillments`; `read_assigned_fulfillment_orders` and `write_assigned_fulfillment_orders`; `read_third_party_fulfillment_orders` and `write_third_party_fulfillment_orders`; `read_channels`; `read_files` and `write_files`; `read_draft_orders` and `write_draft_orders`; `read_gift_cards` and `write_gift_cards`; and `read_returns` and `write_returns`. If the deployed manifest requests one of these or another additional handle, stop and have the HotWax release owner classify and approve it for the launch profile. Do not silently grant it or remove it from Keychain.
-   * **Current order-query compatibility:** the current `OrderUnifiedMegaQuery` unconditionally selects `ReturnAgreement.return` and `Order.returns`, and Shopify requires `read_returns` to select Return objects. Returns remain outside this simple profile, so do not silently add `read_returns`. This is a HotWax-owned launch and publication stop until the released query is profile-aware and omits those fields, or a clean-instance release artifact proves the standard order import succeeds without `read_returns` and the runtime requested and granted manifests are reconciled. If the deployed query requires `read_returns`, stop and move the launch to an approved advanced profile.
+   * **Order-import compatibility:** have HotWax Commerce confirm that the deployed order import supports this standard scope profile without `read_returns`. Do not add `read_returns` unless returns are included in an approved advanced launch profile.
 8. In **Maarg Admin → Shopify → Shopify Shops → the connected shop → Shop Remotes**, open the selected remote. The current detail path is `/qapps/Oms/Shopify/ShopifyShops/ShopifyShopDetail?shopId=<shop-id>`. Verify its **Access Scope** is `SHOP_RW_ACCESS`.
 9. If the selected remote is blank, `SHOP_NO_ACCESS`, or `SHOP_READ_WRITE_ACCESS`, a HotWax integration operator edits that selected remote in **Shop Remotes**, sets it to `SHOP_RW_ACCESS`, saves, and rechecks the connection.
 10. In **Company App → Shopify → open the connection → Products and Inventory → Product Sync**, verify the **Shopify API access** row displays **Write access**.
@@ -214,19 +201,19 @@ Have the approved Shopify app URL, shop domain, named Shopify administrator, val
 
 ### Expected result
 
-The approved Shopify shop is connected to exactly one Product Store, every simple-profile API capability is available, the live OAuth handles are reconciled to the deployed Keychain scope manifest, the selected remote has `SHOP_RW_ACCESS`, and Company Product Sync reports **Write access**.
+The approved Shopify shop is connected to exactly one Product Store, every simple-profile API capability is available, the live OAuth handles match the approved scope profile, the selected remote has `SHOP_RW_ACCESS`, and Company Product Sync reports **Write access**.
 
 ### Evidence to save
 
-Save the token subject, purpose, expiry, and vault record; connection request identifier and acceptance; shop and Product Store identifiers; deployed embedded-app and Keychain versions; exported app and shop scope rows; clean-instance release-validation artifact; returned OAuth handles and comparison disposition; selected remote identifier and access scope; and the positive Product Sync access state.
+Save the token subject, purpose, expiry, and vault record; connection request identifier and acceptance; shop and Product Store identifiers; returned OAuth handles and scope approval; order-import compatibility confirmation; selected remote identifier and access scope; and the positive Product Sync access state.
 
 ### Stop and resolve if
 
-Stop if the launch requires a separate integration subject: the current Maarg screen cannot issue a token for it, and entering another username returns `You are not allowed to generate tokens for other users.` This is a HotWax-owned stop gate until a tested supported issuance flow is available. A signed-in named administrator may issue only that administrator's self-token when policy permits. Also stop if the request remains pending or is rejected; protected-data approval or a required API capability is missing; the deployed requested-scope rows and live granted handles have not been captured and reconciled; the clean-instance release-validation artifact is missing; the current order-query compatibility gate is unresolved; an unexpected advanced handle is unresolved; the remote cannot be corrected; or Product Sync shows **Update required**, **Read only**, or **Unavailable**. Do not proceed to an order chapter when the released query still requires `read_returns` for this simple profile. The Company token-generation action calls a missing Maarg route; do not use it as the approved issuance path. A Keychain payload can omit `accessScope`, so refreshing OAuth scopes alone does not correct the remote capability.
+Stop if the launch requires a separate integration subject: the current Maarg screen cannot issue a token for it, and entering another username returns `You are not allowed to generate tokens for other users.` A signed-in named administrator may issue only that administrator's self-token when policy permits. Also stop if the request remains pending or is rejected; protected-data approval or a required API capability is missing; the refreshed handles do not match the approved scope profile; order-import compatibility is unconfirmed; an unexpected advanced handle is unresolved; the remote cannot be corrected; or Product Sync shows **Update required**, **Read only**, or **Unavailable**. Do not proceed to an order chapter when the deployed import requires `read_returns` for this standard profile. The Company token-generation action calls a missing Maarg route; do not use it as the approved issuance path. A Keychain payload can omit `accessScope`, so refreshing OAuth scopes alone does not correct the remote capability.
 
 ### Next chapter
 
-Continue only after all four gates—OMS token, Shopify installation, Keychain approval, and Company verification—are positive and the current order-query compatibility evidence is approved.
+Continue only after all four gates—OMS token, Shopify installation, Keychain approval, and Company verification—are positive and order-import compatibility is confirmed.
 
 ## 5. Review Shopify mappings
 
@@ -383,14 +370,17 @@ Continue to order infrastructure only after inventory seeding is reconciled and 
 
 ### Before you begin
 
-Have the selected shop identifier and domain, environment, AWS account and region, approved queue naming, launch date, stored AWS credentials, approved queue policies, and the Chapter 4 release evidence that resolves the current `OrderUnifiedMegaQuery` Return-scope dependency for this simple profile.
+Have the selected shop identifier and domain, environment, AWS account and region, approved queue naming, launch date, stored AWS credentials, approved queue policies, and the Chapter 4 order-import compatibility confirmation.
 
 ### Steps
 
 1. Open **Maarg Admin → Shopify → Shopify Order Integration Setup** at `/qapps/Oms/Shopify/ShopifyOrderIntegrationSetup?shopId=<shop-id>`. In **Select Shopify Store**, choose the selected shop and select **Refresh / View Health Status**. Treat the `✅ Integration Stack Fully Configured` or `⚠️ Integration Setup Incomplete` banner only as a configuration summary; it is not a runtime gate. Return channels, return-application modeling, and gift-card mapping are excluded from this launch and do not block it.
 2. Save included-profile section evidence: **MDM Bridge Configuration** must show **MDM Framework Status** `✅ Valid`; **Data Manager Configs** must include configured `SYNC_SHOPIFY_ORDER` and `BULK_ORDER_HISTORY` services; **Global AWS/SQS Configuration** must show `✅ Connected` for the selected queue; and `consume_ShopifyOrders_SQS` must show `✅ Active` with the approved **Queue Name**, **Remote ID**, and **Expire Lock Minutes**. Correct only the selected required section using its visible action, such as **Fix MDM Data** then **Load XML**, **Load Configurations Template** then **Load Configs**, **Edit Service** then **Update Config**, or consumer **Update**.
 3. In **Order Sync System Properties**, verify `newOrderSync.launchDate` and `orderSyncHistory.lastSyncDate`. Use **Edit**, enter the approved **Value**, and select **Update Property**; use **Set to Now** only when the approved launch cutoff is now.
-4. In **Webhooks Management**, select **Subscribe ORDERS_UPDATED**, verify **EndPoint / ARN**, select **Register**, then refresh and confirm the webhook-list row has topic `ORDERS_UPDATED` and the intended endpoint. `Webhook creation triggered.` is not registration evidence. Use **Subscribe New Webhook** only for an approved required topic, entering **Topic** and **EndPoint / ARN** before **Register**.
+4. In **Webhooks Management**, register both realtime order topics:
+   - For new orders, select **Subscribe New Webhook**, enter `ORDERS_CREATE` in **Topic**, verify **EndPoint / ARN**, and select **Register**. This topic provides the dedicated new-order signal during high-volume order creation instead of relying on order updates alone.
+   - For order changes, select **Subscribe ORDERS_UPDATED**, verify **EndPoint / ARN**, and select **Register**.
+   - Refresh the webhook list and confirm that both `ORDERS_CREATE` and `ORDERS_UPDATED` rows show the intended endpoint. `Webhook creation triggered.` is not registration evidence.
 5. Configure the fallback `queue_ShopifyOrderSync` job by its visible row state:
 
    - **❌ Incomplete:** before opening **Fix Configuration**, open the linked job name in **Maarg Admin Service Job** detail and record `runAsBatch`, `fromDate`, and `additionalParameters`, or obtain their governed approved values. **Save Config** submits only **System Message Type** and **Remote ID** and may blank those omitted parameters. Enter the two visible values and select **Save Config** only after the three hidden values are recorded or approved. Re-open the resulting configured row, select **Edit**, restore the exact recorded or approved **Run As Batch**, **From Date**, and **Additional Params**, select **Update Job**, then re-open it and verify all five values and its `✅ Active` status.
@@ -405,20 +395,20 @@ Have the selected shop identifier and domain, environment, AWS account and regio
    - **⚠️ Unassigned:** enter the approved **New Job Name** in **Clone**, select **Clone Job**, then re-open the cloned intended-shop row and follow the applicable incomplete or configured branch.
    - **❌ No historic sync jobs found matching `sync_ShopifyOrderHistory`:** select **Clone Standard Job**, enter the approved **New Job Name**, select **Clone Job**, then re-open the cloned row and follow the applicable incomplete or configured branch.
 
-7. Complete the HotWax-owned infrastructure handoff. Its evidence must include the EventBridge rule, SQS queue URL and ARN, dead-letter queue ARN, redrive policy, queue policy, resource policy, a successful AWS test-event identifier, target-queue delivery once, consumer-read evidence, failed-test dead-letter evidence, and policy comparison to the approved environment.
+7. Complete the HotWax-owned infrastructure handoff. Its evidence must show that the EventBridge rule matches both `orders/create` / `ORDERS_CREATE` and `orders/updated` / `ORDERS_UPDATED`, and must include the SQS queue URL and ARN, dead-letter queue ARN, redrive policy, queue policy, resource policy, a successful AWS test-event identifier for each topic, target-queue delivery, consumer-read evidence, failed-test dead-letter evidence, and policy comparison to the approved environment.
 8. Do not infer a Maarg service-job run, system message, or Data Manager load from the infrastructure test event: this screen does not provide a source-proven action that causally creates those records. Runtime proof for the included profile is deferred to the controlled real Shopify order in Chapter 13, where the order, job run, system message, and Data Manager record are tied together.
 
 ### Expected result
 
-Included-profile MDM, remote, queue, consumer, property, webhook, fallback, and history configuration evidence is positive, and the HotWax infrastructure handoff proves queue and dead-letter delivery. The health banner and configuration actions do not prove runtime order import.
+Included-profile MDM, remote, queue, consumer, property, webhook, fallback, and history configuration evidence is positive. Separate `ORDERS_CREATE` and `ORDERS_UPDATED` webhook rows exist, and the HotWax infrastructure handoff proves both EventBridge topic patterns, queue delivery, and dead-letter delivery. The health banner and configuration actions do not prove runtime order import.
 
 ### Evidence to save
 
-Save the included-profile section states and identifiers, queue URL and ARN, dead-letter ARN, policy references, test-event identifier, target-queue delivery once, consumer-read result, failed-test dead-letter result, webhook-list row, and property values. For every incomplete fallback or history job, save the Service Job detail's pre-save hidden values or governed approval, then the re-opened **Edit** values and `✅ Active` status after **Update Job**. Save runtime job, system-message, and Data Manager evidence only with the controlled Shopify order in Chapter 13.
+Save the included-profile section states and identifiers, queue URL and ARN, dead-letter ARN, policy references, both EventBridge topic patterns and test-event identifiers, target-queue deliveries, consumer-read results, failed-test dead-letter result, separate `ORDERS_CREATE` and `ORDERS_UPDATED` webhook-list rows, and property values. For every incomplete fallback or history job, save the Service Job detail's pre-save hidden values or governed approval, then the re-opened **Edit** values and `✅ Active` status after **Update Job**. Save runtime job, system-message, and Data Manager evidence only with the controlled Shopify order in Chapter 13.
 
 ### Stop and resolve if
 
-Stop for missing Chapter 4 order-query compatibility evidence, a missing required included-profile resource or section state, inaccessible queue, failed delivery, missing redrive behavior, missing webhook-list row, failed consumer, incomplete required Data Manager configuration, a cross-environment identifier, or any unknown fallback `runAsBatch`, `fromDate`, `additionalParameters`, or history `windowDays` value. Do not use **Save Config** until a governed value is available. The setup screen does not by itself provision or prove EventBridge delivery, queues, dead-letter handling, redrive, policies, or runtime order import.
+Stop for missing Chapter 4 order-query compatibility evidence, a missing required included-profile resource or section state, inaccessible queue, failed delivery, missing redrive behavior, a missing `ORDERS_CREATE` or `ORDERS_UPDATED` webhook row or EventBridge pattern, failed consumer, incomplete required Data Manager configuration, a cross-environment identifier, or any unknown fallback `runAsBatch`, `fromDate`, `additionalParameters`, or history `windowDays` value. Do not use **Save Config** until a governed value is available. The setup screen does not by itself provision or prove EventBridge delivery, queues, dead-letter handling, redrive, policies, or runtime order import.
 
 ### Next chapter
 
@@ -432,7 +422,7 @@ Continue to open-order history only after realtime queue infrastructure and the 
 
 ### Before you begin
 
-Have the agreed merchant-zoned history start and launch cutoff, deployed instance or JVM time zone, valid Shopify remote identifier, approved window size, level-2 protected-data approval, completed realtime infrastructure, and the Chapter 4 release evidence that resolves the current `OrderUnifiedMegaQuery` Return-scope dependency for this simple profile. Inventory bulk work must be complete because inventory and history use overlapping bulk-operation responsibilities. `updatedAt` selects open, unfulfilled orders for a query window. For an order not already in HotWax Commerce, `createdAt < newOrderSync.launchDate` determines historical creation. Existing orders are not recreated; pre-cutoff orders are historical work, use `needsInventoryIssuance=N`, and park unfulfilled ship groups in `GENERAL_OPS_PARKING`.
+Have the agreed merchant-zoned history start and launch cutoff, deployed instance or JVM time zone, valid Shopify remote identifier, approved window size, level-2 protected-data approval, completed realtime infrastructure, and the Chapter 4 order-import compatibility confirmation. Inventory bulk work must be complete because inventory and history use overlapping bulk-operation responsibilities. `updatedAt` selects open, unfulfilled orders for a query window. For an order not already in HotWax Commerce, `createdAt < newOrderSync.launchDate` determines historical creation. Existing orders are not recreated; pre-cutoff orders are historical work, use `needsInventoryIssuance=N`, and park unfulfilled ship groups in `GENERAL_OPS_PARKING`.
 
 ### Steps
 
