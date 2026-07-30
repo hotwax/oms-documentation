@@ -23,7 +23,7 @@ The page contains three areas:
 5. Update the connection only when the integration team provides approved values.
 6. Save the change and verify the next expected file transfer.
 
-See [Set up SFTP](../../../learn-netsuite/netsuite-deployment/sdf-bundle/setup-sftp.md) for the NetSuite-side requirements.
+See [Set up SFTP](https://docs.hotwax.co/documents/learn-netsuite/netsuite-deployment/sdf-bundle/setup-sftp) for the NetSuite-side requirements.
 
 ## Select the Product Store
 
@@ -32,7 +32,7 @@ See [Set up SFTP](../../../learn-netsuite/netsuite-deployment/sdf-bundle/setup-s
 3. Save the selection.
 4. Confirm the Product Store on the NetSuite landing page.
 
-Review the related [NetSuite Product Store settings](../../../learn-netsuite/netsuite-deployment/prerequisite-syncs/productstore-settings.md) before activation.
+Review the related [NetSuite Product Store settings](https://docs.hotwax.co/documents/learn-netsuite/netsuite-deployment/prerequisite-syncs/productstore-settings) before activation.
 
 ## Configure inventory variances
 
@@ -58,7 +58,7 @@ Unmapped variance reasons can prevent an inventory adjustment from posting corre
 3. Select the matching NetSuite payment method.
 4. Save the mapping.
 
-See [NetSuite payment method mappings](../../../learn-netsuite/synchronization-flows/integration-mappings/payment-methods.md) for integration context.
+See [NetSuite payment method mappings](https://docs.hotwax.co/documents/learn-netsuite/synchronization-flows/integration-mappings/payment-methods) for integration context.
 
 ## Configure price levels and discounts
 
@@ -67,7 +67,7 @@ See [NetSuite payment method mappings](../../../learn-netsuite/synchronization-f
 3. Select the matching NetSuite price level or discount item.
 4. Save the mapping.
 
-See [NetSuite price levels](../../../learn-netsuite/synchronization-flows/integration-mappings/price-levels.md) for deployment requirements.
+See [NetSuite price levels](https://docs.hotwax.co/documents/learn-netsuite/synchronization-flows/integration-mappings/price-levels) for deployment requirements.
 
 ## Map departments
 
