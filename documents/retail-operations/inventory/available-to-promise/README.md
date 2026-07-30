@@ -46,6 +46,18 @@ HotWax Commerce can publish 75 units as online ATP for this example.
 
 Build sourcing rules with product tags, product categories, facility types, or facility groups instead of maintaining every product and facility combination individually. Review rule priority and scope when more than one rule can apply to the same inventory.
 
+## Choose by business goal
+
+Start with the outcome you need, then use a scenario to choose the right rule.
+
+| Business goal | Start here |
+| --- | --- |
+| Protect online inventory with a threshold or safety stock | [Protect sellable inventory](use-cases.md#protect-sellable-inventory) |
+| Control shipping or pickup eligibility | [Control where products sell](use-cases.md#control-where-products-sell) |
+| Publish different inventory through sales channels | [Publish inventory by channel](use-cases.md#publish-inventory-by-channel) |
+| Investigate inventory values | [Review inventory](inventory.md). The `Inventory` menu item requires component release `v6.0.0` or later. |
+| Schedule, run, and verify sourcing-rule output | [Verify sourcing changes](use-cases.md#verify-sourcing-changes) |
+
 Continue with the sourcing setting you want to configure:
 
 * [Configure thresholds](threshold-rules.md)
@@ -53,3 +65,7 @@ Continue with the sourcing setting you want to configure:
 * [Configure store pickup](store-pickup-rules.md)
 * [Configure shipping](shipping-rule.md)
 * [Manage inventory channels](create-channels.md)
+* [Understand sourcing concepts](concepts.md)
+* [Schedule sourcing rules](schedule-atp-rules.md)
+* [Apply sourcing rule use cases](use-cases.md)
+* [Review inventory](inventory.md)

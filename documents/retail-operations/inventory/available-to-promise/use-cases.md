@@ -4,99 +4,181 @@ description: Apply sourcing rules to common channel, product, pickup, and shippi
 
 # Apply sourcing rule use cases
 
-Use these examples as starting points. Replace the sample tags, features, facility groups, and channels with values from your product store.
+Use these recipes as starting points. Replace the sample tags, facility groups, and channels with values from your product store. For complete form instructions, use the linked configuration pages.
 
-## Set different thresholds by channel
+## Choose a strategy
 
-Create separate rules when sales channels need different inventory buffers.
+| Business goal | Suggested recipe |
+| --- | --- |
+| Hold back a different amount of inventory by sales channel | [Set different thresholds by channel](#set-different-thresholds-by-channel) |
+| Give a product exception a different threshold | [Override a broad product rule](#override-a-broad-product-rule) |
+| Keep seasonal stock available for walk-in customers | [Protect inventory in high-demand regions](#protect-inventory-in-high-demand-regions) |
+| Reserve inventory at individual facilities | [Protect regional inventory with safety stock](#protect-regional-inventory-with-safety-stock) |
+| Keep a launch available in stores without store shipping | [Reserve new products for stores](#reserve-new-products-for-stores) |
+| Keep direct-only products off a marketplace | [Keep products off a marketplace](#keep-products-off-a-marketplace) |
+| Offer customized products only from equipped facilities | [Limit customized products to capable facilities](#limit-customized-products-to-capable-facilities) |
+| Prevent pickup for difficult-to-handle products | [Disable pickup for bulky products](#disable-pickup-for-bulky-products) |
+| Publish a regional inventory pool to Shopify | [Publish regional inventory to Shopify](#publish-regional-inventory-to-shopify) |
 
-1. Open `Sourcing` > `Threshold`.
-2. Create a rule for the first channel.
-3. Enter the threshold value and select that channel.
-4. Add product tags or features when the threshold should not apply to every product.
-5. Save the rule.
-6. Repeat the steps for each channel that needs a different threshold.
+## Protect sellable inventory
 
-For example, use a higher threshold on a marketplace with strict rejection penalties and a lower threshold on your direct website.
+### Set different thresholds by channel
 
-## Override a broad product rule
+**Situation:** Your direct website can sell closer to available inventory than a marketplace that penalizes inventory rejections.
 
-Use rule priority when product selections overlap.
+Use this recipe when each channel needs its own buffer. A threshold is deducted after HotWax Commerce combines facility inventory for that channel.
 
-1. Create a broad threshold rule for products tagged `Kids` and `Shoes`.
-2. Create a second rule for products tagged `Kids`, `Shoes`, and `Sale`.
-3. Select `AND` for the included tags when every tag must match.
-4. Use the sequence button to place the broad rule first.
-5. Place the sale rule after it.
-6. Save the sequence.
+| Rule | Channel | Threshold |
+| --- | --- | --- |
+| Direct website buffer | Direct website | 5 |
+| Marketplace buffer | Marketplace | 15 |
 
-The sale rule sets the final value for products that match both rules.
+1. Create the two rules in `Sourcing` > `Threshold`.
+2. Select the matching channel and enter the listed `Threshold` value for each rule.
+3. Save both rules.
 
-## Reserve new products for stores
+**Expected result:** The direct website has a five-unit channel buffer and the marketplace has a 15-unit buffer after its contributing facility inventory is combined.
 
-Block store shipping for a launch while keeping warehouse shipping available.
+**Validate:** Review each rule's channel and threshold value in [Configure threshold rules](threshold-rules.md).
 
-1. Tag the launch products in the product catalog.
-2. Create a facility group that contains the retail stores.
-3. Open `Sourcing` > `Shipping` > `Product and facility`.
-4. Create a shipping rule and turn `Shipping` off.
-5. Include the retail-store facility group.
-6. Include the launch product tag.
-7. Review the button that shows the number of impacted facilities.
-8. Save the rule.
+### Override a broad product rule
 
-Do not include the warehouse group in the blocked scope.
+**Situation:** All kids' shoes need a five-unit buffer, but sale kids' shoes need a larger buffer.
 
-## Keep products off a marketplace
+Use this recipe when the same product can match a broad rule and a specific exception.
 
-Block selected products on one inventory channel while leaving them available on other channels.
+| Sequence | Product tags | Threshold |
+| --- | --- | --- |
+| First | `Kids` and `Shoes` | 5 |
+| Last | `Kids`, `Shoes`, and `Sale` | 10 |
 
-1. Tag the products that should remain exclusive to your direct website.
-2. Open `Sourcing` > `Shipping` > `Product and channel`.
-3. Create a shipping rule and turn `Shipping` off.
-4. Select the marketplace channel.
-5. Include the direct-only product tag.
-6. Save the rule.
-7. Use `Run now` from the `Schedule` card when the change must be applied before the next recurring run.
+1. Create both threshold rules in `Sourcing` > `Threshold`, using `AND` so every listed tag must match.
+2. Use the sequence button to place the broad `Kids` and `Shoes` rule first.
+3. Place the specific `Kids`, `Shoes`, and `Sale` rule last, then save the sequence.
 
-## Limit customized products to capable facilities
+**Expected result:** The last matching rule sets the final value, so sale kids' shoes receive a threshold of 10.
 
-Create separate shipping and pickup rules when only selected facilities can handle customized products.
+**Validate:** Confirm the sequence and matching product counts in [Configure threshold rules](threshold-rules.md).
 
-1. Create a facility group that contains the capable facilities.
-2. Tag the customized products.
-3. Open `Sourcing` > `Shipping` > `Product and facility`.
-4. Create a rule that blocks shipping for all facility groups.
-5. Add the capable group under `Excluded`.
-6. Include the customized product tag.
-7. Save the rule.
-8. Repeat the pattern under `Sourcing` > `Store pickup` > `Product and facility`.
-9. Review the Store pickup `Preview` before saving.
+### Protect inventory in high-demand regions
 
-The exclusion removes the capable facilities from the blocked scope.
+**Situation:** Mountain stores need winter jackets for walk-in customers, while lower-demand stores can still ship them.
 
-## Protect inventory in high-demand regions
+Use this recipe when a regional demand pattern should change shipping eligibility without blocking every store.
 
-Block store shipping in a region where walk-in demand is high.
+1. Create a facility group for the high-demand mountain stores.
+2. In `Sourcing` > `Shipping` > `Product and facility`, create a rule with `Shipping` off.
+3. Include the mountain-store group and products tagged `Winter jackets`, then save.
 
-1. Tag the seasonal products.
-2. Create a facility group for stores in the high-demand region.
-3. Open `Sourcing` > `Shipping` > `Product and facility`.
-4. Create a rule and turn `Shipping` off.
-5. Include the regional facility group.
-6. Include the seasonal product tag.
-7. Save the rule.
+**Expected result:** Mountain stores do not ship winter jackets. Lower-demand stores remain available for shipping.
 
-Archive the rule when the seasonal restriction ends.
+**Validate:** Confirm the impacted facility count and product scope in [Configure shipping rules](shipping-rule.md).
 
-## Disable pickup for bulky products
+### Protect regional inventory with safety stock
 
-Block pickup for products that cannot be handled at pickup locations.
+**Situation:** All stores need a small inventory reserve, but mountain stores need a larger jacket reserve during the season.
 
-1. Tag the bulky products.
-2. Open `Sourcing` > `Store pickup` > `Product and facility`.
-3. Create a rule and turn `Store pickup` off.
-4. Select all facility groups, or include the groups that offer pickup.
-5. Include the bulky product tag.
-6. Review the `Preview`.
-7. Save the rule.
+Use this recipe when inventory must be reserved at individual facilities. Unlike a channel-level threshold, sourcing safety stock is deducted per facility.
+
+| Sequence | Facility and product scope | Safety stock |
+| --- | --- | --- |
+| First | All stores and all products | 5 |
+| Last | Mountain stores and `Winter jackets` | 12 |
+
+1. Create the broad all-store safety stock rule first in `Sourcing` > `Safety stock`.
+2. Create the mountain-store jacket rule and place it last in the sequence.
+3. Save the sequence.
+
+**Expected result:** The specific rule sets safety stock to 12 for mountain-store jackets. For a facility with QOH of 30, that rule leaves at most 18 units before other deductions.
+
+**Validate:** Confirm the sequence, facility count, and safety stock values in [Configure safety stock rules](safety-stock-rules.md).
+
+## Control where products sell
+
+### Reserve new products for stores
+
+**Situation:** Limited-edition sneakers should remain available in stores during a launch, but should not ship from stores.
+
+Use this recipe when warehouse shipping must remain available while store shipping is off.
+
+1. Tag the sneakers and create a facility group for retail stores.
+2. In `Sourcing` > `Shipping` > `Product and facility`, create a rule with `Shipping` off.
+3. Include the retail-store group and the sneaker tag. Do not include the warehouse group.
+4. Confirm the impacted facility count and save.
+
+**Expected result:** Limited-edition sneakers remain available in stores, warehouse shipping remains available, and stores do not ship the sneakers.
+
+**Validate:** Confirm that the warehouse is outside the rule's facility scope in [Configure shipping rules](shipping-rule.md).
+
+### Keep products off a marketplace
+
+**Situation:** Products tagged `Direct only` should not be available for marketplace shipping.
+
+Use this recipe when a product is sold through your direct website but must not be published for shipping on a marketplace channel.
+
+1. In `Sourcing` > `Shipping` > `Product and channel`, create a rule with `Shipping` off.
+2. Select the marketplace channel and include products tagged `Direct only`.
+3. Save the rule and use `Run now` from the `Schedule` card when the change cannot wait for the recurring run.
+
+**Expected result:** `Direct only` products are not published for shipping on the marketplace channel.
+
+**Validate:** Review the channel and product scope in [Configure shipping rules](shipping-rule.md), then follow [Schedule sourcing rules](schedule-atp-rules.md) to run the output.
+
+### Limit customized products to capable facilities
+
+**Situation:** Only a facility group with the required equipment can fulfill customized products.
+
+Use this recipe when the same equipped facilities must be the only locations that can ship or offer pickup for a product.
+
+1. Create a facility group for the equipped facilities and tag the customized products.
+2. In `Sourcing` > `Shipping` > `Product and facility`, create a rule with `Shipping` off for all facility groups, then add the equipped group under `Excluded`.
+3. Repeat the pattern in `Sourcing` > `Store pickup` > `Product and facility` with `Store pickup` off.
+4. Review the store pickup `Preview` and save both rules.
+
+**Expected result:** Only the facility group with the required equipment can ship or offer pickup for customized products.
+
+**Validate:** Review the shipping rule and store pickup preview in [Configure shipping rules](shipping-rule.md) and [Configure store pickup rules](store-pickup-rules.md).
+
+### Disable pickup for bulky products
+
+**Situation:** Furniture tagged `Bulky` cannot be selected for pickup.
+
+Use this recipe when a product cannot be handled at pickup locations.
+
+1. In `Sourcing` > `Store pickup` > `Product and facility`, create a rule with `Store pickup` off.
+2. Select all facility groups, or include the groups that offer pickup, and include products tagged `Bulky`.
+3. Review the `Preview` and save.
+
+**Expected result:** Customers cannot select pickup for furniture tagged `Bulky`.
+
+**Validate:** Use the rule's `Preview` to confirm that matching furniture has `Allow Pickup` turned off in [Configure store pickup rules](store-pickup-rules.md).
+
+## Publish inventory by channel
+
+### Publish regional inventory to Shopify
+
+**Situation:** A connected Canadian Shopify shop needs inventory from a Canadian warehouse and eligible Canadian stores.
+
+Use this recipe when a regional storefront needs a different inventory pool from other Shopify shops.
+
+1. In `Sourcing` > `Channels`, create the `Canada online` inventory channel and link one configuration facility.
+2. Assign the central warehouse and eligible Canadian stores to the channel.
+3. Set a channel threshold for `Canada online` in `Sourcing` > `Threshold`.
+4. On `Sourcing` > `Channels` > `Publish`, configure the connected Canadian Shopify shop to use the `Canada online` channel.
+
+**Expected result:** The Canadian Shopify shop publishes inventory from the central warehouse and eligible Canadian stores, with the channel threshold applied.
+
+**Validate:** Review the assigned facilities and the Canadian Shopify shop's publish card in [Create inventory channels](create-channels.md).
+
+## Verify sourcing changes
+
+Use this sequence after changing any sourcing rule. It verifies the generated output and, when available, the resulting inventory values.
+
+1. Open the affected rule category's `Schedule` card. Run the schedule or select `Run now`. The run generates and uploads the product-facility CSV, but does not apply it by itself.
+2. Run `Import Product Facility`, followed by `Process Bulk Import Files`, to import and process the output. See [Import Product Facility](../../workflow/job-workflows/inventory.md#import-product-facility).
+3. With component release `v6.0.0` or later, open `Sourcing` > `Inventory`, use the `Channel` scope, and review `Online ATP`, its computation, `Reconciliation`, and inventory push `History`.
+4. On earlier releases, review sourcing execution history and the connected system instead.
+
+**Expected result:** The processed product-facility output reflects the new sourcing rule, and the channel inventory or connected-system history shows the resulting publish activity.
+
+**Validate:** Review `Execution history` in [Schedule sourcing rules](schedule-atp-rules.md), then use [Review inventory](inventory.md) when your release provides the `Inventory` menu item.
