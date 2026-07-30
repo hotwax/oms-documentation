@@ -174,7 +174,7 @@ Each value is a strict pre-allocation eligibility threshold, not inventory guara
 
 Expected result: Stores with more than 15 available units are considered first, then stores above 10 and five units, while less-protected inventory remains outside the routing path.
 
-Validate: Compare an item with 12 available units against an item with six available units to confirm that each reaches the intended ladder step.
+Validate: With the strict `greater` operator, test an item at a facility with exactly 15, 10, and five available units. Confirm that 15 skips rule 1 and reaches rule 2, 10 skips rule 2 and reaches rule 3, and five passes none of the thresholds and follows the final `Queue` action. You can also compare an item with 12 available units against an item with six available units to confirm the intermediate ladder steps.
 
 ### Keep grouped items together
 
