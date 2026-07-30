@@ -21,12 +21,12 @@ Use this table to find a recipe. A recipe helps you solve one routing decision. 
 | Business goal | Suggested recipe | Complete template |
 | --- | --- | --- |
 | Route marketplace orders or select a work queue | [Route marketplace orders from warehouses](#route-marketplace-orders-from-warehouses), [retry rejected order items](#retry-rejected-order-items), or [escalate orders by promise date](#escalate-orders-by-promise-date) | [Inventory-based shipping](template/inventory-based-shipping.md) for rejected and expedited orders across stores |
-| Use warehouses before stores | [Try warehouses before stores](#try-warehouses-before-stores) | — |
-| Prefer nearby facilities | [Prefer nearby facilities](#prefer-nearby-facilities) | — |
-| Prefer lower-cost stores | [Prefer stores with lower fulfillment cost](#prefer-stores-with-lower-fulfillment-cost) | — |
+| Use warehouses before stores | [Try warehouses before stores](#try-warehouses-before-stores) | None |
+| Prefer nearby facilities | [Prefer nearby facilities](#prefer-nearby-facilities) | None |
+| Prefer lower-cost stores | [Prefer stores with lower fulfillment cost](#prefer-stores-with-lower-fulfillment-cost) | None |
 | Protect or rebalance store inventory | [Protect store inventory with safety stock](#protect-store-inventory-with-safety-stock) or [clear slow-moving store inventory](#clear-slow-moving-store-inventory) | [Inventory-based shipping](template/inventory-based-shipping.md) |
-| Keep items together | [Keep grouped items together](#keep-grouped-items-together) | — |
-| Change store participation for a peak period | [Reduce store routing during peak periods](#reduce-store-routing-during-peak-periods) | — |
+| Keep items together | [Keep grouped items together](#keep-grouped-items-together) | None |
+| Change store participation for a peak period | [Reduce store routing during peak periods](#reduce-store-routing-during-peak-periods) | None |
 | Route orders across countries | [Apply a complete template](#apply-a-complete-template) | [Cross-border shipping](template/cross-border-shipping.md) |
 
 ## Prepare HotWax Commerce
@@ -42,7 +42,9 @@ Complete the setup that applies to your strategy:
 Changes remain in a working copy until you click `Save`. Review the full routing group before you save and activate it.
 {% endhint %}
 
-## Route marketplace orders from warehouses
+## Select and prioritize orders
+
+### Route marketplace orders from warehouses
 
 Situation: A marketplace requires its orders to ship from warehouses, while direct-to-consumer orders can use the wider network. Use this recipe when the marketplace `Sales Channel` is mapped and the warehouse group is ready.
 
@@ -58,7 +60,7 @@ Expected result: Marketplace items are attempted at warehouses and any unfillabl
 
 Validate: Use a known marketplace order to confirm that the routing selects its `Sales Channel`, then review the first run in `History`.
 
-## Retry rejected order items
+### Retry rejected order items
 
 Situation: A rejected item becomes available again and should be retried before new orders. Use this recipe when the rejected-item `Queue` is distinct from the queue for new work.
 
@@ -73,7 +75,7 @@ Expected result: Older rejected items receive another allocation attempt before 
 
 Validate: Confirm that a known rejected item is selected before a newer item and that the final rule sends any remainder to the expected queue.
 
-## Escalate orders by promise date
+### Escalate orders by promise date
 
 Situation: An item promised soon needs an earlier allocation attempt. Use this recipe when items with a promise date within the next day need priority over the regular queue.
 
@@ -88,7 +90,7 @@ Expected result: Items promised on or before the next-day cutoff are processed a
 
 Validate: Test with an order whose promise date is within one day and confirm that it is selected while an order outside the cutoff is not.
 
-## Reduce store routing during peak periods
+### Reduce store routing during peak periods
 
 Situation: Holiday volume should stay with warehouses first, but approved stores can absorb overflow. Use this recipe only for the peak period and when store capacity limits are current.
 
@@ -106,7 +108,7 @@ Validate: Review the active-group schedule and the first `History` record to con
 
 ## Choose fulfillment facilities
 
-## Try warehouses before stores
+### Try warehouses before stores
 
 Situation: Online orders should use central inventory before drawing down store stock. Use this recipe when both warehouse and store facility groups are current.
 
@@ -121,7 +123,7 @@ Expected result: HotWax Commerce checks warehouses before stores and queues only
 
 Validate: Use one order that only a warehouse can fill and one that only an approved store can fill, then review the selected rule for each result.
 
-## Prefer nearby facilities
+### Prefer nearby facilities
 
 Situation: Customers expect nearby fulfillment, but you still want a fallback when one location cannot fill the order. Use this recipe when facility and shipping-address coordinates are complete.
 
@@ -142,7 +144,7 @@ Expected result: HotWax Commerce expands from a single nearby allocation to the 
 
 Validate: Test an order that needs one nearby facility and another that needs the final split-anywhere rule, then compare the selected rules.
 
-## Prefer stores with lower fulfillment cost
+### Prefer stores with lower fulfillment cost
 
 Situation: A retailer has fixed rent at an outlet store and wants online demand to use that capacity before higher-cost mall stores. Use this recipe when facility groups represent the business preference.
 
@@ -158,23 +160,23 @@ Validate: Use an order that both groups can fill and confirm that the selected f
 
 ## Protect and rebalance inventory
 
-## Protect store inventory with safety stock
+### Protect store inventory with safety stock
 
 Situation: Stores need inventory for walk-in demand before they fulfill online orders. Use this recipe when a gradual reduction in protection is acceptable.
 
-| Sequence | Filters | Sort | Unavailable items |
-| --- | --- | --- | --- |
-| [Routing rule 1](inventory-rules.md) | Select the store `Group` and set `Safety stock` to 15. | `Inventory balance` | `Next rule` |
-| [Routing rule 2](inventory-rules.md) | Select the same `Group` and set `Safety stock` to 10. | `Inventory balance` | `Next rule` |
-| [Routing rule 3](inventory-rules.md) | Select the same `Group` and set `Safety stock` to 5. | `Inventory balance` | `Queue` |
+| Sequence | Filters | Operator | Sort | Unavailable items |
+| --- | --- | --- | --- | --- |
+| [Routing rule 1](inventory-rules.md) | Select the store `Group` and set `Safety stock` to 15. | `greater` | `Inventory balance` | `Next rule` |
+| [Routing rule 2](inventory-rules.md) | Select the same `Group` and set `Safety stock` to 10. | `greater` | `Inventory balance` | `Next rule` |
+| [Routing rule 3](inventory-rules.md) | Select the same `Group` and set `Safety stock` to 5. | `greater` | `Inventory balance` | `Queue` |
 
-Each value is a pre-allocation eligibility threshold, not inventory guaranteed to remain after allocation. Turn on `Allow partial allocation` only in the last rule if your business accepts split shipments.
+Each value is a strict pre-allocation eligibility threshold, not inventory guaranteed to remain after allocation. An item exactly equal to a threshold does not pass that rule and continues to the next configured rule or unavailable-item action. Turn on `Allow partial allocation` only in the last rule if your business accepts split shipments.
 
 Expected result: Stores with more than 15 available units are considered first, then stores above 10 and five units, while less-protected inventory remains outside the routing path.
 
 Validate: Compare an item with 12 available units against an item with six available units to confirm that each reaches the intended ladder step.
 
-## Keep grouped items together
+### Keep grouped items together
 
 Situation: A retailer sells eyeglass frames and lenses as a group, but can split sunglasses only when the customer accepts it. Use this recipe when grouped items should remain together as long as possible.
 
@@ -190,7 +192,7 @@ Expected result: Frames and lenses stay together through the first two rules, wh
 
 Validate: Test a grouped order that one facility cannot fill completely and confirm that the group stays intact until the final rule.
 
-## Clear slow-moving store inventory
+### Clear slow-moving store inventory
 
 Situation: Two stores have 20 units of the same item, but one sells 10 units per week and the other sells two. Use this recipe when the slower-selling store should be preferred for online fulfillment.
 

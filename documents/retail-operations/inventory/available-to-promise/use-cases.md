@@ -164,11 +164,15 @@ Use this recipe when a regional storefront needs a different inventory pool from
 1. In `Sourcing` > `Channels`, create the `Canada online` inventory channel and link one configuration facility.
 2. Assign the central warehouse and eligible Canadian stores to the channel.
 3. Set a [channel threshold](threshold-rules.md) for `Canada online` in `Sourcing` > `Threshold`.
-4. On `Sourcing` > `Channels`, open the `Publish` tab and configure the connected Canadian Shopify shop to use the `Canada online` channel.
+4. On `Sourcing` > `Channels`, open `Publish` and find the connected Canadian Shopify shop.
+5. Select `Run time`, `Frequency`, and `Inventory channel` = `Canada online`.
+6. Select `Save changes` and confirm the save.
+7. Run the threshold rule schedule, then run `Import Product Facility` followed by `Process Bulk Import Files` to apply the threshold output before publication. Follow [Verify sourcing changes](#verify-sourcing-changes) for the detailed import sequence and [Import Product Facility](../../workflow/job-workflows/inventory.md#import-product-facility) for the workflow.
+8. Return to the shop card. Use the overflow menu and select `Run now` for an immediate publish, or wait for its saved schedule.
 
-**Expected result:** The Canadian Shopify shop publishes inventory from the central warehouse and eligible Canadian stores, with the channel threshold applied.
+**Expected result:** After the threshold output is successfully imported and the publish job completes, the Canadian Shopify shop publishes inventory from the central warehouse and eligible Canadian stores with the channel threshold applied.
 
-**Validate:** Review the assigned facilities and the Canadian Shopify shop's publish card in [Create inventory channels](create-channels.md), then confirm the channel threshold in [Configure threshold rules](threshold-rules.md).
+**Validate:** Confirm the channel facilities and threshold, the Canadian Shopify shop's saved publish card, `Sourcing` > `Inventory` > `Channel` > `Reconciliation`, and `Inventory push history` or the publish job's `History`.
 
 ## Verify sourcing changes
 
