@@ -1,170 +1,188 @@
-# Use Cases
+---
+description: Apply sourcing rules to common channel, product, pickup, and shipping scenarios.
+---
 
-## Threshold Rules
+# Apply sourcing rule use cases
 
-### Scenario 1: Setting Different Thresholds for Different Channels
+Use these recipes as starting points. Replace the sample tags, facility groups, and channels with values from your product store. For complete form instructions, use the linked configuration pages.
 
-Retail brands often sell products across multiple channels, such as offline stores, marketplaces, social media, and their own website. Each channel comes with its own set of rules and challenges, particularly regarding inventory management. For instance, marketplaces like Amazon may impose penalties for delayed fulfillment or rejected orders, making it crucial to maintain a higher inventory threshold for such channels to avoid overselling.
+## Choose a strategy
 
-**Steps to Implement:**
+| Business goal | Suggested recipe |
+| --- | --- |
+| Hold back a different amount of inventory by sales channel | [Set different thresholds by channel](#set-different-thresholds-by-channel) |
+| Give a product exception a different threshold | [Override a broad product rule](#override-a-broad-product-rule) |
+| Keep seasonal stock available for walk-in customers | [Protect inventory in high-demand regions](#protect-inventory-in-high-demand-regions) |
+| Reserve inventory at individual facilities | [Protect regional inventory with safety stock](#protect-regional-inventory-with-safety-stock) |
+| Keep a launch available in stores without store shipping | [Reserve new products for stores](#reserve-new-products-for-stores) |
+| Keep direct-only products off a marketplace | [Keep products off a marketplace](#keep-products-off-a-marketplace) |
+| Offer customized products only from equipped facilities | [Limit customized products to capable facilities](#limit-customized-products-to-capable-facilities) |
+| Prevent pickup for difficult-to-handle products | [Disable pickup for bulky products](#disable-pickup-for-bulky-products) |
+| Publish a regional inventory pool to Shopify | [Publish regional inventory to Shopify](#publish-regional-inventory-to-shopify) |
 
-1. **Create Separate Threshold Rules:**
-   * **Threshold Rule for Shopify Channel:**
-     * Navigate to the ATP app and create a new threshold rule.
-     * Include the relevant products using tags.
-     * Select the Shopify sales channel for this rule.
-     * Set the desired threshold value to manage inventory availability for Shopify orders.
-   * **Threshold Rule for Amazon Channel:**
-     * Similarly, create a new threshold rule for the Amazon sales channel.
-     * Include the products using appropriate tags.
-     * Select the Amazon channel, considering its specific requirements and penalties.
-     * Set a higher threshold value to ensure sufficient inventory is allocated for Amazon orders, reducing the risk of overselling and avoiding penalties.
-2. **Save and Activate Rules:**
-   * After setting the threshold values for each channel, save the rules.
+## Protect sellable inventory
 
-{% embed url="https://youtu.be/-akXZbSUrHU" %}
+### Set different thresholds by channel
 
-### Scenario 2: Setting Thresholds for Overlapping Categories
+**Situation:** Your direct website can sell closer to available inventory than a marketplace that penalizes inventory rejections.
 
-Merchandisers often need to set product inventory thresholds to avoid overselling, particularly when managing inventory across platforms like Shopify. This task becomes more complex when dealing with overlapping product categories. For instance, a merchandiser might need to set a threshold for "Kids Shoes" and a separate, more specific threshold for "Kids Shoes on Sale." Managing these overlapping categories effectively is crucial to ensure accurate inventory availability across different segments.
+Use this recipe when each channel needs its own buffer. A threshold is deducted after HotWax Commerce combines facility inventory for that channel.
 
-**Steps to Implement:**
+| Rule | Channel | Threshold |
+| --- | --- | --- |
+| Direct website buffer | Direct website | 5 |
+| Marketplace buffer | Marketplace | 15 |
 
-1. **Create Separate Threshold Rules for Each Category:**
-   * **Threshold Rule for "Kids Shoes":**
-     * Navigate to the ATP app and create a new threshold rule.
-     * Include all "Kids Shoes" in this rule, using appropriate tags (Kids, Shoes) to capture the entire category.
-     * Set the desired threshold value to manage inventory for all "Kids Shoes."
-   * **Threshold Rule for "Kids Shoes on Sale":**
-     * Create a separate threshold rule specifically for "Kids Shoes on Sale."
-     * Include the products with previous tags as well as "Sales" tag.
-     * Set a different threshold value that reflects the specific inventory needs for sale items.
-2. **Arrange the Sequence of Threshold Rules:**
-   * After creating the threshold rules, it is critical to arrange them in the correct order to ensure that the wider-reaching rule ("Kids Shoes") does not inadvertently override the more specific rule ("Kids Shoes on Sale").
-   * Click on the balloon icon (located on the right side of the threshold rules list).
-   * Drag and drop the rules to arrange them in the desired sequence. Ensure that the wide-reaching rule for "Kids Shoes" is positioned before the rule for "Kids Shoes on Sale."
-   * This sequence ensures that the broader rule is applied first, with the more specific rule refining the inventory allocation for items on sale.
+1. Create the two rules in `Sourcing` > `Threshold`.
+2. Select the matching channel and enter the listed `Threshold` value for each rule.
+3. Save both rules.
 
-{% embed url="https://youtu.be/fCMNfYO6ZMs" %}
+**Expected result:** The direct website has a five-unit channel buffer and the marketplace has a 15-unit buffer after its contributing facility inventory is combined.
 
-## Shipping Rules
+**Validate:** Review each rule's channel and threshold value in [Configure threshold rules](threshold-rules.md).
 
-### Scenario 3: Not Fulfilling Newly Released Products from Store
+### Override a broad product rule
 
-Retailers often prioritize keeping newly released products available for walk-in customers, opting to fulfill online orders for these products solely from their warehouse. For example, suppose a retailer launches a new line of limited-edition sneakers. In that case, they may want to reserve this inventory for in-store shoppers and only fulfill online orders from their central warehouse.
+**Situation:** All kids' shoes need a five-unit buffer, but sale kids' shoes need a larger buffer.
 
-#### Steps to Implement
+Use this recipe when the same product can match a broad rule and a specific exception.
 
-1. **Tagging New Products:**
-   * Assign a unique tag to all newly released products, such as "NewRelease" or "LimitedEdition" on Shopify.
-2. **Create an ATP Rule:**
-   * Navigate to the `ATP App` from the launchpad and go to the `shipping` section
-   * Create a new rule in the `Product and facility` tab specifically for store fulfillment restrictions.
-3. **Include the Tag:**
-   * In the rule setup, include the tag assigned to the newly released products to ensure this rule covers them.
-4. **Select Facility Group:**
-   * Choose the facility group that includes all stores.
-5. **Turn Off Fulfillment:**
-   * Disable fulfillment from the selected facility group, ensuring that the newly released products are not available for online order fulfillment from any store.
-6. **Save the Rule:**
-   * Save and activate the rule to apply these settings across all relevant facilities.
+| Sequence | Product tags | Threshold |
+| --- | --- | --- |
+| First | `Kids` and `Shoes` | 5 |
+| Last | `Kids`, `Shoes`, and `Sale` | 10 |
 
-{% embed url="https://youtu.be/m0Iv4mgv8pw" %}
+1. Create both threshold rules in `Sourcing` > `Threshold`, using `AND` so every listed tag must match.
+2. Use the sequence button to place the broad `Kids` and `Shoes` rule first.
+3. Place the specific `Kids`, `Shoes`, and `Sale` rule last, then save the sequence.
 
-### Scenario 4: Restricting Product Availability to Websites Only
+**Expected result:** The last matching rule sets the final value, so sale kids' shoes receive a threshold of 10.
 
-Retailers may choose to keep certain products exclusive to their own websites, avoiding sales on marketplaces like Amazon or eBay. This decision could be driven by several factors, such as newly released products that the retailer wants to promote through their own channels, or underperforming products on marketplaces that do not meet the desired sales expectations.
+**Validate:** Confirm the sequence and matching product counts in [Configure threshold rules](threshold-rules.md).
 
-**Steps to Implement:**
+### Protect inventory in high-demand regions
 
-1. **Tag the Products:**
-   * Assign a unique tag to the products you want to restrict to your website. For example, you might use a tag like `Shopify_only` to identify these items.
-2. **Create a New Shipping Rule:**
-   * Navigate to the `ATP` app and create a new shipping rule.
-3. **Configure the Rule:**
-   * Go to the `Product and Channel` tab within the rule setup.
-   * Include the relevant product tag (`Shopify_only`).
-   * Select the specific marketplace channels (e.g., Amazon, eBay) where you do not want the products to be available.
-4. **Disable Shipping:**
-   * Turn off the shipping toggle for the selected marketplace channels. This will prevent these tagged products from being available for fulfillment on those platforms.
-5. **Save and Activate:**
-   * Save the rule and select `run now` option, so the restriction is applied immediately.
+**Situation:** Mountain stores need winter jackets for walk-in customers, while lower-demand stores can still ship them.
 
-{% embed url="https://youtu.be/BOseH0pfBJs" %}
+Use this recipe when a regional demand pattern should change shipping eligibility without blocking every store.
 
-### Scenario 5: Restricting Shipping/BOPIS for Customized Products to Specific Facilities
+1. Create a facility group for the high-demand mountain stores.
+2. In `Sourcing` > `Shipping` > `Product and facility`, create a rule with `Shipping` off.
+3. Include the mountain-store group and products tagged `Winter jackets`, then save.
 
-Retailers may offer customized products that can only be processed at certain facilities due to the specialized equipment or expertise required. As a result, shipping these products from all facilities is not feasible. To manage this, retailers need to ensure that orders for customized products are only fulfilled from the facilities equipped to handle customization.
+**Expected result:** Mountain stores do not ship winter jackets. Lower-demand stores remain available for shipping.
 
-**Steps to Implement:**
+**Validate:** Confirm the impacted facility count and product scope in [Configure shipping rules](shipping-rule.md).
 
-1. **Create a Facility Group with Customization Capabilities**
+### Protect regional inventory with safety stock
 
-* Identify the facilities that can handle customized products due to the necessary equipment or expertise.
-* Create a facility group for these locations, grouping only the facilities capable of handling customization.
+**Situation:** All stores need a small inventory reserve, but mountain stores need a larger jacket reserve during the season.
 
-2. **Tag Customized Products**
+Use this recipe when inventory must be reserved at individual facilities. Unlike a channel-level threshold, sourcing safety stock is deducted per facility.
 
-* Assign the unique product tag (e.g., "Customizable") to all products that require customization services. This tag will help in applying specific rules only to these products.
+| Sequence | Facility and product scope | Safety stock |
+| --- | --- | --- |
+| First | All stores and all products | 5 |
+| Last | Mountain stores and `Winter jackets` | 12 |
 
-3. **Create a New ATP Shipping Rule for Customization-Enabled Facilities**
+1. Create the broad all-store safety stock rule first in `Sourcing` > `Safety stock`.
+2. Create the mountain-store jacket rule and place it last in the sequence.
+3. Save the sequence.
 
-* In the ATP app, navigate to the shipping section and create a rule in the "Product and Facility" tab.
-* Exclude the facility group where customization is allowed (facilities with the required equipment).
-* Include the product tag ("Customizable") to apply the rule to all products requiring customization.
+**Expected result:** The specific rule sets safety stock to 12 for mountain-store jackets. For a facility with QOH of 30, that rule leaves at most 18 units before other deductions.
 
-4. **Disable Shipping for Facilities without Customization**
+**Validate:** Confirm the sequence, facility count, and safety stock values in [Configure safety stock rules](safety-stock-rules.md).
 
-* Configure the rule to disable shipping for all facilities except the ones that are included in the customization-enabled facility group.
-* This ensures that customized products will only be shipped from facilities that can handle customization.
+## Control where products sell
 
-5. **Repeat for BOPIS**
+### Reserve new products for stores
 
-* Similarly, create a rule in the ATP app for BOPIS orders.
-* Exclude the facilities capable of customization and disable BOPIS in the rule. This ensures that customers selecting BOPIS will only be able to pick up customized products from facilities equipped to process them.
+**Situation:** Limited-edition sneakers should remain available in stores during a launch, but should not ship from stores.
 
-### Scenario 6: Managing Seasonal Demand by Region
+Use this recipe when warehouse shipping must remain available while store shipping is off.
 
-Retailers often face varying product demands across different regions during seasonal periods. For instance, during winter, coastal regions may have a lower demand for jackets compared to high-altitude areas. To manage this effectively, retailers may want to prioritize shipping jackets from stores in coastal regions while restricting fulfillment from stores in high-demand, high-altitude areas to preserve inventory for in-store customers.
+1. Tag the sneakers and create a facility group for retail stores.
+2. In `Sourcing` > `Shipping` > `Product and facility`, create a rule with `Shipping` off.
+3. Include the retail-store group and the sneaker tag. Do not include the warehouse group.
+4. Confirm the impacted facility count and save.
 
-#### Steps to Implement
+**Expected result:** Limited-edition sneakers remain available in stores, warehouse shipping remains available, and stores do not ship the sneakers.
 
-1. **Tagging Products**
-   * Identify all products that are subject to seasonal demand variations, such as jackets, and assign them a specific tag (e.g., "Winter\_Jackets").
-2. **Creating Facility Groups**
-   * Identify the facilities in high-demand regions, such as those in high-altitude areas, and create a facility group for these stores.
-3. **Creating ATP Rule**
-   * Navigate to the Shipping page in the ATP app.
-   * Create a new ATP rule for the tagged products.
-4. **Applying Facility Group and Product Tag**
-   * In the ATP rule, select the facility group that includes the high-demand region stores.
-   * Apply the product tag to include all relevant items (e.g., "Winter\_Jackets").
-5. **Saving the Rule**
-   * Disable store fulfillment for the selected facility group to prevent shipment from those locations.
-   * Save the ATP rule to enforce this restriction during the seasonal period.
+**Validate:** Confirm that the warehouse is outside the rule's facility scope in [Configure shipping rules](shipping-rule.md).
 
-{% embed url="https://youtu.be/0nIEN15IoHM" %}
+### Keep products off a marketplace
 
-## Pickup Rules
+**Situation:** Products tagged `Direct only` should not be available for marketplace shipping.
 
-### Scenario 7: Disabling Pickup for Heavy Items
+Use this recipe when a product is sold through your direct website but must not be published for shipping on a marketplace channel.
 
-Retailers often carry heavy or bulky items in their catalogs, such as furniture, that are not practical for customers to pick up from stores. In such cases, retailers may want to disable the pickup option for these items, ensuring that customers are only offered delivery options.
+1. In `Sourcing` > `Shipping` > `Product and channel`, create a rule with `Shipping` off.
+2. Select the marketplace channel and include products tagged `Direct only`.
+3. Save the rule and use `Run now` from the `Schedule` card when the change cannot wait for the recurring run.
 
-#### Steps to Implement
+**Expected result:** `Direct only` products are not published for shipping on the marketplace channel.
 
-1. **Tagging Heavy Items**
-   * Identify all heavy or bulky items in the catalog, such as furniture, and assign them a specific tag (e.g., "Heavy\_Items").
-2. **Navigating to Pickup Settings**
-   * Go to the Pickup page in the ATP app where you manage pickup options.
-3. **Creating an ATP Rule**
-   * Create a new ATP rule to manage pickup settings for heavy items.
-4. **Applying Product Tag and Facility Selection**
-   * Select all facilities where the items are stored.
-   * Include the product tag (e.g., "Heavy\_Items") to apply the rule to these items. If the items are limited, you can also include them by specific features.
-5. **Disabling Pickup**
-   * Turn off the pickup option for these items within the rule to ensure customers cannot select in-store pickup.
-6. **Saving the Rule**
-   * Save the ATP rule to enforce the restriction across all selected facilities.
+**Validate:** Review the channel and product scope in [Configure shipping rules](shipping-rule.md), then follow [Schedule sourcing rules](schedule-atp-rules.md) to run the output.
 
-{% embed url="https://youtu.be/7HPG18cIWiI" %}
+### Limit customized products to capable facilities
+
+**Situation:** Only a facility group with the required equipment can fulfill customized products.
+
+Use this recipe when the same equipped facilities must be the only locations that can ship or offer pickup for a product.
+
+1. Create a facility group for the equipped facilities and tag the customized products.
+2. In `Sourcing` > `Shipping` > `Product and facility`, create a rule with `Shipping` off for all facility groups, then add the equipped group under `Excluded`.
+3. Repeat the pattern in `Sourcing` > `Store pickup` > `Product and facility` with `Store pickup` off.
+4. Review the store pickup `Preview` and save both rules.
+
+**Expected result:** Only the facility group with the required equipment can ship or offer pickup for customized products.
+
+**Validate:** Review the shipping rule and store pickup preview in [Configure shipping rules](shipping-rule.md) and [Configure store pickup rules](store-pickup-rules.md).
+
+### Disable pickup for bulky products
+
+**Situation:** Furniture tagged `Bulky` cannot be selected for pickup.
+
+Use this recipe when a product cannot be handled at pickup locations.
+
+1. In `Sourcing` > `Store pickup` > `Product and facility`, create a rule with `Store pickup` off.
+2. Select all facility groups, or include the groups that offer pickup, and include products tagged `Bulky`.
+3. Review the `Preview` and save.
+
+**Expected result:** Customers cannot select pickup for furniture tagged `Bulky`.
+
+**Validate:** Use the rule's `Preview` to confirm that matching furniture has `Allow Pickup` turned off in [Configure store pickup rules](store-pickup-rules.md).
+
+## Publish inventory by channel
+
+### Publish regional inventory to Shopify
+
+**Situation:** A connected Canadian Shopify shop needs inventory from a Canadian warehouse and eligible Canadian stores.
+
+Use this recipe when a regional storefront needs a different inventory pool from other Shopify shops.
+
+1. In `Sourcing` > `Channels`, create the `Canada online` inventory channel and link one configuration facility.
+2. Assign the central warehouse and eligible Canadian stores to the channel.
+3. Set a [channel threshold](threshold-rules.md) for `Canada online` in `Sourcing` > `Threshold`.
+4. On `Sourcing` > `Channels`, open `Publish` and find the connected Canadian Shopify shop.
+5. Select `Run time`, `Frequency`, and `Inventory channel` = `Canada online`.
+6. Select `Save changes` and confirm the save.
+7. Run the threshold rule schedule, then run `Import Product Facility` followed by `Process Bulk Import Files` to apply the threshold output before publication. Follow [Verify sourcing changes](#verify-sourcing-changes) for the detailed import sequence and [Import Product Facility](../../workflow/job-workflows/inventory.md#import-product-facility) for the workflow.
+8. Return to the shop card. Use the overflow menu and select `Run now` for an immediate publish, or wait for its saved schedule.
+
+**Expected result:** After the threshold output is successfully imported and the publish job completes, the Canadian Shopify shop publishes inventory from the central warehouse and eligible Canadian stores with the channel threshold applied.
+
+**Validate:** Confirm the channel facilities and threshold, the Canadian Shopify shop's saved publish card, `Sourcing` > `Inventory` > `Channel` > `Reconciliation`, and `Inventory push history` or the publish job's `History`.
+
+## Verify sourcing changes
+
+Use this sequence after changing any sourcing rule. It verifies the generated output and, when available, the resulting inventory values.
+
+1. Open the affected rule category's `Schedule` card. Run the schedule or select `Run now`. The run generates and uploads the product-facility CSV, but does not apply it by itself.
+2. Run `Import Product Facility`, followed by `Process Bulk Import Files`, to import and process the output. See [Import Product Facility](../../workflow/job-workflows/inventory.md#import-product-facility).
+3. With component release `v6.0.0` or later, open `Sourcing` > `Inventory`, use the `Channel` scope, and review `Online ATP`, its computation, `Reconciliation`, and inventory push `History`.
+4. On earlier releases, review sourcing execution history and the connected system instead.
+
+**Expected result:** The processed product-facility output reflects the new sourcing rule, and the channel inventory or connected-system history shows the resulting publish activity.
+
+**Validate:** Review `Execution history` in [Schedule sourcing rules](schedule-atp-rules.md), then use [Review inventory](inventory.md) when your release provides the `Inventory` menu item.

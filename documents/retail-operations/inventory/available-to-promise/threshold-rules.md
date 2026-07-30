@@ -1,83 +1,39 @@
-# Threshold Rules
+---
+description: Hold back channel-level inventory for selected products with threshold rules.
+---
 
-Retail brands sell products across various channels such as offline stores, marketplaces, social media, and their own websites. Managing inventory across these platforms can be challenging, as each channel may have different rules and penalties for order fulfillment delays or rejections. For example, platforms like Amazon impose penalties for delayed fulfillment or rejected orders, which makes managing inventory crucial.
+# Configure threshold rules
 
-To address this, retailers can create threshold rules to maintain a buffer stock for specific channels, reducing the risk of overselling due to inventory inaccuracies. This buffer stock is known as the **Inventory Threshold** and is applied across the network level rather than individual stores, helping ensure there’s a reserve of stock available before committing to online sales channels.
+A threshold holds back inventory after HotWax Commerce combines the inventory contributed by a channel.
 
-For instance, if the brand **NotNaked** sets an Inventory Threshold of 10 units for Blue Shirts across their stores, the Available-to-Promise (ATP) inventory will be adjusted to ensure enough buffer stock is reserved.
+For example, suppose three facilities contribute 90, 90, and 40 available units to one inventory channel. The channel total is 220 units. A threshold of 10 leaves 210 units available before other deductions.
 
-#### Example
+## Create a threshold rule
 
-* Times Square Inventory: 100 Units
-  * Safety Stock: 10 Units
-  * Available Inventory: 100 - 10 = 90 Units
-* Brooklyn Inventory: 100 Units
-  * Safety Stock: 10 Units
-  * Available Inventory: 100 - 10 = 90 Units
-* Broadway Inventory: 50 Units
-  * Safety Stock: 10 Units
-  * Available Inventory: 50 - 10 = 40 Units
+1. Open `Sourcing` > `Threshold`.
+2. Select `Create threshold rule` when the page has no rules, or select the add button.
+3. Enter a unique `Name`.
+4. Enter a non-negative `Threshold` value.
+5. Select one or more channels, or turn on `Select all channels`.
+6. Define the product scope under `Products by tags` and `Products by feature`.
+7. Leave the product filters empty to apply the rule to all products in the selected channels.
+8. Select the save button.
 
-**Total ATP**:\
-90 (Times Square) + 90 (Brooklyn) + 40 (Broadway) = 220 Units
+If no channels are available, select `Create channel` or `Manage channels` from the rule form. See [Create inventory channels](create-channels.md) for the full setup.
 
-Then, subtract the Inventory Threshold from the Total ATP to get the total inventory available for online orders:\
-**Total Inventory for Online Orders** = Total ATP - Threshold\
-\= 220 Units - 10 Units = 210 Units available for online orders.
+## Review and edit rules
 
-Now, let’s walk through how to set up a threshold rule for one inventory channel, such as Shopify, for a Blue Medium-Sized Shirt from the brand NotNaked.
+Expand a rule card to review its threshold value, channels, and product filters.
 
-## Step-by-Step Instructions to Set Up a Threshold Rule for One Inventory Channel
+* Select the threshold value chip to change the value without opening the full form.
+* Select `Edit rule` to change the name, channel scope, or product filters.
+* Select the archive button to remove the rule from the active sequence.
+* Expand `Archived` to restore an archived rule.
 
-### Create Rule
+## Set rule priority
 
-To create a new threshold rule, click the `Add` button located on the `Threshold` page at the bottom right corner. This will open the **Rule Configuration** page, allowing you to set a new inventory threshold.
+The last matching rule in the sequence sets the threshold value for a product and channel.
 
-### Rule Name
+Place a broad base rule before its specific exceptions. Use the sequence button at the bottom of the page, drag the rules into position, then select the save button.
 
-Enter a descriptive and unique name for your threshold rule. For example, you could name it “Shopify Blue Shirt Threshold.” This name will help you easily identify and manage the rule across your sales channels.
-
-### Rule Configuration
-
-Set the threshold value in this section. This value defines the amount of inventory buffer you want to maintain for the selected channel. For this example, set a threshold of 10 units, ensuring that the product maintains 10 network-level safety stock units to mitigate the risk of overselling.
-
-### Selecting Channel
-
-As we discussed previously, network-level inventory configurations on products are done through the `Channel Configuration` facility. Therefore, you will see the list of all the channel configuration facilities here. You can choose the relevant configuration facility to ensure the rules are applied network-wide on that channel.
-
-### Selecting Products
-
-If you want to create a blanket rule to apply the threshold on all products, no product selection is required. However, if you want to apply the threshold rule to specific products, you can select them either by `Product Tag` or `Product Feature`.
-
-#### Selecting Products by Tags
-
-Use the `Include` or `Exclude` options by clicking the add button in the relevant card and selecting product tags synced from your product catalog. For instance, to apply the rule specifically to the Blue Shirt, you would select the “Blue Shirt” tag.
-
-#### Selecting Products by Features
-
-You can also filter products based on specific attributes such as color, size, or category by using the add button. For example, to target the **Blue Shirt** in size **Medium**, select “Color: Blue” and “Size: M” for your threshold rule.
-
-### Saving Configuration
-
-Once you’ve configured the threshold value, selected the channels, and chosen the products, click the `Save` button at the bottom right corner to finalize and save the rule. The system will now apply the threshold, ensuring that the selected product has a 10-unit buffer stock reserved across your chosen channel.
-
-{% embed url="https://youtu.be/KhiHlfEJb9A" %}
-Threshold Rule Setup
-{% endembed %}
-
-## Setting Threshold Rules for Multiple Channels
-
-If you want to create a threshold rule for multiple inventory channels, you will need to create separate channels and select channel configuration facility as per the requirement. To learn how to create new channels and manage threshold configurations, refer to our **Detailed User Manual** for further instructions.
-
-## Schedule Threshold Rule
-
-Retailers can manage the scheduling of the ATP computation job responsible for the threshold rule from the threshold page. By default, ATP computation jobs are scheduled to run at midnight to ensure ATP calculations occur when store traffic is minimal, making the inventory ATP ready before the start of the day.
-
-However, if you have created a new rule and want to compute ATP immediately, you can run a job once by selecting the relevant option from the job's overflow menu.
-
-Once the threshold rules are created, they will be visible as rule cards on the threshold page as per the created rule. Each rule card provides an overview of configurations and product facility selections. Retailers can click the "Edit rule" button to modify rule configurations. The rule configuration can be adjusted by clicking on the threshold chip and updating the number.
-
-{% embed url="https://youtu.be/UekJap0j5dQ" %}
-Scheduling Threshold Rule
-{% endembed %}
-
+For schedule controls and execution history, see [Schedule sourcing rules](schedule-atp-rules.md).

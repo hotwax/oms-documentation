@@ -1,51 +1,63 @@
-# Schedule ATP Rules
+---
+description: Schedule sourcing rule groups, run them on demand, review history, and control rule priority.
+---
 
-Retailers can manage the scheduling of the job responsible for ATP (Available to Promise) rules from the top of the page. By default, ATP rule jobs are scheduled to run at midnight to ensure ATP calculations occur when store traffic is minimal, making the inventory ATP ready before the start of the day.
+# Schedule sourcing rules
 
-Retailers can view the history of job runs, disable a job, or run a job once by selecting the relevant option from the job's overflow menu.
+Each sourcing rule category has its own schedule. Open `Threshold`, `Safety stock`, `Store pickup`, or `Shipping` from the `Sourcing` menu.
 
-After creating a rule, it is necessary to apply it to products in HotWax so ATP can be calculated according to the rules. Applying ATP rules is a two-step process:
+The `Schedule` card appears after the category or selected tab contains an active rule.
 
-**Step 1: Schedule Rules**
+## Start a recurring schedule
 
-First, schedule the rule categories like Threshold, Safety Stock, Store Pickup, or Shipping in the ATP App. For each category, a separate CSV file is generated containing all products matching the rules. These CSV files are then uploaded to a dedicated SFTP location.
+1. Open the required sourcing rule page.
+2. Review the `Schedule` card.
+3. Select `Schedule`.
+4. Confirm that the card shows the next run time instead of `Paused`.
 
-**Step 2: Schedule `Import Product Facility Job`**
+The current rule schedule runs daily at midnight.
 
-Next, schedule the “Import Product Facility” job in the [Job Manager App](/documents/system-admin/administration/user-permissions/job-manager-app.md). This step imports the CSV files into HotWax, where ATP is computed based on the applied rules.
+## Run rules now
 
-Each rule card provides an overview of configurations and product facility selections. Retailers can click the "Edit rule" button to modify rule configurations.\
-The rule configuration can be adjusted by toggling the store pickup and shipping options on or off, or by setting values for threshold and safety stock by clicking on the number chips.
+Use `Run now` after creating or changing a rule when you do not want to wait for the recurring schedule.
 
-## Understanding the Cascade of Inventory Rule
+1. Open the overflow menu on the `Schedule` card.
+2. Select `Run now`.
+3. Review the warning.
+4. Select `Run now` again.
 
-Each omnichannel configuration, safety stock, threshold, BOPIS, and shipping can have multiple rules to target specific product and facility selections. Since there are multiple rules for each configuration type, products and facilities may overlap among rules. When this occurs, the last rule in the sequence of rules overrides previous rules for a unique combination of products and facilities.
+Running the schedule now creates an immediate copy. It does not replace the recurring schedule.
 
-Consider a retailer who wants to set different inventory thresholds for general shirts and blue shirts. The retailer sets a threshold of 5 for all shirts, allowing a minimum of 5 shirts to be available as network-level buffer stock. However, for blue shirts, the retailer wants to increase the threshold to 10 to ensure enough is available for demand.
+{% hint style="warning" %}
+A recurring or immediate sourcing-rule run generates and uploads the product-facility CSV. It does not apply the generated values in HotWax Commerce by itself. Schedule `Import Product Facility`, followed by `Process Bulk Import Files`, to import and process the output. See [Import Product Facility](../../workflow/job-workflows/inventory.md#import-product-facility).
+{% endhint %}
 
-To achieve this, the retailer would create two rules:
+## Review execution history
 
-1. **General Shirt Rule** (Threshold set to 5 shirts)
-   * Applies to all shirts, allowing a minimum of 5 shirts to be available as network-level buffer stock.
-2. **Blue Shirt Rule** (Threshold set to 10 shirts)
-   * Applies only to blue shirts, requiring a minimum of 10 blue shirts to be available as network-level buffer stock.
+1. Open the overflow menu on the `Schedule` card.
+2. Select `History`.
+3. Review the entries in `Execution history`.
 
-These rules should be listed in the correct sequence to ensure that the specific blue shirt rule overrides the general shirt rule for blue shirts while maintaining the broader threshold for all other shirts.
+## Disable a schedule
 
-A balloon icon in the bottom right corner allows retailers to collapse or expand the inventory rules. Retailers can collapse the inventory rules to rearrange the sequencing of the inventory rules according to the cascade.
+1. Open the overflow menu on the `Schedule` card.
+2. Select `Disable`.
+3. Confirm that the schedule card displays `Paused`.
 
-{% embed url="https://youtu.be/EYvFXLzoe88" %}
-Change Rule Sequence
-{% endembed %}
+Disabling a schedule stops future recurring runs. It does not remove the sourcing rules.
 
-## Base Rule
+## Set rule priority
 
-Some inventory rules only apply when a product matches a specific tag or condition. When the product no longer matches that condition, the rule stops applying.
+Rules run in list order. The last matching rule sets the final value for the same product and facility combination.
 
-If there’s no other rule available for that product, it gets left in the last assigned state. The last assigned state may not be what the retailer actually wants the default state to be.
+1. Select the sequence button at the bottom of the page.
+2. Drag broad rules before specific rules.
+3. Select the save button.
 
-Suppose a product has a pre-order tag and requires a different inventory threshold. A rule is created to set the threshold to 10 units for that product. This rule only works for products with the preorder tag.
+For example, place a five-unit threshold for all shirts before a 10-unit threshold for blue shirts. Products that match the blue-shirt rule receive the more specific value.
 
-Now, if the tag is removed from a product, the product won’t qualify for the rule anymore because it no longer has the required tag. However, the threshold of 10 that has been set won't go back to the default level just because the tag is removed.
+Create a broad base rule when a product needs a default value after it stops matching a specific rule.
 
-To avoid this, a base rule can be added to set a default threshold of 5 units for all products. So even if a product loses the preorder tag, it still follows the base rule. 
+## Archive a rule
+
+Select the archive button on a rule card to remove it from the active sequence. Expand `Archived` to review or restore archived rules.

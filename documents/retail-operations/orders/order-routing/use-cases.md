@@ -1,418 +1,238 @@
-# Use Cases
+---
+description: Build common order routing strategies with routing groups, routings, and routing rules.
+---
 
-This section contains use cases designed to help you understand how various scenarios can be handled in the HotWax Commerce Order Routing App. These use cases are written as if you are creating a brokering run for the first time, ensuring simplicity and clarity for new users.
+# Build common routing strategies
 
-However, if you already have an existing brokering run and want to maintain the same schedule, you don’t need to create a new run. Simply add the routing rules from these cases to the relevant existing runs. This way, you can enhance your current routing logic without altering your established workflows.
+Use these examples as starting points for your routing configuration. Replace the example queues, shipping methods, facility groups, distances, and schedules with values from your HotWax Commerce Omnichannel Order Management System (OMS).
 
-## Scenario 1: Fulfilling Marketplace Orders from Warehouse
+A routing configuration has three levels:
 
-A retailer wants to ensure that all orders placed through various marketplaces are fulfilled exclusively from their warehouse. This scenario is common for businesses that prefer to manage marketplace orders separately due to specific logistical or contractual obligations.
+1. Create a routing group and set its schedule.
+2. Add routings that select and sequence orders.
+3. Add routing rules that select facilities and define what happens to unavailable items.
 
-### Pre-Requisites for This Scenario
+Review [routing group configuration](routing-group-details.md), [routing configuration](routing-rules.md), and [routing rule configuration](inventory-rules.md) before you activate a new strategy.
 
-* **Marketplace\_sales\_channel** must be created in HotWax Commerce and mapped with the relevant [sales channels in Shopify](https://docs.hotwax.co/documents/learn-shopify/setup-shopify/integration-mapping/sales-channel-mapping).
-* A [facility group must be created](https://docs.hotwax.co/documents/system-admins/administration/facilities/manage-groups) in HotWax Commerce with the **Brokering\_group** subtype, which includes all warehouse locations.
+## Choose a strategy
 
-### Steps to Implement
+Use this table to find a recipe. A recipe helps you solve one routing decision. Use a template when several routing decisions must work together.
 
-#### Create Run
+| Business goal | Suggested recipe | Complete template |
+| --- | --- | --- |
+| Route marketplace orders or select a work queue | [Route marketplace orders from warehouses](#route-marketplace-orders-from-warehouses), [retry rejected order items](#retry-rejected-order-items), or [escalate orders by promise date](#escalate-orders-by-promise-date) | [Inventory-based shipping](template/inventory-based-shipping.md) for rejected and expedited orders across stores |
+| Use warehouses before stores | [Try warehouses before stores](#try-warehouses-before-stores) | None |
+| Prefer nearby facilities | [Prefer nearby facilities](#prefer-nearby-facilities) | None |
+| Prefer lower-cost stores | [Prefer stores with lower fulfillment cost](#prefer-stores-with-lower-fulfillment-cost) | None |
+| Protect or rebalance store inventory | [Protect store inventory with safety stock](#protect-store-inventory-with-safety-stock) or [clear slow-moving store inventory](#clear-slow-moving-store-inventory) | [Inventory-based shipping](template/inventory-based-shipping.md) |
+| Keep items together | [Keep grouped items together](#keep-grouped-items-together) | None |
+| Change store participation for a peak period | [Reduce store routing during peak periods](#reduce-store-routing-during-peak-periods) | None |
+| Route orders across countries | [Apply a complete template](#apply-a-complete-template) | [Cross-border shipping](template/cross-border-shipping.md) |
 
-To create a new brokering run for marketplace orders, begin by opening the Order Routing App. If you are managing multiple product stores, select the relevant store to ensure marketplace orders are routed correctly. Next, click on New Run and name the run something clear and specific, such as “Marketplace Order Routing,” to easily identify its purpose. Add a description like “Routing all marketplace orders through warehouse locations only” to provide clarity for your team. Finally, navigate to the Scheduler card and set the appropriate frequency for this routing run, ensuring marketplace orders are processed on time.
+## Prepare HotWax Commerce
 
-#### Create Routing Rules
+Complete the setup that applies to your strategy:
 
-To set up routing rules for marketplace orders, first, select the previously created routing run for marketplace orders in the Order Routing App. This ensures the routing rule is linked to the correct run.
+* [Create facility groups](../../../system-admin/administration/facilities/manage-groups.md) for warehouses, stores, or other eligible locations.
+* [Map Shopify sales channels](../../../learn-shopify/setup-shopify/integration-mappings/sales-channel.md) before you filter orders by channel.
+* [Map Shopify shipping methods](../../../learn-shopify/setup-shopify/integration-mappings/shipping-method.md) before you filter or sort orders by service level.
+* Confirm the queue names used for new, rejected, and unfillable order items in your OMS.
 
-In the next step, apply the necessary configurations:
-
-* **Order Filter:** Use the Sales Channel filter to include only marketplace orders, ensuring orders from Shopify or other marketplaces are grouped and brokered separately from other channels.
-* **Order Sort:** Set the sorting criteria to Order Date. This ensures that older marketplace orders are prioritized for inventory allocation, following a first-in, first-out (FIFO) approach.
-
-#### Create Inventory Rule
-
-To create inventory rules for marketplace orders, first ensure that the appropriate routing rule for marketplace orders is selected, then click on Add Inventory Rule. Once the inventory rule is created, follow these steps:
-
-* **Inventory Filter:** Apply the Facility Group filter and select the group for warehouses only. This ensures that the inventory from warehouse locations is considered for the routing.
-* **Inventory Sort:** Sort the inventory by proximity to the customer’s delivery address. This helps minimize shipping costs by prioritizing inventory that is closer to the destination.
-* **Actions:** If inventory is unavailable, toggle on Partial Fulfillment to allow order splitting. For completely unavailable inventory, select Send Orders to Queue and assign them to the `Unfillable Queue` for further processing.
-
-<figure><img src="../../.gitbook/assets/marketplace-orders-routing.png" alt=""><figcaption><p>Marketplace Orders Routing</p></figcaption></figure>
-
-## Scenario 2: Fulfilling eCommerce Orders from Warehouse and Stores
-
-Retailers often prefer to fulfill eCommerce orders from their warehouse first, but when inventory is unavailable, the orders should be routed to retail stores for fulfillment. This helps ensure that orders are not delayed and inventory is optimized across all available locations.
-
-### Pre-Requisites for This Scenario
-
-To implement this scenario, you need to [create two facility groups](https://docs.hotwax.co/documents/system-admins/administration/facilities/manage-groups) in HotWax Commerce. First, create a **Warehouses** facility group under the Brokering_Group subtype, which will include all your warehouse locations. Second, create a **Stores** facility group, also under the Brokering_Group subtype, to ensure that all retail store locations are available for routing when necessary. These facility groups ensure a clear separation of inventory between warehouses and retail stores.
-
-### Steps to Implement
-
-#### Create Run
-
-To create a new brokering run for eCommerce orders, open the `Order Routing App`. If your system manages multiple product stores, be sure to select the relevant store from the bottom-left switcher to ensure the correct routing. Click on `New Run`, and give it a clear name such as "eCommerce Order Routing." This naming convention will help easily identify the run for future use. In the description field, add something like "Prioritizing warehouse fulfillment, with store fallback" to clarify the purpose of the run for the rest of your team. Finally, navigate to the `Scheduler card` to set the run's frequency. This ensures that eCommerce orders are processed in a timely manner.
-
-#### Create Routing Rules
-
-To configure the routing rules for eCommerce orders, first, ensure that the **eCommerce Order Routing** run is selected.
-
-* **Order Filter**: Use the `Sales Channel filter` to select only eCommerce orders. This will group and broker orders specifically from your eCommerce channel, keeping them separate from orders placed through other sales channels.
-* **Order Sort**: Set the sorting criteria to `Order Date`. This ensures that older orders are processed first, following a first-in, first-out (FIFO) model for order fulfillment.
-
-#### Create Inventory Rules
-
-Now, create inventory rules to route orders through the appropriate facilities. First, make sure that the correct **eCommerce Order Routing** rule is selected, then click on `Add Inventory Rule`.
-
-* **First Inventory Rule for Warehouses**\
-  The first rule ensures that orders are fulfilled from warehouse locations:
-  * **Inventory Filter**: Apply the `Facility Group filter` and select the group for **Warehouses** only, ensuring that orders are initially routed through the warehouse locations for fulfillment.
-  * **Inventory Sort**: Sort by `proximity` to the customer’s delivery address to help minimize shipping costs, prioritizing fulfillment from warehouses closest to the destination.
-  * **Actions**: If inventory is unavailable at the warehouses, set the rule to send the order to the next inventory rule, allowing the system to route the order to available retail stores. If you want to allocate partially available inventory from the warehouse to the orders, turn on the toggle for Partial Fulfillment.
-* **Second Inventory Rule for Stores**\
-  The second rule is triggered when the warehouse is unable to fulfill the order:
-  * **Inventory Filter**: Apply the `Facility Group filter` and select the group for **Stores**, allowing the system to route orders through retail store locations as a secondary option.
-  * **Sort Inventory**: Sort by `proximity` to the customer’s delivery address, helping to minimize shipping costs by routing orders to the nearest store.
-  * **Actions**: If the inventory is also unavailable in the stores, send the order to the `Unfillable Queue` for further processing, ensuring that orders that cannot be fulfilled are properly handled. Allow partial fulfillment by turning on the toggle to allow order splitting and ensure available items are fulfilled.
-
-#### Activate and Schedule
-
-Once the routing rules and inventory rules are set up, the next step is to activate the rules and schedule the run. First, change the status of the **eCommerce Order Routing** run from `Draft` to `Active`. This makes the run ready for live processing. After that, activate the inventory rules for both warehouses and stores, ensuring they are applied during the routing process. Finally, schedule the routing run by setting the frequency at which it should occur, ensuring that eCommerce orders are brokered and fulfilled without delays.
-
-{% embed url="https://youtu.be/kutfVODG4LQ" %}
-eCommerce Orders Routing
-{% endembed %}
-
-## Scenario 3: Re-Routing Rejected Orders
-
-When orders is rejected from stores due to inventory unavailability, the order routing engine automatically re-routes the rejected orders to the next best location with available inventory. This ensures fulfillment while minimizing cancellations, and improving operational efficiency and customer satisfaction.
-
-### Steps to Implement
-
-#### Create Run
-
-Start by creating a new brokering run for rejected orders in the `Order Routing App`. Click on `New Run` and name it something clear, such as “Rejected Orders Re-Routing.” Add a description like "Re-routing rejected orders to available locations" for better team understanding. Finally, navigate to the `Scheduler card` to set the frequency for this routing run, ensuring that rejected orders are handled in a timely manner.
-
-#### Create Routing Rules
-
-Once the run is created, set up the routing rules for re-routing rejected orders.
-
-* **Order Filter**: Apply the `Queue Filter` in the order batch settings and select the `Rejected Order Item` queue. This ensures that only rejected orders are included in this batch.
-* **Order Sort**: Set the sorting criteria to `Order Date`, ensuring that the oldest rejected orders are reprocessed first, following a first-in, first-out (FIFO) method.
-
-#### Create Inventory Rule
-
-Now, create an inventory rule that routes orders to the best available location.
-
-* **Inventory Filter**: If you are checking the inventory at all locations, without any additional filters, you don't have to add inventory rule here.
-* **Inventory Sort**: Sort by `proximity` to the customer’s delivery address to minimize shipping costs.
-* **Actions**: If inventory is unavailable across all locations, select one of the following options:
-  * If you want to split the order to allocate the inventory for the items available, turn on the toggle for partial rejection.
-  * If you have another inventory rule for further allocation, select send to `Next Rule` to attempt routing based on the next rule.
-  * If no further rules exist, select send to `Unfillable Queue` to handle orders manually or through alternative processes.
-
-#### Activate and Schedule
-
-Once the routing and inventory rules are configured, activate the **Rejected Orders Re-Routing** run by changing its status from `Draft` to `Active`. Then, schedule the routing runs to ensure timely re-routing of rejected orders at regular intervals.
-
-<figure><img src="../../.gitbook/assets/rerouting-rejected-orders.png" alt=""><figcaption><p>Rerouting Rejected Orders</p></figcaption></figure>
-
-## Scenario 4: Proximity-Based Order Routing
-
-Retailers may want to fulfill orders from locations closest to the customer to minimize delivery times and costs. By applying a proximity-based routing strategy, businesses can improve both operational efficiency and customer satisfaction.
-
-### Steps to Implement
-
-#### Create Run
-
-To start, open the `Order Routing App` and create a new brokering run for proximity-based routing. Name the run something descriptive, such as "Proximity Order Routing." In the `Scheduler card`, set the appropriate frequency for the run to ensure timely processing of orders based on proximity.
-
-#### Create Routing Rules
-
-Once the run is created, define the routing rules to prioritize fulfillment based on customer proximity.
-
-* **Order Filter**: Apply the `Queue Filter` to select the `Brokering Queue`. By default, orders from all queues will be included. If you need to focus on a specific queue, select accordingly.
-* **Order Sort**: Sort the orders by `Order Date`. This ensures that older orders are given priority in the routing process, following a first-in, first-out (FIFO) approach.
-
-#### Create Inventory Rule
-
-Now, configure the inventory rule to allocate stock based on proximity.
-
-* **Inventory Filter**: Apply the `Proximity Filter` with a specified distance (e.g., 50 miles). This ensures that orders are routed to locations within the defined proximity of the customer’s delivery address.
-* **Inventory Sort**: Sort the inventory by `Proximity`. This ensures that the nearest fulfillment locations are prioritized for order allocation.
-* **Actions**: If you want to split the order to allocate the inventory within 50 miles for the items available, turn on the toggle for partial rejection. In case of inventory unavailability, you can choose to send the order to the next rule if you want to broaden the search beyond 50 miles, select the option to send the order to the next inventory rule. Alternatively, if you want to limit fulfillment to locations within 50 miles and no inventory is available, send the order to the `Unfillable Queue` for further action.
-
-#### Activate and Schedule
-
-Once the rules are set up, activate the proximity-based rules and routing run by changing the status from `Draft` to `Active`. Then, schedule the routing run at regular intervals to ensure efficient processing of orders based on proximity.
-
-<figure><img src="../../.gitbook/assets/proximity-based-routing.png" alt=""><figcaption><p>Proximity Based Routing</p></figcaption></figure>
-
-## Scenario 5: Minimum Stock Availability
-
-Retailers need to balance in-store inventory for walk-in customers while fulfilling online orders. To do this, they want to allocate online orders only to locations with sufficient stock, ensuring that in-store inventory is preserved. Using the `Brokering Safety Stock` feature allows retailers to set a minimum stock threshold for order allocation, protecting essential inventory for physical store customers.
-
-### Steps to Implement
-
-#### Create Run
-
-Open the `Order Routing App` to begin creating a new brokering run. Name the run something like "Minimum Stock Order Routing" for clarity, and provide a description such as "Allocating online orders only to locations meeting minimum stock levels." Then, in the `Scheduler card`, set the appropriate frequency for the routing run to ensure the timely processing of orders.
-
-#### Create Routing Rules
-
-Define the routing rules to ensure online orders are routed only to locations that meet the minimum stock levels for each item.
-
-* **Order Filter**: Apply the `Brokering Queue` filter to route orders from the appropriate queue.
-* **Order Sort**: Sort orders by `Order Date` to prioritize older orders in the routing process, ensuring a first-in, first-out (FIFO) approach.
-
-#### Create Inventory Rules
-
-Set up inventory rules that ensure fulfillment is done only from locations that meet the required stock levels.
-
-* **First Inventory Rule**:
-  * **Inventory Filter**: Apply the `Brokering Safety Stock` filter and define the minimum stock level required for inventory allocation. For example, if the `Brokering Safety Stock` is set to greater than 10, the inventory will only be allocated if the store has more than 10 units of that item available. This ensures that walk-in customers have access to sufficient stock._
-  * **Inventory Sort**: Sort the inventory by `Inventory Balance` to prioritize locations with higher stock levels.
-  * **Action**: If no location can fulfill the entire order based on the first rule, select the option to `Send to Next Rule`.
-* **Second Inventory Rule**:
-  * **Inventory Filter**: No specific filter is selected, as inventory can be allocated from any available location.
-  * **Inventory Sort**: Sort the inventory by `Inventory Balance` to prioritize locations with the most available stock.
-  * **Action**: If partial fulfillment is allowed, enable `Allow Partial Fulfillment` to split the order between multiple locations. If partial allocation is not an option, select `Send to Unfillable Queue`.
-
-#### Activation and Scheduling
-
-Activate both inventory rules and the order routing batch. Ensure that the rules are in effect by changing the status of the batch from `Draft` to `Active`. Lastly, schedule the routing runs to occur at regular intervals, ensuring efficient and timely fulfillment of online orders while maintaining adequate stock levels for in-store customers.
-
-{% embed url="https://youtu.be/eGIvwQWvNm4" %}
-Set Brokering Safety Stock
-{% endembed %}
-
-## Scenario 6: Managing Store Fulfillment Based on Rent Agreements
-
-Retailers who manage stores with varying rent agreements, especially those in malls where rent is tied to sales revenue, need to optimize order routing to avoid giving commissions to the malls. By prioritizing the stores that are not in malls, retailers can increase profitability.
-
-### Prerequisites for This Scenario
-
-Ensure that [facility groups are created](https://docs.hotwax.co/documents/system-admins/administration/facilities/manage-groups) for stores with fixed rental agreements.
-  * **Fixed Rent Stores**: Group stores with fixed or lower rent costs.
-  * **All Stores**: Group all stores to use as a fallback for order fulfillment when necessary.
-
-### Steps to Implement
-
-#### Create Run
-
-Open the `Order Routing App` and set up a new brokering run. Name the run something like "Fixed Rent Store Fulfillment" to indicate that this run prioritizes stores with fixed or lower rent costs. In the `Scheduler card`, set the appropriate frequency for routing to ensure orders are processed at regular intervals.
-
-#### Create Routing Rules
-
-Define routing rules to prioritize cost-effective fulfillment locations.
-
-* **Order Filter**: Apply the `Brokering Queue` filter to route orders from the appropriate queue.
-* **Order Sort**: Sort orders by `Order Date` to prioritize older orders in the routing process.
-
-#### Create Inventory Rules
-
-Set up inventory rules to ensure fulfillment is prioritized based on store rent agreements.
-
-* **First Inventory Rule**:
-  * **Inventory Filter**: Select the facility group created for stores with fixed or lower rent costs.
-  * **Inventory**: Sort inventory by `Inventory Balance` to prioritize locations with sufficient stock levels in these low-rent stores.
-  * **Action**: If no location can fulfill the order based on this rule, select the option to `Send to Next Rule`.
-* **Second Inventory Rule**:
-  * **Inventory Filter**: Select the facility group that includes all stores to broaden the search to any available location.
-  * **Inventory Sort**: Sort inventory by `Inventory Balance` to prioritize locations with the most available stock.
-  * **Action**: If partial fulfillment is allowed, enable `Allow Partial Fulfillment` to split the order between multiple locations. If partial allocation is not an option, select `Send to Unfillable Queue`.
-
-#### Activation and Scheduling
-
-Activate both inventory rules and the order routing batch. Ensure that the rules are active and schedule the brokering runs to execute at regular intervals, ensuring efficient and cost-effective fulfillment of online orders while managing rental costs.
-
-{% embed url="https://youtu.be/sAvLINYU7O4" %}
-Store Fulfillment Based on Store Rent
-{% endembed %}
-
-## Scenario 7: Balancing Shipping Costs and Distance with Split Shipments
-
-Retailers need to balance the cost of shipping, which is influenced by both the distance and the number of shipments. The goal is to minimize shipping costs by considering when it's more cost-effective to ship from multiple locations versus a single distant location. This scenario is particularly relevant for retailers with stores and warehouses spread across a wide geographic area.
-
-### Steps to Implement
-
-#### Create Run
-
-Open the `Order Routing App` and create a new brokering run. Name it "Proximity and Cost-Based Shipping" to reflect that the routing will balance shipping costs with distance and split shipments when necessary. Set up a regular schedule for the run to ensure continuous order processing.
-
-#### Create Routing Rules
-
-Define routing rules to balance shipping costs and minimize the distance of fulfillment.
-
-- **Order Filter**: Apply the `Brokering Queue` filter to ensure that orders from the correct queue are routed.
-- **Order Sort**: Sort orders by `Order Date` to ensure older orders are fulfilled first.
-
-#### Create Inventory Rules
-
-Define a series of four inventory rules to balance shipping costs with proximity and partial allocation options.
-
-- **First Inventory Rule**:
-  - **Inventory Filter**: Apply a `Proximity Filter` to limit the search to locations within 100 miles.
-  - **Inventory Sort**: Sort the inventory based on `Proximity` to prioritize the nearest locations.
-  - **Action**: Disable partial allocation to ensure that the entire order is fulfilled from a single location within 100 miles. If no location can fulfill the order, send to the `next rule`.
-
-- **Second Inventory Rule**:
-  - **Inventory Filter**: Apply the same `Proximity Filter` of 100 miles.
-  - **Inventory Sort**: Sort the inventory based on `Proximity`.
-  - **Action**: Enable partial allocation to allow the order to be split across multiple locations within the 100-mile proximity. If the order cannot be fully allocated, send it to the `next rule`.
-
-- **Third Inventory Rule**:
-  - **Inventory Filter**: Remove the inventory filter to expand the search to distant locations without any proximity constraints.
-  - **Inventory Sort**: Sort the inventory based on `Proximity`.
-  - **Action**: Disable partial allocation to require the entire order to be fulfilled from a single, distant location. If no single distant location can fulfill the order, send it to the `next rule`.
-
-- **Fourth Inventory Rule**:
-  - **Inventory Filter**: Allow all available locations to be included.
-  - **Inventory Sort**: Sort the inventory based on `Proximity`.
-  - **Action**: Enable partial allocation to allow the order to be split across all available locations. If the order still cannot be fulfilled, send it to the `unfillable queue`.
-
-#### Activation and Scheduling
-
-Activate all inventory rules and ensure that the order routing batch is active. Schedule the brokering runs to execute at regular intervals, ensuring a balance between shipping cost and distance while also handling split shipments when required.
-
-{% embed url="https://youtu.be/K59lNhHtKMM" %}
-Balance Shipping Cost and Distance with Split Shipments
-{% endembed %}
-
-> Note: To further minimize the high cost of shipping due to order splitting, you can use the [shipment threshold](./additional-settings.md) feature of HotWax Commerce.
-
-## Scenario 8: Managing Order Splitting for Grouped Items (Kits and Gift Items)
-
-Retailers often face scenarios where certain items in an order must be shipped together, while other items can be shipped separately. For example, if a customer orders a frame and lenses along with sunglasses, the frame and lenses must be shipped together, but the sunglasses can be shipped from a different location. In such cases, items like the frame and lenses are grouped to ensure they are always shipped together.
-
-HotWax Commerce allows retailers to manage these scenarios by disabling the splitting of grouped items while keeping the option to split other items in the order. This ensures that grouped items, which are critical to be shipped together, are handled appropriately, while other non-grouped items can still be split for faster fulfillment.
-
-#### Create Run
-
-Set up a brokering run in the `Order Routing App` and label it “Grouped and Split Shipments” to manage orders containing both grouped and non-grouped items.
-
-#### Create Routing Rules
-
-Set up routing rules to manage the overall flow of orders.
-
-- **Order Filter**: Apply the `Brokering Queue` filter to prioritize orders correctly.
-- **Order Sort**: Sort by `Order Date` to process the oldest orders first.
-
-#### Create Inventory Rules
-
-Define three inventory rules that control how grouped and non-grouped items are allocated, with specific actions for each rule.
-
-- **First Inventory Rule**:
-  - **Inventory Filters**: Since no specific inventory filters are needed for this scenario, no filters are applied.
-  - **Inventory Sort**: Sort inventory based on `Proximity` to prioritize fulfillment from the closest locations.
-  - **Action**: Disable both `Partial Fulfillment` and `Split Grouped Items` to ensure that the entire order, including grouped items, is fulfilled from a single location. If no location can fulfill the order, send it to the next rule.
-
-- **Second Inventory Rule**:
-  - **Inventory Filters**: No filters are applied here as well.
-  - **Inventory Sort**: Continue sorting by `Proximity` to ensure the closest locations are prioritized.
-  - **Action**: Enable `Partial Fulfillment` to allow non-grouped items to be split across multiple locations but keep `Split Grouped Items` disabled to ensure grouped items stay together. If unavailable, send the order to the next rule.
-
-- **Third Inventory Rule**:
-  - **Inventory Filters**: Again, no filters need to be applied here.
-  - **Inventory Sort**: Sort by `Proximity` again to prioritize fulfillment from nearby locations.
-  - **Action**: Enable both `Partial Fulfillment` and `Split Grouped Items` to allow the entire order, including grouped items, to be split across multiple locations. If no fulfillment is possible, send the order to the unfillable queue.
-
-#### 4. Activation and Scheduling
-
-Activate all inventory rules and ensure the brokering run is scheduled to process orders at regular intervals. This setup ensures that grouped items like kits are handled together while non-grouped items can be split for faster delivery, based on the retailer’s fulfillment strategy.
-
-{% embed url="https://youtu.be/bPBdwJZ6Tm8" %}
-Managing Order Splitting
-{% endembed %}
-
-## Scenario 9: Routing Online Orders During the Holiday Season
-
-During the holiday season, stores experience high foot traffic and increased operational load. Retailers often want to reduce store-level fulfillment while keeping online orders protected from stockouts. This order routing configuration helps in routing all online orders to warehouses first and uses selected store locations only when warehouse inventory is unavailable.
-
-### Prerequisites for This Scenario
-Before starting holiday season order routing, daily order routing should be turned off. Optionally, order limits can be enabled for stores so that only a maximum number of orders are routed to stores being used as fallback locations.
-
-### Steps to Implement
-
-#### Create Run
-Create a new brokering run in the `Order Routing App` for holiday season orders. Click on `New Run`, name it “Holiday Season Routing,” and add a short description such as “Prioritize warehouses for all online orders during the holiday season.” Then, use the Scheduler card to set the run frequency so orders are routed on time.
-
-#### Create Order Batches
-Click on the `New` button to create a new batch, for example, Standard orders.
-
-#### Create Routing Rules
-After creating an order batch, click on it to open it and configure the routing rules for holiday season online orders.  
-- **Order Filter**: Apply the `Queue Filter` and select the `Brokering Queue`.
-- **Order Sort**: Set sorting to `Order Date`, so orders route in FIFO sequence.
-
-#### Create Inventory Rules
-Click on `Add Inventory Rules` to create inventory rules for routing orders through the appropriate facilities.
-
-- **First Inventory Rule**
-  The first rule ensures that orders are fulfilled from warehouse locations:
-  - **Inventory Filter**: Apply the Facility Group filter and select the Warehouse group so orders are routed to warehouses first.
-  - **Inventory Sort**: Sort by proximity to the customer’s delivery address to minimize shipping costs while meeting the promised SLAs faster by routing orders to the nearest warehouse.
-  - **Actions**: If inventory is unavailable at warehouses, configure the rule to move the order to the next inventory rule, allowing routing to retail stores as fallback locations. To allocate partially available warehouse inventory, enable the `Partial Fulfillment` toggle.
-
-- **Second Inventory Rule**
-  The second rule is triggered when the warehouse is unable to fulfill the order:
-
-  - **Inventory Filter**: Apply the Facility Group filter and select the Fallback Locations group to route orders to retail stores as a secondary option.
-  - **Inventory Sort**: Sort by proximity to the customer’s delivery address, helping to minimize shipping costs by routing orders to the nearest store.
-  - **Actions**: If inventory is unavailable at fallback locations, route the order to the `Unfillable Queue` for further processing. Enable the `Partial Fulfillment` toggle to allow order splitting so available items can still be fulfilled.
-
-#### Activation and Scheduling
-After setting up routing and inventory rules, activate the Holiday Season Routing run by changing its status from `Draft` to `Active`. Then, activate the inventory rules for both warehouses and fallback locations. Finally, schedule the run by setting its frequency to ensure holiday season orders are routed without delays.
-
-{% embed url="https://drive.google.com/file/d/18E0F6nN1icsn-L3aI-4umUj_Qea8DoVe/view?usp=sharing" %}
-Holiday Season Order Routing
-{% endembed %}
-
-## Scenario 10: Clearing slow-moving store inventory without depleting high-demand stores
-
-Retailers often need to clear aging or slow-moving inventory from some stores while protecting locations where the same item is selling quickly to walk-in customers. If order routing only looks at available units, a high-demand store can be selected simply because it has inventory on hand. That may fulfill the online order, but it can also create a store stockout and cause missed in-store sales.
-
-[Weeks of Supply routing](weeks-of-supply-routing.md) helps retailers use online demand to improve inventory productivity. Stores with deeper cover are prioritized for fulfillment, while stores with lower cover are deprioritized because their inventory is already needed for local demand.
-
-### Pre-Requisites for This Scenario
-
-Before configuring this scenario, make sure sales velocity is available for store inventory. The Weeks of Supply score depends on the relationship between current inventory and sales velocity, so stale or missing sales velocity can reduce the usefulness of this strategy.
-
-You should also create a facility group for the locations you want to evaluate, such as:
-
-* **Stores**: All ship-from-store locations
-* **Outlet Stores**: Locations that should be prioritized for clearing older inventory
-* **Eligible Store Fulfillment Locations**: Stores that have the staffing and operational capacity to fulfill online orders
-
-### Steps to Implement
-
-#### Create Run
-
-Create a brokering run in the `Order Routing App` for store inventory balancing. Name the run something clear, such as “Store Inventory Balancing,” and add a description like “Route online orders from stores with higher Weeks of Supply before stores with high walk-in demand.”
-
-#### Create Routing Rules
-
-Create an order batch for the online orders that should use this routing strategy.
-
-* **Order Filter**: Apply the `Queue Filter` and select the `Brokering Queue`, or apply the relevant sales channel filter if only eCommerce orders should use this logic.
-* **Order Sort**: Sort orders by `Order Date` so older orders are evaluated first.
-
-#### Create Inventory Rules
-
-Use multiple inventory rules so the routing engine first tries the best store inventory balancing option, then falls back to broader fulfillment options if needed.
-
-* **First Inventory Rule**: Use stores with deeper coverage
-  * **Inventory Filter**: Apply the Facility Group filter and select the store group you want to evaluate. Add the `Week of Supply` filter value to define the coverage period used for the calculation.
-  * **Inventory Sort**: Select `Week of Supply` so the routing engine attempts stores with the highest inventory cover first.
-  * **Actions**: If no store can fulfill the order, send unavailable items to the `Next Rule`.
-* **Second Inventory Rule**: Keep the customer promise
-  * **Inventory Filter**: Add a Proximity filter or warehouse Facility Group filter, depending on the retailer’s fulfillment strategy.
-  * **Inventory Sort**: Sort by Proximity if delivery speed and shipping cost are more important at this stage.
-  * **Actions**: If inventory is still unavailable, send the order to the `Unfillable Queue` or allow partial fulfillment if the business accepts split shipments.
-
-#### Activation and Scheduling
-
-Activate the brokering run and both inventory rules after confirming the sequence. Schedule the run based on how aggressively you want to clear slow-moving inventory. For example, a retailer may run this strategy more frequently during end-of-season clearance and less frequently during new product launches when protecting store presentation is more important.
-
-{% hint style="info" %}
-Use Weeks of Supply with other inventory rules instead of treating it as the only routing signal. Facility Group defines which stores are eligible, Proximity protects delivery promises, Brokering Safety Stock protects minimum units, and Weeks of Supply decides which eligible store has the healthiest inventory cover for fulfillment.
+{% hint style="warning" %}
+Changes remain in a working copy until you click `Save`. Review the full routing group before you save and activate it.
 {% endhint %}
+
+## Select and prioritize orders
+
+### Route marketplace orders from warehouses
+
+Situation: A marketplace requires its orders to ship from warehouses, while direct-to-consumer orders can use the wider network. Use this recipe when the marketplace `Sales Channel` is mapped and the warehouse group is ready.
+
+| Level | Configuration |
+| --- | --- |
+| [Routing group](routing-group-details.md) | Create `Marketplace order routing` and choose a schedule that matches the marketplace service-level agreement. |
+| [Routing](routing-rules.md) | Filter by the marketplace `Sales Channel` and sort by `Order date` to process older orders first. |
+| [Routing rule](inventory-rules.md) | Filter by the warehouse `Group`, sort by `Proximity`, and move unavailable items to the final exception `Queue`. |
+
+Turn on `Allow partial allocation` only when the marketplace accepts split shipments.
+
+Expected result: Marketplace items are attempted at warehouses and any unfillable items wait in the exception queue.
+
+Validate: Use a known marketplace order to confirm that the routing selects its `Sales Channel`, then review the first run in `History`.
+
+### Retry rejected order items
+
+Situation: A rejected item becomes available again and should be retried before new orders. Use this recipe when the rejected-item `Queue` is distinct from the queue for new work.
+
+| Level | Configuration |
+| --- | --- |
+| [Routing](routing-rules.md) | Create `Rejected order retry`, select the rejected-item `Queue`, and sort by `Order date` so the oldest items run first. |
+| [Routing rule](inventory-rules.md) | Add the retry-eligible facilities. Use `Next rule` for each fallback, then move remaining items to the unfillable `Queue` in the final rule. |
+
+Place this routing before the routing for new orders when both are in the same routing group.
+
+Expected result: Older rejected items receive another allocation attempt before new items, and unresolved items move to the unfillable queue.
+
+Validate: Confirm that a known rejected item is selected before a newer item and that the final rule sends any remainder to the expected queue.
+
+### Escalate orders by promise date
+
+Situation: An item promised soon needs an earlier allocation attempt. Use this recipe when items with a promise date within the next day need priority over the regular queue.
+
+| Level | Configuration |
+| --- | --- |
+| [Routing](routing-rules.md) | Add an included `Promise date` filter with `Upcoming duration` set to `1`, then sort the matching items by the required business priority. The cutoff is the end of day in the routing server time zone. |
+| [Routing rule](inventory-rules.md) | Turn on `Allow partial allocation`, because this filter processes items rather than whole ship groups. Use `Next rule` for an intermediate fallback and the unfillable `Queue` in the final rule. |
+
+Do not use the excluded `Promise date` option. If you set `Auto cancel days` for unavailable items, HotWax calculates it from the routing server time when it processes those items.
+
+Expected result: Items promised on or before the next-day cutoff are processed at item level, and items that remain unavailable reach the exception queue.
+
+Validate: Test with an order whose promise date is within one day and confirm that it is selected while an order outside the cutoff is not.
+
+### Reduce store routing during peak periods
+
+Situation: Holiday volume should stay with warehouses first, but approved stores can absorb overflow. Use this recipe only for the peak period and when store capacity limits are current.
+
+| Level | Configuration |
+| --- | --- |
+| [Routing group](routing-group-details.md) | Create a temporary group such as `Peak season routing` and schedule it for the peak period. |
+| [Routing](routing-rules.md) | Select the online-order `Queue` or `Sales Channel` and sort by `Order date`. |
+| [Routing rule](inventory-rules.md) | Try the warehouse `Group` first, then the approved store-overflow `Group`. Apply facility order limits and move remaining items to the final exception `Queue`. |
+
+Do not keep an overlapping regular group active for the same order population. Move the regular group to `Draft` before you activate the peak-period group.
+
+Expected result: Warehouses receive online volume first, and only approved stores receive overflow within their order limits.
+
+Validate: Review the active-group schedule and the first `History` record to confirm that only the intended group processed the online queue.
+
+## Choose fulfillment facilities
+
+### Try warehouses before stores
+
+Situation: Online orders should use central inventory before drawing down store stock. Use this recipe when both warehouse and store facility groups are current.
+
+| Sequence | Facility selection | Sort | Unavailable items |
+| --- | --- | --- | --- |
+| [Routing rule 1](inventory-rules.md) | Select the warehouse `Group`. | `Proximity` | `Next rule` |
+| [Routing rule 2](inventory-rules.md) | Select the store `Group`. | `Proximity` | `Queue` |
+
+In the [routing configuration](routing-rules.md), filter by the relevant `Sales Channel` or `Queue`, then sort by `Order date`. In the last routing rule, select the unfillable queue used by your operations team.
+
+Expected result: HotWax Commerce checks warehouses before stores and queues only the items that neither group can allocate.
+
+Validate: Use one order that only a warehouse can fill and one that only an approved store can fill, then review the selected rule for each result.
+
+### Prefer nearby facilities
+
+Situation: Customers expect nearby fulfillment, but you still want a fallback when one location cannot fill the order. Use this recipe when facility and shipping-address coordinates are complete.
+
+Use a 100-mile radius to prefer a nearby single shipment before expanding the search.
+
+| Sequence | Filters | Allocation | Unavailable items |
+| --- | --- | --- | --- |
+| [Routing rule 1](inventory-rules.md) | Set `Proximity` to 100 miles. | Turn off `Allow partial allocation` for one nearby facility. | `Next rule` |
+| [Routing rule 2](inventory-rules.md) | Use the same 100-mile `Proximity` limit. | Turn on `Allow partial allocation` for a split across nearby facilities. | `Next rule` |
+| [Routing rule 3](inventory-rules.md) | Remove the `Proximity` filter. | Turn off `Allow partial allocation` for one facility anywhere. | `Next rule` |
+| [Routing rule 4](inventory-rules.md) | Include all eligible locations. | Turn on `Allow partial allocation` for a split anywhere. | `Queue` |
+
+Sort every routing rule by `Proximity`. This sequence first tries one nearby location, then a nearby split, then one location at any distance, and finally a split across all eligible locations.
+
+To limit expensive split shipments, also configure the [shipment threshold](additional-settings.md).
+
+Expected result: HotWax Commerce expands from a single nearby allocation to the broadest approved fallback only when needed.
+
+Validate: Test an order that needs one nearby facility and another that needs the final split-anywhere rule, then compare the selected rules.
+
+### Prefer stores with lower fulfillment cost
+
+Situation: A retailer has fixed rent at an outlet store and wants online demand to use that capacity before higher-cost mall stores. Use this recipe when facility groups represent the business preference.
+
+| Level | Configuration |
+| --- | --- |
+| [Routing rule](inventory-rules.md) | Select the preferred fixed-rent store `Group`, sort by `Inventory balance` or `Proximity`, and use `Next rule`. Add a second rule for the broader mall-store group and move remaining items to the final `Queue`. |
+
+Facility group membership encodes the business preference. Review that membership when a lease, labor model, or store agreement changes.
+
+Expected result: Eligible outlet stores receive the first allocation attempt before eligible mall stores.
+
+Validate: Use an order that both groups can fill and confirm that the selected facility belongs to the preferred group.
+
+## Protect and rebalance inventory
+
+### Protect store inventory with safety stock
+
+Situation: Stores need inventory for walk-in demand before they fulfill online orders. Use this recipe when a gradual reduction in protection is acceptable.
+
+| Sequence | Filters | Operator | Sort | Unavailable items |
+| --- | --- | --- | --- | --- |
+| [Routing rule 1](inventory-rules.md) | Select the store `Group` and set `Safety stock` to 15. | `greater` | `Inventory balance` | `Next rule` |
+| [Routing rule 2](inventory-rules.md) | Select the same `Group` and set `Safety stock` to 10. | `greater` | `Inventory balance` | `Next rule` |
+| [Routing rule 3](inventory-rules.md) | Select the same `Group` and set `Safety stock` to 5. | `greater` | `Inventory balance` | `Queue` |
+
+Each value is a strict pre-allocation eligibility threshold, not inventory guaranteed to remain after allocation. An item exactly equal to a threshold does not pass that rule and continues to the next configured rule or unavailable-item action. Turn on `Allow partial allocation` only in the last rule if your business accepts split shipments.
+
+Expected result: Stores with more than 15 available units are considered first, then stores above 10 and five units, while less-protected inventory remains outside the routing path.
+
+Validate: With the strict `greater` operator, test an item at a facility with exactly 15, 10, and five available units. Confirm that 15 skips rule 1 and reaches rule 2, 10 skips rule 2 and reaches rule 3, and five passes none of the thresholds and follows the final `Queue` action. You can also compare an item with 12 available units against an item with six available units to confirm the intermediate ladder steps.
+
+### Keep grouped items together
+
+Situation: A retailer sells eyeglass frames and lenses as a group, but can split sunglasses only when the customer accepts it. Use this recipe when grouped items should remain together as long as possible.
+
+| Sequence | `Allow partial allocation` | `Partially allocate grouped items` | Unavailable items |
+| --- | --- | --- | --- |
+| [Routing rule 1](inventory-rules.md) | Off | Off | `Next rule` |
+| [Routing rule 2](inventory-rules.md) | On | Off | `Next rule` |
+| [Routing rule 3](inventory-rules.md) | On | On | `Queue` |
+
+Sort each rule by `Proximity` when the nearest eligible facility should receive the first attempt.
+
+Expected result: Frames and lenses stay together through the first two rules, while the final rule permits the broadest approved split, such as when sunglasses can ship separately.
+
+Validate: Test a grouped order that one facility cannot fill completely and confirm that the group stays intact until the final rule.
+
+### Clear slow-moving store inventory
+
+Situation: Two stores have 20 units of the same item, but one sells 10 units per week and the other sells two. Use this recipe when the slower-selling store should be preferred for online fulfillment.
+
+| Sequence | Filters | Sort | Unavailable items |
+| --- | --- | --- | --- |
+| [Routing rule 1](inventory-rules.md) | Select the eligible store `Group` and configure `Week of Supply`. | `Week of Supply` | `Next rule` |
+| [Routing rule 2](inventory-rules.md) | Select a warehouse group or add a `Proximity` limit. | `Proximity` | `Queue` |
+
+The store selling two units per week has deeper coverage than the store selling 10, even though both have 20 units. Read [the weeks of supply calculation guide](weeks-of-supply-routing.md) before you select the coverage value.
+
+Expected result: HotWax Commerce prefers facilities with deeper inventory cover while retaining a warehouse or distance-based fallback.
+
+Validate: Confirm that current sales velocity is available, then compare the selected facility for the two-store example.
+
+## Test and refine a strategy
+
+Use this safety-stock change story to evaluate a routing change before you activate it. Simulation, Circuit, and Test Drive are feature-gated, so follow only the steps available in your deployment. Test Drive remains disabled by default until an administrator has secured and verified its routing and reset operations.
+
+1. Start with the saved baseline that uses a safety-stock value of 10. If `Simulation` is available, create a variation and change the safety-stock value to 15. Run both sources and compare the eligible and brokered results with queued items. A higher threshold can reduce eligible or brokered results and increase queued items.
+2. If `Circuit` is available, it can propose the variation. Review its proposal in the routing group's working copy. You remain responsible for the change, so review every routing and rule, then click `Save` when you decide to apply the live configuration.
+3. If `Test Drive` is available and approved for use in your deployment, select a representative order and confirm the selected routing rule. Reset the order after the test so its live allocation does not affect later work.
+4. Open `History` after you save and activate the change. Review the first execution for the expected routing and exception-queue results.
+
+Read [simulation guidance](simulation.md), [Circuit guidance](circuit.md), and [Test Drive guidance](test-drive.md) before you use an available feature.
+
+## Apply a complete template
+
+Use a template when you need a connected design of routing groups, routings, rules, queues, and activation steps. A recipe is more appropriate when you need to change one business decision in an existing routing group.
+
+* [Inventory-based shipping](template/inventory-based-shipping.md) protects store inventory while prioritizing rejected and expedited orders.
+* [Cross-border shipping](template/cross-border-shipping.md) separates country-specific orders and facility eligibility with one shared schedule.
+
+## Activate and validate a strategy
+
+1. Review the routing sequence and the routing rule sequence.
+2. Confirm that every last routing rule moves unavailable items to the intended queue.
+3. Change the routings and routing rules to `Active`.
+4. Click `Save`.
+5. Change the routing group to `Active`.
+6. Use `Run now` only when the page shows no unsaved changes.
+7. Open `History` and review the first execution.
+
+If `Test drive` is available in your environment, [test the routing group](test-drive.md) with representative orders before its first scheduled execution.

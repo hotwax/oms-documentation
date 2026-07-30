@@ -1,34 +1,46 @@
 ---
-description: >-
-  Discover your guide for troubleshooting issues for order brokering due to
-  inventory unavailability
+description: Diagnose routing rules that find no eligible inventory or allocate only part of an order.
 ---
 
-# Inventory Unavailability
+# Troubleshoot inventory availability
 
-## Scenario 1: Inventory Not Available
+A routing rule can find physical stock but still reject a facility. Routing evaluates available-to-promise (ATP) inventory after facility membership and the rule's inventory safeguards.
 
-Orders won't be brokered if the inventory is not available or if the inventory is less than the brokering threshold set in the inventory rule. Ensuring accurate inventory levels and thresholds is essential for efficient order brokering and fulfillment.
+## Check the product inventory
 
-### Resolution Steps
+1. Open the order in `Sales Orders`.
+2. Select the SKU to open the [Product inventory view](../../../inventory/inventory-management/product-inventory-view.md).
+3. Filter by the facility that should fulfill the item.
+4. Compare ATP with the order quantity.
+5. Check whether the facility is enabled for online fulfillment.
 
-1. Click on the `SKU` from the `sales order page` to view the product inventory details on the [`Product Inventory View` page.](/documents/retail-operations/inventory/inventory-management/product-inventory-view.md)
-2. Check the inventory availability across the facilities. Use the `facility` filter to check the inventory in individual facilities.
-3. Verify if the inventory is available for that product. If the inventory is not available or is less than the brokering threshold, the order will move to the unfillable parking.
+Quantity on hand does not prove that the quantity is available to route. Existing allocations, safety stock, and other ATP rules can reduce the quantity available for a new order.
 
-For example: If an item has a brokering threshold of 10 units but only 5 units are available across all facilities, the order will not be brokered and will move to unfillable parking.
+## Check the routing rule
 
-Ensure that the order routing run for unfillable parking is scheduled. This ensures that all such orders are picked up in the next brokering cycle for inventory allocation.
+1. In the **Order Routing Rules** app, open the routing group.
+2. Select the routing and routing rule that should allocate the order.
+3. Confirm that the routing and routing rule have an active status.
+4. Review the routing rule's `Filters`:
+   * `Group` and excluded group
+   * `Proximity`
+   * `Safety stock`
+   * `Week of Supply`
+   * `Shipment threshold check`
+   * `Turn off the facility order limit check`
+5. Review `Sort` to confirm which eligible facility is attempted first.
+6. Save any changes to the routing group's working copy.
 
-## Scenario 2: Partially Unavailable
+## Check partial and unavailable-item actions
 
-Retailers sometimes prefer not to split orders to minimize shipping costs. If only part of an order is available at one fulfillment location, the order won't be routed. If inventory is scattered across multiple facilities, you need to decide whether to split the order.
+In the selected routing rule, review these actions:
 
-### Resolution Steps
+* `Allow partial allocation` lets the rule allocate available items when the complete group cannot be allocated.
+* `Partially allocate grouped items` lets grouped items split when partial allocation is enabled.
+* `Next rule` passes unavailable items to the next active routing rule.
+* `Queue` moves unavailable items to the selected queue instead of evaluating the next rule.
+* `Clear auto cancel days` and `Auto cancel days` control the cancellation date applied to unavailable items.
 
-1. If you decide to allow order splitting, navigate to the `Order Routing App`.
-2. Navigate to the `brokering run` > `order batch` > `inventory rule`.
-3. Check if `partial allocation` is allowed for that inventory run.
-4. Turn the `partial allocation` toggle on if you want to enable order splitting.
-5. Save the `inventory rule` configuration.
+If you do not want split fulfillment, leave partial allocation off and add a later routing rule that can try a broader facility group. If split fulfillment is allowed, review the [shipment threshold](../additional-settings.md#set-a-shipment-threshold) before lowering it.
 
+When `Test drive` is available, use it to inspect filter mismatches and the selected routing rule. Test Drive changes the order, so reset the test order before leaving. See [Test a routing group](../test-drive.md).

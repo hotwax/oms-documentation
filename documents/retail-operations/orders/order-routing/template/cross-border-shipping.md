@@ -1,164 +1,83 @@
-# Retailer Routing Orders to Fulfill Orders from Multiple Countries
-
-## Business Overview
-
-This document presents a case study of a Canada-based online retailer operating a central warehouse and multiple retail stores, with shipping capabilities extending to the USA. The retailer focuses on optimizing logistics to improve delivery speed, reduce operational costs, and enhance inventory management.
-This guide explores how businesses with similar models can leverage an advanced order routing system to achieve these goals.
-
-## Business Requirements for Order Fulfillment
-
-#### Time-in-Transit
-
-The retailer offers standard shipping with delivery within 7 days for all USA and Canada orders.
-
-#### Order Priority
-
-All orders should be prioritized by the FIFO rule, ensuring that orders placed first are brokered first.
-
-#### U.S. Order Fulfillment
-
-To minimize international shipping costs, it is essential to fulfill all orders through the central warehouse rather than retail stores. Shipping directly from the warehouse ensures cost efficiency and avoids the higher expenses associated with international shipping from individual retail locations.
-
-#### Canada Order Fulfillment
-
-For orders within Canada, the warehouse is the primary fulfillment center. Retail stores act as backup fulfillment points only when the warehouse lacks sufficient inventory. This strategy enables effective inventory management while still providing backup options to meet demand.
-
-#### Orders with Unavailable Inventory
-
-If no inventory is available at any locations, the order should be available for re-routing. These unfillable orders should be rerouted along with regular orders.
-
-#### Routing Interval
-
-The brokering should be scheduled frequently to ensure continuous and timely order processing.
-
-## Key Routing Considerations
-
-US Orders should be prioritized before Canada Orders since Canada orders can also be fulfilled from the store while US orders can only get inventory from the warehouse.
-
-#### U.S. Order Fulfillment
-
-All US orders must be fulfilled exclusively from the central warehouse in Canada.
-
-#### Canada Order Fulfillment Priorities
-
-Warehouse First: Canada orders should be prioritized to be fully fulfilled from the warehouse.
-
-Store Fulfillment: If the warehouse lacks inventory, orders should be fully fulfilled from stores.
-
-Partial Fulfillment from Warehouse: If neither the warehouse nor stores have the entire stock, orders items with available inventory should brokered to the warehouse.
-
-Partial Fulfillment: If the warehouse is out of stock, partial fulfillment from stores should be allowed.
-
-## How to Set Up Order Routing
-
-### Pre-Requisites
-
-#### Shipping Methods Mapping
-
-The retailer operates two separate online stores in the US and Canada. During the initial mapping of shipping methods, they should be configured distinctly to differentiate between orders destined for the USA and those for Canada.
-
-- **U.S. Orders**: Mapped to "US_Standard_Shipping." All standard orders from the US store will use this shipping method.
-- **Canada Orders**: Mapped to "Standard_Shipping." Standard orders from the Canada store will use this shipping method.
-
-#### Create Facility Groups
-
-Two facility groups need to be created:
-
-- **Group for Warehouses**: To centralize warehouse-based fulfillment.
-- **Group for Stores**: To route orders to retail stores when necessary.
-
-### Create Brokering Run
-
-A single brokering run is scheduled every 15 minutes to ensure timely order processing for both U.S. and Canada orders. This regular interval ensures that orders are brokered efficiently across different regions.
-
-## Create Canada Routing Rule
-
-This routing rule is dedicated to handling Canadian orders, ensuring they are processed separately from U.S. orders.
-
-### Order Filter
-
-Two filters are applied in this routing rule:
-- **Queue Filter**: Orders are fetched from three queues to ensure complete coverage of all types of Canadian orders:
-  - **Brokering Queue**: Includes orders brokered for the first time.
-  - **Rejected Item Parking Queue**: Includes orders rejected from fulfillment locations.
-  - **Unfillable Queue**: Includes orders that were previously unfillable due to a lack of available inventory.
-
-- **Shipping Method Filter**: The filter is set to include only Standard Shipping, which is the designated shipping method for Canada orders.
-
-### Order Sort
-
-The orders are sorted by **Order Date**, ensuring that Canadian orders are brokered on a first-come, first-served basis, following the FIFO principle.
-
-## Create Inventory Rules
-
-The following five inventory rules are applied to route Canadian orders effectively:
-
-### First Inventory Rule
-
-- **Inventory Filter**: A Facility Group Filter is applied to prioritize fulfillment from **Warehouses Only**.
-- **Inventory Sort**: Orders are sorted by **Proximity** to the customer.
-- **Action**: Partial fulfillment is turned off, and if no warehouse can fulfill the order, the order is sent to the next rule.
-
-### Second Inventory Rule
-
-- **Inventory Filter**: A Facility Group Filter is applied to allow fulfillment from **any store**.
-- **Inventory Sort**: Orders are sorted by **Proximity** to the customer to prioritize the nearest store.
-- **Action**: Partial fulfillment is turned off. If no store can fulfill the entire order, the order is sent to the next rule.
-
-### Third Inventory Rule
-
-- **Inventory Filter**: A Facility Group Filter is applied to allow fulfillment from **warehouses only**.
-- **Inventory Sort**: Orders are sorted by **Proximity** to the customer to minimize delivery time from the warehouse.
-- **Action**: Partial fulfillment is turned on, meaning available inventory in the warehouse is allocated to the order. For items that are unavailable, the order is sent to the next rule.
-
-### Fourth Inventory Rule
-
-- **Inventory Filter**: A Facility Group Filter is applied to allow fulfillment from **all stores**.
-- **Inventory Sort**: Orders are sorted by **Proximity** to the customer, ensuring the closest store can fulfill the order.
-- **Action**: Partial fulfillment is turned on so that available inventory in the stores is allocated to the order. For any remaining unfilled items, the order is sent to the **Unfillable Queue** for further processing later.
-
-## Create U.S. Routing Rules
-
-For U.S. orders, a U.S. Routing Rule is created to manage routing and fulfillment. This batch ensures U.S. orders are processed based on their specific requirements.
-
-### Order Filter & Sort
-
-- **Order Filter**: Two filters are applied to U.S. orders:
-  - **Queue Filter**: Orders are fetched from the **Brokering Queue**, **Rejected Item Parking**, and **Unfillable Queue**, ensuring all orders are processed, including previously unfulfilled or rejected orders.
-  - **Shipping Method Filter**: Only orders using the **US_Standard Shipping Method** are included in this batch, ensuring that only U.S. standard shipping orders are routed.
-
-- **Order Sort**: Orders are sorted by **Order Date**, ensuring that earlier orders are processed first, following the first-in, first-out (FIFO) principle.
-
-## Create Inventory Rule for U.S. Orders
-
-For U.S. orders, the following inventory rule is applied to prioritize the central warehouse as the fulfillment location.
-
-- **Inventory Filter**: The Facility Group Filter is set to include only the **warehouse** as the fulfillment source for U.S. orders.
-- **Inventory Sort**: Orders are sorted by **Proximity** to ensure that the nearest location is considered.
-- **Action**: Turn on **partial fulfillment** to allow the system to fulfill orders from available inventory in the warehouse. If any items are unavailable in the warehouse, the order is moved to the **Unfillable Queue** for future processing.
-
-{% embed url ="(https://youtu.be/aIYfEmxTTi4)" %} caption {% endembed %}
+---
+description: Route Canadian and United States orders through different facility groups with a shared schedule.
 ---
 
-### Create U.S. Order Batch
+# Route orders across Canada and the United States
 
-U.S. orders should be mapped to "US_Standard_Shipping," and a new routing batch should be created to ensure that these orders are fulfilled on a FIFO basis.
+Use this template for a Canada-based retailer that ships Canadian orders from a warehouse or stores but restricts United States orders to the central warehouse.
 
-### Create Inventory Rule for U.S. Orders
+This example uses shipping methods to identify the destination market:
 
-All U.S. orders should be fulfilled from the central warehouse. Select the facility group filter for the warehouse, allowing partial fulfillment to allocate available inventory. If items are unavailable, move them to the unfillable queue.
+* `US Standard` for United States orders
+* `Canada Standard` for Canadian orders
 
----
+Replace these names with the shipping methods configured in your HotWax Commerce Omnichannel Order Management System (OMS).
 
-### Activate Components
+## Prepare the configuration
 
-- **Activate Inventory Rules**: Define fulfillment strategies for U.S. and Canadian orders.
-- **Activate Each Order Batch**: Ensure orders are processed according to their respective shipping methods.
-- **Activate the Brokering Run**: Schedule the brokering run every 15 minutes to ensure continuous and timely order brokering.
+1. [Map the Shopify shipping methods](../../../../learn-shopify/setup-shopify/integration-mappings/shipping-method.md) to distinct United States and Canadian methods.
+2. [Create facility groups](../../../../system-admin/administration/facilities/manage-groups.md) for the central warehouse and eligible Canadian stores.
+3. Confirm the queues used for new, rejected, and unfillable order items.
+4. Decide whether the business permits partial allocation in each market.
 
-{% embed url ="(https://youtu.be/WudPbK_x68I)" %} caption {% endembed %}
+## Create the routing group
 
-## Conclusion
+1. Click `New routing group`.
+2. Name the group `North America standard routing`.
+3. Add a description that records the country and facility restrictions.
+4. Set the schedule to every 15 minutes, or choose an interval that matches your order volume.
+5. Keep the group in `Draft` while you configure its routings.
 
-By leveraging a robust order routing system, retailers can optimize order fulfillment. Specific batches for U.S. and Canada orders, combined with precise inventory rules, ensure that U.S. orders are fulfilled from the central warehouse, and Canada orders are managed efficiently between the warehouse and stores. This streamlined approach enhances order processing efficiency, reduces costs, and supports reliable delivery within the 7-day standard shipping timeframe.
+## Add the United States routing
 
+Place this routing first because United States orders have the narrower facility choice.
+
+1. Click `New` in the `Routings` column.
+2. Name the routing `United States standard orders`.
+3. Add a `Queue` filter and select the queues that should be evaluated.
+4. Add a `Shipping method` filter and select `US Standard`.
+5. Sort by `Order date`.
+
+Add one routing rule:
+
+| Setting | Value |
+| --- | --- |
+| `Group` | Central warehouse |
+| `Sort` | `Proximity` |
+| `Allow partial allocation` | Use the retailer policy for United States orders. |
+| `Unavailable items` | Select `Queue`, then choose the unfillable queue. |
+
+The group filter prevents retail stores from receiving United States orders.
+
+## Add the Canada routing
+
+1. Add a second routing named `Canada standard orders`.
+2. Add the same `Queue` filters used for eligible Canadian order items.
+3. Add a `Shipping method` filter and select `Canada Standard`.
+4. Sort by `Order date`.
+
+Add the following routing rules in order:
+
+| Sequence | `Group` | Sort | `Allow partial allocation` | Unavailable items |
+| --- | --- | --- | --- | --- |
+| Routing rule 1 | Central warehouse | `Proximity` | Off | `Next rule` |
+| Routing rule 2 | Canadian stores | `Proximity` | Off | `Next rule` |
+| Routing rule 3 | Central warehouse | `Proximity` | On | `Next rule` |
+| Routing rule 4 | Canadian stores | `Proximity` | On | `Queue` |
+
+Select the unfillable queue in the last routing rule. This sequence tries a single warehouse shipment, then a single store shipment, before it permits split allocation.
+
+## Activate and validate the group
+
+1. Review both routing filters to confirm that an order cannot match the wrong market.
+2. Confirm that the United States routing appears before the Canada routing.
+3. Confirm the four-rule fallback sequence in the Canada routing.
+4. Change the routings and routing rules to `Active`.
+5. Click `Save`.
+6. Change the saved routing group to `Active`.
+7. Run representative United States and Canadian orders through [Test drive](../test-drive.md), if the feature is available.
+8. Open `History` after the first execution and review the result.
+
+{% hint style="warning" %}
+This routing configuration controls facility selection. Carrier service, transit time, and customs processing still determine whether an order meets its delivery promise.
+{% endhint %}
