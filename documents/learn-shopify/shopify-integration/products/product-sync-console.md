@@ -1,10 +1,17 @@
 ---
-description: Learn how to use the Shopify product sync console in HotWax Commerce.
+description: Operate and monitor Shopify product sync after launch.
 ---
 
 # Product sync console
 
-The product sync console helps you review Shopify product sync setup, start the first product import, monitor sync progress, and audit previous product sync runs.
+Use the product sync console after Shopify onboarding to monitor current product
+sync progress, review recently synchronized changes, investigate errors, and
+audit previous runs.
+
+For initial setup and the first product import, follow
+[Set up HotWax Commerce with Shopify](../../../system-admin/administration/company/product-store-onboarding.md).
+For exact post-launch controls and recovery actions, use
+[Manage Shopify Product Sync](../../../system-admin/administration/company/manage-shopify-product-sync.md).
 
 Open the console from a Shopify shop record in the Company app:
 
@@ -12,20 +19,23 @@ Open the console from a Shopify shop record in the Company app:
 2. Open the Shopify shop you want to review.
 3. Open `Product sync`.
 
-The page uses the selected Shopify shop to decide which experience to show.
+The page uses the selected Shopify shop to decide which operational state to
+show.
 
-* If HotWax Commerce has product update history for the shop, the page opens in the returning-user view.
-* If HotWax Commerce doesn't have product update history for the shop, the page opens in the first-time setup wizard.
+* If the shop has products linked to HotWax Commerce, the page opens in the returning-user view.
+* If the shop has no linked HotWax Commerce products, the page opens the setup view, which means onboarding is incomplete or the expected product links are missing.
 
 {% hint style="info" %}
-Most users can leave the page in automatic mode. Automatic mode lets HotWax Commerce choose the correct view from the shop's product update history.
+Most users can leave the page in automatic mode. Automatic mode chooses the
+view by checking whether the shop has products linked to HotWax Commerce.
 {% endhint %}
 
-## First-time setup
+## If the setup view appears
 
-First-time users see a guided setup flow before starting the first product import.
-
-Read [First-time Product Sync Setup](product-sync-first-time-setup.md) for a step-by-step explanation of the setup decisions and their business impact.
+Do not improvise a first import from this operational reference. Return to the
+[canonical Shopify onboarding guide](../../../system-admin/administration/company/product-store-onboarding.md)
+and complete its product preparation, identity, import, and terminal-result
+checks.
 
 ## Returning-user view
 

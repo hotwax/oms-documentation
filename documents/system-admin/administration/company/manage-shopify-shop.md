@@ -1,10 +1,14 @@
 ---
-description: Review and maintain Shopify connections in Company.
+description: Maintain an already connected Shopify shop in Company.
 ---
 
 # Manage a Shopify connection
 
-Each Shopify connection links one Shopify shop with HotWax Commerce configuration, mappings, and synchronization tools.
+Use this page after a Shopify shop is connected to HotWax Commerce. It covers
+reviewing and maintaining an existing connection, not initial setup.
+
+For a new connection, follow
+[Set up HotWax Commerce with Shopify](product-store-onboarding.md).
 
 ## Find a connection
 
@@ -34,13 +38,15 @@ Product Sync appears with the products and inventory workflow when available for
 
 The Shopify domain identifies the remote shop. Confirm it before changing another connection setting.
 
-## Link a Product Store
+## Review or change the linked Product Store
 
 1. Open the connection.
 2. Select `Product Store`.
-3. Choose the Product Store that owns the Shopify shop.
-4. Save the link.
-5. Return to the connection page and confirm the Product Store.
+3. Confirm the Product Store that owns the Shopify shop.
+4. Change it only when the implementation owner approves the downstream
+   catalog, inventory, and order impact.
+5. Save the link.
+6. Return to the connection page and confirm the Product Store.
 
 A Shopify shop can be linked to only one Product Store.
 
@@ -63,14 +69,12 @@ Keep credentials out of tickets, screenshots, and documentation.
 3. Compare the available scopes with the integration requirements.
 4. Resolve missing scopes in Shopify before retrying the affected task.
 
-## Continue configuration
+## Related post-launch tasks
 
-Complete these tasks for the connection:
+Use these references to operate an existing connection:
 
 * [Review Shopify mappings](manage-shopify-mappings.md)
-* [Set up Shopify Product Sync](set-up-shopify-product-sync.md)
 * [Manage Shopify Product Sync](manage-shopify-product-sync.md)
-* [Set up Shopify Order Sync](set-up-shopify-order-sync.md)
 * [Manage Shopify Order Sync](manage-shopify-order-sync.md)
 
 Exclude the development-only Debug area from operator workflows.
