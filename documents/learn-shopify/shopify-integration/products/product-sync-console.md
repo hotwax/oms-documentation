@@ -1,10 +1,12 @@
 ---
-description: Learn how to use the Shopify product sync console in HotWax Commerce.
+description: Operate and monitor Shopify product sync after launch.
 ---
 
 # Product sync console
 
-The product sync console helps you review Shopify product sync setup, start the first product import, monitor sync progress, and audit previous product sync runs.
+Use the product sync console after Shopify onboarding to monitor current product sync progress, review recently synchronized changes, investigate errors, and audit previous runs.
+
+For initial setup and the first product import, follow [Set up HotWax Commerce with Shopify](../../../system-admin/administration/company/product-store-onboarding.md). For exact post-launch controls and recovery actions, use [Manage Shopify Product Sync](../../../system-admin/administration/company/manage-shopify-product-sync.md).
 
 Open the console from a Shopify shop record in the Company app:
 
@@ -12,20 +14,18 @@ Open the console from a Shopify shop record in the Company app:
 2. Open the Shopify shop you want to review.
 3. Open `Product sync`.
 
-The page uses the selected Shopify shop to decide which experience to show.
+The page uses the selected Shopify shop to decide which operational state to show.
 
-* If HotWax Commerce has product update history for the shop, the page opens in the returning-user view.
-* If HotWax Commerce doesn't have product update history for the shop, the page opens in the first-time setup wizard.
+- If the shop has products linked to HotWax Commerce, the page opens in the returning-user view.
+- If the shop has no linked HotWax Commerce products, the page opens the setup view, which means onboarding is incomplete or the expected product links are missing.
 
 {% hint style="info" %}
-Most users can leave the page in automatic mode. Automatic mode lets HotWax Commerce choose the correct view from the shop's product update history.
+Most users can leave the page in automatic mode. Automatic mode chooses the view by checking whether the shop has products linked to HotWax Commerce.
 {% endhint %}
 
-## First-time setup
+## If the setup view appears
 
-First-time users see a guided setup flow before starting the first product import.
-
-Read [First-time Product Sync Setup](product-sync-first-time-setup.md) for a step-by-step explanation of the setup decisions and their business impact.
+Do not improvise a first import from this operational reference. Return to the [canonical Shopify onboarding guide](../../../system-admin/administration/company/product-store-onboarding.md) and complete its product preparation, identity, import, and terminal-result checks.
 
 ## Returning-user view
 
@@ -37,11 +37,11 @@ Returning users see a product sync dashboard with the latest known sync state.
 
 The Summary card shows:
 
-* Last sync time.
-* Next sync time.
-* Whether someone paused the scheduled product sync job.
-* The linked HotWax product store.
-* The count of Shopify products that have changed since the last confirmed product update sync.
+- Last sync time.
+- Next sync time.
+- Whether someone paused the scheduled product sync job.
+- The linked HotWax product store.
+- The count of Shopify products that have changed since the last confirmed product update sync.
 
 Click `Un-synced updates` to review the updated Shopify products that HotWax hasn't imported yet. The modal shows product title, handle, vendor, product type, Shopify update time, variant count, status, and inventory.
 
@@ -135,16 +135,16 @@ Open history from the returning-user view by clicking the clock icon in the Trac
 
 The history page helps users answer these questions:
 
-* Did a previous product sync run finish?
-* Which run changed product data most recently?
-* Did Shopify return product data for the run?
-* Did HotWax import every record or report failures?
+- Did a previous product sync run finish?
+- Which run changed product data most recently?
+- Did Shopify return product data for the run?
+- Did HotWax import every record or report failures?
 
 Use filters to narrow the list:
 
-* Run status.
-* Created after.
-* Created before.
+- Run status.
+- Created after.
+- Created before.
 
 Each run expands into the Shopify export and HotWax import details that support or operations teams may need during review.
 

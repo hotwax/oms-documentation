@@ -2,20 +2,21 @@
 
 * [Launchpad](README.md)
 
+## Implementation
+
+* [Set up HotWax Commerce with Shopify](administration/company/product-store-onboarding.md)
+
 ## Administration
 
 * [Company](administration/company/README.md)
   * [Product stores](administration/company/create-product-store.md)
-    * [Complete guided setup](administration/company/product-store-onboarding.md)
     * [Manage Product Store settings](administration/company/manage-product-store.md)
     * [Clone Product Store settings](administration/company/clone-product-store.md)
   * [Organizations](administration/company/manage-organizations.md)
   * [Shopify connections](administration/company/manage-shopify-shop.md)
     * [Shopify mappings](administration/company/manage-shopify-mappings.md)
     * [Monitor Shopify Product Sync](administration/company/manage-shopify-product-sync.md)
-    * [Set up Shopify Product Sync](administration/company/set-up-shopify-product-sync.md)
     * [Upgrade Shopify Product Sync](administration/company/upgrade-shopify-product-sync.md)
-    * [Set up Shopify Order Sync](administration/company/set-up-shopify-order-sync.md)
     * [Manage Shopify Order Sync](administration/company/manage-shopify-order-sync.md)
   * [Klaviyo](administration/company/manage-klaviyo.md)
   * [NetSuite](administration/company/configure-netsuite-setting.md)
