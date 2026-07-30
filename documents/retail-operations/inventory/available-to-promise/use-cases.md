@@ -163,12 +163,12 @@ Use this recipe when a regional storefront needs a different inventory pool from
 
 1. In `Sourcing` > `Channels`, create the `Canada online` inventory channel and link one configuration facility.
 2. Assign the central warehouse and eligible Canadian stores to the channel.
-3. Set a channel threshold for `Canada online` in `Sourcing` > `Threshold`.
-4. On `Sourcing` > `Channels` > `Publish`, configure the connected Canadian Shopify shop to use the `Canada online` channel.
+3. Set a [channel threshold](threshold-rules.md) for `Canada online` in `Sourcing` > `Threshold`.
+4. On `Sourcing` > `Channels`, open the `Publish` tab and configure the connected Canadian Shopify shop to use the `Canada online` channel.
 
 **Expected result:** The Canadian Shopify shop publishes inventory from the central warehouse and eligible Canadian stores, with the channel threshold applied.
 
-**Validate:** Review the assigned facilities and the Canadian Shopify shop's publish card in [Create inventory channels](create-channels.md).
+**Validate:** Review the assigned facilities and the Canadian Shopify shop's publish card in [Create inventory channels](create-channels.md), then confirm the channel threshold in [Configure threshold rules](threshold-rules.md).
 
 ## Verify sourcing changes
 
