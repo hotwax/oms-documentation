@@ -24,6 +24,16 @@ Order routing has three levels:
 
 The current UI uses these terms consistently. Older documentation and bookmarks may refer to routing groups as *brokering runs* and routing rules as *inventory rules*.
 
+## Choose by business goal
+
+Start with the recipe that matches the decision you need to make:
+
+* [Select marketplace orders or work queues](use-cases.md#select-and-prioritize-orders) when a sales channel, rejected item, or promise date determines which order items should run first.
+* [Choose warehouses, stores, or nearby facilities](use-cases.md#choose-fulfillment-facilities) when your fulfillment network and delivery distance determine where to allocate items.
+* [Protect and rebalance store inventory](use-cases.md#protect-and-rebalance-inventory) when safety stock, grouped items, or weeks of supply should guide facility eligibility.
+* [Apply a complete routing template](use-cases.md#apply-a-complete-template) when you need a connected design rather than one recipe.
+* [Test and refine a strategy](use-cases.md#test-and-refine-a-strategy) when Simulation, Circuit, or Test Drive is available in your deployment.
+
 ## Use the order routing list
 
 Open `Order Routing` from the `Routing` section. The list page gives you two views of the same configuration:
