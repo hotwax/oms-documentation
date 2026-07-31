@@ -17,6 +17,8 @@ The page searches orders for the Product Store selected in the Order Manager men
 
 Start with an order ID, order name, or external ID when one is available. These values are more precise than a customer name.
 
+<figure><img src="../../.gitbook/assets/order-manager-find-orders.png" alt="Find orders page with search, status, allocation, sales channel, shipping method, date filters, sorting, and demo order rows"><figcaption><p>Use the filter bar and row details to identify the correct order.</p></figcaption></figure>
+
 You can also search using:
 
 * Customer name, party ID, email, or phone

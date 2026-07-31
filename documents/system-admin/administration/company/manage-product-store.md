@@ -12,12 +12,18 @@ Change only settings included in the implementation plan. A Product Store settin
 
 1. Open the **Company App**.
 2. Go to `Product Store`.
-3. Select a Product Store.
-4. Review the Product Store name and ID.
-5. Click `Edit` in the section that contains the setting.
-6. Update the value and save the section.
+
+<figure><img src="../../.gitbook/assets/company-product-stores.png" alt="Company App Product Store list with two demo stores, facility and shipping method counts, and create and clone actions"><figcaption><p>Choose the Product Store whose configuration you need to review.</p></figcaption></figure>
+
+3. Select the Product Store you need to change.
+4. Confirm the Product Store name and ID.
+5. Locate the setting in its configuration group.
+6. Change the field or toggle.
+7. Wait for the success message and confirm the displayed value.
 
 Click `Resume setup` when the Product Store still has guided setup work.
+
+<figure><img src="../../.gitbook/assets/company-product-store-configuration.png" alt="Product Store details for a demo store showing configuration groups, editable fields, and toggles"><figcaption><p>Match the setting to its configuration group before changing it.</p></figcaption></figure>
 
 ## Review Product Store fields
 
@@ -58,10 +64,10 @@ The second part of the page contains settings used by HotWax applications:
 
 1. Confirm the Product Store at the top of the page.
 2. Record the current value.
-3. Open the relevant group.
+3. Locate the relevant configuration group.
 4. Change only the intended field.
-5. Save the group.
-6. Reopen the group and confirm the saved value.
+5. For a text or number field, press Enter or leave the field. A toggle applies the change immediately.
+6. Wait for the success message and confirm the displayed value.
 7. Validate the affected workflow before applying the same change to another Product Store.
 
 Use [Clone Product Store settings](clone-product-store.md) when the same approved configuration must be copied to another Product Store.
