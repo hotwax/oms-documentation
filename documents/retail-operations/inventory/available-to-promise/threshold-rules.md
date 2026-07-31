@@ -19,6 +19,8 @@ For example, suppose three facilities contribute 90, 90, and 40 available units 
 7. Leave the product filters empty to apply the rule to all products in the selected channels.
 8. Select the save button.
 
+<figure><img src="../../.gitbook/assets/order-routing-threshold-configuration.png" alt="Edit threshold rule page with a threshold value, selected channel, and included and excluded product filters"><figcaption><p>Review the threshold value, channel scope, and product filters before saving the rule.</p></figcaption></figure>
+
 If no channels are available, select `Create channel` or `Manage channels` from the rule form. See [Create inventory channels](create-channels.md) for the full setup.
 
 ## Review and edit rules
