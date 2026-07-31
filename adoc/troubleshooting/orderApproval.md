@@ -1,76 +1,83 @@
 ---
-description: >-
-  Learn about the order approval process at ADOC, including address validation
-  and the requirement for a government-mandated Customer ID, with a focus on
-  importing order metafields from Shopify to HC.
+description: Troubleshoot ADOC country transformations, approval diagnostics, and OMS approval prerequisites for Shopify orders.
 ---
 
-# Order Approval
+# Troubleshoot Order Approval
 
-ADOC uses a custom flow where certain orders are only approved after the address is validated and a government-mandated Customer ID is present. After an order is imported, ADOC has a job enabled for importing order metafields, under the namespace “HotwaxOrderDetails”, from Shopify by an independent job as Order Attributes in HotWax Commerce.
+ADOC normally validates and approves eligible Shopify orders during real-time import. Start with the [Order Approval](../flows/SalesOrders/OrderApproval.md) flow to identify the rules for the country being investigated.
 
-## Sync metafields from Shopify
+## Confirm the country importer
 
-To synchronize order meta fields from Shopify, we have configured a workflow that utilizes NiFi custom flows and Moqui Services.
-The process can be divided into four main steps:
+The `SYNC_SHOPIFY_ORDER` Data Manager configuration must use the service for the deployed country:
 
-1. **Preparing File for Shopify API Request**:
-   NiFi fetches all orders from the database that lack the required meta fields: `customerId` and `municipio`. The dataset with missing meta fields is converted into a JSON file suitable for a Shopify API request and kept on this FTP location-
-    ```
-   /home/{sftp-username}/hotwax/shopify/CreatedOrderIdsFeed
-    ```
+| Country | Expected service |
+| --- | --- |
+| Costa Rica | `sync#ShopifyOrderForAdocCR` |
+| Guatemala | `sync#ShopifyOrderForAdocGT` |
+| Honduras | `sync#ShopifyOrderForAdocHN` |
+| Nicaragua | `sync#ShopifyOrderForAdocNI` |
+| Panama | `sync#ShopifyOrderForAdocPA` |
+| El Salvador | `sync#ShopifyOrderForAdocSV` |
 
+Search the Maarg logs for the country service to confirm that the order reached the transformation:
 
-2. **Shopify API Call**:
-   A job scheduled in on maarg instance poll_OMSOrderIdsFeed_{brandName} picks the above created file and calls the Shopify API to obtain the current meta fields under the namespace "HotwaxOrderDetails". The response from Shopify is received in JSON format and placed at FTP location-
-    ```
-   /home/{sftp_username}/hotwax/shopify/OrdersMetaFieldsFeed
-    ```
+```logql
+{instance="adoc-<country>-maarg-hotwax-io"}
+  |= "ShopifyOrderForAdoc"
+```
 
+Replace `<country>` with `cr`, `gt`, `hn`, `ni`, `pa`, or `sv`.
 
-3. **Transformation of API Response**:
-   The JSON response from Shopify is not directly understandable by the OMS. NiFi processes this JSON file to convert it into a format that OMS can accept, and places the file on FTP location-
-    ```
-   /home/{sftp_username}/hotwax/oms/ImportJsonListData
-   ```
+## Interpret diagnostic attributes
 
+Check the order attributes and the country-specific Shopify note attributes. Attribute names are case-sensitive.
 
-4. **Job Picking and Data Import**:
-   The transformed file is placed in an FTP location for OMS. The "Packaged Multi-Stream Import" job, located in the Miscellaneous section of the job manager app, retrieves the file and imports the data into OMS.
+* `ATTRIBUTES_MISSING=true` means a CR, GT, HN, NI, or SV payload did not contain custom attributes. The standard country approval checks did not pass.
+* `MISSING_ATTRIBUTES=true` means a PA payload is missing `distrito`, `corregimiento`, or `barrio`. The standard country approval checks did not pass.
+* `DEPARTMENT_MISSING=true` means HN did not receive a department. This is a warning only and does not block approval.
+* `DEPARTMENT_NOT_FOUND=true` means the HN department did not map to a state Geo. This is a warning only and does not block approval.
+* `SHIPTO_ADDRESS_UPDATED=true` confirms that CR, GT, HN, NI, or SV copied its geographic value into the shipping city and postal code. PA does not use this attribute.
+* `APPROVE_ORDER=true` means the standard country checks passed. It is diagnostic only; the current approval flow is controlled by `autoApprove`.
 
-#### To ensure the job runs properly, we need to verify the following:
-1. The corresponding custom NiFi flow is properly schedule and running on respective NiFi instance.
-2. Go to the respective maarg instance e.g. https://adoc-sv-maarg-uat.hotwax.io
-3. After logging in with valid credentials, click on System, then select Service Job.
-4. Search for job poll_OMSOrderIdsFeed_{brandName}, check if the job is set up properly and having **paused** value as 'N'
+For CR, GT, HN, NI, and SV, verify the required `canton` or `municipio`. For PA, verify `distrito`, `corregimiento`, and `barrio`. When `taxCredit?` is explicitly `false`, also verify that `customerId` is present.
 
-If the metafield sync is running as expected, on the order detail page these attributes should be present:
+## Check the store pickup exception
 
-1. Customer ID
-2. Municipio
-3. SHIPTO\_ADDRESS\_UPDATED: true
+A non-empty `_pickupstore` line-item attribute sets `autoApprove=Y` independently of the address checks. An order can therefore be approved for store pickup even when `APPROVE_ORDER` or `SHIPTO_ADDRESS_UPDATED` is absent. Empty `_pickupstore` attributes are discarded.
 
-The `SHIPTO_ADDRESS_UPDATED` order attribute is created after an order has been first validated for a registered Municipio order attribute value. If this attribute is not created, that means that the order does not have a valid Municipio attribute and one needs to be added.
+## Confirm the OMS approval result
 
-Validate that the Order Item Attribute job for this is enabled.
+After creating the sales order, the OMS calls `approve#Order`. If the order remains in `ORDER_CREATED` or `ORDER_HOLD`, check:
 
-Validate that the config ID is set correctly. The default config ID is: `IMP_ORDER_ITM_ATTR`
+1. The product store has auto-approval enabled.
+2. The order's `autoApprove` value is not `N`.
+3. The payment method satisfies the store's approval-without-payment setting.
+4. The Maarg and OMS logs do not contain an approval or allocation error for the order.
 
-You can use the “Missing Order Attribute” report to identify orders where the OMS could not automatically correct the address of an order.
+`APPROVE_ORDER=true` alone does not prove that the OMS approved the order. Confirm the final order status.
 
-## Metafields created on Shopify but not imported into HotWax
+## Use privacy-safe Grafana checks
 
-1. Go to the Shopify order details page and append /metafields.json to the URL.
-2. Verify the order creation and metafields input time in the Shopify JSON.
-3. If you cannot wait for metafields to be imported or the job is not working as expected, order attributes can be created manually from the Order Detail page.
+Use count queries for routine monitoring so that complete customer payloads are not returned:
 
-Mapping Central American region types to the OMS's North American Region types helps when troubleshooting order approval flows in the OMS. If the address entered into the order is not mapped correctly to the type of region, then the order will not be approved even if the region name exists.
+```logql
+sum by (instance) (
+  count_over_time(
+    {instance=~"adoc-(cr|gt|hn|ni|pa|sv)-maarg-hotwax-io"}
+      |= "APPROVE_ORDER" [24h]
+  )
+)
+```
 
-| Central American Region | North American Region Type |
-| ----------------------- | -------------------------- |
-| Departamento            | State                      |
-| Municipio               | Municipality               |
-| Canton                  | Canton                     |
-| Distrito                | District                   |
+For Honduras department warnings:
 
-Read [the Glossary](../GLOSSARY.md) to learn more about how the Central American Regions maps to the Carrier Geo Mapping entries in the OMS.
+```logql
+sum(
+  count_over_time(
+    {instance="adoc-hn-maarg-hotwax-io"}
+      |~ "DEPARTMENT_(MISSING|NOT_FOUND)" [24h]
+  )
+)
+```
+
+The older NiFi metafield feed, `CarrierGeoMapping` address-correction batch, and `IMP_APR_SALES_ORD` scheduled approval job are not part of this standard Maarg import path.
