@@ -1,191 +1,196 @@
-# Unigate Email Integration Setup
+# Set up Unigate email integrations
 
-This document explains how to configure **OMS with Unigate** for sending email notifications (e.g., Ready for Pickup emails).
+Use this guide to connect an OMS tenant to Unigate and route product store email events through a communication provider such as Klaviyo.
 
-## 1. System Message Remote
-Defines a remote system endpoint to which messages (emails) will be sent.
+This setup has three parts:
 
-- **description** → Label for the integration  
-- **sendUrl** → Endpoint where messages will be sent (from `SystemMessageRemote` entity in OMS)  
-- **systemMessageRemoteId** → Unique identifier for this remote configuration  
+1. A tenant and login key in Unigate identify the OMS instance.
+2. A communication gateway auth record in Unigate stores the provider connection.
+3. A product store email setting in OMS selects the provider connection for each email event.
+
+This page covers email integrations. Configure carrier connections separately from `Unigate > Shipping Gateway` in OMS.
+
+## Before you start
+
+Collect the following information:
+
+- The tenant ID and organization name. Use a stable, recognizable tenant ID such as `BRAND_UAT`.
+- The OMS product store ID.
+- The provider base URL and credential. For Klaviyo, use a private API key created for the correct environment.
+- A test order and non-customer email address for validation.
+- Access to the approved secret manager where the generated Unigate login key will be stored.
+
+Use matching environments throughout the setup.
+
+| OMS environment | Unigate application | Unigate REST URL |
+| --- | --- | --- |
+| UAT or development | [Open Unigate UAT](https://unigate-uat.hotwax.io/qapps) | `https://unigate-uat.hotwax.io/rest/s1/unigate/` |
+| Production | [Open Unigate production](https://unigate.hotwax.io/qapps) | `https://unigate.hotwax.io/rest/s1/unigate/` |
+
+{% hint style="warning" %}
+Do not connect a UAT OMS instance to production Unigate. The OMS instance URL and Unigate URL must belong to the same environment.
+{% endhint %}
+
+## Step 1: Create the Unigate tenant
+
+1. Sign in to the matching Unigate environment and open the `Unigate` application.
+2. Select `Create UnigateTenant`.
+3. Enter the tenant ID in `Party ID`.
+4. Enter the client or instance name in `Organization Name`.
+5. Select `Create`.
+
+The new tenant appears in the tenant list. Unigate also creates an API user with the same ID and adds it to the `UNIGATE_API` group.
+
+Do not create separate `Party`, `UserAccount`, or `UserGroupMember` records for a normal onboarding. The tenant creation service creates them together.
+
+## Step 2: Generate and store the login key
+
+1. Open the tenant from the tenant list.
+2. Find the API user on the tenant detail page.
+3. Select `Create UserLoginKey`.
+4. Copy the generated key immediately and store it in the approved secret manager.
+
+Unigate stores a hash of the login key, so the original value cannot be retrieved later. Generate a new key if the value is lost.
+
+{% hint style="danger" %}
+Treat the login key and provider API key as secrets. Do not paste them into GitHub, documentation, tickets, chat, or screenshots. If a key is exposed, replace it and update the affected configuration.
+{% endhint %}
+
+## Step 3: Connect OMS to the Unigate tenant
+
+1. Sign in to the matching OMS instance.
+2. Open `Unigate > Communication Gateway`.
+3. Select `Setup Tenant`.
+4. Complete the form:
+
+| Field | Value |
+| --- | --- |
+| `Tenant ID` | The tenant ID created in Unigate |
+| `Description` | A recognizable description such as `Brand UAT Unigate connection` |
+| `Instance URL` | The matching Unigate REST URL from the environment table |
+| `API Key` | The login key generated in Step 2 |
+
+5. Select `Create`.
+
+The `Active Tenant` section displays the tenant ID and Unigate base URL. The `Communication Gateway Auths` section becomes available after tenant setup is complete.
+
+The OMS record created by this form is `UNIGATE_CONFIG`. OMS reads the API key from `publicKey` and the tenant ID from `internalId`, then sends them to Unigate in the `api_key` and `tenant_Id` request headers.
+
+## Step 4: Add the provider connection
+
+From `Unigate > Communication Gateway` in OMS:
+
+1. Select `Add Comm Auth`.
+2. Complete the provider fields.
+
+For Klaviyo, use the following values:
+
+| Field | Value |
+| --- | --- |
+| `Config` | `Klaviyo gateway` |
+| `Gateway Auth ID` | A unique ID such as `KLAVIYO_BRAND_UAT` |
+| `Description` | A clear environment-specific description |
+| `Base URL` | `https://a.klaviyo.com/api/` |
+| `Public Key` | `Klaviyo-API-Key <private-api-key>` |
+| `Auth Header Name` | `Authorization` |
+
+Leave `Username` and `Password` empty for Klaviyo unless the provider configuration requires them.
+
+3. Select `Add`.
+
+The new auth ID appears in `Communication Gateway Auths`. Although the form labels the credential as `Public Key`, a Klaviyo private API key is sensitive and must be handled as a secret.
+
+The `KLAVIYO` communication gateway configuration is installed with Unigate. Do not create another `CommGatewayConfig` record during tenant onboarding.
+
+## Step 5: Route an email event through the provider
+
+From `Unigate > Communication Gateway` in OMS:
+
+1. Select `Add Email Setting`.
+2. Complete the email setting:
+
+| Field | Value |
+| --- | --- |
+| `Store` | The product store that sends the email |
+| `Email Type` | The event to configure, such as `READY_FOR_PICKUP` |
+| `From Address` | The approved sender address |
+| `Subject` | The subject and Klaviyo metric name for the event |
+| `Body Screen Location` | The template for this email type, when available |
+| `Gateway Auth ID` | The auth ID created in Step 4 |
+| `System Message Remote ID` | `UNIGATE_CONFIG` |
+
+3. Select `Add`.
+
+Both `Gateway Auth ID` and `System Message Remote ID` are required for email delivery. The gateway auth ID selects the provider credential, while `UNIGATE_CONFIG` supplies the Unigate URL and tenant authentication.
+
+Repeat this step for each product store and email type that should use Unigate.
+
+## Step 6: Validate the integration
+
+Complete validation in UAT before configuring production.
+
+1. Reopen `Unigate > Communication Gateway` and confirm the active tenant uses the UAT Unigate URL.
+2. Confirm the communication gateway auth has the expected auth ID, config, and provider base URL.
+3. Confirm the product store email setting shows both the gateway auth ID and `UNIGATE_CONFIG`.
+4. Trigger the configured email event with a controlled UAT order and non-customer email address.
+5. Confirm OMS reports a successful request.
+6. In Klaviyo, confirm:
+   - the event metric matches the configured `Subject`;
+   - the profile email matches the test recipient;
+   - `properties.dataFields[0]` contains the expected order, pickup, totals, and line item data.
+
+Unigate calculates `subtotal` and `savings_total` from the order items and adjustments before sending the Klaviyo event.
+
+## Troubleshooting
+
+| Error or symptom | Check |
+| --- | --- |
+| `Missing authentication headers.` | Complete `Tenant ID` and `API Key` in the OMS tenant setup. OMS must send both `tenant_Id` and `api_key`. |
+| `Invalid credentials.` | Verify the login key belongs to the configured tenant ID. Generate a new login key and update OMS if the original key was lost or replaced. |
+| `Could not find SystemMessageRemote with ID UNIGATE_CONFIG` | Complete `Setup Tenant` in `Unigate > Communication Gateway`. |
+| `No sendUrl found in SystemMessageRemote with ID UNIGATE_CONFIG` | Add the matching environment URL to `Instance URL`. |
+| `Gateway Auth ID is not configured for store ...` | Edit the product store email setting and select the provider auth ID. |
+| `No valid gateway auth config found for tenant` | Verify the selected gateway auth ID exists for this Unigate tenant. |
+| `Email gateway configuration not found` | Verify the auth record uses the installed `KLAVIYO` config. |
+| Klaviyo returns an authorization error | Verify `Auth Header Name` is `Authorization` and `Public Key` contains the complete `Klaviyo-API-Key <private-api-key>` value. |
+| Event is accepted but has unexpected data | Check the product store email subject, recipient, selected template, and the order data used for the UAT test. |
+
+## Configuration reference
+
+Use the UI steps above for normal onboarding. The following records show the current data model for controlled deployment data or troubleshooting.
+
+### OMS tenant connection
 
 ```xml
-<SystemMessageRemote 
-    description="Send email to [instance name]" 
-    sendUrl="https://a.klaviyo.com/api/" 
-    systemMessageRemoteId="KLAVIYO"/>
+<moqui.service.message.SystemMessageRemote
+    systemMessageRemoteId="UNIGATE_CONFIG"
+    description="Brand UAT Unigate connection"
+    sendUrl="https://unigate-uat.hotwax.io/rest/s1/unigate/"
+    publicKey="GENERATED_UNIGATE_LOGIN_KEY"
+    internalId="BRAND_UAT"/>
+```
 
-## 2. Communication Gateway Config
-
-Configures the gateway that will handle sending emails via Unigate.
-
-* **commGatewayConfigId** → Unique ID for the gateway
-* **description** → Name of the gateway
-* **sendEmailServiceName** → Service in Moqui used to send the email
-
-Available services:
-
-1. `co.hotwax.klaviyo.KlaviyoServices.send#EmailCommunication` → Send an email
-2. `co.hotwax.klaviyo.KlaviyoServices.create#WorkflowEvent` → Create an event in Klaviyo
-3. `co.hotwax.klaviyo.common.KlaviyoServices.send#KlaviyoRequest` → Send a request to Klaviyo
+### Unigate provider connection
 
 ```xml
-<co.hotwax.unigate.CommGatewayConfig 
+<co.hotwax.unigate.CommGatewayAuth
+    commGatewayAuthId="KLAVIYO_BRAND_UAT"
     commGatewayConfigId="KLAVIYO"
-    description="Klaviyo Gateway For [instance name]"
-    sendEmailServiceName="co.hotwax.klaviyo.KlaviyoServices.send#EmailCommunication"/>
+    tenantPartyId="BRAND_UAT"
+    description="Brand UAT Klaviyo connection"
+    baseUrl="https://a.klaviyo.com/api/"
+    authHeaderName="Authorization"
+    publicKey="Klaviyo-API-Key PRIVATE_API_KEY"/>
 ```
 
-
-## 3. Instance Party
-
-Represents the organization (instance) that will use this integration.
-
-* **partyId** → Unique ID for the organization
-* **partyTypeEnumId** → Defines that it is an `Organization` type (`PtyOrganization`)
-* **organizationName** → Name of the organization
+### OMS product store email setting
 
 ```xml
-<co.hotwax.unigate.Party 
-    partyId="[instance name]" 
-    partyTypeEnumId="PtyOrganization">
-    <organization organizationName="[instance name]"/>
-</co.hotwax.unigate.Party>
-```
-
-## 4. Communication Gateway Auth
-
-Defines the authentication link between the remote system, gateway config, and tenant.
-
-* **systemMessageRemoteId** → Connects to remote system
-* **commGatewayConfigId** → Connects to gateway configuration
-* **tenantPartyId** → The tenant/organization using this gateway
-
-```xml
-<co.hotwax.unigate.CommGatewayAuth 
-    systemMessageRemoteId="KLAVIYO" 
-    commGatewayConfigId="KLAVIYO" 
-    tenantPartyId="[instance name]"/>
-```
-
-## 5. Client User Credentials
-
-Creates an instance user account for Unigate API access.
-
-* **userId** → Unique identifier for the user
-* **username** → Username for authentication
-* **userFullName** → Display name of the user
-* **partyId** → Links user to organization
-
-Also, assign user to **UNIGATE\_API** group.
-
-```xml
-<moqui.security.UserAccount 
-    userId="[instance name]" 
-    username="[instance name].apiuser" 
-    userFullName="[instance name] KLAVIYO" 
-    partyId="[instance name]"/>
-
-<moqui.security.UserGroupMember 
-    userGroupId="UNIGATE_API" 
-    userId="[instance name]" 
-    fromDate="2025-09-05T00:00:00"/>
-```
-
-## 6. Unigate System Configuration
-
-Defines the Unigate integration endpoint for sending/receiving messages.
-
-* **systemMessageRemoteId** → Unique ID for this config
-* **description** → Explains purpose
-* **sendUrl** → Instance URL with Unigate REST endpoint
-* **publicKey** → Generated from \[Unigate Tenant Detail page]
-* **remoteId** → Remote ID created above
-* **internalId** → References `partyId`
-
-```xml
-<moqui.service.message.SystemMessageRemote 
-    systemMessageRemoteId="UNIGATE_CONFIG" 
-    description="Unigate configuration for shipping and communication integrations"
-    sendUrl="https://[instance name]-uat.hotwax.io/rest/s1/unigate" 
-    publicKey="[YOUR_PUBLIC_KEY]"
-    remoteId="KLAVIYO" 
-    internalId="[instance name]"/>
-```
-
-## 7. Enumerations
-
-Defines message types for sending specific emails.
-
-* **enumId** → Unique identifier
-* **description** → Explanation
-* **enumTypeId** → E.g. `OMSMessageTypeEnum`
-* **relatedEnumId** → Links to another enum (event trigger)
-
-```xml
-<moqui.basic.Enumeration 
-    enumId="SendReadyForPickupEmail" 
-    description="Send Ready for Pickup Email" 
-    enumTypeId="OMSMessageTypeEnum"/>
-
-<moqui.basic.Enumeration 
-    enumId="READY_FOR_PICKUP" 
-    enumCode="READY_FOR_PICKUP" 
-    enumName="BOPIS Order Ready for Pickup" 
-    description="Ready to Pickup Item" 
-    enumTypeId="PRDS_EMAIL" 
-    relatedEnumId="SendReadyForPickupEmail"/>
-```
-
-## 8. Product Store Email Settings
-
-Configures store-level email settings to use Unigate.
-
-* **emailType** → Type of email (`enumCode`)
-* **productStoreId** → Store ID
-* **subject** → Email subject line
-* **systemMessageRemoteId** → References Unigate configuration
-
-```xml
-<org.apache.ofbiz.product.store.ProductStoreEmailSetting 
-    emailType="READY_FOR_PICKUP" 
-    productStoreId="[your_product_store_id]"
-    subject="Ready To Pick-Up Notification" 
+<org.apache.ofbiz.product.store.ProductStoreEmailSetting
+    productStoreId="STORE"
+    emailType="READY_FOR_PICKUP"
+    fromAddress="store@example.com"
+    subject="Ready To Pick-Up Notification"
+    gatewayAuthId="KLAVIYO_BRAND_UAT"
     systemMessageRemoteId="UNIGATE_CONFIG"/>
-```
-
-## 9. System Message Type
-
-Defines the service triggered to send the email.
-
-* **systemMessageTypeId** → Unique identifier
-* **description** → Purpose
-* **sendServiceName** → Moqui service for sending email
-* **sendPath** → Category/path (e.g., `communication/email`)
-
-```xml
-<moqui.service.message.SystemMessageType 
-    systemMessageTypeId="SendReadyForPickupEmail" 
-    description="Send Ready for Pickup Email"
-    sendServiceName="co.hotwax.orderledger.order.email.EmailServices.send#EmailRequest" 
-    sendPath="communication/email"/>
-```
-
-## 10. Communication Event Type
-
-Defines the event type for system message emails.
-
-* **communicationEventTypeId** → `SYS_MSG_EMAIL_COMM` (hardcoded)
-* **parentTypeId** → Parent category (`EMAIL_COMMUNICATION`)
-* **hasTable** → Whether it has its own table (`N`)
-* **description** → Explanation
-* **contactMechTypeId** → `EMAIL_ADDRESS`
-
-```xml
-<org.apache.ofbiz.party.communication.CommunicationEventType 
-    communicationEventTypeId="SYS_MSG_EMAIL_COMM" 
-    parentTypeId="EMAIL_COMMUNICATION" 
-    hasTable="N" 
-    description="Email Communication as a part of SystemMessage flow" 
-    contactMechTypeId="EMAIL_ADDRESS"/>
 ```
