@@ -8,6 +8,11 @@ Safety stock reserves inventory at each affected facility so that quantity is no
 
 For example, if a facility has 100 units and a safety stock value of 10, the facility contributes at most 90 units before other deductions.
 
+<!-- markdownlint-disable-next-line MD034 -->
+{% embed url="https://drive.google.com/file/d/1ZVyzgP4IEKDQpXGusVvHfpAsj9ecdA09/view?usp=drive_link" %}
+Attribute-Based Safety Stock
+{% endembed %}
+
 ## Create a safety stock rule
 
 1. Open `Sourcing` > `Safety stock`.
