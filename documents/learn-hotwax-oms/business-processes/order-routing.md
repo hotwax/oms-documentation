@@ -110,13 +110,13 @@ Test Drive lets teams validate routing behavior before activating changes. Opera
 
 ## Related documentation
 
-* [Order Routing App](./retail-operations/orders/order-routing/README.md)
-* [Brokering Runs](./retail-operations/orders/order-routing/brokering-runs.md)
-* [Routing Rules](./retail-operations/orders/order-routing/routing-rules.md)
-* [Inventory Rules](./retail-operations/orders/order-routing/inventory-rules.md)
-* [Weeks of Supply Routing](./retail-operations/orders/order-routing/weeks-of-supply-routing.md)
-* [Test Drive](./retail-operations/orders/order-routing/test-drive.md)
-* [Additional Settings](./retail-operations/orders/order-routing/additional-settings.md)
+* [Order Routing App](/documents/retail-operations/orders/order-routing/README.md)
+* [Brokering Runs](/documents/retail-operations/orders/order-routing/brokering-runs.md)
+* [Routing Rules](/documents/retail-operations/orders/order-routing/routing-rules.md)
+* [Inventory Rules](/documents/retail-operations/orders/order-routing/inventory-rules.md)
+* [Weeks of Supply Routing](/documents/retail-operations/orders/order-routing/weeks-of-supply-routing.md)
+* [Test Drive](/documents/retail-operations/orders/order-routing/test-drive.md)
+* [Additional Settings](/documents/retail-operations/orders/order-routing/additional-settings.md)
 * [Configurable Order Routing](https://www.hotwax.co/solution/configurable-order-routing)
 * [Order routing blog archive](https://www.hotwax.co/blog/tag/order-routing)
 * [Omnichannel order routing mini-guide](https://docs.google.com/presentation/d/19XFMtSeP03iHpSjJPdUaaWaw0WEQRaqTtcoHV62VcCk/edit?slide=id.g37249ff2f47_0_6#slide=id.g37249ff2f47_0_6)
