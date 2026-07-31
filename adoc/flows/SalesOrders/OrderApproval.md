@@ -1,42 +1,22 @@
 ---
-description: >-
-  Learn how ADOC validates Shopify order attributes, enriches shipping
-  addresses, and approves orders during country-specific imports.
+description: Learn how ADOC validates Shopify order attributes, enriches shipping addresses, and approves orders during country-specific imports.
 ---
 
 # Order Approval
 
-ADOC approves eligible Shopify orders as part of the real-time order import. The
-country-specific Maarg service transforms the Shopify order before it calls the
-standard Shopify order sync service. The transformation enriches the shipping
-address when required and sets `autoApprove` to control whether the OMS should
-approve the order after creating it.
+ADOC approves eligible Shopify orders as part of the real-time order import. The country-specific Maarg service transforms the Shopify order before it calls the standard Shopify order sync service. The transformation enriches the shipping address when required and sets `autoApprove` to control whether the OMS should approve the order after creating it.
 
-This flow is used for Costa Rica, Guatemala, Honduras, Nicaragua, Panama, and El
-Salvador. It replaces the older post-import flow that synchronized metafields,
-updated addresses in a later batch, and then queued orders for a scheduled
-approval job.
+This flow is used for Costa Rica, Guatemala, Honduras, Nicaragua, Panama, and El Salvador. It replaces the older post-import flow that synchronized metafields, updated addresses in a later batch, and then queued orders for a scheduled approval job.
 
 ## Import and approval sequence
 
-1. The `SYNC_SHOPIFY_ORDER` Data Manager configuration invokes the service for
-   the country where the Maarg instance is deployed.
-2. The country service executes its `OrderTransformation_<country>.groovy`
-   script against the Shopify GraphQL order payload.
-3. The script validates the country-specific note attributes, copies an
-   available phone number to the shipping and billing addresses, and enriches
-   the shipping address where required.
-4. The script sets `autoApprove` to `Y` when the order meets the applicable
-   rules. Otherwise, it remains `N`.
-5. The transformed payload is passed to the standard Shopify order sync
-   service. After `create#SalesOrder`, the OMS calls `approve#Order`. Approval
-   still depends on the product store, payment, and order-level approval
-   settings in the OMS.
+1. The `SYNC_SHOPIFY_ORDER` Data Manager configuration invokes the service for the country where the Maarg instance is deployed.
+2. The country service executes its `OrderTransformation_<country>.groovy` script against the Shopify GraphQL order payload.
+3. The script validates the country-specific note attributes, copies an available phone number to the shipping and billing addresses, and enriches the shipping address where required.
+4. The script sets `autoApprove` to `Y` when the order meets the applicable rules. Otherwise, it remains `N`.
+5. The transformed payload is passed to the standard Shopify order sync service. After `create#SalesOrder`, the OMS calls `approve#Order`. Approval still depends on the product store, payment, and order-level approval settings in the OMS.
 
-The implementation is in the `adoc-maarg` component. The country services are
-defined in
-`service/co/hotwax/adoc/order/ShopifyOrderServices.xml`. Their scripts are in
-`src/main/groovy/co/hotwax/order/transformation/`.
+The implementation is in the `adoc-maarg` component. The country services are defined in `service/co/hotwax/adoc/order/ShopifyOrderServices.xml`. Their scripts are in `src/main/groovy/co/hotwax/order/transformation/`.
 
 | Country | Import service | Transformation script |
 | --- | --- | --- |
@@ -48,93 +28,59 @@ defined in
 | El Salvador | `sync#ShopifyOrderForAdocSV` | `OrderTransformation_SV.groovy` |
 
 {% hint style="info" %}
-The seed definition of `SYNC_SHOPIFY_ORDER` does not select a country service.
-Deployment data must set its `importServiceName` to the service for that
-country.
+The seed definition of `SYNC_SHOPIFY_ORDER` does not select a country service. Deployment data must set its `importServiceName` to the service for that country.
 {% endhint %}
 
 ## Country-specific rules
 
-The transformations use Shopify note attributes. Attribute names are
-case-sensitive. The country differences are:
+The transformations use Shopify note attributes. Attribute names are case-sensitive. The country differences are:
 
-* **Costa Rica:** Requires `canton`. It sets the shipping city and postal code
-  to the canton.
-* **Guatemala:** Requires `municipio`. It sets the shipping city and postal code
-  to the municipio.
-* **Honduras:** Requires `municipio`; `department` is optional. It sets the
-  shipping city and postal code to the municipio. When the department maps to a
-  state Geo, it also sets the shipping province code.
-* **Nicaragua:** Requires `municipio`. It sets the shipping city and postal code
-  to the municipio.
-* **Panama:** Requires `distrito`, `corregimiento`, and `barrio`. It does not
-  replace the shipping city or postal code.
-* **El Salvador:** Requires `municipio`. It sets the shipping city and postal
-  code to the municipio.
+* **Costa Rica:** Requires `canton`. It sets the shipping city and postal code to the canton.
+* **Guatemala:** Requires `municipio`. It sets the shipping city and postal code to the municipio.
+* **Honduras:** Requires `municipio`; `department` is optional. It sets the shipping city and postal code to the municipio. When the department maps to a state Geo, it also sets the shipping province code.
+* **Nicaragua:** Requires `municipio`. It sets the shipping city and postal code to the municipio.
+* **Panama:** Requires `distrito`, `corregimiento`, and `barrio`. It does not replace the shipping city or postal code.
+* **El Salvador:** Requires `municipio`. It sets the shipping city and postal code to the municipio.
 
 For Costa Rica, Guatemala, Honduras, Nicaragua, and El Salvador:
 
 * The geographic attribute shown above is required.
 * When `taxCredit?` is explicitly `false`, `customerId` is also required.
-* If the order has no custom attributes, the transformation adds
-  `ATTRIBUTES_MISSING=true`.
-* When the checks pass, the script enriches the address, adds
-  `SHIPTO_ADDRESS_UPDATED=true` and `APPROVE_ORDER=true`, and sets
-  `autoApprove=Y`.
+* If the order has no custom attributes, the transformation adds `ATTRIBUTES_MISSING=true`.
+* When the checks pass, the script enriches the address, adds `SHIPTO_ADDRESS_UPDATED=true` and `APPROVE_ORDER=true`, and sets `autoApprove=Y`.
 
 For Panama:
 
 * `distrito`, `corregimiento`, and `barrio` are all required.
-* When `taxCredit?` exists and is explicitly `false`, `customerId` is also
-  required.
-* If the required attributes are missing, the transformation adds
-  `MISSING_ATTRIBUTES=true`.
-* When the checks pass, it adds `APPROVE_ORDER=true` and sets `autoApprove=Y`.
-  Panama does not add `SHIPTO_ADDRESS_UPDATED` because this transformation does
-  not replace the city or postal code.
+* When `taxCredit?` exists and is explicitly `false`, `customerId` is also required.
+* If the required attributes are missing, the transformation adds `MISSING_ATTRIBUTES=true`.
+* When the checks pass, it adds `APPROVE_ORDER=true` and sets `autoApprove=Y`. Panama does not add `SHIPTO_ADDRESS_UPDATED` because this transformation does not replace the city or postal code.
 
-`APPROVE_ORDER=true` is a diagnostic attribute that records the result of the
-standard country checks. It is not the control that triggers a later approval
-job. The current import flow uses `autoApprove`.
+`APPROVE_ORDER=true` is a diagnostic attribute that records the result of the standard country checks. It is not the control that triggers a later approval job. The current import flow uses `autoApprove`.
 
 ## Store pickup exception
 
-A non-empty `_pickupstore` line-item attribute sets `autoApprove=Y` independently
-of the country-specific address checks. Empty `_pickupstore` attributes are
-removed from the payload.
+A non-empty `_pickupstore` line-item attribute sets `autoApprove=Y` independently of the country-specific address checks. Empty `_pickupstore` attributes are removed from the payload.
 
-This means a store pickup order can be eligible for approval without
-`APPROVE_ORDER` or `SHIPTO_ADDRESS_UPDATED`. It can also retain a missing
-attribute diagnostic generated by the country transformation.
+This means a store pickup order can be eligible for approval without `APPROVE_ORDER` or `SHIPTO_ADDRESS_UPDATED`. It can also retain a missing attribute diagnostic generated by the country transformation.
 
 ## Honduras department mapping
 
 The Honduras transformation treats `department` as optional:
 
 * When `department` is missing, it adds `DEPARTMENT_MISSING=true`.
-* When a department value is present but does not match a `GEOT_STATE` Geo, it
-  adds `DEPARTMENT_NOT_FOUND=true`.
-* When the Geo is found, it copies the Geo ID to the shipping address province
-  code.
+* When a department value is present but does not match a `GEOT_STATE` Geo, it adds `DEPARTMENT_NOT_FOUND=true`.
+* When the Geo is found, it copies the Geo ID to the shipping address province code.
 
-Neither department diagnostic blocks approval. When the `municipio` and
-tax-credit/customer rules pass, the script still adds
-`SHIPTO_ADDRESS_UPDATED=true` and `APPROVE_ORDER=true`, and sets
-`autoApprove=Y`.
+Neither department diagnostic blocks approval. When the `municipio` and tax-credit/customer rules pass, the script still adds `SHIPTO_ADDRESS_UPDATED=true` and `APPROVE_ORDER=true`, and sets `autoApprove=Y`.
 
 ## Carrier assignment is separate
 
-Address enrichment during order import does not use `CarrierGeoMapping`.
-Carrier assignment is a later, separate process implemented by
-`assign#CarrierBasedOnMetroRule` in
-`service/co/hotwax/adoc/order/CarrierAssignmentServices.xml`. It uses `Geo` and
-`GeoAssoc` records for `METRO_AREA` relationships, skips store pickup orders,
-and records a system note when it cannot find the required geographic mapping.
+Address enrichment during order import does not use `CarrierGeoMapping`. Carrier assignment is a later, separate process implemented by `assign#CarrierBasedOnMetroRule` in `service/co/hotwax/adoc/order/CarrierAssignmentServices.xml`. It uses `Geo` and `GeoAssoc` records for `METRO_AREA` relationships, skips store pickup orders, and records a system note when it cannot find the required geographic mapping.
 
 ## Verify the flow
 
-Use a count query in Grafana to confirm activity without returning complete
-order payloads:
+Use a count query in Grafana to confirm activity without returning complete order payloads:
 
 ```logql
 sum by (instance) (
@@ -145,9 +91,7 @@ sum by (instance) (
 )
 ```
 
-Use `SHIPTO_ADDRESS_UPDATED` instead of `APPROVE_ORDER` to verify address
-enrichment. Results are expected for Costa Rica, Guatemala, Honduras,
-Nicaragua, and El Salvador, but not for Panama.
+Use `SHIPTO_ADDRESS_UPDATED` instead of `APPROVE_ORDER` to verify address enrichment. Results are expected for Costa Rica, Guatemala, Honduras, Nicaragua, and El Salvador, but not for Panama.
 
 For import errors, search for the deployed country service:
 
@@ -156,13 +100,8 @@ For import errors, search for the deployed country service:
   |= "ShopifyOrderForAdoc"
 ```
 
-When an order has `APPROVE_ORDER=true` but is not approved, check the OMS order
-status and approval prerequisites. The `approve#Order` service also evaluates
-the product store's auto-approval setting, the order's `autoApprove` value, and
-payment-related settings.
+When an order has `APPROVE_ORDER=true` but is not approved, check the OMS order status and approval prerequisites. The `approve#Order` service also evaluates the product store's auto-approval setting, the order's `autoApprove` value, and payment-related settings.
 
 {% hint style="warning" %}
-Do not use the old `IMP_APR_SALES_ORD` scheduled-job procedure to diagnose the
-standard Maarg import flow. The legacy `approveSalesOrder` service can still be
-invoked separately, but it is not the approval mechanism described here.
+Do not use the old `IMP_APR_SALES_ORD` scheduled-job procedure to diagnose the standard Maarg import flow. The legacy `approveSalesOrder` service can still be invoked separately, but it is not the approval mechanism described here.
 {% endhint %}
