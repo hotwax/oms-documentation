@@ -13,8 +13,10 @@ HotWax Commerce automatically handles the release and brokering of Shopify Pre-O
 
 HotWax Commerce strategically organizes all pre-orders in a dedicated queue until their physical inventory is received. This approach ensures that brokering processes are not initiated for orders lacking available inventory. Once the pre-order inventory arrives, HotWax Commerce transfers all orders from the pre-order queue to the brokering queue. This allows the system's engine to efficiently match the most suitable inventory with specific orders for fulfillment. To accommodate diverse retailer preferences, HotWax Commerce offers two methods for automatically releasing Pre-Orders:
 
-1. **Daily Job**: Merchandisers can schedule this job through the `Job Manager App` > `Pre-Order Page` by enabling the `Run Daily` checkbox in the auto-releasing card. This automated process releases pre-orders where the shipping date has arrived and inventory is available for release.
+1. **Daily job:** Open `Catalog` in Job Manager, search for the automatic pre-order release job, then configure its schedule. This job releases pre-orders when the shipping date has arrived and inventory is available.
 2. **Immediate Release:** This method doesn't require scheduling. Merchandisers can trigger instant release by clicking the `release` button associated with the `Release Pre-orders` job name. This action promptly releases all pre-orders in the queue, facilitating their allocation to the respective fulfillment locations.
+
+See [Manage a job](../../workflow/job-management/jobs/job-details.md) for current scheduling and run-now instructions.
 
 <figure><img src="../../.gitbook/assets/pre-order-automatic-release-job.png" alt=""><figcaption><p>Pre-order Automatic release</p></figcaption></figure>
 

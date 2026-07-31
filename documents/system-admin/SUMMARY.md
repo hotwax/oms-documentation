@@ -40,7 +40,7 @@
 * [User Permissions](administration/user-permissions/introduction.md)
   * [BOPIS App](administration/user-permissions/bopis-app.md)
   * [Fulfillment App](administration/user-permissions/fulfillment-app.md)
-  * [Job Manager App](administration/user-permissions/job-manager-app.md)
+  * [Job Manager app](administration/user-permissions/job-manager-app.md)
   * [Receiving App](administration/user-permissions/receiving-app.md)
   * [Import App](administration/user-permissions/import-app.md)
   * [Users App](administration/user-permissions/users-app.md)

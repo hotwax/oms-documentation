@@ -47,12 +47,16 @@ Ensure that operating system notifications are enabled:
 
 ## Not Receiving Reminder Notifications
 
-If you are not receiving reminder notifications, follow these steps to check the configuration of the `Open BOPIS Order Notifications` job in the Job Manager app's Fulfillment category:
+Check the `Open BOPIS Order Notifications` job when reminder notifications do not arrive:
 
-* Open the Job Manager app.
-* Navigate to the Fulfillment category.
-* Confirm the configuration of the `Open BOPIS Order Notifications` job.
-* Ensure that the job is set up with the desired frequency for reminder notifications.
+1. Open Job Manager.
+2. Open `Catalog`.
+3. Search for `Open BOPIS Order Notifications`.
+4. Open the job.
+5. Confirm its pause state, parameters, and schedule.
+6. Open `History` and review the latest run.
+
+See [Troubleshoot job runs and schedules](../../../retail-operations/workflow/job-management/troubleshooting/job-runs-and-schedules.md).
 
 <figure><img src="../../.gitbook/assets/bopis-notification-job-config.png" alt="" width="375"><figcaption></figcaption></figure>
 
