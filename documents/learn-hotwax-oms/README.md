@@ -67,11 +67,27 @@ A Customer Service Representative (CSR) is the first point of contact for any cu
 
 Customer Service Representatives (CSRs) can utilize HotWax Commerce to get detailed visibility about the orders and perform actions accordingly as per the customer’s requests.
 
+### Cycle count
+
+A cycle count is a scheduled physical inventory check for a facility. Store teams count items, submit the completed count for review, and administrators review variances before finalizing the count. Learn more in the [cycle count workflow](../retail-operations/inventory/cycle-count/README.md#cycle-count-workflow).
+
+### Cycle count approval
+
+Cycle count approval is the administrative review of a submitted cycle count. Administrators review counted quantities and item variances, then accept or reject the items before closing the count. Learn more in [Pending review](../retail-operations/inventory/cycle-count/pending-review.md).
+
+### Count variance
+
+A count variance is the difference between the physical quantity entered during a cycle count and the system-recorded quantity. Reviewers use variances to identify discrepancies and decide whether to accept or reject counted items. Learn more in [Pending review](../retail-operations/inventory/cycle-count/pending-review.md#review-count-page-overview).
+
 ### Digital gift cards
 
 Digital gift cards, or e-gift cards, are virtual equivalents of physical gift cards. Customers receive them via email or text message along with a unique serial number that they can use to redeem the value stored in the card. When customers order a digital gift card on Shopify, the order is immediately auto-fulfilled, a serial number is assigned, and the value is loaded to activate the gift card. Consequently, when HotWax Commerce downloads that order from Shopify, it is automatically marked as `Completed`.
 
 Learn more about [digital gift cards](./business-process-models/giftcard-orders-lifecycle.md#digital-gift-cards).
+
+### Directed cycle count
+
+A directed cycle count is a targeted count of selected items rather than a complete facility inventory count. Learn more in [Assigned counts](../retail-operations/inventory/cycle-count/assigned.md#type-filter).
 
 ### Excluded ATP
 
@@ -102,6 +118,10 @@ In HotWax Commerce, Facility type refers to different locations used for fulfill
 Retail Store: Physical stores that fulfill online orders and facilitate in-store pickups. Warehouse: Centralized storage locations for fulfilling online orders and restocking stores. Outlet Store: Discount retail locations that fulfill orders and offer in-store pickups. Outlet Warehouse: Storage for outlet inventory, supporting fulfillment for outlet stores, and direct customer shipments.
 
 Retailers can prioritize their brokering rules according to the facility types
+
+### Hard cycle count
+
+A hard cycle count is a full inventory count for a facility. It includes the facility's inventory rather than a selected list of items. Learn more in [Assigned counts](../retail-operations/inventory/cycle-count/assigned.md#type-filter).
 
 ### Inventory delta
 
@@ -193,6 +213,10 @@ Rejected orders are orders brokered for fulfillment but rejected by a warehouse 
 ### Reserved inventory
 
 Reserved inventories refer to inventory, whether in a store or warehouse, that has already been allocated to fulfill orders. Reserved quantities are not included in the "available to promise" (ATP) and are not eligible to be sold.
+
+### Recount
+
+A recount is a follow-up count used to verify an item quantity before submitting the cycle count for review. Store teams can create an additional counting session to count remaining items. Learn more in [Review progress and complete](../store-operations/cycle-count/count-progress-review.md#managing-sessions-and-submission).
 
 ### Safety stock
 
