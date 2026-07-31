@@ -4,7 +4,8 @@ Reference for creating a new client implementation guide repo from call transcri
 
 ## GitHub-only implementation drafts
 
-- [JM Agency implementation overview](../jm-agency/README.md) — Internal draft; not included in GitBook navigation.
+- [JM Agency implementation overview](../jm-agency/README.md) — Internal
+  draft; not included in GitBook navigation.
 
 ## Standard Layout
 
