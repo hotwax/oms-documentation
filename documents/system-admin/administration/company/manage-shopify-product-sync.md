@@ -6,7 +6,7 @@ description: Monitor and operate Shopify product sync in the Company App.
 
 Use the `Product sync` dashboard in the Company App to monitor scheduled imports, review the current pipeline, run targeted sync requests, and troubleshoot failed products.
 
-This guide covers day-to-day product sync operations after setup. To connect a new shop, use [Chapter 6 of Set up HotWax Commerce with Shopify](product-store-onboarding.md#6-import-and-validate-products). To move a shop from the legacy pipeline, use [Upgrade Shopify product sync](upgrade-shopify-product-sync.md).
+This guide covers day-to-day product sync operations after setup. To connect a new shop, use [Chapter 4 of Set up HotWax Commerce with Shopify](product-store-onboarding.md#4-install-approve-and-connect-shopify). To move a shop from the legacy pipeline, use [Upgrade Shopify product sync](upgrade-shopify-product-sync.md).
 
 ## Open the product sync dashboard
 
