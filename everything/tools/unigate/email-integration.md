@@ -35,11 +35,15 @@ Do not connect a UAT OMS instance to production Unigate. The OMS instance URL an
 
 1. Sign in to the matching Unigate environment and open the `Unigate` application.
 2. Select `Create UnigateTenant`.
-3. Enter the tenant ID in `Party ID`.
-4. Enter the client or instance name in `Organization Name`.
+3. Enter the client or instance name in `Organization Name`.
+4. Enter the tenant ID in `Party ID`.
 5. Select `Create`.
 
+<figure><img src="../../.gitbook/assets/unigate-create-tenant.jpg" alt="Create UnigateTenant dialog showing the Organization Name and Party ID fields for the QA test tenant"><figcaption><p>The tenant form collects the organization name and party ID. Enter an explicit party ID so the same tenant ID can be used in OMS.</p></figcaption></figure>
+
 The new tenant appears in the tenant list. Unigate also creates an API user with the same ID and adds it to the `UNIGATE_API` group.
+
+`Party ID` is optional in the service, but enter a stable ID during onboarding. If it is left empty, Unigate generates a numeric party ID, which is harder to recognize and map to OMS configuration.
 
 Do not create separate `Party`, `UserAccount`, or `UserGroupMember` records for a normal onboarding. The tenant creation service creates them together.
 
@@ -47,8 +51,13 @@ Do not create separate `Party`, `UserAccount`, or `UserGroupMember` records for 
 
 1. Open the tenant from the tenant list.
 2. Find the API user on the tenant detail page.
-3. Select `Create UserLoginKey`.
-4. Copy the generated key immediately and store it in the approved secret manager.
+3. Open the approved secret manager so it is ready to receive the new key.
+4. Select `Create UserLoginKey`.
+5. Copy the generated key immediately and store it in the approved secret manager.
+
+<figure><img src="../../.gitbook/assets/unigate-tenant-detail.jpg" alt="QA test tenant detail page showing the API user and Create UserLoginKey action"><figcaption><p>The tenant detail page lists the API user and the action that generates its login key.</p></figcaption></figure>
+
+Selecting `Create UserLoginKey` generates and displays a new key immediately; there is no confirmation step. Each selection creates an additional active login-key record and does not expire earlier keys. During a key rotation, revoke the previous key through the approved access-management process.
 
 Unigate stores a hash of the login key, so the original value cannot be retrieved later. Generate a new key if the value is lost.
 
@@ -72,7 +81,7 @@ Treat the login key and provider API key as secrets. Do not paste them into GitH
 
 5. Select `Create`.
 
-The `Active Tenant` section displays the tenant ID and Unigate base URL. The `Communication Gateway Auths` section becomes available after tenant setup is complete.
+The `Active Tenant` section displays the tenant ID, API key, and Unigate base URL. The `Communication Gateway Auths` section becomes available after tenant setup is complete. Treat this page as sensitive and do not capture it in screenshots or screen recordings.
 
 The OMS record created by this form is `UNIGATE_CONFIG`. OMS reads the API key from `publicKey` and the tenant ID from `internalId`, then sends them to Unigate in the `api_key` and `tenant_Id` request headers.
 
@@ -102,6 +111,8 @@ The new auth ID appears in `Communication Gateway Auths`. Although the form labe
 
 The `KLAVIYO` communication gateway configuration is installed with Unigate. Do not create another `CommGatewayConfig` record during tenant onboarding.
 
+The Unigate tenant detail page also has an `Add Comm Gateway Config` action for controlled administrative recovery. Use `Add Comm Auth` in OMS for the standard onboarding flow because OMS sends the record to Unigate under the active tenant. Do not screenshot either configuration list because the current screens display stored credential fields.
+
 ## Step 5: Route an email event through the provider
 
 From `Unigate > Communication Gateway` in OMS:
@@ -115,13 +126,11 @@ From `Unigate > Communication Gateway` in OMS:
 | `Email Type` | The event to configure, such as `READY_FOR_PICKUP` |
 | `From Address` | The approved sender address |
 | `Subject` | The subject and Klaviyo metric name for the event |
-| `Body Screen Location` | The template for this email type, when available |
 | `Gateway Auth ID` | The auth ID created in Step 4 |
-| `System Message Remote ID` | `UNIGATE_CONFIG` |
 
 3. Select `Add`.
 
-Both `Gateway Auth ID` and `System Message Remote ID` are required for email delivery. The gateway auth ID selects the provider credential, while `UNIGATE_CONFIG` supplies the Unigate URL and tenant authentication.
+The gateway auth ID selects the provider credential. OMS automatically assigns `UNIGATE_CONFIG` as the system message remote ID when the setting is created; it is not an input field in the current form.
 
 Repeat this step for each product store and email type that should use Unigate.
 
@@ -131,7 +140,7 @@ Complete validation in UAT before configuring production.
 
 1. Reopen `Unigate > Communication Gateway` and confirm the active tenant uses the UAT Unigate URL.
 2. Confirm the communication gateway auth has the expected auth ID, config, and provider base URL.
-3. Confirm the product store email setting shows both the gateway auth ID and `UNIGATE_CONFIG`.
+3. Confirm the product store email setting shows the expected gateway auth ID. OMS assigns `UNIGATE_CONFIG` automatically in the underlying record.
 4. Trigger the configured email event with a controlled UAT order and non-customer email address.
 5. Confirm OMS reports a successful request.
 6. In Klaviyo, confirm:
