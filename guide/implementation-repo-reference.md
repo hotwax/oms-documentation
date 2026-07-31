@@ -2,6 +2,10 @@
 
 Reference for creating a new client implementation guide repo from call transcripts. Use this as a checklist and set of templates so an AI agent can draft consistent docs without manual typing.
 
+## GitHub-only implementation drafts
+
+- [JM Agency implementation overview](../jm-agency/README.md) — Internal draft; not included in GitBook navigation.
+
 ## Standard Layout
 
 Prefer lowercase directory names, one folder per client.
