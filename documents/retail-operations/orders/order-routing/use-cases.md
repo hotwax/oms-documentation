@@ -1,5 +1,7 @@
 # Use Cases
 
+<!-- markdownlint-disable MD034 -->
+
 This section contains use cases designed to help you understand how various scenarios can be handled in the HotWax Commerce Order Routing App. These use cases are written as if you are creating a brokering run for the first time, ensuring simplicity and clarity for new users.
 
 However, if you already have an existing brokering run and want to maintain the same schedule, you don’t need to create a new run. Simply add the routing rules from these cases to the relevant existing runs. This way, you can enhance your current routing logic without altering your established workflows.
@@ -10,7 +12,7 @@ A retailer wants to ensure that all orders placed through various marketplaces a
 
 ### Pre-Requisites for This Scenario
 
-* **Marketplace\_sales\_channel** must be created in HotWax Commerce and mapped with the relevant [sales channels in Shopify](https://docs.hotwax.co/documents/learn-shopify/setup-shopify/integration-mapping/sales-channel-mapping).
+* **Marketplace\_sales\_channel** must be created in HotWax Commerce and mapped with the relevant [sales channels in Shopify](../../../system-admin/administration/company/product-store-onboarding.md#5-review-shopify-mappings).
 * A [facility group must be created](https://docs.hotwax.co/documents/system-admins/administration/facilities/manage-groups) in HotWax Commerce with the **Brokering\_group** subtype, which includes all warehouse locations.
 
 ### Steps to Implement
@@ -63,12 +65,12 @@ To configure the routing rules for eCommerce orders, first, ensure that the **eC
 
 Now, create inventory rules to route orders through the appropriate facilities. First, make sure that the correct **eCommerce Order Routing** rule is selected, then click on `Add Inventory Rule`.
 
-* **First Inventory Rule for Warehouses**\
+* **First Inventory Rule for Warehouses**
   The first rule ensures that orders are fulfilled from warehouse locations:
   * **Inventory Filter**: Apply the `Facility Group filter` and select the group for **Warehouses** only, ensuring that orders are initially routed through the warehouse locations for fulfillment.
   * **Inventory Sort**: Sort by `proximity` to the customer’s delivery address to help minimize shipping costs, prioritizing fulfillment from warehouses closest to the destination.
   * **Actions**: If inventory is unavailable at the warehouses, set the rule to send the order to the next inventory rule, allowing the system to route the order to available retail stores. If you want to allocate partially available inventory from the warehouse to the orders, turn on the toggle for Partial Fulfillment.
-* **Second Inventory Rule for Stores**\
+* **Second Inventory Rule for Stores**
   The second rule is triggered when the warehouse is unable to fulfill the order:
   * **Inventory Filter**: Apply the `Facility Group filter` and select the group for **Stores**, allowing the system to route orders through retail store locations as a secondary option.
   * **Sort Inventory**: Sort by `proximity` to the customer’s delivery address, helping to minimize shipping costs by routing orders to the nearest store.
@@ -192,8 +194,9 @@ Retailers who manage stores with varying rent agreements, especially those in ma
 ### Prerequisites for This Scenario
 
 Ensure that [facility groups are created](https://docs.hotwax.co/documents/system-admins/administration/facilities/manage-groups) for stores with fixed rental agreements.
-  * **Fixed Rent Stores**: Group stores with fixed or lower rent costs.
-  * **All Stores**: Group all stores to use as a fallback for order fulfillment when necessary.
+
+* **Fixed Rent Stores**: Group stores with fixed or lower rent costs.
+* **All Stores**: Group all stores to use as a fallback for order fulfillment when necessary.
 
 ### Steps to Implement
 
@@ -329,22 +332,28 @@ Managing Order Splitting
 During the holiday season, stores experience high foot traffic and increased operational load. Retailers often want to reduce store-level fulfillment while keeping online orders protected from stockouts. This order routing configuration helps in routing all online orders to warehouses first and uses selected store locations only when warehouse inventory is unavailable.
 
 ### Prerequisites for This Scenario
+
 Before starting holiday season order routing, daily order routing should be turned off. Optionally, order limits can be enabled for stores so that only a maximum number of orders are routed to stores being used as fallback locations.
 
 ### Steps to Implement
 
 #### Create Run
+
 Create a new brokering run in the `Order Routing App` for holiday season orders. Click on `New Run`, name it “Holiday Season Routing,” and add a short description such as “Prioritize warehouses for all online orders during the holiday season.” Then, use the Scheduler card to set the run frequency so orders are routed on time.
 
 #### Create Order Batches
+
 Click on the `New` button to create a new batch, for example, Standard orders.
 
 #### Create Routing Rules
-After creating an order batch, click on it to open it and configure the routing rules for holiday season online orders.  
+
+After creating an order batch, click on it to open it and configure the routing rules for holiday season online orders.
+
 - **Order Filter**: Apply the `Queue Filter` and select the `Brokering Queue`.
 - **Order Sort**: Set sorting to `Order Date`, so orders route in FIFO sequence.
 
 #### Create Inventory Rules
+
 Click on `Add Inventory Rules` to create inventory rules for routing orders through the appropriate facilities.
 
 - **First Inventory Rule**
@@ -361,6 +370,7 @@ Click on `Add Inventory Rules` to create inventory rules for routing orders thro
   - **Actions**: If inventory is unavailable at fallback locations, route the order to the `Unfillable Queue` for further processing. Enable the `Partial Fulfillment` toggle to allow order splitting so available items can still be fulfilled.
 
 #### Activation and Scheduling
+
 After setting up routing and inventory rules, activate the Holiday Season Routing run by changing its status from `Draft` to `Active`. Then, activate the inventory rules for both warehouses and fallback locations. Finally, schedule the run by setting its frequency to ensure holiday season orders are routed without delays.
 
 {% embed url="https://drive.google.com/file/d/18E0F6nN1icsn-L3aI-4umUj_Qea8DoVe/view?usp=sharing" %}

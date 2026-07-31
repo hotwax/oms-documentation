@@ -4,6 +4,8 @@ description: Learn about Brokering Runs.
 
 # Brokering Runs
 
+<!-- markdownlint-disable MD034 -->
+
 As discussed, <mark style="color:orange;">**brokering runs**</mark> serve as the highest level of organization in order routing, defining when and how frequently order routing takes place. Each brokering run has a specific _frequency_, such as every 5 minutes, hourly, daily, or at custom intervals based on business needs.
 
 ### Why Use Multiple Brokering Runs
@@ -33,7 +35,7 @@ Now, let’s understand how you can achieve your order routing and fulfillment g
    * Start by opening the `Order Routing App`. This will take you to the home page, where you can view all previously created brokering runs. If no brokering runs have been created yet, the page will appear blank.
 
 {% hint style="info" %}
-If you have multiple product stores, you’ll be prompted to choose the store for which you want to create a brokering run. This feature helps in managing order routing uniquely for each store. Learn more about [product stores](https://docs.hotwax.co/documents/system-admins/product-store/add-more-product-stores).
+If you have multiple product stores, you’ll be prompted to choose the store for which you want to create a brokering run. This feature helps in managing order routing uniquely for each store. Learn more about [managing Product Stores](../../../system-admin/administration/company/manage-product-store.md).
 {% endhint %}
 
 2. **Initiate a new run**
