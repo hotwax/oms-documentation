@@ -39,5 +39,3 @@ Use these guides for regular administration:
 * [Manage facilities](../facilities/manage-facility-details.md)
 * [Manage users](../users/manage-user.md)
 * [Review Company settings](settings.md)
-
-This manual excludes Composer and Workforce. The product team must confirm their audience and publication status before adding operator instructions.
