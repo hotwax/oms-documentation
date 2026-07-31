@@ -17,10 +17,13 @@ Here's how to set the reorder limit for products by tag:
 
 ### Additional Steps (Optional)
 
-1. Navigate to **Launchpad** > **Job Manager App** > **Inventory** page.
-2. Locate the **Import Product Facility** job under "More jobs."
-3. Schedule this job to run every 3 hours, or click **Run Now** for immediate execution. (This ensures data updates)
-4. In the same app, navigate to the **Miscellaneous** page and schedule the **Process Bulk Import Files** job to run every 15 minutes. You can also click **Run Now** for immediate execution.
+1. Open `Job Manager` from the Launchpad.
+2. Open `Catalog` and search for `Import Product Facility`.
+3. Open the job and schedule it for the required frequency, or select `Run Now` for an immediate execution.
+4. Return to `Catalog` and search for the bulk imported file processing job used by the instance.
+5. Open the job and configure its required schedule, or select `Run Now`.
+
+See [Manage a job](../../retail-operations/workflow/job-management/jobs/job-details.md) for current scheduling instructions.
 
 ### Setting Different Reorder Limits (Optional)
 

@@ -25,12 +25,14 @@ SFTP file locations of orders where "NETSUITE\_ORDER\_EXPORTED" should be added.
 /home/{sftp-username}/hotwax/ApproveOrderAttributes/archive
 ```
 
-Schedule the following Job from the Orders page in the Job Manager app to apply the order attributes to orders.
+Open `Catalog` in Job Manager, search for the following job, then configure its schedule to apply the order attributes:
 
 ```
 Import order attribute
 FTP Config: MOD_ORD_ATTR
 ```
+
+See [Manage a job](../../../retail-operations/workflow/job-management/jobs/job-details.md) for current scheduling instructions.
 
 {% hint style="success" %}
 The 'NETSUITE\_ORDER\_EXPORTED' attribute has now been added to orders.

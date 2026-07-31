@@ -4,17 +4,32 @@
 
 ## Workflow
 
-* [Job Management](workflow/README.md)
-  * [Job Details](workflow/job-management/job-details.md)
-  * [Job Categories](workflow/job-management/job-categories.md)
-  * [Job Queueing](workflow/job-management/job-queueing.md)
-  * [Bulk Scheduling](workflow/job-management/bulk-scheduling.md)
+* [Job Manager](workflow/README.md)
+  * [Dashboard](workflow/job-management/dashboard.md)
+  * Jobs
+    * [Catalog](workflow/job-management/jobs/catalog.md)
+    * [Job details](workflow/job-management/jobs/job-details.md)
+    * [Run history](workflow/job-management/jobs/run-history.md)
+  * Manage files and imports
+    * [File history](workflow/job-management/mdm/file-history.md)
+    * [File details](workflow/job-management/mdm/file-details.md)
+    * [Manual uploads](workflow/job-management/mdm/manual-uploads.md)
+  * System messages
+    * [Message history](workflow/job-management/system-messages/message-history.md)
+    * [Message details](workflow/job-management/system-messages/message-details.md)
+    * [Message types](workflow/job-management/system-messages/message-types.md)
+    * [Remote systems](workflow/job-management/system-messages/remote-systems.md)
+  * Data documents
+    * [Overview](workflow/job-management/data-documents/README.md)
+    * [Build a data document](workflow/job-management/data-documents/build-data-document.md)
+    * [Preview and export](workflow/job-management/data-documents/preview-export-schedule.md)
+    * [Export history](workflow/job-management/data-documents/export-history.md)
+  * [Settings](workflow/job-management/settings.md)
   * [Troubleshooting](workflow/job-management/troubleshooting/README.md)
-    * [Job Stuck](workflow/job-management/troubleshooting/job-stuck.md)
-    * [Job Failed](workflow/job-management/troubleshooting/job-failed.md)
-    * [Duplicate Jobs](workflow/job-management/troubleshooting/duplicate-job-scheduled.md)
-    * [Job Scheduling](workflow/job-management/troubleshooting/schedule-job.md)
-    * [Job Scheduling Errors](workflow/job-management/troubleshooting/job-scheduling-errors.md)
+    * [Job runs and schedules](workflow/job-management/troubleshooting/job-runs-and-schedules.md)
+    * [File imports](workflow/job-management/troubleshooting/file-imports.md)
+    * [System messages](workflow/job-management/troubleshooting/system-messages.md)
+    * [Data document exports](workflow/job-management/troubleshooting/data-document-exports.md)
 
 * [Job Workflows](workflow/job-workflows/README.md)
   * [Parameters](workflow/job-workflows/parameters.md)

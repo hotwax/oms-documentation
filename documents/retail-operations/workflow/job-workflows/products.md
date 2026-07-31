@@ -13,7 +13,7 @@ For a first import, follow [Chapter 6 of Set up HotWax Commerce with Shopify](..
 ## Webhooks
 
 {% hint style="info" %}
-Webhooks can be subscribed to from the category pages within the Job Manager app for specific categories.
+The current Job Manager does not manage webhook subscriptions. Confirm webhook configuration in the connected integration.
 {% endhint %}
 
 Automated messages sent from eCommerce (Shopify) to OMS whenever an event occurs. They contain data about the event and are received in OMS, allowing real time communication between eCommerce and OMS.
