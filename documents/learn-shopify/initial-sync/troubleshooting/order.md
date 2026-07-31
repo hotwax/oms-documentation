@@ -4,47 +4,23 @@ description: Troubleshoot order synchronization between HotWax Commerce and Shop
 
 # Order Sync
 
-## Scenario: Orders Not Available in HotWax Commerce
+## Scenario: An order is missing from HotWax Commerce
 
-### Steps
+First identify which order-import flow should have processed the order. See [Shopify order download flows](../../shopify-integration/orders/order-download.md) for the difference between history, realtime, and scheduled fallback imports.
 
-1. **Verification on Shopify:**
-   * Check Shopify to verify if the order is successfully placed by searching for the order ID. If not found, create the missing orders.
-2. **Run Order Import Job:**
-   * Open `Catalog` in Job Manager.
-   * Search for `New Orders`.
-   * Open the job, review its parameters, then select `Run Now`.
-   * Open `Run history` and review the resulting run.
+1. In Shopify Admin, search for the exact order ID. Confirm the order exists and record its creation time, latest update time, order status, and fulfillment status.
+2. Classify the order:
+   - **History:** an eligible open and unfulfilled pre-launch order in a controlled `updatedAt` window.
+   - **Realtime:** a newly created or updated order expected through the `ORDERS_CREATE` or `ORDERS_UPDATED` EventBridge and SQS path.
+   - **Fallback:** an eligible update expected in a scheduled `queue_ShopifyOrderSync` batch.
+3. Trace the selected flow from its first stage:
+   - For history, check the exact window bounds, history job run, `BulkOrderHistoryQuery` `systemMessageId`, and terminal `BULK_ORDER_HISTORY` result.
+   - For realtime, check the event, queue delivery, consumer read, system message, import, and Data Manager result.
+   - For fallback, check the shop-specific job's **Active** state, schedule, queued system message, job run, import, and Data Manager result.
+4. Retry only the failed flow. If a history window failed after its cursor advanced, reset the cursor to that failed window before retrying. Use **Run now** for fallback only with a controlled batch.
+5. If the earliest missing stage cannot be recovered, send support the Shopify order ID, shop ID, timestamps, flow, job-run and system-message identifiers, and terminal error. Do not send customer or payment data.
 
-See [Investigate job runs](../../../retail-operations/workflow/job-management/jobs/run-history.md).
-
-## Scenario: Order Available in Shopify and Not Available in HotWax Commerce
-
-### Steps
-
-1. **Check Shopify Jobs Section:**
-   * Go to the HotWax Commerce platform.
-   * Access the `EXIM` section in the hamburger menu.
-   * Navigate to the `Shopify Jobs` subsection.
-2. **Review MDM Jobs:**
-   * Under `MDM` (Master Data Management), locate the `Shopify Order MDM` job.
-3. **Inspect Failed Record:**
-   * Check the logs for this job to identify any failed records. You can also filter the failed records.
-   * If failed records are found after the order has been placed till the `Import Order` job runs, open the associated file containing the JSON data. Match the Shopify order ID in the JSON data to verify it's the same order.
-4. **Identify Errors in the Failed Records:**
-   * Check for the event message in the failed logs. Orders may fail due to missing customer address or phone number.
-   * Rectify any such issues on Shopify and download the orders again by navigating to `EXIM` > `Shopify Jobs` > `Order management` > `Import Shopify Orders`.
-   * Enter the `order ID` and run the job to download the order again.
-
-{% hint style="info" %}
-If the job fails due to technical errors, use logs to find out the reason for failure, non-technical users can use AI tools to decipher error messages.
-{% endhint %}
-
-5. If the problem still persists, connect with the HotWax Commerce support team for further assistance.
-
-<figure><img src="../../.gitbook/assets/import-shopify-orders-job.png" alt=""><figcaption></figcaption></figure>
-
-***
+For initial history setup or launch recovery, return to [Set up HotWax Commerce with Shopify](../../../system-admin/administration/company/product-store-onboarding.md). For fallback scheduling and recovery, use [Manage Shopify Order Sync](../../../system-admin/administration/company/manage-shopify-order-sync.md).
 
 ## Scenario: Order Available in HotWax Commerce but stuck in Created state
 
@@ -57,7 +33,7 @@ However, if the order originates from the POS channel, it's crucial to verify it
 1. Log in to the Shopify admin portal and locate the specific order that requires updates.
 2. Click on the Shopify Order ID to view orders on the Shopify Admin panel.
 3. Review the order details to check the status of the order.
-   * If the order is fulfilled in Shopify, follow these steps to mark the order `completed` in HotWax Commerce.
+   - If the order is fulfilled in Shopify, follow these steps to mark the order `completed` in HotWax Commerce.
 
 ### Order Refresh in HotWax Commerce
 
