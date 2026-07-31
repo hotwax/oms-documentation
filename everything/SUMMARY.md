@@ -58,6 +58,7 @@
 * [Shopify](tools/shopify/README.md)
   * [How to Access Shopify POS APP](tools/shopify/README.md)
   * [How to Create Draft Order in Shopify](tools/shopify/draft-order.md)
+  * [Shopify product sync](tools/shopify/product-sync.md)
 * [Tathya](tools/tathya/README.md)
   * [Database Configuration](tools/tathya/database-configuration/README.md)
     * [Additional Settings](tools/tathya/database-configuration/additional-configurations.md)
