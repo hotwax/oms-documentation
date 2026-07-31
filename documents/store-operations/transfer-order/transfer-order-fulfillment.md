@@ -7,6 +7,10 @@ description: How to fulfill transfer orders in HotWax Commerce
 Use the Fulfillment App to fulfill Transfer Orders (TOs). Use the app for store-to-store and store-to-warehouse transfers; complete warehouse-to-store transfers in your Warehouse Management System (WMS). This guide covers locating a TO, picking and packing inventory, creating shipments, handling exceptions, and completing fulfillment.
 
 
+{% embed url="https://drive.google.com/file/d/1nQKJm8V-y4kvYDvCaQIM1UUYcRACrLmK/view?usp=drive_link" %}
+Inventory Transfer Fulfillment
+{% endembed %}
+
 ## Fulfilling a TO
 
 ### Locate the TO

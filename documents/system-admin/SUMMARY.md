@@ -48,7 +48,7 @@
   * [Pre-Order App](administration/user-permissions/pre-order-app.md)
   * [Cycle Count App](administration/user-permissions/cycle-count-app.md)
   * [Transfers App](administration/user-permissions/transfers-app.md)
-* [Delete Customers](administration/delete-customers.md)
+* [Anonymize Customer Data](administration/delete-customers.md)
 * [SOLR Indexing](administration/solr-indexing.md)
 * [Data Manager](administration/data-manager/README.md)
   * [Configuration options](administration/data-manager/configuration-options.md)

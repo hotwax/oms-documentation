@@ -29,6 +29,8 @@ Most controls apply a change as soon as you select a value. The page does not ha
 
 The page is available to signed-in users, but individual controls and updates can still depend on your permissions.
 
+<figure><img src="../../.gitbook/assets/order-manager-settings.png" alt="Order Manager Settings page with a demo user, OMS, Product Store, product identifier, barcode, time zone, and language cards"><figcaption><p>Confirm the working context before changing store or personal settings.</p></figcaption></figure>
+
 ## Review your account and system connection
 
 The account card shows the user currently signed in.
