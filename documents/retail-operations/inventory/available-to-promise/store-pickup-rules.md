@@ -12,6 +12,8 @@ Open `Sourcing` > `Store pickup` to manage pickup eligibility across three tabs:
 
 The page also displays `Top pickup products` and `Top pickup facilities` for the last 30 days.
 
+<figure><img src="../../.gitbook/assets/order-routing-store-pickup-overview.png" alt="Store pickup Product and facility tab with pickup analytics, schedule controls, and active and inactive rule cards"><figcaption><p>Compare recent pickup activity with the scheduled product-and-facility rules.</p></figcaption></figure>
+
 ## Manage pickup facilities
 
 1. Select the `Facility` tab.

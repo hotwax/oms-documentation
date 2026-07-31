@@ -17,6 +17,8 @@ Choose a segment, then select the location or channel you want to review.
 
 `Channel` scope requires one linked configuration facility. If no configuration facility is linked, the page shows `No configuration facility linked` and offers `Add Config`. If the selected facility or channel is invalid, unavailable, or has more than one configuration facility, the page displays an error instead of choosing another scope.
 
+<figure><img src="../../.gitbook/assets/order-routing-online-atp-computation.png" alt="Inventory page in Channel scope showing products with Online ATP, threshold, pickup, and brokering values"><figcaption><p>Review Online ATP and related sourcing configuration for the selected inventory channel.</p></figcaption></figure>
+
 ## Find and open a product
 
 1. Select a facility in `Location` scope or a channel in `Channel` scope.

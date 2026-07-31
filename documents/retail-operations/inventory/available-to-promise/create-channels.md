@@ -58,6 +58,8 @@ The `Publish` tab displays one card for each Shopify shop connected to the selec
 5. Select the `Inventory channel` that should supply inventory.
 6. Select `Save changes`.
 
+<figure><img src="../../.gitbook/assets/order-routing-inventory-channels-publish.png" alt="Inventory channels Publish tab with connected shop cards for run time, frequency, inventory channel, and save controls"><figcaption><p>Set the publishing schedule and inventory channel for each connected Shopify shop.</p></figcaption></figure>
+
 Open the shop card overflow menu for these actions:
 
 * `History`: Review previous job runs.
