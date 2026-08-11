@@ -1,15 +1,13 @@
 ---
-description: Diagnose Data Manager files that do not start, fail, or cannot be retrieved from SFTP.
+description: Choose a safe investigation path for Data Manager configuration and file-processing issues.
 ---
 
-# Troubleshooting Data Manager
+# Troubleshoot Data Manager
 
-Start with the file's log in the relevant Data Manager configuration. The log identifies the uploaded file, current status, and any failed records.
+Use the guide that matches the failure:
 
-| Symptom | Next step |
-| --- | --- |
-| A file remains pending or does not appear to process | [Data not imported](data-not-imported.md) |
-| A scheduled SFTP file is not retrieved | [SFTP errors](data-import-errors.md) |
-| Some rows completed and some failed | Download `Failed Records`, correct the source rows, remove the error-reason column, and retry only those rows. |
+- [Data was not imported](data-not-imported.md)
+- [Import configuration or SFTP error](data-import-errors.md)
+- [Troubleshoot file imports in Job Manager](../../../../retail-operations/workflow/job-management/troubleshooting/file-imports.md)
 
-For field definitions and supported file types, return to [Frequently used imports](../freq-used-configurations.md).
+Capture the configuration identifier, file or log identifier, current status, first error, and timestamps before you change a service, path, or execution mode.

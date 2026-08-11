@@ -54,7 +54,7 @@ For a product to be available for pickup at Shopify PDP, it must have inventory 
 
 ### ATP Computation
 
-When the inventory is received, a product’s QOH and ATP is updated in HotWax Commerce. HotWax Commerce calculates  [Available to Promise](/documents/retail-operations/inventory/available-to-promise) (ATP) of a facility by considering various factors, such as safety stock, threshold, reserved quantity, and orders in the queue.
+When inventory is received, HotWax Commerce updates QOH and ATP. For the canonical definitions of [QOH and ATP](../README.md#available-to-promise-atp), use the glossary. For a facility, ATP accounts for reserved quantities, safety stock, threshold, and orders in the brokering queue.
 
 ATP = QOH - (Reserved quantities + Safety stock + Threshold + Orders in brokering queue)
 

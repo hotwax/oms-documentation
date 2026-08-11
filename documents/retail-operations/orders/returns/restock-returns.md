@@ -13,13 +13,15 @@ HotWax Commerce operates with a specific inventory management approach for resto
 
 ## Restock Returns for In-Store Orders
 
-Store associates can configure whether to accept the return of the product with or without restocking it, depending on the specific requirements set by the retailer. If the decision is to restock in-store order items immediately upon receipt, the inventory changes are updated in HotWax Commerce instantly. These inventory updates are then synced with Shopify through the `Upload recent inventory change` job from `HotWax Commerce Job Manager` app. To schedule the job follow these steps:
+Store associates can configure whether to accept the return of the product with or without restocking it, depending on the specific requirements set by the retailer. If the decision is to restock in-store order items immediately upon receipt, the inventory changes are updated in HotWax Commerce instantly. These inventory updates are then synced with Shopify through the `Upload recent inventory change` job.
 
-1. Log in to the `HotWax Commerce Job Manager App` from the launchpad.
-2. Within the Job Manager app, go to the `Inventory` page.
-3. Locate the `Upload recent inventory change` job within the `more jobs` section of the `inventory` page.
-4. Click on the job title to open the job card.
-5. Specify the job run time and preferred frequency based on your operational needs.
-6. Click on `Save Changes` to schedule the job according to the defined run time and frequency.
+1. Open Job Manager from the HotWax Commerce Launchpad.
+2. Open `Catalog`.
+3. Search for `Upload recent inventory change`.
+4. Select the job.
+5. Review its parameters.
+6. Update its schedule for the required frequency.
+
+See [Manage a job](../../workflow/job-management/jobs/job-details.md) for current scheduling instructions.
 
 <figure><img src="../../.gitbook/assets/restock-returns-job.png" alt="" width="375"><figcaption></figcaption></figure>

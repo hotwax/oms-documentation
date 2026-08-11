@@ -4,6 +4,8 @@ description: Learn about common terms in omnichannel order and inventory managem
 
 # Glossary
 
+Use the definitions in this glossary as the canonical reference for quantity on hand (QOH), available to promise (ATP), and online ATP. Workflow pages can describe how these values are used in a specific process.
+
 ### Advanced shipping notice (ASN)
 
 An advanced shipping notice (ASN) is a notification sent by a supplier to a recipient detailing the contents and expected arrival of a shipment, often sent in advance of the physical delivery. For example, if a store anticipates receiving 100 shirts in an incoming shipment, the ASN will detail this expected inventory count.
@@ -22,7 +24,7 @@ The arrival date is the date when the inventory of the purchase order items is e
 
 ### Available to promise (ATP)
 
-ATP (Available to Promise) represents the physical quantity of a product at stores or warehouses after deducting the reserved inventory, that is, inventory that has been allocated to online orders from the Quantity on Hand (QOH).\
+ATP (available to promise) is the inventory that can be promised at a facility after inventory reserved for orders is deducted from quantity on hand (QOH).\
 ATP = QOH - Reserved quantities
 
 ### Backorders
@@ -67,11 +69,27 @@ A Customer Service Representative (CSR) is the first point of contact for any cu
 
 Customer Service Representatives (CSRs) can utilize HotWax Commerce to get detailed visibility about the orders and perform actions accordingly as per the customer’s requests.
 
+### Cycle count
+
+A cycle count is a scheduled physical inventory check for a facility. Store teams count items, submit the completed count for review, and administrators review variances before finalizing the count. Learn more in the [cycle count workflow](../retail-operations/inventory/cycle-count/README.md#cycle-count-workflow).
+
+### Cycle count approval
+
+Cycle count approval is the administrative review of a submitted cycle count. Administrators review counted quantities and item variances, then accept or reject the items before closing the count. Learn more in [Pending review](../retail-operations/inventory/cycle-count/pending-review.md).
+
+### Count variance
+
+A count variance is the difference between the physical quantity entered during a cycle count and the system-recorded quantity. Reviewers use variances to identify discrepancies and decide whether to accept or reject counted items. Learn more in [Pending review](../retail-operations/inventory/cycle-count/pending-review.md#review-count-page-overview).
+
 ### Digital gift cards
 
 Digital gift cards, or e-gift cards, are virtual equivalents of physical gift cards. Customers receive them via email or text message along with a unique serial number that they can use to redeem the value stored in the card. When customers order a digital gift card on Shopify, the order is immediately auto-fulfilled, a serial number is assigned, and the value is loaded to activate the gift card. Consequently, when HotWax Commerce downloads that order from Shopify, it is automatically marked as `Completed`.
 
 Learn more about [digital gift cards](./business-process-models/giftcard-orders-lifecycle.md#digital-gift-cards).
+
+### Directed cycle count
+
+A directed cycle count is a targeted count of selected items rather than a complete facility inventory count. Learn more in [Assigned counts](../retail-operations/inventory/cycle-count/assigned.md#type-filter).
 
 ### Excluded ATP
 
@@ -103,6 +121,10 @@ Retail Store: Physical stores that fulfill online orders and facilitate in-store
 
 Retailers can prioritize their brokering rules according to the facility types
 
+### Hard cycle count
+
+A hard cycle count is a full inventory count for a facility. It includes the facility's inventory rather than a selected list of items. Learn more in [Assigned counts](../retail-operations/inventory/cycle-count/assigned.md#type-filter).
+
 ### Inventory delta
 
 Inventory delta means adjusting the stock count of an item in a facility by adding or subtracting a specific amount of inventory, as provided by an external system like an ERP. For example, if the Central Warehouse has 10 socks in stock and a delta file specifies a change of +2, the stock count will be adjusted to 12 by adding the delta value (+2) to the existing stock count.
@@ -127,11 +149,10 @@ The maximum order limit is a predefined limit set by a store, indicating the max
 
 ### Online ATP
 
-Online ATP represents the unified inventory pool of actual sellable inventory count that is published on e-commerce platforms and can be promised to customers.
+Online ATP is the sellable inventory total that HotWax Commerce publishes to e-commerce platforms. It starts with QOH and excludes inventory that is unavailable for online sale.
 
-To calculate online ATP, HotWax Commerce deducts inventory that is not available for sale from the ATP. This includes items such as safety stock, threshold quantities, orders in the brokering queue, and inventory from locations that are not participating in online selling.
+The calculation excludes reserved quantities, safety stock, threshold quantities, orders in the brokering queue, and ATP from facilities that do not participate in online selling.
 
-HotWax Commerce calculates online available to promise (ATP):
 Online ATP = QOH - (reserved quantities + safety stock + threshold + orders in brokering queue + excluded facilities’ ATP)
 
 Learn more about [online ATP](./business-process-models/inventory-lifecycle.md#push-online-atp-to-ecommerce).
@@ -184,7 +205,7 @@ A purchase order (PO) is a document created by a retailer and sent to their supp
 
 ### Quantity on hand (QOH)
 
-QOH represents the total physical quantity of a product available at stores or warehouses. HotWax Commerce receives daily inventory feeds from the ERP system to update and maintain inventory data. Additionally, in the absence of ERP systems, HotWax Commerce also receives inventory feeds from Warehouse Management Systems (WMS) and Point of Sale (POS) systems.
+QOH is the total physical quantity of a product recorded at a store or warehouse before order reservations and online-selling rules are applied. HotWax Commerce can update QOH from ERP, WMS, and POS inventory feeds.
 
 ### Rejected orders
 
@@ -193,6 +214,10 @@ Rejected orders are orders brokered for fulfillment but rejected by a warehouse 
 ### Reserved inventory
 
 Reserved inventories refer to inventory, whether in a store or warehouse, that has already been allocated to fulfill orders. Reserved quantities are not included in the "available to promise" (ATP) and are not eligible to be sold.
+
+### Recount
+
+A recount is a follow-up count used to verify an item quantity before submitting the cycle count for review. Store teams can create an additional counting session to count remaining items. Learn more in [Review progress and complete](../store-operations/cycle-count/count-progress-review.md#managing-sessions-and-submission).
 
 ### Safety stock
 

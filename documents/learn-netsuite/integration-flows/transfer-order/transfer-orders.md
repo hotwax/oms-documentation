@@ -5,7 +5,7 @@ description: >-
 
 # Transfer Orders
 
-Transfer orders are instrumental in the internal movement of inventory within an omnichannel retail environment. They are used to transfer inventory from warehouses to stores or between stores. This process is typically initiated when stores require additional inventory to meet customer demands. Retail merchandisers strategically plan inventory transfers, sourcing them either from centralized warehouses or from stores with an excess of stock that isn't selling.
+Transfer orders are instrumental in the internal movement of inventory within an omnichannel retail environment. They are used to transfer inventory from warehouses to stores or between stores. This process is typically initiated when stores require additional inventory to meet customer demands. Retail merchandisers strategically plan inventory transfers, sourcing them either from centralized warehouses or from stores with an excess of stock that is not selling.
 
 Transfer Orders originate within NetSuite, but there is a distinction in how they are fulfilled. When a Transfer Order is initiated from a warehouse, NetSuite's fulfillment solution is employed to fulfill the Transfer Order, ensuring the correct allocation of inventory.
 
@@ -70,10 +70,10 @@ Import fulfilled Transfer Orders from NetSuite
 Import Inventory Deduction from Origin Facility from SFTP:
 
 ```
-Add job name here
+Import Inventory Variance
 ```
 
-#### Here's how transfer order fields are mapped in NetSuite and HotWax Commerce
+#### How transfer order fields are mapped in NetSuite and HotWax Commerce
 
 <table><thead><tr><th width="112">S.No.</th><th width="244.44856661045532">Fields in NetSuite</th><th>Fields in HotWax Commerce</th></tr></thead><tbody><tr><td>1</td><td>Order #</td><td>Shipment Attribute</td></tr><tr><td>2</td><td>Transfer Order Internal ID</td><td>External ID</td></tr><tr><td>3</td><td>Items</td><td>SKU</td></tr><tr><td>4</td><td>Quantity</td><td>Ordered Quantity</td></tr><tr><td>5</td><td>Destination Location</td><td>Facility</td></tr><tr><td>6</td><td>Tracking #</td><td>Tracking ID</td></tr></tbody></table>
 
@@ -87,7 +87,7 @@ Add job name here
 {% endtab %}
 {% endtabs %}
 
-#### Here's how transfer order fields are mapped in NetSuite and HotWax Commerce that remain hidden in the user interface but are included in the transfer order JSON file
+#### How transfer order fields are mapped in NetSuite and HotWax Commerce that remain hidden in the user interface but are included in the transfer order CSV file
 
 <table><thead><tr><th width="112">S.No.</th><th width="217.44856661045532">Fields in NetSuite</th><th>Fields in HotWax Commerce</th></tr></thead><tbody><tr><td>1</td><td>Line ID</td><td>Shipment Item External ID</td></tr><tr><td>2</td><td>From Location</td><td>Shipment Destination Facility ID</td></tr><tr><td>3</td><td>Item Tag</td><td>Tags (hotwax-fulfilled)</td></tr></tbody></table>
 
@@ -135,7 +135,7 @@ HC_SC_ImportTOFulfillmentReceipts_v2.js
 ```
 
 {% hint style="info" %}
-The HC\_SC\_ImportTOFulfillmentReceipts\_v2 SuiteScript also generates a CSV file highlighting erroneous records found during processing and uploads the file to the SFTP server. Simultaneously, an email alert is automatically triggered to designated personnel, helping them quickly pinpoint the source of the issue and accelerating troubleshooting.
+The `HC_SC_ImportTransferOrderReceipts` SuiteScript also generates a CSV file highlighting erroneous records found during processing and uploads the file to the SFTP server. Simultaneously, an email alert is automatically triggered to designated personnel, helping them quickly pinpoint the source of the issue and accelerating troubleshooting.
 {% endhint %}
 
 {% file src="../../.gitbook/assets/Transfer Order Receipts Sample Feed.txt" %}

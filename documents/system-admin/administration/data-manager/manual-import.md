@@ -1,19 +1,18 @@
-# Manual import
+---
+description: Use the current Job Manager Manual Uploads workflow for operator file submissions.
+---
 
-Use a manual import to upload a supported CSV or JSON file directly to a Data Manager configuration.
+# Import a file manually
 
-## Upload a file
+Use Job Manager for operator file submissions.
 
-1. Go to `Settings` > `Data Manager Configurations`.
-2. Search for and open the configuration that matches the data you are importing.
-3. Download the available sample file and prepare your file with the required columns.
-4. Select `Choose File`, select the CSV or JSON file, and start the import.
-5. Open the file's log entry to monitor its status.
+1. Open `MDM` > `Manual uploads`.
+2. Find the required configuration.
+3. Review the import service and template.
+4. Select the prepared file.
+5. Select `Start Import`.
+6. Open `File history` to monitor processing.
 
-## After the import
+Read [Upload a file manually](../../../retail-operations/workflow/job-management/mdm/manual-uploads.md) for the complete workflow.
 
-* `Finished` means the file completed. Review `Failed Records` if the log indicates that any rows were rejected.
-* `Pending` means the file is waiting for the bulk-file processing job. See [Data not imported](troubleshooting/data-not-imported.md) if it remains pending.
-* `Failed` means the file could not be processed. Review the log and correct the source file before retrying.
-
-When retrying failed rows, remove the error-reason column from the downloaded failed-records file before uploading it again.
+Use [Data Manager configuration](README.md) only when an administrator needs to change the underlying service, execution mode, or file contract.

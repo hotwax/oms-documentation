@@ -2,16 +2,16 @@
 
 Retailers need real-time insights into their product inventory, to ensure informed decision-making and efficient inventory management. The `Find Product Inventory` page within HotWax Commerce serves as a centralized hub for managing specific inventory details of products. It offers a comprehensive view of various reservations and availability statuses, including reserved, committed, and available ATP (Available to Promise). Retailers can get visibility into reservations, queues, and excluded facilities, and the `Find Product Inventory` page empowers users to optimize their inventory allocation and fulfillment processes.  Users can see all the columns in which inventory is reserved and the available-to-promise at the end. The following details are available for the inventory on the page:
 
-| Queue Type              | Description                                            |
-|-------------------------|--------------------------------------------------------|
-| Brokering queue         | Queue that holds orders awaiting brokering.            |
-| Unfillable hold queue   | Queue that holds orders that cannot be fulfilled at the moment. |
-| Pre-order queue         | Queue that holds pre-orders awaiting fulfillment.      |
-| Backorder queue         | Queue that holds backorders awaiting fulfillment.      |
-| Excluded facilities ATP | Shows inventory of facilities excluded from online selling. |
-| Excluded ATP            | Shows inventory excluded from online selling.          |
-| Threshold               | Limit set by a merchandiser to avoid overselling online. |
-| Online ATP              | Inventory available for promise on online channels.    |
+| Queue type                 | Description                                                                     |
+|----------------------------|---------------------------------------------------------------------------------|
+| Brokering queue            | Queue that holds orders awaiting brokering.                                     |
+| Unfillable hold queue      | Queue that holds orders that cannot be fulfilled at the moment.                 |
+| Pre-order queue            | Queue that holds pre-orders awaiting fulfillment.                               |
+| Backorder queue            | Queue that holds backorders awaiting fulfillment.                               |
+| Excluded facilities ATP    | Shows inventory of facilities excluded from online selling.                     |
+| Brokering Excluded ATP     | Shows inventory excluded from the brokering calculation.                        |
+| Threshold                  | Limit set by a merchandiser to avoid overselling online.                        |
+| Online ATP                 | Inventory available for promise on online channels.                             |
 | Available to Promise (ATP) | Inventory available for promise to customers, representing actual availability. |
 
 ### Step-by-Step Usage Instructions
@@ -26,9 +26,9 @@ Retailers need real-time insights into their product inventory, to ensure inform
 
 {% embed url="https://youtu.be/E4YeyzjHxYk" %} Video: Search Product {% endembed %}
 
-## Search Products by Facility
+## Inventory by facility
 
-Retailers operating multiple warehouses or stores need facility-specific inventory visibility to efficiently manage and monitor product availability at each fulfillment location. The `Facility` filter provides users with visibility of products available at a particular facility, enabling users to make decisions regarding restocking, fulfillment, and redistribution. The `Facility` filter enhances workflow by enabling users to swiftly identify stock levels, assess inventory distribution, and optimize their supply chain operations.
+Retailers operating multiple warehouses or stores need facility-specific inventory visibility to efficiently manage and monitor product availability at each fulfillment location. The `Facility` filter provides users with visibility of products available at a particular facility, including the facility's ATP, quantity on hand (QOH), and inventory-item details. This helps users assess inventory distribution and make decisions about restocking, fulfillment, and redistribution.
 
 ### Step-by-Step Usage Instructions
 
@@ -36,6 +36,10 @@ Retailers operating multiple warehouses or stores need facility-specific invento
 2. Click on the dropdown menu associated with the Facility filter. A list of available facilities or locations will appear.
 3. Once you've selected a facility from the dropdown menu, the page will display a list of products associated with the chosen facility. Review product availability, quantities, and details related to inventory management at this location.
 4. Use the search filter option to find specific products within the selected facility. Enter the product identifier of the product to access its inventory breakdown at the chosen facility.
+
+The product inventory view shows the selected facility in the filter and lists inventory items by facility, location, ATP, and QOH.
+
+<figure><img src="../../.gitbook/assets/product-inventory.png" alt="Product inventory view with the facility filter and facility-level inventory items"><figcaption><p>Review inventory by facility</p></figcaption></figure>
 
 For example: If you'd like to search for the available product inventory of the SKU "WJ08-XS-Gray" in the Times Square facility, search for the SKU in the search bar and select 'Times Square' from the facility filter.
 
@@ -54,4 +58,3 @@ For example, if a retailer chooses the Amazon sales channel and searches for SKU
 3. If you need to find a specific product's inventory breakdown for the selected channel, use the search functionality provided within the interface. Enter the identifier of the product you're interested in, and the system will display its inventory details for the chosen channel.
 
 {% embed url="https://youtu.be/eU_VU7LKzwk" %} Video: Filter Inventory Channel {% endembed %}
-

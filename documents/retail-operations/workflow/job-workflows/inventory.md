@@ -28,7 +28,7 @@ To know more about inventory synchronization between HotWax and Shopify, refer t
 ## Webhooks
 
 {% hint style="info" %}
-Webhooks can be subscribed to from the category pages within the Job Manager app for specific categories.
+The current Job Manager does not manage webhook subscriptions. Confirm webhook configuration in the connected integration.
 {% endhint %}
 
 Automated messages sent from eCommerce (Shopify) to OMS whenever an event occurs. They contain data about the event and are received in OMS, allowing real time communication between eCommerce and OMS.
@@ -98,11 +98,11 @@ Job Enum ID: `JOB_IMP_PROD_FAC`\
 Service Name: `ftpImportCSVFile`\
 Flow: Applying ATP rules in HotWax.
 
-HotWax Commerce [ATP App](https://docs.hotwax.co/documents/retail-operations/inventory/available-to-promise) allows retailers to configure rules for inventory computation based on product tags and facility types or groups, reducing manual work. Based on these rules, the available-to-promise (ATP) of a product is calculated, which is then synchronized to Shopify or other sales channels.
+The `Sourcing` section of the [Order Routing Rules app](../../orders/order-routing/README.md) lets retailers configure inventory rules by product tags, product features, inventory channels, and facility groups. These rules contribute to the available-to-promise (ATP) inventory published to Shopify and other sales channels.
 
-A job in the ATP app generates a CSV file based on rules configured for calculating ATP and puts it in the SFTP location. \*\*The `Import Product Facility` job is used to download this CSV from the SFTP location and upload it on the file system of HotWax Commerce. \*\* Further, the `Process Bulk Import Files` job runs and processes all the files in HotWax. And finally, all the rules configured from the ATP app by the retailer are created.
+A sourcing-rule run generates a product-facility CSV file and places it in the configured SFTP location. The `Import Product Facility` job downloads that file to HotWax Commerce. The `Process Bulk Import Files` job then processes the file and applies the resulting product-facility configuration.
 
-**It is important to note that this job is responsible for applying ATP rules configured by retailers on ATP computation.**
+This job imports sourcing-rule output. It does not generate the rule output itself.
 
 **Custom Parameters**
 * The recommended frequency for this job is 15 minutes.
