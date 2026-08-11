@@ -1,83 +1,87 @@
 ---
-description: >-
-  Simplify user management in the Order Management System (OMS) with HotWax
-  Commerce.
+description: Find a user and maintain login, contact, role, store, and facility access.
 ---
 
-# Manage Users
+# Manage users
 
-In the Order Management System (OMS), user management is a straightforward process accomplished through the Find User page and the User Details page. Follow these steps for efficient user management:
+## Find a user
 
-1. Go to the Find User page within OMS.
-2. Utilize the search by user name and filtering options such as clearance and status to find the specific user you want to manage.
-3. Once the user is identified, click on the user to access the dedicated User Details page.
-4. On the User Details page, you can update contact information, adjust roles, or manage permissions.
+1. Open the **Company App**.
+2. Go to `Users`.
+3. Search by user name or ID.
+4. Filter by `Security Groups` or `Status`.
+5. Select the user.
 
-{% embed url="https://youtu.be/gOSE4eY2bbg" %}
+## Block or unblock login
 
-## Block or Unblock User Login
+Use the login status to stop or restore access.
 
-The "Block User Login" function allows administrators to control user access to OMS applications. Blocking a user disables their login capabilities, providing an additional layer of security or managing access during specific circumstances. If a user login is attempted too many times with an incorrect password, their login will be blocked automatically. Conversely, unblocking a user restores their login privileges, allowing them to access the system again. This function is useful for enforcing temporary restrictions or addressing security concerns.
+1. Open the user.
+2. Find the login status.
+3. Click `Block User Login` or `Unblock User Login`.
+4. Confirm the action.
 
-<figure><img src="../../.gitbook/assets/block-user-login.png" alt="" width="375"><figcaption></figcaption></figure>
+A login can also become blocked after repeated failed sign-in attempts.
 
-## Reset Password
+## Reset a password
 
-The "Reset Password" function enables administrators to initiate a password reset for a user in the OMS. This is particularly useful in situations where a user forgets their password or for security reasons. Administrators can set a new password directly or trigger an email notification to the user using their saved contact info, prompting them to reset their password independently.
+1. Open the user.
+2. Click `Reset Password`.
+3. Choose the available administrator or email reset option.
+4. Confirm the action.
 
-<figure><img src="../../.gitbook/assets/reset-password.png" alt="" width="375"><figcaption><p>Image: Reset Password</p></figcaption></figure>
+Confirm the user's email address before sending a password-reset message.
 
-## Force Logout
+## Force logout
 
-The "Force Logout" function allows administrators to sign a user out of all active sessions from the `Login details` card on the User Details page. This is useful when a user should immediately lose access, such as after a security concern, device loss, or role change.
+Use `Force logout` to end all active sessions after device loss, a security concern, or an access change.
 
-When administrators click `Force logout`, a confirmation prompt appears before the action is applied. After confirmation, the user is logged out everywhere and must sign in again to continue using HotWax Commerce apps.
+1. Open the user's login details.
+2. Click `Force logout`.
+3. Confirm the action.
 
-If the user is already logged out, the `Force logout` button remains disabled.
+The action is disabled when the user has no active session.
 
-## Update Contact Details
+## Update contact details
 
-The "Update Contact Details" function enables administrators to modify a user's contact information, including email, phone number, or external ID. The on file email of a customer is important for ensuring that reset password emails are sent to the correct address. The external ID of a user is helpful for tracking their commissions during order fulfillment.
+1. Open the contact section.
+2. Click `Edit`.
+3. Update the email, phone number, or external ID.
+4. Save the changes.
 
-<figure><img src="../../.gitbook/assets/update-contact-details.png" alt="" width="375"><figcaption><p>Image: Update Contact Details </p></figcaption></figure>
+The email address is used for password recovery. An external ID can connect the user with another employee system.
 
-## Update User’s Role and Permissions
+## Change access
 
-### Clearance
+Use the clearance area to manage:
 
-Manage employee roles and permissions.  
+* Security Groups
+* Product Stores
+* Access history
 
-- **Add Security Group**: Retailers can assign or update an employee's permissions by associating them with one or more security groups. 
+Add or remove only approved values. Open a Product Store from the user's access list when you need to confirm the store.
 
-- **Remove Security Group**: To remove a security group, they can click on the `More` option next to the group's name and choose `Remove`.
+## Configure picker access
 
-- **Add Product Store**: Employees can be assigned to one or more product stores, based on business needs
+Turn on `Show as a picker` when picklists can be assigned to the user. Then add every facility where the user can pick orders.
 
-- **Remove Product Store**: To remove a product store, they can click on the `More` option next to the product store’s name and choose `Remove`.
+See [Create pickers](add-picker.md) for verification.
 
-- **View Product Store**: View all product store-related details by opening the product store’s details page in the **Company App**.
+## Add facilities
 
-- **View History**: View a record of changes made to an employee permissions. Retailers can see when security groups were added or removed and how long the employee stayed in each group.
+1. Open the user's facility section.
+2. Click `Add Facilities`.
+3. Select the facilities.
+4. Save the changes.
 
+A user must be associated with the facility before some fulfillment roles appear at that location.
 
-<figure><img src="../../.gitbook/assets/update-user-role-and-permission.png" alt=""><figcaption><p>Image: Update user role and permission</p></figcaption></figure>
+## Add favorites
 
-## Create a Picker Role
+Favorites preselect frequently used Product Stores and Shopify shops in HotWax Commerce applications.
 
-The "Show as Picker" function allows picklists to be assigned to a user. This role is tailored for order fulfillment tasks, providing specific access and permissions related to picking operations. By utilizing this function, administrators can customize a user's capabilities to efficiently handle tasks associated with order fulfillment.
+1. Open the user's favorites.
+2. Select the Product Store and Shopify shop.
+3. Save the changes.
 
-<figure><img src="../../.gitbook/assets/picker-fill.png" alt="" width="375"><figcaption><p>Image: Show as a Picker. </p></figcaption></figure>
-
-## Add Facilities
-
-The "Add Facilities" function allows administrators to associate a user with multiple facilities in the OMS. This flexibility enables users to access and manage fulfillment operations across different locations. Additionally, administrators can assign facility-specific login credentials, ensuring that users have the necessary access privileges for activities related to specific facilities.
-
-<figure><img src="../../.gitbook/assets/add-facilities.png" alt="" width="563"><figcaption><p>Image: Add Facilities</p></figcaption></figure>
-
-## Add Favorites
-
-The Favorites function allows users to pin their most frequently used Product store and Shopify shop, ensuring these selections are automatically applied each time they log in to any HotWax Commerce App.
-
-This feature is particularly valuable when users need to schedule specific jobs from the Job Manager app, such as `Import new products`, on a parent Shopify shop. If the shop is not set correctly or the default Shop is not the parent, users might mistakenly run a job on the child shop, which could lead to unexpected changes in OMS behavior.
-
-<figure><img src="../../.gitbook/assets/add-favorites.png" alt="" width="375"><figcaption><p>Image: Favourites</p></figcaption></figure>
+Confirm the selected shop before running a job. A job started for the wrong shop can affect the wrong integration scope.

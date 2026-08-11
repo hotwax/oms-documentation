@@ -10,15 +10,15 @@ The import returns feature in HotWax Commerce streamlines the return management 
 
 HotWax Commerce downloads return data once the return process is completed in Shopify, and this information is then transmitted to ERP systems for financial and accounting purposes. The integration avoids the need for direct links between ERP and Return Management Systems.
 
-Here's how returns can be imported from Shopify to HotWax Commerce:
+Schedule the return import job:
 
-1. log in to the `HotWax Commerce Job Manager App` from the `launchpad`.
-2. Within the `Job Manager` app, go to the `Orders` page.
-3. Locate the `Returns` job within the `import` section of the `Orders` page.
-4. Click on the job title to open the job card.
-5. Specify the job run time and preferred frequency based on your operational needs.
-6. Click on `Save Changes` to schedule the job according to the defined run time and frequency.
+1. Open Job Manager from the HotWax Commerce Launchpad.
+2. Open `Catalog`.
+3. Search for the return import job used by the instance.
+4. Select the job.
+5. Review its parameters.
+6. Update its schedule for the required frequency.
 
-Refer to our [Shopify Integration guide](/documents/learn-shopify/shopify-integration/order-return/import-returns-from-shopify.md) for detailed insights into how the `import return` job facilitates the import of order returns from Shopify.
+See [Manage a job](../../workflow/job-management/jobs/job-details.md) for current scheduling instructions. Refer to the [Shopify integration guide](../../../learn-shopify/shopify-integration/order-return/import-returns-from-shopify.md) to learn how the return import works.
 
 <figure><img src="../../.gitbook/assets/import-order-returns.png" alt="" width="370"><figcaption></figcaption></figure>

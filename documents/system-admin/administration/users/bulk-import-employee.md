@@ -1,17 +1,30 @@
 # Bulk import employees
 
-Use an employee CSV to create multiple employee records at once.
+Bulk employee creation is a Data Manager import.
 
 ## Before you begin
 
-Prepare a CSV with the required employee data. Required fields include `party-id`, `first-name`, `last-name`, `enabled`, `relationship-status`, `user-login-id`, and `password`. Include `external-id`, classifications, identifications, and relationships when your implementation requires them.
+Use the current sample file from the target environment instead of an older local copy.
 
 ## Import employees
 
-1. Go to `EXIM` and open the `Imports` tab.
-2. Select `Employee MDM`.
-3. Upload the employee CSV file.
-4. Review the file details and start the import.
-5. After processing finishes, open the `Employees` page and confirm that the imported records have the expected details.
+1. Open Data Manager in the OMS.
+2. Find the employee import configuration.
+3. Download its sample file.
+4. Populate the required fields.
+5. Upload the file.
+6. Review the Data Manager log.
+
+If the import menu lacks the employee import, search Data Manager configurations for `IMP_EMPLOYEE`.
+
+## Verify employees
+
+1. Open the **Company App**.
+2. Go to `Users`.
+3. Search for an imported employee.
+4. Confirm the name, employee ID, email, and status.
+5. Confirm Security Group, Product Store, and facility access.
+
+A successful file upload proves only that Data Manager received the file. Confirm the Data Manager counts and review a selection of imported users.
 
 If the import does not complete or a record is rejected, use the [employee import troubleshooting guide](troubleshooting/bulk-import-employee.md).

@@ -59,8 +59,10 @@ In instances where a common product catalog is employed across multiple Shopify 
 
 **Step 3: Refresh products to reflect changes**
 
-5. **Execute Jobs in the Job Manager App**
-   * Within the Job Manager app, initiate the following jobs: `Auto refresh pre-order catalog` and `Sync variant details` by searching them from the pipeline page.
+5. **Run the required jobs**
+   * Open `Catalog` in Job Manager.
+   * Search for and run `Auto refresh pre-order catalog`.
+   * Search for and run `Sync variant details`.
 6. **Review products in Hotwax and Shopify**
 
 By following these steps meticulously, you ensure a seamless and accurate linking of products, ultimately improving the functionality of the pre-order option on the Shopify store.

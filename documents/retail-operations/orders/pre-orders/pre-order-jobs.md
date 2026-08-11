@@ -8,13 +8,14 @@ description: >-
 
 Once Purchase Orders have successfully been uploaded to HotWax Commerce, the subsequent step involves seamlessly syncing the pre-orders with the e-commerce platform. Merchandisers can set up various jobs in HotWax Commerce to ensure the accurate listing of pre-orders on the e-commerce platform. Some of these jobs are internal to HotWax Commerce and facilitate the creation of jobs within the system.
 
-All Pre-order jobs have a defined frequency of 15 minutes to ensure the smooth running of the process. However, should the merchandiser wish to modify the job frequency, they can do so by following these steps:
+Pre-order jobs can use a 15-minute schedule. Change a schedule only when the retailer’s operating plan requires a different frequency:
 
-1. Navigate to the `Job Manager`> `Pipeline` Page.
-2. Utilize the `search` bar at the top of the page to locate the specific job.
-3. The desired job card will appear in the results, displaying all the job details, including the last run time, frequency, and other relevant job data.
-4. Clicking on the job card reveals a detailed view, offering merchandisers various options to modify the job, such as altering the run time, adjusting the frequency, and adding custom parameters if required.
-5. Once the changes are made, merchandisers can save them by clicking on the `save changes` button. This action ensures that all future runs of the job reflect the updated settings. Additionally, if there are no pre-orders, merchandisers can also cancel the job to reduce system load.
+1. Open `Catalog` in Job Manager.
+2. Search for the exact job.
+3. Open the job.
+4. Review `Overview`, `Parameters`, and `History`.
+5. Update the schedule or parameters.
+6. Save the changes.
 
 {% embed url="https://youtu.be/KFecL75l5Lk" %}
 Schedule Pre-order jobs
@@ -40,22 +41,23 @@ Moreover, this job also manages the removal of pre-sell items from the pre-order
 
 For more comprehensive details, read our [shopify integration page.](/documents/learn-shopify/shopify-integration/preorders-and-backorders/presell-catalog-management.md)
 
-You can schedule the job by accessing the `Job Manager App` > `Pre-order page` and selecting the `checkbox` next to the `Auto refresh pre-sell catalog` job name.
+Open `Catalog`, search for `Auto refresh pre-sell catalog`, then open the job and configure its schedule.
 
 ## Jobs for Synchronizing the Pre-Order Catalog with eCommerce
 
-To schedule the job, Merchandisers navigate to the `Job Manager` > `Pre Orders` page, where they can schedule the `presell catalog sync` by checking the box next to `Sync variant details`. This job facilitates updates to the Presell catalog on Shopify, working through these steps:
+To schedule the job, open `Catalog`, search for `Sync variant details`, then open the job and configure its schedule. This job facilitates updates to the presell catalog on Shopify through these steps:
 
 1. HotWax Commerce generates a GraphQL file encapsulating all pre-order-related changes, including promised delivery dates, product categories, and statuses. This file is placed in an SFTP location.
 2. Shopify processes these GraphQL files in sequence from the SFTP location to execute the required updates. However, for multiple sequential GraphQL file uploads, Shopify doesn’t fetch the next file automatically. To initiate processing for the subsequent files, Merchandisers should schedule Process Upload jobs in HotWax Commerce through the following steps:
 
-* Navigate to `Job Manager` > `Initial Load` > `Process uploads` card.
-* Activate the `File Upload Status` job, which monitors file processing and potential errors via the Shopify webhook.
-* Schedule the `Upload Pending Process` job to prompt Shopify for the next GraphQL file upon receiving `Upload` Status updates.
+* Search `Catalog` for `File Upload Status`, then review and activate its schedule.
+* Search for `Upload Pending Process`, then configure its schedule to prompt Shopify for the next GraphQL file after an upload status update.
 
 <figure><img src="../../.gitbook/assets/process-uploads-jobs.png" alt=""><figcaption><p>Process Upload</p></figcaption></figure>
 
-* After confirming the activation of `Process Upload` jobs, Merchandisers can schedule the `presell catalog sync` job. To delve deeper into understanding how pre-orders are listed on Shopify, comprehensive insights are available in our [Shopify Pre-order integration guide.](../../../learn-shopify/shopify-integration/preorders-and-backorders/presell-catalog-management.md)
+* After confirming the processing jobs, schedule the `presell catalog sync` job. See the [Shopify pre-order integration guide](../../../learn-shopify/shopify-integration/preorders-and-backorders/presell-catalog-management.md) to learn how pre-orders are listed on Shopify.
+
+See [Manage a job](../../workflow/job-management/jobs/job-details.md) for current scheduling instructions.
 
 Upon listing all products on Shopify, it's crucial to appropriately tag them with `HC: Pre-order` or `HC: Backorder`. This tagging process is easily managed by enabling the checkbox for the `Add pre-order tags` and `Add backorder tags` jobs, running every 15 minutes. These jobs utilize the pre-order category in the meta fields to add the suitable tag to the parent product on Shopify.
 

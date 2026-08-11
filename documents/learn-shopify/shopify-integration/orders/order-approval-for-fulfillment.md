@@ -34,7 +34,7 @@ The `Approve Orders` job runs at a default frequency of 30 minutes. It systemati
 
 For example, if you use Riskified for fraud detection, it adds an `approved` tag once an order passes security checks. The `Approve Orders` job scans for this tag and updates the order status to `Approved`, making it eligible for fulfillment.
 
-<figure><img src="../../.gitbook/assets/approved-orders-job-config.png" alt=""><figcaption><p><em>Fig.6: Configuration of the `Approve Orders` job in the Job Manager App</em></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/approved-orders-job-config.png" alt=""><figcaption><p><em>Fig. 6: Configuration of the “Approved Orders” job in the Job Manager App</em></p></figcaption></figure>
 
 {% hint style="info" %}
 Shopify marks digital items as `Fulfilled` automatically. When these items import into HotWax Commerce, they are automatically marked as completed.

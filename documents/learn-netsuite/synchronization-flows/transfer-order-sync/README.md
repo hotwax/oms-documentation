@@ -44,12 +44,14 @@ Inbound shipment at destination for receiving file SFTP location
 /home/{sftp-username}/netsuite/transferorderv2/fulfillment/archive
 ```
 
-Schedule the import job for this file from the Inventory page in the Job Manager application
+Open `Catalog` in Job Manager, search for the transfer-order import job, then configure its schedule.
 
 ```
 Import fulfilled Transfer Orders from NetSuite
 FTP Configuration
 ```
+
+See [Manage a job](../../../retail-operations/workflow/job-management/jobs/job-details.md) for current scheduling instructions.
 
 {% hint style="success" %}
 Transfer orders are now available to receive in the HotWax Receiving application.
