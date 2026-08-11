@@ -33,6 +33,7 @@
     * [Manage users](administration/users/manage-user.md)
     * [Manage Security Groups and App Permissions](administration/users/manage-user-permission.md)
     * [Create pickers](administration/users/add-picker.md)
+    * [Bulk import employees](administration/users/bulk-import-employee.md)
     * [Troubleshooting](administration/users/troubleshooting/README.md)
       * [Troubleshoot application access](administration/users/troubleshooting/application-access-issue.md)
       * [Troubleshoot bulk employee import](administration/users/troubleshooting/bulk-import-employee.md)
