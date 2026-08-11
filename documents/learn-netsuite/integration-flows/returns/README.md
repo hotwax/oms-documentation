@@ -199,9 +199,9 @@ Customers who live near a brick-and-mortar store or those who prefer to get inst
 
 Retailers we work with, use Shopify POS as their POS system, NetSuite as their ERP system, Loop as their RMS, and HotWax Commerce as their OMS. Some retailers initiate in-store returns using the Loop Returns POS App, while others opt to use their Shopify POS system. Let's see how these two approaches work:
 
-## Synchronizing Shopify POS Returns to NetSuite 
+## Synchronizing Shopify POS Returns to NetSuite
 
-<figure><img src="../../.gitbook/assets/in-store-returns-shopify-pos.png" alt=""><figcaption><p>Sync POS returns to NetSuite using HotWax Commerce</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/In-store-returns-shopify-pos.png" alt=""><figcaption><p>Sync POS returns to NetSuite using HotWax Commerce</p></figcaption></figure>
 
 Shopify POS in-store returns sync to Credit Memo, and Customer Refunds.
 
@@ -239,7 +239,7 @@ When returning an item, a customer can also opt to take the exchange item agains
 
 ***
 
-## Synchronizing Loop POS Returns to NetSuite 
+## Synchronizing Loop POS Returns to NetSuite
 
 <figure><img src="../../.gitbook/assets/pos-returns-sync-to-netsuite-using-loop.png" alt=""><figcaption><p>Sync POS returns to NetSuite using Loop</p></figcaption></figure>
 

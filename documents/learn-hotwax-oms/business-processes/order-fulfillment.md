@@ -57,7 +57,7 @@ Store managers can replace an assigned picker with a new one for various reasons
 As pickers pick order items, HotWax Commerce rate shops to determine the most cost-effective shipping method offered by the carrier that also meets the SLA. Once the shipping method has been selected, HotWax Commerce fetches shipping labels in bulk with tracking codes from the carrier in advance to reduce the packing time.
 {% endhint %}
 
-Learn more about [Picking](/documents/store-operations/fulfillment/open-orders.md#pick-orders)
+Learn more about [Picking](../../store-operations/fulfillment/open-orders.md#print-picklist)
 
 ## Reject Fulfillment Request
 

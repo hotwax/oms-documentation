@@ -76,7 +76,7 @@ A valid phone number associated with the facility is often required by shipping 
 
 Resolution
 
-1. Edit Address Section in Facility detail page: Open the facility from the `Facilities App` and update the phone number from the [`Address and Contact Details`](../../system-admin/administration/facilities/manage-facility-details.md#address-and-contact-details) section.
+1. Edit Address Section in Facility detail page: Open the facility from the `Facilities App` and update the phone number from the [`Address and Contact Details`](../../system-admin/administration/facilities/manage-facility-details.md#edit-contact-details) section.
 2. Retry Label Generation: After adding the phone number, attempt to generate the shipping label again for the affected order.
 
 ### Check Customer Information
