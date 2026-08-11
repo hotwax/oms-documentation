@@ -1,49 +1,38 @@
 ---
-description: >-
-  Ensure smooth synchronization processes by verifying SFTP locations for
-  various sync operations.
+description: Verify SFTP remotes and paths from the released NetSuite job configuration.
 ---
 
-# SFTP Locations
+# Verify SFTP locations
 
-SFTP locations for all sync processes will automatically be created the first time a sync runs.
+NetSuite connector jobs do not provide one universal directory tree for every deployment. Several released templates are seeded paused with blank SFTP remotes or path parameters. Do not assume that every directory is created automatically on the first run.
 
-In case the locations are not created, here is a list of SFTP locations to verify.
+## Order-flow path behavior
 
-1. Customer:
-   * a) /home/{sftp-username}/netsuite/customer
-   * b) /home/{sftp-username}/netsuite/customer/export/archive
-   * c) /home/{sftp-username}/netsuite/customer/import/archive
-2. InventoryAdjustment:
-   * a) /home/{sftp-username}/netsuite/inventoryadjustment/csv
-   * b) /home/{sftp-username}/netsuite/inventoryadjustment/archive
-3. InventoryItem:
-   * a) /home/{sftp-username}/netsuite/inventoryitem/csv/archive
-4. Purchase Order:
-   * a) /home/{sftp-username}/netsuite/purchaseorder/fulfillment/archive
-   * b) /home/{sftp-username}/netsuite/purchaseorder/receipt/archive
-   * c) /home/{sftp-username}/netsuite/purchaseorder/receipt/error
-5. Sales Order:
-   * a) /home/{sftp-username}/netsuite/salesorder/customerdeposit/archive
-   * b) /home/{sftp-username}/netsuite/salesorder/export/archive
-   * c) /home/{sftp-username}/netsuite/salesorder/import/fulfillment/archive
-   * d) /home/{sftp-username}/netsuite/salesorder/import/fulfillment-nifi/archive
-   * e) /home/{sftp-username}/netsuite/salesorder/import/orderidentification/archive
-   * f) /home/{sftp-username}/netsuite/salesorder/import/orderitemattribute/archive
-   * g) /home/{sftp-username}/netsuite/salesorder/update/archive
-   * h) /home/{sftp-username}/netsuite/salesorder/invoice/error
-   * i) /home/{sftp-username}/netsuite/salesorder/customerdeposit/error
-   * j) /home/{sftp-username}/netsuite/salesorder/customerdeposit/archive
-6. Transfer Order:
-   * a) /home/{sftp-username}/netsuite/transferorder/fulfillment/archive
-   * b) /home/{sftp-username}/netsuite/transferorder/fulfillment-nifi/archive
-   * c) /home/{sftp-username}/netsuite/transferorder/receipt/archive
-   * d) /home/{sftp-username}/netsuite/transferorder/receipt/error
-7. Discount Item:
-   * /home/{sftp-username}/netsuite/discountitem/delete/archive
-   * /home/{sftp-username}/netsuite/discountitem/import/archive
-8. Cash Sale:
-   * /home/{sftp-username}/netsuite/cashsale/export/archive
-9. Fulfilled Sales Orders:
-   * /home/{sftp-username}/netsuite/fulfilledsalesorder/export/archive
-   * /home/{sftp-username}/netsuite/fulfilledsalesorder/export/error
+| Flow | Released configuration behavior |
+| --- | --- |
+| Customer export | Configure the customer job's System Message type and SFTP remote before activation. |
+| Sales-order creation | Configure `systemMessageRemoteId` and `filePathPattern` on `generate_CreateOrderFeed`. |
+| POS cash-sale creation | Configure `systemMessageRemoteId` and `filePathPattern` on `generate_CreateOrderFeed_pos`. |
+| Allocation to NetSuite fulfillment | Configure `systemMessageRemoteId` and `filePathPattern` on `generate_BrokeredOrderItemsFeed_Netsuite`. |
+| Completed OMS fulfillment | In connector v3.0.3, configure the SFTP remote; `generate_FulfilledOrderItemsFeed_Netsuite` sends to `/home/{sftp-username}/netsuite/salesorder/update/`. |
+| NetSuite fulfillment returning to OMS | File pickup, transformation, and OMS import path are deployment/integration-stack specific. |
+
+See [Create sales orders and approve OMS orders](../../integration-flows/sales-order/order-approval.md) and [Fulfillment synchronization](../../integration-flows/sales-order/fulfillment.md) for the corresponding jobs.
+
+## Verify a configured path
+
+For each enabled job:
+
+1. Open the job in Job Manager and record its SFTP remote, path parameter, schedule, and pause state.
+2. If the flow includes a Data Manager stage, open its configuration and record the import or export contract.
+3. Ask an authorized integration administrator to confirm the directory and expected file.
+4. Compare filename, size, timestamp, archive behavior, and error output with the Job Run.
+5. Retain the Job Run ID and NetSuite execution ID. When Data Manager participates, also retain its `logId`.
+
+An archive or error subdirectory is evidence only after the installed integration creates and uses it. Do not create a directory solely because it appeared in another deployment's documentation.
+
+{% hint style="danger" %}
+Do not copy SFTP passwords, private keys, connection secrets, or production file contents into documentation, issues, chat, or screenshots.
+{% endhint %}
+
+For a failure, follow [Troubleshoot import configuration errors](../../../system-admin/administration/data-manager/troubleshooting/data-import-errors.md).
