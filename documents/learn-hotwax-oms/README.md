@@ -4,6 +4,8 @@ description: Learn about common terms in omnichannel order and inventory managem
 
 # Glossary
 
+Use the definitions in this glossary as the canonical reference for quantity on hand (QOH), available to promise (ATP), and online ATP. Workflow pages can describe how these values are used in a specific process.
+
 ### Advanced shipping notice (ASN)
 
 An advanced shipping notice (ASN) is a notification sent by a supplier to a recipient detailing the contents and expected arrival of a shipment, often sent in advance of the physical delivery. For example, if a store anticipates receiving 100 shirts in an incoming shipment, the ASN will detail this expected inventory count.
@@ -22,7 +24,7 @@ The arrival date is the date when the inventory of the purchase order items is e
 
 ### Available to promise (ATP)
 
-ATP (Available to Promise) represents the physical quantity of a product at stores or warehouses after deducting the reserved inventory, that is, inventory that has been allocated to online orders from the Quantity on Hand (QOH).\
+ATP (available to promise) is the inventory that can be promised at a facility after inventory reserved for orders is deducted from quantity on hand (QOH).\
 ATP = QOH - Reserved quantities
 
 ### Backorders
@@ -147,11 +149,10 @@ The maximum order limit is a predefined limit set by a store, indicating the max
 
 ### Online ATP
 
-Online ATP represents the unified inventory pool of actual sellable inventory count that is published on e-commerce platforms and can be promised to customers.
+Online ATP is the sellable inventory total that HotWax Commerce publishes to e-commerce platforms. It starts with QOH and excludes inventory that is unavailable for online sale.
 
-To calculate online ATP, HotWax Commerce deducts inventory that is not available for sale from the ATP. This includes items such as safety stock, threshold quantities, orders in the brokering queue, and inventory from locations that are not participating in online selling.
+The calculation excludes reserved quantities, safety stock, threshold quantities, orders in the brokering queue, and ATP from facilities that do not participate in online selling.
 
-HotWax Commerce calculates online available to promise (ATP):
 Online ATP = QOH - (reserved quantities + safety stock + threshold + orders in brokering queue + excluded facilities’ ATP)
 
 Learn more about [online ATP](./business-process-models/inventory-lifecycle.md#push-online-atp-to-ecommerce).
@@ -204,7 +205,7 @@ A purchase order (PO) is a document created by a retailer and sent to their supp
 
 ### Quantity on hand (QOH)
 
-QOH represents the total physical quantity of a product available at stores or warehouses. HotWax Commerce receives daily inventory feeds from the ERP system to update and maintain inventory data. Additionally, in the absence of ERP systems, HotWax Commerce also receives inventory feeds from Warehouse Management Systems (WMS) and Point of Sale (POS) systems.
+QOH is the total physical quantity of a product recorded at a store or warehouse before order reservations and online-selling rules are applied. HotWax Commerce can update QOH from ERP, WMS, and POS inventory feeds.
 
 ### Rejected orders
 
