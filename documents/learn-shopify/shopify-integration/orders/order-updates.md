@@ -1,41 +1,36 @@
 ---
-description: Learn how HotWax Commerce synchronizes order updates from Shopify.
+description: Learn how HotWax Commerce detects and applies supported Shopify order updates.
 ---
 
 # Order updates
 
-### Synchronizing order updates
+When Shopify order events are configured, EventBridge routes `ORDERS_UPDATED` events to SQS. HotWax Commerce fetches the current Shopify order and stages supported changes through the `UPDATE_SHOPIFY_ORDER` Data Manager configuration.
 
-Sometimes customers or customer service representatives (CSRs) make changes to Shopify orders that need to be accurately reflected in HotWax Commerce to ensure the fulfillment process meets the customer's requirements. HotWax Commerce can update the following details from Shopify:
+## How changes are detected
 
-* Adding items to an order
-* Removing items from an order
-* Changing item quantities
-* Refunded transactions
+HotWax Commerce does not store and compare the complete Shopify order JSON. It stores selected scalar values and deterministic hashes in `ShopifyOrderHistory`. On a later event, it compares the current values and hashes, prepares the supported update payload, and refreshes the synchronization history after processing.
 
-When a new order is created, HotWax Commerce stores the complete order JSON in the order history. Later, when an order is updated in Shopify, Shopify triggers the `orders/updated` webhook. AWS EventBridge routes this webhook event to an Amazon SQS queue, where HotWax Commerce polls for the update. 
+Depending on the released bridge version and granted Shopify scopes, detected changes can include:
 
-Once HotWax Commerce receives the event, it compares the new order JSON against the JSON stored in the order history. HotWax Commerce identifies the differences and applies changes only to the modified fields instead of updating the entire order. This event-driven flow ensures that order modifications sync quickly and accurately.
+- Contact information, notes, tags, customer data, and shipping or billing addresses.
+- Payment terms, outstanding totals, and cancellation status.
+- Newly observed line items.
+- Fulfillments, returns, refunds, and transactions through their dedicated processing paths.
 
-### Syncing Shopify order tags
+This is not a guarantee that every Shopify edit is applied in place. In particular, do not rely on arbitrary in-place quantity increases or decreases, or line removal, without validating that exact edit flow against the deployed bridge version.
 
-Shopify order tags are also included in order updates. This allows merchants to use Shopify Flow, fraud tools, or customer service workflows to update an order's handling instructions after the order is created.
+## Shopify order tags
 
-For example, merchants can configure Shopify Flow to apply a `Hold` tag when an order needs manual review and an `Approved` tag when the order is ready for fulfillment. HotWax Commerce syncs these tag changes from Shopify so the Order Management System (OMS) can use the latest tag values when deciding whether an order should remain in brokering or proceed to facility allocation.
+Shopify tags are synchronized as internal OMS order notes. The released default does not treat literal `Hold` or `Approved` tags as approval or allocation gates.
 
-#### Hold and Approved tag flow
+Default approval uses Product Store auto-approval, payment state, and Shopify risk data. A merchant-specific tag-gated workflow requires separate customization and should be documented as that deployment's policy.
 
-1. A customer places an order in Shopify.
-2. Shopify Flow evaluates the order against the merchant's review conditions, such as order value, risk level, or product-specific rules.
-3. If the order requires review, Shopify Flow adds the `Hold` tag. The order remains in the brokering queue and is not allocated to a facility.
-4. After a CSR reviews the order in Shopify, they remove the `Hold` tag and add the `Approved` tag.
-5. The `orders/updated` webhook syncs the updated tags to HotWax Commerce.
-6. On the next allocation run, orders with the `Approved` tag become eligible for facility allocation and fulfillment.
+## Diagnose a missing update
 
-If the order does not meet any manual-review condition, Shopify Flow can add the `Approved` tag automatically. In that case, once the order is downloaded and the tag is synced, the order can proceed through the standard allocation process.
+1. Confirm Shopify emitted the expected update event.
+2. Find the `consume_ShopifyOrders_SQS` Job Run for the shop.
+3. Find the `UPDATE_SHOPIFY_ORDER` Data Manager log tied to `createdByJobRunId`.
+4. Review the terminal result and supported-change payload.
+5. Confirm the latest `ShopifyOrderHistory` values and the OMS order state.
 
-{% hint style="info" %}
-When merchants use an approval-based tag flow, the `Approved` tag is required before an order can proceed to allocation and fulfillment. Orders without the required approval tag remain in the brokering queue until Shopify is updated and the tag change is synced.
-{% endhint %}
-
-To learn more about how HotWax Commerce syncs order fulfillment updates with Shopify, read the [Shopify integration overview](../../). Read further to learn how HotWax Commerce manages [presell orders](../preorders-and-backorders/) and [BOPIS orders](../bopis-orders/).
+For the complete ingestion paths, see [Shopify order download flows](order-download.md).

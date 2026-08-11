@@ -1,12 +1,25 @@
 ---
-description: Learn how HotWax Commerce synchronizes order information from Shopify.
+description: Learn how HotWax Commerce imports, approves, and updates Shopify orders.
 ---
 
 # Orders
 
-HotWax Commerce ensures that order information is always updated to streamline the process of fulfilling orders. When syncing orders from Shopify, HotWax Commerce tackles four essential scenarios
+The Shopify order integration covers controlled pre-launch reconciliation, post-launch ingestion, OMS approval, and supported order updates. Each flow has separate configuration and monitoring requirements. A successful fallback batch does not prove that realtime event delivery is healthy.
 
-1. **Initial Order Download**: To integrate HotWax Commerce with Shopify, merchants are required to import all open sales orders from a particular time frame that HotWax Commerce must fulfill.
-2. **Importing Newly Created Orders:** All the orders that have been placed since the initial download must be imported into HotWax Commerce.
-3. **Approve Orders for Fulfillment:** Before approving orders for fulfillment, HotWax Commerce must ensure that payment has been authorized and verified by Shopify.
-4. **Synchronizing Order Updates:** When making changes to orders, like updating shipping addresses, item quantities, or item details, it is important to inform HotWax Commerce to ensure proper synchronization of order updates.
+## How orders enter HotWax Commerce
+
+| Flow | When to use it | Detail |
+| --- | --- | --- |
+| History | Import eligible open and unfulfilled orders from before launch | [Shopify order download flows](order-download.md#historical-open-order-import) |
+| Realtime | Process configured Shopify order events through EventBridge and SQS | [Shopify order download flows](order-download.md#realtime-order-import) |
+| Scheduled fallback | Recover eligible orders and updates in date windows | [Order download buffer time](buffertimes.md) |
+
+## What happens after import
+
+- New nonterminal orders are evaluated against the Product Store, payment, and risk [approval rules](order-approval-for-fulfillment.md).
+- Supported Shopify changes are detected and staged through the [order update flow](order-updates.md).
+- Digital gift cards, physical gift cards, kits, and POS orders have additional mapping and fulfillment behavior described in this section.
+
+{% hint style="info" %}
+Actual event subscriptions, schedules, buffer values, credentials, and custom approval policy are deployment-specific. Verify the configured job and Shopify shop before rerunning a flow.
+{% endhint %}

@@ -1,19 +1,30 @@
 ---
-description: Troubleshooting Guide for orders stuck in created status
+description: Diagnose why an order remains unapproved or does not proceed to routing.
 ---
 
-# Order Approval Errors
+# Troubleshoot order approval
 
-In HotWax Commerce, all orders are initially marked as "Created" after being downloaded. Orders can be auto-approved using a scheduled job called `Approve Orders`, which checks the approval status of Shopify orders based on parameters set by Shopify merchants. The job runs at a default frequency of 30 minutes and approves orders once all necessary details and required references are established.
+An order can remain `Created` or `Hold` when a standard approval gate or a deployment-specific policy is not satisfied. Do not assume that every order waits for a universal `Approve Orders` job or that the job runs every 30 minutes.
 
-Clients may have varying approval processes, such as requiring customer IDs or payment verification tags. If the job is stuck in the "Created' status", it could be due to missing or incorrect order attributes.
+## Standard checks
 
-## Scenario 1: Missing Order Attribute
+Use one order ID and review these checkpoints in order:
 
-Orders may not get approved if essential attributes are missing. For instance, some clients may require specific information such as a customer ID or Municipio ID. If these attributes are missing, the approval job cannot verify and approve the order, causing it to remain in the 'Created' status. For detailed instructions on how to add missing order attributes, refer to our [troubleshooting documentation](order-attribute-missing.md)
+| Check | What can block approval |
+| --- | --- |
+| Order status | Only `Created` and `Hold` orders enter the default approval service. |
+| Product Store | Automatic approval is disabled for the Product Store. |
+| Order override | The order-level `autoApprove` value is `N`. |
+| Payment | A non-COD payment remains `PAYMENT_NOT_RECEIVED` and `APPR_WO_PMNT_CHK` is not enabled. |
+| Risk | Pending risk defers approval. An auto-accepted `CANCEL` recommendation cancels the order; otherwise `CANCEL` or `INVESTIGATE` approves it and creates a review task. |
+| Review task | A customer-service risk task can block routing even when the order status is `Approved`. |
 
-<figure><img src="../../../.gitbook/assets/add-order-attribute.png" alt="" width="563"><figcaption></figcaption></figure>
+## Deployment-specific checks
 
-## Scenario 2: Incorrect Order Attribute
+Some implementations add required customer IDs, ERP identifiers, fraud attributes, or custom tags before approval. Confirm the retailer's configured policy before changing an order attribute. `NETSUITE_ORDER_EXPORTED`, `Hold`, and `Approved` are not universal default gates.
 
-Another common issue is the presence of incorrect order attributes. This could mean that the required information is either incomplete or inaccurately entered, which can prevent the order from being approved. For example, incorrect municipio ID can lead to approval failures.
+If a custom import applies required attributes, trace its Job Run and terminal Data Manager result. For an individual missing value, see [Troubleshoot a missing order attribute](order-attribute-missing.md).
+
+## Shopify orders
+
+For Shopify-specific payment and risk behavior, see [Order approval for fulfillment](../../../../learn-shopify/shopify-integration/orders/order-approval-for-fulfillment.md). If a detected order-level update should have run `update#ShopifyOrder` and re-evaluated approval, trace the realtime `UPDATE_SHOPIFY_ORDER` Data Manager import before rerunning any fallback job.
