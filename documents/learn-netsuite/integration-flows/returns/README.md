@@ -18,7 +18,7 @@ A return merchandise authorization (RMA) is represented by a NetSuite `Return Au
 The exact jobs, transport, schedules, and mappings vary by implementation. This page describes the NetSuite record pattern used when a HotWax Commerce integration is configured to synchronize returns.
 {% endhint %}
 
-This page focuses on merchandise returns against NetSuite Sales Orders and Invoices that use the RMA cycle. Some implementations can post a direct `Credit Memo` and `Customer Refund` when no return authorization or physical receipt is required. In the HotWax integration pattern documented here, returns against Cash Sales use a `Cash Refund` instead of the RMA, Credit Memo, and Customer Refund lifecycle.
+This page focuses on merchandise returns against NetSuite Sales Orders and Invoices that use the RMA cycle. Some implementations can post a direct `Credit Memo` and `Customer Refund` when no return authorization or physical receipt is required. Depending on the configured record flow, returns against Cash Sales can use a `Cash Refund` instead of the RMA, Credit Memo, and Customer Refund lifecycle.
 
 ## Understand the NetSuite record chain
 
@@ -131,6 +131,8 @@ For an original-payment refund, the integration:
 3. Creates one or more `Customer Refund` records for the refunded amounts
 4. Applies the Credit Memo to the Customer Refund records
 
+Saving a Customer Refund applies the Credit Memo. NetSuite returns every created Customer Refund ID, and HotWax Commerce must persist each one as a settlement checkpoint before acknowledging the settlement. Before retrying, verify those checkpoints in NetSuite instead of creating another refund blindly.
+
 The Credit Memo moves from open to fully applied when the entire returned value has been refunded or applied elsewhere.
 
 For split settlements, only the original-payment portion creates a Customer Refund. The remaining Credit Memo value can be applied to a store-credit or exchange Invoice.
@@ -187,7 +189,8 @@ sequenceDiagram
 
     alt Refund original payment
         HotWax->>NetSuite: Create Credit Memo from RMA
-        HotWax->>NetSuite: Create Customer Refund and apply credit
+        HotWax->>NetSuite: Create one or more Customer Refunds and apply Credit Memo
+        NetSuite-->>HotWax: Customer Refund ID for each created refund
     else Issue store credit
         Commerce-->>Customer: Issue store credit
         Commerce-->>HotWax: Send credit transaction ID
@@ -215,6 +218,7 @@ HotWax Commerce tracks the NetSuite records required for each return:
 | Return authorized | RMA ID |
 | Merchandise received | Item Receipt ID |
 | Returned value recorded | Credit Memo ID |
+| Original-payment refund created | Customer Refund IDs |
 | Store-credit Invoice created | Invoice ID |
 
 A return is fully synchronized only when every record required for its outcome exists and the Credit Memo application is verified in NetSuite when required. An export attempt, queued request, or stored Invoice ID does not prove that the application succeeded.
@@ -228,6 +232,6 @@ Review these conditions during reconciliation:
 * The store-credit Invoice amount matches the customer-facing credit issued
 * The Credit Memo and target Invoice use the same customer so NetSuite can apply them
 * The Credit Memo application in NetSuite matches the required amount
-* Every retry reuses persisted NetSuite IDs
+* Before a retry creates another refund, verify every persisted Customer Refund ID in NetSuite
 
 For the return feed contract, see [Returns financial feed](../../../integrate-with-hotwax/api/returns/returns-financial-feed.md).
