@@ -15,7 +15,7 @@ Replace these names with the shipping methods configured in your HotWax Commerce
 
 ## Prepare the configuration
 
-1. [Map the Shopify shipping methods](../../../../learn-shopify/setup-shopify/integration-mappings/shipping-method.md) to distinct United States and Canadian methods.
+1. [Map the Shopify shipping methods](../../../../system-admin/administration/company/product-store-onboarding.md#5-review-shopify-mappings) to distinct United States and Canadian methods.
 2. [Create facility groups](../../../../system-admin/administration/facilities/manage-groups.md) for the central warehouse and eligible Canadian stores.
 3. Confirm the queues used for new, rejected, and unfillable order items.
 4. Decide whether the business permits partial allocation in each market.

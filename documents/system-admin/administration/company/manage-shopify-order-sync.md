@@ -13,7 +13,7 @@ Use the Order Sync dashboard to monitor scheduled Shopify order batches, review 
 3. Select a connection.
 4. Open `Order Sync`.
 
-If the page shows `Order Sync needs setup`, complete [Set up Shopify Order Sync](set-up-shopify-order-sync.md).
+If the page shows `Order Sync needs setup` during a standard single-shop launch, begin with [order infrastructure in Chapter 9](product-store-onboarding.md#9-configure-maarg-admin-order-infrastructure) of the canonical guide and continue through Chapter 10.
 
 ## Review the summary
 

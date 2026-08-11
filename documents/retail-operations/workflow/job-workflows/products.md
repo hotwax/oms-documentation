@@ -4,53 +4,11 @@ description: Learn about the Products job in HotWax Commerce.
 
 # Products
 
-## Sync
+## Shopify product synchronization
 
-### Import New Product
+The legacy `Import new products`, `Import Product Updates`, and `Process Bulk Imported Files` jobs are not the current standard Shopify product path. New launches use Product Sync in the Company App for the first catalog import, recurring updates, progress, and recovery.
 
-Job Name: `Import new products`\
-Job Enum ID: `JOB_IMP_PROD_NEW`\
-Service Name: `CreateProductsFromShopify`\
-Flow: Importing new products from Shopify to HotWax.
-
-**`Import new product` job is used for importing new products from Shopify to HotWax.** For maintaining the system integrity, it is important to sync new products from Shopify.
-
-If a new product created in Shopify and its not synced in HotWax Commerce (may be because job scheduled to run after 10 mins) and if an order is created for this new product in Shopify (before the job in run) and that order is now downloaded in HotWax, then a a placeholder for this new product will be created in HotWax. Once the job runs, the actual product will be imported and replace the placeholder.
-
-**How does HotWax import products?**\
-HotWax makes an API call on Shopify to retrieve all the newly created products in Shopify between the time frame of the last job run and the current timestamp. In response to this request, Shopify provides a JSON file containing details of such products. Further, the `Import New Products` job imports this JSON into HotWax OMS and uploads it to the `IMP_SHOPIFY_PROD` MDM in HotWax. Finally, the `Process Bulk Import Files` job runs and processes the JSON file to create products in HotWax OMS.
-
-It is important to note that the `Import New Product` job must not be scheduled while creating new products on Shopify, as it can import incomplete data and cause data corruption. So the recommendation is to pause this job and reschedule it only after all products are fully created.
-
-**Custom Parameters**
-
-* `frequency` is the required parameter for this job.
-* It has some optional parameters.
-
-To know more about product import refer to this [document](https://docs.hotwax.co/documents/learn-shopify/shopify-integration/how-are-products-downloaded-from-shopify-to-hotwax-commerce/product-download).
-
-***
-
-### Import Product Updates
-
-Job name: `Import Product Updates`\
-Job Enum ID: `JOB_IMP_PROD_UPD`\
-Service name: `updateProductsFromShopify`\
-Flow: Import product updates from Shopify to HotWax
-
-When a retailer updates a product in Shopify, it is important for HotWax Commerce to sync these updates. **The `Import Product Updates` job is used for importing updates on products from Shopify to HotWax.**
-
-**How are product updates synced?**\
-HotWax makes an API call on Shopify to retrieve all the products that are updated between the last job run time and the current timestamp by checking the `updated_at` field in Shopify. In response to this request, Shopify provides a JSON file that is imported into HotWax by the `Import Product Update` job. Further, the `Process Bulk Imported Files` job runs and processes the JSON to sync product updates in Shopify.
-
-**Custom Parameters**
-
-* `frequency` is the required parameter for this job.
-* It has some optional parameters.
-
-To know more about importing product updates refer to this [document](https://docs.hotwax.co/documents/learn-shopify/shopify-integration/how-are-products-downloaded-from-shopify-to-hotwax-commerce/updating-product-details).
-
-***
+For a first import, follow [Chapter 6 of Set up HotWax Commerce with Shopify](../../../system-admin/administration/company/product-store-onboarding.md#6-import-and-validate-products). For day-to-day operation, use [Monitor Shopify product sync](../../../system-admin/administration/company/manage-shopify-product-sync.md).
 
 ## Webhooks
 
@@ -73,7 +31,9 @@ Automated messages sent from eCommerce (Shopify) to OMS whenever an event occurs
 
 </details>
 
-## More Jobs
+## Advanced and tenant-specific jobs
+
+The remaining entries are references for approved ERP, kit, and tenant-specific workflows. They are not part of the standard Shopify-only launch.
 
 ### Product HS Code Identification
 

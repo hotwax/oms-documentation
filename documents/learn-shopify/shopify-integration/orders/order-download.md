@@ -36,7 +36,7 @@ If a window fails after the history cursor advances, reset the cursor to the fai
 
 Shopify emits `ORDERS_CREATE` when an order is created and `ORDERS_UPDATED` when an order changes. Listening to the create event gives new orders a direct realtime path during high-volume order creation. EventBridge routes both event types to SQS, and `consume_ShopifyOrders_SQS` reads each queued message. HotWax Commerce uses the Shopify order identifier to request the current order data and then creates or updates the order.
 
-When diagnosing realtime import, trace one Shopify order through the event, queue delivery, consumer read, system message, import, and Data Manager result. Do not use a history run or fallback batch as proof that the realtime path processed that order.
+When diagnosing realtime import, trace one Shopify order through the event, SQS delivery, the `consume_ShopifyOrders_SQS` consumer job run, and the Data Manager record with its `logId`, `createdByJobRunId`, `configId`, and terminal result, then confirm the matching OMS order. Realtime SQS import does not create a System Message. Do not use a history run or fallback batch as proof that the realtime path processed that order.
 
 ## Scheduled fallback import
 

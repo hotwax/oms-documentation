@@ -18,7 +18,7 @@ Replace the schedules, queues, shipping methods, and safety stock values with se
 ## Prepare the configuration
 
 1. [Create a facility group](../../../../system-admin/administration/facilities/manage-groups.md) that contains every store eligible for online fulfillment.
-2. [Map the Shopify shipping methods](../../../../learn-shopify/setup-shopify/integration-mappings/shipping-method.md) used for standard and expedited orders.
+2. [Map the Shopify shipping methods](../../../../system-admin/administration/company/product-store-onboarding.md#5-review-shopify-mappings) used for standard and expedited orders.
 3. Confirm the queues used for new, rejected, and unfillable order items.
 4. Confirm the inventory buffers that stores must retain.
 

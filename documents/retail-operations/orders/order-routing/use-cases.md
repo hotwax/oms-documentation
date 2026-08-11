@@ -34,8 +34,8 @@ Use this table to find a recipe. A recipe helps you solve one routing decision. 
 Complete the setup that applies to your strategy:
 
 * [Create facility groups](../../../system-admin/administration/facilities/manage-groups.md) for warehouses, stores, or other eligible locations.
-* [Map Shopify sales channels](../../../learn-shopify/setup-shopify/integration-mappings/sales-channel.md) before you filter orders by channel.
-* [Map Shopify shipping methods](../../../learn-shopify/setup-shopify/integration-mappings/shipping-method.md) before you filter or sort orders by service level.
+* [Map Shopify sales channels](../../../system-admin/administration/company/product-store-onboarding.md#5-review-shopify-mappings) before you filter orders by channel.
+* [Map Shopify shipping methods](../../../system-admin/administration/company/product-store-onboarding.md#5-review-shopify-mappings) before you filter or sort orders by service level.
 * Confirm the queue names used for new, rejected, and unfillable order items in your OMS.
 
 {% hint style="warning" %}
