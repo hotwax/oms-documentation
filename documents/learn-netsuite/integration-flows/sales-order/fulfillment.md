@@ -25,7 +25,7 @@ In connector v3.0.3, this job:
 - Uses the `hotwax-fulfilled` line tag.
 - Uploads to `/home/{sftp-username}/netsuite/salesorder/update/`.
 
-`HC_SC_UpdateSalesOrders` applies the update in NetSuite, and `HC_SC_CreateItemFulfillment` creates the item-fulfillment record. Verify the installed script deployments and actual connector version because later releases can parameterize these values.
+`HC_SC_UpdateSalesOrders` applies the update in NetSuite, and `HC_SC_CreateItemFulfillment` creates the item-fulfillment record. Verify the installed script deployments and actual connector version because behavior can differ by deployed connector version.
 
 ## Shipped fulfillment from NetSuite
 
