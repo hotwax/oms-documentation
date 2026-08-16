@@ -201,7 +201,7 @@ Retailers we work with, use Shopify POS as their POS system, NetSuite as their E
 
 ## Synchronizing Shopify POS Returns to NetSuite
 
-<figure><img src="../../.gitbook/assets/In-store-returns-shopify-pos.png" alt=""><figcaption><p>Sync POS returns to NetSuite using HotWax Commerce</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/in-store-returns-shopify-pos.png" alt=""><figcaption><p>Sync POS returns to NetSuite using HotWax Commerce</p></figcaption></figure>
 
 Shopify POS in-store returns sync to Credit Memo, and Customer Refunds.
 
