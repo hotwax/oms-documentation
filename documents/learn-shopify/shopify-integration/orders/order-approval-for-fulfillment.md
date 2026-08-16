@@ -1,41 +1,49 @@
 ---
-description: Learn how the order approval process in HotWax Commerce works and prepares orders for fulfillment.
+description: Understand the current OMS checks that approve Shopify orders for fulfillment.
 ---
 
 # Order approval for fulfillment
 
-In HotWax Commerce, order approval acts as a critical checkpoint before fulfillment begins. When a customer places an order through Shopify or another sales channel, it enters HotWax Commerce in a `Created` status. 
+New nonterminal Shopify orders are evaluated for approval during creation. Approval is re-evaluated when `update#ShopifyOrder` runs for a detected order-level update, such as changed risk or supported header data. Fulfillment-, refund-, or transaction-only processing does not necessarily invoke that update service. Some lines, such as digital or other non-shipping items, can import as `Completed` and do not follow the same fulfillment path.
 
-Orders must pass validations like payment verification and fraud checks before fulfillment begins. Once these conditions are met, the order status changes to `Approved`. This signals to the warehouse team that the order is legitimate and ready for picking, packing, and shipping.
+Approval and routing are separate checkpoints. Successful approval changes an eligible order to `Approved` and triggers reservation. Routing can still be blocked by a review task or another configured operational rule.
 
-## The order approval lifecycle
+## Default approval checks
 
-The approval process adapts based on the sales channel and payment method. It can happen instantly or after a delay.
+The released OMS evaluates these conditions:
 
-* **Immediate approval:** Orders paid with cash, cash on delivery (COD), or billed accounts often auto-approve within seconds.
-* **Delayed approval:** Orders requiring fraud assessment, such as those paid with high-risk credit cards, enter a `Hold` status. They wait for a scheduled job to confirm they pass security checks.
+1. The order is in `Created` or `Hold` status.
+2. The Product Store allows automatic approval.
+3. The order does not have an order-level automatic-approval opt-out.
+4. Payment is acceptable. Unless the Product Store setting `APPR_WO_PMNT_CHK` disables this check, a non-COD payment preference in `PAYMENT_NOT_RECEIVED` blocks approval.
+5. Shopify risk evaluation is no longer pending.
 
-Once approved, HotWax Commerce officially allocates reserved inventory to the order. This allows the warehouse management system to begin picking operations.
+The released default does not scan generic Riskified `approved` tags, and the source does not define a universal 30-minute `Approve Orders` schedule.
 
-## Approval pathways
+## Risk outcomes
 
-HotWax Commerce orchestrates order approval through several pathways, depending on where the order originated and its specific requirements:
+| Risk state or recommendation | Default outcome |
+| --- | --- |
+| Pending assessment | Defer approval. |
+| No intervention or accepted risk | Continue approval. |
+| `CANCEL` with automatic acceptance enabled | Cancel the order. |
+| `CANCEL` without automatic acceptance, or `INVESTIGATE` | Approve the order and create a customer-service review task that blocks routing until resolved. |
 
-* **Shopify webhooks:** The `orders/updated` webhook detects payment confirmations and instantly triggers the approval process.
-* **Scheduled batch jobs:** The `Approve Orders` job regularly checks for fraud validation tags, like Riskified's `approved` tag, and approves orders that pass the assessment.
-* **Marketplace services:** Specific services handle approval for Amazon and eBay orders based on their unique rules.
-* **Point of sale (POS):** Orders placed in physical stores or via WebPOS auto-approve during checkout.
-* **Direct UI or API:** You can manually approve orders using the HotWax Commerce user interface or direct API calls.
-* **Data imports:** The Maarg Data Manager processes and approves bulk order imports.
+Actual auto-accept settings and custom risk policy are Product Store or deployment configuration.
 
-## `Approve Orders` job
+## Troubleshoot an unapproved order
 
-The `Approve Orders` job runs at a default frequency of 30 minutes. It systematically verifies and approves orders that require additional checks, such as third-party fraud detection. 
+Use one order ID and check the gates in order:
 
-For example, if you use Riskified for fraud detection, it adds an `approved` tag once an order passes security checks. The `Approve Orders` job scans for this tag and updates the order status to `Approved`, making it eligible for fulfillment.
+1. Confirm the current order and item statuses.
+2. Check Product Store automatic approval and the order-level `autoApprove` value.
+3. Inspect payment preferences, payment statuses, and `APPR_WO_PMNT_CHK`.
+4. Inspect the stored Shopify risk level and recommendation.
+5. Identify any deployment-specific attribute, fraud, or tag policy.
+6. If a retry job is configured, verify its actual service, **Active** state, and Quartz schedule rather than assuming a default cadence.
 
-<figure><img src="../../.gitbook/assets/approved-orders-job-config.png" alt=""><figcaption><p><em>Fig. 6: Configuration of the “Approved Orders” job in the Job Manager App</em></p></figcaption></figure>
+## Approved but not routing
 
-{% hint style="info" %}
-Shopify marks digital items as `Fulfilled` automatically. When these items import into HotWax Commerce, they are automatically marked as completed.
-{% endhint %}
+A non-auto-accepted `CANCEL` recommendation or an `INVESTIGATE` recommendation can leave the order `Approved` while a customer-service review task blocks routing. Check and resolve that task according to the retailer's review policy.
+
+For a cross-channel checklist, see [Troubleshoot order approval](../../../retail-operations/orders/order-management/troubleshooting/order-approval.md).

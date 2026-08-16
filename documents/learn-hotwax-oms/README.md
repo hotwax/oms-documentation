@@ -169,7 +169,7 @@ When a customer places multiple orders that can be fulfilled from the same locat
 
 A packing slip is a document included with a shipment that lists the contents of the package. It typically includes details such as item names, quantities, and sometimes prices. This document assists both customers and senders in confirming that the correct items have been packed and shipped. In HotWax Commerce, store associates can choose whether they want to print the packing slip when packing orders.
 
-Learn more about [packing slips](../store-operations/orders/bopis/packed-order-tab.md).
+Learn more about [packing slips](../store-operations/bopis/packed-order-tab.md).
 
 ### Picker
 
@@ -181,11 +181,11 @@ A picklist provides details such as inventory SKUs, quantities, and locations. I
 
 ### Pre-orders
 
-Pre-orders are simply advance orders taken for future inventory. These products have not yet been released in the market and are still in planning or production, and thus not in stock. A pre-order is an order placed for a product that is not yet available for purchase or delivery. Customers can reserve the item in advance, and the order will be fulfilled once the product becomes available in stock. Learn more about [pre-orders](../retail-operations/orders/pre-orders.md).
+Pre-orders are simply advance orders taken for future inventory. These products have not yet been released in the market and are still in planning or production, and thus not in stock. A pre-order is an order placed for a product that is not yet available for purchase or delivery. Customers can reserve the item in advance, and the order will be fulfilled once the product becomes available in stock. Learn more about [pre-orders](../retail-operations/orders/pre-orders/README.md).
 
 ### Pre-order parking
 
-Pre-order parking in HotWax Commerce is a holding area where pre-ordered items are kept until their inventory becomes available. Orders in this queue are not yet ready for fulfillment and wait until the specified stock arrives before being moved to the brokering queue for processing and shipping. This helps handle pre-orders based on inventory availability. Learn more about [pre-order parking](../system-admin/administration/facilities/manage-parkings.md#default-parkings).
+Pre-order parking in HotWax Commerce is a holding area where pre-ordered items are kept until their inventory becomes available. Orders in this queue are not yet ready for fulfillment and wait until the specified stock arrives before being moved to the brokering queue for processing and shipping. This helps handle pre-orders based on inventory availability. Learn more about [pre-order parking](../system-admin/administration/facilities/manage-parkings.md#understand-common-parking-queues).
 
 ### Product variants
 
@@ -221,7 +221,7 @@ A recount is a follow-up count used to verify an item quantity before submitting
 
 ### Safety stock
 
-Safety stock helps retailers control how much inventory they promise to online channels. Once a store’s inventory count falls below the designated safety stock quantity, the remaining inventory will be reserved for in-store sales. Retailers often face inventory discrepancies, where a system’s inventory does not match the actual inventory in stores. Keeping safety stock also helps retailers mitigate the risk of taking orders that cannot be fulfilled due to inventory discrepancies. A robust omnichannel order management system helps retailers easily manage safety stock for each store. Learn more about [safety stock](../retail-operations/inventory/safety-stock.md).
+Safety stock helps retailers control how much inventory they promise to online channels. Once a store’s inventory count falls below the designated safety stock quantity, the remaining inventory will be reserved for in-store sales. Retailers often face inventory discrepancies, where a system’s inventory does not match the actual inventory in stores. Keeping safety stock also helps retailers mitigate the risk of taking orders that cannot be fulfilled due to inventory discrepancies. A robust omnichannel order management system helps retailers easily manage safety stock for each store. Learn more about [safety stock](../retail-operations/inventory/safety-stock/README.md).
 
 ### SendSale orders
 

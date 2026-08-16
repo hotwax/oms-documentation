@@ -1,35 +1,25 @@
 ---
-description: Learn how HotWax Commerce downloads POS sales from Shopify.
+description: Learn how Shopify POS sales map into HotWax Commerce orders and inventory.
 ---
 
 # POS sales download
 
-Point of Sale (POS) sales are purchases made by customers directly at physical retail locations. These involve immediate payment and fulfillment, occurring in real-time.
+Shopify POS sales use the standard [order download flows](order-download.md), with additional channel, ship-group, status, and inventory handling.
 
-HotWax Commerce imports POS sales from Shopify through the standard [order download process](order-download.md). Because POS sales in Shopify have already been fulfilled to customers in-store, they are automatically marked as `Completed` in HotWax Commerce upon import.
+## POS mapping
 
-## Differentiating POS sales from regular orders
+The Shopify `sourceName` is resolved through the shop's `SHOPIFY_ORDER_SOURCE` mapping. A configured POS source maps to `POS_SALES_CHANNEL`.
 
-During import, HotWax Commerce differentiates between POS sales and regular orders by checking if the following conditions are met:
+Fulfilled or non-shipping lines can import as `Completed`. The bridge assigns the `POS_COMPLETED` shipment method as an output mapping for cash POS orders without a shipping address. A mixed POS order can split fulfilled and unfulfilled quantities into separate ship groups.
 
-1. They are already fulfilled in Shopify.
-2. They originated from the POS channel.
-3. They have their shipping method set to `POS_Completed`.
+`POS_COMPLETED` is therefore not a Shopify input value that identifies every POS sale.
 
-If these conditions are satisfied, HotWax Commerce automatically marks the POS sales as `Completed`.
+## Inventory issuance
 
-{% hint style="info" %}
-HotWax Commerce automatically deducts inventory against the POS sale upon import. This keeps the physical inventory available at the retail store accurate in HotWax Commerce.
-{% endhint %}
+Inventory is not deducted unconditionally merely because an order was imported from POS. For a physical line, issuance follows Shopify fulfillment consumption and requires:
 
-POS sale fields in Shopify map to HotWax Commerce just like any regular order. Certain fields such as sales channel, status, and shipping method have different values for POS sales, reflecting how POS sales differ from regular orders.
+- A Shopify fulfillment and location that map to an OMS facility.
+- A matching OMS ship group.
+- Post-launch eligibility when the completed-fallback path is used.
 
-{% tabs %}
-{% tab title="POS sale in Shopify" %}
-<figure><img src="../../.gitbook/assets/pos-sale-fields-shopify.png" alt=""><figcaption><p>POS sale field mapping</p></figcaption></figure>
-{% endtab %}
-
-{% tab title="POS sale in HotWax Commerce" %}
-<figure><img src="../../.gitbook/assets/pos-sale-fields-hotwax.png" alt=""><figcaption><p>POS sale field mapping</p></figcaption></figure>
-{% endtab %}
-{% endtabs %}
+If a POS order is present but inventory was not issued, trace the Shopify fulfillment and location mapping before replaying the order import.

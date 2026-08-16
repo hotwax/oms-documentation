@@ -18,6 +18,7 @@ Flow: Inventory Sync from HotWax to Shopify.
 Note:  The `ShopifyFacilityGroupId` parameter allows retailers to push inventory of specific facilities included in that group.
 
 **Custom Parameters**
+
 - This job has no required parameters.
 - It has `facilityGroupId`,`shopifyFacilityGroupId`,`includeAll`, `useVaildATP` as optional parameters.
 
@@ -105,6 +106,7 @@ A sourcing-rule run generates a product-facility CSV file and places it in the c
 This job imports sourcing-rule output. It does not generate the rule output itself.
 
 **Custom Parameters**
+
 * The recommended frequency for this job is 15 minutes.
 * This job has configId and propertyResource as the required parameters.
 * It also has some optional parameters.
@@ -127,7 +129,7 @@ The `Bulk Recent Kit Product Inventory Setup` job calculates the inventory of th
 * This job has no required parameters.
 * includeAll is the optional parameter of this job.
 
-To know more about kit inventory calculation, refer to this [document](https://docs.hotwax.co/documents/learn-netsuite/integration-flows/kitproducts).
+To know more about kit inventory calculation, refer to this [document](../../../learn-netsuite/integration-flows/kit-products.md).
 
 ***
 
@@ -157,7 +159,7 @@ Job Enum ID : `JOB_IMP_TO_SHPMNT`\
 Service Name: ftpImportFile\
 Flow: Inventory Synchronization
 
-This job is used to create inbound shipment in HotWax so that store associates can see an upcoming inbound shipment in their [Receiving App](https://docs.hotwax.co/documents/store-operations/inventory/receiving/receiving). In case of a warehouse to store TO or store to store TO is created in NetSuite, HotWax imports it as an inbound shipment for the receiving store through this job.
+This job is used to create inbound shipment in HotWax so that store associates can see an upcoming inbound shipment in their [Receiving App](../../../store-operations/receiving/README.md). In case of a warehouse to store TO or store to store TO is created in NetSuite, HotWax imports it as an inbound shipment for the receiving store through this job.
 
 **Custom Parameters**
 
@@ -199,6 +201,7 @@ HotWax sends an API request to Shopify to fetch the latest inventory data for al
 This job is an alternative to Shopify Webhooks, but since Shopify Webhooks are reliable, it is recommended to schedule this job in HotWax.
 
 **Custom Parameters**
+
 - This job does not have any required parameters
 - It has some optional parameters.
 

@@ -1,90 +1,47 @@
 ---
-description: >-
-  Learn how NetSuite and HotWax Commerce generate invoices, complete payments, and update accounting for accurate financial records.
+description: Verify the installed NetSuite invoicing, cancellation, and refund processes.
 ---
 
 # Invoicing
 
-Generating invoices in NetSuite for orders streamlines the financial processes. This step finalizes payment transactions and accounting entries for completed orders, contributing to accurate financial reporting. This step remains the same for orders whether items are fulfilled in NetSuite or not.
+The released connector exposes `HC_SC_CreateSalesOrderInvoice` in the OMS job catalog as a NetSuite SuiteScript job. The connector repository does not contain that SuiteScript's implementation, so it does not prove universal selection criteria, payment outcomes, error-file behavior, or notifications.
 
-**Actions**
+## Verify invoice processing
 
-A scheduled SuiteScript in NetSuite identifies sales orders in "Pending\_Billing" status, which have corresponding customer deposits already created.
+Before enabling or operating the job:
 
-Upon generating the invoice, the status of the customer deposit status is updated from "Undeposited" to "Fully Applied", and the invoice is marked as "PAID IN FULL," signifying payment reception and application to the invoice. This process also ensures all necessary accounting postings are handled in NetSuite.
+1. Confirm that `HC_SC_CreateSalesOrderInvoice` is installed and deployed in the NetSuite account.
+2. Record the deployed script and deployment IDs.
+3. Review the installed script's saved search or selection criteria.
+4. Confirm how customer deposits, payment items, taxes, and partial fulfillment are handled.
+5. Confirm its schedule, file or record inputs, error handling, and notifications.
 
-This step has no external dependency on jobs running in HotWax Commerce.
+Use the NetSuite script execution and resulting invoice or error as evidence. A completed OMS fulfillment job does not, by itself, prove that NetSuite invoiced or applied payment to the order.
 
-**SuiteScript**
+## Reconcile an invoice
 
-```
-HC_SC_CreateSalesOrderInvoice
-```
+Retain:
 
-{% hint style="info" %}
-The `HC_SC_CreateSalesOrderInvoice` SuiteScript also generates a CSV file highlighting erroneous records found during processing and uploads the file to the SFTP server. Simultaneously, an email alert is automatically triggered to designated personnel, helping them quickly pinpoint the source of the issue and accelerating troubleshooting.
-{% endhint %}
+- Shopify, OMS, and NetSuite order identifiers.
+- NetSuite item-fulfillment and invoice identifiers.
+- Invoice status and applied payment or deposit records.
+- `HC_SC_CreateSalesOrderInvoice` execution ID and error text.
+- Any deployment-specific source file, saved search, or notification identifier.
 
-**Overall sync progress**
+## Cancellations and refunds
 
-This is the last step of the order sync. The order lifecycle has been completed.
+Cancellation and customer-refund integrations are deployment-specific. The released connector and generic OMS UDM do not define the previously documented universal 15-minute jobs, JSON contracts, SFTP paths, or customer-refund script.
 
-* [x] Sync new orders from HotWax to NetSuite
-  * [x] Sync customers
-  * [x] Sync order line items
-  * [x] Sync order ids
-  * [x] Create customer deposit
-* [x] Approve order in HotWax for fulfillment
-* [x] HotWax brokering allocates orders
-* [x] Sync item allocation to NetSuite for facilities where NetSuite fulfillment is used
-* [x] Sync order item fulfillment details from NetSuite to HotWax
-* [x] Sync order item fulfillment details from HotWax to NetSuite
-* [x] Invoice orders in NetSuite
+For the configured deployment, document and verify:
 
-## Order Cancellations
+1. The system that owns cancellation and refund decisions.
+2. The OMS producer or import job and its actual schedule.
+3. File or API format, remote, path, and identifier mapping.
+4. The installed NetSuite updater and refund SuiteScripts.
+5. Partial-cancellation and partial-refund accounting behavior.
+6. Retry, idempotency, and duplicate-prevention controls.
+7. Final order, deposit, refund, and invoice statuses.
 
-eCommerce platforms like Shopify lets customers cancel orders if they have not yet been fulfilled. Customers can initiate cancellations themselves, or they may request CSRs to cancel their orders. In either case, when an order is canceled on the eCommerce platform, it is marked as "Canceled".
+`HC_SC_UpdateSalesOrders` is exposed as a general NetSuite sales-order update job, but its presence does not prove that a deployment uses it for cancellations.
 
-HotWax Commerce runs a scheduled job every 15 minutes to synchronize order cancellations from the eCommerce platform. Upon the successful synchronization of cancellations from eCommerce, the order status is marked as "Canceled", and the payment status is set to "Refunded" in HotWax Commerce. Subsequently, when an order is marked as "Canceled" in HotWax Commerce, this cancellation update is synchronized with NetSuite to close the corresponding order in NetSuite.
-
-<figure><img src="../../.gitbook/assets/cancellations-synced-to-netsuite.png" alt=""><figcaption><p>Cancellations synced from HotWax Commerce to NetSuite</p></figcaption></figure>
-
-**Actions**
-
-1. A scheduled job in HotWax Commerce Integration Platform runs every 15 minutes and identifies order items that have been canceled in HotWax Commerce. Subsequently, generates a JSON file comprising the canceled order items and places this file at a designated SFTP location.
-
-**SFTP Location**
-
-```
-/home/{sftp-username}/netsuite/salesorder/update
-```
-
-2. A SuiteScript in NetSuite reads the JSON file from the SFTP location and updates the order status from "Pending Fulfillment" to "Closed" for the affected orders.
-
-**SuiteScript**
-
-```
-HC_SC_UpdateSalesOrders
-```
-
-When orders are created in NetSuite, corresponding customer deposits are also generated. In cases where an order is canceled, HotWax Commerce initiates a customer refund against the customer deposit in NetSuite to ensure accurate accounting and posting. If only a few items within a order are canceled, the refund is created only for the amount corresponding to the canceled items.
-
-<figure><img src="../../.gitbook/assets/customer-refund-record-created-in-netsuite.png" alt=""><figcaption><p>Customer refund record created in NetSuite</p></figcaption></figure>
-
-**Actions**
-
-1. Another scheduled job in HotWax Commerce Integration Platform checks the refunded amount due to order cancellations, generates a JSON file containing this information and places the file at a designated SFTP location.
-
-**SFTP Location**
-
-```
-/home/{sftp-username}/netsuite/salesorder/customer-refund
-```
-
-2. A SuiteScript in NetSuite reads this file and generates a customer refund against the customer deposit. Upon the creation of the customer refund record, the status of the customer deposit is automatically updated from "Not Deposited" to "Fully Applied".
-
-**SuiteScript**
-
-```
- HC_SC_CreateCustomerRefund.js
-```
+For cross-system monitoring, use [Order synchronization checkpoints](reports.md).

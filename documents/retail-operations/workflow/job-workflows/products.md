@@ -77,7 +77,7 @@ When NetSuite manages the kit products, it uploads a CSV format file of kit prod
 * This job has configId and propertyResource as the required parameters.
 * It also has some optional parameters.
 
-To know more about kit products, refer to this [document](https://docs.hotwax.co/documents/learn-netsuite/integration-flows/kitproducts).
+To know more about kit products, refer to this [document](../../../learn-netsuite/integration-flows/kit-products.md).
 
 ***
 

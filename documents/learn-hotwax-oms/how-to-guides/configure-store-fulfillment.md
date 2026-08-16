@@ -38,17 +38,17 @@ Facilities can have products from multiple brands which are configured as produc
 
 ## Fulfillment Configuration of Facilities
 
-The [Facility groups ](/documents/system-admin/administration/facilities/manage-groups)are used to define the scope and functionality of the facility for omnichannel order management.
+The [Facility groups](../../system-admin/administration/facilities/manage-groups.md) are used to define the scope and functionality of the facility for omnichannel order management.
 
 Facilities have the option to choose whether or not to participate in selling their inventory online. If a facility is capable of fulfilling orders and wants its inventory to be sold online, it has to be included in the Facility Group with the `CHANNEL_FAC_GRP` subtype. Retailers can create different facility groups for different sales channels under the `CHANNEL_FAC_GRP` subtype and add the respective facilities to that group.
 
 ## Configure Online Fulfillment Capacity
 
-Fulfillment capacity is defined on the basis of the number of orders a facility will be able to fulfill in a day. It is set up considering various resources such as facility size, staff, and footfall. Users can set up the maximum order limit that can be allocated to that facility through the `Online Order Fulfillment` card. Read our [user manual](/documents/system-admin/administration/facilities/configure-fulfillment-capacity) to learn how to configure online fulfillment for a capacity.
+Fulfillment capacity is defined on the basis of the number of orders a facility will be able to fulfill in a day. It is set up considering various resources such as facility size, staff, and footfall. Users can set up the maximum order limit that can be allocated to that facility through the `Online Order Fulfillment` card. Read our [user manual](../../system-admin/administration/facilities/manage-facility-details.md#set-fulfillment-capacity) to learn how to configure online fulfillment for a capacity.
 
 ## Configure Brokering for Facilities
 
-To include a facility in brokering, it must be added to a facility group with the Brokering Group subtype. This ensures that when the facility group is included in the brokering run, all facilities in that group are available for brokering. For guidance on setting up and configuring brokering rules according to your preferences, refer to our [order brokering user manual](/documents/retail-operations/orders/order-routing/brokering-runs).
+To include a facility in brokering, it must be added to a facility group with the Brokering Group subtype. This ensures that when the facility group is included in the brokering run, all facilities in that group are available for brokering. For guidance on setting up and configuring brokering rules according to your preferences, refer to our [order brokering user manual](../../retail-operations/orders/order-routing/brokering-runs.md).
 
 ## Setup Shipment Method from Facilities
 
@@ -68,7 +68,7 @@ When inventory is received, HotWax Commerce updates QOH and online ATP. For the 
 
 Online ATP = QOH - (Reserved quantities + Safety stock + Threshold + Orders in brokering queue + Excluded facilities' ATP)
 
-For each store that allows online fulfillment, HotWax Commerce calculates the Online ATP that is available to sell and synchronize the inventory with Shopify through [Hard Sync and \`Update recent inventory changes jobs](/documents/retail-operations//workflow/job-workflows/inventory).
+For each store that allows online fulfillment, HotWax Commerce calculates the Online ATP that is available to sell and synchronize the inventory with Shopify through the [`Hard Sync` and `Update recent inventory changes` jobs](../../retail-operations/workflow/job-workflows/inventory.md).
 
 ### Verify Store Fulfillment
 

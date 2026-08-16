@@ -1,99 +1,49 @@
 ---
-description: >-
-  Learn how fulfillment information is synchronized between NetSuite and HotWax Commerce.
+description: Distinguish NetSuite allocation, OMS fulfillment export, and NetSuite fulfillment import.
 ---
 
-# Fulfillment
+# Fulfillment synchronization
 
-## Fulfillment in NetSuite
+<figure><img src="../../../.gitbook/assets/order-timeline.png" alt=""><figcaption><p>Order lifecycle timeline</p></figcaption></figure>
 
-When the warehouse fulfillment team begins the fulfillment of the order item, an item fulfillment record is created in NetSuite. As soon as the order item is picked, packed and shipped, the item fulfillment record is marked as “Shipped” and the order status is updated from "Pending Fulfillment" to "Pending Billing".
+Allocation to a NetSuite-managed facility, completed fulfillment from an OMS-managed facility, and shipped fulfillment returning from NetSuite are three different flows. Monitor them independently.
 
-Synchronizing shipped order items from NetSuite to HotWax Commerce ensures that the order status is consistent and updated across both systems.
+Both outbound job templates are seeded paused. Configure the SFTP remote before enabling either job. Also configure `filePathPattern` for `generate_BrokeredOrderItemsFeed_Netsuite`.
 
-<figure><img src="../../.gitbook/assets/fulfilled-order-updates-synced-to-hotwax.png" alt=""><figcaption><p>Fulfilled order updates synced from NetSuite to HotWax Commerce</p></figcaption></figure>
+## Allocation to NetSuite-managed facilities
 
-**Actions**
+Use `generate_BrokeredOrderItemsFeed_Netsuite` for allocations that NetSuite will fulfill. The connector selects approved items assigned to physical facilities in `NETSUITE_FULFILLMENT`.
 
-1. A Map Reduce SuiteScript generates a CSV file containing item fulfillment records in the Shipped status and places it at an SFTP location.
+This is an allocation feed, not a completed-fulfillment feed. Confirm the facility's group membership, outbound Job Run, SFTP file, and `HC_SC_UpdateSalesOrders` result in NetSuite.
 
-**SuiteScript**
+## Completed fulfillment from HotWax Commerce
 
-```
-HC_MR_ExportedSalesOrderFulfillmentCSV
-```
+Use `generate_FulfilledOrderItemsFeed_Netsuite` after an OMS-managed facility completes fulfillment.
 
-**SFTP Locations**
+In connector v3.0.3, this job:
 
-```
-/home/{sftp-username}/netsuite/salesorder/import/fulfillment
-```
+- Selects completed, non-POS items from facilities in `OMS_FULFILLMENT`.
+- Generates a CSV feed.
+- Uses the `hotwax-fulfilled` line tag.
+- Uploads to `/home/{sftp-username}/netsuite/salesorder/update/`.
 
-2. A scheduled job within HotWax Commerce Integration Platform reads and transforms this CSV file into JSON format so that the OMS can consume it. This JSON file is then placed at an SFTP location.
-3. A scheduled job within HotWax Commerce OMS reads this JSON file from the SFTP location, marking order items as fulfilled in HotWax Commerce.
+`HC_SC_UpdateSalesOrders` applies the update in NetSuite, and `HC_SC_CreateItemFulfillment` creates the item-fulfillment record. Verify the installed script deployments and actual connector version because behavior can differ by deployed connector version.
 
-**Job in HotWax Commerce**
+## Shipped fulfillment from NetSuite
 
-```
-Order Item Fulfillment
-FTP Config: IMP_ODR_ITM_FLFLMNT
-```
+`HC_MR_ExportedSalesOrderFulfillmentCSV` exports shipped item-fulfillment records from NetSuite.
 
-* [x] Sync order item fulfillment details from NetSuite to HotWax
+The connector exposes the exporter metadata, while downstream file pickup, transformation, and OMS import are deployment/integration-stack specific. Generic OMS UDM defines `Order Item Fulfillment` with configuration `IMP_ODR_ITM_FLFLMNT`; verify whether the deployment configures and schedules it. Do not assume that path is connector-native.
 
-## Fulfillment in HotWax
+## Verification
 
-The primary difference in this context is the approach to sending fulfillment location data from HotWax Commerce to NetSuite.
+For either direction, retain:
 
-While fulfillment locations are indeed transmitted to NetSuite after in-store orders are fulfilled within HotWax Commerce, it is important to understand that this data transmission is not critical for the actual fulfillment of orders. The fulfillment location data is conveyed to NetSuite once orders are fulfilled in HotWax Commerce. Its significance lies in updating order status in NetSuite, subsequent creation of invoices and the application of payments to these invoices. This step occurs post-fulfillment in HotWax Commerce to ensure proper financial processing and completion of orders in NetSuite.
+- OMS order ID and order-item sequence ID.
+- Owning facility and its configured fulfillment group.
+- Outbound or inbound Job Run and filename.
+- SFTP remote and exact path.
+- NetSuite SuiteScript deployment and execution result.
+- Final item status and identifier in both systems.
 
-<figure><img src="../../.gitbook/assets/fulfillment-location-and-order-updates-synced-to-netsuite.png" alt=""><figcaption><p>Fulfillment location data and order updates synced from HotWax Commerce to NetSuite</p></figcaption></figure>
-
-**Actions**
-
-1. A scheduled job in HotWax Commerce Integration Platform retrieves fulfilled order items and creates a feed of outbound shipments as a JSON file and places it at an SFTP location.
-
-_to be added_
-
-2. A Scheduled Script in NetSuite reads this JSON file from the SFTP location, allocating locations to the orders in NetSuite by updating order records and tagging the sales order line items with `hotwax-fulfilled`.
-
-3. Once tagged, a secondary Scheduled Script in NetSuite uses a Saved Search to identify these explicitly tagged lines and creates fulfillment records in `Shipped` status in NetSuite using the N/Record module.
-
-**SuiteScript**
-
-```
-HC_SC_UpdateSalesOrders
-HC_SC_CreateItemFulfillment
-```
-
-**SFTP Locations**
-
-```
-/home/{sftp-username}/netsuite/salesorder/update
-```
-
-Upon completion of this process, the orders transition from "Pending Fulfillment" to "Pending Billing" status, signifying that they are fulfilled and ready for billing.
-
-{% hint style="info" %}
-The `HC_SC_CreateItemFulfillment` SuiteScript also generates a CSV file highlighting erroneous records found during processing and uploads the file to the SFTP server. Simultaneously, an email alert is automatically triggered to designated personnel, helping them quickly pinpoint the source of the issue and accelerating troubleshooting.
-{% endhint %}
-
-* [x] Sync order item fulfillment details from HotWax to NetSuite
-
-{% file src="../../.gitbook/assets/Fulfilled Order Items Sample Feed.txt" %}
-
-**Overall sync progress**
-
-Order fulfillment is completed and now the only step remaining is invoicing.
-
-* [x] Sync new orders from HotWax to NetSuite
-  * [x] Sync customers
-  * [x] Sync order line items
-  * [x] Sync order ids
-  * [x] Create customer deposit
-* [x] Approve order in HotWax for fulfillment
-* [x] HotWax brokering allocates orders
-* [x] Sync item allocation to NetSuite for facilities where NetSuite fulfillment is used
-* [x] Sync order item fulfillment details from NetSuite to HotWax
-* [x] Sync order item fulfillment details from HotWax to NetSuite
-* [ ] Invoice orders in NetSuite
+For a complete diagnostic chain, use [Order synchronization checkpoints](reports.md).
