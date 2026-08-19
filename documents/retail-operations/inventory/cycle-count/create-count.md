@@ -1,8 +1,6 @@
-# Create Cycle Count
+# Create cycle count
 
-The Create Count page allows administrators and store managers to set up new cycle counts.
-
-The Inventory Count App provides two views — **Admin** and **Store** — that share the same Create Count workflow. The key difference is in navigation and default settings, as described below.
+The Inventory Count App allows administrators and store managers to create cycle counts for any facility. Both the Admin view and the Store view share the same Create Count form. The difference is how you navigate to the page and which facility is pre-selected.
 
 ## Admin view vs Store view
 
@@ -11,122 +9,127 @@ The Inventory Count App provides two views — **Admin** and **Store** — that 
 | Navigation | Left sidebar menu | Bottom tab bar |
 | Default facility | Must be selected manually | Pre-selected to the current store |
 | Menu options | Bulk Upload, Create count, Assigned, Pending Review, Closed, Store Permissions, Settings | Counts, Create, Variance, Settings |
-| Target user | Head-office administrators, inventory managers | Store managers |
 
-## Accessing the Create Count page
+## Accessing the Create count page
 
 ### Admin view
+
 1. Log in to the Inventory Count App with an admin-level account.
 2. From the left-hand sidebar, select `Create count`.
 3. The `Create` page opens.
 
 ### Store view
+
 1. Log in to the Inventory Count App with a store-level account.
-2. From the bottom navigation bar, select the `Create` tab (identified by a `+` icon).
+2. From the bottom navigation bar, select the `Create` tab.
 3. The `Create` page opens.
 
-## Fill in the count details
+## Fill in count details
 
 ### Count name
 
-- Locate the `Count name` field at the top of the form.
-- Enter a clear, descriptive name for the cycle count.
-> This field is **required**. An error message `Please enter count name` is displayed if left empty.
+- Enter a descriptive name for the cycle count in the `Count name` field at the top of the form.
+
+> This field is required. If left empty, the app displays `Please enter count name`.
 
 ### Facility
 
-- Select the `Facility` chip on the right side of the `Facility` row.
-- A facility selection modal opens.
+- Select the `Facility` chip to open the facility selection modal.
+- In the Admin view, no facility is pre-selected. In the Store view, the current store is pre-selected by default.
 - Use the search bar to filter facilities by name or facility ID.
-- Select the target facility from the list by clicking the radio button.
-- The modal closes and the selected facility name is displayed on the chip.
-- This field is **required**. An error message `Please select a facility` is displayed if no facility is selected.
+- Select the target facility from the list.
+- The modal closes and the selected facility name appears on the chip.
 
-> **Note:** In the Store view, the current store facility is pre-selected by default.
+> This field is required. If no facility is selected, the app displays `Please select a facility`.
 
 ### Count type
 
-- Select the `Count type` dropdown.
-- Choose one of the following count types:
+- Select the `Count type` dropdown and choose one of the following:
 
 | Count type | Description |
 | :--- | :--- |
-| `Directed count` | A targeted count that includes only specific, pre-selected products. Store associates count only the items that appear in the directed list. |
-| `Hard count` | A comprehensive, facility-wide count. Store associates count every product they encounter, whether or not it is in the system. |
+| `Directed count` | A targeted count of specific, pre-selected products. Associates count only the items in the directed list |
+| `Hard count` | A facility-wide count. Associates count every product they find, whether or not it is in the system |
 
 > `Directed count` is selected by default.
 
 ### Due Date
 
 - Select `Add Date` next to `Due Date`.
-- A date picker opens. Choose the date by which the count should be completed.
+- Choose the date by which the count should be completed from the date picker.
 - Select `Done` to confirm.
-> This field is **required**. An error message `Please select due date` is displayed if no date is set.
+
+> This field is required. If no date is set, the app displays `Please select due date`.
 
 ### Start Date
 
 - Select `Add Date` next to `Start Date`.
-- A date picker opens. Choose the date when the store team is expected to begin counting.
+- Choose the date when counting should begin from the date picker.
 - Select `Done` to confirm.
-> The start date **cannot be after the due date**.
+
+> This field is optional. If not set, the app defaults to the current date. The start date cannot be after the due date.
+
+## Search and select products
+
+After filling in count details, use the product section to find and select items for the cycle count.
 
 ### Search for products
 
-- Use the `Search products` search bar to find products by name, SKU, or product ID.
-- Products matching the search term are displayed in a list below.
+- Enter a product name, SKU, or product ID in the `Search products` bar.
+- Matching products appear in the list below.
+
+> Before applying any filter or search term, the list shows `Please select filters to view items`.
 
 ### Filter by tags
 
-- Select the `Tags` chip to open a facet filter modal.
-- Choose one or more tag values to narrow down the product list.
-- Select `Apply` to update the results.
-> The chip label updates to show the number of selected tag values (for example, `3 selected`) or the specific tag name if only one is selected.
+- Select the `Tags` chip to open the filter modal.
+- Choose one or more tag values to narrow the product list.
+- Select `Apply` to update results.
 
-### Product list columns
+> The chip label updates to show the count of selected values (for example, `3 selected`) or the tag name if only one is selected.
 
-Each product row displays the following information:
+### Product list
+
+Each product row displays:
 
 | Column | Description |
 | :--- | :--- |
-| Checkbox | Select or deselect the product for inclusion in the count |
+| Checkbox | Select or deselect the product |
 | Product image | Thumbnail of the product |
-| SKU | Internal name or SKU of the product |
+| SKU | Internal name or SKU |
 | Product name | Product name or parent product name |
 | Category | Primary product category |
 | Product ID | System product identifier |
 
-> **Note:** On smaller screens (Store view on mobile devices), the product list adapts to a mobile layout. The same information is available, but the columns may stack vertically for better readability.
-
 ### Select products
 
-- Click on any product row or its checkbox to select it for the count.
+- Click any product row or its checkbox to select it.
 - Selected rows are highlighted.
-- The selection count is displayed at the top-right of the list (for example, `5 selected`).
+- The selection count appears at the top right of the list (for example, `5 selected`).
 
 ### Select all products
 
-- Use the `All` checkbox at the top of the list to select or deselect all currently visible products.
-- If the total number of matching products exceeds the loaded page, a `Select all [N]` button appears. Select it to include all matching products across all pages.
+- Use the `All` checkbox at the top of the list to select or deselect all visible products.
+- If the total matching products exceed the loaded page, a `Select all` button appears with the total count. Select it to include all matching products.
 
-> **Note:** A cycle count is limited to a maximum of 2,000 items. If you attempt to select more, the system displays a warning: `A count cannot have more than 2000 items`.
+> A cycle count cannot have more than 2,000 items. If you exceed this limit, the app displays a warning.
 
 ### Show selected only
 
-- Enable the `Show selected only` toggle to display only the products that have already been selected.
-- This is useful for reviewing your selection before submitting the count.
+- Turn on the `Show selected only` toggle to display only the products already selected.
+- This helps review selections before creating the count.
 - The toggle is disabled when no products are selected.
 
 ## Create the cycle count
 
-1. Select the `Create Cycle Count` button at the bottom-right corner of the page.
+1. Select `Create Cycle Count` at the bottom right of the page.
 2. A confirmation dialog appears:
-   - If a count with the same name already exists for the selected facility, the message reads: `A count named "[name]" is already open for this facility, these items will be added to it. Continue?`
-   - Otherwise, the message reads: `Are you sure you want to create cycle count with [N] items?`
+   - If a count with the same name already exists for the selected facility: `A count named "[name]" is already open for this facility, these items will be added to it. Continue?`
+   - Otherwise: `Are you sure you want to create cycle count with [N] items?`
 3. Select `Create` to confirm, or `Cancel` to go back.
-4. On successful creation, a toast message is displayed: `The cycle count has been created successfully`.
-5. The form resets, allowing you to create another count immediately.
+4. On success, a message displays: `The cycle count has been created successfully`.
+5. The form resets so you can create another count.
 
-The newly created cycle count will appear under:
-- **Admin view:** The `Assigned` tab in the sidebar after processing.
-- **Store view:** Initialized in **Create** status; moves to the **Counts** tab on the bottom navigation bar once approved.
-
+The newly created cycle count appears under:
+- **Admin view:** The `Assigned` tab in the sidebar after processing
+- **Store view:** The `Counts` tab on the bottom navigation bar shows it only after it moves from `Created` status to `Approved` status.
