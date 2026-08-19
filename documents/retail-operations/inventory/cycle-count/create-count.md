@@ -1,6 +1,6 @@
 # Create Cycle Count
 
-The Create Count page allows administrators and store managers to set up new cycle counts and assign them to specific facilities.
+The Create Count page allows administrators and store managers to set up new cycle counts.
 
 The Inventory Count App provides two views — **Admin** and **Store** — that share the same Create Count workflow. The key difference is in navigation and default settings, as described below.
 
@@ -11,7 +11,7 @@ The Inventory Count App provides two views — **Admin** and **Store** — that 
 | Navigation | Left sidebar menu | Bottom tab bar |
 | Default facility | Must be selected manually | Pre-selected to the current store |
 | Menu options | Bulk Upload, Create count, Assigned, Pending Review, Closed, Store Permissions, Settings | Counts, Create, Variance, Settings |
-| Target user | Head-office administrators, inventory managers | Store managers, authorized store associates |
+| Target user | Head-office administrators, inventory managers | Store managers |
 
 ## Accessing the Create Count page
 
@@ -42,7 +42,7 @@ The Inventory Count App provides two views — **Admin** and **Store** — that 
 - The modal closes and the selected facility name is displayed on the chip.
 - This field is **required**. An error message `Please select a facility` is displayed if no facility is selected.
 
-> **Note:** In the Store view, the current store facility is pre-selected by default. Store users typically keep this default unless they have permissions to create counts for other facilities.
+> **Note:** In the Store view, the current store facility is pre-selected by default.
 
 ### Count type
 
@@ -68,11 +68,7 @@ The Inventory Count App provides two views — **Admin** and **Store** — that 
 - Select `Add Date` next to `Start Date`.
 - A date picker opens. Choose the date when the store team is expected to begin counting.
 - Select `Done` to confirm.
-> The start date **cannot be after the due date**. If it is, an error message `Start date cannot be after the due date` is displayed.
-
-## Search and select products
-
-After filling in the count details, use the product search section to find and select the items to include in the cycle count.
+> The start date **cannot be after the due date**.
 
 ### Search for products
 
@@ -131,6 +127,6 @@ Each product row displays the following information:
 5. The form resets, allowing you to create another count immediately.
 
 The newly created cycle count will appear under:
-- **Admin view:** The `Assigned` tab in the sidebar.
-- **Store view:** The `Counts` tab in the bottom navigation bar.
+- **Admin view:** The `Assigned` tab in the sidebar after processing.
+- **Store view:** Initialized in **Create** status; moves to the **Counts** tab on the bottom navigation bar once approved.
 
