@@ -35,6 +35,7 @@
 
 * [Receiving](receiving/README.md)
   * [Transfer Orders](receiving/transfer-orders.md)
+    * [Create Transfer Order](receiving/create-transfer-order.md)
   * [Returns and Purchase Orders](receiving/returns-and-purchase-orders.md)
   * [Reports](receiving/reports.md)
   * [Settings](receiving/settings.md)
