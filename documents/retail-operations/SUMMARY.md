@@ -136,6 +136,7 @@
   * [Transfer Order Fulfillment](inventory/transfers-fulfillment.md)
 * [Cycle Count](inventory/cycle-count/README.md)
   * [Bulk Upload](inventory/cycle-count/bulk-upload.md)
+  * [Create Count](inventory/cycle-count/create-count.md)
   * [Assigned](inventory/cycle-count/assigned.md)
   * [Pending Review](inventory/cycle-count/pending-review.md)
   * [Closed](inventory/cycle-count/closed.md)
