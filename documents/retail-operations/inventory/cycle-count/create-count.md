@@ -113,6 +113,7 @@ Each product row displays:
 
 - Turn on the `Show selected only` toggle to display only the products already selected.
 - This helps review selections before creating the count.
+- When toggled on, other filters are disabled. You can only remove items from the selected list and cannot add new items.
 - The toggle is disabled when no products are selected.
 
 ## Create the cycle count
