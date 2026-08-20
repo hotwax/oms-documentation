@@ -2,6 +2,17 @@
 
 Use the Receiving App to create a transfer order and move inventory from one facility to another.
 
+## Before you begin
+
+Review the following setup before creating a transfer order:
+
+- **Permission:** The Create Transfer Order page requires the `APP_TRANSFERORDER_CREATE` permission. Any logged-in user with this permission can access the page.
+- **Logged-in facility:** The facility you are logged into becomes the destination for the transfer order. Log in to the facility that will receive the inventory.
+- **Product Store:** The selected Product Store determines which facilities and shipping methods are available. If an expected facility or carrier does not appear, check the Product Store configuration.
+- **Facility associations:** Origin facilities are loaded from the selected Product Store. Only facilities associated with that store appear in the origin selection list.
+- **Shipping method configuration:** Available carriers and shipment methods are loaded based on the selected Product Store. If no options appear, confirm that shipping methods are configured for the store.
+- **Barcode settings:** If you plan to add items by scanning, check the barcode identifier type (SKU, UPC, etc.) on the `Settings` page before you begin.
+
 ## Accessing the Create transfer order page
 
 1. Log in to the Receiving App.
@@ -37,7 +48,30 @@ The `Assign` card contains the following fields:
 - The `Destination` facility is set to the current facility you are logged into.
 - This field is read-only and cannot be changed from this page.
 
-> The origin and destination facilities cannot be the same. The app displays an error if you select an origin that matches the destination.
+> The origin and destination facilities cannot be the same. If you select an origin that matches the destination, the app displays `Origin and destination facility can't be same`.
+
+### Field requirements
+
+The following fields must be completed before the order can be created:
+
+- Transfer name
+- Product Store
+- Origin facility
+- Destination facility (set automatically from your logged-in facility)
+- Carrier
+- Shipment method
+- At least one item with a quantity greater than zero
+
+The following fields are optional:
+
+- Ship date
+- Delivery date
+
+Default values:
+- **Destination:** Set to your logged-in facility
+- **Lifecycle:** `Receive only`
+- **Carrier:** First available carrier for the selected Product Store
+- **Shipment method:** First available method for the selected carrier
 
 ## Select shipping method
 
@@ -46,7 +80,8 @@ The `Shipping Method` card contains two fields:
 ### Carrier
 
 - Select a shipping carrier from the `Carrier` dropdown.
-- Available carriers are configured for your product store.
+- Available carriers are loaded based on the selected Product Store.
+- The first available carrier is selected by default when the page loads.
 
 ### Method
 
@@ -62,11 +97,11 @@ The `Plan` card defines how the transfer order is processed:
 
 Select the appropriate lifecycle based on how the transfer is managed:
 
-| Lifecycle | When to use |
-| :--- | :--- |
-| `Fulfill & Receive` | Store-to-store transfers managed entirely within OMS |
-| `Fulfill only` | Store-to-warehouse transfers where post-fulfillment is handled by an external WMS |
-| `Receive only` | Warehouse-to-store transfers where fulfillment starts externally and receipt is completed in OMS |
+| Lifecycle | Fulfillment | Receipt | When to use |
+| :--- | :--- | :--- | :--- |
+| `Fulfill & Receive` | Origin store fulfills in the Fulfillment App | Destination store receives in the Receiving App | Store-to-store transfers managed entirely within HotWax Commerce. The origin store picks, packs, and ships; the destination store receives and accepts the inventory |
+| `Fulfill only` | Origin store fulfills in the Fulfillment App | Receipt is handled outside HotWax Commerce | Store-to-warehouse or store-to-external-location transfers where the receiving step is managed by a separate system or process |
+| `Receive only` | Fulfillment is handled outside HotWax Commerce | Destination store receives in the Receiving App | Warehouse-to-store transfers where an external system initiates the shipment and the store completes receipt in the Receiving App |
 
 > `Receive only` is selected by default.
 
@@ -106,8 +141,8 @@ The scanner input field displays one of three states:
 
 1. Select the search icon to switch to `Search` mode.
 2. Enter a keyword in the `Search` field. Search supports parent product name, SKU, or UPC.
-3. Matching products appear below the search field.
-4. Select `Add to Transfer` to add the product to the order.
+3. The app displays the first matching product below the search field. Each result shows the primary and secondary product identifiers configured for your store.
+4. Select `Add to Transfer` to add the product to the order. The product is added with a quantity of zero.
 5. If more results are available, select `View more results` to open a full product search modal.
 
 > Once a product is added, a green checkmark icon replaces the `Add to Transfer` button.
@@ -126,8 +161,35 @@ After adding items, each product appears in the item list below the `Add items` 
 
 ## Create the transfer order
 
+Before selecting the submit button, review:
+- Transfer name, Product Store, origin, and destination are set correctly.
+- Carrier and shipment method are selected.
+- Lifecycle, ship date, and delivery date are configured as needed.
+- All items have a valid quantity greater than zero.
+
 1. Select the checkmark icon at the bottom right of the page.
-2. The app validates the order. If any required field is missing or invalid, an error message appears.
+2. The app validates the order. If any required field is missing or invalid, an error message appears at the top of the screen.
 3. On success, a message displays: `Order has been created and sent for admin approval`.
 4. You are redirected to the `Transfer Orders` list page.
-> **Note:** Newly created transfer orders will remain in **CREATED** status and will not be visible in the Receiving App until they are approved.
+
+## After creation
+
+- The newly created transfer order is saved in `Created` status.
+- The order is not visible in the Receiving App until it is approved.
+- To review and approve the order, open it from the Order Management System or the Transfer Orders list (if you have admin access).
+- Before approval, you can still edit the order details, add or remove items, and change quantities.
+- After approval, the order moves to the appropriate workflow based on the selected lifecycle and appears in the Fulfillment App (for fulfillment) or the Receiving App (for receipt).
+
+## Troubleshooting
+
+| Issue | Error message | Resolution |
+| :--- | :--- | :--- |
+| No items added | `Please add atleast one item in the order.` | Add at least one product using scan or search |
+| Transfer name is empty | `Please give some valid transfer order name.` | Enter a name in the `Transfer name` field |
+| Required field missing | `Please select all the required properties assigned to the order.` | Select a Product Store, origin, destination, carrier, and shipment method |
+| Origin and destination are the same | `Origin and destination facility can't be same.` | Select a different origin facility |
+| Item quantity is zero or invalid | `Order items must have a valid ordered quantity.` | Enter a quantity greater than zero for each item |
+| Lifecycle not selected | `Please select transfer order lifecycle.` | Select a lifecycle from the `Plan` card |
+| Order creation fails | `Failed to create order.` | Check your network connection and try again |
+| Expected facility not listed | — | Check the selected Product Store and its facility configuration |
+| No shipping methods available | `No shipment methods found` | Configure shipment methods for the selected carrier in the Product Store settings |
