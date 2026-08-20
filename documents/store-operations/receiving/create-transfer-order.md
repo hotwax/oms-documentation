@@ -184,7 +184,7 @@ Before selecting the submit button, review:
 
 | Issue | Error message | Resolution |
 | :--- | :--- | :--- |
-| No items added | `Please add atleast one item in the order.` | Add at least one product using scan or search |
+| No items added | `Please add at least one item in the order.` | Add at least one product using scan or search |
 | Transfer name is empty | `Please give some valid transfer order name.` | Enter a name in the `Transfer name` field |
 | Required field missing | `Please select all the required properties assigned to the order.` | Select a Product Store, origin, destination, carrier, and shipment method |
 | Origin and destination are the same | `Origin and destination facility can't be same.` | Select a different origin facility |
