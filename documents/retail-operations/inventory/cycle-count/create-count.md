@@ -33,14 +33,11 @@ The Inventory Count App allows administrators and store managers to create cycle
 > This field is required. If left empty, the app displays `Please enter count name`.
 
 ### Facility
-
 - Select the `Facility` chip to open the facility selection modal.
-- In the Admin view, no facility is pre-selected. In the Store view, the current store is pre-selected by default.
-- Use the search bar to filter facilities by name or facility ID.
-- Select the target facility from the list.
-- The modal closes and the selected facility name appears on the chip.
-
-> This field is required. If no facility is selected, the app displays `Please select a facility`.
+- **Admin view:** No facility is pre-selected. Use the search bar to filter facilities by name or facility ID, then select the facility from the list.
+- **Store view:** The facility is fixed to the current store and cannot be changed.
+- The selected facility name appears on the chip.
+> This field is required in Admin view. If no facility is selected, the app displays `Please select a facility`.
 
 ### Count type
 
