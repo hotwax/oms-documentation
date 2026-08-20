@@ -130,3 +130,4 @@ After adding items, each product appears in the item list below the `Add items` 
 2. The app validates the order. If any required field is missing or invalid, an error message appears.
 3. On success, a message displays: `Order has been created and sent for admin approval`.
 4. You are redirected to the `Transfer Orders` list page.
+> **Note:** Newly created transfer orders will remain in **CREATED** status and will not be visible in the Receiving App until they are approved.
