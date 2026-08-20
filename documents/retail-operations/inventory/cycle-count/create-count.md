@@ -1,6 +1,17 @@
+---
+description: Create and assign a cycle count to a facility.
+---
+
 # Create cycle count
 
-The Inventory Count App allows administrators and store managers to create cycle counts for any facility. Both the Admin view and the Store view share the same Create Count flow. The difference is how you navigate to the page and which facility is pre-selected.
+Use the Inventory Count App to create and assign a cycle count. Admin users can create counts for any available facility. Store users can create counts only for facilities associated with their account. Both views use the same Create Count flow, but the navigation differs.
+
+## Before you begin
+
+- You need the `COMMON_ADMIN`, `INV_COUNT_ADMIN`, or `INVCOUNT_APP_VIEW` permission to open the Create Count page.
+- Store users must be associated with at least one active facility.
+- Prepare a count name and due date before you begin.
+- The manual Create Count flow requires at least one selected product.
 
 ## Admin view vs Store view
 
@@ -32,10 +43,11 @@ The Inventory Count App allows administrators and store managers to create cycle
 > This field is required. If left empty, the app displays `Please enter count name`.
 
 ### Facility
+
 - Select the `Facility` chip to open the facility selection modal.
 - **Admin view:** No facility is pre-selected. Use the search bar to filter facilities by name or facility ID, then select the facility from the list.
 - **Store view:** The facility is fixed to the current store and cannot be changed.
-- The selected facility name appears on the chip
+- The selected facility name appears on the chip.
 
 > This field is required in Admin view. If no facility is selected, the app displays `Please select a facility`.
 
@@ -45,12 +57,14 @@ The Inventory Count App allows administrators and store managers to create cycle
 
 | Count type | Description |
 | :--- | :--- |
-| **Hard count** | A comprehensive inventory verification process in which every product present in a facility is physically counted to establish an accurate record of all on-hand inventory. The system generates a blank count, requiring associates to record every item they encounter. |
-| **Directed count** | A targeted inventory verification process in which only specific, pre-selected products are counted. The system generates a count that includes only the administrator-identified SKUs, and associates count only those listed items. |
+| `Hard count` | Use for comprehensive inventory verification across a facility. |
+| `Directed count` | Use for targeted verification of selected products. |
 
 > `Directed count` is selected by default.
 
-### Due Date
+For more information about when to use each type, see [Types of cycle count](../../../learn-hotwax-oms/business-processes/inventory-management.md#types-of-cycle-count).
+
+### Due date
 
 - Select `Add Date` next to `Due Date`.
 - Choose the date by which the count should be completed from the date picker.
@@ -58,7 +72,7 @@ The Inventory Count App allows administrators and store managers to create cycle
 
 > This field is required. If no date is set, the app displays `Please select due date`.
 
-### Start Date
+### Start date
 
 - Select `Add Date` next to `Start Date`.
 - Choose the date when counting should begin from the date picker.
@@ -126,6 +140,11 @@ Each product row displays:
 4. On success, a message displays: `The cycle count has been created successfully`.
 5. The form resets so you can create another count.
 
-The newly created cycle count appears under:
-- **Admin view:** The `Assigned` tab in the sidebar after processing
-- **Store view:** The `Counts` tab on the bottom navigation bar shows it only after it moves from `Created` status to `Approved` status.
+If an open count with the same name already exists for the selected facility, selecting `Create` adds the selected products to that count instead of creating another count.
+
+After processing, the newly created cycle count appears in:
+
+- **Admin view:** The `Assigned` page in `Created` status.
+- **Store view:** The `Counts` page in `Created` status.
+
+Store users can start the count when its configured start date allows it.
