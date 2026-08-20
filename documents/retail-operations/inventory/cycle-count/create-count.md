@@ -1,6 +1,6 @@
 # Create cycle count
 
-The Inventory Count App allows administrators and store managers to create cycle counts for any facility. Both the Admin view and the Store view share the same Create Count form. The difference is how you navigate to the page and which facility is pre-selected.
+The Inventory Count App allows administrators and store managers to create cycle counts for any facility. Both the Admin view and the Store view share the same Create Count flow. The difference is how you navigate to the page and which facility is pre-selected.
 
 ## Admin view vs Store view
 
