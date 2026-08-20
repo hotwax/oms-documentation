@@ -8,7 +8,6 @@ The Inventory Count App allows administrators and store managers to create cycle
 | :--- | :--- | :--- |
 | Navigation | Left sidebar menu | Bottom tab bar |
 | Default facility | Must be selected manually | Pre-selected to the current store |
-| Menu options | Bulk Upload, Create count, Assigned, Pending Review, Closed, Store Permissions, Settings | Counts, Create, Variance, Settings |
 
 ## Accessing the Create count page
 
