@@ -11,7 +11,7 @@ Review the following setup before creating a transfer order:
 - **Product Store:** The selected Product Store determines which facilities and shipping methods are available. If an expected facility or carrier does not appear, check the Product Store configuration.
 - **Facility associations:** Origin facilities are loaded from the selected Product Store. Only facilities associated with that store appear in the origin selection list.
 - **Shipping method configuration:** Available carriers and shipment methods are loaded based on the selected Product Store. If no options appear, confirm that shipping methods are configured for the store.
-- **Barcode settings:** If you plan to add items by scanning, check the barcode identifier type (SKU, UPC, etc.) on the [Settings](settings.md) page before you begin.
+- **Barcode settings:** If you plan to add items by scanning, check the barcode identifier type (SKU, UPC, etc.) on the [Settings](https://docs.hotwax.co/documents/store-operations/inventory/receiving/settings) page before you begin.
 
 ## Review field requirements
 
@@ -179,16 +179,16 @@ Before selecting the submit button, review:
 
 The newly created transfer order is saved in `Created` status. It does not appear in the Receiving App until it is approved.
 
-1. Open the [Transfers App](../../retail-operations/inventory/transfers-app.md).
+1. Open the [Transfers App](https://docs.hotwax.co/documents/retail-operations/inventory/transfers-app).
 2. Find the order on the `Transfer orders` page. You can filter the list by `Created` status or search using the transfer order name.
 3. Select the order to open the `Transfer order details` page.
 4. Review the facilities, lifecycle, shipping method, dates, items, and ordered quantities.
 5. While the order is in `Created` status, you can add items, edit ordered quantities, or remove items.
 6. Select `Approve` when the order is ready to proceed.
 
-After approval, the transfer order becomes available for the [fulfillment](../fulfillment/transfer-order.md) or [receiving](transfer-orders.md) actions defined by its lifecycle.
+After approval, the transfer order becomes available for the [fulfillment](https://docs.hotwax.co/documents/store-operations/orders/fulfillment/transfer-order) or [receiving](https://docs.hotwax.co/documents/store-operations/inventory/receiving/transfer-orders) actions defined by its lifecycle.
 
-For detailed instructions, see [Find Transfer Orders](../../retail-operations/inventory/find-transfer-order.md) and [Transfer Order Details](../../retail-operations/inventory/transfer-order-details.md).
+For detailed instructions, see [Find Transfer Orders](https://docs.hotwax.co/documents/retail-operations/inventory/transfers-app/find-transfer-order) and [Transfer Order Details](https://docs.hotwax.co/documents/retail-operations/inventory/transfers-app/transfer-order-details).
 
 ## Troubleshooting
 

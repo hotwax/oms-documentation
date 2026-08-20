@@ -59,7 +59,7 @@ A cycle count verifies inventory at a facility. Create a hard count for a full i
 
 > `Directed count` is selected by default.
 
-For more information about when to use each type, see [Types of cycle count](../../../learn-hotwax-oms/business-processes/inventory-management.md#types-of-cycle-count).
+For more information about when to use each type, see [Types of cycle count](https://docs.hotwax.co/documents/learn-hotwax-oms/business-processes/inventory-management#types-of-cycle-count).
 
 ### Due date
 
