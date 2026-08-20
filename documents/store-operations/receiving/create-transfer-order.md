@@ -11,7 +11,7 @@ Review the following setup before creating a transfer order:
 - **Product Store:** The selected Product Store determines which facilities and shipping methods are available. If an expected facility or carrier does not appear, check the Product Store configuration.
 - **Facility associations:** Origin facilities are loaded from the selected Product Store. Only facilities associated with that store appear in the origin selection list.
 - **Shipping method configuration:** Available carriers and shipment methods are loaded based on the selected Product Store. If no options appear, confirm that shipping methods are configured for the store.
-- **Barcode settings:** If you plan to add items by scanning, check the barcode identifier type (SKU, UPC, etc.) on the `Settings` page before you begin.
+- **Barcode settings:** If you plan to add items by scanning, check the barcode identifier type (SKU, UPC, etc.) on the [Settings](settings.md) page before you begin.
 
 ## Accessing the Create transfer order page
 
@@ -23,6 +23,29 @@ Review the following setup before creating a transfer order:
 The page is divided into two sections:
 - **Left panel:** Transfer order configuration (name, facility assignments, shipping method, and plan)
 - **Right panel:** Product search and item list
+
+## Field requirements
+
+The following fields must be completed before the order can be created:
+
+- Transfer name
+- Product Store
+- Origin facility
+- Destination facility (set automatically from your logged-in facility)
+- Carrier
+- Shipment method
+- At least one item with a quantity greater than zero
+
+The following fields are optional:
+
+- Ship date
+- Delivery date
+
+Default values:
+- **Destination:** Set to your logged-in facility
+- **Lifecycle:** `Receive only`
+- **Carrier:** First available carrier for the selected Product Store
+- **Shipment method:** First available method for the selected carrier
 
 ## Name the transfer order
 
@@ -49,29 +72,6 @@ The `Assign` card contains the following fields:
 - This field is read-only and cannot be changed from this page.
 
 > The origin and destination facilities cannot be the same. If you select an origin that matches the destination, the app displays `Origin and destination facility can't be same`.
-
-### Field requirements
-
-The following fields must be completed before the order can be created:
-
-- Transfer name
-- Product Store
-- Origin facility
-- Destination facility (set automatically from your logged-in facility)
-- Carrier
-- Shipment method
-- At least one item with a quantity greater than zero
-
-The following fields are optional:
-
-- Ship date
-- Delivery date
-
-Default values:
-- **Destination:** Set to your logged-in facility
-- **Lifecycle:** `Receive only`
-- **Carrier:** First available carrier for the selected Product Store
-- **Shipment method:** First available method for the selected carrier
 
 ## Select shipping method
 
@@ -176,14 +176,14 @@ Before selecting the submit button, review:
 
 The newly created transfer order is saved in `Created` status. It does not appear in the Receiving App until it is approved.
 
-1. Open the Transfers App.
+1. Open the [Transfers App](../../retail-operations/inventory/transfers-app.md).
 2. Find the order on the `Transfer orders` page. You can filter the list by `Created` status or search using the transfer order name.
 3. Select the order to open the `Transfer order details` page.
 4. Review the facilities, lifecycle, shipping method, dates, items, and ordered quantities.
 5. While the order is in `Created` status, you can add items, edit ordered quantities, or remove items.
 6. Select `Approve` when the order is ready to proceed.
 
-After approval, the order becomes available for the fulfillment or receiving actions defined by its lifecycle.
+After approval, the transfer order becomes available for the [fulfillment](../fulfillment/transfer-order.md) or [receiving](transfer-orders.md) actions defined by its lifecycle.
 
 For detailed instructions, see [Find Transfer Orders](../../retail-operations/inventory/find-transfer-order.md) and [Transfer Order Details](../../retail-operations/inventory/transfer-order-details.md).
 
