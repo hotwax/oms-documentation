@@ -45,8 +45,8 @@ The Inventory Count App allows administrators and store managers to create cycle
 
 | Count type | Description |
 | :--- | :--- |
-| `Directed count` | A targeted count of specific, pre-selected products. Associates count only the items in the directed list |
-| `Hard count` | A facility-wide count. Associates count every product they find, whether or not it is in the system |
+| **Hard count** | A comprehensive inventory verification process in which every product present in a facility is physically counted to establish an accurate record of all on-hand inventory. The system generates a blank count, requiring associates to record every item they encounter. |
+| **Directed count** | A targeted inventory verification process in which only specific, pre-selected products are counted. The system generates a count that includes only the administrator-identified SKUs, and associates count only those listed items. |
 
 > `Directed count` is selected by default.
 
