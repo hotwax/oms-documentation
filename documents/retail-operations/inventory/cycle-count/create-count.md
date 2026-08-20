@@ -141,7 +141,7 @@ If an open count with the same name already exists for the selected facility, se
 
 After processing, the newly created cycle count appears in:
 
-- **Admin view:** The `Assigned` page in `Created` status.
+- **Admin view:** The [Assigned counts](https://docs.hotwax.co/documents/retail-operations/inventory/cycle-count/assigned) page in `Created` status.
 - **Store view:** The `Counts` page in `Created` status.
 
 Store users can start the count when its configured start date allows it.
