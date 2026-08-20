@@ -109,8 +109,6 @@ Each product row displays:
 - Use the `All` checkbox at the top of the list to select or deselect all visible products.
 - If the total matching products exceed the loaded page, a `Select all` button appears with the total count. Select it to include all matching products.
 
-> A cycle count cannot have more than 2,000 items. If you exceed this limit, the app displays a warning.
-
 ### Show selected only
 
 - Turn on the `Show selected only` toggle to display only the products already selected.
