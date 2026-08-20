@@ -11,24 +11,24 @@ A cycle count verifies inventory at a facility. Create a hard count for a full i
 - You need the `COMMON_ADMIN`, `INV_COUNT_ADMIN`, or `INVCOUNT_APP_VIEW` permission to open the Create Count page.
 - Prepare a count name and due date before you begin.
 
-## Admin view vs Store view
+## Admin and Store views
 
 | Feature | Admin view | Store view |
 | :--- | :--- | :--- |
 | Navigation | Select `Create count` from the left sidebar | Select `Create` from the bottom tab bar |
 | Facility | Select any facility | The current store is selected automatically |
 
-## Accessing the Create count page
+## Open the Create count page
 
 ### Admin view
 
-1. Log in to the Inventory Count App with an admin-level account.
+1. Log in to the Cycle Count App with an admin-level account.
 2. From the left-hand sidebar, select `Create count`.
 3. The `Create` page opens.
 
 ### Store view
 
-1. Log in to the Inventory Count App with a store-level account.
+1. Log in to the Cycle Count App with a store-level account.
 2. From the bottom navigation bar, select the `Create` tab.
 3. The `Create` page opens.
 
@@ -111,7 +111,7 @@ Each product row displays:
 
 ### Select products
 
-- Click any product row or its checkbox to select it.
+- Select any product row or its checkbox to select it.
 - Selected rows are highlighted.
 - The selection count appears at the top right of the list (for example, `5 selected`).
 
