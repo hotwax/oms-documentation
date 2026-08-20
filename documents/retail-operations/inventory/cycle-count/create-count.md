@@ -4,21 +4,19 @@ description: Create and assign a cycle count to a facility.
 
 # Create cycle count
 
-Use the Inventory Count App to create and assign a cycle count. Admin users can create counts for any available facility. Store users can create counts only for facilities associated with their account. Both views use the same Create Count flow, but the navigation differs.
+A cycle count verifies inventory at a facility. Create a hard count for a full inventory check or a directed count for selected products.
 
 ## Before you begin
 
 - You need the `COMMON_ADMIN`, `INV_COUNT_ADMIN`, or `INVCOUNT_APP_VIEW` permission to open the Create Count page.
-- Store users must be associated with at least one active facility.
 - Prepare a count name and due date before you begin.
-- The manual Create Count flow requires at least one selected product.
 
 ## Admin view vs Store view
 
 | Feature | Admin view | Store view |
 | :--- | :--- | :--- |
-| Navigation | Left sidebar menu | Bottom tab bar |
-| Default facility | Must be selected manually | Pre-selected to the current store |
+| Navigation | Select `Create count` from the left sidebar | Select `Create` from the bottom tab bar |
+| Facility | Select any facility | The current store is selected automatically |
 
 ## Accessing the Create count page
 
@@ -44,12 +42,11 @@ Use the Inventory Count App to create and assign a cycle count. Admin users can 
 
 ### Facility
 
-- Select the `Facility` chip to open the facility selection modal.
-- **Admin view:** No facility is pre-selected. Use the search bar to filter facilities by name or facility ID, then select the facility from the list.
-- **Store view:** The facility is fixed to the current store and cannot be changed.
+- **Admin view:** Select the `Facility` chip, search by facility name or facility ID, and select a facility.
+- **Store view:** The current store is selected automatically.
 - The `Facility` chip displays the selected facility name.
 
-> This field is required in Admin view. If no facility is selected, the app displays `Please select a facility`.
+> A facility is required. If no facility is selected, the app displays `Please select a facility`.
 
 ### Count type
 
