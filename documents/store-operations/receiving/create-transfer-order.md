@@ -13,18 +13,7 @@ Review the following setup before creating a transfer order:
 - **Shipping method configuration:** Available carriers and shipment methods are loaded based on the selected Product Store. If no options appear, confirm that shipping methods are configured for the store.
 - **Barcode settings:** If you plan to add items by scanning, check the barcode identifier type (SKU, UPC, etc.) on the [Settings](settings.md) page before you begin.
 
-## Accessing the Create transfer order page
-
-1. Log in to the Receiving App.
-2. From the left-hand sidebar, select `Transfer Orders`.
-3. Select the `Add (+)` icon at the bottom-right corner of the `Transfer Orders` page.
-4. The `Create transfer order` page opens.
-
-The page is divided into two sections:
-- **Left panel:** Transfer order configuration (name, facility assignments, shipping method, and plan)
-- **Right panel:** Product search and item list
-
-## Field requirements
+## Review field requirements
 
 The following fields must be completed before the order can be created:
 
@@ -42,10 +31,23 @@ The following fields are optional:
 - Delivery date
 
 Default values:
+
 - **Destination:** Set to your logged-in facility
 - **Lifecycle:** `Receive only`
 - **Carrier:** First available carrier for the selected Product Store
 - **Shipment method:** First available method for the selected carrier
+
+## Open the Create transfer order page
+
+1. Log in to the Receiving App.
+2. From the left-hand sidebar, select `Transfer Orders`.
+3. Select the `Add (+)` icon at the bottom-right corner of the `Transfer Orders` page.
+4. The `Create transfer order` page opens.
+
+The page is divided into two sections:
+
+- **Left panel:** Transfer order configuration (name, facility assignments, shipping method, and plan)
+- **Right panel:** Product search and item list
 
 ## Name the transfer order
 
@@ -55,7 +57,7 @@ Default values:
 
 The `Assign` card contains the following fields:
 
-### Product Store
+### Product store
 
 - Select the appropriate `Product Store` from the dropdown.
 - If only one store exists, it is selected by default and displayed as a label.
@@ -105,12 +107,12 @@ Select the appropriate lifecycle based on how the transfer is managed:
 
 > `Receive only` is selected by default.
 
-### Ship Date
+### Ship date
 
 - Select `Select date` next to `Ship Date`.
 - Choose the estimated shipment date from the date picker and confirm.
 
-### Delivery Date
+### Delivery date
 
 - Select `Select date` next to `Delivery Date`.
 - Choose the expected delivery date from the date picker and confirm.
@@ -162,6 +164,7 @@ After adding items, each product appears in the item list below the `Add items` 
 ## Create the transfer order
 
 Before selecting the submit button, review:
+
 - Transfer name, Product Store, origin, and destination are set correctly.
 - Carrier and shipment method are selected.
 - Lifecycle, ship date, and delivery date are configured as needed.
