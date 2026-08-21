@@ -14,7 +14,7 @@ A cycle count verifies inventory at a facility. Create a hard count for a full i
 ## Admin and Store views
 
 | Feature | Admin view | Store view |
-| :--- | :--- | :--- |
+| --- | --- | --- |
 | Navigation | Select `Create count` from the left sidebar | Select `Create` from the bottom tab bar |
 | Facility | Select any facility | The current store is selected automatically |
 
@@ -53,11 +53,13 @@ A cycle count verifies inventory at a facility. Create a hard count for a full i
 - Select the `Count type` dropdown and choose one of the following:
 
 | Count type | Description |
-| :--- | :--- |
+| --- | --- |
 | `Hard count` | Use for comprehensive inventory verification across a facility. |
 | `Directed count` | Use for targeted verification of selected products. |
 
-> `Directed count` is selected by default.
+{% hint style="info" %}
+`Directed count` is selected by default.
+{% endhint %}
 
 For more information about when to use each type, see [Types of cycle count](https://docs.hotwax.co/documents/learn-hotwax-oms/business-processes/inventory-management#types-of-cycle-count).
 
@@ -101,7 +103,7 @@ After filling in count details, use the product section to find and select items
 Each product row displays:
 
 | Column | Description |
-| :--- | :--- |
+| --- | --- |
 | Checkbox | Select or deselect the product |
 | Product image | Thumbnail of the product |
 | SKU | Internal name or SKU |
