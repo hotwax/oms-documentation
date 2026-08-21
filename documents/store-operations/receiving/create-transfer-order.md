@@ -121,7 +121,7 @@ Select the appropriate lifecycle based on how the transfer is managed:
 - Select `Select date` next to `Delivery Date`.
 - Choose the expected delivery date from the date picker and confirm.
 
-{% hint style="warning" %}
+{% hint style="info" %}
 The delivery date cannot be earlier than the ship date.
 {% endhint %}
 
