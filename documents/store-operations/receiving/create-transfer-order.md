@@ -100,12 +100,14 @@ The `Plan` card defines how the transfer order is processed:
 Select the appropriate lifecycle based on how the transfer is managed:
 
 | Lifecycle | Fulfillment | Receipt | When to use |
-| :--- | :--- | :--- | :--- |
+| --- | --- | --- | --- |
 | `Fulfill & Receive` | Origin store fulfills in the Fulfillment App | Destination store receives in the Receiving App | Store-to-store transfers managed entirely within HotWax Commerce. The origin store picks, packs, and ships; the destination store receives and accepts the inventory |
 | `Fulfill only` | Origin store fulfills in the Fulfillment App | Receipt is handled outside HotWax Commerce | Store-to-warehouse or store-to-external-location transfers where the receiving step is managed by a separate system or process |
 | `Receive only` | Fulfillment is handled outside HotWax Commerce | Destination store receives in the Receiving App | Warehouse-to-store transfers where an external system initiates the shipment and the store completes receipt in the Receiving App |
 
-> `Receive only` is selected by default.
+{% hint style="info" %}
+`Receive only` is selected by default.
+{% endhint %}
 
 ### Ship date
 
@@ -139,6 +141,10 @@ The scanner input field displays one of three states:
 
 > The barcode scanning identifier (SKU, UPC, etc.) can be changed from the `Settings` page.
 
+{% hint style="info" %}
+When a product is scanned for the first time, it is added with a quantity of zero. Scanning the product again increments the quantity by one.
+{% endhint %}
+
 ### Add items by searching
 
 1. Select the search icon to switch to `Search` mode.
@@ -147,7 +153,9 @@ The scanner input field displays one of three states:
 4. Select `Add to Transfer` to add the product to the order. The product is added with a quantity of zero.
 5. If more results are available, select `View more results` to open a full product search modal.
 
-> Once a product is added, a green checkmark icon replaces the `Add to Transfer` button.
+{% hint style="success" %}
+Once a product is added, a green checkmark icon replaces the `Add to Transfer` button.
+{% endhint %}
 
 ## Set item quantities
 
@@ -193,7 +201,7 @@ For detailed instructions, see [Find Transfer Orders](https://docs.hotwax.co/doc
 ## Troubleshooting
 
 | Issue | Error message | Resolution |
-| :--- | :--- | :--- |
+| --- | --- | --- |
 | No items added | `Please add at least one item in the order.` | Add at least one product using scan or search |
 | Transfer name is empty | `Please give some valid transfer order name.` | Enter a name in the `Transfer name` field |
 | Required field missing | `Please select all the required properties assigned to the order.` | Select a Product Store, origin, destination, carrier, and shipment method |
@@ -201,5 +209,4 @@ For detailed instructions, see [Find Transfer Orders](https://docs.hotwax.co/doc
 | Item quantity is zero or invalid | `Order items must have a valid ordered quantity.` | Enter a quantity greater than zero for each item |
 | Lifecycle not selected | `Please select transfer order lifecycle.` | Select a lifecycle from the `Plan` card |
 | Order creation fails | `Failed to create order.` | Retry the action. If it continues to fail, contact your administrator or support with the error details |
-| Expected facility not listed | — | Check the selected Product Store and its facility configuration |
 | No shipping methods available | `No shipment methods found` | Configure shipment methods for the selected carrier in the Product Store settings |
