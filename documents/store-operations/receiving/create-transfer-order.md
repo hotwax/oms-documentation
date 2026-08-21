@@ -73,7 +73,9 @@ The `Assign` card contains the following fields:
 - The `Destination` facility is set to the current facility you are logged into.
 - This field is read-only and cannot be changed from this page.
 
-> The origin and destination facilities cannot be the same. If you select an origin that matches the destination, the app displays `Origin and destination facility can't be same`.
+{% hint style="warning" %}
+The origin and destination facilities cannot be the same. If you select an origin that matches the destination, the app displays `Origin and destination facility can't be same`.
+{% endhint %}
 
 ## Select shipping method
 
@@ -119,7 +121,9 @@ Select the appropriate lifecycle based on how the transfer is managed:
 - Select `Select date` next to `Delivery Date`.
 - Choose the expected delivery date from the date picker and confirm.
 
-> The delivery date cannot be earlier than the ship date.
+{% hint style="warning" %}
+The delivery date cannot be earlier than the ship date.
+{% endhint %}
 
 ## Add items to the transfer order
 
@@ -139,7 +143,9 @@ The scanner input field displays one of three states:
 - **Scanner not focused:** A warning appears with a `Focus scanning` button. Select it to refocus the input field.
 - **Product not found:** The scanned barcode does not match any product. A `Search` button appears to try a keyword search instead.
 
-> The barcode scanning identifier (SKU, UPC, etc.) can be changed from the `Settings` page.
+{% hint style="info" %}
+The barcode scanning identifier (SKU, UPC, etc.) can be changed from the [Settings](https://docs.hotwax.co/documents/store-operations/inventory/receiving/settings) page.
+{% endhint %}
 
 {% hint style="info" %}
 When a product is scanned for the first time, it is added with a quantity of zero. Scanning the product again increments the quantity by one.
