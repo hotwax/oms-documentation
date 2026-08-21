@@ -183,27 +183,32 @@ query OrderPage($q: String!, $after: String) {
 
 ```javascript
 let after = null;
+let hasNextPage = true;
 const rows = [];
 
-do {
+while (hasNextPage && rows.length < LIMIT) {
   const body = await post({ query: ORDER_PAGE, variables: { q, after } });
   if (body.errors?.length) throw new Error(body.errors[0].extensions?.code);
 
   const conn = body.data.orders;
   rows.push(...conn.edges.map((e) => e.node));
+
+  // endCursor is still set on the final page, so hasNextPage is what ends the loop.
+  // Looping on the cursor alone spends a full page's cost on a request that returns nothing.
+  hasNextPage = conn.pageInfo.hasNextPage;
   after = conn.pageInfo.endCursor;
 
   // pace against the live bucket rather than retrying blindly
   const t = body.extensions.cost.throttleStatus;
-  if (t.currentlyAvailable < t.maximumAvailable * 0.2) {
+  if (hasNextPage && t.currentlyAvailable < t.maximumAvailable * 0.2) {
     await sleep(((t.maximumAvailable / 2) - t.currentlyAvailable) / t.restoreRate * 1000);
   }
-} while (after && rows.length < LIMIT);
+}
 ```
 
 Cursors are **keyset** cursors, not offsets. Page 40 costs the same as page 1, and rows are never repeated or skipped as long as you follow `endCursor`. To page backwards, use `last:` with `before:` and the page's `startCursor`.
 
-`pageInfo.hasNextPage` is the authoritative signal that there is more data. Use it rather than comparing the row count to the page size.
+`pageInfo.hasNextPage` is the authoritative signal that there is more data. Use it rather than comparing the row count to the page size, and rather than testing `endCursor`, which is still set on the last page. Cost is charged for the page you asked for, not the rows you got back, so one request past the end of a result set is charged in full.
 
 ## Inventory levels
 

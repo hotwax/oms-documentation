@@ -109,8 +109,16 @@ function isCollectionRoot(field) {
     && field.args.some((a) => a.name === 'query');
 }
 
-function mdEscape(value) {
-  return String(value).replace(/\|/g, '\\|');
+/**
+ * Prepare a value for a Markdown table cell. SDL block-string descriptions are legal and
+ * multiline, and a raw newline would split the row, so collapse whitespace before escaping
+ * the cell separator.
+ */
+function mdCell(value) {
+  return String(value)
+    .replace(/\s*\r?\n+\s*/g, ' ')
+    .replace(/\|/g, '\\|')
+    .trim();
 }
 
 function fieldKind(field, schema) {
@@ -231,7 +239,7 @@ function buildPage(schema, source, fromEndpoint) {
     for (const field of Object.values(type.getFields())) {
       const info = fieldKind(field, schema);
       let kind = 'scalar';
-      let notes = field.description ? mdEscape(field.description) : '';
+      let notes = field.description ? mdCell(field.description) : '';
       if (info.kind === 'connection') {
         kind = 'collection';
         notes = notes || `Paged; requires \`first:\`. Nodes are [${info.target}](#${anchor(info.target)}).`;
@@ -245,7 +253,7 @@ function buildPage(schema, source, fromEndpoint) {
       const rendered = info.kind === 'connection' ? `${info.target} connection` : info.rendered;
       // An empty trailing cell leaves a double space before the pipe, which markdownlint's
       // table-column-style rule flags; a dash is both lint-clean and easier to scan.
-      push(`| \`${field.name}\` | \`${mdEscape(rendered)}\` | ${kind} | ${notes || '—'} |`);
+      push(`| \`${field.name}\` | \`${mdCell(rendered)}\` | ${kind} | ${notes || '—'} |`);
     }
     push();
   }
@@ -277,7 +285,7 @@ function buildPage(schema, source, fromEndpoint) {
     push('| Scalar | Serialized as |');
     push('| ------ | ------------- |');
     for (const s of scalars) {
-      push(`| \`${s.name}\` | ${s.description ? mdEscape(s.description) : 'string'} |`);
+      push(`| \`${s.name}\` | ${s.description ? mdCell(s.description) : 'string'} |`);
     }
     push();
   }
