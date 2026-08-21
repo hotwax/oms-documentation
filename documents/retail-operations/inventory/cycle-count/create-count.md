@@ -38,7 +38,9 @@ A cycle count verifies inventory at a facility. Create a hard count for a full i
 
 - Enter a descriptive name for the cycle count in the `Count name` field at the top of the form.
 
-> This field is required. If left empty, the app displays `Please enter count name`.
+{% hint style="warning" %}
+This field is required. If left empty, the app displays `Please enter count name`.
+{% endhint %}
 
 ### Facility
 
@@ -46,7 +48,9 @@ A cycle count verifies inventory at a facility. Create a hard count for a full i
 - **Store view:** The current store is selected automatically.
 - The `Facility` chip displays the selected facility name.
 
-> A facility is required. If no facility is selected, the app displays `Please select a facility`.
+{% hint style="warning" %}
+A facility is required. If no facility is selected, the app displays `Please select a facility`.
+{% endhint %}
 
 ### Count type
 
@@ -69,7 +73,9 @@ For more information about when to use each type, see [Types of cycle count](htt
 - Choose the date by which the count should be completed from the date picker.
 - Select `Done` to confirm.
 
-> This field is required. If no date is set, the app displays `Please select due date`.
+{% hint style="warning" %}
+This field is required. If no date is set, the app displays `Please select due date`.
+{% endhint %}
 
 ### Start date
 
@@ -77,7 +83,9 @@ For more information about when to use each type, see [Types of cycle count](htt
 - Choose the date when counting should begin from the date picker.
 - Select `Done` to confirm.
 
-> This field is optional. If not set, the app defaults to the current date. The start date cannot be after the due date.
+{% hint style="info" %}
+This field is optional. If not set, the app defaults to the current date. The start date cannot be after the due date.
+{% endhint %}
 
 ## Search and select products
 
@@ -88,7 +96,9 @@ After filling in count details, use the product section to find and select items
 - Enter a product name, SKU, or product ID in the `Search products` bar.
 - Matching products appear in the list below.
 
-> Before applying any filter or search term, the list shows `Please select filters to view items`.
+{% hint style="info" %}
+Before applying any filter or search term, the list shows `Please select filters to view items`.
+{% endhint %}
 
 ### Filter by tags
 
@@ -96,7 +106,9 @@ After filling in count details, use the product section to find and select items
 - Choose one or more tag values to narrow the product list.
 - Select `Apply` to update results.
 
-> The chip label updates to show the count of selected values (for example, `3 selected`) or the tag name if only one is selected.
+{% hint style="info" %}
+The chip label updates to show the count of selected values (for example, `3 selected`) or the tag name if only one is selected.
+{% endhint %}
 
 ### Product list
 
