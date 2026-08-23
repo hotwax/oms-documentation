@@ -199,14 +199,17 @@ The Company warning states that inventory placed by the channel should be cleare
 ### Expire a channel
 
 1. Open the channel's publisher and aggregate reset jobs in Company or Job Manager and record their internal job names.
-2. Select the channel.
-3. Select `Expire` under `Stop using this channel`.
-4. Review the target and channel.
-5. Select `Expire channel`.
+2. Pause both jobs and save each change.
+3. Verify that neither job has an active run.
+4. Review event history for the channel. If it has unbatched events or a batch awaiting delivery, stop and follow the approved channel-decommission plan before you expire it.
+5. Select the channel.
+6. Select `Expire` under `Stop using this channel`.
+7. Review the target and channel.
+8. Select `Expire channel`.
 
 Expiration is intended to stop aggregation into the target and clear the inventory that the channel placed there. Verify the Shopify target after expiration. HotWax Commerce retains the mapping so historical events remain attributable to the expired channel.
 
-Expiration removes the channel from the active channel rows, but the Company page does not show it pausing or deleting the channel's publisher and reset jobs. Use the recorded job names to find those jobs in Job Manager, then pause any schedule that should no longer run. If the Shopify target is not cleared, record the channel and location identifiers and escalate before assigning the location elsewhere.
+Expiration removes the channel from the active channel rows, but the Company page does not show it pausing or deleting the channel's publisher and reset jobs. Use the recorded job names to find those jobs in Job Manager and confirm that they remain paused. If the Shopify target is not cleared, record the channel and location identifiers and escalate before assigning the location elsewhere.
 
 ## Manage real-time inventory controls
 
