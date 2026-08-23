@@ -70,3 +70,5 @@ Open the shop card overflow menu for these actions:
 {% hint style="info" %}
 The `Publish` tab displays `No publish jobs yet` until a Shopify shop is connected to the selected product store.
 {% endhint %}
+
+For a connection using the Company inventory-event publishing model, continue with [Monitor Shopify inventory sync](../../../system-admin/administration/company/manage-shopify-inventory-sync.md). Confirm the deployed publishing model before you activate either path.

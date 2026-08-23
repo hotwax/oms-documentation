@@ -12,13 +12,15 @@ Mappings translate Shopify locations and order or product values into HotWax Com
 2. Go to `Shopify`.
 3. Select a connection.
 4. Open `Inventory locations`.
-5. Click `Run facility audit`.
+5. Select `Run facility audit`.
 6. Review every active Shopify location.
 7. Map each location to the matching HotWax facility.
 8. Save the changes.
 9. Run the audit again and resolve remaining gaps.
 
 Map multiple physical stores to one facility only when the approved inventory design requires it.
+
+This page maps physical Shopify locations to HotWax facilities. Do not map a Shopify aggregate location to a physical facility. Keep the approved aggregate target unassigned, then use [Monitor Shopify inventory sync](manage-shopify-inventory-sync.md) to map it to an inventory channel.
 
 ## Map shipping methods
 
@@ -27,7 +29,7 @@ Map multiple physical stores to one facility only when the approved inventory de
 3. Review the Shopify shipping option.
 4. Select the HotWax shipment method and carrier.
 5. Repeat for each active Shopify value.
-6. Click `Save All`.
+6. Select `Save All`.
 
 Unmapped shipping methods can prevent imported orders from receiving the intended fulfillment method.
 
@@ -65,7 +67,8 @@ Return to the Shopify connection and review the mapping summaries.
 
 Before activation, confirm:
 
-* Active inventory locations are mapped
+* Active physical inventory locations are mapped
+* Aggregate locations are intentionally unassigned or mapped to an inventory channel
 * Shipping methods used by live orders are mapped
 * Payment methods used by live orders are mapped
 * Shopify order sources are mapped to sales channels
