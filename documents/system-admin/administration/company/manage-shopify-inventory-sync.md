@@ -39,9 +39,11 @@ Resolve either missing gate through the approved Shopify connection flow before 
 
 Start with the queue and job-health cards. They answer two different questions: what is waiting, and what should move it.
 
-The screenshots in this guide show a Company build newer than v2.2.1 and use fictional demo data. Their shop, channel, location, event, batch, and job identifiers do not describe a live retailer. In the overview, `Needs attention` reflects the intentionally paused manual discard job; assess automatic pipeline health from the individual job rows.
+As of August 24, 2026, the screenshots and event-pipeline terminology in this guide preview the unreleased `feat/inventory-event-pipeline-view` UI at commit `672694b`. This commit is not on Company `main` or in a tagged release, and the preview still reports package version 2.2.1. Do not use the version label alone to identify this UI. Until a deployed release contains it, follow the older Company and Job Manager surfaces described in the release boundary below.
 
-<figure><img src="../../.gitbook/assets/company-shopify-inventory-sync-overview.jpg" alt="Company App Inventory sync dashboard showing the aggregate event queue and inventory sync jobs"><figcaption><p>Start with the aggregate queue, then inspect the job row for the affected channel.</p></figcaption></figure>
+The screenshots use fictional demo data; their shop, channel, location, event, batch, and job identifiers do not describe a live retailer. In the overview, `Needs attention` reflects the intentionally paused manual discard job; assess automatic pipeline health from the individual job rows.
+
+<figure><img src="../../.gitbook/assets/company-shopify-inventory-sync-overview.jpg" alt="Company App Inventory sync dashboard showing the aggregate event queue beside Shared sync jobs"><figcaption><p>The queue shows what is waiting. The Shared sync jobs card covers cross-channel movement; open the affected channel card for its publisher and aggregate ATP reset.</p></figcaption></figure>
 
 ### Review the aggregate event queue
 
@@ -62,25 +64,27 @@ Select an event or batch row to open inventory event history.
 When the page displays `Inventory data could not be loaded from the OMS`, the counts are unavailable, not confirmed zero. Retry the load before you conclude that nothing is pending.
 {% endhint %}
 
-### Review inventory sync jobs
+### Review shared and channel jobs
 
-The `Inventory sync jobs` card shows each supported job as `Active`, `Paused`, or `Not configured`. It also shows the latest cached run and next active schedule.
+`Shared sync jobs` contains schedules that serve the connection or every Shopify inventory channel on the OMS. Each channel card contains the two schedules that belong only to that channel. Both surfaces show a configured job as `Active` or `Paused`, and show `Not configured` when the required job is missing.
 
-| Job | Scope | Purpose |
-| --- | --- | --- |
-| `Publish and send event batches` | One inventory channel | Batches calculated aggregate adjustments for delivery |
-| `Process effective-dated inventory changes` | OMS-wide | Processes inventory changes that become effective at a later time |
-| `Reset physical location QOH` | One Shopify connection | Reconciles every mapped physical Shopify location with HotWax QOH |
-| `Reset aggregate ATP` | One inventory channel | Replaces the target location quantity with the channel's current ATP |
-| `Send produced inventory batches` | OMS-wide, when available | Sends produced Shopify inventory-adjustment System Messages |
-| `Discard unbatched events` | One selected channel, manual only, when available | Cancels pending events that must not be sent |
-| `Purge old inventory events` | OMS-wide, when available | Removes old ledger details according to the connector retention policy |
+| Job | Where shown | Scope | Purpose |
+| --- | --- | --- | --- |
+| `Publish and send event batches` | A channel card | One inventory channel | Batches calculated aggregate adjustments for delivery |
+| `Reset aggregate ATP` | A channel card | One inventory channel | Replaces the target location quantity with the channel's current ATP |
+| `Process effective-dated inventory changes` | `Shared sync jobs` | OMS-wide | Processes inventory changes that become effective at a later time |
+| `Reset physical location QOH` | `Shared sync jobs` | One Shopify connection | Reconciles every mapped physical Shopify location with HotWax QOH |
+| `Send produced inventory batches (all Shopify connections)` | `Shared sync jobs` | OMS-wide, when available | Sends produced Shopify inventory-adjustment System Messages |
+| `Discard unbatched events (manual, per channel)` | `Shared sync jobs` | One selected channel, manual only, when available | Cancels pending events that must not be sent |
+| `Purge old inventory events (all Shopify connections)` | `Shared sync jobs` | OMS-wide, when available | Removes old ledger details according to the connector retention policy |
 
 The jobs displayed depend on the installed Company and Shopify connector releases. `Process effective-dated inventory changes` and `Purge old inventory events` are connector-seeded jobs. If either is missing, treat it as a deployment gap. Do not copy a job definition from another instance.
 
-Inspect the individual rows before you use the rollup as a health verdict. A manual recovery job can be intentionally paused and have no schedule while the automatic publication pipeline remains healthy.
+Inspect every shared and channel-owned row before you use the `Shared sync jobs` rollup as a health verdict. The rollup includes the jobs inside channel cards, even though it is displayed on the shared card. A manual recovery job can be intentionally paused and have no schedule while the automatic publication pipeline remains healthy.
 
-Select a configured job to review its internal name, service, active state, schedule, parameters, recent runs, and edit history. Select `Run now` only after you confirm the job scope and verify that an earlier run is not active.
+Select a configured job from its shared or channel row to review its internal name, service, active state, schedule, parameters, recent runs, and edit history. A row can summarize multiple matching jobs and open only one of them. Use Job Manager to check for duplicate or overlapping schedules before you activate or reschedule a job. Select `Run now` only after you confirm the job scope and verify that an earlier run is not active.
+
+A job's next-run line can show a countdown and timestamp. If the cached next-run timestamp is older than a more recent run, Company shows the cron cadence instead of reporting a false overdue state. `Next run not yet recalculated` means that the schedule exists but the cache has no dependable next timestamp. `No active schedule` means that Company found no unpaused matching job with a cached next-execution timestamp; inspect the job's paused state and cron expression before you conclude that it is unscheduled.
 
 A completed run means that the job has an end time and did not report an error. It does not prove that Shopify now matches HotWax Commerce. After a reset or recovery run, compare representative item quantities at the affected Shopify target.
 
@@ -88,7 +92,7 @@ If the dashboard offers `Set up`, the app creates the missing job in a paused st
 
 Some Company versions allow supported job parameters to be edited in the job modal. Keep `inventoryChannelId` unchanged for a channel publisher or reset job because that value defines which channel the job belongs to.
 
-Editable job parameters; dedicated sender, discard, and purge rows; per-channel publisher and reset controls; and the `Inventory channel` history filter require a Company build newer than v2.2.1. In v2.2.1, review the deployed jobs in Job Manager and use the Shopify target filter in event history.
+The channel-card job placement and the four-stage event pipeline are an unreleased preview at `672694b`. Older released deployments can show the channel jobs in a single `Inventory sync jobs` card and provide separate `All events` and `Grouped by batch` history views. Use Job Manager and the controls visible in that deployed Company build when the newer surfaces are absent. Replace this commit boundary with the released Company version after the feature ships.
 
 ### Configure a channel publisher safely
 
@@ -145,7 +149,7 @@ The lower dashboard sections show:
 
 * Recent full physical-location QOH reset runs
 * Recent full aggregate ATP reset runs
-* Aggregate event batches and their Shopify targets
+* Aggregate event batches, their delivery states, publish reasons, and summed change entries
 
 Each run card shows its run identifier, start time, parameters, scope, result, and whether the job reported an error. Select `View all runs` to search one job's history by run, service, user, parameters, result, and status.
 
@@ -157,7 +161,9 @@ The job-run page loads at most the 500 most recent runs. When it reaches that li
 
 An aggregate inventory channel maps one channel facility group to one Shopify location. Eligible inventory from the facilities in the group contributes to that target after the channel's brokering, safety-stock, threshold, and demand rules are applied.
 
-<figure><img src="../../.gitbook/assets/company-shopify-inventory-channel-mappings.jpg" alt="Inventory channels section showing fictional facility groups mapped to Shopify aggregate locations and their reset schedules"><figcaption><p>Confirm the facility group, Shopify target, and reset job before managing a channel.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/company-shopify-inventory-channel-mappings.jpg" alt="Inventory channel cards showing fictional facility groups, Shopify locations, cached delivery activity, publisher jobs, and aggregate ATP reset jobs"><figcaption><p>Audit each channel as one unit: facility group, Shopify target, cached delivery activity, publisher, and full-reset schedule.</p></figcaption></figure>
+
+`Feeding this channel` counts effective facility-group members by facility type. `Delivered in 24h` counts cached ledger-detail rows that were created in the last 24 hours and currently have a sent System Message. It is not a count of deliveries, units, products, or batches; an older row delivered today is excluded. Treat this value as a recent operational signal rather than a complete throughput total.
 
 Before you begin:
 
@@ -188,7 +194,7 @@ If the channel is created but one or more jobs fail, do not create the channel a
 
 Select a channel from the `Inventory channels` section to manage it.
 
-The Shopify shop and facility group are fixed because they define the channel's identity. You can update the description and choose another eligible aggregate location. When the channel row or edit dialog displays reset scheduling, use it to open the same channel-scoped reset job shown in `Inventory sync jobs`.
+The Shopify shop and facility group are fixed because they define the channel's identity. You can update the description and choose another eligible aggregate location. Open `Reset aggregate ATP` on the channel card to review or change that channel's full-reset schedule.
 
 ### Move an aggregate target
 
@@ -198,7 +204,8 @@ The Shopify shop and facility group are fixed because they define the channel's 
 4. Review the warning.
 5. Save the change.
 6. Run a full aggregate ATP reset for the channel.
-7. Confirm that the old target is cleared and the new target contains the current channel ATP.
+7. Search event history by the old Shopify location. A waiting entry displays `Drains the location the channel left`; a settled row displays `Channel has left this location`; event detail displays `Retarget drain`. An in-flight entry shows the old location without a retarget badge.
+8. Confirm that the old target is cleared and the new target contains the current channel ATP.
 
 The Company warning states that inventory placed by the channel should be cleared from the old target. Saving the edit records the new target, while the connector performs the inventory clearing. Verify both Shopify locations after the save and reset. If the old target remains stocked, do not reuse it; record the channel and location identifiers and escalate the failed clear. Incremental events alone do not seed the complete quantity at the new location.
 
@@ -207,12 +214,12 @@ The Company warning states that inventory placed by the channel should be cleare
 1. Open the channel's publisher and aggregate reset jobs in Company or Job Manager and record their internal job names.
 2. Pause the aggregate reset job and save the change. Keep the channel publisher and produced-message sender active so they can deliver the clearing adjustment created by expiration.
 3. Verify that the aggregate reset has no active run and that the publisher is not currently running.
-4. Review event history for the channel. Resolve pre-existing unbatched events and batches awaiting delivery according to the approved channel-decommission plan before you expire it.
+4. Review event history for the channel. Resolve pre-existing `Waiting` events and batches awaiting delivery according to the approved channel-decommission plan before you expire it.
 5. Select the channel.
 6. Select `Expire` under `Stop using this channel`.
 7. Review the target and channel.
 8. Select `Expire channel`.
-9. Track the clearing adjustment, whether it is still `Unbatched` or already assigned to a batch, until its System Message reaches a successful delivery state. Then verify that the Shopify target is zero.
+9. Track the clearing adjustment, whether it is still in `Waiting to batch` or already assigned to a batch, until its System Message reaches a successful delivery state. After expiration, the channel is no longer available in the `Inventory channel` filter; search its label, old Shopify location, event type, source record, or inventory item instead. Then verify that the Shopify target is zero.
 10. Find the recorded publisher in Job Manager, pause it, and confirm that both the publisher and aggregate reset jobs remain paused.
 
 Expiration is intended to stop aggregation into the target and clear the inventory that the channel placed there. Verify the Shopify target after expiration. HotWax Commerce retains the mapping so historical events remain attributable to the expired channel.
@@ -255,42 +262,75 @@ If a source displays `Not loaded on this OMS`, the connector's seed data is miss
 
 Open inventory event history from an aggregate queue row or select `Event history` in the batch section.
 
-Use search and the available filters to narrow the history by:
+The page presents one `Inventory event pipeline` in the order that the publisher acts. Use search and the available filters to decide which groups, batches, and rows remain visible by:
 
-* Event key or event type
+* Event type and source record
+* Resolved product name or SKU, when available
 * Shopify inventory item identifier
-* Shopify target
+* Shopify location
+* Shopify publish reason
 * Batch identifier
-* Event status
-* Newest-first or oldest-first order
+* Ledger status
+* Inventory channel
 
-Builds newer than v2.2.1 provide an `Inventory channel` filter. In v2.2.1, use the Shopify target filter or search by the channel label or target.
+The `Status` filter applies to the inventory-event ledger lifecycle. It does not filter System Message delivery states such as `Produced`, `Sending`, `Error`, or `Sent`.
 
-The ledger identifies a Shopify inventory item, not an OMS product record. Use the displayed Shopify inventory item identifier when you compare the event with Shopify.
+The `shown` badge counts matching ledger rows. When one event matches inside a waiting group or batch, that card continues to show the complete publisher boundary, including its full event count and summed change entries. Do not interpret those totals as a subtotal of only the matching rows.
 
-Choose `All events` to review each adjustment or `Grouped by batch` to review the System Message that carries a set of adjustments.
+{% hint style="warning" %}
+In preview commit `672694b`, the `Sort` control does not reorder the pipeline sections. `Waiting to batch` remains oldest first, while batches and other event rows retain their operational order. Use the displayed timestamps when sequence matters.
+{% endhint %}
 
-<figure><img src="../../.gitbook/assets/company-shopify-inventory-event-history.jpg" alt="Inventory event history showing search, status, event type, inventory channel, and sort filters above fictional aggregate event rows"><figcaption><p>Filter by channel and status to separate unbatched events from delivered or failed batches.</p></figcaption></figure>
+The ledger's remote identity is the Shopify inventory item. The page also tries to resolve the OMS product and originating business record, such as an order, receipt, cycle count, reset, reservation, or point-of-sale movement. Treat an unresolved enrichment as missing context, not as proof that the source record does not exist.
 
-### Read event states
+<figure><img src="../../.gitbook/assets/company-shopify-inventory-event-history.jpg" alt="Inventory event pipeline showing search and filters above two fictional Waiting to batch groups with Shopify reasons and summed change entries"><figcaption><p>Waiting groups mirror publisher grouping and expose the Shopify reason, summed changes, and retarget drains before batching.</p></figcaption></figure>
+
+### Follow the pipeline stages
+
+| Stage | What it contains | Operator focus |
+| --- | --- | --- |
+| `Waiting to batch` | Pending events grouped from the publisher configuration loaded by the page | Review the oldest group, publish reason, summed changes, and target location. |
+| `In flight and failed` | Produced System Messages that Shopify has not confirmed, including `Produced`, `Sending`, and `Error` | Diagnose delivery and resend only after correcting the cause. |
+| `Quarantined` | Terminal ledger failures that are never automatically batched again | Fix the source rows and record a new event. |
+| `Settled in the last five days` | Events delivered to Shopify or closed as no change | Use this UI-labelled five-day tail for recent confirmation, not long-term audit history. |
+
+Within the ledger, lifecycle and delivery are separate state machines:
 
 | State | Meaning | Next check |
 | --- | --- | --- |
-| `Unbatched` | The adjustment is calculated but has no System Message | Check the channel publisher and its next run. |
-| `No change` | The calculation produced no adjustment | Open the event and review the calculation comment. |
-| `Error` | The event could not be calculated or assigned | Open the event, record its key, and review the error context. |
-| Assigned to a batch | The event follows the System Message delivery state | Open the batch and review its status and errors. |
+| `Waiting` | The adjustment is calculated but has no System Message | Check the channel card's publisher and its next run. |
+| `Batched` | The ledger row is assigned to a System Message | Find that batch in `In flight and failed` or the settled tail and review its delivery state. |
+| `No change` | The grouped change nets to zero and requires no Shopify mutation | Open the event and review its ATP calculation. |
+| `Quarantined` | A terminal calculation or grouping result cannot be published | Fix the source data and record a new inventory event; do not wait for an automatic retry. |
 
-Open an event to review its key, status, Shopify inventory item, inventory channel, Shopify target, adjustment, batch, and calculation comment.
+Open an event to review its source record, resolved originating artifact, actor or note when available, product and SKU, Shopify inventory item, channel, effective Shopify location, publish reason, batch delivery, and ATP calculation. The raw ledger reference remains available when the human-readable source does not contain it.
 
-The history page is an operational monitor, not a permanent archive. It normally loads a recent window of up to 500 ledger records and also retains pending events and unresolved batches. Use exported or backend records when an investigation requires older history.
+### Review a waiting group
+
+`Waiting to batch` puts the oldest group first. By default, a publisher group is scoped to one channel, Shopify inventory item, and event type.
+
+In preview commit `672694b`, the page applies the first nonblank `groupByFields` value that it finds among the cached channel publishers to every waiting channel. The displayed grouping matches actual publication only when the channel publishers use the same grouping fields. Compare `groupByFields` on every affected channel publisher in Company or Job Manager before you rely on the cards for a mixed-channel audit.
+
+For each group, verify:
+
+* `Publishes under`: The Shopify inventory-adjustment reason. An unmapped event type or a group containing mixed event types falls back to `correction`; resolve an unexpected fallback before it freezes into a System Message.
+* `Change entries Shopify will receive`: Events for the same Shopify inventory item and effective location are summed into the delta that Shopify receives.
+* Outcome warnings: A zero sum settles as `No change`. A non-whole sum is quarantined. A nonzero whole-number sum can publish.
+* Target warnings: `Drains the location the channel left` means that the change applies to the former Shopify location recorded on the event, not the channel's current target.
+* `Contributing events`: The source records and ATP calculations that produced the summed entry.
+
+If the page warns that batches can mix event types, the publisher's grouping configuration omits event type. Such a mixed batch must use `correction` because no more specific Shopify reason describes every event in it.
+
+<figure><img src="../../.gitbook/assets/company-shopify-inventory-pipeline-outcomes.jpg" alt="Inventory event pipeline showing a fictional failed batch, quarantined event, and collapsed five-day settled section"><figcaption><p>Use In flight and failed for delivery problems, Quarantined for terminal ledger failures, and Settled for cached delivery and no-change outcomes.</p></figcaption></figure>
+
+The history page is an operational monitor, not a permanent archive. It initially loads a recent set plus all pending and unresolved rows, then adds new updates; it is neither a fixed 500-record report nor complete history. The UI labels the settled stage as a five-day tail, but the client does not enforce an age cutoff or remove already cached rows when the backend purge runs. Older settled rows can remain visible until the app cache is cleared, normally at logout or an identity change. Use backend records when an investigation requires a complete or authoritative time window.
 
 ### Investigate and resend a failed batch
 
-1. Open `Grouped by batch`.
-2. Select the failed batch.
+1. Find the batch under `In flight and failed`.
+2. Select `Events` on the failed batch.
 3. Record the System Message identifier, target, status, and delivery errors.
-4. Review the included event keys and net adjustments.
+4. Review the contributing source records and summed change entries.
 5. Correct the connection, access, or data problem that caused the failure.
 6. Select `Resend` once.
 7. Refresh the batch and confirm its new delivery state. Do not use an unchanged error list as proof that no new attempt occurred.
@@ -300,6 +340,15 @@ The app resends the same frozen payload and idempotency key. Review the resultin
 The batch dialog fetches up to 50 delivery errors and can retain that cached set after the dialog or page is reopened. Use backend System Message error records to inspect the newest attempt, more than 50 errors, or older error history.
 
 Select `Message text` when the technical team needs the stored System Message payload. If the dialog says that the payload is still loading, refresh or reopen it before treating the displayed content as exact. Keep credentials and customer data out of screenshots and tickets.
+
+### Recover a quarantined event
+
+1. Open the row under `Quarantined`.
+2. Record its source record, product, inventory item, effective Shopify location, and ATP calculation.
+3. Correct the invalid source data or configuration that produced the terminal result.
+4. Use the approved business workflow to record a new inventory event; the quarantined row itself is never batched again.
+5. Run a full aggregate ATP reset for the affected channel when the correction or outage could have left Shopify out of sync.
+6. Verify the new event or reset and compare the Shopify target with current channel ATP.
 
 ## Audit common inventory discrepancies
 
@@ -316,26 +365,34 @@ Select `Message text` when the technical team needs the stored System Message pa
 1. Confirm that the inventory channel maps the intended facility group to the intended Shopify target.
 2. Review the channel's facility membership and sourcing rules.
 3. Confirm that `Inventory channel event updates` and the relevant event source are active.
-4. Check the oldest unbatched event and the channel publisher.
+4. Check the oldest waiting group and the publisher row inside the channel card.
 5. Check pending batches and the produced-message sender when it is displayed.
 6. Open failed batches and record their System Message errors.
 7. Run the channel's full aggregate ATP reset when events were skipped or the target moved.
 
-### Events remain unbatched
+### Events remain waiting to batch
 
-1. Filter history to `Unbatched` and the affected channel.
-2. Record the oldest event time.
-3. Review the channel publisher's active state, next run, and recent runs.
+1. Filter history to `Waiting` and the affected channel.
+2. Find the oldest group in `Waiting to batch` and record its age.
+3. Review `Publish and send event batches` on the channel card, including its active state, next run, and recent runs.
 4. Use `Set up` when the publisher is not configured.
 5. Activate and schedule a newly created publisher after you verify its `inventoryChannelId`.
 
 ### Batches remain produced or enter an error state
 
-1. Open the batch and record its System Message identifier.
-2. Review `Delivery errors` and `Message text`.
+1. Find the batch under `In flight and failed` and record its System Message identifier.
+2. Select `Events` to review its delivery errors and contributing events, and use `Message text` when the stored payload is required.
 3. Check the inventory-batch sender when it is displayed, or the deployed System Message sender in Job Manager.
 4. Confirm Shopify write access and the target location.
 5. Correct the cause, then resend the batch once.
+
+### An event is quarantined
+
+1. Open the quarantined event and record its source, product, target, delta, and calculation.
+2. Correct the source row or configuration; the terminal ledger row will not retry.
+3. Record a new event through the approved business workflow.
+4. Run a full aggregate ATP reset when the affected target may remain out of sync.
+5. Verify the new event or reset against Shopify.
 
 ### One kind of inventory change never appears
 
@@ -345,4 +402,4 @@ Select `Message text` when the technical team needs the stored System Message pa
 4. Enable a loaded source or ask the deployment owner to load missing connector seed data.
 5. Run full aggregate ATP resets for affected channels because missed changes are not replayed.
 
-Contact the technical team with the Shopify connection, inventory channel, target location, event key, System Message identifier, job-run identifier, timestamps, and the first recorded error when the same discrepancy returns after reconciliation.
+Contact the technical team with the Shopify connection, inventory channel, target location, event type, source record, Shopify inventory item, System Message identifier, job-run identifier, timestamps, and the first recorded error when the same discrepancy returns after reconciliation.
