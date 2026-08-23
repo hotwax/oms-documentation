@@ -39,6 +39,10 @@ Resolve either missing gate through the approved Shopify connection flow before 
 
 Start with the queue and job-health cards. They answer two different questions: what is waiting, and what should move it.
 
+The screenshots in this guide show a Company build newer than v2.2.1 and use fictional demo data. Their shop, channel, location, event, batch, and job identifiers do not describe a live retailer. In the overview, `Needs attention` reflects the intentionally paused manual discard job; assess automatic pipeline health from the individual job rows.
+
+<figure><img src="../../.gitbook/assets/company-shopify-inventory-sync-overview.jpg" alt="Company App Inventory sync dashboard showing the aggregate event queue and inventory sync jobs"><figcaption><p>Start with the aggregate queue, then inspect the job row for the affected channel.</p></figcaption></figure>
+
 ### Review the aggregate event queue
 
 The `Aggregate event queue` card shows:
@@ -153,6 +157,8 @@ The job-run page loads at most the 500 most recent runs. When it reaches that li
 
 An aggregate inventory channel maps one channel facility group to one Shopify location. Eligible inventory from the facilities in the group contributes to that target after the channel's brokering, safety-stock, threshold, and demand rules are applied.
 
+<figure><img src="../../.gitbook/assets/company-shopify-inventory-channel-mappings.jpg" alt="Inventory channels section showing fictional facility groups mapped to Shopify aggregate locations and their reset schedules"><figcaption><p>Confirm the facility group, Shopify target, and reset job before managing a channel.</p></figcaption></figure>
+
 Before you begin:
 
 * Create and review the channel facility group in `Sourcing` > `Channels`.
@@ -199,17 +205,19 @@ The Company warning states that inventory placed by the channel should be cleare
 ### Expire a channel
 
 1. Open the channel's publisher and aggregate reset jobs in Company or Job Manager and record their internal job names.
-2. Pause both jobs and save each change.
-3. Verify that neither job has an active run.
-4. Review event history for the channel. If it has unbatched events or a batch awaiting delivery, stop and follow the approved channel-decommission plan before you expire it.
+2. Pause the aggregate reset job and save the change. Keep the channel publisher and produced-message sender active so they can deliver the clearing adjustment created by expiration.
+3. Verify that the aggregate reset has no active run and that the publisher is not currently running.
+4. Review event history for the channel. Resolve pre-existing unbatched events and batches awaiting delivery according to the approved channel-decommission plan before you expire it.
 5. Select the channel.
 6. Select `Expire` under `Stop using this channel`.
 7. Review the target and channel.
 8. Select `Expire channel`.
+9. Track the clearing adjustment, whether it is still `Unbatched` or already assigned to a batch, until its System Message reaches a successful delivery state. Then verify that the Shopify target is zero.
+10. Find the recorded publisher in Job Manager, pause it, and confirm that both the publisher and aggregate reset jobs remain paused.
 
 Expiration is intended to stop aggregation into the target and clear the inventory that the channel placed there. Verify the Shopify target after expiration. HotWax Commerce retains the mapping so historical events remain attributable to the expired channel.
 
-Expiration removes the channel from the active channel rows, but the Company page does not show it pausing or deleting the channel's publisher and reset jobs. Use the recorded job names to find those jobs in Job Manager and confirm that they remain paused. If the Shopify target is not cleared, record the channel and location identifiers and escalate before assigning the location elsewhere.
+Expiration removes the channel from the active channel rows, but the Company page does not show it pausing or deleting the channel's publisher and reset jobs. If the clearing adjustment does not appear or the Shopify target is not zero, keep the location out of use, record the channel and location identifiers, and escalate before pausing the publisher or assigning the location elsewhere. If the installed connector uses a different approved decommission path, follow that release-specific runbook instead.
 
 ## Manage real-time inventory controls
 
@@ -220,6 +228,8 @@ The dashboard contains three controls with different scopes. Review the scope an
 | `Real-time inventory push for this shop` | The selected Shopify connection | Physical inventory changes for that shop are skipped. No backlog is created. | Run `Reset physical location QOH`. |
 | `Inventory channel event updates` | Every Shopify connection on the OMS | The aggregate event feed changes from real-time push to manual processing. | Reconcile aggregate ATP, enable the feed, then restart every OMS node. |
 | An individual `Event source` | One class of aggregate inventory change across the OMS | That class of event is not recorded. No backlog is created. | Turn the source on, then run full aggregate ATP resets for affected channels. |
+
+<figure><img src="../../.gitbook/assets/company-shopify-inventory-real-time-event-sources.jpg" alt="Real-time inventory updates section showing the shop-specific inventory toggle, OMS-wide channel feed toggle, and event source toggles"><figcaption><p>Confirm the scope of each real-time control before changing it.</p></figcaption></figure>
 
 {% hint style="danger" %}
 Changes made while the shop-specific push or an individual event source is off do not create a backlog and will not replay later. Reconcile affected targets with the correct full reset before you rely on real-time updates again.
@@ -259,6 +269,8 @@ Builds newer than v2.2.1 provide an `Inventory channel` filter. In v2.2.1, use t
 The ledger identifies a Shopify inventory item, not an OMS product record. Use the displayed Shopify inventory item identifier when you compare the event with Shopify.
 
 Choose `All events` to review each adjustment or `Grouped by batch` to review the System Message that carries a set of adjustments.
+
+<figure><img src="../../.gitbook/assets/company-shopify-inventory-event-history.jpg" alt="Inventory event history showing search, status, event type, inventory channel, and sort filters above fictional aggregate event rows"><figcaption><p>Filter by channel and status to separate unbatched events from delivered or failed batches.</p></figcaption></figure>
 
 ### Read event states
 
