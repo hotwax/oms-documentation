@@ -2,7 +2,7 @@
 description: Troubleshooting guide to resolve inventory synchronization errors
 ---
 
-# Inventory Synchronization Errors
+# Troubleshoot inventory synchronization errors
 
 Inventory synchronization issues can occur at multiple stages, leading to discrepancies in stock levels across platforms. Accurate inventory synchronization is crucial to prevent underselling or overselling for retailers. This document aims to provide detailed steps to diagnose and resolve issues related to inventory synchronization between ERP systems, HotWax Commerce, and Shopify.
 
@@ -29,51 +29,60 @@ The inventory file might be placed in an incorrect SFTP path, preventing HotWax 
 1. **Check the File Path and Location**
    * Verify the SFTP file path where the inventory file should be located.
 2. **Consult the User Manual**
-   * Refer to the [HotWax Commerce User Manual](https://docs.hotwax.co/documents/learn-netsuite/netsuite-deployment/sdfbundle/setupsftp) for detailed instructions on setting up the correct file path.
+   * Refer to [Set up SFTP](../../../learn-netsuite/netsuite-deployment/sdf-bundle/setup-sftp.md) for detailed instructions on setting up the correct file path.
 
-## Scenario 3: Shopify Job Not Running
+## Scenario 3: Shopify rejects or delays an inventory update
 
-Sometimes inventory synchronization to Shopify fails because of an issue on Shopify's end. This can happen when the scheduled job in Shopify is not running due to errors, maintenance, or other interruptions.
+An outbound inventory batch can fail when Shopify rejects the request, throttles the connection, or the target is unavailable.
 
-### Steps to Diagnose and Resolve
+### Diagnose and resolve the failure
 
-1. **Wait for the Shopify Job to Run**
-   * Verify if there are any scheduled maintenance or downtime announcements from Shopify.
-   * If the issue is temporary, wait for the job to resume.
-2. **Monitor Shopify Job Status**
-   * In Shopify, check the job logs and status updates for inventory synchronization tasks.
+1. Open the Company App.
+2. Select `Shopify`, open the affected connection, then select `Inventory sync`.
+3. Open `Batches pending delivery` or `Event history`.
+4. Open the affected batch.
+5. Record its System Message identifier, Shopify target, status, and delivery errors.
+6. Confirm the connection's Shopify write access and the target location.
+7. Check Shopify status information when the error indicates an outage or throttle.
+8. Correct the cause, then select `Resend` once.
 
-## Scenario 4: HotWax Commerce Job Not Running
+Resend uses the batch's original payload and idempotency key. Do not keep retrying without correcting the recorded error.
 
-HotWax Commerce relies on two main jobs for inventory synchronization to Shopify: `Update Recent Inventory Changes` and `Hard Sync Job.` These jobs might fail or may not be scheduled correctly, leading to synchronization issues.
+## Scenario 4: A HotWax Commerce inventory job is not running
 
-### Steps to Diagnose and Resolve
+The job to investigate depends on whether the stale Shopify target represents one physical facility or an aggregate inventory channel.
 
-1. Open `Catalog` in Job Manager.
-2. Search for [`Update Recent Inventory Changes`](../../workflow/job-workflows/inventory.md) and `Hard Sync Job`.
-3. Open each job and confirm its pause state and schedule.
-4. Open `Run history` and review the latest runs.
-5. Return to `Catalog` and search for `Process Uploads to eCommerce`.
-6. Confirm its schedule and latest run.
+### Diagnose and resolve the schedule
 
-See [Troubleshoot job runs and schedules](../../workflow/job-management/troubleshooting/job-runs-and-schedules.md).
+1. Open the Company App.
+2. Select `Shopify`, open the connection, then select `Inventory sync`.
+3. For a physical Shopify location, review `Reset physical location QOH`.
+4. For an aggregate Shopify location, review the channel's publisher and `Reset aggregate ATP` job.
+5. Confirm whether each required job is `Active`, `Paused`, or `Not configured`.
+6. Open the job and review its scope, schedule, parameters, latest run, and result.
+7. Use `Set up` when the dashboard offers it for a missing publisher or reset job. The new job starts paused; activate only the schedule approved for that target.
+8. Select `Run now` only after you confirm that the job targets the affected connection or channel and an earlier run is not active.
 
-<figure><img src="../../.gitbook/assets/inventory-synchronization-errors.png" alt="" width="375"><figcaption></figcaption></figure>
+Depending on the installed connector and publishing model, the active path can include `Update Recent Inventory Changes`, `Hard Sync`, or `Process Uploads to eCommerce`. If the Company dashboard does not identify the active path, confirm the installed connector model, then use [Troubleshoot job runs and schedules](../../workflow/job-management/troubleshooting/job-runs-and-schedules.md) in Job Manager.
 
-## Scenario 5: Insufficient Permissions on Shopify
+See [Monitor Shopify inventory sync](../../../system-admin/administration/company/manage-shopify-inventory-sync.md) for the complete event, job, and reconciliation workflow.
 
-If the Shopify shop does not have the necessary write permissions configured, synchronization attempts from HotWax Commerce will fail. This often happens if the access scope is mistakenly set to `Read Only.`
+<figure><img src="../../.gitbook/assets/inventory-synchronization-errors.png" alt="Job Manager showing the Process uploads to eCommerce schedule" width="375"><figcaption><p>Review the Process uploads to eCommerce schedule when the deployed connector uses this Job Manager path.</p></figcaption></figure>
 
-### Steps to Diagnose and Resolve
+## Scenario 5: Shopify write access is missing
 
-1. **Navigate to the Shopify Shop Page**
-   * In HotWax Commerce, use the hamburger menu to go to the `Shopify Shop` page.
-2. **Select the Relevant Shopify Shop**
-   * Choose the specific Shopify shop where the issue is occurring.
-3. **Check Access Scope in Shopify Config**
-   * In the Shopify configuration section, verify the access scope settings.
-4. **Update Access Scope**
-   * If the access scope is set to `Read Only`, click on the `pencil icon` to edit the configuration.
-   * Change the access scope to `Read and Write` permissions.
+Outbound inventory fails when the selected Shopify connection cannot write inventory.
 
-{% embed url="https://youtu.be/oL_BYAXZQZw" %}
+### Diagnose and resolve access
+
+1. Open the Company App.
+2. Select `Shopify` and open the affected connection.
+3. Select `Access scopes`.
+4. Under `Connection access`, confirm `SHOP_RW_ACCESS`. Do not select `SHOP_READ_WRITE_ACCESS`; it has the same description but does not satisfy the current inventory service gate.
+5. Under `Granted OAuth scopes`, refresh the Shopify scopes and confirm `write_inventory` for the approved connection profile.
+6. Resolve a missing connection-access value in HotWax Commerce or a missing OAuth scope through the approved Shopify connection flow.
+7. Return to `Inventory sync` and retry only the affected batch or reset.
+
+Do not place access tokens or credentials in screenshots, tickets, or documentation.
+
+[Watch the Shopify access-scope walkthrough](https://youtu.be/oL_BYAXZQZw).

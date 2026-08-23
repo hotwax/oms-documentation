@@ -357,7 +357,7 @@ Save job-run final status; exact `BulkQueryShopifyInventoryReset` `systemMessage
 
 ### Stop and resolve if
 
-Stop if an unrelated produced or sent bulk message exists, the recorded message is queued without download and processing evidence, the Data Manager load fails, quantities do not reconcile, or outbound inventory publishes unapproved seed values. The released Company inventory action is not an inbound Shopify inventory import; use this Maarg Admin procedure until a tested supported Company flow is released.
+Stop if an unrelated produced or sent bulk message exists, the recorded message is queued without download and processing evidence, the Data Manager load fails, quantities do not reconcile, or outbound inventory publishes unapproved seed values. [Monitor Shopify inventory sync](manage-shopify-inventory-sync.md) in Company covers outbound HotWax-to-Shopify inventory publication; it does not import starting QOH from Shopify. Use this Maarg Admin procedure for the inbound seed until a tested Company import flow is released.
 
 ### Next chapter
 

@@ -12,7 +12,7 @@ Use the **Company App** to set up and maintain an Order Management System (OMS) 
 | --- | --- |
 | Product Store | Create a brand or storefront, edit store settings, or clone settings between stores |
 | Organizations | View the internal organization hierarchy and manage parent-child relationships |
-| Shopify | Maintain connections, mappings, Product Sync, and Order Sync |
+| Shopify | Maintain connections, mappings, Product Sync, inventory sync, and Order Sync |
 | Klaviyo | Connect Klaviyo and review the notification integration |
 | NetSuite | Configure the connection and maintain integration mappings |
 | Facilities | Create and manage facilities, facility groups, locations, staff, and parking queues |
@@ -33,6 +33,7 @@ Use these guides for regular administration:
 * [Clone Product Store settings](clone-product-store.md)
 * [Manage organizations](manage-organizations.md)
 * [Manage Shopify Product Sync](manage-shopify-product-sync.md)
+* [Monitor Shopify inventory sync](manage-shopify-inventory-sync.md)
 * [Manage Shopify Order Sync](manage-shopify-order-sync.md)
 * [Manage NetSuite settings](configure-netsuite-setting.md)
 * [Manage Klaviyo](manage-klaviyo.md)

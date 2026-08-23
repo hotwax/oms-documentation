@@ -21,10 +21,10 @@ The connection page groups configuration into three areas.
 | Area | Contents |
 | --- | --- |
 | Configuration | Instance details, Product Store, API credentials, and access scopes |
-| Products & Inventory | Inventory locations and product types |
+| Products & Inventory | Inventory locations, product types, Product Sync, and Inventory sync |
 | Orders & Fulfillment | Order Sync, shipping methods, payment methods, and sales channels |
 
-Product Sync appears with the products and inventory workflow when available for the connection.
+Product Sync and Inventory sync appear with the products and inventory workflow when available for the connection.
 
 ## Review instance details
 
@@ -62,9 +62,11 @@ Keep credentials out of tickets, screenshots, and documentation.
 ## Review access scopes
 
 1. Open `Access scopes`.
-2. Refresh the scope list when instructed.
-3. Compare the available scopes with the integration requirements.
-4. Resolve missing scopes in Shopify before retrying the affected task.
+2. Under `Connection access`, confirm the OMS-side access level required by the integration.
+3. For inventory publication, confirm `SHOP_RW_ACCESS`. Do not use `SHOP_READ_WRITE_ACCESS`; it has the same description but does not satisfy the current service gate.
+4. Under `Granted OAuth scopes`, refresh the scopes granted to the app in Shopify.
+5. Compare the available scopes with the approved integration profile. Inventory publication requires `write_inventory`.
+6. Resolve a missing connection-access value in HotWax Commerce and a missing OAuth scope through the approved Shopify connection flow before you retry the affected task.
 
 ## Related post-launch tasks
 
@@ -72,6 +74,7 @@ Use these references to operate an existing connection:
 
 - [Review Shopify mappings](manage-shopify-mappings.md)
 - [Manage Shopify Product Sync](manage-shopify-product-sync.md)
+- [Monitor Shopify inventory sync](manage-shopify-inventory-sync.md)
 - [Manage Shopify Order Sync](manage-shopify-order-sync.md)
 
 Exclude the development-only Debug area from operator workflows.
