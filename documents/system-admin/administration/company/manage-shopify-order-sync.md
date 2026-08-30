@@ -39,6 +39,21 @@ Open the System Message for request details. Open the Data Manager log for impor
 
 A completed Shopify request can produce zero actionable changes. In that case, no Data Manager import is required.
 
+The following flow shows when a Shopify request ends by itself and when it continues into a HotWax import.
+
+```mermaid
+flowchart TD
+    trigger["Scheduled batch or approved custom request"] --> request["Shopify order batch request"]
+    request --> changes{"Actionable order changes?"}
+    changes -- "No" --> complete["Request completes without a Data Manager import"]
+    changes -- "Yes" --> import["HotWax Data Manager import"]
+    import --> imported{"Orders imported?"}
+    imported -- "Yes" --> payment["Verify payments"]
+    imported -- "No" --> correct["Correct source data"]
+    correct --> scopedRequest["Run a specific-order or bounded-time request"]
+    scopedRequest --> request
+```
+
 ## Review the sync monitor
 
 Use the monitor to review:

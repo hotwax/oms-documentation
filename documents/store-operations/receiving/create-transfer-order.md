@@ -107,6 +107,22 @@ Select the appropriate lifecycle based on how the transfer is managed:
 | `Fulfill only` | Origin store fulfills in the Fulfillment App | Receipt is handled outside HotWax Commerce | Store-to-warehouse or store-to-external-location transfers where the receiving step is managed by a separate system or process |
 | `Receive only` | Fulfillment is handled outside HotWax Commerce | Destination store receives in the Receiving App | Warehouse-to-store transfers where an external system initiates the shipment and the store completes receipt in the Receiving App |
 
+Use the following flow to choose which system performs fulfillment and receipt.
+
+```mermaid
+flowchart TD
+    choose{"Choose a transfer lifecycle"}
+    choose --> both["Fulfill & Receive"]
+    both --> bothFulfill["Origin fulfills in the HotWax Fulfillment App"]
+    bothFulfill --> bothReceive["Destination receives in the HotWax Receiving App"]
+    choose --> fulfillOnly["Fulfill only"]
+    fulfillOnly --> hotwaxFulfill["Origin fulfills in the HotWax Fulfillment App"]
+    hotwaxFulfill --> externalReceive["Receipt is handled outside HotWax Commerce"]
+    choose --> receiveOnly["Receive only"]
+    receiveOnly --> externalFulfill["Fulfillment is handled outside HotWax Commerce"]
+    externalFulfill --> hotwaxReceive["Destination receives in the HotWax Receiving App"]
+```
+
 {% hint style="info" %}
 `Receive only` is selected by default.
 {% endhint %}
