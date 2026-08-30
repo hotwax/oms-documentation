@@ -14,7 +14,7 @@ All actions within the `Facilities` App users with this permission level are unr
 | 3              | Sell Online Chip          | -            | Option to enable or manage online sales capabilities for a facility.                            |
 | 4              | Daily Order Capacity Chip | -            | Allows users to set or view the daily order capacity for a facility.                            |
 
-<figure><img src="../../.gitbook/assets/view-facilities.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/facilities-list-v1-15-1.png" alt="Facilities App list page with search, product store, type, and group filters"><figcaption><p>Find Facilities page in Facilities App v1.15.1</p></figcaption></figure>
 
 ## Parking Page
 
@@ -24,8 +24,6 @@ All actions within the `Facilities` App users with this permission level are unr
 | 2              | Rename Parking                             | -              |Enables users to change the name of an existing parking virtual facility.        |
 | 3              | Archive Unused Parking                     | -              |Option to archive parking virtual facilities that are no longer in use.          |
 
-<figure><img src="../../.gitbook/assets/parking.png" alt=""><figcaption></figcaption></figure>
-
 ## Facility Groups
 
 | **Serial No.** | **Action**                   | **Permission** | **Description**                                                                                   |
@@ -34,8 +32,6 @@ All actions within the `Facilities` App users with this permission level are unr
 | 2              | Edit Facilities in Group     |-               | Enables users to modify the facilities that belong to a specific group.                           |
 | 3              | Edit/Delete Group            |-               | Option to edit the details of or delete an existing facility group.                               |
 | 4              | Change Facility Group Subtype|-               | Allows users to change the subtype of a facility group to fit different needs or classifications.  |
-
-<figure><img src="../../.gitbook/assets/groups.png" alt=""><figcaption></figcaption></figure>
 
 ## Facility Detail Page
 
@@ -55,10 +51,10 @@ All actions within the `Facilities` App users with this permission level are unr
 | 12             | Add Locations                            |-             | Option to include additional locations or sub-areas within a facility.                            |
 | 13             | Assign Groups                            |-             | Allows users to assign a facility to one or more facility groups for better organization.         |
 
-<figure><img src="../../.gitbook/assets/details.png" alt=""><figcaption></figcaption></figure>
-
 ## Setting Page
 
 | **Serial No.** | **Action**                              | **Permission**   | **Description**                                                                                   |
 | -------------- | ----------------------------------------|---------------   | -------------------------------------------------------------------------------------------------|
 | 1              | Go TO OMS                               |COMMERCEUSER_VIEW | Allows users to access OMS directly from the Facilities App                                    |
+
+<figure><img src="../../.gitbook/assets/facilities-settings-v1-15-1.png" alt="Facilities App Settings page showing OMS context, app version, timezone, and language"><figcaption><p>Settings page in Facilities App v1.15.1</p></figcaption></figure>

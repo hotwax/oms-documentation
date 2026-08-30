@@ -19,7 +19,7 @@ The users can search for a specific product within the catalog by entering the p
 
 The parent product name is visible on the BOPIS App Catalog page to help with product identification. On clicking any specific product card, the users will be redirected to the Product Details page. The Product Details page provides an overview of the product, including its image, available variants, and their respective inventory across all the associated facilities. By clicking on the stock quantity button next to the “Other stores” option, a pop-up window will appear displaying the inventory for that product in the other facilities.
 
-<figure><img src="../.gitbook/assets/bopis-catalog.png" alt=""><figcaption><p>Image: Catalog Page</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/bopis-catalog-v5-2-3.png" alt="BOPIS Catalog page with product search and current bottom navigation"><figcaption><p>Catalog page in BOPIS App v5.2.3</p></figcaption></figure>
 
 ## Product Details Page Overview
 
@@ -33,5 +33,3 @@ The Product Details Page provides in-depth information on individual products. I
 * **Available to Promise (ATP)**: The quantity available for online orders
 
 Additionally, the system provides information on inventory availability across various facilities, ensuring that customers can be provided information about the product availability across all the stores.
-
-<figure><img src="../.gitbook/assets/bopis-product-details-page.png" alt="" width="563"><figcaption></figcaption></figure>
