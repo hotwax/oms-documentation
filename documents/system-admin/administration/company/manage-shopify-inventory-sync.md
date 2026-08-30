@@ -287,6 +287,29 @@ The ledger's remote identity is the Shopify inventory item. The page also tries 
 
 ### Follow the pipeline stages
 
+The following flow separates the inventory-event ledger lifecycle from System Message delivery and recovery.
+
+```mermaid
+flowchart TD
+    event["Aggregate inventory event recorded"] --> valid{"Can the event be calculated and grouped?"}
+    valid -- "No" --> quarantined["Quarantined"]
+    quarantined --> fixSource["Fix source data or configuration"]
+    fixSource --> newEvent["Record a new inventory event"]
+    newEvent --> event
+    valid -- "Yes" --> waiting["Waiting to batch"]
+    waiting --> change{"Net inventory change?"}
+    change -- "Zero" --> noChange["Settled: No change"]
+    change -- "Non-whole" --> quarantined
+    change -- "Non-zero whole number" --> batched["Batched into a System Message"]
+    batched --> delivery["Produced or Sending"]
+    delivery --> confirmed{"Shopify confirms delivery?"}
+    confirmed -- "Yes" --> sent["Settled: Sent"]
+    confirmed -- "No" --> error["Error"]
+    error --> fixDelivery["Correct the delivery cause"]
+    fixDelivery --> resend["Resend the same frozen payload"]
+    resend --> delivery
+```
+
 | Stage | What it contains | Operator focus |
 | --- | --- | --- |
 | `Waiting to batch` | Pending events grouped from the publisher configuration loaded by the page | Review the oldest group, publish reason, summed changes, and target location. |
