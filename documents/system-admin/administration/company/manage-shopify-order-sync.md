@@ -49,10 +49,9 @@ flowchart TD
     changes -- "Yes" --> import["HotWax Data Manager import"]
     import --> imported{"Orders imported?"}
     imported -- "Yes" --> payment["Verify payments"]
-    imported -- "No" --> retry["Retry"]
-    retry --> retried{"Retry succeeds?"}
-    retried -- "Yes" --> payment
-    retried -- "No" --> reimport["Reimport orders"]
+    imported -- "No" --> correct["Correct source data"]
+    correct --> scopedRequest["Run a specific-order or bounded-time request"]
+    scopedRequest --> request
 ```
 
 ## Review the sync monitor
