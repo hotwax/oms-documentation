@@ -301,10 +301,11 @@ flowchart TD
     change -- "Zero" --> noChange["Settled: No change"]
     change -- "Non-whole" --> quarantined
     change -- "Non-zero whole number" --> batched["Batched into a System Message"]
-    batched --> delivery["Produced or Sending"]
-    delivery --> confirmed{"Shopify confirms delivery?"}
-    confirmed -- "Yes" --> sent["Settled: Sent"]
-    confirmed -- "No" --> error["Error"]
+    batched --> delivery{"Current delivery state?"}
+    delivery -- "Produced or Sending" --> wait["Wait for Shopify confirmation"]
+    wait --> delivery
+    delivery -- "Sent" --> sent["Settled: Sent"]
+    delivery -- "Error" --> error["Error"]
     error --> fixDelivery["Correct the delivery cause"]
     fixDelivery --> resend["Resend the same frozen payload"]
     resend --> delivery
