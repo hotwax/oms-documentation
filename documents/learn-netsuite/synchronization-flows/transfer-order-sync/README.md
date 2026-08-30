@@ -8,6 +8,23 @@ description: >-
 
 Follow these steps to enable the Transfer Order sync between NetSuite and HotWax for receiving in the HotWax Receiving app. To learn more about this integration, read the full NetSuite integration.
 
+The following flow shows how a fulfilled transfer order reaches HotWax for receiving and how the receipt returns to NetSuite.
+
+```mermaid
+flowchart TD
+    netsuiteExport["NetSuite exports a fulfilled transfer order"] --> inboundSftp["SFTP import folders"]
+    inboundSftp --> integration["HotWax integration layer"]
+    integration --> deduction["Create the origin inventory-deduction file"]
+    deduction --> inventoryDelta["HotWax InventoryDelta SFTP"]
+    integration --> fulfillmentFile["Move the fulfillment file for OMS import"]
+    fulfillmentFile --> omsSftp["NetSuite transfer-order fulfillment SFTP"]
+    omsSftp --> omsImport["OMS import job creates the inbound shipment"]
+    omsImport --> receiving["Destination receives in the HotWax Receiving App"]
+    receiving --> receiptExport["HotWax exports the received transfer order"]
+    receiptExport --> receiptSftp["SFTP receipt export"]
+    receiptSftp --> netsuiteReceipt["NetSuite consumes the receipt"]
+```
+
 ## Export transfer order from NetSuite
 
 Schedule the Export Transfer Fulfilled Transfer Order SuiteScript in NetSuite
