@@ -23,6 +23,24 @@ Use `Funnel` as the start of a shift review or operations stand-up:
 5. Return to `Funnel`, reload the page, and confirm whether the pressure changed.
 6. Review `Pending sync` and the selected facility's release settings when safe work is waiting to enter downstream fulfillment.
 
+The following loop shows how Funnel guides a shift review into detailed work and back to a refreshed summary.
+
+```mermaid
+flowchart TD
+    context["Confirm the product store"] --> progress["Review today's headline progress"]
+    progress --> exceptions["Check Unbrokered and Order Hold Tasks"]
+    exceptions --> facilities["Compare facilities"]
+    facilities --> work["Complete work in a detailed queue or Order details"]
+    work --> reload["Return to Funnel and reload"]
+    reload --> pressure{"Did the pressure change?"}
+    pressure -- "Yes" --> exceptions
+    pressure -- "No" --> monitor["Continue monitoring"]
+    reload --> pending{"Safe work waiting for fulfillment sync?"}
+    pending -- "Yes" --> sync["Review Pending sync and release settings"]
+    pending -- "No" --> monitor["Continue monitoring"]
+    sync --> monitor
+```
+
 `Funnel` is the operating summary and navigation layer. The detailed queues are the primary place to work multiple records, and `Order details` is the place for a complete one-order investigation.
 
 ## Review today's progress
