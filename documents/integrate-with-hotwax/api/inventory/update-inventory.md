@@ -1,131 +1,57 @@
 ---
-description: >-
-  Learn how to update product inventory in HotWax by logging variances of
-  inputted amounts.
+description: Apply a facility-level inventory variance using an external facility ID and product identifier.
 ---
 
-# Update Inventory
+# Update inventory
 
-Updates the inventory of products in HotWax by logging a variance of the inputted amount. To update inventory you will need to call the endpoint with the POST method.
+Use this API when an external application detects an inventory variance. It applies a positive or negative delta to available-to-promise (ATP) and quantity-on-hand inventory for one product at one facility. The updated inventory is available to the order routing engine after the request is processed.
 
-Example:
+The request identifies the facility and product using the identifiers known to the calling application. It does not require HotWax Commerce internal IDs.
 
-```
-Inventory in HotWax: 10
-Variance: -2
-Updated inventory in HotWax: 8
-```
+## Endpoint
 
-## Request
-
-### End Point
-
-`https://<host>/api/service/updateInventoryByIdentification`
-
-Example: https://demo-oms.hotwax.io/api/service/updateInventoryByIdentification
-
-### Header
-
+```http
+POST https://<instance-name>.hotwax.io/api/inventory-cycle-count/inventoryAdjustments
+Authorization: Bearer <access-token>
 Content-Type: application/json
-
-#### Authentication
-
-To access this endpoint, you need to include the authorization token in the request header.
-
-`Authorization: Bearer <access_token>`
-
-To learn more about Bearer token authentication, read this [document](../initial-api-authentication.md)
-
-### Body
-
 ```
+
+Create an integration user with inventory-cycle-count API access before calling this endpoint. See [Authentication](../initial-api-authentication.md).
+
+## Request body
+
+```json
 {
-  "facilityId": ,
-  "availableDelta": ,
-  "idType": ,
-  "idValue": ,
-  "locationSeqId": ,
-  "varianceReasonId":
+  "externalFacilityId": "STORE-101",
+  "idType": "SKU",
+  "idValue": "TSHIRT-BLK-M",
+  "availableDelta": -2,
+  "allowNegativeInventory": false,
+  "reasonEnumId": "VAR_MANUAL",
+  "comments": "Cycle count variance from store app, event 12345"
 }
 ```
 
-Sample:
+| Field | Required | Description |
+| --- | --- | --- |
+| `externalFacilityId` | Conditional | Facility identifier from the external application. Send this or `facilityId`. |
+| `facilityId` | Conditional | HotWax Commerce facility ID. Send this or `externalFacilityId`. |
+| `idType` | Conditional | Type of product identifier, such as `SKU` or `UPCA`. Send this with `idValue`, or send `productId`. |
+| `idValue` | Conditional | Product identifier value from the external application. |
+| `productId` | Conditional | HotWax Commerce product ID. Send this instead of `idType` and `idValue` only when the application already has it. |
+| `availableDelta` | Yes | Signed inventory change. Use a positive value to increase inventory and a negative value to decrease it. |
+| `allowNegativeInventory` | No | Defaults to `true`. Set to `false` to clamp a negative variance at zero ATP. |
+| `reasonEnumId` | No | Inventory variance reason. Defaults to `VAR_MANUAL`; use another configured variance reason when your implementation requires one. |
+| `comments` | No | Audit note, such as the external application event ID. |
 
-```
-
-{
-  "facilityId": "WH",
-  "availableDelta": 4,
-  "idType": "UPCA",
-  "idValue": "30065245099",
-  "locationSeqId": "TLTLTLLL01",
-  "varianceReasonId": "POS_SALE"
-}
-
-```
-
-| Parameters         | Description                                                                                  | Required (Y/N) |
-| ------------------ | -------------------------------------------------------------------------------------------- | -------------- |
-| `idType`           | The type of product identifier. Currently supported ID types are SKU, UPCA,Shopify\_Prod\_ID | Y              |
-| `idValue`          | The value of product identifier                                                              | Y              |
-| `availableDelta`   | The variance in inventory quantity(delta)                                                    | Y              |
-| `facilityId`       | The external facility ID where inventory item needs to be updated                            | Y              |
-| `locationSeqId`    | The location ID in the facility where inventory item needs to be updated                     | Y              |
-| `varianceReasonId` | The ID of the reason that caused variance in inventory                                       | Y              |
-
-Table of valid variance reasons and their IDs:
-
-| Variance Reason ID | Description                                                                       |
-| ------------------ | --------------------------------------------------------------------------------- |
-| `MISMATCH`         | Inventory does not match the available SKU                                        |
-| `NOT_IN_STOCK`     | SKU is not available                                                              |
-| `NO_VARIANCE_LOG`  | Use to pass null variance where variance field is required but not used           |
-| `REJ_RSN_DAMAGED`  | Ordered SKU is rejected due to inventory damage                                   |
-| `POS_SALE`         | Inventory consumed by sales made on an external point of sale system in the store |
-| `VAR_DAMAGED`      | Reduce damaged inventory from available quantity                                  |
-| `VAR_LOST`         | SKU inventory is lost                                                             |
-| `VAR_FOUND`        | Lost SKU inventory is found                                                       |
-| `WORN_DISPLAY`     | SKU inventory is worn and unusable from being on display                          |
-| `VAR_MANUAL`       | SKU inventory adjustment is done manually                                         |
+The endpoint does not accept `locationSeqId`; it adjusts inventory at the facility level.
 
 ## Response
 
-### Status Code
+On success, the response returns the resolved `facilityId`, `productId`, `inventoryItemId`, and the applied `availableDelta`. The returned values can be used to reconcile the adjustment with the external application.
 
-HTTP/1.1 200 OK
+Requests without a facility identifier, or without either a product ID or product identifier pair, are rejected.
 
-### Headers
+## Retry behavior
 
-Content-Type: application/json
-
-### Body
-
-```
-{
-   {
-    "facilityId": ,
-    "availableDelta": ,
-    "idType": ,
-    "idValue": ,
-    "locationSeqId": ,
-    "varianceReasonId": ,
-  },
-  "webSiteId": ""
-}
-```
-
-Sample:
-
-```
-{
-  {
-    "facilityId": "WH",
-    "availableDelta": 4,
-    "idType": "UPCA",
-    "idValue": "30065245099",
-    "locationSeqId": "TLTLTLLL01",
-    "varianceReasonId": "POS_SALE"
-  },
-  "webSiteId": "API"
-}
-```
+This API applies a delta. Retrying the same event without a caller-managed duplicate check applies the delta again. Include the source event ID in `comments` and retry only when the calling application can determine that the original request was not processed.
