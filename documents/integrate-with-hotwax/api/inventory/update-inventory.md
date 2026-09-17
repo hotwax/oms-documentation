@@ -11,7 +11,7 @@ The request identifies the facility and product using the identifiers known to t
 ## Endpoint
 
 ```http
-POST https://<instance-name>.hotwax.io/api/inventory-cycle-count/inventoryAdjustments
+POST https://<instance-name>.hotwax.io/rest/s1/inventory-cycle-count/inventoryAdjustments
 Authorization: Bearer <access-token>
 Content-Type: application/json
 ```
