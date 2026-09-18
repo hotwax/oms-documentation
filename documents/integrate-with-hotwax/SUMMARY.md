@@ -2,6 +2,8 @@
 
 * [Introduction](README.md)
 
+* [Integration concepts](integration-concepts.md)
+
 ## Components
 
 * [Available to Promise](components/available-to-promise/README.md)
