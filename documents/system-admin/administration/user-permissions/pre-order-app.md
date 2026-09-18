@@ -11,7 +11,7 @@ The HotWax Commerce `Pre-Order` App is designed for merchandisers to gain a clea
 | 3          | Release Items     | -                  | Release items from the parking queue to begin fulfillment.          |
 | 4          | Edit Promise Date | -                  | Edit the promise date of the order as needed.                       |
 
-<figure><img src="../../.gitbook/assets/pre-order.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/preorder-orders-v1-22-1.png" alt="Preorder Management Orders page with order and promise-date filters"><figcaption><p>Orders page in Preorder App v1.22.1</p></figcaption></figure>
 
 ## Products Page
 
@@ -22,16 +22,7 @@ The HotWax Commerce `Pre-Order` App is designed for merchandisers to gain a clea
 | 3          | Filter Orders        | -                  | Filter orders for specific products based on size, order date, promise date, or loyalty status. |
 | 4          | Release Orders       | -                  | Release all orders associated with the selected products.                                       |
 
-<figure><img src="../../.gitbook/assets/pre-order-products-page.png" alt=""><figcaption></figcaption></figure>
-
-## Catalog Page
-
-| Serial No. | Action                 | Permissions Needed | Description                                                                |
-| ---------- | ---------------------- | ------------------ | -------------------------------------------------------------------------- |
-| 1          | View Product Catalog   | -                  | View the complete product catalog, including pre-orders and backorders.    |
-| 2          | Filter Product Catalog | -                  | Filter the product catalog based on pre-order, backorder, or all products. |
-
-<figure><img src="../../.gitbook/assets/catalog.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/preorder-products-v1-22-1.png" alt="Preorder Management Products page with product search"><figcaption><p>Products page in Preorder App v1.22.1</p></figcaption></figure>
 
 ## Product Audit Page
 
@@ -44,8 +35,9 @@ The HotWax Commerce `Pre-Order` App is designed for merchandisers to gain a clea
 | 5          | Hold Pre-Order Physical Inventory | COMMON\_ADMIN | Configure inventory computation to prevent physical inventory from being made available online for products with orders in the Pre-Order parking.                        |
 | 6          | View Pre-Order Jobs               | -             | View all pre-order jobs and their next scheduled run times.                                                                                                              |
 | 7          | View Shopify Listing Status       | -             | View the listing status of products on Shopify.                                                                                                                          |
+| 8          | Filter Product Catalog            | -             | Filter the audit catalog by all products, pre-orders, or backorders.                                                                                                     |
 
-<figure><img src="../../.gitbook/assets/audit.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/preorder-audit-v1-22-1.png" alt="Preorder Management Audit page with All, Pre-order, and Back-order filters and job status"><figcaption><p>Audit page in Preorder App v1.22.1</p></figcaption></figure>
 
 ## Setting Page
 
@@ -53,3 +45,5 @@ The HotWax Commerce `Pre-Order` App is designed for merchandisers to gain a clea
 | ---------- | --------------------------------- | ------------------ | ------------------------------------------------------- |
 | 1          | View OMS                          | COMMERCEUSER\_VIEW | Allow user to view OMS directly form the Pre-Order App. |
 | 2          | Update Product Identifier Setting | COMMON\_ADMIN      | Allow user to manage product identifier settings        |
+
+<figure><img src="../../.gitbook/assets/preorder-settings-v1-22-1.png" alt="Preorder Management Settings page showing OMS, product store, app version, product identifiers, timezone, and order parking"><figcaption><p>Settings page in Preorder App v1.22.1</p></figcaption></figure>

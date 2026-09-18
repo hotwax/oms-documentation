@@ -18,7 +18,7 @@ Settings are categorized as either **product store wide** (apply across the enti
 
 Users can use this setting to select the facility they want to operate from. Orders, inventory and other configuration data will be specific to the facility that the users select.
 
-<figure><img src="../.gitbook/assets/select-facility-setting.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/bopis-settings-v5-2-3.png" alt="BOPIS Settings page showing facility, re-route fulfillment, and partial rejection controls"><figcaption><p>Facility and order controls in BOPIS App v5.2.3</p></figcaption></figure>
 
 ### Order Edit Permissions
 
@@ -33,8 +33,6 @@ If an order is rejected by the store, the customer receives an email notifying t
 * **Cancel Order Before Fulfillment:** Enable or disable the permission for customers to cancel their order before it's fulfilled.
 * **Shipment Method:** Allow the customers to edit the shipment method for their orders using a dropdown menu with available options.
 
-<figure><img src="../.gitbook/assets/order-edit-permissions-setting.png" alt="" width="375"><figcaption></figcaption></figure>
-
 ### Partial Order Rejection
 
 `Product store wide`
@@ -48,8 +46,6 @@ Store managers can use this setting to control whether a BOPIS order can be part
 `User-specific`
 
 Users can choose primary and secondary product identifiers (such as product ID, product title, SKU, etc.) to view products with preferred identifiers in the app.
-
-<figure><img src="../.gitbook/assets/product-identifier-setting.png" alt="" width="375"><figcaption></figcaption></figure>
 
 ### Timezone
 
@@ -67,17 +63,15 @@ This option allows users to select a preferred display language for the app.
 
 `Product store wide`
 
-For stores managing both `BOPIS` and `Ship from Store` orders, switching between apps can be challenging. To optimize this process, the `Show Shipping Orders` feature can be enabled. This will allow users to view and fulfill regular orders brokered to their store by the OMS directly within the BOPIS app. Users can easily control this setting using the toggle button to enable or disable it as needed.
+<figure><img src="../.gitbook/assets/bopis-settings-order-preferences-v5-2-3.png" alt="BOPIS Settings page showing product identifiers, timezone, language, shipping orders, packing slip, and picker tracking controls"><figcaption><p>App and order preferences in BOPIS App v5.2.3</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/show-shipping-orders-setting.png" alt="" width="375"><figcaption></figcaption></figure>
+For stores managing both `BOPIS` and `Ship from Store` orders, switching between apps can be challenging. To optimize this process, the `Show Shipping Orders` feature can be enabled. This will allow users to view and fulfill regular orders brokered to their store by the OMS directly within the BOPIS app. Users can easily control this setting using the toggle button to enable or disable it as needed.
 
 ### Packing Slip
 
 `Product store wide`
 
 Packing slips help customers reconcile their orders against the delivered items. Store managers can use the `Generate Packing Slips` toggle to control whether or not packing slips are generated for orders.
-
-<figure><img src="../.gitbook/assets/packing-slip-setting.png" alt="" width="375"><figcaption></figcaption></figure>
 
 ### Track Pickers
 
@@ -87,8 +81,6 @@ Store managers can assign store pickup orders to store associates and track asso
 
 * **Enable Tracking:** Turn on picker tracking to require store associates to enter their picker ID when packing an order.
 * **Print Picklists:** Enable automatic printing of picklists when packing orders to help store associates identify and gather the items to be fulfilled.
-
-<figure><img src="../.gitbook/assets/track-pickers-setting.png" alt="" width="375"><figcaption></figcaption></figure>
 
 ### Request Transfer
 
@@ -111,5 +103,3 @@ Users can select the notifications they want to receive in the BOPIS app.
 * **New order notification:** Enable or disable notifications for any new orders.
 * **Open order notification:** Enable or disable notifications for pending open orders.
 * **Ready for pickup order notification:** Enable or disable notifications for orders that are ready to be picked up by customers.
-
-<figure><img src="../.gitbook/assets/notification-preferences-setting.png" alt="" width="375"><figcaption></figcaption></figure>

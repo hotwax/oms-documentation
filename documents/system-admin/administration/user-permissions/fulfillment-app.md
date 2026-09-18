@@ -17,7 +17,7 @@ Below is a list of all the actions available in the Fulfillment App, along with 
 | 7    | Order actions Chip > View Order details | -             | Routes the user to the detailed view of an individual order, where further actions can be taken or details can be reviewed. |
 | 8    | View item QOH (Open Orders)             | -             | Displays the Quantity on Hand (QOH) for items in the order, helping users assess available stock for fulfillment.           |
 
-<figure><img src="../../.gitbook/assets/open-orders.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/fulfillment-orders-v4-2-2.png" alt="Fulfillment App Open page with order search and Open, In Progress, Completed, and Settings navigation"><figcaption><p>Open orders page in Fulfillment App v4.2.2</p></figcaption></figure>
 
 ## In Progress tab
 
@@ -33,8 +33,6 @@ Below is a list of all the actions available in the Fulfillment App, along with 
 | 8    | Pack Order                                      | -             | Opens a popover for users to pack individual orders. Additional confirmation may be required to ensure all information is accurate before completing the packing. |
 | 9    | Shipping label error                            | -             | Alerts users to errors related to shipping labels, allowing them to address issues before proceeding with order fulfillment.                                      |
 
-<figure><img src="../../.gitbook/assets/in-progress.png" alt=""><figcaption></figcaption></figure>
-
 ## Completed tab
 
 | S.No | Action                                        | Permission    | Description                                                                                                                                                                                                                                                           |
@@ -47,8 +45,6 @@ Below is a list of all the actions available in the Fulfillment App, along with 
 | 6    | Regenerate Shipping Label                     | -             | Allows users to regenerate the shipping label for a completed order if necessary, ensuring proper labeling for shipment.                                                                                                                                              |
 | 7    | Print Customer Letter                         | -             | Enables users to print the packing slip or customer letter associated with the order, ensuring documentation is provided with the shipment.                                                                                                                           |
 | 8    | Unpack orders                                 | COMMON\_ADMIN or SF\_UNLOCK\_ORDER | Provides users with the ability to unpack orders and send them back to the "In Progress" state if necessary. This action is only enabled when all required shipment and package information has been provided.                                                        |
-
-<figure><img src="../../.gitbook/assets/completed.png" alt=""><figcaption></figcaption></figure>
 
 ## Transfer Order tab
 
@@ -63,8 +59,6 @@ Below is a list of all the actions available in the Fulfillment App, along with 
 | 7    | Create shipment                       | ORD\_TRANSFER\_ORDER\_CREATE or ORD\_TRANSFER\_ORDER\_ADMIN                             | Enables users to create a shipment for a transfer order, preparing it for dispatch to the receiving facility.                                   |
 
 ## EXIM tab
-
-<figure><img src="../../.gitbook/assets/exim.png" alt=""><figcaption></figcaption></figure>
 
 | S.No | Action                | Permission | Description                                                                                                                                       |
 | ---- | --------------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -81,8 +75,6 @@ Below is a list of all the actions available in the Fulfillment App, along with 
 | 3    | Ellipsis button > Remove reason | -          | Provides the ability to remove a rejection reason from the system, ensuring the list of reasons remains relevant and accurate. |
 | 4    | Add new Rejection reason        | -          | Opens a modal for users to create a new rejection reason, allowing customization of rejection types within the system.         |
 
-<figure><img src="../../.gitbook/assets/rejection.png" alt=""><figcaption></figcaption></figure>
-
 ## Carrier & Shipment Methods tab
 
 | S.No | Action                                              | Permission           | Description                                                                                                                                                          |
@@ -91,8 +83,6 @@ Below is a list of all the actions available in the Fulfillment App, along with 
 | 2    | Create new Carrier                                  | CARRIER\_SETUP\_VIEW | Provides users with the ability to create a new carrier and configure its shipping methods, helping to ensure accurate shipping options are available in the system. |
 | 3    | Create carrier > Setup methods > Setup methods page | CARRIER\_SETUP\_VIEW | Allows users to set up and configure shipping methods for carriers that have been created, ensuring all necessary options are available for order fulfillment.       |
 | 4    | Carrier details view                                | CARRIER\_SETUP\_VIEW | Provides access to view the details of a specific carrier, including shipping methods and associated configurations.                                                 |
-
-<figure><img src="../../.gitbook/assets/carrier.png" alt=""><figcaption></figcaption></figure>
 
 ### Settings
 
@@ -114,7 +104,9 @@ Below is a list of all the actions available in the Fulfillment App, along with 
 
 Manage All Fulfillment Operations
 
-<figure><img src="../../.gitbook/assets/app-settings-permissions.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/fulfillment-settings-v4-2-2.png" alt="Fulfillment App Settings page showing product store, facility, fulfillment capacity, and app preferences"><figcaption><p>Settings page in Fulfillment App v4.2.2</p></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/fulfillment-settings-preferences-v4-2-2.png" alt="Fulfillment App Settings page showing product identifiers, timezone, language, additional documents, and scan controls"><figcaption><p>App preferences in Fulfillment App v4.2.2</p></figcaption></figure>
 
 ## Order Details Page
 
@@ -125,5 +117,3 @@ Manage All Fulfillment Operations
 | 3    | Orders detail page > Unpack (Completed orders)   | COMMON\_ADMIN or SF\_UNLOCK\_ORDER | Provides the ability to unpack a completed order and send it back to the "In Progress" state. This action is only enabled when all required shipment and package information is present.                     |
 | 4    | Edit shipment method                             | ORDER\_SHIPMENT\_METHOD\_UPDATE | Allows users to update the carrier or shipping method for an order from the order details page. |
 | 5    | Generate Tracking Code modal > Edit carrier or method | ORDER\_SHIPMENT\_METHOD\_UPDATE | Allows users to change the carrier or shipment method while generating a tracking code for orders that require manual label handling. |
-
-<figure><img src="../../.gitbook/assets/order-details.png" alt=""><figcaption></figcaption></figure>
