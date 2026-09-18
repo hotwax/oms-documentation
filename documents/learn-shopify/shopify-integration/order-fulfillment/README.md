@@ -21,6 +21,7 @@ For orders fulfilled by an external system, HotWax Commerce receives the fulfill
 After orders are marked as `Completed` in HotWax Commerce, the fulfillment status and tracking details need to be sent to Shopify. Here is how the fulfillment update flow works:
 
 ### 1. Collecting completed orders
+
 Users schedule the **`poll_SystemMessageSftp_OMSFulfillmentFeed`** job in HotWax Commerce. During each run, the job collects all orders that have been completed since the last upload.
 
 {% hint style="info" %}
@@ -38,3 +39,17 @@ HotWax Commerce then sends a GraphQL [`fulfillmentCreate` mutation](https://shop
 ### 4. Shopify processes the fulfillment
 
 Shopify processes the mutation and updates the order status to `Fulfilled`. If tracking details were included, they are also attached to the fulfillment record. Shopify returns a response confirming the fulfillment ID, status, and any errors.
+
+## Troubleshooting Shopify quantity errors
+
+When Shopify rejects a fulfillment update with a quantity error, such as `Invalid fulfillment order line item quantity requested`, do not retry the failed update until the current Shopify fulfillment order is checked.
+
+Before retrying:
+
+* Retrieve the latest fulfillment orders for the Shopify order.
+* Confirm that the fulfillment order is still open and eligible for fulfillment.
+* Match the Shopify order line item to the current fulfillment order line item.
+* Verify that the remaining fulfillable quantity is greater than or equal to the quantity HotWax Commerce is sending.
+* Check whether the item was already fulfilled, canceled, moved to a different fulfillment order, or partially fulfilled outside the current HotWax Commerce retry.
+
+Retrying without this check can keep sending a quantity that Shopify no longer considers fulfillable. If the Shopify fulfillment order has changed, update the HotWax Commerce fulfillment data or stop the retry until the order state is corrected.
