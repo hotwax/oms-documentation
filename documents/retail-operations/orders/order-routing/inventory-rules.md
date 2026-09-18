@@ -87,6 +87,11 @@ When the selected routing uses a `Promise date` filter, the app requires partial
 
 Allowing partial allocation can increase the number of shipments. Review your [additional routing settings](additional-settings.md) before you enable it.
 
+<!-- markdownlint-disable-next-line MD034 -->
+{% embed url="https://drive.google.com/file/d/1u6Y_aeR1NKF0iY-xrN5IJyMXzDbj-QKy/view?usp=drive_link" %}
+Order Splitting Controls
+{% endembed %}
+
 ## Configure unavailable-item actions
 
 Use the `Unavailable items` settings to decide what happens after a rule cannot allocate an item.
