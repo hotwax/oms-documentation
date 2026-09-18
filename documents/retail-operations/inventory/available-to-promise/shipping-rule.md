@@ -10,6 +10,11 @@ Open `Sourcing` > `Shipping` to manage shipping across three tabs:
 * `Product and channel`: Apply a product rule to inventory channels.
 * `Facility`: Set the fulfillment capacity for individual facilities.
 
+<!-- markdownlint-disable-next-line MD034 -->
+{% embed url="https://drive.google.com/file/d/1yKSHLP3DQczVdbvtWcjdWoynNCEKvpbU/view?usp=drive_link" %}
+Store and Product Fulfillment Rules
+{% endembed %}
+
 ## Set facility fulfillment capacity
 
 Fulfillment capacity limits how many orders can be allocated to a facility. It does not change the facility available-to-promise inventory.
