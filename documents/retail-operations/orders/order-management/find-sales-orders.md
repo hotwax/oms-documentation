@@ -43,7 +43,7 @@ Use filters to investigate orders that share a status, allocation condition, cha
 
 The date pickers prevent selecting a future date and keep `Order date from` on or before `Order date through`. Clear the paired date first when you need to move the range past its existing boundary. The same date limits apply to order-date and task-created filters in the workflow and task queues.
 
-<figure><img src="../../.gitbook/assets/order-manager-date-range-main.jpg" alt="Find orders filters with the complete September date picker open and future dates disabled"><figcaption><p>The date picker prevents future dates. This example uses a search with no matches.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/order-manager-date-range-main.jpg" alt="Find orders filters with the complete September date picker open and two synthetic HotWax demo orders"><figcaption><p>Choose the order-date range, then review the matching orders in the selected store.</p></figcaption></figure>
 
 The order-date request uses UTC day boundaries, while rows display dates in your configured user time zone. Around midnight, a displayed date can appear just outside the selected range. Widen the range by one day and open the order when you need to verify a boundary case.
 
@@ -91,10 +91,6 @@ The header shows how many matching orders are loaded and the total number of mat
 The header checkbox does not select matching orders that have not loaded yet. Changing the search or filters can also remove orders from the current selection.
 
 Select `Done` to leave select mode without taking an action.
-
-### Cancel open items
-
-The current app hides this cancellation control because OMS item cancellations do not yet propagate back to Shopify. Use the approved cancellation workflow for the sales channel and verify the resulting order in both systems. Selecting orders here does not make cancellation available.
 
 ### Edit the shipping method
 

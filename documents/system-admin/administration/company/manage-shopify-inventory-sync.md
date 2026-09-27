@@ -38,7 +38,7 @@ A count of event rows is not a count of products, units, or business transaction
 
 If the toolbar reports a sync failure, counts depending on that failed read are unavailable; do not treat them as confirmed zero.
 
-<figure><img src="../../.gitbook/assets/company-inventory-monitor-main.jpg" alt="Inventory sync monitor with channel and physical inventory queues and their scheduled, paused, and unconfigured jobs"><figcaption><p>Channel and physical inventory queues show their own waiting work and related jobs. This UAT example has no waiting events.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/company-inventory-monitor-main.jpg" alt="Inventory sync monitor with channel and physical inventory queues and their scheduled, paused, and unconfigured jobs"><figcaption><p>Channel and physical inventory queues show their own waiting work and related jobs. The HotWax sandbox example has 14 channel events waiting to batch.</p></figcaption></figure>
 
 ## Review channels and jobs
 
@@ -77,7 +77,7 @@ The reset sections show recent runs for physical ATP, physical on-hand inventory
 
 Open `Event history` from the relevant batch section or use a queue link. Channel and location histories use the same controls and row layout.
 
-<figure><img src="../../.gitbook/assets/company-channel-history-main.jpg" alt="Channel inventory history showing delivery timing indicators, current filters, and an empty event list"><figcaption><p>Channel history combines delivery indicators and filters. This connection has no matching events.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/company-channel-history-main.jpg" alt="HotWax sandbox channel inventory history showing waiting transfer-receipt events, delivery timing indicators, and filters"><figcaption><p>Channel history combines delivery indicators, filters, and the source records for each event.</p></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/company-location-history-main.jpg" alt="Location inventory history with the same delivery, event type, Shopify location, date, and sorting controls"><figcaption><p>Location history uses the same investigation controls for physical-location events.</p></figcaption></figure>
 

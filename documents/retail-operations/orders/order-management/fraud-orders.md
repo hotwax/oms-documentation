@@ -78,10 +78,6 @@ completed any required follow-up.
 fraud-review task. It does not execute the suggested action, cancel items,
 approve the order, or change a payment status.
 
-## Cancel a fraud order
-
-The current app hides this cancellation control because OMS item cancellations do not yet propagate back to Shopify. Use the approved cancellation workflow for the sales channel and verify the resulting order in both systems. Selecting orders here does not make cancellation available.
-
 ## Complete several fraud tasks
 
 1. Select `Select`.

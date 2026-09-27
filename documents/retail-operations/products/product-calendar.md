@@ -34,7 +34,6 @@ A dash means the page has no readable date for that field. `No calendar rows mat
 
 The page reads up to 500 calendar rows, ordered by product ID. Search filters those loaded rows; it does not search the entire catalog or load another page. A product missing from this view is not proof that it has no saved calendar record.
 
-<figure><img src="../.gitbook/assets/products-calendar-main.jpg" alt="Product calendar for store STORE with one active mapping, 500 loaded products, and a search result with four blank lifecycle dates"><figcaption><p>Search narrows the loaded products. Dashes indicate no readable dates for this product and store.</p></figcaption></figure>
 
 {% hint style="info" %}
 The calendar is a review page. It does not provide date entry, row creation, or a save action. The `Dates` card in Product details edits the product's general dates; do not use it as a substitute for changing this store's calendar. Ask the team responsible for calendar imports or integrations to update the store-specific records.

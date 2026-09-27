@@ -93,10 +93,6 @@ releases inventory committed to its other items. It does not resolve the
 address task. Return to the task later to correct the address or cancel the
 affected items.
 
-## Cancel the affected ship group
-
-The current app hides this cancellation control because OMS item cancellations do not yet propagate back to Shopify. Use the approved cancellation workflow for the sales channel and verify the resulting order in both systems. Selecting orders here does not make cancellation available.
-
 ## Complete several address tasks
 
 1. Select `Select`.

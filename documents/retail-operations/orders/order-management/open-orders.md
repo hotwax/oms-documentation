@@ -54,11 +54,7 @@ The row does not show an authoritative order status, queue reason, total, addres
 
 Use the allocation fraction only for orientation. If supporting item data fails to load, the row can fall back to an apparently complete `Y/Y` fraction.
 
-Select a row to open [Order details](view-order-details.md). The current Open queue has no `Select` mode or bulk-action footer: its standalone cancellation action is hidden. Use the order's detail page for the actions available for its actual state.
-
-## Cancel orders
-
-The current app hides this cancellation control because OMS item cancellations do not yet propagate back to Shopify. Use the approved cancellation workflow for the sales channel and verify the resulting order in both systems.
+Select a row to open [Order details](view-order-details.md) and work with that order.
 
 ## Interpret list states
 

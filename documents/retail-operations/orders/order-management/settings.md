@@ -50,8 +50,6 @@ The `OMS instance` card identifies the OMS currently configured for Order Manage
 * An OMS can return an error response without the page showing `Offline`.
 * Confirm the page or action you need before concluding that the connection is healthy.
 
-`Go to OMS` can be hidden or disabled depending on the deployment and your OMS-view access.
-
 ## Change the active Product Store
 
 The active Product Store controls store-scoped data and actions throughout Order Manager.

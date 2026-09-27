@@ -75,10 +75,6 @@ Each ship group is attempted independently. Some can succeed while others fail. 
 
 The result messages do not identify which ship groups failed. Use `Order details` to find the remaining virtual groups before retrying. If the routing-group dialog says `No routing groups found`, close and reopen it after confirming the Product Store. The dialog has no separate reload action, and the same message can appear when loading routing groups fails.
 
-## Cancel open items
-
-The current app hides this cancellation control because OMS item cancellations do not yet propagate back to Shopify. Use the approved cancellation workflow for the sales channel and verify the resulting order in both systems. Selecting orders here does not make cancellation available.
-
 ## Edit the shipping method
 
 Use `Edit shipping method` only when the same carrier and method correction applies to every selected order.

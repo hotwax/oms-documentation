@@ -140,13 +140,9 @@ Card-level parking moves this ship group to the selected facility and
 releases inventory committed to its other items. It does not resolve the swap
 task.
 
-## Cancel the affected ship group
-
-The current app hides this cancellation control because OMS item cancellations do not yet propagate back to Shopify. Use the approved cancellation workflow for the sales channel and verify the resulting order in both systems. Selecting orders here does not make cancellation available.
-
 ## Complete several swap tasks
 
-Bulk mode supports parking. The standalone cancellation action is hidden. It does not apply item-level swap decisions.
+Bulk mode supports parking. It does not apply item-level swap decisions.
 
 1. Select `Select`.
 2. Load any additional tasks that you want to include. The header checkbox

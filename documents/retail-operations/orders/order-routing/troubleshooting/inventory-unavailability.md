@@ -42,5 +42,3 @@ In the selected routing rule, review these actions:
 * `Clear auto cancel days` and `Auto cancel days` control the cancellation date applied to unavailable items.
 
 If you do not want split fulfillment, leave partial allocation off and add a later routing rule that can try a broader facility group. If split fulfillment is allowed, review the [shipment threshold](../additional-settings.md#set-a-shipment-threshold) before lowering it.
-
-When `Test drive` is available, use it to inspect filter mismatches and the selected routing rule. Test Drive changes the order, so reset the test order before leaving. See [Test a routing group](../test-drive.md).

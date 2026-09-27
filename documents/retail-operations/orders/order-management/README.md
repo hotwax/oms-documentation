@@ -18,7 +18,7 @@ Order Manager brings order search, exception work, fulfillment queues, and order
 The selected product store controls store-scoped data throughout the app. Changing it can reload counts and lists, so check the store again before comparing totals or acting on an order.
 
 {% hint style="info" %}
-Menu options and actions depend on your permissions. If an option in this guide is missing or an action fails, ask an administrator to check your Order Manager access. Do not use a direct page address to bypass a hidden menu option.
+Menu options and actions depend on your permissions. If an option in this guide is missing or an action fails, ask an administrator to check your Order Manager access.
 {% endhint %}
 
 ## Understand planning, tasks, and downstream release
@@ -43,6 +43,7 @@ A pick profile is the business release policy. `Funnel` exposes its priority, ba
 | Maintain a customer or review customer activity | [Customer details](view-customer-details.md) | Update contact or relationship data, resolve tasks, or open related orders and returns. |
 | Create a Shopify order | [Create order](create-order.md) | Select the shop, customer, address, and items, then submit and verify the new order. |
 | Investigate one order | [Order details](view-order-details.md) | Review items, ship groups, holds, communications, and the actions currently available for that order. |
+| Replenish stock for an order item | [Request and review inventory transfers](view-order-details.md#request-and-review-inventory-transfers) | Compare warehouse/store stock, review the destination and projected inventory, save the request, and track its status. |
 | Confirm the OMS, store, or app preferences | [Settings](settings.md) | Verify the working context before changing store-scoped identifiers or user preferences. |
 | Resolve exception work | A queue under `Blocked` | Review the task or exception, choose its supported outcome, and verify both the task and order afterward. |
 | Work an order-processing stage | A queue under `In progress` | Narrow the list, inspect the order, and use a supported action when one is available. `Inflight` is currently an investigation-only queue. |

@@ -93,10 +93,6 @@ Weeks of Supply routing helps the routing engine choose fulfillment locations ba
 
 Sales Velocity can help route from slower-moving locations. Weeks of Supply adds more context by comparing current inventory with sales velocity, helping retailers protect high-demand stores while using locations with deeper coverage to fulfill online orders.
 
-### Test Drive
-
-Test Drive lets teams validate routing behavior before activating changes. Operations teams can test representative orders to confirm facility eligibility, waterfall behavior, split decisions, and queue outcomes before routing changes affect live fulfillment.
-
 ## Key takeaways
 
 * Order routing begins after an order is approved and ready for allocation.
@@ -106,7 +102,6 @@ Test Drive lets teams validate routing behavior before activating changes. Opera
 * Waterfall routing lets the routing engine expand allocation options step by step without immediately relaxing the retailer's preferred strategy.
 * Controls such as safety stock, facility capacity, product and location eligibility, grouped items, and Brokering Shipment Threshold keep routing aligned with margin, service-level agreement (SLA), and store operations.
 * Weeks of supply and sales velocity help routing account for inventory health, not only available units.
-* Test Drive should be used before activating new or changed routing configurations.
 
 ## Related documentation
 
@@ -115,7 +110,6 @@ Test Drive lets teams validate routing behavior before activating changes. Opera
 * [Routing Rules](/documents/retail-operations/orders/order-routing/routing-rules.md)
 * [Inventory Rules](/documents/retail-operations/orders/order-routing/inventory-rules.md)
 * [Weeks of Supply Routing](/documents/retail-operations/orders/order-routing/weeks-of-supply-routing.md)
-* [Test Drive](/documents/retail-operations/orders/order-routing/test-drive.md)
 * [Additional Settings](/documents/retail-operations/orders/order-routing/additional-settings.md)
 * [Configurable Order Routing](https://www.hotwax.co/solution/configurable-order-routing)
 * [Order routing blog archive](https://www.hotwax.co/blog/tag/order-routing)

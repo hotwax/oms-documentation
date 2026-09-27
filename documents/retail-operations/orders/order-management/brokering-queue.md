@@ -67,10 +67,6 @@ Select a row outside `Select` mode to open [Order details](view-order-details.md
 
 The header checkbox does not select results that have not loaded yet. The page loads 50 orders at a time. To apply an action to the complete filtered population, scroll until the loaded count matches the total, then select all.
 
-## Cancel open items
-
-The current app hides this cancellation control because OMS item cancellations do not yet propagate back to Shopify. Use the approved cancellation workflow for the sales channel and verify the resulting order in both systems. Selecting orders here does not make cancellation available.
-
 ## Edit the shipping method
 
 Use `Edit shipping method` only when the same carrier and method correction applies to every selected order.

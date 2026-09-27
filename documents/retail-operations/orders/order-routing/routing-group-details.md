@@ -77,4 +77,3 @@ Click `History` in the `Scheduler` card to review recent runs. Use the start and
 
 * [Configure routings](routing-rules.md)
 * [Configure routing rules](inventory-rules.md)
-* [Test a routing group](test-drive.md)

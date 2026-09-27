@@ -18,7 +18,7 @@ The timeline groups related records into business transactions, arranged under d
 Expand a timeline row with a chevron to inspect its contributing records or individual steps. `Some history couldn't load` means the history is incomplete; select `Retry`. `Showing the latest 200 facility moves` means older facility moves are outside the loaded history. `No history recorded` means no events are available to display. None of these states proves that the order never changed.
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/order-manager-timeline-main.jpg" alt="Order timeline with Imported and brokered expanded into creation, approval, and assignment records, followed by release and rejection events"><figcaption><p>Expand a business transaction to inspect the records behind it.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/order-manager-timeline-main.jpg" alt="HotWax demo timeline with expanded import and allocation records for four items, alongside fulfillment approval"><figcaption><p>Expand a business transaction to inspect the records behind it.</p></figcaption></figure>
 
 Use the header cards to confirm the business context:
 
@@ -67,7 +67,7 @@ Use `Manage` in the `Attributes` card to maintain order-level metadata. This is 
 
 Names must be unique. Names that differ only in letter case are treated as duplicates. Changes are staged until you save; closing without saving discards the draft. If some writes succeed before a failure, keep the dialog open, review the remaining changes, and retry the save. Closing after a partial save reloads the committed changes.
 
-<figure><img src="../../.gitbook/assets/order-manager-attributes-main.jpg" alt="Manage order attributes dialog with an example delivery preference marked Unsaved and the save icon visible"><figcaption><p>Added attributes remain Unsaved until you select the save icon. This example was discarded.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/order-manager-attributes-main.jpg" alt="Manage order attributes dialog with the HotWax demo gift message marked Unsaved and the save icon visible"><figcaption><p>Added attributes remain Unsaved until you select the save icon.</p></figcaption></figure>
 
 ### Review a fraud assessment
 
@@ -134,12 +134,6 @@ Order Manager first rejects one unit from the current allocation and then releas
 5. Close the dialog and confirm that the order reloads.
 
 Deleting an item attribute takes effect immediately and does not ask for confirmation.
-
-### Check cancellation availability
-
-The current app does not show a per-row item cancellation or the selected-item `Cancel` footer action. These OMS item changes do not yet propagate back to Shopify. Use the approved cancellation process for the sales channel, then verify both systems.
-
-A whole-order `Cancel order` action can still appear when the order's status permits it. It cancels the remaining eligible items across the order; do not use it as a substitute for canceling only one selected item or ship group. Review [whole-order actions](#use-whole-order-actions) before proceeding.
 
 ### Reconcile payments and totals
 
@@ -306,6 +300,8 @@ For several selected items, the app opens one request dialog at a time. Closing 
 
 Requesting and managing transfers requires transfer-creation or Order Manager administrator permission.
 
+<figure><img src="../../.gitbook/assets/order-manager-transfer-review-main.jpg" alt="Review a two-unit HotWax demo transfer from the distribution center to the Downtown store, including projected ATP and QOH"><figcaption><p>Review the source, destination, projected stock, and comment before saving the request.</p></figcaption></figure>
+
 ### Review or complete an existing transfer
 
 1. Select the item's `Transfer from`, `Transferred from`, or `Transfer cancelled` chip.
@@ -316,6 +312,8 @@ Requesting and managing transfers requires transfer-creation or Order Manager ad
 6. Verify the refreshed transfer status and stock.
 
 `Complete transfer` executes the inventory move in OMS. `Cancel transfer` cancels the open request. Completed or canceled transfers do not offer these actions. A projected value is not confirmation that stock has moved.
+
+<figure><img src="../../.gitbook/assets/order-manager-transfer-details-main.jpg" alt="Saved inventory transfer M100612 in Requested status for the HotWax demo order"><figcaption><p>Open the saved transfer to review its ID, quantity, status, comment, and available actions.</p></figcaption></figure>
 
 ## Review and resolve holds
 
@@ -383,16 +381,6 @@ The clone cannot be submitted until a Shopify shop and customer are available. W
 The clone includes all original item rows and ordered quantities, including completed or canceled rows, plus customer information and the shipping address. It does not copy payment capture, holds, fulfillment history, or status history. Taxes, discounts, and shipping are recalculated.
 
 The page remains on the original order. The clone appears in Order Manager only after it synchronizes back from Shopify. Do not submit a second clone while waiting for that synchronization. Open the new order after it appears and confirm every item and quantity.
-
-### Recognize actions unavailable on this page
-
-Some older order management system (OMS) guides describe actions that the current `Order details` page does not support:
-
-* `Create RMA` and `Reindex` are not available.
-* `Appeasement` and `Reship` are not available.
-* `Return` and selected-item cancellation are hidden in the current app.
-
-Use the [returns workflow](../returns/README.md) for supported return-management processes.
 
 ## Recover from page or action failures
 

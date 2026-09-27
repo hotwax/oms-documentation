@@ -32,7 +32,6 @@ Start with the recipe that matches the decision you need to make:
 * [Choose warehouses, stores, or nearby facilities](use-cases.md#choose-fulfillment-facilities) when your fulfillment network and delivery distance determine where to allocate items.
 * [Protect and rebalance store inventory](use-cases.md#protect-and-rebalance-inventory) when safety stock, grouped items, or weeks of supply should guide facility eligibility.
 * [Apply a complete routing template](use-cases.md#apply-a-complete-template) when you need a connected design rather than one recipe.
-* [Test and refine a strategy](use-cases.md#test-and-refine-a-strategy) when Simulation, Circuit, or Test Drive is available in your deployment.
 
 ## Use the order routing list
 
@@ -66,11 +65,3 @@ The detail page keeps changes to the group name, description, routings, and rout
 * [Configure routings](routing-rules.md)
 * [Configure routing rules](inventory-rules.md)
 * [Review routing reports](../../../analytics/reports/brokering.md)
-
-## Use optional features
-
-The following tools are feature-gated and may not be available in your deployment:
-
-* [Test a routing group](test-drive.md)
-* [Simulate routing changes](simulation.md)
-* [Use Circuit](circuit.md)
