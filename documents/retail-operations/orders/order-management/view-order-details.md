@@ -18,6 +18,8 @@ The timeline groups related records into business transactions, arranged under d
 Expand a timeline row with a chevron to inspect its contributing records or individual steps. `Some history couldn't load` means the history is incomplete; select `Retry`. `Showing the latest 200 facility moves` means older facility moves are outside the loaded history. `No history recorded` means no events are available to display. None of these states proves that the order never changed.
 {% endhint %}
 
+<figure><img src="../../.gitbook/assets/order-manager-timeline-main.jpg" alt="Order timeline with Imported and brokered expanded into creation, approval, and assignment records, followed by release and rejection events"><figcaption><p>Expand a business transaction to inspect the records behind it.</p></figcaption></figure>
+
 Use the header cards to confirm the business context:
 
 | Card | How to use it |
@@ -65,6 +67,8 @@ Use `Manage` in the `Attributes` card to maintain order-level metadata. This is 
 
 Names must be unique. Names that differ only in letter case are treated as duplicates. Changes are staged until you save; closing without saving discards the draft. If some writes succeed before a failure, keep the dialog open, review the remaining changes, and retry the save. Closing after a partial save reloads the committed changes.
 
+<figure><img src="../../.gitbook/assets/order-manager-attributes-main.jpg" alt="Manage order attributes dialog with an example delivery preference marked Unsaved and the save icon visible"><figcaption><p>Added attributes remain Unsaved until you select the save icon. This example was discarded.</p></figcaption></figure>
+
 ### Review a fraud assessment
 
 When fact chips appear in `Fraud risk`, select them to open the assessment. Review the provider, assessment date, risk level, fact description, and sentiment. The assessment is read-only. Use the [Fraud queue](fraud-orders.md) or the `Holds` segment to resolve an open fraud-review task.
@@ -86,6 +90,8 @@ Only checkboxes select items. Selecting a product name does not select that item
 Rows use the same product, details, status, and amount columns, with quantity beside the product. `Select all` can include completed or canceled item rows on an active order, but actions count and process only eligible selected items. Completed and canceled orders hide item-selection controls and item actions.
 
 Product identifiers and features follow your Settings preferences. A missing product image keeps its image space so that adjacent rows remain aligned.
+
+<figure><img src="../../.gitbook/assets/order-manager-items-main.jpg" alt="Items segment with one checkbox selected and aligned product, quantity, facility, attributes, status, and amount information"><figcaption><p>Use the checkbox to select an item; the product and its details remain aligned across rows.</p></figcaption></figure>
 
 ### Add an item
 
@@ -293,6 +299,8 @@ Use an inventory transfer when stock must move from another physical facility to
 7. Select the save icon and confirm that the item now shows its transfer chip.
 
 The requested quantity is the item's remaining open quantity, after canceled and fulfilled units are removed. It is not editable in this dialog. The destination and virtual facilities are excluded from source choices. Sales velocity uses completed order items whose order dates fall in the last 30 days; distance is shown only when location data is available.
+
+<figure><img src="../../.gitbook/assets/order-manager-transfer-sources-main.jpg" alt="Request transfer source list with Hide out of stock enabled and warehouse and retail store ATP, QOH, and Sales per day values"><figcaption><p>Compare eligible warehouse and retail sources before choosing where stock should come from.</p></figcaption></figure>
 
 For several selected items, the app opens one request dialog at a time. Closing a dialog stops the remaining requests; earlier saved requests remain. An item with an open transfer is excluded from another request. Review its existing transfer before trying again.
 

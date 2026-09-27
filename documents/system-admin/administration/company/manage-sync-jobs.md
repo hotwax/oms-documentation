@@ -15,6 +15,8 @@ Company's product, inventory, order, fulfillment, transfer, and onboarding pages
 
 If `Sync job details unavailable` appears, select `Retry` or use the refresh action. A failed load does not mean the job is absent. Run and save actions require a successfully loaded job.
 
+<figure><img src="../../.gitbook/assets/company-job-details-main.jpg" alt="Named inventory retention job dialog with its service, active state, hourly schedule in America Los Angeles, and expanded typed parameters"><figcaption><p>Review the selected job's service, schedule, execution time zone, and typed parameters before changing or running it.</p></figcaption></figure>
+
 ## Review a schedule
 
 Open `Schedule` to review the cron expression, its description, execution time zone when supplied, and next run. The schedule description uses the job's execution time zone; do not assume it is the browser time zone.

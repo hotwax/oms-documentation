@@ -38,6 +38,8 @@ A count of event rows is not a count of products, units, or business transaction
 
 If the toolbar reports a sync failure, counts depending on that failed read are unavailable; do not treat them as confirmed zero.
 
+<figure><img src="../../.gitbook/assets/company-inventory-monitor-main.jpg" alt="Inventory sync monitor with channel and physical inventory queues and their scheduled, paused, and unconfigured jobs"><figcaption><p>Channel and physical inventory queues show their own waiting work and related jobs. This UAT example has no waiting events.</p></figcaption></figure>
+
 ## Review channels and jobs
 
 Each `Inventory channels` card identifies the facility group and Shopify target. `Facilities` opens the group's membership. `Delivered in the last 24 hours` counts cached event rows created in that period that have a successful delivery state. It is not a count of units, batches, or all deliveries completed today.
@@ -74,6 +76,10 @@ The reset sections show recent runs for physical ATP, physical on-hand inventory
 ## Audit inventory history
 
 Open `Event history` from the relevant batch section or use a queue link. Channel and location histories use the same controls and row layout.
+
+<figure><img src="../../.gitbook/assets/company-channel-history-main.jpg" alt="Channel inventory history showing delivery timing indicators, current filters, and an empty event list"><figcaption><p>Channel history combines delivery indicators and filters. This connection has no matching events.</p></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/company-location-history-main.jpg" alt="Location inventory history with the same delivery, event type, Shopify location, date, and sorting controls"><figcaption><p>Location history uses the same investigation controls for physical-location events.</p></figcaption></figure>
 
 ### Narrow the investigation
 
@@ -118,6 +124,8 @@ The `Delivery state` filter follows batch delivery, not a separate ledger-status
 | `Cancelled` | The batch is canceled or rejected |
 
 A no-change event does not require a Shopify adjustment. A waiting badge alone does not establish why the connector has not assigned the event to a batch; investigate the publisher and source data if the wait persists.
+
+<figure><img src="../../.gitbook/assets/company-delivery-states-main.jpg" alt="Delivery state menu offering All, Waiting, No change, In flight, Delivery error, Sent, and Cancelled"><figcaption><p>Filter by the event's delivery state to focus the investigation.</p></figcaption></figure>
 
 ### Load an older date range
 

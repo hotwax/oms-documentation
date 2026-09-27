@@ -58,13 +58,32 @@ Read the current public page index and Markdown pages on `docs.hotwax.co` during
 
 ## Validation and screenshot boundaries
 
-* **Local documentation checks:** 311 relative page/asset links in changed files resolve, including the new manuals and navigation entries. GitBook blocks, code fences, and H1 counts are balanced. Changed-file spellcheck and `git diff --check` pass. Full Markdownlint and repository-wide external-link checks remain CI checks; Markdownlint is not installed locally.
+* **Local documentation checks:** 332 relative page/asset links in changed files resolve, including the new manuals and navigation entries. GitBook blocks, code fences, and H1 counts are balanced. Changed-file spellcheck and `git diff --check` pass. Full Markdownlint and repository-wide external-link checks remain CI checks; Markdownlint is not installed locally.
 
 * **Proven from merged source:** Controls, labels, filters, eligibility, staged saves, source grouping, display limits and the request paths described in the edited manuals. Reviewed current source and PR patches; no frontend implementation was changed.
-* **Observed in a real browser:** Order Manager search/filter controls against the existing configured backend. The inspected filter component matches the pinned main component despite unrelated edits in the running checkout. Main-equivalent Order Detail examples could not be captured: an opened search result returned Order not found.
-* **Screenshot limitation:** The regular Chrome connection subsequently blocked automation because another extension UI was open. Company and Products remained at login/setup screens. The attempted date-filter capture clipped the open calendar and is unsuitable for publication. No generated image, seeded mock API, fictional screen, customer data or credentials was used as a replacement. Obsolete inventory-preview screenshot references were removed; the old asset files are preserved.
+* **Observed in a real browser:** Clean, pinned Order Manager, Company, and Products main worktrees ran through the pinned `accxui` wrapper against the real `rails-uat` backend. Each app passed its production build before launch. Listener working directories and app revisions were verified. The existing Chrome session authenticated normally. A navigation timeout did not prevent controlling the resulting tab; the earlier extension-UI capture limitation was resolved.
+* **Screenshots:** Eleven JPEGs were captured directly from those apps on 27 September. They show the complete Order Manager date picker, checkbox selection, staged attributes, transfer-source inventory, expanded timeline, Company inventory queues, channel/location histories, delivery-state menu, named job parameters, and the read-only product calendar. Capture-time clipping excludes customer contact/address cards and credentials. Images are unaltered browser captures; no API mocks or generated screens were used. Obsolete preview screenshot references were replaced with real main screenshots; old asset files remain preserved.
+* **Observed data limits:** The channel and physical histories inspected on the Paris and US connections had no cached events or batches. Their screenshots accurately show empty states; populated event/batch dialogs were not captured. Products loaded 500 calendar rows for `STORE`, one active mapping, and blank dates for the captured product. The Order Manager attribute example was staged and discarded without saving; no transfer was submitted and no job was changed or run.
 * **Not runtime-proven:** Attribute writes, transfer execution, Shopify delivery/resend, job mutation/run completion, notification delivery, POS access, and receiving. No production state was changed. Frontend main does not prove deployment of the necessary backend services or availability in a tagged application release. Verify these operational behaviors on the target instance before treating this audit as UAT acceptance.
 * **Publication:** This is a source-grounded manual update. It does not deploy apps, update GitBook by itself, or certify that every customer instance runs the pinned revisions.
+
+### Screenshot evidence
+
+All captures used the normal Chrome viewport. Modal and panel captures were clipped at capture time to show the relevant controls. The shared wrapper was pinned to `7365cc893888`; app revisions match the baseline table above.
+
+| Capture | App / route | Observed state |
+| --- | --- | --- |
+| [Order-date filters](../documents/retail-operations/.gitbook/assets/order-manager-date-range-main.jpg) | Order Manager `/orders` | Open date picker with future dates disabled; a no-match search excludes customer rows |
+| [Item selection](../documents/retail-operations/.gitbook/assets/order-manager-items-main.jpg) | Order Manager `/orders/122126` | One selected checkbox; product, quantity, facility, attributes, status and amount |
+| [Order attributes](../documents/retail-operations/.gitbook/assets/order-manager-attributes-main.jpg) | Order Manager `/orders/122126`, attributes dialog | Draft example marked Unsaved; discarded after capture |
+| [Transfer sources](../documents/retail-operations/.gitbook/assets/order-manager-transfer-sources-main.jpg) | Order Manager `/orders/122126`, request dialog | Hide out of stock enabled; real source ATP, QOH and sales velocity; no submission |
+| [Business timeline](../documents/retail-operations/.gitbook/assets/order-manager-timeline-main.jpg) | Order Manager `/orders/122126` | Import/brokering transaction expanded; recorded release and rejection events |
+| [Inventory monitor](../documents/system-admin/.gitbook/assets/company-inventory-monitor-main.jpg) | Company `/shopify-connection-details/100001/inventory-sync` | Channel and physical queues; real job schedules/statuses; no waiting events |
+| [Channel history](../documents/system-admin/.gitbook/assets/company-channel-history-main.jpg) | Company `/shopify-connection-details/100001/inventory-sync/history` | Delivery indicators, filters and genuine empty state |
+| [Location history](../documents/system-admin/.gitbook/assets/company-location-history-main.jpg) | Company `/shopify-connection-details/M100000/inventory-sync/location-history` | Physical-location filters and genuine empty state |
+| [Delivery states](../documents/system-admin/.gitbook/assets/company-delivery-states-main.jpg) | Company location history | Complete delivery-state menu |
+| [Job details](../documents/system-admin/.gitbook/assets/company-job-details-main.jpg) | Company inventory monitor, purge-job dialog | Job/service identity, hourly execution time zone, typed retention parameters; no mutation |
+| [Product calendar](../documents/retail-operations/.gitbook/assets/products-calendar-main.jpg) | Products `/product-calendar`, store `STORE` | 500 loaded products, one mapping, search result and four blank date fields |
 
 ## Every merged PR reviewed
 

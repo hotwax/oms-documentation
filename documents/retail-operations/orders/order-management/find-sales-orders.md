@@ -17,8 +17,6 @@ The page searches orders for the Product Store selected in the Order Manager men
 
 Start with an order ID, order name, or external ID when one is available. These values are more precise than a customer name.
 
-<figure><img src="../../.gitbook/assets/order-manager-find-orders.png" alt="Find orders page with search, status, allocation, sales channel, shipping method, date filters, sorting, and demo order rows"><figcaption><p>Use the filter bar and row details to identify the correct order.</p></figcaption></figure>
-
 You can also search using:
 
 * Customer name, party ID, email, or phone
@@ -44,6 +42,8 @@ Use filters to investigate orders that share a status, allocation condition, cha
 | `Newest first` or `Oldest first` | Sorts the matching orders by order date. | Use `Oldest first` to work through aging orders. Use `Newest first` to review recent activity. |
 
 The date pickers prevent selecting a future date and keep `Order date from` on or before `Order date through`. Clear the paired date first when you need to move the range past its existing boundary. The same date limits apply to order-date and task-created filters in the workflow and task queues.
+
+<figure><img src="../../.gitbook/assets/order-manager-date-range-main.jpg" alt="Find orders filters with the complete September date picker open and future dates disabled"><figcaption><p>The date picker prevents future dates. This example uses a search with no matches.</p></figcaption></figure>
 
 The order-date request uses UTC day boundaries, while rows display dates in your configured user time zone. Around midnight, a displayed date can appear just outside the selected range. Widen the range by one day and open the order when you need to verify a boundary case.
 
