@@ -91,6 +91,10 @@
     * [Use routing templates](orders/order-routing/template/README.md)
       * [Preserve store inventory while routing orders](orders/order-routing/template/inventory-based-shipping.md)
       * [Route orders across Canada and the United States](orders/order-routing/template/cross-border-shipping.md)
+  * Test and optimize
+    * [Test a routing group](orders/order-routing/test-drive.md)
+    * [Simulate routing changes](orders/order-routing/simulation.md)
+    * [Use Circuit](orders/order-routing/circuit.md)
   * [Additional routing settings](orders/order-routing/additional-settings.md)
   * [Troubleshoot order routing](orders/order-routing/troubleshooting/README.md)
     * [Troubleshoot a routing schedule](orders/order-routing/troubleshooting/scheduling-error.md)

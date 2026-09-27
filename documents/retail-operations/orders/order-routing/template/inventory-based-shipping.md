@@ -72,6 +72,7 @@ Add the five-rule ladder to both routings. In the last routing rule, return unav
 4. Change the routings and routing rules to `Active`.
 5. Click `Save` in each routing group.
 6. Change each saved routing group to `Active`.
-7. Open `History` after the first scheduled execution and review the result.
+7. Test one standard order, one expedited order, and one rejected order through [Test drive](../test-drive.md), if the feature is available.
+8. Open `History` after the first scheduled execution and review the result.
 
 If store demand varies by location, add [weeks of supply](../weeks-of-supply-routing.md) to the first routing rule instead of relying only on a fixed safety stock value.

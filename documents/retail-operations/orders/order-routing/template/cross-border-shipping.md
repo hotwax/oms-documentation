@@ -75,7 +75,8 @@ Select the unfillable queue in the last routing rule. This sequence tries a sing
 4. Change the routings and routing rules to `Active`.
 5. Click `Save`.
 6. Change the saved routing group to `Active`.
-7. Open `History` after the first execution and review the result.
+7. Run representative United States and Canadian orders through [Test drive](../test-drive.md), if the feature is available.
+8. Open `History` after the first execution and review the result.
 
 {% hint style="warning" %}
 This routing configuration controls facility selection. Carrier service, transit time, and customs processing still determine whether an order meets its delivery promise.

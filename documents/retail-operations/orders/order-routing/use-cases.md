@@ -207,6 +207,17 @@ Expected result: HotWax Commerce prefers facilities with deeper inventory cover 
 
 Validate: Confirm that current sales velocity is available, then compare the selected facility for the two-store example.
 
+## Test and refine a strategy
+
+Use this safety-stock change story to evaluate a routing change before you activate it. Simulation, Circuit, and Test Drive are feature-gated, so follow only the steps available in your deployment. Test Drive remains disabled by default until an administrator has secured and verified its routing and reset operations.
+
+1. Start with the saved baseline that uses a safety-stock value of 10. If `Simulation` is available, create a variation and change the safety-stock value to 15. Run both sources and compare the eligible and brokered results with queued items. A higher threshold can reduce eligible or brokered results and increase queued items.
+2. If `Circuit` is available, it can propose the variation. Review its proposal in the routing group's working copy. You remain responsible for the change, so review every routing and rule, then click `Save` when you decide to apply the live configuration.
+3. If `Test Drive` is available and approved for use in your deployment, select a representative order and confirm the selected routing rule. Reset the order after the test so its live allocation does not affect later work.
+4. Open `History` after you save and activate the change. Review the first execution for the expected routing and exception-queue results.
+
+Read [simulation guidance](simulation.md), [Circuit guidance](circuit.md), and [Test Drive guidance](test-drive.md) before you use an available feature.
+
 ## Apply a complete template
 
 Use a template when you need a connected design of routing groups, routings, rules, queues, and activation steps. A recipe is more appropriate when you need to change one business decision in an existing routing group.
@@ -223,3 +234,5 @@ Use a template when you need a connected design of routing groups, routings, rul
 5. Change the routing group to `Active`.
 6. Use `Run now` only when the page shows no unsaved changes.
 7. Open `History` and review the first execution.
+
+If `Test drive` is available in your environment, [test the routing group](test-drive.md) with representative orders before its first scheduled execution.
