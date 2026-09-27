@@ -43,7 +43,7 @@ Use filters to investigate orders that share a status, allocation condition, cha
 
 The date pickers prevent selecting a future date and keep `Order date from` on or before `Order date through`. Clear the paired date first when you need to move the range past its existing boundary. The same date limits apply to order-date and task-created filters in the workflow and task queues.
 
-<figure><img src="../../.gitbook/assets/order-manager-date-range-main.jpg" alt="Find orders filters with the complete September date picker open and two synthetic HotWax demo orders"><figcaption><p>Choose the order-date range, then review the matching orders in the selected store.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/order-manager-date-range-main.jpg" alt="Find orders filters with the complete September date picker open and two matching orders"><figcaption><p>Choose the order-date range, then review the matching orders in the selected store.</p></figcaption></figure>
 
 The order-date request uses UTC day boundaries, while rows display dates in your configured user time zone. Around midnight, a displayed date can appear just outside the selected range. Widen the range by one day and open the order when you need to verify a boundary case.
 

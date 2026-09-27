@@ -18,7 +18,7 @@ The timeline groups related records into business transactions, arranged under d
 Expand a timeline row with a chevron to inspect its contributing records or individual steps. `Some history couldn't load` means the history is incomplete; select `Retry`. `Showing the latest 200 facility moves` means older facility moves are outside the loaded history. `No history recorded` means no events are available to display. None of these states proves that the order never changed.
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/order-manager-timeline-main.jpg" alt="HotWax demo timeline with expanded import and allocation records for four items, alongside fulfillment approval"><figcaption><p>Expand a business transaction to inspect the records behind it.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/order-manager-timeline-main.jpg" alt="Order timeline with expanded import and allocation records for four items, alongside fulfillment approval"><figcaption><p>Expand a business transaction to inspect the records behind it.</p></figcaption></figure>
 
 Use the header cards to confirm the business context:
 
@@ -67,7 +67,7 @@ Use `Manage` in the `Attributes` card to maintain order-level metadata. This is 
 
 Names must be unique. Names that differ only in letter case are treated as duplicates. Changes are staged until you save; closing without saving discards the draft. If some writes succeed before a failure, keep the dialog open, review the remaining changes, and retry the save. Closing after a partial save reloads the committed changes.
 
-<figure><img src="../../.gitbook/assets/order-manager-attributes-main.jpg" alt="Manage order attributes dialog with the HotWax demo gift message marked Unsaved and the save icon visible"><figcaption><p>Added attributes remain Unsaved until you select the save icon.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/order-manager-attributes-main.jpg" alt="Manage order attributes dialog with a gift message marked Unsaved and the save icon visible"><figcaption><p>Added attributes remain Unsaved until you select the save icon.</p></figcaption></figure>
 
 ### Review a fraud assessment
 
@@ -300,7 +300,7 @@ For several selected items, the app opens one request dialog at a time. Closing 
 
 Requesting and managing transfers requires transfer-creation or Order Manager administrator permission.
 
-<figure><img src="../../.gitbook/assets/order-manager-transfer-review-main.jpg" alt="Review a two-unit HotWax demo transfer from the distribution center to the Downtown store, including projected ATP and QOH"><figcaption><p>Review the source, destination, projected stock, and comment before saving the request.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/order-manager-transfer-review-main.jpg" alt="Review a two-unit inventory transfer from the distribution center to the Downtown store, including projected ATP and QOH"><figcaption><p>Review the source, destination, projected stock, and comment before saving the request.</p></figcaption></figure>
 
 ### Review or complete an existing transfer
 
@@ -313,7 +313,7 @@ Requesting and managing transfers requires transfer-creation or Order Manager ad
 
 `Complete transfer` executes the inventory move in OMS. `Cancel transfer` cancels the open request. Completed or canceled transfers do not offer these actions. A projected value is not confirmation that stock has moved.
 
-<figure><img src="../../.gitbook/assets/order-manager-transfer-details-main.jpg" alt="Saved inventory transfer M100612 in Requested status for the HotWax demo order"><figcaption><p>Open the saved transfer to review its ID, quantity, status, comment, and available actions.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/order-manager-transfer-details-main.jpg" alt="Saved inventory transfer in Requested status"><figcaption><p>Open the saved transfer to review its ID, quantity, status, comment, and available actions.</p></figcaption></figure>
 
 ## Review and resolve holds
 
