@@ -1,5 +1,5 @@
 ---
-description: Review order risk information and resolve or cancel fraud-review tasks.
+description: Review order risk information and resolve fraud-review tasks.
 ---
 
 # Fraud
@@ -80,15 +80,7 @@ approve the order, or change a payment status.
 
 ## Cancel a fraud order
 
-Use `Cancel order` when your review determines that the order should not be
-fulfilled.
-
-1. Select `Cancel order`.
-2. Review the confirmation. The action cannot be undone.
-3. Select `Cancel order` again to continue.
-
-Fraud tasks apply to the complete order. This action cancels the order items
-across all ship groups and then cancels the fraud task.
+The current app hides this cancellation control because OMS item cancellations do not yet propagate back to Shopify. Use the approved cancellation workflow for the sales channel and verify the resulting order in both systems. Selecting orders here does not make cancellation available.
 
 ## Complete several fraud tasks
 
@@ -101,21 +93,15 @@ across all ship groups and then cancels the fraud task.
    * `Resolve` immediately attempts to complete every selected fraud task. This
      action does not show a confirmation, execute a recommendation, or cancel
      order items.
-   * `Cancel orders` confirms the number of distinct orders, cancels the order
-     items, and cancels every selected fraud task.
 
-If several selected tasks belong to the same order, Order Manager cancels that
-order once and updates the status of every selected task.
+Resolve only tasks whose review is complete. Other tasks on the same order remain open.
 
 ## Recover from an error
 
 After a bulk action, Order Manager reports completed and failed task counts,
-then reloads the queue. A cancellation confirmation counts distinct orders,
-while the result messages count task records.
+then reloads the queue. The result messages count task records.
 
-If a fraud task remains after a cancellation failure, select `View order` and
-check its current state before repeating the action. The item cancellation can
-succeed even when the fraud-task status does not update.
+If a fraud task remains after a failed action, select `View order` and check the current order and task state before retrying.
 
 During the first load, the page shows a progress indicator. A refresh keeps the
 existing cards visible and shows a progress bar. If the first request fails,

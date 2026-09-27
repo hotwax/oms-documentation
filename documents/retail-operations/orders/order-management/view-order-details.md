@@ -12,10 +12,10 @@ Many actions depend on the order status, item status, facility type, selected ro
 
 The page heading shows the order name, HotWax order ID, and current status. Review these values before changing the order, especially when several orders have similar customer names.
 
-The timeline records events such as Shopify creation and import, approval, brokering, return or exchange activity, and completion. Select a linked order or return to open that record.
+The timeline groups related records into business transactions, arranged under day headings. Review creation or import, approval, first brokering, facility moves, picking, packing, shipping, returns, exchanges, and cancellation when those records exist. A cancellation that moved items to parking appears as one cancellation transaction rather than an unrelated rejection. Select a linked order or return to open that record.
 
 {% hint style="info" %}
-When the order has no recorded timeline events, the page can show generic status and facility rows. Treat those rows as placeholders, not as an audit history.
+Expand a timeline row with a chevron to inspect its contributing records or individual steps. `Some history couldn't load` means the history is incomplete; select `Retry`. `Showing the latest 200 facility moves` means older facility moves are outside the loaded history. `No history recorded` means no events are available to display. None of these states proves that the order never changed.
 {% endhint %}
 
 Use the header cards to confirm the business context:
@@ -25,7 +25,7 @@ Use the header cards to confirm the business context:
 | `Customer` | Confirm the placing customer and the contact information attached to the order. Open `View details` to work with [Customer details](view-customer-details.md). |
 | `Source` | Confirm the product store, sales channel, point-of-sale facility, and linked source order or return when the order is an exchange. |
 | `Order identifications` | Compare the external order number, HotWax order ID, order name, and any additional identifiers. Open the Shopify link when it is available. |
-| `Attributes` | Review read-only order metadata used by integrations or business processes. |
+| `Attributes` | Review order metadata and select `Manage` to add, edit, or remove order attributes. |
 | `Fraud risk` | Review the recommendation, risk level, and fact counts when a risk assessment exists. |
 
 ### Add missing customer information
@@ -53,6 +53,18 @@ System-sourced identifiers are locked unless your account has Order Manager admi
 
 Removing an identification takes effect immediately and does not ask for confirmation.
 
+### Manage order attributes
+
+Use `Manage` in the `Attributes` card to maintain order-level metadata. This is separate from the attributes on an individual item.
+
+1. Select `Manage` to open `Manage order attributes`.
+2. Enter a required `Name`, optional `Value`, and optional `Description`, then select `Add` to stage a new row.
+3. Use the edit action to change an existing value, or the delete action to stage its removal.
+4. Review rows marked `Unsaved`.
+5. Select the save icon and verify the reloaded `Attributes` card.
+
+Names must be unique. Names that differ only in letter case are treated as duplicates. Changes are staged until you save; closing without saving discards the draft. If some writes succeed before a failure, keep the dialog open, review the remaining changes, and retry the save. Closing after a partial save reloads the committed changes.
+
 ### Review a fraud assessment
 
 When fact chips appear in `Fraud risk`, select them to open the assessment. Review the provider, assessment date, risk level, fact description, and sentiment. The assessment is read-only. Use the [Fraud queue](fraud-orders.md) or the `Holds` segment to resolve an open fraud-review task.
@@ -61,7 +73,7 @@ When fact chips appear in `Fraud risk`, select them to open the assessment. Revi
 
 **Goal:** Confirm what was ordered and correct an item before fulfillment progresses.
 
-**Use this flow when:** You need to add an item, change an item's facility, maintain item attributes, or cancel part of an order.
+**Use this flow when:** You need to add an item, change an item's facility, maintain item attributes, or request stock for an item.
 
 ### Read an item group
 
@@ -69,13 +81,17 @@ The `Items` segment groups matching item rows into an expandable product row. Th
 
 Expand the row to review each underlying item, including its sequence ID, external ID, facility, attributes, status, ship group number, amount, and adjustments.
 
-Selecting a grouped row selects every underlying item. `Select all` can also select completed or canceled rows, so review the selected items before using a footer action.
+Only checkboxes select items. Selecting a product name does not select that item; selecting an expandable group heading opens or closes the group. The group checkbox selects its underlying items without opening the group.
+
+Rows use the same product, details, status, and amount columns, with quantity beside the product. `Select all` can include completed or canceled item rows on an active order, but actions count and process only eligible selected items. Completed and canceled orders hide item-selection controls and item actions.
+
+Product identifiers and features follow your Settings preferences. A missing product image keeps its image space so that adjacent rows remain aligned.
 
 ### Add an item
 
 **Use this flow when:** A valid catalog item was omitted from an active order.
 
-1. Select `Add items` in the `Items` toolbar.
+1. Select `Add items` in the `Items` footer.
 2. If the order has more than one ship group, choose the destination ship group.
 3. Search for the product.
 4. Select `Add` beside the correct result.
@@ -113,23 +129,11 @@ Order Manager first rejects one unit from the current allocation and then releas
 
 Deleting an item attribute takes effect immediately and does not ask for confirmation.
 
-### Cancel one item
+### Check cancellation availability
 
-1. Expand the item group.
-2. Select `Cancel` on the active item.
-3. Confirm the irreversible cancellation.
-4. Verify the item's status after the order reloads.
+The current app does not show a per-row item cancellation or the selected-item `Cancel` footer action. These OMS item changes do not yet propagate back to Shopify. Use the approved cancellation process for the sales channel, then verify both systems.
 
-The dialog does not collect a cancellation reason or note.
-
-### Cancel several selected items
-
-1. Select only the active items that must be canceled.
-2. Confirm that the footer shows `Cancel`, the intended item count, and `items`.
-3. Select the action and confirm the irreversible cancellation.
-4. Verify each selected row after the order reloads.
-
-When cancellable items are selected, a label such as `Cancel 3 items` replaces the whole-order `Cancel order` action. Clear the selection if you intend to cancel the whole order.
+A whole-order `Cancel order` action can still appear when the order's status permits it. It cancels the remaining eligible items across the order; do not use it as a substitute for canceling only one selected item or ship group. Review [whole-order actions](#use-whole-order-actions) before proceeding.
 
 ### Reconcile payments and totals
 
@@ -148,7 +152,9 @@ The totals card shows the item subtotal, grouped adjustments, grand total, and p
 
 **Use this flow when:** An order needs brokering, release, parking, pullback, a task, another item, or updated delivery information.
 
-Each card identifies the ship group, facility, items, status, progress, and the `Brokered`, `Pick`, `Pack`, and `Ship` milestones. `Pending` means the page has no recorded time for that milestone.
+Each card identifies the ship group, facility, items, status, progress, and the `Brokered`, `Pick`, `Pack`, and `Ship` milestones when they apply. These dates use the same history as the main timeline. `Pending` means the page has no recorded time for that milestone. Completed counter-sale groups omit milestones that do not apply.
+
+A collapsed card previews its first three items. Select `+N more` or expand the card to see the rest; the preview is not the complete item list.
 
 An open-hold warning shows how many tasks apply to the group. Order Tasks do not replace the order or ship group status, and more than one task can apply. The internal `Broker ship group` and `Release` actions can remain available, while applicable open tasks can still keep that scope outside downstream picking. Select `View details` before changing the group.
 
@@ -210,7 +216,7 @@ Changing the country clears the previous state selection. The order must have an
 | `Add Items` | A catalog item must be added directly to this active ship group. | Adds one unit of each product selected in the dialog. |
 
 {% hint style="warning" %}
-Select only active items that are eligible for the intended action. `Park Items`, `Release`, and `Pull back` can become enabled when at least one selected item is eligible, but the request includes every selected row. A mixed selection containing completed, canceled, or otherwise ineligible items can fail.
+Select the intended eligible items before using `Park Items`, `Release`, or `Pull back`. The app filters out terminal items for parking and pullback, and only pre-fulfillment items are released. A ship-group action can use the whole group when no item selection is present; use checkboxes when you intend to act on a subset.
 {% endhint %}
 
 #### Broker a ship group
@@ -248,7 +254,7 @@ Release is available for a virtual group on an approved, active order when at le
 2. Select the items to reject from the facility.
 3. Select `Pull back`.
 4. Choose the rejection reason.
-5. Confirm the action and inspect the reloaded item status.
+5. Confirm the action and inspect the reloaded item status. Unselected items remain at the facility.
 
 `Pull back` applies to active items in a physical ship group. It does not select a new facility. Continue with the retailer's routing or exception process after verifying the rejection.
 
@@ -271,6 +277,37 @@ Task name, purpose, and description are required.
 4. Close the dialog and verify that the item appears in this group.
 
 This action is not available on completed or canceled orders.
+
+## Request and review inventory transfers
+
+Use an inventory transfer when stock must move from another physical facility to the facility fulfilling an order item. This moves inventory; it does not change the item's fulfillment facility or create a transfer-order shipping workflow.
+
+### Request stock for an item
+
+1. In `Items`, select the intended item checkboxes.
+2. Select `Request transfer for N items` in the footer, or select `Request transfer` for eligible items on an expanded physical ship group.
+3. Review the item and its destination facility in `Request transfer`.
+4. Use `Hide out of stock` and `Sort by` to compare eligible sources under `Warehouses` and `Retail stores`. Sort options are `Inventory`, `Sales velocity`, and `Alphabetical`.
+5. Compare available-to-promise inventory (ATP), quantity on hand (QOH), `Sales/day`, and distance when available.
+6. Select a source, then review `Transfer from`, `Transfer to`, the projected stock after the move, and any comment.
+7. Select the save icon and confirm that the item now shows its transfer chip.
+
+The requested quantity is the item's remaining open quantity, after canceled and fulfilled units are removed. It is not editable in this dialog. The destination and virtual facilities are excluded from source choices. Sales velocity uses completed order items whose order dates fall in the last 30 days; distance is shown only when location data is available.
+
+For several selected items, the app opens one request dialog at a time. Closing a dialog stops the remaining requests; earlier saved requests remain. An item with an open transfer is excluded from another request. Review its existing transfer before trying again.
+
+Requesting and managing transfers requires transfer-creation or Order Manager administrator permission.
+
+### Review or complete an existing transfer
+
+1. Select the item's `Transfer from`, `Transferred from`, or `Transfer cancelled` chip.
+2. Confirm the inventory transfer ID, quantity, requested date, source, comment, status, and reason.
+3. Compare the source and destination ATP and QOH. An open transfer also shows projected values under `After transfer`; a dash means stock data is unavailable.
+4. Review `Earlier transfers` when more than one transfer exists.
+5. For an open transfer, use `Complete transfer` or `Cancel transfer` only after the appropriate inventory decision has been made, then confirm the action.
+6. Verify the refreshed transfer status and stock.
+
+`Complete transfer` executes the inventory move in OMS. `Cancel transfer` cancels the open request. Completed or canceled transfers do not offer these actions. A projected value is not confirmation that stock has moved.
 
 ## Review and resolve holds
 
@@ -305,7 +342,7 @@ If expected communications are missing, switch to another segment and return to 
 
 ## Use whole-order actions
 
-The footer in `Items` shows only the actions valid for the current order.
+The footer in `Items` shows actions valid for the current order and eligible selection. `Add items` and `Request transfer` are located here rather than on each row.
 
 ### Change the order status
 
@@ -313,12 +350,12 @@ Available status actions come from the current status and configured transition 
 
 `Hold order` changes the order status. It does not create an Order Task or record a task purpose, owner, description, or resolution path.
 
-1. Confirm that no item rows are selected when you intend to act on the whole order.
+1. Confirm the action label and scope. A whole-order action can remain visible while items are selected; selecting items does not narrow that action to the selection.
 2. Select the available status action.
 3. Confirm the action when prompted.
 4. Verify the order and item statuses after the page reloads.
 
-Canceling the whole order cancels every item that is not already canceled or completed. A cancellation cannot be undone.
+Canceling the whole order cancels every item that is not already canceled or completed. A cancellation cannot be undone. This OMS action does not currently propagate cancellation back to Shopify; use it only within the approved cancellation process and verify both systems.
 
 ### Clone the order
 
@@ -345,7 +382,7 @@ Some older order management system (OMS) guides describe actions that the curren
 
 * `Create RMA` and `Reindex` are not available.
 * `Appeasement` and `Reship` are not available.
-* `Return` can appear when an order has a completed item, but selecting it only reports that returns are unavailable here.
+* `Return` and selected-item cancellation are hidden in the current app.
 
 Use the [returns workflow](../returns/README.md) for supported return-management processes.
 

@@ -142,21 +142,11 @@ task.
 
 ## Cancel the affected ship group
 
-Select `Cancel order` when the items represented by this swap task should not be
-fulfilled.
-
-1. Select `Cancel order`.
-2. Review the confirmation. The action cannot be undone.
-3. Select `Cancel order` again to continue.
-
-Despite the button label, this action cancels only the task items in the
-affected ship group and then cancels the swap task. Other ship groups on the
-same order are not included.
+The current app hides this cancellation control because OMS item cancellations do not yet propagate back to Shopify. Use the approved cancellation workflow for the sales channel and verify the resulting order in both systems. Selecting orders here does not make cancellation available.
 
 ## Complete several swap tasks
 
-Bulk mode supports cancellation and parking. It does not apply item-level swap
-decisions.
+Bulk mode supports parking. The standalone cancellation action is hidden. It does not apply item-level swap decisions.
 
 1. Select `Select`.
 2. Load any additional tasks that you want to include. The header checkbox
@@ -164,8 +154,6 @@ decisions.
 3. Select the individual cards, or use the header checkbox to select all loaded
    cards.
 4. Choose a bulk action:
-   * `Cancel orders` confirms the number of distinct ship groups,
-     cancels their task items, and cancels every selected task.
    * `Park` opens the facility picker, moves each distinct ship group,
      and completes every selected task.
 

@@ -35,6 +35,12 @@ Use `Receive` to create and receive inventory for the quantities entered while k
 
 Purchase orders support partial receiving across multiple receipts, so users can receive inventory in stages as shipments arrive.
 
+### Review receiving history
+
+Select the history icon in the purchase order header to review all receipts, or select an item's received-history chip to review that product. Each history row shows the product image, your configured primary and secondary identifiers, product features such as size and color, accepted and rejected quantities, receipt time, and receiver name. If the primary identifier is unavailable, the product name appears instead.
+
+Use the identifiers and features together to distinguish similar variants before investigating a quantity discrepancy. This dialog reviews recorded receipts; it does not change received quantities.
+
 ## Returns
 
 The `Returns` section is used to receive return shipments and add returned stock back into inventory when applicable.

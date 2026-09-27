@@ -36,6 +36,8 @@ To reject an order, store associates can click the `bin` icon, choose a reason i
 
 To partially reject an order, the `bin` icon can be used for the specific item that needs to be rejected, followed by selecting a reason and clicking `Reject Item`.
 
+A newly opened order does not select a rejection reason for you. Choose a reason explicitly before using `Reject Items`. When partial rejection is disabled, choosing a reason starts a whole-order rejection; check the scope before confirming.
+
 After an item is rejected, a notification email is sent, and the order may be rerouted. For more details, see [Re-route Fulfillment](re-route-fulfillment.md).
 
 ### Customer and Payment Details

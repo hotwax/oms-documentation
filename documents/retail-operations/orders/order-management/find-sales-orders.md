@@ -43,6 +43,8 @@ Use filters to investigate orders that share a status, allocation condition, cha
 | `Order date through` | Includes orders placed on or before the selected date. | Use this as the end of an order-date range. |
 | `Newest first` or `Oldest first` | Sorts the matching orders by order date. | Use `Oldest first` to work through aging orders. Use `Newest first` to review recent activity. |
 
+The date pickers prevent selecting a future date and keep `Order date from` on or before `Order date through`. Clear the paired date first when you need to move the range past its existing boundary. The same date limits apply to order-date and task-created filters in the workflow and task queues.
+
 The order-date request uses UTC day boundaries, while rows display dates in your configured user time zone. Around midnight, a displayed date can appear just outside the selected range. Widen the range by one day and open the order when you need to verify a boundary case.
 
 The `Allocation state` options mean:
@@ -92,16 +94,7 @@ Select `Done` to leave select mode without taking an action.
 
 ### Cancel open items
 
-Use `Cancel open items` only after confirming that the remaining open items in every selected order should be canceled.
-
-1. Select the intended orders.
-2. Select `Cancel open items`.
-3. Review the number of selected orders in the confirmation message.
-4. Select `Confirm` to continue or `Dismiss` to return without canceling.
-
-The action skips items that are already canceled or completed. The cancellation cannot be undone.
-
-After the action finishes, the page refreshes the search results. Open the affected orders and confirm the expected items are canceled. If the page reports a failure, verify each selected order before retrying because another order in the selection may already have changed.
+The current app hides this cancellation control because OMS item cancellations do not yet propagate back to Shopify. Use the approved cancellation workflow for the sales channel and verify the resulting order in both systems. Selecting orders here does not make cancellation available.
 
 ### Edit the shipping method
 

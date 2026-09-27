@@ -61,7 +61,7 @@ Keep credentials out of tickets, screenshots, and documentation.
 
 ## Review access scopes
 
-1. Open `Access scopes`.
+1. Open `Access scopes`. When scopes are not cached, the dialog loads them automatically and shows an inline loading indicator.
 2. Under `Connection access`, confirm the OMS-side access level required by the integration.
 3. For inventory publication, confirm `SHOP_RW_ACCESS`. Do not use `SHOP_READ_WRITE_ACCESS`; it has the same description but does not satisfy the current service gate.
 4. Under `Granted OAuth scopes`, refresh the scopes granted to the app in Shopify.

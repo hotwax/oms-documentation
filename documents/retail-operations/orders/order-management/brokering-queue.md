@@ -69,19 +69,7 @@ The header checkbox does not select results that have not loaded yet. The page l
 
 ## Cancel open items
 
-Use `Cancel open items` only when the selected orders should no longer be fulfilled.
-
-{% hint style="warning" %}
-Cancellation cannot be undone. It cancels every item that is not already completed or canceled across all ship groups in each selected order. It does not target only the item shown in the current queue location.
-{% endhint %}
-
-1. Select the orders.
-2. Select `Cancel open items`.
-3. Review the number of selected orders and select `Confirm`.
-4. Wait for the result message and list refresh.
-5. Open each affected order and confirm which items were canceled.
-
-The confirmation shows the selected order count, but the success message does not report how many items changed. An order with no cancellable items can still be submitted. If one request fails, other selected orders may already have changed. After either a success or failure message, inspect every selected order before retrying.
+The current app hides this cancellation control because OMS item cancellations do not yet propagate back to Shopify. Use the approved cancellation workflow for the sales channel and verify the resulting order in both systems. Selecting orders here does not make cancellation available.
 
 ## Edit the shipping method
 

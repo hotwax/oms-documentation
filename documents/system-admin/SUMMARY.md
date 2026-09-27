@@ -19,6 +19,7 @@
     * [Upgrade Shopify Product Sync](administration/company/upgrade-shopify-product-sync.md)
     * [Monitor Shopify inventory sync](administration/company/manage-shopify-inventory-sync.md)
     * [Manage Shopify Order Sync](administration/company/manage-shopify-order-sync.md)
+  * [Manage sync jobs in Company](administration/company/manage-sync-jobs.md)
   * [Klaviyo](administration/company/manage-klaviyo.md)
   * [NetSuite](administration/company/configure-netsuite-setting.md)
   * [Facilities](administration/facilities/README.md)

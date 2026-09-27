@@ -175,7 +175,7 @@ Before submitting:
 1. Confirm that each row represents the intended product.
 2. Review the displayed price.
 3. Change `Qty` when needed.
-4. Confirm that every quantity is greater than zero.
+4. Confirm that every quantity is greater than zero. A blank or nonpositive quantity displays `Quantity must be greater than 0` beside the field. Correct it before submitting.
 5. Remove an unwanted row with the trash action.
 
 Product data supplies the catalog price, and you cannot edit it on this page. If a catalog price is incorrect, stop the workflow and have the product price reviewed before submitting the order.

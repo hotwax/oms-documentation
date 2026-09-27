@@ -13,6 +13,14 @@ With built-in features like bulk actions, variance alerts, and timestamped track
 
 For a business-process overview of inventory management and cycle counting, see [Inventory management](../../../learn-hotwax-oms/business-processes/inventory-management.md).
 
+## Navigate on a phone or tablet
+
+When the side menu is hidden, use the menu button at the top left of `Assigned`, `Draft bulk`, `Pending review`, `Closed`, `Store permissions`, or `Settings`. The button opens app navigation. On Assigned and Pending review, the separate filter button at the right opens page filters. Menu entries depend on your permissions.
+
+## Open Cycle Count from Shopify POS
+
+In embedded mode, the app selects the HotWax facility mapped to the current Shopify POS location from the facilities your account can access. It does not grant access to another facility. If `Unable to login. User is not associated with this location. Please contact the administrator.` appears, ask the administrator to check your facility association and the Shopify-location mapping.
+
 ## Cycle count workflow
 
 1. [Plan your count with a preview](../../../store-operations/cycle-count/plan-cycle-count.md)

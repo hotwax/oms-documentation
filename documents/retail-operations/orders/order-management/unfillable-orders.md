@@ -77,19 +77,7 @@ The result messages do not identify which ship groups failed. Use `Order details
 
 ## Cancel open items
 
-Use `Cancel open items` only after the business has approved cancellation.
-
-{% hint style="warning" %}
-Cancellation cannot be undone. It cancels every item that is not already completed or canceled across all ship groups in each selected order, not only the Unfillable items.
-{% endhint %}
-
-1. Select the orders.
-2. Select `Cancel open items`.
-3. Review the selection count and select `Confirm`.
-4. Wait for the result message.
-5. Open each order and confirm which items were canceled.
-
-The confirmation shows the selected order count, but the success message does not report how many items changed. If one request fails, another selected order may already have changed. Verify every selected order before retrying.
+The current app hides this cancellation control because OMS item cancellations do not yet propagate back to Shopify. Use the approved cancellation workflow for the sales channel and verify the resulting order in both systems. Selecting orders here does not make cancellation available.
 
 ## Edit the shipping method
 

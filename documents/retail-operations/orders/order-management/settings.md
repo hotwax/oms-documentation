@@ -89,7 +89,7 @@ Each selection saves immediately for the selected Product Store. A success messa
 
 The preview shows one sample product. Select the shuffle action to preview another sample. Shuffling changes only the preview, not either identifier setting. When no sample product is available, the preview is absent, but you can still change the identifiers.
 
-These preferences can change the identifiers displayed while creating an order, adding a product or order item, reviewing [Order details](view-order-details.md), and working in Fraud or Swap. They do not rename the product or change its source identifier data.
+These preferences can change the identifiers displayed while creating an order, adding a product or order item, reviewing [Order details](view-order-details.md), working in Fraud or Swap, choosing a custom swap or substitute, and reviewing product rows in Customer details or Return Detail. They do not rename the product or change its source identifier data.
 
 **Outcome:** The success message confirms that the selected Product Store has the intended primary and optional secondary display identifiers.
 
@@ -148,6 +148,12 @@ The language changes immediately for the current session. It does not update you
 Some Order Manager text can remain in English when a translation is not available. Use the control to choose the available interface language, not as confirmation that every label is translated.
 
 **Outcome:** Order Manager uses the selected language for the current session without changing the user profile on the server.
+
+## Read amounts, dates, and counts
+
+Order Manager formats amounts using the currency returned for the order or return, and formats dates and counts for the app language. For example, a Canadian-dollar order can display `CA$1,416.74`. Missing currency values fall back to USD. Check the order currency when comparing records from different stores.
+
+The Create order payment preview still displays USD amounts even when another currency is selected; confirm the selected Currency separately before submission.
 
 ## Record the app version for support
 
