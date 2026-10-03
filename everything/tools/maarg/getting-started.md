@@ -41,18 +41,18 @@ The exact menu depends on installed components, permissions, and the selected re
 
 ## Identify The Installed Version
 
-Open **Hotwax Commerce > About** when your account is permitted to view it. Inspect only the information needed for the issue:
+For a strictly read-only version investigation, use **System > Dashboard** or administrator-provided release metadata. Inspect only the information needed for the issue:
 
 - **Maarg Information** identifies the instance and deployment branch/commit when available.
 - **System Information** includes the displayed framework version and runtime time zone.
-- **Component Information** lists component names, displayed versions, tag/branch information, and commit identifiers. It also reports framework and runtime revision information when available.
+- The **Components** section lists component names, displayed versions, and **Version Detail**. It also reports framework and runtime revision information when available. Avoid copying internal component-location paths.
 
 Record the relevant component and commit alongside the deployment release. Do not infer the Maarg release from the footer alone. A component's displayed version can remain unchanged while its commit has changed; a branch name such as `main` is not an immutable release identifier. An `unknown` version is an evidence gap, not proof that the component is absent.
 
 If the screen and the deployment record disagree, ask the environment operator to reconcile the installed commits with the release manifest before applying release-specific instructions. Do not upgrade the instance to make it match a guide.
 
 {% hint style="warning" %}
-The About page can also contain internal connection details, operational identifiers, and generated sign-in links. Do not share a full-page capture, copy a generated launch link, or publish the page's raw content. Transcribe only the necessary non-secret version fields into the approved incident record.
+Loading **Hotwax Commerce > About** invokes generation of a Launchpad sign-in token in the release-pinned source; it is not a strictly passive version lookup. Prefer the System dashboard or administrator-provided metadata for read-only work. About and diagnostic pages can also expose internal connection details or operational identifiers. Do not share a full-page capture, copy a generated sign-in link, or publish raw page content. Transcribe only the necessary non-secret version fields into the approved incident record.
 {% endhint %}
 
 ### Documentation Baseline And Demo Evidence
