@@ -12,7 +12,7 @@ This workflow is separate from **MDM**. Raw **Import** does not use a Data Manag
 
 ## Version, Navigation, And Verification
 
-The source baseline is **Maarg 6.4.0**, using **moqui-runtime 4.1.0**, **moqui-framework 4.2.0**, and **maarg-util 4.4.0**. The raw screens are supplied by the runtime and use the framework's entity loader/writer.
+The source baseline is **Maarg 6.4.0**, using **moqui-runtime 4.1.0**, **moqui-framework 4.2.0**, and **maarg-util 4.4.0**. The raw screens are supplied by the runtime and use the framework's entity loader/writer. The source check also includes the release build's applied Maarg-util patches, including the CreatedStamp comparison changes.
 
 Open the authorized **Tools** application, then **Entity > Import**, **Entity > Export**, or **Entity > Snapshots**. Deployment menus and mounts can differ; do not construct these addresses from an OMS screen URL. If a screen is absent or denied, ask the administrator to confirm the installed version and your intended access.
 
@@ -90,7 +90,7 @@ When a bounded comparison is authorized:
 
 The comparison has material limits:
 
-- It compares supplied **non-null** values and skips `lastUpdatedStamp`. A blank diff does not prove that an import would make no changes, especially when an empty/null input would clear data.
+- It compares supplied **non-null** values and skips `lastUpdatedStamp` and `createdStamp`. A blank diff does not prove that an import would make no changes, especially when an empty/null input would clear data.
 - It does not execute service entries or predict their results, entity-rule effects, external requests, or later constraint failures.
 - The check section constructs a separate loader; it does not apply the form's loading timeout, Dummy FKs, or Try Insert settings. It is not a rehearsal of all loading behavior.
 - It compares against the database at check time. Another process can change records before an import or selected-row update.
@@ -222,7 +222,7 @@ For an approved application of a snapshot:
 | --- | --- |
 | “No parameters specified” or an unexpected input is used | Check source precedence and clear unused fields. Do not retry an import until you know whether any work occurred. |
 | Unknown entity/field, invalid format, or incomplete key | Compare the input with installed definitions and the required format. Repair the reviewed input offline; do not invent keys or create dummy references as a shortcut. |
-| Empty Check Data diff despite an intended clear | Inspect null/empty inputs and `lastUpdatedStamp` separately; they are outside the comparison's complete coverage. |
+| Empty Check Data diff despite an intended clear | Inspect null/empty inputs, `lastUpdatedStamp`, and `createdStamp` separately; they are outside the comparison's complete coverage. |
 | Foreign-key failure | Identify the missing/invalid relationship and planned load order. Keep constraints in place while diagnosing. |
 | “File already exists” | Inspect the existing file's provenance and completeness. Choose a new approved name instead of deleting recovery evidence to make a retry succeed. |
 | “Skipping to next file,” timeout, or an unexpected count | Preserve the first error and file/job details; establish which data committed and whether work is still running before planning a bounded repair. |
@@ -238,6 +238,6 @@ Release-pinned source used for this guide:
 
 - **moqui-runtime 4.1.0:** `base-component/tools/screen/Tools/Entity/DataImport.xml`, `DataExport.xml`, and `DataSnapshot.xml` for form controls, transitions, input precedence, file handling, and snapshot job invocation.
 - **moqui-framework 4.2.0:** `framework/service/org/moqui/impl/EntityServices.xml` and `framework/data/MoquiSetupData.xml` for snapshot services and job definitions.
-- **moqui-framework 4.2.0:** `framework/src/main/groovy/org/moqui/impl/entity/EntityDataLoaderImpl.groovy`, `EntityDataWriterImpl.groovy`, `EntityValueBase.java`, and `EntityFacadeImpl.groovy` for parsing, comparison, mutation, serialization, and sequence behavior; `framework/src/main/groovy/org/moqui/impl/context/TransactionFacadeImpl.groovy` for transaction isolation; `framework/src/main/java/org/moqui/util/WebUtilities.java` for filename/location guards.
+- **moqui-framework 4.2.0:** `framework/src/main/groovy/org/moqui/impl/entity/EntityDataLoaderImpl.groovy`, `EntityDataWriterImpl.groovy`, `EntityValueBase.java`, and `EntityFacadeImpl.groovy` for parsing, comparison, mutation, serialization, and sequence behavior; `framework/src/main/groovy/org/moqui/impl/context/TransactionFacadeImpl.groovy` for transaction isolation; `framework/src/main/java/org/moqui/util/WebUtilities.java` for filename/location guards. The release build also applies **maarg-util 4.4.0** `patches/CreatedStamp.patch`, which adds `createdStamp` to fields skipped during database comparison.
 
 Still pending: representative sanitized check results; authorized XML/JSON/CSV round trips; partial-failure and duplicate-submission handling; nested records and import-option combinations; snapshot job completion on the actual node/storage topology; and an isolated, fully verified recovery exercise. No permission, throughput, cancellation, archive-integrity, or recovery guarantee should be inferred from source inspection alone.

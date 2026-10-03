@@ -171,7 +171,7 @@ Use **System > Data Document > Export** for one or more definitions. Select **Da
 
 There is **no dedicated Data Feed configuration or history screen in the standard Data Document screen tree**. Its **Data Feeds** panel only lists associations and allows adding/removing an existing feed. Inspect the feed record with the authorized generic entity tools or the component's specific administration screen.
 
-The generic Find page can query immediately when opened. Confirm that viewing the feed configuration entity is authorized and appropriately scoped before following its Find link; do not use it to explore unrelated configuration.
+Maarg-util 4.4.0 replaces the generic entity Find page and requires at least one recognized search condition. Enter the known feed ID before searching. A link carrying existing criteria can query on render, so confirm the actual scope and authorization rather than treating the parameter requirement as a record-volume limit.
 
 For the generic tools:
 
