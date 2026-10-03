@@ -1,6 +1,6 @@
 ---
 description: >-
-  Discover how Hotwax Commerce integrates with EasyPost, providing businesses of
+  Discover how HotWax Commerce integrates with EasyPost, providing businesses of
   all sizes with a streamlined shipping solution.
 ---
 
@@ -8,17 +8,17 @@ description: >-
 
 ## Introduction
 
-Hotwax Commerce integrates with EasyPost to empower businesses, ranging from small enterprises to large corporations, with a streamlined shipping solution. This integration enables users to leverage the full capabilities of EasyPost, including rate shopping across a diverse range of carriers and real-time package tracking.
+HotWax Commerce integrates with EasyPost to empower businesses, ranging from small enterprises to large corporations, with a streamlined shipping solution. This integration enables users to leverage the full capabilities of EasyPost, including rate shopping across a diverse range of carriers and real-time package tracking.
 
 ## Authentication
 
 Authentication and identification to the EasyPost API are accomplished by utilizing an API Key in every request. This API Key serves as your Basic Auth username, and no password is required. The authentication process ensures secure communication with the EasyPost API, and it is imperative to note the following details:
 
 * **Authentication Type**: EasyPost employs API Key-based authentication for requests. Each request must include the API Key as the Basic Auth username. The absence of a valid API Key or the use of an incorrect key will result in authentication failure.
-* **Security Protocol**: EasyPost mandates that all communication with the API is secured using TLS v1.2. Transport Layer Security (TLS) ensures the confidentiality and integrity of data exchanged between Hotwax Commerce and EasyPost, providing a secure environment for API interactions.
+* **Security Protocol**: EasyPost mandates that all communication with the API is secured using TLS v1.2. Transport Layer Security (TLS) ensures the confidentiality and integrity of data exchanged between HotWax Commerce and EasyPost, providing a secure environment for API interactions.
 * **HTTP Restrictions**: Requests made over HTTP are not supported. It is crucial to utilize HTTPS for all communication with the EasyPost API. Any attempt to make requests over HTTP will result in failure.
 
-By adhering to these authentication specifications, Hotwax Commerce ensures the secure and authenticated exchange of data with EasyPost. The API Key serves as the access credential, and the implementation of TLS v1.2 guarantees the confidentiality and integrity of the information transmitted during the integration process. Please refer to the following example to understand how to include the API Key in your requests:
+By adhering to these authentication specifications, HotWax Commerce ensures the secure and authenticated exchange of data with EasyPost. The API Key serves as the access credential, and the implementation of TLS v1.2 guarantees the confidentiality and integrity of the information transmitted during the integration process. Please refer to the following example to understand how to include the API Key in your requests:
 
 ```http
 POST /api/your-endpoint
@@ -26,7 +26,7 @@ Host: api.easypost.com
 Authorization: Basic YOUR_API_KEY
 ```
 
-Replace `YOUR_API_KEY` with the actual API Key provided by EasyPost for your integration. This authentication mechanism ensures a seamless and secure connection between Hotwax Commerce and the EasyPost API for shipping label generation.
+Replace `YOUR_API_KEY` with the actual API Key provided by EasyPost for your integration. This authentication mechanism ensures a seamless and secure connection between HotWax Commerce and the EasyPost API for shipping label generation.
 
 ## APIs used
 

@@ -1,9 +1,11 @@
 ---
 description: >-
- The Fulfillment App is designed for store managers and associates, providing a focused interface to easily Pick, Pack, and Ship orders. The app also includes features to create and update rejection reasons, manage carriers and shipping methods, and more.
+ Pick, pack, and ship orders in the Fulfillment App.
 ---
 
 # Fulfillment App
+
+The Fulfillment App is designed for store managers and associates, providing a focused interface to pick, pack, and ship orders. The app also includes features to create and update rejection reasons, manage carriers and shipping methods, and more.
 
 ## Key Features
 

@@ -1,25 +1,25 @@
-# Manage Facility Staff
+# Manage facility staff
 
-To effectively oversee a facility's staff, which includes roles such as warehouse picker, warehouse packer, warehouse clerk, warehouse receiver, and warehouse manager, the store manager can assign these roles to staff members in the Facilities app for any facility. Subsequently, staff members can access the HotWax Commerce apps and perform functions specific to their assigned roles. Users can use the following steps to efficiently allocate role-specific permissions to staff members for accessing HotWax Commerce and its associated applications.
+Assign staff to the facility and select the role they perform at that location.
 
-#### Add Staff
+## Add staff
 
-1. Navigate to the `Staff` section available at the bottom of the `Facility details` page. Click on `Staff Member` button, this will open a pop-up window with a list of staff members.
-2. In the `Search` bar, users can either type the staff member's name and press enter, or scroll down the list to find the desired staff member.
-3. The staff member's name and ID will be displayed, accompanied by a drop-down menu on the right.
-4. Select the staff role from the drop-down menu and click on the `save` icon to add the staff member to the facility in the selected role.
+1. Open the **Company App**.
+2. Go to `Facilities` > `Find`.
+3. Select the facility.
+4. Open the `Staff` tab.
+5. Click `Staff Member`.
+6. Search for the user.
+7. Select the facility role.
+8. Save the assignment.
 
-The added staff members will be listed, under the `Staff` section along with their:
+The staff list shows the user, assigned role, and assignment date.
 
-  * Name and ID
-  * Assigned role
-  * Date on which the staff member was added to the facility
+## Remove staff
 
-#### Remove Staff
+1. Open the `Staff` tab.
+2. Find the user.
+3. Click the remove action.
+4. Confirm the change.
 
-To remove an inactive staff member from the facility, click on the `x` button located on the right side of the staff member's name within the staff details section.
-
-{% embed url="https://youtu.be/JAL_KKJyAyU" %}
-Video: Add Staff
-{% endembed %}
-
+Removing a facility assignment leaves the user account and Security Groups unchanged.

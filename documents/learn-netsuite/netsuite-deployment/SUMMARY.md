@@ -12,7 +12,7 @@
 ## Prerequisites
 
 * [Install NetSuite Jobs](prerequisite-syncs/install-netsuite-reader.md)
-* [Product Store Settings](prerequisite-syncs/productStore-settings.md)
+* [Product Store Settings](prerequisite-syncs/productstore-settings.md)
 * [SFTP Locations](prerequisite-syncs/sftp-locations.md)
 * [Historical Customers](prerequisite-syncs/historical-customers.md)
 * [Shipping Methods](prerequisite-syncs/shipping-methods.md)

@@ -1,25 +1,40 @@
 ---
 description: >-
-  Optimize workflow by fulfilling orders in HotWax Commerce with the Fulfillment
-  App or external systems.
+  Learn how HotWax Commerce fulfills orders and updates fulfillment status to
+  Shopify.
 ---
 
-# Order Fulfillment
+# Order fulfillment
 
-Once the order is routed to the fulfillment center in HotWax Commerce, it can be fulfilled using either the HotWax Commerce Fulfillment app or an external system such as a Warehouse Management System (WMS).
+Once an order is routed to a fulfillment center in HotWax Commerce, it can be fulfilled using either the HotWax Commerce Fulfillment App or an external system such as a warehouse management system (WMS).
 
-1. **Fulfillment by HotWax Commerce Fulfillment App**
+## Fulfillment by HotWax Commerce Fulfillment App
 
-HotWax Commerce provides a Fulfillment app that enables the picking, packing, and shipping of orders from stores. After shipping, the orders are marked as 'Completed' within HotWax Commerce. To update tracking details and mark orders as 'Fulfilled' or 'Partially Fulfilled' in Shopify, the "Completed Orders" job can be scheduled in HotWax Commerce, which calls a [Shopify API](https://shopify.dev/docs/api/admin-rest/2023-04/resources/fulfillment#post-fulfillments-fulfillment-id-update-tracking).
+HotWax Commerce provides **[Fulfillment App](../../../store-operations/fulfillment/README.md)** that enables picking, packing, and shipping of orders from stores. After shipping, orders are marked as `Completed` within HotWax Commerce.
 
-2. **Fulfillment By An External System**
+## Fulfillment by an external system
 
-For orders fulfilled by an external system, HotWax Commerce only receives the fulfillment status from the external system and marks the order as 'Completed'. Once the order is marked as completed in HotWax Commerce, it sends the tracking details (if they are provided by the external system) to Shopify and marks the orders 'Fulfilled' in Shopify.
+For orders fulfilled by an external system, HotWax Commerce receives the fulfillment status from that system and marks the order as `Completed`. Once an order is marked as completed, HotWax Commerce sends any tracking details to Shopify and marks the order as `Fulfilled`.
 
-In HotWax Commerce, users can schedule the 'Completed Orders' job to generate a file containing all orders that have been completed since the last upload. This file is then uploaded to an SFTP location. HotWax Commerce subsequently uses the API to send the fulfillment status of each completed order to Shopify. Shopify processes these requests and updates the order status to 'fulfilled'.
+## Updating fulfillment status to Shopify
+
+After orders are marked as `Completed` in HotWax Commerce, the fulfillment status and tracking details need to be sent to Shopify. Here is how the fulfillment update flow works:
+
+### 1. Collecting completed orders
+Users schedule the **`poll_SystemMessageSftp_OMSFulfillmentFeed`** job in HotWax Commerce. During each run, the job collects all orders that have been completed since the last upload.
 
 {% hint style="info" %}
-It is recommended that this task be done every 30 minutes. During each run, it will collect all completed orders within the past 30 minutes. The time interval can be adjusted to meet the specific needs of the merchant.
+Run this job every 30 minutes. The interval can be adjusted to meet merchant needs.
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/completed-orders-job-config.png" alt=""><figcaption><p><em>Fig. 1: Configuration of the completed orders job in the Job Manager App</em></p></figcaption></figure>
+### 2. Retrieving fulfillment orders from Shopify
+
+For each completed order, HotWax Commerce calls the Shopify GraphQL API to retrieve the associated fulfillment orders. Shopify organizes fulfillment at the fulfillment-order level, so HotWax Commerce first fetches the fulfillment order ID and line item details using the `get#FulfillmentOrdersByOrderId` service.
+
+### 3. Creating fulfillment on Shopify
+
+HotWax Commerce then sends a GraphQL [`fulfillmentCreate` mutation](https://shopify.dev/docs/api/admin-graphql/latest/mutations/fulfillmentCreate) to Shopify. This mutation creates a fulfillment record on Shopify and marks the order as `Fulfilled` or `Partially Fulfilled`.
+
+### 4. Shopify processes the fulfillment
+
+Shopify processes the mutation and updates the order status to `Fulfilled`. If tracking details were included, they are also attached to the fulfillment record. Shopify returns a response confirming the fulfillment ID, status, and any errors.

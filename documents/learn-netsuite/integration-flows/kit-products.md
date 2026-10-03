@@ -28,12 +28,12 @@ The synchronization of kit products from NetSuite to HotWax Commerce follows a t
 
 #### SFTP Location
 
-`/home/user-sftp/netsuite/product/kit-nifi`
+`/home/{sftp-username}/netsuite/product/kit-nifi`
 
 ### Step 2: Transformation
 
 2.1 The SFTP location is:
-`/home/user-sftp/netsuite/product/kit-nifi`
+`/home/{sftp-username}/netsuite/product/kit-nifi`
 
 This file contains product SKUs, but HotWax Commerce requires its internal IDs at the time of import to read and process the data.
 
@@ -41,7 +41,7 @@ This file contains product SKUs, but HotWax Commerce requires its internal IDs a
 
 #### JSON Path
 
-`/home/user-sftp/netsuite/product/kit`
+`/home/{sftp-username}/netsuite/product/kit`
 
 ### Step 3: Import Kit and its Components in HotWax Commerce
 

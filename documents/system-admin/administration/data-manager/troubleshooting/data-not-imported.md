@@ -1,75 +1,46 @@
 ---
-description: >-
-  Troubleshoot data import issues in the HC OMS to ensure successful data
-  loading and processing.
+description: Investigate a missing, pending, or failed Data Manager import.
 ---
 
-# Data not imported
+# Troubleshoot data that was not imported
 
-## Scenario 1: Data Not Imported in OMS
+Start in Job Manager with the exact file or log identifier.
 
-You scheduled a job to import data into OMS, but the imported data is not loaded. This could be due to the job `Process bulk imported files` not being scheduled in the Job Manager application.
+## Check the submitted file
 
-### Steps to Resolve
+1. Open `MDM` > `File history`.
+2. Search for the file, configuration, or log identifier.
+3. Open the file.
+4. Review its status and timeline.
+5. Compare `Original` with `Errors`.
 
-1. **Verify Job Status:**
+If the file does not appear, confirm that the source system submitted it to the expected configuration.
 
-* Check the status of the job that imports data in bulk. Ensure it is scheduled and completed successfully in the Job Manager app.
+## Check queued processing
 
-2. **Schedule `Process bulk imported files`:**
+Queued files depend on the bulk-file processing service job.
 
-* Navigate to the Miscellaneous page in the Job Manager application.
-* Locate the `Process bulk imported files` job and schedule it.
-* The suggested frequency is 15 minutes, but adjust based on specific requirements.
+1. Open `Catalog` in Job Manager.
+2. Search for the bulk imported file processing job used by the instance.
+3. Confirm its pause state and schedule.
+4. Open `Run history`.
+5. Review the latest run, parameters, and linked data logs.
 
-3. **Check Data Processing:**
+See [Troubleshoot file imports](../../../../retail-operations/workflow/job-management/troubleshooting/file-imports.md).
 
-* After scheduling the `Process bulk imported files` job, observe the Data Manager logs in the EXIM page of OMS to confirm that the imported data is being processed.
+## Check the file format
 
-4. **Check Data Manager Logs in OMS:**
+Download the original file from File Details and compare it with the format required by the configuration.
 
-* Go to Hamburger Menu > MDM > EXIM > Import section.
-* Navigate to the import menu to find the files you have imported in OMS.
-* Check the status of the files; they should transition from Pending to Finished.
+When middleware transforms the file, review the transformation flow with the integration owner. Do not change the Data Manager service to compensate for an unconfirmed source-format problem.
 
-## Scenario 2: Incorrect File Format
+## Check empty input
 
-When importing data from external systems into HotWax Commerce, files must adhere to specific formats supported by the system. Failure to do so can result in import failures and data discrepancies.
+An import can finish without creating records when the submitted file contains no data rows.
 
-### Steps to Resolve
+1. Open the file detail.
+2. Review `Original`.
+3. Confirm that data rows exist after the header.
+4. Check the source export when the file is empty.
 
-1. **Verification Steps:**
-
-* Navigate to the Exim page from the MDM section via the Hamburger Menu.
-* Select the relevant import type (e.g., inventory import) to review import logs.
-* Identify and inspect the failed records column in the logs for error details.
-
-2. **Checking File Format:**
-
-* Download the uploaded file from the import log.
-* Verify that the file format is CSV, as HotWax Commerce supports CSV format for data imports.
-* If the format is incorrect (e.g., XLSX), investigate the data transformation process:
-  * If handled by middleware, review the transformation flow.
-  * Contact HotWax Commerce support to check Nifi flow if handled internally.
-
-## Scenario 3: Empty Records
-
-Empty records in an imported file indicate that the expected data from the external system is not present or properly generated, leading to failed imports in HotWax Commerce.
-
-### Steps to Resolve
-
-1. **Verification Steps:**
-
-* Navigate to the Exim page from the MDM section via the Hamburger Menu.
-* Select the relevant import type (e.g., inventory import) to review import logs.
-* Verify if the imported file contains any data records.
-
-2. **Checking File Records:**
-
-* If the file format is correct (CSV), review imported records from the file.
-* Ensure the external system generates data records:
-  * Access the SFTP path specified for file uploads.
-  * Refer to [user manuals](data-import-errors.md) for correct file paths and SFTP settings.
-  * Verify the existence of records in the SFTP directory.
-
-<figure><img src="../../../.gitbook/assets/process-bulk-imported-files-job.png" alt=""><figcaption></figcaption></figure>
+Submit a corrected file only after the source produces the expected records.

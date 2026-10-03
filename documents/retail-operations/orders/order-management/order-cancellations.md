@@ -21,10 +21,11 @@ When customers request order cancellations from Shopify or CSR teams cancel orde
 
 To sync cancellation updates from Shopify to HotWax Commerce, there are two options available: webhooks and batch jobs. By subscribing to the `Canceled Order` webhook, customers can cancel orders in real-time. However, it should be noted that Shopify webhooks may only sometimes be reliable. Therefore, it is recommended to schedule the `Canceled Order` Job. The canceled order job can be scheduled from the HotWax Commerce Job Manager App.
 
-1. Navigate to the Order section in the job manager app.
-2. Open the job card titled Canceled Order.
-3. Select the order run time and schedule.
-4. Save the Changes, this will schedule the job to import the canceled orders.
+1. Open `Catalog` in Job Manager.
+2. Search for the `Canceled Order` job used by the instance.
+3. Open the job.
+4. Review its parameters and schedule.
+5. Save the required schedule.
 
 ### Partial Order Cancellations
 
@@ -36,10 +37,13 @@ When customers request to remove any item from the order or the CSR team cancels
 
 For partial cancellations, the order status in Shopify does not change, only the last updated date for the order changes. HotWax Commerce partially cancels the order through the following steps:
 
-1. Navigate to the Order section in the job manager app.
-2. Open the job card titled Canceled Item.
-3. Select the order run time and schedule.
-4. Save the Changes, this will schedule the job to import the canceled items.
+1. Open `Catalog` in Job Manager.
+2. Search for the `Canceled Item` job used by the instance.
+3. Open the job.
+4. Review its parameters and schedule.
+5. Save the required schedule.
+
+See [Manage a job](../../workflow/job-management/jobs/job-details.md) for current scheduling instructions.
 
 For more details on how canceled orders are imported, refer to the Shopify-HotWax Commerce Integration document.
 
@@ -60,4 +64,3 @@ If the order is packed, the CSR team should verify with the fulfillment team tha
 ### Partial Cancellation in HotWax Commerce
 
 When Partial order cancellation happens in HotWax commerce, the order item is removed from the fulfillment app, and its inventory is corrected similarly to complete order cancellation. The order status will remain as per the other items, such as created, approved, or completed, only the order item status is changed to canceled which can be visible on the order details page against the line item which is canceled.
-

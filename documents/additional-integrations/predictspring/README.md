@@ -15,4 +15,4 @@ In the case that the order id is unavailable: the associate can search for the o
 ### 2. PredictSpring returns
 
 * If HotWax is the order master: the return will be handled the same way as BORIS.
-* If Hotwax is not the order master: the associate handles the return in PredictSpring. If an immediate inventory change needs to be logged, it can be sent to the inventory variance log by the store.
+* If HotWax is not the order master: the associate handles the return in PredictSpring. If an immediate inventory change needs to be logged, it can be sent to the inventory variance log by the store.

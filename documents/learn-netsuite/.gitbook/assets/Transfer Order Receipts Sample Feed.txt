@@ -1,58 +1,43 @@
-﻿[ {
-  "order_id" : "8305076",
-  "items" : [ {
-    "line_id" : "1",
-    "quantity" : "0"
-  }, {
-    "line_id" : "4",
-    "quantity" : "0"
-  }, {
-    "line_id" : "7",
-    "quantity" : "0"
-  }, {
-    "line_id" : "1",
-    "quantity" : "0"
-  }, {
-    "line_id" : "4",
-    "quantity" : "0"
-  }, {
-    "line_id" : "7",
-    "quantity" : "0"
-  } ]
-}, {
-  "order_id" : "8305078",
-  "items" : [ {
-    "line_id" : "4",
-    "quantity" : "0"
-  }, {
-    "line_id" : "1",
-    "quantity" : "0"
-  }, {
-    "line_id" : "4",
-    "quantity" : "0"
-  } ]
-}, {
-  "order_id" : "8305080",
-  "items" : [ {
-    "line_id" : "1",
-    "quantity" : "0"
-  } ]
-}, {
-  "order_id" : "10460608",
-  "items" : [ {
-    "line_id" : "1",
-    "quantity" : "0"
-  }, {
-    "line_id" : "4",
-    "quantity" : "0"
-  }, {
-    "line_id" : "7",
-    "quantity" : "0"
-  } ]
-}, {
-  "order_id" : "10460610",
-  "items" : [ {
-    "line_id" : "1",
-    "quantity" : "0"
-  } ]
-} ]
+[
+  {
+    "orderId": "8305076",
+    "fulfillmentId": "920410",
+    "shipmentId": "M101188",
+    "items": [
+      {
+        "lineId": "1",
+        "quantity": 10
+      },
+      {
+        "lineId": "4",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "orderId": "8305078",
+    "fulfillmentId": "920411",
+    "shipmentId": "M101154",
+    "items": [
+      {
+        "lineId": "1",
+        "quantity": 15
+      },
+      {
+        "lineId": "4",
+        "quantity": 8
+      }
+    ]
+  },
+  {
+    "orderId": "8305080",
+    "fulfillmentId": "920412",
+    "shipmentId": "M101982",
+    "items": [
+      {
+        "lineId": "1",
+        "quantity": 20
+      }
+    ]
+  }
+]

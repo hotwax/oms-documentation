@@ -101,7 +101,7 @@ To create a return for a customer's order that has already been fulfilled and co
 
 | **Parameter Name**| **Description**                                                     |
 |------------------------------|-----------------------------------------------------------------|
-| externalId                   | Order identification in the external system (e.g. Shopify or Netsuite)          |
+| externalId                   | Order identification in the external system (e.g. Shopify or NetSuite)          |
 | customerId                   | Customer’s Identification in HotWax Commerce (partyId)                       |
 | companyId                    | Identification for the Company owning the brand |
 | currencyCode                 | Currency unit of measurement (USD, INR, YEN, etc.)            |
@@ -123,7 +123,7 @@ To create a return for a customer's order that has already been fulfilled and co
 | id (in item list)            | Product id for that item                                        |
 | price                        | Price of the individual item                                    |
 | quantity                     | Product Quantity                                                |
-| orderItemExternalId (in item list) | Order Item id for external system (Shopify or Netsuite) |
+| orderItemExternalId (in item list) | Order Item id for external system (Shopify or NetSuite) |
 | itemAdjustments              | Record of adjustments (taxes or discounts) applied on the particular item |
 | type                         | Type of return adjustments                                      |
 | returnAdjustments            | Record of adjustments applied on the return                     |

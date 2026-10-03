@@ -1,19 +1,17 @@
 # Table of contents
 
-## Shopify Integration
+## Shopify reference
 
 * [Introduction](README.md)
 * [Products](shopify-integration/products/README.md)
-  * [Product Download](shopify-integration/products/download-products.md)
+  * [Product Sync from Shopify](shopify-integration/products/download-products.md)
+  * [Product Sync Console](shopify-integration/products/product-sync-console.md)
   * [Updating Product Details](shopify-integration/products/update-product-details.md)
   * [Deleting Products](shopify-integration/products/delete-products.md)
-  * [Creating/Deleting Products with Shopify Webhooks](shopify-integration/products/products-shopify-webhooks.md)
-  * [Gift Cards Download](shopify-integration/products/download-gift-cards.md)
-  * [Kit Products Download](shopify-integration/products/download-kit-products.md)
-  * [Product Synchronization for Multiple Shopify Stores](shopify-integration/multiple-store-setup.md)
+  * [Gift Card Product Sync](shopify-integration/products/download-gift-cards.md)
+  * [Kit Product Sync](shopify-integration/products/download-kit-products.md)
 * [Inventory](shopify-integration/inventory/README.md)
   * [Inventory Synchronization](shopify-integration/inventory/inventory-sync.md)
-  * [Location Mapping](shopify-integration/inventory/location-mapping.md)
   * [Inventory Synchronization of Gift Cards](shopify-integration/inventory/inventory-sync-giftcards.md)
   * [Inventory Synchronization of Kit Products](shopify-integration/inventory/inventory-sync-kitproducts.md)
 * [Orders](shopify-integration/orders/README.md)
@@ -40,30 +38,11 @@
   * [Import Returns from Shopify](shopify-integration/order-return/import-returns-from-shopify.md)
   * [Shopify POS Exchanges](shopify-integration/order-return/shopify-pos-exchanges.md)
 
-## Setup Shopify
+## Troubleshooting reference
 
-* [Install HotWax Commerce App](setup-shopify/README.md)
-* [Multiple Store Setup](shopify-integration/multiple-store-setup.md)
-* [Required Permissions from Shopify](setup-shopify/shopify-permissions.md)
-* [Enable BOPIS/Pre-order on Shopify](setup-shopify/enable-bopis-preorder-scripts.md)
-* [Integration Mappings](setup-shopify/integration-mappings/README.md)
-  * [Locations](setup-shopify/integration-mappings/locations.md)
-  * [Shipping Method](setup-shopify/integration-mappings/shipping-method.md)
-  * [Sales channel](setup-shopify/integration-mappings/sales-channel.md)
-  * [Payment Method](setup-shopify/integration-mappings/payment-method-type.md)
-  * [Product Type](setup-shopify/integration-mappings/product-type.md)
-* [Troubleshooting](setup-shopify/troubleshooting/README.md)
-  * [Facility Mapping Discrepancy](setup-shopify/troubleshooting/facility-mapping-discrepancy.md)
-
-## Synchronization Flows
-
-* [Initial Product Sync](initial-sync/README.md)
-* [Initial Order Sync](initial-sync/import-orders.md)
-* [Initial Inventory Sync](initial-sync/upload-inventory.md)
-* [Troubleshooting](initial-sync/troubleshooting/README.md)
-  * [Product Sync](initial-sync/troubleshooting/products.md)
-  * [Order Sync](initial-sync/troubleshooting/order.md)
-  * [Inventory Sync](initial-sync/troubleshooting/inventory.md)
+* [Order Sync](initial-sync/troubleshooting/order.md)
+* [Inventory Sync](initial-sync/troubleshooting/inventory.md)
+* [Shopify Solr Search](initial-sync/troubleshooting/shopify-solr-search.md)
 
 ## Additional resources
 

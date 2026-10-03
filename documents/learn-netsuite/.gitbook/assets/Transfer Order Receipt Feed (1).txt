@@ -1,11 +1,19 @@
-﻿[ {
- "order_id" : "79274",
- "fulfillment_id" : "78268",
- "items" : [ {
-   "line_id" : "9",
-   "quantity" : "10"
- }, {
-   "line_id" : "11",
-   "quantity" : "8"
- } ]
-} ]
+﻿[
+  {
+    "shipmentId": "M101174",
+    "fulfillmentId": "337604",
+    "orderId": "337603",
+    "items": [
+      {
+        "lineId": "2",
+        "quantity": 25,
+        "productId": "1871"
+      },
+      {
+        "lineId": "5",
+        "quantity": 15,
+        "productId": "2577"
+      }
+    ]
+  }
+]

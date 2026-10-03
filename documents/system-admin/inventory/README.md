@@ -1,57 +1,62 @@
 ---
-description: >-
-  Efficiently manage inventory across multiple sales channels with HotWax
-  Commerce's Facilities App.
+description: Set up inventory channels and publish physical and aggregate inventory to Shopify.
 ---
 
-# Multichannel inventory setup
+# Set up multichannel inventory
 
-Managing inventory across multiple sales channels is crucial for retail brands to avoid overselling, and ensure efficient order fulfillment. HotWax Commerce addresses this challenge by introducing the capability to manage multiple Available-to-Promise (ATP) inventories for each sales channel. This feature allows retail brands to allocate separate inventories for different channels, minimizing the risk of penalties for delayed fulfillment or overselling.
+Use the Order Routing Rules and Company apps together to set up multichannel inventory:
 
-With the `Facilities App` in HotWax Commerce, retail brands can create distinct `Sales Channel Groups` for each sales channel. Facilities like warehouses and retail stores can be assigned to specific groups, enabling brands to control which inventory from which location is available for sale on each channel. This capability streamlines inventory management, reduces operational complexity, and enhances workflow efficiency for retail brands operating in diverse sales environments.
+* Use `Sourcing` in the **Order Routing Rules** app to define inventory channels, assign facilities, and configure the rules that calculate online available-to-promise inventory.
+* For connections using the Company inventory-event model, use `Inventory sync` in the **Company App** to map a channel to a Shopify aggregate location, monitor outbound events and jobs, and reconcile inventory.
 
-**Step-by-Step Usage Instructions:**
+This page covers outbound HotWax-to-Shopify publication after cutover. For the one-time inbound Shopify-to-HotWax starting inventory seed, follow [Chapter 8 of Set up HotWax Commerce with Shopify](../administration/company/product-store-onboarding.md#8-seed-starting-inventory-from-shopify).
 
-1. **Access Facility Group Page:**
-   * Log in to the `Facilities App` from the Launchpad.
-   * Navigate to the `Facility Group` [page](../administration/facilities/manage-groups.md) within the `Facilities App`.
-2. **Create New Group:**
-   * Scroll to the bottom of the page and click on the `Create group` button to create a new group for the sales channel you want to set up inventory.
-3. **Enter Group Details:**
-   * Fill in the required details such as `Name`, `Internal ID of the Facility Group`, and `Description`.
-   * Select the system group type as `Online Facility Group` to indicate that this facility group would be used to sell inventory on online channels. The facility groups with the `Online facility Groups` type are also visible in the `sell online` card on the `facility details` [page](./../administration/facilities/manage-facility-details.md#online-fulfillment-settings).
-4. **Save Group:**
-   * Click on the `+` icon to save the newly created inventory group.
-5. **Quick Edit Facilities:**
-   * Once the facility is created, click on the number displayed on the facility card corresponding to the created group.
+Before you schedule publication, confirm the model deployed for the Shopify connection. The Order Routing `Publish` tab configures the `JOB_UL_INV` publishing path. Company `Inventory sync` configures the event-driven physical-QOH and aggregate-ATP paths. Do not activate both paths for the same Shopify target unless the implementation plan requires them.
 
-<figure><img src="../.gitbook/assets/facility-group-quick-edit.png" alt=""><figcaption></figcaption></figure>
+## Define an inventory channel
 
-* Select `Quick Edit` to efficiently manage facilities associated with this group.
+1. Open `Sourcing` > `Channels` in the Order Routing Rules app.
+2. Create or select the channel facility group.
+3. Confirm every facility that should contribute inventory.
+4. Link the configuration facility used by channel-level sourcing rules.
+5. Review threshold, safety stock, pickup, shipping, and brokering rules for the channel.
 
-6. **Add Facilities:**
+See [Create inventory channels](../../retail-operations/inventory/available-to-promise/create-channels.md) for detailed steps.
 
-* Add all relevant facilities to the inventory group you want to include for selling inventory on the chosen channel.
-* Facilities can also be added from the `Facility Details` page by turning on the toggle for that channel in the `sell online` card, which will automatically add that facility to the online facility group of that channel.
+## Choose the Shopify target model
 
-7. **Navigate to the Job Manager App:**
+Map each Shopify location to the inventory model that it represents:
 
-* Access the `Job Manager` app from the Launchpad.
+| Target model | Mapping |
+| --- | --- |
+| Physical location | One Shopify location maps to one HotWax facility. Shopify receives that facility's QOH. |
+| Aggregate location | One Shopify location maps to an inventory channel. Shopify receives ATP aggregated from the channel's facilities. |
 
-8. **Select Channel:**
+Do not use a physical Shopify location as an aggregate target. Create or choose a location that does not already back a HotWax facility or another active inventory channel.
 
-* Select the desired channel, such as Shopify or Amazon from the quick switcher located at the left bottom of the page.
+## Set up event-driven Shopify publication in Company
 
-9. **Schedule Inventory Synchronization Jobs:**
+For a connection using the Company inventory-event model:
 
-* HotWax Commerce has [two inventory synchronization jobs](/documents/retail-operations/workflow/job-workflows/inventory.md) : `Hard Sync` and `Upload Recent Inventory Changes`.
-* Schedule both jobs by specifying the Facility's internal ID in the `facilityGroupId` parameter.
-* This ensures that the inventory for the chosen channel is updated according to the `facilities` added to the corresponding `facility group`.
+1. Open the **Company App**.
+2. Select `Shopify` and open the connection.
+3. Select `Inventory sync`.
+4. Select `Set up channel`.
+5. Choose the channel facility group.
+6. Choose the Shopify aggregate location.
+7. Create the channel.
+8. Review the jobs created in a paused state.
+9. Run a full aggregate ATP reset before you rely on incremental events.
+10. Confirm that an active shared sender covers `ShopifyInventoryAdjustment`, or set up the approved dedicated inventory sender.
+11. Activate the approved publisher and reset schedules.
+12. Keep the manual discard job paused and unscheduled.
 
-By following these steps, users can efficiently set up multi-channel inventory management within HotWax Commerce, enabling seamless synchronization of inventory across various online sales channels.
+See [Monitor Shopify inventory sync](../administration/company/manage-shopify-inventory-sync.md) for channel setup, real-time controls, job monitoring, event history, and reconciliation.
 
-{% hint style="info" %}
-Whenever a new facility is added to an existing online facility group, the Hard Sync job needs to be scheduled to ensure that inventory of that facility is added to the ATP of that sales channel
-{% endhint %}
+## Reconcile the correct inventory path
 
-***
+Use `Reset physical location QOH` when a Shopify location mapped to one HotWax facility is stale. Use the affected channel's `Reset aggregate ATP` job when an aggregate Shopify location is stale.
+
+Physical changes skipped while the shop-specific push is off and aggregate changes skipped while an individual event source is off are not replayed. Turn the control back on, then run the correct full reset for every affected target.
+
+When the OMS-wide `Inventory channel event updates` feed is in manual mode, reconcile aggregate ATP before you enable real-time updates, then restart every OMS node so Moqui registers the feed.

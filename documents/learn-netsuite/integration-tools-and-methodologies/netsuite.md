@@ -28,7 +28,7 @@ When it comes to exporting data from NetSuite, we have three primary methodologi
 * The Search Task is remarkably fast; it swiftly searches for the required data and creates files containing millions of records within seconds.
 * It stores these files in the NetSuite [File Cabinet](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/chapter\_N541319.html#File-Cabinet-Overview). However, an additional Scheduled Suite Script is needed to transfer the files from the NetSuite File Manager to the SFTP server, where HotWax Commerce jobs can access them.
 
-### Importing Data into Netsuite
+### Importing Data into NetSuite
 
 Just as we have methodologies for exporting data, we have three approaches for importing data into NetSuite:
 

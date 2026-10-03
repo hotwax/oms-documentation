@@ -1,50 +1,92 @@
-# Test Drive
+---
+description: Route a selected order through a saved routing group and review the result.
+---
 
-The Test Drive feature is used to test different types of orders to verify that all routing flows are working as expected.
+# Test a routing group
 
-**What Can Be Tested**
-- **Brokering Run** (test a full group of routings)  
-- **Routing Rule** (test one routing and its rules)  
-- **Inventory Rule** (see how stock levels and ATP impact decisions)
+Use `Test drive` to route a selected order through a saved routing group and review the routing and routing rule that handled it.
 
-## Pause Scheduled Brokering
-While using the Test Drive feature, scheduled brokering stops temporarily. This can be done using the "Pause scheduled brokering" toggle present on the Test Drive card. This toggle turns off scheduled brokering for that product store, preventing the system from automatically routing orders.  
+{% hint style="danger" %}
+Test Drive performs live HotWax Commerce Omnichannel Order Management System (OMS) inventory allocation. It is not a simulation. Reset every order that you route in Test Drive before you try another order or exit test mode.
+{% endhint %}
 
-The toggle also shows how many other users are currently running a Test Drive session. This helps avoid conflicts, especially when multiple team members are testing at the same time. Showing active sessions helps prevent anyone from accidentally turning scheduled brokering back on while others are still working in the test environment.
+{% hint style="danger" %}
+Test Drive is disabled by default. The current backend implementation does not yet enforce the required authorization contract for its routing and reset operations. Keep the feature disabled until an administrator has secured and verified both operations. The app's enablement setting records an operator decision; it does not validate backend security at runtime.
+{% endhint %}
 
-## Test Routing Group
-On a Routing Run page, a `Test Drive` button will appear just below the description.
+## Check availability
 
-### Accessing the Test Drive Interface
-Selecting the button opens the Test Drive interface, where all routing and inventory rules linked to the selected run are displayed. A search bar is available to find orders.
+The `Test drive` card appears when:
 
-### Viewing Order Details
-Selecting Test Order opens the order details. This includes the order name, internal ID, the facility or parking where the order currently exists, whether it is in the brokering queue or at a specific facility, the carrier partner, and the delivery type, such as standard or next-day.  
+* your deployment has enabled the feature; and
+* your user has the `ROUTING_TEST_DRIVE_VIEW` permission.
 
-If the order is not yet brokered, the routings eligible to broker the order will be highlighted. If the order is already brokered, the routing and rule that were used will be highlighted.
+The `Test drive` button remains disabled while the routing group is new or has unsaved changes. After you open Test Drive, the page also requires facility reference data and a verified Test Drive session for the current user and product store.
 
-### Brokering and Resetting an Order
-A `Broker Order` button is available. Selecting this brokers the order using the rules from the selected brokering run.  
+If the card is not available or the page returns to the editor, contact your HotWax Commerce administrator. Do not use a scheduled or manual production run as a substitute for a controlled test.
 
-To test the order again, the `Reset Order` button can be used. This moves the order from the allocated facilities back to the parking facility it originally came from.  
+## Prepare a test
 
-The rejection reason will state that it was part of a brokering test drive. No variance will be recorded when an order is reset.
+1. Open the routing group that you want to test.
+2. Save or discard every pending change.
+3. Confirm that the routings and routing rules you expect to test have `Active` status.
+4. Click `Test drive`.
 
-### Understanding Brokering Decisions
-The items in the order appear in separate cards based on ship groups. Each card shows the reason why those items were brokered to a specific facility.  
+The test workspace displays the routing group, its routings, and its routing rules.
 
-Each item also displays the Available To Promise (ATP) and Quantity On Hand (QoH) at the facility.
+## Select an order
 
-### View configuration details
-To view the details of a routing and or a routing rule, click the `details` button to show the configuration of the selected routing or routing rule. If a filter does not match the test order, an error icon will appear on that filter.
+1. Search by order ID, product ID, or customer name.
+2. Click `Test Order` for the required order.
+3. If the order has more than one ship group, select the ship group that you want to test.
+4. Review the order items and shipping method.
 
-## Test Single Routing
-To test a single routing instead of a group, a specific routing can be selected from the order batch.  
-Inside the routing, clicking the `Test` button will show an order search bar.  
+The workspace highlights routings that match the order information available to Test Drive. Some filter checks depend on backend routing results, so treat the completed routing attempt as the source of truth.
 
-Once an order is selected, the app checks if the selected routing can broker the order based on its filters. If a filter is blocking the selected order from qualifying in the routing, Test Drive will flag those filters.  
-If the order is brokered, the ship group card will display the routing rule that allocated the items.
+## Route the order
 
-## Testing Inventory Rule
-To test an individual inventory rule, select any rule to test. After selecting, a `Test` button will appear on the configuration page. Clicking the `Test` button opens the Test Drive interface. In the interface, search for an order and check if the inventory rule is working as expected.
+1. Click `Broker Order`.
+2. Wait for the operation to finish.
+3. Review the highlighted routing and routing rule.
+4. Review the routing decision message, allocated facility, available-to-promise (ATP) inventory, quantity on hand (QOH), and item status.
 
+If the order does not qualify, review the routing status and order filters. If no inventory is found, review the routing rule's facility filters, sort options, and unavailable-item actions.
+
+## Test a warehouse-to-store fallback
+
+Use a controlled representative order with one item at quantity 1. Before the test, confirm that the warehouse group has no usable ATP for the item and an approved store has 12 ATP. Use a saved routing group where the first routing rule tries warehouses and sends unavailable items to `Next rule`, and the second rule tries stores with `Safety stock` set to 10.
+
+After you click `Broker Order`, check the observed result:
+
+* The expected routing is highlighted.
+* The warehouse rule does not allocate the item.
+* The store fallback rule is highlighted.
+* The allocated facility is the approved store.
+* The result shows the routing decision message, ATP, QOH, and item status.
+
+The observed routing result remains the source of truth. Other active filters or backend behavior can change the result. Test Drive shows inventory for the allocated facility after routing. It does not compare the pre-routing balances of both candidates, so confirm those values separately before the test.
+
+When the test is complete:
+
+1. Select `Reset order`.
+2. Confirm `Reset order` in the dialog.
+3. Wait for the control to disappear before you try another order or exit.
+4. Stop and record the existing diagnostic identifiers if reset fails.
+
+For the broader test-and-refine workflow, see [Test and refine a strategy](use-cases.md#test-and-refine-a-strategy).
+
+## Reset the tested order
+
+1. Confirm that the displayed order and ship group are the ones you tested.
+2. Click `Reset order`.
+3. Read the confirmation message.
+4. Click `Reset order` in the dialog.
+5. Wait for the reset request to complete and confirm that the `Reset order` control disappears.
+
+Do not click `Try another order` or `Exit test mode` until the reset completes. The app blocks navigation when it detects a Test Drive allocation that still requires a reset.
+
+The disappearing control acknowledges the backend reset response. It does not independently read the current OMS allocation state.
+
+{% hint style="warning" %}
+If reset fails, stop testing and record the order ID, ship group sequence ID, allocated facility, routing group ID, and error message. Ask an OMS administrator to review the live allocation before you continue.
+{% endhint %}

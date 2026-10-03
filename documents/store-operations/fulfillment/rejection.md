@@ -90,7 +90,7 @@ The table below lists the default rejection reasons and their assigned types, wh
 | ---------------- | ---------------- | ------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------- |
 | NOT IN STOCK     | REPORT\_ALL\_VAR | Sets ATP and QOH inventory to 0 for the rejected product.                      | Prevents new orders until the product is restocked.                                                       |
 | MISMATCH         | REPORT\_VAR      | Decreases ATP and QOH inventory by the rejected quantity.                      | Indicates the product is still in stock but unavailable for orders requiring the rejected size or color.  |
-| DAMAGE           | REPORT\_VAR      | Decreases ATP inventory by the rejected quantity, while QOH remains unchanged. | Shows the product is in stock but damaged and unsellable.                                                 |
+| DAMAGE           | REPORT\_VAR      | Decreases ATP inventory by the rejected quantity, and also decreases QOH when `Adjust QOH Along with ATP on Rejection` is enabled. | Shows the product is in stock but damaged and unsellable.                                                 |
 | NO VARIANCE      | REPORT\_NO\_VAR  | Does not affect either ATP or QOH inventory.                                   | Useful for scenarios where inventory levels remain unchanged, e.g., canceled orders without stock issues. |
 
 ## Adjust QOH Along with ATP on Rejection

@@ -1,5 +1,5 @@
 ---
-description: Learn how HotWax Commerce synchronizes order information from shopify.
+description: Learn how HotWax Commerce synchronizes order information from Shopify.
 ---
 
 # Orders

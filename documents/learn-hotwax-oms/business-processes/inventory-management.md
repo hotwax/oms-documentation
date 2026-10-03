@@ -80,15 +80,39 @@ In most scenarios, purchase orders are received at the warehouse location, and s
 
 All other features, such as receiving extra items or handling discrepancies, are also offered during the purchase order receiving process, just as they are with inbound shipments. The primary difference is that when you are receiving a purchase order instead of a shipment, you can receive it in parts, unlike shipments which must be received in one go.
 
-### Directed Cycle Count
+### Types of cycle count
 
-Retailers aiming for 98% to 99% inventory accuracy, regularly perform cycle counts at their locations to maintain up to date inventory records. Cycle counting is an important inventory management business process for these retailers and should be performed weekly or monthly, depending on the specific needs of the store.
+Retailers aiming for 98% to 99% inventory accuracy regularly perform cycle counts at their locations to maintain up to date inventory records. Cycle counting is an important inventory management business process for these retailers and should be performed weekly or monthly, depending on the specific needs of the store.
 
 HotWax Commerce provides a dedicated Cycle Count App for retailers that helps them create, assign, schedule and perform cycle counts. What differentiates the app is its role-based interface, operations teams use it to create, assign and review submitted counts, while store associates use it to scan and record item quantities during the count.
 
 <figure><img src="../.gitbook/assets/cycle-count-sync.png" alt=""><figcaption><p>Cycle count sync</p></figcaption></figure>
 
-#### Creating & Assigning Cycle Count
+There are two types of cycle count:
+
+#### Hard count
+A hard count is a comprehensive inventory verification process in which every product present in a facility is physically counted. No product is excluded. The goal is to establish a comprehensive and accurate record of all on-hand inventory.
+
+How it works:
+
+During a Hard Count, store associates are assigned to count every item in the facility. The system generates a blank count, requiring associates to record every item they encounter. Once submitted, the system compares counted quantities against recorded system quantities and calculates variance for each product.
+
+Example:
+
+A retail apparel store closes at the end of December for an annual inventory audit. Store associates are divided into teams, each assigned to a section of the store. Over the course of one day, every product — across all categories, sizes, and locations — is physically counted and recorded. The totals are then submitted to the system, which identifies discrepancies between the counted quantities and the system quantities. This entire process constitutes a Hard Count.
+
+#### Directed count
+A directed count is a targeted inventory verification process in which only specific, pre-selected products are counted. Rather than auditing the entire facility, the count is directed toward particular items that have been identified for verification.
+
+How it works:
+
+Before a Directed Count is created, the administrator identifies the specific products to be counted and lists their SKUs. These SKUs are entered into the system through the bulk upload file and the system generates a count that includes only those products. When the store associate opens the count, they see only the listed items. No other products are included.
+
+Example:
+
+A store manager at the Broadway location notices that a particular sneaker model has been showing a system quantity of 15 units for the past two weeks, but store associates report the shelf appears nearly empty. The manager creates a Directed Count for that specific SKU, along with two other products that had discrepancies in the previous count. Associates are directed to count only those three products. The count is submitted, the variance is reviewed, and the system quantity is corrected accordingly.
+
+#### Creating & assigning cycle count
 
 Cycle counts are performed for multiple reasons. Many retailers have the SOP for scheduling cycle counts regularly every week or month. Counts are also commonly initiated after high-volume periods, such as Black Friday, to reconcile actual inventory with recorded levels. Stores reporting higher order rejections may be assigned counts to investigate potential inventory discrepancies.
 

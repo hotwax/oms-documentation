@@ -23,5 +23,5 @@ The Search Task is similar to NetSuite's Saved Search, with additional features 
 
 1. **High-Speed Searches:** The Search Task is optimized for speed, making it highly efficient for synchronizing large volumes of data.
 2. **Versatile Use:** Developers can use SavedSearchIDs to execute specific searches, similar to Saved Searches.
-3. **Efficient Data Export:** The task fetches the results of the saved search and exports them to a CSV file and automatically puts it in the Netsuite File Cabinet at very fast speed.
+3. **Efficient Data Export:** The task fetches the results of the saved search and exports them to a CSV file and automatically puts it in the NetSuite File Cabinet at very fast speed.
 4. **Advantages:** It offers several advantages, including a simplified and efficient way to execute searches and export data. Compared to methods like using Map/Reduce script, it has shown impressive performance improvements, notably in scenarios involving the export of large datasets. We will discuss this further in which scenarios we have used this in our integration.

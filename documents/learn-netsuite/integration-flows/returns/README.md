@@ -22,7 +22,7 @@ Whenever an online return is processed in NetSuite through HotWax it follows the
 
 1. The In Progress return is posted to NetSuite as an RMA against the order the customer is returning
 2. The RMA is received at the warehouse
-3. The receipt confimration is used to issue a refund to the customer
+3. The receipt confirmation issues a refund to the customer
 
 This document will break down exactly how HotWax integrates with NetSuite to help execute each of these steps.
 
@@ -170,7 +170,7 @@ Suppose a customer initiates a return for a $100 item and chooses to exchange it
 
 ### Handling Returns for Older Orders
 
-Retailers' return policies can vary, ranging from one to several months. To accommodate future returns, HotWax imports historical orders from Shopify. However, some retailers accept returns for orders placed over a year ago. If a retailer starts using HotWax Commerce within that year and lacks historical orders in the OMS, here’s how HotWax handles such cases:
+Retailers' return policies can vary, ranging from one to several months. To accommodate future returns, HotWax imports historical orders from Shopify. However, some retailers accept returns for orders placed over a year ago. If a retailer starts using HotWax Commerce within that same year and lacks historical orders in the OMS, here’s how HotWax handles such cases:
 
 #### 1. Matching Shopify and NetSuite order IDs
 

@@ -18,7 +18,7 @@ It's worth noting that while NetSuite boasts a plethora of integration tools, ou
 
 ## Types of SuiteScripts
 
-Netsuite supports multiple types of Suite Scripts. We have used two types of scripts in our integration. They are:
+NetSuite supports multiple types of Suite Scripts. We have used two types of scripts in our integration. They are:
 
 **Scheduled Script:** Scheduled scripts can be run on demand or at predefined intervals on a recurring basis. They are best suited for handling basic information logging or similar tasks. However, they are not well-suited for processing large amounts of records or long-running operations.
 

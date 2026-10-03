@@ -20,7 +20,7 @@ https://{instanceName}.hotwax.io/commerce/control/GeneralSettings
 
 ## 2. Add NetSuite Reader
 
-On the page, you will see `Load Netsuite` button, click on it to load the reader.
+On the page, you will see `Load NetSuite` button, click on it to load the reader.
 
 ## 3. Verify Reader
 

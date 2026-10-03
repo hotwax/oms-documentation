@@ -26,7 +26,7 @@ To change this job's frequency, connect with the integration team.
 /home/{sftp-username}/netsuite/salesorder/update
 ```
 
-Schedule a SuiteScript in Netsuite to consume the fulfilled order feed from HotWax.
+Schedule a SuiteScript in NetSuite to consume the fulfilled order feed from HotWax.
 
 **SuiteScript to import NetSuite fulfillment item allocations**
 
@@ -52,7 +52,7 @@ FTP Config: IMP_ODR_ITM_FLFLMNT
 ```
 
 {% hint style="success" %}
-NetSuite fulfilled order items are now completed in Hotwax
+NetSuite fulfilled order items are now completed in HotWax
 {% endhint %}
 
 ## Sync Order Fulfillment to NetSuite

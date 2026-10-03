@@ -22,12 +22,12 @@ It's essential to note that these configurations require active involvement from
 
 Follow this checklist to complete the integration:
 
-* [ ] Install SFTP bundle in Netsuite
+* [ ] Install SFTP bundle in NetSuite
 * [ ] Setup SFTP
   * [ ] Configure SFTP server
   * [ ] Add a new SFTP server configuration
   * [ ] Define SFTP server details
-* [ ] Verify Netsuite Date format and time
+* [ ] Verify NetSuite Date format and time
   * [ ] Verify process
   * [ ] Verification steps
 * [ ] Setup SFTP directory
