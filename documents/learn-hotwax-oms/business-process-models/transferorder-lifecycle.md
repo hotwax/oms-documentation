@@ -119,7 +119,7 @@ HotWax Commerce imports, approves, and fulfills these transfer orders through th
 
 ### 3. Synchronize Item Fulfillment Records with NetSuite
 
-HotWax Commerce exports the fulfilled transfer order items feed. NetSuite reads the feed, creates item fulfillment records, reduces inventory counts at the source store, and updates the transfer order status to <mark style="color:orange;">**“Pending Receipt”**</mark>.
+HotWax Commerce exports the fulfilled transfer order items feed. NetSuite reads the feed, creates item fulfillment records, marks them <mark style="color:orange;">**“Shipped”**</mark>, reduces inventory counts at the source store, and updates the transfer order status to <mark style="color:orange;">**“Pending Receipt”**</mark>.
 
 ### 4. Receive Transfer Orders in NetSuite
 
