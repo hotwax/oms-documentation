@@ -25,6 +25,9 @@ Maarg can connect the core Order Management System (OMS) with external systems s
 | Diagnose search schema or indexing | [Search Admin](search-admin.md) |
 | Query an indexed document | [Solr Search](solr-search.md) |
 | Trace routing execution | [Order Routing Run Diagnostics](order-routing-runs.md) |
+| Plan raw entity import/export or snapshots | [Raw Entity Data Movement](entity-data-movement.md) |
+| Inspect document definitions and feed delivery | [Data Documents And Data Feeds](data-documents-feeds.md) |
+| Diagnose a configured entity transfer | [Entity Synchronization](entity-synchronization.md) |
 
 ## Versions And Verification
 
