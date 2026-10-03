@@ -60,19 +60,19 @@ A record representing a specific execution instance of a service job. It tracks 
 
 ### Service job run ID
 
-A unique identifier for a specific job run. Developers use this ID to inspect logs or stop a specific run.
+A unique identifier for one execution of a service job. Use it to open run details and correlate timestamps, parameters, errors, and logs.
 
 ### Expire lock minutes
 
-A configurable setting (`EXPIRE_LOCK_TIME`) in the service jobs that dictates the maximum duration an active service job lock will remain active. If a service job terminates and fails to release its lock, this setting prevents the job from running for a long time by automatically expiring the lock after the specified minutes.
+The number of minutes after which the scheduler ignores an old run lock and can schedule the job again. It is not an execution timeout and does not stop the original service; set it comfortably above expected job duration.
 
 ### Release job
 
-An administrative action that clears a job's lock or stops a running job so it can be scheduled again. This is primarily used when a job gets stuck or is running longer than expected.
+An administrative action that clears a scheduled job's run lock so later scheduled execution can proceed. Releasing the lock does not stop the running service or mark its run complete; confirm the original execution is no longer active before releasing it. See [Service Jobs](service-jobs.md).
 
 ### Running job overview
 
-A section on the system dashboard that lists currently running service job runs and their start times. It also allows administrators to stop or release stuck jobs.
+A dashboard list of scheduled jobs with an active run-lock reference, with links to their job and run details. Its age and restart warnings identify runs to investigate; the release action clears the lock and does not terminate execution.
 
 ## System message framework
 
