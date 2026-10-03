@@ -57,7 +57,7 @@ The About page can also contain internal connection details, operational identif
 
 ### Documentation Baseline And Demo Evidence
 
-These guides use the **Maarg 6.4.0 release composition**, whose production build pins **moqui-runtime 4.1.0**, **moqui-framework 4.2.0**, and **maarg-util 4.4.0**. This is the source baseline for behavior, not a claim about every deployed environment.
+These guides use the **Maarg 6.4.0 release composition**, whose production build pins **moqui-runtime 4.1.0**, **moqui-framework 4.2.0**, and **maarg-util 4.4.0**. This is the source baseline for behavior, not a claim about every deployed environment. The production build also applies maarg-util's **CreatedStamp**, **EntityCrypto**, and **JwtToken** patches, and loaded components can replace or extend runtime screens. Check the assembled release configuration and applied patches as well as repository tags.
 
 The October 3 demo displayed framework **4.0.0** and util **4.3.0**. Its reported framework/runtime commit prefixes matched the inspected framework 4.2.0 and runtime 4.1.0 tag commits, while other component/version labels differed. This illustrates why the displayed version, commit, and deployment composition should be recorded separately. The screenshots are UI observations of that demo, not release-matched acceptance tests.
 

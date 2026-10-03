@@ -10,11 +10,11 @@ Use the **Entities** tools to identify an entity's fields and keys, find a parti
 
 ## Version And Access
 
-This guide uses **Maarg v6.4.0**, **moqui-runtime v4.1.0**, and **moqui-framework v4.2.0**. Open **Tools > Entity > Entities > Entity List** in the observed demo. Menu placement and your authorized route can differ by deployment.
+This guide uses **Maarg v6.4.0**, **moqui-runtime v4.1.0**, **moqui-framework v4.2.0**, and **maarg-util v4.4.0**. Maarg-util replaces the runtime's ordinary entity Find and Auto Screen Find screens; the search behavior below follows those active Maarg overrides. Open **Tools > Entity > Entities > Entity List** in the observed demo. Menu placement and your authorized route can differ by deployment.
 
 **Verification scope:** The procedures and behavior below are source-verified. The entity catalog filter and EnumerationType definition/relationship metadata were observed read-only in the hosted demo on October 3, 2026, displaying framework 4.0.0 and util 4.3.0. See [Getting Started](getting-started.md#documentation-baseline-and-demo-evidence) for displayed-version versus commit differences. A record-level relationship walkthrough and mutation/recovery tests remain pending. No record or schema changes were executed for this guide.
 
-Use an account authorized for the entity and screen in the intended environment. Some security and secret-configuration entities are deliberately unavailable through the generic record tools. A visible definition or menu item does not grant record access. Use the dedicated administration screen or ask the environment owner; do not use SQL or another tool to work around a denial.
+Use an account authorized for the entity and screen in the intended environment. Record availability and restrictions differ by tool and installed screen override. A visible definition or menu item does not grant record access or establish a complete sensitive-entity exclusion policy. Use the dedicated administration screen or ask the environment owner; do not use SQL or another tool to work around a denial.
 
 {% hint style="warning" %}
 **Edit** opens an editable record page. **New Value**, **Create**, **Update**, and **Delete** can change live data. **Check/Update Table**, **Check/Update All Tables**, foreign-key controls, and index controls can change the database schema. Keep an investigation read-only unless a specific change, target, and recovery procedure have been approved.
@@ -57,7 +57,7 @@ The page can also show entity event rules and service event rules associated wit
 ## Find A Specific Record
 
 {% hint style="warning" %}
-Opening the ordinary Find page can immediately query the selected entity before you enter filters. Choose an authorized, understood entity first; do not open an unfamiliar high-volume or sensitive entity simply to explore.
+The Maarg Find screens require at least one recognized search condition. Supply a narrow identifier filter before searching. A link that already carries search criteria can execute a query when opened; parameter presence alone does not make its scope small or authorized.
 {% endhint %}
 
 1. From the definition select **Entity Find**, or select **Find** on the catalog row.
@@ -69,7 +69,7 @@ Opening the ordinary Find page can immediately query the selected entity before 
 
 ### Understand Search Scope And Limits
 
-- **Opening Find can run a query immediately.** The ordinary entity Find screen does not require a filter or a prior press of the Find button. Do not open an unfamiliar high-volume entity merely to see how much data it contains.
+- **Search parameters are required.** Maarg-util's active Find override sets `require-parameters="true"`; the framework returns an empty result when no recognized search condition is present. A supplied or inherited search condition can make the page query on render, so inspect the actual criteria and keep them narrow.
 - **50 is the default page size, not a hard total limit.** The source starts with a 50-row page; search-form pagination and the page-size control can change it. A page with 50 rows does not prove that only 50 match.
 - **Small pages do not guarantee cheap queries.** A query can scan or join a large dataset, and pagination can require a count. Narrow the search instead of repeatedly increasing the page size.
 - **The list can use a configured datasource clone.** Where clones are replicas, replication timing can matter. If a recent change is missing, ask the operator to verify the read datasource and replication state before concluding that the write failed.
@@ -77,9 +77,9 @@ Opening the ordinary Find page can immediately query the selected entity before 
 
 ### Distinguish Auto Screen
 
-**Auto Screen** is an alternative generated find-and-edit workflow. It is not a read-only preview. Its Find page first counts the entity's records and requires search parameters when that count is **greater than 1,000,000**. The count itself may be expensive. The ordinary **Find** page does not implement this same guard.
+**Auto Screen** is an alternative generated find-and-edit workflow. It is not a read-only preview. Maarg-util's active Auto Screen Find override requires search parameters and disables the base runtime's preliminary full-entity count. There is no million-record threshold controlling this Maarg search requirement.
 
-If Auto Screen requires parameters, supply a narrow filter. Do not switch tools to evade a search guard. Both routes expose mutating controls, but their layouts and record-detail navigation differ; the relationship procedure below refers to **Entity Data Edit**, reached from the ordinary Find page.
+Supply a narrow filter in Auto Screen as well as ordinary Find. Do not switch tools to evade a search guard. Both routes expose mutating controls, but their layouts and record-detail navigation differ; the relationship procedure below refers to **Entity Data Edit**, reached from the ordinary Find page.
 
 ## Inspect One Record And Follow Its Relationships
 
@@ -121,7 +121,7 @@ Before any authorized correction, agree on the environment, full entity name, ex
 | An expected entity is absent | Clear the regex and View Option filters, then verify the package, installed component, and environment |
 | Filter fails or matches too broadly | Use a simple entity-name fragment; review regular-expression syntax and special characters |
 | Find returns no records | Check every active filter, operators, key types, timezone, environment, and any configured read clone; for views, investigate join conditions |
-| Auto Screen is empty without filters | Supply specific search parameters; its large-entity guard may be active |
+| Find or Auto Screen is empty without filters | Supply a narrow recognized search condition; both active Maarg screens require parameters |
 | Only one page of results appears | Check the page range and filters; 50 is a page default, not a complete entity count |
 | A relationship opens unrelated rows | Confirm whether the link came from Entity Detail or a record, then inspect the target ID Map and all expected key fields |
 | A related-record link is missing | Check whether source key values are empty and whether the relationship has a usable mapping |
