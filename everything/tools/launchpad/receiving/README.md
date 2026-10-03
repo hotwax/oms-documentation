@@ -59,9 +59,9 @@ A lost response does not prove that the inventory update failed. Do not repeat `
 
 1. Record the action, approximate submission time, facility, affected lines, entered quantities, and displayed message.
 2. Inspect receiving history and the current OMS quantities using the supported read views. Compare them with the submission.
-3. Distinguish a confirmed receipt with a failed screen refresh from an unconfirmed receipt. Current source includes both cases and can block further receiving until the earlier outcome is reviewed.
+3. Distinguish a confirmed receipt with a failed screen refresh from an unconfirmed receipt. The reviewed main snapshot includes both cases and can block further receiving until the earlier outcome is reviewed. The reviewed v4.2.2 release does not include that persistent receipt-review block; the absence of a block is not evidence that retrying is safe.
 4. If the app offers `Review receipt`, use it to compare the saved submission details with history. Do not acknowledge the review or clear the block until the outcome is verified.
-5. If the result remains uncertain, stop receiving this transfer and escalate. Do not clear browser storage, use another device, or submit a second receipt to bypass the block.
+5. If the result remains uncertain, stop receiving this transfer and escalate. Do not clear browser storage, use another device, or submit a second receipt without reconciling the previous attempt.
 
 A successful app receipt also needs a separate check in any connected system. Ask the integration owner to inspect the corresponding receipt or integration result before considering a replay or manual posting. This guide does not promise a universal NetSuite adjustment, closure, or zero-quantity outcome; those depend on the installed integration and business configuration.
 
@@ -87,4 +87,8 @@ Redact personal data, credentials, store URLs, and unrelated records from screen
 
 ## Verification Scope
 
-Quantity entry, box filtering, and receipt-reconciliation behavior were checked against [Receiving App source](https://github.com/hotwax/receiving/blob/b575ce1ae58160ad3ae4af638a38a7ef2e1c57b4/src/views/TransferOrderDetail.vue) and its [receipt submission safeguards](https://github.com/hotwax/receiving/blob/b575ce1ae58160ad3ae4af638a38a7ef2e1c57b4/src/db/receivingClient.ts). The source snapshot identifies itself as version 4.2.1. Verify the installed version before relying on a named control; this source check does not establish deployment or downstream integration behavior.
+Quantity entry, box filtering, and receipt-reconciliation behavior were checked against [Receiving App source](https://github.com/hotwax/receiving/blob/b575ce1ae58160ad3ae4af638a38a7ef2e1c57b4/src/views/TransferOrderDetail.vue) and its [receipt submission safeguards](https://github.com/hotwax/receiving/blob/b575ce1ae58160ad3ae4af638a38a7ef2e1c57b4/src/db/receivingClient.ts). This is a main-branch snapshot whose package metadata identifies itself as version 4.2.1.
+
+The latest published release checked on October 3, 2026, [v4.2.2](https://github.com/hotwax/receiving/releases/tag/v4.2.2), uses a different source revision and does not include that snapshot's persistent receipt-review block. Its [receipt submission](https://github.com/hotwax/receiving/blob/bd0e6f1b5b47b23510c99307aed050a0e9fe3caa/src/store/transferorder.ts#L263-L268) and generic error handling must not be treated as proof that a failed response means no receipt was saved.
+
+Verify the installed build before relying on a named control, and verify the prior receipt in history or OMS receipt records before retrying whether or not the app blocks another submission. This source check does not establish deployment or downstream integration behavior.
