@@ -22,6 +22,9 @@ Maarg can connect the core Order Management System (OMS) with external systems s
 | Investigate import failures | [Data Manager Imports](data-manager-imports.md) |
 | Find an installed API contract | [REST API Explorer](rest-api-explorer.md) |
 | Read a bounded runtime log slice | [Log Files](log-files.md) |
+| Investigate pools, threads, caches, or instance state | [Runtime Health Diagnostics](runtime-health.md) |
+| Inspect audit evidence and retained performance statistics | [Audit And Performance](audit-performance.md) |
+| Diagnose component-upgrade failures | [Component Upgrade Diagnosis](component-upgrades.md) |
 | Diagnose search schema or indexing | [Search Admin](search-admin.md) |
 | Query an indexed document | [Solr Search](solr-search.md) |
 | Trace routing execution | [Order Routing Run Diagnostics](order-routing-runs.md) |
