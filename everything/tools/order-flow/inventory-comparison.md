@@ -16,7 +16,7 @@ The checks below were reviewed on October 3, 2026 against these source snapshots
 - Shopify connector: `23e4db2adb896a51563882d890fae00c20173303`
 - NetSuite connector: `8e5664a092eb2523ea9e6bc4caf62d92964de879`
 
-These are source revisions, not a claim about released or deployed versions. A Maarg release number alone does not identify every optional connector's installed revision. The review did not execute jobs, test a live integration, or change inventory, reservations, or orders. Confirm the installed versions, configuration, and active publishing/export paths before applying an implementation-specific explanation. No fixed synchronization interval or immediate-export guarantee applies to every installation.
+The relevant OMS files also match **OMS 3.4.0**. The listed Order Routing, Shopify connector, and NetSuite connector revisions match releases **2.4.0**, **4.4.0**, and **3.4.0**, respectively. The NetSuite connector is optional in the Maarg 6.4.0 composition. These checks identify source baselines, not which components or integration paths are installed in your environment. The review did not execute jobs, test a live integration, or change inventory, reservations, or orders. Confirm the installed versions, configuration, and active publishing/export paths before applying an implementation-specific explanation. No fixed synchronization interval or immediate-export guarantee applies to every installation.
 {% endhint %}
 
 ## 1. Compare The Same Quantity
@@ -62,6 +62,15 @@ For an OMS component-derived kit in the reviewed implementation:
 4. Complete this calculation separately at each facility before combining complete-kit contributions for a channel. Do not combine loose components from different facilities to construct a kit that no facility can fulfill.
 
 **Example:** A kit requires two units of component A and one of component B. At one facility, the applicable available quantities are 21 A and 9 B. A supports 10 complete kits and B supports 9, so the component-based result is 9 kits before any additional kit/channel policy.
+
+For the same two-A/one-B kit, components split across facilities are not interchangeable with complete kits at a facility:
+
+| Facility | Applicable Available A | Applicable Available B | Complete Kits |
+| --- | --- | --- | --- |
+| First facility | 4 | 0 | 0 |
+| Second facility | 0 | 2 | 0 |
+
+The aggregate component totals are four A and two B, but neither facility can supply a complete kit. This component-derived path therefore contributes zero complete kits from these two facilities, rather than pooling their loose components to advertise two kits. The numbers are illustrative available quantities, not raw QOH or a real inventory snapshot.
 
 The reviewed component-based path accounts for component-level safety stock and brokering eligibility, and can apply configured holds. Additional kit/channel rules can reduce the final published quantity. Do not reuse the example as a universal formula for a different publishing model or deduct the same safeguard twice.
 
