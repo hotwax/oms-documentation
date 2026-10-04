@@ -61,6 +61,12 @@ Sales-channel mappings determine how imported orders are categorized.
 
 Review new Shopify product types after catalog changes and map any uncategorized values.
 
+## Clear or rename a mapping
+
+Clearing an existing shipping, payment, sales-channel, product-type, or location mapping and saving removes that mapping. Renaming a Shopify mapping key removes the old key and saves the replacement. Review the complete `Save All` changes before saving, especially when swapping two Shopify values.
+
+Reopen the page after saving and confirm that the old key is absent and the intended replacement points to the correct HotWax value. A removed mapping can affect later sync or order import. If removal fails, ask the technical team to verify that the OMS release supports mapping deletion before retrying.
+
 ## Verify mapping readiness
 
 Return to the Shopify connection and review the mapping summaries.

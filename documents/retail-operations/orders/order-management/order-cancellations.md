@@ -1,5 +1,9 @@
 # Order Cancellations
 
+{% hint style="info" %}
+This guide describes the OMS Sales Order screens. For the standalone Order Manager App, use [Order details](view-order-details.md). Its controls and cancellation availability differ from the screens shown here.
+{% endhint %}
+
 Order cancellations are a common occurrence in online retail. If a merchant is using both Shopify and HotWax Commerce, cancellations can happen in two ways:
 
 1. Cancellations made in Shopify and updated in HotWax Commerce.

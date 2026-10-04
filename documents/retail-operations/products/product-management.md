@@ -202,6 +202,12 @@ The Products app does not provide search-index status or a manual index rebuild 
 
 <figure><img src="../.gitbook/assets/products-settings.png" alt="Products app settings showing the demo OMS instance and Demo Store"><figcaption><p>Confirm the OMS instance and current product store</p></figcaption></figure>
 
+## 7. Review calendar dates for a product store
+
+Open `Product calendar` to review Introduction, Launch, Support ends, and Sales ends dates for the store shown on that page. These store-specific dates are separate from the general product dates edited in Product details. The calendar currently supports review and search, with a link to Company Product Sync for Shopify mapping context.
+
+See [Review the product calendar](product-calendar.md) for scope, mapping coverage, and the loaded-row limit.
+
 ## Related guides
 
 * [Create shipping boxes](../../system-admin/fulfillment/shipping-methods/shipping-box.md)

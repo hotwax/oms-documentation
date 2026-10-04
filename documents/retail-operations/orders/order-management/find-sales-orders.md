@@ -17,8 +17,6 @@ The page searches orders for the Product Store selected in the Order Manager men
 
 Start with an order ID, order name, or external ID when one is available. These values are more precise than a customer name.
 
-<figure><img src="../../.gitbook/assets/order-manager-find-orders.png" alt="Find orders page with search, status, allocation, sales channel, shipping method, date filters, sorting, and demo order rows"><figcaption><p>Use the filter bar and row details to identify the correct order.</p></figcaption></figure>
-
 You can also search using:
 
 * Customer name, party ID, email, or phone
@@ -42,6 +40,10 @@ Use filters to investigate orders that share a status, allocation condition, cha
 | `Order date from` | Includes orders placed on or after the selected date. | Use this as the start of an order-date range. |
 | `Order date through` | Includes orders placed on or before the selected date. | Use this as the end of an order-date range. |
 | `Newest first` or `Oldest first` | Sorts the matching orders by order date. | Use `Oldest first` to work through aging orders. Use `Newest first` to review recent activity. |
+
+The date pickers prevent selecting a future date and keep `Order date from` on or before `Order date through`. Clear the paired date first when you need to move the range past its existing boundary. The same date limits apply to order-date and task-created filters in the workflow and task queues.
+
+<figure><img src="../../.gitbook/assets/order-manager-date-range-main.jpg" alt="Find orders filters with the complete September date picker open and two matching orders"><figcaption><p>Choose the order-date range, then review the matching orders in the selected store.</p></figcaption></figure>
 
 The order-date request uses UTC day boundaries, while rows display dates in your configured user time zone. Around midnight, a displayed date can appear just outside the selected range. Widen the range by one day and open the order when you need to verify a boundary case.
 
@@ -89,19 +91,6 @@ The header shows how many matching orders are loaded and the total number of mat
 The header checkbox does not select matching orders that have not loaded yet. Changing the search or filters can also remove orders from the current selection.
 
 Select `Done` to leave select mode without taking an action.
-
-### Cancel open items
-
-Use `Cancel open items` only after confirming that the remaining open items in every selected order should be canceled.
-
-1. Select the intended orders.
-2. Select `Cancel open items`.
-3. Review the number of selected orders in the confirmation message.
-4. Select `Confirm` to continue or `Dismiss` to return without canceling.
-
-The action skips items that are already canceled or completed. The cancellation cannot be undone.
-
-After the action finishes, the page refreshes the search results. Open the affected orders and confirm the expected items are canceled. If the page reports a failure, verify each selected order before retrying because another order in the selection may already have changed.
 
 ### Edit the shipping method
 

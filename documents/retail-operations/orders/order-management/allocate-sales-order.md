@@ -4,6 +4,10 @@ description: Learn how the sales orders are allocated efficiently in different s
 
 # Allocation
 
+{% hint style="info" %}
+This guide describes the OMS Sales Order screens. For the standalone Order Manager App, use [Order details](view-order-details.md). Its controls and cancellation availability differ from the screens shown here.
+{% endhint %}
+
 To perform the order allocation tasks, we first navigate to the View Sales Order page:
 
 1. Go to the Hamburger Menu in the OMS > Order Management section > Sales Orders to open the Find Sales Order page.

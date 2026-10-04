@@ -43,6 +43,7 @@
 ## Products
 
 * [Manage products in the Products app](products/product-management.md)
+* [Review the product calendar](products/product-calendar.md)
 * [Breaking Variants Into Independent Products](products/breaking-variants-into-independent-products.md)
 
 ## Orders

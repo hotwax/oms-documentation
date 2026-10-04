@@ -75,22 +75,6 @@ Each ship group is attempted independently. Some can succeed while others fail. 
 
 The result messages do not identify which ship groups failed. Use `Order details` to find the remaining virtual groups before retrying. If the routing-group dialog says `No routing groups found`, close and reopen it after confirming the Product Store. The dialog has no separate reload action, and the same message can appear when loading routing groups fails.
 
-## Cancel open items
-
-Use `Cancel open items` only after the business has approved cancellation.
-
-{% hint style="warning" %}
-Cancellation cannot be undone. It cancels every item that is not already completed or canceled across all ship groups in each selected order, not only the Unfillable items.
-{% endhint %}
-
-1. Select the orders.
-2. Select `Cancel open items`.
-3. Review the selection count and select `Confirm`.
-4. Wait for the result message.
-5. Open each order and confirm which items were canceled.
-
-The confirmation shows the selected order count, but the success message does not report how many items changed. If one request fails, another selected order may already have changed. Verify every selected order before retrying.
-
 ## Edit the shipping method
 
 Use `Edit shipping method` only when the same carrier and method correction applies to every selected order.

@@ -60,6 +60,8 @@ Confirm the instance time zone before you change a cron expression. Open `Settin
 4. Review optional values.
 5. Select `Save`.
 
+For a Map, List, or Object parameter, review the JSON displayed in the field and retain its object or list structure. For example, a map looks like `{"key":"value"}`; do not add another pair of quotes around the entire JSON value.
+
 The `Save` action remains unavailable while a required value is missing. Parameter changes affect later runs, including a run started with `Run Now`.
 
 ## Review job history

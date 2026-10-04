@@ -93,19 +93,6 @@ releases inventory committed to its other items. It does not resolve the
 address task. Return to the task later to correct the address or cancel the
 affected items.
 
-## Cancel the affected ship group
-
-Select `Cancel order` when the items represented by this address task should not
-be fulfilled.
-
-1. Select `Cancel order`.
-2. Review the confirmation. The action cannot be undone.
-3. Select `Cancel order` again to continue.
-
-Despite the button label, this action cancels only the task items in the
-affected ship group and then cancels the address task. Other ship groups on the
-same order are not included.
-
 ## Complete several address tasks
 
 1. Select `Select`.
@@ -118,8 +105,6 @@ same order are not included.
    * `Save and release hold` confirms the number of distinct ship groups,
      applies one address decision to each group, and completes every
      selected task.
-   * `Cancel orders` confirms the number of distinct ship groups,
-     cancels their task items, and cancels every selected task.
    * `Park` opens the facility picker, moves each distinct ship group,
      and completes every selected task.
 

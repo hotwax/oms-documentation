@@ -30,6 +30,12 @@ Each item appears as a card containing:
 
 Enter the quantity you physically received for each line item. If you did not receive any units, type 0 instead of leaving the field blank; blank fields will prevent you from completing the order. You can also scan barcodes into the Scan items field to increment the quantity automatically; scanning the same code multiple times increases the quantity each time.
 
+### Review receiving history
+
+Select the history icon in the order header to review all receipts, or select an item's received-history chip to review that transfer-order line. Rows show the product image, your configured primary and secondary identifiers, product features, accepted and rejected quantities, receipt time, and receiver name. A missing primary identifier falls back to the product name.
+
+Check size, color, and identifiers together when several lines look similar. History is read-only and does not correct a receipt or close the transfer order.
+
 ### Saving progress vs completing the order
 
 At the bottom of the detail page you will see a bar showing your progress and two actions: Save progress and Receive and complete.
