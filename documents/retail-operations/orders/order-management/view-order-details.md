@@ -209,14 +209,14 @@ Changing the country clears the previous state selection. The order must have an
 | Action | When to use it | What it changes |
 | --- | --- | --- |
 | `Broker ship group` | An approved, active order has a ship group in a virtual facility that should be evaluated by a routing group. | Submits the whole ship group for brokering. |
-| `Park Items` | Selected items in a virtual group should be moved to another virtual parking facility instead of being released now. | Moves only the selected items to the chosen parking facility. |
-| `Release` | An approved, active order has pre-fulfillment items in a virtual group that should be allocated directly to a physical facility. | Releases only the selected items to the chosen facility. |
-| `Pull back` | Active items assigned to a physical facility should be rejected from that allocation for later routing or review. | Rejects only the selected items using the reason you choose. |
+| `Park Items` | Active items in a virtual group should be moved to another virtual parking facility instead of being released now. | Moves eligible selected items to the chosen parking facility, or all eligible items in the group if nothing is selected. |
+| `Release` | An approved, active order has pre-fulfillment items in a virtual group that should be allocated directly to a physical facility. | Releases eligible selected items to the chosen facility, or all eligible items in the group if nothing is selected. |
+| `Pull back` | Active items assigned to a physical facility should be rejected from that allocation for later routing or review. | Rejects eligible selected items using the reason you choose, or all eligible items in the group if nothing is selected. |
 | `Add Task` | An operator must record a manual or customer-request hold for this group. | Creates one task for this ship group. |
 | `Add Items` | A catalog item must be added directly to this active ship group. | Adds one unit of each product selected in the dialog. |
 
 {% hint style="warning" %}
-Select the intended eligible items before using `Park Items`, `Release`, or `Pull back`. The app filters out terminal items for parking and pullback, and only pre-fulfillment items are released. A ship-group action can use the whole group when no item selection is present; use checkboxes when you intend to act on a subset.
+Select the intended eligible items before using `Park Items`, `Release`, or `Pull back`. With no items selected in that ship group, these actions apply to all eligible items in the group. The app filters out completed and canceled items for parking and pullback, and only pre-fulfillment items are released. Use checkboxes when you intend to act on a subset.
 {% endhint %}
 
 #### Broker a ship group
@@ -236,7 +236,7 @@ Use this action only for a virtual ship group on an approved order that is not c
 4. Choose the virtual parking facility.
 5. Save the change and inspect the reloaded item locations.
 
-The action is disabled until at least one active item is selected. It does not apply to unselected items in the group.
+When items are selected, the action parks only the active items in that selection. With no selection, it parks all active items in the group. The action is disabled when that scope contains no active items.
 
 #### Release selected items
 
@@ -246,7 +246,7 @@ The action is disabled until at least one active item is selected. It does not a
 4. Choose the physical destination facility.
 5. Submit the request and inspect each selected item after the order reloads.
 
-Release is available for a virtual group on an approved, active order when at least one selected item is still in a pre-fulfillment state. The selected facility is the intended allocation target; verify the reloaded item to confirm that allocation succeeded.
+Release is available for a virtual group on an approved, active order when at least one item in scope is still in a pre-fulfillment state. Selected items define the scope; with no selection, the scope is the whole group. Only pre-fulfillment items in that scope are released. The selected facility is the intended allocation target; verify the reloaded item to confirm that allocation succeeded.
 
 #### Pull back selected items
 
@@ -256,7 +256,7 @@ Release is available for a virtual group on an approved, active order when at le
 4. Choose the rejection reason.
 5. Confirm the action and inspect the reloaded item status. Unselected items remain at the facility.
 
-`Pull back` applies to active items in a physical ship group. It does not select a new facility. Continue with the retailer's routing or exception process after verifying the rejection.
+`Pull back` applies to active items in a physical ship group. When items are selected, only active items in that selection are rejected. With no selection, all active items in the group are rejected. It does not select a new facility. Continue with the retailer's routing or exception process after verifying the rejection.
 
 #### Add a task to one ship group
 
