@@ -12,6 +12,8 @@ The NetSuite examples below describe documented HotWax Commerce integration flow
 
 **Verification scope:** Reviewed on October 3, 2026 against the linked HotWax Commerce manuals, Shopify connector release `v4.4.0`, and the [public NetSuite integration source at commit `4922c6e`](https://github.com/hotwax/netsuite-integration/commit/4922c6ea09940335cab5ad262cd6dbbba4b190e3). The NetSuite invoice script and selection definition also match [release `v1.1.0`](https://github.com/hotwax/netsuite-integration/releases/tag/v1.1.0). These are source baselines, not confirmation of a merchant's deployed version or runtime outcome.
 
+The pinned consumer-manual sources were refreshed on October 4, 2026 at documentation commit `a5d99d80`. This includes the separate returns lifecycle below; a documentation merge does not establish that its configured flow is installed in an environment.
+
 {% hint style="warning" %}
 This is a read-only diagnosis guide. Do not fulfill, invoice, adjust inventory, change payment status, or delete and re-import an order merely to make status labels agree. A missing response can also mean that a transaction succeeded but its acknowledgement has not arrived.
 {% endhint %}
@@ -38,7 +40,9 @@ Confirm the posting model with the integration owner:
 
 - **Direct Cash Sale:** The documented [POS Orders integration](https://docs.hotwax.co/documents/learn-netsuite/integration-flows/sales-order/pos-orders) posts eligible completed POS sales as NetSuite Cash Sales. A separate sales-order Item Fulfillment and Invoice are not the expected completion evidence for this path.
 - **Sales Order And Invoice:** Follow the installed sales-order creation, fulfillment, payment/deposit, and billing stages. Their selection rules can differ from the Cash Sale path.
-- **Send Sale:** An order placed in POS for later shipment follows the documented sales-order flow rather than being treated as an immediate completed POS sale. See the [Send Sale Orders guide](https://github.com/hotwax/oms-documentation/blob/3c4fead4319e27b8a633164c51c1f48f9a6d7c49/documents/learn-netsuite/integration-flows/sales-order/sendsale-orders.md).
+- **Send Sale:** An order placed in POS for later shipment follows the documented sales-order flow rather than being treated as an immediate completed POS sale. See the [Send Sale Orders guide](https://github.com/hotwax/oms-documentation/blob/a5d99d80b37042c98f8418cc70fc2eeca2a47397/documents/learn-netsuite/integration-flows/sales-order/sendsale-orders.md).
+
+If the discrepancy involves a return, refund, or store-credit Invoice, follow the separate [NetSuite Returns lifecycle](https://github.com/hotwax/oms-documentation/blob/a5d99d80b37042c98f8418cc70fc2eeca2a47397/documents/learn-netsuite/integration-flows/returns/README.md). Distinguish return authorization, any required inventory receipt, and financial settlement. A stored Invoice or Credit Memo ID does not prove that the required credit application completed; verify that application in NetSuite for the configured outcome.
 
 For a sales-order flow, partial fulfillment does not universally prevent invoicing in NetSuite. Billing behavior depends on enabled features, preferences, and the integration's own selection criteria. Check the installed workflow rather than assuming all backordered orders are ineligible. See [NetSuite Billing Or Invoicing A Sales Order](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_N1240951.html).
 
@@ -93,7 +97,7 @@ Use the tools installed in the environment:
 - [Data Manager Imports](../maarg/data-manager-imports.md) to review processed/imported/failed counts and record-level errors
 - The ERP's import and script execution history to confirm the actual transaction result
 
-In the documented NetSuite sales-order flow, `HC_SC_CreateItemFulfillment` and `HC_SC_CreateSalesOrderInvoice` perform separate steps. The invoice script loads a saved search, transforms selected sales orders, and records per-order errors. A completed script run does not establish that every candidate received an invoice. The documented baseline selects Pending Billing sales orders with customer deposits; verify the deployed search and other criteria. See the [Invoicing guide](https://github.com/hotwax/oms-documentation/blob/3c4fead4319e27b8a633164c51c1f48f9a6d7c49/documents/learn-netsuite/integration-flows/sales-order/invoicing.md).
+In the documented NetSuite sales-order flow, `HC_SC_CreateItemFulfillment` and `HC_SC_CreateSalesOrderInvoice` perform separate steps. The invoice script loads a saved search, transforms selected sales orders, and records per-order errors. A completed script run does not establish that every candidate received an invoice. The documented baseline selects Pending Billing sales orders with customer deposits; verify the deployed search and other criteria. See the [Invoicing guide](https://github.com/hotwax/oms-documentation/blob/a5d99d80b37042c98f8418cc70fc2eeca2a47397/documents/learn-netsuite/integration-flows/sales-order/invoicing.md).
 
 On the Cash Sale path, task submission or an archived input file is not enough to prove a successful import. Check the terminal import result and actual Cash Sale record. Likewise, a consumed upstream fulfillment feed is not proof that every Shopify fulfillment was accepted. Verify the downstream fulfillment ID and the relevant line quantities.
 
