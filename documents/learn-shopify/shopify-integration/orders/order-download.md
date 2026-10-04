@@ -48,4 +48,6 @@ Review the job's **Active** state, Quartz schedule, queued system message, job r
 
 Use the same Shopify order identifier throughout the check. Confirm the HotWax Commerce order has the intended Product Store, products and quantities, customer and addresses, sales channel, shipping method, payment method, and current status. For an existing HotWax Commerce order, confirm the flow updated the order without creating a duplicate.
 
+For details about how Shopify fulfillment-order promises populate ship-group dates, see [Order promise dates](order-promise-dates.md).
+
 If an order is missing, first identify whether it belongs to history, realtime, or fallback processing. Then inspect that flow's earliest missing stage before rerunning work.

@@ -17,6 +17,7 @@
 * [Orders](shopify-integration/orders/README.md)
   * [Order Download](shopify-integration/orders/order-download.md)
     * [thruDateBuffer and bufferTime](shopify-integration/orders/buffertimes.md)
+  * [Order promise dates](shopify-integration/orders/order-promise-dates.md)
   * [Order Approval for Fulfillment](shopify-integration/orders/order-approval-for-fulfillment.md)
   * [Order Updates](shopify-integration/orders/order-updates.md)
   * [POS Sales Download](shopify-integration/orders/pos-sales-download.md)
