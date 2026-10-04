@@ -12,13 +12,13 @@ Every sales order ship group that requires fulfillment carries two estimated dat
 * `Estimated Ship Date`: When the ship group is expected to leave a fulfillment location.
 * `Estimated Delivery Date`: When it is expected to arrive at the customer.
 
-Ship groups that do not require fulfillment, such as POS cash sales and order items that arrive already fulfilled, are skipped. Both dates apply to orders imported in real time and to historical orders brought in through bulk sync, so reporting stays consistent across the full order history.
+Ship groups that do not require fulfillment, such as point-of-sale (POS) cash sales and order items that arrive already fulfilled, are skipped. Both dates apply to orders imported in real time and to historical orders brought in through bulk sync, so reporting stays consistent across the full order history.
 
 {% hint style="info" %}
-These dates are recorded on the order **after** it is placed. For the pre-purchase estimate a shopper sees on the storefront before ordering, see [Configure estimated delivery dates](configure-estimated-delivery-dates.md). That experience is calculated live by the storefront and follows its own rules.
+These dates are recorded on the order after it is placed. For the pre-purchase estimate a shopper sees on the storefront before ordering, see [Configure estimated delivery dates](configure-estimated-delivery-dates.md). That experience is calculated live by the storefront and follows its own rules.
 {% endhint %}
 
-## Where the dates come from
+## Understand where the dates come from
 
 HotWax Commerce fills each date from the most authoritative source available. A value provided by an external system always wins over a value computed internally.
 
