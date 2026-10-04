@@ -4,6 +4,8 @@ description: Learn how Shopify product sync works for multiple Shopify stores.
 
 # Product synchronization for multiple Shopify stores
 
+This page is architecture background for an advanced launch, not a complete setup procedure. The canonical Shopify onboarding guide covers exactly one shop. Obtain an approved multi-shop implementation plan before configuring any connection or first product import.
+
 Some retailers run more than one Shopify store for the same brand or catalog. In HotWax Commerce, the product store decides which catalog a Shopify shop belongs to.
 
 For multi-store setups, the safest model is:
@@ -20,18 +22,9 @@ When several Shopify shops share one product catalog, one shop usually acts as t
 
 This matters because HotWax uses the selected product store and identifier to decide whether incoming Shopify products link to existing HotWax products or create new product links.
 
-## First-time setup for a multi-store catalog
+## Implementation boundary
 
-Before starting product sync for a Shopify shop:
-
-1. Open the shop in the Company app.
-2. Open `Product sync`.
-3. Review the selected product store.
-4. Confirm whether related Shopify shops use the same catalog.
-5. Confirm the product identifier matches the retailer's catalog convention.
-6. Review counts and preflight warnings before starting import.
-
-Read [First-time Product Sync Setup](products/product-sync-first-time-setup.md) for the full walkthrough.
+An approved multi-shop implementation plan must define the authoritative catalog, Product Store ownership, cross-shop identifier policy, import sequence, inventory ownership, location mappings, routing, and rollback before any shop begins its first product import. Do not follow the single-shop guide independently for each related shop.
 
 ## Ongoing product updates
 

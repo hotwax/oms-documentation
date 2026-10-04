@@ -29,7 +29,7 @@ HC_MR_ExportedSalesOrderFulfillmentCSV
 /home/{sftp-username}/netsuite/salesorder/import/fulfillment
 ```
 
-2. A scheduled job within HotWax Commerce Integration Platform reads and transforms this CSV file into the JSON format so that OMS can consume this file. This JSON file is then placed at an SFTP location.
+2. A scheduled job within HotWax Commerce Integration Platform reads and transforms this CSV file into JSON format so that the OMS can consume it. This JSON file is then placed at an SFTP location.
 3. A scheduled job within HotWax Commerce OMS reads this JSON file from the SFTP location, marking order items as fulfilled in HotWax Commerce.
 
 **Job in HotWax Commerce**
@@ -45,7 +45,7 @@ FTP Config: IMP_ODR_ITM_FLFLMNT
 
 The primary difference in this context is the approach to sending fulfillment location data from HotWax Commerce to NetSuite.
 
-While fulfillment locations are indeed transmitted to NetSuite after in-store orders are fulfilled within HotWax Commerce, it's important to understand that this data transmission isn't critical for the actual fulfillment of orders. The fulfillment location data is conveyed to NetSuite once orders are fulfilled in HotWax Commerce. Its significance lies in updating order status in NetSuite, subsequent creation of invoices and the application of payments to these invoices. This step occurs post-fulfillment in HotWax Commerce to ensure proper financial processing and completion of orders in NetSuite.
+While fulfillment locations are indeed transmitted to NetSuite after in-store orders are fulfilled within HotWax Commerce, it is important to understand that this data transmission is not critical for the actual fulfillment of orders. The fulfillment location data is conveyed to NetSuite once orders are fulfilled in HotWax Commerce. Its significance lies in updating order status in NetSuite, subsequent creation of invoices and the application of payments to these invoices. This step occurs post-fulfillment in HotWax Commerce to ensure proper financial processing and completion of orders in NetSuite.
 
 <figure><img src="../../.gitbook/assets/fulfillment-location-and-order-updates-synced-to-netsuite.png" alt=""><figcaption><p>Fulfillment location data and order updates synced from HotWax Commerce to NetSuite</p></figcaption></figure>
 

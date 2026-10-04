@@ -1,51 +1,126 @@
 ---
 description: >-
-  Learn how to add Solr indexes in HotWax Commerce to efficiently index product
-  orders and other data, enhancing data retrieval and search operations within
-  the platform.
+  Use the Maarg Search Admin page to manage Solr configsets, collections,
+  schema fields, and indexes in HotWax Commerce.
 ---
 
-# SOLR Indexing
+# Solr indexing
 
-Solr is an open-source enterprise-search platform used by HotWax Commerce to index product orders and other data within its system. It provides powerful search capabilities, making it an essential component for efficient data retrieval and search operations within the platform.
+Solr stores searchable product, order, inventory, and other application data in collections. The Maarg `Search Admin` page lets system administrators prepare those collections and run the index services that load data into them.
 
-Navigate to the `Search Admin` page from the `hamburger menu` to manage Solr indexing in HotWax Commerce. This page is divided into 3 sections:
+{% hint style="warning" %}
+Use this page only when setting up Solr, applying a planned schema change, or repairing an index. Deleting a collection permanently removes its indexed documents and cannot be undone from this page.
+{% endhint %}
 
-### Overview Section
+## Open Search Admin
 
-Upon accessing the `Search Admin` page, you'll find the `Overview` section, which provides essential details about the Solr indexing configuration for your instance.
+1. Sign in to Maarg with system administrator access.
+2. Open the hamburger menu.
+3. Go to `Settings` > `Search Admin`. The `Admin` page opens by default.
+4. Confirm that the displayed `Instance Name` is the instance you intend to manage before running an action.
 
-* **Host:** This indicates the host location of the Solr index associated with your specific instance. It's crucial to identify where the indexing operations are being performed.
-* **Cloud Mode:** This indicates whether the indexes are hosted on the cloud or not. Understanding the hosting environment helps users manage and optimize their indexing setup accordingly.
-* **Solr Version:** This displays the version of Solr being utilized. It's important for compatibility and understanding the available features and functionalities.
-* **Instance Name:** This identifies the specific instance within HotWax Commerce. It helps users differentiate between multiple instances and manage indexing settings accordingly.
+If the page is not available in the menu, ask a HotWax Commerce administrator to verify your Search Admin access.
 
-### Core Operations Section
+## Check the Solr connection
 
-The `Core Operations` feature within HotWax Commerce enables users to manage Solr cores effectively, ensuring optimal performance and organization of their indexed data. In the context of Solr, a core refers to a single index along with its associated transaction log and configuration files. Each core represents a distinct collection of data within the Solr search platform. HotWax Commerce utilizes three different types of cores:
+The `Solr Configuration` section identifies the connection used by this Maarg instance:
 
-* **shopifyCore:** This core contains all data related to Shopify GraphQL files for pre-order and backorder functions. It serves as the repository for information pertinent to pre-orders and backorders processed through the Shopify integration within HotWax Commerce.
-* **enterpriseSearch:** The enterpriseSearch core houses comprehensive data concerning products, orders, and other enterprise-related information. It serves as the primary repository for critical business data, facilitating efficient search and retrieval operations within the HotWax Commerce platform.
-* **logInsights:** The logInsights core contains insights derived from system logs, offering valuable information for generating superset reports within HotWax Commerce. It serves as a repository for log data analysis, aiding in performance monitoring, troubleshooting, and reporting activities.
+* **Solr Host:** The Solr service connected to the current Maarg instance.
+* **Instance Name:** The HotWax Commerce instance whose instance-specific collections you are managing.
+* **Solr Version:** The Solr version used to locate compatible configuration and schema definitions.
 
-#### Core Management Operations
+When Maarg cannot reach Solr, the page displays `Solr is not available` and disables configset, collection, and index actions. Record the connection error and the three configuration values, then contact the HotWax Commerce technical team. Do not continue with index setup until the connection is restored.
 
-* **Refresh Core:** Click on the `Refresh Core` button to update the Solr index with the latest data, ensuring synchronization with system changes or updates.
-* **Delete Core:** Use caution when deleting a core, as it permanently removes all associated data. Only delete cores that are no longer in use and ensure the action is intentional.
-* **Upload ConfigSet:** Utilize the `Upload ConfigSet` feature to upload configuration files for Solr cores, it only works if there are changes in the Solr config data.
-* **Delete all data:** Click on `Delete all data` to remove all indexed data from the selected core while preserving the core structure. This operation is useful for data cleanup or resetting the index.
-* **Delete Query:** Enter a specific query to delete selected data from the Solr index, allowing users to remove specific records or subsets of data while retaining the rest of the index intact.
+## Manage configsets
 
-### Index Operations
+A configset supplies the Solr configuration used to create a collection. The `Configset Operations` table shows every configset deployed with the application and how many active collections use it.
 
-The "Index Operations" feature within HotWax Commerce is essential for ensuring that data is properly indexed in Solr cores, enabling efficient search functionality within the platform. This feature plays a crucial role in enhancing users' ability to retrieve relevant information quickly and accurately, thereby improving workflow efficiency and decision-making processes.
+* Click `Upload` on one row to upload or overwrite that configset in Solr.
+* Click `Upload All Configsets` during initial setup or a planned upgrade to upload all deployed configsets. This action overwrites configsets that already exist.
+* Click `Delete` only when the configset is no longer needed and no collection uses it. Solr rejects deletion when an active collection still uses the configset.
 
-Follow these steps to create all the indexes for Solr cores:
+Uploading a configset does not create a collection or index application data. Complete the collection and index operations that follow.
 
-* **Create Userlogin Index:** Click on the `Create Userlogin Index` button to initiate indexing for user login credentials. Optionally, add a specific user login ID if you want to index data for a particular user. Otherwise, click `Submit` to index all user login data.
-* **Create Store Index:** Use the `Create Store Index` button to create an index for product stores in HotWax Commerce. Optionally, insert a specific product store ID to index data for a particular store. Otherwise, click `Submit` to index data for all product stores.
-* **Create Product Index:** Click on the `Create Product Index` button to create an index for products downloaded from Shopify. Optionally, specify a time frame to optimize indexing by including only products created within that period. This helps manage and streamline the indexing process for product data.
-* **Create Order Index:** Use the `Create Order Index` button to create an index for orders in HotWax Commerce. Optionally, add a specific order ID if you want to index data for a particular order. Otherwise, click `Submit` to index all orders.
-* **Create Order Item Ship Group Inventory Reservation (OISGIR) Index:** Click on the `Create Order Item Ship Group Inventory Reservation (OISGIR) Index` button to create an index for reservations against order item ship groups. Optionally, specify parameters such as order ID, order item sequence ID, ship group sequence ID, inventory item ID, or shipment ID to index specific reservation data. Otherwise, click `Submit` to index all reservations.
+## Manage collections
 
-<figure><img src="../.gitbook/assets/solr-indexing.png" alt=""><figcaption></figcaption></figure>
+A collection stores indexed documents. The `Collection Operations` table shows the live state of each collection declared by the application:
+
+* **Status:** Whether the collection is active or missing.
+* **Documents:** The number of indexed documents.
+* **Index Size:** The storage used by the index.
+* **App Fields:** The number of application fields from the deployed schema that are present in Solr.
+* **Unique Key:** The field that uniquely identifies each indexed document.
+
+Use the row actions as follows:
+
+* If the collection is missing, upload its configset and then click `Create Collection`.
+* During initial setup, click `Create All Collections` to create every missing collection declared by the application. Existing collections are skipped.
+* For an active collection, click `View Fields` to compare the deployed schema with the live Solr schema.
+* If fields defined by the application are missing in Solr, click `Add Missing Fields`. This adds missing field definitions and copy-field rules; it does not delete extra fields or index documents.
+
+{% hint style="danger" %}
+`Delete` permanently removes the collection, all of its indexed documents, and its Solr metadata. Do not use it for routine reindexing. Delete a collection only as part of an approved recovery or decommissioning plan.
+{% endhint %}
+
+## Compare schema fields
+
+Click `View Fields` for a collection to open its `Field Comparison` section. Use the summary and tables to interpret the result:
+
+* **Missing from Solr:** Fields declared by the deployed application schema that are not present in the live collection. Use `Add Missing Fields` from the collection row to apply them.
+* **Additional in Solr:** Live fields that are not declared by the deployed application schema. These are informational and are not removed by `Add Missing Fields`.
+* **All Schema Fields:** The deployed definitions for regular fields, dynamic fields, and copy-field rules, including their source document type and field settings.
+
+After adding fields, reopen `View Fields` and confirm that `Missing from Solr` is `0`.
+
+## Run an index service
+
+The `Index Operations` table is generated from the deployed schema. Each row identifies a `Collection`, `Doc Type`, and `Index Service`, so the available rows can differ by HotWax Commerce implementation and version.
+
+1. Confirm that Solr is available and the target collection is active.
+2. Locate the document type you want to index.
+3. Click `Run Index`.
+4. Review the service parameters in the dialog. Use the narrowest supported parameters when repairing a specific record or subset.
+5. Start the service and wait for it to finish.
+6. Confirm that the collection's `Documents` count and the related application search results reflect the expected data.
+
+{% hint style="warning" %}
+Optional parameters and defaults are defined by each index service. Leaving optional fields blank can run a bulk index. Review the dialog before starting the service, especially on a production instance.
+{% endhint %}
+
+## Recommended workflows
+
+### Set up Solr for a new instance
+
+1. Verify the `Solr Host`, `Instance Name`, and `Solr Version`.
+2. Click `Upload All Configsets`.
+3. Click `Create All Collections`.
+4. Open `View Fields` for each collection and add any missing fields.
+5. Run the required index service for each document type.
+6. Verify document counts and application searches.
+
+### Apply an application schema change
+
+1. Upload the changed configset, if the release includes a configset change.
+2. Open `View Fields` for each affected collection.
+3. Click `Add Missing Fields` when the comparison reports missing fields.
+4. Run the affected document type's index service only when the release or recovery plan requires existing documents to be rebuilt.
+5. Confirm that no required fields remain missing and verify the affected search.
+
+### Repair missing search results
+
+1. Confirm that Solr is available and the collection status is `Active`.
+2. Use `View Fields` to check for a schema mismatch.
+3. Add missing fields, if present.
+4. Run the relevant index service with a record-specific or otherwise narrow scope when the service supports one.
+5. Verify the indexed document count and repeat the user-facing search.
+
+## Troubleshooting
+
+| Message or state | What it means | Next action |
+| --- | --- | --- |
+| `Solr is not available` | Maarg cannot reach the configured Solr service. | Record the displayed connection error and configuration values, then contact the HotWax Commerce technical team. |
+| `Upload configset first` | The collection cannot be created because its configset is not present in Solr. | Upload the matching configset, then create the collection. |
+| `Create collection first` | The index service cannot run because the target collection does not exist. | Upload the configset, create the collection, and then run the index. |
+| `Missing from Solr` is greater than `0` | The live collection does not contain every field declared by the application schema. | Click `Add Missing Fields`, then repeat the comparison. |
+| A configset cannot be deleted | The configset is unavailable or an active collection still uses it. | Check the `Collections` count and remove the dependency only as part of an approved decommissioning plan. |
+| An index finishes but search results are still missing | The service may have indexed a different scope, or the source record may not meet that index service's criteria. | Check the parameters used, verify the source record, and rerun with the correct narrow scope. |

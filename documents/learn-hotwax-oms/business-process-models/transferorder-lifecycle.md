@@ -15,6 +15,10 @@ Transfer orders are created in the ERP system, they serve various purposes, incl
 
 To explain the Transfer Order Lifecycle BPM, we've opted NetSuite as the ERP system, Shopify for eCommerce, and HotWax Commerce for the OMS because most of our customers use this tech stack.
 
+{% hint style="info" %}
+The status a new transfer order receives in NetSuite depends on an accounting preference. It is either <mark style="color:orange;">**“Pending Approval”**</mark> or <mark style="color:orange;">**“Pending Fulfillment”**</mark>. This document assumes approval routing is turned off, so new transfer orders start in <mark style="color:orange;">**“Pending Fulfillment”**</mark>.
+{% endhint %}
+
 ## Warehouse to Store Transfer Orders
 
 <figure><img src="../.gitbook/assets/warehouse-to-store-transfer-orders-lifecycle-bpm.png" alt=""><figcaption><p>Warehouse to store transfer orders lifecycle business process model</p></figcaption></figure>

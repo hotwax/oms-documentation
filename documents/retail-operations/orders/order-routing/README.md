@@ -1,66 +1,76 @@
 ---
-description: >-
-  This guide will help you understand how to manage and route orders efficiently
-  using HotWax Commerce’s Order Routing App, optimizing order fulfillment
-  strategies.
+description: Configure order selection, facility lookup, schedules, and fallback actions in the Order Routing Rules app.
 icon: gears
 ---
 
-# Order Routing
+# Order routing
 
-## What is Order Routing
+Use the **Order Routing Rules** app to decide which orders the order routing engine attempts, which fulfillment locations it checks, and what happens when inventory is unavailable.
 
-Retailers handling multiple sales channels and fulfillment locations need sophisticated order routing. It allows each order to be fulfilled from the most optimal location, considering factors such as shipping method, proximity to the customer, inventory levels, fulfillment capabilities, sales velocity, and the option to split orders across locations. Effective order routing helps retailers achieve faster delivery times, reduce shipping costs, and maintain balanced inventory across all locations.
+The app now brings sourcing and routing work into one place:
 
-## What is Configurable Order Routing
+* Use the `Sourcing` section to manage threshold, safety stock, store pickup, shipping, inventory channel, and inventory visibility settings. See [available-to-promise inventory](../../inventory/available-to-promise/README.md).
+* Use the `Routing` section to build routing logic, manage facility groups, review schedules, and run routing groups.
 
-Configurable order routing takes traditional routing a step further by allowing retailers to customize and fine-tune order routing across their fulfillment network. Instead of depending on a fixed set of rules, configurable routing uses a brokering algorithm that evaluates orders and fulfillment options against a series of sequential rule sets, each with specific conditions.
+## Understand the routing structure
 
-This high level of customization enables retailers to create order routing that aligns with their unique business needs, and adjust routing parameters in real time without requiring external support. Retailers can optimize factors such as fulfillment costs, inventory distribution, sales velocity, and workload across locations, offering a strategic approach to order management. For scenarios where an order doesn’t meet the criteria of any rule set, configurable routing allows retailers to define specific actions to manage all unfillable orders, making sure no order is left unresolved.
+Order routing has three levels:
 
-This dynamic approach to order routing also lets retailers quickly adapt to evolving market conditions and customer expectations.
+| Level | What it controls | Example |
+| --- | --- | --- |
+| Routing group | When a set of routings runs | Run standard order routing every six hours |
+| Routing | Which orders are selected and in what sequence they are attempted | Select standard shipping orders from the brokering queue, oldest first |
+| Routing rule | Which facilities are eligible, how facilities are ranked, and what happens to unavailable items | Try nearby warehouses first, then move remaining items to the next rule |
 
-## Configurable Order Routing App
+The current UI uses these terms consistently. Older documentation and bookmarks may refer to routing groups as *brokering runs* and routing rules as *inventory rules*.
 
-HotWax Commerce's highly dynamic and configurable `Order Routing App` provides a structured framework for managing order routing with flexibility. The app enables retailers to define how orders are routed across their fulfillment network.
+## Choose by business goal
 
-Below is a brief overview of the brokering framework, we will understand each component in more detail in the following sections.
+Start with the recipe that matches the decision you need to make:
 
-Order routing is organized into three hierarchical levels:
+* [Select marketplace orders or work queues](use-cases.md#select-and-prioritize-orders) when a sales channel, rejected item, or promise date determines which order items should run first.
+* [Choose warehouses, stores, or nearby facilities](use-cases.md#choose-fulfillment-facilities) when your fulfillment network and delivery distance determine where to allocate items.
+* [Protect and rebalance store inventory](use-cases.md#protect-and-rebalance-inventory) when safety stock, grouped items, or weeks of supply should guide facility eligibility.
+* [Apply a complete routing template](use-cases.md#apply-a-complete-template) when you need a connected design rather than one recipe.
+* [Test and refine a strategy](use-cases.md#test-and-refine-a-strategy) when Simulation, Circuit, or Test Drive is available in your deployment.
 
-<div data-full-width="false"><figure><img src="../../.gitbook/assets/brokering-framework.png" alt=""><figcaption><p>Brokering Framework in HotWax Commerce</p></figcaption></figure></div>
+## Use the order routing list
 
-{% embed url="https://drive.google.com/file/d/1ZhhkzqXjNwnrIdzG5GYeh_UW9pDiIhbI/view?usp=drive_link" %}
-Video: Configurable Order Routing
-{% endembed %}
+Open `Order Routing` from the `Routing` section. The list page gives you two views of the same configuration:
 
-* [x] [<mark style="color:orange;">**Brokering Runs**</mark>](https://docs.hotwax.co/documents/retail-operations/orders/order-routing/brokering-runs)
+* `Coverage by day and hour` shows scheduled groups in the selected `All`, `Active`, or `Draft` segment. Select `Active` to review active schedule coverage, then review `Busiest hour`, `Coverage gaps`, and the number of active groups.
+* `Routing groups` shows every group, its schedule, status, and next run. Use `All`, `Active`, or `Draft` to narrow the list, or search by name.
 
-A <mark style="color:orange;">**brokering run**</mark> is the highest level of organization in order routing and lets retailers control the routing frequency based on business needs. Each brokering run can have a different frequency, routing different batches of orders to meet varying fulfillment priorities. For example:
+<figure><img src="../../.gitbook/assets/order-routing-list.jpg" alt="Order Routing List page with the weekly coverage grid and routing group list"><figcaption><p>Review schedule coverage and routing groups on one page.</p></figcaption></figure>
 
-* A brokering run scheduled **every 5 minutes** could prioritize high-priority orders, like same-day deliveries for fast routing and fulfillment.
-* For standard delivery orders with medium priority, a separate brokering run can be set to run **every 6 hours,** aligning with less urgent timelines.
+## Use the routing detail workspace
 
-- [x] [<mark style="color:orange;">**Routing Rules**</mark>](https://docs.hotwax.co/documents/retail-operations/orders/order-routing/routing-rules)
+Select a routing group to open one workspace with the full configuration:
 
-Within each brokering run, there are multiple <mark style="color:orange;">**routings**</mark><mark style="color:orange;">,</mark> <mark style="color:orange;">**or**</mark> <mark style="color:orange;">**“routing rules.”**</mark> Each routing defines a batch of orders by using filters and sorting criteria. For example, in a "High-Priority Run," routings might include:
+1. Review the group name, description, status, schedule, and history.
+2. Select a routing from the `Routings` column.
+3. Review or update the routing's order filters and sort order.
+4. Select a routing rule to review facility filters, facility sorting, partial allocation, and unavailable-item actions.
+5. Click `Save` to keep your changes.
 
-* **Same-day delivery batch**: Includes orders that need same-day delivery.
-* **Next-day delivery batch**: Includes orders on next-day delivery.
-* **Two-day delivery batch**: Includes orders on two-day delivery.
+<figure><img src="../../.gitbook/assets/order-routing-detail.jpg" alt="Order Routing Detail page with routing group, routing, and routing rule columns"><figcaption><p>Configure the complete routing hierarchy in one workspace.</p></figcaption></figure>
 
-These routing rules help retailers prioritize routing for specific order batches with different fulfillment timelines and conditions.
+{% hint style="warning" %}
+The detail page keeps changes to the group name, description, routings, and routing rules in a working copy until you click `Save`. Routing group status, schedule, `Run now`, and group cloning are immediate actions. The app disables those actions while the working copy has unsaved changes.
+{% endhint %}
 
-* [x] [<mark style="color:orange;">**Inventory Rules**</mark>](https://docs.hotwax.co/documents/retail-operations/orders/order-routing/inventory-rules)
+## Continue configuring order routing
 
-Within each routing, multiple <mark style="color:orange;">**inventory rules**</mark> define how inventory is allocated to the order batches. These rules allows for optimal facility look up based on factors such as proximity, stock availability, and other strategic criteria. For example:
+* [Manage routing groups](brokering-runs.md)
+* [Configure a routing group](routing-group-details.md)
+* [Configure routings](routing-rules.md)
+* [Configure routing rules](inventory-rules.md)
+* [Review routing reports](../../../analytics/reports/brokering.md)
 
-* **Same-day delivery batch**_**:**_ Inventory rules can prioritize fulfillment from warehouses within a 100-mile radius of the customer to meet same-day delivery targets. If inventory is unavailable, a secondary rule could expand the range to 250 miles and include stores.
-* **Next-day delivery batch**: For next-day orders, inventory rules can prioritize fulfillment from warehouses within a 250-mile range, accommodating the one-day delivery SLA. Next inventory rules in sequence can apply if the first inventory rule doesn’t allocate inventory for all orders in the batch.
-* **Store fulfillment batch**: Inventory rules can use [Weeks of Supply](weeks-of-supply-routing.md) to prefer stores with deeper inventory cover, helping retailers clear slow-moving inventory while protecting stores that are already experiencing high walk-in demand.
+## Use optional features
 
-In the following sections, we’ll dive deeper into each level, to understand how brokering runs, routing rules, and inventory rules work together to optimize order routing.
+The following tools are feature-gated and may not be available in your deployment:
 
-### Test Drive
-
-The Test Drive feature is used to test different types of orders to verify that all routing flows are working as expected.
+* [Test a routing group](test-drive.md)
+* [Simulate routing changes](simulation.md)
+* [Use Circuit](circuit.md)

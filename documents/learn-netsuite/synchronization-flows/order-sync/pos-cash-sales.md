@@ -26,6 +26,8 @@ SuiteScript to export the NetSuite Internal ID of completed cash sales:
 
 `HC_MR_ExportedCashSaleCSV`
 
-Enable this job in the Job Manager to import the Order Identification records into the OMS:
+Open `Catalog` in Job Manager, search for the following job, then configure its schedule to import Order Identification records:
 
 `Order Identification`
+
+See [Manage a job](../../../retail-operations/workflow/job-management/jobs/job-details.md) for current scheduling instructions.

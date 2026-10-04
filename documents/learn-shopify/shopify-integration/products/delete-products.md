@@ -1,33 +1,22 @@
 ---
-description: Learn how Shopify product deletions affect HotWax Commerce.
+description: Learn how to delete products from both Shopify and HotWax Commerce.
 ---
 
 # Deleting products
 
-When users delete a product in Shopify, HotWax Commerce must remove the Shopify shop links without breaking historical orders, returns, or reporting.
+### Delete products from Shopify and HotWax Commerce
 
-HotWax Commerce doesn't treat product deletion as a normal product update. Shopify product deletes follow a delete-event import path. HotWax Commerce groups delete events by Shopify shop, stages them for processing, and then removes the Shopify links from the affected products.
+Shopify merchants sometimes delete products to correct entry errors. To prevent data mismatches and keep inventory accurate, HotWax also soft deletes these products.
 
-## HotWax delete behavior
+In HotWax, products are soft deleted. This means they are marked as inactive (thru-dated) rather than permanently removed, which allows the system to still handle historical data and potential returns.
 
-When HotWax processes a Shopify product delete event, it:
+#### How deletions are detected
 
-* Finds the Shopify shop product link.
-* Confirms the deleted Shopify product has a link to a HotWax parent product.
-* Expires active variant associations for that parent product.
-* Removes Shopify shop product links for the selected shop.
-* Re-indexes products that still belong to another active parent.
-* Marks orphaned products with a `Product deleted from Shopify` keyword and removes them from product search.
+Deletions are identified during the diff computation stage of the product synchronization flow:
 
-This protects historical records while keeping deleted Shopify products out of active product search.
+* **Missing variants:** When the `Sync Shopify Product Updates` job runs, the system compares the incoming list of variants against the baseline history stored in the `ProductUpdateHistory` table.
+* **Identification:** If a variant exists in the baseline history but is missing from the Shopify bulk response, the system identifies it as removed.
+* **Soft deletion:** HotWax then applies this change by thru-dating the variant's association with its parent product, which delinks the variant without permanently removing the record.
 
-## What to check
+This process helps HotWax handle changes correctly without creating duplicate or orphaned records.
 
-If a deleted Shopify product still appears active in HotWax:
-
-1. Confirm the Shopify product delete sync job runs for the shop's delete-event queue.
-2. Confirm the delete event reached HotWax.
-3. Check whether the product still has active associations from another Shopify shop or product store.
-4. Confirm HotWax refreshed product search after the delete event processed.
-
-Don't rely on the old Shopify product create/delete webhook documentation for this workflow. Product deletes now follow the delete-event import path.

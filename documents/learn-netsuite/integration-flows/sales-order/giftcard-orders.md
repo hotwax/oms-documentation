@@ -68,7 +68,7 @@ Learn more about [sales order synchronization between NetSuite and HotWax Commer
 
 ### Fulfillment of Gift Cards in NetSuite
 
-In the event where a fulfillment location where a gift card item is allocated uses NetSuite for fulfillment, usually a warehouse, then the HotWax Commerce syncs those items' allocation with NetSuite.
+In the event that a fulfillment location where a gift card item is allocated uses NetSuite for fulfillment (usually a warehouse), HotWax Commerce syncs those items' allocation with NetSuite.
 
 Item fulfillment records are created in NetSuite against the gift card order items.
 
@@ -90,7 +90,7 @@ Learn more about [synchronization of fulfillment data](fulfillment.md)
 
 ### Activation of Gift Cards
 
-A scheduled SuiteScript in NetSuite generates a CSV file containing gift card items, their assigned serial numbers, and values corresponding to the gift card orders. The generated CSV is then placed at an designated SFTP location.
+A scheduled SuiteScript in NetSuite generates a CSV file containing gift card items, their assigned serial numbers, and values corresponding to the gift card orders. The generated CSV is then placed at a designated SFTP location.
 
 **SuiteScripts**
 

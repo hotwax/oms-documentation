@@ -1,131 +1,225 @@
-# Orders Not Syncing with NetSuite
+# Orders not syncing with NetSuite
 
-HotWax Commerce integrates with platforms like Shopify and NetSuite to manage orders, inventory, and customer data. Occasionally, synchronization issues may arise, causing data discrepancies and operational inefficiencies. This document outlines common scenarios for these issues, with detailed steps to identify, diagnose, and resolve them.
+Use this guide when an OMS order has not been created in NetSuite. Trace the
+order through the OMS eligibility checks, the Moqui feed job, and the NetSuite
+import and acknowledgement jobs to find the failed stage.
 
-## Scenario 1: Order Missing the Metafield in OMS
+## 1. Check the order sync feed history
 
-If orders do not have all valid order attributes, they remain in “created” status and cannot sync with NetSuite.
+1. In Order Manager, search for the order and open its Order Details page.
+2. Select the icon next to the External ID to open the **Order Sync Feed
+   History**.
 
-### Verification
+<div data-full-width="false">
+  <figure>
+    <img src="../.gitbook/assets/order-sync-history.png" alt="Order Details page showing the Order Sync Feed History dialog">
+  </figure>
+</div>
 
-#### Check Metafield in Shopify
+- If no history record exists, the Moqui order feed has not picked up the order.
+  Continue with the eligibility and job checks below.
+- If a history record exists, OMS generated a feed for the order. Continue with
+  the NetSuite import status checks.
 
-1. Log in to HotWax Commerce.
-2. Navigate to the order view page and click `ExternalID`. This will redirect you to the Shopify admin page.
-3. On the Shopify order page, check the right side in the Tag section. Verify if the order has the necessary Metafield.
+## 2. Check the order age
 
-#### Check Metafield in HotWax Commerce OMS
+Review the Order Entry Date on the Order Details page.
 
-1. Log in to HotWax Commerce.
-2. Go to the `order view page`
-3. Check if the order has the Metafield in the order attribute section.
+<div data-full-width="false">
+  <figure>
+    <img src="../.gitbook/assets/order-timeline.png" alt="Order Details timeline showing the Order Entry Date">
+  </figure>
+</div>
 
-### Resolution
+Allow the configured Moqui and NetSuite job cycles to finish. Under the standard
+schedule, the full flow can take up to two hours. Continue troubleshooting if an
+older order is still missing.
 
-#### Order Metafield present in Shopify but Not in OMS
+## 3. Validate the order data
 
-1. Manually add the Metafield to the OMS.
-2. Go to the order view page in OMS.
-3. Locate the order attribute section.
-4. Add the missing Metafield.
+An ineligible order will not be included in the Moqui order feed.
 
-#### Order Metafield absent in Both Shopify and OMS
+### Check the NetSuite customer ID
 
-1. Identify the cause of the missing Metafield.
-2. Check Shopify settings to ensure Metafields are correctly applied to orders.
-3. Verify if there are any issues with the order that prevents Metafield.
+1. On the Order Details page, select the customer in the **Bill To** section.
 
-**Additional Resources:** Refer to the [Order Attribute is Missing](https://docs.hotwax.co/documents/v/retail-operations/orders/order-management/troubleshooting/orderattributemissing) Troubleshooting document.
+<div data-full-width="false">
+  <figure>
+    <img src="../.gitbook/assets/customer-name.png" alt="Order Details page showing the Bill To customer">
+  </figure>
+</div>
 
-*Note:* Ensure the correct spelling when manually adding the Metafield in the OMS.
+2. On the customer page, confirm that **NetSuite Customer Internal ID** is
+   present in **Identifications**.
 
-## Scenario 2: Missing NetSuite Customer ID
+<div data-full-width="false">
+  <figure>
+    <img src="../.gitbook/assets/customer-identification.png" alt="Customer Identifications showing the NetSuite Customer Internal ID">
+  </figure>
+</div>
 
-To successfully create a sales order in NetSuite, having the customer information pre-existing within NetSuite's database is a prerequisite. If the order contains a new customer who is not present in NetSuite, the system won't allow the order to be pushed.
+3. If the ID is missing, find the customer in NetSuite by email address or phone
+   number. Copy the internal ID from the customer record URL and add it to the
+   customer identification in OMS.
+4. Remove unsupported special characters from the customer name or email address
+   when the NetSuite import response identifies them as the failure.
 
-### Verification
+### Check the NetSuite product IDs
 
-#### Go to the Order View Page
+Open every item from the order and confirm that **NetSuite Product Internal ID**
+is present in the product **Identifications** section. Add the verified NetSuite
+item ID when it is missing.
 
-1. Log in to HotWax Commerce.
-2. Navigate to the order view page.
+<div data-full-width="false">
+  <figure>
+    <img src="../.gitbook/assets/product-identification.png" alt="Product Identifications showing the NetSuite Product Internal ID">
+  </figure>
+</div>
 
-#### Check Customer ID
+### Check the payment
 
-1. Click on the customer name in the \"Bill to\" section.
-2. You will be redirected to the customer page.
-3. Check the identification section for the NetSuite Customer ID.
+On the Order Details page, verify that an Order Payment Preference exists and
+that the payment total equals the order total.
 
-### Resolution
+<div data-full-width="false">
+  <figure>
+    <img src="../.gitbook/assets/order-payment-preference.png" alt="Order Details page showing a payment transaction">
+  </figure>
+</div>
 
-#### Customer ID Missing
+A missing or partial payment prevents the whole order from being created in
+NetSuite. It is not only a customer deposit issue.
 
-1. Check the [customer feed](https://docs.hotwax.co/documents/v/learn-netsuite/netsuite-deployment/prerequisites/sftplocations) for the order.
-2. Navigate to the SFTP customer feed in NetSuite.
-3. Verify if the order is present in the feed.
-4. If the order is present in the feed, there may be an internal issue with NetSuite.
-5. Contact NetSuite support for assistance.
+- If Shopify contains the payment but OMS does not, run the
+  [Import Order Updates from Shopify](https://docs.hotwax.co/documents/v/retail-operations/workflow/job-workflows/orders#import-order-updates-from-shopify)
+  job or add the verified payment preference in OMS.
+- If the payment is missing in Shopify, correct it in Shopify before importing
+  the update into OMS.
 
-## Scenario 3: Customer Names or Email ID Having Special Characters
+### Check required order attributes
 
-If the customer's name or email ID contains special characters, it does not sync with NetSuite. Therefore, we need to remove the special characters. Once the name or email is updated, the next order feed will sync with the order in NetSuite.
+Confirm that all required Shopify metafields are present in the OMS order
+attributes. If an attribute is missing, follow
+[Order Attribute is Missing](https://docs.hotwax.co/documents/v/retail-operations/orders/order-management/troubleshooting/orderattributemissing)
+and correct the attribute before retrying the order.
 
-### Verification
+## 4. Run both order sync job layers
 
-#### Go to the Order View Page
+In Job Manager, open **Orders** > **NetSuite**. Verify that the Moqui feed job
+and the corresponding NetSuite jobs are enabled and completing successfully.
+Run both layers when manually retrying an order.
 
-1. Log in to HotWax Commerce.
-2. Navigate to the order view page.
+### Standard sales orders
 
-#### Check Customer Name and Email
+1. Run `generate_CreateOrderFeed` in Moqui to create the outbound order feed.
+2. Run `HC_importSalesOrders` to import the feed and create the Sales Order in
+   NetSuite.
+3. Run `HC_MR_ExportedSalesOrderCSV` to export the NetSuite result so OMS can
+   record the NetSuite internal ID.
 
-1. In the \"Bill to\" section, verify the customer's name contains any special characters.
-2. Click on the customer name. Verify if the customer's email includes any special characters.
+### POS cash sales
 
-### Resolution
+1. Run `generate_CreateOrderFeed_pos` in Moqui to create the outbound POS feed.
+2. Run `HC_SC_ImportCashSale` to import the feed and create the Cash Sale in
+   NetSuite.
+3. Run `HC_MR_ExportedCashSaleCSV` to export the NetSuite result to OMS.
 
-#### Special Characters Found
+The export jobs are not the wrong jobs; they are the acknowledgement stage. The
+Moqui feed job and the NetSuite import job must also run for the order to be
+created.
 
-1. Notify the client to adjust the customer name.
-2. Provide instructions to the client on how to update the name.
-3. The updated name will be included in the next customer feed.
+## 5. Check the order in NetSuite
 
-## Scenario 4: The Payment Preferences Have Not Been Set
+Search NetSuite using the Shopify order number.
 
-If an order doesn't have a payment preference, it cannot be synced with NetSuite. We need to check if the payment preference for that order is missing in HotWax but present in Shopify, or if the payment preference is missing in both Shopify and HotWax.
+- If the order is present, allow the acknowledgement job to add the NetSuite
+  internal ID in OMS. Under the standard schedule, this can take 15 to 20
+  minutes.
+- If the order is not present and the OMS feed history exists, inspect the
+  NetSuite CSV import response.
 
-### Verification
+## 6. Check the NetSuite CSV import status
 
-#### If the Payment Details are Not Set in HotWax
+In NetSuite, go to **Setup** > **Import/Export** > **View CSV Import Status**.
 
-1. Log in to HotWax Commerce.
-2. Navigate to the order view page
-3. In the “Payment Terms and Preferences” section, verify if preferences are set.
-   Confirm if the payment information is available in Shopify by checking the [`Order JSON data imported`](https://docs.hotwax.co/documents/v/retail-operations/workflow/data-manager/troubleshooting/shopify-mdm) in OMS.  You can verify this on the Shopify order MDM
+<div data-full-width="false">
+  <figure>
+    <img src="../.gitbook/assets/netsuite-import-status.png" alt="NetSuite CSV Import Status page">
+  </figure>
+</div>
 
-#### If the payment details are missing in both Shopify and HotWax
+Find the import file by order date and look for partial or failed results, such
+as `4 of 5 records processed successfully` or `0 of 1 records processed
+successfully`. Open **CSV Response** to see the error for the failed order.
 
-1. Log in to HotWax Commerce.
-2. Navigate to the order view page and click \"ExternalID.\" This will redirect you to the Shopify admin page.
-3. Append /transactions.json to the order URL.
-4. Check if the Transaction is null.
+<div data-full-width="false">
+  <figure>
+    <img src="../.gitbook/assets/netsuite-csv-import-files.png" alt="NetSuite CSV Import Status page showing uploaded files and processing results">
+  </figure>
+</div>
 
-#### Verify Transaction in Shopify
+## 7. Resolve common NetSuite import errors
 
-1. Check the order in Shopify.
-2. Append `/transactions.json` to the order URL.
-3. Verify if the transaction data is present or identify any issues.
+### Invalid entity reference key
 
-### Resolution
+This error means NetSuite cannot find the customer using the ID sent by OMS.
+The customer may be missing, inactive, merged, or mapped to an incorrect ID.
 
-#### If the Payment Details are Not Set in HotWax
+1. Search for the customer in NetSuite by email address or phone number.
 
-1. Check if the payment method is not set in HotWax.
-2. After the client makes the necessary changes, run the [`Import Order Update from Shopify`](https://docs.hotwax.co/documents/v/retail-operations/workflow/job-workflows/orders#import-order-updates-from-shopify) job to sync the data.
+<div data-full-width="false">
+  <figure>
+    <img src="../.gitbook/assets/netsuite-customer-search.png" alt="NetSuite Global Search showing a customer search">
+  </figure>
+</div>
 
-3. Alternatively, you can manually add the payment preferences by clicking on the + “Payment Terms and Preferences” section.
+2. Open the active customer record and copy its internal ID from the URL.
 
-##### If the Payment Details are Not Set in both HotWax and Shopify
+<div data-full-width="false">
+  <figure>
+    <img src="../.gitbook/assets/netsuite-customer-id.png" alt="NetSuite customer record URL showing the internal ID">
+  </figure>
+</div>
 
-1. Inform the client about the issue with the payment preferences.
-2. After the client makes the necessary changes, run the [`Import Order Update from Shopify`](https://docs.hotwax.co/documents/v/retail-operations/workflow/job-workflows/orders#import-order-updates-from-shopify) job to sync the data.
+3. Replace the NetSuite Customer Internal ID in the OMS customer identification.
+
+### Invalid location reference key
+
+This error means that the location is missing, inactive, or mapped incorrectly
+in NetSuite.
+
+1. Identify the order item location in OMS.
+2. In NetSuite, go to **Setup** > **Company** > **Locations**, open the location,
+   and confirm that it exists and is active.
+
+<div data-full-width="false">
+  <figure>
+    <img src="../.gitbook/assets/netsuite-location.png" alt="NetSuite Location record showing the Location Is Inactive setting">
+  </figure>
+</div>
+
+3. Correct the location or its mapping in OMS.
+
+For `Invalid location reference key ... for subsidiary ...`, also confirm that
+the order creation and fulfillment locations belong to the order's subsidiary.
+An authorized NetSuite administrator must correct a cross-subsidiary location.
+
+### Invalid item reference key
+
+This error means the NetSuite item is missing, inactive, or mapped to an
+incorrect product ID. Verify the item in NetSuite and update the NetSuite Product
+Internal ID in OMS.
+
+## 8. Retry the corrected order
+
+After correcting the source data or mapping:
+
+1. Open **Order Sync Feed History** from the Order Details page.
+2. Remove only the failed history record for the affected order.
+3. Run the Moqui feed job and the corresponding NetSuite import and
+   acknowledgement jobs again.
+4. Confirm that a new history record is created and that the NetSuite internal
+   ID returns to OMS.
+
+Removing the history record makes the order eligible for another feed. Do not
+remove successful history records or records for unrelated orders.

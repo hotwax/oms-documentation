@@ -4,20 +4,22 @@ description: >-
   simplify your eCommerce operations.
 ---
 
-# Introduction
+# Shopify integration reference
 
-The integration between HotWax Commerce and Shopify simplifies the process for retailers to synchronize their "available to promise" inventory from HotWax Commerce to Shopify. It also allows Shopify orders to be routed to either the warehouse or store for fast fulfillment. Finally, the integration can update Shopify with tracking details for orders.
+Use this manual after launch to understand and operate the product, inventory, order, and fulfillment flows between Shopify and HotWax Commerce.
 
-Once the product and order data are synchronized from Shopify to HotWax Commerce, and the "available to promise" inventory data is synchronized from HotWax Commerce to Shopify, you can begin using HotWax Commerce.
+For initial implementation, follow [Set up HotWax Commerce with Shopify](../system-admin/administration/company/product-store-onboarding.md).
+
+The integration synchronizes available-to-promise inventory from HotWax Commerce to Shopify, routes Shopify orders to warehouses or stores for fulfillment, and returns fulfillment and tracking updates to Shopify.
 
 ## What Will Be Synced Between Shopify and HotWax Commerce
 
 <figure><img src=".gitbook/assets/shopify-hotwax-data-flow.png" alt=""><figcaption><p>Flow of Data Between Shopify and HotWax Commerce</p></figcaption></figure>
 
-**Products:** To ensure that orders for all products in Shopify can be fulfilled, HotWax Commerce initially synchronizes all the products. Afterward, any newly added products by a merchandiser in Shopify are synced with HotWax Commerce at regular intervals. During this synchronization process, important product information including Shopify ID, SKU, UPC, product images, and additional details such as product names and features are also synced. Any updates made to product details are also synchronized in HotWax Commerce to provide merchants with the latest product information. Read [here](shopify-integration/products/) to learn how products are synced from Shopify to HotWax Commerce.
+**Products:** HotWax Commerce synchronizes Shopify products and later product updates, including Shopify ID, SKU, UPC, images, names, and features. Read [Product Sync from Shopify](shopify-integration/products/) for the operating model.
 
-**Inventory**: When integrating HotWax Commerce and Shopify, HotWax Commerce acts as the master of inventory availability. HotWax Commerce has the capability to integrate with various systems within the Shopify retailer’s tech stack, allowing for the calculation of "sellable inventory". This information is then synchronized to Shopify at regular intervals. For additional information on how HotWax Commerce manages and synchronizes sellable inventory to Shopify, check out [here](shopify-integration/inventory/).
+**Inventory:** After launch, HotWax Commerce is the source for inventory availability published to Shopify. It can combine inventory inputs from the retailer's technology stack to calculate sellable inventory. Read [Inventory Synchronization](shopify-integration/inventory/) for the operating model.
 
-**Orders:** Initially, all open sales orders are synchronized in HotWax Commerce. Subsequently, any upcoming orders and updates, such as order cancellations, quantity changes, item deletions, shipping address modifications, and returns, are also regularly synchronized from Shopify to HotWax Commerce.
+**Orders:** Controlled history imports eligible open and unfulfilled orders from the agreed pre-launch window. Realtime and scheduled fallback flows then synchronize current Shopify orders and updates with HotWax Commerce.
 
-When an order is fulfilled, HotWax Commerce updates the fulfillment status in Shopify. Read further for more information on the [synchronization process](shopify-integration/orders/) of orders from Shopify to HotWax Commerce and the updating of [fulfillment status](shopify-integration/order-fulfillment/) from HotWax Commerce to Shopify.
+When an order is fulfilled, HotWax Commerce updates its fulfillment and tracking information in Shopify. Read [Shopify order download flows](shopify-integration/orders/) and [Order Fulfillment](shopify-integration/order-fulfillment/) for post-launch reference.

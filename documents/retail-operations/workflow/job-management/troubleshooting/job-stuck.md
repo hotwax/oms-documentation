@@ -1,33 +1,9 @@
 ---
-description: >-
-  Learn how to troubleshoot job stuck issues in the HotWax Commerce Job Manager
-  app for seamless job processing.
+description: The stuck-job guide has moved to the current Run History workflow.
 ---
 
-# Job Stuck
+# Job stuck
 
-A scheduled job has been running for a longer duration than expected (more than 15 minutes).
+Use [Troubleshoot job runs and schedules](job-runs-and-schedules.md) to investigate a running job.
 
-## Step 1: Check the Job Queue Status
-
-1. Go to [https://.hotwax.io/webtools/control/FindJob](/documents/retail-operations/workflow/job-management/job-queueing.md).
-2. Navigate to the status field and click on "Pending."
-
-## Step 2: Verify Pending Jobs
-
-1. If there are no jobs in the pending state, it's an unusual situation. Contact HotWax support.
-2. If there are many jobs in the pending state, it indicates a potential backlog in the job queue.
-3. Wait for an hour and then check again if the jobs have run or not.
-
-## Step 3: Check Job Status After Waiting
-
-After waiting, recheck the running tab on the pipeline page. If the jobs have not run, proceed to the next step.
-
-## Step 4: Contact HotWax Support
-
-1. If there are still jobs in the pending state after waiting, contact HotWax support.
-2. Provide details about the extended duration and the number of jobs in the pending state.
-
-By following these steps, you can identify and address issues related to jobs running for an extended duration. If you need further assistance or have additional questions, reach out to the HotWax support team for prompt support.
-
-<figure><img src="../../../.gitbook/assets/stuck-job-details.png" alt="" width="375"><figcaption></figcaption></figure>
+The current app does not expose the previous Pipeline lock-release workflow. Escalate with the run identifier and logs when the app does not provide a safe recovery action.

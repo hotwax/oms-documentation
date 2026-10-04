@@ -1,66 +1,41 @@
 ---
-description: >-
-  Discover the process of creating pickers in HotWax Commerce through CSV import
-  or the user management app.
+description: Configure an individual user as a picker and verify facility assignment.
 ---
 
-# Create Pickers
+# Create pickers
 
-HotWax Commerce allows retailers to select pickers to streamline the process of picking orders from the shelves. As orders continuously flow in, efficient delegation of the picking items to pickers is crucial for timely processing. This delegation ensures that orders are processed promptly and accurately, contributing to customer satisfaction and retention. Furthermore, the feature facilitates incentive-based performance evaluation for pickers, motivating them to handle orders efficiently.\
-Store managers can assign the picklist to picker to pick orders from the fulfillment app. The generated picklists can be printed or displayed in the picking app. Only the users with the picker role will be visible to store managers when assigning orders. Pickers can be created in two ways:
+A picker must be visible for assignment in the fulfillment workflow and associated with the facility where the work occurs.
 
-**Adding Pickers in Bulk**
+## Configure an individual picker
 
-1. Log in to HotWax Commerce and Navigate to the `MDM` > `EXIM` page through the Hamberger menu.
-2. On the `EXIM` Page Choose `Picker` under the `Relationship` headings from the options available under `Imports` section.
-3. This will open an `import picker data setup` page.
-4. On the `import picker data setup` page, download the sample CSV template, fill it with the required details, save the file, and upload it back into the system.
+1. Open the **Company App**.
+2. Go to `Users`.
+3. Open the user or [create a new user](create-user.md).
+4. Turn on `Show as a picker`.
+5. Click `Add Facilities`.
+6. Select every facility where the picker can receive work.
+7. Save the user.
 
-**Following field need to be added in the CSV file:**
+The assignment dialog lists only pickers associated with that facility.
 
-| Field                | Description                          |
-| -------------------- | ------------------------------------ |
-| external\_party\_id  | ID of the external party             |
-| employee\_id         | ID of the employee                   |
-| first\_name          | First name of the employee           |
-| last\_name           | Last name of the employee            |
-| facility\_id         | ID of the associated facility        |
-| facility\_associated | Name of the associated facility      |
-| hiring\_date         | Date of hiring the employee          |
-| status               | 'A' for Active or 'T' for terminated |
-| termination\_date    | Date of termination, if applicable   |
+## Verify the picker
 
-{% embed url="https://youtu.be/3ZBxeYHPyeg" %}
-Video: Adding Pickers in Bulk
-{% endembed %}
+1. Open the [Fulfillment App](../../../store-operations/fulfillment/).
+2. Open an order or select orders in bulk.
+3. Start the picker-assignment action.
+4. Search by the picker name, HotWax ID, or external ID.
+5. Confirm that the picker appears.
 
-**Adding Individual Pickers**
+## Import pickers in bulk
 
-1. Navigate to the `user management app` of HotWax Commerce.
-2. Open the user you want to make a `Picker` or [create a new user](create-user.md)
-3. Go to the `Fulfillment` card and toggle on `Show as a picker`.
-4. Click the 'Add Facilities' button and select the facilities the picker is linked to.
+Bulk picker creation is a Data Manager import, not a native Company task.
 
-{% hint style="warning" %}
-If a picker is not linked to the facility, the picker will not appear on the Assign Picker dialog box on the Fulfillment or BOPIS App.
-{% endhint %}
+1. Open Data Manager in the OMS.
+2. Find the Picker import configuration.
+3. Download its current sample file.
+4. Populate and validate the file.
+5. Upload the file.
+6. Review the import log.
+7. Verify an imported picker in Company and the Fulfillment App.
 
-{% embed url="https://youtu.be/6BW4Hxi08N0" %}
-Video: Adding Individual Pickers
-{% endembed %}
-
-**Verify Picker**
-
-1.Go to the `Store Fulfillment` app within HotWax Commerce.
-
-2.Access the Orders tab within the store [`Fulfillment`](../../../store-operations/fulfillment/)
-
-3.Locate the order that need to be processed, or select orders in bulk.
-
-4.After selecting the desired orders we can select to pick order option to assign the picker or click on `Print Picklist` to generate the picking list.
-
-5.Search for Picker: Search for the picker by name, `Hotwax ID`, or `external ID`. The picker's name should appear in the list menu for selection.
-
-{% embed url="https://youtu.be/xseO7a2u4E4" %}
-Video: Verification of Pickers
-{% endembed %}
+Use the sample file from the target environment because required columns can change with the import configuration.

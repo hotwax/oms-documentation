@@ -6,7 +6,13 @@ description: Learn how to synchronize inventory from HotWax Commerce to Shopify.
 
 **Syncing Inventory From HotWax Commerce To Shopify**
 
-HotWax Commerce provides the option to schedule the 3 different jobs to offer retailers the flexibility to schedule as per their business requirements.
+This page covers outbound HotWax-to-Shopify publication after cutover. For the one-time inbound Shopify-to-HotWax starting inventory seed, follow [Chapter 8 of Set up HotWax Commerce with Shopify](../../../system-admin/administration/company/product-store-onboarding.md#8-seed-starting-inventory-from-shopify).
+
+HotWax Commerce supports full resets, recent-change uploads, and event-driven inventory adjustments. The jobs available on an instance depend on its installed Shopify connector and inventory-publishing model.
+
+{% hint style="info" %}
+Use [Monitor Shopify inventory sync](../../../system-admin/administration/company/manage-shopify-inventory-sync.md) in the Company App to identify the active publication path, monitor its jobs and events, and run the correct reconciliation. Do not create or run a job from its name on this concepts page alone.
+{% endhint %}
 
 ## Upload Recent Inventory Change
 
@@ -28,8 +34,7 @@ At 1:15 PM, the job that runs every 15 minutes detects that there are inventory 
 
 <table><thead><tr><th width="152">Product List</th><th width="236">Inventory Count in Shopify</th><th width="219">Available Adjustments</th><th width="309">Updated Inventory Count in Shopify</th></tr></thead><tbody><tr><td>Product A</td><td>100</td><td>-5</td><td>95</td></tr><tr><td>Product C</td><td>25</td><td>5</td><td>30</td></tr></tbody></table>
 
-<figure><img src="../../.gitbook/assets/sync-recent-inventory-changes.png" alt=""><figcaption><p><em>Fig. 1(i): Sync Inventory for Products with Recent Inventory Changes</em></p></figcaption></figure>
-
+<figure><img src="../../.gitbook/assets/sync-recent-inventory-changes.png" alt="Job Manager showing Upload recent inventory change scheduled every 15 minutes"><figcaption><p>Example recent-change schedule in a Job Manager-based publishing model.</p></figcaption></figure>
 
 When updating inventory on Shopify, HotWax Commerce ensures that the location in Shopify matches the location in HotWax Commerce for merchants. If users utilize a non-Shopify POS, all physical locations in HotWax Commerce will be mapped to one virtual location in Shopify. However, if merchants use Shopify POS and have multiple store locations and an eCom location for online orders, all Shopify locations will be mapped one-to-one with HotWax locations. This means that any inventory updates made to the retail stores and warehouses in HotWax will be reflected in the specific store locations and eCom locations in Shopify for merchants.
 
@@ -53,7 +58,7 @@ This job supports two parameters to control how inventory is synchronized:
 
 - Zone 2 Inventory Sync to Shopify: They create another facility group for the Zone 2 stores and provide its ID in the `shopifyFacilityGroupId` parameter. This directs inventory updates only to the stores included in that facility group.  
 
-<figure><img src="../../.gitbook/assets/hard-sync-inventory-discrepancy.png" alt=""><figcaption><p><em>Fig. 2: Hard Sync inventory to remove any discrepancy</em></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/hard-sync-inventory-discrepancy.png" alt="Job Manager showing the daily Hard sync inventory job"><figcaption><p>Example full-inventory schedule in a Job Manager-based publishing model.</p></figcaption></figure>
 
 ## Push Updated Inventory Deltas to Shopify
 
@@ -65,4 +70,15 @@ For example, Product A has 5 units listed in both Shopify and HotWax Commerce. S
 
 In another example, if a store receives a transfer order for Product B with 2 units, which originally had 10 units, then a variance of 2 will be pushed on Shopify to update the Shopify ATP to 12.
 
-![Delta sync job](../../.gitbook/assets/push-inventory-deltas.png)
+<figure><img src="../../.gitbook/assets/push-inventory-deltas.png" alt="Job Manager showing Push Updated Inventory Deltas to Shopify scheduled every five minutes"><figcaption><p>Example delta-publication schedule in a Job Manager-based publishing model.</p></figcaption></figure>
+
+## Monitor outbound inventory
+
+Open the Company App, select `Shopify`, open the connection, then select `Inventory sync`.
+
+The dashboard separates two outbound paths:
+
+* Physical-location QOH published from mapped HotWax facilities to their Shopify locations
+* Aggregate-channel ATP published from a group of facilities to one Shopify aggregate location
+
+Use the dashboard to review pending events, batches, job health, event sources, reset runs, and delivery errors. Follow [Monitor Shopify inventory sync](../../../system-admin/administration/company/manage-shopify-inventory-sync.md) for the complete operational and reconciliation workflow.

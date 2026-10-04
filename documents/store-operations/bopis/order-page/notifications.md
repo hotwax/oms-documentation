@@ -14,9 +14,16 @@ Store managers can customise the following notification preferences.
 * **Open Orders Reminder:** Receive periodic reminders for open orders at the facility, helping users stay organised.
 * **Ready for Pickup Orders Reminder:** Receive reminders for orders ready for pickup at the facility, ensuring timely customer communication.
 
-The frequency of reminder notifications can be configured through the `Open BOPIS order notifications` job in the Job Manager app's Fulfillment category.
+Configure reminder frequency through the `Open BOPIS order notifications` service job in Job Manager.
 
-> To manage notification frequency, go to the HotWax Commerce launchpad, access the job manager app, and go to the fulfillment page from the left menu. Click on the Open BOPIS order notification button on the Notification card. A extended menu will appear on the right where you can select the run time and schedule according to your preference and click on save to regulate the reminder frequency of the notifications. `Admin` permissions are required to access this feature.
+1. Open Job Manager from the HotWax Commerce Launchpad.
+2. Open `Catalog`.
+3. Search for `Open BOPIS order notifications`.
+4. Open the job.
+5. Review its parameters and schedule.
+6. Save the required frequency.
+
+See [Manage a job](../../../retail-operations/workflow/job-management/jobs/job-details.md) for current scheduling instructions.
 
 Users can configure the notification settings in two ways.
 

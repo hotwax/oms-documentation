@@ -1,6 +1,6 @@
 ---
 description: >-
-  Learn how how store to warehouse transfer orders are processed in HotWax Commerce.
+  Learn how store to warehouse transfer orders are processed in HotWax Commerce.
 ---
 
 # Store to Warehouse
@@ -74,7 +74,7 @@ Once approved, transfer orders are automatically reflected at the source locatio
 * Store associates pick the transfer order items they want to fulfill from their store.
 * After picking the items, store associates pack them and proceed to create fulfillments for each item.
 * Once the shipment has been created, store associates fetch shipping labels from the carrier and the corresponding tracking codes.
-* After all items are shipped, transfer orders status is automatically updated from `Approved` to `Completed` in HotWax Commerce.
+* After all items are shipped, transfer order status is automatically updated from `Approved` to `Completed` in HotWax Commerce.
 
 Once transfer order items are fulfilled from the store, the inventory count for the corresponding items is automatically reduced in HotWax Commerce.
 
@@ -104,7 +104,7 @@ generate_TransferOrderFulfilledItemsFeed
 
 **SuiteScripts**
 
-Import Fuflilled Transfer Order Items from SFTP
+Import Fulfilled Transfer Order Items from SFTP
 
 ```
 HC_SC_ImportTOItemFulfillment_v2.js
@@ -120,7 +120,7 @@ After the receiving process is completed, the transfer order is marked as `Recei
 
 Inventory for transfer order items received in the warehouse is synchronized when HotWax Commerce performs its daily inventory sync from NetSuite.
 
-**Here's how transfer order fields are mapped in NetSuite and HotWax Commerce**
+**How transfer order fields are mapped in NetSuite and HotWax Commerce**
 
 <table data-full-width="false"><thead><tr><th width="157">S.No.</th><th width="257">Fields in NetSuite</th><th>Fields in HotWax Commerce</th></tr></thead><tbody><tr><td>1</td><td>Internal ID</td><td>External ID</td></tr><tr><td>2</td><td>Transfer Order Name</td><td>Transfer Order Name</td></tr><tr><td>3</td><td>Date</td><td>Date</td></tr><tr><td>4</td><td>Item</td><td>Product</td></tr><tr><td>5</td><td>Quantity</td><td>Qty</td></tr><tr><td>6</td><td>Source Location</td><td>Ship From</td></tr><tr><td>7</td><td>Destination Location</td><td>Ship To</td></tr><tr><td>8</td><td>Shipping Address</td><td>Ship To Address</td></tr><tr><td>9</td><td>Shipping Method</td><td>Shipping Method</td></tr></tbody></table>
 

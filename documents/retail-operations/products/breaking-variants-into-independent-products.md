@@ -35,12 +35,14 @@ Here, the user has decided to divide the initial parent product into two, each f
 
 ## Steps to break the variants into separate products
 
-### Step 1: Pause Product Import and Sync Jobs
+### Step 1: Pause product import and sync jobs
 
-* In the [Job Manager App](https://job-manager.hotwax.io/product), go to the Products section.
-* Pause the following jobs ([Learn more](https://docs.hotwax.co/documents/retail-operations/workflow/job-manager/job-details#run-now)):
+* Open [Job Manager](../workflow/README.md), then open `Catalog`.
+* Search for and pause these jobs:
   * **Import Products:** imports new products from Shopify.
   * **Sync Products:** updates existing products from Shopify.
+
+See [Manage a job](../workflow/job-management/jobs/job-details.md) for current pause and run-now instructions.
 
 ### Step 2: Edit Variants in Shopify
 
@@ -63,9 +65,9 @@ Unlinking variants from Shopify in OMS
 If the variants are linked to multiple Shopify shops, only unlink them from the specific shop where the edits were made. Keep the links to other shops intact.
 {% endhint %}
 
-### Step 4: Sync changes in the OMS
+### Step 4: Sync changes in the Order Management System
 
-* Run the following jobs from the Products section of the [Job Manager App](https://job-manager.hotwax.io/product)
-  * Sync Product Job: Run this job to update the old product. ([Learn more](https://docs.hotwax.co/documents/retail-operations/workflow/job-manager/job-details#run-now))
+* Find and run these jobs from `Catalog`:
+  * Sync Product Job: Run this job to update the old product.
   * Import Products Job: Run this job to create the separated variants as a new product.
-  * Re-enable the Sync Product Job. ([Learn more](https://docs.hotwax.co/documents/retail-operations/workflow/job-manager/job-details))
+  * Resume the Sync Product Job.
