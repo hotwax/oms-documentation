@@ -63,6 +63,32 @@ For an OMS/OFBiz file import retrieved from SFTP, use the [SFTP import setup and
 
 If inventory was unavailable at the routing attempt but is present now, preserve both timestamps. That evidence supports an inventory-timing investigation; it does not by itself prove a rule defect or authorize another run.
 
+### Measure Source-To-Destination Timing
+
+Keep separate acceptance records for inventory publication, purchase-order import, and sales-order export. They can use different selection rules, schedules, and downstream processors. A requested maximum delay is a test requirement to agree with the integration owner, not evidence of an installed schedule or a product guarantee.
+
+For one mapped record in each flow, capture:
+
+| Checkpoint | Evidence To Record |
+| --- | --- |
+| Start of the agreed window | The source event or eligible update, its ID and timestamp, and the event chosen to start the timing measurement |
+| Selection and execution | Eligibility result, actual selecting job/run, start/end times, paused state, and any queue or retry wait |
+| Delivery and processing | The correlated file, message, or request and the destination's record-level result |
+| Verified outcome | Destination ID, relevant value/status, destination update time when available, and the time you read it back |
+| Acceptance decision | Requested target, owner-agreed threshold and scope, observed elapsed time, or the first checkpoint still missing |
+
+Use one time zone or record each offset. Keep the destination's update time separate from the time someone first noticed the change. If the actual update time is unavailable, label the readback time as an observation rather than inventing a precise latency. A missing timestamp means timing is unproven, not zero.
+
+A job scheduled every five minutes does not establish a five-minute maximum from source change to destination visibility. Compare the actual executions and downstream results before changing a schedule or running anything again.
+
+### Keep Routing And Accounting Acceptance Separate
+
+Record the result for each required checkpoint, rather than giving the entire scenario one routing-based pass. A correct facility assignment can coexist with a pending ERP sales order, customer deposit, or later return/refund outcome. Conversely, an existing ERP order does not prove that its payment or settlement records are complete.
+
+For the configured flow, verify the correlated remote order and any required deposit/payment records separately. For a return scenario, use the [NetSuite Returns lifecycle](https://github.com/hotwax/oms-documentation/blob/ca98c89eec3a379c3e2ebb7aef2247875bf8cf4f/documents/learn-netsuite/integration-flows/returns/README.md) and verify the required records and credit application. Do not assume that every order uses the same accounting path or that all these records are required for every scenario.
+
+Preserve a previous failure as its own result. Record a retest with its new order/run reference, configuration and observation time; a passing retest does not retroactively verify every earlier case. Leave unexecuted cases marked as untested.
+
 ## 5. Classify The Result
 
 - **Prerequisite not met:** Product, usable inventory, facility eligibility, or order status did not match the agreed scenario.
