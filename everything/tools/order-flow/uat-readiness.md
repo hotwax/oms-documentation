@@ -57,7 +57,9 @@ Do not change safety stock, reset inventory, add stock, or broaden facility memb
 
 Use [Order Routing Run Diagnostics](../maarg/order-routing-runs.md) to correlate the routing group, execution window, batch, and routing runs. Record the first stage with missing or failed evidence.
 
-For integration delays, inspect the actual configured job schedule and recent history through [Service Jobs](../maarg/service-jobs.md) and, where applicable, [System Messages](../maarg/system-messages.md). Scheduling frequency is not an end-to-end completion guarantee. Queueing, processing, polling, and downstream imports can each add time.
+For Maarg integration delays, inspect the actual configured job schedule and recent history through [Service Jobs](../maarg/service-jobs.md) and, where applicable, [System Messages](../maarg/system-messages.md). Scheduling frequency is not an end-to-end completion guarantee. Queueing, processing, polling, and downstream imports can each add time.
+
+For an OMS/OFBiz file import retrieved from SFTP, use the [SFTP import setup and first-run validation guide](https://github.com/hotwax/oms-documentation/blob/a5d99d80b37042c98f8418cc70fc2eeca2a47397/documents/system-admin/administration/data-manager/ftp-import-job.md) to compare the existing configuration ID, import path, file name pattern, and Job Manager file history. These controls are separate from Maarg MDM. Keep this review read-only rather than placing a test file, running a job, or changing its setup.
 
 If inventory was unavailable at the routing attempt but is present now, preserve both timestamps. That evidence supports an inventory-timing investigation; it does not by itself prove a rule defect or authorize another run.
 
