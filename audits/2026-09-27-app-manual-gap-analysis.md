@@ -2,12 +2,12 @@
 
 Audit recorded at 2026-09-27 16:52 UTC.
 
-## Scope and baselines
+## Review scope and baselines
 
-* Reviewed HotWax pull requests merged to app `main` from **20 September 2026 through this audit**, using GitHub merge metadata and changed files. This is a seven-day lookback, not a full historical audit.
+* Reviewed HotWax pull requests merged to app `main` from 20 September 2026 through this audit, using GitHub merge metadata and changed files. This is a seven-day lookback, not a full historical audit.
 * The organization query returned 226 merged PRs; 51 were in eight application repositories or the shared `accxui` wrapper. The final repeated query returned the same 51 app/wrapper PRs.
 * Compared user manuals against the current pinned app source below, including later merges that supersede an earlier PR description.
-* Documentation baseline: [`3c4fead`](https://github.com/hotwax/oms-documentation/tree/3c4fead4319e27b8a633164c51c1f48f9a6d7c49), from the repository default/publishing branch **`user-guides-pub`**. The docs repository does not publish from a branch named `main`.
+* Documentation baseline: [`3c4fead`](https://github.com/hotwax/oms-documentation/tree/3c4fead4319e27b8a633164c51c1f48f9a6d7c49), from the repository default/publishing branch `user-guides-pub`. The docs repository does not publish from a branch named `main`.
 * Existing dirty app checkouts and unrelated documentation edits were preserved. Source inspection used read-only main snapshots; this documentation change has its own task branch.
 * No main merges in the window were found for the surveyed Available to Promise, Fulfillment, Facilities, Pre-Order, Transfers, Users, Launchpad, Returns, Reroute Fulfillment, and Shopify BOPIS repositories. No procedure was invented for dependency, test, refactor, accessibility, cosmetic, or version-only changes.
 
@@ -23,7 +23,7 @@ Audit recorded at 2026-09-27 16:52 UTC.
 | order-routing | [`a75b2faac103`](https://github.com/hotwax/order-routing/tree/a75b2faac1031019154fb6668fc95a328d9de1c7) |
 | accxui | [`7365cc893888`](https://github.com/hotwax/accxui/tree/7365cc893888590738f3608fa50c3f52072db0ce) |
 
-## Gaps and manual changes
+## Review gaps and manual changes
 
 | Area | Baseline gap | Current source and change | Manual |
 | --- | --- | --- |
@@ -40,7 +40,7 @@ Audit recorded at 2026-09-27 16:52 UTC.
 | BOPIS | Initial notification setup and rejection default behavior incomplete | First topic starts device setup; browser permission does not equal topic subscription; rejection reason must be explicitly chosen | [Settings](../documents/store-operations/bopis/settings-page.md), [Open orders](../documents/store-operations/bopis/open-orders-page.md), [Notifications](../documents/store-operations/bopis/troubleshooting/notifications-error.md) |
 | Job Manager | Structured parameter encoding unspecified | Documents Map/List/Object values without another JSON quote layer | [Job details](../documents/retail-operations/workflow/job-management/jobs/job-details.md) |
 
-## Technical evidence
+## Review technical evidence
 
 Each link is pinned to the app snapshot, rather than a moving branch:
 
@@ -53,11 +53,11 @@ Each link is pinned to the app snapshot, rather than a moving branch:
 * **job-manager**: [JobDetail.vue](https://github.com/hotwax/job-manager/blob/ee2fac6b613c1bb81808c9edb5f2867b665ea3db/src/views/JobDetail.vue)
 * **order-routing**: [SimulationService.ts](https://github.com/hotwax/order-routing/blob/a75b2faac1031019154fb6668fc95a328d9de1c7/src/services/SimulationService.ts)
 
-## Published documentation verification
+## Verify published documentation
 
 Read the current public page index and Markdown pages on `docs.hotwax.co` during the audit. The [published inventory guide](https://docs.hotwax.co/documents/system-admins/administration/company/manage-shopify-shop/manage-shopify-inventory-sync.md) still identifies the August preview at `672694b` and describes the four-stage pipeline. The [published Order details guide](https://docs.hotwax.co/documents/retail-operations/orders/order-management/view-order-details.md) calls order attributes read-only and describes selected-item cancellation and older selection behavior. The [published Products guide](https://docs.hotwax.co/documents/retail-operations/products/product-management.md) has no Product Calendar workflow. These gaps also exist in the repository baseline.
 
-## Validation and screenshot boundaries
+## Review validation and screenshot boundaries
 
 * **Local documentation checks:** Checked 357 relative page/asset links across 34 changed Markdown files, GitBook blocks, code fences, H1 counts, changed-file spellcheck, and `git diff --check` after this revision. Repository CI checks the rendered documentation and spelling.
 * **Proven from merged source:** Controls, labels, filters, eligibility, paging/cache boundaries, and action scope. Reviewed current source and PR patches; no frontend implementation was changed.
@@ -69,7 +69,7 @@ Read the current public page index and Markdown pages on `docs.hotwax.co` during
 * **Removed sections:** Removed hidden item-cancellation and unsupported-action sections in Order Manager. Order Routing Simulation, Circuit, Test Drive, and their related documentation and navigation remain intact.
 * **Publication:** This manual update does not deploy apps, publish GitBook by itself, or certify that every customer instance runs the pinned revisions.
 
-### Screenshot evidence
+### Review screenshot evidence
 
 Captures used the normal Chrome viewport. Modal and panel captures were clipped at capture time to show the relevant controls. The shared wrapper was pinned to `7365cc893888`; app revisions match the baseline table above.
 
@@ -88,7 +88,7 @@ Captures used the normal Chrome viewport. Modal and panel captures were clipped 
 | [Delivery states](../documents/system-admin/.gitbook/assets/company-delivery-states-main.jpg) | Company owned sandbox, channel history | Complete delivery-state menu |
 | [Job details](../documents/system-admin/.gitbook/assets/company-job-details-main.jpg) | Company owned sandbox, purge-job dialog | Job/service identity, hourly UTC schedule, typed retention parameters; no mutation |
 
-## Every merged PR reviewed
+## Review every merged PR
 
 Merge times below are UTC. A row with no manual change still records the review disposition. Current source takes precedence where a later merge supersedes earlier behavior.
 
@@ -105,7 +105,7 @@ Merge times below are UTC. A row with no manual change still records the review 
 | [company #339](https://github.com/hotwax/company/pull/339) | 2026-09-26 05:34:58 | fix: Handle empty inputs and malformed keys in Shopify mapping config… | Mappings now describes persisted removal and key replacement; backend deletion support remains an instance prerequisite. |
 | [company #343](https://github.com/hotwax/company/pull/343) | 2026-09-26 03:04:40 | fix access scope refresh after login | Connection guide now explains automatic scope loading when cache is empty. |
 | [company #344](https://github.com/hotwax/company/pull/344) | 2026-09-25 08:49:00 | Removed: unwanted information icon from header and translucent property | Header icon/translucency cleanup; no procedural change. |
-| [company #438](https://github.com/hotwax/company/pull/438) | 2026-09-25 22:18:23 | Follow the connector's SIE_ inventory event-type ids | Current inventory guide uses business event labels and source references; #463 resolver supports both old and SIE_ source IDs. |
+| [company #438](https://github.com/hotwax/company/pull/438) | 2026-09-25 22:18:23 | Follow the connector's `SIE_` inventory event-type IDs | Current inventory guide uses business event labels and source references; #463 resolver supports both old and `SIE_` source IDs. |
 | [company #450](https://github.com/hotwax/company/pull/450) | 2026-09-25 23:29:02 | Refactor: extract CreateUser setup into useUserAccountActions; delete unreachable CreateProductStore view | Refactor and deletion of unreachable view; current Product Store onboarding route remains the documented entry. |
 | [company #451](https://github.com/hotwax/company/pull/451) | 2026-09-25 08:46:17 | chore: remove unused api imports | Unused imports only. |
 | [company #454](https://github.com/hotwax/company/pull/454) | 2026-09-23 10:32:42 | Fix NetSuite variance reason group id and stale membership check | NetSuite reason-group and effective membership fixes; existing variance workflow is unchanged. |

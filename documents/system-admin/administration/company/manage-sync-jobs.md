@@ -11,7 +11,7 @@ Company's product, inventory, order, fulfillment, transfer, and onboarding pages
 1. Open the configured job from the relevant sync page.
 2. Confirm the internal job name in the dialog title.
 3. Review the description, service, and parameters.
-4. Check whether the job serves one shop, product store, inventory channel, or the whole OMS.
+4. Check whether the job serves one shop, product store, inventory channel, or the whole HotWax Commerce instance.
 
 If `Sync job details unavailable` appears, select `Retry` or use the refresh action. A failed load does not mean the job is absent. Run and save actions require a successfully loaded job.
 
@@ -40,7 +40,7 @@ If a save partly succeeds, keep the dialog open and retry only the remaining dra
 
 `Run now` starts an immediate execution using the saved job configuration and does not change its schedule. Save intended configuration changes first, check for an existing active run, then run only for an approved operational purpose.
 
-Review the run result and error information. A request being accepted is not proof that synchronization completed. Use `Recent runs` and `View all runs` to follow the execution; verify the affected Shopify or OMS records before considering the task complete.
+Review the run result and error information. A request being accepted is not proof that synchronization completed. Use `Recent runs` and `View all runs` to follow the execution; verify the affected Shopify or HotWax Commerce records before considering the task complete.
 
 The dialog previews five recent runs and ten edit-history records. Use `View all runs` or Job Manager when you need more history or need to investigate overlapping jobs.
 

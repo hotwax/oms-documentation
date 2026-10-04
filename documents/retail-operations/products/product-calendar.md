@@ -34,7 +34,6 @@ A dash means the page has no readable date for that field. `No calendar rows mat
 
 The page reads up to 500 calendar rows, ordered by product ID. Search filters those loaded rows; it does not search the entire catalog or load another page. A product missing from this view is not proof that it has no saved calendar record.
 
-
 {% hint style="info" %}
 The calendar is a review page. It does not provide date entry, row creation, or a save action. The `Dates` card in Product details edits the product's general dates; do not use it as a substitute for changing this store's calendar. Ask the team responsible for calendar imports or integrations to update the store-specific records.
 {% endhint %}
@@ -43,13 +42,13 @@ The calendar is a review page. It does not provide date entry, row creation, or 
 
 The `Shopify metafield mappings` card counts populated calendar mappings belonging to shops linked to this product store. The count describes mapping configuration, not a count of products synchronized successfully.
 
-Select `Manage Shopify mappings` to open the linked connection's Product Sync page in Company. When several shops belong to the store, this link opens one connection; review the remaining connections separately. The calendar does not create or edit metafield mappings itself.
+Select `Manage Shopify mappings` to open the linked connection's `Product Sync` page in Company. When several shops belong to the store, this link opens one connection; review the remaining connections separately. The calendar does not create or edit metafield mappings itself.
 
 Keep calendar maintenance and sourcing-rule configuration as separate tasks. Reviewing these dates does not activate or change an available-to-promise rule.
 
 ## Recover from a failed load
 
-`Unable to load product calendar` means the calendar, shop, or mapping request failed. Confirm the product store and connection, then refresh. If the message persists, give the technical team the OMS, product store ID, product ID, and time of the failure. An empty list after this message does not prove the store has no calendar records.
+`Unable to load product calendar` means the calendar, shop, or mapping request failed. Confirm the product store and connection, then refresh. If the message persists, give the technical team the HotWax Commerce instance, product store ID, product ID, and time of the failure. An empty list after this message does not prove the store has no calendar records.
 
 ## Related guides
 
