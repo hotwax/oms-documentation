@@ -1,5 +1,5 @@
 ---
-description: Investigate the current Open workflow and cancel verified orders.
+description: Investigate the current Open workflow and verify order and allocation details.
 ---
 
 # Open orders
@@ -14,7 +14,7 @@ Order Manager does not expose one definitive entry or exit rule for this queue. 
 
 1. Confirm the product store shown in the menu.
 2. A facility row in `Funnel` opens this page with that facility. The top workflow link supplies no facility or date. If the page was already open, it can retain an earlier facility filter, so confirm or clear the filter.
-3. Decide which orders you need to investigate and whether cancellation is approved for every selected order.
+3. Decide which orders need investigation and open their details before taking an action.
 
 Changing the product store reloads this queue with the new store.
 
@@ -38,7 +38,7 @@ Use the filters and row details based on the decision you need to make:
 * Filter by `Facility` to review one fulfillment location.
 * Combine `Shipping method` with the delivery deadline to find time-sensitive orders.
 * Use `Priority`, order age, and estimated delivery date to decide what to inspect first.
-* Search for a known ID before canceling a specific customer order.
+* Search for a known ID before taking action on a specific customer order.
 
 ## Read the list
 
@@ -54,38 +54,7 @@ The row does not show an authoritative order status, queue reason, total, addres
 
 Use the allocation fraction only for orientation. If supporting item data fails to load, the row can fall back to an apparently complete `Y/Y` fraction.
 
-Select a row outside `Select` mode to open `Order details`. In `Select` mode, selecting a row adds or removes that order from the bulk selection.
-
-## Select the correct scope
-
-1. Select `Select`.
-2. Choose individual orders, or use the header checkbox for all currently loaded results.
-3. Compare the selected count with the work you intend to change.
-4. Select `Done` to leave select mode and clear the selection.
-
-The header checkbox does not select results that have not loaded. More results append as you scroll. Scroll until the loaded count matches the total before selecting the complete filtered population.
-
-Selection is stored by order ID. If the list contains more than one row for an order, selecting that order still creates one selected-order entry.
-
-## Cancel orders
-
-Use `Cancel` only when every remaining eligible item in each selected order should be canceled.
-
-{% hint style="warning" %}
-Cancellation cannot be undone from this page. It cancels every item that is not already completed or canceled across all ship groups in each selected order. It does not target only the allocation or facility represented by the visible row.
-{% endhint %}
-
-1. Select `Select`.
-2. Select the orders and verify the selected count.
-3. Select `Cancel`.
-4. Review the number of selected orders and select `Confirm`.
-5. Wait for the result message and list refresh.
-6. Retain the affected order IDs, then select `Done` if the page remains in select mode.
-7. Use [Find orders](find-sales-orders.md) to open each affected order and confirm which items were canceled.
-
-The success message counts selected orders, not canceled items. An order with no cancellable items can still be included in that count.
-
-Cancellation requests run across the selection and can finish for only part of it. If one request fails, another selected order may already have changed. A failure does not refresh the list. Inspect every selected order and reload the queue before retrying so that you do not act on stale results.
+Select a row to open [Order details](view-order-details.md) and work with that order.
 
 ## Interpret list states
 

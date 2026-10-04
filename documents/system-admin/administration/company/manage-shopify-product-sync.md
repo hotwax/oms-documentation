@@ -94,7 +94,7 @@ The `Product sync jobs` card shows the jobs and webhook that move requests throu
 * `Import completed requests` checks completed operations and starts the HotWax import.
 * `Bulk operations finish webhook`, when supported, notifies HotWax when Shopify finishes a bulk operation.
 
-Select `Queue update requests`, `Send update request`, or `Import completed requests` to open the service-job modal. Each modal shows the following information and controls:
+Select `Queue update requests`, `Send update request`, or `Import completed requests` to open the service-job modal. The dialog title shows the internal job name. See [Manage sync jobs in Company](manage-sync-jobs.md) for scope, schedule time zones, partial-save recovery, and run verification. Each modal shows the following information and controls:
 
 | Section | What it shows | Useful when |
 | --- | --- | --- |

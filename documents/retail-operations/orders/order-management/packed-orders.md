@@ -6,7 +6,7 @@ description: Verify packed-order scope and submit loaded shipments for shipping.
 
 Use `Packed` to review orders returned by the current Packed workflow and submit verified shipments for shipping.
 
-The page describes these orders as packed and awaiting carrier pickup, while `Funnel` labels the same workflow link `Packed and shipped`. `Order details` does not show the hidden shipment IDs submitted by this bulk action. Verify the shipment ID, packing state, and tracking details in the [Fulfillment app Completed Orders page](../../../store-operations/fulfillment/completed-orders.md) before using it.
+The page describes these orders as packed and awaiting carrier pickup, while `Funnel` labels the same workflow link `Packed and shipped`. Verify the shipment ID, packing state, and tracking details in the [Fulfillment app Completed Orders page](../../../store-operations/fulfillment/completed-orders.md) before using it.
 
 ## Confirm the store and scope
 

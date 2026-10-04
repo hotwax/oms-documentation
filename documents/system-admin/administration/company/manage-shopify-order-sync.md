@@ -26,6 +26,8 @@ The summary shows:
 * Latest batch outcome
 * Pending batch requests
 
+Open a job to verify its internal name, saved parameters, execution time zone, and recent runs. See [Manage sync jobs in Company](manage-sync-jobs.md).
+
 Click `Run now` only for an approved unscheduled batch. Investigate a paused job or incomplete mappings before running another batch.
 
 ## Track sync progress

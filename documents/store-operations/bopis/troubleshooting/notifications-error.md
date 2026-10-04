@@ -18,6 +18,8 @@ Ensure that your device has a stable internet connection. Notifications rely on 
 
 Confirm that the BOPIS app has the necessary settings to send notifications. Go to the BOPIS app's settings page, and ensure that notifications are enabled for required topics.
 
+If this is the first time you are enabling a notification topic, enable it from `Settings` and allow notifications when your browser requests permission. Device registration and topic selection are separate: signing in without saved preferences does not subscribe you to a topic. Recheck the selected topics after signing back in.
+
 ### Confirm System Compatibility
 
 Verify that OMS instance meets compatibility requirements:
