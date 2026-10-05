@@ -183,6 +183,26 @@ When you click on an item row, it expands to display additional details:
 
 Items that have already been reviewed and accepted display an `Applied` status, indicating that the final counted quantity has been submitted to the system.
 
+### Review decisions and inventory changes
+
+`Accept` applies the item's proposed variance when the review request succeeds. `Reject` records the decision without applying that variance. Closing the count finishes its lifecycle; it is not a separate approval gate for items you have already accepted.
+
+Use the compliance filter to focus your review. The filtered variance total describes only the items currently included by the filters. The close-count options apply to **all outstanding items in the count**, including items hidden by those filters.
+
+```mermaid
+flowchart TD
+    accTitle: Choose how to close a reviewed cycle count
+    accDescr: Closing checks for outstanding items across the whole count, including filtered-out items. Choose accept-all or reject-all for outstanding variances, or confirm closing if every item is already reviewed.
+    A["Choose Close"] --> B{"Outstanding items?"}
+    B -->|Yes| C["Accept all: apply remaining variances"]
+    B -->|Yes| D["Reject all: skip remaining variances"]
+    B -->|No| E["Confirm closing reviewed count"]
+    C --> F["Close count"]
+    D --> F
+    E --> F
+    F --> G["View in Closed"]
+```
+
 ### Closing the review
 
 Once the admin has finished reviewing all items in the count, they can use the `Close count` button to finalize the cycle count. Closing a count means the admin has reviewed all variances and is ready to complete the process.
@@ -207,4 +227,4 @@ Closing the cycle count ensures that the cycle count lifecycle is completed and 
 
 * The count moves from the `Pending review` section to the `Closed` section.  
 * The review is fully completed and no further changes can be made.  
-* The system posts adjustments based on the accepted items.
+* Accepted items have their variances applied when accepted, including outstanding items accepted during closing. Rejected items do not apply their proposed variances.

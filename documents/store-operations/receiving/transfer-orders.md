@@ -47,6 +47,27 @@ At the bottom of the detail page you will see a bar showing your progress and tw
 If an error occurs while completing the order (for example, due to a backend issue), you may see an error banner such as “Error in receiving transfer order”. If this happens, try saving progress and attempt completion later or contact support.
 
 
+### Choose whether to save or complete
+
+Use `Save progress` when more inventory is expected later. It posts the quantities you receive now, and fully received lines can close automatically. Use `Receive and complete` when you have finished receiving the items in the selected scope, including any shortages you have verified.
+
+If the page has a box selected, review that scope before confirming: only visible items in that box are received and completed; hidden items remain open. With no box selected, the action covers the order's open items.
+
+```mermaid
+flowchart TD
+    accTitle: Save receiving progress or complete the selected items
+    accDescr: Save progress posts the quantities received now and allows later receiving. Receive and complete requires a quantity on every selected item, reviews discrepancies, and closes only the selected scope.
+    A["Check selected box or all open items"] --> B["Enter actual received quantities"]
+    B --> C{"More receiving expected?"}
+    C -->|Yes| D["Save progress and confirm"]
+    D --> E["Post receipt; fully received lines can close"]
+    C -->|No| F["Enter every quantity, including zero"]
+    F --> G["Receive and complete; review confirmation"]
+    G --> H["Post receipt and close selected items"]
+```
+
+If the receipt response is lost or the page says a receipt was saved but quantities need refreshing, check receiving history and refresh the totals before submitting again. A missing response does not prove that inventory was unchanged.
+
 ### Using the scan feature
 
 Scanning barcodes can speed up receiving, especially for large orders with many units. There are two scanning modes:

@@ -18,6 +18,22 @@ Before selecting an action, open `Order details` and answer:
 
 Order Manager includes held orders in this queue, but their presence does not prove that every held order is eligible for routing. Review blocking holds before using `Broker selected`.
 
+### Investigate before brokering again
+
+An order can have both allocated and unfillable ship groups. Make the decision for the remaining virtual or unassigned groups, then check those groups again after routing. The queue can still contain an order after a successful routing attempt if another group remains unfillable.
+
+```mermaid
+flowchart TD
+    accTitle: Investigate and verify unfillable ship groups
+    accDescr: Check holds, shipping method, product store, and ship group scope before brokering. Results count ship groups; check remaining virtual groups and investigate inventory and routing rules before another attempt.
+    A["Order details: check holds, shipping method, and scope"] --> B["Confirm Product Store and routing group"]
+    B --> C["Broker selected"]
+    C --> D["Read ship group results and reopen Order details"]
+    D --> E{"Virtual groups remain?"}
+    E -->|Yes| F["Investigate inventory, facilities, and routing rules"]
+    E -->|No| G["Continue the order workflow"]
+```
+
 ## Find the orders to review
 
 Search by order, external ID, customer, or email. Narrow the list with:
