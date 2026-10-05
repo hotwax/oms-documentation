@@ -60,6 +60,8 @@ The connector reads Shopify fulfillment-order IDs, line-item IDs, and remaining 
 
 HotWax Commerce sends the GraphQL [`fulfillmentCreate` mutation](https://shopify.dev/docs/api/admin-graphql/latest/mutations/fulfillmentCreate) with the matched line quantities and any available tracking information. Shopify creates a fulfillment for those items. The order can remain `Partially Fulfilled` when other items still need fulfillment.
 
+<figure><img src="../../.gitbook/assets/shopify-partially-fulfilled-order.jpg" alt="Shopify demo order with one unfulfilled Autumn Pullie item at Broadway and one fulfilled Erica Evercool Sports Bra item at Brooklyn"><figcaption><p>A Shopify demo order showing separate fulfilled and unfulfilled items. One fulfillment does not complete the remaining item.</p></figcaption></figure>
+
 ### 4. Checking the result
 
 The connector checks for errors and requires a returned fulfillment ID before recording success. Verify the fulfillment record and quantities in Shopify, rather than relying only on the local shipment status or a completed job run.
