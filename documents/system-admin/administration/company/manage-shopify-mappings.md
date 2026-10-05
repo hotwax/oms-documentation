@@ -30,6 +30,14 @@ Map multiple physical stores to one facility only when the approved inventory de
 
 This page maps physical Shopify locations to HotWax facilities. Do not map a Shopify aggregate location to a physical facility. Keep the approved aggregate target unassigned, then use [Monitor Shopify inventory sync](manage-shopify-inventory-sync.md) to map it to an inventory channel.
 
+### Check online fulfillment separately
+
+On the same Shopify location page, review the `Fulfillment` card. Check `Use inventory at this location to fulfill online orders`, then review the statuses of `Shipping`, `Local delivery`, and `Pickup in store` against your launch plan. A location-to-facility mapping does not establish that the required Shopify delivery method is enabled.
+
+<figure><img src="../../.gitbook/assets/shopify-location-fulfillment-settings.jpg" alt="Broadway demo location Fulfillment card showing online-order inventory enabled while Shipping, Local delivery, and Pickup in store are Off"><figcaption><p>Broadway in hotwax-demo: online-order inventory is enabled, while all three delivery methods shown are Off. Review each required method separately.</p></figcaption></figure>
+
+Follow [Shopify's location fulfillment setup](https://help.shopify.com/en/manual/fulfillment/setup/locations/fulfillment) for delivery-method configuration. Apply the implementation's approved settings before activation.
+
 ## Map shipping methods
 
 1. Open the connection.
