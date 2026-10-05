@@ -12,7 +12,7 @@ The order card in the `Packed` Orders page shows the same basic details as in th
 
 There is also a `mail` icon to resend the pickup email to the customer, and a `Handover` button that is used to mark the order as `completed` once the customer picks up the order.
 
-When the `Handover` button is clicked, an alert appears to verify that the items are valid and the customer has received their order. Once the order is handed over, it moves to the `Completed` tab.
+Use `Handover` only after verifying the package contents and giving the order to the customer. On the order card, this action records handover directly. In Order Details, it opens a confirmation: review the warning, then select `Handover` to record collection. The warning states that handover cannot be undone in this flow. After a successful handover, the shipment moves to the `Completed` tab.
 
 Store associates can record Proof of Delivery (POD) details for completed orders from the `Completed Orders` page.
 
