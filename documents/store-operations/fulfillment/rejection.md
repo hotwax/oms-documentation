@@ -114,16 +114,16 @@ Retailers that don’t utilize HotWax Commerce for store inventory management on
 Check both settings before reporting an item as unfulfillable. **Partial rejections** controls whether other items in the current allocation stay at the store. **Auto reject related items** controls whether the rejection also reaches related orders at the same facility.
 
 ```mermaid
-flowchart TD
+flowchart LR
     accTitle: Partial and collateral rejection scope
     accDescr: With partial rejection enabled, reject the selected item, or matching eligible product items at the same facility when collateral rejection is also enabled. With partial rejection disabled, reject the current ship group, or eligible items in related orders at the same facility when collateral rejection is also enabled.
-    Partial{"Partial rejections enabled?"}
-    Partial -->|Yes| RelatedItems{"Auto reject related items?"}
+    Partial{"Partial<br/>rejections?"}
+    Partial -->|Yes| RelatedItems{"Auto reject<br/>related items?"}
     RelatedItems -->|No| Item["Selected item"]
-    RelatedItems -->|Yes| Matching["Eligible matching product items<br/>at this facility"]
-    Partial -->|No| RelatedOrders{"Auto reject related items?"}
+    RelatedItems -->|Yes| Matching["Matching<br/>product items"]
+    Partial -->|No| RelatedOrders{"Auto reject<br/>related items?"}
     RelatedOrders -->|No| Group["Current ship group"]
-    RelatedOrders -->|Yes| Orders["Eligible items in related orders<br/>at this facility"]
+    RelatedOrders -->|Yes| Orders["Related store<br/>allocations"]
 ```
 
 A **ship group** is the part of an order allocated together. Rejecting the current ship group does not mean rejecting allocations at other facilities. Collateral rejection includes approved items at the same facility whose shipment has not been packed or shipped; it does not reach completed shipments.
