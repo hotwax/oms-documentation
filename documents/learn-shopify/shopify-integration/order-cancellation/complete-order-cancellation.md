@@ -6,16 +6,33 @@ description: >-
 
 # Complete Order Cancellation
 
-**Order Cancellation In Shopify And Updated In HotWax Commerce**
+## From Shopify cancellation to OMS item status
 
-To sync cancellation updates from Shopify to HotWax Commerce, there are two options available: webhooks and batch jobs. By subscribing to the 'Canceled Order' webhook, customers can cancel orders in real-time. However, it should be noted that Shopify webhooks may not always be reliable. Therefore, it is recommended to schedule the 'Canceled Order' Job which imports all updates through a series of steps.
+Canceling an order in Shopify and applying that cancellation in HotWax Commerce are separate steps. The configured integration must import the update, match the OMS order, and process its eligible unfulfilled items. An imported update or successful job run alone does not establish that every OMS item was canceled.
 
-* Import Canceled Orders- When HotWax Commerce wants to check for canceled orders on Shopify, it uses an [API request ](https://shopify.dev/docs/api/admin-rest/2023-04/resources/order#get-orders?status=any)through the 'Canceled Order' job. This job looks at the 'cancelled\_at' field for orders on Shopify and compares it to the job's last run time. If the 'cancelled\_at' time is later than the job's last run time, the job downloads all canceled orders from Shopify in batches of 100 to avoid exceeding Shopify's API limit.
+```mermaid
+flowchart TD
+    accTitle: Shopify cancellation import and eligible OMS items
+    accDescr: A Shopify cancellation enters the configured import path and is matched to an OMS order. Eligible unfulfilled items are canceled and their status is verified. Missing or terminal orders, and items that are not eligible, require review rather than assuming cancellation undoes fulfillment.
+    A[Order canceled in Shopify] --> B[Import update and match OMS order]
+    B --> D{Eligible unfulfilled items?}
+    D -->|Yes| E[Cancel eligible items and verify OMS status]
+    D -->|No| G[Review order mapping and current item status]
+```
 
-* Processing in HotWax Commerce- Once all canceled orders are downloaded, HotWax Commerce processes the file to check the order IDs of the canceled orders and marks them as canceled in the system.
+### Check the configured import path
 
-{% hint style="info" %}
-The recommended frequency for this job is every 30 minutes, however, it can be adjusted to a different time interval using the Job Manager App.
-{% endhint %}
+| Integration | Cancellation handoff |
+| --- | --- |
+| Current Moqui Shopify connector | The order-update sync reads Shopify's `cancelledAt` value. Its configured webhook and fallback order-sync paths are described in [Order download](../orders/order-download.md). The fallback job's normal subsequent runs inspect the updated-time window; its first run selects open, unfulfilled or partially fulfilled orders. Do not treat that first run as a historical cancellation backfill. |
+| Older dedicated cancellation job | The `cancelShopifyOrders` service fetches Shopify orders with canceled status, using the configured updated-time window or a specific Shopify order ID. It matches the existing OMS order and processes eligible items. |
 
-<figure><img src="../../.gitbook/assets/download-canceled-orders-job-config.png" alt=""><figcaption><p><em>Fig. 1: Configuration in Job Manager app to download canceled orders in HotWax Commerce</em></p></figcaption></figure>
+Use the jobs, subscriptions, date window, and shop configuration that belong to your instance. The schedule in the older illustration below is an example, not a required interval for every integration.
+
+### Verify the cancellation scope
+
+The current Moqui order-update path selects items in `ITEM_CREATED` or `ITEM_APPROVED` status and skips orders already marked completed or canceled. Its item cancellation service skips items already canceled or completed. Completed fulfillment remains distinct from cancellation of the remaining unfulfilled items.
+
+After sync, compare the affected OMS item's status and cancellation history with the Shopify order. Check the order summary separately, especially when other items have already been fulfilled. For a missing update, inspect the configured import path, order mapping, item eligibility, and processing outcome before recovery; do not assume another cancellation request is needed.
+
+<figure><img src="../../.gitbook/assets/download-canceled-orders-job-config.png" alt="Earlier Job Manager interface showing an Import canceled orders job configured to run every 30 minutes"><figcaption><p>An earlier Job Manager cancellation-job configuration. Confirm the integration path and schedule used by your instance.</p></figcaption></figure>
