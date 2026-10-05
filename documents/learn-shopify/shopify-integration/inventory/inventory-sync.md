@@ -66,7 +66,23 @@ The `Push Updated Inventory Deltas to Shopify` job syncs only recent inventory d
 
 To improve inventory accuracy, this job only syncs the inventory variances recorded in HotWax commerce rather than resetting the inventory. This means any variance—whether negative (Such as damaged, lost, POS Sales) or positive (TO receiving, Returns restock) are updated to the respective Shopify locations.
 
-For example, Product A has 5 units listed in both Shopify and HotWax Commerce. Shopify then receives 4 orders for this product, which have not yet been downloaded into HotWax Commerce. Meanwhile, one unit of Product A is reported in HotWax Commerce as damaged or missing, reducing the online ATP in HotWax Commerce to 4. In this scenario, HotWax Commerce will now push a -1 inventory variance to Shopify instead of resetting the inventory to 4. The ATP on Shopify will be adjusted to 0, ensuring the product is marked as `Out of Stock` in Shopify, as Shopify has already received orders for 4 units.
+In an available-quantity example, Product A starts with 5 units in both systems. Shopify orders consume 4 units before those orders reach HotWax. A damaged unit then reduces HotWax ATP to 4. Publishing only the damage adjustment preserves the stock already consumed by Shopify orders:
+
+```mermaid
+sequenceDiagram
+    accTitle: Inventory delta while Shopify orders await import
+    accDescr: Both systems start with five units. Shopify orders consume four units, leaving one available. HotWax records one damaged unit before those orders import, so its ATP is four. Sending the damage delta of minus one leaves Shopify availability at zero; resetting Shopify to the stale ATP of four would omit the pending Shopify orders.
+    participant S as Shopify available
+    participant H as HotWax ATP
+    Note over S,H: Starting quantity: 5 in both systems
+    S->>S: Four units ordered<br/>Available: 1
+    H->>H: One unit damaged<br/>ATP: 4<br/>Orders await import
+    H->>S: Publish damage delta: -1
+    S->>S: Available: 1 - 1 = 0
+    Note over S,H: Alternative: reset Shopify<br/>to stale HotWax ATP of 4<br/>Pending orders not reflected
+```
+
+Shopify distinguishes [incremental inventory adjustments](https://shopify.dev/docs/api/admin-graphql/latest/mutations/inventoryAdjustQuantities) from [absolute quantity sets](https://shopify.dev/docs/api/admin-graphql/latest/mutations/inventorySetQuantities). Before a full reset, confirm inventory ownership, the publication target and quantity basis, and whether relevant orders have finished importing. Use the Company App's inventory-sync workflow for the configured reconciliation.
 
 In another example, if a store receives a transfer order for Product B with 2 units, which originally had 10 units, then a variance of 2 will be pushed on Shopify to update the Shopify ATP to 12.
 
