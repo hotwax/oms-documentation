@@ -35,4 +35,6 @@ The current Moqui order-update path selects items in `ITEM_CREATED` or `ITEM_APP
 
 After sync, compare the affected OMS item's status and cancellation history with the Shopify order. Check the order summary separately, especially when other items have already been fulfilled. For a missing update, inspect the configured import path, order mapping, item eligibility, and processing outcome before recovery; do not assume another cancellation request is needed.
 
+<figure><img src="../../.gitbook/assets/shopify-canceled-order-removed-item.jpg" alt="Shopify demo canceled order showing one removed Augusta Pullover Jacket in XS Blue, SKU WJ03-XS-Blue"><figcaption><p>The removed item in an existing canceled Shopify demo order. Verify the matching OMS item and cancellation history separately.</p></figcaption></figure>
+
 <figure><img src="../../.gitbook/assets/download-canceled-orders-job-config.png" alt="Earlier Job Manager interface showing an Import canceled orders job configured to run every 30 minutes"><figcaption><p>An earlier Job Manager cancellation-job configuration. Confirm the integration path and schedule used by your instance.</p></figcaption></figure>
