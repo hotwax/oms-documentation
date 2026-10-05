@@ -18,7 +18,7 @@ Confirm the location mapping and the inventory model configured for this connect
 | Aggregate channel | Available-to-promise inventory calculated for the channel's facility group | The mapped aggregate location |
 | Physical location | The configured physical-facility publication, such as quantity on hand or physical ATP | The Shopify location mapped to that facility |
 
-Review [Shopify location mapping](../../shopify-integration/inventory/location-mapping.md) and [the inventory publication models](../../shopify-integration/inventory/inventory-sync.md). Do not compare a single store's quantity with an aggregate channel, or assume every physical-location publisher uses the same quantity basis.
+Review [Shopify mappings in Company](../../../system-admin/administration/company/manage-shopify-mappings.md) and [the inventory publication models](../../shopify-integration/inventory/inventory-sync.md). Do not compare a single store's quantity with an aggregate channel, or assume every physical-location publisher uses the same quantity basis.
 
 ```mermaid
 flowchart TD

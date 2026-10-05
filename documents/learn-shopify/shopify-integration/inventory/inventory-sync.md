@@ -36,7 +36,7 @@ At 1:15 PM, the job that runs every 15 minutes detects that there are inventory 
 
 <figure><img src="../../.gitbook/assets/sync-recent-inventory-changes.png" alt="Job Manager showing Upload recent inventory change scheduled every 15 minutes"><figcaption><p>Example recent-change schedule in a Job Manager-based publishing model.</p></figcaption></figure>
 
-When updating inventory on Shopify, HotWax Commerce ensures that the location in Shopify matches the location in HotWax Commerce for merchants. If users utilize a non-Shopify POS, all physical locations in HotWax Commerce will be mapped to one virtual location in Shopify. However, if merchants use Shopify POS and have multiple store locations and an eCom location for online orders, all Shopify locations will be mapped one-to-one with HotWax locations. This means that any inventory updates made to the retail stores and warehouses in HotWax will be reflected in the specific store locations and eCom locations in Shopify for merchants.
+Location mappings follow the implementation's approved inventory and fulfillment design. A physical Shopify location can map to its corresponding HotWax facility, while an aggregate location can receive inventory from a facility group. Do not infer the mapping model solely from the POS platform. Review [Shopify mappings in Company](../../../system-admin/administration/company/manage-shopify-mappings.md).
 
 ## Hard Sync
 
@@ -78,7 +78,19 @@ Open the Company App, select `Shopify`, open the connection, then select `Invent
 
 The dashboard separates two outbound paths:
 
-* Physical-location QOH published from mapped HotWax facilities to their Shopify locations
+* Physical-location inventory published from mapped HotWax facilities to their Shopify locations, using the configured quantity basis
 * Aggregate-channel ATP published from a group of facilities to one Shopify aggregate location
+
+```mermaid
+flowchart LR
+    accTitle: Physical and aggregate Shopify inventory targets
+    accDescr: A physical HotWax facility publishes its configured inventory quantity to its mapped Shopify location, while a facility group calculates channel ATP for a separate Shopify aggregate location.
+    F[HotWax physical facility] --> Q[Configured physical quantity]
+    Q --> L[Mapped Shopify physical location]
+    G[HotWax facility group] --> A[Channel ATP calculation]
+    A --> C[Shopify aggregate location]
+```
+
+The arrows represent inventory publication, not a physical stock transfer. Confirm the selected target and quantity basis before comparing inventory or running a reset.
 
 Use the dashboard to review pending events, batches, job health, event sources, reset runs, and delivery errors. Follow [Monitor Shopify inventory sync](../../../system-admin/administration/company/manage-shopify-inventory-sync.md) for the complete operational and reconciliation workflow.
