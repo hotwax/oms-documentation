@@ -24,6 +24,8 @@ The synchronization process runs in seven stages:
 
 ```mermaid
 sequenceDiagram
+    accTitle: Shopify export and HotWax product import stages
+    accDescr: HotWax queues a Shopify bulk query and confirms completion by polling or webhook. When there is a result file, HotWax downloads and transforms it, queues the product import, compares data-group hashes, applies changes, and saves update history. Export completion does not prove import success.
     participant Connector as HotWax connector
     participant Shopify
     participant Import as HotWax product import

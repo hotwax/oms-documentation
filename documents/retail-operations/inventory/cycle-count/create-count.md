@@ -136,6 +136,8 @@ Each product row displays:
 
 ```mermaid
 flowchart TD
+    accTitle: Choose the scope of Cycle Count product selection
+    accDescr: Select individual rows for specific products, use the All checkbox for loaded products, or use Select all with the total count for every search or filter match. Review the selected count and Show selected only before submitting.
     Scope{Which products should<br/>enter the count?}
     Scope -->|Individual products| Rows[Select product rows]
     Scope -->|Loaded products| Page[Use the All checkbox]

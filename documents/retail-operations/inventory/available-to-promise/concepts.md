@@ -61,6 +61,8 @@ The second rule overrides the first rule for sale shirts.
 
 ```mermaid
 flowchart TD
+    accTitle: Later matching sourcing rules override earlier values
+    accDescr: For active rules in the same inventory channel, an earlier Shirts rule sets threshold five. If the later Shirts and Sale rule also matches, the final threshold becomes ten; otherwise it stays five.
     Product[Evaluate a product<br/>tagged Shirts] --> Base[Earlier Shirts rule matches:<br/>threshold is 5]
     Base --> Exception{Does the later Shirts<br/>and Sale rule also match?}
     Exception -->|Yes| Override[Final threshold is 10]

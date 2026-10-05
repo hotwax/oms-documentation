@@ -18,6 +18,8 @@ Monitor each flow independently. A positive result in one flow does not prove th
 
 ```mermaid
 flowchart TD
+    accTitle: Trace separate Shopify order import paths
+    accDescr: History uses a bulk-query system message, realtime uses an EventBridge and SQS consumer job, and fallback uses a queued system message. Check the tied Data Manager result and the same Shopify order in HotWax for each path.
     History[Controlled history window] --> HistoryMessage[Bulk query<br/>system message]
     HistoryMessage --> HistoryImport[History import<br/>Data Manager result]
     Event[Shopify create or<br/>update event] --> SQS[EventBridge and SQS<br/>consumer job]
