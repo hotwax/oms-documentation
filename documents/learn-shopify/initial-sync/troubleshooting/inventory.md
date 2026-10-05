@@ -48,12 +48,12 @@ See [Monitor Shopify inventory sync](../../../system-admin/administration/compan
 1. Open Shopify Admin and go to `Products` > `Inventory`.
 2. Select the mapped location and find the affected variant by its SKU. Compare the relevant quantity column; `Available` and `On hand` can differ because Shopify also tracks committed and unavailable inventory.
 
-<figure><img src="../../.gitbook/assets/shopify-location-inventory.jpg" alt="Shopify demo inventory at the Online Store location showing variant SKUs and separate Unavailable, Committed, Available, On hand, and Incoming columns"><figcaption><p>Select the location before comparing inventory. This demo example shows separate Available and On hand values for the same variant.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/shopify-location-inventory.jpg" alt="Shopify demo inventory at the Online Store location showing variant SKUs and separate Unavailable, Committed, Available, On hand, and Incoming columns"><figcaption><p>In this demo example, XS / Blue at Online Store has 1,239 Available and 1,267 On hand. Compare the column used by your configured publication model.</p></figcaption></figure>
 
 3. Open the variant. In its `Inventory` section, select `View adjustment history`.
 4. Confirm the location in the history view. Review the time, activity, creator, signed change, and resulting quantity. Check for later adjustments or fulfillment activity after the HotWax update.
 
-<figure><img src="../../.gitbook/assets/shopify-adjustment-history.jpg" alt="Shopify adjustment history for Abominable Hoodie XS Blue at Online Store showing HotWax Order Management corrections and movement receipts with separate quantity totals"><figcaption><p>Adjustment history shows what reached Shopify and subsequent activity. These demo records do not establish the status of another product, location, or shop.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/shopify-adjustment-history.jpg" alt="Shopify adjustment history for Abominable Hoodie XS Blue at Online Store showing HotWax Order Management corrections and movement receipts with separate quantity totals"><figcaption><p>This demo history shows HotWax Order Management corrections and movement receipts at Online Store. Check the location, creator, and later activity before comparing totals.</p></figcaption></figure>
 
 ## Resolve and verify
 

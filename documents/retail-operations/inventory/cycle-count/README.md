@@ -23,7 +23,7 @@ When the side menu is hidden, use the menu button at the top left of `Assigned`,
 
 For shops using the installed `HotWax Cycle Count` app, open it from Shopify Admin's app navigation. The `OMS connection` section shows the shop's OMS URL. Confirm the intended instance with your administrator before changing it. The OMS must also have the Shopify app registered for staff sign-in.
 
-<figure><img src="../../.gitbook/assets/cycle-count-shopify-connection.jpg" alt="HotWax Cycle Count app in the Shopify demo store showing its OMS URL, Save connection control, and staff sign-in registration requirement"><figcaption><p>The demo shop points to demo-maarg. This setup screen identifies the connection; staff access and the POS location still need to be checked in the counting workflow.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/cycle-count-shopify-connection.jpg" alt="HotWax Cycle Count app in the Shopify demo store showing its OMS URL, Save connection control, and staff sign-in registration requirement"><figcaption><p>The demo shop uses demo-maarg for its OMS connection. Verify your shop’s instance, staff access, and POS location before counting.</p></figcaption></figure>
 
 Add the HotWax Cycle Count tile in Shopify POS and open the counting workflow there. After an approved connection change, reopen the app in POS to use it.
 
