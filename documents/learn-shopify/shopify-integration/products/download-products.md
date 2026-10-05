@@ -78,7 +78,7 @@ A virtual product, also known as a parent product, does not have a set size or c
 | 7 | Variant | Variant |
 | 8 | Media | Overview |
 
-<div data-full-width="false"><figure><img src="../../.gitbook/assets/shopify-product-catalog.jpg" alt="Shopify demo catalog showing parent product titles, status, variant inventory, product type, and vendor"><figcaption><p>Demo catalog in Shopify. Each row represents a parent product with its variants; quantities are examples captured from the demo store.</p></figcaption></figure></div>
+<div data-full-width="false"><figure><img src="../../.gitbook/assets/shopify-product-catalog.jpg" alt="Shopify demo catalog showing parent product titles, status, and inventory across fifteen variants per product"><figcaption><p>Demo catalog in Shopify. Each row represents a parent product with its variants; quantities are examples captured from the demo store.</p></figcaption></figure></div>
 
 <div data-full-width="false"><figure><img src="../../.gitbook/assets/products-downloaded-in-hotwax.png" alt="HotWax product list showing downloaded products"><figcaption><p>Products downloaded in HotWax</p></figcaption></figure></div>
 
