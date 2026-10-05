@@ -79,6 +79,8 @@ Once you close items in a TO, you can’t receive them again. Make sure no more 
 
 ## Receiving discrepancies
 
+The examples below compare receipts with ordered quantities. With [Receive by fulfillment](../receiving/settings.md#receive-by-fulfillment-transfer-orders) enabled, the comparison uses fulfilled quantities instead.
+
 ### Over receiving
 
 If you receive more units than ordered, you can still record them. For example, if the TO is for 100 units but 110 units arrive, you can record all 110.
