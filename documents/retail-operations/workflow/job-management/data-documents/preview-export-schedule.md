@@ -8,13 +8,35 @@ Open a saved document from `Data documents` > `Documents`.
 
 ## Preview the result
 
-1. Open `Preview`.
-2. Run the preview.
-3. Confirm the columns.
-4. Review representative rows.
-5. Compare the result with the document fields and conditions.
+1. Save any changes to the document fields and conditions.
+2. Open `Preview` and set the `Rows` limit.
+3. Run the preview.
+4. Confirm the columns and review representative rows.
+5. Compare the result with the saved document fields and conditions.
 
 An empty preview can be valid when no records match the conditions. Review `Issues` and `Conditions` before you change the document.
+
+## Choose the output scope
+
+Preview runs against the saved document. Its `Rows` value limits the rows loaded for review. Search and column sorting then change which loaded rows you see.
+
+```mermaid
+flowchart TD
+    accTitle: Data document preview and export scopes
+    accDescr: Save the document fields and conditions, then either preview a limited number of rows and copy or download the visible preview, or queue an export of the saved document and track its result in export history.
+    S[Saved fields and conditions] --> P[Preview: Rows limit]
+    P --> C[Copy or CSV: visible preview rows]
+    S --> E[Run export: saved document]
+    E --> H[Recent Exports: status and result]
+```
+
+| Action | What it produces |
+| --- | --- |
+| `Copy` | The displayed preview rows after search and sorting |
+| `CSV` in the preview table | A download of those displayed preview rows |
+| `Run export` or the header `Export` action | A queued export of the saved document with its saved conditions, using the current default limit of 10,000 rows |
+
+Preview search does not narrow a queued export. Save a condition in the document when that condition must apply to the exported data. If the expected result exceeds 10,000 rows, confirm an approved export plan before treating the file as complete.
 
 ## Review usage
 
@@ -24,9 +46,9 @@ Open `Usage` to understand where the document is referenced when usage informati
 
 1. Save the latest changes.
 2. Open `Preview`.
-3. Select the export action.
-4. Confirm the export request.
-5. Open `Recent Exports` or `Export history`.
+3. Select `Run export` in the preview table or `Export` in the header.
+4. Confirm the `Data document export queued.` message.
+5. Open `Recent Exports` or `Export history` and inspect the result.
 
 Export processing can continue after you leave the builder. Use export history to confirm the final status.
 
