@@ -118,29 +118,49 @@ If the issues persist despite following the troubleshooting steps, consider revi
 If you are using test APIs, then there may be a slight delay in shipping label generation, wait for a few minutes and try generating label again, if it's not generated on the first try.
 {% endhint %}
 
-## Generate Shipping Labels from Preferred Carrier
+## Choose a recovery path
 
-Retailers can generate `shipping labels` from their preferred `carrier` using HotWax Commerce’s `Fulfillment App`, to have more control when working with multiple shipping providers. By toggling the feature in the facility details page `App link`, store associates can either automatically generate labels from the default carrier or `manually` select their preferred carrier after packing.
+When packing fails and the app cannot fetch a shipping label, the `Add tracking details` dialog offers three recovery paths. Review its `Gateway error` before choosing an action. The separate `Shipping label error` button on an order card opens the carrier's error details; it does not open the tracking form.
 
-This feature provides enhanced flexibility, especially for stores using multiple carriers, allowing for easier switching between partners and optimizing the shipping process.
+```mermaid
+flowchart TD
+    accTitle: Recover from a shipping label failure
+    accDescr: Review the gateway error when packing cannot fetch a label. Choose a configured alternate carrier, enter tracking from an externally generated label, or reject the order with troubleshooting details when you cannot provide tracking.
+    E[Review the gateway error] --> C{Choose a recovery path}
+    C --> U[Update carrier and method]
+    U --> P[Submit and check the packing result]
+    C --> M[External label: enter tracking code]
+    M --> P
+    C --> R[No tracking: reject with details]
+```
 
-### Steps to Generate Shipping Labels from Preferred Carriers
+| Dialog tab | When to use it | What to review |
+| --- | --- | --- |
+| `Update carrier` | Another configured carrier and method can serve the shipment | Select from carriers associated with the facility and their configured shipment methods |
+| `Manual tracking details` | A label was generated outside HotWax Commerce | Select the carrier and method, then enter the real carrier tracking code |
+| `Reject order` | You cannot provide tracking for this shipment | Confirm the rejection checkbox and add troubleshooting details for the operations team |
 
-1. **Access the Fulfillment App**: `Open` the HotWax Commerce `Fulfillment App` on your device.
-2. **Go to the "In Progress" Section**: `Navigate` to the `In Progress` section where you’ll find details of `active orders`.
-3. **Select the Order and Pack**: Choose the relevant order and click on the `Pack Order` option.
-4. **Choose the Preferred Carrier**: Select from options like FedEx, UPS, or EasyPost based on the order's requirements and convenience, ensuring flexibility and control over shipping.
-5. **Enter Tracking Code and URL**: Store associates can manually enter the `tracking code` in the provided field. Ensure that a `tracking URL` is configured for the selected carrier. If it’s not available, you may need to input the tracking URL `manually` to allow customers to track their `shipments` effectively.
-6. **Generate the Label**: Once the carrier is selected, `generate` the `shipping label` for the order.
+### Try a different carrier
 
-## Manual fallback: Generate tracking code
+1. Select `Update carrier` in the `Add tracking details` dialog.
+2. Choose an available `Carrier` and `Method`.
+3. Select the submit icon at the bottom right.
+4. Check the packing result. If the dialog remains open with an error, investigate that error before trying another action.
 
-If automatic shipping label generation fails, store associates can manually provide tracking details to proceed with the shipment.
+Available choices come from the facility's carriers and the product store's shipment methods. If the required carrier or method is missing, ask the administrator to review the [carrier and shipment method configuration](../../system-admin/fulfillment/shipping-methods/carrier-and-shipment-methods.md).
 
-1. If a label generation error occurs, a `Shipping label error` button appears on the shipment card.
-2. Click the button to open the `Generate tracking code` modal.
-3. Manually enter the `Tracking code` provided by the carrier.
-4. If a tracking URL is available, enter it in the `Tracking URL` field.
-5. Select `Save` to update the shipment with manual tracking details.
+### Enter tracking from an external label
 
-<figure><img src="../.gitbook/assets/preferred-carrier-label-generation.png" alt=""><figcaption></figcaption></figure>
+1. Generate the label through the approved carrier process outside HotWax Commerce.
+2. Select `Manual tracking details` in the `Add tracking details` dialog.
+3. Review the `Carrier` and `Method`, then enter the carrier's `Tracking code`.
+4. Review the displayed tracking URL. It uses the selected carrier's configured URL; this dialog does not provide a tracking-URL input. Use `Test` when available to open the URL with the entered code.
+5. Select the submit icon and check the packing result.
+
+Entering a tracking code does not generate a new carrier label. If the app reports that the carrier has no tracking URL configured, ask the administrator to review the carrier configuration.
+
+### Reject when tracking is unavailable
+
+Select `Reject order`, confirm that you cannot provide tracking, and add the gateway error or other useful troubleshooting details. Submit the rejection and check the resulting order state. The dialog states that this rejection does not affect inventory for the ordered items at the store.
+
+<figure><img src="../.gitbook/assets/preferred-carrier-label-generation.png" alt="Carrier selector and tracking-code field in an earlier Fulfillment app dialog"><figcaption><p>Earlier dialog layout. Current versions separate Update carrier and Manual tracking details into tabs.</p></figcaption></figure>
