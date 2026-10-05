@@ -10,13 +10,12 @@ Start with the routing group that should have processed the order. Confirm that 
 flowchart TD
     accTitle: Choose the right order routing troubleshooting guide
     accDescr: Use routing group history to distinguish a missing run from a completed run. For a completed run, investigate order selection, facility configuration, or inventory according to the observed symptom.
-    A["Confirm Product Store and intended routing group"] --> B["Open group History"]
-    B --> C{"Did the expected run occur?"}
-    C -->|No| D["Check routing schedule and job status"]
-    C -->|Yes| E{"What went wrong?"}
-    E -->|Order did not match| F["Check shipping-method mapping and order filters"]
-    E -->|Unexpected facility| G["Check facility configuration"]
-    E -->|No or partial allocation| H["Check inventory availability and routing rules"]
+    A["Open intended group History"] --> B{"Expected run recorded?"}
+    B -->|No| C["Check schedule and job status"]
+    B -->|Yes| D["Review run outcome"]
+    D -->|Order did not match| E["Order filters and shipping mappings"]
+    D -->|Unexpected facility| F["Facility configuration"]
+    D -->|No or partial allocation| G["Inventory availability and rules"]
 ```
 
 | Symptom | Check |
