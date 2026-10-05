@@ -25,10 +25,10 @@ Each item appears as a card containing:
 * Product image and SKU – helps identify the product.  
 * On‑hand quantity – a chip (for example, “19 on hand”) shows how many units are currently in your store.  
 * Qty field – a numeric input where you type the quantity received. The field is blank by default. Clicking inside the field displays a cursor; you can type a value or use the up/down arrows to adjust.  
-* Receive All button – fills the quantity field with the remaining expected quantity for that item. Use this when you physically receive the full shipment.  
+* Scan all button – fills the quantity field with the remaining expected quantity for that item. Use this when you physically receive the full shipment.
 * Progress bar and badges – a horizontal bar reflects how much of the expected quantity you have entered. To the right are two numbers: the first shows how many units were received in previous sessions, and the second shows the expected quantity (for example, “0 received 10 ordered”). When your entry equals the expected quantity, the bar turns green; if the number exceeds it, the bar turns red to highlight a potential error. If Receive by fulfillment is enabled, the expected quantity is the fulfilled quantity instead of the ordered quantity.
 
-Enter the quantity you physically received for each line item. If you did not receive any units, type 0 instead of leaving the field blank; blank fields will prevent you from completing the order. You can also scan barcodes into the Scan items field to increment the quantity automatically; scanning the same code multiple times increases the quantity each time.
+When manual entry is available, enter the quantity you physically received for each line item. Force scan settings disable manual quantity entry and bulk scanning. If you did not receive any units, type 0 instead of leaving the field blank; blank fields will prevent you from completing the order. You can also scan barcodes into the Scan items field to increment the quantity automatically; scanning the same code multiple times increases the quantity each time.
 
 ### Review receiving history
 
@@ -40,12 +40,11 @@ Check size, color, and identifiers together when several lines look similar. His
 
 At the bottom of the detail page you will see a bar showing your progress and two actions: Save progress and Receive and complete.
 
-* Save progress – Use this when you need to leave the order open. Clicking Save progress brings up a modal that explains that inventory will be updated for the quantities entered but the transfer order will remain open. Confirming the modal saves your entries and returns you to the order. Fully received items (where the quantity equals the ordered amount) automatically move to the Received and Completed tab after saving, reducing clutter and letting you focus on the remaining open items.  
-* Receive and complete – Use this when you are ready to close the transfer order. The button is always enabled but its behavior depends on whether all quantities have been entered. If some items are still blank, clicking Receive and complete filters the view to show only those items, displays a red message instructing you to enter the actual quantity (or 0 if not received) and provides a Back to open items link. Once every item has a quantity, clicking Receive and complete opens a confirmation modal listing each item with any discrepancies, allowing you to finalize the order. The order then moves to the Completed tab on the Transfer Orders dashboard.  
-* Empty quantities – If you click Save progress or Receive and complete when no quantities have been entered on any item, the app shows a pop‑up alert requesting that you “Specify quantity for at least one of the items to receive”. The buttons are intentionally left enabled to prompt you to correct the issue rather than silently blocking progress.
+* Save progress – Use this when more units are expected. Review the inventory-update confirmation, or acknowledge any over-receiving discrepancies before saving. The app posts the entered quantities and returns to the transfer-order list. Fully received items automatically move to Received and Completed; items still awaiting inventory remain open.
+* Receive and complete – Use this when you are ready to close the selected scope. If some quantities are blank, the action shows the items that need an actual quantity or 0, with a Back to open items link. Enter every missing quantity before continuing. When quantities match expectations, confirm with Proceed. When discrepancies exist, acknowledge every listed discrepancy and select Complete transfer order. Those checkboxes verify discrepancies; they do not choose the items to close.
+* Empty quantities – The app requests a quantity for at least one item when the action has no eligible receipt quantities. While a receipt is being processed, quantities need readback, or the page has a draft conflict, receiving actions are disabled. Resolve the displayed issue before continuing.
 
 If an error occurs while completing the order, you may see “Error in receiving transfer order”. Check receiving history or OMS to establish whether the receipt was posted, then refresh the quantities before another submission. If the app shows `Review receipt`, verify the outcome before selecting `Resolve reviewed receipt`; this clears the draft quantities without submitting inventory. Contact support if you cannot establish the outcome.
-
 
 ### Choose whether to save or complete
 
