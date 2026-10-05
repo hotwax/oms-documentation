@@ -1,6 +1,6 @@
 # Rejection
 
-The Fulfillment App allows store users to reject items from an order or complete an order when it can’t be fulfilled from the current facility. Rejected orders are moved to the ‘Rejected Item Parking’, to automatically reallocate them. Ensure that at least one brokering rule addresses orders at this parking.
+The Fulfillment App allows store users to reject individual items or the current store allocation when it can’t be fulfilled from the current facility. Rejected orders are moved to the ‘Rejected Item Parking’, to automatically reallocate them. Ensure that at least one brokering rule addresses orders at this parking.
 
 ## Reject Single Orders
 
@@ -39,7 +39,7 @@ The Rejection Analytics Page provides a detailed view of order rejections, helpi
 * **Time Filters:** Analyze rejection data from the last 24 hours or 7 days.
 * **Search:** Locate specific rejected items using Product SKUs or order details.
 
-<figure><img src="../.gitbook/assets/rejections-analytics.png" alt=""><figcaption><p>Rejections Analytics</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/rejections-analytics.png" alt="Rejection analytics summary and rejected-item list"><figcaption><p>Rejections Analytics</p></figcaption></figure>
 
 ## Rejection Reasons
 
@@ -68,7 +68,7 @@ Rejection reasons can be shown or hidden for store users directly from the `Reje
 * **When the toggle is ON:** That rejection reason is available to store users while rejecting items.
 * **When the toggle is OFF:** That rejection reason is hidden from store users in the Fulfillment App.
 
-<figure><img src="../.gitbook/assets/rejection-reasons.png" alt=""><figcaption><p>Rejection Reasons</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/rejection-reasons.png" alt="Rejection reason visibility settings for store users"><figcaption><p>Rejection Reasons</p></figcaption></figure>
 
 ### Rejection reason types that trigger inventory adjustments and how these types cause stock levels to be updated
 
@@ -86,12 +86,12 @@ Rejection reasons in the system are divided into specific types to define how th
 
 The table below lists the default rejection reasons and their assigned types, which define how they impact inventory levels. Retailers can also create custom rejection reasons with specific types to handle unique inventory adjustments as needed.
 
-| Rejection Reason | Type             | Action                                                                         | Purpose                                                                                                   |
-| ---------------- | ---------------- | ------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------- |
-| NOT IN STOCK     | REPORT\_ALL\_VAR | Sets ATP and QOH inventory to 0 for the rejected product.                      | Prevents new orders until the product is restocked.                                                       |
-| MISMATCH         | REPORT\_VAR      | Decreases ATP and QOH inventory by the rejected quantity.                      | Indicates the product is still in stock but unavailable for orders requiring the rejected size or color.  |
+| Rejection Reason | Type             | Action                                                                                                                             | Purpose                                                                                                   |
+| ---------------- | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| NOT IN STOCK     | REPORT\_ALL\_VAR | Sets ATP and QOH inventory to 0 for the rejected product.                                                                          | Prevents new orders until the product is restocked.                                                       |
+| MISMATCH         | REPORT\_VAR      | Decreases ATP and QOH inventory by the rejected quantity.                                                                          | Indicates the product is still in stock but unavailable for orders requiring the rejected size or color.  |
 | DAMAGE           | REPORT\_VAR      | Decreases ATP inventory by the rejected quantity, and also decreases QOH when `Adjust QOH Along with ATP on Rejection` is enabled. | Shows the product is in stock but damaged and unsellable.                                                 |
-| NO VARIANCE      | REPORT\_NO\_VAR  | Does not affect either ATP or QOH inventory.                                   | Useful for scenarios where inventory levels remain unchanged, e.g., canceled orders without stock issues. |
+| NO VARIANCE      | REPORT\_NO\_VAR  | Does not affect either ATP or QOH inventory.                                                                                       | Useful for scenarios where inventory levels remain unchanged, e.g., canceled orders without stock issues. |
 
 ## Adjust QOH Along with ATP on Rejection
 
@@ -105,34 +105,53 @@ By suppressing ATP and not QOH, over-selling is still prevented and orders for t
 
 Retailers that don’t utilize HotWax Commerce for store inventory management only need the OMS to maintain an accurate record of sellable inventory. In that case, retailers should allow rejections to impact both ATP and QOH.
 
-<figure><img src="../.gitbook/assets/affect-qoh-on-rejection.png" alt=""><figcaption><p>Affect QOH on Rejection</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/affect-qoh-on-rejection.png" alt="Affect QOH on rejection setting"><figcaption><p>Affect QOH on Rejection</p></figcaption></figure>
 
 ## Partial Rejection
 
-When partial rejection is enabled, individual items get rejected from a facility without impacting the rest of the order. Here’s how it works:
+### How partial and collateral rejection combine
+
+Check both settings before reporting an item as unfulfillable. **Partial rejections** controls whether other items in the current allocation stay at the store. **Auto reject related items** controls whether the rejection also reaches related orders at the same facility.
+
+```mermaid
+flowchart TD
+    accTitle: Partial and collateral rejection scope
+    accDescr: With partial rejection enabled, reject the selected item, or matching eligible product items at the same facility when collateral rejection is also enabled. With partial rejection disabled, reject the current ship group, or eligible items in related orders at the same facility when collateral rejection is also enabled.
+    Partial{"Partial rejections enabled?"}
+    Partial -->|Yes| RelatedItems{"Auto reject related items?"}
+    RelatedItems -->|No| Item["Selected item"]
+    RelatedItems -->|Yes| Matching["Eligible matching product items<br/>at this facility"]
+    Partial -->|No| RelatedOrders{"Auto reject related items?"}
+    RelatedOrders -->|No| Group["Current ship group"]
+    RelatedOrders -->|Yes| Orders["Eligible items in related orders<br/>at this facility"]
+```
+
+A **ship group** is the part of an order allocated together. Rejecting the current ship group does not mean rejecting allocations at other facilities. Collateral rejection includes approved items at the same facility whose shipment has not been packed or shipped; it does not reach completed shipments.
+
+When partial rejection is enabled and collateral rejection is off, individual items get rejected from a facility without impacting the rest of the order. Here’s how it works:
 
 1. **Reject the Item:** Click the trash bin icon next to the unfulfillable item.
 2. **Choose a Reason:** Select a reason for rejection, like "not in stock" or "damaged."
 3. **Process Remaining Items:** The rest of the items in the order remain at the allocated facility for fulfillment and will be shipped as usual.
-4. **Rebrokering:** The rejected item is sent to another facility for fulfillment.
+4. **Rebrokering:** The rejected item moves to Rejected Item Parking for the configured routing rule to try another facility.
 
-When partial rejection is disabled, rejecting any item in an order triggers the rejection of the entire order. Here’s how this works:
+When partial rejection is disabled and collateral rejection is off, rejecting an item rejects the other items in its current ship group. Here’s how this works:
 
 1. **Reject the Item:** Click the trash bin icon next to the unfulfillable item.
 2. **Choose a Reason:** Select a reason for rejection, like "not in stock" or "damaged."
-3. **Automatic Rejection:** The rest of the order is rejected with the reason "reject entire order". This will not impact inventory variance for remaining items (those were not rejected) and also not appear in rejection reports.
+3. **Automatic Rejection:** The remaining items in that ship group are rejected with the reason "reject entire order". This will not impact inventory variance for remaining items (those were not rejected) and also not appear in rejection reports.
 
 If additional items need to be rejected with a specific reason, click on the default rejection reason applied to the item and make a selection.
 
-<figure><img src="../.gitbook/assets/configure-partial-rejection.png" alt=""><figcaption><p>Configure Partial Rejection</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/configure-partial-rejection.png" alt="Partial rejection setting"><figcaption><p>Configure Partial Rejection</p></figcaption></figure>
 
 ## Collateral Rejection
 
-Collateral rejection helps manage situations where the product in a rejected order item is part of multiple pending orders at a facility. When this is enabled, rejecting an item automatically rejects it in all other orders containing the same product. The behavior depends on whether partial rejection is allowed:
+Collateral rejection helps manage situations where the product in a rejected order item is part of multiple pending orders at a facility. When this is enabled, rejecting an item also reaches eligible items in related orders containing the same product at the same facility. The behavior depends on whether partial rejection is allowed:
 
-* **If partial rejection is allowed:** Only the selected item will be rejected from all related orders, and the remaining items in those orders will still be fulfilled from the original facility.
-* **If partial rejection is not allowed:** All orders containing the rejected item will be completely rejected, not just the individual item.
+* **If partial rejection is allowed:** Matching product items are rejected from eligible related orders at the same facility. Other products remain allocated for fulfillment.
+* **If partial rejection is not allowed:** Eligible items allocated to this facility in related orders containing the product are rejected, including other products. Allocations at other facilities remain outside this scope.
 
 This feature ensures faster re-routing of unfulfillable items, minimizing delays across all orders containing the same product.
 
-<figure><img src="../.gitbook/assets/configure-collateral-rejection.png" alt=""><figcaption><p>Configure Collateral Rejection</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/configure-collateral-rejection.png" alt="Collateral rejection setting"><figcaption><p>Configure Collateral Rejection</p></figcaption></figure>
