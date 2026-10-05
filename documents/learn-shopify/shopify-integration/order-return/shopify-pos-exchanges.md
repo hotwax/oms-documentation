@@ -6,7 +6,9 @@ description: Learn how HotWax Commerce manages returns and exchange from Shopify
 
 Many times customers visit their preferred store location to return or exchange their online order. Perhaps they received the wrong size, the item is defective, or they simply changed their mind. Shopify provides a streamlined process for returns and exchanges. Store associates can directly process returns using Shopify POS, specify the items customers wish to return and the reason for the return. If they'd like to exchange the item for a different product, Shopify allows them to select the new item directly within the return process.
 
-With Exchanges V2, Shopify has streamlined the returns and exchange process for both customers and retailers. When there is an exchange order in Shopify POS, it creates a return for the items the customer doesn’t want and adds the new items the customer purchased in exchange to the order
+With Exchanges V2, Shopify has streamlined the returns and exchange process for both customers and retailers. When there is an exchange order in Shopify POS, it creates a return for the items the customer doesn’t want and adds the new items the customer purchased in exchange to the order.
+
+<figure><img src="../../.gitbook/assets/shopify-return-and-exchange-items.jpg" alt="Shopify demo order showing a closed return for an Apollo Running Short in size 32, restocked at Broadway, and a fulfilled size 34 replacement linked to that return"><figcaption><p>Shopify demo: a size exchange shows the returned item and its fulfilled replacement on the same order. Verify the corresponding OMS return, exchange order, and inventory receipt separately.</p></figcaption></figure>
 
 This seems straightforward for the initial exchange process, as the transaction details and order information are consolidated within the original order. However, this approach creates complexities for ERP systems like NetSuite or other accounting systems that hold a repository of all the financial records.
 
