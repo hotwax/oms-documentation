@@ -29,6 +29,24 @@ A scheduled job in HotWax Commerce fetches returns and exchanges from Shopify:
 - Exchange additions are imported as new sales orders linked to the original sale.
 - Returns are imported independently and linked to their corresponding HotWax order to balance totals.
 
+## Follow the linked records
+
+Shopify keeps the returned item and replacement item on the same order. In HotWax Commerce, the original sales order and the exchange sales order have separate OMS order IDs. The exchange order retains the Shopify order ID and links back to the original sale. The completed return also links to the replacement order.
+
+```mermaid
+flowchart TD
+    accTitle: Shopify exchange records in HotWax Commerce
+    accDescr: Shopify keeps the original and exchange items on one order. HotWax records the original sale and replacement sale as separate orders, links the exchange to the original sale, and links the completed return to its replacement order. Refund transactions and inventory receipts must be checked separately.
+    S["One Shopify order<br/>Original and exchange items"] --> O["Original OMS sales order"]
+    S --> E["Separate OMS exchange sales order<br/>Replacement items"]
+    E -->|"Exchange link"| O
+    O --> R["OMS return<br/>Returned items"]
+    R -->|"Replacement order link"| E
+    R --> C["Check refund transactions<br/>and any inventory receipt separately"]
+```
+
+When investigating an exchange, match the Shopify order ID and item identifiers, then check the original order, exchange order, and return. A fulfilled replacement in Shopify does not by itself confirm that all three OMS records imported successfully. Follow the [return, refund, and inventory checks](README.md#separate-goods-money-and-inventory) before treating the exchange as reconciled.
+
 ## Mapping Returns and Exchanges
 
 To illustrate how returns and exchanges in the same order in Shopify are imported as separate exchange orders in HotWax while ensuring all orders and transactions are balanced, this document will cover the following scenarios
