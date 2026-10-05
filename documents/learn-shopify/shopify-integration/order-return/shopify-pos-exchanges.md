@@ -187,6 +187,9 @@ If the customer later returns Item D along with B and C, they will receive a fin
 
 ## Inventory Updates
 
-HotWax automatically adjusts inventory for exchanges and returns:
-- **Exchanges**: Inventory for the new item is decreased when the order syncs as `Completed`.
-- **Returns**: Inventory for returned items is restocked at the specified facility if the restocking flag is enabled in the Shopify integration settings.
+Check replacement-item deductions and returned-item receipts separately:
+
+- **Replacement items:** Verify the inventory issuance against the exchange order and fulfillment facility. A `Completed` order status alone does not establish a new stock deduction. In integrations that use the order-sync go-live cutoff, earlier POS sales and exchanges can complete without issuing stock again because starting inventory already accounts for those sales.
+- **Returned items:** Verify the return's restock data, received quantity, and receipt at the mapped facility. Refund processing alone does not establish that stock was received.
+
+Confirm the instance's inventory ownership and [configured return-import path](import-returns-from-shopify.md#in-store-returns). If inventory also publishes back to Shopify, verify that result through [Monitor Shopify inventory sync](../../../system-admin/administration/company/manage-shopify-inventory-sync.md).
