@@ -31,9 +31,29 @@ The Purchase Order detail page shows:
 * Item cards with product image, identifiers, facility location, `Qty`, `Receive All`, a progress bar, and received history.  
 * `Receive` and `Receive And Close` actions.
 
-Use `Receive` to create and receive inventory for the quantities entered while keeping the purchase order open for later receipts. Use `Receive And Close` when you are ready to close the remaining items on the purchase order.
+Use `Receive` to post the quantities that arrived while keeping pending items available for later receipts. Use `Receive And Close` to post entered quantities and close the items you select in the closing dialog.
 
 Purchase orders support partial receiving across multiple receipts, so users can receive inventory in stages as shipments arrive.
+
+### Choose what to close
+
+Enter only quantities physically received. Then choose the action according to whether you need to close any pending lines:
+
+```mermaid
+flowchart TD
+    accTitle: Receive purchase order inventory or close selected lines
+    accDescr: Enter actual receipt quantities. Receive posts the receipt while leaving pending lines available for later receiving. Receive And Close opens a line-selection dialog; review the selected lines, save and confirm, then those lines are no longer available for receiving.
+    Quantity["Enter actual receipt quantities"] --> Close{"Close any pending lines?"}
+    Close -->|No| Receive["Receive and confirm"]
+    Receive --> Later["Pending lines stay available"]
+    Close -->|Yes| Select["Receive And Close:<br/>review selected lines"]
+    Select --> Confirm["Save icon, then Proceed"]
+    Confirm --> Closed["Selected lines close"]
+```
+
+In `Close purchase order items`, review every checked line before saving. Lines with earlier receipts can already be checked. Uncheck a pending line if more units are expected; use `Select all` only when all remaining lines should close. Completed or rejected lines cannot be selected for another closure.
+
+Tap the Save icon, then review the warning and select `Proceed`. The selected lines will no longer be available for receiving. Closing a line does not mean its full ordered quantity arrived: only the entered receipt quantities are added to inventory.
 
 ### Review receiving history
 
@@ -65,6 +85,12 @@ The Return detail page shows:
 * A floating action button to complete receiving when at least one quantity has been entered.
 
 If the return is already completed or no longer receivable, the same field is used to search and highlight items instead of updating quantities.
+
+### Confirm a return receipt
+
+Enter or scan the quantities that physically arrived, then tap the floating checkmark button. At least one positive quantity and receiving permission are required. Review the `Receive Shipment` confirmation before selecting `Proceed`: it warns that these quantities cannot be edited afterward in this flow.
+
+The app returns to the Returns list after a successful receipt. Lines with earlier receipts have no manual `Qty` or `Receive All` controls, and this flow excludes them from the next receipt. If a response is unclear, check the recorded receipt in OMS before submitting the quantities again.
 
 ## Related guides
 
