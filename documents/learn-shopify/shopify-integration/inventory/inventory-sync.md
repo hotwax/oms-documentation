@@ -40,23 +40,16 @@ Location mappings follow the implementation's approved inventory and fulfillment
 
 ## Hard Sync
 
-Sometimes, there may be a slight delay of a few milliseconds between two inventory update jobs from other systems. For instance, if job-1 runs at 1:00:00 PM and job-2 runs at 1:15:00 PM, job-2 checks the inventory changes that happened between 1:00:00 PM and 1:15:00 PM.
+A full reconciliation compares the configured HotWax inventory quantity with Shopify across the selected products and locations. It can restore alignment after skipped updates or a changed publication target, once the underlying mapping, capture, or delivery issue is resolved. The approved schedule depends on the implementation; a daily reset is not a substitute for monitoring delivery or importing outstanding orders.
 
-However, if a sale occurs in-store at 12:59:59 PM and HotWax Commerce receives an inventory update from the POS at 1:00:01 PM, both jobs won't detect the changes in inventory.
+In the Job Manager-based reset model shown below, the two facility-group parameters have different roles:
 
-To prevent this issue, merchants can use `Hard Sync` job once a day to synchronize the inventory counts of all products from HotWax Commerce to Shopify. The synchronization is achieved through the GraphQL file, similar to how inventory synchronization is performed for products with recent updates.
+* `facilityGroupId` selects the inventory group used to calculate ATP for the aggregate location.
+* `shopifyFacilityGroupId` limits publication to Shopify locations mapped to facilities in that group. If omitted, the job considers all locations mapped for the shop.
 
-This job supports two parameters to control how inventory is synchronized:
+For example, a retailer can calculate aggregate ATP from a group containing all 50 stores, while limiting the physical-location updates to a publication group containing its 25 Zone 2 stores. Each selected physical location receives its own mapped facility's configured quantity. The combined stock of all 50 stores belongs at the aggregate target, rather than being copied to each Zone 2 location.
 
-- The facilityGroupId parameter defines which facilities’ inventory is accumulated to calculate the total available quantity.
-
-- The shopifyFacilityGroupId parameter specifies which store facilities’ inventories should be pushed to Shopify. If not specified, inventory will be pushed for all locations mapped in ShopifyShopLocation.
-
-**Example:** A retailer has 50 stores, with 25 in Zone 1 and 25 in Zone 2. He wants to push the total inventory of all 50 stores while mapping inventory to the stores in Zone 2.
-
-- Calculate Inventory: They create a facility group for Zone 1 and Zone 2 and provide its ID in the `facilityGroupId` parameter. This ensures that stock from these stores is included in the total inventory calculation.
-
-- Zone 2 Inventory Sync to Shopify: They create another facility group for the Zone 2 stores and provide its ID in the `shopifyFacilityGroupId` parameter. This directs inventory updates only to the stores included in that facility group.  
+Confirm that the intended aggregate target is included in the publication scope. Use [Monitor Shopify inventory sync](../../../system-admin/administration/company/manage-shopify-inventory-sync.md) for the jobs available on your instance, the required reconciliation, and verification in Shopify. A completed reset run alone does not prove the target quantity was delivered.
 
 <figure><img src="../../.gitbook/assets/hard-sync-inventory-discrepancy.png" alt="Job Manager showing the daily Hard sync inventory job"><figcaption><p>Example full-inventory schedule in a Job Manager-based publishing model.</p></figcaption></figure>
 
