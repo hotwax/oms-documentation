@@ -134,6 +134,19 @@ Each product row displays:
 - Use the `All` checkbox at the top of the list to select or deselect all visible products.
 - If the total matching products exceed the loaded page, a `Select all` button appears with the total count. Select it to include all matching products.
 
+```mermaid
+flowchart TD
+    Scope{Which products should<br/>enter the count?}
+    Scope -->|Individual products| Rows[Select product rows]
+    Scope -->|Loaded products| Page[Use the All checkbox]
+    Scope -->|Every search or filter match| Matches[Use Select all with<br/>the total matching count]
+    Rows --> Review[Check the selected count<br/>and use Show selected only]
+    Page --> Review
+    Matches --> Review
+```
+
+The selected count is the scope that will be submitted. Review it before choosing `Create Cycle Count`, especially when the matching result set is larger than the loaded list.
+
 ### Show selected only
 
 - Turn on the `Show selected only` toggle to display only the products already selected.
