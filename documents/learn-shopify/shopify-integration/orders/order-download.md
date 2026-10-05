@@ -16,6 +16,21 @@ Use this reference after a Shopify shop is live to identify which order import f
 
 Monitor each flow independently. A positive result in one flow does not prove that either of the other flows is healthy.
 
+```mermaid
+flowchart TD
+    History[Controlled history window] --> HistoryMessage[Bulk query<br/>system message]
+    HistoryMessage --> HistoryImport[History import<br/>Data Manager result]
+    Event[Shopify create or<br/>update event] --> SQS[EventBridge and SQS<br/>consumer job]
+    SQS --> RealtimeImport[Realtime import<br/>Data Manager result]
+    Batch[Scheduled fallback batch] --> BatchMessage[Queued system message]
+    BatchMessage --> BatchImport[Fallback import<br/>Data Manager result]
+    HistoryImport --> Verify[Verify the same Shopify order<br/>in HotWax Commerce]
+    RealtimeImport --> Verify
+    BatchImport --> Verify
+```
+
+For eligible work that proceeds to import, follow its own path to the Data Manager result and matching OMS order. Realtime imports link to the SQS consumer job run rather than a System Message; keep that evidence trail separate from history and fallback batches.
+
 ## Historical open-order import
 
 History import is not a complete Shopify order archive. It queries open and unfulfilled orders in controlled `updatedAt` windows. An order can therefore enter a history window because Shopify updated it during that window, even when Shopify created it earlier.
