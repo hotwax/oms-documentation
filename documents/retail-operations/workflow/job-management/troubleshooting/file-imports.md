@@ -6,6 +6,22 @@ description: Investigate pending, failed, canceled, or partially processed files
 
 Open `MDM` > `File history` and find the exact file or log identifier.
 
+## Choose the next check
+
+Use the current status and record totals together. `Finished with errors` means processing finished with failed records; it still requires investigation.
+
+```mermaid
+flowchart TD
+    accTitle: Decide how to investigate an imported file
+    accDescr: Pending or running files need a queue and timeline check. Other files need a status and failed-record review before any corrected data is submitted, because records may already have applied.
+    A[Find the exact file log] --> B{Pending or running?}
+    B -->|Yes| C[Check queue and timeline<br/>Wait for the original submission]
+    B -->|No| D[Review status and failed-record totals]
+    D --> E[Compare available Errors with Original<br/>Check the import configuration]
+    E --> F[Confirm which records already applied<br/>Check how the configuration handles replay]
+    F --> G[Correct the confirmed problem<br/>Submit corrected data if needed]
+```
+
 ## Investigate a pending file
 
 1. Confirm the file status and submission time.
@@ -26,9 +42,12 @@ Use the cancel action only when it appears for the pending record and you have c
 4. Compare the error with the same row in `Original`.
 5. Open the import configuration.
 6. Correct the source data or confirmed configuration problem.
-7. Submit a corrected file through `Manual uploads`.
+7. Confirm which records already applied and how the configuration handles repeated records.
+8. Submit corrected data through `Manual uploads` when needed.
 
 Cancellation or resubmission does not reverse records that were already processed.
+
+The `Errors` tab appears only when failed records have an available error file. If the tab is missing, use the status, record totals, and linked job or backend logs to continue the investigation.
 
 ## Investigate a missing file
 
