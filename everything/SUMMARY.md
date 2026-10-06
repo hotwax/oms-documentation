@@ -27,6 +27,7 @@
     * [Check Job Frequencies](tools/launchpad/job-manager/check-job-frequencies.md)
     * [Job Runtime Error](tools/launchpad/job-manager/runtime-error.md)
     * [Mismatch Time Zone](tools/launchpad/job-manager/timezone-mismatch.md)
+  * [Cycle Count Export Troubleshooting](tools/launchpad/cycle-count/export-troubleshooting.md)
 * [Maarg](tools/maarg/README.md)
   * [Glossary](tools/maarg/glossary.md)
   * [System Tasks](tools/maarg/system-tasks.md)
@@ -130,3 +131,4 @@
 * [Update OMS Version](deployment/update-oms-version.md)
 * [Rollback OMS Version](deployment/rollback-release.md)
 * [Optional Plugins](deployment/optional-plugins.md)
+

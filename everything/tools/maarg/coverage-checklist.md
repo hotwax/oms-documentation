@@ -77,3 +77,12 @@ These articles do not replace generic Maarg operating instructions. The existing
 ## Verification Standard For Future Updates
 
 A workflow is ready to call **runtime-verified** only when its actual steps, resulting state, and meaningful failure case have been checked in an appropriate environment. Otherwise label it **source-verified** or **UI-observed**, state the runtime version, and describe exactly what remains untested. Never create production data, rerun an integration, change access, alter a schema, or expose private information solely to obtain a screenshot.
+
+## Customer-Support Backfill: October 6, 2026
+
+The [Cycle Count Export Troubleshooting guide](../launchpad/cycle-count/export-troubleshooting.md) adds source-verified coverage for history loading, queued generation, disabled downloads, file retrieval, local saving, and report-scope validation. It is proposed in this documentation change, not merged or runtime-verified. The frontend baseline is Cycle Count App v5.2.1; the separately checked backend baseline is Poorti v3.3.2. No installed pairing or live export outcome is claimed.
+
+Remaining work: inspect an approved synthetic export end to end, including an empty selection and retrieval failure; verify the installed versions, effective export selection, and file retention. This business-workflow addition does not change the 26-family platform coverage count above. Continue the existing platform-guide proposals and customer-driven backlog rather than treating this one guide as completion.
+
+Release review on October 6 distinguishes the newest published Maarg maintenance tag, v5.5.25 (published October 5), from the higher-version v6.4.0 baseline used above. The maintenance tag pins older component lines; it is not a replacement feature baseline for every guide. Commented manifest entries were excluded. Recent main-branch message/fulfillment changes must not be presented as included merely because their pull requests merged. Installed-version and release-line checks remain prerequisites for each workflow.
+
