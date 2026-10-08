@@ -39,7 +39,7 @@ Below is a list of all the actions available in the Users App, along with the sp
 | 3   | Add/Remove Permissions   | SECURITY\_CREATE OR SECURITY\_ADMIN | Enables users to add or remove permissions from existing security groups.         |
 | 4   | Download Permission List | -                                   | Allows users to download a list of existing permissions within a security group.  |
 
-<figure><img src="../../.gitbook/assets/users-permissions-v1-17-0.png" alt="Permissions tab with security-group search and current Users App navigation"><figcaption><p>Permissions tab in Users App v1.17.0</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/users-permissions-v1-17-0.png" alt="Permissions tab showing Security Groups, Create Security Group, and current Users App navigation"><figcaption><p>Permissions tab in Users App v1.17.0</p></figcaption></figure>
 
 ### Setting Page
 
