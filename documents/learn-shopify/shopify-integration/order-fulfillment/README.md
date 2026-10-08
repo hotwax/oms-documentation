@@ -67,3 +67,17 @@ HotWax Commerce sends the GraphQL [`fulfillmentCreate` mutation](https://shopify
 The connector checks for errors and requires a returned fulfillment ID before recording success. Verify the fulfillment record and quantities in Shopify, rather than relying only on the local shipment status or a completed job run.
 
 If the update is missing, check the shipment's eligibility, the configured feed or sender job, and the `CreateShopifyFulfillment` message outcome. If Shopify may already have accepted the request, verify its fulfillment ID and line quantities before retrying. Keep the affected shipment distinct from other shipments on the same order.
+
+## Troubleshooting Shopify quantity errors
+
+When Shopify rejects a fulfillment update with a quantity error, such as `Invalid fulfillment order line item quantity requested`, do not retry the failed update until the current Shopify fulfillment order is checked.
+
+Before retrying:
+
+* Retrieve the latest fulfillment orders for the Shopify order.
+* Confirm that the fulfillment order is still open and eligible for fulfillment.
+* Match the Shopify order line item to the current fulfillment order line item.
+* Verify that the remaining fulfillable quantity is greater than or equal to the quantity HotWax Commerce is sending.
+* Check whether the item was already fulfilled, canceled, moved to a different fulfillment order, or partially fulfilled outside the current HotWax Commerce retry.
+
+Retrying without this check can keep sending a quantity that Shopify no longer considers fulfillable. If the Shopify fulfillment order has changed, update the HotWax Commerce fulfillment data or stop the retry until the order state is corrected.
