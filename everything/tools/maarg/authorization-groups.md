@@ -8,7 +8,7 @@ description: >-
 
 Use this guide to investigate why an authenticated user can or cannot perform a Maarg operation, and to plan a narrowly scoped access change. The effective result depends on the user's active memberships, the exact operation, and the deployed authorization configuration. A group name or a visible menu is not a complete permission report.
 
-**Navigation:** Open **Hotwax Commerce > Security > Security Groups** for Moqui user groups and **Hotwax Commerce > Security > Artifact Groups** for protected-artifact definitions. Despite the **Security Groups** label, these util screens manage Moqui `UserGroup` records, not OFBiz `SecurityGroup` records.
+**Navigation:** Open **Hotwax Commerce > Security > Security Groups** for OMS user groups and **Hotwax Commerce > Security > Artifact Groups** for protected-artifact definitions. Despite the **Security Groups** label, these util screens manage OMS `UserGroup` records, not OFBiz `SecurityGroup` records.
 
 **System > Security > User Groups** and **System > Security > Artifact Groups** are separate runtime administration screens. Their routes and available tabs differ. Use the menus for the intended application rather than constructing a URL or assuming that similarly named pages are interchangeable.
 
@@ -64,7 +64,7 @@ The runtime's **System > Security > User Groups** area additionally has a **Grou
 
 ### OFBiz-Linked Memberships
 
-When the OFBiz realm is active, authentication can reconcile OFBiz security-group assignments into Moqui memberships. The integration uses group mappings, so an OFBiz group ID and a Moqui group ID are not interchangeable. Missing mappings or missing target groups require administrator investigation.
+When the OFBiz realm is active, authentication can reconcile OFBiz security-group assignments into OMS memberships. The integration uses group mappings, so an OFBiz group ID and an OMS group ID are not interchangeable. Missing mappings or missing target groups require administrator investigation.
 
 Local membership changes may be superseded at later authentication. Before adding or ending a local membership, have the deployment/security owner confirm the authoritative assignment, mapping behavior, and resulting permissions. Do not use a sign-in as a read-only inspection: it can update account and membership state. Do not assume that the default synchronized result is an approved least-privilege role.
 

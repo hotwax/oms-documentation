@@ -4,7 +4,7 @@ description: Identify Maarg credential types, review JWT token controls, and pla
 
 # Token Administration
 
-Use **Settings → JWT Tokens** for the Maarg JWT generator and validator. First identify the credential type: a JSON Web Token (JWT), a Moqui login key, and a browser session have different lifecycles. A control for one does not necessarily affect the others.
+Use **Settings → JWT Tokens** for the Maarg JWT generator and validator. First identify the credential type: a JSON Web Token (JWT), an OMS login key, and a browser session have different lifecycles. A control for one does not necessarily affect the others.
 
 ## Version And Access
 
@@ -22,7 +22,7 @@ Treat token values, login keys, session cookies, and signing keys as secrets. Ke
 | --- | --- | --- |
 | JWT returned as `token` by the admin login API | Signed bearer credential representing a user; distinct from the login key returned by the same response | The login service uses the configured JWT lifetime. The v6.4.0 production configuration supplies 7,200 seconds, but deployment overrides can change it. Check the returned expiry rather than assuming a duration |
 | JWT from **Generate Token** | Signed credential with user and purpose claims; no per-token database record is created by this service | **Expires In (Days)** defaults to 30. This explicit lifetime is separate from the admin login JWT default |
-| Moqui login key returned as `api_key` | An opaque credential accepted through the `api_key` or `login_key` authentication mechanism; its one-way hash is stored in `moqui.security.UserLoginKey` | Framework default is 144 hours, or six days, unless overridden. The JWT generator does not manage these records |
+| OMS login key returned as `api_key` | An opaque credential accepted through the `api_key` or `login_key` authentication mechanism; its one-way hash is stored in `moqui.security.UserLoginKey` | Framework default is 144 hours, or six days, unless overridden. The JWT generator does not manage these records |
 | Browser session and `moquiSessionToken` | The session identifies an authenticated browser; `moquiSessionToken` supports request/CSRF protection | Session lifetime and logout are separate from token expiry. The session token is not a replacement API bearer credential |
 | Other integration credentials | Examples include service-specific tokens used by connected systems | Identify the issuer and owning integration. Do not assume this JWT screen administers every credential used by Maarg |
 
@@ -52,7 +52,7 @@ The result displays the user, purpose, expiry, and token. The screen consumes th
 
 The **JWT Token** field and **Validate** button submit a token to the same Maarg instance for verification. The screen reports **Valid Token** with user, user ID, purpose, and expiry, or **Invalid Token** with an error.
 
-This verifies the JWT signature, expected issuer, and time-related validity. It does **not** prove that the account can use a particular API, that every login-state check will pass, or that an integration is authorized for the requested business action. Do not submit a Moqui login key to this JWT validator or paste an unrelated service's credential into it.
+This verifies the JWT signature, expected issuer, and time-related validity. It does **not** prove that the account can use a particular API, that every login-state check will pass, or that an integration is authorized for the requested business action. Do not submit an OMS login key to this JWT validator or paste an unrelated service's credential into it.
 
 ## Plan Expiry, Replacement, And Revocation
 
@@ -63,7 +63,7 @@ Record the credential type, owning account, integration owner, environment, issu
 | Replace a JWT | Generating another JWT does not invalidate the previous one. The admin `refreshToken` operation calls the generator; it is not evidence of an old-token revocation mechanism |
 | Revoke one JWT | The JWT screen has no token inventory or individual revoke button. The reviewed generator/validator provides no per-token revocation record. Escalate to the security owner for a deployment-specific response |
 | Expire or remove a login key | New key-based authentication depends on its `UserLoginKey` record and expiry. Have an authorized administrator use the approved key-management procedure for the exact record. Do not substitute generic entity editing, SQL, or a bulk delete |
-| Sign out | Logout invalidates the current HTTP session and sets logout state used by the Moqui/Maarg authentication paths. It does not delete login-key records or constitute permanent, individual JWT revocation |
+| Sign out | Logout invalidates the current HTTP session and sets logout state used by the OMS authentication paths. It does not delete login-key records or constitute permanent, individual JWT revocation |
 | Change account access or rotate signing material | These can affect multiple users, tokens, sessions, and integrations. They require a separate, owner-approved change and verification plan |
 
 For login keys, `fromDate` records issuance and `thruDate` records expiry. The reviewed authentication path checks the upper expiry date; do not treat a future `fromDate` as an activation gate. Key issuance also cleans up that user's expired keys. Neither expiry nor removal of a key should be assumed to terminate an already established browser session.

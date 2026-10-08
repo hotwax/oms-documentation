@@ -16,7 +16,7 @@ Use this guide when someone cannot sign in, can sign in but cannot complete a ta
 
 - Confirm the environment, the account's approved identifier, the affected application, and the intended task.
 - Obtain the exact error and incident time with its time zone. Ask whether the failure occurs before sign-in, during an additional authentication step, or after sign-in.
-- Confirm whether the environment uses native Moqui authentication or a linked OFBiz/OMS authentication realm. Ask the environment owner if this is unknown.
+- Confirm whether the environment uses native OMS authentication in Maarg or a linked OFBiz authentication realm. Ask the environment owner if this is unknown.
 - Use an administrator authorized to view the account. Permission to view Security does not authorize resetting credentials, impersonating a user, or changing access.
 - Keep personal details, account exports, audit records, and logs in an approved support channel. Do not include passwords, reset values, authentication codes, QR codes, or tokens in a ticket or screenshot.
 
@@ -28,11 +28,11 @@ Account screens contain immediate administrative actions. **Enable Account**, **
 
 | Layer | What it represents | Operational consequence |
 | --- | --- | --- |
-| Moqui `UserAccount` | Maarg user identity and local account fields | The Users screen's create, update, enable, disable, and password actions call Moqui user services |
-| Moqui `UserGroupMember` and authorization records | Memberships and access checks used by Maarg | A successful sign-in does not establish permission for a screen, service, entity, or API operation |
+| OMS `UserAccount` | Maarg user identity and local account fields | The Users screen's create, update, enable, disable, and password actions call OMS user services |
+| OMS `UserGroupMember` and authorization records | Memberships and access checks used by Maarg | A successful sign-in does not establish permission for a screen, service, entity, or API operation |
 | OFBiz `UserLogin` and security-group assignments | The upstream identity and assignments used when the OFBiz realm is configured | Upstream account and password administration must use the deployment's approved OMS process; local Maarg changes do not constitute an upstream lifecycle change |
 
-In the OFBiz-linked flow, authentication can create or update the corresponding Moqui account and reconcile its groups. The mapping uses upstream identity information; matching visible names alone is not enough to establish that two records are the same person. Have the administrator check the actual identity linkage when investigating duplicates or mismatches.
+In the OFBiz-linked flow, authentication can create or update the corresponding local OMS account and reconcile its groups. The mapping uses upstream identity information; matching visible names alone is not enough to establish that two records are the same person. Have the administrator check the actual identity linkage when investigating duplicates or mismatches.
 
 Treat local edits to synchronized identity fields and memberships as potentially temporary. A later authentication can change them again. Do not create a second local account or rename a synchronized account to work around a failed upstream sign-in.
 
@@ -53,15 +53,15 @@ The list's group filter is not an effective-permission report. Verify membership
 | Field or section | What to check |
 | --- | --- |
 | **User ID**, **Username**, **Party ID** | Confirm the intended identity and its association. A display name is not a unique identifier |
-| **Disabled** and **Disabled Date** | These describe the Moqui record. Under native Moqui authentication, a disabled record with a timestamp can represent a timed lockout; one without a timestamp is not automatically re-enabled by that timed-lockout mechanism |
+| **Disabled** and **Disabled Date** | These describe the local OMS record. Under native OMS authentication, a disabled record with a timestamp can represent a timed lockout; one without a timestamp is not automatically re-enabled by that timed-lockout mechanism |
 | **Failed Logins** | Evidence of unsuccessful attempts recorded for this account. Stop repeated tests and check the active authentication system's counters and lockout policy |
 | **Password Set Date** and **Require Password Change** | Local password state. In a linked deployment, the upstream password policy and password-change state must also be checked |
-| **Terminate Date** | A Moqui lifecycle field. Do not use it as proof that all linked authentication routes, existing sessions, API access, and notifications have been shut down |
+| **Terminate Date** | A local OMS lifecycle field. Do not use it as proof that all linked authentication routes, existing sessions, API access, and notifications have been shut down |
 | **IPs Allowed** | Login restrictions configured on the account. Group-level settings and the deployed realm also matter; do not remove restrictions to diagnose an access error |
 | **Groups** | Each membership's group, **From Date**, and **Thru Date**. A listed future or expired row is not an active assignment |
 | **Authentication Methods** | Configured factor types, dates, and validation state. Do not open a factor's **View** or **Verify** dialog merely to collect evidence; it can expose enrollment material or initiate verification |
 | **Login History** | Recent recorded login dates, success flags, and visit references. The detail query is limited to 20 rows; missing history is not proof that no attempt occurred |
-| **Audit Log** | Available audited changes to the Moqui account. It is not a complete audit of upstream accounts, credentials, memberships, or every application action |
+| **Audit Log** | Available audited changes to the local OMS account. It is not a complete audit of upstream accounts, credentials, memberships, or every application action |
 | **Tarpit Locks** | Temporary use-velocity restrictions with release times. These are separate from account disablement and missing permission |
 
 The screen displays a blank Disabled value as `N`. That display does not establish the state of an OFBiz `UserLogin`, an identity provider, or a token-based client.
@@ -89,7 +89,7 @@ An enabled account and a visible menu are not evidence that all underlying opera
 
 These are source-verified procedures, not a recommendation to change an account during diagnosis. Record the approver, target identity, intended result, change window, and verification plan first. Keep a separate authorized administrator available when changing administrative access.
 
-### Create A Native Moqui Account
+### Create A Native OMS Account
 
 Use this only when the environment owner has confirmed that local creation is the correct provisioning route.
 
@@ -112,14 +112,14 @@ The form includes identity/contact fields, password-change requirement, terminat
 
 ### Enable Or Disable A Local Account
 
-- **Enable Account** clears the Moqui disabled flag, disabled timestamp, and failed-login counter. It does not resolve the underlying cause of repeated failures or establish upstream enablement.
-- **Disable Account** sets the Moqui disabled flag and clears its disabled timestamp, so it is not the timed-lockout form of disablement.
+- **Enable Account** clears the local OMS disabled flag, disabled timestamp, and failed-login counter. It does not resolve the underlying cause of repeated failures or establish upstream enablement.
+- **Disable Account** sets the local OMS disabled flag and clears its disabled timestamp, so it is not the timed-lockout form of disablement.
 
 Use the applicable action only after the correct authority has approved it. Reload and confirm the local result, then verify the intended authentication routes separately. In an OFBiz-linked deployment, follow the upstream lifecycle procedure as well; do not regard this screen's button as complete suspension or offboarding.
 
 ### Password Recovery And Offboarding
 
-**Reset Password** is an active operation: the Moqui service prepares a reset credential and requests an email to the saved address. It is not an email-address check. A generic success message does not prove delivery. **Change Password** changes credential state and requires the authorized person to use the secure password workflow.
+**Reset Password** is an active operation: the OMS service prepares a reset credential and requests an email to the saved address. It is not an email-address check. A generic success message does not prove delivery. **Change Password** changes credential state and requires the authorized person to use the secure password workflow.
 
 For linked OMS identities, use the approved upstream password/recovery process. Do not infer that a local reset changed the upstream password.
 
