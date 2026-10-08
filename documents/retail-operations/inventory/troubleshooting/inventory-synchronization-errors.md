@@ -6,30 +6,23 @@ description: Troubleshooting guide to resolve inventory synchronization errors
 
 Inventory synchronization issues can occur at multiple stages, leading to discrepancies in stock levels across platforms. Accurate inventory synchronization is crucial to prevent underselling or overselling for retailers. This document aims to provide detailed steps to diagnose and resolve issues related to inventory synchronization between ERP systems, HotWax Commerce, and Shopify.
 
-## Scenario 1: Partial File Processing Due to Connection Failure
+## Scenario 1: An inventory file did not finish importing into OMS
 
-During the process of importing an inventory file via SFTP, connection failures may occur, resulting in only a portion of the file being processed. This incomplete processing can lead to an invalid file status, causing discrepancies in inventory levels.
+Inbound file processing and outbound Shopify publication are separate. Locate the configured import and establish its outcome before retrying anything.
 
-### Steps to Diagnose and Resolve
+1. Confirm the expected inventory source, import configuration, file name, and timestamp.
+2. Review its Data Manager file history, processing state, record counts, and errors.
+3. Verify which records changed inventory in OMS. A failed or lost response does not prove no records were applied.
+4. Correct the cause and use a supported, scoped recovery. Do not re-upload an entire file merely because a folder or status says failed.
+5. After verifying the OMS quantities, investigate the matching channel or physical-location event path for Shopify delivery.
 
-1. **Navigate to Your SFTP File Path**
-   * Access your SFTP server using your preferred SFTP client such as Filezilla.
-2. **Check the File with Import Date and Time**
-   * Locate the file by its import date and time to identify the specific file that was partially processed.
-3. **If the File is Failed, Reimport the File**
-   * If the file is placed in the failed folder, re-upload the file to the SFTP server.
-   * Ensure a stable connection during the reimport process to avoid partial processing.
+Follow [Troubleshoot file imports](../../workflow/job-management/troubleshooting/file-imports.md) and [inventory import methods](../inventory-upload/import-methods.md). These are inbound inventory procedures, not Shopify event publishers.
 
-## Scenario 2: Incorrect SFTP Location
+## Scenario 2: The inventory file is in the wrong SFTP location
 
-The inventory file might be placed in an incorrect SFTP path, preventing HotWax Commerce from accessing and processing the file. This misplacement can result from user error or misconfiguration in the SFTP client or ERP system.
+Confirm the source system's approved path and file-name pattern with the integration owner. Compare them with the configured OMS retrieval job and import configuration. Keep the investigation read-only until the expected file and any prior processing are established.
 
-### Steps to Diagnose and Resolve
-
-1. **Check the File Path and Location**
-   * Verify the SFTP file path where the inventory file should be located.
-2. **Consult the User Manual**
-   * Refer to [Set up SFTP](../../../learn-netsuite/netsuite-deployment/sdf-bundle/setup-sftp.md) for detailed instructions on setting up the correct file path.
+For NetSuite SFTP setup, see [Set up SFTP](../../../learn-netsuite/netsuite-deployment/sdf-bundle/setup-sftp.md). A file's presence on SFTP does not establish successful import or Shopify delivery.
 
 ## Scenario 3: Shopify rejects or delays an inventory update
 
@@ -39,35 +32,33 @@ An outbound inventory batch can fail when Shopify rejects the request, throttles
 
 1. Open the Company App.
 2. Select `Shopify`, open the affected connection, then select `Inventory sync`.
-3. Open `Batches pending delivery` or `Event history`.
+3. Review `Channel inventory events` or `Physical inventory events` for the affected target, then open its waiting-batch row or `Event history`.
 4. Open the affected batch.
 5. Record its System Message identifier, Shopify target, status, and delivery errors.
 6. Confirm the connection's Shopify write access and the target location.
 7. Check Shopify status information when the error indicates an outage or throttle.
-8. Correct the cause, then select `Resend` once.
+8. Correct the cause, then use the approved recovery process before selecting `Resend`.
 
-Resend uses the batch's original payload and idempotency key. Do not keep retrying without correcting the recorded error.
+Resend uses the batch's original payload and idempotency key; it does not recalculate current inventory. Do not keep retrying without correcting the recorded error. Verify the resulting batch state and Shopify quantity.
 
-## Scenario 4: A HotWax Commerce inventory job is not running
+## Scenario 4: Shopify inventory events are not reaching the target
 
-The job to investigate depends on whether the stale Shopify target represents one physical facility or an aggregate inventory channel.
+The physical-location and channel paths have separate event queues and publishers. A completed inbound inventory import does not prove either outbound path ran.
 
-### Diagnose and resolve the schedule
+1. Open Company > `Shopify` > the connection > `Inventory sync`.
+2. Confirm the affected target's physical mapping or aggregate channel.
+3. Check the appropriate event-source and capture controls. Changes made while capture is off are not available for later replay.
+4. For a physical location, inspect `Physical inventory events` and `Publish physical batches (all shops)`. For a channel, inspect `Channel inventory events` and its `Send channel batches` publisher.
+5. Review waiting events, batches, publisher state, schedule, parameters, and latest run.
+6. For batches that remain in flight, have the integration owner verify sender coverage for the affected message type and inspect its result.
+7. Correct the cause. Use `Reset physical ATP (this shop)` or the channel's `Reset channel ATP` when available-inventory reconciliation is required; `Reset physical on-hand` is a separate quantity reconciliation.
+8. Review the approved recovery's scope and outcome, then verify Shopify at the mapped location.
 
-1. Open the Company App.
-2. Select `Shopify`, open the connection, then select `Inventory sync`.
-3. For a physical Shopify location, review `Reset physical location QOH`.
-4. For an aggregate Shopify location, review the channel's publisher and `Reset aggregate ATP` job.
-5. Confirm whether each required job is `Active`, `Paused`, or `Not configured`.
-6. Open the job and review its scope, schedule, parameters, latest run, and result.
-7. Use `Set up` when the dashboard offers it for a missing publisher or reset job. The new job starts paused; activate only the schedule approved for that target.
-8. Select `Run now` only after you confirm that the job targets the affected connection or channel and an earlier run is not active.
+Supported missing jobs created with `Set up` start paused. Do not activate an arbitrary schedule or duplicate publisher. Keep manual discard jobs paused and unscheduled.
 
-Depending on the installed connector and publishing model, the active path can include `Update Recent Inventory Changes`, `Hard Sync`, or `Process Uploads to eCommerce`. If the Company dashboard does not identify the active path, confirm the installed connector model, then use [Troubleshoot job runs and schedules](../../workflow/job-management/troubleshooting/job-runs-and-schedules.md) in Job Manager.
+<figure><img src="../../.gitbook/assets/company-inventory-monitor-main.jpg" alt="Company inventory monitor with separate channel and physical-location event queues and related publisher and reset jobs"><figcaption><p>Investigate the event path for the affected Shopify target. The sandbox's paused jobs and waiting events are examples.</p></figcaption></figure>
 
-See [Monitor Shopify inventory sync](../../../system-admin/administration/company/manage-shopify-inventory-sync.md) for the complete event, job, and reconciliation workflow.
-
-<figure><img src="../../.gitbook/assets/inventory-synchronization-errors.png" alt="Job Manager showing the Process uploads to eCommerce schedule" width="375"><figcaption><p>Review the Process uploads to eCommerce schedule when the deployed connector uses this Job Manager path.</p></figcaption></figure>
+See [Monitor Shopify inventory sync](../../../system-admin/administration/company/manage-shopify-inventory-sync.md) for the complete event, job, sender, and reconciliation workflow.
 
 ## Scenario 5: Shopify write access is missing
 
@@ -86,3 +77,4 @@ Outbound inventory fails when the selected Shopify connection cannot write inven
 Do not place access tokens or credentials in screenshots, tickets, or documentation.
 
 [Watch the Shopify access-scope walkthrough](https://youtu.be/oL_BYAXZQZw).
+

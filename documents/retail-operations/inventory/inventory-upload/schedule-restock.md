@@ -2,7 +2,7 @@
 
 Retailers usually plan new product launches and need these products to be available for sale in future dates at precise times. For instance, if a retailer plans to start selling a new product at 10 AM after one month, they need the inventory to be synced exactly at that time. Previously, this required manual intervention, which was prone to errors. Manual management of inventory synchronization could lead to delays or mistakes, causing products to not be available for sale as planned, resulting in missed sales opportunities and customer dissatisfaction.
 
-To address this challenge, HotWax Commerce offers a scheduled inventory restocking feature in the `Import` App. Retailers can upload a CSV file containing the products they want to restock and specify the facility and product store for which the inventory needs to be updated. Crucially, during inventory restocking, the `update inventory` service also runs in HotWax Commerce to ensure that inventory is increased in HotWax Commerce but also synced with Shopify.
+To address this challenge, HotWax Commerce offers a scheduled inventory restocking feature in the `Import` App. Retailers can upload a CSV file containing the products they want to restock and specify the facility and product store for which the inventory needs to be updated. Verify the resulting inventory update in OMS first. Shopify inventory event capture, batching, and delivery are separate checkpoints; the scheduled receipt time does not guarantee the same Shopify delivery time. Follow [Monitor Shopify inventory sync](../../../system-admin/administration/company/manage-shopify-inventory-sync.md) for both channel and physical-location publication.
 
 ### Steps to Schedule Restocking
 
@@ -27,7 +27,7 @@ The following fields need to be mapped and filled in while scheduling restocks:
 |----------------------|---------------------------------------------------------------------------------|
 | **Shopify Product SKU**  | The unique product identifier used by Shopify.                                  |
 | **Restock Quantity**  | Represents the updated inventory count for the product.                         |
-| **Schedule Time**     | Specify when the inventory needs to be restocked and synced with Shopify.        |
+| **Schedule Time**     | Specify the intended OMS restock time; verify Shopify delivery separately.        |
 | **Facility**          | Specify the facility where the products need to be restocked.                   |
 | **Product Store**     | Specify the product store for which the product needs to be restocked.          |
 | **Shopify Store**     | Specify the Shopify store where the inventory needs to be synced after restocking. |
@@ -68,3 +68,4 @@ If the merchandisers have any operational level changes, such as their sale bein
 All the scheduled restocks will appear at the bottom of the page, with the scheduled date and time. Merchandisers can click on the overflow menu to reschedule or cancel the restocks as per their requirements.
 
 {% embed url="https://youtu.be/n5GwuZ2dSH8" %}
+

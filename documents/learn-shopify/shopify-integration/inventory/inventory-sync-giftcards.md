@@ -1,29 +1,23 @@
 ---
-description: >-
-  Learn how HotWax Commerce ensures accurate inventory synchronization of gift
-  cards to Shopify.
+description: Distinguish tracked physical gift-card stock from untracked digital gift cards before investigating Shopify inventory sync.
 ---
 
 # Inventory Synchronization of Gift Cards
 
 ## Physical Gift Cards
 
-Physical gift cards have actual stock-keeping units and necessitate delivery to customers just like any other physical product. Oftentimes, retailers generate various variants of a gift card with different denominations, providing customers with a range of options to choose from.
+Physical gift cards can have tracked stock that requires delivery or pickup. Confirm the product and variant identifiers, whether denominations share a physical stock pool in the approved setup, and the Shopify location mapping. Do not assume every gift-card variant has independent physical stock or that all denominations always share one SKU.
 
-It's crucial to understand that the gift cards with differing values, in fact, constitute a single physical product with inventory and therefore have a common SKU.
+For tracked stock published by OMS, follow Shopify inventory event sync for the applicable target: channel ATP to an aggregate location or facility ATP to a mapped physical location. Inspect its source event, batch, delivery result, and Shopify quantity.
 
-For example, a retailer offers a gift card product called "Gift Card" with a physical inventory of 100 units. This single product is listed online with different variants representing different denominations, such as $100, $150, $200, and so on.
-
-When a customer purchases a $100 gift card variant, it's like they're selecting a portion of the available inventory, let's say 1 unit from the total 100 units. Similarly, if another customer chooses a $150 gift card variant, they're also selecting from the same pool of inventory, subtracting 1 unit from the total available.
-
-So, regardless of the denomination chosen by the customer, the inventory is consumed from the same physical product - the "Gift Card" with 100 units. The retailer then credits the value of the chosen denomination to the gift card based on the customer's selection and activates the gift card in Shopify.
+Gift-card activation and monetary value are separate from inventory publication. A successful stock adjustment does not establish that a card was activated or credited.
 
 ## Digital Gift Cards
 
-Digital gift cards do not require physical inventory management as they are virtual products. Therefore, inventory tracking for digital gift cards is usually disabled on Shopify. This means they can be sold without limitations on quantity.
+Digital gift cards do not require physical stock. When inventory tracking is disabled on the Shopify variant, there is no tracked stock quantity to reconcile through this workflow. Verify the variant's actual tracking and fulfillment configuration rather than assuming a missing inventory event is an error.
 
-## Syncing Inventory from HotWax Commerce To Shopify
+## Verify the correct target
 
-HotWax Commerce synchronizes the inventory of physical as well as digital gift cards just like regular products using both webhooks and the `Upload recent inventory change` job. This process remains straightforward for gift cards, just as it does for other products.
+Open Company > `Shopify` > the connection > `Inventory sync`. Select the channel or physical-location path that matches the tracked variant's target, then inspect the event and batch separately from any reset job.
 
-Learn more about [inventory synchronization](inventory-sync.md)
+Follow [Shopify inventory event sync](inventory-sync.md) and [inventory troubleshooting](../../initial-sync/troubleshooting/inventory.md). Do not use an inbound inventory webhook or a product-type assumption as proof of outbound stock delivery.

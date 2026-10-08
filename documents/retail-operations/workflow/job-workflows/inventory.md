@@ -1,232 +1,107 @@
 ---
-description: Discover how Inventory job works in HotWax Commerce.
+description: Monitor Shopify inventory event sync for channels and physical locations, separately from inventory entering OMS.
 ---
 
-# Inventory
+# Inventory workflows
 
-This catalog covers several inventory jobs. Available jobs, internal names, and parameters vary by connector release and publishing model.
+Shopify inventory event sync publishes OMS inventory changes to Shopify through two ledgers: channel inventory events and physical-location inventory events. Inventory entering OMS from an ERP, receipt, or file import is a separate step; successful import does not establish Shopify delivery.
 
-This reference includes both inventory directions. Confirm each job's `Flow` before you run it: `Sync Inventory from Shopify` is inbound, while `Hard Sync`, `Upload Recent Inventory Changes`, and Company inventory sync are outbound.
+<a id="adjustments"></a>
 
-Use [Monitor Shopify inventory sync](../../../system-admin/administration/company/manage-shopify-inventory-sync.md) for the event-driven Shopify inventory pipeline in the Company App. Confirm the active job and its parameters on the target instance before you change a schedule or select `Run Now`.
+## Shopify inventory event sync
 
-## Adjustments
+1. Open the Company App and select `Shopify`.
+2. Open the affected connection and confirm its shop and Product Store.
+3. Select `Inventory sync`.
+4. Choose the channel or physical-location path that matches the Shopify target.
+5. Follow the event into its batch and check delivery, then verify the quantity in Shopify.
 
-### Hard Sync
+| Path | Inventory basis | Monitor and publisher |
+| --- | --- | --- |
+| Channel inventory | ATP calculated for the channel's facility group, published to its aggregate Shopify location | `Channel inventory events`, the channel card, and `Send channel batches` |
+| Physical-location inventory | Facility ATP changes published as available-quantity adjustments to the mapped physical Shopify location | `Physical inventory events` and `Publish physical batches (all shops)` |
 
-Job Name: `Upload Inventory`\
-Job Enum ID: `JOB_UL_INV`\
-Service Name: `bulkResetShopifyInventoryLevel`\
-Flow: Inventory Sync from HotWax to Shopify.
+<figure><img src="../../.gitbook/assets/company-inventory-monitor-main.jpg" alt="Company inventory event sync with separate channel and physical-location queues, waiting events, and publisher jobs"><figcaption><p>Sandbox example of the two Shopify inventory event paths. The shown pending events and paused jobs are sample states, not successful delivery results.</p></figcaption></figure>
 
-**The `Hard Sync` job is used to synchronize the inventory of all the products from HotWax to Shopify once a day.** This job fetches the inventory counts of all products in Shopify and compares them with the inventory counts of all products  in HotWax Commerce. Then it prepares the delta file in GraphQL format for all the products where there is a difference in inventory counts in HotWax compared to Shopify. This delta file is then sent to Shopify, and Shopify updates the inventory counts by recording deltas.
+### Follow events, batches, and delivery
 
-Note:  The `ShopifyFacilityGroupId` parameter allows retailers to push inventory of specific facilities included in that group.
+Inventory changes captured by the enabled event sources produce ledger rows. Publishers group eligible waiting rows into batches, and the corresponding sender delivers each batch to Shopify. Inspect both capture and delivery when a target is stale.
 
-**Custom Parameters**
+* `Events waiting to batch` counts event rows, not products or units.
+* `Batches waiting to send` identifies work not yet delivered.
+* Open an event to inspect its source, signed change, target, and linked batch.
+* Open the batch to review its summed change entries, delivery state, and errors.
+* Review the correct publisher's pause state, schedule, parameters, and recent runs.
 
-- This job has no required parameters.
-- It has `facilityGroupId`,`shopifyFacilityGroupId`,`includeAll`, `useVaildATP` as optional parameters.
+A completed publisher run or queued batch does not prove Shopify accepted an adjustment. Verify the batch and the actual target quantity.
 
-To learn why a full reset is used, see [Inventory synchronization](../../../learn-shopify/shopify-integration/inventory/inventory-sync.md#hard-sync).
+<a id="hard-sync"></a>
 
-<figure><img src="../../.gitbook/assets/upload-inventory.png" alt="Job Manager showing the Upload inventory job scheduled every six hours" width="375"><figcaption><p>Example Hard Sync schedule in Job Manager.</p></figcaption></figure>
+### Reconcile the affected target
 
-## Webhooks
+Use the reset job that matches the target and quantity:
 
-{% hint style="info" %}
-The current Job Manager does not manage webhook subscriptions. Confirm webhook configuration in the connected integration.
-{% endhint %}
+| Company App job | Purpose |
+| --- | --- |
+| `Reset channel ATP` | Reconcile aggregate ATP for the selected channel |
+| `Reset physical ATP (this shop)` | Reconcile ATP for the connection's mapped physical locations |
+| `Reset physical on-hand` | Reconcile physical on-hand quantity when that separate quantity is required |
 
-Automated messages sent from eCommerce (Shopify) to OMS whenever an event occurs. They contain data about the event and are received in OMS, allowing real time communication between eCommerce and OMS.
+Review mappings, source quantities, outstanding Shopify order imports, and recovery scope before an approved reset. Physical event adjustments use available inventory; an on-hand reset is a separate reconciliation operation.
 
-**Subscribe to Shopify eCommerce Webhooks from OMS for:**
+`Resend` sends an existing batch's frozen payload and idempotency key. It does not recalculate current inventory. Correct the delivery error before an approved retry, and use an appropriate reset when missed capture or an obsolete payload requires reconciliation.
 
-<details>
+<a id="upload-recent-inventory-changes"></a>
 
-<summary>Inventory</summary>
+### Configure capture and schedules
 
-**Webhooks available for:**
+Review both `Channel events` and `Physical location events`, the selected shop's push control, and the event-source controls. Changes made while capture is off are not recorded for later replay. Reconcile every affected target before relying on incremental updates again.
 
-**Inventory level update**\
-This webhook is used to receive inventory level updates from Shopify to HotWax, especially when a retailer is not using HotWax Commerce as master of inventory availability (ATP inventory) and managing fulfillment out of HotWax.. In such cases, HotWax relies on other systems like Shopify for inventory updates. However, since Shopify webhooks may not always be reliable, it is recommended to schedule jobs.
+Job creation and activation must follow the approved configuration. Missing jobs that offer `Set up` are created paused; a successful setup does not enable publication automatically. Keep manual discard jobs paused and unscheduled.
 
-</details>
+Use [Monitor Shopify inventory sync](../../../system-admin/administration/company/manage-shopify-inventory-sync.md) for the complete setup, history, job, and recovery procedures. Do not substitute a file-import job or an inbound inventory webhook for either outbound event path.
 
-## More Jobs
+## Inventory entering OMS
 
-### Import Inventory
+The workflows below update inventory records or supporting configuration inside OMS. Verify that result first, then investigate outbound Shopify events separately.
 
-Job name: `Read Reset Inventory File From SFTP`\
-Job Enum id: `JOB_IMP_INV`\
-Service Name: `ftpImportFile`\
-Flow: Inventory Reset in HotWax from NetSuite
+<a id="import-inventory"></a>
+<a id="import-product-facility"></a>
 
-**The `Import Inventory` Reset job is used for importing inventory reset files from SFTP locations uploaded by ERP systems (like NetSuite).**
+### Inventory and configuration files
 
-**How is the reset file received?**
+Use the configured Data Manager import for the approved inventory or product-facility file. Confirm its configuration, source path, expected quantity meaning, import status, failed records, and resulting OMS records. File retrieval or upload alone does not establish processing success.
 
-NetSuite runs a scheduled script and generates the CSV format file of updated inventory on each location, then uploads this file to the SFTP location. Then, the `Import Inventory Reset` job is used to import this file from the SFTP location to HotWax and upload this on `RESET_INVENTORY` MDM. Further `Process Bulk Imported Files` jobs run to process data into HotWax.
+* [Choose inventory import quantities and methods](../../inventory/inventory-upload/import-methods.md)
+* [Troubleshoot file imports](../job-management/troubleshooting/file-imports.md)
+* [Verify sourcing changes](../../inventory/available-to-promise/use-cases.md#verify-sourcing-changes)
 
-**Custom Parameters**
+<a id="import-item-receipt"></a>
+<a id="import-inventory-transfer"></a>
+<a id="import-inbound-shipment"></a>
 
-* The recommended frequency for this job is 15 minutes.
-* This job has configId and propertyResource as the required parameters.
-* It also has some optional parameters.
+### Receipts and transfers
 
-***
+Follow the configured receipt or transfer integration and verify the resulting inventory at the correct facility. Importing a transfer or inbound shipment is not the same as physically receiving stock.
 
-### Import Item Receipt
+* [NetSuite inventory integration](../../../learn-netsuite/integration-flows/inventory.md)
+* [Receive transfer orders](../../../store-operations/receiving/transfer-orders.md)
 
-Job name: `Import Item Receipt`\
-Job Enum ID: `JOB_ITM_RECEIPT`\
-Service Name: `ftpImportFile`
+<a id="bulk-recent-kit-product-inventory-setup"></a>
 
-**The `Import Item Receipt` job is used for importing updates from NetSuite to HotWax on all the items that are completed in NetSuite**.
+### Kit inventory
 
-When an order is brokered to a warehouse, HotWax relies on Warehouse Management Systems (like NetSuite) to get the fulfillment update. In cases when NetSuite is also used as a WMS, it uploads a JSON format file containing details of all the items that are fulfilled from the warehouse in an SFTP location.
+OMS-derived kits use component-based calculations and dedicated channel and physical-location reset feeds in the reviewed connector. Do not assume ordinary component events immediately publish a kit quantity. See [Kit inventory synchronization](../../../learn-shopify/shopify-integration/inventory/inventory-sync-kitproducts.md).
 
-**How is the item receipt synced?**
+<a id="schedule-restock"></a>
 
-After NetSuite uploads a JSON file to the SFTP location, the `Import Item Receipt` job imports the JSON into HotWax and uploads it to the `IMP_ITM_RECEIPT` MDM. Further `Process Bulk Import Files` job runs, which finally marks the item as completed in HotWax.
+### Scheduled restocking
 
-**Custom Parameters**
+A scheduled restock changes the inventory entering OMS. Follow the [scheduled restock procedure](../../inventory/inventory-upload/schedule-restock.md) and verify the OMS result separately from Shopify event delivery. An intended launch time is not proof that both steps completed at that time.
 
-* The recommended frequency for this job is 15 minutes.
-* This job has configId and propertyResource as the required parameters.
-* It also has some optional parameters.
+<a id="webhooks"></a>
+<a id="sync-invnetory-from-shopify"></a>
 
-***
+### Starting inventory from Shopify
 
-### Import Product Facility
-
-Job Name: `Import Product Facility`\
-Job Enum ID: `JOB_IMP_PROD_FAC`\
-Service Name: `ftpImportCSVFile`\
-Flow: Applying ATP rules in HotWax.
-
-The `Sourcing` section of the [Order Routing Rules app](../../orders/order-routing/README.md) lets retailers configure inventory rules by product tags, product features, inventory channels, and facility groups. These rules contribute to the available-to-promise (ATP) inventory published to Shopify and other sales channels.
-
-A sourcing-rule run generates a product-facility CSV file and places it in the configured SFTP location. The `Import Product Facility` job downloads that file to HotWax Commerce. The `Process Bulk Import Files` job then processes the file and applies the resulting product-facility configuration.
-
-This job imports sourcing-rule output. It does not generate the rule output itself.
-
-**Custom Parameters**
-
-* The recommended frequency for this job is 15 minutes.
-* This job has configId and propertyResource as the required parameters.
-* It also has some optional parameters.
-
-***
-
-### Bulk recent kit product inventory setup
-
-Job Name: `Bulk recent kit product inventory setup`\
-Job Enum ID: `BLK_RCNT_KIT_INV`\
-Service Name: `bulkKitProductInventorySetup`\
-Flow: Kit Product Inventory Computation
-
-The `Bulk Recent Kit Product Inventory Setup` job calculates the inventory of the kit products in HotWax by considering the lowest common denominator among its components at a given location.
-
-**Note**: Retailers who don't use Shopify's Bundle App for kit inventory calculation rely on this job in HotWax to compute the inventory.
-
-**Custom Parameters**
-
-* This job has no required parameters.
-* includeAll is the optional parameter of this job.
-
-To know more about kit inventory calculation, refer to [Kit products](../../../learn-netsuite/integration-flows/kit-products.md).
-
-***
-
-### Import Inventory Transfer
-
-Job Name : `Import Inventory Transfer`\
-Job Enum Id : `JOB_INV_TRANS`\
-Service Name: `ftpImportFile`\
-Flow: Importing Inventory Update from NetSuite to HotWax
-
-Retailers with one warehouse for both B2C and B2B create two virtual locations in NetSuite: one for online orders (B2C) and one for wholesale (B2B). This helps manage inventory better. If one runs low on stock, they transfer inventory between them as needed.
-
-In ERP systems (like NetSuite), retailers generally create inventory transfers, and these inventory transfers need to be synced from NetSuite to HotWax to maintain better inventory synchronization. `Import Inventory Transfer` job is used for importing the inventory transfers created in NetSuite to HotWax, and further inventory is adjusted in HotWax accordingly.
-
-**How are inventory transfers are synced ?**
-
-A scheduled script in NetSuite generates a CSV file of inventory transfers and uploads it to an SFTP location. The `Import Inventory Transfer` job in HotWax then fetches the file and uploads it to HotWax’s internal system. Finally, the `Process Bulk Imported Files` job runs to create records in HotWax.
-
-To know more, refer to the inventory transfer [document](https://docs.hotwax.co/documents/learn-netsuite/integration-flows/inventory).
-
-***
-
-### Import Inbound Shipment
-
-Job name: `Import Inbound Shipment`\
-Job Enum ID : `JOB_IMP_TO_SHPMNT`\
-Service Name: ftpImportFile\
-Flow: Inventory Synchronization
-
-This job is used to create inbound shipment in HotWax so that store associates can see an upcoming inbound shipment in the [Receiving App](../../../store-operations/receiving/README.md). In case of a warehouse to store TO or store to store TO is created in NetSuite, HotWax imports it as an inbound shipment for the receiving store through this job.
-
-**Custom Parameters**
-
-* The recommended frequency for this job is 15 minutes.
-* This job has configId and propertyResource as the required parameters.
-* It also has some optional parameters.
-
-***
-
-### Schedule Restock
-
-Job Name: Schedule Restock\
-Job Enum ID: `JOB_SCHEDULED_RSTK`\
-Service Name: `receiveAndUpdateInventoryToShopify`\
-Flow: Schedule restock
-
-Retailers often schedule new product launches and require inventory to be available for sale at specific future dates and times. For example, if a retailer plans to launch a product at 10 AM a month from now, the inventory must sync precisely at that moment.
-
-The HotWax Commerce Import App simplifies this process by allowing retailers to schedule restocks via a CSV upload. Once uploaded, the Import App transfers the CSV to an SFTP location, and the `Schedule Restock` job imports it into HotWax database.
-
-**Custom Parameters**
-
-* ShipmentId is the required for this job.
-
-***
-
-### Sync Invnetory from Shopify
-
-Job Name: `Sync Inventory from Shopify`\
-Job Enum Id : `JOB_SYNC_INV_FRM_SHPY`\
-Service Name: `bulkInventorySyncFromShopify`\
-Flow: Inventory Synchronization from Shopify
-
-In cases where HotWax is not used as the source of truth for inventory availability—meaning retailers do not use HotWax for fulfillment and do not have an ERP system for inventory management—HotWax relies on Shopify for inventory updates. To ensure accurate inventory data, this job runs once a day to reset inventory updates for all products.
-
-**How Does This Job Work?**
-HotWax sends an API request to Shopify to fetch the latest inventory data for all products. In response, Shopify provides a JSON file, which is then uploaded to HotWax’s internal file system. After that, the `Process Bulk Imported Files` job processes the JSON file, updates the inventory, and syncs the changes in HotWax.
-
-This job is an alternative to Shopify Webhooks, but since Shopify Webhooks are reliable, it is recommended to schedule this job in HotWax.
-
-**Custom Parameters**
-
-- This job does not have any required parameters
-- It has some optional parameters.
-
-***
-
-### Upload Recent Inventory Changes
-
-Job Name: `Upload Recent Inventroy Changes`\
-Job Enum Id: `UL_RCNT_INV`\
-Service Name: `bulkRecentShopifyInventroyLevel`\
-Flow: Inventory Synchronization
-
-The `Upload Recent Inventory Changes` job is used to update Shopify with the latest inventory changes for products. It functions similarly to `Hard Sync`, but instead of syncing updated inventory for all products, it only uploads changes for products whose inventory has fluctuated.&#x20;
-
-**Custom Parameters**
-
-* This job does not have any required parameters.
-* It has some optional parameters.
-
-To learn how recent-change uploads work, see [Inventory synchronization](../../../learn-shopify/shopify-integration/inventory/inventory-sync.md#upload-recent-inventory-change).
-
-***
+The one-time starting inventory seed is inbound, from Shopify to OMS. Follow [Chapter 8 of Shopify onboarding](../../../system-admin/administration/company/product-store-onboarding.md#8-seed-starting-inventory-from-shopify). It is separate from the channel and physical-location event publishers described above.

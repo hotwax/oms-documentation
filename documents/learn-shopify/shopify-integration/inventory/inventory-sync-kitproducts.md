@@ -1,67 +1,38 @@
 ---
-description: >-
-  Learn how HotWax Commerce ensures accurate inventory synchronization of Kit
-  Products to Shopify.
+description: Understand component-based kit quantities and their separate Shopify channel and physical-location reset feeds.
 ---
 
 # Inventory Synchronization of Kit Products
 
-### Inventory of Kit Products and their Components in HotWax Commerce
+## Calculate complete kits at each facility
 
-The `Bulk Recent Kit Product Inventory Setup` job calculates the inventory of the kit products by considering the lowest common denominator among its components at a given location.
+OMS-derived kit availability depends on the effective component associations and the available component quantities at the same facility. Components split across facilities do not create a locally fulfillable kit.
 
-#### Example 1
+For a kit requiring one belt and one wallet:
 
-A kit product consisting of a belt and wallet distributed across multiple locations:
+| Facility | Available belts | Available wallets | Complete kits |
+| --- | --- | --- | --- |
+| Store A | 5 | 0 | 0 |
+| Store B | 0 | 10 | 0 |
+| Store C | 3 | 7 | 3 |
 
-| **Store Location** | **Belts** | **Wallets** |
-| ------------------ | --------- | ----------- |
-| Times Square Store | 5         | 0           |
-| Brooklyn Store     | 0         | 10          |
-| Broadway Store     | 3         | 7           |
+The channel has three complete kits in this simplified example, all at Store C. Confirm the configured component quantities, facility eligibility, and channel rules before treating an example as the published quantity.
 
-It will record an inventory of **3** in HotWax Commerce for this kit product because only the Broadway store has both belts and wallets. So, a kit product can only be fulfilled from the Broadway store. The inventory reflects the available quantity of the most limited component at a location where both components are available.
+## Publish derived kit quantities
 
-#### Example 2
+In the reviewed Shopify connector 4.4.2, OMS-derived kit inventory uses separate periodic reset feeds for both channel and physical-location targets. It is not a component-driven real-time kit event publisher.
 
-Another example of a belt and wallet distributed across multiple locations:
+| Target | Feed and publish services |
+| --- | --- |
+| Channel | `generate#KitInventoryChannelFeed` and `push#KitChannelInventory` |
+| Physical location | `generate#KitPhysicalLocationInventoryFeed` and `push#KitPhysicalLocationInventory` |
 
-| **Store Location** | **Belts** | **Wallets** |
-| ------------------ | --------- | ----------- |
-| Times Square Store | 5         | 0           |
-| Brooklyn Store     | 3         | 2           |
-| Broadway Store     | 1         | 5           |
+The corresponding jobs are shop-scoped and seeded paused. Have the integration owner verify the installed jobs, component associations, mappings, target scope, and approved schedules before activation. A component's successful ordinary event batch does not prove that the derived kit quantity has refreshed.
 
-Here, Brooklyn has enough stock to make **2 kits** (2 belts and 2 wallets), and Broadway can fulfill **1 kit** (1 belt and 1 wallet).
+Verify the derived quantity at the intended Shopify target after the kit reset completes. Check channel and physical-location targets separately.
 
-While the total available belts and wallets across all locations might be summed up as **9 belts** (5 + 3 + 1) and **7 wallets** (2 + 5), this does not represent the actual number of kits that can be fulfilled. The correct calculation is based on the available components at each location, resulting in **3 kits**: 2 from Brooklyn and 1 from Broadway.
+## Shopify-managed bundles
 
-### Limitations of Using Bundles App
+Confirm whether OMS or Shopify owns the bundle calculation. Native Shopify bundles must not receive a competing OMS-derived kit quantity. Do not activate a kit reset merely because the product has component records; verify the intended ownership and eligibility first.
 
-If any retailer is using the Bundles App to sell kit products and their components on Shopify, the Bundles App takes care of inventory computation. Bundles simplify kit products and their component management, but it has drawbacks when it comes to determining inventory for multi-location fulfillment.
-
-The Bundles App aggregates the lowest inventory of each component accessible across every location to determine kit inventory. Because it ignores the need for every element of a kit to be accessible at the same place to fulfill the order, this method may lead to inaccurate inventory counts.
-
-#### Example
-
-Suppose a kit product consists of a belt and a wallet, with the inventory distributed between two stores:
-
-| **Store Location** | **Belts** | **Wallets** |
-| ------------------ | --------- | ----------- |
-| Brooklyn Store     | 3         | 2           |
-| Broadway Store     | 1         | 5           |
-
-In this case, the Bundles App calculates the total kit inventory as **4** by adding the total number of belts and wallets across both locations (belts: 3 + 1 = 4, wallets: 2 + 5 = 7).
-
-However, this calculation is incorrect because the actual number of kits that can be fulfilled is only **3**:
-
-* **Brooklyn** can fulfill **2 kits** (with 3 belts and 2 wallets).
-* **Broadway** can fulfill **1 kit** (with 1 belt and 1 wallet).
-
-The remaining items are insufficient to complete any additional kits.
-
-### How does HotWax Commerce Synchronize the Inventory of Kit Products with Shopify
-
-HotWax Commerce syncs the inventory of kit products and their components just like regular products, using webhooks and the `Upload Recent Inventory Change` [job](https://docs.hotwax.co/documents/learn-shopify/shopify-integration/how-does-hotwax-commerce-ensure-accurate-inventory-is-synchronized-to-shopify/inventory-synchronization#upload-recent-inventory-change). This process is the same for kit products and their components as other products.
-
-[Learn more about inventory synchronization.](inventory-sync.md)
+For ordinary inventory events, monitoring, and reconciliation, see [Shopify inventory event sync](inventory-sync.md). Keep that event path separate from the kit-specific reset feeds above.

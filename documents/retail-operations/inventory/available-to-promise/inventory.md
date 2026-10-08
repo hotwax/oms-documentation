@@ -67,13 +67,15 @@ The result is zero when channel brokering is off. Otherwise, `Computed ATP` cann
 
 `Inventory in channel` lists the facilities currently assigned to the channel. `Inventory outside channel` lists facilities with inventory that are not assigned to it. Select the add button beside an outside facility to add that facility to the channel. The added facility contributes to future channel calculations.
 
-## Reconcile with Shopify
+<a id="reconcile-with-shopify"></a>
 
-Open the `Reconciliation` segment in `Channel` scope. Channel aggregate inventory is pushed to the Shopify location mapped to the brokering queue for each connected shop. Compare `OMS Online ATP` with `Shopify ATP` for each mapped shop and location.
+## Verify Shopify inventory event delivery
 
-A blank Shopify value can mean that the product, location, or live Shopify read is unavailable. Review the inventory-item and location mappings before treating a blank value as zero.
+Open Company > `Shopify` > the connection > `Inventory sync`. Confirm the channel's actual aggregate target or the physical location's facility mapping. Do not infer an event target from a brokering queue or another screen's comparison alone.
 
-Use `Inventory push history` to inspect each push run, including its status, timestamps, user, linked data logs, message, results, and errors. Select `Open in Job Manager` when you need deeper evidence for a run.
+Select the channel or physical-location event path, follow its event and batch, and verify the actual available quantity at the mapped Shopify location. A sourcing computation or reconciliation view does not prove Shopify event delivery. A blank or failed Shopify read is not a confirmed zero quantity.
+
+See [Monitor Shopify inventory sync](../../../system-admin/administration/company/manage-shopify-inventory-sync.md) for both paths, delivery errors, publisher/sender investigation, and appropriate resets.
 
 ## Review location inventory history
 
@@ -90,5 +92,6 @@ On older OMS instances, facility inventory, reconciliation, Shopify reads, or jo
 3. In channel scope, follow every row of `Computation`.
 4. Confirm channel membership and inspect `Inventory outside channel`.
 5. Compare `OMS Online ATP` and `Shopify ATP`.
-6. Review the latest successful inventory push.
+6. Verify the affected Company inventory event and batch, then compare the actual Shopify quantity at the matching target.
 7. Open the relevant configuration page before changing a value: [threshold rules](threshold-rules.md), [safety stock rules](safety-stock-rules.md), [store pickup rules](store-pickup-rules.md), [shipping rules](shipping-rule.md), [inventory channels](create-channels.md), [scheduled sourcing rules](schedule-atp-rules.md), or [sourcing use cases](use-cases.md).
+

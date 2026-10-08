@@ -49,26 +49,14 @@ Select `Edit group` on a channel card to update its name or description.
 
 ## Configure inventory publishing
 
-The `Publish` tab displays one card for each Shopify shop connected to the selected product store.
+Channel definition and Shopify publication are separate steps. After confirming facility membership and sourcing rules, configure Shopify inventory event sync in the Company App:
 
-1. Select the `Publish` tab.
-2. Find the Shopify shop.
-3. Select a `Run time`.
-4. Select a `Frequency`.
-5. Select the `Inventory channel` that should supply inventory.
-6. Select `Save changes`.
+1. Open `Shopify` and select the connection.
+2. Confirm its shop and Product Store, then open `Inventory sync`.
+3. Select `Set up channel`, choose the channel facility group and an eligible aggregate Shopify location, and create the channel.
+4. Review its publisher and reset jobs, scope, and approved schedules. Supported missing jobs created with `Set up` start paused.
+5. Reconcile aggregate ATP, inspect event and batch delivery, and verify Shopify before relying on incremental updates.
 
-<figure><img src="../../.gitbook/assets/order-routing-inventory-channels-publish.png" alt="Inventory channels Publish tab with connected shop cards for run time, frequency, inventory channel, and save controls"><figcaption><p>Set the publishing schedule and inventory channel for each connected Shopify shop.</p></figcaption></figure>
+Physical-location publication is a separate event path in the same monitor. Confirm each Shopify location's facility mapping and its physical publisher; do not send the combined channel quantity to each physical store.
 
-Open the shop card overflow menu for these actions:
-
-* `History`: Review previous job runs.
-* `Copy details`: Copy the job information.
-* `Run now`: Create a copy of the job and run it immediately.
-* `Disable`: Stop future occurrences of the job.
-
-{% hint style="info" %}
-The `Publish` tab displays `No publish jobs yet` until a Shopify shop is connected to the selected product store.
-{% endhint %}
-
-For a connection using the Company inventory-event publishing model, continue with [Monitor Shopify inventory sync](../../../system-admin/administration/company/manage-shopify-inventory-sync.md). Confirm the deployed publishing model before you activate either path.
+See [Set up Shopify inventory event sync](../../../system-admin/inventory/README.md) and [Monitor Shopify inventory sync](../../../system-admin/administration/company/manage-shopify-inventory-sync.md) for both paths and recovery controls.

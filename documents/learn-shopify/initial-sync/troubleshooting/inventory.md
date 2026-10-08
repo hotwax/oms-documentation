@@ -16,9 +16,9 @@ Confirm the location mapping and the inventory model configured for this connect
 | Publication model | HotWax quantity to investigate | Shopify context |
 | --- | --- | --- |
 | Aggregate channel | Available-to-promise inventory calculated for the channel's facility group | The mapped aggregate location |
-| Physical location | The configured physical-facility publication, such as quantity on hand or physical ATP | The Shopify location mapped to that facility |
+| Physical location | Facility ATP changes published by physical-location events to Shopify Available | The Shopify location mapped to that facility |
 
-Review [Shopify mappings in Company](../../../system-admin/administration/company/manage-shopify-mappings.md) and [the inventory publication models](../../shopify-integration/inventory/inventory-sync.md). Do not compare a single store's quantity with an aggregate channel, or assume every physical-location publisher uses the same quantity basis.
+Review [Shopify mappings in Company](../../../system-admin/administration/company/manage-shopify-mappings.md) and [the inventory publication models](../../shopify-integration/inventory/inventory-sync.md). Do not compare a single store's quantity with an aggregate channel. Both event paths publish available inventory. Compare Shopify On hand only when investigating the separate `Reset physical on-hand` reconciliation.
 
 ```mermaid
 flowchart TD
@@ -45,9 +45,9 @@ See [Monitor Shopify inventory sync](../../../system-admin/administration/compan
 ## Verify in Shopify
 
 1. Open Shopify Admin and go to `Products` > `Inventory`.
-2. Select the mapped location and find the affected variant by its SKU. Compare the relevant quantity column; `Available` and `On hand` can differ because Shopify also tracks committed and unavailable inventory.
+2. Select the mapped location and find the affected variant by its SKU. For event sync, compare `Available`. `Available` and `On hand` can differ because Shopify also tracks committed and unavailable inventory; an on-hand reset is a separate investigation.
 
-<figure><img src="../../.gitbook/assets/shopify-location-inventory.jpg" alt="Shopify demo inventory at the Online Store location showing variant SKUs and separate Unavailable, Committed, Available, On hand, and Incoming columns"><figcaption><p>In this demo example, XS / Blue at Online Store has 1,239 Available and 1,267 On hand. Compare the column used by your configured publication model.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/shopify-location-inventory.jpg" alt="Shopify demo inventory at the Online Store location showing variant SKUs and separate Unavailable, Committed, Available, On hand, and Incoming columns"><figcaption><p>In this demo example, XS / Blue at Online Store has 1,239 Available and 1,267 On hand. For event sync, compare Available; On hand is a separate quantity.</p></figcaption></figure>
 
 3. Open the variant and check `Inventory tracked`. If the variant should track stock but this setting is off, confirm the approved setup with your implementation team. Follow [Shopify's inventory tracking setup](https://help.shopify.com/en/manual/products/inventory/setup/set-up-inventory-tracking).
 

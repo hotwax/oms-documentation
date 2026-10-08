@@ -46,7 +46,7 @@ Open `Sourcing` > `Channels` to manage both parts. The page title is `Inventory 
 
 Use a separate inventory channel when sales channels require different inventory sources. For example, a Canadian sales channel can use stores and warehouses while a United States sales channel uses warehouses only.
 
-The `Publish` tab associates an inventory channel with a connected Shopify shop and its publish schedule.
+Shopify inventory event sync is configured in the Company App. Map the channel to an aggregate Shopify location, review its publisher and reset jobs, then verify event and batch delivery. Physical-location events use their own mapped facilities and publisher in the same monitor. See [Monitor Shopify inventory sync](../../../system-admin/administration/company/manage-shopify-inventory-sync.md).
 
 ## Understand rule priority
 
@@ -74,3 +74,4 @@ This example assumes both rules are active and target the same inventory channel
 Use the sequence button at the bottom of a sourcing rule page to reorder rules. Drag the rules into position, then select the save button.
 
 Continue with [Create inventory channels](create-channels.md) or [Schedule sourcing rules](schedule-atp-rules.md).
+

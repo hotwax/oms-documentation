@@ -164,25 +164,25 @@ Use this recipe when a regional storefront needs a different inventory pool from
 1. In `Sourcing` > `Channels`, create the `Canada online` inventory channel and link one configuration facility.
 2. Assign the central warehouse and eligible Canadian stores to the channel.
 3. Set a [channel threshold](threshold-rules.md) for `Canada online` in `Sourcing` > `Threshold`.
-4. On `Sourcing` > `Channels`, open `Publish` and find the connected Canadian Shopify shop.
-5. Select `Run time`, `Frequency`, and `Inventory channel` = `Canada online`.
-6. Select `Save changes` and confirm the save.
-7. Run the threshold rule schedule, then run `Import Product Facility` followed by `Process Bulk Import Files` to apply the threshold output before publication. Follow [Verify sourcing changes](#verify-sourcing-changes) for the detailed import sequence and [Import Product Facility](../../workflow/job-workflows/inventory.md#import-product-facility) for the workflow.
-8. Return to the shop card. Use the overflow menu and select `Run now` for an immediate publish, or wait for its saved schedule.
+4. Verify that the sourcing-rule output has been processed into the intended OMS configuration; see [Verify sourcing changes](#verify-sourcing-changes).
+5. Open Company > `Shopify`, select the Canadian connection, and open `Inventory sync`.
+6. Use `Set up channel` to map `Canada online` to the approved aggregate Shopify location, or inspect the existing mapping.
+7. Review the channel's `Send channel batches` and `Reset channel ATP` jobs, sender coverage, scope, and approved schedules.
+8. Reconcile the target, inspect its events and batches, and verify the quantity in Shopify. Do not infer delivery from a completed sourcing-rule run.
 
-**Expected result:** After the threshold output is successfully imported and the publish job completes, the Canadian Shopify shop publishes inventory from the central warehouse and eligible Canadian stores with the channel threshold applied.
+**Expected result:** The aggregate Shopify target receives the channel's calculated ATP from its eligible facilities. Physical Shopify locations use their separate mapped-facility event path rather than receiving the channel total.
 
-**Validate:** Confirm the channel facilities and threshold, the Canadian Shopify shop's saved publish card, `Sourcing` > `Inventory` > `Channel` > `Reconciliation`, and `Inventory push history` or the publish job's `History`.
+**Validate:** Confirm channel membership, sourcing configuration, aggregate mapping, event history, batch delivery, and the actual Shopify quantity. Follow [Monitor Shopify inventory sync](../../../system-admin/administration/company/manage-shopify-inventory-sync.md).
 
 ## Verify sourcing changes
 
 Use this sequence after changing any sourcing rule. It verifies the generated output and, when available, the resulting inventory values.
 
-1. Open the affected rule category's `Schedule` card. Run the schedule or select `Run now`. The run generates and uploads the product-facility CSV, but does not apply it by itself.
-2. Run `Import Product Facility`, followed by `Process Bulk Import Files`, to import and process the output. See [Import Product Facility](../../workflow/job-workflows/inventory.md#import-product-facility).
-3. With component release `v6.0.0` or later, open `Sourcing` > `Inventory`, use the `Channel` scope, and review `Online ATP`, its computation, `Reconciliation`, and inventory push `History`.
-4. On earlier releases, review sourcing execution history and the connected system instead.
+1. Review the affected rule category's `Schedule` and execution history. Establish whether the output was generated; generation alone does not apply the configuration.
+2. Confirm that the configured OMS Data Manager import processed the product-facility output and review failed records. See [Inventory and configuration files](../../workflow/job-workflows/inventory.md#import-product-facility).
+3. Review the resulting configuration and inventory calculation in the intended channel and facility scope.
+4. Open the Company App's `Inventory sync` monitor to inspect the corresponding Shopify events and batches and verify the actual target quantity.
 
-**Expected result:** The processed product-facility output reflects the new sourcing rule, and the channel inventory or connected-system history shows the resulting publish activity.
+**Expected result:** The processed output reflects the intended sourcing rule, and the affected Shopify event path delivers the resulting adjustment or approved reconciliation.
 
-**Validate:** Review `Execution history` in [Schedule sourcing rules](schedule-atp-rules.md), then use [Review inventory](inventory.md) when your release provides the `Inventory` menu item.
+**Validate:** Review [Schedule sourcing rules](schedule-atp-rules.md), [Review inventory](inventory.md), and the Company event and batch history. These are separate checkpoints, not one synchronous operation.
