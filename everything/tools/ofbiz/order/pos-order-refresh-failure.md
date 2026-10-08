@@ -1,60 +1,67 @@
 ---
 description: >-
-  This document provides steps to resolve the "POS Order Refresh Failure" issue
-  in Hotwax Commerce OMS.
+  Investigate a POS order refresh failure without deleting order records or
+  replaying an import before the existing outcome is understood.
 ---
 
 # POS Order Refresh Failure
 
-In HotWax Commerce, "POS orders" are downloaded as fulfilled from Shopify. Occasionally, an order is downloaded into the OMS before it is marked fulfilled in Shopify. Retailers must refresh these orders to update their status, ensuring the fulfilled version of the order is downloaded while cancelling the older version.
+Use this guide when a Shopify point-of-sale (POS) order refresh fails or the OMS record does not reflect the expected Shopify state. First establish the exact order, failed operation, and installed integration. A status difference does not by itself mean that the order should be cancelled or re-imported.
 
-Orders may fail to refresh due to missing shipping addresses, triggering this error: `Could not complete the createOrderContactMech process: The following required parameter is missing: [createOrderContactMech.contactMechId]`.
+**Scope:** These are read-only support checks. No refresh, cancellation, record deletion, or re-import was executed to validate this article. Recovery depends on the deployed integration, the order's lifecycle, and any downstream records already created.
 
-Follow these steps to resolve these errors:
+{% hint style="warning" %}
+Do not cancel an order, delete its `OrderItem`, `OrderHeader`, or `OrderIdentification` records, or re-import it merely to force a status refresh. Those changes can remove history and links, affect reservations or fulfillment, and cause duplicate downstream processing. A direct entity-deletion sequence is not a general POS recovery procedure.
+{% endhint %}
 
-## Troubleshooting Steps
+## 1. Identify The Failed Operation
 
-### Step 1: Cancel the Order
+Record the following in the approved support channel:
 
-1. **Log in to OMS**: Use your username and password to log in to Hotwax Commerce `OMS`.
-2. **Navigate to Sales Orders**: Click the hamburger navbar icon if the left slider is not visible. Go to `Sales Orders` under `Order Management` in the left slider.
-3. **Identify the Order**: Find the order exhibiting the error. Open the order by clicking on its ID.
-4. **Cancel the Order**: On the order page, click the `Cancel` button at the top.
+- Environment, installed integration version, and incident time with time zone
+- Shopify order identifier and the matching OMS order identifier
+- Order source/channel and whether this is a completed in-store sale or an order requiring later fulfillment
+- Current order and line-level states in each system, including quantities, cancellations, refunds, and fulfillment identifiers when relevant
+- The refresh/import job or service, its execution time, and the exact sanitized error
+- Any prior retries, manual changes, exports, ERP records, or customer notifications
 
-### Step 2: Remove the Order ID from Entities
+Confirm the order mapping before interpreting the error. Preserve the first failed attempt and current state; repeated refresh attempts can make the sequence harder to reconstruct.
 
-1. **Access Webtools’ Entity Engine**: Use the link: `https://{instance}.hotwax.io/webtools/control/entitymaint`.
-2. **Remove the Order from Entities**:
-   * Open the `OrderItem` entity and remove the order.
-     *   Open the `OrderItem` entity; a form will open.
+## 2. Interpret The Error Without Assuming A Fix
 
-         <figure><img src="../../../.gitbook/assets/findRecord.png" alt=""><figcaption></figcaption></figure>
-     *   Search for the order using the `orderID` (enter the orderID in the orderID field of the form).
+A previously documented error is:
 
-         <figure><img src="../../../.gitbook/assets/searchOption.png" alt=""><figcaption></figcaption></figure>
-     * Hit Enter or click on the search button below the form.
-     *   Click on the view option at the start of the `orderID` under the `Search result`.
+`Could not complete the createOrderContactMech process: The following required parameter is missing: [createOrderContactMech.contactMechId]`.
 
-         <figure><img src="../../../.gitbook/assets/view.png" alt=""><figcaption></figcaption></figure>
-     *   Click on the `Delete this value` button at the top of the view under the view value.
+The message identifies a missing required contact-mechanism identifier in that attempted operation. It does not, by itself, establish why the value is missing, prove that the customer's shipping address is absent, or justify deleting the order.
 
-         <figure><img src="../../../.gitbook/assets/deleteValue.png" alt=""><figcaption></figcaption></figure>
-     * Repeat the above steps for each order item.
-3. **Remove from OrderHeader and OrderIdentification**:
-   * Open the `OrderHeader` entity and remove the same order.
-   * Open `OrderIdentification` and remove the externalId value.
+Have the integration owner inspect the authorized source input, order/contact mapping, and the failing service's expected fields. Distinguish an absent source value from a mapping, processing, or lifecycle problem. Keep addresses and other personal information out of public examples and attach only a minimal sanitized excerpt to the support record.
 
-### Step 3: Re-import the Order by ID in OMS
+## 3. Reconcile The Existing Outcome
 
-1. **Log in to OMS**: Use your username and password to log in to Hotwax Commerce `OMS`.
-2. **Navigate to Import Section**:
-   * Go to `MDM` > `EXIM` in the left slider.
-   * Navigate to `Shopify Jobs` and select `Import Shopify Order` under the Order Management tab.
-3. **Re-import the Order**:
-   * Enter the details of the order, including the `Shopify Order ID.`
-   * Run the job by clicking the `Run` button.
-4. **Verify Successful Import**:
-   * To verify the order's successful import, go to `MDM` > `EXIM`.
-   * Navigate to Shopify Jobs and click on `Shopify Order MDM` under the MDM tab.
+Before choosing recovery, establish whether the attempt:
 
-Following these steps will resolve the "POS Order Refresh Failure" issue by addressing the root cause—missing shipping details from unfulfilled Shopify orders. This guide provides a structured approach to diagnosing and rectifying the issue, ensuring minimal disruption to your order management process.
+1. Failed before any order change
+2. Changed part of the OMS state before reporting an error
+3. Completed but failed to return or refresh the expected confirmation
+4. Triggered a downstream export, fulfillment, billing record, inventory effect, or notification
+
+Use the order's existing history and the integration's actual execution records. A missing screen result, a failed browser response, or an empty saved search is not sufficient evidence that nothing was created.
+
+For the wider Shopify/OMS/ERP status comparison, use [Fulfillment Status Troubleshooting](../../shopify/fulfillment-status-troubleshooting.md). Confirm the deployed POS posting model before expecting an ERP invoice or item-fulfillment record.
+
+## 4. Plan A Targeted Recovery
+
+Ask the order/integration owner to approve the smallest supported recovery after the first failing stage is known. The plan should identify:
+
+- The exact order and operation, with the relevant source/mapping correction
+- Existing OMS and downstream records that must be preserved
+- Duplicate-processing and inventory/financial effects to check
+- The supported retry or repair mechanism for the installed version
+- Recovery arrangements and a verification plan for each affected system
+
+If the outcome of a previous attempt is uncertain, reconcile it before retrying. Do not treat editing identifiers, cancelling a record, or recreating an order as a harmless diagnostic step. A successful retry is only one checkpoint: verify the intended order and line state, record linkage, quantities, and any affected downstream outcome without creating a second transaction.
+
+## Escalation Evidence
+
+Provide the identifiers through a restricted channel, incident timeline, current state, failed service/job, sanitized error, source/mapping findings, and whether partial or downstream effects were found. State what remains unknown instead of claiming that a generic cancellation-and-reimport sequence will resolve the issue.
