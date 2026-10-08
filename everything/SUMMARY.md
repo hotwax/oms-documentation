@@ -32,6 +32,7 @@
     * [Job Runtime Error](tools/launchpad/job-manager/runtime-error.md)
     * [Mismatch Time Zone](tools/launchpad/job-manager/timezone-mismatch.md)
   * [Cycle Count Export Troubleshooting](tools/launchpad/cycle-count/export-troubleshooting.md)
+  * [Cycle Count Import And Recount Troubleshooting](tools/launchpad/cycle-count/import-troubleshooting.md)
 * [Maarg](tools/maarg/README.md)
   * [Getting Started](tools/maarg/getting-started.md)
   * [Glossary](tools/maarg/glossary.md)
@@ -152,4 +153,3 @@
 * [Update OMS Version](deployment/update-oms-version.md)
 * [Rollback OMS Version](deployment/rollback-release.md)
 * [Optional Plugins](deployment/optional-plugins.md)
-
