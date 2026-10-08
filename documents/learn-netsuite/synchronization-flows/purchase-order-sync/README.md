@@ -20,12 +20,14 @@ SFTP location
 
 ## Import purchase orders into NetSuite
 
-Schedule the import purchase order job from the pre-order page in the Job Manager application
+Open `Catalog` in Job Manager, search for the import purchase order job, then configure its schedule.
 
 ```
 Import purchase orders
 IMP_ASN_PO_FEED
 ```
+
+See [Manage a job](../../../retail-operations/workflow/job-management/jobs/job-details.md) for current scheduling instructions.
 
 ## Export received purchase orders from HotWax
 

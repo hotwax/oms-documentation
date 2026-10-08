@@ -4,6 +4,12 @@ description: Discover how Inventory job works in HotWax Commerce.
 
 # Inventory
 
+This catalog covers several inventory jobs. Available jobs, internal names, and parameters vary by connector release and publishing model.
+
+This reference includes both inventory directions. Confirm each job's `Flow` before you run it: `Sync Inventory from Shopify` is inbound, while `Hard Sync`, `Upload Recent Inventory Changes`, and Company inventory sync are outbound.
+
+Use [Monitor Shopify inventory sync](../../../system-admin/administration/company/manage-shopify-inventory-sync.md) for the event-driven Shopify inventory pipeline in the Company App. Confirm the active job and its parameters on the target instance before you change a schedule or select `Run Now`.
+
 ## Adjustments
 
 ### Hard Sync
@@ -18,17 +24,18 @@ Flow: Inventory Sync from HotWax to Shopify.
 Note:  The `ShopifyFacilityGroupId` parameter allows retailers to push inventory of specific facilities included in that group.
 
 **Custom Parameters**
+
 - This job has no required parameters.
 - It has `facilityGroupId`,`shopifyFacilityGroupId`,`includeAll`, `useVaildATP` as optional parameters.
 
-To know more about inventory synchronization between HotWax and Shopify, refer to this [document](https://docs.hotwax.co/documents/learn-shopify/shopify-integration/how-does-hotwax-commerce-ensure-accurate-inventory-is-synchronized-to-shopify/inventory-synchronization#hard-sync).
+To learn why a full reset is used, see [Inventory synchronization](../../../learn-shopify/shopify-integration/inventory/inventory-sync.md#hard-sync).
 
-<figure><img src="../../.gitbook/assets/upload-inventory.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/upload-inventory.png" alt="Job Manager showing the Upload inventory job scheduled every six hours" width="375"><figcaption><p>Example Hard Sync schedule in Job Manager.</p></figcaption></figure>
 
 ## Webhooks
 
 {% hint style="info" %}
-Webhooks can be subscribed to from the category pages within the Job Manager app for specific categories.
+The current Job Manager does not manage webhook subscriptions. Confirm webhook configuration in the connected integration.
 {% endhint %}
 
 Automated messages sent from eCommerce (Shopify) to OMS whenever an event occurs. They contain data about the event and are received in OMS, allowing real time communication between eCommerce and OMS.
@@ -98,13 +105,14 @@ Job Enum ID: `JOB_IMP_PROD_FAC`\
 Service Name: `ftpImportCSVFile`\
 Flow: Applying ATP rules in HotWax.
 
-HotWax Commerce [ATP App](https://docs.hotwax.co/documents/retail-operations/inventory/available-to-promise) allows retailers to configure rules for inventory computation based on product tags and facility types or groups, reducing manual work. Based on these rules, the available-to-promise (ATP) of a product is calculated, which is then synchronized to Shopify or other sales channels.
+The `Sourcing` section of the [Order Routing Rules app](../../orders/order-routing/README.md) lets retailers configure inventory rules by product tags, product features, inventory channels, and facility groups. These rules contribute to the available-to-promise (ATP) inventory published to Shopify and other sales channels.
 
-A job in the ATP app generates a CSV file based on rules configured for calculating ATP and puts it in the SFTP location. \*\*The `Import Product Facility` job is used to download this CSV from the SFTP location and upload it on the file system of HotWax Commerce. \*\* Further, the `Process Bulk Import Files` job runs and processes all the files in HotWax. And finally, all the rules configured from the ATP app by the retailer are created.
+A sourcing-rule run generates a product-facility CSV file and places it in the configured SFTP location. The `Import Product Facility` job downloads that file to HotWax Commerce. The `Process Bulk Import Files` job then processes the file and applies the resulting product-facility configuration.
 
-**It is important to note that this job is responsible for applying ATP rules configured by retailers on ATP computation.**
+This job imports sourcing-rule output. It does not generate the rule output itself.
 
 **Custom Parameters**
+
 * The recommended frequency for this job is 15 minutes.
 * This job has configId and propertyResource as the required parameters.
 * It also has some optional parameters.
@@ -127,7 +135,7 @@ The `Bulk Recent Kit Product Inventory Setup` job calculates the inventory of th
 * This job has no required parameters.
 * includeAll is the optional parameter of this job.
 
-To know more about kit inventory calculation, refer to this [document](https://docs.hotwax.co/documents/learn-netsuite/integration-flows/kitproducts).
+To know more about kit inventory calculation, refer to [Kit products](../../../learn-netsuite/integration-flows/kit-products.md).
 
 ***
 
@@ -157,7 +165,7 @@ Job Enum ID : `JOB_IMP_TO_SHPMNT`\
 Service Name: ftpImportFile\
 Flow: Inventory Synchronization
 
-This job is used to create inbound shipment in HotWax so that store associates can see an upcoming inbound shipment in their [Receiving App](https://docs.hotwax.co/documents/store-operations/inventory/receiving/receiving). In case of a warehouse to store TO or store to store TO is created in NetSuite, HotWax imports it as an inbound shipment for the receiving store through this job.
+This job is used to create inbound shipment in HotWax so that store associates can see an upcoming inbound shipment in the [Receiving App](../../../store-operations/receiving/README.md). In case of a warehouse to store TO or store to store TO is created in NetSuite, HotWax imports it as an inbound shipment for the receiving store through this job.
 
 **Custom Parameters**
 
@@ -199,6 +207,7 @@ HotWax sends an API request to Shopify to fetch the latest inventory data for al
 This job is an alternative to Shopify Webhooks, but since Shopify Webhooks are reliable, it is recommended to schedule this job in HotWax.
 
 **Custom Parameters**
+
 - This job does not have any required parameters
 - It has some optional parameters.
 
@@ -218,6 +227,6 @@ The `Upload Recent Inventory Changes` job is used to update Shopify with the lat
 * This job does not have any required parameters.
 * It has some optional parameters.
 
-To know more about uploading recent inventory changes refer to this [document](https://docs.hotwax.co/documents/learn-shopify/shopify-integration/how-does-hotwax-commerce-ensure-accurate-inventory-is-synchronized-to-shopify/inventory-synchronization#upload-recent-inventory-change).
+To learn how recent-change uploads work, see [Inventory synchronization](../../../learn-shopify/shopify-integration/inventory/inventory-sync.md#upload-recent-inventory-change).
 
 ***

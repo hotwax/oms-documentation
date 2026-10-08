@@ -1,20 +1,20 @@
 ---
-description: Explore API and data feeds within the 'inbound shipment documentatoin' documentation.
+description: Explore the inbound shipment import file and its fields.
 ---
 
-# Import
+# Import inbound shipments
 
 #### File Structure
 
 | Field Name | Description | Example |
-|---|---|---|
+| --- | --- | --- |
 | `external-shipment-id` | Unique identifier for the external shipment | 12009298 |
 | `product-sku` | Product SKU (internal name) | 26897 |
 | `quantity` | Quantity of the product being transferred | 11 |
 | `origin-facility-id` | ID of the originating facility | 116 |
 | `destination-facility-id` | ID of the destination facility | 281 |
 | `item-external-id` | External identifier for the item | 1 |
-| `tracking-number` | Tracking number associated with the shipment | 788944217767 | 788944218650 |
+| `tracking-number` | Tracking number associated with the shipment | 788944217767 |
 | `shipment-attribute` | Additional attributes (e.g., EXTERNAL\_ORDER\_ID) | EXTERNAL\_ORDER\_ID:TO0005374 |
 | `shipment-type` | Type of the shipment (e.g., IN\_TRANSFER) | IN\_TRANSFER |
 
@@ -33,6 +33,6 @@ description: Explore API and data feeds within the 'inbound shipment documentato
 | OUT\_TRANSFER      | OUTGOING\_SHIPMENT | Outbound Transfer Shipment |
 | PURCHASE\_RETURN   | OUTGOING\_SHIPMENT | Purchase Return Shipment   |
 
-### TBD
+## Sample CSV file
 
-Sample Shipment file
+Download the [sample inbound shipment CSV](sample-inbound-shipment.csv) and replace the example values with the shipment data from your external system.

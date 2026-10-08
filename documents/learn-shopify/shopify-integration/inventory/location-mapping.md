@@ -1,27 +1,21 @@
 ---
-description: >-
-  Easily configure locations in HotWax Commerce and Shopify with our
-  step-by-step guide to manage inventory.
+description: Compare Shopify and HotWax Commerce location-mapping models.
 ---
 
-# Location Mapping
+# Location mapping models
 
-### How To Set Up Locations In HotWax Commerce And Shopify
+Use this page to understand terminology and compare advanced mapping models. It is not a setup procedure. For the required facility creation, Product Store association, Shopify-location import, mapping, and audit steps in a new standard launch, follow [Chapter 7 of Set up HotWax Commerce with Shopify](../../../system-admin/administration/company/product-store-onboarding.md#7-create-facilities-and-map-shopify-locations).
 
-HotWax Commerce sets up all retail stores and warehouses as Locations. For retailers using Shopify eCommerce and third-party Point of Sale systems, only one Location is created on Shopify. This Location aggregates the inventory counts of all products available for sale on Shopify.
+A HotWax Commerce **facility** represents a store, warehouse, or other fulfillment node. A Shopify **location** is Shopify's inventory and fulfillment node. They are different records and require an intentional mapping.
 
-For retailers using Shopify POS in both retail stores and eCommerce, multiple Locations are created on Shopify. One Location is created for the eCommerce store, while each physical store also has its own Location on Shopify. The Location for the eCommerce store aggregates inventory counts for all products from all Locations. Each retail store Location on Shopify has inventory counts specific to that location.
+## Aggregated Shopify location model
 
-**Set up with Non-Shopify POS**
+Some advanced implementations publish inventory aggregated from several HotWax facilities to one approved Shopify location. This model requires an explicit aggregation, fulfillment, and routing design; do not infer it from the point-of-sale platform.
 
-When syncing inventory data between HotWax Commerce and Shopify, HotWax Commerce combines inventory counts from all storage locations (such as stores and warehouses) and sends the total inventory count of products to the default location in Shopify.
+<figure><img src="../../.gitbook/assets/non-shopify-pos-location-mapping.png" alt="Several HotWax facilities publishing through an aggregated Shopify location"><figcaption><p>Example aggregated Shopify location model</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/non-shopify-pos-location-mapping.png" alt=""><figcaption><p><em>Fig. 1: Shopify and HotWax Commerce setup with Non-Shopify POS</em></p></figcaption></figure>
+## One-to-one physical location model
 
-**Set up with Shopify POS**
+Some implementations map each approved physical Shopify location to its corresponding HotWax facility. The implementation plan must still define which facilities publish inventory, accept routing, and fulfill orders, and whether a separate aggregate eCommerce location exists.
 
-Shopify's locations are mapped one-to-one with HotWax Commerce's locations. HotWax Commerce sends the sellable inventory to Shopify, captures orders from Shopify, routes them to fulfillment location, and updates order statuses to Shopify once they are fulfilled. When HotWax Commerce is used, its recommended to disable “online order fulfillment from store locations” on Shopify.
-
-Periodic synchronization of inventory counts for all products at both the default location and store locations occurs from HotWax Commerce to Shopify.
-
-<figure><img src="../../.gitbook/assets/shopify-pos-location-mapping.png" alt=""><figcaption><p><em>Fig. 2 : Shopify and HotWax Commerce setup with Shopify POS</em></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/shopify-pos-location-mapping.png" alt="Shopify physical locations mapped to corresponding HotWax facilities"><figcaption><p>Example one-to-one physical location model</p></figcaption></figure>

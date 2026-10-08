@@ -1,9 +1,11 @@
 ---
 description: >-
- The Completed Orders page shows all orders that have been picked, packed, and are ready to ship. On this page, store associates can ship orders in bulk, unpack them if needed, download the manifest, and regenerate shipping labels if required.
+ Manage completed orders that are ready to ship.
 ---
 
 # Completed Orders Page
+
+The `Completed Orders` page includes packed shipments awaiting shipping and shipments shipped during the current day in the facility's time zone. A packed shipment is ready for the shipping step; the tab name does not mean that it has already shipped. On this page, store associates can ship eligible packed shipments, unpack them before shipping, download the manifest, and regenerate shipping labels if required. See the [fulfillment stages diagram](README.md#fulfillment-stages).
 
 ## Filtering
 
@@ -28,10 +30,10 @@ For example:
 
 Store associates can ship orders in bulk using the `Ship` button.  
 
-- This action applies only to the orders visible on the page, based on the selected carrier, shipping method, or the number of orders chosen through the result size.  
-- For example, if 10 UPS orders are displayed, tapping the Ship button ships those 10 orders.  
+- The action starts with packed shipments in the current loaded list, using the selected carrier, shipping methods, and result size. Already shipped entries are excluded.
+- Shipments that require tracking but have no tracking code are skipped. For example, if ten packed UPS shipments are loaded and two lack required tracking, the bulk action submits the other eight; it does not ship all ten.
 
-When the `Ship` button is tapped, a confirmation message appears. The message tells how many orders will be shipped and reminds that shipped orders can’t be changed. The associate can either cancel or confirm the action.
+When the `Ship` button is tapped, a confirmation message shows the packed-shipment count and explains that shipments cannot be unpacked and edited after shipping. The associate can cancel or confirm. Required tracking is checked when the action proceeds, so the confirmation count can exceed the number submitted. Review the result and remaining packed shipments after the action.
 
 Packed orders are also shipped automatically by a background job called `Ship Packed Orders`. When enabled, job checks for orders that are packed and have a tracking number, if applicable.
 
@@ -58,7 +60,7 @@ When there is an issue with the shipping label, a `Shipping Label Error` button 
 
 Once the issue is resolved, the shipping label can be regenerated.  
 
-The `Unpack` button lets associates move the order back to the **In Progress** stage if changes are required. Shipped orders remain visible on the page for the rest of the day.
+The `Unpack` button applies to packed shipments and, after confirmation, moves them back to **In Progress** for repacking. Shipped shipments cannot be unpacked in this flow. They remain visible on the page for the rest of the current day in the facility's time zone.
 
 Once unpacked, the shipping label that was previously generated must be voided manually. If there is a change in the shipment, the label will get voided automatically
 - If the label is not voided and there are changes to the order, a new shipping label will be generated automatically.

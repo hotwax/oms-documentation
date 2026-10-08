@@ -6,11 +6,11 @@ description: Learn how the gift cards are fulfilled in HotWax Commerce.
 
 Retailers generally offer both physical and digital gift cards with the product type `GIFT_CARD` in Shopify.
 
-In HotWax Commerce, gift cards have their product type set up as `GIFT_CARD`. In this setup, digital gift cards are configured for auto-fulfillment directly in Shopify, while physical gift cards require the traditional fulfillment process. Here's how it works:
+In HotWax Commerce gift cards have their product type set up as “GIFT_CARD”. In this set up, digital gift cards are configured for auto fulfillment directly in Shopify, while physical gift cards require the traditional fulfillment process. Here is how it works:
 
 ### Digital gift cards
 
-When customers order a digital gift card on Shopify, after the order is created, Shopify immediately auto fulfills the order, assigns a serial number to the digital gift card, loads the value to activate the gift card and consequently, when HotWax Commerce downloads that order from Shopify, it is automatically marked as `Completed`.
+When customers order a digital gift card on Shopify, after the order is created, Shopify immediately auto-fulfills the order, assigns a serial number to digital gift card, loads the value to activate the gift card and consequently, when HotWax Commerce downloads that order from Shopify, it is automatically marked as “Completed”.
 
 Customers receive the gift card in their registered email along with the serial number that can be used to redeem the gift card.
 
@@ -31,7 +31,7 @@ The fulfillment update for gift card orders, along with tracking details, is syn
 Learn more about [order fulfillment updates from HotWax Commerce to Shopify](kitproducts-fulfillment.md)
 
 {% hint style="info" %}
-It’s crucial to note that the gift cards are not functional until they are activated on Shopify. The activation process in Shopify is a necessary step to ensure that the gift cards are redeemable and fully functional upon receipt by customers.
+It is crucial to note that the gift cards are not functional until they are activated on Shopify. The activation process in Shopify is a necessary step to ensure that the gift cards are redeemable and fully functional upon receipt by customers.
 {% endhint %}
 
 {% hint style="success" %}
@@ -48,7 +48,7 @@ Digital gift cards are auto-activated and customers can directly redeem them by 
 
 ## Fulfillment of Gift Cards in Warehouse
 
-When the fulfillment location where a gift card item is allocated leverages NetSuite for fulfillment, usually a warehouse, then the HotWax Commerce syncs those items' allocation with NetSuite.
+When the fulfillment location where a gift card item is allocated leverages NetSuite for fulfillment, usually a warehouse, HotWax Commerce syncs the allocation of those items with NetSuite.
 
 Learn more about [fulfillment in NetSuite](/documents/learn-netsuite/integration-flows/sales-order/fulfillment.md)
 

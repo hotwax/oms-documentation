@@ -21,8 +21,35 @@ When Receive by fulfillment is enabled:
 
 * Item cards show fulfilled quantity instead of ordered quantity.  
 * The Unfulfilled items count appears in the header to highlight items with no fulfilled quantity.  
-* Receive All, progress bars, and completion checks use fulfilled quantity as the target.  
+* Scan all, progress bars, and completion checks use fulfilled quantity as the target.
 * Save progress and Receive and complete totals compare received units against fulfilled units.  
 * Over- and under-receipt checks are calculated against fulfilled quantities.
 
 When Receive by fulfillment is disabled, the app uses the ordered quantity for all of the above behaviors.
+
+### Which quantity is expected?
+
+Check `Receive by fulfillment` before interpreting a shortage. The setting changes the expected quantity; enter only the units that physically arrived.
+
+```mermaid
+flowchart TD
+    accTitle: Expected transfer receiving quantity by setting
+    accDescr: With Receive by fulfillment off, the expected total is the ordered quantity. With it on, the expected total is the fulfilled quantity. In either case, subtract units already received to find the remaining expected quantity, then compare the new receipt with that remainder.
+    Setting{"Receive by fulfillment?"}
+    Setting -->|Off| Ordered["Expected total: ordered units"]
+    Setting -->|On| Fulfilled["Expected total: fulfilled units"]
+    Ordered --> Remaining["Subtract units already received"]
+    Fulfilled --> Remaining
+    Remaining --> Actual["Compare actual new receipt<br/>with remaining expected units"]
+```
+
+For example, a line has 100 units ordered, 60 fulfilled, and 20 already received:
+
+| Setting | Expected total | Remaining expected |
+| --- | --- | --- |
+| Off | 100 ordered | 80 units |
+| On | 60 fulfilled | 40 units |
+
+`Scan all` fills the remaining expected quantity when available. Verify that quantity against the delivery before saving. This setting does not mean the remaining ordered units have been shipped or received.
+
+See [save progress or complete](transfer-orders.md#choose-whether-to-save-or-complete) to choose an action after entering actual quantities.

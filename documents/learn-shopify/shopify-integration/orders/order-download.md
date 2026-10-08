@@ -1,84 +1,70 @@
 ---
-description: Learn how HotWax Commerce downloads initial and new orders from Shopify.
+description: Understand and monitor Shopify order imports after launch.
 ---
 
-# Order download
+# Shopify order download flows
 
-## Initial order download
+Use this reference after a Shopify shop is live to identify which order import flow should have processed an order. For initial setup, history reconciliation, and launch validation, follow [Set up HotWax Commerce with Shopify](../../../system-admin/administration/company/product-store-onboarding.md).
 
-To start managing fulfillment, merchants need to import their existing open sales orders from Shopify into HotWax Commerce. This initial import brings in all pending orders so they can be processed and fulfilled without interruption.
+## Flow summary
 
-HotWax Commerce handles this using the `Sync Shopify Order History` job. This job downloads open sales orders from a specific time period, including details like the order number, customer information, shipping address, billing details, and payment information.
+| Flow | Trigger | Purpose |
+| --- | --- | --- |
+| History | Controlled `sync_ShopifyOrderHistory` windows | Imports eligible open and unfulfilled orders from before launch. |
+| Realtime | Shopify `ORDERS_CREATE` and `ORDERS_UPDATED` events through EventBridge and SQS | Processes new orders and later order updates soon after Shopify emits them. The create event provides a direct path for high-volume order creation. |
+| Fallback | Recurring shop-specific `queue_ShopifyOrderSync` job | Provides a scheduled recovery path for eligible order updates. |
 
-### Order history
+Monitor each flow independently. A positive result in one flow does not prove that either of the other flows is healthy.
 
-When HotWax Commerce performs the initial order download, it also creates an order history. This history is created to maintain a complete record of past orders. A complete order history allows merchants to manage customer service inquiries, process returns for past orders, and analyze historical sales data. HotWax Commerce creates this order history automatically as soon as past orders are successfully imported.
+```mermaid
+flowchart TD
+    accTitle: Trace separate Shopify order import paths
+    accDescr: History uses a bulk-query system message, realtime uses an EventBridge and SQS consumer job, and fallback uses a queued system message. Check the tied Data Manager result and the same Shopify order in HotWax for each path.
+    History[Controlled history window] --> HistoryMessage[Bulk query<br/>system message]
+    HistoryMessage --> HistoryImport[History import<br/>Data Manager result]
+    Event[Shopify create or<br/>update event] --> SQS[EventBridge and SQS<br/>consumer job]
+    SQS --> RealtimeImport[Realtime import<br/>Data Manager result]
+    Batch[Scheduled fallback batch] --> BatchMessage[Queued system message]
+    BatchMessage --> BatchImport[Fallback import<br/>Data Manager result]
+    HistoryImport --> Verify[Verify the same Shopify order<br/>in HotWax Commerce]
+    RealtimeImport --> Verify
+    BatchImport --> Verify
+```
 
-Order fields from Shopify map to HotWax Commerce as follows:
+For eligible work that proceeds to import, follow its own path to the Data Manager result and matching OMS order. Realtime imports link to the SQS consumer job run rather than a System Message; keep that evidence trail separate from history and fallback batches.
 
-| Order in Shopify | Order in HotWax Commerce |
-| ---------------- | ------------------------ |
-| Order ID         | Order ID                 |
-| Shopify Shop     | Product store            |
-| Sales order      | Sales order              |
-| Order Status     | Status                   |
-| Order date       | Order date               |
-| Location         | Sales Channel            |
-| Image            | Image                    |
-| Product name     | Product Name             |
-| Variant          | Variant                  |
-| SKU              | SKU                      |
-| Subtotal         | Subtotal                 |
-| Shipping         | Shipping Method          |
-| Total            | Shipment Total           |
-| Shipping Address | Ship To                  |
-| Billing Address  | Bill To                  |
-| Tags             | Tags                     |
+## Historical open-order import
 
-{% tabs %}
-{% tab title="Orders in Shopify" %}
-<figure><img src="../../.gitbook/assets/orders-in-shopify.png" alt=""><figcaption><p><em>Fig.2(i): Orders in Shopify</em></p></figcaption></figure>
-{% endtab %}
+History import is not a complete Shopify order archive. It queries open and unfulfilled orders in controlled `updatedAt` windows. An order can therefore enter a history window because Shopify updated it during that window, even when Shopify created it earlier.
 
-{% tab title="Orders in HotWax Commerce" %}
-<figure><img src="../../.gitbook/assets/orders-downloaded-in-hotwax.png" alt=""><figcaption><p>Fig.2(ii): Orders downloaded in HotWax Commerce</p></figcaption></figure>
-{% endtab %}
-{% endtabs %}
+For an order that does not already exist in HotWax Commerce, `createdAt < newOrderSync.launchDate` determines whether it is created as historical work. Existing orders are updated rather than recreated. Historical pre-launch orders use `needsInventoryIssuance=N`, and their unfulfilled ship groups are parked in `GENERAL_OPS_PARKING` until normal processing takes over.
 
-{% tabs %}
-{% tab title="Order Details in Shopify" %}
-<figure><img src="../../.gitbook/assets/order-details-shopify.png" alt=""><figcaption><p><em>Fig.3(i): Order Details in Shopify</em></p></figcaption></figure>
-{% endtab %}
+For every history window, retain:
 
-{% tab title="Order Details in HotWax Commerce" %}
-<figure><img src="../../.gitbook/assets/order-details-hotwax.png" alt=""><figcaption><p>Fig.3(ii): Order Details in HotWax Commerce</p></figcaption></figure>
-{% endtab %}
-{% endtabs %}
+- Exact converted start and end timestamps.
+- History job-run identifier.
+- `BulkOrderHistoryQuery` `systemMessageId`.
+- Terminal `BULK_ORDER_HISTORY` Data Manager result.
+- Reconciliation showing that eligible orders were created, existing orders were not duplicated, and adjacent windows have no gap or overlap.
 
-## New order creation
+If a window fails after the history cursor advances, reset the cursor to the failed window before retrying it.
 
-<figure><img src="../../.gitbook/assets/new-order-creation-flow.png" alt=""><figcaption><p><em>Fig.4: New Order Creation Flow</em></p></figcaption></figure>
+## Realtime order import
 
-When new orders are placed in Shopify, HotWax Commerce imports them using an event-driven flow. 
-Here is how the new order import flow works:
+Shopify emits `ORDERS_CREATE` when an order is created and `ORDERS_UPDATED` when an order changes. Listening to the create event gives new orders a direct realtime path during high-volume order creation. EventBridge routes both event types to SQS, and `consume_ShopifyOrders_SQS` reads each queued message. HotWax Commerce uses the Shopify order identifier to request the current order data and then creates or updates the order.
 
-### 1. Order creation in Shopify
-When a customer completes a purchase, Shopify registers the new order.
+When diagnosing realtime import, trace one Shopify order through the event, SQS delivery, the `consume_ShopifyOrders_SQS` consumer job run, and the Data Manager record with its `logId`, `createdByJobRunId`, `configId`, and terminal result, then confirm the matching OMS order. Realtime SQS import does not create a System Message. Do not use a history run or fallback batch as proof that the realtime path processed that order.
 
-### 2. Webhook triggers
-Shopify immediately triggers the [`orders/updated` webhook](https://shopify.dev/docs/api/webhooks/2026-01?accordionItem=webhooks-orders-updated&reference=toml). This webhook acts as a real-time notification, instantly broadcasting that a new order exists instead of waiting for a scheduled sync.
+## Scheduled fallback import
 
-### 3. Event routing through AWS EventBridge
-HotWax Commerce has configured AWS EventBridge to catch the webhook event and securely routes the message to an Amazon Simple Queue Service (SQS) queue. This step prevents data loss during high traffic periods and keeps the system stable even if thousands of orders are placed at once.
+The recurring shop-specific `queue_ShopifyOrderSync` job processes eligible order updates in scheduled batch windows. It is a recovery path for the realtime integration, not a substitute for the controlled pre-launch history import.
 
-### 4. Message polling from Amazon SQS
-HotWax Commerce continuously polls the Amazon SQS queue for unread messages. SQS holds these messages safely until HotWax Commerce is ready to read them, so no order events are dropped.
+Review the job's **Active** state, Quartz schedule, queued system message, job run, tied import, and Data Manager result. Use **Run now** only for a controlled batch. For schedule operation and recovery, see [Manage Shopify Order Sync](../../../system-admin/administration/company/manage-shopify-order-sync.md).
 
-### 5. Data enrichment via GraphQL API
-While the webhook payload contains order details, HotWax Commerce only extracts the order ID from the message. It then uses this ID to call the [Shopify GraphQL API](https://shopify.dev/docs/api/admin-graphql/latest/queries/order). Fetching data directly from the API guarantees that HotWax Commerce processes the most reliable and up-to-date order information.
+## Verify a downloaded order
 
-### 6. Receiving detailed order data
-Shopify responds to the API request with the complete details of the order. This response includes everything needed for fulfillment, such as shipping addresses, item quantities, and payment statuses.
+Use the same Shopify order identifier throughout the check. Confirm the HotWax Commerce order has the intended Product Store, products and quantities, customer and addresses, sales channel, shipping method, payment method, and current status. For an existing HotWax Commerce order, confirm the flow updated the order without creating a duplicate.
 
-### 7. Order creation in HotWax Commerce
-Finally, HotWax Commerce processes the detailed API response and creates the order in the order management system. The order is now fully integrated and ready to be routed to the best location for fulfillment.
+For details about how Shopify fulfillment-order promises populate ship-group dates, see [Order promise dates](order-promise-dates.md).
+
+If an order is missing, first identify whether it belongs to history, realtime, or fallback processing. Then inspect that flow's earliest missing stage before rerunning work.

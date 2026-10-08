@@ -23,7 +23,7 @@ Below this section, the [cancellation sync job](/documents/retail-operations/wor
 
 - If both the cancellation sync job and the Shopify setting to process refunds are enabled, the cancellation and refund will be sent to Shopify.
 - If the cancellation sync job is enabled but the Shopify refund setting is disabled, only the cancellation will be sent to Shopify.
-- If the cancellation sync job is disabled, nothing is sent to Shopify, not the cancellation and not the refund, even if the Shopify refund setting is enabled.
+- If the `cancellation sync` job is disabled, neither the cancellation nor the refund is sent to Shopify, even if the Shopify refund setting is enabled.
 - If both settings are disabled, no data is sent to Shopify.
 
 ### Reject Orders
@@ -32,7 +32,7 @@ Click on bin icon to reject the order, select an appropriate reason for rejectin
 
 To reject an order partially, click on the bin icon for the particular item in the order that needs to be rejected, select an appropriate reason for rejecting the item in the pop-up window that appears, and click on the `reject item` button.
 
-If items are rejected, a notification email is also sent, and the order may be re-routed. For more information, refer to the Order Re-Routing App User Manual. 
+If items are rejected, a notification email is also sent, and the order may be re-routed. For more information, see [Re-route Fulfillment](../re-route-fulfillment.md).
 
 ### Customer and Payment Details
 

@@ -6,7 +6,7 @@ description: >-
 
 # Order Soft Allocation
 
-HotWax Commerce's Soft Allocation feature performs real-time eligibility checks for the items in a customer's shopping cart. By evaluating the list of items in the cart along with the destination zip code, Soft Allocation ensures compliance with predefined criteria set by retailers such as checking if all items can be shipped from one location.
+HotWax Commerce's Soft Allocation feature performs real-time eligibility checks for the items in a customer's shopping cart. By evaluating the list of items in the cart along with the destination zip code, Soft Allocation verifies compliance with predefined criteria set by retailers such as checking if all items can be shipped from one location.
 
 This process also helps guarantee an efficient validation of shipping eligibility, aligning with the requirements of various specialty shipping carriers.
 
@@ -24,9 +24,11 @@ b. If the customer allows access to their system location:
 
 * Obtain the latitude and longitude coordinates directly from their device.
 
-### Sample of `postCodeLookup`
+### postcodeLookup API request
 
-#### Method : `/POST`
+#### Endpoint
+
+`POST https://<host>/rest/s1/api/geocode`
 
 ## Request
 

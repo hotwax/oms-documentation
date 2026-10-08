@@ -1,9 +1,11 @@
 ---
 description: >-
- The "In Progress" tab contains orders that have been picked and moved from the "Open" tab. This page is dedicated to the packing stage of fulfillment. Here, associates can activate gift cards, generate documents such as shipping labels and packing slips, and complete the remaining fulfillment steps.
+ Pack orders that have moved from the `Open` tab.
 ---
 
 # In Progress Orders Page
+
+The `In Progress` tab contains prepared shipments that have moved from the `Open` work queue after picklist creation. The tab's presence does not establish that staff have physically picked every item. Verify the products and quantities before packing. Here, associates can activate gift cards, generate documents such as shipping labels and packing slips, and complete the packing work. See the [fulfillment stages diagram](README.md#fulfillment-stages) for the separate packing and shipping steps.
 
 ## Filter Orders by Picklist
 
@@ -94,7 +96,7 @@ Store associates can reject items from an order if they cannot be fulfilled from
 
 For this to work, at least one brokering rule must be set to pick up orders from **Rejected Item Parking**. This helps make sure the order can still be fulfilled from a different store or warehouse.  
 
-To understand the full process, go to the [Rejection Workflow](/documents/store-operations/fulfillment/rejection.md)
+To understand the full process, go to the [Rejection Workflow](rejection.md).
 
 ## Shipping Label Generation
 

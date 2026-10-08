@@ -1,68 +1,98 @@
 ---
-description: Learn how to synchronize inventory from HotWax Commerce to Shopify.
+description: Learn how OMS publishes inventory changes to Shopify and reconciles inventory through the Company App.
 ---
 
 # Inventory Synchronization
 
-**Syncing Inventory From HotWax Commerce To Shopify**
+This page covers outbound OMS-to-Shopify inventory publication after cutover. For the one-time inbound Shopify-to-OMS starting inventory seed, follow [Chapter 8 of Set up HotWax Commerce with Shopify](../../../system-admin/administration/company/product-store-onboarding.md#8-seed-starting-inventory-from-shopify).
 
-HotWax Commerce provides the option to schedule the 3 different jobs to offer retailers the flexibility to schedule as per their business requirements.
+Use `Inventory sync` in the Company App to monitor inventory events, batches, publishers, and resets. Confirm the affected connection, target location, and quantity basis before choosing an action. A successful job run alone does not prove that Shopify received the expected inventory.
 
-## Upload Recent Inventory Change
+## Monitor outbound inventory
 
-The `Upload Recent Inventory Changes` job updates the inventory on Shopify through the following steps:
+1. Open the Company App and select `Shopify`.
+2. Open the connection and confirm its shop and Product Store.
+3. Select `Inventory sync`.
+4. Review the channel or physical-location queue that matches the affected Shopify location.
+5. Open the waiting event or batch, and review the related publisher's schedule, pause state, and latest run before deciding on recovery.
 
-* **Identifying Products with Inventory Changes:** The 'Upload recent inventory change' job examines the inventory records of HotWax Commerce's products. It identifies products that have undergone inventory changes since the last synchronization.\
-  \
-  In the following example, there are five products with inventory records in HotWax Commerce:
+<figure><img src="../../.gitbook/assets/company-inventory-monitor-main.jpg" alt="Company App Inventory sync dashboard with separate channel and physical-location event queues and their related jobs"><figcaption><p>HotWax sandbox inventory monitor. This example shows 14 channel events waiting to batch and paused publication jobs. Check your connection's current state rather than copying the example schedules.</p></figcaption></figure>
 
-<table><thead><tr><th width="163.33333333333331">Product List</th><th>Inventory Count at 1:00 PM</th><th>Inventory Count at 1:15 PM</th></tr></thead><tbody><tr><td>Product A</td><td>100</td><td>95</td></tr><tr><td>Product B</td><td>50</td><td>50</td></tr><tr><td>Product C</td><td>25</td><td>30</td></tr><tr><td>Product D</td><td>100</td><td>100</td></tr><tr><td>Product E</td><td>80</td><td>80</td></tr></tbody></table>
+The dashboard separates two outbound paths:
 
-At 1:15 PM, the job that runs every 15 minutes detects that there are inventory changes for Product A and Product C that require syncing with Shopify after the 'Upload recent inventory change' task is executed.
+| Path | Quantity and target |
+| --- | --- |
+| Physical-location inventory | The configured inventory quantity for a mapped OMS facility is published to its Shopify physical location |
+| Channel inventory | Available-to-promise inventory is calculated for a facility group and published to its Shopify aggregate location |
 
-* **Comparing Inventory counts between HotWax Commerce and Shopify:** To update its inventory records, HotWax Commerce initiates an [API call](https://shopify.dev/docs/api/admin-rest/2023-04/resources/inventorylevel#get-inventory-levels?location-ids=655441491) to retrieve information from Shopify about products that have undergone changes in HotWax Commerce. The inventory counts for these products in Shopify are then compared with the inventory counts that HotWax Commerce has on file.
+```mermaid
+flowchart LR
+    accTitle: Physical and aggregate Shopify inventory targets
+    accDescr: A physical HotWax facility publishes its configured inventory quantity to its mapped Shopify location, while a facility group calculates channel ATP for a separate Shopify aggregate location.
+    F[HotWax physical facility] --> Q[Configured physical quantity]
+    Q --> L[Mapped Shopify physical location]
+    G[HotWax facility group] --> A[Channel ATP calculation]
+    A --> C[Shopify aggregate location]
+```
 
-<table><thead><tr><th width="147">Product List</th><th width="238">Inventory Count in Shopify</th><th width="331">Inventory Count in HotWax Commerce</th><th width="198">Inventory Difference</th></tr></thead><tbody><tr><td>Product A</td><td>100</td><td>95</td><td>-5</td></tr><tr><td>Product C</td><td>25</td><td>30</td><td>5</td></tr></tbody></table>
+The arrows represent inventory publication, not a physical stock transfer. A physical location's quantity is not the aggregate inventory of every facility in its channel. Review [Shopify mappings in Company](../../../system-admin/administration/company/manage-shopify-mappings.md) before changing a target.
 
-* **Uploading accurate inventory on Shopify:** After comparing inventory changes, the 'Upload recent inventory change' job records the difference and generates a GraphQL file for the affected products. This file is then uploaded to Shopify, which reads it and updates the '[available adjustments](https://shopify.dev/docs/api/admin-rest/2022-10/resources/inventorylevel#post-inventory-levels-adjust)' field to either add or deduct inventory based on the changes.
+<a id="upload-recent-inventory-change"></a>
 
-<table><thead><tr><th width="152">Product List</th><th width="236">Inventory Count in Shopify</th><th width="219">Available Adjustments</th><th width="309">Updated Inventory Count in Shopify</th></tr></thead><tbody><tr><td>Product A</td><td>100</td><td>-5</td><td>95</td></tr><tr><td>Product C</td><td>25</td><td>5</td><td>30</td></tr></tbody></table>
+## Publish inventory changes
 
-<figure><img src="../../.gitbook/assets/sync-recent-inventory-changes.png" alt=""><figcaption><p><em>Fig. 1(i): Sync Inventory for Products with Recent Inventory Changes</em></p></figcaption></figure>
+Inventory events record signed changes for their applicable targets. The publisher groups waiting events into batches for delivery. A positive change adds inventory and a negative change removes it. Open the event and its linked batch to distinguish waiting work, delivery errors, and successful delivery.
 
+Event counts are not counts of products or units. A publisher schedule does not establish when every change reaches Shopify; inspect the actual batch delivery and the quantity at the mapped Shopify location.
 
-When updating inventory on Shopify, HotWax Commerce ensures that the location in Shopify matches the location in HotWax Commerce for merchants. If users utilize a non-Shopify POS, all physical locations in HotWax Commerce will be mapped to one virtual location in Shopify. However, if merchants use Shopify POS and have multiple store locations and an eCom location for online orders, all Shopify locations will be mapped one-to-one with HotWax locations. This means that any inventory updates made to the retail stores and warehouses in HotWax will be reflected in the specific store locations and eCom locations in Shopify for merchants.
+<a id="push-updated-inventory-deltas-to-shopify"></a>
 
-## Hard Sync
+### Why deltas and resets differ
 
-Sometimes, there may be a slight delay of a few milliseconds between two inventory update jobs from other systems. For instance, if job-1 runs at 1:00:00 PM and job-2 runs at 1:15:00 PM, job-2 checks the inventory changes that happened between 1:00:00 PM and 1:15:00 PM.
+An adjustment changes the quantity already held by Shopify. A reset reconciles it with the configured OMS quantity. Outstanding Shopify orders can make those two operations produce different results.
 
-However, if a sale occurs in-store at 12:59:59 PM and HotWax Commerce receives an inventory update from the POS at 1:00:01 PM, both jobs won't detect the changes in inventory.
+In an available-quantity example, Product A starts with 5 units in both systems. Shopify orders consume 4 units before those orders reach OMS. A damaged unit then reduces OMS ATP to 4. Publishing only the damage adjustment preserves the stock already consumed by Shopify orders:
 
-To prevent this issue, merchants can use `Hard Sync` job once a day to synchronize the inventory counts of all products from HotWax Commerce to Shopify. The synchronization is achieved through the GraphQL file, similar to how inventory synchronization is performed for products with recent updates.
+```mermaid
+sequenceDiagram
+    accTitle: Inventory delta while Shopify orders await import
+    accDescr: Both systems start with five units. Shopify orders consume four units, leaving one available. HotWax records one damaged unit before those orders import, so its ATP is four. Sending the damage delta of minus one leaves Shopify availability at zero; resetting Shopify to the stale ATP of four would omit the pending Shopify orders.
+    participant S as Shopify available
+    participant H as HotWax ATP
+    Note over S,H: Starting quantity: 5 in both systems
+    S->>S: Four units ordered<br/>Available: 1
+    H->>H: One unit damaged<br/>ATP: 4<br/>Orders await import
+    H->>S: Publish damage delta: -1
+    S->>S: Available: 1 - 1 = 0
+    Note over S,H: Alternative: reset Shopify<br/>to stale HotWax ATP of 4<br/>Pending orders not reflected
+```
 
-This job supports two parameters to control how inventory is synchronized:
+Shopify distinguishes [incremental inventory adjustments](https://shopify.dev/docs/api/admin-graphql/latest/mutations/inventoryAdjustQuantities) from [absolute quantity sets](https://shopify.dev/docs/api/admin-graphql/latest/mutations/inventorySetQuantities). Before a reset, confirm inventory ownership, the publication target and quantity basis, and whether relevant orders have finished importing.
 
-- The facilityGroupId parameter defines which facilities’ inventory is accumulated to calculate the total available quantity.
+<a id="hard-sync"></a>
 
-- The shopifyFacilityGroupId parameter specifies which store facilities’ inventories should be pushed to Shopify. If not specified, inventory will be pushed for all locations mapped in ShopifyShopLocation.
+## Reconcile inventory with a reset
 
-**Example:** A retailer has 50 stores, with 25 in Zone 1 and 25 in Zone 2. He wants to push the total inventory of all 50 stores while mapping inventory to the stores in Zone 2.
+A reset is useful after resolving missed capture, a changed publication target, or another confirmed discrepancy. Choose the reset that matches the required quantity and scope:
 
-- Calculate Inventory: They create a facility group for Zone 1 and Zone 2 and provide its ID in the `facilityGroupId` parameter. This ensures that stock from these stores is included in the total inventory calculation.
+| Company App job | Reconciliation scope |
+| --- | --- |
+| `Reset channel ATP` | Aggregate ATP for the channel shown on its card |
+| `Reset physical ATP (this shop)` | ATP for the connection's mapped physical locations |
+| `Reset physical on-hand` | Physical-location quantity on hand for the configured shop |
 
-- Zone 2 Inventory Sync to Shopify: They create another facility group for the Zone 2 stores and provide its ID in the `shopifyFacilityGroupId` parameter. This directs inventory updates only to the stores included in that facility group.  
+1. Confirm whether the affected target is a physical location or an aggregate channel.
+2. Verify the mapping, quantity basis, relevant inventory rules, and outstanding order imports.
+3. Inspect the event history, waiting batches, publisher state, and latest runs. Correct the cause of the discrepancy before recovery.
+4. Open the applicable reset job and review its service, parameters, and scope. Use the approved recovery process for that target.
+5. Review the resulting run and delivery records, then verify the actual inventory in Shopify at the mapped location.
 
-<figure><img src="../../.gitbook/assets/hard-sync-inventory-discrepancy.png" alt=""><figcaption><p><em>Fig. 2: Hard Sync inventory to remove any discrepancy</em></p></figcaption></figure>
+Available jobs depend on the installed connector and configuration. Do not copy job definitions or schedules from another instance. A completed reset is an execution result; the Shopify quantity still needs verification.
 
-## Push Updated Inventory Deltas to Shopify
+## Investigate failed delivery
 
-The `Push Updated Inventory Deltas to Shopify` job syncs only recent inventory deltas to Shopify. If a product is sold too fast on Shopify and orders are not yet downloaded in HotWax Commerce, then inventory of this product gets out of stock on Shopify, however, inventory in HotWax Commerce is still available. In such cases, the inventory of these products also gets reset with the current ATP in HotWax Commerce with the previous jobs. And due to this Shopify was overselling the inventory.
+Filter history by the affected Shopify location and `Delivery error`, open an event and its batch, then review delivery errors and the summed change entries. Correct the cause before an approved retry.
 
-To improve inventory accuracy, this job only syncs the inventory variances recorded in HotWax commerce rather than resetting the inventory. This means any variance—whether negative (Such as damaged, lost, POS Sales) or positive (TO receiving, Returns restock) are updated to the respective Shopify locations.
+`Resend` sends the existing frozen batch payload and its idempotency key. It does not recalculate inventory from current records. If the payload no longer represents the intended adjustment, use the appropriate approved reconciliation instead of repeatedly resending it.
 
-For example, Product A has 5 units listed in both Shopify and HotWax Commerce. Shopify then receives 4 orders for this product, which have not yet been downloaded into HotWax Commerce. Meanwhile, one unit of Product A is reported in HotWax Commerce as damaged or missing, reducing the online ATP in HotWax Commerce to 4. In this scenario, HotWax Commerce will now push a -1 inventory variance to Shopify instead of resetting the inventory to 4. The ATP on Shopify will be adjusted to 0, ensuring the product is marked as `Out of Stock` in Shopify, as Shopify has already received orders for 4 units.
-
-In another example, if a store receives a transfer order for Product B with 2 units, which originally had 10 units, then a variance of 2 will be pushed on Shopify to update the Shopify ATP to 12.
-
-![Delta sync job](../../.gitbook/assets/push-inventory-deltas.png)
+Follow [Monitor Shopify inventory sync](../../../system-admin/administration/company/manage-shopify-inventory-sync.md) for history filters, event and batch inspection, job controls, and reconciliation. After any recovery, refresh both systems and verify the affected variant at its mapped Shopify location.

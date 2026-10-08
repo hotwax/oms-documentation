@@ -5,48 +5,64 @@ description: >-
 
 # Inventory sync
 
-**Scenario:** Inventory Not Synced from HotWax Commerce to Shopify
+**Scenario:** A product's inventory in Shopify differs from the quantity expected from HotWax Commerce.
 
-Sometimes retailers may encounter inventory disparities between HotWax Commerce and Shopify Inventory. For instance, inventory may appear out of stock in Shopify despite being available in HotWax Commerce.
+Start with the affected shop, variant, and Shopify location. An inventory difference can come from the selected location, the publication model, inventory rules, or a delayed or failed delivery. A successful job run alone does not prove that the expected quantity reached Shopify.
 
-## Steps to Troubleshoot
+## Choose the right comparison
 
-### Verify in HotWax Commerce
+Confirm the location mapping and the inventory model configured for this connection before comparing quantities.
 
-1. **Check Job Status:**
-   * Navigate to the `HotWax Commerce Job Manager App`.
-   * Locate the job named `Upload recent inventory change`. This job is responsible for updating all inventory changes in Shopify that have occurred in HotWax Commerce since the last time the job ran. If any inventory changes have been made after the last job execution, it is essential to run this job to ensure synchronization.
-   * Ensure that the job is running. If not scheduled, schedule the job according to your preferred frequency.
-   * You can also execute the `Hard Sync` job in HotWax Commerce. This job updates inventory for all the products irrespective of the inventory changes, eliminating any discrepancy between HotWax Commerce and Shopify. If inventory changes occurred before the completion of the last `Upload recent inventory change` job, execute the `Hard Sync` job.
+| Publication model | HotWax quantity to investigate | Shopify context |
+| --- | --- | --- |
+| Aggregate channel | Available-to-promise inventory calculated for the channel's facility group | The mapped aggregate location |
+| Physical location | The configured physical-facility publication, such as quantity on hand or physical ATP | The Shopify location mapped to that facility |
 
-{% tabs %}
-{% tab title="Hard Sync" %}
+Review [Shopify mappings in Company](../../../system-admin/administration/company/manage-shopify-mappings.md) and [the inventory publication models](../../shopify-integration/inventory/inventory-sync.md). Do not compare a single store's quantity with an aggregate channel, or assume every physical-location publisher uses the same quantity basis.
 
-<figure><img src="../../.gitbook/assets/hard-sync-job.png" alt="" width="375"><figcaption></figcaption></figure>
-{% endtab %}
+```mermaid
+flowchart TD
+    accTitle: Investigate a Shopify inventory difference
+    accDescr: Identify the shop, variant, and location, confirm mapping and quantity basis, compare inventory and adjustment history, then investigate publication delivery before an approved recovery.
+    A[Identify shop, variant, and location] --> B[Confirm mapping and quantity basis]
+    B --> C[Compare inventory and adjustment history]
+    C --> D{Expected quantity reached Shopify?}
+    D -->|Yes| E[Check later activity and inventory rules]
+    D -->|No| F[Inspect event, batch, and publisher]
+    F --> G[Correct cause and use approved recovery]
+    G --> C
+```
 
-{% tab title="Upload recent inventory change" %}
-<figure><img src="../../.gitbook/assets/upload-recent-inventory-changes-job.png" alt="" width="375"><figcaption></figcaption></figure>
-{% endtab %}
-{% endtabs %}
+## Verify in HotWax Commerce
 
-1. **Inspect Inventory Configurations:**
+1. Open the affected Shopify connection in the Company App and confirm its shop and Product Store.
+2. Open `Inventory sync`. Use the channel or physical-location path that matches the selected Shopify location.
+3. Check the expected quantity and relevant inventory rules. For an aggregate channel, review the facility group, member facilities, and ATP calculation, including reservations and exclusions.
+4. Review waiting events and batches, the publisher's pause state and schedule, and its latest run. Open the affected event and batch to check delivery state and errors.
 
-Retailers can set rules such as safety stocks, thresholds, and exclude facilities to prevent overselling on Shopify. Follow these steps to verify the online ATP of the inventory that is being synchronized between HotWax Commerce and Shopify:
+See [Monitor Shopify inventory sync](../../../system-admin/administration/company/manage-shopify-inventory-sync.md) for event, batch, publisher, and reset investigation.
 
-* In HotWax Commerce, Go to `Products` > `Find Products` > `Product Detail page` > `Product Inventory View` page.
-* Check inventory configurations, including safety stocks, thresholds, reserved inventory, and excluded facilities.
-* Verify the `online ATP` of products on the inventory dashboard and make sure that the `online ATP` inventory count matches with the inventory in Shopify.
+## Verify in Shopify
 
-### Verify in Shopify
+1. Open Shopify Admin and go to `Products` > `Inventory`.
+2. Select the mapped location and find the affected variant by its SKU. Compare the relevant quantity column; `Available` and `On hand` can differ because Shopify also tracks committed and unavailable inventory.
 
-1. **Check Online ATP in Inventory Dashboard:**
-   * Navigate to Shopify Admin Panel.
-   * Go to `Products` > `Product detail` page.
-   * Click on the variant of the product that requires inventory verification.
-2. **Verify Inventory Adjustment History:**
-   * Within the variant's `inventory` section, click on the `adjustment history` button.
-   * Examine historical inventory adjustments. Ensure they reflect recent changes.
-   * If historical changes display outdated records or no inventory records, proceed to the HotWax Commerce Job Manager App. If inventory changes occurred after the last execution of the Upload recent inventory change job, run the Upload recent inventory change job. Alternatively, if the changes happened before the completion of the last Upload recent inventory change job, execute the Hard Sync job.
-   * Wait for a few minutes and revisit the inventory history on Shopify.
-3. If the inventory is still not updated, and discrepancies persist, contact the HotWax Commerce support team for assistance.
+<figure><img src="../../.gitbook/assets/shopify-location-inventory.jpg" alt="Shopify demo inventory at the Online Store location showing variant SKUs and separate Unavailable, Committed, Available, On hand, and Incoming columns"><figcaption><p>In this demo example, XS / Blue at Online Store has 1,239 Available and 1,267 On hand. Compare the column used by your configured publication model.</p></figcaption></figure>
+
+3. Open the variant and check `Inventory tracked`. If the variant should track stock but this setting is off, confirm the approved setup with your implementation team. Follow [Shopify's inventory tracking setup](https://help.shopify.com/en/manual/products/inventory/setup/set-up-inventory-tracking).
+
+<figure><img src="../../.gitbook/assets/shopify-variant-inventory-tracking.jpg" alt="Shopify variant inventory card showing Inventory tracked enabled and Broadway with 35 Committed, 0 Available, and 35 On hand"><figcaption><p>Abominable Hoodie XS / Blue in hotwax-demo: inventory tracking is enabled. Broadway's 35 On hand are all Committed, leaving 0 Available.</p></figcaption></figure>
+
+4. In the variant's `Inventory` section, select `View adjustment history`.
+5. Confirm the location in the history view. Review the time, activity, creator, signed change, and resulting quantity. Check for later adjustments or fulfillment activity after the HotWax update.
+
+<figure><img src="../../.gitbook/assets/shopify-adjustment-history.jpg" alt="Shopify adjustment history for Abominable Hoodie XS Blue at Online Store showing HotWax Order Management corrections and movement receipts with separate quantity totals"><figcaption><p>This demo history shows HotWax Order Management corrections and movement receipts at Online Store. Check the location, creator, and later activity before comparing totals.</p></figcaption></figure>
+
+## Resolve and verify
+
+If the expected change is missing, return to the matching OMS event, batch, and publisher. Correct the cause before retrying. An old Shopify history entry alone does not establish which recovery is appropriate.
+
+`Resend` sends the existing frozen payload; it does not recalculate current inventory. Use the appropriate reset or reconciliation only after confirming the target, quantity basis, and recovery scope with the technical team.
+
+After recovery, refresh both sides and verify the affected variant at the mapped location. If the difference persists, share the shop, variant/SKU, location, expected and actual quantities, observation time, and relevant event, batch, or job identifiers with HotWax Commerce support.
+

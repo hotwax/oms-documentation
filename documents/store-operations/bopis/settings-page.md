@@ -106,7 +106,7 @@ This setting allows store associates to capture and verify proof of delivery whe
 
 `User-specific`
 
-Users can select the notifications they want to receive in the BOPIS app.
+Users can select the notifications they want to receive in the BOPIS app. Enabling the first topic also starts notification setup for the current device. Allow browser notifications when prompted, then confirm the required topics are enabled. Browser permission alone does not subscribe you to a topic.
 
 * **New order notification:** Enable or disable notifications for any new orders.
 * **Open order notification:** Enable or disable notifications for pending open orders.

@@ -12,6 +12,7 @@
   * [Ship to Store](bopis/ship-to-store.md)
   * [Catalog Page](bopis/catalog-page.md)
   * [Settings Page](bopis/settings-page.md)
+  * [Re-route Fulfillment](bopis/re-route-fulfillment.md)
   * [Troubleshooting](bopis/troubleshooting/README.md)
     * [Notification Error](bopis/troubleshooting/notifications-error.md)
 * [Fulfillment App](fulfillment/README.md)
@@ -34,6 +35,7 @@
 
 * [Receiving](receiving/README.md)
   * [Transfer Orders](receiving/transfer-orders.md)
+    * [Create Transfer Order](receiving/create-transfer-order.md)
   * [Returns and Purchase Orders](receiving/returns-and-purchase-orders.md)
   * [Reports](receiving/reports.md)
   * [Settings](receiving/settings.md)

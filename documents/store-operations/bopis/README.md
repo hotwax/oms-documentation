@@ -1,9 +1,27 @@
 ---
 description: >-
- The BOPIS Fulfillment App is designed for store managers and associates, providing a focused interface to Pick, Pack, and Handover store pickup orders. The app also includes features to manage Ship-to-Store items, activate gift cards, and view notifications for new and open orders.
+ Pick, pack, and hand over store pickup orders in the BOPIS Fulfillment App.
 ---
 
 # BOPIS Fulfillment App
+
+The BOPIS Fulfillment App is designed for store managers and associates, providing a focused interface to pick, pack, and hand over store pickup orders. The app also includes features to manage Ship-to-Store items, activate gift cards, and view notifications for new and open orders.
+
+## Pickup lifecycle
+
+Use the order tabs to distinguish preparation from customer collection. Mark an order ready only after its items are picked and the package is prepared. Record handover when the customer actually receives it.
+
+```mermaid
+flowchart TD
+    accTitle: Store pickup preparation and customer handover
+    accDescr: In Open, pick the items and prepare the package. Ready for pickup moves the store pickup shipment to Packed, where it waits for the customer. Handover records customer collection and moves it to Completed.
+    Open["Open: pick and prepare package"] -->|Ready for pickup| Packed["Packed: awaiting customer"]
+    Packed -->|Handover after collection| Completed["Completed: customer collected"]
+```
+
+`Ready for pickup` does not mean the customer has collected the order. Keep it in Packed while awaiting collection. See [Open Orders](open-orders-page.md), [Packed Orders](packed-order-tab.md), and [Completed Orders](completed-orders-tab.md) for actions at each stage.
+
+This flow describes the store's pickup shipment. An order can have other shipments at different locations; review `Other Shipments` in Order Details when checking the full order's progress.
 
 ## Key Features
 
