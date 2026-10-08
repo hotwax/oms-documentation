@@ -39,9 +39,8 @@ flowchart TD
 2. Open `Inventory sync`. Use the channel or physical-location path that matches the selected Shopify location.
 3. Check the expected quantity and relevant inventory rules. For an aggregate channel, review the facility group, member facilities, and ATP calculation, including reservations and exclusions.
 4. Review waiting events and batches, the publisher's pause state and schedule, and its latest run. Open the affected event and batch to check delivery state and errors.
-5. If the connector uses the older Job Manager workflow, inspect the applicable `Catalog` jobs, their services, parameters, and completed runs. Job names such as `Upload recent inventory change` or `Hard Sync` do not establish their scope by themselves.
 
-See [Monitor Shopify inventory sync](../../../system-admin/administration/company/manage-shopify-inventory-sync.md) for event and batch investigation, and [Troubleshoot job runs and schedules](../../../retail-operations/workflow/job-management/troubleshooting/job-runs-and-schedules.md) for schedule and execution checks.
+See [Monitor Shopify inventory sync](../../../system-admin/administration/company/manage-shopify-inventory-sync.md) for event, batch, publisher, and reset investigation.
 
 ## Verify in Shopify
 
@@ -61,8 +60,9 @@ See [Monitor Shopify inventory sync](../../../system-admin/administration/compan
 
 ## Resolve and verify
 
-If the expected change is missing, return to the matching HotWax event, batch, or applicable job. Correct the cause before retrying. An old Shopify history entry alone does not determine whether a recent-change run or a full reset is appropriate.
+If the expected change is missing, return to the matching OMS event, batch, and publisher. Correct the cause before retrying. An old Shopify history entry alone does not establish which recovery is appropriate.
 
-For connectors with event batches, `Resend` sends the existing frozen payload; it does not recalculate current inventory. Use the appropriate reset or reconciliation only after confirming the target, quantity basis, and recovery scope with the technical team.
+`Resend` sends the existing frozen payload; it does not recalculate current inventory. Use the appropriate reset or reconciliation only after confirming the target, quantity basis, and recovery scope with the technical team.
 
 After recovery, refresh both sides and verify the affected variant at the mapped location. If the difference persists, share the shop, variant/SKU, location, expected and actual quantities, observation time, and relevant event, batch, or job identifiers with HotWax Commerce support.
+

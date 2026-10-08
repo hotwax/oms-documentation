@@ -88,14 +88,14 @@ The table below lists the default rejection reasons and their assigned types, wh
 
 | Rejection Reason | Type             | Action                                                                                                                             | Purpose                                                                                                   |
 | ---------------- | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| NOT IN STOCK     | REPORT\_ALL\_VAR | Sets ATP and QOH inventory to 0 for the rejected product.                                                                          | Prevents new orders until the product is restocked.                                                       |
-| MISMATCH         | REPORT\_VAR      | Decreases ATP and QOH inventory by the rejected quantity.                                                                          | Indicates the product is still in stock but unavailable for orders requiring the rejected size or color.  |
-| DAMAGE           | REPORT\_VAR      | Decreases ATP inventory by the rejected quantity, and also decreases QOH when `Adjust QOH Along with ATP on Rejection` is enabled. | Shows the product is in stock but damaged and unsellable.                                                 |
+| NOT IN STOCK     | REPORT\_ALL\_VAR | Reports all remaining inventory for the rejected product as unavailable. Review the QOH-impact setting before applying the reason.                                                                          | Prevents new orders until the product is restocked.                                                       |
+| MISMATCH         | REPORT\_VAR      | Reports the rejected quantity as unavailable. Review the QOH-impact setting before applying the reason.                                                                          | Indicates the product is still in stock but unavailable for orders requiring the rejected size or color.  |
+| DAMAGE           | REPORT\_VAR      | Decreases ATP inventory by the rejected quantity, and also decreases QOH when `Affect QOH` is enabled. | Shows the product is in stock but damaged and unsellable.                                                 |
 | NO VARIANCE      | REPORT\_NO\_VAR  | Does not affect either ATP or QOH inventory.                                                                                       | Useful for scenarios where inventory levels remain unchanged, e.g., canceled orders without stock issues. |
 
 ## Adjust QOH Along with ATP on Rejection
 
-The **Adjust QOH Along with ATP on Rejection** toggle provides control over inventory adjustments during order rejections.
+The **Affect QOH** toggle on the **Affect QOH on rejection** card controls whether rejection adjustments also affect quantity on hand.
 
 ### Why disable impact on QOH
 
@@ -143,8 +143,6 @@ When partial rejection is disabled and collateral rejection is off, rejecting an
 
 If additional items need to be rejected with a specific reason, click on the default rejection reason applied to the item and make a selection.
 
-<figure><img src="../.gitbook/assets/configure-partial-rejection.png" alt="Partial rejection setting"><figcaption><p>Configure Partial Rejection</p></figcaption></figure>
-
 ## Collateral Rejection
 
 Collateral rejection helps manage situations where the product in a rejected order item is part of multiple pending orders at a facility. When this is enabled, rejecting an item also reaches eligible items in related orders containing the same product at the same facility. The behavior depends on whether partial rejection is allowed:
@@ -154,4 +152,3 @@ Collateral rejection helps manage situations where the product in a rejected ord
 
 This feature ensures faster re-routing of unfulfillable items, minimizing delays across all orders containing the same product.
 
-<figure><img src="../.gitbook/assets/configure-collateral-rejection.png" alt="Collateral rejection setting"><figcaption><p>Configure Collateral Rejection</p></figcaption></figure>

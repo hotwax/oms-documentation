@@ -91,8 +91,6 @@ This tab displays orders that have physically arrived at your store and are wait
 
 When the customer collects the shipment, verify their identity and package contents, select `Handover`, then review the `Complete order` confirmation and select `Complete`. This records collection and moves the shipment to Completed. The app attempts the completion email after the last remaining Ship to Store shipment for that order at this store has been handed over.
 
-<figure><img src="https://github.com/user-attachments/assets/1ce90a47-c320-4d12-8747-cd356667bdcd" alt="Earlier iPad layout of Ship to Store with Ready for pickup selected and Handover on three shipment cards"><figcaption>Earlier iPad layout of Ready for pickup. Follow the current confirmation steps above when recording handover.</figcaption></figure>
-
 ### Completed
 
 This tab displays a history of all completed Ship to Store orders that have been successfully handed over to customers.
@@ -100,3 +98,4 @@ This tab displays a history of all completed Ship to Store orders that have been
 ### Check notification failures
 
 An arrival or handover can succeed even if the customer email fails. Check the new tab and shipment status before repeating the status action. On Ready for pickup, use the mail icon and confirm `Send` to resend the pickup notification when appropriate. Both arrival and handover confirmations warn that their status actions are irreversible in this flow.
+

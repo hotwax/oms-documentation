@@ -163,4 +163,3 @@ Entering a tracking code does not generate a new carrier label. If the app repor
 
 Select `Reject order`, confirm that you cannot provide tracking, and add the gateway error or other useful troubleshooting details. Submit the rejection and check the resulting order state. The dialog states that this rejection does not affect inventory for the ordered items at the store.
 
-<figure><img src="../.gitbook/assets/preferred-carrier-label-generation.png" alt="Carrier selector and tracking-code field in an earlier Fulfillment app dialog"><figcaption><p>Earlier dialog layout. Current versions separate Update carrier and Manual tracking details into tabs.</p></figcaption></figure>

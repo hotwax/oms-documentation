@@ -80,7 +80,7 @@ Scanning can be repeated until the expected quantity is reached. If you later de
 
 * Use the search bar on the dashboard to quickly locate a specific transfer order.  
 * Work through the Open filter on the detail page to focus on outstanding items.  
-* Use Receive All when the full ordered quantity has arrived; otherwise, manually enter the quantity.  
+* Use the per-item Scan all action when the remaining expected quantity has physically arrived; otherwise, enter or scan the actual received quantity when the configured settings allow it.
 * Enter 0 for items you did not receive rather than leaving the field blank – blank fields prevent order completion.  
 * Save progress periodically on large orders to avoid losing work if you need to step away.  
 * If you encounter a scanning error (for example, camera permission denied), check your browser settings and grant camera access.  
@@ -98,7 +98,8 @@ At times, stores receive items that differ from the recorded shipment. This disc
 
 ## Handling discrepancies and reconciliation
 
-Before closing an order, the app checks whether any items have been received in quantities different from what was fulfilled. If you attempt to Save progress or Receive and complete with an over‑receipt or under‑receipt, a Save receiving progress modal appears summarising the affected items and highlighting how much was over or under. You must select the items or mark them as a discrepancy to proceed. This in‑app review step reduces accidental over‑receipts and ensures you acknowledge exceptions.  
+Review the discrepancy checks for `Save progress` and `Receive and complete` described above. Acknowledge every listed discrepancy before proceeding; these checkboxes do not select the items to close. Confirm the selected box or order scope separately before completing receipt.
+
 The receiving app then integrates with NetSuite to automatically reconcile under‑receipts, over‑receipts and mis‑ships. When you close an item using Receive and complete, the app sets a custom field that triggers NetSuite automation:
 
 * Under receipts – If you receive fewer units than were shipped, NetSuite creates an Item Receipt for the received quantity and an Item Adjustment for the shortfall, then closes the order item.  
@@ -106,3 +107,4 @@ The receiving app then integrates with NetSuite to automatically reconcile under
 * Mis‑shipped items – NetSuite will create an Item Adjustment referencing the transfer order to account for the mis‑shipped goods.
 
 ---
+

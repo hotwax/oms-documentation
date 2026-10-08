@@ -41,7 +41,16 @@ sequenceDiagram
     end
 ```
 
-Shopify export completion does not prove that the HotWax import succeeded. Use the [Product sync console](product-sync-console.md) to review the export and import stages separately, including any failed import records.
+Shopify export completion does not prove that the HotWax import succeeded. To inspect the current pipeline:
+
+1. Open the Company App and select `Shopify`.
+2. Open the affected Shopify connection, then select `Product sync`.
+3. Review `Track sync progress` for the system message, Shopify bulk operation, and HotWax bulk import separately.
+4. Check whether the import completed, failed, or was skipped because Shopify returned no product data. Review failed records before recovery.
+
+<figure><img src="../../.gitbook/assets/company-product-sync-dashboard.jpg" alt="Company App Product sync dashboard for Demo Store showing a consumed system message, completed zero-object Shopify bulk operation, and skipped HotWax bulk import"><figcaption><p>Demo Store example with no product updates returned: Shopify export is Complete and the HotWax import is Skipped. This is not an example of a successful populated import.</p></figcaption></figure>
+
+Use [Monitor Shopify product sync](../../../system-admin/administration/company/manage-shopify-product-sync.md) for the complete operational workflow and recovery controls.
 
 <details>
 
@@ -82,8 +91,6 @@ A virtual product, also known as a parent product, does not have a set size or c
 
 <div data-full-width="false"><figure><img src="../../.gitbook/assets/shopify-product-catalog.jpg" alt="Shopify demo catalog showing parent product titles, status, and inventory across fifteen variants per product"><figcaption><p>Demo catalog in Shopify. Each row represents a parent product with its variants; quantities are examples captured from the demo store.</p></figcaption></figure></div>
 
-<div data-full-width="false"><figure><img src="../../.gitbook/assets/products-downloaded-in-hotwax.png" alt="HotWax product list showing downloaded products"><figcaption><p>Products downloaded in HotWax</p></figcaption></figure></div>
-
 #### Variant product
 
 The parent product comes in various sizes and colors, resulting in multiple variants. Here is how product variant fields are mapped:
@@ -107,10 +114,9 @@ The parent product comes in various sizes and colors, resulting in multiple vari
 
 <figure><img src="../../.gitbook/assets/shopify-variant-identifiers.jpg" alt="Shopify variant More details section showing SKU MH09-XS-Blue and barcode MH09XSBlue"><figcaption><p>SKU and barcode for the same demo variant. Use the configured primary identifier when matching the variant to a HotWax product.</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/variant-product-details-hotwax.png" alt="HotWax product details for a downloaded variant"><figcaption><p>Variant product in HotWax with details</p></figcaption></figure>
-
 Shopify has multiple product identifiers, such as Shopify Product ID, Product SKU, Product Name, and UPC. Before importing products, set up the primary product identifier that maps to the product ID in HotWax. The primary product identifier can be configured in HotWax when setting up a new product store.
 
 #### Manage sales orders for products not in HotWax
 
 When orders are placed on Shopify, they transfer to HotWax. However, sometimes an order might include a newly launched product in Shopify that has not yet synced with HotWax. This can cause the order download to fail if the product import job has not yet run. To prevent this, HotWax creates a temporary placeholder product for the new item. Once the product import job runs, the system adds the necessary information, such as the product name, brand, price, and weight, to the placeholder product. This makes sure that the order download succeeds.
+
