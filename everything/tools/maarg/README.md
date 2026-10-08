@@ -22,9 +22,14 @@ Maarg can connect the core Order Management System (OMS) with external systems s
 | Check relational database columns | [DB Missing Columns](db-missing-columns.md) |
 | Inspect a scheduled job or failed execution | [Service Jobs](service-jobs.md) |
 | Trace an integration message | [System Messages](system-messages.md) |
+| Review shared message and connection settings | [Message Types And Remotes](message-configuration.md) |
 | Understand an import configuration | [Data Manager Configuration](data-manager-configuration.md) |
 | Investigate import failures | [Data Manager Imports](data-manager-imports.md) |
 | Find an installed API contract | [REST API Explorer](rest-api-explorer.md) |
+| Diagnose an account or sign-in problem | [User Accounts And Access Diagnosis](user-accounts.md) |
+| Review memberships and authorization rules | [Groups And Artifact Authorization](authorization-groups.md) |
+| Identify a credential and plan its lifecycle | [Token Administration](token-administration.md) |
+| Inspect an approved resource location | [Resource Inspection](resource-inspection.md) |
 | Read a bounded runtime log slice | [Log Files](log-files.md) |
 | Investigate pools, threads, caches, or instance state | [Runtime Health Diagnostics](runtime-health.md) |
 | Inspect audit evidence and retained performance statistics | [Audit And Performance](audit-performance.md) |
