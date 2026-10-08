@@ -109,7 +109,7 @@ In the reviewed backend, the export request accepts facility, count type, creati
 
 Changing filters after requesting an export does not rewrite that existing request. Use its creation time and saved selection when comparing results. Record whether dates mean count creation, count closure, export creation, or export processing; those timestamps answer different questions.
 
-The reviewed output contains count and facility references, product identifiers, decision outcome, deciding user, variance, system quantity, and counted quantity. Do not infer that inventory was adjusted merely because a CSV was generated. A recount is a separate operational workflow and must use the approved count-creation process; do not upload this report as a count input without checking the required import format.
+The reviewed output contains count and facility references, product identifiers, decision outcome, deciding user, variance, system quantity, and counted quantity. Do not infer that inventory was adjusted merely because a CSV was generated. A recount is a separate operational workflow. Use [Prepare And Troubleshoot Cycle Count Imports](import-troubleshooting.md) to check the import format, trace an existing upload, and verify count scope before stores begin. Do not upload the results report unchanged or repeat an upload with an unknown outcome.
 
 ## Escalation Checklist
 
