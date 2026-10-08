@@ -94,4 +94,3 @@ On older OMS instances, facility inventory, reconciliation, Shopify reads, or jo
 5. Compare `OMS Online ATP` and `Shopify ATP`.
 6. Verify the affected Company inventory event and batch, then compare the actual Shopify quantity at the matching target.
 7. Open the relevant configuration page before changing a value: [threshold rules](threshold-rules.md), [safety stock rules](safety-stock-rules.md), [store pickup rules](store-pickup-rules.md), [shipping rules](shipping-rule.md), [inventory channels](create-channels.md), [scheduled sourcing rules](schedule-atp-rules.md), or [sourcing use cases](use-cases.md).
-

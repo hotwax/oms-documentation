@@ -25,4 +25,3 @@ When an order is fulfilled, HotWax Commerce updates the fulfillment status in Sh
 \
 \
 \\
-

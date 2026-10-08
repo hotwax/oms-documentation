@@ -65,4 +65,3 @@ If the expected change is missing, return to the matching OMS event, batch, and 
 `Resend` sends the existing frozen payload; it does not recalculate current inventory. Use the appropriate reset or reconciliation only after confirming the target, quantity basis, and recovery scope with the technical team.
 
 After recovery, refresh both sides and verify the affected variant at the mapped location. If the difference persists, share the shop, variant/SKU, location, expected and actual quantities, observation time, and relevant event, batch, or job identifiers with HotWax Commerce support.
-

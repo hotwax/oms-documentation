@@ -77,4 +77,3 @@ Outbound inventory fails when the selected Shopify connection cannot write inven
 Do not place access tokens or credentials in screenshots, tickets, or documentation.
 
 [Watch the Shopify access-scope walkthrough](https://youtu.be/oL_BYAXZQZw).
-

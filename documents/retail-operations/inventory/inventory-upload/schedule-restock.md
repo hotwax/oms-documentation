@@ -68,4 +68,3 @@ If the merchandisers have any operational level changes, such as their sale bein
 All the scheduled restocks will appear at the bottom of the page, with the scheduled date and time. Merchandisers can click on the overflow menu to reschedule or cancel the restocks as per their requirements.
 
 {% embed url="https://youtu.be/n5GwuZ2dSH8" %}
-

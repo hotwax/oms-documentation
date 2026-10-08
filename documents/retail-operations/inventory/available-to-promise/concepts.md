@@ -74,4 +74,3 @@ This example assumes both rules are active and target the same inventory channel
 Use the sequence button at the bottom of a sourcing rule page to reorder rules. Drag the rules into position, then select the save button.
 
 Continue with [Create inventory channels](create-channels.md) or [Schedule sourcing rules](schedule-atp-rules.md).
-
