@@ -11,9 +11,11 @@ Below is a list of all the actions available in the BOPIS App, along with the sp
 | 1          | Product View   | -          | Allows users to view all existing products in the catalog.                             |
 | 2          | Product Detail | -          | Enables users to check inventory levels across different stores for specific products. |
 
-<figure><img src="../../.gitbook/assets/bopis-catalog-permissions.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/bopis-catalog-v5-2-3.png" alt="BOPIS Catalog page with product search and current bottom navigation"><figcaption><p>Catalog page in BOPIS App v5.2.3</p></figcaption></figure>
 
 ### Orders Page
+
+<figure><img src="../../.gitbook/assets/bopis-orders-v5-2-3.png" alt="BOPIS Orders page with Open, Packed, and Completed order tabs"><figcaption><p>Orders page in BOPIS App v5.2.3</p></figcaption></figure>
 
 #### Open Tab
 
@@ -21,8 +23,6 @@ Below is a list of all the actions available in the BOPIS App, along with the sp
 | ---------- | ----------------------- | ---------- | ------------------------------------------------------------------------------ |
 | 1          | Ready for Pickup Button | -          | Marks an order as ready for pickup, triggering a notification to the customer. |
 | 2          | View Inventory          | -          | Allows users to view the available inventory for items in the order.           |
-
-<figure><img src="../../.gitbook/assets/open-order.png" alt=""><figcaption></figcaption></figure>
 
 #### Packed Tab
 
@@ -32,15 +32,11 @@ Below is a list of all the actions available in the BOPIS App, along with the sp
 | 2          | View Inventory             | -          | Enables users to view the available inventory for items in the packed order. |
 | 3          | Resend Notification Button | -          | Allows users to resend the pickup notification to the customer.              |
 
-<figure><img src="../../.gitbook/assets/packed-orders.png" alt=""><figcaption></figcaption></figure>
-
 #### Completed Tab
 
 | Serial No. | Action                | Permission | Description                                |
 | ---------- | --------------------- | ---------- | ------------------------------------------ |
 | 1          | View Completed Orders | -          | Allows users to view all completed orders. |
-
-<figure><img src="../../.gitbook/assets/bopis-completed-orders-permissions.png" alt=""><figcaption></figcaption></figure>
 
 #### Ship to Store
 
@@ -54,8 +50,6 @@ Below is a list of all the actions available in the BOPIS App, along with the sp
 | ---------- | ----------------- | ------------- | -------------------------------------------------------------------------------------------------------- |
 | 1          | Order Detail Page | -             | Allows store associates to view the details of an order.                                                 |
 | 2          | Order Rejection   | COMMON\_ADMIN | Enables users to reject an order completely or partially, based on available inventory or other factors. |
-
-<figure><img src="../../.gitbook/assets/bopis-order-details-permissions.png" alt=""><figcaption></figcaption></figure>
 
 ### Settings Page
 
@@ -72,4 +66,6 @@ Below is a list of all the actions available in the BOPIS App, along with the sp
 | 9  | View BOPIS App               | BOPIS_APP_VIEW          | Allows users to view the entire BOPIS App.                                 |
 | 10 | Manage BOPIS Operations      | STOREFULFILLMENT_ADMIN  | Allows users to manage all BOPIS operations in the store.                   |
 
-<figure><img src="../../.gitbook/assets/app-settings-permissions.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/bopis-settings-v5-2-3.png" alt="BOPIS Settings page showing facility, re-route fulfillment, and partial rejection controls"><figcaption><p>Facility and order controls in BOPIS App v5.2.3</p></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/bopis-settings-order-preferences-v5-2-3.png" alt="BOPIS Settings page showing product identifier, timezone, language, shipping orders, packing slip, and picker tracking controls"><figcaption><p>App and order preferences in BOPIS App v5.2.3</p></figcaption></figure>

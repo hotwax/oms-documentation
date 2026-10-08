@@ -9,7 +9,7 @@ description: >-
 
 <div data-full-width="false">
 
-<figure><img src="../.gitbook/assets/fulfillment-application-setting-page.png" alt="Fulfillment App Settings page with OMS and app configuration cards"><figcaption><p>Fulfillment App Settings page</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/fulfillment-settings-v4-2-2.png" alt="Fulfillment App Settings page showing product store, facility, fulfillment capacity, and app preferences"><figcaption><p>Settings page in Fulfillment App v4.2.2</p></figcaption></figure>
 
 </div>
 
@@ -37,15 +37,11 @@ The OMS instance card shows the OMS environment connected to the app. Use it to 
 
 A product store represents a company, brand, or catalog. If the OMS is connected to multiple eCommerce stores with different product collections, select the product store you want to work in.
 
-<figure><img src="../.gitbook/assets/product-store-setting.png" alt="Product store selector in the Fulfillment App Settings page" width="375"><figcaption><p>Select product store</p></figcaption></figure>
-
 ### Facility
 
 `User-specific`
 
 The facility setting controls the store or warehouse context for the app. Orders, inventory, notification topics, and facility settings depend on the selected facility.
-
-<figure><img src="../.gitbook/assets/facility-selection-modal.png" alt="Facility selection modal with searchable facility list" width="375"><figcaption><p>Select facility</p></figcaption></figure>
 
 ### Online order fulfillment
 
@@ -58,8 +54,6 @@ Set the number of orders the selected facility can receive for fulfillment.
 * A custom number limits how many orders can be allocated.
 
 The card also shows how many orders are allocated to the facility today.
-
-<figure><img src="../.gitbook/assets/online-order-fulfillment-setting.png" alt="Online order fulfillment capacity card with allocated order count and capacity setting" width="375"><figcaption><p>Online order fulfillment</p></figcaption></figure>
 
 ### Sell inventory online
 
@@ -81,15 +75,11 @@ The app version card shows the installed Fulfillment App version and build infor
 
 Select the primary and secondary product identifiers shown in the app. For example, you can show SKU as the main identifier and product ID as the secondary identifier. The card includes a product preview so you can confirm how items will appear during fulfillment.
 
-<figure><img src="../.gitbook/assets/fulfillment-product-identifier-setting.png" alt="Product identifier settings with primary and secondary identifier selectors and product preview" width="375"><figcaption><p>Choose product identifier</p></figcaption></figure>
-
 ### Timezone
 
 `User-specific`
 
 Select the timezone used for app dates and scheduled automation times.
-
-<figure><img src="../.gitbook/assets/fulfillment-timezone-setting.png" alt="Timezone setting showing browser timezone and selected timezone" width="375"><figcaption><p>Select timezone</p></figcaption></figure>
 
 ### Language
 
@@ -97,11 +87,11 @@ Select the timezone used for app dates and scheduled automation times.
 
 Choose the display language for the app.
 
-<figure><img src="../.gitbook/assets/fulfillment-language-setting.png" alt="Language selector in the Fulfillment App Settings page" width="375"><figcaption><p>Select language</p></figcaption></figure>
-
 ### Additional documents
 
 `User-specific`
+
+<figure><img src="../.gitbook/assets/fulfillment-settings-preferences-v4-2-2.png" alt="Fulfillment App Settings page showing product identifiers, timezone, language, additional documents, and scan controls"><figcaption><p>App preferences in Fulfillment App v4.2.2</p></figcaption></figure>
 
 These settings control whether shipping labels and packing slips are printed along with each shipment by default.
 
@@ -112,8 +102,6 @@ A shipping label is used by the delivery carrier to send the package to the cust
 #### Generate packing slip
 
 A packing slip shows the list of items in an order and helps match delivered products with what was ordered.
-
-<figure><img src="../.gitbook/assets/additional-documents-setting.png" alt="Additional documents settings with shipping label and packing slip toggles" width="375"><figcaption><p>Additional documents</p></figcaption></figure>
 
 ### Notification preference
 
