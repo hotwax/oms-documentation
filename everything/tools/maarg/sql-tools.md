@@ -10,7 +10,7 @@ Use **SQL Runner** when an authorized investigation needs a direct database quer
 
 ## Version And Access
 
-This guide uses **Maarg v6.4.0**, **moqui-runtime v4.1.0**, and **moqui-framework v4.2.0**. The observed route is **Tools > Entity > SQL Runner** or **SQL Script Runner**. Use your deployment's authorized route rather than assuming another environment's menu layout.
+This guide uses **Maarg v6.4.0**, **runtime v4.1.0**, and **framework v4.2.0**. The observed route is **Tools > Entity > SQL Runner** or **SQL Script Runner**. Use your deployment's authorized route rather than assuming another environment's menu layout.
 
 Both screens check the **SQL_RUNNER_WEB** permission and authorization for **all actions** on that screen. The datasource's database permissions also govern what submitted SQL can do. Ask the administrator to investigate a denial; entity-browser access alone does not establish permission to use direct SQL.
 
@@ -57,9 +57,7 @@ SELECT 1 AS CHECK_VALUE;
 
 This checks that the selected connection can execute that literal query. It does not verify application tables, data correctness, business permissions, or write capability. Some database dialects need a different syntax.
 
-![SQL Runner showing the literal query SELECT 1 AS CHECK_VALUE and one result](../../.gitbook/assets/maarg-sql-literal-result.jpg)
-
-*The demo returned CHECK_VALUE = 1 with Limit = 1. This verifies this literal query and result display only.*
+The demo returned `CHECK_VALUE = 1` with **Limit = 1**. This verifies this literal query and result display only.
 
 For a record investigation, a query can follow this shape:
 
@@ -111,9 +109,7 @@ This has operational consequences:
 - **Messages are not a migration ledger.** Preserve the reviewed statement order and verify actual database state separately. Do not infer an all-or-nothing outcome from the final message.
 - **Rerunning can repeat successful work.** Do not submit the whole script again after a partial failure until each prior statement's outcome has been established.
 
-![Empty SQL Script Runner form with datasource selection and SQL Script input](../../.gitbook/assets/maarg-sql-script-form.jpg)
-
-*UI-observed form only. No script was submitted, and transaction/recovery behavior was not runtime-tested.*
+The form was inspected without submitting a script. Transaction and recovery behavior were not runtime-tested.
 
 ## Commit And Rollback Are Not Managed By These Screens
 

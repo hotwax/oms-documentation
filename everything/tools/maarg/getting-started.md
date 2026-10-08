@@ -33,9 +33,7 @@ In the observed demo, **Applications** contains **Hotwax Commerce**, **System**,
 
 The Tools dashboard groups links to entity and service utilities. Several neighboring controls execute code, change data, or modify schema. Being able to see a link is not an instruction to use it.
 
-![Maarg Tools dashboard with the Applications menu and grouped entity and service tools](../../.gitbook/assets/maarg-tools-dashboard.jpg)
-
-*UI observed in the hosted demo on October 3, 2026. The dashboard establishes navigation only; no execution or mutation controls were used.*
+The navigation was observed in the hosted demo on October 3, 2026. No execution or mutation controls were used.
 
 The exact menu depends on installed components, permissions, and the selected rendering mode. These role-oriented routes are starting points for investigation, not a proposed access-control policy. Support users generally start with the relevant run or message record; developers inspect definitions and contracts; administrators assess environment health and approved changes.
 
@@ -57,9 +55,9 @@ Loading **Hotwax Commerce > About** invokes generation of a Launchpad sign-in to
 
 ### Documentation Baseline And Demo Evidence
 
-These guides use the **Maarg 6.4.0 release composition**, whose production build pins **moqui-runtime 4.1.0**, **moqui-framework 4.2.0**, and **maarg-util 4.4.0**. This is the source baseline for behavior, not a claim about every deployed environment. The production build also applies maarg-util's **CreatedStamp**, **EntityCrypto**, and **JwtToken** patches, and loaded components can replace or extend runtime screens. Check the assembled release configuration and applied patches as well as repository tags.
+These guides use the **Maarg 6.4.0 release composition**, whose production build pins **runtime 4.1.0**, **framework 4.2.0**, and **maarg-util 4.4.0**. This is the source baseline for behavior, not a claim about every deployed environment. The production build also applies maarg-util's **CreatedStamp**, **EntityCrypto**, and **JwtToken** patches, and loaded components can replace or extend runtime screens. Check the assembled release configuration and applied patches as well as repository tags.
 
-The October 3 demo displayed framework **4.0.0** and util **4.3.0**. Its reported framework/runtime commit prefixes matched the inspected framework 4.2.0 and runtime 4.1.0 tag commits, while other component/version labels differed. This illustrates why the displayed version, commit, and deployment composition should be recorded separately. The screenshots are UI observations of that demo, not release-matched acceptance tests.
+The October 3 demo displayed framework **4.0.0** and util **4.3.0**. Its reported framework/runtime commit prefixes matched the inspected framework 4.2.0 and runtime 4.1.0 tag commits, while other component/version labels differed. This illustrates why the displayed version, commit, and deployment composition should be recorded separately. These UI observations are not release-matched acceptance tests.
 
 Each guide distinguishes:
 

@@ -10,7 +10,7 @@ Use the **Entities** tools to identify an entity's fields and keys, find a parti
 
 ## Version And Access
 
-This guide uses **Maarg v6.4.0**, **moqui-runtime v4.1.0**, **moqui-framework v4.2.0**, and **maarg-util v4.4.0**. Maarg-util replaces the runtime's ordinary entity Find and Auto Screen Find screens; the search behavior below follows those active Maarg overrides. Open **Tools > Entity > Entities > Entity List** in the observed demo. Menu placement and your authorized route can differ by deployment.
+This guide uses **Maarg v6.4.0**, **runtime v4.1.0**, **framework v4.2.0**, and **maarg-util v4.4.0**. Maarg-util replaces the runtime's ordinary entity Find and Auto Screen Find screens; the search behavior below follows those active Maarg overrides. Open **Tools > Entity > Entities > Entity List** in the observed demo. Menu placement and your authorized route can differ by deployment.
 
 **Verification scope:** The procedures and behavior below are source-verified. The entity catalog filter and EnumerationType definition/relationship metadata were observed read-only in the hosted demo on October 3, 2026, displaying framework 4.0.0 and util 4.3.0. See [Getting Started](getting-started.md#documentation-baseline-and-demo-evidence) for displayed-version versus commit differences. A record-level relationship walkthrough and mutation/recovery tests remain pending. No record or schema changes were executed for this guide.
 
@@ -30,9 +30,7 @@ Use an account authorized for the entity and screen in the intended environment.
 
 The release source sets a 60-entry catalog page default; the observed demo initially displayed 20. Check the actual page range rather than assuming that one page is the whole catalog. Filtering this catalog does not filter records within an entity. Use the selected entity's **Find** action for that separate task.
 
-![Entity catalog filtered to the EnumerationType definition](../../.gitbook/assets/maarg-entity-catalog-filter.jpg)
-
-*Catalog filtering matches definition names. No business-record query or schema action is shown.*
+Catalog filtering matches definition names; it does not query business records or perform a schema action.
 
 ### Read Entity Detail
 
@@ -50,9 +48,7 @@ The page can also show entity event rules and service event rules associated wit
 
 **Check/Update Table** is not a read-only validation button. For a metadata-only missing-column investigation, follow [DB Missing Columns](db-missing-columns.md), which generates proposed SQL without applying it.
 
-![EnumerationType fields, primary-key metadata, and relationship key maps in Entity Detail](../../.gitbook/assets/maarg-entity-definition.jpg)
-
-*Definition metadata observed in the demo. Relationship mappings describe the model, not the values belonging to a particular record.*
+Relationship mappings describe the model, not the values belonging to a particular record.
 
 ## Find A Specific Record
 

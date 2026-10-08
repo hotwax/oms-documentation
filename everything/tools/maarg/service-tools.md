@@ -32,9 +32,7 @@ The selection forms above the list and each row's **Run Service** link lead to t
 
 **Service Reference is a catalog, not a list of callers.** It discovers configured service files and service definitions in installed component service directories. It is not a fixed release-wide inventory, an authorization report, or an exhaustive listing of implicit entity operations. If a name is missing, recheck the filter, exact name, environment, component installation, and whether the operation is implicit before concluding that it cannot exist. Do not try guessed names in the runner to discover what works.
 
-![Service Reference filtered to standard Enumeration services, with separate detail and runner links](../../.gitbook/assets/maarg-service-catalog-filter.jpg)
-
-*The catalog uses a substring filter, so this search returns Enumeration and EnumerationByParent. No Run Service action was used.*
+A substring search for Enumeration can also match EnumerationByParent. No service was executed during the demo inspection.
 
 ## 2. Read The Input And Output Contract
 
@@ -64,9 +62,7 @@ The parameter lists come from the resolved definition, including inherited param
 
 Write down a small contract summary: the exact service, required identifiers, optional scope controls and defaults, expected output keys, and the business evidence that would establish success. Do not copy a complete parameter inventory or real payload into a public ticket.
 
-![Service Detail showing input and output parameters for the standard Enumeration service](../../.gitbook/assets/maarg-service-contract.jpg)
-
-*UI-observed contract only. This demo rendered some unspecified metadata as `[]`, rather than the expected fallback text. Do not interpret those cells as declared list types or required flags; check the release definition and implementation with the developer. No service was executed.*
+During the demo inspection, some unspecified metadata rendered as `[]`, rather than the expected fallback text. Do not interpret those cells as declared list types or required flags; check the release definition and implementation with the developer. No service was executed.
 
 ## 3. Trace The Implementation And Related Work
 
