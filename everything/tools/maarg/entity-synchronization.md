@@ -6,7 +6,7 @@ description: >-
 
 # Investigate Entity Synchronization
 
-Use **Entity Sync** when a configured transfer of entity data between Maarg/Moqui systems is delayed, incomplete, or reporting an error. Establish the direction, included entities, last attempt, and receiving-system state before considering another transfer.
+Use **Entity Sync** when a configured transfer of entity data between OMS environments is delayed, incomplete, or reporting an error. Establish the direction, included entities, last attempt, and receiving-system state before considering another transfer.
 
 Entity synchronization is separate from a provider-specific Shopify or NetSuite integration, an MDM import, and a Data Document feed. A product-sync problem does not establish that Entity Sync is involved. Start with the integration's configured job/service and follow its actual records.
 
@@ -18,9 +18,7 @@ Entity synchronization is separate from a provider-specific Shopify or NetSuite 
 
 Use authorized access to the sending and receiving environments, or work with their respective owners. The configuration detail includes credential fields; it is not suitable for an unreviewed screenshot or a public support attachment. Never copy its password or a credential-bearing destination URL into notes or messages.
 
-![Entity Sync list showing ID, description, status, and time filters without populated records](../../.gitbook/assets/maarg-entity-sync-filters.jpg)
-
-*The demo viewport shows the first list columns. Additional destination/direction filters are available horizontally; an empty list is not evidence of a successful transfer.*
+Additional destination and direction filters may require horizontal scrolling. An empty list is not evidence of a successful transfer.
 
 ## 1. Find The Existing Synchronization
 

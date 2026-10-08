@@ -12,7 +12,7 @@ This workflow is separate from **MDM**. Raw **Import** does not use a Data Manag
 
 ## Version, Navigation, And Verification
 
-The source baseline is **Maarg 6.4.0**, using **moqui-runtime 4.1.0**, **moqui-framework 4.2.0**, and **maarg-util 4.4.0**. The raw screens are supplied by the runtime and use the framework's entity loader/writer. The source check also includes the release build's applied Maarg-util patches, including the CreatedStamp comparison changes.
+The source baseline is **Maarg 6.4.0**, using **runtime 4.1.0**, **framework 4.2.0**, and **maarg-util 4.4.0**. The raw screens are supplied by the runtime and use the framework's entity loader/writer. The source check also includes the release build's applied Maarg-util patches, including the CreatedStamp comparison changes.
 
 Open the authorized **Tools** application, then **Entity > Import**, **Entity > Export**, or **Entity > Snapshots**. Deployment menus and mounts can differ; do not construct these addresses from an OMS screen URL. If a screen is absent or denied, ask the administrator to confirm the installed version and your intended access.
 
@@ -36,9 +36,7 @@ These tools do not provide a redacted support export. Files, check results, serv
 
 Opening **Import** and reviewing its controls does not load a file. Keep investigation at this stage until the source and scope are understood. This screen accepts text or a server-readable resource location; it is not an MDM file-upload form.
 
-![Raw entity Import form showing source accordions, options, Check Data, and the two import actions](../../.gitbook/assets/maarg-raw-import-form.jpg)
-
-*UI-observed preparation screen only. No input was entered and no check or import was submitted.*
+The preparation screen was inspected without entering input or submitting a check or import.
 
 ### Choose One Input Source
 
@@ -129,9 +127,7 @@ An export queries data and writes a file or browser response. It is a data discl
 
 There is no row-count or page-size limit on this form. A default empty Filter Map exports all matching records for the selected entities. Confirm scope with authorized inspection before running a large query; sorting does not make an unbounded export safe.
 
-![Raw entity Export form showing entity selection, dependent levels, date bounds, filter, format, and destination controls](../../.gitbook/assets/maarg-raw-export-form.jpg)
-
-*UI-observed form defaults. No entity was selected and no export or download was executed.*
+The form defaults were inspected without selecting an entity, exporting, or downloading data.
 
 ### Output And Format Limits
 
@@ -176,9 +172,7 @@ The dialog supplies **Entities To Include**, **Entities To Skip**, the same `las
 
 After approval of that scope and storage, submit **Export Snapshot** once, capture the job ID, and follow the job through completion. Verify the archive's contents and expected records before calling it usable. A successful wrapper result alone does not establish backup completeness or restorability.
 
-![Export Snapshot dialog showing blank entity inclusion and exclusion controls and format options](../../.gitbook/assets/maarg-snapshot-export-dialog.jpg)
-
-*The dialog was opened and closed without submission. Blank inclusion is shown to explain the scope risk; it is not a recommended export selection.*
+The dialog was opened and closed without submission. An empty inclusion list is not a recommended export selection.
 
 ### Upload Snapshot
 
@@ -236,8 +230,8 @@ Escalate with environment/component versions, node, operation and time zone, san
 
 Release-pinned source used for this guide:
 
-- **moqui-runtime 4.1.0:** `base-component/tools/screen/Tools/Entity/DataImport.xml`, `DataExport.xml`, and `DataSnapshot.xml` for form controls, transitions, input precedence, file handling, and snapshot job invocation.
-- **moqui-framework 4.2.0:** `framework/service/org/moqui/impl/EntityServices.xml` and `framework/data/MoquiSetupData.xml` for snapshot services and job definitions.
-- **moqui-framework 4.2.0:** `framework/src/main/groovy/org/moqui/impl/entity/EntityDataLoaderImpl.groovy`, `EntityDataWriterImpl.groovy`, `EntityValueBase.java`, and `EntityFacadeImpl.groovy` for parsing, comparison, mutation, serialization, and sequence behavior; `framework/src/main/groovy/org/moqui/impl/context/TransactionFacadeImpl.groovy` for transaction isolation; `framework/src/main/java/org/moqui/util/WebUtilities.java` for filename/location guards. The release build also applies **maarg-util 4.4.0** `patches/CreatedStamp.patch`, which adds `createdStamp` to fields skipped during database comparison.
+- **Runtime 4.1.0** (`moqui-runtime`): `base-component/tools/screen/Tools/Entity/DataImport.xml`, `DataExport.xml`, and `DataSnapshot.xml` for form controls, transitions, input precedence, file handling, and snapshot job invocation.
+- **Framework 4.2.0** (`moqui-framework`): `framework/service/org/moqui/impl/EntityServices.xml` and `framework/data/MoquiSetupData.xml` for snapshot services and job definitions.
+- **Framework 4.2.0** (`moqui-framework`): `framework/src/main/groovy/org/moqui/impl/entity/EntityDataLoaderImpl.groovy`, `EntityDataWriterImpl.groovy`, `EntityValueBase.java`, and `EntityFacadeImpl.groovy` for parsing, comparison, mutation, serialization, and sequence behavior; `framework/src/main/groovy/org/moqui/impl/context/TransactionFacadeImpl.groovy` for transaction isolation; `framework/src/main/java/org/moqui/util/WebUtilities.java` for filename/location guards. The release build also applies **maarg-util 4.4.0** `patches/CreatedStamp.patch`, which adds `createdStamp` to fields skipped during database comparison.
 
 Still pending: representative sanitized check results; authorized XML/JSON/CSV round trips; partial-failure and duplicate-submission handling; nested records and import-option combinations; snapshot job completion on the actual node/storage topology; and an isolated, fully verified recovery exercise. No permission, throughput, cancellation, archive-integrity, or recovery guarantee should be inferred from source inspection alone.

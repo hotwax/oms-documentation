@@ -10,7 +10,7 @@ Use this guide to inspect a definition, validate its output, and find the execut
 
 ## Version And Verification Scope
 
-This guide describes **Maarg 6.4.0**, using **runtime 4.1.0**, **framework 4.2.0**, and **maarg-util 4.4.0**. Navigation, fields, and behavior below were checked against those source versions. The catalog, definition settings, Fields, and Index controls were also inspected read-only on a demo displaying framework 4.0.0 and util 4.3.0 on October 3, 2026. The screenshots show demonstration definition metadata, not business-record payloads. No definition changes, View queries, document searches, exports, indexing, or feed/service executions were performed. Execution behavior remains source-verified only; a demo's displayed versions can differ from the release baseline.
+This guide describes **Maarg 6.4.0**, using **runtime 4.1.0**, **framework 4.2.0**, and **maarg-util 4.4.0**. Navigation, fields, and behavior below were checked against those source versions. The catalog, definition settings, Fields, and Index controls were also inspected read-only on a demo displaying framework 4.0.0 and util 4.3.0 on October 3, 2026. Only demonstration definition metadata was inspected, not business-record payloads. No definition changes, View queries, document searches, exports, indexing, or feed/service executions were performed. Execution behavior remains source-verified only; a demo's displayed versions can differ from the release baseline.
 
 Use an account authorized for the relevant System or Tools screens. Menu visibility varies by deployment. Follow the application's menus rather than constructing a URL from the OMS address; these tools can have a separate application mount.
 
@@ -40,9 +40,7 @@ Open **System > Data Document**. Its sections are **Search**, **Index**, **Expor
 4. Review **User Groups**, **Data Feeds**, and **Links**. Confirm which consumers depend on the definition before proposing changes.
 5. Open **Fields** to inspect the field paths, aliases, and conditions. Do not click a field's **+** action during inspection: it creates a field immediately.
 
-![Data Document catalog filtered to a demonstration definition based on Enumeration](../../.gitbook/assets/maarg-data-document-catalog.jpg)
-
-*Read-only demo catalog inspection. The filter identifies a demonstration definition; it does not query its generated documents.*
+Catalog filters identify definitions; they do not query the generated documents.
 
 ### Definition Settings
 
@@ -58,9 +56,7 @@ Open **System > Data Document**. Its sections are **Search**, **Index**, **Expor
 | **Data Feeds** | Existing feeds associated through `DataFeedDocument`. **Add Feed** creates an association, not a new feed definition |
 | **Links** | Search-result actions with label, URL, URL type, and optional condition. Check the destination and expanded values before using a link |
 
-![Settings and feed association controls for the demonstration Data Document](../../.gitbook/assets/maarg-data-document-settings.jpg)
-
-*Definition configuration only. No Update, Add Group, Add Feed, Add Link, or Clone action was submitted.*
+Only definition configuration was inspected. No Update, Add Group, Add Feed, Add Link, or Clone action was submitted.
 
 The entity model also supports **Manual Mapping Service** (`manualMappingServiceName`), which customizes the generated Elastic mapping. It is not exposed in the standard definition edit form described here. Likewise, relationship aliases are separate configuration records rather than controls in the standard Fields editor.
 
@@ -76,9 +72,7 @@ Changing **Primary Entity** on an existing definition does not redesign its fiel
 
 On **Fields**, expand the **Add Fields** tree to inspect fields on the primary entity and its declared relationships. Auto-generated reverse relationships are excluded from this tree. The **+** action adds the chosen field. **Add Field Manual** accepts an explicit field path, alias, sortable setting, function, and sequence.
 
-![Fields and conditions for the demonstration Enumeration-based Data Document](../../.gitbook/assets/maarg-data-document-fields.jpg)
-
-*Read-only field-mapping inspection. The viewport clips the right-hand columns, so Function and row actions are not shown; their behavior below is source-verified.*
+Field mappings were inspected read-only in the demo. The Function column and row actions were outside the observed viewport; their behavior below is source-verified.
 
 A field path has zero or more colon-separated relationship names followed by a field name:
 
@@ -200,7 +194,7 @@ This mechanism depends on the application's entity change hooks and runtime feed
 
 Manual pull is initiated by a caller, not by selecting a feed type alone. `org.moqui.impl.EntityServices.get#DataFeedLatestDocuments` retrieves documents using `lastFeedStamp` and advances that cursor after retrieval. **It changes configuration state and is not an inspection-only operation**. Retrieval is not proof that a downstream system accepted the documents.
 
-The Moqui Tools REST API also defines feed-document retrieval and indexing operations. Use [REST API Explorer](rest-api-explorer.md) to inspect the deployed resource and parameters rather than guessing a base URL or executing a request to discover its behavior.
+The OMS tooling REST API also defines feed-document retrieval and indexing operations. Use [REST API Explorer](rest-api-explorer.md) to inspect the deployed resource and parameters rather than guessing a base URL or executing a request to discover its behavior.
 
 ## Index And Search With The Correct Scope
 
