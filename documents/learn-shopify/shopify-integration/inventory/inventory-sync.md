@@ -2,7 +2,7 @@
 description: Learn how OMS publishes inventory changes to Shopify and reconciles inventory through the Company App.
 ---
 
-# Inventory Synchronization
+# Shopify inventory event sync
 
 This page covers outbound OMS-to-Shopify inventory publication after cutover. For the one-time inbound Shopify-to-OMS starting inventory seed, follow [Chapter 8 of Set up HotWax Commerce with Shopify](../../../system-admin/administration/company/product-store-onboarding.md#8-seed-starting-inventory-from-shopify).
 
@@ -22,15 +22,15 @@ The dashboard separates two outbound paths:
 
 | Path | Quantity and target |
 | --- | --- |
-| Physical-location inventory | The configured inventory quantity for a mapped OMS facility is published to its Shopify physical location |
+| Physical-location inventory | Facility ATP changes are published as available-quantity adjustments to the mapped Shopify physical location |
 | Channel inventory | Available-to-promise inventory is calculated for a facility group and published to its Shopify aggregate location |
 
 ```mermaid
 flowchart LR
     accTitle: Physical and aggregate Shopify inventory targets
-    accDescr: A physical HotWax facility publishes its configured inventory quantity to its mapped Shopify location, while a facility group calculates channel ATP for a separate Shopify aggregate location.
-    F[HotWax physical facility] --> Q[Configured physical quantity]
-    Q --> L[Mapped Shopify physical location]
+    accDescr: Physical-location events publish facility ATP changes as available-quantity adjustments to the mapped Shopify physical location, while channel events publish channel ATP changes to a separate Shopify aggregate location.
+    F[HotWax physical facility] --> Q[Facility ATP change]
+    Q --> L[Shopify physical-location Available]
     G[HotWax facility group] --> A[Channel ATP calculation]
     A --> C[Shopify aggregate location]
 ```
@@ -41,7 +41,7 @@ The arrows represent inventory publication, not a physical stock transfer. A phy
 
 ## Publish inventory changes
 
-Inventory events record signed changes for their applicable targets. The publisher groups waiting events into batches for delivery. A positive change adds inventory and a negative change removes it. Open the event and its linked batch to distinguish waiting work, delivery errors, and successful delivery.
+Both channel and physical-location inventory events record signed changes for their applicable targets. The publisher groups waiting events into batches for delivery. A positive change adds inventory and a negative change removes it. Open the event and its linked batch to distinguish waiting work, delivery errors, and successful delivery.
 
 Event counts are not counts of products or units. A publisher schedule does not establish when every change reaches Shopify; inspect the actual batch delivery and the quantity at the mapped Shopify location.
 
