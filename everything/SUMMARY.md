@@ -26,6 +26,7 @@
   * [Receiving Discrepancies](tools/launchpad/receiving/README.md)
   * [Fulfillment](tools/launchpad/fulfillment/README.md)
     * [Stuck Orders in Fulfillment App](tools/launchpad/fulfillment/README.md)
+  * [Diagnose BOPIS Notifications](tools/launchpad/bopis-notifications.md)
   * [Job Manager](tools/launchpad/job-manager/README.md)
     * [Check Job Frequencies](tools/launchpad/job-manager/check-job-frequencies.md)
     * [Job Runtime Error](tools/launchpad/job-manager/runtime-error.md)
