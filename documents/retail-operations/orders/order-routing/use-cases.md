@@ -138,6 +138,18 @@ Use a 100-mile radius to prefer a nearby single shipment before expanding the se
 
 Sort every routing rule by `Proximity`. This sequence first tries one nearby location, then a nearby split, then one location at any distance, and finally a split across all eligible locations.
 
+```mermaid
+flowchart TD
+    accTitle: Nearby-first routing fallback sequence
+    accDescr: Try one nearby facility, then a nearby split, then one facility at any distance, then a split at any distance. Only unavailable items continue, and the final remainder moves to the exception queue.
+    A[1: One nearby facility] -->|Unavailable remainder| B[2: Split across nearby facilities]
+    B -->|Unavailable remainder| C[3: One facility at any distance]
+    C -->|Unavailable remainder| D[4: Split at any distance]
+    D -->|Unavailable remainder| E[Final exception queue]
+```
+
+Only unavailable items advance along these arrows; allocated items do not repeat the earlier rules. The example uses 100 miles for nearby facilities. Every candidate still needs to meet the rule's other eligibility conditions.
+
 To limit expensive split shipments, also configure the [shipment threshold](additional-settings.md).
 
 Expected result: HotWax Commerce expands from a single nearby allocation to the broadest approved fallback only when needed.

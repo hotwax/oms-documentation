@@ -57,6 +57,24 @@ The launch owner keeps this table current. An individual may hold more than one 
 | 12. Operational users | Company application administrator | Not started | — | — |
 | 13. End-to-end launch test | Launch owner | Not started | — | — |
 
+## Launch sequence at a glance
+
+Follow the numbered chapters in order and save each chapter's evidence before moving on. Product identity and location mappings must be ready before the starting-inventory seed; finish inventory bulk work before the order-history flow. The final launch test ties the configured pieces together with a controlled order.
+
+```mermaid
+flowchart TD
+    accTitle: Standard Shopify launch chapter sequence
+    accDescr: Establish access and the Shopify connection in chapters one through five, reconcile products and locations in chapters six and seven, seed starting inventory in chapter eight, prove order infrastructure and history in chapters nine and ten, then configure operations and validate the launch in chapters eleven through thirteen.
+    A[1-5: Access and connection]
+    B[6-7: Products and locations]
+    C[8: Starting inventory]
+    D[9-10: Order infrastructure and sync]
+    E[11-13: Operations and launch test]
+    A --> B --> C --> D --> E
+```
+
+Use the progress table above to record owners, completion dates, and evidence. If a chapter's stop gate is unresolved, recover that stage before proceeding.
+
 ## 1. Create the initial Maarg administrator
 
 **Owner:** Maarg platform administrator

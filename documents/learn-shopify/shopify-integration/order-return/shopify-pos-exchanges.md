@@ -6,7 +6,9 @@ description: Learn how HotWax Commerce manages returns and exchange from Shopify
 
 Many times customers visit their preferred store location to return or exchange their online order. Perhaps they received the wrong size, the item is defective, or they simply changed their mind. Shopify provides a streamlined process for returns and exchanges. Store associates can directly process returns using Shopify POS, specify the items customers wish to return and the reason for the return. If they'd like to exchange the item for a different product, Shopify allows them to select the new item directly within the return process.
 
-With Exchanges V2, Shopify has streamlined the returns and exchange process for both customers and retailers. When there is an exchange order in Shopify POS, it creates a return for the items the customer doesn’t want and adds the new items the customer purchased in exchange to the order
+With Exchanges V2, Shopify has streamlined the returns and exchange process for both customers and retailers. When there is an exchange order in Shopify POS, it creates a return for the items the customer doesn’t want and adds the new items the customer purchased in exchange to the order.
+
+<figure><img src="../../.gitbook/assets/shopify-return-and-exchange-items.jpg" alt="Shopify demo order showing a closed return for an Apollo Running Short in size 32, restocked at Broadway, and a fulfilled size 34 replacement linked to that return"><figcaption><p>Shopify demo: a size exchange shows the returned item and its fulfilled replacement on the same order. Verify the corresponding OMS return, exchange order, and inventory receipt separately.</p></figcaption></figure>
 
 This seems straightforward for the initial exchange process, as the transaction details and order information are consolidated within the original order. However, this approach creates complexities for ERP systems like NetSuite or other accounting systems that hold a repository of all the financial records.
 
@@ -26,6 +28,24 @@ A scheduled job in HotWax Commerce fetches returns and exchanges from Shopify:
 
 - Exchange additions are imported as new sales orders linked to the original sale.
 - Returns are imported independently and linked to their corresponding HotWax order to balance totals.
+
+## Follow the linked records
+
+Shopify keeps the returned item and replacement item on the same order. In HotWax Commerce, the original sales order and the exchange sales order have separate OMS order IDs. The exchange order retains the Shopify order ID and links back to the original sale. The completed return also links to the replacement order.
+
+```mermaid
+flowchart TD
+    accTitle: Shopify exchange records in HotWax Commerce
+    accDescr: Shopify keeps the original and exchange items on one order. HotWax records the original sale and replacement sale as separate orders, links the exchange to the original sale, and links the completed return to its replacement order. Refund transactions and inventory receipts must be checked separately.
+    S["One Shopify order<br/>Original and exchange items"] --> O["Original OMS sales order"]
+    S --> E["Separate OMS exchange sales order<br/>Replacement items"]
+    E -->|"Exchange link"| O
+    O --> R["OMS return<br/>Returned items"]
+    R -->|"Replacement order link"| E
+    R --> C["Check refund transactions<br/>and any inventory receipt separately"]
+```
+
+When investigating an exchange, match the Shopify order ID and item identifiers, then check the original order, exchange order, and return. A fulfilled replacement in Shopify does not by itself confirm that all three OMS records imported successfully. Follow the [return, refund, and inventory checks](README.md#separate-goods-money-and-inventory) before treating the exchange as reconciled.
 
 ## Mapping Returns and Exchanges
 
@@ -167,6 +187,9 @@ If the customer later returns Item D along with B and C, they will receive a fin
 
 ## Inventory Updates
 
-HotWax automatically adjusts inventory for exchanges and returns:
-- **Exchanges**: Inventory for the new item is decreased when the order syncs as `Completed`.
-- **Returns**: Inventory for returned items is restocked at the specified facility if the restocking flag is enabled in the Shopify integration settings.
+Check replacement-item deductions and returned-item receipts separately:
+
+- **Replacement items:** Verify the inventory issuance against the exchange order and fulfillment facility. A `Completed` order status alone does not establish a new stock deduction. In integrations that use the order-sync go-live cutoff, earlier POS sales and exchanges can complete without issuing stock again because starting inventory already accounts for those sales.
+- **Returned items:** Verify the return's restock data, received quantity, and receipt at the mapped facility. Refund processing alone does not establish that stock was received.
+
+Confirm the instance's inventory ownership and [configured return-import path](import-returns-from-shopify.md#in-store-returns). If inventory also publishes back to Shopify, verify that result through [Monitor Shopify inventory sync](../../../system-admin/administration/company/manage-shopify-inventory-sync.md).

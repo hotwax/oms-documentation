@@ -6,6 +6,18 @@ description: Diagnose common order routing schedule, facility, inventory, and sh
 
 Start with the routing group that should have processed the order. Confirm that you selected the correct Product Store in the app footer, then use the symptom table to continue.
 
+```mermaid
+flowchart TD
+    accTitle: Choose the right order routing troubleshooting guide
+    accDescr: Use routing group history to distinguish a missing run from a completed run. For a completed run, investigate order selection, facility configuration, or inventory according to the observed symptom.
+    A["Open intended group History"] --> B{"Expected run recorded?"}
+    B -->|No| C["Check schedule and job status"]
+    B -->|Yes| D["Review run outcome"]
+    D -->|Order did not match| E["Order filters and shipping mappings"]
+    D -->|Unexpected facility| F["Facility configuration"]
+    D -->|No or partial allocation| G["Inventory availability and rules"]
+```
+
 | Symptom | Check |
 | --- | --- |
 | A routing group did not run | [Troubleshoot a routing schedule](scheduling-error.md) |

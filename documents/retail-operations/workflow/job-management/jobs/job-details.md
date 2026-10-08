@@ -66,13 +66,13 @@ The `Save` action remains unavailable while a required value is missing. Paramet
 
 ## Review job history
 
-Open `History` to inspect recent runs for this job. Expand the available sections to review:
+Open `History` to inspect runs for this job. The tab loads 20 runs initially; scroll to the bottom to load older runs when more are available.
+
+Expand the available sections to review:
 
 - Message
 - Linked data logs
-- Errors
-- Results
-- Parameters
+- Technical Details: Parameters, Results, and Errors when available
 
 Open a linked data log to move to its file detail.
 

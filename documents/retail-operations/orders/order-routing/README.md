@@ -24,6 +24,19 @@ Order routing has three levels:
 
 The current UI uses these terms consistently. Older documentation and bookmarks may refer to routing groups as *brokering runs* and routing rules as *inventory rules*.
 
+### Follow the routing hierarchy
+
+Keep schedule checks separate from allocation checks. A routing group controls when work runs; its routings select orders, and their routing rules select and rank facilities.
+
+```mermaid
+flowchart TD
+    accTitle: Order routing configuration hierarchy
+    accDescr: A routing group contains routings, which contain routing rules. The group controls when work runs, routings select and sort orders, and rules filter and rank facilities and define unavailable-item actions.
+    A["Routing group: schedule and run history"] --> B["Routing: order filters and order sort"]
+    B --> C["Routing rule: facility filters and facility sort"]
+    C --> D["Partial allocation and unavailable-item actions"]
+```
+
 ## Choose by business goal
 
 Start with the recipe that matches the decision you need to make:

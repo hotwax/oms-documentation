@@ -18,9 +18,25 @@ Mappings translate Shopify locations and order or product values into HotWax Com
 8. Save the changes.
 9. Run the audit again and resolve remaining gaps.
 
+### Check the Shopify location before mapping
+
+In Shopify admin, open **Settings > Locations** to compare location names, addresses, and statuses with the facilities in your launch plan. The **All** view includes inactive locations; use **Active** when reviewing the locations that currently need mapping.
+
+<figure><img src="../../.gitbook/assets/shopify-location-statuses.jpg" alt="Shopify demo Locations list showing active stores and an inactive location"><figcaption><p>Example location names and statuses in the hotwax-demo store</p></figcaption></figure>
+
+For a manual **Shopify ID** mapping in Company, open the specific location in Shopify and use the numeric ID at the end of its address-bar URL. For example, the demo Broadway page ends in `/settings/locations/75725176986`, so its Shopify location ID is `75725176986`. Confirm the location name and address before entering the ID for the corresponding HotWax facility.
+
 Map multiple physical stores to one facility only when the approved inventory design requires it.
 
 This page maps physical Shopify locations to HotWax facilities. Do not map a Shopify aggregate location to a physical facility. Keep the approved aggregate target unassigned, then use [Monitor Shopify inventory sync](manage-shopify-inventory-sync.md) to map it to an inventory channel.
+
+### Check online fulfillment separately
+
+On the same Shopify location page, review the `Fulfillment` card. Check `Use inventory at this location to fulfill online orders`, then review the statuses of `Shipping`, `Local delivery`, and `Pickup in store` against your launch plan. A location-to-facility mapping does not establish that the required Shopify delivery method is enabled.
+
+<figure><img src="../../.gitbook/assets/shopify-location-fulfillment-settings.jpg" alt="Broadway demo location Fulfillment card showing online-order inventory enabled while Shipping, Local delivery, and Pickup in store are Off"><figcaption><p>Broadway in hotwax-demo: online-order inventory is enabled, while all three delivery methods shown are Off. Review each required method separately.</p></figcaption></figure>
+
+Follow [Shopify's location fulfillment setup](https://help.shopify.com/en/manual/fulfillment/setup/locations/fulfillment) for delivery-method configuration. Apply the implementation's approved settings before activation.
 
 ## Map shipping methods
 

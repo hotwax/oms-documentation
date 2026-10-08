@@ -59,6 +59,18 @@ Place broad base rules before specific exceptions. For example:
 
 The second rule overrides the first rule for sale shirts.
 
+```mermaid
+flowchart TD
+    accTitle: Later matching sourcing rules override earlier values
+    accDescr: For active rules in the same inventory channel, an earlier Shirts rule sets threshold five. If the later Shirts and Sale rule also matches, the final threshold becomes ten; otherwise it stays five.
+    Product[Evaluate a product<br/>tagged Shirts] --> Base[Earlier Shirts rule matches:<br/>threshold is 5]
+    Base --> Exception{Does the later Shirts<br/>and Sale rule also match?}
+    Exception -->|Yes| Override[Final threshold is 10]
+    Exception -->|No| Keep[Final threshold stays 5]
+```
+
+This example assumes both rules are active and target the same inventory channel. A later rule overrides the earlier value only when its product and channel conditions also match.
+
 Use the sequence button at the bottom of a sourcing rule page to reorder rules. Drag the rules into position, then select the save button.
 
 Continue with [Create inventory channels](create-channels.md) or [Schedule sourcing rules](schedule-atp-rules.md).

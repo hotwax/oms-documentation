@@ -28,6 +28,8 @@ A job with `No schedule` does not run automatically. A paused job retains its co
 
 Correct the identified configuration or data problem before you select `Run Now`.
 
+Follow [the execution evidence path](../jobs/run-history.md#trace-the-execution-evidence) to compare the recorded run with current job settings and inspect linked file results. After rerunning, verify the new run and any linked files.
+
 ## Investigate a running job
 
 1. Filter `Run history` to `Running`.
