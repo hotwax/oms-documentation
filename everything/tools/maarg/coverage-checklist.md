@@ -16,7 +16,7 @@ The goal is a usable backend manual for support engineers, developers, and admin
 
 - Count a coherent workflow once. A parent screen, list, detail page, and dialog do not become four separate documentation gaps.
 - Search the entire documentation set before declaring a workflow missing. Existing Shopify, Unigate, webhook, deployment, monitoring, and OFBiz pages were reviewed for overlap.
-- Keep **Maarg-specific** and **OFBiz-specific** behavior separate. OFBiz JobSandbox instructions do not establish how Moqui service jobs behave.
+- Keep **Maarg-specific** and **OFBiz-specific** behavior separate. OFBiz JobSandbox instructions do not establish how OMS service jobs in Maarg behave.
 - Distinguish generic platform operation from a provider-specific recipe. A Shopify sync article can be useful without covering the generic message or job tools.
 - Use release-pinned source for action semantics, and identify the different runtime version used for screenshots. A screenshot of a filter does not validate a write operation or a populated result.
 - Do not treat every release-manifest component as an enabled screen. Optional integrations, tenant extensions, wrappers, print templates, and test screens require separate relevance checks.

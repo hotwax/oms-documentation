@@ -67,14 +67,14 @@ When these checks are authorized:
 
 1. Locate the intended **Instance ID** and **Instance Name**. Confirm the record's scope with the operator; do not publish the host or database inventory.
 2. Read the individual **Status** indicators and any accompanying check error. Do not rely on icon color alone.
-3. Select **Instance ID** only if the detail evidence is needed. Inspect **Instance Detail**, **Moqui Server Detail**, or **Instance Log** selectively, and close the dialog without submitting any update.
+3. Select **Instance ID** only if the detail evidence is needed. Inspect **Instance Detail**, the OMS server details, or **Instance Log** selectively, and close the dialog without submitting any update.
 4. Correlate the check with the affected node's logs and infrastructure monitoring. Record whether the check was unavailable, failed, or returned a negative result.
 
 | Indicator | What The Check Supports | Important Limit |
 | --- | --- | --- |
 | **Database Exists / DB User Exists** | The configured database check reported the expected database/user records | Missing configuration, insufficient access, or failed connectivity can prevent the check. These indicators do not prove that the application can execute its required queries |
 | **Instance Exists / Instance Running** | The configured instance-host check found the instance and reported it running | A running container does not prove that Maarg finished startup or that the affected workflow is healthy |
-| **Moqui Server Running** | The configured hostname's status request returned a usable status map | Failure can reflect routing, access, endpoint, or startup problems. If the hostname is load-balanced, the response alone does not identify the intended container |
+| OMS server status | The configured hostname's status request returned a usable status map | Failure can reflect routing, access, endpoint, or startup problems. If the hostname is load-balanced, the response alone does not identify the intended container |
 | **L / H / D** | Load, heap, and disk values from that returned status map | These are observations from the responding server, not a combined view of all nodes |
 
 An empty list can mean that no application instances are registered here. It does not establish that no Maarg server is running. A blank metric is not zero usage. Check configuration and probe messages before concluding that a resource is absent or stopped.
@@ -121,9 +121,7 @@ This baseline builds detailed rows for initialized **MCache** caches known to th
 
 Misses can be expected during startup, after invalidation, or for new keys. Eviction and expiry can be normal policy behavior. Use workload context and changes over time rather than an invented acceptable hit rate. A high hit count does not establish that cached data is correct or fresh.
 
-![Cache List filtered to the framework entity definition cache, with summary statistics and recovery controls](../../.gitbook/assets/maarg-cache-summary-filter.jpg)
-
-*The cache summary was filtered without opening entries, clearing caches, or requesting garbage collection. The displayed counters do not establish a business outcome.*
+The cache summary was filtered without opening entries, clearing caches, or requesting garbage collection. Cache counters do not establish a business outcome.
 
 ### Inspect Elements Only When Needed
 

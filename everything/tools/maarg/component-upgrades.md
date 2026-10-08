@@ -12,7 +12,7 @@ This is a diagnostic runbook. For an approved deployment, obtain the Maarg relea
 
 ## Version And Verification Scope
 
-The source baseline is **Maarg 6.4.0**, including **maarg-util 4.4.0**, **moqui-runtime 4.1.0**, and **moqui-framework 4.2.0**. The production composition includes component screen overrides and build patches; repository tags alone do not describe every deployed behavior. Optional plugins, branch builds, and database screen overrides require an environment-specific check.
+The source baseline is **Maarg 6.4.0**, including **maarg-util 4.4.0**, **runtime 4.1.0**, and **framework 4.2.0**. The production composition includes component screen overrides and build patches; repository tags alone do not describe every deployed behavior. Optional plugins, branch builds, and database screen overrides require an environment-specific check.
 
 The **Component Upgrade Step** filter dialog was observed read-only in a hosted demo on October 3, 2026, displaying framework 4.0.0 and util 4.3.0. The screenshot excludes operational comments and configuration details. No startup, deployment, upgrade service, SQL, data load, task change, or recovery action was executed. The error and recovery semantics below are source-verified, not an end-to-end recovery test.
 
