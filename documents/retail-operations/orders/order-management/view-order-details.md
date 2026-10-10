@@ -315,6 +315,99 @@ Requesting and managing transfers requires transfer-creation or Order Manager ad
 
 <figure><img src="../../.gitbook/assets/order-manager-transfer-details-main.jpg" alt="Saved inventory transfer in Requested status"><figcaption><p>Open the saved transfer to review its ID, quantity, status, comment, and available actions.</p></figcaption></figure>
 
+## Review routing and inventory history
+
+**Goal:** Understand where each item went, who or what moved it, and what happened to the stock at each location.
+
+**Use this flow when:** An item is at a location that has no stock, routing keeps failing for an item, or you need to confirm whether an item took inventory.
+
+Select `Routing` to open the routing graph and an inventory timeline for each item. The segment reads the order's facility changes and the stock movements at each location the items touched. It does not change the order.
+
+### Read the routing graph
+
+The graph stays at the top of the segment and reads left to right:
+
+* The first column, `Imported`, shows the order as it came in. Each later column is one step, labeled with the move type and the time it happened. A step that mixes move types is labeled `Several changes`.
+* Each card is one ship group's contents at a location at that moment: the location, the ship group number, and each item's image and identifiers.
+* Lines show items moving between cards. Each line is labeled with the move type, and the number of items in brackets when more than one item moved. A rejection line shows the rejection reason instead, such as `No variance`. Below the label is who moved the items: the routing rule, the user, or the system that made the change.
+* A dashed `Stayed` line connects items that stayed in a ship group when other items left it.
+
+Move types are `Brokered`, `Released`, `Allocated`, `Moved`, `Rejected`, `Parked`, `Back to queue`, `No stock`, and `Cancelled`.
+
+The latest card for a ship group shows `Current` while it still holds those items. A card shows `Completed` or `Cancelled` when every item in it is done. Cards at virtual locations, such as the brokering queue or a parking location, have a lighter background.
+
+<figure><img src="../../.gitbook/assets/order-manager-routing-overview.jpg" alt="Routing segment with a four-step graph: two items imported into the brokering queue, brokered to Central Warehouse by the Warehouse stock first rule, rejected by hotwax.user with No variance, and brokered to Garden City, where the ship group is Completed. Item cards with an Inventory timeline of 5 changes sit below."><figcaption><p>Follow each item from import to its current location, with the rule or user behind every move.</p></figcaption></figure>
+
+Repeated routing attempts are combined so the graph stays readable. When routing finds no stock several times in a row, the attempts appear as one step, such as `No stock ×2`. A move that leaves an item in the ship group it is already in does not add a card.
+
+Select a card or a line to outline the matching item cards below. The page scrolls so the first one sits just under the graph.
+
+{% hint style="info" %}
+When you scroll down, the graph stays at the top of the page and gradually gets shorter, so more of the inventory history fits on screen. Point at the graph, or tab into it, to show it at full height again. In browsers that do not support this behavior, the graph stays at full height.
+{% endhint %}
+
+<figure><img src="../../.gitbook/assets/order-manager-routing-retries.jpg" alt="Routing graph where three items moved from the brokering queue to Unfillable Parking after No stock ×2 under the GalxBoy Last-Resort Split rule, then were brokered to Garden City by the Tier 1 stores rule. The first item's timeline lists both no-stock attempts, Back to queue, Brokered to Garden City, Inventory issued at Garden City, and a later reset."><figcaption><p>Repeated no-stock attempts appear as one step in the graph; the timeline still lists each attempt.</p></figcaption></figure>
+
+### Review an item's inventory timeline
+
+Each item card shows the product, the item number, and the item's current location. Select `Inventory details` to open that product's inventory at the same location in the Order Routing app, in a new tab. For an item now in a queue or parking location, it opens the last location where the timeline recorded stock for it.
+
+Collapsed, `Inventory timeline` shows how many changes the timeline holds and, for an item at a stocked location, the ATP and QOH there now. Expand it to see routing changes and stock movements together, oldest first, ten at a time. Select `View more` to load the next ten, and `View less` to collapse the list again.
+
+The timeline can contain these rows:
+
+| Row | What it tells you |
+| --- | --- |
+| Routing change, such as `Brokered to …`, `Rejected from …`, `Parked in …`, `Back to queue`, or `No location had stock` | When the item moved and why. `Routing rule:` names the rule, `Reason:` gives a rejection or cancellation reason, and `User:` or `Source:` names who made the change. ATP and QOH show the stock at that location right after the change; the number in brackets is the change. |
+| `Inventory issued at …` | When inventory was taken off the books for the item. It uses the same issuance records as the `Ship groups` segment, so the two always agree. |
+| Stock movement, such as a sales order, transfer order, return, cycle count, or reset | What happened to stock at the item's location after it arrived or was issued there, labeled the same way as in the Order Routing app's inventory history. |
+
+`Older stock changes are not shown.` means the location has more history than the timeline loaded. Select `Inventory details` to review the complete history in the Order Routing app.
+
+<figure><img src="../../.gitbook/assets/order-manager-routing-inventory-timeline.jpg" alt="Inventory timeline for one item under the pinned, compressed routing graph: Brokered to Central Warehouse by the Warehouse stock first rule, Rejected from Central Warehouse with reason No variance by hotwax.user, Brokered to Garden City, Inventory issued at Garden City, and a later Reset by External System, each with ATP and QOH"><figcaption><p>Each row shows who moved the item, and the stock at that location right after the change.</p></figcaption></figure>
+
+A counter sale is not routed, so its timeline starts with `Inventory issued at …`, followed by any later stock changes at that store.
+
+<figure><img src="../../.gitbook/assets/order-manager-routing-counter-sale.jpg" alt="Counter sale imported at Garden City and Completed, with an Inventory timeline showing Inventory issued at Garden City, QOH 99 with a change of minus 1, followed by Reset by External System"><figcaption><p>A counter sale shows its issuance at the store instead of a routing history.</p></figcaption></figure>
+
+### Understand an item with no inventory impact
+
+When an item's timeline is empty, expanding it shows `No inventory impact` with the reason:
+
+* **Fulfilled before go-live:** The item was completed before the product store went live on HotWax, on the date shown. Stock that left before go-live is already excluded from the launch inventory, so HotWax does not issue it again. The go-live date is the launch date of the Shopify shop linked to the product store. This explanation appears only when the product store is linked to exactly one Shopify shop with a launch date.
+* **Nothing has reserved or issued stock:** No routing change, reservation, or issuance has moved stock for the item yet.
+
+<figure><img src="../../.gitbook/assets/order-manager-routing-no-inventory-impact.jpg" alt="Item at the Broadway store with an expanded Inventory timeline of 0 changes, showing No inventory impact: Nothing has reserved or issued stock for this item"><figcaption><p>An empty timeline says why nothing has moved the item's stock.</p></figcaption></figure>
+
+### Act on an item that is short at its location
+
+An open item is short when its location's ATP for the product is below zero. Order Manager flags it in three places:
+
+* In `Items`, the item's location chip turns to a warning and shows the shortfall, for example `Main Warehouse (-4)`.
+* In `Ship groups`, the ship group shows `N items short at …` with `View routing`, and the item shows `Available here: N`.
+* In `Routing`, the item card shows `Short here. Reject the item to send it back to routing, or move it to a location with stock.`
+
+From the item card in `Routing`:
+
+1. Review the item's inventory timeline to understand why the location is short.
+2. Select `Reject item` to send the item back to routing. Choose a rejection reason in the same dialog as [Pull back selected items](#pull-back-selected-items); only this item is rejected.
+3. Or select `Move item` and choose another location, the same way as [changing an item's facility](#change-an-items-facility). Check each location's available stock before you choose.
+4. Confirm that the order reloads and the routing graph shows the new move.
+
+Canceling either dialog changes nothing. Items you had selected in `Ship groups` stay selected after a reject.
+
+### Investigate an item routed to a location without stock
+
+1. Open `Routing` and find the item's card in the graph. Note the step that brought it to its current location, and the rule or user on that line.
+2. Expand the item's `Inventory timeline`.
+3. On the row that brought the item to the location, read the ATP after the change. If ATP was zero or above, the location had stock when the item arrived.
+4. Read the later rows to see what reduced the stock, such as other orders, transfer orders, or an inventory reset.
+5. Compare with the collapsed timeline's current ATP and QOH, then decide whether to reject or move the item.
+
+{% hint style="info" %}
+`Routing history could not be loaded.` means the history is incomplete; select `Retry`. The routing graph and timelines describe recorded changes and stock movements only. A missing row does not prove that nothing happened outside HotWax.
+{% endhint %}
+
 ## Review and resolve holds
 
 The `Holds` segment contains the same bad-address, substitute, fraud, and general task cards used in the dedicated queues. Use the linked guide for the task type:
