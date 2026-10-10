@@ -94,6 +94,7 @@
   * [How to Access Shopify POS APP](tools/shopify/README.md)
   * [How to Create Draft Order in Shopify](tools/shopify/draft-order.md)
   * [Shopify product sync](tools/shopify/product-sync.md)
+  * [Investigate Shopify Transfer Sync](tools/shopify/transfer-sync-troubleshooting.md)
   * [Fulfillment And Invoice Status Troubleshooting](tools/shopify/fulfillment-status-troubleshooting.md)
 * [Tathya](tools/tathya/README.md)
   * [Database Configuration](tools/tathya/database-configuration/README.md)
@@ -152,4 +153,3 @@
 * [Update OMS Version](deployment/update-oms-version.md)
 * [Rollback OMS Version](deployment/rollback-release.md)
 * [Optional Plugins](deployment/optional-plugins.md)
-
