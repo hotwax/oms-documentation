@@ -42,7 +42,7 @@ A pick profile is the business release policy. `Funnel` exposes its priority, ba
 | Find a customer | [Find customers](find-customers.md) | Search for the correct party ID, then open [Customer details](view-customer-details.md). |
 | Maintain a customer or review customer activity | [Customer details](view-customer-details.md) | Update contact or relationship data, resolve tasks, or open related orders and returns. |
 | Create a Shopify order | [Create order](create-order.md) | Select the shop, customer, address, and items, then submit and verify the new order. |
-| Investigate one order | [Order details](view-order-details.md) | Review items, ship groups, holds, communications, and the actions currently available for that order. |
+| Investigate one order | [Order details](view-order-details.md) | Review items, ship groups, routing and inventory history, holds, communications, and the actions currently available for that order. |
 | Replenish stock for an order item | [Request and review inventory transfers](view-order-details.md#request-and-review-inventory-transfers) | Compare warehouse/store stock, review the destination and projected inventory, save the request, and track its status. |
 | Confirm the OMS, store, or app preferences | [Settings](settings.md) | Verify the working context before changing store-scoped identifiers or user preferences. |
 | Resolve exception work | A queue under `Blocked` | Review the task or exception, choose its supported outcome, and verify both the task and order afterward. |
