@@ -321,7 +321,7 @@ Requesting and managing transfers requires transfer-creation or Order Manager ad
 
 **Use this flow when:** An item is at a location that has no stock, routing keeps failing for an item, or you need to confirm whether an item took inventory.
 
-Select `Routing` to open the routing graph and an inventory timeline for each item. The segment reads the order's facility changes and the stock movements at each location the items touched. It does not change the order.
+Select `Routing` to open the routing graph and an inventory timeline for each item. The segment reads the order's facility changes and the stock movements at each location the items touched. Viewing the graph and timelines does not change the order; only `Reject item` and `Move item`, offered on an item that is short at its location, change it.
 
 ### Read the routing graph
 
