@@ -384,8 +384,10 @@ When an item's timeline is empty, expanding it shows `No inventory impact` with 
 An open item is short when its location's ATP for the product is below zero. Order Manager flags it in three places:
 
 * In `Items`, the item's location chip turns to a warning and shows the shortfall, for example `Main Warehouse (-4)`.
-* In `Ship groups`, the ship group shows `N items short at …` with `View routing`, and the item shows `Available here: N`.
+* In `Ship groups`, the ship group shows `N items short at …` with `View routing`. When you expand the ship group, the item shows `Available here: N`.
 * In `Routing`, the item card shows `Short here. Reject the item to send it back to routing, or move it to a location with stock.`
+
+<figure><img src="../../.gitbook/assets/order-manager-ship-group-short-stock.jpg" alt="Central Warehouse ship group with a warning bar reading 1 item short at Central Warehouse and a View routing button"><figcaption><p>A ship group with a short item links straight to its routing.</p></figcaption></figure>
 
 From the item card in `Routing`:
 
@@ -395,6 +397,8 @@ From the item card in `Routing`:
 4. Confirm that the order reloads and the routing graph shows the new move.
 
 Canceling either dialog changes nothing. Items you had selected in `Ship groups` stay selected after a reject.
+
+<figure><img src="../../.gitbook/assets/order-manager-routing-short-stock.jpg" alt="Routing segment for an item brokered to Central Warehouse by the Warehouse stock first rule. The location chip reads Central Warehouse (-2), a warning row offers Reject item and Move item, and the timeline shows the brokering at ATP 90 followed by a Damaged variance of minus 92 that took ATP to minus 2."><figcaption><p>The item was brokered while the warehouse had stock; a later variance left it short. Reject or move it from the card.</p></figcaption></figure>
 
 ### Investigate an item routed to a location without stock
 
