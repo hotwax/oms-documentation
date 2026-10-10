@@ -77,6 +77,18 @@ These articles do not replace generic Maarg operating instructions. The existing
 6. **Backfill customer-driven business workflows.** Prioritize recurring support questions and confirmed release changes across OMS record inspection, decision rules, Shopify setup/imports, order routing, fulfillment, and connector administration. Reuse existing domain guides before adding another page.
 7. **Review specialized tools when needed.** Test/validation dashboards, AI operations, optional preorder, and tenant-specific screens need their own audience, version, security, and environment assessment. Their presence in a manifest alone is not a documentation priority.
 
+## Product Import Backfill: October 10, 2026
+
+The existing [Shopify product sync guide](../shopify/product-sync.md) now covers missing Draft/prelaunch products, effective query filters, product/variant identity, the separate selected-product path, stage-specific verification, bounded recent views, and approved recovery. The existing navigation path and the `run-and-verify-a-sync` anchor are preserved. This is a substantive update to the current Company workflow rather than a duplicate guide or a legacy created-products-feed recipe.
+
+The source baseline is Company App v2.7.0 with connector v4.3.8 reviewed separately. The connector's default bulk query excludes Archived products, not Draft; custom queries can override that default. Product import has no inventory-tracking or Online Store publication gate in this reviewed path. Full sync retains eligibility filtering and is not forced recreation or deletion reconciliation. The selected-product path has a first-250-variants limit per product, and a per-product synced result can include unchanged data. These distinctions are documented without asserting a customer's deployed configuration or changing launch/publication decisions.
+
+The latest distribution by publication remains Maarg v6.3.9, with active connector v4.3.8 and Poorti v3.3.3. XML comments were excluded. Standalone Poorti v3.4.1 and Company v2.7.0 releases do not establish inclusion or installation. Demo sign-in remains pending, so this batch is source-verified only; no live import, migration, retry, or correction was performed.
+
+The complete related product-operation and console pages were read, and their nine referenced images plus the System Messages filter image were visually reviewed. Loading-only and older console illustrations are not reused as current-flow screenshots. This target-branch guide contains no screenshot, credential-entry recipe, private connection example, or customer-specific data. The consumer-branch illustration cleanup remains separate.
+
+This batch leaves the platform status/count refresh in draft PR #1912 and the native-transfer workflow in draft PR #1913 unchanged. Next priorities: approved runtime checks for Draft and archived/custom-filter cases, targeted partial or unknown outcomes, products with more than 250 variants, and identifier conflicts; safe count/receiving corrections; and source-backed fulfillment-queue diagnosis. Reports remain leads rather than reproduced defects.
+
 ## Verification Standard For Future Updates
 
 A workflow is ready to call **runtime-verified** only when its actual steps, resulting state, and meaningful failure case have been checked in an appropriate environment. Otherwise label it **source-verified** or **UI-observed**, state the runtime version, and describe exactly what remains untested. Never create production data, rerun an integration, change access, alter a schema, or expose private information solely to obtain a screenshot.
