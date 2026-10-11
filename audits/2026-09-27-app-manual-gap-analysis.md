@@ -38,7 +38,7 @@ Audit recorded at 2026-09-27 16:52 UTC.
 | Cycle Count | Mobile navigation and embedded non-admin facility behavior absent | Both retail/store entry guides distinguish menu and filters and explain POS mapping/access | [Retail guide](../documents/retail-operations/inventory/cycle-count/README.md), [Store guide](../documents/store-operations/cycle-count/README.md) |
 | Receiving | History did not explain identifiers/features | Adds all-receipt and line/product history entry points and variant identification | [Transfers](../documents/store-operations/receiving/transfer-orders.md), [Purchase orders/returns](../documents/store-operations/receiving/returns-and-purchase-orders.md) |
 | BOPIS | Initial notification setup and rejection default behavior incomplete | First topic starts device setup; browser permission does not equal topic subscription; rejection reason must be explicitly chosen | [Settings](../documents/store-operations/bopis/settings-page.md), [Open orders](../documents/store-operations/bopis/open-orders-page.md), [Notifications](../documents/store-operations/bopis/troubleshooting/notifications-error.md) |
-| Job Manager | Structured parameter encoding unspecified | Documents Map/List/Object values without another JSON quote layer | [Job details](../documents/retail-operations/workflow/job-management/jobs/job-details.md) |
+| Job Manager | Structured parameter encoding unspecified | Documents Map/List/Object values without another JSON quote layer | [Job details](../documents/system-admin/administration/job-manager/jobs/job-details.md) |
 
 ## Review technical evidence
 

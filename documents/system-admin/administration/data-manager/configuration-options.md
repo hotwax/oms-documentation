@@ -45,6 +45,6 @@ Use `Settings` > `Data Manager Configurations` to inspect or maintain the backen
 
 Use Job Manager for daily operations:
 
-- [Upload a file manually](../../../retail-operations/workflow/job-management/mdm/manual-uploads.md)
-- [Monitor file processing](../../../retail-operations/workflow/job-management/mdm/file-history.md)
-- [Review file details](../../../retail-operations/workflow/job-management/mdm/file-details.md)
+- [Upload a file manually](../job-manager/mdm/manual-uploads.md)
+- [Monitor file processing](../job-manager/mdm/file-history.md)
+- [Review file details](../job-manager/mdm/file-details.md)

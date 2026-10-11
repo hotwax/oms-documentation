@@ -26,7 +26,7 @@ Queued files depend on the bulk-file processing service job.
 4. Open `Run history`.
 5. Review the latest run, parameters, and linked data logs.
 
-See [Troubleshoot file imports](../../../../retail-operations/workflow/job-management/troubleshooting/file-imports.md).
+See [Troubleshoot file imports](../../job-manager/troubleshooting/file-imports.md).
 
 ## Check the file format
 

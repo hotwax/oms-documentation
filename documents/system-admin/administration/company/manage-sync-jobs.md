@@ -49,4 +49,4 @@ The dialog previews five recent runs and ten edit-history records. Use `View all
 * [Monitor Shopify Product Sync](manage-shopify-product-sync.md)
 * [Monitor Shopify inventory sync](manage-shopify-inventory-sync.md)
 * [Manage Shopify Order Sync](manage-shopify-order-sync.md)
-* [Manage a job in Job Manager](../../../retail-operations/workflow/job-management/jobs/job-details.md)
+* [Manage a job in Job Manager](../job-manager/jobs/job-details.md)

@@ -13,6 +13,6 @@ Use Job Manager for operator file submissions.
 5. Select `Start Import`.
 6. Open `File history` to monitor processing.
 
-Read [Upload a file manually](../../../retail-operations/workflow/job-management/mdm/manual-uploads.md) for the complete workflow.
+Read [Upload a file manually](../job-manager/mdm/manual-uploads.md) for the complete workflow.
 
 Use [Data Manager configuration](README.md) only when an administrator needs to change the underlying service, execution mode, or file contract.

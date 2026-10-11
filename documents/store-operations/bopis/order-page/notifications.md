@@ -23,7 +23,7 @@ Configure reminder frequency through the `Open BOPIS order notifications` servic
 5. Review its parameters and schedule.
 6. Save the required frequency.
 
-See [Manage a job](../../../retail-operations/workflow/job-management/jobs/job-details.md) for current scheduling instructions.
+See [Manage a job](../../../system-admin/administration/job-manager/jobs/job-details.md) for current scheduling instructions.
 
 Users can configure the notification settings in two ways.
 

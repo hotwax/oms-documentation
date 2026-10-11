@@ -16,7 +16,7 @@ HotWax Commerce strategically organizes all pre-orders in a dedicated queue unti
 1. **Daily job:** Open `Catalog` in Job Manager, search for the automatic pre-order release job, then configure its schedule. This job releases pre-orders when the shipping date has arrived and inventory is available.
 2. **Immediate Release:** This method doesn't require scheduling. Merchandisers can trigger instant release by clicking the `release` button associated with the `Release Pre-orders` job name. This action promptly releases all pre-orders in the queue, facilitating their allocation to the respective fulfillment locations.
 
-See [Manage a job](../../workflow/job-management/jobs/job-details.md) for current scheduling and run-now instructions.
+See [Manage a job](../../../system-admin/administration/job-manager/jobs/job-details.md) for current scheduling and run-now instructions.
 
 <figure><img src="../../.gitbook/assets/pre-order-automatic-release-job.png" alt=""><figcaption><p>Pre-order Automatic release</p></figcaption></figure>
 

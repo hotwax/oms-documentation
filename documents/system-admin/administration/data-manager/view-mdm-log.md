@@ -12,4 +12,4 @@ Use Job Manager to audit files processed through Data Manager.
 4. Open the file.
 5. Review the timeline, original data, and errors.
 
-Read [Monitor file processing](../../../retail-operations/workflow/job-management/mdm/file-history.md) and [Review file details](../../../retail-operations/workflow/job-management/mdm/file-details.md) for the complete workflow.
+Read [Monitor file processing](../job-manager/mdm/file-history.md) and [Review file details](../job-manager/mdm/file-details.md) for the complete workflow.

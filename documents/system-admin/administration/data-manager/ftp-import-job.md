@@ -32,6 +32,6 @@ Confirm these details with the system that produces the file:
 4. Find the file by name, configuration, or log identifier, then open its details.
 5. Review the processing status and timeline. If records fail, compare `Errors` with `Original` before correcting the source file.
 
-Read [Monitor file processing](../../../retail-operations/workflow/job-management/mdm/file-history.md) and [Review file details](../../../retail-operations/workflow/job-management/mdm/file-details.md) for the complete workflow.
+Read [Monitor file processing](../job-manager/mdm/file-history.md) and [Review file details](../job-manager/mdm/file-details.md) for the complete workflow.
 
 If no file appears, first compare the job's configuration ID and the configuration's import path. See [SFTP errors](troubleshooting/data-import-errors.md) for the full diagnostic path.

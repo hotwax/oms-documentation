@@ -8,7 +8,7 @@ description: >-
 
 Job Manager gives operations and technical teams one place to monitor scheduled work and investigate data processing in HotWax Commerce.
 
-Open Job Manager from the HotWax Commerce Launchpad. Your account needs the `JOB_MANAGER_APP_VIEW` permission to enter the app.
+Open Job Manager from the HotWax Commerce Launchpad. Your account needs the `JOB_MANAGER_APP_VIEW` permission to enter the app. See [Job Manager app permissions](../user-permissions/job-manager-app.md) for the permissions that control each action.
 
 ## Choose a workspace
 
@@ -53,12 +53,12 @@ The app can also redirect to the legacy experience when the connected HotWax Com
 
 ## Learn each workflow
 
-- [Review the Dashboard](job-management/dashboard.md)
-- [Find a job](job-management/jobs/catalog.md)
-- [Investigate a job run](job-management/jobs/run-history.md)
-- [Monitor imported files](job-management/mdm/file-history.md)
-- [Trace system messages](job-management/system-messages/message-history.md)
-- [Review Shopify bulk operations](job-management/shopify/bulk-operations.md)
-- [Build a data document](job-management/data-documents/build-data-document.md)
-- [Manage app settings](job-management/settings.md)
-- [Troubleshoot Job Manager](job-management/troubleshooting/README.md)
+- [Review the Dashboard](dashboard.md)
+- [Find a job](jobs/catalog.md)
+- [Investigate a job run](jobs/run-history.md)
+- [Monitor imported files](mdm/file-history.md)
+- [Trace system messages](system-messages/message-history.md)
+- [Review Shopify bulk operations](shopify/bulk-operations.md)
+- [Build a data document](data-documents/build-data-document.md)
+- [Manage app settings](settings.md)
+- [Troubleshoot Job Manager](troubleshooting/README.md)

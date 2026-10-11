@@ -58,7 +58,7 @@ Check the `Open BOPIS Order Notifications` job when reminder notifications do no
 5. Confirm its pause state, parameters, and schedule.
 6. Open `History` and review the latest run.
 
-See [Troubleshoot job runs and schedules](../../../retail-operations/workflow/job-management/troubleshooting/job-runs-and-schedules.md).
+See [Troubleshoot job runs and schedules](../../../system-admin/administration/job-manager/troubleshooting/job-runs-and-schedules.md).
 
 <figure><img src="../../.gitbook/assets/bopis-notification-job-config.png" alt="" width="375"><figcaption></figcaption></figure>
 

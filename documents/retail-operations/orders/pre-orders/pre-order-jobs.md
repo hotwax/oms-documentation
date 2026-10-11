@@ -57,7 +57,7 @@ To schedule the job, open `Catalog`, search for `Sync variant details`, then ope
 
 * After confirming the processing jobs, schedule the `presell catalog sync` job. See the [Shopify pre-order integration guide](../../../learn-shopify/shopify-integration/preorders-and-backorders/presell-catalog-management.md) to learn how pre-orders are listed on Shopify.
 
-See [Manage a job](../../workflow/job-management/jobs/job-details.md) for current scheduling instructions.
+See [Manage a job](../../../system-admin/administration/job-manager/jobs/job-details.md) for current scheduling instructions.
 
 Upon listing all products on Shopify, it's crucial to appropriately tag them with `HC: Pre-order` or `HC: Backorder`. This tagging process is easily managed by enabling the checkbox for the `Add pre-order tags` and `Add backorder tags` jobs, running every 15 minutes. These jobs utilize the pre-order category in the meta fields to add the suitable tag to the parent product on Shopify.
 

@@ -68,4 +68,4 @@ Queued imports depend on the configured bulk-file processing job.
 3. Confirm its schedule and pause state.
 4. Review recent runs and linked file logs.
 
-See [Configure Data Manager](../../../../system-admin/administration/data-manager/README.md) for backend queue and configuration concepts.
+See [Configure Data Manager](../../data-manager/README.md) for backend queue and configuration concepts.
