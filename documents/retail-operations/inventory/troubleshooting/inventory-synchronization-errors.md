@@ -16,7 +16,7 @@ Inbound file processing and outbound Shopify publication are separate. Locate th
 4. Correct the cause and use a supported, scoped recovery. Do not re-upload an entire file merely because a folder or status says failed.
 5. After verifying the OMS quantities, investigate the matching channel or physical-location event path for Shopify delivery.
 
-Follow [Troubleshoot file imports](../../workflow/job-management/troubleshooting/file-imports.md) and [inventory import methods](../inventory-upload/import-methods.md). These are inbound inventory procedures, not Shopify event publishers.
+Follow [Troubleshoot file imports](../../../system-admin/administration/job-manager/troubleshooting/file-imports.md) and [inventory import methods](../inventory-upload/import-methods.md). These are inbound inventory procedures, not Shopify event publishers.
 
 ## Scenario 2: The inventory file is in the wrong SFTP location
 

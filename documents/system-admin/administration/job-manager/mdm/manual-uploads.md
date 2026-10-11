@@ -26,7 +26,7 @@ Confirm:
 
 Service parameter metadata is read-only on this page. Use the backend Data Manager configuration when an administrator needs to change the underlying import definition.
 
-See [Configure Data Manager](../../../../system-admin/administration/data-manager/README.md).
+See [Configure Data Manager](../../data-manager/README.md).
 
 ## Download a template
 

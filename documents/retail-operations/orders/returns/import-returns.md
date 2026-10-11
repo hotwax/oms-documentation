@@ -19,6 +19,6 @@ Schedule the return import job:
 5. Review its parameters.
 6. Update its schedule for the required frequency.
 
-See [Manage a job](../../workflow/job-management/jobs/job-details.md) for current scheduling instructions. Refer to the [Shopify integration guide](../../../learn-shopify/shopify-integration/order-return/import-returns-from-shopify.md) to learn how the return import works.
+See [Manage a job](../../../system-admin/administration/job-manager/jobs/job-details.md) for current scheduling instructions. Refer to the [Shopify integration guide](../../../learn-shopify/shopify-integration/order-return/import-returns-from-shopify.md) to learn how the return import works.
 
 <figure><img src="../../.gitbook/assets/import-order-returns.png" alt="" width="370"><figcaption></figcaption></figure>

@@ -73,7 +73,7 @@ The workflows below update inventory records or supporting configuration inside 
 Use the configured Data Manager import for the approved inventory or product-facility file. Confirm its configuration, source path, expected quantity meaning, import status, failed records, and resulting OMS records. File retrieval or upload alone does not establish processing success.
 
 * [Choose inventory import quantities and methods](../../inventory/inventory-upload/import-methods.md)
-* [Troubleshoot file imports](../job-management/troubleshooting/file-imports.md)
+* [Troubleshoot file imports](../../../system-admin/administration/job-manager/troubleshooting/file-imports.md)
 * [Verify sourcing changes](../../inventory/available-to-promise/use-cases.md#verify-sourcing-changes)
 
 <a id="import-item-receipt"></a>

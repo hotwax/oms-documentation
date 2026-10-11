@@ -22,6 +22,6 @@ Store associates can configure whether to accept the return of the product with 
 5. Review its parameters.
 6. Update its schedule for the required frequency.
 
-See [Manage a job](../../workflow/job-management/jobs/job-details.md) for current scheduling instructions.
+See [Manage a job](../../../system-admin/administration/job-manager/jobs/job-details.md) for current scheduling instructions.
 
 <figure><img src="../../.gitbook/assets/restock-returns-job.png" alt="" width="375"><figcaption></figcaption></figure>

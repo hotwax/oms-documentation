@@ -27,7 +27,7 @@ Import purchase orders
 IMP_ASN_PO_FEED
 ```
 
-See [Manage a job](../../../retail-operations/workflow/job-management/jobs/job-details.md) for current scheduling instructions.
+See [Manage a job](../../../system-admin/administration/job-manager/jobs/job-details.md) for current scheduling instructions.
 
 ## Export received purchase orders from HotWax
 

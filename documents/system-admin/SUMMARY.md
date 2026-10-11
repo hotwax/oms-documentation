@@ -64,6 +64,34 @@
   * [Troubleshooting](administration/data-manager/troubleshooting/README.md)
     * [Data Not Imported](administration/data-manager/troubleshooting/data-not-imported.md)
     * [SFTP Errors](administration/data-manager/troubleshooting/data-import-errors.md)
+* [Job Manager](administration/job-manager/README.md)
+  * [Dashboard](administration/job-manager/dashboard.md)
+  * Jobs
+    * [Catalog](administration/job-manager/jobs/catalog.md)
+    * [Job details](administration/job-manager/jobs/job-details.md)
+    * [Run history](administration/job-manager/jobs/run-history.md)
+  * Manage files and imports
+    * [File history](administration/job-manager/mdm/file-history.md)
+    * [File details](administration/job-manager/mdm/file-details.md)
+    * [Manual uploads](administration/job-manager/mdm/manual-uploads.md)
+  * System messages
+    * [Message history](administration/job-manager/system-messages/message-history.md)
+    * [Message details](administration/job-manager/system-messages/message-details.md)
+    * [Message types](administration/job-manager/system-messages/message-types.md)
+    * [Remote systems](administration/job-manager/system-messages/remote-systems.md)
+  * Shopify
+    * [Bulk operations](administration/job-manager/shopify/bulk-operations.md)
+  * Data documents
+    * [Overview](administration/job-manager/data-documents/README.md)
+    * [Build a data document](administration/job-manager/data-documents/build-data-document.md)
+    * [Preview and export](administration/job-manager/data-documents/preview-export-schedule.md)
+    * [Export history](administration/job-manager/data-documents/export-history.md)
+  * [Settings](administration/job-manager/settings.md)
+  * [Troubleshooting](administration/job-manager/troubleshooting/README.md)
+    * [Job runs and schedules](administration/job-manager/troubleshooting/job-runs-and-schedules.md)
+    * [File imports](administration/job-manager/troubleshooting/file-imports.md)
+    * [System messages](administration/job-manager/troubleshooting/system-messages.md)
+    * [Data document exports](administration/job-manager/troubleshooting/data-document-exports.md)
 
 ## Inventory
 

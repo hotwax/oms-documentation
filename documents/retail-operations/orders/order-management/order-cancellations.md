@@ -47,7 +47,7 @@ For partial cancellations, the order status in Shopify does not change, only the
 4. Review its parameters and schedule.
 5. Save the required schedule.
 
-See [Manage a job](../../workflow/job-management/jobs/job-details.md) for current scheduling instructions.
+See [Manage a job](../../../system-admin/administration/job-manager/jobs/job-details.md) for current scheduling instructions.
 
 For more details on how canceled orders are imported, refer to the Shopify-HotWax Commerce Integration document.
 

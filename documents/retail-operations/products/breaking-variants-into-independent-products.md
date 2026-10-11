@@ -37,12 +37,12 @@ Here, the user has decided to divide the initial parent product into two, each f
 
 ### Step 1: Pause product import and sync jobs
 
-* Open [Job Manager](../workflow/README.md), then open `Catalog`.
+* Open [Job Manager](../../system-admin/administration/job-manager/README.md), then open `Catalog`.
 * Search for and pause these jobs:
   * **Import Products:** imports new products from Shopify.
   * **Sync Products:** updates existing products from Shopify.
 
-See [Manage a job](../workflow/job-management/jobs/job-details.md) for current pause and run-now instructions.
+See [Manage a job](../../system-admin/administration/job-manager/jobs/job-details.md) for current pause and run-now instructions.
 
 ### Step 2: Edit Variants in Shopify
 

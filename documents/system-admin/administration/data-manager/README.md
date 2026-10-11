@@ -8,9 +8,9 @@ Data Manager configuration defines how files enter and leave the HotWax Commerce
 
 Use Job Manager for daily operations:
 
-- [Upload a file manually](../../../retail-operations/workflow/job-management/mdm/manual-uploads.md)
-- [Monitor file processing](../../../retail-operations/workflow/job-management/mdm/file-history.md)
-- [Review file details](../../../retail-operations/workflow/job-management/mdm/file-details.md)
+- [Upload a file manually](../job-manager/mdm/manual-uploads.md)
+- [Monitor file processing](../job-manager/mdm/file-history.md)
+- [Review file details](../job-manager/mdm/file-details.md)
 
 ## Open Data Manager configurations
 
@@ -52,7 +52,7 @@ Queued imports enter File History in a pending state. The configured bulk-file p
 
 When one poller run is already processing the queue, a later scheduled run can stop without starting another processor. Check the run result and active file before treating this behavior as an error.
 
-Use [Troubleshoot file imports](../../../retail-operations/workflow/job-management/troubleshooting/file-imports.md) to check the queue and processing job from Job Manager.
+Use [Troubleshoot file imports](../job-manager/troubleshooting/file-imports.md) to check the queue and processing job from Job Manager.
 
 ## Configure with care
 

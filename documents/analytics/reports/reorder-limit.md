@@ -23,7 +23,7 @@ Here's how to set the reorder limit for products by tag:
 4. Return to `Catalog` and search for the bulk imported file processing job used by the instance.
 5. Open the job and configure its required schedule, or select `Run Now`.
 
-See [Manage a job](../../retail-operations/workflow/job-management/jobs/job-details.md) for current scheduling instructions.
+See [Manage a job](../../system-admin/administration/job-manager/jobs/job-details.md) for current scheduling instructions.
 
 ### Setting Different Reorder Limits (Optional)
 

@@ -52,4 +52,4 @@ Do not include secrets, payloads, or customer data in permission screenshots or 
 
 ## Learn the current workflows
 
-See the [Job Manager guide](../../../retail-operations/workflow/README.md) for task-based instructions.
+See the [Job Manager guide](../job-manager/README.md) for task-based instructions.

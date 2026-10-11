@@ -17,7 +17,7 @@ A scheduled file import can fail when the service-job parameter points to the wr
 
 Correct the job parameter only when the failed run used the wrong configuration.
 
-See [Troubleshoot job runs and schedules](../../../../retail-operations/workflow/job-management/troubleshooting/job-runs-and-schedules.md).
+See [Troubleshoot job runs and schedules](../../job-manager/troubleshooting/job-runs-and-schedules.md).
 
 ## Check the SFTP path
 

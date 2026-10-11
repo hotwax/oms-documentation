@@ -32,7 +32,7 @@ Import order attribute
 FTP Config: MOD_ORD_ATTR
 ```
 
-See [Manage a job](../../../retail-operations/workflow/job-management/jobs/job-details.md) for current scheduling instructions.
+See [Manage a job](../../../system-admin/administration/job-manager/jobs/job-details.md) for current scheduling instructions.
 
 {% hint style="success" %}
 The 'NETSUITE\_ORDER\_EXPORTED' attribute has now been added to orders.
