@@ -24,6 +24,7 @@ Use the app menu to open the workspace that matches your task:
 | `Message history` | Trace inbound and outbound system messages |
 | `Message types` | Review or administer system message type definitions |
 | `Remote systems` | Review or administer connected-system definitions |
+| `Bulk operations` | Review the bulk operations Shopify ran and the system message that requested each one |
 | `Documents` | Build and run data documents |
 | `Export history` | Investigate data document exports |
 | `Settings` | Review the active instance, product store, time zone, app version, and data status |
@@ -42,7 +43,7 @@ The Dashboard is an operational summary. Use the linked history and detail pages
 
 The app menu shows the active product store and time zone. Check this context before you run a job, upload a file, or interpret a timestamp.
 
-Changing the product store refreshes supported job and file views. System messages do not use the product store as a global filter.
+Changing the product store refreshes supported job, file, and Shopify bulk operation views. System messages do not use the product store as a global filter.
 
 ## Open the legacy app
 
@@ -57,6 +58,7 @@ The app can also redirect to the legacy experience when the connected HotWax Com
 - [Investigate a job run](job-management/jobs/run-history.md)
 - [Monitor imported files](job-management/mdm/file-history.md)
 - [Trace system messages](job-management/system-messages/message-history.md)
+- [Review Shopify bulk operations](job-management/shopify/bulk-operations.md)
 - [Build a data document](job-management/data-documents/build-data-document.md)
 - [Manage app settings](job-management/settings.md)
 - [Troubleshoot Job Manager](job-management/troubleshooting/README.md)

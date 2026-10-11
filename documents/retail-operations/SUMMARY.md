@@ -19,6 +19,8 @@
     * [Message details](workflow/job-management/system-messages/message-details.md)
     * [Message types](workflow/job-management/system-messages/message-types.md)
     * [Remote systems](workflow/job-management/system-messages/remote-systems.md)
+  * Shopify
+    * [Bulk operations](workflow/job-management/shopify/bulk-operations.md)
   * Data documents
     * [Overview](workflow/job-management/data-documents/README.md)
     * [Build a data document](workflow/job-management/data-documents/build-data-document.md)
