@@ -49,27 +49,27 @@ Use Job Manager for daily operations:
 - [Monitor file processing](../job-manager/mdm/file-history.md)
 - [Review file details](../job-manager/mdm/file-details.md)
 
-## Maarg configuration fields
+## OMS configuration fields
 
-On the Maarg administration screen, open `MDM` > `Configs`.
+On the OMS administration screen, open `MDM` > `Configs`.
 
 1. Select `Add` on the configuration list to create a configuration.
 2. To edit one, search by ID or description, open the Config ID link, and select `Edit` on its detail page.
 3. Save the confirmed settings. The Config ID cannot be changed after creation.
 
-The Maarg create and edit dialogs expose these fields:
+The OMS create and edit dialogs expose these fields:
 
 | Field | Description |
 | --- | --- |
 | `Config ID` | Unique identifier, entered at creation and fixed afterward |
 | `Description` | Describes the data handled by the configuration |
 | `Import Service Name` | Service invoked for records in the imported file |
-| `Execution Mode` | `Queue`, `Async`, or `Sync`; an empty value uses `DMC_QUEUE` in the runner. See [Maarg runner behavior](README.md#maarg-runner-and-thread-pools) before changing it |
+| `Execution Mode` | `Queue`, `Async`, or `Sync`; an empty value uses `DMC_QUEUE` in the runner. See [OMS runner behavior](README.md#oms-runner-and-thread-pools) before changing it |
 | `Multi Threading` | `Y` enables CSV or JSON chunk processing; an empty value is treated as disabled |
 | `Priority` | Greater than `6` selects `PRIORITY`; `6` and below select `NORMAL`. An empty value defaults to `5` |
 
-The detail page also displays the read-only `Thread Pool`, derived from the priority. The legacy OMS fields listed above are not all available in the Maarg create and edit dialogs.
+The detail page also displays the read-only `Thread Pool`, derived from the priority. The legacy OMS fields listed above are not all available in the OMS create and edit dialogs.
 
 Keep queue mode selected and multi-threading disabled unless your HotWax Commerce implementation team has approved a different configuration. Multi-threading allows chunks of one file to run concurrently, even when files within the configuration are queued sequentially.
 
-The configuration detail page provides sample CSV and JSON downloads, `Upload File`, and import logs. See [Manual Imports](manual-import.md#maarg-administration-upload) and [View Logs](view-mdm-log.md#maarg-administration-logs) for this backend workflow.
+Use Job Manager for manual imports. See [Import a file manually](manual-import.md) for preparing, submitting, and monitoring the file.

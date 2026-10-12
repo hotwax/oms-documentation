@@ -90,7 +90,7 @@ Excessive adjectives like “vital”, “crucial”, “essential”
 
 Do not use “Moqui” or “OFBiz,” in any capitalization, in user-facing documentation. This ban applies to headings, body text, tables, examples, captions, and image text.
 
-Use “Maarg” for the current OMS backend and “legacy OMS” for the previous OMS backend. Use “HotWax Commerce OMS” when the distinction is unnecessary. Keep framework and implementation details in internal engineering documentation.
+Use “HotWax Commerce OMS” or “OMS” in user-facing documentation. Use “legacy OMS” only when the distinction from the current OMS matters. Avoid repeating internal backend names when “OMS” is sufficient. Keep framework and implementation details in internal engineering documentation.
 
 #### Core principles
 

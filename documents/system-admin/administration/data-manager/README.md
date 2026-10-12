@@ -36,27 +36,27 @@ For example, order imports, fulfillment updates, and inventory resets can each u
 
 Most configurations use a generic HotWax Commerce service after middleware transforms the source data. A native integration can use a service designed for that system’s original payload.
 
-## Maarg runner and thread pools
+## OMS runner and thread pools
 
-The following behavior applies to the Maarg Data Manager. Legacy OMS instances use a different bulk-file processor; confirm the connected backend before changing execution settings.
+The following behavior applies to the OMS Data Manager. Legacy OMS instances use a different bulk-file processor; confirm the connected backend before changing execution settings.
 
-The Maarg runner dispatches pending imports to two dedicated worker pools, `PRIORITY` and `NORMAL`. A configuration priority greater than `6` selects `PRIORITY`; `6` and below select `NORMAL`. An empty priority defaults to `5`.
+The OMS runner dispatches pending imports to two dedicated worker pools, `PRIORITY` and `NORMAL`. A configuration priority greater than `6` selects `PRIORITY`; `6` and below select `NORMAL`. An empty priority defaults to `5`.
 
-| Execution mode | Maarg runner behavior |
+| Execution mode | OMS runner behavior |
 | --- | --- |
 | `Queue` (`DMC_QUEUE`, also used when the mode is empty) | Processes files sequentially within each configuration, ordered by creation date |
 | `Async` (`DMC_ASYNC`) | Submits files for concurrent processing when pool capacity is available |
-| `Sync` (`DMC_SYNC`) | Remains an available configuration value, but the current Maarg runner uses the same pool-processing branch as other non-queue values |
+| `Sync` (`DMC_SYNC`) | Remains an available configuration value, but the current OMS runner uses the same pool-processing branch as other non-queue values |
 
-The Maarg upload service creates a `Pending` import for the runner regardless of execution mode. Selecting `Sync` does not make this upload execute immediately in the submitting request.
+The OMS upload service creates a `Pending` import for the runner regardless of execution mode. Selecting `Sync` does not make this upload execute immediately in the submitting request.
 
 Queued processing does not provide a global FIFO guarantee across configurations, even when they share a pool. An inventory reset and an order import using different configurations can run concurrently. Do not rely on queue mode alone to make one configuration wait for another.
 
 The runner checks for work every `60` seconds by default. The `scheduled_mdm_check_time` setting controls this interval; a value of `0` or less disables the runner. After startup, recovery and scheduling begin after `mdm_reschedule_delay` seconds, which defaults to `120`.
 
-On the Maarg administration `Find Import` page, the MDM Runner panel displays each pool's active, current, and maximum thread counts, queue depth and remaining capacity, and the runner's last execution time. A saturated thread pool is highlighted as a warning; a full queue is highlighted as a danger state.
+On the OMS administration `Find Import` page, the MDM Runner panel displays each pool's active, current, and maximum thread counts, queue depth and remaining capacity, and the runner's last execution time. A saturated thread pool is highlighted as a warning; a full queue is highlighted as a danger state.
 
-## Maarg file storage and retention
+## OMS file storage and retention
 
 Manual uploads use the configured `mantle.content.root`, defaulting to `runtime://datamanager`, with an `imported/{configId}/` subdirectory. The SFTP polling service stores downloaded files under `runtime://datamanager/imported/{configId}/` before creating imports. The log links to the stored content.
 

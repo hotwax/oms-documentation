@@ -14,15 +14,15 @@ Use Job Manager to audit files processed through Data Manager.
 
 Read [Monitor file processing](../job-manager/mdm/file-history.md) and [Review file details](../job-manager/mdm/file-details.md) for the complete workflow.
 
-## Maarg administration logs
+## OMS administration logs
 
-For the Maarg backend, use `MDM` > `Imports` (`Find Import`) to review imports across configurations. Open a Config ID from `Configs` to see logs for that configuration.
+For the OMS backend, use `MDM` > `Imports` (`Find Import`) to review imports across configurations. Open a Config ID from `Configs` to see logs for that configuration.
 
 The log tables show log and parent IDs, uploaded and error-file downloads with sizes, import parameters, creation and start dates, status and completion date, product store, total and failed record counts, and execution time. The configuration detail table also shows the worker thread and instance ID. Select `View` for import parameters, the history icon for status transitions, or the log-file icon for processing details where available.
 
 `Parent Log ID` can link a retry created during crash recovery to its interrupted import. It does not necessarily represent a chunk of a multi-threaded import.
 
-### Maarg import statuses
+### OMS import statuses
 
 | Status | Meaning |
 | --- | --- |
@@ -39,7 +39,7 @@ After a restart, recovery marks matching interrupted imports `Crashed` and creat
 
 ### Cancel an import
 
-On the current Maarg configuration detail screen:
+On the current OMS configuration detail screen:
 
 - For `Pending` or `Queued`, select the cancel icon and confirm cancellation
 - For `Running`, select `Request Cancel`. The status changes to `Cancel Requested`; wait for the loader to observe the request and stop
@@ -50,7 +50,7 @@ Cancellation is cooperative and does not undo records already processed. Review 
 
 Select the trash icon and confirm to remove a log and its associated parameters and content records. Do not delete a log while its import is active; use cancellation and wait for a terminal status first.
 
-The removal service also deletes referenced files unless another active log shares the content location. Automatic retention uses the same service. See [Maarg file storage and retention](README.md#maarg-file-storage-and-retention) before deleting audit data.
+The removal service also deletes referenced files unless another active log shares the content location. Automatic retention uses the same service. See [OMS file storage and retention](README.md#oms-file-storage-and-retention) before deleting audit data.
 
 ### Investigate errors
 
