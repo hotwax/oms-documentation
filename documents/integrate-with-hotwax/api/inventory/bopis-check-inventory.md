@@ -12,6 +12,10 @@ The BOPIS (Buy Online, Pick-up In Store) Check Inventory API allows you to retri
 
 Use the OMS API host supplied for the target production or UAT environment. Confirm it with the integration owner; do not derive an API host by changing an instance name.
 
+**Example:** `https://demo-maarg.hotwax.io/rest/s1/ofbiz-oms-usl/checkBopisInventory`
+
+This example uses the demonstration OMS API host. Replace the host with the one configured for your environment and retain the endpoint path.
+
 ### Method
 
 GET (Recommended if your library supports sending a body in a GET request)

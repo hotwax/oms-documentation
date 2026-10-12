@@ -12,6 +12,10 @@ The Shipping Check Inventory API allows to retrieve the inventory details for th
 
 Use the OMS API host supplied for the target production or UAT environment. Confirm it with the integration owner; do not derive an API host by changing an instance name.
 
+**Example:** `https://demo-maarg.hotwax.io/rest/s1/ofbiz-oms-usl/checkShippingInventory`
+
+This example uses the demonstration OMS API host. Replace the host with the one configured for your environment and retain the endpoint path.
+
 ### Methods
 
 * GET: When passing params in the URL
