@@ -45,8 +45,6 @@ The search text, filters, tags, and sort stay in place when you reload the page.
 
 A new search, filter, or sort keeps only the selected products that are still listed, so a product hidden by the search isn't tagged.
 
-<figure><img src="../.gitbook/assets/product-workbench.png" alt="Product workbench filtered to the Abominable Hoodie product family from the demo OMS"><figcaption><p>Find and triage products in the Product workbench</p></figcaption></figure>
-
 ## 2. Inspect and edit product details
 
 **Goal:** Confirm the product family and update the correct parent or variant without overwriting unrelated product data.
