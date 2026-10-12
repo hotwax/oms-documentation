@@ -20,6 +20,28 @@ Links such as `Last successful build` and `Last failed build` select different r
 
 Record the time zone with incident times. Widgets can display timestamps differently, so do not infer an execution order from an unqualified clock time alone.
 
+## Understand a numbered build's menu
+
+These controls belong to one run. The job page has different controls, such as starting a new parameterized build or configuring the job. Available entries depend on permissions and plugins.
+
+| Menu item | Purpose and action scope |
+| --- | --- |
+| `Status` | Reads the run's result, timing, trigger, and stages. |
+| `Changes` | Reads the source changes Jenkins recorded for this run; it is not a complete application release history. |
+| `Console Output` | Reads execution commands, progress, and errors. Inspect a redacted, relevant excerpt when sharing evidence. |
+| `Edit Build Information` | Changes the run's display name or description. It does not edit the pipeline, and it is not a read-only tour action. |
+| `Parameters` | Reads saved inputs for this execution, which can include sensitive values. It is not a new-build form. |
+| `Git Build Data` | Reads repositories and revisions recorded by Jenkins SCM checkouts. It may not record component repositories cloned inside the Docker build. |
+| `Lockable resources` | Shows shared resources associated with the run. A build requiring an already locked resource waits for it to become available. |
+| `Open Blue Ocean` | Opens an alternative visual interface for the run and stages. Its execution controls require the same review as those in the classic interface. |
+| `Restart from Stage` | Starts a new execution at an eligible stage and skips preceding stages. Completed deployment/data effects can be repeated. |
+| `Rebuild` | Opens a rerun path. In the inspected reference run, this label linked to Replay; check the actual destination. Reused branch inputs can resolve to newer code. |
+| `Pipeline Steps` | Reads individual executed steps, timing, and associated logs. |
+| `Workspaces` | Browses files on the Jenkins build agent. Later executions can change the workspace; it is not an immutable build artifact. |
+| `Previous Build` | Opens the preceding run of the same job. |
+
+For a tour, use the inspection entries and leave edits, replay, and stage restarts unsubmitted. See [Lockable Resources](https://plugins.jenkins.io/lockable-resources/), [Blue Ocean](https://www.jenkins.io/doc/book/blueocean/dashboard/), and [pipeline restarts](https://www.jenkins.io/doc/book/pipeline/running-pipelines/#restart-from-a-stage) for the underlying Jenkins features.
+
 ## Verify the pipeline source and revision
 
 Distinguish three sources: the Jenkinsfile defines the automation, the Docker configuration defines the image recipe, and the assembled application components define the running software. `DOCKER_BRANCH` can select the second source without changing the first.

@@ -58,6 +58,14 @@ On October 12, 2026, the inspected Docker repository's `main` contained Dev, UAT
 
 The profile selects a build recipe. The job's deployment settings establish the destination, so `Prod` does not by itself redirect a reference job to production and `UAT` does not by itself make a production job safe for testing.
 
+### Check whether the recipe tests a release or moving code
+
+A tag on the Docker configuration repository does not guarantee that every dependency inside its Dockerfile uses a release tag. Inspect its `git clone` references, component-fetch mode, copied configuration, and any startup component additions.
+
+For example, Maarg's checked `v6.4.0` Dev Dockerfile still clones `main` for the framework, runtime, setup, and nested Docker configuration repositories. The UAT Dockerfile instead pins framework `v4.2.0`, runtime `v4.1.0`, setup `v1.2.1`, and Maarg Docker configuration `v6.4.0`, and fetches the released component set. Selecting `v6.4.0` with `Dev` therefore does not reproduce that released bundle.
+
+For release testing, choose the reviewed recipe that assembles the intended released dependencies, then confirm the actual component manifest. Do not choose `Test` because the target hostname contains test or assume `UAT` changes the destination. Confirm the target job, runtime configuration, optional components, and migration plan independently.
+
 ## Review the Maarg component and runtime configuration
 
 The four inputs above do not list every component or runtime setting. Inspect the selected Dockerfile, component manifest, optional components, and the deployment configuration that supplies datasource, job, and integration settings. Preserve installed optional components unless their removal is part of the reviewed change.

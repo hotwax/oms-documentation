@@ -28,6 +28,10 @@ The result should identify the current artifact, configuration, database state, 
 4. Check compatibility across the bundle and with connected applications. Preserve required custom components and overrides unless their removal is part of the change.
 5. Record the intended image identity and how the operator will verify the assembled components after startup. A Docker source branch or a Maarg version label alone does not identify the whole bundle.
 
+For release testing, inspect the dependencies inside the selected recipe. Even Maarg's tagged `v6.4.0` Dev recipe clones moving `main` dependencies; its UAT recipe pins the released framework, runtime, setup, and configuration. Follow [Check whether the recipe tests a release or moving code](../tools/jenkins/parameters.md#check-whether-the-recipe-tests-a-release-or-moving-code) rather than choosing a profile from the target's hostname.
+
+If the current instance has run newer branch code, moving to the latest published release may be a code downgrade. Reconcile the actual running versions and applied database changes before an image replacement, and rehearse the compatible schema/data transition.
+
 The inspected production image fetches the released `oms-suite` component set, packages the framework and runtime with `addRuntime`, and extracts `moqui-plus-runtime.war` for execution. Optional components can also be fetched by the startup setup script, which can rebuild that package. Verify the final running component manifest as well as the image digest.
 
 The checked production image uses Java 21. Confirm the selected release's Java runtime and other image dependencies instead of assuming an older base image is compatible.
