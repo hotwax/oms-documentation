@@ -150,6 +150,7 @@
 
 ## Hotwax Deployment & Versions
 
+* [Deploy and upgrade Maarg](deployment/deploy-maarg.md)
 * [HotWax Commerce Deployment](deployment/README.md)
 * [Launch Machine](deployment/launch-machine.md)
 * [Update OMS Version](deployment/update-oms-version.md)

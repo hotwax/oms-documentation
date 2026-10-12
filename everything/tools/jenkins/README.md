@@ -6,7 +6,7 @@ description: >-
 
 # Get started with Jenkins
 
-Use [HotWax Commerce Jenkins](https://jenkins.hotwax.co/) to inspect the automation used to build and deploy backend software. This guide introduces the classic Jenkins interface and a read-only learning path. Use the approved deployment procedure when you are ready to make a change.
+Use [HotWax Commerce Jenkins](https://jenkins.hotwax.co/) to inspect the automation used to build and deploy Maarg, the HotWax Commerce backend built on Moqui. This guide introduces the classic Jenkins interface and a read-only learning path. Use [Deploy and upgrade Maarg](../../deployment/deploy-maarg.md) when you are ready to prepare an approved change.
 
 Jenkins runs a job's configured instructions. A job can build an image, deploy software, launch infrastructure, restart an instance, or perform another operation. The word `Build` describes a Jenkins run; it does not mean that the run only compiles code.
 
@@ -24,7 +24,7 @@ The navigation and parameter labels in this guide were checked on Jenkins 2.492.
 | Step | A task inside a stage, such as checking out source or executing a command. |
 | View | A grouping of jobs for browsing. It is not a deployment target or an access-control boundary. |
 
-Jenkins jobs are separate from OMS and Maarg business jobs. A deployment pipeline is not the order-import schedule. Inspect those schedules in [Job Manager](../launchpad/job-manager/README.md) or [Maarg service jobs](../maarg/service-jobs.md).
+Jenkins jobs are separate from Maarg business jobs. A deployment pipeline is not the order-import schedule. Inspect application processing in [Maarg service jobs](../maarg/service-jobs.md).
 
 For the general concepts, see the [Jenkins Pipeline handbook](https://www.jenkins.io/doc/book/pipeline/) and [Jenkins project types](https://www.jenkins.io/doc/book/using/working-with-projects/).
 
@@ -66,7 +66,7 @@ View names help you navigate; the job definition and target parameters establish
 
 ## Follow a deployment pipeline
 
-The inspected test and UAT jobs display this flow in `Stage View`:
+The inspected Maarg reference/test job displays this flow in `Stage View`:
 
 | Stage | What to inspect |
 | --- | --- |
@@ -113,12 +113,6 @@ After this exercise, you should be able to explain what a run attempted, where i
 
 ## Use the deployment procedures
 
-This orientation does not choose a release, migration sequence, or rollback plan. Continue with the appropriate procedure:
+Continue with [Deploy and upgrade Maarg](../../deployment/deploy-maarg.md) to select the release and component bundle, prepare migrations and recovery, execute the approved sequence, and verify completion. Use [Maarg component upgrade diagnosis](../maarg/component-upgrades.md) to investigate startup data loads and their recorded outcomes.
 
-* [Launch a machine](../../deployment/launch-machine.md)
-* [Update OMS version](../../deployment/update-oms-version.md)
-* [Rollback OMS version](../../deployment/rollback-release.md)
-* [Optional plugins](../../deployment/optional-plugins.md)
-* [Maarg component upgrade diagnosis](../maarg/component-upgrades.md)
-
-Match those procedures to the current job and infrastructure. Older recipes can use different field names or an earlier deployment path; do not transfer their defaults into another job without verification.
+Match the procedure to the current job and infrastructure. A familiar form or a previous green run does not choose a migration sequence or establish a recovery plan.
