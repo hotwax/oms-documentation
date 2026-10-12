@@ -10,21 +10,7 @@ The BOPIS (Buy Online, Pick-up In Store) Check Inventory API allows you to retri
 
 **URL:** `https://<host>/rest/s1/ofbiz-oms-usl/checkBopisInventory`
 
-This API uses our next generation OMS instance. All traditional instances have access to this next generation OMS by replacing "oms" with "maarg" in the host name.
-
-**Production**
-
-Current Name: `demo-oms`
-
-Maarg Name: `demo-maarg`
-
-**UAT**
-
-Current Name: `demo-uat`
-
-Maarg Name: `demo-maarg-uat`
-
-**Example:** `https://demo-maarg.hotwax.io/rest/s1/ofbiz-oms-usl/checkBopisInventory`
+Use the OMS API host supplied for the target production or UAT environment. Confirm it with the integration owner; do not derive an API host by changing an instance name.
 
 ### Method
 

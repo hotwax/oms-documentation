@@ -26,7 +26,7 @@ HotWax Commerce orchestrates order approval through several pathways, depending 
 * **Marketplace services:** Specific services handle approval for Amazon and eBay orders based on their unique rules.
 * **Point of sale (POS):** Orders placed in physical stores or via WebPOS auto-approve during checkout.
 * **Direct UI or API:** You can manually approve orders using the HotWax Commerce user interface or direct API calls.
-* **Data imports:** The Maarg Data Manager processes and approves bulk order imports.
+* **Data imports:** The OMS Data Manager processes and approves bulk order imports.
 
 ## `Approve Orders` job
 

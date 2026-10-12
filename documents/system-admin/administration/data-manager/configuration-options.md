@@ -1,75 +1,14 @@
-# Configuration options
+# Review an import configuration
 
-## Legacy OMS configuration fields
+Use Job Manager to review the configuration before importing a file.
 
-On legacy OMS administration screens, to create a configuration, select `Add` and enter the confirmed import or export details. To edit an existing configuration, search by name or ID and select the `Edit` icon.
+1. Open `MDM` > `Manual uploads`.
+2. Find the intended configuration and select `Start Import` on its card.
+3. Review its configuration ID, import service, description, execution settings, and read-only service parameter metadata.
+4. Confirm the file structure with the configuration owner before submitting data.
 
-{% hint style="info" %}
-`Config ID` cannot be modified. To use a different ID, create a new configuration.
-{% endhint %}
+Do not enable multi-threading or change execution mode or priority without the configuration owner's approval. These settings affect processing capacity and ordering. Imports under different configurations can run concurrently.
 
-| Field | Description |
-| --- | --- |
-| `Config ID` | Unique identifier for the configuration. |
-| `Description` | Short explanation of what the configuration handles. |
-| `Import Service` | Service name that handles incoming data. |
-| `Import Path` | SFTP folder path for imported files. |
-| `Export Content ID` | Template identifier used while exporting data. |
-| `Export Service` | Service that handles outgoing data. |
-| `Export Path` | SFTP destination folder for exported files. |
-| `File Name Pattern` | A regular expression that limits an SFTP import to matching files. |
-| `Multi-threading` | Controls whether files for this configuration can be processed with multiple threads. |
-| `Execution Mode` | Determines how the order management system (OMS) schedules processing for this configuration. |
-| `Notify on Failure` | Controls whether failure notifications are sent for this configuration. |
+Use [Import a file manually](manual-import.md) to prepare and submit the file, then [monitor it in File History](../job-manager/mdm/file-history.md).
 
-{% hint style="danger" %}
-Keep the configured execution mode unless your HotWax Commerce implementation team instructs you to change it.
-{% endhint %}
-
-{% hint style="danger" %}
-Do not enable multi-threading unless your HotWax Commerce implementation team has approved the configuration. It can change how bulk files use OMS processing capacity.
-{% endhint %}
-
-{% hint style="info"%}
-Notifications are sent to the email addresses configured for the instance.
-{% endhint %}
-
-## Review a legacy OMS configuration
-
-Use `Settings` > `Data Manager Configurations` to inspect or maintain the backend import or export contract.
-
-1. Search for the configuration by name or ID.
-2. Open the configuration.
-3. Confirm its service, file paths, file name pattern, execution settings, and notification behavior.
-4. Change a value only after the configuration owner confirms the expected contract.
-
-Use Job Manager for daily operations:
-
-- [Upload a file manually](../job-manager/mdm/manual-uploads.md)
-- [Monitor file processing](../job-manager/mdm/file-history.md)
-- [Review file details](../job-manager/mdm/file-details.md)
-
-## OMS configuration fields
-
-On the OMS administration screen, open `MDM` > `Configs`.
-
-1. Select `Add` on the configuration list to create a configuration.
-2. To edit one, search by ID or description, open the Config ID link, and select `Edit` on its detail page.
-3. Save the confirmed settings. The Config ID cannot be changed after creation.
-
-The OMS create and edit dialogs expose these fields:
-
-| Field | Description |
-| --- | --- |
-| `Config ID` | Unique identifier, entered at creation and fixed afterward |
-| `Description` | Describes the data handled by the configuration |
-| `Import Service Name` | Service invoked for records in the imported file |
-| `Execution Mode` | `Queue`, `Async`, or `Sync`; an empty value uses `DMC_QUEUE` in the runner. See [OMS runner behavior](README.md#oms-runner-and-thread-pools) before changing it |
-| `Multi Threading` | `Y` enables CSV or JSON chunk processing; an empty value is treated as disabled |
-| `Priority` | Greater than `6` selects `PRIORITY`; `6` and below select `NORMAL`. An empty value defaults to `5` |
-
-The detail page also displays the read-only `Thread Pool`, derived from the priority. The legacy OMS fields listed above are not all available in the OMS create and edit dialogs.
-
-Keep queue mode selected and multi-threading disabled unless your HotWax Commerce implementation team has approved a different configuration. Multi-threading allows chunks of one file to run concurrently, even when files within the configuration are queued sequentially.
-
-Use Job Manager for manual imports. See [Import a file manually](manual-import.md) for preparing, submitting, and monitoring the file.
+Creating backend configurations, changing import services, and maintaining legacy OMS configuration fields are technical administration tasks. Those procedures are in [Everything: Configuration options](https://github.com/hotwax/oms-documentation/blob/everything-bagel-pub/everything/operations/oms-administration/data-manager/configuration-options.md).
