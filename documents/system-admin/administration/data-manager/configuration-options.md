@@ -1,8 +1,8 @@
 # Configuration options
 
-## Add or edit a configuration
+## Legacy OMS configuration fields
 
-To create a configuration, select `Add` and enter the confirmed import or export details. To edit an existing configuration, search by name or ID and select the `Edit` icon.
+On legacy OMS administration screens, to create a configuration, select `Add` and enter the confirmed import or export details. To edit an existing configuration, search by name or ID and select the `Edit` icon.
 
 {% hint style="info" %}
 `Config ID` cannot be modified. To use a different ID, create a new configuration.
@@ -34,7 +34,7 @@ Do not enable multi-threading unless your HotWax Commerce implementation team ha
 Notifications are sent to the email addresses configured for the instance.
 {% endhint %}
 
-### Review a configuration
+## Review a legacy OMS configuration
 
 Use `Settings` > `Data Manager Configurations` to inspect or maintain the backend import or export contract.
 
@@ -48,3 +48,28 @@ Use Job Manager for daily operations:
 - [Upload a file manually](../job-manager/mdm/manual-uploads.md)
 - [Monitor file processing](../job-manager/mdm/file-history.md)
 - [Review file details](../job-manager/mdm/file-details.md)
+
+## OMS configuration fields
+
+On the OMS administration screen, open `MDM` > `Configs`.
+
+1. Select `Add` on the configuration list to create a configuration.
+2. To edit one, search by ID or description, open the Config ID link, and select `Edit` on its detail page.
+3. Save the confirmed settings. The Config ID cannot be changed after creation.
+
+The OMS create and edit dialogs expose these fields:
+
+| Field | Description |
+| --- | --- |
+| `Config ID` | Unique identifier, entered at creation and fixed afterward |
+| `Description` | Describes the data handled by the configuration |
+| `Import Service Name` | Service invoked for records in the imported file |
+| `Execution Mode` | `Queue`, `Async`, or `Sync`; an empty value uses `DMC_QUEUE` in the runner. See [OMS runner behavior](README.md#oms-runner-and-thread-pools) before changing it |
+| `Multi Threading` | `Y` enables CSV or JSON chunk processing; an empty value is treated as disabled |
+| `Priority` | Greater than `6` selects `PRIORITY`; `6` and below select `NORMAL`. An empty value defaults to `5` |
+
+The detail page also displays the read-only `Thread Pool`, derived from the priority. The legacy OMS fields listed above are not all available in the OMS create and edit dialogs.
+
+Keep queue mode selected and multi-threading disabled unless your HotWax Commerce implementation team has approved a different configuration. Multi-threading allows chunks of one file to run concurrently, even when files within the configuration are queued sequentially.
+
+Use Job Manager for manual imports. See [Import a file manually](manual-import.md) for preparing, submitting, and monitoring the file.
