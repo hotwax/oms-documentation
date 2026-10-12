@@ -4,33 +4,17 @@ description: Learn about the Orders jobs in HotWax Commerce.
 
 # Orders
 
-### Import Orders
+## Shopify order import
 
-Job Name: `Import Orders`\
-Job enum ID: `JOB_IMP_ORD`\
-Service Name: `createOrdersFromShopify`\
-Flow: Order Import from Shopify to OMS
+The legacy `JOB_IMP_ORD` / `createOrdersFromShopify` job is not the primary order-import path for a new standard launch. Current Shopify ingestion has three separate flows: controlled open-order history, realtime `ORDERS_CREATE` and `ORDERS_UPDATED` events through EventBridge and SQS, and a scheduled fallback batch.
 
-**The `Import Orders` job is used for downloading orders from Shopify into HotWax. It retrieves all orders created in Shopify from the time the job last ran up to the current time.**
-
-When the `Import Order` job runs for the first time, it defaults to downloading orders created in the last 15 minutes. This time frame can be adjusted using the "frequency" parameter.
-
-**How are orders downloaded?**\
-HotWax sends an API request to Shopify, which returns the order details in JSON format. The JSON file is then uploaded to the internal file system of HotWax Commerce for further processing. The `Process Bulk Import Files` job then reads a JSON file and creates order records in HotWax Commerce.
-
-To prevent errors with large files, HotWax limits the download to 100 orders per API call, though Shopify allows downloading up to 250 orders.
-
-Note: To find the Uploaded file, login to HotWax Commerce OMS, then navigate to Hamburger Menu>EXIM Page > Shopify Jobs tab > `Shopify Order MDM`.
-
-**Custom parameters:**
-
-* Recommended frequency for the Import Order job is **15 minutes.**
-* The required parameters for this job is **“frequency”.**
-* It has some more optional parameters.
-
-To know more about Order Download, refer to this [document](https://docs.hotwax.co/documents/learn-shopify/shopify-integration/how-are-orders-downloaded-from-shopify-to-hotwax-commerce/order-download).
+Use [Shopify order download flows](../../../learn-shopify/shopify-integration/orders/order-download.md) to diagnose an existing flow. For launch setup, follow [Chapter 9 of Set up HotWax Commerce with Shopify](../../../system-admin/administration/company/product-store-onboarding.md#9-configure-maarg-admin-order-infrastructure).
 
 ***
+
+## Tenant-specific operational jobs
+
+The remaining entries describe jobs that may exist on older or specialized tenants. They are operational references, not a setup checklist. Run or schedule one only when the supported release owner confirms that the tenant uses that exact job.
 
 ### Approve Orders
 
@@ -54,142 +38,6 @@ HotWax Commerce offers an additional job, `Approved Sales Orders`, designed for 
 
 To know more about Order Approval refer to this [document](https://docs.hotwax.co/documents/learn-shopify/shopify-integration/how-are-orders-downloaded-from-shopify-to-hotwax-commerce/order-approval-for-fulfillment#order-approval-for-fulfillment-in-hotwax-commerce).
 
-***
-
-### Update Orders
-
-Job Name: `Import Order Updates from Shopify`\
-Job Enum Id: `JOB_IMP_ORD_UPD`\
-Service Name: `updateOrdersFromShopify`\
-Flow: Order Update From Shopify to OMS
-
-**The Update Orders job is used for importing updates of orders from Shopify to HotWax, such as adding new items, modifying quantities, or cancelling items within an order.**
-
-When CSRs or customers modify orders in Shopify, the `Import Order Updates from Shopify` job ensures those changes are accurately synced to HotWax. It identifies and updates any orders that have been modified after being downloaded in HotWax. The job retrieves updates for all orders placed between the last job run and the current time.
-
-**How are orders updated in HotWax ?**
-
-HotWax sends an API request to Shopify, which returns the order update details in JSON format. The JSON file is then uploaded to the internal file system of HotWax Commerce for further processing. The `Process Bulk Import Files` job then reads a JSON file and creates order records in HotWax Commerce.
-
-**Note**: To find the Uploaded file, login to HotWax Commerce OMS, then navigate to Hamburger Menu>EXIM Page > Shopify Jobs tab > `Shopify Order MDM`.
-
-**Custom parameters**
-
-* The required parameters for this job is “frequency”.
-* Recommended frequency for this job is every hour (i.e 60 min)
-* It has bufferTime as the optional parameter.
-
-To know more about order updates, refer to this [document](https://docs.hotwax.co/documents/learn-shopify/shopify-integration/how-are-orders-downloaded-from-shopify-to-hotwax-commerce/order-updates#synchronizing-order-updates).
-
-***
-
-### Cancelled Orders
-
-Job Name: `Import Cancelled Orders`\
-Job Enum ID: `JOB_IMP_ORD_CNCL`\
-Service Name: `updateShopifyOrderStatus`\
-Flow: Shopify to HotWax
-
-**The 'Import Cancelled Orders Job\` is used for syncing cancelled orders from Shopify to HotWax. This job retrieves all Shopify orders cancelled between the last job run and the current time.**
-
-When an order is cancelled on Shopify, it can be imported into HotWax Commerce via the `Update Orders Job`, Shopify webhooks, or the `Import Cancelled Orders Job`, which ensures accurate processing when other methods are unreliable.
-
-To sync cancelled orders, it is recommended to schedule both the Update Order and Cancelled Order jobs. The Cancelled Order job handles missed orders but will be deprecated in the near future.
-
-This job specifically checks the `cancelled_at` field for orders on Shopify and compares it with the job’s last run time. If the `cancelled_at` time is later than the job's last run time, the job downloads all canceled orders in batches of 100 to avoid exceeding Shopify's API limit.
-
-**How is cancellation synced?**
-
-HotWax sends an API request to Shopify, which returns the cancelled order details in JSON format. The JSON file is then uploaded to the internal file system of HotWax Commerce for further processing. The `Process Bulk Import Files` job then reads a JSON file and creates order records in HotWax Commerce.
-
-**Custom parameters**
-
-* The required parameters for this job is “frequency”.
-* Recommended frequency for this job is every 30 min.
-* It has bufferTime as the optional parameter.
-
-To know more about Order Cancellation refer to this [document](https://docs.hotwax.co/documents/learn-shopify/shopify-integration/how-does-hotwax-commerce-manage-order-cancellations/complete-order-cancellation).
-
-***
-
-### Cancelled Order Items
-
-Job Name: `Import Cancelled Items`\
-Job Enum ID: `JOB_IMP_ITM_CNCL`\
-Service Name: `cancelOrderItemsFromShopify`\
-Flow : Shopify to HotWax
-
-**The `Import Cancelled Items` job is used to accurately synchronize item cancellations from Shopify to HotWax**. When a customer cancels an item from an order, only that specific item is canceled, not the entire order.
-
-While the Update Orders Job can import canceled items, the Import Canceled Items job acts as a backup to guarantee that cancellations are properly synced. This job retrieves updates for orders placed between the last run and the current time, reflecting any cancellations made in Shopify.
-
-**How Items are Cancelled in HotWax ?**
-
-HotWax sends an API request to retrieve order information, and in response, Shopify provides a JSON format file containing details of orders. The job checks the 'updated at' field in the order JSON and compares the timestamp with the job’s last run time. All orders updated after the last run are imported into HotWax Commerce in batches of 100 to prevent exceeding Shopify’s API limits.
-
-After import, HotWax filters out the orders with canceled items and marks those items as canceled. The order status in HotWax Commerce is not changed; only the status of the canceled items is updated.
-
-**Custom Parameters**
-
-* The required parameters for this job is **“frequency”**.
-* The recommended frequency for this job is **Hourly** (i.e 60 min).
-* bufferTime and createByJobId are optional parameters for this job.
-
-To know more about item cancellations, refer to this [document](https://docs.hotwax.co/documents/learn-shopify/shopify-integration/how-does-hotwax-commerce-manage-order-cancellations/partial-order-cancellation).
-
-***
-
-### Import Order Returns
-
-Job Name: `Import Order Returns`\
-Enum Id: `JOB_IMP_RTN`\
-Service Name: `createReturnsFromShopify`\
-Flow: Shopify to HotWax
-
-**The Import Order Returns job imports returns from Shopify to HotWax after they are completed and marked as "Refund" or "Returned" in Shopify, maintaining the order history.**
-
-Another method for importing returns is subscribing to Shopify webhooks via the Job Manager App, but this approach is not recommended due to the unreliability of Shopify webhooks.
-
-Although Shopify allows fetching 250 returns per API call, to avoid issues with large files, HotWax will download up to 100 returns per API call.
-
-**How are returns imported?**
-
-HotWax sends an API request to Shopify, which returns the order return details in JSON format. The JSON file is then uploaded to the internal file system of HotWax Commerce for further processing. The `Process Bulk Import Files` job then reads a JSON file and creates order records in HotWax Commerce.
-
-Note: To find the Uploaded file, login to HotWax Commerce OMS, then navigate to Hamburger Menu>EXIM Page > Shopify Jobs tab > `Shopify Order Return`.
-
-**Custom Parameters**
-
-* The required parameters for this job is **“frequency”**.
-* The recommended frequency for this job is **6 hours**.
-* financialStatus ,bufferTime ,limit , createdByJobId are the optional parameters.
-
-To know more about return import refer to this [document](https://docs.hotwax.co/documents/learn-shopify/shopify-integration/how-does-hotwax-commerce-manage-order-returns/import-returns-from-shopify)
-
-***
-
-### Webhooks
-
-{% hint style="info" %}
-Webhooks can be subscribed to from the category pages within the Job Manager app for specific categories.
-{% endhint %}
-
-Automated messages sent from eCommerce (Shopify) to OMS whenever an event occurs. They contain data about the event and are received in OMS, allowing real time communication between eCommerce and OMS.
-
-**Subscribe to Shopify eCommerce Webhooks from OMS for:**
-
-<details>
-
-<summary>Orders</summary>
-
-**Webhooks available for:**
-
-1. New Orders
-2. Canceled orders
-3. Payment status
-4. Returns
-
-</details>
 ***
 
 ### Upload

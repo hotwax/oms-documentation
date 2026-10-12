@@ -1,16 +1,22 @@
 ---
-description: >-
-  Easily create and manage user profiles with HotWax Commerce's Users
-  application.
+description: Create users and manage their access from the Company App.
 ---
 
-# Users
+# Users and security
 
-## Introduction
+Use the **Company App** to manage user accounts and the access they receive through Security Groups.
 
-HotWax Commerce's Users application allows businesses to create and manage users within the HotWax Commerce Order Management System (OMS). By establishing user profiles, organizations can grant access to critical operations involving orders, products, and inventory data.
+## Choose a task
 
-## Topics
+* [Create a user](create-user.md)
+* [Manage a user](manage-user.md)
+* [Manage Security Groups and App Permissions](manage-user-permission.md)
+* [Create pickers](add-picker.md)
+* [Troubleshoot application access](troubleshooting/application-access-issue.md)
 
-1. **User Creation:** Seamlessly create new user profiles, defining roles and assigning granular access privileges.
-2. **User Management:** Effortlessly manage existing user accounts, updating permissions and maintaining user information.
+User access has two parts:
+
+* A Security Group assigns permissions to its members.
+* App Permissions shows which Security Groups and users can access each application capability.
+
+Review both areas when a user lacks access to a page or action.

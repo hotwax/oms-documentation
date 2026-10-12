@@ -1,67 +1,39 @@
 ---
-description: Learn how to set up multiple stores in HotWax Commerce.
+description: Learn how Shopify product sync works for multiple Shopify stores.
 ---
 
-# Product Synchronization for Multiple Shopify Stores
+# Product synchronization for multiple Shopify stores
 
-HotWax Commerce streamlines product synchronization from Shopify by selecting one Shopify store as the primary data source. If a client utilizes a multi-store configuration within Shopify for a single brand, the process involves designating one Shopify store for product data sourcing while the other child stores are restricted to product linking. Product linking occurs through the utilization of the primary product identifier established in the Product Store settings, such as `SKU` or `UPCA`. This synchronization process is facilitated by customizable job workflows, which can be configured using the `Job Manager App`.
+This page is architecture background for an advanced launch, not a complete setup procedure. The canonical Shopify onboarding guide covers exactly one shop. Obtain an approved multi-shop implementation plan before configuring any connection or first product import.
 
-Initially, products are synced into the primary catalog through the following job workflows:
+Some retailers run more than one Shopify store for the same brand or catalog. In HotWax Commerce, the product store decides which catalog a Shopify shop belongs to.
 
-[Import Products in Bulk](/documents/retail-operations/workflow/job-management/initial-load.md) (For initial Import) [Import New Products](/documents/retail-operations/workflow/job-workflows/products#import-new-product) (For regular import)
+For multi-store setups, the safest model is:
 
-Subsequently, the primary catalog is linked to the child stores using the following job workflow: [Associate Products with Sub-catalogs](/documents/retail-operations/workflow/job-workflows/products#associate-product-with-sub-catalog)
+* Use one shared HotWax product store when Shopify shops sell the same catalog.
+* Use separate HotWax product stores when Shopify shops sell different catalogs.
+* Use the same product identifier across related Shopify shops when they share a catalog.
 
-## How to Maintain Accurate Catalog for Multiple Shopify Stores
+The product sync console asks users to confirm related Shopify stores before the first import because this choice affects orders, inventory, routing, fulfillment, and reporting.
 
-### Initial Product Creation in Shopify Store
+## Primary and related shops
 
-**Create Product in Shopify Store:**
+When several Shopify shops share one product catalog, one shop usually acts as the main source of product data. Related shops can share the same HotWax product store when their Shopify products use the same identifier convention, such as SKU or barcode.
 
-* Go to your store on Shopify
-* Create new products on Shopify
+This matters because HotWax uses the selected product store and identifier to decide whether incoming Shopify products link to existing HotWax products or create new product links.
 
-**Automatic Sync with HotWax Commerce:**
+## Implementation boundary
 
-* Wait for at least 15 minutes for the automatic sync with HotWax Commerce, if the `Import new products` job is scheduled.
+An approved multi-shop implementation plan must define the authoritative catalog, Product Store ownership, cross-shop identifier policy, import sequence, inventory ownership, location mappings, routing, and rollback before any shop begins its first product import. Do not follow the single-shop guide independently for each related shop.
 
-**Manual Sync (if needed):**
+## Ongoing product updates
 
-* If immediate sync is required, go to the `Job Manager App`.
-* Switch to the desired Shopify shop in the quick switcher from the left bottom.
-* Navigate to the `Products` page > Sync section and run the `Import New Products` job by clicking the `Run Now` button.
+Returning shops use the same product sync history and progress tracking as single-shop setups. HotWax reads product update runs for the selected Shopify shop and applies changes to the HotWax catalog linked to that shop's product store.
 
-**Verify Product Import:**
+Read [Product Sync Console](products/product-sync-console.md) for progress and history behavior.
 
-* Navigate to the `PIM` > `Products` page from the Hamburger Menu.
-* Search for the product by its SKU.
-* Open the details page by clicking on the product.
-* Verify product details are the same as the details added on Shopify.
+## What to avoid
 
-Products are successfully imported in OMS from the Shopify store.
+Don't run legacy product import jobs for child catalogs. The old `Import Products`, `Import Product updates`, and `Import Products in Bulk` Job Manager flows no longer represent the current product sync path.
 
-### Product Association with Child Catalogs
-
-**Create Products in Other Shopify Stores:**
-
-* After the product sync in HotWax Commerce for the primary store, create products in other Shopify stores and they will be automatically associated in OMS with other Shopify stores with the `Associate Products with Sub-catalogs` job.
-
-**Verify Association:**
-
-* Navigate to the `PIM` > `Products` page from the Hamburger Menu.
-* Search for the product by its SKU.
-* Open the details page by clicking on the product.
-* Verify Shopify Shop associations from the `Shopify Shop Product` section.
-
-**Manual Association (if needed):**
-
-In case, there is any failed association or incorrect association created you can manually manage the Shopify shop association through the following steps:
-
-* Open the `Product Detail` page by searching for the product SKU.
-* Navigate to the `Shopify Shop Product` section.
-* Click on `Add` to associate the product with another Shopify Shop by choosing the `Shopify Shop` where you want to associate the product and enter the `Product ID` from the specific Shopify shop.
-* You can also delete associations by clicking on the `delete` icon in the last column of the association table.
-
-{% hint style="warning" %}
-Do not schedule or run `Import products` and `Import Product updates` jobs for child catalogs. Scheduling these jobs for child catalogs can lead to catalog management issues.
-{% endhint %}
+Don't connect unrelated Shopify shops to the same HotWax product store. If two shops use different catalogs or different identifier rules, sharing the same product store can create incorrect product links and downstream order or inventory issues.

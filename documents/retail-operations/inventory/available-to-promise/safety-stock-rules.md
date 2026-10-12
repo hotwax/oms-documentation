@@ -1,53 +1,46 @@
-# Safety Stock Rules
+---
+description: Reserve facility-level inventory for selected products with safety stock rules.
+---
 
-Safety stock allows retailers to reserve inventory for walk-in customers while controlling how much product inventory is committed to online channels. It also helps mitigate the risk of order rejection caused by discrepancies between the system’s inventory and the actual stock available in stores. By maintaining safety stock, retailers can reduce the chances of receiving orders they cannot fulfill. A robust omnichannel order management system makes it easy to track and manage safety stock across all locations. For example, if a retailer has 100 units of a medium-sized Blue shirt from the NotNaked brand at their Times Square store and wants to reserve 10 units for in-store customers, the Available-to-Promise (ATP) inventory for that store would be reduced to 90 units.
+# Configure safety stock rules
 
-## Step-by-Step Instructions to Set Up Safety Stock Rule
+Safety stock reserves inventory at each affected facility so that quantity is not promised to online orders.
 
-### Create Rule
+For example, if a facility has 100 units and a safety stock value of 10, the facility contributes at most 90 units before other deductions.
 
-To create a new safety stock rule, click the `Add` button on the `Safety Stock` page, located at the bottom right corner. This will open the rule configuration page where you can define the safety stock levels.
-
-### Rule Name
-
-Enter a descriptive and unique name for the rule, such as “Safety Stock- Retail Stores.” This name will help you quickly identify and manage the rule later.
-
-### Rule Configuration
-
-Set the product's safety stock level. In this case, the safety stock level will be 10 units per store, meaning you are reserving 10 units of the product at each store location to ensure sufficient stock for walk-in customers.
-
-### Selecting Facility
-
-Safety stock rules apply to facility groups. When creating these groups for the first time, it’s recommended to create a group that includes only your retail stores. If a similar group already exists, use the `Include` card to add that group, enforcing the 10-unit safety stock rule. You can also create custom groups as needed from the `Facility Group` page. If necessary, use the `Exclude` card to exclude specific facility groups. Alternatively, you can toggle an option to apply the rule to all stores if the same rule applies across all locations.
-
-### Selecting Products
-
-If you want to create a blanket rule to add safety stock on all products, you don’t have to select any products. However, if you want to add safety stock for specific products, you can select the products either by `Product Tag` or `Product Feature`.
-
-#### Selecting Products by Tags
-
-Use the `Include` or `Exclude` options by clicking the add button in the relevant card and selecting product tags synced from your product catalog. For example, to apply the rule specifically to the Blue Shirt, you would select the “Blue Shirt” tag.
-
-#### Selecting Products by Features
-
-You can also filter products based on specific attributes such as color, size, or category by using the add button. For instance, to target the Blue Shirt of Medium size for your safety stock rule, select “Color: Blue” and “Size: M.”
-
-### Saving Configuration
-
-Once you’ve set the safety stock level, selected the facilities, and applied the product tags or features, click the `Save` button at the bottom right corner to apply the rule. The system will now reserve 10 units of the selected products at each selected store location for walk-in customers.
-
-{% embed url="https://youtu.be/s3jwK7BiW3A" %}
-Safety Stock Rule
+<!-- markdownlint-disable-next-line MD034 -->
+{% embed url="https://drive.google.com/file/d/1ZVyzgP4IEKDQpXGusVvHfpAsj9ecdA09/view?usp=drive_link" %}
+Attribute-Based Safety Stock
 {% endembed %}
 
-## Schedule Safety Stock Rule
+## Create a safety stock rule
 
-Retailers can manage the scheduling of the ATP computation job responsible for the safety stock rule from the safety stock page. By default, ATP computation jobs are scheduled to run at midnight to ensure ATP calculations occur when store traffic is minimal, making the inventory ATP ready before the start of the day.
+1. Open `Sourcing` > `Safety stock`.
+2. Select `Create safety stock rule` when the page has no rules, or select the add button.
+3. Enter a unique `Name`.
+4. Enter a non-negative `Safety stock` value.
+5. Define the facility scope:
+   * Turn on `Select all facility groups` to apply the rule to every available group.
+   * Otherwise, select `Add` under `Included` and choose at least one facility group.
+   * Add groups under `Excluded` to remove them from the included scope.
+6. Select the button that shows the number of impacted facilities and confirm the resulting facility count.
+7. Define the product scope under `Products by tags` and `Products by feature`.
+8. Leave the product filters empty to apply the rule to all products in the facility scope.
+9. Select the save button.
 
-However, if you have created a new rule and want to compute ATP immediately, you can run a job once by selecting the relevant option from the job's overflow menu.
+If no facility groups are available, select `Create facility group` or `Use an existing group` from the rule form.
 
-Once the safety stock rules are created, they will be visible as rule cards on the safety stock page as per the created rule. Each rule card provides an overview of configurations and product facility selections. Retailers can click the "Edit rule" button to modify rule configurations. The rule configuration can be adjusted by clicking on the chip of the safety stock rule and updating the number.
+## Review and edit rules
 
-{% embed url="https://youtu.be/lBCfzeTJqbo" %}
-Scheduling Safety Stock Rule
-{% endembed %}
+Expand a rule card to review its safety stock value, facility groups, and product filters.
+
+* Select the safety stock value chip to change the value without opening the full form.
+* Select `Edit rule` to change the name, facility scope, or product filters.
+* Select the archive button to remove the rule from the active sequence.
+* Expand `Archived` to restore an archived rule.
+
+## Set rule priority
+
+The last matching rule in the sequence sets the safety stock value for a product and facility.
+
+Use the sequence button at the bottom of the page, drag broad rules before specific rules, then select the save button. For more detail, see [Schedule sourcing rules](schedule-atp-rules.md).

@@ -12,13 +12,13 @@ While developing this integration, several challenges surfaced, necessitating ad
 
 In a usual setup, ERP systems share a file comprising all active products for inventory synchronization with HotWax Commerce. However, the client’s Retail Pro version could only share a file containing all products ever created in Retail Pro, not just the active ones. This led to an inflated file size, causing prolonged processing times in HotWax Commerce.
 
-To address this, we implemented additional logic to filter the file against products created in HotWax from the eCommerce platform. The refined file now only contains inventory by facility for online-published products, significantly reducing file size from 300MB to 70-80KB. HotWax Commerce reads this new file and updates the inventory records to match Retail Pro's data accurately.
+To address this, we implemented additional logic to filter the file against products created in HotWax from the eCommerce platform. The refined file now only contains inventory by facility for online-published products, significantly reducing file size from 300MB to 70-80KB. HotWax Commerce reads this new file and updates the inventory records to match Retail Pro's data.
 
 ### Incorrect inventory counts due to partially shipped orders in HotWax Commerce
 
-HotWax Commerce sends orders to Retail Pro for invoicing, but only fully fulfilled orders are pushed. The Order section discusses why partially fulfilled orders are excluded. Because partially fulfilled orders are excluded, the morning inventory reset file sent by Retail Pro does not account for these scenarios. This discrepancy inflates the inventory count in HotWax Commerce and requires a specific solution.
+HotWax Commerce sends orders to Retail Pro for invoicing, but only fully fulfilled orders are pushed. The Order section explains why partially fulfilled orders are excluded. Because partially fulfilled orders are excluded, the morning inventory reset file sent by Retail Pro does not account for these scenarios. This discrepancy inflates the inventory count in HotWax Commerce.
 
-To address this, the HotWax Commerce integration platform identifies partially fulfilled orders, calculates the inventory deductions not communicated to Retail Pro, and generates an inventory variance file. HotWax Commerce loads this file after the main reset inventory file to correct inventory numbers.
+To address this, the HotWax Commerce integration platform identifies partially fulfilled orders, calculates the inventory deductions not communicated to Retail Pro, and generates an inventory variance file. This file is loaded in HotWax Commerce after the main inventory reset file to correct inventory numbers. Timing is critical: the variance file must be processed after the main inventory reset file to avoid discrepancies.
 
 #### Example showing intricacies of the "Partially shipped orders"
 
@@ -94,7 +94,7 @@ To address this, the HotWax Commerce integration platform identifies partially f
     | A            | -2       | 0         |
     | B            | -2       | 0         |
     | C            | 0        | 0         |
-7.  Finalized and accurate inventory counts in HotWax Commerce after processing both the main reset inventory file and the inventory variance file.
+7.  Finalized and accurate inventory counts in HotWax Commerce after processing both the main inventory reset file and the inventory variance file.
 
     **Inventory snapshot at HotWax Commerce:**
 

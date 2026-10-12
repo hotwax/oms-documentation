@@ -1,57 +1,51 @@
 ---
-description: >-
-  Efficiently manage inventory across multiple sales channels with HotWax
-  Commerce's Facilities App.
+description: Set up Shopify inventory event sync for channel ATP and physical locations.
 ---
 
-# Multichannel inventory setup
+# Set up Shopify inventory event sync
 
-Managing inventory across multiple sales channels is crucial for retail brands to avoid overselling, and ensure efficient order fulfillment. HotWax Commerce addresses this challenge by introducing the capability to manage multiple Available-to-Promise (ATP) inventories for each sales channel. This feature allows retail brands to allocate separate inventories for different channels, minimizing the risk of penalties for delayed fulfillment or overselling.
+Use the Order Routing Rules app to define inventory channels, facility membership, and sourcing rules. Use `Inventory sync` in the Company App to configure and monitor Shopify inventory event publication for both channels and physical locations.
 
-With the `Facilities App` in HotWax Commerce, retail brands can create distinct `Sales Channel Groups` for each sales channel. Facilities like warehouses and retail stores can be assigned to specific groups, enabling brands to control which inventory from which location is available for sale on each channel. This capability streamlines inventory management, reduces operational complexity, and enhances workflow efficiency for retail brands operating in diverse sales environments.
+This page covers outbound OMS-to-Shopify publication after cutover. For the one-time inbound starting inventory seed, follow [Chapter 8 of Shopify onboarding](../administration/company/product-store-onboarding.md#8-seed-starting-inventory-from-shopify).
 
-**Step-by-Step Usage Instructions:**
+## Define an inventory channel
 
-1. **Access Facility Group Page:**
-   * Log in to the `Facilities App` from the Launchpad.
-   * Navigate to the `Facility Group` [page](../administration/facilities/manage-groups.md) within the `Facilities App`.
-2. **Create New Group:**
-   * Scroll to the bottom of the page and click on the `Create group` button to create a new group for the sales channel you want to set up inventory.
-3. **Enter Group Details:**
-   * Fill in the required details such as `Name`, `Internal ID of the Facility Group`, and `Description`.
-   * Select the system group type as `Online Facility Group` to indicate that this facility group would be used to sell inventory on online channels. The facility groups with the `Online facility Groups` type are also visible in the `sell online` card on the `facility details` [page](./../administration/facilities/manage-facility-details.md#online-fulfillment-settings).
-4. **Save Group:**
-   * Click on the `+` icon to save the newly created inventory group.
-5. **Quick Edit Facilities:**
-   * Once the facility is created, click on the number displayed on the facility card corresponding to the created group.
+1. Open `Sourcing` > `Channels` in the Order Routing Rules app.
+2. Create or select the channel facility group.
+3. Confirm the facilities that should contribute inventory.
+4. Link the configuration facility used by channel-level sourcing rules.
+5. Review the applicable threshold, safety-stock, pickup, and shipping rules.
 
-<figure><img src="../.gitbook/assets/facility-group-quick-edit.png" alt=""><figcaption></figcaption></figure>
+See [Create inventory channels](../../retail-operations/inventory/available-to-promise/create-channels.md) for detailed steps.
 
-* Select `Quick Edit` to efficiently manage facilities associated with this group.
+## Choose the Shopify target model
 
-6. **Add Facilities:**
+| Target | Mapping and event publication |
+| --- | --- |
+| Physical location | One Shopify location maps to one OMS facility. Physical-location events publish facility ATP changes as adjustments to Shopify available inventory. |
+| Aggregate location | One Shopify location maps to an inventory channel. Channel events publish ATP changes calculated for its facility group. |
 
-* Add all relevant facilities to the inventory group you want to include for selling inventory on the chosen channel.
-* Facilities can also be added from the `Facility Details` page by turning on the toggle for that channel in the `sell online` card, which will automatically add that facility to the online facility group of that channel.
+Do not use a physical Shopify location as an aggregate target. Choose a separate aggregate location that is not mapped to another active channel. A physical on-hand reset is a separate reconciliation action; it does not make the physical event stream a QOH stream.
 
-7. **Navigate to the Job Manager App:**
+## Set up event-driven Shopify publication in Company
 
-* Access the `Job Manager` app from the Launchpad.
+1. Open the Company App, select `Shopify`, and open the connection.
+2. Confirm its shop and Product Store, then select `Inventory sync`.
+3. For an aggregate target, select `Set up channel`, choose its facility group and eligible Shopify location, and create the channel.
+4. Review the channel's `Send channel batches` and `Reset channel ATP` jobs. Missing supported jobs created with `Set up` start paused.
+5. For physical targets, confirm the Shopify-location-to-facility mappings and review `Publish physical batches (all shops)` plus the applicable physical reset jobs.
+6. Review the approved capture controls, publisher/sender configuration, parameters, and schedules for both paths. Do not activate a duplicate publisher for the same target.
+7. Reconcile the applicable targets and verify Shopify quantities before relying on incremental delivery.
+8. Keep manual discard jobs paused and unscheduled.
 
-8. **Select Channel:**
+<figure><img src="../.gitbook/assets/company-inventory-monitor-main.jpg" alt="Company Inventory sync monitor showing channel and physical-location event queues and their jobs"><figcaption><p>The two event paths have separate queues and jobs. Review the selected Shopify target before changing capture or publication settings.</p></figcaption></figure>
 
-* Select the desired channel, such as Shopify or Amazon from the quick switcher located at the left bottom of the page.
+See [Monitor Shopify inventory sync](../administration/company/manage-shopify-inventory-sync.md) for setup, event history, capture controls, job monitoring, and recovery.
 
-9. **Schedule Inventory Synchronization Jobs:**
+## Reconcile the correct inventory path
 
-* HotWax Commerce has [two inventory synchronization jobs](/documents/retail-operations/workflow/job-workflows/inventory.md) : `Hard Sync` and `Upload Recent Inventory Changes`.
-* Schedule both jobs by specifying the Facility's internal ID in the `facilityGroupId` parameter.
-* This ensures that the inventory for the chosen channel is updated according to the `facilities` added to the corresponding `facility group`.
+Use `Reset channel ATP` for the selected aggregate channel. Use `Reset physical ATP (this shop)` for mapped physical-location available inventory. Use `Reset physical on-hand` only when on-hand reconciliation is required.
 
-By following these steps, users can efficiently set up multi-channel inventory management within HotWax Commerce, enabling seamless synchronization of inventory across various online sales channels.
+Changes made while event capture is off are not recorded for later replay. Coordinate the approved capture change and appropriate reconciliation for every affected target. Enabling real-time event feeds requires restarting every OMS node after saving; follow the detailed monitor guide and the deployment team's change plan.
 
-{% hint style="info" %}
-Whenever a new facility is added to an existing online facility group, the Hard Sync job needs to be scheduled to ensure that inventory of that facility is added to the ATP of that sales channel
-{% endhint %}
-
-***
+A successful reset job or sender run does not prove the final Shopify quantity. Check event and batch results and verify the same variant at the mapped Shopify location.

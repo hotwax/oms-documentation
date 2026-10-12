@@ -17,7 +17,7 @@ The Reorder Point feature automates the replenishment process by enabling users 
 
 ## The Implementation
 
-Reorder Point involves leveraging a dedicated reorder channel within the Order Management System (OMS). This channel operates independently of the primary sales channel and serves solely to trigger reorder reports and manage inventory thresholds. Please refer to this [user guide](https://docs.hotwax.co/documents/retail-operations/inventory/available-to-promise/create-channel) on how to make a new channel in HotWax Commerce.
+Reorder Point uses a dedicated inventory channel in HotWax Commerce. This channel is separate from the primary sales channel and exists only to trigger reorder reports and apply the reorder threshold. See [Create inventory channels](available-to-promise/create-channels.md) to create the channel.
 
 For example, if the primary sales channel, say A, starts with 100 units and has a reorder point of 10 units, a reorder Channel, say B, would have 100 inventory with a 10 threshold. As sales occur on the inventory channel A, inventories in both A and B decrease concurrently. When A sells 90 units, B's online inventory becomes depleted, triggering an automated reorder report while allowing online sales on A.
 

@@ -1,49 +1,75 @@
 # Configuration options
 
-## Add a configuration
+## Older OMS configuration fields
 
-To create a new import configuration:
-1. Click the `Add` button on the Data Manager Configurations list page.
-2. Enter the configuration details in the dialog.
+On older OFBiz administration screens, to create a configuration, select `Add` and enter the confirmed import or export details. To edit an existing configuration, search by name or ID and select the `Edit` icon.
 
 {% hint style="info" %}
-The Config ID cannot be modified after creation. To use a different ID, create a new configuration.
+`Config ID` cannot be modified. To use a different ID, create a new configuration.
 {% endhint %}
 
-## Edit a configuration
-To edit an existing configuration:
-* Use the search bar on the Data Manager Configurations list page to find the configuration by name or ID.
-* Click the configuration ID link to open its detail page.
-* Click the `Edit` button in the toolbar to open the edit dialog.
-
-### Configuration fields
-| Field                | Description                                                                                                         |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Config ID**        | Unique identifier for the configuration. Cannot be changed after creation.                                          |
-| **Description**      | Short explanation of what the configuration handles.                                                                |
-| **Import Service**   | Service name that handles incoming data.                                                                            |
-| **Execution Mode**   | How the OMS prioritizes processing. Select from `Queued`, `Sync`, or `Async`. Defaults to `Queued`.                |
-| **Multi-threading**  | Y/N flag to enable multi-threading for all files imported under this config. Defaults to `N`.                       |
-| **Priority**         | Numeric value that determines which thread pool handles this configuration. Priorities greater than `6` route to the `PRIORITY` pool; `6` and below (and an empty value, which defaults to `5`) route to the `NORMAL` pool. |
-| **Thread Pool**      | Read-only. Displays the worker pool (`PRIORITY` or `NORMAL`) assigned based on the Priority value.                 |
+| Field | Description |
+| --- | --- |
+| `Config ID` | Unique identifier for the configuration. |
+| `Description` | Short explanation of what the configuration handles. |
+| `Import Service` | Service name that handles incoming data. |
+| `Import Path` | SFTP folder path for imported files. |
+| `Export Content ID` | Template identifier used while exporting data. |
+| `Export Service` | Service that handles outgoing data. |
+| `Export Path` | SFTP destination folder for exported files. |
+| `File Name Pattern` | A regular expression that limits an SFTP import to matching files. |
+| `Multi-threading` | Controls whether files for this configuration can be processed with multiple threads. |
+| `Execution Mode` | Determines how the order management system (OMS) schedules processing for this configuration. |
+| `Notify on Failure` | Controls whether failure notifications are sent for this configuration. |
 
 {% hint style="danger" %}
-Execution mode should always be set to Queued.
+Keep the configured execution mode unless your HotWax Commerce implementation team instructs you to change it.
 {% endhint %}
 
 {% hint style="danger" %}
-Multi-threading should be disabled on all configs unless explicitly instructed by HotWax Support. Incorrect use of multi-threading can cause system overload and downtime. If multi-threading is enabled, the configuration must be set to execute in Queued mode, or you risk causing a system overload.
+Do not enable multi-threading unless your HotWax Commerce implementation team has approved the configuration. It can change how bulk files use OMS processing capacity.
 {% endhint %}
 
-## View a configuration
-You may need to view a data manager configuration to manually import data or to audit data that has been imported by another user or a scheduled SFTP import job.
+{% hint style="info"%}
+Notifications are sent to the email addresses configured for the instance.
+{% endhint %}
 
-1. On the Data Manager Configurations list page, click the **Config ID** link for the configuration you want to view.
-2. The configuration detail page opens, showing all configuration fields and a log of all imports for that configuration.
+## Review an older OMS configuration
 
-From the configuration detail page, you can also:
-- **Download a sample CSV template** — Click the CSV icon in the toolbar to download a template file pre-populated with the column headers expected by the import service.
-- **Download a sample JSON template** — Click the JSON icon in the toolbar to download a JSON template pre-populated with the parameter names expected by the import service.
-- **Upload a file** — Click `Upload File` to manually submit a CSV or JSON file for import.
+Use `Settings` > `Data Manager Configurations` to inspect or maintain the backend import or export contract.
 
-Once a file is done processing, its status will change to **Finished**. If processing finishes with error records, download the error file for review. Error files are in CSV or JSON format with error reasons attached to each record
+1. Search for the configuration by name or ID.
+2. Open the configuration.
+3. Confirm its service, file paths, file name pattern, execution settings, and notification behavior.
+4. Change a value only after the configuration owner confirms the expected contract.
+
+Use Job Manager for daily operations:
+
+- [Upload a file manually](../job-manager/mdm/manual-uploads.md)
+- [Monitor file processing](../job-manager/mdm/file-history.md)
+- [Review file details](../job-manager/mdm/file-details.md)
+
+## Maarg configuration fields
+
+On the Moqui-based Maarg administration screen, open `MDM` > `Configs`.
+
+1. Select `Add` on the configuration list to create a configuration.
+2. To edit one, search by ID or description, open the Config ID link, and select `Edit` on its detail page.
+3. Save the confirmed settings. The Config ID cannot be changed after creation.
+
+The Maarg create and edit dialogs expose these fields:
+
+| Field | Description |
+| --- | --- |
+| `Config ID` | Unique identifier, entered at creation and fixed afterward |
+| `Description` | Describes the data handled by the configuration |
+| `Import Service Name` | Service invoked for records in the imported file |
+| `Execution Mode` | `Queue`, `Async`, or `Sync`; an empty value uses `DMC_QUEUE` in the runner. See [Maarg runner behavior](README.md#maarg-runner-and-thread-pools) before changing it |
+| `Multi Threading` | `Y` enables CSV or JSON chunk processing; an empty value is treated as disabled |
+| `Priority` | Greater than `6` selects `PRIORITY`; `6` and below select `NORMAL`. An empty value defaults to `5` |
+
+The detail page also displays the read-only `Thread Pool`, derived from the priority. The older OMS fields listed above are not all available in the Maarg create and edit dialogs.
+
+Keep queue mode selected and multi-threading disabled unless your HotWax Commerce implementation team has approved a different configuration. Multi-threading allows chunks of one file to run concurrently, even when files within the configuration are queued sequentially.
+
+The configuration detail page provides sample CSV and JSON downloads, `Upload File`, and import logs. See [Manual Imports](manual-import.md#maarg-administration-upload) and [View Logs](view-mdm-log.md#maarg-administration-logs) for this backend workflow.

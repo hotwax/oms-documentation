@@ -84,3 +84,4 @@
 * [Error Logs](troubleshooting/finding-logs.md)
 * [Failure Notifications](troubleshooting/notifications.md)
 * [Order Sync Failure](troubleshooting/order-do-not-sync.md)
+* [Missing Customer Deposit](troubleshooting/missing-customer-deposit.md)

@@ -45,6 +45,22 @@ When a count is moved to the `In progress` state (by tapping `Start counting`), 
   * **All requested items counted:** Verifies there are no uncounted directed items. If there are still uncounted SKUs, the manager should follow up with the team.  
   * **`Submit for review` button:** Becomes enabled only when all checklist items are satisfied. Clicking this sends the completed count to head office for audit and final approval. Once submitted, the count appears in `Pending review` for regional managers.
 
+### Why submission is unavailable
+
+Check the submission requirements in order. Submitting every session does not automatically submit the whole count. Review undirected items separately and keep or discard them according to the intended scope; they do not have to be discarded just to enable submission.
+
+```mermaid
+flowchart LR
+    accTitle: Requirements to submit a cycle count
+    accDescr: Submission requires permission, an in-progress count, all sessions submitted, and no remaining requested items. All four checks must pass and item lists must finish loading.
+    A["Submission permission"] --> E["All four checks pass"]
+    B["Count In progress"] --> E
+    C["All sessions submitted"] --> E
+    D["No requested items uncounted"] --> E
+    E --> F["Item lists finish loading"]
+    F --> G["Submit for review"]
+```
+
 ### Managing sessions and submission
 
 1. Monitor session status. Ensure each associate submits their session when finished. If a session is stuck in `In progress`, follow up with the associate to complete their counts.  
@@ -123,7 +139,7 @@ Read more details about performing a count on [this page](start-complete-session
     
 * Ensure session discipline. Require associates to submit their sessions promptly. Sessions left open for days can lead to stale data and variances.  
     
-* Verify all items counted. Do not submit a count until the uncounted and undirected tabs are zero. Head office may reject incomplete counts, delaying inventory reconciliation.  
+* Verify all items counted. Resolve the remaining requested items and review whether undirected items belong in the count before submitting. Head office may reject incomplete counts, delaying inventory reconciliation.
     
 * Keep notes for exceptions. If some items cannot be counted (damaged or missing), document reasons and communicate them to head office. Proper documentation supports accurate adjustments.
 

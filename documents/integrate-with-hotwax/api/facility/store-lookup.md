@@ -16,7 +16,7 @@ The API allows to look up the stores accepting BOPIS orders near the customer’
 
 Method: `POST`
 
-Example: Host: https://demo-maarg.hotwax.io/rest/s1/api/store
+Example: Host: <https://demo-maarg.hotwax.io/rest/s1/api/stores>
 
 ### Header
 
@@ -48,6 +48,13 @@ Content-Type: application/json
 | `sortBy`         | Sort data based on the attribute, for example: "storeDistance asc" sorts results by distance | N              |
 | `keyword`        | Keyword search (only on storeName, storeCode, and externalId)                                | N              |
 | `fieldsToSelect` | The list of fields to select, all the fields can be filtered in response                     | N              |
+
+### Location search considerations
+
+* The `point` parameter requires valid latitude and longitude values. Stores without valid geolocation data cannot be returned by a proximity search.
+* A narrow `distance` can return no stores even when eligible stores exist outside the radius. If a proximity request returns no results, increase the radius or omit `distance` to search without a radius limit.
+* Do not include `sortBy` with `point`. The API sorts proximity results by distance automatically.
+* Do not include `fieldsToSelect` with `point`. Use it only for non-proximity searches.
 
 ## Response
 

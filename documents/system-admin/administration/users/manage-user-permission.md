@@ -1,52 +1,67 @@
 ---
-description: >-
-  HotWax Commerce offers advanced security permissions tailored to employee
-  roles, ensuring operational integrity and preventing unauthorized actions
-  across all Enterprise User Apps.
+description: Manage Security Groups and review application access in Company.
 ---
 
-# Manage User Permissions
+# Manage Security Groups and App Permissions
 
-HotWax Commerce provides retailers with a suite of Enterprise User Apps to ensure seamless omnichannel operations such as same-day BOPIS, Ship From Store, and Pre-Order management. The Enterprise User App suite is accessible to all employees across the organization, from pickers to the head of operations, with each user assigned a specific role and provided with appropriate training.
+Security Groups bundle permissions for a role. App Permissions provides an application-centered view of those permissions and the users who receive access.
 
-By enabling or disabling app features and actions in accordance with the logged-in user's granted authorizations, HotWax Commerce provides superior security clearance management. This granular control guarantees that only authorized employees have access to specific app features, thereby assisting retailers in preventing unintended alterations to the apps. The User permission feature in HotWax Commerce offers retailers the flexibility to alter permissions for each group according to specific requirements. Additionally, the platform allows for the creation of new security groups with tailored permissions, providing unprecedented flexibility in user access management.
+## Review a Security Group
 
-## Create Security Group
+1. Open the **Company App**.
+2. Go to `Users` > `Security Groups`.
+3. Search for the group.
+4. Select the group.
+5. Review:
+   * User access
+   * Permissions
+   * Authorizations
 
-The `Create Security Group` feature enables retailers to create customized security groups tailored to specific roles or responsibilities within their organization. By defining access levels through these groups, retailers can ensure that users only have access to the functionalities necessary for their tasks, enhancing security and efficiency within the platform.
+Use the group details page when you need to understand or change one role.
 
-### Example
+## Create a Security Group
 
-Suppose retailers have different users for sales order fulfillment and managing transfer orders. In such cases, they may need to create a user role responsible for fulfilling only the transfer orders in the fulfillment app and receiving the transfer shipments in the receiving app. Retailers can create such user security groups through the following steps:
+1. Go to `Security Groups`.
+2. Click the create button.
+3. Enter the group name, ID, and description.
+4. Save the group.
+5. Open the new group.
+6. Add the permissions approved for the role.
+7. Add users only after the permission list is reviewed.
 
-1. **Accessing the Permission App:**
-   * Navigate to the `Permission` section in the User Management App
-   * Locate the `Create Security Group` option, typically found in the last section of the permissions interface.
-2. **Creating a Security Group:**
-   * Click on the `+ Create Security Group` button.
-   * Input relevant details such as the Name, internal ID, and description for the new security group.
-3. **Adding Permissions:**
-   * After creating the security group, click on the checkboxes corresponding to the permissions you wish to assign to this group.
-4. **Finalizing Setup:**
-   * Once all necessary permissions have been selected, click on the `Finish Setup` to finalize the creation of the security group.
+Use a stable ID. The group name and description can explain the business role.
 
-By enabling the creation of customized security groups and precise assignment of permissions, this feature ensures that users have access only to the functionalities necessary for their roles, thereby minimizing security risks and optimizing productivity within the platform.
+## Change a Security Group
 
-{% embed url="https://youtu.be/KFs_FsSTC30" %}
+1. Open the group.
+2. Review current users and permissions.
+3. Edit the group name or description when needed.
+4. Add or remove the intended permissions.
+5. Save the changes.
+6. Test with a user assigned to the group.
 
-## Edit Security Group
+Removing a permission affects every user who receives it through that group. Check whether another Security Group still grants the same permission before concluding that access was removed.
 
-By allowing users to edit security group details such as name, internal ID, description, and permissions, HotWax Commerce empowers retailers to adapt security settings according to evolving organizational needs and user roles. This feature significantly contributes to workflow efficiency by streamlining the process of managing user access rights and maintaining a secure environment for business operations.
+## Review App Permissions
 
-### Example
+Use App Permissions when you start with an application or capability instead of a role.
 
-Store associates often have permission and access to manage orders both for the store pickup order and regular shipping orders. However, if a retailer aims to separate these permissions and keep different users to manage store fulfillment orders and BOPIS orders, they need to create a new user group specifically for BOPIS fulfillment and remove BOPIS fulfillment permissions from the existing store associate role. By reallocating permissions and ensuring proper group assignments, the retailer ensures that store associates have access only to the functionalities relevant to store fulfillment.
+1. Go to `Users` > `App Permissions`.
+2. Select an application.
+3. Select a permission.
+4. Review:
+   * Security Groups with access
+   * Assignment history
+   * Users with access
+5. Open the relevant Security Group to make an approved change.
 
-#### Step-by-Step Usage Instructions
+The catalog reflects the permissions available in the current OMS environment. Use it instead of a copied static permission list.
 
-1. **Access Security Group Settings:** Navigate to the `permissions` tab within the `User Management App`.
-2. **Select Security Group:** Identify the security group you wish to edit from the list displayed. Click on the group to view the granted permissions.
-3. **Modify Permissions:** Review the permissions assigned to the security group. You can adjust permissions by checking or unchecking the checkbox against the permission to add or remove access to specific functionalities.
-4. **Edit Name and Description:** You can also change the name and description of the user permissions by clicking on the `edit button` available in front of the permission's name.
+## Verify a change
 
-{% embed url="https://youtu.be/Ud0hYiHqLBk" %}
+1. Confirm that the user belongs to the expected Security Group.
+2. Confirm that the group contains the required permission.
+3. Ask the user to sign out and sign in again when access remains unchanged.
+4. Open the exact page or action being tested.
+
+See [Troubleshoot application access](troubleshooting/application-access-issue.md) when the task remains unavailable.

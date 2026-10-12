@@ -288,7 +288,7 @@ No, users do not need to be store managers to handle receiving and fulfilling ta
 
 <summary>What needs to be configured when setting up a new instance of HotWax Commerce?</summary>
 
-When setting up a new instance of HotWax Commerce, the following configurations need to be completed: - \*\*Product Store Configuration\*\*: Set up the Product Store Name, Currency, Auto Approve Order, Auto Cancel Days, Sales Order ID Prefix, Allow Split and Product Identifier. - \*\*Initial Setup Tasks\*\*: Add DBICs, configure Product Stores, add more Product Stores, set up the company name, load facilities, and load System Property data. - \*\*User and Gateway Configuration\*\*: Create your first system user and add shipping gateways. - \*\*Shopify Integration\*\*: Connect a Shopify Store, map Shopify locations, and set up Shopify Mappings. - \*\*Solr Indexing Configuration\*\*: Manage Solr indexing for efficient data retrieval and search operations. Refer to the user manual for detailed instructions.
+For a new instance with one Shopify shop, use [Set up HotWax Commerce with Shopify](../system-admin/administration/company/product-store-onboarding.md). It is the single required sequence from claiming the initial Maarg administrator through company and Product Store defaults, Shopify connection, products, facilities, inventory, orders, routing, users, and end-to-end validation. NetSuite, multiple shops, migrations, pickup, preorders, returns integrations, SFTP, and other advanced launch variants require separate implementation guides.
 
 </details>
 
@@ -313,6 +313,7 @@ Yes, a user can be associated with different facilities within different apps. T
 <summary>Is there a mobile app for store associates and managers?</summary>
 
 Yes, there are several mobile apps available for store associates and managers, including:
+
 1. **HotWax Commerce's Inventory Count App**: Designed for inventory management.
 2. **HotWax Commerce's Inventory Receiving App**: Manages ASN, Purchase Orders, and Returns.
 3. **HotWax Commerce's BOPIS Fulfillment App**: Manages Buy Online Pick-up In Store (BOPIS) functionality.

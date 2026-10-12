@@ -1,6 +1,6 @@
 ---
 description: >-
-  Learn how retailers uses different approaches to handle exchanges across
+  Learn how retailers use different approaches to handle exchanges across
   Shopify, NetSuite, Loop, and HotWax Commerce.
 ---
 
@@ -43,7 +43,7 @@ Exchanges can be handled in various ways by different retailers, each employing 
 
 Exchange orders that are created in Shopify are imported into HotWax Commerce just like regular sales orders. Given that exchanges are created by Loop in Shopify, they are assigned the sales channel `Loop Exchange` within Shopify. Consequently, all exchange orders imported into HotWax Commerce have a `Loop Exchange` sales channel as well.
 
-When it comes to pushing sales order data from HotWax Commerce to NetSuite, the handling of all web orders remains consistent irrespective of the sales channel they originate from. The generated order feed from HotWax commerce is also generic, similar to that of regular orders. This means that HotWax can synchronize web exchange orders to NetSuite in the same manner it synchronizes regular orders.
+When it comes to pushing sales order data from HotWax Commerce to NetSuite, the handling of all web orders remains consistent irrespective of the sales channel they originate from. The generated order feed from HotWax Commerce is also generic, similar to that of regular orders. This means that HotWax can synchronize web exchange orders to NetSuite in the same manner it synchronizes regular orders.
 
 More specifically, for all web exchange orders, the sync for Customers, Sales Order Item Line IDs, Sales Order IDs, Order Allocation, and Fulfillment remains consistent between [HotWax Commerce and NetSuite](../sales-order/order-approval.md).
 
@@ -61,7 +61,7 @@ In the event, payments are captured in Shopify and payment records are created i
 
 #### Restocking Item from the Original Order
 
-Exchanges involve returning a purchased item for a different product. Therefore, it’s crucial to restock the inventory from the original order.
+Exchanges involve returning a purchased item for a different product, making it crucial to restock the inventory from the original order.
 
 Upon physically receiving the returned inventory from the original order, NetSuite generates item receipt records and updates the inventory count accordingly. Subsequently, HotWax Commerce synchronizes these item receipt records from NetSuite and accurately updates the inventory count.
 
@@ -69,11 +69,11 @@ Upon physically receiving the returned inventory from the original order, NetSui
 
 Exchange orders that are created in Shopify POS are imported into HotWax Commerce just like regular POS sales. Given that POS exchanges are created by Loop in Shopify, they are assigned the sales channel `Loop Exchange` within Shopify. Consequently, all POS exchanges imported into HotWax Commerce have a `Loop Exchange` sales channel as well.
 
-POS exchange sales are similar to other POS sales as both transactions are recorded within the physical store.
+POS exchange sales are similar to other POS sales since both transactions are recorded within the physical store.
 
 When POS sales are downloaded in HotWax Commerce, POS sales have a `Completed` order status, the sales channel is set to `POS\_Channel`, and the shipping method is set to `POS\_COMPLETED`.
 
-While, in the case of POS exchange sales, although they also have a `Completed` order status, their sales channel is `Loop Exchange.` Due to this distinction, HotWax Commerce is unable to assign their shipping method as POS\_COMPLETED. Instead, it is designated as `Two-Day Shipping` as default.
+In the case of POS exchange sales, they also have a `Completed` order status, but their sales channel is `Loop Exchange.` Due to this distinction, HotWax Commerce is unable to assign their shipping method as POS\_COMPLETED. Instead, it is designated as `Two-Day Shipping` by default.
 
 | Attribute       | POS Sales      | POS Exchange Sales |
 | --------------- | -------------- | ------------------ |
@@ -95,7 +95,7 @@ As previously discussed, the [synchronization of POS sales from HotWax Commerce 
 
 When an item from the original order is returned on Shopify POS, HotWax Commerce downloads the return data, including the facility ID where the returned items are received. If the restocking flag is enabled, HotWax Commerce also restocks the inventory based on the captured facility ID.
 
-<figure><img src="../../.gitbook/assets/pos-exchanges-sync-to-netsuite.png" alt=""><figcaption><p>Sync POS exchanges to NetSutie</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/pos-exchanges-sync-to-netsuite.png" alt=""><figcaption><p>Sync POS exchanges to NetSuite</p></figcaption></figure>
 
 {% hint style="info" %}
 In our integration, web exchange orders are handled similarly to regular orders, while POS exchange sales are handled similarly to POS sales. Therefore, the SFTP location, SuiteScripts, as well as the jobs within the HotWax Commerce Integration Platform and OMS, remain unchanged.

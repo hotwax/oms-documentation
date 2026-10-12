@@ -14,7 +14,7 @@ The `Product Inventory View Page` within HotWax Commerce offers users a comprehe
 2. Browse through the list of available products or search for the product name. Click on the name of the desired product to open its `Product View` Page.
 3. On the Product View Page, locate and click on the `View Inventory` button to access the Product Inventory View Page, offering comprehensive inventory information for the selected product.
 
-### View comeplete detail of product's inventory
+### View complete details of a product's inventory
 
 Navigate to the `Overview` section on the `Product Inventory View` page to access essential product information, including product name, SKU, size, and color variants.
 

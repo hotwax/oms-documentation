@@ -13,7 +13,7 @@ Shopify retailers can install the HotWax Commerce BOPIS PDP App within their Sho
 Once the order is downloaded, HotWax Commerce categorizes it as a "Ship to Store" order and brokers it to a facility from where the inventory will be shipped to the pickup location. After a fulfillment location has been designated, store employees can use the following steps to monitor and fulfill `Ship to Store` orders:
 
 1.  **Locate the Ship to Store Section:** Click on the `Ship to Store icon (represented by a trail sign)` on the top right corner of the `Orders` page. This will redirect the user to the `Ship to Store` page.
-2.  **Search for Orders:** Users can use the `Search` bar on the top left of the page to find orders using customer name or order ID.
+2.  **Search for Orders:** Users can use the `Search` bar on the top left of the page to find orders using the HotWax order ID or order name.
 
 ---
 
@@ -68,17 +68,34 @@ When you receive a Ship to Store order in your fulfillment queue:
 
 The `Ship to Store` page in the BOPIS App is organized into three tabs to help you track orders through their lifecycle:
 
-### Incoming
-This tab displays inventory that has been shipped from the fulfillment center and is currently in transit to your store.
+```mermaid
+flowchart TD
+    accTitle: Ship to Store dispatch, arrival, and customer collection
+    accDescr: Incoming includes shipments awaiting dispatch and shipments in transit. After the source ships and the package physically arrives, select Arrived and confirm to move it to Ready for pickup. After customer collection, Handover and its confirmation move the shipment to Completed.
+    Preparing["Incoming: awaiting dispatch"] -->|Source ships| Transit["Incoming: in transit"]
+    Transit -->|Physical arrival: Arrived and confirm| Ready["Ready for pickup: at the store"]
+    Ready -->|Customer collection: Handover and confirm| Completed["Completed: customer collected"]
+```
 
-When the physical shipment arrives, locate the order in this tab and label it `Arrived`. A notification is automatically sent to the customer informing them that their order is now available for pickup, and the order moves to the `Ready for Pickup` tab.
+### Incoming
+
+This tab includes orders awaiting fulfillment, shipments being prepared, and shipments already in transit. An Incoming card alone does not establish that the source has shipped it.
+
+`Arrived` is enabled only after the shipment is marked shipped and you have permission to update the order. When the package physically arrives, select `Arrived`, review the confirmation, and select `Ready for pickup`. The shipment then moves to the Ready for pickup tab.
+
+For an order with multiple incoming shipments to this store, the app attempts the pickup notification after the last incoming shipment arrives. Review the remaining shipments before telling the customer the entire order is ready.
 
 ### Ready for pickup
+
 This tab displays orders that have physically arrived at your store and are waiting for the customer.
 
-When the customer comes to collect their order, verify their identity and mark it as `Handover`. The system marks the order as fulfilled and moves it to the `Completed` tab.
+When the customer collects the shipment, verify their identity and package contents, select `Handover`, then review the `Complete order` confirmation and select `Complete`. This records collection and moves the shipment to Completed. The app attempts the completion email after the last remaining Ship to Store shipment for that order at this store has been handed over.
 
 ### Completed
-This tab displays a history of all completed Ship to Store orders that have been successfully handed over to customers within the past 24 hours.
 
-<figure><img src="https://github.com/user-attachments/assets/1ce90a47-c320-4d12-8747-cd356667bdcd" alt=""><figcaption></figcaption></figure>
+This tab displays a history of all completed Ship to Store orders that have been successfully handed over to customers.
+
+### Check notification failures
+
+An arrival or handover can succeed even if the customer email fails. Check the new tab and shipment status before repeating the status action. On Ready for pickup, use the mail icon and confirm `Send` to resend the pickup notification when appropriate. Both arrival and handover confirmations warn that their status actions are irreversible in this flow.
+

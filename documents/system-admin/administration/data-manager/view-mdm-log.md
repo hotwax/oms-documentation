@@ -1,67 +1,59 @@
-# View Logs
+---
+description: Use the current Job Manager File History workflow to audit processed files.
+---
 
-Data Manager logs help verify the status, accuracy, and completeness of data imported into the OMS.
+# Review file processing
 
-Logs are available in two places:
-- **Find Import page:** Shows all import logs across every configuration. Navigate here to get a system-wide view of all imports.
-- **Configuration detail page:** Shows import logs scoped to a single configuration. Navigate here when auditing imports for a specific config.
+Use Job Manager to audit files processed through Data Manager.
 
-## Log columns
-Each log entry displays the following columns:
+1. Open `MDM` > `File history`.
+2. Search for the file, configuration, or log identifier.
+3. Filter by status, priority, error state, or configuration.
+4. Open the file.
+5. Review the timeline, original data, and errors.
 
-| Column              | Description                                                                                                         |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Log ID**          | A unique identifier for the import log entry.                                                                       |
-| **Parent Log ID**   | If this import is a child of a parent import (e.g., a chunked sub-import), the parent's Log ID is shown here.      |
-| **Config ID**       | The configuration this import belongs to. Click to open the configuration detail page in a new tab.                 |
-| **Uploaded File**   | Download icon for the original file that was submitted. Also shows the file size in MB.                             |
-| **Import Parameters**      | Click `View` to open a dialog showing the key-value parameters passed to the import service for this run.           |
-| **Error File**      | Download icon for the error records file, if any records failed. Also shows the file size in MB.                    |
-| **Created Date**    | The date and time the import was submitted, along with the user who submitted it.                                   |
-| **Start Date**      | The date and time the import began processing.                                                                      |
-| **Status**          | The current status of the import. See [Statuses](#statuses) below.                                                  |
-| **Completion Date** | The date and time the import finished, was cancelled, or crashed. Shown alongside the Status column.                |
-| **Product Store**   | The product store associated with this import, if applicable.                                                       |
-| **Total Records**   | The total number of records in the submitted file.                                                                  |
-| **Failed Records**  | The number of records that failed to process. Shown in red.                                                         |
-| **Execution Time**  | The total time taken to process the file, computed from start to finish (or cancellation).                          |
+Read [Monitor file processing](../job-manager/mdm/file-history.md) and [Review file details](../job-manager/mdm/file-details.md) for the complete workflow.
 
-{% hint style="info" %}
-On the Configuration detail page, a **Run Thread** column is also displayed, showing the worker thread that processed the import.
-{% endhint %}
+## Maarg administration logs
 
-## Statuses
-Each import progresses through the following statuses:
+For the Moqui-based Maarg backend, use `MDM` > `Imports` (`Find Import`) to review imports across configurations. Open a Config ID from `Configs` to see logs for that configuration.
 
-| Status        | Description                                                                                          |
-| ------------- | ---------------------------------------------------------------------------------------------------- |
-| **Pending**   | The file has been submitted and is waiting to be picked up by the MDM runner.                        |
-| **Queued**    | The MDM runner has picked up the file and placed it in the worker pool queue.                        |
-| **Running**   | The file is actively being processed by a worker thread.                                             |
-| **Finished**  | Processing completed successfully.                                                                   |
-| **Failed**    | Processing completed but encountered a failure. Check the Error File for details.                    |
-| **Crashed**   | The runner or worker thread terminated unexpectedly during processing.                               |
-| **Cancelled** | The import was manually cancelled by a user.                                                         |
+The log tables show log and parent IDs, uploaded and error-file downloads with sizes, import parameters, creation and start dates, status and completion date, product store, total and failed record counts, and execution time. The configuration detail table also shows the worker thread and instance ID. Select `View` for import parameters, the history icon for status transitions, or the log-file icon for processing details where available.
 
-## Actions
+`Parent Log ID` can link a retry created during crash recovery to its interrupted import. It does not necessarily represent a chunk of a multi-threaded import.
+
+### Maarg import statuses
+
+| Status | Meaning |
+| --- | --- |
+| `Pending` | Submitted and awaiting the runner |
+| `Queued` | Selected by the runner, awaiting its turn in a configuration sequence or worker pool |
+| `Running` | File processing has started |
+| `Finished` | Processing ended; failed records can still be present |
+| `Failed` | An exception prevented normal completion; inspect the processing log. An error-record file may not exist |
+| `Crashed` | Startup recovery identified an interrupted queued or running import for this instance |
+| `Cancel Requested` | A running import has been asked to stop; cancellation is not yet complete |
+| `Cancelled` | The import was cancelled before processing or stopped after a cancellation request |
+
+After a restart, recovery marks matching interrupted imports `Crashed` and creates new `Pending` imports with the originals as their parents. Check for an existing retry before submitting the original file again.
+
 ### Cancel an import
-A `Pending` import can be cancelled before the MDM runner picks it up. Click the **X** button on the log entry to cancel it. Once an import moves to `Queued` or `Running` status, it can no longer be cancelled this way.
 
-### Delete a log entry
-Click the **trash** icon on a log entry to permanently delete the import record. This removes the log entry and any associated uploaded or error files from the system.
+On the current Maarg configuration detail screen:
 
-## Troubleshooting
-**File Upload Failed:**
+- For `Pending` or `Queued`, select the cancel icon and confirm cancellation
+- For `Running`, select `Request Cancel`. The status changes to `Cancel Requested`; wait for the loader to observe the request and stop
 
-This typically occurs when the file format does not align with the required CSV or JSON format. Download the sample template from the configuration detail page and verify that your file matches the expected structure before re-uploading.
+Cancellation is cooperative and does not undo records already processed. Review counts and processing logs before deciding which records to retry. Older backend versions can expose fewer cancellation options.
 
-**File upload is partially failed:**
+### Delete a log
 
-Failed records are generated when a file is successfully processed, but discrepancies in the uploaded data cause some records to fail. The records with correct data get processed, and a file containing all failed records with error details becomes available in the **Error File** column. Download the error file to identify what went wrong for each record. After fixing the errors, re-upload the corrected file. Some possible error types are:
+Select the trash icon and confirm to remove a log and its associated parameters and content records. Do not delete a log while its import is active; use cancellation and wait for a terminal status first.
 
-| Error Type       | Description                                             |
-| ---------------- | ------------------------------------------------------- |
-| **Invalid Data** | Data that does not conform to expected values.          |
-| **Invalid Format**| Correct type but doesn't follow the expected structure.|
-| **Missing Field**| A required field is not provided or is empty.           |
-| **Required Field**| A field marked as required is left blank.              |
+The removal service also deletes referenced files unless another active log shares the content location. Automatic retention uses the same service. See [Maarg file storage and retention](README.md#maarg-file-storage-and-retention) before deleting audit data.
+
+### Investigate errors
+
+Always inspect both status and `Failed Records`. A `Finished` import can be partially unsuccessful. Download available error records and inspect the processing log; a file-level failure may leave no error file.
+
+File-format errors, missing required fields, invalid identifiers, permissions, and service failures can all prevent processing. Template downloads help with parameter names but do not prove the data is valid. See [Recover failed records](manual-import.md#recover-failed-records) before retrying.

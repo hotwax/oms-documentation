@@ -25,39 +25,42 @@ Allows accessing all HotWax Commerce applications.
 
 **Single Sign-On (SSO):** Enables users to log in applications using their credentials. After the initial login in the Launchpad, they gain automatic access to all associated applications without the need to enter their login details again.
 
-## **Application Categories**
+## Application categories
 
-Shows how apps are categorized on basis of their characteristics.
+Launchpad groups applications by the work they support.
 
 #### Orders
 
-This category revolves around managing the orders using the three apps: BOPIS, Pre-Order Management and Fulfillment.
+Use these applications to manage order fulfillment workflows:
 
-* **BOPIS (Buy Online, Pickup In-Store)** HotWax Commerce’s BOPIS app enables users to handover store pick-up orders to customers.
-* **Pre-Order Management** HotWax Commerce’s Pre-Order Management app enables users to manage pre-orders and backorders, with planned future inventory to fulfill the orders.
-* **Fulfillment** HotWax Commerce's Fulfillment app enables users to pick, pack, and ship orders brokered to the stores from the OMS.
+* **BOPIS (Buy Online, Pick Up In Store):** Hand over store pickup orders to customers
+* **Fulfillment:** Pick, pack, and ship orders assigned to a store
+* **Pre-Orders:** Manage pre-orders and backorders that use planned future inventory
 
 #### Workflow
 
-This category revolves around managing the workflow using the three apps: Threshold Management, Job Manager and Import.
+Use these applications to manage inventory availability, scheduled jobs, and order routing:
 
-* **Threshold Management** HotWax Commerce’s Threshold Management app enables merchandisers to set inventory thresholds for a group of products.
-* **Job Manager** HotWax Commerce’s Job Manager app helps the operations teams to manage jobs by scheduling new jobs, skipping or canceling scheduled jobs and finding failed jobs that need attention.
-* **Import** HotWax Commerce’s Import app enables users to import inventory and purchase orders.
+* **Available to Promise:** Manage the inventory available to sell
+* **Job Manager:** Schedule and monitor jobs
+* **Order Routing:** Configure how orders are routed to fulfillment locations
 
 #### Inventory
 
-This category revolves around managing the inventory using the two apps: Receiving and Cycle Count.
+Use these applications to receive, count, and move inventory:
 
-* **Receiving** HotWax Commerce’s Receiving app enables users to manage incoming shipments, purchase orders, and return orders.
-* **Cycle Count** HotWax Commerce’s Cycle Count app enables stock associates to count the store’s inventory, and reconcile systematic and physical inventory.
+* **Receiving:** Manage incoming shipments, purchase orders, and return orders
+* **Cycle Count:** Count store inventory and reconcile system and physical inventory
+* **Transfers:** Move inventory between facilities
 
 #### Administration
 
-This category revolves around managing users and facilities using the two apps: User Management, and Facilities.
+Use these applications to manage data, users, facilities, and company configuration:
 
-* **User Management** HotWax Commerce’s User Management app allows businesses to create and manage users within the HotWax Commerce OMS.
-* **Facilities** HotWax Commerce’s Facilities app assists businesses in overseeing multiple facilities like stores and warehouses, and managing attributes like facility details and fulfillment options for each facility.
+* **Import:** Import inventory and purchase orders
+* **Users:** Create and manage users
+* **Facilities:** Manage stores, warehouses, and their fulfillment settings
+* **Company:** Manage company configuration
 
 ***
 

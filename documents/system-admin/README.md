@@ -45,7 +45,7 @@ Applications on the Launchpad are organized into the following categories:
 | App | Description |
 |---|---|
 | **Available to Promise** | Enables merchandisers to configure rules for computing and publishing available inventory to sales channels. |
-| **Job Manager** | Helps operations teams schedule, skip, cancel, and monitor automated jobs. |
+| **Job Manager** | Helps operations teams monitor service health, manage job schedules, investigate files and messages, and build data exports. |
 | **Order Routing** | Enables merchandisers to configure order routing rules that determine how and where orders are fulfilled. |
 
 ### Inventory

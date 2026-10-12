@@ -1,0 +1,99 @@
+---
+description: Map Shopify locations and values to their HotWax Commerce equivalents.
+---
+
+# Manage Shopify mappings
+
+Mappings translate Shopify locations and order or product values into HotWax Commerce records. Review mappings before starting inventory, product, or order synchronization.
+
+## Map inventory locations
+
+1. Open the **Company App**.
+2. Go to `Shopify`.
+3. Select a connection.
+4. Open `Inventory locations`.
+5. Select `Run facility audit`.
+6. Review every active Shopify location.
+7. Map each location to the matching HotWax facility.
+8. Save the changes.
+9. Run the audit again and resolve remaining gaps.
+
+### Check the Shopify location before mapping
+
+In Shopify admin, open **Settings > Locations** to compare location names, addresses, and statuses with the facilities in your launch plan. The **All** view includes inactive locations; use **Active** when reviewing the locations that currently need mapping.
+
+<figure><img src="../../.gitbook/assets/shopify-location-statuses.jpg" alt="Shopify demo Locations list showing active stores and an inactive location"><figcaption><p>Example location names and statuses in the hotwax-demo store</p></figcaption></figure>
+
+For a manual **Shopify ID** mapping in Company, open the specific location in Shopify and use the numeric ID at the end of its address-bar URL. For example, the demo Broadway page ends in `/settings/locations/75725176986`, so its Shopify location ID is `75725176986`. Confirm the location name and address before entering the ID for the corresponding HotWax facility.
+
+Map multiple physical stores to one facility only when the approved inventory design requires it.
+
+This page maps physical Shopify locations to HotWax facilities. Do not map a Shopify aggregate location to a physical facility. Keep the approved aggregate target unassigned, then use [Monitor Shopify inventory sync](manage-shopify-inventory-sync.md) to map it to an inventory channel.
+
+### Check online fulfillment separately
+
+On the same Shopify location page, review the `Fulfillment` card. Check `Use inventory at this location to fulfill online orders`, then review the statuses of `Shipping`, `Local delivery`, and `Pickup in store` against your launch plan. A location-to-facility mapping does not establish that the required Shopify delivery method is enabled.
+
+<figure><img src="../../.gitbook/assets/shopify-location-fulfillment-settings.jpg" alt="Broadway demo location Fulfillment card showing online-order inventory enabled while Shipping, Local delivery, and Pickup in store are Off"><figcaption><p>Broadway in hotwax-demo: online-order inventory is enabled, while all three delivery methods shown are Off. Review each required method separately.</p></figcaption></figure>
+
+Follow [Shopify's location fulfillment setup](https://help.shopify.com/en/manual/fulfillment/setup/locations/fulfillment) for delivery-method configuration. Apply the implementation's approved settings before activation.
+
+## Map shipping methods
+
+1. Open the connection.
+2. Select `Shipping methods`.
+3. Review the Shopify shipping option.
+4. Select the HotWax shipment method and carrier.
+5. Repeat for each active Shopify value.
+6. Select `Save All`.
+
+Unmapped shipping methods can prevent imported orders from receiving the intended fulfillment method.
+
+## Map payment methods
+
+1. Open `Payment methods`.
+2. Review the Shopify payment name.
+3. Select the matching HotWax payment method.
+4. Add a mapping when no current row exists.
+5. Save the changes.
+
+Use a payment method approved by the finance and integration teams.
+
+## Map sales channels
+
+1. Open `Sales channels`.
+2. Review each Shopify order source.
+3. Select the matching HotWax sales channel.
+4. Save the mapping.
+
+Sales-channel mappings determine how imported orders are categorized.
+
+## Map product types
+
+1. Open `Product types`.
+2. Review the Shopify product type.
+3. Select the matching HotWax product type.
+4. Save the mapping.
+
+Review new Shopify product types after catalog changes and map any uncategorized values.
+
+## Clear or rename a mapping
+
+Clearing an existing shipping, payment, sales-channel, product-type, or location mapping and saving removes that mapping. Renaming a Shopify mapping key removes the old key and saves the replacement. Review the complete `Save All` changes before saving, especially when swapping two Shopify values.
+
+Reopen the page after saving and confirm that the old key is absent and the intended replacement points to the correct HotWax value. A removed mapping can affect later sync or order import. If removal fails, ask the technical team to verify that the OMS release supports mapping deletion before retrying.
+
+## Verify mapping readiness
+
+Return to the Shopify connection and review the mapping summaries.
+
+Before activation, confirm:
+
+* Active physical inventory locations are mapped
+* Aggregate locations are intentionally unassigned or mapped to an inventory channel
+* Shipping methods used by live orders are mapped
+* Payment methods used by live orders are mapped
+* Shopify order sources are mapped to sales channels
+* Product types used by the current catalog are mapped
+
+Starter mappings accelerate setup, but they must still be reviewed against the implementation design.

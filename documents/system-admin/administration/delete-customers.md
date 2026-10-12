@@ -1,75 +1,53 @@
 ---
 description: >-
-  Safely manage customer data in compliance with GDPR regulations using HotWax
-  Commerce's secure deletion feature.
+  Permanently anonymize customer information from the Order Manager while
+  preserving the associated operational records.
 ---
 
-# Delete customers
+# Anonymize customer data
 
-The GDPR bill passed by the European Union has brought changes in how businesses handle customer data. One aspect is the "right to be forgotten," also known as the "right to erasure," allowing individuals to request the deletion of their data if it's no longer necessary or if there's no compelling reason for its continued processing.
+Data privacy regulations such as the GDPR give individuals the right to request erasure of their personal information. HotWax Commerce supports these requests by anonymizing the customer record from the Order Manager.
 
-In the context of HotWax Commerce, where customer information is stored after order fulfillment for future use such as returns or accounting, compliance with GDPR's right to erasure is vital. HotWax Commerce provides a feature to delete customer details securely.
+Anonymization does not delete the customer or order records. It permanently replaces or removes the customer's personally identifiable information while retaining the records required for order history and accounting.
 
-By implementing this feature, HotWax Commerce users can manage customer data in accordance with GDPR requirements. It ensures compliance and fosters trust with customers by demonstrating a commitment to data privacy and protection. Moreover, it streamlines data management processes, contributing to workflow efficiency.
+## What anonymization changes
 
-## Steps to Delete Customer Data from UI
+The action:
 
-### Search for Customer Email ID
+* Replaces the customer name with `DELETED`.
+* Anonymizes email addresses, phone numbers, and postal addresses linked to the customer and their orders.
+* Disables the customer record.
+* Refreshes the customer search index so the disabled customer no longer appears in `Find customers`.
 
-1. Navigate to the `Sales Order` page.
-2. Enter the customer's email ID in the search bar.
+{% hint style="warning" %}
+Anonymization cannot be undone. Before proceeding, confirm that no active order still requires the customer's contact or delivery information.
+{% endhint %}
 
-### Select and Delete the Customer
+## Anonymize a customer in the Order Manager
 
-1. From the search results, select an order associated with the customer.
-2. Click on the customer’s name in the `Bill To` section.
-3. On the customer page, click the `Delete Customer` button at the top.
-4. The customer will be deleted from the OMS.
+1. Open the `Order Manager`.
+2. Select `Find customers` from the main menu.
+3. Search for the customer by name, HotWax party ID, email address, or phone number.
+4. Select the customer to open the `Customer Detail` page.
+5. Select the trash icon in the upper-right corner.
+6. In the `Anonymize customer data` confirmation dialog, review the warning and select `Anonymize`.
+7. Wait for the `Customer data has been anonymized.` confirmation. The Order Manager returns to `Find customers`.
 
-### Verify Customer Deletion
+## Verify anonymization
 
-1. Return to the `Sales Order` page.
-2. Search for the customer's email ID.
-    - If no orders are displayed, the customer has been successfully deleted.
-    - If the customer name is still displayed, proceed to the next step.
+1. Search `Find customers` using the customer's original name, email address, or phone number. The customer should no longer appear.
+2. Search `Find orders` using the customer's original email address.
+   * If no orders are returned, anonymization is complete.
+   * If orders still appear, their search documents contain stale customer information and must be reindexed.
 
-### Reindex Orders
+### Reindex stale order search results
 
-1. For each order visible:
-    - Open the order associated with the email ID.
-    - Click the `Reindex` button at the top of the order details page.
-2. Verify successful reindexing by searching the email ID again on the `Sales Order` page.
-    - If no orders are displayed, the reindexing is successful.
-    - If orders are still present, proceed to the next step.
+Order search results use a separate index from customer search. If a search by the original email address still returns orders after anonymization:
 
-### Run `createOrderIndex` Service
-
-1. Open `Webtools` and click the `Service Engine` button.
+1. Open `Webtools` and select `Service Engine`.
 2. Search for and open the `createOrderIndex` service.
-3. Click the `Schedule Job` button.
-4. For each order visible:
-    - Enter the order ID as the job ID and click `Submit`.
-5. Verify customer deletion by searching the email ID on the `Find Sales Order` page.
+3. Select `Schedule Job`.
+4. Run the service for each affected order ID.
+5. Search `Find orders` using the original email address again. No affected orders should be returned.
 
-## Step-by-Step Usage Instructions
-
-### Log into your HotWax Commerce webtools instance
-   * Visit the HotWax Commerce webtools portal and log in using your credentials.
-
-### Navigate to the Service Engine
-   * Once logged in, locate and click on the `Service Engine` tab. This is where you can access various services which you can schedule in HotWax Commerce.
-
-### Search for the Service Named `deleteCustomerDetails`
-   * In the `Service Engine`, locate the service titled `deleteCustomerDetails`. This service is specifically designed to delete customer information in compliance with GDPR regulations.
-
-### Schedule the Service by Adding the PartyID of the Customer
-   * After selecting the `deleteCustomerDetails` service, you will be prompted to schedule it. Provide the `PartyID` of the customer whose data you wish to delete. This ensures that the deletion process targets the correct customer information.
-
-### Execute the Service
-   * Once you've added the `PartyID`, proceed to execute the service. This action triggers the deletion process, securely removing the specified customer's details from the system.
-
-### Verify Deletion
-
-   * After the service has been executed, verify that the customer's details have been successfully deleted. You should see placeholders such as 'deleted' in place of the customer's name, address, and email, with 'NA-NA' replacing the phone number.
-
-By following these steps, HotWax Commerce users can comply with GDPR regulations regarding the right to erasure while maintaining data management practices within the platform.
+If the customer remains visible in `Find customers`, or if Order Manager displays `Failed to anonymize customer data. Please try again.`, retry the action. Contact a HotWax Commerce system administrator if it continues to fail.

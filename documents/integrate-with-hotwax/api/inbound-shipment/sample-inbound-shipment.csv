@@ -1,0 +1,2 @@
+external-shipment-id,product-sku,quantity,origin-facility-id,destination-facility-id,item-external-id,tracking-number,shipment-attribute,shipment-type
+INBOUND-1001,SKU-1001,11,116,281,1,788944217767,EXTERNAL_ORDER_ID:TO0005374,IN_TRANSFER

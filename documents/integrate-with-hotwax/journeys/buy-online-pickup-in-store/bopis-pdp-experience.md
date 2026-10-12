@@ -6,9 +6,9 @@ description: >-
 
 # BOPIS PDP Experience
 
-### HotWax's BOPIS PDP experience allows customers to browse all available pickup stores (facilities) for their desired products on the Shopify product detail page (PDP)
+HotWax Commerce's Buy Online Pick-Up In Store (BOPIS) PDP experience lets customers browse pickup stores that have the selected product available on the Shopify product detail page (PDP).
 
-## To integrate this feature, follow these steps
+## Integrate the BOPIS PDP experience
 
 ### Step 1: Obtain the customer's latitude and longitude
 

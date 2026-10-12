@@ -1,0 +1,13 @@
+{
+  "name": "oms-documentation-graphql-tools",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Generates the GraphQL schema reference page from an OMS instance's published SDL.",
+  "scripts": {
+    "generate": "node generate-schema-reference.mjs"
+  },
+  "dependencies": {
+    "graphql": "^16.9.0"
+  }
+}

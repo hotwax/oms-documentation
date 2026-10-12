@@ -1,40 +1,53 @@
-# Manual Imports
+---
+description: Use the current Job Manager Manual Uploads workflow for operator file submissions.
+---
 
-## Downloading a template
+# Import a file manually
 
-Before importing data, download the sample template for the configuration you want to use. Templates are pre-generated from the import service's expected parameters, so they always reflect the correct structure.
+Use Job Manager for operator file submissions.
 
-From the configuration detail page, two template formats are available in the toolbar:
+1. Open `MDM` > `Manual uploads`.
+2. Find the required configuration.
+3. Review the import service and template.
+4. Select the prepared file.
+5. Select `Start Import`.
+6. Open `File history` to monitor processing.
 
-- **CSV template** — Click the CSV icon to download a file with column headers formatted as hyphen-separated names (e.g., `product-id`, `facility-id`). Use this as your starting point when preparing a CSV import file.
-- **JSON template** — Click the JSON icon to download a JSON file with the expected parameter names as keys. Use this when the import service expects a JSON payload.
+Read [Upload a file manually](../job-manager/mdm/manual-uploads.md) for the complete workflow.
 
-## Importing data
-1. Navigate to the Data Manager Configurations list and open the relevant configuration by clicking its Config ID.
-2. From the configuration detail page, click `Upload File` in the toolbar.
-3. Select your prepared CSV or JSON file using the file chooser.
-4. Click `Add` to submit the file. The OMS will create a new log entry and begin processing.
+Use [Data Manager configuration](README.md) only when an administrator needs to change the underlying service, execution mode, or file contract.
 
-Once submitted, the import log entry will initially appear in `Pending` status. The MDM runner picks it up and routes it to either the Priority or Normal thread pool based on the configuration's priority setting.
+## Maarg administration upload
 
-{% hint style="info" %}
-If the import does not begin processing immediately, the configuration may be set to Queued mode. The MDM runner processes queued imports at regular intervals. You can monitor the runner's last execution time and pool activity from the Find Import page.
-{% endhint %}
+Administrators using the Moqui-based Maarg backend can also upload from `MDM` > `Configs` > the configuration's Config ID.
 
-## Monitoring the import
-After submitting, track progress from the log table on the configuration detail page:
+### Prepare the file
 
-- **Status** updates from `Pending` → `Queued` → `Running` → `Finished` (or `Failed` / `Crashed` / `Cancelled`).
-- **Total Records** and **Failed Records** are updated as the import processes.
-- **Execution Time** shows the total time taken once the import completes.
+Use the toolbar downloads to inspect the selected import service's parameters:
 
-Click `View` in the **Parameters** column to inspect the exact parameters passed to the import service for that run.
+- **CSV:** Generates a header row from the service's input parameters, excluding `_recordNumber`. Camel-case names become hyphen-separated headers, such as `product-id` and `facility-id`
+- **JSON:** Generates a JSON array containing parameter schema metadata. Replace the metadata with actual record values and confirm the import service's required structure before uploading
 
-## Handling errors
-After the import finishes, if the status is `Failed` or the **Failed Records** count is greater than zero, your data has not been fully processed.
+These downloads are generated on request from the service definition. They do not verify business rules, valid identifiers, or dependencies in your data. Test a small file with approved non-production data before importing a large file.
 
-1. Click the download icon in the **Error File** column to download the error records file.
-2. The file contains the original records along with an error reason for each failed row.
-3. Correct the identified errors in the file, remove the error reason column, and re-upload the corrected file.
+### Submit and monitor
 
-For detailed troubleshooting steps, refer to the [Audit Logs](/documents/system-admin/administration/data-manager/view-mdm-log.md) page.
+1. Select `Upload File` on the configuration detail page.
+2. Select the prepared CSV or JSON file.
+3. Select `Add` to submit it.
+4. Monitor the new log on the detail page or `Find Import`.
+
+The upload creates a `Pending` import. The runner selects its pool from the configuration priority; processing can wait for the next runner interval or available capacity. See [Maarg runner and thread pools](README.md#maarg-runner-and-thread-pools).
+
+The usual status sequence is `Pending` → `Queued` → `Running` → `Finished`. Counts are recorded by the runner after file processing; they are not guaranteed to update for every record while it runs. Use [Maarg administration logs](view-mdm-log.md#maarg-administration-logs) to inspect parameters, status history, processing logs, and failures.
+
+### Recover failed records
+
+`Finished` means file processing ended, and can include failed records. Check `Failed Records` and the error file before treating the import as fully successful.
+
+1. Download the error file when available.
+2. Correct only the failed records and remove the error-message column (`ErrorMessage`) from CSV or the `_ERROR_MESSAGE_` property from JSON before resubmitting.
+3. Confirm the service permits retrying these records without duplicate effects.
+4. Upload the corrected file and inspect its result.
+
+A `Failed` import can represent a file-level exception and may have no error-record file. Inspect its processing log and service error before retrying. Some records may already have been processed; resubmitting the full original file can repeat their effects.

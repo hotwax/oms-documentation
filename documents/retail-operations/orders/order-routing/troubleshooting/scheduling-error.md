@@ -1,33 +1,47 @@
 ---
-description: Learn how to resolve brokering issues related to incorrect scheduling
+description: Diagnose a routing group that did not run at the expected time.
 ---
 
-# Scheduling Errors
+# Troubleshoot a routing schedule
 
-### Scenario: The Brokering Engine Won't Run Due to Incorrect Scheduling
+Use the routing list, schedule details, and run history to determine whether the problem is the schedule or the routing configuration.
 
-The brokering engine relies on correctly scheduled runs to process and route orders. If the scheduling is incorrect, the engine won't execute, leading to unprocessed orders and potential delays in order fulfillment.
+## Check the schedule
 
-### Resolution Steps
+1. Open the **Order Routing Rules** app.
+2. Confirm the Product Store and time zone shown in the app footer.
+3. Go to `Routing` > `Order Routing`.
+4. Use the `Active` and `Draft` tabs to find the routing group.
+5. Open the routing group.
+6. Confirm that its status is `Active`.
+7. In `Scheduler`, confirm that a schedule exists and review the displayed cadence and `Next run`.
+8. Save or discard any pending configuration changes.
+9. Click `Edit schedule` when the cadence or Quartz cron expression is incorrect.
+10. Select a schedule option or update `Expression`, click the save icon, then confirm `Save`.
 
-1. **Verify Brokering Schedule**
-   1. Navigate to the Order Routing App.
-   2. Click on the Brokering Run card you would like to run for routing.
-   3. Verify the run time and the frequency to ensure they are set correctly.
-2. **Check Inventory Rules**
-   1. If the brokering run schedule is correct, proceed to check the inventory rules by clicking on the order batch you would like to run.
-   2. Verify if the order batches are correctly sorted. The sorting should align with the expected order processing sequence.
-3. **Verify Inventory Rule Configuration**
-   1. Check the inventory rules by clicking on the inventory rule associated with the order batch.
-   2. Verify if the order brokering facilities are correctly configured. Ensure the facilities to which the orders should be routed are specified accurately.
-   3. Verify if the inventory sorting criteria are correctly set to prioritize the orders as needed.
-4. **Confirm Status**
-   1. Finally, verify the status of the inventory rule, order batch, and brokering run. Ensure that each status is set to "Active" and not in "Draft."
+The schedule editor previews the expression in the user's displayed time zone, but the saved job runs in the default time zone of the HotWax Commerce server. Compare the saved `Next run` and `History` values, then confirm the server time zone with your system administrator before you change a schedule that appears offset.
 
-Read our [order routing](https://docs.hotwax.co/documents/retail-operations/orders/order-routing) user manual to learn more
+## Check active configuration
 
-**Example**
+A scheduled routing group can run without allocating orders when its child configuration is inactive or does not match an order.
 
-**Incorrect Scheduling**: If the brokering run is set to execute at 3:00 PM daily but needs to run every hour, adjust the frequency to "Hourly" in the Brokering Run settings.
+1. Confirm that the required routing has an active status.
+2. Confirm that the required routing rules have an active status.
+3. Review the routing's order filters.
+4. Review the routing rules' facility filters and unavailable-item actions.
+5. Save any changes.
 
-{% embed url="https://youtu.be/fRni_V6Yc3U" %}
+## Compare a manual run with history
+
+1. Click `History` and look for the expected scheduled start.
+2. If no entry exists, return to the schedule and status checks.
+3. Click `Run now` to start an immediate copy of the routing group.
+4. Open `History` again and inspect the new run.
+
+`Run now` does not replace or change the saved schedule.
+
+* If the manual run completes, focus on the schedule, status, and time zone.
+* If the manual run starts but allocates no orders, inspect routing filters, routing-rule filters, inventory, and queue actions.
+* If the manual run fails, capture the run time and routing group ID for operational investigation.
+
+The `Coverage by day and hour` chart on the Order Routing List page can also reveal schedule gaps. See [Manage routing groups](../brokering-runs.md).

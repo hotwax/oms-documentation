@@ -63,6 +63,10 @@
 ## HotWax Commerce API and Data feeds
 
 * [Authentication](api/initial-api-authentication.md)
+* [GraphQL API](api/graphql/README.md)
+  * [Query examples](api/graphql/queries.md)
+  * [Schema reference](api/graphql/schema-reference.md)
+  * [Keeping the reference current](api/graphql/self-documenting-schema.md)
 * [Orders](api/orders/README.md)
   * [Find Order](api/orders/find-orders.md)
   * [Retrieve Orders](api/orders/retrieve-order.md)
