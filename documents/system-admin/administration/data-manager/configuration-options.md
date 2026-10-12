@@ -1,8 +1,8 @@
 # Configuration options
 
-## Older OMS configuration fields
+## Legacy OMS configuration fields
 
-On older OFBiz administration screens, to create a configuration, select `Add` and enter the confirmed import or export details. To edit an existing configuration, search by name or ID and select the `Edit` icon.
+On legacy OMS administration screens, to create a configuration, select `Add` and enter the confirmed import or export details. To edit an existing configuration, search by name or ID and select the `Edit` icon.
 
 {% hint style="info" %}
 `Config ID` cannot be modified. To use a different ID, create a new configuration.
@@ -34,7 +34,7 @@ Do not enable multi-threading unless your HotWax Commerce implementation team ha
 Notifications are sent to the email addresses configured for the instance.
 {% endhint %}
 
-## Review an older OMS configuration
+## Review a legacy OMS configuration
 
 Use `Settings` > `Data Manager Configurations` to inspect or maintain the backend import or export contract.
 
@@ -68,7 +68,7 @@ The Maarg create and edit dialogs expose these fields:
 | `Multi Threading` | `Y` enables CSV or JSON chunk processing; an empty value is treated as disabled |
 | `Priority` | Greater than `6` selects `PRIORITY`; `6` and below select `NORMAL`. An empty value defaults to `5` |
 
-The detail page also displays the read-only `Thread Pool`, derived from the priority. The older OMS fields listed above are not all available in the Maarg create and edit dialogs.
+The detail page also displays the read-only `Thread Pool`, derived from the priority. The legacy OMS fields listed above are not all available in the Maarg create and edit dialogs.
 
 Keep queue mode selected and multi-threading disabled unless your HotWax Commerce implementation team has approved a different configuration. Multi-threading allows chunks of one file to run concurrently, even when files within the configuration are queued sequentially.
 
