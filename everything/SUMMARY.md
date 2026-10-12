@@ -22,6 +22,9 @@
   * [How to Create Issue on Git](tools/git/README.md)
 * [Jira](tools/jira/README.md)
   * [Feature Request on Jira](tools/jira/README.md)
+* [Jenkins](tools/jenkins/README.md)
+  * [Understand deployment parameters](tools/jenkins/parameters.md)
+  * [Inspect builds and troubleshoot failures](tools/jenkins/builds.md)
 * [Launchpad](tools/launchpad/README.md)
   * [Receiving Discrepancies](tools/launchpad/receiving/README.md)
   * [Fulfillment](tools/launchpad/fulfillment/README.md)
@@ -149,6 +152,7 @@
 
 ## Hotwax Deployment & Versions
 
+* [Deploy and upgrade Maarg](deployment/deploy-maarg.md)
 * [HotWax Commerce Deployment](deployment/README.md)
 * [Launch Machine](deployment/launch-machine.md)
 * [Update OMS Version](deployment/update-oms-version.md)
