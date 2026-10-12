@@ -38,7 +38,7 @@ Most configurations use a generic HotWax Commerce service after middleware trans
 
 ## Maarg runner and thread pools
 
-The following behavior applies to the Moqui-based Maarg Data Manager. Legacy OMS instances use a different bulk-file processor; confirm the connected backend before changing execution settings.
+The following behavior applies to the Maarg Data Manager. Legacy OMS instances use a different bulk-file processor; confirm the connected backend before changing execution settings.
 
 The Maarg runner dispatches pending imports to two dedicated worker pools, `PRIORITY` and `NORMAL`. A configuration priority greater than `6` selects `PRIORITY`; `6` and below select `NORMAL`. An empty priority defaults to `5`.
 

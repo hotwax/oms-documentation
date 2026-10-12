@@ -51,7 +51,7 @@ Use Job Manager for daily operations:
 
 ## Maarg configuration fields
 
-On the Moqui-based Maarg administration screen, open `MDM` > `Configs`.
+On the Maarg administration screen, open `MDM` > `Configs`.
 
 1. Select `Add` on the configuration list to create a configuration.
 2. To edit one, search by ID or description, open the Config ID link, and select `Edit` on its detail page.

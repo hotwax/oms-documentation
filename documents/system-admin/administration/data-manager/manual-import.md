@@ -19,7 +19,7 @@ Use [Data Manager configuration](README.md) only when an administrator needs to 
 
 ## Maarg administration upload
 
-Administrators using the Moqui-based Maarg backend can also upload from `MDM` > `Configs` > the configuration's Config ID.
+Administrators using the Maarg backend can also upload from `MDM` > `Configs` > the configuration's Config ID.
 
 ### Prepare the file
 

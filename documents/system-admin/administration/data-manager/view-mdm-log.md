@@ -16,7 +16,7 @@ Read [Monitor file processing](../job-manager/mdm/file-history.md) and [Review f
 
 ## Maarg administration logs
 
-For the Moqui-based Maarg backend, use `MDM` > `Imports` (`Find Import`) to review imports across configurations. Open a Config ID from `Configs` to see logs for that configuration.
+For the Maarg backend, use `MDM` > `Imports` (`Find Import`) to review imports across configurations. Open a Config ID from `Configs` to see logs for that configuration.
 
 The log tables show log and parent IDs, uploaded and error-file downloads with sizes, import parameters, creation and start dates, status and completion date, product store, total and failed record counts, and execution time. The configuration detail table also shows the worker thread and instance ID. Select `View` for import parameters, the history icon for status transitions, or the log-file icon for processing details where available.
 

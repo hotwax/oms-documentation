@@ -86,6 +86,12 @@ Choose plain words that describe the action directly and avoid using:
 “Streamline”  
 Excessive adjectives like “vital”, “crucial”, “essential”
 
+#### Backend names in user-facing documentation
+
+Do not use “Moqui” or “OFBiz,” in any capitalization, in user-facing documentation. This ban applies to headings, body text, tables, examples, captions, and image text.
+
+Use “Maarg” for the current OMS backend and “legacy OMS” for the previous OMS backend. Use “HotWax Commerce OMS” when the distinction is unnecessary. Keep framework and implementation details in internal engineering documentation.
+
 #### Core principles
 
 * Use one term for one concept everywhere.
