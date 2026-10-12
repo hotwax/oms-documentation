@@ -65,9 +65,13 @@ A lost response does not prove that the inventory update failed. Do not repeat `
 
 A successful app receipt also needs a separate check in any connected system. Ask the integration owner to inspect the corresponding receipt or integration result before considering a replay or manual posting. This guide does not promise a universal NetSuite adjustment, closure, or zero-quantity outcome; those depend on the installed integration and business configuration.
 
+## The Receipt Is Saved But Shopify Differs
+
+Use [Investigate Shopify transfer sync](../../shopify/transfer-sync-troubleshooting.md) to distinguish native transfer staging, per-record delivery, mapping blockers, and inventory events for physical locations or aggregate channels. Verify the expected Shopify record and inventory target independently. Do not repeat receiving or switch integration settings to test delivery.
+
 ## Missing Lines Or Product Details
 
-Check the selected facility, order, item tab, and any box filter. Compare the source order's lines with the OMS order. If a line exists but its image or barcode is missing, continue with [Missing Product Details](../../ofbiz/product/missing-product-details.md).
+Check the selected facility, order, item tab, and any box filter. Compare the source order's lines with the OMS order. If a line exists but its image or barcode is missing, compare the line's OMS product ID, SKU, and current catalog record. A missing display field is not evidence of a missing receipt. When Shopify supplies the product, use [Shopify product sync](../../shopify/product-sync.md) to identify its import stage before considering an approved resync.
 
 Do not add a replacement line, recreate the transfer, or receive directly in a second system before the owner has checked for an existing receipt and agreed how reconciliation will work.
 

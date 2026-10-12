@@ -67,6 +67,16 @@ These pages contain useful domain-specific detail. They should remain the primar
 
 These articles do not replace generic Maarg operating instructions. The existing [System Monitoring Guide](../../monitoring/system-monitoring-guide.md) includes OFBiz and NiFi procedures; its job thresholds and JobSandbox actions must not be carried over to Maarg without verification.
 
+## Customer-Support Backfill: October 10, 2026
+
+The proposed [Shopify Transfer Sync investigation guide](../shopify/transfer-sync-troubleshooting.md) connects native transfer monitoring with receiving reconciliation and channel/physical-location inventory events. It covers ownership and start-date eligibility, staging versus record-level delivery, missing or ambiguous mappings, list/history limits, and approval-bound recovery. The receiving guide and Shopify navigation link to it. Duplicate product mappings can block native creation for a whole order; the guide does not prescribe keeping an arbitrary listing or toggling sync as a repair.
+
+Source verification uses Company App v2.7.0 and Shopify connector v4.3.8 separately. The latest distribution by publication time remains Maarg v6.3.9, published October 8 at 13:34:59 UTC, with active Poorti v3.3.3 and connector v4.3.8 pins. Commented components were ignored. The higher-numbered v6.4.2 was published October 7 with Poorti v3.4.1 and connector v4.4.2. Company v2.7.0, published October 9, is a standalone frontend release; the distribution manifest does not establish its installation.
+
+The guide distinguishes physical native-owner suppression from aggregate-channel routing, and ATP-to-Shopify-Available event delivery from physical quantity-on-hand and derived-kit reset exceptions. It uses the current Company flow and links to the existing inventory monitor rather than introducing legacy Job Manager screenshots. The four images across that complete inventory workflow and the linked System Messages filter image were inspected in full. No new image or runtime proof is claimed. The read-only demo remained at sign-in; installed versions, permissions, delivery outcomes, and any recovery remain unverified.
+
+This addition leaves the platform-family count unchanged and does not duplicate the Cycle Count import/recount work in draft PR #1912 or its platform-status refresh. Remaining priorities are an approved synthetic runtime verification of transfer and count workflows; source-qualified Draft/prelaunch product-sync eligibility beyond the mapping picker; safe count/receiving correction outcomes; and read-only diagnosis of reported fulfillment-queue symptoms. Reports remain investigation leads, not reproduced defects. Receiving-history display changes need release and installation evidence before being described as available.
+
 ## Next Work Batches
 
 1. **Review the proposed guides.** PRs #1902–#1905 use this identical publication-status snapshot so their coverage files can merge together without conflicting counts. Following approved merges, refresh the snapshot against the publication branch and replace merged PR references with local guide links. Draft availability is not publication or runtime acceptance.
