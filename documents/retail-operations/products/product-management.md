@@ -14,17 +14,36 @@ Before editing categories or prices, open `Settings` and confirm the current `Pr
 
 **Use this flow when:** You know a product ID, SKU, UPC, or name. You can also use this flow to review products that share a type, store, virtual or variant status, or tag.
 
-**Key labels:** `Product workbench`, `Product ID, SKU, UPC, name`, `Product type`, `Product store`, `Virtual/variant`, `Apply tags`, `Alphabetical`, `Recently updated`, `Recently created`, `Add tag`.
+**Key labels:** `Product workbench`, `Product ID, SKU, UPC, name`, `Product type`, `Product store`, `Virtual/variant`, `Tags`, `Clear filters`, `{shown} of {count} matching products`, `Select`, `Done`, `Add tag`.
 
 1. Open `Products` > `Product workbench`.
-2. Search by product ID, SKU, UPC, or product name.
-3. Narrow the results with `Product type`, `Product store`, `Virtual/variant`, or `Apply tags`.
-4. If an expected product is missing, clear the search and tags, then select `All types`, `All stores`, and `All products`.
-5. Sort the list by `Alphabetical`, `Recently updated`, or `Recently created`.
-6. Review the product ID or SKU, the parent name for a variant or the brand or product type for another record, the variant count for a virtual product, tags, `Pre-order` or `Back-order` badges, and 30-day sales.
-7. Select a row to open the product. Use the checkboxes only when you want to apply `Add tag` to multiple visible products.
+2. Search by product ID, SKU, UPC, or product name. The search runs when you pause typing.
+3. Narrow the results with `Product type`, `Product store`, `Virtual/variant`, or `Tags`.
+4. If an expected product is missing, select `Clear filters`. It clears the search and tags, and resets the other filters and the sort.
+5. Use the sort button in the list header to change the order:
+   * `Newest introduced` (the default) or `Oldest introduced`
+   * `Recently updated` or `Least recently updated`
+   * `Product family`, which lists each virtual product ahead of its variants
+   * `Name A–Z`, `Name Z–A`, `SKU A–Z`, or `SKU Z–A`
+   * `Price: high to low` or `Price: low to high`, by the list price in the filtered store's group and currency. These choices appear only when that store has a store group and currency. Unpriced products come last.
+6. Check the list header, for example `25 of 1,986 matching products`. More rows load as you scroll.
+7. Review each row: the product image, the primary and secondary identifiers chosen in `Settings` (see [Choose the product identifier](#7-choose-the-product-identifier-shown-on-product-rows)), the variant count for a virtual product, `Pre-order` or `Back-order` badges, tags, and 30-day sales.
+8. Select a row to open the product.
+
+The search text, filters, tags, and sort stay in place when you reload the page.
 
 **Outcome:** You have isolated the relevant records and opened the correct product for detailed review.
+
+### Add a tag to several products
+
+1. Find the products with the search and filters.
+2. Select `Select` in the list header. In select mode, selecting a row selects it instead of opening the product.
+3. Select the rows to tag, or use the header checkbox to select every loaded row. The footer shows `{n} selected`.
+4. Select `Add tag` in the footer. Check the existing tags to add and select `Add`. To add a tag that doesn't exist yet, type it in `Search or enter new tag` and select `Add "<tag>"`.
+5. Wait while the app shows `Updating products...`. It then reports how many products it tagged, or how many it couldn't tag.
+6. Select `Done` to leave select mode.
+
+A new search, filter, or sort keeps only the selected products that are still listed, so a product hidden by the search isn't tagged.
 
 <figure><img src="../.gitbook/assets/product-workbench.png" alt="Product workbench filtered to the Abominable Hoodie product family from the demo OMS"><figcaption><p>Find and triage products in the Product workbench</p></figcaption></figure>
 
@@ -40,9 +59,9 @@ Before editing categories or prices, open `Settings` and confirm the current `Pr
 2. For a product family, use the feature options or variant strip to select the variant you want to inspect.
 3. Select `Edit parent` for shared parent data or `Edit variant` for data that belongs to the selected variant.
 4. Use the section that matches the task. For example, use `Display` for the name, description, brand, or product type; `Product identifications` for SKU or UPC; and `Categories` or `Prices` for store-specific setup.
-5. Complete the action for that section. `Display`, `Dates`, `Prices`, `Inventory policy`, and `Shipping and handling` use card-level `Save` and `Reset` actions. `Product identifications` uses an edit dialog, while `Tags` and `Categories` apply add or remove actions directly.
+5. Complete the action for that section. `Display`, `Dates`, `Prices`, `Inventory policy`, and `Shipping and handling` use card-level `Save` and `Reset` actions. `Product identifications` lists each identifier's type and value and uses an edit dialog (`Edit`). `Tags` apply add or remove actions directly. `Categories` and `Shopify Shop Products` open a dialog with its own save action.
 6. For sections with a `Save` footer, save each changed card. Select `Reset` to restore that card's editable fields. Staged substitute and component links have the additional behavior described below. If the app reports `Underlying data changed`, review the latest data before saving again.
-7. Use `Change history` to review recorded identifier changes. Use `Imports` for recent shop product update records.
+7. Use `Change history` to review recorded changes to identifier values and facility settings. Each entry names what changed, such as `SKU` or `Minimum stock at Broadway`, and how: `Set to {value}`, `Cleared, was {value}`, or `{from} to {to}`, with when and who made it. Select `Show more` for older entries. Use `Imports` for recent shop product update records.
 
 **Outcome:** The app updates the intended parent or variant data, while card-level drafts remain separate.
 
@@ -109,6 +128,62 @@ Products can show a separate `Components` card for other marketing-package types
 **Outcome:** The pick-assembly kit has active component links with the quantity required for one kit.
 
 <figure><img src="../.gitbook/assets/kit-product-components.png" alt="Display card staging a demo OMS product as a quantity-two component of Beaumont Summit Kit"><figcaption><p>Set the kit type, component, and per-kit quantity before saving Display</p></figcaption></figure>
+
+### Update categories
+
+**Goal:** Add the product to the store's catalog categories it belongs in, and remove it from the ones it doesn't.
+
+**Use this flow when:** A product is missing from a category, or sits in a category it shouldn't.
+
+1. Confirm the current `Product Store` in `Settings`. The list shows that store's catalog categories.
+2. Open the product and select `Edit parent` or `Edit variant`.
+3. In `Categories`, select `Edit categories`.
+4. Use `Search categories` to filter by category name, description, or ID. The categories the product is in now start checked.
+5. Check the categories to add and uncheck the ones to remove. Selecting a row toggles its checkbox.
+6. Select the save button. It's available only after a change. Saving adds the product to the newly checked categories and ends its membership in the unchecked ones.
+
+**Outcome:** The product's categories match the checked list. Removing a category ends the membership rather than deleting it, so its history stays on record.
+
+### Update prices
+
+**Goal:** Replace a product's price in the current store's store group, or give a variant its parent's prices.
+
+**Use this flow when:** A price is wrong, or a variant is missing prices its parent has.
+
+The `Prices` card lists the prices the product already has in the primary store group of the `Product Store` selected in `Settings`. It shows one field per price type and currency, with the store's currency first. A product with no prices in that group shows `No prices in this store group.`
+
+1. Confirm the current `Product Store` in `Settings`.
+2. Open the product and select `Edit parent` or `Edit variant`.
+3. In `Prices`, enter the new value in the price field you want to change. A changed price must be a positive number. You can replace a price but not clear it.
+4. For a variant, select `Copy from parent` to fill in the parent's prices for the store group, including price types and currencies the variant doesn't have yet. Review the copied values. Copying alone doesn't save them.
+5. Select `Save`, or `Reset` to discard the changes.
+
+Saving retires each changed price and creates its replacement. The replacement keeps the purpose of the price it replaces, and stays `PURCHASE` whenever a `PURCHASE` price is among those replaced, because orders and the Shopify connector read `PURCHASE` prices.
+
+**Outcome:** The product has one active price per changed price type and currency in the store group.
+
+### Link Shopify shop products
+
+**Goal:** Keep the product's links to its Shopify product and inventory item correct for each shop.
+
+**Use this flow when:** A product shows the wrong Shopify ID, is missing a Shopify link, or no longer exists on Shopify.
+
+The `Shopify Shop Products` card lists each link with its shop, the Shopify product ID and Shopify inventory ID, the last 30 days of Shopify orders, and the Shopify inventory. When the card first comes into view, the app looks up each link on Shopify and flags problems on the row:
+
+* `No Shopify ID saved`
+* `Not found on Shopify`
+* `Inventory ID differs on Shopify`
+
+1. To fix a flagged link, select `Review Shopify values` when the row offers it. The edit dialog opens with the values Shopify has. Review them, then select `Save`. Otherwise, select `Edit` and correct the IDs.
+2. To add a link, select `Add`, then pick the `Shop`:
+   * In `From Shopify`, search the shop's variants (or products, for a virtual product) and check the ones to link. You can't pick an ID that another product already has; the list shows which product has it.
+   * In `Enter manually`, type the `Shopify product ID` and, if you have it, the `Shopify inventory ID`. After you pause typing, the app looks up the ID on Shopify and shows its title, 30-day orders, and inventory. When Shopify's inventory ID differs, select `Use Shopify's` to fill it in.
+3. Select `Save`.
+4. To change a link's IDs, select `Edit` on its row. The app saves a new Shopify ID as a new link before it removes the old one, so a failed change leaves the old link in place. Select `Remove` to remove a link; the app removes it at once, without a confirmation. On a verified link, select `Open on Shopify` to open the product in Shopify admin.
+
+Each Shopify ID belongs to one product per shop. If another product already has the ID you enter, the dialog shows `Linked to another product on this shop.` with that product, and you can't save it: unlink it on that product first. If Shopify doesn't have the ID, or the app can't reach Shopify for that shop, you can still save after checking `Save anyway; this link may not sync until Shopify has this ID.`
+
+**Outcome:** Each link points to the right Shopify product and inventory item, and no two products on one shop share a Shopify ID.
 
 ## 3. Resolve duplicate identifiers
 
@@ -202,14 +277,38 @@ The Products app does not provide search-index status or a manual index rebuild 
 
 <figure><img src="../.gitbook/assets/products-settings.png" alt="Products app settings showing the demo OMS instance and Demo Store"><figcaption><p>Confirm the OMS instance and current product store</p></figcaption></figure>
 
-## 7. Review calendar dates for a product store
+## 7. Choose the product identifier shown on product rows
 
-Open `Product calendar` to review Introduction, Launch, Support ends, and Sales ends dates for the store shown on that page. These store-specific dates are separate from the general product dates edited in Product details. The calendar currently supports review and search, with a link to Company Product Sync for Shopify mapping context.
+**Goal:** Show the identifiers your team recognizes, such as a SKU or UPC, on every product row in the app.
 
-See [Review the product calendar](product-calendar.md) for scope, mapping coverage, and the loaded-row limit.
+**Use this flow when:** Product rows lead with an identifier your team doesn't use, or show a product's name where you expected an identifier.
+
+**Key labels:** `Settings`, `Product identifier`, `Primary`, `Secondary`, `Preview product identifier`, `Shuffle`.
+
+The setting belongs to the `Product Store` selected in `Settings` and applies to everyone who uses that store. It's the same product identifier setting the other HotWax Commerce apps use. Changing it requires the `COMMON_ADMIN` permission.
+
+1. Open `Products` > `Settings` and confirm the `Product Store`.
+2. In `Product identifier`, choose the `Primary` and `Secondary` identifiers. Each choice shows how many products have it, for example `UPCA (1,698 products)` or `GTIN (no products)`.
+3. Check `Preview product identifier`. It shows a product sampled from the catalog the way rows will show it. Select `Shuffle` to preview another product.
+4. The change saves when you choose it.
+
+Product rows show the image, then the primary and secondary identifiers. This applies on the Product workbench, Missing values, the Product calendar and its dates dialog, the variant strip, product pickers, the Resolve duplicates dialog, and associated products.
+
+A product without the primary identifier shows its name instead. When it has no name, it shows its internal name or product ID. The preview tells you when this happens, for example `No UPCA on this product, so rows show its name.`
+
+By default rows show the SKU, then the product ID.
+
+**Outcome:** Product rows across the app lead with the identifiers you chose.
+
+## 8. Review and edit calendar dates for a product store
+
+Open `Product calendar` to review and edit the Introduction, Launch, Support ends, and Sales ends dates for the store shown on that page. These store-specific dates are separate from the general product dates edited in Product details. You can edit one product's dates or many products' dates at once.
+
+See [Manage the product calendar](product-calendar.md) for scope, search, editing, and mapping coverage.
 
 ## Related guides
 
+* [Manage the product calendar](product-calendar.md)
 * [Create shipping boxes](../../system-admin/fulfillment/shipping-methods/shipping-box.md)
 * [Download kit products from Shopify](../../learn-shopify/shopify-integration/products/download-kit-products.md)
 * [Import kit components from an ERP](../workflow/job-workflows/products.md#import-kit-component)
