@@ -20,6 +20,19 @@ Links such as `Last successful build` and `Last failed build` select different r
 
 Record the time zone with incident times. Widgets can display timestamps differently, so do not infer an execution order from an unqualified clock time alone.
 
+## Verify the pipeline source and revision
+
+Distinguish three sources: the Jenkinsfile defines the automation, the Docker configuration defines the image recipe, and the assembled application components define the running software. `DOCKER_BRANCH` can select the second source without changing the first.
+
+1. If your permissions allow read-only inspection of `Configure`, read the pipeline definition type. For `Pipeline script from SCM`, record the repository URL, branch specification, and `Script Path`; for an inline script, identify the recorded script used by the run. Leave the configuration unchanged and do not select `Save` or `Apply`.
+2. Inspect the exact completed run's console and `Git Build Data`. Look for the Jenkinsfile obtained-from record and the repository/ref/commit associated with its SCM checkout. A later explicit checkout can refer to the Docker repository; identify each checkout before assigning a revision to it.
+3. Open the identified Jenkinsfile at its recorded commit in source control. Compare its checkout, Dockerfile selection, build, and deployment steps with the run's stage records. Repository `main` today may differ from what that run used.
+4. Record the Docker configuration checkout and application component manifest separately. `Changes`, custom descriptions, and a build's single displayed Git revision do not necessarily describe every source involved.
+
+The [committed Maarg templates](https://github.com/hotwax/devops-jenkins-pipeline-template/tree/main/aws/maarg) include `aws/maarg/Jenkinsfile` and `aws/maarg/uat/Jenkinsfile`. Finding those files establishes available implementations, not which path or revision a particular job uses.
+
+If `Configure` denies `Job/ExtendedRead`, or the recorded-script view denies `Run/Replay`, continue with the existing build records accessible to your role. A console that only identifies the Docker checkout does not prove a Jenkinsfile path, revision, or inline-script origin. When that identity cannot be established, record the limit and obtain the missing non-sensitive source metadata from the administrator. Do not execute a replay, change permissions, copy saved credentials, or infer that the job uses the repository's current template.
+
 ## Interpret the result
 
 | Result or state | Meaning for investigation |
@@ -45,6 +58,7 @@ Read the text result and logs rather than relying only on colors, which vary wit
 | Failed stage | Evidence to check |
 | --- | --- |
 | Checkout | Intended repository/ref, resolved revision, and access error |
+| Prepare base image, when present | Required base-image identity, local availability, and authentication/pull errors |
 | Build image | Failed compilation/dependency/container step and its first useful error |
 | Push image | Registry destination, image reference, and publication error |
 | Deploy image | Target, deployment command response, and whether a rollout began before failure |

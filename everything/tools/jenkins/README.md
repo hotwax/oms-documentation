@@ -78,6 +78,8 @@ The inspected Maarg reference/test job displays this flow in `Stage View`:
 
 Some jobs also display `Declarative: Checkout SCM` before the explicit `Checkout` stage. Do not assume every job has the same stages or that an additional checkout refers to the same repository.
 
+The reviewed Maarg AWS templates also define `Prepare Base Image`: they use the base image already present on the build agent or pull it when missing. Check the exact run for this stage rather than assuming every recorded deployment has it. Establish the [pipeline source and executed revision](builds.md#verify-the-pipeline-source-and-revision) separately from the Docker configuration checkout.
+
 An image packages application code and its runtime dependencies. A registry stores the built image; deployment makes a target environment use it. A successful image push does not prove that deployment occurred. A successful deployment command still needs [runtime verification](builds.md#verify-the-running-system).
 
 Click a build number to inspect a specific execution. The job page's `Stage View` compares several runs; `Full Stage View` opens the larger stage-history view. Use [Inspect builds and troubleshoot failures](builds.md) to interpret the result.

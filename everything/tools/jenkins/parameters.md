@@ -34,6 +34,30 @@ The test form lists `Dev`, `UAT`, `Test`, and `Prod` as Docker profiles. Their a
 
 Likewise, `DOCKER_BRANCH` is not necessarily the application's version. A Docker configuration can select several components and their release tags. Verify the assembled image and component versions after deployment.
 
+## Find the branch or tag and choose its profile
+
+1. Identify the Docker configuration repository from the selected job or the relevant run. Maarg's committed AWS templates default to [hotwax/hotwax-maarg-docker-config](https://github.com/hotwax/hotwax-maarg-docker-config), but a job can provide a different `DOCKER_REPO_URL`.
+2. Open that repository's branch/tag picker and copy the exact approved ref name. Use the release tag for a released bundle or the reviewed feature branch for a branch deployment. Record its resolved commit; do not infer the value from the job name.
+3. Open the Dockerfile on that same ref and inspect its component versions and build configuration. Choose the branch/tag and profile together.
+4. Confirm that the selected job actually uses the inspected pipeline implementation. Use [Verify the pipeline source and revision](builds.md#verify-the-pipeline-source-and-revision) before treating a template as the live job's definition.
+
+The [Maarg AWS pipeline templates](https://github.com/hotwax/devops-jenkins-pipeline-template/tree/main/aws/maarg) are separate from the Docker configuration repository. The reviewed templates construct the Dockerfile path as `docker$DOCKER_INSTANCE/Dockerfile`. The inspected reference form's labels have these underlying values:
+
+| Selection | Underlying value | Dockerfile path |
+| --- | --- | --- |
+| `Dev` | Empty string | `docker/Dockerfile` |
+| `UAT` | `/uat` | `docker/uat/Dockerfile` |
+| `Test` | `/test` | `docker/test/Dockerfile` |
+| `Prod` | `/prod` | `docker/prod/Dockerfile` |
+
+The reference form defaulted to `Dev`, despite being a test job. A default is not a recommendation for the intended deployment, and other jobs can expose different choices.
+
+{% hint style="warning" %}
+On October 12, 2026, the inspected Docker repository's `main` contained Dev, UAT, and Prod Dockerfiles but no `docker/test/Dockerfile`. Under the reviewed template's path rule, selecting `Test` with that source would fail to find its Dockerfile. Check the exact selected ref before execution; a dropdown option does not establish that its build recipe exists.
+{% endhint %}
+
+The profile selects a build recipe. The job's deployment settings establish the destination, so `Prod` does not by itself redirect a reference job to production and `UAT` does not by itself make a production job safe for testing.
+
 ## Review the Maarg component and runtime configuration
 
 The four inputs above do not list every component or runtime setting. Inspect the selected Dockerfile, component manifest, optional components, and the deployment configuration that supplies datasource, job, and integration settings. Preserve installed optional components unless their removal is part of the reviewed change.

@@ -23,9 +23,10 @@ The result should identify the current artifact, configuration, database state, 
 ## 2. Select the release and component bundle
 
 1. Select the approved Maarg release tag or, for an explicitly planned branch deployment, the exact resolved commit. Record the Docker configuration repository and source revision.
-2. Inspect the selected profile's Dockerfile and `myaddons.xml`. Record the framework, runtime, setup component, component-set versions, build patches, and optional components required by the target.
-3. Check compatibility across the bundle and with connected applications. Preserve required custom components and overrides unless their removal is part of the change.
-4. Record the intended image identity and how the operator will verify the assembled components after startup. A Docker source branch or a Maarg version label alone does not identify the whole bundle.
+2. Confirm the selected job's Jenkinsfile repository, script path, and executed revision separately from the Docker configuration ref. Follow [Verify the pipeline source and revision](../tools/jenkins/builds.md#verify-the-pipeline-source-and-revision); a template found in repository `main` does not establish the live job's definition.
+3. Inspect the selected profile's Dockerfile and `myaddons.xml`. Record the framework, runtime, setup component, component-set versions, build patches, and optional components required by the target.
+4. Check compatibility across the bundle and with connected applications. Preserve required custom components and overrides unless their removal is part of the change.
+5. Record the intended image identity and how the operator will verify the assembled components after startup. A Docker source branch or a Maarg version label alone does not identify the whole bundle.
 
 The inspected production image fetches the released `oms-suite` component set, packages the framework and runtime with `addRuntime`, and extracts `moqui-plus-runtime.war` for execution. Optional components can also be fetched by the startup setup script, which can rebuild that package. Verify the final running component manifest as well as the image digest.
 
@@ -67,10 +68,10 @@ For missing-column evidence, use [DB Missing Columns](../tools/maarg/db-missing-
 | --- | --- |
 | `HOST` | Confirm the target Maarg instance and environment using the job's expected host format. |
 | `DOCKER_REPO_URL` | Select the approved Maarg Docker configuration repository, `hotwax/hotwax-maarg-docker-config`, using the URL format supported by the job. |
-| `DOCKER_BRANCH` | Select the approved Docker configuration tag or branch and record its resolved commit. Inspect the component versions selected by that configuration. |
-| `DOCKER_INSTANCE` | Confirm the build profile and its Dockerfile/configuration. Verify the destination independently; the profile alone does not select or prove the target host. |
+| `DOCKER_BRANCH` | Copy the exact approved branch/tag from the Docker configuration repository and record its resolved commit. Inspect the component versions selected by that configuration. |
+| `DOCKER_INSTANCE` | Check the Dockerfile on that same ref: Dev uses `docker/Dockerfile`, UAT uses `docker/uat/Dockerfile`, Test uses `docker/test/Dockerfile`, and Prod uses `docker/prod/Dockerfile` under the reviewed template. Confirm that the file exists and verify the destination independently. |
 
-Forms and defaults differ between jobs. Optional components and runtime settings may be supplied by deployment configuration rather than these four inputs. Preserve their approved values and use [Understand deployment parameters](../tools/jenkins/parameters.md) to compare requested inputs with an existing run's recorded inputs.
+Forms and defaults differ between jobs. The inspected Docker `main` had no Test Dockerfile; use [Find the branch or tag and choose its profile](../tools/jenkins/parameters.md#find-the-branch-or-tag-and-choose-its-profile) to check the selected pair. Optional components and runtime settings may be supplied by deployment configuration rather than these four inputs. Preserve their approved values and compare requested inputs with an existing run's recorded inputs.
 
 ## 6. Deploy in the rehearsed order
 
