@@ -16,6 +16,16 @@ Use the OMS API host supplied for the target production or UAT environment. Conf
 
 This example uses the demonstration OMS API host. Replace the host with the one configured for your environment and retain the endpoint path.
 
+### Instance naming examples
+
+| Environment | Legacy OMS instance | OMS API instance |
+| --- | --- | --- |
+| Production | `demo-oms` | `demo-maarg` |
+| UAT | `demo-uat` | `demo-maarg-uat` |
+
+These names illustrate the demonstration environment's naming convention. Confirm your own instance names and API host with the integration owner; the naming pattern alone does not prove that an API instance exists or is connected.
+
+
 ### Methods
 
 * GET: When passing params in the URL
