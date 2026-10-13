@@ -13,6 +13,19 @@ For example, if a facility has 100 units and a safety stock value of 10, the fac
 Attribute-Based Safety Stock
 {% endembed %}
 
+## See what your rules hold back
+
+The `Safety stock` page shows, next to the rules, how much store inventory they keep from online orders right now. Use it to check a rule's effect before and after you change it.
+
+| Card | Question it answers | What to do with the answer |
+| --- | --- | --- |
+| `Store stock held as safety stock` | What share of the units at stores does safety stock hold, and is that share rising? | Compare it with the buffer you intended. A share that keeps rising usually means a rule's product scope grows as new products are tagged. The trend appears once weekly snapshots are scheduled; see [Track safety stock over time](../../orders/order-routing/dashboard.md#track-safety-stock-over-time). |
+| `Units held by rule` | Which rule holds the units, and how much of the total? | Select a rule to open it. If one rule holds most of the units, narrow its product tags or facility groups, or lower its value. |
+| `Unattributed safety stock`, in `Units held by rule` | Are units held by a minimum stock value that no current rule would set? | Run the safety stock rule group again, or find the rule, import, or earlier tag that set the value. |
+| `Stores holding the most` | Which stores give up the largest share of their inventory? | Review whether those stores carry many low-stock products that a rule covers. Select the link at the bottom to see every store on the dashboard. |
+
+Units are counted at stores only. For a product at a store, the hold is the safety stock value or the units available, whichever is smaller. A unit is credited to a rule only when the rule matches the store and the product's tags, is the last matching rule in the sequence, and its value equals the value saved for the product at that store.
+
 ## Create a safety stock rule
 
 1. Open `Sourcing` > `Safety stock`.
