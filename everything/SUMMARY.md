@@ -154,3 +154,11 @@
 * [Update OMS Version](deployment/update-oms-version.md)
 * [Rollback OMS Version](deployment/rollback-release.md)
 * [Optional Plugins](deployment/optional-plugins.md)
+
+## OMS administration references
+
+* [Shopify Launch Backend Runbook](operations/oms-administration/shopify-launch-runbook.md)
+* [Solr Indexing Setup](operations/oms-administration/solr-indexing.md)
+* [Data Manager Backend Reference](operations/oms-administration/data-manager/README.md)
+  * [Configuration Options](operations/oms-administration/data-manager/configuration-options.md)
+  * [Import Logs](operations/oms-administration/data-manager/view-mdm-log.md)
