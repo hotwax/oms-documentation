@@ -47,6 +47,10 @@ Start with the recipe that matches the decision you need to make:
 * [Apply a complete routing template](use-cases.md#apply-a-complete-template) when you need a connected design rather than one recipe.
 * [Test and refine a strategy](use-cases.md#test-and-refine-a-strategy) when Simulation, Circuit, or Test Drive is available in your deployment.
 
+## Start with the dashboard
+
+Open `Dashboard` to see how routing performed over the last complete weeks: which routing rules allocated orders, how much work went to stores, and how much inventory safety stock and shipping controls hold back. Each card links to the setting you would change. See [Read the order routing dashboard](dashboard.md).
+
 ## Use the order routing list
 
 Open `Order Routing` from the `Routing` section. The list page gives you two views of the same configuration:
@@ -74,6 +78,7 @@ The detail page keeps changes to the group name, description, routings, and rout
 
 ## Continue configuring order routing
 
+* [Read the order routing dashboard](dashboard.md)
 * [Manage routing groups](brokering-runs.md)
 * [Configure a routing group](routing-group-details.md)
 * [Configure routings](routing-rules.md)
