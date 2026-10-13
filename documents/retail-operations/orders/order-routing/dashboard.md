@@ -39,7 +39,7 @@ Select `4 weeks`, `6 weeks`, or `12 weeks` at the top of the page. The dashboard
 
 ## Review the headline numbers
 
-The four cards at the top summarize the selected week. The routing and shipping cards show the change from the previous week and a small trend line. The safety stock card shows the current value.
+Three of the four cards at the top summarize the selected week and show the change from the previous week with a small trend line. The fourth, `Store stock held as safety stock`, always shows the current value and doesn't change when you select another week, so don't compare it directly with a past week's routing numbers.
 
 | Card | What it counts |
 | --- | --- |
