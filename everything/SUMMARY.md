@@ -33,6 +33,7 @@
     * [Mismatch Time Zone](tools/launchpad/job-manager/timezone-mismatch.md)
   * [Cycle Count Export Troubleshooting](tools/launchpad/cycle-count/export-troubleshooting.md)
   * [Cycle Count Import And Recount Troubleshooting](tools/launchpad/cycle-count/import-troubleshooting.md)
+  * [Cycle Count Submission And Progress Troubleshooting](tools/launchpad/cycle-count/submission-troubleshooting.md)
 * [Maarg](tools/maarg/README.md)
   * [Getting Started](tools/maarg/getting-started.md)
   * [Glossary](tools/maarg/glossary.md)
