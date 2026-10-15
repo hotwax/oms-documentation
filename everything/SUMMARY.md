@@ -32,6 +32,7 @@
     * [Job Runtime Error](tools/launchpad/job-manager/runtime-error.md)
     * [Mismatch Time Zone](tools/launchpad/job-manager/timezone-mismatch.md)
   * [Cycle Count Export Troubleshooting](tools/launchpad/cycle-count/export-troubleshooting.md)
+  * [Cycle Count Results And Adjustments](tools/launchpad/cycle-count/results-and-adjustments.md)
   * [Cycle Count Import And Recount Troubleshooting](tools/launchpad/cycle-count/import-troubleshooting.md)
 * [Maarg](tools/maarg/README.md)
   * [Getting Started](tools/maarg/getting-started.md)

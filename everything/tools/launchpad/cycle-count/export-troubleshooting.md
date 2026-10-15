@@ -10,6 +10,8 @@ Use this guide when a Cycle Count report does not download, stays in progress, o
 
 This guide covers the Cycle Count App's `Closed` and `Export history` workflow. It does not describe the separate native Shopify POS counting extension or Job Manager Data Document exports.
 
+For field-by-field reconciliation, use [Verify Cycle Count Results And Adjustments](results-and-adjustments.md). It separates count-time snapshots, saved review decisions, actual inventory movements, and valuation requirements; the exported variance is not by itself a posted adjustment amount.
+
 ## Before You Start
 
 - Confirm the OMS environment, Cycle Count App version, relevant facilities, count references, and the time of the export request with its time zone.
