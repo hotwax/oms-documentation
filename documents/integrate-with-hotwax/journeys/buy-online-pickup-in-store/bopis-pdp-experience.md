@@ -196,7 +196,7 @@ Replace the example identifiers with the values configured in OMS.
 ```json
 {
   "productStoreId": "STORE",
-  "inventoryGroupId": "CHANNEL_FAC_GRP",
+  "inventoryGroupId": "SHOPIFY_FAC_GRP",
   "internalNames": ["MSH02-32-Black"],
   "facilityIds": ["STORE_15", "STORE_20", "STORE_9"]
 }
