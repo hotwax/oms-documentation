@@ -42,9 +42,9 @@ Content-Type: application/json
 ```json
 {
   "productStoreId": "STORE",
-  "productIds": "11855",
-  "internalNames": "XS-BLACK",
-  "facilityIds": "114",
+  "productIds": ["11855"],
+  "internalNames": ["XS-BLACK"],
+  "facilityIds": ["114"],
   "inventoryGroupId": "SHOPIFY_FAC_GRP"
 }
 ```
@@ -66,12 +66,12 @@ Content-Type: application/json
 | Parameter        | Description                                             | Example             |
 |------------------|---------------------------------------------------------|---------------------|
 | `productStoreId` | The ID of the product store                             | `"STORE"`           |
-| `productIds`      | HotWax Commerce internal product ID                     | `"11855"`           |
-| `internalNames`   | The well known ID of a product, usually UPC or SKU based on configuration| `"XS-BLACK"`           |
-| `facilityIds`     | The HotWax Commerce facility ID where product inventory is located | `"114"`             |
+| `productIds`      | List of HotWax Commerce internal product IDs             | `["11855"]`         |
+| `internalNames`   | List of product internal names, usually UPC or SKU based on configuration | `["XS-BLACK"]` |
+| `facilityIds`     | List of HotWax Commerce facility IDs where product inventory is located | `["114"]` |
 | `inventoryGroupId` | HotWax Commerce inventory group ID                     | `"SHOPIFY_FAC_GRP"` |
 
-If both productIds and internalNames are passed, the value of productIds will be honored.
+`productStoreId`, `inventoryGroupId`, and `facilityIds` are required. Provide either `productIds` or `internalNames` as a list, even when querying a single product. If both productIds and internalNames are passed, the value of productIds will be honored.
 
 **Select Products**
 
@@ -96,14 +96,23 @@ Content-Type: application/json
 
 ### Body
 
+The response contains a `resultList` entry for each requested product and facility combination. Examples below show one entry. Use positive `computedAtp` for pickup availability; a failed eligibility check returns zero and a decision reason.
+
 #### ATP zeroed out due to the inventory checks
 
 ```json
 {
-  "atp": 0.0,
-  "computedAtp": 0.0,
-  "decisionReason": "AllowPickupFacility"
-  "decisionReasonDesc": "Pickup is not allowed for product 11855 at facility 115."
+  "resultList": [
+    {
+      "productId": "11855",
+      "facilityId": "114",
+      "atp": 0.0,
+      "safetyStock": 0.0,
+      "computedAtp": 0.0,
+      "decisionReason": "AllowPickupFacility",
+      "decisionReasonDesc": "Pickup is not allowed for product 11855 at facility 114."
+    }
+  ]
 }
 ```
 
@@ -129,8 +138,14 @@ Each Decision Reason also comes with a detailed log of why the given check faile
 
 ```json
 {
-  "atp": 50.0,
-  "safetyStock": 5.0,
-  "computedAtp": 45.0,
+  "resultList": [
+    {
+      "productId": "11855",
+      "facilityId": "114",
+      "atp": 50.0,
+      "safetyStock": 5.0,
+      "computedAtp": 45.0
+    }
+  ]
 }
 ```

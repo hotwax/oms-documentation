@@ -173,43 +173,66 @@ Method: `POST`
 
 ### Step 3: Check inventory at each store allowing BOPIS
 
-For each store that allows BOPIS, use the [BOPIS Check Inventory](/documents/integrate-with-hotwax/api/inventory/bopis-check-inventory.md) API to check the available to promise (ATP) inventory for the desired product. Display all the facilities with non-zero inventory numbers on the product detail page (PDP) for customers to select and place a BOPIS order.
+Use the [BOPIS Check Inventory](/documents/integrate-with-hotwax/api/inventory/bopis-check-inventory.md) API to check pickup availability for the selected product at the stores returned by the store lookup.
 
-Note: If a facility has 0 inventory for the product, you can still display it for the Ship-to-store PDP experience.
+Send the OMS product store ID, the channel's inventory group ID, and the OMS facility IDs. Identify products with either `productIds` or `internalNames`. An internal name is the value of `Product.internalName` in OMS; do not assume it is the Shopify variant ID or SKU without checking the product mapping.
+
+The facility must belong to the product store, a pickup facility group, and the requested channel's inventory group. Pickup must also be allowed for the product at the facility and in any channel-level configuration. Use `computedAtp`, which accounts for safety stock, to display locations with a positive quantity available for pickup. A zero result can include a `decisionReason` and `decisionReasonDesc` explaining a failed eligibility check.
+
+Note: Displaying a location with zero pickup inventory for a Ship-to-store experience requires a separate Ship-to-store workflow.
 
 #### Sample
 
 Method: `POST`
 
+Endpoint: `https://<host>/rest/s1/ofbiz-oms-usl/checkBopisInventory`
+
+Header: `Content-Type: application/json`
+
 **Request**
 
-```
+Replace the example identifiers with the values configured in OMS.
+
+```json
 {
-  "filters": {
-    "sku": "MSH02-32-Black",
-    "facilityId": "STORE_15, STORE_20, STORE_9 "
-  }
+  "productStoreId": "STORE",
+  "inventoryGroupId": "SHOPIFY_FAC_GRP",
+  "internalNames": ["MSH02-32-Black"],
+  "facilityIds": ["STORE_15", "STORE_20", "STORE_9"]
 }
 ```
 
 **Response**
 
-```
+Illustrative response for the requested product and three eligible stores:
+
+```json
 {
-"count": "1",
-  "docs": [
+  "resultList": [
     {
-    "facilityId": "STORE_15",
-    "atp": 3.000000
+      "facilityId": "STORE_15",
+      "productId": "10001",
+      "internalName": "MSH02-32-Black",
+      "atp": 5,
+      "safetyStock": 2,
+      "computedAtp": 3
     },
     {
-    "facilityId": "STORE_20",
-    "atp": 8.000000
+      "facilityId": "STORE_20",
+      "productId": "10001",
+      "internalName": "MSH02-32-Black",
+      "atp": 10,
+      "safetyStock": 2,
+      "computedAtp": 8
     },
     {
-    "facilityId": "STORE_9",
-    "atp": 14.000000
-    },
+      "facilityId": "STORE_9",
+      "productId": "10001",
+      "internalName": "MSH02-32-Black",
+      "atp": 16,
+      "safetyStock": 2,
+      "computedAtp": 14
+    }
   ]
 }
 ```
@@ -220,7 +243,7 @@ In case the customer's location is not available, you can display all the availa
 
 * Step 1: Call the storeLookup API without passing latitude and longitude coordinates to retrieve all facilities allowing BOPIS
 * Step 2: Use the facility IDs returned in the response of the storeLookup API with the [BOPIS Check Inventory](/documents/integrate-with-hotwax/api/inventory/bopis-check-inventory.md) API to get the facilities having inventory for the product.
-* Step 3: Display all the locations with non-zero inventory on the PDP
+* Step 3: Display locations with positive `computedAtp` on the PDP
 
 #### Sample
 
