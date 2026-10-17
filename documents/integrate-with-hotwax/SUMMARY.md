@@ -48,7 +48,7 @@
           kind: openapi
           spec: order-routing
     ```
-* [Commerce Admin](components/admin/README.md)
+* [Admin](components/admin/README.md)
   * ```yaml
     type: builtin:openapi
     props:
