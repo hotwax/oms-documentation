@@ -6,11 +6,11 @@ description: >-
 
 # Fulfillment And Invoice Status Troubleshooting
 
-Use this guide when Shopify shows an order as "Fulfilled" but HotWax Commerce or an enterprise resource planning (ERP) system shows a different fulfillment or billing state. Start with the individual order and line records. A report's "Fulfilled" column does not establish that an ERP invoice should exist.
+Use this guide when Shopify shows an order as "Fulfilled" but OMS or an enterprise resource planning (ERP) system shows a different fulfillment or billing state. Start with the individual order and line records. A report's "Fulfilled" column does not establish that an ERP invoice should exist.
 
-The NetSuite examples below describe documented HotWax Commerce integration flows. Confirm the installed integration version, posting model, saved-search criteria, and schedules before applying them to a particular environment.
+The NetSuite examples below describe documented OMS integration flows. Confirm the installed integration version, posting model, saved-search criteria, and schedules before applying them to a particular environment.
 
-**Verification scope:** Reviewed on October 3, 2026 against the linked HotWax Commerce manuals, Shopify connector release `v4.4.0`, and the [public NetSuite integration source at commit `4922c6e`](https://github.com/hotwax/netsuite-integration/commit/4922c6ea09940335cab5ad262cd6dbbba4b190e3). The NetSuite invoice script and selection definition also match [release `v1.1.0`](https://github.com/hotwax/netsuite-integration/releases/tag/v1.1.0). These are source baselines, not confirmation of a merchant's deployed version or runtime outcome.
+**Verification scope:** Reviewed on October 3, 2026 against the linked OMS manuals, Shopify connector release `v4.4.0`, and the [public NetSuite integration source at commit `4922c6e`](https://github.com/hotwax/netsuite-integration/commit/4922c6ea09940335cab5ad262cd6dbbba4b190e3). The NetSuite invoice script and selection definition also match [release `v1.1.0`](https://github.com/hotwax/netsuite-integration/releases/tag/v1.1.0). These are source baselines, not confirmation of a merchant's deployed version or runtime outcome.
 
 The pinned consumer-manual sources were refreshed on October 4, 2026 at documentation commit `a5d99d80`. This includes the separate returns lifecycle below; a documentation merge does not establish that its configured flow is installed in an environment.
 
@@ -18,13 +18,15 @@ The pinned consumer-manual sources were refreshed on October 4, 2026 at document
 This is a read-only diagnosis guide. Do not fulfill, invoice, adjust inventory, change payment status, or delete and re-import an order merely to make status labels agree. A missing response can also mean that a transaction succeeded but its acknowledgement has not arrived.
 {% endhint %}
 
+For a sales order missing from NetSuite or rejected because of a sales-channel, department, or location reference, start with [Diagnose NetSuite Order Push And Mappings](../Netsuite/order-push-troubleshooting.md). It separates order selection, Data Manager processing, actual mapping, and destination acknowledgement.
+
 ## Understand The Status Boundaries
 
 | Evidence | What It Establishes | What Still Needs Checking |
 | --- | --- | --- |
 | Shopify fulfillment status | The fulfillment state recorded in Shopify | The affected lines, quantities, location, and whether the update came from POS, a manual action, or an integration |
 | Shopify payment status | The separate payment state recorded in Shopify | Payment eligibility for the deployed export and any required ERP payment records |
-| OMS order or shipment status | The processing state recorded in HotWax Commerce | Line-level completion and acceptance by each downstream system |
+| OMS order or shipment status | The processing state recorded in OMS | Line-level completion and acceptance by each downstream system |
 | NetSuite Item Fulfillment | A fulfillment transaction exists for the linked sales order | Its shipment status, lines, quantities, location, and subsequent billing |
 | NetSuite Invoice or Cash Sale | The corresponding billing transaction exists | Whether it is the expected transaction type, covers the correct lines, and has the required payment application |
 

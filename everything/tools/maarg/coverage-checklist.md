@@ -56,6 +56,16 @@ This is guide-presence coverage, not a claim that the whole manual is complete o
 | 25 | Resource inspection | **Merged:** [Resource Inspection](resource-inspection.md) | Source-verified only; an owner-approved synthetic location and metadata/content/download examples remain |
 | 26 | Entity synchronization | **Merged:** [Entity Synchronization](entity-synchronization.md) | Selection/window/dependent validation, populated history, and destination outcomes pending |
 
+## NetSuite Order Push Backfill: October 17, 2026
+
+The proposed [NetSuite order-push and mapping diagnostic guide](../Netsuite/order-push-troubleshooting.md) follows the current Company monitor through order selection, Data Manager processing, actual mapping and destination acknowledgement. It covers prerequisites, navigation, pending-versus-eligible scope, bounded cached histories, ignored rule-condition warnings, blank correlation fields, sales-channel/department/location identity and uncertain outcomes. It avoids history deletion, blanket replay and assumed mapping fallbacks.
+
+The source baseline is Company App v2.8.0 and NetSuite connector v3.3.6, with relevant Data Manager behavior checked at util v4.3.3. The latest distribution by publication time remains v6.3.13, published October 16 at 12:21:21 UTC. Its active manifest declares NetSuite connector v3.3.6, but the default production component set excludes this optional connector. Company v2.8.0 is a separate frontend release. Commented entries were ignored; neither publication nor manifest presence establishes installation.
+
+The complete linked processing, entity, fulfillment and inventory guides were reviewed, including the actual pixels of both Data Manager/System Messages filter images. No new image is used as runtime proof. Demo access reached sign-in only; installed-version pairing, populated monitor results, destination acceptance and recovery remain unverified. This business-workflow addition leaves the 26 platform families unchanged.
+
+Active drafts [#1918](https://github.com/hotwax/oms-documentation/pull/1918), [#1923](https://github.com/hotwax/oms-documentation/pull/1923), [#1928](https://github.com/hotwax/oms-documentation/pull/1928), [#1929](https://github.com/hotwax/oms-documentation/pull/1929), [#1932](https://github.com/hotwax/oms-documentation/pull/1932) and [#1934](https://github.com/hotwax/oms-documentation/pull/1934) retain their distinct fulfillment, receiving and count work. Priority remains approved isolated acceptance, unknown/partial correction outcomes, agreed recount selection and valuation, and incremental results. Further source-qualified gaps include Shopify held-inventory comparisons and modern variance-reason administration. Consumer navigation in merged #1935 and Products screenshots in [#1927](https://github.com/hotwax/oms-documentation/pull/1927) stay separate. Support reports are leads, not independently reproduced defects.
+
 ## Existing Documentation To Reuse
 
 These pages contain useful domain-specific detail. They should remain the primary source for that detail rather than being copied into each platform guide.
