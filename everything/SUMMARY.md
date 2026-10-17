@@ -76,6 +76,7 @@
     * [Fetch Put SFTP Retry](tools/napita/troubleshooting/fetch-put-sftp-retry.md)
 * [Netsuite](tools/Netsuite/README.md)
   * [Managing Saved Searches](tools/Netsuite/README.md)
+  * [Diagnose NetSuite Order Push And Mappings](tools/Netsuite/order-push-troubleshooting.md)
 * [Ofbiz](<tools/ofbiz/README (1).md>)
   * [Display Pages in Hamburger Menu](tools/ofbiz/display-pages-in-hamburger-menu.md)
   * [Orders](tools/ofbiz/order/README.md)
