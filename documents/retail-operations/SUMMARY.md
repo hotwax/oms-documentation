@@ -53,6 +53,7 @@
     * [Duplicate Orders](orders/order-management/troubleshooting/duplicate-orders.md)
     * [Shopify Order Import Failures](orders/order-management/troubleshooting/shopify-order-import-failure.md)
 * [Order routing](orders/order-routing/README.md)
+  * [Read the order routing dashboard](orders/order-routing/dashboard.md)
   * Manage and configure
     * [Manage routing groups](orders/order-routing/brokering-runs.md)
     * [Configure a routing group](orders/order-routing/routing-group-details.md)
