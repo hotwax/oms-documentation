@@ -288,7 +288,7 @@ No, users do not need to be store managers to handle receiving and fulfilling ta
 
 <summary>What needs to be configured when setting up a new instance of HotWax Commerce?</summary>
 
-For a new instance with one Shopify shop, use [Set up HotWax Commerce with Shopify](../system-admin/administration/company/product-store-onboarding.md). It is the single required sequence from claiming the initial Maarg administrator through company and Product Store defaults, Shopify connection, products, facilities, inventory, orders, routing, users, and end-to-end validation. NetSuite, multiple shops, migrations, pickup, preorders, returns integrations, SFTP, and other advanced launch variants require separate implementation guides.
+For a new instance with one Shopify shop, use [Set up HotWax Commerce with Shopify](../system-admin/administration/company/product-store-onboarding.md). It is the single required sequence from confirming initial OMS administrator readiness through company and Product Store defaults, Shopify connection, products, facilities, inventory, orders, routing, users, and end-to-end validation. NetSuite, multiple shops, migrations, pickup, preorders, returns integrations, SFTP, and other advanced launch variants require separate implementation guides.
 
 </details>
 

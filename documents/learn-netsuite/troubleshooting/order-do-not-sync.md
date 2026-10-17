@@ -1,7 +1,7 @@
 # Orders not syncing with NetSuite
 
 Use this guide when an OMS order has not been created in NetSuite. Trace the
-order through the OMS eligibility checks, the Moqui feed job, and the NetSuite
+order through the OMS eligibility checks, the OMS feed job, and the NetSuite
 import and acknowledgement jobs to find the failed stage.
 
 ## 1. Check the order sync feed history
@@ -16,7 +16,7 @@ import and acknowledgement jobs to find the failed stage.
   </figure>
 </div>
 
-- If no history record exists, the Moqui order feed has not picked up the order.
+- If no history record exists, the OMS order feed has not picked up the order.
   Continue with the eligibility and job checks below.
 - If a history record exists, OMS generated a feed for the order. Continue with
   the NetSuite import status checks.
@@ -31,13 +31,13 @@ Review the Order Entry Date on the Order Details page.
   </figure>
 </div>
 
-Allow the configured Moqui and NetSuite job cycles to finish. Under the standard
+Allow the configured OMS and NetSuite job cycles to finish. Under the standard
 schedule, the full flow can take up to two hours. Continue troubleshooting if an
 older order is still missing.
 
 ## 3. Validate the order data
 
-An ineligible order will not be included in the Moqui order feed.
+An ineligible order will not be included in the OMS order feed.
 
 ### Check the NetSuite customer ID
 
@@ -105,13 +105,13 @@ and correct the attribute before retrying the order.
 
 ## 4. Run both order sync job layers
 
-In Job Manager, open **Orders** > **NetSuite**. Verify that the Moqui feed job
+In Job Manager, open **Orders** > **NetSuite**. Verify that the OMS feed job
 and the corresponding NetSuite jobs are enabled and completing successfully.
 Run both layers when manually retrying an order.
 
 ### Standard sales orders
 
-1. Run `generate_CreateOrderFeed` in Moqui to create the outbound order feed.
+1. Run `generate_CreateOrderFeed` in the OMS to create the outbound order feed.
 2. Run `HC_importSalesOrders` to import the feed and create the Sales Order in
    NetSuite.
 3. Run `HC_MR_ExportedSalesOrderCSV` to export the NetSuite result so OMS can
@@ -119,13 +119,13 @@ Run both layers when manually retrying an order.
 
 ### POS cash sales
 
-1. Run `generate_CreateOrderFeed_pos` in Moqui to create the outbound POS feed.
+1. Run `generate_CreateOrderFeed_pos` in the OMS to create the outbound POS feed.
 2. Run `HC_SC_ImportCashSale` to import the feed and create the Cash Sale in
    NetSuite.
 3. Run `HC_MR_ExportedCashSaleCSV` to export the NetSuite result to OMS.
 
 The export jobs are not the wrong jobs; they are the acknowledgement stage. The
-Moqui feed job and the NetSuite import job must also run for the order to be
+OMS feed job and the NetSuite import job must also run for the order to be
 created.
 
 ## 5. Check the order in NetSuite
@@ -216,7 +216,7 @@ After correcting the source data or mapping:
 
 1. Open **Order Sync Feed History** from the Order Details page.
 2. Remove only the failed history record for the affected order.
-3. Run the Moqui feed job and the corresponding NetSuite import and
+3. Run the OMS feed job and the corresponding NetSuite import and
    acknowledgement jobs again.
 4. Confirm that a new history record is created and that the NetSuite internal
    ID returns to OMS.

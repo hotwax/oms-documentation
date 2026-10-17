@@ -8,7 +8,7 @@ description: Learn about the Orders jobs in HotWax Commerce.
 
 The legacy `JOB_IMP_ORD` / `createOrdersFromShopify` job is not the primary order-import path for a new standard launch. Current Shopify ingestion has three separate flows: controlled open-order history, realtime `ORDERS_CREATE` and `ORDERS_UPDATED` events through EventBridge and SQS, and a scheduled fallback batch.
 
-Use [Shopify order download flows](../../../learn-shopify/shopify-integration/orders/order-download.md) to diagnose an existing flow. For launch setup, follow [Chapter 9 of Set up HotWax Commerce with Shopify](../../../system-admin/administration/company/product-store-onboarding.md#9-configure-maarg-admin-order-infrastructure).
+Use [Shopify order download flows](../../../learn-shopify/shopify-integration/orders/order-download.md) to diagnose an existing flow. For launch setup, follow [Chapter 9 of Set up HotWax Commerce with Shopify](../../../system-admin/administration/company/product-store-onboarding.md#9-confirm-oms-order-infrastructure).
 
 ***
 
