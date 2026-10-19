@@ -41,6 +41,7 @@ today rather than what was planned. For how to read and page these objects, star
 | `shipment` | [Shipment](#shipment) | `externalId: String`, `shipmentId: ID` |
 | `shipmentReceipt` | [ShipmentReceipt](#shipmentreceipt) | `receiptId: ID` |
 | `shopifyShop` | [ShopifyShop](#shopifyshop) | `shopId: ID` |
+| `systemMessage` | [SystemMessage](#systemmessage) | `systemMessageId: ID` |
 | `transferDiagnosticOrder` | [TransferDiagnosticOrder](#transferdiagnosticorder) | `orderId: ID` |
 | `transferDiagnosticReceipt` | [TransferDiagnosticReceipt](#transferdiagnosticreceipt) | `receiptId: ID` |
 | `transferDiagnosticShipment` | [TransferDiagnosticShipment](#transferdiagnosticshipment) | `externalId: String`, `shipmentId: ID` |
@@ -365,6 +366,16 @@ Returns a paged collection of [Shipment](#shipment).
 | Sort keys | `SHIPMENT_ID`, `SHIPPED_DATE`, `STATUS` |
 | Sort enum | `ShipmentSortKey` |
 
+#### `shopifyShopLocations`
+
+Returns a paged collection of [ShopifyShopLocation](#shopifyshoplocation).
+
+| | |
+| --- | --- |
+| Search keys | `shopId`, `facilityId` |
+| Sort keys | `FACILITY_ID`, `SHOP_ID` |
+| Sort enum | `ShopifyShopLocationSortKey` |
+
 #### `shopifyShopProducts`
 
 Returns a paged collection of [ShopifyShopProduct](#shopifyshopproduct).
@@ -384,6 +395,16 @@ Returns a paged collection of [ShopifyShop](#shopifyshop).
 | Search keys | `shopId`, `myshopifyDomain`, `productStoreId`, `isEnabled` |
 | Sort keys | `NAME`, `SHOP_ID` |
 | Sort enum | `ShopifyShopSortKey` |
+
+#### `systemMessages`
+
+Returns a paged collection of [SystemMessage](#systemmessage).
+
+| | |
+| --- | --- |
+| Search keys | `systemMessageId`, `systemMessageTypeId`, `systemMessageRemoteId`, `statusId`, `parentMessageId`, `ackMessageId` |
+| Sort keys | `SYSTEM_MESSAGE_ID` |
+| Sort enum | `SystemMessageSortKey` |
 
 #### `transferDiagnosticOrderShipments`
 
@@ -1252,6 +1273,16 @@ returns a bounded array with no cursors.
 | `timezone` | `String` | scalar | — |
 | `weightUnit` | `String` | scalar | — |
 
+### ShopifyShopLocation
+
+| Field | Type | Kind | Notes |
+| ----- | ---- | ---- | ----- |
+| `facility` | `Facility` | object | One [Facility](#facility). |
+| `facilityId` | `ID` | scalar | — |
+| `shop` | `ShopifyShop` | object | One [ShopifyShop](#shopifyshop). |
+| `shopId` | `ID` | scalar | — |
+| `shopifyLocationId` | `ID` | scalar | — |
+
 ### ShopifyShopOrder
 
 | Field | Type | Kind | Notes |
@@ -1269,6 +1300,22 @@ returns a bounded array with no cursors.
 | `shopId` | `ID` | scalar | — |
 | `shopifyInventoryItemId` | `String` | scalar | — |
 | `shopifyProductId` | `ID` | scalar | — |
+
+### SystemMessage
+
+| Field | Type | Kind | Notes |
+| ----- | ---- | ---- | ----- |
+| `ackMessageId` | `ID` | scalar | — |
+| `failCount` | `Int` | scalar | — |
+| `initDate` | `DateTime` | scalar | — |
+| `isOutgoing` | `String` | scalar | — |
+| `lastAttemptDate` | `DateTime` | scalar | — |
+| `parentMessageId` | `ID` | scalar | — |
+| `processedDate` | `DateTime` | scalar | — |
+| `statusId` | `ID` | scalar | — |
+| `systemMessageId` | `ID` | scalar | — |
+| `systemMessageRemoteId` | `ID` | scalar | — |
+| `systemMessageTypeId` | `ID` | scalar | — |
 
 ### TelecomNumber
 
@@ -1405,8 +1452,10 @@ returns a bounded array with no cursors.
 | `ServiceJobSortKey` | `JOB_NAME` |
 | `ShipmentReceiptSortKey` | `RECEIPT_ID` |
 | `ShipmentSortKey` | `SHIPMENT_ID`, `SHIPPED_DATE`, `STATUS` |
+| `ShopifyShopLocationSortKey` | `FACILITY_ID`, `SHOP_ID` |
 | `ShopifyShopProductSortKey` | `PRODUCT_ID` |
 | `ShopifyShopSortKey` | `NAME`, `SHOP_ID` |
+| `SystemMessageSortKey` | `SYSTEM_MESSAGE_ID` |
 | `TransferDiagnosticOrderShipmentSortKey` | `ORDER_ID` |
 | `TransferDiagnosticReceiptSortKey` | `RECEIPT_ID` |
 | `TransferDiagnosticShipmentItemSortKey` | `SHIPMENT_ID` |
