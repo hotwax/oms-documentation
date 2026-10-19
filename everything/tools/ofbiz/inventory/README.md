@@ -1,23 +1,31 @@
 # Add New Variance Reason
 
+{% hint style="warning" %}
+This is a legacy **OFBiz Webtools** procedure. Do not apply its `entity-engine-xml` example to Maarg/Moqui or assume it creates a rejection reason or a NetSuite mapping. For the modern Company workflow, reason-family distinctions and safe diagnosis, start with [Manage Rejection Reasons And Variance Sync](../../launchpad/rejection-and-variance-reasons.md). Manual `IID_REASON` administration still requires the installed backend contract and an approved change procedure.
+{% endhint %}
+
 This Standard Operating Procedure (SOP) outlines the steps required to create a new variance reason in HotWax Commerce, for retailers to record variances in the cycle count app.
 
 ## Steps to Create a New Variance Reason
 
 ### Login to the Webtools
+
 1. Open your web browser.
 2. Navigate to the `HotWax Commerce Webtools` login page.
 3. Enter your credentials (username and password).
 4. Click the `Login` button to access the Webtools dashboard.
 
 ### Navigate to the Import/Export Section
+
 1. Once logged in, locate the `Webtools` section on the dashboard.
 2. Click on the `Import/Export` button.
 
 ### Access XML Data Import
+
 1. In the Import/Export section, find and click on the `XML Data Import` button.
 
 ### Prepare Data for Import
+
 1. Scroll down to the bottom of the page to locate the input box under the `Import File` button.
 2. Enter the XML data in the input box. Use the sample data provided as a template
 
@@ -34,6 +42,7 @@ This Standard Operating Procedure (SOP) outlines the steps required to create a 
     ```
 
 ### Modify the XML Data
+
 1. Replace the `enumId`, `enumName`, and `description` values with the new variance reason details. For example
 
     ```xml
@@ -43,12 +52,15 @@ This Standard Operating Procedure (SOP) outlines the steps required to create a 
 2. Ensure the new details accurately reflect the specific variance reason you intend to create.
 
 ### Import the XML Data
+
 1. After entering the modified data in the input box, double-check for accuracy.
 2. Click the `Import Text` button to import the data into the system.
 
 ### Verify the New Variance Reason
+
 1. After importing the data, verify that the new variance reason has been successfully created.
 2. Go to the Enumeration entity in Webtools to ensure the new variance reason appears as expected.
 
 ## Conclusion
+
 Following these steps, you can create a new variance reason in HotWax Commerce for recording variances through the cycle count app. Ensure all data entered is accurate and double-check each step to prevent errors during the import process. For any issues or further assistance, please contact the support team.

@@ -23,6 +23,7 @@
 * [Jira](tools/jira/README.md)
   * [Feature Request on Jira](tools/jira/README.md)
 * [Launchpad](tools/launchpad/README.md)
+  * [Manage Rejection Reasons And Variance Sync](tools/launchpad/rejection-and-variance-reasons.md)
   * [Receiving Discrepancies](tools/launchpad/receiving/README.md)
   * [Fulfillment](tools/launchpad/fulfillment/README.md)
     * [Stuck Orders in Fulfillment App](tools/launchpad/fulfillment/README.md)
