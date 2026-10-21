@@ -62,7 +62,7 @@ The following behavior applies specifically to **Scan order items** in the revie
 
 For read-only diagnosis, compare the expected identifier type and value, product/variant membership and current checked state. If input differs, investigate the label or scanner configuration with its owner. If multiple products share the same value, stop and involve the product-data owner rather than guessing which item was accepted.
 
-Do not use live scanning or the dialog's bottom save/pack control as a diagnostic test. The control returns a pack request once the dialog's checks are satisfied. Do not disable Require scan, reject items, change quantities, repack or reship to clear a barcode problem. Any approved acceptance test must use an isolated fixture and verify the resulting shipment and quantities separately.
+Do not use live scanning or the dialog's bottom save/pack control as a diagnostic test. Once the dialog's checks are satisfied, the control continues into the packing confirmation flow; it does not merely save scan progress. Do not disable Require scan, reject items, change quantities, repack or reship to clear a barcode problem. Any approved acceptance test must use an isolated fixture and verify the resulting shipment and quantities separately.
 
 ## Verify An Approved Correction
 
