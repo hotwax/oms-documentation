@@ -25,6 +25,7 @@
 * [Launchpad](tools/launchpad/README.md)
   * [Receiving Discrepancies](tools/launchpad/receiving/README.md)
   * [Fulfillment](tools/launchpad/fulfillment/README.md)
+    * [Product Identifiers And Scanning](tools/launchpad/fulfillment/product-identifiers-and-scanning.md)
     * [Stuck Orders in Fulfillment App](tools/launchpad/fulfillment/README.md)
   * [Diagnose BOPIS Notifications](tools/launchpad/bopis-notifications.md)
   * [Job Manager](tools/launchpad/job-manager/README.md)
@@ -162,3 +163,4 @@
 * [Data Manager Backend Reference](operations/oms-administration/data-manager/README.md)
   * [Configuration Options](operations/oms-administration/data-manager/configuration-options.md)
   * [Import Logs](operations/oms-administration/data-manager/view-mdm-log.md)
+
