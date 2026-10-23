@@ -8,7 +8,7 @@ description: >-
 
 Job Manager gives operations and technical teams one place to monitor scheduled work and investigate data processing in HotWax Commerce.
 
-Open Job Manager from the HotWax Commerce Launchpad. Your account needs the `JOB_MANAGER_APP_VIEW` permission to enter the app. See [Job Manager app permissions](../user-permissions/job-manager-app.md) for the permissions that control each action.
+Open Job Manager from the HotWax Commerce Launchpad. Your account needs the `JOB_MANAGER_ACCXUI_APP_VIEW` permission to enter the app. See [Job Manager app permissions](../user-permissions/job-manager-app.md) for the permissions that control each action.
 
 ## Choose a workspace
 
@@ -62,7 +62,3 @@ The app can also redirect to the legacy experience when the connected HotWax Com
 - [Build a data document](data-documents/build-data-document.md)
 - [Manage app settings](settings.md)
 - [Troubleshoot Job Manager](troubleshooting/README.md)
-
-## Arrived changes
-
-Read [Arrived: operations](arrived-operations.md) and [Arrived: data-document builder](arrived-data-document-builder.md) for the changed workflows and their source notes.

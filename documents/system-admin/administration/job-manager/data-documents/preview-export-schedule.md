@@ -8,13 +8,21 @@ Open a saved document from `Data documents` > `Documents`.
 
 ## Preview the result
 
-1. Save any changes to the document fields and conditions.
-2. Open `Preview` and set the `Rows` limit.
-3. Run the preview.
-4. Confirm the columns and review representative rows.
-5. Compare the result with the saved document fields and conditions.
+1. Open `Preview` and set the `Rows` limit.
+2. Select `Preview`.
+3. If there are unsaved changes, choose how to continue.
 
-An empty preview can be valid when no records match the conditions. Review `Issues` and `Conditions` before you change the document.
+| Choice | Result |
+| --- | --- |
+| `Cancel` | Return to editing without running a preview |
+| `Preview anyway` | Preview the saved document without the pending edits |
+| `Save` | Save the changes, then preview if saving succeeds |
+
+![Unsaved changes dialog with Cancel, Preview anyway, and Save](../../../.gitbook/assets/job-manager/builder-preview-unsaved.jpg)
+
+*Preview anyway uses the saved definition. Choose Save to include pending field or condition changes.*
+
+Confirm the returned columns and review representative rows against the saved fields and conditions. An empty preview can be valid when no records match. Review `Issues` and `Conditions` before changing the document.
 
 ## Choose the output scope
 

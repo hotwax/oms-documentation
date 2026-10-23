@@ -8,7 +8,7 @@ Job Manager uses app access, administrator permissions, and backend action check
 
 ## Grant app access
 
-Assign `JOB_MANAGER_APP_VIEW` to users who need to open Job Manager.
+Assign `JOB_MANAGER_ACCXUI_APP_VIEW` to users who need to open Job Manager.
 
 The app checks this permission during sign-in. A user without app access cannot use the operational pages described below.
 
@@ -16,7 +16,7 @@ The app checks this permission during sign-in. A user without app access cannot 
 
 | Permission | Current use |
 | --- | --- |
-| `JOB_MANAGER_APP_VIEW` | Open the Job Manager app |
+| `JOB_MANAGER_ACCXUI_APP_VIEW` | Open the Job Manager app |
 | `COMMON_ADMIN` | Create, edit, save, and delete `Message types` and `Remote systems`, including protected configuration fields |
 | `COMMERCEUSER_VIEW` | Use `Go to OMS` from `Settings` when that button is available in the connected environment |
 

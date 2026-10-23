@@ -39,6 +39,7 @@ sequenceDiagram
 
 * [Plan your count with a preview](plan-cycle-count.md)
 * [Create sessions and complete your count](start-complete-session.md)
+* [Add hand-counted items](start-complete-session.md#add-hand-counted-items)
 * [Review counts at the store before submitting for review](count-progress-review.md)
 * Review and approve variances at head office
 * [Go back and review old counts and export](../../retail-operations/inventory/cycle-count/closed.md)
@@ -47,7 +48,3 @@ sequenceDiagram
 {% embed url="https://drive.google.com/file/d/1D-DbMBTo41v_OKKyuE_TXzQHcni1FSt_/view?usp=drive_link" %}
 Inventory Cycle Count
 {% endembed %}
-
-## Arrived changes
-
-Read the [arrived directed hand-count guide](arrived-directed-hand-count.md) for the changed workflow and its source notes.

@@ -30,6 +30,12 @@ Add the HotWax Cycle Count tile in Shopify POS and open the counting workflow th
 
 In embedded mode, the app selects the HotWax facility mapped to the current Shopify POS location from the facilities your account can access. It does not grant access to another facility. If `Unable to login. User is not associated with this location. Please contact the administrator.` appears, ask the administrator to check your facility association and the Shopify-location mapping.
 
+## Plan and assign counts
+
+- [Create a cycle count](create-count.md)
+- [Review and approve a draft](draft.md)
+- [Upload counts in bulk](bulk-upload.md)
+
 ## Cycle count workflow
 
 1. [Plan your count with a preview](../../../store-operations/cycle-count/plan-cycle-count.md)
@@ -37,7 +43,3 @@ In embedded mode, the app selects the HotWax facility mapped to the current Shop
 3. [Review counts at the store before submitting for review](../../../store-operations/cycle-count/count-progress-review.md)
 4. [Review and approve variances at head office](./pending-review.md)
 5. [Go back and review old counts and export](./closed.md)
-
-## Arrived changes
-
-Read [Arrived: count administration](arrived-count-administration.md) for draft approval and upload workflows. Each section identifies its source PR.

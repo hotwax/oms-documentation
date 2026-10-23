@@ -41,7 +41,6 @@
   * [Settings](receiving/settings.md)
   * [Permissions](receiving/permissions.md)
 * [Cycle Count](cycle-count/README.md)
-  * [Arrived: directed hand counting](cycle-count/arrived-directed-hand-count.md)
   * [Plan Cycle Count](cycle-count/plan-cycle-count.md)
   * [Start & Complete Session](cycle-count/start-complete-session.md)
   * [Count Progress & Review](cycle-count/count-progress-review.md)

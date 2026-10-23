@@ -15,36 +15,36 @@ Use the summary cards to compare:
 - Failed runs
 - Running jobs
 
-The cards summarize the loaded runs after filtering. The current view loads up to 25 recent runs per job, so these totals do not represent all historical executions.
+The cards summarize the server search for the selected filters, including matching runs beyond the displayed page. Changing a filter refreshes the totals and returns the list to the first page.
 
 ## Find a run
 
-Use `Search by run, job, service, user, message, or result`, or combine these filters:
+Use `Search by run id, job, service, or user`, or combine these filters:
 
 - `Status`: Running, Successful, Failed, or Terminated
 - `Job`
-- `User`
-- `Data logs`: Has data logs or No data logs
+- `User`: enter the exact username
 
 Use `Previous` and `Next` to move through pages of results.
 
-These controls paginate the loaded results; they do not fetch older runs for each job. To investigate an older execution, open the job's [History tab](job-details.md#review-job-history) and scroll to load more runs.
+Each page loads matching runs from the server. The navigation controls prevent moving before the first page or beyond the last page. Clear a filter to broaden the search.
+
+Use the job's [History tab](job-details.md#review-job-history) to inspect its linked data logs.
 
 The active product store can exclude runs associated with another store. Confirm the selected store before treating a missing result as evidence that a job did not run.
 
 ## Read a run card
 
-A run card shows the run identifier, job, service, status, start time, completion time, duration, user, and linked data-log count when available.
+A run card shows the run identifier, job, service, status, start time, completion time, duration, and user.
 
 Select the card to open its job. Expand a section without opening the job to review:
 
 - `Message`
-- `Linked data logs`
 - `Errors`
 - `Results`
 - `Parameters`
 
-Select a linked data-log identifier to open the related [file detail](../mdm/file-details.md).
+To inspect linked imports, open the job's `History` tab, find the same run identifier, and select a data-log identifier to open the related [file detail](../mdm/file-details.md).
 
 ## Trace the execution evidence
 
@@ -71,7 +71,7 @@ Each linked file has its own processing status and record totals. Use [file-impo
 2. Find the affected job, time, or run identifier.
 3. Expand `Errors` when available.
 4. Review the available `Parameters` and `Results`.
-5. Open each linked data log and check its status and record totals.
+5. Open the same run in the job's `History` tab, then inspect any linked data logs and their record totals.
 6. Open the job and compare its current schedule and parameters with the failed run.
 
 Record the original error before you rerun or edit the job.
