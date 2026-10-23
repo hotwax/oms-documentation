@@ -43,6 +43,11 @@ sequenceDiagram
 * Review and approve variances at head office
 * [Go back and review old counts and export](../../retail-operations/inventory/cycle-count/closed.md)
 
+<!-- markdownlint-disable-next-line MD034 -->
 {% embed url="https://drive.google.com/file/d/1D-DbMBTo41v_OKKyuE_TXzQHcni1FSt_/view?usp=drive_link" %}
 Inventory Cycle Count
 {% endembed %}
+
+## Upcoming changes
+
+Prepare for proposed changes with the [upcoming directed hand-count guide](upcoming-directed-hand-count.md). This preview is separate from the current workflow.

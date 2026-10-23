@@ -65,6 +65,8 @@
     * [Data Not Imported](administration/data-manager/troubleshooting/data-not-imported.md)
     * [SFTP Errors](administration/data-manager/troubleshooting/data-import-errors.md)
 * [Job Manager](administration/job-manager/README.md)
+  * [Upcoming operations](administration/job-manager/upcoming-operations.md)
+  * [Upcoming data-document builder](administration/job-manager/upcoming-data-document-builder.md)
   * [Dashboard](administration/job-manager/dashboard.md)
   * Jobs
     * [Catalog](administration/job-manager/jobs/catalog.md)

@@ -8,7 +8,6 @@ The app provides distinct views for Admins and Store Associates:
 
 * [Store View](../../../store-operations/cycle-count/README.md): Step-by-step instructions for store associates to perform cycle counts in-store.
 
-
 With built-in features like bulk actions, variance alerts, and timestamped tracking, the Cycle Count App keeps inventory accurate across your network.
 
 For a business-process overview of inventory management and cycle counting, see [Inventory management](../../../learn-hotwax-oms/business-processes/inventory-management.md).
@@ -38,3 +37,7 @@ In embedded mode, the app selects the HotWax facility mapped to the current Shop
 3. [Review counts at the store before submitting for review](../../../store-operations/cycle-count/count-progress-review.md)
 4. [Review and approve variances at head office](./pending-review.md)
 5. [Go back and review old counts and export](./closed.md)
+
+## Upcoming changes
+
+Prepare for proposed draft approval and upload changes with [Upcoming count administration](upcoming-count-administration.md). Each section names the open PR it depends on.

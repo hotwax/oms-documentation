@@ -109,6 +109,7 @@
   * [Transfers App Settings](inventory/transfers-settings.md)
   * [Transfer Order Fulfillment](inventory/transfers-fulfillment.md)
 * [Cycle Count](inventory/cycle-count/README.md)
+  * [Upcoming count administration](inventory/cycle-count/upcoming-count-administration.md)
   * [Bulk Upload](inventory/cycle-count/bulk-upload.md)
   * [Create Count](inventory/cycle-count/create-count.md)
   * [Assigned](inventory/cycle-count/assigned.md)

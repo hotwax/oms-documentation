@@ -1,0 +1,132 @@
+[
+  {
+    "path": "documents/retail-operations/.gitbook/assets/upcoming-inventory-count/bulk-upload-error-records.jpg",
+    "repository": "hotwax/inventory-count",
+    "pullRequest": "https://github.com/hotwax/inventory-count/pull/1327",
+    "headCommit": "8c316620e98cda87cf88949c6b1d52973c746016",
+    "captureDate": "2026-10-23",
+    "data": "synthetic local fixtures",
+    "ui": "unmodified PR Vue components in isolated local wrapper",
+    "sha256": "80aa74ca4d6f45084d8bf20e3c6a3f89294c4a543accf665f49ab7a9486007bb"
+  },
+  {
+    "path": "documents/retail-operations/.gitbook/assets/upcoming-inventory-count/draft-count-approval.jpg",
+    "repository": "hotwax/inventory-count",
+    "pullRequest": "https://github.com/hotwax/inventory-count/pull/1438",
+    "headCommit": "7ce4406a411d13cf87cb62488c660e1eb1ead3f8",
+    "captureDate": "2026-10-23",
+    "data": "synthetic local fixtures",
+    "ui": "unmodified PR Vue components in isolated local wrapper",
+    "sha256": "bf1b5e86c4a59bbb9267ac18ce246b268965580633c4dbfe63900afc607aa921"
+  },
+  {
+    "path": "documents/store-operations/.gitbook/assets/upcoming-inventory-count/directed-handcount-counted.jpg",
+    "repository": "hotwax/inventory-count",
+    "pullRequest": "https://github.com/hotwax/inventory-count/pull/1488",
+    "headCommit": "8a76b25990197507acbfd36b4cd7c9b9a8435517",
+    "captureDate": "2026-10-23",
+    "data": "synthetic local fixtures",
+    "ui": "unmodified PR Vue components in isolated local wrapper",
+    "sha256": "8e7896437034d65a67f91ae85c9637a991aa7a6838ada57f5eb980f4ee5acd1d"
+  },
+  {
+    "path": "documents/store-operations/.gitbook/assets/upcoming-inventory-count/directed-handcount-edit.jpg",
+    "repository": "hotwax/inventory-count",
+    "pullRequest": "https://github.com/hotwax/inventory-count/pull/1488",
+    "headCommit": "8a76b25990197507acbfd36b4cd7c9b9a8435517",
+    "captureDate": "2026-10-23",
+    "data": "synthetic local fixtures",
+    "ui": "unmodified PR Vue components in isolated local wrapper",
+    "sha256": "6cdb35527d6883d55ffad2f6e58aa93e3aa193ddd59321add7b480274679a131"
+  },
+  {
+    "path": "documents/store-operations/.gitbook/assets/upcoming-inventory-count/directed-handcount-leave.jpg",
+    "repository": "hotwax/inventory-count",
+    "pullRequest": "https://github.com/hotwax/inventory-count/pull/1488",
+    "headCommit": "8a76b25990197507acbfd36b4cd7c9b9a8435517",
+    "captureDate": "2026-10-23",
+    "data": "synthetic local fixtures",
+    "ui": "unmodified PR Vue components in isolated local wrapper",
+    "sha256": "b5c2c9adb3050d757b069007f0e351b289db6ee641bfe8f2260cc2725c2ccb7a"
+  },
+  {
+    "path": "documents/system-admin/.gitbook/assets/upcoming-job-manager/builder-metadata.jpg",
+    "repository": "hotwax/job-manager",
+    "pullRequest": "https://github.com/hotwax/job-manager/pull/1112",
+    "headCommit": "57f85282470c5f6cf1679565d0206515da4af209",
+    "captureDate": "2026-10-23",
+    "data": "synthetic local fixtures",
+    "ui": "unmodified PR Vue components in isolated local wrapper",
+    "sha256": "a414e1b3f78f20c0640c82b65bd22337537dd6b5afff44539b9eafdd66e8a8fc"
+  },
+  {
+    "path": "documents/system-admin/.gitbook/assets/upcoming-job-manager/builder-preview-unsaved.jpg",
+    "repository": "hotwax/job-manager",
+    "pullRequest": "https://github.com/hotwax/job-manager/pull/1112",
+    "headCommit": "57f85282470c5f6cf1679565d0206515da4af209",
+    "captureDate": "2026-10-23",
+    "data": "synthetic local fixtures",
+    "ui": "unmodified PR Vue components in isolated local wrapper",
+    "sha256": "0f7278facd2f0c0ce6162b4360af5135da21901a695a9cc586f47944ebbd5d81"
+  },
+  {
+    "path": "documents/system-admin/.gitbook/assets/upcoming-job-manager/builder-unsaved-warning.jpg",
+    "repository": "hotwax/job-manager",
+    "pullRequest": "https://github.com/hotwax/job-manager/pull/1112",
+    "headCommit": "57f85282470c5f6cf1679565d0206515da4af209",
+    "captureDate": "2026-10-23",
+    "data": "synthetic local fixtures",
+    "ui": "unmodified PR Vue components in isolated local wrapper",
+    "sha256": "79189e43f78c8d228481218b434a62f7023cd29578978ddb65fa90267cb655e4"
+  },
+  {
+    "path": "documents/system-admin/.gitbook/assets/upcoming-job-manager/create-job.jpg",
+    "repository": "hotwax/job-manager",
+    "pullRequest": "https://github.com/hotwax/job-manager/pull/1071",
+    "headCommit": "ac998c8f0441f1da4327c1e2adfa7280c504c8e2",
+    "captureDate": "2026-10-23",
+    "data": "synthetic local fixtures",
+    "ui": "unmodified PR Vue components in isolated local wrapper",
+    "sha256": "b465d1c5bc9281321136c911c1672efc4faff605c420ed4f54738bd1de28acb9"
+  },
+  {
+    "path": "documents/system-admin/.gitbook/assets/upcoming-job-manager/dashboard-diagnostics.jpg",
+    "repository": "hotwax/job-manager",
+    "pullRequest": "https://github.com/hotwax/job-manager/pull/1071",
+    "headCommit": "ac998c8f0441f1da4327c1e2adfa7280c504c8e2",
+    "captureDate": "2026-10-23",
+    "data": "synthetic local fixtures",
+    "ui": "unmodified PR Vue components in isolated local wrapper",
+    "sha256": "7891c6059bdba17fc8766abeda907d55a55b58bd9f993af5c3d9cc13839c2150"
+  },
+  {
+    "path": "documents/system-admin/.gitbook/assets/upcoming-job-manager/dashboard-drilldowns.jpg",
+    "repository": "hotwax/job-manager",
+    "pullRequest": "https://github.com/hotwax/job-manager/pull/1071",
+    "headCommit": "ac998c8f0441f1da4327c1e2adfa7280c504c8e2",
+    "captureDate": "2026-10-23",
+    "data": "synthetic local fixtures",
+    "ui": "unmodified PR Vue components in isolated local wrapper",
+    "sha256": "631994c4286acd06b1223b300f5dd4a48522da122cfb93a9e1f6edc7856a46a2"
+  },
+  {
+    "path": "documents/system-admin/.gitbook/assets/upcoming-job-manager/job-history-pinned-run.jpg",
+    "repository": "hotwax/job-manager",
+    "pullRequest": "https://github.com/hotwax/job-manager/pull/1071",
+    "headCommit": "ac998c8f0441f1da4327c1e2adfa7280c504c8e2",
+    "captureDate": "2026-10-23",
+    "data": "synthetic local fixtures",
+    "ui": "unmodified PR Vue components in isolated local wrapper",
+    "sha256": "cd44f1f6cd6b1c27ee2f5f0f1f632e8df561057ed35e2c6d706f35c9b09120c5"
+  },
+  {
+    "path": "documents/system-admin/.gitbook/assets/upcoming-job-manager/job-parameters.jpg",
+    "repository": "hotwax/job-manager",
+    "pullRequest": "https://github.com/hotwax/job-manager/pull/1071",
+    "headCommit": "ac998c8f0441f1da4327c1e2adfa7280c504c8e2",
+    "captureDate": "2026-10-23",
+    "data": "synthetic local fixtures",
+    "ui": "unmodified PR Vue components in isolated local wrapper",
+    "sha256": "ce7beafccf35f79965bf9099da9362d8e0e664a69d752aec21ce7720d2aa8881"
+  }
+]
