@@ -1,176 +1,93 @@
 ---
-description: Operate and monitor Shopify product sync after launch.
+description: Monitor Shopify product sync requests, exports, imports, and recovery in the Company App.
 ---
 
 # Product sync console
 
-Use the product sync console after Shopify onboarding to monitor current product sync progress, review recently synchronized changes, investigate errors, and audit previous runs.
+Use the product sync console to follow a Shopify product request through export and import, inspect failed products, and review previous runs. Check the selected shop and the import result before treating a run as complete.
 
-For integration scope, identifiers, filters, and completion checks, see [Product download](download-products.md). For initial setup and the first product import, follow [Set up HotWax Commerce with Shopify](../../../system-admin/administration/company/product-store-onboarding.md). For exact post-launch controls and recovery actions, use [Manage Shopify Product Sync](../../../system-admin/administration/company/manage-shopify-product-sync.md).
+For query scope and product identifiers, see [Product download](download-products.md). For supported field changes, see [Update product details](update-product-details.md).
 
-Open the console from a Shopify shop record in the Company app:
+## Open the console
 
-1. Go to `Shopify`.
-2. Open the Shopify shop you want to review.
-3. Open `Product sync`.
+1. Open the Company App and select `Shopify`.
+2. Open the connection you want to review.
+3. Select `Product sync`.
 
-The page uses the selected Shopify shop to decide which operational state to show.
+Automatic mode uses the shop's recorded product sync request history to choose the setup or returning-user view. A returning-user view does not establish that products are linked or that an import succeeded. Use `Mode` to inspect or change that view selection. Changing the view does not run an import or repair missing product links in HotWax Commerce.
 
-- If the shop has products linked to HotWax Commerce, the page opens in the returning-user view.
-- If the shop has no linked HotWax Commerce products, the page opens the setup view, which means onboarding is incomplete or the expected product links are missing.
+If the setup view appears unexpectedly, check the selected shop and its sync history before starting another catalog import. For first-time setup, follow [Set up HotWax Commerce with Shopify](../../../system-admin/administration/company/product-store-onboarding.md).
 
-{% hint style="info" %}
-Most users can leave the page in automatic mode. Automatic mode chooses the view by checking whether the shop has products linked to HotWax Commerce.
-{% endhint %}
+## Read the dashboard
 
-## If the setup view appears
+The `Summary` card shows the recorded last-sync time, the associated import's record count, the next scheduled run or paused state, and the linked product store.
 
-Do not improvise a first import from this operational reference. Return to the [canonical Shopify onboarding guide](../../../system-admin/administration/company/product-store-onboarding.md) and complete its product preparation, identity, import, and terminal-result checks.
+The last-sync summary uses a consumed or confirmed request with a linked import. It does not prove that every import record succeeded. `Un-synced updates` lists Shopify products updated after the recorded boundary; it is not a complete list of failed records from earlier imports.
 
-## Returning-user view
+<figure><img src="../../../system-admin/.gitbook/assets/shopify-product-sync-dashboard.jpg" alt="Company App Product sync dashboard with summary, progress, jobs, pipeline, and custom requests"><figcaption><p>Product sync dashboard</p></figcaption></figure>
 
-Returning users see a product sync dashboard with the latest known sync state.
+### Track the selected run
 
-<figure><img src="../../.gitbook/assets/product-sync-returning-dashboard.png" alt=""><figcaption><p>Product sync dashboard for a returning Shopify shop</p></figcaption></figure>
+Open each available stage in `Track sync progress`:
 
-### Summary
-
-The Summary card shows:
-
-- Last sync time.
-- Next sync time.
-- Whether someone paused the scheduled product sync job.
-- The linked HotWax product store.
-- The count of Shopify products that have changed since the connection's recorded product-update boundary.
-
-The recorded update boundary does not prove that every earlier import succeeded. Check the linked import and its failed records separately.
-
-Click `Un-synced updates` to review the updated Shopify products that HotWax hasn't imported yet. The modal shows product title, handle, vendor, product type, Shopify update time, variant count, status, and inventory.
-
-If HotWax Commerce can't identify the selected shop's sync history or can't read Shopify product counts, the Summary card shows an error instead of a count. Use the error message to decide whether to retry or contact support.
-
-### Mode selector
-
-Use `Mode` when support asks you to compare automatic view selection with the first-time setup or returning-user view.
-
-<figure><img src="../../.gitbook/assets/product-sync-mode-selector.png" alt=""><figcaption><p>Mode selector showing automatic detection, product count, and active view</p></figcaption></figure>
-
-### Track sync progress
-
-The Track sync progress card shows the current product update path:
-
-| Step | What it means |
+| Stage | What to verify |
 | --- | --- |
-| Product sync request | Shows whether HotWax has created, queued, or completed the request to process Shopify product updates. |
-| Shopify product export | Shows whether Shopify has prepared the product update file, how many objects Shopify returned, and the technical operation ID for support. |
-| HotWax product import | Shows whether HotWax has started importing the Shopify file, plus processed and failed record counts. |
+| `System message` | Request ID, status, error text, connection, and the job responsible for the next step |
+| `Shopify bulk operation` | Operation ID, Shopify status, object count, and whether a result file exists |
+| `HotWax bulk import` | Data Manager log ID, final status, total records, successful records, and failed records |
 
-Click a step to open its details. A step stays unavailable until HotWax Commerce has a real record ID for that part of the sync.
+The dashboard can show a run opened from history, a newly started run, or the latest available run. It keeps the selected request while its details load. It does not automatically select the oldest unfinished import. Check history and the `Pipeline` card for other pending work.
 
-Click the clock icon in the Track sync progress card header to open the Product sync history page for the same Shopify shop.
+A completed Shopify export is separate from a completed HotWax import. If Shopify returns no result URL, the request can finish without creating an import. Object counts include Shopify export objects; they are not a count of successfully imported HotWax products.
 
-### How HotWax chooses the progress run
+### Check jobs and pending work
 
-The progress card helps users answer this business question: "Which product sync run needs attention right now?"
+Use `Product sync jobs` to inspect the shop's request schedule, the shared sender and completion-processing jobs, and the completion webhook. The `Pipeline` card shows pending requests, the current Shopify operation, files waiting for import, and recent errors.
 
-For the selected Shopify shop, HotWax reviews the product update sync requests it has already recorded for that shop. It then chooses the run that's most useful for an operator to monitor:
+Open the corresponding job to check its parameters, active state, schedule, and recent runs. Review an existing request before starting another one. For exact actions, including webhook behavior and partial-save recovery, use [Monitor Shopify product sync](../../../system-admin/administration/company/manage-shopify-product-sync.md#review-jobs-and-pipeline-health).
 
-| Priority | Where the Shopify bulk operation is | What this means for the user |
-| --- | --- | --- |
-| HotWax is importing the Shopify product file. | Shopify has already accepted the bulk request, prepared the product data file, and returned it to HotWax. HotWax is now applying that file to products, variants, tags, features, metafields, and Shopify shop links. | This is the most important active run because it can still change catalog data in HotWax. If it stalls here, Shopify finished its part, but HotWax hasn't finished making the products usable for orders, inventory, and fulfillment. |
-| HotWax has received Shopify's bulk operation response and is preparing the import. | Shopify has responded to the bulk job. HotWax has enough information to continue toward file processing, but the HotWax import record may not exist yet. | This confirms the request reached both systems. Wait for HotWax to create or continue the import instead of starting another run. |
-| Shopify has the bulk operation request. | HotWax has sent the product sync request to Shopify. Shopify is now responsible for preparing the product export file. | This tells the user the work is outside HotWax for the moment. If the run stays here, the likely issue is Shopify bulk operation progress, not product matching or HotWax import logic. |
-| HotWax has queued the request, but Shopify doesn't have it yet. | The product sync request exists in HotWax, but HotWax hasn't sent the bulk operation to Shopify. | This exposes an early queue or scheduler delay. The user knows Shopify hasn't started preparing product data yet. |
-| No active bulk operation or import needs attention. | The latest product sync run already moved through Shopify export and HotWax import. | The card becomes a reference for the most recent completed sync, so users can confirm what happened last without mistaking it for active work. |
+## Review product changes
 
-This order matters because the card surfaces the oldest unresolved work before it shows the newest finished work. That helps users identify whether the run is waiting on Shopify to prepare the file or waiting on HotWax to apply the file.
+`Recently synced product updates` shows saved product-update history for the selected shop. Search by internal name and inspect the product reference, update time, and field changes when available.
 
-It also keeps attention on the run that can still affect product availability, product details, and downstream inventory or order workflows.
+The history describes data processed by the importer. It does not replace a check of the current product record or prove that every exported field has an OMS mapping. Use the [field mapping reference](update-product-details.md#review-the-field-mappings) to interpret titles, identifiers, prices, images, features, metafields, and calendar dates.
 
-After HotWax selects the run, it loads the related Shopify export record and HotWax import record. Those records supply the Shopify object count, import ID, total record count, failed record count, and status badges shown in the progress card.
+For an unexpected result, compare the Shopify product, saved comparison history, and current HotWax record. Pay particular attention to blank values, identifier changes, and an existing Shopify inventory-item link.
 
-### Recently synced product updates
+## Correct errors and retry a product
 
-The Recently synced product updates section shows the product changes HotWax detected from Shopify's product export file. Each card shows the product or variant, the Shopify reference, the update time, and the field-level changes HotWax can apply or audit.
+1. Review `Parsed error details` and identify the Shopify parent product and failed Data Manager import.
+2. Open `View details` and correct the source data or configuration named in the error.
+3. Select `Retry` when a numeric Shopify product ID is available.
+4. Review the returned synced, failed, and missing-product counts, then verify the product and its mappings in HotWax.
 
-HotWax currently supports these product update fields:
+The product retry fetches current data from Shopify through the on-demand importer. It does not rerun the original failed file. The original import history remains evidence of that attempt.
 
-| Shopify change | HotWax impact |
+When a failed record has no usable Shopify product ID, inspect its details to identify the product before using a custom request. Download the raw or failed-record file from history when the corresponding file is available.
+
+See [Review errors and retry products](../../../system-admin/administration/company/manage-shopify-product-sync.md#review-errors-and-retry-products) for the operational controls.
+
+## Review sync history
+
+Select the history icon in `Track sync progress`. History stays scoped to the selected Shopify shop.
+
+Use `System message status`, `Sort`, `Created after`, and `Created before` to find a run. `Newest first` is the default; `Oldest first` is also available. Date filters apply to each retrieved page, and the page loads additional history to fill the filtered result. Continue loading when the period you need is outside the displayed results.
+
+Expand a run to check the message, Shopify operation, and import independently. Use `View query` to confirm the actual filter. Select the total or failed record count to download the corresponding file when available.
+
+| History result | Meaning |
 | --- | --- |
-| Parent product title | Updates the parent product name. |
-| Parent product vendor | Updates the product brand. |
-| Parent product handle | Updates the parent product's internal name with the Shopify handle. |
-| Parent product image link | Updates the parent product image. |
-| Parent product gift card, shipping, and component flags | Updates the product type when the product store permits that type to change. |
-| Shopify product options and option values | Updates selectable product features, including option position and value. |
-| Shopify product tags | Updates product tag keywords. |
-| Shopify product metafields | Updates product attributes. A configured `parent_product` metafield updates the parent product identification used by HotWax. |
-| Variant title | Updates the variant product name. |
-| Variant image link | Updates the variant product image. |
-| Variant price | Updates the variant list and purchase price for the product store currency. |
-| Variant gift card, shipping, and component flags | Updates the variant product type when the product store permits that type to change. |
-| Variant stock keeping unit, barcode, and Shopify variant ID | Updates product identifiers and the Shopify product link. |
-| Variant selected options | Updates variant features such as size, color, or any Shopify option values used by the shop. |
-| Variant inventory item ID and weight | Updates the Shopify inventory item link, shipping weight, product weight, and weight unit. |
-| Variant parent product and sequence | Updates the parent-child product association and variant order. |
-| Shopify product type | Updates the product type keyword used for the variant's parent product. |
+| Total record count | Records in the linked import, not a count of successful products |
+| Successful record count | Records reported as successful by that import |
+| Failed record count | Records requiring error review |
+| No import | Check whether the export is pending, failed, or returned no file |
 
-Use the search field to filter by internal name or Shopify reference.
+For all history controls and file links, see [Review sync history](../../../system-admin/administration/company/manage-shopify-product-sync.md#review-sync-history).
 
-When no updates exist, the section shows `No recently synced product updates`.
+## Choose a recovery request
 
-### Recent sync errors
+Use a targeted product sync when a small set of products needs another import. A replay queues a request from the selected date. A full catalog re-sync removes the generated date window but retains configured status and query filters.
 
-The Recent sync errors section shows failed product update imports. Each item includes the product reference and error content.
+Before replaying, check the query, existing imports, and the affected product identities. Neither a full import nor a replay replaces the separate [product deletion flow](delete-products.md).
 
-If errors exist, each error card helps the user decide whether to retry the failed work or download the raw Shopify file for review.
-
-Click `Retry` to rerun the failed product update import for that record. Click `Download raw file` to download the Shopify file or error content used by the failed import.
-
-When no errors exist, the section shows `No recent sync errors`.
-
-## Product sync history
-
-Open history from the returning-user view by clicking the clock icon in the Track sync progress card header. The app opens the history page for the same Shopify shop.
-
-<figure><img src="../../.gitbook/assets/product-sync-history-page.png" alt=""><figcaption><p>Product sync history with filters and previous sync runs</p></figcaption></figure>
-
-The history page helps users answer these questions:
-
-- Did a previous product sync run finish?
-- Which run changed product data most recently?
-- Did Shopify return product data for the run?
-- Did HotWax import every record or report failures?
-
-Use filters to narrow the list:
-
-- Run status.
-- Created after.
-- Created before.
-
-Each run expands into the Shopify export and HotWax import details that support or operations teams may need during review.
-
-| History field | What it means |
-| --- | --- |
-| Run status | Whether the product sync request is still waiting, in progress, finished, or failed. |
-| Shopify product export | The Shopify background task used to read product updates. |
-| Object count | The number of Shopify objects returned by the export. |
-| HotWax product import ID | The HotWax import log that processed the Shopify file. |
-| Total record count | Number of records processed by the HotWax import. |
-| Failed record count | Number of records that failed in the HotWax import. |
-
-Click the query chip to review the Shopify query used for the run. Click the download chip to download the raw Shopify file when HotWax has a downloadable import file.
-
-If the history page can't load, use `Retry` to request the shop's sync history again. If the page still doesn't load, contact support because HotWax Commerce can't confirm the previous Shopify export or HotWax import status for that shop.
-
-### How history filtering and sorting work
-
-The history page starts with the selected Shopify shop. HotWax finds the sync history that belongs to that shop and requests product update runs with the newest run first.
-
-When users select a run status, HotWax asks for only runs in that status. The page still uses the shop as the boundary, so one Shopify shop's history doesn't mix with another shop's history.
-
-The date filters work after each page of results loads. The page compares each run's created time with the `Created after` and `Created before` fields, then keeps only matching rows.
-
-The page shows the newest runs first, even when older history records come back from HotWax Commerce in a different order.
-
-The page loads 25 history rows at a time. It removes duplicate runs before appending rows. Then it loads Shopify export and HotWax import details in small groups, so users can start reviewing the list before every detail record finishes loading.
+Follow [Run a custom request](../../../system-admin/administration/company/manage-shopify-product-sync.md#run-a-custom-request) for the available actions. Their availability depends on the installed app, connector, connection, and permissions.

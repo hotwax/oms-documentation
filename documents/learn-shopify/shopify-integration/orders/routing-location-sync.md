@@ -119,7 +119,7 @@ For a physical facility, a successful fallback also reallocates the local items 
 
 If Shopify rejects a mapped target with `Location not found`, the connector can retry at the configured primary location. If Shopify accepts that move but the primary location has no local mapping, the connector parks the local items and creates a task. Check both systems in this case: a local exception does not mean Shopify stayed at the original location.
 
-For configured aggregate inventory channels, a successful move can also trigger inventory corrections. Those corrections have their own outcome; a logged correction failure does not reverse the location move. Review [inventory synchronization](../inventory/README.md) separately.
+For configured aggregate inventory channels, a successful move can also trigger inventory corrections. Those corrections have their own outcome; a logged correction failure does not reverse the location move and is not retried by this routing workflow. An unchanged location baseline can make a later run skip the move. Review [inventory synchronization](../inventory/README.md) separately.
 
 ## Understand incoming Shopify changes
 
@@ -134,7 +134,11 @@ Incoming and outgoing reconciliation share a lock on the Shopify order's sync-hi
 | `locationsHash` | Local line quantities and resolved locations, including the last placement of completed and canceled items |
 | `fulfillmentOrdersHash` | The last handled Shopify location payload, including remaining quantities and fulfillment-order update times |
 
-A pending local routing change takes priority over an incoming location update. The connector defers the incoming location branch and leaves its payload fingerprint unwritten so it can be reconsidered. If no local baseline exists, recorded routing changes after the outbound job's progress date provide the pending-change check.
+A pending local routing change takes priority over an incoming location update. The connector defers the incoming location branch and leaves its payload fingerprint unwritten so it can be reconsidered.
+
+If no local baseline exists, the pending-change check uses routing history after the selected outbound job's valid `lastRunTime`, excluding changes marked `ALLOCATED`. This inbound check does not fall back to `sinceDate`. If `lastRunTime` is missing or invalid, it checks all eligible routing history for the order. Old changes can therefore keep incoming locations deferred even when no recent move is pending, without creating a sync-exception task.
+
+For this deferral, check the outbound job selected for the shop connection, its `lastRunTime`, and its filters. When several jobs match the connection, the check uses the first by job name; when none matches, it uses a sole available reroute job as a fallback. Confirm which job is responsible for the order and let the applicable outbound workflow record its result. Do not erase routing history or manually stamp a location baseline to bypass the check.
 
 Repeated handled payloads skip location reconciliation. Connector-generated reallocations are marked `ALLOCATED` and excluded from the outbound candidates to avoid a loop. A saved fingerprint records processing state; it is not proof that every requested move succeeded.
 

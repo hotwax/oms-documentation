@@ -45,12 +45,14 @@ The initial import and recurring updates use the same bulk pipeline. Their query
 | --- | --- |
 | Initial or full import | `includeAll=true` skips the generated date window. Other configured filters still apply. |
 | Recurring updates | Without an explicit `fromDate`, HotWax uses the message date of the latest consumed product-update request for this connection. |
-| Explicit date window | `fromDate` and `thruDate` filter Shopify update times. Configured date buffers move the corresponding boundary earlier. |
+| Explicit date window | `fromDate` and `thruDate` use strict `>` and `<` boundaries. Both target `updated_at` by default; `fromDateLabel` and `thruDateLabel` can select other fields. Configured positive date buffers move the corresponding boundary earlier. |
 | Custom query | `filterQuery` replaces the generated date and status expression. Review the complete query before running it. |
 
 The default generated query excludes archived products. It is not limited to active products; draft products can be included. Additional status exclusions and filter conditions can narrow the result. A full import does not automatically override those conditions.
 
 The recurring date boundary tracks a consumed request, not a confirmed successful product import. Review the linked import and failed records before treating that boundary as proof that every earlier product change was applied.
+
+Records exactly on a generated boundary are excluded. For a replay, choose a starting date before the earliest change you need to recover and account for the configured field labels and date buffers. A custom `filterQuery` controls its own boundaries.
 
 Metafields are requested for configured namespaces. Product calendar mappings can add namespaces to the request. The query does not download every metafield automatically.
 

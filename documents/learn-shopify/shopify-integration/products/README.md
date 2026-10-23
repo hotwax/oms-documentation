@@ -1,5 +1,5 @@
 ---
-description: Learn how accurate product data drives real-time inventory updates on Shopify.
+description: Learn how HotWax Commerce imports Shopify products, variants, and supported changes.
 ---
 
 # Products
