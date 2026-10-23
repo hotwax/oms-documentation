@@ -1,225 +1,64 @@
 # Orders not syncing with NetSuite
 
-Use this guide when an OMS order has not been created in NetSuite. Trace the
-order through the OMS eligibility checks, the Moqui feed job, and the NetSuite
-import and acknowledgement jobs to find the failed stage.
+Use this guide when an order is missing in NetSuite or its NetSuite ID has not reached HotWax Commerce. First confirm whether the deployment uses the batch integration or the earlier CSV integration over Secure File Transfer Protocol (SFTP).
 
-## 1. Check the order sync feed history
+## Trace the batch integration
 
-1. In Order Manager, search for the order and open its Order Details page.
-2. Select the icon next to the External ID to open the **Order Sync Feed
-   History**.
+Record the OMS order ID, product store, NetSuite external ID, system message ID, and remote job or task ID when available. Use those identifiers to follow the same order through each stage.
 
-<div data-full-width="false">
-  <figure>
-    <img src="../.gitbook/assets/order-sync-history.png" alt="Order Details page showing the Order Sync Feed History dialog">
-  </figure>
-</div>
+### Check selection and prerequisites
 
-- If no history record exists, the Moqui order feed has not picked up the order.
-  Continue with the eligibility and job checks below.
-- If a history record exists, OMS generated a feed for the order. Continue with
-  the NetSuite import status checks.
+1. Check for an existing `NETSUITE_ORDER_ID` and a `NetSuiteSalesOrderDetail` tracking record. The default selection excludes an order when either exists.
+2. Review the active rules and cutover settings for the product store. An order can be eligible but remain unselected because no rule matches it.
+3. Check every item's active NetSuite product mapping, fulfillment location, and open hold tasks. For an exchange, check the source return's credit memo.
+4. Check customer resolution. The default flow waits for the bill-to customer's NetSuite ID. A facility-based customer configuration records an error when its default customer is missing.
+5. Check the shop mapping, timezone, and payment coverage. The default preparation checks item values plus adjustments against valid payments with a one percent tolerance.
 
-## 2. Check the order age
+For the full prerequisite list, see [Order sync](../synchronization-flows/order-sync/README.md#select-orders-and-resolve-prerequisites).
 
-Review the Order Entry Date on the Order Details page.
+### Check the tracking record and message
 
-<div data-full-width="false">
-  <figure>
-    <img src="../.gitbook/assets/order-timeline.png" alt="Order Details timeline showing the Order Entry Date">
-  </figure>
-</div>
+| Observed state | What to check next |
+| --- | --- |
+| No tracking record | Review rule coverage, waiting conditions, producer execution, and the configured open-batch limit. |
+| Tracking record with an error but no message ID | Read the preparation error and correct the underlying mapping or order data. The tracking record prevents automatic reselection. |
+| `SmsgProduced` | Check the sender, connection, request file, and send errors. The shared sender marks the message `SmsgError` when its retry threshold is reached; the default threshold is three failures. |
+| `SmsgSent` | Check the remote job or task and the corresponding result poller. Record the remote outcome before considering another submission. |
+| `SmsgReceived` | Check result consumption. The script poller selects sent messages, so a received message with a consumption error needs recovery of that stage. |
+| `SmsgConsumed` | Check Data Manager result imports and the persisted order and line identifiers. |
+| `SmsgError` | Read the exact send or task failure, check the remote outcome, and identify whether recovery belongs to submission, result collection, or import. |
 
-Allow the configured Moqui and NetSuite job cycles to finish. Under the standard
-schedule, the full flow can take up to two hours. Continue troubleshooting if an
-older order is still missing.
+The REST batch poller returns an unconsumed received message to the sent state for a later poll. The script batch poller does not implement that same reset. Use the configured transport when interpreting the message state.
 
-## 3. Validate the order data
+### Verify result imports
 
-An ineligible order will not be included in the Moqui order feed.
+1. Check `IMP_NS_SALES_ORDER_RESULT` for the order's tracking outcome.
+2. Check `IMP_NS_SALES_ORDER_ID` for the `NETSUITE_ORDER_ID` import.
+3. Check `IMP_NS_SALES_ORDER_ITEM` for the line identifiers required by later updates.
+4. Compare the stored order ID with the actual NetSuite record. Confirm that it belongs to the same external order and customer.
 
-### Check the NetSuite customer ID
+If NetSuite already has the order, recover the missing result or import. Creating another order does not repair a missing acknowledgement.
 
-1. On the Order Details page, select the customer in the **Bill To** section.
+### Recover the failed stage
 
-<div data-full-width="false">
-  <figure>
-    <img src="../.gitbook/assets/customer-name.png" alt="Order Details page showing the Bill To customer">
-  </figure>
-</div>
+Correct the specific error before retrying. Waiting orders have no claim and are checked again on a later producer run. Preparation refusals and claimed orders keep their tracking records, so changing source data alone does not make them eligible again.
 
-2. On the customer page, confirm that **NetSuite Customer Internal ID** is
-   present in **Identifications**.
+Before a controlled retry, reconcile the saved request, remote result, tracking record, and Data Manager history. Preserve the batch file and identifiers. Use the deployment's recovery procedure for the failed stage; do not remove claims or generate a replacement batch while the remote outcome is unknown.
 
-<div data-full-width="false">
-  <figure>
-    <img src="../.gitbook/assets/customer-identification.png" alt="Customer Identifications showing the NetSuite Customer Internal ID">
-  </figure>
-</div>
+## Trace the CSV integration
 
-3. If the ID is missing, find the customer in NetSuite by email address or phone
-   number. Copy the internal ID from the customer record URL and add it to the
-   customer identification in OMS.
-4. Remove unsupported special characters from the customer name or email address
-   when the NetSuite import response identifies them as the failure.
+For deployments using the earlier SFTP flow, inspect the order's `Order Sync Feed History` from the `Order Details` page. A history row confirms that the feed was generated; it does not confirm that NetSuite imported it or that OMS received the acknowledgement.
 
-### Check the NetSuite product IDs
+1. Check the configured order feed job and its selection criteria.
+2. Confirm that the exported file reached the expected SFTP location.
+3. Check the corresponding NetSuite import script and its record errors.
+4. Check the NetSuite acknowledgement export and the OMS import of the identifiers.
 
-Open every item from the order and confirm that **NetSuite Product Internal ID**
-is present in the product **Identifications** section. Add the verified NetSuite
-item ID when it is missing.
+| Flow | Feed job | NetSuite import | NetSuite acknowledgement export |
+| --- | --- | --- | --- |
+| Sales order | `generate_CreateOrderFeed` | `HC_importSalesOrders` | `HC_MR_ExportedSalesOrderCSV` |
+| POS cash sale | `generate_CreateOrderFeed_pos` | `HC_SC_ImportCashSale` | `HC_MR_ExportedCashSaleCSV` |
 
-<div data-full-width="false">
-  <figure>
-    <img src="../.gitbook/assets/product-identification.png" alt="Product Identifications showing the NetSuite Product Internal ID">
-  </figure>
-</div>
+Check the job names against the deployment configuration. See [Order ID sync over SFTP](../synchronization-flows/order-sync/sync-orderIds.md) and [POS cash sales](../synchronization-flows/order-sync/pos-cash-sales.md) for file and identifier details.
 
-### Check the payment
-
-On the Order Details page, verify that an Order Payment Preference exists and
-that the payment total equals the order total.
-
-<div data-full-width="false">
-  <figure>
-    <img src="../.gitbook/assets/order-payment-preference.png" alt="Order Details page showing a payment transaction">
-  </figure>
-</div>
-
-A missing or partial payment prevents the whole order from being created in
-NetSuite. It is not only a customer deposit issue.
-
-- If Shopify contains the payment but OMS does not, run the
-  [Import Order Updates from Shopify](https://docs.hotwax.co/documents/v/retail-operations/workflow/job-workflows/orders#import-order-updates-from-shopify)
-  job or add the verified payment preference in OMS.
-- If the payment is missing in Shopify, correct it in Shopify before importing
-  the update into OMS.
-
-### Check required order attributes
-
-Confirm that all required Shopify metafields are present in the OMS order
-attributes. If an attribute is missing, follow
-[Order Attribute is Missing](https://docs.hotwax.co/documents/v/retail-operations/orders/order-management/troubleshooting/orderattributemissing)
-and correct the attribute before retrying the order.
-
-## 4. Run both order sync job layers
-
-In Job Manager, open **Orders** > **NetSuite**. Verify that the Moqui feed job
-and the corresponding NetSuite jobs are enabled and completing successfully.
-Run both layers when manually retrying an order.
-
-### Standard sales orders
-
-1. Run `generate_CreateOrderFeed` in Moqui to create the outbound order feed.
-2. Run `HC_importSalesOrders` to import the feed and create the Sales Order in
-   NetSuite.
-3. Run `HC_MR_ExportedSalesOrderCSV` to export the NetSuite result so OMS can
-   record the NetSuite internal ID.
-
-### POS cash sales
-
-1. Run `generate_CreateOrderFeed_pos` in Moqui to create the outbound POS feed.
-2. Run `HC_SC_ImportCashSale` to import the feed and create the Cash Sale in
-   NetSuite.
-3. Run `HC_MR_ExportedCashSaleCSV` to export the NetSuite result to OMS.
-
-The export jobs are not the wrong jobs; they are the acknowledgement stage. The
-Moqui feed job and the NetSuite import job must also run for the order to be
-created.
-
-## 5. Check the order in NetSuite
-
-Search NetSuite using the Shopify order number.
-
-- If the order is present, allow the acknowledgement job to add the NetSuite
-  internal ID in OMS. Under the standard schedule, this can take 15 to 20
-  minutes.
-- If the order is not present and the OMS feed history exists, inspect the
-  NetSuite CSV import response.
-
-## 6. Check the NetSuite CSV import status
-
-In NetSuite, go to **Setup** > **Import/Export** > **View CSV Import Status**.
-
-<div data-full-width="false">
-  <figure>
-    <img src="../.gitbook/assets/netsuite-import-status.png" alt="NetSuite CSV Import Status page">
-  </figure>
-</div>
-
-Find the import file by order date and look for partial or failed results, such
-as `4 of 5 records processed successfully` or `0 of 1 records processed
-successfully`. Open **CSV Response** to see the error for the failed order.
-
-<div data-full-width="false">
-  <figure>
-    <img src="../.gitbook/assets/netsuite-csv-import-files.png" alt="NetSuite CSV Import Status page showing uploaded files and processing results">
-  </figure>
-</div>
-
-## 7. Resolve common NetSuite import errors
-
-### Invalid entity reference key
-
-This error means NetSuite cannot find the customer using the ID sent by OMS.
-The customer may be missing, inactive, merged, or mapped to an incorrect ID.
-
-1. Search for the customer in NetSuite by email address or phone number.
-
-<div data-full-width="false">
-  <figure>
-    <img src="../.gitbook/assets/netsuite-customer-search.png" alt="NetSuite Global Search showing a customer search">
-  </figure>
-</div>
-
-2. Open the active customer record and copy its internal ID from the URL.
-
-<div data-full-width="false">
-  <figure>
-    <img src="../.gitbook/assets/netsuite-customer-id.png" alt="NetSuite customer record URL showing the internal ID">
-  </figure>
-</div>
-
-3. Replace the NetSuite Customer Internal ID in the OMS customer identification.
-
-### Invalid location reference key
-
-This error means that the location is missing, inactive, or mapped incorrectly
-in NetSuite.
-
-1. Identify the order item location in OMS.
-2. In NetSuite, go to **Setup** > **Company** > **Locations**, open the location,
-   and confirm that it exists and is active.
-
-<div data-full-width="false">
-  <figure>
-    <img src="../.gitbook/assets/netsuite-location.png" alt="NetSuite Location record showing the Location Is Inactive setting">
-  </figure>
-</div>
-
-3. Correct the location or its mapping in OMS.
-
-For `Invalid location reference key ... for subsidiary ...`, also confirm that
-the order creation and fulfillment locations belong to the order's subsidiary.
-An authorized NetSuite administrator must correct a cross-subsidiary location.
-
-### Invalid item reference key
-
-This error means the NetSuite item is missing, inactive, or mapped to an
-incorrect product ID. Verify the item in NetSuite and update the NetSuite Product
-Internal ID in OMS.
-
-## 8. Retry the corrected order
-
-After correcting the source data or mapping:
-
-1. Open **Order Sync Feed History** from the Order Details page.
-2. Remove only the failed history record for the affected order.
-3. Run the Moqui feed job and the corresponding NetSuite import and
-   acknowledgement jobs again.
-4. Confirm that a new history record is created and that the NetSuite internal
-   ID returns to OMS.
-
-Removing the history record makes the order eligible for another feed. Do not
-remove successful history records or records for unrelated orders.
+Allow the configured producer, NetSuite, and import cycles to finish. There is no single completion time shared by every deployment.
