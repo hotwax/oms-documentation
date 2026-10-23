@@ -1,7 +1,11 @@
 # Picking App
 
-The HotWax Commerce Picking App is designed to assist store associates in efficiently picking order items from their facility locations, preparing them for packing and fulfillment. The app supports both wave-based picking and collaborative picking options, allowing store associates to work together seamlessly. Since the app is tailored for collaborative use, no specific permissions are required to access the app or to perform actions such as viewing picklists, scanning items, and completing picklists.
+The Picking App helps store associates pick order items for packing and fulfillment. Assign the app access permission through the user's Security Group.
 
 | Serial No. | Action        | Permission    | Description                                                                                 |
 | ---------- | ------------- | ------------- | ------------------------------------------------------------------------------------------- |
-| 1          | View Picking App     | PICKING_APP_VIEW | Allows users to view Picking App |
+| 1 | View Picking App | `PICKING_APP_VIEW` | Allows users to open the Picking App when the app access check is enabled. |
+
+If sign-in shows `You do not have permission to access the app.`, check the user's Security Groups and app access in [Troubleshoot application access](../users/troubleshooting/application-access-issue.md). After changing permissions, sign out and sign in again.
+
+To make a user available for picklist assignment at a facility, follow [Create pickers](../users/add-picker.md).

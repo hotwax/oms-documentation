@@ -43,6 +43,8 @@ Inside a session, the associate will see:
 
 ### Scanning items
 
+Before counting with a Bluetooth scanner, follow [Connect the Socket Mobile scanner](connect-scanner.md). Configure the scanner to send `Enter` after each barcode so the app records the scan.
+
 The scan action button changes based on session state:
 
 * Before the session starts, it shows `Start counting` (green). Tapping it moves the session to `In progress` and focuses the scanner input.
