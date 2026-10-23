@@ -1,0 +1,14 @@
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#E8F0FE", "primaryTextColor": "#17324D", "primaryBorderColor": "#4275AF", "lineColor": "#52677B", "secondaryColor": "#E5F4ED", "tertiaryColor": "#FFF4DC", "fontFamily": "Arial", "fontSize": "16px"}, "flowchart": {"curve": "basis", "htmlLabels": false}}}%%
+flowchart TD
+  A[Review a transfer in Company] --> B{Did every status list load?}
+  B -->|No| C[Read available lists and retry unknown results]
+  B -->|Yes| D[Review ownership and product mappings]
+  C --> D
+  D --> E{Detach requested?}
+  E -->|No| F[Continue monitoring]
+  E -->|Yes| G[Connector checks shop ownership and Shopify state]
+  G -->|Already pushed or different owner| H[Show refusal and keep ownership]
+  G -->|Eligible| I[Detach in one transaction]
+  I --> J[Publish inventory movements only if selected]
+  classDef caution fill:#FFF4DC,stroke:#AA7B24,color:#4B3715;
+  class C,H caution;

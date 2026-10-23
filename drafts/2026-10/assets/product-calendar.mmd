@@ -1,0 +1,13 @@
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#E8F0FE", "primaryTextColor": "#17324D", "primaryBorderColor": "#4275AF", "lineColor": "#52677B", "secondaryColor": "#E5F4ED", "tertiaryColor": "#FFF4DC", "fontFamily": "Arial", "fontSize": "16px"}, "flowchart": {"curve": "basis", "htmlLabels": false}}}%%
+flowchart TD
+  A[Choose product store] --> B[Search the full product calendar]
+  B --> C[Load matching products in pages]
+  C --> D{One product or selected products?}
+  D -->|One| E[Open its date editor]
+  D -->|Selected| F[Review the selected count]
+  F --> E
+  E --> G[Keep, set, or clear each date]
+  G --> H[Save changed dates]
+  H --> I[Review the updated calendar]
+  classDef action fill:#E5F4ED,stroke:#2D8060,color:#173B2C;
+  class H,I action;
