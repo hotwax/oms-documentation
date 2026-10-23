@@ -8,7 +8,6 @@ The app provides distinct views for Admins and Store Associates:
 
 * [Store View](../../../store-operations/cycle-count/README.md): Step-by-step instructions for store associates to perform cycle counts in-store.
 
-
 With built-in features like bulk actions, variance alerts, and timestamped tracking, the Cycle Count App keeps inventory accurate across your network.
 
 For a business-process overview of inventory management and cycle counting, see [Inventory management](../../../learn-hotwax-oms/business-processes/inventory-management.md).
@@ -30,6 +29,12 @@ Add the HotWax Cycle Count tile in Shopify POS and open the counting workflow th
 ### Confirm facility access
 
 In embedded mode, the app selects the HotWax facility mapped to the current Shopify POS location from the facilities your account can access. It does not grant access to another facility. If `Unable to login. User is not associated with this location. Please contact the administrator.` appears, ask the administrator to check your facility association and the Shopify-location mapping.
+
+## Plan and assign counts
+
+- [Create a cycle count](create-count.md)
+- [Review and approve a draft](draft.md)
+- [Upload counts in bulk](bulk-upload.md)
 
 ## Cycle count workflow
 

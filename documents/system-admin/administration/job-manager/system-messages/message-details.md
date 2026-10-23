@@ -17,7 +17,7 @@ Use the journey and status history to answer:
 - Which operation failed or stopped?
 - Is there a parent, child, or linked message?
 
-Compare timestamps in the app time zone shown in `Settings`.
+Compare timestamps in the app time zone shown in `Settings`. A consumed message confirms its processing status; verify the resulting business record separately before considering the integration complete.
 
 ## Review errors and operations
 

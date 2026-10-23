@@ -54,11 +54,17 @@ Confirm the instance time zone before you change a cron expression. Open `Settin
 
 ## Edit custom parameters
 
+The `Parameters` tab shows supported service inputs, including optional inputs with no saved value. A blank optional value is not automatically a configuration error.
+
 1. Open `Parameters`.
 2. Select `Edit` or `Add`.
 3. Enter all required parameter values.
 4. Review optional values.
-5. Select `Save`.
+5. Select `Save`, or select `Cancel` to discard the edits and retain the saved values.
+
+![Parameters tab showing a configured facilityId and a blank optional pageSize](../../../.gitbook/assets/job-manager/job-parameters.jpg)
+
+*Optional parameters remain visible even when no value is set.*
 
 For a Map, List, or Object parameter, review the JSON displayed in the field and retain its object or list structure. For example, a map looks like `{"key":"value"}`; do not add another pair of quotes around the entire JSON value.
 
@@ -66,7 +72,13 @@ The `Save` action remains unavailable while a required value is missing. Paramet
 
 ## Review job history
 
-Open `History` to inspect runs for this job. The tab loads 20 runs initially; scroll to the bottom to load older runs when more are available.
+Open `History` to inspect runs for this job. The tab loads 20 runs initially; scroll to the bottom to load older runs when more are available. Use the search, `Status`, `User`, and `Data logs` filters to narrow the loaded history.
+
+When you open `View run` from the Dashboard, the `Run #...` chip limits the history to that execution. Clear the chip to return to the job's broader history.
+
+![Job History filtered to one run with a removable run chip](../../../.gitbook/assets/job-manager/job-history-pinned-run.jpg)
+
+*Confirm the run identifier before reviewing its recorded parameters, results, and errors.*
 
 Expand the available sections to review:
 

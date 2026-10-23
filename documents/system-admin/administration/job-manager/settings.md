@@ -18,7 +18,7 @@ The profile card shows the signed-in user. Use:
 
 Review `OMS instance` before you run a job, upload a file, or change a configuration.
 
-`Go to OMS` appears only in supported environments and requires `COMMERCEUSER_VIEW`. The button is unavailable when the permission is missing.
+`Go to OMS` appears only when your sign-in provides access to the OMS interface and requires `COMMERCEUSER_VIEW`.
 
 ## Select a product store
 

@@ -106,6 +106,8 @@ Before applying any filter or search term, the list shows `Please select filters
 - Choose one or more tag values to narrow the product list.
 - Select `Apply` to update results.
 
+Tag totals count eligible product variants. A virtual parent product is not an additional item to count. For example, a tagged parent with three eligible variants contributes three countable SKUs. Review the selected products before creating the count; the tag total is a product count, not an inventory quantity.
+
 {% hint style="info" %}
 The chip label updates to show the count of selected values (for example, `3 selected`) or the tag name if only one is selected.
 {% endhint %}
@@ -168,9 +170,6 @@ The selected count is the scope that will be submitted. Review it before choosin
 
 If an open count with the same name already exists for the selected facility, selecting `Create` adds the selected products to that count instead of creating another count.
 
-After processing, the newly created cycle count appears in:
-
-- **Admin view:** The [Assigned counts](https://docs.hotwax.co/documents/retail-operations/inventory/cycle-count/assigned) page in `Created` status.
-- **Store view:** The `Counts` page in `Created` status.
+The count is created in `Created` status. With `INV_COUNT_APPROVAL`, open [Draft](draft.md) to review and approve it; the approved count then appears in `Assigned`. Without this permission, the created count appears directly in `Assigned` or the store's `Counts` list.
 
 Store users can start the count when its configured start date allows it.

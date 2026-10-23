@@ -1,60 +1,54 @@
 ---
-description: >-
-  Review schedule, queue, file, message, and service health from the Job Manager
-  Dashboard.
+description: Review schedule, queue, file, message, and service health from the Job Manager Dashboard.
 ---
 
 # Review the Job Manager Dashboard
 
-Open `Dashboard` to review current operational health before you investigate an individual record.
-
-Dashboard counts reflect the active instance and the data available when the page was last refreshed. Open the linked page to confirm the current records behind a count.
-
-<figure><img src="../../.gitbook/assets/job-manager/dashboard-health-summary.png" alt="Dashboard health cards and queue operations map"><figcaption><p>Review schedule, ingestion, and message health from the Dashboard.</p></figcaption></figure>
+Open `Dashboard` to review operational health and investigate the records behind a warning. Check the displayed time window before interpreting a count; recent activity does not represent all historical failures.
 
 ## Review schedule health
 
-Use the schedule summary to compare:
+Use the schedule summary to compare active, paused, unscheduled, and draft jobs. Select a status to open `Catalog` with that filter, then review the job before changing its schedule or running it.
 
-- Active jobs
-- Paused jobs
-- Jobs without a schedule
-- Draft jobs
+## Investigate a failed file import
 
-Select a status to open `Catalog` with the matching filter. Review the job before you run it or change its schedule.
+1. Locate the `High-priority ingestion` or `Standard ingestion` card.
+2. Select `View n Failed`.
+3. In `File history`, review the priority, failure, and time filters carried over from the Dashboard.
+4. Open the affected file and inspect its error information.
 
-## Review ingestion and message health
+![Dashboard with View Failed actions for high-priority and standard ingestion](../../.gitbook/assets/job-manager/dashboard-drilldowns.jpg)
 
-Use the ingestion and system message cards to identify:
+*The ingestion actions open File history with the matching priority and time window.*
 
-- High-priority and normal-priority file activity
-- Inbound and outbound system message activity
-- Failed file imports
-- System messages in an error state
-
-Select a count to open the relevant history. Use [File history](mdm/file-history.md) for import processing and [Message history](system-messages/message-history.md) for integration messages.
+Incoming and outgoing message error totals summarize message activity. Open [Message history](system-messages/message-history.md) to investigate the underlying messages.
 
 ## Read the Queue Operations Map
 
-Use the Queue Operations Map to see how work is moving through the available processing stages. Treat the map as a summary, then open the related history to inspect a specific record.
+Use the `Queue operations map` to review pending files and queued messages. Select the relevant stage to open its filtered history, then inspect the record's status and timestamps.
 
-## Review service job diagnostics
+## Investigate a failed job run
 
-Use `Service Job Diagnostics` to find jobs with configuration problems. A diagnostic can identify missing or invalid job setup, but it does not replace the job detail or run error.
+1. Under `Service Jobs Diagnostics`, locate the failed job.
+2. Select `View run` to open the job's `History` tab.
+3. Confirm that the `Run #...` chip identifies the run you selected.
+4. Review the run's status, user, start and completion times, and technical details.
+5. Clear the run chip when you want to review other executions.
 
-1. Select the diagnostic action.
-2. Open the affected job.
-3. Review `Overview`, `Parameters`, and `History`.
-4. Compare the configuration with the latest failed run.
+![Queue operations map and a failed job with a View run action](../../.gitbook/assets/job-manager/dashboard-diagnostics.jpg)
 
-See [Manage a job](jobs/job-details.md) and [Investigate job runs](jobs/run-history.md).
+*View run opens the selected execution in the job's History tab.*
+
+`View run` opens the execution details. `Run Now` starts another execution. Review the failure before deciding whether to rerun the job.
+
+For configuration diagnostics, open the job and compare its `Overview`, `Parameters`, and `History`. See [Manage a job](jobs/job-details.md).
 
 ## Review recent activity
 
-Use `Recent Activity` to move from a dashboard event to its related job, file, or message. Confirm the target identifier and status on the detail page.
+Use `Recent Activity` to open the related job, file, or message. Confirm its identifier and status on the detail page.
 
 ## Refresh dashboard data
 
-Open `Settings` when a dashboard section appears stale. Review `Data Status`, then refresh the affected data source or use the full refresh action.
+Open `Settings` when a section appears stale. Review `Data Fetch Status`, then refresh the affected data source or use `Refresh All`.
 
 See [Manage Job Manager settings](settings.md).

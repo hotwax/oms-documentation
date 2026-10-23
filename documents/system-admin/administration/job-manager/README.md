@@ -8,7 +8,7 @@ description: >-
 
 Job Manager gives operations and technical teams one place to monitor scheduled work and investigate data processing in HotWax Commerce.
 
-Open Job Manager from the HotWax Commerce Launchpad. Your account needs the `JOB_MANAGER_APP_VIEW` permission to enter the app. See [Job Manager app permissions](../user-permissions/job-manager-app.md) for the permissions that control each action.
+Open Job Manager from the HotWax Commerce Launchpad. Your account needs the `JOB_MANAGER_ACCXUI_APP_VIEW` permission to enter the app. See [Job Manager app permissions](../user-permissions/job-manager-app.md) for the permissions that control each action.
 
 ## Choose a workspace
 

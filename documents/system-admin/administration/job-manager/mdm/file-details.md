@@ -32,7 +32,7 @@ Use the available tabs:
 - `Original`: Data submitted for processing
 - `Errors`: Records or error details returned during processing
 
-The `Errors` tab appears only when failed records have an available error file. Its absence does not establish that every record processed successfully.
+The `Errors` tab appears only when failed records have an available error file. Wait for its contents to load when you first open it; the page reuses the loaded result when you return to the tab. Its absence does not establish that every record processed successfully.
 
 Search within the displayed payload to find an identifier or error. Use the expand and collapse controls when the payload contains nested data.
 

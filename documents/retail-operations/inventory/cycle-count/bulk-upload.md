@@ -1,33 +1,24 @@
+---
+description: Upload a CSV to create cycle counts, monitor processing, and download error records.
+---
+
 # Bulk upload
 
-The bulk upload feature makes it easy to create multiple cycle counts at once using a CSV file. Instead of entering products one by one, you can upload a formatted file, and the system will generate the corresponding cycle counts automatically. This is especially useful when working with large product lists.
-
-To begin, go to the `Cycle Count` app and select `Bulk upload`.
-
-On this page, you can:
-
-* Download a sample CSV template 
-* Use or create saved field mappings  
-* Upload new CSV files  
-* Review past uploads and track their status
+Use `Draft bulk` in the Cycle Count app to create multiple cycle counts from a CSV file. The page provides a template, saved field mappings, and the status of recent uploads.
 
 ## Required permissions
 
-Access to the bulk upload feature requires the `COMMON_ADMIN` or `INV_COUNT_ADMIN` permission.
+Access to bulk upload requires `COMMON_ADMIN` or `INV_COUNT_ADMIN`.
 
-## Steps to create a cycle count using bulk upload
+## Prepare and upload a CSV
 
-Before uploading, download a sample CSV to ensure the format and data align with required fields. Using the sample file helps prevent mapping errors during the upload process.
+1. Open `Draft bulk` and select `Download template`.
+2. Prepare the file using the template fields.
+3. Select `Upload` and choose the CSV from your device.
+4. Choose a saved field mapping or map each column to the corresponding system field.
+5. Review the mapping and select `Submit`.
 
-1. Upload a CSV file
-
-* Click `Upload` and select a CSV file from your device.  
-* Once the file is uploaded, previously disabled controls on the screen become active.
-
-
-2. Map CSV fields
-
-After uploading your CSV, map each column to the correct system field so values like SKU, facility, or date are interpreted correctly. If unsure, check the table below to avoid errors and create your cycle count accurately.
+Use these fields when preparing the file:
 
 | Field name | Meaning | How to get the right value |
 | :---- | :---- | :---- |
@@ -39,41 +30,49 @@ After uploading your CSV, map each column to the correct system field so values 
 | `estimatedCompletionDate` | Due date by which the count should be completed. | Format: `MM-DD-YYYY`. |
 | `estimatedStartDate` | Date the cycle count is allowed to begin. | Format: `MM-DD-YYYY`. |
 
-3. Submit the upload
-
-     
-* After mapping successfully, click `Submit` to begin processing.
-
 ## Creating Hard Counts with bulk upload
 
 Hard counts are created from the same CSV flow. To avoid missing-product errors when you don’t want to preload item lines:
 
-1. In your CSV, set `purposeType` to `HARD_COUNT` for the rows you want to create as hard counts.  
-2. During field mapping, choose `Skip` for the product identifier field (`productSku`). This tells the uploader not to look for item rows when building the count.  
-3. Map the remaining required fields (for example, `countImportName`, `facility`, `estimatedStartDate`, `estimatedCompletionDate`) and submit.  
+1. In your CSV, set `purposeType` to `HARD_COUNT` for the rows you want to create as hard counts.
+2. During field mapping, choose `Skip` for the product identifier field (`productSku`). This tells the uploader not to look for item rows when building the count.
+3. Map the remaining required fields (for example, `countImportName`, `facility`, `estimatedStartDate`, `estimatedCompletionDate`) and submit.
 
-The uploader will create a hard count with no product list preloaded, so the count opens as a blank, full physical count in the app without throwing a missing-product error.
+The uploader creates a hard count with no product list preloaded, so the count opens as a blank, full physical count in the app.
 
-## Recently uploaded counts
+## Track recently uploaded counts
 
-Below the `Submit` button, you’ll find the recently uploaded counts section. This displays all bulk uploads along with their processing status.
+Find the file under `Recently uploaded counts`. Each row shows the filename, Data Manager log ID, processing status, and a three-dot action menu. Keep the filename and log ID when investigating an import.
 
-Each record includes:
+The list refreshes approximately every 15 seconds and shows up to 100 records from the last 24 hours. Use the record's status to track processing. Upload acceptance does not confirm that every count was created.
 
-* Uploaded file name  
-* System-generated uploaded cycle count ID  
-* Status  
-* Action menu (three dots), where users can view details or cancel uploads still in `Pending` status
+| Status | Meaning |
+| --- | --- |
+| `pending` | Waiting to process or waiting for the next processing status |
+| `processing` | The import is running |
+| `processed` | Processing finished with no reported failed records |
+| `error` | The import failed, crashed, or finished with one or more failed records |
+| `cancelled` | The import was cancelled |
 
-At the top of this section, the page also shows `Processing <time>` (for example, “Processing in 2 minutes”) based on the next scheduled job run. This countdown lets you know when the uploader will pick up your file, so you can estimate when counts will appear under `Assigned`.
+![Recent uploads with an error record and actions to view the file or error records](../../.gitbook/assets/inventory-count/bulk-upload-error-records.jpg)
 
-### File status indicators
+*An import with failed records shows error even when processing has finished.*
 
-| Status | Description |
-| ----- | ----- |
-| `Pending` | The file is currently being processed. |
-| `Processed` | The system successfully created the respective cycle counts. |
-| `Cancelled` | The upload was cancelled before completion. |
-| `Error` | The file encountered an error during import. Resolve it by reviewing the error description in the modal. |
+## Review an upload error
 
-Once processing is complete, the cycle counts from the bulk upload appear under the `Assigned` tab in the Cycle Count app. Store teams can then begin execution.
+1. Open the file's three-dot menu.
+2. Select `View error records` to download the available error-record file.
+3. Review the failed records and their errors. Use `View file` to download the original CSV for comparison.
+4. Correct the affected data before submitting another upload. Check which records already succeeded to avoid repeating them unnecessarily.
+
+`View error records` is available when the import fails, crashes, or reports failed records.
+
+## Cancel a pending upload
+
+1. Find an upload in `pending` status.
+2. Open its three-dot menu and select `Cancel`.
+3. Wait for the list to refresh and confirm the resulting status.
+
+The cancellation notification confirms that cancellation was requested. Check for `cancelled` before treating the upload as stopped.
+
+After processing, review the created counts in [Draft](draft.md) or [Assigned](assigned.md), depending on your approval permission.
