@@ -1,122 +1,92 @@
 ---
-description: Learn how HotWax Commerce downloads product data from Shopify using bulk operations and change detection.
+description: Understand how HotWax Commerce imports Shopify products, variants, and changes through the bulk product sync.
 ---
 
 # Product download
 
-HotWax Commerce treats Shopify as the primary source of truth for all product information. To keep large product catalogs synchronized without hitting API limits, HotWax uses the Shopify GraphQL Admin API and bulk operations.
+HotWax Commerce imports Shopify products and variants to build the catalog used for order processing and inventory mapping. The bulk product sync supports an initial catalog import and recurring updates. Product sync creates product records and links; [importing inventory from Shopify](../inventory/import-inventory-from-shopify.md) is a separate process.
 
-The synchronization process runs in seven stages:
+For the first import, follow [Set up HotWax Commerce with Shopify](../../../system-admin/administration/company/product-store-onboarding.md). This page explains the integration behind that workflow. Confirm that your installed connector supports the bulk product path before applying its configuration.
 
-1. **Queue the request:** The scheduled `Sync Shopify Product Updates` job plans the sync. It identifies exactly what data is needed from Shopify based on the last successful sync time and adds a small time buffer to make sure no updates are missed.
+## Prepare the shop and product identity
 
-2. **Send to Shopify:** HotWax sends the bulk query to Shopify's GraphQL Admin API and records the bulk operation that Shopify creates in response.
+Before importing products:
 
-3. **Confirm completion:** Shopify processes the bulk query in the background. HotWax confirms when the operation finishes in two ways: it polls Shopify on a schedule, and it listens for a real-time `Bulk Operations Finish` webhook from Shopify. Once completion is confirmed, HotWax downloads the result file, a JSONL file containing the products and variants returned by the query. If Shopify completes the operation without a result file, there is no product file to import.
+1. Confirm the Shopify shop has an active connection and is linked to the intended Product Store.
+2. Choose the Product Store's primary identifier: Shopify variant ID, SKU, or barcode. Populate the chosen value consistently and resolve duplicates before import.
+3. Confirm the Product Store's currency, store group, and catalog setup. Product prices and catalog membership use this context.
+4. Review the product query, exclusion parameters, and metafield namespaces for this connection.
+5. Confirm that the bulk-query sender, result polling or completion webhook, and product import processing are configured. The product sync job only queues the request.
 
-4. **Prepare data:** HotWax reads the downloaded file, transforms it into a nested JSON format, and queues it for the database sync.
+The job template `sync_ShopifyProductUpdates` is installed paused with an empty `shopId`. A template's schedule does not prove that product sync is running for your shop.
 
-5. **Identify changes:** Instead of overwriting the database, HotWax identifies exactly what has changed using a baseline comparison strategy. It groups related product data (such as core details, tags, features, identifiers, and variant associations) and computes a unique SHA-256 hash for each group. If a new hash matches the one stored in the `ProductUpdateHistory` table, that group has not changed and is skipped.
+### Keep Shopify identifiers distinct
 
-6. **Update the database:** Only the identified changes (deltas) are applied. This selective update handles core product details, features, tags, pricing, and identifiers like SKU and UPC. It also detects the correct product type (such as `FINISHED_GOOD` vs. `DIGITAL_GOOD`) based on Shopify flags.
+| Identifier | Purpose |
+| --- | --- |
+| Shopify product ID | Identifies the parent product and its collection of variants |
+| Shopify variant ID | Identifies one sellable variant and links it to an OMS product |
+| Shopify inventory item ID | Identifies the inventory item used with Shopify location IDs for inventory sync |
+| SKU or barcode | Can be the configured matching value for the OMS product; these values do not replace the Shopify IDs |
+| OMS product ID | Identifies the product record in HotWax |
+| Shopify shop ID | Scopes the connection, product links, and sync history |
 
-7. **Save history:** Finally, HotWax updates the `ProductUpdateHistory` record with the new hashes and a snapshot of the current data. On subsequent runs, matching hashes let HotWax skip unchanged data groups rather than reapply those updates.
+The configured primary identifier is used to match a variant to the OMS product's internal name. The OMS product ID is a separate record identifier. Parent products use the Shopify handle with a `V_` prefix as their internal name.
+
+HotWax stores the parent and variant links in `ShopifyShopProduct`. Variant links also hold the Shopify inventory item ID. Always verify the selected shop when inspecting these links, especially when several shops share an OMS catalog. A matching SKU alone does not prove that the required Shopify inventory link exists.
+
+Changing the primary identifier or an identifier value after import can change how a variant matches an OMS product. Review the existing links before using a catalog import to recover missing products.
+
+## Choose the import scope
+
+The initial import and recurring updates use the same bulk pipeline. Their query scopes differ:
+
+| Scope | Behavior |
+| --- | --- |
+| Initial or full import | `includeAll=true` skips the generated date window. Other configured filters still apply. |
+| Recurring updates | Without an explicit `fromDate`, HotWax uses the message date of the latest consumed product-update request for this connection. |
+| Explicit date window | `fromDate` and `thruDate` filter Shopify update times. Configured date buffers move the corresponding boundary earlier. |
+| Custom query | `filterQuery` replaces the generated date and status expression. Review the complete query before running it. |
+
+The default generated query excludes archived products. It is not limited to active products; draft products can be included. Additional status exclusions and filter conditions can narrow the result. A full import does not automatically override those conditions.
+
+The recurring date boundary tracks a consumed request, not a confirmed successful product import. Review the linked import and failed records before treating that boundary as proof that every earlier product change was applied.
+
+Metafields are requested for configured namespaces. Product calendar mappings can add namespaces to the request. The query does not download every metafield automatically.
+
+## Follow the bulk import
 
 ```mermaid
-sequenceDiagram
-    accTitle: Shopify export and HotWax product import stages
-    accDescr: HotWax queues a Shopify bulk query and confirms completion by polling or webhook. When there is a result file, HotWax downloads and transforms it, queues the product import, compares data-group hashes, applies changes, and saves update history. Export completion does not prove import success.
-    participant Connector as HotWax connector
-    participant Shopify
-    participant Import as HotWax product import
-    Connector->>Connector: Queue product update request
-    Connector->>Shopify: Start bulk query
-    Note over Shopify: Prepare requested product data
-    Shopify-->>Connector: Completion via poll or webhook
-    opt Export has a result file
-        Connector->>Connector: Download and transform file
-        Connector->>Import: Queue product import
-        Import->>Import: Compare hashes and apply changes
-        Import->>Import: Save update history
-    end
+flowchart LR
+    accTitle: Shopify product import stages
+    accDescr: HotWax queues a shop-specific query. Shopify exports products and variants. HotWax downloads the result, prepares an import, applies product changes, and saves comparison history. Each stage has its own result.
+    A[Queue product query] --> B[Shopify bulk export]
+    B --> C[Download and prepare file]
+    C --> D[Queue product import]
+    D --> E[Apply changes and save history]
 ```
 
-Shopify export completion does not prove that the HotWax import succeeded. To inspect the current pipeline:
+1. HotWax queues the resolved query for the selected Shopify connection.
+2. The sender starts a Shopify bulk operation and records its operation ID.
+3. Polling or the bulk-operation completion webhook checks the result. When Shopify supplies a result file, HotWax downloads it.
+4. HotWax groups the exported parent products and variants into an import file and creates the linked Data Manager import.
+5. The import compares incoming product data with saved comparison history. It creates new records and applies supported changes.
+6. HotWax saves the comparison history used by later runs. See [Update product details](update-product-details.md) for the fields and comparison behavior.
 
-1. Open the Company App and select `Shopify`.
-2. Open the affected Shopify connection, then select `Product sync`.
-3. Review `Track sync progress` for the system message, Shopify bulk operation, and HotWax bulk import separately.
-4. Check whether the import completed, failed, or was skipped because Shopify returned no product data. Review failed records before recovery.
+If Shopify completes an export without a result URL, HotWax consumes the request without creating a product import file. This is different from a populated import finishing successfully.
 
-<figure><img src="../../.gitbook/assets/company-product-sync-dashboard.jpg" alt="Company App Product sync dashboard for Demo Store showing a consumed system message, completed zero-object Shopify bulk operation, and skipped HotWax bulk import"><figcaption><p>Demo Store example with no product updates returned: Shopify export is Complete and the HotWax import is Skipped. This is not an example of a successful populated import.</p></figcaption></figure>
+## Confirm the result
 
-Use [Monitor Shopify product sync](../../../system-admin/administration/company/manage-shopify-product-sync.md) for the complete operational workflow and recovery controls.
+1. Open the Company App, select `Shopify`, and open the affected connection.
+2. Select `Product sync`, then review `Track sync progress`.
+3. Check the product sync request, Shopify product export, and HotWax product import separately.
+4. Open the linked import and review its final status, processed records, failed records, and error details.
+5. Verify representative parent products, variants, selected identifiers, prices, and Shopify inventory item links in OMS.
 
-<details>
+Shopify's object count includes exported object types and is not a count of successfully imported OMS products. A consumed system message confirms that the request advanced through its processing stage; it does not replace the import result or product readback.
 
-<summary>Developer details: services, system messages, and statuses</summary>
+<figure><img src="../../.gitbook/assets/company-product-sync-dashboard.jpg" alt="Company App Product sync dashboard showing a consumed request, completed zero-object Shopify export, and skipped HotWax import"><figcaption><p>No product updates were returned in this example. The skipped import does not demonstrate a successful populated import.</p></figcaption></figure>
 
-The flow runs on a single system message of type `BulkQueryShopifyProductUpdates`, which moves through the following services and statuses:
+Use [Monitor Shopify product sync](../../../system-admin/administration/company/manage-shopify-product-sync.md) for history, recovery controls, and current jobs. If a request was consumed but its import failed, investigate that import before starting a later update window. Do not assume the next scheduled run automatically includes every failed record.
 
-| Stage | Service | System message status |
-| :--- | :--- | :--- |
-| Queue the request | `sync#ShopifyProductUpdates` (job `sync_ShopifyProductUpdates`) | `SmsgProduced` |
-| Send to Shopify | `send#ShopifyBulkQueryMessage` (saves the bulk operation ID to `remoteMessageId`) | `SmsgSent` |
-| Confirm completion | `poll_ShopifyBulkOperationResult` job, or the `Bulk Operations Finish` webhook; the result downloads to `${receiveMovePath}/${systemMessageId}.jsonl` | `SmsgReceived` |
-| Prepare data | `consume#ShopifyProductDataFile` uploads to the master data management (MDM) queue `SYNC_SHOPIFY_PRODUCT` | `SmsgConsumed` |
-| Identify changes, update, and save history | `sync#ShopifyProduct` computes the SHA-256 hashes, writes the deltas, and updates `ProductUpdateHistory` | — |
-
-For a completed export with no result URL, HotWax marks the system message consumed without creating a product import file. The import stage above applies when Shopify returns a result file.
-
-</details>
-
----
-
-### Product data mapping
-
-#### Parent product
-
-A virtual product, also known as a parent product, does not have a set size or color. All fields in the product JSON are imported, but only relevant fields are processed to improve system performance. Here is how parent product fields are mapped between Shopify and HotWax:
-
-| No. | Shopify fields | HotWax fields |
-| :--- | :--- | :--- |
-| 1 | ID | Shopify Product ID |
-| 2 | Title | Product Name |
-| 3 | Body HTML | Product Content |
-| 4 | Vendor | Brand |
-| 5 | Product_type | Categories |
-| 6 | Tags | Tags |
-| 7 | Variant | Variant |
-| 8 | Media | Overview |
-
-<div data-full-width="false"><figure><img src="../../.gitbook/assets/shopify-product-catalog.jpg" alt="Shopify demo catalog showing parent product titles, status, and inventory across fifteen variants per product"><figcaption><p>Demo catalog in Shopify. Each row represents a parent product with its variants; quantities are examples captured from the demo store.</p></figcaption></figure></div>
-
-#### Variant product
-
-The parent product comes in various sizes and colors, resulting in multiple variants. Here is how product variant fields are mapped:
-
-| No. | Shopify fields | HotWax fields |
-| :--- | :--- | :--- |
-| 1 | Product Variant ID | Shopify Product ID |
-| 2 | Title | Product Name |
-| 3 | Options | Feature |
-| 4 | Image | Image |
-| 5 | Parent Product | Parent Product |
-| 6 | Price | Price |
-| 7 | SKU | SKU |
-| 8 | Quantity | View inventory |
-| 9 | Shipping | Shippable |
-| 10 | Product Type | Product Type |
-| 11 | Weight | Weight |
-| 12 | Metafields | Product Tag |
-
-<figure><img src="../../.gitbook/assets/shopify-variant-options.jpg" alt="Abominable Hoodie XS Blue variant in Shopify with its parent product, size, color, image, and price"><figcaption><p>The XS / Blue variant belongs to the Abominable Hoodie parent product. Its size and color distinguish it from the other variants.</p></figcaption></figure>
-
-<figure><img src="../../.gitbook/assets/shopify-variant-identifiers.jpg" alt="Shopify variant More details section showing SKU MH09-XS-Blue and barcode MH09XSBlue"><figcaption><p>SKU and barcode for the same demo variant. Use the configured primary identifier when matching the variant to a HotWax product.</p></figcaption></figure>
-
-Shopify has multiple product identifiers, such as Shopify Product ID, Product SKU, Product Name, and UPC. Before importing products, set up the primary product identifier that maps to the product ID in HotWax. The primary product identifier can be configured in HotWax when setting up a new product store.
-
-#### Manage sales orders for products not in HotWax
-
-When orders are placed on Shopify, they transfer to HotWax. However, sometimes an order might include a newly launched product in Shopify that has not yet synced with HotWax. This can cause the order download to fail if the product import job has not yet run. To prevent this, HotWax creates a temporary placeholder product for the new item. Once the product import job runs, the system adds the necessary information, such as the product name, brand, price, and weight, to the placeholder product. This makes sure that the order download succeeds.
-
+For a small set of missing or changed products, the connector also supports an on-demand import by numeric Shopify parent product IDs. Confirm its availability in your installed version and review the returned missing and failed IDs, then verify the resulting OMS records.

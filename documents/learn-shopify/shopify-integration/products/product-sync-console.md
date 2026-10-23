@@ -6,7 +6,7 @@ description: Operate and monitor Shopify product sync after launch.
 
 Use the product sync console after Shopify onboarding to monitor current product sync progress, review recently synchronized changes, investigate errors, and audit previous runs.
 
-For initial setup and the first product import, follow [Set up HotWax Commerce with Shopify](../../../system-admin/administration/company/product-store-onboarding.md). For exact post-launch controls and recovery actions, use [Manage Shopify Product Sync](../../../system-admin/administration/company/manage-shopify-product-sync.md).
+For integration scope, identifiers, filters, and completion checks, see [Product download](download-products.md). For initial setup and the first product import, follow [Set up HotWax Commerce with Shopify](../../../system-admin/administration/company/product-store-onboarding.md). For exact post-launch controls and recovery actions, use [Manage Shopify Product Sync](../../../system-admin/administration/company/manage-shopify-product-sync.md).
 
 Open the console from a Shopify shop record in the Company app:
 
@@ -41,7 +41,9 @@ The Summary card shows:
 - Next sync time.
 - Whether someone paused the scheduled product sync job.
 - The linked HotWax product store.
-- The count of Shopify products that have changed since the last confirmed product update sync.
+- The count of Shopify products that have changed since the connection's recorded product-update boundary.
+
+The recorded update boundary does not prove that every earlier import succeeded. Check the linked import and its failed records separately.
 
 Click `Un-synced updates` to review the updated Shopify products that HotWax hasn't imported yet. The modal shows product title, handle, vendor, product type, Shopify update time, variant count, status, and inventory.
 
