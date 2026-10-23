@@ -45,7 +45,7 @@ The sync checks each selected order for these conditions:
 | Payment coverage is insufficient | The order waits. |
 | The rendered order has no item lines | Preparation records an error. |
 
-The default preparation compares valid authorized and settled payments with the sum of item values and order adjustments. Its payment tolerance is one percent. A zero-value order does not need a payment. This check does not create a deposit or capture payment.
+The default preparation compares valid authorized and settled payments with the sum of item values and order adjustments. Its payment tolerance is 1%. A zero-value order does not need a payment. This check does not create a deposit or capture payment.
 
 The optional shop property `netsuite.salesOrder.cutoffOrderId` prevents the default preparation from sending Shopify order IDs at or below the configured cutoff. An order selected despite that cutoff receives a preparation error. Align the selection rules with the cutover configuration.
 
@@ -131,6 +131,16 @@ Allocation updates and cancellations use NetSuite line identifiers. Store fulfil
 For returns, credit memos, refunds, and exchange settlement, see [Return sync](../returns/README.md). For stalled orders, use [Orders not syncing with NetSuite](../../troubleshooting/order-do-not-sync.md).
 
 ## Upgrade an existing batch integration
+
+Before upgrading, check persisted order selection rules for `taxLineWithoutRateOrderId` and `taxWithoutNexusOrderId`. The current `NetSuiteOrderDueView` no longer exposes these fields, so a rule that still names either field fails its selection query. This read-only query identifies the affected conditions:
+
+```sql
+SELECT RULE_ID, FIELD_NAME
+FROM RULE_CONDITION
+WHERE FIELD_NAME IN ('taxLineWithoutRateOrderId', 'taxWithoutNexusOrderId');
+```
+
+Preserve any required tax-rate and tax-nexus holds in the client integration before removing the old rule conditions. Verify the replacement checks and updated selection rules before enabling the upgraded producer.
 
 The file format changes the meaning of the system message's `messageText`: new senders expect a file location where older messages can contain record bodies. Apply the matching upgrade data for existing message types as well as the connector code.
 

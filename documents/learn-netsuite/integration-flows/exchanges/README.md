@@ -12,12 +12,14 @@ The connector supports an exchange-credit lifecycle in which a NetSuite Credit M
 
 ## Link the return to the replacement order
 
-The commerce or returns system creates the replacement order, and HotWax imports it through the order integration. The return's outcome links its returned items to that order. HotWax groups the returned items by their original NetSuite Sales Order and return type, then creates a customer return invoice in OMS for each group.
+The commerce or returns system creates the replacement order, and HotWax imports it through the order integration. The return's outcome links its returned items to that order. HotWax groups the returned items by their original NetSuite Sales Order and return type, then creates a customer return invoice in the order management system (OMS) for each group.
 
 The replacement order's exchange-credit payment preference references the customer return invoice that supplies its credit. This reference connects the new order to the correct NetSuite Credit Memo when the memo is available.
 
 ```mermaid
 flowchart TD
+    accTitle: Exchange credit and the replacement order
+    accDescr: The return invoice links a credit memo to the replacement sale. NetSuite applies the credit to the replacement invoice, and HotWax verifies the remaining balance.
     returned["Returned items and exchange outcome"] --> invoice["Customer return invoice in OMS"]
     invoice --> memo["NetSuite Credit Memo after prerequisites"]
     invoice -->|"Invoice reference on exchange credit"| replacement["Replacement order"]
@@ -34,7 +36,7 @@ See [Returns](../returns/README.md) for authorization and receipt requirements, 
 
 The return and replacement order need compatible customer information for NetSuite to apply the credit. A configured warranty exchange waits for one linked, imported replacement order and a known NetSuite customer before posting its final financial records.
 
-When a replacement order supplies the customer, HotWax can update the return and customer return invoices that do not yet have a NetSuite Credit Memo. The approval step updates an existing RMA with the final customer, address, tax, location, and configured fields. An invoice that already has a Credit Memo retains that memo's customer.
+When a replacement order supplies the customer, HotWax can update the return and customer return invoices that do not yet have a NetSuite Credit Memo. The approval step updates an existing return merchandise authorization (RMA) with the final customer, address, tax, location, and configured fields. An invoice that already has a Credit Memo retains that memo's customer.
 
 Some integrations book returns to the return facility's accounting customer. Others use the replacement customer's NetSuite ID or a configured store customer for an anonymous sale. These are implementation choices, not a single customer rule for all exchanges.
 
@@ -62,13 +64,13 @@ Replacement fulfillment and receipt of the original merchandise are separate eve
 
 The store's return settings determine whether the Credit Memo waits for receipt evidence. Inspect partial receipt quantities and the restock decision independently from the exchange payment.
 
-## Handle a cancelled replacement order
+## Handle a canceled replacement order
 
-When the configured cancellation flow runs, the connector attempts to delete the Credit Memo that funded the cancelled replacement, close its open RMA lines, and cancel the OMS customer return invoice. NetSuite allows deletion only while the memo has no applications. A refusal stops the cancellation flow and leaves the invoice available for review; the connector does not automatically reverse an applied financial transaction.
+When the configured cancellation flow runs, the connector attempts to delete the Credit Memo that funded the canceled replacement, close its open RMA lines, and cancel the OMS customer return invoice. NetSuite allows deletion only while the memo has no applications. A refusal stops the cancellation flow and leaves the invoice available for review; the connector does not automatically reverse an applied financial transaction.
 
 ## Reference existing discount-based exchange feeds
 
-Existing Loop integrations can represent the returned value as a discount, such as `loop-discount`, on a new Shopify order. In that setup, the replacement order's discount and any additional payment follow the configured order feed. Web exchanges can use the Sales Order flow, while a separately configured POS exchange feed can create Cash Sales.
+Existing Loop integrations can represent the returned value as a discount, such as `loop-discount`, on a new Shopify order. In that setup, the replacement order's discount and any additional payment follow the configured order feed. Web exchanges can use the Sales Order flow, while a separately configured point of sale (POS) exchange feed can create Cash Sales.
 
 Channel names, POS identification rules, discount mappings, and feed schedules belong to that installed integration. Do not use a `Loop Exchange` channel or a shipping-method label alone to infer which accounting path is active. The discount-based approach does not establish that the Credit Memo application lifecycle described above is configured.
 

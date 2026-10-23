@@ -8,6 +8,8 @@ description: >-
 
 Return synchronization advances from recorded business facts: the return's status, its customer return invoices, NetSuite identifiers, receipt history, and financial applications. Scheduled jobs select eligible records through configured rules. A return can progress through several jobs and batches before every group is synchronized.
 
+A return merchandise authorization (RMA) records the authorized return in NetSuite. The order management system (OMS) tracks the related invoices and imported identifiers.
+
 Read [Returns](../../integration-flows/returns/README.md) for the business lifecycle and [Exchanges](../../integration-flows/exchanges/README.md) for replacement-order settlement.
 
 ## Prepare the integration
@@ -35,6 +37,7 @@ When an original order exists but its NetSuite ID is missing, use the returned-o
 | --- | --- |
 | `NS_RTN_NO_RMA_CHANNEL` | Identifies configured channels, optionally with a required reason, that use a Credit Memo without an RMA |
 | `NS_RTN_NO_RCPT_WAIT_CH` | Allows the configured channel for the return's own store to bypass the warehouse receipt wait |
+| `NS_RTN_ARRIVAL_RCPT_CH_PARENT` | Enables arrival receipt waiting for a return channel's parent enumeration; the setting value must match that parent, and the setting is read from the return's explicit Product Store |
 | `NS_RTN_GROUP_CREDIT_PROD` | Names the financial product used when one money line represents the group's returned merchandise |
 | `NS_RTN_STORE_CREDIT_PROD` | Names the product used by the separate store-credit Invoice path |
 | `BookAtReturnFacility` | Uses the return facility's configured accounting customer, location, department, and subsidiary |
@@ -43,6 +46,8 @@ When an original order exists but its NetSuite ID is missing, use the returned-o
 | `TaxVarianceItemId` | Enables the corresponding Credit Memo balancing line when configured; a return-facility override can supply its own item |
 
 The final four settings belong to `NETSUITE_RETURN_CONFIG`. A return with conflicting settings from multiple stores needs an explicit store association. Keep the configured NetSuite fields aligned with the record type and deployed scripts.
+
+Arrival receipt waiting is separate from the warehouse receipt wait. With `NS_RTN_ARRIVAL_RCPT_CH_PARENT` configured, an arrived item with an open RMA line and no recorded Item Receipt can hold back the Credit Memo. Recording an arrival alone does not enable this check, and a return without an explicit `productStoreId` does not enter it. Verify this setting and store association when the receipt and Credit Memo would otherwise update the same RMA at the same time.
 
 ## Run the lifecycle stages
 
@@ -56,15 +61,17 @@ The final four settings belong to `NETSUITE_RETURN_CONFIG`. A return with confli
 | Create Credit Memos | Approved invoices with money and the required authorization, receipt, and customer facts enter the appropriate memo batch |
 | Settle customer return invoices | Ready invoices post the configured refund or credit application and become paid when NetSuite reports no unapplied memo balance |
 
-An open return hold excludes the return from the relevant due views. An invoice, receipt, or authorization already claimed by a batch also waits for that batch's result. Jobs that hold the same return lock defer a busy return to a later run.
+An open return hold excludes the return from the relevant due views. An invoice, receipt, or authorization claimed by an active batch waits for that batch's result. RMA attempts in terminal message states can become eligible again, as described in the recovery table below. Jobs that hold the same return lock defer a busy return to a later run.
 
 ## Follow a batch through its results
 
-The connector writes each batch as a JSONL file and stores its file location on the system message. The file contains the prepared records for that attempt. RMA and RMA-based Credit Memo result processing reads the sent lines again to match the returned records.
+The connector writes each batch as a JSON Lines file and stores its file location on the system message. The file contains the prepared records for that attempt. RMA and RMA-based Credit Memo result processing reads the sent lines again to match the returned records.
 
 ```mermaid
 flowchart TD
-    due["Eligible return records"] --> prepared["Prepared batch file and ledger"]
+    accTitle: Return batch submission and result imports
+    accDescr: Eligible records are saved and submitted to NetSuite. Result files pass through Data Manager before their identifiers, history, or errors are recorded.
+    due["Eligible return records"] --> prepared["Prepared file and tracking records"]
     prepared --> sent["Send to NetSuite"]
     sent --> job["NetSuite job or script task"]
     job --> results["Poll and match results"]
@@ -87,7 +94,7 @@ The batch message progresses through produced, sent, and received states as it i
 
 The connector limits batches in flight for the relevant account, message type, and, for receipt batches, store. An unresolved batch can therefore delay subsequent records in the same flow.
 
-## Check the durable records
+## Check the recorded results
 
 | Record | What it establishes |
 | --- | --- |
@@ -115,12 +122,12 @@ The return header history summarizes transactions per customer return invoice. F
 | RMA or receipt fails a local preparation check | The batch writes a refusal file; after correcting the source fact, a later run checks it again |
 | NetSuite refuses an RMA | The recorded refusal normally stops automatic selection; `INVALID_INITIALIZE_REF` receives one further attempt before it is treated as a persistent refusal |
 | NetSuite refuses a receipt | The recorded refusal excludes that shipment from the due view until it is reviewed for retry |
-| Credit Memo preparation fails, NetSuite refuses it, or its merchandise values do not match | The invoice retains its ledger record and does not automatically enter a new memo batch |
+| Credit Memo preparation fails, NetSuite refuses it, or its merchandise values do not match | The invoice retains its tracking record and does not automatically enter a new memo batch |
 | Result consumption or Data Manager import fails | Inspect the message and failed imports, then retry the appropriate result-processing stage; the asynchronous REST poller restores unsuccessful consumption to sent for a later poll |
-| Batch sending reaches its retry limit, or a script task fails | The system message enters an error state and needs review |
+| Batch sending reaches its retry limit, or a script task fails | The system message enters an error state and needs review. An RMA attempt in `SmsgError`, `SmsgCancelled`, or `SmsgRejected` no longer counts as open; without an imported RMA or persistent refusal, a later producer can select it again automatically |
 | Credit Memo still has an unapplied balance | Settlement remains incomplete; verify the refund or Invoice application and the configured NetSuite exchange process |
 
-Stable external IDs, saved batch files, and persisted transaction IDs allow supported retries to find existing records. They do not make every refusal self-correcting. Resolve the named source fact and reconcile any existing NetSuite record before releasing a failed record for retry. Do not erase transaction IDs to force another creation.
+Stable external IDs, saved batch files, and persisted transaction IDs allow supported retries to find existing records. They do not make every refusal self-correcting. Resolve the named source fact and reconcile any existing NetSuite record before retrying. For controlled RMA recovery, first pause the relevant producer or hold the return so automatic selection does not overlap the investigation. Recover any existing remote result using its stable external ID before resuming the intended stage. Do not erase transaction IDs to force another creation.
 
 Changes after an RMA has been created also need review. The approval update does not rebuild every original RMA line; for example, a restocking fee added after RMA creation is not automatically added to that RMA.
 

@@ -12,7 +12,7 @@ Record the OMS order ID, product store, NetSuite external ID, system message ID,
 2. Review the active rules and cutover settings for the product store. An order can be eligible but remain unselected because no rule matches it.
 3. Check every item's active NetSuite product mapping, fulfillment location, and open hold tasks. For an exchange, check the source return's credit memo.
 4. Check customer resolution. The default flow waits for the bill-to customer's NetSuite ID. A facility-based customer configuration records an error when its default customer is missing.
-5. Check the shop mapping, timezone, and payment coverage. The default preparation checks item values plus adjustments against valid payments with a one percent tolerance.
+5. Check the shop mapping, timezone, and payment coverage. The default preparation checks item values plus adjustments against valid payments with a 1% tolerance.
 
 For the full prerequisite list, see [Order sync](../synchronization-flows/order-sync/README.md#select-orders-and-resolve-prerequisites).
 
@@ -47,12 +47,20 @@ Before a controlled retry, reconcile the saved request, remote result, tracking 
 
 ## Trace the CSV integration
 
-For deployments using the earlier SFTP flow, inspect the order's `Order Sync Feed History` from the `Order Details` page. A history row confirms that the feed was generated; it does not confirm that NetSuite imported it or that OMS received the acknowledgement.
+For deployments using the earlier SFTP flow, check the actual feed job's `runFeedWithHistory` parameter before interpreting `Order Sync Feed History` on the `Order Details` page.
 
-1. Check the configured order feed job and its selection criteria.
-2. Confirm that the exported file reached the expected SFTP location.
-3. Check the corresponding NetSuite import script and its record errors.
-4. Check the NetSuite acknowledgement export and the OMS import of the identifiers.
+| History mode | Selection and recovery behavior |
+| --- | --- |
+| `runFeedWithHistory=Y` | An `ExternalOrderSyncHistory` row excludes the order from later exports. A required-field failure can still create this row even when the order enters an exception file. Correcting the source data alone does not make that order eligible again. |
+| `runFeedWithHistory=N` | The producer does not write sync history. The shared job definitions use this mode. Missing history does not prove that no export ran, and an exported order can remain eligible until its NetSuite ID is recorded. |
+
+1. Check the configured order feed job, history mode, selection criteria, and existing NetSuite ID.
+2. Inspect the main file and the separate `required_fields_missing` and `partial_payment` exception files. Read the missing-field or payment reason and verify each file's configured destination. Partially paid, non-replacement point of sale orders do not receive a history row in history-enabled mode.
+3. Confirm that the intended file reached its destination, then check the NetSuite import script and its record errors.
+4. Reconcile the order directly in NetSuite. If it exists, recover the acknowledgement export and OMS identifier import.
+5. Only for a confirmed failed history-enabled attempt with no remote order, use the deployment's supported recovery operation to release that order's history. Regenerate and reconcile the affected order before resuming broader processing.
+
+A history row records an export attempt, which may have produced an exception record. It does not prove that the main file contained the order, that NetSuite imported it, or that OMS received the acknowledgement. Preserve history while the remote outcome is unknown.
 
 | Flow | Feed job | NetSuite import | NetSuite acknowledgement export |
 | --- | --- | --- | --- |

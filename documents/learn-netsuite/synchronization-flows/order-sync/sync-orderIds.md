@@ -11,7 +11,7 @@ HotWax Commerce imports the NetSuite order ID and line IDs after NetSuite create
 
 ## Create sales orders in NetSuite
 
-1. Schedule the configured order export job in the HotWax Commerce integration layer. It generates a file for eligible orders that have not yet been sent to NetSuite.
+1. Schedule the configured order export job in the HotWax Commerce integration layer. It generates a file for orders still eligible for export without a recorded NetSuite order ID. When `runFeedWithHistory=Y`, an existing sync-history row also excludes an order.
 2. Verify the exported file at the configured SFTP location:
 
 ```text
@@ -22,6 +22,8 @@ HotWax Commerce imports the NetSuite order ID and line IDs after NetSuite create
 4. Check the script result and confirm that the intended sales orders were created.
 
 Replace `{sftp-username}` with the configured SFTP username. Job schedules and selection criteria depend on the deployment.
+
+Review [CSV selection and retry behavior](../../troubleshooting/order-do-not-sync.md#trace-the-csv-integration) before regenerating a feed. An earlier export can still lack its NetSuite acknowledgement.
 
 ## Import order and line identifiers
 

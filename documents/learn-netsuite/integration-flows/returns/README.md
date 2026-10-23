@@ -12,12 +12,14 @@ This page describes the connector's return lifecycle. Your configured rules sele
 
 ## Follow each return group
 
-A return can include items from different original orders or have different outcomes. HotWax creates a customer return invoice in OMS for each group of items with the same original NetSuite Sales Order and return type. This OMS invoice tracks the group's returned value; it is separate from a NetSuite sales Invoice.
+A return can include items from different original orders or have different outcomes. HotWax creates a customer return invoice in the order management system (OMS) for each group of items with the same original NetSuite Sales Order and return type. This OMS invoice tracks the group's returned value; it is separate from a NetSuite sales Invoice.
 
 Each group has its own Return Authorization, Credit Memo, and settlement records when those records are required. For example, items returned for a refund and items returned for an exchange can follow separate chains within the same return.
 
 ```mermaid
 flowchart TD
+    accTitle: Return authorization, receipt, and settlement
+    accDescr: Items are grouped by original order and return type. Configured groups pass through an authorization and receipt before a credit memo and settlement.
     source["Return and outcome in HotWax Commerce"] --> groups["Group items by original order and return type"]
     groups --> invoice["Customer return invoice in OMS"]
     invoice --> route{"Authorization required?"}
@@ -58,7 +60,7 @@ The receipt uses the shipment's receiving location and recorded arrival date. Th
 
 For merchandise received directly in NetSuite, a separate import records receipt lines against the corresponding return and RMA. This import records the NetSuite receipt history in OMS; it does not receive the same stock again in OMS.
 
-Receipt requirements depend on the return's destination, item disposition, and store settings. The Credit Memo can wait for receipt evidence for a warehouse return, a restocked item, or merchandise already recorded as arrived. A configured channel can bypass the warehouse receipt wait. Review quantities separately when receipts are partial; receipt evidence and receipt of every expected unit are different checks.
+Receipt requirements depend on the return's destination, item disposition, and store settings. The Credit Memo can wait for receipt evidence for a warehouse return, a restocked item, or merchandise already recorded as arrived. The arrival check requires `NS_RTN_ARRIVAL_RCPT_CH_PARENT` on the return's explicit Product Store; recording arrival alone does not enable it. A separate channel setting can bypass the warehouse receipt wait. See [return settings](../../synchronization-flows/returns/README.md#choose-the-relevant-return-settings). Review quantities separately when receipts are partial; receipt evidence and receipt of every expected unit are different checks.
 
 ## Create the Credit Memo
 
