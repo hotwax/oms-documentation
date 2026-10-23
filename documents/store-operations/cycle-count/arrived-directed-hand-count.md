@@ -1,12 +1,12 @@
 ---
-description: Preview the proposed directed hand-count workflow, including editable totals, confirmed zero counts, and recovery of unsaved changes.
+description: Use the directed hand-count workflow, including editable totals, confirmed zero counts, and recovery of unsaved changes.
 ---
 
-# Upcoming directed hand counting
+# Arrived: directed hand counting
 
-> **Release preview — checked 23 October 2026.** This guide describes [Inventory Count PR #1488](https://github.com/hotwax/inventory-count/pull/1488), which merged on 23 October 2026. Deployment has not been verified. Use it when your app includes this change. Until then, follow [Start and complete a session](start-complete-session.md). Screenshots show the actual proposed UI running locally with synthetic products; they do not show a customer environment.
+> **Arrived — source checked 23 October 2026.** This guide describes [Inventory Count PR #1488](https://github.com/hotwax/inventory-count/pull/1488), which merged on 23 October 2026. Deployment has not been verified. For the earlier workflow, see [Start and complete a session](start-complete-session.md). Screenshots show the actual PR UI running locally with synthetic products; they do not show a customer environment.
 
-Directed counts start with a list of assigned products. The proposed **Hand count** page lets you work through that list and enter each product's total counted quantity without searching for and adding every product individually.
+Directed counts start with a list of assigned products. The **Hand count** page lets you work through that list and enter each product's total counted quantity without searching for and adding every product individually.
 
 ## Open and filter the assigned products
 
@@ -23,9 +23,9 @@ Enter the **total** you counted in **Qty**, or adjust it with the minus and plus
 
 For an assigned product you checked and did not find, select **Not in stock**. This explicitly records a zero count. A row that still shows its untouched default 0 is not proof that someone counted it.
 
-![Directed hand count with a total of 7, an explicitly selected zero count, and one untouched product](../.gitbook/assets/upcoming-inventory-count/directed-handcount-edit.jpg)
+![Directed hand count with a total of 7, an explicitly selected zero count, and one untouched product](../.gitbook/assets/arrived-inventory-count/directed-handcount-edit.jpg)
 
-*PR #1488 preview. DOC-1001 has a pending total of 7; DOC-1002 is explicitly marked Not in stock. DOC-1003 remains uncounted. All products are examples.*
+*PR #1488 screen. DOC-1001 has a pending total of 7; DOC-1002 is explicitly marked Not in stock. DOC-1003 remains uncounted. All products are examples.*
 
 ## Save and review your work
 
@@ -34,9 +34,9 @@ For an assigned product you checked and did not find, select **Not in stock**. T
 3. Open **Counted** to check recorded quantities, including products counted as zero.
 4. Continue through **Uncounted**, then return to the session and follow the normal session-submission workflow.
 
-![Counted tab including a product explicitly recorded as Counted 0](../.gitbook/assets/upcoming-inventory-count/directed-handcount-counted.jpg)
+![Counted tab including a product explicitly recorded as Counted 0](../.gitbook/assets/arrived-inventory-count/directed-handcount-counted.jpg)
 
-*PR #1488 preview. A confirmed zero is shown as **Counted · 0**. The footer can still show unsaved edits made on another tab.*
+*PR #1488 screen. A confirmed zero is shown as **Counted · 0**. The footer can still show unsaved edits made on another tab.*
 
 Saving hand counts saves progress in this session. Submitting the session, submitting the combined count, and reviewing inventory variances remain separate actions.
 
@@ -52,15 +52,15 @@ When you leave with unsaved quantity changes, the app offers three choices:
 | **Discard** | Leave and discard the pending edits |
 | **Save** | Attempt to save the pending edits before leaving |
 
-![Leave-page dialog offering Cancel, Discard, and Save for unsaved hand counts](../.gitbook/assets/upcoming-inventory-count/directed-handcount-leave.jpg)
+![Leave-page dialog offering Cancel, Discard, and Save for unsaved hand counts](../.gitbook/assets/arrived-inventory-count/directed-handcount-leave.jpg)
 
-*PR #1488 preview. The dialog applies to pending edits, not previously saved session counts.*
+*PR #1488 screen. The dialog applies to pending edits, not previously saved session counts.*
 
 Draft recovery uses storage in the same browser and is scoped to the instance, user, and session. It is not a cross-device backup. If you see **Draft recovery is unavailable. Save your changes before leaving or reloading this page.**, save before navigating away.
 
 If the session is no longer available for counting, editing is disabled. Return to the session and confirm that it is still active and available to you before continuing.
 
-## Other proposed store changes
+## Other store changes
 
 [PR #1444](https://github.com/hotwax/inventory-count/pull/1444) isolates locally held variance data by facility. Check the active facility before reviewing variances, especially after switching stores. Ordinary navigation within one facility preserves its working context; changing facility clears the manual variance working data associated with that switch.
 

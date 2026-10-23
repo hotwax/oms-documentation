@@ -2,9 +2,9 @@
 description: Prepare for dashboard drill-downs, pinned job runs, complete parameter editing, and paused job creation in Job Manager.
 ---
 
-# Upcoming Job Manager operations
+# Arrived: Job Manager operations
 
-> **Release preview — checked 23 October 2026.** The main workflow in this guide comes from open [Job Manager PR #1071](https://github.com/hotwax/job-manager/pull/1071). Other proposals are identified separately. Screenshots show actual PR pages running locally with synthetic jobs and files; no live jobs were executed. Continue using the current guides until these changes are deployed.
+> **Arrived — source checked 23 October 2026.** The main workflow in this guide comes from open [Job Manager PR #1071](https://github.com/hotwax/job-manager/pull/1071). Separate proposals are identified below. Screenshots show actual PR pages running locally with synthetic jobs and files; no live jobs were executed. Deployment was not verified during documentation capture.
 
 ## Open the records behind a dashboard warning
 
@@ -15,11 +15,11 @@ The Dashboard shows recent ingestion activity, message queues, and job diagnosti
 3. In File history, inspect the inherited priority, failure, and time filters before broadening the search.
 4. Open the affected file and examine its error information.
 
-![Dashboard showing separate View 1 Failed actions for high-priority and standard ingestion](../../.gitbook/assets/upcoming-job-manager/dashboard-drilldowns.jpg)
+![Dashboard showing separate View 1 Failed actions for high-priority and standard ingestion](../../.gitbook/assets/arrived-job-manager/dashboard-drilldowns.jpg)
 
-*PR #1071 preview. The examples contain one affected import in each ingestion group. The displayed “since” window is carried into the file search.*
+*PR #1071 screen. The examples contain one affected import in each ingestion group. The displayed “since” window is carried into the file search.*
 
-The **Queue operations map** opens the relevant pending file or queued message view. Incoming and outgoing message error totals are summaries, not direct failure drill-downs in this proposal. Use Message history to investigate their underlying records.
+The **Queue operations map** opens the relevant pending file or queued message view. Incoming and outgoing message error totals are summaries, not direct failure drill-downs in this workflow. Use Message history to investigate their underlying records.
 
 ## Go directly to a failed job run
 
@@ -29,13 +29,13 @@ The **Queue operations map** opens the relevant pending file or queued message v
 4. Review its status, user, start/completion time, and technical details.
 5. Clear the run chip to broaden the history, then use the search, Status, User, or Data logs filters as needed.
 
-![Queue operations map and failed job diagnostic with a View run action](../../.gitbook/assets/upcoming-job-manager/dashboard-diagnostics.jpg)
+![Queue operations map and failed job diagnostic with a View run action](../../.gitbook/assets/arrived-job-manager/dashboard-diagnostics.jpg)
 
-*PR #1071 preview. **View run** preserves the failed run's identity when moving from the dashboard.*
+*PR #1071 screen. **View run** preserves the failed run's identity when moving from the dashboard.*
 
-![Job History tab filtered to Run DOC-R101 with Status, User, and Data logs controls](../../.gitbook/assets/upcoming-job-manager/job-history-pinned-run.jpg)
+![Job History tab filtered to Run DOC-R101 with Status, User, and Data logs controls](../../.gitbook/assets/arrived-job-manager/job-history-pinned-run.jpg)
 
-*PR #1071 preview. The removable run chip narrows the history to the selected run. Identifiers and errors are synthetic.*
+*PR #1071 screen. The removable run chip narrows the history to the selected run. Identifiers and errors are synthetic.*
 
 Use the evidence in the run before deciding to retry. Opening **View run** only inspects it; **Run now** is a separate execution action.
 
@@ -48,27 +48,27 @@ The **Parameters** tab includes supported service inputs even when an optional v
 3. Select **Edit**, enter the intended values, and save the edits.
 4. Use **Cancel** if you want to discard the current edits and retain the saved values.
 
-![Parameters tab showing configured facilityId and an unset optional pageSize](../../.gitbook/assets/upcoming-job-manager/job-parameters.jpg)
+![Parameters tab showing configured facilityId and an unset optional pageSize](../../.gitbook/assets/arrived-job-manager/job-parameters.jpg)
 
-*PR #1071 preview. `pageSize` is visible even though it has no saved value.*
+*PR #1071 screen. `pageSize` is visible even though it has no saved value.*
 
 ## Create a job and enable it deliberately
 
 With the required job-management permissions, open **Catalog** and start creating a job. Enter its name, description, exact service name, and schedule, then review its parameters. Supply the inputs required by the chosen service. Optional inputs can remain blank; blank values are omitted when creating its parameter records.
 
-![Create job form with Name, Description, Service, and Cron expression fields](../../.gitbook/assets/upcoming-job-manager/create-job.jpg)
+![Create job form with Name, Description, Service, and Cron expression fields](../../.gitbook/assets/arrived-job-manager/create-job.jpg)
 
-*PR #1071 preview. This uses a synthetic service name; choose the actual service required by your environment. The form was not submitted.*
+*PR #1071 screen. This uses a synthetic service name; choose the actual service required by your environment. The form was not submitted.*
 
 A newly created job starts **paused**. After creation, open its detail page, verify its parameters and schedule, and enable it when ready. Add its category from the job detail page once the job has been created.
 
 If the app reports **Job created, but its parameters could not be saved**, the job already exists. Open that job and repair its parameters before enabling it; do not repeat creation as if no job had been made.
 
-This proposal uses a typed service name. The searchable service-name picker in [draft PR #1069](https://github.com/hotwax/job-manager/pull/1069) is explicitly parked pending its discovery API and is not part of these instructions.
+This workflow uses a typed service name. The searchable service-name picker in [draft PR #1069](https://github.com/hotwax/job-manager/pull/1069) is explicitly parked pending its discovery API and is not part of these instructions.
 
-## Understand the other proposed changes
+## Understand the other changes
 
-| Proposal | What changes for the operator |
+| Change | What changes for the operator |
 | --- | --- |
 | [#1072](https://github.com/hotwax/job-manager/pull/1072) | Run history uses the server's search and pagination results. Filters and totals are tied to that search; this requires its compatible server API. |
 | [#1123](https://github.com/hotwax/job-manager/pull/1123) | Previous/Next navigation guards against invalid history pages. |
@@ -86,7 +86,7 @@ The websocket/live-update proposal in [draft PR #1048](https://github.com/hotwax
 
 ## Related guides
 
-- [Upcoming data-document builder](upcoming-data-document-builder.md)
+- [Arrived: data-document builder](arrived-data-document-builder.md)
 - [Current job details](jobs/job-details.md)
 - [Current run history](jobs/run-history.md)
 - [Current file history](mdm/file-history.md)

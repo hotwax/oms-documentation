@@ -63,6 +63,6 @@ The app can also redirect to the legacy experience when the connected HotWax Com
 - [Manage app settings](settings.md)
 - [Troubleshoot Job Manager](troubleshooting/README.md)
 
-## Upcoming changes
+## Arrived changes
 
-Prepare for proposed changes with [Upcoming operations](upcoming-operations.md) and [Upcoming data-document builder](upcoming-data-document-builder.md). These previews identify open PRs and do not replace the current released workflows.
+Read [Arrived: operations](arrived-operations.md) and [Arrived: data-document builder](arrived-data-document-builder.md) for the changed workflows and their source notes.

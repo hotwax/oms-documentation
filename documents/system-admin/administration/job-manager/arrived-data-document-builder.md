@@ -1,10 +1,10 @@
 ---
-description: Preview metadata editing, validation, conditions, and saved-definition previews in the proposed data-document builder.
+description: Use metadata editing, validation, conditions, and saved-definition previews in the data-document builder.
 ---
 
-# Upcoming data-document builder
+# Arrived: data-document builder
 
-> **Release preview — checked 23 October 2026.** This guide describes open [Job Manager PR #1112](https://github.com/hotwax/job-manager/pull/1112). Screenshots show its actual UI running locally with a synthetic order document. Saving and exporting against a customer system were not exercised. Until deployment, use [Build a data document](data-documents/build-data-document.md).
+> **Arrived — source checked 23 October 2026.** This guide describes open [Job Manager PR #1112](https://github.com/hotwax/job-manager/pull/1112). Screenshots show its actual UI running locally with a synthetic order document. Saving and exporting against a customer system were not exercised. Deployment has not been verified. See also [Build a data document](data-documents/build-data-document.md).
 
 ## Edit the document metadata
 
@@ -21,9 +21,9 @@ Open the document's graph builder and confirm its primary entity and name. **Nam
 
 Use the information button for field guidance. Save after reviewing the form; editing a field alone does not apply it to the saved document.
 
-![Advanced metadata form with Primary Entity, Name, Title, Data document ID, Index Name, and Manual Data Service](../../.gitbook/assets/upcoming-job-manager/builder-metadata.jpg)
+![Advanced metadata form with Primary Entity, Name, Title, Data document ID, Index Name, and Manual Data Service](../../.gitbook/assets/arrived-job-manager/builder-metadata.jpg)
 
-*PR #1112 preview. DemoOrderSummary is a synthetic existing document, so its ID is read-only.*
+*PR #1112 screen. DemoOrderSummary is a synthetic existing document, so its ID is read-only.*
 
 ## Choose fields and retain exact aliases
 
@@ -38,15 +38,15 @@ The **Issues** tab distinguishes validation errors from an unsaved-changes warni
 - **Validation errors** must be corrected before the document can be saved.
 - **Unsaved changes** means the current edits have not yet been applied. This warning includes a **Save** action; the warning itself does not block saving.
 
-![Issues tab showing an unsaved-changes warning with an inline Save action](../../.gitbook/assets/upcoming-job-manager/builder-unsaved-warning.jpg)
+![Issues tab showing an unsaved-changes warning with an inline Save action](../../.gitbook/assets/arrived-job-manager/builder-unsaved-warning.jpg)
 
-*PR #1112 preview. The warning is a reminder to save, not a failed validation result.*
+*PR #1112 screen. The warning is a reminder to save, not a failed validation result.*
 
 When switching between documents, wait for the requested document to load. The revised page clears the previous document while loading and offers **Retry** if the requested document cannot be loaded. Confirm the document identity before editing.
 
 ## Define conditions with supported operators
 
-Open **Conditions** and select the field alias, comparison, and value. The proposed operator menu depends on the field's type.
+Open **Conditions** and select the field alias, comparison, and value. The operator menu depends on the field's type.
 
 | Field type | Available comparisons |
 | --- | --- |
@@ -69,9 +69,9 @@ Review any condition-related validation issue before saving. Do not assume an ol
 | **Preview anyway** | Preview the saved document; pending edits are excluded |
 | **Save** | Save first, then preview if saving succeeds |
 
-![Unsaved changes dialog explaining that Preview anyway runs the saved document](../../.gitbook/assets/upcoming-job-manager/builder-preview-unsaved.jpg)
+![Unsaved changes dialog explaining that Preview anyway runs the saved document](../../.gitbook/assets/arrived-job-manager/builder-preview-unsaved.jpg)
 
-*PR #1112 preview. This distinction matters when testing a new field, alias, or condition.*
+*PR #1112 screen. This distinction matters when testing a new field, alias, or condition.*
 
 Check that the returned columns and records match the saved definition before exporting or scheduling it. Previewing does not itself schedule an export. See the existing [Preview, export, and schedule](data-documents/preview-export-schedule.md) guide for those separate actions.
 

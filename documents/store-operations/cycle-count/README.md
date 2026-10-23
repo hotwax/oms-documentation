@@ -48,6 +48,6 @@ sequenceDiagram
 Inventory Cycle Count
 {% endembed %}
 
-## Upcoming changes
+## Arrived changes
 
-Prepare for proposed changes with the [upcoming directed hand-count guide](upcoming-directed-hand-count.md). This preview is separate from the current workflow.
+Read the [arrived directed hand-count guide](arrived-directed-hand-count.md) for the changed workflow and its source notes.

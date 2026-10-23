@@ -38,6 +38,6 @@ In embedded mode, the app selects the HotWax facility mapped to the current Shop
 4. [Review and approve variances at head office](./pending-review.md)
 5. [Go back and review old counts and export](./closed.md)
 
-## Upcoming changes
+## Arrived changes
 
-Prepare for proposed draft approval and upload changes with [Upcoming count administration](upcoming-count-administration.md). Each section names the open PR it depends on.
+Read [Arrived: count administration](arrived-count-administration.md) for draft approval and upload workflows. Each section identifies its source PR.
