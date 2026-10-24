@@ -31,7 +31,7 @@ In HotWax Commerce, every change in inventory numbers for a product generates an
 
 ### Reasons for Inventory Change
 
-To understand the various reasons for inventory changes, let's consider an example: an order involving a product with both Available to Promise (ATP) and Quantity on Hand (QOH) set at 10. Inventory logs are generated whenever any action related to the inventory of a product is performed. The calculations below are for a single quantity of the product.
+`ATP diff` and `QOH diff` show how much an event changes inventory, not the resulting balances. The examples below describe separate events for one unit unless stated otherwise.
 
 Here are some of the reasons or events that cause inventory changes:
 
@@ -39,7 +39,7 @@ Here are some of the reasons or events that cause inventory changes:
   * Resulting log: ATP diff: -1, QOH diff: 0
 * **Sales Shipment:** When the order is completed in the OMS and shipped, the QOH decreases as the item is physically shipped from the store.
   * Resulting log: ATP diff: 0, QOH diff: -1
-* **ERP Updates:** HotWax Commerce considers ERP systems as the source of truth and receives daily inventory updates from them. Any inventory changes, whether negative or positive, will create an inventory log.
+* **ERP Updates:** Inventory imports update OMS according to the configured source, import method, and schedule. Review the import and its inventory logs to identify the changes applied.
   * Example Scenario: ERP system updates inventory based on actual counts or adjustments.
   * Inventory Log: Created for each change in inventory.
 * **Transfer Reservation:** Inventory is reserved due to a transfer order. The ATP and QOH diff will be similar to the sales reservation.
@@ -52,6 +52,6 @@ Here are some of the reasons or events that cause inventory changes:
   * Resulting log: ATP diff: -1, QOH diff: -1
 * **Variance API (Adjustment):** When a user records a variance with the reason adjustment from the product inventory page.
 * **Store rejected inventory (Not in Stock):** When a store rejects an order because the product is not in stock, the Available to Promise (ATP) and Quantity On Hand (QOH) at that particular facility will become 0.
-  * Resulting log: ATP diff: -10, QOH diff: -10
-* **Reservation cancelled:** When a sales reservation is cancelled, the Available to Promise (ATP) for the product will increase to 1, and the Quantity On Hand (QOH) will remain at 0.
+  * Example when both ATP and QOH are 10 before the adjustment: ATP diff: -10, QOH diff: -10
+* **Reservation cancelled:** Cancelling a reservation for one unit increases ATP by 1 and leaves QOH unchanged. For example, ATP of 9 and QOH of 10 become ATP of 10 and QOH of 10.
   * Resulting log: ATP diff: +1, QOH diff: 0

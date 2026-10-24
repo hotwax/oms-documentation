@@ -42,6 +42,7 @@
   * [Permissions](receiving/permissions.md)
 * [Cycle Count](cycle-count/README.md)
   * [Plan Cycle Count](cycle-count/plan-cycle-count.md)
+  * [Connect a Scanner](cycle-count/connect-scanner.md)
   * [Start & Complete Session](cycle-count/start-complete-session.md)
   * [Count Progress & Review](cycle-count/count-progress-review.md)
   * [Run Diagnostics](cycle-count/run-diagnostics.md)

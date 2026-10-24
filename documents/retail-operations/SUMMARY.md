@@ -85,7 +85,7 @@
   * [Troubleshooting](orders/pre-orders/troubleshooting/README.md)
     * [Inaccurate Inventory Computation](orders/pre-orders/troubleshooting/inaccurate-inventory-computation.md)
     * [Missing Product Linking](orders/pre-orders/troubleshooting/missing-product-linking.md)
-    * [Product Syns Issues](orders/pre-orders/troubleshooting/preorder-backorder-product-sync-issues.md)
+    * [Product Sync Issues](orders/pre-orders/troubleshooting/preorder-backorder-product-sync-issues.md)
 
 * [Returns](orders/returns/README.md)
   * [Import Returns](orders/returns/import-returns.md)
@@ -100,7 +100,7 @@
   * [Configure Product Inventory](inventory/inventory-management/configure-product-inventory.md)
 * [Inventory Upload](inventory/inventory-upload/README.md)
   * [Schedule Restocking](inventory/inventory-upload/schedule-restock.md)
-  * [Inventroy Import Method](inventory/inventory-upload/import-methods.md)
+  * [Inventory Import Methods](inventory/inventory-upload/import-methods.md)
 * [Transfers](inventory/transfers-app.md)
   * [Find Transfer Orders](inventory/find-transfer-order.md)
   * [Transfer Order Creation](inventory/transfer-order-creation.md)
