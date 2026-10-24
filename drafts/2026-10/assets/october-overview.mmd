@@ -1,0 +1,15 @@
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#E8F0FE", "primaryTextColor": "#17324D", "primaryBorderColor": "#4275AF", "lineColor": "#52677B", "secondaryColor": "#E5F4ED", "tertiaryColor": "#FFF4DC", "fontFamily": "Arial", "fontSize": "16px"}, "flowchart": {"curve": "basis", "htmlLabels": false}}}%%
+flowchart LR
+  A[October product updates] --> B[Catalog and product dates]
+  A --> C[Routing and inventory visibility]
+  A --> D[Store receiving and counts]
+  A --> E[Shopify sync control]
+  A --> F[Returns and NetSuite]
+  A --> G[Job Manager operations]
+  A --> H[Pre-order workspace preview]
+  classDef catalog fill:#E8F0FE,stroke:#4275AF,color:#17324D;
+  classDef operations fill:#E5F4ED,stroke:#2D8060,color:#173B2C;
+  classDef preview fill:#F1EBFA,stroke:#7C5AA7,color:#392650;
+  class B,C catalog;
+  class D,E,F,G operations;
+  class H preview;

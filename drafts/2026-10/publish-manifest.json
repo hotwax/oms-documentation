@@ -1,0 +1,110 @@
+{
+  "month": "2026-10",
+  "generatedAt": "2026-10-23T15:39:56Z",
+  "status": "draft",
+  "coverage": {
+    "from": "2026-10-01",
+    "through": "2026-10-23",
+    "timezone": "Asia/Kolkata",
+    "completeMonth": false
+  },
+  "items": [
+    {
+      "key": "release-notes:2026-10",
+      "contentType": "release-note",
+      "title": "October 2026 release notes",
+      "slug": "product-updates/release-notes/2026-10",
+      "filePath": "drafts/2026-10/release-notes.md",
+      "metaDescription": "October updates cover product calendars, routing visibility, store operations, Shopify synchronization, returns, and Job Manager.",
+      "tagNames": [
+        "Release Note"
+      ],
+      "contentHash": "db4b304152ceece20689f4b883923f570b49e10922e02fad1de94abed68d7a8a"
+    },
+    {
+      "key": "product-update:2026-10:product-calendar-and-catalog-control",
+      "contentType": "product-update",
+      "title": "Manage product dates across the whole catalog",
+      "slug": "product-updates/2026-10/product-calendar-and-catalog-control",
+      "filePath": "drafts/2026-10/product-updates/product-calendar-and-catalog-control.md",
+      "metaDescription": "Search the full product calendar, update selected lifecycle dates, and review product identifiers and Shopify links.",
+      "tagNames": [
+        "Product Update"
+      ],
+      "contentHash": "ddadbed3c32372a3e70b025a46d546f15d328fd979a93049853b5c563ac2c32d"
+    },
+    {
+      "key": "product-update:2026-10:routing-and-inventory-visibility",
+      "contentType": "product-update",
+      "title": "See why an order moved and where stock is held",
+      "slug": "product-updates/2026-10/routing-and-inventory-visibility",
+      "filePath": "drafts/2026-10/product-updates/routing-and-inventory-visibility.md",
+      "metaDescription": "Connect order routing history, stock warnings, and routing diagnostics to investigate fulfillment decisions.",
+      "tagNames": [
+        "Product Update"
+      ],
+      "contentHash": "8b329d8d95a79508e34d991f08f8a813e28d2d97749df17bb728e32ce9ba9814"
+    },
+    {
+      "key": "product-update:2026-10:store-receiving-and-counting",
+      "contentType": "product-update",
+      "title": "Keep store receiving and counts clear from scan to confirmation",
+      "slug": "product-updates/2026-10/store-receiving-and-counting",
+      "filePath": "drafts/2026-10/product-updates/store-receiving-and-counting.md",
+      "metaDescription": "Find transfers by tracking code, review uncertain receipts, and keep cycle-count progress and packed shipments visible.",
+      "tagNames": [
+        "Product Update"
+      ],
+      "contentHash": "b23bfb7c4a7e53cd5f6c018182f3116e306e05b1a64f0293883d2cdfaae640f7"
+    },
+    {
+      "key": "product-update:2026-10:shopify-transfer-and-fulfillment-control",
+      "contentType": "product-update",
+      "title": "Follow Shopify sync from transfer ownership to fulfillment",
+      "slug": "product-updates/2026-10/shopify-transfer-and-fulfillment-control",
+      "filePath": "drafts/2026-10/product-updates/shopify-transfer-and-fulfillment-control.md",
+      "metaDescription": "Review incomplete transfer sync, repair product mappings, and understand fulfillment and inventory reset recovery.",
+      "tagNames": [
+        "Product Update"
+      ],
+      "contentHash": "8e6d4d6f07c3f0603afabb25540dc5e51a25f62e0ab9a711e9fe32e3926a13f1"
+    },
+    {
+      "key": "product-update:2026-10:returns-and-netsuite-reconciliation",
+      "contentType": "product-update",
+      "title": "Keep return receipts and NetSuite records connected",
+      "slug": "product-updates/2026-10/returns-and-netsuite-reconciliation",
+      "filePath": "drafts/2026-10/product-updates/returns-and-netsuite-reconciliation.md",
+      "metaDescription": "Track physical return arrivals, respect per-item restocking, and carry return context into NetSuite reconciliation.",
+      "tagNames": [
+        "Product Update"
+      ],
+      "contentHash": "98327f5fc740d00565fe36b1860a2efce6dd802d6cccec234bb51aa634f02d2f"
+    },
+    {
+      "key": "product-update:2026-10:job-manager-operations",
+      "contentType": "product-update",
+      "title": "See both sides of a Shopify bulk operation",
+      "slug": "product-updates/2026-10/job-manager-operations",
+      "filePath": "drafts/2026-10/product-updates/job-manager-operations.md",
+      "metaDescription": "Compare Shopify processing with HotWax consumption, find shared-remote jobs, and manage existing system tasks.",
+      "tagNames": [
+        "Product Update"
+      ],
+      "contentHash": "c44e0f9adebb59a7a704b61a5e6c0dbf6fe5662e314a22ed0154e1888c60c645"
+    },
+    {
+      "key": "product-update:2026-10:preorder-workspace-preview",
+      "contentType": "product-update",
+      "title": "Preview the new pre-order workspace",
+      "slug": "product-updates/2026-10/preorder-workspace-preview",
+      "filePath": "drafts/2026-10/product-updates/preorder-workspace-preview.md",
+      "metaDescription": "Explore the merged pre-order workspace and the future-inventory import contract while release acceptance continues.",
+      "tagNames": [
+        "Product Update"
+      ],
+      "contentHash": "37b612a18f553cac624acdb1c86b41afa3bbaa9e4fac1bce4204eb31371a2a21"
+    }
+  ],
+  "sourceSnapshotAt": "2026-10-23T15:40:58Z"
+}
