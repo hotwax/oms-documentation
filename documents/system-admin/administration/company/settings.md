@@ -23,6 +23,8 @@ Confirm:
 
 Include the instance, release, app version, and build when reporting an issue. Keep authentication tokens and credentials out of the report.
 
+To choose which release the instance uses, follow [Manage app versions](manage-app-versions.md).
+
 ## Change the timezone
 
 1. Open the timezone setting.

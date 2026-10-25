@@ -39,6 +39,7 @@
     * [Troubleshooting](administration/users/troubleshooting/README.md)
       * [Troubleshoot application access](administration/users/troubleshooting/application-access-issue.md)
       * [Troubleshoot bulk employee import](administration/users/troubleshooting/bulk-import-employee.md)
+  * [App versions](administration/company/manage-app-versions.md)
   * [Settings](administration/company/settings.md)
 * [User Permissions](administration/user-permissions/introduction.md)
   * [BOPIS App](administration/user-permissions/bopis-app.md)

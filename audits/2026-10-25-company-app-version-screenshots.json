@@ -1,0 +1,20 @@
+{
+  "capturedOn": "2026-10-25",
+  "images": [
+    {
+      "file": "documents/system-admin/.gitbook/assets/company/company-app-version-list.png",
+      "sha256": "b0ea181553fe7cbc48de42161ea660042f1555268338ec1502c4c4593fb5d45b",
+      "capture": "Live Company v2.9.0 production UI, noncustomer verification instance; element screenshot without pixel or DOM edits"
+    },
+    {
+      "file": "documents/system-admin/.gitbook/assets/company/company-app-version-picker.png",
+      "sha256": "6afcbfa443d502ef7a022db5f0326ad6c55c6c3d1273d36616e79c32bd5b136a",
+      "capture": "Live Company v2.9.0 production UI, noncustomer verification instance; element screenshot without pixel or DOM edits"
+    },
+    {
+      "file": "documents/system-admin/.gitbook/assets/company/company-app-version-history.png",
+      "sha256": "3bc94173ece44a262a9e34a77f21d89a351467690a1cef1121f7353feac7a4d0",
+      "capture": "Live Company v2.9.0 production UI, noncustomer verification instance; element screenshot without pixel or DOM edits"
+    }
+  ]
+}
