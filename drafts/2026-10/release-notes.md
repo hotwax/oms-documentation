@@ -5,7 +5,8 @@ contentType: release-note
 month: 2026-10
 status: draft
 coverageThrough: 2026-10-23
-metaDescription: October updates cover product calendars, routing visibility, store operations, Shopify synchronization, returns, and Job Manager.
+supplementalCoverageThrough: 2026-10-25
+metaDescription: October updates cover product calendars, routing visibility, store operations, Shopify synchronization, returns, Job Manager, and Company app version selection.
 tagNames: [Release Note]
 key: release-notes:2026-10
 ---
@@ -16,7 +17,11 @@ key: release-notes:2026-10
 
 HotWax Commerce's October updates focus on understanding routing decisions, keeping store workflows clear, and following synchronization across Shopify, OMS, and NetSuite.
 
-> Draft through **23 October 2026**, Asia/Kolkata. This is a month-to-date editorial package. **Release-listed** means a GitHub release explicitly names the change; **Merged** means the source change landed, with no matching app release established here; **Preview** means development and acceptance remain in progress. Neither a merge nor a release tag proves deployment to a particular tenant.
+> Draft through **23 October 2026**, Asia/Kolkata, with a targeted Company app-version addendum verified **25 October 2026**. Other October 24–25 changes have not been collected here. This is a month-to-date editorial package. **Release-listed** means a GitHub release explicitly names the change; **Merged** means the source change landed, with no matching app release established here; **Preview** means development and acceptance remain in progress. Neither a merge nor a release tag proves deployment to a particular tenant.
+
+## Company app versions
+
+**Deployed, verified October 25, 2026.** Company v2.9.0 adds per-instance UAT and production version controls, release dates and expandable notes, public hosting checks before selection and saving, and combined change history with usernames and local timestamps. Teams can control rollout timing and return to an earlier release while it remains hosted. `Default` follows the environment's main URL build, which may differ from the newest GitHub release. Existing sessions need login re-entry to resolve a changed selection; an ordinary refresh is insufficient. [Read the Company update](product-updates/company-app-version-management.md) and the [app version guide](https://github.com/hotwax/oms-documentation/blob/codex/company-app-version-docs/documents/system-admin/administration/company/manage-app-versions.md). [Company v2.9.0](https://github.com/hotwax/company/releases/tag/v2.9.0), [#520](https://github.com/hotwax/company/pull/520).
 
 ## Product management
 

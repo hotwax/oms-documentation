@@ -114,3 +114,19 @@ For the ancestry checks, use `gh api repos/hotwax/receiving/compare/<merge-sha>.
 Documentation validation covers changed-file Markdown lint and spelling, local links and fragments, referenced GitHub resources, manifest hashes and unique keys/slugs, Mermaid rendering, SVG parsing, and visual inspection. The draft PR records exact validation results. No application tests were added or rerun for this documentation-only change.
 
 [Release notes](release-notes.md) · [Package overview](README.md)
+
+## Company app version addendum, October 25
+
+This is targeted coverage beyond the original October 23 collection window. It does not refresh availability for the other stories or establish complete October 24–25 coverage.
+
+| Source | Established fact and limit |
+| --- | --- |
+| [Company #520](https://github.com/hotwax/company/pull/520), [merge 2132a58898b3](https://github.com/hotwax/company/commit/2132a58898b3dcf672a6674b39d4353ad5f7bb49) | Merged October 25, 2026, 13:54:20 India Standard Time, into main. Catalog app matrix, UAT/Prod controls, release picker and combined history. |
+| [v2.9.0](https://github.com/hotwax/company/releases/tag/v2.9.0) | Published October 25, 2026, 13:54:34 India Standard Time; body links #520. |
+| Fresh deployed UI and public hosting-check reads, October 25 | Production main build 2.9.0, retained 2.6.0; UAT main build 2.9.0, retained 2.8.1. Both hosts report the matching environment configuration. This is Company-specific deployment evidence. |
+| Source at v2.9.0 and same-day deployed acceptance | Default follows the main URL; hosting checks run again before saving. Existing sessions require login re-entry for a changed choice, after which reload retains the selected version. Actual switching and rollback were exercised during deployment acceptance and original settings restored. This documentation task performed read-only UI checks and no setting writes. |
+| Live [Company documentation](https://docs.hotwax.co/documents/system-admins/administration/company), [product update index](https://www.hotwax.co/product-updates), site sitemap and open GitHub PR search | No existing App Version task guide or published article for the new Company controls was found. #1943 remains the appropriate upcoming draft; no later monthly package was found. |
+| [July announcement](https://www.hotwax.co/product-updates/2026-07/hotwax-introduces-version-aware-app-delivery-for-controlled-oms-rollouts) | The delivery foundation is already published. The October article explicitly links it and announces only the new management controls. |
+| [Guide PR #1949](https://github.com/hotwax/oms-documentation/pull/1949), documentation issue [#1948](https://github.com/hotwax/oms-documentation/issues/1948) | Real deployed screenshots, task instructions, source ledger and hashes. Article and release-note links use the proposed GitHub guide until an approved live URL exists. Replace those links before CMS publication. |
+
+No claims are made that every app offers multiple retained releases, that tags prove backend compatibility, or that existing sessions switch seamlessly. No customer production-instance settings were changed, and no documentation was merged or published.

@@ -15,11 +15,23 @@
       "title": "October 2026 release notes",
       "slug": "product-updates/release-notes/2026-10",
       "filePath": "drafts/2026-10/release-notes.md",
-      "metaDescription": "October updates cover product calendars, routing visibility, store operations, Shopify synchronization, returns, and Job Manager.",
+      "metaDescription": "October updates cover product calendars, routing visibility, store operations, Shopify synchronization, returns, Job Manager, and Company app version selection.",
       "tagNames": [
         "Release Note"
       ],
-      "contentHash": "db4b304152ceece20689f4b883923f570b49e10922e02fad1de94abed68d7a8a"
+      "contentHash": "ab278fdef00ab67b7ea3088581b833ef87c360bb4380091e588a22cc93d54acb"
+    },
+    {
+      "key": "product-update:2026-10:company-app-version-management",
+      "contentType": "product-update",
+      "title": "Choose when each instance adopts an app release",
+      "slug": "product-updates/2026-10/company-app-version-management",
+      "filePath": "drafts/2026-10/product-updates/company-app-version-management.md",
+      "metaDescription": "Choose verified hosted app releases for each OMS instance and environment, review release information, and return to a retained version in Company.",
+      "tagNames": [
+        "Product Update"
+      ],
+      "contentHash": "cebf5731ae21f4d637c939113353a47ddb6485c432ae2869fff04b995cad5093"
     },
     {
       "key": "product-update:2026-10:product-calendar-and-catalog-control",
@@ -106,5 +118,13 @@
       "contentHash": "37b612a18f553cac624acdb1c86b41afa3bbaa9e4fac1bce4204eb31371a2a21"
     }
   ],
-  "sourceSnapshotAt": "2026-10-23T15:40:58Z"
+  "sourceSnapshotAt": "2026-10-23T15:40:58Z",
+  "supplementalCoverage": [
+    {
+      "feature": "Company app version management",
+      "through": "2026-10-25",
+      "completeWindow": false,
+      "guidePullRequest": "https://github.com/hotwax/oms-documentation/pull/1949"
+    }
+  ]
 }
