@@ -7,3 +7,5 @@ description: >-
 # Pre-orders
 
 The APIs and data feeds that connect to deliver Pre-orders and Backorders experience.
+
+For product-page availability and purchase-button customization, see [Pre-order PDP experience with Shopify Liquid](preorder-pdp-experience.md).

@@ -126,10 +126,11 @@
 * [Buy Online Pickup In Store](journeys/buy-online-pickup-in-store/README.md)
   * [BOPIS PDP Experience](journeys/buy-online-pickup-in-store/bopis-pdp-experience.md)
   * [Ready For Pickup Notification](journeys/buy-online-pickup-in-store/ready-for-pickup-email.md)
+* [Pre-Orders](journeys/pre-orders/README.md)
+  * [Pre-order PDP experience with Shopify Liquid](journeys/pre-orders/preorder-pdp-experience.md)
+  * [Promise Date Change Notification](journeys/pre-orders/promise-date-change-notification.md)
 * [Brokering and Allocation](journeys/brokering-and-allocation/README.md)
   * [Order Soft Allocation](journeys/brokering-and-allocation/soft-allocation.md)
-* [Pre-Orders](journeys/pre-orders/README.md)
-  * [Promise Date Change Notification](journeys/pre-orders/promise-date-change-notification.md)
 
 ## Sample Files
 

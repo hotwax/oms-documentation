@@ -35,6 +35,7 @@
 * [Pre-orders and Backorders](shopify-integration/preorders-and-backorders/README.md)
   * [Presell Catalog Management](shopify-integration/preorders-and-backorders/presell-catalog-management.md)
   * [Presell Catalog Synchronization](shopify-integration/preorders-and-backorders/presell-catalog-synchronization.md)
+  * [Pre-order PDP experience with Shopify Liquid](../integrate-with-hotwax/journeys/pre-orders/preorder-pdp-experience.md)
 * [Order Returns](shopify-integration/order-return/README.md)
   * [Import Returns from Shopify](shopify-integration/order-return/import-returns-from-shopify.md)
   * [Shopify POS Exchanges](shopify-integration/order-return/shopify-pos-exchanges.md)
