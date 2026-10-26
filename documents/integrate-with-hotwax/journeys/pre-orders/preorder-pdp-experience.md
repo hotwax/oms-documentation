@@ -78,21 +78,9 @@ If Shopify instead reports `T = 65`, the same schedule leaves `65 - 60 = 5` unit
 
 This is estimated **stock arrival at the facility**, not delivery to the customer. If a positive-supply batch has an unknown date, or the selected date is overdue, keep the preorder label and show “Estimated arrival pending.” Never choose `batches[0]` or the earliest date without doing the quantity calculation.
 
-## Check your store configuration
-
-This guide uses a variant-level JSON metafield. For stores using category and tag-based presell configuration, see [Presell Catalog Synchronization](../../../learn-shopify/shopify-integration/preorders-and-backorders/presell-catalog-synchronization.md). Always read the selected variant's data; a parent product tag does not establish every variant's availability.
-
-Before changing the theme:
-
-1. Confirm the namespace and key with your integration team. The defaults are `hotwax` and `preorder_batches`, but a shop can override them.
-2. Confirm the metafield belongs to the Shopify product variant and has type `json`.
-3. Check a real variant in the target store. A JSON field's existence alone does not mean the variant is currently available for preorder.
-4. Identify the theme's existing selected-variant handler and add-to-cart label. Work in an unpublished theme copy.
-5. Confirm the inventory policy. The button example below covers Shopify-tracked, finite inventory with `inventory_policy == 'deny'`. It does not implement an unlimited `continue`-selling policy.
-
 ## Understand the JSON
 
-The example below uses illustrative identifiers, quantities, and dates. Check the fields on your selected variant before using the examples. The Shopify location-name example uses `shopifyLocationId` when supplied; otherwise, use the HotWax facility lookup.
+The example below uses illustrative identifiers, quantities, and dates. The Shopify location-name example uses `shopifyLocationId` when supplied; otherwise, use the HotWax facility lookup. For category and tag-based configuration, see [Presell Catalog Synchronization](../../../learn-shopify/shopify-integration/preorders-and-backorders/presell-catalog-synchronization.md).
 
 ```json
 {
@@ -145,9 +133,9 @@ The example below uses illustrative identifiers, quantities, and dates. Check th
 | `quantityOnOrderTotal` | Remaining incoming quantity for the batch. | Supply before this listing's own reservations are deducted. |
 | `externalCommitments` | Open reservations outside this exact Shopify listing, including other listings in the same shop. | Reduces the supply attributed to this listing. |
 
-`quantityOnOrderTotal - externalCommitments` describes the batch's supply attributed to this listing before its own reservations. Do not display this result as “units left,” use it as a cart maximum, or replace Shopify inventory with it. The result can be negative during some inventory transitions; a positive batch does not prove that a new buyer can still reserve that batch.
+`quantityOnOrderTotal - externalCommitments` is schedule supply, not “units left” or a cart maximum.
 
-Read the metafield as a complete snapshot; do not add quantities from successive versions together. Date changes, cancellations, receipts, and changes in external commitments can update it. Orders from this listing reduce Shopify's available quantity. Use that updated total with the schedule; do not deduct the orders a second time.
+Read the metafield as a complete snapshot; do not add quantities from successive versions together.
 
 ## Read the Storefront API fields
 
@@ -169,7 +157,7 @@ query PreorderVariant($variantId: ID!) {
 }
 ```
 
-Use your configured API version and shopper context. The metafield definition must permit [Storefront API access](https://shopify.dev/docs/storefronts/headless/building-with-the-storefront-api/products-collections/metafields), and the client needs the applicable product and inventory access scopes. A missing or inaccessible field is unknown, not zero.
+Use your configured API version and shopper context.
 
 | Input | Meaning in this calculation |
 | --- | --- |
@@ -177,7 +165,7 @@ Use your configured API version and shopper context. The metafield definition mu
 | `quantityAvailable` | Total sellable online quantity, called `T` below. It does not identify how much comes from future inventory. |
 | `metafield.value` | JSON **string** in the Storefront API. Check `type == "json"`, parse with `JSON.parse`, and validate `batches`. In Liquid, `.value` is already an object. |
 
-See Shopify's [ProductVariant](https://shopify.dev/docs/api/storefront/latest/objects/ProductVariant) and [Metafield](https://shopify.dev/docs/api/storefront/latest/objects/Metafield) references. None of these fields alone means “this purchase is a preorder.”
+See Shopify's [ProductVariant](https://shopify.dev/docs/api/storefront/latest/objects/ProductVariant) and [Metafield](https://shopify.dev/docs/api/storefront/latest/objects/Metafield) references.
 
 ## Read the selected variant
 
@@ -190,8 +178,6 @@ See Shopify's [ProductVariant](https://shopify.dev/docs/api/storefront/latest/ob
   {% assign preorder_data = preorder_field.value %}
 {% endif %}
 ```
-
-Use the selected variant consistently for the metafield, availability, price, and submitted variant ID. One color or size can be on preorder while another is available to ship or sold out.
 
 ## Calculate the state and date in Liquid
 
@@ -291,7 +277,7 @@ In the theme's existing button-label logic, use this order of precedence:
 1. Keep the existing unavailable, sold-out or insufficient-quantity controls.
 2. Use `Pre-order` when `purchase_state` is `preorder`.
 3. Keep the existing add-to-cart label for `in_stock`.
-4. Treat `unknown` as missing information, not proof that the variant is in stock. Keep native purchase controls and omit any “ships now” or promised-date claim. Resolve this state for preorder products before launching the customization.
+4. For `unknown`, keep the existing purchase controls and omit stock or date claims.
 
 For example, replace only the existing label content, using your theme's translation keys:
 
@@ -307,9 +293,7 @@ For example, replace only the existing label content, using your theme's transla
 {% endif %}
 ```
 
-Add the `pre_order` translation if your theme does not already define it. The other key names above are also theme-dependent. Update any explicit `aria-label` to match the visible text. Route `sold_out` and `unavailable` through the theme's disabled-button branch. Handle `insufficient_quantity` through its quantity-limit message and purchase controls; changing a label alone does not disable a button. Preserve the existing button, product form, selected-variant input, loading indicator, submit handler, and cart error handling.
-
-Changing the button label is presentation only. It does not reserve inventory, route an order, create a Shopify selling plan, or establish deferred payment terms.
+Add the `pre_order` translation if your theme does not already define it. The other key names above are also theme-dependent. Update any explicit `aria-label` to match the visible text.
 
 ## Display the calculated arrival estimate
 
@@ -367,7 +351,7 @@ function readPreorderBatches(productRoot, variantId) {
 }
 ```
 
-This helper only reads the schedule. Apply the same quantity/date calculation using the selected variant's fresh total availability and the quantity being purchased. Fetch or re-render missing variants through your theme's existing mechanism; do not treat an absent row as in-stock. Keep selectors scoped to the product section so a quick-view form does not update another product's button.
+This helper reads the schedule for the selected variant. Use it with that variant's total availability in the quantity/date calculation.
 
 Connect to your theme's selected-variant handler; there is no universal `variant:change` event. Also, `product | json` does not automatically include custom metafields, and Shopify omits certain inventory properties from that product serialization. Emit required values explicitly. See [Shopify's JSON filter reference](https://shopify.dev/docs/api/liquid/filters/json).
 
@@ -426,9 +410,16 @@ Use the instance's supported storefront access configuration. Liquid cannot issu
 
 A warehouse must be indexed and exposed for the lookup to return it. Do not copy the BOPIS example's `RETAIL_STORE` filter or proximity radius into a lookup for a known warehouse. For multi-facility lists, paginate while results remain, cache names by facility ID and refresh them when renamed. Empty results or lookup failures should omit the label; they do not mean the product is sold out. This API describes locations and does not calculate preorder inventory or arrival dates.
 
-## Test before publishing
+## Configuration and troubleshooting checklist
 
-Use an unpublished theme and test variants in a development store. Check the displayed state and date against the selected variant's inventory after each change.
+* **Metafield:** Check the selected variant, JSON type, namespace/key (defaults: `hotwax.preorder_batches`), and [Storefront API access](https://shopify.dev/docs/storefronts/headless/building-with-the-storefront-api/products-collections/metafields). Start here if data is blank.
+* **Inventory:** Use Shopify-tracked inventory with `inventory_policy == 'deny'` and complete numeric batch fields. Missing values are unknown, not zero; other inventory policies need a separate implementation.
+* **Theme wiring:** Use the selected variant for availability, price, metafield and submitted ID. Update through the theme's existing handler and scope selectors to the product section so another handler or quick view does not overwrite the result.
+* **Purchase controls:** Preserve the form and cart-error handling. Send `sold_out` and `unavailable` through the existing disabled-button branch, and `insufficient_quantity` through the quantity-limit controls. Changing text alone does not disable purchasing.
+* **Freshness:** Re-fetch or re-render after variant, quantity, cart or market changes. If a date is stale, refresh the total and schedule; a metafield change does not update an already open page automatically.
+* **Validation:** Use an unpublished theme and development-store variants to check the cases below before publishing.
+
+## Test cases
 
 | Test | Expected result |
 | --- | --- |
@@ -447,17 +438,3 @@ Use an unpublished theme and test variants in a development store. Check the dis
 | Variant, quantity, cart, market or product-section changes | Recalculate; keep the label, date and submitted variant aligned. |
 | Location is missing, renamed or not exposed in Liquid | Refresh the name, use the lookup fallback or omit the label. |
 | Inventory is untracked, continue-selling, or includes another future-inventory type | Use a separately validated policy; this calculation does not cover it. |
-
-## Troubleshoot common results
-
-| Symptom | Check |
-| --- | --- |
-| Liquid returns blank data | Correct variant owner, namespace, key, type, store, and access settings. |
-| Every size shows the same state | The theme may be reading the product or initial variant instead of the selected variant. |
-| Button briefly changes and then resets | Integrate with the existing variant handler so a later native update does not overwrite the label. |
-| Future stock exists but state is `unknown` | Confirm finite inventory policy, complete numeric batch fields, and absence of unsupported inventory types. |
-| Theme shows preorder while stock can ship now | Check the quantity, location scope and consumption order; do not equate any active batch with a preorder purchase. |
-| Date remains stale on an open page | Refresh or re-render through the theme's normal mechanism. A metafield update does not push new HTML into an already open page. |
-| Quantity in JSON differs from Shopify availability | The schedule precedes this listing's order deductions. Use the Shopify total in the calculation; do not force the two values to match. |
-
-Before publishing, verify the selected variant's metafield, total availability, consumption order, fulfillment scope and location names. Test both physical and preorder stock, including quantity and variant changes.
