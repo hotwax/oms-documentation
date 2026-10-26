@@ -4,9 +4,11 @@ description: >-
   and identify the inventory information needed for an accurate preorder button.
 ---
 
-# Use preorder batch metafields in Shopify Liquid
+# Pre-order PDP experience with Shopify Liquid
 
 Use the variant metafield `hotwax.preorder_batches` to read incoming inventory dates and batch status. This guide explains the JSON, provides Liquid examples, and shows how to connect the result to a product page's existing purchase button.
+
+For store pickup availability on the product page, see the [BOPIS PDP Experience](../buy-online-pickup-in-store/bopis-pdp-experience.md) guide.
 
 {% hint style="warning" %}
 This guide describes the future-inventory event integration currently under review in [Shopify connector PR #1020](https://github.com/hotwax/mantle-shopify-connector/pull/1020). Confirm that your store has this integration enabled and that the actual variant carries the documented payload before implementing the examples.
@@ -16,7 +18,7 @@ The batch metafield does not contain physical availability or reservations from 
 
 ## Confirm which integration your store uses
 
-This guide applies to the JSON batch contract below. The existing [Presell Catalog Synchronization](presell-catalog-synchronization.md) guide describes category, tag, and script-based behavior. Do not combine the two contracts or infer a variant's state from a parent product tag.
+This guide applies to the JSON batch contract below. The existing [Presell Catalog Synchronization](../../../learn-shopify/shopify-integration/preorders-and-backorders/presell-catalog-synchronization.md) guide describes category, tag, and script-based behavior. Do not combine the two contracts or infer a variant's state from a parent product tag.
 
 Before changing the theme:
 
