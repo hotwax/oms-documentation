@@ -1,18 +1,82 @@
 ---
 description: >-
-  Read HotWax Commerce preorder batches in Shopify Liquid, handle variant changes,
-  and identify the inventory information needed for an accurate preorder button.
+  Calculate preorder availability and estimated arrival dates from Shopify's
+  available quantity and HotWax inventory batches, with a Shopify Liquid example.
 ---
 
 # Pre-order PDP experience with Shopify Liquid
 
-Use the variant metafield `hotwax.preorder_batches` with Shopify availability to decide what the product page can tell a shopper. This guide explains the preorder calculation, how to choose an estimated incoming date, and how to display location names and update the purchase button.
+**For each arrival date, subtract the supply arriving later from Shopify's available quantity. The first date that covers the requested quantity is the preorder estimate.**
 
-For store pickup availability on the product page, see the [BOPIS PDP Experience](../buy-online-pickup-in-store/bopis-pdp-experience.md) guide.
+This guide shows the calculation, the metafield and Storefront API inputs, and a Liquid example that updates the purchase button and estimated arrival date. For pickup availability, see [BOPIS PDP Experience](../buy-online-pickup-in-store/bopis-pdp-experience.md).
+
+## Calculate the preorder date
+
+Use two inputs for the selected variant:
+
+* `T`: Shopify's total available quantity, from Storefront API `quantityAvailable` or Liquid `variant.inventory_quantity` for tracked inventory.
+* Each active preorder batch's supply: `quantityOnOrderTotal - externalCommitments`.
 
 {% hint style="info" %}
-Accurate preorder messaging requires inventory quantities after reservations: physical availability for the purchase button, and remaining quantity per incoming batch for the estimated arrival date. The examples below explain how to use these inputs. When a required value is unavailable, keep Shopify's purchase controls and omit an unsupported arrival promise.
+This method requires one consumption order: **physical stock first, then incoming batches from earliest arrival to latest**. Existing reservations must follow that order too, including after cancellations, receipts or date changes. The remaining stock must be the unconsumed end of that supply schedule.
+
+Use quantities covering the same variant, listing and eligible fulfillment locations, without duplicate supply. If orders can retain later-batch reservations while earlier eligible stock is available, or the quantities cover different locations, use an inventory-provided promise instead of this calculation.
 {% endhint %}
+
+### Step 1: Calculate each batch's supply
+
+```text
+batch supply = quantityOnOrderTotal - externalCommitments
+```
+
+Include active `FIT_PRE_ORDER` batches. Shopify has already deducted orders placed through this listing from `T`. **Do not subtract those orders again.** The batch supply is a schedule quantity, not a separate count of unsold units.
+
+### Step 2: Check availability now
+
+For a positive requested quantity `q`:
+
+```text
+available now = T - sum(all active preorder batch supply)
+```
+
+First honor Shopify's purchase checks: if the variant is unavailable or `q > T`, do not offer that quantity. Otherwise, if `available now >= q`, show `Add to cart` with no preorder date. Include the same variant's quantity already in the cart in `q`, unless your integration reserves it separately.
+
+If `available now < q`, the purchase needs incoming stock. A negative result means earlier supply has already been consumed; it is **not** a negative physical-stock value to publish or a reason to discard the calculation. Keep the signed result when walking the schedule.
+
+### Step 3: Find the first date that covers the quantity
+
+Sort the batches by arrival date, earliest first. At each date `D`:
+
+```text
+available by D = T - sum(batch supply arriving AFTER D)
+```
+
+Choose the first date where `available by D >= q`. Batches sharing a date contribute together. For one unit, this is the next available preorder date. For multiple units, it is the estimate for the **full requested quantity**.
+
+### Worked example: 45 units available in Shopify
+
+| Arrival date | Quantity on order | External commitments | Batch supply |
+| --- | --- | --- | --- |
+| November 1 | 12 | 2 | 10 |
+| November 15 | 25 | 5 | 20 |
+| December 1 | 30 | 0 | 30 |
+
+The schedule contains 60 units. Shopify reports `T = 45`, so under this consumption order the first 15 future units are already spoken for: all 10 November 1 units and five November 15 units.
+
+| Available by | Calculation | Result |
+| --- | --- | --- |
+| Now | `45 - 10 - 20 - 30` | -15 |
+| November 1 | `45 - 20 - 30` | -5 |
+| November 15 | `45 - 30` | 15 |
+| December 1 | `45` | 45 |
+
+* Buy **1 through 15**: `Pre-order`, estimated arrival **November 15**.
+* Buy **16 through 45**: `Pre-order`, full-quantity estimated arrival **December 1**.
+* Buy **more than 45**: insufficient availability.
+
+If Shopify instead reports `T = 65`, the same schedule leaves `65 - 60 = 5` units available now. A purchase of five uses physical stock; a purchase of six needs incoming stock and has a full-quantity estimate of November 1.
+
+This is estimated **stock arrival at the facility**, not delivery to the customer. If a positive-supply batch has an unknown date, or the selected date is overdue, keep the preorder label and show “Estimated arrival pending.” Never choose `batches[0]` or the earliest date without doing the quantity calculation.
 
 ## Check your store configuration
 
@@ -40,9 +104,9 @@ The example below uses illustrative identifiers, quantities, and dates. Check th
       "shopifyLocationId": "12345678901",
       "futureInventoryItemTypeId": "FIT_PRE_ORDER",
       "statusId": "FUTURE_INV_ACTIVE",
-      "promiseDate": "2026-11-15T12:00:00+0000",
-      "quantityOnOrderTotal": 100,
-      "externalCommitments": 20
+      "promiseDate": "2026-11-01T12:00:00+0000",
+      "quantityOnOrderTotal": 12,
+      "externalCommitments": 2
     },
     {
       "futureInventoryItemId": "FI10002",
@@ -50,8 +114,18 @@ The example below uses illustrative identifiers, quantities, and dates. Check th
       "shopifyLocationId": "12345678901",
       "futureInventoryItemTypeId": "FIT_PRE_ORDER",
       "statusId": "FUTURE_INV_ACTIVE",
+      "promiseDate": "2026-11-15T12:00:00+0000",
+      "quantityOnOrderTotal": 25,
+      "externalCommitments": 5
+    },
+    {
+      "futureInventoryItemId": "FI10003",
+      "facilityId": "WAREHOUSE_1",
+      "shopifyLocationId": "12345678901",
+      "futureInventoryItemTypeId": "FIT_PRE_ORDER",
+      "statusId": "FUTURE_INV_ACTIVE",
       "promiseDate": "2026-12-01T12:00:00+0000",
-      "quantityOnOrderTotal": 50,
+      "quantityOnOrderTotal": 30,
       "externalCommitments": 0
     }
   ]
@@ -73,18 +147,9 @@ The example below uses illustrative identifiers, quantities, and dates. Check th
 
 `quantityOnOrderTotal - externalCommitments` describes the batch's supply attributed to this listing before its own reservations. Do not display this result as “units left,” use it as a cart maximum, or replace Shopify inventory with it. The result can be negative during some inventory transitions; a positive batch does not prove that a new buyer can still reserve that batch.
 
-Read the metafield as a complete snapshot; do not add quantities from successive versions together. Date changes, cancellations, receipts, and changes in external commitments can update it. A reservation from this same Shopify listing can leave its metafield unchanged because Shopify already accounts for that order in inventory.
+Read the metafield as a complete snapshot; do not add quantities from successive versions together. Date changes, cancellations, receipts, and changes in external commitments can update it. Orders from this listing reduce Shopify's available quantity. Use that updated total with the schedule; do not deduct the orders a second time.
 
-## Calculate preorder status and the estimated date
-
-For a new purchase, answer two questions in order:
-
-1. Can eligible physical stock cover the requested quantity? If yes, show `Add to cart`. If some units require active preorder stock, show `Pre-order` or explicitly identify the preorder portion.
-2. Which still-available incoming batch covers those future units? Use that batch's expected arrival date. An earlier batch with no units left must not set the date.
-
-The calculation below assumes finite Shopify-tracked inventory, physical stock used first, and no other future-inventory type. Inventory quantities must cover the same variant, listing, market and eligible fulfillment locations. A quantity already in the cart must be included in the quantity being evaluated unless the integration has explicitly reserved it.
-
-### Read the Storefront API fields
+## Read the Storefront API fields
 
 Fetch the selected variant by its Shopify GraphQL ID through your existing Storefront API client:
 
@@ -95,7 +160,6 @@ query PreorderVariant($variantId: ID!) {
       id
       availableForSale
       quantityAvailable
-      currentlyNotInStock
       metafield(namespace: "hotwax", key: "preorder_batches") {
         type
         value
@@ -111,61 +175,9 @@ Use your configured API version and shopper context. The metafield definition mu
 | --- | --- |
 | `availableForSale` | Shopify's purchase gate. When false, retain sold-out behavior even if the metafield still lists batches. |
 | `quantityAvailable` | Total sellable online quantity, called `T` below. It does not identify how much comes from future inventory. |
-| `currentlyNotInStock` | Shopify's out-of-stock-but-purchasable flag, commonly used for backorders. It is not the HotWax preorder flag: future stock published as Shopify inventory can leave it false. |
 | `metafield.value` | JSON **string** in the Storefront API. Check `type == "json"`, parse with `JSON.parse`, and validate `batches`. In Liquid, `.value` is already an object. |
 
 See Shopify's [ProductVariant](https://shopify.dev/docs/api/storefront/latest/objects/ProductVariant) and [Metafield](https://shopify.dev/docs/api/storefront/latest/objects/Metafield) references. None of these fields alone means “this purchase is a preorder.”
-
-### Calculate remaining future and physical quantities
-
-For each eligible, active preorder batch `i`:
-
-```text
-listing supply[i] = quantityOnOrderTotal[i] - externalCommitments[i]
-remaining future[i] = listing supply[i] - this listing's open preorder reservations[i]
-F = sum(remaining future[i])
-P = T - F
-```
-
-`F` is the remaining future quantity and `P` is the remaining physical quantity. The subtraction `P = T - F` is valid **only** when `F` accounts for all future stock included in `T`, each supply is counted once, both values use the same fulfillment scope, and the quantities form a consistent snapshot. An aggregate channel and its underlying facilities must not be counted twice. If the mapping or timing does not satisfy those conditions, obtain physical availability directly from the integration instead.
-
-`quantityOnOrderTotal - externalCommitments` does not deduct this listing's own preorder reservations. Account for those reservations before subtracting future quantity from Shopify's total.
-
-Obtain either the remaining available quantity per batch or this listing's open preorder reservations from your inventory integration. Use quantities for the selected variant and eligible fulfillment locations, refreshed after inventory or reservation changes. If these inputs are unavailable, show an incoming-stock schedule without promising which batch will supply a new purchase. A location-name lookup provides names and addresses, not inventory quantities.
-
-For a positive requested quantity `q`:
-
-| Condition | Result |
-| --- | --- |
-| Shopify says unavailable, or known finite `T < q` | Do not offer the requested quantity. Retain Shopify's sold-out or quantity-limit behavior. |
-| Required quantities, inventory policy or fulfillment scope are unknown or inconsistent | Do not claim a preorder state or date. Preserve native purchase controls and show no unsupported promise. |
-| `P >= q` | `Add to cart`; no preorder arrival date for this purchase. |
-| `0 <= P < q` and `F >= q - P` | The purchase includes preorder units. Set `future units needed = q - P`. |
-
-Negative batch quantities or a negative derived `P` require reconciliation or a separately validated deficit policy; do not silently clamp them and calculate a date. The display calculation does not reserve inventory, and Shopify's cart and checkout remain the final purchase checks.
-
-### Select the currently available estimated arrival date
-
-Use **remaining future quantity**, not original incoming quantity, when selecting a date:
-
-1. Keep eligible active `FIT_PRE_ORDER` batches and exclude batches with zero remaining availability.
-2. Follow the integration's actual allocation order. If it guarantees earliest-arrival-first allocation within this fulfillment scope, sort by valid `promiseDate` from earliest to latest. Do not assume that rule merely because dates exist.
-3. Starting with `future units needed`, take available units from each batch until the quantity is covered.
-4. For one unit, show the date of the first batch that can supply it. For a quantity fulfilled across batches, the full-quantity estimate is the latest date among the batches used. If the UI shows split arrivals, show the corresponding quantities and dates separately.
-5. If any required batch has no valid date, the dates are overdue, or the allocation policy can select a different facility/batch, show an agreed “Estimated arrival pending” message or request a resolved promise. Do not skip an undated batch and invent a later commitment.
-
-This is an estimated **arrival of stock at the facility**, not arrival at the customer's door. Shipping, handling and ship-together rules can delay fulfillment beyond it. Recalculate after variant or quantity changes and when refreshing inventory; do not keep a previous variant's date.
-
-The following worked examples use the two batches in the JSON above. “Own reservations” are an additional input from your inventory integration. The examples assume consistent scope and earliest-arrival-first allocation:
-
-| Scenario | Own reservations: Nov 15 / Dec 1 | Remaining future: Nov 15 / Dec 1 | Shopify `T` | Physical `P` | Requested `q` | Display |
-| --- | --- | --- | --- | --- | --- | --- |
-| First batch is fully reserved | 80 / 0 | `100 - 20 - 80 = 0` / `50 - 0 - 0 = 50` | 50 | `50 - 50 = 0` | 1 | `Pre-order`; estimated stock arrival Dec 1. |
-| Physical and future stock coexist | 75 / 0 | 5 / 50 | 58 | `58 - 55 = 3` | 1 | `Add to cart`; the incoming dates do not apply to this purchase. |
-| Quantity exceeds physical stock | 75 / 0 | 5 / 50 | 58 | 3 | 4 | 3 physical + 1 preorder; estimated stock arrival Nov 15 for the preorder unit. |
-| Quantity spans both incoming batches | 75 / 0 | 5 / 50 | 58 | 3 | 9 | 3 physical + 5 arriving Nov 15 + 1 arriving Dec 1; full quantity available Dec 1. |
-
-The Liquid helper below classifies a one-unit purchase using authoritative physical availability. Use the quantity and batch calculation above to select an estimated arrival date or handle a larger purchase.
 
 ## Read the selected variant
 
@@ -181,7 +193,185 @@ The Liquid helper below classifies a one-unit purchase using authoritative physi
 
 Use the selected variant consistently for the metafield, availability, price, and submitted variant ID. One color or size can be on preorder while another is available to ship or sold out.
 
-## Display human-readable location names
+## Calculate the state and date in Liquid
+
+Place this block in the product section after assigning `current_variant` and `preorder_field` above. It sets `purchase_state` and `estimated_arrival` for the button and date markup that follow. Keep the blocks in the same Liquid scope.
+
+The example uses `requested_quantity = 1` for the initial page. Replace it with the quantity being evaluated, including relevant cart quantity, and recalculate when that quantity changes. It assumes the consumption order described above and a complete batch array. Numeric quantity fields must be JSON numbers. Dates use the same timestamp format and UTC offset, as in the sample, so [sorting by `promiseDate`](https://shopify.dev/docs/api/liquid/filters/sort) is chronological; normalize mixed-offset dates before using this example.
+
+```liquid
+{% liquid
+  assign requested_quantity = 1
+  assign purchase_state = 'unknown'
+  assign estimated_arrival = nil
+  assign total_available = current_variant.inventory_quantity
+
+  if current_variant == blank
+    assign purchase_state = 'unavailable'
+  elsif current_variant.available == false
+    assign purchase_state = 'sold_out'
+  elsif current_variant.inventory_management == 'shopify' and current_variant.inventory_policy == 'deny' and total_available != nil
+    if total_available <= 0
+      assign purchase_state = 'sold_out'
+    elsif requested_quantity > total_available
+      assign purchase_state = 'insufficient_quantity'
+    elsif requested_quantity > 0 and preorder_field.type == 'json' and preorder_field.value.batches != nil
+      assign later_supply = 0
+      assign quantities_valid = true
+      assign dates_valid = true
+      assign active_batches = preorder_field.value.batches | where: 'statusId', 'FUTURE_INV_ACTIVE'
+
+      for batch in preorder_field.value.batches
+        if batch.statusId == blank
+          assign quantities_valid = false
+        endif
+      endfor
+
+      for batch in active_batches
+        assign ordered_quantity = batch.quantityOnOrderTotal | plus: 0
+        assign external_quantity = batch.externalCommitments | plus: 0
+        if batch.quantityOnOrderTotal == nil or batch.externalCommitments == nil
+          assign quantities_valid = false
+        elsif batch.quantityOnOrderTotal != ordered_quantity or batch.externalCommitments != external_quantity
+          assign quantities_valid = false
+        else
+          assign supply = batch.quantityOnOrderTotal | minus: batch.externalCommitments
+          if batch.quantityOnOrderTotal < 0 or batch.externalCommitments < 0 or supply < 0
+            assign quantities_valid = false
+          elsif supply > 0
+            if batch.futureInventoryItemTypeId != 'FIT_PRE_ORDER'
+              assign quantities_valid = false
+            endif
+            assign later_supply = later_supply | plus: supply
+            assign parsed_date = batch.promiseDate | date: '%s'
+            if batch.promiseDate == blank or parsed_date == batch.promiseDate
+              assign dates_valid = false
+            endif
+          endif
+        endif
+      endfor
+
+      if quantities_valid
+        assign available_by_date = total_available | minus: later_supply
+        if available_by_date >= requested_quantity
+          assign purchase_state = 'in_stock'
+        else
+          assign purchase_state = 'preorder'
+          if dates_valid
+            assign dated_batches = active_batches | sort: 'promiseDate'
+            assign now_epoch = 'now' | date: '%s' | plus: 0
+            for batch in dated_batches
+              assign supply = batch.quantityOnOrderTotal | minus: batch.externalCommitments
+              if supply > 0
+                assign later_supply = later_supply | minus: supply
+                assign available_by_date = total_available | minus: later_supply
+                if available_by_date >= requested_quantity
+                  assign arrival_epoch = batch.promiseDate | date: '%s' | plus: 0
+                  if arrival_epoch >= now_epoch
+                    assign estimated_arrival = batch.promiseDate
+                  endif
+                  break
+                endif
+              endif
+            endfor
+          endif
+        endif
+      endif
+    endif
+  endif
+%}
+```
+
+The first loop totals the schedule. The date loop removes each arriving batch from `later_supply`, so `total_available - later_supply` increases until it covers the requested quantity. It never subtracts this listing's orders again. Zero-supply and inactive batches do not affect the estimate; a negative batch supply returns `unknown`. That is different from a valid **negative running availability** such as -15 in the worked example.
+
+## Connect the state to the existing button
+
+In the theme's existing button-label logic, use this order of precedence:
+
+1. Keep the existing unavailable, sold-out or insufficient-quantity controls.
+2. Use `Pre-order` when `purchase_state` is `preorder`.
+3. Keep the existing add-to-cart label for `in_stock`.
+4. Treat `unknown` as missing information, not proof that the variant is in stock. Keep native purchase controls and omit any “ships now” or promised-date claim. Resolve this state for preorder products before launching the customization.
+
+For example, replace only the existing label content, using your theme's translation keys:
+
+```liquid
+{% if current_variant == blank %}
+  {{ 'products.product.unavailable' | t }}
+{% elsif purchase_state == 'sold_out' or current_variant.available == false %}
+  {{ 'products.product.sold_out' | t }}
+{% elsif purchase_state == 'preorder' %}
+  {{ 'products.product.pre_order' | t }}
+{% else %}
+  {{ 'products.product.add_to_cart' | t }}
+{% endif %}
+```
+
+Add the `pre_order` translation if your theme does not already define it. The other key names above are also theme-dependent. Update any explicit `aria-label` to match the visible text. Route `sold_out` and `unavailable` through the theme's disabled-button branch. Handle `insufficient_quantity` through its quantity-limit message and purchase controls; changing a label alone does not disable a button. Preserve the existing button, product form, selected-variant input, loading indicator, submit handler, and cart error handling.
+
+Changing the button label is presentation only. It does not reserve inventory, route an order, create a Shopify selling plan, or establish deferred payment terms.
+
+## Display the calculated arrival estimate
+
+Use `estimated_arrival` from the calculation, rather than a date from an arbitrary batch. Localize the wording and date format for your storefront:
+
+```liquid
+{% if purchase_state == 'preorder' %}
+  {% if estimated_arrival != blank %}
+    <p>Estimated stock arrival: {{ estimated_arrival | date: '%B %d, %Y' | escape }}</p>
+  {% else %}
+    <p>Estimated arrival pending</p>
+  {% endif %}
+{% endif %}
+```
+
+The estimate covers the full requested quantity. It does not include handling, shipping or delays caused by other items that must ship together. A batch with an overdue date remains incoming stock until its inventory state changes.
+
+## Recalculate when the variant or quantity changes
+
+Liquid runs when Shopify renders the page or section. A JavaScript variant change does not automatically rerun the snippet. Follow [Shopify's variant handling guidance](https://shopify.dev/docs/storefronts/themes/product-merchandising/variants) and connect to the handler your theme actually uses.
+
+For a theme that re-renders its product section, include the quantity/date calculation and its inputs in that render. For a theme that updates in JavaScript, read the selected variant's total availability and batch JSON, apply the same calculation, and update both label and date after the theme's availability update. Recalculate when the quantity or cart changes too.
+
+To expose the current batch JSON for the variants already rendered by the theme, one option is escaped data attributes:
+
+```liquid
+<div data-hotwax-preorder-data hidden>
+  {% for variant in product.variants %}
+    <span
+      data-variant-id="{{ variant.id }}"
+      data-batches="{{ variant.metafields.hotwax.preorder_batches.value | json | escape }}"
+    ></span>
+  {% endfor %}
+</div>
+```
+
+Read one row in your existing selected-variant handler:
+
+```javascript
+function readPreorderBatches(productRoot, variantId) {
+  const rows = productRoot.querySelectorAll(
+    '[data-hotwax-preorder-data] [data-variant-id]'
+  );
+  const row = Array.from(rows).find(
+    (item) => item.dataset.variantId === String(variantId)
+  );
+  if (!row) return null;
+
+  try {
+    const data = JSON.parse(row.dataset.batches);
+    return data && Array.isArray(data.batches) ? data : null;
+  } catch {
+    return null;
+  }
+}
+```
+
+This helper only reads the schedule. Apply the same quantity/date calculation using the selected variant's fresh total availability and the quantity being purchased. Fetch or re-render missing variants through your theme's existing mechanism; do not treat an absent row as in-stock. Keep selectors scoped to the product section so a quick-view form does not update another product's button.
+
+Connect to your theme's selected-variant handler; there is no universal `variant:change` event. Also, `product | json` does not automatically include custom metafields, and Shopify omits certain inventory properties from that product serialization. Emit required values explicitly. See [Shopify's JSON filter reference](https://shopify.dev/docs/api/liquid/filters/json).
+
+## Optional: Display human-readable location names
 
 Use `shopifyLocationId` to identify a Shopify location and `facilityId` to identify a HotWax facility. The Shopify ID is a decimal string, for example `"12345678901"`; its GraphQL form is `gid://shopify/Location/12345678901`. Preserve IDs as strings in JavaScript.
 
@@ -236,218 +426,27 @@ Use the instance's supported storefront access configuration. Liquid cannot issu
 
 A warehouse must be indexed and exposed for the lookup to return it. Do not copy the BOPIS example's `RETAIL_STORE` filter or proximity radius into a lookup for a known warehouse. For multi-facility lists, paginate while results remain, cache names by facility ID and refresh them when renamed. Empty results or lookup failures should omit the label; they do not mean the product is sold out. This API describes locations and does not calculate preorder inventory or arrival dates.
 
-## Distinguish future supply from a preorder purchase
-
-For a one-unit purchase, with a policy that uses physical stock first:
-
-| Physical units available for this shopper | Sellable future units | Expected button |
-| --- | --- | --- |
-| 5 | 20 | `Add to cart` |
-| 0 | 20 | `Pre-order` |
-| 0 | 0 | `Sold out` |
-| Unknown | Unknown or positive batch schedule | Cannot determine from the batch JSON alone |
-
-Here, “physical available” means stock eligible to fulfill the purchase after reservations and holds, within the shopper's applicable fulfillment scope. It does not mean warehouse quantity on hand.
-
-Do not calculate physical availability by subtracting `quantityOnOrderTotal - externalCommitments` from `variant.inventory_quantity` or Storefront `quantityAvailable`. The subtraction in the calculation section requires remaining future quantities after all reservations. For example, both situations below can expose a batch with `quantityOnOrderTotal: 10`, `externalCommitments: 0`, and a total Shopify available quantity of five:
-
-* Zero physical units, with five of the incoming units reserved by this listing: a new unit uses future inventory.
-* Five physical units, with all 10 incoming units reserved by this listing: a new unit uses physical inventory.
-
-Without the listing's own reservation quantities, the theme cannot distinguish the two situations with that subtraction. It also cannot identify the next uncommitted batch merely by taking the earliest `promiseDate`.
-
-[Shopify's variant object](https://shopify.dev/docs/api/liquid/objects/variant) does not provide a separate physical-versus-future quantity. [Location inventory levels](https://shopify.dev/docs/api/admin-graphql/2026-01/objects/InventoryLevel) are an Admin API concept. Do not put Admin API credentials in theme code. Liquid [store availability](https://shopify.dev/docs/api/liquid/objects/store_availability) is not a substitute for the integration's complete shipping eligibility and inventory-source mapping. The Storefront API also exposes [StoreAvailability.quantityAvailable](https://shopify.dev/docs/api/storefront/latest/objects/StoreAvailability), documented as physical stock at that location. Do not treat pickup-oriented results as complete, reservation-adjusted shipping availability or interpret a missing location as zero stock.
-
-Use physical availability from the same inventory scope and policy as the storefront. If that input is unavailable, keep the existing purchase controls and omit preorder or immediate-shipping claims that the available data cannot support.
-
-## Add a conditional Liquid state reader
-
-Create `snippets/hotwax-preorder-state.liquid` with the following content. It returns a string: `in_stock`, `preorder`, `sold_out`, `unavailable`, or `unknown`.
-
-The required `physical_available` parameter is an integration-supplied number for the selected variant and shopper. Missing input returns `unknown`; it must never default to zero. This example classifies one unit and assumes the Shopify inventory and supplied physical availability have the same eligible fulfillment scope. It deliberately returns `unknown` when another active future-inventory type could explain the available inventory.
-
-```liquid
-{%- doc -%}
-  Classifies a one-unit purchase using variant and batch data.
-  @param {variant} variant - Selected Shopify variant.
-  @param {number} [physical_available] - Authoritative physical ATP in scope.
-{%- enddoc -%}
-{%- liquid
-  assign state = 'unknown'
-
-  if variant == blank
-    assign state = 'unavailable'
-  elsif variant.available == false
-    assign state = 'sold_out'
-  elsif variant.inventory_management == 'shopify' and variant.inventory_policy == 'deny'
-    if variant.inventory_quantity <= 0
-      assign state = 'sold_out'
-    elsif physical_available != nil
-      if physical_available >= 1
-        assign state = 'in_stock'
-      else
-        assign field = variant.metafields.hotwax.preorder_batches
-        assign has_preorder_supply = false
-        assign has_other_supply = false
-        assign incomplete_batch = false
-
-        if field.type == 'json' and field.value.batches != nil
-          for batch in field.value.batches
-            if batch.statusId == 'FUTURE_INV_ACTIVE'
-              if batch.quantityOnOrderTotal == nil or batch.externalCommitments == nil
-                assign incomplete_batch = true
-              else
-                assign listing_supply = batch.quantityOnOrderTotal | minus: batch.externalCommitments
-                if listing_supply > 0
-                  if batch.futureInventoryItemTypeId == 'FIT_PRE_ORDER'
-                    assign has_preorder_supply = true
-                  else
-                    assign has_other_supply = true
-                  endif
-                endif
-              endif
-            elsif batch.statusId == nil
-              assign incomplete_batch = true
-            endif
-          endfor
-          if has_preorder_supply and has_other_supply == false and incomplete_batch == false
-            assign state = 'preorder'
-          endif
-        endif
-      endif
-    endif
-  endif
-
-  echo state
--%}
-```
-
-Keep Shopify's existing purchase checks. In particular, `variant.available` can be true for a continue-selling or untracked variant; it is not a preorder flag. A metafield must not re-enable a sold-out variant, override quantity rules, bypass a selling plan, or suppress a cart error.
-
-For a controlled test with zero physical availability independently verified, this call should return `preorder` when the selected variant has sellable preorder inventory:
-
-```liquid
-{% capture purchase_state %}
-  {% render 'hotwax-preorder-state', variant: current_variant, physical_available: 0 %}
-{% endcapture %}
-{% assign purchase_state = purchase_state | strip %}
-```
-
-The zero above is a test fixture, not a production default. Replace it with the authoritative value before integrating the state reader. Liquid `capture` returns text; compare with `purchase_state == 'preorder'`, not with a boolean. The string `'false'` is also truthy in Liquid, so do not use string results as boolean conditions.
-
-For quantities above one, consider both the requested quantity and units already in the cart. A quantity of six with five physical units can require a preorder portion. The one-unit classifier does not solve that case. Obtain a quantity-aware fulfillment promise before using the same label or date for larger quantities.
-
-## Connect the state to the existing button
-
-In the theme's existing button-label logic, use this order of precedence:
-
-1. Keep the existing unavailable or sold-out state and disabled behavior.
-2. Use `Pre-order` when the state reader returns `preorder`.
-3. Keep the existing add-to-cart label for `in_stock`.
-4. Treat `unknown` as missing information, not proof that the variant is in stock. Keep native purchase controls and omit any “ships now” or promised-date claim. Resolve this state for preorder products before launching the customization.
-
-For example, replace only the existing label content, using your theme's translation keys:
-
-```liquid
-{% if current_variant == blank %}
-  {{ 'products.product.unavailable' | t }}
-{% elsif purchase_state == 'sold_out' or current_variant.available == false %}
-  {{ 'products.product.sold_out' | t }}
-{% elsif purchase_state == 'preorder' %}
-  {{ 'products.product.pre_order' | t }}
-{% else %}
-  {{ 'products.product.add_to_cart' | t }}
-{% endif %}
-```
-
-Add the `pre_order` translation if your theme does not already define it. The other key names above are also theme-dependent. Update any explicit `aria-label` to match the visible text. Route `sold_out` and `unavailable` through the theme's existing disabled-button branch; changing label text alone does not disable a button. Preserve the existing button, product form, selected-variant input, loading indicator, submit handler, and cart error handling.
-
-Changing the button label is presentation only. It does not reserve inventory, route an order, create a Shopify selling plan, or establish deferred payment terms.
-
-## Update the label when the variant changes
-
-Liquid runs when Shopify renders the page or section. A JavaScript variant change does not automatically rerun the snippet. Follow [Shopify's variant handling guidance](https://shopify.dev/docs/storefronts/themes/product-merchandising/variants) and connect to the handler your theme actually uses.
-
-For a theme that re-renders its product section, include the state reader and its authoritative input in that render. For a theme that updates in JavaScript, explicitly emit the necessary per-variant data and have its existing handler update the label and date region after the native availability update.
-
-To expose the current batch JSON for the variants already rendered by the theme, one option is escaped data attributes:
-
-```liquid
-<div data-hotwax-preorder-data hidden>
-  {% for variant in product.variants %}
-    <span
-      data-variant-id="{{ variant.id }}"
-      data-batches="{{ variant.metafields.hotwax.preorder_batches.value | json | escape }}"
-    ></span>
-  {% endfor %}
-</div>
-```
-
-Read one row in your existing selected-variant handler:
-
-```javascript
-function readPreorderBatches(productRoot, variantId) {
-  const rows = productRoot.querySelectorAll(
-    '[data-hotwax-preorder-data] [data-variant-id]'
-  );
-  const row = Array.from(rows).find(
-    (item) => item.dataset.variantId === String(variantId)
-  );
-  if (!row) return null;
-
-  try {
-    const data = JSON.parse(row.dataset.batches);
-    return data && Array.isArray(data.batches) ? data : null;
-  } catch {
-    return null;
-  }
-}
-```
-
-This helper only reads the schedule. It does not calculate physical availability or replace the state reader's prerequisites. Fetch or re-render missing variants through your theme's existing mechanism; do not treat an absent row as in-stock. Keep selectors scoped to the product section so a quick-view form does not update another product's button.
-
-Connect to your theme's selected-variant handler; there is no universal `variant:change` event. Also, `product | json` does not automatically include custom metafields, and Shopify omits certain inventory properties from that product serialization. Emit required values explicitly. See [Shopify's JSON filter reference](https://shopify.dev/docs/api/liquid/filters/json).
-
-## Display dates without overstating the promise
-
-Use `promiseDate` as incoming-stock information. Multiple batches can have different dates, and the earliest batch can already be fully reserved by this listing. A batch date alone does not identify which stock will fulfill a new order.
-
-For an incoming-stock schedule, filter to active preorder batches and show only entries whose listing supply is positive. Label it as an incoming schedule rather than “Your order ships on.” Format valid dates with Shopify's [date filter](https://shopify.dev/docs/api/liquid/filters/date), for example:
-
-```liquid
-{{ batch.promiseDate | date: '%B %d, %Y' | escape }}
-```
-
-Only run that expression after checking that `promiseDate` is present and valid. Agree on the display timezone and any warehouse processing buffer with the integration team. A blank or overdue date must not make an active preorder look like physical stock; suppress the promised date and use an agreed pending-date message. Do not mark a batch received merely because its date has passed.
-
-For the next available stock-arrival estimate, use the net quantities and allocation policy described in [Select the currently available estimated arrival date](#select-the-currently-available-estimated-arrival-date). For a customer-specific shipping date, obtain a quantity-aware promise that also accounts for handling, shipping and any ship-together policy. Do not derive that promise from `batches[0]` or from a date sort alone.
-
 ## Test before publishing
 
 Use an unpublished theme and test variants in a development store. Check the displayed state and date against the selected variant's inventory after each change.
 
 | Test | Expected result |
 | --- | --- |
-| Zero physical stock, active sellable preorder batch | `Pre-order`; add-to-cart submits the selected variant. |
-| Physical stock and future stock coexist | `Add to cart` for one unit when physical stock is eligible and available. |
-| Variant is sold out but still has a batch snapshot | Existing sold-out behavior wins. |
-| Missing physical-availability input | `unknown`; no claim that inventory is physical or preorder. |
-| Missing, empty, wrong-type, or incomplete JSON | No invented preorder state or date. |
-| Received or cancelled batches remain in the array | They do not trigger preorder messaging. |
-| External commitments equal or exceed incoming quantity | That batch does not establish positive preorder supply. |
-| This listing reserves the earliest batch completely | With net batch data, select the next eligible batch with remaining quantity. Without it, show no buyer-specific date. |
-| Requested quantity spans two available dated batches | Use the later date for the full quantity, or show the two quantities and arrival estimates explicitly. |
-| A required batch has an absent or overdue date | Keep the preorder state if otherwise established; show an agreed pending-date message. |
-| Shopify location ID matches a numeric Liquid location ID | Resolve and escape the correct name using string comparison. |
-| Location ID is missing or not exposed in the selected variant | Use HotWax lookup or omit the label; do not change purchase state. |
-| HotWax warehouse lookup, rename or lookup failure | Match the facility code, refresh the displayed name and preserve the fallback on failure. |
-| Expected arrival date changes | Freshly rendered content uses the new date without changing the purchase state solely because of the date. |
-| Part of the incoming stock arrives | Re-evaluate physical availability; do not keep `Pre-order` solely because a future batch remains. |
-| All incoming stock arrives | With physical stock available, return to `Add to cart`. |
-| Incoming stock is cancelled | Refresh availability and dates; cancelled stock must not contribute to a preorder promise. |
-| Variant switch, deep link, quick view, and section reload | Label, date, price, and submitted variant ID stay aligned. |
-| Quantity increase, existing cart quantity, or different market | Recalculate with the applicable quantity and inventory scope before promising fulfillment. |
-| Continue-selling, untracked inventory, or another future-inventory type | Use a separately validated policy; the conditional sample returns `unknown`. |
+| Example schedule, Shopify total 45, quantity 1 or 15 | `Pre-order`; November 15. |
+| Example schedule, Shopify total 45, quantity 16 or 45 | `Pre-order`; December 1. |
+| Example schedule, Shopify total 65, quantity 5 | `Add to cart`; no preorder date. |
+| Example schedule, Shopify total 65, quantity 6 | `Pre-order`; November 1. |
+| Requested quantity exceeds the Shopify total | Keep the quantity-limit controls; do not offer that quantity. |
+| Variant is sold out while batches remain listed | Sold-out behavior wins. |
+| Batches are unsorted or two share a date | Select by chronological availability, including all supply on the same date. |
+| Zero-supply, received or cancelled batch | Exclude it from the available supply. |
+| Missing or malformed batch quantities, or negative batch supply | `unknown`; do not invent availability. |
+| Missing batch date or selected date is overdue | Keep the established preorder state; show a pending-date message. |
+| Order reduces Shopify availability without changing the batch schedule | Advance the date when the remaining quantity crosses the next batch boundary. |
+| Incoming stock arrives, is cancelled, or changes date | Refresh the total and schedule together, then recalculate under the same consumption policy. |
+| Variant, quantity, cart, market or product-section changes | Recalculate; keep the label, date and submitted variant aligned. |
+| Location is missing, renamed or not exposed in Liquid | Refresh the name, use the lookup fallback or omit the label. |
+| Inventory is untracked, continue-selling, or includes another future-inventory type | Use a separately validated policy; this calculation does not cover it. |
 
 ## Troubleshoot common results
 
@@ -456,9 +455,9 @@ Use an unpublished theme and test variants in a development store. Check the dis
 | Liquid returns blank data | Correct variant owner, namespace, key, type, store, and access settings. |
 | Every size shows the same state | The theme may be reading the product or initial variant instead of the selected variant. |
 | Button briefly changes and then resets | Integrate with the existing variant handler so a later native update does not overwrite the label. |
-| Future stock exists but state is `unknown` | Confirm physical availability, finite inventory policy, complete batch fields, and absence of unsupported inventory types. |
-| Theme shows preorder while stock can ship now | Remove the shortcut that equates any active batch with a preorder purchase. |
+| Future stock exists but state is `unknown` | Confirm finite inventory policy, complete numeric batch fields, and absence of unsupported inventory types. |
+| Theme shows preorder while stock can ship now | Check the quantity, location scope and consumption order; do not equate any active batch with a preorder purchase. |
 | Date remains stale on an open page | Refresh or re-render through the theme's normal mechanism. A metafield update does not push new HTML into an already open page. |
-| Quantity in JSON differs from Shopify availability | The JSON excludes this listing's own commitments and contains no physical quantity. Do not force the two numbers to match. |
+| Quantity in JSON differs from Shopify availability | The schedule precedes this listing's order deductions. Use the Shopify total in the calculation; do not force the two values to match. |
 
-Before publishing, verify the selected variant's metafield, inventory inputs, fulfillment scope, date-display policy and location names. Test both physical and preorder stock, including quantity and variant changes.
+Before publishing, verify the selected variant's metafield, total availability, consumption order, fulfillment scope and location names. Test both physical and preorder stock, including quantity and variant changes.
