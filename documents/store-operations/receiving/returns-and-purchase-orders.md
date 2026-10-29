@@ -22,6 +22,8 @@ The `Purchase Orders` page includes:
 
 Open purchase orders include records in `Created` or `Approved` status.
 
+![Purchase Orders list showing search, status tabs, and a purchase order row](../../.gitbook/assets/receiving-purchase-orders-list.png)
+
 ### Purchase order detail
 
 The Purchase Order detail page shows:
@@ -32,6 +34,8 @@ The Purchase Order detail page shows:
 * `Receive` and `Receive And Close` actions.
 
 Use `Receive` to post the quantities that arrived while keeping pending items available for later receipts. Use `Receive And Close` to post entered quantities and close the items you select in the closing dialog.
+
+![Purchase Order Details screen showing pending and completed items, quantities, locations, and receiving actions](../../.gitbook/assets/receiving-purchase-order-detail.png)
 
 Purchase orders support partial receiving across multiple receipts, so users can receive inventory in stages as shipments arrive.
 
