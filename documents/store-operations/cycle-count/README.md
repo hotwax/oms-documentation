@@ -45,6 +45,4 @@ sequenceDiagram
 * [Go back and review old counts and export](../../retail-operations/inventory/cycle-count/closed.md)
 
 <!-- markdownlint-disable-next-line MD034 -->
-{% embed url="https://www.youtube.com/watch?v=YNOuRzZ1Uo4" %}
-Inventory Cycle Count
-{% endembed %}
+{% embed url="https://youtu.be/YNOuRzZ1Uo4" %} Video: Inventory Cycle Count {% endembed %}
