@@ -77,6 +77,16 @@ The guide distinguishes physical native-owner suppression from aggregate-channel
 
 This addition leaves the platform-family count unchanged and does not duplicate the Cycle Count import/recount work in draft PR #1912 or its platform-status refresh. Remaining priorities are an approved synthetic runtime verification of transfer and count workflows; source-qualified Draft/prelaunch product-sync eligibility beyond the mapping picker; safe count/receiving correction outcomes; and read-only diagnosis of reported fulfillment-queue symptoms. Reports remain investigation leads, not reproduced defects. Receiving-history display changes need release and installation evidence before being described as available.
 
+## Shopify Hold-State Backfill: October 18, 2026
+
+The existing [inventory-comparison guide](../order-flow/inventory-comparison.md#investigate-shopify-holds-and-quantity-state-changes) now connects Shopify hold states with adjustment history, OMS reservations and the Company event/batch timeline. It explains the published Reserved-to-Committed migration, quantity-field and inactive-location distinctions, read-only navigation, the four-field current-inventory check, loaded-history limits, unknown outcomes and safe escalation. The transfer guide links to this procedure; existing page navigation remains intact.
+
+New implementation claims were checked separately at Company App v2.8.0 and Shopify connector v4.3.12. The latest distribution by publication time is still v6.3.13, published October 16 at 12:21:21 UTC, with active connector v4.3.12 and OMS v3.3.4 pins. XML comments were excluded. Company v2.8.0 is a standalone frontend release, and a higher-numbered connector release does not establish distribution inclusion or installation. Older sections retain their stated baselines.
+
+Both channel and physical-location event paths publish ATP changes to Shopify Available. Physical QOH and derived-kit resets remain separate. The full related inventory/transfer/monitoring workflow was read, and all four existing Company monitor/history images plus the System Messages filter image were inspected. No new screenshot or runtime proof is claimed. Demo access reached sign-in only.
+
+This expands an existing business workflow without changing the 26 platform-family rows. Existing drafts #1918, #1923, #1928, #1929, #1932, #1934 and #1936 retain their distinct scopes. Priorities are approved runtime acceptance of hold creation/release and unknown delivery outcomes, count/receiving corrections and recount selection/valuation, modern variance-reason administration, and the separate consumer Products screenshot backlog in [#1927](https://github.com/hotwax/oms-documentation/pull/1927). Support reports remain leads; resolved incidents are not presented as current defects.
+
 ## Next Work Batches
 
 1. **Keep publication and verification status separate.** The 26 platform guides are merged. Continue their remaining checks below and refresh this snapshot after later documentation merges. A published guide does not turn a source-only procedure into runtime acceptance.

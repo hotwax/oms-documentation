@@ -111,6 +111,8 @@ Return to the same Shopify connection and open **Inventory sync**. Determine whe
 
 Use [Monitor Shopify inventory sync](https://github.com/hotwax/oms-documentation/blob/0fad00e35d2e7a1fe4cc7e661b5c0441ce3dda9b/documents/system-admin/administration/company/manage-shopify-inventory-sync.md) for the complete Company workflow, field meanings, history limits, and batch inspection. Its screenshots illustrate inventory monitoring, not native-transfer delivery.
 
+If Shopify Committed or Unavailable differs from the OMS view, use [Investigate Shopify holds and quantity-state changes](../order-flow/inventory-comparison.md#investigate-shopify-holds-and-quantity-state-changes) to compare hold release, adjustment history and event timestamps before proposing a reset. That procedure also documents Company v2.8.0 queue navigation and the current-inventory check separately from this guide's v2.7.0 baseline.
+
 ## 6. Agree On Recovery And Verify The Result
 
 Before any approved correction, the integration owner should establish:
