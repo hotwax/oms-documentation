@@ -1,46 +1,39 @@
 ---
 description: >-
-  Explore the streamlined process of order fulfillment in HotWax Commerce, from
-  receiving order details to final shipment.
+  Understand the separate picking, packing, and shipping stages in the OMS
+  Fulfillment App and verify the correct allocation before acting.
 ---
 
 # Order Fulfillment
 
-Upon receiving order details from the HotWax Commerce, the designated fulfillment center facility is promptly notified, initiating the next phase of the order fulfillment process. Store associates efficiently receive the order instructions in the fulfillment app, ensuring seamless communication and coordination, where the regular orders will move to the fulfillment app and customers who have opted for the BOPIS will move to the BOPIS app.
+After routing assigns ship-from-store work, associates use the Fulfillment App to prepare and ship the allocated items. Store pickup follows the separate pickup workflow. One order can have multiple allocations and shipments, so a tab or shipment status does not describe the entire order.
 
-Subsequently, the ordered items meticulously go for Pick, Pack and Shipping.
+**Verification scope:** This overview was checked against Fulfillment App [v4.2.2](https://github.com/hotwax/fulfillment/releases/tag/v4.2.2) and Poorti v3.3.3 on October 11, 2026. It is source-verified; installed versions, permissions, configuration, and live outcomes still require confirmation.
 
-### Pick
+## Before You Start
 
-Navigate to the `Open Orders` page to view all pending orders sent to this facility for fulfillment. You'll find the total number of queued orders prominently displayed at the top of the page, giving you an immediate overview of the workload.
+Confirm the product store, facility, order, affected items, and quantities. Check the physical goods before progressing them. If the previous action timed out, a cancellation is reported, or the queue conflicts with the order record, use [Fulfillment Queue Troubleshooting](../launchpad/fulfillment/README.md) before another action.
 
-Orders are listed in a `First In, First Out` sequence, but you can apply service level agreement based on shipping methods to prioritize fulfillment. To generate a picklist, simply click on the `Print Picksheet` function.
+## Pick
 
-If you need to assign a new picker to the orders, Navigate to the user management app and create a new user and there we can find an option of `show as a picker` and can add the user as the picker.
+`Open` contains eligible assigned work from the order search index. Shipping-method and category filters, search, and the result size control what is loaded. The default order-date sort is not a guarantee that every order appears in the same priority order in every deployment.
 
-To reprint the picklist, go to the "In Progress" tab and click on the `Print Picklist` button located at the bottom right corner of the page. If you need to change the assigned picker, you can do so on the same page by selecting the "Edit Picker" button next to the "Print Picklist" button.
+Confirming the picking action or a new picklist prepares fulfillment and moves eligible work into `In Progress`. Selecting `Pick order` alone opens the picker dialog; it does not complete that action. Creating a picklist does not prove that staff physically picked every unit. Verify products, quantities, and allocation before packing. Reprinting an existing picklist is different from creating new picking work.
 
-Store managers have the additional option to generate a QR code by clicking on the `GENERATE QR CODE` button located in the bottom-left corner. Pickers can scan this QR code with their mobile devices to access their picklist directly. Pickers can pick the orders assigned to them in the picking [app](https://docs.hotwax.co/user-guides/orders/fulfillment/pickingapp).
+## Pack
 
-### Pack
+`In Progress` contains approved shipments whose orders are approved. Review the specific shipment, packaging, carrier, shipping method, and required tracking before using the packing workflow. The bulk action works on the current loaded list; inspect its filters and affected count first.
 
-This happens in the in-progress tab, once orders are picked and ready to pack, store associates can select boxes in which the order items will be packed and generate the `packing slip` and `shipping label.`
+Packing moves the shipment into `Completed` while it can still be waiting to ship. A carrier error or an interrupted response requires checking the actual shipment and label result before another attempt. Reading `Shipping label error` does not regenerate a label; carrier changes, manual tracking, label regeneration, and rejection are separate operational actions.
 
-#### Steps to pack the order items in the shipping boxes:
+## Ship
 
-1. Navigate to the specific order details within the In Progress tab of the Fulfillment App.
-2. Within the order details section, locate and click on the Add Boxes option.
-3. Add the required number of boxes corresponding to the order items, ensuring adequate packaging space without excess boxes. Store associates can choose to pack multiple order items into one box, reducing shipping costs and environmental impact.
-4. Upon adding boxes, store associates can further specify box types for individual order items. Click on the select box option against the order item and navigate through the dropdown menu to select the appropriate option corresponding to each item's size and packaging requirements.
-5. After appropriately packing all items and selecting box types click Pack to update the shipping carrier for shipping label generation with the least shipping charges for the selected boxes.
+`Completed` includes packed shipments and shipments shipped during the current day in the facility's time zone. If the facility has no time zone, the app uses its local zone. A visible completed card is not proof that the shipment has shipped.
 
-### Ship
+The bulk `Ship` action starts with packed shipments in the loaded, filtered list. Already shipped entries are excluded, and shipments requiring tracking are skipped when tracking is missing. Its confirmation count can therefore exceed the number actually submitted. Review the result and remaining packed work; do not assume the whole order was shipped.
 
-When the order is ready to ship, the packed orders are transferred to the shipping area where carrier partners can pick the orders for delivery.
+A packed shipment can be unpacked before shipping through the supported workflow. A shipped shipment cannot be unpacked in this flow. Confirm any associated carrier-label outcome separately. If an installation uses automatic shipping, its effective schedule and eligibility must be checked with the owner; this overview does not establish that such a job is enabled.
 
-#### Steps to Ship Orders:
+## Verify The Handoff
 
-1. Go to the Completed tab, you can see all the orders on a FIFO basis.
-2. Click Ship Orders function at the top to mark the orders as shipped in bulk. If Ship Packed Orders is enabled, all packed orders will be shipped. Enable the `isTrackingRequired` setting on shipping methods that should not be automatically be shipped unless they have tracking codes.
-
-In the event that the packing slip or shipping label is damaged after packing an order, it can be regenerated from the completed tab.
+Confirm the affected shipment's status, item quantities, facility, and tracking where required. Other allocations can remain open. Use [Order Fulfillment Notification](order-fulfillment-notification.md) to verify the separate Shopify handoff. For missing or lingering cards, uncertain actions, and source-versus-index comparisons, follow [Fulfillment Queue Troubleshooting](../launchpad/fulfillment/README.md).

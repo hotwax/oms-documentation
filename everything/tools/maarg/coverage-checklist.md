@@ -12,6 +12,16 @@ This checklist tracks the **Maarg v6.4.0** documentation expansion. It records p
 
 The goal is a usable backend manual for support engineers, developers, and administrators. A guide should explain how to find the right screen, interpret the result, recognize a failure, and decide what is safe to do next.
 
+## Fulfillment Queue Backfill: October 11, 2026
+
+The proposed [Fulfillment Queue Troubleshooting guide](../launchpad/fulfillment/README.md) replaces the former blanket indexed-record deletion recipe with a read-only, modern OMS investigation. It distinguishes the indexed Open queue from shipment-backed In Progress and Completed lists, explains their status, facility, date, grouping, and result limits, and covers cancelled or reassigned work, failed reads, partial lookup details, carrier-error evidence, bounded recovery, and outcome verification. The linked [Order Fulfillment overview](../order-flow/order-fulfillment.md) now separates picking, packing, shipping, and downstream delivery. Navigation points to the diagnostic guide once rather than duplicating the same page.
+
+This addition is source-verified against Fulfillment App v4.2.2, OMS component v3.3.3, and Poorti v3.3.3. The latest distribution by publication time remains v6.3.9, published October 8 at 13:34:59 UTC; its active manifest includes the reviewed backend components and Shopify connector v4.3.8. XML-commented components were excluded. The semver-higher v6.4.2 was published earlier, and standalone Poorti v3.4.1 is not the included v3.3.3 baseline. Fulfillment App v4.2.2 is a separate standalone release, not a frontend pin or installation claim.
+
+The cloud demo reached sign-in, so no authenticated queue, installed pairing, carrier result, or recovery outcome was verified. Related workflow pages and seven existing screenshots were reviewed; no new or borrowed screenshots are introduced. Customer reports informed investigation priorities but are not published as reproduced defects. This business-workflow addition does not change the 26-family platform count or the independent open product-import, transfer-sync, and Cycle Count import batches.
+
+Remaining priorities: verify a synthetic cancelled/reassigned queue and partial shipment read on an approved installed pairing; backfill fresh-read checks for Receiving App v4.2.2 history after an uncertain receipt, because reopening its dialog can show previously loaded data and a failed history fetch can appear empty; confirm receiving-history product-name changes against release and installation evidence; retain the existing export/import runtime and consumer-screenshot backlog.
+
 ## How Coverage Is Counted
 
 - Count a coherent workflow once. A parent screen, list, detail page, and dialog do not become four separate documentation gaps.
