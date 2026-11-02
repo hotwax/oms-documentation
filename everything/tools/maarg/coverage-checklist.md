@@ -122,3 +122,10 @@ The new guide is source-verified against Cycle Count App v5.2.1 and Poorti v3.3.
 Release scope was refreshed separately: Maarg v6.3.9, published October 8 at 13:34:59 UTC, is the latest distribution by publication time. Its active `myaddons.xml` pins Poorti v3.3.3 and Shopify connector v4.3.8; XML-commented entries were excluded. The semver-higher v6.4.2 was published October 7 and pins Poorti v3.4.1 and connector v4.4.2. Cycle Count App v5.2.1 remains the latest standalone app release and is not a frontend pin in that distribution manifest. These facts do not establish installed versions or replace the platform guides' v6.4.0 source baseline.
 
 Remaining priorities: approved synthetic export/import verification; source-qualified Draft/prelaunch product eligibility; exact-release native-transfer switch coverage; safe count/receiving correction procedures; and read-only diagnosis of reported fulfillment-queue symptoms. Customer reports are investigation leads, not reproduced defects. Receiving-history product-name changes require release and installation evidence before being described as available.
+
+## Proposed Read-Only Query Backfill: November 2, 2026
+
+The [Cycle Count query diagnostic guide](cycle-count-query-diagnostics.md) covers installed-contract checks, caller authentication versus authorization, count/session/item identity, bounded lists versus connection pagination, live-read limits, and safe handling of query errors. It is source-verified against moqui-gql 1.5.2, selected with Poorti 3.3.9 in Maarg 6.3.19. Distribution inclusion is not installed-version or runtime acceptance evidence.
+
+No authenticated query, synthetic failure, screenshot, lock release, inventory adjustment, or recovery outcome is verified. Remaining work is an authorized demo check of installed versions and read-only results, followed by safe synthetic pagination and failure examples. Customer reports motivated the investigation but do not establish root causes or complete schema coverage. The 26 platform-family count and the separate existing business-workflow drafts remain unchanged.
+

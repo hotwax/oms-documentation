@@ -48,6 +48,7 @@
   * [Data Manager Configuration](tools/maarg/data-manager-configuration.md)
   * [Data Manager Imports](tools/maarg/data-manager-imports.md)
   * [REST API Explorer](tools/maarg/rest-api-explorer.md)
+  * [Read-Only Cycle Count Query Diagnostics](tools/maarg/cycle-count-query-diagnostics.md)
   * [Entity Inspection](tools/maarg/entity-inspection.md)
   * [SQL Tools](tools/maarg/sql-tools.md)
   * [Service Definitions And Execution](tools/maarg/service-tools.md)
@@ -162,3 +163,4 @@
 * [Data Manager Backend Reference](operations/oms-administration/data-manager/README.md)
   * [Configuration Options](operations/oms-administration/data-manager/configuration-options.md)
   * [Import Logs](operations/oms-administration/data-manager/view-mdm-log.md)
+
