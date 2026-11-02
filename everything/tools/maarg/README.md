@@ -25,6 +25,7 @@ Maarg can connect the core Order Management System (OMS) with external systems s
 | Review shared message and connection settings | [Message Types And Remotes](message-configuration.md) |
 | Understand an import configuration | [Data Manager Configuration](data-manager-configuration.md) |
 | Investigate import failures | [Data Manager Imports](data-manager-imports.md) |
+| Diagnose incomplete Cycle Count queries | [Read-Only Cycle Count Query Diagnostics](cycle-count-query-diagnostics.md) |
 | Find an installed API contract | [REST API Explorer](rest-api-explorer.md) |
 | Diagnose an account or sign-in problem | [User Accounts And Access Diagnosis](user-accounts.md) |
 | Review memberships and authorization rules | [Groups And Artifact Authorization](authorization-groups.md) |
@@ -49,3 +50,4 @@ Start with the relevant record ID, environment, component version, and incident 
 
 - [Documentation Coverage](coverage-checklist.md): Workflow-level coverage, existing articles to reuse, and remaining documentation and runtime checks.
 - [Glossary](glossary.md): Platform terms used in these guides.
+
