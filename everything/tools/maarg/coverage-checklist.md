@@ -122,3 +122,16 @@ The new guide is source-verified against Cycle Count App v5.2.1 and Poorti v3.3.
 Release scope was refreshed separately: Maarg v6.3.9, published October 8 at 13:34:59 UTC, is the latest distribution by publication time. Its active `myaddons.xml` pins Poorti v3.3.3 and Shopify connector v4.3.8; XML-commented entries were excluded. The semver-higher v6.4.2 was published October 7 and pins Poorti v3.4.1 and connector v4.4.2. Cycle Count App v5.2.1 remains the latest standalone app release and is not a frontend pin in that distribution manifest. These facts do not establish installed versions or replace the platform guides' v6.4.0 source baseline.
 
 Remaining priorities: approved synthetic export/import verification; source-qualified Draft/prelaunch product eligibility; exact-release native-transfer switch coverage; safe count/receiving correction procedures; and read-only diagnosis of reported fulfillment-queue symptoms. Customer reports are investigation leads, not reproduced defects. Receiving-history product-name changes require release and installation evidence before being described as available.
+
+
+## MCP Connection Diagnosis Backfill — November 3, 2026
+
+Added [MCP Connection Diagnosis](mcp-connection-diagnosis.md) as cross-cutting troubleshooting for the existing account, authorization, and token families. It separates endpoint, authentication, protocol session, discovery, and operation results; includes safe verification and affected-client closure criteria. The 26-family count is unchanged.
+
+Source baseline: moqui-mcp v1.1.0. The latest published distribution reviewed is v6.3.20 (published November 2, 2026); its uncommented manifest lists that MCP version, but `oms-suite` does not include it. Neither a standalone release nor a manifest entry establishes runtime installation. The hosted demo exposed only its sign-in page, so installed versions and authenticated behavior remain unverified; no runtime screenshots are claimed.
+
+Prioritized remaining work:
+
+1. Verify this connection workflow using an approved synthetic identity and the installed client/component versions, including a known-safe operation and intended denial; do not issue credentials or alter permissions for documentation alone.
+2. Continue pending Cycle Count query-completeness documentation separately; tool authentication success does not establish query fields, pagination, or complete business results.
+3. Retain the platform verification gaps above, including credential-specific expiry/replacement/containment and the synthetic export checks. Continue existing open workflow batches rather than duplicating them.
