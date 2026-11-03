@@ -39,6 +39,7 @@
   * [User Accounts And Access Diagnosis](tools/maarg/user-accounts.md)
   * [Groups And Artifact Authorization](tools/maarg/authorization-groups.md)
   * [Token Administration](tools/maarg/token-administration.md)
+  * [MCP Connection Diagnosis](tools/maarg/mcp-connection-diagnosis.md)
   * [Resource Inspection](tools/maarg/resource-inspection.md)
   * [System Tasks](tools/maarg/system-tasks.md)
   * [DB Missing Columns](tools/maarg/db-missing-columns.md)
