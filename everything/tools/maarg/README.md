@@ -29,6 +29,7 @@ Maarg can connect the core Order Management System (OMS) with external systems s
 | Diagnose an account or sign-in problem | [User Accounts And Access Diagnosis](user-accounts.md) |
 | Review memberships and authorization rules | [Groups And Artifact Authorization](authorization-groups.md) |
 | Identify a credential and plan its lifecycle | [Token Administration](token-administration.md) |
+| Separate connector authentication, session, and tool failures | [MCP Connection Diagnosis](mcp-connection-diagnosis.md) |
 | Inspect an approved resource location | [Resource Inspection](resource-inspection.md) |
 | Read a bounded runtime log slice | [Log Files](log-files.md) |
 | Investigate pools, threads, caches, or instance state | [Runtime Health Diagnostics](runtime-health.md) |
