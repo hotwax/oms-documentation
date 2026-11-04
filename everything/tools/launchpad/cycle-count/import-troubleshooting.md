@@ -10,6 +10,8 @@ Use this guide when creating approved counts from a CSV or investigating a recou
 
 This is the Cycle Count App's OMS bulk-upload flow. The steps are source-verified against Cycle Count App v5.2.1 and Poorti v3.3.3; they have not been exercised together in an authenticated runtime. Confirm the installed versions and configured field mapping before applying them.
 
+For an approved integration that sends files directly, use [Cycle Count HTTPS File Intake](https-import.md). That route consumes service CSV headers directly and requires separate message correlation and count verification.
+
 ## Before You Start
 
 - Confirm the OMS environment, authorized facilities, intended products, count type, count name, start/due times, and who approves the recount.

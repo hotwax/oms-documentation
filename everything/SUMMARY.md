@@ -31,6 +31,7 @@
     * [Check Job Frequencies](tools/launchpad/job-manager/check-job-frequencies.md)
     * [Job Runtime Error](tools/launchpad/job-manager/runtime-error.md)
     * [Mismatch Time Zone](tools/launchpad/job-manager/timezone-mismatch.md)
+  * [Cycle Count HTTPS File Intake](tools/launchpad/cycle-count/https-import.md)
   * [Cycle Count Export Troubleshooting](tools/launchpad/cycle-count/export-troubleshooting.md)
   * [Cycle Count Import And Recount Troubleshooting](tools/launchpad/cycle-count/import-troubleshooting.md)
 * [Maarg](tools/maarg/README.md)
