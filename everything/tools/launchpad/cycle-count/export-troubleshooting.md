@@ -111,6 +111,8 @@ Changing filters after requesting an export does not rewrite that existing reque
 
 The reviewed output contains count and facility references, product identifiers, decision outcome, deciding user, variance, system quantity, and counted quantity. Do not infer that inventory was adjusted merely because a CSV was generated. A recount is a separate operational workflow. Use [Prepare And Troubleshoot Cycle Count Imports](import-troubleshooting.md) to check the import format, trace an existing upload, and verify count scope before stores begin. Do not upload the results report unchanged or repeat an upload with an unknown outcome.
 
+If the report reflects unexpected counted quantities, first use [Cycle Count submission and progress troubleshooting](submission-troubleshooting.md) to reconcile saved session items and review decisions. Generating another report does not repair an uncertain count submission.
+
 ## Escalation Checklist
 
 Send the minimum necessary details through the approved private support channel:

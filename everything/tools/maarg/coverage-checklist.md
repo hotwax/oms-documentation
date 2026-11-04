@@ -56,6 +56,25 @@ This is guide-presence coverage, not a claim that the whole manual is complete o
 | 25 | Resource inspection | **Merged:** [Resource Inspection](resource-inspection.md) | Source-verified only; an owner-approved synthetic location and metadata/content/download examples remain |
 | 26 | Entity synchronization | **Merged:** [Entity Synchronization](entity-synchronization.md) | Selection/window/dependent validation, populated history, and destination outcomes pending |
 
+## Cycle Count Submission Backfill: October 13, 2026
+
+The proposed [Cycle Count Submission And Progress Troubleshooting guide](../launchpad/cycle-count/submission-troubleshooting.md) covers the gap between local counting, session synchronization, Track progress, and head-office review. It provides read-only navigation, quantity and session comparisons, freshness and partial-read limits, safe handling of unexpected uncounted items, and correction boundaries. The existing export and import guides link to it, and navigation adds one entry. A stale display does not justify duplicate scans, clearing local work, zeroing items, or a new recount.
+
+This batch is source-verified against Cycle Count App v5.2.1 and the modern OMS contract in Poorti v3.3.4. The published app's session status update does not await confirmation of final item synchronization. Track progress can retain or append rows on re-entry and incomplete reads do not establish absence. Those source facts inform the diagnostic checks; customer reports and proposed fixes are not presented as reproduced defects or deployed behavior.
+
+Release review covered all 318 distribution records. The latest publication is v5.5.27 at October 13, 14:09:58 UTC, whose active production group includes connector v3.5.9, OMS v2.4.15, and Poorti v2.4.6. Distribution v6.3.10 was published earlier at 06:13:19 UTC and includes connector v4.3.9, OMS v3.3.3, and Poorti v3.3.4. XML comments were excluded and production group membership checked. The standalone connector v4.5.0, OMS v3.5.0, and Poorti v3.5.0 releases do not change either manifest. A higher version number, release publication, distribution inclusion, and installed runtime remain separate facts.
+
+The publication branch was checked at `e08bb4beab790f8bdfae757759ea30b83466ea2f`. PRs #1912, #1913, #1915, and the backend-reference PR #1924 are merged. Fulfillment draft #1918 and Receiving draft #1923 remain separate active batches. Their coverage edits are preserved for review; the older dated sections retain their original verification snapshots. This business guide leaves the 26 platform-family count unchanged.
+
+The complete related store-counting, progress, head-office review, import/export, permissions, and support-inspection pages were reviewed. Five existing images were inspected as pixels: instance sign-in, OMS connection, two scanner setup barcodes, and the System Messages filter. None demonstrates successful count synchronization; no screenshot was added or repurposed for that claim. The cloud demo reached sign-in, so installed versions, actual reads, unknown submission outcomes, safe corrections, and downstream effects remain runtime-unverified.
+
+Prioritized remaining work:
+
+1. Approved synthetic count reconciliation: local/server quantity differences, interrupted final synchronization, failed or partial progress reads, repeated entry, zero quantities, and voided sessions. Verify correction outcomes before writing a recovery recipe.
+2. Receiving-history and fulfillment-queue runtime checks in the existing drafts; retain their source-version boundaries when newer releases arrive.
+3. Verify current supported automation contracts for count-file submission, recount generation, and result/adjustment reporting. Requests for automation do not establish an existing end-to-end feature or authorize integration changes.
+4. Consumer count guides still need release-qualified refresh, permission, and export-scope wording; this batch leaves that branch untouched. Products screenshot recapture is already tracked by [PR #1927](https://github.com/hotwax/oms-documentation/pull/1927), separate from this work. Review its actual images and installed-build evidence before considering the earlier screenshot backlog resolved.
+
 ## Existing Documentation To Reuse
 
 These pages contain useful domain-specific detail. They should remain the primary source for that detail rather than being copied into each platform guide.

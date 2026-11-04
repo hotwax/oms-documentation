@@ -87,6 +87,8 @@ The `Import Error` dialog displays one returned error entry. It does not establi
 
 Do not close the investigation merely because a message is processed or a toast disappears. Completion means the approved count scope is present and available as intended. Counting, review, and inventory decisions remain separate work.
 
+If the count exists but submitted session quantities are missing or stale in Track progress, use [Cycle Count submission and progress troubleshooting](submission-troubleshooting.md) before creating another recount or marking items out of stock. Import success, session synchronization, and inventory review are separate results.
+
 ## Choose A Bounded Correction
 
 If the input or outcome is wrong, preserve the original request and ask the count owner and support to reconcile which records exist before choosing a correction.
