@@ -12,14 +12,14 @@
     {
       "key": "release-notes:2026-10",
       "contentType": "release-note",
-      "title": "October 2026 release notes",
+      "title": "October 2026 apps release notes",
       "slug": "product-updates/release-notes/2026-10",
       "filePath": "drafts/2026-10/release-notes.md",
-      "metaDescription": "October updates cover product calendars, routing visibility, store operations, Shopify synchronization, returns, Job Manager, and Company app version selection.",
+      "metaDescription": "October gives retail teams more control over app rollouts, cycle counts, integration follow-up, and job history, with a preview of the new pre-order workspace.",
       "tagNames": [
         "Release Note"
       ],
-      "contentHash": "9811104dc12aeeafa12fda6a001289dad78a7b8d68afda71853a5c46c7b675c4"
+      "contentHash": "0865af492230dbd523c746687d911819f620548ac72f79834f62ceccfe29ebef"
     },
     {
       "key": "product-update:2026-10:company-app-version-management",
@@ -119,7 +119,7 @@
     }
   ],
   "sourceSnapshotAt": "2026-11-04T09:53:08Z",
-  "updatedAt": "2026-11-04T09:53:08Z",
+  "updatedAt": "2026-11-04T10:03:36Z",
   "deploymentEvidence": [
     {
       "component": "Company",

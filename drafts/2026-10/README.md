@@ -2,7 +2,7 @@
 
 **Draft editorial package, 1–31 October 2026, Asia/Kolkata. Reviewed November 4; Company deployment evidence is dated October 25.**
 
-This package brings together October's product changes, release references, and diagrams for review. Start with the [release notes](release-notes.md) for the full digest or choose a feature story below.
+This package brings together October's product changes, release references, and diagrams for review. Start with the [release notes](release-notes.md) for the full digest or choose a feature story below. The digest follows the app sections and action headings used in the published August and September notes; detailed release evidence stays in the reviewer appendix.
 
 ```mermaid
 %%{init: {"theme": "base", "themeVariables": {"primaryColor": "#E8F0FE", "primaryTextColor": "#17324D", "primaryBorderColor": "#4275AF", "lineColor": "#52677B", "secondaryColor": "#E5F4ED", "tertiaryColor": "#FFF4DC", "fontFamily": "Arial", "fontSize": "16px"}, "flowchart": {"curve": "basis", "htmlLabels": false}}}%%
@@ -42,7 +42,7 @@ Eight feature stories, with availability stated separately for each. [Open the S
 
 - One consolidated release-note draft and eight feature articles with titles, descriptions, stable slugs, and content keys.
 - Eight editable Mermaid diagrams, embedded in Markdown, with matching `.mmd` sources and SVG exports under `assets/`. Text explains each diagram for readers using assistive technology.
-- A [source ledger](source-ledger.md) with PR merge dates, immutable merge commits, release evidence, known limits, and editorial exclusions.
+- A [source ledger](source-ledger.md) with PR merge dates, immutable merge commits, release evidence, the version-reference table, known limits, and editorial exclusions.
 - A [publication manifest](publish-manifest.json) with file paths and SHA-256 content hashes. Its draft metadata is descriptive, not an execution guard for the repository publisher.
 
 ## Scope and review

@@ -1,101 +1,139 @@
 ---
-title: October 2026 release notes
+title: October 2026 apps release notes
 slug: product-updates/release-notes/2026-10
 contentType: release-note
 month: 2026-10
 status: draft
 coverageThrough: 2026-10-31
-metaDescription: October updates cover product calendars, routing visibility, store operations, Shopify synchronization, returns, Job Manager, and Company app version selection.
+metaDescription: October gives retail teams more control over app rollouts, cycle counts, integration follow-up, and job history, with a preview of the new pre-order workspace.
 tagNames: [Release Note]
 key: release-notes:2026-10
 ---
 
 <!-- markdownlint-configure-file { "MD025": { "front_matter_title": "" } } -->
 
-# October 2026 release notes
+# October 2026 apps release notes
 
-HotWax Commerce's October updates focus on understanding routing decisions, keeping store workflows clear, and following synchronization across Shopify, OMS, and NetSuite.
+October gives retail teams more control over app rollouts, store counts, and integration follow-up in HotWax Commerce's order management system (OMS). Administrators can choose hosted app versions for each environment, store teams can follow count progress and packed transfers, and operations teams can investigate job runs and Shopify processing from the same workspace.
 
-> Draft covering **1–31 October 2026**, Asia/Kolkata, reviewed November 4. **Release-listed** means a GitHub release explicitly names the change; **Merged** means the source change landed, with no matching app release established here; **Preview** means development and acceptance remain in progress. Neither a merge nor a release tag proves deployment to a particular tenant. The Company deployment check below is dated October 25.
+<!-- Editorial draft: source coverage October 1–31, 2026, Asia/Kolkata; reviewed November 4. Release and deployment evidence is retained in source-ledger.md. -->
 
-## Company app versions
+## Company
 
-**Deployed, verified October 25, 2026.** Company v2.9.0 adds per-instance UAT and production version controls, release dates and expandable notes, public hosting checks before selection and saving, and combined change history with usernames and local timestamps. Teams can control rollout timing and return to an earlier release while it remains hosted. `Default` follows the environment's main URL build, which may differ from the newest GitHub release. [Read the Company update](product-updates/company-app-version-management.md) and the [app version guide](https://github.com/hotwax/oms-documentation/blob/user-guides-pub/documents/system-admin/administration/company/manage-app-versions.md). [Company v2.9.0](https://github.com/hotwax/company/releases/tag/v2.9.0), [#520](https://github.com/hotwax/company/pull/520).
+### Choose when each environment adopts an app release
 
-**Release-listed — adopt a changed selection on refresh.** AccxUI v1.12.0 checks the selected version when a signed-in app loads or refreshes. Inventory Count v5.3.1 explicitly adopts it. The currently running build must include this change; older builds still need sign-out and login re-entry. This is not continuous polling. [AccxUI #261](https://github.com/hotwax/accxui/pull/261), [v1.12.0](https://github.com/hotwax/accxui/releases/tag/v1.12.0), [Inventory Count v5.3.1](https://github.com/hotwax/inventory-count/releases/tag/v5.3.1).
+Company brings app-version selection, release notes, and change history into one administration page. Teams can test a hosted release in their test environment while production stays on its selected version, or return to an earlier release while it remains hosted. Company checks that the selected build is available before saving.
 
-## Product management
+A changed selection takes effect on the next page load or refresh in apps that include refresh support. Older running builds still need sign-out and login re-entry. Cycle Count v5.3.1 includes the refresh behavior; availability depends on the app and build already in use. [Read the full app-version management update](product-updates/company-app-version-management.md).
 
-**Merged — product calendar and catalog controls.** Search the full store calendar, load results in pages, and edit lifecycle dates for one or several selected products. Review identifier coverage, clearer product identity, and Shopify association checks. Bulk selection covers loaded rows, and product history requires the matching OMS fix. [Products #80](https://github.com/hotwax/products/pull/80), [#87](https://github.com/hotwax/products/pull/87), [#70](https://github.com/hotwax/products/pull/70). [Read the product update](product-updates/product-calendar-and-catalog-control.md).
+### Follow transfer sync and choose eligible Shopify locations
 
-## Routing and order management
+The transfer monitor keeps available results visible when part of a status check fails and marks the missing results for review. Shopify variant information helps operators investigate missing product mappings before saving a correction.
 
-**Release-listed — order routing history.** Order Manager v1.5.0 adds the Routing graph, inventory timeline, and short-stock actions. The facility picker pins the current location and warns when no eligible facility covers the selected items. [Release v1.5.0](https://github.com/hotwax/order-manager/releases/tag/v1.5.0).
+Company also supports detaching eligible transfers from Shopify sync. A transfer already sent to Shopify or owned by another shop cannot be detached through this flow. Shopify app and fulfillment-service locations can appear in import and audit views, but remain unselected until an administrator chooses them. These controls require compatible connector support. [Read the full Shopify transfer update](product-updates/shopify-transfer-and-fulfillment-control.md).
 
-**Merged — network diagnostics.** Order Routing adds weekly routing and store-shipping views alongside current safety-stock and shipping-exclusion diagnostics. Current stock buffers are not historical weekly balances. The dashboard requires compatible OMS data documents and merged after v2.5.0. [Dashboard #584](https://github.com/hotwax/order-routing/pull/584).
+## Order Manager and Order Routing
 
-**Release-listed — inventory rule filters.** Order Routing v2.5.0 adds carrier postal-code mapping filters and sorting. Later fixes handle rule edits with no existing action and empty product-feature/tag selectors. [Release v2.5.0](https://github.com/hotwax/order-routing/releases/tag/v2.5.0), [#585](https://github.com/hotwax/order-routing/pull/585), [#590](https://github.com/hotwax/order-routing/pull/590). [Read the product update](product-updates/routing-and-inventory-visibility.md).
+### Connect an order's route with the stock available to fulfill it
 
-## Store operations
+Order Manager's `Routing` tab shows how an order moved between locations and the recorded reason for each move. Operators can follow that history into the item's inventory details, review short-stock warnings, and choose from eligible locations when moving an item.
 
-**Merged — receiving by tracking code.** Receiving adds cached pending-transfer search, tracking-code navigation, package context, and scan-all draft shortcuts. Uncertain receipts survive cache resets and require review; confirmed receipts are not sent twice because a refresh failed. These changes are outside v4.2.2. [#739](https://github.com/hotwax/receiving/pull/739), [#740](https://github.com/hotwax/receiving/pull/740).
+The facility picker keeps the current location visible and warns when no eligible facility can cover the selected items. Order Routing separately adds carrier postal-code filters and sorting to inventory rules. [Read the full routing update](product-updates/routing-and-inventory-visibility.md).
 
-**Release-listed — count progress and mobile entry.** Inventory Count v5.3.0 lists scanning, export failure status, session synchronization, zero-quantity display, navigation, and iPad keyboard improvements. Session-lock renewal also stops extending expiry beyond the configured lease; previously inflated abandoned locks are not retroactively cleared. Receiving's corresponding keyboard integration remains merged work. [Inventory Count v5.3.0](https://github.com/hotwax/inventory-count/releases/tag/v5.3.0), [count scanning #1463](https://github.com/hotwax/inventory-count/pull/1463), [session re-entry #1482](https://github.com/hotwax/inventory-count/pull/1482), [session lease #1490](https://github.com/hotwax/inventory-count/pull/1490), [Receiving iPad #757](https://github.com/hotwax/receiving/pull/757).
+## Cycle Count
 
-**Release-listed — packed transfers waiting to ship.** Fulfillment v4.2.3 and v4.3.1 list the Packed transfer segment, also forward-ported into `main`. Cancellation from that shipment-detail flow is separately established in v4.2.4; the v4.3.1 entry does not establish cancellation support. [v4.2.3](https://github.com/hotwax/fulfillment/releases/tag/v4.2.3), [v4.2.4](https://github.com/hotwax/fulfillment/releases/tag/v4.2.4), [v4.3.1](https://github.com/hotwax/fulfillment/releases/tag/v4.3.1), [main #1718](https://github.com/hotwax/fulfillment/pull/1718).
+### Keep scanning, progress, and submission in step
 
-**Merged — live Open Orders.** The separate Fulfillment rework adds a live Open list, local search, loading progress, and whole-order rejection behavior under its documented stock conditions. It merged after v4.3.0 and is not included in that tag. BOPIS separately honors the configured inventory adjustment choice when rejecting items. [Fulfillment #1702](https://github.com/hotwax/fulfillment/pull/1702), [BOPIS #908](https://github.com/hotwax/bopis/pull/908). [Read the store operations update](product-updates/store-receiving-and-counting.md).
+Cycle Count improves mobile scanning and keeps quantity fields visible when the iPad keyboard opens. Progress views retain zero quantities, failed exports show their actual outcome, and submission waits for count data to finish synchronizing.
 
-## Shopify integration
+Re-entering a session waits for pending status changes before reopening its controls. Session locks now expire within the configured time limit after renewal stops; existing locks that already exceed that limit still need review. These count improvements are included in v5.3.0. [Read the full store operations update](product-updates/store-receiving-and-counting.md).
 
-**Release-listed — transfer monitoring and control.** Company v2.6.0 exposes partial sync failures and mapping-repair context. v2.8.0 adds eligible transfer detachment through a single connector call. Transfers already held by Shopify cannot be detached by this flow. [v2.6.0](https://github.com/hotwax/company/releases/tag/v2.6.0), [v2.8.0](https://github.com/hotwax/company/releases/tag/v2.8.0).
+## Fulfillment
 
-**Release-listed — fulfillment-service locations.** Company v2.8.1 lists Shopify app/fulfillment-service locations in import and audit views. These locations are unselected by default and require connector support. [Company #494](https://github.com/hotwax/company/pull/494), [v2.8.1](https://github.com/hotwax/company/releases/tag/v2.8.1).
+### See which packed transfers still need to ship
 
-**Release-listed — fulfillment recovery.** Shopify connector v4.5.0 lists queued shipment-driven sends, durable storage of returned fulfillment IDs, and adoption of existing successful fulfillments in the closed-line recovery case. Sender setup is required; this does not promise exactly-once delivery. [Release v4.5.0](https://github.com/hotwax/mantle-shopify-connector/releases/tag/v4.5.0).
+The `Packed` segment keeps packed transfer shipments visible until they ship. Store teams can open a shipment and finish the remaining work without treating packing as completion.
 
-**Release-listed and later merged fixes — inventory resets.** v4.5.2 lists active-inventory comparison before Data Manager import. Follow-ups skip and count unmapped inventory items and exclude active channel or virtual locations from inbound physical-stock resets. Repeated, indexed item rejections can be removed from an outbound retry while valid items continue; other failure types still stop. [Comparison #979](https://github.com/hotwax/mantle-shopify-connector/pull/979), [unmapped items #992](https://github.com/hotwax/mantle-shopify-connector/pull/992), [location guard #1007](https://github.com/hotwax/mantle-shopify-connector/pull/1007), [outbound retries #920](https://github.com/hotwax/mantle-shopify-connector/pull/920).
+Packed transfers are included in v4.2.3 and v4.3.1. The separate `Cancel shipment` action is included in v4.2.4, with confirmation and existing label restrictions. Its availability should not be assumed from the v4.3.1 Packed segment alone. [Read the full packed-transfer update](product-updates/store-receiving-and-counting.md#finish-packed-transfers).
 
-**Merged — lower order-sync payload retention.** The order-history hash service stops retaining full input payloads in execution tracking. [#1026](https://github.com/hotwax/mantle-shopify-connector/pull/1026). [Read the Shopify product update](product-updates/shopify-transfer-and-fulfillment-control.md).
+## Shopify fulfillment and inventory
 
-**Preview — future-inventory synchronization.** Late October merges project future-reserved quantities to the pre-order parking location, manage app-owned fulfillment holds, isolate failures by order, and separate future quantities and batch metadata from physical-stock publication. These require compatible components, configuration, and acceptance; they are not established as part of v4.5.5. [Projection #1058](https://github.com/hotwax/mantle-shopify-connector/pull/1058), [holds #1059](https://github.com/hotwax/mantle-shopify-connector/pull/1059), [failure isolation #1062](https://github.com/hotwax/mantle-shopify-connector/pull/1062), [event delivery #1063](https://github.com/hotwax/mantle-shopify-connector/pull/1063), [future channels #1064](https://github.com/hotwax/mantle-shopify-connector/pull/1064).
+### Recover fulfillment updates after an interrupted send
+
+The Shopify connector queues shipment updates and saves Shopify's returned fulfillment ID before finishing the local work. When that ID has been saved, a retry can complete the OMS update without creating another fulfillment. A separate recovery path can adopt an existing successful Shopify fulfillment when the requested lines are already closed.
+
+The dedicated sender starts paused and needs configuration before use. The full update explains the remaining retry limits and setup requirements. [Read the full fulfillment recovery update](product-updates/shopify-transfer-and-fulfillment-control.md#recover-fulfillment-without-unnecessary-repeat-creation).
+
+### Compare inventory before importing a reset
+
+The connector compares mapped Shopify inventory with OMS quantities before queuing changes through Data Manager. This includes changes to zero or negative quantities. Operators can distinguish records read, unchanged rows, skipped items, and completed imports instead of treating every source row as a stock change.
+
+Later merged follow-ups skip unmapped items and exclude inventory-channel or virtual locations from inbound physical-stock resets. Those follow-ups still need a verified release; the released comparison does not establish their availability. [Read the full inventory reset update](product-updates/shopify-transfer-and-fulfillment-control.md#compare-inventory-before-importing-changes).
 
 ## Returns and NetSuite
 
-**Release-listed — connect arrivals and receipts.** Per-item Shopify dispositions determine restocking, and received return shipments provide input for NetSuite receipt batches. NetSuite v3.5.1 adds a default five-minute incremental receipt overlap, optional booking at the return facility, and handling for eligible cancelled RMAs. v3.5.2 adds bin-aware product receipt detail, with configuration and population prerequisites. [Shopify v4.5.0](https://github.com/hotwax/mantle-shopify-connector/releases/tag/v4.5.0), [NetSuite v3.5.0](https://github.com/hotwax/mantle-netsuite-connector/releases/tag/v3.5.0), [v3.5.1](https://github.com/hotwax/mantle-netsuite-connector/releases/tag/v3.5.1), [v3.5.2](https://github.com/hotwax/mantle-netsuite-connector/releases/tag/v3.5.2).
+### Carry physical return arrivals into NetSuite receipts
 
-**Merged with limitations — restocking fees.** RMA preparation can add the configured restocking-fee item. The final mapping path still needs acceptance, and an already-created RMA does not receive a later fee automatically. [#573](https://github.com/hotwax/mantle-netsuite-connector/pull/573). [Read the returns update](product-updates/returns-and-netsuite-reconciliation.md).
+Shopify return handling evaluates restocking for each piece. Eligible arrivals can become received return shipments in the OMS, giving the NetSuite integration a physical receipt to follow through processing.
 
-**Release-listed — selected NetSuite product imports.** The v3.3.8 maintenance release lists imports by configured item groups and on-demand imports of named item IDs or SKUs. The scheduled job starts paused. Existing identifiers are preserved, and tenant configuration and end-to-end acceptance remain required. These capabilities also have main-branch forward-ports, but are not established as part of v3.5.5. [Selected groups #609](https://github.com/hotwax/mantle-netsuite-connector/pull/609), [named items #638](https://github.com/hotwax/mantle-netsuite-connector/pull/638), [v3.3.8](https://github.com/hotwax/mantle-netsuite-connector/releases/tag/v3.3.8).
+NetSuite receipt imports allow a short overlap in their update window to catch receipts that appear late. Optional configuration can use the facility that received the return. Products requiring bin detail can carry that information into the receipt once the supporting product settings and jobs are ready. Return authorization cancellation and settlement retain their own prerequisites. [Read the full returns update](product-updates/returns-and-netsuite-reconciliation.md).
 
-## Operations and platform
+### Import the NetSuite products the team needs
 
-**Release-listed — Job Manager visibility.** v3.5.0 lists Shopify Bulk operations, shared-remote jobs, and System Tasks, which needs supported OMS 6.5.0 or later. It also adds instance-wide run history and Data Document Builder improvements, including document-specific previews and drag ordering. Instance-wide history supports All and Failed; Successful, Running, and Terminated filters and counts remain disabled pending a backend fix. [v3.5.0](https://github.com/hotwax/job-manager/releases/tag/v3.5.0), [run history #1072](https://github.com/hotwax/job-manager/pull/1072), [builder #1112](https://github.com/hotwax/job-manager/pull/1112), [field ordering #963](https://github.com/hotwax/job-manager/pull/963). [Read the Job Manager update](product-updates/job-manager-operations.md).
+Configured imports can bring products into the OMS from selected NetSuite item groups. Teams can also request up to 100 named item IDs or SKUs and review which were found. Existing products are matched before new products are created, preserving their existing identifiers.
 
-**Release-listed framework and app-specific adoption — diagnostic logs.** The shared framework adds local logs for filtering, copying, downloading, and clearing; optional remote forwarding needs configuration. Inventory Count v5.4.0 explicitly adopts logging. Later Company and Job Manager integrations are merged work, not established in their October releases. [Local logs #267](https://github.com/hotwax/accxui/pull/267), [AccxUI v1.13.0](https://github.com/hotwax/accxui/releases/tag/v1.13.0), [Inventory Count v5.4.0](https://github.com/hotwax/inventory-count/releases/tag/v5.4.0).
+These capabilities are included in the v3.3.8 maintenance release. The scheduled import starts paused and needs group configuration; inclusion in a different release line is not established. The connection and import results still need verification for the retailer's setup. [Read the full NetSuite product import update](product-updates/returns-and-netsuite-reconciliation.md#bring-selected-netsuite-products-into-oms).
 
-**Release-listed framework — installed-app refresh.** AccxUI v1.11.0 lists the fix for installed apps remaining on obsolete service workers. Framework release selection remains separate from each app's adoption and deployment. [AccxUI #236](https://github.com/hotwax/accxui/pull/236), [v1.11.0](https://github.com/hotwax/accxui/releases/tag/v1.11.0).
+## Job Manager
 
-**Preview — rebuilt Pre-order App and supply lifecycle.** The merged frontend connects demand, future inventory, purchase orders, and shipment workflows. Late October work aligns API contracts, shipment batches, arrival-date changes, purchase-order cancellation, and order-item reservation release. Receiving future supply does not itself allocate waiting orders to physical stock. CSV help explains allocation-adjusted parent quantities. The backend migration and hosted acceptance remained open on November 4; this is not a general release announcement. [Frontend #397](https://github.com/hotwax/preorder/pull/397), [shipment batches #1258](https://github.com/hotwax/oms/pull/1258), [receiving #437](https://github.com/hotwax/hotwax-poorti/pull/437), [PO cancellation #1263](https://github.com/hotwax/oms/pull/1263), [arrival dates #1264](https://github.com/hotwax/oms/pull/1264), [reservation release #1265](https://github.com/hotwax/oms/pull/1265). [Read the preview](product-updates/preorder-workspace-preview.md).
+### See where a Shopify bulk operation has reached
 
-## Version reference
+The `Bulk operations` page puts Shopify's status, timing, counts, and result files beside the related HotWax job and processing status. A completed Shopify operation can still be waiting for HotWax to process its file. Unmatched operations remain visible, helping operators see where follow-up is needed.
 
-These are observed October GitHub releases, not a universal upgrade bundle. Source links for private backend repositories require access. Do not infer that every merged feature above is included in the newest tag.
+Shared-connection jobs also appear in the catalog. The `System Tasks` page lets teams find, assign, and resolve existing tasks on supported OMS versions from 6.5.0 onward. These updates are included in Job Manager v3.5.0. [Read the full Job Manager update](product-updates/job-manager-operations.md).
 
-| Component | Selected October releases | What this establishes |
-| --- | --- | --- |
-| Order Manager | [v1.4.0](https://github.com/hotwax/order-manager/releases/tag/v1.4.0), [v1.5.0](https://github.com/hotwax/order-manager/releases/tag/v1.5.0) | v1.5.0 explicitly lists Routing and facility-picker changes. |
-| Company | [v2.5.0](https://github.com/hotwax/company/releases/tag/v2.5.0) through [v2.9.0](https://github.com/hotwax/company/releases/tag/v2.9.0), including [v2.8.1](https://github.com/hotwax/company/releases/tag/v2.8.1) | Transfer controls, fulfillment-service locations, and app-version management are release-listed. v2.9.0 deployment evidence is dated October 25. |
-| Order Routing | [v2.5.0](https://github.com/hotwax/order-routing/releases/tag/v2.5.0) | Includes postal-code rule filters; the diagnostics dashboard merged later. |
-| Fulfillment | [v4.3.1](https://github.com/hotwax/fulfillment/releases/tag/v4.3.1); maintenance [v4.2.3](https://github.com/hotwax/fulfillment/releases/tag/v4.2.3) through [v4.2.6](https://github.com/hotwax/fulfillment/releases/tag/v4.2.6) | Packed is listed in v4.3.1 and v4.2.3; cancellation is separately listed in v4.2.4. No Open Orders inclusion is inferred. |
-| Receiving | [v4.2.2](https://github.com/hotwax/receiving/releases/tag/v4.2.2) through [v4.2.4](https://github.com/hotwax/receiving/releases/tag/v4.2.4) | Ancestry excludes #739/#740 from v4.2.2 and v4.2.4; the later maintenance tags do not establish these features. |
-| Inventory Count | [v5.3.0](https://github.com/hotwax/inventory-count/releases/tag/v5.3.0), [v5.3.1](https://github.com/hotwax/inventory-count/releases/tag/v5.3.1), [v5.4.0](https://github.com/hotwax/inventory-count/releases/tag/v5.4.0), [v5.4.1](https://github.com/hotwax/inventory-count/releases/tag/v5.4.1) | v5.3.0 lists count improvements; v5.3.1 adopts refresh-based version resolution; v5.4.0 lists logs. No extra feature is inferred from v5.4.1's empty release body. |
-| Job Manager | [v3.4.2](https://github.com/hotwax/job-manager/releases/tag/v3.4.2), [v3.5.0](https://github.com/hotwax/job-manager/releases/tag/v3.5.0) | v3.5.0 lists the operations and builder work, with restricted instance-wide status filters and backend prerequisites. |
-| AccxUI | [v1.11.0](https://github.com/hotwax/accxui/releases/tag/v1.11.0) through [v1.13.1](https://github.com/hotwax/accxui/releases/tag/v1.13.1) | v1.12.0 lists refresh-based version resolution; v1.13.0 adds logging. Each app must adopt a compatible build. |
-| OMS release assembly | [v6.5.0](https://github.com/hotwax/hotwax-maarg-docker-config/releases/tag/v6.5.0) through [v6.5.4](https://github.com/hotwax/hotwax-maarg-docker-config/releases/tag/v6.5.4) | Release records published 19–23 October; no tenant rollout or production certification is inferred. |
-| Shopify connector | [v4.5.0](https://github.com/hotwax/mantle-shopify-connector/releases/tag/v4.5.0) through [v4.5.5](https://github.com/hotwax/mantle-shopify-connector/releases/tag/v4.5.5) | Selected current feature-line releases; maintenance lines also received fixes. |
-| NetSuite connector | [v3.5.0](https://github.com/hotwax/mantle-netsuite-connector/releases/tag/v3.5.0) through [v3.5.5](https://github.com/hotwax/mantle-netsuite-connector/releases/tag/v3.5.5); maintenance [v3.3.8](https://github.com/hotwax/mantle-netsuite-connector/releases/tag/v3.3.8) | v3.3.8 separately lists the late product imports. ERP-side scripts, configuration, and acceptance remain prerequisites. |
-| BOPIS | [v5.4.1](https://github.com/hotwax/bopis/releases/tag/v5.4.1) | October release exists; its compare-only body does not establish inclusion of every merged fix. |
-| Products, Pre-order, Transfers | No October GitHub release found in the full-month release API snapshot | Their merged changes need a separately verified app build and rollout. |
+### Search job runs and preview the intended data document
 
-[Package overview](README.md) · [Claim and release evidence](source-ledger.md)
+Instance-wide run history lets operators search by run ID, job name, or user ID. Filters apply across the matching records before they are divided into pages. In v3.5.0, instance-wide history supports `All` and `Failed`; the other status filters and counts remain unavailable. Individual-job history keeps its local status filters.
+
+The Data Document Builder keeps each document's preview, export history, and schedules together. Teams can save changes before previewing and drag fields within an entity group to change their order. [Read the full run-history and builder update](product-updates/job-manager-operations.md#search-runs-across-the-instance).
+
+## Shared app updates
+
+### Keep app updates and diagnostic information accessible
+
+The shared app platform improves how installed apps pick up updated builds. Each app needs to adopt the compatible platform version before the change applies.
+
+Cycle Count v5.4.0 also adds local logs that teams can filter, copy, download, and clear when investigating a problem. Sending logs to a remote service is optional and requires configuration. Company and Job Manager have merged their log-viewing controls, but those controls are not confirmed in their October releases. [Read the diagnostic-log details](product-updates/job-manager-operations.md#gather-app-diagnostics-where-available).
+
+## Updates awaiting release or acceptance
+
+The following changes include merged app work without a verified October release and previews still awaiting acceptance. They are separate from the released capabilities above.
+
+### Manage product dates across the store catalog
+
+The Products calendar can search the full store catalog, load more results in pages, and edit lifecycle dates for one or several selected products. Selecting all covers the loaded rows, and unedited dates stay in place. Identifier coverage and Shopify association checks add context when reviewing the catalog. These changes are merged and need a compatible app build and OMS services. [Read the full product calendar update](product-updates/product-calendar-and-catalog-control.md).
+
+### Review the network constraints behind routing
+
+The Order Routing dashboard brings weekly routing and store-shipping activity beside current safety stock and shipping exclusions. Current stock buffers remain separate from the historical weekly totals. The dashboard merged after v2.5.0 and requires the supporting OMS data documents. [Read the full network diagnostics update](product-updates/routing-and-inventory-visibility.md#explain-network-constraints).
+
+### Find transfers by tracking code and review uncertain receipts
+
+Receiving adds tracking-code search, package context, and `Scan all` draft shortcuts. It keeps a record of an uncertain submission for review before another receipt can be sent. A confirmed receipt is not sent again because a later refresh failed. These changes are merged but excluded from the v4.2.4 maintenance release.
+
+Separate merged Fulfillment work adds a live `Open` order list, local search, and loading progress. BOPIS (Buy Online Pick-Up In Store) also honors the configured inventory-adjustment choice when rejecting items. Their merged state does not confirm an October app release containing these changes. [Read the full store operations update](product-updates/store-receiving-and-counting.md).
+
+### Review restocking-fee support before enabling it
+
+Merged NetSuite work can add a configured restocking-fee item when preparing a return authorization. The product-mapping path still needs acceptance, and a fee added later does not update an authorization already created. This remains separate from the released return-receipt improvements. [Read the restocking-fee limitations](product-updates/returns-and-netsuite-reconciliation.md#prepare-bin-aware-receipt-detail).
+
+### Preview the pre-order workspace and future-inventory synchronization
+
+The rebuilt Pre-order App connects demand, future supply, purchase orders, and inbound shipments. Late October work carries quantity changes through shipment batches, expected arrival dates, and cancellations. Canceling a purchase-order line closes its remaining future supply without automatically moving customer reservations elsewhere. Rejecting or canceling an order item separately releases that item's future reservation.
+
+Receiving future supply does not itself assign waiting orders to the physical stock. Related Shopify work represents future-reserved quantities at the pre-order parking location, manages app-owned fulfillment holds, and keeps future-inventory publishing separate from physical-stock changes.
+
+The backend migration and hosted acceptance remain open, so this is a preview rather than a general release. Compatible components and configuration are required. [Read the full pre-order preview](product-updates/preorder-workspace-preview.md).
+
+<!-- Reviewer resources: [package overview](README.md) and [release/version evidence](source-ledger.md). These are editorial references, not customer workflow instructions. -->
