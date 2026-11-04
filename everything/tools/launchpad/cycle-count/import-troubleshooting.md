@@ -8,7 +8,7 @@ description: >-
 
 Use this guide when creating approved counts from a CSV or investigating a recount upload that appears to have failed. Selecting a file, submitting it, processing its system message, and making the intended count available to a store are separate stages.
 
-This is the Cycle Count App's OMS bulk-upload flow. The steps are source-verified against Cycle Count App v5.2.1 and Poorti v3.3.3; they have not been exercised together in an authenticated runtime. Confirm the installed versions and configured field mapping before applying them.
+This is the Cycle Count App's OMS bulk-upload flow. The steps are source-verified against Cycle Count App v5.2.1 and Poorti v3.3.3; they have not been exercised together in an authenticated runtime. Confirm the installed versions and configured field mapping before applying them. The product-order section and the current-version notes below add a separate November 4 source check; they do not establish a deployed version.
 
 ## Before You Start
 
@@ -38,11 +38,43 @@ An exported count-results report is not the bulk-upload template. First [verify 
 | `External Facility ID` | An alternative identifier resolved against the facility's external ID. When an internal Facility ID is supplied, it takes precedence. Ask support to resolve ambiguous or conflicting mappings before submission. |
 | `Start date` and `Due date` | Use `MM-dd-yyyy HH:mm:ss`, for example `10-15-2026 08:00:00`. The importer uses the facility's configured time zone when available; without it, dates use the server default time zone. Confirm the zone, check that the due date does not precede the start date, and verify the resulting dates. The reviewed validation checks date format, not that ordering; the browser's time zone does not determine it. |
 
+The canonical date format above remains recommended. In the separately checked Poorti v3.6.0 source, the importer also accepts month/day/year spreadsheet forms with a time, with or without seconds. Confirm the actual saved CSV values and resulting dates; this does not change the facility time-zone behavior. Use four-digit years rather than relying on an ambiguous abbreviated year.
+
 `Product SKU` also offers `Skip`. Do not use it for a directed SKU recount just to clear the required-mapping check. The backend can create a count/session without requested product rows when no product identifier is supplied; that is not proof that the intended product list was accepted. A hard count needs its own approved scope.
 
 **Names and duplicate rows matter.** In the reviewed importer, a row can reuse a count with the same name and facility while that count is in Created status, then append items to its associated session. Product additions are not deduplicated. A repeated file or repeated row can therefore add duplicate requested products. If the earlier count has moved beyond Created, the same name is not a guarantee that a later upload will update it. Changing a filename is not a duplicate-prevention strategy.
 
 The importer also does not use a repeated row to revise an existing count's dates or type. Use the supported correction agreed with the count owner instead of uploading altered metadata and assuming it replaced the original.
+
+## Prepare The Requested Product Order
+
+For a new directed count, arrange the complete input rows within each intended count and facility in the sequence stores should follow. For example, prepare an approved category sequence and then product-name order within each category. Sort whole rows together so product identifiers, count names, facilities, and dates stay aligned. The reviewed bulk-upload screen preserves row order when building its submission; it does not apply a category or name sort for you.
+
+The importer adds item rows in sequence. In a newly created session, this supports the requested counting order through the app's `Assigned order` selection. The stored item sequence is not a universal CSV line number across different counts or sessions. If a Created count is reused, later items are appended to its existing session. A sorted re-upload does not replace or rearrange earlier items and can introduce duplicates.
+
+{% hint style="warning" %}
+Do not re-upload, delete, or recreate an existing count merely to test its display order. Reconcile its identity and existing products first, then agree on a bounded correction with the count owner.
+{% endhint %}
+
+### Check The Store's Sort Selection
+
+In an already authorized counting session, the associate can check the product list's `Sort by` control. Do not open or resume a session solely for read-only investigation: entering a session can acquire a lock and start synchronization. Preserve unsaved work and use the original counting context or an authorized backend read instead.
+
+| Selection | What It Means |
+| --- | --- |
+| `Assigned order` | Orders items by their numeric item sequence (`importItemSeqId`). This is the default when no saved selection overrides it. |
+| `Alphabetical` | Sorts the configured primary product identity and fallback labels. It is not necessarily product-name order or a category-then-name hierarchy. |
+| `Last updated` | Shows items with more recent recorded update timestamps first; it is not the original upload sequence. |
+
+The selection is remembered on the current device/browser across page visits. Ask the associate to inspect the current selection rather than assuming the default is still active. Do not sign out or clear local data to reset the sort preference. The `Assigned` admin navigation page and the session's `Assigned order` sort are different controls.
+
+There is no separate multi-level category sort in the reviewed menu. For a new count requiring category-then-name order, prepare that sequence in the approved input and use `Assigned order`. Changing a product display-identifier setting is not a substitute for preparing that hierarchy.
+
+Compare the same count, facility, session, product tab, and search scope. The client can combine duplicate product rows, retain their earliest sequence, and sum their quantities; the visible product list need not have one row for every CSV line. Products absent from the current filtered tab are not automatically missing from the import. A raw API response also need not arrive in display order: the app applies its own sort.
+
+Check representative first, middle, and last products along with the complete expected product set. If the order still differs, preserve a small redacted comparison and have support inspect the saved item identities and sequence before any correction. Identify a saved item by both `inventoryCountImportId` and `importItemSeqId`, since a sequence can recur in another session.
+
+These sorting controls are present in both Cycle Count App v5.2.1 and v5.4.1. Do not require an upgrade to v5.4.1 solely for `Assigned order`, or infer an installed version from a screenshot of the menu. The ordering section was source-checked on November 4, 2026; its detailed evidence and runtime limits are listed below.
 
 ## Submit Once And Record The Request
 
@@ -82,7 +114,7 @@ The `Import Error` dialog displays one returned error entry. It does not establi
 1. Open `Assigned` and find the intended count by name, facility, type, and relevant status filters. Record its count ID; do not rely on a reused name alone.
 2. Confirm every intended facility has the correct count and that no unassigned or unintended facility scope was introduced.
 3. Verify the start/due dates and facility time zone, especially before a scheduled recount. Reusing a Created count may retain its earlier metadata.
-4. Inspect the count/session's requested products against the approved input. Check representative SKUs and the complete expected product set, including duplicates and missing rows.
+4. Inspect the count/session's requested products against the approved input. Check representative SKUs and the complete expected product set, including duplicates and missing rows. If a specific counting sequence is required, also follow [the product-order checks](#prepare-the-requested-product-order); import acceptance alone does not establish the associate's current display order.
 5. Confirm the intended store user can see the correct count at the expected time through their normal authorized access. Import processing alone does not establish store readiness.
 
 Do not close the investigation merely because a message is processed or a toast disappears. Completion means the approved count scope is present and available as intended. Counting, review, and inventory decisions remain separate work.
@@ -110,4 +142,10 @@ Source checked October 8, 2026:
 - Poorti v3.3.3 import services, REST contract, and message-type definition. Its importer consumes the CSV through the system-message path; do not assume the generic Data Manager log/cancellation procedure applies to this upload.
 - Latest distribution by publication time at this check: Maarg v6.3.9, published October 8 at 13:34:59 UTC. Its active manifest pins Poorti v3.3.3. XML-commented entries were excluded. Semver-higher v6.4.2 was published earlier and pins Poorti v3.4.1; it does not replace this guide's checked backend baseline.
 
-Standalone releases, distribution inclusion, configured route, and installed versions are separate facts. A read-only demo check reached sign-in only. No file was uploaded, cancelled, retried, or processed; no count, inventory, or store-readiness outcome was runtime-verified. Screenshots are omitted because no suitable authenticated example was inspected. Remaining verification requires an approved synthetic fixture covering success, invalid input, uncertain submission, duplicate prevention, and store availability.
+Additional source checks on November 4, 2026:
+
+- Cycle Count App v5.2.1 [session sorting controls](https://github.com/hotwax/inventory-count/blob/031fe43c6427005babad591379c6147aa303c7d6/src/views/SessionCountDetail.vue#L211-L219) and v5.4.1 [directed hand-count controls](https://github.com/hotwax/inventory-count/blob/1c2b9a4e25ac8be9b0554aa00446cadace5dd23e/src/components/DirectedHandCount.vue#L5-L17), [shared sorting and grouping](https://github.com/hotwax/inventory-count/blob/1c2b9a4e25ac8be9b0554aa00446cadace5dd23e/src/composables/useInventoryCountImport.ts#L239-L295), [saved selection and default](https://github.com/hotwax/inventory-count/blob/1c2b9a4e25ac8be9b0554aa00446cadace5dd23e/src/stores/userProfileStore.ts#L56-L67), and [bulk-upload mapping](https://github.com/hotwax/inventory-count/blob/1c2b9a4e25ac8be9b0554aa00446cadace5dd23e/src/views/BulkUpload.vue). The sorting options predate v5.4.1; they were included in [v4.10.0](https://github.com/hotwax/inventory-count/releases/tag/v4.10.0).
+- Poorti v3.6.0 import, date parsing, item creation, and REST definitions were checked separately. Same-name Created count reuse, append-without-deduplication behavior, and upload-message processing remain relevant. The date parser accepts additional spreadsheet forms; this does not make a repeated upload a replacement operation.
+- The latest distribution by publication time at this recheck is Maarg v6.6.0, published November 3 at 10:52:48 UTC, after reviewing all 346 release records. Its active default OMS suite includes Poorti v3.6.0, OMS v3.6.0, and moqui-gql v1.7.0. XML comments were excluded. The app is released separately; this manifest does not establish its installation or the versions used by a particular store.
+
+Standalone releases, distribution inclusion, configured route, and installed versions are separate facts. A read-only demo check reached sign-in only. No file was uploaded, cancelled, retried, or processed; no count, inventory, or store-readiness outcome was runtime-verified. Screenshots are omitted because no suitable authenticated example was inspected. Remaining verification requires an approved synthetic fixture covering success, invalid input, uncertain submission, duplicate prevention, requested product order, remembered sort choices, and store availability.

@@ -6,7 +6,7 @@ description: >-
 
 # Maarg Documentation Coverage
 
-This checklist tracks the **Maarg v6.4.0** documentation expansion. It records publication status checked on **October 8, 2026**, against `everything-bagel-pub` at commit `3e58d74cfc3cf894a6214515f3a090eda6d34405`.
+This checklist tracks the platform guides based on **Maarg v6.4.0** and later customer-support backfill. Guide presence was rechecked on **November 4, 2026**, against `everything-bagel-pub` at commit `83c13def65eb5025fb682a508ca5e60d8a72b5cc`. Later releases do not automatically replace each guide's stated source baseline.
 
 **Merged** means a guide is present in that checked publication-branch snapshot. All 26 platform/support workflow families below now have merged dedicated guides, including the former proposals in PRs #1902–#1905. Merged status establishes guide presence only; it does not establish product deployment or runtime acceptance.
 
@@ -66,6 +66,18 @@ These pages contain useful domain-specific detail. They should remain the primar
 - [Post-migration sanity checks](../../monitoring/README.md): cross-platform checks; use the generic Maarg runbooks for screen-level investigation and obtain specific approval for changes
 
 These articles do not replace current OMS operating instructions. Use [Service Jobs](service-jobs.md) and [System Messages](system-messages.md) for the supported investigation paths; do not apply historical monitoring thresholds or recovery actions without checking the installed implementation.
+
+## Cycle Count Ordering Backfill: November 4, 2026
+
+The existing [Cycle Count import guide](../launchpad/cycle-count/import-troubleshooting.md#prepare-the-requested-product-order) now connects input row preparation with the store session's `Assigned order`, `Alphabetical`, and `Last updated` choices. It explains the remembered device selection, primary-identifier sorting, product grouping, session-local item identity, and why a sorted re-upload appends rather than reorders an existing count. It separates the Assigned admin page from the session sort and avoids opening an active session as a passive diagnostic check.
+
+The ordering evidence was checked against Cycle Count App v5.2.1 and v5.4.1 and Poorti v3.6.0. The existing October 8 import baseline is retained with a scoped current-version note, including the expanded date parser. No upgrade to v5.4.1 is required solely for the already-present sort choices. Installed versions, actual sequence and grouping, saved preferences, and store-readiness outcomes remain runtime-unverified. No screenshots or operational data are added.
+
+All 346 distribution release records were checked by publication time. Latest is Maarg v6.6.0, published November 3 at 10:52:48 UTC. Its active default OMS suite includes Poorti and OMS v3.6.0 and moqui-gql v1.7.0. XML-commented components were excluded. MCP v1.1.0 is declared but is not in that default suite. Frontend publication, distribution membership, enabled components, and actual installation remain separate checks.
+
+This adds no platform family: all 26 dedicated platform guides remain present in the checked target tree. The open Cycle Count query-completeness draft #1957 and MCP connection-diagnosis draft #1958 remain separate work, as do the count submission, HTTPS intake, results, correction, and receiving drafts. This update does not claim they have merged or duplicate their procedures.
+
+Remaining priorities are approved isolated import/ordering examples, installed-version evidence, and success, invalid-input, uncertain-outcome, and duplicate/grouping checks. Preserve the source-only limitations and continue the existing runtime and customer-driven backlog. Do not open a live session, upload a test file, issue a credential, or change inventory merely to produce documentation evidence.
 
 ## Customer-Support Backfill: October 10, 2026
 
