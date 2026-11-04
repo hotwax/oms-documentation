@@ -38,7 +38,7 @@ To partially reject an order, the `bin` icon can be used for the specific item t
 
 A newly opened order does not select a rejection reason for you. Choose a reason explicitly before using `Reject Items`. When partial rejection is disabled, choosing a reason starts a whole-order rejection; check the scope before confirming.
 
-After an item is rejected, a notification email is sent, and the order may be rerouted. For more details, see [Re-route Fulfillment](re-route-fulfillment.md).
+After an item is rejected, a notification email is sent, and the order may be rerouted.
 
 ### Customer and Payment Details
 
