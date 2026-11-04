@@ -4,9 +4,9 @@
   "status": "draft",
   "coverage": {
     "from": "2026-10-01",
-    "through": "2026-10-23",
+    "through": "2026-10-31",
     "timezone": "Asia/Kolkata",
-    "completeMonth": false
+    "completeMonth": true
   },
   "items": [
     {
@@ -19,7 +19,7 @@
       "tagNames": [
         "Release Note"
       ],
-      "contentHash": "ab278fdef00ab67b7ea3088581b833ef87c360bb4380091e588a22cc93d54acb"
+      "contentHash": "9811104dc12aeeafa12fda6a001289dad78a7b8d68afda71853a5c46c7b675c4"
     },
     {
       "key": "product-update:2026-10:company-app-version-management",
@@ -31,7 +31,7 @@
       "tagNames": [
         "Product Update"
       ],
-      "contentHash": "cebf5731ae21f4d637c939113353a47ddb6485c432ae2869fff04b995cad5093"
+      "contentHash": "457a3a58d01e3619d1afa29165b4b5d6146eea2fb7fccf56f949cd07da9de0a1"
     },
     {
       "key": "product-update:2026-10:product-calendar-and-catalog-control",
@@ -43,7 +43,7 @@
       "tagNames": [
         "Product Update"
       ],
-      "contentHash": "ddadbed3c32372a3e70b025a46d546f15d328fd979a93049853b5c563ac2c32d"
+      "contentHash": "fd36e61e7d73aec7b9a7ee84b3dd0bc4662601f26d362b933c11d41bf99e8bd6"
     },
     {
       "key": "product-update:2026-10:routing-and-inventory-visibility",
@@ -55,7 +55,7 @@
       "tagNames": [
         "Product Update"
       ],
-      "contentHash": "8b329d8d95a79508e34d991f08f8a813e28d2d97749df17bb728e32ce9ba9814"
+      "contentHash": "94e62b1a8be3df17f9b1cc654947d2c5d27032d8afe2db1b4fbf6746a382f1ed"
     },
     {
       "key": "product-update:2026-10:store-receiving-and-counting",
@@ -67,7 +67,7 @@
       "tagNames": [
         "Product Update"
       ],
-      "contentHash": "b23bfb7c4a7e53cd5f6c018182f3116e306e05b1a64f0293883d2cdfaae640f7"
+      "contentHash": "e15b5c0be094fabb1246be559e97e99c0db3827321c38f60bd52d96681253d71"
     },
     {
       "key": "product-update:2026-10:shopify-transfer-and-fulfillment-control",
@@ -79,7 +79,7 @@
       "tagNames": [
         "Product Update"
       ],
-      "contentHash": "8e6d4d6f07c3f0603afabb25540dc5e51a25f62e0ab9a711e9fe32e3926a13f1"
+      "contentHash": "8a479774d42932b4b6f0bf3346e3c1ff13fc18045bef9842b2020cd37983897d"
     },
     {
       "key": "product-update:2026-10:returns-and-netsuite-reconciliation",
@@ -91,19 +91,19 @@
       "tagNames": [
         "Product Update"
       ],
-      "contentHash": "98327f5fc740d00565fe36b1860a2efce6dd802d6cccec234bb51aa634f02d2f"
+      "contentHash": "8e3ede5acf32804da86e56fced74b224c1f65d17f3f39a11aa5bce2ca7a6a1b2"
     },
     {
       "key": "product-update:2026-10:job-manager-operations",
       "contentType": "product-update",
-      "title": "See both sides of a Shopify bulk operation",
+      "title": "Follow jobs from Shopify operations to run history",
       "slug": "product-updates/2026-10/job-manager-operations",
       "filePath": "drafts/2026-10/product-updates/job-manager-operations.md",
-      "metaDescription": "Compare Shopify processing with HotWax consumption, find shared-remote jobs, and manage existing system tasks.",
+      "metaDescription": "Compare Shopify processing with HotWax consumption, search run history, build data documents, and manage existing system tasks.",
       "tagNames": [
         "Product Update"
       ],
-      "contentHash": "c44e0f9adebb59a7a704b61a5e6c0dbf6fe5662e314a22ed0154e1888c60c645"
+      "contentHash": "b774e9cad11acb6533a03494bc0939ad73adfadb8f846cfa6c5f0a9425c41fdf"
     },
     {
       "key": "product-update:2026-10:preorder-workspace-preview",
@@ -115,16 +115,17 @@
       "tagNames": [
         "Product Update"
       ],
-      "contentHash": "37b612a18f553cac624acdb1c86b41afa3bbaa9e4fac1bce4204eb31371a2a21"
+      "contentHash": "f1402461b829e7150f809f8ab48c6316d178b6ae88b765b1b4e30decfe09a31e"
     }
   ],
-  "sourceSnapshotAt": "2026-10-23T15:40:58Z",
-  "supplementalCoverage": [
+  "sourceSnapshotAt": "2026-11-04T09:53:08Z",
+  "updatedAt": "2026-11-04T09:53:08Z",
+  "deploymentEvidence": [
     {
-      "feature": "Company app version management",
-      "through": "2026-10-25",
-      "completeWindow": false,
-      "guidePullRequest": "https://github.com/hotwax/oms-documentation/pull/1949"
+      "component": "Company",
+      "version": "v2.9.0",
+      "verifiedOn": "2026-10-25",
+      "scope": "UAT and production main app URLs; not a fresh November deployment check"
     }
   ]
 }

@@ -4,7 +4,7 @@ slug: product-updates/2026-10/returns-and-netsuite-reconciliation
 contentType: product-update
 month: 2026-10
 status: draft
-coverageThrough: 2026-10-23
+coverageThrough: 2026-10-31
 metaDescription: Track physical return arrivals, respect per-item restocking, and carry return context into NetSuite reconciliation.
 tagNames: [Product Update]
 key: product-update:2026-10:returns-and-netsuite-reconciliation
@@ -57,6 +57,12 @@ The connector can import NetSuite's **Use Bins** setting into the product's rece
 
 Restocking-fee support also merged this month. It requires a configured fee product with a NetSuite item identification. A fee arriving after an RMA was already created is a documented limitation; the source PR does not establish that the final product-lookup path has completed acceptance testing.
 
-Sources: [Shopify per-item dispositions #883](https://github.com/hotwax/mantle-shopify-connector/pull/883), [return shipments #893](https://github.com/hotwax/mantle-shopify-connector/pull/893), [NetSuite receipt integration #488](https://github.com/hotwax/mantle-netsuite-connector/pull/488), [incremental window #517](https://github.com/hotwax/mantle-netsuite-connector/pull/517), [return facility #524](https://github.com/hotwax/mantle-netsuite-connector/pull/524), [cancelled RMAs #532](https://github.com/hotwax/mantle-netsuite-connector/pull/532), [Use Bins #557](https://github.com/hotwax/mantle-netsuite-connector/pull/557), and [restocking fees #573](https://github.com/hotwax/mantle-netsuite-connector/pull/573). These sources require repository access.
+## Bring selected NetSuite products into OMS
+
+The October 28 **v3.3.8** maintenance release separately lists product imports by selected NetSuite item groups and on-demand imports of named item IDs or SKUs. The scheduled group import starts paused and needs group configuration. Existing products are matched before new products are created; existing SKU, UPC, and internal-name values are preserved.
+
+The named-item operation accepts up to 100 identifiers and reports found and missing items. These are release-listed capabilities on the v3.3 maintenance line, with forward-ports into `main`; they are not established as part of v3.5.5. Source checks do not establish full NetSuite-to-OMS acceptance for a tenant, so configuration and end-to-end verification remain prerequisites.
+
+Sources: [Shopify per-item dispositions #883](https://github.com/hotwax/mantle-shopify-connector/pull/883), [return shipments #893](https://github.com/hotwax/mantle-shopify-connector/pull/893), [NetSuite receipt integration #488](https://github.com/hotwax/mantle-netsuite-connector/pull/488), [incremental window #517](https://github.com/hotwax/mantle-netsuite-connector/pull/517), [return facility #524](https://github.com/hotwax/mantle-netsuite-connector/pull/524), [cancelled RMAs #532](https://github.com/hotwax/mantle-netsuite-connector/pull/532), [Use Bins #557](https://github.com/hotwax/mantle-netsuite-connector/pull/557), [restocking fees #573](https://github.com/hotwax/mantle-netsuite-connector/pull/573), [selected groups #609](https://github.com/hotwax/mantle-netsuite-connector/pull/609), [named items #638](https://github.com/hotwax/mantle-netsuite-connector/pull/638), [main group-import forward-port #610](https://github.com/hotwax/mantle-netsuite-connector/pull/610), [main named-item forward-port #640](https://github.com/hotwax/mantle-netsuite-connector/pull/640), and [v3.3.8](https://github.com/hotwax/mantle-netsuite-connector/releases/tag/v3.3.8). These sources require repository access.
 
 [October overview](../README.md) · [All release notes](../release-notes.md) · [Source ledger](../source-ledger.md)

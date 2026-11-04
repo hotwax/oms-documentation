@@ -4,7 +4,7 @@ slug: product-updates/2026-10/routing-and-inventory-visibility
 contentType: product-update
 month: 2026-10
 status: draft
-coverageThrough: 2026-10-23
+coverageThrough: 2026-10-31
 metaDescription: Connect order routing history, stock warnings, and routing diagnostics to investigate fulfillment decisions.
 tagNames: [Product Update]
 key: product-update:2026-10:routing-and-inventory-visibility

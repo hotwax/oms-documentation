@@ -4,7 +4,7 @@ slug: product-updates/2026-10/shopify-transfer-and-fulfillment-control
 contentType: product-update
 month: 2026-10
 status: draft
-coverageThrough: 2026-10-23
+coverageThrough: 2026-10-31
 metaDescription: Review incomplete transfer sync, repair product mappings, and understand fulfillment and inventory reset recovery.
 tagNames: [Product Update]
 key: product-update:2026-10:shopify-transfer-and-fulfillment-control
@@ -49,6 +49,8 @@ Detachment has eligibility checks; it is not a general way to cancel a Shopify t
 
 ## Recover fulfillment without unnecessary repeat creation
 
+Company **v2.8.1** also lists fulfillment-service location support. Those Shopify locations can appear in import and audit views, remain unselected by default, and require compatible connector support.
+
 Shipment-driven fulfillment feeds queue messages for a dedicated sender. After Shopify returns a fulfillment ID, the connector saves it before completing the remaining local work. A retry with that saved ID finishes the local update without issuing another fulfillment creation request. A separate recovery path can adopt an existing successful Shopify fulfillment when all requested lines are already closed.
 
 This is recovery behavior, not an exactly-once guarantee: a process stop between Shopify's response and the first saved ID remains a documented gap. The dedicated sender is seeded paused, so deployment also needs deliberate sender configuration and review of overlapping jobs.
@@ -59,6 +61,12 @@ The active-inventory reset work compares mapped Shopify levels with OMS quantiti
 
 Treat Data Manager's source, unchanged, skipped, and processed counts separately. They describe different stages and should not all be read as the number of stock changes.
 
-Sources: [Company #479](https://github.com/hotwax/company/pull/479), [#501](https://github.com/hotwax/company/pull/501), [v2.8.0](https://github.com/hotwax/company/releases/tag/v2.8.0), [Shopify fulfillment queue #842](https://github.com/hotwax/mantle-shopify-connector/pull/842), [saved fulfillment ID #861](https://github.com/hotwax/mantle-shopify-connector/pull/861), [recovery #892](https://github.com/hotwax/mantle-shopify-connector/pull/892), [reset comparison #979](https://github.com/hotwax/mantle-shopify-connector/pull/979), [unmapped items #992](https://github.com/hotwax/mantle-shopify-connector/pull/992), and [location guard #1007](https://github.com/hotwax/mantle-shopify-connector/pull/1007). Connector sources require repository access.
+## Preview future-inventory synchronization
+
+Changes merged October 30–31 project future-reserved units to the pre-order parking location in Shopify while retaining the OMS warehouse assignment. App-owned holds keep eligible future-inventory fulfillment orders from proceeding too early. Before releasing a hold, the connector reads Shopify's current state and leaves merchant and other-app holds alone. Follow-up handling isolates failures by order so one failed projection does not stop the entire location job.
+
+Separate work publishes inventory events as a whole, retains delivery identifiers for retries, and sends absolute future quantities and batch metadata through future-inventory channels. Physical-stock events stay separate from those channels. Configuration, migrations, compatible components, and acceptance are still required; these merges are not established as part of the earlier v4.5.5 release. Source checks did not complete the end-to-end Data Manager reset-feed path.
+
+Sources: [Company #479](https://github.com/hotwax/company/pull/479), [#501](https://github.com/hotwax/company/pull/501), [v2.8.0](https://github.com/hotwax/company/releases/tag/v2.8.0), [fulfillment-service locations #494](https://github.com/hotwax/company/pull/494), [v2.8.1](https://github.com/hotwax/company/releases/tag/v2.8.1), [Shopify fulfillment queue #842](https://github.com/hotwax/mantle-shopify-connector/pull/842), [saved fulfillment ID #861](https://github.com/hotwax/mantle-shopify-connector/pull/861), [recovery #892](https://github.com/hotwax/mantle-shopify-connector/pull/892), [reset comparison #979](https://github.com/hotwax/mantle-shopify-connector/pull/979), [unmapped items #992](https://github.com/hotwax/mantle-shopify-connector/pull/992), [location guard #1007](https://github.com/hotwax/mantle-shopify-connector/pull/1007), [future-location projection #1058](https://github.com/hotwax/mantle-shopify-connector/pull/1058), [app-owned holds #1059](https://github.com/hotwax/mantle-shopify-connector/pull/1059), [per-order recovery #1062](https://github.com/hotwax/mantle-shopify-connector/pull/1062), [event delivery #1063](https://github.com/hotwax/mantle-shopify-connector/pull/1063), and [future channels #1064](https://github.com/hotwax/mantle-shopify-connector/pull/1064). Connector sources require repository access.
 
 [October overview](../README.md) · [All release notes](../release-notes.md) · [Source ledger](../source-ledger.md)

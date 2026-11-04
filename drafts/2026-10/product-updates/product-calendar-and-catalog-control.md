@@ -4,7 +4,7 @@ slug: product-updates/2026-10/product-calendar-and-catalog-control
 contentType: product-update
 month: 2026-10
 status: draft
-coverageThrough: 2026-10-23
+coverageThrough: 2026-10-31
 metaDescription: Search the full product calendar, update selected lifecycle dates, and review product identifiers and Shopify links.
 tagNames: [Product Update]
 key: product-update:2026-10:product-calendar-and-catalog-control
@@ -16,7 +16,7 @@ key: product-update:2026-10:product-calendar-and-catalog-control
 
 HotWax Commerce's Products App brings calendar search, date editing, and product identity into a more consistent catalog workflow. Merchandising teams can find products beyond the first loaded page and change the dates they intend to change.
 
-**Availability:** merged into Products `main` in October. No October GitHub release was found for this app at the cutoff. The deployed app and its compatible OMS calendar services determine availability.
+**Availability:** merged into Products `main` in October. No October GitHub release was found for this app in the full-month snapshot. The deployed app and its compatible OMS calendar services determine availability.
 
 ## Find the products you mean
 

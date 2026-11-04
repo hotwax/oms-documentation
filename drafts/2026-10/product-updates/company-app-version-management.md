@@ -4,7 +4,7 @@ slug: product-updates/2026-10/company-app-version-management
 contentType: product-update
 month: 2026-10
 status: draft
-coverageThrough: 2026-10-25
+coverageThrough: 2026-10-31
 metaDescription: Choose verified hosted app releases for each OMS instance and environment, review release information, and return to a retained version in Company.
 tagNames: [Product Update]
 key: product-update:2026-10:company-app-version-management
@@ -18,7 +18,7 @@ A release can be ready to test while production needs to stay on a familiar buil
 
 The underlying [version-aware delivery model](https://www.hotwax.co/product-updates/2026-07/hotwax-introduces-version-aware-app-delivery-for-controlled-oms-rollouts) was announced in July. This update adds the Company controls for selecting a release, reading its notes, and reviewing changes.
 
-**Availability:** Company v2.9.0 is deployed at the UAT and production main URLs, verified October 25, 2026. Available versions vary by app and environment; this does not mean every app has multiple hosted releases.
+**Availability:** Company v2.9.0 was verified at the UAT and production main URLs on October 25, 2026. Available versions vary by app and environment; this does not mean every app has multiple hosted releases. Later October framework changes improve how signed-in apps adopt a changed selection, as described below.
 
 ## Control rollout timing for each instance
 
@@ -38,12 +38,14 @@ When an earlier release remains hosted, an administrator can select it again for
 
 The app's history button combines UAT and production changes. Each record shows the previous and new value, environment, username, and timestamp in the user's selected timezone. The timestamp does not display a timezone suffix.
 
-## Plan for login re-entry
+## Apply a changed selection
 
-Saving a different version does not move an already-open session with an ordinary refresh. Users need to sign out and re-enter the affected app so login resolves the selection again. After re-entry, reload retains the selected version.
+Saving a different version does not immediately move an already-open session. In builds containing AccxUI **v1.12.0**, a signed-in user picks up the changed selection on the next page load or refresh, preserving the current route. This is a page-load check, not continuous polling. If the check fails, the app keeps its stored selection.
 
-Read the [app version guide](https://github.com/hotwax/oms-documentation/blob/codex/company-app-version-docs/documents/system-admin/administration/company/manage-app-versions.md) for the selection, rollback, and history procedures, with screenshots.
+The currently running build must contain that framework change. Older builds, including the October 25 behavior verified for this article, still require sign-out and login re-entry. Inventory Count **v5.3.1** explicitly adopts the new framework; do not assume every app has adopted it.
 
-Sources: [Company v2.9.0](https://github.com/hotwax/company/releases/tag/v2.9.0) and [Company #520](https://github.com/hotwax/company/pull/520).
+Read the [app version guide](https://github.com/hotwax/oms-documentation/blob/user-guides-pub/documents/system-admin/administration/company/manage-app-versions.md) for the selection, rollback, and history procedures, with screenshots.
+
+Sources: [Company v2.9.0](https://github.com/hotwax/company/releases/tag/v2.9.0), [Company #520](https://github.com/hotwax/company/pull/520), [refresh behavior #261](https://github.com/hotwax/accxui/pull/261), [AccxUI v1.12.0](https://github.com/hotwax/accxui/releases/tag/v1.12.0), and [Inventory Count v5.3.1](https://github.com/hotwax/inventory-count/releases/tag/v5.3.1).
 
 [October overview](../README.md), [all release notes](../release-notes.md), and [source ledger](../source-ledger.md).
