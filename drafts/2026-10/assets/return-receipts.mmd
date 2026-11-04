@@ -1,0 +1,14 @@
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#E8F0FE", "primaryTextColor": "#17324D", "primaryBorderColor": "#4275AF", "lineColor": "#52677B", "secondaryColor": "#E5F4ED", "tertiaryColor": "#FFF4DC", "fontFamily": "Arial", "fontSize": "16px"}, "flowchart": {"curve": "basis", "htmlLabels": false}}}%%
+flowchart TD
+  A[Shopify return or refund with restock] --> B[Evaluate returned items and locations]
+  B --> C[Record eligible restocked arrivals in OMS]
+  C --> D[Received return shipment]
+  D --> E{RMA and receipt prerequisites met?}
+  E -->|No| F[Keep pending or show a refusal for review]
+  E -->|Yes| G[Configured NetSuite item-receipt batch]
+  G --> H[Read and record the batch result]
+  H -->|Accepted| I[Link the NetSuite receipt to the shipment]
+  H -->|Refused| J[Retain the reason for correction]
+  I --> K[Continue the configured return settlement]
+  classDef ready fill:#E5F4ED,stroke:#2D8060,color:#173B2C;
+  class I,K ready;

@@ -1,0 +1,11 @@
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#E8F0FE", "primaryTextColor": "#17324D", "primaryBorderColor": "#4275AF", "lineColor": "#52677B", "secondaryColor": "#E5F4ED", "tertiaryColor": "#FFF4DC", "fontFamily": "Arial", "fontSize": "16px"}, "flowchart": {"curve": "basis", "htmlLabels": false}}}%%
+flowchart TD
+  A[Expected purchase-order supply] --> B[Future-inventory batch]
+  B --> C[Review ledger and remaining supply]
+  C --> D[Review waiting pre-orders and reservations]
+  D --> E[Plan inbound shipment]
+  E --> F[Receive through the compatible shipment workflow]
+  F --> G[Read back quantities and refresh related views]
+  G --> H[Review remaining demand and exceptions]
+  classDef preview fill:#F1EBFA,stroke:#7C5AA7,color:#392650;
+  class A,B,C,D,E,F,G,H preview;
