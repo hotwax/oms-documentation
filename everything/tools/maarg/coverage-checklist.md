@@ -6,7 +6,7 @@ description: >-
 
 # Maarg Documentation Coverage
 
-This checklist tracks the **Maarg v6.4.0** documentation expansion. It records publication status checked on **October 8, 2026**, against `everything-bagel-pub` at commit `3e58d74cfc3cf894a6214515f3a090eda6d34405`.
+This checklist tracks the **Maarg v6.4.0** documentation expansion. It records publication status checked on **October 12, 2026**, against `everything-bagel-pub` at commit `009787b80d2e0af36d6e11890fe963139a77ee06`.
 
 **Merged** means a guide is present in that checked publication-branch snapshot. All 26 platform/support workflow families below now have merged dedicated guides, including the former proposals in PRs #1902–#1905. Merged status establishes guide presence only; it does not establish product deployment or runtime acceptance.
 
@@ -69,13 +69,13 @@ These articles do not replace current OMS operating instructions. Use [Service J
 
 ## Customer-Support Backfill: October 10, 2026
 
-The proposed [Shopify Transfer Sync investigation guide](../shopify/transfer-sync-troubleshooting.md) connects native transfer monitoring with receiving reconciliation and channel/physical-location inventory events. It covers ownership and start-date eligibility, staging versus record-level delivery, missing or ambiguous mappings, list/history limits, and approval-bound recovery. The receiving guide and Shopify navigation link to it. Duplicate product mappings can block native creation for a whole order; the guide does not prescribe keeping an arbitrary listing or toggling sync as a repair.
+The merged [Shopify Transfer Sync investigation guide](../shopify/transfer-sync-troubleshooting.md) connects native transfer monitoring with receiving reconciliation and channel/physical-location inventory events. It covers ownership and start-date eligibility, staging versus record-level delivery, missing or ambiguous mappings, list/history limits, and approval-bound recovery. The receiving guide and Shopify navigation link to it. Duplicate product mappings can block native creation for a whole order; the guide does not prescribe keeping an arbitrary listing or toggling sync as a repair.
 
 Source verification uses Company App v2.7.0 and Shopify connector v4.3.8 separately. The latest distribution by publication time remains Maarg v6.3.9, published October 8 at 13:34:59 UTC, with active Poorti v3.3.3 and connector v4.3.8 pins. Commented components were ignored. The higher-numbered v6.4.2 was published October 7 with Poorti v3.4.1 and connector v4.4.2. Company v2.7.0, published October 9, is a standalone frontend release; the distribution manifest does not establish its installation.
 
 The guide distinguishes physical native-owner suppression from aggregate-channel routing, and ATP-to-Shopify-Available event delivery from physical quantity-on-hand and derived-kit reset exceptions. It uses the current Company flow and links to the existing inventory monitor rather than introducing legacy Job Manager screenshots. The four images across that complete inventory workflow and the linked System Messages filter image were inspected in full. No new image or runtime proof is claimed. The read-only demo remained at sign-in; installed versions, permissions, delivery outcomes, and any recovery remain unverified.
 
-This addition leaves the platform-family count unchanged and does not duplicate the Cycle Count import/recount work in draft PR #1912 or its platform-status refresh. Remaining priorities are an approved synthetic runtime verification of transfer and count workflows; source-qualified Draft/prelaunch product-sync eligibility beyond the mapping picker; safe count/receiving correction outcomes; and read-only diagnosis of reported fulfillment-queue symptoms. Reports remain investigation leads, not reproduced defects. Receiving-history display changes need release and installation evidence before being described as available.
+This addition leaves the platform-family count unchanged. Transfer-sync PR #1913 and Cycle Count import/recount PR #1912 are merged in the October 12 snapshot. Remaining priorities are approved synthetic runtime verification of transfer and count workflows, safe correction outcomes, and the receiving-history work below. The fulfillment-queue guide remains in draft PR #1918. Reports remain investigation leads, not reproduced defects.
 
 ## Next Work Batches
 
@@ -97,7 +97,7 @@ The latest distribution by publication remains Maarg v6.3.9, with active connect
 
 The complete related product-operation and console pages were read, and their nine referenced images plus the System Messages filter image were visually reviewed. Loading-only and older console illustrations are not reused as current-flow screenshots. This target-branch guide contains no screenshot, credential-entry recipe, private connection example, or customer-specific data. The consumer-branch illustration cleanup remains separate.
 
-This batch leaves the platform status/count refresh in draft PR #1912 and the native-transfer workflow in draft PR #1913 unchanged. Next priorities: approved runtime checks for Draft and archived/custom-filter cases, targeted partial or unknown outcomes, products with more than 250 variants, and identifier conflicts; safe count/receiving corrections; and source-backed fulfillment-queue diagnosis. Reports remain leads rather than reproduced defects.
+Product-import PR #1915 is merged in the October 12 snapshot, alongside PRs #1912 and #1913. Next priorities: approved runtime checks for Draft and archived/custom-filter cases, targeted partial or unknown outcomes, products with more than 250 variants, identifier conflicts, and safe count/receiving corrections. Fulfillment-queue diagnosis is covered by the separate draft PR #1918. Reports remain leads rather than reproduced defects.
 
 ## Verification Standard For Future Updates
 
@@ -115,10 +115,31 @@ Priority after this update: confirm an authorized synthetic export fixture and i
 
 ## Customer-Support Backfill: October 8, 2026
 
-The proposed [Cycle Count Import And Recount Troubleshooting guide](../launchpad/cycle-count/import-troubleshooting.md) fills the gap between a usable export and a store-ready recount. It covers template/mapping preparation, local parsing versus server acceptance, recent-history limits, asynchronous processing, error/file inspection, duplicate-prone name reuse, facility/date/product verification, and approval-bound correction. It uses the incoming `ImportInventoryCounts` path rather than assuming generic Data Manager log actions apply. Navigation and the merged export guide link to it. No customer incident, private source, or live data is reproduced.
+The merged [Cycle Count Import And Recount Troubleshooting guide](../launchpad/cycle-count/import-troubleshooting.md) fills the gap between a usable export and a store-ready recount. It covers template/mapping preparation, local parsing versus server acceptance, recent-history limits, asynchronous processing, error/file inspection, duplicate-prone name reuse, facility/date/product verification, and approval-bound correction. It uses the incoming `ImportInventoryCounts` path rather than assuming generic Data Manager log actions apply. Navigation and the merged export guide link to it. No customer incident, private source, or live data is reproduced.
 
 The new guide is source-verified against Cycle Count App v5.2.1 and Poorti v3.3.3. A read-only demo check reached sign-in, so installed versions, a successful upload, invalid-input outcome, uncertain submission, safe correction, and store readiness remain unverified. No new screenshots are included. The linked System Messages filter image was inspected in full and remains consistent with its existing limited filter-only caption.
 
 Release scope was refreshed separately: Maarg v6.3.9, published October 8 at 13:34:59 UTC, is the latest distribution by publication time. Its active `myaddons.xml` pins Poorti v3.3.3 and Shopify connector v4.3.8; XML-commented entries were excluded. The semver-higher v6.4.2 was published October 7 and pins Poorti v3.4.1 and connector v4.4.2. Cycle Count App v5.2.1 remains the latest standalone app release and is not a frontend pin in that distribution manifest. These facts do not establish installed versions or replace the platform guides' v6.4.0 source baseline.
 
 Remaining priorities: approved synthetic export/import verification; source-qualified Draft/prelaunch product eligibility; exact-release native-transfer switch coverage; safe count/receiving correction procedures; and read-only diagnosis of reported fulfillment-queue symptoms. Customer reports are investigation leads, not reproduced defects. Receiving-history product-name changes require release and installation evidence before being described as available.
+
+## Receiving History Backfill: October 12, 2026
+
+The proposed update to [Investigate Receiving Discrepancies](../launchpad/receiving/README.md) adds order-wide and line-specific history navigation, released history fields, safe freshness checks after an uncertain submission, grouped/paginated-history limits, an outcome decision table, and correction boundaries. The existing navigation and guide path remain intact. It also qualifies the later box filters, `Scan all` label, and receipt-review safeguard so they are not presented as v4.2.2 controls.
+
+Source verification uses Receiving App v4.2.2 and Poorti v3.3.3. The released dialog reads cached history; reopening it alone does not refresh. Re-entering transfer detail starts new reads, but an empty result can also follow a failed history read. The guide therefore requires preserved entries and authoritative receipt/line reconciliation before an approved retry. It does not prescribe a negative receipt, zero-and-complete, cancellation, or general inventory adjustment as a reversal.
+
+All 316 published distribution records were reviewed by publication time. Maarg v6.3.9 remains latest, published October 8 at 13:34:59 UTC; production uses the active `oms-suite` group with Poorti v3.3.3, OMS v3.3.3, and connector v4.3.8. XML comments were excluded. Receiving v4.2.2 remains the latest of 72 standalone app releases reviewed, with no frontend pin in that distribution manifest. Release source, distribution inclusion, and installed runtime are separate checks.
+
+The complete related Receiving pages, receipt-to-Shopify investigation, product-sync guide, entity-inspection guide, System Messages guide, and linked inventory-event workflow were reviewed. Receiving pages contain no screenshots. The five images in the linked System Messages and Company inventory workflow were inspected as actual pixels; they remain consistent with their existing limited captions. No image was added or reused to imply a live receipt result. The demo remains at sign-in, so runtime permissions, history reads, uncertain outcomes, corrections, and downstream results remain unverified.
+
+Support correspondence and conversations supplied leads about uncertain receiving outcomes, receipt reconciliation, and history labels. Resolved correspondence was treated as resolved; reports do not establish a reproduced defect. Later history/cache/pagination source changes and requested product-name display changes need release and installation evidence before becoming default operating instructions. This batch does not overlap the open fulfillment draft #1918, deployment PR #1920, or the consumer Products update #1921.
+
+Prioritized remaining work:
+
+1. Approved synthetic receiving verification: successful and failed history reads, a lost submission response, repeated-product lines, completed orders, supplemental-history limits, and confirmed correction results across connected systems.
+2. Safe count/import correction outcomes and store readiness after an unknown or partial submission, using the merged Cycle Count guides.
+3. Review the existing fulfillment-queue draft #1918 and its runtime gap; customer-reported queue symptoms remain leads.
+4. Consumer-guide version qualifications and screenshot recapture remain separate from this publication branch. The [Products update #1921](https://github.com/hotwax/oms-documentation/pull/1921) removes the stale workbench illustration; [product details](https://github.com/hotwax/oms-documentation/blob/df78e2e3e6479986e47c333f88b50f1d6cf47b75/documents/retail-operations/.gitbook/assets/product-details.png) and [Products settings](https://github.com/hotwax/oms-documentation/blob/df78e2e3e6479986e47c333f88b50f1d6cf47b75/documents/retail-operations/.gitbook/assets/products-settings.png) still require installed-build screenshot review. Do not replace them with unverified images or claim runtime acceptance of merged product-source changes.
+
+This business-guide update leaves all 26 merged platform families unchanged.
