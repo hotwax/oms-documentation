@@ -8,7 +8,7 @@ description: >-
 
 Use this guide when a deployment starts but a component behaves unexpectedly, an upgrade row reports an error, or a **Data Load Failure** System Task appears. Begin with the installed release and existing evidence. Restarting, rerunning all upgrade services, or editing version tracking can repeat data changes or skip work that still needs recovery.
 
-This is a diagnostic runbook. For an approved deployment, obtain the Maarg release-specific procedure from its owner. The existing [deployment documentation](../../deployment/README.md) provides broader OMS context; its jobs and steps are not established here as a Maarg upgrade procedure. An upgrade-history page does not deploy a new version or authorize a rollback.
+This is a diagnostic runbook. For an approved deployment, follow [Deploy and upgrade Maarg](../../deployment/deploy-maarg.md) together with the selected release's migration instructions and the deployment owner's confirmed job and configuration. An upgrade-history page does not deploy a new version or authorize a rollback.
 
 ## Version And Verification Scope
 
@@ -122,7 +122,7 @@ Keep investigation read-only until the owner approves an exact change and its co
 6. **Verify independently.** Re-read the expected records/schema and required downstream results. Recheck logs and tracking, and run the release's relevant business sanity checks. A changed flag or task status alone is insufficient.
 7. **Close tracking with evidence.** Update the System Task only when the verified outcome supports that status. Record what remains unresolved rather than marking a partially repaired migration complete.
 
-Rollback is not simply redeploying an older binary: data and external effects may no longer be compatible. Have the deployment and database owners provide the tested Maarg release-specific recovery plan. The existing [Rollback OMS Version](../../deployment/rollback-release.md) page describes an OMS/Jenkins workflow; do not apply its image, SQL, or deletion steps to Maarg without that separately verified plan.
+Rollback is not simply redeploying an older binary: data and external effects may no longer be compatible. Use the tested Maarg release-specific recovery plan prepared in [Deploy and upgrade Maarg](../../deployment/deploy-maarg.md#4-rehearse-and-prepare-the-change). Have the deployment and database owners confirm the compatible artifact, database state, and exact recovery actions before execution.
 
 ## Troubleshooting
 
