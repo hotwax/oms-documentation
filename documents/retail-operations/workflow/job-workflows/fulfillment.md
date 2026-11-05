@@ -28,7 +28,7 @@ Job Enum ID: `JOB_ORD_FLMNT_HST`\
 Service Name: `ftpImportFile`\
 Flow: Order Fulfillment in HotWax
 
-HotWax and Shopify both maintain order fulfillment statuses. A Moqui job in HotWax ensures system integrity by synchronizing order fulfillment history between the two platforms. This job ensures that any orders marked as fulfilled in Shopify are also updated as fulfilled in HotWax, maintaining consistency across systems.
+HotWax and Shopify both maintain order fulfillment statuses. An OMS job in HotWax ensures system integrity by synchronizing order fulfillment history between the two platforms. This job ensures that any orders marked as fulfilled in Shopify are also updated as fulfilled in HotWax, maintaining consistency across systems.
 
 **How does this job work?**\
 HotWax sends an API request to Shopify to provide all the orders fulfilled from the last job run until the current timestamp. In response to this request, Shopify provides a JSON file that is imported by the ‘Order Fulfillment History’ job in HotWax and uploaded to `MDM_UPD_ORD_FMNT_HST` in MDM. From there, the `Process Bulk Import Files` job runs, and the fulfilled status is marked.

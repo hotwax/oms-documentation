@@ -8,7 +8,7 @@ payment and customer deposit jobs.
 
 1. OMS creates the order in NetSuite and receives the NetSuite internal ID.
 2. OMS records the payment as an Order Payment Preference (OPP).
-3. The Moqui `generate_CustomerDepositFeed` job exports the eligible payment.
+3. The OMS `generate_CustomerDepositFeed` job exports the eligible payment.
 4. The configured NetSuite customer deposit job processes the feed and creates
    the customer deposit.
 
@@ -72,13 +72,13 @@ amount. Then create the order in NetSuite before continuing with the deposit.
 
 In the Job Manager app, open **NetSuite** and run or verify both stages:
 
-1. Run the Moqui `generate_CustomerDepositFeed` job to generate the customer
+1. Run the OMS `generate_CustomerDepositFeed` job to generate the customer
    deposit feed.
 2. Run the configured NetSuite job that consumes the feed:
    `HC_MR_CreateCustomerDeposit` or `HC_SC_CreateCustomerDepositAndRefund`.
 3. Check the last run status for errors before retrying.
 
-The Moqui feed job and the NetSuite processing job are separate. Running only
+The OMS feed job and the NetSuite processing job are separate. Running only
 one of them does not complete the customer deposit flow.
 
 ## 4. Verify the customer deposit in NetSuite

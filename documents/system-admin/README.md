@@ -78,7 +78,7 @@ Each app on the Launchpad can be launched in three different environments:
 | **UAT (User Acceptance Testing)** | Select the bottom-right icon on the app card. |
 
 {% hint style="info" %}
-Some apps, such as Available to Promise, Order Routing, and Company, require a Maarg instance to be configured. Maarg is HotWax Commerce's API and routing management platform. If Maarg is not configured, these apps will display a `Not configured` badge and will be inaccessible.
+Some apps, such as Available to Promise, Order Routing, and Company, require an OMS API connection to be configured. If this connection is not configured, these apps will display a `Not configured` badge and will be inaccessible.
 {% endhint %}
 
 ---
