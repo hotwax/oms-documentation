@@ -83,6 +83,33 @@ For an incoming webhook backlog, inspect the relevant message and its consumer t
 
 In **Transfer sync details**, select an entry under **Issues** and compare it with **Working** checks and their time. A failed comparison is unknown, not proof that a mapping is missing.
 
+### Classify A Product That Is Missing From One System
+
+First establish which record is absent. Supplies or packaging can be valid OMS products without being Shopify products. Ask the catalog and integration owners whether the item is meant to be managed in OMS, Shopify, or both before choosing a repair.
+
+| Finding | What to verify next |
+| --- | --- |
+| The source transfer exists, but the OMS transfer was not created | Inspect the inbound import's affected record and first error in [Data Manager](../maarg/data-manager-imports.md). Confirm the source item identifier and its matching OMS product. This is upstream of Shopify native-transfer delivery. |
+| The OMS product exists, but the inbound item cannot resolve it | Compare the identifier **type and value**, not only the displayed SKU or name. Inspect the active identifier record using [Entity Inspection](../maarg/entity-inspection.md); a missing or expired identifier can differ from a missing product. |
+| The OMS transfer exists, but its product has no mapping in this Shopify shop | Establish whether an inventory-tracked Shopify variant should exist. If yes, investigate the intended product import and mapping. If the item is intentionally absent from Shopify, record the intended route and request an integration decision instead of inventing a listing or mapping. |
+| A transfer mixes Shopify merchandise with unmapped supplies | Review every active line. In the reviewed native-create path, one line without a usable Shopify inventory-item mapping blocks staging of the **whole order**. The stager does not silently omit that line and send the rest. Other valid orders in the same run can still stage. |
+
+For the reviewed NetSuite connector v3.3.9 inbound path, items in the transfer payload's first ship group resolve through an active OMS product identification using `productIdType` and `productIdValue` before transfer creation. OMS v3.3.8 checks for unresolved products before creating the order header. It also rejects an external order ID already present in OMS. Confirm whether an earlier import succeeded before approving a replay; neither a missing screen result nor a newly created product proves that retrying is needed. NetSuite product import and Shopify product import are separate paths: an OMS product need not originate in Shopify, and this transfer import does not create the missing product itself.
+
+An empty **Not found in Shopify** search is limited to that query, shop, and successful read. Check the exact identity and search errors before concluding that no variant exists. A suggestion to create a Shopify product or turn off native sync does not decide whether either action fits the business workflow. Keep intended non-Shopify items separate from genuine catalog defects.
+
+### Keep The Repair Within The Affected Route
+
+Facility mappings identify a transfer's candidate native shop; they do not classify its contents as merchandise or supplies. If both use the same warehouse, removing its mapping can affect normal transfers too. Do not use a warehouse exclusion, a shop-wide native-sync switch, or cancellation of a supply line as a substitute for an agreed product-level route.
+
+Switching to inventory adjustments also requires a real Shopify inventory-item and location target. In connector v4.3.18, an OMS product with no usable Shopify mapping produces no physical-location adjustment target. Turning off native sync does not create that target or prove that previously excluded movements were delivered. For an intentionally non-Shopify product, agree which system should hold the inventory rather than force an adjustment to an unrelated variant.
+
+Some newer Company builds expose **Detach from native sync**. This is an operational change, not a diagnostic refresh. Company v2.10.1 contains the control, but the reviewed connector v4.3.18 does not define its owner-list or detach REST resources. Verify the installed backend contract and permission before planning to use it. Do not remove ownership records manually to work around an unavailable control. If a supported version offers **Publish inventory movements as events**, reconcile prior receipts, reservations, adjustments, and resets first; recorded events alone do not establish Shopify delivery, and replaying movements already counted can duplicate inventory effects.
+
+Before an approved repair, record the intended product owner, exact identifier/mapping issue, affected transfers and lines, existing receipts, expected downstream targets, and how success will be checked. Afterward, verify OMS import and each required downstream outcome separately. Keep the case open when a source transfer is imported but its required downstream outcome remains unconfirmed.
+
+### Inspect Mapping Issues
+
 | Observation | Read-only investigation and boundary |
 | --- | --- |
 | Source or destination location is unmapped | Compare both OMS facilities with the intended Shopify locations in this connection. Native creation needs distinct source and destination Shopify locations and a write-capable connection. A facility not represented in Shopify requires an integration design decision, not an invented location mapping. |
@@ -131,4 +158,8 @@ The UI workflow was reviewed against Company App [v2.7.0](https://github.com/hot
 
 The October 10, 2026 release check found Maarg v6.3.9 as the latest distribution by publication time. Its active component manifest includes connector v4.3.8 and Poorti v3.3.3; commented entries were excluded. The higher-numbered v6.4.2 was published earlier and includes different component versions. Company v2.7.0 is a standalone app release, not a frontend version pinned by that manifest.
 
-No authenticated runtime, installed-version pairing, transfer submission, mapping change, switch change, inventory reset, or recovery outcome was verified for this guide. No new screenshot is offered as runtime proof.
+The product-absence and route-classification sections were added on November 5, 2026. They were source-checked separately against Shopify connector v4.3.18, NetSuite connector v3.3.9, OMS v3.3.8, and Company v2.10.1's [missing-mapping view](https://github.com/hotwax/company/blob/143de5652be6b7ef02d795c5bede57828ce67763/src/components/shopify/ShopifyTransferMissingMapping.vue), [transfer details](https://github.com/hotwax/company/blob/143de5652be6b7ef02d795c5bede57828ce67763/src/views/ShopifyTransferSyncDetail.vue), and [detach choices](https://github.com/hotwax/company/blob/143de5652be6b7ef02d795c5bede57828ce67763/src/components/shopify/ShopifyTransferDetachModal.vue). This scoped check does not replace the earlier guide's UI and routing baseline.
+
+All 347 distribution release records were reviewed by publication time. Maarg v6.3.22, published November 4 at 09:14:39 UTC, is newer by publication than v6.6.0. Its active default OMS suite includes Shopify connector v4.3.18, OMS v3.3.8, and Poorti v3.3.9. NetSuite connector v3.3.9 is declared but is not in that default suite. XML-commented components were excluded. Company v2.10.1 is a standalone frontend release, not a pin in the distribution manifest. Release, suite membership, enabled components, and installation remain separate checks.
+
+No authenticated runtime, installed-version pairing, transfer submission, product creation, mapping change, switch change, detach action, inventory reset, or recovery outcome was verified for this guide. The November 5 demo read could not load through the available reader; it supplied no runtime evidence. No new screenshot is offered as runtime proof.

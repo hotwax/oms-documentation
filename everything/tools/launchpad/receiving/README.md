@@ -73,6 +73,8 @@ Use [Investigate Shopify transfer sync](../../shopify/transfer-sync-troubleshoot
 
 Check the selected facility, order, item tab, and any box filter. Compare the source order's lines with the OMS order. If a line exists but its image or barcode is missing, compare the line's OMS product ID, SKU, and current catalog record. A missing display field is not evidence of a missing receipt. When Shopify supplies the product, use [Shopify product sync](../../shopify/product-sync.md) to identify its import stage before considering an approved resync.
 
+For a source transfer that never reached OMS, or for supplies intentionally absent from Shopify, follow [Classify a product that is missing from one system](../../shopify/transfer-sync-troubleshooting.md#classify-a-product-that-is-missing-from-one-system). Distinguish inbound product identification from downstream Shopify mapping before adding a product or resyncing a catalog.
+
 Do not add a replacement line, recreate the transfer, or receive directly in a second system before the owner has checked for an existing receipt and agreed how reconciliation will work.
 
 ## Escalation Checklist
