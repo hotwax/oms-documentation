@@ -87,6 +87,16 @@ This addition leaves the platform-family count unchanged and does not duplicate 
 6. **Backfill customer-driven business workflows.** Prioritize recurring support questions and confirmed release changes across OMS record inspection, decision rules, Shopify setup/imports, order routing, fulfillment, and connector administration. Reuse existing domain guides before adding another page.
 7. **Review specialized tools when needed.** Test/validation dashboards, AI operations, optional preorder, and tenant-specific screens need their own audience, version, security, and environment assessment. Their presence in a manifest alone is not a documentation priority.
 
+## Supply And Non-Shopify Product Triage: November 5, 2026
+
+The existing [transfer-sync guide](../shopify/transfer-sync-troubleshooting.md#classify-a-product-that-is-missing-from-one-system) now distinguishes an upstream transfer import that cannot resolve an OMS product from an OMS product intentionally absent from Shopify. It covers mixed-transfer whole-order staging, source identifier checks, shared-facility risks, missing inventory-adjustment targets, and newer frontend controls whose backend support must be checked. Receiving links to the same decision path rather than duplicating it.
+
+This is source-verified against Shopify connector v4.3.18, NetSuite connector v3.3.9, OMS v3.3.8, and Company v2.10.1. The latest of all 347 distribution releases by publication is Maarg v6.3.22, published November 4 at 09:14:39 UTC. Its active default OMS suite includes Shopify v4.3.18, OMS v3.3.8, and Poorti v3.3.9; NetSuite v3.3.9 is declared but not included in that suite. XML comments were excluded. Company is a separate frontend release. These checks do not establish the installed pairing or change older guide baselines.
+
+The publication tree was rechecked at `83c13def65eb5025fb682a508ca5e60d8a72b5cc`; all 26 platform families remain present. The existing transfer guide already covered general mappings and delivery, so this batch adds a narrow classification path. Open receiving-history, count, NetSuite order-push, query, and MCP drafts remain separate and are not claimed as merged. No customer data, private links, screenshots, or operational actions are included.
+
+Remaining: an approved synthetic case for a missing OMS identifier, intentionally non-Shopify supplies, a mixed transfer, prior receipt/reimport detection, and each agreed downstream outcome. Installed versions, product-selection policy, detach compatibility, and safe recovery remain unverified. The demo reader could not load the site. Preserve the existing runtime backlog; later NetSuite closure/receipt-status work needs its own tagged-source and integration-policy review.
+
 ## Product Import Backfill: October 10, 2026
 
 The existing [Shopify product sync guide](../shopify/product-sync.md) now covers missing Draft/prelaunch products, effective query filters, product/variant identity, the separate selected-product path, stage-specific verification, bounded recent views, and approved recovery. The existing navigation path and the `run-and-verify-a-sync` anchor are preserved. This is a substantive update to the current Company workflow rather than a duplicate guide or a legacy created-products-feed recipe.
