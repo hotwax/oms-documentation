@@ -25,6 +25,16 @@ The matrix groups **26 platform/support workflow families**, with **26 merged de
 
 This is guide-presence coverage, not a claim that the whole manual is complete or that the procedures have passed end-to-end tests. Runtime acceptance, safe failure examples, security-owner review, deployment differences, and customer-driven business workflows remain.
 
+## NetSuite Transfer Fulfillment Backfill: November 6, 2026
+
+The proposed [NetSuite transfer fulfillment guide](../Netsuite/transfer-fulfillment-troubleshooting.md) covers a missing-order-line boundary: a catalog product can exist while a recently added transfer line has not yet reached OMS. It separates order-update and warehouse-fulfillment imports, uses actual shipped quantities rather than ordered totals, and requires prior shipment/receipt and original-payload checks before an approved recovery. Receiving and NetSuite navigation link to it. This does not duplicate the product-identity/Shopify-route draft in PR #1962 or the uncertain-receipt history work in PR #1923.
+
+Source checks use NetSuite connector v3.6.1, OMS v3.6.0, Poorti v3.6.0, and standalone Receiving App v4.2.4. All 350 published distribution releases were reviewed by publication time: the latest is Maarg v6.6.1, published November 5 at 10:51:45 UTC. Its active manifest includes OMS and Poorti v3.6.0 in the default OMS suite; NetSuite v3.6.1 is declared but not part of that suite. XML comments were excluded. The standalone frontend release and a declared connector do not establish deployment or an enabled update feed.
+
+The read-only demo check reached sign-in. No authenticated workflow, shipment import, receipt, replay, or recovery was tested; no new screenshot is claimed. The guide remains source-verified, and proposed connector fixes are not described as released behavior. Public content contains no customer identifiers, private URLs, payloads, or logs.
+
+This batch leaves all 26 platform families and the earlier verification backlog unchanged. Next checks include an approved synthetic late-line/partial-shipment case, existing-shipment and uncertain-outcome recovery, and installed feed availability. NetSuite closure/receipt-status reconciliation and migrated inventory-import visibility remain separate research priorities; neither is generalized into an operational recipe here.
+
 ## Platform And Support Coverage
 
 | # | Workflow Family | Publication Status And Guide | Remaining Verification |
