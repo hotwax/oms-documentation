@@ -69,6 +69,10 @@ A successful app receipt also needs a separate check in any connected system. As
 
 Use [Investigate Shopify transfer sync](../../shopify/transfer-sync-troubleshooting.md) to distinguish native transfer staging, per-record delivery, mapping blockers, and inventory events for physical locations or aggregate channels. Verify the expected Shopify record and inventory target independently. Do not repeat receiving or switch integration settings to test delivery.
 
+## NetSuite Fulfillment Is Missing Or Short
+
+For warehouse-origin NetSuite transfers, use [Investigate NetSuite transfer fulfillment gaps](../../Netsuite/transfer-fulfillment-troubleshooting.md) when goods have arrived but fulfilled quantity is missing or short. Check whether a recently added order line reached OMS before its item fulfillment. An existing catalog product does not prove the transfer line exists. Keep this separate from an uncertain receipt outcome, and do not force fulfilled quantity to equal the ordered total.
+
 ## Missing Lines Or Product Details
 
 Check the selected facility, order, item tab, and any box filter. Compare the source order's lines with the OMS order. If a line exists but its image or barcode is missing, compare the line's OMS product ID, SKU, and current catalog record. A missing display field is not evidence of a missing receipt. When Shopify supplies the product, use [Shopify product sync](../../shopify/product-sync.md) to identify its import stage before considering an approved resync.

@@ -75,6 +75,7 @@
     * [Queue Errors](tools/napita/troubleshooting/troubleshooting-queue-files.md)
     * [Fetch Put SFTP Retry](tools/napita/troubleshooting/fetch-put-sftp-retry.md)
 * [Netsuite](tools/Netsuite/README.md)
+  * [Transfer Fulfillment Gaps](tools/Netsuite/transfer-fulfillment-troubleshooting.md)
   * [Managing Saved Searches](tools/Netsuite/README.md)
 * [Ofbiz](<tools/ofbiz/README (1).md>)
   * [Display Pages in Hamburger Menu](tools/ofbiz/display-pages-in-hamburger-menu.md)
