@@ -25,6 +25,34 @@ Behavior is verified against the 4.4.0 source. The import filter screenshot was 
 Uploaded files, error files, parameters, and logs may contain customer data, identifiers, internal paths, or service details. Download only when needed, retain them in approved storage, and redact them before sharing. Do not use production content in screenshots or documentation.
 {% endhint %}
 
+## Confirm Which Route Owns The File
+
+Before treating a missing MDM log as a failure, confirm that the current integration creates an MDM import for this file. An older reset-inventory configuration or a familiar screen name does not establish which route is active now.
+
+Ask the integration owner to identify the affected environment and facility scope, the supported intake location, the producer or polling job, the consuming service, and the history that records its result. If the route has changed, confirm the cutover time and whether the change applies to this facility or region. Do not assume another location uses the same route.
+
+| Confirmed route | Evidence to follow |
+| --- | --- |
+| The file creates a Data Manager import | Find its current Config ID and log ID, then check input, counts, errors, and business results below |
+| The file enters through a System Message | Find the message by type, remote, file reference, and time; follow its consumer and any resulting import or business record |
+| An integration platform transforms or forwards the file first | Correlate the source file with the generated output, delivery result, and the destination's processing record |
+
+Use [System Messages](system-messages.md) and [Service Jobs](service-jobs.md) for the stages the installed route actually uses. A successful polling or producer job does not establish that its downstream consumer finished. Keep source and transformed file references separate; their names, record counts, and timestamps can differ.
+
+### When A Legacy Inventory Import Is Missing
+
+1. Verify the environment, facility, inventory quantity basis, original file reference, expected processing time, and time zone.
+2. Confirm whether the current route still uses the old import configuration. If it does, check filters, retention, and the run evidence described below.
+3. If the route changed, locate its current processing history and correlate this file to its result. Do not conclude that all files failed because the old screen has no new entries.
+4. Check the intended product/facility inventory result at the relevant time. Distinguish a target QOH or ATP quantity from a signed adjustment; later sales, receipts, reservations, or syncs can make the current value differ from the earlier input.
+5. If the supported intake location or processing history is unknown, stop and ask the integration owner to confirm it. Do not invent a replacement job/configuration or use a manual upload as a diagnostic test.
+
+A file in an archive folder is not sufficient completion evidence. In the reviewed standard Maarg SFTP path, the poller can move a file after saving incoming messages, while message consumption is asynchronous. Follow the consumer and its business result. See [SFTP file troubleshooting](../ofbiz/data-manager/sftp-issue.md) for transport-stage checks.
+
+Do not rename or re-upload the file, rerun a polling job, reset a message, or post an inventory adjustment merely to make a legacy log appear. First establish whether any part already succeeded and obtain approval for the specific recovery scope.
+
+**Source scope for this route check:** The November 7, 2026 review used maarg-util 4.3.6 and framework 4.1.4 from the latest published distribution, Maarg 6.3.24. Its MDM list selects import-type Data Manager logs; it is not a universal history of every inventory integration. This narrow check does not replace the 4.4.0 screen/action baseline elsewhere in this guide or establish a tenant's migrated upload location. The authorized demo reached sign-in only; no file, payload, import, or inventory operation was tested.
+
 ## Find An Import
 
 1. Open `MDM > Imports > Find Import`.
@@ -175,7 +203,7 @@ Automatic retention also applies. In this baseline the runner selects older term
 
 | Symptom | Next check |
 | --- | --- |
-| Known import is missing | Clear restrictive date/status/store/instance filters, verify the environment, and ask whether retention or approved cleanup removed it |
+| Known import is missing | First confirm that the active route creates an MDM import here. Then check environment, filters, retention, and approved cleanup; use the route's own history if it bypasses this configuration |
 | Pending despite available-looking capacity | Confirm the runner node and initialization, configuration mode, and earlier queued/running work for that configuration |
 | Finished with failed records | Inspect error content and the full log, reconcile partial updates, and prepare only the approved recovery scope |
 | Failed with zero displayed records | Do not assume nothing changed. Counts may not have been finalized; verify logs and business records |
