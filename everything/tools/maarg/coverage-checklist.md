@@ -85,6 +85,9 @@ This addition leaves the platform-family count unchanged and does not duplicate 
 4. **Validate data and recovery outcomes.** Use approved isolated examples for entity formats, feed/synchronization selection and time boundaries, upgrade failures, and repair/rollback. Record resulting state and downstream verification.
 5. **Verify diagnostic collection.** Add synthetic multi-node audit/visit/performance cases and check effective collection, node scope, and retention settings.
 6. **Backfill customer-driven business workflows.** Prioritize recurring support questions and confirmed release changes across OMS record inspection, decision rules, Shopify setup/imports, order routing, fulfillment, and connector administration. Reuse existing domain guides before adding another page.
+
+   **November 7, 2026 checkpoint:** The proposed [active intake-route checks](data-manager-imports.md#confirm-which-route-owns-the-file) and revised [SFTP file troubleshooting](../ofbiz/data-manager/sftp-issue.md) distinguish missing legacy history, file movement, and final business processing. Source checks use maarg-util 4.3.6 and framework 4.1.4 from latest-published Maarg 6.3.24; declaration does not establish deployment. The demo reached sign-in only, with no operational test or new screenshot. All 26 platform families and earlier backlog remain. Next: confirm migrated intake/history mappings and approved synthetic partial-failure/recovery cases. Transfer-line draft #1965, product-route draft #1962, uncertain-receipt draft #1923, and NetSuite closure/reconciliation work remain separate.
+
 7. **Review specialized tools when needed.** Test/validation dashboards, AI operations, optional preorder, and tenant-specific screens need their own audience, version, security, and environment assessment. Their presence in a manifest alone is not a documentation priority.
 
 ## Product Import Backfill: October 10, 2026
