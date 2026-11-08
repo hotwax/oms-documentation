@@ -8,6 +8,8 @@ description: >-
 
 Use this guide when the physical delivery, the Receiving App, and a connected inventory system show different quantities. First establish what was received and saved. A closed transfer order, a completed app action, and a receipt in another system are separate observations.
 
+For a discrepancy after a NetSuite transfer-line closure, use [Reconcile Transfer Closure And Receipts](../../Netsuite/transfer-closure-reconciliation.md) to distinguish cancellation, fulfillment completion, saved receipts, and outbound closure feeds.
+
 ## Before You Start
 
 - Confirm the OMS environment, Product Store, receiving facility, app version, and incident time with its time zone.

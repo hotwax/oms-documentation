@@ -14,6 +14,7 @@
   * [Order Creation](tools/order-flow/order-creation.md)
   * [Order Import](tools/order-flow/orders-import.md)
   * [Compare Inventory And Reservation Timing](tools/order-flow/inventory-comparison.md)
+  * [NetSuite Transfer Closure And Receipts](tools/Netsuite/transfer-closure-reconciliation.md)
   * [Order Brokering](tools/order-flow/order-brokering.md)
   * [Routing UAT Readiness](tools/order-flow/uat-readiness.md)
   * [Order Fulfillment](tools/order-flow/order-fulfillment.md)
