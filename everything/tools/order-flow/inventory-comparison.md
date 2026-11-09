@@ -4,9 +4,11 @@ description: Compare inventory across systems, verify reservations for mixed ord
 
 # Compare Inventory And Reservation Timing
 
-Use this guide when ERP, HotWax Commerce, and Shopify quantities differ, a positive stock count does not result in routing, or an order containing both in-stock and preorder items has not reached the ERP.
+Use this guide when ERP, OMS, and Shopify quantities differ, a positive stock count does not result in routing, or an order containing both in-stock and preorder items has not reached the ERP.
 
 Start with one product, one location or inventory channel, and a timestamped order-line example. A stock discrepancy, a routing decision, and an order-export delay can have different causes.
+
+For Shopify Committed, Reserved or Unavailable differences, start with [Investigate Shopify holds and quantity-state changes](#investigate-shopify-holds-and-quantity-state-changes), then follow the matched event and quantity path.
 
 {% hint style="info" %}
 The checks below were reviewed on October 3–4, 2026 against these source snapshots:
@@ -18,6 +20,8 @@ The checks below were reviewed on October 3–4, 2026 against these source snaps
 
 The relevant OMS files also match **OMS 3.4.0**. The listed Order Routing, Shopify connector, and NetSuite connector revisions match releases **2.4.0**, **4.4.0**, and **3.4.0**, respectively. The NetSuite connector is optional in the Maarg 6.4.0 composition. These checks identify source baselines, not which components or integration paths are installed in your environment. The review did not execute jobs, test a live integration, or change inventory, reservations, or orders. Confirm the installed versions, configuration, and active publishing/export paths before applying an implementation-specific explanation. No fixed synchronization interval or immediate-export guarantee applies to every installation.
 {% endhint %}
+
+The Shopify hold-state procedure added on October 18, 2026 was separately checked against **Company App v2.8.0**, **Shopify connector v4.3.12**, and Shopify's linked public documentation. It does not replace the older source baselines for the other sections. The authorized demo reached sign-in only, so installed versions and live hold, delivery and recovery outcomes remain unverified.
 
 ## 1. Compare The Same Quantity
 
@@ -38,6 +42,44 @@ Record these details on both sides of the comparison:
 In the reviewed OMS implementation, online ATP can depend on contributing facilities, facility safety stock, channel thresholds, brokering eligibility, queued demand, and configured preorder/backorder holds. Some inputs already include deductions. Do not subtract reservations or safety stock a second time from a quantity that is already net of them.
 
 Keep unavailable data separate from zero. A blank quantity, loading failure, or missing search result is not a verified zero-stock balance.
+
+### Investigate Shopify Holds And Quantity-State Changes
+
+Use this procedure when one screen shows stock while another shows none, Committed remains after an order change, or a report shows Reserved falling while Committed rises. First confirm the same variant, shop, location, units and observation window. Use authorized read access to Shopify inventory/history, the relevant order or transfer, and Company. Do not adjust stock, release a hold, change inventory tracking, or reroute an order while gathering evidence.
+
+**Shopify states are separate quantities.** At one location, On hand equals Available plus Committed plus Unavailable; Incoming is outside that total. Committed includes unfulfilled orders, reserved draft orders and ready-to-ship transfers. Unavailable covers other set-aside stock, including app holds, damage and safety stock. A dash in Available can indicate that the variant is inactive at the location; it is not a zero balance. See [Shopify's inventory-state definitions](https://help.shopify.com/en/manual/inventory-and-locations/fundamentals/inventory-states).
+
+The Shopify API's `reserved` quantity is not a synonym for every OMS reservation. Shopify's [August 5, 2026 change notice](https://shopify.dev/changelog/posts/draft-order-and-transfer-shipment-inventory-is-moving-from-reserved-to-committed) describes moving active draft-order and open transfer/shipment holds from `reserved` to `committed`. Both names remain valid. That migration preserves `available` and `on_hand`, leaves earlier history unchanged, and can create a one-time correction entry. Do not infer a particular shop's migration time from the announcement date or interpret the state move as a receipt, sale, loss or OMS adjustment.
+
+**Illustrative comparison:** Shopify has 12 On hand, 3 Committed and 1 Unavailable, leaving 8 Available. Comparing OMS ATP 8 with Shopify On hand 12 does not demonstrate a four-unit sync failure. This example does not establish that OMS knows about every Shopify hold; verify the underlying demand before accepting the match.
+
+#### Build A Hold And Delivery Timeline
+
+1. In Shopify, open **Products > the product > the variant**, when applicable. Record the exact location and displayed states. In **Inventory**, open **View adjustment history**. Record each relevant activity, creator/app, time, signed change and resulting total. A dash in a history column means that adjustment did not affect that state. The product/variant history covers the last 180 days; older evidence may require Shopify's Inventory adjustment changes report. Do not enable tracking or edit quantities to make history appear. See [Shopify adjustment history](https://help.shopify.com/en/manual/inventory-and-locations/adjusting-inventory/adjustment-history).
+2. Identify the existing order, draft reservation, transfer or shipment that accounts for the hold. Compare its line quantity, location, status and release/fulfillment time with the OMS order import, reservation, cancellation or transfer evidence. A requested cancellation, a new location assignment, and a completed hold release are different milestones. Do not cancel or fulfill a record just to test whether Committed clears.
+3. In **Company > Shopify > the connection > Inventory sync**, confirm the shop and Product Store. For Company v2.8.0, open a queue row such as **Events waiting to batch** or **Batches waiting to send** under the relevant **Channel inventory events** or **Physical inventory events** card. Clear the preselected **Delivery state** when investigating all outcomes, then narrow the product, **Shopify location**, **From** and **To** dates. Wait for requested older rows to load.
+4. Open the relevant **Inventory event**. Compare **Source record/Came from**, signed change, Shopify inventory item/location, **Recorded**, **Reached Shopify**, **Decision comment** and **Batch**. Recorded is the ledger-entry time, while Reached Shopify reflects the successful message-processing timestamp; neither replaces the original business transaction's timestamp. Read the batch's contributing events, change entries and delivery errors. Inspect **Message payload** only if needed and keep it private. **Resend** is an operational action.
+5. When available, select **Current Shopify inventory > Check now** in the event dialog. Company v2.8.0 reads **Available**, **On hand**, **Incoming** and **Committed**, with a **Checked at** time. It does not show Reserved or Unavailable. This is a new read, not a reconstruction of the event-time balance. Missing identifiers disable the check; a failed read, **Not available**, or a not-stocked result does not establish zero. Obtain other state details from authorized Shopify evidence when necessary.
+6. Compare the hold's creation/release, OMS source change, event recording, batch result and Shopify adjustment in time order. Account for later sales, receipts and other apps' adjustments before comparing a historical delivery with the current snapshot. Keep a missing import, a waiting batch, an unsuccessful read and a later legitimate change as separate findings.
+
+History is bounded. Older events may also fall outside the connector's retained history. Company initially reads the newest 500 events, and its search/filters operate on loaded rows. With connector v4.3.12, older loaded rows can remain last-read snapshots while the newest slice refreshes. A first page, unchanged old row, or failed refresh is not proof that no event occurred. If Waiting persists without an explanation, ask the integration owner to inspect the underlying event status and publisher result; the badge alone does not identify the blocker. For the separately verified newer source path, see [Read Publisher Outcomes Before Retrying](#read-publisher-outcomes-before-retrying).
+
+#### Match The Publisher To The Quantity
+
+The reviewed connector v4.3.12 has distinct outbound paths:
+
+| Path | Evidence to compare |
+| --- | --- |
+| Channel inventory events | Channel ATP changes, target aggregate location and batch adjustments to Shopify **Available** |
+| Physical-location inventory events | Facility ATP changes, mapped physical location and batch adjustments to Shopify **Available** |
+| Physical on-hand reset | The separately configured physical QOH reconciliation and its `on_hand` result |
+| OMS-derived kit reset | Separate channel or physical-location kit calculations and reset results; an ordinary component event does not prove the kit refreshed |
+
+An incremental adjustment changes Shopify's existing balance; an absolute reset supplies a replacement quantity. Neither proves that every pending Shopify hold is already represented in OMS. Do not subtract the same demand twice or replace Available with QOH. For native-transfer ownership and source exclusions, continue with [Investigate Shopify Transfer Sync](../shopify/transfer-sync-troubleshooting.md#5-follow-inventory-events-to-the-correct-target); missing physical events do not automatically establish capture failure.
+
+If a recorded absolute-set response reports a quantity-comparison conflict, preserve the attempted value, comparison value, actual response and time for the integration owner. Shopify's [quantity-set contract](https://shopify.dev/docs/api/admin-graphql/latest/mutations/inventorySetQuantities) distinguishes guarded comparison from bypassing it. Inspect the installed API version and actual request; do not assume every OMS reset enables that guard, or remove it merely to force acceptance.
+
+A timeout or unclear delivery result requires destination and message reconciliation before another write. Close the case only when the same-location quantity difference, relevant hold and delivery outcome are explained. A state-only migration can be expected; an unexplained On hand or Available change needs its own transaction evidence. Do not reset, resend or alter holds solely to make two screens equal.
 
 ### Shared Sellable Availability Across Businesses
 
@@ -143,17 +185,42 @@ Inspect each relevant job's scope, schedule, paused state, recent runs, and erro
 
 If an expected record was never selected, investigate eligibility. If it was selected but remains queued, investigate processing and delivery. If the destination reports success but quantities still differ, compare the actual item, location, measure, and timestamp again. Verify the destination result before treating the discrepancy as resolved.
 
+### Read Publisher Outcomes Before Retrying
+
+Use this read-only check when a Shopify publisher job completed but inventory events remain unresolved. This subsection was verified on November 9, 2026 against **Shopify connector v4.3.19** and **Company App v2.10.1**. The latest published distribution by publication time, Maarg v6.3.24, selects that connector in its active default component set. Company is a separate frontend release. Confirm installed versions and the actual job service before applying these details; the demo remained at sign-in, so no live publisher or recovery outcome was verified.
+
+1. Follow the existing [Company inventory-sync monitor](https://github.com/hotwax/oms-documentation/blob/3c150b0c753d78547173d6b73117a5e87d7f60ca/documents/system-admin/administration/company/manage-shopify-inventory-sync.md). Identify **Channel inventory events** or **Physical inventory events**, the shop, inventory channel or Shopify location, and the affected event IDs. Keep the signed delta separate from the resulting inventory balance.
+2. In **Inventory sync > Jobs**, select the already configured publisher job and inspect **Recent runs** without changing or running it. Record its service, currently configured scope, run time, errors and available result figures. Confirm the specific run's recorded parameters through the approved run-history process before treating that scope as historical evidence. An all-shops run does not isolate the affected shop. Company v2.10.1 omits zero-valued figures in this dialog; a missing figure alone does not prove zero or a failed backend read.
+3. Read the actual result and event/batch evidence together. The result fields below belong to specific services, not every inventory job:
+
+| Evidence | Interpretation and next read |
+| --- | --- |
+| Physical drain: **Stopped because** is `unpublishable-remaining`, with **Still pending** greater than zero | In this reviewed path, a shop without a write-capable default Shopify remote can retain unassigned events while other shops continue. The drain records a warning without raising a service error for this outcome. Ask the integration owner to identify the affected shop and verify its remote selection/access; do not reconnect or expand access during diagnosis. |
+| Channel event: nonzero individual delta, no batch, and **Waiting** | Company derives this badge from the event delta and missing message, without consulting the underlying detail status. Ask the integration owner to distinguish `DETAIL_PENDING` from `DETAIL_NOOP` or terminal `DETAIL_ERROR`. The channel publisher settles a grouped zero total as no-op and a fractional grouped total as error, without creating a message for those details. Neither is automatically eligible for another ordinary batching pass. |
+| Physical event: cancelled diagnostic batch | Physical zero-sum or fractional groups instead receive a cancelled diagnostic message. Read its explanation before interpreting cancellation as a delivery failure. Such a message can count toward **Messages created** without changing Shopify inventory. |
+| Drain reports an empty eligible queue, or **Messages created** is positive | Follow the affected event to its batch, delivery result and destination evidence. These producer figures do not establish that every original event reached Shopify. They are not counts of products or units synchronized. |
+
+Keep the publisher's selection/settlement result separate from the sender's result. An event still eligible but unbatched, a no-op group, a terminal invalid group, a cancelled diagnostic message and a failed outbound batch need different investigations. Preserve the group total, underlying status, message reference if present, and first meaningful reason. If the UI does not expose that evidence, request a read-only check through the approved support process rather than inferring it from **Waiting**.
+
+For example, nonzero channel details for the same grouped inventory item and target location can offset to zero. Their individual deltas may still produce **Waiting** badges even after the backend settles them as no-op. That example does not prove that unrelated events cancel each other or that a reported stock discrepancy is resolved.
+
+Do not round a fractional group, edit ledger statuses, discard pending events, resend a cancelled diagnostic message, or start an inventory reset to clear a badge. Delta publication uses an incremental adjustment; a reset writes an absolute quantity and needs its own reconciliation and approval. Before any authorized recovery, establish the failed stage, prior attempts and their destination outcomes, the exact affected scope, and how duplicate or stale work will be prevented. Preserve an unknown delivery outcome as unknown until the owner reconciles it.
+
+Public UI source references: [Company delivery badges](https://github.com/hotwax/company/blob/143de5652be6b7ef02d795c5bede57828ce67763/src/utils/inventoryEvents.ts) and [recent-run figures](https://github.com/hotwax/company/blob/143de5652be6b7ef02d795c5bede57828ce67763/src/components/common/ServiceJobDetailsModal.vue).
+
 ## Escalate With A Small, Read-Only Evidence Pack
 
 Provide support with:
 
 - Environment, installed app/connector versions, active integration paths, and relevant configuration scope
 - Mapped product and location identifiers, exact quantity labels and units, and timestamped before/after values
+- For Shopify holds, the affected draft/order/transfer, hold creation or release evidence, named quantity states, adjustment-history creator, and the event/batch/current-read timestamps
 - For shared availability, ownership/subsidiary scope, participating stores, overlapping source facilities, destination mappings, and evidence of how each store's demand affects the pool
 - For kits, effective component quantities and per-facility calculations
 - Order and item identifiers, ship groups, queues, reservations, future-supply references, and the routing run
 - For presell, the PO receiving facility, category state, mapped Shopify variant, separate publication/storefront outcomes, and each date field's scope and source
 - Relevant job/run, message/feed, and ERP correlation IDs with the first meaningful error or waiting reason
+- For Shopify publishers, the service and run-specific scope, stopped reason and pending count when returned, underlying detail/group outcome, and each affected batch or missing message reference
 - The expected reservation, export, and release behavior, identifying whether each is confirmed configuration or a requested change
 
 Share only the necessary records through the approved support channel. Remove credentials and unrelated customer data from screenshots or logs.
