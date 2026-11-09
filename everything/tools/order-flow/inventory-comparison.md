@@ -62,7 +62,7 @@ The Shopify API's `reserved` quantity is not a synonym for every OMS reservation
 5. When available, select **Current Shopify inventory > Check now** in the event dialog. Company v2.8.0 reads **Available**, **On hand**, **Incoming** and **Committed**, with a **Checked at** time. It does not show Reserved or Unavailable. This is a new read, not a reconstruction of the event-time balance. Missing identifiers disable the check; a failed read, **Not available**, or a not-stocked result does not establish zero. Obtain other state details from authorized Shopify evidence when necessary.
 6. Compare the hold's creation/release, OMS source change, event recording, batch result and Shopify adjustment in time order. Account for later sales, receipts and other apps' adjustments before comparing a historical delivery with the current snapshot. Keep a missing import, a waiting batch, an unsuccessful read and a later legitimate change as separate findings.
 
-History is bounded. Older events may also fall outside the connector's retained history. Company initially reads the newest 500 events, and its search/filters operate on loaded rows. With connector v4.3.12, older loaded rows can remain last-read snapshots while the newest slice refreshes. A first page, unchanged old row, or failed refresh is not proof that no event occurred. If Waiting persists without an explanation, ask the integration owner to inspect the underlying event status and publisher result; the badge alone does not identify the blocker.
+History is bounded. Older events may also fall outside the connector's retained history. Company initially reads the newest 500 events, and its search/filters operate on loaded rows. With connector v4.3.12, older loaded rows can remain last-read snapshots while the newest slice refreshes. A first page, unchanged old row, or failed refresh is not proof that no event occurred. If Waiting persists without an explanation, ask the integration owner to inspect the underlying event status and publisher result; the badge alone does not identify the blocker. For the separately verified newer source path, see [Read Publisher Outcomes Before Retrying](#read-publisher-outcomes-before-retrying).
 
 #### Match The Publisher To The Quantity
 
@@ -185,6 +185,29 @@ Inspect each relevant job's scope, schedule, paused state, recent runs, and erro
 
 If an expected record was never selected, investigate eligibility. If it was selected but remains queued, investigate processing and delivery. If the destination reports success but quantities still differ, compare the actual item, location, measure, and timestamp again. Verify the destination result before treating the discrepancy as resolved.
 
+### Read Publisher Outcomes Before Retrying
+
+Use this read-only check when a Shopify publisher job completed but inventory events remain unresolved. This subsection was verified on November 9, 2026 against **Shopify connector v4.3.19** and **Company App v2.10.1**. The latest published distribution by publication time, Maarg v6.3.24, selects that connector in its active default component set. Company is a separate frontend release. Confirm installed versions and the actual job service before applying these details; the demo remained at sign-in, so no live publisher or recovery outcome was verified.
+
+1. Follow the existing [Company inventory-sync monitor](https://github.com/hotwax/oms-documentation/blob/3c150b0c753d78547173d6b73117a5e87d7f60ca/documents/system-admin/administration/company/manage-shopify-inventory-sync.md). Identify **Channel inventory events** or **Physical inventory events**, the shop, inventory channel or Shopify location, and the affected event IDs. Keep the signed delta separate from the resulting inventory balance.
+2. In **Inventory sync > Jobs**, select the already configured publisher job and inspect **Recent runs** without changing or running it. Record its service, currently configured scope, run time, errors and available result figures. Confirm the specific run's recorded parameters through the approved run-history process before treating that scope as historical evidence. An all-shops run does not isolate the affected shop. Company v2.10.1 omits zero-valued figures in this dialog; a missing figure alone does not prove zero or a failed backend read.
+3. Read the actual result and event/batch evidence together. The result fields below belong to specific services, not every inventory job:
+
+| Evidence | Interpretation and next read |
+| --- | --- |
+| Physical drain: **Stopped because** is `unpublishable-remaining`, with **Still pending** greater than zero | In this reviewed path, a shop without a write-capable default Shopify remote can retain unassigned events while other shops continue. The drain records a warning without raising a service error for this outcome. Ask the integration owner to identify the affected shop and verify its remote selection/access; do not reconnect or expand access during diagnosis. |
+| Channel event: nonzero individual delta, no batch, and **Waiting** | Company derives this badge from the event delta and missing message, without consulting the underlying detail status. Ask the integration owner to distinguish `DETAIL_PENDING` from `DETAIL_NOOP` or terminal `DETAIL_ERROR`. The channel publisher settles a grouped zero total as no-op and a fractional grouped total as error, without creating a message for those details. Neither is automatically eligible for another ordinary batching pass. |
+| Physical event: cancelled diagnostic batch | Physical zero-sum or fractional groups instead receive a cancelled diagnostic message. Read its explanation before interpreting cancellation as a delivery failure. Such a message can count toward **Messages created** without changing Shopify inventory. |
+| Drain reports an empty eligible queue, or **Messages created** is positive | Follow the affected event to its batch, delivery result and destination evidence. These producer figures do not establish that every original event reached Shopify. They are not counts of products or units synchronized. |
+
+Keep the publisher's selection/settlement result separate from the sender's result. An event still eligible but unbatched, a no-op group, a terminal invalid group, a cancelled diagnostic message and a failed outbound batch need different investigations. Preserve the group total, underlying status, message reference if present, and first meaningful reason. If the UI does not expose that evidence, request a read-only check through the approved support process rather than inferring it from **Waiting**.
+
+For example, nonzero channel details for the same grouped inventory item and target location can offset to zero. Their individual deltas may still produce **Waiting** badges even after the backend settles them as no-op. That example does not prove that unrelated events cancel each other or that a reported stock discrepancy is resolved.
+
+Do not round a fractional group, edit ledger statuses, discard pending events, resend a cancelled diagnostic message, or start an inventory reset to clear a badge. Delta publication uses an incremental adjustment; a reset writes an absolute quantity and needs its own reconciliation and approval. Before any authorized recovery, establish the failed stage, prior attempts and their destination outcomes, the exact affected scope, and how duplicate or stale work will be prevented. Preserve an unknown delivery outcome as unknown until the owner reconciles it.
+
+Public UI source references: [Company delivery badges](https://github.com/hotwax/company/blob/143de5652be6b7ef02d795c5bede57828ce67763/src/utils/inventoryEvents.ts) and [recent-run figures](https://github.com/hotwax/company/blob/143de5652be6b7ef02d795c5bede57828ce67763/src/components/common/ServiceJobDetailsModal.vue).
+
 ## Escalate With A Small, Read-Only Evidence Pack
 
 Provide support with:
@@ -197,6 +220,7 @@ Provide support with:
 - Order and item identifiers, ship groups, queues, reservations, future-supply references, and the routing run
 - For presell, the PO receiving facility, category state, mapped Shopify variant, separate publication/storefront outcomes, and each date field's scope and source
 - Relevant job/run, message/feed, and ERP correlation IDs with the first meaningful error or waiting reason
+- For Shopify publishers, the service and run-specific scope, stopped reason and pending count when returned, underlying detail/group outcome, and each affected batch or missing message reference
 - The expected reservation, export, and release behavior, identifying whether each is confirmed configuration or a requested change
 
 Share only the necessary records through the approved support channel. Remove credentials and unrelated customer data from screenshots or logs.
