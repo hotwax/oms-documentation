@@ -25,6 +25,68 @@ Behavior is verified against the 4.4.0 source. The import filter screenshot was 
 Uploaded files, error files, parameters, and logs may contain customer data, identifiers, internal paths, or service details. Download only when needed, retain them in approved storage, and redact them before sharing. Do not use production content in screenshots or documentation.
 {% endhint %}
 
+## Confirm Which Route Owns The File
+
+Before treating a missing MDM log as a failure, confirm that the current integration creates an MDM import for this file. An older reset-inventory configuration or a familiar screen name does not establish which route is active now.
+
+Ask the integration owner to identify the affected environment and facility scope, the supported intake location, the producer or polling job, the consuming service, and the history that records its result. If the route has changed, confirm the cutover time and whether the change applies to this facility or region. Do not assume another location uses the same route.
+
+| Confirmed route | Evidence to follow |
+| --- | --- |
+| The file creates a Data Manager import | Find its current Config ID and log ID, then check input, counts, errors, and business results below |
+| The file enters through a System Message | Find the message by type, remote, file reference, and time; follow its consumer and any resulting import or business record |
+| An integration platform transforms or forwards the file first | Correlate the source file with the generated output, delivery result, and the destination's processing record |
+
+Use [System Messages](system-messages.md) and [Service Jobs](service-jobs.md) for the stages the installed route actually uses. A successful polling or producer job does not establish that its downstream consumer finished. Keep source and transformed file references separate; their names, record counts, and timestamps can differ.
+
+### When A Legacy Inventory Import Is Missing
+
+1. Verify the environment, facility, inventory quantity basis, original file reference, expected processing time, and time zone.
+2. Confirm whether the current route still uses the old import configuration. If it does, check filters, retention, and the run evidence described below.
+3. If the route changed, locate its current processing history and correlate this file to its result. Do not conclude that all files failed because the old screen has no new entries.
+4. Check the intended product/facility inventory result at the relevant time. Distinguish a target QOH or ATP quantity from a signed adjustment; later sales, receipts, reservations, or syncs can make the current value differ from the earlier input.
+5. If the supported intake location or processing history is unknown, stop and ask the integration owner to confirm it. Do not invent a replacement job/configuration or use a manual upload as a diagnostic test.
+
+A file in an archive folder is not sufficient completion evidence. In the reviewed standard Maarg SFTP path, the poller can move a file after saving incoming messages, while message consumption is asynchronous. Follow the consumer and its business result. See [SFTP file troubleshooting](../ofbiz/data-manager/sftp-issue.md) for transport-stage checks.
+
+Do not rename or re-upload the file, rerun a polling job, reset a message, or post an inventory adjustment merely to make a legacy log appear. First establish whether any part already succeeded and obtain approval for the specific recovery scope.
+
+**Source scope for this route check:** The November 7, 2026 review used maarg-util 4.3.6 and framework 4.1.4 from the latest published distribution, Maarg 6.3.24. Its MDM list selects import-type Data Manager logs; it is not a universal history of every inventory integration. This narrow check does not replace the 4.4.0 screen/action baseline elsewhere in this guide or establish a tenant's migrated upload location. The authorized demo reached sign-in only; no file, payload, import, or inventory operation was tested.
+
+### Check Inventory Row Identity And Outcome
+
+Use this check when an inventory row reports an invalid product/location, or finishes without the expected stock change. First confirm the installed consumer. The details below apply only to Poorti **3.6.0** services `co.hotwax.poorti.FulfillmentServices.reset#ProductFacilityInventory` and `co.hotwax.poorti.FulfillmentServices.adjust#InventoryDeltaByIdentification`, with the OMS **3.6.0** inventory lookup. A familiar file name or legacy reset screen does not establish that your route calls either service.
+
+1. Open the confirmed MDM configuration and read **Import Service Name**, or have the integration owner identify the System Message consumer and any wrapper/transform. Compare the actual service input with the original file. Use [Data Manager Configuration](data-manager-configuration.md) for template and field-name checks; do not copy columns between services.
+2. Confirm the quantity contract. The reset consumes an absolute `externalInventoryLevel` interpreted by `inventoryResetEnumId`; the adjustment consumes a signed `availableDelta`. The reset also requires its `resetDataResourceId` source reference and a valid reset type. Missing quantity is not zero. Do not fill a blank with zero merely to pass validation. For QOH, ATP and downstream Shopify quantity comparisons, use [Compare Inventory And Reservation Timing](../order-flow/inventory-comparison.md).
+3. Check the exact identifiers supplied to that consumer:
+
+| Input choice | Read-only check |
+| --- | --- |
+| Internal product ID | Verify the exact `productId` in this environment. When supplied, it takes precedence over the external identifier pair in the reviewed lookup. A displayed product name or matching-looking SKU is not an internal ID. |
+| External product identifier | Reset uses `productIdentType` and `productIdentValue`; adjustment uses `idType` and `idValue`. Check the corresponding effective **GoodIdentification** type/value record, including its dates. Preserve leading zeros and the actual transformed value. If several products share that identity, escalate the ambiguity rather than choosing a product or deleting a mapping. |
+| Internal or external facility | `facilityId` takes precedence. Otherwise `externalFacilityId` is matched to **Facility.externalId**. A facility name, Shopify location ID or another system's code is not interchangeable with that field. The reviewed lookup rejects virtual facilities. |
+| Product/facility linkage | Inspect the existing relationship and inventory item with the owner. Missing linkage alone is not a universal validation failure: these services can create it. Do not execute their find-or-create lookup as a diagnostic read or manually add linkage just to clear an error. |
+
+Read the first actual error and identify the stage that produced it. These checks do not guarantee that every invalid input receives the same message or that one corrected field resolves the remaining prerequisites.
+
+#### Distinguish Skipped, Unchanged And Applied Rows
+
+A non-error response does not prove that identity was validated or inventory changed. In the reviewed services:
+
+| Observed input or result | What to verify |
+| --- | --- |
+| Reset to zero using external product identity, with no matching effective product | After its required-input and reset-type checks, the reset can return a skip message before facility lookup. This is not evidence that the facility mapping is valid or that a product was created. |
+| Adjustment with `availableDelta` equal to zero | It returns `applied=false` with a zero-delta skip reason before product/facility identity checks. A zero-row test therefore cannot validate those mappings. |
+| Resolved reset whose calculated QOH and ATP differences are both zero | It records **ExternalInventoryReset** history without adding an inventory-detail change. History presence alone does not establish a stock change. |
+| Adjustment that reaches processing | Inspect the reported applied delta, `applied`, `skipReason` and `physicalInventoryId` when retained by the route. When negative-inventory protection applies, the requested reduction can be limited or skipped according to QOH; do not assume the requested amount was fully applied. |
+
+Follow the route's retained result, import error content, reset or physical-inventory reference, and resulting inventory detail. If the UI does not expose a field, request an authorized read-only check rather than inventing another upload or API call. Keep skipped rows separate from validation failures, zero-difference resets and actual changes. Match the same product, facility, quantity basis and processing time; a later current balance can include other transactions.
+
+These are mutating services, not validation tools. Do not submit zero rows to test identity, replace a reset with a delta, change the reset basis, create products/facilities, or replay a file during diagnosis. Before an approved correction, reconcile earlier attempts and partial effects, resolve the actual input or mapping cause, and agree on the precise affected scope. OMS processing and subsequent Shopify publication require separate evidence.
+
+**Source scope:** This subsection was checked on November 11, 2026 against Poorti 3.6.0 and OMS 3.6.0, with maarg-util 4.6.2 for configuration/history displays and framework 4.2.2 for required numeric input validation. These are the source baselines selected by latest-published Maarg 6.6.3. Older sections retain their stated baselines. This does not establish an installed route, supported upload location, or runtime outcome. The authorized demo again reached sign-in only; no input was submitted or inventory changed.
+
 ## Find An Import
 
 1. Open `MDM > Imports > Find Import`.
@@ -175,7 +237,7 @@ Automatic retention also applies. In this baseline the runner selects older term
 
 | Symptom | Next check |
 | --- | --- |
-| Known import is missing | Clear restrictive date/status/store/instance filters, verify the environment, and ask whether retention or approved cleanup removed it |
+| Known import is missing | First confirm that the active route creates an MDM import here. Then check environment, filters, retention, and approved cleanup; use the route's own history if it bypasses this configuration |
 | Pending despite available-looking capacity | Confirm the runner node and initialization, configuration mode, and earlier queued/running work for that configuration |
 | Finished with failed records | Inspect error content and the full log, reconcile partial updates, and prepare only the approved recovery scope |
 | Failed with zero displayed records | Do not assume nothing changed. Counts may not have been finalized; verify logs and business records |

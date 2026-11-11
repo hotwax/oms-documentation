@@ -90,7 +90,7 @@
     * [Add New Variance Reason](tools/ofbiz/inventory/README.md)
   * [Data Manager Configuration](tools/ofbiz/data-manager/README.md)
     * [Create a Job Using Data Manager Configuration](tools/ofbiz/README.md)
-    * [SFTP Issue](tools/ofbiz/data-manager/sftp-issue.md)
+    * [SFTP File Troubleshooting](tools/ofbiz/data-manager/sftp-issue.md)
 * [Shopify](tools/shopify/README.md)
   * [How to Access Shopify POS APP](tools/shopify/README.md)
   * [How to Create Draft Order in Shopify](tools/shopify/draft-order.md)
