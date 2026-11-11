@@ -53,6 +53,40 @@ Do not rename or re-upload the file, rerun a polling job, reset a message, or po
 
 **Source scope for this route check:** The November 7, 2026 review used maarg-util 4.3.6 and framework 4.1.4 from the latest published distribution, Maarg 6.3.24. Its MDM list selects import-type Data Manager logs; it is not a universal history of every inventory integration. This narrow check does not replace the 4.4.0 screen/action baseline elsewhere in this guide or establish a tenant's migrated upload location. The authorized demo reached sign-in only; no file, payload, import, or inventory operation was tested.
 
+### Check Inventory Row Identity And Outcome
+
+Use this check when an inventory row reports an invalid product/location, or finishes without the expected stock change. First confirm the installed consumer. The details below apply only to Poorti **3.6.0** services `co.hotwax.poorti.FulfillmentServices.reset#ProductFacilityInventory` and `co.hotwax.poorti.FulfillmentServices.adjust#InventoryDeltaByIdentification`, with the OMS **3.6.0** inventory lookup. A familiar file name or legacy reset screen does not establish that your route calls either service.
+
+1. Open the confirmed MDM configuration and read **Import Service Name**, or have the integration owner identify the System Message consumer and any wrapper/transform. Compare the actual service input with the original file. Use [Data Manager Configuration](data-manager-configuration.md) for template and field-name checks; do not copy columns between services.
+2. Confirm the quantity contract. The reset consumes an absolute `externalInventoryLevel` interpreted by `inventoryResetEnumId`; the adjustment consumes a signed `availableDelta`. The reset also requires its `resetDataResourceId` source reference and a valid reset type. Missing quantity is not zero. Do not fill a blank with zero merely to pass validation. For QOH, ATP and downstream Shopify quantity comparisons, use [Compare Inventory And Reservation Timing](../order-flow/inventory-comparison.md).
+3. Check the exact identifiers supplied to that consumer:
+
+| Input choice | Read-only check |
+| --- | --- |
+| Internal product ID | Verify the exact `productId` in this environment. When supplied, it takes precedence over the external identifier pair in the reviewed lookup. A displayed product name or matching-looking SKU is not an internal ID. |
+| External product identifier | Reset uses `productIdentType` and `productIdentValue`; adjustment uses `idType` and `idValue`. Check the corresponding effective **GoodIdentification** type/value record, including its dates. Preserve leading zeros and the actual transformed value. If several products share that identity, escalate the ambiguity rather than choosing a product or deleting a mapping. |
+| Internal or external facility | `facilityId` takes precedence. Otherwise `externalFacilityId` is matched to **Facility.externalId**. A facility name, Shopify location ID or another system's code is not interchangeable with that field. The reviewed lookup rejects virtual facilities. |
+| Product/facility linkage | Inspect the existing relationship and inventory item with the owner. Missing linkage alone is not a universal validation failure: these services can create it. Do not execute their find-or-create lookup as a diagnostic read or manually add linkage just to clear an error. |
+
+Read the first actual error and identify the stage that produced it. These checks do not guarantee that every invalid input receives the same message or that one corrected field resolves the remaining prerequisites.
+
+#### Distinguish Skipped, Unchanged And Applied Rows
+
+A non-error response does not prove that identity was validated or inventory changed. In the reviewed services:
+
+| Observed input or result | What to verify |
+| --- | --- |
+| Reset to zero using external product identity, with no matching effective product | After its required-input and reset-type checks, the reset can return a skip message before facility lookup. This is not evidence that the facility mapping is valid or that a product was created. |
+| Adjustment with `availableDelta` equal to zero | It returns `applied=false` with a zero-delta skip reason before product/facility identity checks. A zero-row test therefore cannot validate those mappings. |
+| Resolved reset whose calculated QOH and ATP differences are both zero | It records **ExternalInventoryReset** history without adding an inventory-detail change. History presence alone does not establish a stock change. |
+| Adjustment that reaches processing | Inspect the reported applied delta, `applied`, `skipReason` and `physicalInventoryId` when retained by the route. When negative-inventory protection applies, the requested reduction can be limited or skipped according to QOH; do not assume the requested amount was fully applied. |
+
+Follow the route's retained result, import error content, reset or physical-inventory reference, and resulting inventory detail. If the UI does not expose a field, request an authorized read-only check rather than inventing another upload or API call. Keep skipped rows separate from validation failures, zero-difference resets and actual changes. Match the same product, facility, quantity basis and processing time; a later current balance can include other transactions.
+
+These are mutating services, not validation tools. Do not submit zero rows to test identity, replace a reset with a delta, change the reset basis, create products/facilities, or replay a file during diagnosis. Before an approved correction, reconcile earlier attempts and partial effects, resolve the actual input or mapping cause, and agree on the precise affected scope. OMS processing and subsequent Shopify publication require separate evidence.
+
+**Source scope:** This subsection was checked on November 11, 2026 against Poorti 3.6.0 and OMS 3.6.0, with maarg-util 4.6.2 for configuration/history displays and framework 4.2.2 for required numeric input validation. These are the source baselines selected by latest-published Maarg 6.6.3. Older sections retain their stated baselines. This does not establish an installed route, supported upload location, or runtime outcome. The authorized demo again reached sign-in only; no input was submitted or inventory changed.
+
 ## Find An Import
 
 1. Open `MDM > Imports > Find Import`.
