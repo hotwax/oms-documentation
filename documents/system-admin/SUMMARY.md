@@ -39,6 +39,7 @@
     * [Troubleshooting](administration/users/troubleshooting/README.md)
       * [Troubleshoot application access](administration/users/troubleshooting/application-access-issue.md)
       * [Troubleshoot bulk employee import](administration/users/troubleshooting/bulk-import-employee.md)
+  * [Document templates](administration/company/manage-document-templates.md)
   * [App versions](administration/company/manage-app-versions.md)
   * [Settings](administration/company/settings.md)
 * [User Permissions](administration/user-permissions/introduction.md)

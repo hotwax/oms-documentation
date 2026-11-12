@@ -18,6 +18,7 @@ Use the **Company App** to set up and maintain an Order Management System (OMS) 
 | Facilities | Create and manage facilities, facility groups, locations, staff, and parking queues |
 | Users | Create users and manage Security Groups and App Permissions |
 | App Version | Choose hosted releases for each instance and environment, review release notes, and inspect version history |
+| Document Templates | Edit, preview, and choose the templates that print packing slips and pick lists (early alpha) |
 | Settings | Review account, instance, version, timezone, and data-fetch information |
 
 The menu reflects your permissions. Contact an administrator when a required page is missing.
@@ -38,6 +39,7 @@ Use these guides for regular administration:
 * [Manage Shopify Order Sync](manage-shopify-order-sync.md)
 * [Manage NetSuite settings](configure-netsuite-setting.md)
 * [Manage Klaviyo](manage-klaviyo.md)
+* [Edit document templates](manage-document-templates.md)
 * [Manage facilities](../facilities/manage-facility-details.md)
 * [Manage users](../users/manage-user.md)
 * [Manage app versions](manage-app-versions.md)
