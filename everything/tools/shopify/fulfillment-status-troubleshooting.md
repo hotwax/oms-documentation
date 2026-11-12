@@ -103,6 +103,41 @@ In the documented NetSuite sales-order flow, `HC_SC_CreateItemFulfillment` and `
 
 On the Cash Sale path, task submission or an archived input file is not enough to prove a successful import. Check the terminal import result and actual Cash Sale record. Likewise, a consumed upstream fulfillment feed is not proof that every Shopify fulfillment was accepted. Verify the downstream fulfillment ID and the relevant line quantities.
 
+### Trace A Later Shopify Payment To Its NetSuite Deposit
+
+Use this check when an order already exists in NetSuite but a later Shopify charge has no corresponding Customer Deposit. An address or tax change can change the order amount; it does not establish whether a payment succeeded, reached OMS or qualified for the installed deposit route.
+
+**Scope:** This subsection uses Shopify connector 4.6.3 and the optional NetSuite connector 3.6.2. In this Shopify baseline, processing an existing order can import transaction IDs not already recorded in `ShopifyTransactionHistory`. The reviewed NetSuite batch route selects individual eligible payments. Do not infer that all post-checkout changes are unsupported, or that every installation runs this route automatically.
+
+#### Confirm The Payment And Active Route
+
+1. In the authorized Shopify order view, read the payment event and its transaction ID, kind, status, amount, currency and time. Separate a successful sale or capture from an authorization, pending/failed transaction, refund or a change to the order total alone.
+2. Compare the same transaction with its OMS payment preference and transaction-history record. Preserve the Shopify transaction ID and OMS payment identity separately; `manualRefNum` links the reviewed OMS payment to the Shopify transaction. A capture can update an earlier authorization preference, so do not require a new preference row for every event. Match shop-currency amounts separately from presentment amounts/currency. Do not compare only total paid against the current order total or treat the original deposit as evidence for the later payment.
+3. Have the integration owner identify the configured Shopify order-update/import path, NetSuite deposit producer, due view, rules, remote and result consumer. Read existing [Service Jobs](../maarg/service-jobs.md) and [System Messages](../maarg/system-messages.md). A schedule or run for initial order creation does not establish that later payments are selected.
+4. For the reviewed per-payment batch route, use authorized, narrowly filtered [Entity Inspection](../maarg/entity-inspection.md) to correlate the payment with its `NetSuiteCustomerDepositDetail` tracking record by `orderPaymentPreferenceId` and `systemMessageRemoteId`. If those records are not exposed to your role, request a read-only check from the owner. Do not invent a deposit-monitor screen or substitute legacy feed-job instructions.
+
+The current `NetSuiteDepositDueView` requires a settled payment, an effective NetSuite order identification, an effective company **PaymentMethod** record with its NetSuite `externalId`, and matching Shopify transaction history. It excludes payments already claimed in the deposit tracking table and applies exchange-related exclusions. The producer's configured due view and rules determine the actual population. Read their saved conditions; do not broaden them to make a payment appear.
+
+The reviewed due view does not itself impose the original order's creation-date cutoff. Older order/feed selection windows, different wrappers and deployment rules can produce different outcomes. Confirm the exact route before attributing a missing later payment to order age.
+
+#### Locate The First Missing Payment Stage
+
+| Observation | Read-only next check |
+| --- | --- |
+| Only the order total or tax changed | Establish whether a successful additional payment transaction exists. A revised total is not payment evidence. |
+| Shopify transaction exists but its OMS payment/history is missing | Trace the order-update/import result and the exact transaction identity. Do not capture again, recreate the order or run an unrestricted order import. |
+| OMS payment exists but no deposit claim exists | Check settled status, order identification, payment-method mapping, transaction history, exchange handling and the actual selection rules. Absence from one run is not proof of a rejected deposit. |
+| Claim has `errorMessage` and no `systemMessageId` | Inspect preparation evidence. A tracking record can be saved for a preparation error before any batch is sent, and its presence affects later selection. |
+| Claim has a batch/message reference, including a claim with an error | Follow that saved request, remote submission and per-payment result. A produced/sent message or completed batch does not prove this payment's deposit succeeded. |
+| Result records `netsuiteDepositId` or an error | Correlate the result by its external reference to the exact payment. Verify the actual NetSuite transaction even when an ID is stored; preserve missing or uncertain result evidence before any retry. |
+| Deposit exists but billing or balance still differs | Compare its amount, currency, linked customer/order and any required payment application. Deposit creation, invoice creation and payment application are separate outcomes. |
+
+Keep the original and later payments separate throughout the comparison. Reconcile each request and result rather than inferring success from one order-level badge, the presence of any deposit, or a reduced batch count.
+
+Before an approved correction, establish whether NetSuite already accepted the deposit, whether an acknowledgement is missing, and whether any related processing is still active. Do not delete tracking records, clear transaction history, change payment status, move a selection cursor, resend a whole batch or manually create another deposit to test the diagnosis. Have the financial and integration owners agree on the exact affected payment and accounting outcome.
+
+**Verification boundary:** Checked on November 12, 2026 against the source versions above. Latest-published Maarg 6.6.3 includes Shopify 4.6.3 in its default suite and declares NetSuite 3.6.2 as optional; this does not establish installation or scheduling. Earlier sections retain their stated baselines. The authorized demo reached sign-in only. No payment, deposit, import, replay or accounting operation was performed.
+
 ## 6. Agree On A Bounded Recovery
 
 Escalate with the first incomplete stage, its owner, expected result, evidence, and business deadline. The next action depends on the finding:

@@ -140,7 +140,7 @@ After the approved action, verify:
 4. The OMS NetSuite identification and any separate acknowledgement.
 5. Remaining exceptions using the same criteria, rather than only a reduced pending count.
 
-For an order that already exists but lacks fulfillment or billing, continue with [Fulfillment And Invoice Status Troubleshooting](../shopify/fulfillment-status-troubleshooting.md). Inventory publication and Shopify Available quantities are separate workflows; an order-export mapping repair does not establish inventory synchronization.
+For an order that already exists but lacks fulfillment or billing, continue with [Fulfillment And Invoice Status Troubleshooting](../shopify/fulfillment-status-troubleshooting.md). If an existing order has a later Shopify charge without a matching Customer Deposit, use [Trace A Later Shopify Payment To Its NetSuite Deposit](../shopify/fulfillment-status-troubleshooting.md#trace-a-later-shopify-payment-to-its-netsuite-deposit) to follow the individual payment and active deposit route. Inventory publication and Shopify Available quantities are separate workflows; an order-export mapping repair does not establish inventory synchronization.
 
 Escalate privately with versions, incident time, Product Store, group/rule/job/log references, order and line identities, exact field types, expected versus saved/sent values, the first meaningful error and whether the destination outcome is known. Redact private URLs, credentials, personal data and unrelated payload content.
 
