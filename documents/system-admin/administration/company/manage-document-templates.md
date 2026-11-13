@@ -22,15 +22,17 @@ Each document has one **live template**. Every packing slip or pick list prints 
 
 Making a revision live copies its code into the live template. That adds a revision to the live template's history, and the next print uses it. Deleting a template later doesn't change what prints.
 
-There are three documents:
+Every instance has three documents:
 
 * Packing slip
 * Packing slip and shipping label
 * Pick list
 
+Your instance can add documents of its own, such as a 4x6 pick ticket or a transfer order pick list. They appear as more cards and work the same way.
+
 ## Before you start
 
-* Template access comes with admin permissions. If `Document Templates` is missing from the menu, ask an administrator for access.
+* Editing, previewing and making templates live needs the `SUPER` or `WAREHOUSE_MANAGER` security group, unless your HotWax administrator has granted it to another group. If your group has it, the editing buttons appear; otherwise you can read templates but not change them.
 * Templates are FreeMarker XSL-FO code. Basic HTML or XML experience helps when you change a layout.
 
 ## Open Document Templates
@@ -93,13 +95,13 @@ If you have unsaved changes, the preview shows the saved revision. Save first to
 
 ### Choose the order to preview with
 
-The preview starts on the newest recent shipment, or pick list for the pick list. To test a particular case:
+The preview starts on the newest recent document the template prints from: a shipment for a packing slip, a pick list for a pick list, or an approved transfer order for a transfer order document. To test a particular case:
 
 1. Select `Choose order`.
-2. Search by order name, order ID, or external ID.
-3. Select one of the order's shipments, or pick lists for the pick list.
+2. Search by order name, order ID, or external ID. For a transfer order document, search by transfer order name or ID.
+3. Select one of the order's shipments or pick lists, or the transfer order.
 
-The search covers approved orders that aren't picked yet, are picked, or are packed. A packing slip prints from a shipment and a pick list from a pick list, so only orders that have one appear.
+The search covers approved orders that aren't picked yet, are picked, or are packed. A packing slip prints from a shipment and a pick list from a pick list, so only orders that have one appear. Transfer order documents list approved transfer orders.
 
 <figure><img src="../../.gitbook/assets/company/company-document-templates-choose-order.png" alt="Choose an order to preview with window showing a search for 5955 and one matching shipment"><figcaption><p>Search for the exact order you want to test with.</p></figcaption></figure>
 
