@@ -103,6 +103,45 @@ Do not use **Un-synced updates** as an eligibility checklist. In Company v2.7.0 
 
 The empty search initially shows only 15 recently updated products. A text search loads results in pages; **Un-synced updates** shows at most the first 100 products. **Select all** applies to the loaded visible list, not the whole Shopify catalog, and selections can remain while the search changes. Review the complete selected count before an approved submission.
 
+## Audit catalog readiness separately from import success
+
+Use this read-only review when an unexpected order reveals a catalog setup problem, or before a planned launch. A successful product import proves neither that inventory is controlled correctly nor that an order can proceed to an ERP. Do not use the import's synced count as a catalog-readiness score.
+
+### Define the scope before marking anything checked
+
+Agree on the shop, Product Store, products or collection, intended sales channels, locations, launch time, and review owner. Record one row per **Shopify variant**, with its parent product ID, variant ID, inventory-item ID, SKU/barcode, mapped OMS product ID, and observation time. Keep this worksheet private. A product with several variants needs several checks.
+
+Use the read-only lookup and **View mappings** described above for a bounded selection. The picker's recent results, loaded pages, and **Un-synced updates** are not a whole-catalog audit. For a wider review, ask the catalog owner for an authorized complete listing, retain its filters and extraction time, and account for every page and variant. Mark unreadable or missing fields **not established**, not passed. Do not start an import, change an identifier strategy, or create a mapping to fill a gap in the worksheet.
+
+### Check independent readiness conditions
+
+| Condition | What to verify without changing it |
+| --- | --- |
+| Intended sale | Confirm the variant belongs in this launch or assortment. Product status, intended channel publication and launch timing are separate from whether OMS can import it. Preserve intentionally unpublished products and approved exceptions. |
+| Catalog identity | Apply the Product Store's actual identifier strategy. A blank SKU is a different finding when SKU is the identifier than when the strategy uses barcode or Shopify variant ID. Compare exact values, including whitespace, and investigate duplicate identifiers. A matching title or a populated SKU alone does not prove the correct OMS mapping. |
+| Inventory tracking and sales policy | Read Shopify's inventory tracking and **Continue selling when out of stock** setting for each variant. Establish whether each setting is intentional. Confirm the intended online selling policy and any POS exception; an untracked variant requires separate review. Do not enable tracking or disable continued selling as an audit shortcut. |
+| Inventory destination and result | Confirm the actual Shopify inventory item and location, the OMS facility or aggregate channel, and the configured inventory owner. Follow the existing [inventory comparison](../order-flow/inventory-comparison.md) and [transfer/inventory investigation](transfer-sync-troubleshooting.md) for quantities and delivery. A valid product mapping does not establish that the latest quantity reached the right target. |
+| Downstream item identity | If the assortment must reach an ERP, have its integration owner verify the exact source identifier and effective item mapping required by that route. A Shopify-to-OMS variant mapping does not establish a NetSuite item link or order-export eligibility. Items intentionally excluded from an ERP need an explicit business decision, not an invented mapping. |
+| Price and order evidence | Record the current variant price and currency separately from the affected order line, its discounts, quantity, currency and creation/change times. Do not call a product free, incorrectly priced, or fixed from conflicting screenshots or a present-day catalog value alone. |
+
+Shopify explains that [SKUs are generally optional](https://help.shopify.com/en/manual/products/details/sku), while integrations can depend on them. Its [continued-selling guidance](https://help.shopify.com/en/manual/inventory-and-locations/setup/selling-when-out-of-stock) distinguishes online behavior from POS, where staff can sell below zero. Its [product-status guidance](https://help.shopify.com/en/manual/products/product-status) separates status from channel availability; an Unlisted product can still be purchased through its direct URL. Do not treat a missing SKU, zero stock or hidden search listing as a universal sales block.
+
+Treat the conditions independently: a product can be imported but not ready for its intended sale or fulfillment route. Conversely, a missing optional SKU is not a universal import failure. Shopify's inventory and selling settings should be reviewed in their own right, not inferred from a successful OMS import.
+
+### Separate a catalog correction from existing orders
+
+Give each exception an owner, intended outcome, affected variants and dependent orders, with evidence and any unknowns. Do not remove duplicate mappings, merge products, add together stock from two identities, reset inventory, publish a product, change its price, or release/replay orders merely to make the worksheet pass. Each is a separate correction with a defined scope and approval.
+
+If an order already exists, inspect its current lines and statuses independently. A catalog correction does not establish what an earlier order contains. A reported partial cancellation does not prove that the remaining lines are paid, ready for export, or safe to release. Ask the order/integration owner to verify the remaining quantities, payments, mappings and prior downstream outcomes before deciding the next action. No test purchase or operational write is needed for this audit.
+
+Close the review only when the agreed scope is accounted for and each exception has either verified evidence of its intended configuration or an explicitly recorded unresolved decision. Recheck affected variants and downstream outcomes after an approved correction; retain the earlier observation rather than overwriting the history. This is a review checklist, not an automatic catalog scanner or a guarantee against overselling.
+
+### Source and runtime boundary for this audit
+
+This subsection was checked on November 13, 2026 against Shopify connector **v4.6.3**, the explicit modern-source pin in Maarg **v6.6.3**. The reviewed product importer warns when the selected identifier is missing rather than establishing a universal rejection. Its product-update query and import processing do not certify Shopify inventory tracking, continued-selling policy, channel availability or order readiness. Physical inventory targeting requires its own item/location mappings and publication configuration. The rest of this guide retains its separately stated Company v2.7.0/connector v4.3.8 baseline.
+
+The latest distribution **by publication time** is now maintenance-line Maarg **v5.5.37**, published November 12 at 12:44:33 UTC; it pins Shopify connector **v3.5.11**, not v4.6.3. Company **v2.10.1** is a separate standalone release. These facts are not evidence of a deployed upgrade, downgrade or installed app/connector pairing. Confirm the installed route before applying release-specific behavior. The authorized demo remained at sign-in; no live catalog audit, sale, mapping change, inventory change or order recovery was tested.
+
 ## Run and verify a sync
 
 ### One approved selected-product import
