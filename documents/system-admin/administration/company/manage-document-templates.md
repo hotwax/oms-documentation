@@ -32,7 +32,7 @@ Your instance can add documents of its own, such as a 4x6 pick ticket or a trans
 
 ## Before you start
 
-* Editing, previewing and making templates live needs the `Document Template Admin` security group. Other users can read templates but not change them. Ask an administrator to add you to the group.
+* Editing, previewing and making templates live is access your HotWax administrator grants to chosen security groups, such as warehouse managers. If your group has it, the editing buttons appear; otherwise you can read templates but not change them. Ask an administrator which group has access.
 * Templates are FreeMarker XSL-FO code. Basic HTML or XML experience helps when you change a layout.
 
 ## Open Document Templates
