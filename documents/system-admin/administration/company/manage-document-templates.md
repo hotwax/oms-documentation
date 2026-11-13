@@ -32,7 +32,7 @@ Your instance can add documents of its own, such as a 4x6 pick ticket or a trans
 
 ## Before you start
 
-* Template access comes with admin permissions. If `Document Templates` is missing from the menu, ask an administrator for access.
+* Editing, previewing and making templates live needs the `Document Template Admin` security group. Other users can read templates but not change them. Ask an administrator to add you to the group.
 * Templates are FreeMarker XSL-FO code. Basic HTML or XML experience helps when you change a layout.
 
 ## Open Document Templates
