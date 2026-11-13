@@ -18,6 +18,8 @@ After signing in you land on the Transfer Orders page, with an Open tab listing 
 - Each entry shows the order status and creation timestamp.
 - Only TOs for your destination facility appear.
 
+![Transfer Orders list showing search, Open and Completed tabs, and available orders](../.gitbook/assets/receiving-transfer-orders-list.png)
+
 ### Review TO details
 
 Opening a TO shows:
@@ -25,6 +27,8 @@ Opening a TO shows:
 - Total number of items to receive.
 - Item list with product name, image, SKU, and ordered quantity.
 - A progress bar that indicates how much of each item has been received.
+
+![Transfer Order details showing the scan field, item quantities, progress, and receiving actions](../.gitbook/assets/receiving-transfer-order-detail.png)
 
 This view helps you verify items before starting the receiving process.
 
