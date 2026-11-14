@@ -4,9 +4,9 @@ description: Trace a missing NetSuite sales order through order-push rules, Data
 
 # Diagnose NetSuite Order Push And Mappings
 
-Use this guide when a sales order is missing from NetSuite, an order-push run looks successful without a destination order, or NetSuite rejects a sales-channel, department, or location reference. Start with one order and identify the first incomplete stage. A pending count, a generated file, and an accepted NetSuite order establish different things.
+Use this guide when a sales order is missing from NetSuite, an order-push run looks successful without a destination order, or NetSuite rejects a customer, sales-channel, department, or location reference. Start with one order and identify the first incomplete stage. A pending count, a generated file, and an accepted NetSuite order establish different things.
 
-This workflow is source-verified for **Company App v2.8.0** and **NetSuite connector v3.3.6**. It follows the OMS rule-group order-push path. Confirm the installed versions and active downstream processor before interpreting a mapping. No live export or correction was tested.
+This workflow is source-verified for **Company App v2.8.0** and **NetSuite connector v3.3.6**. It follows the OMS rule-group order-push path. Confirm the installed versions and active downstream processor before interpreting a mapping. The separately labeled customer-identity section also checks the modern batch route in NetSuite connector v3.6.3. No live export or correction was tested.
 
 ## Before You Start
 
@@ -120,6 +120,35 @@ The custom-field definition's internal ID, its list/record type, and the selecte
 
 Do not infer the correct business channel or department from a successful order at another store. Ask the business and integration owners to confirm the intended attribution and NetSuite account scope.
 
+### Check Customer Identity At The Stage That Uses It
+
+A missing customer identification, an order waiting for a customer, and a rejected customer reference are different findings. Do not reprocess an order merely because it is absent from NetSuite. First confirm its actual selection service, customer producer and order customer-resolution service. The Company rule selector described above does not establish a universal customer gate.
+
+For the **modern batch route in NetSuite connector v3.6.3**, compare these stages:
+
+| Observation | Read-only check and boundary |
+| --- | --- |
+| Customer absent from the customer batch | Read the producer's configured `dueViewName`. When it uses `NetSuiteCustomerDueView`, its required `SHOPIFY_CUST_ID` join can exclude an OMS party without that identification before this producer prepares a customer request. The view has other eligibility conditions too; one identifier alone does not prove selection. This is a customer-producer condition, not a universal order-rule filter. |
+| Order reports that its bill-to customer has no NetSuite customer yet | Confirm `customerServiceName`. The default party-based service looks for the active bill-to party's `NETSUITE_CUSTOMER_ID`; when no matching identification row is found, it returns a wait rather than preparing that order for submission. Follow the corresponding customer selection, request, result and saved identification. A successful job wrapper alone does not establish that this customer was accepted. |
+| Facility-based customer resolution is configured | Inspect the selling facility's `DEFAULT_B2C_CUSTOMER` relationship and the related party's external ID. This alternative does not require each shopper to become a NetSuite customer. A missing required facility customer is an error, not the default shopper-customer wait. Do not create a shopper mapping or switch customer services as a diagnostic test. |
+| NetSuite rejects a customer/entity reference | Preserve the exact failed field and the actual ID sent. Ask the destination owner to verify whether that ID still identifies the intended customer in the correct account, including any merge or inactivation. The error alone does not prove a merge or identify the replacement. Compare current party identity, saved order identity and the attempt's payload separately. |
+
+#### Current Customer Identity Is Not The Order's Saved Identity
+
+In this modern route, the customer-resolution step stores `NETSUITE_CUSTOMER_ID` on the **order** as an `OrderIdentification`. If the order already has a different effective ID, the reviewed service keeps it and logs the difference. That saved order identity is distinct from the customer's `PartyIdentification` and from the order's `NETSUITE_ORDER_ID`.
+
+The customer-result recorder likewise creates a party's NetSuite identification only when absent; a new customer result does not automatically replace an existing different mapping. A customer correction or successful later customer sync therefore does not prove that an older order or already-prepared request now carries the new customer. Do not infer an automatic repair after a destination merge.
+
+For one affected order, collect this evidence privately using [Entity Inspection](../maarg/entity-inspection.md) and the matching processing/message history:
+
+1. The Product Store, source shop, NetSuite remote/account, active route and relevant execution times.
+2. The exact bill-to party relationship and its effective dates; the party's `SHOPIFY_CUST_ID` and `NETSUITE_CUSTOMER_ID` records, where required by that route.
+3. The order's effective `NETSUITE_CUSTOMER_ID`, any existing `NETSUITE_ORDER_ID`, and, for the facility alternative, the selling facility and default-customer relationship.
+4. The customer or order batch record, message and result for the same entity; distinguish no selection, waiting, preparation failure, a destination rejection and a missing response.
+5. The customer reference actually sent in the affected attempt, its configured message remote/account, and the destination owner's confirmation of the intended customer and any already-created transaction.
+
+Do not match customers by a similar name or email address, select an arbitrary duplicate identification, create or merge customers, edit identifiers, remove synchronization history or replay a file to test a theory. The integration and destination owners must decide any correction and recovery scope after resolving identity and previous outcomes. Reuse the bounded verification below; a smaller pending count is not sufficient.
+
 ## 5. Handle Failed Saves And Unknown Outcomes
 
 If an operator already tried a mapping change, preserve the original error and inspect the saved record through a fresh supported read before repeating it.
@@ -151,3 +180,5 @@ The Company workflow was reviewed at [v2.8.0](https://github.com/hotwax/company/
 The October 17, 2026 release review found OMS distribution v6.3.13, published October 16, as the latest distribution by publication time. Its active manifest declares NetSuite connector v3.3.6, but the default production component set does **not** include it; installation is optional. Company v2.8.0 is a standalone frontend release. Neither declaration nor publication proves that either component is installed.
 
 The related processing, entity, fulfillment and inventory guides were reviewed in full. The two existing Data Manager/System Messages filter images were inspected and remain limited illustrations of those filters. No screenshot is offered as proof of NetSuite mapping or order-delivery behavior. The authorized demo reached sign-in only; installed versions, populated monitor results, destination delivery and recovery remain runtime-unverified.
+
+**November 14, 2026 customer-identity verification:** The new subsection was source-checked against optional NetSuite connector v3.6.3 in the separately published Maarg v6.6.4 distribution. It covers configured customer due-view selection, party-versus-facility order customer resolution, saved order identity and customer-result recording; it is not a claim that the earlier Company rule path has been replaced. The latest distribution by publication time is instead Maarg v6.3.29, published November 13 at 14:07:46 UTC, whose manifest declares optional NetSuite v3.3.13. Neither distribution includes NetSuite in its default production component set. Company v2.10.1 remains a standalone release; the earlier Company screen instructions retain their explicit v2.8.0 baseline. The read-only demo check still reached sign-in only. Installed route selection, populated customer/order records, destination references and recovery outcomes remain runtime-unverified. No new screenshot or operational action was used.
