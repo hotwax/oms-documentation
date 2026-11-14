@@ -6,7 +6,9 @@ description: Compare Shopify and HotWax Commerce location-mapping models.
 
 Use this page to understand terminology and compare advanced mapping models. It is not a setup procedure. For the required facility creation, Product Store association, Shopify-location import, mapping, and audit steps in a new standard launch, follow [Chapter 7 of Set up HotWax Commerce with Shopify](../../../system-admin/administration/company/product-store-onboarding.md#7-create-facilities-and-map-shopify-locations).
 
-A HotWax Commerce **facility** represents a store, warehouse, or other fulfillment node. A Shopify **location** is Shopify's inventory and fulfillment node. They are different records and require an intentional mapping.
+A HotWax Commerce facility represents a store, warehouse, or other fulfillment node. A Shopify location is Shopify's inventory and fulfillment node. They are different records and require an intentional mapping.
+
+Mappings also resolve the destination for [routing location sync](../orders/routing-location-sync.md). Configure that workflow separately to send eligible HotWax routing decisions to Shopify. An aggregate inventory channel and a physical facility mapping serve different purposes; publishing pooled inventory does not assign all order quantities to one physical facility.
 
 ## Aggregated Shopify location model
 

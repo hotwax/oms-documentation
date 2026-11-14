@@ -4,7 +4,7 @@ description: Learn how OMS publishes inventory changes to Shopify and reconciles
 
 # Shopify inventory event sync
 
-This page covers outbound OMS-to-Shopify inventory publication after cutover. For the one-time inbound Shopify-to-OMS starting inventory seed, follow [Chapter 8 of Set up HotWax Commerce with Shopify](../../../system-admin/administration/company/product-store-onboarding.md#8-seed-starting-inventory-from-shopify).
+This page covers outbound OMS-to-Shopify inventory publication after cutover. For the inbound starting inventory seed, see [Import inventory from Shopify](import-inventory-from-shopify.md), then follow the [onboarding cutover sequence](../../../system-admin/administration/company/product-store-onboarding.md#8-seed-starting-inventory-from-shopify).
 
 Use `Inventory sync` in the Company App to monitor inventory events, batches, publishers, and resets. Confirm the affected connection, target location, and quantity basis before choosing an action. A successful job run alone does not prove that Shopify received the expected inventory.
 
