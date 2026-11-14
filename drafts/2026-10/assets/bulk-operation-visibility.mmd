@@ -1,0 +1,16 @@
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#E8F0FE", "primaryTextColor": "#17324D", "primaryBorderColor": "#4275AF", "lineColor": "#52677B", "secondaryColor": "#E5F4ED", "tertiaryColor": "#FFF4DC", "fontFamily": "Arial", "fontSize": "16px"}, "flowchart": {"curve": "basis", "htmlLabels": false}}}%%
+sequenceDiagram
+  autonumber
+  participant J as HotWax job
+  participant S as Shopify
+  participant M as OMS processing
+  participant O as Job Manager operator
+  J->>S: Request a bulk operation
+  S-->>J: Return operation ID
+  J->>M: Retain the operation link
+  S-->>S: Finish producing the result
+  O->>S: Read operation status
+  O->>M: Read matching message and processing time
+  Note over O,M: Shopify completion and HotWax consumption are distinct
+  M->>S: Retrieve the available result
+  M-->>M: Process the result and record its outcome
