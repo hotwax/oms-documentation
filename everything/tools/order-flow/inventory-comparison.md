@@ -10,6 +10,8 @@ Start with one product, one location or inventory channel, and a timestamped ord
 
 For Shopify Committed, Reserved or Unavailable differences, start with [Investigate Shopify holds and quantity-state changes](#investigate-shopify-holds-and-quantity-state-changes), then follow the matched event and quantity path.
 
+For repeated inventory-update emails or CSV errors, use [Triage Inventory Failure Reports Without Replaying Them](#triage-inventory-failure-reports-without-replaying-them) before interpreting counts or considering recovery.
+
 {% hint style="info" %}
 The checks below were reviewed on October 3–4, 2026 against these source snapshots:
 
@@ -208,6 +210,25 @@ Do not round a fractional group, edit ledger statuses, discard pending events, r
 
 Public UI source references: [Company delivery badges](https://github.com/hotwax/company/blob/143de5652be6b7ef02d795c5bede57828ce67763/src/utils/inventoryEvents.ts) and [recent-run figures](https://github.com/hotwax/company/blob/143de5652be6b7ef02d795c5bede57828ce67763/src/components/common/ServiceJobDetailsModal.vue).
 
+### Triage Inventory Failure Reports Without Replaying Them
+
+Use this read-only procedure when an inventory-update email or CSV lists failed records, especially repeated inventory-item or location identifier errors. An export is evidence of what its reporting process selected, not a live inventory balance or a list of unique products. Do not upload it as an adjustment file or use it to trigger a bulk retry.
+
+**Prerequisites:** authorized access to the complete original report, its producing job/configuration, the relevant Shopify shop, and the installed integration's mappings and delivery history. Start from [Inspect service jobs](../maarg/service-jobs.md) and [Investigate system messages](../maarg/system-messages.md) for Maarg-managed work. A legacy or external reporting job may not appear in Company; have its integration owner identify the actual producer instead of substituting the nearest similar job.
+
+1. **Establish the report's scope.** Record generation time and time zone, reporting window, filters, limit/pagination and the actual job/run reference if available. Download the complete authorized attachment rather than counting preview rows. Confirm whether it contains attempts, current failures or a historical selection. If the export omits row timestamps or run IDs, record that limitation; do not assign the email's sent time to every attempt or assume that each new email represents a new execution.
+2. **Keep row count, affected targets and stock separate.** Preserve the original rows, then summarize exact duplicates and distinct target combinations separately. Include the integration configuration, verified shop, inventory item and location in the comparison key; retain missing values as unresolved. Map configuration identifiers to shops before combining reports. A shared SKU or location name is not a safe cross-shop key. Repeated rows for the same target may represent separate attempts, and a target can carry different attempted quantities or errors. Do not discard that history or sum an `available` value as units lost or stock requiring adjustment.
+3. **Read the response, not only the status code.** Separate an inventory-item error from a location error, missing stock association, access failure and an unknown response. A generic HTTP failure does not identify the failed field. Preserve the first meaningful message, attempted identifiers, quantity measure and request/result correlation privately. Treat “invalid” as a reason to verify identity in the actual destination, not proof that a product was deleted or that its quantity is zero.
+4. **Reconcile the target read-only.** In the selected Shopify shop, verify the exact product variant and inventory-item identity, the intended location and the item's inventory level at that location. Then compare those identities with the configuration/mapping and the actual failed request. Shopify models an inventory level as an inventory item at a location; a valid variant or item alone does not establish that location-level state. Keep an unavailable or denied read distinct from a confirmed missing record. Use the applicable [Shopify product-sync checks](../shopify/product-sync.md) when identity import is in question, and the current-inventory read above only when the installed monitor supports the affected path.
+5. **Compare reports only after aligning scope.** For the same confirmed configuration/window rules, calculate target combinations present in both reports, newly listed and no longer listed. Also compare response categories and attempt details. A missing key may have succeeded, fallen outside a window/limit, been filtered out or stopped being attempted. Its absence alone is not recovery. A smaller headline count can conceal a largely different affected set.
+6. **Verify the eventual result.** Correlate any later attempt with its destination response and the same shop/item/location readback, accounting for legitimate later stock changes. If no later result is accessible, keep the outcome unknown. Ask the responsible owner to establish the failed stage and current backlog before proposing a scoped correction. Do not remap identifiers, enable tracking, activate a location, reset stock, resend or expand access as a diagnostic shortcut.
+
+**Check the already-produced message, not only today's mapping.** In the separately source-reviewed Shopify connector **v4.3.23** event senders, retries use the stored query and variables instead of rebuilding them from current mappings. The physical sender requires the stored destination; the channel sender has a legacy fallback for older messages without one. A corrected current mapping alone therefore does not establish that an existing message now targets the corrected identity. Have the integration owner inspect that message and its actual destination before recovery. This behavior is not asserted for every inventory job or legacy report producer.
+
+**Synthetic example:** A first complete report has five rows across targets A, B and C; a later report has four rows across C, D and E. The row count fell, but both reports still cover three distinct targets and only C is shared. Neither A nor B is proved fixed, and the reports do not establish a total stock discrepancy. This example illustrates comparison logic, not a connector's report schema or a real incident.
+
+This report-triage addition was reviewed on November 15, 2026 against Shopify's [InventoryItem](https://shopify.dev/docs/api/admin-graphql/latest/objects/InventoryItem) and [InventoryLevel](https://shopify.dev/docs/api/admin-graphql/latest/objects/InventoryLevel) contracts. Report columns, retention, producer selection and current destination state must be verified for the installed route; the Company publisher details above are not asserted for a legacy CSV reporter. The authorized demo reached sign-in only, so no authenticated report, mapping, failed request or recovery was runtime-verified.
+
 ## Escalate With A Small, Read-Only Evidence Pack
 
 Provide support with:
@@ -221,6 +242,7 @@ Provide support with:
 - For presell, the PO receiving facility, category state, mapped Shopify variant, separate publication/storefront outcomes, and each date field's scope and source
 - Relevant job/run, message/feed, and ERP correlation IDs with the first meaningful error or waiting reason
 - For Shopify publishers, the service and run-specific scope, stopped reason and pending count when returned, underlying detail/group outcome, and each affected batch or missing message reference
+- For failure reports, complete-export scope/limits, raw-row and distinct-target counts, missing identity fields, response categories, cross-report changes and the later result supporting any claimed recovery
 - The expected reservation, export, and release behavior, identifying whether each is confirmed configuration or a requested change
 
 Share only the necessary records through the approved support channel. Remove credentials and unrelated customer data from screenshots or logs.
