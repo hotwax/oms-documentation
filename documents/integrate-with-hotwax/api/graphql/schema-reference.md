@@ -24,6 +24,10 @@ today rather than what was planned. For how to read and page these objects, star
 
 | Root | Returns | Arguments |
 | ---- | ------- | --------- |
+| `cycleCount` | [CycleCount](#cyclecount) | `workEffortId: ID` |
+| `dataFeed` | [DataFeed](#datafeed) | `dataFeedId: ID` |
+| `dataManagerConfig` | [DataManagerConfig](#datamanagerconfig) | `configId: ID` |
+| `dataManagerLog` | [DataManagerLog](#datamanagerlog) | `logId: ID` |
 | `entityAuditLog` | [EntityAuditLog](#entityauditlog) | `auditHistorySeqId: ID` |
 | `facility` | [Facility](#facility) | `externalId: String`, `facilityId: ID` |
 | `inventoryItem` | [InventoryItem](#inventoryitem) | `inventoryItemId: ID` |
@@ -40,6 +44,7 @@ today rather than what was planned. For how to read and page these objects, star
 | `serviceJob` | [ServiceJob](#servicejob) | `jobName: ID` |
 | `shipment` | [Shipment](#shipment) | `externalId: String`, `shipmentId: ID` |
 | `shipmentReceipt` | [ShipmentReceipt](#shipmentreceipt) | `receiptId: ID` |
+| `shopifyInventoryChannel` | [ShopifyInventoryChannel](#shopifyinventorychannel) | `inventoryChannelId: ID` |
 | `shopifyShop` | [ShopifyShop](#shopifyshop) | `shopId: ID` |
 | `systemMessage` | [SystemMessage](#systemmessage) | `systemMessageId: ID` |
 | `transferDiagnosticOrder` | [TransferDiagnosticOrder](#transferdiagnosticorder) | `orderId: ID` |
@@ -55,6 +60,66 @@ Where a root accepts both an ID and an `externalId`, pass exactly one of them.
 Every collection root accepts `first`/`after` for forward paging, `last`/`before` for
 backward paging, a `query:` filter string, and `sortKey` with `reverse`. A page size is
 required and is capped at 100.
+
+#### `cycleCountItems`
+
+Returns a paged collection of [CycleCountItem](#cyclecountitem).
+
+| | |
+| --- | --- |
+| Search keys | `inventoryCountImportId`, `productId` |
+| Sort keys | `IMPORT_ITEM_SEQ_ID` |
+| Sort enum | `CycleCountItemSortKey` |
+
+#### `cycleCountSessions`
+
+Returns a paged collection of [CycleCountSession](#cyclecountsession).
+
+| | |
+| --- | --- |
+| Search keys | `inventoryCountImportId`, `workEffortId`, `statusId` |
+| Sort keys | `INVENTORY_COUNT_IMPORT_ID` |
+| Sort enum | `CycleCountSessionSortKey` |
+
+#### `cycleCounts`
+
+Returns a paged collection of [CycleCount](#cyclecount).
+
+| | |
+| --- | --- |
+| Search keys | `workEffortId`, `workEffortName`, `facilityId`, `statusId`, `workEffortTypeId` |
+| Sort keys | `WORK_EFFORT_ID`, `WORK_EFFORT_NAME` |
+| Sort enum | `CycleCountSortKey` |
+
+#### `dataFeedDocuments`
+
+Returns a paged collection of [DataFeedDocument](#datafeeddocument).
+
+| | |
+| --- | --- |
+| Search keys | `dataFeedId`, `dataDocumentId` |
+| Sort keys | `DATA_FEED_ID` |
+| Sort enum | `DataFeedDocumentSortKey` |
+
+#### `dataFeeds`
+
+Returns a paged collection of [DataFeed](#datafeed).
+
+| | |
+| --- | --- |
+| Search keys | `dataFeedId`, `dataFeedTypeEnumId` |
+| Sort keys | `DATA_FEED_ID` |
+| Sort enum | `DataFeedSortKey` |
+
+#### `dataManagerLogs`
+
+Returns a paged collection of [DataManagerLog](#datamanagerlog).
+
+| | |
+| --- | --- |
+| Search keys | `logId`, `configId`, `logTypeEnumId`, `statusId`, `failedRecordCount`, `createdDate` |
+| Sort keys | `CREATED_DATE`, `LOG_ID` |
+| Sort enum | `DataManagerLogSortKey` |
 
 #### `entityAuditLogs`
 
@@ -86,6 +151,16 @@ Returns a paged collection of [FacilityCarrierShipment](#facilitycarriershipment
 | Sort keys | `FACILITY_ID`, `PARTY_ID` |
 | Sort enum | `FacilityCarrierShipmentSortKey` |
 
+#### `facilityGroupMembers`
+
+Returns a paged collection of [FacilityGroupMember](#facilitygroupmember).
+
+| | |
+| --- | --- |
+| Search keys | `facilityGroupId`, `facilityId` |
+| Sort keys | `FACILITY_GROUP_ID`, `FACILITY_ID` |
+| Sort enum | `FacilityGroupMemberSortKey` |
+
 #### `facilityParties`
 
 Returns a paged collection of [FacilityParty](#facilityparty).
@@ -115,6 +190,16 @@ Returns a paged collection of [InventoryItemDetail](#inventoryitemdetail).
 | Search keys | `inventoryItemId`, `receiptId`, `itemIssuanceId`, `physicalInventoryId`, `resetItemId` |
 | Sort keys | `INVENTORY_ITEM_ID` |
 | Sort enum | `InventoryItemDetailSortKey` |
+
+#### `inventoryItemTimeline`
+
+Returns a paged collection of [InventoryItemDetail](#inventoryitemdetail).
+
+| | |
+| --- | --- |
+| Search keys | `inventoryItemId`, `reasonEnumId`, `effectiveDate` |
+| Sort keys | `EFFECTIVE_DATE` |
+| Sort enum | `InventoryItemTimelineSortKey` |
 
 #### `inventoryItemVariances`
 
@@ -166,6 +251,16 @@ Returns a paged collection of [ItemIssuance](#itemissuance).
 | Sort keys | `ITEM_ISSUANCE_ID` |
 | Sort enum | `ItemIssuanceSortKey` |
 
+#### `orderIssuanceTimeline`
+
+Returns a paged collection of [InventoryItemDetail](#inventoryitemdetail).
+
+| | |
+| --- | --- |
+| Search keys | `orderId`, `reasonEnumId`, `effectiveDate` |
+| Sort keys | `EFFECTIVE_DATE` |
+| Sort enum | `InventoryItemTimelineSortKey` |
+
 #### `orderItemAssocs`
 
 Returns a paged collection of [OrderItemAssoc](#orderitemassoc).
@@ -185,6 +280,36 @@ Returns a paged collection of [OrderItem](#orderitem).
 | Search keys | `orderId`, `externalId`, `productId`, `statusId`, `orderItemTypeId`, `shipmentId`, `syncStatusId` |
 | Sort keys | `ORDER_ID`, `PRODUCT_ID` |
 | Sort enum | `OrderItemSortKey` |
+
+#### `orderReceiptTimeline`
+
+Returns a paged collection of [InventoryItemDetail](#inventoryitemdetail).
+
+| | |
+| --- | --- |
+| Search keys | `orderId`, `reasonEnumId`, `effectiveDate` |
+| Sort keys | `EFFECTIVE_DATE` |
+| Sort enum | `InventoryItemTimelineSortKey` |
+
+#### `orderReservationTimeline`
+
+Returns a paged collection of [InventoryItemDetail](#inventoryitemdetail).
+
+| | |
+| --- | --- |
+| Search keys | `orderId`, `reasonEnumId`, `effectiveDate` |
+| Sort keys | `EFFECTIVE_DATE` |
+| Sort enum | `InventoryItemTimelineSortKey` |
+
+#### `orderStatusTimeline`
+
+Returns a paged collection of [OrderStatus](#orderstatus).
+
+| | |
+| --- | --- |
+| Search keys | `statusId`, `lastUpdatedTxStamp` |
+| Sort keys | `LAST_UPDATED_TX_STAMP` |
+| Sort enum | `OrderStatusTimelineSortKey` |
 
 #### `orders`
 
@@ -225,6 +350,16 @@ Returns a paged collection of [ProductAttribute](#productattribute).
 | Search keys | `productId`, `attrName`, `attrType` |
 | Sort keys | `ATTR_NAME` |
 | Sort enum | `ProductAttributeSortKey` |
+
+#### `productFacilities`
+
+Returns a paged collection of [ProductFacility](#productfacility).
+
+| | |
+| --- | --- |
+| Search keys | `productId`, `facilityId`, `inventoryItemId` |
+| Sort keys | `FACILITY_ID`, `PRODUCT_ID` |
+| Sort enum | `ProductFacilitySortKey` |
 
 #### `productFeatureAppls`
 
@@ -336,6 +471,16 @@ Returns a paged collection of [Return](#return).
 | Sort keys | `RETURN_DATE`, `RETURN_ID`, `STATUS` |
 | Sort enum | `ReturnSortKey` |
 
+#### `serviceJobRuns`
+
+Returns a paged collection of [ServiceJobRunMetadata](#servicejobrunmetadata).
+
+| | |
+| --- | --- |
+| Search keys | `jobName`, `hasError`, `startTime` |
+| Sort keys | `START_TIME` |
+| Sort enum | `ServiceJobRunMetadataSortKey` |
+
 #### `serviceJobs`
 
 Returns a paged collection of [ServiceJob](#servicejob).
@@ -365,6 +510,86 @@ Returns a paged collection of [Shipment](#shipment).
 | Search keys | `shipmentId`, `statusId`, `primaryOrderId`, `originFacilityId`, `shipmentMethodTypeId`, `estimatedShipDate` |
 | Sort keys | `SHIPMENT_ID`, `SHIPPED_DATE`, `STATUS` |
 | Sort enum | `ShipmentSortKey` |
+
+#### `shopifyInventoryAdjustmentDetails`
+
+Returns a paged collection of [ShopifyInventoryAdjustmentDetail](#shopifyinventoryadjustmentdetail).
+
+| | |
+| --- | --- |
+| Search keys | `eventTypeId`, `inventoryChannelId`, `systemMessageId`, `detailStatusId` |
+| Sort keys | `CREATED_DATE`, `EVENT_TYPE_ID` |
+| Sort enum | `ShopifyInventoryAdjustmentDetailSortKey` |
+
+#### `shopifyInventoryChannels`
+
+Returns a paged collection of [ShopifyInventoryChannel](#shopifyinventorychannel).
+
+| | |
+| --- | --- |
+| Search keys | `inventoryChannelId`, `shopId`, `facilityGroupId` |
+| Sort keys | `INVENTORY_CHANNEL_ID` |
+| Sort enum | `ShopifyInventoryChannelSortKey` |
+
+#### `shopifyLocationInventoryAdjustmentDetails`
+
+Returns a paged collection of [ShopifyLocationInventoryAdjustmentDetail](#shopifylocationinventoryadjustmentdetail).
+
+| | |
+| --- | --- |
+| Search keys | `eventTypeId`, `shopId`, `systemMessageId` |
+| Sort keys | `EVENT_TYPE_ID` |
+| Sort enum | `ShopifyLocationInventoryAdjustmentDetailSortKey` |
+
+#### `shopifyShopInventoryTransferActivities`
+
+Returns a paged collection of [ShopifyShopInventoryTransferActivity](#shopifyshopinventorytransferactivity).
+
+| | |
+| --- | --- |
+| Search keys | `shopId`, `sourceSystemMessageId`, `dataManagerLogId` |
+| Sort keys | `SHOP_ID` |
+| Sort enum | `ShopifyShopInventoryTransferActivitySortKey` |
+
+#### `shopifyShopInventoryTransferActivityDetails`
+
+Returns a paged collection of [ShopifyShopInventoryTransferActivityDetail](#shopifyshopinventorytransferactivitydetail).
+
+| | |
+| --- | --- |
+| Search keys | `shopId`, `shipmentStatusId`, `receiptId`, `orderStatusId`, `orderItemChangeId` |
+| Sort keys | `SHOP_ID` |
+| Sort enum | `ShopifyShopInventoryTransferActivityDetailSortKey` |
+
+#### `shopifyShopInventoryTransferLines`
+
+Returns a paged collection of [ShopifyShopInventoryTransferLine](#shopifyshopinventorytransferline).
+
+| | |
+| --- | --- |
+| Search keys | `shopId`, `orderId` |
+| Sort keys | `SHOP_ID` |
+| Sort enum | `ShopifyShopInventoryTransferLineSortKey` |
+
+#### `shopifyShopInventoryTransferShipments`
+
+Returns a paged collection of [ShopifyShopInventoryTransferShipment](#shopifyshopinventorytransfershipment).
+
+| | |
+| --- | --- |
+| Search keys | `shopId`, `shipmentId` |
+| Sort keys | `SHOP_ID` |
+| Sort enum | `ShopifyShopInventoryTransferShipmentSortKey` |
+
+#### `shopifyShopInventoryTransfers`
+
+Returns a paged collection of [ShopifyShopInventoryTransfer](#shopifyshopinventorytransfer).
+
+| | |
+| --- | --- |
+| Search keys | `shopId`, `orderId` |
+| Sort keys | `SHOP_ID` |
+| Sort enum | `ShopifyShopInventoryTransferSortKey` |
 
 #### `shopifyShopLocations`
 
@@ -468,6 +693,141 @@ returns a bounded array with no cursors.
 | `contactMechTypeId` | `String` | scalar | — |
 | `infoString` | `String` | scalar | — |
 
+### CycleCount
+
+| Field | Type | Kind | Notes |
+| ----- | ---- | ---- | ----- |
+| `actualCompletionDate` | `DateTime` | scalar | — |
+| `actualStartDate` | `DateTime` | scalar | — |
+| `createdByUserLogin` | `String` | scalar | — |
+| `createdDate` | `DateTime` | scalar | — |
+| `estimatedCompletionDate` | `DateTime` | scalar | — |
+| `estimatedStartDate` | `DateTime` | scalar | — |
+| `facility` | `Facility` | object | One [Facility](#facility). |
+| `facilityId` | `String` | scalar | — |
+| `sessions` | `[CycleCountSession!]!` | list | Bounded list of [CycleCountSession](#cyclecountsession); optional `first:`. |
+| `statusId` | `String` | scalar | — |
+| `workEffortId` | `ID` | scalar | — |
+| `workEffortName` | `String` | scalar | — |
+| `workEffortPurposeTypeId` | `String` | scalar | — |
+| `workEffortTypeId` | `String` | scalar | — |
+
+### CycleCountItem
+
+| Field | Type | Kind | Notes |
+| ----- | ---- | ---- | ----- |
+| `countedByUserLoginId` | `String` | scalar | — |
+| `createdDate` | `DateTime` | scalar | — |
+| `importItemSeqId` | `ID` | scalar | — |
+| `inventoryCountImportId` | `ID` | scalar | — |
+| `isRequested` | `String` | scalar | — |
+| `locationSeqId` | `String` | scalar | — |
+| `productId` | `String` | scalar | — |
+| `productIdentifier` | `String` | scalar | — |
+| `quantity` | `Decimal` | scalar | — |
+| `systemQuantityOnHand` | `Decimal` | scalar | — |
+
+### CycleCountSession
+
+| Field | Type | Kind | Notes |
+| ----- | ---- | ---- | ----- |
+| `approvedDate` | `DateTime` | scalar | — |
+| `countImportName` | `String` | scalar | — |
+| `createdDate` | `DateTime` | scalar | — |
+| `dueDate` | `DateTime` | scalar | — |
+| `facilityAreaId` | `String` | scalar | — |
+| `inventoryCountImportId` | `ID` | scalar | — |
+| `items` | `CycleCountItem connection` | collection | Paged; requires `first:`. Nodes are [CycleCountItem](#cyclecountitem). |
+| `locks` | `[CycleCountSessionLock!]!` | list | Bounded list of [CycleCountSessionLock](#cyclecountsessionlock); optional `first:`. |
+| `statusId` | `String` | scalar | — |
+| `uploadedByUserLogin` | `String` | scalar | — |
+| `workEffortId` | `String` | scalar | — |
+
+### CycleCountSessionLock
+
+| Field | Type | Kind | Notes |
+| ----- | ---- | ---- | ----- |
+| `deviceId` | `String` | scalar | — |
+| `fromDate` | `DateTime` | scalar | — |
+| `inventoryCountImportId` | `ID` | scalar | — |
+| `lastHeartbeatAt` | `DateTime` | scalar | — |
+| `leaseSeconds` | `Decimal` | scalar | — |
+| `thruDate` | `DateTime` | scalar | — |
+| `userId` | `String` | scalar | — |
+
+### DataDocument
+
+| Field | Type | Kind | Notes |
+| ----- | ---- | ---- | ----- |
+| `dataDocumentId` | `ID` | scalar | — |
+| `primaryEntityName` | `String` | scalar | — |
+
+### DataFeed
+
+| Field | Type | Kind | Notes |
+| ----- | ---- | ---- | ----- |
+| `dataFeedId` | `ID` | scalar | — |
+| `dataFeedTypeEnumId` | `ID` | scalar | — |
+| `documents` | `DataFeedDocument connection` | collection | Paged; requires `first:`. Nodes are [DataFeedDocument](#datafeeddocument). |
+| `feedDeleteServiceName` | `String` | scalar | — |
+| `feedName` | `String` | scalar | — |
+| `feedReceiveServiceName` | `String` | scalar | — |
+| `lastFeedStamp` | `DateTime` | scalar | — |
+
+### DataFeedDocument
+
+| Field | Type | Kind | Notes |
+| ----- | ---- | ---- | ----- |
+| `dataDocumentId` | `ID` | scalar | — |
+| `dataFeedId` | `ID` | scalar | — |
+| `document` | `DataDocument` | object | One [DataDocument](#datadocument). |
+| `feed` | `DataFeed` | object | One [DataFeed](#datafeed). |
+
+### DataManagerConfig
+
+| Field | Type | Kind | Notes |
+| ----- | ---- | ---- | ----- |
+| `configId` | `ID` | scalar | — |
+| `enableDataFeed` | `String` | scalar | — |
+| `executionModeId` | `ID` | scalar | — |
+| `exportServiceName` | `String` | scalar | — |
+| `importServiceName` | `String` | scalar | — |
+| `multiThreading` | `String` | scalar | — |
+| `priority` | `Int` | scalar | — |
+
+### DataManagerContent
+
+| Field | Type | Kind | Notes |
+| ----- | ---- | ---- | ----- |
+| `contentDate` | `DateTime` | scalar | — |
+| `fileName` | `String` | scalar | — |
+| `fileSize` | `Int` | scalar | — |
+| `logContentId` | `ID` | scalar | — |
+| `logContentTypeEnumId` | `ID` | scalar | — |
+| `logId` | `ID` | scalar | — |
+
+### DataManagerLog
+
+| Field | Type | Kind | Notes |
+| ----- | ---- | ---- | ----- |
+| `cancelDateTime` | `DateTime` | scalar | — |
+| `config` | `DataManagerConfig` | object | One [DataManagerConfig](#datamanagerconfig). |
+| `configId` | `ID` | scalar | — |
+| `createdByJobId` | `ID` | scalar | — |
+| `createdByJobRunId` | `ID` | scalar | — |
+| `createdDate` | `DateTime` | scalar | — |
+| `failedRecordCount` | `Int` | scalar | — |
+| `files` | `DataManagerContent connection` | collection | Paged; requires `first:`. Nodes are [DataManagerContent](#datamanagercontent). |
+| `finishDateTime` | `DateTime` | scalar | — |
+| `logId` | `ID` | scalar | — |
+| `logTypeEnumId` | `ID` | scalar | — |
+| `parentLogId` | `ID` | scalar | — |
+| `startDateTime` | `DateTime` | scalar | — |
+| `statusId` | `ID` | scalar | — |
+| `systemMessage` | `SystemMessage` | object | One [SystemMessage](#systemmessage). |
+| `systemMessageId` | `ID` | scalar | — |
+| `totalRecordCount` | `Int` | scalar | — |
+
 ### EntityAuditLog
 
 | Field | Type | Kind | Notes |
@@ -491,11 +851,15 @@ returns a bounded array with no cursors.
 | Field | Type | Kind | Notes |
 | ----- | ---- | ---- | ----- |
 | `carrierShipmentMethods` | `[FacilityCarrierShipment!]!` | list | Bounded list of [FacilityCarrierShipment](#facilitycarriershipment); optional `first:`. |
+| `closedDate` | `DateTime` | scalar | — |
 | `externalId` | `String` | scalar | — |
 | `facilityId` | `ID` | scalar | — |
 | `facilityName` | `String` | scalar | — |
+| `facilityTimeZone` | `String` | scalar | — |
 | `facilityType` | `FacilityType` | object | One [FacilityType](#facilitytype). |
 | `facilityTypeId` | `String` | scalar | — |
+| `groupMemberships` | `[FacilityGroupMember!]!` | list | Bounded list of [FacilityGroupMember](#facilitygroupmember); optional `first:`. |
+| `openedDate` | `DateTime` | scalar | — |
 | `parentFacilityId` | `String` | scalar | — |
 | `parties` | `[FacilityParty!]!` | list | Bounded list of [FacilityParty](#facilityparty); optional `first:`. |
 
@@ -507,6 +871,26 @@ returns a bounded array with no cursors.
 | `partyId` | `ID` | scalar | — |
 | `roleTypeId` | `ID` | scalar | — |
 | `shipmentMethodTypeId` | `ID` | scalar | — |
+
+### FacilityGroup
+
+| Field | Type | Kind | Notes |
+| ----- | ---- | ---- | ----- |
+| `description` | `String` | scalar | — |
+| `facilityGroupId` | `ID` | scalar | — |
+| `facilityGroupName` | `String` | scalar | — |
+| `facilityGroupTypeId` | `String` | scalar | — |
+
+### FacilityGroupMember
+
+| Field | Type | Kind | Notes |
+| ----- | ---- | ---- | ----- |
+| `facilityGroupId` | `ID` | scalar | — |
+| `facilityId` | `ID` | scalar | — |
+| `fromDate` | `DateTime` | scalar | — |
+| `group` | `FacilityGroup` | object | One [FacilityGroup](#facilitygroup). |
+| `sequenceNum` | `Int` | scalar | — |
+| `thruDate` | `DateTime` | scalar | — |
 
 ### FacilityOriginAddress
 
@@ -711,6 +1095,7 @@ returns a bounded array with no cursors.
 | `paymentPreferences` | `[OrderPaymentPreference!]!` | list | Bounded list of [OrderPaymentPreference](#orderpaymentpreference); optional `first:`. |
 | `productStoreId` | `String` | scalar | — |
 | `returnItems` | `ReturnItem connection` | collection | Paged; requires `first:`. Nodes are [ReturnItem](#returnitem). |
+| `salesChannelEnumId` | `String` | scalar | — |
 | `shipGroups` | `ShipGroup connection` | collection | Paged; requires `first:`. Nodes are [ShipGroup](#shipgroup). |
 | `shopifyOrder` | `ShopifyShopOrder` | object | One [ShopifyShopOrder](#shopifyshoporder). |
 | `statusFlowId` | `String` | scalar | — |
@@ -831,7 +1216,11 @@ returns a bounded array with no cursors.
 
 | Field | Type | Kind | Notes |
 | ----- | ---- | ---- | ----- |
+| `lastUpdatedTxStamp` | `DateTime` | scalar | — |
+| `order` | `Order` | object | One [Order](#order). |
+| `orderId` | `ID` | scalar | — |
 | `orderItemSeqId` | `String` | scalar | — |
+| `orderStatusId` | `ID` | scalar | — |
 | `statusDatetime` | `DateTime` | scalar | — |
 | `statusId` | `ID` | scalar | — |
 
@@ -923,6 +1312,28 @@ returns a bounded array with no cursors.
 | `attrType` | `String` | scalar | — |
 | `attrValue` | `String` | scalar | — |
 | `productId` | `ID` | scalar | — |
+
+### ProductFacility
+
+| Field | Type | Kind | Notes |
+| ----- | ---- | ---- | ----- |
+| `allowBrokering` | `String` | scalar | — |
+| `allowPickup` | `String` | scalar | — |
+| `computedLastInventoryCount` | `Decimal` | scalar | — |
+| `daysToShip` | `Int` | scalar | — |
+| `facility` | `Facility` | object | One [Facility](#facility). |
+| `facilityId` | `ID` | scalar | — |
+| `inventoryItem` | `InventoryItem` | object | One [InventoryItem](#inventoryitem). |
+| `inventoryItemId` | `ID` | scalar | — |
+| `lastInventoryCount` | `Decimal` | scalar | — |
+| `maximumStock` | `Decimal` | scalar | — |
+| `minimumStock` | `Decimal` | scalar | — |
+| `product` | `Product` | object | One [Product](#product). |
+| `productId` | `ID` | scalar | — |
+| `reorderPoint` | `Decimal` | scalar | — |
+| `reorderQuantity` | `Decimal` | scalar | — |
+| `requirementMethodEnumId` | `ID` | scalar | — |
+| `salesVelocity` | `Decimal` | scalar | — |
 
 ### ProductFeature
 
@@ -1161,6 +1572,16 @@ returns a bounded array with no cursors.
 | `startTime` | `DateTime` | scalar | — |
 | `userId` | `String` | scalar | — |
 
+### ServiceJobRunMetadata
+
+| Field | Type | Kind | Notes |
+| ----- | ---- | ---- | ----- |
+| `endTime` | `DateTime` | scalar | — |
+| `hasError` | `String` | scalar | — |
+| `jobName` | `String` | scalar | — |
+| `jobRunId` | `ID` | scalar | — |
+| `startTime` | `DateTime` | scalar | — |
+
 ### ShipGroup
 
 | Field | Type | Kind | Notes |
@@ -1250,6 +1671,49 @@ returns a bounded array with no cursors.
 | `shipmentRouteSegmentId` | `ID` | scalar | — |
 | `trackingIdNumber` | `String` | scalar | — |
 
+### ShopifyInventoryAdjustmentDetail
+
+| Field | Type | Kind | Notes |
+| ----- | ---- | ---- | ----- |
+| `computedInventoryChange` | `Decimal` | scalar | — |
+| `createdDate` | `DateTime` | scalar | — |
+| `detailStatusId` | `ID` | scalar | — |
+| `eventReferenceId` | `String` | scalar | — |
+| `eventTypeId` | `ID` | scalar | — |
+| `inventoryChannel` | `ShopifyInventoryChannel` | object | One [ShopifyInventoryChannel](#shopifyinventorychannel). |
+| `inventoryChannelId` | `ID` | scalar | — |
+| `publishShopifyLocationId` | `ID` | scalar | — |
+| `shopifyInventoryItemId` | `ID` | scalar | — |
+| `systemMessage` | `SystemMessage` | object | One [SystemMessage](#systemmessage). |
+| `systemMessageId` | `ID` | scalar | — |
+
+### ShopifyInventoryChannel
+
+| Field | Type | Kind | Notes |
+| ----- | ---- | ---- | ----- |
+| `description` | `String` | scalar | — |
+| `facilityGroupId` | `ID` | scalar | — |
+| `fromDate` | `DateTime` | scalar | — |
+| `inventoryChannelId` | `ID` | scalar | — |
+| `shop` | `ShopifyShop` | object | One [ShopifyShop](#shopifyshop). |
+| `shopId` | `ID` | scalar | — |
+| `shopifyLocationId` | `ID` | scalar | — |
+| `thruDate` | `DateTime` | scalar | — |
+
+### ShopifyLocationInventoryAdjustmentDetail
+
+| Field | Type | Kind | Notes |
+| ----- | ---- | ---- | ----- |
+| `computedInventoryChange` | `Decimal` | scalar | — |
+| `createdDate` | `DateTime` | scalar | — |
+| `eventReferenceId` | `String` | scalar | — |
+| `eventTypeId` | `ID` | scalar | — |
+| `shopId` | `ID` | scalar | — |
+| `shopifyInventoryItemId` | `ID` | scalar | — |
+| `shopifyLocationId` | `ID` | scalar | — |
+| `systemMessage` | `SystemMessage` | object | One [SystemMessage](#systemmessage). |
+| `systemMessageId` | `ID` | scalar | — |
+
 ### ShopifyShop
 
 | Field | Type | Kind | Notes |
@@ -1272,6 +1736,71 @@ returns a bounded array with no cursors.
 | `shopifyShopId` | `String` | scalar | — |
 | `timezone` | `String` | scalar | — |
 | `weightUnit` | `String` | scalar | — |
+
+### ShopifyShopInventoryTransfer
+
+| Field | Type | Kind | Notes |
+| ----- | ---- | ---- | ----- |
+| `activities` | `ShopifyShopInventoryTransferActivity connection` | collection | Paged; requires `first:`. Nodes are [ShopifyShopInventoryTransferActivity](#shopifyshopinventorytransferactivity). |
+| `lines` | `ShopifyShopInventoryTransferLine connection` | collection | Paged; requires `first:`. Nodes are [ShopifyShopInventoryTransferLine](#shopifyshopinventorytransferline). |
+| `order` | `Order` | object | One [Order](#order). |
+| `orderId` | `ID` | scalar | — |
+| `shipments` | `ShopifyShopInventoryTransferShipment connection` | collection | Paged; requires `first:`. Nodes are [ShopifyShopInventoryTransferShipment](#shopifyshopinventorytransfershipment). |
+| `shopId` | `ID` | scalar | — |
+| `shopifyInventoryTransferId` | `ID` | scalar | — |
+
+### ShopifyShopInventoryTransferActivity
+
+| Field | Type | Kind | Notes |
+| ----- | ---- | ---- | ----- |
+| `activityHash` | `ID` | scalar | — |
+| `activityKey` | `String` | scalar | — |
+| `createdDate` | `DateTime` | scalar | — |
+| `dataManagerLog` | `DataManagerLog` | object | One [DataManagerLog](#datamanagerlog). |
+| `dataManagerLogId` | `ID` | scalar | — |
+| `details` | `ShopifyShopInventoryTransferActivityDetail connection` | collection | Paged; requires `first:`. Nodes are [ShopifyShopInventoryTransferActivityDetail](#shopifyshopinventorytransferactivitydetail). |
+| `happenedAt` | `DateTime` | scalar | — |
+| `orderId` | `ID` | scalar | — |
+| `shopId` | `ID` | scalar | — |
+| `sourceSystemMessage` | `SystemMessage` | object | One [SystemMessage](#systemmessage). |
+| `sourceSystemMessageId` | `ID` | scalar | — |
+| `topic` | `String` | scalar | — |
+
+### ShopifyShopInventoryTransferActivityDetail
+
+| Field | Type | Kind | Notes |
+| ----- | ---- | ---- | ----- |
+| `activityDetailSeqId` | `ID` | scalar | — |
+| `activityHash` | `ID` | scalar | — |
+| `orderId` | `ID` | scalar | — |
+| `orderItemChangeId` | `ID` | scalar | — |
+| `orderStatusId` | `ID` | scalar | — |
+| `receipt` | `ShipmentReceipt` | object | One [ShipmentReceipt](#shipmentreceipt). |
+| `receiptId` | `ID` | scalar | — |
+| `shipmentStatusId` | `ID` | scalar | — |
+| `shopId` | `ID` | scalar | — |
+
+### ShopifyShopInventoryTransferLine
+
+| Field | Type | Kind | Notes |
+| ----- | ---- | ---- | ----- |
+| `orderId` | `ID` | scalar | — |
+| `orderItemSeqId` | `ID` | scalar | — |
+| `quantity` | `Decimal` | scalar | — |
+| `shopId` | `ID` | scalar | — |
+| `shopifyInventoryItemId` | `ID` | scalar | — |
+| `shopifyInventoryTransferLineItemId` | `ID` | scalar | — |
+
+### ShopifyShopInventoryTransferShipment
+
+| Field | Type | Kind | Notes |
+| ----- | ---- | ---- | ----- |
+| `batchIndex` | `Int` | scalar | — |
+| `orderId` | `ID` | scalar | — |
+| `shipment` | `Shipment` | object | One [Shipment](#shipment). |
+| `shipmentId` | `ID` | scalar | — |
+| `shopId` | `ID` | scalar | — |
+| `shopifyInventoryShipmentId` | `ID` | scalar | — |
 
 ### ShopifyShopLocation
 
@@ -1421,13 +1950,21 @@ returns a bounded array with no cursors.
 
 | Enum | Values |
 | ---- | ------ |
+| `CycleCountItemSortKey` | `IMPORT_ITEM_SEQ_ID` |
+| `CycleCountSessionSortKey` | `INVENTORY_COUNT_IMPORT_ID` |
+| `CycleCountSortKey` | `WORK_EFFORT_ID`, `WORK_EFFORT_NAME` |
+| `DataFeedDocumentSortKey` | `DATA_FEED_ID` |
+| `DataFeedSortKey` | `DATA_FEED_ID` |
+| `DataManagerLogSortKey` | `CREATED_DATE`, `LOG_ID` |
 | `EntityAuditLogSortKey` | `AUDIT_HISTORY_SEQ_ID`, `CHANGED_DATE` |
 | `FacilityCarrierShipmentSortKey` | `FACILITY_ID`, `PARTY_ID` |
+| `FacilityGroupMemberSortKey` | `FACILITY_GROUP_ID`, `FACILITY_ID` |
 | `FacilityPartySortKey` | `FACILITY_ID`, `PARTY_ID` |
 | `FacilitySortKey` | `FACILITY_ID`, `FACILITY_NAME` |
 | `GoodIdentificationSortKey` | `FROM_DATE` |
 | `InventoryItemDetailSortKey` | `INVENTORY_ITEM_ID` |
 | `InventoryItemSortKey` | `INVENTORY_ITEM_ID` |
+| `InventoryItemTimelineSortKey` | `EFFECTIVE_DATE` |
 | `InventoryItemVarianceSortKey` | `INVENTORY_ITEM_ID`, `PHYSICAL_INVENTORY_ID` |
 | `InventoryLevelSortKey` | `FACILITY_ID`, `PRODUCT_ID` |
 | `InventoryReservationSortKey` | `INVENTORY_ITEM_ID`, `ORDER_ID` |
@@ -1435,9 +1972,11 @@ returns a bounded array with no cursors.
 | `OrderItemAssocSortKey` | `ORDER_ID`, `TO_ORDER_ID` |
 | `OrderItemSortKey` | `ORDER_ID`, `PRODUCT_ID` |
 | `OrderSortKey` | `GRAND_TOTAL`, `ORDER_DATE`, `ORDER_ID`, `ORDER_NAME` |
+| `OrderStatusTimelineSortKey` | `LAST_UPDATED_TX_STAMP` |
 | `PartySortKey` | `LAST_NAME`, `PARTY_ID` |
 | `ProdCatalogSortKey` | `CATALOG_NAME`, `PROD_CATALOG_ID` |
 | `ProductAttributeSortKey` | `ATTR_NAME` |
+| `ProductFacilitySortKey` | `FACILITY_ID`, `PRODUCT_ID` |
 | `ProductFeatureApplSortKey` | `SEQUENCE_NUM` |
 | `ProductIdentificationClashSortKey` | `ID_VALUE`, `PRODUCT_ID` |
 | `ProductKeywordSortKey` | `KEYWORD` |
@@ -1449,9 +1988,18 @@ returns a bounded array with no cursors.
 | `ReturnIdentificationSortKey` | `FROM_DATE`, `RETURN_ID` |
 | `ReturnItemSortKey` | `ORDER_ID`, `RETURN_ID` |
 | `ReturnSortKey` | `RETURN_DATE`, `RETURN_ID`, `STATUS` |
+| `ServiceJobRunMetadataSortKey` | `START_TIME` |
 | `ServiceJobSortKey` | `JOB_NAME` |
 | `ShipmentReceiptSortKey` | `RECEIPT_ID` |
 | `ShipmentSortKey` | `SHIPMENT_ID`, `SHIPPED_DATE`, `STATUS` |
+| `ShopifyInventoryAdjustmentDetailSortKey` | `CREATED_DATE`, `EVENT_TYPE_ID` |
+| `ShopifyInventoryChannelSortKey` | `INVENTORY_CHANNEL_ID` |
+| `ShopifyLocationInventoryAdjustmentDetailSortKey` | `EVENT_TYPE_ID` |
+| `ShopifyShopInventoryTransferActivityDetailSortKey` | `SHOP_ID` |
+| `ShopifyShopInventoryTransferActivitySortKey` | `SHOP_ID` |
+| `ShopifyShopInventoryTransferLineSortKey` | `SHOP_ID` |
+| `ShopifyShopInventoryTransferShipmentSortKey` | `SHOP_ID` |
+| `ShopifyShopInventoryTransferSortKey` | `SHOP_ID` |
 | `ShopifyShopLocationSortKey` | `FACILITY_ID`, `SHOP_ID` |
 | `ShopifyShopProductSortKey` | `PRODUCT_ID` |
 | `ShopifyShopSortKey` | `NAME`, `SHOP_ID` |
