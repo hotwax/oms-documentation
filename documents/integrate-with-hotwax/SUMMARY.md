@@ -91,6 +91,7 @@
   * [Shipping Check Inventory](api/inventory/shipping-check-inventory.md)
   * [Reset Inventory](api/inventory/reset-inventory.md)
   * [Update Inventory](api/inventory/update-inventory.md)
+  * [Create Future Inventory](api/inventory/create-future-inventory.md)
   * [Get Online ATP of Products](api/inventory/get-online-atp.md)
 * [Brokering](api/brokering/README.md)
   * [Brokered Order Items Feed](api/brokering/brokered-order-items.md)
