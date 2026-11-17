@@ -8,7 +8,7 @@ description: >-
 
 Use this guide when a count contains a wrong quantity or product, a session needs to be excluded, an assigned count was closed unexpectedly, or another count is needed. First establish which records changed. Editing a count, removing counted data, cancelling a run, and posting an inventory adjustment have different effects.
 
-The workflow is source-verified against Cycle Count App v5.2.1 and Poorti v3.3.7. The latter is included in OMS distribution v6.3.13. Installed versions and live correction outcomes remain unverified. The checks below preserve evidence before an authorized operator chooses a bounded correction; they are not a general rollback procedure.
+Unless explicitly scoped otherwise, this workflow is source-verified against Cycle Count App v5.2.1 and Poorti v3.3.7. The latter is included in OMS distribution v6.3.13. Installed versions and live correction outcomes remain unverified. The checks below preserve evidence before an authorized operator chooses a bounded correction; they are not a general rollback procedure.
 
 ## Before You Start
 
@@ -72,6 +72,34 @@ The confirmation title in the checked app says `Remove session from count`, but 
 Removal deletes counted item data; it is not the same as entering a physical count of zero. Other products in that session and contributions from other sessions require separate verification. The app's fetched row set must not be assumed to cover an unlimited number of matching items. It does not request subsequent pages. The checked framework processes array deletions individually, so a later failure need not undo rows already deleted.
 
 Before an approved removal, identify and preserve the exact affected item keys. Afterwards, re-read the session header, remaining item rows and product aggregate. Confirm that only the intended contribution disappeared. If the response is uncertain or the result is partial, escalate with those keys instead of repeating removal or deleting records directly.
+
+### A Removed Scan Still Appears Under Counted
+
+This subsection was checked separately against Cycle Count App **v5.4.1**, not the earlier app baseline above. Confirm the installed app before applying it: v5.2.3 uses different zero-quantity classification and does not have the directed Hand count segments described here. App publication does not establish the version installed on a store device.
+
+In v5.4.1, removing a scan creates a negative scan event; it does not delete the product or clear its recorded-counter marker. A directed count can therefore show the product under **Counted** with **0 Units**, rather than returning it to **Uncounted**. Zero with a recorded counter and zero that has never been counted are different states in this app. Neither a zero nor its tab placement establishes what is physically on the shelf or what has reached the server.
+
+First identify the actual action and its scope:
+
+| Action | Scope In The Reviewed App |
+| --- | --- |
+| `Only this scan` | Adds a negative event for the selected scan's quantity. |
+| `All scans of this SKU` | Negates positive, already-aggregated, not-yet-negated events with the same scanned value in this session's device event list. It is not a product-wide deletion across identifier aliases, devices or sessions. |
+| Review `Remove from count` | Deletes fetched counted-item records for the selected product/session, as described above. It is not the store scan-removal action. |
+
+The all-scans operation records events sequentially. If it fails partway through, preserve the event evidence and reconcile the partial result rather than repeating it. A removal toast confirms neither complete server synchronization nor an inventory reversal.
+
+For read-only diagnosis, use the existing server-record checks in section 2 and coordinate with the operator who owns the device. Compare the exact count, session and product, the observed scan-removal time, local quantity and pending-sync indication with the saved server rows. Do not clear local storage, open another counting session, reopen a submitted session, or post an inventory adjustment to make a product return to Uncounted.
+
+**Only after the count owner approves correcting the active session**, the authorized operator can use this v5.4.1 directed-count path. Opening Hand count can acquire a session lock and start synchronization; it is not a passive diagnostic view.
+
+1. Confirm that this is the intended active directed session and that the app permits editing under the operator's own session lock. Stop if the session is unavailable, another operator holds the lock, or review/posting has already occurred.
+2. From that session, choose **Add hand-counted items**. On **Hand count**, switch from **Uncounted** to **Counted**, or use **Assigned** to inspect the assigned product set. Search for the exact product and clear an unrelated search filter if necessary. Do not add a substitute product when the intended one cannot be found.
+3. Establish the correct physical quantity for this session's scope. Enter the desired **total**, not the amount to add or subtract. Other sessions' quantities are not replaced. For example, replacing an erroneous session total of 7 with 5 means entering 5, not -2.
+4. Review the quantity and save once. The reviewed app calculates a change from the current local total, including pending local scan events, and rejects a stale expected total. If saving fails, preserve the retained edits and resolve the session or changed-total problem before another attempt.
+5. Treat **Saved on this device. Waiting to sync.** as a pending server outcome. Preserve the device work; do not re-enter the same change elsewhere. Have support verify fresh server item rows and the review aggregate before submission or any further correction. A local display or save toast is not sufficient.
+
+If this installed version lacks these controls, the product remains missing from Assigned, quantities disagree, or the count is already submitted/reviewed, stop this path and use the bounded escalation below. Do not generalize these app-specific steps to a hard count or use a later app release as proof that a previous count was repaired.
 
 ### Discard Or Re-open A Store Session
 
@@ -148,3 +176,11 @@ Checked October 17, 2026:
 - Latest distribution by publication time: OMS distribution v6.3.13, published October 16 at 12:21:21 UTC. Its production suite includes Poorti v3.3.7, OMS v3.3.4 and Shopify connector v4.3.12; the production image selects framework v4.1.3. XML comments were excluded. Standalone OMS v3.5.1 was published separately and is not the OMS pin in this distribution. The app is deployed separately.
 
 The read-only demo reached sign-in. No count, session, decision, inventory movement or correction was created or changed. Existing API Explorer and System Messages illustrations were inspected and do not demonstrate this workflow, so no screenshot is presented as correction proof. Installed permissions, actual response shapes, repeated-row edits, partial cancellations, session creation and downstream outcomes still require approved isolated acceptance.
+
+### November 17, 2026 Scan-Removal Follow-up
+
+The scan-removal subsection is source-verified at Cycle Count App [v5.4.1](https://github.com/hotwax/inventory-count/releases/tag/v5.4.1), commit `1c2b9a4e25ac8be9b0554aa00446cadace5dd23e`: [scan-removal actions](https://github.com/hotwax/inventory-count/blob/1c2b9a4e25ac8be9b0554aa00446cadace5dd23e/src/views/SessionCountDetail.vue), [recorded-count classification](https://github.com/hotwax/inventory-count/blob/1c2b9a4e25ac8be9b0554aa00446cadace5dd23e/src/services/inventoryCountRecord.ts), [aggregation](https://github.com/hotwax/inventory-count/blob/1c2b9a4e25ac8be9b0554aa00446cadace5dd23e/src/workers/backgroundAggregation.ts), [hand-count totals](https://github.com/hotwax/inventory-count/blob/1c2b9a4e25ac8be9b0554aa00446cadace5dd23e/src/composables/useInventoryCountImport.ts), [Hand count](https://github.com/hotwax/inventory-count/blob/1c2b9a4e25ac8be9b0554aa00446cadace5dd23e/src/components/DirectedHandCount.vue), and [session lifecycle](https://github.com/hotwax/inventory-count/blob/1c2b9a4e25ac8be9b0554aa00446cadace5dd23e/src/composables/useHandCountSession.ts). Comparison with separately published v5.2.3 establishes the version boundary; earlier sections retain their original baseline.
+
+The latest published OMS distribution is v6.6.5, published November 16 at 12:08:14 UTC. Its active manifest and production suite include Poorti v3.6.2, OMS v3.6.2 and Shopify connector v4.6.4; NetSuite v3.6.4 is optional, outside that default suite. XML comments were excluded. The separately deployed Cycle Count app is not pinned by this component manifest, and none of these declarations establishes installation. This release refresh does not reverify the earlier backend workflow against new component versions.
+
+The authorized demo again reached sign-in only. No device/session was opened for counting, no count or operational record was mutated, and no new screenshot or runtime correction outcome is claimed. Installed-version confirmation, approved zero/partial-removal/stale-total/offline-sync examples and downstream acceptance remain pending.
