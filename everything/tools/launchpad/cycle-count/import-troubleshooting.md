@@ -89,6 +89,8 @@ Do not close the investigation merely because a message is processed or a toast 
 
 ## Choose A Bounded Correction
 
+For an already-created count, use [Cycle Count Corrections And Recounts](correction-troubleshooting.md) to distinguish review edits, product/session removal, Assigned cancellation, additional sessions and a separate recount. Establish the persisted scope before choosing any action.
+
 If the input or outcome is wrong, preserve the original request and ask the count owner and support to reconcile which records exist before choosing a correction.
 
 - For a parse or mapping error before submission, correct the CSV or mapping and recheck the intended scope.
