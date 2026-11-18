@@ -1,0 +1,13 @@
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#E8F0FE", "primaryTextColor": "#17324D", "primaryBorderColor": "#4275AF", "lineColor": "#52677B", "secondaryColor": "#E5F4ED", "tertiaryColor": "#FFF4DC", "fontFamily": "Arial", "fontSize": "16px"}, "flowchart": {"curve": "basis", "htmlLabels": false}}}%%
+flowchart TD
+  A[Order needs investigation] --> B[Open the Routing tab]
+  B --> C[Follow recorded moves and their reasons]
+  C --> D[Inspect the item and location inventory]
+  D --> E{Is the item short?}
+  E -->|No| F[Continue monitoring fulfillment]
+  E -->|Yes| G[Review eligible facilities]
+  G --> H{Does a different facility cover it?}
+  H -->|Yes| I[Choose a location and review Move item]
+  H -->|No| J[Review rejection or another operational action]
+  classDef inspect fill:#FFF4DC,stroke:#AA7B24,color:#4B3715;
+  class D,G,J inspect;

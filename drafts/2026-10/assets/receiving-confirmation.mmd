@@ -1,0 +1,15 @@
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#E8F0FE", "primaryTextColor": "#17324D", "primaryBorderColor": "#4275AF", "lineColor": "#52677B", "secondaryColor": "#E5F4ED", "tertiaryColor": "#FFF4DC", "fontFamily": "Arial", "fontSize": "16px"}, "flowchart": {"curve": "basis", "htmlLabels": false}}}%%
+flowchart TD
+  A[Find transfer and select tracking scope] --> B[Scan and review draft quantities]
+  B --> C[Confirm receipt]
+  C --> D{Submission outcome}
+  D -->|Confirmed| E[Read back saved quantities]
+  E --> F{Refresh succeeded?}
+  F -->|Yes| G[Continue with updated totals]
+  F -->|No| H[Retry the readback]
+  H --> E
+  D -->|Unknown| I[Keep a durable receipt record]
+  I --> J[Verify receiving history or OMS]
+  J --> K[Resolve reviewed receipt and refresh totals]
+  classDef caution fill:#FFF4DC,stroke:#AA7B24,color:#4B3715;
+  class I,J,K caution;
