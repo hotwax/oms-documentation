@@ -1,6 +1,6 @@
 # Set up HotWax Commerce with Shopify
 
-Use this canonical guide to connect one Shopify shop to a new HotWax Commerce instance and validate products, facilities, starting inventory, order import, routing, fulfillment, and named operational access. It is the required procedure for the standard Shopify-only launch profile; linked application documentation is optional background, not a required setup path.
+Use this canonical guide to connect one Shopify shop to a new HotWax Commerce instance and validate products, facilities, starting inventory, order import, routing, fulfillment, and named operational access. It covers the user-facing steps and evidence gates for the standard Shopify-only launch profile. HotWax Commerce completes backend setup using the [Everything launch runbook](https://github.com/hotwax/oms-documentation/blob/everything-bagel-pub/everything/operations/oms-administration/shopify-launch-runbook.md); application tasks remain in this guide.
 
 ## What this guide delivers
 
@@ -43,9 +43,9 @@ The launch owner keeps this table current. An individual may hold more than one 
 
 | Chapter | Owner | Status | Completion date | Evidence link or identifier |
 | --- | --- | --- | --- | --- |
-| 1. Initial Maarg administrator | Maarg platform administrator | Not started | — | — |
+| 1. Initial OMS administrator | OMS platform administrator | Not started | — | — |
 | 2. Instance readiness | HotWax integration operator | Not started | — | — |
-| 3. Company and product store | Maarg platform administrator and Company application administrator | Not started | — | — |
+| 3. Company and product store | OMS platform administrator and Company application administrator | Not started | — | — |
 | 4. Shopify connection | Shopify administrator | Not started | — | — |
 | 5. Shopify mappings | Company application administrator | Not started | — | — |
 | 6. Product import | Company application administrator | Not started | — | — |
@@ -75,49 +75,21 @@ flowchart TD
 
 Use the progress table above to record owners, completion dates, and evidence. If a chapter's stop gate is unresolved, recover that stage before proceeding.
 
-## 1. Create the initial Maarg administrator
+## 1. Confirm initial OMS administrator readiness
 
-**Owner:** Maarg platform administrator
+**Owner:** HotWax platform administrator
 
-**Application:** Maarg Admin
+Ask the HotWax Commerce technical team to complete [initial administrator setup in Everything](https://github.com/hotwax/oms-documentation/blob/everything-bagel-pub/everything/operations/oms-administration/shopify-launch-runbook.md#1-create-the-initial-maarg-administrator). Confirm that two named, separately tested platform administrators can sign in, no demonstration administrator remains active, and the instance is restricted to approved administrators.
 
-### Before you begin
+The platform administrator is a recovery and administration account, not a routine operations account. Its creation does not prove Company App or operational application access. Do not require an authentication factor until every required client has passed the compatibility test.
 
-Confirm that this is a clean tenant with only the `_NA_` seeded user, that normal seed data including the `ADMIN` group is loaded, and that the `ext-user` data set was **not** loaded. `ext-user` supplies shared or demonstration users and suppresses the one-time form. Have the named administrator's vault location ready.
-
-### Steps
-
-1. Open `https://<instance-host>/`. The login page redirects to the one-time form and displays **Welcome to your new system** when no user account has been claimed.
-2. Enter **Username**, **New Password**, **New Password Verify**, **User Full Name**, and **Email Address**. Use a named individual account and a unique password that satisfies the deployed policy. The current tested default is at least eight characters, one digit, and one non-alphanumeric character; a deployment can require more.
-3. Select **Create Initial Admin Account**. Store the credential in the approved password vault.
-4. Verify the success message `Account created with username <username>`. The form returns to the normal login page rather than signing you in automatically.
-5. Sign in with the new credentials, sign out, and sign in again.
-6. In **Maarg Admin → Applications → System → Security → Users**, open the account. The current stable path is `/qapps/system/Security/UserAccount/UserAccountList`.
-7. Verify that the account is active and has active `ADMIN` membership.
-8. Create or verify a separate named recovery administrator according to the customer's access policy. In that user's **Groups** panel, add `ADMIN`, verify that the membership is active, and test a separate login. Do not grant sensitive diagnostic access unless a separately approved requirement needs it.
-9. Do not require an authentication factor for the bootstrap or recovery administrator until every required Company App and operational client has been tested with that factor. Maarg web login supports authentication factors, but the current basic Maarg REST login does not expose the corresponding factor-code input.
-
-### Expected result
-
-Two named, separately tested Maarg platform administrators can sign in and the instance remains restricted to approved administrators.
-
-### Evidence to save
-
-Save the success message, both active user identifiers, active `ADMIN` memberships, login-test timestamps, and the vault record identifiers. Do not save passwords or tokens.
-
-### Stop and resolve if
-
-If the form is absent before an account is claimed, or submission returns `Can only create initial admin account if there are no UserAccount records`, stop. Inspect the `moqui.security.UserAccount` count and confirm whether `ext-user` was loaded. Never repair this condition by inserting raw records. This account is a Maarg platform administrator only; it does not by itself prove access to Company App or other HotWax applications.
-
-### Next chapter
-
-Continue to the instance readiness gate only after both administrator logins and memberships are proven.
+Save the named owners, successful login tests, recovery access confirmation, and application-access handoff. Do not continue if an initial administrator cannot be established through the supported setup procedure.
 
 ## 2. Pass the instance readiness gate
 
 **Owner:** HotWax integration operator
 
-**Application:** Maarg Admin and Company App
+**Application:** Company App, with backend prerequisites confirmed by the HotWax integration operator
 
 ### Before you begin
 
@@ -125,11 +97,11 @@ Have confirmation that the deployed HotWax applications are supported for this l
 
 ### Steps
 
-1. Confirm with HotWax Commerce that the deployed Maarg, Company App, Shopify embedded app, HotWax Keychain, Shopify OMS bridge, Mantle Shopify connector, and Poorti versions are supported for this launch.
+1. Confirm with HotWax Commerce that the deployed OMS, Company App, Shopify embedded app, HotWax Keychain, Shopify OMS bridge, Mantle Shopify connector, and Poorti versions are supported for this launch.
 2. Verify required seed and base data, healthy search services, present Shopify integration components, and that no demonstration or temporary administrator remains active.
 3. Apply the supported HotWax application-access package and verify that the named launch administrator can open every application used by the remaining chapters.
 4. Confirm level-2 protected-customer-data approval for the Shopify app and that the agreed history does not require orders created more than sixty days ago.
-5. If an authentication factor is required by launch policy, test every required Company App and operational client before enabling it for the launch account. The current basic Maarg REST login has no factor-code input even though Maarg web login supports authentication factors.
+5. If an authentication factor is required by launch policy, test every required Company App and operational client before enabling it for the launch account. The current basic OMS API login has no factor-code input even though OMS web login supports authentication factors.
 
 ### Expected result
 
@@ -149,9 +121,9 @@ Continue when the launch administrator can use the required applications and all
 
 ## 3. Create the company and Product Store
 
-**Owner:** Maarg platform administrator and Company application administrator
+**Owner:** OMS platform administrator and Company application administrator
 
-**Application:** Maarg Admin and Company App
+**Application:** Company App, with backend prerequisites confirmed by the HotWax integration operator
 
 ### Before you begin
 
@@ -159,9 +131,9 @@ Have the approved product-store name, stable identifier, currency, locale, time 
 
 ### Steps
 
-1. In **Maarg Admin → Applications → System → Tools → Entity → Entities**, open `org.apache.ofbiz.common.property.SystemProperty`. The direct find path is `/qapps/system/Tools/Entity/DataEdit/EntityDataFind?selectedEntity=org.apache.ofbiz.common.property.SystemProperty`. Verify `general` / `currency.uom.id.default` matches the approved single-store currency, `general` / `country.geo.id.default` matches the primary operating-country Geo ID, and `shipment` / `shipment.default.weight.uom` is the approved `WT_kg` or `WT_lb`. Update only an approved value, then reopen each record and verify it.
+1. Have the platform administrator confirm the approved instance currency, primary operating country, and shipment weight unit through the Everything runbook. Record the verified defaults before creating the Product Store.
 2. In Company App, open `/product-store` and select **Create product store** to open `/create-product-store`.
-3. Enter **Company name** when this is the first Product Store, then enter **Name**, **ID**, and **Currency**. When **Operating countries** appears, select **Add**, choose every approved country, save the selection, and verify the selected country chips before continuing. Select **Manage configurations**. The page must display `Product store created successfully.` before it opens `/product-store-onboarding/<product-store-id>`. Then open `moqui.basic.GeoAssoc` in **Maarg Admin → Applications → System → Tools → Entity → Entities**, filter for `toGeoId=DBIC` and `geoAssocTypeEnumId=GROUP_MEMBER`, and verify one saved `geoId` association for every approved operating country.
+3. Enter **Company name** when this is the first Product Store, then enter **Name**, **ID**, and **Currency**. When **Operating countries** appears, select **Add**, choose every approved country, save the selection, and verify the selected country chips before continuing. Select **Manage configurations**. The page must display `Product store created successfully.` before it opens `/product-store-onboarding/<product-store-id>`. Have the platform administrator verify that each approved operating country was saved correctly before continuing.
 4. In the **Configurations** screen, select **Configure manually** and set **Product Identifier**, **Auto approve orders**, and **Sales order ID prefix**. Select **Setup product store**.
 5. Open `/product-store-details/<product-store-id>` and set the approved locale, time zone, order approval and billing defaults. Re-open the details page and verify every saved value before using the Product Store in a connection.
 
@@ -185,7 +157,7 @@ Continue with the Shopify connection gates using this active Product Store.
 
 **Owner:** Shopify administrator, HotWax Keychain approver, and Company application administrator
 
-**Application:** Maarg Admin, Shopify Admin, HotWax Keychain, and Company App
+**Application:** Shopify Admin, HotWax Keychain, and Company App
 
 ### Before you begin
 
@@ -193,8 +165,8 @@ Have the approved Shopify app URL, shop domain, named Shopify administrator, val
 
 ### Steps
 
-1. In **Maarg Admin → Settings → JWT Tokens**, open `/qapps/Oms/Settings/JwtTokens`. This screen is self-token-only: leave **Username** as the signed-in named administrator. Enter the tenant-approved free-text **Purpose** value, record it using the governed format `Shopify OMS connection | <shop-domain> | <YYYY-MM-DD>`, set **Expires In (Days)**, and select **Generate Token**. Copy the displayed token once into the approved vault. This is an OMS authorization token, not a Shopify access token.
-2. Verify `Token generated for <user> — copy it now. It will not be shown again.` and record the displayed **Purpose**, **Expires**, token subject, owner, and vault reference. The positive handoff result is one valid OMS **Access Token** with those recorded attributes. Generation alone does not validate the Shopify connection.
+1. Obtain a valid OMS authorization token from the approved platform administrator through the Everything token-issuance procedure. Record its subject, owner, purpose, expiry, and vault reference. This is not a Shopify access token.
+2. Confirm the token handoff and permitted scope. Generation alone does not validate the Shopify connection.
 3. In Shopify Admin, install the official HotWax Commerce app from the approved application URL. Complete Shopify OAuth, approve only the scope set authorized for the deployed app release and shop, and confirm level-2 protected-customer-data access. Do not copy scope handles from an older setup guide.
 4. Enter the OMS host and the OMS **Access Token**. Never paste that token into a ticket or screenshot. Submission creates a pending connection request; pending is not connected.
 5. In HotWax Keychain, open **Find Instance Requests**. The HotWax Keychain approver confirms the customer, instance, and shop, then accepts the correct pending request. For a failed, rejected, duplicate, or superseded request, stop it, record the request identifier and disposition, correct the cause, and submit only the intended replacement.
@@ -213,8 +185,8 @@ Have the approved Shopify app URL, shop domain, named Shopify administrator, val
    * **Verify the granted scopes:** compare the refreshed handles with the required capabilities above and record how each capability is granted. Resolve every missing or unexpected scope with HotWax Commerce before continuing. The later setup chapters and final validation confirm that the approved capabilities work.
    * **Not required by this simple profile:** `read_all_orders`; `write_orders` and `write_products` for pickup or preorder extensions; `read_fulfillments` and `write_fulfillments`; `read_assigned_fulfillment_orders` and `write_assigned_fulfillment_orders`; `read_third_party_fulfillment_orders` and `write_third_party_fulfillment_orders`; `read_channels`; `read_files` and `write_files`; `read_draft_orders` and `write_draft_orders`; `read_gift_cards` and `write_gift_cards`; and `read_returns` and `write_returns`. If the deployed manifest requests one of these or another additional handle, stop and have the HotWax release owner classify and approve it for the launch profile. Do not silently grant it or remove it from Keychain.
    * **Order-import compatibility:** have HotWax Commerce confirm that the deployed order import supports this standard scope profile without `read_returns`. Do not add `read_returns` unless returns are included in an approved advanced launch profile.
-8. In **Maarg Admin → Shopify → Shopify Shops → the connected shop → Shop Remotes**, open the selected remote. The current detail path is `/qapps/Oms/Shopify/ShopifyShops/ShopifyShopDetail?shopId=<shop-id>`. Verify its **Access Scope** is `SHOP_RW_ACCESS`.
-9. If the selected remote is blank, `SHOP_NO_ACCESS`, or `SHOP_READ_WRITE_ACCESS`, a HotWax integration operator edits that selected remote in **Shop Remotes**, sets it to `SHOP_RW_ACCESS`, saves, and rechecks the connection.
+8. Have the integration operator verify the selected Shopify remote has `SHOP_RW_ACCESS` using the Everything runbook.
+9. If the selected remote capability is blank or incorrect, have the integration operator correct and verify it before continuing. OAuth scope refresh alone does not correct this capability.
 10. In **Company App → Shopify → open the connection → Products and Inventory → Product Sync**, verify the **Shopify API access** row displays **Write access**.
 11. Document the rotation policy. HotWax Keychain retains the OMS token for credential resynchronization, so do not revoke or allow it to expire until it is replaced through the supported Keychain flow and a resync is proven.
 
@@ -228,7 +200,7 @@ Save the token subject, purpose, expiry, and vault record; connection request id
 
 ### Stop and resolve if
 
-Stop if the launch requires a separate integration subject: the current Maarg screen cannot issue a token for it, and entering another username returns `You are not allowed to generate tokens for other users.` A signed-in named administrator may issue only that administrator's self-token when policy permits. Also stop if the request remains pending or is rejected; protected-data approval or a required API capability is missing; the refreshed handles do not match the approved scope profile; order-import compatibility is unconfirmed; an unexpected advanced handle is unresolved; the remote cannot be corrected; or Product Sync shows **Update required**, **Read only**, or **Unavailable**. Do not proceed to an order chapter when the deployed import requires `read_returns` for this standard profile. The Company token-generation action calls a missing Maarg route; do not use it as the approved issuance path. A Keychain payload can omit `accessScope`, so refreshing OAuth scopes alone does not correct the remote capability.
+Stop if the launch requires a separate integration subject: the current token-issuance procedure cannot issue a token for it, and entering another username returns `You are not allowed to generate tokens for other users.` A signed-in named administrator may issue only that administrator's self-token when policy permits. Also stop if the request remains pending or is rejected; protected-data approval or a required API capability is missing; the refreshed handles do not match the approved scope profile; order-import compatibility is unconfirmed; an unexpected advanced handle is unresolved; the remote cannot be corrected; or Product Sync shows **Update required**, **Read only**, or **Unavailable**. Do not proceed to an order chapter when the deployed import requires `read_returns` for this standard profile. The Company token-generation action is not a supported issuance path in this release; obtain the token through the approved operator handoff. A Keychain payload can omit `accessScope`, so refreshing OAuth scopes alone does not correct the remote capability.
 
 ### Next chapter
 
@@ -342,7 +314,7 @@ Continue to starting inventory only after products, facilities, and all required
 
 **Owner:** HotWax integration operator and Company application administrator
 
-**Application:** Maarg Admin and Company App
+**Application:** Company App, with backend prerequisites confirmed by the HotWax integration operator
 
 ### Before you begin
 
@@ -355,15 +327,11 @@ Confirm complete product identity, facility and location mappings, a valid Shopi
 
 ### Steps
 
-1. In **Maarg Admin → System → System Messages**, confirm no unrelated message under parent type `ShopifyBulkQuery` is in `SmsgProduced` or `SmsgSent`.
-2. Keep both shared Shopify bulk-operation poller schedules paused.
-3. Open **Maarg Admin → System → Service Jobs**, open `sync_ShopifyInventoryReset`, set the selected Shopify shop identifier, and select **Run Job** once. The current path is `/qapps/system/ServiceJob/Jobs/ServiceJobDetail?jobName=sync_ShopifyInventoryReset`. Save the job-run identifier.
-4. In **System Messages**, find the resulting `BulkQueryShopifyInventoryReset` message and record its exact `systemMessageId`.
-5. Open `send_ProducedBulkOperationSystemMessage_ShopifyBulkQuery`, select **Run Job** once, and verify that the recorded message—not another bulk query—moves from `SmsgProduced` to `SmsgSent` and receives the Shopify bulk-operation identifier.
-6. Open `poll_ShopifyBulkOperationResult` and use one-time **Run Job** actions until the recorded message reaches its expected terminal state. Keep `poll_BulkOperationResult_ShopifyBulkQuery` paused for this inventory operation.
-7. In **Maarg Admin → MDM → Data Manager Imports**, wait for the `RESET_SHOPIFY_INVENTORY` load tied to the recorded message to reach a terminal result.
-8. Compare sample Shopify `on_hand` values with HotWax quantity on hand. Verify external inventory reset records and that outbound publication did not echo unapproved quantities to Shopify during the seed.
-9. Restore only the schedules approved for normal operations after validation.
+1. Have the HotWax integration operator complete [the inbound starting-inventory procedure in Everything](https://github.com/hotwax/oms-documentation/blob/everything-bagel-pub/everything/operations/oms-administration/shopify-launch-runbook.md#8-seed-starting-inventory-from-shopify).
+2. Confirm no unrelated inventory or history bulk operation overlaps the seed and that outbound publication remains contained.
+3. Obtain the selected shop, job-run identifier, exact bulk-query message identifier, terminal import counts, and error review from the operator.
+4. Compare representative Shopify quantity-on-hand values with the corresponding OMS inventory records.
+5. Continue only after the source-to-import reconciliation is positive and the operator confirms the approved schedule states.
 
 ### Expected result
 
@@ -371,73 +339,38 @@ The recorded message completes its inbound Shopify inventory path, its `RESET_SH
 
 ### Evidence to save
 
-Save job-run final status; exact `BulkQueryShopifyInventoryReset` `systemMessageId`; Shopify bulk-operation identifier and transitions; `RESET_SHOPIFY_INVENTORY` counts and errors; sample quantity comparison; external reset records; and schedule-state evidence. Evidence screens include `/qapps/system/ServiceJob/JobRuns/JobRunList`, `/qapps/system/SystemMessage/Message/SystemMessageList`, and `/qapps/Oms/DataManager/DataManagerImport/DataManagerImportList`.
+Save job-run final status; exact `BulkQueryShopifyInventoryReset` `systemMessageId`; Shopify bulk-operation identifier and transitions; `RESET_SHOPIFY_INVENTORY` counts and errors; sample quantity comparison; external reset records; and schedule-state evidence. Have the operator provide the corresponding job, message, and import evidence.
 
 ### Stop and resolve if
 
-Stop if an unrelated produced or sent bulk message exists, the recorded message is queued without download and processing evidence, the Data Manager load fails, quantities do not reconcile, or outbound inventory publishes unapproved seed values. [Monitor Shopify inventory sync](manage-shopify-inventory-sync.md) in Company covers outbound HotWax-to-Shopify inventory publication; it does not import starting QOH from Shopify. Use this Maarg Admin procedure for the inbound seed until a tested Company import flow is released.
+Stop if an unrelated produced or sent bulk message exists, the recorded message is queued without download and processing evidence, the Data Manager load fails, quantities do not reconcile, or outbound inventory publishes unapproved seed values. [Monitor Shopify inventory sync](manage-shopify-inventory-sync.md) in Company covers outbound HotWax-to-Shopify inventory publication; it does not import starting QOH from Shopify. Have the technical team perform the inbound seed using the Everything runbook until a tested Company import flow is released.
 
 ### Next chapter
 
 Continue to order infrastructure only after inventory seeding is reconciled and approved normal schedules are restored.
 
-## 9. Configure Maarg Admin order infrastructure
+## 9. Confirm OMS order infrastructure
 
 **Owner:** HotWax integration operator
 
-**Application:** Maarg Admin
+Have the operator complete [order infrastructure setup in Everything](https://github.com/hotwax/oms-documentation/blob/everything-bagel-pub/everything/operations/oms-administration/shopify-launch-runbook.md#9-configure-maarg-admin-order-infrastructure) before proceeding to order-history import. The backend configuration health banner alone is not runtime proof.
 
-### Before you begin
+### Evidence to review
 
-Have the selected shop identifier and domain, environment, AWS account and region, approved queue naming, launch date, stored AWS credentials, approved queue policies, and the Chapter 4 order-import compatibility confirmation.
+- Required import configurations, Shopify remote, queue, consumer, order properties, fallback job, and history job match the selected shop and approved environment
+- Both `ORDERS_CREATE` and `ORDERS_UPDATED` webhooks exist and their EventBridge patterns match the intended topics
+- Queue delivery, consumer reads, failed-test dead-letter delivery, redrive behavior, and approved policies are proven
+- Existing fallback `runAsBatch`, `fromDate`, and `additionalParameters` values and history `windowDays` are recorded and verified after any configuration change; partial save actions must not silently clear them
 
-### Steps
+Stop if any required prerequisite, access capability, topic, policy, parameter, or delivery result is missing. A test event does not by itself prove an OMS order import. Runtime import is proven with the controlled Shopify order in Chapter 13; realtime SQS import does not create a System Message.
 
-1. Open **Maarg Admin → Shopify → Shopify Order Integration Setup** at `/qapps/Oms/Shopify/ShopifyOrderIntegrationSetup?shopId=<shop-id>`. In **Select Shopify Store**, choose the selected shop and select **Refresh / View Health Status**. Treat the `✅ Integration Stack Fully Configured` or `⚠️ Integration Setup Incomplete` banner only as a configuration summary; it is not a runtime gate. Return channels, return-application modeling, and gift-card mapping are excluded from this launch and do not block it.
-2. Save included-profile section evidence: **MDM Bridge Configuration** must show **MDM Framework Status** `✅ Valid`; **Data Manager Configs** must include configured `SYNC_SHOPIFY_ORDER` and `BULK_ORDER_HISTORY` services; **Global AWS/SQS Configuration** must show `✅ Connected` for the selected queue; and `consume_ShopifyOrders_SQS` must show `✅ Active` with the approved **Queue Name**, **Remote ID**, and **Expire Lock Minutes**. Correct only the selected required section using its visible action, such as **Fix MDM Data** then **Load XML**, **Load Configurations Template** then **Load Configs**, **Edit Service** then **Update Config**, or consumer **Update**.
-3. In **Order Sync System Properties**, verify `newOrderSync.launchDate` and `orderSyncHistory.lastSyncDate`. Use **Edit**, enter the approved **Value**, and select **Update Property**; use **Set to Now** only when the approved launch cutoff is now.
-4. In **Webhooks Management**, register both realtime order topics:
-   - For new orders, select **Subscribe New Webhook**, enter `ORDERS_CREATE` in **Topic**, verify **EndPoint / ARN**, and select **Register**. This topic provides the dedicated new-order signal during high-volume order creation instead of relying on order updates alone.
-   - For order changes, select **Subscribe ORDERS_UPDATED**, verify **EndPoint / ARN**, and select **Register**.
-   - Refresh the webhook list and confirm that both `ORDERS_CREATE` and `ORDERS_UPDATED` rows show the intended endpoint. `Webhook creation triggered.` is not registration evidence.
-5. Configure the fallback `queue_ShopifyOrderSync` job by its visible row state:
-
-   - **❌ Incomplete:** before opening **Fix Configuration**, open the linked job name in **Maarg Admin Service Job** detail and record `runAsBatch`, `fromDate`, and `additionalParameters`, or obtain their governed approved values. **Save Config** submits only **System Message Type** and **Remote ID** and may blank those omitted parameters. Enter the two visible values and select **Save Config** only after the three hidden values are recorded or approved. Re-open the resulting configured row, select **Edit**, restore the exact recorded or approved **Run As Batch**, **From Date**, and **Additional Params**, select **Update Job**, then re-open it and verify all five values and its `✅ Active` status.
-   - **Configured intended-shop row:** select **Edit**, review **System Message Type**, **Remote ID**, **Run As Batch**, **From Date**, and **Additional Params**, then select **Update Job** only with the exact recorded or governed approved values. Re-open the row and save every displayed value and its `✅ Active` status.
-   - **⚠️ Unassigned:** enter the approved **New Job Name** in **Clone**, select **Clone Job**, then re-open the cloned intended-shop row and follow the applicable incomplete or configured branch.
-   - **❌ No fallback jobs found matching `queue_ShopifyOrderSync`:** select **Clone Standard Job**, enter the approved **New Job Name**, select **Clone Job**, then re-open the cloned row and follow the applicable incomplete or configured branch.
-
-6. Configure `sync_ShopifyOrderHistory` by its visible row state:
-
-   - **❌ Incomplete:** before opening **Fix Configuration**, open the linked job name in **Maarg Admin Service Job** detail and record `windowDays`, or obtain its governed approved value. **Save Config** submits only **System Message Type** and **Remote ID** and may blank the omitted `windowDays`. Enter the two visible values and select **Save Config** only after `windowDays` is recorded or approved. Re-open the resulting configured row, select **Edit**, restore the exact recorded or approved **Window Days**, select **Update Job**, then re-open it and verify **System Message Type**, **Remote ID**, **Window Days**, and its `✅ Active` status.
-   - **Configured intended-shop row:** select **Edit**, review **System Message Type**, **Remote ID**, and **Window Days**, then select **Update Job** only with the exact recorded or governed approved values. Re-open the row and save every displayed value and its `✅ Active` status.
-   - **⚠️ Unassigned:** enter the approved **New Job Name** in **Clone**, select **Clone Job**, then re-open the cloned intended-shop row and follow the applicable incomplete or configured branch.
-   - **❌ No historic sync jobs found matching `sync_ShopifyOrderHistory`:** select **Clone Standard Job**, enter the approved **New Job Name**, select **Clone Job**, then re-open the cloned row and follow the applicable incomplete or configured branch.
-
-7. Complete the HotWax-owned infrastructure handoff. Its evidence must show that the EventBridge rule matches both `orders/create` / `ORDERS_CREATE` and `orders/updated` / `ORDERS_UPDATED`, and must include the SQS queue URL and ARN, dead-letter queue ARN, redrive policy, queue policy, resource policy, a successful AWS test-event identifier for each topic, target-queue delivery, consumer-read evidence, failed-test dead-letter evidence, and policy comparison to the approved environment.
-8. Do not infer a Maarg service-job run or Data Manager load from the infrastructure test event: this screen does not provide a source-proven action that causally creates those records. Runtime proof for the included realtime profile is deferred to the controlled real Shopify order in Chapter 13, where the SQS consumer job run, Data Manager `logId`, `createdByJobRunId`, `configId`, terminal result, and OMS order are tied together. Realtime SQS import does not create a System Message.
-
-### Expected result
-
-Included-profile MDM, remote, queue, consumer, property, webhook, fallback, and history configuration evidence is positive. Separate `ORDERS_CREATE` and `ORDERS_UPDATED` webhook rows exist, and the HotWax infrastructure handoff proves both EventBridge topic patterns, queue delivery, and dead-letter delivery. The health banner and configuration actions do not prove runtime order import.
-
-### Evidence to save
-
-Save the included-profile section states and identifiers, queue URL and ARN, dead-letter ARN, policy references, both EventBridge topic patterns and test-event identifiers, target-queue deliveries, consumer-read results, failed-test dead-letter result, separate `ORDERS_CREATE` and `ORDERS_UPDATED` webhook-list rows, and property values. For every incomplete fallback or history job, save the Service Job detail's pre-save hidden values or governed approval, then the re-opened **Edit** values and `✅ Active` status after **Update Job**. Save realtime runtime job-run and Data Manager evidence only with the controlled Shopify order in Chapter 13; save System Message evidence only for a flow that actually creates one.
-
-### Stop and resolve if
-
-Stop for missing Chapter 4 order-query compatibility evidence, a missing required included-profile resource or section state, inaccessible queue, failed delivery, missing redrive behavior, a missing `ORDERS_CREATE` or `ORDERS_UPDATED` webhook row or EventBridge pattern, failed consumer, incomplete required Data Manager configuration, a cross-environment identifier, or any unknown fallback `runAsBatch`, `fromDate`, `additionalParameters`, or history `windowDays` value. Do not use **Save Config** until a governed value is available. The setup screen does not by itself provision or prove EventBridge delivery, queues, dead-letter handling, redrive, policies, or runtime order import.
-
-### Next chapter
-
-Continue to open-order history only after realtime queue infrastructure and the fallback prerequisites are proven.
+Save the operator's identifiers, parameter values, test results, and evidence links before continuing.
 
 ## 10. Import open-order history and enable recurring Order Sync
 
 **Owner:** HotWax integration operator and Company application administrator
 
-**Application:** Maarg Admin and Company App
+**Application:** Company App, with backend prerequisites confirmed by the HotWax integration operator
 
 ### Before you begin
 
@@ -445,19 +378,14 @@ Have the agreed merchant-zoned history start and launch cutoff, deployed instanc
 
 ### Steps
 
-1. Convert the merchant's zoned history start and launch cutoff to the deployed instance or JVM time zone. Store `newOrderSync.launchDate` as the converted launch cutoff and `orderSyncHistory.lastSyncDate` as the converted history start in zone-less `yyyy-MM-dd HH:mm:ss` format.
-2. In **System Messages**, confirm no unrelated `ShopifyBulkQuery` message is in `SmsgProduced` or `SmsgSent`. Keep `poll_ShopifyBulkOperationResult` paused while this released history flow is active.
-3. Calculate and record the exact converted start and end timestamp for the first history window. Clone `sync_ShopifyOrderHistory` for the selected shop. Set `systemMessageTypeId` to `BulkOrderHistoryQuery`, set the correct Shopify `systemMessageRemoteId`, set the approved window size—seven days unless the tested release defines another safe default—and select **Run Now** once. Save the job-run identifier and that window's exact bounds.
-4. Record the resulting `BulkOrderHistoryQuery` `systemMessageId` together with the exact converted start and end timestamp for its queued window.
-5. Select **Run Job** once on `send_ProducedBulkOperationSystemMessage_ShopifyBulkQuery` and verify that the recorded history message is the message sent.
-6. Use one-time **Run Job** actions on `poll_BulkOperationResult_ShopifyBulkQuery` until the recorded history message reaches the expected terminal state.
-7. Wait for the tied `BULK_ORDER_HISTORY` Data Manager load to reach a terminal result, then reconcile Shopify query records to Data Manager records. Record the same window's exact converted start and end timestamp with the job run, `systemMessageId`, and Data Manager result.
-8. For each window, compare eligible unknown pre-launch Shopify orders with newly created HotWax orders; prove that existing orders were not duplicated and post-launch records were not created by the history flow. Calculate the exact next start and end timestamp before queueing the next window so the evidence proves no gap or overlap.
-9. After history reconciliation, open `/shopify-connection-details/<shop-id>/order-sync/configure`. Verify **Shopify shop**, **Product Store**, **Shopify remote**, and **Order mapping readiness**. Select **Create paused Order Sync job** and confirm **Batch job** and **Activation** both show **Paused**.
-10. In **Schedule**, enter a valid containment **Quartz cron expression** whose displayed **Schedule preview** and next run are after the controlled validation window. Verify the displayed **OMS runtime timezone** and select **Save schedule**. Resolve every **Missing** mapping in the linked mapping screen or obtain an approved exception before activation.
-11. Select **Review and activate**, verify the selected shop, remote, containment schedule, and mapping review in **Activate Order Sync**, then select **Activate Order Sync**. Confirm **Activation** shows **Active** and open `/shopify-connection-details/<shop-id>/order-sync` immediately; **Run now** is unavailable while the job is paused.
-12. In the **Order sync jobs** card, open **Queue order requests**. With a controlled eligible Shopify order in the selected batch window, select **Run now** and confirm `The standard next batch was queued as <id>.` Save the resulting **Queued SystemMessage**, job run, the tied import, and its Data Manager result. Do not allow the containment schedule to fire while that run is unresolved.
-13. If the controlled batch is positive, open **Queue order requests**, replace the containment expression with the approved normal recurrence in **Quartz cron expression**, verify its **Schedule preview**, and select **Save**. If the batch fails, immediately turn **Active** off in that same job detail and select **Save** before the containment schedule fires; preserve the failure evidence and do not enable normal recurrence.
+1. Have the integration operator complete [open-order history import in Everything](https://github.com/hotwax/oms-documentation/blob/everything-bagel-pub/everything/operations/oms-administration/shopify-launch-runbook.md#10-import-open-order-history-and-enable-recurring-order-sync). Agree on the merchant-zoned history start and launch cutoff, their converted runtime timestamps, and every window's exact bounds.
+2. Review each window's job-run, bulk message, terminal import counts, and source-to-load reconciliation. Confirm there is no gap, overlap, or duplicate creation before the operator advances to the next window.
+3. If a window fails, have the operator restore its cursor before retrying. Do not use an untested Company history action or enable recurring sync while history is unresolved.
+4. After history reconciliation, open `/shopify-connection-details/<shop-id>/order-sync/configure`. Verify **Shopify shop**, **Product Store**, **Shopify remote**, and **Order mapping readiness**. Select **Create paused Order Sync job** and confirm **Batch job** and **Activation** both show **Paused**.
+5. In **Schedule**, enter a valid containment **Quartz cron expression** whose displayed **Schedule preview** and next run are after the controlled validation window. Verify the displayed **OMS runtime timezone** and select **Save schedule**. Resolve every **Missing** mapping in the linked mapping screen or obtain an approved exception before activation.
+6. Select **Review and activate**, verify the selected shop, remote, containment schedule, and mapping review in **Activate Order Sync**, then select **Activate Order Sync**. Confirm **Activation** shows **Active** and open `/shopify-connection-details/<shop-id>/order-sync` immediately; **Run now** is unavailable while the job is paused.
+7. In the **Order sync jobs** card, open **Queue order requests**. With a controlled eligible Shopify order in the selected batch window, select **Run now** and confirm `The standard next batch was queued as <id>.` Save the resulting **Queued SystemMessage**, job run, the tied import, and its Data Manager result. Do not allow the containment schedule to fire while that run is unresolved.
+8. If the controlled batch is positive, open **Queue order requests**, replace the containment expression with the approved normal recurrence in **Quartz cron expression**, verify its **Schedule preview**, and select **Save**. If the batch fails, immediately turn **Active** off in that same job detail and select **Save** before the containment schedule fires; preserve the failure evidence and do not enable normal recurrence.
 
 ### Expected result
 
@@ -544,7 +472,7 @@ Save user identifiers; the exact security group where the template creates one, 
 
 ### Stop and resolve if
 
-Stop if the saved account, security group, Product Store, facility, or `WAREHOUSE_PICKER` role does not match the selected template and approved access, or if a required application login cannot be supplied through a tested login-bearing template or the supported manual route. The initial Maarg administrator is a platform recovery and administration account, not a routine operations account. Do not recreate legacy raw permission records.
+Stop if the saved account, security group, Product Store, facility, or `WAREHOUSE_PICKER` role does not match the selected template and approved access, or if a required application login cannot be supplied through a tested login-bearing template or the supported manual route. The initial OMS administrator is a platform recovery and administration account, not a routine operations account. Do not recreate legacy raw permission records.
 
 ### Next chapter
 
@@ -554,7 +482,7 @@ Continue to launch validation once operational users have passed their job-speci
 
 **Owner:** Launch owner and operations validator
 
-**Application:** Shopify Admin, Company App, and Maarg Admin
+**Application:** Shopify Admin and Company App, with operator evidence for backend processing
 
 ### Before you begin
 
@@ -611,7 +539,7 @@ Use this table to recover without bypassing the applicable stop gate.
 
 Use application manuals only for optional operating detail after this guide's required outcome is complete. Keep the following boundaries clear:
 
-- **Maarg Admin** is the platform-administration application used for the bootstrap, tokens, service jobs, system messages, Data Manager, and integration setup.
+- **HotWax technical team** owns backend administrator setup, tokens, service jobs, system messages, Data Manager, and integration setup through the Everything runbook.
 - **Company App** is used for Product Store, connection verification, mappings, Product Sync, facilities, operational users, and recurring Order Sync.
 - **Order Routing app** is used to create, activate, test, schedule, and review standard routing groups and rules.
 - **Shopify Admin** owns app installation, OAuth approval, and the controlled order.
