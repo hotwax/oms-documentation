@@ -1,102 +1,77 @@
 ---
 description: >-
-  Learn how retailers use different approaches to handle exchanges across
-  Shopify, NetSuite, Loop, and HotWax Commerce.
+  Learn how HotWax Commerce links returned value to replacement orders and
+  synchronizes exchange credit with NetSuite.
 ---
 
 # Exchanges
 
-Retailers often use different return options, such as store credit, replacement, refund, and exchange, to accommodate varying customer requests and preferences.
+An exchange has two linked parts: the return of the original merchandise and the new order for its replacement. HotWax Commerce tracks the returned value separately from fulfillment of the replacement order.
 
-In the context of returns, an exchange refers to a transaction in which a customer returns a purchased item and, instead of receiving a refund or store credit, opts to swap the returned item for a different product. This lets the customer exchange the initially purchased item for another one.
+The connector supports an exchange-credit lifecycle in which a NetSuite Credit Memo pays for the replacement order. Some existing integrations represent exchange value as a discount on the replacement order instead. Use the method configured for your integration when reconciling the exchange.
 
-Exchanges can be handled in various ways by different retailers, each employing unique processes.
+## Link the return to the replacement order
 
-## Different Approaches for Handling Exchanges
+The commerce or returns system creates the replacement order, and HotWax imports it through the order integration. The return's outcome links its returned items to that order. HotWax groups the returned items by their original NetSuite Sales Order and return type, then creates a customer return invoice in the order management system (OMS) for each group.
 
-1.  **Zero Amount Exchange Orders:**
+The replacement order's exchange-credit payment preference references the customer return invoice that supplies its credit. This reference connects the new order to the correct NetSuite Credit Memo when the memo is available.
 
-    Retailers can process exchange orders by creating an exchange order with a zero amount, where the order item total is equal to the item total of the original order. So in this case no amount needs to be refunded to the customer.
-2.  **Store Credit:**
+```mermaid
+flowchart TD
+    accTitle: Exchange credit and the replacement order
+    accDescr: The return invoice links a credit memo to the replacement sale. NetSuite applies the credit to the replacement invoice, and HotWax verifies the remaining balance.
+    returned["Returned items and exchange outcome"] --> invoice["Customer return invoice in OMS"]
+    invoice --> memo["NetSuite Credit Memo after prerequisites"]
+    invoice -->|"Invoice reference on exchange credit"| replacement["Replacement order"]
+    replacement --> order["Replacement Sales Order in NetSuite"]
+    memo -->|"Configured Credit Memo reference"| order
+    order --> salesInvoice["Replacement Invoice"]
+    salesInvoice --> apply["Configured NetSuite process applies credit"]
+    apply --> verify["HotWax verifies no unapplied memo balance"]
+```
 
-    Retailers can issue a store credit to a customer for the amount that is equal to the returned order item, and use this store credit against the new exchanged item.
-3.  **Integrated Platform Approach:**
+See [Returns](../returns/README.md) for authorization and receipt requirements, including configured financial-only outcomes.
 
-    Many retailers use platforms where eCommerce, OMS, Return Management System (RMS), and Accounting can be managed in one single platform. In such cases, they can easily unlink the payment reference from the original order and apply it to the exchanged order.
-4.  **Separate Systems:**
+## Wait for the accounting customer
 
-    Many retailers also use a separate Return Management System along with independent eCommerce, OMS, and Accounting Systems.
+The return and replacement order need compatible customer information for NetSuite to apply the credit. A configured warranty exchange waits for one linked, imported replacement order and a known NetSuite customer before posting its final financial records.
 
-    For example, customers we have worked with, use Shopify as their eCommerce platform, NetSuite as their ERP system, Loop as their RMS, and HotWax Commerce as their OMS.
+When a replacement order supplies the customer, HotWax can update the return and customer return invoices that do not yet have a NetSuite Credit Memo. The approval step updates an existing return merchandise authorization (RMA) with the final customer, address, tax, location, and configured fields. An invoice that already has a Credit Memo retains that memo's customer.
 
-    **In this setup here is how exchanges work:**
+Some integrations book returns to the return facility's accounting customer. Others use the replacement customer's NetSuite ID or a configured store customer for an anonymous sale. These are implementation choices, not a single customer rule for all exchanges.
 
-    As returns are initiated in Loop, it is also responsible for creating exchange orders in Shopify, whether they take place in-store or online. Loop treats the new order in Shopify as an entirely separate order that is only linked to the original order through references in extended fields.
+## Apply the exchange credit
 
-    When the customer completes their exchange process, Loop marks the original order as returned in both Shopify and NetSuite. Additionally, marks payment as refunded in NetSuite. Refunds in Shopify are intentionally not processed, because Loop uses the pending refund amount as a `discount` on the new order created as a replacement for the original order.
+The return settlement job does not create a Customer Refund for exchange credit. When configured, it writes the Credit Memo reference to the replacement Sales Order. It can also update an open Invoice that NetSuite created before the reference was available.
 
-    If the new order total is less than the pending refund amount, then the leftover refund amount is processed as a refund on Shopify based on the customer's selected preference which could be either store credit or the original payment method. In the event that the new order total exceeds the pending refund amount, the outstanding balance will be captured from the customer.
+The configured NetSuite billing and credit-application process applies the Credit Memo to the replacement Invoice. The connector then reads the Credit Memo's unapplied amount. If any balance remains, the OMS customer return invoice stays ready for settlement and is checked again on a later run.
 
-## Data Flow
+The reference fields and NetSuite application script must be configured for this path. Without them, creating both orders and the Credit Memo does not complete the exchange settlement.
 
-### Synchronize Web Exchanges to NetSuite
+## Handle a difference in value
 
-Exchange orders that are created in Shopify are imported into HotWax Commerce just like regular sales orders. Given that exchanges are created by Loop in Shopify, they are assigned the sales channel `Loop Exchange` within Shopify. Consequently, all exchange orders imported into HotWax Commerce have a `Loop Exchange` sales channel as well.
+The source system records how the customer pays or receives the difference:
 
-When it comes to pushing sales order data from HotWax Commerce to NetSuite, the handling of all web orders remains consistent irrespective of the sales channel they originate from. The generated order feed from HotWax Commerce is also generic, similar to that of regular orders. This means that HotWax can synchronize web exchange orders to NetSuite in the same manner it synchronizes regular orders.
+* A higher-priced replacement can include an additional payment, which follows the replacement order's payment integration
+* An equal-value exchange can use the returned credit for the replacement value
+* A lower-priced replacement can leave a refund, store-credit, or gift card amount, which follows the return settlement method recorded in OMS
 
-More specifically, for all web exchange orders, the sync for Customers, Sales Order Item Line IDs, Sales Order IDs, Order Allocation, and Fulfillment remains consistent between [HotWax Commerce and NetSuite](../sales-order/order-approval.md).
+The integration uses the linked outcome and payment amounts. It does not infer the customer-facing refund or collect an additional payment solely from the difference between two order totals.
 
-<figure><img src="../../.gitbook/assets/web-exchanges-sync-to-netsuite.png" alt=""><figcaption><p>Sync web exchanges to NetSuite</p></figcaption></figure>
+## Receive the original merchandise
 
-However, there are certain distinctions to note:
+Replacement fulfillment and receipt of the original merchandise are separate events. An OMS return shipment produces a NetSuite Item Receipt from its RMA when the receipt prerequisites are met. Warehouse receipts created directly in NetSuite can be imported as receipt history without receiving the inventory again in OMS.
 
-* References to the original order stored in Shopify notes are saved in HotWax Commerce as a `communication event` and subsequently sent to NetSuite as a `memo` on the order.
-* Exchange orders have a discount code labeled `loop-discount` applied to them. This discount code is also present in NetSuite. Consequently, HotWax Commerce ensures that the exchange order is synchronized to NetSuite with this exact code, with the discount amount shared as the `Rate.`
-* All exchange orders have a discount code applied to them. When the amount of the exchange order item is the same as that of the original order item, the value of the exchange order becomes zero due to the applied discount. In these instances, there is no need to create customer deposits in NetSuite. In the event the value of an exchange order item exceeds the value of the original order item, customer deposits should be created in NetSuite to reflect the authorized payments.
+The store's return settings determine whether the Credit Memo waits for receipt evidence. Inspect partial receipt quantities and the restock decision independently from the exchange payment.
 
-Since our current customers are not capturing additional payments for exchanges in Shopify, payment preferences are not being created in HotWax, and subsequently, customer deposits are not being generated in NetSuite.
+## Handle a canceled replacement order
 
-In the event, payments are captured in Shopify and payment records are created in HotWax Commerce, customer deposits should also be created in NetSuite.
+When the configured cancellation flow runs, the connector attempts to delete the Credit Memo that funded the canceled replacement, close its open RMA lines, and cancel the OMS customer return invoice. NetSuite allows deletion only while the memo has no applications. A refusal stops the cancellation flow and leaves the invoice available for review; the connector does not automatically reverse an applied financial transaction.
 
-#### Restocking Item from the Original Order
+## Reference existing discount-based exchange feeds
 
-Exchanges involve returning a purchased item for a different product, making it crucial to restock the inventory from the original order.
+Existing Loop integrations can represent the returned value as a discount, such as `loop-discount`, on a new Shopify order. In that setup, the replacement order's discount and any additional payment follow the configured order feed. Web exchanges can use the Sales Order flow, while a separately configured point of sale (POS) exchange feed can create Cash Sales.
 
-Upon physically receiving the returned inventory from the original order, NetSuite generates item receipt records and updates the inventory count accordingly. Subsequently, HotWax Commerce synchronizes these item receipt records from NetSuite and accurately updates the inventory count.
+Channel names, POS identification rules, discount mappings, and feed schedules belong to that installed integration. Do not use a `Loop Exchange` channel or a shipping-method label alone to infer which accounting path is active. The discount-based approach does not establish that the Credit Memo application lifecycle described above is configured.
 
-### Synchronize POS Exchanges to NetSuite
-
-Exchange orders that are created in Shopify POS are imported into HotWax Commerce just like regular POS sales. Given that POS exchanges are created by Loop in Shopify, they are assigned the sales channel `Loop Exchange` within Shopify. Consequently, all POS exchanges imported into HotWax Commerce have a `Loop Exchange` sales channel as well.
-
-POS exchange sales are similar to other POS sales since both transactions are recorded within the physical store.
-
-When POS sales are downloaded in HotWax Commerce, POS sales have a `Completed` order status, the sales channel is set to `POS\_Channel`, and the shipping method is set to `POS\_COMPLETED`.
-
-In the case of POS exchange sales, they also have a `Completed` order status, but their sales channel is `Loop Exchange.` Due to this distinction, HotWax Commerce is unable to assign their shipping method as POS\_COMPLETED. Instead, it is designated as `Two-Day Shipping` by default.
-
-| Attribute       | POS Sales      | POS Exchange Sales |
-| --------------- | -------------- | ------------------ |
-| Order Status    | Completed      | Completed          |
-| Sales Channel   | POS\_Channel   | Loop Exchange      |
-| Shipping Method | POS\_COMPLETED | Two-Day Shipping   |
-
-Because of these distinctions between POS sales and POS exchange sales, HotWax Commerce generates a separate feed to sync POS exchange orders to NetSuite.
-
-**How HotWax Commerce identifies POS exchange sales to sync to NetSuite:**
-
-* The order status is `Completed`
-* The sales channel is `Loop Exchange`
-* The NetSuite order identification is absent. This condition also helps make sure that in-store exchange orders are segregated from web exchange orders and these orders are not sent to NetSuite twice.
-
-As previously discussed, the [synchronization of POS sales from HotWax Commerce to NetSuite](../sales-order/pos-orders.md) involves the creation of Cash Sale records. All the eligible POS exchange sales are then synchronized to NetSuite just like any other POS sales and Cash Sales are created in NetSuite for POS exchange sales.
-
-#### Restocking Item from the Original Order
-
-When an item from the original order is returned on Shopify POS, HotWax Commerce downloads the return data, including the facility ID where the returned items are received. If the restocking flag is enabled, HotWax Commerce also restocks the inventory based on the captured facility ID.
-
-<figure><img src="../../.gitbook/assets/pos-exchanges-sync-to-netsuite.png" alt=""><figcaption><p>Sync POS exchanges to NetSuite</p></figcaption></figure>
-
-{% hint style="info" %}
-In our integration, web exchange orders are handled similarly to regular orders, while POS exchange sales are handled similarly to POS sales. Therefore, the SFTP location, SuiteScripts, as well as the jobs within the HotWax Commerce Integration Platform and OMS, remain unchanged.
-{% endhint %}
+See [Order approval](../sales-order/order-approval.md), [POS orders](../sales-order/pos-orders.md), and [Synchronize returns](../../synchronization-flows/returns/README.md) for the related flows.
